@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6700" toLevel="1" name="Ball Trapping Orodriel Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
-		<blockedInOlympiad>false</blockedInOlympiad>
+		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
+		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -18,11 +17,10 @@
 		</conditions>
 	</skill>
 	<skill id="6701" toLevel="1" name="Penalty Kick Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
-		<blockedInOlympiad>false</blockedInOlympiad>
+		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
+		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -35,16 +33,15 @@
 		</conditions>
 	</skill>
 	<skill id="6705" toLevel="1" name="Stun">
-		<!-- Temporarily in shock and unable to move. -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalTime>3</abnormalTime>
 		<activateRate>50</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>-1033</effectPoint>
-		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<abnormalType>STUN</abnormalType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>300</effectRange>
 		<lvlBonusRate>1</lvlBonusRate>
@@ -62,7 +59,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6706" toLevel="1" name="Piercing Attack">
-		<!-- High Five Skill -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -75,7 +71,6 @@
 		<mpConsume>83</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE</rideState>
 		<effectPoint>-1349</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitTime>2000</hitTime>
@@ -92,11 +87,9 @@
 		</effects>
 	</skill>
 	<skill id="6707" toLevel="1" name="Self-destruction">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>-1000</effectPoint>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<affectRange>200</affectRange>
@@ -107,10 +100,8 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6708" toLevel="1" name="Self-destruction">
-		<!-- none -->
 		<operateType>A1</operateType>
 		<effectPoint>-1000</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<affectRange>200</affectRange>
@@ -121,11 +112,9 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6709" toLevel="1" name="Multi Shot">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>-1000</effectPoint>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>500</effectRange>
 		<magicLvl>85</magicLvl>
@@ -138,14 +127,13 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6710" toLevel="1" name="Etis Haste">
-		<!-- Atk. Spd. increases by 10%. -->
+		<!-- Atk. Spd. +10%. -->
 		<abnormalTime>30</abnormalTime>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>1000</effectPoint>
 		<operateType>A2</operateType>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<abnormalLvl>2</abnormalLvl>
@@ -155,14 +143,12 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6711" toLevel="3" name="Etis Power Up">
-		<!-- none -->
 		<abnormalTime>30</abnormalTime>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>1000</effectPoint>
 		<operateType>A2</operateType>
 		<abnormalType>PA_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<abnormalLvl>
@@ -176,7 +162,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6714" toLevel="1" name="Wind Walk of Elcadia">
-		<!-- High Five Skill -->
+		<!-- For 10 min., Speed +33. -->
+		<icon>icon.skill1204</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -185,10 +172,8 @@
 		<effectPoint>495</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1204</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -202,7 +187,8 @@
 		</effects>
 	</skill>
 	<skill id="6715" toLevel="1" name="Haste of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Atk. Spd. +33% for 10 min. -->
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -211,10 +197,8 @@
 		<effectPoint>495</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1086</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -228,7 +212,8 @@
 		</effects>
 	</skill>
 	<skill id="6716" toLevel="1" name="Might of Elcadia">
-		<!-- High Five Skill -->
+		<!-- P. Atk. +15% for 10 min. -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -237,10 +222,8 @@
 		<effectPoint>495</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1068</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -254,7 +237,8 @@
 		</effects>
 	</skill>
 	<skill id="6717" toLevel="1" name="Berserker Spirit of Elcadia">
-		<!-- High Five Skill -->
+		<!-- For 10 min., party members' P. Def. -8%, M. Def. -16%, and evasion -4. P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Speed +8. -->
+		<icon>icon.skill1062</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
@@ -263,10 +247,8 @@
 		<effectPoint>495</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1062</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -308,7 +290,8 @@
 		</effects>
 	</skill>
 	<skill id="6718" toLevel="1" name="Death Whisper of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Critical Attack effect +35% for 10 min. -->
+		<icon>icon.skill1242</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
@@ -317,10 +300,8 @@
 		<effectPoint>495</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1242</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -334,7 +315,8 @@
 		</effects>
 	</skill>
 	<skill id="6719" toLevel="1" name="Guidance of Elcadia">
-		<!-- High Five Skill -->
+		<!-- For 10 min., Accuracy +4. -->
+		<icon>icon.skill1240</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
@@ -343,10 +325,8 @@
 		<effectPoint>495</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1240</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -360,7 +340,8 @@
 		</effects>
 	</skill>
 	<skill id="6720" toLevel="1" name="Focus of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Critical Attack rate +30% for 10 min. -->
+		<icon>icon.skill1077</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
@@ -369,10 +350,8 @@
 		<effectPoint>495</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1077</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -386,7 +365,8 @@
 		</effects>
 	</skill>
 	<skill id="6721" toLevel="1" name="Empower of Elcadia">
-		<!-- High Five Skill -->
+		<!-- M. Atk. +75% for 10 min. -->
+		<icon>icon.skill1059</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -395,10 +375,8 @@
 		<effectPoint>495</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1059</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -412,7 +390,8 @@
 		</effects>
 	</skill>
 	<skill id="6722" toLevel="1" name="Acumen of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Casting Spd. +30% for 10 min. -->
+		<icon>icon.skill1085</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
@@ -421,10 +400,8 @@
 		<effectPoint>495</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1085</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -438,7 +415,8 @@
 		</effects>
 	</skill>
 	<skill id="6723" toLevel="1" name="Concentration of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Magic cancel damage -53 for 20 min. -->
+		<icon>icon.skill1078</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
@@ -447,10 +425,8 @@
 		<effectPoint>624</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1078</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -464,7 +440,8 @@
 		</effects>
 	</skill>
 	<skill id="6724" toLevel="1" name="Greater Heal of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Recovers the target's HP by 450 power and recovers 30 HP per sec. for 15 sec. -->
+		<icon>icon.skill1217</icon>
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
@@ -474,10 +451,8 @@
 		<effectPoint>520</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1217</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -495,7 +470,8 @@
 		</effects>
 	</skill>
 	<skill id="6725" toLevel="1" name="Blessed Blood of Elcadia">
-		<!-- High Five Skill -->
+		<!-- For 15 sec., bestows the blessing of blood upon party members. Recovers HP by a certain rate when being attacked. -->
+		<icon>icon.skill1218</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>BLESS_THE_BLOOD</abnormalType>
@@ -504,10 +480,8 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1218</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -524,20 +498,18 @@
 				<chance>60</chance>
 				<targetType>SELF</targetType>
 				<minDamage>60</minDamage>
-				<skillId>6726</skillId>
+				<skillId>6726</skillId> <!-- Blessed Blood -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6726" toLevel="1" name="Blessed Blood">
-		<!-- Glory Days Confirmed -->
-		<blockedInOlympiad>false</blockedInOlympiad>
 		<icon>icon.skill3080</icon>
+		<blockedInOlympiad>false</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -551,7 +523,8 @@
 		</effects>
 	</skill>
 	<skill id="6727" toLevel="1" name="Vampiric Rage of Elcadia">
-		<!-- High Five Skill -->
+		<!-- For 10 min., recovers as HP 9% of the physical damage inflicted on the enemy with a certain probability. -->
+		<icon>icon.skill1268</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
@@ -560,10 +533,8 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1268</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -577,16 +548,15 @@
 		</effects>
 	</skill>
 	<skill id="6728" toLevel="1" name="Recharge of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Recovers MP up to 136 power depending on the target's Lv.. -->
+		<icon>icon.skill1013</icon>
 		<castRange>400</castRange>
 		<effectPoint>655</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>6000</hitTime>
-		<icon>icon.skill1013</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>3000</reuseDelay>
 		<targetType>TARGET</targetType>
@@ -598,7 +568,8 @@
 		</effects>
 	</skill>
 	<skill id="6729" toLevel="1" name="Holy Attack Resistance of Elcadia">
-		<!-- High Five Skill -->
+		<!-- For 10 min., Resistance to Holy attacks +33. -->
+		<icon>icon.skill1392</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>ARMOR_HOLY</abnormalType>
@@ -607,10 +578,8 @@
 		<effectPoint>655</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1392</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -625,16 +594,15 @@
 		</effects>
 	</skill>
 	<skill id="6730" toLevel="1" name="Greater Battle Heal of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Immediately restores the target's HP with 858 Power. -->
+		<icon>icon.skill1218</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<castRange>600</castRange>
 		<effectPoint>468</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1218</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<reuseDelay>1000</reuseDelay>
@@ -647,12 +615,10 @@
 		</effects>
 	</skill>
 	<skill id="6731" toLevel="1" name="Etis Shadow">
-		<!-- none -->
 		<operateType>A2</operateType>
 		<effectPoint>1000</effectPoint>
 		<abnormalType>STEALTH</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -673,13 +639,10 @@
 		</conditions>
 	</skill>
 	<skill id="6732" toLevel="1" name="Mirage">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<affectRange>2000</affectRange>
 		<hitTime>3000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<effectPoint>-10000</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>2000</reuseDelay>
@@ -690,18 +653,17 @@
 		</effects>
 	</skill>
 	<skill id="6733" toLevel="1" name="Antharas' Stigma">
-		<!-- "Antharas's stigma. After 10 seconds, spreads the Stigma Aftermath nearby, which decreases 400 HP per second and 150 MP." -->
+		<!-- Antharas' stigma. After 10 sec., spreads the Stigma Aftermath nearby, which decreases 400 HP per sec. and 150 MP. -->
+		<icon>icon.skill5860</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-10000</effectPoint>
 		<abnormalType>TIME_BOMB</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>2000</effectRange>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
-		<icon>icon.skill5860</icon>
 		<hitTime>3000</hitTime>
 		<reuseDelay>2000</reuseDelay>
 		<isDebuff>true</isDebuff>
@@ -712,13 +674,13 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6734" toLevel="1" name="Energy of Destruction">
-		<!-- "For 5 seconds, inflicted with poison with 800 HP decrease per second." -->
+		<!-- For 5 sec., inflicted with poison with 800 HP decrease per sec. -->
+		<icon>icon.skill0129</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>1</lvlBonusRate>
@@ -728,19 +690,18 @@
 		<trait>POISON</trait>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>120</attributeValue>
-		<icon>icon.skill0129</icon>
 		<isDebuff>true</isDebuff>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6735" toLevel="1" name="Petrify">
-		<!-- "Inflicted with petrification, the body is rigid like stone." -->
+		<!-- Petrified and unable to move temporarily. -->
+		<icon>icon.skill4111</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-1000</effectPoint>
 		<abnormalType>TURN_STONE</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>1</lvlBonusRate>
@@ -748,7 +709,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<affectRange>100</affectRange>
-		<icon>icon.skill4111</icon>
 		<isDebuff>true</isDebuff>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
 		<targetType>SELF</targetType>
@@ -756,8 +716,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6736" toLevel="1" name="Fierce Attack">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>2000</castRange>
 		<effectRange>2000</effectRange>
 		<hitTime>4000</hitTime>
@@ -765,7 +723,6 @@
 		<mpConsume>79</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE</rideState>
 		<effectPoint>-1000</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<fanRange>0;0;500;40</fanRange>
@@ -780,18 +737,15 @@
 		</effects>
 	</skill>
 	<skill id="6737" toLevel="1" name="Heal">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<icon>icon.skill1401</icon>
 		<affectRange>2000</affectRange>
 		<hitTime>90000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>130</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<effectPoint>546</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<icon>icon.skill1401</icon>
 		<reuseDelay>1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
@@ -803,12 +757,12 @@
 		</effects>
 	</skill>
 	<skill id="6738" toLevel="1" name="Hold">
-		<!-- Temporarily inflicted with hold and unable to move. -->
+		<!-- Inflicted with Hold and unable to move. -->
+		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-1000</effectPoint>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>2000</effectRange>
 		<lvlBonusRate>2</lvlBonusRate>
@@ -816,7 +770,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<trait>HOLD</trait>
-		<icon>icon.skill4047</icon>
 		<hitTime>2000</hitTime>
 		<reuseDelay>1000</reuseDelay>
 		<isMagic>1</isMagic>
@@ -827,10 +780,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6739" toLevel="1" name="Presentation - Behemoth Leader Casting Preparation">
-		<!-- none -->
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<hitTime>45000</hitTime>
@@ -838,10 +789,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6740" toLevel="1" name="Presentation - Behemoth Leader Casting">
-		<!-- none -->
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -850,10 +799,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6741" toLevel="1" name="Presentation - Behemoth Leader Casting Failure">
-		<!-- none -->
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -862,11 +809,9 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6742" toLevel="1" name="Presentation - Behemoth Object Channeling">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>CA1</operateType>
 		<effectPoint>100</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>2000</effectRange>
@@ -879,8 +824,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6743" toLevel="1" name="Dark Wound">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Dark attribute is weakened -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -893,7 +838,6 @@
 		<effectPoint>-10000</effectPoint>
 		<effectRange>2000</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -901,7 +845,6 @@
 		<mpConsume>25</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>DARK</attributeType>
 		<attributeValue>120</attributeValue>
@@ -920,12 +863,12 @@
 		</effects>
 	</skill>
 	<skill id="6744" toLevel="1" name="Dark Storm">
-		<!-- Casting Spd. decreases by 90% and Atk. Spd. decreases by 30%. -->
+		<!-- Casting Spd. -90% and Atk. Spd. -30%. -->
+		<icon>icon.skill1386</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-10000</effectPoint>
 		<abnormalType>CASTING_TIME_UP</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1200</effectRange>
 		<lvlBonusRate>2</lvlBonusRate>
@@ -935,7 +878,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>120</attributeValue>
 		<affectRange>200</affectRange>
-		<icon>icon.skill1386</icon>
 		<hitTime>2000</hitTime>
 		<reuseDelay>1000</reuseDelay>
 		<isMagic>1</isMagic>
@@ -946,12 +888,11 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6745" toLevel="1" name="Dark Space">
-		<!-- none -->
+		<icon>icon.skill1445</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-10000</effectPoint>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<effectRange>1200</effectRange>
@@ -961,7 +902,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>120</attributeValue>
 		<affectRange>200</affectRange>
-		<icon>icon.skill1445</icon>
 		<hitTime>2000</hitTime>
 		<reuseDelay>1000</reuseDelay>
 		<isMagic>1</isMagic>
@@ -971,12 +911,12 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="6746" toLevel="1" name="Dark Space">
-		<!-- Darkness attribute is weakened. -->
+		<!-- Dark attribute is weakened. -->
+		<icon>icon.skill1445</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-10000</effectPoint>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1200</effectRange>
 		<lvlBonusRate>2</lvlBonusRate>
@@ -986,7 +926,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>120</attributeValue>
 		<affectRange>200</affectRange>
-		<icon>icon.skill1445</icon>
 		<hitTime>2000</hitTime>
 		<reuseDelay>1000</reuseDelay>
 		<isMagic>1</isMagic>
@@ -997,16 +936,14 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6747" toLevel="1" name="Dark Blade">
-		<!-- none -->
+		<icon>icon.skill1445</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-10000</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>150</effectRange>
 		<magicLvl>85</magicLvl>
 		<attributeType>DARK</attributeType>
 		<attributeValue>120</attributeValue>
-		<icon>icon.skill1445</icon>
 		<hitTime>1500</hitTime>
 		<reuseDelay>1000</reuseDelay>
 		<castRange>60</castRange>
@@ -1014,8 +951,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6748" toLevel="1" name="Shock Attack">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Inflicts Stun for 5 sec. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1027,13 +964,11 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>120</attributeValue>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>85</magicLvl>
 		<mpConsume>33</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<lvlBonusRate>1</lvlBonusRate>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1049,8 +984,6 @@
 		</effects>
 	</skill>
 	<skill id="6749" toLevel="1" name="Devil Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-10000</effectPoint>
 		<effectRange>300</effectRange>
@@ -1061,7 +994,6 @@
 		<mpConsume>79</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1073,8 +1005,6 @@
 		</effects>
 	</skill>
 	<skill id="6750" toLevel="1" name="Power Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-1000</effectPoint>
 		<effectRange>300</effectRange>
@@ -1085,7 +1015,6 @@
 		<mpConsume>33</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -1098,10 +1027,8 @@
 		</effects>
 	</skill>
 	<skill id="6751" toLevel="1" name="Blow Attack">
-		<!-- none -->
 		<operateType>A1</operateType>
 		<effectPoint>-1000</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>300</effectRange>
 		<magicLvl>85</magicLvl>
@@ -1117,8 +1044,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6752" toLevel="1" name="Revival">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<abnormalTime>60</abnormalTime>
 		<effectPoint>562</effectPoint>
 		<hitTime>2000</hitTime>
@@ -1126,7 +1051,6 @@
 		<mpConsume>158</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1144,8 +1068,6 @@
 		</effects>
 	</skill>
 	<skill id="6753" toLevel="1" name="Death Blow">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-337</effectPoint>
 		<effectRange>300</effectRange>
@@ -1156,7 +1078,6 @@
 		<mpConsume>77</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DEATH</trait>
@@ -1170,8 +1091,8 @@
 		</effects>
 	</skill>
 	<skill id="6754" toLevel="1" name="Bleed">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Inflicted with bleed and -200 HP every sec. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1182,14 +1103,12 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-10000</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>85</magicLvl>
 		<mpConsume>100</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>DARK</attributeType>
 		<attributeValue>120</attributeValue>
@@ -1205,8 +1124,6 @@
 		</effects>
 	</skill>
 	<skill id="6755" toLevel="1" name="Devil Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>900</castRange>
 		<effectPoint>-10000</effectPoint>
 		<effectRange>1400</effectRange>
@@ -1218,7 +1135,6 @@
 		<mpConsume>78</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1229,8 +1145,6 @@
 		</effects>
 	</skill>
 	<skill id="6756" toLevel="1" name="Death Talon">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<affectRange>200</affectRange>
 		<effectPoint>-10000</effectPoint>
 		<attributeType>DARK</attributeType>
@@ -1241,7 +1155,6 @@
 		<mpConsume>155</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -1253,8 +1166,8 @@
 		</effects>
 	</skill>
 	<skill id="6757" toLevel="1" name="Decrease Speed">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Enemy's Speed -30% for 15 sec. -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1264,7 +1177,6 @@
 		<effectPoint>-655</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1160</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1272,7 +1184,6 @@
 		<mpConsume>69</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>DARK</attributeType>
 		<attributeValue>120</attributeValue>
@@ -1286,20 +1197,17 @@
 		</effects>
 	</skill>
 	<skill id="6758" toLevel="1" name="Rage">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<effectPoint>100000</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1068</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>69</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1327,10 +1235,8 @@
 		</effects>
 	</skill>
 	<skill id="6759" toLevel="1" name="Death Shot">
-		<!-- none -->
 		<effectPoint>-897</effectPoint>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<magicLvl>85</magicLvl>
@@ -1343,8 +1249,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6760" toLevel="1" name="Dragon Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-1000</effectPoint>
 		<effectRange>300</effectRange>
@@ -1353,7 +1257,6 @@
 		<mpConsume>79</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>120</attributeValue>
@@ -1368,8 +1271,6 @@
 		</effects>
 	</skill>
 	<skill id="6761" toLevel="1" name="Dragon Blow Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<affectRange>200</affectRange>
 		<effectPoint>-1000</effectPoint>
 		<hitTime>1500</hitTime>
@@ -1377,7 +1278,6 @@
 		<mpConsume>158</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>120</attributeValue>
@@ -1393,20 +1293,17 @@
 		</effects>
 	</skill>
 	<skill id="6762" toLevel="1" name="Rage">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<effectPoint>100000</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1068</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>69</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1432,8 +1329,6 @@
 		</effects>
 	</skill>
 	<skill id="6763" toLevel="1" name="Dragon Earth Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-1000</effectPoint>
 		<effectRange>300</effectRange>
@@ -1444,7 +1339,6 @@
 		<mpConsume>79</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -1457,8 +1351,6 @@
 		</effects>
 	</skill>
 	<skill id="6764" toLevel="1" name="Dragon Earth Shot">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>900</castRange>
 		<effectPoint>-897</effectPoint>
 		<effectRange>1400</effectRange>
@@ -1469,7 +1361,6 @@
 		<mpConsume>79</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1481,14 +1372,11 @@
 		</effects>
 	</skill>
 	<skill id="6765" toLevel="1" name="Full Recovery">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<effectPoint>562</effectPoint>
 		<hitTime>2500</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>900000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<castRange>900</castRange>
@@ -1501,8 +1389,6 @@
 		</effects>
 	</skill>
 	<skill id="6766" toLevel="1" name="Earth Tremor">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>900</castRange>
 		<effectPoint>-10000</effectPoint>
 		<effectRange>1400</effectRange>
@@ -1514,7 +1400,6 @@
 		<mpConsume>78</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1525,10 +1410,8 @@
 		</effects>
 	</skill>
 	<skill id="6767" toLevel="1" name="Earthquake">
-		<!-- none -->
 		<operateType>A1</operateType>
 		<effectPoint>-10000</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<attributeType>EARTH</attributeType>
@@ -1541,8 +1424,8 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6768" toLevel="1" name="Shock Attack">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Inflicts Stun for 5 sec. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1552,13 +1435,11 @@
 		<effectPoint>-10000</effectPoint>
 		<effectRange>300</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>85</magicLvl>
 		<mpConsume>158</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<lvlBonusRate>1</lvlBonusRate>
 		<attributeType>EARTH</attributeType>
@@ -1576,8 +1457,8 @@
 		</effects>
 	</skill>
 	<skill id="6769" toLevel="1" name="Petrify">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Petrified and unable to move temporarily. -->
+		<icon>icon.skill4111</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
@@ -1587,7 +1468,6 @@
 		<effectPoint>-1000</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill4111</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -1595,7 +1475,6 @@
 		<mpConsume>155</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>120</attributeValue>
@@ -1609,8 +1488,6 @@
 		</effects>
 	</skill>
 	<skill id="6770" toLevel="1" name="Heal">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<affectRange>900</affectRange>
 		<effectPoint>100</effectPoint>
 		<hitTime>1500</hitTime>
@@ -1618,7 +1495,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>130</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<reuseDelay>5000</reuseDelay>
@@ -1632,8 +1508,6 @@
 		</effects>
 	</skill>
 	<skill id="6771" toLevel="1" name="Devil Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-10000</effectPoint>
 		<effectRange>300</effectRange>
@@ -1644,7 +1518,6 @@
 		<mpConsume>79</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1656,8 +1529,6 @@
 		</effects>
 	</skill>
 	<skill id="6772" toLevel="1" name="Power Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-1000</effectPoint>
 		<effectRange>300</effectRange>
@@ -1668,7 +1539,6 @@
 		<mpConsume>33</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -1681,20 +1551,17 @@
 		</effects>
 	</skill>
 	<skill id="6773" toLevel="1" name="Rage">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<effectPoint>100000</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1068</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>69</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1722,8 +1589,8 @@
 		</effects>
 	</skill>
 	<skill id="6774" toLevel="1" name="Shock Attack">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Inflicts Stun for 10 sec. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1733,13 +1600,11 @@
 		<effectPoint>-10000</effectPoint>
 		<effectRange>300</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>85</magicLvl>
 		<mpConsume>85</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<lvlBonusRate>1</lvlBonusRate>
 		<attributeType>DARK</attributeType>
@@ -1757,8 +1622,6 @@
 		</effects>
 	</skill>
 	<skill id="6775" toLevel="1" name="Soul Breath">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-1000</effectPoint>
 		<effectRange>200</effectRange>
@@ -1769,7 +1632,6 @@
 		<mpConsume>85</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<fanRange>0;0;150;60</fanRange>
@@ -1784,8 +1646,8 @@
 		</effects>
 	</skill>
 	<skill id="6776" toLevel="1" name="Paralysis">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Causes the enemy's body to go completely rigid for 10 sec. and causes paralysis for 10 sec. -->
+		<icon>icon.skill1170</icon>
 		<abnormalTime>10</abnormalTime>
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
@@ -1793,7 +1655,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -1801,7 +1662,6 @@
 		<mpConsume>69</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<abnormalType>PARALYZE</abnormalType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<abnormalLvl>1</abnormalLvl>
@@ -1827,13 +1687,14 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>6779</skillId>
+				<skillId>6779</skillId> <!-- Paralysis -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="6777" toLevel="1" name="Bleeding Gash">
-		<!-- High Five Skill -->
+		<!-- For 20 sec., slows down Speed and inflicts bleed so that -200 HP every sec. Inflicted with paralysis for 10 sec. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1844,14 +1705,12 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-323</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>85</magicLvl>
 		<mpConsume>89</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>DARK</attributeType>
 		<attributeValue>120</attributeValue>
@@ -1872,8 +1731,6 @@
 		</effects>
 	</skill>
 	<skill id="6778" toLevel="1" name="Devil Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-10000</effectPoint>
 		<effectRange>300</effectRange>
@@ -1884,7 +1741,6 @@
 		<mpConsume>89</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1896,8 +1752,8 @@
 		</effects>
 	</skill>
 	<skill id="6779" toLevel="1" name="Paralysis">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- The target is paralyzed. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime> <!-- FIXME: value unconfirmed -->
 		<abnormalType>PARALYZE</abnormalType>
@@ -1905,12 +1761,10 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill1170</icon>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<trait>PARALYZE</trait>
 		<targetType>SELF</targetType>
@@ -1920,10 +1774,8 @@
 		</effects>
 	</skill>
 	<skill id="6780" toLevel="1" name="Presentation - Portal Ray Combined Light Maintenance">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1931,10 +1783,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6781" toLevel="1" name="Presentation - Red Portal Ray">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1942,10 +1792,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6782" toLevel="1" name="Presentation - Blue Portal Ray">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1953,10 +1801,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6783" toLevel="1" name="Presentation - Portal 2_boom_up">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1964,10 +1810,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6784" toLevel="1" name="Presentation - Eris' Suffering">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1976,10 +1820,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6785" toLevel="1" name="Presentation - Dialogue with Etis 1">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1988,10 +1830,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6786" toLevel="1" name="Presentation - Etis Transformation Effect">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1999,10 +1839,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6787" toLevel="1" name="Presentation - Etis Pre-Transformation">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2011,10 +1849,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6788" toLevel="1" name="Presentation - Etis Post-Transformation">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2023,10 +1859,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6789" toLevel="1" name="Presentation - Etis' Defeat">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2035,10 +1869,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6790" toLevel="1" name="Presentation - Etis Kneeling">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2047,10 +1879,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6791" toLevel="1" name="Presentation - Dialogue with Elcadia 1">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2059,10 +1889,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6792" toLevel="1" name="Presentation - Dialogue with Elcadia 2">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2071,10 +1899,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6793" toLevel="1" name="Presentation - Dialogue with Elcadia 3">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2083,10 +1909,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6794" toLevel="1" name="Presentation - Elcadia Casting 1">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2095,10 +1919,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6795" toLevel="1" name="Presentation - Elcadia Casting 2">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2107,10 +1929,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6796" toLevel="1" name="Presentation - Meteor Effect">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2118,10 +1938,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6797" toLevel="1" name="Presentation - Eris Scatter Effect">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2129,10 +1947,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6798" toLevel="1" name="Presentation - Etis Summon Effect">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2140,10 +1956,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6799" toLevel="1" name="Presentation - Portal 2_boom_down">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>

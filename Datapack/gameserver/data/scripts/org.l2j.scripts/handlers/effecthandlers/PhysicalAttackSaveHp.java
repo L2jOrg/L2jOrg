@@ -112,7 +112,7 @@ public final class PhysicalAttackSaveHp extends AbstractEffect
 		{
 			// Trait, elements
 			final double weaponTraitMod = Formulas.calcWeaponTraitBonus(effector, effected);
-			final double generalTraitMod = Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), false);
+			final double generalTraitMod = Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), true);
 			final double attributeMod = Formulas.calcAttributeBonus(effector, effected, skill);
 			final double pvpPveMod = Formulas.calculatePvpPveBonus(effector, effected, skill, true);
 			final double randomMod = effector.getRandomDamageMultiplier();

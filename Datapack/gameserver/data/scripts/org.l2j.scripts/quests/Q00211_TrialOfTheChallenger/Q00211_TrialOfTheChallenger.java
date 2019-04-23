@@ -16,6 +16,7 @@
  */
 package quests.Q00211_TrialOfTheChallenger;
 
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.QuestSound;
@@ -359,7 +360,7 @@ public final class Q00211_TrialOfTheChallenger extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs == null) || !Util.checkIfInRange(1500, npc, killer, true))
+		if ((qs == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			return super.onKill(npc, killer, isSummon);
 		}

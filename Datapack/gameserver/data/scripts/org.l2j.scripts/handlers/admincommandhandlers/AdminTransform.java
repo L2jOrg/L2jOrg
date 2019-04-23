@@ -46,15 +46,14 @@ public class AdminTransform implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_untransform"))
 		{
-			final L2Object obj = activeChar.getTarget();
-			if (obj.isCharacter())
-			{
-				((L2Character) obj).stopTransformation(true);
-			}
-			else
+			final L2Object obj = activeChar.getTarget() == null ? activeChar : activeChar.getTarget();
+			if (!obj.isCharacter() || !((L2Character) obj).isTransformed())
 			{
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+				return false;
 			}
+
+			((L2Character) obj).stopTransformation(true);
 		}
 		else if (command.startsWith("admin_transform"))
 		{

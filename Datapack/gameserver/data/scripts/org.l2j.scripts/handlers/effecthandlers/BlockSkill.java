@@ -24,6 +24,7 @@ import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureSkillUse;
 import org.l2j.gameserver.model.events.listeners.FunctionEventListener;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
+import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 
 /**
@@ -50,7 +51,7 @@ public final class BlockSkill extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		if ((_magicTypes == null) || (_magicTypes.length == 0))
 		{

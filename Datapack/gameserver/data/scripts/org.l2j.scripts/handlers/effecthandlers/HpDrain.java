@@ -55,8 +55,7 @@ public final class HpDrain extends AbstractEffect
 	@Override
 	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		// TODO: Unhardcode Cubic Skill to avoid double damage
-		if (effector.isAlikeDead() || (skill.getId() == 4050))
+		if (effector.isAlikeDead())
 		{
 			return;
 		}

@@ -6,6 +6,9 @@ AbstractStatAddEffect: Abstract class for managing stat adding.
 AbstractStatEffect: Abstract class for managing stats.
 Accuracy: P. Accuracy stat.
 AddHate: Instant effect that increases target's hate towards you.
+AdditionalPotionCp: Increases the amount of CP heal gained from potions or elixirs.
+AdditionalPotionHp: Increases the amount of HP heal gained from potions or elixirs.
+AdditionalPotionMp: Increases the amount of MP heal gained from potions or elixirs.
 AddSkillBySkill: Add skill when other skill already exists. (l2jmobius)
 AddTeleportBookmarkSlot: Instant effect that increases the amount of My Teleport slots.
 AgathionSlot: Agathion slot modifier. (l2jmobius)

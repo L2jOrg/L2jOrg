@@ -19,7 +19,14 @@ public enum WeaponType implements ItemType {
     DUAL(TraitType.DUAL),
     FIST(TraitType.FIST), // 0 items with that type
     FISHINGROD(TraitType.NONE),
-    FLAG(TraitType.NONE); // 0 items with that type
+    RAPIER(TraitType.RAPIER),
+    CROSSBOW(TraitType.CROSSBOW),
+    ANCIENTSWORD(TraitType.ANCIENTSWORD),
+    FLAG(TraitType.NONE), // 0 items with that type
+    DUALDAGGER(TraitType.DUALDAGGER),
+    OWNTHING(TraitType.NONE), // 0 items with that type
+    TWOHANDCROSSBOW(TraitType.TWOHANDCROSSBOW),
+    DUALBLUNT(TraitType.DUALBLUNT);
 
     private final int _mask;
     private final TraitType _traitType;
@@ -50,10 +57,14 @@ public enum WeaponType implements ItemType {
     }
 
     public boolean isRanged() {
-        return this == BOW;
+        return (this == BOW) || (this == CROSSBOW) || (this == TWOHANDCROSSBOW);
+    }
+
+    public boolean isCrossbow() {
+        return (this == CROSSBOW) || (this == TWOHANDCROSSBOW);
     }
 
     public boolean isDual() {
-        return (this == DUALFIST) || (this == DUAL);
+        return (this == DUALFIST) || (this == DUAL) || (this == DUALDAGGER) || (this == DUALBLUNT);
     }
 }

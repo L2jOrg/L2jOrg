@@ -743,16 +743,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4002" level="2" /> <!--NPC HP Drain -->
-			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="3" /> <!--Light Armor Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="4002" level="2" /> <!-- NPC HP Drain -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -771,11 +771,11 @@
 				<item id="1867" min="1" max="1" chance="17.289" /> <!-- Animal Skin -->
 				<item id="1881" min="1" max="1" chance="1.719" /> <!-- Coarse Bone Powder -->
 				<item id="1875" min="1" max="1" chance="0.857" /> <!-- Stone of Purity -->
-				<item id="5437" min="1" max="1" chance="0.315" /> <!-- Recipe: Heavy Sword(100%) -->
+				<item id="5437" min="1" max="1" chance="0.315" /> <!-- Recipe: Heavy Sword -->
 			</drop>
 			<spoil>
-				<item id="1931" min="1" max="1" chance="15.0011" /> <!-- Leather Boots Lining -->
-				<item id="2152" min="1" max="1" chance="20.2039" /> <!-- Recipe: Enchanted Necklace -->
+				<item id="1931" min="1" max="1" chance="15.0011" /> <!-- Leather Boot Lining -->
+				<item id="2152" min="1" max="1" chance="20.2039" /> <!-- Recipe: Magic Necklace -->
 				<item id="1932" min="1" max="1" chance="18.2156" /> <!-- Bone Helmet Design -->
 			</spoil>
 		</dropLists>
@@ -2259,7 +2259,7 @@
 		<sex>MALE</sex>
 		<acquire exp="792" sp="23" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="424" hpRegen="2.5" mp="174" mpRegen="1.2" />
+			<vitals hp="123.64762" hpRegen="2.5" mp="189.39" mpRegen="1.2" />
 			<attack physical="37.82932" magical="25.83252" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="69.1457235" magical="59.52687" evasion="10" />
 			<speed>
@@ -2273,17 +2273,10 @@
 		<skillList>
 			<skill id="4152" level="1" /> <!-- NPC HP Drain - Magic -->
 			<skill id="4160" level="1" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
+			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2302,16 +2295,16 @@
 				<item id="218" min="1" max="1" chance="0.075" /> <!-- Throwing Knife -->
 				<item id="57" min="41" max="97" chance="70" /> <!-- Adena -->
 				<item id="1868" min="1" max="1" chance="6.531" /> <!-- Thread -->
-				<item id="1864" min="1" max="1" chance="6.412" /> <!-- Stem -->
-				<item id="1867" min="1" max="1" chance="4.27" /> <!-- Animal Skin -->
-				<item id="1871" min="1" max="1" chance="3.28" /> <!-- Charcoal -->
-				<item id="1869" min="1" max="1" chance="3.241" /> <!-- Iron Ore -->
-				<item id="1866" min="1" max="1" chance="2.161" /> <!-- Suede -->
+				<item id="1864" min="1" max="1" chance="6.416" /> <!-- Stem -->
+				<item id="1867" min="1" max="1" chance="4.327" /> <!-- Animal Skin -->
+				<item id="1871" min="1" max="1" chance="3.286" /> <!-- Charcoal -->
+				<item id="1869" min="1" max="1" chance="3.19" /> <!-- Iron Ore -->
+				<item id="1866" min="1" max="1" chance="2.157" /> <!-- Suede -->
 			</drop>
 			<spoil>
-				<item id="1868" min="1" max="1" chance="51.85" /> <!-- Thread -->
-				<item id="1897" min="1" max="1" chance="6.334" /> <!-- Necklace of Wisdom Chain -->
-				<item id="734" min="1" max="1" chance="4.44" /> <!-- Wind Walk Potion -->
+				<item id="1868" min="1" max="1" chance="52.89" /> <!-- Thread -->
+				<item id="1897" min="1" max="1" chance="6.254" /> <!-- Necklace of Wisdom Chain -->
+				<item id="734" min="1" max="1" chance="4.336" /> <!-- Wind Walk Potion -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -2332,7 +2325,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="9" /> <!-- Cedar Staff -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1928" hpRegen="6.5" mp="1377" mpRegen="2.4" />
+			<vitals hp="1023.17174" hpRegen="8.5" mp="1501.845" mpRegen="3" />
 			<attack physical="602.6356364" magical="482.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="321.793719" magical="214.1539" />
 			<speed>
@@ -2344,12 +2337,8 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4095" level="1" /> <!-- Damage Shield -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2358,24 +2347,8 @@
 			<radius normal="10" />
 			<height normal="23" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="91" min="1" max="1" chance="0.003" /> <!-- Heavy War Axe -->
-				<item id="92" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff -->
-				<item id="57" min="587" max="1370" chance="70" /> <!-- Adena -->
-				<item id="1870" min="1" max="3" chance="25.49" /> <!-- Coal -->
-				<item id="1874" min="1" max="1" chance="3.488" /> <!-- Oriharukon Ore -->
-				<item id="4105" min="1" max="1" chance="0.75" /> <!-- Heavy War Axe Head -->
-				<item id="4106" min="1" max="1" chance="0.75" /> <!-- Spirit's Staff Head -->
-			</drop>
-			<spoil>
-				<item id="1870" min="1" max="5" chance="91.785" /> <!-- Coal -->
-				<item id="1875" min="1" max="1" chance="18.54" /> <!-- Stone of Purity -->
-				<item id="1874" min="1" max="1" chance="18.35" /> <!-- Oriharukon Ore -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="21259" level="71" type="L2Monster" name="Fallen Orc Shaman" title="Enhanced">
+	<npc id="21259" level="72" type="L2Monster" name="Fallen Orc Shaman" title="Enhanced">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -2389,10 +2362,10 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="11299" sp="338" />
+		<acquire exp="20524" sp="615" />
 		<equipment rhand="175" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1984" hpRegen="6.5" mp="1410" mpRegen="2.4" />
+			<vitals hp="1042.63023" hpRegen="8.5" mp="1537.245" mpRegen="3" />
 			<attack physical="632.6356364" magical="502.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="331.793719" magical="224.1539" />
 			<speed>
@@ -2405,13 +2378,10 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4073" level="5" /> <!-- Stun -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2424,22 +2394,6 @@
 			<radius normal="14.4" />
 			<height normal="29.4" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="91" min="1" max="1" chance="0.003" /> <!-- Heavy War Axe -->
-				<item id="92" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff -->
-				<item id="57" min="587" max="1370" chance="70" /> <!-- Adena -->
-				<item id="1870" min="1" max="3" chance="25.49" /> <!-- Coal -->
-				<item id="1874" min="1" max="1" chance="3.488" /> <!-- Oriharukon Ore -->
-				<item id="4105" min="1" max="1" chance="0.75" /> <!-- Heavy War Axe Head -->
-				<item id="4106" min="1" max="1" chance="0.75" /> <!-- Spirit's Staff Head -->
-			</drop>
-			<spoil>
-				<item id="1870" min="1" max="5" chance="91.785" /> <!-- Coal -->
-				<item id="1875" min="1" max="1" chance="18.54" /> <!-- Stone of Purity -->
-				<item id="1874" min="1" max="1" chance="18.35" /> <!-- Oriharukon Ore -->
-			</spoil>
-		</dropLists>
 	</npc>
 	<npc id="21260" level="50" type="L2Monster" name="Betrayer Orc Hero">
 		<parameters>

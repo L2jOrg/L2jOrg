@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="17701" toLevel="5" name="Topaz">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of $s1. -->
+		<icon>icon.etc_bm_jewel_topaz_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17706" toLevel="5" name="Vital Stone">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Sayha Grace XP/ SP +$s1, while hunting. -->
+		<icon>icon.etc_bm_jewel_vital</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17707" toLevel="5" name="Jade">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Atk. Spd./ Casting Spd. +$s1. -->
+		<icon>icon.etc_bm_jewel_jade_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17708" toLevel="5" name="Diamond">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- P. Def. +$s1, when equipped. -->
+		<icon>icon.etc_bm_jewel_diamond_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17709" toLevel="5" name="Pearl">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Def. +$s1. -->
+		<icon>icon.etc_bm_jewel_pearl_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

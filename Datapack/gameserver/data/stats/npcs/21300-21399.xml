@@ -1,42 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="21396" level="80" type="L2Npc" name="Carrion Scarab">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+	<npc id="21396" level="84" type="L2Monster" name="Carrion Scarab">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="680551" sp="10208" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="45" />
 				<run ground="130" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="22" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="6326" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Necklace -->
+				<item id="6327" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Ring -->
+				<item id="57" min="7076" max="16511" chance="70" /> <!-- Adena -->
+				<item id="1884" min="12" max="36" chance="32.31" /> <!-- Cord -->
+				<item id="6346" min="1" max="1" chance="7.905" /> <!-- Sealed Majestic Ring Gemstone -->
+				<item id="6342" min="1" max="1" chance="5.44" /> <!-- Sealed Majestic Earring Gemstone -->
+				<item id="6344" min="1" max="1" chance="3.494" /> <!-- Sealed Majestic Necklace Beads -->
+			</drop>
+			<spoil>
+				<item id="6346" min="1" max="1" chance="34.73" /> <!-- Sealed Majestic Ring Gemstone -->
+				<item id="6342" min="1" max="1" chance="26.04" /> <!-- Sealed Majestic Earring Gemstone -->
+				<item id="6344" min="1" max="1" chance="16.23" /> <!-- Sealed Majestic Necklace Beads -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21397" level="80" type="L2Npc" name="Carrion Scarab">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+	<npc id="21397" level="84" type="L2Monster" name="Carrion Scarab">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="1355598" sp="20333" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="45" />
 				<run ground="130" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="22" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+		</skillList>
 	</npc>
 	<npc id="21398" level="80" type="L2Npc" name="Soldier Scarab">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

@@ -378,9 +378,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-
 		<skills>
-			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3061" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Poison -->
 		</skills>
 		<stats>
@@ -410,10 +408,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-
-		<skills>
-			<skill id="3050" level="2" /> <!-- Special Ability: Focus -->
-		</skills>
 		<stats>
 			<stat type="pAtk">305</stat>
 			<stat type="mAtk">121</stat>
@@ -595,10 +589,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-
-		<skills>
-			<skill id="3050" level="2" /> <!-- Special Ability: Focus -->
-		</skills>
 		<stats>
 			<stat type="pAtk">305</stat>
 			<stat type="mAtk">121</stat>
@@ -657,10 +647,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-
-		<skills>
-			<skill id="3057" level="3" /> <!-- Special Ability: Anger -->
-		</skills>
 		<stats>
 			<stat type="pAtk">305</stat>
 			<stat type="mAtk">121</stat>

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5300" toLevel="9" name="Burst Shot">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
@@ -33,7 +32,6 @@
 			<value level="9">259</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -55,7 +53,8 @@
 		</effects>
 	</skill>
 	<skill id="5301" toLevel="9" name="Stun">
-		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -67,7 +66,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -94,7 +92,6 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -117,7 +114,8 @@
 		</effects>
 	</skill>
 	<skill id="5302" toLevel="9" name="Poison">
-		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -140,7 +138,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill4035</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -165,7 +162,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<trait>POISON</trait>
@@ -202,7 +198,8 @@
 		</effects>
 	</skill>
 	<skill id="5303" toLevel="9" name="Bleed">
-		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -225,7 +222,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0096</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -250,7 +246,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<trait>BLEED</trait>
@@ -287,7 +282,8 @@
 		</effects>
 	</skill>
 	<skill id="5304" toLevel="9" name="Paralysis">
-		<!-- A temporary paralysis which prevents movement. -->
+		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -301,7 +297,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>830</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -328,7 +323,6 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>PARALYZE</trait>
 		<targetType>ENEMY</targetType>
@@ -351,7 +345,8 @@
 		</effects>
 	</skill>
 	<skill id="5305" toLevel="9" name="Poison">
-		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -362,7 +357,6 @@
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill4035</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -387,7 +381,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>150</affectRange>
 		<isDebuff>true</isDebuff>
@@ -426,7 +419,8 @@
 		</effects>
 	</skill>
 	<skill id="5306" toLevel="9" name="Paralysis">
-		<!-- A temporary paralysis which prevents movement. -->
+		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -439,7 +433,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1170</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -464,7 +457,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<trait>PARALYZE</trait>
@@ -489,7 +481,8 @@
 		</effects>
 	</skill>
 	<skill id="5307" toLevel="9" name="Stun">
-		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -500,7 +493,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -527,7 +519,6 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -550,7 +541,8 @@
 		</effects>
 	</skill>
 	<skill id="5308" toLevel="9" name="Poison">
-		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -572,7 +564,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill4035</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -597,7 +588,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<trait>POISON</trait>
@@ -634,7 +624,8 @@
 		</effects>
 	</skill>
 	<skill id="5309" toLevel="9" name="Bleed">
-		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -656,7 +647,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -682,7 +672,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>BLEED</trait>
 		<targetType>ENEMY</targetType>
@@ -757,7 +746,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -816,7 +804,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -881,7 +868,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -944,7 +930,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1006,7 +991,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2.5</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1046,7 +1030,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -1110,7 +1093,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1173,7 +1155,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1235,7 +1216,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2.5</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1273,7 +1253,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<attributeType>WIND</attributeType>
@@ -1298,7 +1277,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<attributeType>WIND</attributeType>
@@ -1325,7 +1303,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2.5</hitCancelTime>
 		<attributeType>WIND</attributeType>
@@ -1351,7 +1328,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<attributeType>EARTH</attributeType>
@@ -1376,7 +1352,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<attributeType>EARTH</attributeType>
@@ -1403,7 +1378,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2.5</hitCancelTime>
 		<attributeType>EARTH</attributeType>
@@ -1429,7 +1403,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<attributeType>HOLY</attributeType>
@@ -1454,7 +1427,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<attributeType>HOLY</attributeType>
@@ -1481,7 +1453,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2.5</hitCancelTime>
 		<attributeType>HOLY</attributeType>
@@ -1534,7 +1505,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1597,7 +1567,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1659,7 +1628,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2.5</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1711,7 +1679,6 @@
 			<value level="9">79</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<targetType>ENEMY</targetType>
@@ -1764,7 +1731,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1787,7 +1753,8 @@
 		</effects>
 	</skill>
 	<skill id="5333" toLevel="9" name="Poison">
-		<!-- Glory Days confirmed -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -1809,7 +1776,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill4035</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -1846,7 +1812,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
@@ -1901,7 +1866,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1949,7 +1913,6 @@
 			<value level="9">173</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1997,7 +1960,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -2024,7 +1986,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<affectRange>150</affectRange>
@@ -2064,7 +2025,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2099,7 +2059,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<attributeType>FIRE</attributeType>
@@ -2139,7 +2098,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -2166,7 +2124,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<attributeType>FIRE</attributeType>
@@ -2208,7 +2165,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2243,7 +2199,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<attributeType>WATER</attributeType>
@@ -2268,7 +2223,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
@@ -2293,7 +2247,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<attributeType>WATER</attributeType>
@@ -2335,7 +2288,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2370,7 +2322,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<attributeType>WIND</attributeType>
@@ -2395,7 +2346,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
@@ -2420,7 +2370,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<attributeType>WIND</attributeType>
@@ -2462,7 +2411,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2497,7 +2445,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<attributeType>EARTH</attributeType>
@@ -2536,7 +2483,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -2563,7 +2509,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<attributeType>EARTH</attributeType>
@@ -2590,7 +2535,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>200</effectRange>
 		<attributeType>HOLY</attributeType>
@@ -2614,7 +2558,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<attributeType>HOLY</attributeType>
@@ -2653,7 +2596,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -2680,7 +2622,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<attributeType>HOLY</attributeType>
@@ -2722,7 +2663,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2772,7 +2712,6 @@
 			<value level="9">173</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2822,7 +2761,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -2849,7 +2787,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<attributeType>DARK</attributeType>
@@ -2861,7 +2798,8 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5362" toLevel="9" name="Stun">
-		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2873,7 +2811,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -2900,7 +2837,6 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -2923,7 +2859,8 @@
 		</effects>
 	</skill>
 	<skill id="5363" toLevel="9" name="Poison">
-		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -2946,7 +2883,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill4035</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -2971,7 +2907,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<trait>POISON</trait>
@@ -3008,7 +2943,8 @@
 		</effects>
 	</skill>
 	<skill id="5364" toLevel="9" name="Bleed">
-		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -3031,7 +2967,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -3057,7 +2992,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>BLEED</trait>
 		<targetType>ENEMY</targetType>
@@ -3093,7 +3027,8 @@
 		</effects>
 	</skill>
 	<skill id="5365" toLevel="9" name="Paralysis">
-		<!-- A temporary paralysis which prevents movement. -->
+		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -3107,7 +3042,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>830</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -3123,7 +3057,6 @@
 		</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>PARALYZE</trait>
 		<targetType>ENEMY</targetType>
@@ -3134,7 +3067,8 @@
 		</effects>
 	</skill>
 	<skill id="5366" toLevel="9" name="Poison">
-		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -3146,7 +3080,6 @@
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill4035</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -3171,7 +3104,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<trait>POISON</trait>
@@ -3209,7 +3141,8 @@
 		</effects>
 	</skill>
 	<skill id="5367" toLevel="9" name="Paralysis">
-		<!-- A temporary paralysis which prevents movement. -->
+		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -3222,7 +3155,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -3238,7 +3170,6 @@
 		</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>PARALYZE</trait>
 		<targetType>SELF</targetType>
@@ -3250,7 +3181,8 @@
 		</effects>
 	</skill>
 	<skill id="5368" toLevel="9" name="Stun">
-		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3259,7 +3191,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0100</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -3274,7 +3205,6 @@
 		</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<isDebuff>true</isDebuff>
@@ -3284,7 +3214,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5369" toLevel="9" name="Poison">
-		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -3306,7 +3237,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill4035</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -3331,7 +3261,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<trait>POISON</trait>
@@ -3368,7 +3297,8 @@
 		</effects>
 	</skill>
 	<skill id="5370" toLevel="9" name="Bleed">
-		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -3388,7 +3318,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0096</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -3402,7 +3331,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<isDebuff>true</isDebuff>
@@ -3451,7 +3379,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3510,7 +3437,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -3547,7 +3473,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<attributeType>FIRE</attributeType>
@@ -3599,7 +3524,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -3636,7 +3560,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2.5</hitCancelTime>
 		<attributeType>FIRE</attributeType>
@@ -3647,7 +3570,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5376" toLevel="9" name="Blazing Circle">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>200</affectRange>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
@@ -3666,7 +3588,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -3703,7 +3624,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<attributeType>WATER</attributeType>
@@ -3728,7 +3648,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<attributeType>WATER</attributeType>
@@ -3755,7 +3674,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2.5</hitCancelTime>
 		<attributeType>WATER</attributeType>
@@ -3808,7 +3726,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3832,7 +3749,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<attributeType>WIND</attributeType>
@@ -3884,7 +3800,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2.5</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -3937,7 +3852,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3961,7 +3875,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<attributeType>EARTH</attributeType>
@@ -3988,7 +3901,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2.5</hitCancelTime>
 		<attributeType>EARTH</attributeType>
@@ -4014,7 +3926,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<attributeType>HOLY</attributeType>
@@ -4039,7 +3950,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<attributeType>HOLY</attributeType>
@@ -4066,7 +3976,6 @@
 			<value level="9">99</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2.5</hitCancelTime>
 		<attributeType>HOLY</attributeType>
@@ -4119,7 +4028,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4170,7 +4078,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -4232,7 +4139,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2.5</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -4296,7 +4202,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4359,7 +4264,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4382,7 +4286,8 @@
 		</effects>
 	</skill>
 	<skill id="5394" toLevel="9" name="Poison">
-		<!-- TODO: Need to be Checked in Retail -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -4407,7 +4312,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill4035</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -4444,7 +4348,6 @@
 			<value level="9">16</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<trait>POISON</trait>
@@ -4492,7 +4395,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>
@@ -4526,12 +4428,11 @@
 	</skill>
 	<skill id="5396" toLevel="1" name="Spell Stance">
 		<castRange>400</castRange>
-		<channelingSkillId>5397</channelingSkillId>
+		<channelingSkillId>5397</channelingSkillId> <!-- Spell Force -->
 		<channelingTickInterval>2</channelingTickInterval>
 		<hitTime>15000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>CA5</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>600</effectRange>
@@ -4541,6 +4442,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5397" toLevel="3" name="Spell Force">
+		<icon>icon.skill0427</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4549,10 +4451,8 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MAGICAL_STANCE</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill0427</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -4573,7 +4473,6 @@
 		<mpConsume>63</mpConsume>
 		<mpInitialConsume>16</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -4585,20 +4484,18 @@
 		</effects>
 	</skill>
 	<skill id="5399" toLevel="1" name="Heat of Desert">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- Condition causing target to decrease HP by heat of desert. -->
+		<icon>icon.skill1230</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>HOT_GROUND</abnormalType>
 		<activateRate>10</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill1230</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>

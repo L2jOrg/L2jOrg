@@ -1,232 +1,328 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="18200" level="80" type="L2Npc" name="Charm of Corner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="18200" level="85" type="L2Monster" name="Charm of Corner">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="4019412" sp="60291" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
+		</skillList>
 	</npc>
-	<npc id="18201" level="80" type="L2Npc" name="Charm of Corner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="18201" level="85" type="L2Monster" name="Charm of Corner">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="4019412" sp="60291" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
+		</skillList>
 	</npc>
-	<npc id="18202" level="80" type="L2Npc" name="Charm of Corner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="18202" level="85" type="L2Monster" name="Charm of Corner">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="4019412" sp="60291" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
+		</skillList>
 	</npc>
-	<npc id="18203" level="80" type="L2Npc" name="Charm of Corner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="18203" level="85" type="L2Monster" name="Charm of Corner">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="4019412" sp="60291" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
+		</skillList>
 	</npc>
-	<npc id="18204" level="80" type="L2Npc" name="Charm of Corner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="18204" level="85" type="L2Monster" name="Charm of Corner">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="4019412" sp="60291" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
+		</skillList>
 	</npc>
-	<npc id="18205" level="80" type="L2Npc" name="Charm of Corner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="18205" level="85" type="L2Monster" name="Charm of Corner">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="4019412" sp="60291" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
+		</skillList>
 	</npc>
-	<npc id="18206" level="80" type="L2Npc" name="Charm of Corner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="18206" level="85" type="L2Monster" name="Charm of Corner">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="4019412" sp="60291" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
+		</skillList>
 	</npc>
-	<npc id="18207" level="80" type="L2Npc" name="Charm of Corner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="18207" level="85" type="L2Monster" name="Charm of Corner">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="4019412" sp="60291" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
+		</skillList>
 	</npc>
-	<npc id="18208" level="80" type="L2Npc" name="Charm of Corner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="18208" level="85" type="L2Monster" name="Charm of Corner">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="4019412" sp="60291" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
+		</skillList>
 	</npc>
-	<npc id="18209" level="80" type="L2Npc" name="Charm of Corner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="18209" level="85" type="L2Monster" name="Charm of Corner">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="4019412" sp="60291" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
+		</skillList>
 	</npc>
-	<npc id="18210" level="80" type="L2Npc" name="Charm of Corner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="18210" level="85" type="L2Monster" name="Charm of Corner">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="4019412" sp="60291" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
+		</skillList>
 	</npc>
-	<npc id="18211" level="80" type="L2Npc" name="Charm of Corner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="18211" level="85" type="L2Monster" name="Charm of Corner">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="4019412" sp="60291" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
+		</skillList>
 	</npc>
 	<npc id="18212" level="80" type="L2Npc" name="Halisha's Archon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -504,81 +600,105 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="18226" level="80" type="L2Npc" name="Caster of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="18226" level="85" type="L2Monster" name="Caster of Darkness">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="2979228" sp="44688" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="21574.6007875" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="70" />
 				<run ground="155" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+		</skillList>
 	</npc>
-	<npc id="18227" level="80" type="L2Npc" name="Caster of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="18227" level="85" type="L2Monster" name="Caster of Darkness">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="2979228" sp="44688" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="21574.6007875" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="70" />
 				<run ground="155" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+		</skillList>
 	</npc>
-	<npc id="18228" level="80" type="L2Npc" name="Caster of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="18228" level="85" type="L2Monster" name="Caster of Darkness">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="2979228" sp="44688" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="21574.6007875" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="70" />
 				<run ground="155" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+		</skillList>
 	</npc>
-	<npc id="18229" level="80" type="L2Npc" name="Caster of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="18229" level="85" type="L2Monster" name="Caster of Darkness">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="2979228" sp="44688" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="21574.6007875" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="70" />
 				<run ground="155" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+		</skillList>
 	</npc>
 	<npc id="18230" level="80" type="L2Npc" name="Signet of Emperor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

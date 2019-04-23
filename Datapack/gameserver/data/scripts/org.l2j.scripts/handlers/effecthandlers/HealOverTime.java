@@ -19,8 +19,10 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.effects.AbstractEffect;
+import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.serverpackets.ExRegenMax;
 
 /**
@@ -37,7 +39,7 @@ public final class HealOverTime extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		if (effected.isDead() || effected.isDoor())
 		{
@@ -52,8 +54,14 @@ public final class HealOverTime extends AbstractEffect
 		{
 			return false;
 		}
-		
-		hp += _power * getTicksMultiplier();
+
+		double power = _power;
+		if ((item != null) && (item.isPotion() || item.isElixir()))
+		{
+			power += effected.getStat().getValue(Stats.ADDITIONAL_POTION_HP, 0) / getTicks();
+		}
+
+		hp += power * getTicksMultiplier();
 		hp = Math.min(hp, maxhp);
 		effected.setCurrentHp(hp, false);
 		effected.broadcastStatusUpdate(effector);
@@ -61,11 +69,21 @@ public final class HealOverTime extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		if (effected.isPlayer() && (getTicks() > 0) && (skill.getAbnormalType() == AbnormalType.HP_RECOVER))
 		{
-			effected.sendPacket(new ExRegenMax(skill.getAbnormalTime(), getTicks(), _power));
+			double power = _power;
+			if ((item != null) && (item.isPotion() || item.isElixir()))
+			{
+				final double bonus = effected.getStat().getValue(Stats.ADDITIONAL_POTION_HP, 0);
+				if (bonus > 0)
+				{
+					power += bonus / getTicks();
+				}
+			}
+
+			effected.sendPacket(new ExRegenMax(skill.getAbnormalTime(), getTicks(), power));
 		}
 	}
 }

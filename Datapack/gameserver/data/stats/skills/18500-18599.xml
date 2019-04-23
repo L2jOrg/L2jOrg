@@ -1,58 +1,54 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="18564" toLevel="1" name="Shiny Jewelry Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18566" toLevel="5" name="Garnet">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +$s1. -->
+		<icon>icon.etc_bm_jewel_garnet</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18567" toLevel="2" name="Garnet - Special Ability">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Becomes invincible from debuffs for 5 sec. -->
+		<icon>icon.etc_bm_jewel_garnet</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18571" toLevel="1" name="Hero's Basics - I">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Acquired XP/ SP +3%. -->
+		<icon>icon.skill18571</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18572" toLevel="1" name="Hero's Basics - II">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Acquired XP/ SP +7%. -->
+		<icon>icon.skill18572</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18573" toLevel="1" name="Hero's Basics - III">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- XP/ SP +3%. XP -20% if your character dies. -->
+		<icon>icon.skill18573</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18575" toLevel="1" name="Call to Hunt - I">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Max HP/ MP/ CP +200, M./ P. Atk. +5%, M./ P. Atk. +5%. -->
+		<icon>icon.skill18575</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18576" toLevel="1" name="Call to Hunt - II">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- P. Critical Damage +45, M. Critical +30, P. Critical Rate/ M. Critical Rate +10. -->
+		<icon>icon.skill18576</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18577" toLevel="1" name="Call to Battle">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Damage in PvP -5%, Debuff Resistance +10%. -->
+		<icon>icon.skill18577</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18578" toLevel="1" name="Song Contest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- World Chat Points +20. -->
+		<icon>icon.skill18578</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18588" toLevel="1" name="Fortune Brooch">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

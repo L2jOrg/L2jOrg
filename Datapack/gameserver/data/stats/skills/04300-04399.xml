@@ -1,108 +1,104 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4300" toLevel="1" name="Race">
-		<!-- Freya retail confirmed -->
-		<!-- Race Giant -->
+		<!-- Giant -->
 		<icon>icon.skill4300</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4301" toLevel="1" name="Race">
-		<!-- Freya retail confirmed -->
-		<!-- Race Bug -->
+		<!-- Bug -->
 		<icon>icon.skill4301</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4302" toLevel="1" name="Race">
-		<!-- Freya retail confirmed -->
-		<!-- Race Fairy -->
+		<!-- Fairies -->
 		<icon>icon.skill4302</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4303" toLevel="1" name="Enchant Type">
-		<!-- Freya retail confirmed -->
+		<!-- Monster whose HP is 2 times higher than normal. -->
 		<icon>icon.skill4303</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4304" toLevel="1" name="Enchant Type">
-		<!-- Freya retail confirmed -->
+		<!-- Monster whose HP is 3 times higher than normal. -->
 		<icon>icon.skill4304</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4305" toLevel="1" name="Enchant Type">
-		<!-- Freya retail confirmed -->
+		<!-- Monster whose HP is 4 times higher than normal. -->
 		<icon>icon.skill4305</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4306" toLevel="1" name="Enchant Type">
-		<!-- Freya retail confirmed -->
+		<!-- Monster whose HP is 5 times higher than normal. -->
 		<icon>icon.skill4306</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4307" toLevel="1" name="Enchant Type">
-		<!-- Freya retail confirmed -->
+		<!-- Monster whose HP is 6 times higher than normal. -->
 		<icon>icon.skill4307</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4308" toLevel="1" name="Enchant Type">
-		<!-- Freya retail confirmed -->
+		<!-- Monster whose HP is 7 times higher than normal. -->
 		<icon>icon.skill4308</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4309" toLevel="1" name="Enchant Type">
-		<!-- Freya retail confirmed -->
+		<!-- Monster whose HP is 8 times higher than normal. -->
 		<icon>icon.skill4309</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4310" toLevel="1" name="Enchant Type">
-		<!-- Freya retail confirmed -->
+		<!-- Monster whose HP is 9 times higher than normal. -->
 		<icon>icon.skill4310</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4311" toLevel="1" name="Week Type">
-		<!-- Freya retail confirmed -->
+		<!-- Monster with 1/ 2 the normal HP. -->
 		<icon>icon.skill4311</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4312" toLevel="1" name="Defense Type">
-		<!-- Freya retail confirmed -->
+		<!-- Monster equipped with heavy armor. -->
 		<icon>icon.skill4312</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4313" toLevel="1" name="Defense Type">
-		<!-- Freya retail confirmed -->
+		<!-- Monster equipped with light armor. -->
 		<icon>icon.skill4313</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4314" toLevel="12" name="Holy Light Burst">
-		<!-- Freya retail confirmed -->
 		<affectRange>200</affectRange>
 		<castRange>700</castRange>
 		<effectPoint>-100</effectPoint>
@@ -139,7 +135,6 @@
 			<value level="12">116</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -164,7 +159,8 @@
 		</effects>
 	</skill>
 	<skill id="4315" toLevel="12" name="Hold">
-		<!-- Freya retail confirmed -->
+		<!-- Inflicted with Hold and unable to move. -->
+		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -176,7 +172,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1200</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1201</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -207,7 +202,6 @@
 			<value level="12">116</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>HOLD</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -218,7 +212,6 @@
 		</effects>
 	</skill>
 	<skill id="4316" toLevel="12" name="Drain HP">
-		<!-- Freya retail confirmed -->
 		<affectRange>150</affectRange>
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
@@ -255,7 +248,6 @@
 			<value level="12">209</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -281,7 +273,6 @@
 		</effects>
 	</skill>
 	<skill id="4317" toLevel="5" name="Increase Rage Might">
-		<!-- Freya retail confirmed -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -296,7 +287,6 @@
 		<magicLvl>60</magicLvl>
 		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -316,7 +306,11 @@
 		</effects>
 	</skill>
 	<skill id="4318" toLevel="2" name="Ultimate Buff">
-		<!-- Glory Days confirmed -->
+		<!-- P. Atk. and P. Def. are increased. -->
+		<icon>
+			<value level="1">icon.skill0755</value>
+			<value level="2">icon.skill0757</value>
+		</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ULTIMATE_BUFF</abnormalType>
@@ -325,15 +319,10 @@
 		<magicLvl>60</magicLvl>
 		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>
-			<value level="1">icon.skill0755</value>
-			<value level="2">icon.skill0757</value>
-		</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -378,6 +367,8 @@
 		</effects>
 	</skill>
 	<skill id="4319" toLevel="1" name="Paralysis">
+		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -385,13 +376,11 @@
 		<castRange>1500</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>2000</effectRange>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -403,7 +392,8 @@
 		</effects>
 	</skill>
 	<skill id="4320" toLevel="12" name="Poison">
-		<!-- Freya retail confirmed -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -425,7 +415,6 @@
 		<castRange>1500</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>2000</effectRange>
-		<icon>icon.skill4035</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
@@ -457,7 +446,6 @@
 			<value level="12">78</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -485,20 +473,19 @@
 		</effects>
 	</skill>
 	<skill id="4321" toLevel="1" name="Decrease P. Def.">
-		<!-- Freya retail confirmed -->
+		<!-- P. Def. greatly decreases temporarily. -->
+		<icon>icon.skill0122</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<castRange>1500</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>2000</effectRange>
-		<icon>icon.skill0122</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -512,18 +499,16 @@
 		</effects>
 	</skill>
 	<skill id="4322" toLevel="1" name="Adventurer's Wind Walk">
-		<!-- Freya retail confirmed -->
-		<!-- Newbie Guide Buff -->
+		<!-- Speed increases temporarily. Effect 2. -->
+		<icon>icon.skill1204</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1204</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -537,18 +522,16 @@
 		</effects>
 	</skill>
 	<skill id="4323" toLevel="1" name="Adventurer's Shield">
-		<!-- Freya retail confirmed -->
-		<!-- Newbie Guide Buff -->
+		<!-- For 60 min., P. Def. +15% -->
+		<icon>icon.skill1040</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1040</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -562,18 +545,16 @@
 		</effects>
 	</skill>
 	<skill id="4324" toLevel="1" name="Adventurer's Blessed Body">
-		<!-- Freya retail confirmed -->
-		<!-- Newbie Guide Buff -->
+		<!-- For 60 min., Max HP +35%. -->
+		<icon>icon.skill1045</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1045</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -587,18 +568,16 @@
 		</effects>
 	</skill>
 	<skill id="4325" toLevel="1" name="Adventurer's Vampiric Rage">
-		<!-- Freya retail confirmed -->
-		<!-- Newbie Guide Buff -->
+		<!-- For 60 min., recovers as HP 9% of the physical damage inflicted on the enemy with a certain probability. -->
+		<icon>icon.skill1268</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1268</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -612,18 +591,16 @@
 		</effects>
 	</skill>
 	<skill id="4326" toLevel="1" name="Adventurer's Regeneration">
-		<!-- Freya retail confirmed -->
-		<!-- Newbie Guide Buff -->
+		<!-- For 60 min., HP Recovery Bonus +20%. -->
+		<icon>icon.skill1044</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>HP_REGEN_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1044</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -637,18 +614,16 @@
 		</effects>
 	</skill>
 	<skill id="4327" toLevel="1" name="Adventurer's Haste">
-		<!-- Freya retail confirmed -->
-		<!-- Newbie Guide Buff -->
+		<!-- Atk. Spd. +15% for 60 min. -->
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1086</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -662,18 +637,16 @@
 		</effects>
 	</skill>
 	<skill id="4328" toLevel="1" name="Adventurer's Blessed Soul">
-		<!-- Freya retail confirmed -->
-		<!-- Newbie Guide Buff -->
+		<!-- For 60 min., Max HP +35%. -->
+		<icon>icon.skill1048</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1048</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -687,18 +660,16 @@
 		</effects>
 	</skill>
 	<skill id="4329" toLevel="1" name="Adventurer's Acumen">
-		<!-- Freya retail confirmed -->
-		<!-- Newbie Guide Buff -->
+		<!-- For 60 min., Casting Spd. +30% -->
+		<icon>icon.skill1085</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1085</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -712,18 +683,16 @@
 		</effects>
 	</skill>
 	<skill id="4330" toLevel="1" name="Adventurer's Concentration">
-		<!-- Freya retail confirmed -->
-		<!-- Newbie Guide Buff -->
+		<!-- For 60 min., magic cancel rate -18. -->
+		<icon>icon.skill1078</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1078</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -737,18 +706,16 @@
 		</effects>
 	</skill>
 	<skill id="4331" toLevel="1" name="Adventurer's Empower">
-		<!-- Freya retail confirmed -->
-		<!-- Newbie Guide Buff -->
+		<!-- For 60 min., M. Atk. +55%. -->
+		<icon>icon.skill1059</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1059</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -762,7 +729,7 @@
 		</effects>
 	</skill>
 	<skill id="4332" toLevel="1" name="Mental Aegis">
-		<!-- Freya retail confirmed -->
+		<!-- Provides powerful Hold/ Sleep/ Fear/ Silence Resistance. -->
 		<icon>icon.skill1035</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -776,7 +743,7 @@
 		</effects>
 	</skill>
 	<skill id="4333" toLevel="5" name="Dark Attack Resistance">
-		<!-- Freya retail confirmed -->
+		<!-- Resistant to Dark attacks. -->
 		<icon>icon.skill4333</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -795,13 +762,11 @@
 		</effects>
 	</skill>
 	<skill id="4334" toLevel="1" name="SSQ Cancel">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>2000</affectRange>
 		<castRange>1000</castRange>
 		<effectRange>1500</effectRange>
 		<magicLvl>99</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -812,7 +777,7 @@
 		</effects>
 	</skill>
 	<skill id="4335" toLevel="1" name="Holy Attack">
-		<!-- Freya retail confirmed -->
+		<!-- Unleashes a holy attack. -->
 		<icon>icon.skill1043</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -825,7 +790,7 @@
 		</effects>
 	</skill>
 	<skill id="4336" toLevel="5" name="Dark Attack Vulnerability">
-		<!-- Freya retail confirmed -->
+		<!-- Vulnerable to Dark attacks. -->
 		<icon>icon.skill4336_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -844,7 +809,7 @@
 		</effects>
 	</skill>
 	<skill id="4337" toLevel="5" name="Holy Attack Resistance">
-		<!-- Freya retail confirmed -->
+		<!-- Resistant to Holy attacks. -->
 		<icon>icon.skill4337</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -863,14 +828,11 @@
 		</effects>
 	</skill>
 	<skill id="4338" toLevel="1" name="Adventurer's Life Cubic">
-		<!-- Confirmed CT2.5 -->
-		<!-- Newbie Guide Buff -->
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>18</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -883,19 +845,16 @@
 		</effects>
 	</skill>
 	<skill id="4339" toLevel="1" name="Mimir's Elixir">
-		<!-- Freya retail confirmed -->
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<magicLvl>60</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4340" toLevel="1" name="Ultimate Buff">
-		<!-- Freya retail confirmed -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ULTIMATE_BUFF</abnormalType>
@@ -904,7 +863,6 @@
 		<magicLvl>60</magicLvl>
 		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -920,7 +878,6 @@
 		</effects>
 	</skill>
 	<skill id="4341" toLevel="1" name="Ultimate Buff">
-		<!-- Freya retail confirmed -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ULTIMATE_BUFF</abnormalType>
@@ -929,7 +886,6 @@
 		<magicLvl>60</magicLvl>
 		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -949,7 +905,8 @@
 		</effects>
 	</skill>
 	<skill id="4342" toLevel="2" name="Wind Walk">
-		<!-- Freya retail confirmed -->
+		<!-- Increases Speed temporarily. Effect $s1 -->
+		<icon>icon.skill1204</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -958,7 +915,6 @@
 		<abnormalType>SPEED_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1204</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -966,7 +922,6 @@
 			<value level="2">100</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -983,7 +938,8 @@
 		</effects>
 	</skill>
 	<skill id="4343" toLevel="3" name="Decrease Weight">
-		<!-- Freya retail confirmed -->
+		<!-- Reduces current weight. Effect $s1 -->
+		<icon>icon.skill1257</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -993,7 +949,6 @@
 		<abnormalType>DECREASE_WEIGHT_PENALTY</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1257</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -1002,7 +957,6 @@
 			<value level="3">100</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1019,7 +973,8 @@
 		</effects>
 	</skill>
 	<skill id="4344" toLevel="3" name="Shield">
-		<!-- Freya retail confirmed -->
+		<!-- Increases defense power temporarily. Effect $s1 -->
+		<icon>icon.skill1040</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1029,7 +984,6 @@
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1040</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">7</value>
@@ -1042,7 +996,6 @@
 			<value level="3">100</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1060,7 +1013,8 @@
 		</effects>
 	</skill>
 	<skill id="4345" toLevel="3" name="Might">
-		<!-- Freya retail confirmed -->
+		<!-- P. Atk. increases temporarily. Effect $s1 -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1070,7 +1024,6 @@
 		<abnormalType>PA_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1068</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -1079,7 +1032,6 @@
 			<value level="3">100</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1097,7 +1049,8 @@
 		</effects>
 	</skill>
 	<skill id="4346" toLevel="4" name="Mental Shield">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily increases Hold/ Sleep/ Fear/ Mental Attack Resistance. Effect $s1 -->
+		<icon>icon.skill1035</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1108,7 +1061,6 @@
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1035</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -1118,7 +1070,6 @@
 			<value level="4">100</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1148,7 +1099,8 @@
 		</effects>
 	</skill>
 	<skill id="4347" toLevel="6" name="Blessed Body">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily increases maximum HP. Effect $s1 -->
+		<icon>icon.skill1045</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1161,7 +1113,6 @@
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1045</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -1173,7 +1124,6 @@
 			<value level="6">300</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1194,7 +1144,8 @@
 		</effects>
 	</skill>
 	<skill id="4348" toLevel="6" name="Blessed Soul">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily increases maximum MP. Effect $s1 -->
+		<icon>icon.skill1048</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1207,7 +1158,6 @@
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1048</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -1219,7 +1169,6 @@
 			<value level="6">300</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1240,7 +1189,8 @@
 		</effects>
 	</skill>
 	<skill id="4349" toLevel="2" name="Magic Barrier">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily increases M. Def. Effect $s1 -->
+		<icon>icon.skill1036</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1249,7 +1199,6 @@
 		<abnormalType>MD_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1036</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -1257,7 +1206,6 @@
 			<value level="2">300</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1274,7 +1222,8 @@
 		</effects>
 	</skill>
 	<skill id="4350" toLevel="4" name="Stun Resistance">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily provides powerful resistance against Stun Attack. Effect $s1 -->
+		<icon>icon.skill1259</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1285,7 +1234,6 @@
 		<abnormalType>RESIST_SHOCK</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1259</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -1295,7 +1243,6 @@
 			<value level="4">300</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1313,7 +1260,8 @@
 		</effects>
 	</skill>
 	<skill id="4351" toLevel="6" name="Concentration">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily lowers the probability of magic being canceled due to damage taken. Effect $s1 -->
+		<icon>icon.skill1078</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1326,7 +1274,6 @@
 		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1078</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -1338,7 +1285,6 @@
 			<value level="6">400</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1359,7 +1305,8 @@
 		</effects>
 	</skill>
 	<skill id="4352" toLevel="2" name="Berserker Spirit">
-		<!-- Freya retail confirmed -->
+		<!-- P. Def. decreases momentarily., M. Def. and Evasion, and increases P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed. Effect $s1 -->
+		<icon>icon.skill1062</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1368,7 +1315,6 @@
 		<abnormalType>BERSERKER</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1062</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -1376,7 +1322,6 @@
 			<value level="2">400</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1442,7 +1387,8 @@
 		</effects>
 	</skill>
 	<skill id="4353" toLevel="6" name="Blessed Shield">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily increases the probability of shield defense. Effect $s1 -->
+		<icon>icon.skill1243</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1455,7 +1401,6 @@
 		<abnormalType>SHIELD_PROB_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1243</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -1467,7 +1412,6 @@
 			<value level="6">400</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1488,7 +1432,8 @@
 		</effects>
 	</skill>
 	<skill id="4354" toLevel="4" name="Vampiric Rage">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily restores HP using damage inflicted upon the enemy with a certain probability. Effect $s1 -->
+		<icon>icon.skill1268</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1499,7 +1444,6 @@
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1268</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -1509,7 +1453,6 @@
 			<value level="4">400</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1528,7 +1471,8 @@
 		</effects>
 	</skill>
 	<skill id="4355" toLevel="3" name="Acumen">
-		<!-- Freya retail confirmed -->
+		<!-- Increases Casting Spd. temporarily. Effect $s1 -->
+		<icon>icon.skill1085</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1538,7 +1482,6 @@
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1085</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -1547,7 +1490,6 @@
 			<value level="3">600</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1565,7 +1507,8 @@
 		</effects>
 	</skill>
 	<skill id="4356" toLevel="3" name="Empower">
-		<!-- Freya retail confirmed -->
+		<!-- Increases M. Atk. power temporarily. Effect $s1 -->
+		<icon>icon.skill1059</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1575,7 +1518,6 @@
 		<abnormalType>MA_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1059</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -1584,7 +1526,6 @@
 			<value level="3">600</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1602,7 +1543,8 @@
 		</effects>
 	</skill>
 	<skill id="4357" toLevel="2" name="Haste">
-		<!-- Freya retail confirmed -->
+		<!-- Atk. Spd. increases temporarily. Effect $s1 -->
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1611,7 +1553,6 @@
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1086</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -1619,7 +1560,6 @@
 			<value level="2">600</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1636,7 +1576,8 @@
 		</effects>
 	</skill>
 	<skill id="4358" toLevel="3" name="Guidance">
-		<!-- Freya retail confirmed -->
+		<!-- Increases Accuracy temporarily. Effect $s1 -->
+		<icon>icon.skill1240</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1646,7 +1587,6 @@
 		<abnormalType>HIT_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1240</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -1655,7 +1595,6 @@
 			<value level="3">400</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1673,7 +1612,8 @@
 		</effects>
 	</skill>
 	<skill id="4359" toLevel="3" name="Focus">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily increases critical P. Atk. rate. Effect $s1 -->
+		<icon>icon.skill1077</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1683,7 +1623,6 @@
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1077</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -1692,7 +1631,6 @@
 			<value level="3">600</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1710,7 +1648,8 @@
 		</effects>
 	</skill>
 	<skill id="4360" toLevel="3" name="Death Whisper">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily increase the Critical P. Atk. Effect $s1 -->
+		<icon>icon.skill1242</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1720,7 +1659,6 @@
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1242</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>
@@ -1729,7 +1667,6 @@
 			<value level="3">600</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1747,8 +1684,8 @@
 		</effects>
 	</skill>
 	<skill id="4361" toLevel="2" name="Curse of Destruction">
-		<!-- Freya retail confirmed -->
-		<!-- Fighter -->
+		<!-- Curse of the Preacher of Doom. Momentarily decreases Accuracy. Effect $s1 -->
+		<icon>icon.skill0046</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1758,12 +1695,10 @@
 		<canBeDispelled>false</canBeDispelled>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill0046</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1792,8 +1727,8 @@
 		</effects>
 	</skill>
 	<skill id="4362" toLevel="2" name="Curse of Destruction">
-		<!-- Freya retail confirmed -->
-		<!-- Mage -->
+		<!-- Curse of the Preacher of Doom. Momentarily decreases Casting Spd. Effect $s1 -->
+		<icon>icon.skill0046</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1803,12 +1738,10 @@
 		<canBeDispelled>false</canBeDispelled>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill0046</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1837,18 +1770,17 @@
 		</effects>
 	</skill>
 	<skill id="4363" toLevel="1" name="Curse of Destruction">
-		<!-- Freya retail confirmed -->
+		<!-- Curse of the Preacher of Doom. Momentarily decreases Accuracy. Effect 1. -->
+		<icon>icon.skill0046</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HIT_DOWN</abnormalType>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill0046</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1863,8 +1795,8 @@
 		</effects>
 	</skill>
 	<skill id="4364" toLevel="2" name="Blessing of Revelations">
-		<!-- Freya retail confirmed -->
-		<!-- Fighter -->
+		<!-- Blessing of the Orator of Revelations. Momentarily decreases body weight and increases Poison/ Bleed Resistance. Effect $s1 -->
+		<icon>icon.skill1044</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1874,11 +1806,9 @@
 		<canBeDispelled>false</canBeDispelled>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1044</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1909,8 +1839,8 @@
 		</effects>
 	</skill>
 	<skill id="4365" toLevel="2" name="Blessing of Revelations">
-		<!-- Mage -->
-		<!-- Freya retail confirmed -->
+		<!-- Blessing of the Orator of Revelations. Momentarily increases your Hold/ Mental Attack Resistance and lessens the probability of magic cancellation due to damage. Effect $s1 -->
+		<icon>icon.skill1044</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1920,11 +1850,9 @@
 		<canBeDispelled>false</canBeDispelled>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1044</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1951,18 +1879,17 @@
 		</effects>
 	</skill>
 	<skill id="4366" toLevel="1" name="Blessing of Revelations">
-		<!-- Freya retail confirmed -->
+		<!-- Blessing of the Orator of Revelations. Momentarily decreases body weight and increases Poison/ Bleed Resistance. Effect 1. -->
+		<icon>icon.skill1044</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DECREASE_WEIGHT_PENALTY</abnormalType>
 		<canBeDispelled>false</canBeDispelled>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1044</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1981,16 +1908,15 @@
 		</effects>
 	</skill>
 	<skill id="4367" toLevel="1" name="Clan Hall Blessing">
-		<!-- Freya retail confirmed -->
+		<!-- Receiving the fortress blessing. -->
+		<icon>icon.skill11756</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<icon>icon.skill11756</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2001,16 +1927,15 @@
 		</effects>
 	</skill>
 	<skill id="4368" toLevel="1" name="Clan Hall Blessing">
-		<!-- Freya retail confirmed -->
+		<!-- Receiving the fortress blessing. -->
+		<icon>icon.skill11756</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<icon>icon.skill11756</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2025,16 +1950,15 @@
 		</effects>
 	</skill>
 	<skill id="4369" toLevel="1" name="Clan Hall Blessing">
-		<!-- Freya retail confirmed -->
+		<!-- Receiving the fortress blessing. -->
+		<icon>icon.skill11756</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<icon>icon.skill11756</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2049,16 +1973,15 @@
 		</effects>
 	</skill>
 	<skill id="4370" toLevel="1" name="Clan Hall Blessing">
-		<!-- Freya retail confirmed -->
+		<!-- Receiving the fortress blessing. -->
+		<icon>icon.skill11756</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<icon>icon.skill11756</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2073,16 +1996,15 @@
 		</effects>
 	</skill>
 	<skill id="4371" toLevel="1" name="Clan Hall Blessing">
-		<!-- Freya retail confirmed -->
+		<!-- Receiving the fortress blessing. -->
+		<icon>icon.skill11756</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<icon>icon.skill11756</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2097,16 +2019,15 @@
 		</effects>
 	</skill>
 	<skill id="4372" toLevel="1" name="Clan Hall Blessing">
-		<!-- Freya retail confirmed -->
+		<!-- Receiving the fortress blessing. -->
+		<icon>icon.skill11756</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<icon>icon.skill11756</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2121,16 +2042,15 @@
 		</effects>
 	</skill>
 	<skill id="4373" toLevel="1" name="Clan Hall Blessing">
-		<!-- Freya retail confirmed -->
+		<!-- Receiving the fortress blessing. -->
+		<icon>icon.skill11756</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<icon>icon.skill11756</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2145,16 +2065,15 @@
 		</effects>
 	</skill>
 	<skill id="4374" toLevel="1" name="Clan Hall Blessing">
-		<!-- Freya retail confirmed -->
+		<!-- Receiving the fortress blessing. -->
+		<icon>icon.skill11756</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<icon>icon.skill11756</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2169,16 +2088,15 @@
 		</effects>
 	</skill>
 	<skill id="4375" toLevel="1" name="Clan Hall Blessing">
-		<!-- Freya retail confirmed -->
+		<!-- Receiving the fortress blessing. -->
+		<icon>icon.skill11756</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<icon>icon.skill11756</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2193,7 +2111,7 @@
 		</effects>
 	</skill>
 	<skill id="4376" toLevel="1" name="Greater Physical Attack Resistance">
-		<!-- Freya retail confirmed -->
+		<!-- Provides very strong resistance against P. Atk. -->
 		<icon>icon.skill4376</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2206,7 +2124,6 @@
 		</effects>
 	</skill>
 	<skill id="4377" toLevel="12" name="Wield Temper">
-		<!-- Freya retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2242,7 +2159,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2266,13 +2182,13 @@
 		</effects>
 	</skill>
 	<skill id="4378" toLevel="12" name="Damage Shield">
-		<!-- Freya retail confirmed -->
+		<!-- Temporarily returns some of the received damage back to the enemy. -->
+		<icon>icon.action105</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>1800</hitTime>
-		<icon>icon.action105</icon>
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -2303,7 +2219,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2318,7 +2233,7 @@
 		</effects>
 	</skill>
 	<skill id="4379" toLevel="5" name="Spear Resistance">
-		<!-- Freya retail confirmed -->
+		<!-- Spear Resistance -->
 		<icon>icon.skill4379</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2336,14 +2251,11 @@
 		</effects>
 	</skill>
 	<skill id="4380" toLevel="1" name="Arena CP Recovery">
-		<!-- Confirmed CT2.5 -->
-		<!-- Arena Skill -->
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -2356,14 +2268,14 @@
 		</effects>
 	</skill>
 	<skill id="4381" toLevel="1" name="Week Type">
-		<!-- Freya retail confirmed -->
+		<!-- Monster with 1/ 4 the normal HP. -->
 		<icon>icon.skill4381</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType> <!-- Just Boadcast -->
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4382" toLevel="12" name="Curse of Lake Ghost">
-		<!-- Freya retail confirmed -->
+		<!-- The Lake Ghost hexes you, temporarily increasing the size of your head. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
@@ -2403,7 +2315,6 @@
 			<value level="12">85</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>200</effectRange>
@@ -2429,7 +2340,6 @@
 		</effects>
 	</skill>
 	<skill id="4383" toLevel="1" name="Aggression Stone">
-		<!-- Freya retail confirmed -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
@@ -2440,7 +2350,6 @@
 		<attributeValue>20</attributeValue>
 		<magicLvl>80</magicLvl>
 		<operateType>A3</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2456,17 +2365,16 @@
 		</effects>
 	</skill>
 	<skill id="4384" toLevel="1" name="Scapegoat's Grace">
-		<!-- Freya retail confirmed -->
+		<!-- Scapegoat's Grace. Temporarily protects against any debuff that lowers P. Def. -->
+		<icon>icon.skill0122</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill0122</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2475,17 +2383,16 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4385" toLevel="1" name="Scapegoat's Grace">
-		<!-- Freya retail confirmed -->
+		<!-- Scapegoat's Grace. Temporarily protects against any debuff that lowers P. Atk. -->
+		<icon>icon.skill4037</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill4037</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2494,7 +2401,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4386" toLevel="1" name="Scapegoat's Grace">
-		<!-- Freya retail confirmed -->
+		<!-- Scapegoat's Grace. Temporarily protects against poison. -->
+		<icon>icon.skill4036</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -2502,10 +2410,8 @@
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill4036</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2515,17 +2421,16 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4387" toLevel="1" name="Scapegoat's Grace">
-		<!-- Freya retail confirmed -->
+		<!-- Scapegoat's Grace. Temporarily protects against any de-buff that diminishes the effect of HP recovery magic. -->
+		<icon>icon.skill1269</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill1269</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2534,7 +2439,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4388" toLevel="5" name="Paralysis Resistance">
-		<!-- Freya retail confirmed -->
+		<!-- Resistant to paralyzing attacks. -->
 		<icon>icon.skill4388</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2552,7 +2457,7 @@
 		</effects>
 	</skill>
 	<skill id="4389" toLevel="5" name="Mental Attack Resistance">
-		<!-- Freya retail confirmed -->
+		<!-- Resistant to Mental Derangement -->
 		<icon>icon.skill4389</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2570,8 +2475,6 @@
 		</effects>
 	</skill>
 	<skill id="4390" toLevel="2" name="Mystic Immunity">
-		<!-- TODO: Auto level parse, Requires manual update -->
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2581,7 +2484,8 @@
 		</effects>
 	</skill>
 	<skill id="4391" toLevel="2" name="Wind Walk">
-		<!-- Freya retail confirmed -->
+		<!-- Increases Speed temporarily. Effect $s1 -->
+		<icon>icon.skill1204</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2591,11 +2495,9 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>100</hitTime>
-		<icon>icon.skill1204</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2612,7 +2514,8 @@
 		</effects>
 	</skill>
 	<skill id="4392" toLevel="3" name="Shield">
-		<!-- Freya retail confirmed -->
+		<!-- Increases defense power temporarily. Effect $s1 -->
+		<icon>icon.skill1040</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2623,11 +2526,9 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>100</hitTime>
-		<icon>icon.skill1040</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2645,8 +2546,8 @@
 		</effects>
 	</skill>
 	<skill id="4393" toLevel="3" name="Might">
-		<!-- Freya retail confirmed -->
-		<!-- by DrLecter -->
+		<!-- P. Atk. increases temporarily. Effect $s1 -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2656,11 +2557,9 @@
 		<abnormalType>PA_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1068</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2678,7 +2577,8 @@
 		</effects>
 	</skill>
 	<skill id="4394" toLevel="6" name="Blessed Body">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily increases maximum HP. Effect $s1 -->
+		<icon>icon.skill1045</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2691,11 +2591,9 @@
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1045</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2716,7 +2614,8 @@
 		</effects>
 	</skill>
 	<skill id="4395" toLevel="6" name="Blessed Soul">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily increases maximum MP. Effect $s1 -->
+		<icon>icon.skill1048</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2729,11 +2628,9 @@
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1048</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2754,7 +2651,8 @@
 		</effects>
 	</skill>
 	<skill id="4396" toLevel="2" name="Magic Barrier">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily increases M. Def. Effect $s1 -->
+		<icon>icon.skill1036</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -2763,11 +2661,9 @@
 		<abnormalType>MD_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1036</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2784,8 +2680,8 @@
 		</effects>
 	</skill>
 	<skill id="4397" toLevel="2" name="Berserker Spirit">
-		<!-- Freya retail confirmed -->
-		<!-- by DrLecter -->
+		<!-- P. Def. decreases momentarily., M. Def. and Evasion, and increases P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed. Effect $s1 -->
+		<icon>icon.skill1062</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2794,11 +2690,9 @@
 		<abnormalType>BERSERKER</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1062</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2864,7 +2758,8 @@
 		</effects>
 	</skill>
 	<skill id="4398" toLevel="6" name="Blessed Shield">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily increases the probability of shield defense. Effect $s1 -->
+		<icon>icon.skill1243</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2877,11 +2772,9 @@
 		<abnormalType>SHIELD_PROB_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1243</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2902,7 +2795,8 @@
 		</effects>
 	</skill>
 	<skill id="4399" toLevel="4" name="Vampiric Rage">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily restores HP using damage inflicted upon the enemy with a certain probability. Effect $s1 -->
+		<icon>icon.skill1268</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2913,11 +2807,9 @@
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1268</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

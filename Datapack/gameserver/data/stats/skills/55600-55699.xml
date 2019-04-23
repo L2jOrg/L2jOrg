@@ -1,34 +1,29 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="55600" toLevel="1" name="Blessed Support Cube">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>[icon.etc_golden_ore_cube_pc_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55601" toLevel="1" name="Party Support Cube - Lv. 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>[icon.etc_silver_ore_cube_pc_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55602" toLevel="1" name="Fishing Support Cube">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>[icon.etc_cupreous_ore_cube_pc_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55603" toLevel="1" name="Potion Support Cube - Lv. 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>[icon.etc_earthen_ore_cube_pc_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55604" toLevel="1" name="Progression Support Cube">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>[icon.etc_crystal_cube_event_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55605" toLevel="1" name="Artisan's Goggles (STR+1 INT+1)">
-		<icon>icon.skill55605</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>icon.accessory_dwarf_goggle_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -46,9 +41,9 @@
 		</effects>
 	</skill>
 	<skill id="55606" toLevel="1" name="Artisan's Goggles (DEX +1 WIT +1)">
-		<icon>icon.skill55606</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>icon.accessory_dwarf_goggle_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -66,9 +61,9 @@
 		</effects>
 	</skill>
 	<skill id="55607" toLevel="1" name="Artisan's Goggles (CON+1 MEN+1)">
-		<icon>icon.skill55607</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>icon.accessory_dwarf_goggle_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -86,9 +81,9 @@
 		</effects>
 	</skill>
 	<skill id="55608" toLevel="1" name="Uniform Hat (STR+1 INT+1)">
-		<icon>icon.skill55608</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>BranchSys.icon.br_Uniform_Hat_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -106,9 +101,9 @@
 		</effects>
 	</skill>
 	<skill id="55609" toLevel="1" name="Uniform Hat (DEX +1 WIT +1)">
-		<icon>icon.skill55609</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>BranchSys.icon.br_Uniform_Hat_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -126,9 +121,9 @@
 		</effects>
 	</skill>
 	<skill id="55610" toLevel="1" name="Uniform Hat (CON+1 MEN+1)">
-		<icon>icon.skill55610</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>BranchSys.icon.br_Uniform_Hat_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -146,9 +141,9 @@
 		</effects>
 	</skill>
 	<skill id="55611" toLevel="1" name="Assassin's Bamboo Hat (STR+1 INT+1)">
-		<icon>icon.skill55611</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>BranchSys.icon.br_Bamboo_Hat_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -166,9 +161,9 @@
 		</effects>
 	</skill>
 	<skill id="55612" toLevel="1" name="Assassin's Bamboo Hat (DEX +1 WIT +1)">
-		<icon>icon.skill55612</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>BranchSys.icon.br_Bamboo_Hat_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -186,9 +181,9 @@
 		</effects>
 	</skill>
 	<skill id="55613" toLevel="1" name="Assassin's Bamboo Hat (CON+1 MEN+1)">
-		<icon>icon.skill55613</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>BranchSys.icon.br_Bamboo_Hat_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -206,9 +201,9 @@
 		</effects>
 	</skill>
 	<skill id="55614" toLevel="1" name="Valkyrie Hat (STR+1 INT+1)">
-		<icon>icon.skill55614</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>BranchSys.icon.br_valkyrie_cap_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -226,9 +221,9 @@
 		</effects>
 	</skill>
 	<skill id="55615" toLevel="1" name="Valkyrie Hat (DEX +1 WIT +1)">
-		<icon>icon.skill55615</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>BranchSys.icon.br_valkyrie_cap_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -246,9 +241,9 @@
 		</effects>
 	</skill>
 	<skill id="55616" toLevel="1" name="Valkyrie Hat (CON+1 MEN+1)">
-		<icon>icon.skill55616</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>BranchSys.icon.br_valkyrie_cap_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -266,9 +261,9 @@
 		</effects>
 	</skill>
 	<skill id="55617" toLevel="1" name="Gatekeeper Hat (STR+1 INT+1)">
-		<icon>icon.skill55617</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>BranchSys.icon.br_gatekeeper_of_hat_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -286,9 +281,9 @@
 		</effects>
 	</skill>
 	<skill id="55618" toLevel="1" name="Gatekeeper Hat (DEX +1 WIT +1)">
-		<icon>icon.skill55618</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>BranchSys.icon.br_gatekeeper_of_hat_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -306,9 +301,9 @@
 		</effects>
 	</skill>
 	<skill id="55619" toLevel="1" name="Gatekeeper Hat (CON+1 MEN+1)">
-		<icon>icon.skill55619</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>BranchSys.icon.br_gatekeeper_of_hat_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -326,9 +321,9 @@
 		</effects>
 	</skill>
 	<skill id="55620" toLevel="1" name="Wedding Veil (STR+1 INT+1)">
-		<icon>icon.skill55620</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>BranchSys2.icon.br_wedding_vail_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -346,9 +341,9 @@
 		</effects>
 	</skill>
 	<skill id="55621" toLevel="1" name="Wedding Veil (DEX +1 WIT +1)">
-		<icon>icon.skill55621</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>BranchSys2.icon.br_wedding_vail_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -366,9 +361,9 @@
 		</effects>
 	</skill>
 	<skill id="55622" toLevel="1" name="Wedding Veil (CON+1 MEN+1)">
-		<icon>icon.skill55622</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>BranchSys2.icon.br_wedding_vail_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -386,9 +381,9 @@
 		</effects>
 	</skill>
 	<skill id="55623" toLevel="1" name="Maid Hair Accessory (STR+1 INT+1)">
-		<icon>icon.skill55623</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>BranchSys3.icon1.g_co_cutie_maid_hair</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -406,9 +401,9 @@
 		</effects>
 	</skill>
 	<skill id="55624" toLevel="1" name="Maid Hair Accessory (DEX +1 WIT +1)">
-		<icon>icon.skill55624</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>BranchSys3.icon1.g_co_cutie_maid_hair</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -426,9 +421,9 @@
 		</effects>
 	</skill>
 	<skill id="55625" toLevel="1" name="Maid Hair Accessory (CON+1 MEN+1)">
-		<icon>icon.skill55625</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>BranchSys3.icon1.g_co_cutie_maid_hair</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -446,9 +441,9 @@
 		</effects>
 	</skill>
 	<skill id="55626" toLevel="1" name="Refined Romantic Chapeau: Red (STR+1 INT+1)">
-		<icon>icon.skill55626</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>icon.bm_romantic_chaperon_red</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -466,9 +461,9 @@
 		</effects>
 	</skill>
 	<skill id="55627" toLevel="1" name="Refined Romantic Chapeau: Red (DEX+1 WIT+1)">
-		<icon>icon.skill55627</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>icon.bm_romantic_chaperon_red</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -486,9 +481,9 @@
 		</effects>
 	</skill>
 	<skill id="55628" toLevel="1" name="Refined Romantic Chapeau: Red (CON+1 MEN+1)">
-		<icon>icon.skill55628</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>icon.bm_romantic_chaperon_red</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -506,9 +501,9 @@
 		</effects>
 	</skill>
 	<skill id="55629" toLevel="1" name="Refined Angel Ring (STR+1 INT+1)">
-		<icon>icon.skill55629</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>icon.accessory_angel_ring_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -526,9 +521,9 @@
 		</effects>
 	</skill>
 	<skill id="55630" toLevel="1" name="Refined Angel Ring (DEX +1 WIT +1)">
-		<icon>icon.skill55630</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>icon.accessory_angel_ring_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -546,9 +541,9 @@
 		</effects>
 	</skill>
 	<skill id="55631" toLevel="1" name="Refined Angel Ring (CON+1 MEN+1)">
-		<icon>icon.skill55631</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>icon.accessory_angel_ring_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -566,9 +561,9 @@
 		</effects>
 	</skill>
 	<skill id="55632" toLevel="1" name="Refined Wizard Hat (STR+1 INT+1)">
-		<icon>icon.skill55632</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>icon.accessory_magician_cap2_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -586,9 +581,9 @@
 		</effects>
 	</skill>
 	<skill id="55633" toLevel="1" name="Refined Wizard Hat (DEX +1 WIT +1)">
-		<icon>icon.skill55633</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>icon.accessory_magician_cap2_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -606,9 +601,9 @@
 		</effects>
 	</skill>
 	<skill id="55634" toLevel="1" name="Refined Wizard Hat (CON+1 MEN+1)">
-		<icon>icon.skill55634</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>icon.accessory_magician_cap2_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -626,9 +621,9 @@
 		</effects>
 	</skill>
 	<skill id="55635" toLevel="1" name="Laborer Hat (STR+1 INT+1)">
-		<icon>icon.skill55635</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>BranchSys.icon.br_people_cap_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -646,9 +641,9 @@
 		</effects>
 	</skill>
 	<skill id="55636" toLevel="1" name="Laborer Hat (DEX +1 WIT +1)">
-		<icon>icon.skill55636</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>BranchSys.icon.br_people_cap_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -666,9 +661,9 @@
 		</effects>
 	</skill>
 	<skill id="55637" toLevel="1" name="Laborer Hat (CON+1 MEN+1)">
-		<icon>icon.skill55637</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>BranchSys.icon.br_people_cap_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -686,9 +681,9 @@
 		</effects>
 	</skill>
 	<skill id="55638" toLevel="1" name="Top Hat (STR+1 INT+1)">
-		<icon>icon.skill55638</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>icon.accessory_magicial_cap_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -706,9 +701,9 @@
 		</effects>
 	</skill>
 	<skill id="55639" toLevel="1" name="Top Hat (DEX +1 WIT +1)">
-		<icon>icon.skill55639</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>icon.accessory_magicial_cap_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -726,9 +721,9 @@
 		</effects>
 	</skill>
 	<skill id="55640" toLevel="1" name="Wizard Hat (CON+1 MEN+1)">
-		<icon>icon.skill55640</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>icon.accessory_magicial_cap_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -746,9 +741,9 @@
 		</effects>
 	</skill>
 	<skill id="55641" toLevel="1" name="Vigilante Hat (STR+1 INT+1)">
-		<icon>icon.skill55641</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>icon.zorocap</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -766,9 +761,9 @@
 		</effects>
 	</skill>
 	<skill id="55642" toLevel="1" name="Vigilante Hat (DEX +1 WIT +1)">
-		<icon>icon.skill55642</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>icon.zorocap</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -786,9 +781,9 @@
 		</effects>
 	</skill>
 	<skill id="55643" toLevel="1" name="Vigilante Hat (CON+1 MEN+1)">
-		<icon>icon.skill55643</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>icon.zorocap</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -806,9 +801,9 @@
 		</effects>
 	</skill>
 	<skill id="55644" toLevel="1" name="White Uniform Hat (STR+1 INT+1)">
-		<icon>icon.skill55644</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>BranchSys2.icon2.pi_navy_cap</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -826,9 +821,9 @@
 		</effects>
 	</skill>
 	<skill id="55645" toLevel="1" name="White Uniform Hat (DEX +1 WIT +1)">
-		<icon>icon.skill55645</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>BranchSys2.icon2.pi_navy_cap</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -846,9 +841,9 @@
 		</effects>
 	</skill>
 	<skill id="55646" toLevel="1" name="White Uniform Hat (CON+1 MEN+1)">
-		<icon>icon.skill55646</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>BranchSys2.icon2.pi_navy_cap</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -866,9 +861,9 @@
 		</effects>
 	</skill>
 	<skill id="55647" toLevel="1" name="Warrior's Helmet (STR+1 INT+1)">
-		<icon>icon.skill55647</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>BranchSys2.icon.br_close_helmet_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -886,9 +881,9 @@
 		</effects>
 	</skill>
 	<skill id="55648" toLevel="1" name="Warrior's Helmet (DEX +1 WIT +1)">
-		<icon>icon.skill55648</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>BranchSys2.icon.br_close_helmet_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -906,9 +901,9 @@
 		</effects>
 	</skill>
 	<skill id="55649" toLevel="1" name="Warrior's Helmet (CON+1 MEN+1)">
-		<icon>icon.skill55649</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>BranchSys2.icon.br_close_helmet_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -926,9 +921,9 @@
 		</effects>
 	</skill>
 	<skill id="55650" toLevel="1" name="First Mate Hat (STR+1 INT+1)">
-		<icon>icon.skill55650</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>icon.Accessary_middle_ages_i01</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -946,9 +941,9 @@
 		</effects>
 	</skill>
 	<skill id="55651" toLevel="1" name="First Mate Hat (DEX +1 WIT +1)">
-		<icon>icon.skill55651</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>icon.Accessary_middle_ages_i01</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -966,9 +961,9 @@
 		</effects>
 	</skill>
 	<skill id="55652" toLevel="1" name="First Mate Hat (CON+1 MEN+1)">
-		<icon>icon.skill55652</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>icon.Accessary_middle_ages_i01</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -986,9 +981,9 @@
 		</effects>
 	</skill>
 	<skill id="55653" toLevel="1" name="Refined Romantic Chapeau: Blue (STR+1 INT+1)">
-		<icon>icon.skill55653</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>icon.bm_romantic_chaperon_blue</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1006,9 +1001,9 @@
 		</effects>
 	</skill>
 	<skill id="55654" toLevel="1" name="Refined Romantic Chapeau: Blue (DEX+1 WIT+1)">
-		<icon>icon.skill55654</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>icon.bm_romantic_chaperon_blue</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1026,9 +1021,9 @@
 		</effects>
 	</skill>
 	<skill id="55655" toLevel="1" name="Refined Romantic Chapeau: Blue (CON+1 MEN+1)">
-		<icon>icon.skill55655</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>icon.bm_romantic_chaperon_blue</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1046,9 +1041,9 @@
 		</effects>
 	</skill>
 	<skill id="55656" toLevel="1" name="Gold-rimmed Glasses (STR+1 INT+1)">
-		<icon>icon.skill55656</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>BranchSys2.icon.br_gold_eyeglass_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1066,9 +1061,9 @@
 		</effects>
 	</skill>
 	<skill id="55657" toLevel="1" name="Gold-rimmed Glasses (DEX+1 WIT+1)">
-		<icon>icon.skill55657</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>BranchSys2.icon.br_gold_eyeglass_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1086,9 +1081,9 @@
 		</effects>
 	</skill>
 	<skill id="55658" toLevel="1" name="Gold-rimmed Glasses (CON+1 MEN+1)">
-		<icon>icon.skill55658</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>BranchSys2.icon.br_gold_eyeglass_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1106,9 +1101,9 @@
 		</effects>
 	</skill>
 	<skill id="55659" toLevel="1" name="Horn-rimmed Glasses (STR+1 INT+1)">
-		<icon>icon.skill55659</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>BranchSys.icon.br_Eye_Glasses_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1126,9 +1121,9 @@
 		</effects>
 	</skill>
 	<skill id="55660" toLevel="1" name="Horn-rimmed Glasses (DEX+1 WIT+1)">
-		<icon>icon.skill55660</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>BranchSys.icon.br_Eye_Glasses_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1146,9 +1141,9 @@
 		</effects>
 	</skill>
 	<skill id="55661" toLevel="1" name="Horn-rimmed Glasses (CON+1 MEN+1)">
-		<icon>icon.skill55661</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>BranchSys.icon.br_Eye_Glasses_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1166,9 +1161,9 @@
 		</effects>
 	</skill>
 	<skill id="55662" toLevel="1" name="Stylish Straw Hat (STR+1 INT+1)">
-		<icon>icon.skill55662</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>BranchSys3.icon.g_straw_hat</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1186,9 +1181,9 @@
 		</effects>
 	</skill>
 	<skill id="55663" toLevel="1" name="Stylish Straw Hat (DEX +1 WIT +1)">
-		<icon>icon.skill55663</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>BranchSys3.icon.g_straw_hat</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1206,9 +1201,9 @@
 		</effects>
 	</skill>
 	<skill id="55664" toLevel="1" name="Stylish Straw Hat (CON+1 MEN+1)">
-		<icon>icon.skill55664</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>BranchSys3.icon.g_straw_hat</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1226,9 +1221,9 @@
 		</effects>
 	</skill>
 	<skill id="55665" toLevel="1" name="Chic Silver Chapeau (STR+1 INT+1)">
-		<icon>icon.skill55665</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>BranchSys2.icon2.pi_silverchaperon</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1246,9 +1241,9 @@
 		</effects>
 	</skill>
 	<skill id="55666" toLevel="1" name="Chic Silver Chapeau (DEX +1 WIT +1)">
-		<icon>icon.skill55666</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>BranchSys2.icon2.pi_silverchaperon</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1266,9 +1261,9 @@
 		</effects>
 	</skill>
 	<skill id="55667" toLevel="1" name="Chic Silver Chapeau (CON+1 MEN+1)">
-		<icon>icon.skill55667</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>BranchSys2.icon2.pi_silverchaperon</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1286,9 +1281,9 @@
 		</effects>
 	</skill>
 	<skill id="55668" toLevel="1" name="Afro Hair (STR+1 INT+1)">
-		<icon>icon.skill55668</icon>
+		<!-- STR+1, INT+1. -->
+		<icon>BranchSys.icon.br_Afro_hair_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1306,9 +1301,9 @@
 		</effects>
 	</skill>
 	<skill id="55669" toLevel="1" name="Afro Hair (DEX +1 WIT +1)">
-		<icon>icon.skill55669</icon>
+		<!-- DEX +1, and WIT +1. -->
+		<icon>BranchSys.icon.br_Afro_hair_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1326,9 +1321,9 @@
 		</effects>
 	</skill>
 	<skill id="55670" toLevel="1" name="Afro Hair (CON+1 MEN+1)">
-		<icon>icon.skill55670</icon>
+		<!-- CON+1, MEN+1 -->
+		<icon>BranchSys.icon.br_Afro_hair_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1346,148 +1341,132 @@
 		</effects>
 	</skill>
 	<skill id="55671" toLevel="1" name="Eva's Scroll: Enchant Hair Accessory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- To Enchant Hair Accessory. -->
+		<icon>icon.scroll_of_unidentify_am_d</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55672" toLevel="1" name="Stabilized Eva's Scroll: Enchant Hair Accessory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- To Enchant Hair Accessory. -->
+		<icon>icon.scroll_of_unidentify_am_d</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55673" toLevel="1" name="Eva's Enhancement Pack - Hair Accessory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>Branchsys2.icon.br_lucky_bag_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55674" toLevel="1" name="Eva's Hair Accessory Pack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchSys.icon.br_silver_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55675" toLevel="1" name="Eva's Enhancement Pack - Hair Accessory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>Branchsys2.icon.br_lucky_bag_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55676" toLevel="1" name="Scroll: Enchant Weapon (A-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55677" toLevel="1" name="Shining Pendant Varnish">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55678" toLevel="1" name="Improved Scroll: Enchant Weapon (A-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55679" toLevel="1" name="Strawberry Juice">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 5 min., Max HP +10%, HP Recovery Bonus +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, Debuff Resistance +10%. Cannot be stacked with Prophecy-type buffs. -->
+		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55680" toLevel="1" name="Mango Juice">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 5 min., MP Recovery Bonus +10%, M. Atk. +10%, M. Def. +10%, Casting Spd. +5%, Debuff Resistance +10%. Skill MP Consumption -3%. Cannot be stacked with Prophecy-type buffs. -->
+		<icon>icon.etc_fruit_cocktail_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55681" toLevel="1" name="Cherry Juice">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 5 min., Evasion +3, Accuracy +3, Critical Rate +10%, Critical Damage +15%, Speed +10%, Debuff Resistance +10%. -->
+		<icon>icon.etc_fruit_cocktail_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55682" toLevel="1" name="Special Dragons Fruit">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 20 min., XP/ SP +10%, P./ M. Atk. +12%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%, P./ M. Def. +15%, Max HP/ MP/ CP +25%, HP/ MP Recovery Bonus +30%. With a certain chance, converts 5% of P. melee damage dealt into HP. Buff remains after death. -->
+		<icon>icon.bm_dragon_fruit</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55683" toLevel="1" name="Royal Tears">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- The essence of Frintezza s feelings. P. Atk./ M. Atk. +15%, P. Def./ M. Def. +15%. Changes the appearance of your weapon. Deleted upon logout. Not deleted upon death. -->
+		<icon>BranchSys2.icon.g_illumination_skyblue</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55684" toLevel="1" name="Red Candy of the Royal Family">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- XP/ SP +25%. Can be once stacked with the Blue Candy of the Royal Family. -->
+		<icon>etc_whiteday_candy_i05</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55685" toLevel="1" name="Blue Candy of the Royal Family">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- XP/ SP +25%. Can be once stacked with the Red Candy of the Royal Family. -->
+		<icon>etc_whiteday_candy_i06</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55686" toLevel="1" name="The Royal Confectionary Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55687" toLevel="1" name="Ultimate Confidence">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- You feel unusually confident about yourself and you are ready to express your feelings as they are. For 2 hr., acquired XP/ SP +5%, Atk. Spd./ Casting Spd. +10%, Speed +20. Cannot be stacked with Blessing of Light. Changes the appearance of your weapon. Not deleted upon death. -->
+		<icon>icon.release_thirst</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55688" toLevel="1" name="Pirates Treasure Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.card_event_blue_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55689" toLevel="1" name="Newbie Talisman">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- P. Def. +18, M. Def. +9, P./ M. Evasion +1, Max HP/ MP/ CP +50, Atk. Spd./ Casting Spd. +6, Speed +4. -->
+		<icon>icon.npoint_talisman_stat</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55690" toLevel="2" name="Transformation Scroll: Pirate">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Transformation into a Pirate. Fighting characteristics are improved. Remains even after death. -->
+		<icon>icon.etc_charm_of_courage_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55691" toLevel="2" name="Transformation Scroll: Dark Assassin">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Transformation into a Dark Assassin. Fighting characteristics are improved. Remains even after death. -->
+		<icon>icon.etc_charm_of_courage_i05</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55692" toLevel="2" name="Transformation Scroll: White Assassin">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Transformation into a White Assassin. Fighting characteristics are improved. Remains even after death. -->
+		<icon>icon.etc_charm_of_courage_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55693" toLevel="1" name="Blue Dynasty Transformation Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Makes you armor look like Blue Dynasty one. Fighting characteristics are improved. Remains after death. -->
+		<icon>icon.etc_charm_of_courage_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55694" toLevel="1" name="Red Zubei Transformation Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Makes you armor look like Red Zubei one. Fighting characteristics are improved. Remains after death. -->
+		<icon>icon.etc_charm_of_courage_i04</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55695" toLevel="1" name="Transformation Support Cube">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_golden_ore_cube_pc_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55696" toLevel="1" name="Newbie Amulet">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- XP/ SP +50%, while hunting. -->
+		<icon>BranchSys2.lcon.br_life_rune_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55697" toLevel="1" name="Kusto Lucky Enchant Pack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55698" toLevel="1" name="Giant's Treasure Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.card_event_blue_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55699" toLevel="1" name="Scroll: Hunter's Song">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Critical Attack Rate +100% for 10 min. -->
+		<icon>icon.skill0269</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

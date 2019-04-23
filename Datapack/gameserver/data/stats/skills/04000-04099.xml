@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4001" toLevel="12" name="Gust">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -52,7 +51,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -76,7 +74,6 @@
 		</effects>
 	</skill>
 	<skill id="4002" toLevel="12" name="Blood Siphon">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -114,7 +111,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -139,7 +135,6 @@
 		</effects>
 	</skill>
 	<skill id="4003" toLevel="1" name="Golem Body">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -148,11 +143,11 @@
 				<BOW>70</BOW>
 				<BLUNT>-10</BLUNT>
 				<DAGGER>30</DAGGER>
+				<DUALDAGGER>30</DUALDAGGER>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4004" toLevel="1" name="Fragile Skull">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -163,7 +158,6 @@
 		</effects>
 	</skill>
 	<skill id="4005" toLevel="1" name="Floating Target">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -178,7 +172,6 @@
 		</effects>
 	</skill>
 	<skill id="4006" toLevel="1" name="Burning Wood">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -193,7 +186,6 @@
 		</effects>
 	</skill>
 	<skill id="4007" toLevel="1" name="Immortal Life">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -209,7 +201,6 @@
 		</effects>
 	</skill>
 	<skill id="4008" toLevel="1" name="Insect Skin">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -221,67 +212,60 @@
 		</effects>
 	</skill>
 	<skill id="4009" toLevel="5" name="Fire Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resistant to Fire attacks. -->
 		<icon>icon.skill4009</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4010" toLevel="5" name="Water Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resistant to Water attacks. -->
 		<icon>icon.skill4010</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4011" toLevel="5" name="Wind Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resistant to Wind attacks. -->
 		<icon>icon.skill4011</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4012" toLevel="5" name="Earth Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resistant to Earth attacks. -->
 		<icon>icon.skill4012</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4013" toLevel="1" name="Fire Resistance, Water Vulnerability">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4014" toLevel="1" name="Water Resistance, Fire Vulnerability">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4015" toLevel="1" name="Wind Resistance, Earth Vulnerability">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4016" toLevel="1" name="Earth Resistance, Wind Vulnerability">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4017" toLevel="1" name="Queen Ant's Blow">
-		<!-- Confirmed CT2.5 -->
-		<!-- Queen Ant Skills -->
 		<affectRange>250</affectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1300</hitTime>
 		<magicLvl>40</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -293,8 +277,8 @@
 		</effects>
 	</skill>
 	<skill id="4018" toLevel="1" name="Decrease Speed">
-		<!-- Confirmed CT2.5 -->
-		<!-- Queen Ant Skills -->
+		<!-- Speed decreases momentarily. Effect 3. -->
+		<icon>icon.skill4018</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -305,12 +289,10 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>2200</hitTime>
-		<icon>icon.skill4018</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>3</lvlBonusRate>
 		<magicLvl>40</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -325,8 +307,8 @@
 		</effects>
 	</skill>
 	<skill id="4019" toLevel="1" name="Decrease Speed">
-		<!-- Confirmed CT2.5 -->
-		<!-- Queen Ant Skills -->
+		<!-- Momentarily decreases Speed and continuously consumes HP. Effect 3. -->
+		<icon>icon.skill4019</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -338,12 +320,10 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>1700</hitTime>
-		<icon>icon.skill4019</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>3</lvlBonusRate>
 		<magicLvl>40</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -360,7 +340,6 @@
 		</effects>
 	</skill>
 	<skill id="4020" toLevel="1" name="Recovery">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -368,7 +347,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>35</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -379,8 +357,7 @@
 		</effects>
 	</skill>
 	<skill id="4021" toLevel="1" name="Queen Ant">
-		<!-- Confirmed CT2.5 -->
-		<!-- Queen Ant Skills -->
+		<!-- Vulnerable to Fire attacks but highly resistant to archery attacks. -->
 		<icon>icon.skillboss</icon>
 		<magicLvl>40</magicLvl>
 		<operateType>P</operateType>
@@ -392,21 +369,16 @@
 		</effects>
 	</skill>
 	<skill id="4022" toLevel="1" name="Body of Nurse Ant">
-		<!-- Confirmer CT2.5 -->
-		<!-- This Skill Is Only For Description In The Client -->
 		<magicLvl>35</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4023" toLevel="1" name="Body of Royal Guard Ant">
-		<!-- Confirmer CT2.5 -->
-		<!-- This Skill Is Only For Description In The Client -->
 		<magicLvl>35</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4024" toLevel="1" name="Recovery">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -414,7 +386,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>35</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -425,7 +396,6 @@
 		</effects>
 	</skill>
 	<skill id="4025" toLevel="12" name="Master Recharge">
-		<!-- Freya retail confirmed -->
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">138</value>
@@ -474,7 +444,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>OWNER_PET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -498,7 +467,6 @@
 		</effects>
 	</skill>
 	<skill id="4026" toLevel="1" name="Gludio Flame">
-		<!-- Freya retail confirmed -->
 		<affectRange>200</affectRange>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
@@ -511,7 +479,6 @@
 		<mpConsume>28</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -523,7 +490,6 @@
 		</effects>
 	</skill>
 	<skill id="4027" toLevel="1" name="Gludio Heal">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -533,7 +499,6 @@
 		<mpConsume>98</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -544,7 +509,8 @@
 		</effects>
 	</skill>
 	<skill id="4028" toLevel="3" name="Might">
-		<!-- Freya retail confirmed -->
+		<!-- P. Atk. +$s2 for $s1. -->
+		<icon>icon.skill4028</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -567,11 +533,9 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill4028</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -588,6 +552,8 @@
 		</effects>
 	</skill>
 	<skill id="4029" toLevel="3" name="Shield">
+		<!-- P. Def. +$s2 for $s1. -->
+		<icon>icon.skill1040</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -609,11 +575,9 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill1040</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -628,7 +592,8 @@
 		</effects>
 	</skill>
 	<skill id="4030" toLevel="3" name="Might">
-		<!-- Freya retail confirmed -->
+		<!-- P. Atk. +$s2 for $s1. -->
+		<icon>icon.skill4028</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -653,11 +618,9 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill4028</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -672,7 +635,8 @@
 		</effects>
 	</skill>
 	<skill id="4031" toLevel="3" name="Might">
-		<!-- Freya retail confirmed -->
+		<!-- For $s1 P. Atk. +$s2. -->
+		<icon>icon.skill4031</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -684,7 +648,6 @@
 		<effectPoint>100</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill4031</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">20</value>
@@ -698,7 +661,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -716,7 +678,6 @@
 		</effects>
 	</skill>
 	<skill id="4032" toLevel="12" name="Power Strike">
-		<!-- Freya retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -752,7 +713,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -776,7 +736,6 @@
 		</effects>
 	</skill>
 	<skill id="4033" toLevel="12" name="Aura Burn">
-		<!-- Freya retail confirmed -->
 		<affectRange>200</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>4000</hitTime>
@@ -811,7 +770,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>3.5</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -837,7 +795,8 @@
 		</effects>
 	</skill>
 	<skill id="4034" toLevel="12" name="Ice Bolt">
-		<!-- Freya retail confirmed -->
+		<!-- Speed decreases momentarily. Effect $s1 -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -848,7 +807,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3100</hitTime>
-		<icon>icon.skill1184</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -882,7 +840,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
@@ -912,7 +869,8 @@
 		</effects>
 	</skill>
 	<skill id="4035" toLevel="12" name="Poison">
-		<!-- Freya retail confirmed -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -937,7 +895,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill4035</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -971,7 +928,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<trait>POISON</trait>
@@ -998,7 +954,8 @@
 		</effects>
 	</skill>
 	<skill id="4036" toLevel="12" name="Poison">
-		<!-- Freya retail confirmed -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4036</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1024,7 +981,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill4036</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -1058,7 +1014,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<trait>POISON</trait>
@@ -1086,7 +1041,8 @@
 		</effects>
 	</skill>
 	<skill id="4037" toLevel="3" name="Weakness">
-		<!-- Freya retail confirmed -->
+		<!-- P. Atk. decreases momentarily. Effect $s1 -->
+		<icon>icon.skill4037</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1100,7 +1056,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill4037</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -1116,7 +1071,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1132,7 +1086,8 @@
 		</effects>
 	</skill>
 	<skill id="4038" toLevel="5" name="Shackle">
-		<!-- Freya retail confirmed -->
+		<!-- Atk. Spd. decreases momentarily. Effect $s1 -->
+		<icon>icon.skill4038</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1148,7 +1103,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill4038</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -1168,7 +1122,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1186,7 +1139,6 @@
 		</effects>
 	</skill>
 	<skill id="4039" toLevel="12" name="Mana Drain">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1222,7 +1174,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1247,7 +1198,6 @@
 		</effects>
 	</skill>
 	<skill id="4040" toLevel="12" name="Power Shot">
-		<!-- Freya retail confirmed -->
 		<castRange>700</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1200</effectRange>
@@ -1282,7 +1232,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>17000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1306,7 +1255,6 @@
 		</effects>
 	</skill>
 	<skill id="4041" toLevel="2" name="Cruma Blaze">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1323,7 +1271,6 @@
 			<value level="2">45</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1337,7 +1284,6 @@
 		</effects>
 	</skill>
 	<skill id="4042" toLevel="1" name="Nurka Blaze">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1348,7 +1294,6 @@
 		<magicLvl>45</magicLvl>
 		<mpConsume>40</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1359,7 +1304,6 @@
 		</effects>
 	</skill>
 	<skill id="4043" toLevel="1" name="Partisan Flame">
-		<!-- Freya retail confirmed -->
 		<affectRange>200</affectRange>
 		<castRange>400</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1372,7 +1316,6 @@
 		<mpConsume>60</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1384,7 +1327,6 @@
 		</effects>
 	</skill>
 	<skill id="4044" toLevel="1" name="Partisan Heal">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1394,7 +1336,6 @@
 		<mpConsume>70</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1405,7 +1346,6 @@
 		</effects>
 	</skill>
 	<skill id="4045" toLevel="1" name="Full Magic Attack Resistance">
-		<!-- Glory Days retail confirmed -->
 		<magicLvl>50</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1433,7 +1373,8 @@
 		</effects>
 	</skill>
 	<skill id="4046" toLevel="12" name="Sleep">
-		<!-- Freya retail confirmed -->
+		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<icon>icon.skill4046</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
@@ -1444,7 +1385,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill4046</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1479,7 +1419,6 @@
 		<operateType>A2</operateType>
 		<removedOnDamage>true</removedOnDamage>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2</hitCancelTime>
 		<trait>SLEEP</trait>
@@ -1490,10 +1429,8 @@
 		</effects>
 	</skill>
 	<skill id="4047" toLevel="13" name="Hold">
-		<!-- Freya retail confirmed and Updated to Ertheia -->
-		<!-- Confirmed -->
-		<!-- Confirmed -->
-		<!-- Confirmed -->
+		<!-- Inflicted with Hold and unable to move. -->
+		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -1504,7 +1441,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill4047</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1555,7 +1491,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>HOLD</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -1565,7 +1500,6 @@
 		</effects>
 	</skill>
 	<skill id="4048" toLevel="3" name="Dash">
-		<!-- Freya retail confirmed -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
@@ -1577,7 +1511,6 @@
 		</magicLvl>
 		<mpConsume>12</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1597,8 +1530,6 @@
 		</effects>
 	</skill>
 	<skill id="4049" toLevel="16" name="Cubic Strike">
-		<!-- Cubic Skill -->
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>
 			<value level="1">-379</value>
 			<value level="2">-438</value>
@@ -1636,7 +1567,6 @@
 			<value level="16">85</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1665,8 +1595,6 @@
 		</effects>
 	</skill>
 	<skill id="4050" toLevel="16" name="Cubic Drain">
-		<!-- Cubic Skill -->
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>
 			<value level="1">-408</value>
 			<value level="2">-467</value>
@@ -1705,7 +1633,6 @@
 			<value level="16">85</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1735,9 +1662,6 @@
 		</effects>
 	</skill>
 	<skill id="4051" toLevel="20" name="Cubic Heal">
-		<!-- Cubic Skill -->
-		<!-- Confirmed CT2.5 -->
-		<!-- Levels 17, 18 and 19 doesn't exist in client. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">408</value>
@@ -1786,7 +1710,6 @@
 			<value level="20">18</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -1819,8 +1742,8 @@
 		</effects>
 	</skill>
 	<skill id="4052" toLevel="15" name="Cubic Poison">
-		<!-- Cubic Skill -->
-		<!-- Confirmed CT2.5 -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill1168</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">6</value>
@@ -1861,7 +1784,6 @@
 			<value level="14">-687</value>
 			<value level="15">-689</value>
 		</effectPoint>
-		<icon>icon.skill1168</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -1883,7 +1805,6 @@
 			<value level="15">85</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1912,8 +1833,8 @@
 		</effects>
 	</skill>
 	<skill id="4053" toLevel="16" name="Cubic Weakness">
-		<!-- Cubic Skill -->
-		<!-- Confirmed CT2.5 -->
+		<!-- P. Atk. decreases momentarily. Effect $s1 -->
+		<icon>icon.skill1164</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
@@ -1937,7 +1858,6 @@
 			<value level="15">-687</value>
 			<value level="16">-689</value>
 		</effectPoint>
-		<icon>icon.skill1164</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1960,7 +1880,6 @@
 			<value level="16">85</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1973,8 +1892,8 @@
 		</effects>
 	</skill>
 	<skill id="4054" toLevel="16" name="Cubic Hex">
-		<!-- Cubic Skill -->
-		<!-- Confirmed CT2.5 -->
+		<!-- P. Def. decreases temporarily. Effect $s1 -->
+		<icon>icon.skill0122</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -1998,7 +1917,6 @@
 			<value level="15">-687</value>
 			<value level="16">-689</value>
 		</effectPoint>
-		<icon>icon.skill0122</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -2021,7 +1939,6 @@
 			<value level="16">85</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2034,8 +1951,8 @@
 		</effects>
 	</skill>
 	<skill id="4055" toLevel="16" name="Cubic Shackle">
-		<!-- Cubic Skill -->
-		<!-- Confirmed CT2.5 -->
+		<!-- Atk. Spd. decreases temporarily. Effect $s1 -->
+		<icon>icon.skill1206</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -2059,7 +1976,6 @@
 			<value level="15">-687</value>
 			<value level="16">-689</value>
 		</effectPoint>
-		<icon>icon.skill1206</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -2082,7 +1998,6 @@
 			<value level="16">85</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2095,13 +2010,11 @@
 		</effects>
 	</skill>
 	<skill id="4056" toLevel="1" name="Immortal Attack">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4057" toLevel="1" name="Insect Vulnerability">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2112,7 +2025,6 @@
 		</effects>
 	</skill>
 	<skill id="4058" toLevel="1" name="Animal Vulnerability">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2123,7 +2035,6 @@
 		</effects>
 	</skill>
 	<skill id="4059" toLevel="1" name="Plant Vulnerability">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2134,7 +2045,6 @@
 		</effects>
 	</skill>
 	<skill id="4060" toLevel="1" name="Beast Vulnerability">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2145,7 +2055,6 @@
 		</effects>
 	</skill>
 	<skill id="4061" toLevel="1" name="Dragon Vulnerability">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2156,8 +2065,7 @@
 		</effects>
 	</skill>
 	<skill id="4062" toLevel="1" name="Orfen">
-		<!-- Confirmed CT2.5 -->
-		<!-- Orfen Skills -->
+		<!-- The youngest of the 3 Nerupa sisters. Ambitious unlike her sisters, she is amassing her power in the Sea of Spores. She threads the web of the Future. -->
 		<icon>icon.skillboss</icon>
 		<magicLvl>50</magicLvl>
 		<operateType>P</operateType>
@@ -2169,8 +2077,8 @@
 		</effects>
 	</skill>
 	<skill id="4063" toLevel="1" name="Paralysis">
-		<!-- Confirmed CT2.5 -->
-		<!-- Orfen Skills -->
+		<!-- Paralyzed and unable to move temporarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -2181,11 +2089,9 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>3600</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>50</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>PARALYZE</trait>
 		<targetType>ENEMY</targetType>
@@ -2198,8 +2104,8 @@
 		</effects>
 	</skill>
 	<skill id="4064" toLevel="1" name="Paralysis">
-		<!-- Confirmed CT2.5 -->
-		<!-- Orfen Skills -->
+		<!-- Paralyzed and unable to move temporarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -2211,11 +2117,9 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1300</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>50</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>PARALYZE</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2226,7 +2130,6 @@
 		</effects>
 	</skill>
 	<skill id="4065" toLevel="12" name="Heal">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2276,7 +2179,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2300,7 +2202,6 @@
 		</effects>
 	</skill>
 	<skill id="4066" toLevel="12" name="Twister">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2338,7 +2239,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2362,7 +2262,6 @@
 		</effects>
 	</skill>
 	<skill id="4067" toLevel="12" name="Blow">
-		<!-- Freya retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2398,7 +2297,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2423,7 +2321,6 @@
 		</effects>
 	</skill>
 	<skill id="4068" toLevel="12" name="Mechanical Cannon">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2459,7 +2356,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2483,7 +2379,6 @@
 		</effects>
 	</skill>
 	<skill id="4069" toLevel="12" name="Curve Beam">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2519,7 +2414,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2543,20 +2437,18 @@
 		</effects>
 	</skill>
 	<skill id="4070" toLevel="1" name="Decrease Atk. Spd.">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- Atk. Spd. decreases momentarily. Effect 3. -->
+		<icon>icon.skill1206</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<activateRate>10</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill1206</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -2569,6 +2461,7 @@
 		</effects>
 	</skill>
 	<skill id="4071" toLevel="5" name="Bow/Crossbow Resistance">
+		<!-- Resistant to Bow/ Crossbow attacks. -->
 		<icon>
 			<value level="1">icon.skill4071</value>
 			<value level="2">icon.skill4071</value>
@@ -2588,11 +2481,19 @@
 					<value level="4">40</value>
 					<value level="5">50</value>
 				</BOW>
+				<CROSSBOW>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</CROSSBOW>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4072" toLevel="12" name="Stun">
-		<!-- Freya retail confirmed -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -2616,7 +2517,6 @@
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -2649,7 +2549,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
@@ -2676,7 +2575,8 @@
 		</effects>
 	</skill>
 	<skill id="4073" toLevel="12" name="Stun">
-		<!-- Freya retail confirmed -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -2701,7 +2601,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -2720,7 +2619,6 @@
 		</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -2746,7 +2644,8 @@
 		</effects>
 	</skill>
 	<skill id="4074" toLevel="2" name="Haste">
-		<!-- Freya retail confirmed -->
+		<!-- Atk. Spd. +$s1 -->
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2757,7 +2656,6 @@
 		<effectPoint>100</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1086</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">30</value>
@@ -2769,7 +2667,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2786,7 +2683,8 @@
 		</effects>
 	</skill>
 	<skill id="4075" toLevel="12" name="Stun">
-		<!-- Freya retail confirmed -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2798,7 +2696,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0092</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -2831,7 +2728,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2841,7 +2737,8 @@
 		</effects>
 	</skill>
 	<skill id="4076" toLevel="3" name="Decrease Speed">
-		<!-- Freya retail confirmed -->
+		<!-- Speed decreases momentarily. Effect $s1 -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2855,7 +2752,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1160</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -2871,7 +2767,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2888,7 +2783,6 @@
 		</effects>
 	</skill>
 	<skill id="4077" toLevel="12" name="Aura Burn">
-		<!-- Freya retail confirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>650</effectRange>
@@ -2938,7 +2832,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2963,7 +2856,6 @@
 		</effects>
 	</skill>
 	<skill id="4078" toLevel="12" name="Flame Strike">
-		<!-- Freya retail confirmed -->
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
@@ -3002,7 +2894,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -3027,7 +2918,7 @@
 		</effects>
 	</skill>
 	<skill id="4079" toLevel="1" name="Siege Hammer">
-		<!-- Confirmed CT2.5 -->
+		<!-- Powerful attack on castle doors and walls. -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3035,7 +2926,6 @@
 		<magicLvl>49</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3046,7 +2936,6 @@
 		</effects>
 	</skill>
 	<skill id="4080" toLevel="1" name="Dark Heal">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3055,7 +2944,6 @@
 		<magicLvl>60</magicLvl>
 		<mpConsume>98</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3066,7 +2954,6 @@
 		</effects>
 	</skill>
 	<skill id="4081" toLevel="1" name="Pretending to steal">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3074,13 +2961,13 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>70</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4082" toLevel="1" name="Poison of Death">
-		<!-- Confirmed CT2.5 -->
+		<!-- You have been infected by a fatal poison. -->
+		<icon>icon.skill4082</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>4200</abnormalTime>
 		<abnormalType>FATAL_POISON</abnormalType>
@@ -3089,13 +2976,11 @@
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill4082</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>50</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -3112,7 +2997,6 @@
 		</effects>
 	</skill>
 	<skill id="4083" toLevel="1" name="Kalis' Poison">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3121,7 +3005,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>70</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -3133,7 +3016,7 @@
 		</effects>
 	</skill>
 	<skill id="4084" toLevel="11" name="Physical Attack Resistance">
-		<!-- Freya retail confirmed -->
+		<!-- Physical Attack Resistance -->
 		<icon>icon.skill4084</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3158,7 +3041,7 @@
 		</effects>
 	</skill>
 	<skill id="4085" toLevel="1" name="Critical Damage">
-		<!-- Freya retail confirmed -->
+		<!-- Increases Critical Damage. -->
 		<icon>icon.skill4085</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3171,7 +3054,7 @@
 		</effects>
 	</skill>
 	<skill id="4086" toLevel="1" name="Critical Chance">
-		<!-- Freya retail confirmed -->
+		<!-- Increases Critical Rate. -->
 		<icon>icon.skill4086</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3184,7 +3067,6 @@
 		</effects>
 	</skill>
 	<skill id="4087" toLevel="12" name="Blaze">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3222,7 +3104,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3246,7 +3127,8 @@
 		</effects>
 	</skill>
 	<skill id="4088" toLevel="12" name="Bleed">
-		<!-- Freya retail confirmed -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -3272,7 +3154,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -3306,7 +3187,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>BLEED</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -3332,7 +3212,8 @@
 		</effects>
 	</skill>
 	<skill id="4089" toLevel="1" name="Spirit Bear">
-		<!-- Freya retail confirmed -->
+		<!-- P. Atk. +15% and Speed +15%. -->
+		<icon>icon.skill0076</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
@@ -3342,11 +3223,9 @@
 		<mpConsume>18</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill0076</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3361,7 +3240,8 @@
 		</effects>
 	</skill>
 	<skill id="4090" toLevel="1" name="Spirit Wolf">
-		<!-- Freya retail confirmed -->
+		<!-- Speed +40. -->
+		<icon>icon.skill0083</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
@@ -3371,11 +3251,9 @@
 		<mpConsume>18</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill0083</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3386,7 +3264,8 @@
 		</effects>
 	</skill>
 	<skill id="4091" toLevel="3" name="Spirit Ogre">
-		<!-- Confirmed CT2.5 -->
+		<!-- P. Atk. +$s1, P. Def. +$s2, Accuracy +$s3, and Max HP +$s4. Evasion -$s5 and speed -$s6. -->
+		<icon>icon.skill0109</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
@@ -3405,11 +3284,9 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill0109</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3467,7 +3344,8 @@
 		</effects>
 	</skill>
 	<skill id="4092" toLevel="1" name="Spirit Puma">
-		<!-- Freya retail confirmed -->
+		<!-- Atk. Spd. +30% and evasion +4. P. Def. -20%. -->
+		<icon>icon.skill0282</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
@@ -3477,11 +3355,9 @@
 		<mpConsume>18</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill0282</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3500,7 +3376,7 @@
 		</effects>
 	</skill>
 	<skill id="4093" toLevel="1" name="Evasion">
-		<!-- Freya retail confirmed -->
+		<!-- Evasion +4. -->
 		<icon>icon.skill4093</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3513,7 +3389,6 @@
 		</effects>
 	</skill>
 	<skill id="4094" toLevel="12" name="Cancellation">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3562,7 +3437,6 @@
 			<value level="12">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3571,7 +3445,7 @@
 		</effects>
 	</skill>
 	<skill id="4095" toLevel="1" name="Damage Shield">
-		<!-- Freya retail confirmed -->
+		<!-- Reflects a part of received damage. -->
 		<icon>icon.skill4095</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3584,7 +3458,8 @@
 		</effects>
 	</skill>
 	<skill id="4096" toLevel="3" name="Hawk Eye">
-		<!-- Freya retail confirmed -->
+		<!-- P. Def. momentarily -$s1 and Accuracy +$s2. -->
+		<icon>icon.skill0131</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3606,11 +3481,9 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill0131</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3629,7 +3502,8 @@
 		</effects>
 	</skill>
 	<skill id="4097" toLevel="12" name="Chant of Life">
-		<!-- Freya retail confirmed -->
+		<!-- HP is recovered. -->
+		<icon>icon.skill1229</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3650,7 +3524,6 @@
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1229</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">10</value>
@@ -3682,7 +3555,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -3709,7 +3581,8 @@
 		</effects>
 	</skill>
 	<skill id="4098" toLevel="12" name="Silence">
-		<!-- Freya retail confirmed -->
+		<!-- Magic skills are blocked momentarily. -->
+		<icon>icon.skill1064</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
@@ -3720,7 +3593,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1064</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -3754,7 +3626,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<trait>DERANGEMENT</trait>
@@ -3765,7 +3636,8 @@
 		</effects>
 	</skill>
 	<skill id="4099" toLevel="2" name="Berserker Spirit">
-		<!-- Freya retail confirmed -->
+		<!-- P. Def. -$s1, M. Def. -$s2, Evasion -$s3, and P. Atk. +$s4, M. Atk. +$s5, Atk. Spd. +$s6, Casting Spd. +$s7, Speed +$s8. -->
+		<icon>icon.skill1062</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3776,7 +3648,6 @@
 		<effectPoint>100</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1062</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -3788,7 +3659,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>

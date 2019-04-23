@@ -19,7 +19,6 @@
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 
 		<skills>
-			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3052" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Bleed -->
 		</skills>
 		<stats>
@@ -111,10 +110,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
-
-		<skills>
-			<skill id="3057" level="2" /> <!-- Special Ability: Anger -->
-		</skills>
 		<stats>
 			<stat type="pAtk">232</stat>
 			<stat type="mAtk">114</stat>
@@ -142,9 +137,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
-
 		<skills>
-			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3059" level="2" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Drain -->
 		</skills>
 		<stats>
@@ -210,7 +203,6 @@
 
 		<skills>
 			<skill id="3049" level="2" type_chance="30" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Damage -->
-			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 		</skills>
 		<stats>
 			<stat type="pAtk">226</stat>
@@ -277,7 +269,6 @@
 
 		<skills>
 			<skill id="3498" level="1" /> <!-- Special Ability: Light -->
-			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 		</skills>
 		<stats>
 			<stat type="pAtk">440</stat>
@@ -311,7 +302,6 @@
 		<set name="commissionItemType" val="BOW" />
 
 		<skills>
-			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3053" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Bleed -->
 		</skills>
 		<stats>
@@ -380,9 +370,6 @@
 		<set name="commissionItemType" val="BOW" />
 
 		<set name="reduced_mp_consume" val="38,1" />
-		<skills>
-			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
-		</skills>
 		<stats>
 			<stat type="pAtk">528</stat>
 			<stat type="mAtk">125</stat>
@@ -414,9 +401,6 @@
 		<set name="reuse_delay" val="697" />
 		<set name="commissionItemType" val="BOW" />
 
-		<skills>
-			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
-		</skills>
 		<stats>
 			<stat type="pAtk">528</stat>
 			<stat type="mAtk">125</stat>
@@ -449,7 +433,6 @@
 		<set name="commissionItemType" val="BOW" />
 
 		<skills>
-			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3062" level="2" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Poison -->
 		</skills>
 		<stats>
@@ -479,10 +462,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
-
-		<skills>
-			<skill id="3051" level="1" /> <!-- Special Ability: Focus -->
-		</skills>
 		<stats>
 			<stat type="pAtk">186</stat>
 			<stat type="mAtk">107</stat>
@@ -510,10 +489,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
-
-		<skills>
-			<skill id="3063" level="1" /> <!-- Special Ability: Back Blow -->
-		</skills>
 		<stats>
 			<stat type="pAtk">186</stat>
 			<stat type="mAtk">107</stat>
@@ -543,7 +518,6 @@
 		<set name="commissionItemType" val="DAGGER" />
 
 		<skills>
-			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3054" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Bleed -->
 		</skills>
 		<stats>
@@ -573,10 +547,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
-
-		<skills>
-			<skill id="3064" level="1" /> <!-- Special Ability: Guidance -->
-		</skills>
 		<stats>
 			<stat type="pAtk">203</stat>
 			<stat type="mAtk">114</stat>
@@ -604,10 +574,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
-
-		<skills>
-			<skill id="3066" level="2" /> <!-- Special Ability: Critical Damage -->
-		</skills>
 		<stats>
 			<stat type="pAtk">203</stat>
 			<stat type="mAtk">114</stat>
@@ -635,10 +601,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
-
-		<skills>
-			<skill id="3056" level="2" /> <!-- Special Ability: Rsk. Haste -->
-		</skills>
 		<stats>
 			<stat type="pAtk">203</stat>
 			<stat type="mAtk">114</stat>
@@ -729,9 +691,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 
-		<skills>
-			<skill id="3058" level="1" /> <!-- Special Ability: Anger -->
-		</skills>
 		<stats>
 			<stat type="pAtk">259</stat>
 			<stat type="mAtk">107</stat>
@@ -790,10 +749,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
-
-		<skills>
-			<skill id="3065" level="1" /> <!-- Special Ability: Guidance -->
-		</skills>
 		<stats>
 			<stat type="pAtk">282</stat>
 			<stat type="mAtk">114</stat>
@@ -885,7 +840,6 @@
 		<set name="commissionItemType" val="SPEAR" />
 
 		<skills>
-			<skill id="3552" level="2" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3070" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Stun -->
 		</skills>
 		<stats>
@@ -915,10 +869,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
-
-		<skills>
-			<skill id="3552" level="2" /> <!-- Special Ability: PvP Damage -->
-		</skills>
 		<stats>
 			<stat type="pAtk">213</stat>
 			<stat type="mAtk">107</stat>
@@ -1008,10 +958,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
-
-		<skills>
-			<skill id="3552" level="2" /> <!-- Special Ability: PvP Damage -->
-		</skills>
 		<stats>
 			<stat type="pAtk">232</stat>
 			<stat type="mAtk">114</stat>
@@ -1042,7 +988,7 @@
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 
 		<skills>
-			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
+
 			<skill id="3061" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Poison -->
 		</skills>
 		<stats>
@@ -1104,9 +1050,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 
-		<skills>
-			<skill id="3057" level="1" /> <!-- Special Ability: Anger -->
-		</skills>
 		<stats>
 			<stat type="pAtk">213</stat>
 			<stat type="mAtk">107</stat>
@@ -1135,9 +1078,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 
-		<skills>
-			<skill id="3073" level="1" /> <!-- Special Ability: M. Atk. -->
-		</skills>
 		<stats>
 			<stat type="pAtk">170</stat>
 			<stat type="mAtk">143</stat>
@@ -1168,7 +1108,6 @@
 
 		<skills>
 			<skill id="3075" level="1" type_chance="5" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Paralyze -->
-			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 		</skills>
 		<stats>
 			<stat type="pAtk">170</stat>
@@ -1197,10 +1136,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-
-		<skills>
-			<skill id="3072" level="1" /> <!-- Special Ability: Empower -->
-		</skills>
 		<stats>
 			<stat type="pAtk">170</stat>
 			<stat type="mAtk">143</stat>
@@ -1228,10 +1163,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-
-		<skills>
-			<skill id="3073" level="2" /> <!-- Special Ability: M. Atk. -->
-		</skills>
 		<stats>
 			<stat type="pAtk">186</stat>
 			<stat type="mAtk">152</stat>
@@ -1262,7 +1193,6 @@
 
 		<skills>
 			<skill id="3074" level="2" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
-			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 		</skills>
 		<stats>
 			<stat type="pAtk">186</stat>
@@ -1355,7 +1285,6 @@
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 
 		<skills>
-			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3055" level="2" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Bleed -->
 		</skills>
 		<stats>
@@ -1387,7 +1316,6 @@
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 
 		<skills>
-			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3060" level="2" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Drain -->
 		</skills>
 		<stats>
@@ -1417,10 +1345,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-
-		<skills>
-			<skill id="3067" level="2" /> <!-- Special Ability: Critical Damage -->
-		</skills>
 		<stats>
 			<stat type="pAtk">232</stat>
 			<stat type="mAtk">114</stat>

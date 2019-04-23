@@ -1,498 +1,495 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="56000" toLevel="1" name="Stable Scroll: Enchant Cloak">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56001" toLevel="1" name="High-grade Life Stone Pack - Legendary">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56002" toLevel="1" name="High-grade Life Stone Pack - Cloak">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56003" toLevel="1" name="XP and SP Rune - 50%">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- When in inventory, acquired XP/ SP +50%. -->
+		<icon>icon.skill19226</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56004" toLevel="1" name="Summon Agathion Mermaid">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons Agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56005" toLevel="1" name="Agathion Mermaid Enchant Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.star_scrl_of_ench_ag</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56006" toLevel="1" name="Master's Fishing Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For $s1, Acquired XP/ SP +$s2 when fishing succeeds. Buff remains even after death and cannot be forcefully deleted. -->
+		<icon>BranchIcon.etc_sign_agathion_feed_blue_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56007" toLevel="1" name="Shining Fishing Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Double click to obtain a random item. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56008" toLevel="1" name="Fishing XP Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56009" toLevel="11" name="Mermaid Agathion Unique Ability">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Increases Acquired XP/SP during fishing with growth of Agathion. -->
+		<icon>icon.agathion_base</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56010" toLevel="4" name="Blessing of Mermaid">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For $s1, Acquired XP/SP during fishing +$s2. -->
+		<icon>icon.skill_agathion_special</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56011" toLevel="1" name="Complete Arms Supplies Pack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56012" toLevel="1" name="Cloak of the Chosen">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Max HP/ MP/ CP +5%, P. Def. +3%, M. Def. +5%, Speed +10. -->
+		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56013" toLevel="1" name="Improved Scroll: Castle Blessing - Party">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Gives Castle Blessing buff for all party members. Maintains buffs and debuffs even after death. The Noblesse Blessing and the Lucky Charm disappear, however. -->
+		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56014" toLevel="1" name="Scroll: Castle Buff - Party">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Gives Might Lv. 2, Empower Lv. 2, Acumen Lv. 2, Haste Lv. 1 for all party members. -->
+		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56015" toLevel="1" name="Scroll: Castle Wind Walk - Party">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Speed +33 for all party members. -->
+		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56016" toLevel="1" name="Reinforced Castle Ring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Increases Max ?? and P./ M. Atk. -->
+		<icon>icon.ev_11th_rare_acc_ring</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56017" toLevel="1" name="Reinforced Castle Earring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Increases Max MP, MP recovery rate, Healing Power, decreases Skill MP Consumption. -->
+		<icon>icon.ev_11th_rare_acc_earing</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56018" toLevel="1" name="Reinforced Castle Necklace">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Increases Max MP, P./ M. Def., Mental Attack and Resistance, decreases Skill MP Consumption. -->
+		<icon>icon.ev_11th_rare_acc_necklace</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56019" toLevel="1" name="+7 Elmoreden Cloak Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Double-click to obtain a +7 Elmoreden Cloak. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56020" toLevel="1" name="+7 Aden Cloak Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Double-click to obtain a +7 Aden Cloak. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56021" toLevel="1" name="+7 Elmore Cloak Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Double-click to obtain a +7 Elmore Cloak. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56022" toLevel="1" name="+7 Ferios Cloak Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Double-click to obtain a +7 Ferios Cloak. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56023" toLevel="1" name="Agathion Summon - Gnosian">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons Agathion Gnosian. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56024" toLevel="1" name="Agathion Summon - Orodriel">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons Agathion Orodriel. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56025" toLevel="1" name="Agathion Summon - Penalty Kick">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons Agathion Penalty Kick. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56026" toLevel="1" name="Seven Signs Miracle Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56027" toLevel="1" name="VIP Level 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- The right to VIP 1st level chest. Acquired XP/ SP +5%, item drop rate +10%. World chat on any level, number of usage attempts +1. -->
+		<icon>BranchIcon.Icon.g_skill_vip1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56028" toLevel="1" name="VIP Level 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- The right to VIP 2nd level chest. Acquired XP/ SP +10%, item drop rate +20%. World chat on any level, number of usage attempts +2. -->
+		<icon>BranchIcon.Icon.g_skill_vip2</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56029" toLevel="1" name="VIP Level 3">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- The right to VIP 3rd level chest. Acquired XP/ SP +15%, item drop rate +30%. Experience loss upon death is -5%. Acquired XP/ SP during fishing +5%, PvE damage +3%. World chat on any level, number of usage attempts +2. You can obtain Silver Coin while hunting. -->
+		<icon>BranchIcon.Icon.g_skill_vip3</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56030" toLevel="1" name="VIP Level 4">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- The right to VIP 4th level chest. Acquired XP/ SP +25%, item drop rate +50%. Experience loss upon death is -20%. Acquired XP/ SP during fishing +20%, PvE damage +10%. World chat on any level, number of usage attempts +3. You can obtain Silver Coin while hunting. -->
+		<icon>BranchIcon.Icon.g_skill_vip4</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56031" toLevel="1" name="VIP Level 5">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- The right to VIP 5th level chest. Acquired XP/ SP +30%, item drop rate +20%. Experience loss upon death -20%. Acquired XP/ SP during fishing +20%. PvE damage is increased. World chat on any level, number of usage attempts +10. -->
+		<icon>BranchIcon.Icon.g_skill_vip5</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56032" toLevel="1" name="VIP Level 6">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- The right to VIP 6th level chest. Acquired XP/ SP +30%, item drop rate +20%. Experience loss upon death -20%. Acquired XP/ SP during fishing +20%. PvE damage is increased, STR/ DEX/ CON/ INT/ WIT/ MEN +1. World chat on any level, number of usage attempts +10. -->
+		<icon>BranchIcon.Icon.g_skill_vip6</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56033" toLevel="1" name="VIP Level 7">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- The right to VIP 7th level chest. Acquired XP/ SP +30%, item drop rate +20%. Experience loss upon death -20%. Acquired XP/ SP during fishing +20%. PvE damage is increased, STR/ DEX/ CON/ INT/ WIT/ MEN +2. World chat on any level, number of usage attempts +20. -->
+		<icon>BranchIcon.Icon.g_skill_vip7</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56034" toLevel="1" name="Summon Agathion Meliodas">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons Meliodas Agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56035" toLevel="1" name="Summon Agathion Elizabeth">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons Elizabeth Agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56036" toLevel="1" name="Summon Agathion Hawk">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons Hawk Agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56037" toLevel="1" name="Summon Agathion Ban">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons Ban Agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56038" toLevel="1" name="Summon Agathion Diane">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons Diane Agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56039" toLevel="1" name="Summon Agathion King">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons King Agathion -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56040" toLevel="1" name="Summon Agathion Merlin">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons Merlin Agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56041" toLevel="1" name="Summon Agathion Gowther">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons Gowther Agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56042" toLevel="1" name="Summon Agathion Escanor">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons Escanor Agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56043" toLevel="9" name="Seven Deadly Sins - Meliodas">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Max HP/ MP/ CP and STR/ INT are increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56044" toLevel="9" name="Seven Deadly Sins - Elizabeth">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Max HP/ MP/ CP and CON/ WIT are increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56045" toLevel="9" name="Seven Deadly Sins - Hawk">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Max HP/ MP/ CP and CON are increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56046" toLevel="9" name="Seven Deadly Sins - Ban">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Max HP/ MP/ CP and DEX are increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56047" toLevel="9" name="Seven Deadly Sins - Diane">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Max HP/ MP/ CP and STR are increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56048" toLevel="9" name="Seven Deadly Sins - King">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Max HP/ MP/ CP and WIT are increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56049" toLevel="9" name="Seven Deadly Sins - Merlin">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Max HP/ MP/ CP and INT are increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56050" toLevel="9" name="Seven Deadly Sins - Gowther">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Max HP/ MP/ CP and MEN are increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56051" toLevel="9" name="Seven Deadly Sins - Escanor">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Max HP/ MP/ CP and CON are increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56052" toLevel="9" name="Sin of Wrath">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- PvE Damage to ordinary monsters is increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56053" toLevel="9" name="Divine Family Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Damage received in PvE is decreased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56054" toLevel="8" name="Boar Hat Pub Pig Mark">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Acquired XP/ SP is increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56055" toLevel="8" name="Sin of Greed">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- P. Skills Critical Rate is increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56056" toLevel="8" name="Sin of Envy">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- P. Atk. is increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56057" toLevel="8" name="Sin of Sloth">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Skill MP Consumption is decreased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56058" toLevel="8" name="Sin of Gluttony">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Def. is increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56059" toLevel="8" name="Sin of Lust">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Debuff Resistance is increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56060" toLevel="8" name="Sin of Pride">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- P. Def. is increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56061" toLevel="8" name="Demon Sword Lostvayne Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- PvP Damage is increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56062" toLevel="8" name="Tranquility Magic Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Damage received in PvP is decreased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56063" toLevel="8" name="Leftovers Cleaning Knights Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Acquired XP/ SP is increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56064" toLevel="8" name="Holy Staff Courechouse Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Skill Cooldown is decreased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56065" toLevel="8" name="War Hammer Gideon Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- P. Critical Damage is increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56066" toLevel="8" name="Spirit Spear Chastiefol Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. is increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56067" toLevel="8" name="Morning Star Aldan Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Critical Damage is increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56068" toLevel="8" name="Twin Bow Herritt Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Damage to immobilized targets is increased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56069" toLevel="8" name="Divine Axe Rhitta Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Received P. Critical Damage is decreased when Agathion is upgraded. -->
+		<icon>BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56070" toLevel="1" name="Seven Sins Agathion Charm Growth Book">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56071" toLevel="1" name="Merlin's Magical Bracelet">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- If equipped, 1 primary and $s1 secondary Agathion slots are available. -->
+		<icon>BranchIcon.icon.g_bm_7th_sins_lbracelet_30d_jp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56072" toLevel="1" name="Seven Deadly Sins: Might">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special buff of the Seven Deadly Sins squad. For $s1, P. Atk. +$s2. -->
+		<icon>icon.skill1068</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56073" toLevel="1" name="Seven Deadly Sins: Haste">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special buff of the Seven Deadly Sins squad. For $s1, P. Atk. Spd. +$s2. -->
+		<icon>icon.skill1086</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56074" toLevel="1" name="Seven Deadly Sins: Empower">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special buff of the Seven Deadly Sins squad. For $s1, M. Atk. +$s2. -->
+		<icon>icon.skill1059</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56075" toLevel="1" name="Seven Deadly Sins: Acumen">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special buff of the Seven Deadly Sins squad. For $s1, Casting Spd. +$s2. -->
+		<icon>icon.skill1085</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56076" toLevel="1" name="Seven Deadly Sins: Wind Walk">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special buff of the Seven Deadly Sins squad. For $s1, Speed +$s2. -->
+		<icon>icon.skill1204</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56077" toLevel="1" name="Seven Deadly Sins: Vampiric Rage">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special buff of the Seven Deadly Sins squad. For $s1, recovers as HP $s2 of the physical damage inflicted on the enemy with a certain probability. -->
+		<icon>icon.skill1268</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56078" toLevel="1" name="Seven Deadly Sins: Berserker Spirit">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special buff of the Seven Deadly Sins squad. For $s1, party member's P. Def. -$s2, M. Def. -$s3, Evasion -$s4, and P. Atk. +$s5, M. Atk. +$s6, Atk. Spd. +$s7, Casting Spd. +$s8, Speed +$s9. -->
+		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56079" toLevel="1" name="Seven Deadly Sins: Shield">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special buff of the Seven Deadly Sins squad. For $s1, P. Def. +$s2. -->
+		<icon>icon.skill1040</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56080" toLevel="1" name="Seven Deadly Sins: Focus">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special buff of the Seven Deadly Sins squad. For $s1, P. Critical Rate +$s2. -->
+		<icon>icon.skill1077</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56081" toLevel="1" name="Seven Deadly Sins: Death Whisper">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special buff of the Seven Deadly Sins squad. For $s1, P. Critical Damage +$s2. -->
+		<icon>icon.skill1242</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56082" toLevel="1" name="Seven Deadly Sins: Guidance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special buff of the Seven Deadly Sins squad. For $s1, Accuracy +$s2. -->
+		<icon>icon.skill1240</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56083" toLevel="1" name="Seven Deadly Sins: Clarity">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special buff of the Seven Deadly Sins squad. For $s1, P. Skill MP Consumption -$s2, M. Skill MP Consumption -$s3, and song/ dance Skill MP Consumption -$s4. Consumes $s5 Spirit Ore. -->
+		<icon>icon.skill1397</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56084" toLevel="1" name="Seven Deadly Sins: Wild Magic">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special buff of the Seven Deadly Sins squad. For $s1, M. Critical Rate +$s2. -->
+		<icon>icon.skill1303</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56085" toLevel="1" name="Seven Deadly Sins: Concentration">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special buff of the Seven Deadly Sins squad. For $s1, probability of magic being canceled due to damage received -$s2. -->
+		<icon>icon.skill1078</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56086" toLevel="1" name="Seven Deadly Sins: Blessed Body">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special buff of the Seven Deadly Sins squad. For $s1, Max HP +$s2. -->
+		<icon>icon.skill1045</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56087" toLevel="1" name="Seven Deadly Sins: Blessed Soul">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special buff of the Seven Deadly Sins squad. For $s1, Max MP +$s2. -->
+		<icon>icon.skill1048</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56088" toLevel="1" name="Seven Deadly Sins: Magic Barrier">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special buff of the Seven Deadly Sins squad. For $s1, M. Def. +$s2. -->
+		<icon>icon.skill1036</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56089" toLevel="1" name="Seven Deadly Sins Special Beer - Victory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Special item of the Seven Deadly Sins squad. For $s1, HP/ MP Recovery bonus +$s2, Accuracy/ Evasion +$s3, P./ M. Atk. +$s4, Atk. Spd./ Casting Spd. +$s5, P./ M. Critical Rate +$s6, P./ M. Critical Damage +$s7. -->
+		<icon>BranchSys3.icon1.g_beerfestival_octoberfest_beer</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56090" toLevel="1" name="Snake's Blessing Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56091" toLevel="24" name="Snake's Blessing Lv. 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Allows obtaining the Seven Deadly Sins cards. Allows obtaining one card after $s1 h. You can get total of $s2 cards for $s3 levels. As soon as the effect is over, the character can get it again from Snake. <Warning> If the character is dead, it is impossible to get a card or to increase the Snake's Blessing level. Also the character cannot get a card if the inventary is full. -->
+		<icon>icon.card_event_everyday_gift</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56092" toLevel="1" name="Purse with the Seven Deadly Sins Cards">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56093" toLevel="1" name="Agathion Cute Trick">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- See the tricks performed by the summoned Agathion. -->
+		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56094" toLevel="1" name="Legendary Knights Card - Seven Deadly Sins">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For $s1, Acquired XP/ SP +$s2, P. Atk./ P. Def./ M. Atk./ M. Def. +$s3. -->
+		<icon>BranchIcon.icon.icon_card_sin_meli_legend</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56095" toLevel="1" name="+5 Agathion Hawk - Lv. 3 (7-day) Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56096" toLevel="1" name="VIP Gain Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.Icon.g_bm_vip_potion_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56097" toLevel="1" name="Good VIP Gain Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.Icon.g_bm_vip_potion_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56098" toLevel="24" name="Venir's Talisman">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- When equipped, CON +$s1. -->
+		<icon>
+			<value level="1">icon.etc_all_stat_talisman_i00</value>
+			<value level="2">icon.etc_all_stat_talisman_i00</value>
+			<value level="3">icon.etc_all_stat_talisman_i00</value>
+			<value level="4">icon.etc_all_stat_talisman_i00</value>
+			<value level="5">icon.etc_all_stat_talisman_i00</value>
+			<value level="6">icon.etc_all_stat_talisman_i00</value>
+			<value level="7">icon.etc_all_stat_talisman_i01</value>
+			<value level="8">icon.etc_all_stat_talisman_i01</value>
+			<value level="9">icon.etc_all_stat_talisman_i01</value>
+			<value level="10">icon.etc_all_stat_talisman_i01</value>
+			<value level="11">icon.etc_all_stat_talisman_i01</value>
+			<value level="12">icon.etc_all_stat_talisman_i01</value>
+			<value level="13">icon.etc_all_stat_talisman_i02</value>
+			<value level="14">icon.etc_all_stat_talisman_i02</value>
+			<value level="15">icon.etc_all_stat_talisman_i02</value>
+			<value level="16">icon.etc_all_stat_talisman_i02</value>
+			<value level="17">icon.etc_all_stat_talisman_i02</value>
+			<value level="18">icon.etc_all_stat_talisman_i02</value>
+			<value level="19">icon.etc_all_stat_talisman_i02</value>
+			<value level="20">icon.etc_all_stat_talisman_i02</value>
+			<value level="21">icon.etc_all_stat_talisman_i02</value>
+			<value level="22">icon.etc_all_stat_talisman_i02</value>
+			<value level="23">icon.etc_all_stat_talisman_i02</value>
+			<value level="24">icon.etc_all_stat_talisman_i02</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

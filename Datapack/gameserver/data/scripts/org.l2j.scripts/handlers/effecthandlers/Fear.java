@@ -27,6 +27,8 @@ import org.l2j.gameserver.model.actor.instance.L2DefenderInstance;
 import org.l2j.gameserver.model.actor.instance.L2FortCommanderInstance;
 import org.l2j.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import org.l2j.gameserver.model.effects.AbstractEffect;
+import org.l2j.gameserver.model.effects.EffectFlag;
+import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.util.Util;
 
@@ -42,14 +44,24 @@ public final class Fear extends AbstractEffect
 	{
 		
 	}
+
+	@Override
+	public long getEffectFlags()
+	{
+		return EffectFlag.FEAR.getMask();
+	}
 	
 	@Override
 	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		final L2Character creature = effected;
-		return creature.isPlayer() || creature.isSummon() || (creature.isAttackable() && //
-			!((creature instanceof L2DefenderInstance) || (creature instanceof L2FortCommanderInstance) || //
-				(creature instanceof L2SiegeFlagInstance) || (creature.getTemplate().getRace() == Race.SIEGE_WEAPON)));
+		if ((effected == null) || effected.isRaid())
+		{
+			return false;
+		}
+
+		return effected.isPlayer() || effected.isSummon() || (effected.isAttackable() //
+				&& !((effected instanceof L2DefenderInstance) || (effected instanceof L2FortCommanderInstance) //
+				|| (effected instanceof L2SiegeFlagInstance) || (effected.getTemplate().getRace() == Race.SIEGE_WEAPON)));
 	}
 	
 	@Override
@@ -59,14 +71,14 @@ public final class Fear extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		fearAction(null, effected);
 		return false;
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		effected.getAI().notifyEvent(CtrlEvent.EVT_AFRAID);
 		fearAction(effector, effected);

@@ -19,6 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.effects.AbstractEffect;
+import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.skills.Skill;
 
 /**
@@ -30,26 +31,18 @@ public final class Passive extends AbstractEffect
 	public Passive(StatsSet params)
 	{
 	}
-	
+
+	@Override
+	public long getEffectFlags()
+	{
+		return EffectFlag.PASSIVE.getMask();
+	}
+
+
 	@Override
 	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
 	{
 		return effected.isAttackable();
 	}
-	
-	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill)
-	{
-		effected.abortAttack();
-		effected.abortCast();
-		effected.disableAllSkills();
-		effected.setIsImmobilized(true);
-	}
-	
-	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
-	{
-		effected.enableAllSkills();
-		effected.setIsImmobilized(false);
-	}
+
 }

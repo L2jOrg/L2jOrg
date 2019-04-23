@@ -16,9 +16,7 @@
  */
 package quests.Q00098_SagaOfTheShillienSaint;
 
-import java.util.HashSet;
-import java.util.Set;
-
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.base.ClassId;
@@ -28,6 +26,9 @@ import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.util.Util;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author QuangNguyen
@@ -435,7 +436,7 @@ public class Q00098_SagaOfTheShillienSaint extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(1500, npc, killer, true))
+		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			switch (npc.getId())
 			{

@@ -16,15 +16,16 @@
  */
 package quests.Q00356_DigUpTheSeaOfSpores;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.util.Util;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Dig Up the Sea of Spores! (356)
@@ -136,7 +137,7 @@ public final class Q00356_DigUpTheSeaOfSpores extends Quest
 	{
 		final QuestState qs = getQuestState(killer, false);
 		
-		if ((qs == null) || !Util.checkIfInRange(1500, npc, killer, true))
+		if ((qs == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			return null;
 		}

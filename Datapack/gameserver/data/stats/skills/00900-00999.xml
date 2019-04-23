@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="900" toLevel="6" name="Energy Blast">
+		<!-- Delivers a powerful strike with $s1 Power. -->
+		<icon>icon.skill_transform_etc</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -13,7 +15,6 @@
 		</effectPoint>
 		<fanRange>0;0;200;900</fanRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill_transform_etc</icon>
 		<magicLvl>
 			<value level="1">80</value>
 			<value level="2">81</value>
@@ -32,7 +33,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<pveEffects>
 			<effect name="PhysicalAttack">
@@ -63,6 +63,8 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="901" toLevel="6" name="Dark Strike">
+		<!-- Delivers a powerful strike with $s1 Power. -->
+		<icon>icon.skill_transform_etc</icon>
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-676</value>
@@ -74,7 +76,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill_transform_etc</icon>
 		<magicLvl>
 			<value level="1">80</value>
 			<value level="2">81</value>
@@ -94,7 +95,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<pveEffects>
 			<effect name="PhysicalAttack">
@@ -124,6 +124,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="902" toLevel="6" name="Bursting Flame">
+		<!-- Inflicts a powerful ranged attack with $s1 Power. -->
+		<icon>icon.skill_transform_etc</icon>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-676</value>
@@ -135,7 +137,6 @@
 		</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill_transform_etc</icon>
 		<magicLvl>
 			<value level="1">80</value>
 			<value level="2">81</value>
@@ -154,7 +155,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<pveEffects>
 			<effect name="PhysicalAttack">
@@ -184,6 +184,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="903" toLevel="6" name="Stratum Explosion">
+		<!-- Attacks enemies in front of you. Power $s1. -->
+		<icon>icon.skill_transform_etc</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -195,7 +197,6 @@
 			<value level="6">-689</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill_transform_etc</icon>
 		<magicLvl>
 			<value level="1">80</value>
 			<value level="2">81</value>
@@ -214,7 +215,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<pveEffects>
 			<effect name="PhysicalAttack">
@@ -245,6 +245,8 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="904" toLevel="6" name="Corpse Burst">
+		<!-- Causes a nearby corpse to burst open, poisoning enemies with $s1 Power. Effect $s2 -->
+		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -266,7 +268,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill_transform_debuff</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -287,7 +288,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<trait>POISON</trait>
@@ -330,6 +330,8 @@
 		</pvpEffects>
 	</skill>
 	<skill id="905" toLevel="6" name="Dark Detonation">
+		<!-- Inflicts a powerful continuous attack on nearby enemies, stunning them with $s1 Power. -->
+		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -347,7 +349,6 @@
 			<value level="6">-689</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill_transform_debuff</icon>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
 			<value level="1">80</value>
@@ -367,7 +368,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
@@ -404,6 +404,8 @@
 		</pvpEffects>
 	</skill>
 	<skill id="906" toLevel="6" name="Lance Step">
+		<!-- Inflicts a mighty straight-line blow with $s1 Power. -->
+		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>900</affectRange>
 		<effectPoint>
@@ -416,7 +418,6 @@
 		</effectPoint>
 		<fanRange>0;0;900;100</fanRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill_transform_s_attack</icon>
 		<magicLvl>
 			<value level="1">80</value>
 			<value level="2">81</value>
@@ -435,7 +436,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<pveEffects>
 			<effect name="PhysicalAttack">
@@ -466,6 +466,8 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="907" toLevel="6" name="Aqua Splash">
+		<!-- Inflicts a powerful ranged attack with $s1 Power. -->
+		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-676</value>
@@ -479,7 +481,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill_transform_s_attack</icon>
 		<magicLvl>
 			<value level="1">80</value>
 			<value level="2">81</value>
@@ -498,7 +499,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<pveEffects>
 			<effect name="PhysicalAttack">
@@ -528,6 +528,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="908" toLevel="6" name="Spin Slash">
+		<!-- Attacks enemies in front of you. Power $s1. -->
+		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -539,7 +541,6 @@
 			<value level="6">-689</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill_transform_s_attack</icon>
 		<magicLvl>
 			<value level="1">80</value>
 			<value level="2">81</value>
@@ -558,7 +559,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<pveEffects>
 			<effect name="PhysicalAttack">
@@ -589,6 +589,8 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="909" toLevel="6" name="Ice Fog">
+		<!-- Inflicts continuous damage on nearby enemies with $s1 Power, decreasing their Speed, Atk. Spd. and Casting Spd. -->
+		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -608,7 +610,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill_transform_debuff</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -630,7 +631,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>POISON</trait>
 		<targetType>SELF</targetType>
@@ -680,6 +680,8 @@
 		</pvpEffects>
 	</skill>
 	<skill id="910" toLevel="6" name="Water Jet">
+		<!-- Strikes enemies with $s2 Power in a mighty rush of Water. Effect $s1 -->
+		<icon>icon.skill_transform_s_attack</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -700,7 +702,6 @@
 		<attributeValue>20</attributeValue>
 		<fanRange>0;0;200;900</fanRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill_transform_s_attack</icon>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
 			<value level="1">80</value>
@@ -720,7 +721,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<trait>BLEED</trait>
@@ -753,7 +753,8 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="911" toLevel="11" name="Energy Burst">
-		<!-- Aurabird Falcon and Owl -->
+		<!-- Attacks enemies in front of you. Power $s1. -->
+		<icon>icon.skill_transform_etc</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -770,7 +771,6 @@
 			<value level="11">-696</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill_transform_etc</icon>
 		<magicLvl>
 			<value level="1">75</value>
 			<value level="2">76</value>
@@ -799,7 +799,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -823,8 +822,9 @@
 		</effects>
 	</skill>
 	<skill id="912" toLevel="1" name="Summon Imperial Phoenix">
-		<hitTime>15000</hitTime>
+		<!-- Summons an Imperial Phoenix. Requires 2 A-grade Crystals. -->
 		<icon>icon.skill0912</icon>
+		<hitTime>15000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>2</itemConsumeCount>
 		<itemConsumeId>1461</itemConsumeId> <!-- Crystal (A-Grade) -->
@@ -832,7 +832,6 @@
 		<mpConsume>145</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>45000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -842,24 +841,23 @@
 		<effects>
 			<effect name="Summon">
 				<npcId>14918</npcId>
-				<lifeTime>3600</lifeTime>
-				<consumeItemId>1461</consumeItemId>
+				<consumeItemId>1461</consumeItemId> <!-- Crystal (A-grade) -->
 				<consumeItemCount>1</consumeItemCount>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="913" toLevel="1" name="Deflect Magic">
+		<!-- Magic Attack Resistance +50% for 20 min. -->
+		<icon>icon.skill0913</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DD_RESIST</abnormalType>
 		<effectPoint>679</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0913</icon>
 		<magicLvl>77</magicLvl>
 		<mpConsume>37</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -872,19 +870,19 @@
 		</effects>
 	</skill>
 	<skill id="914" toLevel="1" name="Song of Purification">
+		<!-- With 50% probability removes debuffs from party members. Debuff Resistance +80%, Healing Power +30% for 5 min. -->
+		<icon>icon.skill0914</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_PURIFICATION</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>679</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0914</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>80</magicLvl>
 		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>240000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -907,19 +905,19 @@
 		</effects>
 	</skill>
 	<skill id="915" toLevel="1" name="Dance of Berserker">
+		<!-- For 5 min., all party members' P. Def. -4%, M. Def. -8%, P. Evasion -2 -->
+		<icon>icon.skill0915</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_BERSERKER</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>679</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0915</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>80</magicLvl>
 		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>240000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -938,7 +936,6 @@
 				<amount>-2</amount>
 				<mode>DIFF</mode>
 			</effect>
-			
 			<effect name="PAtk">
 				<amount>4</amount>
 				<mode>PER</mode>
@@ -962,13 +959,13 @@
 		</effects>
 	</skill>
 	<skill id="916" toLevel="4" name="Shield Deflect Magic">
-		<!-- Confirmed CT2.5 -->
+		<!-- For $s1, transfers magical damage back to the enemy caster. Requires Shield. -->
+		<icon>icon.skill0916</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>REFLECT_MAGIC_DD</abnormalType>
 		<effectPoint>204</effectPoint>
 		<hitTime>500</hitTime>
-		<icon>icon.skill0916</icon>
 		<magicLvl>
 			<value level="1">60</value>
 			<value level="2">64</value>
@@ -983,7 +980,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>45000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1003,17 +999,17 @@
 		</effects>
 	</skill>
 	<skill id="917" toLevel="1" name="Final Secret">
+		<!-- For 30 sec., you call upon your hidden reserves to get your skills power +10% and standard attack damage +8% during PvP. -->
+		<icon>icon.skill0917</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>FINAL_SECRET</abnormalType>
 		<effectPoint>597</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0917</icon>
 		<magicLvl>79</magicLvl>
 		<mpConsume>41</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>150000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1030,15 +1026,15 @@
 		</effects>
 	</skill>
 	<skill id="918" toLevel="1" name="Maximum Force Focus">
+		<!-- Immediately increases Momentum to its maximum level. Available if the charge is below 8th level. Requires a fist weapon. -->
+		<icon>icon.skill0918</icon>
 		<effectPoint>150</effectPoint>
 		<hitTime>900</hitTime>
 		<hpConsume>80</hpConsume>
-		<icon>icon.skill0918</icon>
 		<magicLvl>80</magicLvl>
 		<mpConsume>20</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>75000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1057,15 +1053,15 @@
 		</effects>
 	</skill>
 	<skill id="919" toLevel="1" name="Maximum Sonic Focus">
+		<!-- Immediately increases Momentum to its maximum level. Available if the charge is below 8th level. Requires a dual sword. -->
+		<icon>icon.skill0919</icon>
 		<effectPoint>150</effectPoint>
 		<hitTime>900</hitTime>
 		<hpConsume>80</hpConsume>
-		<icon>icon.skill0919</icon>
 		<magicLvl>80</magicLvl>
 		<mpConsume>20</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>75000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1084,7 +1080,8 @@
 		</effects>
 	</skill>
 	<skill id="920" toLevel="37" name="Power Crush">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Over-hit. Critical. -->
+		<icon>icon.skill0920</icon>
 		<castRange>80</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -1128,7 +1125,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0920</icon>
 		<magicLvl>
 			<value level="1">38</value>
 			<value level="2">39</value>
@@ -1210,7 +1206,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1268,18 +1263,18 @@
 		</effects>
 	</skill>
 	<skill id="921" toLevel="1" name="Spike Thrust">
+		<!-- Attacks a target and inflicts damage with 3849 Power added to P. Atk. Over-hit. Critical. Ignores Shield Defense. -->
+		<icon>icon.skill0921</icon>
 		<castRange>80</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-337</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>720</hitTime>
-		<icon>icon.skill0921</icon>
 		<magicLvl>76</magicLvl>
 		<mpConsume>77</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1300,6 +1295,8 @@
 		</effects>
 	</skill>
 	<skill id="922" toLevel="3" name="Hide">
+		<!-- Renders invisible for $s1. Effect cancels upon any action except for moving. -->
+		<icon>icon.skill0922</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
@@ -1318,12 +1315,10 @@
 			<value level="2">61</value>
 			<value level="3">71</value>
 		</magicLvl>
-		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>
 		<reuseDelay>180000</reuseDelay>
-		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1340,18 +1335,44 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="923" toLevel="1" name="Dual Dagger Mastery">
+		<!-- When using a dual dagger, P. Atk. +87.5 and the vital points attacks success rate +5%. -->
+		<icon>icon.skill0923</icon>
+		<magicLvl>81</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>81</minLevel>
+				<maxLevel>85</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>87.5</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</effect>
+			<effect name="FatalBlowRate">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="924" toLevel="1" name="Seven Arrow">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Shoots 7 arrows to attack the enemy with 11440 Power added to P. Atk. Critical. -->
+		<icon>icon.skill0924</icon>
 		<castRange>900</castRange>
 		<effectPoint>-1022</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0924</icon>
 		<magicLvl>81</magicLvl>
 		<mpConsume>81</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>3</hitCancelTime>
@@ -1372,7 +1393,7 @@
 		</effects>
 	</skill>
 	<skill id="925" toLevel="1" name="Sigil Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- When a Sigil is equipped, M. Atk. +4% and MP Recovery Bonus +17%. -->
 		<icon>icon.skill0925</icon>
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
@@ -1395,7 +1416,7 @@
 		</effects>
 	</skill>
 	<skill id="926" toLevel="1" name="Sigil Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- When a Sigil is equipped, heal power +30 and MP Recovery Bonus +17%. -->
 		<icon>icon.skill0925</icon>
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
@@ -1418,7 +1439,8 @@
 		</effects>
 	</skill>
 	<skill id="927" toLevel="14" name="Burning Chop">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk., causes burns for $s2, and makes him consume $s3 HP every sec. Cannot be used when a bow is equipped. Over-hit. Critical. -->
+		<icon>icon.skill0927</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -1462,7 +1484,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0927</icon>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
 			<value level="1">40</value>
@@ -1484,7 +1505,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -1498,8 +1518,8 @@
 					<item>POLE</item>
 					<item>DUALFIST</item>
 					<item>DUAL</item>
-
-
+					<item>DUALDAGGER</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -1545,17 +1565,53 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="928" toLevel="1" name="Dual Blow">
+		<!-- Attacks the target's vital points with 11234 Power added to P. Atk. Lethal Strike is possible. Half Kill is possible. Critical. Over-hit. Requires a dual dagger to be equipped. -->
+		<icon>icon.skill0928_1</icon>
+		<castRange>40</castRange>
+		<effectPoint>-337</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>1800</hitTime>
+		<magicLvl>83</magicLvl>
+		<mpConsume>82</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<coolTime>720</coolTime>
+		<trait>DEATH</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="FatalBlow">
+				<power>11234</power>
+				<criticalChance>30</criticalChance>
+				<chanceBoost>600</chanceBoost>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="Lethal">
+				<fullLethal>0.1</fullLethal>
+				<halfLethal>8</halfLethal>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="933" toLevel="1" name="Detection">
-		<!-- Confirmed CT2.5 -->
+		<!-- Finds any enemies hidden nearby. -->
+		<icon>icon.skill0470</icon>
 		<affectRange>300</affectRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0470</icon>
 		<magicLvl>74</magicLvl>
 		<mpConsume>67</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1565,6 +1621,7 @@
 		</effects>
 	</skill>
 	<skill id="934" toLevel="1" name="Sigil Mastery">
+		<!-- When a sigil is equipped, Max MP +5% and MP Recovery Bonus +17%. -->
 		<icon>icon.skill0925</icon>
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
@@ -1587,6 +1644,7 @@
 		</effects>
 	</skill>
 	<skill id="935" toLevel="1" name="Sigil Mastery">
+		<!-- When a sigil is equipped, Max MP +5% and MP Recovery Bonus +17%. -->
 		<icon>icon.skill0925</icon>
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
@@ -1609,7 +1667,7 @@
 		</effects>
 	</skill>
 	<skill id="936" toLevel="47" name="Ordinary Mercenary">
-		<!-- Confirmed CT2.5 -->
+		<!-- Mercenary's ability. -->
 		<icon>icon.skilltransform1</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -1898,7 +1956,7 @@
 		</effects>
 	</skill>
 	<skill id="937" toLevel="47" name="Elite Mercenary">
-		<!-- Confirmed CT2.5 -->
+		<!-- Elite Mercenary's ability. -->
 		<icon>icon.skilltransform1</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -2194,7 +2252,7 @@
 		</effects>
 	</skill>
 	<skill id="938" toLevel="47" name="Exalted Mercenary">
-		<!-- Confirmed CT2.5 -->
+		<!-- Exalted Mercenary's ability. -->
 		<icon>icon.skilltransform1</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -2483,18 +2541,17 @@
 		</effects>
 	</skill>
 	<skill id="939" toLevel="1" name="Soul Rage">
-		<!-- Confirmed CT2.5 -->
+		<!-- Gathers souls and attacks the enemy by hurling projectiles. Possible up to Lv. 40. Critical hit and over-hit are possible. -->
+		<icon>icon.skill0939</icon>
 		<castRange>600</castRange>
 		<effectPoint>-340</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
 		<hpConsume>25</hpConsume>
-		<icon>icon.skill0939</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>5</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2511,66 +2568,67 @@
 		</selfEffects>
 	</skill>
 	<skill id="940" toLevel="1" name="Fake Attack">
-		<hitTime>1000</hitTime>
+		<!-- Pretends to attack. -->
 		<icon>icon.skill_transform_s_attack</icon>
+		<hitTime>1000</hitTime>
 		<magicLvl>80</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="941" toLevel="1" name="Special Motion">
+		<!-- Surprises the target. -->
+		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill_transform_s_attack</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="942" toLevel="1" name="Special Motion">
+		<!-- Acts grumpy. -->
+		<icon>icon.skill_transform_s_attack</icon>
 		<effectPoint>100</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill_transform_s_attack</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="943" toLevel="1" name="Special Motion">
+		<!-- Brings down snow on the target's head. -->
+		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill_transform_s_attack</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="944" toLevel="1" name="Special Motion">
+		<!-- Laughs at target. -->
+		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill_transform_s_attack</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="945" toLevel="1" name="Magician's Will">
+		<!-- M. Atk. +5%, Casting Spd. +5% and magical Critical Rate +5%. MP Consumption -5%. -->
 		<icon>icon.skill0945</icon>
 		<magicLvl>81</magicLvl>
 		<operateType>P</operateType>
@@ -2596,6 +2654,7 @@
 		</effects>
 	</skill>
 	<skill id="946" toLevel="1" name="Silent Mind">
+		<!-- Allows use of a bow without consuming MP. -->
 		<icon>icon.skill0946</icon>
 		<magicLvl>81</magicLvl>
 		<operateType>P</operateType>
@@ -2605,7 +2664,8 @@
 		</effects>
 	</skill>
 	<skill id="947" toLevel="1" name="Lucky Strike">
-		<!-- Confirmed CT2.5 -->
+		<!-- Inflicts an exploding attack on the enemy with 4312 Power added to P. Atk. Causes damage and spoil at the same time on some nearby enemies. Requires a sword or blunt weapon. Over-hit. -->
+		<icon>icon.skill0947</icon>
 		<affectLimit>3-6</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>40</castRange>
@@ -2613,13 +2673,11 @@
 		<effectPoint>-343</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1700</hitTime>
-		<icon>icon.skill0947</icon>
 		<magicLvl>81</magicLvl>
 		<mpConsume>70</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -2641,17 +2699,17 @@
 		</effects>
 	</skill>
 	<skill id="948" toLevel="1" name="Eye for Eye">
+		<!-- For 10 sec., returns received damage back to the enemy. -->
+		<icon>icon.skill0948</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>COUNTER_SKILL</abnormalType>
 		<effectPoint>340</effectPoint>
 		<hitTime>500</hitTime>
-		<icon>icon.skill0948</icon>
 		<magicLvl>81</magicLvl>
 		<mpConsume>29</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>75000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -2666,6 +2724,8 @@
 		</effects>
 	</skill>
 	<skill id="949" toLevel="1" name="Onslaught of Pa'agrio">
+		<!-- Attacks near the enemy with 4312 Power added to P. Atk., causes burns for 15 sec., and makes him consume 92 HP every sec. Requires a blunt weapon. Over-hit. -->
+		<icon>icon.skill0949</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -2680,7 +2740,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0949</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>81</magicLvl>
@@ -2688,7 +2747,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -2713,14 +2771,13 @@
 		</effects>
 	</skill>
 	<skill id="950" toLevel="7" name="Nail Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kamael Final Form Skill -->
+		<!-- A demonic clawed combo attack. Power $s1. -->
+		<icon>icon.skill0539</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0539</icon>
 		<magicLvl>
 			<value level="1">79</value>
 			<value level="2">80</value>
@@ -2742,7 +2799,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2761,8 +2817,8 @@
 		</effects>
 	</skill>
 	<skill id="951" toLevel="7" name="Wing Assault">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kamael Final Form Skill -->
+		<!-- Charges with outspread wings. Strikes around the attacking target. Power $s1. -->
+		<icon>icon.skill0540</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>600</castRange>
@@ -2770,7 +2826,6 @@
 		<effectPoint>-676</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>800</hitTime>
-		<icon>icon.skill0540</icon>
 		<magicLvl>
 			<value level="1">79</value>
 			<value level="2">80</value>
@@ -2791,7 +2846,6 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -2816,7 +2870,7 @@
 		</effects>
 	</skill>
 	<skill id="952" toLevel="5" name="Collector's Experience">
-		<!-- Confirmed CT2.5 -->
+		<!-- P. Atk. +$s1 when using a sword/ blunt weapon. Shield Defense +$s2 when using a shield. There's a chance that Collector's Fortune will be activated on yourself when using Crushing Strike. -->
 		<icon>BranchSys2.icon.skill0952</icon>
 		<magicLvl>
 			<value level="1">58</value>
@@ -2832,7 +2886,7 @@
 				<!-- Crushing Strike -->
 				<!-- Collector's Fortune -->
 				<castSkillId>997</castSkillId>
-				<skillId>6920</skillId>
+				<skillId>6920</skillId> <!-- Collector's Fortune -->
 				<skillLevel>1</skillLevel>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
@@ -2864,15 +2918,14 @@
 		</effects>
 	</skill>
 	<skill id="953" toLevel="1" name="Life to Soul">
-		<!-- Confirmed CT2.5 -->
+		<!-- Consumes HP in order to increase the soul. -->
+		<icon>icon.skill0502</icon>
 		<effectPoint>150</effectPoint>
 		<hitTime>900</hitTime>
 		<hpConsume>328</hpConsume>
-		<icon>icon.skill0502</icon>
 		<magicLvl>82</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>11000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2886,7 +2939,8 @@
 		</effects>
 	</skill>
 	<skill id="954" toLevel="1" name="Strider Bite">
-		<!-- Confirmed CT2.5 -->
+		<!-- Commands the mounted strider to bite the enemies in front. Attacks the enemy with 1649 Power added to P. Atk., causes Bleed for 20 sec., and makes him consume 54 HP every second. Over-hit. Critical. -->
+		<icon>icon.skill00954</icon>
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -2899,7 +2953,6 @@
 		<effectPoint>-266</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill00954</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>55</magicLvl>
@@ -2907,7 +2960,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>BLEED</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2924,18 +2976,17 @@
 		</effects>
 	</skill>
 	<skill id="955" toLevel="1" name="Strider Dash">
-		<!-- Confirmed CT2.5 -->
+		<!-- Speed +66 for 15 sec. -->
+		<icon>icon.skill000955</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<effectPoint>438</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill000955</icon>
 		<magicLvl>56</magicLvl>
 		<mpConsume>25</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -2948,14 +2999,13 @@
 		</effects>
 	</skill>
 	<skill id="956" toLevel="3" name="Boost Morale">
-		<!-- Confirmed CT2.5 -->
-		<!-- Vanguard Stance Skill -->
+		<!-- For $s1, when using a sword/ blunt weapon/ dual sword, one's own Accuracy +$s2, Critical Rate +$s3, and Critical Damage +$s4. -->
+		<icon>icon.skill956</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<effectPoint>408</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill956</icon>
 		<magicLvl>
 			<value level="1">43</value>
 			<value level="2">55</value>
@@ -2964,7 +3014,6 @@
 		<mpConsume>133</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -3012,8 +3061,8 @@
 		</effects>
 	</skill>
 	<skill id="957" toLevel="37" name="Guillotine Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Vanguard Stance Skill -->
+		<!-- Attacks the target with $s1 Power added to P. Atk. Requires a two-handed sword/ two-handed blunt weapon to be equipped. Ignores Shield Defense. Over-hit. -->
+		<icon>icon.skill957</icon>
 		<castRange>40</castRange>
 		<coolTime>1080</coolTime>
 		<effectPoint>
@@ -3057,7 +3106,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1620</hitTime>
-		<icon>icon.skill957</icon>
 		<magicLvl>
 			<value level="1">49</value>
 			<value level="2">50</value>
@@ -3139,7 +3187,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>7000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3199,8 +3246,8 @@
 		</effects>
 	</skill>
 	<skill id="958" toLevel="37" name="Triple Blade Slash">
-		<!-- Confirmed CT2.5 -->
-		<!-- Vanguard Stance Skill -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a dual sword. Over-hit. Ignores Shield Defense. -->
+		<icon>icon.skill958</icon>
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
 		<effectPoint>
@@ -3244,7 +3291,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1733</hitTime>
-		<icon>icon.skill958</icon>
 		<magicLvl>
 			<value level="1">49</value>
 			<value level="2">50</value>
@@ -3326,7 +3372,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3334,7 +3379,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -3386,19 +3431,18 @@
 		</effects>
 	</skill>
 	<skill id="959" toLevel="1" name="Frog Jump">
-		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
+		<!-- For 15 seconds, Speed +33. -->
+		<icon>icon.skill_transform_buff</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
 		<effectPoint>495</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill_transform_buff</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>24</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -3411,19 +3455,18 @@
 		</effects>
 	</skill>
 	<skill id="960" toLevel="1" name="Race Running">
-		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
+		<!-- For 15 seconds, Speed +33. -->
+		<icon>icon.skill_transform_buff</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
 		<effectPoint>495</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill_transform_buff</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>24</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -3436,19 +3479,18 @@
 		</effects>
 	</skill>
 	<skill id="961" toLevel="1" name="Swift Dash">
-		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
+		<!-- For 15 seconds, Speed +33. -->
+		<icon>icon.skill_transform_buff</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
 		<effectPoint>495</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill_transform_buff</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>24</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -3461,20 +3503,19 @@
 		</effects>
 	</skill>
 	<skill id="962" toLevel="1" name="Guard's March">
-		<!-- Confirmed CT2.5 -->
+		<!-- Speed +33 for 5 sec. -->
+		<icon>icon.skill_transform_buff</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
 		<effectPoint>495</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill_transform_buff</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>19</mpConsume>
 		<mpInitialConsume>5</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -3487,19 +3528,18 @@
 		</effects>
 	</skill>
 	<skill id="963" toLevel="1" name="Guard's Ambush">
-		<!-- NOTE: Description says "Increases Speed" but is client typo, it "Decrease Speed" -->
+		<!-- Hides the user. Speed -30%, and the effect is canceled if any action other than movement is initiated. -->
+		<icon>icon.skill_transform_buff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>STEALTH</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<effectPoint>679</effectPoint>
-		<icon>icon.skill_transform_buff</icon>
 		<magicLvl>1</magicLvl>
 		<mpConsume>19</mpConsume>
 		<mpInitialConsume>5</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3516,6 +3556,7 @@
 		</effects>
 	</skill>
 	<skill id="964" toLevel="1" name="Children of Shilen">
+		<!-- Casting Spd. +13 and MP Recovery Bonus +2%. -->
 		<icon>icon.skill0294</icon>
 		<magicLvl>14</magicLvl>
 		<operateType>P</operateType>
@@ -3532,26 +3573,24 @@
 		</effects>
 	</skill>
 	<skill id="965" toLevel="1" name="Fake Attack">
-		<!-- Confirmed CT2.5 -->
-		<hitTime>1000</hitTime>
+		<!-- Pretends to attack. -->
 		<icon>icon.skill_transform_s_attack</icon>
+		<hitTime>1000</hitTime>
 		<magicLvl>80</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="966" toLevel="1" name="Special Motion">
-		<!-- Confirmed CT2.5 -->
+		<!-- Plays harp. -->
+		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill_transform_s_attack</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3565,19 +3604,18 @@
 		<!-- TODO: Implement and use proper effects. -->
 	</skill>
 	<skill id="968" toLevel="1" name="Treykan Claw">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attack targets with 6960 Power added to P. Atk. -->
+		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>20</castRange>
 		<coolTime>167</coolTime>
 		<effectPoint>-354</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill_transform_s_attack</icon>
 		<magicLvl>85</magicLvl>
 		<mpConsume>99</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>7000</reuseDelay>
-		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -3589,19 +3627,18 @@
 		</effects>
 	</skill>
 	<skill id="969" toLevel="1" name="Treykan Dash">
-		<!-- Confirmed CT2.5 -->
+		<!-- Speed +100% for 5 sec. -->
+		<icon>icon.skill_transform_buff</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<effectPoint>495</effectPoint>
-		<icon>icon.skill_transform_buff</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>30</mpConsume>
 		<mpInitialConsume>8</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
@@ -3615,18 +3652,17 @@
 		</effects>
 	</skill>
 	<skill id="970" toLevel="1" name="Dash">
-		<!-- Confirmed CT2.5 -->
+		<!-- Speed +66 for 15 sec. -->
+		<icon>icon.skill0004</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<effectPoint>438</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0004</icon>
 		<magicLvl>46</magicLvl>
 		<mpConsume>20</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>900</effectRange>
@@ -3641,7 +3677,8 @@
 		</effects>
 	</skill>
 	<skill id="971" toLevel="1" name="Acumen">
-		<!-- Confirmed CT2.5 -->
+		<!-- Casting Spd. +30% for 20 min. -->
+		<icon>icon.skill1085</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
@@ -3649,14 +3686,12 @@
 		<effectPoint>438</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1085</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>48</magicLvl>
 		<mpConsume>30</mpConsume>
 		<mpInitialConsume>8</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -3669,18 +3704,17 @@
 		</effects>
 	</skill>
 	<skill id="972" toLevel="1" name="Snipe">
-		<!-- Confirmed CT2.5 -->
+		<!-- For 2 min., Accuracy +6, P. Atk. +199, bow's range +200 and Critical Rate +20% when using a bow. The player cannot move while the effect lasts. -->
+		<icon>icon.skill0313</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SNIPE</abnormalType>
 		<effectPoint>655</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0313</icon>
 		<magicLvl>74</magicLvl>
 		<mpConsume>35</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>75000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -3718,7 +3752,8 @@
 		</effects>
 	</skill>
 	<skill id="973" toLevel="8" name="Shock Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attack targets with Power $s1 added to P. Atk. Stuns the enemy for $s2. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3739,7 +3774,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -3765,7 +3799,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -3787,7 +3820,8 @@
 		</effects>
 	</skill>
 	<skill id="974" toLevel="7" name="Stun Shot">
-		<!-- Confirmed CT2.5 -->
+		<!-- Shoots an arrow with $s1 Power added to P. Atk. Causes shock for $s2. Also cancels target. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3799,7 +3833,6 @@
 		<effectPoint>-665</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -3822,7 +3855,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -3846,7 +3878,8 @@
 		</effects>
 	</skill>
 	<skill id="975" toLevel="33" name="Aqua Swirl">
-		<!-- Confirmed CT2.5 -->
+		<!-- Creates a powerful vortex of water, inflicting Water damage on the enemy with $s1 Power added to M. Atk. -->
+		<icon>icon.skill1175</icon>
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-673</value>
@@ -3861,7 +3894,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1175</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">20</value>
@@ -3936,7 +3968,6 @@
 		<mpInitialConsume>15</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1200</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3982,7 +4013,8 @@
 		</effects>
 	</skill>
 	<skill id="976" toLevel="7" name="Transformation Skill - Wind Strike">
-		<!-- Confirmed CT2.5 -->
+		<!-- Creates a powerful hurricane, inflicting Wind damage on the enemy with $s1 Power added to M. Atk. -->
+		<icon>icon.skill1177</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-669</value>
@@ -4005,7 +4037,6 @@
 			<value level="7">50</value>
 		</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1177</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">70</value>
@@ -4028,7 +4059,6 @@
 		<mpInitialConsume>15</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1200</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4047,7 +4077,8 @@
 		</effects>
 	</skill>
 	<skill id="977" toLevel="6" name="Ice Bolt">
-		<!-- Confirmed CT2.5 -->
+		<!-- Momentarily freezes the surrounding air, inflicting damage on the enemy with $s1 Power and decreasing their Speed by $s3 for $s2. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -4074,7 +4105,6 @@
 			<value level="6">50</value>
 		</attributeValue>
 		<hitTime>3100</hitTime>
-		<icon>icon.skill1184</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -4097,7 +4127,6 @@
 		<mpInitialConsume>15</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4119,7 +4148,8 @@
 		</effects>
 	</skill>
 	<skill id="978" toLevel="7" name="Shoulder Charge">
-		<!-- Confirmed CT2.5 -->
+		<!-- Rushes in with the shoulder to attack the enemy. Inflicted with fear for $s1. Consumes up to $s2 souls to increase power. Over-hit. -->
+		<icon>icon.skill0494</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -4139,7 +4169,6 @@
 		</effectPoint>
 		<effectRange>800</effectRange>
 		<hitTime>800</hitTime>
-		<icon>icon.skill0494</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -4163,7 +4192,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -4182,7 +4210,8 @@
 		</effects>
 	</skill>
 	<skill id="979" toLevel="6" name="Aggression">
-		<!-- Confirmed CT2.5 -->
+		<!-- Provokes the enemy to switch the target and attack you with $s1 Power. -->
+		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
@@ -4198,7 +4227,6 @@
 		</effectPoint>
 		<effectRange>1300</effectRange>
 		<hitTime>700</hitTime>
-		<icon>icon.skill0028</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">80</value>
@@ -4210,7 +4238,6 @@
 		</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4222,7 +4249,8 @@
 		</effects>
 	</skill>
 	<skill id="980" toLevel="6" name="Aggression Aura">
-		<!-- Confirmed CT2.5 -->
+		<!-- Provokes the enemies around you to switch the target and attack you with $s1 Power. -->
+		<icon>icon.skill0018</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
@@ -4237,7 +4265,6 @@
 			<value level="6">-11018</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0018</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">80</value>
@@ -4257,7 +4284,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>40000</reuseDelay>
-		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4270,7 +4296,8 @@
 		</effects>
 	</skill>
 	<skill id="981" toLevel="6" name="Sleep">
-		<!-- Confirmed CT2.5 -->
+		<!-- Causes the enemy to sleep for $s1. -->
+		<icon>icon.skill1069</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
@@ -4288,7 +4315,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>10000</hitTime>
-		<icon>icon.skill1069</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -4312,7 +4338,6 @@
 		<operateType>A2</operateType>
 		<removedOnDamage>true</removedOnDamage>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SLEEP</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -4325,6 +4350,8 @@
 		</effects>
 	</skill>
 	<skill id="982" toLevel="3" name="Combat Aura">
+		<!-- Party member's P. Atk. +$s2 and Atk. Spd. +$s3 for $s1. -->
+		<icon>icon.skill0982</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4339,7 +4366,6 @@
 		</affectRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0982</icon>
 		<magicLvl>
 			<value level="1">52</value>
 			<value level="2">64</value>
@@ -4352,7 +4378,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -4378,7 +4403,7 @@
 		</effects>
 	</skill>
 	<skill id="983" toLevel="1" name="Patience">
-		<!-- Confirmed CT2.5 -->
+		<!-- Skill Power +20% when being attacked. -->
 		<icon>icon.skill0983</icon>
 		<magicLvl>60</magicLvl>
 		<operateType>P</operateType>
@@ -4392,13 +4417,14 @@
 				<chance>10</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<skillId>6687</skillId>
+				<skillId>6687</skillId> <!-- Patience -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="984" toLevel="25" name="Shield Strike">
-		<!-- Glory Days confirmed -->
+		<!-- Attacks the enemy using a shield with $s1 Power added to P. Atk, and provokes the enemy. Requires a shield. -->
+		<icon>icon.skill0984</icon>
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-3787</value>
@@ -4429,7 +4455,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0984</icon>
 		<magicLvl>
 			<value level="1">40</value>
 			<value level="2">43</value>
@@ -4487,7 +4512,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>500</coolTime>
 		<targetType>ENEMY</targetType>
@@ -4529,7 +4553,8 @@
 		</effects>
 	</skill>
 	<skill id="985" toLevel="1" name="Challenge for Fate">
-		<!-- Glory Days confirmed -->
+		<!-- Challenges and provokes nearby enemies. Increases your P. Def. and M. Def. for 15 sec. -->
+		<icon>icon.skill0985</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
@@ -4540,11 +4565,9 @@
 		<effectPoint>-10330</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0985</icon>
 		<magicLvl>83</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>45000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
@@ -4561,12 +4584,14 @@
 		<selfEffects>
 			<effect name="CallSkill">
 				<!-- Challenge of Faith -->
-				<skillId>6913</skillId>
+				<skillId>6913</skillId> <!-- Challenge for Fate -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
 	</skill>
 	<skill id="986" toLevel="18" name="Deadly Strike">
+		<!-- Quickly strikes the target three times with $s1 Power. For $s2, enemy s P. Def. -$s3. Requires dual swords. Over-hit. -->
+		<icon>icon.skill0986</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -4576,7 +4601,6 @@
 		<effectPoint>-2320</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0986</icon>
 		<magicLvl>
 			<value level="1">40</value>
 			<value level="2">43</value>
@@ -4620,7 +4644,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>500</coolTime>
 		<targetType>ENEMY</targetType>
@@ -4668,7 +4691,8 @@
 		</effects>
 	</skill>
 	<skill id="987" toLevel="1" name="Multiple Shot">
-		<!-- Glory Days confirmed -->
+		<!-- Attack multiple enemies at the front with 11030 Power added to P. Atk. Over-hit. Critical. Requires a bow or crossbow to be equipped. -->
+		<icon>icon.skill0987</icon>
 		<affectLimit>8-0-1</affectLimit>
 		<affectRange>900</affectRange>
 		<affectHeight>-200;200</affectHeight>
@@ -4677,12 +4701,10 @@
 		<effectRange>1400</effectRange>
 		<fanRange>0;0;900;60</fanRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0987</icon>
 		<magicLvl>83</magicLvl>
 		<mpConsume>162</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>12000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>1000</coolTime>
 		<staticReuse>true</staticReuse>
@@ -4693,8 +4715,8 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>BOW</item>
-
-
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4707,7 +4729,8 @@
 		</effects>
 	</skill>
 	<skill id="988" toLevel="3" name="Battle Whisper">
-		<!-- High Five Skill -->
+		<!-- For $s1, P. Atk. +$s2, Critical Damage +$s3, and Atk. Spd. +$s4. Increases the additional MP Consumption when singing while sing/ dance effect lasts. -->
+		<icon>icon.skill0988</icon>
 		<abnormalTime>120</abnormalTime>
 		<effectPoint>
 			<value level="1">486</value>
@@ -4715,7 +4738,6 @@
 			<value level="3">448</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0988</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>
 			<value level="1">46</value>
@@ -4725,7 +4747,6 @@
 		<mpConsume>30</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<abnormalType>WISPERING_OF_BATTLE</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4764,17 +4785,16 @@
 		</effects>
 	</skill>
 	<skill id="989" toLevel="1" name="Defense Motion">
-		<!-- High Five Skill -->
+		<!-- For 2 min., P. Def. +25%, Evasion +3, and M. Def. +10%. Increases the additional MP Consumption when singing while sing/ dance effect lasts. -->
+		<icon>icon.skill0989</icon>
 		<abnormalTime>120</abnormalTime>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0989</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>60</magicLvl>
 		<mpConsume>30</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<abnormalType>MOTION_OF_DEFENCE</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4797,6 +4817,8 @@
 		</effects>
 	</skill>
 	<skill id="990" toLevel="1" name="Death Sting">
+		<!-- Fires an arrow of death at an enemy with 13006 Power added to P. Atk. Additionally, blocks magic skills usage for 10 sec. Requires a bow. Over-hit. Critical. -->
+		<icon>icon.skill0990</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
@@ -4806,14 +4828,12 @@
 		<effectPoint>-1387</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3500</hitTime>
-		<icon>icon.skill0990</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>79</magicLvl>
 		<mpConsume>248</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>12000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>500</coolTime>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -4838,7 +4858,8 @@
 		</effects>
 	</skill>
 	<skill id="991" toLevel="1" name="Throw Dagger">
-		<!-- Glory Days confirmed -->
+		<!-- Attacks the enemy by throwing a dagger with 3488 Power added to P. Atk. and Speed -80% for 10 sec. Requires a dagger to be equipped. -->
+		<icon>icon.skill0991</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -4848,7 +4869,6 @@
 		<effectPoint>-345</effectPoint>
 		<effectRange>450</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0991</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>82</magicLvl>
@@ -4856,7 +4876,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>45000</reuseDelay>
-		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -4865,7 +4884,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DAGGER</item>
-
+					<item>DUALDAGGER</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4881,7 +4900,7 @@
 		</effects>
 	</skill>
 	<skill id="992" toLevel="8" name="Sonic Mastery">
-		<!-- High Five Skill -->
+		<!-- Absorbs the target's Momentum. Momentum can be absorbed with a $s1 chance for standard physical attacks and $s2 during a critical attack. Applies when a sword, blunt weapon, or dual sword is equipped. Up to level $s3 of Momentum can be absorbed. -->
 		<icon>icon.skill0992</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -4920,7 +4939,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Focus Sonic -->
 				<isCritical>false</isCritical>
-				<skillId>6813</skillId>
+				<skillId>6813</skillId> <!-- Sonic Focus -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -4942,7 +4961,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Focus Sonic -->
 				<isCritical>true</isCritical>
-				<skillId>6813</skillId>
+				<skillId>6813</skillId> <!-- Sonic Focus -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -4964,7 +4983,7 @@
 		</effects>
 	</skill>
 	<skill id="993" toLevel="8" name="Force Mastery">
-		<!-- High Five Skill -->
+		<!-- Absorbs the target's Momentum. Momentum can be absorbed with a $s1 chance for standard physical attacks and $s2 during a critical attack. Applies when a fist weapon is equipped. Up to level $s3 of Momentum can be absorbed. -->
 		<icon>icon.skill0993</icon>
 		<magicLvl>
 			<value level="1">24</value>
@@ -4994,7 +5013,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Focus Force -->
 				<isCritical>false</isCritical>
-				<skillId>6814</skillId>
+				<skillId>6814</skillId> <!-- Focus Force -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -5016,7 +5035,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Focus Force -->
 				<isCritical>true</isCritical>
-				<skillId>6814</skillId>
+				<skillId>6814</skillId> <!-- Focus Force -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -5038,18 +5057,18 @@
 		</effects>
 	</skill>
 	<skill id="994" toLevel="1" name="Rush">
+		<!-- Charges toward the enemy. Momentum level 1. Cannot be used when a bow/ crossbow is equipped. -->
+		<icon>icon.skill0484</icon>
 		<castRange>400</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>-379</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>200</hitTime>
-		<icon>icon.skill0484</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>38</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -5062,8 +5081,8 @@
 					<item>POLE</item>
 					<item>DUALFIST</item>
 					<item>DUAL</item>
-
-
+					<item>DUALDAGGER</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 			<condition name="OpCheckCastRange">
@@ -5072,7 +5091,8 @@
 		</conditions>
 	</skill>
 	<skill id="995" toLevel="1" name="Rush Impact">
-		<!-- High Five Skill -->
+		<!-- Rushes forward to attack the enemies in front with 4224 Power added to P. Atk. and inflicts Stun for 9 sec. Cannot be used when a bow/ crossbow is equipped. -->
+		<icon>icon.skill0793</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -5086,7 +5106,6 @@
 		<effectPoint>-681</effectPoint>
 		<effectRange>800</effectRange>
 		<hitTime>800</hitTime>
-		<icon>icon.skill0793</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>83</magicLvl>
@@ -5094,7 +5113,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
 		<reuseDelay>20000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<fanRange>0;0;600;60</fanRange>
 		<trait>SHOCK</trait>
@@ -5110,8 +5128,8 @@
 					<item>POLE</item>
 					<item>DUALFIST</item>
 					<item>DUAL</item>
-
-
+					<item>DUALDAGGER</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 			<condition name="OpCheckCastRange">
@@ -5128,7 +5146,8 @@
 		</effects>
 	</skill>
 	<skill id="996" toLevel="1" name="Disarm">
-		<!-- High Five Skill -->
+		<!-- Disarms the enemy and prevents him from equipping a weapon for 5 sec. -->
+		<icon>icon.skill0485</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
@@ -5142,12 +5161,10 @@
 		<mpConsume>55</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE</rideState>
 		<effectPoint>-673</effectPoint>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<activateRate>70</activateRate>
-		<icon>icon.skill0485</icon>
 		<trait>DISARM</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -5169,7 +5186,8 @@
 		</effects>
 	</skill>
 	<skill id="997" toLevel="25" name="Crushing Strike">
-		<!-- High Five Skill -->
+		<!-- Impacts the enemy with $s1 Power added to P. Atk, decreasing the target's P. Def. and M. Def. by $s3 for $s2. Requires a sword or blunt weapon to be equipped. Over-hit. -->
+		<icon>icon.skill0997</icon>
 		<abnormalTime>3</abnormalTime>
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
@@ -5177,7 +5195,6 @@
 		<effectPoint>-3422</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>800</hitTime>
-		<icon>icon.skill0997</icon>
 		<magicLvl>
 			<value level="1">40</value>
 			<value level="2">43</value>
@@ -5234,7 +5251,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<abnormalType>PD_DOWN</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<lvlBonusRate>30</lvlBonusRate>
@@ -5293,19 +5309,18 @@
 		</effects>
 	</skill>
 	<skill id="998" toLevel="1" name="Blazing Boost">
-		<!-- Glory Days confirmed -->
+		<!-- Quickly approaches the enemy. Cannot be used when a bow/ crossbow is equipped. -->
+		<icon>icon.skill0998</icon>
 		<castRange>400</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>-630</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>800</hitTime>
-		<icon>icon.skill0998</icon>
 		<magicLvl>40</magicLvl>
 		<mpConsume>38</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -5318,8 +5333,8 @@
 					<item>POLE</item>
 					<item>DUALFIST</item>
 					<item>DUAL</item>
-
-
+					<item>DUALBLUNT</item>
+					<item>DUALDAGGER</item>
 				</weaponType>
 			</condition>
 			<condition name="OpCheckCastRange">

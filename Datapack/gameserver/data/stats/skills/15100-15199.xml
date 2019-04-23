@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="15127" toLevel="1" name="Equip Weapon">
-		<!-- Glory Days confirmed -->
 		<!-- Continuously receives new weapons from the weapon stand to increase P. Atk. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
@@ -11,7 +10,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>SPEED_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -29,7 +27,6 @@
 		</effects>
 	</skill>
 	<skill id="15128" toLevel="1" name="Equip Armor">
-		<!-- Glory Days confirmed -->
 		<!-- Continuously receives new armor from the armor stand to increase P. Def. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A2</operateType>
@@ -39,7 +36,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -57,7 +53,6 @@
 		</effects>
 	</skill>
 	<skill id="15141" toLevel="1" name="Super CP Lv. 1">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 1. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -65,7 +60,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -75,7 +69,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15142" toLevel="1" name="Super CP Lv. 2">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 2. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -83,7 +76,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>2</abnormalLvl>
@@ -93,7 +85,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15143" toLevel="1" name="Super CP Lv. 3">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 3. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -101,7 +92,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>3</abnormalLvl>
@@ -111,7 +101,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15144" toLevel="1" name="Super CP Lv. 4">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 4. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -119,7 +108,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>4</abnormalLvl>
@@ -129,7 +117,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15147" toLevel="1" name="Overheat">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- The machine is overheated. Inflicts continuous damage on the target that harms you. -->
 		<icon>icon.skill1492</icon>
 		<operateType>A2</operateType>
@@ -138,7 +125,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>10</hitCancelTime>
@@ -152,7 +138,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15148" toLevel="1" name="Coolant Leak">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- The machine is overheated. Inflicts a speed decreasing effect on the target that harms you. -->
 		<icon>icon.skill0102</icon>
 		<operateType>A2</operateType>
@@ -161,7 +146,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>10</hitCancelTime>
@@ -175,7 +159,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15149" toLevel="1" name="Self Recovery">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Recovers your HP. -->
 		<icon>icon.skill1216</icon>
 		<operateType>A2</operateType>
@@ -184,7 +167,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>10</hitCancelTime>
@@ -197,7 +179,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15150" toLevel="1" name="Self Defense">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- The machine is protecting itself. Increases your P. Def. -->
 		<icon>icon.skill1389</icon>
 		<operateType>A2</operateType>
@@ -206,7 +187,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>DEBUFF_SHIELD</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>10</hitCancelTime>
@@ -219,7 +199,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15151" toLevel="1" name="Overheat">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- The machine is burning from overheating and HP is wearing away. -->
 		<icon>icon.skill1492</icon>
 		<operateType>A2</operateType>
@@ -229,7 +208,6 @@
 		<effectPoint>-100</effectPoint>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -244,7 +222,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15152" toLevel="1" name="Coolant Leak">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Speed is decreased due to the machine's coolant leak. -->
 		<icon>icon.skill0102</icon>
 		<operateType>A2</operateType>
@@ -254,7 +231,6 @@
 		<effectPoint>-100</effectPoint>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -269,14 +245,12 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15153" toLevel="1" name="Attention to Draco Incubation">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned. -->
 		<icon>icon.skill11507</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>SIGNAL_C</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -289,14 +263,12 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15154" toLevel="1" name="Attention to Draco Incubation">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned. -->
 		<icon>icon.skill11507</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>SIGNAL_C</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -311,7 +283,6 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="15155" toLevel="1" name="Petrify">
-		<!-- Glory Days confirmed -->
 		<!-- Petrify status. -->
 		<icon>icon.skill1540</icon>
 		<operateType>A2</operateType>
@@ -320,7 +291,6 @@
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
@@ -340,7 +310,6 @@
 		</effects>
 	</skill>
 	<skill id="15165" toLevel="1" name="Tauti Shock Wave">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Cannot move due to shock. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -349,7 +318,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>STUN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<activateRate>80</activateRate>
 		<magicLvl>99</magicLvl>
@@ -365,7 +333,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15167" toLevel="1" name="Tauti Leap Attack">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Takes hold of Tauti and throws him up. Uses falling damage to inflict tremendous harm. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -375,7 +342,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>STUN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>3000</effectRange>
 		<magicLvl>99</magicLvl>
@@ -391,7 +357,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15169" toLevel="1" name="Tauti Great Shout">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- HP is cut down from the roar. HP is decreased by the energy of fire in the roar. -->
 		<icon>icon.skill0102</icon>
 		<operateType>A2</operateType>
@@ -401,7 +366,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<magicLvl>99</magicLvl>
@@ -416,7 +380,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15170" toLevel="1" name="Chaos Shield">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. and M. Def. are increased. -->
 		<icon>icon.skill1418</icon>
 		<operateType>A2</operateType>
@@ -425,7 +388,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>4.5</hitCancelTime>
 		<abnormalLvl>99</abnormalLvl>
@@ -436,13 +398,11 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15171" toLevel="1" name="Tauti Boomerang">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Skill where Tauti throws crossways and receives back again. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<affectRange>900</affectRange>
@@ -454,7 +414,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15172" toLevel="1" name="Tauti Air Binding">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bound in the air from Tauti's gaze. Cannot be removed with a de-buff removing skill. -->
 		<icon>icon.skill11276</icon>
 		<operateType>A2</operateType>
@@ -463,7 +422,6 @@
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -481,7 +439,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15173" toLevel="1" name="Tauti Air Binding">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bound in the air from Tauti's gaze. Cannot be removed with a de-buff removing skill. -->
 		<icon>icon.skill11276</icon>
 		<operateType>A2</operateType>
@@ -490,7 +447,6 @@
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -508,7 +464,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15174" toLevel="1" name="Petra Injection - Enhance HP Recovery">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill1434</icon>
 		<operateType>CA2</operateType>
 		<castRange>2500</castRange>
@@ -516,12 +471,11 @@
 		<effectPoint>2</effectPoint>
 		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>3000</effectRange>
 		<magicLvl>99</magicLvl>
-		<channelingSkillId>15175</channelingSkillId>
+		<channelingSkillId>15175</channelingSkillId> <!-- Petra Injection - Enhance HP Recovery -->
 		<channelingStart>1.2</channelingStart>
 		<channelingTickInterval>2</channelingTickInterval>
 		<isMagic>2</isMagic>
@@ -530,7 +484,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15175" toLevel="1" name="Petra Injection - Enhance HP Recovery">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Zahak has used its Petra to increase Tauti's HP Recovery. -->
 		<icon>icon.skill1434</icon>
 		<operateType>A2</operateType>
@@ -538,7 +491,6 @@
 		<effectPoint>2</effectPoint>
 		<abnormalType>HP_REGEN_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>3000</effectRange>
@@ -550,7 +502,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15176" toLevel="1" name="Petra Injection - Enhance P. Def.">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill1434</icon>
 		<operateType>CA2</operateType>
 		<castRange>2500</castRange>
@@ -558,12 +509,11 @@
 		<effectPoint>2</effectPoint>
 		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>3000</effectRange>
 		<magicLvl>99</magicLvl>
-		<channelingSkillId>15177</channelingSkillId>
+		<channelingSkillId>15177</channelingSkillId> <!-- Petra Injection - Enhance P. Def. -->
 		<channelingStart>1.2</channelingStart>
 		<channelingTickInterval>2</channelingTickInterval>
 		<isMagic>2</isMagic>
@@ -572,7 +522,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15177" toLevel="1" name="Petra Injection - Enhance P. Def.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Zahak has used its Petra to increase Tauti's P. Def. -->
 		<icon>icon.skill1434</icon>
 		<operateType>A2</operateType>
@@ -580,7 +529,6 @@
 		<effectPoint>2</effectPoint>
 		<abnormalType>PD_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>3000</effectRange>
@@ -592,7 +540,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15178" toLevel="1" name="Petra Injection - Enhance M. Def.">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill1434</icon>
 		<operateType>CA2</operateType>
 		<castRange>2500</castRange>
@@ -600,12 +547,11 @@
 		<effectPoint>2</effectPoint>
 		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>3000</effectRange>
 		<magicLvl>99</magicLvl>
-		<channelingSkillId>15179</channelingSkillId>
+		<channelingSkillId>15179</channelingSkillId> <!-- Petra Injection - Enhance M. Def. -->
 		<channelingStart>1.2</channelingStart>
 		<channelingTickInterval>2</channelingTickInterval>
 		<isMagic>2</isMagic>
@@ -614,7 +560,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15179" toLevel="1" name="Petra Injection - Enhance M. Def.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Zahak has used its Petra to increase Tauti's M. Def. -->
 		<icon>icon.skill1434</icon>
 		<operateType>A2</operateType>
@@ -622,7 +567,6 @@
 		<effectPoint>2</effectPoint>
 		<abnormalType>MD_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>3000</effectRange>
@@ -634,7 +578,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15180" toLevel="1" name="Petra Injection - Enhance P. Atk.">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill1434</icon>
 		<operateType>CA2</operateType>
 		<castRange>2500</castRange>
@@ -642,12 +585,11 @@
 		<effectPoint>2</effectPoint>
 		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>3000</effectRange>
 		<magicLvl>99</magicLvl>
-		<channelingSkillId>15181</channelingSkillId>
+		<channelingSkillId>15181</channelingSkillId> <!-- Petra Injection - Enhance P. Atk. -->
 		<channelingStart>1.2</channelingStart>
 		<channelingTickInterval>2</channelingTickInterval>
 		<isMagic>2</isMagic>
@@ -656,7 +598,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15181" toLevel="1" name="Petra Injection - Enhance P. Atk.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Zahak has used its Petra to increase Tauti's P. Atk. -->
 		<icon>icon.skill1434</icon>
 		<operateType>A2</operateType>
@@ -664,7 +605,6 @@
 		<effectPoint>2</effectPoint>
 		<abnormalType>PA_PD_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>3000</effectRange>
@@ -676,15 +616,13 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15182" toLevel="1" name="Adolph's Superior Aggression Aura">
-		<!-- Glory Days confirmed -->
-		<!-- Provokes nearby enemies into attacking you. -->
+		<!-- Provokes target into attacking you by forcefully changing their target. -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -701,15 +639,13 @@
 		</effects>
 	</skill>
 	<skill id="15183" toLevel="1" name="Adolph's Superior Aggression Aura">
-		<!-- Glory Days confirmed -->
-		<!-- Provokes nearby enemies into attacking you. -->
+		<!-- Provokes target into attacking you by forcefully changing their target. -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -726,15 +662,13 @@
 		</effects>
 	</skill>
 	<skill id="15184" toLevel="1" name="Adolph's Superior Aggression Aura">
-		<!-- Glory Days confirmed -->
-		<!-- Provokes nearby enemies into attacking you. -->
+		<!-- Provokes target into attacking you by forcefully changing their target. -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -751,8 +685,7 @@
 		</effects>
 	</skill>
 	<skill id="15185" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Glory Days confirmed -->
-		<!-- Attacks targets at the front and inflicts Stun for 9 second(s). -->
+		<!-- Attacks targets at the front and inflicts Stun for 9 sec. -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -761,7 +694,6 @@
 		<effectPoint>-694</effectPoint>
 		<abnormalType>STUN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>30</lvlBonusRate>
@@ -788,8 +720,7 @@
 		</effects>
 	</skill>
 	<skill id="15186" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Glory Days confirmed -->
-		<!-- Attacks targets at the front and inflicts Stun for 9 second(s). -->
+		<!-- Attacks targets at the front and inflicts Stun for 9 sec. -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -798,7 +729,6 @@
 		<effectPoint>-694</effectPoint>
 		<abnormalType>STUN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>30</lvlBonusRate>
@@ -825,8 +755,7 @@
 		</effects>
 	</skill>
 	<skill id="15187" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Glory Days confirmed -->
-		<!-- Attacks targets at the front and inflicts Stun for 9 second(s). -->
+		<!-- Attacks targets at the front and inflicts Stun for 9 sec. -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -835,7 +764,6 @@
 		<effectPoint>-694</effectPoint>
 		<abnormalType>STUN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>30</lvlBonusRate>
@@ -862,7 +790,6 @@
 		</effects>
 	</skill>
 	<skill id="15188" toLevel="1" name="Hayuk's Multiple Arrow">
-		<!-- Glory Days confirmed -->
 		<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 23391 power added to P. Atk. -->
 		<icon>icon.skill10771</icon>
 		<operateType>A1</operateType>
@@ -870,7 +797,6 @@
 		<hitTime>1500</hitTime>
 		<coolTime>350</coolTime>
 		<effectPoint>-689</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>85</magicLvl>
@@ -888,7 +814,6 @@
 		</effects>
 	</skill>
 	<skill id="15189" toLevel="1" name="Hayuk's Multiple Arrow">
-		<!-- Glory Days confirmed -->
 		<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 27459 power added to P. Atk. -->
 		<icon>icon.skill10771</icon>
 		<operateType>A1</operateType>
@@ -896,7 +821,6 @@
 		<hitTime>1500</hitTime>
 		<coolTime>350</coolTime>
 		<effectPoint>-689</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>90</magicLvl>
@@ -914,7 +838,6 @@
 		</effects>
 	</skill>
 	<skill id="15190" toLevel="1" name="Hayuk's Multiple Arrow">
-		<!-- Glory Days confirmed -->
 		<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 31527 power added to P. Atk. -->
 		<icon>icon.skill10771</icon>
 		<operateType>A1</operateType>
@@ -922,7 +845,6 @@
 		<hitTime>1500</hitTime>
 		<coolTime>350</coolTime>
 		<effectPoint>-689</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>95</magicLvl>
@@ -940,7 +862,6 @@
 		</effects>
 	</skill>
 	<skill id="15191" toLevel="1" name="Hayuk's Heavy Arrow Rain">
-		<!-- Glory Days confirmed -->
 		<!-- Rains down arrows like rain on the target and its surrounding area with 22526 power added to P. Atk. -->
 		<icon>icon.skill10772</icon>
 		<operateType>A1</operateType>
@@ -948,7 +869,6 @@
 		<hitTime>1500</hitTime>
 		<coolTime>350</coolTime>
 		<effectPoint>-689</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>85</magicLvl>
@@ -965,7 +885,6 @@
 		</effects>
 	</skill>
 	<skill id="15192" toLevel="1" name="Hayuk's Heavy Arrow Rain">
-		<!-- Glory Days confirmed -->
 		<!-- Rains down arrows like rain on the target and its surrounding area with 26448 power added to P. Atk. -->
 		<icon>icon.skill10772</icon>
 		<operateType>A1</operateType>
@@ -973,7 +892,6 @@
 		<hitTime>1500</hitTime>
 		<coolTime>350</coolTime>
 		<effectPoint>-689</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>90</magicLvl>
@@ -990,7 +908,6 @@
 		</effects>
 	</skill>
 	<skill id="15193" toLevel="1" name="Hayuk's Heavy Arrow Rain">
-		<!-- Glory Days confirmed -->
 		<!-- Rains down arrows like rain on the target and its surrounding area with 30371 power added to P. Atk. -->
 		<icon>icon.skill10772</icon>
 		<operateType>A1</operateType>
@@ -998,7 +915,6 @@
 		<hitTime>1500</hitTime>
 		<coolTime>350</coolTime>
 		<effectPoint>-689</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>95</magicLvl>
@@ -1015,8 +931,7 @@
 		</effects>
 	</skill>
 	<skill id="15194" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Glory Days confirmed -->
-		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 282 HP per second. -->
+		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. -282 HP per sec. -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -1028,7 +943,6 @@
 		<effectPoint>-687</effectPoint>
 		<abnormalType>DEPORT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
 		<effectRange>1100</effectRange>
@@ -1062,8 +976,7 @@
 		</effects>
 	</skill>
 	<skill id="15195" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Glory Days confirmed -->
-		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 296 HP per second. -->
+		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. -296 HP per sec. -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -1075,7 +988,6 @@
 		<effectPoint>-687</effectPoint>
 		<abnormalType>DEPORT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
 		<effectRange>1100</effectRange>
@@ -1109,8 +1021,7 @@
 		</effects>
 	</skill>
 	<skill id="15196" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Glory Days confirmed -->
-		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 313 HP per second. -->
+		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. -313 HP per sec. -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -1122,7 +1033,6 @@
 		<effectPoint>-687</effectPoint>
 		<abnormalType>DEPORT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
 		<effectRange>1100</effectRange>
@@ -1156,14 +1066,11 @@
 		</effects>
 	</skill>
 	<skill id="15197" toLevel="1" name="Guardian Spirit's Wrath">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks nearby enemies with the wrath of the guardian spirit. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-183</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<affectRange>150</affectRange>
@@ -1174,14 +1081,11 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15198" toLevel="1" name="Guardian Spirit's Wrath">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks nearby enemies with the wrath of the guardian spirit. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-183</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>90</magicLvl>
 		<affectRange>150</affectRange>
@@ -1192,14 +1096,11 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15199" toLevel="1" name="Guardian Spirit's Wrath">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks nearby enemies with the wrath of the guardian spirit. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-183</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>95</magicLvl>
 		<affectRange>150</affectRange>

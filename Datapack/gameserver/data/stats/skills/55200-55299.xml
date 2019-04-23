@@ -1,13 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="55200" toLevel="1" name="Sealed Rune Lvl 8">
-		<icon>icon.skill55200</icon>
+		<icon>BranchIcon.Icon.g_blue_sealed_rune</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70007</itemConsumeId> <!-- Sealed Rune - Lv. 8 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -22,41 +21,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="12.5">
-						<item id="29825" count="1" />
+						<item id="29825" count="1" /> <!-- Sigel? Rune - Stage 8 -->
 					</item>
 					<item chance="12.5">
-						<item id="29845" count="1" />
+						<item id="29845" count="1" /> <!-- Tyrr? Rune - Stage 8 -->
 					</item>
 					<item chance="12.5">
-						<item id="29865" count="1" />
+						<item id="29865" count="1" /> <!-- Othell? Rune - Stage 8 -->
 					</item>
 					<item chance="12.5">
-						<item id="29885" count="1" />
+						<item id="29885" count="1" /> <!-- Yul? Rune - Stage 8 -->
 					</item>
 					<item chance="12.5">
-						<item id="29905" count="1" />
+						<item id="29905" count="1" /> <!-- Feoh? Rune - Stage 8 -->
 					</item>
 					<item chance="12.5">
-						<item id="29925" count="1" />
+						<item id="29925" count="1" /> <!-- Iss?Rune - Stage 8 -->
 					</item>
 					<item chance="12.5">
-						<item id="29945" count="1" />
+						<item id="29945" count="1" /> <!-- Wynn? Rune - Stage 8 -->
 					</item>
 					<item chance="12.5">
-						<item id="29965" count="1" />
+						<item id="29965" count="1" /> <!-- Aeore? Rune - Stage 8 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55201" toLevel="1" name="Sealed Rune Lvl 9">
-		<icon>icon.skill55201</icon>
+		<icon>BranchIcon.Icon.g_blue_sealed_rune</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70008</itemConsumeId> <!-- Sealed Rune - Lv. 9 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -71,41 +69,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="12.5">
-						<item id="29826" count="1" />
+						<item id="29826" count="1" /> <!-- Sigel? Rune - Stage 9 -->
 					</item>
 					<item chance="12.5">
-						<item id="29846" count="1" />
+						<item id="29846" count="1" /> <!-- Tyrr? Rune - Stage 9 -->
 					</item>
 					<item chance="12.5">
-						<item id="29866" count="1" />
+						<item id="29866" count="1" /> <!-- Othell? Rune - Stage 9 -->
 					</item>
 					<item chance="12.5">
-						<item id="29886" count="1" />
+						<item id="29886" count="1" /> <!-- Yul? Rune - Stage 9 -->
 					</item>
 					<item chance="12.5">
-						<item id="29906" count="1" />
+						<item id="29906" count="1" /> <!-- Feoh? Rune - Stage 9 -->
 					</item>
 					<item chance="12.5">
-						<item id="29926" count="1" />
+						<item id="29926" count="1" /> <!-- Iss?Rune - Stage 9 -->
 					</item>
 					<item chance="12.5">
-						<item id="29946" count="1" />
+						<item id="29946" count="1" /> <!-- Wynn? Rune - Stage 9 -->
 					</item>
 					<item chance="12.5">
-						<item id="29966" count="1" />
+						<item id="29966" count="1" /> <!-- Aeore? Rune - Stage 9 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55202" toLevel="1" name="Sealed Rune Lv. 10">
-		<icon>icon.skill55202</icon>
+		<icon>BranchIcon.Icon.g_blue_sealed_rune</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70009</itemConsumeId> <!-- Sealed Rune - Lv. 10 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -120,41 +117,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="12.5">
-						<item id="29827" count="1" />
+						<item id="29827" count="1" /> <!-- Sigel? Rune - Stage 10 -->
 					</item>
 					<item chance="12.5">
-						<item id="29847" count="1" />
+						<item id="29847" count="1" /> <!-- Tyrr? Rune - Stage 10 -->
 					</item>
 					<item chance="12.5">
-						<item id="29867" count="1" />
+						<item id="29867" count="1" /> <!-- Othell? Rune - Stage 10 -->
 					</item>
 					<item chance="12.5">
-						<item id="29887" count="1" />
+						<item id="29887" count="1" /> <!-- Yul? Rune - Stage 10 -->
 					</item>
 					<item chance="12.5">
-						<item id="29907" count="1" />
+						<item id="29907" count="1" /> <!-- Feoh? Rune - Stage 10 -->
 					</item>
 					<item chance="12.5">
-						<item id="29927" count="1" />
+						<item id="29927" count="1" /> <!-- Iss?Rune - Stage 10 -->
 					</item>
 					<item chance="12.5">
-						<item id="29947" count="1" />
+						<item id="29947" count="1" /> <!-- Wynn? Rune - Stage 10 -->
 					</item>
 					<item chance="12.5">
-						<item id="29967" count="1" />
+						<item id="29967" count="1" /> <!-- Aeore? Rune - Stage 10 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55203" toLevel="1" name="Sealed Rune Lv. 11">
-		<icon>icon.skill55203</icon>
+		<icon>BranchIcon.Icon.g_red_sealed_rune_01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70010</itemConsumeId> <!-- Sealed Rune - Lv. 11 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -169,41 +165,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="12.5">
-						<item id="29828" count="1" />
+						<item id="29828" count="1" /> <!-- Sigel? Rune - Stage 11 -->
 					</item>
 					<item chance="12.5">
-						<item id="29848" count="1" />
+						<item id="29848" count="1" /> <!-- Tyrr? Rune - Stage 11 -->
 					</item>
 					<item chance="12.5">
-						<item id="29868" count="1" />
+						<item id="29868" count="1" /> <!-- Othell? Rune - Stage 11 -->
 					</item>
 					<item chance="12.5">
-						<item id="29888" count="1" />
+						<item id="29888" count="1" /> <!-- Yul? Rune - Stage 11 -->
 					</item>
 					<item chance="12.5">
-						<item id="29908" count="1" />
+						<item id="29908" count="1" /> <!-- Feoh? Rune - Stage 11 -->
 					</item>
 					<item chance="12.5">
-						<item id="29928" count="1" />
+						<item id="29928" count="1" /> <!-- Iss?Rune - Stage 11 -->
 					</item>
 					<item chance="12.5">
-						<item id="29948" count="1" />
+						<item id="29948" count="1" /> <!-- Wynn? Rune - Stage 11 -->
 					</item>
 					<item chance="12.5">
-						<item id="29968" count="1" />
+						<item id="29968" count="1" /> <!-- Aeore? Rune - Stage 11 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55204" toLevel="1" name="Sealed Rune Lv. 12">
-		<icon>icon.skill55204</icon>
+		<icon>BranchIcon.Icon.g_red_sealed_rune_01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70011</itemConsumeId> <!-- Sealed Rune - Lv. 12 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -218,41 +213,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="12.5">
-						<item id="29829" count="1" />
+						<item id="29829" count="1" /> <!-- Sigel? Rune - Stage 12 -->
 					</item>
 					<item chance="12.5">
-						<item id="29849" count="1" />
+						<item id="29849" count="1" /> <!-- Tyrr? Rune - Stage 12 -->
 					</item>
 					<item chance="12.5">
-						<item id="29869" count="1" />
+						<item id="29869" count="1" /> <!-- Othell? Rune - Stage 12 -->
 					</item>
 					<item chance="12.5">
-						<item id="29889" count="1" />
+						<item id="29889" count="1" /> <!-- Yul? Rune - Stage 12 -->
 					</item>
 					<item chance="12.5">
-						<item id="29909" count="1" />
+						<item id="29909" count="1" /> <!-- Feoh? Rune - Stage 12 -->
 					</item>
 					<item chance="12.5">
-						<item id="29929" count="1" />
+						<item id="29929" count="1" /> <!-- Iss?Rune - Stage 12 -->
 					</item>
 					<item chance="12.5">
-						<item id="29949" count="1" />
+						<item id="29949" count="1" /> <!-- Wynn? Rune - Stage 12 -->
 					</item>
 					<item chance="12.5">
-						<item id="29969" count="1" />
+						<item id="29969" count="1" /> <!-- Aeore? Rune - Stage 12 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55205" toLevel="1" name="Sealed Rune Lv. 13">
-		<icon>icon.skill55205</icon>
+		<icon>BranchIcon.Icon.g_red_sealed_rune_01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70012</itemConsumeId> <!-- Sealed Rune - Lv. 13 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -267,152 +261,115 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="12.5">
-						<item id="29830" count="1" />
+						<item id="29830" count="1" /> <!-- Sigel? Rune - Stage 13 -->
 					</item>
 					<item chance="12.5">
-						<item id="29850" count="1" />
+						<item id="29850" count="1" /> <!-- Tyrr? Rune - Stage 13 -->
 					</item>
 					<item chance="12.5">
-						<item id="29870" count="1" />
+						<item id="29870" count="1" /> <!-- Othell? Rune - Stage 13 -->
 					</item>
 					<item chance="12.5">
-						<item id="29890" count="1" />
+						<item id="29890" count="1" /> <!-- Yul? Rune - Stage 13 -->
 					</item>
 					<item chance="12.5">
-						<item id="29910" count="1" />
+						<item id="29910" count="1" /> <!-- Feoh? Rune - Stage 13 -->
 					</item>
 					<item chance="12.5">
-						<item id="29930" count="1" />
+						<item id="29930" count="1" /> <!-- Iss?Rune - Stage 13 -->
 					</item>
 					<item chance="12.5">
-						<item id="29950" count="1" />
+						<item id="29950" count="1" /> <!-- Wynn? Rune - Stage 13 -->
 					</item>
 					<item chance="12.5">
-						<item id="29970" count="1" />
+						<item id="29970" count="1" /> <!-- Aeore? Rune - Stage 13 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55206" toLevel="1" name="Sealed Rune Lv. 14">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.card_event_black_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55207" toLevel="1" name="Sealed Rune Lv. 15">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.card_event_black_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55208" toLevel="1" name="Sealed Rune Lv. 16">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.card_event_black_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55209" toLevel="1" name="Sealed Rune Lv. 17">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.card_event_black_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55210" toLevel="1" name="Sealed Rune Lv. 18">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.card_event_black_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55211" toLevel="1" name="Sealed Rune Lv. 19">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.card_event_black_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55212" toLevel="1" name="Sealed Rune Lv. 20">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.card_event_black_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55213" toLevel="1" name="Instant Acceleration Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Greatly increases Speed for a short period of time. -->
+		<icon>icon.etc_potion_green_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55214" toLevel="1" name="Teleport: Entrance to Mithril Mines">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55215" toLevel="1" name="Teleport: Entrance to the School of Dark Arts">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55216" toLevel="1" name="Teleport: Entrance to Orc Barracks">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55217" toLevel="1" name="Teleport: Entrance to Ruins of Agony">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55218" toLevel="1" name="Teleport: Entrance to Ruins of Despair">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55219" toLevel="1" name="Teleport: Abandoned Camp">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55220" toLevel="1" name="Teleport: Entrance to Ant Nest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55221" toLevel="1" name="Teleport: Entrance to Cruma Tower">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55222" toLevel="1" name="Teleport: Death Pass">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55223" toLevel="1" name="Teleport: Three-way crossroads at Dragon Valley">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55224" toLevel="1" name="Teleport: Entrance to Antharas' Lair">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55225" toLevel="1" name="Teleport: Outlaw Forest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55226" toLevel="1" name="Teleport: Alligator Island">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55227" toLevel="1" name="Teleport: Entrance to Forgotten Temple">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55228" toLevel="1" name="Scroll of Escape: Talking Island Village">
-		<icon>icon.skill55228</icon>
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>37115</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<cond msgId="113" addName="1">
@@ -432,32 +389,23 @@
 		</effects>
 	</skill>
 	<skill id="55229" toLevel="1" name="Scroll of Escape: Talking Island Village">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55230" toLevel="1" name="Scroll of Escape: Talking Island Village">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55231" toLevel="1" name="Scroll of Escape: Talking Island Village">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55232" toLevel="1" name="Scroll of Escape: Talking Island Village">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55233" toLevel="1" name="Scroll of Escape: Talking Island Village">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55234" toLevel="2" name="XP Rune 100%">
-		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
+		<!-- Acquired XP/ SP +100%. -->
+		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -472,22 +420,23 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>
- 				    <value level="1">100</value> 
- 				    <value level="2">100</value>
+					<value level="1">100</value>
+					<value level="2">100</value>
 				</amount>
 				<mode>DIFF</mode> <!-- FIX -->
 			</effect>
 			<effect name="SpModify">
 				<amount>
- 				    <value level="1">100</value>
- 				    <value level="2">100</value>
+					<value level="1">100</value>
+					<value level="2">100</value>
 				</amount>
 				<mode>DIFF</mode> <!-- FIX -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55235" toLevel="1" name="Adventurer�s Potion - Atk. Spd.">
-		<icon>icon.skill55235</icon>
+		<!-- Increases Atk. Spd. -->
+		<icon>icon.etc_reagent_green_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -497,7 +446,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -511,8 +459,9 @@
 		</effects>
 	</skill>
 	<skill id="55236" toLevel="1" name="Adventurer�s Potion - Casting Spd.">
- 	<!-- 	Increase Cast speed by 15%	-->
-		<icon>icon.skill55236</icon>
+		<!-- Increases Casting Spd. -->
+		<icon>icon.etc_potion_of_acumen2_i00</icon>
+		<!-- 	Increase Cast speed by 15%	-->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -522,7 +471,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -536,20 +484,18 @@
 		</effects>
 	</skill>
 	<skill id="55237" toLevel="1" name="Scroll: Vampiric Rage">
-		<!-- Recovers 6% HP from the received physical damage for 20 minutes. -->
-		<icon>icon.skill55237</icon>
+		<!-- For 20 min., recovers as HP 6% of the physical damage inflicted on the enemy with a certain probability. -->
+		<icon>icon.etc_scroll_white_i00</icon>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>70104</itemConsumeId> <!-- Scroll: Vampiric Rage -->	
+		<itemConsumeId>70104</itemConsumeId> <!-- Scroll: Vampiric Rage -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1268</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -563,25 +509,25 @@
 		</effects>
 	</skill>
 	<skill id="55238" toLevel="1" name="Side Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Enlarges the user's head for 10 min. Cooldown - 30 min. -->
+		<icon>icon.skill2513</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55239" toLevel="1" name="Holiday Hat">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore. -->
+		<icon>icon.bm_romantic_chaperon_gold</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55240" toLevel="1" name="Overwhelming Power of a Holiday Hat">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 20 min., acquired XP/ SP +5%. Buff remains after death. -->
+		<icon>icon.skill19226</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55241" toLevel="1" name="Scroll: Mana Regeneration">
-		<!-- Increases MP Recovery Rate for 20 minutes. -->
-		<icon>icon.skill55241</icon>
+		<!-- Increases MP Regeneration. Effect 4 -->
+		<icon>icon.etc_scroll_white_i00</icon>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>70105</itemConsumeId> <!-- Scroll: Mana Regeneration lvl 1 -->	
+		<itemConsumeId>70105</itemConsumeId> <!-- Scroll: Mana Regeneration lvl 1 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MP_REGEN_UP</abnormalType>
@@ -590,7 +536,6 @@
 		<mpConsume>28</mpConsume>
 		<mpInitialConsume>7</mpInitialConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -603,7 +548,8 @@
 		</effects>
 	</skill>
 	<skill id="55242" toLevel="1" name="Scroll: Berserker Spirit">
-		<icon>icon.skill55242</icon>
+		<!-- For 20 min., P. Def. -5%, M. Def. -10%, Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. -->
+		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
@@ -614,7 +560,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -658,25 +603,22 @@
 		</effects>
 	</skill>
 	<skill id="55243" toLevel="2" name="Scroll: Dance of the Warrior">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 10 min., P. Atk +12%. -->
+		<icon>icon.skill0271</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55244" toLevel="2" name="Scroll: Dance of the Mystic">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 10 min., M. Atk +20%. -->
+		<icon>icon.skill0273</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55245" toLevel="8" name="Teleport: Town of Aden">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55246" toLevel="1" name="Rune of Boost">
-		<!-- A 7-day item. When in inventory, STR +1, INT +1, CON +1, MEN +1, DEX +1, WIT +1. -->
-		<icon>icon.skill55246</icon>
+		<!-- When in inventory STR +1, INT +1, CON +1, MEN +1, DEX +1, WIT +1. -->
+		<icon>BranchSys3.lcon.g_rune_itemdrop_up</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -710,9 +652,9 @@
 		</effects>
 	</skill>
 	<skill id="55247" toLevel="1" name="Refined Romantic Chapeau">
-		<icon>icon.skill55247</icon>
+		<!-- P. Atk. +33, M. Atk. +41. -->
+		<icon>icon.accessory_archer_hat2_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -730,7 +672,8 @@
 		</effects>
 	</skill>
 	<skill id="55248" toLevel="1" name="Bracelet of Duty - Lv. 1">
-		<icon>icon.skill55248</icon>
+		<!-- Opens up 1 Talisman slot. -->
+		<icon>BranchIcon.Icon.g_pledge_bracelet_01</icon>
 		<magicLvl>20</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -741,7 +684,8 @@
 		</effects>
 	</skill>
 	<skill id="55249" toLevel="1" name="Bracelet of Duty - Lv. 2">
-		<icon>icon.skill0000</icon>
+		<!-- Opens up one Talisman slot. CON +1. -->
+		<icon>BranchIcon.Icon.g_pledge_bracelet_02</icon>
 		<magicLvl>20</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -756,7 +700,8 @@
 		</effects>
 	</skill>
 	<skill id="55250" toLevel="1" name="Bracelet of Duty - Lv. 3">
-		<icon>icon.skill55250</icon>
+		<!-- Opens up two Talisman slots. CON +1, MEN +1. -->
+		<icon>BranchIcon.Icon.g_pledge_bracelet_03</icon>
 		<magicLvl>20</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -775,7 +720,8 @@
 		</effects>
 	</skill>
 	<skill id="55251" toLevel="1" name="Bracelet of Duty - Lv. 4">
-		<icon>icon.skill55251</icon>
+		<!-- Opens up two Talisman slots. DEX +1, WIT +1, CON +1, MEN +1. -->
+		<icon>BranchIcon.Icon.g_pledge_bracelet_04</icon>
 		<magicLvl>20</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -802,7 +748,8 @@
 		</effects>
 	</skill>
 	<skill id="55252" toLevel="1" name="Bracelet of Duty - Lv. 5">
-		<icon>icon.skill0000</icon>
+		<!-- Opens up three Talisman slots. STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1. -->
+		<icon>BranchIcon.Icon.g_pledge_bracelet_05</icon>
 		<magicLvl>20</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -837,7 +784,29 @@
 		</effects>
 	</skill>
 	<skill id="55253" toLevel="20" name="Sigel's Protection">
-		<icon>icon.skill55253</icon>
+		<!-- P. Def. +$s1 -->
+		<icon>
+			<value level="1">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="2">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="3">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="4">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="5">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="6">BranchIcon.Icon.g_rune_sigel_lv01</value>
+			<value level="7">BranchIcon.Icon.g_rune_sigel_lv01</value>
+			<value level="8">BranchIcon.Icon.g_rune_sigel_lv01</value>
+			<value level="9">BranchIcon.Icon.g_rune_sigel_lv01</value>
+			<value level="10">BranchIcon.Icon.g_rune_sigel_lv01</value>
+			<value level="11">BranchIcon.Icon.g_rune_sigel_lv02</value>
+			<value level="12">BranchIcon.Icon.g_rune_sigel_lv02</value>
+			<value level="13">BranchIcon.Icon.g_rune_sigel_lv02</value>
+			<value level="14">icon.ensoul_big_p</value>
+			<value level="15">icon.ensoul_big_p</value>
+			<value level="16">icon.ensoul_big_p</value>
+			<value level="17">icon.ensoul_big_p</value>
+			<value level="18">icon.ensoul_big_p</value>
+			<value level="19">icon.ensoul_big_p</value>
+			<value level="20">icon.ensoul_big_p</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -868,7 +837,29 @@
 		</effects>
 	</skill>
 	<skill id="55254" toLevel="20" name="Sigel Protection">
-		<icon>icon.skill55254</icon>
+		<!-- Max HP +$s1 -->
+		<icon>
+			<value level="1">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="2">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="3">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="4">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="5">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="6">BranchIcon.Icon.g_rune_sigel_lv01</value>
+			<value level="7">BranchIcon.Icon.g_rune_sigel_lv01</value>
+			<value level="8">BranchIcon.Icon.g_rune_sigel_lv01</value>
+			<value level="9">BranchIcon.Icon.g_rune_sigel_lv01</value>
+			<value level="10">BranchIcon.Icon.g_rune_sigel_lv01</value>
+			<value level="11">BranchIcon.Icon.g_rune_sigel_lv02</value>
+			<value level="12">BranchIcon.Icon.g_rune_sigel_lv02</value>
+			<value level="13">BranchIcon.Icon.g_rune_sigel_lv02</value>
+			<value level="14">icon.ensoul_big_p</value>
+			<value level="15">icon.ensoul_big_p</value>
+			<value level="16">icon.ensoul_big_p</value>
+			<value level="17">icon.ensoul_big_p</value>
+			<value level="18">icon.ensoul_big_p</value>
+			<value level="19">icon.ensoul_big_p</value>
+			<value level="20">icon.ensoul_big_p</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
@@ -899,7 +890,29 @@
 		</effects>
 	</skill>
 	<skill id="55255" toLevel="20" name="Tyrr Might">
-		<icon>icon.skill55255</icon>
+		<!-- P. Atk. +$s1 -->
+		<icon>
+			<value level="1">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="2">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="3">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="4">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="5">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="6">BranchIcon.Icon.g_rune_tir_lv01</value>
+			<value level="7">BranchIcon.Icon.g_rune_tir_lv01</value>
+			<value level="8">BranchIcon.Icon.g_rune_tir_lv01</value>
+			<value level="9">BranchIcon.Icon.g_rune_tir_lv01</value>
+			<value level="10">BranchIcon.Icon.g_rune_tir_lv01</value>
+			<value level="11">BranchIcon.Icon.g_rune_tir_lv02</value>
+			<value level="12">BranchIcon.Icon.g_rune_tir_lv02</value>
+			<value level="13">BranchIcon.Icon.g_rune_tir_lv02</value>
+			<value level="14">icon.ensoul_big_p</value>
+			<value level="15">icon.ensoul_big_p</value>
+			<value level="16">icon.ensoul_big_p</value>
+			<value level="17">icon.ensoul_big_p</value>
+			<value level="18">icon.ensoul_big_p</value>
+			<value level="19">icon.ensoul_big_p</value>
+			<value level="20">icon.ensoul_big_p</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
@@ -930,7 +943,29 @@
 		</effects>
 	</skill>
 	<skill id="55256" toLevel="20" name="Tyrr Haste">
-		<icon>icon.skill55256</icon>
+		<!-- Atk. Spd. +$s1. -->
+		<icon>
+			<value level="1">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="2">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="3">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="4">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="5">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="6">BranchIcon.Icon.g_rune_tir_lv01</value>
+			<value level="7">BranchIcon.Icon.g_rune_tir_lv01</value>
+			<value level="8">BranchIcon.Icon.g_rune_tir_lv01</value>
+			<value level="9">BranchIcon.Icon.g_rune_tir_lv01</value>
+			<value level="10">BranchIcon.Icon.g_rune_tir_lv01</value>
+			<value level="11">BranchIcon.Icon.g_rune_tir_lv02</value>
+			<value level="12">BranchIcon.Icon.g_rune_tir_lv02</value>
+			<value level="13">BranchIcon.Icon.g_rune_tir_lv02</value>
+			<value level="14">icon.ensoul_big_p</value>
+			<value level="15">icon.ensoul_big_p</value>
+			<value level="16">icon.ensoul_big_p</value>
+			<value level="17">icon.ensoul_big_p</value>
+			<value level="18">icon.ensoul_big_p</value>
+			<value level="19">icon.ensoul_big_p</value>
+			<value level="20">icon.ensoul_big_p</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
@@ -961,7 +996,29 @@
 		</effects>
 	</skill>
 	<skill id="55257" toLevel="20" name="Othell's Focus">
-		<icon>icon.skill55257</icon>
+		<!-- P. Critical Rate +$s1. -->
+		<icon>
+			<value level="1">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="2">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_othel_lv02</value>
+			<value level="7">BranchIcon.Icon.g_rune_othel_lv02</value>
+			<value level="8">BranchIcon.Icon.g_rune_othel_lv02</value>
+			<value level="9">BranchIcon.Icon.g_rune_othel_lv02</value>
+			<value level="10">BranchIcon.Icon.g_rune_othel_lv02</value>
+			<value level="11">BranchIcon.Icon.g_rune_othel_lv03</value>
+			<value level="12">BranchIcon.Icon.g_rune_othel_lv03</value>
+			<value level="13">BranchIcon.Icon.g_rune_othel_lv03</value>
+			<value level="14">icon.ensoul_big_p</value>
+			<value level="15">icon.ensoul_big_p</value>
+			<value level="16">icon.ensoul_big_p</value>
+			<value level="17">icon.ensoul_big_p</value>
+			<value level="18">icon.ensoul_big_p</value>
+			<value level="19">icon.ensoul_big_p</value>
+			<value level="20">icon.ensoul_big_p</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalRate">
@@ -992,7 +1049,29 @@
 		</effects>
 	</skill>
 	<skill id="55258" toLevel="20" name="Othell's Critical Damage">
-		<icon>icon.skill55258</icon>
+		<!-- Critical Damage +$s1. -->
+		<icon>
+			<value level="1">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="2">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_othel_lv02</value>
+			<value level="7">BranchIcon.Icon.g_rune_othel_lv02</value>
+			<value level="8">BranchIcon.Icon.g_rune_othel_lv02</value>
+			<value level="9">BranchIcon.Icon.g_rune_othel_lv02</value>
+			<value level="10">BranchIcon.Icon.g_rune_othel_lv02</value>
+			<value level="11">BranchIcon.Icon.g_rune_othel_lv03</value>
+			<value level="12">BranchIcon.Icon.g_rune_othel_lv03</value>
+			<value level="13">BranchIcon.Icon.g_rune_othel_lv03</value>
+			<value level="14">icon.ensoul_big_p</value>
+			<value level="15">icon.ensoul_big_p</value>
+			<value level="16">icon.ensoul_big_p</value>
+			<value level="17">icon.ensoul_big_p</value>
+			<value level="18">icon.ensoul_big_p</value>
+			<value level="19">icon.ensoul_big_p</value>
+			<value level="20">icon.ensoul_big_p</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalDamage">
@@ -1023,7 +1102,29 @@
 		</effects>
 	</skill>
 	<skill id="55259" toLevel="20" name="Yul Wind Walk">
-		<icon>icon.skill55259</icon>
+		<!-- Speed +$s1. -->
+		<icon>
+			<value level="1">BranchIcon.Icon.g_rune_yr_lv01</value>
+			<value level="2">BranchIcon.Icon.g_rune_yr_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_yr_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_yr_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_yr_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_yr_lv02</value>
+			<value level="7">BranchIcon.Icon.g_rune_yr_lv02</value>
+			<value level="8">BranchIcon.Icon.g_rune_yr_lv02</value>
+			<value level="9">BranchIcon.Icon.g_rune_yr_lv02</value>
+			<value level="10">BranchIcon.Icon.g_rune_yr_lv02</value>
+			<value level="11">BranchIcon.Icon.g_rune_yr_lv03</value>
+			<value level="12">BranchIcon.Icon.g_rune_yr_lv03</value>
+			<value level="13">BranchIcon.Icon.g_rune_yr_lv03</value>
+			<value level="14">icon.ensoul_big_p</value>
+			<value level="15">icon.ensoul_big_p</value>
+			<value level="16">icon.ensoul_big_p</value>
+			<value level="17">icon.ensoul_big_p</value>
+			<value level="18">icon.ensoul_big_p</value>
+			<value level="19">icon.ensoul_big_p</value>
+			<value level="20">icon.ensoul_big_p</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="Speed">
@@ -1054,7 +1155,29 @@
 		</effects>
 	</skill>
 	<skill id="55260" toLevel="20" name="Yul Guidance">
-		<icon>icon.skill55260</icon>
+		<!-- Accuracy +$s1. -->
+		<icon>
+			<value level="1">BranchIcon.Icon.g_rune_yr_lv01</value>
+			<value level="2">BranchIcon.Icon.g_rune_yr_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_yr_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_yr_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_yr_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_yr_lv02</value>
+			<value level="7">BranchIcon.Icon.g_rune_yr_lv02</value>
+			<value level="8">BranchIcon.Icon.g_rune_yr_lv02</value>
+			<value level="9">BranchIcon.Icon.g_rune_yr_lv02</value>
+			<value level="10">BranchIcon.Icon.g_rune_yr_lv02</value>
+			<value level="11">BranchIcon.Icon.g_rune_yr_lv03</value>
+			<value level="12">BranchIcon.Icon.g_rune_yr_lv03</value>
+			<value level="13">BranchIcon.Icon.g_rune_yr_lv03</value>
+			<value level="14">icon.ensoul_big_p</value>
+			<value level="15">icon.ensoul_big_p</value>
+			<value level="16">icon.ensoul_big_p</value>
+			<value level="17">icon.ensoul_big_p</value>
+			<value level="18">icon.ensoul_big_p</value>
+			<value level="19">icon.ensoul_big_p</value>
+			<value level="20">icon.ensoul_big_p</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="Accuracy">
@@ -1085,7 +1208,29 @@
 		</effects>
 	</skill>
 	<skill id="55261" toLevel="20" name="Feoh's Magical Power">
-		<icon>icon.skill55261</icon>
+		<!-- M. Atk. +$s1 and skill MP Consumption +15%. -->
+		<icon>
+			<value level="1">BranchIcon.Icon.g_rune_feoh_lv01</value>
+			<value level="2">BranchIcon.Icon.g_rune_feoh_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_feoh_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_feoh_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_feoh_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_feoh_lv02</value>
+			<value level="7">BranchIcon.Icon.g_rune_feoh_lv02</value>
+			<value level="8">BranchIcon.Icon.g_rune_feoh_lv02</value>
+			<value level="9">BranchIcon.Icon.g_rune_feoh_lv02</value>
+			<value level="10">BranchIcon.Icon.g_rune_feoh_lv02</value>
+			<value level="11">BranchIcon.Icon.g_rune_feoh_lv03</value>
+			<value level="12">BranchIcon.Icon.g_rune_feoh_lv03</value>
+			<value level="13">BranchIcon.Icon.g_rune_feoh_lv03</value>
+			<value level="14">icon.ensoul_big_p</value>
+			<value level="15">icon.ensoul_big_p</value>
+			<value level="16">icon.ensoul_big_p</value>
+			<value level="17">icon.ensoul_big_p</value>
+			<value level="18">icon.ensoul_big_p</value>
+			<value level="19">icon.ensoul_big_p</value>
+			<value level="20">icon.ensoul_big_p</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalAttack">
@@ -1141,7 +1286,29 @@
 		</effects>
 	</skill>
 	<skill id="55262" toLevel="20" name="Feoh's Empower">
-		<icon>icon.skill55262</icon>
+		<!-- M. Atk. +$s1. -->
+		<icon>
+			<value level="1">BranchIcon.Icon.g_rune_feoh_lv01</value>
+			<value level="2">BranchIcon.Icon.g_rune_feoh_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_feoh_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_feoh_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_feoh_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_feoh_lv02</value>
+			<value level="7">BranchIcon.Icon.g_rune_feoh_lv02</value>
+			<value level="8">BranchIcon.Icon.g_rune_feoh_lv02</value>
+			<value level="9">BranchIcon.Icon.g_rune_feoh_lv02</value>
+			<value level="10">BranchIcon.Icon.g_rune_feoh_lv02</value>
+			<value level="11">BranchIcon.Icon.g_rune_feoh_lv03</value>
+			<value level="12">BranchIcon.Icon.g_rune_feoh_lv03</value>
+			<value level="13">BranchIcon.Icon.g_rune_feoh_lv03</value>
+			<value level="14">icon.ensoul_big_p</value>
+			<value level="15">icon.ensoul_big_p</value>
+			<value level="16">icon.ensoul_big_p</value>
+			<value level="17">icon.ensoul_big_p</value>
+			<value level="18">icon.ensoul_big_p</value>
+			<value level="19">icon.ensoul_big_p</value>
+			<value level="20">icon.ensoul_big_p</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalAttack">
@@ -1172,7 +1339,29 @@
 		</effects>
 	</skill>
 	<skill id="55263" toLevel="20" name="Iss' Magic Regeneration">
-		<icon>icon.skill55263</icon>
+		<!-- MP Recovery Bonus +$s1. -->
+		<icon>
+			<value level="1">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="2">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_is_lv02</value>
+			<value level="7">BranchIcon.Icon.g_rune_is_lv02</value>
+			<value level="8">BranchIcon.Icon.g_rune_is_lv02</value>
+			<value level="9">BranchIcon.Icon.g_rune_is_lv02</value>
+			<value level="10">BranchIcon.Icon.g_rune_is_lv02</value>
+			<value level="11">BranchIcon.Icon.g_rune_is_lv03</value>
+			<value level="12">BranchIcon.Icon.g_rune_is_lv03</value>
+			<value level="13">BranchIcon.Icon.g_rune_is_lv03</value>
+			<value level="14">icon.ensoul_big_p</value>
+			<value level="15">icon.ensoul_big_p</value>
+			<value level="16">icon.ensoul_big_p</value>
+			<value level="17">icon.ensoul_big_p</value>
+			<value level="18">icon.ensoul_big_p</value>
+			<value level="19">icon.ensoul_big_p</value>
+			<value level="20">icon.ensoul_big_p</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MpRegen">
@@ -1203,7 +1392,29 @@
 		</effects>
 	</skill>
 	<skill id="55264" toLevel="20" name="Iss' Boost Mana">
-		<icon>icon.skill55264</icon>
+		<!-- Max MP +$s1. -->
+		<icon>
+			<value level="1">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="2">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_is_lv02</value>
+			<value level="7">BranchIcon.Icon.g_rune_is_lv02</value>
+			<value level="8">BranchIcon.Icon.g_rune_is_lv02</value>
+			<value level="9">BranchIcon.Icon.g_rune_is_lv02</value>
+			<value level="10">BranchIcon.Icon.g_rune_is_lv02</value>
+			<value level="11">BranchIcon.Icon.g_rune_is_lv03</value>
+			<value level="12">BranchIcon.Icon.g_rune_is_lv03</value>
+			<value level="13">BranchIcon.Icon.g_rune_is_lv03</value>
+			<value level="14">icon.ensoul_big_p</value>
+			<value level="15">icon.ensoul_big_p</value>
+			<value level="16">icon.ensoul_big_p</value>
+			<value level="17">icon.ensoul_big_p</value>
+			<value level="18">icon.ensoul_big_p</value>
+			<value level="19">icon.ensoul_big_p</value>
+			<value level="20">icon.ensoul_big_p</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxMp">
@@ -1234,7 +1445,29 @@
 		</effects>
 	</skill>
 	<skill id="55265" toLevel="20" name="Wynn's Acumen">
-		<icon>icon.skill55265</icon>
+		<!-- Casting Spd. +$s1. -->
+		<icon>
+			<value level="1">BranchIcon.Icon.g_rune_wynn_lv01</value>
+			<value level="2">BranchIcon.Icon.g_rune_wynn_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_wynn_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_wynn_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_wynn_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_wynn_lv02</value>
+			<value level="7">BranchIcon.Icon.g_rune_wynn_lv02</value>
+			<value level="8">BranchIcon.Icon.g_rune_wynn_lv02</value>
+			<value level="9">BranchIcon.Icon.g_rune_wynn_lv02</value>
+			<value level="10">BranchIcon.Icon.g_rune_wynn_lv02</value>
+			<value level="11">BranchIcon.Icon.g_rune_wynn_lv03</value>
+			<value level="12">BranchIcon.Icon.g_rune_wynn_lv03</value>
+			<value level="13">BranchIcon.Icon.g_rune_wynn_lv03</value>
+			<value level="14">icon.ensoul_big_p</value>
+			<value level="15">icon.ensoul_big_p</value>
+			<value level="16">icon.ensoul_big_p</value>
+			<value level="17">icon.ensoul_big_p</value>
+			<value level="18">icon.ensoul_big_p</value>
+			<value level="19">icon.ensoul_big_p</value>
+			<value level="20">icon.ensoul_big_p</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalAttackSpeed">
@@ -1265,7 +1498,29 @@
 		</effects>
 	</skill>
 	<skill id="55266" toLevel="20" name="Wynn's Lightness">
-		<icon>icon.skill55266</icon>
+		<!-- Weight limit +$s1. -->
+		<icon>
+			<value level="1">BranchIcon.Icon.g_rune_wynn_lv01</value>
+			<value level="2">BranchIcon.Icon.g_rune_wynn_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_wynn_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_wynn_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_wynn_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_wynn_lv02</value>
+			<value level="7">BranchIcon.Icon.g_rune_wynn_lv02</value>
+			<value level="8">BranchIcon.Icon.g_rune_wynn_lv02</value>
+			<value level="9">BranchIcon.Icon.g_rune_wynn_lv02</value>
+			<value level="10">BranchIcon.Icon.g_rune_wynn_lv02</value>
+			<value level="11">BranchIcon.Icon.g_rune_wynn_lv03</value>
+			<value level="12">BranchIcon.Icon.g_rune_wynn_lv03</value>
+			<value level="13">BranchIcon.Icon.g_rune_wynn_lv03</value>
+			<value level="14">icon.ensoul_big_p</value>
+			<value level="15">icon.ensoul_big_p</value>
+			<value level="16">icon.ensoul_big_p</value>
+			<value level="17">icon.ensoul_big_p</value>
+			<value level="18">icon.ensoul_big_p</value>
+			<value level="19">icon.ensoul_big_p</value>
+			<value level="20">icon.ensoul_big_p</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="WeightLimit">
@@ -1296,7 +1551,29 @@
 		</effects>
 	</skill>
 	<skill id="55267" toLevel="20" name="Aeore's Regeneration">
-		<icon>icon.skill55267</icon>
+		<!-- HP Recovery Bonus +$s1. -->
+		<icon>
+			<value level="1">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="2">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_eolh_lv02</value>
+			<value level="7">BranchIcon.Icon.g_rune_eolh_lv02</value>
+			<value level="8">BranchIcon.Icon.g_rune_eolh_lv02</value>
+			<value level="9">BranchIcon.Icon.g_rune_eolh_lv02</value>
+			<value level="10">BranchIcon.Icon.g_rune_eolh_lv02</value>
+			<value level="11">BranchIcon.Icon.g_rune_eolh_lv03</value>
+			<value level="12">BranchIcon.Icon.g_rune_eolh_lv03</value>
+			<value level="13">BranchIcon.Icon.g_rune_eolh_lv03</value>
+			<value level="14">icon.ensoul_big_p</value>
+			<value level="15">icon.ensoul_big_p</value>
+			<value level="16">icon.ensoul_big_p</value>
+			<value level="17">icon.ensoul_big_p</value>
+			<value level="18">icon.ensoul_big_p</value>
+			<value level="19">icon.ensoul_big_p</value>
+			<value level="20">icon.ensoul_big_p</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="HpRegen">
@@ -1327,7 +1604,29 @@
 		</effects>
 	</skill>
 	<skill id="55268" toLevel="20" name="Aeore's Heal">
-		<icon>icon.skill55268</icon>
+		<!-- Received healing +$s1. -->
+		<icon>
+			<value level="1">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="2">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_eolh_lv02</value>
+			<value level="7">BranchIcon.Icon.g_rune_eolh_lv02</value>
+			<value level="8">BranchIcon.Icon.g_rune_eolh_lv02</value>
+			<value level="9">BranchIcon.Icon.g_rune_eolh_lv02</value>
+			<value level="10">BranchIcon.Icon.g_rune_eolh_lv02</value>
+			<value level="11">BranchIcon.Icon.g_rune_eolh_lv03</value>
+			<value level="12">BranchIcon.Icon.g_rune_eolh_lv03</value>
+			<value level="13">BranchIcon.Icon.g_rune_eolh_lv03</value>
+			<value level="14">icon.ensoul_big_p</value>
+			<value level="15">icon.ensoul_big_p</value>
+			<value level="16">icon.ensoul_big_p</value>
+			<value level="17">icon.ensoul_big_p</value>
+			<value level="18">icon.ensoul_big_p</value>
+			<value level="19">icon.ensoul_big_p</value>
+			<value level="20">icon.ensoul_big_p</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="HealEffect">
@@ -1358,27 +1657,27 @@
 		</effects>
 	</skill>
 	<skill id="55269" toLevel="1" name="Valakas Treasure Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_sheep_agathion_30d_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55270" toLevel="1" name="Agathion - Dance of Fury">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 20 min., Atk. Spd. +5%. -->
+		<icon>icon.bm_agathion_fury</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55271" toLevel="1" name="Agathion - Dance of Concentration">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 20 min., Casting Spd. +5%. -->
+		<icon>icon.bm_agathion_concentration</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55272" toLevel="1" name="Agathion - Song of Wind">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 5 min., Speed +20. -->
+		<icon>icon.bm_agathion_wind</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55273" toLevel="3" name="Great Energy of Development">
-		<icon>icon.skill55273</icon>
+		<!-- For 10 min., acquired XP +5%. -->
+		<icon>BranchIcon.Icon.etc_g_bonus_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -1389,7 +1688,6 @@
 		<magicLvl>40</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1406,7 +1704,8 @@
 		</effects>
 	</skill>
 	<skill id="55274" toLevel="3" name="Energy of Speed">
-		<icon>icon.skill55274</icon>
+		<!-- Speed +2 for 10 min. -->
+		<icon>BranchIcon.Icon.etc_g_bonus_herb_i01</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -1417,7 +1716,6 @@
 		<magicLvl>40</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1434,7 +1732,8 @@
 		</effects>
 	</skill>
 	<skill id="55275" toLevel="3" name="Energy of Accuracy">
-		<icon>icon.skill55275</icon>
+		<!-- P./ M. Accuracy +1 for 10 min. -->
+		<icon>BranchIcon.Icon.etc_g_bonus_herb_i02</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -1445,7 +1744,6 @@
 		<magicLvl>40</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1462,52 +1760,40 @@
 		</effects>
 	</skill>
 	<skill id="55282" toLevel="1" name="Buff for the Hero of Ruins of Agony">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- A Buff for a warrior fighting in the Ruins of Agony. P. Atk. and M. Atk. +10%. You can receive a Box of Tears when the Buff is no longer in effect. <Warning> You cannot receive the item if your character dies when receiving or if there is no empty slot in your Inventory. -->
+		<icon>BranchIcon.Icon.skill_g_field_special_buff_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55283" toLevel="1" name="Box of Tears Acquisition Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- You can receive a Box of Tears when the Buff is no longer in effect. -->
+		<icon>BranchIcon.Icon.skill_g_field_special_buff_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55284" toLevel="1" name="Box of Tears Acquisition Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.Icon.skill_g_field_special_buff_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55285" toLevel="1" name="Box of Tears">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55286" toLevel="1" name="Decayed Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55287" toLevel="1" name="Shabby Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55288" toLevel="1" name="Crude Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55289" toLevel="1" name="Old Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55290" toLevel="1" name="Devil's Ring">
-		<!-- A 15-day item. When equipped, increases Max HP by 20, M. Atk. by 3, P. Atk. by 5. -->
-		<icon>icon.skill55290</icon>
+		<!-- Increases Max. HP and P./ M. Atk. -->
+		<icon>icon.ev_11th_rare_acc_ring</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1529,16 +1815,16 @@
 		</effects>
 	</skill>
 	<skill id="55291" toLevel="1" name="Devil's Ring">
-		<icon>icon.skill55291</icon>
+		<!-- Increases Max. HP and P./ M. Atk. -->
+		<icon>icon.ev_11th_rare_acc_ring</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55292" toLevel="1" name="Devil's Earring">
-		<!-- A 15-day item. MP Recovery Rate +0.2, Healing Power +2%. The effect does not stack, if two identical earrings are equipped. Additionally increases MP by 10. -->
-		<icon>icon.skill55292</icon>
+		<!-- Increases MP recovery rate and healing power. -->
+		<icon>icon.ev_11th_rare_acc_earing</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1556,18 +1842,18 @@
 		</effects>
 	</skill>
 	<skill id="55293" toLevel="1" name="Devil's Earring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill55293</icon>
+		<!-- Increases MP recovery rate and healing power. -->
+		<icon>icon.ev_11th_rare_acc_earing</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55294" toLevel="1" name="Devil's Necklace"> 
-	<!-- A 15-day item. Max MP +20, M. Def. +3, P. Def. +5. -->
-		<icon>icon.skill55294</icon>
+	<skill id="55294" toLevel="1" name="Devil's Necklace">
+		<!-- P. Def. and M. Def. are increased. -->
+		<icon>icon.ev_11th_rare_acc_necklace</icon>
+		<!-- A 15-day item. Max MP +20, M. Def. +3, P. Def. +5. -->
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<abnormalLvl>1</abnormalLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1589,28 +1875,27 @@
 		</effects>
 	</skill>
 	<skill id="55295" toLevel="1" name="Devil's Necklace">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- P. Def. and M. Def. are increased. -->
+		<icon>icon.ev_11th_rare_acc_necklace</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55296" toLevel="1" name="Scroll of Invisibility">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Makes the player invisible and invincible to enemy's attacks. Speed -40%. The effect fades upon attack. -->
+		<icon>icon.etc_aidcharm_cancel_valbreath_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55297" toLevel="1" name="Buff for the Hero of Ruins of Despair">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- A Buff for a warrior fighting in the Ruins of Despair. P. Atk. and M. Atk. +10%. You can receive a Decayed Box when the Buff is no longer in effect. <Warning> You cannot receive the item if your character dies when receiving or if there is no empty slot in your Inventory. -->
+		<icon>BranchIcon.Icon.skill_g_field_special_buff_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55298" toLevel="1" name="Decayed Box Acquisition Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- You can receive a Decayed Box when the Buff is no longer in effect. -->
+		<icon>BranchIcon.Icon.skill_g_field_special_buff_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55299" toLevel="1" name="Decayed Box Acquisition Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.Icon.skill_g_field_special_buff_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

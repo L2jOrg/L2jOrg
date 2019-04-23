@@ -61,6 +61,12 @@ public final class PullBack extends AbstractEffect
 	@Override
 	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
+		// Prevent pulling raids.
+		if ((effected == null) || effected.isRaid())
+		{
+			return;
+		}
+
 		// Prevent pulling NPCs.
 		if (!effected.isPlayable() && !effected.isMonster())
 		{

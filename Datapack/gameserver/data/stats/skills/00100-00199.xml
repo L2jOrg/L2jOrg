@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="100" toLevel="15" name="Shock Attack">
+		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2. Requires a blunt weapon. Over-hit. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -28,7 +30,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -68,7 +69,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -105,6 +105,8 @@
 		</effects>
 	</skill>
 	<skill id="101" toLevel="48" name="Stun Shot">
+		<!-- Fires an arrow with $s1 Power added to P. Atk. and stuns the enemy for $s2. Requires a bow. Over-hit. Target cancel is possible. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -160,7 +162,6 @@
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -265,7 +266,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -338,6 +338,8 @@
 		</effects>
 	</skill>
 	<skill id="102" toLevel="18" name="Entangle">
+		<!-- Enemy's Speed -$s2 for $s1. -->
+		<icon>icon.skill0102</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -385,7 +387,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0102</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -451,7 +452,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -482,6 +482,8 @@
 		</effects>
 	</skill>
 	<skill id="103" toLevel="5" name="Corpse Plague">
+		<!-- Causes a poison cloud to pour out of a corpse. Inflicts poison on enemies near the corpse for $s1, and makes them consume $s2 HP every sec. -->
+		<icon>icon.skill0103</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">6</value>
@@ -507,7 +509,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0103</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -527,7 +528,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>POISON</trait>
 		<targetType>NPC_BODY</targetType>
@@ -551,17 +551,17 @@
 		</effects>
 	</skill>
 	<skill id="104" toLevel="1" name="Detect Plant Weakness">
+		<!-- For 10 min., damage against plants +5%. -->
+		<icon>icon.skill0104</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DETECT_WEAKNESS</abnormalType>
 		<effectPoint>438</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0104</icon>
 		<magicLvl>46</magicLvl>
 		<mpConsume>21</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -573,6 +573,8 @@
 		</effects>
 	</skill>
 	<skill id="105" toLevel="26" name="Freezing Strike">
+		<!-- Momentarily freezes the surrounding air, inflicting Water damage on the enemy with $s1 Power and decreasing their Speed by $s3 for $s2. -->
+		<icon>icon.skill0105</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -611,7 +613,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0105</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -701,7 +702,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -743,6 +743,8 @@
 		</effects>
 	</skill>
 	<skill id="106" toLevel="14" name="Veil">
+		<!-- Creates an illusion of nearby monsters for $s1. -->
+		<icon>icon.skill0106</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TURN_PASSIVE</abnormalType>
@@ -751,7 +753,6 @@
 		<castRange>500</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill0106</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">43</value>
@@ -787,7 +788,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -797,6 +797,8 @@
 		</effects>
 	</skill>
 	<skill id="107" toLevel="11" name="Holy Aura">
+		<!-- Holds nearby undead monsters for $s1. -->
+		<icon>icon.skill0107</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -819,7 +821,6 @@
 			<value level="11">-672</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0107</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -850,7 +851,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>HOLD</trait>
 		<targetType>SELF</targetType>
@@ -864,18 +864,17 @@
 		</effects>
 	</skill>
 	<skill id="109" toLevel="1" name="Ogre Spirit Totem">
-		<!-- Glory Days Confirmed -->
+		<!-- Possessed by an Ogre's Spirit, P. Atk., P. Def. and M. Def. +20%, Critical Damage +20% for 5 min. Requires a fist weapon. -->
+		<icon>icon.skill0109</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<effectPoint>438</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0109</icon>
 		<magicLvl>46</magicLvl>
 		<mpConsume>41</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -889,22 +888,22 @@
 		</conditions>
 		<effects>
 			<effect name="PAtk">
-				<amount>30</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>DUALFIST</item>
 				</weaponType>
 			</effect>
 			<effect name="MagicalDefence">
-				<amount>30</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
-				<amount>30</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="CriticalDamage">
-				<amount>10</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>DUALFIST</item>
@@ -913,6 +912,8 @@
 		</effects>
 	</skill>
 	<skill id="110" toLevel="2" name="Ultimate Defense">
+		<!-- For $s1., P. Def. +$s2, M. Def. +$s3, and Buff-canceling Attack Resistance +$s4, and restricts movement. -->
+		<icon>icon.skill0110</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -925,7 +926,6 @@
 			<value level="2">438</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0110</icon>
 		<magicLvl>
 			<value level="1">20</value>
 			<value level="2">46</value>
@@ -936,7 +936,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>900000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -964,6 +963,8 @@
 		</effects>
 	</skill>
 	<skill id="111" toLevel="2" name="Ultimate Evasion">
+		<!-- For $s1, Evasion +$s2, physical attack skill Evasion Rate +$s3, and Buff-canceling Attack Resistance +$s4. -->
+		<icon>icon.skill0111</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -975,7 +976,6 @@
 			<value level="2">523</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0111</icon>
 		<magicLvl>
 			<value level="1">28</value>
 			<value level="2">55</value>
@@ -986,7 +986,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>900000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1013,6 +1012,8 @@
 		</effects>
 	</skill>
 	<skill id="112" toLevel="4" name="Deflect Arrow">
+		<!-- Bow Resistance +$s2 for $s1. -->
+		<icon>icon.skill0112</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1028,7 +1029,6 @@
 			<value level="4">40</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0112</icon>
 		<magicLvl>
 			<value level="1">24</value>
 			<value level="2">32</value>
@@ -1043,7 +1043,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1056,10 +1055,17 @@
 					<value level="3">32</value>
 					<value level="4">40</value>
 				</BOW>
+				<CROSSBOW>
+					<value level="1">8</value>
+					<value level="2">12</value>
+					<value level="3">16</value>
+					<value level="4">20</value>
+				</CROSSBOW>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="113" toLevel="2" name="Long Shot">
+		<!-- Bow's range +$s1. -->
 		<icon>icon.skill0113</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -1081,6 +1087,8 @@
 		</effects>
 	</skill>
 	<skill id="115" toLevel="19" name="Power Break">
+		<!-- Enemy's P. Atk. -$s2 for $s1. -->
+		<icon>icon.skill0115</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">2</value>
@@ -1130,7 +1138,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill0115</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -1199,7 +1206,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1231,6 +1237,8 @@
 		</effects>
 	</skill>
 	<skill id="116" toLevel="16" name="Howl">
+		<!-- Nearby enemies' P. Atk. -$s2 for $s1. -->
+		<icon>icon.skill0116</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
@@ -1257,7 +1265,6 @@
 			<value level="16">-342</value>
 		</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill0116</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -1298,7 +1305,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -1311,7 +1317,7 @@
 		</effects>
 	</skill>
 	<skill id="118" toLevel="1" name="Magician's Movement">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Atk. Spd. when equipped with a magic armor. -->
 		<icon>icon.skill0118</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1329,6 +1335,8 @@
 		</effects>
 	</skill>
 	<skill id="120" toLevel="15" name="Stunning Fist">
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. and stuns them for $s2. Requires a fist weapon. Over-hit. -->
+		<icon>icon.skill0120</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1356,7 +1364,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1604</hitTime>
-		<icon>icon.skill0120</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -1396,7 +1403,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -1433,6 +1439,8 @@
 		</effects>
 	</skill>
 	<skill id="121" toLevel="6" name="Battle Roar">
+		<!-- Instantly recovers $s1 of Max HP and Max HP +$s3 for $s2. -->
+		<icon>icon.skill0121</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1452,7 +1460,6 @@
 			<value level="6">635</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0121</icon>
 		<magicLvl>
 			<value level="1">28</value>
 			<value level="2">40</value>
@@ -1471,7 +1478,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>150000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1492,6 +1498,8 @@
 		</effects>
 	</skill>
 	<skill id="122" toLevel="17" name="Hex">
+		<!-- Enemy's P. Def. -$s2 for $s1. -->
+		<icon>icon.skill0122</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -1519,7 +1527,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill0122</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -1563,7 +1570,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1575,6 +1581,8 @@
 		</effects>
 	</skill>
 	<skill id="123" toLevel="3" name="Spirit Barrier">
+		<!-- M. Def. +$s2 for $s1. -->
+		<icon>icon.skill0123</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1588,7 +1596,6 @@
 			<value level="3">549</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill0123</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -1607,7 +1614,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1624,6 +1630,8 @@
 		</effects>
 	</skill>
 	<skill id="127" toLevel="22" name="Hamstring">
+		<!-- Enemy's Speed -$s2 for $s1 -->
+		<icon>icon.skill0127</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1650,7 +1658,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0127</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -1727,7 +1734,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1739,6 +1745,8 @@
 		</effects>
 	</skill>
 	<skill id="129" toLevel="5" name="Poison">
+		<!-- Poisons the target, causing loss of $s2 HP per sec. for $s1 -->
+		<icon>icon.skill0129</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">5</value>
@@ -1762,7 +1770,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0129</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -1789,7 +1796,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>POISON</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -1808,7 +1814,8 @@
 		</effects>
 	</skill>
 	<skill id="130" toLevel="2" name="Thrill Fight">
-		<!-- Confirmed CT2.5 -->
+		<!-- Speed -$s2 and Atk. Spd. +$s3 for $s1 -->
+		<icon>icon.skill0130</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1820,7 +1827,6 @@
 			<value level="2">523</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0130</icon>
 		<magicLvl>
 			<value level="1">46</value>
 			<value level="2">55</value>
@@ -1831,7 +1837,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1851,6 +1856,8 @@
 		</effects>
 	</skill>
 	<skill id="131" toLevel="3" name="Hawk Eye">
+		<!-- Skill Power +$s2, Accuracy +$s3 for $s1 -->
+		<icon>icon.skill0131</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1864,7 +1871,6 @@
 			<value level="3">549</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0131</icon>
 		<magicLvl>
 			<value level="1">40</value>
 			<value level="2">49</value>
@@ -1877,7 +1883,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1898,6 +1903,7 @@
 		</effects>
 	</skill>
 	<skill id="134" toLevel="1" name="Toughness">
+		<!-- Resistance to sleep/ hold/ poison +20. -->
 		<icon>icon.skill0134</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1911,6 +1917,7 @@
 		</effects>
 	</skill>
 	<skill id="137" toLevel="4" name="Critical Chance">
+		<!-- P. Critical Rate +$s1. -->
 		<icon>icon.skill0137</icon>
 		<magicLvl>
 			<value level="1">28</value>
@@ -1933,7 +1940,8 @@
 		</effects>
 	</skill>
 	<skill id="139" toLevel="9" name="Guts">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<!-- For $s1, P. Def. +$s2 and Debuff Resistance +$s3. Available when HP is $s4 or lower. -->
+		<icon>icon.skill0139</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1959,7 +1967,6 @@
 			<value level="9">550</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0139</icon>
 		<magicLvl>
 			<value level="1">36</value>
 			<value level="2">43</value>
@@ -1984,7 +1991,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -2062,7 +2068,7 @@
 		</effects>
 	</skill>
 	<skill id="141" toLevel="3" name="Weapon Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- P. Atk. +$s1, additionally +$s2. -->
 		<icon>icon.skill0141</icon>
 		<magicLvl>
 			<value level="1">5</value>
@@ -2087,7 +2093,7 @@
 		</effects>
 	</skill>
 	<skill id="142" toLevel="5" name="Armor Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- P. Def. +$s1 and MP Recovery Bonus +$s2. -->
 		<icon>icon.skill0142</icon>
 		<magicLvl>
 			<value level="1">5</value>
@@ -2129,7 +2135,7 @@
 		</effects>
 	</skill>
 	<skill id="143" toLevel="2" name="Cubic Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- Ability to summon $s1 Cubics at once. -->
 		<icon>icon.skill0143</icon>
 		<magicLvl>
 			<value level="1">43</value>
@@ -2147,6 +2153,7 @@
 		</effects>
 	</skill>
 	<skill id="144" toLevel="45" name="Dual Weapon Mastery">
+		<!-- P. Atk. +$s1 when using a dual sword. -->
 		<icon>icon.skill0144</icon>
 		<magicLvl>
 			<value level="1">38</value>
@@ -2254,6 +2261,7 @@
 		</effects>
 	</skill>
 	<skill id="146" toLevel="53" name="Anti Magic">
+		<!-- M. Def. +$s1. -->
 		<icon>icon.skill0146</icon>
 		<magicLvl>
 			<value level="1">4</value>
@@ -2427,6 +2435,7 @@
 		</effects>
 	</skill>
 	<skill id="147" toLevel="59" name="Magic Resistance">
+		<!-- M. Def. +$s1. -->
 		<icon>icon.skill0147</icon>
 		<magicLvl>
 			<value level="1">18</value>
@@ -2623,6 +2632,7 @@
 		</effects>
 	</skill>
 	<skill id="148" toLevel="8" name="Vital Force">
+		<!-- HP Recovery Bonus +$s1 and MP Recovery Bonus +$s2 when sitting. -->
 		<icon>icon.skill0148</icon>
 		<magicLvl>
 			<value level="1">24</value>
@@ -2668,6 +2678,7 @@
 		</effects>
 	</skill>
 	<skill id="150" toLevel="3" name="Weight Limit">
+		<!-- Doubles your weight limit. -->
 		<icon>icon.skill0150</icon>
 		<magicLvl>
 			<value level="1">10</value>
@@ -2688,6 +2699,7 @@
 		</effects>
 	</skill>
 	<skill id="153" toLevel="4" name="Shield Mastery">
+		<!-- Shield Defense +$s1 and Defense Rate +$s2. -->
 		<icon>icon.skill0153</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -2731,6 +2743,7 @@
 		</effects>
 	</skill>
 	<skill id="163" toLevel="1" name="Spellcraft">
+		<!-- Increases Casting Spd. when equipped with a robe jacket and robe pants. Casting Spd. is decreased if no robes are equipped. -->
 		<icon>icon.skill0163</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2748,6 +2761,7 @@
 		</effects>
 	</skill>
 	<skill id="164" toLevel="3" name="Quick Recovery">
+		<!-- Cooldown for magic -$s1. -->
 		<icon>icon.skill0164</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -2769,8 +2783,7 @@
 		</effects>
 	</skill>
 	<skill id="165" toLevel="5" name="Trade">
-		<!-- Confirmed CT2.5 -->
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- Enables you to purchase high quality weapons with a discount up to $s1. -->
 		<icon>icon.skill0165</icon>
 		<magicLvl>
 			<value level="1">15</value>
@@ -2783,6 +2796,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="168" toLevel="3" name="Boost Atk. Spd.">
+		<!-- Atk. Spd. +$s1 -->
 		<icon>icon.skill0168</icon>
 		<magicLvl>
 			<value level="1">36</value>
@@ -2803,6 +2817,7 @@
 		</effects>
 	</skill>
 	<skill id="169" toLevel="2" name="Quick Step">
+		<!-- Speed +$s1. -->
 		<icon>icon.skill0169</icon>
 		<magicLvl>
 			<value level="1">28</value>
@@ -2821,7 +2836,7 @@
 		</effects>
 	</skill>
 	<skill id="171" toLevel="8" name="Esprit">
-		<!-- Confirmed CT2.5 -->
+		<!-- HP Recovery Bonus +$s1 and MP Recovery Bonus +$s2 when running. -->
 		<icon>icon.skill0171</icon>
 		<magicLvl>
 			<value level="1">36</value>
@@ -2870,7 +2885,7 @@
 		</effects>
 	</skill>
 	<skill id="172" toLevel="15" name="Create Item">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<!-- Allows the user to manufacture level $s1 items. -->
 		<icon>icon.skill0172</icon>
 		<magicLvl>
 			<value level="1">5</value>
@@ -2893,7 +2908,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="173" toLevel="2" name="Acrobatics">
-		<!-- Confirmed CT2.5 -->
+		<!-- Maximum height user can fall without taking damage +$s1. -->
 		<icon>icon.skill0173</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -2912,7 +2927,8 @@
 		</effects>
 	</skill>
 	<skill id="176" toLevel="9" name="Frenzy">
-		<!-- Confirmed CT2.5 and Updated to IO -->
+		<!-- For $s1, P. Atk. +$s2, Atk. Spd. +$s3, P. Critical Rate +$s4, P. Critical Damage +$s5, and Speed +$s6. Additional P. Accuracy $s7 and P. Atk. +$s8 when using a two-handed sword, two-handed blunt weapon, or spear. Available when HP is $s9 or lower. -->
+		<icon>icon.skill0176</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2938,7 +2954,6 @@
 			<value level="9">1191</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0176</icon>
 		<magicLvl>
 			<value level="1">32</value>
 			<value level="2">46</value>
@@ -2963,7 +2978,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -3129,14 +3143,14 @@
 		</effects>
 	</skill>
 	<skill id="181" toLevel="1" name="Revival">
+		<!-- Restores to full HP in an emergency. Only usable if HP is 10 percent or lower. -->
+		<icon>icon.skill0181</icon>
 		<effectPoint>562</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0181</icon>
 		<magicLvl>55</magicLvl>
 		<mpConsume>25</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>900000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3154,6 +3168,8 @@
 		</effects>
 	</skill>
 	<skill id="190" toLevel="45" name="Fatal Strike">
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit. Ignores Shield Defense. -->
+		<icon>icon.skill0190</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -3200,7 +3216,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0190</icon>
 		<magicLvl>
 			<value level="1">38</value>
 			<value level="2">39</value>
@@ -3298,7 +3313,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3366,6 +3380,7 @@
 		</effects>
 	</skill>
 	<skill id="191" toLevel="6" name="Focus Mind">
+		<!-- MP Recovery Bonus +$s1. -->
 		<icon>icon.skill0191</icon>
 		<magicLvl>
 			<value level="1">36</value>
@@ -3392,6 +3407,7 @@
 		</effects>
 	</skill>
 	<skill id="193" toLevel="7" name="Critical Damage">
+		<!-- Critical Damage +$s1. -->
 		<icon>icon.skill0193</icon>
 		<magicLvl>
 			<value level="1">24</value>
@@ -3420,7 +3436,7 @@
 		</effects>
 	</skill>
 	<skill id="194" toLevel="1" name="Lucky">
-		<!-- Confirmed CT2.5 -->
+		<!-- There is no death penalty at Lv. 9 or below. -->
 		<icon>icon.skill0194</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3430,6 +3446,7 @@
 		</effects>
 	</skill>
 	<skill id="195" toLevel="2" name="Boost Breath">
+		<!-- Lung capacity +$s1. -->
 		<icon>icon.skill0195</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -3448,12 +3465,12 @@
 		</effects>
 	</skill>
 	<skill id="196" toLevel="1" name="Holy Blade">
-		<attributeType>HOLY</attributeType>
+		<!-- Ability to attack with holy power. -->
 		<icon>icon.skill0196</icon>
+		<attributeType>HOLY</attributeType>
 		<magicLvl>43</magicLvl>
 		<mpConsume>8</mpConsume>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
@@ -3464,6 +3481,7 @@
 		</effects>
 	</skill>
 	<skill id="197" toLevel="2" name="Holy Armor">
+		<!-- Increases Dark Attack Resistance. -->
 		<icon>icon.skill0197</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -3474,7 +3492,6 @@
 			<value level="2">9</value>
 		</mpConsume>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
@@ -3488,6 +3505,7 @@
 		</effects>
 	</skill>
 	<skill id="198" toLevel="3" name="Boost Evasion">
+		<!-- P. Evasion +$s1, P./ M. Skill Evasion +$s2. -->
 		<icon>icon.skill0198</icon>
 		<magicLvl>
 			<value level="1">24</value>

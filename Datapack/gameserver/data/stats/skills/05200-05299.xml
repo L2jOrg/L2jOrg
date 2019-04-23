@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5200" toLevel="8" name="Pet Recharge">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Restores MP. -->
+		<icon>icon.skill1013</icon>
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">604</value>
@@ -15,7 +16,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>6000</hitTime>
-		<icon>icon.skill1013</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">65</value>
@@ -49,7 +49,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>12000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>OWNER_PET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -69,7 +68,8 @@
 		</effects>
 	</skill>
 	<skill id="5201" toLevel="6" name="Pet Concentration">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Momentarily lowers the probability of magic being canceled due to damage taken. Effect $s1 -->
+		<icon>icon.skill1078</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -91,7 +91,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1078</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">20</value>
@@ -119,7 +118,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>OWNER_PET</targetType>
@@ -139,7 +137,7 @@
 		</effects>
 	</skill>
 	<skill id="5202" toLevel="12" name="Stun">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -183,7 +181,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
@@ -194,7 +191,8 @@
 		</effects>
 	</skill>
 	<skill id="5203" toLevel="12" name="Fear">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<icon>icon.skill1092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -206,7 +204,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1092</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">10</value>
@@ -238,7 +235,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>SELF</targetType>
@@ -250,20 +246,16 @@
 		</effects>
 	</skill>
 	<skill id="5204" toLevel="1" name="Presentation - First Gigantic Pig Combination">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>5800</hitTime>
 		<magicLvl>76</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5205" toLevel="1" name="Heal">
-		<!-- CT2.5 retail confirmed -->
 		<magicLvl>99</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -275,7 +267,8 @@
 		</effects>
 	</skill>
 	<skill id="5206" toLevel="1" name="Decrease Speed">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Mutant Curse: Speed decreases momentarily. Effect 1. -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -285,7 +278,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1160</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -294,7 +286,6 @@
 		<mpInitialConsume>16</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -307,7 +298,8 @@
 		</effects>
 	</skill>
 	<skill id="5207" toLevel="1" name="Decrease Atk. Spd.">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Mutant Curse: Atk. Spd. decreases momentarily. Effect 1. -->
+		<icon>icon.skill4038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -317,7 +309,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill4038</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -326,7 +317,6 @@
 		<mpInitialConsume>16</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -338,17 +328,16 @@
 		</effects>
 	</skill>
 	<skill id="5208" toLevel="1" name="Wind Walk (Event)">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Speed increases temporarily. Effect 2. -->
+		<icon>icon.skill1204</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1204</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -363,17 +352,16 @@
 		</effects>
 	</skill>
 	<skill id="5209" toLevel="1" name="Shield (Event)">
-		<!-- CT2.5 retail confirmed -->
+		<!-- P. Def. increases temporarily. Effect 3. -->
+		<icon>icon.skill1040</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1040</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -388,17 +376,16 @@
 		</effects>
 	</skill>
 	<skill id="5210" toLevel="1" name="Blessed Body (Event)">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Momentarily increases maximum HP. Effect 6. -->
+		<icon>icon.skill1045</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1045</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -413,17 +400,16 @@
 		</effects>
 	</skill>
 	<skill id="5211" toLevel="1" name="Vampiric Rage (Event)">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Provides the ability to recover HP temporarily by damaging the enemy with a certain probability. Effect 4. -->
+		<icon>icon.skill1268</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1268</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -438,17 +424,16 @@
 		</effects>
 	</skill>
 	<skill id="5212" toLevel="1" name="Regeneration (Event)">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Increases HP recovery bonus for a fixed time. Effect 3. -->
+		<icon>icon.skill1044</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>HP_REGEN_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1044</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -463,17 +448,16 @@
 		</effects>
 	</skill>
 	<skill id="5213" toLevel="1" name="Haste (Event)">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Temporarily increases Atk. Spd. Effect 1. -->
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1086</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -488,17 +472,16 @@
 		</effects>
 	</skill>
 	<skill id="5214" toLevel="1" name="Blessed Soul (Event)">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Momentarily increases maximum MP. Effect 6. -->
+		<icon>icon.skill1048</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1048</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -513,17 +496,16 @@
 		</effects>
 	</skill>
 	<skill id="5215" toLevel="1" name="Acumen (Event)">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Momentarily increases Casting Spd. Effect 3. -->
+		<icon>icon.skill1085</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1085</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -538,17 +520,16 @@
 		</effects>
 	</skill>
 	<skill id="5216" toLevel="1" name="Concentration (Event)">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Momentarily lowers the probability of magic being canceled due to damage taken. Effect 1. -->
+		<icon>icon.skill1078</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1078</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -563,17 +544,16 @@
 		</effects>
 	</skill>
 	<skill id="5217" toLevel="1" name="Empower (Event)">
-		<!-- CT2.5 retail confirmed -->
+		<!-- M. Atk. increases temporarily. Effect 1. -->
+		<icon>icon.skill1059</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1059</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -588,20 +568,18 @@
 		</effects>
 	</skill>
 	<skill id="5218" toLevel="1" name="Teleport">
-		<!-- Confirmed CT2.5 -->
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>2000</hitTime>
 		<magicLvl>76</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5219" toLevel="1" name="Giant Mutant Stun">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Curse of giant mutated animal: Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -621,7 +599,6 @@
 		<mpConsume>43</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -632,7 +609,7 @@
 		</effects>
 	</skill>
 	<skill id="5220" toLevel="1" name="Giant Mutant Fear">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Curse of giant mutated animal: Afflicted with Fear and moving against own will momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -651,7 +628,6 @@
 		<mpConsume>43</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -663,11 +639,8 @@
 		</effects>
 	</skill>
 	<skill id="5221" toLevel="1" name="Baylor - Physical Close Range Vulnerability">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<effects>
@@ -675,6 +648,7 @@
 				<BLUNT>-70</BLUNT>
 				<SWORD>-70</SWORD>
 				<DUAL>-70</DUAL>
+				<DUALDAGGER>-70</DUALDAGGER>
 				<DAGGER>-70</DAGGER>
 				<POLE>-70</POLE>
 				<DUALFIST>-70</DUALFIST>
@@ -682,11 +656,8 @@
 		</effects>
 	</skill>
 	<skill id="5222" toLevel="1" name="Baylor - Physical Long Range Vulnerability">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<effects>
@@ -696,11 +667,8 @@
 		</effects>
 	</skill>
 	<skill id="5223" toLevel="1" name="Baylor - Magic Vulnerability">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<effects>
@@ -711,8 +679,8 @@
 		</effects>
 	</skill>
 	<skill id="5224" toLevel="1" name="Berserk">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
+		<!-- Increases P. Atk. and P. Def. -->
+		<icon>icon.skill1062</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
@@ -722,11 +690,9 @@
 		<mpConsume>75</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill1062</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -741,8 +707,8 @@
 		</effects>
 	</skill>
 	<skill id="5225" toLevel="1" name="Invincibility">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
+		<!-- Invincible against standard targets and skills and buffs/ debuffs. -->
+		<icon>icon.skill1427</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
@@ -753,11 +719,9 @@
 		<mpConsume>60</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill1427</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -775,8 +739,7 @@
 		</effects>
 	</skill>
 	<skill id="5226" toLevel="1" name="Imprison">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
+		<!-- Transfers to prison. -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -786,15 +749,14 @@
 		<mpConsume>60</mpConsume>
 		<mpInitialConsume>15</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5230" toLevel="1" name="Stun">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tully Skills -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -804,13 +766,11 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>85</magicLvl>
 		<mpConsume>195</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
@@ -824,8 +784,8 @@
 		</effects>
 	</skill>
 	<skill id="5231" toLevel="1" name="Stun">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tully Skills -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -835,13 +795,11 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>85</magicLvl>
 		<mpConsume>390</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
@@ -855,8 +813,8 @@
 		</effects>
 	</skill>
 	<skill id="5232" toLevel="1" name="Stun">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tully Skills -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -866,13 +824,11 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>85</magicLvl>
 		<mpConsume>779</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
@@ -886,15 +842,13 @@
 		</effects>
 	</skill>
 	<skill id="5233" toLevel="1" name="Weight Spin Attack - Weak">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tully Skills -->
+		<!-- Powerful attack on surrounding area. -->
 		<affectRange>300</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>5000</hitTime>
 		<magicLvl>85</magicLvl>
 		<mpConsume>149</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -906,15 +860,13 @@
 		</effects>
 	</skill>
 	<skill id="5234" toLevel="1" name="Weight Spin Attack - Mid">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tully Skills -->
+		<!-- Powerful attack on surrounding area. -->
 		<affectRange>300</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3000</hitTime>
 		<magicLvl>85</magicLvl>
 		<mpConsume>260</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -926,15 +878,13 @@
 		</effects>
 	</skill>
 	<skill id="5235" toLevel="1" name="Weight Spin Attack - Strong">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tully Skills -->
+		<!-- Powerful attack on surrounding area. -->
 		<affectRange>300</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2000</hitTime>
 		<magicLvl>85</magicLvl>
 		<mpConsume>445</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -946,8 +896,7 @@
 		</effects>
 	</skill>
 	<skill id="5236" toLevel="1" name="Speed Up">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tully Skills -->
+		<!-- Increases Speed. Effect 2. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -956,7 +905,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>25</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -970,8 +918,7 @@
 		</effects>
 	</skill>
 	<skill id="5237" toLevel="1" name="Decrease Speed">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tully Skills -->
+		<!-- Decreases Speed. Effect 2. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -980,7 +927,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>25</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -994,7 +940,8 @@
 		</effects>
 	</skill>
 	<skill id="5238" toLevel="1" name="Freezing">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Instantly freezes and immobilizes. -->
+		<icon>icon.skill1174</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>FREEZING</abnormalType>
@@ -1008,7 +955,6 @@
 		<attributeValue>20</attributeValue>
 		<fanRange>0;0;600;60</fanRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1174</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1017,7 +963,6 @@
 		<mpInitialConsume>23</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>2.5</hitCancelTime>
@@ -1032,7 +977,8 @@
 		</effects>
 	</skill>
 	<skill id="5239" toLevel="5" name="Event Timer">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Battle cannot be continued when the corresponding effect disappears. Corresponding effects will disappear even if you ride a vehicle. -->
+		<icon>icon.skill5239</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">300</value>
@@ -1045,10 +991,8 @@
 		<canBeDispelled>false</canBeDispelled>
 		<effectPoint>100</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill5239</icon>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<stayAfterDeath>true</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1058,7 +1002,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5240" toLevel="1" name="Stun">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1070,13 +1015,11 @@
 		<effectRange>400</effectRange>
 		<fanRange>0;0;600;60</fanRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<mpConsume>221</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -1090,7 +1033,8 @@
 		</effects>
 	</skill>
 	<skill id="5241" toLevel="1" name="Stun">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1101,13 +1045,11 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<mpConsume>368</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -1121,7 +1063,8 @@
 		</effects>
 	</skill>
 	<skill id="5242" toLevel="1" name="Sickness">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Blurs vision. -->
+		<icon>icon.skill5242</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MAX_BREATH_UP</abnormalType>
@@ -1132,19 +1075,18 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill5242</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>85</magicLvl>
 		<mpConsume>1</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5243" toLevel="1" name="Blind">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Momentarily cannot see. -->
+		<icon>icon.skill5243</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MAX_BREATH_UP</abnormalType>
@@ -1154,25 +1096,23 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill5243</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5244" toLevel="1" name="Physical Up">
+		<!-- Increases P. Atk. and P. Def. -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PA_PD_UP</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill1068</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1191,14 +1131,14 @@
 		</effects>
 	</skill>
 	<skill id="5245" toLevel="1" name="Magical Up">
+		<!-- Increases M. Atk. and M. Def. -->
+		<icon>icon.skill1059</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>MA_MD_UP</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill1059</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1217,7 +1157,6 @@
 		</effects>
 	</skill>
 	<skill id="5246" toLevel="12" name="Dark Explosion">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1255,7 +1194,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1280,7 +1218,8 @@
 		</effects>
 	</skill>
 	<skill id="5247" toLevel="12" name="Seed of Darkness">
-		<!-- CT2.5 retail confirmed -->
+		<!-- HP decreases momentarily. Critical Damage will be inflicted by the full grown seed if it is not removed. -->
+		<icon>icon.skill0523</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1306,7 +1245,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3300</hitTime>
-		<icon>icon.skill0523</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1340,7 +1278,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>BLEED</trait>
 		<targetType>ENEMY</targetType>
@@ -1367,7 +1304,7 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>5248</skillId>
+				<skillId>5248</skillId> <!-- Seed Explosion -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -1386,7 +1323,6 @@
 		</endEffects>
 	</skill>
 	<skill id="5248" toLevel="12" name="Seed Explosion">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1411,7 +1347,6 @@
 		</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1435,7 +1370,6 @@
 		</effects>
 	</skill>
 	<skill id="5249" toLevel="12" name="Dark Circle">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>200</affectRange>
 		<effectPoint>-100</effectPoint>
 		<attributeType>DARK</attributeType>
@@ -1485,7 +1419,6 @@
 			<value level="12">24</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>3</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1511,7 +1444,8 @@
 		</effects>
 	</skill>
 	<skill id="5250" toLevel="1" name="Stun">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1523,14 +1457,12 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>87</magicLvl>
 		<mpConsume>76</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -1541,7 +1473,8 @@
 		</effects>
 	</skill>
 	<skill id="5251" toLevel="12" name="Poison">
-		<!-- CT2.5 retail confirmed -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1566,7 +1499,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>1800</hitTime>
-		<icon>icon.skill4035</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -1599,7 +1531,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>POISON</trait>
 		<targetType>ENEMY</targetType>
@@ -1625,7 +1556,7 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>5252</skillId>
+				<skillId>5252</skillId> <!-- Paralysis -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -1644,7 +1575,8 @@
 		</endEffects>
 	</skill>
 	<skill id="5252" toLevel="12" name="Paralysis">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -1654,7 +1586,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>6000</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -1674,7 +1605,6 @@
 		</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>PARALYZE</trait>
 		<targetType>SELF</targetType>
@@ -1684,7 +1614,8 @@
 		</effects>
 	</skill>
 	<skill id="5253" toLevel="12" name="Bleed">
-		<!-- Confirmed CT2.5 -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1710,7 +1641,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1744,7 +1674,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>BLEED</trait>
 		<targetType>ENEMY</targetType>
@@ -1770,7 +1699,7 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>5252</skillId>
+				<skillId>5252</skillId> <!-- Paralysis -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -1789,7 +1718,8 @@
 		</endEffects>
 	</skill>
 	<skill id="5254" toLevel="12" name="Invasion of Spirit">
-		<!-- CT2.5 retail confirmed -->
+		<!-- MP decreases. Effect $s1 -->
+		<icon>icon.skill1102</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">2</value>
@@ -1813,7 +1743,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1102</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -1846,7 +1775,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1871,7 +1799,7 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>5255</skillId>
+				<skillId>5255</skillId> <!-- Mana Burn -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -1890,7 +1818,6 @@
 		</endEffects>
 	</skill>
 	<skill id="5255" toLevel="12" name="Mana Burn">
-		<!-- CT2.5 retail confirmed -->
 		<effectPoint>-100</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1910,7 +1837,6 @@
 			<value level="12">95</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
@@ -1937,7 +1863,8 @@
 		</effects>
 	</skill>
 	<skill id="5256" toLevel="1" name="Announcement of Death">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Announcement of Death. Dead after 30 sec. -->
+		<icon>icon.skill5239</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DEATH_CLACK</abnormalType>
@@ -1948,17 +1875,15 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill5239</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>95</magicLvl>
 		<mpConsume>85</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>5257</skillId>
+				<skillId>5257</skillId> <!-- Death -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
@@ -1966,13 +1891,11 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5257" toLevel="2" name="Death">
-		<!-- CT2.5 retail confirmed -->
 		<effectPoint>1</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1986,7 +1909,6 @@
 		</effects>
 	</skill>
 	<skill id="5258" toLevel="12" name="Mana Burn">
-		<!-- CT2.5 retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2035,7 +1957,6 @@
 			<value level="12">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -2062,7 +1983,8 @@
 		</effects>
 	</skill>
 	<skill id="5259" toLevel="12" name="Fear">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<icon>icon.skill1092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -2074,7 +1996,6 @@
 		<effectPoint>-1</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1092</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -2122,7 +2043,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY</targetType>
@@ -2133,7 +2053,8 @@
 		</effects>
 	</skill>
 	<skill id="5260" toLevel="12" name="Disarm">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Disarms equipment. -->
+		<icon>icon.skill0485</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
@@ -2144,7 +2065,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0485</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -2176,7 +2096,6 @@
 			<value level="12">85</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>DISARM</trait>
 		<targetType>ENEMY</targetType>
@@ -2186,7 +2105,6 @@
 		</effects>
 	</skill>
 	<skill id="5262" toLevel="12" name="Rising Shot">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
@@ -2224,7 +2142,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>25000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -2249,7 +2166,6 @@
 		</effects>
 	</skill>
 	<skill id="5263" toLevel="12" name="Chain Lightning">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
@@ -2300,7 +2216,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>20000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -2325,7 +2240,7 @@
 		</effects>
 	</skill>
 	<skill id="5264" toLevel="12" name="Death Mark">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Marked with the brand of darkness. Effect $s1 -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DEATH_MARK</abnormalType>
@@ -2383,13 +2298,11 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>9000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5265" toLevel="12" name="Soul Emission">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
@@ -2442,7 +2355,6 @@
 			<value level="12">24</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
@@ -2467,7 +2379,8 @@
 		</effects>
 	</skill>
 	<skill id="5266" toLevel="12" name="Magical Backfire">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Increased MP consumption. Effect $s1 -->
+		<icon>icon.skill1396</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MP_COST_UP</abnormalType>
@@ -2477,7 +2390,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1396</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -2524,7 +2436,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -2587,7 +2498,6 @@
 		</effects>
 	</skill>
 	<skill id="5267" toLevel="21" name="Trap Explosion">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2618,7 +2528,6 @@
 			<value level="21">86</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2652,7 +2561,8 @@
 		</effects>
 	</skill>
 	<skill id="5268" toLevel="17" name="Poison">
-		<!-- Confirmed CT2.5 -->
+		<!-- HP decreases from poison momentarily. -->
+		<icon>icon.skill0515</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -2662,7 +2572,6 @@
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0515</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -2686,7 +2595,6 @@
 			<value level="17">86</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>POISON</trait>
@@ -2719,7 +2627,8 @@
 		</effects>
 	</skill>
 	<skill id="5269" toLevel="17" name="Slow Trap">
-		<!-- Confirmed CT2.5 -->
+		<!-- Decreases Atk. Spd. and Casting Spd. Effect $s1 -->
+		<icon>icon.skill0516</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ALL_SPEED_DOWN</abnormalType>
@@ -2727,7 +2636,6 @@
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0516</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -2751,7 +2659,6 @@
 			<value level="17">86</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2773,7 +2680,8 @@
 		</effects>
 	</skill>
 	<skill id="5270" toLevel="16" name="Flash Trap">
-		<!-- Confirmed CT2.5 -->
+		<!-- Lost the target. Stunned and unable to move momentarily. -->
+		<icon>icon.skill0517</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2782,7 +2690,6 @@
 		<affectRange>200</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0517</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -2805,7 +2712,6 @@
 			<value level="16">86</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>SHOCK</trait>
@@ -2820,7 +2726,8 @@
 		</effects>
 	</skill>
 	<skill id="5271" toLevel="19" name="Hold">
-		<!-- Confirmed CT2.5 -->
+		<!-- Inflicted with Hold and unable to move. -->
+		<icon>icon.skill0518</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -2830,7 +2737,6 @@
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill0518</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -2856,7 +2762,6 @@
 			<value level="19">86</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>
@@ -2890,7 +2795,6 @@
 		</effects>
 	</skill>
 	<skill id="5272" toLevel="17" name="Decoy Provocation">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>200</affectRange>
 		<effectPoint>
 			<value level="1">-4080</value>
@@ -2932,7 +2836,6 @@
 			<value level="17">86</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2945,7 +2848,6 @@
 		</effects>
 	</skill>
 	<skill id="5273" toLevel="9" name="Power Strike">
-		<!-- CT2.5 retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2974,7 +2876,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2995,7 +2896,6 @@
 		</effects>
 	</skill>
 	<skill id="5274" toLevel="9" name="Power Shot">
-		<!-- CT2.5 retail confirmed -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -3023,7 +2923,6 @@
 			<value level="9">173</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3044,7 +2943,6 @@
 		</effects>
 	</skill>
 	<skill id="5275" toLevel="9" name="Spinning Slasher">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3072,7 +2970,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -3094,7 +2991,6 @@
 		</effects>
 	</skill>
 	<skill id="5276" toLevel="9" name="Burst Shot">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
@@ -3124,7 +3020,6 @@
 			<value level="9">259</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -3146,7 +3041,6 @@
 		</effects>
 	</skill>
 	<skill id="5277" toLevel="9" name="Power Strike">
-		<!-- CT2.5 retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3177,7 +3071,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3198,7 +3091,6 @@
 		</effects>
 	</skill>
 	<skill id="5278" toLevel="9" name="Power Shot">
-		<!-- CT2.5 retail confirmed -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -3228,7 +3120,6 @@
 			<value level="9">173</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3249,7 +3140,6 @@
 		</effects>
 	</skill>
 	<skill id="5279" toLevel="9" name="Spinning Slasher">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3279,7 +3169,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -3291,7 +3180,6 @@
 		</effects>
 	</skill>
 	<skill id="5280" toLevel="9" name="Burst Shot">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
@@ -3323,7 +3211,6 @@
 			<value level="9">259</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -3345,7 +3232,6 @@
 		</effects>
 	</skill>
 	<skill id="5281" toLevel="9" name="Power Strike">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
@@ -3377,7 +3263,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3398,7 +3283,6 @@
 		</effects>
 	</skill>
 	<skill id="5282" toLevel="9" name="Power Shot">
-		<!-- CT2.5 retail confirmed -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -3428,7 +3312,6 @@
 			<value level="9">173</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3449,7 +3332,6 @@
 		</effects>
 	</skill>
 	<skill id="5283" toLevel="9" name="Spinning Slasher">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3479,7 +3361,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -3491,7 +3372,6 @@
 		</effects>
 	</skill>
 	<skill id="5284" toLevel="9" name="Burst Shot">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
@@ -3523,7 +3403,6 @@
 			<value level="9">259</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -3545,7 +3424,6 @@
 		</effects>
 	</skill>
 	<skill id="5285" toLevel="9" name="Power Strike">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
@@ -3577,7 +3455,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3598,7 +3475,6 @@
 		</effects>
 	</skill>
 	<skill id="5286" toLevel="9" name="Power Shot">
-		<!-- CT2.5 retail confirmed -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -3628,7 +3504,6 @@
 			<value level="9">173</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3649,7 +3524,6 @@
 		</effects>
 	</skill>
 	<skill id="5287" toLevel="9" name="Spinning Slasher">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3679,7 +3553,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -3691,7 +3564,6 @@
 		</effects>
 	</skill>
 	<skill id="5288" toLevel="9" name="Burst Shot">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
@@ -3723,7 +3595,6 @@
 			<value level="9">259</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -3745,7 +3616,6 @@
 		</effects>
 	</skill>
 	<skill id="5289" toLevel="9" name="Power Strike">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
@@ -3777,7 +3647,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3798,7 +3667,6 @@
 		</effects>
 	</skill>
 	<skill id="5290" toLevel="9" name="Power Shot">
-		<!-- CT2.5 retail confirmed -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -3828,7 +3696,6 @@
 			<value level="9">173</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3849,7 +3716,6 @@
 		</effects>
 	</skill>
 	<skill id="5291" toLevel="9" name="Spinning Slasher">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3879,7 +3745,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -3891,7 +3756,6 @@
 		</effects>
 	</skill>
 	<skill id="5292" toLevel="9" name="Burst Shot">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
@@ -3923,7 +3787,6 @@
 			<value level="9">259</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -3945,7 +3808,6 @@
 		</effects>
 	</skill>
 	<skill id="5293" toLevel="9" name="Power Strike">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
@@ -3977,7 +3839,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3998,7 +3859,6 @@
 		</effects>
 	</skill>
 	<skill id="5294" toLevel="9" name="Power Shot">
-		<!-- CT2.5 retail confirmed -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -4028,7 +3888,6 @@
 			<value level="9">173</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4049,7 +3908,6 @@
 		</effects>
 	</skill>
 	<skill id="5295" toLevel="9" name="Spinning Slasher">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -4079,7 +3937,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -4091,7 +3948,6 @@
 		</effects>
 	</skill>
 	<skill id="5296" toLevel="9" name="Burst Shot">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
@@ -4123,7 +3979,6 @@
 			<value level="9">259</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -4145,7 +4000,6 @@
 		</effects>
 	</skill>
 	<skill id="5297" toLevel="9" name="Power Strike">
-		<!-- CT2.5 retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -4176,7 +4030,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4197,7 +4050,6 @@
 		</effects>
 	</skill>
 	<skill id="5298" toLevel="9" name="Power Shot">
-		<!-- CT2.5 retail confirmed -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -4227,7 +4079,6 @@
 			<value level="9">173</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4248,7 +4099,6 @@
 		</effects>
 	</skill>
 	<skill id="5299" toLevel="9" name="Spinning Slasher">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -4278,7 +4128,6 @@
 			<value level="9">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>

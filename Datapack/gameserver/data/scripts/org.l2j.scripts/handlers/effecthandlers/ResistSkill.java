@@ -16,14 +16,15 @@
  */
 package handlers.effecthandlers;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.SkillHolder;
+import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Resist Skill effect implementaion.
@@ -53,7 +54,7 @@ public final class ResistSkill extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		for (SkillHolder holder : _skills)
 		{

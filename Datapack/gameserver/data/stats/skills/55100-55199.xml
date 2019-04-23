@@ -1,42 +1,152 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="55100" toLevel="1" name="Water Dragon Pendant Basic Effect Lv. 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Atk. +9 when equipped. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp_blue</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<amount>9</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55101" toLevel="10" name="Water Dragon Pendant Enchant Effect Lvl 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Atk. +13 when equipped. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp_blue</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">13</value>
+					<value level="2">20</value>
+					<value level="3">31</value>
+					<value level="4">46</value>
+					<value level="5">64</value>
+					<value level="6">84</value>
+					<value level="7">107</value>
+					<value level="8">149</value>
+					<value level="9">160</value>
+					<value level="10">202</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55102" toLevel="1" name="Water Dragon Pendant Basic Effect Lv. 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Atk. +9, M. Critical Damage +62. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp_blue</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<amount>9</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>62</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55103" toLevel="10" name="Water Dragon Pendant Enchant Effect Lvl 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill55103</icon>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<basicProperty>NONE</basicProperty>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-	</skill>
-	<skill id="55104" toLevel="3" name="Water Dragon Pendant Basic Effect Lv. 3">
-		<icon>icon.skill55104</icon>
-		<abnormalLvl>3</abnormalLvl>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<!-- M. Atk. +13, M. Critical Damage +89. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp_blue</icon>
 		<magicLvl>1</magicLvl>
-		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">13</value>
+					<value level="2">20</value>
+					<value level="3">31</value>
+					<value level="4">46</value>
+					<value level="5">64</value>
+					<value level="6">84</value>
+					<value level="7">107</value>
+					<value level="8">149</value>
+					<value level="9">160</value>
+					<value level="10">202</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">89</value>
+					<value level="2">134</value>
+					<value level="3">210</value>
+					<value level="4">307</value>
+					<value level="5">429</value>
+					<value level="6">565</value>
+					<value level="7">717</value>
+					<value level="8">992</value>
+					<value level="9">1065</value>
+					<value level="10">1344</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="55104" toLevel="1" name="Water Dragon Pendant Basic Effect Lv. 3">
+		<!-- M. Atk. +9, M. Critical Damage +62, M. Critical Rate +1%. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp_blue</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MAtk">
 				<amount>9</amount>
@@ -53,272 +163,1485 @@
 		</effects>
 	</skill>
 	<skill id="55105" toLevel="10" name="Water Dragon Pendant Enchant Effect Lvl 3">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Atk. +13, M. Critical Damage +89, M. Critical Rate +2%. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp_blue</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">13</value>
+					<value level="2">20</value>
+					<value level="3">31</value>
+					<value level="4">46</value>
+					<value level="5">64</value>
+					<value level="6">84</value>
+					<value level="7">107</value>
+					<value level="8">149</value>
+					<value level="9">160</value>
+					<value level="10">202</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">89</value>
+					<value level="2">134</value>
+					<value level="3">210</value>
+					<value level="4">307</value>
+					<value level="5">429</value>
+					<value level="6">565</value>
+					<value level="7">717</value>
+					<value level="8">992</value>
+					<value level="9">1065</value>
+					<value level="10">1344</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+					<value level="6">7</value>
+					<value level="7">8</value>
+					<value level="8">9</value>
+					<value level="9">10</value>
+					<value level="10">12</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55106" toLevel="1" name="Water Dragon Pendant Basic Effect Lv. 4">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Atk. +9, M. Critical Damage +62, M. Critical Rate +1%, M. Atk. +1%. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp_blue</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<amount>9</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>62</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55107" toLevel="10" name="Water Dragon Pendant Enchant Effect Lvl 4">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Atk. +13, M. Critical Damage +89, M. Critical Rate +2%, M. Atk. +1.5%. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp_blue</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">13</value>
+					<value level="2">20</value>
+					<value level="3">31</value>
+					<value level="4">46</value>
+					<value level="5">64</value>
+					<value level="6">84</value>
+					<value level="7">107</value>
+					<value level="8">149</value>
+					<value level="9">160</value>
+					<value level="10">202</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">89</value>
+					<value level="2">134</value>
+					<value level="3">210</value>
+					<value level="4">307</value>
+					<value level="5">429</value>
+					<value level="6">565</value>
+					<value level="7">717</value>
+					<value level="8">992</value>
+					<value level="9">1065</value>
+					<value level="10">1344</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+					<value level="6">7</value>
+					<value level="7">8</value>
+					<value level="8">9</value>
+					<value level="9">10</value>
+					<value level="10">12</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">1.5</value>
+					<value level="2">2</value>
+					<value level="3">2.5</value>
+					<value level="4">3</value>
+					<value level="5">3.5</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">8</value>
+					<value level="10">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55108" toLevel="1" name="Water Dragon Pendant Basic Effect Lv. 5">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Atk. +9, M. Critical Damage +62, M. Critical Rate +1%, M. Atk. +1%, M. Critical Damage +1%. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp_blue</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<amount>9</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>62</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55109" toLevel="10" name="Water Dragon Pendant Enchant Effect Lvl 5">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Atk. +13, M. Critical Damage +89, M. Critical Rate +2%, M. Atk. +1.5%, M. Critical Damage +2%. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp_blue</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">13</value>
+					<value level="2">20</value>
+					<value level="3">31</value>
+					<value level="4">46</value>
+					<value level="5">64</value>
+					<value level="6">84</value>
+					<value level="7">107</value>
+					<value level="8">149</value>
+					<value level="9">160</value>
+					<value level="10">202</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">89</value>
+					<value level="2">134</value>
+					<value level="3">210</value>
+					<value level="4">307</value>
+					<value level="5">429</value>
+					<value level="6">565</value>
+					<value level="7">717</value>
+					<value level="8">992</value>
+					<value level="9">1065</value>
+					<value level="10">1344</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+					<value level="6">7</value>
+					<value level="7">8</value>
+					<value level="8">9</value>
+					<value level="9">10</value>
+					<value level="10">12</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">1.5</value>
+					<value level="2">2</value>
+					<value level="3">2.5</value>
+					<value level="4">3</value>
+					<value level="5">3.5</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">8</value>
+					<value level="10">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+					<value level="6">7</value>
+					<value level="7">9</value>
+					<value level="8">11</value>
+					<value level="9">13</value>
+					<value level="10">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55110" toLevel="1" name="Wind Dragon Pendant Basic Effect Lv. 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- MP 21. -->
+		<icon>BranchIcon.Icon.bm_pendant_pve_white</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>21</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55111" toLevel="10" name="Wind Dragon Pendant Enchant Effect Lvl 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- MP 33. -->
+		<icon>BranchIcon.Icon.bm_pendant_pve_white</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">33</value>
+					<value level="2">42</value>
+					<value level="3">52</value>
+					<value level="4">63</value>
+					<value level="5">75</value>
+					<value level="6">96</value>
+					<value level="7">113</value>
+					<value level="8">127</value>
+					<value level="9">139</value>
+					<value level="10">156</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55112" toLevel="1" name="Wind Dragon Pendant Basic Effect Lv. 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- MP 21, HP 31. -->
+		<icon>BranchIcon.Icon.bm_pendant_pve_white</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>21</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>31</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55113" toLevel="10" name="Wind Dragon Pendant Enchant Effect Lvl 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- MP 33, HP 50. -->
+		<icon>BranchIcon.Icon.bm_pendant_pve_white</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">33</value>
+					<value level="2">42</value>
+					<value level="3">52</value>
+					<value level="4">63</value>
+					<value level="5">75</value>
+					<value level="6">96</value>
+					<value level="7">113</value>
+					<value level="8">127</value>
+					<value level="9">139</value>
+					<value level="10">156</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">78</value>
+					<value level="3">121</value>
+					<value level="4">153</value>
+					<value level="5">186</value>
+					<value level="6">215</value>
+					<value level="7">243</value>
+					<value level="8">267</value>
+					<value level="9">293</value>
+					<value level="10">316</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55114" toLevel="1" name="Wind Dragon Pendant Basic Effect Lv. 3">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- MP 21, HP 31, HP Recovery Bonus +1.8, MP Recovery Bonus +0.5. -->
+		<icon>BranchIcon.Icon.bm_pendant_pve_white</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>21</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>31</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>1.8</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55115" toLevel="10" name="Wind Dragon Pendant Enchant Effect Lvl 3">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- MP 33, HP 50, HP Recovery Bonus +1.9, MP Recovery Bonus +0.7. -->
+		<icon>BranchIcon.Icon.bm_pendant_pve_white</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">33</value>
+					<value level="2">42</value>
+					<value level="3">52</value>
+					<value level="4">63</value>
+					<value level="5">75</value>
+					<value level="6">96</value>
+					<value level="7">113</value>
+					<value level="8">127</value>
+					<value level="9">139</value>
+					<value level="10">156</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">78</value>
+					<value level="3">121</value>
+					<value level="4">153</value>
+					<value level="5">186</value>
+					<value level="6">215</value>
+					<value level="7">243</value>
+					<value level="8">267</value>
+					<value level="9">293</value>
+					<value level="10">316</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">1.9</value>
+					<value level="2">2.1</value>
+					<value level="3">2.3</value>
+					<value level="4">3.1</value>
+					<value level="5">4.2</value>
+					<value level="6">4.7</value>
+					<value level="7">4.9</value>
+					<value level="8">6.2</value>
+					<value level="9">6.8</value>
+					<value level="10">7.4</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">0.7</value>
+					<value level="2">1</value>
+					<value level="3">1.1</value>
+					<value level="4">1.3</value>
+					<value level="5">1.5</value>
+					<value level="6">1.8</value>
+					<value level="7">1.9</value>
+					<value level="8">2.2</value>
+					<value level="9">2.4</value>
+					<value level="10">2.8</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55116" toLevel="1" name="Wind Dragon Pendant Basic Effect Lv. 4">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- MP 21, HP 31, HP Recovery Bonus +1.8, MP Recovery Bonus +0.5, 1% chance to restore 12 MP when using skills. -->
+		<icon>BranchIcon.Icon.bm_pendant_pve_white</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>21</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>31</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>1.8</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55117" toLevel="10" name="Wind Dragon Pendant Enchant Effect Lvl 4">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- MP 33, HP 50, HP Recovery Bonus +1.9, MP Recovery Bonus +0.7, 2% chance to restore 12 MP when using skills. -->
+		<icon>BranchIcon.Icon.bm_pendant_pve_white</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">33</value>
+					<value level="2">42</value>
+					<value level="3">52</value>
+					<value level="4">63</value>
+					<value level="5">75</value>
+					<value level="6">96</value>
+					<value level="7">113</value>
+					<value level="8">127</value>
+					<value level="9">139</value>
+					<value level="10">156</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">78</value>
+					<value level="3">121</value>
+					<value level="4">153</value>
+					<value level="5">186</value>
+					<value level="6">215</value>
+					<value level="7">243</value>
+					<value level="8">267</value>
+					<value level="9">293</value>
+					<value level="10">316</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">1.9</value>
+					<value level="2">2.1</value>
+					<value level="3">2.3</value>
+					<value level="4">3.1</value>
+					<value level="5">4.2</value>
+					<value level="6">4.7</value>
+					<value level="7">4.9</value>
+					<value level="8">6.2</value>
+					<value level="9">6.8</value>
+					<value level="10">7.4</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">0.7</value>
+					<value level="2">1</value>
+					<value level="3">1.1</value>
+					<value level="4">1.3</value>
+					<value level="5">1.5</value>
+					<value level="6">1.8</value>
+					<value level="7">1.9</value>
+					<value level="8">2.2</value>
+					<value level="9">2.4</value>
+					<value level="10">2.8</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55118" toLevel="1" name="Wind Dragon Pendant Basic Effect Lv. 5">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- MP 21, HP 31, HP Recovery Bonus +1.8, MP Recovery Bonus +0.5, 1% chance to restore 12 MP when using skills, MP Skill consumption -3%. -->
+		<icon>BranchIcon.Icon.bm_pendant_pve_white</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>21</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>31</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>1.8</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55119" toLevel="10" name="Wind Dragon Pendant Enchant Effect Lvl 5">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- MP 33, HP 50, HP Recovery Bonus +1.9, MP Recovery Bonus +0.7, 2% chance to restore 12 MP when using skills, MP Skill consumption -5%. -->
+		<icon>BranchIcon.Icon.bm_pendant_pve_white</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">33</value>
+					<value level="2">42</value>
+					<value level="3">52</value>
+					<value level="4">63</value>
+					<value level="5">75</value>
+					<value level="6">96</value>
+					<value level="7">113</value>
+					<value level="8">127</value>
+					<value level="9">139</value>
+					<value level="10">156</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">78</value>
+					<value level="3">121</value>
+					<value level="4">153</value>
+					<value level="5">186</value>
+					<value level="6">215</value>
+					<value level="7">243</value>
+					<value level="8">267</value>
+					<value level="9">293</value>
+					<value level="10">316</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">1.9</value>
+					<value level="2">2.1</value>
+					<value level="3">2.3</value>
+					<value level="4">3.1</value>
+					<value level="5">4.2</value>
+					<value level="6">4.7</value>
+					<value level="7">4.9</value>
+					<value level="8">6.2</value>
+					<value level="9">6.8</value>
+					<value level="10">7.4</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">0.7</value>
+					<value level="2">1</value>
+					<value level="3">1.1</value>
+					<value level="4">1.3</value>
+					<value level="5">1.5</value>
+					<value level="6">1.8</value>
+					<value level="7">1.9</value>
+					<value level="8">2.2</value>
+					<value level="9">2.4</value>
+					<value level="10">2.8</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">9</value>
+					<value level="4">11</value>
+					<value level="5">13</value>
+					<value level="6">15</value>
+					<value level="7">17</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55120" toLevel="1" name="none">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.Icon.bm_pendant_pve_white</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55121" toLevel="1" name="Earth Dragon Pendant Basic Effect Lv. 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Def. +6. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>6</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55122" toLevel="10" name="Land Dragon Pendant Enchant Effect Lvl 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Def. +8. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">10</value>
+					<value level="3">12</value>
+					<value level="4">14</value>
+					<value level="5">16</value>
+					<value level="6">18</value>
+					<value level="7">20</value>
+					<value level="8">22</value>
+					<value level="9">25</value>
+					<value level="10">28</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55123" toLevel="1" name="Earth Dragon Pendant Basic Effect Lv. 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Def. +6, P. Def. +11. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>6</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>11</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55124" toLevel="10" name="Land Dragon Pendant Enchant Effect Lvl 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Def. +8, P. Def. +14. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">10</value>
+					<value level="3">12</value>
+					<value level="4">14</value>
+					<value level="5">16</value>
+					<value level="6">18</value>
+					<value level="7">20</value>
+					<value level="8">22</value>
+					<value level="9">25</value>
+					<value level="10">28</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">14</value>
+					<value level="2">18</value>
+					<value level="3">24</value>
+					<value level="4">29</value>
+					<value level="5">35</value>
+					<value level="6">43</value>
+					<value level="7">54</value>
+					<value level="8">61</value>
+					<value level="9">66</value>
+					<value level="10">71</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55125" toLevel="1" name="Earth Dragon Pendant Basic Effect Lv. 3">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Def. +6, P. Def. +11, Shield Defense Rate +10%. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>6</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>11</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ShieldDefenceRate">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55126" toLevel="10" name="Land Dragon Pendant Enchant Effect Lvl 3">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Def. +8, P. Def. +14, Shield Defense Rate +15%. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">10</value>
+					<value level="3">12</value>
+					<value level="4">14</value>
+					<value level="5">16</value>
+					<value level="6">18</value>
+					<value level="7">20</value>
+					<value level="8">22</value>
+					<value level="9">25</value>
+					<value level="10">28</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">14</value>
+					<value level="2">18</value>
+					<value level="3">24</value>
+					<value level="4">29</value>
+					<value level="5">35</value>
+					<value level="6">43</value>
+					<value level="7">54</value>
+					<value level="8">61</value>
+					<value level="9">66</value>
+					<value level="10">71</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ShieldDefenceRate">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">70</value>
+					<value level="8">80</value>
+					<value level="9">90</value>
+					<value level="10">100</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55127" toLevel="1" name="Earth Dragon Pendant Basic Effect Lv. 4">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Def. +6, P. Def. +11, Shield Defense Rate +10%, Shield Defense +3%. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>6</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>11</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ShieldDefenceRate">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55128" toLevel="10" name="Land Dragon Pendant Enchant Effect Lvl 4">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Def. +8, P. Def. +14, Shield Defense Rate +15%, Shield Defense +6%. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">10</value>
+					<value level="3">12</value>
+					<value level="4">14</value>
+					<value level="5">16</value>
+					<value level="6">18</value>
+					<value level="7">20</value>
+					<value level="8">22</value>
+					<value level="9">25</value>
+					<value level="10">28</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">14</value>
+					<value level="2">18</value>
+					<value level="3">24</value>
+					<value level="4">29</value>
+					<value level="5">35</value>
+					<value level="6">43</value>
+					<value level="7">54</value>
+					<value level="8">61</value>
+					<value level="9">66</value>
+					<value level="10">71</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ShieldDefenceRate">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">70</value>
+					<value level="8">80</value>
+					<value level="9">90</value>
+					<value level="10">100</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefence">
+				<amount>
+					<value level="1">6</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+					<value level="7">35</value>
+					<value level="8">40</value>
+					<value level="9">45</value>
+					<value level="10">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55129" toLevel="1" name="Earth Dragon Pendant Basic Effect Lv. 5">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Def. +6, P. Def. +11, Shield Defense Rate +10%, Shield Defense +3%. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>6</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>11</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ShieldDefenceRate">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55130" toLevel="10" name="Land Dragon Pendant Enchant Effect Lvl 5">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- M. Def. +8, P. Def. +14, Shield Defense Rate +15%, Shield Defense +6%. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">10</value>
+					<value level="3">12</value>
+					<value level="4">14</value>
+					<value level="5">16</value>
+					<value level="6">18</value>
+					<value level="7">20</value>
+					<value level="8">22</value>
+					<value level="9">25</value>
+					<value level="10">28</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">14</value>
+					<value level="2">18</value>
+					<value level="3">24</value>
+					<value level="4">29</value>
+					<value level="5">35</value>
+					<value level="6">43</value>
+					<value level="7">54</value>
+					<value level="8">61</value>
+					<value level="9">66</value>
+					<value level="10">71</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ShieldDefenceRate">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">70</value>
+					<value level="8">80</value>
+					<value level="9">90</value>
+					<value level="10">100</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefence">
+				<amount>
+					<value level="1">6</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+					<value level="7">35</value>
+					<value level="8">40</value>
+					<value level="9">45</value>
+					<value level="10">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55131" toLevel="1" name="Earth Dragon Pendant Defensive Effect Lv. 5">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Creates a barrier that absorbs up to 202 damage within 5 sec. Cooldown is 90 sec. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55132" toLevel="10" name="Earth Dragon Pendant Defensive Effect Lv. 5">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Creates a barrier that absorbs up to 302 damage within 6 sec. Cooldown is 90 sec. -->
+		<icon>BranchIcon.Icon.bm_pendant_pvp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55133" toLevel="6" name="Pendant Enchant Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- Acquired XP/ SP +5%. -->
+		<icon>BranchIcon.Icon.bm_blessing_dragon</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">30</value>
+					<value level="6">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">30</value>
+					<value level="6">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55134" toLevel="1" name="Scroll: Enchant Weapon (B-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55135" toLevel="1" name="Scroll: Enchant Armor (B-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55136" toLevel="1" name="Blessed Scroll: Enchant Weapon (B-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55137" toLevel="1" name="Blessed Scroll: Enchant Armor (B-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55138" toLevel="1" name="Shaft with Antharas treasures">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.Icon.g_bm_antaras_pocket_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55141" toLevel="1" name="Report Status">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
+		<icon>icon.skill6038</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55142" toLevel="1" name="MP Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55143" toLevel="1" name="Elite Fishing Rod of Golden Mermaid">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Acquired XP/ SP through fishing +50%. -->
+		<icon>icon.bm_gold_fishing_pole</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55144" toLevel="20" name="P. Atk.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- P. Atk. +$s1 -->
+		<icon>icon.ensoul_big_p</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55145" toLevel="20" name="M. Atk.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. +$s1. -->
+		<icon>icon.ensoul_big_m</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55146" toLevel="20" name="P. Def.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. +$s1. -->
+		<icon>icon.ensoul_big_m</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55147" toLevel="20" name="M. Def.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. +$s1. -->
+		<icon>icon.ensoul_big_m</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55148" toLevel="20" name="Accuracy">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. +$s1. -->
+		<icon>icon.ensoul_big_m</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55149" toLevel="20" name="Evasion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. +$s1. -->
+		<icon>icon.ensoul_big_m</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55150" toLevel="20" name="HP">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. +$s1. -->
+		<icon>icon.ensoul_big_m</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55151" toLevel="20" name="MP">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. +$s1. -->
+		<icon>icon.ensoul_big_m</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55152" toLevel="20" name="Recover HP">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. +$s1. -->
+		<icon>icon.ensoul_big_m</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55153" toLevel="20" name="Recover MP">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. +$s1. -->
+		<icon>icon.ensoul_big_m</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55154" toLevel="20" name="Atk. Spd.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. +$s1. -->
+		<icon>icon.ensoul_big_m</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55155" toLevel="20" name="Casting Spd.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. +$s1. -->
+		<icon>icon.ensoul_big_m</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55156" toLevel="20" name="P. Critical Rate">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. +$s1. -->
+		<icon>icon.ensoul_big_m</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55157" toLevel="20" name="P. Critical Damage">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. +$s1. -->
+		<icon>icon.ensoul_big_m</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55158" toLevel="20" name="M. Critical Rate">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. +$s1. -->
+		<icon>icon.ensoul_big_m</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55159" toLevel="20" name="M. Critical Damage">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. +$s1. -->
+		<icon>icon.ensoul_big_m</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55160" toLevel="1" name="Special Pirate Fruit">
-		<icon>icon.skill55160</icon>
+		<!-- For 20 min., P./ M. Atk. +7%, P./ M. Def. +10%, Max. HP/ CP/ MP +15%, HP/ MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Acquired XP/ SP +5%. Cooldown is 1 min. Buff remains after death. -->
+		<icon>icon.etc_codran_i09</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
@@ -327,7 +1650,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -389,42 +1711,43 @@
 		</effects>
 	</skill>
 	<skill id="55161" toLevel="1" name="VIP Level 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- The right to VIP 1st level chest. Acquired XP/ SP +3%, item drop rate +50%. -->
+		<icon>BranchIcon.Icon.g_skill_vip1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55162" toLevel="1" name="VIP Level 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- The right to VIP 2nd level chest. Acquired XP/ SP +7%, item drop rate +150%. World chat on any level, number of usage attempts +10. -->
+		<icon>BranchIcon.Icon.g_skill_vip2</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55163" toLevel="1" name="VIP Level 3">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- The right to VIP 3rd level chest. Acquired XP/ SP +15%, item drop rate +200%. Experience loss and chance to lose items upon death is -10%. World chat on any level, number of usage attempts +10. -->
+		<icon>BranchIcon.Icon.g_skill_vip3</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55164" toLevel="1" name="VIP Level 4">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- The right to VIP 4th level chest. Acquired XP/ SP +25%, item drop rate +250%. Experience loss and chance to lose items upon death is -15%. World chat on any level, number of usage attempts +10. XP/ SP gain +20% during fishing. -->
+		<icon>BranchIcon.Icon.g_skill_vip4</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55165" toLevel="1" name="VIP Level 5">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- The right to VIP 5th level chest. Acquired XP/ SP +30%, item drop rate +250%. Experience loss and chance to lose items upon death -20%. PvE damage is increased. World chat on any level, number of usage attempts +10. XP/ SP gain +20% during fishing. -->
+		<icon>BranchIcon.Icon.g_skill_vip5</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55166" toLevel="1" name="VIP Level 6">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- The right to VIP 6th level chest. Acquired XP/ SP +30%, item drop rate +250%. Experience loss and chance to lose items upon death -20%. PvE damage is increased, STR/ DEX/ INT/ WIT/ MEN +2. World chat on any level, number of usage attempts +10. XP/ SP gain +20% during fishing. -->
+		<icon>BranchIcon.Icon.g_skill_vip6</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55167" toLevel="1" name="VIP Level 7">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- The right to VIP 7th level chest. Acquired XP/ SP +30%, item drop rate +250%. Experience loss and chance to lose items upon death -20%. PvE/ PvP damage is increased, STR/ DEX/ INT/ WIT/ MEN +2. World chat on any level, number of usage attempts +20. XP/ SP gain +20% during fishing. -->
+		<icon>BranchIcon.Icon.g_skill_vip7</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55168" toLevel="1" name="Clan Unity - Lv. 1">
-		<icon>icon.skill155168</icon>
+		<!-- Clan Alliance Buff. For 3 hr., acquired XP/ SP +3%. -->
+		<icon>icon.skill19011</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10800</abnormalTime>
@@ -442,7 +1765,8 @@
 		</effects>
 	</skill>
 	<skill id="55169" toLevel="1" name="Clan Unity - Lv. 2">
-		<icon>icon.skill55169</icon>
+		<!-- Clan Alliance Buff. For 3 hr., acquired XP/ SP +5%, damage received in PvE -2%. -->
+		<icon>icon.skill19011</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>10800</abnormalTime>
@@ -472,7 +1796,8 @@
 		</effects>
 	</skill>
 	<skill id="55170" toLevel="1" name="Clan Unity - Lv. 3">
-		<icon>icon.skill55170</icon>
+		<!-- Clan Alliance Buff. For 3 hr., acquired XP/ SP +7%, damage received in PvE -5%. -->
+		<icon>icon.skill19011</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>10800</abnormalTime>
@@ -502,7 +1827,8 @@
 		</effects>
 	</skill>
 	<skill id="55171" toLevel="1" name="Clan Unity - Lv. 4">
-		<icon>icon.skill55171</icon>
+		<!-- Clan Alliance Buff. For 3 hr., Acquired XP/ SP +10%, PvE damage +7%, damage received in PvE -8%. -->
+		<icon>icon.skill19011</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>10800</abnormalTime>
@@ -544,13 +1870,11 @@
 		</effects>
 	</skill>
 	<skill id="55172" toLevel="1" name="Clan's Special Supplies">
-		<icon>icon.skill55172</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70025</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -565,56 +1889,54 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="2.1">
-						<item id="1877" count="1" />
+						<item id="1877" count="1" /> <!-- Adamantite Nugget -->
 					</item>
 					<item chance="26.4">
-						<item id="1884" count="1" />
+						<item id="1884" count="1" /> <!-- Cord -->
 					</item>
 					<item chance="5.4">
-						<item id="1881" count="1" />
+						<item id="1881" count="1" /> <!-- Coarse Bone Powder -->
 					</item>
 					<item chance="2.4">
-						<item id="1875" count="1" />
+						<item id="1875" count="1" /> <!-- Stone of Purity -->
 					</item>
 					<item chance="3.3">
-						<item id="1885" count="1" />
+						<item id="1885" count="1" /> <!-- High-grade Suede -->
 					</item>
 					<item chance="9.6">
-						<item id="1882" count="1" />
+						<item id="1882" count="1" /> <!-- Leather -->
 					</item>
 					<item chance="6.9">
-						<item id="1879" count="1" />
+						<item id="1879" count="1" /> <!-- Cokes -->
 					</item>
 					<item chance="10.6">
-						<item id="1895" count="1" />
+						<item id="1895" count="1" /> <!-- Metallic Fiber -->
 					</item>
 					<item chance="7.7">
-						<item id="1876" count="1" />
+						<item id="1876" count="1" /> <!-- Mithril Ore -->
 					</item>
 					<item chance="2.6">
-						<item id="1874" count="1" />
+						<item id="1874" count="1" /> <!-- Oriharukon Ore -->
 					</item>
 					<item chance="19.0">
-						<item id="1878" count="1" />
+						<item id="1878" count="1" /> <!-- Durable Braid -->
 					</item>
 					<item chance="2.7">
-						<item id="1880" count="1" />
+						<item id="1880" count="1" /> <!-- Steel -->
 					</item>
 					<item chance="1.3">
-						<item id="1883" count="1" />
+						<item id="1883" count="1" /> <!-- Steel Mold -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55173" toLevel="1" name="Clan's Special Supplies">
-		<icon>icon.skill55173</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70026</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -629,95 +1951,93 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="2.1">
-						<item id="1877" count="1" />
+						<item id="1877" count="1" /> <!-- Adamantite Nugget -->
 					</item>
 					<item chance="14.8">
-						<item id="1884" count="1" />
+						<item id="1884" count="1" /> <!-- Cord -->
 					</item>
 					<item chance="0.7">
-						<item id="1894" count="1" />
+						<item id="1894" count="1" /> <!-- Crafted Leather -->
 					</item>
 					<item chance="6.2">
-						<item id="1881" count="1" />
+						<item id="1881" count="1" /> <!-- Coarse Bone Powder -->
 					</item>
 					<item chance="0.57">
-						<item id="70035" count="1" />
+						<item id="70035" count="1" /> <!-- Yellow Talisman - P. Def. -->
 					</item>
 					<item chance="0.57">
-						<item id="70038" count="1" />
+						<item id="70038" count="1" /> <!-- Yellow Talisman - Healing Power -->
 					</item>
 					<item chance="0.57">
-						<item id="70031" count="1" />
+						<item id="70031" count="1" /> <!-- Yellow Talisman - M. Def. -->
 					</item>
 					<item chance="0.57">
-						<item id="70032" count="1" />
+						<item id="70032" count="1" /> <!-- Yellow Talisman - M. Atk. -->
 					</item>
 					<item chance="0.57">
-						<item id="70033" count="1" />
+						<item id="70033" count="1" /> <!-- Yellow Talisman - Casting Spd. -->
 					</item>
 					<item chance="0.57">
-						<item id="70030" count="1" />
+						<item id="70030" count="1" /> <!-- Yellow Talisman - Atk. Spd. -->
 					</item>
 					<item chance="0.57">
-						<item id="70029" count="1" />
+						<item id="70029" count="1" /> <!-- Yellow Talisman - P. Atk. -->
 					</item>
 					<item chance="0.57">
-						<item id="70036" count="1" />
+						<item id="70036" count="1" /> <!-- Yellow Talisman - Speed -->
 					</item>
 					<item chance="0.57">
-						<item id="70034" count="1" />
+						<item id="70034" count="1" /> <!-- Yellow Talisman - Accuracy -->
 					</item>
 					<item chance="0.57">
-						<item id="70037" count="1" />
+						<item id="70037" count="1" /> <!-- Yellow Talisman - Evasion -->
 					</item>
 					<item chance="3.3">
-						<item id="1875" count="1" />
+						<item id="1875" count="1" /> <!-- Stone of Purity -->
 					</item>
 					<item chance="5.0">
-						<item id="1885" count="1" />
+						<item id="1885" count="1" /> <!-- High-grade Suede -->
 					</item>
 					<item chance="11.5">
-						<item id="1882" count="1" />
+						<item id="1882" count="1" /> <!-- Leather -->
 					</item>
 					<item chance="8.9">
-						<item id="1879" count="1" />
+						<item id="1879" count="1" /> <!-- Cokes -->
 					</item>
 					<item chance="7.6">
-						<item id="1895" count="1" />
+						<item id="1895" count="1" /> <!-- Metallic Fiber -->
 					</item>
 					<item chance="9.8">
-						<item id="1876" count="1" />
+						<item id="1876" count="1" /> <!-- Mithril Ore -->
 					</item>
 					<item chance="4.6">
-						<item id="1874" count="1" />
+						<item id="1874" count="1" /> <!-- Oriharukon Ore -->
 					</item>
 					<item chance="9.0">
-						<item id="1878" count="1" />
+						<item id="1878" count="1" /> <!-- Durable Braid -->
 					</item>
 					<item chance="2.9">
-						<item id="1889" count="1" />
+						<item id="1889" count="1" /> <!-- Synthetic Braid -->
 					</item>
 					<item chance="0.4">
-						<item id="70039" count="1" />
+						<item id="70039" count="1" /> <!-- Blue Talisman - Invisibility -->
 					</item>
 					<item chance="5.9">
-						<item id="1880" count="1" />
+						<item id="1880" count="1" /> <!-- Steel -->
 					</item>
 					<item chance="1.6">
-						<item id="1883" count="1" />
+						<item id="1883" count="1" /> <!-- Steel Mold -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55174" toLevel="1" name="Clan's Special Supplies">
-		<icon>icon.skill0000</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70027</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -732,134 +2052,132 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="2.3">
-						<item id="1877" count="1" />
+						<item id="1877" count="1" /> <!-- Adamantite Nugget -->
 					</item>
 					<item chance="1.4">
-						<item id="4043" count="1" />
+						<item id="4043" count="1" /> <!-- Asofe -->
 					</item>
 					<item chance="14.25">
-						<item id="1884" count="1" />
+						<item id="1884" count="1" /> <!-- Cord -->
 					</item>
 					<item chance="1.5">
-						<item id="1894" count="1" />
+						<item id="1894" count="1" /> <!-- Crafted Leather -->
 					</item>
 					<item chance="6.2">
-						<item id="1881" count="1" />
+						<item id="1881" count="1" /> <!-- Coarse Bone Powder -->
 					</item>
 					<item chance="0.51">
-						<item id="70035" count="1" />
+						<item id="70035" count="1" /> <!-- Yellow Talisman - P. Def. -->
 					</item>
 					<item chance="0.51">
-						<item id="70038" count="1" />
+						<item id="70038" count="1" /> <!-- Yellow Talisman - Healing Power -->
 					</item>
 					<item chance="0.51">
-						<item id="70031" count="1" />
+						<item id="70031" count="1" /> <!-- Yellow Talisman - M. Def. -->
 					</item>
 					<item chance="0.51">
-						<item id="70032" count="1" />
+						<item id="70032" count="1" /> <!-- Yellow Talisman - M. Atk. -->
 					</item>
 					<item chance="0.51">
-						<item id="70033" count="1" />
+						<item id="70033" count="1" /> <!-- Yellow Talisman - Casting Spd. -->
 					</item>
 					<item chance="0.51">
-						<item id="70030" count="1" />
+						<item id="70030" count="1" /> <!-- Yellow Talisman - Atk. Spd. -->
 					</item>
 					<item chance="0.51">
-						<item id="70029" count="1" />
+						<item id="70029" count="1" /> <!-- Yellow Talisman - P. Atk. -->
 					</item>
 					<item chance="0.51">
-						<item id="70036" count="1" />
+						<item id="70036" count="1" /> <!-- Yellow Talisman - Speed -->
 					</item>
 					<item chance="0.51">
-						<item id="70034" count="1" />
+						<item id="70034" count="1" /> <!-- Yellow Talisman - Accuracy -->
 					</item>
 					<item chance="0.51">
-						<item id="70037" count="1" />
+						<item id="70037" count="1" /> <!-- Yellow Talisman - Evasion -->
 					</item>
 					<item chance="3.5">
-						<item id="1875" count="1" />
+						<item id="1875" count="1" /> <!-- Stone of Purity -->
 					</item>
 					<item chance="3.4">
-						<item id="1885" count="1" />
+						<item id="1885" count="1" /> <!-- High-grade Suede -->
 					</item>
 					<item chance="1.3">
-						<item id="4039" count="1" />
+						<item id="4039" count="1" /> <!-- Mold Glue -->
 					</item>
 					<item chance="9.9">
-						<item id="1882" count="1" />
+						<item id="1882" count="1" /> <!-- Leather -->
 					</item>
 					<item chance="7.3">
-						<item id="1879" count="1" />
+						<item id="1879" count="1" /> <!-- Cokes -->
 					</item>
 					<item chance="7.3">
-						<item id="1895" count="1" />
+						<item id="1895" count="1" /> <!-- Metallic Fiber -->
 					</item>
 					<item chance="8.6">
-						<item id="1876" count="1" />
+						<item id="1876" count="1" /> <!-- Mithril Ore -->
 					</item>
 					<item chance="0.8">
-						<item id="1890" count="1" />
+						<item id="1890" count="1" /> <!-- Mithril Alloy -->
 					</item>
 					<item chance="0.3">
-						<item id="1893" count="1" />
+						<item id="1893" count="1" /> <!-- Oriharukon -->
 					</item>
 					<item chance="3.2">
-						<item id="1874" count="1" />
+						<item id="1874" count="1" /> <!-- Oriharukon Ore -->
 					</item>
 					<item chance="0.6">
-						<item id="4041" count="1" />
+						<item id="4041" count="1" /> <!-- Mold Hardener -->
 					</item>
 					<item chance="0.8">
-						<item id="1887" count="1" />
+						<item id="1887" count="1" /> <!-- Varnish of Purity -->
 					</item>
 					<item chance="9.2">
-						<item id="1878" count="1" />
+						<item id="1878" count="1" /> <!-- Durable Braid -->
 					</item>
 					<item chance="2.6">
-						<item id="1889" count="1" />
+						<item id="1889" count="1" /> <!-- Synthetic Braid -->
 					</item>
 					<item chance="0.1">
-						<item id="956" count="1" />
+						<item id="956" count="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
 					</item>
 					<item chance="0.05">
-						<item id="952" count="1" />
+						<item id="952" count="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
 					</item>
 					<item chance="0.4">
-						<item id="1886" count="1" />
+						<item id="1886" count="1" /> <!-- Silver Mold -->
 					</item>
 					<item chance="0.5">
-						<item id="70039" count="1" />
+						<item id="70039" count="1" /> <!-- Blue Talisman - Invisibility -->
 					</item>
 					<item chance="1.1">
-						<item id="1888" count="1" />
+						<item id="1888" count="1" /> <!-- Synthetic Cokes -->
 					</item>
 					<item chance="0.5">
-						<item id="4040" count="1" />
+						<item id="4040" count="1" /> <!-- Mold Lubricant -->
 					</item>
 					<item chance="3.8">
-						<item id="1880" count="1" />
+						<item id="1880" count="1" /> <!-- Steel -->
 					</item>
 					<item chance="2.0">
-						<item id="1883" count="1" />
+						<item id="1883" count="1" /> <!-- Steel Mold -->
 					</item>
 					<item chance="1.5">
-						<item id="4044" count="1" />
+						<item id="4044" count="1" /> <!-- Thons -->
 					</item>
 					<item chance="0.5">
-						<item id="4042" count="1" />
+						<item id="4042" count="1" /> <!-- Enria -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55175" toLevel="1" name="Clan's Special Supplies">
-		<icon>icon.skill0000</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70028</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -874,152 +2192,153 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="2.2">
-						<item id="1877" count="1" />
+						<item id="1877" count="1" /> <!-- Adamantite Nugget -->
 					</item>
 					<item chance="1.8">
-						<item id="4043" count="1" />
+						<item id="4043" count="1" /> <!-- Asofe -->
 					</item>
 					<item chance="5.7">
-						<item id="1884" count="1" />
+						<item id="1884" count="1" /> <!-- Cord -->
 					</item>
 					<item chance="1.6">
-						<item id="1894" count="1" />
+						<item id="1894" count="1" /> <!-- Crafted Leather -->
 					</item>
 					<item chance="6.9">
-						<item id="1881" count="1" />
+						<item id="1881" count="1" /> <!-- Coarse Bone Powder -->
 					</item>
 					<item chance="0.72">
-						<item id="70035" count="1" />
+						<item id="70035" count="1" /> <!-- Yellow Talisman - P. Def. -->
 					</item>
 					<item chance="0.72">
-						<item id="70038" count="1" />
+						<item id="70038" count="1" /> <!-- Yellow Talisman - Healing Power -->
 					</item>
 					<item chance="0.72">
-						<item id="70031" count="1" />
+						<item id="70031" count="1" /> <!-- Yellow Talisman - M. Def. -->
 					</item>
 					<item chance="0.72">
-						<item id="70032" count="1" />
+						<item id="70032" count="1" /> <!-- Yellow Talisman - M. Atk. -->
 					</item>
 					<item chance="0.72">
-						<item id="70033" count="1" />
+						<item id="70033" count="1" /> <!-- Yellow Talisman - Casting Spd. -->
 					</item>
 					<item chance="0.72">
-						<item id="70030" count="1" />
+						<item id="70030" count="1" /> <!-- Yellow Talisman - Atk. Spd. -->
 					</item>
 					<item chance="0.72">
-						<item id="70029" count="1" />
+						<item id="70029" count="1" /> <!-- Yellow Talisman - P. Atk. -->
 					</item>
 					<item chance="0.72">
-						<item id="70036" count="1" />
+						<item id="70036" count="1" /> <!-- Yellow Talisman - Speed -->
 					</item>
 					<item chance="0.72">
-						<item id="70034" count="1" />
+						<item id="70034" count="1" /> <!-- Yellow Talisman - Accuracy -->
 					</item>
 					<item chance="0.72">
-						<item id="70037" count="1" />
+						<item id="70037" count="1" /> <!-- Yellow Talisman - Evasion -->
 					</item>
 					<item chance="0.1">
-						<item id="1892" count="1" />
+						<item id="1892" count="1" /> <!-- Blacksmith's Frame -->
 					</item>
 					<item chance="0.2">
-						<item id="4048" count="1" />
+						<item id="4048" count="1" /> <!-- Maestro Mold -->
 					</item>
 					<item chance="0.1">
-						<item id="4047" count="1" />
+						<item id="4047" count="1" /> <!-- Craftsman Mold -->
 					</item>
 					<item chance="0.1">
-						<item id="1891" count="1" />
+						<item id="1891" count="1" /> <!-- Artisan's Frame -->
 					</item>
 					<item chance="0.2">
-						<item id="4046" count="1" />
+						<item id="4046" count="1" /> <!-- Maestro Anvil Lock -->
 					</item>
 					<item chance="4.2">
-						<item id="1875" count="1" />
+						<item id="1875" count="1" /> <!-- Stone of Purity -->
 					</item>
 					<item chance="5.3">
-						<item id="1885" count="1" />
+						<item id="1885" count="1" /> <!-- High-grade Suede -->
 					</item>
 					<item chance="1.9">
-						<item id="4039" count="1" />
+						<item id="4039" count="1" /> <!-- Mold Glue -->
 					</item>
 					<item chance="11.0">
-						<item id="1882" count="1" />
+						<item id="1882" count="1" /> <!-- Leather -->
 					</item>
 					<item chance="6.6">
-						<item id="1879" count="1" />
+						<item id="1879" count="1" /> <!-- Cokes -->
 					</item>
 					<item chance="5.2">
-						<item id="1895" count="1" />
+						<item id="1895" count="1" /> <!-- Metallic Fiber -->
 					</item>
 					<item chance="10.24">
-						<item id="1876" count="1" />
+						<item id="1876" count="1" /> <!-- Mithril Ore -->
 					</item>
 					<item chance="0.6">
-						<item id="1890" count="1" />
+						<item id="1890" count="1" /> <!-- Mithril Alloy -->
 					</item>
 					<item chance="0.5">
-						<item id="1893" count="1" />
+						<item id="1893" count="1" /> <!-- Oriharukon -->
 					</item>
 					<item chance="2.6">
-						<item id="1874" count="1" />
+						<item id="1874" count="1" /> <!-- Oriharukon Ore -->
 					</item>
 					<item chance="0.3">
-						<item id="4041" count="1" />
+						<item id="4041" count="1" /> <!-- Mold Hardener -->
 					</item>
 					<item chance="1.3">
-						<item id="1887" count="1" />
+						<item id="1887" count="1" /> <!-- Varnish of Purity -->
 					</item>
 					<item chance="6.2">
-						<item id="1878" count="1" />
+						<item id="1878" count="1" /> <!-- Durable Braid -->
 					</item>
 					<item chance="3.0">
-						<item id="1889" count="1" />
+						<item id="1889" count="1" /> <!-- Synthetic Braid -->
 					</item>
 					<item chance="0.1">
-						<item id="4045" count="1" />
+						<item id="4045" count="1" /> <!-- Maestro Holder -->
 					</item>
 					<item chance="0.2">
-						<item id="956" count="1" />
+						<item id="956" count="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
 					</item>
 					<item chance="0.1">
-						<item id="952" count="1" />
+						<item id="952" count="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
 					</item>
 					<item chance="0.5">
-						<item id="955" count="1" />
+						<item id="955" count="1" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 					</item>
 					<item chance="0.1">
-						<item id="951" count="1" />
+						<item id="951" count="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 					</item>
 					<item chance="1.2">
-						<item id="1886" count="1" />
+						<item id="1886" count="1" /> <!-- Silver Mold -->
 					</item>
 					<item chance="0.4">
-						<item id="70039" count="1" />
+						<item id="70039" count="1" /> <!-- Blue Talisman - Invisibility -->
 					</item>
 					<item chance="1.7">
-						<item id="1888" count="1" />
+						<item id="1888" count="1" /> <!-- Synthetic Cokes -->
 					</item>
 					<item chance="0.8">
-						<item id="4040" count="1" />
+						<item id="4040" count="1" /> <!-- Mold Lubricant -->
 					</item>
 					<item chance="4.7">
-						<item id="1880" count="1" />
+						<item id="1880" count="1" /> <!-- Steel -->
 					</item>
 					<item chance="2.6">
-						<item id="1883" count="1" />
+						<item id="1883" count="1" /> <!-- Steel Mold -->
 					</item>
 					<item chance="2.1">
-						<item id="4044" count="1" />
+						<item id="4044" count="1" /> <!-- Thons -->
 					</item>
 					<item chance="1.0">
-						<item id="4042" count="1" />
+						<item id="4042" count="1" /> <!-- Enria -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55176" toLevel="1" name="Yellow Talisman - P. Atk.">
-		<icon>icon.skill55176</icon>
+		<!-- Increases P. Atk. when equipped. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
@@ -1029,7 +2348,8 @@
 		</effects>
 	</skill>
 	<skill id="55177" toLevel="1" name="Yellow Talisman - Atk. Spd.">
-		<icon>icon.skill55177</icon>
+		<!-- Increases Atk. Spd. when equipped. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
@@ -1039,7 +2359,8 @@
 		</effects>
 	</skill>
 	<skill id="55178" toLevel="1" name="Yellow Talisman - M. Def.">
-		<icon>icon.skill55178</icon>
+		<!-- Increases M. Def. when equipped. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -1049,7 +2370,8 @@
 		</effects>
 	</skill>
 	<skill id="55179" toLevel="1" name="Yellow Talisman - M. Atk.">
-		<icon>icon.skill55179</icon>
+		<!-- Increases magic power when equipped. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MAtk">
@@ -1059,7 +2381,8 @@
 		</effects>
 	</skill>
 	<skill id="55180" toLevel="1" name="Yellow Talisman - Casting Spd.">
-		<icon>icon.skill55180</icon>
+		<!-- Increases Casting Speed when equipped. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalAttackSpeed">
@@ -1069,7 +2392,8 @@
 		</effects>
 	</skill>
 	<skill id="55181" toLevel="1" name="Yellow Talisman - Accuracy">
-		<icon>icon.skill55181</icon>
+		<!-- Increases Accuracy when equipped. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="Accuracy">
@@ -1083,7 +2407,8 @@
 		</effects>
 	</skill>
 	<skill id="55182" toLevel="1" name="Yellow Talisman - P. Def.">
-		<icon>icon.skill55182</icon>
+		<!-- Increases P. Def. when equipped. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -1093,7 +2418,8 @@
 		</effects>
 	</skill>
 	<skill id="55183" toLevel="1" name="Yellow Talisman - Speed">
-		<icon>icon.skill55183</icon>
+		<!-- Increases Speed when equipped. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="Speed">
@@ -1103,7 +2429,8 @@
 		</effects>
 	</skill>
 	<skill id="55184" toLevel="1" name="Yellow Talisman - Evasion">
-		<icon>icon.skill55184</icon>
+		<!-- Increases Evasion when equipped. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalEvasion">
@@ -1117,7 +2444,8 @@
 		</effects>
 	</skill>
 	<skill id="55185" toLevel="1" name="Yellow Talisman - Healing">
-		<icon>icon.skill55185</icon>
+		<!-- Increases the efficiency of HP recovery magic. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="Heal">
@@ -1127,11 +2455,11 @@
 		</effects>
 	</skill>
 	<skill id="55186" toLevel="1" name="Blue Talisman - Invisibility">
-		<icon>icon.skill55186</icon>
+		<!-- Protects from preemptive attacks from monsters by making your character invisible. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<reuseDelay>240000</reuseDelay>
 		<hitTime>4000</hitTime>
 		<mpConsume>7</mpConsume>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<magicLvl>40</magicLvl>
 		<operateType>T</operateType>
@@ -1150,10 +2478,10 @@
 		</effects>
 	</skill>
 	<skill id="55187" toLevel="1" name="Roast Blue Mackerel - STR">
-		<icon>icon.skill55187</icon>
+		<!-- For 20 min. STR +1. -->
+		<icon>BranchIcon.Icon.roasted_mackerel_buff</icon>
 		<abnormalTime>1200</abnormalTime>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<hitTime>4000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1168,10 +2496,10 @@
 		</effects>
 	</skill>
 	<skill id="55188" toLevel="1" name="Roast Blue Mackerel - INT">
-		<icon>icon.skill55188</icon>
+		<!-- For 20 min. INT +1. -->
+		<icon>BranchIcon.Icon.roasted_mackerel_buff</icon>
 		<abnormalTime>1200</abnormalTime>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<hitTime>4000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1186,10 +2514,10 @@
 		</effects>
 	</skill>
 	<skill id="55189" toLevel="1" name="Roast Blue Mackerel - CON">
-		<icon>icon.skill55189</icon>
+		<!-- For 20 min. CON +1. -->
+		<icon>BranchIcon.Icon.roasted_mackerel_buff</icon>
 		<abnormalTime>1200</abnormalTime>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<hitTime>4000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1204,10 +2532,10 @@
 		</effects>
 	</skill>
 	<skill id="55190" toLevel="1" name="Roast Blue Mackerel - DEX">
-		<icon>icon.skill55190</icon>
+		<!-- For 20 min. DEX +1. -->
+		<icon>BranchIcon.Icon.roasted_mackerel_buff</icon>
 		<abnormalTime>1200</abnormalTime>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<hitTime>4000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1222,10 +2550,10 @@
 		</effects>
 	</skill>
 	<skill id="55191" toLevel="1" name="Roast Blue Mackerel - MEN">
-		<icon>icon.skill55191</icon>
+		<!-- For 20 min. MEN +1. -->
+		<icon>BranchIcon.Icon.roasted_mackerel_buff</icon>
 		<abnormalTime>1200</abnormalTime>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<hitTime>4000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1240,10 +2568,10 @@
 		</effects>
 	</skill>
 	<skill id="55192" toLevel="1" name="Roast Blue Mackerel - WIT">
-		<icon>icon.skill55192</icon>
+		<!-- For 20 min. WIT +1. -->
+		<icon>BranchIcon.Icon.roasted_mackerel_buff</icon>
 		<abnormalTime>1200</abnormalTime>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<hitTime>4000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1258,13 +2586,12 @@
 		</effects>
 	</skill>
 	<skill id="55193" toLevel="1" name="Sealed Rune Lvl 1">
-		<icon>icon.skill55193</icon>
+		<icon>BranchIcon.Icon.g_green_sealed_rune</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70000</itemConsumeId> <!-- Sealed Rune - Lv. 1 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1279,41 +2606,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="12.5">
-						<item id="29818" count="1" />
+						<item id="29818" count="1" /> <!-- Sigel? Rune - Stage 1 -->
 					</item>
 					<item chance="12.5">
-						<item id="29838" count="1" />
+						<item id="29838" count="1" /> <!-- Tyrr? Rune - Stage 1 -->
 					</item>
 					<item chance="12.5">
-						<item id="29858" count="1" />
+						<item id="29858" count="1" /> <!-- Othell? Rune - Stage 1 -->
 					</item>
 					<item chance="12.5">
-						<item id="29878" count="1" />
+						<item id="29878" count="1" /> <!-- Yul? Rune - Stage 1 -->
 					</item>
 					<item chance="12.5">
-						<item id="29898" count="1" />
+						<item id="29898" count="1" /> <!-- Feoh? Rune - Stage 1 -->
 					</item>
 					<item chance="12.5">
-						<item id="29918" count="1" />
+						<item id="29918" count="1" /> <!-- Iss?Rune - Stage 1 -->
 					</item>
 					<item chance="12.5">
-						<item id="29938" count="1" />
+						<item id="29938" count="1" /> <!-- Wynn? Rune - Stage 1 -->
 					</item>
 					<item chance="12.5">
-						<item id="29958" count="1" />
+						<item id="29958" count="1" /> <!-- Aeore? Rune - Stage 1 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55194" toLevel="1" name="Sealed Rune Lvl 2">
-		<icon>icon.skill55194</icon>
+		<icon>BranchIcon.Icon.g_green_sealed_rune</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70001</itemConsumeId> <!-- Sealed Rune - Lv. 2 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1328,41 +2654,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="12.5">
-						<item id="29819" count="1" />
+						<item id="29819" count="1" /> <!-- Sigel? Rune - Stage 2 -->
 					</item>
 					<item chance="12.5">
-						<item id="29839" count="1" />
+						<item id="29839" count="1" /> <!-- Tyrr? Rune - Stage 2 -->
 					</item>
 					<item chance="12.5">
-						<item id="29859" count="1" />
+						<item id="29859" count="1" /> <!-- Othell? Rune - Stage 2 -->
 					</item>
 					<item chance="12.5">
-						<item id="29879" count="1" />
+						<item id="29879" count="1" /> <!-- Yul? Rune - Stage 2 -->
 					</item>
 					<item chance="12.5">
-						<item id="29899" count="1" />
+						<item id="29899" count="1" /> <!-- Feoh? Rune - Stage 2 -->
 					</item>
 					<item chance="12.5">
-						<item id="29919" count="1" />
+						<item id="29919" count="1" /> <!-- Iss?Rune - Stage 2 -->
 					</item>
 					<item chance="12.5">
-						<item id="29939" count="1" />
+						<item id="29939" count="1" /> <!-- Wynn? Rune - Stage 2 -->
 					</item>
 					<item chance="12.5">
-						<item id="29959" count="1" />
+						<item id="29959" count="1" /> <!-- Aeore? Rune - Stage 2 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55195" toLevel="1" name="Sealed Rune Lvl 3">
-		<icon>icon.skill55195</icon>
+		<icon>BranchIcon.Icon.g_green_sealed_rune</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70002</itemConsumeId> <!-- Sealed Rune - Lv. 3 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1377,41 +2702,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="12.5">
-						<item id="29820" count="1" />
+						<item id="29820" count="1" /> <!-- Sigel? Rune - Stage 3 -->
 					</item>
 					<item chance="12.5">
-						<item id="29840" count="1" />
+						<item id="29840" count="1" /> <!-- Tyrr? Rune - Stage 3 -->
 					</item>
 					<item chance="12.5">
-						<item id="29860" count="1" />
+						<item id="29860" count="1" /> <!-- Othell? Rune - Stage 3 -->
 					</item>
 					<item chance="12.5">
-						<item id="29880" count="1" />
+						<item id="29880" count="1" /> <!-- Yul? Rune - Stage 3 -->
 					</item>
 					<item chance="12.5">
-						<item id="29900" count="1" />
+						<item id="29900" count="1" /> <!-- Feoh? Rune - Stage 3 -->
 					</item>
 					<item chance="12.5">
-						<item id="29920" count="1" />
+						<item id="29920" count="1" /> <!-- Iss?Rune - Stage 3 -->
 					</item>
 					<item chance="12.5">
-						<item id="29940" count="1" />
+						<item id="29940" count="1" /> <!-- Wynn? Rune - Stage 3 -->
 					</item>
 					<item chance="12.5">
-						<item id="29960" count="1" />
+						<item id="29960" count="1" /> <!-- Aeore? Rune - Stage 3 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55196" toLevel="1" name="Sealed Rune Lvl 4">
-		<icon>icon.skill55196</icon>
+		<icon>BranchIcon.Icon.g_green_sealed_rune</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70003</itemConsumeId> <!-- Sealed Rune - Lv. 4 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1426,41 +2750,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="12.5">
-						<item id="29821" count="1" />
+						<item id="29821" count="1" /> <!-- Sigel? Rune - Stage 4 -->
 					</item>
 					<item chance="12.5">
-						<item id="29841" count="1" />
+						<item id="29841" count="1" /> <!-- Tyrr? Rune - Stage 4 -->
 					</item>
 					<item chance="12.5">
-						<item id="29861" count="1" />
+						<item id="29861" count="1" /> <!-- Othell? Rune - Stage 4 -->
 					</item>
 					<item chance="12.5">
-						<item id="29881" count="1" />
+						<item id="29881" count="1" /> <!-- Yul? Rune - Stage 4 -->
 					</item>
 					<item chance="12.5">
-						<item id="29901" count="1" />
+						<item id="29901" count="1" /> <!-- Feoh? Rune - Stage 4 -->
 					</item>
 					<item chance="12.5">
-						<item id="29921" count="1" />
+						<item id="29921" count="1" /> <!-- Iss?Rune - Stage 4 -->
 					</item>
 					<item chance="12.5">
-						<item id="29941" count="1" />
+						<item id="29941" count="1" /> <!-- Wynn? Rune - Stage 4 -->
 					</item>
 					<item chance="12.5">
-						<item id="29961" count="1" />
+						<item id="29961" count="1" /> <!-- Aeore? Rune - Stage 4 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55197" toLevel="1" name="Sealed Rune Lvl 5">
-		<icon>icon.skill55197</icon>
+		<icon>BranchIcon.Icon.g_green_sealed_rune</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70004</itemConsumeId> <!-- Sealed Rune - Lv. 5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1475,41 +2798,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="12.5">
-						<item id="29822" count="1" />
+						<item id="29822" count="1" /> <!-- Sigel? Rune - Stage 5 -->
 					</item>
 					<item chance="12.5">
-						<item id="29842" count="1" />
+						<item id="29842" count="1" /> <!-- Tyrr? Rune - Stage 5 -->
 					</item>
 					<item chance="12.5">
-						<item id="29862" count="1" />
+						<item id="29862" count="1" /> <!-- Othell? Rune - Stage 5 -->
 					</item>
 					<item chance="12.5">
-						<item id="29882" count="1" />
+						<item id="29882" count="1" /> <!-- Yul? Rune - Stage 5 -->
 					</item>
 					<item chance="12.5">
-						<item id="29902" count="1" />
+						<item id="29902" count="1" /> <!-- Feoh? Rune - Stage 5 -->
 					</item>
 					<item chance="12.5">
-						<item id="29922" count="1" />
+						<item id="29922" count="1" /> <!-- Iss?Rune - Stage 5 -->
 					</item>
 					<item chance="12.5">
-						<item id="29942" count="1" />
+						<item id="29942" count="1" /> <!-- Wynn? Rune - Stage 5 -->
 					</item>
 					<item chance="12.5">
-						<item id="29962" count="1" />
+						<item id="29962" count="1" /> <!-- Aeore? Rune - Stage 5 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55198" toLevel="1" name="Sealed Rune Lvl 6">
-		<icon>icon.skill55198</icon>
+		<icon>BranchIcon.Icon.g_blue_sealed_rune</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70005</itemConsumeId> <!-- Sealed Rune - Lv. 6 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1524,41 +2846,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="12.5">
-						<item id="29823" count="1" />
+						<item id="29823" count="1" /> <!-- Sigel? Rune - Stage 6 -->
 					</item>
 					<item chance="12.5">
-						<item id="29843" count="1" />
+						<item id="29843" count="1" /> <!-- Tyrr? Rune - Stage 6 -->
 					</item>
 					<item chance="12.5">
-						<item id="29863" count="1" />
+						<item id="29863" count="1" /> <!-- Othell? Rune - Stage 6 -->
 					</item>
 					<item chance="12.5">
-						<item id="29883" count="1" />
+						<item id="29883" count="1" /> <!-- Yul? Rune - Stage 6 -->
 					</item>
 					<item chance="12.5">
-						<item id="29903" count="1" />
+						<item id="29903" count="1" /> <!-- Feoh? Rune - Stage 6 -->
 					</item>
 					<item chance="12.5">
-						<item id="29923" count="1" />
+						<item id="29923" count="1" /> <!-- Iss?Rune - Stage 6 -->
 					</item>
 					<item chance="12.5">
-						<item id="29943" count="1" />
+						<item id="29943" count="1" /> <!-- Wynn? Rune - Stage 6 -->
 					</item>
 					<item chance="12.5">
-						<item id="29963" count="1" />
+						<item id="29963" count="1" /> <!-- Aeore? Rune - Stage 6 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55199" toLevel="1" name="Sealed Rune Lvl 7">
-		<icon>icon.skill55199</icon>
+		<icon>BranchIcon.Icon.g_blue_sealed_rune</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70006</itemConsumeId> <!-- Sealed Rune - Lv. 7 -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1573,28 +2894,28 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="12.5">
-						<item id="29824" count="1" />
+						<item id="29824" count="1" /> <!-- Sigel? Rune - Stage 7 -->
 					</item>
 					<item chance="12.5">
-						<item id="29844" count="1" />
+						<item id="29844" count="1" /> <!-- Tyrr? Rune - Stage 7 -->
 					</item>
 					<item chance="12.5">
-						<item id="29864" count="1" />
+						<item id="29864" count="1" /> <!-- Othell? Rune - Stage 7 -->
 					</item>
 					<item chance="12.5">
-						<item id="29884" count="1" />
+						<item id="29884" count="1" /> <!-- Yul? Rune - Stage 7 -->
 					</item>
 					<item chance="12.5">
-						<item id="29904" count="1" />
+						<item id="29904" count="1" /> <!-- Feoh? Rune - Stage 7 -->
 					</item>
 					<item chance="12.5">
-						<item id="29924" count="1" />
+						<item id="29924" count="1" /> <!-- Iss?Rune - Stage 7 -->
 					</item>
 					<item chance="12.5">
-						<item id="29944" count="1" />
+						<item id="29944" count="1" /> <!-- Wynn? Rune - Stage 7 -->
 					</item>
 					<item chance="12.5">
-						<item id="29964" count="1" />
+						<item id="29964" count="1" /> <!-- Aeore? Rune - Stage 7 -->
 					</item>
 				</items>
 			</effect>

@@ -1,20 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1600" toLevel="1" name="Soul Instinct">
-		<!-- Glory Days confirmed -->
-		<!-- For 15 seconds, awakens party members' destructive instincts to increase P. Atk., P. Critical Rate, M. Atk., and M. Critical Rate by 50%, and Atk. Spd. and Casting Spd. by 20%. -->
+		<!-- For 15 sec., awakens party members' destructive instincts to get P. Atk., P. Critical Rate, M. Atk., and M. Critical Rate +50%, and Atk. Spd. and Casting Spd. +20%. -->
+		<icon>icon.skill1600</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>INSTINCT</abnormalType>
 		<affectRange>600</affectRange>
-		<icon>icon.skill1600</icon>
 		<operateType>A2</operateType>
 		<mpConsume>148</mpConsume>
 		<hitTime>2500</hitTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>549</effectPoint>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>83</magicLvl>
 		<isMagic>1</isMagic>
@@ -50,14 +48,12 @@
 		</effects>
 	</skill>
 	<skill id="1601" toLevel="1" name="Fishing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attempt to fish at the dock. Put on a fishing rod and bait. -->
 		<icon>icon.skill1312</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="1602" toLevel="13" name="Reeling">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Loosen the fishing line when the fish is struggling. -->
 		<icon>icon.skill1314</icon>
 		<operateType>A1</operateType>
@@ -65,7 +61,6 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="1603" toLevel="13" name="Pumping">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Tighten the fishing line when the fish is tired. -->
 		<icon>icon.skill1313</icon>
 		<operateType>A1</operateType>
@@ -73,12 +68,12 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="1604" toLevel="13" name="Fishing Expertise">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Higher expertise gets you better fish. -->
 		<icon>icon.skill1315</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1605" toLevel="3" name="Dual Weapon Defense">
+		<!-- For $s1 P. Atk Evasion Rate +$s2. Requires a dual sword. -->
 		<icon>icon.skill1605</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -87,10 +82,12 @@
 		</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
-		<castRange>0</castRange>
-		<effectRange>900</effectRange>
-		<hitTime>4000</hitTime>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<effectPoint>
+			<value level="1">204</value>
+			<value level="2">379</value>
+			<value level="3">549</value>
+		</effectPoint>
+		<hitTime>1500</hitTime>
 		<magicLvl>
 			<value level="1">7</value>
 			<value level="2">25</value>
@@ -107,8 +104,7 @@
 			<value level="3">8</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>300</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<reuseDelay>180000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -132,6 +128,8 @@
 		</effects>
 	</skill>
 	<skill id="1606" toLevel="10" name="Quick Spear">
+		<!-- Attacks nearby enemies by throwing a spear with $s1 Power added to P. Atk. Stuns for $s2. Requires a polearm. Over-hit. Critical. Ignores Shield Defense. -->
+		<icon>icon.skill1606</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -180,10 +178,8 @@
 			<value level="9">121</value>
 			<value level="10">133</value>
 		</mpConsume>
-		<icon>icon.skill1606</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -222,6 +218,8 @@
 		</effects>
 	</skill>
 	<skill id="1607" toLevel="45" name="Excruciating Strike">
+		<!-- Attacks the enemies in front of the character with $s1 Power added to P. Atk. Ignores $s2 of the enemy's P. Def. Requires a sword/ two-handed sword. Over-hit. Ignores Shield Defense. -->
+		<icon>icon.skill1607</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -268,7 +266,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill1607</icon>
 		<magicLvl>
 			<value level="1">40</value>
 			<value level="2">40</value>
@@ -366,7 +363,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -434,7 +430,8 @@
 		</effects>
 	</skill>
 	<skill id="1608" toLevel="2" name="Immortal Life">
-		<!--For 5 seconds HP doesn’t drop below 1. Additionally recovers 20% HP if the effect of Immortality ends.-->
+		<!-- For 5 sec., HP doesn t drop below 1. Additionally recovers 20% HP if the effect of Immortality ends. -->
+		<icon>icon.skill1608</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -443,7 +440,6 @@
 			<value fromLevel="1" toLevel="2">5</value>
 		</abnormalTime>
 		<abnormalType>RESIST_DEATH</abnormalType>
-		<icon>icon.skill10022</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -457,21 +453,22 @@
 		<effectPoint>2</effectPoint>
 		<reuseDelayType>S</reuseDelayType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<hitCancelTime>0</hitCancelTime>
 		<effects>
 			<effect name="IgnoreDeath" />
-		 </effects>
-		 <endEffects>
+		</effects>
+		<endEffects>
 			<effect name="HealPercent">
 				<power>
 					<value level="1">20</value>
 					<value level="2">30</value>
 				</power>
 			</effect>
-		 </endEffects>
+		</endEffects>
 	</skill>
 	<skill id="1609" toLevel="4" name="Sword Expert">
+		<!-- P. Atk. +$s1, Accuracy +$s2. Atk. Spd. Boost +$s3 when using a sword/ two-handed sword. Continuously consumes MP proportionately to your level. -->
+		<icon>icon.skill1609</icon>
 		<magicLvl>
 			<value level="1">46</value>
 			<value level="2">58</value>
@@ -483,12 +480,10 @@
 			<value level="2">1</value>
 			<value level="3">1</value>
 			<value level="4">1</value>
-		</mpConsume>	
+		</mpConsume>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
-		<icon>icon.skill1609</icon>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -527,6 +522,8 @@
 		</effects>
 	</skill>
 	<skill id="1610" toLevel="18" name="Life Rescue">
+		<!-- For $s1 restores $s2 HP of the target each sec. -->
+		<icon>icon.skill1610</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -552,7 +549,6 @@
 		<affectLimit>50-50</affectLimit>
 		<affectRange>1000</affectRange>
 		<hitTime>3500</hitTime>
-		<icon>icon.skill1610</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">20</value>
@@ -597,7 +593,6 @@
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<castRange>600</castRange>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -629,6 +624,7 @@
 		</effects>
 	</skill>
 	<skill id="1611" toLevel="5" name="Power Supremacy">
+		<!-- P. Atk. +$s1, Max HP -$s2. -->
 		<icon>icon.skill1611</icon>
 		<mpInitialConsume>
 			<value level="1">0</value>
@@ -638,7 +634,6 @@
 			<value level="5">0</value>
 		</mpInitialConsume>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
@@ -665,11 +660,13 @@
 		</effects>
 	</skill>
 	<skill id="1612" toLevel="1" name="Slowing Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 15 sec., Speed -20%. -->
+		<icon>icon.skill0210</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1613" toLevel="11" name="Body Impale">
+		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicts Stun for $s2 and dispels $s3 buff(s) from a stunned target. Requires a blunt weapon. Ignores Shield Defense. Over-hit. -->
+		<icon>icon.skill1613</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -678,7 +675,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<hitTime>1200</hitTime>
-		<hitCancelTime>500</hitCancelTime>
 		<effectPoint>
 			<value level="1">680</value>
 			<value level="2">850</value>
@@ -717,7 +713,6 @@
 			<value level="10">79</value>
 			<value level="11">85</value>
 		</mpConsume>
-		<icon>icon.skill1613</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<operateType>A2</operateType>
@@ -725,7 +720,6 @@
 		<staticReuse>true</staticReuse>
 		<coolTime>500</coolTime>
 		<nextAction>ATTACK</nextAction>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -734,7 +728,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>BLUNT</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -752,20 +746,22 @@
 					<value level="9">2652</value>
 					<value level="10">2942</value>
 					<value level="11">3232</value>
-				</power>	
+				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="DispelByCategory">
 				<slot>BUFF</slot>
-				<rate>25</rate>
+				<rate>10</rate>
 				<max>1</max>
 			</effect>
 			<effect name="BlockActions" />
-		</effects>			
+		</effects>
 	</skill>
 	<skill id="1615" toLevel="4" name="Weapon Reinforcement">
+		<!-- For 5 min., enhances polearms and blunt weapons, P. Atk. +$s1. At a certain chance to decrease target s Atk. Spd. and Casting Spd. -$s2. -->
+		<icon>icon.skill1615</icon>
 		<reuseDelay>2000</reuseDelay>
 		<coolTime>500</coolTime>
 		<hitTime>2000</hitTime>
@@ -783,7 +779,6 @@
 		</mpConsume>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
-		<icon>icon.skill1615</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -799,6 +794,7 @@
 				<weaponType>
 					<item>POLE</item>
 					<item>BLUNT</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="TriggerSkillByDamage">
@@ -808,13 +804,14 @@
 				<chance>10</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>60</minDamage>
-				<skillId>1616</skillId>
+				<skillId>1616</skillId> <!-- Physical Damage -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1616" toLevel="1" name="Physical Damage">
-		<icon>icon.skill1616</icon>
+		<!-- You were damaged and for 15 sec. Atk. Spd. and Casting Spd. -10%. -->
+		<icon>icon.skill1615</icon>
 		<operateType>A2</operateType>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<targetType>ENEMY</targetType>
@@ -835,6 +832,8 @@
 		</effects>
 	</skill>
 	<skill id="1617" toLevel="4" name="Tenacity">
+		<!-- Enhances the body. For $s1, Stun Resistance +$s2, restores HP at a certain chance upon taking damage. -->
+		<icon>icon.skill1617</icon>
 		<reuseDelay>2000</reuseDelay>
 		<coolTime>500</coolTime>
 		<hitTime>2000</hitTime>
@@ -852,7 +851,6 @@
 		</mpConsume>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
-		<icon>icon.skill1617</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -872,19 +870,20 @@
 				<chance>10</chance>
 				<targetType>SELF</targetType>
 				<minDamage>50</minDamage>
-				<skillId>1618</skillId>
+				<skillId>1618</skillId> <!-- Body Reconstruction -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1618" toLevel="3" name="Body Reconstruction">
+		<!-- Restores the target's HP with $s1 Power. -->
+		<icon>icon.skill0045</icon>
 		<reuseDelay>5000</reuseDelay>
 		<magicLvl>
 			<value level="1">44</value>
 			<value level="2">56</value>
 			<value level="3">64</value>
 		</magicLvl>
-		<icon>icon.skill1618</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -899,28 +898,25 @@
 		</effects>
 	</skill>
 	<skill id="1619" toLevel="8" name="Sonic Focus">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1620" toLevel="8" name="Focus Force">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1621" toLevel="1" name="Shield of Sacrifice">
+		<!-- Sacrifices itself, decreasing Max HP by 20%. For party members P. Def. +15%, M. Def. +20%, Healing Power +20% for 3 min. Requires a shield. -->
+		<icon>icon.skill1621</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>180</abnormalTime>
 		<abnormalType>SHIELD_PROB_UP</abnormalType>
-		<affectRange>900</affectRange>
-		<hitTime>2000</hitTime>
-		<hitCancelTime>500</hitCancelTime>
-		<icon>icon.skill1621</icon>
-		<operateType>A2</operateType>
+		<affectRange>1000</affectRange>
+		<effectPoint>673</effectPoint>
+		<hitTime>1000</hitTime>
 		<magicLvl>80</magicLvl>
 		<mpConsume>38</mpConsume>
+		<hpConsume>1115</hpConsume>
+		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -942,18 +938,15 @@
 				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MaxHp">
-				<amount>-20</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="1622" toLevel="1" name="Blood of Sacrifice">
+		<!-- The sacrifice decreases Max HP. -->
+		<icon>icon.skill1621</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>180</abnormalTime>
 		<isMagic>4</isMagic>
 		<magicLvl>80</magicLvl>
-		<icon>icon.skill1622</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
@@ -967,9 +960,10 @@
 		</effects>
 	</skill>
 	<skill id="1623" toLevel="1" name="Eva's Protection">
+		<!-- For party members P. Def. +15%, M. Def. +10%, Speed +4 for 3 min. Requires a shield. -->
+		<icon>icon.skill1623</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>180</abnormalTime>
-		<affectRange>900</affectRange>
 		<castRange>400</castRange>
 		<effectPoint>669</effectPoint>
 		<effectRange>600</effectRange>
@@ -977,10 +971,8 @@
 		<isMagic>1</isMagic>
 		<magicLvl>80</magicLvl>
 		<mpConsume>114</mpConsume>
-		<icon>icon.skill1623</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1005,6 +997,8 @@
 		</effects>
 	</skill>
 	<skill id="1624" toLevel="4" name="Indestructible Sound">
+		<!-- Using Momentum, throws a powerful strike with a sword, blocking the target for $s1 Damage received by the target -50%, blocks target's movements and skill usage. Requires a dual sword. Requires Momentum level 5. -->
+		<icon>icon.skill1624</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">10</value>
@@ -1021,7 +1015,6 @@
 		<effectPoint>-1000</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1624</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic>
 		<lvlBonusRate>30</lvlBonusRate>
@@ -1040,7 +1033,6 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<reuseDelay>120000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>PHYSICAL_BLOCKADE</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -1072,6 +1064,8 @@
 		</effects>
 	</skill>
 	<skill id="1625" toLevel="1" name="Throwing Spear">
+		<!-- Throws a spear at the enemy with $s1 Power added to P. Atk. and immobilizes them for $s2. Requires a polearm. Over-hit. Ignores Shield Defense. -->
+		<icon>icon.skill1625</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1084,7 +1078,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>1000</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1625</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<mpConsume>63</mpConsume>
@@ -1092,7 +1085,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -1111,21 +1103,20 @@
 				<criticalChance>30</criticalChance>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions">
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="1626" toLevel="1" name="Spear Howl">
+		<!-- With a spear strike, inflicts damage on nearby enemies with 2911 Power added to P. Atk. Removes speed-increasing Buffs. Requires a polearm. -->
+		<icon>icon.skill1626</icon>
 		<basicProperty>PHYSICAL</basicProperty>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1626</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>80</magicLvl>
 		<mpConsume>67</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1148,13 +1139,14 @@
 		</effects>
 	</skill>
 	<skill id="1627" toLevel="1" name="Destroyer�s Roar">
+		<!-- Inflicts Fear on nearby enemies and their Speed -90%. Requires a sword/ blunt weapon/ two-handed sword. -->
+		<icon>icon.skill1627</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
 		<activateRate>40</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill0003</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic>
 		<lvlBonusRate>20</lvlBonusRate>
@@ -1162,7 +1154,6 @@
 		<castRange>40</castRange>
 		<hitTime>500</hitTime>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<effectRange>400</effectRange>
@@ -1190,15 +1181,15 @@
 		</effects>
 	</skill>
 	<skill id="1628" toLevel="1" name="Broad Sweep">
+		<!-- For $s1 the number of attacking enemies +$s2. Requires a sword/ two-handed sword. -->
+		<icon>icon.skill1628</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>POLEARM_ATTACK</abnormalType>
-		<icon>icon.skill1628</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
 		<hitTime>2000</hitTime>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<magicLvl>76</magicLvl>
@@ -1218,29 +1209,30 @@
 			<effect name="HitNumber">
 				<amount>2</amount>
 				<mode>DIFF</mode>
-			</effect>	
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1629" toLevel="1" name="Throw Dagger in Wrist">
+		<!-- Throw Dagger in Wrist Throws a dagger at the enemy with $s1 Power added to P. Atk., and injures their wrist. Due to the wound, for $s2 there's a certain probability to interrupt target's skill casting. Requires a dagger. -->
 		<icon>icon.skill1629</icon>
-		<castRange>800</castRange>
-		<operateType>A2</operateType>
-		<hitTime>1500</hitTime>
-		<effectPoint>1</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<activateRate>80</activateRate>
+		<lvlBonusRate>20</lvlBonusRate>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<effectRange>900</effectRange>
+		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>76</magicLvl>
 		<mpConsume>60</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1</abnormalTime>
-		<activateRate>80</activateRate>
 		<nextAction>ATTACK</nextAction>
-		<staticReuse>true</staticReuse>
-		<isMagic>1</isMagic>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
+		<castRange>800</castRange>
+		<hitTime>500</hitTime>
+		<coolTime>100</coolTime>
 		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-709</effectPoint>
+		<isDebuff>true</isDebuff>
+		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1259,25 +1251,27 @@
 		</effects>
 	</skill>
 	<skill id="1630" toLevel="1" name="Throwing Blood Dagger">
+		<!-- Throws a dagger at an enemy with $s1 Power added to P. Atk. For $s2, with a certain probability, decreases target's HP when it tries to use skills. Requires a dagger. Over-hit. -->
 		<icon>icon.skill1630</icon>
-		<castRange>800</castRange>
-		<operateType>A2</operateType>
-		<hitTime>1500</hitTime>
-		<mpConsume>60</mpConsume>
-		<effectPoint>1</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<activateRate>80</activateRate>
+		<lvlBonusRate>20</lvlBonusRate>
+		<basicProperty>MAGIC</basicProperty>
+		<effectRange>900</effectRange>
+		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>76</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>20</abnormalTime>
-		<activateRate>80</activateRate>
-		<reuseDelay>30000</reuseDelay>
+		<mpConsume>60</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<isMagic>1</isMagic>
+		<castRange>800</castRange>
+		<hitTime>500</hitTime>
+		<coolTime>100</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-709</effectPoint>
 		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
+		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1295,11 +1289,11 @@
 		</effects>
 	</skill>
 	<skill id="1631" toLevel="2" name="Clear Movements">
-		<icon>icon.skill1631</icon>
-		<operateType>A2</operateType>
+		<!-- All senses sharpen, resetting Cooldown time of "Hide" and "Shadow Step". (Requires a dagger.) -->
+		<icon>icon.skill10518</icon>
+		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">77</value>
@@ -1312,27 +1306,25 @@
 		<hitTime>1000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>420000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effects>
 			<effect name="ReuseSkillById">
-				<skillId>821</skillId>
+				<skillId>821</skillId> <!-- Shadow Step -->
 			</effect>
 			<effect name="ReuseSkillById">
-				<skillId>922</skillId>
+				<skillId>922</skillId> <!-- Hide -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1632" toLevel="1" name="Deadly Strike">
-		<!-- Glory Days confirmed -->
-		<!-- P. Def. and M. Def. + 20%. -->
-		<icon>icon.skill1040</icon>
+		<!-- Attacks the target with $s1 Power added to P. Atk. For $s2 decreases enemy s P. Def. by $s3. Requires dual swords. Over-hit. -->
+		<icon>icon.skill0986</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<effectPoint>1</effectPoint>
 		<abnormalType>PD_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>

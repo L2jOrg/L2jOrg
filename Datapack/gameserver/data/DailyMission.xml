@@ -1631,18 +1631,19 @@
 			<item id="70777" count="1" />
 		</items>
 	</reward>
-	<!--
 	<reward id="224" reward_id="604" name="Login All Weekend" isMainClassOnly="false" isOneTime="false">
+		<handler name="loginweekend" />
 		<items>
 			<item id="29648" count="2" />
 		</items>
 	</reward>
 	<reward id="225" reward_id="605" name="Login All Month" isMainClassOnly="false" isOneTime="false">
+		<handler name="loginmonth" />
 		<items>
 			<item id="29648" count="4" />
 		</items>
 	</reward>
-	-->
+
 	<reward id="226" reward_id="606" name="Quest Mania" isMainClassOnly="false" requiredCompletion="2" isOneTime="false">
 		<handler name="quest" />
 		<items>

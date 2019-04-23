@@ -16,17 +16,18 @@
  */
 package handlers.effecthandlers;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.holders.SkillHolder;
+import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Double Casting effect implementation.
@@ -56,7 +57,7 @@ public final class DoubleCast extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		if (effected.isPlayer())
 		{
@@ -70,7 +71,7 @@ public final class DoubleCast extends AbstractEffect
 				}
 			}
 		}
-		super.onStart(effector, effected, skill);
+		super.onStart(effector, effected, skill, item);
 	}
 	
 	@Override

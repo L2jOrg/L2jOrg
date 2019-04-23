@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4100" toLevel="12" name="Prominence">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -39,7 +38,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -63,7 +61,6 @@
 		</effects>
 	</skill>
 	<skill id="4101" toLevel="12" name="Spinning Slasher">
-		<!-- Freya retail confirmed -->
 		<affectRange>150</affectRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -98,7 +95,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -123,7 +119,8 @@
 		</effects>
 	</skill>
 	<skill id="4102" toLevel="3" name="Surrender to Fire">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily decreases Fire Resistance and increases Water Resistance. Effect $s1 -->
+		<icon>icon.skill4279_new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -137,7 +134,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill4279_new</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -153,7 +149,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -178,7 +173,6 @@
 		</effects>
 	</skill>
 	<skill id="4103" toLevel="2" name="Ultimate Evasion">
-		<!-- Freya retail confirmed -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -197,7 +191,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -214,7 +207,8 @@
 		</effects>
 	</skill>
 	<skill id="4104" toLevel="12" name="Chill Flame">
-		<!-- Freya retail confirmed -->
+		<!-- HP decreases momentarily from burning flame. Effect $s1 -->
+		<icon>icon.skill1100</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -240,7 +234,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1100</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -274,7 +267,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -299,7 +291,6 @@
 		</effects>
 	</skill>
 	<skill id="4105" toLevel="12" name="Beam Cannon">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -335,7 +326,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -359,9 +349,8 @@
 		</effects>
 	</skill>
 	<skill id="4106" toLevel="1" name="Antharas Stun">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<!-- Antharas Skills -->
-		<!-- Antharas Jump from Front -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill4106</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -372,11 +361,9 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>180</attributeValue>
 		<hitTime>6000</hitTime>
-		<icon>icon.skill4106</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -392,13 +379,13 @@
 		</effects>
 	</skill>
 	<skill id="4107" toLevel="1" name="Antharas Tail Swipe">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Instantly stuns characters and does not let them move. -->
+		<icon>icon.skill4107</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="4108" toLevel="1" name="Antharas Fear">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<!-- Antharas Skills -->
+		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<icon>icon.skill4108</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -413,12 +400,10 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>180</attributeValue>
 		<hitTime>2300</hitTime>
-		<icon>icon.skill4108</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
@@ -431,8 +416,8 @@
 		</effects>
 	</skill>
 	<skill id="4109" toLevel="1" name="Curse of Antharas">
-		<!-- Confirmed CT2.5 -->
-		<!-- Antharas Skills -->
+		<!-- You have been touched by the curse of Antharas, which has temporarily decreased all your combat stats. -->
+		<icon>icon.skill4109</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ANTARAS_DEBUFF</abnormalType>
@@ -443,12 +428,10 @@
 		<effectPoint>-100</effectPoint>
 		<fanRange>0;0;850;850</fanRange>
 		<hitTime>2800</hitTime>
-		<icon>icon.skill4109</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2</hitCancelTime>
@@ -500,8 +483,6 @@
 		</effects>
 	</skill>
 	<skill id="4110" toLevel="2" name="Dragon Stink">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<!-- Antharas Skills -->
 		<affectRange>1200</affectRange>
 		<castRange>
 			<value level="1">500</value>
@@ -519,7 +500,6 @@
 		<hitTime>2300</hitTime>
 		<magicLvl>99</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -532,8 +512,8 @@
 		</effects>
 	</skill>
 	<skill id="4111" toLevel="1" name="Antharas Petrify">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<!-- Antharas Skills -->
+		<!-- Petrified and unable to move temporarily. -->
+		<icon>icon.skill4111</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
@@ -548,12 +528,10 @@
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3200</hitTime>
-		<icon>icon.skill4111</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
@@ -563,8 +541,7 @@
 			<effect name="PhysicalAttack">
 				<power>10</power>
 			</effect>
-			<effect name="BlockActions">
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="HpRegen">
 				<amount>-100</amount>
 				<mode>PER</mode>
@@ -572,8 +549,6 @@
 		</effects>
 	</skill>
 	<skill id="4112" toLevel="1" name="Antharas Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Antharas Skills -->
 		<affectRange>100</affectRange>
 		<castRange>50</castRange>
 		<coolTime>800</coolTime>
@@ -584,7 +559,6 @@
 		<hitTime>2200</hitTime>
 		<magicLvl>99</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -597,8 +571,6 @@
 		</effects>
 	</skill>
 	<skill id="4113" toLevel="1" name="Antharas Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Antharas Skills -->
 		<affectRange>100</affectRange>
 		<castRange>50</castRange>
 		<coolTime>800</coolTime>
@@ -609,7 +581,6 @@
 		<hitTime>2200</hitTime>
 		<magicLvl>99</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -622,7 +593,6 @@
 		</effects>
 	</skill>
 	<skill id="4114" toLevel="1" name="Aden Flame">
-		<!-- Freya retail confirmed -->
 		<affectRange>200</affectRange>
 		<castRange>1100</castRange>
 		<effectPoint>-100</effectPoint>
@@ -635,7 +605,6 @@
 		<mpConsume>90</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -647,7 +616,6 @@
 		</effects>
 	</skill>
 	<skill id="4115" toLevel="1" name="Aden Heal">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -657,7 +625,6 @@
 		<mpConsume>105</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -668,7 +635,7 @@
 		</effects>
 	</skill>
 	<skill id="4116" toLevel="10" name="Magic Attack Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases M. Def. -->
 		<icon>icon.skill4116_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -692,7 +659,8 @@
 		</effects>
 	</skill>
 	<skill id="4117" toLevel="12" name="Paralysis">
-		<!-- Freya retail confirmed -->
+		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -703,7 +671,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>6000</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -751,7 +718,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>PARALYZE</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -761,7 +727,8 @@
 		</effects>
 	</skill>
 	<skill id="4118" toLevel="12" name="Paralysis">
-		<!-- Confirmed CT2.5 -->
+		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -773,7 +740,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>800</effectRange>
 		<hitTime>6000</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -821,7 +787,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>PARALYZE</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -832,7 +797,8 @@
 		</effects>
 	</skill>
 	<skill id="4119" toLevel="3" name="Decrease Accuracy">
-		<!-- Freya retail confirmed -->
+		<!-- Accuracy decreases momentarily. Effect $s1 -->
+		<icon>icon.skill1222</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -846,7 +812,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1222</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -862,7 +827,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -879,7 +843,8 @@
 		</effects>
 	</skill>
 	<skill id="4120" toLevel="12" name="Stun">
-		<!-- Freya retail confirmed -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">9</value>
@@ -903,7 +868,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1200</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -936,7 +900,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>17000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -969,7 +932,6 @@
 		</effects>
 	</skill>
 	<skill id="4121" toLevel="12" name="Summoned Monster Magic Protection">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -993,8 +955,7 @@
 		</effects>
 	</skill>
 	<skill id="4122" toLevel="1" name="Antharas">
-		<!-- Confirmed CT2.5 -->
-		<!-- Antharas Skills -->
+		<!-- Vulnerable to Wind attacks but has a very powerful Earth Resistance. -->
 		<icon>icon.skillboss</icon>
 		<magicLvl>99</magicLvl>
 		<operateType>P</operateType>
@@ -1008,7 +969,7 @@
 		</effects>
 	</skill>
 	<skill id="4123" toLevel="12" name="Hostile Feeling">
-		<!-- Confirmed CT2.5 -->
+		<!-- Causes the enemy to target you for attack. -->
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">-410</value>
@@ -1056,13 +1017,11 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4124" toLevel="12" name="Spear Attack">
-		<!-- Freya retail confirmed -->
 		<castRange>700</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1200</effectRange>
@@ -1097,7 +1056,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>17000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1121,19 +1079,17 @@
 		</effects>
 	</skill>
 	<skill id="4125" toLevel="1" name="Antharas Recovery">
-		<!-- Confirmed CT2.5 -->
-		<!-- Antharas Skills -->
+		<!-- Antharas recovery stage 1. -->
+		<icon>icon.skill1044</icon>
 		<abnormalLvl>11</abnormalLvl>
 		<abnormalTime>43200</abnormalTime>
 		<abnormalType>HP_REGEN_DOWN</abnormalType>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.skill1044</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1144,16 +1100,15 @@
 		</effects>
 	</skill>
 	<skill id="4126" toLevel="1" name="Reduce Delay">
-		<!-- Freya retail confirmed -->
+		<!-- Skill Cooldown decreases temporarily. -->
+		<icon>icon.skill0164</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill0164</icon>
 		<magicLvl>40</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1169,8 +1124,6 @@
 		</effects>
 	</skill>
 	<skill id="4127" toLevel="1" name="Baium Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baium Skills -->
 		<affectRange>200</affectRange>
 		<castRange>100</castRange>
 		<coolTime>1000</coolTime>
@@ -1179,7 +1132,6 @@
 		<hitTime>1500</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1191,8 +1143,6 @@
 		</effects>
 	</skill>
 	<skill id="4128" toLevel="1" name="Wind Of Force">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baium Skills -->
 		<affectRange>600</affectRange>
 		<coolTime>1700</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1200,7 +1150,6 @@
 		<hitTime>2300</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SQUARE_PB</affectScope>
@@ -1211,15 +1160,12 @@
 		</effects>
 	</skill>
 	<skill id="4129" toLevel="1" name="Earthquake">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baium Skills -->
 		<affectRange>250</affectRange>
 		<coolTime>2500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1500</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -1231,8 +1177,6 @@
 		</effects>
 	</skill>
 	<skill id="4130" toLevel="1" name="Lightning">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baium Skills -->
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
 		<coolTime>4000</coolTime>
@@ -1241,7 +1185,6 @@
 		<hitTime>6000</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>3</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1254,8 +1197,8 @@
 		</effects>
 	</skill>
 	<skill id="4131" toLevel="1" name="Paralysis">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baium Skills -->
+		<!-- Paralyzed and unable to move temporarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -1268,12 +1211,10 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>3600</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>75</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<trait>PARALYZE</trait>
@@ -1285,13 +1226,11 @@
 		</effects>
 	</skill>
 	<skill id="4132" toLevel="1" name="Spear Attack">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>150</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3000</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -1303,14 +1242,12 @@
 		</effects>
 	</skill>
 	<skill id="4133" toLevel="1" name="Heal">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>2000</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1321,7 +1258,6 @@
 		</effects>
 	</skill>
 	<skill id="4134" toLevel="1" name="Seal">
-		<!-- Confirmed CT2.5 -->
 		<castRange>700</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
@@ -1329,20 +1265,16 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>4.5</hitCancelTime>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4135" toLevel="1" name="Baium Heal">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baium Skills -->
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1354,15 +1286,12 @@
 		</effects>
 	</skill>
 	<skill id="4136" toLevel="1" name="Baium's Gift">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baium Skills -->
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>2000</effectRange>
 		<hitTime>2000</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1374,7 +1303,6 @@
 		</effects>
 	</skill>
 	<skill id="4137" toLevel="12" name="Hydro Screw">
-		<!-- Freya retail confirmed -->
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -1414,7 +1342,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1439,7 +1366,6 @@
 		</effects>
 	</skill>
 	<skill id="4138" toLevel="12" name="Corpse Burst">
-		<!-- Freya retail confirmed -->
 		<affectRange>200</affectRange>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1478,7 +1404,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>NPC_BODY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1507,7 +1432,6 @@
 		</effects>
 	</skill>
 	<skill id="4139" toLevel="12" name="Boom Attack">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>150</affectRange>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
@@ -1530,7 +1454,6 @@
 		</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -1555,7 +1478,8 @@
 		</effects>
 	</skill>
 	<skill id="4140" toLevel="12" name="Contract Payment">
-		<!-- Freya retail confirmed -->
+		<!-- Your MP is continuously consumed as payment for summoning an unholy creature. Effect $s1 -->
+		<icon>icon.skill1100</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1576,7 +1500,6 @@
 		<castRange>600</castRange>
 		<effectPoint>1</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill1100</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>
@@ -1595,7 +1518,6 @@
 		</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -1621,7 +1543,6 @@
 		</effects>
 	</skill>
 	<skill id="4141" toLevel="12" name="Wind Fist">
-		<!-- Freya retail confirmed -->
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
@@ -1643,7 +1564,6 @@
 			<value level="12">95</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1676,7 +1596,6 @@
 			<value level="12">95</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1688,7 +1607,6 @@
 		</effects>
 	</skill>
 	<skill id="4143" toLevel="10" name="Bomb">
-		<!-- Freya retail confirmed -->
 		<affectRange>350</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>500</hitTime>
@@ -1707,7 +1625,6 @@
 			<value level="10">95</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -1730,7 +1647,6 @@
 		</effects>
 	</skill>
 	<skill id="4144" toLevel="80" name="Mimic Attack">
-		<!-- Freya retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1819,7 +1735,6 @@
 			<value level="80">80</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1911,8 +1826,8 @@
 		</effects>
 	</skill>
 	<skill id="4145" toLevel="3" name="P. Atk. Decrease">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- P. Atk. decreases momentarily. Effect $s1 -->
+		<icon>icon.skill4037</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1923,12 +1838,10 @@
 		<activateRate>10</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill4037</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -1945,8 +1858,8 @@
 		</effects>
 	</skill>
 	<skill id="4146" toLevel="3" name="Decrease P. Def.">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- P. Def. decreases momentarily. Effect $s1 -->
+		<icon>icon.skill0122</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1957,12 +1870,10 @@
 		<activateRate>10</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0122</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -1979,8 +1890,6 @@
 		</effects>
 	</skill>
 	<skill id="4147" toLevel="7" name="Dispel">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
 		<effectPoint>-100</effectPoint>
 		<magicLvl>
 			<value level="1">10</value>
@@ -1992,7 +1901,6 @@
 			<value level="7">70</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -2002,8 +1910,8 @@
 		</effects>
 	</skill>
 	<skill id="4148" toLevel="12" name="Poison">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4036</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2025,7 +1933,6 @@
 		<activateRate>10</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill4036</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -2043,7 +1950,6 @@
 			<value level="12">95</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>POISON</trait>
@@ -2070,8 +1976,8 @@
 		</effects>
 	</skill>
 	<skill id="4149" toLevel="12" name="Bleed">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2093,7 +1999,6 @@
 		<activateRate>10</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -2111,7 +2016,6 @@
 			<value level="12">95</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -2138,8 +2042,8 @@
 		</effects>
 	</skill>
 	<skill id="4150" toLevel="12" name="Flame">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- HP decreases momentarily from burning flame. Effect $s1 -->
+		<icon>icon.skill1100</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2162,7 +2066,6 @@
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
-		<icon>icon.skill1100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -2180,7 +2083,6 @@
 			<value level="12">95</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -2206,7 +2108,6 @@
 		</effects>
 	</skill>
 	<skill id="4151" toLevel="12" name="Dagger Storm">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2243,7 +2144,6 @@
 			<value level="12">39</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>3.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2268,7 +2168,6 @@
 		</effects>
 	</skill>
 	<skill id="4152" toLevel="12" name="Drain HP">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2319,7 +2218,6 @@
 			<value level="12">11</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>3.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2345,7 +2243,8 @@
 		</effects>
 	</skill>
 	<skill id="4153" toLevel="12" name="Decrease Speed">
-		<!-- Freya retail confirmed -->
+		<!-- Speed decreases momentarily. Effect $s1 -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2358,7 +2257,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3100</hitTime>
-		<icon>icon.skill1184</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -2405,7 +2303,6 @@
 			<value level="12">8</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>3.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2434,7 +2331,6 @@
 		</effects>
 	</skill>
 	<skill id="4154" toLevel="12" name="Mana Burn">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2469,7 +2365,6 @@
 			<value level="12">39</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>3.5</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2495,7 +2390,6 @@
 		</effects>
 	</skill>
 	<skill id="4155" toLevel="12" name="Twister">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2532,7 +2426,6 @@
 			<value level="12">39</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>3.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2557,7 +2450,6 @@
 		</effects>
 	</skill>
 	<skill id="4156" toLevel="12" name="Beam Cannon">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2592,7 +2484,6 @@
 			<value level="12">39</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>3.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2617,7 +2508,6 @@
 		</effects>
 	</skill>
 	<skill id="4157" toLevel="12" name="Blaze">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2668,7 +2558,6 @@
 			<value level="12">8</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>3.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2693,7 +2582,6 @@
 		</effects>
 	</skill>
 	<skill id="4158" toLevel="12" name="Prominence">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2730,7 +2618,6 @@
 			<value level="12">39</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>3.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2755,7 +2642,6 @@
 		</effects>
 	</skill>
 	<skill id="4159" toLevel="12" name="Beam Cannon">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2790,7 +2676,6 @@
 			<value level="12">39</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>3.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2815,7 +2700,6 @@
 		</effects>
 	</skill>
 	<skill id="4160" toLevel="12" name="Aura Burn">
-		<!-- Freya retail confirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>650</effectRange>
@@ -2850,7 +2734,6 @@
 			<value level="12">10</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2875,22 +2758,19 @@
 		</effects>
 	</skill>
 	<skill id="4161" toLevel="1" name="Summon">
-		<!-- Confirmed CT2.5 -->
-		<!-- Teleports player to mob (Porta/Perum skill) -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4162" toLevel="3" name="Decrease Atk. Spd.">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- Atk. Spd. decreases momentarily. Effect $s1 -->
+		<icon>icon.skill1206</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2901,12 +2781,10 @@
 		<activateRate>10</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill1206</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -2923,7 +2801,6 @@
 		</effects>
 	</skill>
 	<skill id="4163" toLevel="12" name="Damage Shield">
-		<!-- Freya retail confirmed -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
@@ -2958,7 +2835,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2973,14 +2849,13 @@
 		</effects>
 	</skill>
 	<skill id="4164" toLevel="18" name="Paralysis">
-		<!-- Cubic skill -->
-		<!-- Confirmed CT2.5 -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<activateRate>40</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -3005,7 +2880,6 @@
 			<value level="18">85</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>PARALYZE</trait>
@@ -3027,14 +2901,14 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>6125</skillId>
+				<skillId>6125</skillId> <!-- Paralysis -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="4165" toLevel="17" name="Icy Air">
-		<!-- Cubic skill -->
-		<!-- Confirmed CT2.5 -->
+		<!-- Continuously damaged by icy air. Effect $s1 -->
+		<icon>icon.skill1183</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -3060,7 +2934,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
-		<icon>icon.skill1183</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -3084,7 +2957,6 @@
 			<value level="17">85</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -3115,15 +2987,14 @@
 		</effects>
 	</skill>
 	<skill id="4166" toLevel="18" name="Stun">
-		<!-- Cubic skill -->
-		<!-- Confirmed CT2.5 -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0279</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill0279</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -3148,7 +3019,6 @@
 			<value level="18">85</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>SHOCK</trait>
@@ -3159,17 +3029,16 @@
 		</effects>
 	</skill>
 	<skill id="4167" toLevel="1" name="Curse of Fairy Mimyu">
-		<!-- Freya retail confirmed -->
+		<!-- Fairy Mimyu's Curse reduces Speed and Atk. Speed. -->
+		<icon>icon.skill1206</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill1206</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -3188,7 +3057,6 @@
 		</effects>
 	</skill>
 	<skill id="4168" toLevel="12" name="Power Strike">
-		<!-- Freya retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3223,7 +3091,6 @@
 			<value level="12">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3247,7 +3114,8 @@
 		</effects>
 	</skill>
 	<skill id="4169" toLevel="12" name="Stun">
-		<!-- Freya retail confirmed -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -3272,7 +3140,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -3303,7 +3170,6 @@
 			<value level="12">87</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -3329,7 +3195,6 @@
 		</effects>
 	</skill>
 	<skill id="4170" toLevel="12" name="Mortal Blow">
-		<!-- Freya retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3364,7 +3229,6 @@
 			<value level="12">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3389,7 +3253,6 @@
 		</effects>
 	</skill>
 	<skill id="4171" toLevel="12" name="Spinning Slasher">
-		<!-- Freya retail confirmed -->
 		<affectRange>200</affectRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3423,7 +3286,6 @@
 			<value level="12">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -3448,7 +3310,8 @@
 		</effects>
 	</skill>
 	<skill id="4172" toLevel="12" name="Stun">
-		<!-- Freya retail confirmed -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3459,7 +3322,6 @@
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -3490,7 +3352,6 @@
 			<value level="12">87</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
@@ -3504,7 +3365,8 @@
 		</effects>
 	</skill>
 	<skill id="4173" toLevel="12" name="Might">
-		<!-- Freya retail confirmed -->
+		<!-- Increases P. Atk. -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -3541,11 +3403,9 @@
 			<value level="12">40</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill1068</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3556,7 +3416,8 @@
 		</effects>
 	</skill>
 	<skill id="4174" toLevel="12" name="Shield">
-		<!-- Freya retail confirmed -->
+		<!-- Increases P. Def. -->
+		<icon>icon.skill1040</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -3593,11 +3454,9 @@
 			<value level="12">40</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill1040</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3608,7 +3467,8 @@
 		</effects>
 	</skill>
 	<skill id="4175" toLevel="12" name="Haste">
-		<!-- Freya retail confirmed -->
+		<!-- Increases Atk. Spd. -->
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -3645,11 +3505,9 @@
 			<value level="12">40</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill1086</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3660,7 +3518,8 @@
 		</effects>
 	</skill>
 	<skill id="4176" toLevel="12" name="Reflect Damage">
-		<!-- Freya retail confirmed -->
+		<!-- Returns received damage. -->
+		<icon>icon.skill0086</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
@@ -3697,11 +3556,9 @@
 			<value level="12">40</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill0086</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3712,7 +3569,6 @@
 		</effects>
 	</skill>
 	<skill id="4177" toLevel="12" name="Cancellation">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>200</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1500</hitTime>
@@ -3745,7 +3601,6 @@
 			<value level="12">79</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -3755,7 +3610,6 @@
 		</effects>
 	</skill>
 	<skill id="4178" toLevel="12" name="Flame Strike">
-		<!-- Freya retail confirmed -->
 		<affectRange>200</affectRange>
 		<castRange>700</castRange>
 		<effectPoint>-100</effectPoint>
@@ -3792,7 +3646,6 @@
 			<value level="12">118</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -3817,7 +3670,6 @@
 		</effects>
 	</skill>
 	<skill id="4179" toLevel="12" name="Power Strike">
-		<!-- Freya retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3852,7 +3704,6 @@
 			<value level="12">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3876,7 +3727,8 @@
 		</effects>
 	</skill>
 	<skill id="4180" toLevel="12" name="Stun">
-		<!-- Freya retail confirmed -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -3901,7 +3753,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -3932,7 +3783,6 @@
 			<value level="12">87</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -3958,7 +3808,6 @@
 		</effects>
 	</skill>
 	<skill id="4181" toLevel="12" name="Mortal Blow">
-		<!-- Freya retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3993,7 +3842,6 @@
 			<value level="12">87</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4018,7 +3866,8 @@
 		</effects>
 	</skill>
 	<skill id="4182" toLevel="12" name="Poison">
-		<!-- Freya retail confirmed -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill1168</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -4042,7 +3891,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3300</hitTime>
-		<icon>icon.skill1168</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4073,7 +3921,6 @@
 			<value level="12">116</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>POISON</trait>
 		<targetType>SELF</targetType>
@@ -4100,7 +3947,8 @@
 		</effects>
 	</skill>
 	<skill id="4183" toLevel="12" name="P. Atk. Decrease">
-		<!-- Freya retail confirmed -->
+		<!-- P. Atk. decreases momentarily. Effect $s1 -->
+		<icon>icon.skill1164</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4122,7 +3970,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3300</hitTime>
-		<icon>icon.skill1164</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4153,7 +4000,6 @@
 			<value level="12">116</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -4179,7 +4025,8 @@
 		</effects>
 	</skill>
 	<skill id="4184" toLevel="12" name="Decrease Atk. Spd.">
-		<!-- Freya retail confirmed -->
+		<!-- Atk. Spd. decreases momentarily. Effect $s1 -->
+		<icon>icon.skill1206</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4201,7 +4048,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3300</hitTime>
-		<icon>icon.skill1206</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4232,7 +4078,6 @@
 			<value level="12">116</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -4258,7 +4103,8 @@
 		</effects>
 	</skill>
 	<skill id="4185" toLevel="12" name="Sleep">
-		<!-- Freya retail confirmed -->
+		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<icon>icon.skill1069</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">10</value>
@@ -4281,7 +4127,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3300</hitTime>
-		<icon>icon.skill1069</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4313,7 +4158,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<removedOnDamage>true</removedOnDamage>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SLEEP</trait>
 		<targetType>SELF</targetType>
@@ -4324,7 +4168,8 @@
 		</effects>
 	</skill>
 	<skill id="4186" toLevel="12" name="Hold">
-		<!-- Freya retail confirmed -->
+		<!-- Inflicted with Hold and unable to move. -->
+		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">10</value>
@@ -4347,7 +4192,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3300</hitTime>
-		<icon>icon.skill1201</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4378,7 +4222,6 @@
 			<value level="12">116</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>HOLD</trait>
 		<targetType>SELF</targetType>
@@ -4389,7 +4232,8 @@
 		</effects>
 	</skill>
 	<skill id="4187" toLevel="12" name="Decrease Speed">
-		<!-- Freya retail confirmed -->
+		<!-- Speed decreases momentarily. Effect $s1 -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4411,7 +4255,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3300</hitTime>
-		<icon>icon.skill1160</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4442,7 +4285,6 @@
 			<value level="12">116</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -4468,7 +4310,8 @@
 		</effects>
 	</skill>
 	<skill id="4188" toLevel="12" name="Bleed">
-		<!-- Freya retail confirmed -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -4492,7 +4335,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3300</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4523,7 +4365,6 @@
 			<value level="12">116</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>BLEED</trait>
 		<targetType>SELF</targetType>
@@ -4550,7 +4391,8 @@
 		</effects>
 	</skill>
 	<skill id="4189" toLevel="12" name="Paralysis">
-		<!-- Freya retail confirmed -->
+		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">10</value>
@@ -4573,7 +4415,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3300</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4604,7 +4445,6 @@
 			<value level="12">116</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>PARALYZE</trait>
 		<targetType>SELF</targetType>
@@ -4615,7 +4455,8 @@
 		</effects>
 	</skill>
 	<skill id="4190" toLevel="12" name="Decrease MP">
-		<!-- Freya retail confirmed -->
+		<!-- MP decreases. Effect $s1 -->
+		<icon>icon.skill1102</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">2</value>
@@ -4638,7 +4479,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3300</hitTime>
-		<icon>icon.skill1102</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4669,7 +4509,6 @@
 			<value level="12">116</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -4695,7 +4534,6 @@
 		</effects>
 	</skill>
 	<skill id="4191" toLevel="12" name="Dagger Storm">
-		<!-- Freya retail confirmed -->
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
@@ -4731,7 +4569,6 @@
 			<value level="12">78</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4755,7 +4592,6 @@
 		</effects>
 	</skill>
 	<skill id="4192" toLevel="12" name="Vampiric Touch">
-		<!-- Freya retail confirmed -->
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
@@ -4791,7 +4627,6 @@
 			<value level="12">139</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4816,7 +4651,6 @@
 		</effects>
 	</skill>
 	<skill id="4193" toLevel="12" name="Drain Energy">
-		<!-- Freya retail confirmed -->
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
@@ -4850,7 +4684,6 @@
 			<value level="12">201</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4875,7 +4708,6 @@
 		</effects>
 	</skill>
 	<skill id="4194" toLevel="12" name="Aura Burn">
-		<!-- Freya retail confirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>650</effectRange>
@@ -4909,7 +4741,6 @@
 			<value level="12">78</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4933,7 +4764,6 @@
 		</effects>
 	</skill>
 	<skill id="4195" toLevel="12" name="Twister">
-		<!-- Freya retail confirmed -->
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
@@ -4969,7 +4799,6 @@
 			<value level="12">78</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4993,7 +4822,8 @@
 		</effects>
 	</skill>
 	<skill id="4196" toLevel="12" name="Decrease Speed">
-		<!-- Freya retail confirmed -->
+		<!-- Speed decreases momentarily. Effect $s1 -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -5006,7 +4836,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2300</hitTime>
-		<icon>icon.skill1184</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -5037,7 +4866,6 @@
 			<value level="12">78</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -5065,7 +4893,8 @@
 		</effects>
 	</skill>
 	<skill id="4197" toLevel="12" name="Hold">
-		<!-- Freya retail confirmed -->
+		<!-- Inflicted with Hold and unable to move. -->
+		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">10</value>
@@ -5090,7 +4919,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1200</effectRange>
 		<hitTime>3300</hitTime>
-		<icon>icon.skill1201</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -5121,7 +4949,6 @@
 			<value level="12">116</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>HOLD</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -5132,7 +4959,8 @@
 		</effects>
 	</skill>
 	<skill id="4198" toLevel="12" name="Poison">
-		<!-- Freya retail confirmed -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill1168</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -5157,7 +4985,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1168</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -5188,7 +5015,6 @@
 			<value level="12">116</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>POISON</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -5214,7 +5040,8 @@
 		</effects>
 	</skill>
 	<skill id="4199" toLevel="12" name="P. Atk. Decrease">
-		<!-- Freya retail confirmed -->
+		<!-- P. Atk. decreases momentarily. Effect $s1 -->
+		<icon>icon.skill1164</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5237,7 +5064,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1164</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -5268,7 +5094,6 @@
 			<value level="12">116</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>

@@ -74,7 +74,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_questitem" val="true" />
 		<skills>
 			<skill id="2171" level="1" /> <!-- Spellbook Paper -->
 		</skills>
@@ -311,7 +310,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_questitem" val="true" />
 		<skills>
 			<skill id="2172" level="1" /> <!-- Scroll of Giants -->
 		</skills>
@@ -405,7 +403,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_questitem" val="true" />
 		<skills>
 			<skill id="2173" level="1" /> <!-- Book of Giants -->
 		</skills>

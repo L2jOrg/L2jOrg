@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="205" toLevel="53" name="Sword/Blunt Weapon Mastery">
-		<!-- Scavenger, Bounty Hunter, Fortune Seeker, Artisan, Warsmith, Maestro -->
+		<!-- P. Atk. +$s1 when using a sword or a blunt weapon, with an additionally +$s2 when using a sword, or +$s3 when using a blunt weapon. -->
 		<icon>icon.skill0217</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -79,7 +79,7 @@
 				<targetType>SELF</targetType>
 				<isCritical>true</isCritical>
 				<allowWeapons>SWORD,BLUNT</allowWeapons>
-				<skillId>5604</skillId>
+				<skillId>5604</skillId> <!-- Sword/Blunt Weapon Mastery -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="PAtk"> <!-- Increase while wearing Sword/Blunt -->
@@ -269,6 +269,7 @@
 		</effects>
 	</skill>
 	<skill id="208" toLevel="60" name="Bow Mastery">
+		<!-- P. Atk. +$s1 when using a bow. -->
 		<icon>icon.skill0208</icon>
 		<magicLvl>
 			<value level="1">18</value>
@@ -406,6 +407,7 @@
 		</effects>
 	</skill>
 	<skill id="209" toLevel="53" name="Dagger Mastery">
+		<!-- P. Atk. +$s1 when using a dagger. -->
 		<icon>icon.skill0209</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -474,8 +476,8 @@
 				<chance>33</chance>
 				<targetType>SELF</targetType>
 				<isCritical>true</isCritical>
-				<allowWeapons>DAGGER</allowWeapons>
-				<skillId>5603</skillId>
+				<allowWeapons>DAGGER,DUALDAGGER</allowWeapons>
+				<skillId>5603</skillId> <!-- Dagger Mastery -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="PAtk">
@@ -537,12 +539,13 @@
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>DAGGER</item>
-
+					<item>DUALDAGGER</item>
 				</weaponType>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="210" toLevel="53" name="Fist Weapon Mastery">
+		<!-- P. Atk. +$s1 when using a fist weapon. -->
 		<icon>icon.skill0210</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -666,7 +669,7 @@
 		</effects>
 	</skill>
 	<skill id="211" toLevel="10" name="Boost HP">
-		<!-- Warrior, Warlord, Raider, Destroyer, Scavenger, Bounty Hunter, Artisan, Warsmith, Prophet, Overlord, Warcryer -->
+		<!-- Max HP +$s1 -->
 		<icon>icon.skill0211</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -701,6 +704,7 @@
 		</effects>
 	</skill>
 	<skill id="212" toLevel="8" name="Fast HP Recovery">
+		<!-- HP Recovery Bonus +$s1. -->
 		<icon>icon.skill0212</icon>
 		<magicLvl>
 			<value level="1">24</value>
@@ -731,6 +735,7 @@
 		</effects>
 	</skill>
 	<skill id="213" toLevel="8" name="Boost Mana">
+		<!-- Max MP +$s1 -->
 		<icon>icon.skill0213</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -761,6 +766,7 @@
 		</effects>
 	</skill>
 	<skill id="214" toLevel="1" name="Mana Recovery">
+		<!-- Increases MP Recovery Bonus when equipped with a magic armor. -->
 		<icon>icon.skill0214</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -776,7 +782,7 @@
 		</effects>
 	</skill>
 	<skill id="216" toLevel="53" name="Polearm Mastery">
-		<!-- Warrior, Warlord, Dreadnought, Raider, Destroyer, Titan, Scavenger, Bounty Hunter, Fortune Seeker, Artisan, Warsmith, Maestro -->
+		<!-- P. Atk. +$s1 when using a polearm, and allows an attack on multiple targets. -->
 		<icon>icon.skill0216</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -961,7 +967,7 @@
 		</effects>
 	</skill>
 	<skill id="217" toLevel="53" name="Sword/Blunt Weapon Mastery">
-		<!-- Human Knight, Paladin, Phoenix Knight, Dark Avenger, Hell Knight, Elven Knight, Temple Knight, Evas Templar, Swordsinger, Sword Muse, Palus Knight, Shillien Knight, Shillien Templar -->
+		<!-- P. Atk. +$s1 when using a sword or blunt weapon. -->
 		<icon>icon.skill0217</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -1086,13 +1092,12 @@
 		</effects>
 	</skill>
 	<skill id="221" toLevel="1" name="Silent Move">
-		<!-- Confirmed CT2.5 -->
-		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
+		<!-- Disables preemptive attacks from enemies. Speed -20% and continuously consumes MP. -->
 		<icon>icon.skill0221</icon>
+		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<magicLvl>40</magicLvl>
 		<mpConsume>7</mpConsume>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
@@ -1110,18 +1115,16 @@
 		</effects>
 	</skill>
 	<skill id="222" toLevel="4" name="Fury Fists">
-		<!-- TODO: Auto level parse, Requires manual update -->
-		<!-- Confirmed CT2.5 -->
+		<!-- Atk. Spd +$s1. Continuously consumes HP. -->
 		<icon>icon.skill0222</icon>
 		<magicLvl>43</magicLvl>
 		<mpConsume>8</mpConsume>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
-			<effect name="DamOverTime">
-				<power>12</power>
+			<effect name="HealOverTime">
+				<power>-12</power>
 				<ticks>2</ticks>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
@@ -1131,6 +1134,8 @@
 		</effects>
 	</skill>
 	<skill id="223" toLevel="52" name="Sting">
+		<!-- Attacks the enemy with $s1 Power added to P. Atk., and inflicts Bleed causing loss of $s3 HP per sec. for $s2. Requires a sword, dagger, or dual sword. Over-hit. -->
+		<icon>icon.skill0223</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -1249,7 +1254,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0223</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -1363,7 +1367,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>BLEED</trait>
 		<targetType>ENEMY</targetType>
@@ -1374,8 +1377,8 @@
 					<item>SWORD</item>
 					<item>DAGGER</item>
 					<item>DUAL</item>
-
-
+					<item>DUALBLUNT</item>
+					<item>DUALDAGGER</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -1497,7 +1500,7 @@
 		</effects>
 	</skill>
 	<skill id="225" toLevel="3" name="Acrobatic Move">
-		<!-- Confirmed CT2.5 -->
+		<!-- Evasion +$s1 when running. -->
 		<icon>icon.skill0225</icon>
 		<magicLvl>
 			<value level="1">28</value>
@@ -1522,11 +1525,11 @@
 		</effects>
 	</skill>
 	<skill id="226" toLevel="1" name="Relax">
+		<!-- HP Recovery Bonus + 5. While sitting, 1 MP is consumed per sec. -->
 		<icon>icon.skill0226</icon>
 		<magicLvl>5</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
@@ -1541,7 +1544,7 @@
 		</effects>
 	</skill>
 	<skill id="227" toLevel="58" name="Light Armor Mastery">
-		<!-- Warrior, Warlord, Dreadnought, Gladiator, Duelist, Raider, Destroyer, Titan, Scavenger, Bounty Hunter, Fortune Seeker, Artisan, Warsmith, Maestro -->
+		<!-- P. Def. +$s1 and Evasion +$s2 when equipped with light armor. -->
 		<icon>icon.skill0227</icon>
 		<magicLvl>
 			<value level="1">18</value>
@@ -1741,7 +1744,7 @@
 		</effects>
 	</skill>
 	<skill id="228" toLevel="3" name="Fast Spell Casting">
-		<!-- Confirmed CT2.5 -->
+		<!-- Casting Spd. +$s1 -->
 		<icon>icon.skill0228</icon>
 		<magicLvl>
 			<value level="1">25</value>
@@ -1762,6 +1765,7 @@
 		</effects>
 	</skill>
 	<skill id="229" toLevel="7" name="Fast Mana Recovery">
+		<!-- MP Recovery Bonus +$s1. -->
 		<icon>icon.skill0229</icon>
 		<magicLvl>
 			<value level="1">25</value>
@@ -1790,6 +1794,8 @@
 		</effects>
 	</skill>
 	<skill id="230" toLevel="2" name="Sprint">
+		<!-- For $s1 Speed +$s2. -->
+		<icon>icon.skill0230</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1801,7 +1807,6 @@
 			<value level="2">495</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill0230</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">32</value>
@@ -1817,7 +1822,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1833,7 +1837,7 @@
 		</effects>
 	</skill>
 	<skill id="231" toLevel="58" name="Heavy Armor Mastery">
-		<!-- Warrior, Warlord, Dreadnought, Gladiator, Duelist, Raider, Destroyer, Titan, Scavenger, Bounty Hunter, Fortune Seeker, Artisan, Warsmith, Maestro -->
+		<!-- When equipped with Heavy Armor, P. Def. +$s1. -->
 		<icon>icon.skill0231</icon>
 		<magicLvl>
 			<value level="1">18</value>
@@ -1967,7 +1971,7 @@
 		</effects>
 	</skill>
 	<skill id="232" toLevel="60" name="Heavy Armor Mastery">
-		<!-- Human Knight, Paladin, Phoenix Knight, Dark Avenger, Hell Knight, Elven Knight, Temple Knight, Evas Templar, Swordsinger, Sword Muse, Palus Knight, Shillien Knight, Shillien Templar, Bladedancer, Spectral Dancer -->
+		<!-- P. Def. +$s1 and received Critical Damage -$s2 when equipped with heavy armor. -->
 		<icon>icon.skill0232</icon>
 		<magicLvl>
 			<value level="1">18</value>
@@ -2173,7 +2177,7 @@
 		</effects>
 	</skill>
 	<skill id="233" toLevel="55" name="Light Armor Mastery">
-		<!-- Rogue, Treasure Hunter, Adventurer, Hawkeye, Sagittarius, Elven Scout, Plains Walker, Wind Rider, Silver Ranger, Moonlight Sentinel, Assassin, Abyss Walker, Ghost Hunter, Phantom Ranger, Ghost Sentinel, Monk, Tyrant, Grand Khavatari -->
+		<!-- P. Def. +$s1, P. Evasion +$s2 and Chance of receiving P. Critical Attack -$s3 when equipped with light armor. -->
 		<icon>icon.skill0233</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2371,7 +2375,7 @@
 		</effects>
 	</skill>
 	<skill id="234" toLevel="49" name="Robe Mastery">
-		<!-- Cleric, Bishop, Cardinal, Prophet, Hierophant, Elven Oracle, Elven Elder, Evas Saint, Shillien Oracle, Shillien Elder, Shillien Saint -->
+		<!-- When equipped with a Robe, P. Def. +$s1. -->
 		<icon>icon.skill0234</icon>
 		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
@@ -2437,7 +2441,7 @@
 		</effects>
 	</skill>
 	<skill id="235" toLevel="49" name="Robe Mastery">
-		<!-- Human Wizard, Sorcerer, Archmage, Necromancer, Soultaker, Warlock, Arcana Lord, Elven Wizard, Spellsinger, Mystic Muse, Elemental Summoner, Elemental Master, Dark Wizard, Spellhowler, Storm Screamer, Phantom Summoner, Spectral Master -->
+		<!-- When equipped with a Robe, P. Def. +$s1. -->
 		<icon>icon.skill0235</icon>
 		<magicLvl>
 			<value level="1">18</value>
@@ -2553,7 +2557,7 @@
 		</effects>
 	</skill>
 	<skill id="236" toLevel="49" name="Light Armor Mastery">
-		<!-- Cleric, Bishop, Cardinal, Prophet, Hierophant, Elven Oracle, Elven Elder, Evas Saint, Shillien Oracle, Shillien Elder, Shillien Saint -->
+		<!-- When equipped with light armor, P. Def. +$s1, Casting Spd. +$s2, Atk. Spd. +$s3, and MP Recovery Bonus +$s4. -->
 		<icon>icon.skill0236</icon>
 		<magicLvl>
 			<value level="1">18</value>
@@ -2690,6 +2694,7 @@
 		</effects>
 	</skill>
 	<skill id="239" toLevel="10" name="Expertise D">
+		<!-- Allows use of D-grade equipment. -->
 		<icon>
 			<value level="1">icon.skill0239</value>
 			<value level="2">icon.skill0240</value>
@@ -2697,10 +2702,9 @@
 			<value level="4">icon.skill0242</value>
 			<value level="5">icon.skill0243</value>
 			<value level="6">icon.skill0243</value>
-			<value level="7">icon.skill0243</value>
-			<value level="8">icon.skill0243</value>
-			<value level="9">icon.skill0243</value>
-			<value level="10">icon.skill0243</value>
+			<value level="7">icon.skill0243_1</value>
+			<value level="8">icon.skill0243_1</value>
+			<value level="9">icon.skill0243_1</value>
 		</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -2718,7 +2722,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="244" toLevel="3" name="Armor Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- P. Def. +$s1 -->
 		<icon>icon.skill0244</icon>
 		<magicLvl>
 			<value level="1">7</value>
@@ -2739,6 +2743,8 @@
 		</effects>
 	</skill>
 	<skill id="245" toLevel="15" name="Wild Sweep">
+		<!-- Attacks multiple enemies simultaneously with $s1 Power added to P. Atk. Requires a polearm. Over-hit. -->
+		<icon>icon.skill0245</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>80</affectRange>
 		<castRange>40</castRange>
@@ -2763,7 +2769,6 @@
 		<effectRange>400</effectRange>
 		<fanRange>0;0;80;150</fanRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0245</icon>
 		<magicLvl>
 			<value level="1">18</value>
 			<value level="2">19</value>
@@ -2801,7 +2806,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
@@ -2837,18 +2841,16 @@
 		</effects>
 	</skill>
 	<skill id="246" toLevel="1" name="Seal of Ruler">
-		<!-- Confirmed CT2.5 -->
-		<!-- Not Used Anymore -->
+		<!-- Engraves the Seal of Ruler on the holy artifact which guards the castle. -->
+		<icon>icon.skill0246</icon>
 		<castRange>85</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>180000</hitTime>
-		<icon>icon.skill0246</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>30</magicLvl>
 		<mpInitialConsume>50</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>HOLYTHING</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2862,8 +2864,9 @@
 		</effects>
 	</skill>
 	<skill id="247" toLevel="1" name="Build Headquarters">
-		<hitTime>4000</hitTime>
+		<!-- Establishes a headquarters during a siege that aids in recovery and reinforcement of forces. Consumes 500 D-grade Crystals. -->
 		<icon>icon.skill0247</icon>
+		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>500</itemConsumeCount>
 		<itemConsumeId>1458</itemConsumeId> <!-- Crystal D -->
@@ -2871,7 +2874,6 @@
 		<mpInitialConsume>30</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1800000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>4</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2885,7 +2887,7 @@
 		</effects>
 	</skill>
 	<skill id="248" toLevel="6" name="Crystallize">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<!-- Makes D-grade Crystallization possible. -->
 		<icon>icon.skill0248</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -2899,7 +2901,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="249" toLevel="50" name="Weapon Mastery">
-		<!-- Human Mystic, Human Wizard, Sorcerer, Archmage, Necromancer, Soultaker, Warlock, Arcana Lord, Cleric, Bishop, Cardinal, Prophet, Hierophant, Elven Mystic, Elven Wizard, Spellsinger, Mystic Muse, Elemental Summoner, Elemental Master, Elven Oracle, Elven Elder, Evas Saint, Dark Mystic, Dark Wizard, Spellhowler, Storm Screamer, Phantom Summoner, Spectral Master, Shillien Oracle, Shillien Elder, Shillien Saint -->
+		<!-- P. Atk. +$s1, M. Atk. +$s2. -->
 		<icon>icon.skill0249</icon>
 		<magicLvl>
 			<value level="1">7</value>
@@ -3085,7 +3087,7 @@
 		</effects>
 	</skill>
 	<skill id="250" toLevel="50" name="Weapon Mastery">
-		<!-- Orc Mystic, Orc Shaman, Overlord, Dominator, Warcryer, Doomcryer -->
+		<!-- P. Atk. +$s1, M. Atk. +$s2. -->
 		<icon>icon.skill0250</icon>
 		<magicLvl>
 			<value level="1">7</value>
@@ -3326,7 +3328,7 @@
 		</effects>
 	</skill>
 	<skill id="251" toLevel="53" name="Robe Mastery">
-		<!-- Orc Mystic, Orc Shaman, Overlord, Dominator, Warcryer, Doomcryer -->
+		<!-- When equipped with a Robe, P. Def. +$s1. -->
 		<icon>icon.skill0251</icon>
 		<magicLvl>
 			<value level="1">4</value>
@@ -3450,7 +3452,7 @@
 		</effects>
 	</skill>
 	<skill id="252" toLevel="53" name="Light Armor Mastery">
-		<!-- Orc Mystic, Orc Shaman, Overlord, Dominator, Warcryer, Doomcryer -->
+		<!-- When equipped with light armor, P. Def. +$s1, Casting Spd. +$s2, Atk. Spd. +$s3, and MP Recovery Bonus +$s4. -->
 		<icon>icon.skill0252</icon>
 		<magicLvl>
 			<value level="1">4</value>
@@ -3595,7 +3597,7 @@
 		</effects>
 	</skill>
 	<skill id="253" toLevel="51" name="Heavy Armor Mastery">
-		<!-- Orc Mystic, Orc Shaman, Overlord, Dominator, Warcryer, Doomcryer -->
+		<!-- When equipped with heavy armor, P. Def. +$s1, Casting Spd. +$s2, and Atk. Spd. +$s3. -->
 		<icon>icon.skill0253</icon>
 		<magicLvl>
 			<value level="1">11</value>
@@ -3729,6 +3731,8 @@
 		</effects>
 	</skill>
 	<skill id="254" toLevel="17" name="Spoil">
+		<!-- Imbues a monster with magic that renders it susceptible to the Sweeper skill. -->
+		<icon>icon.skill0254</icon>
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-138</value>
@@ -3748,7 +3752,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1800</hitTime>
-		<icon>icon.skill0254</icon>
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -3790,7 +3793,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
@@ -3800,6 +3802,8 @@
 		</effects>
 	</skill>
 	<skill id="255" toLevel="15" name="Power Smash">
+		<!-- Lands an excruciating blow with $s1 Power added to P. Atk. Requires a sword/ a blunt weapon. Over-hit. -->
+		<icon>icon.skill0255</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -3821,7 +3825,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0255</icon>
 		<magicLvl>
 			<value level="1">18</value>
 			<value level="2">19</value>
@@ -3859,7 +3862,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3895,11 +3897,11 @@
 		</effects>
 	</skill>
 	<skill id="256" toLevel="1" name="Accuracy">
+		<!-- Accuracy +3. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0256</icon>
 		<magicLvl>24</magicLvl>
 		<mpConsume>5</mpConsume>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
@@ -3914,7 +3916,7 @@
 		</effects>
 	</skill>
 	<skill id="257" toLevel="53" name="Sword/Blunt Weapon Mastery">
-		<!-- Warrior, Gladiator, Duelist, Raider, Destroyer, Titan -->
+		<!-- P. Atk. +$s1 when using a sword or blunt weapon. -->
 		<icon>icon.skill0257</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -4039,7 +4041,7 @@
 		</effects>
 	</skill>
 	<skill id="258" toLevel="41" name="Light Armor Mastery">
-		<!-- Warlock, Arcana Lord, Elemental Summoner, Elemental Master, Phantom Summoner, Spectral Master -->
+		<!-- When equipped with light armor, P. Def. +$s1, Casting Spd. +$s2, Atk. Spd. +$s3, and MP Recovery Bonus +$s4. -->
 		<icon>icon.skill0258</icon>
 		<magicLvl>
 			<value level="1">38</value>
@@ -4160,7 +4162,7 @@
 		</effects>
 	</skill>
 	<skill id="259" toLevel="41" name="Heavy Armor Mastery">
-		<!-- Prophet, Hierophant -->
+		<!-- When equipped with heavy armor, P. Def. +$s1, Casting Spd. +$s2, and Atk. Spd. +$s3. -->
 		<icon>icon.skill0259</icon>
 		<magicLvl>
 			<value level="1">38</value>
@@ -4274,7 +4276,8 @@
 		</effects>
 	</skill>
 	<skill id="260" toLevel="45" name="Hammer Crush">
-		<!-- Gladiator, Destroyer, Titan, Bounty Hunter, Fortune Seeker, Warsmith, Maestro, Overlord, Warcryer -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. and inflicts Stun for $s2. Requires a blunt weapon. Ignores Shield Defense. Over-hit. -->
+		<icon>icon.skill0260</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -4327,7 +4330,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0260</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -4427,7 +4429,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -4496,7 +4497,8 @@
 		</effects>
 	</skill>
 	<skill id="261" toLevel="34" name="Triple Sonic Slash">
-		<!-- Confirmed CT2.5 and Updated to IO -->
+		<!-- Gathers Momentum to inflict damage onto the enemy with $s1 Power, increasing the damage as Momentum is consumed. Damage +$s3 at max Momentum consumption of $s2. Requires a sword, blunt, spear, fist, dual blunt, or dual sword. -->
+		<icon>icon.skill0261</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
@@ -4537,7 +4539,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1667</hitTime>
-		<icon>icon.skill0261</icon>
 		<magicLvl>
 			<value level="1">53</value>
 			<value level="2">54</value>
@@ -4615,7 +4616,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4623,7 +4623,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4681,6 +4681,8 @@
 		</effects>
 	</skill>
 	<skill id="262" toLevel="37" name="Divine Blessing">
+		<!-- Restores the target's HP with $s1 Power. -->
+		<icon>icon.skill0262</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">337</value>
@@ -4723,7 +4725,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill0262</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">38</value>
@@ -4805,7 +4806,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4854,7 +4854,8 @@
 		</effects>
 	</skill>
 	<skill id="263" toLevel="45" name="Deadly Blow">
-		<!-- Treasure Hunter, Adventurer, Plains Walker, Wind Rider, Abyss Walker, Ghost Hunter -->
+		<!-- Attacks the target's vital points. Over-hit. Requires a dagger. Power $s1 added to P. Atk. -->
+		<icon>icon.skill0263</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -4901,7 +4902,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0263</icon>
 		<magicLvl>
 			<value level="1">38</value>
 			<value level="2">39</value>
@@ -4999,7 +4999,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -5007,7 +5006,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DAGGER</item>
-
+					<item>DUALDAGGER</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5070,13 +5069,14 @@
 		</effects>
 	</skill>
 	<skill id="264" toLevel="2" name="Song of Earth">
+		<!-- All party members' P. Def. +25% for 5 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<icon>icon.skill0264</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_EARTH</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>523</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0264</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>
 			<value level="1">55</value>
@@ -5088,7 +5088,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5105,19 +5104,19 @@
 		</effects>
 	</skill>
 	<skill id="265" toLevel="1" name="Song of Life">
+		<!-- All party members' HP Recovery bonus +25% for 5 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<icon>icon.skill0265</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_LIFE</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>495</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0265</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>60</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5131,13 +5130,14 @@
 		</effects>
 	</skill>
 	<skill id="266" toLevel="2" name="Song of Water">
+		<!-- All party members' Max. MP +5%, MP Recovery +15% for 5 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<icon>icon.skill0266</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_WATER</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>549</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0266</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>
 			<value level="1">58</value>
@@ -5149,7 +5149,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5173,13 +5172,14 @@
 		</effects>
 	</skill>
 	<skill id="267" toLevel="2" name="Song of Warding">
+		<!-- All party members' M. Def. +30% for 5 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<icon>icon.skill0267</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_WARDING</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>379</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0267</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -5191,7 +5191,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5208,19 +5207,19 @@
 		</effects>
 	</skill>
 	<skill id="268" toLevel="1" name="Song of Wind">
+		<!-- All party members' Speed +20 for 5 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<icon>icon.skill0268</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_WIND</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>438</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0268</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>46</magicLvl>
 		<mpConsume>60</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5234,19 +5233,19 @@
 		</effects>
 	</skill>
 	<skill id="269" toLevel="1" name="Hunter's Song">
+		<!-- All party members' P. Critical Rate +100% for 5 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<icon>icon.skill0269</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_HUNTER</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>467</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0269</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>40</magicLvl>
 		<mpConsume>60</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5260,13 +5259,14 @@
 		</effects>
 	</skill>
 	<skill id="270" toLevel="2" name="Song of Invocation">
+		<!-- All party members' chance to be hit by P. Critical Atk./ M. Critical Atk. - 5% for 5 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<icon>icon.skill0270</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_INVOCATION</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>408</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0270</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>
 			<value level="1">43</value>
@@ -5278,7 +5278,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5302,13 +5301,14 @@
 		</effects>
 	</skill>
 	<skill id="271" toLevel="2" name="Dance of the Warrior">
+		<!-- All party members' P. Atk. +12% for 5 min. Additionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires dual swords. -->
+		<icon>icon.skill0271</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_WARRIOR</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>523</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0271</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>
 			<value level="1">55</value>
@@ -5320,7 +5320,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5330,7 +5329,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5345,19 +5344,19 @@
 		</effects>
 	</skill>
 	<skill id="272" toLevel="1" name="Dance of Inspiration">
+		<!-- All party members' Accuracy +4 for 5 min. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+		<icon>icon.skill0272</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_INSPIRATION</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>438</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0272</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>46</magicLvl>
 		<mpConsume>60</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5367,7 +5366,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5379,13 +5378,14 @@
 		</effects>
 	</skill>
 	<skill id="273" toLevel="2" name="Dance of the Mystic">
+		<!-- All party members' M. Atk. +20% for 5 min. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+		<icon>icon.skill0273</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_MYSTIC</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>467</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0273</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>
 			<value level="1">49</value>
@@ -5397,7 +5397,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5407,7 +5406,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5422,19 +5421,19 @@
 		</effects>
 	</skill>
 	<skill id="274" toLevel="1" name="Dance of Fire">
+		<!-- For 5 min., party members' P. Critical Damage +35%. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+		<icon>icon.skill0274</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_FIRE</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>379</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0274</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>40</magicLvl>
 		<mpConsume>60</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5444,7 +5443,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5456,19 +5455,19 @@
 		</effects>
 	</skill>
 	<skill id="275" toLevel="1" name="Dance of Fury">
+		<!-- All party members' Atk. Spd. +15% for 5 min. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+		<icon>icon.skill0275</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_FURY</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>549</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0275</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>58</magicLvl>
 		<mpConsume>60</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5478,7 +5477,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5490,19 +5489,19 @@
 		</effects>
 	</skill>
 	<skill id="276" toLevel="1" name="Dance of Concentration">
+		<!-- All party members' magic cancel damage -40 and Casting Spd. +30% for 5 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<icon>icon.skill0276</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_CONCENTRATION</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>495</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0276</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>60</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5512,7 +5511,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5528,6 +5527,8 @@
 		</effects>
 	</skill>
 	<skill id="277" toLevel="1" name="Dance of Light">
+		<!-- All party members' Holy Attack +20 for 5 min. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+		<icon>icon.skill0277</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_LIGHT</abnormalType>
@@ -5535,13 +5536,11 @@
 		<effectPoint>408</effectPoint>
 		<attributeType>HOLY</attributeType>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0277</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>43</magicLvl>
 		<mpConsume>60</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5551,7 +5550,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5563,9 +5562,9 @@
 		</effects>
 	</skill>
 	<skill id="278" toLevel="6" name="Summon Viper Cubic">
-		<!-- Confirmed CT2.5 -->
-		<hitTime>6000</hitTime>
+		<!-- Summons a Viper Cubic. The Viper Cubic uses magic that poisons a targeted enemy. Consumes $s1 Spirit Ore when summoning. -->
 		<icon>icon.skill0278</icon>
+		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">2</value>
@@ -5602,7 +5601,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -5624,9 +5622,8 @@
 		</effects>
 	</skill>
 	<skill id="279" toLevel="9" name="Lightning Strike">
-		<!-- Confirmed CT2.5 and Updated to IO -->
-		<!-- Guessed -->
-		<!-- Confirmed -->
+		<!-- Strikes the enemy with a lightning bolt that inflicts non-attribute damage with $s1 Power. Paralyzes for $s2 -->
+		<icon>icon.skill0279</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -5648,7 +5645,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0279</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -5677,7 +5673,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>PARALYZE</trait>
 		<targetType>ENEMY</targetType>
@@ -5705,6 +5700,8 @@
 		</effects>
 	</skill>
 	<skill id="280" toLevel="40" name="Burning Fist">
+		<!-- Hurls a fire iron-fist to attack the target with $s1 Power added to P. Atk. Requires a fist weapon. Ignores Shield Defense. Over-hit. -->
+		<icon>icon.skill0280</icon>
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-213</value>
@@ -5752,7 +5749,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1900</hitTime>
-		<icon>icon.skill0280</icon>
 		<magicLvl>
 			<value level="1">38</value>
 			<value level="2">39</value>
@@ -5840,7 +5836,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>500</coolTime>
 		<targetType>ENEMY</targetType>
@@ -5903,7 +5898,8 @@
 		</effects>
 	</skill>
 	<skill id="281" toLevel="45" name="Soul Breaker">
-		<!-- Tyrant, Grand Khavatari -->
+		<!-- Hurls an iron-fist to attack the target with $s1 Power added to P. Atk. and inflicts Stun for $s2. Requires a fist weapon. Ignores Shield Defense. Over-hit. -->
+		<icon>icon.skill0281</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -6038,7 +6034,6 @@
 			<value level="39">1409</value>
 			<value level="40">1409</value>
 		</hitTime>
-		<icon>icon.skill0281</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -6138,7 +6133,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -6207,17 +6201,17 @@
 		</effects>
 	</skill>
 	<skill id="282" toLevel="1" name="Puma Spirit Totem">
+		<!-- Possessed by a Puma Spirit, Atk. Spd/ Speed +20% and Accuracy +6 for 5 min. Requires a fist weapon. -->
+		<icon>icon.skill0282</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<effectPoint>379</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0282</icon>
 		<magicLvl>40</magicLvl>
 		<mpConsume>35</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -6230,12 +6224,9 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="Accuracy">
-				<amount>6</amount>
-				<mode>DIFF</mode>
-				<weaponType>
-					<item>DUALFIST</item>
-				</weaponType>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>20</amount>
@@ -6244,11 +6235,19 @@
 					<item>DUALFIST</item>
 				</weaponType>
 			</effect>
+			<effect name="Accuracy">
+				<amount>6</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="283" toLevel="11" name="Summon Dark Panther">
-		<hitTime>15000</hitTime>
+		<!-- Summons a dark panther that attacks with dexterity. Requires $s1 C-grade Crystal(s). -->
 		<icon>icon.skill0283</icon>
+		<hitTime>15000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">1</value>
@@ -6303,7 +6302,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -6325,7 +6323,7 @@
 					<value level="10">14808</value>
 					<value level="11">14809</value>
 				</npcId>
-				<consumeItemId>1459</consumeItemId>
+				<consumeItemId>1459</consumeItemId> <!-- Crystal (C-grade) -->
 				<consumeItemCount>
 					<value level="1">1</value>
 					<value level="2">1</value>
@@ -6344,6 +6342,8 @@
 		</effects>
 	</skill>
 	<skill id="284" toLevel="48" name="Hurricane Assault">
+		<!-- Attacks the target with rapid consecutive strikes with $s1 Power added to P. Atk. Requires a fist weapon. Increases Power upon consuming Momentum, and consumes up to $s2. Over-hit. Critical. Ignores Shield Defense. -->
+		<icon>icon.skill0284</icon>
 		<castRange>40</castRange>
 		<coolTime>440</coolTime>
 		<effectPoint>
@@ -6393,7 +6393,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1360</hitTime>
-		<icon>icon.skill0284</icon>
 		<magicLvl>
 			<value level="1">34</value>
 			<value level="2">35</value>
@@ -6497,7 +6496,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -6568,6 +6566,7 @@
 		</effects>
 	</skill>
 	<skill id="285" toLevel="27" name="Higher Mana Gain">
+		<!-- When using the Recharge skill, MP Recovery Rate increases. -->
 		<icon>icon.skill0285</icon>
 		<magicLvl>
 			<value level="1">17</value>
@@ -6636,7 +6635,8 @@
 		</effects>
 	</skill>
 	<skill id="286" toLevel="13" name="Provoke">
-		<!-- Confirmed CT2.5 and Updated to IO -->
+		<!-- Provokes enemies within a wide range and Spear Resistance -$s2 for $s1. -->
+		<icon>icon.skill0286</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
@@ -6663,7 +6663,6 @@
 			<value level="13">101</value>
 		</magicLvl>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0286</icon>
 		<isDebuff>true</isDebuff>
 		<mpConsume>
 			<value level="1">54</value>
@@ -6682,7 +6681,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -6715,6 +6713,8 @@
 		</effects>
 	</skill>
 	<skill id="287" toLevel="3" name="Lionheart">
+		<!-- Paralysis/ Hold/ Sleep/ Stun/ Buff-canceling Attack Resistance +$s2 for $s1. -->
+		<icon>icon.skill0287</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -6728,7 +6728,6 @@
 			<value level="3">582</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0287</icon>
 		<magicLvl>
 			<value level="1">36</value>
 			<value level="2">49</value>
@@ -6741,7 +6740,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>150000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -6772,6 +6770,7 @@
 		</effects>
 	</skill>
 	<skill id="288" toLevel="5" name="Guard Stance">
+		<!-- P. Def. +$s1 and Shield Defense Rate +$s2. Consumes MP proportionately to your level. -->
 		<icon>icon.skill0288</icon>
 		<magicLvl>
 			<value level="1">43</value>
@@ -6788,7 +6787,6 @@
 			<value level="5">14</value>
 		</mpConsume>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
@@ -6819,6 +6817,8 @@
 		</effects>
 	</skill>
 	<skill id="289" toLevel="17" name="Life Leech">
+		<!-- Inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. Absorbs $s2 of the damage as HP. -->
+		<icon>icon.skill0289</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-95</value>
@@ -6841,7 +6841,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0289</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -6902,7 +6901,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -6932,6 +6930,7 @@
 		</effects>
 	</skill>
 	<skill id="290" toLevel="14" name="Final Frenzy">
+		<!-- P. Atk. +$s2 when HP is below $s1. -->
 		<icon>icon.skill0290</icon>
 		<magicLvl>
 			<value level="1">43</value>
@@ -6975,6 +6974,7 @@
 		</effects>
 	</skill>
 	<skill id="291" toLevel="20" name="Final Fortress">
+		<!-- P. Def. +$s2 when HP is below $s1. -->
 		<icon>icon.skill0291</icon>
 		<magicLvl>
 			<value level="1">52</value>
@@ -7030,17 +7030,17 @@
 		</effects>
 	</skill>
 	<skill id="292" toLevel="1" name="Bison Spirit Totem">
+		<!-- Possessed by a Bison's Spirit. For 1 min., P. Accuracy +6, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, P. Critical Rate +50. If HP is 60% or below, P. Evasion +4, P. Atk. +20%, P. Def. +15%, Atk. Spd. +10%, P. Critical Rate +100. If HP is 30% or below, P. Evasion +6, P. Atk. +30%, P. Def. +20%, Atk. Spd. +10%, P. Critical Rate +200. Requires a fist weapon. -->
+		<icon>icon.skill0292</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<effectPoint>624</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0292</icon>
 		<magicLvl>68</magicLvl>
 		<mpConsume>32</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -7083,6 +7083,7 @@
 		</effects>
 	</skill>
 	<skill id="293" toLevel="28" name="Two-handed Weapon Mastery">
+		<!-- P. Atk. +$s1 and Accuracy +$s2 when using a two-handed sword or a two-handed blunt weapon. -->
 		<icon>icon.skill0293</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -7188,6 +7189,7 @@
 		</effects>
 	</skill>
 	<skill id="294" toLevel="1" name="Shadow Sense">
+		<!-- Accuracy +3 at night. -->
 		<icon>icon.skill0294</icon>
 		<magicLvl>15</magicLvl>
 		<operateType>P</operateType>
@@ -7200,7 +7202,7 @@
 		</effects>
 	</skill>
 	<skill id="295" toLevel="1" name="Iron Body">
-		<!-- Confirmed CT2.5 -->
+		<!-- Environment-related damage -40%. -->
 		<icon>icon.skill0295</icon>
 		<magicLvl>15</magicLvl>
 		<operateType>P</operateType>
@@ -7213,12 +7215,12 @@
 		</effects>
 	</skill>
 	<skill id="296" toLevel="1" name="Chameleon Rest">
-		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
+		<!-- Allows you to sit and rest while being protected from a monster's pre-emptive attack. MP will be consumed continuously. -->
 		<icon>icon.skill0296</icon>
+		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<magicLvl>46</magicLvl>
 		<mpConsume>9</mpConsume>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
@@ -7229,6 +7231,8 @@
 		</effects>
 	</skill>
 	<skill id="297" toLevel="3" name="Duelist Spirit">
+		<!-- For $s1, Atk. Spd. for dual swords +$s2. -->
+		<icon>icon.skill0297</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -7236,8 +7240,8 @@
 		</abnormalLvl>
 		<abnormalTime>
 			<value level="1">120</value>
-			<value level="2">120</value>		
-			<value level="3">180</value>		
+			<value level="2">120</value>
+			<value level="3">180</value>
 		</abnormalTime>
 		<abnormalType>DUELIST_SPIRIT</abnormalType>
 		<effectPoint>
@@ -7245,11 +7249,10 @@
 			<value level="2">646</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0297</icon>
 		<magicLvl>
 			<value level="1">64</value>
-			<value level="2">72</value>		
-			<value level="3">82</value>		
+			<value level="2">72</value>
+			<value level="3">82</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">30</value>
@@ -7258,7 +7261,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -7278,18 +7280,17 @@
 		</effects>
 	</skill>
 	<skill id="298" toLevel="1" name="Rabbit Spirit Totem">
-		<!-- Confirmed CT2.5 -->
+		<!-- Possessed by a Rabbit's Spirit. Atk. Spd. +30%, Speed +30%, Evasion +6 and Accuracy +6 for 5 min. Requires a fist weapon. -->
+		<icon>icon.skill0298</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<effectPoint>582</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0298</icon>
 		<magicLvl>62</magicLvl>
 		<mpConsume>58</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -7306,10 +7307,6 @@
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalEvasion">
-				<amount>12</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>30</amount>
 				<mode>PER</mode>
@@ -7317,11 +7314,26 @@
 					<item>DUALFIST</item>
 				</weaponType>
 			</effect>
+			<effect name="Accuracy">
+				<amount>6</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>6</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="299" toLevel="1" name="Summon Wild Hog Cannon">
-		<hitTime>180000</hitTime>
+		<!-- Summons a siege weapon. Can only move in normal mode. During siege mode, it cannot move, and it can inflict ranged attacks. Switching modes takes 30 sec. Requires 70 B-grade Crystals. -->
 		<icon>icon.skill0299</icon>
+		<hitTime>180000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>70</itemConsumeCount>
 		<itemConsumeId>1460</itemConsumeId> <!-- Crystal (B-Grade) -->
@@ -7329,7 +7341,6 @@
 		<mpInitialConsume>530</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -7339,9 +7350,8 @@
 		</conditions>
 		<effects>
 			<effect name="Summon">
-				<npcId>14768</npcId>
-				<lifeTime>1200</lifeTime>
-				<consumeItemId>2132</consumeItemId>
+				<npcId>14768</npcId> <!-- Wild Hog Cannon -->
+				<consumeItemId>2132</consumeItemId> <!-- Gemstone (B-grade) -->
 				<consumeItemCount>20</consumeItemCount>
 			</effect>
 		</effects>

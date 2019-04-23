@@ -41,7 +41,7 @@ public class CanSummonCubicSkillCondition implements ISkillCondition
 		}
 		
 		final L2PcInstance player = caster.getActingPlayer();
-		if (player.inObserverMode() || player.isMounted())
+		if (player.inObserverMode() || player.isMounted() || player.isSpawnProtected() || player.isTeleportProtected())
 		{
 			return false;
 		}

@@ -16,9 +16,7 @@
  */
 package quests.Q00406_PathOfTheElvenKnight;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -28,6 +26,9 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
 import org.l2j.gameserver.util.Util;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Path Of The Elven Knight (406)
@@ -146,7 +147,7 @@ public final class Q00406_PathOfTheElvenKnight extends Quest
 			check = hasQuestItems(killer, requiredItemId);
 		}
 		
-		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(1500, npc, killer, false))
+		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, false))
 		{
 			if (check && (getQuestItemsCount(killer, reward.getId()) < 20) && (getRandom(100) < reward.getChance()))
 			{

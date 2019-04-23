@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="9487" toLevel="1" name="Angel Cat's Blessing">
-		<!-- For 60 min., Max HP/MP + 5%, and XP/SP gained through hunting + 20%. -->
+		<!-- For 60 min., Max. HP/ MP +5%, and acquired XP/ SP +20%. Buff remains after death. -->
 		<icon>icon.skilltransform4</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>-3</magicLvl>
 		<abnormalLvl>2</abnormalLvl>

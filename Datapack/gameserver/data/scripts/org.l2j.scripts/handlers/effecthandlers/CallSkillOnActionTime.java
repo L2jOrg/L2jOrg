@@ -16,16 +16,17 @@
  */
 package handlers.effecthandlers;
 
-import java.util.Collections;
-
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.SkillHolder;
+import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
+
+import java.util.Collections;
 
 /**
  * Dam Over Time effect implementation.
@@ -41,7 +42,7 @@ public final class CallSkillOnActionTime extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		effected.getEffectList().stopEffects(Collections.singleton(_skill.getSkill().getAbnormalType()));
 		effected.getEffectList().addBlockedAbnormalTypes(Collections.singleton(_skill.getSkill().getAbnormalType()));
@@ -54,7 +55,7 @@ public final class CallSkillOnActionTime extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		if (effector.isDead())
 		{

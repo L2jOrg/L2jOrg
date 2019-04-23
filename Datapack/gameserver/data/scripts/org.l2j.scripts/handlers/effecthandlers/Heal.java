@@ -53,6 +53,12 @@ public final class Heal extends AbstractEffect
 		}
 		
 		double amount = _power;
+
+		if ((item != null) && (item.isPotion() || item.isElixir()))
+		{
+			amount += effected.getStat().getValue(Stats.ADDITIONAL_POTION_HP, 0);
+		}
+
 		double staticShotBonus = 0;
 		double mAtkMul = 1;
 		final boolean sps = skill.isMagic() && effector.isChargedShot(ShotType.SPIRITSHOTS);

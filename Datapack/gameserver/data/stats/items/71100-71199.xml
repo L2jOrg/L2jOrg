@@ -22,8 +22,8 @@
 		</stats>
 	</item>
 	<item id="71101" name="XP and SP Rune - 50%" additionalName="1 hour" type="EtcItem">
-		<!-- 1-hour item. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 75 characters. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-		<set name="icon" val="icon.bm_pendant_varnish_premium" />
+		<!-- 1-hour item. When in inventory, your Acquired XP/ SP is increased by 50%. Intended for Lv. 1 - 75 characters. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.skill19226" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -32,8 +32,8 @@
 		<set name="time" val="60" />
 	</item>
 	<item id="71102" name="Package: XP and SP Rune - 50% (1 hour)" type="EtcItem">
-		<!-- Double-click to obtain XP and SP Rune - 50% (1 hour). Intended for Lv. 1 - 75 characters. -->
-		<set name="icon" val="icon.bm_silver_lure" />
+		<!-- Double-click to obtain XP & SP Rune - 50% (1 hour). Intended for Lv. 1 - 75 characters. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
@@ -41,8 +41,8 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71103" name="XP and SP Rune - 50%" additionalName="5 hours" type="EtcItem">
-		<!-- 5-hour item?. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 75 characters. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<!-- 5-hour item?. When in inventory, your Acquired XP/ SP is increased by 50%. Intended for Lv. 1 - 75 characters. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.skill19226" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -51,8 +51,8 @@
 		<set name="time" val="300" />
 	</item>
 	<item id="71104" name="Package: XP and SP Rune - 50% (5 hours)" type="EtcItem">
-		<!-- Double-click to obtain XP and SP Rune - 50% (5 hours). Intended for Lv. 1 - 75 characters. -->
-		<set name="icon" val="icon.scroll_of_verification_i06" />
+		<!-- Double-click to obtain XP & SP Rune - 50% (5 hours). Intended for Lv. 1 - 75 characters. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
@@ -60,8 +60,8 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71105" name="XP and SP Rune - 50%" additionalName="7-day" type="EtcItem">
-		<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 75 characters. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-		<set name="icon" val="icon.etc_crystal_cube_event_i00" />
+		<!-- 7-day item. When in inventory, your Acquired XP/ SP is increased by 50%. Intended for Lv. 1 - 75 characters. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.skill19226" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -69,8 +69,8 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="71106" name="Package: XP and SP Rune - 50% (7-day)" type="EtcItem">
-		<!-- Double-click to obtainXP and SP Rune - 50% (7-day). Intended for Lv. 1 - 75 characters. -->
-		<set name="icon" val="icon.etc_ev_kalie_token" />
+		<!-- Double-click to obtainXP & SP Rune - 50% (7-day). Intended for Lv. 1 - 75 characters. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
@@ -79,7 +79,7 @@
 	</item>
 	<item id="71107" name="Irene' Hourglass - 1 Hour" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~19. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-		<set name="icon" val="icon.etc_kalie_hero_scroll" />
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -89,8 +89,8 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71108" name="Package: Irene' Hourglass (1 hour)" type="EtcItem">
-		<!-- Double-click to obtain Irene' Hourglass - 1 Hour. Intended for Lv. 1 - 75 characters. -->
-		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
+		<!-- Double-click to obtain Irene's Hourglass - 1 Hour. Intended for Lv. 1 - 75 characters. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="100" />
@@ -100,7 +100,7 @@
 	</item>
 	<item id="71109" name="Package: Golden Mermaid's Fishing Rod (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Golden Mermaid's Fishing Rod (7-day). -->
-		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
@@ -109,7 +109,7 @@
 	</item>
 	<item id="71110" name="Package: Golden Mermaid's Fishing Rod (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Golden Mermaid's Fishing Rod (30-day). -->
-		<set name="icon" val="icon.etc_readybox_gold" />
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
@@ -117,8 +117,8 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71111" name="Ruthless Tribe Mask" type="Armor">
-		<!-- A mask which formerly belonged to Looters. Cannot be exchanged, dropped, sold. Can be stored in private warehouse. Can be shared within account through Dimensional Merchant. -->
-		<set name="icon" val="icon.etc_bm_jewel_garnet" />
+		<!-- A mask which formerly belonged to Looters. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped, sold. Can be stored in private warehouse or shared within account. -->
+		<set name="icon" val="BranchSys.icon.br_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -131,8 +131,8 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71112" name="Artisan's Goggles" type="Armor">
-		<!-- Large goggles used to protect eyes. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, sold. Can be stored in private warehouse. Can be shared within account through Dimensional Merchant. -->
-		<set name="icon" val="icon.ev_kr_traditional_dress" />
+		<!-- Large goggles used to protect eyes. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, sold. Can be stored in private warehouse or shared within account.. -->
+		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="alldress" />
@@ -146,8 +146,8 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71113" name="Fairy Antennae" type="Armor">
-		<!-- A lovely hair accessory shaped as antennae with starlets. Cannot be exchanged, dropped, sold. Can be stored in private warehouse. Can be shared within account through Dimensional Merchant. -->
-		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
+		<!-- A lovely hair accessory shaped as antennae with starlets. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped, sold. Can be stored in private warehouse or shared within account. -->
+		<set name="icon" val="icon.accessory_hair_feeler_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -163,8 +163,8 @@
 		</stats>
 	</item>
 	<item id="71114" name="Assassin's Bamboo Hat" type="Armor">
-		<!-- A hat made from bulrush. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, sold. Can be stored in private warehouse. Can be shared within account through Dimensional Merchant. -->
-		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
+		<!-- A hat made from bulrush. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, sold. Can be stored in private warehouse or shared within account. -->
+		<set name="icon" val="BranchSys.icon.br_Bamboo_Hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -180,8 +180,8 @@
 		</stats>
 	</item>
 	<item id="71115" name="Little Angel Wings" type="Armor">
-		<!-- A hair accessory shaped as a little white wing. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
+		<!-- A hair accessory shaped as a little white wing. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse or shared within account. -->
+		<set name="icon" val="icon.accessory_hair_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -197,8 +197,8 @@
 		</stats>
 	</item>
 	<item id="71116" name="Black Gem Mask" type="Armor">
-		<!-- A luxurious black colored accessory. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
+		<!-- A luxurious black colored accessory. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse or shared within account. -->
+		<set name="icon" val="BranchSys.icon.br_black_gem_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -214,8 +214,8 @@
 		</stats>
 	</item>
 	<item id="71117" name="Circlet of Eva" type="Armor">
-		<!-- A crown containing mysterious power. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-		<set name="icon" val="icon.accessory_bear_cap_i00" />
+		<!-- A crown containing mysterious power. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse or shared within account. -->
+		<set name="icon" val="BranchSys.icon.br_circlet_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
@@ -228,8 +228,8 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71118" name="Outlaw Eyepatch" type="Armor">
-		<!-- A purple colored accessory that will certainly adorn its owner. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-		<set name="icon" val="icon.accessory_pig_cap_i00" />
+		<!-- A purple colored accessory that will certainly adorn its owner. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse or shared within account. -->
+		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
@@ -242,8 +242,8 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71119" name="Monocle" type="Armor">
-		<!-- An accessory for those who like to stand out from the crowd. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-		<set name="icon" val="icon.accessory_frog_cap_i00" />
+		<!-- An accessory for those who like to stand out from the crowd. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse or shared within account. -->
+		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
@@ -257,7 +257,7 @@
 	</item>
 	<item id="71120" name="Sing Of Adventurer - Recovery" type="EtcItem">
 		<!-- Endowed with a mysterious power, the song allows resurrecting a character and restoring their lost experience at the death of an NPC. -->
-		<set name="icon" val="icon.new_user_box" />
+		<set name="icon" val="BranchSys3.Icon.g_sing_of_adventurer_recovery" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -267,7 +267,7 @@
 	</item>
 	<item id="71121" name="Agathion - Bugbear" type="Armor">
 		<!-- Equipping it in the main slot summons the Agathion. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-		<set name="icon" val="icon.accessory_fish_cap_i00" />
+		<set name="icon" val="BranchSys.icon.br_aga_bugbear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
@@ -281,7 +281,7 @@
 	</item>
 	<item id="71122" name="Agathion - Dryad" type="Armor">
 		<!-- Equipping it in the main slot summons the Agathion. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-		<set name="icon" val="icon.accessory_chicken_cap2_i00" />
+		<set name="icon" val="BranchSys.icon.br_aga_dryad_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
@@ -295,7 +295,7 @@
 	</item>
 	<item id="71123" name="Agathion - Griffin" type="Armor">
 		<!-- Equipping it in the main slot summons the Agathion. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-		<set name="icon" val="icon.bm_pendant_pve" />
+		<set name="icon" val="BranchIcon.icon.Item_g_rbracelet_griffin" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
@@ -308,61 +308,61 @@
 	</item>
 	<item id="71124" name="Stable Cloak Enchantment Scroll - Legendary" type="EtcItem">
 		<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted between +1-+10. Enchant level goes up by 1 when it succeeds, and if it fails, the enchant level remains the same. -->
-		<set name="icon" val="icon.new_user_box" />
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_enchant_scroll_normal" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71125" name="Legendary Scroll (High-grade)" type="EtcItem">
 		<!-- Exchange a Elmoreden/Aden/Elmore/Ferios Cloak for a legendary cloak through the Dimensional Merchant. -->
-		<set name="icon" val="icon.super_elixir_potion" />
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_legend_scroll" />
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71126" name="High-grade Life Stone - Ancient Kingdom" type="EtcItem">
 		<!-- High-grade Life Stone for the Ancient Kingdom's Cloak. Can augment all ancient kingdom cloaks when they have been enchanted to +10, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +10 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
-		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_normal" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="71127" name="High-grade Life Stone - Elmoreden" type="EtcItem">
 		<!-- High-grade Life Stone for the Elmoreden Cloak. Can augment Legendary Elmoreden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
-		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmoreden" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="71128" name="High-grade Life Stone - Aden" type="EtcItem">
 		<!-- High-grade Life Stone for the Aden Cloak. Can augment Legendary Aden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
-		<set name="icon" val="Icon.ev_monkey_banana" />
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_aden" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="71129" name="High-grade Life Stone - Elmore" type="EtcItem">
 		<!-- High-grade Life Stone for the Elmore Cloak. Can augment Legendary Elmore kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
-		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmore" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71130" name="High-grade Life Stone - Ferios" type="EtcItem">
 		<!-- High-grade Life Stone for the Ferios Cloak. Can augment Legendary Ferios kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
-		<set name="icon" val="icon.etc_fruit_cocktail_i03" />
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_perios" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71131" name="High-grade Life Stone Pack - Legendary" type="EtcItem">
 		<!-- Double-click to obtain 1 High-grade Life Stone - Ancient Kingdom/Elmoreden/Aden/Elmore/Ferios randomly. -->
-		<set name="icon" val="icon.etc_fruit_cocktail_i02" />
+		<set name="icon" val="icon.bm_freya_2016_gift_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71132" name="High-grade Life Stone Pack - Cloak" type="EtcItem">
 		<!-- Double-click to obtain 1 High-grade Life Stone - Ancient Kingdom/Elmoreden/Aden/Elmore/Ferios randomly. -->
-		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
+		<set name="icon" val="icon.bm_freya_2016_gift_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71133" name="Mermaid Agathion" type="Armor">
-		<!-- Enables to summon Mermaid Agathion when equipped. -->
-		<set name="icon" val="icon.bm_magic_square_talisman" />
+		<!-- Enables to summon Agathion Mermaid when equipped. -->
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -373,7 +373,7 @@
 	</item>
 	<item id="71134" name="Master's Fishing Coin" type="EtcItem">
 		<!-- Coin obtained when fishing. Take it to the Dimensional Merchant to exchange for Fishing XP Boxes. -->
-		<set name="icon" val="icon.ensoul_big_mm" />
+		<set name="icon" val="icon.etc_coins_blue_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -382,28 +382,28 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71135" name="Agathion Mermaid Enchant Scroll" type="EtcItem">
-		<!-- Only for Mermaid Agathion. Increases M. Def. when the Agathion grows. Can be safely strengthened up to +3 and can be enhanced up to +10. Starting from +1 enchanting special abilities increases step by step. If enchanting fails, the enchanl level is maintained. -->
-		<set name="icon" val="icon.fish_huge_i12" />
+		<!-- Only for Agathion Mermaid. Increases M. Def. when the Agathion grows. Can be safely strengthened up to +3 and can be enhanced up to +10. Starting from +1 enchanting special abilities increases step by step. If enchanting fails, the enchanl level is maintained. -->
+		<set name="icon" val="icon.star_scrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71136" name="Mermaid's Trace" type="EtcItem">
-		<!-- Mermaid's Trace. Collect 20 and take them to the Dimensional Merchant to obtain Mermaid Agathion Charm. -->
-		<set name="icon" val="icon.bm_silver_lure_box" />
+		<!-- Mermaid's Trace. Collect 20 and take them to the Dimensional Merchant to obtain Agathion Mermaid. -->
+		<set name="icon" val="icon.etc_oren_fish_scale_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71137" name="Master's Fishing Potion" additionalName="1 h." type="EtcItem">
 		<!-- For 1 h., EXP/ SP bonus +100% when fishing succeeds. Applied to all bait. Can be stacked with Fishermen's Guild Support Certificate. -->
-		<set name="icon" val="icon.bm_gold_lure_special_box" />
+		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71139" name="Fishing XP Box" type="EtcItem">
-		<!-- Double click to obtain Fishing XP Scroll. Has a low chance to obtain Shining Fishing Box. -->
-		<set name="icon" val="icon.bm_freya_sirr_box" />
+		<!-- Double-click to obtain Fishing XP Scroll. Has a low chance to obtain Shining Fishing Box. -->
+		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -414,15 +414,15 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71140" name="Shining Fishing Box" type="EtcItem">
-		<!-- Double click to obtain a random item. -->
-		<set name="icon" val="icon.bm_freya_sirr_box" />
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71141" name="Fishing XP Scroll" type="EtcItem">
 		<!-- Allows to obtain additional XP during fishing. Cannot be used by chaotic characters. -->
-		<set name="icon" val="icon.bm_freya_sirr_box" />
+		<set name="icon" val="icon.exp_bottle_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -432,8 +432,8 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71142" name="Complete Arms Supplies Pack" type="EtcItem">
-		<!-- Double click to obtain one item for powerful weapon at random. -->
-		<set name="icon" val="icon.bm_freya_sirr_box" />
+		<!-- Double-click to obtain one item for powerful weapon at random. -->
+		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />

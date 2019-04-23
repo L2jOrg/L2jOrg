@@ -21,6 +21,8 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3005" toLevel="1" name="Bleed">
+		<!-- Causes a scar that decreases HP. Effect 5. -->
+		<icon>icon.skill0223</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -28,12 +30,10 @@
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>50</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill0223</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>40</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -47,13 +47,14 @@
 		</effects>
 	</skill>
 	<skill id="3006" toLevel="1" name="Equip Set Items">
+		<!-- Additionally enhances stats when equipped with a set item -->
 		<icon>icon.skill0042</icon>
 		<magicLvl>0</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3007" toLevel="6" name="Special Ability: Guidance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Accuracy. -->
 		<icon>icon.skill1240</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -80,8 +81,8 @@
 		</effects>
 	</skill>
 	<skill id="3008" toLevel="6" name="Special Ability: Guidance">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.ensoul_big_old</icon>
+		<!-- Increases Accuracy. -->
+		<icon>icon.skill1240</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -107,8 +108,8 @@
 		</effects>
 	</skill>
 	<skill id="3009" toLevel="8" name="Special Ability: Evasion">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.ensoul_big_old</icon>
+		<!-- Increase Evasion. -->
+		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -138,8 +139,8 @@
 		</effects>
 	</skill>
 	<skill id="3010" toLevel="6" name="Special Ability: Focus">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.ensoul_big_old</icon>
+		<!-- Increases P. Critical Rate. -->
+		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -165,7 +166,7 @@
 		</effects>
 	</skill>
 	<skill id="3011" toLevel="6" name="Special Ability: Focus">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Critical Rate. -->
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -192,7 +193,7 @@
 		</effects>
 	</skill>
 	<skill id="3012" toLevel="6" name="Special Ability: Anger">
-		<!-- Confirmed CT2.5 -->
+		<!-- Decreases Max HP and increases P. Atk. -->
 		<icon>icon.skill1062</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -223,7 +224,7 @@
 		</effects>
 	</skill>
 	<skill id="3013" toLevel="5" name="Special Ability: Health">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Max HP. -->
 		<icon>icon.skill0211</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -285,7 +286,7 @@
 		</effects>
 	</skill>
 	<skill id="3014" toLevel="3" name="Special Ability: Mana Up">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Max MP. -->
 		<icon>icon.skill0213</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -326,7 +327,7 @@
 		</effects>
 	</skill>
 	<skill id="3016" toLevel="6" name="Special Ability: Critical Stun">
-		<!-- Confirmed CT2.5 -->
+		<!-- Stunned and unable to move momentarily. -->
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -342,7 +343,6 @@
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-92</effectPoint>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>
@@ -353,7 +353,6 @@
 			<value level="5">58</value>
 			<value level="6">61</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>SHOCK</trait>
@@ -365,12 +364,12 @@
 		</effects>
 	</skill>
 	<skill id="3017" toLevel="4" name="Special Ability: Magic Regeneration">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- MP Recovery Bonus +$s2 for $s1. -->
+		<icon>icon.skill1044</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="3018" toLevel="6" name="Special Ability: Back Blow">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Critical Rate when attacking a target from behind. -->
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -398,7 +397,7 @@
 		</effects>
 	</skill>
 	<skill id="3019" toLevel="6" name="Special Ability: Back Blow">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Critical Rate when attacking a target from behind. -->
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -426,7 +425,8 @@
 		</effects>
 	</skill>
 	<skill id="3020" toLevel="6" name="Special Ability: Critical Bleed">
-		<!-- Confirmed CT2.5 -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -449,7 +449,6 @@
 			<value level="6">12</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill0223</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -460,7 +459,6 @@
 			<value level="5">58</value>
 			<value level="6">61</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -481,7 +479,8 @@
 		</effects>
 	</skill>
 	<skill id="3021" toLevel="6" name="Special Ability: Critical Bleed">
-		<!-- Confirmed CT2.5 -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -497,7 +496,6 @@
 			<value level="6">35</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill0223</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -508,7 +506,6 @@
 			<value level="5">58</value>
 			<value level="6">61</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -529,7 +526,7 @@
 		</effects>
 	</skill>
 	<skill id="3022" toLevel="6" name="Special Ability: Critical Drain">
-		<!-- Confirmed CT2.5 -->
+		<icon>icon.skill0070</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -541,7 +538,6 @@
 			<value level="6">-234</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill0070</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">46</value>
@@ -552,7 +548,6 @@
 			<value level="6">61</value>
 		</magicLvl>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitTime>3000</hitTime>
 		<targetType>ENEMY</targetType>
@@ -579,8 +574,8 @@
 		</effects>
 	</skill>
 	<skill id="3023" toLevel="6" name="Special Ability: Critical Damage">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.skill0193</icon>
+		<!-- Increases Critical Damage. -->
+		<icon>icon.skill1242</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -606,7 +601,8 @@
 		</effects>
 	</skill>
 	<skill id="3024" toLevel="6" name="Special Ability: Critical Poison">
-		<!-- Confirmed CT2.5 -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -639,7 +635,6 @@
 			<value level="6">-582</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill1168</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -652,7 +647,6 @@
 			<value level="6">61</value>
 		</magicLvl>
 		<reuseDelay>12000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>POISON</trait>
@@ -673,7 +667,6 @@
 		</effects>
 	</skill>
 	<skill id="3025" toLevel="6" name="Special Ability: Critical Anger">
-		<!-- Confirmed CT2.5 -->
 		<operateType>A1</operateType>
 		<hpConsume>
 			<value level="1">12</value>
@@ -691,14 +684,13 @@
 			<value level="5">58</value>
 			<value level="6">61</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>NONE</targetType>
 		<affectScope>NONE</affectScope>
 	</skill>
 	<skill id="3026" toLevel="6" name="Special Ability: Critical Anger">
-		<!-- Confirmed CT2.5 -->
+		<!-- Inflicts additional damage during a critical attack while reducing one's own HP. -->
 		<icon>icon.skill1062</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -725,8 +717,8 @@
 		</effects>
 	</skill>
 	<skill id="3027" toLevel="7" name="Special Ability: Rsk. Focus">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.ensoul_big_old</icon>
+		<!-- Increases Critical Rate when in danger. -->
+		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -791,7 +783,7 @@
 		</effects>
 	</skill>
 	<skill id="3028" toLevel="6" name="Special Ability: Rsk. Evasion">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Evasion when in danger. -->
 		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -819,7 +811,7 @@
 		</effects>
 	</skill>
 	<skill id="3029" toLevel="6" name="Special Ability: Rsk. Evasion">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Evasion when in danger. -->
 		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -847,7 +839,7 @@
 		</effects>
 	</skill>
 	<skill id="3030" toLevel="6" name="Special Ability: Rsk. Evasion">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Evasion when in danger. -->
 		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -875,7 +867,7 @@
 		</effects>
 	</skill>
 	<skill id="3031" toLevel="6" name="Special Ability: Rsk. Evasion">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Evasion when in danger. -->
 		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -903,7 +895,7 @@
 		</effects>
 	</skill>
 	<skill id="3032" toLevel="6" name="Special Ability: Rsk. Haste">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Atk. Spd. when in danger. -->
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -930,7 +922,7 @@
 		</effects>
 	</skill>
 	<skill id="3033" toLevel="6" name="Special Ability: Rsk. Haste">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Atk. Spd. when in danger. -->
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -957,7 +949,7 @@
 		</effects>
 	</skill>
 	<skill id="3034" toLevel="7" name="Special Ability: Rsk. Haste">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Atk. Spd. when in danger. -->
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1022,8 +1014,15 @@
 		</effects>
 	</skill>
 	<skill id="3035" toLevel="6" name="Special Ability: Mighty Mortal">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.ensoul_big_old</icon>
+		<!-- Increases success rate of attacks targeting the enemy's vital parts. -->
+		<icon>
+			<value level="1">icon.skill0410</value>
+			<value level="2">icon.skill0410</value>
+			<value level="3">icon.skill0016</value>
+			<value level="4">icon.skill0016</value>
+			<value level="5">icon.skill0016</value>
+			<value level="6">icon.skill0016</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1049,8 +1048,15 @@
 		</effects>
 	</skill>
 	<skill id="3036" toLevel="6" name="Special Ability: Haste">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.skill1086</icon>
+		<!-- Increases Atk. Spd. -->
+		<icon>
+			<value level="1">icon.skill1241</value>
+			<value level="2">icon.skill1241</value>
+			<value level="3">icon.skill1086</value>
+			<value level="4">icon.skill1086</value>
+			<value level="5">icon.skill1086</value>
+			<value level="6">icon.skill1086</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1076,7 +1082,7 @@
 		</effects>
 	</skill>
 	<skill id="3037" toLevel="6" name="Special Ability: Haste">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Atk. Spd. -->
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1103,8 +1109,15 @@
 		</effects>
 	</skill>
 	<skill id="3038" toLevel="6" name="Special Ability: Haste">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.skill1086</icon>
+		<!-- Increases Atk. Spd. -->
+		<icon>
+			<value level="1">icon.skill1241</value>
+			<value level="2">icon.skill1086</value>
+			<value level="3">icon.skill1086</value>
+			<value level="4">icon.skill1086</value>
+			<value level="5">icon.skill1086</value>
+			<value level="6">icon.skill1086</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1130,7 +1143,6 @@
 		</effects>
 	</skill>
 	<skill id="3039" toLevel="7" name="Special Ability: Critical Drain">
-		<!-- Confirmed CT2.5 -->
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -1153,7 +1165,6 @@
 			<value level="6">61</value>
 			<value level="7">70</value>
 		</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1182,7 +1193,8 @@
 		</effects>
 	</skill>
 	<skill id="3040" toLevel="6" name="Special Ability: Critical Poison">
-		<!-- Confirmed CT2.5 -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -1215,11 +1227,9 @@
 			<value level="6">-582</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill1168</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>
@@ -1248,7 +1258,8 @@
 		</effects>
 	</skill>
 	<skill id="3041" toLevel="6" name="Special Ability: Critical Poison">
-		<!-- Confirmed CT2.5 -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -1281,11 +1292,9 @@
 			<value level="6">-582</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill1168</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>
@@ -1314,8 +1323,25 @@
 		</effects>
 	</skill>
 	<skill id="3042" toLevel="20" name="Special Ability: Critical Damage">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.skill0193</icon>
+		<!-- Increases Critical Damage. -->
+		<icon>
+			<value level="1">icon.skill0193</value>
+			<value level="2">icon.skill0193</value>
+			<value level="3">icon.skill0193</value>
+			<value level="4">icon.skill1242</value>
+			<value level="5">icon.skill1242</value>
+			<value level="6">icon.skill1242</value>
+			<value level="7">icon.skill1242</value>
+			<value level="8">icon.skill1242</value>
+			<value level="9">icon.skill1242</value>
+			<value level="10">icon.skill1242</value>
+			<value level="11">icon.skill1242</value>
+			<value level="12">icon.skill1242</value>
+			<value level="13">icon.skill1242</value>
+			<value level="14">icon.skill0193</value>
+			<value level="15">icon.skill0193</value>
+			<value level="16">icon.skill0193</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1444,7 +1470,7 @@
 		</effects>
 	</skill>
 	<skill id="3043" toLevel="6" name="Special Ability: Critical Damage">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Critical Damage. -->
 		<icon>icon.skill0193</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1471,7 +1497,7 @@
 		</effects>
 	</skill>
 	<skill id="3044" toLevel="20" name="Special Ability: Focus">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Critical Rate. -->
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1601,8 +1627,25 @@
 		</effects>
 	</skill>
 	<skill id="3045" toLevel="20" name="Special Ability: Haste">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.skill1086</icon>
+		<!-- Increases Atk. Spd. -->
+		<icon>
+			<value level="1">icon.skill1086</value>
+			<value level="2">icon.skill1086</value>
+			<value level="3">icon.skill1086</value>
+			<value level="4">icon.skill1241</value>
+			<value level="5">icon.skill1086</value>
+			<value level="6">icon.skill1086</value>
+			<value level="7">icon.skill1086</value>
+			<value level="8">icon.skill1086</value>
+			<value level="9">icon.skill1086</value>
+			<value level="10">icon.skill1241</value>
+			<value level="11">icon.skill1086</value>
+			<value level="12">icon.skill1086</value>
+			<value level="13">icon.skill1086</value>
+			<value level="14">icon.skill1086</value>
+			<value level="15">icon.skill1086</value>
+			<value level="16">icon.skill1086</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1668,8 +1711,8 @@
 		</effects>
 	</skill>
 	<skill id="3046" toLevel="20" name="Special Ability: Guidance">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.ensoul_big_old</icon>
+		<!-- Increases Accuracy. -->
+		<icon>icon.skill1240</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1798,7 +1841,7 @@
 		</effects>
 	</skill>
 	<skill id="3047" toLevel="3" name="Special Ability: Acumen">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Casting Spd. -->
 		<icon>icon.skill1085</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1839,8 +1882,8 @@
 		</effects>
 	</skill>
 	<skill id="3048" toLevel="3" name="Special Ability: Conversion">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.ensoul_big_old</icon>
+		<!-- Decreases Max HP and increases Max MP. -->
+		<icon>icon.skill1048</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1884,7 +1927,6 @@
 		</effects>
 	</skill>
 	<skill id="3049" toLevel="2" name="Special Ability: Magic Damage">
-		<!-- Confirmed CT2.5 -->
 		<operateType>A1</operateType>
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1894,7 +1936,6 @@
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1906,7 +1947,8 @@
 		</effects>
 	</skill>
 	<skill id="3052" toLevel="2" name="Special Ability: Critical Bleed">
-		<!-- Confirmed CT2.5 -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1915,14 +1957,12 @@
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>42</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill0223</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -1936,7 +1976,8 @@
 		</effects>
 	</skill>
 	<skill id="3053" toLevel="2" name="Special Ability: Critical Bleed">
-		<!-- Confirmed CT2.5 -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1945,14 +1986,12 @@
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>35</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill0223</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -1970,7 +2009,8 @@
 		</effects>
 	</skill>
 	<skill id="3054" toLevel="2" name="Special Ability: Critical Bleed">
-		<!-- Confirmed CT2.5 -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1979,14 +2019,12 @@
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>12</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill0223</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -2004,7 +2042,8 @@
 		</effects>
 	</skill>
 	<skill id="3055" toLevel="2" name="Special Ability: Critical Bleed">
-		<!-- Confirmed CT2.5 -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2013,14 +2052,12 @@
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>24</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill0223</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -2038,8 +2075,8 @@
 		</effects>
 	</skill>
 	<skill id="3056" toLevel="3" name="Special Ability: Rsk. Haste">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.ensoul_big_old</icon>
+		<!-- Increases Atk. Spd. when in danger. -->
+		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -2079,7 +2116,6 @@
 		</effects>
 	</skill>
 	<skill id="3059" toLevel="2" name="Special Ability: Critical Drain">
-		<!-- Confirmed CT2.5 -->
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
@@ -2088,7 +2124,6 @@
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2104,7 +2139,6 @@
 		</effects>
 	</skill>
 	<skill id="3060" toLevel="2" name="Special Ability: Critical Drain">
-		<!-- Confirmed CT2.5 -->
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
@@ -2113,7 +2147,6 @@
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2129,7 +2162,8 @@
 		</effects>
 	</skill>
 	<skill id="3061" toLevel="3" name="Special Ability: Critical Poison">
-		<!-- Confirmed CT2.5 -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2140,11 +2174,9 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill1168</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>
@@ -2167,7 +2199,8 @@
 		</effects>
 	</skill>
 	<skill id="3062" toLevel="2" name="Special Ability: Critical Poison">
-		<!-- Confirmed CT2.5 -->
+		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2178,11 +2211,9 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill1168</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>
@@ -2200,7 +2231,7 @@
 		</effects>
 	</skill>
 	<skill id="3068" toLevel="3" name="Special Ability: Haste">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Atk. Spd. -->
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2245,8 +2276,8 @@
 		</effects>
 	</skill>
 	<skill id="3069" toLevel="1" name="Special Ability: Rsk. Evasion">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.ensoul_big_old</icon>
+		<!-- Increases Evasion when in danger. -->
+		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -2259,7 +2290,8 @@
 		</effects>
 	</skill>
 	<skill id="3070" toLevel="4" name="Special Ability: Critical Stun">
-		<!-- Confirmed CT2.5 -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2273,7 +2305,6 @@
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>
@@ -2282,7 +2313,6 @@
 			<value level="3">70</value>
 			<value level="4">82</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>SHOCK</trait>
@@ -2294,8 +2324,8 @@
 		</effects>
 	</skill>
 	<skill id="3071" toLevel="2" name="Special Ability: Rsk. Focus">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.ensoul_big_old</icon>
+		<!-- Increases Critical Rate when in danger. -->
+		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>64</magicLvl>
@@ -2329,7 +2359,8 @@
 		</effects>
 	</skill>
 	<skill id="3074" toLevel="2" name="Special Ability: Magic Silence">
-		<!-- Confirmed CT2.5 -->
+		<!-- Temporarily blocks the ability to use magic skills. -->
+		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2340,7 +2371,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill1064</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -2348,7 +2378,6 @@
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DERANGEMENT</trait>
@@ -2359,7 +2388,8 @@
 		</effects>
 	</skill>
 	<skill id="3075" toLevel="2" name="Special Ability: Magic Paralyze">
-		<!-- Confirmed CT2.5 -->
+		<!-- During 15 sec. gradually freezes the enemy's body. The enemy is paralysed for 10 sec. when the whole body is turned to ice. -->
+		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2369,14 +2399,12 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill1170</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<isDebuff>true</isDebuff>
@@ -2399,13 +2427,13 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>6126</skillId>
+				<skillId>6126</skillId> <!-- Paralysis -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="3076" toLevel="6" name="Special Ability: Empower">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases M. Atk. -->
 		<icon>icon.skill1059</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2432,7 +2460,7 @@
 		</effects>
 	</skill>
 	<skill id="3077" toLevel="6" name="Special Ability: M. Atk.">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases M. Atk. and MP Consumption -->
 		<icon>icon.skill1059</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2464,7 +2492,8 @@
 		</effects>
 	</skill>
 	<skill id="3078" toLevel="6" name="Special Ability: Magic Silence">
-		<!-- Confirmed CT2.5 -->
+		<!-- Temporarily blocks the ability to use magic skills. -->
+		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2475,7 +2504,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill1064</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -2487,7 +2515,6 @@
 			<value level="5">28</value>
 			<value level="6">61</value>
 		</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DERANGEMENT</trait>
@@ -2498,7 +2525,8 @@
 		</effects>
 	</skill>
 	<skill id="3079" toLevel="6" name="Special Ability: Magic Paralyze">
-		<!-- Confirmed CT2.5 -->
+		<!-- Slows the enemy down for $s1, after that the enemy is fully paralysed for $s2. -->
+		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2508,7 +2536,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -2520,7 +2547,6 @@
 			<value level="5">28</value>
 			<value level="6">61</value>
 		</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>PARALYZE</trait>
@@ -2542,13 +2568,14 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>6126</skillId>
+				<skillId>6126</skillId> <!-- Paralysis -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="3080" toLevel="15" name="Item Skill: Aggression">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Provokes a target to attack during an standard physical attack. Power $s1. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -2569,7 +2596,6 @@
 			<value level="15">-659</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>
 			<value level="1">46</value>
@@ -2594,7 +2620,6 @@
 			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2606,11 +2631,11 @@
 		</effects>
 	</skill>
 	<skill id="3081" toLevel="15" name="Item Skill: Charm (Attack Active)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Decreases the target's urge to attack during a standard physical attack. Power $s1. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>
 			<value level="1">46</value>
@@ -2635,7 +2660,6 @@
 			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DERANGEMENT</trait>
@@ -2664,11 +2688,11 @@
 		</effects>
 	</skill>
 	<skill id="3082" toLevel="10" name="Item Skill: Mana Burn">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Burns up the target's MP during an standard physical attack. Power $s1. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>
 			<value level="1">46</value>
@@ -2683,7 +2707,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2708,7 +2731,8 @@
 		</effects>
 	</skill>
 	<skill id="3083" toLevel="15" name="Item Skill: Slow (Attack Active)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily decreases the target's Speed during an normal physical attack. Effect $s1 -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2717,7 +2741,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -2744,7 +2767,6 @@
 			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2757,7 +2779,8 @@
 		</effects>
 	</skill>
 	<skill id="3084" toLevel="10" name="Item Skill: Winter (Attack Active)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily decreases the target's Atk. Spd. during an normal physical attack. Effect $s1 -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2766,7 +2789,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -2783,7 +2805,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2796,7 +2817,8 @@
 		</effects>
 	</skill>
 	<skill id="3085" toLevel="10" name="Item Skill: Stun">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily inflicts Stun on the target during an normal physical attack. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2806,7 +2828,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -2823,7 +2844,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>SHOCK</trait>
@@ -2834,7 +2854,8 @@
 		</effects>
 	</skill>
 	<skill id="3086" toLevel="15" name="Item Skill: Hold">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily inflicts Hold on the target during an normal physical attack. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2844,7 +2865,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -2871,7 +2891,6 @@
 			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>HOLD</trait>
@@ -2885,7 +2904,8 @@
 		</effects>
 	</skill>
 	<skill id="3087" toLevel="10" name="Item Skill: Sleep">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily inflicts Sleep on the target during a normal physical attack. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2895,7 +2915,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -2912,7 +2931,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>SLEEP</trait>
@@ -2926,7 +2944,8 @@
 		</effects>
 	</skill>
 	<skill id="3088" toLevel="10" name="Item Skill: Paralyze">
-		<!-- Confirmed CT2.5 -->
+		<!-- When activated: Normal physical attack slows the enemy down for $s1, after that the enemy is fully paralysed for $s2. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2935,7 +2954,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -2952,7 +2970,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>PARALYZE</trait>
@@ -2974,13 +2991,14 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>6126</skillId>
+				<skillId>6126</skillId> <!-- Paralysis -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="3089" toLevel="10" name="Item Skill: Medusa">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily petrifies the target during a normal physical attack. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2992,7 +3010,6 @@
 		<effectRange>400</effectRange>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3009,7 +3026,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -3019,7 +3035,8 @@
 		</effects>
 	</skill>
 	<skill id="3090" toLevel="10" name="Item Skill: Fear">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily inflicts Fear on the target and causes him to flee during a normal physical attack. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3029,7 +3046,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3046,7 +3062,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DERANGEMENT</trait>
@@ -3058,7 +3073,8 @@
 		</effects>
 	</skill>
 	<skill id="3091" toLevel="20" name="Item Skill: Poison (Attack Active)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily inflicts Poison on the target during a normal physical attack. Effect $s1 -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -3090,7 +3106,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -3117,7 +3132,6 @@
 			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>POISON</trait>
@@ -3152,7 +3166,8 @@
 		</effects>
 	</skill>
 	<skill id="3092" toLevel="15" name="Item Skill: Bleed (Attack Active)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily inflicts Bleed on the target during a normal physical attack. Effect $s1 -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -3184,7 +3199,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -3212,7 +3226,6 @@
 		</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -3247,7 +3260,8 @@
 		</effects>
 	</skill>
 	<skill id="3093" toLevel="10" name="Item Skill: Silence">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily blocks the target's magic skill during a normal physical attack. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3257,7 +3271,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3274,7 +3287,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DERANGEMENT</trait>
@@ -3285,7 +3297,8 @@
 		</effects>
 	</skill>
 	<skill id="3094" toLevel="10" name="Item Skill: Doom">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily blocks all of the target's physical and magic skills during a normal physical attack. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3295,7 +3308,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3312,7 +3324,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DERANGEMENT</trait>
@@ -3324,12 +3335,12 @@
 		</effects>
 	</skill>
 	<skill id="3095" toLevel="10" name="Item Skill: Mana Burn">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Burns up the target's MP during magic use. Power $s1. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill3080</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>
 			<value level="1">46</value>
@@ -3344,7 +3355,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -3369,7 +3379,8 @@
 		</effects>
 	</skill>
 	<skill id="3096" toLevel="15" name="Item Skill: Slow (Magic Active)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily decreases the target's Speed during magic use. Effect $s1 -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3379,7 +3390,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3406,7 +3416,6 @@
 			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -3419,7 +3428,8 @@
 		</effects>
 	</skill>
 	<skill id="3097" toLevel="10" name="Item Skill: Winter (Magic Active)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily decreases the target's Atk. Spd. during magic use. Effect $s1 -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3429,7 +3439,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3446,7 +3455,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -3459,7 +3467,8 @@
 		</effects>
 	</skill>
 	<skill id="3098" toLevel="10" name="Item Skill: Stun">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily inflicts Stun on the target during magic use. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3470,7 +3479,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3487,7 +3495,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>SHOCK</trait>
@@ -3498,7 +3505,8 @@
 		</effects>
 	</skill>
 	<skill id="3099" toLevel="15" name="Item Skill: Hold">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily inflicts Hold on the target during magic use. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3509,7 +3517,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3536,7 +3543,6 @@
 			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>HOLD</trait>

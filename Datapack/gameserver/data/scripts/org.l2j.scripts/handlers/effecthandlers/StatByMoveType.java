@@ -19,6 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.effects.AbstractEffect;
+import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.MoveType;
 import org.l2j.gameserver.model.stats.Stats;
@@ -41,7 +42,7 @@ public class StatByMoveType extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		effected.getStat().mergeMoveTypeValue(_stat, _type, _value);
 	}
@@ -53,7 +54,7 @@ public class StatByMoveType extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		return skill.isPassive() || skill.isToggle();
 	}

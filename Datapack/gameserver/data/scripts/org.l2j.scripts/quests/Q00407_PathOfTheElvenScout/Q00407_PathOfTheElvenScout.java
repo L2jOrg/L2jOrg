@@ -16,6 +16,7 @@
  */
 package quests.Q00407_PathOfTheElvenScout;
 
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -145,7 +146,7 @@ public final class Q00407_PathOfTheElvenScout extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		if (npc.isScriptValue(killer.getObjectId()) && Util.checkIfInRange(1500, npc, killer, false))
+		if (npc.isScriptValue(killer.getObjectId()) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, false))
 		{
 			final QuestState qs = getQuestState(killer, false);
 			if (qs == null)

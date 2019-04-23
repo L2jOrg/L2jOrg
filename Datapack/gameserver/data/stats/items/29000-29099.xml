@@ -14,9 +14,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="736" min="1" max="1" chance="100" />
-			<item id="29651" min="3" max="3" chance="100" />
-			<item id="29520" min="5" max="5" chance="100" />
+			<item id="736" min="1" max="1" chance="100" /> <!-- Scroll of Escape -->
+			<item id="29651" min="3" max="3" chance="100" /> <!-- Healing Potion - Event -->
+			<item id="29520" min="5" max="5" chance="100" /> <!-- VIP Coin -->
 		</capsuled_items>
 	</item>
 	<item id="29002" name="Daily Present - VIP 2" type="EtcItem">
@@ -33,9 +33,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="737" min="1" max="1" chance="100" />
-			<item id="29651" min="3" max="3" chance="100" />
-			<item id="29520" min="10" max="10" chance="100" />
+			<item id="737" min="1" max="1" chance="100" /> <!-- Scroll of Resurrection -->
+			<item id="29651" min="3" max="3" chance="100" /> <!-- Healing Potion - Event -->
+			<item id="29520" min="10" max="10" chance="100" /> <!-- VIP Coin -->
 		</capsuled_items>
 	</item>
 	<item id="29003" name="Daily Present - VIP 3" type="EtcItem">
@@ -52,10 +52,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="736" min="1" max="1" chance="100" />
-			<item id="737" min="1" max="1" chance="100" />
-			<item id="29651" min="5" max="5" chance="100" />
-			<item id="29520" min="15" max="15" chance="100" />
+			<item id="736" min="1" max="1" chance="100" /> <!-- Scroll of Escape -->
+			<item id="737" min="1" max="1" chance="100" /> <!-- Scroll of Resurrection -->
+			<item id="29651" min="5" max="5" chance="100" /> <!-- Healing Potion - Event -->
+			<item id="29520" min="15" max="15" chance="100" /> <!-- VIP Coin -->
 		</capsuled_items>
 	</item>
 	<item id="29004" name="Daily Present - VIP 4" type="EtcItem">
@@ -72,10 +72,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="736" min="1" max="1" chance="100" />
-			<item id="737" min="1" max="1" chance="100" />
-			<item id="29652" min="3" max="3" chance="100" />
-			<item id="29520" min="25" max="25" chance="100" />
+			<item id="736" min="1" max="1" chance="100" /> <!-- Scroll of Escape -->
+			<item id="737" min="1" max="1" chance="100" /> <!-- Scroll of Resurrection -->
+			<item id="29652" min="3" max="3" chance="100" /> <!-- Major Healing Potion - Event -->
+			<item id="29520" min="25" max="25" chance="100" /> <!-- VIP Coin -->
 		</capsuled_items>
 	</item>
 	<item id="29005" name="Daily Present - VIP 5" type="EtcItem">
@@ -92,9 +92,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="1538" min="1" max="1" chance="100" />
-			<item id="29652" min="3" max="3" chance="100" />
-			<item id="29520" min="40" max="40" chance="100" />
+			<item id="1538" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Escape -->
+			<item id="29652" min="3" max="3" chance="100" /> <!-- Major Healing Potion - Event -->
+			<item id="29520" min="40" max="40" chance="100" /> <!-- VIP Coin -->
 		</capsuled_items>
 	</item>
 	<item id="29006" name="Daily Present - VIP 6" type="EtcItem">
@@ -111,9 +111,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="3936" min="1" max="1" chance="100" />
-			<item id="29652" min="3" max="3" chance="100" />
-			<item id="29520" min="100" max="100" chance="100" />
+			<item id="3936" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Resurrection -->
+			<item id="29652" min="3" max="3" chance="100" /> <!-- Major Healing Potion - Event -->
+			<item id="29520" min="100" max="100" chance="100" /> <!-- VIP Coin -->
 		</capsuled_items>
 	</item>
 	<item id="29007" name="Daily Present - VIP 7" type="EtcItem">
@@ -130,10 +130,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="1538" min="1" max="1" chance="100" />
-			<item id="3936" min="1" max="1" chance="100" />
-			<item id="29652" min="3" max="3" chance="100" />
-			<item id="29520" min="150" max="150" chance="100" />
+			<item id="1538" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Escape -->
+			<item id="3936" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Resurrection -->
+			<item id="29652" min="3" max="3" chance="100" /> <!-- Major Healing Potion - Event -->
+			<item id="29520" min="150" max="150" chance="100" /> <!-- VIP Coin -->
 		</capsuled_items>
 	</item>
 	<item id="29008" name="XP/SP Scroll" type="EtcItem">
@@ -211,7 +211,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="55003" level="1" />
+			<skill id="55003" level="1" /> <!-- 1st Class Buff Scroll -->
 		</skills>
 	</item>
 	<item id="29012" name="2nd Class Buff Scroll" type="EtcItem">
@@ -569,7 +569,7 @@
 	</item>
 	<item id="29041" name="Vigilante Hat" type="Armor">
 		<!-- Vigilante Hat. Cannot be exchanged, dropped, or sold. -->
-		<set name="icon" val="icon.accessory_archer_hat_i00" />
+		<set name="icon" val="icon.icon.zorocap" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />

@@ -22,6 +22,7 @@ import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
@@ -53,18 +54,24 @@ public final class Cp extends AbstractEffect
 		{
 			return;
 		}
-		
+
+		int basicAmount = _amount;
+		if ((item != null) && (item.isPotion() || item.isElixir()))
+		{
+			basicAmount += effected.getStat().getValue(Stats.ADDITIONAL_POTION_CP, 0);
+		}
+
 		double amount = 0;
 		switch (_mode)
 		{
 			case DIFF:
 			{
-				amount = Math.min(_amount, effected.getMaxRecoverableCp() - effected.getCurrentCp());
+				amount = Math.min(basicAmount, effected.getMaxRecoverableCp() - effected.getCurrentCp());
 				break;
 			}
 			case PER:
 			{
-				amount = Math.min((effected.getCurrentCp() * _amount) / 100.0, effected.getMaxRecoverableCp() - effected.getCurrentCp());
+				amount = Math.min((effected.getMaxCp() * basicAmount) / 100.0, effected.getMaxRecoverableCp() - effected.getCurrentCp());
 				break;
 			}
 		}

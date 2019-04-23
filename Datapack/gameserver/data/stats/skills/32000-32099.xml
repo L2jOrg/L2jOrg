@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="32000" toLevel="1" name="Rice Cake of Fighting Spirit">
-		<icon>icon.skill32000</icon>
+		<!-- Acquired XP/ SP +20% for 20 min. Cooldown - 10 min. Buff remains after death. -->
+		<icon>icon.bm_rice_cake_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
@@ -30,7 +31,8 @@
 		</effects>
 	</skill>
 	<skill id="32001" toLevel="1" name="Rice Cake of Fighting Spirit - Personal">
-		<icon>icon.skill32001</icon>
+		<!-- Acquired XP/ SP +20% for 20 min. Cooldown - 10 min. Buff remains after death. -->
+		<icon>icon.bm_rice_cake_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
@@ -59,7 +61,8 @@
 		</effects>
 	</skill>
 	<skill id="32002" toLevel="1" name="Rice Cake of Flaming Fighting Spirit">
-		<icon>icon.skill32002</icon>
+		<!-- Acquired XP/ SP +30% for 20 min. Cooldown - 10 min. Buff remains after death. -->
+		<icon>icon.bm_rice_cake_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
@@ -88,48 +91,46 @@
 		</effects>
 	</skill>
 	<skill id="32003" toLevel="1" name="Rich Supplies">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Open the chest to randomly get one of the next items: Scroll: Enchant Weapon/ Armor (D/ C-grade), Magic Haste Potion, Greater Magic Haste Potion, Haste Potion, Greater Haste Potion, Greater Scroll of Resurrection, Scroll of Escape. -->
+		<icon>icon.event_high_oriental_park_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32004" toLevel="1" name="Improved Scroll of Resurrection">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_scroll_of_resurrection_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32005" toLevel="1" name="Fighting Spirit Support Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Double-click to obtain two Cakes of Fighting Spirit. Rich Supplies can be obtained at a certain chance. -->
+		<icon>icon.etc_marguene_collection_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32006" toLevel="1" name="Commander�s Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Inflicts 50 damage. Can be used only in PvP. -->
+		<icon>icon.weapon_shining_knife_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32007" toLevel="3" name="Teleport: Entrance to Cruma Tower">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Teleports to Entrance to Cruma Tower -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32010" toLevel="1" name="Potion Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Double-click the chest to get one of the following items: Dye Potion Pack/ Facelifting Potion Pack/ Mysterious Potion. -->
+		<icon>icon.etc_box_of_adventure_2_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32011" toLevel="1" name="Enchantment Scroll Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Double-click the chest to get one of the following items: Scroll: Empower/ Scroll: Might/ Scroll: Shield. -->
+		<icon>icon.etc_box_of_adventure_3_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32012" toLevel="1" name="High-Quality Dye Chest">
-		<icon>icon.skill32012</icon>
+		<!-- Double-click to get one of the following items: Greater STR Dye/ Greater CON Dye/ Greater DEX Dye/ Greater INT Dye/ Greater Dye/ Greater MEN Dye. -->
+		<icon>icon.etc_box_of_adventure_4_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49110</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -144,53 +145,53 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="8.3">
-						<item id="4592" count="1" />
+						<item id="4592" count="1" /> <!-- Greater Dye of CON <Con +2 DEX -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4591" count="1" />
+						<item id="4591" count="1" /> <!-- Greater Dye of CON <Con +2 Str -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4594" count="1" />
+						<item id="4594" count="1" /> <!-- Greater Dye of DEX <Dex +2 CON -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4593" count="1" />
+						<item id="4593" count="1" /> <!-- Greater Dye of DEX <Dex +2 Str -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4595" count="1" />
+						<item id="4595" count="1" /> <!-- Greater Dye of INT <Int +2 Men -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4596" count="1" />
+						<item id="4596" count="1" /> <!-- Greater Dye of INT <Int +2 Wit -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4597" count="1" />
+						<item id="4597" count="1" /> <!-- Greater Dye of MEN <Men +2 Int -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4598" count="1" />
+						<item id="4598" count="1" /> <!-- Greater Dye of MEN <Men +2 Wit -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4589" count="1" />
+						<item id="4589" count="1" /> <!-- Greater Dye of STR <STR +2 CON -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4590" count="1" />
+						<item id="4590" count="1" /> <!-- Greater Dye of STR <STR +2 DEX -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4599" count="1" />
+						<item id="4599" count="1" /> <!-- Greater Dye of WIT <Wit +2 Int -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4600" count="1" />
+						<item id="4600" count="1" /> <!-- Greater Dye of WIT <Wit +2 Men -2> - 2nd Class Transfer -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="32013" toLevel="1" name="Wind Dye Pack">
-		<icon>icon.skill32013</icon>
+		<!-- Double-click to get one of the following items: Dye of STR/ Dye of CON/ Dye of DEX/ Dye of INT/ Dye of MEN. -->
+		<icon>icon.etc_box_of_adventure_5_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49111</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -205,139 +206,137 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="8.3">
-						<item id="4469" count="1" />
+						<item id="4469" count="1" /> <!-- Dye of STR <STR +1 CON -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4470" count="1" />
+						<item id="4470" count="1" /> <!-- Dye of STR <STR +1 DEX -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4471" count="1" />
+						<item id="4471" count="1" /> <!-- Dye of CON <Con +1 Str -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4472" count="1" />
+						<item id="4472" count="1" /> <!-- Dye of CON <Con +1 DEX -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4473" count="1" />
+						<item id="4473" count="1" /> <!-- Dye of DEX <Dex +1 Str -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4474" count="1" />
+						<item id="4474" count="1" /> <!-- Dye of DEX <Dex +1 CON -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4475" count="1" />
+						<item id="4475" count="1" /> <!-- Dye of INT <Int +1 Men -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4476" count="1" />
+						<item id="4476" count="1" /> <!-- Dye of INT <Int +1 Wit -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4477" count="1" />
+						<item id="4477" count="1" /> <!-- Dye of MEN <Men +1 Int -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4478" count="1" />
+						<item id="4478" count="1" /> <!-- Dye of MEN <Men +1 Wit -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4479" count="1" />
+						<item id="4479" count="1" /> <!-- Dye of WIT <Wit +1 Int -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4480" count="1" />
+						<item id="4480" count="1" /> <!-- Dye of WIT <Wit +1 Men -1> - 1st Class Transfer -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="32014" toLevel="1" name="Staff Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Double-click to get one of the following items: Cursed Staff/ Crystal Staff/ Sage's Staff/ Demon's Staff. -->
+		<icon>icon.etc_treasure_box_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32015" toLevel="1" name="Fist Weapon Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Double-click to get one of the following items: Knuckle Duster/ Needle Wolverine/ Fisted Blade/ Great Pata. -->
+		<icon>icon.etc_treasure_box_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32016" toLevel="1" name="Spear Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Double-click to get one of the following items: Bec de Corbin/ Orcish Glaive/ Poleaxe/ Orcish Poleaxe. -->
+		<icon>icon.etc_treasure_box_i04</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32017" toLevel="1" name="Blunt Weapon Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Double-click to get one of the following items: Dwarven War Hammer/ Heavy Doom Hammer/ War Axe/ Yaksa Mace. -->
+		<icon>icon.etc_treasure_box_i05</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32018" toLevel="1" name="Dagger Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Double-click to get one of the following items: Stiletto/ Cursed Dagger/ Dark Screamer/ Crystal Dagger. -->
+		<icon>icon.etc_treasure_box_i06</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32019" toLevel="1" name="One-Handed Sword Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Double-click to get one of the following items: Katana/ StormBringer/ Sword of Delusion/ Samurai Long Sword. -->
+		<icon>icon.etc_treasure_box_i07</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32020" toLevel="1" name="Bow Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Double-click to get one of the following items: Elemental Bow/ Crystallized Ice Bow/ Akat Longbow/ Eminence Bow. -->
+		<icon>icon.etc_treasure_box_i08</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32021" toLevel="1" name="Tulio's Gift Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.new_user_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32022" toLevel="1" name="Venezia Rune - Low-Grade">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- When in inventory, acquired XP/ SP +22%. Only usable up to level 40. -->
+		<icon>icon.skill19226</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32023" toLevel="1" name="Ring of Macken">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Increases Max. HP and P./ M. Atk. -->
+		<icon>icon.ev_11th_rare_acc_ring</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32024" toLevel="1" name="Earring of Macken">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Increases MP recovery rate and healing power. -->
+		<icon>icon.ev_11th_rare_acc_earing</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32025" toLevel="1" name="Necklace of Macken">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- P. Def. and M. Def. are increased. -->
+		<icon>icon.ev_11th_rare_acc_necklace</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32026" toLevel="1" name="Ring of Macken">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Increases Max. HP and P./ M. Atk. -->
+		<icon>icon.ev_11th_rare_acc_ring</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32027" toLevel="1" name="Earring of Macken">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Increases MP recovery rate and healing power. -->
+		<icon>icon.ev_11th_rare_acc_earing</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32028" toLevel="1" name="Necklace of Macken">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- P. Def. and M. Def. are increased. -->
+		<icon>icon.ev_11th_rare_acc_necklace</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32029" toLevel="1" name="Venezia Rune - High-Grade">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- XP/ SP +11% Scroll -->
+		<icon>icon.skill19226</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32030" toLevel="1" name="Dandy's Home Run Ball">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 1 hr., acquired XP/ SP +100%. Cannot be stacked with Fish Stew - The Guild's Gratitude. Changes the appearance of your armor into that of a Lineage II Uniform. Buff remains after death. -->
+		<icon>BranchIcon.icon.g_ev_homerunball</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32031" toLevel="1" name="Teleport Stone: Talking Island Village">
-		<icon>icon.skill32031</icon>
+		<!-- Teleports to Talking Island Village. Cooldown - 60 min. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29149</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -357,14 +356,13 @@
 		</effects>
 	</skill>
 	<skill id="32032" toLevel="1" name="Teleport Stone: Elven Village">
-		<icon>icon.skill32032</icon>
+		<!-- Teleports to Elven Village. Cooldown - 60 min. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29150</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -384,14 +382,13 @@
 		</effects>
 	</skill>
 	<skill id="32033" toLevel="1" name="Teleport Stone: Dark Elf Village">
-		<icon>icon.skill32033</icon>
+		<!-- Teleports to Dark Elf Village. Cooldown - 60 min. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29151</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -411,14 +408,13 @@
 		</effects>
 	</skill>
 	<skill id="32034" toLevel="1" name="Teleport Stone: Orc Village">
-		<icon>icon.skill32034</icon>
+		<!-- Teleports to Orc Village. Cooldown - 60 min. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29152</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -438,14 +434,13 @@
 		</effects>
 	</skill>
 	<skill id="32035" toLevel="1" name="Teleport Stone: Dwarven Village">
-		<icon>icon.skill32035</icon>
+		<!-- Teleports to Dwarven Village. Cooldown - 60 min. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29153</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -465,14 +460,13 @@
 		</effects>
 	</skill>
 	<skill id="32036" toLevel="1" name="Teleport Stone: Gludin Village">
-		<icon>icon.skill32036</icon>
+		<!-- Teleports to Gludin. Cooldown - 60 min. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29154</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -492,14 +486,13 @@
 		</effects>
 	</skill>
 	<skill id="32037" toLevel="1" name="Teleport Stone: Town of Gludio">
-		<icon>icon.skill32037</icon>
+		<!-- Teleports to Gludio. Cooldown - 60 min. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29155</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -519,44 +512,37 @@
 		</effects>
 	</skill>
 	<skill id="32038" toLevel="1" name="Teleport Stone: Town of Dion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Teleports to Dion. Cooldown - 60 min. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32039" toLevel="1" name="Teleport Stone: Floran Village">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Teleports to Floran. Cooldown - 60 min. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32040" toLevel="1" name="Teleport Stone: Town of Giran">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Teleports to Giran. Cooldown - 60 min. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32041" toLevel="1" name="Teleport Stone: Town of Oren">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Teleports to Oren. Cooldown - 60 min. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32042" toLevel="1" name="Teleport Stone: Ivory Tower">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Teleports to Ivory Tower. Cooldown - 60 min. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32043" toLevel="1" name="Teleport Stone: Hunter's Village">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Teleports to Hunters Village. Cooldown - 60 min. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32044" toLevel="1" name="Teleport: Entrance to Cruma Tower">
-		<icon>icon.skill32044</icon>
+		<!-- Teleports to Entrance to Cruma Tower. Cooldown - 60 min. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49089</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -576,14 +562,13 @@
 		</effects>
 	</skill>
 	<skill id="32045" toLevel="1" name="Teleport: Entrance to Dragon Valley">
-		<icon>icon.skill32045</icon>
+		<!-- Teleports to Entrance to Dragon Valley. Cooldown - 60 min. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49090</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -603,14 +588,13 @@
 		</effects>
 	</skill>
 	<skill id="32046" toLevel="1" name="Teleport: Dragon Valley Bridge">
-		<icon>icon.skill32046</icon>
+		<!-- Teleports to Dragon Valley Bridge. Cooldown - 60 min. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49091</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -630,28 +614,25 @@
 		</effects>
 	</skill>
 	<skill id="32047" toLevel="1" name="Cube of Sayha - 30-day">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.sa_cube</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32048" toLevel="1" name="Cube of Sayha - 90-day">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.sa_cube</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32049" toLevel="1" name="Storm Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Acquired XP/ SP +50% for 2 hr. Cooldown - 2 hr. Buff remains after death. -->
+		<icon>icon.power_of_storm</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32050" toLevel="1" name="Sayha's Treasure Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_pi_gift_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32051" toLevel="1" name="Berserker Spirit">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 20 min., P. Def. -5%, M. Def. -10%, Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. -->
+		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

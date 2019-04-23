@@ -1,253 +1,239 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="55900" toLevel="1" name="Match Girls' Gratitude">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 20 min., P./ M. Atk. +12%, P./ M. Def +15%, Max HP/ MP/ CP +25%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%, HP/ MP Recovery Bonus +30%. At a certain chance absorbs 5% of the melee damage inflicted on target as HP. -->
+		<icon>icon.etc_candle_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55901" toLevel="2" name="Cooking Ingredient">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>
+			<value level="1">icon.skill11775</value>
+			<value level="2">icon.skill0000</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55902" toLevel="1" name="Match Girls' Blessing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Blessing from helping the Match Girls. For 2 hr., acquired XP/ SP +70% and XP/ SP from fishing +20%. Cannot be stacked with Dandy's Home Run Ball and Fish Stew - Guild's Gratitude. Remains when moving to the Olympiad. -->
+		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55903" toLevel="1" name="Christmas Talisman: P. Skill Critical Damage">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- P. Skill Critical Damage +2%. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55904" toLevel="1" name="Christmas Talisman: M. Skill Critical Damage">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Skill Critical Damage +2%. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55905" toLevel="1" name="Christmas Talisman: Ultimate Defense">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 15 sec., P. Def. +1800 and M. Def. +1620. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55906" toLevel="1" name="Christmas Talisman: Debuff Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 15 sec., defends against debuffs 5 times. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55907" toLevel="1" name="Christmas Talisman: P. Atk.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- P. Atk. +5%. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55908" toLevel="1" name="Christmas Talisman: M. Atk.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. +5%. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55909" toLevel="1" name="Christmas Talisman: P. Def.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- P. Def. +6%. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55910" toLevel="1" name="Christmas Talisman: M. Def.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Def. +6%. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55911" toLevel="1" name="Sealbook: One-eyed ParaPara Cat">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55912" toLevel="1" name="Sealbook: Smiling ParaPara Cat">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55913" toLevel="1" name="Sealbook: Charming ParaPara Cat">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55914" toLevel="1" name="Sealbook: Ferocious ParaPara Cat">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55915" toLevel="1" name="Sealbook: Merchant ParaPara Cat">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55916" toLevel="1" name="Transform: One-eyed ParaPara Cat">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 1 hr., transforms into One-eyed ParaPara Cat. -->
+		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55917" toLevel="1" name="Transform: Smiling ParaPara Cat">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 1 hr., transforms into Smiling ParaPara Cat. -->
+		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55918" toLevel="1" name="Transform: Charming ParaPara Cat">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 1 hr., transforms into Charming ParaPara Cat. -->
+		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55919" toLevel="1" name="Transform: Ferocious ParaPara Cat">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 1 hr., transforms into Ferocious ParaPara Cat. -->
+		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55920" toLevel="1" name="Transform: Merchant ParaPara Cat">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 1 hr., transforms into Merchant ParaPara Cat. -->
+		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55921" toLevel="3" name="Fishermen's Guild Support Certificate">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For $s1 hr., acquired XP/ SP during fishing +$s2 when used. Buff remains after death. -->
+		<icon>icon.event_orc_memo</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55922" toLevel="1" name="Christmas Surprise Sox">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55923" toLevel="1" name="Rudolph's Blessed Resurrection">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Resurrects a dead character and fully restores its XP. Consumes 1 Spirit Ore. -->
+		<icon>icon.skill5662</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55924" toLevel="1" name="Rudolph's Blessing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 20 min., acquired XP/ SP +5%. -->
+		<icon>icon.skill19226</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55925" toLevel="1" name="Rudolph's Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Buff/ debuff effects remain after death, but Power of Rudolph is consumed. -->
+		<icon>BranchSys2.icon.event_lbracelet_rudolph</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55926" toLevel="1" name="Summon Agathion - Rudolph">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons Agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55927" toLevel="1" name="Blessing of Protection">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Has a high chance of resisting debuffs and keeps you safe from damage by chaotic characters who are more than 10 levels apart from you. In addition, has a high chance of resisting debuffs from normal characters who are more than 10 levels apart from you. -->
+		<icon>icon.skill0194</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55928" toLevel="1" name="Glittering Enchant Scroll of Border">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55929" toLevel="1" name="Highest Grade Talisman of Border Sealed Case">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Double click to obtain +10 Talisman of Border - Lv. 5. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55930" toLevel="1" name="Talisman of Border Lucky Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55931" toLevel="1" name="Fire Dragon Pendant Lucky Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55932" toLevel="1" name="Water Dragon Pendant Lucky Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55933" toLevel="1" name="Wind Dragon Pendant Lucky Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55934" toLevel="1" name="Earth Dragon Pendant Lucky Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55935" toLevel="1" name="Highest Grade Fire Dragon Pendant Sealed Case">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55936" toLevel="1" name="Highest Grade Water Dragon Pendant Sealed Case">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55937" toLevel="1" name="Highest Grade Wind Dragon Pendant Sealed Case">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55938" toLevel="1" name="Highest Grade Earth Dragon Pendant Sealed Case">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55989" toLevel="2" name="Uldie's Full Buff">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Ultimate buff from Uldie. For 2 hr., acquiried XP/ SP +$s1, P. Atk./ M. Atk. +$s2, Atk. Spd./ Casting Spd. +$s3. -->
+		<icon>BranchSys.icon.br_sevenlove_girlpresent_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55990" toLevel="1" name="Bracelet of Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- HP/ MP Recovery +15%, Accuracy +2, M. Accuracy +2, Weight Limit +10,000. -->
+		<icon>icon.ertheia_bracelet_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55991" toLevel="15" name="Bright Talisman of Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- By the energy of Power P./ M. Def. +13, Max HP +6%, Max MP +2%, P./ M. Atk. +2%. -->
+		<icon>
+			<value level="1">icon.sayhas_talisman_g_Lv1</value>
+			<value level="2">icon.sayhas_talisman_g_Lv2</value>
+			<value level="3">icon.sayhas_talisman_g_Lv3</value>
+			<value level="4">icon.sayhas_talisman_g_Lv4</value>
+			<value level="5">icon.sayhas_talisman_g_lv5</value>
+			<value level="6">icon.sayhas_talisman_pve_Lv1</value>
+			<value level="7">icon.sayhas_talisman_pve_Lv2</value>
+			<value level="8">icon.sayhas_talisman_pve_Lv3</value>
+			<value level="9">icon.sayhas_talisman_pve_Lv4</value>
+			<value level="10">icon.sayhas_talisman_pve_lv5</value>
+			<value level="11">icon.sayhas_talisman_pvp_Lv1</value>
+			<value level="12">icon.sayhas_talisman_pvp_Lv2</value>
+			<value level="13">icon.sayhas_talisman_pvp_Lv3</value>
+			<value level="14">icon.sayhas_talisman_pvp_Lv4</value>
+			<value level="15">icon.sayhas_talisman_pvp_lv5</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55992" toLevel="2" name="Power of Shunaiman">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- By the power of Shunaiman Stun/ Mental attack +5%, damage reflection resistance +10%. -->
+		<icon>
+			<value level="1">icon.sayhas_talisman_pvp_Lv1</value>
+			<value level="2">icon.sayhas_talisman_pvp_Lv2</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55993" toLevel="1" name="Summon Big Wedding Cake">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55994" toLevel="1" name="Summon Your Spouse">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons your spouse. Target of summoning must be in your party and have same ring equipped. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55995" toLevel="1" name="Agathion Cute Trick">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- See Agathion's cute trick. -->
+		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55996" toLevel="1" name="Summon Agathion - Bugbear">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons Agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55997" toLevel="1" name="Summon Agathion - Dryad">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons Agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55998" toLevel="1" name="Summon Agathion - Griffin">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Summons Agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55999" toLevel="1" name="Irene' Hourglass - 1 Hour">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Acquired XP/ SP +50% for the duration of the effect -->
+		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

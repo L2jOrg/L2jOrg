@@ -59,6 +59,10 @@ public final class ManaHeal extends AbstractEffect
 		}
 		
 		double amount = _power;
+		if ((item != null) && (item.isPotion() || item.isElixir()))
+		{
+			amount += effected.getStat().getValue(Stats.ADDITIONAL_POTION_MP, 0);
+		}
 		
 		if (!skill.isStatic())
 		{

@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1201" toLevel="35" name="Dryad Root">
+		<!-- Immobilizes the enemy for $s1. -->
+		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -47,7 +49,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1201</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -164,7 +165,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>HOLD</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -177,6 +177,8 @@
 		</effects>
 	</skill>
 	<skill id="1204" toLevel="6" name="Wind Walk">
+		<!-- For $s1 Speed +$s2. -->
+		<icon>icon.skill1204</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -198,7 +200,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1204</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">20</value>
@@ -226,7 +227,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -246,6 +246,8 @@
 		</effects>
 	</skill>
 	<skill id="1206" toLevel="21" name="Wind Shackle">
+		<!-- Enemy's Atk. Spd. -$s2 for $s1. -->
+		<icon>icon.skill1206</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -299,7 +301,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1206</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -347,7 +348,7 @@
 			<value level="18">67</value>
 			<value level="19">69</value>
 			<value level="20">75</value>
-			<value level="21">79</value>	
+			<value level="21">79</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">1</value>
@@ -374,7 +375,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -408,6 +408,8 @@
 		</effects>
 	</skill>
 	<skill id="1208" toLevel="19" name="Seal of Binding">
+		<!-- For $s1 inflicts Hold on the nearby targets. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<icon>icon.skill1208</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -438,7 +440,6 @@
 			<value level="19">-673</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1208</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -482,7 +483,7 @@
 			<value level="16">80</value>
 			<value level="17">82</value>
 			<value level="18">113</value>
-			<value level="19">117</value>	
+			<value level="19">117</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">7</value>
@@ -507,7 +508,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>HOLD</trait>
 		<targetType>SELF</targetType>
@@ -521,6 +521,8 @@
 		</effects>
 	</skill>
 	<skill id="1209" toLevel="6" name="Seal of Poison">
+		<!-- Poisons nearby enemies, causing loss of $s2 HP per sec. for $s1. -->
+		<icon>icon.skill1209</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -546,7 +548,6 @@
 			<value level="6">-635</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1209</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -576,7 +577,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>POISON</trait>
 		<targetType>SELF</targetType>
@@ -597,6 +597,8 @@
 		</effects>
 	</skill>
 	<skill id="1210" toLevel="4" name="Seal of Gloom">
+		<!-- For $s2, nearby enemies' MP -$s3 with $s1 Power added to M. Atk. -->
+		<icon>icon.skill1210</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">6</value>
@@ -617,7 +619,6 @@
 			<value level="4">-646</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1210</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -641,7 +642,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -669,6 +669,8 @@
 		</effects>
 	</skill>
 	<skill id="1213" toLevel="13" name="Seal of Mirage">
+		<!-- Throws nearby enemies into chaos, causing them to attack anybody randomly. -->
+		<icon>icon.skill1213</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -687,7 +689,6 @@
 			<value level="13">-655</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1213</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
@@ -737,7 +738,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>SELF</targetType>
@@ -750,17 +750,16 @@
 		</effects>
 	</skill>
 	<skill id="1216" toLevel="1" name="Self Heal">
-		<!-- Confirmed CT2.5 -->
+		<!-- Restores HP with 42 Power. -->
+		<icon>icon.skill1216</icon>
 		<effectPoint>10</effectPoint>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1216</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>7</mpConsume>
 		<mpInitialConsume>2</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -771,6 +770,8 @@
 		</effects>
 	</skill>
 	<skill id="1217" toLevel="41" name="Greater Heal">
+		<!-- Restores the target's HP with $s1 Power. -->
+		<icon>icon.skill1217</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">236</value>
@@ -812,7 +813,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1217</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">38</value>
@@ -945,7 +945,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -999,6 +998,8 @@
 		</effects>
 	</skill>
 	<skill id="1218" toLevel="41" name="Greater Battle Heal">
+		<!-- Immediately restores the target's HP with $s1 Power. -->
+		<icon>icon.skill1218</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">202</value>
@@ -1040,7 +1041,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1218</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">38</value>
@@ -1173,7 +1173,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1226,6 +1225,8 @@
 		</effects>
 	</skill>
 	<skill id="1219" toLevel="41" name="Greater Group Heal">
+		<!-- Restores all party members' HP with $s1 Power. -->
+		<icon>icon.skill1219</icon>
 		<affectRange>1000</affectRange>
 		<effectPoint>
 			<value level="1">202</value>
@@ -1266,7 +1267,6 @@
 			<value level="36">484</value>
 		</effectPoint>
 		<hitTime>7000</hitTime>
-		<icon>icon.skill1219</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">38</value>
@@ -1399,7 +1399,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1454,6 +1453,8 @@
 		</effects>
 	</skill>
 	<skill id="1220" toLevel="33" name="Blaze">
+		<!-- Ignites flames on your body with $s1 Power, inflicting Fire damage on the enemy. -->
+		<icon>icon.skill1220</icon>
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-182</value>
@@ -1469,7 +1470,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1220</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">20</value>
@@ -1578,7 +1578,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1200</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1624,6 +1623,8 @@
 		</effects>
 	</skill>
 	<skill id="1222" toLevel="17" name="Curse Chaos">
+		<!-- Enemy's P. Accuracy -$s2 for $s1. -->
+		<icon>icon.skill1222</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1669,7 +1670,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1222</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -1732,7 +1732,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1762,7 +1761,8 @@
 		</effects>
 	</skill>
 	<skill id="1223" toLevel="15" name="Surrender to Earth">
-		<!-- Confirmed CT2.5 -->
+		<!-- For $s1, enemy's Earth Resistance -$s2 and Wind Resistance +$s3. -->
+		<icon>icon.skill1223</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -1838,7 +1838,6 @@
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1223</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -1895,7 +1894,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1911,6 +1909,8 @@
 		</effects>
 	</skill>
 	<skill id="1224" toLevel="17" name="Surrender to Poison">
+		<!-- Enemy's Poison Resistance -$s2 for $s1. -->
+		<icon>icon.skill1224</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -1992,7 +1992,6 @@
 			<value level="17">1400</value>
 		</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1224</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -2055,7 +2054,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>POISON</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2085,7 +2083,8 @@
 		</effects>
 	</skill>
 	<skill id="1225" toLevel="18" name="Summon Mew the Cat">
-		<!-- H5 hitTime -->
+		<!-- Summons Mew the Cat for assistance in combat. Consumes $s1 Spirit Ore. -->
+		<icon>icon.skill1225</icon>
 		<hitTime>
 			<value level="1">15000</value>
 			<value level="2">15000</value>
@@ -2106,7 +2105,6 @@
 			<value level="17">6000</value>
 			<value level="18">6000</value>
 		</hitTime>
-		<icon>icon.skill1225</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -2191,7 +2189,6 @@
 			<value level="17">5000</value>
 			<value level="18">5000</value>
 		</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2225,7 +2222,8 @@
 		</effects>
 	</skill>
 	<skill id="1226" toLevel="18" name="Summon Boxer the Unicorn">
-		<!-- H5 hitTime -->
+		<!-- Summons Boxer the Unicorn. Consumes $s1 Spirit Ore. -->
+		<icon>icon.skill1226</icon>
 		<hitTime>
 			<value level="1">15000</value>
 			<value level="2">15000</value>
@@ -2246,7 +2244,6 @@
 			<value level="17">6000</value>
 			<value level="18">6000</value>
 		</hitTime>
-		<icon>icon.skill1226</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">1</value>
@@ -2350,7 +2347,6 @@
 			<value level="17">5000</value>
 			<value level="18">5000</value>
 		</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2383,7 +2379,8 @@
 		</effects>
 	</skill>
 	<skill id="1227" toLevel="18" name="Summon Mirage the Unicorn">
-		<!-- H5 hitTime -->
+		<!-- Summons Mirage the Unicorn, which helps in combat using attack magic. Consumes $s1 Spirit Ore. -->
+		<icon>icon.skill1227</icon>
 		<hitTime>
 			<value level="1">15000</value>
 			<value level="2">15000</value>
@@ -2404,7 +2401,6 @@
 			<value level="17">6000</value>
 			<value level="18">6000</value>
 		</hitTime>
-		<icon>icon.skill1227</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -2489,7 +2485,6 @@
 			<value level="17">5000</value>
 			<value level="18">5000</value>
 		</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2523,7 +2518,8 @@
 		</effects>
 	</skill>
 	<skill id="1228" toLevel="18" name="Summon Silhouette">
-		<!-- H5 hitTime -->
+		<!-- Summons Silhouette, which helps in combat using attack magic. Consumes $s1 Spirit Ore. -->
+		<icon>icon.skill1228</icon>
 		<hitTime>
 			<value level="1">15000</value>
 			<value level="2">15000</value>
@@ -2544,7 +2540,6 @@
 			<value level="17">6000</value>
 			<value level="18">6000</value>
 		</hitTime>
-		<icon>icon.skill1228</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -2629,7 +2624,6 @@
 			<value level="17">5000</value>
 			<value level="18">5000</value>
 		</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2663,6 +2657,8 @@
 		</effects>
 	</skill>
 	<skill id="1229" toLevel="23" name="Chant of Life">
+		<!-- Recovers $s2 HP per sec. for all party members for $s1. -->
+		<icon>icon.skill1229</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2714,7 +2710,6 @@
 			<value level="20">673</value>
 		</effectPoint>
 		<hitTime>7000</hitTime>
-		<icon>icon.skill1229</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">20</value>
@@ -2786,14 +2781,13 @@
 			<value level="17">57</value>
 			<value level="18">58</value>
 			<value level="19">58</value>
-			<value level="20">59</value>	
-			<value level="21">60</value>	
-			<value level="22">60</value>	
-			<value level="23">61</value>	
+			<value level="20">59</value>
+			<value level="21">60</value>
+			<value level="22">60</value>
+			<value level="23">61</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -2831,6 +2825,8 @@
 		</effects>
 	</skill>
 	<skill id="1230" toLevel="36" name="Prominence">
+		<!-- Ignites flames to inflict Fire damage on the enemy with $s1 Power added to M. Atk. -->
+		<icon>icon.skill1230</icon>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-360</value>
@@ -2869,7 +2865,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1230</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -2988,7 +2983,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1200</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -3038,6 +3032,8 @@
 		</effects>
 	</skill>
 	<skill id="1231" toLevel="31" name="Aura Flare">
+		<!-- Inflicts non-attribute damage on the enemy using $s1 Power added to M. Atk. -->
+		<icon>icon.skill1231</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>MA_DOWN</abnormalType>
@@ -3077,7 +3073,6 @@
 		</effectPoint>
 		<effectRange>650</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1231</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">38</value>
@@ -3180,7 +3175,6 @@
 		</mpInitialConsume>
 		<operateType>A3</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
@@ -3231,6 +3225,8 @@
 		</selfEffects>
 	</skill>
 	<skill id="1232" toLevel="3" name="Blazing Skin">
+		<!-- For $s1, gives a party member the ability to transfer $s2 of received damage back to the enemy. -->
+		<icon>icon.skill1232</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3246,7 +3242,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1232</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -3265,7 +3260,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -3286,6 +3280,8 @@
 		</effects>
 	</skill>
 	<skill id="1233" toLevel="4" name="Decay">
+		<!-- Rots the enemy, causing loss of $s2 HP per sec. for $s1. -->
+		<icon>icon.skill1233</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">6</value>
@@ -3308,7 +3304,6 @@
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1233</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -3332,7 +3327,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3349,6 +3343,8 @@
 		</effects>
 	</skill>
 	<skill id="1234" toLevel="36" name="Vampiric Claw">
+		<!-- Inflicts dark damage on the enemy with $s1 Power added to M. Atk. Absorbs $s2 of the damage as HP. -->
+		<icon>icon.skill1234</icon>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-360</value>
@@ -3381,13 +3377,12 @@
 			<value level="28">-655</value>
 			<value level="29">-660</value>
 			<value level="30">-665</value>
-			<value level="31">-672</value>	
+			<value level="31">-672</value>
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1234</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">38</value>
@@ -3505,7 +3500,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -3555,7 +3549,8 @@
 		</effects>
 	</skill>
 	<skill id="1235" toLevel="36" name="Hydro Blast">
-		<!-- Confirmed CT2.5 -->
+		<!-- Releases a high pressure current to inflict Water damage on the enemy with $s1 Power added to M. Atk. -->
+		<icon>icon.skill1235</icon>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-360</value>
@@ -3599,7 +3594,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1235</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -3718,7 +3712,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1200</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -3767,6 +3760,8 @@
 		</effects>
 	</skill>
 	<skill id="1236" toLevel="21" name="Frost Bolt">
+		<!-- Momentarily freezes the surrounding air, inflicting Water damage with $s1 Power added to M. Atk. and decreasing the enemy's Speed by $s3 for $s2. -->
+		<icon>icon.skill1236</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -3801,7 +3796,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3100</hitTime>
-		<icon>icon.skill1236</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -3876,7 +3870,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1200</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3913,6 +3906,8 @@
 		</effects>
 	</skill>
 	<skill id="1237" toLevel="19" name="Ice Dagger">
+		<!-- Hurls a blade of ice with $s1 Power added to M. Atk., inflicting water damage and causing loss of $s3 HP per sec. for $s2. -->
+		<icon>icon.skill1237</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -3932,7 +3927,7 @@
 			<value level="16">8</value>
 			<value level="17">8</value>
 			<value level="18">8</value>
-			<value level="19">8</value>	
+			<value level="19">8</value>
 		</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -3966,7 +3961,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1237</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -4035,7 +4029,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1200</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4091,7 +4084,8 @@
 		</effects>
 	</skill>
 	<skill id="1238" toLevel="3" name="Freezing Skin">
-		<!-- Confirmed CT2.5 -->
+		<!-- For $s1, gives a party member the ability to transfer $s2 of received damage back to the enemy. -->
+		<icon>icon.skill1238</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4107,7 +4101,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1238</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -4126,7 +4119,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -4147,6 +4139,8 @@
 		</effects>
 	</skill>
 	<skill id="1239" toLevel="36" name="Hurricane">
+		<!-- Creates a whirlwind that uses $s1 Power to inflict Wind damage to the enemy. -->
+		<icon>icon.skill1239</icon>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-360</value>
@@ -4190,7 +4184,6 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1239</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -4309,7 +4302,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1200</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -4359,6 +4351,8 @@
 		</effects>
 	</skill>
 	<skill id="1240" toLevel="6" name="Guidance">
+		<!-- P. Accuracy +$s2 for $s1. -->
+		<icon>icon.skill1240</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4380,7 +4374,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1240</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -4408,7 +4401,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -4428,6 +4420,8 @@
 		</effects>
 	</skill>
 	<skill id="1242" toLevel="6" name="Death Whisper">
+		<!-- P. Critical Damage +$s2 for $s1. -->
+		<icon>icon.skill1242</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4449,7 +4443,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1242</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -4477,7 +4470,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -4497,6 +4489,8 @@
 		</effects>
 	</skill>
 	<skill id="1243" toLevel="6" name="Blessed Shield">
+		<!-- Shield Defense +$s2 for $s1. -->
+		<icon>icon.skill1243</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4518,7 +4512,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1243</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -4546,7 +4539,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -4566,7 +4558,8 @@
 		</effects>
 	</skill>
 	<skill id="1244" toLevel="13" name="Freezing Flame">
-		<!-- Updated to IO -->
+		<!-- Strikes the target with magical cold flame, causing loss of $s2 HP per sec. for $s1. -->
+		<icon>icon.skill1244</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">6</value>
@@ -4598,7 +4591,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill1244</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -4649,7 +4641,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4693,20 +4684,22 @@
 				<ticks>1</ticks>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="9" toLevel="13" fromSubLevel="2001" toSubLevel="2030">
- 				<amount>
- 					<value fromLevel="9" toLevel="13" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="9" toLevel="13" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="Speed" fromLevel="9" toLevel="13" fromSubLevel="3001" toSubLevel="3030">
- 				<amount>
- 					<value fromLevel="9" toLevel="13" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
+				<amount>
+					<value fromLevel="9" toLevel="13" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</pveEffects>
 	</skill>
 	<skill id="1245" toLevel="19" name="Steal Essence">
+		<!-- Inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. Absorbs $s2 of the damage as HP. -->
+		<icon>icon.skill1245</icon>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-379</value>
@@ -4728,7 +4721,6 @@
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1245</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -4795,7 +4787,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4827,6 +4818,8 @@
 		</effects>
 	</skill>
 	<skill id="1246" toLevel="14" name="Seal of Silence">
+		<!-- Blocks nearby enemies' use of magic for $s1. -->
+		<icon>icon.skill1246</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
@@ -4852,7 +4845,6 @@
 			<value level="14">-673</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1246</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -4906,7 +4898,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>SELF</targetType>
@@ -4917,7 +4908,8 @@
 		</effects>
 	</skill>
 	<skill id="1247" toLevel="16" name="Seal of Scourge">
-		<!-- should stop regen - check if mul regHP by 0 will work -->
+		<!-- Blocks nearby enemies' natural HP recovery ability by $s2 for $s1. -->
+		<icon>icon.skill1247</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HP_REGEN_DOWN</abnormalType>
@@ -4944,7 +4936,6 @@
 			<value level="16">-673</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1247</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -5004,7 +4995,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>BOSS</trait>
 		<targetType>SELF</targetType>
@@ -5018,6 +5008,8 @@
 		</effects>
 	</skill>
 	<skill id="1248" toLevel="14" name="Seal of Suspension">
+		<!-- Nearby enemies' physical/ magic skill Cooldown -$s2 for $s1. -->
+		<icon>icon.skill1248</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>REUSE_DELAY_UP</abnormalType>
@@ -5042,7 +5034,6 @@
 			<value level="14">-673</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1248</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -5096,7 +5087,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -5115,6 +5105,8 @@
 		</effects>
 	</skill>
 	<skill id="1249" toLevel="3" name="Pa'agrio's Vision">
+		<!-- Accuracy of nearby clan members +$s2 for $s1. -->
+		<icon>icon.skill1249</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5130,7 +5122,6 @@
 			<value level="3">532</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1249</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -5149,7 +5140,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5167,6 +5157,8 @@
 		</effects>
 	</skill>
 	<skill id="1250" toLevel="3" name="Pa'agrio's Protection">
+		<!-- Shield Defense of nearby clan members +$s2 for $s1. Effect $s3. -->
+		<icon>icon.skill1250</icon>
 		<abnormalLvl>
 			<value level="1">6</value>
 			<value level="2">7</value>
@@ -5182,7 +5174,6 @@
 			<value level="3">532</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1250</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -5201,7 +5192,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5219,6 +5209,8 @@
 		</effects>
 	</skill>
 	<skill id="1251" toLevel="2" name="Chant of Fury">
+		<!-- All party members' Atk. Spd. +$s2 for $s1. -->
+		<icon>icon.skill1251</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5231,7 +5223,6 @@
 			<value level="2">532</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1251</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">48</value>
@@ -5247,7 +5238,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5264,6 +5254,8 @@
 		</effects>
 	</skill>
 	<skill id="1252" toLevel="3" name="Chant of Evasion">
+		<!-- All party members' Evasion +$s2 for $s1. -->
+		<icon>icon.skill1252</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5278,7 +5270,6 @@
 			<value level="3">532</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1252</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -5297,7 +5288,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5315,6 +5305,8 @@
 		</effects>
 	</skill>
 	<skill id="1253" toLevel="3" name="Chant of Rage">
+		<!-- Critical Damage of all party members +$s2 for $s1. -->
+		<icon>icon.skill1253</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5329,7 +5321,6 @@
 			<value level="3">532</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1253</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -5348,7 +5339,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5366,6 +5356,8 @@
 		</effects>
 	</skill>
 	<skill id="1254" toLevel="6" name="Mass Resurrection">
+		<!-- Resurrect a dead clan member. -->
+		<icon>icon.skill1254</icon>
 		<affectLimit>50-50</affectLimit>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -5378,7 +5370,6 @@
 			<value level="6">578</value>
 		</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1254</icon>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -5406,7 +5397,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>600000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>500</coolTime>
 		<staticReuse>true</staticReuse>
@@ -5430,14 +5420,14 @@
 		</effects>
 	</skill>
 	<skill id="1255" toLevel="2" name="Party Return">
-		<!-- Confirmed CT2.5 -->
+		<!-- Teleports party members to the nearest village. Cannot be used in a specially designated place such as the GM Consultation Service. -->
+		<icon>icon.skill1255</icon>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>
 			<value level="1">20000</value>
 			<value level="2">3500</value>
 		</hitTime>
-		<icon>icon.skill1255</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">48</value>
@@ -5453,7 +5443,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>150000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -5468,6 +5457,8 @@
 		</effects>
 	</skill>
 	<skill id="1256" toLevel="18" name="Pa'agrio's Heart">
+		<!-- Restores a clan member's HP with $s1 Power and recovers $s3 HP per sec. for $s2. -->
+		<icon>icon.skill1256</icon>
 		<abnormalLvl>
 			<value level="1">6</value>
 			<value level="2">7</value>
@@ -5510,7 +5501,6 @@
 			<value level="15">673</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1256</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -5574,7 +5564,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5629,6 +5618,8 @@
 		</effects>
 	</skill>
 	<skill id="1257" toLevel="3" name="Decrease Weight">
+		<!-- Weight penalty interval +$s2 for $s1. -->
+		<icon>icon.skill1257</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5644,7 +5635,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1257</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">35</value>
@@ -5663,7 +5653,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -5679,7 +5668,8 @@
 		</effects>
 	</skill>
 	<skill id="1258" toLevel="4" name="Restore Life">
-		<!-- Confirmed CT2.5 -->
+		<!-- Recovers HP by $s1. -->
+		<icon>icon.skill1258</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">500</value>
@@ -5689,7 +5679,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>8000</hitTime>
-		<icon>icon.skill1258</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -5711,7 +5700,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_NOT</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -5727,6 +5715,8 @@
 		</effects>
 	</skill>
 	<skill id="1259" toLevel="4" name="Stun Resistance">
+		<!-- Stun Resistance +$s2 for $s1. -->
+		<icon>icon.skill1259</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5744,7 +5734,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1259</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -5766,7 +5755,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -5783,6 +5771,8 @@
 		</effects>
 	</skill>
 	<skill id="1260" toLevel="3" name="Pa'agrio's Tact">
+		<!-- Nearby clan members' Evasion +$s2 for $s1. -->
+		<icon>icon.skill1260</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5798,7 +5788,6 @@
 			<value level="3">532</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1260</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -5817,7 +5806,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5835,6 +5823,8 @@
 		</effects>
 	</skill>
 	<skill id="1261" toLevel="2" name="Pa'agrio's Rage">
+		<!-- Nearby clan members' P. Def. -$s2, M. Def. -$s3, and Evasion - $s4, and P. Atk. +$s5, M. Atk. +$s6, Atk. Spd. +$s7, Casting Spd. +$s8, and Speed +$s9 for $s1. -->
+		<icon>icon.skill1261</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5848,7 +5838,6 @@
 			<value level="2">495</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1261</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -5864,7 +5853,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -5930,6 +5918,7 @@
 		</effects>
 	</skill>
 	<skill id="1262" toLevel="10" name="Transfer Pain">
+		<!-- Transfers $s1 of received damage to a servitor. Consumes MP proportionately to your level. -->
 		<icon>icon.skill1262</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -5956,7 +5945,6 @@
 			<value level="10">18</value>
 		</mpInitialConsume>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
@@ -5981,6 +5969,8 @@
 		</effects>
 	</skill>
 	<skill id="1263" toLevel="24" name="Curse Gloom">
+		<!-- Curses the enemy, momentarily reducing their M. Def. by $s1. -->
+		<icon>icon.skill1263</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="24">10</value>
@@ -6021,7 +6011,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2780</hitTime>
-		<icon>icon.skill1263</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -6105,7 +6094,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2400</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -6297,6 +6285,8 @@
 		</effects>
 	</skill>
 	<skill id="1264" toLevel="3" name="Solar Spark">
+		<!-- Inflicts holy damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
+		<icon>icon.skill1264</icon>
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-303</value>
@@ -6307,7 +6297,6 @@
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1264</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">25</value>
@@ -6326,7 +6315,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -6342,6 +6330,8 @@
 		</effects>
 	</skill>
 	<skill id="1265" toLevel="14" name="Solar Flare">
+		<!-- Inflicts holy damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
+		<icon>icon.skill1265</icon>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-474</value>
@@ -6363,7 +6353,6 @@
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1265</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -6415,7 +6404,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -6442,6 +6430,8 @@
 		</effects>
 	</skill>
 	<skill id="1266" toLevel="3" name="Shadow Spark">
+		<!-- Inflicts dark damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
+		<icon>icon.skill1266</icon>
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-303</value>
@@ -6452,7 +6442,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1266</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">25</value>
@@ -6471,7 +6460,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -6487,6 +6475,8 @@
 		</effects>
 	</skill>
 	<skill id="1267" toLevel="14" name="Shadow Flare">
+		<!-- Inflicts dark damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
+		<icon>icon.skill1267</icon>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-474</value>
@@ -6508,7 +6498,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1267</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -6560,7 +6549,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -6587,6 +6575,8 @@
 		</effects>
 	</skill>
 	<skill id="1268" toLevel="4" name="Vampiric Rage">
+		<!-- For $s1 recovers as HP $s2 of the physical damage inflicted on the enemy with a certain probability. -->
+		<icon>icon.skill1268</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -6604,7 +6594,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1268</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">30</value>
@@ -6626,7 +6615,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -6644,6 +6632,8 @@
 		</effects>
 	</skill>
 	<skill id="1269" toLevel="11" name="Curse Disease">
+		<!-- Power of HP recovery magic received by the enemy -$s2 for $s1. -->
+		<icon>icon.skill1269</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
@@ -6665,7 +6655,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1269</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -6710,7 +6699,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -6722,10 +6710,11 @@
 		</effects>
 	</skill>
 	<skill id="1271" toLevel="2" name="Benediction">
+		<!-- Restores all party members' Hp. Works only with MP<25%. -->
+		<icon>icon.skill1271</icon>
 		<affectRange>2000</affectRange>
 		<effectPoint>560</effectPoint>
 		<hitTime>7000</hitTime>
-		<icon>icon.skill1271</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">66</value>
@@ -6737,11 +6726,10 @@
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">43</value>
-			<value level="2">46</value>		
+			<value level="2">46</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>900000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>6</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -6760,6 +6748,8 @@
 		</effects>
 	</skill>
 	<skill id="1272" toLevel="15" name="Word of Fear">
+		<!-- Frightens nearby enemies into fleeing for $s1. -->
+		<icon>icon.skill1272</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -6786,7 +6776,6 @@
 			<value level="15">-673</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1272</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -6843,7 +6832,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>150000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>SELF</targetType>
@@ -6855,10 +6843,11 @@
 		</effects>
 	</skill>
 	<skill id="1273" toLevel="15" name="Eva's Serenade">
+		<!-- Soothes surrounding enemies, eliminating their desire to attack. -->
+		<icon>icon.skill1273</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1273</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -6913,7 +6902,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>900000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>SELF</targetType>
@@ -6926,6 +6914,8 @@
 		</effects>
 	</skill>
 	<skill id="1274" toLevel="4" name="Energy Bolt">
+		<!-- Inflicts non-attribute damage on the enemy using $s1 Power added to M. Atk. -->
+		<icon>icon.skill1274</icon>
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">-102</value>
@@ -6935,7 +6925,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1274</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">20</value>
@@ -6957,7 +6946,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -6973,6 +6961,8 @@
 		</effects>
 	</skill>
 	<skill id="1275" toLevel="14" name="Aura Bolt">
+		<!-- Inflicts non-attribute damage on the enemy using $s1 Power added to M. Atk. -->
+		<icon>icon.skill1275</icon>
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">-190</value>
@@ -6992,7 +6982,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1275</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -7044,7 +7033,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -7070,6 +7058,7 @@
 		</effects>
 	</skill>
 	<skill id="1276" toLevel="14" name="Summon Kai the Cat">
+		<!-- Summons Kai the Cat. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1276</icon>
 		<itemConsumeCount>
 			<value level="1">1</value>
@@ -7138,7 +7127,6 @@
 			<value level="14">28</value>
 		</mpInitialConsume>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<!-- H5 hitTime -->
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -7171,6 +7159,7 @@
 		</effects>
 	</skill>
 	<skill id="1277" toLevel="14" name="Summon Merrow the Unicorn">
+		<!-- Summons Merrow the Unicorn. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1277</icon>
 		<itemConsumeCount>
 			<value level="1">1</value>
@@ -7238,7 +7227,6 @@
 			<value level="14">28</value>
 		</mpInitialConsume>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<!-- H5 hitTime -->
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -7271,6 +7259,7 @@
 		</effects>
 	</skill>
 	<skill id="1278" toLevel="14" name="Summon Soulless">
+		<!-- Summons a Soulless. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1278</icon>
 		<itemConsumeCount>
 			<value level="1">1</value>
@@ -7338,7 +7327,6 @@
 			<value level="14">28</value>
 		</mpInitialConsume>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<!-- H5 hitTime -->
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -7371,9 +7359,9 @@
 		</effects>
 	</skill>
 	<skill id="1279" toLevel="9" name="Summon Binding Cubic">
-		<!-- Confirmed CT2.5 -->
-		<hitTime>6000</hitTime>
+		<!-- Summons Binding Cubic. Binding Cubic uses magic that paralyzes a targeted enemy. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1279</icon>
+		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">4</value>
@@ -7422,7 +7410,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -7447,9 +7434,9 @@
 		</effects>
 	</skill>
 	<skill id="1280" toLevel="9" name="Summon Aqua Cubic">
-		<!-- Confirmed CT2.5 -->
-		<hitTime>6000</hitTime>
+		<!-- Summons Aqua Cubic. Aqua Cubic uses attack magic that inflicts continuous damage to the enemy. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1280</icon>
+		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">2</value>
@@ -7498,7 +7485,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -7523,9 +7509,9 @@
 		</effects>
 	</skill>
 	<skill id="1281" toLevel="9" name="Summon Spark Cubic">
-		<!-- Confirmed CT2.5 -->
-		<hitTime>6000</hitTime>
+		<!-- Summons Spark Cubic. Spark Cubic uses magic that stuns a targeted enemy. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1281</icon>
+		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">4</value>
@@ -7574,7 +7560,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -7599,6 +7584,8 @@
 		</effects>
 	</skill>
 	<skill id="1282" toLevel="2" name="Pa'agrio's Haste">
+		<!-- Speed of nearby clan members +$s2 for $s1. -->
+		<icon>icon.skill1282</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -7612,7 +7599,6 @@
 			<value level="2">597</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1282</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">58</value>
@@ -7628,7 +7614,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -7645,6 +7630,7 @@
 		</effects>
 	</skill>
 	<skill id="1283" toLevel="13" name="Soul Guard">
+		<!-- P. Def. +$s1. Continuously consumes MP. -->
 		<icon>icon.skill1283</icon>
 		<magicLvl>
 			<value level="1">44</value>
@@ -7677,7 +7663,6 @@
 			<value level="13">14</value>
 		</mpInitialConsume>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
@@ -7720,6 +7705,8 @@
 		</effects>
 	</skill>
 	<skill id="1284" toLevel="3" name="Chant of Revenge">
+		<!-- For $s1, gives a party member the ability to transfer $s2 of received damage back to the enemy. -->
+		<icon>icon.skill1284</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -7734,7 +7721,6 @@
 			<value level="3">655</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1284</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">62</value>
@@ -7753,7 +7739,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -7770,20 +7755,20 @@
 		</effects>
 	</skill>
 	<skill id="1285" toLevel="1" name="Seed of Fire">
+		<!-- Uses energy of fire to ??? Fire attack level +20. -->
+		<icon>icon.skill1285</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<effectPoint>100</effectPoint>
 		<attributeType>FIRE</attributeType>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1285</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>66</magicLvl>
 		<mpConsume>200</mpConsume>
 		<mpInitialConsume>50</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -7796,20 +7781,20 @@
 		</effects>
 	</skill>
 	<skill id="1286" toLevel="1" name="Seed of Water">
+		<!-- Uses energy of Water to ??? Water attack level +20. -->
+		<icon>icon.skill1286</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<effectPoint>100</effectPoint>
 		<attributeType>WATER</attributeType>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1286</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>66</magicLvl>
 		<mpConsume>200</mpConsume>
 		<mpInitialConsume>50</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -7822,20 +7807,20 @@
 		</effects>
 	</skill>
 	<skill id="1287" toLevel="1" name="Seed of Wind">
+		<!-- Uses energy of wind to ??? Wind attack level +20. -->
+		<icon>icon.skill1287</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<effectPoint>100</effectPoint>
 		<attributeType>WIND</attributeType>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1287</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>66</magicLvl>
 		<mpConsume>200</mpConsume>
 		<mpInitialConsume>50</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -7848,18 +7833,18 @@
 		</effects>
 	</skill>
 	<skill id="1288" toLevel="1" name="Aura Symphony">
+		<!-- Deals non-attribute magical damage to the target. Power 150. -->
+		<icon>icon.skill1288</icon>
 		<castRange>900</castRange>
 		<effectPoint>-4200</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1288</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>68</magicLvl>
 		<mpConsume>200</mpConsume>
 		<mpInitialConsume>50</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -7870,6 +7855,8 @@
 		</effects>
 	</skill>
 	<skill id="1289" toLevel="2" name="Inferno">
+		<!-- Inflicts fire damage on the enemy with 150 Power added to M. Atk., and HP -60 per sec. for 15 sec. -->
+		<icon>icon.skill1289</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -7880,7 +7867,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1289</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
@@ -7889,7 +7875,7 @@
 		</magicLvl>
 		<mpConsume>
 			<value level="1">200</value>
-			<value level="2">275</value>		
+			<value level="2">275</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">50</value>
@@ -7897,7 +7883,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -7916,6 +7901,8 @@
 		</effects>
 	</skill>
 	<skill id="1290" toLevel="1" name="Blizzard">
+		<!-- Inflicts water damage on the enemy with 150 Power added to M. Atk., and their Speed -50% for 30 sec. -->
+		<icon>icon.skill1290</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -7927,7 +7914,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1290</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -7936,7 +7922,6 @@
 		<mpInitialConsume>50</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -7951,6 +7936,8 @@
 		</effects>
 	</skill>
 	<skill id="1291" toLevel="2" name="Demon Wind">
+		<!-- Inflicts wind damage on the enemy with 150 Power added to M. Atk., and their HP recovery magic effect -50% for 2 min. -->
+		<icon>icon.skill1291</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
@@ -7960,7 +7947,6 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1291</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
@@ -7969,7 +7955,7 @@
 		</magicLvl>
 		<mpConsume>
 			<value level="1">200</value>
-			<value level="2">275</value>		
+			<value level="2">275</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">50</value>
@@ -7977,7 +7963,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -7996,18 +7981,18 @@
 		</effects>
 	</skill>
 	<skill id="1292" toLevel="1" name="Elemental Assault">
+		<!-- Deals non-attribute magical damage to the target. Power 200. Over-hit. -->
+		<icon>icon.skill1292</icon>
 		<castRange>900</castRange>
 		<effectPoint>-6000</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1292</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>72</magicLvl>
 		<mpConsume>200</mpConsume>
 		<mpInitialConsume>50</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -8019,18 +8004,18 @@
 		</effects>
 	</skill>
 	<skill id="1293" toLevel="1" name="Elemental Symphony">
+		<!-- Deals non-attribute magical damage to the target. Power 200. Over-hit. -->
+		<icon>icon.skill1293</icon>
 		<castRange>900</castRange>
 		<effectPoint>-6000</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1293</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>72</magicLvl>
 		<mpConsume>200</mpConsume>
 		<mpInitialConsume>50</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -8042,18 +8027,18 @@
 		</effects>
 	</skill>
 	<skill id="1294" toLevel="1" name="Elemental Storm">
+		<!-- Deals non-attribute magical damage to the target. Power 200. -->
+		<icon>icon.skill1294</icon>
 		<castRange>900</castRange>
 		<effectPoint>-6000</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1294</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>72</magicLvl>
 		<mpConsume>200</mpConsume>
 		<mpInitialConsume>50</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -8064,6 +8049,8 @@
 		</effects>
 	</skill>
 	<skill id="1295" toLevel="17" name="Aqua Splash">
+		<!-- Creates a massive tidal wave and inflicts water damage on the target and nearby enemies with $s1 Power added to M. Atk. -->
+		<icon>icon.skill1295</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -8078,19 +8065,18 @@
 			<value level="8">-323</value>
 			<value level="9">-328</value>
 			<value level="10">-333</value>
-			<value level="11">-338</value>	
-			<value level="12">-343</value>	
-			<value level="13">-348</value>	
-			<value level="14">-353</value>	
-			<value level="15">-358</value>	
-			<value level="16">-363</value>	
-			<value level="17">-368</value>	
+			<value level="11">-338</value>
+			<value level="12">-343</value>
+			<value level="13">-348</value>
+			<value level="14">-353</value>
+			<value level="15">-358</value>
+			<value level="16">-363</value>
+			<value level="17">-368</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1295</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">58</value>
@@ -8104,12 +8090,12 @@
 			<value level="9">74</value>
 			<value level="10">76</value>
 			<value level="11">78</value>
-			<value level="12">79</value>	
-			<value level="13">80</value>	
-			<value level="14">81</value>	
-			<value level="15">82</value>	
-			<value level="16">83</value>	
-			<value level="17">84</value>	
+			<value level="12">79</value>
+			<value level="13">80</value>
+			<value level="14">81</value>
+			<value level="15">82</value>
+			<value level="16">83</value>
+			<value level="17">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">72</value>
@@ -8123,12 +8109,12 @@
 			<value level="9">93</value>
 			<value level="10">102</value>
 			<value level="11">106</value>
-			<value level="12">108</value>	
-			<value level="13">111</value>	
-			<value level="14">114</value>	
-			<value level="15">117</value>	
-			<value level="16">119</value>	
-			<value level="17">122</value>	
+			<value level="12">108</value>
+			<value level="13">111</value>
+			<value level="14">114</value>
+			<value level="15">117</value>
+			<value level="16">119</value>
+			<value level="17">122</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">11</value>
@@ -8142,16 +8128,15 @@
 			<value level="9">14</value>
 			<value level="10">14</value>
 			<value level="11">14</value>
-			<value level="12">15</value>	
-			<value level="13">15</value>	
-			<value level="14">15</value>	
-			<value level="15">15</value>	
-			<value level="16">15</value>	
-			<value level="17">15</value>	
+			<value level="12">15</value>
+			<value level="13">15</value>
+			<value level="14">15</value>
+			<value level="15">15</value>
+			<value level="16">15</value>
+			<value level="17">15</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -8170,17 +8155,19 @@
 					<value level="9">54</value>
 					<value level="10">55</value>
 					<value level="11">56</value>
-					<value level="12">57</value>	
-					<value level="13">59</value>	
-					<value level="14">61</value>	
-					<value level="15">63</value>	
-					<value level="16">65</value>	
-					<value level="17">67</value>	
+					<value level="12">57</value>
+					<value level="13">59</value>
+					<value level="14">61</value>
+					<value level="15">63</value>
+					<value level="16">65</value>
+					<value level="17">67</value>
 				</power>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1296" toLevel="17" name="Rain of Fire">
+		<!-- Creates a massive explosion and inflicts fire damage on the target and nearby enemies with $s1 Power added to M. Atk. -->
+		<icon>icon.skill1296</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
 		<castRange>500</castRange>
@@ -8195,19 +8182,18 @@
 			<value level="8">-323</value>
 			<value level="9">-328</value>
 			<value level="10">-333</value>
-			<value level="11">-338</value>	
-			<value level="12">-343</value>	
-			<value level="13">-348</value>	
-			<value level="14">-353</value>	
-			<value level="15">-358</value>	
-			<value level="16">-363</value>	
-			<value level="17">-368</value>	
+			<value level="11">-338</value>
+			<value level="12">-343</value>
+			<value level="13">-348</value>
+			<value level="14">-353</value>
+			<value level="15">-358</value>
+			<value level="16">-363</value>
+			<value level="17">-368</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1296</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">58</value>
@@ -8221,12 +8207,12 @@
 			<value level="9">74</value>
 			<value level="10">76</value>
 			<value level="11">78</value>
-			<value level="12">79</value>	
-			<value level="13">80</value>	
-			<value level="14">81</value>	
-			<value level="15">82</value>	
-			<value level="16">83</value>	
-			<value level="17">84</value>	
+			<value level="12">79</value>
+			<value level="13">80</value>
+			<value level="14">81</value>
+			<value level="15">82</value>
+			<value level="16">83</value>
+			<value level="17">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">49</value>
@@ -8240,12 +8226,12 @@
 			<value level="9">63</value>
 			<value level="10">68</value>
 			<value level="11">70</value>
-			<value level="12">72</value>	
-			<value level="13">74</value>	
-			<value level="14">76</value>	
-			<value level="15">77</value>	
-			<value level="16">80</value>	
-			<value level="17">81</value>	
+			<value level="12">72</value>
+			<value level="13">74</value>
+			<value level="14">76</value>
+			<value level="15">77</value>
+			<value level="16">80</value>
+			<value level="17">81</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">11</value>
@@ -8259,16 +8245,15 @@
 			<value level="9">14</value>
 			<value level="10">14</value>
 			<value level="11">14</value>
-			<value level="12">15</value>	
-			<value level="13">15</value>	
-			<value level="14">15</value>	
-			<value level="15">15</value>	
-			<value level="16">15</value>	
-			<value level="17">15</value>	
+			<value level="12">15</value>
+			<value level="13">15</value>
+			<value level="14">15</value>
+			<value level="15">15</value>
+			<value level="16">15</value>
+			<value level="17">15</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -8287,18 +8272,18 @@
 					<value level="9">54</value>
 					<value level="10">55</value>
 					<value level="11">57</value>
-					<value level="12">58</value>	
-					<value level="13">60</value>	
-					<value level="14">62</value>	
-					<value level="15">64</value>	
-					<value level="16">66</value>	
-					<value level="17">68</value>	
+					<value level="12">58</value>
+					<value level="13">60</value>
+					<value level="14">62</value>
+					<value level="15">64</value>
+					<value level="16">66</value>
+					<value level="17">68</value>
 				</power>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1297" toLevel="6" name="Clear Mind">
-		<!-- Confirmed CT2.5 -->
+		<!-- MP Recovery Bonus +$s1 while standing and +$s2 when walking. -->
 		<icon>icon.skill1297</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -8338,6 +8323,8 @@
 		</effects>
 	</skill>
 	<skill id="1298" toLevel="17" name="Mass Slow">
+		<!-- Speed near the enemy -$s2 for $s1. -->
+		<icon>icon.skill1298</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -8404,7 +8391,6 @@
 			<value level="16">624</value>
 			<value level="17">631</value>
 		</hpConsume>
-		<icon>icon.skill1298</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -8425,11 +8411,10 @@
 			<value level="14">74</value>
 			<value level="15">76</value>
 			<value level="16">77</value>
-			<value level="17">78</value>	
+			<value level="17">78</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -8442,6 +8427,8 @@
 		</effects>
 	</skill>
 	<skill id="1299" toLevel="2" name="Servitor Empowerment">
+		<!-- For $s1, servitor's P. Def. +$s2, M. Def. +$s3, and Buff-canceling Attack Resistance +$s4. -->
+		<icon>icon.skill1299</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -8455,7 +8442,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1299</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">52</value>
@@ -8471,7 +8457,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>900000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SUMMON</targetType>

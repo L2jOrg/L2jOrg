@@ -1,22 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5700" toLevel="7" name="Decrease M. Def.">
-		<!-- Lvl 1 - Kamaloka (Labyrinth of the Abyss) 29 -->
-		<!-- Lvl 2 - Kamaloka (Labyrinth of the Abyss) 39 -->
-		<!-- Lvl 3 - Kamaloka (Labyrinth of the Abyss) 49 -->
-		<!-- Lvl 4 - Kamaloka (Labyrinth of the Abyss) 59 -->
-		<!-- Lvl 5 - Kamaloka (Labyrinth of the Abyss) 69 -->
-		<!-- Lvl 6 - Kamaloka (Labyrinth of the Abyss) 78 -->
-		<!-- Lvl 7 - Kamaloka (Labyrinth of the Abyss) 81 -->
+		<!-- M. Def. is decreased. Effect $s1 -->
+		<icon>icon.skill1263</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MD_DOWN</abnormalType>
-		<icon>icon.skill1263</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>29</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -30,22 +23,15 @@
 		</effects>
 	</skill>
 	<skill id="5701" toLevel="7" name="P. Atk. Decrease">
-		<!-- Lvl 1 - Kamaloka (Labyrinth of the Abyss) 29 -->
-		<!-- Lvl 2 - Kamaloka (Labyrinth of the Abyss) 39 -->
-		<!-- Lvl 3 - Kamaloka (Labyrinth of the Abyss) 49 -->
-		<!-- Lvl 4 - Kamaloka (Labyrinth of the Abyss) 59 -->
-		<!-- Lvl 5 - Kamaloka (Labyrinth of the Abyss) 69 -->
-		<!-- Lvl 6 - Kamaloka (Labyrinth of the Abyss) 78 -->
-		<!-- Lvl 7 - Kamaloka (Labyrinth of the Abyss) 81 -->
+		<!-- P. Atk. is decreased. Effect $s1 -->
+		<icon>icon.skill4037</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
-		<icon>icon.skill4037</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>29</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -59,7 +45,6 @@
 		</effects>
 	</skill>
 	<skill id="5702" toLevel="2" name="Adiantum Round Fighter">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>400</affectRange>
 		<castRange>
 			<value level="1">0</value>
@@ -79,7 +64,6 @@
 		<mpInitialConsume>2</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>
 			<value level="1">SELF</value>
@@ -105,7 +89,6 @@
 		<magicLvl>36</magicLvl>
 		<operateType>A3</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>400</effectRange>
@@ -123,7 +106,6 @@
 		<magicLvl>36</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<attributeType>WATER</attributeType>
@@ -138,7 +120,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>36</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<attributeType>FIRE</attributeType>
@@ -149,6 +130,8 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5706" toLevel="1" name="Poison">
+		<!-- HP decreases from Poison momentarily. The body is paralyzed after a set amount of time. Effect 7. -->
+		<icon>icon.skill4036</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -158,13 +141,11 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill4036</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>61</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<effectRange>1400</effectRange>
@@ -175,16 +156,16 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5707" toLevel="1" name="Paralysis">
+		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill1170</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>61</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -211,7 +192,6 @@
 		</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<targetType>ENEMY</targetType>
@@ -238,7 +218,6 @@
 		</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
@@ -268,7 +247,6 @@
 		</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
@@ -280,6 +258,7 @@
 		</effects>
 	</skill>
 	<skill id="5711" toLevel="1" name="Power of Rage">
+		<!-- P. Atk. is greatly increased because of rage. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -290,7 +269,6 @@
 		<magicLvl>61</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -299,6 +277,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5712" toLevel="1" name="Energy Ditch">
+		<!-- Delivers one's own energy to Lematan. The delivery status is cancelled when damage is incurred. -->
 		<castRange>1300</castRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>15000</hitTime>
@@ -306,11 +285,10 @@
 		<magicLvl>61</magicLvl>
 		<operateType>CA5</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1700</effectRange>
-		<channelingSkillId>5713</channelingSkillId>
+		<channelingSkillId>5713</channelingSkillId> <!-- Energy Ditch -->
 		<channelingStart>3.6</channelingStart>
 		<mpPerChanneling>15</mpPerChanneling>
 		<channelingTickInterval>2</channelingTickInterval>
@@ -323,6 +301,7 @@
 		</effects>
 	</skill>
 	<skill id="5713" toLevel="5" name="Energy Ditch">
+		<!-- Has been given minions' M. Atk. Recovery bonus increased. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -336,7 +315,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>61</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -351,7 +329,6 @@
 		<magicLvl>61</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
@@ -360,7 +337,8 @@
 		<affectScope>POINT_BLANK</affectScope>
 	</skill>
 	<skill id="5715" toLevel="1" name="Electric Flame">
-		<!-- Confirmed CT2.5 -->
+		<!-- Incurring continuous flame damage and has decreased Speed. -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>FIRE_DOT</abnormalType>
@@ -372,14 +350,12 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1160</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>73</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -399,6 +375,8 @@
 		</effects>
 	</skill>
 	<skill id="5716" toLevel="1" name="Stun">
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -409,12 +387,10 @@
 		<effectPoint>-975</effectPoint>
 		<fanRange>0;0;1500;60</fanRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0100</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>73</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>2000</effectRange>
 		<attributeType>FIRE</attributeType>
@@ -433,7 +409,6 @@
 		<magicLvl>73</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>2000</effectRange>
 		<attributeType>FIRE</attributeType>
@@ -443,18 +418,18 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5718" toLevel="1" name="Anger">
+		<!-- P. Def. is decreased and P. Atk. is greatly increased because of rage. -->
+		<icon>icon.skill0176</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<activateRate>0</activateRate>
 		<effectPoint>100</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0176</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>73</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -469,7 +444,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -478,8 +452,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5720" toLevel="6" name="Blade Cut">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>40</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -503,7 +475,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -521,8 +492,6 @@
 		</effects>
 	</skill>
 	<skill id="5721" toLevel="6" name="Blade Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<affectRange>200</affectRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -545,7 +514,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -564,8 +532,6 @@
 		</effects>
 	</skill>
 	<skill id="5722" toLevel="6" name="Hammer Assault">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -588,7 +554,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -606,8 +571,6 @@
 		</effects>
 	</skill>
 	<skill id="5723" toLevel="6" name="Hammer Swing">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<affectRange>200</affectRange>
 		<castRange>100</castRange>
 		<effectPoint>-100</effectPoint>
@@ -631,7 +594,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -650,8 +612,6 @@
 		</effects>
 	</skill>
 	<skill id="5724" toLevel="6" name="Broom Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
@@ -674,7 +634,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -692,8 +651,6 @@
 		</effects>
 	</skill>
 	<skill id="5725" toLevel="6" name="Broom Thrust">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
@@ -716,7 +673,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -734,8 +690,6 @@
 		</effects>
 	</skill>
 	<skill id="5726" toLevel="6" name="Scissors Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
@@ -758,7 +712,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -776,8 +729,6 @@
 		</effects>
 	</skill>
 	<skill id="5727" toLevel="6" name="Scissors Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
@@ -800,7 +751,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -818,8 +768,6 @@
 		</effects>
 	</skill>
 	<skill id="5728" toLevel="6" name="Shovel Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
@@ -842,7 +790,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -860,8 +807,6 @@
 		</effects>
 	</skill>
 	<skill id="5729" toLevel="6" name="Shovel Whirlwind">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<affectRange>200</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2500</hitTime>
@@ -883,7 +828,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>20000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -902,8 +846,6 @@
 		</effects>
 	</skill>
 	<skill id="5730" toLevel="6" name="Made Fireball">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -937,7 +879,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -955,8 +896,6 @@
 		</effects>
 	</skill>
 	<skill id="5731" toLevel="6" name="Incense of Death">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -987,7 +926,6 @@
 			<value level="6">16</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<coolTime>800</coolTime>
 		<targetType>ENEMY</targetType>
@@ -1006,8 +944,7 @@
 		</effects>
 	</skill>
 	<skill id="5732" toLevel="6" name="Flame Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
+		<icon>icon.skill1181</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>500</affectRange>
 		<castRange>500</castRange>
@@ -1023,7 +960,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1181</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">60</value>
@@ -1051,7 +987,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1070,8 +1005,8 @@
 		</effects>
 	</skill>
 	<skill id="5733" toLevel="6" name="Fear of Steward">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
+		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<icon>icon.skill1092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -1084,7 +1019,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1092</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
@@ -1113,7 +1047,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY</targetType>
@@ -1134,8 +1067,6 @@
 		</effects>
 	</skill>
 	<skill id="5734" toLevel="6" name="Gust of Wind">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1169,7 +1100,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1187,8 +1117,8 @@
 		</effects>
 	</skill>
 	<skill id="5735" toLevel="6" name="Curse of Steward">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
+		<!-- Momentarily inflicts Sleep on the target. Decrease probability of additional sleep state while effects last. -->
+		<icon>icon.skill1069</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
@@ -1207,7 +1137,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1069</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1238,7 +1167,6 @@
 		<operateType>A2</operateType>
 		<removedOnDamage>true</removedOnDamage>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SLEEP</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -1261,8 +1189,6 @@
 		</effects>
 	</skill>
 	<skill id="5736" toLevel="6" name="Katar Trusting">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
@@ -1285,7 +1211,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1303,8 +1228,6 @@
 		</effects>
 	</skill>
 	<skill id="5737" toLevel="6" name="Power Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<affectRange>200</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2500</hitTime>
@@ -1326,7 +1249,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>20000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -1345,8 +1267,6 @@
 		</effects>
 	</skill>
 	<skill id="5738" toLevel="6" name="Power Roar">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<affectRange>300</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2500</hitTime>
@@ -1368,7 +1288,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>20000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -1387,19 +1306,17 @@
 		</effects>
 	</skill>
 	<skill id="5739" toLevel="1" name="Invincibility">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
+		<!-- Recently resurrected and temporarily immobile. -->
+		<icon>icon.skill5739</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill5739</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1416,14 +1333,11 @@
 		</effects>
 	</skill>
 	<skill id="5740" toLevel="1" name="Pet Regeneration">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>900</castRange>
 		<effectRange>1400</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>99</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -1442,14 +1356,11 @@
 		</effects>
 	</skill>
 	<skill id="5741" toLevel="1" name="Mental Pot">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>900</castRange>
 		<effectRange>1400</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>99</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -1470,7 +1381,6 @@
 			<value level="5">50</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -1480,24 +1390,23 @@
 		<effectPoint>100</effectPoint>
 		<magicLvl>99</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5744" toLevel="1" name="Invincibility">
+		<!-- Temporarily invincible. -->
+		<icon>icon.skill1418</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<activateRate>10</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<icon>icon.skill1418</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1505,6 +1414,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5745" toLevel="12" name="Death Blow">
+		<!-- Draws on your HP to summon your strength and unleash a punishing attack. Power $s1. -->
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-206</value>
@@ -1567,7 +1477,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>20000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1591,6 +1500,7 @@
 		</effects>
 	</skill>
 	<skill id="5746" toLevel="12" name="Double Attack">
+		<!-- Inflicts 2 devastatingly rapid attacks. Power $s1. -->
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
 		<effectPoint>
@@ -1640,7 +1550,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1664,6 +1573,8 @@
 		</effects>
 	</skill>
 	<skill id="5747" toLevel="12" name="Spin Attack">
+		<!-- Deals damage and shock simultaneously. Momentarily inflicts Stun on the enemy. $s1 power. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1688,7 +1599,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -1722,7 +1632,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>13000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -1748,6 +1657,8 @@
 		</effects>
 	</skill>
 	<skill id="5748" toLevel="12" name="Meteor Shower">
+		<!-- Drops meteors to attack surrounding enemies. Power $s1. -->
+		<icon>icon.skill1467</icon>
 		<affectLimit>5-12</affectLimit>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -1765,7 +1676,6 @@
 			<value level="12">-709</value>
 		</effectPoint>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill1467</icon>
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -1783,7 +1693,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>20000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>400</affectRange>
 		<targetType>SELF</targetType>
@@ -1791,6 +1700,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5749" toLevel="12" name="Thunder Bolt">
+		<!-- Pours forth the power of thunder upon the enemy. Power $s1. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-138</value>
@@ -1839,7 +1749,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<pveEffects>
 			<effect name="MagicalAttack">
@@ -1881,6 +1790,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5750" toLevel="12" name="Blaze">
+		<!-- Inflicts a swift magic attack upon contacted enemies nearby. Power $s1. -->
+		<icon>icon.skill1417</icon>
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-138</value>
@@ -1898,7 +1809,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1417</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">10</value>
@@ -1930,7 +1840,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<pveEffects>
 			<effect name="MagicalAttack">
@@ -1972,6 +1881,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5751" toLevel="12" name="Lightning Wave">
+		<!-- Inflicts the power of thunder upon surrounding enemies. Power $s1. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -2020,7 +1930,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<pveEffects>
 			<effect name="MagicalAttack">
@@ -2063,6 +1972,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5752" toLevel="12" name="Blaze">
+		<!-- Consumes one's own HP to inflict powerful magic on the enemy. Power $s1. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-138</value>
@@ -2125,7 +2035,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>20000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<pveEffects>
 			<effect name="MagicalAttack">
@@ -2167,16 +2076,15 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5753" toLevel="1" name="Awakening">
+		<icon>icon.action117</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PET_FURY</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.action117</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>99</magicLvl>
 		<mpConsume>52</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2190,7 +2098,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>400</affectRange>
 		<targetType>SELF</targetType>
@@ -2203,7 +2110,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>400</affectRange>
 		<targetType>SELF</targetType>
@@ -2216,7 +2122,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2228,11 +2133,10 @@
 		<magicLvl>61</magicLvl>
 		<operateType>CA5</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>600</effectRange>
-		<channelingSkillId>5713</channelingSkillId>
+		<channelingSkillId>5713</channelingSkillId> <!-- Energy Ditch -->
 		<channelingStart>3.6</channelingStart>
 		<mpPerChanneling>15</mpPerChanneling>
 		<channelingTickInterval>2</channelingTickInterval>
@@ -2245,7 +2149,6 @@
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2255,13 +2158,14 @@
 		<hitTime>9700</hitTime>
 		<magicLvl>73</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5760" toLevel="9" name="Critical Blow">
+		<!-- Increases Critical Rate and Atk. Spd. Improves chance of a critical hit from range attacks. Effect $s1 -->
+		<icon>icon.skill5760</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2276,10 +2180,8 @@
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SEED_OF_CRITICAL</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill5760</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2288,6 +2190,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5761" toLevel="2" name="Power Strike">
+		<!-- Strong pounding attack. -->
 		<castRange>40</castRange>
 		<effectPoint>-574</effectPoint>
 		<effectRange>400</effectRange>
@@ -2299,7 +2202,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>20000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2313,15 +2215,15 @@
 		</effects>
 	</skill>
 	<skill id="5762" toLevel="1" name="Blessing of Pathfinder">
+		<!-- The Pathfinder's blessing. All battle abilities are increased. -->
+		<icon>icon.skill5762</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill5762</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2332,12 +2234,12 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5763" toLevel="1" name="Wink">
-		<hitTime>3000</hitTime>
+		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2347,6 +2249,8 @@
 		</conditions>
 	</skill>
 	<skill id="5764" toLevel="1" name="Terror of the Pumpkin Ghost">
+		<!-- Curse of the Pumpkin Ghost. Causes spontaneous movement. -->
+		<icon>icon.skill1092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -2356,12 +2260,10 @@
 		<coolTime>1000</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2060</hitTime>
-		<icon>icon.skill1092</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>95</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<isDebuff>true</isDebuff>
@@ -2380,7 +2282,6 @@
 		<magicLvl>75</magicLvl>
 		<mpConsume>76</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -2401,7 +2302,6 @@
 		<magicLvl>75</magicLvl>
 		<mpConsume>76</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -2422,7 +2322,6 @@
 		<magicLvl>75</magicLvl>
 		<mpConsume>76</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -2443,7 +2342,6 @@
 		<magicLvl>78</magicLvl>
 		<mpConsume>78</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -2474,7 +2372,6 @@
 		</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>900</effectRange>
 		<castRange>400</castRange>
@@ -2501,7 +2398,6 @@
 		</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>900</effectRange>
 		<castRange>400</castRange>
@@ -2509,16 +2405,16 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5771" toLevel="1" name="Buff Control">
+		<!-- Limits to prevent a buff upon the master. -->
+		<icon>icon.action113</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MAGICAL_STANCE</abnormalType>
 		<effectPoint>100</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.action113</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2527,17 +2423,17 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5772" toLevel="1" name="Surrender to Fire">
+		<!-- Fire Resistance decreases and Water Resistance increases momentarily. Effect 4. -->
+		<icon>icon.skill4279_new</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ARMOR_FIRE</abnormalType>
 		<effectPoint>100</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill4279_new</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2546,17 +2442,17 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5773" toLevel="1" name="Surrender to Water">
+		<!-- Fire Resistance decreases and Water Resistance increases momentarily. Effect 4. -->
+		<icon>icon.skill4280_new</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ARMOR_WATER</abnormalType>
 		<effectPoint>100</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill4280_new</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2565,15 +2461,15 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5775" toLevel="1" name="Greater Blessing of Pathfinder">
+		<!-- The Pathfinder's blessing. All battle abilities are increased. -->
+		<icon>icon.skill5762</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill5762</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2584,30 +2480,29 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5776" toLevel="1" name="Raid Boss">
-		<!-- Confirmed CT2.5 -->
+		<!-- Lost Warden: Kamaloka - Leader of those who watch over the Labyrinth of the Abyss. He watches over those inside Kamaloka to make sure they properly perform their roles. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5777" toLevel="1" name="Raid Boss">
-		<!-- Confirmed CT2.5 -->
+		<!-- Lost Captain: Kamaloka - Leader of those who guard the Labyrinth of the Abyss. They protect Kamaloka from all enemies to try to infiltrate Kamaloka. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5778" toLevel="1" name="Invincible After-effect">
-		<!-- skill after ct2.3 not used -->
+		<!-- Temporarily unable to receive invincible effect. -->
+		<icon>icon.skill0837</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>90</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill0837</icon>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2617,6 +2512,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5779" toLevel="42" name="Transform Effect">
+		<!-- Transforms both your physical form and abilities. -->
 		<icon>icon.skilltransform3</icon>
 		<magicLvl>
 			<value level="1">7</value>
@@ -2740,152 +2636,128 @@
 		</passiveConditions>
 	</skill>
 	<skill id="5781" toLevel="1" name="Presentation - Lindvior Approach">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>17000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5782" toLevel="1" name="Presentation - Lindvior Gust">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>10000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5783" toLevel="1" name="Presentation - Lindvior Descent">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>15000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5784" toLevel="1" name="Presentation - Lindvior Dust">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>5000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5785" toLevel="1" name="Presentation - Dimensional Door">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5786" toLevel="1" name="Presentation - Ekimus Separation">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>22000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5787" toLevel="1" name="Presentation - Ekimus Approach">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>11000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5788" toLevel="1" name="Presentation - Ekimus Blood Hail">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>2100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5789" toLevel="1" name="Presentation - Ekimus Sneer">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>13000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5790" toLevel="1" name="Presentation - Ekimus Aftereffect">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5791" toLevel="1" name="Presentation - Magyun's Entrance">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>4200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5792" toLevel="1" name="Presentation - Summon Banshee Queen Boomeye">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>2000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5793" toLevel="1" name="Presentation - Summon Boomeye">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>3000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5794" toLevel="1" name="Decrease Speed">
+		<!-- Speed decreases momentarily. Effect 3. -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2895,13 +2767,11 @@
 		<effectPoint>-684</effectPoint>
 		<fanRange>0;0;900;5</fanRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1160</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>83</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<isDebuff>true</isDebuff>
@@ -2911,6 +2781,8 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5795" toLevel="1" name="Poison">
+		<!-- Poisons the target, causing them to lose 66 HP every sec. for 30 sec. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -2920,13 +2792,11 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-684</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill4035</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>83</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<isDebuff>true</isDebuff>
@@ -2936,6 +2806,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5796" toLevel="1" name="Decrease Speed">
+		<!-- Speed decreases momentarily. Effect 3. -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2945,13 +2817,11 @@
 		<effectPoint>-684</effectPoint>
 		<fanRange>0;0;900;30</fanRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1160</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>83</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<attributeType>WIND</attributeType>
@@ -2971,7 +2841,6 @@
 		<magicLvl>80</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<attributeType>DARK</attributeType>
@@ -2989,7 +2858,6 @@
 		<magicLvl>80</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<attributeType>FIRE</attributeType>
@@ -3000,6 +2868,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5799" toLevel="1" name="Bleed">
+		<!-- Causes the target to bleed and lose 78 HP every sec. for 20 sec. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -3009,13 +2879,11 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-689</effectPoint>
 		<hitTime>1800</hitTime>
-		<icon>icon.skill0096</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>DARK</attributeType>
 		<attributeValue>50</attributeValue>

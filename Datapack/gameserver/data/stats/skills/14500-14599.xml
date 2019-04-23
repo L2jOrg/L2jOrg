@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="14509" toLevel="1" name="HP Transfer">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Connects souls and recovers HP. -->
+		<icon>icon.skill1042</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="14559" toLevel="1" name="Soul Drain Status">
-		<!-- Glory Days confirmed -->
 		<!-- HP is being absorbed. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
@@ -14,7 +13,6 @@
 		<effectPoint>-2</effectPoint>
 		<abnormalType>PHYSICAL_STANCE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1000</effectRange>

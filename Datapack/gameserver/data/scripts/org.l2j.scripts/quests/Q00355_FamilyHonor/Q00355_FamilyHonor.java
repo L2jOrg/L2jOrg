@@ -16,14 +16,15 @@
  */
 package quests.Q00355_FamilyHonor;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.util.Util;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Family Honor (355)
@@ -194,7 +195,7 @@ public final class Q00355_FamilyHonor extends Quest
 	{
 		final QuestState qs = getQuestState(killer, false);
 		
-		if ((qs == null) || !Util.checkIfInRange(1500, npc, killer, true))
+		if ((qs == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			return null;
 		}

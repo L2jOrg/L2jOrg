@@ -1,128 +1,108 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6000" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6001" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6002" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6003" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6004" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6005" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6006" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6007" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6008" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6009" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6010" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6011" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6012" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6013" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6014" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6015" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6016" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6017" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6018" toLevel="1" name="not_used">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6019" toLevel="1" name="Searching Master">
-		<!-- Confirmed CT2.5 -->
+		<!-- Directly attacks a pet's master or summoner. -->
 		<icon>icon.skill6019</icon>
 		<magicLvl>52</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6020" toLevel="1" name="Soul Retain">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -132,7 +112,6 @@
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -159,7 +138,6 @@
 		</effects>
 	</skill>
 	<skill id="6021" toLevel="1" name="Soul Retain">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -169,7 +147,6 @@
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -196,7 +173,6 @@
 		</effects>
 	</skill>
 	<skill id="6022" toLevel="1" name="Soul Retain">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -206,7 +182,6 @@
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -233,7 +208,6 @@
 		</effects>
 	</skill>
 	<skill id="6023" toLevel="1" name="Soul Retain">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -243,7 +217,6 @@
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -310,6 +283,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6033" toLevel="1" name="Treasure Seeker's Betrayal">
+		<!-- Carrying this mark of betrayal makes one the target of nearby monsters. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>STIGMA_A</abnormalType>
@@ -320,7 +294,6 @@
 		<magicLvl>76</magicLvl>
 		<mpConsume>42</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -328,7 +301,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6034" toLevel="1" name="Freezing">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Target cannot move until the match starts. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -339,7 +312,6 @@
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -366,21 +338,20 @@
 	<skill id="6037" toLevel="1" name="Soul Unleash">
 		<magicLvl>80</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6038" toLevel="1" name="Report Status">
+		<!-- You are under suspicion of using this program illegally. Chatting has been blocked. -->
+		<icon>icon.skill6038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
-		<icon>icon.skill6038</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<stayAfterDeath>True</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -393,14 +364,14 @@
 		</effects>
 	</skill>
 	<skill id="6039" toLevel="1" name="Report Status">
+		<!-- You are under suspicion of using this program illegally. Party participation has been blocked. -->
+		<icon>icon.skill6038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
-		<icon>icon.skill6038</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<stayAfterDeath>True</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -413,14 +384,14 @@
 		</effects>
 	</skill>
 	<skill id="6040" toLevel="1" name="Report Status">
+		<!-- You are under suspicion of using this program illegally. You can be attacked. -->
+		<icon>icon.skill6038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
-		<icon>icon.skill6038</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<stayAfterDeath>True</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -433,18 +404,17 @@
 		</effects>
 	</skill>
 	<skill id="6041" toLevel="1" name="Phoenix Rush">
-		<!-- Confirmed CT2.5 -->
+		<!-- Charges the enemy and inflicts damage. -->
+		<icon>icon.skill6041</icon>
 		<castRange>400</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>-679</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>800</hitTime>
-		<icon>icon.skill6041</icon>
 		<magicLvl>81</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -460,19 +430,18 @@
 		</effects>
 	</skill>
 	<skill id="6042" toLevel="1" name="Phoenix Cleanse">
-		<!-- Confirmed CT2.5 -->
+		<!-- Cancels the target's de-buff. -->
+		<icon>icon.skill6042</icon>
 		<castRange>600</castRange>
 		<effectPoint>679</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill6042</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>81</magicLvl>
 		<mpConsume>47</mpConsume>
 		<mpInitialConsume>12</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>180000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -485,21 +454,20 @@
 		</effects>
 	</skill>
 	<skill id="6043" toLevel="1" name="Phoenix Flame Feather">
-		<!-- Confirmed CT2.5 -->
+		<!-- Spreads ring-shaped flames. Power 70. -->
+		<icon>icon.skill6043</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>-340</effectPoint>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill6043</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>81</magicLvl>
 		<mpConsume>87</mpConsume>
 		<mpInitialConsume>22</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -511,7 +479,8 @@
 		</effects>
 	</skill>
 	<skill id="6044" toLevel="1" name="Phoenix Flame Beak">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacks the enemy with a powerful beak. Power 2156. -->
+		<icon>icon.skill6044</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-343</effectPoint>
@@ -519,13 +488,11 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill6044</icon>
 		<magicLvl>81</magicLvl>
 		<mpConsume>80</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>13000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -539,13 +506,13 @@
 		<hitTime>2000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6046" toLevel="14" name="Piercing Attack">
+		<!-- A powerful stab pierces the target. -->
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-136</value>
@@ -599,7 +566,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -625,6 +591,7 @@
 		</effects>
 	</skill>
 	<skill id="6047" toLevel="14" name="Whirlwind">
+		<!-- Caster spins rapidly, targeting nearby enemies. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -678,7 +645,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -705,6 +671,7 @@
 		</effects>
 	</skill>
 	<skill id="6048" toLevel="14" name="Lance Smash">
+		<!-- Flourishes a lance and frontally attacks enemies. -->
 		<affectLimit>5-15</affectLimit>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -760,7 +727,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
@@ -787,7 +753,8 @@
 		</effects>
 	</skill>
 	<skill id="6049" toLevel="4" name="Battle Cry">
-		<!-- Confirmed CT2.5 -->
+		<!-- Utters a battle cry that increases one's own P. Atk., P. Def. and M. Def. -->
+		<icon>icon.action117</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -799,7 +766,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.action117</icon>
 		<magicLvl>
 			<value level="1">50</value>
 			<value level="2">70</value>
@@ -814,7 +780,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -851,6 +816,7 @@
 		</effects>
 	</skill>
 	<skill id="6050" toLevel="14" name="Power Smash">
+		<!-- Powerfully strikes a target. -->
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-136</value>
@@ -904,7 +870,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -930,6 +895,7 @@
 		</effects>
 	</skill>
 	<skill id="6051" toLevel="14" name="Energy Burst">
+		<!-- Fires energy gathered in one's body at the enemies to the front. -->
 		<affectLimit>5-15</affectLimit>
 		<effectPoint>
 			<value level="1">-273</value>
@@ -984,7 +950,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SQUARE_PB</affectScope>
@@ -1011,6 +976,7 @@
 		</effects>
 	</skill>
 	<skill id="6052" toLevel="14" name="Shock Wave">
+		<!-- Fires energy gathered in one's body at the enemies to the front. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-273</value>
@@ -1065,7 +1031,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1091,7 +1056,8 @@
 		</effects>
 	</skill>
 	<skill id="6053" toLevel="4" name="Howl">
-		<!-- Confirmed CT2.5 -->
+		<!-- Amplifies one's own abilities with a loud roar, raising P. Atk., P. Def., M. Atk., and M. Def. -->
+		<icon>icon.action117</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1103,7 +1069,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.action117</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">50</value>
@@ -1125,7 +1090,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1171,22 +1135,21 @@
 		</effects>
 	</skill>
 	<skill id="6054" toLevel="1" name="Switch State">
-		<!-- Confirmed CT2.5 -->
+		<!-- The pet's condition changes. -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="6055" toLevel="1" name="Report Status">
+		<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
+		<icon>icon.skill6038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
-		<icon>icon.skill6038</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<stayAfterDeath>True</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1201,14 +1164,14 @@
 		</effects>
 	</skill>
 	<skill id="6056" toLevel="1" name="Report Status">
+		<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
+		<icon>icon.skill6038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
-		<icon>icon.skill6038</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<stayAfterDeath>True</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1223,14 +1186,14 @@
 		</effects>
 	</skill>
 	<skill id="6057" toLevel="1" name="Report Status">
+		<!-- You are under suspicion of using this program illegally. You are no longer permitted to move. -->
+		<icon>icon.skill6038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
-		<icon>icon.skill6038</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<stayAfterDeath>True</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1246,14 +1209,14 @@
 		</effects>
 	</skill>
 	<skill id="6058" toLevel="1" name="Report Status">
+		<!-- You are under suspicion of using this program illegally. You are no longer permitted to move. -->
+		<icon>icon.skill6038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
-		<icon>icon.skill6038</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<stayAfterDeath>True</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1269,15 +1232,15 @@
 		</effects>
 	</skill>
 	<skill id="6059" toLevel="1" name="Counter Critical">
+		<!-- Increases P. Critical Damage. -->
+		<icon>icon.skill1542</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>COUNTER_CRITICAL_TRIGGER</abnormalType>
-		<icon>icon.skill1542</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>80</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1292,27 +1255,27 @@
 					<item>SWORD</item>
 					<item>BLUNT</item>
 					<item>DAGGER</item>
-
+					<item>DUALDAGGER</item>
 					<item>DUAL</item>
 					<item>DUALFIST</item>
 					<item>POLE</item>
-
-
+					<item>ANCIENTSWORD</item>
+					<item>RAPIER</item>
 				</weaponType>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6060" toLevel="1" name="Great Fury">
+		<!-- Atk. Spd. +30% for 8 sec. -->
+		<icon>icon.skill1543</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN_SPECIAL</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill1543</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>80</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1328,188 +1291,189 @@
 		</effects>
 	</skill>
 	<skill id="6061" toLevel="1" name="Decrease Weight">
+		<!-- Weight penalty interval +9000, and the number of items an individual can possess increases. -->
 		<icon>icon.skill1257</icon>
 		<magicLvl>52</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6062" toLevel="1" name="Raid Boss (Lv. 99)">
-		<!-- Confirmed CT2.5 -->
+		<!-- An evil undead version of the elder of twin knights who were famous warriors in Gracia before the fall. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6063" toLevel="1" name="Raid Boss (Lv. 99)">
-		<!-- Confirmed CT2.5 -->
+		<!-- An evil undead version of the younger of twin knights who were famous warriors in Gracia before the fall. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6064" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- An undead version of a famous healer in Gracia before the fall. It served Ekimus and later aspired to rule the Hall of Erosion. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6065" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- An undead version of an infamous serial killer infamous throughout Gracia before the fall. He attempted to preserve his life by threatening Cohemenes, but was deceived and became an undead slave. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6066" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Steals souls in order to secrete matter from the Seed of Infinity. These Soul Devourers eventually lose all capacity for thought, driven only by their unholy appetite. Thy particularly favor souls that suffered a horrific and agonizing death. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6067" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- An undead version of the royal astrologer in Gracia before the fall. While alive, his intentionally false prophecy opened the kingdom to the influence of Ekimus and the Seed of Infinity. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6068" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- An undead version of a former Gracian high priest. Obsessed with attaining eternal life, he played a pivotal role in bringing the Seed of Infinity to the capital. He styled himself the 1st priest of Ekimus. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6069" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- An exceptionally efficient pre-fall Gracian provincial official infamous for his brutal interrogation methods. He was transformed into undead by the Seed of Infinity. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6070" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- In his bid for power, he committed atrocities in Gracia rarely seen before the fall. Because of his thirst for violence and bloodshed, he was transformed into undead by the Seed of Infinity. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6071" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This undead monster was once a powerful warlord on the frontier of pre-fall Gracia. He believed that the enemy's power was contained in their blood, and so he killed countless prisoners in order to absorb their strength. He was transformed into undead by the Seed of Infinity. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6072" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This undead monster was once of the most powerful warlords in Gracia. He gained popularity among the fallen nobles for mercilessly carrying out his missions, whatever the cost. He was also a secret worshipper of the Goddess of Death. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6073" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This undead monster was created from the rage and pain of prisoners tortured and killed in ancient Gracia. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6074" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This undead monster was created to protect a sacred burial ground for nobles in ancient Gracia. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6075" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This undead monster was created to prevent the corpses left on the battlegrounds of ancient Gracia from being raised. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6076" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This undead monster fed on the souls of ancient Gracians. It awoke from its long slumber though the magic of Ekimus. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6077" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This undead monster fed on the souls of ancient Gracians. It awoke from its long slumber though the magic of Ekimus. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6078" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6079" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6080" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6081" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6082" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6083" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6084" toLevel="1" name="Raid Boss (Lv. 80)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Lord of ancient Hwuh whose hand was imbued with Demon power in return for not taking action while Hwuh was being conquered by the Seed of Infinity. He now has the power to control Aurabirds and has become a Master Rider. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6085" toLevel="1" name="Raid Boss (Lv. 80)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This ill-tempered king of the birds in Gracia has become even more violent after losing its sky nest to the Storm Dragon Lindvior. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6086" toLevel="1" name="Raid Boss (Lv. 80)">
-		<!-- Confirmed CT2.5 -->
+		<!-- One of the ladies-in-waiting of the Banshee Queen, she became close to Ekimus and eventually was transformed into a Banshee Queen herself. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6087" toLevel="1" name="Raid Boss (Lv. 80)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This Drake originally appeared with the Seed of Destruction. Though one of the children of Skellus, the Dragon of Darkness , it does not serve Tiat. Instead, it watches Tiat's actions for Skellus. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1525,7 +1489,6 @@
 		<hitTime>3500</hitTime>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
@@ -1534,21 +1497,19 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6090" toLevel="1" name="Lightning Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Lightning Strike end effect. -->
+		<!-- The target is paralyzed. -->
+		<icon>icon.skill0279</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill0279</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>58</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>PARALYZE</trait>
@@ -1559,20 +1520,18 @@
 		</effects>
 	</skill>
 	<skill id="6091" toLevel="1" name="Anchor">
-		<!-- Confirmed CT2.5 -->
-		<!-- Anchor end effect. -->
+		<!-- The target is paralyzed. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>44</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>PARALYZE</trait>
@@ -1583,20 +1542,18 @@
 		</effects>
 	</skill>
 	<skill id="6092" toLevel="1" name="Lightning Shock">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<!-- Lightning Shock end effect. -->
+		<!-- The target is paralyzed. -->
+		<icon>icon.skill0791</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill0791</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>81</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<soulMaxConsumeCount>5</soulMaxConsumeCount>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1608,20 +1565,19 @@
 		</effects>
 	</skill>
 	<skill id="6093" toLevel="1" name="Panther Hide">
-		<!-- Confirmed CT2.5 -->
+		<!-- Allows one to stay hidden. Movement speed -10%. The effect is canceled if any action other than movement is initiated. -->
+		<icon>icon.skill0922</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<effectPoint>679</effectPoint>
-		<icon>icon.skill0922</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>42</mpConsume>
 		<operateType>A2</operateType>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>
 		<reuseDelay>180000</reuseDelay>
-		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1636,12 +1592,12 @@
 		</effects>
 	</skill>
 	<skill id="6094" toLevel="11" name="Panther Cancel">
-		<!-- Confirmed CT2.5 -->
+		<!-- Cancels multiple enemy buffs. -->
+		<icon>icon.skill6094</icon>
 		<castRange>40</castRange>
 		<effectPoint>-475</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill6094</icon>
 		<magicLvl>
 			<value level="1">68</value>
 			<value level="2">72</value>
@@ -1658,7 +1614,6 @@
 		<mpConsume>42</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1671,7 +1626,8 @@
 		</effects>
 	</skill>
 	<skill id="6095" toLevel="15" name="Panther Dark Claw">
-		<!-- Confirmed CT2.5 -->
+		<!-- Damages the target, decreasing Dark Attack Resistance by $s3 for $s2. -->
+		<icon>icon.skill1445</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
@@ -1683,7 +1639,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1445</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -1706,7 +1661,6 @@
 		<mpConsume>42</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1737,13 +1691,13 @@
 		</effects>
 	</skill>
 	<skill id="6096" toLevel="13" name="Panther Fatal Claw">
-		<!-- Confirmed CT2.5 -->
+		<!-- Panther's P. Atk. is supplemented with $s1 Power added to P. Atk., in a deadly attack. -->
+		<icon>icon.skill6096</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-475</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill6096</icon>
 		<magicLvl>
 			<value level="1">60</value>
 			<value level="2">64</value>
@@ -1762,7 +1716,6 @@
 		<mpConsume>42</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1788,14 +1741,14 @@
 		</effects>
 	</skill>
 	<skill id="6097" toLevel="1" name="Scissors">
+		<!-- Scissors. -->
+		<icon>icon.xmas_gawi_i00</icon>
 		<effectPoint>-1</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.xmas_gawi_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>1500</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>500</effectRange>
@@ -1804,14 +1757,14 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6098" toLevel="1" name="Rock">
+		<!-- Rock. -->
+		<icon>icon.xmas_bawi_i00</icon>
 		<effectPoint>-1</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.xmas_bawi_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>1500</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>500</effectRange>
@@ -1820,14 +1773,14 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6099" toLevel="1" name="Paper">
+		<!-- Paper. -->
+		<icon>icon.xmas_bo_i00</icon>
 		<effectPoint>-1</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.xmas_bo_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>1500</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>500</effectRange>

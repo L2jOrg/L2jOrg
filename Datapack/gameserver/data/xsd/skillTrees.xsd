@@ -107,7 +107,7 @@
 									</xs:attribute>
 									<xs:attribute name="learnedByFS" type="xs:boolean" />
 									<xs:attribute name="learnedByNpc" type="xs:boolean" />
-									<xs:attribute name="levelUpSp" type="xs:positiveInteger" />
+									<xs:attribute name="levelUpSp" type="xs:long" />
 									<xs:attribute name="residenceSkill" type="xs:boolean" />
 									<xs:attribute name="skillId" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="skillLvl" type="xs:positiveInteger" use="required" />

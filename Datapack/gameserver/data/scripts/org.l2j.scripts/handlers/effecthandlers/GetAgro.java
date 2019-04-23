@@ -16,8 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import java.util.Set;
-
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
@@ -28,6 +26,8 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
+
+import java.util.Set;
 
 /**
  * Get Agro effect implementation.
@@ -67,7 +67,7 @@ public final class GetAgro extends AbstractEffect
 				{
 					if (!nearby.isMovementDisabled() && nearby.getTemplate().isClan(clans))
 					{
-						nearby.addDamageHate(effector, 200, 200);
+						nearby.addDamageHate(effector, 1, 200);
 						nearby.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, effector);
 					}
 				}

@@ -1,208 +1,233 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="54000" toLevel="11" name="Taurus Agathion Unique Ability">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- P. Def. +$s1. P. Def. increases when Agathion is upgraded. -->
+		<icon>icon.agathion_tau_star_1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54001" toLevel="11" name="Leo Agathion Unique Ability">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- P. Atk. +$s1. P. Atk. increases when Agathion is upgraded. -->
+		<icon>icon.agathion_leo_star_1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54002" toLevel="11" name="Scorpio Agathion Unique Ability">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- P. Critical Rate +$s1. P. Critical Rate increases when Agathion is upgraded. -->
+		<icon>icon.agathion_sco_star_1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54003" toLevel="11" name="Sagittarius Agathion Unique Ability">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Atk. Spd. +$s1. Atk. Spd. increases when Agathion is upgraded. -->
+		<icon>icon.agathion_sag_star_1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54004" toLevel="11" name="Virgo Agathion Unique Ability">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Def. +$s1. M. Def. increases when Agathion is upgraded. -->
+		<icon>icon.agathion_virgo_star_1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54005" toLevel="11" name="Aquarius Agathion Unique Ability">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Atk. +$s1. M. Atk. increases when Agathion is upgraded. -->
+		<icon>icon.agathion_aqu_star_1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54006" toLevel="11" name="Capricorn Agathion Unique Ability">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- M. Critical Rate +$s1. M. Critical Rate increases when Agathion is upgraded. -->
+		<icon>icon.agathion_capr_star_1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54007" toLevel="11" name="Libra Agathion Unique Ability">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Casting Spd. +$s1. M. Casting Spd. increases when Agathion is upgraded. -->
+		<icon>icon.agathion_lib_star_1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54008" toLevel="11" name="Gemini Agathion Unique Ability">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- XP/ SP acqusition from Sayha Grace +$s1. Effect of Sayha Grace increases when Agathion is upgraded. -->
+		<icon>icon.agathion_gem_star_1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54009" toLevel="1" name="Agathion - Taurus">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Releases Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54010" toLevel="1" name="Agathion - Leo">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Releases Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54011" toLevel="1" name="Agathion - Scorpio">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Releases Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54012" toLevel="1" name="Agathion - Sagittarius">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Releases Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54013" toLevel="1" name="Agathion - Virgo">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Releases Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54014" toLevel="1" name="Agathion - Aquarius">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Releases Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54015" toLevel="1" name="Agathion - Capricorn">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Releases Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54016" toLevel="1" name="Agathion - Libra">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Releases Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54017" toLevel="1" name="Agathion - Gemini">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Releases Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54018" toLevel="1" name="Seal Agathion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Dismiss a summoned Agathion. -->
+		<icon>icon.etc_unsummon_aga_agit_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54019" toLevel="2" name="Savior's Earring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Acquired XP/ SP +2%, Max MP +20. -->
+		<icon>
+			<value level="1">icon.r2_earring_i00</value>
+			<value level="2">icon.r2_earring_i01</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54020" toLevel="1" name="Bracelet of Authority">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- HP/ MP Recovery Bonus +15%, P. Accuracy +2, M. Accuracy +2, Weight Limit +10000. -->
+		<icon>icon.ertheia_bracelet_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54021" toLevel="15" name="Talisman of Authority">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Thanks to the authority P. Def./ M. Def. +13, Max HP +6%, Max MP +2%, P. Atk./ M. Atk. +2%. -->
+		<icon>
+			<value level="1">icon.sayhas_talisman_g_Lv1</value>
+			<value level="2">icon.sayhas_talisman_g_Lv2</value>
+			<value level="3">icon.sayhas_talisman_g_Lv3</value>
+			<value level="4">icon.sayhas_talisman_g_Lv4</value>
+			<value level="5">icon.sayhas_talisman_g_lv5</value>
+			<value level="6">icon.sayhas_talisman_pve_Lv1</value>
+			<value level="7">icon.sayhas_talisman_pve_Lv2</value>
+			<value level="8">icon.sayhas_talisman_pve_Lv3</value>
+			<value level="9">icon.sayhas_talisman_pve_Lv4</value>
+			<value level="10">icon.sayhas_talisman_pve_lv5</value>
+			<value level="11">icon.sayhas_talisman_pvp_Lv1</value>
+			<value level="12">icon.sayhas_talisman_pvp_Lv2</value>
+			<value level="13">icon.sayhas_talisman_pvp_Lv3</value>
+			<value level="14">icon.sayhas_talisman_pvp_Lv4</value>
+			<value level="15">icon.sayhas_talisman_pvp_lv5</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54022" toLevel="2" name="Shunaiman's Authority">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Thanks to Shunaiman's authority Stun/ Mental Atk. Rate +5%, Damage Reflect Resistance +10%. -->
+		<icon>
+			<value level="1">icon.sayhas_talisman_pvp_Lv1</value>
+			<value level="2">icon.sayhas_talisman_pvp_Lv2</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54023" toLevel="5" name="Water Attack Defense">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Water Attack Defense +20. -->
+		<icon>icon.elemental_necklace_water_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54024" toLevel="5" name="Fire Attack Defense">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Fire Attack Defense +20. -->
+		<icon>icon.elemental_necklace_fire_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54025" toLevel="5" name="Wind Attack Defense">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Wind Attack Defense +20. -->
+		<icon>icon.elemental_necklace_wind_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54026" toLevel="5" name="Earth Attack Defense">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Earth Attack Defense +20. -->
+		<icon>icon.elemental_necklace_earth_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54027" toLevel="5" name="Attribute XP Increase">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Acquired attribute XP +3%. -->
+		<icon>icon.skill_transform_s_attack</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54028" toLevel="1" name="Spirit's Blessing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 20 min. Acquired XP +50%. -->
+		<icon>icon.elemental_bless_scrl_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54029" toLevel="4" name="Venir's Blessing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +$s1. -->
+		<icon>
+			<value level="1">icon.etc_all_stat_talisman_i00</value>
+			<value level="2">icon.etc_all_stat_talisman_i01</value>
+			<value level="3">icon.etc_all_stat_talisman_i02</value>
+			<value level="4">icon.etc_all_stat_talisman_i02</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54030" toLevel="11" name="Ignis' Necklace Basic Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Max HP +50. -->
+		<icon>icon.elemental_necklace_fire_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54031" toLevel="11" name="Nebula's Necklace Basic Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Max HP +50. -->
+		<icon>icon.elemental_necklace_water_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54032" toLevel="11" name="Procella's Necklace Basic Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Max HP +50. -->
+		<icon>icon.elemental_necklace_wind_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54033" toLevel="11" name="Petram's Necklace Basic Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Max HP +50. -->
+		<icon>icon.elemental_necklace_earth_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54034" toLevel="10" name="Anakim's Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- When using the Recharge skill, MP Recovery Rate +5, M. Atk. +1%. -->
+		<icon>icon.etc_water_rune_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54035" toLevel="10" name="Lilith's Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Received Healing +1%, P. Atk. +1%. -->
+		<icon>icon.etc_fire_rune_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54036" toLevel="5" name="Anakim Recovery">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Recovers 75 MP when skills are used. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54037" toLevel="5" name="Lilith Recovery">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Restores 100 HP when striking. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54038" toLevel="1" name="Sayha's Cloak Basic Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Max HP/ MP +$s1. -->
+		<icon>BranchSys2.br_wing_of_sylphide_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54039" toLevel="10" name="Sayha's Cloak Enchant Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Max HP/ MP +$s1. -->
+		<icon>BranchSys2.br_wing_of_sylphide_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54040" toLevel="1" name="Sayha's Blink">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Cancels target and teleports to the back. -->
+		<icon>icon.sayha2017_blink</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

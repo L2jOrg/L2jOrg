@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3500" toLevel="1" name="Set Effect - Wooden Light Armor">
-		<!-- https://l2wiki.com/classic/Wooden_Set -->
+		<!-- Max HP +41, P. Def. +2%. -->
 		<icon>icon.armor_t06_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -18,6 +18,7 @@
 		</effects>
 	</skill>
 	<skill id="3501" toLevel="1" name="Set Effect - Devotion Robe Armor">
+		<!-- Casting Spd. +15%. -->
 		<icon>icon.armor_t55_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -30,6 +31,7 @@
 		</effects>
 	</skill>
 	<skill id="3502" toLevel="2" name="Set Effect - Mithril Heavy Armor, 3-piece">
+		<!-- Max HP +126. -->
 		<icon>icon.armor_t19_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -45,6 +47,7 @@
 		</effects>
 	</skill>
 	<skill id="3503" toLevel="2" name="Set Effect - Reinforced Leather Light Armor, 3-piece">
+		<!-- Max MP +80. -->
 		<icon>icon.armor_t13_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -61,6 +64,7 @@
 		</effects>
 	</skill>
 	<skill id="3504" toLevel="2" name="Set Effect - Knowledge Robe Armor, 3-piece">
+		<!-- Max MP +40. -->
 		<icon>icon.armor_t41_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -77,6 +81,7 @@
 		</effects>
 	</skill>
 	<skill id="3505" toLevel="2" name="Set Effect - Manticore Light Armor, 3-piece">
+		<!-- Max MP +92. -->
 		<icon>icon.armor_t42_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -93,6 +98,7 @@
 		</effects>
 	</skill>
 	<skill id="3506" toLevel="2" name="Set Effect - Brigandine Heavy Armor, 3-piece">
+		<!-- Max HP +153. -->
 		<icon>icon.armor_t43_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -109,7 +115,8 @@
 		</effects>
 	</skill>
 	<skill id="3507" toLevel="2" name="Set Effect - Elven Mithril Robe Armor, 3-piece">
-		<icon>icon.armor_t51_u_i00</icon>
+		<!-- MP Recovery Bonus +5.24%. -->
+		<icon>icon.armor_elven_tunic_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -125,6 +132,7 @@
 		</effects>
 	</skill>
 	<skill id="3508" toLevel="2" name="Set Effect - Reinforced Mithril Light Armor, 3-piece">
+		<!-- P. Evasion +4. -->
 		<icon>icon.armor_t47_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -141,6 +149,7 @@
 		</effects>
 	</skill>
 	<skill id="3509" toLevel="2" name="Set Effect - Chain Heavy Armor, 3-piece">
+		<!-- Sleep/ Hold Resistance +20%, Max HP +198. -->
 		<icon>icon.armor_t48_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -161,6 +170,7 @@
 		</effects>
 	</skill>
 	<skill id="3510" toLevel="2" name="Set Effect - Karmian Robe Armor, 3-piece">
+		<!-- Sleep/ Hold Resistance +20%. -->
 		<icon>icon.armor_t53_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -181,6 +191,7 @@
 		</effects>
 	</skill>
 	<skill id="3511" toLevel="2" name="Set Effect - Plate Light Armor, 2-piece">
+		<!-- Sleep/ Hold Resistance +20%. -->
 		<icon>icon.armor_t47_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -201,6 +212,7 @@
 		</effects>
 	</skill>
 	<skill id="3512" toLevel="1" name="Set Effect - Compound Heavy Armor, 2-piece">
+		<!-- Weight Limit +5759, M. Def. +5%, Paralysis Resistance +10%. -->
 		<icon>icon.armor_t61_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -221,6 +233,7 @@
 		</effects>
 	</skill>
 	<skill id="3513" toLevel="2" name="Set Effect - Demon Robe Armor, 3-piece">
+		<!-- Stun Resistance +10%. -->
 		<icon>icon.armor_t54_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -244,6 +257,7 @@
 		</effects>
 	</skill>
 	<skill id="3514" toLevel="2" name="Set Effect - Theca Light Armor, 3-piece">
+		<!-- Paralysis Resistance +10%. -->
 		<icon>icon.armor_t63_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -259,7 +273,8 @@
 		</effects>
 	</skill>
 	<skill id="3515" toLevel="1" name="Set Effect - Drake Light Armor, 2-piece">
-		<icon>icon.armor_t21_ul_i00</icon>
+		<!-- M. Def. +5%, Stun Resistance +10%. -->
+		<icon>icon.armor_t45_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -274,6 +289,7 @@
 		</effects>
 	</skill>
 	<skill id="3516" toLevel="1" name="Set Effect - Full Plate Heavy Armor, 2-piece">
+		<!-- Max HP +270, P. Def. +5%, Stun Resistance +10%. -->
 		<icon>icon.armor_t62_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -293,6 +309,7 @@
 		</effects>
 	</skill>
 	<skill id="3517" toLevel="2" name="Set Effect - Divine Robe Armor, 2-piece">
+		<!-- Paralysis Resistance +10%. -->
 		<icon>icon.armor_t57_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -316,6 +333,7 @@
 		</effects>
 	</skill>
 	<skill id="3518" toLevel="4" name="Set Effect - Zubei Heavy Armor, 4-piece">
+		<!-- HP Recovery Bonus +5.24%. -->
 		<icon>icon.armor_t64_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -339,6 +357,7 @@
 		</effects>
 	</skill>
 	<skill id="3519" toLevel="4" name="Set Effect - Avadon Heavy Armor, 5-piece">
+		<!-- Max HP +294. -->
 		<icon>icon.armor_t66_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -363,6 +382,7 @@
 		</effects>
 	</skill>
 	<skill id="3520" toLevel="4" name="Set Effect - Zubei Light Armor, 5-piece">
+		<!-- P. Evasion +4. -->
 		<icon>icon.armor_t65_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -377,7 +397,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
-				<PARALYZE>30</PARALYZE>		
+				<PARALYZE>30</PARALYZE>
 			</effect>
 			<effect name="StatUp" fromLevel="4" toLevel="4">
 				<amount>1</amount>
@@ -386,6 +406,7 @@
 		</effects>
 	</skill>
 	<skill id="3521" toLevel="3" name="Set Effect - Avadon Light Armor, 2-piece">
+		<!-- Weight limit +5759. -->
 		<icon>icon.armor_t67_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -400,8 +421,8 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
-				<POISON>30</POISON>		
-				<BLEED>30</BLEED>		
+				<POISON>30</POISON>
+				<BLEED>30</BLEED>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="3" toLevel="3">
 				<amount>5.25</amount>
@@ -410,6 +431,7 @@
 		</effects>
 	</skill>
 	<skill id="3522" toLevel="4" name="Set Effect - Zubei Robe Armor, 5-piece">
+		<!-- MP Recovery Bonus +5.26%. -->
 		<icon>icon.armor_t56_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -424,7 +446,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
-				<PARALYZE>30</PARALYZE>		
+				<PARALYZE>30</PARALYZE>
 			</effect>
 			<effect name="MAtk" fromLevel="4" toLevel="4">
 				<amount>10</amount>
@@ -433,14 +455,15 @@
 		</effects>
 	</skill>
 	<skill id="3523" toLevel="3" name="Set Effect - Avadon Robe Armor, 2-piece">
+		<!-- Poison/ Bleed Resistance +60%. -->
 		<icon>icon.armor_t59_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait" fromLevel="1" toLevel="3">
-				<POISON>60</POISON>		
-				<BLEED>60</BLEED>		
+				<POISON>60</POISON>
+				<BLEED>60</BLEED>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="2" toLevel="3">
 				<amount>5.26</amount>
@@ -453,6 +476,7 @@
 		</effects>
 	</skill>
 	<skill id="3524" toLevel="4" name="Set Effect - Blue Wolf Heavy Armor, 4-piece">
+		<!-- HP Recovery Bonus +5.24%. -->
 		<icon>icon.armor_t68_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -467,7 +491,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
-				<SHOCK>30</SHOCK>		
+				<SHOCK>30</SHOCK>
 			</effect>
 			<effect name="StatUp" fromLevel="4" toLevel="4">
 				<amount>3</amount>
@@ -484,6 +508,7 @@
 		</effects>
 	</skill>
 	<skill id="3525" toLevel="3" name="Set Effect - Doom Heavy Armor, 3-piece">
+		<!-- Max HP +320. -->
 		<icon>icon.armor_t71_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -494,8 +519,8 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="2" toLevel="3">
-				<SLEEP>50</SLEEP>		
-				<HOLD>50</HOLD>		
+				<SLEEP>50</SLEEP>
+				<HOLD>50</HOLD>
 			</effect>
 			<effect name="StatUp" fromLevel="3" toLevel="3">
 				<amount>-3</amount>
@@ -508,6 +533,7 @@
 		</effects>
 	</skill>
 	<skill id="3526" toLevel="3" name="Set Effect - Blue Wolf Light Armor, 4-piece">
+		<!-- MP Recovery Bonus +5.26%. -->
 		<icon>icon.armor_t69_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -534,7 +560,7 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
-				<SHOCK>30</SHOCK>		
+				<SHOCK>30</SHOCK>
 			</effect>
 			<effect name="MagicalAttackSpeed" fromLevel="3" toLevel="3">
 				<amount>15</amount>
@@ -543,6 +569,7 @@
 		</effects>
 	</skill>
 	<skill id="3527" toLevel="3" name="Set Effect - Doom Light Armor, 4-piece">
+		<!-- MP Recovery Bonus +5.26%. -->
 		<icon>icon.armor_t72_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -567,6 +594,7 @@
 		</effects>
 	</skill>
 	<skill id="3528" toLevel="4" name="Set Effect - Blue Wolf Robe Armor, 5-piece">
+		<!-- MP Recovery Bonus +5.26%. -->
 		<icon>icon.armor_t70_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -598,6 +626,7 @@
 		</effects>
 	</skill>
 	<skill id="3529" toLevel="4" name="Set Effect - Doom Robe Armor, 5-piece">
+		<!-- MP Recovery Bonus +5.26%. -->
 		<icon>icon.armor_t73_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -638,6 +667,7 @@
 		</effects>
 	</skill>
 	<skill id="3530" toLevel="4" name="Set Effect - Dark Crystal Heavy Armor, 4-piece">
+		<!-- HP Recovery Bonus +5.24%. -->
 		<icon>icon.armor_t74_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -669,6 +699,7 @@
 		</effects>
 	</skill>
 	<skill id="3531" toLevel="3" name="Set Effect - Tallum Heavy Armor, 3-piece">
+		<!-- Weight limit +5759. -->
 		<icon>icon.armor_t77_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -701,6 +732,7 @@
 		</effects>
 	</skill>
 	<skill id="3532" toLevel="4" name="Set Effect - Dark Crystal Light Armor, 3-piece">
+		<!-- P. Evasion +4. -->
 		<icon>icon.armor_t75_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -736,6 +768,7 @@
 		</effects>
 	</skill>
 	<skill id="3533" toLevel="3" name="Set Effect - Tallum Light Armor, 4-piece">
+		<!-- MP Recovery Bonus +8%. -->
 		<icon>icon.armor_t78_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -764,6 +797,7 @@
 		</effects>
 	</skill>
 	<skill id="3534" toLevel="4" name="Set Effect - Tallum Robe Armor, 5-piece">
+		<!-- MP Recovery Bonus +5.26%. -->
 		<icon>icon.armor_t79_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -796,6 +830,7 @@
 		</effects>
 	</skill>
 	<skill id="3535" toLevel="3" name="Set Effect - Dark Crystal Robe, 3-piece">
+		<!-- Speed +7. Decreases Magic Cancel Rate. -->
 		<icon>icon.armor_t76_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -831,6 +866,7 @@
 		</effects>
 	</skill>
 	<skill id="3536" toLevel="3" name="Set Effect - Nightmare Heavy Armor, 4-piece">
+		<!-- P. Accuracy +3, HP Recovery Bonus +5.24%. -->
 		<icon>icon.armor_t80_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -867,6 +903,7 @@
 		</effects>
 	</skill>
 	<skill id="3537" toLevel="3" name="Set Effect - Majestic Heavy Armor, 3-piece">
+		<!-- P. Accuracy +3, HP Recovery Bonus +5.24%. -->
 		<icon>icon.armor_t83_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -902,6 +939,7 @@
 		</effects>
 	</skill>
 	<skill id="3538" toLevel="3" name="Set Effect - Nightmare Light Armor, 4-piece">
+		<!-- MP Recovery Bonus +5.26%. -->
 		<icon>icon.armor_t81_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -934,6 +972,7 @@
 		</effects>
 	</skill>
 	<skill id="3539" toLevel="3" name="Set Effect - Majestic Light Armor, 4-piece">
+		<!-- Weight Limit +5759, P. Accuracy +3. -->
 		<icon>icon.armor_t84_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -952,7 +991,7 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-
+					<item>CROSSBOW</item>
 				</weaponType>
 			</effect>
 			<effect name="MaxMp" fromLevel="2" toLevel="3">
@@ -973,6 +1012,7 @@
 		</effects>
 	</skill>
 	<skill id="3540" toLevel="3" name="Set Effect - Nightmare Robe Armor, 4-piece">
+		<!-- MP Recovery Bonus +5.26%. -->
 		<icon>icon.armor_t82_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1005,6 +1045,7 @@
 		</effects>
 	</skill>
 	<skill id="3541" toLevel="3" name="Set Effect - Majestic Robe Armor, 4-piece">
+		<!-- MP Recovery Bonus +8%. -->
 		<icon>icon.armor_t85_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1036,8 +1077,8 @@
 		</effects>
 	</skill>
 	<skill id="3542" toLevel="6" name="Special Ability: Critical Damage">
-		<!-- Confirmed CT2.5 -->
-		<icon>icon.skill0193</icon>
+		<!-- Increases Critical Damage. -->
+		<icon>icon.skill1242</icon>
 		<magicLvl>
 			<value level="1">46</value>
 			<value level="2">49</value>
@@ -1063,7 +1104,7 @@
 		</effects>
 	</skill>
 	<skill id="3543" toLevel="1" name="Equip Shield">
-		<!-- Hoplon Shield Skill -->
+		<!-- Increases Shield Defense Rate. -->
 		<icon>icon.skill0091</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1076,7 +1117,7 @@
 		</effects>
 	</skill>
 	<skill id="3544" toLevel="1" name="Equip Shield">
-		<!-- Brigandine Shield Skill -->
+		<!-- Increases Max HP. -->
 		<icon>icon.skill0091</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1089,7 +1130,7 @@
 		</effects>
 	</skill>
 	<skill id="3545" toLevel="1" name="Equip Shield">
-		<!-- Chain Shield Skill -->
+		<!-- Increases Shield Defense Rate. -->
 		<icon>icon.skill0091</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1102,7 +1143,7 @@
 		</effects>
 	</skill>
 	<skill id="3546" toLevel="1" name="Equip Shield">
-		<!-- Composite Shield Skill -->
+		<!-- Additionally increases Magic Damage Resistance. -->
 		<icon>icon.skill0091</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1115,7 +1156,7 @@
 		</effects>
 	</skill>
 	<skill id="3547" toLevel="1" name="Equip Shield">
-		<!-- Full Plate Shield Skill -->
+		<!-- Increases Shield Defense Rate. -->
 		<icon>icon.skill0091</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1128,7 +1169,7 @@
 		</effects>
 	</skill>
 	<skill id="3548" toLevel="1" name="Equip Shield">
-		<!-- Avadon Shield Skill -->
+		<!-- Increases Shield Defense Rate. -->
 		<icon>icon.skill0091</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1141,7 +1182,7 @@
 		</effects>
 	</skill>
 	<skill id="3549" toLevel="1" name="Equip Shield">
-		<!-- Doom Shield Skill -->
+		<!-- Increases Shield Defense Rate. -->
 		<icon>icon.skill0091</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1154,7 +1195,7 @@
 		</effects>
 	</skill>
 	<skill id="3550" toLevel="1" name="Equip Shield">
-		<!-- Dark Crystal Shield Skill -->
+		<!-- Increases Shield Defense Rate. -->
 		<icon>icon.skill0091</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1167,7 +1208,7 @@
 		</effects>
 	</skill>
 	<skill id="3551" toLevel="1" name="Equip Shield">
-		<!-- Shield of Nightmare Skill -->
+		<!-- Increases Shield Defense Rate. -->
 		<icon>icon.skill0091</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1180,6 +1221,7 @@
 		</effects>
 	</skill>
 	<skill id="3553" toLevel="1" name="Imperial Crusader Heavy Armor Set">
+		<!-- Sleep/ Hold Resistance, Max HP, and P. Def. STR+ 2, DEX-2 -->
 		<icon>icon.armor_t88_u_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1200,7 +1242,7 @@
 		</effects>
 	</skill>
 	<skill id="3554" toLevel="1" name="Equip Shield">
-		<!-- Imperial Crusader Shield Skill -->
+		<!-- Additionally increases Poison/ Bleed Resistance. -->
 		<icon>icon.skill0091</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1213,6 +1255,7 @@
 		</effects>
 	</skill>
 	<skill id="3555" toLevel="1" name="Draconic Leather Armor Set">
+		<!-- Max MP, Atk. Spd, P. Atk, and weight limit. DEX+ 1, STR+ 1, CON-2 -->
 		<icon>icon.armor_t89_ul_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1236,6 +1279,7 @@
 		</effects>
 	</skill>
 	<skill id="3556" toLevel="1" name="Major Arcana Robe Set">
+		<!-- Decreases chance of magic casting being canceled. Increases Stun Resistance, M. Atk., Speed and weight limit. WIT +1, INT +1, MEN -2 -->
 		<icon>icon.armor_t90_ul_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1262,8 +1306,7 @@
 		</effects>
 	</skill>
 	<skill id="3557" toLevel="1" name="Valakas' Necklace">
-		<!-- Confirmed CT2.5 -->
-		<!-- Boss Jewel Skill -->
+		<!-- Increases Fire Resistance, Sleep Resistance, sleep attack bonus, Max HP/ P. Atk./ M. Atk. and magic damage Critical Rate. Decreases skill cooldown. Reflects some of the physical damage received back upon the enemy. -->
 		<icon>icon.accessory_necklace_of_valakas_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1312,9 +1355,23 @@
 		</effects>
 	</skill>
 	<skill id="3558" toLevel="1" name="Antharas' Earring">
-		<!-- Confirmed CT2.5 -->
-		<!-- Boss Jewel Skill -->
-		<icon>icon.accessory_earring_of_antaras_i00</icon>
+		<!-- Damaged earring. Bleed Resistance and Bleed Atk. Rate +1%. -->
+		<icon>
+			<value level="1">icon.accessory_earring_of_antaras_i00</value>
+			<value level="2">icon.accessory_earring_of_antaras_i00</value>
+			<value level="3">icon.accessory_earring_of_antaras_i00</value>
+			<value level="4">icon.accessory_earring_of_antaras_i00</value>
+			<value level="5">icon.accessory_earring_of_antaras_i00</value>
+			<value level="6">icon.accessory_earring_of_antaras_i00</value>
+			<value level="7">icon.accessory_earring_of_antaras_i00</value>
+			<value level="8">icon.accessory_earring_of_antaras_i00</value>
+			<value level="9">icon.accessory_earring_of_antaras_i00</value>
+			<value level="10">icon.accessory_earring_of_antaras_i00</value>
+			<value level="11">icon.accessory_earring_of_antaras_i00</value>
+			<value level="12">icon.accessory_earring_of_antaras_i00</value>
+			<value level="13">icon.accessory_earring_of_antaras_i01</value>
+			<value level="14">icon.accessory_earring_of_antaras_i02</value>
+		</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1354,8 +1411,7 @@
 		</effects>
 	</skill>
 	<skill id="3559" toLevel="2" name="Zaken's Earring">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<!-- Boss Jewel Skill -->
+		<!-- Increases Bleed/ Stun/ Mental Attack Resistance, Bleed/ Stun/ Mental attack bonus and effectiveness of received HP recovery magic, and has a chance of restoring HP by using some of the damage inflicted upon the enemy. -->
 		<icon>icon.accessory_earring_of_zaken_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1404,7 +1460,12 @@
 		</effects>
 	</skill>
 	<skill id="3560" toLevel="3" name="Refined Orfen's Earring">
-		<icon>icon.accessory_earring_of_orfen_i00</icon>
+		<!-- Hold Resistance and Atk. Rate +10%, Mental Resistance and Atk. Rate +5%, Healing Power +2%, Skill MP Consumption -2%. -->
+		<icon>
+			<value level="1">icon.accessory_earring_of_orfen_i00</value>
+			<value level="2">icon.accessory_earring_of_orfen_i02</value>
+			<value level="3">icon.accessory_earring_of_orfen_i03</value>
+		</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1451,12 +1512,27 @@
 			</effect>
 			<effect name="MpVampiricAttack" fromLevel="3" toLevel="3">
 				<amount>3</amount>
-				<chance>80</chance>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3561" toLevel="3" name="Damaged Baium's Ring Enchant Effect">
-		<icon>icon.accessory_ring_of_baium_i00</icon>
+		<!-- Damaged ring. Bleed Resistance +1%. -->
+		<icon>
+			<value level="1">icon.accessory_ring_of_baium_i00</value>
+			<value level="2">icon.accessory_ring_of_baium_i00</value>
+			<value level="3">icon.accessory_ring_of_baium_i00</value>
+			<value level="4">icon.accessory_ring_of_baium_i00</value>
+			<value level="5">icon.accessory_ring_of_baium_i00</value>
+			<value level="6">icon.accessory_ring_of_baium_i00</value>
+			<value level="7">icon.accessory_ring_of_baium_i00</value>
+			<value level="8">icon.accessory_ring_of_baium_i00</value>
+			<value level="9">icon.accessory_ring_of_baium_i00</value>
+			<value level="10">icon.accessory_ring_of_baium_i00</value>
+			<value level="11">icon.accessory_ring_of_baium_i00</value>
+			<value level="12">icon.accessory_ring_of_baium_i00</value>
+			<value level="13">icon.accessory_ring_of_baium_i02</value>
+			<value level="14">icon.accessory_ring_of_baium_i03</value>
+		</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1528,7 +1604,12 @@
 		</effects>
 	</skill>
 	<skill id="3562" toLevel="3" name="Queen Ant's Ring">
-		<icon>icon.accessory_ring_of_queen_ant_i00</icon>
+		<!-- Poison Resistance and Atk. Rate +10%, P./ M. Accuracy +1, P./ M. Atk. +4%. -->
+		<icon>
+			<value level="1">icon.accessory_ring_of_queen_ant_i00</value>
+			<value level="2">icon.accessory_ring_of_queen_ant_i02</value>
+			<value level="3">icon.accessory_ring_of_queen_ant_i03</value>
+		</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1598,8 +1679,12 @@
 		</effects>
 	</skill>
 	<skill id="3563" toLevel="3" name="Ring of Core">
-		<!-- Boss Jewel Skill -->
-		<icon>icon.accessory_ring_of_core_i00</icon>
+		<!-- Mental Resistance and Atk. Rate +10%, P./ M. Evasion +1, Received Damage -2%. -->
+		<icon>
+			<value level="1">icon.accessory_ring_of_core_i00</value>
+			<value level="2">icon.accessory_ring_of_core_i02</value>
+			<value level="3">icon.accessory_ring_of_core_i03</value>
+		</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1679,7 +1764,8 @@
 		</effects>
 	</skill>
 	<skill id="3571" toLevel="2" name="Special Ability: Critical Stun">
-		<!-- Confirmed CT2.5 -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1690,7 +1776,6 @@
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>
 			<value level="1">10</value>
@@ -1701,7 +1786,6 @@
 			<value level="2">84</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>SHOCK</trait>
@@ -1713,7 +1797,8 @@
 		</effects>
 	</skill>
 	<skill id="3574" toLevel="3" name="Special Ability: Critical Slow">
-		<!-- Confirmed CT2.5 -->
+		<!-- Temporarily decreases Speed. Effect $s1 -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1726,7 +1811,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill1160</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>
@@ -1735,7 +1819,6 @@
 			<value level="3">84</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -1749,7 +1832,8 @@
 		</effects>
 	</skill>
 	<skill id="3577" toLevel="3" name="Special Ability: Magic Hold">
-		<!-- Confirmed CT2.5 -->
+		<!-- Inflicted with Hold and unable to move. -->
+		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -1759,7 +1843,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill1201</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -1769,7 +1852,6 @@
 			<value level="3">85</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>HOLD</trait>
@@ -1780,7 +1862,7 @@
 		</effects>
 	</skill>
 	<skill id="3578" toLevel="1" name="Special Ability: Infinity Sword">
-		<!-- Update to Classic Zaken -->
+		<!-- Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Speed +5%. Inflicts additional damage during PvP by 5%, grants weapon with special effects. -->
 		<icon>icon.weapon_the_sword_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>P</operateType>
@@ -1821,7 +1903,7 @@
 		</effects>
 	</skill>
 	<skill id="3579" toLevel="1" name="Infinity Power - Reflect">
-		<!-- Update to Classic Zaken -->
+		<!-- For $s1, returns $s2 of damage received by the target back to the enemy. -->
 		<icon>icon.skill0086</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1847,7 +1929,7 @@
 		</effects>
 	</skill>
 	<skill id="3580" toLevel="1" name="Special Ability: Infinity Axe">
-		<!-- Updated to Classic Zaken -->
+		<!-- Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Speed +5%. Inflicts additional damage during PvP by 5%, grants weapon with special effects. -->
 		<icon>icon.weapon_the_axe_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>P</operateType>
@@ -1888,8 +1970,7 @@
 		</effects>
 	</skill>
 	<skill id="3581" toLevel="1" name="Infinity Power - Tenacity">
-		<!-- Updated to Classic Zaken -->
-		<icon>icon.skill0000</icon>
+		<!-- For $s1 returns $s2 of the received damage back to the enemy. Recovers $s3 HP. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<operateType>A2</operateType>
@@ -1918,7 +1999,7 @@
 		</effects>
 	</skill>
 	<skill id="3582" toLevel="1" name="Special Ability: Infinity Slasher">
-		<!-- Update to Classic Zaken -->
+		<!-- Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%. Inflicts additional damage during PvP by 5%, grants weapon with special effects. -->
 		<icon>icon.weapon_the_two_handed_sword_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>P</operateType>
@@ -1959,7 +2040,7 @@
 		</effects>
 	</skill>
 	<skill id="3584" toLevel="1" name="Infinity Power - Protection">
-		<!-- Update to Classic Zaken -->
+		<!-- For $s1 makes you immune to debuffs $s2 times. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -1977,7 +2058,7 @@
 		</effects>
 	</skill>
 	<skill id="3585" toLevel="1" name="Special Ability: Infinity Dual Sword">
-		<!-- Update to Classic Zaken -->
+		<!-- Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +5%, P. Critical Damage +5%, Atk. Spd. +5%. Inflicts additional damage during PvP by 5%, grants weapon with special effects. -->
 		<icon>icon.weapon_the_dualsword_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>P</operateType>
@@ -2027,7 +2108,7 @@
 		</effects>
 	</skill>
 	<skill id="3586" toLevel="1" name="Infinity Power - Refresh">
-		<!-- Update to Classic Zaken -->
+		<!-- For 5 min. Skill Cooldown -$s1 (except for the skills with a fixed cooldown). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2055,7 +2136,7 @@
 		</effects>
 	</skill>
 	<skill id="3587" toLevel="1" name="Special Ability: Infinity Fighter">
-		<!-- Update to Classic Zaken -->
+		<!-- Max HP +20%, Max MP +15%, Max CP +30%, P. Critical Rate +20, Atk. Spd. +5%. Inflicts additional damage during PvP by 5%, grants weapon with special effects. -->
 		<icon>icon.weapon_the_fist_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>P</operateType>
@@ -2104,12 +2185,10 @@
 		<activateRate>25</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0100</icon>
 		<isDebuff>1</isDebuff>
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>80</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>SHOCK</trait>
@@ -2121,7 +2200,7 @@
 		</effects>
 	</skill>
 	<skill id="3589" toLevel="1" name="Special Ability: Infinity Dagger">
-		<!-- Update to Classic Zaken -->
+		<!-- Max HP +15%, Max MP +25%, Max CP +30%, M. Critical Rate +20, P. Critical Damage +20%. Inflicts additional damage during PvP by 5%, grants weapon with special effects. -->
 		<icon>icon.weapon_the_dagger_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>P</operateType>
@@ -2162,7 +2241,7 @@
 		</effects>
 	</skill>
 	<skill id="3590" toLevel="1" name="Infinity Power - Immortal">
-		<!-- Update to Classic Zaken -->
+		<!-- For $s1, chance of deadly attack +$s2. -->
 		<icon>icon.skill0410</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2179,7 +2258,7 @@
 		</effects>
 	</skill>
 	<skill id="3591" toLevel="1" name="Special Ability: Infinity Spear">
-		<!-- Update to Classic Zaken -->
+		<!-- Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%. Inflicts additional damage during PvP by 5%, grants weapon with special effects. -->
 		<icon>icon.weapon_the_pole_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>P</operateType>
@@ -2220,13 +2299,13 @@
 		</effects>
 	</skill>
 	<skill id="3593" toLevel="1" name="Special Ability: Infinity Bow">
-		<!-- Update to Classic Zaken -->
+		<!-- Max HP +15%, Max MP +25%, Max CP +30%, MP Consumption -5%, Atk. Spd. +10%. Inflicts additional damage during PvP by 5%, grants weapon with special effects. -->
 		<icon>icon.weapon_the_bow_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-		<effect name="MaxHp">
+			<effect name="MaxHp">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2261,12 +2340,12 @@
 		</effects>
 	</skill>
 	<skill id="3594" toLevel="1" name="Infinity Power - Archery">
-		<!-- Update to Classic Zaken -->
+		<!-- For 5 min. Speed +15, the bow's range +100. -->
+		<icon>icon.skill0431</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<reuseDelay>600000</reuseDelay>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0431</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2288,7 +2367,7 @@
 		</effects>
 	</skill>
 	<skill id="3595" toLevel="1" name="Special Ability: Infinity Scepter">
-		<!-- Update to Classic Zaken -->
+		<!-- Max HP +10%, Max MP +25%, Max CP +30%, M. Atk. +10%, P. Critical Damage +10%. Inflicts additional damage during PvP by 5%, grants weapon with special effects. -->
 		<icon>icon.weapon_the_staff_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>P</operateType>
@@ -2329,7 +2408,7 @@
 		</effects>
 	</skill>
 	<skill id="3596" toLevel="1" name="Infinity Power - Vampiric Mana">
-		<!-- Update to Classic Zaken -->
+		<!-- For 5 min. increases Speed and the bow's range. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2341,12 +2420,11 @@
 		<effects>
 			<effect name="MpVampiricAttack">
 				<amount>3</amount>
-				<chance>80</chance>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3597" toLevel="1" name="Special Ability: Infinity Rod">
-		<!-- Updated to Classic Zaken -->
+		<!-- Max HP +10%, Max MP +25%, Max CP +30%, M. Critical Rate +20, Casting Spd. +5%. Inflicts additional damage during PvP by 5%, grants weapon with special effects. -->
 		<icon>icon.weapon_the_mace_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>P</operateType>
@@ -2387,8 +2465,7 @@
 		</effects>
 	</skill>
 	<skill id="3598" toLevel="1" name="Infinity Power - Mana Limit">
-		<!-- Updated to Classic Zaken -->
-		<icon>icon.skill0100</icon>
+		<!-- For 30 sec. magic skills don't consume MP. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<operateType>A2</operateType>
@@ -2415,7 +2492,6 @@
 		</effects>
 	</skill>
 	<skill id="3599" toLevel="1" name="Polearm Multi-attack">
-		<!-- Confirmed CT2.5 and Updated to GC -->
 		<!-- Enables the character to attack multiple opponents. -->
 		<icon>icon.skill0216</icon>
 		<magicLvl>1</magicLvl>

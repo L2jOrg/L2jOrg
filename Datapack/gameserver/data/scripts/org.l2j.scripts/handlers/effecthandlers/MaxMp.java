@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -41,19 +42,22 @@ public class MaxMp extends AbstractStatEffect
 	{
 		if (_heal)
 		{
-			switch (_mode)
+			ThreadPoolManager.schedule(() ->
 			{
-				case DIFF: // DIFF
+				switch (_mode)
 				{
-					effected.setCurrentMp(effected.getCurrentMp() + _amount);
-					break;
+					case DIFF:
+					{
+						effected.setCurrentMp(effected.getCurrentMp() + _amount);
+						break;
+					}
+					case PER:
+					{
+						effected.setCurrentMp(effected.getCurrentMp() + (effected.getMaxMp() * (_amount / 100)));
+						break;
+					}
 				}
-				case PER: // PER
-				{
-					effected.setCurrentMp(effected.getCurrentMp() + (effected.getMaxMp() * (_amount / 100)));
-					break;
-				}
-			}
+			}, 100);
 		}
 	}
 }

@@ -23,7 +23,7 @@
 	</item>
 	<item id="13520" name="Event - Jindo Dog Hat" type="Armor">
 		<!-- Hat of a Jindo Dog. Uses 2 hair accessory slots. -->
-		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
+		<set name="icon" val="icon.accessory_jindo_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
@@ -40,7 +40,7 @@
 	</item>
 	<item id="13521" name="Event - Shaggy Dog Hat" type="Armor">
 		<!-- Hat of a Shaggy Dog. Uses 2 hair accessory slots. -->
-		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
+		<set name="icon" val="icon.accessory_sapsal_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />

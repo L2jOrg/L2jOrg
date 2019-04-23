@@ -16,9 +16,7 @@
  */
 package quests.Q00276_TotemOfTheHestui;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -27,8 +25,10 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
 import org.l2j.gameserver.util.Util;
-
 import quests.Q00261_CollectorsDream.Q00261_CollectorsDream;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Totem of the Hestui (276)
@@ -88,7 +88,7 @@ public final class Q00276_TotemOfTheHestui extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, killer, npc, true))
+		if ((st != null) && st.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, killer, npc, true))
 		{
 			switch (npc.getId())
 			{

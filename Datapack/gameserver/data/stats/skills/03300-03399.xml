@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3322" toLevel="1" name="Iron Bracelet">
-		<!-- Confirmed CT2.5 -->
+		<!-- Opens up 1 Talisman slot. -->
 		<icon>icon.etc_rbracelet_c_i00</icon>
 		<magicLvl>20</magicLvl>
 		<operateType>P</operateType>
@@ -13,7 +13,7 @@
 		</effects>
 	</skill>
 	<skill id="3323" toLevel="1" name="Bronze Bracelet">
-		<!-- Confirmed CT2.5 -->
+		<!-- Opens up 2 Talisman slots. -->
 		<icon>icon.etc_rbracelet_b_i01</icon>
 		<magicLvl>40</magicLvl>
 		<operateType>P</operateType>
@@ -25,7 +25,7 @@
 		</effects>
 	</skill>
 	<skill id="3324" toLevel="1" name="Steel Bracelet">
-		<!-- Confirmed CT2.5 -->
+		<!-- Opens up 3 Talisman slots. -->
 		<icon>icon.etc_rbracelet_a_i02</icon>
 		<magicLvl>52</magicLvl>
 		<operateType>P</operateType>

@@ -3,7 +3,6 @@
 	<skill id="7000" toLevel="1" name="NPC Default">
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>0</effectRange>
@@ -16,7 +15,6 @@
 		<effectRange>900</effectRange>
 		<magicLvl>99</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -35,7 +33,6 @@
 		<effectRange>900</effectRange>
 		<magicLvl>99</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -49,13 +46,11 @@
 		</effects>
 	</skill>
 	<skill id="7003" toLevel="1" name="Dispel All">
-		<!-- Confirmed CT2.5 -->
 		<castRange>400</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>900</effectRange>
 		<magicLvl>99</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -74,13 +69,12 @@
 		</effects>
 	</skill>
 	<skill id="7004" toLevel="2" name="Dispel Petrification">
-		<!-- This skill only has one level, 2. -->
+		<!-- Cures petrification with the effect of 2 or less. -->
 		<effectPoint>566</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -91,7 +85,7 @@
 		</effects>
 	</skill>
 	<skill id="7005" toLevel="4" name="Greater Chant of Vampire">
-		<!-- This skill only has one level, 4. -->
+		<!-- Momentarily allows party members to partially restore HP using damage inflicted upon the enemy with a certain probability. Effect 4. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
@@ -105,7 +99,6 @@
 		<mpInitialConsume>55</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<specialLevel>-1</specialLevel>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<basicProperty>NONE</basicProperty>
@@ -124,8 +117,7 @@
 		</effects>
 	</skill>
 	<skill id="7006" toLevel="13" name="The Love of Pa'agrio">
-		<!-- TODO: Needs to be done -->
-		<!-- This skill only has one level, 13. -->
+		<!-- Momentarily increases target's allies HP recovery bonus. Effect 6. -->
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
@@ -137,7 +129,6 @@
 		<mpConsume>272</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<specialLevel>-1</specialLevel>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<basicProperty>NONE</basicProperty>
@@ -150,8 +141,7 @@
 		</conditions>
 	</skill>
 	<skill id="7007" toLevel="4" name="Greater Seal of Flame">
-		<!-- Needs to be done -->
-		<!-- This skill only has one level, 4. -->
+		<!-- Sets the target's allies on fire. Momentarily and continuously decreases the enemies' HP. Effect 8. -->
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -166,7 +156,6 @@
 		<mpConsume>153</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>74</magicLvl>
 		<attributeType>FIRE</attributeType>
@@ -179,11 +168,12 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="7008" toLevel="1" name="Feather of Blessing">
+		<!-- Once used, the Feather of Blessing cannot be reused for another 5 min. -->
+		<icon>icon.blessed_feather_i00</icon>
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -191,7 +181,6 @@
 		<abnormalTime>300</abnormalTime>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
-		<icon>icon.blessed_feather_i00</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic>
 		<targetType>TARGET</targetType>
@@ -223,67 +212,67 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="7014" toLevel="1" name="Test - Critical Damage Up">
+		<!-- Increases received Critical Damage -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="7015" toLevel="1" name="Test - Critical Damage Down">
+		<!-- Decreases received Critical Damage -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="7016" toLevel="1" name="Test - Critical Damage Up">
+		<!-- Increases received Critical Damage -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="7017" toLevel="1" name="Test - Critical Damage Down">
+		<!-- Decreases received Critical Damage -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="7018" toLevel="1" name="Test - Critical Rate Up">
+		<!-- Increases received Critical Damage -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="7019" toLevel="1" name="Test - Critical Rate Down">
+		<!-- Decreases received Critical Damage -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="7020" toLevel="1" name="Test - Critical Rate Up">
+		<!-- Increases received Critical Damage -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="7021" toLevel="1" name="Test - Critical Rate Down">
+		<!-- Decreases received Critical Damage -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="7022" toLevel="1" name="Test - Find Hidden Door">
+		<!-- Look for hidden door. -->
 		<affectLimit>6-12</affectLimit>
 		<hitTime>1000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
@@ -318,7 +307,6 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="7028" toLevel="1" name="Stationary NPCs">
-		<!-- TODO: Implement me! -->
 		<magicLvl>99</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -329,12 +317,11 @@
 		</effects>
 	</skill>
 	<skill id="7029" toLevel="4" name="Super Haste">
-		<!-- GM Skill -->
-		<effectPoint>1</effectPoint>
+		<!-- Speed is increased. -->
 		<icon>icon.skill7029</icon>
+		<effectPoint>1</effectPoint>
 		<magicLvl>1</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -448,13 +435,12 @@
 		<mpConsume>3</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4500</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Summon">
-				<npcId>20150</npcId>
+				<npcId>20150</npcId> <!-- King Bugbear -->
 				<lifeTime>1200</lifeTime>
 			</effect>
 		</effects>
@@ -468,14 +454,13 @@
 		<mpConsume>3</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4500</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<!--
 		<effects>
 			<effect name="Summon">
-				<npcId>20169</npcId>
+				<npcId>20169</npcId> Skeleton Royal Guard
 				<lifeTime>1200</lifeTime>
 			</effect>
 		</effects>-->
@@ -489,13 +474,12 @@
 		<mpConsume>3</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4500</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Summon">
-				<npcId>20241</npcId>
+				<npcId>20241</npcId> <!-- Hunter Gargoyle -->
 				<lifeTime>1200</lifeTime>
 			</effect>
 		</effects>
@@ -541,7 +525,8 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="7041" toLevel="1" name="Master's Blessing - Focus">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Critical Attack Rate +30% for 1 hr. -->
+		<icon>icon.skill1077</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
@@ -549,12 +534,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1077</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -568,7 +551,8 @@
 		</effects>
 	</skill>
 	<skill id="7042" toLevel="1" name="Master's Blessing - Death Whisper">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Critical P. Atk. +35% for 1 hr. -->
+		<icon>icon.skill1242</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
@@ -576,12 +560,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1242</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>56</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -595,7 +577,8 @@
 		</effects>
 	</skill>
 	<skill id="7043" toLevel="1" name="Master's Blessing - Haste">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Atk. Spd. +33% for 1 hr. -->
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -603,12 +586,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1086</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -622,7 +603,8 @@
 		</effects>
 	</skill>
 	<skill id="7044" toLevel="1" name="Master's Blessing - Guidance">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Accuracy +4 for 1 hr. -->
+		<icon>icon.skill1240</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
@@ -630,12 +612,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1240</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>56</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -649,7 +629,8 @@
 		</effects>
 	</skill>
 	<skill id="7045" toLevel="1" name="Master's Blessing - Blessed Body">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Max HP +35% for 1 hr. -->
+		<icon>icon.skill1045</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
@@ -657,12 +638,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1045</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>72</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -676,7 +655,8 @@
 		</effects>
 	</skill>
 	<skill id="7046" toLevel="1" name="Master's Blessing - Blessed Soul">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Max MP +35% for 1 hr. -->
+		<icon>icon.skill1048</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
@@ -684,12 +664,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1048</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>70</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -703,7 +681,8 @@
 		</effects>
 	</skill>
 	<skill id="7047" toLevel="1" name="Master's Blessing - Agility">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Evasion +4 for 1 hr. -->
+		<icon>icon.skill1087</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>AVOID_UP</abnormalType>
@@ -711,12 +690,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1087</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -730,7 +707,8 @@
 		</effects>
 	</skill>
 	<skill id="7048" toLevel="1" name="Master's Blessing - Acumen">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Casting Spd. +30% for 1 hr. -->
+		<icon>icon.skill1085</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
@@ -738,12 +716,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1085</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>48</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -757,7 +733,8 @@
 		</effects>
 	</skill>
 	<skill id="7049" toLevel="1" name="Master's Blessing - Decrease Weight">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side.Weight penalty interval +9000 for 1 hr. -->
+		<icon>icon.skill1257</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DECREASE_WEIGHT_PENALTY</abnormalType>
@@ -765,12 +742,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1257</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -783,7 +758,8 @@
 		</effects>
 	</skill>
 	<skill id="7050" toLevel="1" name="Master's Blessing - Might">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. P. Atk. +15% for 1 hr. -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -791,12 +767,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1068</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>40</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -810,7 +784,8 @@
 		</effects>
 	</skill>
 	<skill id="7051" toLevel="1" name="Master's Blessing - Shield">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. P. Def. +15% for 1 hr. -->
+		<icon>icon.skill1040</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -818,12 +793,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1040</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>44</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -837,7 +810,8 @@
 		</effects>
 	</skill>
 	<skill id="7052" toLevel="1" name="Master's Blessing - Magic Barrier">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. M. Def. +30% for 1 hr. -->
+		<icon>icon.skill1036</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
@@ -845,12 +819,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1036</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -864,7 +836,8 @@
 		</effects>
 	</skill>
 	<skill id="7053" toLevel="1" name="Master's Blessing - Vampiric Rage">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hr., with a certain probability recovers as HP 9% of the P. melee damage inflicted. -->
+		<icon>icon.skill1268</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
@@ -872,12 +845,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1268</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>72</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -891,7 +862,8 @@
 		</effects>
 	</skill>
 	<skill id="7054" toLevel="1" name="Master's Blessing - Empower">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. M. Atk. +75% for 1 hr. -->
+		<icon>icon.skill1059</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -899,12 +871,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1059</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -918,7 +888,8 @@
 		</effects>
 	</skill>
 	<skill id="7055" toLevel="1" name="Master's Blessing - Wind Walk">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Speed +33 for 1 hr. -->
+		<icon>icon.skill1204</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -926,12 +897,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1204</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>30</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -945,7 +914,8 @@
 		</effects>
 	</skill>
 	<skill id="7056" toLevel="1" name="Master's Blessing - Berserker Spirit">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hr., party member's P. Def. -8%, M. Def. -16%, and Evasion -4. P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Speed +8. -->
+		<icon>icon.skill1062</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
@@ -953,12 +923,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1062</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -1000,7 +968,8 @@
 		</effects>
 	</skill>
 	<skill id="7057" toLevel="1" name="Master's Blessing - Greater Might">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. P. Atk. +10% for 1 hr. -->
+		<icon>icon.skill1388</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PA_PD_UP</abnormalType>
@@ -1008,12 +977,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1388</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>74</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -1027,7 +994,8 @@
 		</effects>
 	</skill>
 	<skill id="7058" toLevel="1" name="Master's Blessing - Greater Shield">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. P. Def. +15% for 1 hr. -->
+		<icon>icon.skill1389</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PA_PD_UP</abnormalType>
@@ -1035,12 +1003,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1389</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>74</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -1054,7 +1020,8 @@
 		</effects>
 	</skill>
 	<skill id="7059" toLevel="1" name="Master's Blessing - Wild Magic">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hr., occurrence rate of damage that is caused by magic damage +2. -->
+		<icon>icon.skill1303</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAGIC_CRITICAL_UP</abnormalType>
@@ -1062,12 +1029,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1303</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>70</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -1081,7 +1046,8 @@
 		</effects>
 	</skill>
 	<skill id="7060" toLevel="1" name="Master's Blessing - Clarity">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hr., physical skill MP consumption -20%, magic skill's MP consumption -10%, and song/ dance skill's MP consumption -20%. -->
+		<icon>icon.skill1397</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CHEAP_MAGIC</abnormalType>
@@ -1089,12 +1055,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1397</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>74</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -1119,8 +1083,8 @@
 		</effects>
 	</skill>
 	<skill id="7061" toLevel="1" name="Master's Blessing - Prophecy of Water">
-		<!-- GM Skill -->
-		<!-- Confirmed CT2.5 -->
+		<!-- The GM is always by your side. For 1 hr., MP Recovery Bonus +20%, M. Atk. +15%, M. Def. +15%, Casting Spd. +10%, Debuff Resistance +10%. Skill MP Consumption -5%. -->
+		<icon>icon.skill1355</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -1128,13 +1092,11 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1355</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>78</magicLvl>
 		<mpConsume>1</mpConsume>
 		<mpInitialConsume>1</mpInitialConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -1199,7 +1161,8 @@
 		</effects>
 	</skill>
 	<skill id="7062" toLevel="1" name="Master's Blessing - Prophecy of Fire">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hr., Max HP +15%, HP Recovery Bonus +20%, P. Atk. +50%, P. Def. +15%, Atk. Spd. +10%, Debuff Resistance +10%. Cannot be stacked with Prophecy-type buffs. -->
+		<icon>icon.skill1356</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -1207,12 +1170,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1356</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>78</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -1274,7 +1235,8 @@
 		</effects>
 	</skill>
 	<skill id="7063" toLevel="1" name="Master's Blessing - Prophecy of Wind">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 h., Evasion +4, Accuracy +4, P. Critical Rate +15%, Critical Damage +20%, Speed +15%, Debuff Resistance +10%, damage to Raid Bosses +15%. -->
+		<icon>icon.skill1357</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -1282,12 +1244,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1357</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>78</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -1345,7 +1305,8 @@
 		</effects>
 	</skill>
 	<skill id="7064" toLevel="1" name="Master's Blessing - Chant of Victory">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hr., HP/ MP Recovery Bonus +20%, Accuracy +4, Evasion +4, P./ M. Atk. +15%, Casting/ Atk. Spd. +10%, P./ M. Critical Rate +15%, P./ M. Critical Damage +15%. -->
+		<icon>icon.skill1363</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -1353,12 +1314,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1363</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>78</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -1417,12 +1376,12 @@
 		</effects>
 	</skill>
 	<skill id="7065" toLevel="1" name="Test - Charge">
+		<!-- Charges into the enemy. -->
 		<coolTime>200</coolTime>
 		<hitTime>800</hitTime>
 		<magicLvl>75</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>600</effectRange>
 		<castRange>400</castRange>
@@ -1435,6 +1394,7 @@
 		</targetConditions>
 	</skill>
 	<skill id="7066" toLevel="1" name="Test Stun Charge">
+		<!-- Charges into enemy and Stuns. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1447,7 +1407,6 @@
 		<magicLvl>75</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>600</effectRange>
 		<isDebuff>true</isDebuff>
@@ -1467,6 +1426,7 @@
 		</effects>
 	</skill>
 	<skill id="7067" toLevel="1" name="Test Range Charge">
+		<!-- Charges into enemy and causes bleeding -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1480,7 +1440,6 @@
 		<magicLvl>75</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>600</effectRange>
 		<isDebuff>true</isDebuff>
@@ -1495,13 +1454,13 @@
 		</targetConditions>
 	</skill>
 	<skill id="7068" toLevel="1" name="Test Steal Abnormal State">
+		<!-- Steals enemy's abnormal state. -->
 		<coolTime>200</coolTime>
 		<hitTime>2000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>75</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<castRange>600</castRange>
@@ -1514,13 +1473,13 @@
 		</conditions>
 	</skill>
 	<skill id="7069" toLevel="1" name="Test Abnormal State DD">
+		<!-- Inflicts damage according to the enemy's number of abnormal states. -->
 		<coolTime>200</coolTime>
 		<hitTime>2000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>75</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<castRange>600</castRange>
@@ -1533,16 +1492,17 @@
 		</conditions>
 	</skill>
 	<skill id="7070" toLevel="1" name="Test - Soul Eating Passive">
+		<!-- Absorbs soul. -->
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="7071" toLevel="1" name="Test - Soul Transfer">
+		<!-- Transfers soul to party member. -->
 		<hitTime>900</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hpConsume>20</hpConsume>
 		<targetType>TARGET</targetType>
@@ -1554,13 +1514,13 @@
 		</targetConditions>
 	</skill>
 	<skill id="7075" toLevel="1" name="Test - Distance DD">
+		<!-- Magic damage changes by distance. -->
 		<effectPoint>-1</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>17</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<attributeType>FIRE</attributeType>
@@ -1570,6 +1530,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="7076" toLevel="1" name="Test - Delay Debuff">
+		<!-- Bleeds for 20 sec. and Stuns. -->
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1584,7 +1545,6 @@
 		<magicLvl>70</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<isDebuff>true</isDebuff>
@@ -1594,13 +1554,13 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="7077" toLevel="1" name="Test - Delay Debuff - Call">
+		<!-- Currently stunned. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<magicLvl>70</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1610,6 +1570,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="7079" toLevel="1" name="Test - Party Damage Absorb">
+		<!-- Transfers party damage to tanker. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -1617,7 +1578,6 @@
 		<hitTime>2500</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1627,6 +1587,7 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="7080" toLevel="1" name="Test - General Attack Prohibited">
+		<!-- Cannot perform general attack. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>40</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -1635,7 +1596,6 @@
 		<hitTime>2500</hitTime>
 		<magicLvl>70</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<isDebuff>true</isDebuff>
@@ -1644,6 +1604,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="7081" toLevel="1" name="Effect Test - Land Shot">
+		<!-- Shoots toward ground. -->
 		<affectLimit>5-12</affectLimit>
 		<coolTime>800</coolTime>
 		<effectPoint>-1</effectPoint>
@@ -1651,7 +1612,6 @@
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>25000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<affectRange>200</affectRange>
@@ -1661,6 +1621,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="7082" toLevel="1" name="Effect Test - Chain Lightning">
+		<!-- Chain Lightning -->
 		<affectLimit>5-12</affectLimit>
 		<effectPoint>-1</effectPoint>
 		<hitTime>5000</hitTime>
@@ -1668,7 +1629,6 @@
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>20000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<attributeType>WATER</attributeType>
@@ -1680,12 +1640,12 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="7083" toLevel="1" name="Test - Trap Skill">
+		<!-- Trap Range Skill -->
 		<affectLimit>6-12</affectLimit>
 		<effectPoint>-1</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>38</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
@@ -1695,12 +1655,12 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="7084" toLevel="1" name="Test - Trap Skill">
+		<!-- Trap Range Skill -->
 		<affectLimit>6-12</affectLimit>
 		<effectPoint>-1</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>38</magicLvl>
 		<operateType>CA1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
@@ -1717,7 +1677,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>50</attributeValue>
@@ -1730,7 +1689,6 @@
 		<effectPoint>-100</effectPoint>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1742,7 +1700,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>900</effectRange>
 		<attributeType>DARK</attributeType>
@@ -1754,8 +1711,8 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="7088" toLevel="1" name="Master's Blessing - Improve Combat">
-		<!-- Confirmed CT2.5 -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 1 hr., P. Atk. +15% and P. Def. +15%. -->
+		<icon>icon.skill1499</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_PA_PD_UP</abnormalType>
@@ -1763,14 +1720,12 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1499</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>70</magicLvl>
 		<mpConsume>1</mpConsume>
 		<mpInitialConsume>1</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -1793,8 +1748,8 @@
 		</effects>
 	</skill>
 	<skill id="7089" toLevel="1" name="Master's Blessing - Improve Magic">
-		<!-- Confirmed CT2.5 -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine M. Atk. increase and M. Def. increase to have more advanced magic ability increase effect. For 1 hr., M. Atk. +75% and M. Def. +30%. -->
+		<icon>icon.skill1500</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>
@@ -1802,14 +1757,12 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1500</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>74</magicLvl>
 		<mpConsume>1</mpConsume>
 		<mpInitialConsume>1</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -1832,8 +1785,8 @@
 		</effects>
 	</skill>
 	<skill id="7090" toLevel="1" name="Master's Blessing - Improve Condition">
-		<!-- Confirmed CT2.5 -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine maximum HP increase and maximum MP increase to have more advanced mental and physical power. For 1 hr., Max HP +35% and Max MP +35%. -->
+		<icon>icon.skill1501</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_HP_MP_UP</abnormalType>
@@ -1841,14 +1794,12 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1501</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>72</magicLvl>
 		<mpConsume>1</mpConsume>
 		<mpInitialConsume>1</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -1871,8 +1822,8 @@
 		</effects>
 	</skill>
 	<skill id="7091" toLevel="1" name="Master's Blessing - Improve Critical Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. For 1 hr., Critical Rate +30% and Critical Damage +35%. -->
+		<icon>icon.skill1502</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_CRT_RATE_DMG_UP</abnormalType>
@@ -1880,14 +1831,12 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1502</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>74</magicLvl>
 		<mpConsume>1</mpConsume>
 		<mpInitialConsume>1</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -1910,8 +1859,8 @@
 		</effects>
 	</skill>
 	<skill id="7092" toLevel="1" name="Master's Blessing - Improve Shield Defense">
-		<!-- Confirmed CT2.5 -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine Shield Defense rate increase and Shield Defense increase to have more advanced shield ability increase effect. For 1 hr., shield defense rate +30% and Shield Defense +50%. -->
+		<icon>icon.skill1503</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_SHIELD_RATE_DEFENCE_UP</abnormalType>
@@ -1919,14 +1868,12 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1503</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>70</magicLvl>
 		<mpConsume>1</mpConsume>
 		<mpInitialConsume>1</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -1949,8 +1896,8 @@
 		</effects>
 	</skill>
 	<skill id="7093" toLevel="1" name="Master's Blessing - Improve Movement">
-		<!-- Confirmed CT2.5 -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine Spd. increase and Evasion increase to have more advanced movement increase effect. For 1 hr., Speed +33 and Evasion +4. -->
+		<icon>icon.skill1504</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_SPEED_AVOID_UP</abnormalType>
@@ -1958,14 +1905,12 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1504</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>72</magicLvl>
 		<mpConsume>1</mpConsume>
 		<mpInitialConsume>1</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -1988,7 +1933,8 @@
 		</effects>
 	</skill>
 	<skill id="7094" toLevel="1" name="Master's Blessing - Sharpen Edge">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Sharpens a bladed weapon to get P. Atk. +5% and Critical Rate +20% for 1 hr. -->
+		<icon>icon.skill0825</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_ATTACK_BUFF</abnormalType>
@@ -1997,12 +1943,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill0825</icon>
 		<magicLvl>49</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isMagic>2</isMagic>
@@ -2015,10 +1959,10 @@
 				<weaponType>
 					<item>SWORD</item>
 					<item>DUAL</item>
-
-
+					<item>ANCIENTSWORD</item>
+					<item>RAPIER</item>
 					<item>DAGGER</item>
-
+					<item>DUALDAGGER</item>
 					<item>POLE</item>
 					<item>DUALFIST</item>
 				</weaponType>
@@ -2029,10 +1973,10 @@
 				<weaponType>
 					<item>SWORD</item>
 					<item>DUAL</item>
-
-
+					<item>ANCIENTSWORD</item>
+					<item>RAPIER</item>
 					<item>DAGGER</item>
-
+					<item>DUALDAGGER</item>
 					<item>POLE</item>
 					<item>DUALFIST</item>
 				</weaponType>
@@ -2040,7 +1984,8 @@
 		</effects>
 	</skill>
 	<skill id="7095" toLevel="1" name="Master's Blessing - Encase Armor">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Thickens the surface of heavy armor to get P. Def. +10% for 1 hr. -->
+		<icon>icon.skill0828</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_DEFENCE_BUFF</abnormalType>
@@ -2049,12 +1994,10 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill0828</icon>
 		<magicLvl>46</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isMagic>2</isMagic>
@@ -2071,7 +2014,8 @@
 		</effects>
 	</skill>
 	<skill id="7096" toLevel="1" name="Master's Blessing - Noblesse Blessing">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. The target's buff/ de-buff doesn't disappear at death but is maintained. But the Noblesse Blessing and the Amulet of Luck disappear. -->
+		<icon>icon.skill1323</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PRESERVE_ABNORMAL</abnormalType>
@@ -2080,13 +2024,11 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1323</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -2099,7 +2041,6 @@
 		<icon>icon.skill01702</icon>
 		<operateType>A1</operateType>
 		<effectPoint>709</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -2115,14 +2056,12 @@
 		</effects>
 	</skill>
 	<skill id="7098" toLevel="1" name="Clan-exclusive Pet Heal">
-		<!-- Glory Days confirmed -->
 		<!-- Recovers all of your HP. Power 3000 -->
 		<icon>icon.skill1401</icon>
 		<operateType>A1</operateType>
 		<mpConsume>5</mpConsume>
 		<hitTime>1000</hitTime>
 		<effectPoint>-700</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2136,8 +2075,7 @@
 		</effects>
 	</skill>
 	<skill id="7099" toLevel="1" name="Clan-exclusive Pet Fear">
-		<!-- Glory Days confirmed -->
-		<!-- Inflicts fear on the target for 3 seconds. -->
+		<!-- Inflicts fear on the target for 3 sec. -->
 		<icon>icon.skill4108</icon>
 		<operateType>A2</operateType>
 		<mpConsume>5</mpConsume>
@@ -2147,7 +2085,6 @@
 		<effectPoint>-700</effectPoint>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>

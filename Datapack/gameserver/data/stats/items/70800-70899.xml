@@ -62,22 +62,38 @@
 		<!-- Bracelet used to summon Sin Eater Agathion and to activate Hour of Penitence. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="100" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="useSkillDisTime" val="10" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="100" />
+		<skills>
+			<skill id="55701" level="1" /> <!-- Release Agathion's Seal - Sin Eater -->
+			<skill id="3267" level="1" /> <!-- Seal Agathion -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="70807" name="Crumbs of Penitence" type="EtcItem">
 		<!-- Item that drops from monster if it is killed during the Hour of Penitence. Bring it to Dark Judge and lower your PC count. -->
 		<set name="icon" val="icon.etc_powder_white_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="70808" name="Giant's Treasure Chest" type="EtcItem">

@@ -54,7 +54,7 @@ public final class Summon extends AbstractEffect
 		_expMultiplier = params.getFloat("expMultiplier", 1);
 		_consumeItem = new ItemHolder(params.getInt("consumeItemId", 0), params.getInt("consumeItemCount", 1));
 		_consumeItemInterval = params.getInt("consumeItemInterval", 0);
-		_lifeTime = params.getInt("lifeTime", 3600) > 0 ? params.getInt("lifeTime", 3600) * 1000 : -1;
+		_lifeTime = params.getInt("lifeTime", 0) > 0 ? params.getInt("lifeTime") * 1000 : -1; // Classic change.
 	}
 	
 	@Override
@@ -90,7 +90,7 @@ public final class Summon extends AbstractEffect
 		summon.setTitle(effected.getName());
 		summon.setReferenceSkill(skill.getId());
 		summon.setExpMultiplier(_expMultiplier);
-		summon.setLifeTime(_lifeTime);
+		summon.setLifeTime(_lifeTime <= 0 ? Integer.MAX_VALUE : _lifeTime); // Classic hack. Resummon upon entering game.
 		summon.setItemConsume(_consumeItem);
 		summon.setItemConsumeInterval(consumeItemInterval);
 		

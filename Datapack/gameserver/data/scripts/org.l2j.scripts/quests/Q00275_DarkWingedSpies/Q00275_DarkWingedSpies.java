@@ -16,6 +16,7 @@
  */
 package quests.Q00275_DarkWingedSpies;
 
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.L2Attackable;
@@ -73,7 +74,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 	{
 		final QuestState st = getQuestState(killer, false);
 		
-		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, killer, true))
+		if ((st != null) && st.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			final long count = getQuestItemsCount(killer, DARKWING_BAT_FANG);
 			

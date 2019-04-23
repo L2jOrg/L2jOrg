@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="13136" toLevel="1" name="Hero's Cloak">
-		<!-- Increases Max HP by 10% and Max CP by 15%, and increases STR/INT/CON/MEN/DEX/WIT + 2, and Fire/Water/Wind/Earth/Holy/Dark Resistance + 10 when equipped. -->
+		<!-- Max HP/ MP/ CP +10%, P. Def. +5%, M. Def. +10%, all weapon resistance +5, M./ P. Critical Rate +20, received PvP damage -10%. Reflects 4% of the damage received back to the enemy. -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -35,6 +35,7 @@
 				<POLE>5</POLE>
 				<DAGGER>5</DAGGER>
 				<DUALFIST>5</DUALFIST>
+				<DUALDAGGER>5</DUALDAGGER>
 			</effect>
 			<effect name="MagicCriticalRate">
 				<amount>20</amount>

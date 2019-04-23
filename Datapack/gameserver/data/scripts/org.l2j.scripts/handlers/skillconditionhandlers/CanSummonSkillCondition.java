@@ -19,7 +19,6 @@ package handlers.skillconditionhandlers;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
@@ -38,21 +37,14 @@ public class CanSummonSkillCondition implements ISkillCondition
 	public boolean canUse(L2Character caster, Skill skill, L2Object target)
 	{
 		final L2PcInstance player = caster.getActingPlayer();
-		if (player == null)
+		if ((player == null) || player.isSpawnProtected() || player.isTeleportProtected())
 		{
 			return false;
 		}
 		
 		boolean canSummon = true;
-		
-		if (player.hasServitors())
-		{
-			for (L2Summon summon : player.getServitors().values())
-			{
-				summon.unSummon(player);
-			}
-		}
-		else if (player.isFlyingMounted() || player.isMounted() || player.inObserverMode() || player.isTeleporting())
+
+		if (player.isFlyingMounted() || player.isMounted() || player.inObserverMode() || player.isTeleporting())
 		{
 			canSummon = false;
 		}

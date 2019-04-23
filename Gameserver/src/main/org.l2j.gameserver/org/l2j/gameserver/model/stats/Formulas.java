@@ -1273,9 +1273,13 @@ public final class Formulas {
         // Any original values that appear higher than tested have been replaced with the tested values, because even with packet delay its obvious they are wrong.
         // All other original values are compared with the test results and differences are considered to be too insignificant and mostly caused due to packet delay.
         switch (attackType) {
-            case BOW: {
+            case BOW:
+            case CROSSBOW:
+            case TWOHANDCROSSBOW: {
                 return (int) (totalAttackTime * 0.95);
             }
+            case DUALBLUNT:
+            case DUALDAGGER:
             case DUAL:
             case DUALFIST: {
                 if (secondHit) {

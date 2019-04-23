@@ -16,8 +16,8 @@
  */
 package handlers.effecthandlers;
 
-import java.util.Collection;
-
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.StatsSet;
@@ -28,8 +28,9 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.SystemMessageId;
+
+import java.util.Collection;
 
 /**
  * @author Sdw
@@ -43,7 +44,22 @@ public final class Plunder extends AbstractEffect
 	@Override
 	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
-		return Formulas.calcMagicSuccess(effector, effected, skill);
+		final int lvlDifference = (effected.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : effector.getLevel()));
+		final double lvlModifier = Math.pow(1.3, lvlDifference);
+		float targetModifier = 1;
+		if (effected.isAttackable() && !effected.isRaid() && !effected.isRaidMinion() && (effected.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (effector.getActingPlayer() != null) && ((effected.getLevel() - effector.getActingPlayer().getLevel()) >= 3))
+		{
+			final int lvlDiff = effected.getLevel() - effector.getActingPlayer().getLevel() - 2;
+			if (lvlDiff >= Config.NPC_SKILL_CHANCE_PENALTY.size())
+			{
+				targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(Config.NPC_SKILL_CHANCE_PENALTY.size() - 1);
+			}
+			else
+			{
+				targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(lvlDiff);
+			}
+		}
+		return Rnd.get(100) < (100 - Math.round((float) (lvlModifier * targetModifier)));
 	}
 	
 	@Override
@@ -73,24 +89,28 @@ public final class Plunder extends AbstractEffect
 			effector.sendPacket(SystemMessageId.PLUNDER_SKILL_HAS_BEEN_ALREADY_USED_ON_THIS_TARGET);
 			return;
 		}
-		
-		monster.setSpoilerObjectId(effector.getObjectId());
-		if (monster.isSweepActive())
+
+		monster.setPlundered(player);
+
+		if (!player.getInventory().checkInventorySlotsAndWeight(monster.getSpoilLootItems(), false, false))
 		{
-			final Collection<ItemHolder> items = monster.takeSweep();
-			if (items != null)
+			return;
+		}
+
+		final Collection<ItemHolder> items = monster.takeSweep();
+		if (items != null)
+		{
+			for (ItemHolder sweepedItem : items)
 			{
-				for (ItemHolder sweepedItem : items)
+				final ItemHolder rewardedItem = new ItemHolder(sweepedItem.getId(), sweepedItem.getCount());
+				final L2Party party = effector.getParty();
+				if (party != null)
 				{
-					final L2Party party = effector.getParty();
-					if (party != null)
-					{
-						party.distributeItem(player, sweepedItem, true, monster);
-					}
-					else
-					{
-						player.addItem("Sweeper", sweepedItem, effected, true);
-					}
+					party.distributeItem(player, rewardedItem, true, monster);
+				}
+				else
+				{
+					player.addItem("Plunder", rewardedItem, effected, true);
 				}
 			}
 		}

@@ -16,10 +16,6 @@
  */
 package handlers.targethandlers.affectscope;
 
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
-
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.AffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectObjectHandler;
@@ -31,6 +27,10 @@ import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
 import org.l2j.gameserver.model.skills.targets.TargetType;
+
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 /**
  * Range affect scope implementation. Gathers objects in area of target origin (including origin itself).
@@ -62,7 +62,7 @@ public class Range implements IAffectScopeHandler
 			{
 				return false;
 			}
-			if ((affectObject != null) && !affectObject.checkAffectedObject(activeChar, c))
+			if ((c != target) && (affectObject != null) && !affectObject.checkAffectedObject(activeChar, c))
 			{
 				return false;
 			}

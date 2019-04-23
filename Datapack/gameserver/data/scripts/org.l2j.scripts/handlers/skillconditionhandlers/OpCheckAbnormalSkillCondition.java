@@ -53,7 +53,7 @@ public class OpCheckAbnormalSkillCondition implements ISkillCondition
 			}
 			case TARGET:
 			{
-				if (target.isCharacter())
+				if ((target != null) && target.isCharacter())
 				{
 					return ((L2Character) target).getEffectList().hasAbnormalType(_type, info -> (info.getSkill().getAbnormalLvl() >= _level)) == _hasAbnormal;
 				}

@@ -1,796 +1,1403 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="21400" level="80" type="L2Npc" name="Hexa Beetle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+	<npc id="21400" level="84" type="L2Monster" name="Hexa Beetle">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="993837" sp="14907" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="45" />
 				<run ground="145" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="54.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="5313" min="1" max="1" chance="0.03" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.03" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5318" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Boots -->
+				<item id="57" min="10234" max="23880" chance="70" /> <!-- Adena -->
+				<item id="1886" min="1" max="1" chance="26.11" /> <!-- Silver Mold -->
+				<item id="5503" min="1" max="1" chance="4.421" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="5514" min="1" max="1" chance="4.388" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5515" min="1" max="1" chance="4.379" /> <!-- Sealed Majestic Gauntlet Design -->
+				<item id="5502" min="1" max="1" chance="4.369" /> <!-- Sealed Boots of Nightmare Lining -->
+			</drop>
+			<spoil>
+				<item id="5503" min="1" max="1" chance="21.13" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="5514" min="1" max="1" chance="20.98" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5502" min="1" max="1" chance="20.38" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="5515" min="1" max="1" chance="19.46" /> <!-- Sealed Majestic Gauntlet Design -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21401" level="80" type="L2Npc" name="Hexa Beetle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+	<npc id="21401" level="84" type="L2Monster" name="Hexa Beetle">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="1943222" sp="29148" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="45" />
 				<run ground="145" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="54.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="21402" level="80" type="L2Npc" name="Katraxith">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+	<npc id="21402" level="84" type="L2Monster" name="Katraxith">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="993837" sp="14907" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="37" />
 				<run ground="165" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="24" />
 			<height normal="52.8" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="5313" min="1" max="1" chance="0.03" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.03" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5318" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Boots -->
+				<item id="57" min="10234" max="23880" chance="70" /> <!-- Adena -->
+				<item id="1887" min="1" max="1" chance="43.47" /> <!-- Varnish of Purity -->
+				<item id="5514" min="1" max="1" chance="4.451" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5515" min="1" max="1" chance="4.44" /> <!-- Sealed Majestic Gauntlet Design -->
+				<item id="5503" min="1" max="1" chance="4.371" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="5502" min="1" max="1" chance="4.355" /> <!-- Sealed Boots of Nightmare Lining -->
+			</drop>
+			<spoil>
+				<item id="5515" min="1" max="1" chance="21.42" /> <!-- Sealed Majestic Gauntlet Design -->
+				<item id="5514" min="1" max="1" chance="20.94" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5502" min="1" max="1" chance="20.31" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="5503" min="1" max="1" chance="20.13" /> <!-- Sealed Majestic Boot Lining -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21403" level="80" type="L2Npc" name="Katraxith">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+	<npc id="21403" level="84" type="L2Monster" name="Katraxith">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="1980478" sp="29707" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="37" />
 				<run ground="165" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="24" />
 			<height normal="52.8" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="21404" level="80" type="L2Npc" name="Tera Beetle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+	<npc id="21404" level="84" type="L2Monster" name="Tera Beetle">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="993837" sp="14907" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="45" />
 				<run ground="185" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="54.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="5313" min="1" max="1" chance="0.03" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.03" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5318" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Boots -->
+				<item id="57" min="10234" max="23880" chance="70" /> <!-- Adena -->
+				<item id="1888" min="1" max="3" chance="28.46" /> <!-- Synthetic Cokes -->
+				<item id="5515" min="1" max="1" chance="4.479" /> <!-- Sealed Majestic Gauntlet Design -->
+				<item id="5514" min="1" max="1" chance="4.425" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5503" min="1" max="1" chance="4.386" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="5502" min="1" max="1" chance="4.363" /> <!-- Sealed Boots of Nightmare Lining -->
+			</drop>
+			<spoil>
+				<item id="5514" min="1" max="1" chance="21.22" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5503" min="1" max="1" chance="21.16" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="5515" min="1" max="1" chance="20.94" /> <!-- Sealed Majestic Gauntlet Design -->
+				<item id="5502" min="1" max="1" chance="20.74" /> <!-- Sealed Boots of Nightmare Lining -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21405" level="80" type="L2Npc" name="Tera Beetle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+	<npc id="21405" level="84" type="L2Monster" name="Tera Beetle">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="1980478" sp="29707" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="45" />
 				<run ground="185" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="54.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="21406" level="80" type="L2Npc" name="Imperial Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21406" level="84" type="L2Monster" name="Imperial Knight">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<equipment rhand="150" lhand="103" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+		<acquire exp="691558" sp="10373" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="40" />
 				<run ground="145" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="5311" min="1" max="1" chance="0.0075" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="57" min="7193" max="16783" chance="70" /> <!-- Adena -->
+				<item id="1889" min="1" max="3" chance="41.36" /> <!-- Synthetic Braid -->
+				<item id="5523" min="1" max="1" chance="1.299" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="5522" min="1" max="1" chance="1.218" /> <!-- Sealed Armor of Nightmare Pattern -->
+			</drop>
+			<spoil>
+				<item id="5522" min="1" max="1" chance="5.82" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="1" max="1" chance="5.819" /> <!-- Sealed Majestic Plate Armor Pattern -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21407" level="80" type="L2Npc" name="Imperial Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21407" level="84" type="L2Monster" name="Imperial Knight">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<equipment rhand="150" lhand="103" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+		<acquire exp="1375920" sp="20638" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="40" />
 				<run ground="145" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="21408" level="80" type="L2Npc" name="Imperial Royal Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+	<npc id="21408" level="84" type="L2Monster" name="Imperial Royal Guard">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="98" />
+		<acquire exp="708492" sp="10627" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="50" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="28" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="5311" min="1" max="1" chance="0.0075" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="57" min="7372" max="17200" chance="70" /> <!-- Adena -->
+				<item id="1890" min="1" max="1" chance="20.11" /> <!-- Mithril Alloy -->
+				<item id="5523" min="1" max="1" chance="1.338" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="5522" min="1" max="1" chance="1.289" /> <!-- Sealed Armor of Nightmare Pattern -->
+			</drop>
+			<spoil>
+				<item id="5523" min="1" max="1" chance="6" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="5522" min="1" max="1" chance="5.951" /> <!-- Sealed Armor of Nightmare Pattern -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21409" level="80" type="L2Npc" name="Imperial Royal Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+	<npc id="21409" level="84" type="L2Monster" name="Imperial Royal Guard">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="98" />
+		<acquire exp="1387139" sp="20807" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="50" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="28" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="21410" level="80" type="L2Npc" name="Guardian Scarab">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+	<npc id="21410" level="84" type="L2Monster" name="Guardian Scarab">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="1010772" sp="15161" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="45" />
 				<run ground="195" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="17" />
 			<height normal="26.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="5326" min="1" max="1" chance="0.03" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Robe -->
+				<item id="57" min="10413" max="24297" chance="70" /> <!-- Adena -->
+				<item id="1891" min="1" max="1" chance="3.817" /> <!-- Artisan's Frame -->
+				<item id="5487" min="1" max="1" chance="2.419" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5488" min="1" max="1" chance="2.38" /> <!-- Sealed Majestic Robe Fabric -->
+			</drop>
+			<spoil>
+				<item id="5487" min="1" max="1" chance="11.29" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5488" min="1" max="1" chance="10.97" /> <!-- Sealed Majestic Robe Fabric -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21411" level="80" type="L2Npc" name="Guardian Scarab">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+	<npc id="21411" level="84" type="L2Monster" name="Guardian Scarab">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="1991697" sp="29875" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="45" />
 				<run ground="195" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="17" />
 			<height normal="26.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="21412" level="80" type="L2Npc" name="Ustralith">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+	<npc id="21412" level="84" type="L2Monster" name="Ustralith">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="993837" sp="14907" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="37" />
 				<run ground="130" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="28" />
 			<height normal="66" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="5326" min="1" max="1" chance="0.03" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Robe -->
+				<item id="57" min="10234" max="23880" chance="70" /> <!-- Adena -->
+				<item id="1892" min="1" max="1" chance="5.632" /> <!-- Blacksmith's Frame -->
+				<item id="5487" min="1" max="1" chance="2.378" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5488" min="1" max="1" chance="2.31" /> <!-- Sealed Majestic Robe Fabric -->
+			</drop>
+			<spoil>
+				<item id="5487" min="1" max="1" chance="11.45" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5488" min="1" max="1" chance="10.51" /> <!-- Sealed Majestic Robe Fabric -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21413" level="80" type="L2Npc" name="Ustralith">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+	<npc id="21413" level="84" type="L2Monster" name="Ustralith">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="1980478" sp="29707" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="37" />
 				<run ground="130" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="28" />
 			<height normal="66" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="21414" level="80" type="L2Npc" name="Imperial Assassin">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21414" level="84" type="L2Monster" name="Imperial Assassin">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<equipment rhand="946" lhand="945" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+		<acquire exp="758237" sp="11373" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="80" />
 				<run ground="175" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="28.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="5320" min="1" max="1" chance="0.0075" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="57" min="7897" max="18427" chance="70" /> <!-- Adena -->
+				<item id="1893" min="1" max="1" chance="11.09" /> <!-- Oriharukon -->
+				<item id="5480" min="1" max="1" chance="1.864" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="5481" min="1" max="1" chance="1.849" /> <!-- Sealed Majestic Leather Armor Fabric -->
+			</drop>
+			<spoil>
+				<item id="5480" min="1" max="1" chance="8.413" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="5481" min="1" max="1" chance="8.335" /> <!-- Sealed Majestic Leather Armor Fabric -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21415" level="80" type="L2Npc" name="Imperial Assassin">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21415" level="84" type="L2Monster" name="Imperial Assassin">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<equipment rhand="946" lhand="945" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+		<acquire exp="1397934" sp="20969" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="80" />
 				<run ground="175" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="28.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="21416" level="80" type="L2Npc" name="Imperial Commander">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21416" level="84" type="L2Monster" name="Imperial Commander">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<equipment rhand="134" lhand="6721" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+		<acquire exp="789989" sp="11849" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="39" />
 				<run ground="140" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="7" />
 			<height normal="30" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="5320" min="1" max="1" chance="0.0075" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="57" min="8233" max="19209" chance="70" /> <!-- Adena -->
+				<item id="1894" min="1" max="3" chance="25.91" /> <!-- Crafted Leather -->
+				<item id="5481" min="1" max="1" chance="1.938" /> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="5480" min="1" max="1" chance="1.832" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+			</drop>
+			<spoil>
+				<item id="5481" min="1" max="1" chance="8.717" /> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="5480" min="1" max="1" chance="8.691" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21417" level="80" type="L2Npc" name="Imperial Commander">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21417" level="84" type="L2Monster" name="Imperial Commander">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<equipment rhand="134" lhand="6721" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+		<acquire exp="1442599" sp="21638" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="39" />
 				<run ground="140" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="7" />
 			<height normal="30" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="21418" level="80" type="L2Npc" name="Imperial Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21418" level="84" type="L2Monster" name="Imperial Guard">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<equipment rhand="142" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+		<acquire exp="705317" sp="10579" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="27" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="29" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="5312" min="1" max="1" chance="0.03" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5317" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Circlet -->
+				<item id="57" min="7338" max="17122" chance="70" /> <!-- Adena -->
+				<item id="1895" min="12" max="36" chance="14.74" /> <!-- Metallic Fiber -->
+				<item id="5528" min="1" max="1" chance="4.499" /> <!-- Sealed Majestic Circlet Design -->
+				<item id="5527" min="1" max="1" chance="4.433" /> <!-- Sealed Helm of Nightmare Design -->
+			</drop>
+			<spoil>
+				<item id="5528" min="1" max="1" chance="21.41" /> <!-- Sealed Majestic Circlet Design -->
+				<item id="5527" min="1" max="1" chance="20.82" /> <!-- Sealed Helm of Nightmare Design -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21419" level="80" type="L2Npc" name="Imperial Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21419" level="84" type="L2Monster" name="Imperial Guard">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<equipment rhand="142" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15911" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+		<acquire exp="1388620" sp="20829" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="27" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="29" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="21420" level="80" type="L2Npc" name="Ashuras">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+	<npc id="21420" level="85" type="L2Monster" name="Ashuras">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="1330194" sp="19952" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="41" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="8678" min="1" max="1" chance="0.0075" /> <!-- Sirra's Blade -->
+				<item id="57" min="13307" max="31050" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="7.803" /> <!-- Gemstone (A-grade) -->
+				<item id="8712" min="1" max="1" chance="4.953" /> <!-- Sirra's Blade Edge -->
+			</drop>
+			<spoil>
+				<item id="8712" min="1" max="1" chance="11.86" /> <!-- Sirra's Blade Edge -->
+				<item id="8690" min="1" max="1" chance="1.409" /> <!-- Recipe: Sirra's Blade (60%) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21421" level="80" type="L2Npc" name="Ashuras">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+	<npc id="21421" level="85" type="L2Monster" name="Ashuras">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="2640882" sp="39613" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="41" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
+		</skillList>
 	</npc>
-	<npc id="21422" level="80" type="L2Npc" name="Imperial Dancer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+	<npc id="21422" level="85" type="L2Monster" name="Imperial Dancer">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="3939" />
+		<acquire exp="767945" sp="11519" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="23" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
+			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="8679" min="1" max="1" chance="0.003" /> <!-- Sword of Ipos -->
+				<item id="57" min="7810" max="18223" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="4.547" /> <!-- Gemstone (A-grade) -->
+				<item id="8713" min="1" max="1" chance="1.941" /> <!-- Sword of Ipos Blade -->
+			</drop>
+			<spoil>
+				<item id="8713" min="1" max="1" chance="4.557" /> <!-- Sword of Ipos Blade -->
+				<item id="8692" min="1" max="1" chance="0.75" /> <!-- Recipe: Sword of Ipos (60%) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21423" level="80" type="L2Npc" name="Imperial Dancer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+	<npc id="21423" level="85" type="L2Monster" name="Imperial Dancer">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="3939" />
+		<acquire exp="1430983" sp="21464" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="23" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
+			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
+		</skillList>
 	</npc>
-	<npc id="21424" level="80" type="L2Npc" name="Ashikenas">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+	<npc id="21424" level="85" type="L2Monster" name="Ashikenas">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="1059474" sp="15892" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="41" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="8680" min="1" max="1" chance="0.0075" /> <!-- Barakiel's Axe -->
+				<item id="57" min="10666" max="24887" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="6.258" /> <!-- Gemstone (A-grade) -->
+				<item id="8714" min="1" max="1" chance="2.66" /> <!-- Barakiel's Axe Piece -->
+			</drop>
+			<spoil>
+				<item id="8714" min="1" max="1" chance="6.066" /> <!-- Barakiel's Axe Piece -->
+				<item id="8694" min="1" max="1" chance="1.106" /> <!-- Recipe: Barakiel's Axe (60%) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21425" level="80" type="L2Npc" name="Ashikenas">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+	<npc id="21425" level="85" type="L2Monster" name="Ashikenas">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="2076464" sp="31146" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="41" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
+		</skillList>
 	</npc>
-	<npc id="21426" level="80" type="L2Npc" name="Abraxian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+	<npc id="21426" level="85" type="L2Monster" name="Abraxian">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="1059474" sp="15892" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="31" />
 				<run ground="130" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="21" />
 			<height normal="50" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="8681" min="1" max="1" chance="0.0075" /> <!-- Behemoth' Tuning Fork -->
+				<item id="57" min="10666" max="24887" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="6.159" /> <!-- Gemstone (A-grade) -->
+				<item id="8715" min="1" max="1" chance="2.641" /> <!-- Behemoth' Tuning Fork Piece -->
+			</drop>
+			<spoil>
+				<item id="8715" min="1" max="1" chance="6.145" /> <!-- Behemoth' Tuning Fork Piece -->
+				<item id="8696" min="1" max="1" chance="1.125" /> <!-- Recipe: Behemoth' Tuning Fork (60%) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21427" level="80" type="L2Npc" name="Abraxian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+	<npc id="21427" level="85" type="L2Monster" name="Abraxian">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="2076464" sp="31146" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="31" />
 				<run ground="130" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="21" />
 			<height normal="50" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
+		</skillList>
 	</npc>
-	<npc id="21428" level="80" type="L2Npc" name="Hasturan">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+	<npc id="21428" level="85" type="L2Monster" name="Hasturan">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="1357938" sp="20369" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="31" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="21" />
 			<height normal="50" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
+			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="8683" min="1" max="1" chance="0.0075" /> <!-- Tiphon's Spear -->
+				<item id="57" min="13593" max="31718" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="7.983" /> <!-- Gemstone (A-grade) -->
+				<item id="8717" min="1" max="1" chance="3.307" /> <!-- Tiphon's Spear Edge -->
+			</drop>
+			<spoil>
+				<item id="8717" min="1" max="1" chance="7.859" /> <!-- Tiphon's Spear Edge -->
+				<item id="8700" min="1" max="1" chance="1.418" /> <!-- Recipe: Tiphon's Spear (60%) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21429" level="80" type="L2Npc" name="Hasturan">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+	<npc id="21429" level="85" type="L2Monster" name="Hasturan">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="2673394" sp="40100" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="31" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="21" />
 			<height normal="50" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
+			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
+		</skillList>
 	</npc>
-	<npc id="21430" level="80" type="L2Npc" name="Ahrimanes">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21430" level="85" type="L2Monster" name="Ahrimanes">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<equipment rhand="6722" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+		<acquire exp="1452658" sp="21789" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="35" />
 				<run ground="210" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="57.75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="8685" min="1" max="1" chance="0.0075" /> <!-- Sobekk's Hurricane -->
+				<item id="57" min="14571" max="33999" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="8.441" /> <!-- Gemstone (A-grade) -->
+				<item id="8719" min="1" max="1" chance="3.585" /> <!-- Sobekk's Hurricane Edge -->
+			</drop>
+			<spoil>
+				<item id="8719" min="1" max="1" chance="8.447" /> <!-- Sobekk's Hurricane Edge -->
+				<item id="8704" min="1" max="1" chance="1.456" /> <!-- Recipe: Sobekk's Hurricane (60%) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21431" level="80" type="L2Npc" name="Ahrimanes">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21431" level="85" type="L2Monster" name="Ahrimanes">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<equipment rhand="6722" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+		<acquire exp="2697670" sp="40465" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="35" />
 				<run ground="210" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="57.75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
+		</skillList>
 	</npc>
-	<npc id="21432" level="80" type="L2Npc" name="Chakram Beetle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+	<npc id="21432" level="85" type="L2Monster" name="Chakram Beetle">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="2878656" sp="43179" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="45" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="19" />
 			<height normal="54.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="8686" min="1" max="1" chance="0.0075" /> <!-- Themis' Tongue -->
+				<item id="57" min="15940" max="37192" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="9.281" /> <!-- Gemstone (A-grade) -->
+				<item id="8720" min="1" max="1" chance="2.596" /> <!-- Themis' Tongue Piece -->
+				<item id="90045" min="1" max="1" chance="2.187" /> <!-- Magical Tablet -->
+			</drop>
+			<spoil>
+				<item id="8720" min="1" max="1" chance="6.155" /> <!-- Themis' Tongue Piece -->
+				<item id="90045" min="1" max="1" chance="5.046" /> <!-- Magical Tablet -->
+				<item id="8706" min="1" max="1" chance="1.059" /> <!-- Recipe: Themis' Tongue (60%) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21433" level="80" type="L2Npc" name="Jamadhr Beetle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+	<npc id="21433" level="85" type="L2Monster" name="Jamadhr Beetle">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="2669276" sp="40039" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="45" />
 				<run ground="175" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="43.6" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="8687" min="1" max="1" chance="0.0075" /> <!-- Cabrio's Hand -->
+				<item id="57" min="13779" max="32151" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="8.013" /> <!-- Gemstone (A-grade) -->
+				<item id="8721" min="1" max="1" chance="3.397" /> <!-- Cabrio's Hand Head -->
+			</drop>
+			<spoil>
+				<item id="8721" min="1" max="1" chance="5.298" /> <!-- Cabrio's Hand Head -->
+				<item id="90045" min="1" max="1" chance="4.342" /> <!-- Magical Tablet -->
+				<item id="8708" min="1" max="1" chance="0.75" /> <!-- Recipe: Cabrio's Hand (60%) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21434" level="80" type="L2Npc" name="Blood Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+	<npc id="21434" level="85" type="L2Monster" name="Blood Priest">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="3792041" sp="56880" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="21574.6007875" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="31" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="21" />
 			<height normal="50" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="8684" min="1" max="1" chance="0.0075" /> <!-- Shyeed's Bow -->
+				<item id="57" min="22132" max="51642" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="15.59" /> <!-- Gemstone (A-grade) -->
+				<item id="8718" min="1" max="1" chance="3.688" /> <!-- Shyeed's Bow Shaft -->
+			</drop>
+			<spoil>
+				<item id="8718" min="1" max="1" chance="8.532" /> <!-- Shyeed's Bow Shaft -->
+				<item id="8702" min="1" max="1" chance="1.529" /> <!-- Recipe: Shyeed's Bow (60%) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21435" level="80" type="L2Npc" name="Sacrifice Guide">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21435" level="85" type="L2Monster" name="Sacrifice Guide">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<equipment rhand="134" lhand="6721" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+		<acquire exp="1701921" sp="25528" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="7" />
 			<height normal="30" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="8682" min="1" max="1" chance="0.003" /> <!-- Naga Storm -->
+				<item id="57" min="10375" max="24209" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="7.107" /> <!-- Gemstone (A-grade) -->
+				<item id="8716" min="1" max="1" chance="1.747" /> <!-- Naga Storm Piece -->
+			</drop>
+			<spoil>
+				<item id="8716" min="1" max="1" chance="3.984" /> <!-- Naga Storm Piece -->
+				<item id="8698" min="1" max="1" chance="0.75" /> <!-- Recipe: Naga Storm (60%) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21436" level="80" type="L2Npc" name="Sacrifice Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21436" level="85" type="L2Monster" name="Sacrifice Leader">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<equipment rhand="134" lhand="6721" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+		<acquire exp="1701921" sp="25528" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="7" />
 			<height normal="30" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="8688" min="1" max="1" chance="0.003" /> <!-- Daimon Crystal -->
+				<item id="57" min="10375" max="24209" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="7.12" /> <!-- Gemstone (A-grade) -->
+				<item id="8722" min="1" max="1" chance="1.652" /> <!-- Daimon Crystal Fragment -->
+			</drop>
+			<spoil>
+				<item id="8722" min="1" max="1" chance="4.044" /> <!-- Daimon Crystal Fragment -->
+				<item id="8710" min="1" max="1" chance="0.75" /> <!-- Recipe: Daimon Crystal (60%) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21437" level="80" type="L2Npc" name="Sacrifice Insect">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16069" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+	<npc id="21437" level="85" type="L2Monster" name="Sacrifice Insect">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="2056090" sp="30841" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="22" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="21438" level="80" type="L2Npc" name="Ghost of Gatekeeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21438" level="83" type="L2Monster" name="Ghost of Gatekeeper">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<equipment rhand="150" lhand="103" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15744" hpRegen="10.5" mp="2666" mpRegen="3.6" />
+		<acquire exp="702678" sp="10540" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="16911.39829" hpRegen="8.5" mp="2907.225" mpRegen="3" />
+			<attack physical="1099.423617" magical="750.7638096" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
 			<speed>
 				<walk ground="40" />
 				<run ground="165" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="21439" level="80" type="L2Npc" name="Ghost of Gatekeeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21439" level="83" type="L2Monster" name="Ghost of Gatekeeper">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<equipment rhand="150" lhand="103" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15744" hpRegen="10.5" mp="2666" mpRegen="3.6" />
+		<acquire exp="702678" sp="10540" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="16911.39829" hpRegen="8.5" mp="2907.225" mpRegen="3" />
+			<attack physical="1099.423617" magical="750.7638096" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
 			<speed>
 				<walk ground="40" />
 				<run ground="165" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="21440" level="80" type="L2Npc" name="Ghost of Vassal">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15744" hpRegen="10.5" mp="2666" mpRegen="3.6" />
+	<npc id="21440" level="83" type="L2Monster" name="Ghost of Vassal">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="702678" sp="10540" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="16911.39829" hpRegen="8.5" mp="2907.225" mpRegen="3" />
+			<attack physical="1099.423617" magical="750.7638096" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
 			<speed>
 				<walk ground="15" />
 				<run ground="15" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="21" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
 	</npc>
 </list>

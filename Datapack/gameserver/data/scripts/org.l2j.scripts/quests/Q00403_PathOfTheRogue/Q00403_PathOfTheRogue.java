@@ -16,9 +16,7 @@
  */
 package quests.Q00403_PathOfTheRogue;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.L2Npc;
@@ -32,6 +30,9 @@ import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.NpcSay;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
 import org.l2j.gameserver.util.Util;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Path Of The Rogue (403)
@@ -215,7 +216,7 @@ public final class Q00403_PathOfTheRogue extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isStarted() && npc.isScriptValue(1) && Util.checkIfInRange(1500, npc, killer, true))
+		if ((qs != null) && qs.isStarted() && npc.isScriptValue(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			if (npc.getId() == CATS_EYE_BANDIT)
 			{

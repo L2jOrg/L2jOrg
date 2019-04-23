@@ -1,127 +1,115 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="51001" toLevel="1" name="Sayha's Storm">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 10 min., Sayha Grace points +100%, acquired XP/ SP +100%. Reuse Time: 10 min. Buff remains after death. -->
+		<icon>icon.bm_sayha_storm</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51002" toLevel="1" name="Sayha's Storm">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 10 min., Sayha Grace points +100%, acquired XP/ SP +100%. Reuse Time: 10 min. Buff remains after death. -->
+		<icon>icon.bm_sayha_storm</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51003" toLevel="1" name="Sayha Grace Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_nebit_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51004" toLevel="1" name="Sayha's Golden Treasure">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_sayha_gold_present</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51005" toLevel="1" name="Sayha's Silver Treasure">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_sayha_silver_present</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51006" toLevel="1" name="Sayha Grace Maintaining Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 10 min. activates Sayha Grace effect. Cooldown: 10 min. The effect does not disappear after death. -->
+		<icon>icon.bm_freya_potion</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51007" toLevel="1" name="Golden Treasure Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_sayha_rune</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51008" toLevel="1" name="Lucky Enchant Stone Chest - A-grade">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.scroll_of_unidentify_am_s</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51009" toLevel="1" name="Lucky Enchant Stone Chest - B-grade">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51010" toLevel="1" name="Refined Rare Accessory Pack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51011" toLevel="1" name="Rare Accessory Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51012" toLevel="1" name="Fire Dragon's Blessing Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Grants you Blessing Of Fire Dragon for 20 min.: Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51013" toLevel="1" name="Shining Scroll of Mood Melody">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 20 min. activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. Buff remains after death. Cannot be used together with Scroll of Mood Melody. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51014" toLevel="1" name="Fire Dragon's Blessing Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Grants you Blessing Of Fire Dragon for 20 min.: Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
+		<icon>icon.bm_blessing_dragon</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51015" toLevel="1" name="Shining Scroll of Mood Melody">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 20 min. activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. Buff remains after death. Cannot be used together with Scroll of Mood Melody. -->
+		<icon>icon.bm_magmeld</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51016" toLevel="1" name="Clan Bonus - Exp. Lv. 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 4 h., clan members' Acquired XP/ SP +3%. At least 7 clan members must be logged in. -->
+		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51017" toLevel="1" name="Clan Bonus - Exp. Lv. 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 4 h., clan members' Acquired XP/ SP +6%. At least 14 clan members must be logged in. -->
+		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51018" toLevel="1" name="Clan Bonus - Exp. Lv. 3">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 4 h., clan members' Acquired XP/ SP +10%. At least 21 clan members must be logged in. -->
+		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51019" toLevel="1" name="Clan Bonus - Exp. Lv. 4">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 4 h., clan members' Acquired XP/ SP +20%. At least 28 clan members must be logged in. -->
+		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51020" toLevel="1" name="Clan Bonus - P. Atk. Lv. 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Clan Alliance Buff. For 4 h., PvE Damage +5%. Requires at least 3 267 000 clan hunting points for the effect to be applied. -->
+		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51021" toLevel="1" name="Clan Bonus - P. Atk. Lv. 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Clan Alliance Buff. For 4 hr., PvE Damage +10%. Requires at least 6 534 000 clan hunting points for the effect to be applied. -->
+		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51022" toLevel="1" name="Clan Bonus - P. Atk. Lv. 3">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Clan Alliance Buff. For 4 hr., PvE Damage +15%. Requires at least 9 801 000 clan hunting points for the effect to be applied. -->
+		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51023" toLevel="1" name="Clan Bonus - P. Atk. Lv. 4">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Clan Alliance Buff. For 4 hr., PvE Damage +15%, PvP Damage +10%. Requires at least 13 068 000 clan hunting points for the effect to be applied. -->
+		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51024" toLevel="1" name="Expand Primary and Secondary Agathion Slots">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Does not add Agathion Slots. -->
+		<icon>icon.etc_bm_brooch_lavianrose_i04</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51025" toLevel="4" name="Expand Primary and Secondary Agathion Slots">
-		<icon>icon.skill51025</icon>
+		<!-- Adds an additional primary and $s1 secondary Agathion slots. -->
+		<icon>icon.etc_bm_brooch_lavianrose_i04</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="AgathionSlot">
@@ -135,71 +123,64 @@
 		</effects>
 	</skill>
 	<skill id="51026" toLevel="1" name="Summon Aries Agathion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Release Agathion's Seal - Aries. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51027" toLevel="1" name="Summon Joy Agathion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Release Agathion's Seal - Joy. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51028" toLevel="1" name="Summon Pisces Agathion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Release Agathion's Seal - Pisces. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51029" toLevel="1" name="Summon Cancer Agathion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Release Agathion's Seal - Cancer. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51030" toLevel="1" name="Teleport: Gludio">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Teleports to Gludio. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51031" toLevel="1" name="Teleport: Dion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Teleports to Dion. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51032" toLevel="1" name="Teleport: Giran">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Teleports to Giran. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51033" toLevel="1" name="Teleport: Oren">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Teleports to Oren. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51034" toLevel="1" name="Teleport: Hunter's Village">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Teleports to Hunter's Village. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51035" toLevel="1" name="Summon Rudolph Agathion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Release Agathion's Seal - Rudolph. -->
+		<icon>BranchSys2.icon.event_lbracelet_rudolph</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51036" toLevel="1" name="Rudolph's Blessing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Atk. Spd. and Casting Spd. +5%, acquired XP/ SP +10%. -->
+		<icon>BranchSys2.icon.event_lbracelet_rudolph</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51037" toLevel="1" name="Release Agathion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Release summoned Agathion. -->
+		<icon>icon.etc_unsummon_aga_agit_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51038" toLevel="1" name="Battle Box Lv. 1">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -215,15 +196,25 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="33">
+						<item id="70024" count="1" /> <!-- Daily Coin -->
+					</item>
+					<item chance="33">
+						<item id="1419" count="1" /> <!-- Proof of Blood -->
+					</item>
+					<item chance="34">
+						<item id="29648" count="1" /> <!-- XP/SP Scroll - Normal -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="51039" toLevel="1" name="Battle Box Lv. 2">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -239,15 +230,31 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="20">
+						<item id="49758" count="1" /> <!-- Blood Crystal -->
+					</item>
+					<item chance="20">
+						<item id="90012" count="1" /> <!-- Common Life Stone -->
+					</item>
+					<item chance="20">
+						<item id="70024" count="2" /> <!-- Daily Coin -->
+					</item>
+					<item chance="20">
+						<item id="1419" count="2" /> <!-- Proof of Blood -->
+					</item>
+					<item chance="20">
+						<item id="29648" count="2" /> <!-- XP/SP Scroll - Normal -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="51040" toLevel="1" name="Battle Box Lv. 3">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -263,15 +270,28 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25">
+						<item id="90012" count="1" /> <!-- Common Life Stone -->
+					</item>
+					<item chance="25">
+						<item id="70024" count="3" /> <!-- Daily Coin -->
+					</item>
+					<item chance="25">
+						<item id="29649" count="4" /> <!-- XP/SP Scroll - Medium -->
+					</item>
+					<item chance="25">
+						<item id="29648" count="4" /> <!-- XP/SP Scroll - Normal -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="51041" toLevel="1" name="Battle Box Lv. 4">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -287,21 +307,49 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="11">
+						<item id="49756" count="1" /> <!-- Cloth Piece -->
+					</item>
+					<item chance="11">
+						<item id="90012" count="1" /> <!-- Common Life Stone -->
+					</item>
+					<item chance="11">
+						<item id="70024" count="5" /> <!-- Daily Coin -->
+					</item>
+					<item chance="11">
+						<item id="90013" count="1" /> <!-- Mid-grade Life Stone -->
+					</item>
+					<item chance="11">
+						<item id="730" count="1" /> <!-- Scroll: Enchant Armor (A-grade) -->
+					</item>
+					<item chance="11">
+						<item id="948" count="1" /> <!-- Scroll: Enchant Armor (B-grade) -->
+					</item>
+					<item chance="11">
+						<item id="729" count="1" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+					</item>
+					<item chance="11">
+						<item id="947" count="1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+					</item>
+					<item chance="11">
+						<item id="29649" count="1" /> <!-- XP/SP Scroll - Medium -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="51042" toLevel="1" name="Battle Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51043" toLevel="1" name="XP Scroll: 10,000,000">
-		<icon>icon.skill51043</icon>
+		<!-- XP +10,000,000. -->
+		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>90917</itemConsumeId> <!-- XP Scroll: 10,000,000 -->
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -316,12 +364,12 @@
 		</effects>
 	</skill>
 	<skill id="51044" toLevel="1" name="XP Scroll: 50,000,000">
-		<icon>icon.skill51044</icon>
+		<!-- XP +50,000,000. -->
+		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>90918</itemConsumeId> <!-- XP Scroll: 50,000,000 -->
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -336,12 +384,12 @@
 		</effects>
 	</skill>
 	<skill id="51045" toLevel="1" name="XP Scroll: 100,000,000">
-		<icon>icon.skill51045</icon>
+		<!-- XP +100,000,000. -->
+		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>90919</itemConsumeId> <!-- XP Scroll: 100,000,000 -->
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -356,273 +404,213 @@
 		</effects>
 	</skill>
 	<skill id="51046" toLevel="1" name="Zodiac Agathion Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.star_agathion_cube</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51047" toLevel="1" name="Agathion Enchant Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.star_scrl_of_ench_ag</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51048" toLevel="1" name="Quality Agathion Enchant Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.star_giantscrl_of_ench_ag</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51049" toLevel="1" name="Solid Scroll: Enchant Agathion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.star_giantscrl_of_ench_ag</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51050" toLevel="1" name="Raid Lucky Charm">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Chance of dropping items -50%, chance of losing XP -50% when character dies. Cannot be used by chaotic characters. -->
+		<icon>icon.etc_cross_of_einhasad_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51051" toLevel="1" name="Sealed Doll of Border Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.star_agathion_cube</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51052" toLevel="1" name="Raid Lucky Charm Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51053" toLevel="1" name="GM Repi Gift Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51054" toLevel="1" name="High-grade Shining Pendant Polish Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51055" toLevel="1" name="Items Seal Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.scrl_item_lock</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51056" toLevel="1" name="Item Unseal Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.scrl_item_unlock</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51057" toLevel="1" name="Weapon Supply Box +8 (A-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i07</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51058" toLevel="1" name="Lucky Cube of Growth - 30-day">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.sa_cube</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51059" toLevel="1" name="Scroll: Enchant Savior's Earring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Enchants Savior's Earring. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51060" toLevel="1" name="Savior's Earring Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i07</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51061" toLevel="1" name="Lucky Fortune">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 5 min. party members' acquired XP/ SP +10%, Sayha Grace XP/ SP +20% while hunting. -->
+		<icon>icon.Accessary_middle_ages_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51062" toLevel="1" name="Balthus Knights' Varnish">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51063" toLevel="1" name="Balthus Knights' Matte Varnish">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51064" toLevel="1" name="Balthus Knights' Shining Varnish">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51065" toLevel="1" name="Balthus Knights' Glittering Varnish">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51066" toLevel="1" name="Rash's Supplies - Antharas">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51067" toLevel="1" name="Rash's Supplies - Baium">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51068" toLevel="1" name="Summon Sin Eater Agathion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Release Agathion's Seal - Sin Eater. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51069" toLevel="1" name="Hour of Penitence">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- For 2 hr., allows you to receive Crumbs of Penitence while hunting. -->
+		<icon>icon.etc_leash_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51070" toLevel="3" name="Dragon's Miracle Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Restores Sayha Grace points. For 20 min., acquired XP/ SP +20%, P./ M. Atk. +12%, P./ M. Def. +15%, P./ M. Crirical Rate +20, P./ M. Critical Damage +5%, HP/ MP/ CP +25%, HP/ MP Recovery +30%, Sayha Grace Consumption -10%. At a certain chance absorbs 5% of the damage inflicted on target as HP. Can be cumulate up to 3 times. Buff remains after death. -->
+		<icon>
+			<value level="1">icon.bm_dragon_posion_brave_1</value>
+			<value level="2">icon.bm_dragon_posion_brave_2</value>
+			<value level="3">icon.bm_dragon_posion_brave_3</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51071" toLevel="1" name="Dragon's Relic Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_special_pendant_abradant_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51072" toLevel="1" name="Fire Dragon's Relic Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51073" toLevel="1" name="Land Dragon's Relic Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51074" toLevel="1" name="Dragon's Dye Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51075" toLevel="1" name="Weapon Supply Box (Best A-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51076" toLevel="1" name="Weapon Ingredient/Recipe Box (Top A-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51077" toLevel="1" name="Weapon Recipe Box (Best A-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51078" toLevel="1" name="Rash�s Supply Items - Zaken">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51079" toLevel="1" name="Hidden Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51080" toLevel="1" name="Golden Fishing Supply Items">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51081" toLevel="1" name="Gold Big Fish Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51082" toLevel="1" name="Silver Big Fish Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51083" toLevel="1" name="High Grade Melissa's Recovery Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_bm_hero_red_potion</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51084" toLevel="1" name="Advanced Armor Enchant Stone (B-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51085" toLevel="1" name="Advanced Armor Enchant Stone (A-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51086" toLevel="1" name="Wind Cube of Abundance - 30-day.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.sa_cube</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51087" toLevel="1" name="Wind Cube of Abundance - 90-day.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.sa_cube</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51088" toLevel="1" name="Amulet of Winds">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Acquired XP/ SP +20%, Acquired XP/ SP through fishing +50%, all characteristics +1. -->
+		<icon>icon.bm_sayha_rune</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51089" toLevel="1" name="Teleport to Forge of the Gods">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Teleports you to Forge of the Gods. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51090" toLevel="1" name="Teleport to Garden of Eva">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Teleports you to Garden of Eva. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51091" toLevel="1" name="Teleport to Land of Winds">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Teleports you to Land of Winds. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51092" toLevel="1" name="Teleport to Wall of Argos">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Teleports you to Wall of Argos. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51093" toLevel="1" name="Fire Attribute Attack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Fire Attribute Attack +100. -->
+		<icon>icon.agathion_fire_1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51094" toLevel="1" name="Water Attribute Attack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Water Attribute Attack +100. -->
+		<icon>icon.agathion_water_1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51095" toLevel="1" name="Wind Attribute Attack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Wind Attribute Attack +100. -->
+		<icon>icon.agathion_wind_1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51096" toLevel="1" name="Earth Attribute Attack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Earth Attribute Attack +100. -->
+		<icon>icon.agathion_earth_1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51097" toLevel="1" name="Radiant Spirit's Varnish">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.ev_charge_scroll</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51098" toLevel="1" name="Energy of Blue Dynasty">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Armor is transformed into the Blue Dynasty. Max HP/ MP +20%, Acquired XP/ SP and during effect of Sayha Grace +20%. Buff remains even after death. -->
+		<icon>icon.armor_t91_u_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51099" toLevel="1" name="Kat the Cat�s Energy">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Transforms you into Kat the Cat. Max HP/ MP +20%, Acquired XP/ SP and during effect of Sayha Grace +20%. Buff remains even after death. -->
+		<icon>icon.cat_the_cat_change_0</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

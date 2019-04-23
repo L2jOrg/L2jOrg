@@ -45,6 +45,7 @@
 										<xs:simpleType>
 											<xs:restriction base="xs:token">
 												<xs:enumeration value="NORMAL" />
+												<xs:enumeration value="HUNTING" />
 												<xs:enumeration value="NOBLES_TOKEN" />
 												<xs:enumeration value="NOBLES_ADENA" />
 												<xs:enumeration value="OTHER" />

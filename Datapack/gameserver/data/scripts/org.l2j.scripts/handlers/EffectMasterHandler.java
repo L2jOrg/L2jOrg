@@ -77,7 +77,6 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("CpHealOverTime", CpHealOverTime::new);
 		EffectHandler.getInstance().registerHandler("CpHealPercent", CpHealPercent::new);
 		EffectHandler.getInstance().registerHandler("CpRegen", CpRegen::new);
-		EffectHandler.getInstance().registerHandler("CreateItemRandom", CreateItemRandom::new);
 		EffectHandler.getInstance().registerHandler("CriticalDamage", CriticalDamage::new);
 		EffectHandler.getInstance().registerHandler("CriticalDamagePosition", CriticalDamagePosition::new);
 		EffectHandler.getInstance().registerHandler("CriticalRate", CriticalRate::new);
@@ -139,6 +138,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("GiveRecommendation", GiveRecommendation::new);
 		EffectHandler.getInstance().registerHandler("GiveSp", GiveSp::new);
 		EffectHandler.getInstance().registerHandler("GiveXp", GiveXp::new);
+		EffectHandler.getInstance().registerHandler("GiveExpAndSp", GiveExpAndSp::new);
 		EffectHandler.getInstance().registerHandler("Grow", Grow::new);
 		EffectHandler.getInstance().registerHandler("HairAccessorySet", HairAccessorySet::new);
 		EffectHandler.getInstance().registerHandler("Harvesting", Harvesting::new);

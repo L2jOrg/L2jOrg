@@ -16,17 +16,18 @@
  */
 package quests.Q00662_AGameOfCards;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
 import org.l2j.gameserver.util.Util;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * A Game of Cards (662)
@@ -704,7 +705,7 @@ public final class Q00662_AGameOfCards extends Quest
 		}
 		
 		final L2PcInstance player = players.get(getRandom(players.size()));
-		if ((player != null) && Util.checkIfInRange(1500, npc, player, false))
+		if ((player != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			if (MONSTERS.get(npc.getId()) < getRandom(1000))
 			{

@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6416" toLevel="1" name="Reptilikon Poison Breath">
+		<!-- Decreases 4 MP per sec. for 20 sec. -->
+		<icon>icon.skill1102</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>DOT_MP</abnormalType>
@@ -14,7 +16,6 @@
 		<effectRange>900</effectRange>
 		<fanRange>0;0;200;90</fanRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1102</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -23,7 +24,6 @@
 		<mpInitialConsume>22</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
@@ -36,6 +36,8 @@
 		</effects>
 	</skill>
 	<skill id="6417" toLevel="1" name="Reptilikon Poison Shot">
+		<!-- Decreases 4 MP per sec. for 20 sec. -->
+		<icon>icon.skill1102</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>DOT_MP</abnormalType>
@@ -48,7 +50,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1200</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1102</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -57,7 +58,6 @@
 		<mpInitialConsume>22</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -70,6 +70,8 @@
 		</effects>
 	</skill>
 	<skill id="6418" toLevel="1" name="Reptilikon Fury Poison Bomb">
+		<!-- Decreases 69 HP and 4 MP per sec. for 20 sec. -->
+		<icon>icon.skill1102</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>DOT_MP</abnormalType>
@@ -82,7 +84,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1200</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1102</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -91,7 +92,6 @@
 		<mpInitialConsume>22</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -115,7 +115,6 @@
 		<magicLvl>82</magicLvl>
 		<mpConsume>121</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -133,7 +132,6 @@
 		<magicLvl>83</magicLvl>
 		<mpConsume>121</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -151,7 +149,6 @@
 		<magicLvl>84</magicLvl>
 		<mpConsume>121</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -168,7 +165,6 @@
 		<magicLvl>84</magicLvl>
 		<mpConsume>121</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -180,6 +176,8 @@
 		</effects>
 	</skill>
 	<skill id="6423" toLevel="1" name="Stun">
+		<!-- Momentarily Stuns and immobilizes the enemy for 3 sec. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -191,13 +189,11 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<mpConsume>121</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -218,7 +214,6 @@
 		<magicLvl>84</magicLvl>
 		<mpConsume>121</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -229,17 +224,17 @@
 		</effects>
 	</skill>
 	<skill id="6425" toLevel="1" name="Demotivation Hex">
+		<!-- P. Def. -90% for 10 sec. -->
+		<icon>icon.skill0122</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill0122</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -253,7 +248,6 @@
 		</effects>
 	</skill>
 	<skill id="6426" toLevel="1" name="Priest's Ire">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>200</affectRange>
 		<castRange>800</castRange>
 		<coolTime>500</coolTime>
@@ -265,7 +259,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>84</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -277,22 +270,20 @@
 		</effects>
 	</skill>
 	<skill id="6427" toLevel="1" name="Medicinal Mushroom 1">
-		<!-- Fantasy Mushroom Skill -->
+		<icon>icon.skill0100</icon>
 		<affectRange>300</affectRange>
 		<coolTime>1000</coolTime>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0100</icon>
 		<magicLvl>84</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="6428" toLevel="1" name="Restore HP">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sticky Mushroom Skill -->
+		<!-- Recovers HP by 90%. -->
+		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -302,7 +293,6 @@
 		<castRange>2000</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>2000</effectRange>
-		<icon>icon.skill1201</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -310,7 +300,6 @@
 		<mpConsume>88</mpConsume>
 		<mpInitialConsume>22</mpInitialConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>HOLD</trait>
@@ -328,18 +317,17 @@
 		</effects>
 	</skill>
 	<skill id="6429" toLevel="1" name="Cozy Mucus">
-		<!-- Rainbow Frog -->
+		<!-- Bow/ Crossbow P. Atk. +15% and HP recovers. -->
+		<icon>icon.skill6429</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
 		<castRange>2000</castRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>500</hitTime>
-		<icon>icon.skill6429</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -353,7 +341,7 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-
+					<item>CROSSBOW</item>
 				</weaponType>
 			</effect>
 			<effect name="HpRegen">
@@ -363,14 +351,12 @@
 		</effects>
 	</skill>
 	<skill id="6430" toLevel="1" name="Roar Hip Heal">
-		<!-- Energy Plant Skill -->
 		<castRange>2000</castRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>84</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>2000</effectRange>
@@ -383,7 +369,8 @@
 		</effects>
 	</skill>
 	<skill id="6431" toLevel="1" name="Feral Might">
-		<!-- P. Atk. increases by 19 % for 5 minutes -->
+		<!-- P. Atk. +19% for 5 min. -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -391,12 +378,10 @@
 		<effectPoint>379</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1068</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>90000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -410,7 +395,8 @@
 		</effects>
 	</skill>
 	<skill id="6432" toLevel="1" name="Feral Focus">
-		<!-- Critical attack rate increases by 35 % for 5 minutes -->
+		<!-- Critical attack rate +35% for 5 min. -->
+		<icon>icon.skill1077</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
@@ -418,12 +404,10 @@
 		<effectPoint>495</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1077</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>90000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -437,7 +421,8 @@
 		</effects>
 	</skill>
 	<skill id="6433" toLevel="1" name="Feral Guidance">
-		<!-- Accuracy increases by 7 for 5 minutes. -->
+		<!-- Accuracy +7 for 5 min. -->
+		<icon>icon.skill1240</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
@@ -445,12 +430,10 @@
 		<effectPoint>532</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1240</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>90000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -464,7 +447,8 @@
 		</effects>
 	</skill>
 	<skill id="6434" toLevel="1" name="Feral Haste">
-		<!-- Atk. Spd. increases by 38 % for 5 minutes. -->
+		<!-- Atk. Spd. +38% for 5 min. -->
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -472,12 +456,10 @@
 		<effectPoint>495</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1086</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>90000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -491,8 +473,8 @@
 		</effects>
 	</skill>
 	<skill id="6435" toLevel="3" name="Curse of Abyss">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- Bow/ Crossbow Critical Rate +$s1 and Critical Damage +$s2. -->
+		<icon>icon.skill6435</icon>
 		<abnormalLvl>
 			<value level="1">7</value>
 			<value level="2">8</value>
@@ -503,12 +485,10 @@
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill6435</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -542,7 +522,7 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-
+					<item>CROSSBOW</item>
 				</weaponType>
 			</effect>
 			<effect name="CriticalRate">
@@ -554,26 +534,24 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-
+					<item>CROSSBOW</item>
 				</weaponType>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6436" toLevel="1" name="Curse of the Dark Abyss">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- Max HP -5%, Bow/ Crossbow Critical Rate +90% and Critical Damage +50% per sec. -->
+		<icon>icon.skill6435</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill6435</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -588,7 +566,7 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-
+					<item>CROSSBOW</item>
 				</weaponType>
 			</effect>
 			<effect name="CriticalRate">
@@ -596,12 +574,14 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-
+					<item>CROSSBOW</item>
 				</weaponType>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6437" toLevel="7" name="Freezing Core Area">
+		<!-- Decreases $s1 HP per sec. by cold. -->
+		<icon>icon.skill1183</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -612,12 +592,10 @@
 		<effectPoint>-100</effectPoint>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
-		<icon>icon.skill1183</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>POISON</trait>
@@ -639,6 +617,8 @@
 		</effects>
 	</skill>
 	<skill id="6438" toLevel="1" name="Penalty Area">
+		<!-- Decreases 1000 HP per sec. -->
+		<icon>icon.skill4036</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -647,11 +627,9 @@
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill4036</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<isDebuff>true</isDebuff>
@@ -660,17 +638,16 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6439" toLevel="1" name="Energy of Wisdom">
+		<icon>icon.skill6439</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SIGNAL_E</abnormalType>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill6439</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<isDebuff>true</isDebuff>
@@ -682,25 +659,28 @@
 				<BLUNT>95</BLUNT>
 				<SWORD>50</SWORD>
 				<DUAL>50</DUAL>
+				<ANCIENTSWORD>95</ANCIENTSWORD>
 				<BOW>99</BOW>
 				<POLE>95</POLE>
 				<DAGGER>95</DAGGER>
+				<RAPIER>95</RAPIER>
+				<CROSSBOW>99</CROSSBOW>
 				<DUALFIST>95</DUALFIST>
+				<DUALDAGGER>95</DUALDAGGER>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6440" toLevel="1" name="Energy of Strength">
+		<icon>icon.skill6440</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SIGNAL_E</abnormalType>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill6440</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<isDebuff>true</isDebuff>
@@ -713,24 +693,27 @@
 				<BLUNT>-5</BLUNT>
 				<SWORD>-5</SWORD>
 				<DUAL>-5</DUAL>
+				<ANCIENTSWORD>-5</ANCIENTSWORD>
 				<POLE>-5</POLE>
+				<CROSSBOW>99</CROSSBOW>
 				<DUALFIST>-5</DUALFIST>
+				<DUALDAGGER>-5</DUALDAGGER>
 				<DAGGER>-5</DAGGER>
+				<RAPIER>-5</RAPIER>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6441" toLevel="1" name="Energy of Agility">
+		<icon>icon.skill6441</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SIGNAL_E</abnormalType>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill6441</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<isDebuff>true</isDebuff>
@@ -742,25 +725,29 @@
 				<BLUNT>95</BLUNT>
 				<SWORD>50</SWORD>
 				<DUAL>50</DUAL>
+				<ANCIENTSWORD>95</ANCIENTSWORD>
 				<BOW>-100</BOW>
 				<POLE>95</POLE>
 				<DAGGER>95</DAGGER>
+				<RAPIER>95</RAPIER>
+				<CROSSBOW>-100</CROSSBOW>
 				<DUALFIST>95</DUALFIST>
+				<DUALDAGGER>95</DUALDAGGER>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6442" toLevel="1" name="Energy of Wisdom">
+		<!-- A special location buff that allows the user to inflict magic damage on monsters in the Seed of Annihilation. -->
+		<icon>icon.skill6439</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SIGNAL_E</abnormalType>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill6439</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -775,17 +762,17 @@
 		</effects>
 	</skill>
 	<skill id="6443" toLevel="1" name="Energy of Strength">
+		<!-- A special location buff that allows the user to inflict melee damage on monsters in the Seed of Annihilation. -->
+		<icon>icon.skill6440</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SIGNAL_E</abnormalType>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill6440</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -804,17 +791,17 @@
 		</effects>
 	</skill>
 	<skill id="6444" toLevel="1" name="Energy of Agility">
+		<!-- A special location buff that allows the user to inflict ranged physical damage on monsters in the Seed of Annihilation. -->
+		<icon>icon.skill6441</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SIGNAL_E</abnormalType>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill6441</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -833,12 +820,10 @@
 		</effects>
 	</skill>
 	<skill id="6445" toLevel="1" name="Presentation - Freya's Message 1">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>10000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<effectPoint>100</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -846,228 +831,193 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6446" toLevel="1" name="Presentation - Freya's Message 2">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>8000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6447" toLevel="1" name="Presentation - Freya's Message 3">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>5000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6448" toLevel="1" name="Presentation - Freya's Message 4">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>1000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6449" toLevel="1" name="Presentation - Freya's Message 5">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>7000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6450" toLevel="1" name="Presentation - Freya Nova">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>5000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6451" toLevel="1" name="Presentation - Freya Move">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>12000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6452" toLevel="1" name="Presentation - Freya Space Change">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>5000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6453" toLevel="1" name="Presentation - Freya Death">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>15000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6454" toLevel="1" name="Presentation - Freya Frustration">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>6000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6455" toLevel="1" name="Presentation - Freya Destroy">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>6000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6456" toLevel="1" name="Presentation - Freya Eternal Blizzard">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>1000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6457" toLevel="1" name="Presentation - Absorption of Sirr">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>8000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6458" toLevel="1" name="Presentation - Transform of Sirr">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>6000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6459" toLevel="1" name="Presentation - Kegor Super Buff">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>10000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6460" toLevel="1" name="Presentation - Jinia Super Buff">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>10000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6461" toLevel="1" name="Presentation - Kegor's Message 1">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>6000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6462" toLevel="1" name="Presentation - Kegor's Message 1">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>6000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6463" toLevel="1" name="Presentation - Transfer Achievement">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1075,23 +1025,21 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6464" toLevel="1" name="Three Siblings' Trickery">
-		<!-- By the three sibling's trickery, Max HP/MP/CP are increased by 40% for 10 seconds. -->
+		<!-- By the three sibling's trickery, Max HP/ MP/ CP +40% for 10 sec. -->
+		<icon>icon.ev_rotten_jack_ghost_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
-		<icon>icon.ev_rotten_jack_ghost_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1109,7 +1057,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitTime>2000</hitTime>
 		<targetType>SELF</targetType>
@@ -1121,7 +1068,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitTime>2000</hitTime>
 		<targetType>SELF</targetType>
@@ -1133,7 +1079,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>500</effectRange>
@@ -1147,7 +1092,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>500</effectRange>
@@ -1161,7 +1105,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1175,7 +1118,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1189,7 +1131,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1203,7 +1144,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1217,7 +1157,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1231,7 +1170,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1245,7 +1183,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1259,7 +1196,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1273,7 +1209,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1287,7 +1222,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1301,7 +1235,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1315,7 +1248,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1329,7 +1261,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1343,7 +1274,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1357,7 +1287,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1371,7 +1300,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1385,7 +1313,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1399,7 +1326,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1413,7 +1339,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1427,7 +1352,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1441,7 +1365,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1455,7 +1378,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>500</effectRange>
@@ -1469,7 +1391,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1540,7 +1461,6 @@
 			<value level="28">95</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<attributeType>HOLY</attributeType>
@@ -1613,7 +1533,6 @@
 			<value level="28">95</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<attributeType>HOLY</attributeType>
@@ -1686,7 +1605,6 @@
 			<value level="28">95</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<attributeType>HOLY</attributeType>
@@ -1759,7 +1677,6 @@
 			<value level="28">95</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
@@ -1832,7 +1749,6 @@
 			<value level="28">95</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>HOLY</attributeType>
 		<attributeValue>100</attributeValue>
@@ -1905,7 +1821,6 @@
 			<value level="28">95</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>HOLY</attributeType>
 		<attributeValue>180</attributeValue>
@@ -1978,7 +1893,6 @@
 			<value level="28">95</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1200</effectRange>
 		<attributeType>HOLY</attributeType>
@@ -2051,7 +1965,6 @@
 			<value level="28">95</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1200</effectRange>
 		<attributeType>HOLY</attributeType>

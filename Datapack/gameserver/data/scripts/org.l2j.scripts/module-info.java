@@ -559,6 +559,7 @@ open module org.l2j.scripts {
              quests.Q00416_PathOfTheOrcShaman.Q00416_PathOfTheOrcShaman,
              quests.Q00417_PathOfTheScavenger.Q00417_PathOfTheScavenger,
              quests.Q00418_PathOfTheArtisan.Q00418_PathOfTheArtisan,
+             quests.Q00500_BrothersBoundInChains.Q00500_BrothersBoundInChains,
              quests.Q00662_AGameOfCards.Q00662_AGameOfCards,
              quests.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss,
              quests.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss,

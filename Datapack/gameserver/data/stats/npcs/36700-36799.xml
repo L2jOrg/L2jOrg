@@ -460,93 +460,113 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="36783" level="80" type="L2Npc" name="Human Knight" title="Royal Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="36783" level="62" type="L2Monster" name="Human Knight" title="Royal Guard">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="384" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14625" hpRegen="10.5" mp="2932" mpRegen="3.6" />
+			<vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
+			<attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="23" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="36784" level="80" type="L2Npc" name="Human Knight" title="Royal Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="36784" level="62" type="L2Monster" name="Human Knight" title="Royal Guard">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="384" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14625" hpRegen="10.5" mp="2932" mpRegen="3.6" />
+			<vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
+			<attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="36785" level="80" type="L2Npc" name="Human Knight" title="Royal Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="36785" level="62" type="L2Monster" name="Human Knight" title="Royal Guard">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="384" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14625" hpRegen="10.5" mp="2932" mpRegen="3.6" />
+			<vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
+			<attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="36786" level="80" type="L2Npc" name="Human Knight" title="Royal Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="36786" level="62" type="L2Monster" name="Human Knight" title="Royal Guard">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="384" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14625" hpRegen="10.5" mp="2932" mpRegen="3.6" />
+			<vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
+			<attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="7.5" />
 			<height normal="23" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="36787" level="80" type="L2Npc" name="Shield" title="Gludio">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -571,92 +591,112 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36788" level="80" type="L2Npc" name="Human Knight" title="Royal Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="36788" level="62" type="L2Monster" name="Human Knight" title="Royal Guard">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="384" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14625" hpRegen="10.5" mp="2932" mpRegen="3.6" />
+			<vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
+			<attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="23" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="36789" level="80" type="L2Npc" name="Human Knight" title="Royal Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="36789" level="62" type="L2Monster" name="Human Knight" title="Royal Guard">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="384" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14625" hpRegen="10.5" mp="2932" mpRegen="3.6" />
+			<vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
+			<attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="36790" level="80" type="L2Npc" name="Human Knight" title="Royal Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="36790" level="62" type="L2Monster" name="Human Knight" title="Royal Guard">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="384" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14625" hpRegen="10.5" mp="2932" mpRegen="3.6" />
+			<vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
+			<attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="36791" level="80" type="L2Npc" name="Human Knight" title="Royal Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="36791" level="62" type="L2Monster" name="Human Knight" title="Royal Guard">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="384" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14625" hpRegen="10.5" mp="2932" mpRegen="3.6" />
+			<vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
+			<attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="7.5" />
 			<height normal="23" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
+			</drop>
+		</dropLists>
 	</npc>
 </list>

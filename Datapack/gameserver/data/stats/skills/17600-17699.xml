@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="17608" toLevel="1" name="Energy of Delusion">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Fantastical energy of the fishing dock. Quickly attracts fish, and has an increased chance of meeting Goldeen. Restores Vitality if you stay at the dock for some time. Additional damage when reeling/ pumping. -->
+		<!-- Fishing place, filled with Fantastical Energy. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17613" toLevel="1" name="Agathion - Aries">
-		<!-- Release Agathion's Seal. -->
+		<!-- Summon Agathion -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -18,12 +17,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13411</npcId>
+				<npcId>13411</npcId> <!-- Aries -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17619" toLevel="1" name="Release Agathion's Seal - Pisces">
-		<!-- Release Agathion's Seal. -->
+		<!-- Summon Agathion -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -33,13 +32,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13407</npcId>
+				<npcId>13407</npcId> <!-- Pierce -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17621" toLevel="1" name="Release Agathion's Seal - Cancer">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Release Agathion's Seal. -->
+		<!-- Summon Agathion -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -49,26 +47,22 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13409</npcId>
+				<npcId>13409</npcId> <!-- Cat -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17625" toLevel="1" name="Agathion Cute Trick - Aries">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="17685" toLevel="1" name="Uldie's Gift">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="17686" toLevel="4" name="Uldie's Effect">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- XP/SP gain + 30% when hunting, P./M. Atk. + 5%. Received damage - 5%. -->
+		<!-- Buff from Uldie. For 2 hr., acquired XP/ SP +$s1, P. Atk./ M. Atk. +$s2, Atk. Spd./ Casting Spd. +$s3. A chance to receive an Elite Gift from the Captain of Lara's Team when removing the Buff. <Warning> You cannot receive the gift if your character dies when receiving or if there is no empty slot in your Inventory. -->
 		<icon>BranchSys.icon.br_sevenlove_girlpresent_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -81,13 +75,10 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17689" toLevel="1" name="Uldie's Valuable Gift">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17695" toLevel="1" name="Summon Squash">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Invisible NPC skill for summoning the 10th Anniversary event squash. -->
+		<!-- Skill for summoning a Pumpkin for an anniversary. -->
 		<icon>icon.skill17695</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -95,8 +86,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="17696" toLevel="1" name="Summon Large Squash">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Invisible NPC skill for summoning the 10th Anniversary event squash. -->
+		<!-- Skill for summoning a Pumpkin for an anniversary. -->
 		<icon>icon.skill17696</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>

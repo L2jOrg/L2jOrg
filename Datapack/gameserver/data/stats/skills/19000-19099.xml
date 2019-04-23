@@ -1,13 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19009" toLevel="1" name="Clan Advent">
-		<!-- When the clan leader logs in, clan members' P. Atk. M. Atk. + 2% -->
+		<!-- When the clan leader logs in, clan members' P./ M. Atk. +2%. -->
 		<icon>icon.skill19009</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
 		<abnormalType>CLAN_ADVENT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -34,8 +33,7 @@
 		</effects>
 	</skill>
 	<skill id="19032" toLevel="1" name="Ability of Light">
-		<!-- TODO: confirm me -->
-		<!-- Imbued with the Ability of Light. Increases Max CP by 3000 and damage inflicted during PvP by 10%. Effects do not apply when in Chaotic state. Can be used by a Marquis or higher. -->
+		<!-- Imbued with the Ability of Light. Max CP +2000. Effects do not apply when in Chaotic state. -->
 		<icon>icon.skill19008</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -66,8 +64,7 @@
 		</effects>
 	</skill>
 	<skill id="19033" toLevel="1" name="Ability of Darkness">
-		<!-- TODO: confirm me -->
-		<!-- Imbued with the Ability of Darkness. Increases Max CP by 3000 and damage inflicted during PvP by 10%. Can be used by a Marquis or higher. -->
+		<!-- Imbued with the Ability of Darkness. Max CP +1000. -->
 		<icon>icon.skill19008</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -93,15 +90,14 @@
 	</skill>
 	<skill id="19034" toLevel="1" name="Imprint of Light">
 		<!-- Engraves the Imprint of Light on the ancient relic that guards the castle. -->
+		<icon>icon.skill0246</icon>
 		<castRange>85</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>120000</hitTime>
-		<icon>icon.skill0246</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>HOLYTHING</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -119,15 +115,14 @@
 	</skill>
 	<skill id="19035" toLevel="1" name="Imprint of Darkness">
 		<!-- Engraves the Imprint of Darkness on the ancient relic that guards the castle. -->
+		<icon>icon.skill0246</icon>
 		<castRange>85</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>120000</hitTime>
-		<icon>icon.skill0246</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>HOLYTHING</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -144,14 +139,12 @@
 		</effects>
 	</skill>
 	<skill id="19036" toLevel="1" name="Blessing of Light">
-		<!-- TODO: Confir me -->
 		<!-- Acquires 3% additional XP and SP through the blessing of the Guardian of Light. -->
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<abnormalType>BRIGHTNESS_BLESS</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -173,6 +166,7 @@
 		</effects>
 	</skill>
 	<skill id="19039" toLevel="1" name="Cloak of Light">
+		<!-- Max HP/ MP/ CP +5%, P. Def. +3%, M. Def. +5%, all kinds of Weapon Resistance +3%, P./ M. Critical Rate +10, damage reflection +3%. Not available in a chaotic state. -->
 		<icon>icon.amor_goodness_cloak</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -212,6 +206,7 @@
 				<POLE>3</POLE>
 				<DAGGER>3</DAGGER>
 				<DUALFIST>3</DUALFIST>
+				<DUALDAGGER>3</DUALDAGGER>
 			</effect>
 			<effect name="CriticalRate">
 				<amount>10</amount>
@@ -228,6 +223,7 @@
 		</effects>
 	</skill>
 	<skill id="19040" toLevel="1" name="Cloak of Darkness">
+		<!-- Max HP/ MP/ CP +5%, P. Def. +3%, M. Def. +5%, all kinds of Weapon Resistance +3%, P./ M. Critical Rate +10, damage reflection +3%. -->
 		<icon>icon.amor_evilness_cloak</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -261,6 +257,7 @@
 				<POLE>3</POLE>
 				<DAGGER>3</DAGGER>
 				<DUALFIST>3</DUALFIST>
+				<DUALDAGGER>3</DUALDAGGER>
 			</effect>
 			<effect name="CriticalRate">
 				<amount>10</amount>
@@ -277,15 +274,12 @@
 		</effects>
 	</skill>
 	<skill id="19041" toLevel="1" name="Escape: Castle">
-		<!-- TODO: Confirm me -->
 		<!-- Return to Castle. -->
 		<hitTime>20000</hitTime>
-		<icon>icon.vesper_cloack_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>3600000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -299,12 +293,9 @@
 		</effects>
 	</skill>
 	<skill id="19042" toLevel="1" name="Blessed Scroll of Escape: Castle">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to Castle. -->
-		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>

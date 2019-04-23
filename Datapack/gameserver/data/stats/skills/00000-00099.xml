@@ -1,6 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1" toLevel="45" name="Triple Slash">
+		<!-- Quickly strikes the target three times with $s1 Power. For $s2, enemy s P. Def. -$s3. Requires dual swords. Over-hit. Ignores shield block. -->
+		<icon>icon.skill0001</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<activateRate>70</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
 		<effectPoint>
@@ -47,7 +54,7 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1733</hitTime>
-		<icon>icon.skill0001</icon>
+		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">38</value>
 			<value level="2">39</value>
@@ -143,9 +150,8 @@
 			<value level="45">103</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -153,7 +159,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -210,14 +216,18 @@
 				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-23</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="2" toLevel="19" name="Confusion">
-		<!-- Confirmed CT2.5 -->
+		<!-- Throws the enemy into confusion, changing their target of attack. -->
+		<icon>icon.skill0002</icon>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0002</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">24</value>
@@ -284,7 +294,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -296,6 +305,8 @@
 		</effects>
 	</skill>
 	<skill id="3" toLevel="9" name="Power Strike">
+		<!-- Delivers a powerful blow that strikes the target with $s1 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit. -->
+		<icon>icon.skill0003</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -311,7 +322,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0003</icon>
 		<magicLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -337,7 +347,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -367,6 +376,8 @@
 		</effects>
 	</skill>
 	<skill id="4" toLevel="2" name="Dash">
+		<!-- For $s1 Speed +$s2. -->
+		<icon>icon.skill0004</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -378,7 +389,6 @@
 			<value level="2">438</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0004</icon>
 		<magicLvl>
 			<value level="1">20</value>
 			<value level="2">46</value>
@@ -389,7 +399,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -405,6 +414,8 @@
 		</effects>
 	</skill>
 	<skill id="5" toLevel="34" name="Double Sonic Slash">
+		<!-- Discharges a powerful energy beam at the enemy with $s1 Power added to P. Atk. Requires dual sword. Increases Power upon consumption of Momentum, and consumes up to $s2. Over-hit. Critical. -->
+		<icon>icon.skill0005</icon>
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
 		<effectPoint>
@@ -445,7 +456,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1733</hitTime>
-		<icon>icon.skill0005</icon>
 		<magicLvl>
 			<value level="1">44</value>
 			<value level="2">45</value>
@@ -521,7 +531,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -529,7 +538,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -578,7 +587,15 @@
 		</effects>
 	</skill>
 	<skill id="6" toLevel="45" name="Sonic Blaster">
+		<!-- Hurls a deadly blast of force from the sword with $s1 Power added to P. Atk, stunning the target for $s2. Requires a dual sword, sword or blunt to be equipped. Increases Power upon consuming Momentum, and consumes up to $s3. Over-hit. Critical. -->
+		<icon>icon.skill0006</icon>
 		<castRange>600</castRange>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>35</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>
 			<value level="1">-183</value>
 			<value level="2">-188</value>
@@ -623,7 +640,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1900</hitTime>
-		<icon>icon.skill0006</icon>
 		<magicLvl>
 			<value level="1">38</value>
 			<value level="2">39</value>
@@ -718,10 +734,10 @@
 			<value level="44">129</value>
 			<value level="45">130</value>
 		</mpConsume>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
+		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -730,7 +746,7 @@
 					<item>DUAL</item>
 					<item>SWORD</item>
 					<item>BLUNT</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -787,10 +803,12 @@
 				</power>
 				<overHit>true</overHit>
 			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="7" toLevel="44" name="Sonic Storm">
-		<!-- Glory Days confirmed and Updated to IO -->
+		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. Requires a sword, blunt weapon, spear, fist weapon, or dual sword. Increases Power upon consuming Momentum, and consumes up to $s2. Over-hit. Critical. -->
+		<icon>icon.skill0007</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
@@ -843,7 +861,6 @@
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>1790</hitTime>
-		<icon>icon.skill0007</icon>
 		<magicLvl>
 			<value level="1">47</value>
 			<value level="2">48</value>
@@ -938,7 +955,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -949,7 +965,7 @@
 					<item>DUAL</item>
 					<item>SWORD</item>
 					<item>BLUNT</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -1015,11 +1031,11 @@
 		</effects>
 	</skill>
 	<skill id="8" toLevel="8" name="Sonic Focus">
-		<!-- Confirmed CT2.5 -->
+		<!-- Channels Momentum for use with other Sonic skills. Requires a sword, blunt weapon, or dual sword weapon. Momentum will disperse after 10 min. of non-use. Can be charged up to level $s1. -->
+		<icon>icon.skill0008</icon>
 		<effectPoint>200</effectPoint>
 		<hitTime>900</hitTime>
 		<hpConsume>25</hpConsume>
-		<icon>icon.skill0008</icon>
 		<magicLvl>
 			<value level="1">40</value>
 			<value level="2">43</value>
@@ -1032,7 +1048,6 @@
 		</magicLvl>
 		<mpConsume>5</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1040,7 +1055,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-
+					<item>DUALBLUNT</item>
 					<item>SWORD</item>
 					<item>BLUNT</item>
 				</weaponType>
@@ -1074,6 +1089,8 @@
 		</effects>
 	</skill>
 	<skill id="9" toLevel="37" name="Sonic Buster">
+		<!-- Hurls a powerful burst of energy at enemies in front with $s1 Power added to P. Atk. Requires a dual sword, sword or blunt weapon. Increases Power upon consuming Momentum, and consumes up to $s2. Consumes $s3 Momentum Stones. Over-hit. Critical. -->
+		<icon>icon.skill0009</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
@@ -1120,7 +1137,6 @@
 		<effectRange>400</effectRange>
 		<fanRange>0;0;200;180</fanRange>
 		<hitTime>720</hitTime>
-		<icon>icon.skill0009</icon>
 		<itemConsumeCount>3</itemConsumeCount>
 		<itemConsumeId>5589</itemConsumeId> <!-- Energy Stone -->
 		<magicLvl>
@@ -1204,7 +1220,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
@@ -1215,7 +1230,7 @@
 					<item>DUAL</item>
 					<item>SWORD</item>
 					<item>BLUNT</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -1266,9 +1281,9 @@
 		</effects>
 	</skill>
 	<skill id="10" toLevel="8" name="Summon Storm Cubic">
-		<!-- Confirmed CT2.5 -->
-		<hitTime>6000</hitTime>
+		<!-- Summons a storm cubic that inflicts damage on the enemy with magic. Consumes $s1 Spirit Ore when summoning. -->
 		<icon>icon.skill0010</icon>
+		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">4</value>
@@ -1313,7 +1328,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1337,8 +1351,8 @@
 		</effects>
 	</skill>
 	<skill id="11" toLevel="12" name="Trick">
-		<!-- Confirmed CT2.5 -->
-		<!-- NOTE: skill desc says "Requires a dagger" but is client typo -->
+		<!-- Reduces the enemy's aggressive tendencies, causing them to cancel their target. -->
+		<icon>icon.skill0011</icon>
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">-119</value>
@@ -1356,7 +1370,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill0011</icon>
 		<magicLvl>
 			<value level="1">49</value>
 			<value level="2">52</value>
@@ -1387,7 +1400,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -1402,8 +1414,8 @@
 		</effects>
 	</skill>
 	<skill id="12" toLevel="14" name="Switch">
-		<!-- Confirmed CT2.5 -->
-		<!-- NOTE: skill desc says "Requires a dagger" but is client typo -->
+		<!-- Confuses the enemy, causing them to cancel their target. -->
+		<icon>icon.skill0012</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-104</value>
@@ -1423,7 +1435,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill0012</icon>
 		<magicLvl>
 			<value level="1">43</value>
 			<value level="2">46</value>
@@ -1458,7 +1469,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -1473,8 +1483,9 @@
 		</effects>
 	</skill>
 	<skill id="13" toLevel="1" name="Summon Siege Golem">
-		<hitTime>180000</hitTime>
+		<!-- Summons a siege weapon. Requires 180 C-grade Crystals. -->
 		<icon>icon.skill0013</icon>
+		<hitTime>180000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>180</itemConsumeCount>
 		<itemConsumeId>1459</itemConsumeId> <!-- Crystal (C-Grade) -->
@@ -1482,7 +1493,6 @@
 		<mpInitialConsume>530</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1492,18 +1502,18 @@
 		</conditions>
 		<effects>
 			<effect name="Summon">
-				<npcId>14737</npcId>
-				<consumeItemId>2131</consumeItemId>
+				<npcId>14737</npcId> <!-- Siege Golem -->
+				<consumeItemId>2131</consumeItemId> <!-- Gemstone (C-grade) -->
 				<consumeItemCount>40</consumeItemCount>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="15" toLevel="54" name="Charm">
-		<!-- Confirmed CT2.5 -->
+		<!-- Enemy's aggression toward the user -$s1. -->
+		<icon>icon.skill0015</icon>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0015</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
@@ -1676,7 +1686,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -1743,6 +1752,8 @@
 		</effects>
 	</skill>
 	<skill id="16" toLevel="24" name="Mortal Blow">
+		<!-- Attacks the target's vital points. Over-hit. Requires a dagger. Power $s1 added to P. Atk. -->
+		<icon>icon.skill0016</icon>
 		<castRange>40</castRange>
 		<affectRange>40</affectRange>
 		<coolTime>720</coolTime>
@@ -1774,7 +1785,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0016</icon>
 		<magicLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -1830,7 +1840,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1875,6 +1884,8 @@
 		</effects>
 	</skill>
 	<skill id="17" toLevel="37" name="Force Burst">
+		<!-- Hurls a powerful burst of energy at enemies in front with $s1 Power added to P. Atk. Requires a fist weapon. Increases Power upon consuming Momentum, and consumes up to $s3. Consumes $s2 Momentum Stones. Over-hit. Critical. -->
+		<icon>icon.skill0017</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
@@ -1921,7 +1932,6 @@
 		<effectRange>400</effectRange>
 		<fanRange>0;0;200;180</fanRange>
 		<hitTime>783</hitTime>
-		<icon>icon.skill0017</icon>
 		<itemConsumeCount>2</itemConsumeCount>
 		<itemConsumeId>5589</itemConsumeId> <!-- Energy Stone -->
 		<magicLvl>
@@ -2005,7 +2015,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
@@ -2064,7 +2073,8 @@
 		</effects>
 	</skill>
 	<skill id="18" toLevel="45" name="Aggression Aura">
-		<!-- Confirmed CT2.5 -->
+		<!-- Provokes nearby enemies to switch the target and attack you with $s1 Power. -->
+		<icon>icon.skill0018</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
@@ -2113,7 +2123,6 @@
 			<value level="40">-8012</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0018</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">38</value>
@@ -2211,7 +2220,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>40000</reuseDelay>
-		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2224,6 +2232,8 @@
 		</effects>
 	</skill>
 	<skill id="19" toLevel="45" name="Double Shot">
+		<!-- Shoots $s1 arrows in succession to attack the enemy with $s2 Power added to P. Atk. Requires a bow. Over-hit. Critical. -->
+		<icon>icon.skill0019</icon>
 		<castRange>900</castRange>
 		<coolTime>1000</coolTime>
 		<effectPoint>
@@ -2270,7 +2280,6 @@
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0019</icon>
 		<magicLvl>
 			<value level="1">38</value>
 			<value level="2">39</value>
@@ -2367,7 +2376,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2433,13 +2441,14 @@
 		</effects>
 	</skill>
 	<skill id="21" toLevel="3" name="Poison Recovery">
+		<!-- Cures the target of minor poisoning. -->
+		<icon>icon.skill0021</icon>
 		<effectPoint>
 			<value level="1">204</value>
 			<value level="2">379</value>
 			<value level="3">566</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0021</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">20</value>
@@ -2458,7 +2467,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2473,9 +2481,9 @@
 		</effects>
 	</skill>
 	<skill id="22" toLevel="7" name="Summon Vampiric Cubic">
-		<!-- Confirmed CT2.5 -->
-		<hitTime>6000</hitTime>
+		<!-- Summons a Vampiric Cubic. A Vampiric Cubic uses magic that absorbs the target's HP and with it regenerates its master's HP. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill0022</icon>
+		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">5</value>
@@ -2516,7 +2524,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2539,6 +2546,8 @@
 		</effects>
 	</skill>
 	<skill id="24" toLevel="34" name="Burst Shot">
+		<!-- Fires an exploding arrow to attack the enemy's surroundings with $s1 Power added to P. Atk. Requires a bow. Over-hit. -->
+		<icon>icon.skill0024</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
@@ -2581,7 +2590,6 @@
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>3200</hitTime>
-		<icon>icon.skill0024</icon>
 		<magicLvl>
 			<value level="1">44</value>
 			<value level="2">45</value>
@@ -2656,7 +2664,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -2711,8 +2718,9 @@
 		</effects>
 	</skill>
 	<skill id="25" toLevel="14" name="Summon Mechanic Golem">
-		<hitTime>15000</hitTime>
+		<!-- Summons a mechanic golem that uses a cannon for ranged attacks. Requires $s1 D-grade Crystals. -->
 		<icon>icon.skill0025</icon>
+		<hitTime>15000</hitTime>
 		<itemConsumeCount>
 			<value level="1">7</value>
 			<value level="2">11</value>
@@ -2779,7 +2787,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2809,6 +2816,8 @@
 		</effects>
 	</skill>
 	<skill id="27" toLevel="14" name="Unlock">
+		<!-- Has a $s1 chance to open a level $s2 door, and $s3 chance to open a treasure chest. Requires $s4 Thief Keys. -->
+		<icon>icon.skill0027</icon>
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">-1</value>
@@ -2828,7 +2837,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0027</icon>
 		<itemConsumeCount>
 			<value level="1">2</value>
 			<value level="2">2</value>
@@ -2880,7 +2888,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2910,7 +2917,8 @@
 		</effects>
 	</skill>
 	<skill id="28" toLevel="57" name="Aggression">
-		<!-- Confirmed CT2.5 -->
+		<!-- Provokes the enemy to switch the target and attack you with $s1 Power. -->
+		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
@@ -3078,7 +3086,6 @@
 			<value level="52">1300</value>
 		</effectRange>
 		<hitTime>700</hitTime>
-		<icon>icon.skill0028</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">22</value>
@@ -3141,7 +3148,6 @@
 		</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3153,6 +3159,8 @@
 		</effects>
 	</skill>
 	<skill id="29" toLevel="24" name="Iron Punch">
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a fist weapon. Over-hit. -->
+		<icon>icon.skill0029</icon>
 		<castRange>40</castRange>
 		<coolTime>296</coolTime>
 		<effectPoint>
@@ -3183,7 +3191,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1604</hitTime>
-		<icon>icon.skill0029</icon>
 		<magicLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -3239,7 +3246,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3257,6 +3263,8 @@
 		</effects>
 	</skill>
 	<skill id="30" toLevel="45" name="Backstab">
+		<!-- Attacks the enemy's unprotected back with $s1 Power added to P. Atk. Requires a dagger to be equipped. Over-hit. Critical. -->
+		<icon>icon.skill0030</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -3303,7 +3311,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0030</icon>
 		<magicLvl>
 			<value level="1">38</value>
 			<value level="2">39</value>
@@ -3401,7 +3408,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3409,7 +3415,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DAGGER</item>
-
+					<item>DUALDAGGER</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -3564,9 +3570,9 @@
 		</effects>
 	</skill>
 	<skill id="33" toLevel="8" name="Summon Phantom Cubic">
-		<!-- Confirmed CT2.5 -->
-		<hitTime>6000</hitTime>
+		<!-- Summons Phantom Cubic. A Phantom Cubic uses magic that decreases the target's P. Atk., P. Def., and Atk. Spd. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill0033</icon>
+		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">2</value>
@@ -3611,7 +3617,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3635,13 +3640,14 @@
 		</effects>
 	</skill>
 	<skill id="34" toLevel="3" name="Bandage">
+		<!-- Cures minor bleeding. -->
+		<icon>icon.skill0034</icon>
 		<effectPoint>
 			<value level="1">204</value>
 			<value level="2">438</value>
 			<value level="3">582</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0034</icon>
 		<magicLvl>
 			<value level="1">20</value>
 			<value level="2">46</value>
@@ -3654,7 +3660,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3669,7 +3674,8 @@
 		</effects>
 	</skill>
 	<skill id="35" toLevel="44" name="Force Storm">
-		<!-- Confirmed CT2.5 and Updated to IO -->
+		<!-- Attacks near the enemy with $s1 Power added to P. Atk. Requires a sword, blunt weapon, spear, fist weapon, or dual sword. Over-hit. Critical. -->
+		<icon>icon.skill0035</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
@@ -3722,7 +3728,6 @@
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>1790</hitTime>
-		<icon>icon.skill0035</icon>
 		<magicLvl>
 			<value level="1">47</value>
 			<value level="2">48</value>
@@ -3818,7 +3823,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -3892,6 +3896,8 @@
 		</effects>
 	</skill>
 	<skill id="36" toLevel="40" name="Spinning Slasher">
+		<!-- Swings a spear to attack nearby enemies with $s1 Power added to P. Atk. Requires a polearm to be equipped. Ignores Shield Defense. Over-hit. -->
+		<icon>icon.skill0036</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
 		<coolTime>733</coolTime>
@@ -3938,7 +3944,6 @@
 			<value level="40">-340</value>
 		</effectPoint>
 		<hitTime>1067</hitTime>
-		<icon>icon.skill0036</icon>
 		<magicLvl>
 			<value level="1">38</value>
 			<value level="2">39</value>
@@ -4025,7 +4030,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -4088,17 +4092,16 @@
 		</effects>
 	</skill>
 	<skill id="42" toLevel="1" name="Sweeper">
-		<!-- Confirmed CT2.5 -->
+		<!-- Use on the corpses of Spoiled monsters to obtain extra items. -->
+		<icon>icon.skill0042</icon>
 		<castRange>20</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill0042</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>10</magicLvl>
 		<mpConsume>3</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>500</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NPC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4112,13 +4115,14 @@
 		</effects>
 	</skill>
 	<skill id="44" toLevel="3" name="Remedy">
+		<!-- Cures minor bleeding. -->
+		<icon>icon.skill0044</icon>
 		<effectPoint>
 			<value level="1">379</value>
 			<value level="2">467</value>
 			<value level="3">582</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0044</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -4137,7 +4141,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4152,6 +4155,8 @@
 		</effects>
 	</skill>
 	<skill id="45" toLevel="9" name="Divine Heal">
+		<!-- Restores HP with $s1 Power. -->
+		<icon>icon.skill0045</icon>
 		<effectPoint>
 			<value level="1">204</value>
 			<value level="2">214</value>
@@ -4164,7 +4169,6 @@
 			<value level="9">313</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill0045</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">26</value>
@@ -4201,7 +4205,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4222,10 +4225,11 @@
 		</effects>
 	</skill>
 	<skill id="46" toLevel="23" name="Life Scavenge">
+		<!-- Drains HP from corpses and uses it to restore your HP. -->
+		<icon>icon.skill0046</icon>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0046</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -4304,7 +4308,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NPC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4343,7 +4346,8 @@
 		</effects>
 	</skill>
 	<skill id="48" toLevel="49" name="Thunder Storm">
-		<!-- Confirmed CT2.5 and Updated to IO -->
+		<!-- Swings a spear to attack nearby enemies with $s1 Power added to P. Atk. and causes Stun for $s2. Requires a polearm to be equipped. Ignores Shield Defense. Over-hit. Critical. -->
+		<icon>icon.skill0048</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -4408,7 +4412,6 @@
 			<value level="49">-167</value>
 		</effectPoint>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0048</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -4515,7 +4518,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
@@ -4595,6 +4597,8 @@
 		</effects>
 	</skill>
 	<skill id="49" toLevel="26" name="Holy Strike">
+		<!-- Inflicts holy damage on the undead with $s1 Power added to M. Atk. -->
+		<icon>icon.skill0049</icon>
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">-418</value>
@@ -4628,7 +4632,6 @@
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1900</hitTime>
-		<icon>icon.skill0049</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -4716,7 +4719,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4759,11 +4761,11 @@
 		</effects>
 	</skill>
 	<skill id="50" toLevel="8" name="Focus Force">
-		<!-- Confirmed CT2.5 -->
+		<!-- Channels Momentum when using a fist weapon. Momentum will disperse after 10 min. of non-use. Can be charged up to level $s1. -->
+		<icon>icon.skill0050</icon>
 		<effectPoint>150</effectPoint>
 		<hitTime>900</hitTime>
 		<hpConsume>20</hpConsume>
-		<icon>icon.skill0050</icon>
 		<magicLvl>
 			<value level="1">24</value>
 			<value level="2">32</value>
@@ -4776,7 +4778,6 @@
 		</magicLvl>
 		<mpConsume>5</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4815,16 +4816,15 @@
 		</effects>
 	</skill>
 	<skill id="51" toLevel="1" name="Lure">
-		<!-- Confirmed CT2.5 -->
+		<!-- Quietly lures the enemy. -->
+		<icon>icon.skill0051</icon>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0051</icon>
 		<magicLvl>52</magicLvl>
 		<mpConsume>44</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -4836,6 +4836,8 @@
 		</effects>
 	</skill>
 	<skill id="54" toLevel="57" name="Force Blaster">
+		<!-- Discharges a powerful energy beam at the enemy with $s1 Power added to P. Atk. Requires a fist weapon. Increases Power upon consumption of Momentum, and consumes up to $s2. Over-hit. Critical. -->
+		<icon>icon.skill0054</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-130</value>
@@ -4893,7 +4895,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1900</hitTime>
-		<icon>icon.skill0054</icon>
 		<magicLvl>
 			<value level="1">22</value>
 			<value level="2">23</value>
@@ -5014,7 +5015,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE</rideState>
 		<!-- charge values -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<chargeConsume>1</chargeConsume>
@@ -5094,6 +5094,8 @@
 		</effects>
 	</skill>
 	<skill id="56" toLevel="24" name="Power Shot">
+		<!-- Makes a powerful long-distance attack with $s1 Power added to P. Atk. Requires a bow. Over-hit. -->
+		<icon>icon.skill0056</icon>
 		<castRange>700</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>
@@ -5124,7 +5126,6 @@
 		</effectPoint>
 		<effectRange>1200</effectRange>
 		<hitTime>3200</hitTime>
-		<icon>icon.skill0056</icon>
 		<magicLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -5179,7 +5180,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -5223,6 +5223,8 @@
 		</effects>
 	</skill>
 	<skill id="58" toLevel="55" name="Elemental Heal">
+		<!-- Restores HP with $s1 Power. -->
+		<icon>icon.skill0058</icon>
 		<effectPoint>
 			<value level="1">101</value>
 			<value level="2">107</value>
@@ -5281,7 +5283,6 @@
 			<value level="55">780</value>
 		</effectPoint>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill0058</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">13</value>
@@ -5456,7 +5457,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -5523,11 +5523,11 @@
 		</effects>
 	</skill>
 	<skill id="60" toLevel="1" name="Fake Death">
+		<!-- Plays dead to keep a monster from attacking. Consumes 10 MP per sec. -->
 		<icon>icon.skill0060</icon>
 		<magicLvl>40</magicLvl>
 		<mpConsume>200</mpConsume>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
@@ -5541,13 +5541,14 @@
 		</effects>
 	</skill>
 	<skill id="61" toLevel="3" name="Cure Bleeding">
+		<!-- Cures minor bleeding. -->
+		<icon>icon.skill0061</icon>
 		<effectPoint>
 			<value level="1">235</value>
 			<value level="2">438</value>
 			<value level="3">582</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0061</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">24</value>
@@ -5566,7 +5567,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -5581,6 +5581,8 @@
 		</effects>
 	</skill>
 	<skill id="65" toLevel="18" name="Horror">
+		<!-- Frightens the enemy into fleeing for $s1. -->
+		<icon>icon.skill0065</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -5607,7 +5609,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0065</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -5673,7 +5674,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -5684,9 +5684,9 @@
 		</effects>
 	</skill>
 	<skill id="67" toLevel="7" name="Summon Life Cubic">
-		<!-- Confirmed CT2.5 -->
-		<hitTime>6000</hitTime>
+		<!-- Summons a Life Cubic. The Life Cubic uses magic to regenerate HP to its owner and party members. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill0067</icon>
+		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">5</value>
@@ -5727,7 +5727,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -5750,7 +5749,8 @@
 		</effects>
 	</skill>
 	<skill id="69" toLevel="32" name="Sacrifice">
-		<!-- Confirmed CT2.5 and Updated to IO -->
+		<!-- Consumes your HP to recover the target's HP by $s1. -->
+		<icon>icon.skill0069</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">494</value>
@@ -5822,7 +5822,6 @@
 			<value level="31">1594</value>
 			<value level="32">1605</value>
 		</hpConsume>
-		<icon>icon.skill0069</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">50</value>
@@ -5860,7 +5859,6 @@
 		</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -5904,6 +5902,8 @@
 		</effects>
 	</skill>
 	<skill id="70" toLevel="56" name="Drain HP">
+		<!-- Inflicts dark damage on the target with $s1 Power added to M. Atk. Absorbs $s2 of the damage inflicted on target as HP. -->
+		<icon>icon.skill0070</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-78</value>
@@ -5967,7 +5967,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0070</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">13</value>
@@ -6145,7 +6144,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -6214,8 +6212,8 @@
 		</effects>
 	</skill>
 	<skill id="72" toLevel="3" name="Iron Will">
-		<!-- Confirmed CT2.5 -->
-		<!-- NOTE: Enchant 2 in client says "Decreases MP consumption" in some levels, but is client typo -->
+		<!-- M. Def. +$s2 for $s1. -->
+		<icon>icon.skill0072</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -6229,7 +6227,6 @@
 			<value level="3">523</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill0072</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">43</value>
@@ -6248,7 +6245,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -6265,17 +6261,17 @@
 		</effects>
 	</skill>
 	<skill id="75" toLevel="1" name="Detect Insect Weakness">
+		<!-- For 10 min., increases damage against insects +5%. -->
+		<icon>icon.skill0075</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DETECT_WEAKNESS</abnormalType>
 		<effectPoint>303</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0075</icon>
 		<magicLvl>32</magicLvl>
 		<mpConsume>14</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -6287,17 +6283,17 @@
 		</effects>
 	</skill>
 	<skill id="76" toLevel="1" name="Bear Spirit Totem">
+		<!-- Possessed by a Bear's Spirit, P. Atk., P. Def. and M. Def. +10%, Critical Damage +10% for 5 min. Requires a fist weapon. -->
+		<icon>icon.skill0076</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<effectPoint>268</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0076</icon>
 		<magicLvl>28</magicLvl>
 		<mpConsume>25</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>23000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -6311,18 +6307,28 @@
 		</conditions>
 		<effects>
 			<effect name="PAtk">
-				<amount>20</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>DUALFIST</item>
 				</weaponType>
 			</effect>
-			<effect name="Speed">
-				<amount>-30</amount>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
 			</effect>
 			<effect name="CriticalDamage">
-				<amount>20</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>DUALFIST</item>
@@ -6331,6 +6337,8 @@
 		</effects>
 	</skill>
 	<skill id="77" toLevel="2" name="Attack Aura">
+		<!-- P. Atk. +$s2 for $s1. -->
+		<icon>icon.skill0077</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -6342,7 +6350,6 @@
 			<value level="2">268</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill0077</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">10</value>
@@ -6358,7 +6365,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -6374,6 +6380,8 @@
 		</effects>
 	</skill>
 	<skill id="78" toLevel="4" name="War Cry">
+		<!-- P. Atk. +$s2 for $s1. -->
+		<icon>icon.skill0078</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -6392,7 +6400,6 @@
 			<value level="2">408</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0078</icon>
 		<magicLvl>
 			<value level="1">20</value>
 			<value level="2">43</value>
@@ -6407,7 +6414,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>45000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -6425,17 +6431,17 @@
 		</effects>
 	</skill>
 	<skill id="80" toLevel="1" name="Detect Beast Weakness">
+		<!-- For 10 min., damage against monsters +5%. -->
+		<icon>icon.skill0080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DETECT_WEAKNESS</abnormalType>
 		<effectPoint>495</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0080</icon>
 		<magicLvl>52</magicLvl>
 		<mpConsume>24</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -6447,6 +6453,8 @@
 		</effects>
 	</skill>
 	<skill id="81" toLevel="3" name="Punch of Doom">
+		<!-- Inflicts great damage on the enemy with iron-fist. Requires a fist weapon. Ignores Shield Defense. Over-hit. Critical. Power $s1. -->
+		<icon>icon.skill0081</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -6464,7 +6472,6 @@
 			<value level="2">455</value>
 			<value level="3">499</value>
 		</hpConsume>
-		<icon>icon.skill0081</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">55</value>
@@ -6474,7 +6481,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
@@ -6500,7 +6506,8 @@
 		</effects>
 	</skill>
 	<skill id="82" toLevel="3" name="Majesty">
-		<!-- Confirmed CT2.5 -->
+		<!-- P. Def. +$s2 and Evasion -$s3 for $s1. -->
+		<icon>icon.skill0082</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -6514,7 +6521,6 @@
 			<value level="3">549</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0082</icon>
 		<magicLvl>
 			<value level="1">20</value>
 			<value level="2">40</value>
@@ -6527,7 +6533,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -6552,17 +6557,17 @@
 		</effects>
 	</skill>
 	<skill id="83" toLevel="1" name="Wolf Spirit Totem">
+		<!-- Possessed by a Wolf's Spirit, Speed and Atk. Spd. Boost +10%, Accuracy +3 for 5 min. Requires a fist weapon. -->
+		<icon>icon.skill0083</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<effectPoint>204</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0083</icon>
 		<magicLvl>20</magicLvl>
 		<mpConsume>19</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>23000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -6576,8 +6581,15 @@
 		</conditions>
 		<effects>
 			<effect name="Speed">
-				<amount>20</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
 			</effect>
 			<effect name="Accuracy">
 				<amount>3</amount>
@@ -6589,6 +6601,8 @@
 		</effects>
 	</skill>
 	<skill id="84" toLevel="5" name="Poison Blade Dance">
+		<!-- A sword emits a toxic cloud that momentarily damages and poisons nearby enemies. Requires a dual sword. -->
+		<icon>icon.skill0084</icon>
 		<abnormalLvl>
 			<value level="1">6</value>
 			<value level="2">7</value>
@@ -6612,7 +6626,6 @@
 			<value level="4">-712</value>
 		</effectPoint>
 		<hitTime>1833</hitTime>
-		<icon>icon.skill0084</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -6631,7 +6644,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>POISON</trait>
 		<targetType>SELF</targetType>
@@ -6641,7 +6653,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -6662,6 +6674,8 @@
 		</effects>
 	</skill>
 	<skill id="86" toLevel="3" name="Reflect Damage">
+		<!-- For $s1, returns $s2 of damage received by the target back to the enemy. -->
+		<icon>icon.skill0086</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -6675,7 +6689,6 @@
 			<value level="3">495</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill0086</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -6694,7 +6707,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -6710,17 +6722,17 @@
 		</effects>
 	</skill>
 	<skill id="87" toLevel="1" name="Detect Animal Weakness">
+		<!-- For 10 min., damage against animals +5%. -->
+		<icon>icon.skill0087</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DETECT_WEAKNESS</abnormalType>
 		<effectPoint>379</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0087</icon>
 		<magicLvl>40</magicLvl>
 		<mpConsume>18</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -6732,17 +6744,17 @@
 		</effects>
 	</skill>
 	<skill id="88" toLevel="1" name="Detect Dragon Weakness">
+		<!-- For 10 min., damage against dragons +5%. -->
+		<icon>icon.skill0088</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DETECT_WEAKNESS</abnormalType>
 		<effectPoint>549</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0088</icon>
 		<magicLvl>58</magicLvl>
 		<mpConsume>27</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -6754,6 +6766,8 @@
 		</effects>
 	</skill>
 	<skill id="91" toLevel="2" name="Defense Aura">
+		<!-- Increases P. Def. by $s2 for $s1. -->
+		<icon>icon.skill0091</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -6765,7 +6779,6 @@
 			<value level="2">204</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill0091</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">5</value>
@@ -6781,7 +6794,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -6797,6 +6809,8 @@
 		</effects>
 	</skill>
 	<skill id="92" toLevel="60" name="Shield Stun">
+		<!-- Makes an attack with a shield, stunning the target for $s1. Requires a shield. -->
+		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -6864,7 +6878,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill0092</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -6994,7 +7007,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -7009,7 +7021,8 @@
 		</effects>
 	</skill>
 	<skill id="94" toLevel="7" name="Rage">
-		<!-- Confirmed CT2.5 and Updated to IO -->
+		<!-- For $s1 P. Atk. +$s2. When using a two-handed sword/ two-handed blunt/ polearm additionally P. Atk. +$s3, when using a two-handed sword/ two-handed blunt Accuracy +$s4. Requires a sword/ blunt/ polearm/ fist weapon/ dual swords. -->
+		<icon>icon.skill0094</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -7026,7 +7039,6 @@
 		<abnormalType>PA_UP_SPECIAL</abnormalType>
 		<effectPoint>235</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0094</icon>
 		<magicLvl>
 			<value level="1">24</value>
 			<value level="2">55</value>
@@ -7047,7 +7059,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -7060,7 +7071,7 @@
 					<item>SWORD</item>
 					<item>BLUNT</item>
 					<item>DUALFIST</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -7105,7 +7116,7 @@
 					<item>POLE</item>
 					<item>FIST</item>
 					<item>DUAL</item>
-
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="PhysicalAttackSpeed" fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2030">
@@ -7117,6 +7128,8 @@
 		</effects>
 	</skill>
 	<skill id="95" toLevel="22" name="Cripple">
+		<!-- Enemy's Speed -$s2 for $s1. Requires a fist weapon. -->
+		<icon>icon.skill0095</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">2</value>
@@ -7173,7 +7186,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1604</hitTime>
-		<icon>icon.skill0095</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -7226,7 +7238,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -7268,6 +7279,8 @@
 		</effects>
 	</skill>
 	<skill id="96" toLevel="7" name="Bleed">
+		<!-- Enemy's Speed -$s2 for $s1, and inflicts Bleed, causing them to lose $s3 HP every sec. Requires a dagger. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -7296,7 +7309,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -7320,7 +7332,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>BLEED</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -7329,7 +7340,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DAGGER</item>
-
+					<item>DUALDAGGER</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -7353,6 +7364,8 @@
 		</effects>
 	</skill>
 	<skill id="97" toLevel="13" name="Sanctuary">
+		<!-- P. Atk. of nearby undead monsters -$s2 for $s1. -->
+		<icon>icon.skill0097</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
@@ -7376,7 +7389,6 @@
 			<value level="13">-682</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0097</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -7411,7 +7423,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -7424,7 +7435,8 @@
 		</effects>
 	</skill>
 	<skill id="98" toLevel="8" name="Sword Symphony">
-		<!-- Glory Days Confirmed -->
+		<!-- Attacks the enemy with 825 Power added to P. Atk. and blocks the use of magic skills for 10 sec. Over-hit. Critical. -->
+		<icon>icon.skill0098</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
@@ -7442,7 +7454,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0098</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -7467,7 +7478,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -7491,6 +7501,8 @@
 		</effects>
 	</skill>
 	<skill id="99" toLevel="2" name="Rapid Shot">
+		<!-- Increases bow Atk. Spd. by $s2 for $s1. -->
+		<icon>icon.skill0099</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -7502,7 +7514,6 @@
 			<value level="2">549</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0099</icon>
 		<magicLvl>
 			<value level="1">32</value>
 			<value level="2">55</value>
@@ -7517,7 +7528,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>

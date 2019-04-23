@@ -16,9 +16,7 @@
  */
 package quests.Q00360_PlunderTheirSupplies;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -26,6 +24,9 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
 import org.l2j.gameserver.util.Util;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Plunder Supplies (360)
@@ -95,7 +96,7 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		final QuestState st = getQuestState(killer, false);
-		if ((st == null) || !Util.checkIfInRange(1500, npc, killer, false))
+		if ((st == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, false))
 		{
 			return super.onKill(npc, killer, isPet);
 		}

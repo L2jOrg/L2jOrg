@@ -16,6 +16,8 @@
  */
 package handlers.effecthandlers;
 
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
@@ -23,7 +25,6 @@ import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.SystemMessageId;
 
 /**
@@ -39,7 +40,22 @@ public final class Spoil extends AbstractEffect
 	@Override
 	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
-		return Formulas.calcMagicSuccess(effector, effected, skill);
+		final int lvlDifference = (effected.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : effector.getLevel()));
+		final double lvlModifier = Math.pow(1.3, lvlDifference);
+		float targetModifier = 1;
+		if (effected.isAttackable() && !effected.isRaid() && !effected.isRaidMinion() && (effected.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (effector.getActingPlayer() != null) && ((effected.getLevel() - effector.getActingPlayer().getLevel()) >= 3))
+		{
+			final int lvlDiff = effected.getLevel() - effector.getActingPlayer().getLevel() - 2;
+			if (lvlDiff >= Config.NPC_SKILL_CHANCE_PENALTY.size())
+			{
+				targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(Config.NPC_SKILL_CHANCE_PENALTY.size() - 1);
+			}
+			else
+			{
+				targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(lvlDiff);
+			}
+		}
+		return Rnd.get(100) < (100 - Math.round((float) (lvlModifier * targetModifier)));
 	}
 	
 	@Override

@@ -149,7 +149,8 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91116" name="Nebula’s Old Necklace" additionalName="Lv4" type="Armor">
-		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<!-- MP +42, Water Attack Defense +80, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
+		<set name="icon" val="icon.elemental_necklace_water_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
@@ -167,7 +168,8 @@
 		</stats>
 	</item>
 	<item id="91117" name="Nebula’s Necklace" type="Armor">
-		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<!-- MP +42, Water Attack Defense +100, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
+		<set name="icon" val="icon.elemental_necklace_water_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
@@ -185,7 +187,8 @@
 		</stats>
 	</item>
 	<item id="91118" name="Ignis’ Old Necklace" additionalName="Lv4" type="Armor">
-		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<!-- MP +42, Fire Attack Defense +80, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
+		<set name="icon" val="icon.elemental_necklace_fire_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
@@ -203,7 +206,8 @@
 		</stats>
 	</item>
 	<item id="91119" name="Ignis’ Necklace" type="Armor">
-		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<!-- MP +50, Fire Attack Defense +100, Acquired Attribute XP +30%. Activates additional abilities after enchanting. -->
+		<set name="icon" val="icon.elemental_necklace_fire_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
@@ -221,7 +225,8 @@
 		</stats>
 	</item>
 	<item id="91120" name="Procella’s Old Necklace" additionalName="Lv4" type="Armor">
-		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<!-- MP +42, Wind Attack Defense +80, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
+		<set name="icon" val="icon.elemental_necklace_wind_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
@@ -239,7 +244,8 @@
 		</stats>
 	</item>
 	<item id="91121" name="Procella’s Necklace" type="Armor">
-		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<!-- MP +42, Wind Attack Defense +100, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
+		<set name="icon" val="icon.elemental_necklace_wind_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
@@ -257,7 +263,8 @@
 		</stats>
 	</item>
 	<item id="91122" name="Petram’s Old Necklace" additionalName="Lv4" type="Armor">
-		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<!-- MP +42, Earth Attack Defense +80, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
+		<set name="icon" val="icon.elemental_necklace_earth_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
@@ -275,7 +282,8 @@
 		</stats>
 	</item>
 	<item id="91123" name="Petram’s Necklace" type="Armor">
-		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<!-- MP +42, Earth Attack Defense +100, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
+		<set name="icon" val="icon.elemental_necklace_earth_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
@@ -429,12 +437,15 @@
 	</item>
 	<item id="91138" name="Reinforced Antharas' Earring" type="Armor">
 		<!-- MP +34, Bleed Resistance and Bleed Atk. Rate +10%, Stun Resistance and Stun Atk. Rate +10%, Mental Resistance and Atk. Rate +10%, Reflect Damage Resistance +7%, Healing Effects +10%, Skill MP Consumption -4%, Vampiric Rage effect +2%. The effect doesn't stack if two identical earrings are worn. -->
-		<set name="icon" val="icon.agathion_base" />
+		<set name="icon" val="icon.accessory_earring_of_antaras_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="120" />
+		<skills>
+			<skill id="3558" level="1" /> <!-- Antharas' Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">84</stat>
 		</stats>
@@ -582,6 +593,30 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="91154" name="Sibi's Samurai Black Long Sword" type="Weapon">
+		<!-- When successfully enchanted, a reward can be acquired. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Will be deleted after event. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="100" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">155</stat>
+			<stat type="mAtk">70</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
 	<item id="91155" name="Sibi's Weapon Enchant Scroll" type="EtcItem">
 		<!-- Enchant Scroll for Sibi's Samurai Black Long Sword. Starting from +3, P. Atk. +5/ M. Atk. +3. Starting from +4, P./ M. Atk. x2. Can be enchanted up to +23. Will be deleted after event. -->
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
@@ -639,6 +674,30 @@
 		<set name="weight" val="100" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+	</item>
+	<item id="91162" name="Golden Cheer Stamen" additionalName="Event" type="Weapon">
+		<!-- An item commemorating the game's 14th anniversary. Helps materializing your dreams. Allows using the Firecracker skill. Cannot be exchanged, dropped, sold, destroyed. Can be transferred between characters on one account and stored in a private warehouse. -->
+		<set name="icon" val="icon.ev_14th_weapon" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="MITHRIL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">12</stat>
+			<stat type="mAtk">12</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
 	</item>
 	<item id="91163" name="Anakim's Rune - Stage 1" type="EtcItem">
 		<!-- A stone with the power of Anakim. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="13856" toLevel="15" name="Might">
+		<!-- P. Atk. +$s1 -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -25,6 +26,7 @@
 		</effects>
 	</skill>
 	<skill id="13857" toLevel="15" name="Wrath">
+		<!-- Atk. Spd. +$s1 -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -49,6 +51,7 @@
 		</effects>
 	</skill>
 	<skill id="13858" toLevel="15" name="Focus">
+		<!-- P. Critical Rate. +$s1. -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -73,6 +76,7 @@
 		</effects>
 	</skill>
 	<skill id="13859" toLevel="15" name="Death">
+		<!-- P. Critical Damage +$s1. -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -97,17 +101,17 @@
 		</effects>
 	</skill>
 	<skill id="13860" toLevel="15" name="Hunter">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Skill Critical Rate + $s1, PvP Damage + $s2 -->
+		<!-- P. Skills Critical Rate +$s1. -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="13861" toLevel="15" name="Fire">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Skills Critical Damage +$s1. -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="13862" toLevel="15" name="Body">
+		<!-- Max HP +$s1 -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -132,6 +136,7 @@
 		</effects>
 	</skill>
 	<skill id="13863" toLevel="15" name="Empower">
+		<!-- M. Atk. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -156,6 +161,7 @@
 		</effects>
 	</skill>
 	<skill id="13864" toLevel="15" name="Acumen">
+		<!-- Casting Spd. +$s1 -->
 		<icon>icon.ensoul_big_m</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>1200</abnormalTime>
@@ -165,7 +171,6 @@
 		<hitCancelTime>0</hitCancelTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -192,6 +197,7 @@
 		</effects>
 	</skill>
 	<skill id="13865" toLevel="15" name="Savagery">
+		<!-- M. Critical Rate +$s1 -->
 		<icon>icon.ensoul_big_m</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -216,6 +222,7 @@
 		</effects>
 	</skill>
 	<skill id="13866" toLevel="15" name="Mystic">
+		<!-- M. Critical Damage +$s1 -->
 		<icon>icon.ensoul_big_m</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -240,6 +247,7 @@
 		</effects>
 	</skill>
 	<skill id="13867" toLevel="15" name="Soul">
+		<!-- Max MP +$s1 -->
 		<icon>icon.ensoul_big_m</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -264,6 +272,7 @@
 		</effects>
 	</skill>
 	<skill id="13868" toLevel="15" name="Speed Focus">
+		<!-- Atk. Spd. +$s1, P. Critical Rate +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -301,7 +310,7 @@
 		</effects>
 	</skill>
 	<skill id="13869" toLevel="15" name="Speed Death">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. +$s1, P. Critical Damage +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -346,17 +355,17 @@
 		</effects>
 	</skill>
 	<skill id="13870" toLevel="15" name="Speed Hunter">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. +$s1, P. Skills Critical Rate +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="13871" toLevel="15" name="Speed Fire">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. +$s1, P. Skills Critical Damage +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="13872" toLevel="15" name="Speed Body">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. +$s1 and Max HP +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -401,7 +410,7 @@
 		</effects>
 	</skill>
 	<skill id="13873" toLevel="15" name="Crit. Death">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Critical Rate +$s1, P. Critical Damage +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -439,17 +448,17 @@
 		</effects>
 	</skill>
 	<skill id="13874" toLevel="15" name="Crit. Hunter">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Critical Rate +$s1, P. Skills Critical Rate +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="13875" toLevel="15" name="Critical Flame">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Critical Rate +$s1, P. Skills Critical Damage +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="13876" toLevel="15" name="Critical Body">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Critical Rate +$s1, Max HP +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -487,7 +496,7 @@
 		</effects>
 	</skill>
 	<skill id="13877" toLevel="15" name="Acute Savagery">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Casting Spd. +$s1, M. Critical Rate +$s2. -->
 		<icon>icon.ensoul_big_mm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -532,8 +541,7 @@
 		</effects>
 	</skill>
 	<skill id="13878" toLevel="15" name="Acute Wizard">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Casting Spd. + $s1, M. Critical Damage + $s2 -->
+		<!-- Casting Spd. +$s1, M. Critical Damage +$s2. -->
 		<icon>icon.ensoul_big_mm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -578,8 +586,7 @@
 		</effects>
 	</skill>
 	<skill id="13879" toLevel="15" name="Acute Soul">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Casting Spd. + $s1, Max MP + $s2 -->
+		<!-- Casting Spd. +$s1, Max HP +$s2. -->
 		<icon>icon.ensoul_big_mm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -624,8 +631,7 @@
 		</effects>
 	</skill>
 	<skill id="13880" toLevel="15" name="Savagery. Wizard">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- M. Critical Rate + $s1, M. Critical Damage + $s2 -->
+		<!-- M. Critical Rate +$s1, M. Critical Damage +$s2. -->
 		<icon>icon.ensoul_big_mm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -670,8 +676,7 @@
 		</effects>
 	</skill>
 	<skill id="13881" toLevel="15" name="Savagery. Soul">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- M. Critical Rate + $s1, Max MP + $s2, PvP Damage + $s3 -->
+		<!-- M. Critical Rate +$s1, Max MP +$s2. -->
 		<icon>icon.ensoul_big_mm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -716,7 +721,7 @@
 		</effects>
 	</skill>
 	<skill id="13882" toLevel="15" name="HP Acumen">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP +$s1, Casting Spd. +$s2. -->
 		<icon>icon.ensoul_big_pm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -761,7 +766,7 @@
 		</effects>
 	</skill>
 	<skill id="13883" toLevel="15" name="HP-Savagery">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP +$s1, M. Critical Rate +$s2. -->
 		<icon>icon.ensoul_big_pm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -806,7 +811,7 @@
 		</effects>
 	</skill>
 	<skill id="13884" toLevel="15" name="HP Mystic">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP +$s1, M. Critical Damage +$s2. -->
 		<icon>icon.ensoul_big_pm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -851,7 +856,7 @@
 		</effects>
 	</skill>
 	<skill id="13885" toLevel="15" name="HP Soul">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Max CP +$s1, Max HP +$s2. -->
 		<icon>icon.ensoul_big_pm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -896,7 +901,7 @@
 		</effects>
 	</skill>
 	<skill id="13886" toLevel="15" name="MP Wrath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Max MP +$s1, Atk. Spd +$s2. -->
 		<icon>icon.ensoul_big_pm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -941,7 +946,7 @@
 		</effects>
 	</skill>
 	<skill id="13887" toLevel="15" name="MP Focus">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Max MP +$s1, P. Critical Rate +$s2. -->
 		<icon>icon.ensoul_big_pm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -993,7 +998,7 @@
 		</effects>
 	</skill>
 	<skill id="13888" toLevel="15" name="MP Death">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Max MP +$s1, P. Critical Damage +$s2. -->
 		<icon>icon.ensoul_big_pm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1038,12 +1043,12 @@
 		</effects>
 	</skill>
 	<skill id="13889" toLevel="15" name="MP Hunter">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Max MP +$s1, P. Skills Critical Rate +$s2. -->
 		<icon>icon.ensoul_big_pm</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="13890" toLevel="15" name="MP Fire">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Max MP +$s1, P. Skills Critical Damage +$s2. -->
 		<icon>icon.ensoul_big_pm</icon>
 		<operateType>P</operateType>
 	</skill>

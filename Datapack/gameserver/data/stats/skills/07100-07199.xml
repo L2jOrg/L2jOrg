@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="7100" toLevel="1" name="Clan-exclusive Pet Stun">
-		<!-- Glory Days confirmed -->
-		<!-- Stuns the target for 3 seconds. -->
+		<!-- Stuns for 3 sec. -->
 		<icon>icon.skill5168</icon>
 		<operateType>A2</operateType>
 		<mpConsume>5</mpConsume>
@@ -11,7 +10,6 @@
 		<effectPoint>-700</effectPoint>
 		<abnormalType>STUN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
@@ -30,8 +28,7 @@
 		</effects>
 	</skill>
 	<skill id="7101" toLevel="1" name="Clan-exclusive Pet Aerial Thrust">
-		<!-- Glory Days confirmed -->
-		<!-- Lifts and holds the target in the air for 3 seconds. -->
+		<!-- Lifts and holds the target in the air for 3 sec. -->
 		<icon>icon.skill11276</icon>
 		<operateType>A2</operateType>
 		<mpConsume>5</mpConsume>
@@ -42,7 +39,6 @@
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
@@ -71,10 +67,7 @@
 		</effects>
 	</skill>
 	<skill id="7102" toLevel="1" name="Summon Clan Pet">
-		<!-- Glory Days confirmed -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
@@ -92,12 +85,9 @@
 		</effects>
 	</skill>
 	<skill id="7103" toLevel="1" name="Helping Tree CP Recovery Range">
-		<!-- Glory Days confirmed -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>300</hitTime>
 		<effectPoint>635</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -109,15 +99,13 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="7104" toLevel="1" name="Pa'agrio's Hand">
-		<!-- Glory Days confirmed -->
-		<!-- Raise the temperature of the Draco Egg through Pa'agrio's Hand. It raises the temperature by 1 - 10 degrees on a Small Draco Egg and 0.1 - 1.0 degrees on a Large Draco Egg. The Fire Spirit Agathion must be summoned for it to be used. -->
+		<!-- Raise the temperature of the Draco Egg through Pa'agrio's Hand. It raises the temperature by 1 - 10 degrees on a Small Draco Egg and 0.1 - 1.0 degrees on a Large Draco Egg. The Spirit of Flame Agathion must be summoned for it to be used. -->
 		<icon>icon.skill11775</icon>
 		<operateType>A1</operateType>
 		<castRange>100</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<magicLvl>1</magicLvl>
@@ -127,14 +115,11 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="7105" toLevel="1" name="Attempt Incubation">
-		<!-- Glory Days confirmed -->
-		<!-- Incubation Possible -->
-		<icon>icon.skill0000</icon>
+		<!-- Attempt Incubation -->
 		<operateType>A1</operateType>
 		<castRange>100</castRange>
 		<effectPoint>-1</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>700</effectRange>
 		<magicLvl>1</magicLvl>
@@ -153,14 +138,11 @@
 		</conditions>
 	</skill>
 	<skill id="7106" toLevel="1" name="Optimal Temperature Incubation Success">
-		<!-- Glory Days confirmed -->
 		<!-- Optimal Temperature Incubation Success -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>800</coolTime>
 		<effectPoint>-1</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<reuseDelay>2000</reuseDelay>
@@ -178,14 +160,11 @@
 		</conditions>
 	</skill>
 	<skill id="7107" toLevel="1" name="Incubation Success">
-		<!-- Glory Days confirmed -->
 		<!-- Incubation Success -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>800</coolTime>
 		<effectPoint>-1</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<reuseDelay>2000</reuseDelay>
@@ -203,14 +182,11 @@
 		</conditions>
 	</skill>
 	<skill id="7108" toLevel="1" name="Incubation Failure">
-		<!-- Glory Days confirmed -->
 		<!-- Incubation Failure -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<coolTime>800</coolTime>
 		<effectPoint>-1</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<reuseDelay>2000</reuseDelay>
@@ -228,7 +204,6 @@
 		</conditions>
 	</skill>
 	<skill id="7113" toLevel="1" name="Pet Invincibility Effect">
-		<!-- Glory Days confirmed -->
 		<!-- Invincibility Effect -->
 		<icon>icon.skill0442</icon>
 		<operateType>A2</operateType>
@@ -237,7 +212,6 @@
 		<effectPoint>-100</effectPoint>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -257,17 +231,15 @@
 		</effects>
 	</skill>
 	<skill id="7115" toLevel="1" name="Energy of Chaos">
-		<!-- Glory Days confirmed -->
 		<!-- Character's hair and cloak have been changed due to participation in the Ceremony of Chaos. -->
+		<icon>icon.skill0810</icon>
 		<abnormalTime>600</abnormalTime>
 		<abnormalVisualEffect>CURIOUS_HOUSE</abnormalVisualEffect>
-		<icon>icon.skill0810</icon>
 		<canBeDispelled>false</canBeDispelled>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>CURIOUS_HOUSE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>85</magicLvl>
@@ -278,48 +250,44 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="7122" toLevel="1" name="Raid Boss (Lv. 75)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Enchanted by Shilen, enshrouded in darkness, Queen Ant's minion is guarding the lands near the Ant Nest. -->
+		<icon>icon.skillraid</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="7123" toLevel="1" name="Raid Boss (Lv. 75)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Enchanted by Shilen, enshrouded in darkness, Giran is guarding the lands and praying about resurrection. -->
+		<icon>icon.skillraid</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="7124" toLevel="1" name="Raid Boss (Lv. 75)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Enchanted by Shilen, enshrouded in darkness, minion of Core is guarding the lands around Cruma Tower. -->
+		<icon>icon.skillraid</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="7125" toLevel="1" name="Raid Boss (Lv. 75)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Enchanted by Shilen, enshrouded in darkness, minion of Orfen is guarding the Plains of the Lizardmen. -->
+		<icon>icon.skillraid</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="7126" toLevel="1" name="Master's Blessing - Holy Weapon">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- The GM is always by your side. All party members' Holy Attack damage +20 for 1 hr. -->
+		<icon>icon.skill1043</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="7127" toLevel="1" name="Master's Blessing - Stun Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- The GM is always by your side. Stun Resistance +40% for 1 hr. -->
+		<icon>icon.skill1259</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="7128" toLevel="5" name="Presentation - Pegasus">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Skill for demonstration of constellation toggle. -->
+		<icon>icon.skill11046</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="7129" toLevel="4" name="Triple Sonic Slash">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="7130" toLevel="4" name="Sonic Blaster">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

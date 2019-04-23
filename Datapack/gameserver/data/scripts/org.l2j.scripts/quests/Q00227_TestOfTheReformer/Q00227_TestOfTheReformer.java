@@ -16,9 +16,7 @@
  */
 package quests.Q00227_TestOfTheReformer;
 
-import java.util.Arrays;
-import java.util.List;
-
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.QuestSound;
@@ -34,6 +32,9 @@ import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.NpcSay;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
 import org.l2j.gameserver.util.Util;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Test Of The Reformer (227)
@@ -255,7 +256,7 @@ public final class Q00227_TestOfTheReformer extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(1500, npc, killer, true))
+		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			switch (npc.getId())
 			{

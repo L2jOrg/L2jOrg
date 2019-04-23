@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19113" toLevel="1" name="No Clan Return">
-		<!-- For 30 sec., blocks target's Escape. Consumes 100 Spirit Ores and 3000 Individual Fame. Marquis or above only. -->
+		<!-- For 30 sec. prevents the chosen target from using Teleport. Needs 2 Blood Crystals. -->
+		<icon>icon.skill_recall</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
-		<icon>icon.skill_recall</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
 		<hitTime>2000</hitTime>
@@ -14,7 +14,6 @@
 		<isDebuff>true</isDebuff>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -26,7 +25,7 @@
 		</effects>
 	</skill>
 	<skill id="19114" toLevel="1" name="No Clan Resurrection">
-		<!-- For 30 sec., blocks target's Resurrection. Consumes 150 Spirit Ores and 1000 Clan Reputation. Marquis or above only. -->
+		<!-- For 30 sec. prevents the chosen target from using Resurrection. Needs 1 Blood Crystal. -->
 		<icon>icon.skill_resurrection</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -39,7 +38,6 @@
 		<isDebuff>true</isDebuff>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -51,8 +49,7 @@
 		</effects>
 	</skill>
 	<skill id="19119" toLevel="1" name="Noblesse Grace">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Retains target's buffs/debuffs upon death, except for Noblesse Grace and Lucky Charm. Consumes 1000 Spirit Ore. -->
+		<!-- Retains target's buffs/ debuffs upon death, except for Noblesse Grace and Lucky Charm. Consumes 1000 Spirit Ore. -->
 		<icon>icon.skill1323</icon>
 		<operateType>A2</operateType>
 		<mpConsume>500</mpConsume>

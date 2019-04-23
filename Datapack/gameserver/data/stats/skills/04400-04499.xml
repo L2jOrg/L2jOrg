@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4400" toLevel="3" name="Acumen">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Casting Spd. temporarily. Effect $s1 -->
+		<icon>icon.skill1085</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -11,11 +12,9 @@
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1085</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -33,7 +32,8 @@
 		</effects>
 	</skill>
 	<skill id="4401" toLevel="3" name="Empower">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases M. Atk. power temporarily. Effect $s1 -->
+		<icon>icon.skill1059</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -43,11 +43,9 @@
 		<abnormalType>MA_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1059</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -65,7 +63,8 @@
 		</effects>
 	</skill>
 	<skill id="4402" toLevel="2" name="Haste">
-		<!-- Confirmed CT2.5 -->
+		<!-- Atk. Spd. increases temporarily. Effect $s1 -->
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -74,11 +73,9 @@
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1086</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -95,7 +92,8 @@
 		</effects>
 	</skill>
 	<skill id="4403" toLevel="3" name="Guidance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Accuracy temporarily. Effect $s1 -->
+		<icon>icon.skill1240</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -105,11 +103,9 @@
 		<abnormalType>HIT_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1240</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -127,7 +123,8 @@
 		</effects>
 	</skill>
 	<skill id="4404" toLevel="3" name="Focus">
-		<!-- Confirmed CT2.5 -->
+		<!-- Momentarily increases critical P. Atk. rate. Effect $s1 -->
+		<icon>icon.skill1077</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -137,11 +134,9 @@
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1077</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -159,7 +154,8 @@
 		</effects>
 	</skill>
 	<skill id="4405" toLevel="3" name="Death Whisper">
-		<!-- Confirmed CT2.5 -->
+		<!-- Momentarily increase the Critical P. Atk. Effect $s1 -->
+		<icon>icon.skill1242</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -169,11 +165,9 @@
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1242</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -191,7 +185,8 @@
 		</effects>
 	</skill>
 	<skill id="4406" toLevel="3" name="Agility">
-		<!-- Confirmed CT2.5 -->
+		<!-- Momentarily increases evasion. Effect $s1 -->
+		<icon>icon.skill1087</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -201,11 +196,9 @@
 		<abnormalType>AVOID_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1087</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -223,7 +216,6 @@
 		</effects>
 	</skill>
 	<skill id="4407" toLevel="2" name="Enchant Type Monster">
-		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill0000</value>
 			<value level="2">icon.skill4407</value>
@@ -233,7 +225,6 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4408" toLevel="20" name="HP Increase (12x)">
-		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill0000</value>
 			<value level="2">icon.skill0000</value>
@@ -313,7 +304,6 @@
 		</effects>
 	</skill>
 	<skill id="4409" toLevel="20" name="MP Increase (12x)">
-		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill0000</value>
 			<value level="2">icon.skill0000</value>
@@ -393,7 +383,6 @@
 		</effects>
 	</skill>
 	<skill id="4410" toLevel="22" name="Ultra Strong P. Atk.">
-		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill0141</value>
 			<value level="2">icon.skill0141</value>
@@ -452,7 +441,6 @@
 		</effects>
 	</skill>
 	<skill id="4411" toLevel="22" name="Ultra Strong M. Atk.">
-		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill4411_normal</value>
 			<value level="2">icon.skill4411_normal</value>
@@ -511,7 +499,6 @@
 		</effects>
 	</skill>
 	<skill id="4412" toLevel="22" name="Ultra Strong P. Def.">
-		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill0142</value>
 			<value level="2">icon.skill0142</value>
@@ -570,7 +557,6 @@
 		</effects>
 	</skill>
 	<skill id="4413" toLevel="22" name="Ultra Strong M. Def.">
-		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill4413_normal</value>
 			<value level="2">icon.skill4413_normal</value>
@@ -629,7 +615,7 @@
 		</effects>
 	</skill>
 	<skill id="4414" toLevel="3" name="Heavy Armor Type">
-		<!-- Confirmed CT2.5 -->
+		<!-- Strong P. Def. and weak Evasion. -->
 		<icon>
 			<value level="1">icon.skill4312</value>
 			<value level="2">icon.skill0000</value>
@@ -658,7 +644,6 @@
 		</effects>
 	</skill>
 	<skill id="4415" toLevel="26" name="Crossbow">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -728,8 +713,7 @@
 		</effects>
 	</skill>
 	<skill id="4416" toLevel="26" name="Dwarves">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<!-- Guessed -->
+		<!-- Called out of their graves by black magic, a curse or the power of an evil mind, most of these creatures lack intelligence and can perform only simple actions. However, some high-ranking undead possess great knowledge and sophistication even when compared to ordinary humanoids. -->
 		<icon>
 			<value level="1">icon.skill4290</value>
 			<value level="2">icon.skill4291</value>
@@ -755,8 +739,8 @@
 			<value level="22">icon.skill4416_castleguard</value>
 			<value level="23">icon.skill4416_mercenary</value>
 			<value level="24">icon.skill4416_none</value>
-			<value level="25">icon.skill4296</value>
-			<value level="26">icon.skill4296</value>
+			<value level="25">icon.skill4416_kamael</value>
+			<value level="26">icon.skill_4416_ertheia</value>
 		</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1103,7 +1087,7 @@
 		</effects>
 	</skill>
 	<skill id="4417" toLevel="38" name="Angel">
-		<!-- Confirmed CT2.5 -->
+		<!-- Animals -->
 		<icon>
 			<value level="1">icon.skill4293</value>
 			<value level="2">icon.skill4292</value>
@@ -1269,6 +1253,46 @@
 					<value level="37">0</value>
 					<value level="38">15</value>
 				</SLEEP>
+				<DUALDAGGER>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">0</value>
+					<value level="10">0</value>
+					<value level="11">0</value>
+					<value level="12">0</value>
+					<value level="13">0</value>
+					<value level="14">0</value>
+					<value level="15">0</value>
+					<value level="16">0</value>
+					<value level="17">0</value>
+					<value level="18">0</value>
+					<value level="19">0</value>
+					<value level="20">0</value>
+					<value level="21">0</value>
+					<value level="22">0</value>
+					<value level="23">0</value>
+					<value level="24">0</value>
+					<value level="25">0</value>
+					<value level="26">0</value>
+					<value level="27">0</value>
+					<value level="28">0</value>
+					<value level="29">0</value>
+					<value level="30">0</value>
+					<value level="31">0</value>
+					<value level="32">0</value>
+					<value level="33">0</value>
+					<value level="34">0</value>
+					<value level="35">0</value>
+					<value level="36">15</value>
+					<value level="37">0</value>
+					<value level="38">0</value>
+				</DUALDAGGER>
 				<POISON>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -1433,7 +1457,7 @@
 		</effects>
 	</skill>
 	<skill id="4418" toLevel="5" name="Fire Attribute">
-		<!-- Confirmed CT2.5 -->
+		<!-- Unleashes an attack fortified with Fire. Resistant to Fire attacks. -->
 		<icon>icon.etc_fire_crystal_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1456,7 +1480,7 @@
 		</effects>
 	</skill>
 	<skill id="4419" toLevel="5" name="Water Attribute">
-		<!-- Confirmed CT2.5 -->
+		<!-- Unleashes an attack fortified with Water. Resistant to Water attacks. -->
 		<icon>icon.etc_water_crystal_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1479,7 +1503,7 @@
 		</effects>
 	</skill>
 	<skill id="4420" toLevel="5" name="Wind Attribute">
-		<!-- Confirmed CT2.5 -->
+		<!-- Unleashes an attack fortified with Wind. Resistant to Wind attacks. -->
 		<icon>icon.etc_wind_crystal_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1502,7 +1526,7 @@
 		</effects>
 	</skill>
 	<skill id="4421" toLevel="5" name="Earth Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Unleashes an attack fortified with Earth. Resistant to Earth attacks. -->
 		<icon>icon.etc_earth_crystal_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1525,7 +1549,7 @@
 		</effects>
 	</skill>
 	<skill id="4422" toLevel="5" name="Darkness Protection">
-		<!-- Confirmed CT2.5 -->
+		<!-- Unleashes an attack fortified with Dark. Resistant to Dark attacks. -->
 		<icon>icon.etc_unholy_crystal_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1548,7 +1572,7 @@
 		</effects>
 	</skill>
 	<skill id="4423" toLevel="5" name="Holy Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Unleashes an attack fortified with Holy. Resistant to Holy attacks. -->
 		<icon>icon.etc_holy_crystal_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1571,7 +1595,7 @@
 		</effects>
 	</skill>
 	<skill id="4424" toLevel="5" name="Fist Weapon Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resistant to Fist Weapons. -->
 		<icon>icon.skill4424</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1589,7 +1613,7 @@
 		</effects>
 	</skill>
 	<skill id="4425" toLevel="5" name="Blunt Weapon Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resistant to Blunts. -->
 		<icon>icon.skill4425</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1607,7 +1631,7 @@
 		</effects>
 	</skill>
 	<skill id="4426" toLevel="5" name="Dual Sword Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resistant to Dual Swords. -->
 		<icon>icon.skill4426</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1625,7 +1649,7 @@
 		</effects>
 	</skill>
 	<skill id="4427" toLevel="5" name="Sword Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resistant to Swords. -->
 		<icon>icon.skill4427</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1643,14 +1667,14 @@
 		</effects>
 	</skill>
 	<skill id="4428" toLevel="5" name="Two-handed Weapon Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resistant to Two-handed Weapons. -->
 		<icon>icon.skill4428</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4429" toLevel="5" name="Greater Fire Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Fire. -->
 		<icon>icon.skill4429</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1669,7 +1693,7 @@
 		</effects>
 	</skill>
 	<skill id="4430" toLevel="5" name="Greater Water Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Water. -->
 		<icon>icon.skill4430</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1688,7 +1712,7 @@
 		</effects>
 	</skill>
 	<skill id="4431" toLevel="5" name="Greater Wind Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Wind. -->
 		<icon>icon.skill4431</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1707,7 +1731,7 @@
 		</effects>
 	</skill>
 	<skill id="4432" toLevel="5" name="Greater Earth Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Earth. -->
 		<icon>icon.skill4432</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1726,7 +1750,7 @@
 		</effects>
 	</skill>
 	<skill id="4433" toLevel="5" name="Greater Holy Attack Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Holy. -->
 		<icon>icon.skill4433</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1745,7 +1769,7 @@
 		</effects>
 	</skill>
 	<skill id="4434" toLevel="5" name="Greater Dark Attack Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Dark. -->
 		<icon>icon.skill4434</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1764,7 +1788,7 @@
 		</effects>
 	</skill>
 	<skill id="4435" toLevel="5" name="Greater Stun Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Stun. -->
 		<icon>icon.skill4435</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1782,7 +1806,7 @@
 		</effects>
 	</skill>
 	<skill id="4436" toLevel="5" name="Greater Poison Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Poison. -->
 		<icon>icon.skill4436</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1800,7 +1824,7 @@
 		</effects>
 	</skill>
 	<skill id="4437" toLevel="5" name="Greater Bleed Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Bleed. -->
 		<icon>icon.skill4437</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1818,7 +1842,7 @@
 		</effects>
 	</skill>
 	<skill id="4438" toLevel="5" name="Greater Sleep Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Sleep. -->
 		<icon>icon.skill4286</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1836,7 +1860,7 @@
 		</effects>
 	</skill>
 	<skill id="4439" toLevel="5" name="Greater Hold Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Hold. -->
 		<icon>icon.skill4288</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1854,7 +1878,7 @@
 		</effects>
 	</skill>
 	<skill id="4440" toLevel="5" name="Greater Paralysis Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Paralysis. -->
 		<icon>icon.skill4440</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1872,7 +1896,7 @@
 		</effects>
 	</skill>
 	<skill id="4441" toLevel="5" name="Greater Mental Attack Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Mental Attacks. -->
 		<icon>icon.skill4441</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1890,7 +1914,7 @@
 		</effects>
 	</skill>
 	<skill id="4442" toLevel="5" name="Greater Fist Weapon Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Fist Weapons. -->
 		<icon>icon.skill4442</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1908,7 +1932,7 @@
 		</effects>
 	</skill>
 	<skill id="4443" toLevel="5" name="Greater Blunt Weapon Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Blunts. -->
 		<icon>icon.skill4443</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1926,7 +1950,7 @@
 		</effects>
 	</skill>
 	<skill id="4444" toLevel="5" name="Greater Bow/Crossbow Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Highly resistant to Bow/ Crossbows. -->
 		<icon>icon.skill4444</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1940,11 +1964,18 @@
 					<value level="4">90</value>
 					<value level="5">100</value>
 				</BOW>
+				<CROSSBOW>
+					<value level="1">60</value>
+					<value level="2">70</value>
+					<value level="3">80</value>
+					<value level="4">90</value>
+					<value level="5">100</value>
+				</CROSSBOW>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4445" toLevel="5" name="Greater Spear Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Spears. -->
 		<icon>icon.skill4445</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1962,7 +1993,7 @@
 		</effects>
 	</skill>
 	<skill id="4446" toLevel="5" name="Greater Dual Sword Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Dual Swords. -->
 		<icon>icon.skill4446</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1980,7 +2011,7 @@
 		</effects>
 	</skill>
 	<skill id="4447" toLevel="5" name="Greater Sword Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Swords. -->
 		<icon>icon.skill4447</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1998,7 +2029,7 @@
 		</effects>
 	</skill>
 	<skill id="4448" toLevel="5" name="Greater Dagger/Rapier Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Highly resistant to Daggers/ Rapiers. -->
 		<icon>icon.skill4448</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2012,18 +2043,32 @@
 					<value level="4">90</value>
 					<value level="5">100</value>
 				</DAGGER>
+				<DUALDAGGER>
+					<value level="1">60</value>
+					<value level="2">70</value>
+					<value level="3">80</value>
+					<value level="4">90</value>
+					<value level="5">100</value>
+				</DUALDAGGER>
+				<RAPIER>
+					<value level="1">60</value>
+					<value level="2">70</value>
+					<value level="3">80</value>
+					<value level="4">90</value>
+					<value level="5">100</value>
+				</RAPIER>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4449" toLevel="5" name="Greater Two-handed Weapon Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Very resistant to Two-handed Weapons. -->
 		<icon>icon.skill4449</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4450" toLevel="5" name="Stun Vulnerability">
-		<!-- Confirmed CT2.5 -->
+		<!-- Vulnerable to Stun. -->
 		<icon>icon.skill4450</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2041,7 +2086,7 @@
 		</effects>
 	</skill>
 	<skill id="4451" toLevel="5" name="Poison Vulnerability">
-		<!-- Confirmed CT2.5 -->
+		<!-- Vulnerable to Poison. -->
 		<icon>icon.skill4451</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2059,7 +2104,7 @@
 		</effects>
 	</skill>
 	<skill id="4452" toLevel="5" name="Bleed Vulnerability">
-		<!-- Confirmed CT2.5 -->
+		<!-- Vulnerable to Bleed. -->
 		<icon>icon.skill4452</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2077,7 +2122,7 @@
 		</effects>
 	</skill>
 	<skill id="4453" toLevel="5" name="Sleep Vulnerability">
-		<!-- Confirmed CT2.5 -->
+		<!-- Vulnerable to Sleep. -->
 		<icon>icon.skill4453</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2095,7 +2140,7 @@
 		</effects>
 	</skill>
 	<skill id="4454" toLevel="5" name="Hold Vulnerability">
-		<!-- Confirmed CT2.5 -->
+		<!-- Vulnerable to Hold. -->
 		<icon>icon.skill4454</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2113,7 +2158,7 @@
 		</effects>
 	</skill>
 	<skill id="4455" toLevel="5" name="Paralysis Vulnerability">
-		<!-- Confirmed CT2.5 -->
+		<!-- Vulnerable to Paralysis. -->
 		<icon>icon.skill4455</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2131,7 +2176,7 @@
 		</effects>
 	</skill>
 	<skill id="4456" toLevel="5" name="Mental Attack Vulnerability">
-		<!-- Confirmed CT2.5 -->
+		<!-- Vulnerable to Mental Attacks. -->
 		<icon>icon.skill4456</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2149,7 +2194,7 @@
 		</effects>
 	</skill>
 	<skill id="4457" toLevel="5" name="Fist Weapon Vulnerability">
-		<!-- Confirmed CT2.5 -->
+		<!-- Vulnerable to Fist Weapons. -->
 		<icon>icon.skill4457</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2167,7 +2212,7 @@
 		</effects>
 	</skill>
 	<skill id="4458" toLevel="5" name="Spear Vulnerability">
-		<!-- Confirmed CT2.5 -->
+		<!-- Vulnerable to Spears. -->
 		<icon>icon.skill4458</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2185,7 +2230,7 @@
 		</effects>
 	</skill>
 	<skill id="4459" toLevel="5" name="Dual Sword Vulnerability">
-		<!-- Confirmed CT2.5 -->
+		<!-- Vulnerable to Dual Swords. -->
 		<icon>icon.skill4459</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2203,7 +2248,7 @@
 		</effects>
 	</skill>
 	<skill id="4460" toLevel="5" name="Sword Vulnerability">
-		<!-- Confirmed CT2.5 -->
+		<!-- Vulnerable to Swords. -->
 		<icon>icon.skill4460</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2221,7 +2266,7 @@
 		</effects>
 	</skill>
 	<skill id="4461" toLevel="5" name="Dagger/Rapier Vulnerability">
-		<!-- Confirmed CT2.5 -->
+		<!-- Vulnerable to Daggers/ Rapiers. -->
 		<icon>icon.skill4461</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2235,11 +2280,25 @@
 					<value level="4">-67</value>
 					<value level="5">-100</value>
 				</DAGGER>
+				<DUALDAGGER>
+					<value level="1">-11</value>
+					<value level="2">-25</value>
+					<value level="3">-43</value>
+					<value level="4">-67</value>
+					<value level="5">-100</value>
+				</DUALDAGGER>
+				<RAPIER>
+					<value level="1">-11</value>
+					<value level="2">-25</value>
+					<value level="3">-43</value>
+					<value level="4">-67</value>
+					<value level="5">-100</value>
+				</RAPIER>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4462" toLevel="5" name="Two-handed Weapon Vulnerability">
-		<!-- Confirmed CT2.5 -->
+		<!-- Vulnerable to Two-handed Weapons. -->
 		<icon>icon.skill4462</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2253,11 +2312,26 @@
 					<value level="4">-67</value>
 					<value level="5">-100</value>
 				</DAGGER>
+				<DUALDAGGER>
+					<value level="1">-11</value>
+					<value level="2">-25</value>
+					<value level="3">-43</value>
+					<value level="4">-67</value>
+					<value level="5">-100</value>
+				</DUALDAGGER>
+				<RAPIER>
+					<value level="1">-11</value>
+					<value level="2">-25</value>
+					<value level="3">-43</value>
+					<value level="4">-67</value>
+					<value level="5">-100</value>
+				</RAPIER>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4463" toLevel="3" name="Surrender to Water">
-		<!-- Confirmed CT2.5 -->
+		<!-- Water Resistance decreases and Fire Resistance increases momentarily. Effect $s1 -->
+		<icon>icon.skill4280_new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2271,7 +2345,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill4280_new</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -2292,7 +2365,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2317,7 +2389,8 @@
 		</effects>
 	</skill>
 	<skill id="4464" toLevel="3" name="Surrender to Wind">
-		<!-- Confirmed CT2.5 -->
+		<!-- Wind Resistance decreases and Earth Resistance increases momentarily. Effect $s1 -->
+		<icon>icon.skill4281_new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2331,7 +2404,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill4281_new</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -2352,7 +2424,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2377,7 +2448,8 @@
 		</effects>
 	</skill>
 	<skill id="4465" toLevel="3" name="Surrender to Earth">
-		<!-- Confirmed CT2.5 -->
+		<!-- Earth Resistance decreases and Wind Resistance increases momentarily. Effect $s1 -->
+		<icon>icon.skill4282_new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2391,7 +2463,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill4282_new</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -2412,7 +2483,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2437,7 +2507,8 @@
 		</effects>
 	</skill>
 	<skill id="4466" toLevel="3" name="Surrender to Dark">
-		<!-- Confirmed CT2.5 -->
+		<!-- Dark Attack Resistance decreases and Holy Attack Resistance increases momentarily. Effect $s1 -->
+		<icon>icon.skill4336_new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2451,7 +2522,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill4336_new</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -2472,7 +2542,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2497,7 +2566,8 @@
 		</effects>
 	</skill>
 	<skill id="4467" toLevel="3" name="Surrender to Holy">
-		<!-- Confirmed CT2.5 -->
+		<!-- Holy Attack Resistance decreases and Dark Attack Resistance increases momentarily. Effect $s1 -->
+		<icon>icon.skill4275_new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2511,7 +2581,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill4275_new</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -2532,7 +2601,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2557,8 +2625,6 @@
 		</effects>
 	</skill>
 	<skill id="4468" toLevel="2" name="Wind Walk">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2572,7 +2638,6 @@
 			<value level="2">70</value>
 		</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2590,17 +2655,14 @@
 		</effects>
 	</skill>
 	<skill id="4469" toLevel="1" name="Potion Drinking">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>35</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4470" toLevel="1" name="Spoil">
-		<!-- Confirmed CT2.5 -->
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
@@ -2609,13 +2671,12 @@
 		<mpConsume>12</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4471" toLevel="12" name="Anger">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases NPC's P. Atk. and P. Def. Effect $s1 -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2678,7 +2739,6 @@
 			<value level="12">16</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2722,7 +2782,7 @@
 		</effects>
 	</skill>
 	<skill id="4472" toLevel="12" name="Golem Punch">
-		<!-- Confirmed CT2.5 -->
+		<!-- For powerful Golems that are $s1x stronger. -->
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
@@ -2757,7 +2817,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2781,7 +2840,8 @@
 		</effects>
 	</skill>
 	<skill id="4473" toLevel="12" name="Stun">
-		<!-- Confirmed CT2.5 -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2792,7 +2852,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1200</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -2825,7 +2884,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>17000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -2851,8 +2909,6 @@
 		</effects>
 	</skill>
 	<skill id="4474" toLevel="5" name="Restore Life">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
 		<effectPoint>100</effectPoint>
 		<magicLvl>
 			<value level="1">10</value>
@@ -2862,7 +2918,6 @@
 			<value level="5">50</value>
 		</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -2880,7 +2935,7 @@
 		</effects>
 	</skill>
 	<skill id="4475" toLevel="1" name="Complete Bleed Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Completely resistant to Bleed. -->
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
@@ -2894,7 +2949,6 @@
 		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2907,7 +2961,8 @@
 		</effects>
 	</skill>
 	<skill id="4476" toLevel="5" name="Silent Move">
-		<!-- Confirmed CT2.5 -->
+		<!-- Protected from preemptive attacks from monsters. -->
+		<icon>icon.skill0221</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">60</value>
@@ -2920,7 +2975,6 @@
 		<activateRate>0</activateRate>
 		<effectPoint>100</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0221</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">10</value>
@@ -2945,7 +2999,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2956,7 +3009,6 @@
 		</effects>
 	</skill>
 	<skill id="4477" toLevel="12" name="Frost Wall">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
@@ -3010,7 +3062,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
@@ -3035,7 +3086,6 @@
 		</effects>
 	</skill>
 	<skill id="4478" toLevel="1" name="Aqua Splash">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>200</affectRange>
 		<castRange>700</castRange>
 		<effectPoint>-100</effectPoint>
@@ -3046,7 +3096,6 @@
 		<magicLvl>64</magicLvl>
 		<mpConsume>23</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -3058,7 +3107,8 @@
 		</effects>
 	</skill>
 	<skill id="4479" toLevel="1" name="Ice Fairy's Blessing">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Water Resistance. Effect 4. -->
+		<icon>icon.skill1182</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>ARMOR_WATER</abnormalType>
@@ -3066,14 +3116,12 @@
 		<effectPoint>100</effectPoint>
 		<effectRange>1200</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1182</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>64</magicLvl>
 		<mpConsume>31</mpConsume>
 		<mpInitialConsume>8</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -3087,7 +3135,6 @@
 		</effects>
 	</skill>
 	<skill id="4480" toLevel="1" name="Curse Gloom">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>MD_DOWN</abnormalType>
@@ -3102,7 +3149,6 @@
 		<mpInitialConsume>24</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -3115,7 +3161,6 @@
 		</effects>
 	</skill>
 	<skill id="4481" toLevel="1" name="Hex">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -3130,7 +3175,6 @@
 		<mpInitialConsume>24</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -3143,7 +3187,7 @@
 		</effects>
 	</skill>
 	<skill id="4482" toLevel="1" name="Silence">
-		<!-- Confirmed CT2.5 -->
+		<icon>icon.skill1064</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -3152,11 +3196,9 @@
 		<effectPoint>100</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>100</hitTime>
-		<icon>icon.skill1064</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -3169,7 +3211,8 @@
 		</effects>
 	</skill>
 	<skill id="4483" toLevel="12" name="Hold">
-		<!-- Confirmed CT2.5 -->
+		<!-- Inflicted with Hold and unable to move. -->
+		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -3179,7 +3222,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3300</hitTime>
-		<icon>icon.skill4047</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>
 			<value level="1">0</value>
@@ -3239,7 +3281,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>HOLD</trait>
 		<targetType>SELF</targetType>
@@ -3250,14 +3291,12 @@
 		</effects>
 	</skill>
 	<skill id="4484" toLevel="1" name="Devour Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>100</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -3269,20 +3308,19 @@
 		</effects>
 	</skill>
 	<skill id="4485" toLevel="1" name="Devour Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>3000</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4486" toLevel="12" name="Decrease P. Def.">
-		<!-- Confirmed CT2.5 -->
+		<!-- P. Def. decreases temporarily. Effect $s1 -->
+		<icon>icon.skill0122</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3306,7 +3344,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill0122</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -3354,7 +3391,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -3380,7 +3416,7 @@
 		</effects>
 	</skill>
 	<skill id="4487" toLevel="12" name="Decrease M. Def.">
-		<!-- Confirmed CT2.5 -->
+		<!-- M. Def. decreases momentarily. Effect $s1 -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3451,7 +3487,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -3477,7 +3512,8 @@
 		</effects>
 	</skill>
 	<skill id="4488" toLevel="12" name="Hold">
-		<!-- Confirmed CT2.5 -->
+		<!-- Inflicted with Hold and unable to move. -->
+		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -3488,7 +3524,6 @@
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill4047</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -3520,7 +3555,6 @@
 			<value level="12">128</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -3531,7 +3565,6 @@
 		</effects>
 	</skill>
 	<skill id="4489" toLevel="12" name="Death Bomb">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>150</affectRange>
 		<effectPoint>-100</effectPoint>
 		<magicLvl>
@@ -3563,7 +3596,6 @@
 			<value level="12">128</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -3591,7 +3623,6 @@
 		</effects>
 	</skill>
 	<skill id="4490" toLevel="12" name="Holy War">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
@@ -3645,7 +3676,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
@@ -3670,7 +3700,8 @@
 		</effects>
 	</skill>
 	<skill id="4491" toLevel="12" name="Holy Weapon">
-		<!-- Confirmed CT2.5 -->
+		<!-- Makes Holy attacks. -->
+		<icon>icon.skill1043</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -3682,7 +3713,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>3200</hitTime>
-		<icon>icon.skill1043</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>-1</magicLvl>
@@ -3702,7 +3732,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>25000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<attributeType>HOLY</attributeType>
@@ -3734,7 +3763,7 @@
 		</effects>
 	</skill>
 	<skill id="4492" toLevel="12" name="Enlarging Head Curse">
-		<!-- Confirmed CT2.5 -->
+		<!-- Momentarily enlarges the head. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
@@ -3777,7 +3806,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -3802,7 +3830,6 @@
 		</effects>
 	</skill>
 	<skill id="4493" toLevel="12" name="Mystic Immunity">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DEBUFF_SHIELD</abnormalType>
@@ -3854,7 +3881,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -3869,7 +3895,7 @@
 				<chance>50</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
-				<skillId>5022</skillId>
+				<skillId>5022</skillId> <!-- Decrease Speed -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -3888,14 +3914,13 @@
 		</effects>
 	</skill>
 	<skill id="4494" toLevel="2" name="Underground Prisoner">
-		<!-- Confirmed CT2.5 -->
+		<!-- If the person who made the greatest contribution is $s1 or more Lv.s higher than the Raid Boss, then the item/ adena rewards will decrease. If the difference is $s2 Lv.s or more, then the monster will drop nothing at all. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4495" toLevel="12" name="Power Shot">
-		<!-- Confirmed CT2.5 -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -3929,7 +3954,6 @@
 			<value level="12">173</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3953,7 +3977,8 @@
 		</effects>
 	</skill>
 	<skill id="4496" toLevel="12" name="Stun">
-		<!-- Confirmed CT2.5 -->
+		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -3977,7 +4002,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4008,7 +4032,6 @@
 			<value level="12">173</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -4034,24 +4057,21 @@
 		</effects>
 	</skill>
 	<skill id="4497" toLevel="1" name="Treasure Chest (Lv. 21)">
-		<!-- Confirmed CT2.5 -->
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4498" toLevel="1" name="Treasure Chest (Lv. 22)">
-		<!-- Confirmed CT2.5 -->
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4499" toLevel="1" name="Treasure Chest (Lv. 25)">
-		<!-- Confirmed CT2.5 -->
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

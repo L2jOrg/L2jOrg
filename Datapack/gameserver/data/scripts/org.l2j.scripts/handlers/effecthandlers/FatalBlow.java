@@ -16,12 +16,9 @@
  */
 package handlers.effecthandlers;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
-
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -29,6 +26,10 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
+
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Fatal Blow effect implementation.
@@ -41,12 +42,14 @@ public final class FatalBlow extends AbstractEffect
 	private final double _criticalChance;
 	private final Set<AbnormalType> _abnormals;
 	private final double _abnormalPower;
+	private final boolean _overHit;
 	
 	public FatalBlow(StatsSet params)
 	{
 		_power = params.getDouble("power");
 		_chanceBoost = params.getDouble("chanceBoost");
 		_criticalChance = params.getDouble("criticalChance", 0);
+		_overHit = params.getBoolean("overHit", false);
 		
 		String abnormals = params.getString("abnormalType", null);
 		if ((abnormals != null) && !abnormals.isEmpty())
@@ -88,6 +91,11 @@ public final class FatalBlow extends AbstractEffect
 		if (effector.isAlikeDead())
 		{
 			return;
+		}
+
+		if (_overHit && effected.isAttackable())
+		{
+			((L2Attackable) effected).overhitEnabled(true);
 		}
 		
 		double power = _power;

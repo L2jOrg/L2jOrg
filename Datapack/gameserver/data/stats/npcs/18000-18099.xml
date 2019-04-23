@@ -306,10 +306,10 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="163287" sp="4898" />
+		<acquire exp="9189932" sp="275697" />
 		<equipment rhand="5800" lhand="5799" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2240316" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="1241577.52641" hpRegen="7.5" mp="2284.185" mpRegen="2.7" />
 			<attack physical="734.25" magical="501.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="291.15" magical="213.05" />
 			<speed>
@@ -323,20 +323,11 @@
 		<skillList>
 			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
 			<skill id="4118" level="6" /> <!-- Paralysis -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Darkness Protection -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4287" level="1" /> <!-- Hold Resistance -->
+			<skill id="4287" level="3" /> <!-- Hold Resistance -->
 			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
-			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-			<skill id="5467" level="5" /> <!-- Darkness Protection -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
@@ -687,7 +678,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18015" level="34" type="L2FestivalMonster" name="Blood Knight" title="Chaos Decoy">
+	<npc id="18015" level="70" type="L2FestivalMonster" name="Blood Knight" title="Chaos Decoy">
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -698,9 +689,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5800" /> <!-- Tarbar -->
-		<acquire exp="2475" sp="96" />
+		<acquire exp="163287" sp="4898" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="11293" hpRegen="4.5" mp="1507" mpRegen="1.8" />
+			<vitals hp="4394.90933" hpRegen="7.5" mp="1643.445" mpRegen="2.7" />
 			<attack physical="106.0570175" magical="82.76936" random="10" critical="8" accuracy="0" attackSpeed="216" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="113.00631" magical="97.28601" evasion="10" />
 			<speed>
@@ -713,19 +704,11 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Darkness Protection -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4287" level="3" /> <!-- Hold Resistance -->
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 		</skillList>
 		<corpseTime>3</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -735,7 +718,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="18016" level="32" type="L2FestivalMonster" name="Treasure Chest" title="Gludio">
+	<npc id="18016" level="62" type="L2FestivalMonster" name="Treasure Chest" title="Gludio">
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -743,9 +726,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="273" /> <!-- Compound Bow -->
-		<acquire exp="1898" sp="71" />
+		<acquire exp="0" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="7312" hpRegen="4.5" mp="2932" mpRegen="1.8" />
+			<vitals hp="2845.61943" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
 			<attack physical="235.8991855" magical="72.49711" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
 			<defence physical="106.7406795" magical="91.89199" evasion="10" />
 			<speed>
@@ -756,19 +739,6 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skillList>
 		<corpseTime>3</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
@@ -776,6 +746,13 @@
 			<radius normal="8.5" />
 			<height normal="8.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="49758" min="1" max="9" chance="92.105" /> <!-- Blood Crystal -->
+				<item id="49664" min="1" max="1" chance="1.945" /> <!-- Weapon Supply Box (B-grade) -->
+				<item id="49665" min="1" max="1" chance="0.75" /> <!-- Armor Supply Box (B-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18017" level="80" type="L2Npc" name="Teleport" title="Giant's Cave">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
