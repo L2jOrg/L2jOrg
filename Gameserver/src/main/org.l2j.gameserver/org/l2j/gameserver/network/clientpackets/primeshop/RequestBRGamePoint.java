@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.clientpackets.primeshop;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2j.gameserver.network.serverpackets.primeshop.ExBRGamePoint;
 
@@ -16,9 +15,6 @@ public final class RequestBRGamePoint extends IClientIncomingPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
-        if (player != null) {
-            client.sendPacket(new ExBRGamePoint(player));
-        }
+        client.sendPacket(new ExBRGamePoint());
     }
 }

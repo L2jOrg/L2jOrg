@@ -31,7 +31,7 @@ public final class Util {
     private static final NumberFormat ADENA_FORMATTER = NumberFormat.getIntegerInstance(Locale.ENGLISH);
 
     public static void handleIllegalPlayerAction(L2PcInstance actor, String message, IllegalActionPunishmentType punishment) {
-        ThreadPoolManager.getInstance().schedule(new IllegalPlayerActionTask(actor, message, punishment), 5000);
+        ThreadPoolManager.schedule(new IllegalPlayerActionTask(actor, message, punishment), 5000);
     }
 
     /**
