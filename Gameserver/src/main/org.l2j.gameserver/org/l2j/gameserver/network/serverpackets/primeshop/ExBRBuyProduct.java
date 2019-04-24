@@ -39,7 +39,9 @@ public class ExBRBuyProduct extends IClientOutgoingPacket {
         INVALID_USER_STATE(-11),
         NOT_DAY_OF_WEEK(-12),
         NOT_TIME_OF_DAY(-13),
-        SOLD_OUT(-14);
+        SOLD_OUT(-14),
+        MAXIMUM_BOUGHT(-28);
+
         private final int _id;
 
         ExBrProductReplyType(int id) {

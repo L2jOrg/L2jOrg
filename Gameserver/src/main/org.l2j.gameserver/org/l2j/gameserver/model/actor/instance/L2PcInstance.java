@@ -3890,7 +3890,7 @@ public final class L2PcInstance extends L2Playable {
             if (oldTarget.equals(newTarget)) // no target change?
             {
                 // Validate location of the target.
-                if ((newTarget != null) && (newTarget.getObjectId() != getObjectId())) {
+                if (newTarget.getObjectId() != getObjectId()) {
                     sendPacket(new ValidateLocation(newTarget));
                 }
                 return;

@@ -27,6 +27,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+
 public final class L2World {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(L2World.class);
@@ -373,6 +376,20 @@ public final class L2World {
         }
     }
 
+    public L2Object getVisibleObject(L2Object reference, int objectId) {
+        var currentRegion = getRegion(reference);
+        if(isNull(currentRegion)) {
+            return null;
+        }
+        L2Object object = null;
+        for(var region : currentRegion.getSurroundingRegions()) {
+            if( nonNull(object = region.getVisibleObjects().get(objectId)) ) {
+                return object;
+            }
+        }
+        return object;
+    }
+
     public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz) {
         final List<T> result = new ArrayList<>();
         forEachVisibleObject(object, clazz, result::add);
@@ -541,6 +558,7 @@ public final class L2World {
     public static L2World getInstance() {
         return Singleton.INSTANCE;
     }
+
 
     private static class Singleton {
         private static final L2World INSTANCE = new L2World();

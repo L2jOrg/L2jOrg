@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
 import java.nio.ByteBuffer;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author Mobius
  */
@@ -27,12 +29,8 @@ public class RequestTargetActionMenu extends IClientIncomingPacket {
         }
 
         if (_type == 1) {
-            for (L2Object object : L2World.getInstance().getVisibleObjects(player, L2Object.class)) {
-                if (_objectId == object.getObjectId()) {
-                    player.setTarget(object);
-                    break;
-                }
-            }
+            var object = L2World.getInstance().getVisibleObject(player, _objectId);
+            player.setTarget(object);
         }
     }
 }
