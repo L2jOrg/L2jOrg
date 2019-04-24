@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS `character_skills_save`;
 CREATE TABLE IF NOT EXISTS `character_skills_save` (
-  `charId` INT NOT NULL DEFAULT 0,
+  `charId` INT UNSIGNED NOT NULL DEFAULT 0,
   `skill_id` INT NOT NULL DEFAULT 0,
   `skill_level` INT(4) NOT NULL DEFAULT 1,
   `skill_sub_level` INT(4) NOT NULL DEFAULT '0',
@@ -12,5 +12,5 @@ CREATE TABLE IF NOT EXISTS `character_skills_save` (
   `buff_index` INT(2) NOT NULL DEFAULT 0,
 
   PRIMARY KEY (`charId`,`skill_id`,`skill_level`,`class_index`),
-  FOREIGN KEY FK_FRIENDS_FRIEND (`charId`) REFERENCES characters (`charId`) ON DELETE CASCADE
+  FOREIGN KEY FK_CHARACTER_SKILL_SAVE (`charId`) REFERENCES characters (`charId`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
