@@ -5411,7 +5411,7 @@ public final class L2PcInstance extends L2Playable {
             statement.setString(26, getTitle());
             statement.setInt(27, appearance.getTitleColor());
             statement.setInt(28, isOnlineInt());
-            statement.setInt(39, _clanPrivileges.getBitmask());
+            statement.setInt(29, _clanPrivileges.getBitmask());
             statement.setBoolean(30, wantsPeace());
             statement.setInt(31, _baseClass);
             statement.setInt(32, isNoble() ? 1 : 0);
