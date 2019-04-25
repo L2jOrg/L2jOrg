@@ -57,7 +57,7 @@
             <AppenderRef ref="game"/>
             <AppenderRef ref="debug"/>
         </Logger>
-        <Logger name="org.l2j.gameserver.network.l2.s2c.L2GameServerPacket" level="debug">
+        <Logger name="packet.info" level="debug">
             <AppenderRef ref="packetSize"/>
         </Logger>
     </Loggers>

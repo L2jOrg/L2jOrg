@@ -15,13 +15,13 @@ sourceSets {
     }
 }
 
-configurations.all {
+/*configurations.all {
     // Check for updates every build
     resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
-}
+}*/
 
 dependencies {
-    api 'javax.cache:cache-api:1.1.0'
+    implementation 'javax.cache:cache-api:1.1.0'
     api 'io.github.joealisson:primitive:1.0.0-SNAPSHOT'
     api 'org.slf4j:slf4j-api:1.8.0-beta4'
 

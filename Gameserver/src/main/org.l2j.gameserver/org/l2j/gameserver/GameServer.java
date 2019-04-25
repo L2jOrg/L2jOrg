@@ -266,7 +266,7 @@ public class GameServer {
         LOGGER.info("Maximum number of connected players is {}", Config.MAXIMUM_ONLINE_USERS);
         LOGGER.info("Server loaded in {} seconds", serverLoadStart.until(Instant.now(), ChronoUnit.SECONDS));
 
-        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(Config.PORT_GAME), L2GameClient::new, new ClientPacketHandler(), ThreadPoolManager::execute).bufferLargeSize(24 * 1024).build();
+        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(Config.PORT_GAME), L2GameClient::new, new ClientPacketHandler(), ThreadPoolManager::execute).build();
         connectionHandler.start();
     }
 
@@ -274,12 +274,17 @@ public class GameServer {
         configureLogger();
         logVersionInfo();
         configureDatabase();
+        configureNetworkPackets();
         printSection("Server Configuration");
         Config.load();
         ThreadPoolManager.getInstance().schedulePurge();
         INSTANCE = new GameServer();
         ThreadPoolManager.execute(AuthServerCommunication.getInstance());
 
+    }
+
+    private static void configureNetworkPackets() {
+        System.setProperty("async-mmocore.configurationFile", "config/async-mmocore.properties");
     }
 
     private static void configureLogger() {

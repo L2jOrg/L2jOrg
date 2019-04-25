@@ -37,7 +37,7 @@ public class AuthServer {
 
         var bindServerListen = gameServerListenHost().equals("*") ? new InetSocketAddress(gameServerListenPort()) : new InetSocketAddress(gameServerListenHost(), gameServerListenPort());
         var gameserverHandler = new GameServerPacketHandler();
-        serverConnectionHandler = ConnectionBuilder.create(bindServerListen, ServerClient::new, gameserverHandler, gameserverHandler).threadPoolSize(2).build();
+        serverConnectionHandler = ConnectionBuilder.create(bindServerListen, ServerClient::new, gameserverHandler, gameserverHandler).build();
         serverConnectionHandler.start();
         logger.info("Listening for GameServers on {} : {}", gameServerListenHost(), gameServerListenPort());
 
@@ -45,7 +45,7 @@ public class AuthServer {
         var bindAddress = listenHost().equals("*") ? new InetSocketAddress(listenPort()) : new InetSocketAddress(listenHost(), listenPort()) ;
         final AuthPacketHandler lph = new AuthPacketHandler();
         final ConnectionHelper sh = new ConnectionHelper();
-        connectionHandler = ConnectionBuilder.create(bindAddress, AuthClient::new, lph, sh).threadPoolSize(4).build();
+        connectionHandler = ConnectionBuilder.create(bindAddress, AuthClient::new, lph, sh).build();
         connectionHandler.start();
         logger.info("Login Server ready on {}:{}", bindAddress.getHostString(), listenPort());
     }
@@ -58,12 +58,17 @@ public class AuthServer {
     public static void main(String[] args) {
         configureLogger();
         configureDatabase();
+        configureNetworkPackets();
         try {
             _instance = new AuthServer();
             getRuntime().addShutdownHook(new Thread(() -> _instance.shutdown()));
         } catch (Exception e) {
             logger.error(e.getLocalizedMessage(), e);
         }
+    }
+
+    private static void configureNetworkPackets() {
+        System.setProperty("async-mmocore.configurationFile", "config/async-mmocore.properties");
     }
 
     private static void configureDatabase() {
