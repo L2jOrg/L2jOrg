@@ -4,6 +4,8 @@ import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.CharacterData;
 
+import java.util.List;
+
 public interface CharacterDAO extends DAO {
 
     @Query("UPDATE characters SET online = 0")
@@ -20,4 +22,7 @@ public interface CharacterDAO extends DAO {
 
     @Query("DELETE FROM character_skills_save WHERE restore_type = 1 AND systime <= :timestamp:")
     void deleteExpiredSavedSkills(long timestamp);
+
+    @Query("SELECT  charId, createDate FROM characters WHERE DAYOFMONTH(createDate) = :day: AND MONTH(createDate) = :month: AND YEAR(createDate) < :year:")
+    List<CharacterData> findBirthdayCharacters(int year, int month, int day);
 }

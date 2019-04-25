@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.taskmanager.tasks;
 
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.instancemanager.MailManager;
@@ -29,19 +29,18 @@ import org.l2j.gameserver.taskmanager.TaskManager.ExecutableTask;
 import org.l2j.gameserver.taskmanager.TaskType;
 import org.l2j.gameserver.util.Util;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.time.temporal.ChronoField;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+
+import static java.util.Objects.isNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author Nyaran
  */
 public class TaskBirthday extends Task {
     private static final String NAME = "birthday";
-    private static final String QUERY = "SELECT charId, createDate FROM characters WHERE createDate LIKE ?";
     private static final Calendar _today = Calendar.getInstance();
     private int _count = 0;
 
@@ -65,59 +64,33 @@ public class TaskBirthday extends Task {
             checkBirthday(lastExecDate.get(Calendar.YEAR), lastExecDate.get(Calendar.MONTH), lastExecDate.get(Calendar.DATE));
         }
 
-        LOGGER.info("BirthdayManager: " + _count + " gifts sent. " + rangeDate);
+        LOGGER.info("BirthdayManager: {} gifts sent. {}", _count, rangeDate);
     }
 
     private void checkBirthday(int year, int month, int day) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(QUERY)) {
-            statement.setString(1, "%-" + getNum(month + 1) + "-" + getNum(day));
-            try (ResultSet rset = statement.executeQuery()) {
-                while (rset.next()) {
-                    final int playerId = rset.getInt("charId");
-                    final Calendar createDate = Calendar.getInstance();
-                    createDate.setTime(rset.getDate("createDate"));
-
-                    final int age = year - createDate.get(Calendar.YEAR);
-                    if (age <= 0) {
-                        continue;
-                    }
-
-                    String text = Config.ALT_BIRTHDAY_MAIL_TEXT;
-
-                    if (text.contains("$c1")) {
-                        text = text.replace("$c1", CharNameTable.getInstance().getNameById(playerId));
-                    }
-                    if (text.contains("$s1")) {
-                        text = text.replace("$s1", String.valueOf(age));
-                    }
-
-                    final Message msg = new Message(playerId, Config.ALT_BIRTHDAY_MAIL_SUBJECT, text, MailType.BIRTHDAY);
-
-                    final Mail attachments = msg.createAttachments();
-                    attachments.addItem("Birthday", Config.ALT_BIRTHDAY_GIFT, 1, null, null);
-
-                    MailManager.getInstance().sendMessage(msg);
-                    _count++;
-                }
+        var charactersData = getDAO(CharacterDAO.class).findBirthdayCharacters(year, month, day);
+        charactersData.forEach(characterData -> {
+            var name = CharNameTable.getInstance().getNameById(characterData.getCharId());
+            if(isNull(name)) {
+                return;
             }
-        } catch (SQLException e) {
-            LOGGER.warn("Error checking birthdays. ", e);
-        }
+
+            var age = year - characterData.getCreateDate().toInstant().get(ChronoField.YEAR);
+            var text = Config.ALT_BIRTHDAY_MAIL_TEXT.replace("$c1", name).replace("$s1", String.valueOf(age));
+            final Message msg = new Message(characterData.getCharId(), Config.ALT_BIRTHDAY_MAIL_SUBJECT, text, MailType.BIRTHDAY);
+
+            final Mail attachments = msg.createAttachments();
+            attachments.addItem("Birthday", Config.ALT_BIRTHDAY_GIFT, 1, null, null);
+
+            MailManager.getInstance().sendMessage(msg);
+            _count++;
+        });
 
         // If character birthday is 29-Feb and year isn't leap, send gift on 28-feb
         final GregorianCalendar calendar = new GregorianCalendar();
         if ((month == Calendar.FEBRUARY) && (day == 28) && !calendar.isLeapYear(_today.get(Calendar.YEAR))) {
-            checkBirthday(year, Calendar.FEBRUARY, 29);
+            checkBirthday(year, month, 29);
         }
-    }
-
-    /**
-     * @param num the number to format.
-     * @return the formatted number starting with a 0 if it is lower or equal than 10.
-     */
-    private String getNum(int num) {
-        return (num <= 9) ? "0" + num : String.valueOf(num);
     }
 
     @Override
