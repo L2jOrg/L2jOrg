@@ -2,7 +2,6 @@ module org.l2j.commons {
     requires java.sql;
     requires org.slf4j;
     requires com.zaxxer.hikari;
-    requires transitive java.xml.bind;
     requires java.management;
     requires java.compiler;
     requires cache.api;

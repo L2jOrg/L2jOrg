@@ -2,8 +2,6 @@ import java.text.SimpleDateFormat
 import java.util.regex.Matcher
 
 plugins {
-    id "idea"
-    id "eclipse"
     id "application"
 }
 ext.moduleName = 'org.l2j.authserver'
@@ -21,14 +19,13 @@ sourceSets {
 }
 
 dependencies {
-    compile project(':Commons')
-    compile 'io.github.joealisson:async-mmocore:2.2.1-SNAPSHOT'
+    implementation project(':Commons')
+    implementation 'io.github.joealisson:async-mmocore:2.2.1-SNAPSHOT'
 
-    runtime 'org.apache.logging.log4j:log4j-slf4j18-impl:2.11.2'
+    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j18-impl:2.11.2'
 }
 
 jar {
-    baseName 'authserver'
 
     exclude('config/**')
     exclude('*.cfg')

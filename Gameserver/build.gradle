@@ -2,9 +2,6 @@ import java.text.SimpleDateFormat
 import java.util.regex.Matcher
 
 plugins {
-    id "java"
-    id "idea"
-    id "eclipse"
     id "application"
 }
 
@@ -23,11 +20,12 @@ sourceSets {
 }
 
 dependencies {
-    compile project(':Commons')
-    compile 'io.github.joealisson:async-mmocore:2.2.1-SNAPSHOT'
+    
+    implementation project(':Commons')
+    implementation 'io.github.joealisson:async-mmocore:2.2.1-SNAPSHOT'
 
-    runtime 'org.ehcache:ehcache:3.7.0'
-    runtime 'org.apache.logging.log4j:log4j-slf4j18-impl:2.11.2'
+    runtimeOnly 'org.ehcache:ehcache:3.7.1'
+    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j18-impl:2.11.2'
 }
 
 task createVersionFile(dependsOn: processResources) {
@@ -48,7 +46,6 @@ classes {
 }
 
 jar {
-    baseName  'gameserver'
 
     exclude('config/**')
     exclude('*.cfg')

@@ -1,7 +1,5 @@
 plugins {
-    id "java"
-    id "idea"
-    id "eclipse"
+    id "java-library"
 }
 
 ext.moduleName = 'org.l2j.commons'
@@ -23,17 +21,10 @@ configurations.all {
 }
 
 dependencies {
-    compile 'org.slf4j:slf4j-api:1.8.0-beta4'
-    compile 'com.zaxxer:HikariCP:3.3.1'
-    compile 'org.glassfish.jaxb:jaxb-runtime:2.4.0-b180830.0438'
-    compile 'javax.cache:cache-api:1.1.0'
-    compile 'io.github.joealisson:primitive:1.0.0-SNAPSHOT'
+    api 'javax.cache:cache-api:1.1.0'
+    api 'io.github.joealisson:primitive:1.0.0-SNAPSHOT'
+    api 'org.slf4j:slf4j-api:1.8.0-beta4'
 
-    runtime ('mysql:mysql-connector-java:8.0.15') {
-        transitive = false
-    }
-}
-
-jar {
-    baseName "commons"
+    implementation 'com.zaxxer:HikariCP:3.3.1'
+    runtimeOnly 'mysql:mysql-connector-java:8.0.15'
 }

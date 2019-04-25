@@ -10,7 +10,6 @@ import org.l2j.commons.util.Rnd;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
@@ -51,9 +50,8 @@ public class GameServerManager {
     private void loadServerNames() {
         try {
             var serverNameReader = new ServerNameReader();
-            var f = new File("servername.xml");
-            serverNameReader.read(f);
             serverNames = serverNameReader.getServerNames();
+            serverNameReader.cleanUp();
             LOGGER.info("Loaded {} server names", serverNames.size());
         } catch (Exception e) {
             LOGGER.warn("servername.xml could not be loaded.", e);

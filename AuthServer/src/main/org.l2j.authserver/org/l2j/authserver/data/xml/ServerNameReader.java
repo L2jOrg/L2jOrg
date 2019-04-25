@@ -2,17 +2,20 @@ package org.l2j.authserver.data.xml;
 
 import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
-import org.l2j.commons.xml.XMLReader;
+import org.l2j.commons.xml.XmlReader;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
+import java.io.File;
+import java.nio.file.Path;
 
-public class ServerNameReader extends XMLReader<ServersList> {
+public class ServerNameReader extends XmlReader {
 
-    private final IntObjectMap<String> serverNames;
+    private IntObjectMap<String> serverNames;
 
-    public ServerNameReader() throws JAXBException {
+    public ServerNameReader() {
         serverNames = new HashIntObjectMap<>();
+        load();
     }
 
     public IntObjectMap<String> getServerNames() {
@@ -20,22 +23,26 @@ public class ServerNameReader extends XMLReader<ServersList> {
     }
 
     @Override
-    protected void processEntity(ServersList entity) {
-        entity.getServer().forEach(info -> serverNames.put(info.getId(), info.getName()));
+    protected Path getSchemaFilePath() {
+        return Path.of("servername.xsd");
     }
 
     @Override
-    protected JAXBContext getJAXBContext() throws JAXBException {
-        return JAXBContext.newInstance(ServersList.class);
+    public void load() {
+        parseFile(new File("servername.xml"));
     }
 
     @Override
-    protected String getSchemaFilePath() {
-        return "servername.xsd";
+    protected void parseDocument(Document doc, File f) {
+        forEach(doc, "servers_list", list -> forEach(list, "server", this::parseServerName));
     }
 
-    @Override
-    protected String[] getXmlFileDirectories() {
-        return new String[] { "." };
+    private void parseServerName(Node serverNameNode) {
+        var attrs = serverNameNode.getAttributes();
+        serverNames.put(parseInteger(attrs, "id"), parseString(attrs, "name"));
+    }
+
+    public void cleanUp() {
+        serverNames = null;
     }
 }
