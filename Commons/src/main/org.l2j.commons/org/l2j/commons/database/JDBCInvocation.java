@@ -4,6 +4,7 @@ import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import io.github.joealisson.primitive.pair.IntObjectPair;
 import io.github.joealisson.primitive.pair.impl.ImmutableIntObjectPairImpl;
+import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.commons.database.annotation.Table;
@@ -15,6 +16,7 @@ import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.cache.Cache;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -34,8 +36,8 @@ class JDBCInvocation implements InvocationHandler {
     private static final Pattern PARAMETER_PATTERN = Pattern.compile(":(.*?):");
     private static final String REPLACE_TEMPLATE = "REPLACE INTO %s %s VALUES %s";
     // TODO use cache API
-    private static final Map<Method, QueryDescriptor> descriptors = new HashMap<>();
-    private static final Map<Class<?>, QueryDescriptor> saveDescriptors = new HashMap<>();
+    private static final Cache<Method, QueryDescriptor> descriptors = CacheFactory.getInstance().getCache("sql-descriptors");
+    private static final Cache<Class<?>, QueryDescriptor> saveDescriptors = CacheFactory.getInstance().getCache("sql-save-descriptors");
 
     JDBCInvocation() {
         for (TypeHandler typeHandler : ServiceLoader.load(TypeHandler.class)) {
@@ -111,7 +113,13 @@ class JDBCInvocation implements InvocationHandler {
     }
 
     private QueryDescriptor buildQuery(final Method method)  {
-        return descriptors.computeIfAbsent(method, this::buildDescriptor);
+        if(descriptors.containsKey(method)) {
+            return descriptors.get(method);
+        }
+        var descriptor = buildDescriptor(method);
+        descriptors.put(method, descriptor);
+
+        return descriptor;
     }
 
     private QueryDescriptor buildDescriptor(Method method) {

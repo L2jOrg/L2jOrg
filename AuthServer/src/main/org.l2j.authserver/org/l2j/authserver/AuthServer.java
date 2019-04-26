@@ -9,6 +9,7 @@ import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.AuthPacketHandler;
 import org.l2j.authserver.network.gameserver.GameServerPacketHandler;
 import org.l2j.authserver.network.gameserver.ServerClient;
+import org.l2j.commons.cache.CacheFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -57,6 +58,7 @@ public class AuthServer {
 
     public static void main(String[] args) {
         configureLogger();
+        configureCaches();
         configureDatabase();
         configureNetworkPackets();
         try {
@@ -65,6 +67,10 @@ public class AuthServer {
         } catch (Exception e) {
             logger.error(e.getLocalizedMessage(), e);
         }
+    }
+
+    private static void configureCaches() {
+        CacheFactory.getInstance().initialize("config/ehcache.xml");
     }
 
     private static void configureNetworkPackets() {

@@ -3,10 +3,10 @@ package org.l2j.commons.cache;
 import javax.cache.Cache;
 import javax.cache.CacheManager;
 import javax.cache.Caching;
+import javax.cache.configuration.MutableConfiguration;
+import javax.cache.expiry.Duration;
+import javax.cache.expiry.TouchedExpiryPolicy;
 import javax.cache.spi.CachingProvider;
-
-import java.net.URI;
-import java.nio.file.Files;
 import java.nio.file.Path;
 
 import static java.util.Objects.isNull;
@@ -34,12 +34,20 @@ public class CacheFactory {
 
     public <K, V> Cache<K, V> getCache(String alias) {
         checkInitilized();
-        return manager.getCache(alias);
+        Cache<K, V> cache = manager.getCache(alias);
+        if(isNull(cache)) {
+           cache =  manager.createCache(alias, new MutableConfiguration<K, V>().setStoreByValue(false).setExpiryPolicyFactory(TouchedExpiryPolicy.factoryOf(Duration.ONE_HOUR)));
+        }
+        return cache;
     }
 
     public <K, V> Cache<K, V> getCache(String alias, Class<K> keyClass, Class<V> valueClass) {
         checkInitilized();
-        return manager.getCache(alias, keyClass, valueClass);
+        Cache<K, V> cache = manager.getCache(alias, keyClass, valueClass);
+        if(isNull(cache)) {
+            cache = manager.createCache(alias, new MutableConfiguration<K, V>().setTypes(keyClass, valueClass).setStoreByValue(false).setExpiryPolicyFactory(TouchedExpiryPolicy.factoryOf(Duration.ONE_HOUR)));
+        }
+        return cache;
     }
 
     private void checkInitilized() {

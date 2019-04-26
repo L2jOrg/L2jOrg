@@ -2,6 +2,7 @@ package org.l2j.gameserver;
 
 import io.github.joealisson.mmocore.ConnectionBuilder;
 import io.github.joealisson.mmocore.ConnectionHandler;
+import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.DeadLockDetector;
@@ -272,6 +273,7 @@ public class GameServer {
 
     public static void main(String[] args) throws Exception {
         configureLogger();
+        configureCaches();
         logVersionInfo();
         configureDatabase();
         configureNetworkPackets();
@@ -281,6 +283,10 @@ public class GameServer {
         INSTANCE = new GameServer();
         ThreadPoolManager.execute(AuthServerCommunication.getInstance());
 
+    }
+
+    private static void configureCaches() {
+        CacheFactory.getInstance().initialize("config/ehcache.xml");
     }
 
     private static void configureNetworkPackets() {

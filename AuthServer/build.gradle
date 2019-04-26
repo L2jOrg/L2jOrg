@@ -23,6 +23,7 @@ dependencies {
     implementation 'io.github.joealisson:async-mmocore:2.2.1-SNAPSHOT'
 
     runtimeOnly 'org.apache.logging.log4j:log4j-slf4j18-impl:2.11.2'
+    runtimeOnly 'org.ehcache:ehcache:3.7.1'
 }
 
 jar {
