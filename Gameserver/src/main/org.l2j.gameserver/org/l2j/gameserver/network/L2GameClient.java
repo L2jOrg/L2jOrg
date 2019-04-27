@@ -241,7 +241,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
     }
 
     public void close(boolean toLoginScreen) {
-        close(toLoginScreen ? ServerClose.STATIC_PACKET : LeaveWorld.STATIC_PACKET);
+        sendPacket(toLoginScreen ? ServerClose.STATIC_PACKET : LeaveWorld.STATIC_PACKET);
     }
 
     public byte[] enableCrypt() {
@@ -435,11 +435,11 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         return info.getObjectId();
     }
 
-    private AccountData getAccountData() {
-        if(isNull(account)) {
+    private synchronized AccountData getAccountData() {
+        if (isNull(account)) {
             account = getDAO(AccountDAO.class).findById(accountName);
-            if(isNull(account)) {
-               createNewAccountData();
+            if (isNull(account)) {
+                createNewAccountData();
             }
         }
         return account;
@@ -504,6 +504,9 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
     }
 
     public void updateVipPoints(long points) {
+        if(points == 0) {
+            return;
+        }
         var currentVipTier = VipData.getInstance().getVipTier(getVipPoints());
         getAccountData().updateVipPoints(points);
         var newTier = VipData.getInstance().getVipTier(getVipPoints());
@@ -514,8 +517,8 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
             } else {
                 getAccountData().setVipTierExpiration(0);
             }
-            sendPacket(new ReceiveVipInfo());
         }
+        sendPacket(new ReceiveVipInfo());
     }
 
     public int getCoin() {

@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.clientpackets.primeshop;
 
+import org.l2j.gameserver.data.database.dao.PrimeShopDAO;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.data.xml.impl.PrimeShopData;
 import org.l2j.gameserver.enums.MailType;
@@ -15,21 +16,23 @@ import org.l2j.gameserver.network.serverpackets.primeshop.ExBRGamePoint;
 
 import java.nio.ByteBuffer;
 
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
+
 /**
  * @author Gnacik, UnAfraid
  */
 public final class RequestBRPresentBuyProduct extends RequestBuyProduct {
 
-    private int _brId;
-    private int _count;
+    private int productId;
+    private int count;
     private String _charName;
     private String _mailTitle;
     private String _mailBody;
 
     @Override
     public void readImpl(ByteBuffer packet) {
-        _brId = packet.getInt();
-        _count = packet.getInt();
+        productId = packet.getInt();
+        count = packet.getInt();
         _charName = readString(packet);
         _mailTitle = readString(packet);
         _mailBody = readString(packet);
@@ -45,19 +48,19 @@ public final class RequestBRPresentBuyProduct extends RequestBuyProduct {
 
         final int receiverId = CharNameTable.getInstance().getIdByName(_charName);
         if (receiverId <= 0) {
-            activeChar.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.INVALID_USER));
+            activeChar.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.INVENTORY_FULL0));
             return;
         }
 
         if (activeChar.hasItemRequest() || activeChar.hasRequest(PrimeShopRequest.class)) {
-            activeChar.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.INVALID_USER_STATE));
+            activeChar.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.INVENTORY_FULL));
             return;
         }
 
         activeChar.addRequest(new PrimeShopRequest(activeChar));
 
-        final PrimeShopProduct item = PrimeShopData.getInstance().getItem(_brId);
-        if (validatePlayer(item, _count, activeChar) && processPayment(activeChar, item, _count)) {
+        final PrimeShopProduct item = PrimeShopData.getInstance().getItem(productId);
+        if (validatePlayer(item, count, activeChar) && processPayment(activeChar, item, count)) {
 
             client.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.SUCCESS));
             client.sendPacket(new ExBRGamePoint());
@@ -69,6 +72,7 @@ public final class RequestBRPresentBuyProduct extends RequestBuyProduct {
                 attachement.addItem("Prime Shop Gift", subItem.getId(), subItem.getCount(), activeChar, this);
             }
             MailManager.getInstance().sendMessage(mail);
+            getDAO(PrimeShopDAO.class).addHistory(productId, count, activeChar.getObjectId());
         }
 
         activeChar.removeRequest(PrimeShopRequest.class);

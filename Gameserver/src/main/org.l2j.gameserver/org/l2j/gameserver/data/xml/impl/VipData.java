@@ -12,6 +12,7 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.nio.file.Path;
 import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -143,7 +144,8 @@ public class VipData extends IGameXmlReader{
     public boolean checkVipTierExpiration(L2PcInstance player) {
         var now = Instant.now();
         if(now.isAfter(Instant.ofEpochMilli(player.getVipTierExpiration()))) {
-            player.updateVipPoints(getPointsDepreciatedOnLevel(player.getVipTier()));
+            player.updateVipPoints(-getPointsDepreciatedOnLevel(player.getVipTier()));
+            player.setVipTierExpiration(Instant.now().plus(30, ChronoUnit.DAYS).toEpochMilli());
             return true;
         }
         return false;

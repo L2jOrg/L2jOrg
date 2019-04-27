@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.clientpackets.primeshop;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.PrimeShopDAO;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.model.actor.request.PrimeShopRequest;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -11,6 +11,8 @@ import org.l2j.gameserver.network.serverpackets.primeshop.ExBRBuyProduct.ExBrPro
 import org.l2j.gameserver.util.Util;
 
 import java.util.Calendar;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 public abstract class RequestBuyProduct extends IClientIncomingPacket {
 
@@ -27,17 +29,17 @@ public abstract class RequestBuyProduct extends IClientIncomingPacket {
 
         if ((count < 1) || (count > 99)) {
             Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid itemcount [" + count + "] from Prime", Config.DEFAULT_PUNISH);
-            player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
+            player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INCORRECT_COUNT));
             return false;
         }
 
         if ( (item.getMinLevel() > 0 && item.getMinLevel() > player.getLevel()) || (item.getMaxLevel() > 0 && item.getMaxLevel() < player.getLevel())) {
-            player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER));
+            player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_LEVEL));
             return false;
         }
 
         if ((item.getMinBirthday() > 0 && item.getMinBirthday() > player.getBirthdays()) || (item.getMaxBirthday() > 0 && item.getMaxBirthday() < player.getBirthdays())) {
-            player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
+            player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_DATE_CREATION));
             return false;
         }
 
@@ -61,7 +63,7 @@ public abstract class RequestBuyProduct extends IClientIncomingPacket {
 
         if (player.getInventory().validateWeight(weight)) {
             if (!player.getInventory().validateCapacity(slots)) {
-                player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTROY_OVERFLOW));
+                player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTORY_FULL));
                 return false;
             }
         } else {
@@ -69,6 +71,10 @@ public abstract class RequestBuyProduct extends IClientIncomingPacket {
             return false;
         }
 
+        if(item.getRestrictionDay() > 0 && getDAO(PrimeShopDAO.class).countBougthItemToday(player.getObjectId(), item.getId()) >= item.getRestrictionDay()) {
+            player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.ALREADY_BOUGHT));
+            return false;
+        }
         return true;
     }
 
@@ -97,23 +103,22 @@ public abstract class RequestBuyProduct extends IClientIncomingPacket {
 
         if (paymentId < 0) {
             activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
-            activeChar.removeRequest(PrimeShopRequest.class);
             return false;
         } else if (paymentId > 0) {
             if (!activeChar.destroyItemByItemId("PrimeShop-" + item.getId(), paymentId, price, activeChar, true)) {
                 activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
-                activeChar.removeRequest(PrimeShopRequest.class);
-                return true;
+                return false;
             }
         } else {
             if (activeChar.getL2Coins() < price) {
                 activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
-                activeChar.removeRequest(PrimeShopRequest.class);
+                return false;
+            }
+            if(price > 0) {
                 activeChar.updateL2Coins(-price);
                 activeChar.updateVipPoints((int) (price * 0.07));
-                return true;
             }
         }
-        return false;
+        return true;
     }
 }
