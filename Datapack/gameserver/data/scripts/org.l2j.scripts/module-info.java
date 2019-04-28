@@ -1,3 +1,5 @@
+import handlers.admincommandhandlers.AdminCoins;
+
 open module org.l2j.scripts {
 
     requires java.logging;
@@ -217,7 +219,7 @@ open module org.l2j.scripts {
             handlers.admincommandhandlers.AdminPetition,
             handlers.admincommandhandlers.AdminPForge,
             handlers.admincommandhandlers.AdminPledge,
-            handlers.admincommandhandlers.AdminPrimePoints,
+                AdminCoins,
             handlers.admincommandhandlers.AdminRide,
             handlers.admincommandhandlers.AdminScan,
             handlers.admincommandhandlers.AdminServerInfo,

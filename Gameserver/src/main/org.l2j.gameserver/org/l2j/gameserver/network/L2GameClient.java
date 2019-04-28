@@ -529,6 +529,10 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         getAccountData().updateCoins(coins);
     }
 
+    public void setCoin(int coins) {
+        getAccountData().setCoins(coins);
+    }
+
     public void setVipTierExpiration(long expiration) {
         getAccountData().setVipTierExpiration(expiration);
     }

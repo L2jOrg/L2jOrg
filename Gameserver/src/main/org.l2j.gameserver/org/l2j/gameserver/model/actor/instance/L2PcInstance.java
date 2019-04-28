@@ -10941,25 +10941,6 @@ public final class L2PcInstance extends L2Playable {
     }
 
     /**
-     * @return the prime shop points of the player.
-     */
-    public int getPrimePoints() {
-        return getAccountVariables().getInt("PRIME_POINTS", 0);
-    }
-
-    /**
-     * Sets prime shop for current player.
-     *
-     * @param points
-     */
-    public void setPrimePoints(int points) {
-        // Immediate store upon change
-        final AccountVariables vars = getAccountVariables();
-        vars.set("PRIME_POINTS", Math.max(points, 0));
-        vars.storeMe();
-    }
-
-    /**
      * Gets the last commission infos.
      *
      * @return the last commission infos
@@ -11262,6 +11243,10 @@ public final class L2PcInstance extends L2Playable {
 
     public int getL2Coins() {
         return getClient().getCoin();
+    }
+
+    public void setL2Coins(int coins) {
+        getClient().setCoin(coins);
     }
 
     public void updateL2Coins(int coins) {

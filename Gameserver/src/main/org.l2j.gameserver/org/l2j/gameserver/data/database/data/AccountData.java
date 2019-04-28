@@ -40,6 +40,10 @@ public class AccountData {
         this.coin += coins;
     }
 
+    public void setCoins(int coins) {
+        this.coin = coins;
+    }
+
     public void setVipTierExpiration(long expiration) {
         this.vipTierExpiration = expiration;
     }
