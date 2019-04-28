@@ -480,7 +480,7 @@ public class SkillCaster implements Runnable {
 
         // Reschedule next task if we have such.
         if (hasNextPhase) {
-            _task = ThreadPoolManager.getInstance().schedule(this, nextTaskDelay);
+            _task = ThreadPoolManager.schedule(this, nextTaskDelay);
         } else {
             // Stop casting if there is no next phase.
             stopCasting(false);

@@ -3496,7 +3496,7 @@ public final class L2PcInstance extends L2Playable {
     @Override
     public final void broadcastPacket(IClientOutgoingPacket mov) {
         if (mov instanceof CharInfo) {
-            new IllegalArgumentException("CharInfo is being send via broadcastPacket. Do NOT do that! Use broadcastCharInfo() instead.");
+            throw new IllegalArgumentException("CharInfo is being send via broadcastPacket. Do NOT do that! Use broadcastCharInfo() instead.");
         }
 
         sendPacket(mov);

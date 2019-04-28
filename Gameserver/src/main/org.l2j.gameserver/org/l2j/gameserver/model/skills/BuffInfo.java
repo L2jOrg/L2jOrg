@@ -307,7 +307,7 @@ public final class BuffInfo {
 
         // Creates a task that will stop all the effects.
         if (_abnormalTime > 0) {
-            _scheduledFutureTimeTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new BuffTimeTask(this), 0, 1000);
+            _scheduledFutureTimeTask = ThreadPoolManager.scheduleAtFixedRate(new BuffTimeTask(this), 0, 1000);
         }
 
         for (AbstractEffect effect : _effects) {

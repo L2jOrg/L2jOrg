@@ -373,6 +373,7 @@ open module org.l2j.scripts {
             handlers.targethandlers.HolyThing,
             handlers.targethandlers.Ground,
             handlers.targethandlers.FortressFlagpole,
+            handlers.targethandlers.Enemy,
             handlers.targethandlers.EnemyOnly,
             handlers.targethandlers.EnemyNot,
             handlers.targethandlers.DoorTreasure,
