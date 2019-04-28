@@ -1,37 +1,37 @@
 <html><title>Teleport Menu</title><body>
 <table width=270>
 <tr>
-<td width=45><button value="Main" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=45><button action="bypass -h admin_admin" width=45>Main</button></td>
 <td width=180><center>Teleport Menu</center></td>
-<td width=45><button value="Back" action="bypass -h admin_show_moves" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=45><button action="bypass -h admin_show_moves" width=45>Back</button></td>
 </tr>
 </table><br>
 <center><table><tr>
-<td><button value="  " action="bypass -h admin_tele" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="North" action="bypass -h admin_gonorth $offset" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Up" action="bypass -h admin_goup $offset" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr><tr>
-<td><button value="West" action="bypass -h admin_gowest $offset" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_tele" width=70>  </button></td>
+<td><button action="bypass -h admin_gonorth $offset" width=70>North</button></td>
+<td><button action="bypass -h admin_goup $offset" width=70>Up</button></td></tr><tr>
+<td><button action="bypass -h admin_gowest $offset" width=70>West</button></td>
 <td><edit var="offset" width=70></td>
-<td><button value="East" action="bypass -h admin_goeast $offset" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr><tr>
-<td><button value="  " action="bypass -h admin_tele" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="South" action="bypass -h admin_gosouth $offset" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Down" action="bypass -h admin_godown $offset" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr></table><br><br>
+<td><button action="bypass -h admin_goeast $offset" width=70>East</button></td></tr><tr>
+<td><button action="bypass -h admin_tele" width=70>  </button></td>
+<td><button action="bypass -h admin_gosouth $offset" width=70>South</button></td>
+<td><button action="bypass -h admin_godown $offset" width=70>Down</button></td></tr></table><br><br>
 <br><br>
 <table width=270><tr>
 <td>Move:</td>
-<td><button value="Normal mode" action="bypass -h admin_teleto end" width=90 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_teleto end" width=90>Normal mode</button></td>
 </tr><tr>
-<td><button value="Demonic mode" action="bypass -h admin_instant_move" width=90 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Charge mode" action="bypass -h admin_teleto charge" width=90 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_instant_move" width=90>Demonic mode</button></td>
+<td><button action="bypass -h admin_teleto charge" width=90>Charge mode</button></td>
 </tr></table>
 <br><br>
 <table width=270><tr>
 <td>GM Speed:</td>
-<td><button value="1" action="bypass -h admin_gmspeed_menu 1" width=25 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="2" action="bypass -h admin_gmspeed_menu 2" width=25 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="3" action="bypass -h admin_gmspeed_menu 3" width=25 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="4" action="bypass -h admin_gmspeed_menu 4" width=25 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Off" action="bypass -h admin_gmspeed_menu 0" width=25 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_gmspeed_menu 1" width=25>1</button></td>
+<td><button action="bypass -h admin_gmspeed_menu 2" width=25>2</button></td>
+<td><button action="bypass -h admin_gmspeed_menu 3" width=25>3</button></td>
+<td><button action="bypass -h admin_gmspeed_menu 4" width=25>4</button></td>
+<td><button action="bypass -h admin_gmspeed_menu 0" width=25>Off</button></td>
 </tr></table><br><br>
 Move to given Cords:<br1>
 <table width=270><tr>
@@ -41,8 +41,8 @@ Move to given Cords:<br1>
 </tr>
 </table><br1>
 <table><tr>
-<td><button value="Tele" action="bypass -h admin_move_to $char_cord_x $char_cord_y $char_cord_z" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Walk" action="bypass -h admin_walk $char_cord_x $char_cord_y $char_cord_z" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_move_to $char_cord_x $char_cord_y $char_cord_z" width=80>Tele</button></td>
+<td><button action="bypass -h admin_walk $char_cord_x $char_cord_y $char_cord_z" width=80>Walk</button></td>
 </tr></table>
 </center>
 </body></html>

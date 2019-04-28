@@ -67,4 +67,9 @@ public final class NpcHtmlMessage extends AbstractHtmlPacket {
     public HtmlActionScope getScope() {
         return _itemId == 0 ? HtmlActionScope.NPC_HTML : HtmlActionScope.NPC_ITEM_HTML;
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return getHtml().length() * 2 + 15;
+    }
 }

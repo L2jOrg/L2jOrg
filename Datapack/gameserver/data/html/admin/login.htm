@@ -1,15 +1,15 @@
 <html><title>Login server</title><body>
 <table width=270><tr>
-<td width=45><button value="Main" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=45><button action="bypass -h admin_admin" width=45>Main</button></td>
 <td width=180><center>Server Management Menu</center></td>
-<td width=45><button value="Back" action="bypass -h admin_admin4" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=45><button action="bypass -h admin_admin4" width=45>Back</button></td>
 </tr></table>
 <br><br>
 <table width=240>
 <tr>
 <td width=100>Max Players:</td>
 <td><edit var="qbox" width=120 height=21></td>
-<td><button value="Help" action="bypass -h admin_html help/login.htm" width=45 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_html help/login.htm" width=45>Help</button></td>
 </tr></table><br><br>
 <table width=260><tr>
 <td>Registered as:</td><td>%server_name%</td>
@@ -21,11 +21,11 @@
 <center>
 <br><br>
 <table width=260><tr>
-<td><button value="Gm Only" action="bypass -h admin_server_gm_only" width=95 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Kick non GMs" action="bypass -h admin_kick_non_gm" width=95 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Everyone" action="bypass -h admin_server_all" width=95 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr><tr>
-<td><button value="Clock On" action="bypass -h admin_server_list_clock on" width=95 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Clock Off" action="bypass -h admin_server_list_clock off" width=95 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Max Players" action="bypass -h admin_server_max_player $qbox" width=95 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr></table>
+<td><button action="bypass -h admin_server_gm_only" width=95>Gm Only</button></td>
+<td><button action="bypass -h admin_kick_non_gm" width=95>Kick non GMs</button></td>
+<td><button action="bypass -h admin_server_all" width=95>Everyone</button></td></tr><tr>
+<td><button action="bypass -h admin_server_list_clock on" width=95>Clock On</button></td>
+<td><button action="bypass -h admin_server_list_clock off" width=95>Clock Off</button></td>
+<td><button action="bypass -h admin_server_max_player $qbox" width=95>Max Players</button></td></tr></table>
 </center>
 </body></html>

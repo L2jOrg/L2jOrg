@@ -1,9 +1,9 @@
 <html><title>Items</title><body>
 <table width=270>
 <tr>
-<td width=45><button value="Main" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=45><button action="bypass -h admin_admin" width=45>Main</button></td>
 <td width=180><center>Item Creation Menu</center></td>
-<td width=45><button value="Back" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=45><button action="bypass -h admin_admin" width=45>Back</button></td>
 </tr>
 </table><br>
 <table width=260><tr><td>Fill the ID number in item-id to create the item that you want, use amount if you need more than one. <font color="LEVEL">Caution: Do not use amount with non-stackable items</font></td></tr></table><br>
@@ -17,10 +17,10 @@
 <tr>
 <td><edit var="itemid" width=50></td>
 <td><edit var="itemnum" width=70 type=number></td>
-<td><button value="Create Item" action="bypass -h admin_create_item $itemid $itemnum" width=140 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_create_item $itemid $itemnum" width=140>Create Item</button></td>
 </tr>
-<tr><td></td><td></td><td><button value="Give Item to Target" action="bypass -h admin_give_item_target $itemid $itemnum" width=140 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
-<tr><td></td><td></td><td><button value="Give Item to All Online" action="bypass -h admin_give_item_to_all $itemid $itemnum" width=140 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
+<tr><td></td><td></td><td><button action="bypass -h admin_give_item_target $itemid $itemnum" width=140>Give Item to Target</button></td></tr>
+<tr><td></td><td></td><td><button action="bypass -h admin_give_item_to_all $itemid $itemnum" width=140>Give Item to All Online</button></td></tr>
 </table><br><br>
 <table width=270 cellpadding="4">
 <tr>
@@ -33,7 +33,7 @@
 </tr>
 <tr>
 <td></td>
-<td><button value="Create Coin" action="bypass -h admin_create_coin $ebox $vbox" width=140 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_create_coin $ebox $vbox" width=140>Create Coin</button></td>
 </tr>
 </table>
 </center>

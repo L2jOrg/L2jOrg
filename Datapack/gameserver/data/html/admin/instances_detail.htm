@@ -2,10 +2,10 @@
 <center>
 <table width=270 border=0 bgcolor="444444">
 <tr>
-<td><button value="Main" action="bypass -h admin_admin" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Char" action="bypass -h admin_admin6" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Game" action="bypass -h admin_admin2" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="GM" action="bypass -h admin_admin7" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_admin" width=65>Main</button></td>
+<td><button action="bypass -h admin_admin6" width=65>Char</button></td>
+<td><button action="bypass -h admin_admin2" width=65>Game</button></td>
+<td><button action="bypass -h admin_admin7" width=65>GM</button></td>
 </tr>
 </table>
 <br>
@@ -44,13 +44,13 @@
 <font name="hs10" color="LEVEL">Create Instance from template:</font><br1>
 
 <combobox width=120 height=17 var=ebox list=Alone;Party;CommandChannel><br>
-<button value="Create Instance!" action="bypass -h admin_instancecreate %templateId% $ebox" width=140 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+<button action="bypass -h admin_instancecreate %templateId% $ebox" width=140>Create Instance!</button>
 
 <br><br>
 <font name="hs10" color="LEVEL">Active Instances:</font><br1>
 
 %instanceList%
 
-<button value="Back" action="bypass -h admin_instancelist" width=200 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1>
+<button action="bypass -h admin_instancelist" width=200>Back</button><br1>
 </center>
 </body></html>

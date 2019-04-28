@@ -2,11 +2,11 @@
 <center>
 <table width=270 border=0>
 <tr>
-<td><button value="Kill" action="bypass -h admin_kill_menu" width=50 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Res" action="bypass -h admin_res" width=50 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Heal" action="bypass -h admin_heal" width=50 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Food" action="bypass -h admin_fullfood" width=50 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Uns" action="bypass -h admin_unsummon" width=50 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_kill_menu" width=50>Kill</button></td>
+<td><button action="bypass -h admin_res" width=50>Res</button></td>
+<td><button action="bypass -h admin_heal" width=50>Heal</button></td>
+<td><button action="bypass -h admin_fullfood" width=50>Food</button></td>
+<td><button action="bypass -h admin_unsummon" width=50>Uns</button></td>
 </tr>
 </table>
 <br><img src="L2UI.SquareWhite" width=260 height=1><br>
@@ -30,7 +30,7 @@
 <tr>
 <td><font color="LEVEL">Level:</font></td>
 <td><edit var="qbox" width=30 height=13></td>
-<td><button value="Change Level" action="bypass -h admin_summon_setlvl $qbox" width=120 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_summon_setlvl $qbox" width=120>Change Level</button></td>
 </tr>
 </table>
 </center></body></html>

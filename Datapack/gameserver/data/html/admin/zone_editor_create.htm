@@ -6,10 +6,10 @@
 <center>
 	<table width=270 border=0 bgcolor="444444">
 		<tr>
-			<td><button value="Main" action="bypass -h admin_admin" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-			<td><button value="Char" action="bypass -h admin_admin6" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-			<td><button value="Game" action="bypass -h admin_admin2" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-			<td><button value="GM" action="bypass -h admin_admin7" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+			<td><button action="bypass -h admin_admin" width=65>Main</button></td>
+			<td><button action="bypass -h admin_admin6" width=65>Char</button></td>
+			<td><button action="bypass -h admin_admin2" width=65>Game</button></td>
+			<td><button action="bypass -h admin_admin7" width=65>GM</button></td>
 		</tr>
 	</table>
 	<br>
@@ -18,27 +18,27 @@
 	<table>	
 		<tr>
 			<td><edit var="name" width=127 height=15></td>
-			<td><button action="bypass -h admin_zones setname $name" value="Set name" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+			<td><button action="bypass -h admin_zones setname $name" width=130>Set name</button></td>
 		</tr>
 		<tr>
 			<td><edit var="minZ" width=127 height=15></td>
-			<td><button action="bypass -h admin_zones setMinZ $minZ" value="Set minZ" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+			<td><button action="bypass -h admin_zones setMinZ $minZ" width=130>Set minZ</button></td>
 		</tr>
 		<tr>
 			<td><edit var="maxZ" width=127 height=15></td>
-			<td><button action="bypass -h admin_zones setMaxZ $maxZ" value="Set maxZ" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+			<td><button action="bypass -h admin_zones setMaxZ $maxZ" width=130>Set maxZ</button></td>
 		</tr>
 		<tr>
-			<td><button action="bypass -h admin_zones start" value="Picking" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-			<td><button action="bypass -h admin_zones finish" value="Moving" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+			<td><button action="bypass -h admin_zones start" width=130>Picking</button></td>
+			<td><button action="bypass -h admin_zones finish" width=130>Moving</button></td>
 		</tr>
 		<tr>
-			<td><button action="bypass -h admin_zones dump" value="Dump" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-			<td><button action="bypass -h admin_zones clear" value="Clear" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+			<td><button action="bypass -h admin_zones dump" width=130>Dump</button></td>
+			<td><button action="bypass -h admin_zones clear" width=130>Clear</button></td>
 		</tr>
 		<tr>
-			<td><button action="bypass -h admin_zones show" value="Show" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-			<td><button action="bypass -h admin_zones hide" value="Hide" width=130 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+			<td><button action="bypass -h admin_zones show" width=130>Show</button></td>
+			<td><button action="bypass -h admin_zones hide" width=130>Hide</button></td>
 		</tr>
 	</table>
 </center>

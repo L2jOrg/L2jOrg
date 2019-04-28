@@ -1,69 +1,57 @@
-<html><title>Character Menu</title><body>
-<center>
-<table width=270 border=0 bgcolor="444444">
-<tr>
-<td><button value="Main" action="bypass -h admin_admin" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Char" action="bypass -h admin_admin6" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Game" action="bypass -h admin_admin2" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="GM" action="bypass -h admin_admin7" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr>
-</table><br>
-<table width=270>
-<tr>
-<td><font color="LEVEL">QuickBox:</font></td>
-<td><edit var="qbox" width=120 height=15></td>
-<td><button value="Help" action="bypass -h admin_html help/main_menu.htm" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr>
-</table>
+<html><title>Character Menu</title><body><center>
+<table background="L2UI_CT1.Windows.Windows_DF_TooltipBG"><tr>
+<td><button action="bypass -h admin_admin" width=55>Main</button></td>
+<td background="L2UI_CT1.Tab_DF_Tab_Selected" width=55 ALIGN=CENTER>Char</td>
+<td><button action="bypass admin_admin2" width=55>Game</button></td>
+<td><button action="bypass admin_admin7" width=55>GM</button></td>
+<td><button action="bypass -h admin_html help/main_menu.htm" width=50>Help</button></td>
+</tr></table>
+<table width=270><tr>
+<td align=RIGHT><font color="LEVEL">QuickBox:</font></td>
+<td><edit var="qbox" width=120></td>
+</tr></table>
 <br>
 Characters Related:<br1>
-<table width=240>
-<tr>
-<td><button value="List" action="bypass -h admin_show_characters 0" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Find Dualbox" action="bypass -h admin_find_dualbox $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Manage" action="bypass -h admin_char_manage" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr>
-<tr>
-<td><button value="Set Name" action="bypass -h admin_changename $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Set Title" action="bypass -h admin_settitle $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Set Rec" action="bypass -h admin_rec $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr>
-<tr>
-<td><button value="Set Fame" action="bypass -h admin_setfame $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Set Pvp" action="bypass -h admin_setpvp $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Set Pk" action="bypass -h admin_setpk $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr>
-<tr>
-<td><button value="Vit Set" action="bypass -h admin_set_vitality $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Vit Max" action="bypass -h admin_full_vitality" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Party" action="bypass -h admin_partyinfo" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr>
-<tr>
-<td><button value="Get Buffs" action="bypass -h admin_getbuffs $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Quests" action="bypass -h admin_charquestmenu $qbox" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Effects" action="bypass -h admin_admin3" width=82 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr>
-<tr>
-<td><button value="PC Points" action="bypass -h admin_pccafepoints" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Coins" action="bypass -h admin_coins" width=82 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<table><tr>
+<td><button action="bypass -h admin_show_characters 0" width=85>List</button></td>
+<td><button action="bypass -h admin_find_dualbox $qbox" width=85>Find Dualbox</button></td>
+<td><button action="bypass -h admin_char_manage" width=85>Manage</button></td>
+</tr><tr>
+<td><button action="bypass -h admin_changename $qbox" width=85>Set Name</button></td>
+<td><button action="bypass -h admin_settitle $qbox" width=85>Set Title</button></td>
+<td><button action="bypass -h admin_rec $qbox" width=85>Set Rec</button></td>
+</tr><tr>
+<td><button action="bypass -h admin_setfame $qbox" width=85>Set Fame</button></td>
+<td><button action="bypass -h admin_setpvp $qbox" width=85>Set Pvp</button></td>
+<td><button action="bypass -h admin_setpk $qbox" width=85>Set Pk</button></td>
+</tr><tr>
+<td><button action="bypass -h admin_set_vitality $qbox" width=85>Vit Set</button></td>
+<td><button action="bypass -h admin_full_vitality" width=85>Vit Max</button></td>
+<td><button action="bypass -h admin_partyinfo" width=85>Party</button></td>
+</tr><tr>
+<td><button action="bypass -h admin_getbuffs $qbox" width=85>Get Buffs</button></td>
+<td><button action="bypass -h admin_charquestmenu $qbox" width=85>Quests</button></td>
+<td><button action="bypass -h admin_admin3" width=85>Effects</button></td>
+</tr><tr>
+<td><button action="bypass -h admin_pccafepoints" width=85>PC Points</button></td>
+<td><button action="bypass -h admin_coins" width=85>Coins</button></td>
 <td></td>
 </tr>
 </table>
 <br>
-<table width=270><tr>
-<td><button value="Go To" action="bypass -h admin_goto_char_menu $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Recall" action="bypass -h admin_recall_char_menu $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Rep." action="bypass -h admin_setreputation $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="NoKarma" action="bypass -h admin_nokarma" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<table><tr>
+<td><button action="bypass -h admin_goto_char_menu $qbox" width=65>Go To</button></td>
+<td><button action="bypass -h admin_recall_char_menu $qbox" width=65>Recall</button></td>
+<td><button action="bypass -h admin_setreputation $qbox" width=65>Rep.</button></td>
+<td><button action="bypass -h admin_nokarma" width=65>NoKarma</button></td>
 </tr><tr>
-<td><button value="ChatBan" action="bypass -h admin_ban_chat $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="ChtUnBan" action="bypass -h admin_unban_chat $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Jail" action="bypass -h admin_jail $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Jail Out" action="bypass -h admin_unjail $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button action="bypass -h admin_ban_chat $qbox" width=65>ChatBan</button></td>
+<td><button action="bypass -h admin_unban_chat $qbox" width=65>ChtUnBan</button></td>
+<td><button action="bypass -h admin_jail $qbox" width=65>Jail</button></td>
+<td><button action="bypass -h admin_unjail $qbox" width=65>Jail Out</button></td>
 </tr><tr>
-<td><button value="Kick" action="bypass -h admin_kick_menu $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Punish" action="bypass -h admin_punishment player $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Find" action="bypass -h admin_find_character $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Repair" action="bypass -h admin_repair $qbox" width=65 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr></table>
-</center></body></html>
+<td><button action="bypass -h admin_kick_menu $qbox" width=65>Kick</button></td>
+<td><button action="bypass -h admin_punishment player $qbox" width=65>Punish</button></td>
+<td><button action="bypass -h admin_find_character $qbox" width=65>Find</button></td>
+<td><button action="bypass -h admin_repair $qbox" width=65>Repair</button></td>
+</tr></table></center></body></html>

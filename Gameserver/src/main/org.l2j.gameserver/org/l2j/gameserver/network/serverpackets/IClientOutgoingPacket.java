@@ -108,7 +108,7 @@ public abstract class IClientOutgoingPacket extends WritablePacket<L2GameClient>
     protected boolean write(L2GameClient client, ByteBuffer packet) {
         try {
             writeImpl(client, packet);
-            LOG_PACKET_INFO.debug("{} : {}", toString(), packet.limit());
+            LOG_PACKET_INFO.debug("{} : {}", toString(), packet.position());
             return true;
         } catch (Exception e) {
             LOGGER.error("Error writing packet {} to client {}", this, client);
