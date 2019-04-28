@@ -447,14 +447,6 @@
 	<!-- ADMIN PRIME POINTS -->
 	<admin command="admin_primepoints" accessLevel="100" />
 
-	<!-- PREMIUM SYSTEM -->
-	<admin command="admin_premium_menu" accessLevel="100" />
-	<admin command="admin_premium_add1" accessLevel="100" confirmDlg="true" />
-	<admin command="admin_premium_add2" accessLevel="100" confirmDlg="true" />
-	<admin command="admin_premium_add3" accessLevel="100" confirmDlg="true" />
-	<admin command="admin_premium_info" accessLevel="100" />
-	<admin command="admin_premium_remove" accessLevel="100" confirmDlg="true" />
-
 	<!-- ADMIN QUEST -->
 	<admin command="admin_quest_reload" accessLevel="100" />
 	<admin command="admin_script_load" accessLevel="100" />

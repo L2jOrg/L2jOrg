@@ -26,7 +26,6 @@ import org.l2j.gameserver.data.xml.impl.MultisellData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
-import org.l2j.gameserver.instancemanager.PremiumManager;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -68,7 +67,6 @@ public final class HomeBoard implements IParseBoardHandler
 	
 	private static final String[] CUSTOM_COMMANDS =
 	{
-		Config.PREMIUM_SYSTEM_ENABLED && Config.COMMUNITY_PREMIUM_SYSTEM_ENABLED ? "_bbspremium" : null,
 		Config.COMMUNITYBOARD_ENABLE_MULTISELLS ? "_bbsexcmultisell" : null,
 		Config.COMMUNITYBOARD_ENABLE_MULTISELLS ? "_bbsmultisell" : null,
 		Config.COMMUNITYBOARD_ENABLE_MULTISELLS ? "_bbssell" : null,
@@ -262,23 +260,6 @@ public final class HomeBoard implements IParseBoardHandler
 			}
 			
 			returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
-		}
-		else if (command.startsWith("_bbspremium"))
-		{
-			final String fullBypass = command.replace("_bbspremium;", "");
-			final String[] buypassOptions = fullBypass.split(",");
-			final int premiumDays = Integer.parseInt(buypassOptions[0]);
-			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITY_PREMIUM_COIN_ID, -1) < (Config.COMMUNITY_PREMIUM_PRICE_PER_DAY * premiumDays))
-			{
-				activeChar.sendMessage("Not enough currency!");
-			}
-			else
-			{
-				activeChar.destroyItemByItemId("CB_Premium", Config.COMMUNITY_PREMIUM_COIN_ID, Config.COMMUNITY_PREMIUM_PRICE_PER_DAY * premiumDays, activeChar, true);
-				PremiumManager.getInstance().addPremiumTime(activeChar.getAccountName(), premiumDays, TimeUnit.DAYS);
-				activeChar.sendMessage("Your account will now have premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumExpiration(activeChar.getAccountName())) + ".");
-				returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/premium/thankyou.html");
-			}
 		}
 		
 		if (returnHtml != null)

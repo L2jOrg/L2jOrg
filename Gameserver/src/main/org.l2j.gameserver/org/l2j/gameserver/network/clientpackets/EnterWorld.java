@@ -277,10 +277,6 @@ public class EnterWorld extends IClientIncomingPacket {
         // Send Equipped Items
         activeChar.sendPacket(new ExUserInfoEquipSlot(activeChar));
 
-        if(activeChar.getVipTier() > 0 && !VipData.getInstance().checkVipTierExpiration(activeChar)) {
-            client.sendPacket(new ReceiveVipInfo());
-        }
-
         // Send Unread Mail Count
         if (MailManager.getInstance().hasUnreadPost(activeChar)) {
             activeChar.sendPacket(new ExUnReadMailCount(activeChar));

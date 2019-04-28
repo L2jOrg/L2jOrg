@@ -4,6 +4,12 @@ import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.gameserver.data.xml.model.VipInfo;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.events.Containers;
+import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.impl.IBaseEvent;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.w3c.dom.Document;
@@ -13,6 +19,7 @@ import java.io.File;
 import java.nio.file.Path;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
+import java.util.function.Consumer;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -24,6 +31,14 @@ public class VipData extends IGameXmlReader{
 
     private VipData() {
         load();
+
+        var listeners = Containers.Players();
+        listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) (event) -> {
+            final var player = event.getActiveChar();
+            if(player.getVipTier() > 0 && !checkVipTierExpiration(player)) {
+                player.sendPacket(new ReceiveVipInfo());
+            }
+        }, this));
     }
 
     @Override

@@ -183,13 +183,6 @@ public class DropSearchBoard implements IParseBoardHandler
 						rateChance = Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER;
 						rateAmount = Config.RATE_SPOIL_DROP_AMOUNT_MULTIPLIER;
 						
-						// also check premium rates if available
-						if (Config.PREMIUM_SYSTEM_ENABLED && player.hasPremiumStatus())
-						{
-							rateChance *= Config.PREMIUM_RATE_SPOIL_CHANCE;
-							rateAmount *= Config.PREMIUM_RATE_SPOIL_AMOUNT;
-						}
-						
 						// bonus spoil rate effect
 						rateChance *= spoilRateEffectBonus;
 					}
@@ -229,44 +222,6 @@ public class DropSearchBoard implements IParseBoardHandler
 						else
 						{
 							rateAmount *= Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER;
-						}
-						
-						// also check premium rates if available
-						if (Config.PREMIUM_SYSTEM_ENABLED && player.hasPremiumStatus())
-						{
-							if (Config.PREMIUM_RATE_DROP_CHANCE_BY_ID.get(cbDropHolder.itemId) != null)
-							{
-								rateChance *= Config.PREMIUM_RATE_DROP_CHANCE_BY_ID.get(cbDropHolder.itemId);
-							}
-							else if (item.hasExImmediateEffect())
-							{
-								// TODO: Premium herb chance? :)
-							}
-							else if (cbDropHolder.isRaid)
-							{
-								// TODO: Premium raid chance? :)
-							}
-							else
-							{
-								rateChance *= Config.PREMIUM_RATE_DROP_CHANCE;
-							}
-							
-							if (Config.PREMIUM_RATE_DROP_AMOUNT_BY_ID.get(cbDropHolder.itemId) != null)
-							{
-								rateAmount *= Config.PREMIUM_RATE_DROP_AMOUNT_BY_ID.get(cbDropHolder.itemId);
-							}
-							else if (item.hasExImmediateEffect())
-							{
-								// TODO: Premium herb amount? :)
-							}
-							else if (cbDropHolder.isRaid)
-							{
-								// TODO: Premium raid amount? :)
-							}
-							else
-							{
-								rateAmount *= Config.PREMIUM_RATE_DROP_AMOUNT;
-							}
 						}
 						
 						// bonus drop amount effect

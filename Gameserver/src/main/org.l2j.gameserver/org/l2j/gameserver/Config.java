@@ -86,7 +86,7 @@ public final class Config {
     private static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
     private static final String CUSTOM_PASSWORD_CHANGE_CONFIG_FILE = "./config/Custom/PasswordChange.ini";
     private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
-    private static final String CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE = "./config/Custom/PremiumSystem.ini";
+
     private static final String CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE = "./config/Custom/PrivateStoreRange.ini";
     private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
     private static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "./config/Custom/PvpRewardItem.ini";
@@ -104,7 +104,7 @@ public final class Config {
     // Variable Definitions
     // --------------------------------------------------
     public static boolean ENABLE_ATTENDANCE_REWARDS;
-    public static boolean PREMIUM_ONLY_ATTENDANCE_REWARDS;
+    public static boolean VIP_ONLY_ATTENDANCE_REWARDS;
     public static boolean ATTENDANCE_REWARDS_SHARE_ACCOUNT;
     public static int ATTENDANCE_REWARD_DELAY;
     public static boolean ATTENDANCE_POPUP_WINDOW;
@@ -758,7 +758,7 @@ public final class Config {
     public static List<String> TELNET_HOSTS;
     public static int TELNET_PORT;
     public static boolean TRAINING_CAMP_ENABLE;
-    public static boolean TRAINING_CAMP_PREMIUM_ONLY;
+
     public static int TRAINING_CAMP_MAX_DURATION;
     public static int TRAINING_CAMP_MIN_LEVEL;
     public static int TRAINING_CAMP_MAX_LEVEL;
@@ -978,26 +978,13 @@ public final class Config {
     public static boolean COMMUNITYBOARD_COMBAT_DISABLED;
     public static boolean COMMUNITYBOARD_KARMA_DISABLED;
     public static boolean COMMUNITYBOARD_CAST_ANIMATIONS;
-    public static boolean COMMUNITY_PREMIUM_SYSTEM_ENABLED;
-    public static int COMMUNITY_PREMIUM_COIN_ID;
-    public static int COMMUNITY_PREMIUM_PRICE_PER_DAY;
+
     public static List<Integer> COMMUNITY_AVAILABLE_BUFFS;
     public static Map<String, Location> COMMUNITY_AVAILABLE_TELEPORTS;
 
-
     public static boolean ENABLE_FIND_PVP;
-    public static boolean PREMIUM_SYSTEM_ENABLED;
-    public static float PREMIUM_RATE_XP;
-    public static float PREMIUM_RATE_SP;
-    public static Map<Integer, Float> PREMIUM_RATE_DROP_ITEMS_ID;
-    public static float PREMIUM_RATE_DROP_CHANCE;
-    public static float PREMIUM_RATE_DROP_AMOUNT;
-    public static float PREMIUM_RATE_SPOIL_CHANCE;
-    public static float PREMIUM_RATE_SPOIL_AMOUNT;
-    public static Map<Integer, Float> PREMIUM_RATE_DROP_CHANCE_BY_ID;
-    public static Map<Integer, Float> PREMIUM_RATE_DROP_AMOUNT_BY_ID;
     public static boolean PC_CAFE_ENABLED;
-    public static boolean PC_CAFE_ONLY_PREMIUM;
+    public static boolean PC_CAFE_ONLY_VIP;
     public static int PC_CAFE_MAX_POINTS;
     public static boolean PC_CAFE_ENABLE_DOUBLE_POINTS;
     public static int PC_CAFE_DOUBLE_POINTS_CHANCE;
@@ -1229,7 +1216,7 @@ public final class Config {
         // Load Attandance config file (if exists)
         final PropertiesParser Attandance = new PropertiesParser(ATTENDANCE_CONFIG_FILE);
         ENABLE_ATTENDANCE_REWARDS = Attandance.getBoolean("EnableAttendanceRewards", false);
-        PREMIUM_ONLY_ATTENDANCE_REWARDS = Attandance.getBoolean("PremiumOnlyAttendanceRewards", false);
+        VIP_ONLY_ATTENDANCE_REWARDS = Attandance.getBoolean("VipOnlyAttendanceRewards", false);
         ATTENDANCE_REWARDS_SHARE_ACCOUNT = Attandance.getBoolean("AttendanceRewardsShareAccount", false);
         ATTENDANCE_REWARD_DELAY = Attandance.getInt("AttendanceRewardDelay", 30);
         ATTENDANCE_POPUP_WINDOW = Attandance.getBoolean("AttendancePopupWindow", false);
@@ -1486,7 +1473,7 @@ public final class Config {
         final PropertiesParser trainingCampSettings = new PropertiesParser(TRAINING_CAMP_CONFIG_FILE);
 
         TRAINING_CAMP_ENABLE = trainingCampSettings.getBoolean("TrainingCampEnable", false);
-        TRAINING_CAMP_PREMIUM_ONLY = trainingCampSettings.getBoolean("TrainingCampPremiumOnly", false);
+
         TRAINING_CAMP_MAX_DURATION = trainingCampSettings.getInt("TrainingCampDuration", 18000);
         TRAINING_CAMP_MIN_LEVEL = trainingCampSettings.getInt("TrainingCampMinLevel", 18);
         TRAINING_CAMP_MAX_LEVEL = trainingCampSettings.getInt("TrainingCampMaxLevel", 127);
@@ -2089,9 +2076,7 @@ public final class Config {
         COMMUNITYBOARD_HEAL_PRICE = CommunityBoard.getInt("CommunityHealPrice", 0);
         COMMUNITYBOARD_KARMA_DISABLED = CommunityBoard.getBoolean("CommunityKarmaDisabled", true);
         COMMUNITYBOARD_CAST_ANIMATIONS = CommunityBoard.getBoolean("CommunityCastAnimations", false);
-        COMMUNITY_PREMIUM_SYSTEM_ENABLED = CommunityBoard.getBoolean("CommunityPremiumSystem", false);
-        COMMUNITY_PREMIUM_COIN_ID = CommunityBoard.getInt("CommunityPremiumBuyCoinId", 57);
-        COMMUNITY_PREMIUM_PRICE_PER_DAY = CommunityBoard.getInt("CommunityPremiumPricePerDay", 1000000);
+
         final String[] allowedBuffs = CommunityBoard.getString("CommunityAvailableBuffs", "").split(",");
         COMMUNITY_AVAILABLE_BUFFS = new ArrayList<>(allowedBuffs.length);
         for (String s : allowedBuffs) {
@@ -2173,7 +2158,7 @@ public final class Config {
         final PropertiesParser PcCafe = new PropertiesParser(CUSTOM_PC_CAFE_CONFIG_FILE);
 
         PC_CAFE_ENABLED = PcCafe.getBoolean("PcCafeEnabled", false);
-        PC_CAFE_ONLY_PREMIUM = PcCafe.getBoolean("PcCafeOnlyPremium", false);
+        PC_CAFE_ONLY_VIP = PcCafe.getBoolean("PcCafeOnlyVip", false);
         PC_CAFE_MAX_POINTS = PcCafe.getInt("MaxPcCafePoints", 200000);
         if (PC_CAFE_MAX_POINTS < 0) {
             PC_CAFE_MAX_POINTS = 0;
@@ -2195,53 +2180,6 @@ public final class Config {
         }
         if (PC_CAFE_LOW_EXP_KILLS_CHANCE > 100) {
             PC_CAFE_LOW_EXP_KILLS_CHANCE = 100;
-        }
-
-        // Load PremiumSystem config file (if exists)
-        final PropertiesParser PremiumSystem = new PropertiesParser(CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE);
-
-        PREMIUM_SYSTEM_ENABLED = PremiumSystem.getBoolean("EnablePremiumSystem", false);
-        PREMIUM_RATE_XP = PremiumSystem.getFloat("PremiumRateXp", 2);
-        PREMIUM_RATE_SP = PremiumSystem.getFloat("PremiumRateSp", 2);
-        PREMIUM_RATE_DROP_CHANCE = PremiumSystem.getFloat("PremiumRateDropChance", 2);
-        PREMIUM_RATE_DROP_AMOUNT = PremiumSystem.getFloat("PremiumRateDropAmount", 1);
-        PREMIUM_RATE_SPOIL_CHANCE = PremiumSystem.getFloat("PremiumRateSpoilChance", 2);
-        PREMIUM_RATE_SPOIL_AMOUNT = PremiumSystem.getFloat("PremiumRateSpoilAmount", 1);
-        final String[] premiumDropChanceMultiplier = PremiumSystem.getString("PremiumRateDropChanceByItemId", "").split(";");
-        PREMIUM_RATE_DROP_CHANCE_BY_ID = new HashMap<>(premiumDropChanceMultiplier.length);
-        if (!premiumDropChanceMultiplier[0].isEmpty()) {
-            for (String item : premiumDropChanceMultiplier) {
-                final String[] itemSplit = item.split(",");
-                if (itemSplit.length != 2) {
-                    LOGGER.warn(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"", item, "\""));
-                } else {
-                    try {
-                        PREMIUM_RATE_DROP_CHANCE_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
-                    } catch (NumberFormatException nfe) {
-                        if (!item.isEmpty()) {
-                            LOGGER.warn(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"", item, "\""));
-                        }
-                    }
-                }
-            }
-        }
-        final String[] premiumDropAmountMultiplier = PremiumSystem.getString("PremiumRateDropAmountByItemId", "").split(";");
-        PREMIUM_RATE_DROP_AMOUNT_BY_ID = new HashMap<>(premiumDropAmountMultiplier.length);
-        if (!premiumDropAmountMultiplier[0].isEmpty()) {
-            for (String item : premiumDropAmountMultiplier) {
-                final String[] itemSplit = item.split(",");
-                if (itemSplit.length != 2) {
-                    LOGGER.warn(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"", item, "\""));
-                } else {
-                    try {
-                        PREMIUM_RATE_DROP_AMOUNT_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
-                    } catch (NumberFormatException nfe) {
-                        if (!item.isEmpty()) {
-                            LOGGER.warn(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"", item, "\""));
-                        }
-                    }
-                }
-            }
         }
 
         // Load PrivateStoreRange config file (if exists)

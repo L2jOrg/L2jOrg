@@ -20,7 +20,7 @@ public final class PcCafePointsManager {
         }
 
         // PC-points only premium accounts
-        if (Config.PC_CAFE_ONLY_PREMIUM && !player.hasPremiumStatus()) {
+        if (Config.PC_CAFE_ONLY_VIP && player.getVipTier() <= 0) {
             return;
         }
 

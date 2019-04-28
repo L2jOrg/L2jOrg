@@ -699,19 +699,6 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
                     rateChance *= Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER;
                 }
 
-                // premium chance
-                if (Config.PREMIUM_SYSTEM_ENABLED && (killer.getActingPlayer() != null) && killer.getActingPlayer().hasPremiumStatus()) {
-                    if (Config.PREMIUM_RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId()) != null) {
-                        rateChance *= Config.PREMIUM_RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId());
-                    } else if (item.hasExImmediateEffect()) {
-                        // TODO: Premium herb chance? :)
-                    } else if (victim.isRaid()) {
-                        // TODO: Premium raid chance? :)
-                    } else {
-                        rateChance *= Config.PREMIUM_RATE_DROP_CHANCE;
-                    }
-                }
-
                 // bonus drop rate effect
                 rateChance *= killer.getStat().getValue(Stats.BONUS_DROP_RATE, 1);
 
@@ -733,19 +720,6 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
                         rateAmount *= Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER;
                     }
 
-                    // premium chance
-                    if (Config.PREMIUM_SYSTEM_ENABLED && (killer.getActingPlayer() != null) && killer.getActingPlayer().hasPremiumStatus()) {
-                        if (Config.PREMIUM_RATE_DROP_AMOUNT_BY_ID.get(dropItem.getItemId()) != null) {
-                            rateAmount *= Config.PREMIUM_RATE_DROP_AMOUNT_BY_ID.get(dropItem.getItemId());
-                        } else if (item.hasExImmediateEffect()) {
-                            // TODO: Premium herb amount? :)
-                        } else if (victim.isRaid()) {
-                            // TODO: Premium raid amount? :)
-                        } else {
-                            rateAmount *= Config.PREMIUM_RATE_DROP_AMOUNT;
-                        }
-                    }
-
                     // bonus drop amount effect
                     rateAmount *= killer.getStat().getValue(Stats.BONUS_DROP_AMOUNT, 1);
 
@@ -757,10 +731,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
             case SPOIL: {
                 // chance
                 double rateChance = Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER;
-                // premium chance
-                if (Config.PREMIUM_SYSTEM_ENABLED && (killer.getActingPlayer() != null) && killer.getActingPlayer().hasPremiumStatus()) {
-                    rateChance *= Config.PREMIUM_RATE_SPOIL_CHANCE;
-                }
+
                 // bonus drop rate effect
                 rateChance *= killer.getStat().getValue(Stats.BONUS_SPOIL_RATE, 1);
 
@@ -768,10 +739,6 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
                 if ((Rnd.nextDouble() * 100) < (dropItem.getChance() * rateChance)) {
                     // amount is calculated after chance returned success
                     double rateAmount = Config.RATE_SPOIL_DROP_AMOUNT_MULTIPLIER;
-                    // premium amount
-                    if (Config.PREMIUM_SYSTEM_ENABLED && (killer.getActingPlayer() != null) && killer.getActingPlayer().hasPremiumStatus()) {
-                        rateAmount *= Config.PREMIUM_RATE_SPOIL_AMOUNT;
-                    }
 
                     // finally
                     return new ItemHolder(dropItem.getItemId(), (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));

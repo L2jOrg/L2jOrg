@@ -417,10 +417,7 @@ public final class L2PcInstance extends L2Playable {
     private boolean _noble = false;
     private boolean _hero = false;
     private boolean _trueHero = false;
-    /**
-     * Premium System
-     */
-    private boolean _premiumStatus = false;
+
 
     /**
      * The L2FolkInstance corresponding to the last Folk which one the player talked.
@@ -10416,15 +10413,6 @@ public final class L2PcInstance extends L2Playable {
 
     public void setRecoTwoHoursGiven(boolean val) {
         _recoTwoHoursGiven = val;
-    }
-
-    public void setPremiumStatus(boolean premiumStatus) {
-        _premiumStatus = premiumStatus;
-        sendPacket(new ExBrPremiumState(this));
-    }
-
-    public boolean hasPremiumStatus() {
-        return Config.PREMIUM_SYSTEM_ENABLED && _premiumStatus;
     }
 
     public String getLastPetitionGmName() {

@@ -34,7 +34,7 @@ public class RequestVipAttendanceCheck extends IClientIncomingPacket {
             return;
         }
 
-        if (Config.PREMIUM_ONLY_ATTENDANCE_REWARDS && !activeChar.hasPremiumStatus()) {
+        if (Config.VIP_ONLY_ATTENDANCE_REWARDS && activeChar.getVipTier() <= 0) {
             activeChar.sendPacket(SystemMessageId.YOUR_VIP_RANK_IS_TOO_LOW_TO_RECEIVE_THE_REWARD);
             return;
         }
