@@ -1,19 +1,19 @@
 package org.l2j.commons.database;
 
+import org.l2j.commons.cache.CacheFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.cache.Cache;
 import java.lang.reflect.Proxy;
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
 
 public class DatabaseAccess {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DatabaseAccess.class);
     private static boolean initialized = false;
 
-    private static Map<Class, DAO> cache = new HashMap<>();
+    private static Cache<Class, DAO> cache = CacheFactory.getInstance().getCache("dao", Class.class, DAO.class);
     private static JDBCInvocation handler = new JDBCInvocation();
 
     public static boolean initialize() {
