@@ -1,37 +1,23 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.cache;
 
-import org.l2j.commons.util.filter.HTMLFilter;
+import org.l2j.commons.cache.CacheFactory;
+import org.l2j.commons.util.FilterUtil;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
-import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
+import javax.cache.Cache;
+import java.nio.file.Files;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Layane
@@ -39,77 +25,32 @@ import java.util.regex.Pattern;
 public class HtmCache {
     private static final Logger LOGGER = LoggerFactory.getLogger(HtmCache.class);
 
-    private static final HTMLFilter HTML_FILTER = new HTMLFilter();
-    private static final Pattern EXTEND_PATTERN = Pattern.compile("<extend template=\"([a-zA-Z0-9-_./\\ ]*)\">(.*?)</extend>", Pattern.DOTALL);
+    private static final Pattern EXTEND_PATTERN = Pattern.compile("<extend template=\"([a-zA-Z0-9-_./ ]*)\">(.*?)</extend>", Pattern.DOTALL);
     private static final Pattern ABSTRACT_BLOCK_PATTERN = Pattern.compile("<abstract block=\"([a-zA-Z0-9-_. ]*)\" ?/>", Pattern.DOTALL);
     private static final Pattern BLOCK_PATTERN = Pattern.compile("<block name=\"([a-zA-Z0-9-_. ]*)\">(.*?)</block>", Pattern.DOTALL);
 
-    private static final Map<String, String> _cache = Config.LAZY_CACHE ? new ConcurrentHashMap<>() : new HashMap<>();
-
-    private int _loadedFiles;
-    private long _bytesBuffLen;
+    private static final Cache<String, String> CACHE = CacheFactory.getInstance().getCache("html", String.class, String.class);
 
     private HtmCache() {
         reload();
     }
 
     public void reload() {
-        reload(Config.DATAPACK_ROOT);
+        CACHE.clear();
+        LOGGER.info("Cache[HTML]: Running lazy cache");
     }
 
-    public void reload(File f) {
-        if (!Config.LAZY_CACHE) {
-            LOGGER.info("Html cache start...");
-            parseDir(f);
-            LOGGER.info("Cache[HTML]: " + String.format("%.3f", getMemoryUsage()) + " megabytes on " + _loadedFiles + " files loaded");
-        } else {
-            _cache.clear();
-            _loadedFiles = 0;
-            _bytesBuffLen = 0;
-            LOGGER.info("Cache[HTML]: Running lazy cache");
-        }
+    public boolean purge(String path) {
+        return CACHE.remove(path);
     }
 
-    public void reloadPath(File f) {
-        parseDir(f);
-        LOGGER.info("Cache[HTML]: Reloaded specified path.");
-    }
-
-    public double getMemoryUsage() {
-        return (float) _bytesBuffLen / 1048576;
-    }
-
-    public int getLoadedFiles() {
-        return _loadedFiles;
-    }
-
-    private void parseDir(File dir) {
-        final File[] files = dir.listFiles();
-        if (files != null) {
-            for (File file : files) {
-                if (!file.isDirectory()) {
-                    loadFile(file);
-                } else {
-                    parseDir(file);
-                }
-            }
-        }
-    }
-
-    public String loadFile(File file) {
-        if (HTML_FILTER.accept(file)) {
+    public String loadFile(String filePath) {
+        var path =  getSettings(ServerSettings.class).dataPackDirectory().resolve(filePath);
+        if(FilterUtil.htmlFilter(path)) {
             try {
-                String content = processHtml(Util.readAllLines(file, StandardCharsets.UTF_8, null));
-                content = content.replaceAll("(?s)<!--.*?-->", ""); // Remove html comments
-                // content = content.replaceAll("\r", "").replaceAll("\n", ""); // Remove new lines
-
-                final String oldContent = _cache.put(file.toURI().getPath().substring(Config.DATAPACK_ROOT.toURI().getPath().length()), content);
-                if (oldContent == null) {
-                    _bytesBuffLen += content.length() * 2;
-                    _loadedFiles++;
-                } else {
-                    _bytesBuffLen = (_bytesBuffLen - oldContent.length()) + (content.length() * 2);
-                }
+                var content = processHtml(Files.readString(path));
+                content = content.replaceAll("(?s)<!--.*?-->", "").replaceAll("[\r\n\t]", ""); // Remove html comments and spaces
+                CACHE.put(filePath, content);
                 return content;
             } catch (Exception e) {
                 LOGGER.warn("Problem with htm file:", e);
@@ -144,7 +85,7 @@ public class HtmCache {
 
         content = getHtm(path);
         if ((content != null) && (newPath != null)) {
-            _cache.put(newPath, content);
+            CACHE.put(newPath, content);
         }
 
         if ((player != null) && player.isGM() && (path != null) && Config.GM_DEBUG_HTML_PATHS) {
@@ -154,12 +95,11 @@ public class HtmCache {
     }
 
     private String getHtm(String path) {
-        // TODO: Check why some files do not get in cache on server startup.
-        return (path == null) || path.isEmpty() ? "" : _cache.get(path) == null ? loadFile(new File(Config.DATAPACK_ROOT, path)) : _cache.get(path);
+        return Util.isNullOrEmpty(path) ? "" : CACHE.containsKey(path) ? CACHE.get(path) : loadFile(path);
     }
 
     public boolean contains(String path) {
-        return _cache.containsKey(path);
+        return CACHE.containsKey(path);
     }
 
     /**
@@ -167,7 +107,7 @@ public class HtmCache {
      * @return {@code true} if the path targets a HTM or HTML file, {@code false} otherwise.
      */
     public boolean isLoadable(String path) {
-        return HTML_FILTER.accept(new File(Config.DATAPACK_ROOT, path));
+        return FilterUtil.htmlFilter(getSettings(ServerSettings.class).dataPackDirectory().resolve(path));
     }
 
     private String parseTemplateName(String name) {
@@ -232,6 +172,7 @@ public class HtmCache {
     public static HtmCache getInstance() {
         return Singleton.INSTANCE;
     }
+
 
     private static class Singleton {
         private static final HtmCache INSTANCE = new HtmCache();

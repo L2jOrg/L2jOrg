@@ -1,8 +1,8 @@
 package org.l2j.gameserver.util;
 
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.model.L2Object;
@@ -17,8 +17,6 @@ import org.l2j.gameserver.network.serverpackets.ShowBoard;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.*;
-import java.nio.charset.Charset;
 import java.text.*;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -505,22 +503,6 @@ public final class Util {
     public static boolean isInsideRangeOfObjectId(L2Object obj, int targetObjId, int radius) {
         final L2Object target = L2World.getInstance().findObject(targetObjId);
         return (target != null) && (obj.calculateDistance3D(target) <= radius);
-    }
-
-    public static String readAllLines(File file, Charset cs, String newLineDelimiter) throws IOException {
-        final StringBuilder sb = new StringBuilder();
-        try (InputStream in = new FileInputStream(file);
-             InputStreamReader reader = new InputStreamReader(in, cs);
-             BufferedReader buffer = new BufferedReader(reader)) {
-            String line;
-            while ((line = buffer.readLine()) != null) {
-                sb.append(line);
-                if (newLineDelimiter != null) {
-                    sb.append(newLineDelimiter);
-                }
-            }
-        }
-        return sb.toString();
     }
 
     /**

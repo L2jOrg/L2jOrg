@@ -22,7 +22,10 @@ import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.instancemanager.*;
+import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
+import org.l2j.gameserver.instancemanager.QuestManager;
+import org.l2j.gameserver.instancemanager.WalkingManager;
+import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.scripting.ScriptEngineManager;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -30,7 +33,6 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
 import java.util.StringTokenizer;
 
 /**
@@ -115,26 +117,18 @@ public class AdminReload implements IAdminCommandHandler
 					break;
 				}
 				case "htm":
-				case "html":
-				{
-					if (st.hasMoreElements())
-					{
-						final String path = st.nextToken();
-						final File file = new File(Config.DATAPACK_ROOT, "data/html/" + path);
-						if (file.exists())
-						{
-							HtmCache.getInstance().reload(file);
-							AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Htm File:" + file.getName() + ".");
-						}
-						else
-						{
-							BuilderUtil.sendSysMessage(activeChar, "File or Directory does not exist.");
+				case "html": {
+					if (st.hasMoreElements()) {
+						var path = "data/html/" + st.nextToken();
+						if(HtmCache.getInstance().purge(path)) {
+							AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Htm File:" + path + ".");
+						} else {
+							BuilderUtil.sendSysMessage(activeChar, "Html Cache doesn't contains File or Directory.");
 						}
 					}
 					else
 					{
 						HtmCache.getInstance().reload();
-						BuilderUtil.sendSysMessage(activeChar, "Cache[HTML]: " + HtmCache.getInstance().getMemoryUsage() + " megabytes on " + HtmCache.getInstance().getLoadedFiles() + " files loaded");
 						AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Htms.");
 					}
 					break;

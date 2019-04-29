@@ -575,12 +575,7 @@ public class L2Npc extends L2Character {
 
         final String temp = "data/html/default/" + pom + ".htm";
 
-        if (!Config.LAZY_CACHE) {
-            // If not running lazy cache the file must be in the cache or it doesnt exist
-            if (HtmCache.getInstance().contains(temp)) {
-                return temp;
-            }
-        } else if (HtmCache.getInstance().isLoadable(temp)) {
+        if (HtmCache.getInstance().isLoadable(temp)) {
             return temp;
         }
 

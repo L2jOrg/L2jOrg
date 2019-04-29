@@ -421,7 +421,7 @@ public final class Config {
     public static boolean ENABLE_STORY_QUEST_BUFF_REWARD;
     public static boolean MULTIPLE_ITEM_DROP;
     public static boolean FORCE_INVENTORY_UPDATE;
-    public static boolean LAZY_CACHE;
+
     public static boolean CACHE_CHAR_NAMES;
     public static int MIN_NPC_ANIMATION;
     public static int MAX_NPC_ANIMATION;
@@ -1545,7 +1545,7 @@ public final class Config {
         ENABLE_STORY_QUEST_BUFF_REWARD = General.getBoolean("StoryQuestRewardBuff", true);
         MULTIPLE_ITEM_DROP = General.getBoolean("MultipleItemDrop", true);
         FORCE_INVENTORY_UPDATE = General.getBoolean("ForceInventoryUpdate", false);
-        LAZY_CACHE = General.getBoolean("LazyCache", true);
+
         CACHE_CHAR_NAMES = General.getBoolean("CacheCharNames", true);
         MIN_NPC_ANIMATION = General.getInt("MinNPCAnimation", 10);
         MAX_NPC_ANIMATION = General.getInt("MaxNPCAnimation", 20);

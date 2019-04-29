@@ -16,15 +16,13 @@
  */
 package handlers.admincommandhandlers;
 
-import java.io.File;
-import java.util.StringTokenizer;
-
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
+
+import java.util.StringTokenizer;
 
 /**
  * @author NosBit
@@ -97,7 +95,7 @@ public class AdminHtml implements IAdminCommandHandler
 		}
 		else
 		{
-			content = HtmCache.getInstance().loadFile(new File(Config.DATAPACK_ROOT, path));
+			content = HtmCache.getInstance().loadFile(path);
 		}
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		if (content != null)

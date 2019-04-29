@@ -95,6 +95,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.actor.tasks.player;
     exports org.l2j.gameserver.model.variables;
     exports org.l2j.gameserver.model.events.timers;
+    exports org.l2j.gameserver.settings;
 
     uses org.l2j.gameserver.scripting.IScriptingEngine;
     provides org.l2j.gameserver.scripting.IScriptingEngine
