@@ -18,10 +18,10 @@ public abstract class RequestBuyProduct extends IClientIncomingPacket {
 
     private static final int HERO_COINS = 23805;
 
-    protected static boolean validatePlayer(PrimeShopProduct item, int count, L2PcInstance player) {
+    protected static boolean validatePlayer(PrimeShopProduct product, int count, L2PcInstance player) {
         final long currentTime = System.currentTimeMillis() / 1000;
 
-        if (item == null) {
+        if (product == null) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_PRODUCT));
             Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid brId from Prime", Config.DEFAULT_PUNISH);
             return false;
@@ -33,33 +33,33 @@ public abstract class RequestBuyProduct extends IClientIncomingPacket {
             return false;
         }
 
-        if ( (item.getMinLevel() > 0 && item.getMinLevel() > player.getLevel()) || (item.getMaxLevel() > 0 && item.getMaxLevel() < player.getLevel())) {
+        if ( (product.getMinLevel() > 0 && product.getMinLevel() > player.getLevel()) || (product.getMaxLevel() > 0 && product.getMaxLevel() < player.getLevel())) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_LEVEL));
             return false;
         }
 
-        if ((item.getMinBirthday() > 0 && item.getMinBirthday() > player.getBirthdays()) || (item.getMaxBirthday() > 0 && item.getMaxBirthday() < player.getBirthdays())) {
+        if ((product.getMinBirthday() > 0 && product.getMinBirthday() > player.getBirthdays()) || (product.getMaxBirthday() > 0 && product.getMaxBirthday() < player.getBirthdays())) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_DATE_CREATION));
             return false;
         }
 
-        if ((Calendar.getInstance().get(Calendar.DAY_OF_WEEK) & item.getDaysOfWeek()) == 0) {
+        if ((Calendar.getInstance().get(Calendar.DAY_OF_WEEK) & product.getDaysOfWeek()) == 0) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.NOT_DAY_OF_WEEK));
             return false;
         }
 
-        if ((item.getStartSale() > 1) && (item.getStartSale() > currentTime)) {
+        if ((product.getStartSale() > 1) && (product.getStartSale() > currentTime)) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.BEFORE_SALE_DATE));
             return false;
         }
 
-        if ((item.getEndSale() > 1) && (item.getEndSale() < currentTime)) {
+        if ((product.getEndSale() > 1) && (product.getEndSale() < currentTime)) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.AFTER_SALE_DATE));
             return false;
         }
 
-        final int weight = item.getWeight() * count;
-        final long slots = item.getCount() * count;
+        final int weight = product.getWeight() * count;
+        final long slots = product.getCount() * count;
 
         if (player.getInventory().validateWeight(weight)) {
             if (!player.getInventory().validateCapacity(slots)) {
@@ -71,7 +71,7 @@ public abstract class RequestBuyProduct extends IClientIncomingPacket {
             return false;
         }
 
-        if(item.getRestrictionDay() > 0 && getDAO(PrimeShopDAO.class).countBougthItemToday(player.getObjectId(), item.getId()) >= item.getRestrictionDay()) {
+        if(product.getRestrictionDay() > 0 && getDAO(PrimeShopDAO.class).countBougthItemToday(player.getObjectId(), product.getId()) >= product.getRestrictionDay()) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.ALREADY_BOUGHT));
             return false;
         }

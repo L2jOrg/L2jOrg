@@ -13,7 +13,7 @@ public class RequestVipProductList extends IClientIncomingPacket {
     }
 
     @Override
-    protected void runImpl() throws Exception {
+    protected void runImpl() {
         client.sendPacket(new ReceiveVipProductList());
     }
 }

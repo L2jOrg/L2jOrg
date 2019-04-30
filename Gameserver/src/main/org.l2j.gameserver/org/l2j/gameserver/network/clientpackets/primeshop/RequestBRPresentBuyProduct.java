@@ -57,24 +57,27 @@ public final class RequestBRPresentBuyProduct extends RequestBuyProduct {
             return;
         }
 
-        activeChar.addRequest(new PrimeShopRequest(activeChar));
+        try {
+            activeChar.addRequest(new PrimeShopRequest(activeChar));
 
-        final PrimeShopProduct item = PrimeShopData.getInstance().getItem(productId);
-        if (validatePlayer(item, count, activeChar) && processPayment(activeChar, item, count)) {
+            final PrimeShopProduct item = PrimeShopData.getInstance().getItem(productId);
+            if (validatePlayer(item, count, activeChar) && processPayment(activeChar, item, count)) {
 
-            client.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.SUCCESS));
-            client.sendPacket(new ExBRGamePoint());
+                client.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.SUCCESS));
+                client.sendPacket(new ExBRGamePoint());
 
-            final Message mail = new Message(receiverId, _mailTitle, _mailBody, MailType.PRIME_SHOP_GIFT);
+                final Message mail = new Message(receiverId, _mailTitle, _mailBody, MailType.PRIME_SHOP_GIFT);
 
-            final Mail attachement = mail.createAttachments();
-            for (PrimeShopItem subItem : item.getItems()) {
-                attachement.addItem("Prime Shop Gift", subItem.getId(), subItem.getCount(), activeChar, this);
+                final Mail attachement = mail.createAttachments();
+                for (PrimeShopItem subItem : item.getItems()) {
+                    attachement.addItem("Prime Shop Gift", subItem.getId(), subItem.getCount(), activeChar, this);
+                }
+                MailManager.getInstance().sendMessage(mail);
+                getDAO(PrimeShopDAO.class).addHistory(productId, count, activeChar.getObjectId());
             }
-            MailManager.getInstance().sendMessage(mail);
-            getDAO(PrimeShopDAO.class).addHistory(productId, count, activeChar.getObjectId());
+        } finally {
+            activeChar.removeRequest(PrimeShopRequest.class);
         }
 
-        activeChar.removeRequest(PrimeShopRequest.class);
     }
 }

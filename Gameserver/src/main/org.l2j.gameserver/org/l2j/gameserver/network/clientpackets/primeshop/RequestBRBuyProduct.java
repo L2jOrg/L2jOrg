@@ -35,25 +35,25 @@ public final class RequestBRBuyProduct extends RequestBuyProduct {
         }
 
         if (activeChar.hasItemRequest() || activeChar.hasRequest(PrimeShopRequest.class)) {
-            activeChar.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.INVENTORY_FULL));
+            activeChar.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.SERVER_ERROR));
             return;
         }
+        try {
+            activeChar.addRequest(new PrimeShopRequest(activeChar));
+            final PrimeShopProduct item = PrimeShopData.getInstance().getItem(productId);
 
-        activeChar.addRequest(new PrimeShopRequest(activeChar));
-        final PrimeShopProduct item = PrimeShopData.getInstance().getItem(productId);
+            if (validatePlayer(item, count, activeChar) && processPayment(activeChar, item, count)) {
 
-        if (validatePlayer(item, count, activeChar) && processPayment(activeChar, item, count)) {
+                for (PrimeShopItem subItem : item.getItems()) {
+                    activeChar.addItem("PrimeShop", subItem.getId(), subItem.getCount() * count, activeChar, true);
+                }
 
-            for (PrimeShopItem subItem : item.getItems()) {
-                activeChar.addItem("PrimeShop", subItem.getId(), subItem.getCount() * count, activeChar, true);
+                client.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.SUCCESS));
+                client.sendPacket(new ExBRGamePoint());
+                getDAO(PrimeShopDAO.class).addHistory(productId, count, activeChar.getObjectId());
             }
-
-            client.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.SUCCESS));
-            client.sendPacket(new ExBRGamePoint());
-            getDAO(PrimeShopDAO.class).addHistory(productId, count, activeChar.getObjectId());
+        } finally {
+            activeChar.removeRequest(PrimeShopRequest.class);
         }
-
-        activeChar.removeRequest(PrimeShopRequest.class);
     }
-
 }

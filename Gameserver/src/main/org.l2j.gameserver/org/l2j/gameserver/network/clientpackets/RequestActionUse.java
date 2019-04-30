@@ -63,14 +63,11 @@ public final class RequestActionUse extends IClientIncomingPacket {
             }
         }
 
-        // Don't allow to do some action if player is transformed
-        if (activeChar.isTransformed()) {
-            final int[] allowedActions = activeChar.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
-            if (!(Arrays.binarySearch(allowedActions, _actionId) >= 0)) {
-                client.sendPacket(ActionFailed.STATIC_PACKET);
-                LOGGER.warn("Player " + activeChar + " used action which he does not have! Id = " + _actionId + " transform: " + activeChar.getTransformation().orElse(null));
-                return;
-            }
+        final int[] allowedActions = activeChar.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
+        if (!(Arrays.binarySearch(allowedActions, _actionId) >= 0)) {
+            client.sendPacket(ActionFailed.STATIC_PACKET);
+            LOGGER.warn("Player " + activeChar + " used action which he does not have! Id = " + _actionId + " transform: " + activeChar.getTransformation().orElse(null));
+            return;
         }
 
         final ActionDataHolder actionHolder = ActionData.getInstance().getActionData(_actionId);

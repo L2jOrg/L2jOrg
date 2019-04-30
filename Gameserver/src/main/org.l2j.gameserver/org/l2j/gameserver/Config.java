@@ -1558,7 +1558,7 @@ public final class Config {
         DEFAULT_GLOBAL_CHAT = General.getString("GlobalChat", "ON");
         DEFAULT_TRADE_CHAT = General.getString("TradeChat", "ON");
         ENABLE_WORLD_CHAT = General.getBoolean("WorldChatEnabled", false);
-        MINIMUM_CHAT_LEVEL = General.getInt("MinimumChatLevel", 20);
+        MINIMUM_CHAT_LEVEL = General.getInt("MinimumChatLevel", 2);
         ALLOW_WAREHOUSE = General.getBoolean("AllowWarehouse", true);
         WAREHOUSE_CACHE = General.getBoolean("WarehouseCache", false);
         WAREHOUSE_CACHE_TIME = General.getInt("WarehouseCacheTime", 15);
