@@ -20,6 +20,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.DailyMissionData;
+import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.model.DailyMissionDataHolder;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
@@ -66,6 +67,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
         resetRecommends();
         resetWorldChatPoints();
         resetTrainingCamp();
+        resetVipTierExpired();
     }
 
     @ScheduleTarget
@@ -139,13 +141,13 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
         }
 
         // Update data for online players.
-        L2World.getInstance().getPlayers().stream().forEach(player ->
+        L2World.getInstance().getPlayers().forEach(player ->
         {
             player.getVariables().remove(PlayerVariables.EXTEND_DROP);
             player.getVariables().storeMe();
         });
 
-        LOGGER.info("Daily world chat points has been resetted.");
+        LOGGER.info("Daily Extend Drop has been resetted.");
     }
 
     private void resetDailySkills() {
@@ -179,7 +181,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
         }
 
         // Update data for online players.
-        L2World.getInstance().getPlayers().stream().forEach(player ->
+        L2World.getInstance().getPlayers().forEach(player ->
         {
             player.setWorldChatUsed(0);
             player.sendPacket(new ExWorldChatCnt(player));
@@ -204,7 +206,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
             LOGGER.error("Could not reset Recommendations System: ", e);
         }
 
-        L2World.getInstance().getPlayers().stream().forEach(player ->
+        L2World.getInstance().getPlayers().forEach(player ->
         {
             player.setRecomLeft(0);
             player.setRecomHave(player.getRecomHave() - 20);
@@ -225,7 +227,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
             }
 
             // Update data for online players.
-            L2World.getInstance().getPlayers().stream().forEach(player ->
+            L2World.getInstance().getPlayers().forEach(player ->
             {
                 player.resetTraingCampDuration();
                 player.getAccountVariables().storeMe();
@@ -233,6 +235,17 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
 
             LOGGER.info("Training Camp daily time has been resetted.");
         }
+    }
+
+    private void resetVipTierExpired() {
+        L2World.getInstance().getPlayers().forEach(player -> {
+            if(player.getVipTier() < 1) {
+                return;
+            }
+
+            VipData.getInstance().checkVipTierExpiration(player);
+        });
+        LOGGER.info("VIP expiration time has been checked.");
     }
 
     private void resetDailyMissionRewards() {

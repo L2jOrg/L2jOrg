@@ -58,7 +58,6 @@ public final class TaskManager {
         registerTask(new TaskCleanUp());
         registerTask(new TaskRestart());
         registerTask(new TaskShutdown());
-        registerTask(new TaskVipExpiration());
     }
 
     private void registerTask(Task task) {

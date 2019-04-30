@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
-
 /**
  * @author UnAfraid
  */
@@ -86,7 +85,7 @@ public class EventScheduler {
         final long timeSchedule = nextSchedule - System.currentTimeMillis();
         if (timeSchedule <= (30 * 1000)) {
             LOGGER.warn("Wrong reschedule for " + _eventManager.getClass().getSimpleName() + " end up run in " + (timeSchedule / 1000) + " seconds!");
-            ThreadPoolManager.getInstance().schedule(this::startScheduler, timeSchedule + 1000);
+            ThreadPoolManager.schedule(this::startScheduler, timeSchedule + 1000);
             return;
         }
 
@@ -94,13 +93,13 @@ public class EventScheduler {
             _task.cancel(false);
         }
 
-        _task = ThreadPoolManager.getInstance().schedule(() ->
+        _task = ThreadPoolManager.schedule(() ->
         {
             run();
             updateLastRun();
 
             if (_repeat) {
-                ThreadPoolManager.getInstance().schedule(this::startScheduler, 1000);
+                ThreadPoolManager.schedule(this::startScheduler, 1000);
             }
         }, timeSchedule);
     }

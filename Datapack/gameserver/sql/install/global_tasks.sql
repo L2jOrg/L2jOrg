@@ -9,6 +9,3 @@ CREATE TABLE IF NOT EXISTS `global_tasks` (
   `param3` VARCHAR(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-INSERT INTO global_tasks (name, type, param1, param2) VALUES
-('vipExpiration', 'GLOBAL_TASK', '1', '06:30:00');
