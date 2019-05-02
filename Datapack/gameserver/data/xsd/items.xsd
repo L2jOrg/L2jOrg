@@ -257,6 +257,7 @@
 			<xs:enumeration value="earthPower" />
 			<xs:enumeration value="holyPower" />
 			<xs:enumeration value="darkPower" />
+			<xs:enumeration value="agathionSlots" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="condType">

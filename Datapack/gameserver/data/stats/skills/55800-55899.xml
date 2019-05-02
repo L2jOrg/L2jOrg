@@ -399,7 +399,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="TalismanSlot">
-				<slots>3</slots>
+				<slots>4</slots>
 			</effect>
 			<effect name="StatUp">
 				<amount>1</amount>
@@ -430,12 +430,46 @@
 	<skill id="55885" toLevel="1" name="Agathion Bracelet Stats Increase">
 		<!-- STR/ INT/ CON/ MEN +$s1. -->
 		<icon>icon.skill6343_2</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55886" toLevel="1" name="Agathion Bracelet Resistance Increase">
 		<!-- Mental/ Stun/ Sleep/ Paralysis Attack Resistance +$s1. -->
 		<icon>icon.skill6366_2</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+		<effect name="DefenceTrait">
+			<DERANGEMENT>
+				<value level="1">5</value>
+			</DERANGEMENT>
+			<SHOCK>
+				<value level="1">5</value>
+			</SHOCK>
+			<SLEEP>
+				<value level="1">5</value>
+			</SLEEP>
+			<PARALYZE>
+				<value level="1">5</value>
+			</PARALYZE>
+		</effect>
+		</effects>
 	</skill>
 	<skill id="55887" toLevel="4" name="Clan Exuberance">
 		<!-- Clan members' HP/ MP/ CP Recovery Bonus +$s1, received PVE damage -$s2, EXP and SP +$s3. -->

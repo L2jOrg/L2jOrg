@@ -103,7 +103,7 @@
 		<!-- A 30-day item. Equipping it in the Bracelet's main slot summons the Agathion Pisces and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.pis_agathion_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
@@ -668,12 +668,17 @@
 		<!-- When worn, 5 Agathion slots are activated. STR/ INT/ CON/ MEN/ DEX/ WIT +1. Mental/ stun/ sleep/ paralyse attacks resistance +8%. Cannot be dropped. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="100" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="51025" level="4" /> <!-- Expand Agathion Slots -->
+			<skill id="55885" level="1"/> <!-- Agathion Bracelet Stats Increase -->
+			<skill id="55886" level="1"/> <!-- Agathion Bracelet Resistance Increase -->
+		</skills>
 	</item>
 	<item id="91162" name="Golden Cheer Stamen" additionalName="Event" type="Weapon">
 		<!-- An item commemorating the game's 14th anniversary. Helps materializing your dreams. Allows using the Firecracker skill. Cannot be exchanged, dropped, sold, destroyed. Can be transferred between characters on one account and stored in a private warehouse. -->

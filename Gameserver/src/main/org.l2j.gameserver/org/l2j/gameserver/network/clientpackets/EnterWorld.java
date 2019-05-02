@@ -459,6 +459,8 @@ public class EnterWorld extends IClientIncomingPacket {
         activeChar.sendPacket(new ExAutoSoulShot(0, true, 2));
         activeChar.sendPacket(new ExAutoSoulShot(0, true, 3));
 
+        activeChar.sendPacket(ExBRNewIconCashBtnWnd.STATIC);
+
         // Fix for equipped item skills
         if (!activeChar.getEffectList().getCurrentAbnormalVisualEffects().isEmpty()) {
             activeChar.updateAbnormalVisualEffects();

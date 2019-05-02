@@ -12,6 +12,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="8522" level="1"/>
+		</skills>
 		<stats>
 			<stat type="mDef">40</stat>
 		</stats>

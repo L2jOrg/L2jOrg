@@ -376,7 +376,7 @@
 		<!-- A 7-day item. Enables to summon Agathion of Joy when equipped. <Skill used>. 1. Agathion's Escape: Allows to relocate to Giran, Gludio, Dion, Oren, Hunters Village. (Cooldown: 1 min). <Item Skill>. 1. Search for Evidence: Speed +66 for 15 sec.. <Item Skill>. 2. Hidden Search: monsters don't attack first. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="30" />
@@ -715,8 +715,7 @@
 		<!-- A 30-day item. Occupies 3 Hair Accessory slots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="HEAVY" />
-		<set name="bodypart" val="alldress" />
+		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="is_tradable" val="false" />
@@ -1032,19 +1031,29 @@
 		<set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="51025" level="1" /> <!-- Expand  Agathion Slots -->
+			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
+			<skill id="23234" level="1" /> <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="39016" level="1" /> <!-- Seal Agathion -->
+			<skill id="39017" level="1" /> <!-- Seal Agathion -->
+			<skill id="39018" level="1" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="90886" name="Agathion Bracelet - Singer and Dancer" additionalName="90-day" type="Armor">
 		<!-- A 90-day item. When worn, 2 Agathion slots are activated. <Active Skill>. 1. Dance of Fury: Atk. Spd. +5% for 20 minutes. 2. Dance of Concentration: Casting Spd. +5% for 20 minutes. 3. Song of Wind: Speed +20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 30-day. Cannot be exchanged, dropped or sold. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
-		<set name="bodypart" val="alldress" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="is_tradable" val="false" />
@@ -1052,13 +1061,22 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
+		<skills>
+			<skill id="51025" level="1" /> <!-- Expand  Agathion Slots -->
+			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
+			<skill id="23234" level="1" /> <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="39016" level="1" /> <!-- Seal Agathion -->
+			<skill id="39017" level="1" /> <!-- Seal Agathion -->
+			<skill id="39018" level="1" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="90887" name="Agathion Bracelet - Lv. 3" additionalName="60-day" type="Armor">
 		<!-- A 90-day item. When worn, 3 Agathion slots are activated., STR/ INT/ CON/ MEN +1. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
-		<set name="bodypart" val="alldress" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="is_tradable" val="false" />
@@ -1066,53 +1084,75 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="86400" />
+		<skills>
+			<skill id="51025" level="2" /> <!-- Expand  Agathion Slots -->
+			<skill id="55885" level="1"/> <!-- Agathion Bracelet Stats Increase -->
+		</skills>
 	</item>
 	<item id="90888" name="Agathion Bracelet - Lv. 1" type="Armor">
 		<!-- When worn, 2 Agathion slots are activated. Cannot be dropped. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hairall" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="51025" level="1" /> <!-- Expand  Agathion Slots -->
+		</skills>
 	</item>
 	<item id="90889" name="Agathion Bracelet - Lv. 2" type="Armor">
 		<!-- When worn, 3 Agathion slots are activated. Cannot be dropped. -->
 		<set name="icon" val="icon.bracelet_tersi_agathion" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hairall" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="51025" level="2" /> <!-- Expand  Agathion Slots -->
+		</skills>
 	</item>
 	<item id="90890" name="Agathion Bracelet - Lv. 3" type="Armor">
 		<!-- When worn, 3 Agathion slots are activated. STR/ INT/ CON/ MEN +1. Cannot be dropped. -->
 		<set name="icon" val="icon.high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="51025" level="2" /> <!-- Expand  Agathion Slots -->
+			<skill id="55885" level="1"/> <!-- Agathion Bracelet Stats Increase -->
+		</skills>
 	</item>
 	<item id="90891" name="Agathion Bracelet - Lv. 4" type="Armor">
 		<!-- When worn, 4 Agathion slots are activated. STR/ INT/ CON/ MEN +1. Mental/ stun/ sleep/ paralyse attacks resistance +5%. Cannot be dropped. -->
 		<set name="icon" val="icon.high_agathion_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="51025" level="3" /> <!-- Expand Agathion Slots -->
+			<skill id="55885" level="1"/> <!-- Agathion Bracelet Stats Increase -->
+			<skill id="55886" level="1"/> <!-- Agathion Bracelet Resistance Increase -->
+		</skills>
 	</item>
 	<item id="90892" name="Agathion Bracelet - Joy" type="Armor">
 		<!-- When worn, 2 Agathion slots are activated.. <Item Skill>. 1. Evidence Chase: for 15 min. Speed +66. <Item Skill>. 2. Hidden Search: monsters don't attack first. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
@@ -1120,11 +1160,17 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="51025" level="1" /> <!-- Expand Agathion Slots -->
+			<skill id="39101" level="1" /> <!-- Evidence Chase -->
+			<skill id="39102" level="1"/> <!-- Secret Investigation -->
+		</skills>
 	</item>
 	<item id="90893" name="Agathion Bracelet - Joy" additionalName="7-day" type="Armor">
 		<!-- A 7-day item. When worn, 2 Agathion slots are activated.. <Item Skill>. 1. Evidence Chase: for 15 min. Speed +66. <Item Skill>. 2. Hidden Search: monsters don't attack first. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
@@ -1133,6 +1179,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="51025" level="1" /> <!-- Expand Agathion Slots -->
+			<skill id="39101" level="1" /> <!-- Evidence Chase -->
+			<skill id="39102" level="1"/> <!-- Secret Investigation -->
+		</skills>
 	</item>
 	<item id="90894" name="Agathion Aries" additionalName="60-day" type="Armor">
 		<!-- A 60-day item. Equipping it in the main slot summons the Agathion Aries and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->

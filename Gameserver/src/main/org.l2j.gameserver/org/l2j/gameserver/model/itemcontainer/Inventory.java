@@ -67,12 +67,12 @@ public abstract class Inventory extends ItemContainer {
     public static final int PAPERDOLL_AGATHION3 = 19;
     public static final int PAPERDOLL_AGATHION4 = 20;
     public static final int PAPERDOLL_AGATHION5 = 21;
-    public static final int PAPERDOLL_DECO1 = 22;
-    public static final int PAPERDOLL_DECO2 = 23;
-    public static final int PAPERDOLL_DECO3 = 24;
-    public static final int PAPERDOLL_DECO4 = 25;
-    public static final int PAPERDOLL_DECO5 = 26;
-    public static final int PAPERDOLL_DECO6 = 27;
+    public static final int TALISMAN1 = 22;
+    public static final int TALISMAN2 = 23;
+    public static final int TALISMAN3 = 24;
+    public static final int TALISMAN4 = 25;
+    public static final int TALISMAN5 = 26;
+    public static final int TALISMAN6 = 27;
     public static final int PAPERDOLL_CLOAK = 28;
     public static final int PAPERDOLL_BELT = 29;
     public static final int PAPERDOLL_BROOCH = 30;
@@ -175,8 +175,8 @@ public abstract class Inventory extends ItemContainer {
             return PAPERDOLL_RBRACELET;
         } else if (slot == L2Item.SLOT_L_BRACELET) {
             return PAPERDOLL_LBRACELET;
-        } else if (slot == L2Item.SLOT_DECO) {
-            return PAPERDOLL_DECO1; // return first we deal with it later
+        } else if (slot == L2Item.SLOT_TALISMAN) {
+            return TALISMAN1; // return first we deal with it later
         } else if (slot == L2Item.SLOT_BELT) {
             return PAPERDOLL_BELT;
         } else if (slot == L2Item.SLOT_BROOCH) {
@@ -536,13 +536,13 @@ public abstract class Inventory extends ItemContainer {
                 slot = L2Item.SLOT_R_BRACELET;
                 break;
             }
-            case PAPERDOLL_DECO1:
-            case PAPERDOLL_DECO2:
-            case PAPERDOLL_DECO3:
-            case PAPERDOLL_DECO4:
-            case PAPERDOLL_DECO5:
-            case PAPERDOLL_DECO6: {
-                slot = L2Item.SLOT_DECO;
+            case TALISMAN1:
+            case TALISMAN2:
+            case TALISMAN3:
+            case TALISMAN4:
+            case TALISMAN5:
+            case TALISMAN6: {
+                slot = L2Item.SLOT_TALISMAN;
                 break;
             }
             case PAPERDOLL_BELT: {
@@ -698,8 +698,8 @@ public abstract class Inventory extends ItemContainer {
             pdollSlot = PAPERDOLL_LBRACELET;
         } else if (slot == L2Item.SLOT_R_BRACELET) {
             pdollSlot = PAPERDOLL_RBRACELET;
-        } else if (slot == L2Item.SLOT_DECO) {
-            pdollSlot = PAPERDOLL_DECO1;
+        } else if (slot == L2Item.SLOT_TALISMAN) {
+            pdollSlot = TALISMAN1;
         } else if (slot == L2Item.SLOT_BELT) {
             pdollSlot = PAPERDOLL_BELT;
         } else if (slot == L2Item.SLOT_BROOCH) {
@@ -851,7 +851,7 @@ public abstract class Inventory extends ItemContainer {
             setPaperdollItem(PAPERDOLL_LBRACELET, item);
         } else if (targetSlot == L2Item.SLOT_R_BRACELET) {
             setPaperdollItem(PAPERDOLL_RBRACELET, item);
-        } else if (targetSlot == L2Item.SLOT_DECO) {
+        } else if (targetSlot == L2Item.SLOT_TALISMAN) {
             equipTalisman(item);
         } else if (targetSlot == L2Item.SLOT_BELT) {
             setPaperdollItem(PAPERDOLL_BELT, item);
@@ -991,7 +991,7 @@ public abstract class Inventory extends ItemContainer {
         }
 
         // find same (or incompatible) talisman type
-        for (int i = PAPERDOLL_DECO1; i < (PAPERDOLL_DECO1 + getTalismanSlots()); i++) {
+        for (int i = TALISMAN1; i < (TALISMAN1 + getTalismanSlots()); i++) {
             if (_paperdoll[i] != null) {
                 if (getPaperdollItemId(i) == item.getId()) {
                     // overwrite
@@ -1002,7 +1002,7 @@ public abstract class Inventory extends ItemContainer {
         }
 
         // no free slot found - put on first free
-        for (int i = PAPERDOLL_DECO1; i < (PAPERDOLL_DECO1 + getTalismanSlots()); i++) {
+        for (int i = TALISMAN1; i < (TALISMAN1 + getTalismanSlots()); i++) {
             if (_paperdoll[i] == null) {
                 setPaperdollItem(i, item);
                 return;
@@ -1010,7 +1010,7 @@ public abstract class Inventory extends ItemContainer {
         }
 
         // no free slots - put on first
-        setPaperdollItem(PAPERDOLL_DECO1, item);
+        setPaperdollItem(TALISMAN1, item);
     }
 
     public int getArtifactSlots() {
@@ -1445,11 +1445,23 @@ public abstract class Inventory extends ItemContainer {
 
         @Override
         public void notifyUnequiped(int slot, L2ItemInstance item, Inventory inventory) {
+            var charStat = inventory.getOwner().getStat();
+            item.getItem().getFunctionTemplates().forEach(func -> {
+                if(func.getStat().hasDefaultFinalizer()) {
+                    charStat.removeAddAdditionalStat(func.getStat(), func.getValue());
+                }
+            });
             inventory.getOwner().getStat().recalculateStats(true);
         }
 
         @Override
         public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory) {
+            var charStat = inventory.getOwner().getStat();
+            item.getItem().getFunctionTemplates().forEach(func -> {
+                if(func.getStat().hasDefaultFinalizer()) {
+                    charStat.addAdditionalStat(func.getStat(), func.getValue());
+                }
+            });
             inventory.getOwner().getStat().recalculateStats(true);
         }
     }
@@ -1768,12 +1780,12 @@ public abstract class Inventory extends ItemContainer {
         @Override
         public void notifyUnequiped(int slot, L2ItemInstance item, Inventory inventory) {
             if (item.getItem().getBodyPart() == L2Item.SLOT_R_BRACELET) {
-                inventory.unEquipItemInSlot(PAPERDOLL_DECO1);
-                inventory.unEquipItemInSlot(PAPERDOLL_DECO2);
-                inventory.unEquipItemInSlot(PAPERDOLL_DECO3);
-                inventory.unEquipItemInSlot(PAPERDOLL_DECO4);
-                inventory.unEquipItemInSlot(PAPERDOLL_DECO5);
-                inventory.unEquipItemInSlot(PAPERDOLL_DECO6);
+                inventory.unEquipItemInSlot(TALISMAN1);
+                inventory.unEquipItemInSlot(TALISMAN2);
+                inventory.unEquipItemInSlot(TALISMAN3);
+                inventory.unEquipItemInSlot(TALISMAN4);
+                inventory.unEquipItemInSlot(TALISMAN5);
+                inventory.unEquipItemInSlot(TALISMAN6);
             }
         }
 

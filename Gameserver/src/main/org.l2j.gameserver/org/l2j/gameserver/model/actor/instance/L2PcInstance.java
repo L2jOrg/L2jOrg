@@ -1841,7 +1841,7 @@ public final class L2PcInstance extends L2Playable {
 
             final long slot = _inventory.getSlotFromItem(item);
             // we can't unequip talisman by body slot
-            if ((slot == L2Item.SLOT_DECO) || (slot == L2Item.SLOT_BROOCH_JEWEL) || (slot == L2Item.SLOT_AGATHION) || (slot == L2Item.SLOT_ARTIFACT)) {
+            if ((slot == L2Item.SLOT_TALISMAN) || (slot == L2Item.SLOT_BROOCH_JEWEL) || (slot == L2Item.SLOT_AGATHION) || (slot == L2Item.SLOT_ARTIFACT)) {
                 items = _inventory.unEquipItemInSlotAndRecord(item.getLocationSlot());
             } else {
                 items = _inventory.unEquipItemInBodySlotAndRecord(slot);
@@ -7621,7 +7621,7 @@ public final class L2PcInstance extends L2Playable {
 
     public void sendSkillList() {
         if (_skillListRefreshTask == null) {
-            _skillListRefreshTask = ThreadPoolManager.getInstance().schedule(() ->
+            _skillListRefreshTask = ThreadPoolManager.schedule(() ->
             {
                 sendSkillList(0);
                 _skillListRefreshTask = null;

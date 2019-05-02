@@ -861,12 +861,22 @@
 	<skill id="55468" toLevel="1" name="Lv. 1 Brooch">
 		<!-- Activates 2 jewel slots. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>2</slots>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55469" toLevel="1" name="Lv. 2 Brooch">
 		<!-- Activates 3 jewel slots. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i01</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>3</slots>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55470" toLevel="2" name="Lv. 2 Brooch - Additional Effect">
 		<!-- Inventory Slot +5. -->
@@ -875,6 +885,7 @@
 			<value level="2">icon.etc_bm_brooch_lavianrose_i01</value>
 		</icon>
 		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="55471" toLevel="5" name="Topaz">
 		<!-- Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of $s1. -->

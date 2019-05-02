@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.enums;
 
 import org.l2j.gameserver.model.interfaces.IUpdateTypeComponent;
@@ -47,15 +31,15 @@ public enum InventorySlot implements IUpdateTypeComponent {
     AGATHION3(Inventory.PAPERDOLL_AGATHION3),
     AGATHION4(Inventory.PAPERDOLL_AGATHION4),
     AGATHION5(Inventory.PAPERDOLL_AGATHION5),
-    DECO1(Inventory.PAPERDOLL_DECO1),
-    DECO2(Inventory.PAPERDOLL_DECO2),
-    DECO3(Inventory.PAPERDOLL_DECO3),
-    DECO4(Inventory.PAPERDOLL_DECO4),
-    DECO5(Inventory.PAPERDOLL_DECO5),
-    DECO6(Inventory.PAPERDOLL_DECO6),
+    TALISMAN1(Inventory.TALISMAN1),
+    TALISMAN2(Inventory.TALISMAN2),
+    TALISMAN3(Inventory.TALISMAN3),
+    TALISMAN4(Inventory.TALISMAN4),
+    TALISMAN5(Inventory.TALISMAN5),
+    TALISMAN6(Inventory.TALISMAN6),
     BELT(Inventory.PAPERDOLL_BELT),
     BROOCH(Inventory.PAPERDOLL_BROOCH),
-    BROOCH_JEWEL(Inventory.PAPERDOLL_BROOCH_JEWEL1),
+    BROOCH_JEWEL1(Inventory.PAPERDOLL_BROOCH_JEWEL1),
     BROOCH_JEWEL2(Inventory.PAPERDOLL_BROOCH_JEWEL2),
     BROOCH_JEWEL3(Inventory.PAPERDOLL_BROOCH_JEWEL3),
     BROOCH_JEWEL4(Inventory.PAPERDOLL_BROOCH_JEWEL4),

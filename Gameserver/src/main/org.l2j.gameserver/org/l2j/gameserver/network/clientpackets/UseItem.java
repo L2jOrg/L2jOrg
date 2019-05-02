@@ -169,7 +169,7 @@ public final class UseItem extends IClientIncomingPacket {
                 if (activeChar.isCursedWeaponEquipped()) {
                     return;
                 }
-            } else if (item.getItem().getBodyPart() == L2Item.SLOT_DECO) {
+            } else if (item.getItem().getBodyPart() == L2Item.SLOT_TALISMAN) {
                 if (!item.isEquipped() && (activeChar.getInventory().getTalismanSlots() == 0)) {
                     activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
                     return;
@@ -199,13 +199,13 @@ public final class UseItem extends IClientIncomingPacket {
                 activeChar.getAI().setNextAction(new NextAction(CtrlEvent.EVT_FINISH_CASTING, CtrlIntention.AI_INTENTION_CAST, () -> activeChar.useEquippableItem(item, true)));
             } else if (activeChar.isAttackingNow()) {
                 ThreadPoolManager.schedule(() -> {
-                    var exitentItem = activeChar.getInventory().getItemByObjectId(_objectId);
+                    var usedItem = activeChar.getInventory().getItemByObjectId(_objectId);
 
-                    if(isNull(exitentItem)) {
+                    if(isNull(usedItem)) {
                         return;
                     }
                     // Equip or unEquip
-                    activeChar.useEquippableItem(exitentItem, false);
+                    activeChar.useEquippableItem(usedItem, false);
                 }, activeChar.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
             } else {
                 activeChar.useEquippableItem(item, true);

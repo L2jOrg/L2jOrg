@@ -34,7 +34,7 @@
 		<!-- 1-day item. When worn, 2 Agathion slots are activated. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -43,6 +43,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<skills>
+			<skill id="51025" level="1" /> <!-- Expand Agathion Slots -->
+		</skills>
 	</item>
 	<item id="91004" name="Agathion - Sin Eater" type="Armor">
 		<!-- Equipping it in the Bracelet's main slot summons the Agathion Sin Eater and activates the Special Ability option. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->

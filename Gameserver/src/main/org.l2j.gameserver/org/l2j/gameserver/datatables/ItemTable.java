@@ -15,7 +15,6 @@ import org.l2j.gameserver.model.actor.instance.L2EventMonsterInstance;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.*;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.util.GMAudit;
@@ -41,7 +40,7 @@ public class ItemTable {
         SLOTS.put("shirt", (long) L2Item.SLOT_UNDERWEAR);
         SLOTS.put("lbracelet", (long) L2Item.SLOT_L_BRACELET);
         SLOTS.put("rbracelet", (long) L2Item.SLOT_R_BRACELET);
-        SLOTS.put("talisman", (long) L2Item.SLOT_DECO);
+        SLOTS.put("talisman", (long) L2Item.SLOT_TALISMAN);
         SLOTS.put("chest", (long) L2Item.SLOT_CHEST);
         SLOTS.put("fullarmor", (long) L2Item.SLOT_FULL_ARMOR);
         SLOTS.put("head", (long) L2Item.SLOT_HEAD);
@@ -77,7 +76,6 @@ public class ItemTable {
         SLOTS.put("hair2", (long) L2Item.SLOT_HAIR2);
         SLOTS.put("dhair", (long) L2Item.SLOT_HAIRALL);
         SLOTS.put("alldress", (long) L2Item.SLOT_ALLDRESS);
-        SLOTS.put("deco1", (long) L2Item.SLOT_DECO);
         SLOTS.put("waist", (long) L2Item.SLOT_BELT);
     }
 

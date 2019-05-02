@@ -525,7 +525,7 @@ public class SkillCaster implements Runnable {
         }
 
         // Reduce talisman mana on skill use
-        if ((_skill.getReferenceItemId() > 0) && (ItemTable.getInstance().getTemplate(_skill.getReferenceItemId()).getBodyPart() == L2Item.SLOT_DECO)) {
+        if ((_skill.getReferenceItemId() > 0) && (ItemTable.getInstance().getTemplate(_skill.getReferenceItemId()).getBodyPart() == L2Item.SLOT_TALISMAN)) {
             final L2ItemInstance talisman = caster.getInventory().getItems(i -> i.getId() == _skill.getReferenceItemId(), L2ItemInstance::isEquipped).stream().findAny().orElse(null);
             if (talisman != null) {
                 talisman.decreaseMana(false, talisman.useSkillDisTime());

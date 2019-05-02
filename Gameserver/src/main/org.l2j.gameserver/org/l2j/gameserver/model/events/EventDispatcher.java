@@ -85,7 +85,7 @@ public final class EventDispatcher {
         }
 
         if (hasListeners) {
-            ThreadPoolManager.getInstance().execute(() -> notifyEventToMultipleContainers(event, containers, null));
+            ThreadPoolManager.execute(() -> notifyEventToMultipleContainers(event, containers, null));
         }
     }
 

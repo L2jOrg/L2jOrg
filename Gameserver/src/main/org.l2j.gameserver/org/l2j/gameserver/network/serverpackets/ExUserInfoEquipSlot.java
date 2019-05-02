@@ -55,7 +55,7 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
         final PcInventory inventory = _activeChar.getInventory();
         for (InventorySlot slot : InventorySlot.values()) {
             if (containsMask(slot)) {
-                final VariationInstance augment = inventory.getPaperdollAugmentation(slot.getSlot());
+                    final VariationInstance augment = inventory.getPaperdollAugmentation(slot.getSlot());
                 packet.putShort((short) 22); // 10 + 4 * 3
                 packet.putInt(inventory.getPaperdollObjectId(slot.getSlot()));
                 packet.putInt(inventory.getPaperdollItemId(slot.getSlot()));

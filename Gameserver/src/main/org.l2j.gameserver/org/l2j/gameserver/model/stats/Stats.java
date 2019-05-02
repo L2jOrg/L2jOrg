@@ -250,9 +250,11 @@ public enum Stats {
     private final BiFunction<Double, Double, Double> _mulFunction;
     private final Double _resetAddValue;
     private final Double _resetMulValue;
+    private boolean hasDefaultFinalizer ;
 
     Stats(String xmlString) {
         this(xmlString, Stats::defaultValue, MathUtil::add, MathUtil::mul, null, null);
+        hasDefaultFinalizer = true;
     }
 
     Stats(String xmlString, IStatsFunction valueFinalizer) {
@@ -328,5 +330,9 @@ public enum Stats {
 
     public Double getResetMulValue() {
         return _resetMulValue;
+    }
+
+    public boolean hasDefaultFinalizer() {
+        return hasDefaultFinalizer;
     }
 }

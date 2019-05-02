@@ -53,12 +53,12 @@ public class CharSelectionInfo extends IClientOutgoingPacket {
                     Inventory.PAPERDOLL_AGATHION3, // 152
                     Inventory.PAPERDOLL_AGATHION4, // 152
                     Inventory.PAPERDOLL_AGATHION5, // 152
-                    Inventory.PAPERDOLL_DECO1,
-                    Inventory.PAPERDOLL_DECO2,
-                    Inventory.PAPERDOLL_DECO3,
-                    Inventory.PAPERDOLL_DECO4,
-                    Inventory.PAPERDOLL_DECO5,
-                    Inventory.PAPERDOLL_DECO6,
+                    Inventory.TALISMAN1,
+                    Inventory.TALISMAN2,
+                    Inventory.TALISMAN3,
+                    Inventory.TALISMAN4,
+                    Inventory.TALISMAN5,
+                    Inventory.TALISMAN6,
                     Inventory.PAPERDOLL_BELT,
                     Inventory.PAPERDOLL_BROOCH,
                     Inventory.PAPERDOLL_BROOCH_JEWEL1,

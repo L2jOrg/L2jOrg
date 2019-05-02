@@ -35,7 +35,7 @@ public enum EffectScope {
     private static final Map<String, EffectScope> XML_NODE_NAME_TO_EFFECT_SCOPE;
 
     static {
-        XML_NODE_NAME_TO_EFFECT_SCOPE = Arrays.stream(values()).collect(Collectors.toMap(e -> e.getXmlNodeName(), e -> e));
+        XML_NODE_NAME_TO_EFFECT_SCOPE = Arrays.stream(values()).collect(Collectors.toMap(EffectScope::getXmlNodeName, e -> e));
     }
 
     private final String _xmlNodeName;
