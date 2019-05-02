@@ -3,6 +3,24 @@
 	<skill id="39100" toLevel="1" name="Agathion Teleport - Hunters Village">
 		<!-- Teleports to Hunters Village. -->
 		<operateType>A1</operateType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>3000</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>117088</x>
+				<y>76931</y>
+				<z>-2696</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39101" toLevel="1" name="Evidence Chase">
 		<!-- Your Speed +66 for 15 sec. -->

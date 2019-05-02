@@ -411,7 +411,7 @@
 		<!-- Bracelet that summons Agathion - Cheerleader Mae. Cannot be exchanged, dropped, used in a private store, sold or share within account. <Agathion's Effect>. 1. Cheerleader Mae's Support: P. / M. Atk. +5%, Atk. Spd./Casting Spd. +5%, Skill MP Consumption -10%, P. / M. Critical Damage + 3%. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_g_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
@@ -419,6 +419,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55403" level="1"/> <!-- Summon Agathion - Cheerleader Mae -->
+			<skill id="55404" level="1"/> <!-- Agathion Cute Trick - Cheerleader Mae -->
+			<skill id="55405" level="1"/> <!-- Cheerleader Mae Support -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="70334" name="Cadmus Transformation Bracelet Pack (1 day)" additionalName="Prophet" type="EtcItem">
 		<!-- Double-click to receive Cadmus Transformation Bracelet Pack - Prophet (1 day). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->

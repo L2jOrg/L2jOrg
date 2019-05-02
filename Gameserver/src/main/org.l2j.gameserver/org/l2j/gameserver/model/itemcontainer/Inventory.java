@@ -14,6 +14,7 @@ import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
+import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.items.type.EtcItemType;
@@ -1494,6 +1495,9 @@ public abstract class Inventory extends ItemContainer {
 
             it.forEachSkill(ItemSkillType.ON_ENCHANT, holder ->
             {
+                if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
+                    return;
+                }
                 // Remove skills bestowed from +4 armor
                 if (item.getEnchantLevel() >= holder.getValue()) {
                     player.removeSkill(holder.getSkill(), false, holder.getSkill().isPassive());
@@ -1509,6 +1513,10 @@ public abstract class Inventory extends ItemContainer {
 
             it.forEachSkill(ItemSkillType.NORMAL, holder ->
             {
+                if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
+                    return;
+                }
+
                 final Skill Skill = holder.getSkill();
 
                 if (Skill != null) {
@@ -1527,6 +1535,11 @@ public abstract class Inventory extends ItemContainer {
 
                     itm.getItem().forEachSkill(ItemSkillType.NORMAL, holder ->
                     {
+
+                        if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
+                            return;
+                        }
+
                         if (player.getSkillLevel(holder.getSkillId()) != 0) {
                             return;
                         }
@@ -1552,7 +1565,13 @@ public abstract class Inventory extends ItemContainer {
             }
 
             // Apply skill, if weapon have "skills on unequip"
-            it.forEachSkill(ItemSkillType.ON_UNEQUIP, holder -> holder.getSkill().activateSkill(player, player));
+            it.forEachSkill(ItemSkillType.ON_UNEQUIP, holder -> {
+
+                if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
+                    return;
+                }
+                holder.getSkill().activateSkill(player, player);
+            });
 
             if (update.get()) {
                 player.sendSkillList();
@@ -1590,8 +1609,11 @@ public abstract class Inventory extends ItemContainer {
             // Recalculate all stats
             player.getStat().recalculateStats(true);
 
-            item.getItem().forEachSkill(ItemSkillType.ON_ENCHANT, holder ->
-            {
+            item.getItem().forEachSkill(ItemSkillType.ON_ENCHANT, holder -> {
+
+                if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
+                    return;
+                }
                 // Add skills bestowed from +4 armor
                 if (item.getEnchantLevel() >= holder.getValue()) {
                     player.addSkill(holder.getSkill(), false);
@@ -1607,6 +1629,11 @@ public abstract class Inventory extends ItemContainer {
 
             item.getItem().forEachSkill(ItemSkillType.NORMAL, holder ->
             {
+
+                if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
+                    return;
+                }
+
                 final Skill skill = holder.getSkill();
                 if (skill != null) {
                     player.addSkill(skill, false);
@@ -1628,7 +1655,14 @@ public abstract class Inventory extends ItemContainer {
             });
 
             // Apply skill, if weapon have "skills on equip"
-            item.getItem().forEachSkill(ItemSkillType.ON_EQUIP, holder -> holder.getSkill().activateSkill(player, player));
+            item.getItem().forEachSkill(ItemSkillType.ON_EQUIP, holder -> {
+
+                if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
+                    return;
+                }
+
+                holder.getSkill().activateSkill(player, player);
+            });
 
             if (update.get()) {
                 player.sendSkillList();
@@ -1636,6 +1670,13 @@ public abstract class Inventory extends ItemContainer {
             if (updateTimestamp.get()) {
                 player.sendPacket(new SkillCoolTime(player));
             }
+        }
+
+        private boolean verifySkillActiveIfAddtionalAgathion(int slot, ItemSkillHolder holder) {
+            if(slot > PAPERDOLL_AGATHION1 && slot <= PAPERDOLL_AGATHION5) {
+                return holder.getSkill().isActive();
+            }
+            return false;
         }
     }
 

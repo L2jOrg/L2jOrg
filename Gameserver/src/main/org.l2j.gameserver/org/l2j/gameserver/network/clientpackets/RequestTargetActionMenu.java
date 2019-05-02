@@ -1,12 +1,9 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
 import java.nio.ByteBuffer;
-
-import static java.util.Objects.nonNull;
 
 /**
  * @author Mobius

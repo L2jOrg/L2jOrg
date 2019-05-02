@@ -4,7 +4,7 @@
 		<!-- Activates the power of the Agathion Gowther. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Gowther Lv. 3. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -12,12 +12,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="56041" level="1"/>
+		</skills>
 	</item>
 	<item id="71201" name="Agathion Escanor" additionalName="Lv. 2" type="Armor">
 		<!-- Activates the power of the Agathion Escanor. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Escanor Lv. 3. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -25,96 +28,126 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="56042" level="1"/>
+		</skills>
 	</item>
 	<item id="71202" name="Agathion Meliodas" additionalName="Lv. 3" type="Armor">
 		<!-- Activates the power of the Agathion Meliodas. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="56034" level="1"/>
+		</skills>
 	</item>
 	<item id="71203" name="Agathion Elizabeth" additionalName="Lv. 3" type="Armor">
 		<!-- Activates the power of the Agathion Elizabeth. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="56035" level="1"/>
+		</skills>
 	</item>
 	<item id="71204" name="Agathion Hawk" additionalName="Lv. 3" type="Armor">
 		<!-- Activates the power of the Agathion Hawk. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="56036" level="1"/>
+		</skills>
 	</item>
 	<item id="71205" name="Agathion Ban" additionalName="Lv. 3" type="Armor">
 		<!-- Activates the power of the Agathion Ban. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="56037" level="1"/>
+		</skills>
 	</item>
 	<item id="71206" name="Agathion Diane" additionalName="Lv. 3" type="Armor">
 		<!-- Activates the power of the Agathion Diane. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="56038" level="1"/>
+		</skills>
 	</item>
 	<item id="71207" name="Agathion King" additionalName="Lv. 3" type="Armor">
 		<!-- Activates the power of the Agathion King. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="56039" level="1"/>
+		</skills>
 	</item>
 	<item id="71208" name="Agathion Merlin" additionalName="Lv. 3" type="Armor">
 		<!-- Activates the power of the Agathion Merlin. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="56040" level="1"/>
+		</skills>
 	</item>
 	<item id="71209" name="Agathion Gowther" additionalName="Lv. 3" type="Armor">
 		<!-- Activates the power of the Agathion Gowther. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="56041" level="1"/>
+		</skills>
 	</item>
 	<item id="71210" name="Agathion Escanor" additionalName="Lv. 3" type="Armor">
 		<!-- Activates the power of the Agathion Escanor. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="56042" level="1"/>
+		</skills>
 	</item>
 	<item id="71211" name="Seven Sins Agathion Growth Book" type="EtcItem">
 		<!-- For Seven Sins Agathion enchantment. Enchantment level does not change in case of enchant failure. -->
@@ -142,6 +175,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="51025" level="1" /> <!-- Expand Primary and Secondary Agathion Slots -->
+		</skills>
 	</item>
 	<item id="71214" name="Merlin's Magical Bracelet Box (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Merlin's Magical Bracelet (30-day). Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Will be deleted after the event. -->

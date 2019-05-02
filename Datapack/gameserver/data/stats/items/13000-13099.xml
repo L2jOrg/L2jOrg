@@ -65,7 +65,7 @@
 		<!-- Enables to summon Agathion of Joy when equipped. <Skill used>. 1. Agathion's Escape: Allows to relocate to Giran, Gludio, Dion, Oren, Hunters Village. (Cooldown: 1 min). <Item Skill>. 1. Search for Evidence: Speed +66 for 15 sec. <Item Skill>. 2. Hidden Search: monsters don't attack first. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lbracelet" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="30" />
@@ -82,6 +82,13 @@
 			<skill id="8256" level="1" /> <!-- Release Agathion's Seal - Joy -->
 			<skill id="5955" level="1" /> <!-- Agathion Cute Trick - Joy -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="39056" level="1"/> <!-- Agathion Teleport: Oren -->
+			<skill id="39055" level="1"/> <!--Agathion Teleport: Giran-->
+			<skill id="39054" level="1"/> <!--Agathion Teleport: Dion-->
+			<skill id="39053" level="1"/> <!--Agathion Teleport: Gludio-->
+			<skill id="39100" level="1"/> <!--Agathion Teleport - Hunters Village-->
+			<skill id="39101" level="1" /> <!-- Evidence Chase -->
+			<skill id="39102" level="1"/> <!-- Secret Investigation -->
 		</skills>
 	</item>
 </list>
