@@ -353,6 +353,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55712" level="1"/>  <!-- Activates 5 jewel slots. -->
+			<skill id="55713" level="1"/> <!-- Inventory Slot +12. -->
+		</skills>
 	</item>
 	<item id="70832" name="Fortune Red Cat's Eye Chest" type="EtcItem">
 		<!-- Double-click to obtain a Lv. 1-5 Red Cat's Eye. Cannot be dropped. -->

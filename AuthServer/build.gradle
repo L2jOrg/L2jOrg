@@ -23,7 +23,7 @@ dependencies {
     implementation 'io.github.joealisson:async-mmocore:2.2.1-SNAPSHOT'
 
     runtimeOnly 'org.apache.logging.log4j:log4j-slf4j18-impl:2.11.2'
-    runtimeOnly 'org.ehcache:ehcache:3.7.1'
+    runtimeOnly 'org.ehcache:ehcache:3.7.0'
 }
 
 jar {
@@ -73,7 +73,7 @@ startScripts {
 }
 
 task dist(type: Copy) {
-    from([configurations.runtime, jar]) {
+    from([configurations.compileClasspath, configurations.runtimeClasspath, jar]) {
         include "*.jar"
     }
     into ("$buildDir/authserver/lib")

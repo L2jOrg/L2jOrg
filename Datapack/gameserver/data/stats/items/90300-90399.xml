@@ -151,6 +151,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55468" level="1"/> <!-- Activates 2 jewel slots. -->
+			<skill id="55470" level="1"/> <!-- Inventory Slot +5. -->
+		</skills>
 	</item>
 	<item id="90312" name="Brooch" additionalName="Lv. 2" type="Armor">
 		<!-- Activates 3 jewel slots when equipped. Inventory Slot + 9. -->
@@ -162,6 +166,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55469" level="1"/> <!-- Activates 3 jewel slots. -->
+			<skill id="55470" level="2"/> <!-- Inventory Slot +9. -->
+		</skills>
 	</item>
 	<item id="90313" name="Topaz" additionalName="Lv. 1" type="Armor">
 		<!-- Disrupts the target's skill casting when used. Inflicts 475 damage in PvP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->

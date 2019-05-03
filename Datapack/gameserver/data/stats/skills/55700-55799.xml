@@ -80,12 +80,22 @@
 	<skill id="55712" toLevel="1" name="Lv. 4 Brooch">
 		<!-- Activates 5 jewel slots. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="JewelSlot">
+				<amount>5</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55713" toLevel="1" name="Lv. 4 Brooch - Additional Effect">
 		<!-- Inventory Slot +12. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
 		<operateType>A1</operateType>
+		<effects>
+			<effect name="EnlargeSlot">
+				<amount>12</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55714" toLevel="1" name="Shining Golden Boot">
 		<icon>icon.card_event_blue_box</icon>

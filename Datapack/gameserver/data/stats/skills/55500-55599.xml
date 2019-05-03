@@ -39,11 +39,21 @@
 		<!-- Activates 4 jewel slots. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i02</icon>
 		<operateType>A1</operateType>
+		<effects>
+			<effect name="JewelSlot">
+				<amount>4</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55511" toLevel="1" name="Lv. 3 Brooch - Additional Effect">
 		<!-- Inventory Slot +12. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i02</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="EnlargeSlot">
+				<amount>12</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55512" toLevel="1" name="Aquamarine Fortune Chest">
 		<operateType>A1</operateType>
