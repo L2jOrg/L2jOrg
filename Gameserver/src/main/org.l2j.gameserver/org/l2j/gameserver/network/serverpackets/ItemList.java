@@ -6,8 +6,8 @@ import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public final class ItemList extends AbstractItemPacket {
     private final int _sendType;
@@ -17,7 +17,7 @@ public final class ItemList extends AbstractItemPacket {
     public ItemList(int sendType, L2PcInstance activeChar) {
         _sendType = sendType;
         _activeChar = activeChar;
-        _items = activeChar.getInventory().getItems(item -> !item.isQuestItem()).stream().collect(Collectors.toList());
+        _items = new ArrayList<>(activeChar.getInventory().getItems(item -> !item.isQuestItem()));
     }
 
     @Override
@@ -36,5 +36,14 @@ public final class ItemList extends AbstractItemPacket {
             packet.putInt(_items.size());
         }
         writeInventoryBlock(packet, _activeChar.getInventory());
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        var size = 13 + _activeChar.getInventory().getBlockItems().size() * 4;
+        if(_sendType == 2) {
+            size += _items.size() * 100;
+        }
+        return  size;
     }
 }

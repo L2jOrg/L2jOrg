@@ -17,8 +17,8 @@
 package handlers.communityboard;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
@@ -40,12 +40,10 @@ import org.l2j.gameserver.network.serverpackets.ShowBoard;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
-import java.util.concurrent.TimeUnit;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
@@ -180,7 +178,7 @@ public final class HomeBoard implements IParseBoardHandler
 				activeChar.destroyItemByItemId("CB_Teleport", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_TELEPORT_PRICE, activeChar, true);
 				activeChar.setInstanceById(0);
 				activeChar.teleToLocation(Config.COMMUNITY_AVAILABLE_TELEPORTS.get(teleBuypass), 0);
-				ThreadPoolManager.getInstance().schedule(() ->
+				ThreadPoolManager.schedule(() ->
 				{
 					activeChar.enableAllSkills();
 				}, 3000);
@@ -207,7 +205,7 @@ public final class HomeBoard implements IParseBoardHandler
 					targets.add(pet);
 				}
 				
-				activeChar.getServitors().values().stream().forEach(targets::add);
+				activeChar.getServitors().values().forEach(targets::add);
 				
 				for (int i = 0; i < buffCount; i++)
 				{

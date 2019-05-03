@@ -37,4 +37,9 @@ public class ExQuestItemList extends AbstractItemPacket {
         }
         writeInventoryBlock(packet, _activeChar.getInventory());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + _activeChar.getInventory().getBlockItems().size() * 4 + _items.size() * 100;
+    }
 }

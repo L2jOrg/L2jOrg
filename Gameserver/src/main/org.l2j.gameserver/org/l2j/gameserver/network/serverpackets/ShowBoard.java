@@ -7,8 +7,11 @@ import java.nio.ByteBuffer;
 import java.util.List;
 
 public class ShowBoard extends IClientOutgoingPacket {
+
+    private static final int BOARD_MENU_SIZE = 20 * 8;
     private final String _content;
     private int _showBoard = 1; // 1 show, 0 hide
+
 
     public ShowBoard(String htmlCode, String id) {
         _content = id + "\u0008" + htmlCode;
@@ -44,5 +47,10 @@ public class ShowBoard extends IClientOutgoingPacket {
         writeString("bypass _bbsfriends", packet); // friends
         writeString("bypass bbs_add_fav", packet); // add fav.
         writeString(_content, packet);
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return (_content.length() + BOARD_MENU_SIZE ) * 2;
     }
 }
