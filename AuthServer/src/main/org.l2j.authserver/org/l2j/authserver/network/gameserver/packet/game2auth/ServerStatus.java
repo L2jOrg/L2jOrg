@@ -1,8 +1,9 @@
 package org.l2j.authserver.network.gameserver.packet.game2auth;
 
+import io.github.joealisson.primitive.maps.IntIntMap;
+import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
+
 import java.nio.ByteBuffer;
-import java.util.HashMap;
-import java.util.Map;
 
 import static java.util.Objects.nonNull;
 
@@ -13,6 +14,7 @@ public class ServerStatus extends GameserverReadablePacket {
 	private static final int SERVER_LIST_SQUARE_BRACKET = 0x03;
 	private static final int MAX_PLAYERS = 0x04;
 	private static final int TEST_SERVER = 0x05;
+	private static final int SERVER_LIST_TYPE = 0x06;
 	
 	public static final int STATUS_AUTO = 0x00;
 	public static final int STATUS_GOOD = 0x01;
@@ -22,12 +24,12 @@ public class ServerStatus extends GameserverReadablePacket {
 	public static final int STATUS_GM_ONLY = 0x05;
 	
 	private static final int ON = 0x01;
-    Map<Integer, Integer> status;
+    IntIntMap status;
 
 	@Override
 	protected void readImpl(ByteBuffer buffer)  {
         int size = buffer.getInt();
-		status = new HashMap<>(size);
+		status = new HashIntIntMap(size);
         for (int i = 0; i < size; i++) {
             status.put(buffer.getInt(), buffer.getInt());
         }
@@ -35,7 +37,7 @@ public class ServerStatus extends GameserverReadablePacket {
 
 	@Override
 	protected void runImpl()  {
-		var gameServerInfo = client.getGameServerInfo();
+		final var gameServerInfo = client.getGameServerInfo();
 		if (nonNull(gameServerInfo)) {
 		    status.forEach((type, value) -> {
                 switch (type) {
@@ -54,6 +56,8 @@ public class ServerStatus extends GameserverReadablePacket {
                     case MAX_PLAYERS:
                         gameServerInfo.setMaxPlayers(value);
                         break;
+                    case SERVER_LIST_TYPE:
+                        gameServerInfo.setServerType(value);
                 }
             });
 		}

@@ -36,7 +36,7 @@ public class CacheFactory {
         checkInitilized();
         Cache<K, V> cache = manager.getCache(alias);
         if(isNull(cache)) {
-           cache =  manager.createCache(alias, new MutableConfiguration<K, V>().setStoreByValue(false).setExpiryPolicyFactory(TouchedExpiryPolicy.factoryOf(Duration.ONE_HOUR)));
+           cache = manager.createCache(alias, new MutableConfiguration<K, V>().setStoreByValue(false).setExpiryPolicyFactory(TouchedExpiryPolicy.factoryOf(Duration.ONE_HOUR)));
         }
         return cache;
     }

@@ -1,28 +1,20 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.admincommandhandlers;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ServerType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 
+import java.util.Arrays;
 import java.util.StringTokenizer;
+import java.util.stream.Collectors;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * This class handles the admin commands that acts on the login
@@ -78,32 +70,33 @@ public class AdminLogin implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Format is server_max_player <max>");
 			}
 		}
-		else if (command.startsWith("admin_server_list_type"))
-		{
+		else if (command.startsWith("admin_server_list_type")) {
 			final StringTokenizer st = new StringTokenizer(command);
 			final int tokens = st.countTokens();
-			if (tokens > 1)
-			{
+			if (tokens > 1) {
 				st.nextToken();
 				final String[] modes = new String[tokens - 1];
-				
+
+				boolean isNumeric = true;
 				for (int i = 0; i < (tokens - 1); i++)
 				{
-					modes[i] = st.nextToken().trim();
+					isNumeric &= Util.isNumeric(modes[i] = st.nextToken().trim());
 				}
 				int newType = 0;
-				try
-				{
-					newType = Integer.parseInt(modes[0]);
+
+				if(isNumeric) {
+					for (String mode : modes) {
+						newType |= Integer.parseInt(mode);
+					}
+				} else {
+					newType = ServerType.maskOf(modes);
 				}
-				catch (NumberFormatException e)
+
+				var serverSettings = getSettings(ServerSettings.class);
+				if (serverSettings.type() != newType)
 				{
-					newType = Config.getServerTypeId(modes);
-				}
-				if (Config.SERVER_LIST_TYPE != newType)
-				{
-					Config.SERVER_LIST_TYPE = newType;
-					// TODO Implement AuthServerCommunication.getInstance().sendServerType();
+					serverSettings.setType(newType);
+					AuthServerCommunication.getInstance().sendServerType(newType);
 					BuilderUtil.sendSysMessage(activeChar, "Server Type changed to " + getServerTypeName(newType));
 					showMainPage(activeChar);
 				}
@@ -115,7 +108,7 @@ public class AdminLogin implements IAdminCommandHandler
 			}
 			else
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Format is server_list_type <normal/relax/test/nolabel/restricted/event/free>");
+				BuilderUtil.sendSysMessage(activeChar, "Format is server_list_type <Normal | Relax | Test | Restricted | Event | Free | New |Classic>");
 			}
 		}
 		else if (command.startsWith("admin_server_list_age"))
@@ -125,13 +118,13 @@ public class AdminLogin implements IAdminCommandHandler
 			{
 				st.nextToken();
 				final String mode = st.nextToken();
-				int age = 0;
+				int age;
 				try
 				{
 					age = Integer.parseInt(mode);
 					if (Config.SERVER_LIST_AGE != age)
 					{
-						Config.SERVER_LIST_TYPE = age;
+						Config.SERVER_LIST_AGE = age;
 						// TODO Implement AuthServerCommunication.getInstance().sendServerStatus(ServerStatus.SERVER_AGE, age);
 						BuilderUtil.sendSysMessage(activeChar, "Server Age changed to " + age);
 						showMainPage(activeChar);
@@ -158,77 +151,21 @@ public class AdminLogin implements IAdminCommandHandler
 		}
 		return true;
 	}
-	
-	/**
-	 * @param activeChar
-	 */
+
 	private void showMainPage(L2PcInstance activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(activeChar, "data/html/admin/login.htm");
 		// TODO Implement html.replace("%server_name%", AuthServerCommunication.getInstance().getServerName());
 		// TODO Implment html.replace("%status%", AuthServerCommunication.getInstance().getStatusString());
-		html.replace("%clock%", getServerTypeName(Config.SERVER_LIST_TYPE));
+		html.replace("%type%", getServerTypeName(getSettings(ServerSettings.class).type()));
 		html.replace("%brackets%", String.valueOf(Config.SERVER_LIST_BRACKET));
 		// TODO implement html.replace("%max_players%", String.valueOf(AuthServerCommunication.getInstance().getMaxPlayer()));
 		activeChar.sendPacket(html);
 	}
 	
-	private String getServerTypeName(int serverType)
-	{
-		String nameType = "";
-		for (int i = 0; i < 7; i++)
-		{
-			final int currentType = serverType & (int) Math.pow(2, i);
-			
-			if (currentType > 0)
-			{
-				if (!nameType.isEmpty())
-				{
-					nameType += "+";
-				}
-				
-				switch (currentType)
-				{
-					case 0x01:
-					{
-						nameType += "Normal";
-						break;
-					}
-					case 0x02:
-					{
-						nameType += "Relax";
-						break;
-					}
-					case 0x04:
-					{
-						nameType += "Test";
-						break;
-					}
-					case 0x08:
-					{
-						nameType += "NoLabel";
-						break;
-					}
-					case 0x10:
-					{
-						nameType += "Restricted";
-						break;
-					}
-					case 0x20:
-					{
-						nameType += "Event";
-						break;
-					}
-					case 0x40:
-					{
-						nameType += "Free";
-						break;
-					}
-				}
-			}
-		}
-		return nameType;
+	private String getServerTypeName(int serverType) {
+		return Arrays.stream(ServerType.values()).filter(type -> (serverType & type.getMask()) != 0).map(ServerType::toString).collect(Collectors.joining(", "));
 	}
 	
 	/**

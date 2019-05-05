@@ -33,7 +33,7 @@ public class ServerSettings implements Settings {
 
         port = settingsFile.getShort("GameserverPort", (short) 7777);
 
-        parseServerType(settingsFile);
+        type = ServerType.maskOf(settingsFile.getStringArray("ServerListType"));
 
         maximumOnlineUsers = Math.max(1, settingsFile.getInteger("MaximumOnlineUsers", 20));
         ageLimit = settingsFile.getByte("ServerListAge", (byte) 0);
@@ -41,23 +41,6 @@ public class ServerSettings implements Settings {
         isPvP = settingsFile.getBoolean("PvPServer", false);
 
         dataPackDirectory = Path.of(settingsFile.getString("DatapackRoot", "."));
-    }
-
-    private void parseServerType(SettingsFile settingsFile) {
-        type = 0;
-        var types = settingsFile.getStringArray("ServerListType");
-
-        for (String t : types) {
-            if(isNullOrEmpty(t)){
-               continue;
-            }
-            try {
-                type |= ServerType.valueOf(t.toUpperCase()).getMask();
-            } catch (Exception e) {
-                // do nothing
-            }
-
-        }
     }
 
     public int serverId() {
@@ -94,6 +77,10 @@ public class ServerSettings implements Settings {
 
     public int type() {
         return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 
     public int maximumOnlineUsers() {

@@ -1,6 +1,5 @@
 package org.l2j.commons.util;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -18,35 +17,62 @@ public class Util {
     public static final int[] INT_ARRAY_EMPTY = new int[0];
     public static final String[] STRING_ARRAY_EMPTY = new String[0];
 
-    public static boolean isNullOrEmpty(CharSequence value) {
+    public static boolean isNullOrEmpty(final CharSequence value) {
         return isNull(value) || value.length() == 0;
     }
 
-    public static boolean isNotEmpty(String value) {
+    public static boolean isNotEmpty(final String value) {
         return nonNull(value) && !value.isEmpty();
     }
 
-    public static boolean isNullOrEmpty(Collection<?> collection) {
+    public static boolean isNullOrEmpty(final Collection<?> collection) {
         return isNull(collection) || collection.isEmpty();
     }
 
-    public static String hash(String value) throws NoSuchAlgorithmException {
+    public static String hash(final String value) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance("SHA3-256");
         byte[] raw = value.getBytes(StandardCharsets.UTF_8);
         return Base64.getEncoder().encodeToString(md.digest(raw));
     }
 
-    public static Field[] findFieldsAnnoted(Class<?> classToSearch, Class<? extends Annotation> annotationClass) {
-        List<Field> fields = new ArrayList<>();
-        Class<?> searchClass = classToSearch;
-        while (nonNull(searchClass)) {
-            fields.addAll(Stream.of(searchClass.getDeclaredFields()).filter(f -> f.isAnnotationPresent(annotationClass)).collect(Collectors.toList()));
-            searchClass = searchClass.getSuperclass();
+    public static boolean isNumeric(final String value) {
+        if(isNullOrEmpty(value)) {
+            return false;
         }
-        return fields.toArray(Field[]::new);
+
+        if(value.charAt(value.length() -1) == '.') {
+            return false;
+        }
+
+        var beginIndex = 0;
+        if(value.charAt(0) == '-') {
+            if(value.length() == 1) {
+                return false;
+            }
+            beginIndex = 1;
+        }
+
+        var points = 0;
+
+        for(var i = beginIndex; i < value.length(); i++) {
+            var caracter = value.charAt(i);
+            final var isPoint = caracter == '.';
+            if(isPoint) {
+                points++;
+            }
+
+            if(points > 1) {
+                return false;
+            }
+
+            if(!isPoint && !Character.isDigit(caracter)) {
+                return false;
+            }
+        }
+        return true;
     }
 
-    public static List<Field> fieldsOf(Class<?> classToSearch) {
+    public static List<Field> fieldsOf(final Class<?> classToSearch) {
         List<Field> fields = new ArrayList<>();
         Class<?> searchClass = classToSearch;
         while (nonNull(searchClass)) {
@@ -55,4 +81,5 @@ public class Util {
         }
         return Collections.unmodifiableList(fields);
     }
+
 }

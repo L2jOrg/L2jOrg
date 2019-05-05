@@ -57,7 +57,7 @@ public final class Config {
     private static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
     private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
     private static final String IDFACTORY_CONFIG_FILE = "./config/IdFactory.ini";
-    private static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
+
     private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
     private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
     private static final String RATES_CONFIG_FILE = "./config/Rates.ini";
@@ -69,7 +69,7 @@ public final class Config {
     public static final int MAX_ACTIVE_ACCOUNTS_ON_ONE_IP = 0;
     public static final String[] MAX_ACTIVE_ACCOUNTS_IGNORED_IP = { "127.0.0.1"};
     public static final int MAX_ACTIVE_ACCOUNTS_ON_ONE_HWID = 0;
-    public static final int CHARACTER_DELETE_AFTER_HOURS = 168;
+
 
     // --------------------------------------------------
     // Custom Config File Definitions
@@ -679,21 +679,8 @@ public final class Config {
     // Server Settings
     // --------------------------------------------------
     public static int PORT_GAME;
-    public static int PORT_LOGIN;
-    public static String LOGIN_BIND_ADDRESS;
-    public static int LOGIN_TRY_BEFORE_BAN;
-    public static int LOGIN_BLOCK_AFTER_BAN;
+
     public static String GAMESERVER_HOSTNAME;
-    public static String DATABASE_DRIVER;
-    public static String DATABASE_URL;
-    public static String DATABASE_LOGIN;
-    public static String DATABASE_PASSWORD;
-    public static int DATABASE_MAX_CONNECTIONS;
-    public static int DATABASE_MAX_IDLE_TIME;
-    public static boolean BACKUP_DATABASE;
-    public static String MYSQL_BIN_PATH;
-    public static String BACKUP_PATH;
-    public static int BACKUP_DAYS;
     public static int MAXIMUM_ONLINE_USERS;
     public static boolean HARDWARE_INFO_ENABLED;
     public static int MAX_PLAYERS_PER_HWID;
@@ -704,13 +691,9 @@ public final class Config {
     public static File DATAPACK_ROOT;
     public static boolean ACCEPT_ALTERNATE_ID;
     public static int REQUEST_ID;
-    public static boolean RESERVE_HOST_ON_LOGIN = false;
     public static List<Integer> PROTOCOL_LIST;
-    public static int SERVER_LIST_TYPE;
     public static int SERVER_LIST_AGE;
     public static boolean SERVER_LIST_BRACKET;
-    public static boolean LOGIN_SERVER_SCHEDULE_RESTART;
-    public static long LOGIN_SERVER_SCHEDULE_RESTART_TIME;
     public static boolean SERVER_RESTART_SCHEDULE_ENABLED;
     public static boolean SERVER_RESTART_SCHEDULE_MESSAGE;
     public static int SERVER_RESTART_SCHEDULE_COUNTDOWN;
@@ -739,7 +722,7 @@ public final class Config {
     public static int PVP_PVP_TIME;
     public static int MAX_REPUTATION;
     public static int REPUTATION_INCREASE;
-    public static IdFactoryType IDFACTORY_TYPE;
+
     public static boolean BAD_ID_CHECKING;
     public static double ENCHANT_CHANCE_ELEMENT_STONE;
     public static double ENCHANT_CHANCE_ELEMENT_CRYSTAL;
@@ -752,11 +735,6 @@ public final class Config {
     public static double HP_REGEN_MULTIPLIER;
     public static double MP_REGEN_MULTIPLIER;
     public static double CP_REGEN_MULTIPLIER;
-    public static boolean TELNET_ENABLED;
-    public static String TELNET_PASSWORD;
-    public static String TELNET_HOSTNAME;
-    public static List<String> TELNET_HOSTS;
-    public static int TELNET_PORT;
     public static boolean TRAINING_CAMP_ENABLE;
 
     public static int TRAINING_CAMP_MAX_DURATION;
@@ -764,16 +742,7 @@ public final class Config {
     public static int TRAINING_CAMP_MAX_LEVEL;
     public static double TRAINING_CAMP_EXP_MULTIPLIER;
     public static double TRAINING_CAMP_SP_MULTIPLIER;
-    public static boolean SHOW_LICENCE;
-    public static boolean SHOW_PI_AGREEMENT;
-    public static boolean ACCEPT_NEW_GAMESERVER;
-    public static byte[] HEX_ID;
-    public static boolean AUTO_CREATE_ACCOUNTS;
-    public static boolean FLOOD_PROTECTION;
-    public static int FAST_CONNECTION_LIMIT;
-    public static int NORMAL_CONNECTION_TIME;
-    public static int FAST_CONNECTION_TIME;
-    public static int MAX_CONNECTION_PER_IP;
+
     // Antharas
     public static int ANTHARAS_WAIT_TIME;
 
@@ -975,7 +944,7 @@ public final class Config {
     public static int COMMUNITYBOARD_TELEPORT_PRICE;
     public static int COMMUNITYBOARD_BUFF_PRICE;
     public static int COMMUNITYBOARD_HEAL_PRICE;
-    public static boolean COMMUNITYBOARD_COMBAT_DISABLED;
+
     public static boolean COMMUNITYBOARD_KARMA_DISABLED;
     public static boolean COMMUNITYBOARD_CAST_ANIMATIONS;
 
@@ -1090,7 +1059,7 @@ public final class Config {
                 LOGGER.warn("Wrong config protocol version: " + protocol + ". Skipped.");
             }
         }
-        SERVER_LIST_TYPE = getServerTypeId(serverSettings.getString("ServerListType", "Free").split(","));
+
         SERVER_LIST_AGE = serverSettings.getInt("ServerListAge", 0);
         SERVER_LIST_BRACKET = serverSettings.getBoolean("ServerListBrackets", false);
 
@@ -2366,55 +2335,6 @@ public final class Config {
         config.PUNISHMENT_TIME = properties.getInt("FloodProtector" + configString + "PunishmentTime", 0) * 60000;
     }
 
-    public static int getServerTypeId(String[] serverTypes) {
-        int serverType = 0;
-        for (String cType : serverTypes) {
-            switch (cType.trim().toLowerCase()) {
-                case "normal": {
-                    serverType |= 0x01;
-                    break;
-                }
-                case "relax": {
-                    serverType |= 0x02;
-                    break;
-                }
-                case "test": {
-                    serverType |= 0x04;
-                    break;
-                }
-                case "broad": {
-                    serverType |= 0x08;
-                    break;
-                }
-                case "restricted": {
-                    serverType |= 0x10;
-                    break;
-                }
-                case "event": {
-                    serverType |= 0x20;
-                    break;
-                }
-                case "free": {
-                    serverType |= 0x40;
-                    break;
-                }
-                case "world": {
-                    serverType |= 0x100;
-                    break;
-                }
-                case "new": {
-                    serverType |= 0x200;
-                    break;
-                }
-                case "classic": {
-                    serverType |= 0x400;
-                    break;
-                }
-            }
-        }
-        return serverType;
-    }
-
     /**
      * @param line the string line to parse
      * @return a parsed float map
@@ -2452,14 +2372,14 @@ public final class Config {
                 continue;
             }
 
-            int itemId = -1;
+            int itemId;
             try {
                 itemId = Integer.parseInt(valueSplit[0]);
             } catch (NumberFormatException e) {
                 LOGGER.warn("parseItemsList[Config.load()]: invalid itemId -> " + valueSplit[0] + ", value must be an integer. Skipping to the next entry in the list.");
                 continue;
             }
-            int count = -1;
+            int count;
             try {
                 count = Integer.parseInt(valueSplit[1]);
             } catch (NumberFormatException e) {

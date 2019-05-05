@@ -4,9 +4,9 @@ import io.github.joealisson.mmocore.Connector;
 import io.github.joealisson.mmocore.PacketExecutor;
 import io.github.joealisson.mmocore.ReadablePacket;
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.authcomm.gs2as.ChangePassword;
+import org.l2j.gameserver.network.authcomm.gs2as.ServerStatus;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,6 +27,7 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
+import static org.l2j.gameserver.network.authcomm.gs2as.ServerStatus.SERVER_LIST_TYPE;
 
 public class AuthServerCommunication implements Runnable, PacketExecutor<AuthServerClient> {
 
@@ -59,8 +60,8 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
             } catch (IOException | ExecutionException | InterruptedException e) {
                 try {
                     Thread.sleep(5000);
-                } catch (InterruptedException e1) {
-                    // do nothing
+                } catch (InterruptedException ignored) {
+                    Thread.currentThread().interrupt();
                 }
             }
         }
@@ -146,19 +147,6 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
         return clients;
     }
 
-    public L2GameClient removeClient(L2GameClient client) {
-        writeLock.lock();
-        try {
-            if(client.getConnectionState() == ConnectionState.AUTHENTICATED) {
-                return authedClients.remove(client.getAccountName());
-            } else {
-                return waitingClients.remove(client.getAccountName());
-            }
-        } finally {
-            writeLock.unlock();
-        }
-    }
-
     public String[] getAccounts() {
         return authedClients.keySet().toArray(String[]::new);
     }
@@ -199,6 +187,10 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 
     public void sendChangePassword(String accountName, String oldPass, String curpass) {
         sendPacket(new ChangePassword(accountName, oldPass, curpass, ""));
+    }
+
+    public void sendServerType(int type) {
+        sendPacket(new ServerStatus().add(SERVER_LIST_TYPE, type));
     }
 
     public static AuthServerCommunication getInstance() {
