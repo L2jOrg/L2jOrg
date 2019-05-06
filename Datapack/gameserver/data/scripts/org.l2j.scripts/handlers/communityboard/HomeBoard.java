@@ -1,26 +1,13 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.communityboard;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.data.database.dao.ReportDAO;
+import org.l2j.gameserver.data.database.data.ReportData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.data.xml.impl.MultisellData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
@@ -47,24 +34,24 @@ import java.util.Objects;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
+
 /**
  * Home board.
  * @author Zoey76, Mobius
  */
-public final class HomeBoard implements IParseBoardHandler
-{
+public final class HomeBoard implements IParseBoardHandler {
 	// SQL Queries
 	private static final String COUNT_FAVORITES = "SELECT COUNT(*) AS favorites FROM `bbs_favorites` WHERE `playerId`=?";
 	private static final String NAVIGATION_PATH = "data/html/CommunityBoard/Custom/navigation.html";
 	
-	private static final String[] COMMANDS =
-	{
+	private static final String[] COMMANDS = {
 		"_bbshome",
 		"_bbstop",
+		"_bbsreport"
 	};
 	
-	private static final String[] CUSTOM_COMMANDS =
-	{
+	private static final String[] CUSTOM_COMMANDS = {
 		Config.COMMUNITYBOARD_ENABLE_MULTISELLS ? "_bbsexcmultisell" : null,
 		Config.COMMUNITYBOARD_ENABLE_MULTISELLS ? "_bbsmultisell" : null,
 		Config.COMMUNITYBOARD_ENABLE_MULTISELLS ? "_bbssell" : null,
@@ -73,8 +60,7 @@ public final class HomeBoard implements IParseBoardHandler
 		Config.COMMUNITYBOARD_ENABLE_HEAL ? "_bbsheal" : null
 	};
 	
-	private static final BiPredicate<String, L2PcInstance> COMBAT_CHECK = (command, activeChar) ->
-	{
+	private static final BiPredicate<String, L2PcInstance> COMBAT_CHECK = (command, activeChar) -> {
 		boolean commandCheck = false;
 		for (String c : CUSTOM_COMMANDS)
 		{
@@ -178,10 +164,7 @@ public final class HomeBoard implements IParseBoardHandler
 				activeChar.destroyItemByItemId("CB_Teleport", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_TELEPORT_PRICE, activeChar, true);
 				activeChar.setInstanceById(0);
 				activeChar.teleToLocation(Config.COMMUNITY_AVAILABLE_TELEPORTS.get(teleBuypass), 0);
-				ThreadPoolManager.schedule(() ->
-				{
-					activeChar.enableAllSkills();
-				}, 3000);
+				ThreadPoolManager.schedule(activeChar::enableAllSkills, 3000);
 			}
 		}
 		else if (command.startsWith("_bbsbuff"))
@@ -204,8 +187,8 @@ public final class HomeBoard implements IParseBoardHandler
 				{
 					targets.add(pet);
 				}
-				
-				activeChar.getServitors().values().forEach(targets::add);
+
+				targets.addAll(activeChar.getServitors().values());
 				
 				for (int i = 0; i < buffCount; i++)
 				{
@@ -258,6 +241,16 @@ public final class HomeBoard implements IParseBoardHandler
 			}
 			
 			returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
+		} else if(command.startsWith("_bbsreport")) {
+			var reportText =  command.replace("_bbsreport", "");
+
+			var report = new ReportData();
+			report.setPlayerId(activeChar.getObjectId());
+			report.setReport(reportText);
+			getDAO(ReportDAO.class).save(report);
+
+			activeChar.sendMessage("Thank you For your Report!! the GM will be informed!");
+			AdminData.getInstance().broadcastMessageToGMs(String.format("Player: %s (%s) has just submitted a report!", activeChar.getName(), activeChar.getObjectId()));
 		}
 		
 		if (returnHtml != null)

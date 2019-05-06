@@ -221,9 +221,7 @@ public final class AdminData extends IGameXmlReader{
      * @param player the player
      */
     public void showGm(L2PcInstance player) {
-        if (_gmList.containsKey(player)) {
-            _gmList.put(player, false);
-        }
+        _gmList.putIfAbsent(player, false);
     }
 
     /**
@@ -232,9 +230,7 @@ public final class AdminData extends IGameXmlReader{
      * @param player the player
      */
     public void hideGm(L2PcInstance player) {
-        if (_gmList.containsKey(player)) {
-            _gmList.put(player, true);
-        }
+        _gmList.putIfAbsent(player, true);
     }
 
     /**

@@ -6,7 +6,7 @@ import org.l2j.gameserver.data.database.data.CharacterData;
 
 import java.util.List;
 
-public interface CharacterDAO extends DAO {
+public interface CharacterDAO extends DAO<CharacterData> {
 
     @Query("UPDATE characters SET online = 0")
     void setAllCharactersOffline();

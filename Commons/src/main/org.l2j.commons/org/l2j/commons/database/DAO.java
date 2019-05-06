@@ -1,6 +1,6 @@
 package org.l2j.commons.database;
 
-public interface DAO {
+public interface DAO<T> {
 
-    boolean save(Object model);
+    boolean save(T model);
 }

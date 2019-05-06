@@ -277,7 +277,6 @@ public class GameServer {
         ThreadPoolManager.getInstance().schedulePurge();
         INSTANCE = new GameServer();
         ThreadPoolManager.execute(AuthServerCommunication.getInstance());
-
     }
 
     private static void configureCaches() {

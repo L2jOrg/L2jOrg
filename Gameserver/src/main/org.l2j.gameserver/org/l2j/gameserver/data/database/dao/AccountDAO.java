@@ -4,7 +4,7 @@ import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.AccountData;
 
-public interface AccountDAO extends DAO {
+public interface AccountDAO extends DAO<AccountData> {
 
     @Query("DELETE FROM account_gsdata WHERE account_gsdata.account_name NOT IN (SELECT account_name FROM characters);")
     int deleteWithoutAccount();

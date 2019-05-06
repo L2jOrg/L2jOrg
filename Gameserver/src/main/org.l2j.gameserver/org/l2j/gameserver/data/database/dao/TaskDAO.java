@@ -6,7 +6,7 @@ import org.l2j.gameserver.data.database.data.TaskData;
 
 import java.util.List;
 
-public interface TaskDAO extends DAO {
+public interface TaskDAO extends DAO<TaskData> {
 
     @Query("SELECT * FROM global_tasks")
     List<TaskData> findAll();
