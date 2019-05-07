@@ -37,4 +37,9 @@ public class ExDivideAdenaDone extends IClientOutgoingPacket {
         packet.putLong(_adenaCount);
         writeString(_distributorName, packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 27 + _distributorName.length() * 2;
+    }
 }

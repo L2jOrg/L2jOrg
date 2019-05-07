@@ -54,4 +54,9 @@ public class ExChooseInventoryAttributeItem extends IClientOutgoingPacket {
         packet.putInt(_items.size());
         _items.forEach(packet::putInt);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 49 + _items.size() * 4;
+    }
 }

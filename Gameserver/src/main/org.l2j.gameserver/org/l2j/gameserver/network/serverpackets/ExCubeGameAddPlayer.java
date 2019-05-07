@@ -36,4 +36,9 @@ public class ExCubeGameAddPlayer extends IClientOutgoingPacket {
         packet.putInt(_player.getObjectId());
         writeString(_player.getName(), packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 23 + _player.getName().length()*2;
+    }
 }

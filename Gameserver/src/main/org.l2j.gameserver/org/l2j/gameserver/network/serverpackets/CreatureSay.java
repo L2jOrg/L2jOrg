@@ -13,6 +13,8 @@ import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.util.Objects.nonNull;
+
 public final class CreatureSay extends IClientOutgoingPacket {
     private final int _objectId;
     private final ChatType _textType;
@@ -24,13 +26,6 @@ public final class CreatureSay extends IClientOutgoingPacket {
     private int _charLevel = -1;
     private List<String> _parameters;
 
-    /**
-     * @param sender
-     * @param receiver
-     * @param name
-     * @param messageType
-     * @param text
-     */
     public CreatureSay(L2PcInstance sender, L2PcInstance receiver, String name, ChatType messageType, String text) {
         _objectId = sender.getObjectId();
         _charName = name;
@@ -152,6 +147,18 @@ public final class CreatureSay extends IClientOutgoingPacket {
                 writeString(s, packet);
             }
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        var size = 23;
+        size += nonNull(_charName) ? _charName.length() * 2 : 4;
+        if(nonNull(_text)) {
+            size +=  _text.length() * 2 + 2;
+        } else if(nonNull(_parameters)) {
+            size += _parameters.stream().mapToInt(String::length).sum() + _parameters.size() * 2;
+        }
+        return size;
     }
 
     @Override

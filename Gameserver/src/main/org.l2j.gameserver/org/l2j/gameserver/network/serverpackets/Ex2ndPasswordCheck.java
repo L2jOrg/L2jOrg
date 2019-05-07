@@ -27,4 +27,9 @@ public class Ex2ndPasswordCheck extends IClientOutgoingPacket {
         packet.putInt(_windowType);
         packet.putInt(0x00);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

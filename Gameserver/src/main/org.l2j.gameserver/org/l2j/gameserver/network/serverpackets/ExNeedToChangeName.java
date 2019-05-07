@@ -32,4 +32,9 @@ public class ExNeedToChangeName extends IClientOutgoingPacket {
         packet.putInt(_subType);
         writeString(_name, packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 15 + _name.length() *2;
+    }
 }

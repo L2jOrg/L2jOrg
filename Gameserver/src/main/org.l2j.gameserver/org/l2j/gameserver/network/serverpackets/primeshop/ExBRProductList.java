@@ -67,6 +67,6 @@ public class ExBRProductList extends IClientOutgoingPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return _primeList.size() * 120;
+        return 26 + _primeList.size() * 56 + _primeList.stream().mapToInt(product -> product.getItems().size()).sum() * 16;
     }
 }

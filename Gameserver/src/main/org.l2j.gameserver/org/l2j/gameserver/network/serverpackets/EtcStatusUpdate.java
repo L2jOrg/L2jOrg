@@ -33,4 +33,9 @@ public class EtcStatusUpdate extends IClientOutgoingPacket {
         packet.put((byte) _activeChar.getChargedSouls());
         packet.put((byte) _mask);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 15;
+    }
 }

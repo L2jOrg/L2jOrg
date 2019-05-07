@@ -21,4 +21,9 @@ public class ExShowEnsoulWindow extends IClientOutgoingPacket {
     public void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.EX_SHOW_ENSOUL_WINDOW.writeId(packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 5;
+    }
 }

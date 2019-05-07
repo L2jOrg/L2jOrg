@@ -76,4 +76,9 @@ public class ExBeautyItemList extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 29 + 24 * (_beautyData.getHairList().size() + _beautyData.getFaceList().size() + _colorData.size());
+    }
 }

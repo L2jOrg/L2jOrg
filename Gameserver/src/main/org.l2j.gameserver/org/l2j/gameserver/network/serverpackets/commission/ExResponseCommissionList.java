@@ -72,6 +72,15 @@ public class ExResponseCommissionList extends AbstractItemPacket {
         }
     }
 
+    @Override
+    protected int size(L2GameClient client) {
+        int chunkSize = _items.size() - _listIndexStart;
+        if (chunkSize > MAX_CHUNK_SIZE) {
+            chunkSize = MAX_CHUNK_SIZE;
+        }
+        return 17 + chunkSize * 130;
+    }
+
     public enum CommissionListReplyType {
         PLAYER_AUCTIONS_EMPTY(-2),
         ITEM_DOES_NOT_EXIST(-1),

@@ -34,4 +34,9 @@ public class TradeUpdate extends AbstractItemPacket {
             writeItem(packet, _item, _count);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return  10 + (_sendType == 2 ? 110 : 0);
+    }
 }

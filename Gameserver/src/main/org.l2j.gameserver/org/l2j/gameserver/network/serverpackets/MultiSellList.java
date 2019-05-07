@@ -95,4 +95,11 @@ public final class MultiSellList extends AbstractItemPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        var entries = _list.getEntries().subList(_index, _size);
+        var products = entries.stream().mapToInt(entry -> entry.getProducts().size() + entry.getIngredients().size()).sum();
+        return  32 + _size * (54 + products * 80);
+    }
 }

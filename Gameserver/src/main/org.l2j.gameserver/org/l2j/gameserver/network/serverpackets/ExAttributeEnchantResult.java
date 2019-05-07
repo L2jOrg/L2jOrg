@@ -37,4 +37,9 @@ public class ExAttributeEnchantResult extends IClientOutgoingPacket {
         packet.putShort((short) _successCount);
         packet.putShort((short) _failedCount);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 20;
+    }
 }

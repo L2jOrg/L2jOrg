@@ -29,4 +29,9 @@ public class ExGetOnAirShip extends IClientOutgoingPacket {
         packet.putInt(_pos.getY());
         packet.putInt(_pos.getZ());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25;
+    }
 }

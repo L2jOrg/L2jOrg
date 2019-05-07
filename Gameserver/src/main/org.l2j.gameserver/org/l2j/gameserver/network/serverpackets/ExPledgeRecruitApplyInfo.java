@@ -22,4 +22,9 @@ public class ExPledgeRecruitApplyInfo extends IClientOutgoingPacket {
 
         packet.putInt(_status.ordinal());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

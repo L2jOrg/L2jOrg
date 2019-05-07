@@ -46,4 +46,9 @@ public class ExPCCafePointInfo extends IClientOutgoingPacket {
         packet.put((byte) _pointType); // points inc display color(0=yellow, 1=cyan-blue, 2=red, all other black)
         packet.putInt(_time * 3); // value is in seconds * 3
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 23;
+    }
 }

@@ -41,27 +41,29 @@ public class ExOlympiadMatchResult extends IClientOutgoingPacket {
         packet.putInt(_winTeam);
         packet.putInt(_winnerList.size());
         for (OlympiadInfo info : _winnerList) {
-            writeString(info.getName(), packet);
-            writeString(info.getClanName(), packet);
-            packet.putInt(info.getClanId());
-            packet.putInt(info.getClassId());
-            packet.putInt(info.getDamage());
-            packet.putInt(info.getCurrentPoints());
-            packet.putInt(info.getDiffPoints());
-            packet.putInt(0x00); // Helios
+            writeParticipant(packet, info);
         }
 
         packet.putInt(_loseTeam);
         packet.putInt(_loserList.size());
         for (OlympiadInfo info : _loserList) {
-            writeString(info.getName(), packet);
-            writeString(info.getClanName(), packet);
-            packet.putInt(info.getClanId());
-            packet.putInt(info.getClassId());
-            packet.putInt(info.getDamage());
-            packet.putInt(info.getCurrentPoints());
-            packet.putInt(info.getDiffPoints());
-            packet.putInt(0x00); // Helios
+            writeParticipant(packet, info);
         }
+    }
+
+    private void writeParticipant(ByteBuffer packet, OlympiadInfo info) {
+        writeString(info.getName(), packet);
+        writeString(info.getClanName(), packet);
+        packet.putInt(info.getClanId());
+        packet.putInt(info.getClassId());
+        packet.putInt(info.getDamage());
+        packet.putInt(info.getCurrentPoints());
+        packet.putInt(info.getDiffPoints());
+        packet.putInt(0x00); // Helios
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 27 + _winnerList.get(0).getName().length() * 2 + (_winnerList.size() + _loserList.size()) * 100;
     }
 }

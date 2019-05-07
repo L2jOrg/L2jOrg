@@ -52,4 +52,9 @@ public final class ExItemAuctionInfoPacket extends AbstractItemPacket {
             writeItem(packet, _nextAuction.getItemInfo());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 240;
+    }
 }

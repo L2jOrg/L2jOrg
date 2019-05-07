@@ -10,6 +10,7 @@ import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
 import java.nio.ByteBuffer;
+import java.util.Arrays;
 import java.util.Set;
 
 /**
@@ -19,14 +20,13 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType> {
     private final L2Summon _summon;
     private final L2PcInstance _attacker;
     private final int _val;
-    private final byte[] _masks = new byte[]
-            {
-                    (byte) 0x00,
-                    (byte) 0x0C,
-                    (byte) 0x0C,
-                    (byte) 0x00,
-                    (byte) 0x00
-            };
+    private final byte[] _masks = new byte[] {
+        (byte) 0x00,
+        (byte) 0x0C,
+        (byte) 0x0C,
+        (byte) 0x00,
+        (byte) 0x00
+    };
     private final String _title;
     private final Set<AbnormalVisualEffect> _abnormalVisualEffects;
     private int _initSize = 0;
@@ -312,5 +312,10 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType> {
                 packet.putShort((short) abnormalVisualEffect.getClientId());
             }
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 100 + Arrays.stream(NpcInfoType.values()).mapToInt(NpcInfoType::getBlockLength).sum();
     }
 }

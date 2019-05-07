@@ -41,4 +41,9 @@ public class ExChangeClientEffectInfo extends IClientOutgoingPacket {
         packet.putInt(_key);
         packet.putInt(_value);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17;
+    }
 }

@@ -7,6 +7,8 @@ import org.l2j.gameserver.network.serverpackets.AbstractItemPacket;
 
 import java.nio.ByteBuffer;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author NosBit
  */
@@ -30,5 +32,10 @@ public class ExResponseCommissionBuyInfo extends AbstractItemPacket {
             packet.putInt(0); // CommissionItemType seems client does not really need it.
             writeItem(packet, _commissionItem.getItemInfo());
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + (nonNull(_commissionItem) ? 120 : 0);
     }
 }

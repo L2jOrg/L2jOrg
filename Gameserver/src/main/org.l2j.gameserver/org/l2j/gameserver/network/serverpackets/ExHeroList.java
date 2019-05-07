@@ -36,4 +36,10 @@ public class ExHeroList extends IClientOutgoingPacket {
             packet.putInt(0x00);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + _heroList.size() * 26 + _heroList.values().stream().mapToInt(h -> h.getString(Olympiad.CHAR_NAME).length() * 2
+                + h.getString(Hero.CLAN_NAME).length() * 2 + h.getString(Hero.ALLY_NAME).length() * 2).sum();
+    }
 }

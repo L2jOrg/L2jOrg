@@ -24,14 +24,14 @@ public class ExBettingLuckyGameResult extends IClientOutgoingPacket {
 
     private final LuckyGameResultType _result;
     private final LuckyGameType _type;
-    private final EnumMap<LuckyGameItemType, List<ItemHolder>> _rewards;
+    private final EnumMap<LuckyGameItemType, List<ItemHolder>> rewards;
     private final int _ticketCount;
     private final int _size;
 
     public ExBettingLuckyGameResult(LuckyGameResultType result, LuckyGameType type) {
         _result = result;
         _type = type;
-        _rewards = new EnumMap<>(LuckyGameItemType.class);
+        rewards = new EnumMap<>(LuckyGameItemType.class);
         _ticketCount = 0;
         _size = 0;
     }
@@ -39,7 +39,7 @@ public class ExBettingLuckyGameResult extends IClientOutgoingPacket {
     public ExBettingLuckyGameResult(LuckyGameResultType result, LuckyGameType type, EnumMap<LuckyGameItemType, List<ItemHolder>> rewards, int ticketCount) {
         _result = result;
         _type = type;
-        _rewards = rewards;
+        this.rewards = rewards;
         _ticketCount = ticketCount;
         _size = (int) rewards.values().stream().mapToLong(i -> i.stream().count()).sum();
     }
@@ -51,12 +51,17 @@ public class ExBettingLuckyGameResult extends IClientOutgoingPacket {
         packet.putInt(_type.ordinal());
         packet.putInt(_ticketCount);
         packet.putInt(_size);
-        for (Entry<LuckyGameItemType, List<ItemHolder>> reward : _rewards.entrySet()) {
+        for (Entry<LuckyGameItemType, List<ItemHolder>> reward : rewards.entrySet()) {
             for (ItemHolder item : reward.getValue()) {
                 packet.putInt(reward.getKey().getClientId());
                 packet.putInt(item.getId());
                 packet.putInt((int) item.getCount());
             }
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 21 + rewards.values().stream().mapToInt(List::size).sum() * 12;
     }
 }

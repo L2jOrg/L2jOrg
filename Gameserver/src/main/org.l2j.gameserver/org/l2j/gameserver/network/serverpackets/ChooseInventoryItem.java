@@ -18,4 +18,9 @@ public final class ChooseInventoryItem extends IClientOutgoingPacket {
 
         packet.putInt(_itemId);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

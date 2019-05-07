@@ -26,4 +26,9 @@ public class ExNevitAdventTimeChange extends IClientOutgoingPacket {
         // left time in ms max is 16000 its 4m and state is automatically changed to quit
         packet.putInt(_time);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 10;
+    }
 }

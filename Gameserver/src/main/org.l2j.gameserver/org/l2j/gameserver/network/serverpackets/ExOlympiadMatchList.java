@@ -55,4 +55,9 @@ public class ExOlympiadMatchList extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17 + _games.size() * 12 + 68;
+    }
 }

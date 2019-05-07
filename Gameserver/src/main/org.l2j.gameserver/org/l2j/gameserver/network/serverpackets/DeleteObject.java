@@ -24,4 +24,9 @@ public final class DeleteObject extends IClientOutgoingPacket {
         packet.putInt(_objectId);
         packet.put((byte) 0x00); // c2
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 10;
+    }
 }

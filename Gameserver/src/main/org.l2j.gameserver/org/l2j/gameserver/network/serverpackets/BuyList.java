@@ -40,4 +40,9 @@ public final class BuyList extends AbstractItemPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 27 + _list.size() * 108;
+    }
 }

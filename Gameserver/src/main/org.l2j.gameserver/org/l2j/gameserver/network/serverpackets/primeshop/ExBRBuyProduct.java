@@ -24,6 +24,11 @@ public class ExBRBuyProduct extends IClientOutgoingPacket {
         packet.putInt(_reply);
     }
 
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
+
     public enum ExBrProductReplyType implements IIdentifiable {
         SUCCESS(1),
         LACK_OF_POINT(-1),
@@ -58,15 +63,10 @@ public class ExBRBuyProduct extends IClientOutgoingPacket {
         ExBrProductReplyType(int id) {
             _id = id;
         }
-
         @Override
         public int getId() {
             return _id;
         }
-    }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 7;
     }
 }

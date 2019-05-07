@@ -33,4 +33,9 @@ public class ExEnchantSkillList extends IClientOutgoingPacket {
             packet.putShort((short) skill.getSubLevel());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + _skills.size() * 8;
+    }
 }

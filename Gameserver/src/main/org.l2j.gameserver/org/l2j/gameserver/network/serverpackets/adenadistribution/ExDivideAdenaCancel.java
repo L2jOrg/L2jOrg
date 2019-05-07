@@ -23,4 +23,9 @@ public class ExDivideAdenaCancel extends IClientOutgoingPacket {
 
         packet.put((byte) 0x00); // TODO: Find me
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 6;
+    }
 }

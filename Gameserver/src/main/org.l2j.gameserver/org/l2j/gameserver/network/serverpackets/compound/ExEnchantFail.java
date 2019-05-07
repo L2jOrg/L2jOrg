@@ -26,4 +26,9 @@ public class ExEnchantFail extends IClientOutgoingPacket {
         packet.putInt(_itemOne);
         packet.putInt(_itemTwo);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

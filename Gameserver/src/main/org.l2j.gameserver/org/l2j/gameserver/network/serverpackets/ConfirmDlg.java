@@ -5,6 +5,7 @@ import org.l2j.gameserver.network.OutgoingPackets;
 import org.l2j.gameserver.network.SystemMessageId;
 
 import java.nio.ByteBuffer;
+import java.util.Arrays;
 
 /**
  * ConfirmDlg server packet implementation.
@@ -56,5 +57,10 @@ public class ConfirmDlg extends AbstractMessagePacket<ConfirmDlg> {
         writeMe(packet);
         packet.putInt(_time);
         packet.putInt(_requesterId);
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 18 + writeMeSize(client);
     }
 }

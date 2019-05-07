@@ -2,6 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.network.L2GameClient;
 
 import java.nio.ByteBuffer;
 import java.util.Collection;
@@ -62,5 +63,10 @@ public abstract class AbstractInventoryUpdate extends AbstractItemPacket {
             packet.putShort((short) item.getChange()); // Update type : 01-add, 02-modify, 03-remove
             writeItem(packet, item);
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17 + _items.size() * 104;
     }
 }

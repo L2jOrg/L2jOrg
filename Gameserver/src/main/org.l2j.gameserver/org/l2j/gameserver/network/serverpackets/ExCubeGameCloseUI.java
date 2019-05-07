@@ -22,4 +22,9 @@ public class ExCubeGameCloseUI extends IClientOutgoingPacket {
 
         packet.putInt(0xffffffff);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

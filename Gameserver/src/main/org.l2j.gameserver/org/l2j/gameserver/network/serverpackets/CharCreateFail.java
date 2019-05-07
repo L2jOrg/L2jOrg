@@ -28,4 +28,9 @@ public class CharCreateFail extends IClientOutgoingPacket {
 
         packet.putInt(_error);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

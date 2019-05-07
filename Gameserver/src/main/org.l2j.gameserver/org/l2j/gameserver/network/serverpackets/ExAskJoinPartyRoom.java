@@ -25,4 +25,9 @@ public class ExAskJoinPartyRoom extends IClientOutgoingPacket {
         writeString(_charName, packet);
         writeString(_roomName, packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + (_charName.length() + _roomName.length()) * 2;
+    }
 }

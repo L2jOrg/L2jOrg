@@ -104,4 +104,9 @@ public class Die extends IClientOutgoingPacket {
         packet.putInt(getItems().size());
         getItems().forEach(packet::putInt);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 54 + getItems().size() * 4;
+    }
 }

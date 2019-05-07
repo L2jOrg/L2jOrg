@@ -25,4 +25,11 @@ public class ExAskModifyPartyLooting extends IClientOutgoingPacket {
         writeString(_requestor, packet);
         packet.putInt(_partyDistributionType.getId());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 11 + _requestor.length() * 2;
+    }
 }
+
+

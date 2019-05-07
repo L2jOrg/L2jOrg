@@ -35,4 +35,9 @@ public class ExEnSoulExtractionResult extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 8 + _item.getSpecialAbilities().size() * 4 + _item.getAdditionalSpecialAbilities().size();
+    }
 }

@@ -40,6 +40,10 @@ public class ExQuestItemList extends AbstractItemPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return 13 + _activeChar.getInventory().getBlockItems().size() * 4 + _items.size() * 100;
+        var size = 13 + _items.size() * 100;
+        if(_activeChar.getInventory().hasInventoryBlock()) {
+            size += _activeChar.getInventory().getBlockItems().size() * 4;
+        }
+        return size;
     }
 }

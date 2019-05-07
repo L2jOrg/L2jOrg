@@ -29,4 +29,9 @@ public class ExGetCrystalizingEstimation extends IClientOutgoingPacket {
             packet.putDouble(holder.getChance());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + _items.size() * 20;
+    }
 }

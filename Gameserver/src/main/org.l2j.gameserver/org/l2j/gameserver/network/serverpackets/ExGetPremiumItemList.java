@@ -36,4 +36,9 @@ public class ExGetPremiumItemList extends IClientOutgoingPacket {
             writeString(item.getSender(), packet);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + _map.size() * 26 + _map.values().stream().mapToInt(it -> it.getSender().length() * 2).sum();
+    }
 }

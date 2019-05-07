@@ -42,4 +42,9 @@ public class ExAbnormalStatusUpdateFromTarget extends IClientOutgoingPacket {
             packet.putInt(info.getEffectorObjectId());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 11 + _effects.size() * 18;
+    }
 }

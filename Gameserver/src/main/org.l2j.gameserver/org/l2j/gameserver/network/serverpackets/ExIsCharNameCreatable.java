@@ -21,4 +21,9 @@ public class ExIsCharNameCreatable extends IClientOutgoingPacket {
 
         packet.putInt(_allowed);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

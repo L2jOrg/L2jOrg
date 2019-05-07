@@ -21,4 +21,9 @@ public class ExCloseCommission extends IClientOutgoingPacket {
     public void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.EX_CLOSE_COMMISSION.writeId(packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 5;
+    }
 }

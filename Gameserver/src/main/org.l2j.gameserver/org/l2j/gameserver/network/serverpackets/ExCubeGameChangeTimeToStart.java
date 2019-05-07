@@ -28,4 +28,9 @@ public class ExCubeGameChangeTimeToStart extends IClientOutgoingPacket {
 
         packet.putInt(_seconds);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

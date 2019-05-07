@@ -21,4 +21,9 @@ public class ExPledgeBonusMarkReset extends IClientOutgoingPacket {
     public void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.EX_PLEDGE_BONUS_MARK_RESET.writeId(packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 5;
+    }
 }

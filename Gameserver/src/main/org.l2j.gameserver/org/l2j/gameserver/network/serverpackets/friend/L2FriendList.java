@@ -56,6 +56,11 @@ public class L2FriendList extends IClientOutgoingPacket {
         }
     }
 
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + _info.size() * 24 +  _info.stream().mapToInt(info -> info._name.length() * 2).sum();
+    }
+
     private static class FriendInfo {
         int _objId;
         String _name;

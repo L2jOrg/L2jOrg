@@ -23,4 +23,9 @@ public class ExShowCommission extends IClientOutgoingPacket {
 
         packet.putInt(0x01);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

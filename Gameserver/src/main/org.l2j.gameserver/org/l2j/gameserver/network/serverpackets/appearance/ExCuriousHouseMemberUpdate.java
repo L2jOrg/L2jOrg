@@ -44,4 +44,9 @@ public class ExCuriousHouseMemberUpdate extends IClientOutgoingPacket {
         packet.putInt(_currentHp);
         packet.putInt(_currentCp);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25;
+    }
 }

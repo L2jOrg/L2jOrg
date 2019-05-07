@@ -40,18 +40,14 @@ public class L2FriendStatus extends IClientOutgoingPacket {
         packet.putInt(_type);
         writeString(_name, packet);
         switch (_type) {
-            case MODE_OFFLINE: {
-                packet.putInt(_objectId);
-                break;
-            }
-            case MODE_LEVEL: {
-                packet.putInt(_level);
-                break;
-            }
-            case MODE_CLASS: {
-                packet.putInt(_classId);
-                break;
-            }
+            case MODE_OFFLINE -> packet.putInt(_objectId);
+            case MODE_LEVEL -> packet.putInt(_level);
+            case MODE_CLASS -> packet.putInt(_classId);
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 15 + _name.length() * 2;
     }
 }

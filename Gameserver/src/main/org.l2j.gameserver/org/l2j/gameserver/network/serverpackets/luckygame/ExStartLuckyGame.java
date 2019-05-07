@@ -25,4 +25,9 @@ public class ExStartLuckyGame extends IClientOutgoingPacket {
         packet.putInt(_type.ordinal());
         packet.putInt(_ticketCount);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

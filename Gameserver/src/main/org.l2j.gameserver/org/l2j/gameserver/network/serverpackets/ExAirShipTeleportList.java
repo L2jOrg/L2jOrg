@@ -6,6 +6,8 @@ import org.l2j.gameserver.network.OutgoingPackets;
 
 import java.nio.ByteBuffer;
 
+import static java.util.Objects.nonNull;
+
 public class ExAirShipTeleportList extends IClientOutgoingPacket {
     private final int _dockId;
     private final VehiclePathPoint[][] _teleports;
@@ -37,5 +39,10 @@ public class ExAirShipTeleportList extends IClientOutgoingPacket {
         } else {
             packet.putInt(0);
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + (nonNull(_teleports) ? _teleports.length * 20 : 0);
     }
 }

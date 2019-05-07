@@ -68,4 +68,9 @@ public class ExReplyReceivedPost extends AbstractItemPacket {
         packet.putInt(_msg.hasAttachments() ? 1 : 0);
         packet.putInt(_msg.isReturned() ? 1 : 0);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return super.size(client);
+    }
 }

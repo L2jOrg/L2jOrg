@@ -11,10 +11,6 @@ public class CharSelected extends IClientOutgoingPacket {
     private final L2PcInstance _activeChar;
     private final int _sessionId;
 
-    /**
-     * @param cha
-     * @param sessionId
-     */
     public CharSelected(L2PcInstance cha, int sessionId) {
         _activeChar = cha;
         _sessionId = sessionId;
@@ -64,5 +60,10 @@ public class CharSelected extends IClientOutgoingPacket {
 
         packet.put(new byte[28]);
         packet.putInt(0x00);
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 205 + _activeChar.getName().length() * 2 + _activeChar.getTitle().length() * 2;
     }
 }

@@ -9,6 +9,8 @@ import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
 import java.nio.ByteBuffer;
 import java.util.Calendar;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author Sdw
  */
@@ -63,5 +65,23 @@ public class ExFriendDetailInfo extends IClientOutgoingPacket {
             packet.putInt(_lastAccess);
             writeString("", packet); // memo
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        var size = 52;
+        if(nonNull(_friend)) {
+            size += _friend.getName().length() *2;
+            var clan = _friend.getClan();
+            if(nonNull(clan)) {
+                size += clan.getName().length() * 2;
+                size += clan.getAllyName().length() * 2;
+            } else {
+                size += 8;
+            }
+        } else {
+            size += _name.length() * 2;
+        }
+        return size;
     }
 }

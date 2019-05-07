@@ -58,4 +58,9 @@ public class ExBrBroadcastEventState extends IClientOutgoingPacket {
         writeString(_param5, packet);
         writeString(_param6, packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 37 + (_param5.length() + _param6.length()) * 2;
+    }
 }

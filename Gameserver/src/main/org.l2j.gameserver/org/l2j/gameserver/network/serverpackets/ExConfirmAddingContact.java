@@ -24,4 +24,9 @@ public class ExConfirmAddingContact extends IClientOutgoingPacket {
         writeString(_charName, packet);
         packet.putInt(_added ? 0x01 : 0x00);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 11 + _charName.length();
+    }
 }

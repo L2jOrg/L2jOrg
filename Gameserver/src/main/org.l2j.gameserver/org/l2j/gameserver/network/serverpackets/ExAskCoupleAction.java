@@ -24,4 +24,9 @@ public class ExAskCoupleAction extends IClientOutgoingPacket {
         packet.putInt(_actionId);
         packet.putInt(_charObjId);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

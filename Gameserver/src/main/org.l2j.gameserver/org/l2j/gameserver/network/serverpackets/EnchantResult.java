@@ -47,4 +47,9 @@ public class EnchantResult extends IClientOutgoingPacket {
             packet.putShort((short) option);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25 + _enchantOptions.length * 2;
+    }
 }

@@ -55,4 +55,9 @@ public class ExInzoneWaiting extends IClientOutgoingPacket {
             packet.putInt((int) instanceTime);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 14 + _instanceTimes.size() * 8;
+    }
 }

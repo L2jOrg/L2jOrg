@@ -35,4 +35,9 @@ public class ExMPCCPartyInfoUpdate extends IClientOutgoingPacket {
         packet.putInt(_memberCount);
         packet.putInt(_mode); // mode 0 = Remove Party, 1 = AddParty, maybe more...
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 19 + _name.length() * 2;
+    }
 }

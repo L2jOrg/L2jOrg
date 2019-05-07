@@ -27,4 +27,9 @@ public class ExNoticePostArrived extends IClientOutgoingPacket {
 
         packet.putInt(_showAnim ? 0x01 : 0x00);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

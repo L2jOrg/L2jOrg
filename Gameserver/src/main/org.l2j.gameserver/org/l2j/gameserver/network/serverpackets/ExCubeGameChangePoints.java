@@ -36,4 +36,9 @@ public class ExCubeGameChangePoints extends IClientOutgoingPacket {
         packet.putInt(_bluePoints);
         packet.putInt(_redPoints);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 21;
+    }
 }

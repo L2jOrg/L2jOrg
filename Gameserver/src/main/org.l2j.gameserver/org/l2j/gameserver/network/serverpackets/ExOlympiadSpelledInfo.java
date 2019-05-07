@@ -55,4 +55,9 @@ public class ExOlympiadSpelledInfo extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + _effects.size() * 18 +  _effects2.size() * 14;
+    }
 }

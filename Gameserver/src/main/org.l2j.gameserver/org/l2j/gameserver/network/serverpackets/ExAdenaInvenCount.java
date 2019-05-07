@@ -23,4 +23,9 @@ public class ExAdenaInvenCount extends IClientOutgoingPacket {
         packet.putLong(_activeChar.getAdena());
         packet.putShort((short) _activeChar.getInventory().getSize());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 15;
+    }
 }

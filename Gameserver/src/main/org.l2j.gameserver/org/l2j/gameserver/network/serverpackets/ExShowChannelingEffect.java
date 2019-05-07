@@ -9,7 +9,7 @@ import java.nio.ByteBuffer;
 /**
  * @author Sdw
  */
-public class ExShowChannelingEffect extends AbstractItemPacket {
+public class ExShowChannelingEffect extends IClientOutgoingPacket {
     private final L2Character _caster;
     private final L2Character _target;
     private final int _state;
@@ -26,5 +26,10 @@ public class ExShowChannelingEffect extends AbstractItemPacket {
         packet.putInt(_caster.getObjectId());
         packet.putInt(_target.getObjectId());
         packet.putInt(_state);
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 15;
     }
 }

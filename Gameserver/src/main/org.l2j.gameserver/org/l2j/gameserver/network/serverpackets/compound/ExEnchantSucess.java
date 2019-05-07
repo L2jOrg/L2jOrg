@@ -22,4 +22,9 @@ public class ExEnchantSucess extends IClientOutgoingPacket {
 
         packet.putInt(_itemId);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

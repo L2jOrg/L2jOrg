@@ -19,6 +19,10 @@ public class ExPlayScene extends IClientOutgoingPacket {
     @Override
     public void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.EX_PLAY_SCENE.writeId(packet);
+    }
 
+    @Override
+    protected int size(L2GameClient client) {
+        return 5;
     }
 }

@@ -20,4 +20,9 @@ public final class DoorInfo extends IClientOutgoingPacket {
         packet.putInt(_door.getObjectId());
         packet.putInt(_door.getId());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

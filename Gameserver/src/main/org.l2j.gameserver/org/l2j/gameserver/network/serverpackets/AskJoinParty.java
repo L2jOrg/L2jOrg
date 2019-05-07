@@ -26,4 +26,9 @@ public class AskJoinParty extends IClientOutgoingPacket {
         writeString(_requestorName, packet);
         packet.putInt(_partyDistributionType.getId());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 11 + _requestorName.length() * 2;
+    }
 }

@@ -8,6 +8,7 @@ import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
 
 import java.io.PrintStream;
@@ -49,6 +50,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
     private final SystemMessageId _smId;
     private SMParam[] _params;
     private int _paramIndex;
+
     public AbstractMessagePacket(SystemMessageId smId) {
         if (smId == null) {
             throw new NullPointerException("SystemMessageId cannot be null!");
@@ -283,58 +285,38 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 
             writeParamType(packet, param.getType());
             switch (param.getType()) {
-                case TYPE_ELEMENT_NAME:
-                case TYPE_BYTE:
-                case TYPE_FACTION_NAME: {
-                    packet.put((byte) param.getIntValue());
-                    break;
-                }
-
-                case TYPE_CASTLE_NAME:
-                case TYPE_SYSTEM_STRING:
-                case TYPE_INSTANCE_NAME:
-                case TYPE_CLASS_ID: {
-                    packet.putShort((short) param.getIntValue());
-                    break;
-                }
-
-                case TYPE_ITEM_NAME:
-                case TYPE_INT_NUMBER:
-                case TYPE_NPC_NAME:
-                case TYPE_DOOR_NAME: {
-                    packet.putInt(param.getIntValue());
-                    break;
-                }
-
-                case TYPE_LONG_NUMBER: {
-                    packet.putLong(param.getLongValue());
-                    break;
-                }
-
-                case TYPE_TEXT:
-                case TYPE_PLAYER_NAME: {
-                    writeString(param.getStringValue(), packet);
-                    break;
-                }
-
-                case TYPE_SKILL_NAME: {
+                case TYPE_ELEMENT_NAME, TYPE_BYTE, TYPE_FACTION_NAME -> packet.put((byte) param.getIntValue());
+                case TYPE_CASTLE_NAME, TYPE_SYSTEM_STRING, TYPE_INSTANCE_NAME, TYPE_CLASS_ID -> packet.putShort((short) param.getIntValue());
+                case TYPE_ITEM_NAME, TYPE_INT_NUMBER, TYPE_NPC_NAME, TYPE_DOOR_NAME -> packet.putInt(param.getIntValue());
+                case TYPE_LONG_NUMBER -> packet.putLong(param.getLongValue());
+                case TYPE_TEXT, TYPE_PLAYER_NAME -> writeString(param.getStringValue(), packet);
+                case TYPE_SKILL_NAME -> {
                     final int[] array = param.getIntArrayValue();
                     packet.putInt(array[0]); // skill id
                     packet.putShort((short) array[1]); // skill level
                     packet.putShort((short) array[2]); // skill sub level
-                    break;
                 }
-
-                case TYPE_POPUP_ID:
-                case TYPE_ZONE_NAME: {
+                case TYPE_POPUP_ID, TYPE_ZONE_NAME -> {
                     final int[] array = param.getIntArrayValue();
                     packet.putInt(array[0]); // x
                     packet.putInt(array[1]); // y
                     packet.putInt(array[2]); // z
-                    break;
                 }
             }
         }
+    }
+
+    protected int writeMeSize(L2GameClient client) {
+        return _params.length + 1 + Arrays.stream(_params).mapToInt(param ->
+        switch (param.getType()) {
+            case TYPE_ELEMENT_NAME, TYPE_BYTE, TYPE_FACTION_NAME -> 1;
+            case TYPE_CASTLE_NAME, TYPE_SYSTEM_STRING, TYPE_INSTANCE_NAME, TYPE_CLASS_ID -> 2;
+            case TYPE_ITEM_NAME, TYPE_INT_NUMBER, TYPE_NPC_NAME, TYPE_DOOR_NAME -> 4;
+            case TYPE_LONG_NUMBER, TYPE_SKILL_NAME -> 8;
+            case TYPE_TEXT, TYPE_PLAYER_NAME -> 2 + param.getStringValue().length() * 2;
+            case TYPE_POPUP_ID, TYPE_ZONE_NAME -> 12;
+            default -> 0;
+        }).sum();
     }
 
     public final void printMe(PrintStream out) {

@@ -19,4 +19,9 @@ public class ExCursedWeaponList extends IClientOutgoingPacket {
         packet.putInt(ids.size());
         ids.forEach(packet::putInt);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + CursedWeaponsManager.getInstance().getCursedWeaponsIds().size() * 4;
+    }
 }

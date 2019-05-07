@@ -26,4 +26,9 @@ public class ChangeMoveType extends IClientOutgoingPacket {
         packet.putInt(_running ? RUN : WALK);
         packet.putInt(0); // c2
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17;
+    }
 }

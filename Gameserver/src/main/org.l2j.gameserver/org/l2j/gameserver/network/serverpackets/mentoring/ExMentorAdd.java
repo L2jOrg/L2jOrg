@@ -25,4 +25,9 @@ public class ExMentorAdd extends IClientOutgoingPacket {
         packet.putInt(_mentor.getActiveClass());
         packet.putInt(_mentor.getLevel());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 15 + _mentor.getName().length() * 2;
+    }
 }

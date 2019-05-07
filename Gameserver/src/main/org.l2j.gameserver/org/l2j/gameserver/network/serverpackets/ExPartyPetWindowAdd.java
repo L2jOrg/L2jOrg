@@ -29,4 +29,9 @@ public final class ExPartyPetWindowAdd extends IClientOutgoingPacket {
         packet.putInt((int) _summon.getCurrentMp());
         packet.putInt(_summon.getMaxMp());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 35;
+    }
 }

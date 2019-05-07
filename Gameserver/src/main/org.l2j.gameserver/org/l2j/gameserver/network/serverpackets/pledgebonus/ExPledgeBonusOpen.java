@@ -14,7 +14,6 @@ import org.slf4j.LoggerFactory;
 
 import java.nio.ByteBuffer;
 
-
 /**
  * @author UnAfraid
  */
@@ -71,5 +70,10 @@ public class ExPledgeBonusOpen extends IClientOutgoingPacket {
         packet.putInt(huntingBonus != null ? highestHuntingBonus.getItemReward().getId() : 0x00);
         packet.put((byte) (huntingBonus != null ? huntingBonus.getLevel() : 0x00));
         packet.put((byte) (huntingBonus != null ? 0x01 : 0x00));
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 35;
     }
 }

@@ -33,4 +33,9 @@ public class ExBrLoadEventTopRankers extends IClientOutgoingPacket {
         packet.putInt(_bestScore);
         packet.putInt(_myScore);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25;
+    }
 }

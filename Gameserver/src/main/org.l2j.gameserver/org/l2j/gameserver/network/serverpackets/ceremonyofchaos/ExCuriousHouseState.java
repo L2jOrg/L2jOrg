@@ -28,4 +28,9 @@ public class ExCuriousHouseState extends IClientOutgoingPacket {
         OutgoingPackets.EX_CURIOUS_HOUSE_STATE.writeId(packet);
         packet.putInt(_state);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

@@ -36,4 +36,9 @@ public class ExMPCCRoomMember extends IClientOutgoingPacket {
             packet.putInt(_room.getMemberType(member).ordinal());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + _room.getMembersCount() * 54;
+    }
 }

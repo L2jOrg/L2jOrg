@@ -35,4 +35,9 @@ public class AgitDecoInfo extends IClientOutgoingPacket {
         packet.putInt(0); // TODO: Find me!
         packet.putInt(0); // TODO: Find me!
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 29 + ResidenceFunctionType.values().length;
+    }
 }

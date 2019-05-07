@@ -26,4 +26,9 @@ public class ExEnchantSkillResult extends IClientOutgoingPacket {
 
         packet.putInt(_enchanted ? 1 : 0);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

@@ -23,4 +23,9 @@ public class PetItemList extends AbstractItemPacket {
             writeItem(packet, item);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 6 +_items.size() * 100;
+    }
 }

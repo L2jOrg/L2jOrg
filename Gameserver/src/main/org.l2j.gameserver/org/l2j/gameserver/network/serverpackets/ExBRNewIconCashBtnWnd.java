@@ -18,4 +18,9 @@ public class ExBRNewIconCashBtnWnd extends IClientOutgoingPacket {
         OutgoingPackets.EX_BR_NEW_ICON_CASH_BTN_WND.writeId(packet);
         packet.putShort((short) 0x00); // has update ?
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 7;
+    }
 }

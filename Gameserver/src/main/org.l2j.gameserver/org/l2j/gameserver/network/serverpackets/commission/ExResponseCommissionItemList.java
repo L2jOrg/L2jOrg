@@ -12,27 +12,32 @@ import java.util.Collection;
  * @author NosBit
  */
 public class ExResponseCommissionItemList extends AbstractItemPacket {
-    private final int _sendType;
-    private final Collection<L2ItemInstance> _items;
+    private final int sendType;
+    private final Collection<L2ItemInstance> items;
 
     public ExResponseCommissionItemList(int sendType, Collection<L2ItemInstance> items) {
-        _sendType = sendType;
-        _items = items;
+        this.sendType = sendType;
+        this.items = items;
     }
 
     @Override
     public void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.EX_RESPONSE_COMMISSION_ITEM_LIST.writeId(packet);
-        packet.put((byte) _sendType);
-        if (_sendType == 2) {
-            packet.putInt(_items.size());
-            packet.putInt(_items.size());
-            for (L2ItemInstance itemInstance : _items) {
+        packet.put((byte) sendType);
+        if (sendType == 2) {
+            packet.putInt(items.size());
+            packet.putInt(items.size());
+            for (L2ItemInstance itemInstance : items) {
                 writeItem(packet, itemInstance);
             }
         } else {
             packet.putInt(0);
             packet.putInt(0);
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 14 + (sendType == 2 ? items.size() * 100 : 0);
     }
 }

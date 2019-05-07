@@ -28,4 +28,9 @@ public class ExMPCCRoomInfo extends IClientOutgoingPacket {
         packet.putInt(_room.getLocation());
         writeString(_room.getTitle(), packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 31 + _room.getTitle().length() * 2;
+    }
 }

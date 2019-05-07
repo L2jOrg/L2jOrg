@@ -50,4 +50,9 @@ public class ListMenteeWaiting extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17 + _possibleCandiates.size() * 10 + _possibleCandiates.stream().mapToInt(c -> c.getName().length() * 2).sum();
+    }
 }

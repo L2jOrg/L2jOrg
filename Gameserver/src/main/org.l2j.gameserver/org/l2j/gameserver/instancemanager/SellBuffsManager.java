@@ -34,6 +34,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * Sell Buffs Manager
  *
  * @author St3eT
+ *
  */
 public final class SellBuffsManager extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(SellBuffsManager.class);

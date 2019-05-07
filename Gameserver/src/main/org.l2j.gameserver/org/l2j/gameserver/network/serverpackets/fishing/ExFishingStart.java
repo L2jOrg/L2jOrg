@@ -20,7 +20,7 @@ public class ExFishingStart extends IClientOutgoingPacket {
     /**
      * @param player
      * @param fishType
-     * @param baitType     - 0 = newbie, 1 = normal, 2 = night
+     * @param baitType - 0 = newbie, 1 = normal, 2 = night
      * @param baitLocation
      */
     public ExFishingStart(L2PcInstance player, int fishType, int baitType, ILocational baitLocation) {
@@ -39,5 +39,10 @@ public class ExFishingStart extends IClientOutgoingPacket {
         packet.putInt(_baitLocation.getY());
         packet.putInt(_baitLocation.getZ());
         packet.put((byte) _baitType);
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 23;
     }
 }

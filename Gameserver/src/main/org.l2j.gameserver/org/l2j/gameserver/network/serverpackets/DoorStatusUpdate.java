@@ -25,4 +25,9 @@ public final class DoorStatusUpdate extends IClientOutgoingPacket {
         packet.putInt((int) _door.getCurrentHp());
         packet.putInt(_door.getMaxHp());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 33;
+    }
 }

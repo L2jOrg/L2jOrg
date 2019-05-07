@@ -16,10 +16,7 @@ import java.nio.ByteBuffer;
  * @author UnAfraid
  */
 public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType> {
-    private static final byte[] MASKS =
-            {
-                    0x00
-            };
+    private static final byte[] MASKS = { 0x00 };
 
     protected static int calculateMask(ItemInfo item) {
         int mask = 0;

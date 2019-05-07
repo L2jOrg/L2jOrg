@@ -47,4 +47,9 @@ public class ExPartyRoomMember extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + _room.getMembersCount() * 60 + _room.getMembers().stream().mapToInt(p -> InstanceManager.getInstance().getAllInstanceTimes(p).size() * 4).sum();
+    }
 }

@@ -28,4 +28,9 @@ public final class TradeOwnAdd extends AbstractItemPacket {
         packet.putInt(0x01);
         writeItem(packet, _item);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 120;
+    }
 }

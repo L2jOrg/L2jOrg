@@ -21,4 +21,9 @@ public class ClientSetTime extends IClientOutgoingPacket {
         packet.putInt(GameTimeController.getInstance().getGameTime()); // time in client minutes
         packet.putInt(6); // constant to match the server time( this determines the speed of the client clock)
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

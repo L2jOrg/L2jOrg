@@ -62,7 +62,11 @@ public class ExBuySellList extends AbstractItemPacket {
         } else {
             packet.putShort((short) 0x00);
         }
-
         packet.put((byte)( _done ? 0x01 : 0x00));
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 18 + _sellList.size() * 108 + _refundList.size() * 112;
     }
 }

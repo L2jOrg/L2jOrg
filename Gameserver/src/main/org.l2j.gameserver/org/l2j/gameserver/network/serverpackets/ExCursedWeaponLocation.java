@@ -38,6 +38,11 @@ public class ExCursedWeaponLocation extends IClientOutgoingPacket {
         }
     }
 
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + _cursedWeaponInfo.size() * 20;
+    }
+
     public static class CursedWeaponInfo {
         public Location pos;
         public int id;

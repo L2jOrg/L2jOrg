@@ -59,4 +59,9 @@ public final class BuyListSeed extends IClientOutgoingPacket {
             packet.putShort((short) 0x00);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 23 + _list.size() * 49;
+    }
 }

@@ -55,4 +55,9 @@ public class ExPledgeRecruitBoardSearch extends IClientOutgoingPacket {
             packet.putInt(_clanList.get(i).getRecruitType()); // Helios
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17 + (_endIndex - _startIndex) * 139;
+    }
 }

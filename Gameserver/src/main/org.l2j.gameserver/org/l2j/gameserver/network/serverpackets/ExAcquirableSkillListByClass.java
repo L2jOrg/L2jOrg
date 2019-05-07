@@ -38,4 +38,9 @@ public class ExAcquirableSkillListByClass extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + _learnable.size() * 19;
+    }
 }

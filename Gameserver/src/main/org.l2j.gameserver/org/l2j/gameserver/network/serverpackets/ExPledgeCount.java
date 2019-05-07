@@ -22,4 +22,9 @@ public class ExPledgeCount extends IClientOutgoingPacket {
 
         packet.putInt(_count);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

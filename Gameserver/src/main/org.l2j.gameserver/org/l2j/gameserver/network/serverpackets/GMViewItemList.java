@@ -7,46 +7,46 @@ import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
 import java.nio.ByteBuffer;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
 public class GMViewItemList extends AbstractItemPacket {
-    private final int _sendType;
-    private final List<L2ItemInstance> _items = new ArrayList<>();
+    private final int sendType;
+    private final Collection<L2ItemInstance> items;
     private final int _limit;
-    private final String _playerName;
+    private final String playerName;
 
     public GMViewItemList(int sendType, L2PcInstance cha) {
-        _sendType = sendType;
-        _playerName = cha.getName();
+        this.sendType = sendType;
+        playerName = cha.getName();
         _limit = cha.getInventoryLimit();
-        for (L2ItemInstance item : cha.getInventory().getItems()) {
-            _items.add(item);
-        }
+        items = cha.getInventory().getItems();
     }
 
     public GMViewItemList(int sendType, L2PetInstance cha) {
-        _sendType = sendType;
-        _playerName = cha.getName();
+        this.sendType = sendType;
+        playerName = cha.getName();
         _limit = cha.getInventoryLimit();
-        for (L2ItemInstance item : cha.getInventory().getItems()) {
-            _items.add(item);
-        }
+        items = cha.getInventory().getItems();
     }
 
     @Override
     public void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.GM_VIEW_ITEM_LIST.writeId(packet);
-        packet.put((byte) _sendType);
-        if (_sendType == 2) {
-            packet.putInt(_items.size());
+        packet.put((byte) sendType);
+        if (sendType == 2) {
+            packet.putInt(items.size());
         } else {
-            writeString(_playerName, packet);
+            writeString(playerName, packet);
             packet.putInt(_limit); // inventory limit
         }
-        packet.putInt(_items.size());
-        for (L2ItemInstance item : _items) {
+        packet.putInt(items.size());
+        for (L2ItemInstance item : items) {
             writeItem(packet, item);
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return  14 + items.size() * 100 + (sendType == 2 ? 4 :  playerName.length() * 2);
     }
 }

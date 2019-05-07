@@ -35,7 +35,11 @@ public class VipData extends IGameXmlReader{
         var listeners = Containers.Players();
         listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) (event) -> {
             final var player = event.getActiveChar();
-            if(player.getVipTier() > 0 && !checkVipTierExpiration(player)) {
+            if(player.getVipTier() > 0) {
+                if(!checkVipTierExpiration(player)) {
+                    player.sendPacket(new ReceiveVipInfo());
+                }
+            } else {
                 player.sendPacket(new ReceiveVipInfo());
             }
         }, this));

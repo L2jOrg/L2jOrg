@@ -28,4 +28,9 @@ public class ExMPCCShowPartyMemberInfo extends IClientOutgoingPacket {
             packet.putInt(pc.getClassId().getId());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + _party.getMemberCount() * 42;
+    }
 }

@@ -45,4 +45,9 @@ public class ExChangeAttributeInfo extends IClientOutgoingPacket {
         packet.putInt(_attributes);
         packet.putInt(_itemObjId);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17;
+    }
 }

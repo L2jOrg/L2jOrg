@@ -48,4 +48,8 @@ public class ExCuriousHouseMemberList extends IClientOutgoingPacket {
         }
     }
 
+    @Override
+    protected int size(L2GameClient client) {
+        return 17 + _players.size() * 24;
+    }
 }

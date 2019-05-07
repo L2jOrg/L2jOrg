@@ -32,4 +32,9 @@ public class ExResponseCommissionBuyItem extends IClientOutgoingPacket {
             packet.putLong(itemInfo.getCount());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25;
+    }
 }

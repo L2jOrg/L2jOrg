@@ -50,4 +50,9 @@ public class AcquireSkillList extends IClientOutgoingPacket {
             packet.put((byte) 0x00);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 7 + _learnable.size() * 19 + _learnable.stream().mapToInt(skill -> skill.getRequiredItems().size()).sum() * 13;
+    }
 }

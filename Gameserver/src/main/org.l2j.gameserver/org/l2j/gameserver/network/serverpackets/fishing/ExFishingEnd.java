@@ -26,6 +26,11 @@ public class ExFishingEnd extends IClientOutgoingPacket {
         packet.put((byte) _reason.getReason());
     }
 
+    @Override
+    protected int size(L2GameClient client) {
+        return 10;
+    }
+
     public enum FishingEndReason {
         LOSE(0),
         WIN(1),

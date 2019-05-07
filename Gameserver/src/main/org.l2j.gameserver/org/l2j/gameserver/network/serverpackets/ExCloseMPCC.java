@@ -23,4 +23,9 @@ public class ExCloseMPCC extends IClientOutgoingPacket {
         OutgoingPackets.EX_CLOSE_MPCC.writeId(packet);
 
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 5;
+    }
 }

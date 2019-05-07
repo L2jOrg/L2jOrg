@@ -24,4 +24,9 @@ public class ExChangeNpcState extends IClientOutgoingPacket {
         packet.putInt(_objId);
         packet.putInt(_state);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

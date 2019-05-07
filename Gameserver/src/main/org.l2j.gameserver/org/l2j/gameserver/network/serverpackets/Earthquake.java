@@ -52,4 +52,9 @@ public class Earthquake extends IClientOutgoingPacket {
         packet.putInt(_duration);
         packet.putInt(0x00); // Unknown
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 31;
+    }
 }

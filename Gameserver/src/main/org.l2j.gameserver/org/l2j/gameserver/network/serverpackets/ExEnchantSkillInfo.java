@@ -41,4 +41,9 @@ public final class ExEnchantSkillInfo extends IClientOutgoingPacket {
             packet.putShort((short)( currentRouteId != routeId ? subLevel : Math.min(subLevel + 1, route + (EnchantSkillGroupsData.MAX_ENCHANT_LEVEL - 1))));
         });
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25 + _routes.size() * 4;
+    }
 }

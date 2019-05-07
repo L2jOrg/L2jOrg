@@ -36,4 +36,9 @@ public class ExManageMpccRoomMember extends IClientOutgoingPacket {
         packet.putInt(MapRegionManager.getInstance().getBBs(_activeChar.getLocation()));
         packet.putInt(_memberType.ordinal());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 31 + _activeChar.getName().length() * 2;
+    }
 }

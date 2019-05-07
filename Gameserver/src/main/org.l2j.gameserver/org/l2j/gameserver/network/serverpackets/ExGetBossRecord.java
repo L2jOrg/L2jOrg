@@ -7,6 +7,8 @@ import java.nio.ByteBuffer;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author KenM
  */
@@ -40,5 +42,10 @@ public class ExGetBossRecord extends IClientOutgoingPacket {
                 packet.putInt(0x00); // ??
             }
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17 + (nonNull(_bossRecordInfo) ?  _bossRecordInfo.size() * 12 : 16);
     }
 }

@@ -21,4 +21,9 @@ public class ExChangeToAwakenedClass extends IClientOutgoingPacket {
 
         packet.putInt(_classId);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

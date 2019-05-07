@@ -27,4 +27,9 @@ public final class AskJoinPledge extends IClientOutgoingPacket {
             packet.putInt(_pledgeType);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17 + _requestor.getName().length() * 2 + _pledgeName.length() * 2;
+    }
 }

@@ -24,4 +24,9 @@ public class ExOlympiadMode extends IClientOutgoingPacket {
 
         packet.put((byte) _mode);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 6;
+    }
 }

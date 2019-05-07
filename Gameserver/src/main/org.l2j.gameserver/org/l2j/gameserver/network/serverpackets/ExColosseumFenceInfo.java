@@ -45,4 +45,9 @@ public class ExColosseumFenceInfo extends IClientOutgoingPacket {
         packet.putInt(_width);
         packet.putInt(_length);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 33;
+    }
 }

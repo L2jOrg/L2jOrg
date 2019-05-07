@@ -25,4 +25,9 @@ public class ExBaseAttributeCancelResult extends IClientOutgoingPacket {
         packet.putInt(_objId);
         packet.putInt(_attribute);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17;
+    }
 }

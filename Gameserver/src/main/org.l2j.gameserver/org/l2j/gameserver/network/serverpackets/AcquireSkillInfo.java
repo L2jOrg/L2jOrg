@@ -82,6 +82,11 @@ public class AcquireSkillInfo extends IClientOutgoingPacket {
         }
     }
 
+    @Override
+    protected int size(L2GameClient client) {
+        return 29 + _reqs.size() * 20;
+    }
+
     /**
      * Private class containing learning skill requisites.
      */

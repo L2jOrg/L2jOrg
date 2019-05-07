@@ -22,6 +22,7 @@ import java.nio.ByteBuffer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -395,6 +396,12 @@ public class CharSelectionInfo extends IClientOutgoingPacket {
             packet.put((byte)(Hero.getInstance().isHero(charInfoPackage.getObjectId()) ? 0x01 : 0x00)); // Hero glow
             packet.put((byte)( charInfoPackage.isHairAccessoryEnabled() ? 0x01 : 0x00)); // Show hair accessory if enabled
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 21 + _characterPackages.length * 290 + PAPERDOLL_ORDER.length * 4 +
+                Arrays.stream(_characterPackages).mapToInt(info -> info.getName().length() * 2 + _loginName.length() * 2).sum();
     }
 
     @Override

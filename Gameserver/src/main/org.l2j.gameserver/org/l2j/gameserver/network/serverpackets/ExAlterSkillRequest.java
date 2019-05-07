@@ -26,4 +26,9 @@ public class ExAlterSkillRequest extends IClientOutgoingPacket {
         packet.putInt(_currentSkillId);
         packet.putInt(_alterTime);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17;
+    }
 }

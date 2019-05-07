@@ -26,4 +26,9 @@ public class ExCastleState extends IClientOutgoingPacket {
         packet.putInt(_castleId);
         packet.putInt(_castleSide.ordinal());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

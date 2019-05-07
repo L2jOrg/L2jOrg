@@ -27,4 +27,9 @@ public class ExPledgeRecruitBoardDetail extends IClientOutgoingPacket {
         packet.putInt(_pledgeRecruitInfo.getApplicationType());
         packet.putInt(_pledgeRecruitInfo.getRecruitType());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25 + (_pledgeRecruitInfo.getInformation().length() + _pledgeRecruitInfo.getDetailedInformation().length()) * 2;
+    }
 }

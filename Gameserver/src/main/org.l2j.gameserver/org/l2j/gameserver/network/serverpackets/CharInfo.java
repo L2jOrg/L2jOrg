@@ -237,6 +237,11 @@ public class CharInfo extends IClientOutgoingPacket {
     }
 
     @Override
+    protected int size(L2GameClient client) {
+        return 500;
+    }
+
+    @Override
     public int[] getPaperdollOrder() {
         return PAPERDOLL_ORDER;
     }

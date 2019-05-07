@@ -22,4 +22,9 @@ public class ExMailArrived extends IClientOutgoingPacket {
     public void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.EX_MAIL_ARRIVED.writeId(packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 5;
+    }
 }

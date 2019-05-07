@@ -24,4 +24,9 @@ public class ExPartyPetWindowDelete extends IClientOutgoingPacket {
         packet.put((byte) _summon.getSummonType());
         packet.putInt(_summon.getOwner().getObjectId());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 14;
+    }
 }

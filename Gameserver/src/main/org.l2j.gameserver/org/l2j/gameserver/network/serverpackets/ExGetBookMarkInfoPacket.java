@@ -35,4 +35,9 @@ public class ExGetBookMarkInfoPacket extends IClientOutgoingPacket {
             writeString(tpbm.getTag(), packet);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17 + player.getTeleportBookmarks().size() * 24 + player.getTeleportBookmarks().stream().mapToInt(t -> (t.getName().length() + t.getTag().length() *2)).sum();
+    }
 }

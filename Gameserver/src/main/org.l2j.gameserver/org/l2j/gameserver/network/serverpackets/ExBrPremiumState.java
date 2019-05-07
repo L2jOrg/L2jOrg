@@ -17,4 +17,9 @@ public class ExBrPremiumState extends IClientOutgoingPacket {
         packet.putInt(activeChar.getObjectId());
         packet.put((byte) (activeChar.getVipTier() > 0 ? 0x01 : 0x00));
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 10;
+    }
 }

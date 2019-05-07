@@ -27,4 +27,9 @@ public class BlockListPacket extends IClientOutgoingPacket {
             writeString("", packet); // memo ?
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 +  _playersId.size() * 64;
+    }
 }

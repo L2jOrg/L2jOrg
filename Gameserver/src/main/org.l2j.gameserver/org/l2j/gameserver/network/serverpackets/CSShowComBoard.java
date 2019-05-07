@@ -19,4 +19,9 @@ public final class CSShowComBoard extends IClientOutgoingPacket {
         packet.put((byte) 0x01); // c4 1 to show community 00 to hide
         packet.put(_html);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

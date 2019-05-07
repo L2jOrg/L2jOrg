@@ -28,4 +28,9 @@ public class ExChangeAttributeItemList extends AbstractItemPacket {
             writeItem(packet, item);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + _itemsList.length * 100;
+    }
 }

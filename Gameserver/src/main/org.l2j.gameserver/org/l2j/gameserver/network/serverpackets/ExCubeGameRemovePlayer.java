@@ -35,4 +35,9 @@ public class ExCubeGameRemovePlayer extends IClientOutgoingPacket {
         packet.putInt(_isRedTeam ? 0x01 : 0x00);
         packet.putInt(_player.getObjectId());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 21;
+    }
 }

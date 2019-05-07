@@ -26,7 +26,7 @@ public class ExMentorList extends IClientOutgoingPacket {
             _mentees = MentorManager.getInstance().getMentees(activeChar.getObjectId());
         } else if (activeChar.isMentee()) {
             _type = 0x02;
-            _mentees = Arrays.asList(MentorManager.getInstance().getMentor(activeChar.getObjectId()));
+            _mentees = Collections.singletonList(MentorManager.getInstance().getMentor(activeChar.getObjectId()));
         } else if (activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP)) // Not a mentor, Not a mentee, so can be a mentor
         {
             _mentees = Collections.emptyList();
@@ -51,5 +51,10 @@ public class ExMentorList extends IClientOutgoingPacket {
             packet.putInt(mentee.getLevel());
             packet.putInt(mentee.isOnlineInt());
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17 + _mentees.size() * 18 + _mentees.stream().mapToInt(m -> m.getName().length() * 2).sum();
     }
 }

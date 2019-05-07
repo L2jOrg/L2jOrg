@@ -62,4 +62,9 @@ public class ExAcquireSkillInfo extends IClientOutgoingPacket {
             packet.putInt(skill.getLevel());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 33 + _itemReq.size() * 12 + _skillRem.size() * 8;
+    }
 }

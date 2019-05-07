@@ -42,4 +42,9 @@ public class FriendAddRequestResult extends IClientOutgoingPacket {
         packet.putInt(_charClassId);
         packet.putShort((short) 0x00); // Always 0 on retail
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 33 + _charName.length();
+    }
 }

@@ -32,4 +32,9 @@ public class AbnormalStatusUpdate extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 5 + _effects.size() * 16;
+    }
 }

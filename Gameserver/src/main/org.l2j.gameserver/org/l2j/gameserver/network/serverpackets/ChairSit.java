@@ -26,4 +26,9 @@ public class ChairSit extends IClientOutgoingPacket {
         packet.putInt(_activeChar.getObjectId());
         packet.putInt(_staticObjectId);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

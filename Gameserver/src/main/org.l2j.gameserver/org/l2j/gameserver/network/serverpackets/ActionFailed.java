@@ -38,4 +38,9 @@ public final class ActionFailed extends IClientOutgoingPacket {
 
         packet.putInt(_castingType); // MagicSkillUse castingType
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

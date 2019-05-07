@@ -27,4 +27,9 @@ public class ExRaidBossSpawnInfo extends IClientOutgoingPacket {
             packet.putInt(id);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + _bossIds.size() * 4;
+    }
 }

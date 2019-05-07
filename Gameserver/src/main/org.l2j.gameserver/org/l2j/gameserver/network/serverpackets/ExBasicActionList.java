@@ -148,4 +148,9 @@ public final class ExBasicActionList extends IClientOutgoingPacket {
             packet.putInt(_actionId);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + _actionIds.length * 4;
+    }
 }

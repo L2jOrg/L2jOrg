@@ -70,4 +70,9 @@ public class ExOlympiadUserInfo extends IClientOutgoingPacket {
         packet.putInt(_curCp);
         packet.putInt(_maxCp);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 80;
+    }
 }

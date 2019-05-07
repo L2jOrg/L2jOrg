@@ -44,4 +44,9 @@ public class ExMoveToLocationInShuttle extends IClientOutgoingPacket {
         packet.putInt(_fromY);
         packet.putInt(_fromZ);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 37;
+    }
 }

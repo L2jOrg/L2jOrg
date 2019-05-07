@@ -25,4 +25,9 @@ public class ExPledgeBonusUpdate extends IClientOutgoingPacket {
         packet.put((byte) _type.getClientId());
         packet.putInt(_value);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 10;
+    }
 }

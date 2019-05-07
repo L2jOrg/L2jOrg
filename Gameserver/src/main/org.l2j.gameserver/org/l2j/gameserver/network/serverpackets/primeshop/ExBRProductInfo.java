@@ -40,4 +40,9 @@ public class ExBRProductInfo extends IClientOutgoingPacket {
         packet.putLong(_charPoints);
         packet.putLong(0x00); // Hero coins
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 41 + _item.getItems().size() * 16;
+    }
 }

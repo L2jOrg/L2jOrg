@@ -13,9 +13,6 @@ import java.nio.ByteBuffer;
 public class ExAskJoinMPCC extends IClientOutgoingPacket {
     private final String _requestorName;
 
-    /**
-     * @param requestorName
-     */
     public ExAskJoinMPCC(String requestorName) {
         _requestorName = requestorName;
     }
@@ -26,5 +23,10 @@ public class ExAskJoinMPCC extends IClientOutgoingPacket {
 
         writeString(_requestorName, packet); // name of CCLeader
         packet.putInt(0x00); // TODO: Find me
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 11 + _requestorName.length() * 2;
     }
 }

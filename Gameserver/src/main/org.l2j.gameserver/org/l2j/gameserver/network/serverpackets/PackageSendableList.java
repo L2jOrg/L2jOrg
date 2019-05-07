@@ -42,4 +42,9 @@ public class PackageSendableList extends AbstractItemPacket {
             packet.putInt(_items.size());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + (_sendType == 2 ?  _items.size() * 104 : 8);
+    }
 }

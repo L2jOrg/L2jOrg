@@ -25,6 +25,8 @@ import org.l2j.gameserver.network.OutgoingPackets;
 import java.nio.ByteBuffer;
 import java.util.Collection;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author Migi, DS
  */
@@ -67,5 +69,14 @@ public class ExReplySentPost extends AbstractItemPacket {
         packet.putLong(_msg.getReqAdena());
         packet.putInt(_msg.hasAttachments() ? 0x01 : 0x00);
         packet.putInt(_msg.isReturned() ? 0x01 : 00);
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        var size = 35 + _msg.getContent().length() * 2 + _msg.getSubject().length() * 2 + _msg.getReceiverName().length() * 2;
+        if(nonNull(_items)) {
+            size += _items.size() * 104;
+        }
+        return size;
     }
 }

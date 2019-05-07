@@ -30,4 +30,9 @@ public class ExPledgeDraftListSearch extends IClientOutgoingPacket {
             packet.putInt(prl.getPlayerLvl());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + _pledgeRecruitList.size() * 55;
+    }
 }

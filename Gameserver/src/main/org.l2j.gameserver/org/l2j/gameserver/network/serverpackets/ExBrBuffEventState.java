@@ -33,4 +33,9 @@ public class ExBrBuffEventState extends IClientOutgoingPacket {
         packet.putInt(_state);
         packet.putInt(_endtime);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 21;
+    }
 }

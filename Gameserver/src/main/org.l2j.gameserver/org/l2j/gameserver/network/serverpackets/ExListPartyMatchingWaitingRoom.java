@@ -58,4 +58,9 @@ public class ExListPartyMatchingWaitingRoom extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + _players.size() * 50 + _players.stream().mapToInt(p -> InstanceManager.getInstance().getAllInstanceTimes(p).size() * 4).sum();
+    }
 }

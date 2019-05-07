@@ -8,6 +8,7 @@ import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2j.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
 import org.l2j.gameserver.network.serverpackets.primeshop.ExBRBuyProduct.ExBrProductReplyType;
+import org.l2j.gameserver.network.serverpackets.primeshop.ExBRProductList;
 import org.l2j.gameserver.util.Util;
 
 import java.util.Calendar;
@@ -45,6 +46,13 @@ public abstract class RequestBuyProduct extends IClientIncomingPacket {
 
         if ((Calendar.getInstance().get(Calendar.DAY_OF_WEEK) & product.getDaysOfWeek()) == 0) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.NOT_DAY_OF_WEEK));
+            return false;
+        }
+
+        if(product.getVipTier() > player.getVipTier()) {
+            // should never happens but is better check
+            // TODO find the correct message
+            player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SOLD_OUT));
             return false;
         }
 

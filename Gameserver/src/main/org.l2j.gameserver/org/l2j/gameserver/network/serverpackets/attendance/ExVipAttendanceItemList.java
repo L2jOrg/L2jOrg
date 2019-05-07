@@ -45,4 +45,9 @@ public class ExVipAttendanceItemList extends IClientOutgoingPacket {
         packet.put((byte) 0x00);
         packet.putInt(0x00);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 24 + AttendanceRewardData.getInstance().getRewardsCount() * 14;
+    }
 }

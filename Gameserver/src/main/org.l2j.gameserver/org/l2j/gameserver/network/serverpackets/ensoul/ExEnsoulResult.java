@@ -33,4 +33,9 @@ public class ExEnsoulResult extends IClientOutgoingPacket {
             packet.putInt(option.getId());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 8 + _item.getSpecialAbilities().size() * 4 + _item.getAdditionalSpecialAbilities().size() * 4;
+    }
 }

@@ -29,4 +29,9 @@ public class Ex2ndPasswordVerify extends IClientOutgoingPacket {
         packet.putInt(_mode);
         packet.putInt(_wrongTentatives);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

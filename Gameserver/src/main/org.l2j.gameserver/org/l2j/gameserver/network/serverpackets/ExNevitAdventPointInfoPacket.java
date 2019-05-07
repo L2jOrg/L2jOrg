@@ -21,4 +21,9 @@ public class ExNevitAdventPointInfoPacket extends IClientOutgoingPacket {
 
         packet.putInt(_points); // 72 = 1%, max 7200 = 100%
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

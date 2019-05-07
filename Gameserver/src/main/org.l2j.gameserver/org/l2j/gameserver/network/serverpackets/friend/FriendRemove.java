@@ -25,4 +25,9 @@ public class FriendRemove extends IClientOutgoingPacket {
         packet.putInt(_responce);
         writeString(_charName, packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 11 + _charName.length() * 2;
+    }
 }

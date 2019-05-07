@@ -32,4 +32,9 @@ public class ExPledgeRecruitInfo extends IClientOutgoingPacket {
             writeString(subPledge.getName(), packet);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 23 + (_clan.getLeaderName().length() + _clan.getName().length()) * 2;
+    }
 }

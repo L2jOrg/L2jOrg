@@ -44,4 +44,9 @@ public class ExUserInfoFishing extends IClientOutgoingPacket {
             packet.putInt(_baitLocation.getZ());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 22;
+    }
 }

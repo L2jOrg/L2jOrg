@@ -24,4 +24,9 @@ public class ExDuelStart extends IClientOutgoingPacket {
 
         packet.putInt(_partyDuel);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

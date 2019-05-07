@@ -39,4 +39,9 @@ public class ExChangePostState extends IClientOutgoingPacket {
             packet.putInt(_changeId); // state
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + _changedMsgIds.length * 8;
+    }
 }

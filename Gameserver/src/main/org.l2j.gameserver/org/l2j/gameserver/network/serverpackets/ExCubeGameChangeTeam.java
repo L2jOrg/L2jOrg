@@ -34,4 +34,9 @@ public class ExCubeGameChangeTeam extends IClientOutgoingPacket {
         packet.putInt(_fromRedTeam ? 0x01 : 0x00);
         packet.putInt(_fromRedTeam ? 0x00 : 0x01);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 21;
+    }
 }

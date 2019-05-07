@@ -6,6 +6,7 @@ import org.l2j.gameserver.network.OutgoingPackets;
 
 import java.nio.ByteBuffer;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * @author mrTJO
@@ -50,5 +51,10 @@ public class ExCubeGameTeamList extends IClientOutgoingPacket {
             packet.putInt(player.getObjectId());
             writeString(player.getName(), packet);
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25 + Stream.concat(_redPlayers.stream(), _bluePlayers.stream()).mapToInt(p -> p.getName().length() * 2 + 6).sum();
     }
 }

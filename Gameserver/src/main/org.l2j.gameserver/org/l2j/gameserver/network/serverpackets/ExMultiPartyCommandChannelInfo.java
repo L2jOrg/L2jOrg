@@ -34,4 +34,9 @@ public class ExMultiPartyCommandChannelInfo extends IClientOutgoingPacket {
             packet.putInt(p.getMemberCount());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 19 + _channel.getLeader().getName().length() * 2 + _channel.getPartys().size() * 42;
+    }
 }

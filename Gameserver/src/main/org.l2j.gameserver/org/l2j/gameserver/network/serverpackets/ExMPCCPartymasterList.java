@@ -23,4 +23,9 @@ public class ExMPCCPartymasterList extends IClientOutgoingPacket {
         packet.putInt(_leadersName.size());
         _leadersName.forEach(name -> writeString(name, packet));
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + _leadersName.size() * 2  + _leadersName.stream().mapToInt(l -> l.length() * 2).sum();
+    }
 }

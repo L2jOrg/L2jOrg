@@ -23,4 +23,9 @@ public class CameraMode extends IClientOutgoingPacket {
 
         packet.putInt(_mode);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

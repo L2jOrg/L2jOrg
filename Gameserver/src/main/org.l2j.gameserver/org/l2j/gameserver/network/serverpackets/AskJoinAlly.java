@@ -27,4 +27,9 @@ public class AskJoinAlly extends IClientOutgoingPacket {
         writeString(null, packet); // TODO: Find me!
         writeString(_requestorName, packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 15 + _requestorName.length() * 2;
+    }
 }

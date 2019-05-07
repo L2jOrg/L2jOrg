@@ -15,12 +15,11 @@ public class ReceiveVipProductList extends IClientOutgoingPacket {
 
     @Override
     protected void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.RECEIVE_VIP_PRODUCT_LIST.writeId(packet);
-
         var player = client.getActiveChar();
         var products = PrimeShopData.getInstance().getPrimeItems();
         var vipTier = player.getVipTier();
 
+        OutgoingPackets.RECEIVE_VIP_PRODUCT_LIST.writeId(packet);
         packet.putLong(player.getAdena());
         packet.putLong(player.getRustyCoin()); // Rusty Coin Amount
         packet.putLong(player.getSilverCoin()); // Silver Coin Amount
@@ -56,5 +55,11 @@ public class ReceiveVipProductList extends IClientOutgoingPacket {
             packet.putInt(item.getId());
             packet.putInt((int) item.getCount());
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        var products =PrimeShopData.getInstance().getPrimeItems();
+        return 32 + (products.size() + 1) * 18 + products.values().stream().mapToInt(product -> product.getItems().size()).sum() * 8;
     }
 }

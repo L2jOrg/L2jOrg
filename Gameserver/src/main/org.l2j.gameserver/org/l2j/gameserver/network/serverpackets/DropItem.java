@@ -43,4 +43,9 @@ public class DropItem extends IClientOutgoingPacket {
         packet.put((byte) (_item.getAugmentation() != null ? 1 : 0)); // Grand Crusade
         packet.put((byte) _item.getSpecialAbilities().size()); // Grand Crusade
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 37;
+    }
 }

@@ -8,6 +8,7 @@ import org.l2j.gameserver.network.OutgoingPackets;
 import org.l2j.gameserver.network.clientpackets.RequestAllyInfo;
 
 import java.nio.ByteBuffer;
+import java.util.Arrays;
 import java.util.Collection;
 
 /**
@@ -64,6 +65,12 @@ public class AllianceInfo extends IClientOutgoingPacket {
             packet.putInt(aci.getTotal());
             packet.putInt(aci.getOnline());
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 23 + _name.length() * 2 + _leaderC.length() * 2 + _leaderP.length() * 2 + _allies.length * 20 +
+                Arrays.stream(_allies).mapToInt(ally -> ally.getClan().getName().length() * 2 + ally.getClan().getLeaderName().length() * 2).sum();
     }
 
     public String getName() {

@@ -64,4 +64,9 @@ public class ExAirShipInfo extends IClientOutgoingPacket {
         packet.putInt(_ship.getFuel());
         packet.putInt(_ship.getMaxFuel());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 73;
+    }
 }

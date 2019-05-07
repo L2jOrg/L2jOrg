@@ -41,4 +41,9 @@ public class L2Friend extends IClientOutgoingPacket {
         packet.putInt(_online ? 1 : 0);
         packet.putInt(_online ? _objid : 0);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 23 + _name.length() * 2;
+    }
 }

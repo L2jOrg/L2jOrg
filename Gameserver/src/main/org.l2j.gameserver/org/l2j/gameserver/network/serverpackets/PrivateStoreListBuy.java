@@ -44,4 +44,9 @@ public class PrivateStoreListBuy extends AbstractItemPacket {
             packet.putLong(item.getStoreCount());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25 + _items.size() * 130;
+    }
 }

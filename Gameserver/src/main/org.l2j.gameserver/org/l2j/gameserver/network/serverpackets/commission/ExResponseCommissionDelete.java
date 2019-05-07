@@ -27,4 +27,9 @@ public class ExResponseCommissionDelete extends IClientOutgoingPacket {
 
         packet.putInt(_result);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

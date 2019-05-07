@@ -29,4 +29,9 @@ public class ExAutoSoulShot extends IClientOutgoingPacket {
         packet.putInt(_enable ? 0x01 : 0x00);
         packet.putInt(_type);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17;
+    }
 }

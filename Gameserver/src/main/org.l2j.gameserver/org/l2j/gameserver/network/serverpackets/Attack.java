@@ -17,10 +17,6 @@ public class Attack extends IClientOutgoingPacket {
     private final Location _targetLoc;
     private final List<Hit> _hits = new ArrayList<>();
 
-    /**
-     * @param attacker
-     * @param target
-     */
     public Attack(L2Character attacker, L2Character target) {
         _attackerObjId = attacker.getObjectId();
         _attackerLoc = new Location(attacker);
@@ -84,5 +80,10 @@ public class Attack extends IClientOutgoingPacket {
         packet.putInt(_targetLoc.getX());
         packet.putInt(_targetLoc.getY());
         packet.putInt(_targetLoc.getZ());
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 55 + _hits.size() * 16;
     }
 }

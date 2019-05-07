@@ -44,4 +44,9 @@ public class ExShuttleInfo extends IClientOutgoingPacket {
             packet.putInt(stop.hasDoorChanged() ? 0x01 : 0x00);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 33 + _stops.size() * 12 + _stops.stream().mapToInt(stop -> stop.getDimensions().size()).sum() * 12;
+    }
 }

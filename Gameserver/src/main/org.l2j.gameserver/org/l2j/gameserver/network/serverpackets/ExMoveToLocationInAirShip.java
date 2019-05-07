@@ -34,4 +34,9 @@ public class ExMoveToLocationInAirShip extends IClientOutgoingPacket {
         packet.putInt(_destination.getZ());
         packet.putInt(_heading);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 29;
+    }
 }

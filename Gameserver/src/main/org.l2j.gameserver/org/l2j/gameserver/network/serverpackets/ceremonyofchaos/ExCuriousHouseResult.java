@@ -38,4 +38,8 @@ public class ExCuriousHouseResult extends IClientOutgoingPacket {
         });
     }
 
+    @Override
+    protected int size(L2GameClient client) {
+        return 20 + _event.getMembers().size() * 20;
+    }
 }

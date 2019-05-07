@@ -31,4 +31,9 @@ public class ExDuelUpdateUserInfo extends IClientOutgoingPacket {
         packet.putInt((int) _activeChar.getCurrentCp());
         packet.putInt(_activeChar.getMaxCp());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 43 + _activeChar.getName().length() * 2;
+    }
 }

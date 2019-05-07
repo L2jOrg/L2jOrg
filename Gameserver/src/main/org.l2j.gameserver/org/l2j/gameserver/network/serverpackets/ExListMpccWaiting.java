@@ -48,4 +48,9 @@ public class ExListMpccWaiting extends IClientOutgoingPacket {
             writeString(room.getLeader().getName(), packet);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + _rooms.size() * 92 ;
+    }
 }

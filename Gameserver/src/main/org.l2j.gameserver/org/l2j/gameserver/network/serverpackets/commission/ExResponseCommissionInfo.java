@@ -44,4 +44,9 @@ public class ExResponseCommissionInfo extends IClientOutgoingPacket {
         packet.putLong(_presetAmount);
         packet.putInt(_presetDurationType);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 33;
+    }
 }

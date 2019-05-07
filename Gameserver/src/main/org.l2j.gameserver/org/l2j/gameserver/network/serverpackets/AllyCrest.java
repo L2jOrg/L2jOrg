@@ -8,6 +8,7 @@ import org.l2j.gameserver.settings.ServerSettings;
 
 import java.nio.ByteBuffer;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class AllyCrest extends IClientOutgoingPacket {
@@ -37,5 +38,10 @@ public class AllyCrest extends IClientOutgoingPacket {
         } else {
             packet.putInt(0);
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17 + (nonNull(_data) ? _data.length : 0);
     }
 }

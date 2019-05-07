@@ -32,4 +32,9 @@ public class ExTrainingZone_Admission extends IClientOutgoingPacket {
         packet.putDouble(_maxExp); // Training time elapsed in minutes * this value = acquired exp IN GAME DOESN'T SEEM LIKE THE FIELD IS LIMITED
         packet.putDouble(_maxSp); // Training time elapsed in minutes * this value = acquired sp IN GAME LIMITED TO INTEGER.MAX_VALUE SO THE MULTIPLY WITH REMAINING TIME CANT EXCEED IT (so field max value can't exceed 3579139.0 for 10hr) !! // Note real sp gain is exp gained / 250
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 29;
+    }
 }

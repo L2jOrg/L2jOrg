@@ -20,4 +20,9 @@ public class ExBRGamePoint extends IClientOutgoingPacket {
         packet.putLong(client.getCoin());
         packet.putInt(0x00);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 21;
+    }
 }

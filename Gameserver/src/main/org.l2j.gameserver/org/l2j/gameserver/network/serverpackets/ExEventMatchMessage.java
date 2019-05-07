@@ -30,4 +30,9 @@ public class ExEventMatchMessage extends IClientOutgoingPacket {
         packet.put((byte) _type);
         writeString(_message, packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 8 + _message.length() * 2;
+    }
 }

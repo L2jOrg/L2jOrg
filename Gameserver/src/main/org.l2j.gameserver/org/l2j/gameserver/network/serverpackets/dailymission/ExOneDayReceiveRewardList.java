@@ -56,4 +56,9 @@ public class ExOneDayReceiveRewardList extends IClientOutgoingPacket {
             packet.putInt(reward.getRequiredCompletions());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 30 + _rewards.size() * 12;
+    }
 }
