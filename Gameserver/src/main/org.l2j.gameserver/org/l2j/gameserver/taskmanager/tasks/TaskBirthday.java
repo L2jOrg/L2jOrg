@@ -29,7 +29,6 @@ import org.l2j.gameserver.taskmanager.TaskManager.ExecutableTask;
 import org.l2j.gameserver.taskmanager.TaskType;
 import org.l2j.gameserver.util.Util;
 
-import java.time.temporal.ChronoField;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -75,7 +74,7 @@ public class TaskBirthday extends Task {
                 return;
             }
 
-            var age = year - characterData.getCreateDate().toInstant().get(ChronoField.YEAR);
+            var age = year - characterData.getCreateDate().getYear();
             var text = Config.ALT_BIRTHDAY_MAIL_TEXT.replace("$c1", name).replace("$s1", String.valueOf(age));
             final Message msg = new Message(characterData.getCharId(), Config.ALT_BIRTHDAY_MAIL_SUBJECT, text, MailType.BIRTHDAY);
 

@@ -711,7 +711,7 @@ public final class L2PcInstance extends L2Playable {
         player.setLastServerPosition(character.getX(), character.getY(), character.getZ());
 
         player.setBookMarkSlot(character.getBookMarkSlot());
-        player.getCreateDate().setTime(character.getCreateDate());
+        player.getCreateDate().setTime(Date.valueOf(character.getCreateDate()));
         player.setLang(character.getLanguage());
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();

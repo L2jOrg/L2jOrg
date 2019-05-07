@@ -79,6 +79,6 @@ public class ExBeautyItemList extends IClientOutgoingPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return 29 + 24 * (_beautyData.getHairList().size() + _beautyData.getFaceList().size() + _colorData.size());
+        return 29 + 24 * (_beautyData.getHairList().size() + _beautyData.getFaceList().size() + _colorData.size() * _colorData.values().stream().mapToInt(List::size).sum());
     }
 }

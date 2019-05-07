@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class CharacterData {
 
@@ -83,7 +83,7 @@ public class CharacterData {
     private int y;
     private int z;
     private int bookMarkSlot;
-    private Date createDate;
+    private LocalDate createDate;
     private String language;
 
     public int getCharId() {
@@ -294,7 +294,7 @@ public class CharacterData {
         return bookMarkSlot;
     }
 
-    public Date getCreateDate() {
+    public LocalDate getCreateDate() {
         return createDate;
     }
 

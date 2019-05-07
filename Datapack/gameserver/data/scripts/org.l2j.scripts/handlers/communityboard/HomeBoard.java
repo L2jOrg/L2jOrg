@@ -247,6 +247,7 @@ public final class HomeBoard implements IParseBoardHandler {
 			var report = new ReportData();
 			report.setPlayerId(activeChar.getObjectId());
 			report.setReport(reportText);
+			report.setPending(true);
 			getDAO(ReportDAO.class).save(report);
 
 			activeChar.sendMessage("Thank you For your Report!! the GM will be informed!");

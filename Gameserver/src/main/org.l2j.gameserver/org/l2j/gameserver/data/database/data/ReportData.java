@@ -2,14 +2,12 @@ package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Table;
-import org.l2j.commons.database.annotation.Transient;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Table("bbs_reports")
 public class ReportData {
 
-    @Transient
     @Column("report_id")
     private int id;
 
@@ -18,9 +16,10 @@ public class ReportData {
 
     String report;
 
-    @Transient
     @Column("report_date")
-    Date data;
+    LocalDate data;
+
+    boolean pending;
 
     public void setPlayerId(int playerId) {
         this.playerId = playerId;
@@ -28,5 +27,9 @@ public class ReportData {
 
     public void setReport(String report) {
         this.report = report;
+    }
+
+    public void setPending(boolean pending) {
+        this.pending = pending;
     }
 }

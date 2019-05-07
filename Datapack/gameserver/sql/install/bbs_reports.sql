@@ -5,7 +5,8 @@ CREATE TABLE IF NOT EXISTS `bbs_reports`
     `player_id`   INT UNSIGNED NOT NULL,
     `report`     VARCHAR(500)  NOT NULL,
     `report_date` TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `pending` BOOL NOT NULL DEFAULT TRUE,
     PRIMARY KEY (`report_id`),
-    UNIQUE INDEX `REPORT_PLAYER` (`report_id`, `player_id`)
+    KEY (`report_date`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
