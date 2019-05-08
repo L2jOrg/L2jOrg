@@ -13,6 +13,7 @@ import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
 import java.nio.ByteBuffer;
+import java.util.Arrays;
 
 /**
  * @author Sdw, UnAfraid
@@ -328,6 +329,11 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             packet.putInt(0x00);
         }
 
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 23 + Arrays.stream(UserInfoType.values()).mapToInt(UserInfoType::getBlockLength).sum() + (_title.length() + _activeChar.getName().length()) * 2;
     }
 
     private int calculateRelation(L2PcInstance activeChar) {

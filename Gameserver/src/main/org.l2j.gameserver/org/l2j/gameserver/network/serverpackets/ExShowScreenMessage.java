@@ -254,4 +254,9 @@ public class ExShowScreenMessage extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 51 + (_npcString == -1 ? _text.length()  : _parameters.stream().mapToInt(String::length).sum()) * 2;
+    }
 }

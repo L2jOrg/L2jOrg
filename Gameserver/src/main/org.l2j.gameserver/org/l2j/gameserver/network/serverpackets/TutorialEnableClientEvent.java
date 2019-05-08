@@ -18,4 +18,9 @@ public class TutorialEnableClientEvent extends IClientOutgoingPacket {
 
         packet.putInt(_eventId);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

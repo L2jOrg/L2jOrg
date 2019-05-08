@@ -36,4 +36,9 @@ public class ExStopMoveInAirShip extends IClientOutgoingPacket {
         packet.putInt(_loc.getZ());
         packet.putInt(_h);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 29;
+    }
 }

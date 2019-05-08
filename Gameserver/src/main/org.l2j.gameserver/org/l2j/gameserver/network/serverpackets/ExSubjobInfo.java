@@ -49,6 +49,11 @@ public class ExSubjobInfo extends IClientOutgoingPacket {
         }
     }
 
+    @Override
+    protected int size(L2GameClient client) {
+        return 18 + _subs.size() * 13;
+    }
+
     private final class SubInfo {
         private final int _index;
         private final int _classId;

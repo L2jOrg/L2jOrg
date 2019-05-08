@@ -21,4 +21,9 @@ public class StartPledgeWar extends IClientOutgoingPacket {
         writeString(_playerName, packet);
         writeString(_pledgeName, packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + (_playerName.length() + _pledgeName.length()) * 2;
+    }
 }

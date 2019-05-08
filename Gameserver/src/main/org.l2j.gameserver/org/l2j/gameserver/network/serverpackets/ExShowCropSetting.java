@@ -82,4 +82,9 @@ public class ExShowCropSetting extends IClientOutgoingPacket {
         _next.clear();
         _current.clear();
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + 68;
+    }
 }

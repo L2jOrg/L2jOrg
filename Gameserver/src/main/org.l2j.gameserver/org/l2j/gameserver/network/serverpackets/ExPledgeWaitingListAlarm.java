@@ -16,4 +16,9 @@ public class ExPledgeWaitingListAlarm extends IClientOutgoingPacket {
         OutgoingPackets.EX_PLEDGE_WAITING_LIST_ALARM.writeId(packet);
 
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 5;
+    }
 }

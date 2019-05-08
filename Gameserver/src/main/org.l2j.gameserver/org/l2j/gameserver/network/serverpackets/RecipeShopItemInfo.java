@@ -28,4 +28,9 @@ public class RecipeShopItemInfo extends IClientOutgoingPacket {
         packet.put((byte) 0x00); // Trigger offering window if 1
         packet.putLong(0x00);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 45;
+    }
 }

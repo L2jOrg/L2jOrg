@@ -25,4 +25,9 @@ public class SocialAction extends IClientOutgoingPacket {
         packet.putInt(_actionId);
         packet.putInt(0x00); // TODO: Find me!
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17;
+    }
 }

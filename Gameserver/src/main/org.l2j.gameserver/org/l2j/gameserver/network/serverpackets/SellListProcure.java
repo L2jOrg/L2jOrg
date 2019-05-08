@@ -43,4 +43,9 @@ public class SellListProcure extends IClientOutgoingPacket {
             packet.putLong(0); // price, u shouldnt get any adena for crops, only raw materials
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 19 + _sellList.size() * 30;
+    }
 }

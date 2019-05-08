@@ -21,4 +21,9 @@ public class ExVitalityPointInfo extends IClientOutgoingPacket {
 
         packet.putInt(_vitalityPoints);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

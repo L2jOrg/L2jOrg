@@ -44,4 +44,9 @@ public class ExShowCastleInfo extends IClientOutgoingPacket {
             packet.put((byte) castle.getSide().ordinal()); // Grand Crusade
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + CastleManager.getInstance().getCastles().size() * 100;
+    }
 }

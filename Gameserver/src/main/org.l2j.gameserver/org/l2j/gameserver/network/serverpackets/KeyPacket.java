@@ -33,4 +33,9 @@ public final class KeyPacket extends IClientOutgoingPacket {
         packet.putInt(0x00); // obfuscation key
         packet.put((byte) ((serverSettings.type() & CLASSIC.getMask()) != 0 ? 0x01 : 0x00)); // isClassic
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 26;
+    }
 }

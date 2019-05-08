@@ -32,4 +32,9 @@ public class TargetUnselected extends IClientOutgoingPacket {
         packet.putInt(_z);
         packet.putInt(0x00); // ??
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25;
+    }
 }

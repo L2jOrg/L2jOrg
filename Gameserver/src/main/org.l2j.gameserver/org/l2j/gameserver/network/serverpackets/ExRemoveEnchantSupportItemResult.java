@@ -21,4 +21,9 @@ public class ExRemoveEnchantSupportItemResult extends IClientOutgoingPacket {
         OutgoingPackets.EX_REMOVE_ENCHANT_SUPPORT_ITEM_RESULT.writeId(packet);
 
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 5;
+    }
 }

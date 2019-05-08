@@ -36,4 +36,9 @@ public class ExShowFortressInfo extends IClientOutgoingPacket {
             packet.putInt(fort.getOwnedTime());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + FortManager.getInstance().getForts().size() * 50;
+    }
 }

@@ -38,6 +38,11 @@ public final class SkillList extends IClientOutgoingPacket {
         packet.putInt(_lastLearnedSkillId);
     }
 
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + _skills.size() * 18;
+    }
+
     static class Skill {
         public int id;
         public int reuseDelayGroup;

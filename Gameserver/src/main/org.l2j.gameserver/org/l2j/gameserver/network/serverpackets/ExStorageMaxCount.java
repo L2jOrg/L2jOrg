@@ -54,4 +54,9 @@ public class ExStorageMaxCount extends IClientOutgoingPacket {
         packet.putInt(40); // TODO: Find me!
         packet.putInt(0x64); // Artifact slots (Fixed)
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 53;
+    }
 }

@@ -9,6 +9,8 @@ import org.l2j.gameserver.network.OutgoingPackets;
 import java.nio.ByteBuffer;
 import java.util.List;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author l3x
  */
@@ -58,5 +60,10 @@ public class ExShowSeedInfo extends IClientOutgoingPacket {
                 packet.putInt(s.getReward(2)); // Reward 2 - item id
             }
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 18 +  (nonNull(_seeds) ? _seeds.size() * 14 : 4);
     }
 }

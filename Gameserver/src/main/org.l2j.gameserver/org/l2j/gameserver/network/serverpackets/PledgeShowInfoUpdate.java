@@ -40,4 +40,9 @@ public class PledgeShowInfoUpdate extends IClientOutgoingPacket {
         packet.putInt(0x00); // TODO: Find me!
         packet.putInt(0x00); // TODO: Find me!
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 85 + _clan.getAllyName().length() * 2;
+    }
 }

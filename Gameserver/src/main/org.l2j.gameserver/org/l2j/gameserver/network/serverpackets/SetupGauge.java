@@ -37,4 +37,9 @@ public final class SetupGauge extends IClientOutgoingPacket {
         packet.putInt(_time);
         packet.putInt(_time2);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 21;
+    }
 }

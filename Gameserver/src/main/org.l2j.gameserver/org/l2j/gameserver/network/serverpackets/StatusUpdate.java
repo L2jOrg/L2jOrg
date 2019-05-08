@@ -62,4 +62,9 @@ public final class StatusUpdate extends IClientOutgoingPacket {
             packet.putInt(entry.getValue());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 15 +  _updates.size() * 5;
+    }
 }

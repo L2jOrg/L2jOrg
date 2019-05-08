@@ -38,4 +38,9 @@ public final class ExShowTrace extends IClientOutgoingPacket {
             packet.putInt(loc.getZ());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + _locations.size() * 12;
+    }
 }

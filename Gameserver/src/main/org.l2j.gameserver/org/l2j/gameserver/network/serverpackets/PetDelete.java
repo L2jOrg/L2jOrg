@@ -21,4 +21,9 @@ public class PetDelete extends IClientOutgoingPacket {
         packet.putInt(_petType);
         packet.putInt(_petObjId);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

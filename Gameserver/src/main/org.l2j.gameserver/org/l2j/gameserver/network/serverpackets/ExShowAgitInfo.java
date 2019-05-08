@@ -32,4 +32,9 @@ public class ExShowAgitInfo extends IClientOutgoingPacket {
             packet.putInt(clanHall.getType().getClientVal()); // Clan hall type
         });
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + ClanHallData.getInstance().getClanHalls().size() * 2;
+    }
 }

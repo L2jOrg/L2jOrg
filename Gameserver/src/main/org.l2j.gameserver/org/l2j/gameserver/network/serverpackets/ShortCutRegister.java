@@ -55,4 +55,9 @@ public final class ShortCutRegister extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 41 ;
+    }
 }

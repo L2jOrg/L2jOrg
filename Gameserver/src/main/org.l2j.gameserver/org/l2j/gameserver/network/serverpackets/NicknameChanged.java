@@ -25,4 +25,9 @@ public class NicknameChanged extends IClientOutgoingPacket {
         packet.putInt(_objectId);
         writeString(_title, packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 11 + _title.length() * 2;
+    }
 }

@@ -44,4 +44,9 @@ public class ExShowProcureCropDetail extends IClientOutgoingPacket {
             packet.put((byte) crop.getReward()); // reward type
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + _castleCrops.size() * 21;
+    }
 }

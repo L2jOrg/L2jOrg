@@ -48,4 +48,9 @@ public final class HennaItemRemoveInfo extends IClientOutgoingPacket {
         packet.putShort((short) 0x00); // equip CHA
         packet.putInt(0x00);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 95;
+    }
 }

@@ -30,4 +30,9 @@ public class ExShowBeautyMenu extends IClientOutgoingPacket {
         packet.putInt(_activeChar.getVisualHairColor());
         packet.putInt(_activeChar.getVisualFace());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 21;
+    }
 }

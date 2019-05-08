@@ -18,4 +18,9 @@ public final class MagicSkillCanceld extends IClientOutgoingPacket {
 
         packet.putInt(_objectId);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

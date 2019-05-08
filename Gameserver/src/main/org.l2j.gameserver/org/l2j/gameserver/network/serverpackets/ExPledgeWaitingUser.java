@@ -23,4 +23,9 @@ public class ExPledgeWaitingUser extends IClientOutgoingPacket {
         packet.putInt(_pledgeRecruitInfo.getPlayerId());
         writeString(_pledgeRecruitInfo.getMessage(), packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 11 + _pledgeRecruitInfo.getMessage().length() * 2;
+    }
 }

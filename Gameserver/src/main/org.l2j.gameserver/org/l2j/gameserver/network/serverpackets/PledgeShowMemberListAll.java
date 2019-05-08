@@ -90,4 +90,9 @@ public class PledgeShowMemberListAll extends IClientOutgoingPacket {
             packet.put((byte) m.getOnlineStatus());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 82 + (_name.length() + _leaderName.length()) * 2 + _members.size() * 70;
+    }
 }

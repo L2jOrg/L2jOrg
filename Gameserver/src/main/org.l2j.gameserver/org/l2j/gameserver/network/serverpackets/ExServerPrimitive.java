@@ -409,7 +409,7 @@ public class ExServerPrimitive extends IClientOutgoingPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return (_lines.size() + 10) * 44  + (_points.size() + 10 ) * 32 + 50;
+        return (_lines.size() + 10) * 44  + (_points.size() + 10 ) * 32 + 55;
     }
 
     private static class Point {

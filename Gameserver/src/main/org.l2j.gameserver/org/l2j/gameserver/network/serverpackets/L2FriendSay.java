@@ -30,4 +30,9 @@ public class L2FriendSay extends IClientOutgoingPacket {
         writeString(_sender, packet);
         writeString(_message, packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 15 + (_receiver.length() + _sender.length() + _message.length()) * 2;
+    }
 }

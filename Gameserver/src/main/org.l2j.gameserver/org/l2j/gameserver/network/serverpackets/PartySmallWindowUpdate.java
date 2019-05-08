@@ -59,6 +59,11 @@ public final class PartySmallWindowUpdate extends AbstractMaskPacket<PartySmallW
     }
 
     @Override
+    protected int size(L2GameClient client) {
+        return 45;
+    }
+
+    @Override
     protected void addMask(int mask) {
         _flags |= mask;
     }

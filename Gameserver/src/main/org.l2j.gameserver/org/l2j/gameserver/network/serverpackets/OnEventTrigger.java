@@ -24,4 +24,9 @@ public class OnEventTrigger extends IClientOutgoingPacket {
         packet.putInt(_emitterId);
         packet.put((byte) _enabled);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 11;
+    }
 }

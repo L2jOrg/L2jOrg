@@ -28,4 +28,9 @@ public class PackageToList extends IClientOutgoingPacket {
             writeString(entry.getValue(), packet);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + _players.size() * 6 + _players.values().stream().mapToInt(String::length).sum() * 2;
+    }
 }

@@ -27,4 +27,9 @@ public class ExSubPledgeSkillAdd extends IClientOutgoingPacket {
         packet.putInt(_skillId);
         packet.putInt(_skillLevel);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17;
+    }
 }

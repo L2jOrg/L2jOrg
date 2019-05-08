@@ -57,4 +57,10 @@ public class GMViewPledgeInfo extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 85 + _clan.getMembersCount() * 26 +
+                (_clan.getMembers().stream().mapToInt(m -> m.getName().length()).sum() + _activeChar.getName().length() + _clan.getName().length() + _clan.getLeaderName().length()) * 2;
+    }
 }

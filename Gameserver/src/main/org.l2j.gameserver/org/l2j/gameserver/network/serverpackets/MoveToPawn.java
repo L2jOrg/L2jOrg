@@ -45,4 +45,9 @@ public class MoveToPawn extends IClientOutgoingPacket {
         packet.putInt(_ty);
         packet.putInt(_tz);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 41;
+    }
 }

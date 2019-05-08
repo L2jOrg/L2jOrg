@@ -108,4 +108,9 @@ public final class SiegeDefenderList extends IClientOutgoingPacket {
             packet.putInt(defendingClan.getAllyCrestId());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 62 + (1 + _castle.getSiege().getDefenderClans().size() + _castle.getSiege().getDefenderWaitingClans().size()) * 152;
+    }
 }

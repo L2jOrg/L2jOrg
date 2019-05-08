@@ -43,4 +43,9 @@ public class PartyMemberPosition extends IClientOutgoingPacket {
             packet.putInt(loc.getZ());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + locations.size() * 16;
+    }
 }

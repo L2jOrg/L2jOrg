@@ -18,4 +18,9 @@ public class SendTradeRequest extends IClientOutgoingPacket {
 
         packet.putInt(_senderId);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

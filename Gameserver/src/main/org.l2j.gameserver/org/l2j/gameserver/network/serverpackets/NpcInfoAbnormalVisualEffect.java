@@ -31,4 +31,9 @@ public class NpcInfoAbnormalVisualEffect extends IClientOutgoingPacket {
             packet.putShort((short) abnormalVisualEffect.getClientId());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17 + _npc.getEffectList().getCurrentAbnormalVisualEffects().size() * 2;
+    }
 }

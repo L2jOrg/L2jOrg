@@ -157,4 +157,9 @@ public class GMViewCharacterInfo extends IClientOutgoingPacket {
         packet.putInt(0x00);
         packet.putInt(0x00);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 360 + (AttributeType.ATTRIBUTE_TYPES.length + _activeChar.getName().length() + _activeChar.getTitle().length()) * 2 + PAPERDOLL_ORDER.length * 16 ;
+    }
 }

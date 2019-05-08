@@ -51,6 +51,6 @@ public class ShowBoard extends IClientOutgoingPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return (_content.length() + BOARD_MENU_SIZE ) * 2;
+        return 7 + (_content.length() + BOARD_MENU_SIZE ) * 2;
     }
 }

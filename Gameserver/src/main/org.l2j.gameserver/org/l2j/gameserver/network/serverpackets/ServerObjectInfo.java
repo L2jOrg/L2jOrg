@@ -56,4 +56,9 @@ public final class ServerObjectInfo extends IClientOutgoingPacket {
         packet.putInt(0x01); // object type
         packet.putInt(0x00); // special effects
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 85 + _name.length() * 2;
+    }
 }

@@ -25,4 +25,9 @@ public class ManagePledgePower extends IClientOutgoingPacket {
         packet.putInt(_action);
         packet.putInt(_clan.getRankPrivs(_rank).getBitmask());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17;
+    }
 }

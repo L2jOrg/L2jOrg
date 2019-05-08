@@ -37,6 +37,11 @@ public final class TutorialShowHtml extends AbstractHtmlPacket {
     }
 
     @Override
+    protected int size(L2GameClient client) {
+        return 9 + getHtml().length() * 2;
+    }
+
+    @Override
     public HtmlActionScope getScope() {
         return HtmlActionScope.TUTORIAL_HTML;
     }

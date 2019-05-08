@@ -35,4 +35,9 @@ public class HennaRemoveList extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 21 + _player.getHennaList().length * 30;
+    }
 }

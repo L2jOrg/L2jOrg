@@ -39,4 +39,9 @@ public class ExShowTerritory extends IClientOutgoingPacket {
             packet.putInt(loc.getY());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17 + _vertices.size() * 8;
+    }
 }

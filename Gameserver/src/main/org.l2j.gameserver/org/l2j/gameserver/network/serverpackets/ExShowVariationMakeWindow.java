@@ -23,4 +23,9 @@ public class ExShowVariationMakeWindow extends IClientOutgoingPacket {
         OutgoingPackets.EX_SHOW_VARIATION_MAKE_WINDOW.writeId(packet);
 
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 5;
+    }
 }

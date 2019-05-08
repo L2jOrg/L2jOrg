@@ -27,4 +27,9 @@ public class ExResponseResetList extends IClientOutgoingPacket {
         packet.putInt(_activeChar.getAppearance().getHairColor());
         packet.putInt(_activeChar.getAppearance().getFace());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 33;
+    }
 }

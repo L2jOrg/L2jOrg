@@ -108,4 +108,9 @@ public class SpecialCamera extends IClientOutgoingPacket {
         packet.putInt(_relAngle);
         packet.putInt(_unk);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 50;
+    }
 }

@@ -31,4 +31,9 @@ public class ExTeleportToLocationActivate extends IClientOutgoingPacket {
         packet.putInt(_loc.getHeading());
         packet.putInt(0); // Unknown
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 33;
+    }
 }

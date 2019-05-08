@@ -38,6 +38,11 @@ public class PledgeSkillList extends IClientOutgoingPacket {
         }
     }
 
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + _skills.length * 8 + _subSkills.length * 12;
+    }
+
     public static class SubPledgeSkill {
         int _subType;
         int _skillId;

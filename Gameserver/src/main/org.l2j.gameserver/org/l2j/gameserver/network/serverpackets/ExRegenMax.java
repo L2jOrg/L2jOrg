@@ -25,4 +25,9 @@ public class ExRegenMax extends IClientOutgoingPacket {
         packet.putInt(_tickInterval);
         packet.putDouble(_amountPerTick);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25;
+    }
 }

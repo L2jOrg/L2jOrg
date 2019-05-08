@@ -21,4 +21,9 @@ public final class SetSummonRemainTime extends IClientOutgoingPacket {
         packet.putInt(_maxTime);
         packet.putInt(_remainingTime);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

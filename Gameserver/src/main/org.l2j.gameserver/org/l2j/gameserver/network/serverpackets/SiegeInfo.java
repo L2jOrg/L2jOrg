@@ -11,6 +11,8 @@ import org.l2j.gameserver.network.OutgoingPackets;
 import java.nio.ByteBuffer;
 import java.util.Calendar;
 
+import static java.util.Objects.nonNull;
+
 /**
  * Shows the Siege Info<BR>
  * <BR>
@@ -83,5 +85,10 @@ public class SiegeInfo extends IClientOutgoingPacket {
                 packet.putInt(0x00);
             }
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 140 + ( nonNull(_castle) ? 34 + Config.SIEGE_HOUR_LIST.size() * 4 : 0);
     }
 }

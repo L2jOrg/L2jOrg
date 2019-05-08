@@ -57,4 +57,9 @@ public class ListPartyWaiting extends IClientOutgoingPacket {
         packet.putInt(L2World.getInstance().getPartyCount()); // Helios
         packet.putInt(L2World.getInstance().getPartyMemberCount()); // Helios
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 21 + _rooms.size() * 28 + _rooms.stream().mapToInt(room -> room.getTitle().length() + room.getLeader().getName().length() + room.getMembersCount() * 40).sum();
+    }
 }

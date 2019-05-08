@@ -19,4 +19,9 @@ public final class JoinParty extends IClientOutgoingPacket {
         packet.putInt(_response);
         packet.putInt(0x00); // TODO: Find me!
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

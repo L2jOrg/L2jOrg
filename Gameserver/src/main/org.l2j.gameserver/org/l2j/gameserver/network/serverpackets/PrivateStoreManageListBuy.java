@@ -55,6 +55,6 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return 25 + _itemList.size() * 110  + (_sendType == 2 ? 0 : _buyList.length * 130);
+        return 30 + _itemList.size() * 110  + (_sendType == 2 ? 0 : _buyList.length * 130);
     }
 }

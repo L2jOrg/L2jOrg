@@ -21,4 +21,9 @@ public class ExSearchOrc extends IClientOutgoingPacket {
         OutgoingPackets.EX_SEARCH_ORC.writeId(packet);
 
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 5;
+    }
 }

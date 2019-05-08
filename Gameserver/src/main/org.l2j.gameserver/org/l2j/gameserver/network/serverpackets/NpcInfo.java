@@ -14,6 +14,7 @@ import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.OutgoingPackets;
 
 import java.nio.ByteBuffer;
+import java.util.Arrays;
 import java.util.Set;
 
 /**
@@ -341,5 +342,10 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
                 packet.putShort((short) AbnormalVisualEffect.STEALTH.getClientId());
             }
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 22 + Arrays.stream(NpcInfoType.values()).mapToInt(NpcInfoType::getBlockLength).sum() + (_npc.getName().length() + _npc.getTitle().length() + _abnormalVisualEffects.size()) * 2;
     }
 }

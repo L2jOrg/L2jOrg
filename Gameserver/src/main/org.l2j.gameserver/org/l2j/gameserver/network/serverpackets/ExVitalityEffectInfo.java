@@ -31,4 +31,9 @@ public class ExVitalityEffectInfo extends IClientOutgoingPacket {
         packet.putShort((short) _vitalityItemsRemaining); // How much vitality items remaining for use
         packet.putShort((short) Config.VITALITY_MAX_ITEMS_ALLOWED); // Max number of items for use
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 19;
+    }
 }

@@ -47,6 +47,6 @@ public class PrivateStoreListBuy extends AbstractItemPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return 25 + _items.size() * 130;
+        return 30 + _items.size() * 130;
     }
 }

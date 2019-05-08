@@ -51,4 +51,9 @@ public class MonRaceInfo extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17 + (54 + 20) * 8;
+    }
 }

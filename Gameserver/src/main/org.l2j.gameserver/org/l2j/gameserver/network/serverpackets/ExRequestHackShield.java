@@ -23,4 +23,9 @@ public class ExRequestHackShield extends IClientOutgoingPacket {
         OutgoingPackets.EX_REQUEST_HACK_SHIELD.writeId(packet);
 
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 5;
+    }
 }

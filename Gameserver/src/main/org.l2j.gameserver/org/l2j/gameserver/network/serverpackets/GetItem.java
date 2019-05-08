@@ -26,4 +26,9 @@ public final class GetItem extends IClientOutgoingPacket {
         packet.putInt(_item.getY());
         packet.putInt(_item.getZ());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25;
+    }
 }

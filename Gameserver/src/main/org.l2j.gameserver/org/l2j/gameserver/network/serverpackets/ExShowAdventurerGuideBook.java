@@ -21,4 +21,9 @@ public class ExShowAdventurerGuideBook extends IClientOutgoingPacket {
         OutgoingPackets.EX_SHOW_ADVENTURER_GUIDE_BOOK.writeId(packet);
 
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 5;
+    }
 }

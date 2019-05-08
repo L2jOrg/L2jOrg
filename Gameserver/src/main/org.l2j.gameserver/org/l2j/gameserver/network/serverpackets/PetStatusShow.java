@@ -25,4 +25,9 @@ public class PetStatusShow extends IClientOutgoingPacket {
         packet.putInt(_summonType);
         packet.putInt(_summonObjectId);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

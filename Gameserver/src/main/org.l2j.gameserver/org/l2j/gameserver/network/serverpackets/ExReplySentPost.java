@@ -73,7 +73,7 @@ public class ExReplySentPost extends AbstractItemPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        var size = 35 + _msg.getContent().length() * 2 + _msg.getSubject().length() * 2 + _msg.getReceiverName().length() * 2;
+        var size = 37 + _msg.getContent().length() * 2 + _msg.getSubject().length() * 2 + _msg.getReceiverName().length() * 2;
         if(nonNull(_items)) {
             size += _items.size() * 104;
         }

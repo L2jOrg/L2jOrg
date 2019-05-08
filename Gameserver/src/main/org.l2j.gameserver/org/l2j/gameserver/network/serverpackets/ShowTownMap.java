@@ -23,4 +23,9 @@ public class ShowTownMap extends IClientOutgoingPacket {
         packet.putInt(_x);
         packet.putInt(_y);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 15 + _texture.length() * 2;
+    }
 }

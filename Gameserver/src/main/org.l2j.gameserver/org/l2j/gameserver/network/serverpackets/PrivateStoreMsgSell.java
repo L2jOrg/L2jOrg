@@ -24,4 +24,9 @@ public class PrivateStoreMsgSell extends IClientOutgoingPacket {
         packet.putInt(_objId);
         writeString(_storeMsg, packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 11 +_storeMsg.length() * 2;
+    }
 }

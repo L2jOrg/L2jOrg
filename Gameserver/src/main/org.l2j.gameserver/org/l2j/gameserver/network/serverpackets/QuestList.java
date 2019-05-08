@@ -39,4 +39,9 @@ public class QuestList extends IClientOutgoingPacket {
         }
         packet.put(_oneTimeQuestMask);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 6 + _activeQuests.size() * 8;
+    }
 }

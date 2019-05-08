@@ -24,4 +24,9 @@ public class ExShowQuestMark extends IClientOutgoingPacket {
         packet.putInt(_questId);
         packet.putInt(_questState);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

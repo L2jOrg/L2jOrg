@@ -167,4 +167,9 @@ public class PetInfo extends IClientOutgoingPacket {
 
         packet.put((byte) _statusMask);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 120 + _summon.getName().length() * 4;
+    }
 }

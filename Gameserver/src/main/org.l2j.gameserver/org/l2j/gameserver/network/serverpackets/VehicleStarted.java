@@ -29,4 +29,9 @@ public class VehicleStarted extends IClientOutgoingPacket {
         packet.putInt(_objectId);
         packet.putInt(_state);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

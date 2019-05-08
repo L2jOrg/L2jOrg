@@ -27,4 +27,10 @@ public class ExVariationResult extends IClientOutgoingPacket {
         packet.putInt(_option2);
         packet.putInt(_success);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17;
+    }
 }
+

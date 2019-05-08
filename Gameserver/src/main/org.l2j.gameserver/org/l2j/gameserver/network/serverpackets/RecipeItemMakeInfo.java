@@ -38,8 +38,14 @@ public class RecipeItemMakeInfo extends IClientOutgoingPacket {
             packet.putInt(_success ? 1 : 0); // item creation success/failed
             packet.put((byte) 0x00);
             packet.putLong(0x00);
+        } else {
+            LOGGER.info("Character: " + _activeChar + ": Requested unexisting recipe with id = " + _id);
+            throw new InvalidDataPacketException();
         }
-        LOGGER.info("Character: " + _activeChar + ": Requested unexisting recipe with id = " + _id);
-        throw new InvalidDataPacketException();
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 35;
     }
 }

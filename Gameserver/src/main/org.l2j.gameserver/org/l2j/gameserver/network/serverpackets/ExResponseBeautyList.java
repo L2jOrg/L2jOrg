@@ -43,4 +43,9 @@ public class ExResponseBeautyList extends IClientOutgoingPacket {
         }
         packet.putInt(0);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 33 + _beautyItem.size() * 8;
+    }
 }

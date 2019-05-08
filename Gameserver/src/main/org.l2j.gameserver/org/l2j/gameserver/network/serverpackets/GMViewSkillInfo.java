@@ -36,4 +36,9 @@ public class GMViewSkillInfo extends IClientOutgoingPacket {
             packet.put((byte)(skill.isEnchantable() ? 1 : 0));
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 11 + _activeChar.getName().length() * 2 + _skills.size() * 18;
+    }
 }

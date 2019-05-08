@@ -25,4 +25,9 @@ public class PledgeInfo extends IClientOutgoingPacket {
         writeString(_clan.getName(), packet);
         writeString(_clan.getAllyName(), packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + (_clan.getName().length() + _clan.getAllyName().length()) * 2;
+    }
 }

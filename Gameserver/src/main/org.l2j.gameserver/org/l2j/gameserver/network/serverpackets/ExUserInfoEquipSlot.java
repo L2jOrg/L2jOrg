@@ -65,4 +65,9 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 12 + InventorySlot.values().length * 22;
+    }
 }

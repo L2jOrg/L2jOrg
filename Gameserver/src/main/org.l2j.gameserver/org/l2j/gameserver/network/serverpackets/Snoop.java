@@ -32,4 +32,9 @@ public class Snoop extends IClientOutgoingPacket {
         writeString(_speaker, packet);
         writeString(_msg, packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 23 + (_name.length() + _speaker.length() + _msg.length()) * 2;
+    }
 }

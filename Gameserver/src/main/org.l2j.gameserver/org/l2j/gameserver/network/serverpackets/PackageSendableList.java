@@ -45,6 +45,6 @@ public class PackageSendableList extends AbstractItemPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return 13 + (_sendType == 2 ?  _items.size() * 104 : 8);
+        return 18 + (_sendType == 2 ?  _items.size() * 104 : 8);
     }
 }

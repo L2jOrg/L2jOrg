@@ -27,4 +27,9 @@ public class ExUserInfoCubic extends IClientOutgoingPacket {
 
         packet.putInt(_activeChar.getAgathionId());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 15 + _activeChar.getCubics().size() * 2;
+    }
 }

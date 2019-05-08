@@ -15,4 +15,9 @@ public final class PartySmallWindowDeleteAll extends IClientOutgoingPacket {
     public void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.PARTY_SMALL_WINDOW_DELETE_ALL.writeId(packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 5;
+    }
 }

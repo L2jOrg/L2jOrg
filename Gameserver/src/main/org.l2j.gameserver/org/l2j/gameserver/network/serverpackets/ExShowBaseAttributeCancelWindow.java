@@ -27,6 +27,11 @@ public class ExShowBaseAttributeCancelWindow extends IClientOutgoingPacket {
         }
     }
 
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + _items.size() * 12;
+    }
+
     /**
      * TODO: Unhardcode! Update prices for Top/Mid/Low S80/S84
      *

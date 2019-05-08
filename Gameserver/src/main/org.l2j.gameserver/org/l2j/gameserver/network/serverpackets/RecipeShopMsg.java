@@ -20,4 +20,9 @@ public class RecipeShopMsg extends IClientOutgoingPacket {
         packet.putInt(_activeChar.getObjectId());
         writeString(_activeChar.getStoreName(), packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 11 + _activeChar.getStoreName().length() * 2;
+    }
 }

@@ -46,4 +46,9 @@ public class ExPutCommissionResultForVariationMake extends IClientOutgoingPacket
         packet.putLong(_unk1);
         packet.putInt(_unk2);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 33;
+    }
 }

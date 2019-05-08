@@ -40,6 +40,6 @@ public class GMViewWarehouseWithdrawList extends AbstractItemPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return 18 + playerName.length() * 2 + _items.size() * 104;
+        return 21 + playerName.length() * 2 + _items.size() * 104;
     }
 }

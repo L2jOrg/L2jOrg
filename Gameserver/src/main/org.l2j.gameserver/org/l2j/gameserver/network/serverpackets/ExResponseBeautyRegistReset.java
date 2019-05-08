@@ -36,4 +36,9 @@ public class ExResponseBeautyRegistReset extends IClientOutgoingPacket {
         packet.putInt(_activeChar.getVisualFace());
         packet.putInt(_activeChar.getVisualHairColor());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 41;
+    }
 }

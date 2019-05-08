@@ -24,4 +24,9 @@ public class ExUserInfoInvenWeight extends IClientOutgoingPacket {
         packet.putInt(_activeChar.getCurrentLoad());
         packet.putInt(_activeChar.getMaxLoad());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17;
+    }
 }

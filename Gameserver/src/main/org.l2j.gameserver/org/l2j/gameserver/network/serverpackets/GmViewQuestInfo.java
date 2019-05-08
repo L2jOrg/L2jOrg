@@ -36,4 +36,9 @@ public class GmViewQuestInfo extends IClientOutgoingPacket {
         packet.putShort((short) 0x00); // some size
         // for size; ddQQ
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + _activeChar.getName().length() * 2 + _questList.size() * 8;
+    }
 }

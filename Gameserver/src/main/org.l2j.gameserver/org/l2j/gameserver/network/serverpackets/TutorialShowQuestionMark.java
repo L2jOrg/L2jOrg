@@ -24,4 +24,9 @@ public final class TutorialShowQuestionMark extends IClientOutgoingPacket {
         packet.put((byte) _markType);
         packet.putInt(_markId);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 10;
+    }
 }

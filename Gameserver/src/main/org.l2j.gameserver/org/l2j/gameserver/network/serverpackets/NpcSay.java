@@ -104,4 +104,9 @@ public final class NpcSay extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 21 + (_npcString == -1 ? _text.length() : _parameters.stream().mapToInt(String::length).sum()) * 2;
+    }
 }

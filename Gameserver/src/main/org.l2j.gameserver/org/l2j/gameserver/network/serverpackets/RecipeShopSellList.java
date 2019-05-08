@@ -35,4 +35,9 @@ public class RecipeShopSellList extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 29 + (_manufacturer.hasManufactureShop() ? _manufacturer.getManufactureItems().size() * 16 + 4: 4);
+    }
 }

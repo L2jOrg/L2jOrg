@@ -28,6 +28,11 @@ public class PledgeReceiveSubPledgeCreated extends IClientOutgoingPacket {
         writeString(getLeaderName(), packet);
     }
 
+    @Override
+    protected int size(L2GameClient client) {
+        return 17 + (getLeaderName().length() + _subPledge.getName().length()) * 2 ;
+    }
+
     private String getLeaderName() {
         final int LeaderId = _subPledge.getLeaderId();
         if ((_subPledge.getId() == L2Clan.SUBUNIT_ACADEMY) || (LeaderId == 0)) {

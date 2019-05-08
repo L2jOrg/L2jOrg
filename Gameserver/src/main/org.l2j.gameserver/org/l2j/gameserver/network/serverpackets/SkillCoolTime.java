@@ -44,4 +44,9 @@ public class SkillCoolTime extends IClientOutgoingPacket {
             packet.putInt((int) ts.getRemaining() / 1000);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + _skillReuseTimeStamps.size() * 12;
+    }
 }

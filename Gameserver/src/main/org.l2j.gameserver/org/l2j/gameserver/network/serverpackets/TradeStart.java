@@ -71,6 +71,6 @@ public final class TradeStart extends AbstractItemPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return 14 + (_sendType == 2 ? _itemList.size() * 100 : 0);
+        return 20 + (_sendType == 2 ? _itemList.size() * 100 : 0);
     }
 }

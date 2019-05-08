@@ -27,4 +27,9 @@ public class ValidateLocation extends IClientOutgoingPacket {
         packet.putInt(_loc.getHeading());
         packet.put((byte) 0xFF); // TODO: Find me!
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 26;
+    }
 }

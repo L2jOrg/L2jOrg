@@ -41,4 +41,9 @@ public class MoveToLocationInVehicle extends IClientOutgoingPacket {
         packet.putInt(_origin.getY());
         packet.putInt(_origin.getZ());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 37;
+    }
 }

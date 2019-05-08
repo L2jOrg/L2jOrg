@@ -67,4 +67,9 @@ public class StaticObject extends IClientOutgoingPacket {
         packet.putInt(_showHp ? 1 : 0);
         packet.putInt(_damageGrade);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 50;
+    }
 }

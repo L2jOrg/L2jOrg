@@ -10,6 +10,8 @@ import org.l2j.gameserver.network.OutgoingPackets;
 import java.nio.ByteBuffer;
 import java.util.List;
 
+import static org.l2j.commons.util.Util.isNullOrEmpty;
+
 /**
  * TODO: Rewrite!!!!!!
  *
@@ -65,6 +67,12 @@ public class ExShowFortressMapInfo extends IClientOutgoingPacket {
                 packet.putInt(0);
             }
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        var commanders = FortSiegeManager.getInstance().getCommanderSpawnList(_fortress.getResidenceId());
+        return 17 + (!isNullOrEmpty(commanders) ? commanders.size() * 8 : _fortress.getFortSize() * 4);
     }
 
     /**

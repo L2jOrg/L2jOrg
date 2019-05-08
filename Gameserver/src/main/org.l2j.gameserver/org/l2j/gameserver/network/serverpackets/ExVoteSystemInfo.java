@@ -36,4 +36,9 @@ public class ExVoteSystemInfo extends IClientOutgoingPacket {
         packet.putInt(_bonusVal);
         packet.putInt(_bonusType);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25;
+    }
 }

@@ -24,4 +24,10 @@ public class ExShowContactList extends IClientOutgoingPacket {
         packet.putInt(_contacts.size());
         _contacts.forEach(contact -> writeString(contact, packet));
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + (_contacts.stream().mapToInt(String::length).sum() + _contacts.size()) *2;
+    }
 }
+

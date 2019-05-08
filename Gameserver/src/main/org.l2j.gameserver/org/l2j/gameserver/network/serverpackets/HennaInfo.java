@@ -50,4 +50,9 @@ public final class HennaInfo extends IClientOutgoingPacket {
         packet.putInt(0x00); // Premium Slot Dye Time Left
         packet.putInt(0x00); // Premium Slot Dye ID isValid
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 41 + _hennas.size() * 8;
+    }
 }

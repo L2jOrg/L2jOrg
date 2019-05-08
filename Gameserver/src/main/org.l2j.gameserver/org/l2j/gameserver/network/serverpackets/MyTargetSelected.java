@@ -31,4 +31,9 @@ public class MyTargetSelected extends IClientOutgoingPacket {
         packet.putShort((short) _color);
         packet.putInt(0x00); // Mode 0x00 - Standard; 0x03 Context Menu
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 19;
+    }
 }

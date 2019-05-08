@@ -23,4 +23,9 @@ public class ExPrivateStoreBuyingResult extends IClientOutgoingPacket {
         packet.putLong(_count);
         writeString(_seller, packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 20 + _seller.length() * 2;
+    }
 }

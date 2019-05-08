@@ -21,4 +21,9 @@ public class ExRequestChangeNicknameColor extends IClientOutgoingPacket {
 
         packet.putInt(_itemObjectId);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

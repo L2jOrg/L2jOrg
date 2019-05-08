@@ -66,4 +66,9 @@ public final class ExShowSellCropList extends IClientOutgoingPacket {
             packet.putLong(item.getCount()); // my crops
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + _cropsItems.size() * 51;
+    }
 }

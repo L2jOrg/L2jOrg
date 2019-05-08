@@ -44,4 +44,9 @@ public class GameGuardQuery extends IClientOutgoingPacket {
         packet.putInt(0x2017038B);
         packet.putInt(0xC35B1EA3);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 21;
+    }
 }

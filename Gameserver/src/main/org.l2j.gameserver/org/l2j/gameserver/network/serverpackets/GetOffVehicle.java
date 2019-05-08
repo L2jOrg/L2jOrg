@@ -40,4 +40,9 @@ public class GetOffVehicle extends IClientOutgoingPacket {
         packet.putInt(_y);
         packet.putInt(_z);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25;
+    }
 }

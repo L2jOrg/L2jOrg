@@ -9,6 +9,8 @@ import org.l2j.gameserver.network.OutgoingPackets;
 import java.nio.ByteBuffer;
 import java.util.List;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author l3x
  */
@@ -56,5 +58,10 @@ public class ExShowCropInfo extends IClientOutgoingPacket {
                 }
             }
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 18 + (nonNull(_crops) ? _crops.size() * 43 : 0);
     }
 }

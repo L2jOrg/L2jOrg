@@ -47,6 +47,6 @@ public class GMViewItemList extends AbstractItemPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return  14 + items.size() * 100 + (sendType == 2 ? 4 :  playerName.length() * 2);
+        return  25 + items.size() * 100 + (sendType == 2 ? 4 :  playerName.length() * 2);
     }
 }

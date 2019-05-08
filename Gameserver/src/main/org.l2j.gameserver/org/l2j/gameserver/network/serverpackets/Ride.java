@@ -34,4 +34,9 @@ public final class Ride extends IClientOutgoingPacket {
         packet.putInt(_loc.getY());
         packet.putInt(_loc.getZ());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 33;
+    }
 }

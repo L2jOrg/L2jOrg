@@ -33,4 +33,9 @@ public final class TeleportToLocation extends IClientOutgoingPacket {
         packet.putInt(_heading);
         packet.putInt(0x00); // Unknown
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 33;
+    }
 }

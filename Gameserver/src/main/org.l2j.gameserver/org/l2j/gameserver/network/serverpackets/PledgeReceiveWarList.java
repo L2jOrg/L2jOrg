@@ -43,4 +43,9 @@ public class PledgeReceiveWarList extends IClientOutgoingPacket {
             packet.putInt(clanWar.getKillToStart()); // Friends to start war left
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + _clanList.size() * 55;
+    }
 }

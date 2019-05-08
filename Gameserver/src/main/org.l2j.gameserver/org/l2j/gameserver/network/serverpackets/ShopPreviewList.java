@@ -60,4 +60,9 @@ public class ShopPreviewList extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25 + _list.size() * 22;
+    }
 }

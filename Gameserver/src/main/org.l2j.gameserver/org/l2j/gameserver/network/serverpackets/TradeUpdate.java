@@ -37,6 +37,6 @@ public class TradeUpdate extends AbstractItemPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return  10 + (_sendType == 2 ? 110 : 0);
+        return  15 + (_sendType == 2 ? 110 : 0);
     }
 }

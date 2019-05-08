@@ -29,4 +29,9 @@ public final class ExSendManorList extends IClientOutgoingPacket {
             packet.putInt(castle.getResidenceId());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 +  CastleManager.getInstance().getCastles().size() * 4;
+    }
 }

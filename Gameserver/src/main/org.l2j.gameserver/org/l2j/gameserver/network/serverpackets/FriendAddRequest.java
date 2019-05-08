@@ -22,4 +22,9 @@ public class FriendAddRequest extends IClientOutgoingPacket {
         packet.put((byte) 0x01);
         writeString(_requestorName, packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 8 + _requestorName.length() * 2;
+    }
 }

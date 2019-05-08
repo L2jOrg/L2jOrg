@@ -33,4 +33,9 @@ public class ExPledgeWaitingListApplied extends IClientOutgoingPacket {
         writeString(_pledgeRecruitInfo.getInformation(), packet);
         writeString(_pledgePlayerRecruitInfo.getMessage(), packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 30 + (_pledgeRecruitInfo.getClan().getName().length() + _pledgeRecruitInfo.getClanLeaderName().length() + _pledgeRecruitInfo.getInformation().length() + _pledgePlayerRecruitInfo.getMessage().length()) * 2;
+    }
 }

@@ -25,4 +25,9 @@ public class ExTacticalSign extends IClientOutgoingPacket {
         packet.putInt(_target.getObjectId());
         packet.putInt(_tokenId);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

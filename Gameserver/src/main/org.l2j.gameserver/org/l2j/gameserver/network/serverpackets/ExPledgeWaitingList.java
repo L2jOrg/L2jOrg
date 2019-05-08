@@ -30,4 +30,9 @@ public class ExPledgeWaitingList extends IClientOutgoingPacket {
             packet.putInt(recruitInfo.getPlayerLvl());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

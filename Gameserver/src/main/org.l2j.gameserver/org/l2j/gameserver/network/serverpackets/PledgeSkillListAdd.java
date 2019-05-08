@@ -24,4 +24,9 @@ public class PledgeSkillListAdd extends IClientOutgoingPacket {
         packet.putInt(_id);
         packet.putInt(_lvl);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

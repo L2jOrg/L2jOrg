@@ -26,4 +26,9 @@ public class ExWorldChatCnt extends IClientOutgoingPacket {
         OutgoingPackets.EX_WORLD_CHAT_CNT.writeId(packet);
         packet.putInt(worldChatCount);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

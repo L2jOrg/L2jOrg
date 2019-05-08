@@ -37,4 +37,9 @@ public final class ExShowManorDefaultInfo extends IClientOutgoingPacket {
             packet.putInt(crop.getReward(2)); // Reward 2 itemId
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 10 + _crops.size() * 26;
+    }
 }

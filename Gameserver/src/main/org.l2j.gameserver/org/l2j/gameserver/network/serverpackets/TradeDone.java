@@ -18,4 +18,9 @@ public class TradeDone extends IClientOutgoingPacket {
 
         packet.putInt(_num);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

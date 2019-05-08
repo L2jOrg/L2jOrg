@@ -18,4 +18,9 @@ public final class NewCharacterSuccess extends IClientOutgoingPacket {
     public void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.NEW_CHARACTER_SUCCESS.writeId(packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 5;
+    }
 }

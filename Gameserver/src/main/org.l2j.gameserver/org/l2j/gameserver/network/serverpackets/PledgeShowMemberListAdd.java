@@ -42,4 +42,9 @@ public final class PledgeShowMemberListAdd extends IClientOutgoingPacket {
         packet.putInt(_isOnline); // 1 = online 0 = offline
         packet.putInt(_pledgeType);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 31 + _name.length() * 2;
+    }
 }

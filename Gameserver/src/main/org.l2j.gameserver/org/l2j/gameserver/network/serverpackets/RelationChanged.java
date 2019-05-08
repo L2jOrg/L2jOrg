@@ -8,6 +8,8 @@ import java.nio.ByteBuffer;
 import java.util.LinkedList;
 import java.util.List;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author Luca Baldi
  */
@@ -73,7 +75,7 @@ public final class RelationChanged extends IClientOutgoingPacket {
     public void writeImpl(L2GameClient client, ByteBuffer packet) {
         OutgoingPackets.RELATION_CHANGED.writeId(packet);
 
-        packet.put((byte) _mask);
+        packet.put(_mask);
         if (_multi == null) {
             writeRelation(packet, _singled);
         } else {
@@ -82,6 +84,11 @@ public final class RelationChanged extends IClientOutgoingPacket {
                 writeRelation(packet, r);
             }
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 6 + (nonNull(_multi) ? _multi.size() * 14 + 2 : 14);
     }
 
     private void writeRelation(ByteBuffer packet, Relation relation) {
@@ -94,6 +101,7 @@ public final class RelationChanged extends IClientOutgoingPacket {
             packet.put((byte) relation._pvpFlag);
         }
     }
+
 
     protected static class Relation {
         int _objId;

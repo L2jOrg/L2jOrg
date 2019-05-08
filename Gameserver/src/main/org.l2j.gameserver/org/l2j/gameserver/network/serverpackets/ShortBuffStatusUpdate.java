@@ -29,4 +29,9 @@ public class ShortBuffStatusUpdate extends IClientOutgoingPacket {
         packet.putShort((short) _skillSubLvl);
         packet.putInt(_duration);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17;
+    }
 }

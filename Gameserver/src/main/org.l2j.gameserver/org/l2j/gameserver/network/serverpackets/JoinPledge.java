@@ -18,4 +18,9 @@ public final class JoinPledge extends IClientOutgoingPacket {
 
         packet.putInt(_pledgeId);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

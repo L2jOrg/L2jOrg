@@ -21,4 +21,9 @@ public class ExRedSky extends IClientOutgoingPacket {
 
         packet.putInt(_duration);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

@@ -30,4 +30,9 @@ public class ExShowUsm extends IClientOutgoingPacket {
 
         packet.putInt(_videoId);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

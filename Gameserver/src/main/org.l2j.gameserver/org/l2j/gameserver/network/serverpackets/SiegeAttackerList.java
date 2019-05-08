@@ -74,4 +74,9 @@ public final class SiegeAttackerList extends IClientOutgoingPacket {
             packet.putInt(0x00);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 30 + _castle.getSiege().getAttackerClans().size() * 148;
+    }
 }

@@ -25,4 +25,9 @@ public class StopRotation extends IClientOutgoingPacket {
         packet.putInt(_speed);
         packet.putInt(0); // ?
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 21;
+    }
 }

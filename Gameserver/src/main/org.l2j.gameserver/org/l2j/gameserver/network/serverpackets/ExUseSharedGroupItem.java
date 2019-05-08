@@ -30,4 +30,9 @@ public class ExUseSharedGroupItem extends IClientOutgoingPacket {
         packet.putInt(_remainingTime);
         packet.putInt(_totalTime);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25;
+    }
 }

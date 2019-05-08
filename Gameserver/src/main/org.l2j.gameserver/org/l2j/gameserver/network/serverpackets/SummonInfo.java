@@ -10,6 +10,7 @@ import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
 import java.nio.ByteBuffer;
+import java.util.Arrays;
 import java.util.Set;
 
 /**
@@ -314,5 +315,10 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType> {
                 packet.putShort((short) abnormalVisualEffect.getClientId());
             }
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 20 + Arrays.stream(NpcInfoType.values()).mapToInt(NpcInfoType::getBlockLength).sum() + _abnormalVisualEffects.size() * 2;
     }
 }

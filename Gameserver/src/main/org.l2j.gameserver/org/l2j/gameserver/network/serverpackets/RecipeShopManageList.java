@@ -9,6 +9,8 @@ import org.l2j.gameserver.network.OutgoingPackets;
 import java.nio.ByteBuffer;
 import java.util.Iterator;
 
+import static java.util.Objects.nonNull;
+
 public class RecipeShopManageList extends IClientOutgoingPacket {
     private final L2PcInstance _seller;
     private final boolean _isDwarven;
@@ -66,5 +68,10 @@ public class RecipeShopManageList extends IClientOutgoingPacket {
                 packet.putLong(item.getCost());
             }
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 20 + (nonNull(_recipes) ? _recipes.length * 8 : 4) + (_seller.hasManufactureShop() ? _seller.getManufactureItems().size() * 16 : 4);
     }
 }

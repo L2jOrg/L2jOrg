@@ -40,7 +40,7 @@ public final class ItemList extends AbstractItemPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        var size = 13 + (_activeChar.getInventory().hasInventoryBlock() ? _activeChar.getInventory().getBlockItems().size() * 4 : 2);
+        var size = 15 + (_activeChar.getInventory().hasInventoryBlock() ? _activeChar.getInventory().getBlockItems().size() * 4 : 2);
         if(_sendType == 2) {
             size += _items.size() * 100;
         }

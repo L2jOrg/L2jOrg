@@ -34,4 +34,9 @@ public class ExPVPMatchCCRecord extends IClientOutgoingPacket {
             packet.putInt(entry.getValue());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + _players.size() * 50;
+    }
 }

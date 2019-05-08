@@ -22,4 +22,9 @@ public class ExPutItemResultForVariationMake extends IClientOutgoingPacket {
         packet.putInt(_itemId);
         packet.putInt(0x01);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17;
+    }
 }

@@ -73,6 +73,11 @@ public final class FlyToLocation extends IClientOutgoingPacket {
         packet.putInt(_animationSpeed);
     }
 
+    @Override
+    protected int size(L2GameClient client) {
+        return 49;
+    }
+
     public enum FlyType {
         THROW_UP,
         THROW_HORIZONTAL,

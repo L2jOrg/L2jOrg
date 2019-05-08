@@ -29,4 +29,9 @@ public class ExShowSeedMapInfo extends IClientOutgoingPacket {
         // Manager not implemented yet
         packet.putInt(2766); // sys msg id
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25;
+    }
 }

@@ -44,7 +44,12 @@ public class ShopPreviewInfo extends IClientOutgoingPacket {
         packet.putInt(getFromList(Inventory.PAPERDOLL_LBRACELET));
     }
 
+    @Override
+    protected int size(L2GameClient client) {
+        return 85;
+    }
+
     private int getFromList(int key) {
-        return (_itemlist.containsKey(key) ? _itemlist.get(key) : 0);
+        return (_itemlist.getOrDefault(key, 0));
     }
 }

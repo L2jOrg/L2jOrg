@@ -30,4 +30,9 @@ public class ExSetCompassZoneCode extends IClientOutgoingPacket {
 
         packet.putInt(_zoneType);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

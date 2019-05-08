@@ -36,4 +36,9 @@ public class ExValidateLocationInAirShip extends IClientOutgoingPacket {
         packet.putInt(_loc.getZ());
         packet.putInt(_heading);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 30;
+    }
 }

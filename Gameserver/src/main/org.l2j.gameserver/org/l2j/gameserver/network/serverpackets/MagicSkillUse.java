@@ -91,4 +91,9 @@ public final class MagicSkillUse extends IClientOutgoingPacket {
         packet.putInt(_actionId >= 0 ? 0x01 : 0x00); // 1 when ID from RequestActionUse is used
         packet.putInt(_actionId >= 0 ? _actionId : 0); // ID from RequestActionUse. Used to set cooldown on summon skills.
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 74 + _unknown.size() * 2 + _groundLocations.size() * 12;
+    }
 }

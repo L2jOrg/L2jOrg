@@ -20,9 +20,6 @@ public class ExShowFortressSiegeInfo extends IClientOutgoingPacket {
     private final int _csize;
     private final int _csize2;
 
-    /**
-     * @param fort
-     */
     public ExShowFortressSiegeInfo(Fort fort) {
         _fortId = fort.getResidenceId();
         _size = fort.getFortSize();
@@ -93,5 +90,10 @@ public class ExShowFortressSiegeInfo extends IClientOutgoingPacket {
                 packet.putInt(0x00);
             }
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17 + _size * 4;
     }
 }

@@ -10,6 +10,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import java.nio.ByteBuffer;
 import java.util.List;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author Migi, DS
  */
@@ -52,5 +54,10 @@ public class ExShowReceivedPostList extends IClientOutgoingPacket {
         }
         packet.putInt(MESSAGE_FEE);
         packet.putInt(MESSAGE_FEE_PER_SLOT);
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 21 + (nonNull(_inbox ) ?  _inbox.size() * 100 + 4 : 4);
     }
 }

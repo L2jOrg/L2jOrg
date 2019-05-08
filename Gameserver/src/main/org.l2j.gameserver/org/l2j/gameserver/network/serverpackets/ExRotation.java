@@ -24,4 +24,9 @@ public class ExRotation extends IClientOutgoingPacket {
         packet.putInt(_charId);
         packet.putInt(_heading);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

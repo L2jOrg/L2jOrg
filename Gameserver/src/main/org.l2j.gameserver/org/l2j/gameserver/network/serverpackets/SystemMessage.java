@@ -67,4 +67,9 @@ public final class SystemMessage extends AbstractMessagePacket<SystemMessage> {
         packet.putShort((short) getId());
         writeMe(packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 7 + writeMeSize(client);
+    }
 }

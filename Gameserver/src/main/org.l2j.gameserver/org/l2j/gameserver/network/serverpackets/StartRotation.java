@@ -27,4 +27,9 @@ public final class StartRotation extends IClientOutgoingPacket {
         packet.putInt(_side);
         packet.putInt(_speed);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 21;
+    }
 }

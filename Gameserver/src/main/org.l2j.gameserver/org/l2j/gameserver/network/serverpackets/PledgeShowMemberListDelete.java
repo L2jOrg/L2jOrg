@@ -18,4 +18,9 @@ public class PledgeShowMemberListDelete extends IClientOutgoingPacket {
 
         writeString(_player, packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 7 +_player.length() * 2;
+    }
 }

@@ -65,6 +65,6 @@ public final class WareHouseDepositList extends AbstractItemPacket {
 
     @Override
     protected int size(L2GameClient client) {
-     return 14 + (_sendType == 2 ? _items.size() * 110 : 10);
+     return 20 + (_sendType == 2 ? _items.size() * 110 : 10);
     }
 }

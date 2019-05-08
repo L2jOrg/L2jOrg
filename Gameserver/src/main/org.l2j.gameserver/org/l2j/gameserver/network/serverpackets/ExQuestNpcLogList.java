@@ -44,4 +44,9 @@ public class ExQuestNpcLogList extends IClientOutgoingPacket {
             packet.putInt(holder.getCount());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 10 + _npcLogList.size() * 9;
+    }
 }

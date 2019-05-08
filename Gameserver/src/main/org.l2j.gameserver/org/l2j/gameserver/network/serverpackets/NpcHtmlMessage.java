@@ -70,6 +70,6 @@ public final class NpcHtmlMessage extends AbstractHtmlPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return getHtml().length() * 2 + 15;
+        return getHtml().length() * 2 + 18;
     }
 }

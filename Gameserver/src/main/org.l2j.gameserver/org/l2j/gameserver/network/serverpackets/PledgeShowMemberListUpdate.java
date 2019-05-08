@@ -62,4 +62,9 @@ public final class PledgeShowMemberListUpdate extends IClientOutgoingPacket {
         packet.putInt(_hasSponsor);
         packet.put((byte) _onlineStatus);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 36 + _name.length() * 2;
+    }
 }

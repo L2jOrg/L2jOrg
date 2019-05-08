@@ -21,4 +21,9 @@ public class ShowPCCafeCouponShowUI extends IClientOutgoingPacket {
         OutgoingPackets.SHOW_PCCAFE_COUPON_SHOW_UI.writeId(packet);
 
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 5;
+    }
 }

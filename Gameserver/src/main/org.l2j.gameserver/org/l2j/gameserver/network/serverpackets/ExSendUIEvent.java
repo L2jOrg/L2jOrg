@@ -9,6 +9,8 @@ import java.nio.ByteBuffer;
 import java.util.Arrays;
 import java.util.List;
 
+import static java.util.Objects.nonNull;
+
 public class ExSendUIEvent extends IClientOutgoingPacket {
     // UI Types
     public static int TYPE_COUNT_DOWN = 0;
@@ -119,5 +121,10 @@ public class ExSendUIEvent extends IClientOutgoingPacket {
                 writeString(param, packet);
             }
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 35 + (nonNull(_params) ? (_params.stream().mapToInt(String::length).sum() + _params.size())* 2 : 0);
     }
 }

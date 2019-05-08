@@ -26,4 +26,9 @@ public final class PledgeStatusChanged extends IClientOutgoingPacket {
         packet.putInt(_clan.getCrestLargeId());
         packet.putInt(0x00); // pledge type ?
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 35;
+    }
 }

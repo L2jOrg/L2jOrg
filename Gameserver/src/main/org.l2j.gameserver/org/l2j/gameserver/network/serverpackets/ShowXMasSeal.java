@@ -21,4 +21,9 @@ public class ShowXMasSeal extends IClientOutgoingPacket {
 
         packet.putInt(_item);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

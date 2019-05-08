@@ -70,4 +70,9 @@ public final class PartySmallWindowAll extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 50 + _party.getMemberCount() * 72 + _party.getMembers().stream().mapToInt(member -> member.getName().length()*2 +  member.getServitors().size() * 60).sum();
+    }
 }

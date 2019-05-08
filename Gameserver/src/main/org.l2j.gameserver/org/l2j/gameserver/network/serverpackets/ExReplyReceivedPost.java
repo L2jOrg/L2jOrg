@@ -11,6 +11,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import java.nio.ByteBuffer;
 import java.util.Collection;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author Migi, DS
  */
@@ -71,6 +73,6 @@ public class ExReplyReceivedPost extends AbstractItemPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return super.size(client);
+        return 86 + (nonNull(_items) ? _items.size() * 104 : 4) + (_msg.getContent().length() + _msg.getSubject().length() + _msg.getSenderName().length()) * 2;
     }
 }

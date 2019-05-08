@@ -76,6 +76,6 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return 14 + (_sendType == 2 ? _items.size() * 120 : 8);
+        return 20 + (_sendType == 2 ? _items.size() * 120 : 8);
     }
 }

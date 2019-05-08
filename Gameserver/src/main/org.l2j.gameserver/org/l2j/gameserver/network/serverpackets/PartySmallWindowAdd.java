@@ -37,4 +37,9 @@ public final class PartySmallWindowAdd extends IClientOutgoingPacket {
         packet.put((byte) 0x00);
         packet.putShort((short) _member.getRace().ordinal());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 48 + _member.getName().length() * 2;
+    }
 }

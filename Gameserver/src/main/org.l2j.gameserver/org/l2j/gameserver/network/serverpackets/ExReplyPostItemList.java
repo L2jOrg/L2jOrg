@@ -37,6 +37,6 @@ public class ExReplyPostItemList extends AbstractItemPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return 12 + _itemList.size() * 100;
+        return 17 + _itemList.size() * 100;
     }
 }

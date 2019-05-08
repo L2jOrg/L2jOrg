@@ -22,4 +22,9 @@ public final class RestartResponse extends IClientOutgoingPacket {
         OutgoingPackets.RESTART_RESPONSE.writeId(packet);
         packet.putInt(_result ? 1 : 0);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9;
+    }
 }

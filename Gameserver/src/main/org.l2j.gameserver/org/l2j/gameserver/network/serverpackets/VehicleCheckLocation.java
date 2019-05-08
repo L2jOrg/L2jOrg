@@ -26,4 +26,9 @@ public class VehicleCheckLocation extends IClientOutgoingPacket {
         packet.putInt(_boat.getZ());
         packet.putInt(_boat.getHeading());
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25;
+    }
 }

@@ -31,6 +31,6 @@ public final class TradeOtherAdd extends AbstractItemPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return 120;
+        return 125;
     }
 }

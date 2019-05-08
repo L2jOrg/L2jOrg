@@ -20,4 +20,9 @@ public final class PartySmallWindowDelete extends IClientOutgoingPacket {
         packet.putInt(_member.getObjectId());
         writeString(_member.getName(), packet);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 11 + _member.getName().length() * 2;
+    }
 }

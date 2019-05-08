@@ -34,4 +34,9 @@ public class PledgeReceiveMemberInfo extends IClientOutgoingPacket {
 
         writeString(_member.getApprenticeOrSponsorName(), packet); // name of this member's apprentice/sponsor
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 40 + (_member.getName().length() + _member.getTitle().length() + _member.getClan().getName().length() + _member.getApprenticeOrSponsorName().length()) * 2;
+    }
 }

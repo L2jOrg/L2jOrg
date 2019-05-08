@@ -8,6 +8,8 @@ import org.l2j.gameserver.network.OutgoingPackets;
 
 import java.nio.ByteBuffer;
 
+import static java.util.Objects.nonNull;
+
 public class SendMacroList extends IClientOutgoingPacket {
     private final int _count;
     private final Macro _macro;
@@ -46,5 +48,12 @@ public class SendMacroList extends IClientOutgoingPacket {
                 writeString(cmd.getCmd(), packet); // command name
             }
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 12 + (nonNull(_macro) ? 15 +
+                (_macro.getName().length() + _macro.getDescr().length() + _macro.getAcronym().length()) *2 +
+                _macro.getCommands().stream().mapToInt(cmd -> cmd.getCmd().length() * 2 + 7).sum() : 0);
     }
 }

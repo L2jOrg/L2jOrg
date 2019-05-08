@@ -35,4 +35,9 @@ public class ExUserInfoAbnormalVisualEffect extends IClientOutgoingPacket {
             packet.putShort((short) AbnormalVisualEffect.STEALTH.getClientId());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 19 + 2 *_activeChar.getEffectList().getCurrentAbnormalVisualEffects().size();
+    }
 }

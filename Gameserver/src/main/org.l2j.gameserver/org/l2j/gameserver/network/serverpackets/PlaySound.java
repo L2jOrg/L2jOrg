@@ -54,4 +54,9 @@ public class PlaySound extends IClientOutgoingPacket {
         packet.putInt(_unknown7); // z
         packet.putInt(_unknown8);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 35 + _soundFile.length() * 2;
+    }
 }

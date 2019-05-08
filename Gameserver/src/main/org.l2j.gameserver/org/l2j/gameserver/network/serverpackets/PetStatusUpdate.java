@@ -53,4 +53,9 @@ public class PetStatusUpdate extends IClientOutgoingPacket {
         packet.putLong(_summon.getExpForNextLevel()); // 100% absolute value
         packet.putInt(0x01); // TODO: Find me!
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 85 + _summon.getTitle().length() * 2;
+    }
 }

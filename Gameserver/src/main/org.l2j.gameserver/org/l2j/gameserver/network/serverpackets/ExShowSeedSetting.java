@@ -78,4 +78,9 @@ public class ExShowSeedSetting extends IClientOutgoingPacket {
         _current.clear();
         _next.clear();
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13 + 66 * _seeds.size();
+    }
 }

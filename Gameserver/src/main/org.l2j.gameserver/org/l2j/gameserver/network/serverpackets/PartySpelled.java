@@ -51,4 +51,9 @@ public class PartySpelled extends IClientOutgoingPacket {
             }
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 17 + _effects.size() * 16 +  _effects2.size() * 12;
+    }
 }

@@ -5,7 +5,6 @@ import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
 import java.nio.ByteBuffer;
-import java.util.SimpleTimeZone;
 
 /**
  * @author KenM
@@ -26,6 +25,6 @@ public final class ExRpItemLink extends AbstractItemPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return 103;
+        return 105;
     }
 }

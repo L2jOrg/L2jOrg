@@ -30,4 +30,9 @@ public class ExPutIntensiveResultForVariationMake extends IClientOutgoingPacket 
         packet.putLong(_gemstoneCount);
         packet.putInt(_unk2);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 30;
+    }
 }

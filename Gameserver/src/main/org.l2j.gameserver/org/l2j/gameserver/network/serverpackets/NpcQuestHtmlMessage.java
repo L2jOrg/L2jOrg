@@ -29,6 +29,11 @@ public final class NpcQuestHtmlMessage extends AbstractHtmlPacket {
     }
 
     @Override
+    protected int size(L2GameClient client) {
+        return 13 + getHtml().length() * 2;
+    }
+
+    @Override
     public HtmlActionScope getScope() {
         return HtmlActionScope.NPC_QUEST_HTML;
     }

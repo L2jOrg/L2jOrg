@@ -8,6 +8,8 @@ import org.l2j.gameserver.network.OutgoingPackets;
 import java.nio.ByteBuffer;
 import java.util.List;
 
+import static org.l2j.commons.util.Util.isNullOrEmpty;
+
 /**
  * @author Migi, DS
  */
@@ -39,5 +41,10 @@ public class ExShowSentPostList extends IClientOutgoingPacket {
         } else {
             packet.putInt(0x00);
         }
+    }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + (isNullOrEmpty(_outbox) ? 4 : _outbox.size() * 90);
     }
 }

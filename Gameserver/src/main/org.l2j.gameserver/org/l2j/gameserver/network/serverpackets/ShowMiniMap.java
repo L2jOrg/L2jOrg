@@ -19,4 +19,9 @@ public class ShowMiniMap extends IClientOutgoingPacket {
         packet.putInt(_mapId);
         packet.put((byte) 0x00); // Seven Signs state
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 10;
+    }
 }

@@ -44,4 +44,9 @@ public class HennaItemDrawInfo extends IClientOutgoingPacket {
         packet.putShort((short) (_activeChar.getWIT() + _activeChar.getHennaValue(BaseStats.WIT))); // equip WIT
         packet.putInt(0x00); // TODO: Find me!
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 95;
+    }
 }

@@ -57,4 +57,9 @@ public class MagicSkillLaunched extends IClientOutgoingPacket {
             packet.putInt(target.getObjectId());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 25 + _targets.size() *  4;
+    }
 }

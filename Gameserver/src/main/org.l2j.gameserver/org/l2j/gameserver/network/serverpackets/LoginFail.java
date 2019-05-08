@@ -40,4 +40,9 @@ public class LoginFail extends IClientOutgoingPacket {
         packet.putInt(_success);
         packet.putInt(_reason);
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 13;
+    }
 }

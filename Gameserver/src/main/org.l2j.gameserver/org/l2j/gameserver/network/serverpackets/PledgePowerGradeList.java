@@ -23,4 +23,9 @@ public class PledgePowerGradeList extends IClientOutgoingPacket {
             packet.putInt(temp.getParty());
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 9 + _privs.length * 8;
+    }
 }

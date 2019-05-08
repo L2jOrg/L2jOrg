@@ -24,4 +24,9 @@ public class PledgeReceivePowerInfo extends IClientOutgoingPacket {
         writeString(_member.getName(), packet);
         packet.putInt(_member.getClan().getRankPrivs(_member.getPowerGrade()).getBitmask()); // privileges
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 15 + _member.getName().length() * 2;
+    }
 }

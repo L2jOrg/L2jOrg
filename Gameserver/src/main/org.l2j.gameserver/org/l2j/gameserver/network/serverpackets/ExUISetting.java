@@ -32,4 +32,9 @@ public class ExUISetting extends IClientOutgoingPacket {
             packet.putInt(0);
         }
     }
+
+    @Override
+    protected int size(L2GameClient client) {
+        return 10;
+    }
 }
