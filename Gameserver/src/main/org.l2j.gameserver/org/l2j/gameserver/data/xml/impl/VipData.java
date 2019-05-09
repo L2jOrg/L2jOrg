@@ -6,7 +6,6 @@ import org.l2j.gameserver.data.xml.model.VipInfo;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
-import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
@@ -38,6 +37,13 @@ public class VipData extends IGameXmlReader{
             if(player.getVipTier() > 0) {
                 if(!checkVipTierExpiration(player)) {
                     player.sendPacket(new ReceiveVipInfo());
+                }
+                var skillId = vipTiers.get(player.getVipTier()).getSkill();
+                if(skillId > 0) {
+                    var skill = SkillData.getInstance().getSkill(skillId, 1);
+                    if(nonNull(skill)) {
+                        player.addSkill(skill);
+                    }
                 }
             } else {
                 player.sendPacket(new ReceiveVipInfo());
@@ -72,17 +78,9 @@ public class VipData extends IGameXmlReader{
         var bonusNode = vipNode.getFirstChild();
         if(nonNull(bonusNode)) {
             attributes = bonusNode.getAttributes();
-            vipInfo.setXpSpBonus(parseFloat(attributes, "xp_sp"));
-            vipInfo.setItemDropBonus(parseFloat(attributes, "item_drop"));
-            vipInfo.setWorldChatBonus(parseInteger(attributes, "world_chat"));
-            vipInfo.setDeathPenaltyReduction(parseFloat(attributes, "death_penalty_reduction"));
-            vipInfo.setFishingXpBonus(parseFloat(attributes, "fishing_xp"));
-            vipInfo.setPvEDamageBonus(parseFloat(attributes, "pve_damage"));
-            vipInfo.setPvPDamageBonus(parseFloat(attributes, "pvp_damage"));
             vipInfo.setSilverCoinChance(parseFloat(attributes, "silver_coin_acquisition"));
             vipInfo.setRustyCoinChance(parseFloat(attributes, "rusty_coin_acquisition"));
-            vipInfo.setReceiveDailyVIPBox(parseBoolean(attributes, "daily_vip_box"));
-            vipInfo.setAllCombatAttributeBonus(parseInteger(attributes, "combat_attribute"));
+            vipInfo.setSkill(parseInteger(attributes, "skill"));
         }
     }
 
@@ -118,38 +116,6 @@ public class VipData extends IGameXmlReader{
             return vipTiers.get(level).getPointsRequired();
         }
         return 0;
-    }
-
-    public float getXPAndSPBonus(L2PcInstance player) {
-        return getVipInfo(player).getXpSpBonus() - 1;
-    }
-
-    public float getItemDropBonus(L2PcInstance player) {
-        return getVipInfo(player).getItemDropBonus();
-    }
-
-    public float getDeathPenaltyReduction(L2PcInstance player) {
-        return getVipInfo(player).getDeathPenaltyReduction();
-    }
-
-    public int getWorldChatBonus(L2PcInstance player) {
-        return getVipInfo(player).getWorldChatBonus();
-    }
-
-    public double getPvPDamageBonus(L2PcInstance player) {
-        return getVipInfo(player).getPvPDamageBonus();
-    }
-
-    public double getPvEDamageBonus(L2PcInstance player) {
-        return getVipInfo(player).getPvEDamageBonus();
-    }
-
-    public float getFishingXPBonus(L2PcInstance player) {
-        return getVipInfo(player).getPhishingXpBonus();
-    }
-
-    public double getCombatAttributesBonus(L2PcInstance player) {
-        return getVipInfo(player).getAllCombatAttributeBonus();
     }
 
     public float getSilverCoinDropChance(L2PcInstance player) {

@@ -702,10 +702,6 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
                 // bonus drop rate effect
                 rateChance *= killer.getStat().getValue(Stats.BONUS_DROP_RATE, 1);
 
-                if(nonNull(killer.getActingPlayer())) {
-                    rateChance *= VipData.getInstance().getItemDropBonus(killer.getActingPlayer());
-                }
-
                 // calculate if item will drop
                 if ((Rnd.nextDouble() * 100) < (dropItem.getChance() * rateChance)) {
                     // amount is calculated after chance returned success

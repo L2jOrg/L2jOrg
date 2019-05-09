@@ -29,8 +29,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public class PrimeShopData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(PrimeShopData.class);
 
-    private final IntObjectMap<PrimeShopProduct> primeItems = new HashIntObjectMap<>(125);
-    private final IntObjectMap<PrimeShopProduct> vipGifts = new HashIntObjectMap<>(7);
+    private final IntObjectMap<PrimeShopProduct> primeItems = new HashIntObjectMap<>(140);
 
     private PrimeShopData() {
         load();
@@ -96,11 +95,7 @@ public class PrimeShopData extends IGameXmlReader{
         product.setVipTier(parseByte(attrs, "vipTier"));
         product.setSilverCoin(parseInteger(attrs, "silverCoin"));
 
-        if(product.getId() >= 100001 && product.getId() <= 100007) {
-            vipGifts.put(product.getId(), product);
-        } else {
-            primeItems.put(product.getId(), product);
-        }
+        primeItems.put(product.getId(), product);
     }
 
     public void showProductInfo(L2PcInstance player, int brId) {
@@ -114,18 +109,11 @@ public class PrimeShopData extends IGameXmlReader{
     }
 
     public PrimeShopProduct getItem(int brId) {
-        if(primeItems.containsKey(brId)) {
-            return primeItems.get(brId);
-        }
-        return vipGifts.get(brId);
+        return primeItems.get(brId);
     }
 
     public IntObjectMap<PrimeShopProduct> getPrimeItems() {
         return primeItems;
-    }
-
-    public PrimeShopProduct getVipGift(byte vipTier) {
-        return vipGifts.get(100000 + vipTier);
     }
 
     public static PrimeShopData getInstance() {

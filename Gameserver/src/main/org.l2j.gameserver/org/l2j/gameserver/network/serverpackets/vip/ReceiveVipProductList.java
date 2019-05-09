@@ -9,15 +9,12 @@ import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 import java.nio.ByteBuffer;
 
-import static java.util.Objects.nonNull;
-
 public class ReceiveVipProductList extends IClientOutgoingPacket {
 
     @Override
     protected void writeImpl(L2GameClient client, ByteBuffer packet) {
         var player = client.getActiveChar();
         var products = PrimeShopData.getInstance().getPrimeItems();
-        var vipTier = player.getVipTier();
 
         OutgoingPackets.RECEIVE_VIP_PRODUCT_LIST.writeId(packet);
         packet.putLong(player.getAdena());
@@ -25,17 +22,10 @@ public class ReceiveVipProductList extends IClientOutgoingPacket {
         packet.putLong(player.getSilverCoin()); // Silver Coin Amount
         packet.put((byte) 1); // Show Reward tab
 
-        packet.putInt(vipTier > 0 ? products.size() + 1 : products.size());
+        packet.putInt(products.size());
 
         for (var product : products.values()) {
             putProduct(packet, product);
-        }
-
-        if(vipTier > 0 ) {
-            var gift = PrimeShopData.getInstance().getVipGift(vipTier);
-            if(nonNull(gift)) {
-                putProduct(packet, gift);
-            }
         }
     }
 
@@ -60,6 +50,6 @@ public class ReceiveVipProductList extends IClientOutgoingPacket {
     @Override
     protected int size(L2GameClient client) {
         var products =PrimeShopData.getInstance().getPrimeItems();
-        return 32 + (products.size() + 1) * 18 + products.values().stream().mapToInt(product -> product.getItems().size()).sum() * 8;
+        return 32 + products.size() * 18 + products.values().stream().mapToInt(product -> product.getItems().size()).sum() * 8;
     }
 }

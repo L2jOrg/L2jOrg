@@ -134,6 +134,7 @@ public enum Stats {
     // VARIOUS
     BREATH("breath"),
     FALL("fall"),
+    FISHING_EXP_SP_BONUS("fishingExpSpBonus"),
 
     // VULNERABILITIES
     DAMAGE_ZONE_VULN("damageZoneVuln"),

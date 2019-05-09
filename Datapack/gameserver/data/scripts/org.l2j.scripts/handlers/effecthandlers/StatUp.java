@@ -21,7 +21,6 @@ import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.BaseStats;
-import org.l2j.gameserver.model.stats.Stats;
 
 /**
  * @author Sdw
@@ -38,38 +37,7 @@ public class StatUp extends AbstractEffect
 	}
 	
 	@Override
-	public void pump(L2Character effected, Skill skill)
-	{
-		Stats stat = Stats.STAT_STR;
-		
-		switch (_stat)
-		{
-			case INT:
-			{
-				stat = Stats.STAT_INT;
-				break;
-			}
-			case DEX:
-			{
-				stat = Stats.STAT_DEX;
-				break;
-			}
-			case WIT:
-			{
-				stat = Stats.STAT_WIT;
-				break;
-			}
-			case CON:
-			{
-				stat = Stats.STAT_CON;
-				break;
-			}
-			case MEN:
-			{
-				stat = Stats.STAT_MEN;
-				break;
-			}
-		}
-		effected.getStat().mergeAdd(stat, _amount);
+	public void pump(L2Character effected, Skill skill) {
+		effected.getStat().mergeAdd(_stat.getStat(), _amount);
 	}
 }

@@ -1343,9 +1343,6 @@ public final class Formulas {
                 pvpAttack = attacker.getStat().getValue(Stats.PVP_PHYSICAL_ATTACK_DAMAGE, 1);
                 pvpDefense = target.getStat().getValue(Stats.PVP_PHYSICAL_ATTACK_DEFENCE, 1);
             }
-            if(nonNull(attacker.getActingPlayer())) {
-                pvpAttack *= VipData.getInstance().getPvPDamageBonus(attacker.getActingPlayer());
-            }
             return 1 + (pvpAttack - pvpDefense);
         }
 
@@ -1373,9 +1370,6 @@ public final class Formulas {
                 pveAttack = attacker.getStat().getValue(Stats.PVE_PHYSICAL_ATTACK_DAMAGE, 1);
                 pveDefense = target.getStat().getValue(Stats.PVE_PHYSICAL_ATTACK_DEFENCE, 1);
                 pveRaidDefense = attacker.isRaid() ? attacker.getStat().getValue(Stats.PVE_RAID_PHYSICAL_ATTACK_DEFENCE, 1) : 1;
-            }
-            if(nonNull(attacker.getActingPlayer())) {
-                pveAttack *= VipData.getInstance().getPvEDamageBonus(attacker.getActingPlayer());
             }
             return (1 + (pveAttack - (pveDefense * pveRaidDefense))) * pvePenalty;
         }

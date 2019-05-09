@@ -4211,23 +4211,24 @@ public final class L2PcInstance extends L2Playable {
             int dropEquipWeapon = 0;
             int dropItem = 0;
             int dropLimit = 0;
-            int dropPercent = 0;
+            double dropPercent = 0;
 
             // Classic calculation.
             if (killer.isPlayable() && (getReputation() < 0) && (_pkKills >= Config.KARMA_PK_LIMIT)) {
                 isKarmaDrop = true;
-                dropPercent = Config.KARMA_RATE_DROP;
+                dropPercent = Config.KARMA_RATE_DROP * getStat().getValue(Stats.REDUCE_DEATH_PENALTY_BY_PVP, 1);
                 dropEquip = Config.KARMA_RATE_DROP_EQUIP;
                 dropEquipWeapon = Config.KARMA_RATE_DROP_EQUIP_WEAPON;
                 dropItem = Config.KARMA_RATE_DROP_ITEM;
                 dropLimit = Config.KARMA_DROP_LIMIT;
             } else if (killer.isNpc()) {
-                dropPercent = Config.PLAYER_RATE_DROP;
+                dropPercent = Config.PLAYER_RATE_DROP * (killer.isRaid() ? getStat().getValue(Stats.REDUCE_DEATH_PENALTY_BY_RAID, 1) : getStat().getValue(Stats.REDUCE_DEATH_PENALTY_BY_MOB, 1));
                 dropEquip = Config.PLAYER_RATE_DROP_EQUIP;
                 dropEquipWeapon = Config.PLAYER_RATE_DROP_EQUIP_WEAPON;
                 dropItem = Config.PLAYER_RATE_DROP_ITEM;
                 dropLimit = Config.PLAYER_DROP_LIMIT;
             }
+
 
             if ((dropPercent > 0) && (Rnd.get(100) < dropPercent)) {
                 int dropCount = 0;
@@ -4461,8 +4462,6 @@ public final class L2PcInstance extends L2Playable {
         if ((killer != null) && killer.isPlayable() && atWarWith(killer.getActingPlayer())) {
             lostExp /= 4.0;
         }
-
-        lostExp *= VipData.getInstance().getDeathPenaltyReduction(this);
 
         model.setExpBeforeDeath(getExp());
         getStat().removeExp(lostExp);
@@ -10787,7 +10786,7 @@ public final class L2PcInstance extends L2Playable {
      * @return The amount of times player can use world chat
      */
     public int getWorldChatPoints() {
-        return (int) getStat().getValue(Stats.WORLD_CHAT_POINTS, Config.WORLD_CHAT_POINTS_PER_DAY) + VipData.getInstance().getWorldChatBonus(this);
+        return (int) getStat().getValue(Stats.WORLD_CHAT_POINTS, Config.WORLD_CHAT_POINTS_PER_DAY);
     }
 
     /**

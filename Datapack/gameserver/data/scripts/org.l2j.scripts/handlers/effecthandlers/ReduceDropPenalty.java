@@ -40,28 +40,21 @@ public class ReduceDropPenalty extends AbstractEffect
 	}
 	
 	@Override
-	public void pump(L2Character effected, Skill skill)
-	{
-		switch (_type)
-		{
-			case MOB:
-			{
-				effected.getStat().mergeMul(Stats.REDUCE_EXP_LOST_BY_MOB, (_exp / 100) + 1);
-				effected.getStat().mergeMul(Stats.REDUCE_DEATH_PENALTY_BY_MOB, (_deathPenalty / 100) + 1);
-				break;
-			}
-			case PK:
-			{
-				effected.getStat().mergeMul(Stats.REDUCE_EXP_LOST_BY_PVP, (_exp / 100) + 1);
-				effected.getStat().mergeMul(Stats.REDUCE_DEATH_PENALTY_BY_PVP, (_deathPenalty / 100) + 1);
-				break;
-			}
-			case RAID:
-			{
-				effected.getStat().mergeMul(Stats.REDUCE_EXP_LOST_BY_RAID, (_exp / 100) + 1);
-				effected.getStat().mergeMul(Stats.REDUCE_DEATH_PENALTY_BY_RAID, (_deathPenalty / 100) + 1);
-				break;
+	public void pump(L2Character effected, Skill skill) {
+		switch (_type) {
+			case MOB -> reduce(effected, Stats.REDUCE_EXP_LOST_BY_MOB, Stats.REDUCE_DEATH_PENALTY_BY_MOB);
+			case PK -> reduce(effected, Stats.REDUCE_EXP_LOST_BY_PVP, Stats.REDUCE_DEATH_PENALTY_BY_PVP);
+			case RAID -> reduce(effected, Stats.REDUCE_EXP_LOST_BY_RAID, Stats.REDUCE_DEATH_PENALTY_BY_RAID);
+			case ANY ->  {
+				reduce(effected, Stats.REDUCE_EXP_LOST_BY_MOB, Stats.REDUCE_DEATH_PENALTY_BY_MOB);
+				reduce(effected, Stats.REDUCE_EXP_LOST_BY_PVP, Stats.REDUCE_DEATH_PENALTY_BY_PVP);
+				reduce(effected, Stats.REDUCE_EXP_LOST_BY_RAID, Stats.REDUCE_DEATH_PENALTY_BY_RAID);
 			}
 		}
+	}
+
+	private void reduce(L2Character effected, Stats statExp, Stats statPenalty) {
+		effected.getStat().mergeMul(statExp, (_exp / 100) + 1);
+		effected.getStat().mergeMul(statPenalty, (_deathPenalty / 100) + 1);
 	}
 }

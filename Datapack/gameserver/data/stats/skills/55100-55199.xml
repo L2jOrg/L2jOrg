@@ -1713,37 +1713,293 @@
 	<skill id="55161" toLevel="1" name="VIP Level 1">
 		<!-- The right to VIP 1st level chest. Acquired XP/ SP +3%, item drop rate +50%. -->
 		<icon>BranchIcon.Icon.g_skill_vip1</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="BonusDropRate">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55162" toLevel="1" name="VIP Level 2">
 		<!-- The right to VIP 2nd level chest. Acquired XP/ SP +7%, item drop rate +150%. World chat on any level, number of usage attempts +10. -->
 		<icon>BranchIcon.Icon.g_skill_vip2</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="BonusDropRate">
+				<amount>150</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WorldChatPoints">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55163" toLevel="1" name="VIP Level 3">
 		<!-- The right to VIP 3rd level chest. Acquired XP/ SP +15%, item drop rate +200%. Experience loss and chance to lose items upon death is -10%. World chat on any level, number of usage attempts +10. -->
 		<icon>BranchIcon.Icon.g_skill_vip3</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="BonusDropRate">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReduceDropPenalty">
+				<exp>-10</exp>
+				<deathPenalty>-10</deathPenalty>
+				<mode>PER</mode>
+				<type>ANY</type>
+			</effect>
+			<effect name="WorldChatPoints">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55164" toLevel="1" name="VIP Level 4">
 		<!-- The right to VIP 4th level chest. Acquired XP/ SP +25%, item drop rate +250%. Experience loss and chance to lose items upon death is -15%. World chat on any level, number of usage attempts +10. XP/ SP gain +20% during fishing. -->
 		<icon>BranchIcon.Icon.g_skill_vip4</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="BonusDropRate">
+				<amount>250</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReduceDropPenalty">
+				<exp>-15</exp>
+				<deathPenalty>-15</deathPenalty>
+				<mode>PER</mode>
+				<type>ANY</type>
+			</effect>
+			<effect name="WorldChatPoints">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="fishingExpSpBonus">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55165" toLevel="1" name="VIP Level 5">
 		<!-- The right to VIP 5th level chest. Acquired XP/ SP +30%, item drop rate +250%. Experience loss and chance to lose items upon death -20%. PvE damage is increased. World chat on any level, number of usage attempts +10. XP/ SP gain +20% during fishing. -->
 		<icon>BranchIcon.Icon.g_skill_vip5</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="BonusDropRate">
+				<amount>250</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReduceDropPenalty">
+				<exp>-20</exp>
+				<deathPenalty>-20</deathPenalty>
+				<mode>PER</mode>
+				<type>ANY</type>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WorldChatPoints">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="fishingExpSpBonus">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55166" toLevel="1" name="VIP Level 6">
-		<!-- The right to VIP 6th level chest. Acquired XP/ SP +30%, item drop rate +250%. Experience loss and chance to lose items upon death -20%. PvE damage is increased, STR/ DEX/ INT/ WIT/ MEN +2. World chat on any level, number of usage attempts +10. XP/ SP gain +20% during fishing. -->
+		<!-- The right to VIP 6th level chest. Acquired XP/ SP +30%, item drop rate +250%. Experience loss and chance to lose items upon death -20%. PvE damage is increased, STR/ DEX/ INT/ WIT/ MEN +1. World chat on any level, number of usage attempts +10. XP/ SP gain +20% during fishing. -->
 		<icon>BranchIcon.Icon.g_skill_vip6</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="BonusDropRate">
+				<amount>250</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReduceDropPenalty">
+				<exp>-20</exp>
+				<deathPenalty>-20</deathPenalty>
+				<mode>PER</mode>
+				<type>ANY</type>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WorldChatPoints">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="fishingExpSpBonus">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55167" toLevel="1" name="VIP Level 7">
 		<!-- The right to VIP 7th level chest. Acquired XP/ SP +30%, item drop rate +250%. Experience loss and chance to lose items upon death -20%. PvE/ PvP damage is increased, STR/ DEX/ INT/ WIT/ MEN +2. World chat on any level, number of usage attempts +20. XP/ SP gain +20% during fishing. -->
 		<icon>BranchIcon.Icon.g_skill_vip7</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="BonusDropRate">
+				<amount>250</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReduceDropPenalty">
+				<exp>-20</exp>
+				<deathPenalty>-20</deathPenalty>
+				<mode>PER</mode>
+				<type>ANY</type>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WorldChatPoints">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="fishingExpSpBonus">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55168" toLevel="1" name="Clan Unity - Lv. 1">
 		<!-- Clan Alliance Buff. For 3 hr., acquired XP/ SP +3%. -->

@@ -350,6 +350,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("WeightLimit", WeightLimit::new);
 		EffectHandler.getInstance().registerHandler("WeightPenalty", WeightPenalty::new);
 		EffectHandler.getInstance().registerHandler("WorldChatPoints", WorldChatPoints::new);
+		EffectHandler.getInstance().registerHandler("fishingExpSpBonus", FishingExpSpBonus::new);
 		LOGGER.info("Loaded {} effect handlers.", EffectHandler.getInstance().size());
 	}
 }
