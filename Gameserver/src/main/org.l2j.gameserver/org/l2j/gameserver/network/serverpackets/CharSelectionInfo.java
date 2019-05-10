@@ -400,8 +400,8 @@ public class CharSelectionInfo extends IClientOutgoingPacket {
 
     @Override
     protected int size(L2GameClient client) {
-        return 21 + _characterPackages.length * 290 + PAPERDOLL_ORDER.length * 4 +
-                Arrays.stream(_characterPackages).mapToInt(info -> info.getName().length() * 2 + _loginName.length() * 2).sum();
+        return 21 + _characterPackages.length  * 320 +   getPaperdollOrder().length * 4 * _characterPackages.length +
+                Arrays.stream(_characterPackages).mapToInt(info -> (info.getName().length() + _loginName.length()) * 2).sum();
     }
 
     @Override
