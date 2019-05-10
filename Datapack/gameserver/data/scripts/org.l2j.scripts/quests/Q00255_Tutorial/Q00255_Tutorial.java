@@ -152,6 +152,7 @@ public class Q00255_Tutorial extends Quest {
                     player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_1, 0));
                     player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
                     player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
+                    qs.setMemoState(4);
                 }
                 break;
             }
@@ -176,15 +177,19 @@ public class Q00255_Tutorial extends Quest {
                 break;
             }
             case "1": { // Client Event On Character move
-                player.sendPacket(new TutorialEnableClientEvent(2));
-                playTutorialVoice(player, "tutorial_voice_004");
-                showTutorialHtml(player, "tutorial_05.html");
+                if(qs.getMemoState() < 2) {
+                    player.sendPacket(new TutorialEnableClientEvent(2));
+                    playTutorialVoice(player, "tutorial_voice_004");
+                    showTutorialHtml(player, "tutorial_05.html");
+                }
                 break;
             }
             case "2": { // Client Event Change point of view
-                player.sendPacket(new TutorialEnableClientEvent(8));
-                playTutorialVoice(player, "tutorial_voice_005");
-                showTutorialHtml(player, "tutorial_07.html");
+                if(qs.getMemoState() < 2) {
+                    player.sendPacket(new TutorialEnableClientEvent(8));
+                    playTutorialVoice(player, "tutorial_voice_005");
+                    showTutorialHtml(player, "tutorial_07.html");
+                }
                 break;
             }
 
