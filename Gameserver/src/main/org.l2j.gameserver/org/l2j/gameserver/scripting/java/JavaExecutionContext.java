@@ -23,6 +23,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.*;
 import java.util.Map.Entry;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.*;
@@ -94,8 +96,8 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
             moduleSourcePath =  this.sourcePath.toString() + File.pathSeparatorChar +  sourcePath.toString();
         }
         var javaVersion = System.getProperty("java.specification.version");
-        return List.of("--module-path", System.getProperty("jdk.module.path"),  "--module-source-path", moduleSourcePath,
-                "-g:"  + getProperty("g"), "-target", javaVersion, "--source", javaVersion, "--enable-preview", "-implicit:class"
+        return List.of("--enable-preview", "--module-path", System.getProperty("jdk.module.path"),  "--module-source-path", moduleSourcePath,
+                "-g:"  + getProperty("g"), "-target", javaVersion, "--source", javaVersion, "-implicit:class"
         );
     }
 
@@ -171,10 +173,18 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
     private static class DefaultDiagnosticListener implements DiagnosticListener<JavaFileObject> {
         @Override
         public void report(Diagnostic<? extends JavaFileObject> diagnostic) {
-            if(nonNull(diagnostic.getSource())) {
-                LOGGER.error("Error on {} {}:{} - {}", diagnostic.getSource().getName(), diagnostic.getLineNumber(), diagnostic.getColumnNumber(), diagnostic.getMessage(Locale.getDefault()));
+            if (diagnostic.getKind() == Diagnostic.Kind.ERROR) {
+                log(LOGGER::error, diagnostic);
             } else {
-                LOGGER.error("Error {}", diagnostic.getMessage(Locale.getDefault()));
+                log(LOGGER::warn, diagnostic);
+            }
+        }
+
+        private void log(BiConsumer<String, Object[]> action, Diagnostic<? extends JavaFileObject> diagnostic) {
+            if(nonNull(diagnostic.getSource())) {
+                action.accept("{} {}:{} - {}", new Object[] { diagnostic.getSource().getName(), diagnostic.getLineNumber(), diagnostic.getColumnNumber(), diagnostic.getMessage(Locale.getDefault())} );
+            } else {
+                action.accept("{}", new Object[] { diagnostic.getMessage(Locale.getDefault()) });
             }
         }
     }
