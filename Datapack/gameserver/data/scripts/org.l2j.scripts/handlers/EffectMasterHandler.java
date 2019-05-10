@@ -16,6 +16,7 @@ public final class EffectMasterHandler
 	public static void main(String[] args) {
 		EffectHandler.getInstance().registerHandler("AbnormalShield", AbnormalShield::new);
 		EffectHandler.getInstance().registerHandler("AbnormalTimeChange", AbnormalTimeChange::new);
+		EffectHandler.getInstance().registerHandler("AbnormalVisualEffect", VisualEffect::new);
 		EffectHandler.getInstance().registerHandler("AbsorbDamage", AbsorbDamage::new);
 		EffectHandler.getInstance().registerHandler("Accuracy", Accuracy::new);
 		EffectHandler.getInstance().registerHandler("AddHate", AddHate::new);
@@ -124,6 +125,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("FatalBlowRate", FatalBlowRate::new);
 		EffectHandler.getInstance().registerHandler("Fear", Fear::new);
 		EffectHandler.getInstance().registerHandler("Feed", Feed::new);
+		EffectHandler.getInstance().registerHandler("FishingExpSpBonus", FishingExpSpBonus::new);
 		EffectHandler.getInstance().registerHandler("Flag", Flag::new);
 		EffectHandler.getInstance().registerHandler("FlipBlock", FlipBlock::new);
 		EffectHandler.getInstance().registerHandler("FocusEnergy", FocusEnergy::new);
@@ -350,7 +352,6 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("WeightLimit", WeightLimit::new);
 		EffectHandler.getInstance().registerHandler("WeightPenalty", WeightPenalty::new);
 		EffectHandler.getInstance().registerHandler("WorldChatPoints", WorldChatPoints::new);
-		EffectHandler.getInstance().registerHandler("fishingExpSpBonus", FishingExpSpBonus::new);
 		LOGGER.info("Loaded {} effect handlers.", EffectHandler.getInstance().size());
 	}
 }

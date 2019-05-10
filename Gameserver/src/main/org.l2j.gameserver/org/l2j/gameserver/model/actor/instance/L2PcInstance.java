@@ -6954,7 +6954,7 @@ public final class L2PcInstance extends L2Playable {
     public void setInventoryBlockingStatus(boolean val) {
         _inventoryDisable = val;
         if (val) {
-            ThreadPoolManager.getInstance().schedule(new InventoryEnableTask(this), 1500);
+            ThreadPoolManager.schedule(new InventoryEnableTask(this), 1500);
         }
     }
 

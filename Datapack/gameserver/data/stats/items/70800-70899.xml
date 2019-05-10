@@ -354,6 +354,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="55710" level="1" type="ON_EQUIP"/> <!-- Bright light -->
+			<skill id="55711" level="1" type="ON_UNEQUIP"/> <!-- Bright light fades -->
 			<skill id="55712" level="1"/>  <!-- Activates 5 jewel slots. -->
 			<skill id="55713" level="1"/> <!-- Inventory Slot +12. -->
 		</skills>

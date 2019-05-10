@@ -16,9 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.Arrays;
-import java.util.StringTokenizer;
-
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.Movie;
 import org.l2j.gameserver.enums.Team;
@@ -35,20 +32,13 @@ import org.l2j.gameserver.model.html.PageResult;
 import org.l2j.gameserver.model.html.styles.ButtonsStyle;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.Earthquake;
-import org.l2j.gameserver.network.serverpackets.ExRedSky;
-import org.l2j.gameserver.network.serverpackets.ExUserInfoAbnormalVisualEffect;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
-import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2j.gameserver.network.serverpackets.OnEventTrigger;
-import org.l2j.gameserver.network.serverpackets.PlaySound;
-import org.l2j.gameserver.network.serverpackets.SocialAction;
-import org.l2j.gameserver.network.serverpackets.SunRise;
-import org.l2j.gameserver.network.serverpackets.SunSet;
+import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.Util;
+
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
 /**
  * This class handles following admin commands:
@@ -539,10 +529,8 @@ public class AdminEffects implements IAdminCommandHandler
 					}
 				}
 				
-				final PageResult result = PageBuilder.newBuilder(AbnormalVisualEffect.values(), 100, "bypass -h admin_ave_abnormal").currentPage(page).style(ButtonsStyle.INSTANCE).bodyHandler((pages, ave, sb) ->
-				{
-					sb.append(String.format("<button action=\"bypass admin_ave_abnormal %s\" align=left icon=teleport>%s(%d)</button>", ave.name(), ave.name(), ave.getClientId()));
-				}).build();
+				final PageResult result = PageBuilder.newBuilder(AbnormalVisualEffect.values(), 50, "bypass -h admin_ave_abnormal").currentPage(page).style(ButtonsStyle.INSTANCE).bodyHandler((pages, ave, sb) ->
+						sb.append(String.format("<button action=\"bypass admin_ave_abnormal %s\" align=left icon=teleport>%s(%d)</button>", ave.name(), ave.name(), ave.getClientId()))).build();
 				
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 				html.setFile(activeChar, "data/html/admin/ave_abnormal.htm");
@@ -558,7 +546,7 @@ public class AdminEffects implements IAdminCommandHandler
 				
 				html.replace("%abnormals%", result.getBodyTemplate().toString());
 				activeChar.sendPacket(html);
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //" + command.replace("admin_", "") + " <AbnormalVisualEffect> [radius]");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //" + command.replace("admin_", "") + " <VisualEffect> [radius]");
 				return true;
 			}
 		}
@@ -570,20 +558,17 @@ public class AdminEffects implements IAdminCommandHandler
 				int level = 1;
 				int hittime = 1;
 				final int skill = Integer.parseInt(st.nextToken());
-				if (st.hasMoreTokens())
-				{
+
+				if (st.hasMoreTokens()) {
 					level = Integer.parseInt(st.nextToken());
 				}
-				if (st.hasMoreTokens())
-				{
+				if (st.hasMoreTokens()) {
 					hittime = Integer.parseInt(st.nextToken());
 				}
-				if (obj == null)
-				{
+				if (obj == null) {
 					obj = activeChar;
 				}
-				if (!obj.isCharacter())
-				{
+				if (!obj.isCharacter()) {
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 				else

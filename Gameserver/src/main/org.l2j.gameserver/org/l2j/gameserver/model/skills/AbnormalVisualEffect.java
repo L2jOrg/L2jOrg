@@ -22,6 +22,7 @@ package org.l2j.gameserver.model.skills;
  * @author NosBit
  */
 public enum AbnormalVisualEffect {
+    NONE(0),
     DOT_BLEEDING(1),
     DOT_POISON(2),
     DOT_FIRE(3),

@@ -942,9 +942,7 @@ public final class CharEffectList {
      * @param aves the abnormal visual effects
      */
     public final void startAbnormalVisualEffect(AbnormalVisualEffect... aves) {
-        for (AbnormalVisualEffect ave : aves) {
-            _abnormalVisualEffects.add(ave);
-        }
+            _abnormalVisualEffects.addAll(Arrays.asList(aves));
         _owner.updateAbnormalVisualEffects();
     }
 

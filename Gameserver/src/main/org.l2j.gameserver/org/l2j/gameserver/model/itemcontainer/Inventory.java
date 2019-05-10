@@ -1587,7 +1587,7 @@ public abstract class Inventory extends ItemContainer {
 
         @Override
         public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory) {
-            if (!inventory.getOwner().isPlayer()) {
+                    if (!inventory.getOwner().isPlayer()) {
                 return;
             }
 

@@ -72,10 +72,21 @@
 		<!-- Brooch radiates bright light. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
 		<operateType>A1</operateType>
+		<effects>
+			<effect name="AbnormalVisualEffect">
+				<type>AVE_BROOCH</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55711" toLevel="1" name="Remove Lv. 4 Brooch">
 		<!-- Bright light fades. -->
 		<operateType>A1</operateType>
+		<effects>
+			<effect name="AbnormalVisualEffect">
+				<type>AVE_BROOCH</type>
+				<mode>STOP</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55712" toLevel="1" name="Lv. 4 Brooch">
 		<!-- Activates 5 jewel slots. -->
