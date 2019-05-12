@@ -1,9 +1,10 @@
 package org.l2j.gameserver.scripting.java;
 
-import org.l2j.commons.util.filter.JavaFilter;
-import org.l2j.gameserver.Config;
+import org.l2j.commons.util.FilterUtil;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.scripting.AbstractExecutionContext;
 import org.l2j.gameserver.scripting.annotations.Disabled;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,7 +12,6 @@ import javax.tools.Diagnostic;
 import javax.tools.DiagnosticListener;
 import javax.tools.JavaFileObject;
 import javax.tools.StandardLocation;
-import java.io.File;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.lang.module.Configuration;
@@ -23,11 +23,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.*;
 import java.util.Map.Entry;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.*;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public final class JavaExecutionContext extends AbstractExecutionContext<JavaScriptingEngine> {
 
@@ -42,43 +41,23 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
     JavaExecutionContext(JavaScriptingEngine engine) {
         super(engine);
 
-        sourcePath = Path.of(Config.DATAPACK_ROOT.getAbsolutePath(), requireNonNullElse(getProperty("source.path"), "data/Scripts"));
+        sourcePath = getSettings(ServerSettings.class).dataPackDirectory().resolve(requireNonNullElse(getProperty("source.path"), "data/scripts"));
         try {
-            compileScripts();
+            compileModuleInfo();
+            compile(sourcePath);
         } catch (Exception e) {
             LOGGER.error("Could not compile Java Scripts", e);
         }
     }
 
-    private void compileScripts() throws Exception {
+    private void compileModuleInfo() throws Exception {
         Files.createDirectories(destination);
         initializeScriptingFileManager();
-        compile(sourcePath);
-    }
 
-    private void compile(Path sourcePath) throws JavaCompilerException, IOException {
-        var sources = Files.walk(sourcePath).filter(JavaFilter::accept).collect(Collectors.toList());
-        var options = parseOptions(sourcePath);
-        var writer = new StringWriter();
-        final boolean compilationSuccess = getScriptingEngine().getCompiler().getTask(writer, scriptingFileManager, listener, options, null, scriptingFileManager.getJavaFileObjectsFromPaths(sources)).call();
-        if (!compilationSuccess) {
-            throw new JavaCompilerException(writer.toString());
-        }
-        tryConfigureModuleLayer();
-    }
-
-    private void tryConfigureModuleLayer() {
-        var moduleNames = scriptingFileManager.getModuleNames();
-        if(moduleNames.isEmpty()) {
-            return;
-        }
-
-        try {
-            Configuration configuration = ModuleLayer.boot().configuration().resolve(ModuleFinder.of(destination), ModuleFinder.of(), moduleNames);
-            layer = ModuleLayer.boot().defineModulesWithOneLoader(configuration, ClassLoader.getSystemClassLoader());
-        } catch (Exception e) {
-            LOGGER.warn("Couldn't configure module layer of modules {} : {}", moduleNames, e.getMessage());
-        }
+        var options = new ArrayList<>(compileOptions());
+        options.add("--module-source-path");
+        options.add(sourcePath.toString());
+        compile(findModuleInfo(), options);
     }
 
     private void initializeScriptingFileManager() throws IOException {
@@ -88,17 +67,65 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
         scriptingFileManager = new ScriptingFileManager(fileManager);
     }
 
-    private List<String> parseOptions(Path sourcePath) {
-        String moduleSourcePath;
-        if(sourcePath.equals(this.sourcePath)) {
-            moduleSourcePath = sourcePath.toString();
-        } else {
-            moduleSourcePath =  this.sourcePath.toString() + File.pathSeparatorChar +  sourcePath.toString();
+    private List<Path> findModuleInfo() throws IOException {
+        return Files.find(sourcePath, Integer.MAX_VALUE,
+                (path, attributes) -> "module-info.java".equals(path.getFileName().toString())).collect(Collectors.toList());
+    }
+
+    private void tryConfigureModuleLayer() {
+        var moduleNames = scriptingFileManager.getModuleNames();
+        if(moduleNames.isEmpty()) {
+            return;
         }
+        try {
+            Configuration configuration = ModuleLayer.boot().configuration().resolve(ModuleFinder.of(destination), ModuleFinder.of(), moduleNames);
+            layer = ModuleLayer.boot().defineModulesWithOneLoader(configuration, ClassLoader.getSystemClassLoader());
+        } catch (Exception e) {
+            LOGGER.warn("Couldn't configure module layer of modules {} : {}", moduleNames, e.getMessage());
+        }
+    }
+
+    private void compile(List<Path> sources, List<String> options) throws JavaCompilerException {
+        if(!Util.isNullOrEmpty(sources)) {
+            var writer = new StringWriter();
+            final boolean compilationSuccess = getScriptingEngine().getCompiler().getTask(writer, scriptingFileManager, listener, options, null, scriptingFileManager.getJavaFileObjectsFromPaths(sources)).call();
+
+            if (!compilationSuccess) {
+                throw new JavaCompilerException(writer.toString());
+            }
+            tryConfigureModuleLayer();
+        }
+    }
+
+    private void compile(Path sourcePath) throws JavaCompilerException, IOException {
+        var paths = Files.walk(sourcePath).filter(this::needCompile).collect(Collectors.toList());
+        if(!Util.isNullOrEmpty(paths)) {
+            compile(paths, compileOptions());
+        }
+    }
+
+    private boolean needCompile(Path path) {
+        if(!FilterUtil.javaFile(path)) {
+            return false;
+        }
+
+        try {
+            var compiled = destination.resolve(Path.of(sourcePath.relativize(path).toString().replace(".java", ".class")));
+
+            if(Files.notExists(compiled) || Files.getLastModifiedTime(compiled).compareTo(Files.getLastModifiedTime(path)) < 0) {
+                return true;
+            }
+            return !scriptingFileManager.beAwareOfObjectFile(path, compiled);
+        } catch (IOException e) {
+            LOGGER.warn(e.getMessage(), e);
+            return true;
+        }
+    }
+
+    private List<String> compileOptions() {
         var javaVersion = System.getProperty("java.specification.version");
-        return List.of("--enable-preview", "--module-path", System.getProperty("jdk.module.path"),  "--module-source-path", moduleSourcePath,
-                "-g:"  + getProperty("g"), "-target", javaVersion, "--source", javaVersion, "-implicit:class"
-        );
+        return List.of("--enable-preview", "--module-path", System.getProperty("jdk.module.path"),
+                    "-g:"  + getProperty("g"), "-target", javaVersion, "--source", javaVersion, "-implicit:class");
     }
 
     @Override
@@ -120,6 +147,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 
             if(isNull(scriptFileInfo)) {
                 LOGGER.error("Compilation successfull, but class coresponding to " + sourcePath.toString() + " not found!");
+                continue;
             }
 
             var javaName = scriptFileInfo.getJavaName();
@@ -173,18 +201,10 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
     private static class DefaultDiagnosticListener implements DiagnosticListener<JavaFileObject> {
         @Override
         public void report(Diagnostic<? extends JavaFileObject> diagnostic) {
-            if (diagnostic.getKind() == Diagnostic.Kind.ERROR) {
-                log(LOGGER::error, diagnostic);
+            if (nonNull(diagnostic.getSource())) {
+                LOGGER.warn("{} {}:{} - {}", diagnostic.getSource().getName(), diagnostic.getLineNumber(), diagnostic.getColumnNumber(), diagnostic.getMessage(Locale.getDefault()) );
             } else {
-                log(LOGGER::warn, diagnostic);
-            }
-        }
-
-        private void log(BiConsumer<String, Object[]> action, Diagnostic<? extends JavaFileObject> diagnostic) {
-            if(nonNull(diagnostic.getSource())) {
-                action.accept("{} {}:{} - {}", new Object[] { diagnostic.getSource().getName(), diagnostic.getLineNumber(), diagnostic.getColumnNumber(), diagnostic.getMessage(Locale.getDefault())} );
-            } else {
-                action.accept("{}", new Object[] { diagnostic.getMessage(Locale.getDefault()) });
+                LOGGER.warn(diagnostic.getMessage(Locale.getDefault()), diagnostic.getSource());
             }
         }
     }

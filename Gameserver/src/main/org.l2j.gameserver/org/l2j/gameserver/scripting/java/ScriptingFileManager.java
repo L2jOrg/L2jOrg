@@ -2,24 +2,22 @@ package org.l2j.gameserver.scripting.java;
 
 import org.l2j.commons.util.Util;
 
-import javax.tools.FileObject;
-import javax.tools.ForwardingJavaFileManager;
-import javax.tools.JavaFileObject;
+import javax.tools.*;
 import javax.tools.JavaFileObject.Kind;
-import javax.tools.StandardJavaFileManager;
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
+
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 
 final class ScriptingFileManager extends ForwardingJavaFileManager<StandardJavaFileManager> {
 
     private final Map<Path, ScriptingFileInfo> scriptsFileInfo = new HashMap<>();
     private final Set<String> moduleNames = new HashSet<>();
 
-    public ScriptingFileManager(StandardJavaFileManager fileManager) {
+    ScriptingFileManager(StandardJavaFileManager fileManager) {
         super(fileManager);
     }
 
@@ -44,15 +42,39 @@ final class ScriptingFileManager extends ForwardingJavaFileManager<StandardJavaF
         return javaFileObject;
     }
 
-    public Set<String> getModuleNames() {
+    Set<String> getModuleNames() {
         return moduleNames;
     }
 
-    public ScriptingFileInfo getScriptInfo(Path scriptPath) {
+    ScriptingFileInfo getScriptInfo(Path scriptPath) {
         return scriptsFileInfo.get(scriptPath);
     }
 
-    public Iterable<? extends JavaFileObject> getJavaFileObjectsFromPaths(Iterable<Path> paths) {
+    Iterable<? extends JavaFileObject> getJavaFileObjectsFromPaths(Iterable<Path> paths) {
         return fileManager.getJavaFileObjectsFromPaths(paths);
+    }
+
+    boolean beAwareOfObjectFile(Path path, Path compiled) throws IOException {
+        var filesObject = getJavaFileObjectsFromPaths(Collections.singletonList(compiled));
+        var it = filesObject.iterator();
+        if(it.hasNext()) {
+            var javaFileObject = it.next();
+            var classLocation = getLocationForModule(StandardLocation.CLASS_OUTPUT, javaFileObject);
+            var module = inferModuleName(classLocation);
+            var parentPath = compiled.getParent();
+
+            while (nonNull(parentPath) && !parentPath.getFileName().toString().equals(module)) {
+                parentPath = parentPath.getParent();
+            }
+
+            if(isNull(parentPath)) {
+                return false;
+            }
+
+            var className = parentPath.relativize(compiled).toString().replace(".class", "").replaceAll(File.separator, ".");
+            scriptsFileInfo.putIfAbsent(path, new ScriptingFileInfo(path, className, module, classLocation));
+            return true;
+        }
+        return false;
     }
 }

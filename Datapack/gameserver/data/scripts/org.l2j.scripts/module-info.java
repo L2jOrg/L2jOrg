@@ -10,12 +10,6 @@ open module org.l2j.scripts {
     requires org.slf4j;
     requires io.github.joealisson.primitive;
 
-    exports handlers;
-    exports quests;
-    exports events;
-    exports instances;
-    exports ai;
-
     uses instances.AbstractInstance;
     uses events.ScriptEvent;
     uses ai.AbstractNpcAI;

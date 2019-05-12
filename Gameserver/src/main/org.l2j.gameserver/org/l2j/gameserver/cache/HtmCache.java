@@ -46,7 +46,7 @@ public class HtmCache {
 
     public String loadFile(String filePath) {
         var path =  getSettings(ServerSettings.class).dataPackDirectory().resolve(filePath);
-        if(FilterUtil.htmlFilter(path)) {
+        if(FilterUtil.htmlFile(path)) {
             try {
                 var content = processHtml(Files.readString(path));
                 content = content.replaceAll("(?s)<!--.*?-->", "").replaceAll("[\r\n\t]", ""); // Remove html comments and spaces
@@ -107,7 +107,7 @@ public class HtmCache {
      * @return {@code true} if the path targets a HTM or HTML file, {@code false} otherwise.
      */
     public boolean isLoadable(String path) {
-        return FilterUtil.htmlFilter(getSettings(ServerSettings.class).dataPackDirectory().resolve(path));
+        return FilterUtil.htmlFile(getSettings(ServerSettings.class).dataPackDirectory().resolve(path));
     }
 
     private String parseTemplateName(String name) {

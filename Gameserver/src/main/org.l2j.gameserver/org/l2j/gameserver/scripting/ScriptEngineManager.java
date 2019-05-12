@@ -1,6 +1,7 @@
 package org.l2j.gameserver.scripting;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,6 +13,7 @@ import java.util.*;
 import java.util.Map.Entry;
 
 import static java.util.Objects.isNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Caches script engines and provides functionality for executing and managing scripts.
@@ -22,7 +24,7 @@ public final class ScriptEngineManager  {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ScriptEngineManager.class);
 
-    public static final Path SCRIPT_FOLDER = Paths.get(Config.DATAPACK_ROOT.getAbsolutePath(), "data", "scripts");
+    public static final Path SCRIPT_FOLDER = getSettings(ServerSettings.class).dataPackDirectory().resolve("data/scripts");
     private static final Path MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "MasterHandler.java");
     private static final Path EFFECT_MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "EffectMasterHandler.java");
     private static final Path SKILL_CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "SkillConditionMasterHandler.java");
@@ -151,11 +153,10 @@ public final class ScriptEngineManager  {
                 var fileName = file.getFileName().toString();
 
                 if(attrs.isRegularFile() && fileName.startsWith("Init")) {
-                    var sourceFile = file.toAbsolutePath();
                     var ext = fileName.substring(fileName.lastIndexOf(".") +1);
 
                     if(ext.equals(fileName)) {
-                        LOGGER.warn("ScriptFile: {} does not have an extension to determine the script engine!", sourceFile);
+                        LOGGER.warn("ScriptFile: {} does not have an extension to determine the script engine!", file);
                         return FileVisitResult.CONTINUE;
                     }
 
@@ -164,7 +165,7 @@ public final class ScriptEngineManager  {
                         return FileVisitResult.CONTINUE;
                     }
 
-                    files.computeIfAbsent(engine, k -> new LinkedList<>()).add(sourceFile);
+                    files.computeIfAbsent(engine, k -> new LinkedList<>()).add(file);
                 }
                 return FileVisitResult.CONTINUE;
             }
@@ -176,14 +177,13 @@ public final class ScriptEngineManager  {
     public void executeScript(Path sourceFile) throws Exception {
         Objects.requireNonNull(sourceFile);
 
-        if (!sourceFile.isAbsolute()) {
-            sourceFile = SCRIPT_FOLDER.resolve(sourceFile);
+        if (sourceFile.isAbsolute()) {
+            sourceFile = SCRIPT_FOLDER.toAbsolutePath().relativize(sourceFile);
         }
 
         // throws exception if not exists or not file
         checkExistingFile(sourceFile);
 
-        sourceFile = sourceFile.toAbsolutePath();
         final String ext = getFileExtension(sourceFile);
         Objects.requireNonNull(sourceFile, "ScriptFile: " + sourceFile + " does not have an extension to determine the script engine!");
 

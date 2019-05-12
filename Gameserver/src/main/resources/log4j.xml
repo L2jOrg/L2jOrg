@@ -45,6 +45,8 @@
         </Root>
         <Logger name="org.l2j.gameserver" level="info">
             <AppenderRef ref="game"/>
+        </Logger>
+        <Logger name="org.l2j" level="debug">
             <AppenderRef ref="debug"/>
         </Logger>
         <Logger name="com.zaxxer.hikari" level="info">

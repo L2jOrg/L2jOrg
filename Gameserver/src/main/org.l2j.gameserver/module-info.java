@@ -9,7 +9,6 @@ module org.l2j.gameserver {
     requires cache.api;
     requires jdk.unsupported;
     requires java.management;
-    requires java.scripting;
     requires java.compiler;
 
     opens org.l2j.gameserver.settings to org.l2j.commons;

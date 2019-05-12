@@ -93,7 +93,7 @@ public abstract class XmlReader
      * @param file the XML file to parse.
      */
     protected void parseFile(File file) {
-        if (!FilterUtil.xmlFilter(file)) {
+        if (!FilterUtil.xmlFile(file)) {
             LOGGER.warn("Could not parse {} is not a file or it doesn't exist!", file);
             return;
         }
@@ -136,7 +136,7 @@ public abstract class XmlReader
             {
                 parseDirectory(f, recursive);
             }
-            else if (FilterUtil.xmlFilter(f.toPath()))
+            else if (FilterUtil.xmlFile(f.toPath()))
             {
                 parseFile(f);
             }
