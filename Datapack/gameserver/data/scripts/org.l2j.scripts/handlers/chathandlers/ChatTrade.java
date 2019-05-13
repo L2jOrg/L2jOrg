@@ -27,6 +27,9 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.GeneralSettings;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Trade chat handler.
@@ -52,9 +55,9 @@ public final class ChatTrade implements IChatHandler
 			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
 			return;
 		}
-		if (activeChar.getLevel() < 20)
-		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TRADE_CHAT_CANNOT_BE_USED_BY_NON_PREMIUM_USERS_LV_S1_OR_LOWER).addInt(20));
+		var levelRequired =  getSettings(GeneralSettings.class).tradeChatLevel();
+		if (activeChar.getLevel() < levelRequired) {
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TRADE_CHAT_CANNOT_BE_USED_BY_NON_PREMIUM_USERS_LV_S1_OR_LOWER).addInt(levelRequired));
 			return;
 		}
 		
