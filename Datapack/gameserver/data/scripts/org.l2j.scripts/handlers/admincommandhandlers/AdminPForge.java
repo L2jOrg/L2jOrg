@@ -16,12 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.math.BigInteger;
-import java.nio.ByteBuffer;
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.StringTokenizer;
-
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
@@ -31,6 +25,12 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.AdminForgePacket;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
+
+import java.math.BigInteger;
+import java.nio.ByteBuffer;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.StringTokenizer;
 
 /**
  * This class handles commands for gm to forge packets
@@ -178,19 +178,11 @@ public final class AdminPForge implements IAdminCommandHandler
 		return true;
 	}
 	
-	private boolean validateMethod(String method)
-	{
-		switch (method)
-		{
-			case "sc":
-			case "sb":
-			case "cs":
-			{
-				return true;
-			}
-		}
-		
-		return false;
+	private boolean validateMethod(String method) {
+		return switch (method) {
+			case "sc", "sb", "cs" -> true;
+			default -> false;
+		};
 	}
 	
 	private void showValuesUsage(L2PcInstance activeChar)
@@ -625,7 +617,7 @@ public final class AdminPForge implements IAdminCommandHandler
 	{
 		if ((b == 'C') || (b == 'c'))
 		{
-			buf.put(Byte.decode(string));
+			buf.put(Integer.decode(string).byteValue());
 			return true;
 		}
 		else if ((b == 'D') || (b == 'd'))
@@ -635,7 +627,7 @@ public final class AdminPForge implements IAdminCommandHandler
 		}
 		else if ((b == 'H') || (b == 'h'))
 		{
-			buf.putShort(Short.decode(string));
+			buf.putShort(Integer.decode(string).shortValue());
 			return true;
 		}
 		else if ((b == 'F') || (b == 'f'))

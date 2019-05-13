@@ -12,6 +12,7 @@ sourceSets {
     main {
         java {
             srcDirs = ['src/main/org.l2j.gameserver']
+
         }
         resources {
             srcDirs = ['src/main/resources']

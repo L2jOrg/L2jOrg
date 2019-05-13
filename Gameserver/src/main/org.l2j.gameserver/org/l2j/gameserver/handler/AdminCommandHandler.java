@@ -81,7 +81,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
             player.sendPacket(dlg);
         } else {
             // Admin Commands must run through a long running task, otherwise a command that takes too much time will freeze the server, this way you'll feel only a minor spike.
-            ThreadPoolManager.getInstance().execute(() ->
+            ThreadPoolManager.execute(() ->
             {
                 final long begin = System.currentTimeMillis();
                 try {

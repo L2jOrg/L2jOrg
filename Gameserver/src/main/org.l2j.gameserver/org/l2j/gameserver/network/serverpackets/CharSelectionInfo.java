@@ -293,7 +293,6 @@ public class CharSelectionInfo extends IClientOutgoingPacket {
                 }
             }
         }
-
         for (int i = 0; i < size; i++) {
             final CharSelectInfoPackage charInfoPackage = _characterPackages[i];
 

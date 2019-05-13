@@ -43,7 +43,7 @@ public class AdminForgePacket extends IClientOutgoingPacket {
     public boolean generate(ByteBuffer packet, byte type, String value) {
         return switch (type | 32) {
             case 'c' -> {
-                packet.put(Byte.decode(value));
+                packet.put(Integer.decode(value).byteValue());
                 break true;
             }
             case 'd' -> {
@@ -51,7 +51,7 @@ public class AdminForgePacket extends IClientOutgoingPacket {
                 break true;
             }
             case 'h' -> {
-                packet.putShort(Short.decode(value));
+                packet.putShort(Integer.decode(value).shortValue());
                 break true;
             }
             case 'f' -> {

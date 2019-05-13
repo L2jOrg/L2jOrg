@@ -9,6 +9,7 @@ import org.l2j.gameserver.network.clientpackets.attendance.RequestVipAttendanceI
 import org.l2j.gameserver.network.clientpackets.attributechange.RequestChangeAttributeCancel;
 import org.l2j.gameserver.network.clientpackets.attributechange.RequestChangeAttributeItem;
 import org.l2j.gameserver.network.clientpackets.attributechange.SendChangeAttributeTargetItem;
+import org.l2j.gameserver.network.clientpackets.captcha.RequestCaptchaAnswer;
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestCancelCuriousHouse;
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestCuriousHouseHtml;
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCuriousHouse;
@@ -311,7 +312,7 @@ public enum ExIncomingPackets implements PacketFactory {
     REQUEST_VIP_LUCKY_GAME_ITEM_LIST(0x10C, null, ConnectionState.IN_GAME),
     REQUEST_VIP_LUCKY_GAME_BONUS(0x10D, null, ConnectionState.IN_GAME),
     EX_REQUEST_VIP_INFO(0x10E, ExRequestVipInfo::new, ConnectionState.IN_GAME),
-    REQUEST_CAPTCHA_ANSWER(0x10F, null, ConnectionState.IN_GAME),
+    REQUEST_CAPTCHA_ANSWER(0x10F, RequestCaptchaAnswer::new, ConnectionState.IN_GAME),
     REQUEST_REFRESH_CAPTCHA_IMAGE(0x110, null, ConnectionState.IN_GAME),
     REQUEST_PLEDGE_SIGN_IN_FOR_OPEN_JOINING_METHOD(0x111, RequestPledgeSignInForOpenJoiningMethod::new, ConnectionState.IN_GAME),
     EX_REQUEST_MATCH_ARENA(0x112, null, ConnectionState.IN_GAME),
