@@ -14,7 +14,6 @@ import java.sql.Statement;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-
 /**
  * @author UnAfraid
  */
@@ -59,10 +58,10 @@ public final class PunishmentManager {
                 }
             }
         } catch (Exception e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Error while loading punishments: ", e);
+            LOGGER.warn("Error while loading punishments: ", e);
         }
 
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + initiated + " active and " + expired + " expired punishments.");
+        LOGGER.info("Loaded {} active and {} expired punishments.", initiated, expired);
     }
 
     public void startPunishment(PunishmentTask task) {

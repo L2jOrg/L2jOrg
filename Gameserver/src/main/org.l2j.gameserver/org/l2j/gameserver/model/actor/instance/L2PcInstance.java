@@ -9059,7 +9059,7 @@ public final class L2PcInstance extends L2Playable {
             return;
         }
         if (_fameTask == null) {
-            _fameTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new FameTask(this, fameFixRate), delay, delay);
+            _fameTask = ThreadPoolManager.scheduleAtFixedRate(new FameTask(this, fameFixRate), delay, delay);
         }
     }
 
