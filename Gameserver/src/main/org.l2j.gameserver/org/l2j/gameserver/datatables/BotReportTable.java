@@ -17,8 +17,9 @@
 package org.l2j.gameserver.datatables;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Object;
@@ -33,8 +34,12 @@ import org.slf4j.LoggerFactory;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
+import javax.imageio.ImageIO;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.sql.Connection;
@@ -379,6 +384,67 @@ public final class BotReportTable {
         scheduleResetPointTask();
     }
 
+    private String generateCaptchaText() {
+        return String.valueOf(Rnd.get(121213, 987979));
+    }
+
+    private byte[] generateCaptcha() {
+        var height = 32;
+        var width  = 128;
+
+        // http://msdn.microsoft.com/en-us/library/bb694531(VS.85).aspx
+        var image = new BufferedImage(width, height, BufferedImage.TYPE_USHORT_565_RGB);
+        var graphics = image.createGraphics();
+        graphics.setColor(Color.BLACK);
+        graphics.fillRect(0, 0, width, height);
+
+        var text = generateCaptchaText();
+
+        var metrics = graphics.getFontMetrics();
+
+        var textStart = 10;
+        for(var i = 0; i < text.length(); i++) {
+            var character = text.charAt(i);
+            var charWidth = metrics.charWidth(character);
+            graphics.setColor(getColor());
+            graphics.drawString(""+character, textStart + (i * charWidth),  Rnd.get(10) + 10);
+        }
+
+        addNoise(graphics);
+
+        graphics.dispose();
+
+        ByteArrayOutputStream bout = new ByteArrayOutputStream();
+        try {
+            ImageIO.write(image, "dds", bout);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return bout.toByteArray();
+    }
+
+    private void addNoise(Graphics2D graphics) {
+        for (int i = 0; i < 30; i++) {
+            graphics.setColor(getColor());
+            graphics.drawOval(Rnd.get(128), Rnd.get(32), 6, 6);
+        }
+
+        for (int i = 0; i < 5; i++) {
+            graphics.setColor(getColor());
+            graphics.drawLine(20 + Rnd.get(75), 100 + Rnd.get(75) * -1, 2 + Rnd.get(15), 30 + Rnd.get(15) * -1);
+        }
+    }
+
+    private Color getColor() {
+        return switch (Rnd.get(5)) {
+            case 1 -> Color.WHITE;
+            case 2 -> Color.RED;
+            case 3 -> Color.YELLOW;
+            case 4 -> Color.CYAN;
+            default -> Color.GREEN;
+        };
+    }
+
     private void scheduleResetPointTask() {
         try {
             final String[] hour = Config.BOTREPORT_RESETPOINT_HOUR;
@@ -404,6 +470,8 @@ public final class BotReportTable {
     private static final class Singleton {
         private static final BotReportTable INSTANCE = new BotReportTable();
     }
+
+
     /**
      * Represents the info about a reporter
      */
@@ -434,6 +502,8 @@ public final class BotReportTable {
             _reportPoints = (byte) points;
         }
     }
+
+
     /**
      * Represents the info about a reported character
      */
@@ -471,6 +541,7 @@ public final class BotReportTable {
             return false;
         }
     }
+
     private final class PunishmentsLoader extends DefaultHandler {
 
         PunishmentsLoader() {
@@ -503,19 +574,21 @@ public final class BotReportTable {
             }
         }
     }
+
     private class PunishHolder {
 
         final Skill _punish;
         final int _systemMessageId;
 
-        public PunishHolder(Skill sk, int sysMsg) {
+        PunishHolder(Skill sk, int sysMsg) {
             _punish = sk;
             _systemMessageId = sysMsg;
         }
     }
+
     private class ResetPointTask implements Runnable {
 
-        public ResetPointTask() {
+        ResetPointTask() {
         }
 
         @Override
@@ -523,4 +596,6 @@ public final class BotReportTable {
             resetPointsAndSchedule();
         }
     }
+
+
 }

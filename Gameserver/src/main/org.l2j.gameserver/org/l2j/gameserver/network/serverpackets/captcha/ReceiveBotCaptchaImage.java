@@ -11,6 +11,7 @@ public class ReceiveBotCaptchaImage extends IClientOutgoingPacket {
 
     @Override
     protected void writeImpl(L2GameClient client, ByteBuffer packet) throws Exception {
+
         OutgoingPackets.RECEIVE_BOT_CAPTCHA_IMAGE.writeId(packet);
         packet.put((byte) 0x02); // unk
         packet.putLong(0x02);   // unk
