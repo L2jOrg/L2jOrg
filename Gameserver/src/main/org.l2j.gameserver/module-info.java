@@ -1,7 +1,3 @@
-import org.l2j.gameserver.image.SimpleDDSDxT1ImageWriterSpi;
-
-import javax.imageio.spi.ImageWriterSpi;
-
 module org.l2j.gameserver {
     requires org.l2j.commons;
 
@@ -105,7 +101,4 @@ module org.l2j.gameserver {
     uses org.l2j.gameserver.scripting.IScriptingEngine;
     provides org.l2j.gameserver.scripting.IScriptingEngine
         with org.l2j.gameserver.scripting.java.JavaScriptingEngine;
-
-    uses ImageWriterSpi;
-    provides ImageWriterSpi with SimpleDDSDxT1ImageWriterSpi;
 }

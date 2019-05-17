@@ -10,6 +10,7 @@ import java.awt.image.BufferedImage;
 public class CaptchaEngine {
 
     private static final IntObjectMap<Captcha> captchas = new HashIntObjectMap<>();
+    private static final DXT1ImageCompressor compressor = new DXT1ImageCompressor();
 
     private CaptchaEngine() {
         //
@@ -21,7 +22,7 @@ public class CaptchaEngine {
     }
 
     private int generateCaptchaCode() {
-        return Rnd.get(121213, 987979);
+        return Rnd.get(111111, 999999);
     }
 
     private Captcha generateCaptcha(int code) {
@@ -29,15 +30,13 @@ public class CaptchaEngine {
         var width  = 128;
 
         // http://msdn.microsoft.com/en-us/library/bb694531(VS.85).aspx
-        var image = new BufferedImage(width, height, BufferedImage.TYPE_USHORT_565_RGB);
+        var image = new BufferedImage(width, height, BufferedImage.TYPE_4BYTE_ABGR_PRE);
         Graphics2D graphics = createGraphics(height, width, image);
-
+        graphics.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 22));
         writeCode(code, graphics);
-
         addNoise(graphics);
-
         graphics.dispose();
-        return new Captcha(0, DXT1ImageCompressor.compress(image));
+        return new Captcha(code, compressor.compress(image));
     }
 
     private Graphics2D createGraphics(int height, int width, BufferedImage image) {
@@ -55,21 +54,21 @@ public class CaptchaEngine {
         var textStart = 10;
         for(var i = 0; i < text.length(); i++) {
             var character = text.charAt(i);
-            var charWidth = metrics.charWidth(character);
+            var charWidth = metrics.charWidth(character) + 5;
             graphics.setColor(getColor());
-            graphics.drawString(""+character, textStart + (i * charWidth),  Rnd.get(10) + 10);
+            graphics.drawString(""+character, textStart + (i * charWidth),  Rnd.get(22, 32));
         }
     }
 
     private void addNoise(Graphics2D graphics) {
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 12; i++) {
             graphics.setColor(getColor());
-            graphics.drawOval(Rnd.get(128), Rnd.get(32), 6, 6);
+            graphics.fillOval(Rnd.get(10, 122), Rnd.get(6, 20), 5, 5);
         }
 
         for (int i = 0; i < 5; i++) {
             graphics.setColor(getColor());
-            graphics.drawLine(20 + Rnd.get(75), 100 + Rnd.get(75) * -1, 2 + Rnd.get(15), 30 + Rnd.get(15) * -1);
+            graphics.drawLine(Rnd.get(30, 90), Rnd.get(6, 28),  Rnd.get(80, 120), Rnd.get(10, 26));
         }
     }
 
