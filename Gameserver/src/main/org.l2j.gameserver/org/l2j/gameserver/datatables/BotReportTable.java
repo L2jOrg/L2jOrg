@@ -1,33 +1,22 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.datatables;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engines.captcha.CaptchaEngine;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
+import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.network.serverpackets.captcha.ReceiveBotCaptchaImage;
+import org.l2j.gameserver.network.serverpackets.captcha.ReceiveBotCaptchaResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.Attributes;
@@ -46,7 +35,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-
 /**
  * @author BiggBoss
  */
@@ -61,6 +49,7 @@ public final class BotReportTable {
     private static final int COLUMN_BOT_ID = 1;
     private static final int COLUMN_REPORTER_ID = 2;
     private static final int COLUMN_REPORT_TIME = 3;
+
     private static final String SQL_LOAD_REPORTED_CHAR_DATA = "SELECT * FROM bot_reported_char_data";
     private static final String SQL_INSERT_REPORTED_CHAR_DATA = "INSERT INTO bot_reported_char_data VALUES (?,?,?)";
     private static final String SQL_CLEAR_REPORTED_CHAR_DATA = "DELETE FROM bot_reported_char_data";
@@ -332,6 +321,17 @@ public final class BotReportTable {
                 punishBot(bot, _punishments.get(key));
             }
         }
+
+        // each 3 report request captcha
+        if((rcd.getReportCount() % 3) == 0) {
+            var captcha = CaptchaEngine.getInstance().next();
+            if(!bot.hasRequest(CaptchaRequest.class)) {
+                var request = new CaptchaRequest(bot, captcha);
+                bot.addRequest(request);
+                bot.sendPacket(new ReceiveBotCaptchaImage(captcha, request.getRemainingTime()));
+                bot.sendPacket(SystemMessageId.PLEASE_ENTER_THE_AUTHENTICATION_CODE_IN_TIME_TO_CONTINUE_PLAYING);
+            }
+        }
     }
 
     /**
@@ -365,7 +365,7 @@ public final class BotReportTable {
         if (sk != null) {
             _punishments.put(neededReports, new PunishHolder(sk, sysMsg));
         } else {
-            LOGGER.warn(": Could not add punishment for " + neededReports + " report(s): Skill " + skillId + "-" + skillLevel + " does not exist!");
+            LOGGER.warn("Could not add punishment for " + neededReports + " report(s): Skill " + skillId + "-" + skillLevel + " does not exist!");
         }
     }
 
@@ -395,6 +395,15 @@ public final class BotReportTable {
             ThreadPoolManager.schedule(new ResetPointTask(), 24 * 3600 * 1000);
             LOGGER.warn(getClass().getSimpleName() + ": Could not properly schedule bot report points reset task. Scheduled in 24 hours.", e);
         }
+    }
+
+    public void punishBotDueUnsolvedCaptcha(L2PcInstance bot) {
+        CommonSkill.BOT_REPORT_STATUS.getSkill().applyEffects(bot, bot);
+        bot.removeRequest(CaptchaRequest.class);
+        var msg = SystemMessage.getSystemMessage(SystemMessageId.IF_A_USER_ENTERS_A_WRONG_AUTHENTICATION_CODE_3_TIMES_IN_A_ROW_OR_DOES_NOT_ENTER_THE_CODE_IN_TIME_THE_SYSTEM_WILL_QUALIFY_HIM_AS_A_RULE_BREAKER_AND_CHARGE_HIS_ACCOUNT_WITH_A_PENALTY_S1);
+        msg.addSkillName(CommonSkill.BOT_REPORT_STATUS.getId());
+        bot.sendPacket(msg);
+        bot.sendPacket(ReceiveBotCaptchaResult.FAILED);
     }
 
     public static BotReportTable getInstance() {
@@ -521,10 +530,6 @@ public final class BotReportTable {
     }
 
     private class ResetPointTask implements Runnable {
-
-        ResetPointTask() {
-        }
-
         @Override
         public void run() {
             resetPointsAndSchedule();

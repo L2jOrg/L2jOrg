@@ -1,18 +1,15 @@
 package org.l2j.gameserver.engines.captcha;
 
 import java.awt.image.BufferedImage;
-import java.awt.image.Raster;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+
+import static java.lang.Math.abs;
 
 /*
  * https://docs.microsoft.com/pt-br/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#compression-algorithms
  *
- * //RGB packed 565 16 bit no alpha
- *  A = 255
- *  R = (color & 0xF800) >> 11
- *  G = (color & 0x7E0) >> 5
- *  B = (color & 0x1F)
+ * RGBA
  *
  * http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.215.7942&rep=rep1&type=pdf
  *
@@ -21,7 +18,7 @@ class DXT1ImageCompressor {
 
     private static final int MAGIC = 0x20534444;
     private static final int HEADER_SIZE = 124;
-    private static final int DDSD_PIXELFORMAT = 0x1000;
+    private static final int DDSD_PIXEL_FORMAT = 0x1000;
     private static final int DDSD_CAPS = 0x01;
     private static final int DDSD_HEIGHT = 0x02;
     private static final int DDSD_WIDTH = 0x04;
@@ -41,97 +38,66 @@ class DXT1ImageCompressor {
 
         writeHeader(image, buffer);
 
-        var data = image.getRaster();
-
-        var texelBuffer = new short[16];
+        var texelBuffer = new int[16];
+        TextureBlock block = new TextureBlock();
 
         // compress 4x4 Block
         for (int i = 0; i < height; i += 4) {
             for (int j = 0; j < width; j += 4) {
-                extractBlock(data, j, i, texelBuffer);
-                compressBlock(texelBuffer, buffer);
+                extractBlock(image, j, i, texelBuffer, block);
+
+                buffer.putShort(block.getMaxColor());
+                buffer.putShort(block.getMinColor());
+                buffer.putInt(computColorIndexes(block));
             }
         }
         return buffer.array();
     }
 
-    private void compressBlock(short[] texelBuffer, ByteBuffer buffer) {
-        var maxDistance = -1;
-        short color0 = 0;
-        short color1 = 0;
+    private int computColorIndexes(final TextureBlock block) {
+        var palette = block.getPalette();
 
-        // Choose the max e min colors
-        for (int i = 0; i < 15; i++) {
-            for (int j = i; j < 16; j++) {
-                var distance = euclidianDistance(texelBuffer[i], texelBuffer[j]);
-                if (distance > maxDistance) {
-                    maxDistance = distance;
-                    color0 = texelBuffer[i];
-                    color1 = texelBuffer[j];
-                }
-            }
+        long encodedColors = 0;
+        long index;
+        for (int i = 15; i >= 0; i--) {
+
+            var color = block.colorAt(i);
+
+            int d0 = abs(palette[0].r - color.r) + abs(palette[0].g - color.g) + abs(palette[0].b - color.b);
+            int d1 = abs(palette[1].r - color.r) + abs(palette[1].g - color.g) + abs(palette[1].b - color.b);
+            int d2 = abs(palette[2].r - color.r) + abs(palette[2].g - color.g) + abs(palette[2].b - color.b);
+            int d3 = abs(palette[3].r - color.r) + abs(palette[3].g - color.g) + abs(palette[3].b - color.b);
+
+            int b0 = compare(d0, d3);
+            int b1 = compare(d1, d2);
+            int b2 = compare(d0, d2);
+            int b3 = compare(d1, d3);
+            int b4 = compare(d2, d3);
+
+            int x0 = b1 & b2;
+            int x1 = b0 & b3;
+            int x2 = b0 & b4;
+
+            index = (x2 | ((x0 | x1) << 1));
+            encodedColors |= (index << (i << 1));
         }
-
-        if (color0 < color1) {
-            var tmp = color0;
-            color0 = color1;
-            color1 = tmp;
-        }
-
-        short color2 = (short) (2.f / 3 * color0 + 1.f / 3 * color1);
-        short color3 = (short) (1.f / 3 * color0 + 2.f / 3 * color1);
-
-        // calculate encoded colors
-        long encodedColors = encodeColors(texelBuffer, color0, color1, color2, color3);
-        buffer.putShort(color0);
-        buffer.putShort(color1);
-        buffer.putInt((int) encodedColors);
+        return (int) encodedColors;
     }
 
-    private long encodeColors(final short[] texelBuffer, final short color0, final short color1, final short color2, final short color3) {
-        long encodedColors = 0L;
-        long bitMask;
-        for (int i = 0; i < 16; i++) {
-            var distance0 = euclidianDistance(color0, texelBuffer[i]);
-            var distance1 = euclidianDistance(color1, texelBuffer[i]);
-            var distance2 = euclidianDistance(color2, texelBuffer[i]);
-            var distance3 = euclidianDistance(color3, texelBuffer[i]);
-
-            int mask0 = maskOf(distance0, distance3);
-            int mask1 = maskOf(distance1, distance2);
-            int mask2 = maskOf(distance0, distance2);
-            int mask3 = maskOf(distance1, distance3);
-            int mask4 = maskOf(distance2, distance3);
-
-            int bitmask0 = mask1 & mask2;
-            int bitmask1 = mask0 & mask3;
-            int bitmask2 = mask0 & mask4;
-
-            bitMask = (bitmask2 | ((bitmask0 | bitmask1) << 1));
-
-            encodedColors |= (bitMask << (i << 1));
-        }
-        return encodedColors;
-    }
-
-    /* If a is greater than b, than b-a will be a negative value, and the
-      32nd bit will be a one. Otherwise, b-a will be a positive value or zero, and the 32nd bit will be a zero.
-      Therefore we need only return the 32nd bit of the value b-a. */
-    private int maskOf(int a, int b) {
-        return (a - b) >>> 31;
-    }
-
-    private int euclidianDistance(short x, short y) {
-        return (x - y) * (x - y);
+    /*
+     *  return 1 if a > b, 0 otherwise
+     */
+    private int compare(int a, int b) {
+        return (b-a) >>> 31;
     }
 
     private void writeHeader(BufferedImage image, ByteBuffer buffer) {
         buffer.putInt(MAGIC);
         buffer.putInt(HEADER_SIZE);
-        buffer.putInt(DDSD_CAPS | DDSD_HEIGHT | DDSD_PIXELFORMAT | DDSD_WIDTH);
+        buffer.putInt(DDSD_CAPS | DDSD_HEIGHT | DDSD_PIXEL_FORMAT | DDSD_WIDTH);
         buffer.putInt(image.getHeight());
         buffer.putInt(image.getWidth());
-        buffer.putInt((image.getWidth() * image.getHeight()) / 2); // Pitch Or Linear Size
+        buffer.putInt(0x00); // Pitch Or Linear Size
         buffer.putInt(0x00); // Depth
         buffer.putInt(0x00); // MipMapCount
         buffer.put(new byte[44]); // Reserved not used
@@ -153,11 +119,11 @@ class DXT1ImageCompressor {
         buffer.putInt(0x00); // Reserved 2 not used
     }
 
-    private void extractBlock(Raster image, int x, int y, short[] textelBuffer) {
+    private void extractBlock(final BufferedImage image, int x, int y, final int[] buffer, final TextureBlock block) {
         int blockWidth = Math.min(image.getWidth() - x, 4);
         int blockHeight = Math.min(image.getHeight() - y, 4);
 
-        image.getDataElements(x, y, blockWidth, blockHeight, textelBuffer);
-
+        image.getRGB(x, y, blockWidth, blockHeight, buffer, 0, 4);
+        block.of(buffer);
     }
 }

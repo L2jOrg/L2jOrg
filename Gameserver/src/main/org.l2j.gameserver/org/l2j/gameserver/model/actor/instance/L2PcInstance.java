@@ -28,6 +28,7 @@ import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.*;
 import org.l2j.gameserver.model.actor.appearance.PcAppearance;
 import org.l2j.gameserver.model.actor.request.AbstractRequest;
+import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
 import org.l2j.gameserver.model.actor.stat.PcStat;
 import org.l2j.gameserver.model.actor.status.PcStatus;
 import org.l2j.gameserver.model.actor.tasks.player.*;
@@ -6475,12 +6476,12 @@ public final class L2PcInstance extends L2Playable {
     }
 
     public boolean canLogout() {
-        if (hasItemRequest()) {
+        if (hasItemRequest() || hasRequest(CaptchaRequest.class)) {
             return false;
         }
 
         if (isLocked()) {
-            LOGGER.warn("Player " + getName() + " tried to restart/logout during class change.");
+            LOGGER.warn("Player {} tried to restart/logout during class change.", getName());
             return false;
         }
 
@@ -6488,11 +6489,8 @@ public final class L2PcInstance extends L2Playable {
             return false;
         }
 
-        if (isBlockedFromExit()) {
-            return false;
-        }
+        return !isBlockedFromExit();
 
-        return true;
     }
 
     /**

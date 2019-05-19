@@ -42,7 +42,8 @@ public enum CommonSkill {
     ABILITY_OF_LIGHT(19032, 1),
     ABILITY_OF_DARKNESS(19033, 1),
     IMPRIT_OF_LIGHT(19034, 1),
-    IMPRIT_OF_DARKNESS(19035, 1);
+    IMPRIT_OF_DARKNESS(19035, 1),
+    BOT_REPORT_STATUS(55031, 1);
 
     private final SkillHolder _holder;
 

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.engines.captcha;
 
 import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
 import org.l2j.commons.util.Rnd;
 
 import java.awt.*;
@@ -9,34 +9,47 @@ import java.awt.image.BufferedImage;
 
 public class CaptchaEngine {
 
-    private static final IntObjectMap<Captcha> captchas = new HashIntObjectMap<>();
+    private static final IntObjectMap<Captcha> captchas = new CHashIntObjectMap<>();
     private static final DXT1ImageCompressor compressor = new DXT1ImageCompressor();
 
     private CaptchaEngine() {
-        //
     }
 
     public Captcha next() {
-        var code = generateCaptchaCode();
-        return captchas.computeIfAbsent(code, this::generateCaptcha);
+        var id = Rnd.get(captchas.size() + 5);
+        return captchas.computeIfAbsent(id, this::generateCaptcha);
+    }
+
+    public Captcha next(int previousId) {
+        var id = Rnd.get(captchas.size() + 5);
+        if(id == previousId) {
+            id++;
+        }
+        return captchas.computeIfAbsent(id, this::generateCaptcha);
     }
 
     private int generateCaptchaCode() {
         return Rnd.get(111111, 999999);
     }
 
-    private Captcha generateCaptcha(int code) {
+    private Captcha generateCaptcha(int id) {
         var height = 32;
         var width  = 128;
 
-        // http://msdn.microsoft.com/en-us/library/bb694531(VS.85).aspx
         var image = new BufferedImage(width, height, BufferedImage.TYPE_4BYTE_ABGR_PRE);
         Graphics2D graphics = createGraphics(height, width, image);
         graphics.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 22));
+
+        var code = generateCaptchaCode();
+
         writeCode(code, graphics);
         addNoise(graphics);
         graphics.dispose();
-        return new Captcha(code, compressor.compress(image));
+        return new Captcha(id, code, compressor.compress(image));
+    }
+
+    public static void main(String[] args) {
+        getInstance().next();
     }
 
     private Graphics2D createGraphics(int height, int width, BufferedImage image) {
@@ -56,18 +69,17 @@ public class CaptchaEngine {
             var character = text.charAt(i);
             var charWidth = metrics.charWidth(character) + 5;
             graphics.setColor(getColor());
-            graphics.drawString(""+character, textStart + (i * charWidth),  Rnd.get(22, 32));
+            graphics.drawString(""+character, textStart + (i * charWidth),  Rnd.get(24, 32));
         }
     }
 
     private void addNoise(Graphics2D graphics) {
-        for (int i = 0; i < 12; i++) {
-            graphics.setColor(getColor());
-            graphics.fillOval(Rnd.get(10, 122), Rnd.get(6, 20), 5, 5);
+        graphics.setColor(Color.WHITE);
+        for (int i = 0; i < 20; i++) {
+            graphics.fillOval(Rnd.get(10, 122), Rnd.get(6, 20), 4, 4);
         }
 
-        for (int i = 0; i < 5; i++) {
-            graphics.setColor(getColor());
+        for (int i = 0; i < 6; i++) {
             graphics.drawLine(Rnd.get(30, 90), Rnd.get(6, 28),  Rnd.get(80, 120), Rnd.get(10, 26));
         }
     }
@@ -94,8 +106,10 @@ public class CaptchaEngine {
     public static class Captcha {
         private final int code;
         private final byte[] data;
+        private final int id;
 
-        private Captcha(int code, byte[] data) {
+        private Captcha(int id, int code, byte[] data) {
+            this.id = id;
             this.code = code;
             this.data = data;
         }
@@ -106,6 +120,10 @@ public class CaptchaEngine {
 
         public byte[] getData() {
             return data;
+        }
+
+        public int getId() {
+            return id;
         }
     }
 

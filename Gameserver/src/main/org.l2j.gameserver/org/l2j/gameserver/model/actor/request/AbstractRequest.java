@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import java.util.Objects;
 import java.util.concurrent.ScheduledFuture;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author UnAfraid
  */
@@ -33,11 +35,17 @@ public abstract class AbstractRequest {
     }
 
     public void scheduleTimeout(long delay) {
-        _timeOutTask = ThreadPoolManager.getInstance().schedule(this::onTimeout, delay);
+        _timeOutTask = ThreadPoolManager.schedule(this::onTimeout, delay);
     }
 
     public boolean isTimeout() {
         return (_timeOutTask != null) && !_timeOutTask.isDone();
+    }
+
+    public void cancelTimeout() {
+        if(nonNull(_timeOutTask)) {
+            _timeOutTask.cancel(false);
+        }
     }
 
     public boolean isProcessing() {
