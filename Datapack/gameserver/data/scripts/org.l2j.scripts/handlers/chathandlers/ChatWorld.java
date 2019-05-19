@@ -36,26 +36,21 @@ import java.util.concurrent.ConcurrentHashMap;
  * World chat handler.
  * @author UnAfraid
  */
-public final class ChatWorld implements IChatHandler
-{
+public final class ChatWorld implements IChatHandler {
 	private static final Map<Integer, Instant> REUSE = new ConcurrentHashMap<>();
 	
-	private static final ChatType[] CHAT_TYPES =
-	{
+	private static final ChatType[] CHAT_TYPES = {
 		ChatType.WORLD,
 	};
 	
 	@Override
-	public void handleChat(ChatType type, L2PcInstance activeChar, String target, String text)
-	{
-		if (!Config.ENABLE_WORLD_CHAT)
-		{
+	public void handleChat(ChatType type, L2PcInstance activeChar, String target, String text) {
+		if (!Config.ENABLE_WORLD_CHAT) {
 			return;
 		}
 		
 		final Instant now = Instant.now();
-		if (!REUSE.isEmpty())
-		{
+		if (!REUSE.isEmpty()) {
 			REUSE.values().removeIf(now::isAfter);
 		}
 		

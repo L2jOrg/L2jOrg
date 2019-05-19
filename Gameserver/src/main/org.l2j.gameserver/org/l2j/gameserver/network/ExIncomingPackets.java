@@ -391,8 +391,8 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_REQUEST_UNLOCKED_ITEM(0x15A, null, ConnectionState.IN_GAME),
     EX_LOCKED_ITEM_CANCEL(0x15B, null, ConnectionState.IN_GAME),
     EX_UNLOCKED_ITEM_CANCEL(0x15C, null, ConnectionState.IN_GAME),
-    REQUEST_BLOCK_LIST_FOR_AD(0x15D, null, ConnectionState.IN_GAME),
-    REQUEST_USER_BAN_INFO(0x15E, null, ConnectionState.IN_GAME),
+    REQUEST_USER_BAN_INFO(0x15D, null, ConnectionState.IN_GAME),
+    REQUEST_BLOCK_LIST_FOR_AD(0x15E, ExRequestBlockListForAD::new, ConnectionState.IN_GAME),
     EX_ELEMENTAL_SPIRIT_CHANGE_TYPE(0x15F, null, ConnectionState.IN_GAME), // 152
     EX_INTERACT_MODIFY(0x160, null, ConnectionState.IN_GAME), // 152
     EX_TRY_ENCHANT_ARTIFACT(0x161, null, ConnectionState.IN_GAME), // 152

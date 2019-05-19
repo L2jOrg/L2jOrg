@@ -9,6 +9,7 @@ public class GeneralSettings implements Settings {
     private int whisperChatLevel;
     private int shoutChatLevel;
     private int tradeChatLevel;
+    private int banChatAdenaAdsReportCount;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -16,6 +17,8 @@ public class GeneralSettings implements Settings {
         whisperChatLevel = settingsFile.getInteger("MinimumWhisperChatLevel", 2);
         shoutChatLevel = settingsFile.getInteger("MinimumShoutChatLevel", 10);
         tradeChatLevel = settingsFile.getInteger("MinimumTradeChatLevel", 15);
+
+        banChatAdenaAdsReportCount = settingsFile.getInteger("BanChatAdenaADSReportCount", 10);
     }
 
     public int generalChatLevel() {
@@ -32,5 +35,9 @@ public class GeneralSettings implements Settings {
 
     public int tradeChatLevel() {
         return tradeChatLevel;
+    }
+
+    public int banChatAdenaAdsReportCount() {
+        return banChatAdenaAdsReportCount;
     }
 }
