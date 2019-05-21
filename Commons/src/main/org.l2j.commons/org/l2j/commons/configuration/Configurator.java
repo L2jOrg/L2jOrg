@@ -1,10 +1,10 @@
 package org.l2j.commons.configuration;
 
+import org.l2j.commons.cache.CacheFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import javax.cache.Cache;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -16,10 +16,10 @@ public class Configurator {
     private static Configurator configurator;
     private LazyConfiguratorLoader loader;
 
-    private Map<Class<? extends Settings>, Settings> settingsMap;
+    private Cache<Class<? extends Settings>, Settings> settingsMap;
 
     private Configurator() {
-        settingsMap = new ConcurrentHashMap<>();
+        settingsMap = CacheFactory.getInstance().getCache("settings");
         loader = new LazyConfiguratorLoader();
         load();
     }
