@@ -50,6 +50,7 @@ public class PrimeShopProduct {
     private List<PrimeShopItem> items;
     private byte vipTier;
     private int silverCoin;
+    private boolean isVipGift;
 
     public PrimeShopProduct(int id, List<PrimeShopItem> items) {
         this.id = id;
@@ -254,5 +255,13 @@ public class PrimeShopProduct {
 
     public int getSilverCoin() {
         return silverCoin;
+    }
+
+    public void setVipGift(boolean isVipGift) {
+       this.isVipGift = isVipGift;
+    }
+
+    public boolean isVipGift() {
+        return isVipGift;
     }
 }

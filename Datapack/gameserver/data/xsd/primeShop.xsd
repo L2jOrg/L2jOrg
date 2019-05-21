@@ -44,5 +44,6 @@
         <xs:attribute type="xs:byte" name="availableCount" default="0"/>
         <xs:attribute type="xs:byte" name="vipTier" default="0"/>
         <xs:attribute type="xs:int" name="silverCoin" default="0"/>
+        <xs:attribute type="xs:boolean" name="isVipGift" default="false"/>
     </xs:complexType>
 </xs:schema>

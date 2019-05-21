@@ -459,8 +459,6 @@ public class EnterWorld extends IClientIncomingPacket {
         activeChar.sendPacket(new ExAutoSoulShot(0, true, 2));
         activeChar.sendPacket(new ExAutoSoulShot(0, true, 3));
 
-        activeChar.sendPacket(ExBRNewIconCashBtnWnd.STATIC);
-
         // Fix for equipped item skills
         if (!activeChar.getEffectList().getCurrentAbnormalVisualEffects().isEmpty()) {
             activeChar.updateAbnormalVisualEffects();
@@ -480,7 +478,7 @@ public class EnterWorld extends IClientIncomingPacket {
                         activeChar.sendPacket(new ExVipAttendanceItemList(activeChar));
                     }
                 }
-            }, Config.ATTENDANCE_REWARD_DELAY * 60 * 1000);
+            }, Config.ATTENDANCE_REWARD_DELAY * 60  * 1000);
         }
 
         if (Config.HARDWARE_INFO_ENABLED) {

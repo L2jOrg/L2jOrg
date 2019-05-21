@@ -10,4 +10,7 @@ public interface PrimeShopDAO extends DAO {
 
     @Query("INSERT INTO shop_history ( product_id, count, bidder ) VALUES ( :productId:, :count:, :playerObjectId:)")
     void addHistory(int productId, int count, int playerObjectId);
+
+    @Query("SELECT EXISTS ( SELECT 1 FROM shop_history WHERE bidder=:playerObjectId: AND sell_date = CURRENT_DATE AND product_id BETWEEN :minProductId: AND :maxProductId: )")
+    boolean hasBougthAnyItemInRangeToday(int playerObjectId, int minProductId, int maxProductId);
 }

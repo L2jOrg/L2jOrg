@@ -8,6 +8,7 @@ import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2j.gameserver.network.serverpackets.ExBRNewIconCashBtnWnd;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.IGameXmlReader;
@@ -32,6 +33,7 @@ public class VipData extends IGameXmlReader{
         load();
 
         var listeners = Containers.Players();
+
         listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) (event) -> {
             final var player = event.getActiveChar();
             if(player.getVipTier() > 0) {
@@ -45,11 +47,18 @@ public class VipData extends IGameXmlReader{
                         player.addSkill(skill);
                     }
                 }
+                if(PrimeShopData.getInstance().canReceiveVipGift(player)) {
+                    player.sendPacket(ExBRNewIconCashBtnWnd.SHOW);
+                } else {
+                    player.sendPacket(ExBRNewIconCashBtnWnd.NOT_SHOW);
+                }
             } else {
                 player.sendPacket(new ReceiveVipInfo());
+                player.sendPacket(ExBRNewIconCashBtnWnd.NOT_SHOW);
             }
         }, this));
     }
+
 
     @Override
     protected Path getSchemaFilePath() {

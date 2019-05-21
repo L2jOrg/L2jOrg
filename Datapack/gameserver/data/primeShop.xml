@@ -2,31 +2,31 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://la2j.org"
       xsi:schemaLocation="http://la2j.org xsd/primeShop.xsd">
 
-    <product id="100001" category="13" price="0" vipTier="1"  restrictionDay="1"> <!-- VIP 1 Gift Box -->
+    <product id="100001" category="13" price="0" vipTier="1" isVipGift="true"  restrictionDay="1"> <!-- VIP 1 Gift Box -->
         <item id="29001"/>
     </product>
 
-    <product id="100002" category="13" price="0" vipTier="2" restrictionDay="1"><!-- VIP 2 Gift Box -->
+    <product id="100002" category="13" price="0" vipTier="2" isVipGift="true" restrictionDay="1"><!-- VIP 2 Gift Box -->
         <item id="29002"/>
     </product>
 
-    <product id="100003" category="13" price="0" vipTier="3" restrictionDay="1"> <!-- VIP 3 Gift Box -->
+    <product id="100003" category="13" price="0" vipTier="3" isVipGift="true" restrictionDay="1"> <!-- VIP 3 Gift Box -->
         <item id="29003"/>
     </product>
 
-    <product id="100004" category="13" price="0" vipTier="4" restrictionDay="1"> <!-- VIP 4 Gift Box -->
+    <product id="100004" category="13" price="0" vipTier="4" isVipGift="true" restrictionDay="1"> <!-- VIP 4 Gift Box -->
         <item id="29004"/>
     </product>
 
-    <product id="100005" category="13" price="0" vipTier="5" restrictionDay="1"> <!-- VIP 5 Gift Box -->
+    <product id="100005" category="13" price="0" vipTier="5" isVipGift="true" restrictionDay="1"> <!-- VIP 5 Gift Box -->
         <item id="29005"/>
     </product>
 
-    <product id="100006" category="13" price="0" vipTier="6" restrictionDay="1"> <!-- VIP 6 Gift Box -->
+    <product id="100006" category="13" price="0" vipTier="6" isVipGift="true" restrictionDay="1"> <!-- VIP 6 Gift Box -->
         <item id="29006"/>
     </product>
 
-    <product id="100007" category="13" price="0" vipTier="7" restrictionDay="1"> <!-- VIP 7 Gift Box -->
+    <product id="100007" category="13" price="0" vipTier="7" isVipGift="true" restrictionDay="1"> <!-- VIP 7 Gift Box -->
         <item id="29007"/>
     </product>
 

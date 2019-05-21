@@ -2,6 +2,7 @@ package org.l2j.gameserver.data.xml.impl;
 
 import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import org.l2j.gameserver.data.database.dao.PrimeShopDAO;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.L2Item;
@@ -22,14 +23,18 @@ import java.util.List;
 
 import static java.util.Objects.isNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author Gnacik, UnAfraid
  */
 public class PrimeShopData extends IGameXmlReader{
+
     private static final Logger LOGGER = LoggerFactory.getLogger(PrimeShopData.class);
+    private static final int VIP_GIFT_BASE_ID = 100000;
 
     private final IntObjectMap<PrimeShopProduct> primeItems = new HashIntObjectMap<>(140);
+    private final IntObjectMap<PrimeShopProduct> vipGifts = new HashIntObjectMap<>(7);
 
     private PrimeShopData() {
         load();
@@ -94,8 +99,13 @@ public class PrimeShopData extends IGameXmlReader{
         product.setAvailableCount(parseByte(attrs, "availableCount"));
         product.setVipTier(parseByte(attrs, "vipTier"));
         product.setSilverCoin(parseInteger(attrs, "silverCoin"));
+        product.setVipGift(parseBoolean(attrs, "isVipGift"));
 
-        primeItems.put(product.getId(), product);
+        if(product.isVipGift()) {
+            vipGifts.put(product.getId(), product);
+        } else {
+            primeItems.put(product.getId(), product);
+        }
     }
 
     public void showProductInfo(L2PcInstance player, int brId) {
@@ -108,8 +118,15 @@ public class PrimeShopData extends IGameXmlReader{
         player.sendPacket(new ExBRProductInfo(item, player));
     }
 
-    public PrimeShopProduct getItem(int brId) {
-        return primeItems.get(brId);
+    public PrimeShopProduct getItem(int productId) {
+        if(primeItems.containsKey(productId)) {
+            return primeItems.get(productId);
+        }
+        return vipGifts.get(productId);
+    }
+
+    public PrimeShopProduct getVipGiftOfTier(byte tier) {
+        return vipGifts.get(VIP_GIFT_BASE_ID + tier);
     }
 
     public IntObjectMap<PrimeShopProduct> getPrimeItems() {
@@ -118,6 +135,10 @@ public class PrimeShopData extends IGameXmlReader{
 
     public static PrimeShopData getInstance() {
         return Singleton.INSTANCE;
+    }
+
+    public boolean canReceiveVipGift(L2PcInstance player) {
+        return player.getVipTier() > 0 && !getDAO(PrimeShopDAO.class).hasBougthAnyItemInRangeToday(player.getObjectId(), VIP_GIFT_BASE_ID+1, VIP_GIFT_BASE_ID+7);
     }
 
     private static class Singleton {

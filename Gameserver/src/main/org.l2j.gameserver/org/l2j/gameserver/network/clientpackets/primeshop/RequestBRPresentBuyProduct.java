@@ -11,6 +11,7 @@ import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.Mail;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
 import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
+import org.l2j.gameserver.network.serverpackets.ExBRNewIconCashBtnWnd;
 import org.l2j.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
 import org.l2j.gameserver.network.serverpackets.primeshop.ExBRGamePoint;
 
@@ -74,6 +75,9 @@ public final class RequestBRPresentBuyProduct extends RequestBuyProduct {
                 }
                 MailManager.getInstance().sendMessage(mail);
                 getDAO(PrimeShopDAO.class).addHistory(productId, count, activeChar.getObjectId());
+                if(item.isVipGift()) {
+                    client.sendPacket(ExBRNewIconCashBtnWnd.NOT_SHOW);
+                }
             }
         } finally {
             activeChar.removeRequest(PrimeShopRequest.class);
