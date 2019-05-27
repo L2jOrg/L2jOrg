@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.datatables.BotReportTable;
+import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.L2Object;
@@ -53,7 +53,7 @@ public final class TradeRequest extends IClientIncomingPacket {
         BuffInfo info = player.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
         if (info != null) {
             for (AbstractEffect effect : info.getEffects()) {
-                if (!effect.checkCondition(BotReportTable.TRADE_ACTION_BLOCK_ID)) {
+                if (!effect.checkCondition(ReportTable.TRADE_ACTION_BLOCK_ID)) {
                     client.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
                     client.sendPacket(ActionFailed.STATIC_PACKET);
                     return;
@@ -90,7 +90,7 @@ public final class TradeRequest extends IClientIncomingPacket {
         info = partner.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
         if (info != null) {
             for (AbstractEffect effect : info.getEffects()) {
-                if (!effect.checkCondition(BotReportTable.TRADE_ACTION_BLOCK_ID)) {
+                if (!effect.checkCondition(ReportTable.TRADE_ACTION_BLOCK_ID)) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_AND_IS_CURRENTLY_BEING_INVESTIGATED);
                     sm.addString(partner.getName());
                     client.sendPacket(sm);

@@ -36,6 +36,17 @@ public class Util {
         return Base64.getEncoder().encodeToString(md.digest(raw));
     }
 
+    public static int hashIp(String ip)  {
+        final String[] rawByte = ip.split("\\.");
+        final int[] rawIp = new int[4];
+        for (int i = 0; i < 4; i++) {
+            rawIp[i] = Integer.parseInt(rawByte[i]);
+        }
+
+        return rawIp[0] | (rawIp[1] << 8) | (rawIp[2] << 16) | (rawIp[3] << 24);
+    }
+
+
     public static boolean isNumeric(final String value) {
         if(isNullOrEmpty(value)) {
             return false;

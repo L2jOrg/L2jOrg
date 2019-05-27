@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.datatables.BotReportTable;
+import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
@@ -62,12 +62,12 @@ public final class BlockAction extends AbstractEffect
 	@Override
 	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (_blockedActions.contains(BotReportTable.PARTY_ACTION_BLOCK_ID))
+		if (_blockedActions.contains(ReportTable.PARTY_ACTION_BLOCK_ID))
 		{
 			PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, effected.getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN, 0, "block action debuff", "system", true));
 		}
 		
-		if (_blockedActions.contains(BotReportTable.CHAT_BLOCK_ID))
+		if (_blockedActions.contains(ReportTable.CHAT_BLOCK_ID))
 		{
 			PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, effected.getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, 0, "block action debuff", "system", true));
 		}
@@ -76,11 +76,11 @@ public final class BlockAction extends AbstractEffect
 	@Override
 	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (_blockedActions.contains(BotReportTable.PARTY_ACTION_BLOCK_ID))
+		if (_blockedActions.contains(ReportTable.PARTY_ACTION_BLOCK_ID))
 		{
 			PunishmentManager.getInstance().stopPunishment(effected.getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN);
 		}
-		if (_blockedActions.contains(BotReportTable.CHAT_BLOCK_ID))
+		if (_blockedActions.contains(ReportTable.CHAT_BLOCK_ID))
 		{
 			PunishmentManager.getInstance().stopPunishment(effected.getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN);
 		}

@@ -1,10 +1,9 @@
 package org.l2j.gameserver.network.clientpackets.captcha;
 
-import org.l2j.gameserver.datatables.BotReportTable;
+import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.engines.captcha.CaptchaEngine;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
-import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -49,7 +48,7 @@ public class RequestCaptchaAnswer extends IClientIncomingPacket {
     private void onWrongCode(L2PcInstance player, CaptchaRequest request) {
         if(request.isLimitReached()) {
             request.cancelTimeout();
-            BotReportTable.getInstance().punishBotDueUnsolvedCaptcha(player);
+            ReportTable.getInstance().punishBotDueUnsolvedCaptcha(player);
         } else {
             var captcha = CaptchaEngine.getInstance().next();
             request.newRequest(captcha);

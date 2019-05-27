@@ -17,7 +17,7 @@
 package handlers.playeractions;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.datatables.BotReportTable;
+import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -33,7 +33,7 @@ public final class BotReport implements IPlayerActionHandler
 	{
 		if (Config.BOTREPORT_ENABLE)
 		{
-			BotReportTable.getInstance().reportBot(activeChar);
+			ReportTable.getInstance().reportBot(activeChar);
 		}
 		else
 		{

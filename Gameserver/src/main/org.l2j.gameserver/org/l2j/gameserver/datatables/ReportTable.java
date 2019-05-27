@@ -1,15 +1,22 @@
 package org.l2j.gameserver.datatables;
 
-import org.l2j.commons.database.DatabaseFactory;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.BotReportDAO;
+import org.l2j.gameserver.data.database.data.BotReportData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.engines.captcha.CaptchaEngine;
+import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
+import org.l2j.gameserver.model.punishment.PunishmentAffect;
+import org.l2j.gameserver.model.punishment.PunishmentTask;
+import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -17,6 +24,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.captcha.ReceiveBotCaptchaImage;
 import org.l2j.gameserver.network.serverpackets.captcha.ReceiveBotCaptchaResult;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.Attributes;
@@ -26,44 +34,44 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
+
 /**
  * @author BiggBoss
  */
-public final class BotReportTable {
+public final class ReportTable {
     public static final int ATTACK_ACTION_BLOCK_ID = -1;
     public static final int TRADE_ACTION_BLOCK_ID = -2;
     public static final int PARTY_ACTION_BLOCK_ID = -3;
     public static final int ACTION_BLOCK_ID = -4;
     public static final int CHAT_BLOCK_ID = -5;
     // Zoey76: TODO: Split XML parsing from SQL operations, use IGameXmlReader instead of SAXParser.
-    private static final Logger LOGGER = LoggerFactory.getLogger(BotReportTable.class);
-    private static final int COLUMN_BOT_ID = 1;
-    private static final int COLUMN_REPORTER_ID = 2;
-    private static final int COLUMN_REPORT_TIME = 3;
+    private static final Logger LOGGER = LoggerFactory.getLogger(ReportTable.class);
 
-    private static final String SQL_LOAD_REPORTED_CHAR_DATA = "SELECT * FROM bot_reported_char_data";
-    private static final String SQL_INSERT_REPORTED_CHAR_DATA = "INSERT INTO bot_reported_char_data VALUES (?,?,?)";
-    private static final String SQL_CLEAR_REPORTED_CHAR_DATA = "DELETE FROM bot_reported_char_data";
+    private static final String REPORT_TYPE_ADENA_ADS = "ADENA_ADS";
 
-    private Map<Integer, Long> _ipRegistry;
-    private Map<Integer, ReporterCharData> _charRegistry;
-    private Map<Integer, ReportedCharData> _reports;
+    private IntObjectMap<BotReportedCharData> reports;
+    private IntObjectMap<ReporterCharData> reporters;
+
+    private Map<Integer, Long> ipRegistry;
     private Map<Integer, PunishHolder> _punishments;
 
-    private BotReportTable() {
+    private ReportTable() {
         if (Config.BOTREPORT_ENABLE) {
-            _ipRegistry = new HashMap<>();
-            _charRegistry = new ConcurrentHashMap<>();
-            _reports = new ConcurrentHashMap<>();
+            reports = new CHashIntObjectMap<>();
+            ipRegistry = new HashMap<>();
+            reporters = new CHashIntObjectMap<>();
             _punishments = new ConcurrentHashMap<>();
 
             try {
@@ -84,24 +92,7 @@ public final class BotReportTable {
     }
 
     /**
-     * Returns a integer representative number from a connection
-     *
-     * @param player (The L2PcInstance owner of the connection)
-     * @return int (hashed ip)
-     */
-    private static int hashIp(L2PcInstance player) {
-        final String con = player.getClient().getHostAddress();
-        final String[] rawByte = con.split("\\.");
-        final int[] rawIp = new int[4];
-        for (int i = 0; i < 4; i++) {
-            rawIp[i] = Integer.parseInt(rawByte[i]);
-        }
-
-        return rawIp[0] | (rawIp[1] << 8) | (rawIp[2] << 16) | (rawIp[3] << 24);
-    }
-
-    /**
-     * Checks and return if the abstrat barrier specified by an integer (map key) has accomplished the waiting time
+     * Checks and return if the abstract barrier specified by an integer (map key) has accomplished the waiting time
      *
      * @param map      (a Map to study (Int = barrier, Long = fully qualified unix time)
      * @param objectId (an existent map key)
@@ -119,52 +110,18 @@ public final class BotReportTable {
      * Warning: Heavy method, used only on server start up
      */
     private void loadReportedCharData() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             Statement st = con.createStatement();
-             ResultSet rset = st.executeQuery(SQL_LOAD_REPORTED_CHAR_DATA)) {
-            long lastResetTime = 0;
-            try {
-                final String[] hour = Config.BOTREPORT_RESETPOINT_HOUR;
-                final Calendar c = Calendar.getInstance();
-                c.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour[0]));
-                c.set(Calendar.MINUTE, Integer.parseInt(hour[1]));
+        var botReportDao = getDAO(BotReportDAO.class);
+        var yesterday = LocalDateTime.now().minusDays(1);
 
-                if (System.currentTimeMillis() < c.getTimeInMillis()) {
-                    c.set(Calendar.DAY_OF_YEAR, c.get(Calendar.DAY_OF_YEAR) - 1);
-                }
+        botReportDao.removeExpiredReports(yesterday);
+        var reportsData = botReportDao.findAll();
 
-                lastResetTime = c.getTimeInMillis();
-            } catch (Exception e) {
-            }
+        for (BotReportData report : reportsData) {
+            reports.computeIfAbsent(report.getBotId(), bot -> new BotReportedCharData()).addReporter(report);
+            reporters.computeIfAbsent(report.getReporterId(), reporter -> new ReporterCharData()).decreaseReportPoints();
 
-            while (rset.next()) {
-                final int botId = rset.getInt(COLUMN_BOT_ID);
-                final int reporter = rset.getInt(COLUMN_REPORTER_ID);
-                final long date = rset.getLong(COLUMN_REPORT_TIME);
-                if (_reports.containsKey(botId)) {
-                    _reports.get(botId).addReporter(reporter, date);
-                } else {
-                    final ReportedCharData rcd = new ReportedCharData();
-                    rcd.addReporter(reporter, date);
-                    _reports.put(rset.getInt(COLUMN_BOT_ID), rcd);
-                }
-
-                if (date > lastResetTime) {
-                    ReporterCharData rcd = _charRegistry.get(reporter);
-                    if (rcd != null) {
-                        rcd.setPoints(rcd.getPointsLeft() - 1);
-                    } else {
-                        rcd = new ReporterCharData();
-                        rcd.setPoints(6);
-                        _charRegistry.put(reporter, rcd);
-                    }
-                }
-            }
-
-            LOGGER.info(getClass().getSimpleName() + ": Loaded " + _reports.size() + " bot reports");
-        } catch (Exception e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Could not load reported char data!", e);
         }
+        LOGGER.info("Loaded {} bot reports", reports.size());
     }
 
     /**
@@ -172,22 +129,11 @@ public final class BotReportTable {
      * Warning: Heavy method, used only at server shutdown
      */
     public void saveReportedCharData() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             Statement st = con.createStatement();
-             PreparedStatement ps = con.prepareStatement(SQL_INSERT_REPORTED_CHAR_DATA)) {
-            st.execute(SQL_CLEAR_REPORTED_CHAR_DATA);
-
-            for (Map.Entry<Integer, ReportedCharData> entrySet : _reports.entrySet()) {
-                for (int reporterId : entrySet.getValue()._reporters.keySet()) {
-                    ps.setInt(1, entrySet.getKey());
-                    ps.setInt(2, reporterId);
-                    ps.setLong(3, entrySet.getValue()._reporters.get(reporterId));
-                    ps.execute();
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.error(getClass().getSimpleName() + ": Could not update reported char data in database!", e);
-        }
+        var botReportDao = getDAO(BotReportDAO.class);
+        reports.values().forEach(r -> {
+            r.adsReporters.values().forEach(botReportDao::save);
+            r.reporters.values().forEach(botReportDao::save);
+        });
     }
 
     /**
@@ -198,95 +144,86 @@ public final class BotReportTable {
      */
     public boolean reportBot(L2PcInstance reporter) {
         final L2Object target = reporter.getTarget();
-        if (target == null) {
+        if (isNull(target) || !target.isPlayer() || target.getObjectId() == reporter.getObjectId()) {
             return false;
         }
 
-        final L2Character bot = ((L2Character) target);
-
-        if ((!bot.isPlayer()) || (target.getObjectId() == reporter.getObjectId())) {
-            return false;
-        }
+        final L2PcInstance bot = ((L2PcInstance) target);
 
         if (bot.isInsideZone(ZoneId.PEACE) || bot.isInsideZone(ZoneId.PVP)) {
             reporter.sendPacket(SystemMessageId.YOU_CANNOT_REPORT_A_CHARACTER_WHO_IS_IN_A_PEACE_ZONE_OR_A_BATTLEGROUND);
             return false;
         }
 
-        if (bot.isPlayer() && bot.getActingPlayer().isInOlympiadMode()) {
+        if (bot.isInOlympiadMode()) {
             reporter.sendPacket(SystemMessageId.THIS_CHARACTER_CANNOT_MAKE_A_REPORT_YOU_CANNOT_MAKE_A_REPORT_WHILE_LOCATED_INSIDE_A_PEACE_ZONE_OR_A_BATTLEGROUND_WHILE_YOU_ARE_AN_OPPOSING_CLAN_MEMBER_DURING_A_CLAN_WAR_OR_WHILE_PARTICIPATING_IN_THE_OLYMPIAD);
             return false;
         }
 
-        if ((bot.getClan() != null) && bot.getClan().isAtWarWith(reporter.getClan())) {
+        if ((nonNull(bot.getClan())) && bot.getClan().isAtWarWith(reporter.getClan())) {
             reporter.sendPacket(SystemMessageId.YOU_CANNOT_REPORT_WHEN_A_CLAN_WAR_HAS_BEEN_DECLARED);
             return false;
         }
 
-        if (bot.isPlayer() && (bot.getActingPlayer().getExp() == bot.getActingPlayer().getStat().getStartingExp())) {
+        if (bot.getExp() == bot.getStat().getStartingExp()) {
             reporter.sendPacket(SystemMessageId.YOU_CANNOT_REPORT_A_CHARACTER_WHO_HAS_NOT_ACQUIRED_ANY_XP_AFTER_CONNECTING);
             return false;
         }
 
-        ReportedCharData rcd = _reports.get(bot.getObjectId());
-        ReporterCharData rcdRep = _charRegistry.get(reporter.getObjectId());
+        BotReportedCharData rcd = reports.get(bot.getObjectId());
+        ReporterCharData rcdRep = reporters.get(reporter.getObjectId());
         final int reporterId = reporter.getObjectId();
 
-        synchronized (this) {
-            if (_reports.containsKey(reporterId)) {
-                reporter.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_AND_CANNOT_REPORT_OTHER_USERS);
+
+        final int ip = org.l2j.gameserver.util.Util.hashIp(reporter);
+        if (!timeHasPassed(ipRegistry, ip)) {
+            reporter.sendPacket(SystemMessageId.THIS_CHARACTER_CANNOT_MAKE_A_REPORT_THE_TARGET_HAS_ALREADY_BEEN_REPORTED_BY_EITHER_YOUR_CLAN_OR_HAS_ALREADY_BEEN_REPORTED_FROM_YOUR_CURRENT_IP);
+            return false;
+        }
+
+        if (nonNull(rcd)) {
+            if (rcd.alredyReportedBy(reporterId)) {
+                reporter.sendPacket(SystemMessageId.YOU_CANNOT_REPORT_THIS_PERSON_AGAIN_AT_THIS_TIME);
                 return false;
             }
 
-            final int ip = hashIp(reporter);
-            if (!timeHasPassed(_ipRegistry, ip)) {
+            if (!Config.BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS && rcd.reportedBySameClan(reporter.getClan())) {
                 reporter.sendPacket(SystemMessageId.THIS_CHARACTER_CANNOT_MAKE_A_REPORT_THE_TARGET_HAS_ALREADY_BEEN_REPORTED_BY_EITHER_YOUR_CLAN_OR_HAS_ALREADY_BEEN_REPORTED_FROM_YOUR_CURRENT_IP);
                 return false;
             }
+        }
 
-            if (rcd != null) {
-                if (rcd.alredyReportedBy(reporterId)) {
-                    reporter.sendPacket(SystemMessageId.YOU_CANNOT_REPORT_THIS_PERSON_AGAIN_AT_THIS_TIME);
-                    return false;
-                }
-
-                if (!Config.BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS && rcd.reportedBySameClan(reporter.getClan())) {
-                    reporter.sendPacket(SystemMessageId.THIS_CHARACTER_CANNOT_MAKE_A_REPORT_THE_TARGET_HAS_ALREADY_BEEN_REPORTED_BY_EITHER_YOUR_CLAN_OR_HAS_ALREADY_BEEN_REPORTED_FROM_YOUR_CURRENT_IP);
-                    return false;
-                }
+        if (nonNull(rcdRep)) {
+            if (rcdRep.getPointsLeft() == 0) {
+                reporter.sendPacket(SystemMessageId.YOU_HAVE_USED_ALL_AVAILABLE_POINTS_POINTS_ARE_RESET_EVERYDAY_AT_NOON);
+                return false;
             }
 
-            if (rcdRep != null) {
-                if (rcdRep.getPointsLeft() == 0) {
-                    reporter.sendPacket(SystemMessageId.YOU_HAVE_USED_ALL_AVAILABLE_POINTS_POINTS_ARE_RESET_EVERYDAY_AT_NOON);
-                    return false;
-                }
-
-                final long reuse = (System.currentTimeMillis() - rcdRep.getLastReporTime());
-                if (reuse < Config.BOTREPORT_REPORT_DELAY) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_MAKE_ANOTHER_REPORT_IN_S1_MINUTE_S_YOU_HAVE_S2_POINT_S_REMAINING_ON_THIS_ACCOUNT);
-                    sm.addInt((int) (reuse / 60000));
-                    sm.addInt(rcdRep.getPointsLeft());
-                    reporter.sendPacket(sm);
-                    return false;
-                }
+            final long reuse = (System.currentTimeMillis() - rcdRep.getLastReporTime());
+            if (reuse < Config.BOTREPORT_REPORT_DELAY) {
+                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_MAKE_ANOTHER_REPORT_IN_S1_MINUTE_S_YOU_HAVE_S2_POINT_S_REMAINING_ON_THIS_ACCOUNT);
+                sm.addInt((int) (reuse / 60000));
+                sm.addInt(rcdRep.getPointsLeft());
+                reporter.sendPacket(sm);
+                return false;
             }
+        }
 
-            final long curTime = System.currentTimeMillis();
-
-            if (rcd == null) {
-                rcd = new ReportedCharData();
-                _reports.put(bot.getObjectId(), rcd);
+        final long curTime = System.currentTimeMillis();
+        synchronized (this) {
+            if (isNull(rcd)) {
+                rcd = new BotReportedCharData();
+                reports.put(bot.getObjectId(), rcd);
             }
-            rcd.addReporter(reporterId, curTime);
+            rcd.addReporter(bot.getObjectId(), reporterId, "BOT");
 
-            if (rcdRep == null) {
+            if (isNull(rcdRep)) {
                 rcdRep = new ReporterCharData();
             }
             rcdRep.registerReport(curTime);
 
-            _ipRegistry.put(ip, curTime);
-            _charRegistry.put(reporterId, rcdRep);
+            ipRegistry.put(ip, curTime);
+            reporters.put(reporterId, rcdRep);
         }
 
         SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_WAS_REPORTED_AS_A_BOT);
@@ -298,10 +235,7 @@ public final class BotReportTable {
         sm.addInt(rcdRep.getPointsLeft());
         reporter.sendPacket(sm);
 
-        if (bot.isPlayer()) {
-            handleReport(bot.getActingPlayer(), rcd);
-        }
-
+        handleReport(bot, rcd);
         return true;
     }
 
@@ -311,7 +245,7 @@ public final class BotReportTable {
      * @param bot (L2PcInstance to be punished)
      * @param rcd (RepotedCharData linked to this bot)
      */
-    private void handleReport(L2PcInstance bot, ReportedCharData rcd) {
+    private void handleReport(L2PcInstance bot, BotReportedCharData rcd) {
         // Report count punishment
         punishBot(bot, _punishments.get(rcd.getReportCount()));
 
@@ -341,11 +275,11 @@ public final class BotReportTable {
      * @param ph  (PunishHolder containing the debuff and a possible system message to send)
      */
     private void punishBot(L2PcInstance bot, PunishHolder ph) {
-        if (ph != null) {
+        if (nonNull(ph)) {
             ph._punish.applyEffects(bot, bot);
             if (ph._systemMessageId > -1) {
                 final SystemMessageId id = SystemMessageId.getSystemMessageId(ph._systemMessageId);
-                if (id != null) {
+                if (nonNull(id)) {
                     bot.sendPacket(id);
                 }
             }
@@ -360,22 +294,17 @@ public final class BotReportTable {
      * @param skillLevel
      * @param sysMsg        (id of a system message to send when applying the punish)
      */
-    void addPunishment(int neededReports, int skillId, int skillLevel, int sysMsg) {
+    private void addPunishment(int neededReports, int skillId, int skillLevel, int sysMsg) {
         final Skill sk = SkillData.getInstance().getSkill(skillId, skillLevel);
-        if (sk != null) {
+        if (nonNull(sk)) {
             _punishments.put(neededReports, new PunishHolder(sk, sysMsg));
         } else {
-            LOGGER.warn("Could not add punishment for " + neededReports + " report(s): Skill " + skillId + "-" + skillLevel + " does not exist!");
+            LOGGER.warn("Could not add punishment for {} report(s): Skill {} - {} does not exist!", neededReports, skillId , skillLevel );
         }
     }
 
-    void resetPointsAndSchedule() {
-        synchronized (_charRegistry) {
-            for (ReporterCharData rcd : _charRegistry.values()) {
-                rcd.setPoints(7);
-            }
-        }
-
+    private void resetPointsAndSchedule() {
+        reporters.values().forEach(r -> r.setPoints(7));
         scheduleResetPointTask();
     }
 
@@ -406,14 +335,36 @@ public final class BotReportTable {
         bot.sendPacket(ReceiveBotCaptchaResult.FAILED);
     }
 
-    public static BotReportTable getInstance() {
+    public void reportAdenaADS(int reporterId, int reportedId) {
+        var reportedData = reports.get(reportedId);
+        if(isNull(reportedData)) {
+            reportedData = new BotReportedCharData();
+        } else {
+            if(reportedData.alreadyReportedAdenaADS(reporterId)) {
+                return;
+            }
+        }
+
+        reportedData.addReporter(reporterId, reportedId, REPORT_TYPE_ADENA_ADS);
+        var reportedCount = reportedData.getADSReportedCount();
+
+        if(reportedCount >= getSettings(GeneralSettings.class).banChatAdenaAdsReportCount()) {
+            var manager = PunishmentManager.getInstance();
+            if(manager.hasPunishment(reportedId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN)) {
+                manager.stopPunishment(reportedId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN);
+            }
+            manager.startPunishment(new PunishmentTask(0, reportedId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, Instant.now().plus(14, ChronoUnit.HOURS).toEpochMilli(), "Chat banned bot report", "system", false));
+        }
+
+    }
+
+    public static ReportTable getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static final class Singleton {
-        private static final BotReportTable INSTANCE = new BotReportTable();
+        private static final ReportTable INSTANCE = new ReportTable();
     }
-
 
     /**
      * Represents the info about a reporter
@@ -444,44 +395,66 @@ public final class BotReportTable {
         void setPoints(int points) {
             _reportPoints = (byte) points;
         }
+
+        void decreaseReportPoints() {
+            _reportPoints--;
+        }
     }
 
 
     /**
      * Represents the info about a reported character
      */
-    private final class ReportedCharData {
+    private final class BotReportedCharData {
 
-        Map<Integer, Long> _reporters;
+        IntObjectMap<BotReportData> reporters;
+        IntObjectMap<BotReportData> adsReporters;
 
-        ReportedCharData() {
-            _reporters = new HashMap<>();
+        BotReportedCharData() {
+            reporters = new HashIntObjectMap<>();
+            adsReporters = new HashIntObjectMap<>();
         }
 
         int getReportCount() {
-            return _reporters.size();
+            return reporters.size();
         }
 
         boolean alredyReportedBy(int objectId) {
-            return _reporters.containsKey(objectId);
-        }
-
-        void addReporter(int objectId, long reportTime) {
-            _reporters.put(objectId, reportTime);
+            return reporters.containsKey(objectId);
         }
 
         boolean reportedBySameClan(L2Clan clan) {
-            if (clan == null) {
+            if (isNull(clan)) {
                 return false;
             }
 
-            for (int reporterId : _reporters.keySet()) {
-                if (clan.isMember(reporterId)) {
+            var it = reporters.keySet().iterator();
+            while (it.hasNext()) {
+                if(clan.isMember(it.nextInt())) {
                     return true;
                 }
             }
-
             return false;
+        }
+
+        void addReporter(BotReportData report) {
+            if (REPORT_TYPE_ADENA_ADS.equalsIgnoreCase(report.getType())) {
+                adsReporters.put(report.getReporterId(), report);
+            } else {
+                reporters.put(report.getReporterId(), report);
+            }
+        }
+
+        void addReporter(int botId, int reporterId, String type) {
+            addReporter(new BotReportData(botId, reporterId, type));
+        }
+
+        boolean alreadyReportedAdenaADS(int reporterId) {
+            return adsReporters.containsKey(reporterId);
+        }
+
+        int getADSReportedCount() {
+            return adsReporters.size();
         }
     }
 

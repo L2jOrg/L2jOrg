@@ -9,7 +9,7 @@ import org.l2j.commons.util.DeadLockDetector;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.*;
 import org.l2j.gameserver.data.xml.impl.*;
-import org.l2j.gameserver.datatables.BotReportTable;
+import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.geoengine.GeoEngine;
@@ -175,7 +175,7 @@ public class GameServer {
         TeleportersData.getInstance();
         CursedWeaponsManager.getInstance();
         TransformData.getInstance();
-        BotReportTable.getInstance();
+        ReportTable.getInstance();
         if (Config.SELLBUFF_ENABLED) {
             SellBuffsManager.getInstance();
         }

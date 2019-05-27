@@ -1,12 +1,8 @@
 package org.l2j.gameserver.model.actor.request.impl;
 
-import org.l2j.gameserver.datatables.BotReportTable;
+import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.request.AbstractRequest;
-import org.l2j.gameserver.model.skills.CommonSkill;
-import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.network.serverpackets.captcha.ReceiveBotCaptchaResult;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -60,7 +56,7 @@ public class CaptchaRequest extends AbstractRequest {
 
     @Override
     public void onTimeout() {
-        BotReportTable.getInstance().punishBotDueUnsolvedCaptcha(getActiveChar());
+        ReportTable.getInstance().punishBotDueUnsolvedCaptcha(getActiveChar());
     }
 
     public int maxAttemps() {

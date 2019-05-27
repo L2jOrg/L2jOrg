@@ -32,5 +32,6 @@ module org.l2j.commons {
              org.l2j.commons.database.handler.DoubleHandler,
              org.l2j.commons.database.handler.BooleanHandler,
              org.l2j.commons.database.handler.DateHandler,
+             org.l2j.commons.database.handler.DateTimeHandler,
              org.l2j.commons.database.handler.EntityHandler;
 }

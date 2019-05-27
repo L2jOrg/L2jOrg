@@ -76,8 +76,7 @@ public final class Util {
     }
 
     public static double convertHeadingToDegree(int clientHeading) {
-        final double degree = clientHeading / 182.044444444;
-        return degree;
+        return clientHeading / 182.044444444;
     }
 
     public static int calculateHeadingFrom(ILocational from, ILocational to) {
@@ -604,5 +603,9 @@ public final class Util {
 
     public static <K, V extends Comparable<? super V>> Map<K, V> sortByValue(Map<K, V> map) {
         return map.entrySet().stream().sorted(Map.Entry.comparingByValue()).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+    }
+
+    public static int hashIp(L2PcInstance player) {
+        return org.l2j.commons.util.Util.hashIp(player.getIPAddress());
     }
 }

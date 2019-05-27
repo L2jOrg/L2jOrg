@@ -1,5 +1,7 @@
 package org.l2j.gameserver.instancemanager;
 
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.commons.configuration.Configurator;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
@@ -40,19 +42,20 @@ public final class ZoneManager extends IGameXmlReader{
     private static final int OFFSET_X = Math.abs(L2World.MAP_MIN_X >> SHIFT_BY);
     private static final int OFFSET_Y = Math.abs(L2World.MAP_MIN_Y >> SHIFT_BY);
 
-    private final Map<Class<? extends L2ZoneType>, Map<Integer, ? extends L2ZoneType>> _classZones = new HashMap<>();
+    private final Map<Class<? extends L2ZoneType>, IntObjectMap<? extends L2ZoneType>> _classZones = new HashMap<>();
     private final Map<String, L2SpawnTerritory> _spawnTerritories = new HashMap<>();
-    private final ZoneRegion[][] _zoneRegions = new ZoneRegion[(L2World.MAP_MAX_X >> SHIFT_BY) + OFFSET_X + 1][(L2World.MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y + 1];
+    private final ZoneRegion[][] zoneRegions;
     private int _lastDynamicId = 300000;
     private List<L2ItemInstance> _debugItems;
 
     private ZoneManager() {
-        for (int x = 0; x < _zoneRegions.length; x++) {
-            for (int y = 0; y < _zoneRegions[x].length; y++) {
-                _zoneRegions[x][y] = new ZoneRegion(x, y);
+        zoneRegions = new ZoneRegion[(L2World.MAP_MAX_X >> SHIFT_BY) + OFFSET_X + 1][(L2World.MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y + 1];
+        for (int x = 0; x < zoneRegions.length; x++) {
+            for (int y = 0; y < zoneRegions[x].length; y++) {
+                zoneRegions[x][y] = new ZoneRegion(x, y);
             }
         }
-        LOGGER.info("Zone Region Grid set up: {} by {}", _zoneRegions.length, _zoneRegions[0].length);
+        LOGGER.info("Zone Region Grid set up: {} by {}", zoneRegions.length, zoneRegions[0].length);
 
         load();
     }
@@ -98,7 +101,7 @@ public final class ZoneManager extends IGameXmlReader{
         int count = 0;
 
         // Backup old zone settings
-        for (Map<Integer, ? extends L2ZoneType> map : _classZones.values()) {
+        for (IntObjectMap<? extends L2ZoneType> map : _classZones.values()) {
             for (L2ZoneType zone : map.values()) {
                 if (zone.getSettings() != null) {
                     SETTINGS.put(zone.getName(), zone.getSettings());
@@ -107,7 +110,7 @@ public final class ZoneManager extends IGameXmlReader{
         }
 
         // Clear zones
-        for (ZoneRegion[] zoneRegions : _zoneRegions) {
+        for (ZoneRegion[] zoneRegions : zoneRegions) {
             for (ZoneRegion zoneRegion : zoneRegions) {
                 zoneRegion.getZones().clear();
                 count++;
@@ -299,8 +302,8 @@ public final class ZoneManager extends IGameXmlReader{
                         // Register the zone into any world region it
                         // intersects with...
                         // currently 11136 test for each zone :>
-                        for (int x = 0; x < _zoneRegions.length; x++) {
-                            for (int y = 0; y < _zoneRegions[x].length; y++) {
+                        for (int x = 0; x < zoneRegions.length; x++) {
+                            for (int y = 0; y < zoneRegions[x].length; y++) {
 
                                 final int ax = (x - OFFSET_X) << SHIFT_BY;
                                 final int bx = ((x + 1) - OFFSET_X) << SHIFT_BY;
@@ -308,7 +311,7 @@ public final class ZoneManager extends IGameXmlReader{
                                 final int by = ((y + 1) - OFFSET_Y) << SHIFT_BY;
 
                                 if (temp.getZone().intersectsRectangle(ax, bx, ay, by)) {
-                                    _zoneRegions[x][y].getZones().put(temp.getId(), temp);
+                                    zoneRegions[x][y].getZones().put(temp.getId(), temp);
                                 }
                             }
                         }
@@ -325,8 +328,8 @@ public final class ZoneManager extends IGameXmlReader{
         parseDatapackDirectory("data/zones", true);
         LOGGER.info("Loaded {} zone classes and {} zones.", _classZones.size(), getSize());
         LOGGER.info("Loaded {}  NPC spawn territoriers.", _spawnTerritories.size());
-        final OptionalInt maxId = _classZones.values().stream().flatMap(map -> map.keySet().stream()).mapToInt(Integer.class::cast).filter(value -> value < 300000).max();
-        LOGGER.info("Last static id: {}", maxId.getAsInt());
+        final OptionalInt maxId = _classZones.values().stream().flatMapToInt(map -> map.keySet().stream()).filter(value -> value < 300000).max();
+        maxId.ifPresent(id -> LOGGER.info("Last static id: {}", id));
     }
 
     /**
@@ -336,7 +339,7 @@ public final class ZoneManager extends IGameXmlReader{
      */
     public int getSize() {
         int i = 0;
-        for (Map<Integer, ? extends L2ZoneType> map : _classZones.values()) {
+        for (IntObjectMap<? extends L2ZoneType> map : _classZones.values()) {
             i += map.size();
         }
         return i;
@@ -349,7 +352,7 @@ public final class ZoneManager extends IGameXmlReader{
      * @return true, if successful
      */
     private boolean checkId(int id) {
-        for (Map<Integer, ? extends L2ZoneType> map : _classZones.values()) {
+        for (IntObjectMap<? extends L2ZoneType> map : _classZones.values()) {
             if (map.containsKey(id)) {
                 return true;
             }
@@ -366,9 +369,9 @@ public final class ZoneManager extends IGameXmlReader{
      */
     @SuppressWarnings("unchecked")
     private <T extends L2ZoneType> void addZone(Integer id, T zone) {
-        Map<Integer, T> map = (Map<Integer, T>) _classZones.get(zone.getClass());
+        IntObjectMap<T> map = (IntObjectMap<T>) _classZones.get(zone.getClass());
         if (map == null) {
-            map = new HashMap<>();
+            map = new HashIntObjectMap<>();
             map.put(id, zone);
             _classZones.put(zone.getClass(), map);
         } else {
@@ -396,7 +399,7 @@ public final class ZoneManager extends IGameXmlReader{
      * @see #getZoneById(int, Class)
      */
     public L2ZoneType getZoneById(int id) {
-        for (Map<Integer, ? extends L2ZoneType> map : _classZones.values()) {
+        for (IntObjectMap<? extends L2ZoneType> map : _classZones.values()) {
             if (map.containsKey(id)) {
                 return map.get(id);
             }
@@ -411,7 +414,7 @@ public final class ZoneManager extends IGameXmlReader{
      * @return the zone by name
      */
     public L2ZoneType getZoneByName(String name) {
-        for (Map<Integer, ? extends L2ZoneType> map : _classZones.values()) {
+        for (IntObjectMap<? extends L2ZoneType> map : _classZones.values()) {
             final Optional<? extends L2ZoneType> zoneType = map.values().stream().filter(z -> (z.getName() != null) && z.getName().equals(name)).findAny();
             if (zoneType.isPresent()) {
                 return zoneType.get();
@@ -589,7 +592,7 @@ public final class ZoneManager extends IGameXmlReader{
 
     public ZoneRegion getRegion(int x, int y) {
         try {
-            return _zoneRegions[(x >> SHIFT_BY) + OFFSET_X][(y >> SHIFT_BY) + OFFSET_Y];
+            return zoneRegions[(x >> SHIFT_BY) + OFFSET_X][(y >> SHIFT_BY) + OFFSET_Y];
         } catch (ArrayIndexOutOfBoundsException e) {
             // LOGGER.warn(getClass().getSimpleName() + ": Incorrect zone region X: " + ((x >> SHIFT_BY) + OFFSET_X) + " Y: " + ((y >> SHIFT_BY) + OFFSET_Y) + " for coordinates x: " + x + " y: " + y);
             return null;

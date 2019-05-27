@@ -4,7 +4,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
-import org.l2j.gameserver.datatables.BotReportTable;
+import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.L2World;
@@ -427,7 +427,7 @@ public class Shutdown extends Thread {
 
         // Save bot reports to database
         if (Config.BOTREPORT_ENABLE) {
-            BotReportTable.getInstance().saveReportedCharData();
+            ReportTable.getInstance().saveReportedCharData();
             LOGGER.info("Bot Report Table: Successfully saved reports to database!");
         }
 
