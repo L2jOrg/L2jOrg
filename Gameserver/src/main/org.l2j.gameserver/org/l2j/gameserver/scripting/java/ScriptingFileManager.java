@@ -71,7 +71,7 @@ final class ScriptingFileManager extends ForwardingJavaFileManager<StandardJavaF
                 return false;
             }
 
-            var className = parentPath.relativize(compiled).toString().replace(".class", "").replaceAll(File.separator, ".");
+            var className = parentPath.relativize(compiled).toString().replace(".class", "").replace(File.separator, ".");
             scriptsFileInfo.putIfAbsent(path, new ScriptingFileInfo(path, className, module, classLocation));
             return true;
         }
