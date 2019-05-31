@@ -15,28 +15,29 @@ import java.nio.ByteBuffer;
  */
 public final class AuthLogin extends IClientIncomingPacket {
 
-    // loginName + keys must match what the loginserver used.
-    private String _loginName;
+    // account + keys must match what the loginserver used.
+    private String account;
     /*
      * private final long _key1; private final long _key2; private final long _key3; private final long _key4;
      */
-    private int _playKey1;
-    private int _playKey2;
-    private int _loginKey1;
-    private int _loginKey2;
+    private int sessionId;
+    private int accountId;
+    private int authAccountId;
+    private int authKey;
 
     @Override
     public void readImpl(ByteBuffer packet) {
-        _loginName = readString(packet).toLowerCase();
-        _playKey2 = packet.getInt();
-        _playKey1 = packet.getInt();
-        _loginKey1 = packet.getInt();
-        _loginKey2 = packet.getInt();
+        account = readString(packet).toLowerCase();
+        accountId = packet.getInt();
+        sessionId = packet.getInt();
+        authAccountId = packet.getInt();
+        authKey = packet.getInt();
+        // packet.ge
     }
 
     @Override
     public void runImpl() {
-        if (_loginName.isEmpty() || !client.isProtocolOk()) {
+        if (account.isEmpty() || !client.isProtocolOk()) {
             client.closeNow();
             return;
         }
@@ -46,8 +47,8 @@ public final class AuthLogin extends IClientIncomingPacket {
         if (client.getAccountName() == null) {
             // Preventing duplicate login in case client login server socket was disconnected or this packet was not sent yet
 
-            client.setAccountName(_loginName);
-            final SessionKey key = new SessionKey(_loginKey1, _loginKey2, _playKey1, _playKey2);
+            client.setAccountName(account);
+            final SessionKey key = new SessionKey(authAccountId, authKey, sessionId, accountId);
             client.setSessionId(key);
 
             L2GameClient oldClient = AuthServerCommunication.getInstance().addWaitingClient(client);

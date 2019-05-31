@@ -27,11 +27,12 @@ public final class KeyPacket extends IClientOutgoingPacket {
             packet.put(_key[i]); // key
         }
         var serverSettings = getSettings(ServerSettings.class);
-        packet.putInt(0x01);
+        packet.putInt(0x01); // ciphen enabled
         packet.putInt(serverSettings.serverId());
-        packet.put((byte) 0x01);
+        packet.put((byte) 0x00); // merged server
         packet.putInt(0x00); // obfuscation key
         packet.put((byte) ((serverSettings.type() & CLASSIC.getMask()) != 0 ? 0x01 : 0x00)); // isClassic
+        packet.put((byte) 0x00); // queued ?
     }
 
     @Override

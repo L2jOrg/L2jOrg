@@ -30,7 +30,7 @@ public final class RequestShortCutReg extends IClientIncomingPacket {
 
     @Override
     public void runImpl() {
-        if ((client.getActiveChar() == null) || (_page > 10) || (_page < 0)) {
+        if ((client.getActiveChar() == null) || (_page > 19) || (_page < 0)) {
             return;
         }
 
