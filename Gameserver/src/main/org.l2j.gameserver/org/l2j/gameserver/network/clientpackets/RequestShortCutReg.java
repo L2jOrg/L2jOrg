@@ -22,6 +22,7 @@ public final class RequestShortCutReg extends IClientIncomingPacket {
         final int slot = packet.getInt();
         _slot = slot % 12;
         _page = slot / 12;
+        packet.get(); // unk 196
         _id = packet.getInt();
         _lvl = packet.getShort();
         _subLvl = packet.getShort(); // Sublevel

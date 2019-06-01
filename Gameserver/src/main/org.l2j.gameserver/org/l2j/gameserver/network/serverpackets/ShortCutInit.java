@@ -26,7 +26,7 @@ public final class ShortCutInit extends IClientOutgoingPacket {
         for (Shortcut sc : _shortCuts) {
             packet.putInt(sc.getType().ordinal());
             packet.putInt(sc.getSlot() + (sc.getPage() * 12));
-
+            packet.put((byte) 0x00);
             switch (sc.getType()) {
                 case ITEM: {
                     packet.putInt(sc.getId());
@@ -34,7 +34,8 @@ public final class ShortCutInit extends IClientOutgoingPacket {
                     packet.putInt(sc.getSharedReuseGroup());
                     packet.putInt(0x00);
                     packet.putInt(0x00);
-                    packet.putLong(0x00); // Augment id
+                    packet.putInt(0x00); // Augment effect 1
+                    packet.putInt(0x00); // Augment effect 2
                     packet.putInt(0x00); // Visual id
                     break;
                 }

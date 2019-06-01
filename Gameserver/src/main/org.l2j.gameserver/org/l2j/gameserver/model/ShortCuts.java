@@ -102,21 +102,6 @@ public class ShortCuts implements IRestorable {
             return;
         }
         deleteShortCutFromDb(old);
-        if (old.getType() == ShortcutType.ITEM) {
-            final L2ItemInstance item = _owner.getInventory().getItemByObjectId(old.getId());
-
-            if ((item != null) && (item.getItemType() == EtcItemType.SOULSHOT)) {
-                if (_owner.removeAutoSoulShot(item.getId())) {
-                    _owner.sendPacket(new ExAutoSoulShot(item.getId(), false, 0));
-                }
-            }
-        }
-
-        _owner.sendPacket(new ShortCutInit(_owner));
-
-        for (int shotId : _owner.getAutoSoulShot()) {
-            _owner.sendPacket(new ExAutoSoulShot(shotId, true, 0));
-        }
     }
 
     public synchronized void deleteShortCutByObjectId(int objectId) {

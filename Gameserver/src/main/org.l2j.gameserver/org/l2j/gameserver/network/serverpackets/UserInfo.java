@@ -263,7 +263,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             packet.putInt(_activeChar.getPvpKills());
             packet.putShort((short) _activeChar.getRecomLeft());
             packet.putShort((short) _activeChar.getRecomHave());
-            packet.putInt(0x00); // unk 196
+            packet.putInt(0x010); // unk 196
         }
 
         if (containsMask(UserInfoType.VITA_FAME)) {

@@ -24,15 +24,17 @@ public final class ShortCutRegister extends IClientOutgoingPacket {
 
         packet.putInt(_shortcut.getType().ordinal());
         packet.putInt(_shortcut.getSlot() + (_shortcut.getPage() * 12)); // C4 Client
+        packet.put((byte) 0x00); // 196
         switch (_shortcut.getType()) {
             case ITEM: {
                 packet.putInt(_shortcut.getId());
                 packet.putInt(_shortcut.getCharacterType());
                 packet.putInt(_shortcut.getSharedReuseGroup());
-                packet.putInt(0x00); // unknown
-                packet.putInt(0x00); // unknown
-                packet.putInt(0x00); // item augment id
-                packet.putInt(0x00); // TODO: Find me, item visual id ?
+                packet.putInt(0x00); // Remaining time
+                packet.putInt(0x00); // Cool down time
+                packet.putInt(0x00); // item augment effect 1
+                packet.putInt(0x00); // item augment effect 2
+                packet.putInt(0x00); // unk
                 break;
             }
             case SKILL: {

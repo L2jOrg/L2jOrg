@@ -27,11 +27,10 @@ public final class RequestShortCutDel extends IClientIncomingPacket {
             return;
         }
 
-        if ((_page > 10) || (_page < 0)) {
+        if ((_page > 19) || (_page < 0)) {
             return;
         }
 
         activeChar.deleteShortCut(_slot, _page);
-        // client needs no confirmation. this packet is just to inform the server
     }
 }
