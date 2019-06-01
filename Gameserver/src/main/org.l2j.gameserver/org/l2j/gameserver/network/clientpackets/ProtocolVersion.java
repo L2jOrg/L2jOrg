@@ -1,18 +1,14 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
+import org.l2j.gameserver.network.authcomm.gs2as.PlayerLogout;
 import org.l2j.gameserver.network.serverpackets.KeyPacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.nio.ByteBuffer;
 
-
-/**
- * This class ...
- *
- * @version $Revision: 1.5.2.8.2.8 $ $Date: 2005/04/02 10:43:04 $
- */
 public final class ProtocolVersion extends IClientIncomingPacket {
     private static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
 
@@ -30,12 +26,13 @@ public final class ProtocolVersion extends IClientIncomingPacket {
             // this is just a ping attempt from the new C2 client
             client.closeNow();
         } else if (!Config.PROTOCOL_LIST.contains(_version)) {
-            LOGGER_ACCOUNTING.warn("Wrong protocol version " + _version + ", " + client);
+            LOGGER_ACCOUNTING.warn("Wrong protocol version {}, {}", _version, client);
+            AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(client.getAccountName()));
             client.setProtocolOk(false);
             client.close(new KeyPacket(client.enableCrypt(), 0));
         } else {
-            client.sendPacket(new KeyPacket(client.enableCrypt(), 1));
             client.setProtocolOk(true);
+            client.sendPacket(new KeyPacket(client.enableCrypt(), 1));
         }
     }
 }
