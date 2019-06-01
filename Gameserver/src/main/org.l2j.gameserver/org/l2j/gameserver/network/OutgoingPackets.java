@@ -830,7 +830,10 @@ public enum OutgoingPackets {
     EX_USER_BAN_INFO(0xFE, 0x201),
     EX_TRY_ENCHANT_ARTIFACT_RESULT(0xFE, 0x202), // 152
     EX_XIGN_CODE(0xFE, 0x203), // 152
-    EX_MAX(0xFE, 0x204); // 152
+    EX_MAX(0xFE, 0x204), // 152
+    EX_UNK(0XFE, 0X209),
+    EX_UNK1(0XFE, 0X225);
+
 
     private final int _id1;
     private final int _id2;

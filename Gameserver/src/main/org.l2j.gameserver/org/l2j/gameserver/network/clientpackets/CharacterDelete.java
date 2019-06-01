@@ -31,26 +31,14 @@ public final class CharacterDelete extends IClientIncomingPacket {
 
     @Override
     public void runImpl() {
-        // if (!client.getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterDelete"))
-        // {
-        // client.sendPacket(new CharDeleteFail(CharacterDeleteFailType.UNKNOWN));
-        // return;
-        // }
-
         try {
             final CharacterDeleteFailType failType = client.markToDeleteChar(_charSlot);
-            switch (failType) {
-                case NONE:// Success!
-                {
-                    client.sendPacket(new CharDeleteSuccess());
-                    final CharSelectInfoPackage charInfo = client.getCharSelection(_charSlot);
-                    EventDispatcher.getInstance().notifyEvent(new OnPlayerDelete(charInfo.getObjectId(), charInfo.getName(), client), Containers.Players());
-                    break;
-                }
-                default: {
-                    client.sendPacket(new CharDeleteFail(failType));
-                    break;
-                }
+            if (failType == CharacterDeleteFailType.NONE) {// Success!
+                client.sendPacket(new CharDeleteSuccess());
+                final CharSelectInfoPackage charInfo = client.getCharSelection(_charSlot);
+                EventDispatcher.getInstance().notifyEvent(new OnPlayerDelete(charInfo.getObjectId(), charInfo.getName(), client), Containers.Players());
+            } else {
+                client.sendPacket(new CharDeleteFail(failType));
             }
         } catch (Exception e) {
             LOGGER.error(e.getLocalizedMessage(), e);

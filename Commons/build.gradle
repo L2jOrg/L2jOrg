@@ -16,10 +16,10 @@ sourceSets {
 }
 
 
-/*configurations.all {
+configurations.all {
     // Check for updates every build
     resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
-}*/
+}
 
 dependencies {
     api 'javax.cache:cache-api:1.1.0'

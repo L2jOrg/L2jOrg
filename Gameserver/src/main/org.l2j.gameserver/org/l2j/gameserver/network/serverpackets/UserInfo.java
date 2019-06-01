@@ -26,8 +26,8 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
     private final int _walkSpd;
     private final int _swimRunSpd;
     private final int _swimWalkSpd;
-    private final int _flRunSpd = 0;
-    private final int _flWalkSpd = 0;
+    private final int _mountRunSpd = 0;
+    private final int _mountWalkSpd = 0;
     private final int _flyRunSpd;
     private final int _flyWalkSpd;
     private final double _moveMultiplier;
@@ -129,8 +129,8 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             packet.putShort((short) _activeChar.getINT());
             packet.putShort((short) _activeChar.getWIT());
             packet.putShort((short) _activeChar.getMEN());
-            packet.putShort((short) 0x00);
-            packet.putShort((short) 0x00);
+            packet.putShort((short) 0x01); // LUC
+            packet.putShort((short) 0x01); // CHA
         }
 
         if (containsMask(UserInfoType.MAX_HPCPMP)) {
@@ -169,7 +169,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             packet.put((byte) _activeChar.getMountType().ordinal());
             packet.put((byte) _activeChar.getPrivateStoreType().getId());
             packet.put((byte) (_activeChar.hasDwarvenCraft() || (_activeChar.getSkillLevel(248) > 0) ? 1 : 0));
-            packet.put((byte) 0x00);
+            packet.put((byte) 0x00); // Ability Points
         }
 
         if (containsMask(UserInfoType.STATS)) {
@@ -192,12 +192,12 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
 
         if (containsMask(UserInfoType.ELEMENTALS)) {
             packet.putShort((short) 14);
-            packet.putShort((short) 0x00);
-            packet.putShort((short) 0x00);
-            packet.putShort((short) 0x00);
-            packet.putShort((short) 0x00);
-            packet.putShort((short) 0x00);
-            packet.putShort((short) 0x00);
+            packet.putShort((short) 0x00); // Fire defense
+            packet.putShort((short) 0x00); // Water defense
+            packet.putShort((short) 0x00); // Wind defense
+            packet.putShort((short) 0x00); // Earth defense
+            packet.putShort((short) 0x00); // Holy defense
+            packet.putShort((short) 0x00); // dark defense
         }
 
         if (containsMask(UserInfoType.POSITION)) {
@@ -214,8 +214,8 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             packet.putShort((short) _walkSpd);
             packet.putShort((short) _swimRunSpd);
             packet.putShort((short) _swimWalkSpd);
-            packet.putShort((short) _flRunSpd);
-            packet.putShort((short) _flWalkSpd);
+            packet.putShort((short) _mountRunSpd);
+            packet.putShort((short) _mountWalkSpd);
             packet.putShort((short) _flyRunSpd);
             packet.putShort((short) _flyWalkSpd);
         }
@@ -234,8 +234,8 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
 
         if (containsMask(UserInfoType.ATK_ELEMENTAL)) {
             packet.putShort((short) 5);
-            packet.put((byte) 0x00);
-            packet.putShort((short) 0x00);
+            packet.put((byte) -2); // Attack Element
+            packet.putShort((short) 0x00); // Attack element power
         }
 
         if (containsMask(UserInfoType.CLAN)) {
@@ -253,8 +253,8 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
         }
 
         if (containsMask(UserInfoType.SOCIAL)) {
-            packet.putShort((short) 22);
-            packet.put((byte) _activeChar.getPvpFlag());
+            packet.putShort((short) 26); // 196
+            packet.put(_activeChar.getPvpFlag());
             packet.putInt(_activeChar.getReputation()); // Reputation
             packet.put((byte) (_activeChar.isNoble() ? 1 : 0));
             packet.put((byte) (_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 2 : 0)); // 152 - Value for enabled changed to 2?
@@ -263,14 +263,16 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             packet.putInt(_activeChar.getPvpKills());
             packet.putShort((short) _activeChar.getRecomLeft());
             packet.putShort((short) _activeChar.getRecomHave());
+            packet.putInt(0x00); // unk 196
         }
 
         if (containsMask(UserInfoType.VITA_FAME)) {
-            packet.putShort((short) 15);
+            packet.putShort((short) 19); // 196
             packet.putInt(_activeChar.getVitalityPoints());
             packet.put((byte) 0x00); // Vita Bonus
             packet.putInt(_activeChar.getFame());
             packet.putInt(_activeChar.getRaidbossPoints());
+            packet.putInt(0x00); // unk 196
         }
 
         if (containsMask(UserInfoType.SLOTS)) {
@@ -304,17 +306,18 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
         }
 
         if (containsMask(UserInfoType.INVENTORY_LIMIT)) {
-            packet.putShort((short) 9);
-            packet.putShort((short) 0x00);
-            packet.putShort((short) 0x00);
+            packet.putShort((short) 13);
+            packet.putInt((short) 0x00); // mount ??
             packet.putShort((short) _activeChar.getInventoryLimit());
             packet.put((byte) (_activeChar.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_activeChar.getCursedWeaponEquippedId()) : 0));
+            packet.putInt(0x00); // unk 196
         }
 
         if (containsMask(UserInfoType.TRUE_HERO)) {
             packet.putShort((short) 9);
+            packet.put((byte) 0x01);
             packet.putInt(0x00);
-            packet.putShort((short) 0x00);
+            packet.put((byte) 0x00);
             packet.put((byte) (_activeChar.isTrueHero() ? 100 : 0x00));
         }
 
