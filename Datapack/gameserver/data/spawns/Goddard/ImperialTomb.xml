@@ -1,0 +1,552 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_05" minZ="-2778" maxZ="-2478">
+				<node x="177505" y="-75734" />
+				<node x="178286" y="-75713" />
+				<node x="178278" y="-74915" />
+				<node x="177532" y="-74910" />
+			</territory>
+		</territories>
+		<npc id="21398" count="2" respawnTime="30sec" respawnRandom="15sec" />
+		<npc id="21399" count="1" respawnTime="180sec" respawnRandom="40sec" />
+		<npc id="21402" count="1" respawnTime="45sec" respawnRandom="15sec" />
+		<npc id="21403" count="2" respawnTime="90sec" respawnRandom="25sec" />
+		<npc id="21405" count="2" respawnTime="40sec" respawnRandom="15sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_07" minZ="-3422" maxZ="-3122">
+				<node x="177556" y="-78584" />
+				<node x="178370" y="-78567" />
+				<node x="178368" y="-77809" />
+				<node x="177552" y="-77791" />
+			</territory>
+		</territories>
+		<npc id="21398" count="2" respawnTime="30sec" respawnRandom="15sec" />
+		<npc id="21399" count="1" respawnTime="180sec" respawnRandom="40sec" />
+		<npc id="21402" count="1" respawnTime="40sec" respawnRandom="15sec" />
+		<npc id="21403" count="2" respawnTime="90sec" respawnRandom="25sec" />
+		<npc id="21405" count="2" respawnTime="40sec" respawnRandom="15sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_06" minZ="-2775" maxZ="-2475">
+				<node x="174676" y="-75761" />
+				<node x="175457" y="-75739" />
+				<node x="175449" y="-74942" />
+				<node x="174703" y="-74937" />
+			</territory>
+		</territories>
+		<npc id="21398" count="2" respawnTime="30sec" respawnRandom="15sec" />
+		<npc id="21399" count="1" respawnTime="180sec" respawnRandom="40sec" />
+		<npc id="21402" count="1" respawnTime="40sec" respawnRandom="15sec" />
+		<npc id="21403" count="2" respawnTime="90sec" respawnRandom="25sec" />
+		<npc id="21404" count="2" respawnTime="40sec" respawnRandom="15sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_08" minZ="-2770" maxZ="-2470">
+				<node x="174679" y="-78607" />
+				<node x="175464" y="-78600" />
+				<node x="175477" y="-77837" />
+				<node x="174673" y="-77829" />
+			</territory>
+		</territories>
+		<npc id="21398" count="2" respawnTime="30sec" respawnRandom="15sec" />
+		<npc id="21399" count="1" respawnTime="180sec" respawnRandom="40sec" />
+		<npc id="21402" count="1" respawnTime="40sec" respawnRandom="15sec" />
+		<npc id="21403" count="2" respawnTime="90sec" respawnRandom="25sec" />
+		<npc id="21404" count="2" respawnTime="40sec" respawnRandom="15sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_09" minZ="-3423" maxZ="-3123">
+				<node x="174736" y="-81498" />
+				<node x="175468" y="-81493" />
+				<node x="175512" y="-80681" />
+				<node x="174691" y="-80692" />
+			</territory>
+		</territories>
+		<npc id="21410" count="5" respawnTime="60sec" respawnRandom="0sec" />
+		<npc id="21411" count="5" respawnTime="60sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_09_1" minZ="-3423" maxZ="-3123">
+				<node x="174736" y="-81498" />
+				<node x="175468" y="-81493" />
+				<node x="175512" y="-80681" />
+				<node x="174691" y="-80692" />
+			</territory>
+		</territories>
+		<npc id="21400" count="4" respawnTime="45sec" respawnRandom="0sec" />
+		<npc id="21408" count="4" respawnTime="45sec" respawnRandom="0sec" />
+		<npc id="21411" count="5" respawnTime="45sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_09_1" minZ="-3423" maxZ="-3123">
+				<node x="174736" y="-81498" />
+				<node x="175468" y="-81493" />
+				<node x="175512" y="-80681" />
+				<node x="174691" y="-80692" />
+			</territory>
+		</territories>
+		<npc id="21400" count="4" respawnTime="45sec" respawnRandom="0sec" />
+		<npc id="21408" count="4" respawnTime="45sec" respawnRandom="0sec" />
+		<npc id="21411" count="5" respawnTime="45sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_09_2" minZ="-3423" maxZ="-3123">
+				<node x="174736" y="-81498" />
+				<node x="175468" y="-81493" />
+				<node x="175512" y="-80681" />
+				<node x="174691" y="-80692" />
+			</territory>
+		</territories>
+		<npc id="21408" count="4" respawnTime="35sec" respawnRandom="0sec" />
+		<npc id="21409" count="4" respawnTime="35sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_10" minZ="-4072" maxZ="-3772">
+				<node x="177583" y="-81446" />
+				<node x="178337" y="-81443" />
+				<node x="178350" y="-80638" />
+				<node x="177570" y="-80645" />
+			</territory>
+		</territories>
+		<npc id="21410" count="5" respawnTime="60sec" respawnRandom="0sec" />
+		<npc id="21411" count="5" respawnTime="60sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_10_1" minZ="-4072" maxZ="-3772">
+				<node x="177583" y="-81446" />
+				<node x="178337" y="-81443" />
+				<node x="178350" y="-80638" />
+				<node x="177570" y="-80645" />
+			</territory>
+		</territories>
+		<npc id="21400" count="4" respawnTime="45sec" respawnRandom="0sec" />
+		<npc id="21408" count="4" respawnTime="45sec" respawnRandom="0sec" />
+		<npc id="21411" count="5" respawnTime="45sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_10_2" minZ="-4072" maxZ="-3772">
+				<node x="177583" y="-81446" />
+				<node x="178337" y="-81443" />
+				<node x="178350" y="-80638" />
+				<node x="177570" y="-80645" />
+			</territory>
+		</territories>
+		<npc id="21408" count="4" respawnTime="35sec" respawnRandom="0sec" />
+		<npc id="21409" count="4" respawnTime="35sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_10_2" minZ="-4072" maxZ="-3772">
+				<node x="177583" y="-81446" />
+				<node x="178337" y="-81443" />
+				<node x="178350" y="-80638" />
+				<node x="177570" y="-80645" />
+			</territory>
+		</territories>
+		<npc id="21408" count="4" respawnTime="35sec" respawnRandom="0sec" />
+		<npc id="21409" count="4" respawnTime="35sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_11" minZ="-4715" maxZ="-4415">
+				<node x="180439" y="-81438" />
+				<node x="181196" y="-81441" />
+				<node x="181202" y="-80595" />
+				<node x="180441" y="-80597" />
+			</territory>
+		</territories>
+		<npc id="21410" count="5" respawnTime="60sec" respawnRandom="0sec" />
+		<npc id="21411" count="5" respawnTime="60sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_11_1" minZ="-4715" maxZ="-4415">
+				<node x="180439" y="-81438" />
+				<node x="181196" y="-81441" />
+				<node x="181202" y="-80595" />
+				<node x="180441" y="-80597" />
+			</territory>
+		</territories>
+		<npc id="21400" count="4" respawnTime="45sec" respawnRandom="0sec" />
+		<npc id="21408" count="4" respawnTime="45sec" respawnRandom="0sec" />
+		<npc id="21411" count="5" respawnTime="45sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_11_2" minZ="-4715" maxZ="-4415">
+				<node x="180439" y="-81438" />
+				<node x="181196" y="-81441" />
+				<node x="181202" y="-80595" />
+				<node x="180441" y="-80597" />
+			</territory>
+		</territories>
+		<npc id="21408" count="4" respawnTime="35sec" respawnRandom="0sec" />
+		<npc id="21409" count="4" respawnTime="35sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_12" minZ="-6012" maxZ="-5712">
+				<node x="183282" y="-78507" />
+				<node x="184060" y="-78506" />
+				<node x="184047" y="-77708" />
+				<node x="183290" y="-77713" />
+			</territory>
+		</territories>
+		<npc id="21401" count="3" respawnTime="40sec" respawnRandom="0sec" />
+		<npc id="21407" count="3" respawnTime="40sec" respawnRandom="0sec" />
+		<npc id="21416" count="4" respawnTime="40sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_12_1" minZ="-6012" maxZ="-5712">
+				<node x="183282" y="-78507" />
+				<node x="184060" y="-78506" />
+				<node x="184047" y="-77708" />
+				<node x="183290" y="-77713" />
+			</territory>
+		</territories>
+		<npc id="21432" count="3" respawnTime="40sec" respawnRandom="0sec" />
+		<npc id="21424" count="2" respawnTime="40sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_13" minZ="-6647" maxZ="-6347">
+				<node x="186143" y="-78512" />
+				<node x="186962" y="-78497" />
+				<node x="186952" y="-77690" />
+				<node x="186140" y="-77695" />
+			</territory>
+		</territories>
+		<npc id="21401" count="3" respawnTime="40sec" respawnRandom="0sec" />
+		<npc id="21407" count="3" respawnTime="40sec" respawnRandom="0sec" />
+		<npc id="21416" count="4" respawnTime="40sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_13_1" minZ="-6647" maxZ="-6347">
+				<node x="186143" y="-78512" />
+				<node x="186962" y="-78497" />
+				<node x="186952" y="-77690" />
+				<node x="186140" y="-77695" />
+			</territory>
+		</territories>
+		<npc id="21432" count="3" respawnTime="40sec" respawnRandom="0sec" />
+		<npc id="21424" count="2" respawnTime="40sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_14" minZ="-7313" maxZ="-7013">
+				<node x="189041" y="-78487" />
+				<node x="189856" y="-78476" />
+				<node x="189845" y="-77747" />
+				<node x="189045" y="-77684" />
+			</territory>
+		</territories>
+		<npc id="21401" count="3" respawnTime="40sec" respawnRandom="0sec" />
+		<npc id="21406" count="3" respawnTime="40sec" respawnRandom="0sec" />
+		<npc id="21417" count="4" respawnTime="40sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_14_1" minZ="-7313" maxZ="-7013">
+				<node x="189041" y="-78487" />
+				<node x="189856" y="-78476" />
+				<node x="189845" y="-77747" />
+				<node x="189045" y="-77684" />
+			</territory>
+		</territories>
+		<npc id="21432" count="3" respawnTime="40sec" respawnRandom="0sec" />
+		<npc id="21424" count="2" respawnTime="40sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_15" minZ="-5367" maxZ="-5067">
+				<node x="183286" y="-81378" />
+				<node x="184046" y="-81378" />
+				<node x="184034" y="-80596" />
+				<node x="183293" y="-80595" />
+			</territory>
+		</territories>
+		<npc id="21407" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21414" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21418" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21422" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21423" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21424" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21425" count="2" respawnTime="45sec" respawnRandom="20sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_16" minZ="-6015" maxZ="-5715">
+				<node x="186142" y="-81378" />
+				<node x="186961" y="-81360" />
+				<node x="186957" y="-80639" />
+				<node x="186164" y="-80573" />
+			</territory>
+		</territories>
+		<npc id="21407" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21414" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21418" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21422" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21423" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21424" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21425" count="2" respawnTime="45sec" respawnRandom="20sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_17" minZ="-6668" maxZ="-6368">
+				<node x="189032" y="-81361" />
+				<node x="189850" y="-81343" />
+				<node x="189847" y="-80621" />
+				<node x="189054" y="-80555" />
+			</territory>
+		</territories>
+		<npc id="21406" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21415" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21418" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21422" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21423" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21424" count="2" respawnTime="45sec" respawnRandom="20sec" />
+		<npc id="21425" count="2" respawnTime="45sec" respawnRandom="20sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_18" minZ="-6005" maxZ="-5705">
+				<node x="189047" y="-84252" />
+				<node x="189801" y="-84247" />
+				<node x="189857" y="-83452" />
+				<node x="189048" y="-83434" />
+			</territory>
+		</territories>
+		<npc id="21426" count="2" respawnTime="30sec" respawnRandom="15sec" />
+		<npc id="21428" count="2" respawnTime="60sec" respawnRandom="20sec" />
+		<npc id="21430" count="2" respawnTime="90sec" respawnRandom="30sec" />
+		<npc id="21427" count="2" respawnTime="60sec" respawnRandom="20sec" />
+		<npc id="21429" count="2" respawnTime="90sec" respawnRandom="30sec" />
+		<npc id="21430" count="2" respawnTime="120sec" respawnRandom="30sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_18_1" minZ="-6005" maxZ="-5705">
+				<node x="189047" y="-84252" />
+				<node x="189801" y="-84247" />
+				<node x="189857" y="-83452" />
+				<node x="189048" y="-83434" />
+			</territory>
+		</territories>
+		<npc id="21434" count="1" respawnTime="720sec" respawnRandom="120sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_18_2" minZ="-6005" maxZ="-5705">
+				<node x="189047" y="-84252" />
+				<node x="189801" y="-84247" />
+				<node x="189857" y="-83452" />
+				<node x="189048" y="-83434" />
+			</territory>
+		</territories>
+		<npc id="21412" count="1" respawnTime="80sec" respawnRandom="20sec" />
+		<npc id="21420" count="1" respawnTime="80sec" respawnRandom="20sec" />
+		<npc id="21413" count="1" respawnTime="80sec" respawnRandom="20sec" />
+		<npc id="21421" count="1" respawnTime="80sec" respawnRandom="20sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_19" minZ="-5372" maxZ="-5072">
+				<node x="186151" y="-84243" />
+				<node x="186911" y="-84241" />
+				<node x="186965" y="-83467" />
+				<node x="186141" y="-83455" />
+			</territory>
+		</territories>
+		<npc id="21426" count="2" respawnTime="30sec" respawnRandom="15sec" />
+		<npc id="21428" count="2" respawnTime="60sec" respawnRandom="20sec" />
+		<npc id="21430" count="2" respawnTime="90sec" respawnRandom="30sec" />
+		<npc id="21427" count="2" respawnTime="60sec" respawnRandom="20sec" />
+		<npc id="21429" count="2" respawnTime="90sec" respawnRandom="30sec" />
+		<npc id="21431" count="2" respawnTime="120sec" respawnRandom="30sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_19_1" minZ="-5372" maxZ="-5072">
+				<node x="186151" y="-84243" />
+				<node x="186911" y="-84241" />
+				<node x="186965" y="-83467" />
+				<node x="186141" y="-83455" />
+			</territory>
+		</territories>
+		<npc id="21434" count="1" respawnTime="720sec" respawnRandom="120sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_19_2" minZ="-5372" maxZ="-5072">
+				<node x="186151" y="-84243" />
+				<node x="186911" y="-84241" />
+				<node x="186965" y="-83467" />
+				<node x="186141" y="-83455" />
+			</territory>
+		</territories>
+		<npc id="21412" count="1" respawnTime="80sec" respawnRandom="20sec" />
+		<npc id="21420" count="1" respawnTime="80sec" respawnRandom="20sec" />
+		<npc id="21413" count="1" respawnTime="80sec" respawnRandom="20sec" />
+		<npc id="21421" count="1" respawnTime="80sec" respawnRandom="20sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_20" minZ="-6011" maxZ="-5711">
+				<node x="183299" y="-84273" />
+				<node x="184050" y="-84275" />
+				<node x="184080" y="-83473" />
+				<node x="183288" y="-83466" />
+			</territory>
+		</territories>
+		<npc id="21426" count="2" respawnTime="30sec" respawnRandom="15sec" />
+		<npc id="21428" count="2" respawnTime="60sec" respawnRandom="20sec" />
+		<npc id="21430" count="2" respawnTime="90sec" respawnRandom="30sec" />
+		<npc id="21427" count="2" respawnTime="60sec" respawnRandom="20sec" />
+		<npc id="21429" count="2" respawnTime="90sec" respawnRandom="30sec" />
+		<npc id="21431" count="2" respawnTime="120sec" respawnRandom="30sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_20_1" minZ="-6011" maxZ="-5711">
+				<node x="183299" y="-84273" />
+				<node x="184050" y="-84275" />
+				<node x="184080" y="-83473" />
+				<node x="183288" y="-83466" />
+			</territory>
+		</territories>
+		<npc id="21434" count="1" respawnTime="720sec" respawnRandom="120sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_20_2" minZ="-6011" maxZ="-5711">
+				<node x="183299" y="-84273" />
+				<node x="184050" y="-84275" />
+				<node x="184080" y="-83473" />
+				<node x="183288" y="-83466" />
+			</territory>
+		</territories>
+		<npc id="21412" count="1" respawnTime="80sec" respawnRandom="20sec" />
+		<npc id="21420" count="1" respawnTime="80sec" respawnRandom="20sec" />
+		<npc id="21413" count="1" respawnTime="80sec" respawnRandom="20sec" />
+		<npc id="21421" count="1" respawnTime="80sec" respawnRandom="20sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_21" minZ="-6641" maxZ="-6341">
+				<node x="180806" y="-84051" />
+				<node x="181277" y="-84137" />
+				<node x="181323" y="-82707" />
+				<node x="180852" y="-82704" />
+			</territory>
+		</territories>
+		<npc id="21424" count="2" respawnTime="90sec" respawnRandom="20sec" />
+		<npc id="21426" count="2" respawnTime="90sec" respawnRandom="20sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_22" minZ="-6631" maxZ="-6331">
+				<node x="179922" y="-82573" />
+				<node x="181354" y="-82571" />
+				<node x="181280" y="-82101" />
+				<node x="179926" y="-82053" />
+			</territory>
+		</territories>
+		<npc id="21424" count="2" respawnTime="90sec" respawnRandom="20sec" />
+		<npc id="21426" count="2" respawnTime="90sec" respawnRandom="20sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_05_1" minZ="-2778" maxZ="-2478">
+				<node x="177505" y="-75734" />
+				<node x="178286" y="-75713" />
+				<node x="178278" y="-74915" />
+				<node x="177532" y="-74910" />
+			</territory>
+		</territories>
+		<npc id="21397" count="3" respawnTime="10sec" respawnRandom="0sec" />
+		<npc id="21399" count="1" respawnTime="10sec" respawnRandom="0sec" />
+		<npc id="21403" count="3" respawnTime="10sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_07_1" minZ="-3422" maxZ="-3122">
+				<node x="177556" y="-78584" />
+				<node x="178370" y="-78567" />
+				<node x="178368" y="-77809" />
+				<node x="177552" y="-77791" />
+			</territory>
+		</territories>
+		<npc id="21397" count="3" respawnTime="10sec" respawnRandom="0sec" />
+		<npc id="21399" count="1" respawnTime="10sec" respawnRandom="0sec" />
+		<npc id="21403" count="3" respawnTime="10sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_06_1" minZ="-2775" maxZ="-2475">
+				<node x="174676" y="-75761" />
+				<node x="175457" y="-75739" />
+				<node x="175449" y="-74942" />
+				<node x="174703" y="-74937" />
+			</territory>
+		</territories>
+		<npc id="21396" count="3" respawnTime="10sec" respawnRandom="0sec" />
+		<npc id="21399" count="1" respawnTime="10sec" respawnRandom="0sec" />
+		<npc id="21403" count="3" respawnTime="10sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="godard14_2515_08_1" minZ="-2770" maxZ="-2470">
+				<node x="174679" y="-78607" />
+				<node x="175464" y="-78600" />
+				<node x="175477" y="-77837" />
+				<node x="174673" y="-77829" />
+			</territory>
+		</territories>
+		<npc id="21396" count="3" respawnTime="10sec" respawnRandom="0sec" />
+		<npc id="21399" count="1" respawnTime="10sec" respawnRandom="0sec" />
+		<npc id="21403" count="3" respawnTime="10sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn name="25_15_npc">
+		<group>
+			<npc id="21440" x="182859" y="-79009" z="-2728" heading="9671" respawnTime="30sec" />
+			<npc id="21440" x="180792" y="-77721" z="-2728" heading="48443" respawnTime="30sec" />
+			<npc id="21440" x="180941" y="-77227" z="-2728" heading="24207" respawnTime="30sec" />
+			<npc id="21440" x="182074" y="-77711" z="-2728" heading="7695" respawnTime="30sec" />
+			<npc id="21440" x="181428" y="-78043" z="-2728" heading="7696" respawnTime="30sec" />
+			<npc id="21440" x="181416" y="-77564" z="-2728" heading="36673" respawnTime="30sec" />
+			<npc id="21440" x="180315" y="-77560" z="-2728" heading="57681" respawnTime="30sec" />
+			<npc id="21440" x="180315" y="-78687" z="-2728" heading="36232" respawnTime="30sec" />
+			<npc id="21439" x="180792" y="-78687" z="-2728" heading="7610" respawnTime="30sec" />
+			<npc id="21439" x="180792" y="-78687" z="-2728" heading="23367" respawnTime="30sec" />
+			<npc id="21439" x="180792" y="-77399" z="-2728" heading="12056" respawnTime="30sec" />
+			<npc id="21439" x="179997" y="-78204" z="-2728" heading="14359" respawnTime="30sec" />
+			<npc id="21439" x="181746" y="-77882" z="-2728" heading="43845" respawnTime="30sec" />
+			<npc id="21439" x="180709" y="-75221" z="-2728" heading="57598" respawnTime="30sec" />
+			<npc id="21439" x="180201" y="-75232" z="-2728" heading="33148" respawnTime="30sec" />
+			<npc id="21439" x="180956" y="-75346" z="-2728" heading="42375" respawnTime="30sec" />
+			<npc id="21438" x="180633" y="-78526" z="-2728" heading="59228" respawnTime="30sec" />
+			<npc id="21438" x="182541" y="-79009" z="-2728" heading="48294" respawnTime="30sec" />
+			<npc id="21438" x="180951" y="-77721" z="-2728" heading="18009" respawnTime="30sec" />
+			<npc id="21438" x="182700" y="-79331" z="-2728" heading="46697" respawnTime="30sec" />
+			<npc id="21438" x="182223" y="-78848" z="-2728" heading="33578" respawnTime="30sec" />
+			<npc id="21438" x="182382" y="-77399" z="-2728" heading="63083" respawnTime="30sec" />
+			<npc id="21438" x="180495" y="-75344" z="-2728" heading="8728" respawnTime="30sec" />
+			<npc id="21438" x="180956" y="-75418" z="-2728" heading="55660" respawnTime="30sec" />
+			<npc id="21438" x="180552" y="-75371" z="-2728" heading="1395" respawnTime="30sec" />
+		</group>
+	</spawn>
+</list>
