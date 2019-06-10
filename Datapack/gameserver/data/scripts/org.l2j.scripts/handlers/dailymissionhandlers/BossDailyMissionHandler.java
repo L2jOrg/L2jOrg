@@ -19,10 +19,10 @@ package handlers.dailymissionhandlers;
 import java.util.List;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.enums.DailyMissionStatus;
+import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
-import org.l2j.gameserver.model.DailyMissionDataHolder;
-import org.l2j.gameserver.model.DailyMissionPlayerEntry;
+import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
+import org.l2j.gameserver.model.dailymission.DailyMissionPlayerData;
 import org.l2j.gameserver.model.L2CommandChannel;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.L2Attackable;
@@ -50,32 +50,7 @@ public class BossDailyMissionHandler extends AbstractDailyMissionHandler
 	{
 		Containers.Monsters().addListener(new ConsumerEventListener(this, EventType.ON_ATTACKABLE_KILL, (OnAttackableKill event) -> onAttackableKill(event), this));
 	}
-	
-	@Override
-	public boolean isAvailable(L2PcInstance player)
-	{
-		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
-		if (entry != null)
-		{
-			switch (entry.getStatus())
-			{
-				case NOT_AVAILABLE: // Initial state
-				{
-					if (entry.getProgress() >= _amount)
-					{
-						entry.setStatus(DailyMissionStatus.AVAILABLE);
-						storePlayerEntry(entry);
-					}
-					break;
-				}
-				case AVAILABLE:
-				{
-					return true;
-				}
-			}
-		}
-		return false;
-	}
+
 	
 	private void onAttackableKill(OnAttackableKill event)
 	{
@@ -99,7 +74,7 @@ public class BossDailyMissionHandler extends AbstractDailyMissionHandler
 	
 	private void processPlayerProgress(L2PcInstance player)
 	{
-		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
+		final DailyMissionPlayerData entry = getPlayerEntry(player.getObjectId(), true);
 		if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)
 		{
 			if (entry.increaseProgress() >= _amount)

@@ -16,10 +16,10 @@
  */
 package handlers.dailymissionhandlers;
 
-import org.l2j.gameserver.enums.DailyMissionStatus;
+import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
-import org.l2j.gameserver.model.DailyMissionDataHolder;
-import org.l2j.gameserver.model.DailyMissionPlayerEntry;
+import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
+import org.l2j.gameserver.model.dailymission.DailyMissionPlayerData;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
@@ -45,37 +45,11 @@ public class CeremonyOfChaosDailyMissionHandler extends AbstractDailyMissionHand
 		Containers.Global().addListener(new ConsumerEventListener(this, EventType.ON_CEREMONY_OF_CHAOS_MATCH_RESULT, (OnCeremonyOfChaosMatchResult event) -> onCeremonyOfChaosMatchResult(event), this));
 	}
 	
-	@Override
-	public boolean isAvailable(L2PcInstance player)
-	{
-		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
-		if (entry != null)
-		{
-			switch (entry.getStatus())
-			{
-				case NOT_AVAILABLE: // Initial state
-				{
-					if (entry.getProgress() >= _amount)
-					{
-						entry.setStatus(DailyMissionStatus.AVAILABLE);
-						storePlayerEntry(entry);
-					}
-					break;
-				}
-				case AVAILABLE:
-				{
-					return true;
-				}
-			}
-		}
-		return false;
-	}
-	
 	private void onCeremonyOfChaosMatchResult(OnCeremonyOfChaosMatchResult event)
 	{
 		event.getMembers().forEach(member ->
 		{
-			final DailyMissionPlayerEntry entry = getPlayerEntry(member.getObjectId(), true);
+			final DailyMissionPlayerData entry = getPlayerEntry(member.getObjectId(), true);
 			if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)
 			{
 				if (entry.increaseProgress() >= _amount)

@@ -214,7 +214,7 @@ public class CharInfo extends IClientOutgoingPacket {
         packet.putInt(_activeChar.getTransformationDisplayId()); // Confirmed
         packet.putInt(_activeChar.getAgathionId()); // Confirmed
 
-        packet.put((byte) 0x00); // TODO: Find me!
+        packet.put((byte) 0x01); // TODO: Find me!
 
         packet.putInt((int) Math.round(_activeChar.getCurrentCp())); // Confirmed
         packet.putInt(_activeChar.getMaxHp()); // Confirmed
@@ -222,7 +222,7 @@ public class CharInfo extends IClientOutgoingPacket {
         packet.putInt(_activeChar.getMaxMp()); // Confirmed
         packet.putInt((int) Math.round(_activeChar.getCurrentMp())); // Confirmed
 
-        packet.put((byte) 0x00); // TODO: Find me!
+        packet.put((byte) 0x00); // special effect ? TODO: Find me!
         final Set<AbnormalVisualEffect> abnormalVisualEffects = _activeChar.getEffectList().getCurrentAbnormalVisualEffects();
         packet.putInt(abnormalVisualEffects.size() + (_gmSeeInvis ? 1 : 0)); // Confirmed
         for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects) {
@@ -234,6 +234,7 @@ public class CharInfo extends IClientOutgoingPacket {
         packet.put((byte)( cocPlayer != null ? cocPlayer.getPosition() : _activeChar.isTrueHero() ? 100 : 0));
         packet.put((byte) (_activeChar.isHairAccessoryEnabled() ? 0x01 : 0x00)); // Hair accessory
         packet.put((byte) _activeChar.getAbilityPointsUsed()); // Used Ability Points
+        packet.putLong(0x00); // 196 TODO find me
     }
 
     @Override

@@ -22,6 +22,7 @@ package org.l2j.gameserver.model.events.timers;
  */
 @FunctionalInterface
 public interface IEventTimerEvent<T> {
+
     /**
      * notified upon timer execution method.
      *

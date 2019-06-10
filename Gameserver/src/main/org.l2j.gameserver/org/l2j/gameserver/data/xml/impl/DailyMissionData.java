@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.model.DailyMissionDataHolder;
+import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.base.ClassId;
@@ -23,8 +23,8 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  */
 public class DailyMissionData extends IGameXmlReader{
     private static final Logger LOGGER = LoggerFactory.getLogger(DailyMissionData.class);
-    private final Map<Integer, List<DailyMissionDataHolder>> _dailyMissionRewards = new LinkedHashMap<>();
-    private boolean _isAvailable;
+    private final Map<Integer, List<DailyMissionDataHolder>> dailyMissionRewards = new LinkedHashMap<>();
+    private boolean available;
 
     private DailyMissionData() {
         load();
@@ -37,33 +37,31 @@ public class DailyMissionData extends IGameXmlReader{
 
     @Override
     public void load() {
-        _dailyMissionRewards.clear();
+        dailyMissionRewards.clear();
         parseDatapackFile("data/DailyMission.xml");
-        _isAvailable = !_dailyMissionRewards.isEmpty();
-        LOGGER.info("Loaded {} one day rewards.",  _dailyMissionRewards.size());
+        available = !dailyMissionRewards.isEmpty();
+        LOGGER.info("Loaded {} one day rewards.",  dailyMissionRewards.size());
     }
 
     @Override
     public void parseDocument(Document doc, File f) {
-        forEach(doc, "list", listNode -> forEach(listNode, "reward", rewardNode ->
-        {
-            final StatsSet set = new StatsSet(parseAttributes(rewardNode));
+        forEach(doc, "list", listNode -> forEach(listNode, "mission", missionNode -> {
+            final StatsSet set = new StatsSet(parseAttributes(missionNode));
 
             final List<ItemHolder> items = new ArrayList<>(1);
-            forEach(rewardNode, "items", itemsNode -> forEach(itemsNode, "item", itemNode ->
-            {
+
+            forEach(missionNode, "reward", itemNode -> {
                 final int itemId = parseInteger(itemNode.getAttributes(), "id");
                 final int itemCount = parseInteger(itemNode.getAttributes(), "count");
                 items.add(new ItemHolder(itemId, itemCount));
-            }));
+            });
 
-            set.set("items", items);
+            set.set("rewards", items);
+
 
             final List<ClassId> classRestriction = new ArrayList<>(1);
-            forEach(rewardNode, "classId", classRestrictionNode ->
-            {
-                classRestriction.add(ClassId.getClassId(Integer.parseInt(classRestrictionNode.getTextContent())));
-            });
+            forEach(missionNode, "classId", classRestrictionNode ->
+                    classRestriction.addAll(Arrays.stream(classRestrictionNode.getNodeValue().split(" ")).map(id -> ClassId.getClassId(Integer.parseInt(id))).collect(Collectors.toList())));
             set.set("classRestriction", classRestriction);
 
             // Initial values in case handler doesn't exists
@@ -71,8 +69,7 @@ public class DailyMissionData extends IGameXmlReader{
             set.set("params", StatsSet.EMPTY_STATSET);
 
             // Parse handler and parameters
-            forEach(rewardNode, "handler", handlerNode ->
-            {
+            forEach(missionNode, "handler", handlerNode -> {
                 set.set("handler", parseString(handlerNode.getAttributes(), "name"));
 
                 final StatsSet params = new StatsSet();
@@ -81,13 +78,13 @@ public class DailyMissionData extends IGameXmlReader{
             });
 
             final DailyMissionDataHolder holder = new DailyMissionDataHolder(set);
-            _dailyMissionRewards.computeIfAbsent(holder.getId(), k -> new ArrayList<>()).add(holder);
+            dailyMissionRewards.computeIfAbsent(holder.getId(), k -> new ArrayList<>()).add(holder);
         }));
     }
 
     public Collection<DailyMissionDataHolder> getDailyMissionData() {
         //@formatter:off
-        return _dailyMissionRewards.values()
+        return dailyMissionRewards.values()
                 .stream()
                 .flatMap(List::stream)
                 .collect(Collectors.toList());
@@ -96,7 +93,7 @@ public class DailyMissionData extends IGameXmlReader{
 
     public Collection<DailyMissionDataHolder> getDailyMissionData(L2PcInstance player) {
         //@formatter:off
-        return _dailyMissionRewards.values()
+        return dailyMissionRewards.values()
                 .stream()
                 .flatMap(List::stream)
                 .filter(o -> o.isDisplayable(player))
@@ -105,11 +102,11 @@ public class DailyMissionData extends IGameXmlReader{
     }
 
     public Collection<DailyMissionDataHolder> getDailyMissionData(int id) {
-        return _dailyMissionRewards.get(id);
+        return dailyMissionRewards.get(id);
     }
 
     public boolean isAvailable() {
-        return _isAvailable;
+        return available;
     }
 
     public static DailyMissionData getInstance() {

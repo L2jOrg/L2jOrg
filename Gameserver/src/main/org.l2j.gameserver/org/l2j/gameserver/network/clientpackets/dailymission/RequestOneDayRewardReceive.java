@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.dailymission;
 
 import org.l2j.gameserver.data.xml.impl.DailyMissionData;
-import org.l2j.gameserver.model.DailyMissionDataHolder;
+import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2j.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;

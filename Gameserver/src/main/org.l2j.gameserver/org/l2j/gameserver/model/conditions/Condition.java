@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.conditions;
 
-import org.l2j.gameserver.model.DailyMissionDataHolder;
+import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.skills.Skill;

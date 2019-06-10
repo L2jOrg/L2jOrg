@@ -16,8 +16,12 @@ public interface TypeHandler<T> {
     T handleResult(QueryDescriptor queryDescriptor) throws SQLException;
     T handleType(ResultSet resultSet, Class<?> type) throws SQLException;
     T handleColumn(ResultSet resultSet, int column) throws SQLException;
-    void setParameter(PreparedStatement statement, int parameterIndex, T arg) throws SQLException;
 
+    void setParameter(PreparedStatement statement, int parameterIndex, T arg) throws SQLException;
     String type();
+
+    default T handleColumn(ResultSet resultSet, int column, Class<?> type) throws SQLException {
+        return handleColumn(resultSet, column);
+    }
 }
 

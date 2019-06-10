@@ -81,8 +81,6 @@ public class EnterWorld extends IClientIncomingPacket {
 
         client.setClientTracert(tracert);
 
-        activeChar.broadcastUserInfo();
-
         // Restore to instanced area if enabled
         if (Config.RESTORE_PLAYER_INSTANCE) {
             final PlayerVariables vars = activeChar.getVariables();
@@ -143,6 +141,8 @@ public class EnterWorld extends IClientIncomingPacket {
                 SkillTreesData.getInstance().addSkills(activeChar, true);
             }
         }
+
+        activeChar.broadcastUserInfo();
 
         // Chat banned icon.
         if (activeChar.isChatBanned()) {
@@ -441,8 +441,6 @@ public class EnterWorld extends IClientIncomingPacket {
         if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.STORE_OFFLINE_TRADE_IN_REALTIME) {
             OfflineTradersTable.onTransaction(activeChar, true, false);
         }
-
-        activeChar.broadcastUserInfo();
 
         if (BeautyShopData.getInstance().hasBeautyData(activeChar.getRace(), activeChar.getAppearance().getSexType())) {
             activeChar.sendPacket(new ExBeautyItemList(activeChar));

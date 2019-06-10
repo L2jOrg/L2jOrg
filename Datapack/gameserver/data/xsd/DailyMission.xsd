@@ -1,6 +1,40 @@
 <?xml version="1.0"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-	<xs:element name="list" type="listType" />
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
+	<xs:include schemaLocation="common.xsd"/>
+
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element type="MissionType" name="mission" maxOccurs="unbounded" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="MissionType">
+		<xs:sequence>
+			<xs:element type="shortList" name="classes" minOccurs="0" />
+			<xs:element type="handlerType" name="handler" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type="RewardType" name="reward" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute type="xs:short" name="id" use="required"/>
+		<xs:attribute type="xs:string" name="name" use="required"/>
+		<xs:attribute type="xs:short" name="requiredCompletion" default="1"/>
+		<xs:attribute type="Cycle" name="cycle" default="DAILY"/>
+		<xs:attribute type="xs:boolean" name="isDisplayedWhenNotAvailable" />
+	</xs:complexType>
+
+	<xs:complexType name="handlerType">
+		<xs:sequence>
+			<xs:element type="paramType" name="param" maxOccurs="unbounded" minOccurs="0" />
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" />
+	</xs:complexType>
+
 	<xs:complexType name="paramType">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
@@ -8,43 +42,24 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="handlerType">
-		<xs:sequence>
-			<xs:element type="paramType" name="param" maxOccurs="unbounded" minOccurs="0" />
-		</xs:sequence>
-		<xs:attribute name="name" type="xs:string" />
-	</xs:complexType>
-	<xs:complexType name="itemType">
+
+	<xs:complexType name="RewardType">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
-				<xs:attribute type="xs:int" name="id" />
-				<xs:attribute type="xs:byte" name="count" />
+				<xs:attribute type="xs:int" name="id" use="required"/>
+				<xs:attribute type="xs:int" name="count" default="1"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="itemsType">
-		<xs:sequence>
-			<xs:element type="itemType" name="item" maxOccurs="unbounded" minOccurs="0" />
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="rewardType">
-		<xs:sequence>
-			<xs:element type="xs:short" name="classId" maxOccurs="unbounded" minOccurs="0" />
-			<xs:element type="handlerType" name="handler" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element type="itemsType" name="items" />
-		</xs:sequence>
-		<xs:attribute type="xs:short" name="id" />
-		<xs:attribute type="xs:short" name="reward_id" />
-		<xs:attribute type="xs:string" name="name" />
-		<xs:attribute type="xs:short" name="requiredCompletion" />
-		<xs:attribute type="xs:boolean" name="isOneTime" />
-		<xs:attribute type="xs:boolean" name="isMainClassOnly" />
-		<xs:attribute type="xs:boolean" name="isDualClassOnly" />
-		<xs:attribute type="xs:boolean" name="isDisplayedWhenNotAvailable" />
-	</xs:complexType>
-	<xs:complexType name="listType">
-		<xs:sequence>
-			<xs:element type="rewardType" name="reward" maxOccurs="unbounded" minOccurs="0" />
-		</xs:sequence>
-	</xs:complexType>
+
+	<xs:simpleType name="Cycle">
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="collapse"/>
+			<xs:enumeration value="DAILY"/>
+			<xs:enumeration value="WEEKLY"/>
+			<xs:enumeration value="MONTHLY"/>
+			<xs:enumeration value="SINGLE"/>
+		</xs:restriction>
+	</xs:simpleType>
+
 </xs:schema>

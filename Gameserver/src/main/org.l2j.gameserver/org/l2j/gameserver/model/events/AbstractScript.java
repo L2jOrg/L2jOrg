@@ -1201,13 +1201,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                 final ListenerRegisterType type = regType.value();
                 final EventType eventType = listener.value();
                 if (method.getParameterCount() != 1) {
-                    LOGGER.warn(": Non properly defined annotation listener on method: " + method.getName() + " expected parameter count is 1 but found: " + method.getParameterCount());
+                    LOGGER.warn("Non properly defined annotation listener on method: {} expected parameter count is 1 but found: {}", method.getName(), method.getParameterCount());
                     continue;
                 } else if (!eventType.isEventClass(method.getParameterTypes()[0])) {
-                    LOGGER.warn(": Non properly defined annotation listener on method: " + method.getName() + " expected parameter to be type of: " + eventType.getEventClass().getSimpleName() + " but found: " + method.getParameterTypes()[0].getSimpleName());
+                    LOGGER.warn("Non properly defined annotation listener on method: {} expected parameter to be type of: {}  but found: {}", method.getName(), eventType.getEventClass().getSimpleName(), method.getParameterTypes()[0].getSimpleName());
                     continue;
                 } else if (!eventType.isReturnClass(method.getReturnType())) {
-                    LOGGER.warn(": Non properly defined annotation listener on method: " + method.getName() + " expected return type to be one of: " + Arrays.toString(eventType.getReturnClasses()) + " but found: " + method.getReturnType().getSimpleName());
+                    LOGGER.warn("Non properly defined annotation listener on method: {} expected return type to be one of: {} but found: {}", method.getName(), Arrays.toString(eventType.getReturnClasses()), method.getReturnType().getSimpleName());
                     continue;
                 }
 

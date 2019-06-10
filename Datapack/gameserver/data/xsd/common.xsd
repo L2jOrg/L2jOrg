@@ -1,0 +1,10 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://l2j.org"
+           xmlns="http://l2j.org"
+           elementFormDefault="qualified">
+
+    <xs:simpleType name="shortList">
+        <xs:list itemType="xs:short"/>
+    </xs:simpleType>
+
+</xs:schema>

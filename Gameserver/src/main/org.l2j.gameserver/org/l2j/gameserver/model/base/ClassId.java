@@ -262,7 +262,7 @@ public enum ClassId implements IIdentifiable {
      * @param race    the race related to the class.
      * @param pParent the parent class Id.
      */
-    private ClassId(int pId, boolean pIsMage, Race race, ClassId pParent) {
+    ClassId(int pId, boolean pIsMage, Race race, ClassId pParent) {
         _id = pId;
         _isMage = pIsMage;
         _isSummoner = false;
@@ -283,7 +283,7 @@ public enum ClassId implements IIdentifiable {
      * @param race        the race related to the class.
      * @param pParent     the parent class Id.
      */
-    private ClassId(int pId, boolean pIsMage, boolean pIsSummoner, Race race, ClassId pParent) {
+    ClassId(int pId, boolean pIsMage, boolean pIsSummoner, Race race, ClassId pParent) {
         _id = pId;
         _isMage = pIsMage;
         _isSummoner = pIsSummoner;

@@ -16,11 +16,11 @@
  */
 package handlers.dailymissionhandlers;
 
-import org.l2j.gameserver.enums.DailyMissionStatus;
+import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 import org.l2j.gameserver.enums.QuestType;
 import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
-import org.l2j.gameserver.model.DailyMissionDataHolder;
-import org.l2j.gameserver.model.DailyMissionPlayerEntry;
+import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
+import org.l2j.gameserver.model.dailymission.DailyMissionPlayerData;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
@@ -32,12 +32,9 @@ import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
  */
 public class QuestDailyMissionHandler extends AbstractDailyMissionHandler
 {
-	private final int _amount;
-	
 	public QuestDailyMissionHandler(DailyMissionDataHolder holder)
 	{
 		super(holder);
-		_amount = holder.getRequiredCompletions();
 	}
 	
 	@Override
@@ -45,42 +42,17 @@ public class QuestDailyMissionHandler extends AbstractDailyMissionHandler
 	{
 		Containers.Players().addListener(new ConsumerEventListener(this, EventType.ON_PLAYER_QUEST_COMPLETE, (OnPlayerQuestComplete event) -> onQuestComplete(event), this));
 	}
-	
-	@Override
-	public boolean isAvailable(L2PcInstance player)
-	{
-		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
-		if (entry != null)
-		{
-			switch (entry.getStatus())
-			{
-				case NOT_AVAILABLE: // Initial state
-				{
-					if (entry.getProgress() >= _amount)
-					{
-						entry.setStatus(DailyMissionStatus.AVAILABLE);
-						storePlayerEntry(entry);
-					}
-					break;
-				}
-				case AVAILABLE:
-				{
-					return true;
-				}
-			}
-		}
-		return false;
-	}
+
 	
 	private void onQuestComplete(OnPlayerQuestComplete event)
 	{
 		final L2PcInstance player = event.getActiveChar();
 		if (event.getQuestType() == QuestType.DAILY)
 		{
-			final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
+			final DailyMissionPlayerData entry = getPlayerEntry(player.getObjectId(), true);
 			if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)
 			{
-				if (entry.increaseProgress() >= _amount)
+				if (entry.increaseProgress() >= getRequiredCompletition())
 				{
 					entry.setStatus(DailyMissionStatus.AVAILABLE);
 				}

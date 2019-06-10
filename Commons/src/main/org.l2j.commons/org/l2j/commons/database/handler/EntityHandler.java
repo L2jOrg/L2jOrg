@@ -48,8 +48,8 @@ public class EntityHandler implements TypeHandler<Object> {
                     continue;
                 }
                 if(f.trySetAccessible()) {
-                    var handler = TypeHandler.MAP.getOrDefault(f.getType().getName(), TypeHandler.MAP.get(Object.class.getName()));
-                    f.set(instance, handler.handleColumn(resultSet, i));
+                    var handler = TypeHandler.MAP.getOrDefault(f.getType().isEnum() ? "enum" : f.getType().getName(), TypeHandler.MAP.get(Object.class.getName()));
+                    f.set(instance, handler.handleColumn(resultSet, i, f.getType()));
                 } else {
                     throw  new SQLException("No accessible field " + f.getName() + " On type " + type );
                 }

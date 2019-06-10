@@ -1,26 +1,13 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.handler;
 
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.enums.DailyMissionStatus;
-import org.l2j.gameserver.model.DailyMissionDataHolder;
-import org.l2j.gameserver.model.DailyMissionPlayerEntry;
+import org.l2j.gameserver.data.database.dao.DailyMissionDAO;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
+import org.l2j.gameserver.model.dailymission.DailyMissionPlayerData;
+import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,65 +15,82 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author Sdw
  */
 public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
-    private final Map<Integer, DailyMissionPlayerEntry> _entries = new ConcurrentHashMap<>();
-    private final DailyMissionDataHolder _holder;
-    protected Logger LOGGER = LoggerFactory.getLogger(getClass().getName());
+    private final IntObjectMap<DailyMissionPlayerData> entries = new CHashIntObjectMap<>();
+    private final DailyMissionDataHolder holder;
+    protected final Logger LOGGER = LoggerFactory.getLogger(getClass());
 
     protected AbstractDailyMissionHandler(DailyMissionDataHolder holder) {
-        _holder = holder;
+        this.holder = holder;
         init();
     }
 
     public DailyMissionDataHolder getHolder() {
-        return _holder;
+        return holder;
     }
 
-    public abstract boolean isAvailable(L2PcInstance player);
+    public boolean isAvailable(L2PcInstance player) {
+        var entry = getPlayerEntry(player.getObjectId(), false);
+        if (nonNull(entry))
+        {
+            switch (entry.getStatus())
+            {
+                case NOT_AVAILABLE:
+                {
+                    if (entry.getProgress() >= getRequiredCompletition())
+                    {
+                        entry.setStatus(DailyMissionStatus.AVAILABLE);
+                        storePlayerEntry(entry);
+                    }
+                    break;
+                }
+                case AVAILABLE:
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
     public abstract void init();
 
     public int getStatus(L2PcInstance player) {
-        final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
+        final DailyMissionPlayerData entry = getPlayerEntry(player.getObjectId(), false);
         return entry != null ? entry.getStatus().getClientId() : DailyMissionStatus.NOT_AVAILABLE.getClientId();
     }
 
+    protected int getRequiredCompletition() {
+        return holder.getRequiredCompletions();
+    }
+
     public int getProgress(L2PcInstance player) {
-        final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
+        final DailyMissionPlayerData entry = getPlayerEntry(player.getObjectId(), false);
         return entry != null ? entry.getProgress() : 0;
     }
 
     public boolean getRecentlyCompleted(L2PcInstance player) {
-        final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
+        final DailyMissionPlayerData entry = getPlayerEntry(player.getObjectId(), false);
         return (entry != null) && entry.getRecentlyCompleted();
     }
 
     public synchronized void reset() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("DELETE FROM character_daily_rewards WHERE rewardId = ? AND status = ?")) {
-            ps.setInt(1, _holder.getId());
-            ps.setInt(2, DailyMissionStatus.COMPLETED.getClientId());
-            ps.execute();
-        } catch (SQLException e) {
-            LOGGER.warn("Error while clearing data for: " + getClass().getSimpleName(), e);
-        } finally {
-            _entries.clear();
-        }
+        getDAO(DailyMissionDAO.class).deleteById(holder.getId());
+        entries.clear();
     }
 
     public boolean requestReward(L2PcInstance player) {
         if (isAvailable(player)) {
             giveRewards(player);
 
-            final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
+            final DailyMissionPlayerData entry = getPlayerEntry(player.getObjectId(), true);
             entry.setStatus(DailyMissionStatus.COMPLETED);
             entry.setLastCompleted(System.currentTimeMillis());
             entry.setRecentlyCompleted(true);
@@ -98,10 +102,10 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
     }
 
     protected void giveRewards(L2PcInstance player) {
-        _holder.getRewards().forEach(i -> player.addItem("One Day Reward", i, player, true));
+        holder.getRewards().forEach(i -> player.addItem("One Day Reward", i, player, true));
     }
 
-    protected void storePlayerEntry(DailyMissionPlayerEntry entry) {
+    protected void storePlayerEntry(DailyMissionPlayerData entry) {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("REPLACE INTO character_daily_rewards (charId, rewardId, status, progress, lastCompleted) VALUES (?, ?, ?, ?, ?)")) {
             ps.setInt(1, entry.getObjectId());
@@ -112,14 +116,14 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
             ps.execute();
 
             // Cache if not exists
-            _entries.computeIfAbsent(entry.getObjectId(), id -> entry);
+            entries.computeIfAbsent(entry.getObjectId(), id -> entry);
         } catch (Exception e) {
             LOGGER.warn("Error while saving reward " + entry.getRewardId() + " for player: " + entry.getObjectId() + " in database: ", e);
         }
     }
 
-    protected DailyMissionPlayerEntry getPlayerEntry(int objectId, boolean createIfNone) {
-        final DailyMissionPlayerEntry existingEntry = _entries.get(objectId);
+    protected DailyMissionPlayerData getPlayerEntry(int objectId, boolean createIfNone) {
+        final DailyMissionPlayerData existingEntry = entries.get(objectId);
         if (existingEntry != null) {
             return existingEntry;
         }
@@ -127,20 +131,20 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("SELECT * FROM character_daily_rewards WHERE charId = ? AND rewardId = ?")) {
             ps.setInt(1, objectId);
-            ps.setInt(2, _holder.getId());
+            ps.setInt(2, holder.getId());
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                    final DailyMissionPlayerEntry entry = new DailyMissionPlayerEntry(rs.getInt("charId"), rs.getInt("rewardId"), rs.getInt("status"), rs.getInt("progress"), rs.getLong("lastCompleted"));
-                    _entries.put(objectId, entry);
+                    final DailyMissionPlayerData entry = new DailyMissionPlayerData(rs.getInt("charId"), rs.getInt("rewardId"), rs.getInt("status"), rs.getInt("progress"), rs.getLong("lastCompleted"));
+                    entries.put(objectId, entry);
                 }
             }
         } catch (Exception e) {
-            LOGGER.warn("Error while loading reward " + _holder.getId() + " for player: " + objectId + " in database: ", e);
+            LOGGER.warn("Error while loading reward " + holder.getId() + " for player: " + objectId + " in database: ", e);
         }
 
         if (createIfNone) {
-            final DailyMissionPlayerEntry entry = new DailyMissionPlayerEntry(objectId, _holder.getId());
-            _entries.put(objectId, entry);
+            final DailyMissionPlayerData entry = new DailyMissionPlayerData(objectId, holder.getId());
+            entries.put(objectId, entry);
             return entry;
         }
         return null;

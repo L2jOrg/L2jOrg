@@ -31,7 +31,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 
-
 /**
  * This class serves as a container for player parties.
  *
@@ -304,7 +303,7 @@ public class L2Party extends AbstractPlayerGroup {
         }
 
         if (_positionBroadcastTask == null) {
-            _positionBroadcastTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(() ->
+            _positionBroadcastTask = ThreadPoolManager.scheduleAtFixedRate(() ->
             {
                 if (_positionPacket == null) {
                     _positionPacket = new PartyMemberPosition(this);
@@ -334,7 +333,7 @@ public class L2Party extends AbstractPlayerGroup {
             return;
         }
 
-        _tacticalSigns.entrySet().forEach(entry -> player.sendPacket(new ExTacticalSign(entry.getValue(), remove ? 0 : entry.getKey())));
+        _tacticalSigns.forEach((key, value) -> player.sendPacket(new ExTacticalSign(value, remove ? 0 : key)));
     }
 
     public void addTacticalSign(L2PcInstance activeChar, int tacticalSignId, L2Character target) {

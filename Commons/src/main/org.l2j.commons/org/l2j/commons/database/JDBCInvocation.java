@@ -51,18 +51,18 @@ class JDBCInvocation implements InvocationHandler {
             return save(method, args);
         }
 
-        var handler = TypeHandler.MAP.getOrDefault(method.getReturnType().getName(), TypeHandler.MAP.get(Object.class.getName()));
+        var handler = TypeHandler.MAP.getOrDefault(method.getReturnType().isEnum() ? "enum" : method.getReturnType().getName(), TypeHandler.MAP.get(Object.class.getName()));
 
         if(isNull(handler)) {
-            throw new IllegalStateException("There is no TypeHandler Service");
+            throw new IllegalStateException("There is no TypeHandler Service for type " + method.getReturnType().getName());
         }
 
         if(!method.isAnnotationPresent(Query.class)) {
             return handler.defaultValue();
         }
 
-        try(var con = DatabaseFactory.getInstance().getConnection();
-            var query = buildQuery(method)) {
+        try(var query = buildQuery(method);
+            var con = DatabaseFactory.getInstance().getConnection()) {
             query.execute(con, args);
             return handler.handleResult(query);
         }

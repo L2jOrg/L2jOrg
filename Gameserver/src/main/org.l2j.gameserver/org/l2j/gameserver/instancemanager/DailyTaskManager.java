@@ -21,7 +21,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.DailyMissionData;
 import org.l2j.gameserver.data.xml.impl.VipData;
-import org.l2j.gameserver.model.DailyMissionDataHolder;
+import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
 import org.l2j.gameserver.model.L2World;
