@@ -863,7 +863,7 @@
     <mission id="1110" name="Water Attack Hunting Ground Guide" requiredCompletion="700" cycle="SINGLE">
         <handler name="hunt">
             <param name="minLevel">76</param>
-            <param name="monsters">212 <!-- TODO monsters of Water attack monsters (Garden of Eva) --> </param>
+            <param name="monsters">20849 20801 20802 20994 20803 20773 21768 20849</param>
         </handler>
         <reward id="91031"/>
     </mission>
