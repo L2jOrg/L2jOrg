@@ -11,6 +11,7 @@ public enum CrystalType {
     C(2, 1459, 6, 45),
     B(3, 1460, 11, 67),
     A(4, 1461, 20, 145),
+    S(5, 1462, 25, 250),
     EVENT(11, 0, 0, 0);
 
     private final int _id;

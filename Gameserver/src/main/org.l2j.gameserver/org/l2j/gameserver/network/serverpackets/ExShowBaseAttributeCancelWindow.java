@@ -39,6 +39,16 @@ public class ExShowBaseAttributeCancelWindow extends IClientOutgoingPacket {
      * @return
      */
     private long getPrice(L2ItemInstance item) {
+        switch (item.getItem().getCrystalType()) {
+            case S: {
+                if (item.isWeapon()) {
+                    _price = 50000;
+                } else {
+                    _price = 40000;
+                }
+                break;
+            }
+        }
         return _price;
     }
 }

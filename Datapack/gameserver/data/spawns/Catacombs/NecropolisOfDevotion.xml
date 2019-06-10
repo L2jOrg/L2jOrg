@@ -454,4 +454,10 @@
 		<npc id="21631" count="2" respawnTime="122sec" respawnRandom="40sec" />
 		<npc id="21633" count="2" respawnTime="122sec" respawnRandom="40sec" />
 	</spawn>
+	<spawn name="teleport">
+		<group>
+			<npc id="31081" x="-52784" y="79104" z="-4736" heading="0" respawnTime="60sec" />
+			<npc id="31082" x="-51920" y="79104" z="-4736" heading="0" respawnTime="60sec" />
+		</group>
+	</spawn>
 </list>

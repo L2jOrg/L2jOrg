@@ -15,24 +15,13 @@ public enum ItemGrade {
     R;
 
     public static ItemGrade valueOf(CrystalType type) {
-        switch (type) {
-            case NONE: {
-                return NONE;
-            }
-            case D: {
-                return D;
-            }
-            case C: {
-                return C;
-            }
-            case B: {
-                return B;
-            }
-            case A: {
-                return A;
-            }
-
-        }
-        return null;
+        return  switch (type) {
+            case NONE -> NONE;
+            case D -> D;
+            case C -> C;
+            case B -> B;
+            case A -> A;
+            default -> null;
+        };
     }
 }
