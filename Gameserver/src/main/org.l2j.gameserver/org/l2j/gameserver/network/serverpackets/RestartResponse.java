@@ -18,13 +18,9 @@ public final class RestartResponse extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.RESTART_RESPONSE.writeId(packet);
-        packet.putInt(_result ? 1 : 0);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.RESTART_RESPONSE);
+        writeInt(_result ? 1 : 0);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

@@ -12,9 +12,9 @@ public class RequestGiveNickName extends IClientIncomingPacket {
     private String _title;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _target = readString(packet);
-        _title = readString(packet);
+    public void readImpl() {
+        _target = readString();
+        _title = readString();
     }
 
     @Override

@@ -23,17 +23,13 @@ public class MyTargetSelected extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.MY_TARGET_SELECTED.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.MY_TARGET_SELECTED);
 
-        packet.putInt(0x01); // Grand Crusade
-        packet.putInt(_objectId);
-        packet.putShort((short) _color);
-        packet.putInt(0x00); // Mode 0x00 - Standard; 0x03 Context Menu
+        writeInt(0x01); // Grand Crusade
+        writeInt(_objectId);
+        writeShort((short) _color);
+        writeInt(0x00); // Mode 0x00 - Standard; 0x03 Context Menu
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 19;
-    }
 }

@@ -33,20 +33,16 @@ public class SkillCoolTime extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SKILL_COOL_TIME.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SKILL_COOL_TIME);
 
-        packet.putInt(_skillReuseTimeStamps.size());
+        writeInt(_skillReuseTimeStamps.size());
         for (TimeStamp ts : _skillReuseTimeStamps) {
-            packet.putInt(ts.getSkillId());
-            packet.putInt(0x00); // ?
-            packet.putInt((int) ts.getReuse() / 1000);
-            packet.putInt((int) ts.getRemaining() / 1000);
+            writeInt(ts.getSkillId());
+            writeInt(0x00); // ?
+            writeInt((int) ts.getReuse() / 1000);
+            writeInt((int) ts.getRemaining() / 1000);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + _skillReuseTimeStamps.size() * 12;
-    }
 }

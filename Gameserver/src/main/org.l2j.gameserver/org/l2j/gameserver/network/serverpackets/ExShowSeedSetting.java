@@ -39,48 +39,44 @@ public class ExShowSeedSetting extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_SEED_SETTING.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_SEED_SETTING);
 
-        packet.putInt(_manorId); // manor id
-        packet.putInt(_seeds.size()); // size
+        writeInt(_manorId); // manor id
+        writeInt(_seeds.size()); // size
 
         for (L2Seed s : _seeds) {
-            packet.putInt(s.getSeedId()); // seed id
-            packet.putInt(s.getLevel()); // level
-            packet.put((byte) 1);
-            packet.putInt(s.getReward(1)); // reward 1 id
-            packet.put((byte) 1);
-            packet.putInt(s.getReward(2)); // reward 2 id
-            packet.putInt(s.getSeedLimit()); // next sale limit
-            packet.putInt(s.getSeedReferencePrice()); // price for castle to produce 1
-            packet.putInt(s.getSeedMinPrice()); // min seed price
-            packet.putInt(s.getSeedMaxPrice()); // max seed price
+            writeInt(s.getSeedId()); // seed id
+            writeInt(s.getLevel()); // level
+            writeByte((byte) 1);
+            writeInt(s.getReward(1)); // reward 1 id
+            writeByte((byte) 1);
+            writeInt(s.getReward(2)); // reward 2 id
+            writeInt(s.getSeedLimit()); // next sale limit
+            writeInt(s.getSeedReferencePrice()); // price for castle to produce 1
+            writeInt(s.getSeedMinPrice()); // min seed price
+            writeInt(s.getSeedMaxPrice()); // max seed price
             // Current period
             if (_current.containsKey(s.getSeedId())) {
                 final SeedProduction sp = _current.get(s.getSeedId());
-                packet.putLong(sp.getStartAmount()); // sales
-                packet.putLong(sp.getPrice()); // price
+                writeLong(sp.getStartAmount()); // sales
+                writeLong(sp.getPrice()); // price
             } else {
-                packet.putLong(0);
-                packet.putLong(0);
+                writeLong(0);
+                writeLong(0);
             }
             // Next period
             if (_next.containsKey(s.getSeedId())) {
                 final SeedProduction sp = _next.get(s.getSeedId());
-                packet.putLong(sp.getStartAmount()); // sales
-                packet.putLong(sp.getPrice()); // price
+                writeLong(sp.getStartAmount()); // sales
+                writeLong(sp.getPrice()); // price
             } else {
-                packet.putLong(0);
-                packet.putLong(0);
+                writeLong(0);
+                writeLong(0);
             }
         }
         _current.clear();
         _next.clear();
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + 66 * _seeds.size();
-    }
 }

@@ -15,16 +15,12 @@ public class ExPutItemResultForVariationMake extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PUT_ITEM_RESULT_FOR_VARIATION_MAKE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PUT_ITEM_RESULT_FOR_VARIATION_MAKE);
 
-        packet.putInt(_itemObjId);
-        packet.putInt(_itemId);
-        packet.putInt(0x01);
+        writeInt(_itemObjId);
+        writeInt(_itemId);
+        writeInt(0x01);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17;
-    }
 }

@@ -18,16 +18,12 @@ public class ExBRBuyProduct extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BR_BUY_PRODUCT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BR_BUY_PRODUCT);
 
-        packet.putInt(_reply);
+        writeInt(_reply);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 
     public enum ExBrProductReplyType implements IIdentifiable {
         SUCCESS(1),

@@ -6,7 +6,6 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,33 +30,29 @@ public class ExOlympiadSpelledInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_OLYMPIAD_SPELLED_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_OLYMPIAD_SPELLED_INFO);
 
-        packet.putInt(_playerId);
-        packet.putInt(_effects.size() + _effects2.size());
+        writeInt(_playerId);
+        writeInt(_effects.size() + _effects2.size());
         for (BuffInfo info : _effects) {
             if ((info != null) && info.isInUse()) {
-                packet.putInt(info.getSkill().getDisplayId());
-                packet.putShort((short) info.getSkill().getDisplayLevel());
-                packet.putShort((short) 0x00); // Sub level
-                packet.putInt(info.getSkill().getAbnormalType().getClientId());
-                writeOptionalD(packet, info.getSkill().isAura() ? -1 : info.getTime());
+                writeInt(info.getSkill().getDisplayId());
+                writeShort((short) info.getSkill().getDisplayLevel());
+                writeShort((short) 0x00); // Sub level
+                writeInt(info.getSkill().getAbnormalType().getClientId());
+                writeOptionalD(info.getSkill().isAura() ? -1 : info.getTime());
             }
         }
         for (Skill skill : _effects2) {
             if (skill != null) {
-                packet.putInt(skill.getDisplayId());
-                packet.putShort((short) skill.getDisplayLevel());
-                packet.putShort((short) 0x00); // Sub level
-                packet.putInt(skill.getAbnormalType().getClientId());
-                packet.putShort((short) -1);
+                writeInt(skill.getDisplayId());
+                writeShort((short) skill.getDisplayLevel());
+                writeShort((short) 0x00); // Sub level
+                writeInt(skill.getAbnormalType().getClientId());
+                writeShort((short) -1);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + _effects.size() * 18 +  _effects2.size() * 14;
-    }
 }

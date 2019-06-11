@@ -20,28 +20,24 @@ public class ExCursedWeaponLocation extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CURSED_WEAPON_LOCATION.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CURSED_WEAPON_LOCATION);
 
         if (!_cursedWeaponInfo.isEmpty()) {
-            packet.putInt(_cursedWeaponInfo.size());
+            writeInt(_cursedWeaponInfo.size());
             for (CursedWeaponInfo w : _cursedWeaponInfo) {
-                packet.putInt(w.id);
-                packet.putInt(w.activated);
+                writeInt(w.id);
+                writeInt(w.activated);
 
-                packet.putInt(w.pos.getX());
-                packet.putInt(w.pos.getY());
-                packet.putInt(w.pos.getZ());
+                writeInt(w.pos.getX());
+                writeInt(w.pos.getY());
+                writeInt(w.pos.getZ());
             }
         } else {
-            packet.putInt(0);
+            writeInt(0);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + _cursedWeaponInfo.size() * 20;
-    }
 
     public static class CursedWeaponInfo {
         public Location pos;

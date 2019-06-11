@@ -20,9 +20,9 @@ public final class RequestGetOnVehicle extends IClientIncomingPacket {
     private Location _pos;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _boatId = packet.getInt();
-        _pos = new Location(packet.getInt(), packet.getInt(), packet.getInt());
+    public void readImpl() {
+        _boatId = readInt();
+        _pos = new Location(readInt(), readInt(), readInt());
     }
 
     @Override

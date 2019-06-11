@@ -20,8 +20,8 @@ public final class RequestRefineCancel extends IClientIncomingPacket {
     private int _targetItemObjId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _targetItemObjId = packet.getInt();
+    public void readImpl() {
+        _targetItemObjId = readInt();
     }
 
     @Override

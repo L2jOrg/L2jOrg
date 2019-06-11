@@ -19,22 +19,18 @@ public class ExShowAgitInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_AGIT_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_AGIT_INFO);
 
         final Collection<ClanHall> clanHalls = ClanHallData.getInstance().getClanHalls();
-        packet.putInt(clanHalls.size());
+        writeInt(clanHalls.size());
         clanHalls.forEach(clanHall ->
         {
-            packet.putInt(clanHall.getResidenceId());
-            writeString(clanHall.getOwnerId() <= 0 ? "" : ClanTable.getInstance().getClan(clanHall.getOwnerId()).getName(), packet); // owner clan name
-            writeString(clanHall.getOwnerId() <= 0 ? "" : ClanTable.getInstance().getClan(clanHall.getOwnerId()).getLeaderName(), packet); // leader name
-            packet.putInt(clanHall.getType().getClientVal()); // Clan hall type
+            writeInt(clanHall.getResidenceId());
+            writeString(clanHall.getOwnerId() <= 0 ? "" : ClanTable.getInstance().getClan(clanHall.getOwnerId()).getName()); // owner clan name
+            writeString(clanHall.getOwnerId() <= 0 ? "" : ClanTable.getInstance().getClan(clanHall.getOwnerId()).getLeaderName()); // leader name
+            writeInt(clanHall.getType().getClientVal()); // Clan hall type
         });
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + ClanHallData.getInstance().getClanHalls().size() * 2;
-    }
 }

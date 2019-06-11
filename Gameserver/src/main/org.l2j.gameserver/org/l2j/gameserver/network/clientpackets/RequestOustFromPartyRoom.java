@@ -18,8 +18,8 @@ public final class RequestOustFromPartyRoom extends IClientIncomingPacket {
     private int _charObjId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _charObjId = packet.getInt();
+    public void readImpl() {
+        _charObjId = readInt();
     }
 
     @Override

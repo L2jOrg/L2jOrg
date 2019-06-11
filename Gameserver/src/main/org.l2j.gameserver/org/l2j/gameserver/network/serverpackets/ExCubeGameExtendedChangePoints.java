@@ -37,22 +37,18 @@ public class ExCubeGameExtendedChangePoints extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BLOCK_UP_SET_STATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BLOCK_UP_SET_STATE);
 
-        packet.putInt(0x00);
+        writeInt(0x00);
 
-        packet.putInt(_timeLeft);
-        packet.putInt(_bluePoints);
-        packet.putInt(_redPoints);
+        writeInt(_timeLeft);
+        writeInt(_bluePoints);
+        writeInt(_redPoints);
 
-        packet.putInt(_isRedTeam ? 0x01 : 0x00);
-        packet.putInt(_player.getObjectId());
-        packet.putInt(_playerPoints);
+        writeInt(_isRedTeam ? 0x01 : 0x00);
+        writeInt(_player.getObjectId());
+        writeInt(_playerPoints);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 33;
-    }
 }

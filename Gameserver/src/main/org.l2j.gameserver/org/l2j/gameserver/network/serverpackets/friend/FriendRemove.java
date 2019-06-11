@@ -19,15 +19,11 @@ public class FriendRemove extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.FRIEND_REMOVE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.FRIEND_REMOVE);
 
-        packet.putInt(_responce);
-        writeString(_charName, packet);
+        writeInt(_responce);
+        writeString(_charName);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 11 + _charName.length() * 2;
-    }
 }

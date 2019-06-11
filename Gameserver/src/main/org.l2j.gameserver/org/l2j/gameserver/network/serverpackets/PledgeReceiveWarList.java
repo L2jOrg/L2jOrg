@@ -23,11 +23,11 @@ public class PledgeReceiveWarList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PLEDGE_RECEIVE_WAR_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PLEDGE_RECEIVE_WAR_LIST);
 
-        packet.putInt(_tab); // page
-        packet.putInt(_clanList.size());
+        writeInt(_tab); // page
+        writeInt(_clanList.size());
         for (ClanWar clanWar : _clanList) {
             final L2Clan clan = clanWar.getOpposingClan(_clan);
 
@@ -35,17 +35,13 @@ public class PledgeReceiveWarList extends IClientOutgoingPacket {
                 continue;
             }
 
-            writeString(clan.getName(), packet);
-            packet.putInt(clanWar.getState().ordinal()); // type: 0 = Declaration, 1 = Blood Declaration, 2 = In War, 3 = Victory, 4 = Defeat, 5 = Tie, 6 = Error
-            packet.putInt(clanWar.getRemainingTime()); // Time if friends to start remaining
-            packet.putInt(clanWar.getKillDifference(_clan)); // Score
-            packet.putInt(0); // @TODO: Recent change in points
-            packet.putInt(clanWar.getKillToStart()); // Friends to start war left
+            writeString(clan.getName());
+            writeInt(clanWar.getState().ordinal()); // type: 0 = Declaration, 1 = Blood Declaration, 2 = In War, 3 = Victory, 4 = Defeat, 5 = Tie, 6 = Error
+            writeInt(clanWar.getRemainingTime()); // Time if friends to start remaining
+            writeInt(clanWar.getKillDifference(_clan)); // Score
+            writeInt(0); // @TODO: Recent change in points
+            writeInt(clanWar.getKillToStart()); // Friends to start war left
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + _clanList.size() * 55;
-    }
 }

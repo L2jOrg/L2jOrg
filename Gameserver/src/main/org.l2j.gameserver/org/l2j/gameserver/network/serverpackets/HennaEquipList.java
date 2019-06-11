@@ -27,28 +27,24 @@ public class HennaEquipList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.HENNA_EQUIP_LIST.writeId(packet);
-        packet.putLong(_player.getAdena()); // activeChar current amount of Adena
-        packet.putInt(3); // available equip slot
-        packet.putInt(_hennaEquipList.size());
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.HENNA_EQUIP_LIST);
+        writeLong(_player.getAdena()); // activeChar current amount of Adena
+        writeInt(3); // available equip slot
+        writeInt(_hennaEquipList.size());
 
         for (L2Henna henna : _hennaEquipList) {
             // Player must have at least one dye in inventory
             // to be able to see the Henna that can be applied with it.
             if ((_player.getInventory().getItemByItemId(henna.getDyeItemId())) != null) {
-                packet.putInt(henna.getDyeId()); // dye Id
-                packet.putInt(henna.getDyeItemId()); // item Id of the dye
-                packet.putLong(henna.getWearCount()); // amount of dyes required
-                packet.putLong(henna.getWearFee()); // amount of Adena required
-                packet.putInt(henna.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00); // meet the requirement or not
-                // packet.putInt(0x00); // Does not exist in Classic.
+                writeInt(henna.getDyeId()); // dye Id
+                writeInt(henna.getDyeItemId()); // item Id of the dye
+                writeLong(henna.getWearCount()); // amount of dyes required
+                writeLong(henna.getWearFee()); // amount of Adena required
+                writeInt(henna.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00); // meet the requirement or not
+                // writeInt(0x00); // Does not exist in Classic.
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 21 + _hennaEquipList.size() * 28;
-    }
 }

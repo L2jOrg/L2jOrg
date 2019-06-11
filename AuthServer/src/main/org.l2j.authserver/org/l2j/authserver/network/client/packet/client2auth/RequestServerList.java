@@ -28,10 +28,10 @@ public class RequestServerList extends L2LoginClientPacket
     private byte listType;
 
 	@Override
-	public boolean readImpl(ByteBuffer buffer) {
-        accountId = buffer.getInt();
-        authId = buffer.getInt();
-        listType = buffer.get();
+	public boolean readImpl() {
+        accountId = readInt();
+        authId = readInt();
+        listType = readByte();
 		return true;
 	}
 	

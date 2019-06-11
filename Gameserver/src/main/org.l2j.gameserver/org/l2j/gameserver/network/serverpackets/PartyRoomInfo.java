@@ -17,20 +17,16 @@ public class PartyRoomInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PARTY_ROOM_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PARTY_ROOM_INFO);
 
-        packet.putInt(_room.getId());
-        packet.putInt(_room.getMaxMembers());
-        packet.putInt(_room.getMinLvl());
-        packet.putInt(_room.getMaxLvl());
-        packet.putInt(_room.getLootType());
-        packet.putInt(_room.getLocation());
-        writeString(_room.getTitle(), packet);
+        writeInt(_room.getId());
+        writeInt(_room.getMaxMembers());
+        writeInt(_room.getMinLvl());
+        writeInt(_room.getMaxLvl());
+        writeInt(_room.getLootType());
+        writeInt(_room.getLocation());
+        writeString(_room.getTitle());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 31 + _room.getTitle().length() * 2;
-    }
 }

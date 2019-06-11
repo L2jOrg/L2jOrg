@@ -14,12 +14,8 @@ public final class LeaveWorld extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.LOG_OUT_OK.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.LOG_OUT_OK);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

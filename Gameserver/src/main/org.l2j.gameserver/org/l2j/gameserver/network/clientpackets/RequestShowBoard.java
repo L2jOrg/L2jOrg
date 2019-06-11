@@ -15,8 +15,8 @@ public final class RequestShowBoard extends IClientIncomingPacket {
     private int _unknown;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _unknown = packet.getInt();
+    public void readImpl() {
+        _unknown = readInt();
     }
 
     @Override

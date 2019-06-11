@@ -33,32 +33,24 @@ public class ExEnchantSkillInfoDetail extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_ENCHANT_SKILL_INFO_DETAIL.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_ENCHANT_SKILL_INFO_DETAIL);
 
-        packet.putInt(_type.ordinal());
-        packet.putInt(_skillId);
-        packet.putShort((short) _skillLvl);
-        packet.putShort((short) _skillSubLvl);
+        writeInt(_type.ordinal());
+        writeInt(_skillId);
+        writeShort((short) _skillLvl);
+        writeShort((short) _skillSubLvl);
         if (_enchantSkillHolder != null) {
-            packet.putLong(_enchantSkillHolder.getSp(_type));
-            packet.putInt(_enchantSkillHolder.getChance(_type));
+            writeLong(_enchantSkillHolder.getSp(_type));
+            writeInt(_enchantSkillHolder.getChance(_type));
             final Set<ItemHolder> holders = _enchantSkillHolder.getRequiredItems(_type);
-            packet.putInt(holders.size());
+            writeInt(holders.size());
             holders.forEach(holder ->
             {
-                packet.putInt(holder.getId());
-                packet.putInt((int) holder.getCount());
+                writeInt(holder.getId());
+                writeInt((int) holder.getCount());
             });
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        var size = 17;
-        if(nonNull(_enchantSkillHolder)) {
-            size += 16 + _enchantSkillHolder.getRequiredItems(_type).size() * 8;
-        }
-        return size;
-    }
 }

@@ -21,15 +21,11 @@ public class ExShowChannelingEffect extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_CHANNELING_EFFECT.writeId(packet);
-        packet.putInt(_caster.getObjectId());
-        packet.putInt(_target.getObjectId());
-        packet.putInt(_state);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_CHANNELING_EFFECT);
+        writeInt(_caster.getObjectId());
+        writeInt(_target.getObjectId());
+        writeInt(_state);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 18;
-    }
 }

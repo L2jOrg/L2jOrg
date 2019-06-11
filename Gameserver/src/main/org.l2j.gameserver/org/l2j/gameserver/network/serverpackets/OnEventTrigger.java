@@ -18,15 +18,11 @@ public class OnEventTrigger extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EVENT_TRIGGER.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EVENT_TRIGGER);
 
-        packet.putInt(_emitterId);
-        packet.put((byte) _enabled);
+        writeInt(_emitterId);
+        writeByte((byte) _enabled);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 11;
-    }
 }

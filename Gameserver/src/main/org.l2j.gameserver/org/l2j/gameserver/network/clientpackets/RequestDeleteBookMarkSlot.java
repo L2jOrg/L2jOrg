@@ -12,8 +12,8 @@ public final class RequestDeleteBookMarkSlot extends IClientIncomingPacket {
     private int _id;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _id = packet.getInt();
+    public void readImpl() {
+        _id = readInt();
     }
 
     @Override

@@ -17,19 +17,15 @@ public class ExPledgeRecruitBoardDetail extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PLEDGE_RECRUIT_BOARD_DETAIL.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PLEDGE_RECRUIT_BOARD_DETAIL);
 
-        packet.putInt(_pledgeRecruitInfo.getClanId());
-        packet.putInt(_pledgeRecruitInfo.getKarma());
-        writeString(_pledgeRecruitInfo.getInformation(), packet);
-        writeString(_pledgeRecruitInfo.getDetailedInformation(), packet);
-        packet.putInt(_pledgeRecruitInfo.getApplicationType());
-        packet.putInt(_pledgeRecruitInfo.getRecruitType());
+        writeInt(_pledgeRecruitInfo.getClanId());
+        writeInt(_pledgeRecruitInfo.getKarma());
+        writeString(_pledgeRecruitInfo.getInformation());
+        writeString(_pledgeRecruitInfo.getDetailedInformation());
+        writeInt(_pledgeRecruitInfo.getApplicationType());
+        writeInt(_pledgeRecruitInfo.getRecruitType());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25 + (_pledgeRecruitInfo.getInformation().length() + _pledgeRecruitInfo.getDetailedInformation().length()) * 2;
-    }
 }

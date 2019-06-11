@@ -21,23 +21,19 @@ public class ExResponseCommissionItemList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_RESPONSE_COMMISSION_ITEM_LIST.writeId(packet);
-        packet.put((byte) sendType);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_RESPONSE_COMMISSION_ITEM_LIST);
+        writeByte((byte) sendType);
         if (sendType == 2) {
-            packet.putInt(items.size());
-            packet.putInt(items.size());
+            writeInt(items.size());
+            writeInt(items.size());
             for (L2ItemInstance itemInstance : items) {
-                writeItem(packet, itemInstance);
+                writeItem(itemInstance);
             }
         } else {
-            packet.putInt(0);
-            packet.putInt(0);
+            writeInt(0);
+            writeInt(0);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 14 + (sendType == 2 ? items.size() * 100 : 0);
-    }
 }

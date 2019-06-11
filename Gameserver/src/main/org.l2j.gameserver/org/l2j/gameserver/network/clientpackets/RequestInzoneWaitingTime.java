@@ -10,7 +10,7 @@ import java.nio.ByteBuffer;
  */
 public class RequestInzoneWaitingTime extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
 
     }
 

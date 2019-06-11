@@ -30,21 +30,17 @@ public class FriendAddRequestResult extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.FRIEND_ADD_REQUEST_RESULT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.FRIEND_ADD_REQUEST_RESULT);
 
-        packet.putInt(_result);
-        packet.putInt(_charId);
-        writeString(_charName, packet);
-        packet.putInt(_isOnline);
-        packet.putInt(_charObjectId);
-        packet.putInt(_charLevel);
-        packet.putInt(_charClassId);
-        packet.putShort((short) 0x00); // Always 0 on retail
+        writeInt(_result);
+        writeInt(_charId);
+        writeString(_charName);
+        writeInt(_isOnline);
+        writeInt(_charObjectId);
+        writeInt(_charLevel);
+        writeInt(_charClassId);
+        writeShort((short) 0x00); // Always 0 on retail
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 33 + _charName.length();
-    }
 }

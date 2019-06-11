@@ -22,19 +22,15 @@ public class Snoop extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SNOOP.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SNOOP);
 
-        packet.putInt(_convoId);
-        writeString(_name, packet);
-        packet.putInt(0x00); // ??
-        packet.putInt(_type.getClientId());
-        writeString(_speaker, packet);
-        writeString(_msg, packet);
+        writeInt(_convoId);
+        writeString(_name);
+        writeInt(0x00); // ??
+        writeInt(_type.getClientId());
+        writeString(_speaker);
+        writeString(_msg);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 23 + (_name.length() + _speaker.length() + _msg.length()) * 2;
-    }
 }

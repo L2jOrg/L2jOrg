@@ -50,21 +50,17 @@ public final class StatusUpdate extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.STATUS_UPDATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.STATUS_UPDATE);
 
-        packet.putInt(_objectId); // casterId
-        packet.putInt(_isVisible ? _casterObjectId : 0x00);
-        packet.put((byte) (_isVisible ? 0x01 : 0x00));
-        packet.put((byte) _updates.size());
+        writeInt(_objectId); // casterId
+        writeInt(_isVisible ? _casterObjectId : 0x00);
+        writeByte((byte) (_isVisible ? 0x01 : 0x00));
+        writeByte((byte) _updates.size());
         for (Entry<StatusUpdateType, Integer> entry : _updates.entrySet()) {
-            packet.put((byte) entry.getKey().getClientId());
-            packet.putInt(entry.getValue());
+            writeByte((byte) entry.getKey().getClientId());
+            writeInt(entry.getValue());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 15 +  _updates.size() * 5;
-    }
 }

@@ -22,8 +22,8 @@ public class RequestPledgeBonusReward extends IClientIncomingPacket {
     private int _type;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _type = packet.get();
+    public void readImpl() {
+        _type = readByte();
     }
 
     @Override

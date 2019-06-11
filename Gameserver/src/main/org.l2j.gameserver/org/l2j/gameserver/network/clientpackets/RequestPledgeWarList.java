@@ -16,9 +16,9 @@ public final class RequestPledgeWarList extends IClientIncomingPacket {
     private int _tab;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _page = packet.getInt();
-        _tab = packet.getInt();
+    public void readImpl() {
+        _page = readInt();
+        _tab = readInt();
     }
 
     @Override

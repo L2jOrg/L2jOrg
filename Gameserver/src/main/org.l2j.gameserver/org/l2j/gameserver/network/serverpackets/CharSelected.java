@@ -5,8 +5,6 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
-import java.nio.ByteBuffer;
-
 public class CharSelected extends IClientOutgoingPacket {
     private final L2PcInstance _activeChar;
     private final int _sessionId;
@@ -17,53 +15,49 @@ public class CharSelected extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.CHARACTER_SELECTED.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.CHARACTER_SELECTED);
 
-        writeString(_activeChar.getName(), packet);
-        packet.putInt(_activeChar.getObjectId());
-        writeString(_activeChar.getTitle(), packet);
-        packet.putInt(_sessionId);
-        packet.putInt(_activeChar.getClanId());
-        packet.putInt(0x00); // ??
-        packet.putInt(_activeChar.getAppearance().getSex() ? 1 : 0);
-        packet.putInt(_activeChar.getRace().ordinal());
-        packet.putInt(_activeChar.getClassId().getId());
-        packet.putInt(0x01); // active ??
-        packet.putInt(_activeChar.getX());
-        packet.putInt(_activeChar.getY());
-        packet.putInt(_activeChar.getZ());
-        packet.putDouble(_activeChar.getCurrentHp());
-        packet.putDouble(_activeChar.getCurrentMp());
-        packet.putLong(_activeChar.getSp());
-        packet.putLong(_activeChar.getExp());
-        packet.putInt(_activeChar.getLevel());
-        packet.putInt(_activeChar.getReputation());
-        packet.putInt(_activeChar.getPkKills());
-        packet.putInt(GameTimeController.getInstance().getGameTime() % (24 * 60)); // "reset" on 24th hour
-        packet.putInt(0x00);
-        packet.putInt(_activeChar.getClassId().getId());
+        writeString(_activeChar.getName());
+        writeInt(_activeChar.getObjectId());
+        writeString(_activeChar.getTitle());
+        writeInt(_sessionId);
+        writeInt(_activeChar.getClanId());
+        writeInt(0x00); // ??
+        writeInt(_activeChar.getAppearance().getSex() ? 1 : 0);
+        writeInt(_activeChar.getRace().ordinal());
+        writeInt(_activeChar.getClassId().getId());
+        writeInt(0x01); // active ??
+        writeInt(_activeChar.getX());
+        writeInt(_activeChar.getY());
+        writeInt(_activeChar.getZ());
+        writeDouble(_activeChar.getCurrentHp());
+        writeDouble(_activeChar.getCurrentMp());
+        writeLong(_activeChar.getSp());
+        writeLong(_activeChar.getExp());
+        writeInt(_activeChar.getLevel());
+        writeInt(_activeChar.getReputation());
+        writeInt(_activeChar.getPkKills());
+        writeInt(GameTimeController.getInstance().getGameTime() % (24 * 60)); // "reset" on 24th hour
+        writeInt(0x00);
+        writeInt(_activeChar.getClassId().getId());
 
-        packet.put(new byte[16]);
+        writeBytes(new byte[16]);
 
-        packet.putInt(0x00);
-        packet.putInt(0x00);
-        packet.putInt(0x00);
-        packet.putInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
 
-        packet.putInt(0x00);
+        writeInt(0x00);
 
-        packet.putInt(0x00);
-        packet.putInt(0x00);
-        packet.putInt(0x00);
-        packet.putInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
 
-        packet.put(new byte[28]);
-        packet.putInt(0x00);
+        writeBytes(new byte[28]);
+        writeInt(0x00);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 205 + _activeChar.getName().length() * 2 + _activeChar.getTitle().length() * 2;
-    }
 }

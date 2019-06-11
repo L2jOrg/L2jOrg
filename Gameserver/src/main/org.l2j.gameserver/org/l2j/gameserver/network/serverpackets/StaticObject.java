@@ -52,24 +52,20 @@ public class StaticObject extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.STATIC_OBJECT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.STATIC_OBJECT);
 
-        packet.putInt(_staticObjectId);
-        packet.putInt(_objectId);
-        packet.putInt(_type);
-        packet.putInt(_isTargetable ? 1 : 0);
-        packet.putInt(_meshIndex);
-        packet.putInt(_isClosed ? 1 : 0);
-        packet.putInt(_isEnemy ? 1 : 0);
-        packet.putInt(_currentHp);
-        packet.putInt(_maxHp);
-        packet.putInt(_showHp ? 1 : 0);
-        packet.putInt(_damageGrade);
+        writeInt(_staticObjectId);
+        writeInt(_objectId);
+        writeInt(_type);
+        writeInt(_isTargetable ? 1 : 0);
+        writeInt(_meshIndex);
+        writeInt(_isClosed ? 1 : 0);
+        writeInt(_isEnemy ? 1 : 0);
+        writeInt(_currentHp);
+        writeInt(_maxHp);
+        writeInt(_showHp ? 1 : 0);
+        writeInt(_damageGrade);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 50;
-    }
 }

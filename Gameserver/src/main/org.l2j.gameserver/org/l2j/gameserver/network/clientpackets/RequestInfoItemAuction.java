@@ -15,8 +15,8 @@ public final class RequestInfoItemAuction extends IClientIncomingPacket {
     private int _instanceId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _instanceId = packet.getInt();
+    public void readImpl() {
+        _instanceId = readInt();
     }
 
     @Override

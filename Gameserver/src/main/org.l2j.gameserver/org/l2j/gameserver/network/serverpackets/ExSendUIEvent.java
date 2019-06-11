@@ -103,28 +103,24 @@ public class ExSendUIEvent extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SEND_UIEVENT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SEND_UIEVENT);
 
-        packet.putInt(_objectId);
-        packet.putInt(_type); // 0 = show, 1 = hide (there is 2 = pause and 3 = resume also but they don't work well you can only pause count down and you cannot resume it because resume hides the counter).
-        packet.putInt(0); // unknown
-        packet.putInt(0); // unknown
-        writeString(String.valueOf(_countUp), packet); // 0 = count down, 1 = count up timer always disappears 10 seconds before end
-        writeString(String.valueOf(_startTime), packet);
-        writeString(String.valueOf(_startTime2), packet);
-        writeString(String.valueOf(_endTime), packet);
-        writeString(String.valueOf(_endTime2), packet);
-        packet.putInt(_npcstringId);
+        writeInt(_objectId);
+        writeInt(_type); // 0 = show, 1 = hide (there is 2 = pause and 3 = resume also but they don't work well you can only pause count down and you cannot resume it because resume hides the counter).
+        writeInt(0); // unknown
+        writeInt(0); // unknown
+        writeString(String.valueOf(_countUp)); // 0 = count down, 1 = count up timer always disappears 10 seconds before end
+        writeString(String.valueOf(_startTime));
+        writeString(String.valueOf(_startTime2));
+        writeString(String.valueOf(_endTime));
+        writeString(String.valueOf(_endTime2));
+        writeInt(_npcstringId);
         if (_params != null) {
             for (String param : _params) {
-                writeString(param, packet);
+                writeString(param);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 35 + (nonNull(_params) ? (_params.stream().mapToInt(String::length).sum() + _params.size())* 2 : 0);
-    }
 }

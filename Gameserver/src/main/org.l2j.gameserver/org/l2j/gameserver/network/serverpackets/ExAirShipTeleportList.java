@@ -20,29 +20,25 @@ public class ExAirShipTeleportList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_AIR_SHIP_TELEPORT_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_AIR_SHIP_TELEPORT_LIST);
 
-        packet.putInt(_dockId);
+        writeInt(_dockId);
         if (_teleports != null) {
-            packet.putInt(_teleports.length);
+            writeInt(_teleports.length);
 
             for (int i = 0; i < _teleports.length; i++) {
-                packet.putInt(i - 1);
-                packet.putInt(_fuelConsumption[i]);
+                writeInt(i - 1);
+                writeInt(_fuelConsumption[i]);
                 final VehiclePathPoint[] path = _teleports[i];
                 final VehiclePathPoint dst = path[path.length - 1];
-                packet.putInt(dst.getX());
-                packet.putInt(dst.getY());
-                packet.putInt(dst.getZ());
+                writeInt(dst.getX());
+                writeInt(dst.getY());
+                writeInt(dst.getZ());
             }
         } else {
-            packet.putInt(0);
+            writeInt(0);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + (nonNull(_teleports) ? _teleports.length * 20 : 0);
-    }
 }

@@ -36,9 +36,9 @@ public final class RequestAnswerFriendInvite extends IClientIncomingPacket {
     private int _response;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        packet.get();
-        _response = packet.getInt();
+    public void readImpl() {
+        readByte();
+        _response = readInt();
     }
 
     @Override

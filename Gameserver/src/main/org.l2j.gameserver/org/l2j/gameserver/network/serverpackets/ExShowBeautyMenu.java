@@ -22,17 +22,13 @@ public class ExShowBeautyMenu extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_BEAUTY_MENU.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_BEAUTY_MENU);
 
-        packet.putInt(_type);
-        packet.putInt(_activeChar.getVisualHair());
-        packet.putInt(_activeChar.getVisualHairColor());
-        packet.putInt(_activeChar.getVisualFace());
+        writeInt(_type);
+        writeInt(_activeChar.getVisualHair());
+        writeInt(_activeChar.getVisualHairColor());
+        writeInt(_activeChar.getVisualFace());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 21;
-    }
 }

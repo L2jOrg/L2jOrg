@@ -43,21 +43,17 @@ public class ExInzoneWaiting extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_INZONE_WAITING_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_INZONE_WAITING_INFO);
 
-        packet.put((byte) (_sendByClient ? 0x00 : 0x01)); // Grand Crusade
-        packet.putInt(_currentTemplateId);
-        packet.putInt(_instanceTimes.size());
+        writeByte((byte) (_sendByClient ? 0x00 : 0x01)); // Grand Crusade
+        writeInt(_currentTemplateId);
+        writeInt(_instanceTimes.size());
         for (Entry<Integer, Long> entry : _instanceTimes.entrySet()) {
             final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
-            packet.putInt(entry.getKey());
-            packet.putInt((int) instanceTime);
+            writeInt(entry.getKey());
+            writeInt((int) instanceTime);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 14 + _instanceTimes.size() * 8;
-    }
 }

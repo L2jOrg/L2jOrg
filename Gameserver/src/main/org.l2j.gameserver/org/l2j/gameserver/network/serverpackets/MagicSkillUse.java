@@ -61,39 +61,35 @@ public final class MagicSkillUse extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.MAGIC_SKILL_USE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.MAGIC_SKILL_USE);
 
-        packet.putInt(_castingType.getClientBarId()); // Casting bar type: 0 - default, 1 - default up, 2 - blue, 3 - green, 4 - red.
-        packet.putInt(_activeChar.getObjectId());
-        packet.putInt(_target.getObjectId());
-        packet.putInt(_skillId);
-        packet.putInt(_skillLevel);
-        packet.putInt(_hitTime);
-        packet.putInt(_reuseGroup);
-        packet.putInt(_reuseDelay);
-        packet.putInt(_activeChar.getX());
-        packet.putInt(_activeChar.getY());
-        packet.putInt(_activeChar.getZ());
-        packet.putShort((short) _unknown.size()); // TODO: Implement me!
+        writeInt(_castingType.getClientBarId()); // Casting bar type: 0 - default, 1 - default up, 2 - blue, 3 - green, 4 - red.
+        writeInt(_activeChar.getObjectId());
+        writeInt(_target.getObjectId());
+        writeInt(_skillId);
+        writeInt(_skillLevel);
+        writeInt(_hitTime);
+        writeInt(_reuseGroup);
+        writeInt(_reuseDelay);
+        writeInt(_activeChar.getX());
+        writeInt(_activeChar.getY());
+        writeInt(_activeChar.getZ());
+        writeShort((short) _unknown.size()); // TODO: Implement me!
         for (int unknown : _unknown) {
-            packet.putShort((short) unknown);
+            writeShort((short) unknown);
         }
-        packet.putShort((short) _groundLocations.size());
+        writeShort((short) _groundLocations.size());
         for (IPositionable target : _groundLocations) {
-            packet.putInt(target.getX());
-            packet.putInt(target.getY());
-            packet.putInt(target.getZ());
+            writeInt(target.getX());
+            writeInt(target.getY());
+            writeInt(target.getZ());
         }
-        packet.putInt(_target.getX());
-        packet.putInt(_target.getY());
-        packet.putInt(_target.getZ());
-        packet.putInt(_actionId >= 0 ? 0x01 : 0x00); // 1 when ID from RequestActionUse is used
-        packet.putInt(_actionId >= 0 ? _actionId : 0); // ID from RequestActionUse. Used to set cooldown on summon skills.
+        writeInt(_target.getX());
+        writeInt(_target.getY());
+        writeInt(_target.getZ());
+        writeInt(_actionId >= 0 ? 0x01 : 0x00); // 1 when ID from RequestActionUse is used
+        writeInt(_actionId >= 0 ? _actionId : 0); // ID from RequestActionUse. Used to set cooldown on summon skills.
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 74 + _unknown.size() * 2 + _groundLocations.size() * 12;
-    }
 }

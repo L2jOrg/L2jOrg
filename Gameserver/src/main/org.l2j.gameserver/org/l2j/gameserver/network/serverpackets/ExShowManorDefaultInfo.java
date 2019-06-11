@@ -21,25 +21,21 @@ public final class ExShowManorDefaultInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_MANOR_DEFAULT_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_MANOR_DEFAULT_INFO);
 
-        packet.put((byte) (_hideButtons ? 0x01 : 0x00)); // Hide "Seed Purchase" and "Crop Sales" buttons
-        packet.putInt(_crops.size());
+        writeByte((byte) (_hideButtons ? 0x01 : 0x00)); // Hide "Seed Purchase" and "Crop Sales" buttons
+        writeInt(_crops.size());
         for (L2Seed crop : _crops) {
-            packet.putInt(crop.getCropId()); // crop Id
-            packet.putInt(crop.getLevel()); // level
-            packet.putInt(crop.getSeedReferencePrice()); // seed price
-            packet.putInt(crop.getCropReferencePrice()); // crop price
-            packet.put((byte) 1); // Reward 1 type
-            packet.putInt(crop.getReward(1)); // Reward 1 itemId
-            packet.put((byte) 1); // Reward 2 type
-            packet.putInt(crop.getReward(2)); // Reward 2 itemId
+            writeInt(crop.getCropId()); // crop Id
+            writeInt(crop.getLevel()); // level
+            writeInt(crop.getSeedReferencePrice()); // seed price
+            writeInt(crop.getCropReferencePrice()); // crop price
+            writeByte((byte) 1); // Reward 1 type
+            writeInt(crop.getReward(1)); // Reward 1 itemId
+            writeByte((byte) 1); // Reward 2 type
+            writeInt(crop.getReward(2)); // Reward 2 itemId
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 10 + _crops.size() * 26;
-    }
 }

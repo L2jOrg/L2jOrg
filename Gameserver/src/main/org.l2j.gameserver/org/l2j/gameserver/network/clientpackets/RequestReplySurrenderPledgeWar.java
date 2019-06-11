@@ -13,9 +13,9 @@ public final class RequestReplySurrenderPledgeWar extends IClientIncomingPacket 
     private int _answer;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _reqName = readString(packet);
-        _answer = packet.getInt();
+    public void readImpl() {
+        _reqName = readString();
+        _answer = readInt();
     }
 
     @Override

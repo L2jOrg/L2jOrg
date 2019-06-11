@@ -18,16 +18,12 @@ public class ManagePledgePower extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.MANAGE_PLEDGE_POWER.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.MANAGE_PLEDGE_POWER);
 
-        packet.putInt(_rank);
-        packet.putInt(_action);
-        packet.putInt(_clan.getRankPrivs(_rank).getBitmask());
+        writeInt(_rank);
+        writeInt(_action);
+        writeInt(_clan.getRankPrivs(_rank).getBitmask());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17;
-    }
 }

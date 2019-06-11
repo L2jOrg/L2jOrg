@@ -28,18 +28,18 @@ public class RequestProcureCropList extends IClientIncomingPacket {
     private List<CropHolder> _items = null;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        final int count = packet.getInt();
-        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.remaining())) {
+    public void readImpl() throws InvalidDataPacketException {
+        final int count = readInt();
+        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
             throw new InvalidDataPacketException();
         }
 
         _items = new ArrayList<>(count);
         for (int i = 0; i < count; i++) {
-            final int objId = packet.getInt();
-            final int itemId = packet.getInt();
-            final int manorId = packet.getInt();
-            final long cnt = packet.getLong();
+            final int objId = readInt();
+            final int itemId = readInt();
+            final int manorId = readInt();
+            final long cnt = readLong();
             if ((objId < 1) || (itemId < 1) || (manorId < 0) || (cnt < 0)) {
                 _items = null;
                 throw new InvalidDataPacketException();

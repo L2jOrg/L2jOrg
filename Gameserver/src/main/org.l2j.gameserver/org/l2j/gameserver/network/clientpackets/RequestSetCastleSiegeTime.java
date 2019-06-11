@@ -51,9 +51,9 @@ public class RequestSetCastleSiegeTime extends IClientIncomingPacket {
     }
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _castleId = packet.getInt();
-        _time = packet.getInt();
+    public void readImpl() {
+        _castleId = readInt();
+        _time = readInt();
         _time *= 1000;
     }
 

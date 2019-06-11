@@ -15,15 +15,11 @@ public class PetDelete extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PET_DELETE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PET_DELETE);
 
-        packet.putInt(_petType);
-        packet.putInt(_petObjId);
+        writeInt(_petType);
+        writeInt(_petObjId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13;
-    }
 }

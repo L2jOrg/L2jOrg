@@ -18,10 +18,10 @@ public final class RequestWithDrawPremiumItem extends IClientIncomingPacket {
     private long _itemCount;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _itemNum = packet.getInt();
-        _charId = packet.getInt();
-        _itemCount = packet.getLong();
+    public void readImpl() {
+        _itemNum = readInt();
+        _charId = readInt();
+        _itemCount = readLong();
     }
 
     @Override

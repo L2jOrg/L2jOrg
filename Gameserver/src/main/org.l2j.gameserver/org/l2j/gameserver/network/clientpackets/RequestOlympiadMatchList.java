@@ -15,7 +15,7 @@ public final class RequestOlympiadMatchList extends IClientIncomingPacket {
     private static final String COMMAND = "arenalist";
 
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
 
     }
 

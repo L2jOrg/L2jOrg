@@ -18,8 +18,8 @@ public final class SetPrivateStoreMsgBuy extends IClientIncomingPacket {
     private String _storeMsg;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _storeMsg = readString(packet);
+    public void readImpl() {
+        _storeMsg = readString();
     }
 
     @Override

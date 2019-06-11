@@ -18,10 +18,10 @@ public final class RequestRecipeShopMakeItem extends IClientIncomingPacket {
     private long _unknown;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _id = packet.getInt();
-        _recipeId = packet.getInt();
-        _unknown = packet.getLong();
+    public void readImpl() {
+        _id = readInt();
+        _recipeId = readInt();
+        _unknown = readLong();
     }
 
     @Override

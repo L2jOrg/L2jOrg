@@ -18,12 +18,8 @@ public class ExEnchantOneOK extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_ENCHANT_ONE_OK.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_ENCHANT_ONE_OK);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

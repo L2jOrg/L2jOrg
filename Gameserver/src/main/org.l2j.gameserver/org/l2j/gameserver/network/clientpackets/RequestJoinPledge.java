@@ -19,9 +19,9 @@ public final class RequestJoinPledge extends IClientIncomingPacket {
     private int _pledgeType;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _target = packet.getInt();
-        _pledgeType = packet.getInt();
+    public void readImpl() {
+        _target = readInt();
+        _pledgeType = readInt();
     }
 
     private void scheduleDeny(L2PcInstance player, String name) {

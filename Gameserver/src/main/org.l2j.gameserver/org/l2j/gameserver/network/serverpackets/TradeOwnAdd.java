@@ -19,18 +19,14 @@ public final class TradeOwnAdd extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.TRADE_OWN_ADD.writeId(packet);
-        packet.put((byte) _sendType);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.TRADE_OWN_ADD);
+        writeByte((byte) _sendType);
         if (_sendType == 2) {
-            packet.putInt(0x01);
+            writeInt(0x01);
         }
-        packet.putInt(0x01);
-        writeItem(packet, _item);
+        writeInt(0x01);
+        writeItem(_item);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 125;
-    }
 }

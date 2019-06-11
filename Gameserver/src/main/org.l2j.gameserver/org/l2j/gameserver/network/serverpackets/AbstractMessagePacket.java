@@ -12,7 +12,6 @@ import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
 
 import java.io.PrintStream;
-import java.nio.ByteBuffer;
 import java.util.Arrays;
 
 /**
@@ -269,38 +268,38 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
         return (T) this;
     }
 
-    protected void writeParamsSize(ByteBuffer packet, int size) {
-        packet.put((byte) size);
+    protected void writeParamsSize(int size) {
+        writeByte((byte) size);
     }
 
-    protected void writeParamType(ByteBuffer packet, int type) {
-        packet.put((byte) type);
+    protected void writeParamType(int type) {
+        writeByte((byte) type);
     }
 
-    protected final void writeMe(ByteBuffer packet) {
-        writeParamsSize(packet, _params.length);
+    protected final void writeMe() {
+        writeParamsSize(_params.length);
         SMParam param;
         for (int i = 0; i < _paramIndex; i++) {
             param = _params[i];
 
-            writeParamType(packet, param.getType());
+            writeParamType(param.getType());
             switch (param.getType()) {
-                case TYPE_ELEMENT_NAME, TYPE_BYTE, TYPE_FACTION_NAME -> packet.put((byte) param.getIntValue());
-                case TYPE_CASTLE_NAME, TYPE_SYSTEM_STRING, TYPE_INSTANCE_NAME, TYPE_CLASS_ID -> packet.putShort((short) param.getIntValue());
-                case TYPE_ITEM_NAME, TYPE_INT_NUMBER, TYPE_NPC_NAME, TYPE_DOOR_NAME -> packet.putInt(param.getIntValue());
-                case TYPE_LONG_NUMBER -> packet.putLong(param.getLongValue());
-                case TYPE_TEXT, TYPE_PLAYER_NAME -> writeString(param.getStringValue(), packet);
+                case TYPE_ELEMENT_NAME, TYPE_BYTE, TYPE_FACTION_NAME -> writeByte((byte) param.getIntValue());
+                case TYPE_CASTLE_NAME, TYPE_SYSTEM_STRING, TYPE_INSTANCE_NAME, TYPE_CLASS_ID -> writeShort((short) param.getIntValue());
+                case TYPE_ITEM_NAME, TYPE_INT_NUMBER, TYPE_NPC_NAME, TYPE_DOOR_NAME -> writeInt(param.getIntValue());
+                case TYPE_LONG_NUMBER -> writeLong(param.getLongValue());
+                case TYPE_TEXT, TYPE_PLAYER_NAME -> writeString(param.getStringValue());
                 case TYPE_SKILL_NAME -> {
                     final int[] array = param.getIntArrayValue();
-                    packet.putInt(array[0]); // skill id
-                    packet.putShort((short) array[1]); // skill level
-                    packet.putShort((short) array[2]); // skill sub level
+                    writeInt(array[0]); // skill id
+                    writeShort((short) array[1]); // skill level
+                    writeShort((short) array[2]); // skill sub level
                 }
                 case TYPE_POPUP_ID, TYPE_ZONE_NAME -> {
                     final int[] array = param.getIntArrayValue();
-                    packet.putInt(array[0]); // x
-                    packet.putInt(array[1]); // y
-                    packet.putInt(array[2]); // z
+                    writeInt(array[0]); // x
+                    writeInt(array[1]); // y
+                    writeInt(array[2]); // z
                 }
             }
         }

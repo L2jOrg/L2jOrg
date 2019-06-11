@@ -14,8 +14,8 @@ public class RequestPledgeRecruitBoardDetail extends IClientIncomingPacket {
     private int _clanId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _clanId = packet.getInt();
+    public void readImpl() {
+        _clanId = readInt();
     }
 
     @Override

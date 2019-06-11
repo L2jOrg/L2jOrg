@@ -14,8 +14,8 @@ public final class RequestWriteHeroWords extends IClientIncomingPacket {
     private String _heroWords;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _heroWords = readString(packet);
+    public void readImpl() {
+        _heroWords = readString();
     }
 
     @Override

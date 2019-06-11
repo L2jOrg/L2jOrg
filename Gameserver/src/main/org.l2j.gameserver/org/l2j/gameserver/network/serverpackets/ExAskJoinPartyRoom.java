@@ -19,15 +19,11 @@ public class ExAskJoinPartyRoom extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_ASK_JOIN_PARTY_ROOM.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_ASK_JOIN_PARTY_ROOM);
 
-        writeString(_charName, packet);
-        writeString(_roomName, packet);
+        writeString(_charName);
+        writeString(_roomName);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + (_charName.length() + _roomName.length()) * 2;
-    }
 }

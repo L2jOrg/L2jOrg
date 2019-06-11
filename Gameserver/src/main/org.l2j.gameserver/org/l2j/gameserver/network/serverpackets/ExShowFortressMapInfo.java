@@ -25,12 +25,12 @@ public class ExShowFortressMapInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_FORTRESS_MAP_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_FORTRESS_MAP_INFO);
 
-        packet.putInt(_fortress.getResidenceId());
-        packet.putInt(_fortress.getSiege().isInProgress() ? 1 : 0); // fortress siege status
-        packet.putInt(_fortress.getFortSize()); // barracks count
+        writeInt(_fortress.getResidenceId());
+        writeInt(_fortress.getSiege().isInProgress() ? 1 : 0); // fortress siege status
+        writeInt(_fortress.getFortSize()); // barracks count
 
         final List<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(_fortress.getResidenceId());
         if ((commanders != null) && (commanders.size() != 0) && _fortress.getSiege().isInProgress()) {
@@ -38,9 +38,9 @@ public class ExShowFortressMapInfo extends IClientOutgoingPacket {
                 case 3: {
                     for (FortSiegeSpawn spawn : commanders) {
                         if (isSpawned(spawn.getId())) {
-                            packet.putInt(0);
+                            writeInt(0);
                         } else {
-                            packet.putInt(1);
+                            writeInt(1);
                         }
                     }
                     break;
@@ -51,12 +51,12 @@ public class ExShowFortressMapInfo extends IClientOutgoingPacket {
                     for (FortSiegeSpawn spawn : commanders) {
                         count++;
                         if (count == 4) {
-                            packet.putInt(1); // TODO: control room emulated
+                            writeInt(1); // TODO: control room emulated
                         }
                         if (isSpawned(spawn.getId())) {
-                            packet.putInt(0);
+                            writeInt(0);
                         } else {
-                            packet.putInt(1);
+                            writeInt(1);
                         }
                     }
                     break;
@@ -64,16 +64,12 @@ public class ExShowFortressMapInfo extends IClientOutgoingPacket {
             }
         } else {
             for (int i = 0; i < _fortress.getFortSize(); i++) {
-                packet.putInt(0);
+                writeInt(0);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        var commanders = FortSiegeManager.getInstance().getCommanderSpawnList(_fortress.getResidenceId());
-        return 17 + (!isNullOrEmpty(commanders) ? commanders.size() * 8 : _fortress.getFortSize() * 4);
-    }
+
 
     /**
      * @param npcId

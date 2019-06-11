@@ -17,16 +17,12 @@ public class ExUserInfoInvenWeight extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_USER_INFO_INVEN_WEIGHT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_USER_INFO_INVEN_WEIGHT);
 
-        packet.putInt(_activeChar.getObjectId());
-        packet.putInt(_activeChar.getCurrentLoad());
-        packet.putInt(_activeChar.getMaxLoad());
+        writeInt(_activeChar.getObjectId());
+        writeInt(_activeChar.getCurrentLoad());
+        writeInt(_activeChar.getMaxLoad());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17;
-    }
 }

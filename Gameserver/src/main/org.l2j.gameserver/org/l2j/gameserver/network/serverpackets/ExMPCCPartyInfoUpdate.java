@@ -27,17 +27,13 @@ public class ExMPCCPartyInfoUpdate extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_MPCCPARTY_INFO_UPDATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_MPCCPARTY_INFO_UPDATE);
 
-        writeString(_name, packet);
-        packet.putInt(_LeaderOID);
-        packet.putInt(_memberCount);
-        packet.putInt(_mode); // mode 0 = Remove Party, 1 = AddParty, maybe more...
+        writeString(_name);
+        writeInt(_LeaderOID);
+        writeInt(_memberCount);
+        writeInt(_mode); // mode 0 = Remove Party, 1 = AddParty, maybe more...
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 19 + _name.length() * 2;
-    }
 }

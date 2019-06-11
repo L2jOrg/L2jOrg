@@ -37,38 +37,34 @@ public final class ExShowSellCropList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_SELL_CROP_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_SELL_CROP_LIST);
 
-        packet.putInt(_manorId); // manor id
-        packet.putInt(_cropsItems.size()); // size
+        writeInt(_manorId); // manor id
+        writeInt(_cropsItems.size()); // size
         for (L2ItemInstance item : _cropsItems.values()) {
             final L2Seed seed = CastleManorManager.getInstance().getSeedByCrop(item.getId());
-            packet.putInt(item.getObjectId()); // Object id
-            packet.putInt(item.getId()); // crop id
-            packet.putInt(seed.getLevel()); // seed level
-            packet.put((byte) 0x01);
-            packet.putInt(seed.getReward(1)); // reward 1 id
-            packet.put((byte) 0x01);
-            packet.putInt(seed.getReward(2)); // reward 2 id
+            writeInt(item.getObjectId()); // Object id
+            writeInt(item.getId()); // crop id
+            writeInt(seed.getLevel()); // seed level
+            writeByte((byte) 0x01);
+            writeInt(seed.getReward(1)); // reward 1 id
+            writeByte((byte) 0x01);
+            writeInt(seed.getReward(2)); // reward 2 id
             if (_castleCrops.containsKey(item.getId())) {
                 final CropProcure crop = _castleCrops.get(item.getId());
-                packet.putInt(_manorId); // manor
-                packet.putLong(crop.getAmount()); // buy residual
-                packet.putLong(crop.getPrice()); // buy price
-                packet.put((byte) crop.getReward()); // reward
+                writeInt(_manorId); // manor
+                writeLong(crop.getAmount()); // buy residual
+                writeLong(crop.getPrice()); // buy price
+                writeByte((byte) crop.getReward()); // reward
             } else {
-                packet.putInt(0xFFFFFFFF); // manor
-                packet.putLong(0x00); // buy residual
-                packet.putLong(0x00); // buy price
-                packet.put((byte) 0x00); // reward
+                writeInt(0xFFFFFFFF); // manor
+                writeLong(0x00); // buy residual
+                writeLong(0x00); // buy price
+                writeByte((byte) 0x00); // reward
             }
-            packet.putLong(item.getCount()); // my crops
+            writeLong(item.getCount()); // my crops
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + _cropsItems.size() * 51;
-    }
 }

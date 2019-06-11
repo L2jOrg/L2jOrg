@@ -17,26 +17,22 @@ public class PledgeReceiveMemberInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PLEDGE_RECEIVE_MEMBER_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PLEDGE_RECEIVE_MEMBER_INFO);
 
-        packet.putInt(_member.getPledgeType());
-        writeString(_member.getName(), packet);
-        writeString(_member.getTitle(), packet); // title
-        packet.putInt(_member.getPowerGrade()); // power
+        writeInt(_member.getPledgeType());
+        writeString(_member.getName());
+        writeString(_member.getTitle()); // title
+        writeInt(_member.getPowerGrade()); // power
 
         // clan or subpledge name
         if (_member.getPledgeType() != 0) {
-            writeString((_member.getClan().getSubPledge(_member.getPledgeType())).getName(), packet);
+            writeString((_member.getClan().getSubPledge(_member.getPledgeType())).getName());
         } else {
-            writeString(_member.getClan().getName(), packet);
+            writeString(_member.getClan().getName());
         }
 
-        writeString(_member.getApprenticeOrSponsorName(), packet); // name of this member's apprentice/sponsor
+        writeString(_member.getApprenticeOrSponsorName()); // name of this member's apprentice/sponsor
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 40 + (_member.getName().length() + _member.getTitle().length() + _member.getClan().getName().length() + _member.getApprenticeOrSponsorName().length()) * 2;
-    }
 }

@@ -25,14 +25,10 @@ public class ExShowUsm extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_USM.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_USM);
 
-        packet.putInt(_videoId);
+        writeInt(_videoId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

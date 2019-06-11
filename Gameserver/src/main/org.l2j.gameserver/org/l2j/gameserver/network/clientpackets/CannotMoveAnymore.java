@@ -34,11 +34,11 @@ public final class CannotMoveAnymore extends IClientIncomingPacket {
     private int _heading;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _x = packet.getInt();
-        _y = packet.getInt();
-        _z = packet.getInt();
-        _heading = packet.getInt();
+    public void readImpl() {
+        _x = readInt();
+        _y = readInt();
+        _z = readInt();
+        _heading = readInt();
     }
 
     @Override

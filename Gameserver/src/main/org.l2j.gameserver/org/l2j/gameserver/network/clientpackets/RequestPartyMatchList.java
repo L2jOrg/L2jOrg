@@ -20,13 +20,13 @@ public class RequestPartyMatchList extends IClientIncomingPacket {
     private String _roomTitle;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _roomId = packet.getInt();
-        _maxMembers = packet.getInt();
-        _minLevel = packet.getInt();
-        _maxLevel = packet.getInt();
-        _lootType = packet.getInt();
-        _roomTitle = readString(packet);
+    public void readImpl() {
+        _roomId = readInt();
+        _maxMembers = readInt();
+        _minLevel = readInt();
+        _maxLevel = readInt();
+        _lootType = readInt();
+        _roomTitle = readString();
     }
 
     @Override

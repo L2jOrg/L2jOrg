@@ -45,22 +45,18 @@ public class ExBrBroadcastEventState extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BR_BROADCAST_EVENT_STATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BR_BROADCAST_EVENT_STATE);
 
-        packet.putInt(_eventId);
-        packet.putInt(_eventState);
-        packet.putInt(_param0);
-        packet.putInt(_param1);
-        packet.putInt(_param2);
-        packet.putInt(_param3);
-        packet.putInt(_param4);
-        writeString(_param5, packet);
-        writeString(_param6, packet);
+        writeInt(_eventId);
+        writeInt(_eventState);
+        writeInt(_param0);
+        writeInt(_param1);
+        writeInt(_param2);
+        writeInt(_param3);
+        writeInt(_param4);
+        writeString(_param5);
+        writeString(_param6);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 37 + (_param5.length() + _param6.length()) * 2;
-    }
 }

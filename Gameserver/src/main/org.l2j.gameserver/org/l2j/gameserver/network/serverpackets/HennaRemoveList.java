@@ -18,26 +18,22 @@ public class HennaRemoveList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.HENNA_UNEQUIP_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.HENNA_UNEQUIP_LIST);
 
-        packet.putLong(_player.getAdena());
-        packet.putInt(0x03); // seems to be max size
-        packet.putInt(3 - _player.getHennaEmptySlots());
+        writeLong(_player.getAdena());
+        writeInt(0x03); // seems to be max size
+        writeInt(3 - _player.getHennaEmptySlots());
 
         for (L2Henna henna : _player.getHennaList()) {
             if (henna != null) {
-                packet.putInt(henna.getDyeId());
-                packet.putInt(henna.getDyeItemId());
-                packet.putLong(henna.getCancelCount());
-                packet.putLong(henna.getCancelFee());
-                packet.putInt(0x00);
+                writeInt(henna.getDyeId());
+                writeInt(henna.getDyeItemId());
+                writeLong(henna.getCancelCount());
+                writeLong(henna.getCancelFee());
+                writeInt(0x00);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 21 + _player.getHennaList().length * 30;
-    }
 }

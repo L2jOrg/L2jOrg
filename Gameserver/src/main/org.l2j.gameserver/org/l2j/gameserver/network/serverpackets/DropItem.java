@@ -22,30 +22,26 @@ public class DropItem extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.DROP_ITEM.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.DROP_ITEM);
 
-        packet.putInt(_charObjId);
-        packet.putInt(_item.getObjectId());
-        packet.putInt(_item.getDisplayId());
+        writeInt(_charObjId);
+        writeInt(_item.getObjectId());
+        writeInt(_item.getDisplayId());
 
-        packet.putInt(_item.getX());
-        packet.putInt(_item.getY());
-        packet.putInt(_item.getZ());
+        writeInt(_item.getX());
+        writeInt(_item.getY());
+        writeInt(_item.getZ());
         // only show item count if it is a stackable item
-        packet.put((byte) (_item.isStackable() ? 0x01 : 0x00));
-        packet.putLong(_item.getCount());
+        writeByte((byte) (_item.isStackable() ? 0x01 : 0x00));
+        writeLong(_item.getCount());
 
-        packet.put((byte) 0x00);
-        // packet.putInt(0x01); if above C == true (1) then packet.getInt()
+        writeByte((byte) 0x00);
+        // writeInt(0x01); if above C == true (1) then readInt()
 
-        packet.put((byte) _item.getEnchantLevel()); // Grand Crusade
-        packet.put((byte) (_item.getAugmentation() != null ? 1 : 0)); // Grand Crusade
-        packet.put((byte) _item.getSpecialAbilities().size()); // Grand Crusade
+        writeByte((byte) _item.getEnchantLevel()); // Grand Crusade
+        writeByte((byte) (_item.getAugmentation() != null ? 1 : 0)); // Grand Crusade
+        writeByte((byte) _item.getSpecialAbilities().size()); // Grand Crusade
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 37;
-    }
 }

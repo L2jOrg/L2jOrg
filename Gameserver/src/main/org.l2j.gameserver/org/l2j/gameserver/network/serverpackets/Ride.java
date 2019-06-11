@@ -23,20 +23,16 @@ public final class Ride extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.RIDE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.RIDE);
 
-        packet.putInt(_objectId);
-        packet.putInt(_mounted);
-        packet.putInt(_rideType);
-        packet.putInt(_rideNpcId);
-        packet.putInt(_loc.getX());
-        packet.putInt(_loc.getY());
-        packet.putInt(_loc.getZ());
+        writeInt(_objectId);
+        writeInt(_mounted);
+        writeInt(_rideType);
+        writeInt(_rideNpcId);
+        writeInt(_loc.getX());
+        writeInt(_loc.getY());
+        writeInt(_loc.getZ());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 33;
-    }
 }

@@ -29,18 +29,18 @@ public class SetPrivateStoreListSell extends IClientIncomingPacket {
     private Item[] _items = null;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        _packageSale = (packet.getInt() == 1);
-        final int count = packet.getInt();
-        if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.remaining())) {
+    public void readImpl() throws InvalidDataPacketException {
+        _packageSale = (readInt() == 1);
+        final int count = readInt();
+        if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
             throw new InvalidDataPacketException();
         }
 
         _items = new Item[count];
         for (int i = 0; i < count; i++) {
-            final int itemId = packet.getInt();
-            final long cnt = packet.getLong();
-            final long price = packet.getLong();
+            final int itemId = readInt();
+            final long cnt = readLong();
+            final long price = readLong();
 
             if ((itemId < 1) || (cnt < 1) || (price < 0)) {
                 _items = null;

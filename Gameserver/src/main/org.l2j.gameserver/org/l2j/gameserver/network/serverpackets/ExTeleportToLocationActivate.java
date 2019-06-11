@@ -20,20 +20,16 @@ public class ExTeleportToLocationActivate extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_TELEPORT_TO_LOCATION_ACTIVATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_TELEPORT_TO_LOCATION_ACTIVATE);
 
-        packet.putInt(_objectId);
-        packet.putInt(_loc.getX());
-        packet.putInt(_loc.getY());
-        packet.putInt(_loc.getZ());
-        packet.putInt(0); // Unknown (this isn't instanceId)
-        packet.putInt(_loc.getHeading());
-        packet.putInt(0); // Unknown
+        writeInt(_objectId);
+        writeInt(_loc.getX());
+        writeInt(_loc.getY());
+        writeInt(_loc.getZ());
+        writeInt(0); // Unknown (this isn't instanceId)
+        writeInt(_loc.getHeading());
+        writeInt(0); // Unknown
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 33;
-    }
 }

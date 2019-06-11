@@ -30,9 +30,9 @@ public class RequestTodoListHTML extends IClientIncomingPacket {
     private String _linkName;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _tab = packet.get();
-        _linkName = readString(packet);
+    public void readImpl() {
+        _tab = readByte();
+        _linkName = readString();
     }
 
     @Override

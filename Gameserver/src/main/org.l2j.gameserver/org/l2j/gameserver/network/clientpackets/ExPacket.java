@@ -3,8 +3,6 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.network.ExIncomingPackets;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Nos
  */
@@ -16,8 +14,8 @@ public class ExPacket extends IClientIncomingPacket {
     private IClientIncomingPacket _exPacket;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        final int exPacketId = packet.getShort() & 0xFFFF;
+    public void readImpl() throws InvalidDataPacketException {
+        final int exPacketId = readShort() & 0xFFFF;
         if (exPacketId >= ExIncomingPackets.PACKET_ARRAY.length) {
             throw new InvalidDataPacketException();
         }
@@ -28,11 +26,11 @@ public class ExPacket extends IClientIncomingPacket {
         }
 
         _exPacket = _exIncomingPacket.newIncomingPacket();
-        _exPacket.read(packet);
+        _exPacket.read();
     }
 
     @Override
-    public void runImpl() throws Exception {
+    public void runImpl() {
         if (!_exIncomingPacket.getConnectionStates().contains(client.getConnectionState())) {
             return;
         }

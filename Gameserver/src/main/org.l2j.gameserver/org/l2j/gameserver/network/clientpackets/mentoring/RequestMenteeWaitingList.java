@@ -15,10 +15,10 @@ public class RequestMenteeWaitingList extends IClientIncomingPacket {
     private int _maxLevel;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _page = packet.getInt();
-        _minLevel = packet.getInt();
-        _maxLevel = packet.getInt();
+    public void readImpl() {
+        _page = readInt();
+        _minLevel = readInt();
+        _maxLevel = readInt();
     }
 
     @Override

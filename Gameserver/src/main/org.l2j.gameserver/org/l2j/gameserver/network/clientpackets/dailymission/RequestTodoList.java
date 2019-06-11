@@ -15,9 +15,9 @@ public class RequestTodoList extends IClientIncomingPacket {
     private boolean _showAllLevels;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _tab = packet.get(); // Daily Reward = 9, Event = 1, Instance Zone = 2
-        _showAllLevels = packet.get() == 1; // Disabled = 0, Enabled = 1
+    public void readImpl() {
+        _tab = readByte(); // Daily Reward = 9, Event = 1, Instance Zone = 2
+        _showAllLevels = readByte() == 1; // Disabled = 0, Enabled = 1
     }
 
     @Override

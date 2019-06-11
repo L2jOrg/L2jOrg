@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.network.L2GameClient;
 
 import java.math.BigInteger;
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,54 +19,40 @@ public class AdminForgePacket extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
+    public void writeImpl(L2GameClient client) {
         for (Part p : _parts) {
-            generate(packet, p.b, p.str);
+            generate(p.b, p.str);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return _parts.stream().mapToInt(p ->
-            switch (p.b | 32) {
-                case 'c'-> 1;
-                case 'h'-> 2;
-                case 'd'-> 4;
-                case 'f', 'q' -> 8;
-                case 's' -> p.str.length();
-                case 'b', 'x' -> new BigInteger(p.str).toByteArray().length;
-                default -> 0;
-            }).sum();
-    }
-
-    public boolean generate(ByteBuffer packet, byte type, String value) {
+    public boolean generate(byte type, String value) {
         return switch (type | 32) {
             case 'c' -> {
-                packet.put(Integer.decode(value).byteValue());
+                writeByte(Integer.decode(value).byteValue());
                 break true;
             }
             case 'd' -> {
-                packet.putInt(Integer.decode(value));
+                writeInt(Integer.decode(value));
                 break true;
             }
             case 'h' -> {
-                packet.putShort(Integer.decode(value).shortValue());
+                writeShort(Integer.decode(value).shortValue());
                 break true;
             }
             case 'f' -> {
-                packet.putDouble(Double.parseDouble(value));
+                writeDouble(Double.parseDouble(value));
                 break true;
             }
             case 's' -> {
-                writeString(value, packet);
+                writeString(value);
                 break true;
             }
             case 'b', 'x' -> {
-                packet.put(new BigInteger(value).toByteArray());
+                writeBytes(new BigInteger(value).toByteArray());
                 break  true;
             }
             case 'q' -> {
-                packet.putLong(Long.decode(value));
+                writeLong(Long.decode(value));
                 break true;
             }
             default -> false;

@@ -16,9 +16,7 @@ import org.l2j.gameserver.network.serverpackets.RecipeShopManageList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.util.Arrays;
-
 
 /**
  * This class manages the action use request packet.
@@ -33,10 +31,10 @@ public final class RequestActionUse extends IClientIncomingPacket {
     private boolean _shiftPressed;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _actionId = packet.getInt();
-        _ctrlPressed = (packet.getInt() == 1);
-        _shiftPressed = (packet.get() == 1);
+    public void readImpl() {
+        _actionId = readInt();
+        _ctrlPressed = (readInt() == 1);
+        _shiftPressed = (readByte() == 1);
     }
 
     @Override

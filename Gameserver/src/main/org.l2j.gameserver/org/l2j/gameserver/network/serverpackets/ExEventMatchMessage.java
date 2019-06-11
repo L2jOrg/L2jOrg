@@ -24,15 +24,11 @@ public class ExEventMatchMessage extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_EVENT_MATCH_MESSAGE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_EVENT_MATCH_MESSAGE);
 
-        packet.put((byte) _type);
-        writeString(_message, packet);
+        writeByte((byte) _type);
+        writeString(_message);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 8 + _message.length() * 2;
-    }
 }

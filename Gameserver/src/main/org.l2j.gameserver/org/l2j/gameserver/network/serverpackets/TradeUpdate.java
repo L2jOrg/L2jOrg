@@ -24,19 +24,15 @@ public class TradeUpdate extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.TRADE_UPDATE.writeId(packet);
-        packet.put((byte) _sendType);
-        packet.putInt(0x01);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.TRADE_UPDATE);
+        writeByte((byte) _sendType);
+        writeInt(0x01);
         if (_sendType == 2) {
-            packet.putInt(0x01);
-            packet.putShort((short) ((_newCount > 0) && _item.getItem().isStackable() ? 3 : 2));
-            writeItem(packet, _item, _count);
+            writeInt(0x01);
+            writeShort((short) ((_newCount > 0) && _item.getItem().isStackable() ? 3 : 2));
+            writeItem(_item, _count);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return  15 + (_sendType == 2 ? 110 : 0);
-    }
 }

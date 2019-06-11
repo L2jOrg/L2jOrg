@@ -14,15 +14,11 @@ public final class DoorInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.DOOR_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.DOOR_INFO);
 
-        packet.putInt(_door.getObjectId());
-        packet.putInt(_door.getId());
+        writeInt(_door.getObjectId());
+        writeInt(_door.getId());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13;
-    }
 }

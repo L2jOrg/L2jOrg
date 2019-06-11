@@ -22,13 +22,9 @@ public class ExCuriousHouseObserveMode extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CURIOUS_HOUSE_OBSERVE_MODE.writeId(packet);
-        packet.put((byte) _spectating);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CURIOUS_HOUSE_OBSERVE_MODE);
+        writeByte((byte) _spectating);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 6;
-    }
 }

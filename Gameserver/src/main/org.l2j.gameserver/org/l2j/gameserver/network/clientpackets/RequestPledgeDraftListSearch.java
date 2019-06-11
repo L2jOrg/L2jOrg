@@ -19,13 +19,13 @@ public class RequestPledgeDraftListSearch extends IClientIncomingPacket {
     private boolean _descending;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _levelMin = CommonUtil.constrain(packet.getInt(), 0, 107);
-        _levelMax = CommonUtil.constrain(packet.getInt(), 0, 107);
-        _classId = packet.getInt();
-        _query = readString(packet);
-        _sortBy = packet.getInt();
-        _descending = packet.getInt() == 2;
+    public void readImpl() {
+        _levelMin = CommonUtil.constrain(readInt(), 0, 107);
+        _levelMax = CommonUtil.constrain(readInt(), 0, 107);
+        _classId = readInt();
+        _query = readString();
+        _sortBy = readInt();
+        _descending = readInt() == 2;
     }
 
     @Override

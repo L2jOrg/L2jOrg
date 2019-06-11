@@ -36,29 +36,25 @@ public final class ServerObjectInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SERVER_OBJECT_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SERVER_OBJECT_INFO);
 
-        packet.putInt(_activeChar.getObjectId());
-        packet.putInt(_idTemplate + 1000000);
-        writeString(_name, packet); // name
-        packet.putInt(_isAttackable ? 1 : 0);
-        packet.putInt(_x);
-        packet.putInt(_y);
-        packet.putInt(_z);
-        packet.putInt(_heading);
-        packet.putDouble(1.0); // movement multiplier
-        packet.putDouble(1.0); // attack speed multiplier
-        packet.putDouble(_collisionRadius);
-        packet.putDouble(_collisionHeight);
-        packet.putInt((int) (_isAttackable ? _activeChar.getCurrentHp() : 0));
-        packet.putInt(_isAttackable ? _activeChar.getMaxHp() : 0);
-        packet.putInt(0x01); // object type
-        packet.putInt(0x00); // special effects
+        writeInt(_activeChar.getObjectId());
+        writeInt(_idTemplate + 1000000);
+        writeString(_name); // name
+        writeInt(_isAttackable ? 1 : 0);
+        writeInt(_x);
+        writeInt(_y);
+        writeInt(_z);
+        writeInt(_heading);
+        writeDouble(1.0); // movement multiplier
+        writeDouble(1.0); // attack speed multiplier
+        writeDouble(_collisionRadius);
+        writeDouble(_collisionHeight);
+        writeInt((int) (_isAttackable ? _activeChar.getCurrentHp() : 0));
+        writeInt(_isAttackable ? _activeChar.getMaxHp() : 0);
+        writeInt(0x01); // object type
+        writeInt(0x00); // special effects
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 85 + _name.length() * 2;
-    }
 }

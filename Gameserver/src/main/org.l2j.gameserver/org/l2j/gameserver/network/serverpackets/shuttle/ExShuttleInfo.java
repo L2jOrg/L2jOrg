@@ -23,30 +23,26 @@ public class ExShuttleInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHUTTLE_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHUTTLE_INFO);
 
-        packet.putInt(_shuttle.getObjectId());
-        packet.putInt(_shuttle.getX());
-        packet.putInt(_shuttle.getY());
-        packet.putInt(_shuttle.getZ());
-        packet.putInt(_shuttle.getHeading());
-        packet.putInt(_shuttle.getId());
-        packet.putInt(_stops.size());
+        writeInt(_shuttle.getObjectId());
+        writeInt(_shuttle.getX());
+        writeInt(_shuttle.getY());
+        writeInt(_shuttle.getZ());
+        writeInt(_shuttle.getHeading());
+        writeInt(_shuttle.getId());
+        writeInt(_stops.size());
         for (L2ShuttleStop stop : _stops) {
-            packet.putInt(stop.getId());
+            writeInt(stop.getId());
             for (Location loc : stop.getDimensions()) {
-                packet.putInt(loc.getX());
-                packet.putInt(loc.getY());
-                packet.putInt(loc.getZ());
+                writeInt(loc.getX());
+                writeInt(loc.getY());
+                writeInt(loc.getZ());
             }
-            packet.putInt(stop.isDoorOpen() ? 0x01 : 0x00);
-            packet.putInt(stop.hasDoorChanged() ? 0x01 : 0x00);
+            writeInt(stop.isDoorOpen() ? 0x01 : 0x00);
+            writeInt(stop.hasDoorChanged() ? 0x01 : 0x00);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 33 + _stops.size() * 12 + _stops.stream().mapToInt(stop -> stop.getDimensions().size()).sum() * 12;
-    }
 }

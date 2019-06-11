@@ -17,17 +17,13 @@ public class PledgeInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PLEDGE_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PLEDGE_INFO);
 
-        packet.putInt(getSettings(ServerSettings.class).serverId());
-        packet.putInt(_clan.getId());
-        writeString(_clan.getName(), packet);
-        writeString(_clan.getAllyName(), packet);
+        writeInt(getSettings(ServerSettings.class).serverId());
+        writeInt(_clan.getId());
+        writeString(_clan.getName());
+        writeString(_clan.getAllyName());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + (_clan.getName().length() + _clan.getAllyName().length()) * 2;
-    }
 }

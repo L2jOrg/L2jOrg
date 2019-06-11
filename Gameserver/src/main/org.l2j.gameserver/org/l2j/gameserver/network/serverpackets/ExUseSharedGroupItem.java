@@ -22,17 +22,13 @@ public class ExUseSharedGroupItem extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_USE_SHARED_GROUP_ITEM.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_USE_SHARED_GROUP_ITEM);
 
-        packet.putInt(_itemId);
-        packet.putInt(_grpId);
-        packet.putInt(_remainingTime);
-        packet.putInt(_totalTime);
+        writeInt(_itemId);
+        writeInt(_grpId);
+        writeInt(_remainingTime);
+        writeInt(_totalTime);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25;
-    }
 }

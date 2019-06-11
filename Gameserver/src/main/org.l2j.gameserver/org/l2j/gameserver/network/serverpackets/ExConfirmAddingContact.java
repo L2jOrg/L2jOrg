@@ -18,15 +18,11 @@ public class ExConfirmAddingContact extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_AGIT_AUCTION_CMD.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_AGIT_AUCTION_CMD);
 
-        writeString(_charName, packet);
-        packet.putInt(_added ? 0x01 : 0x00);
+        writeString(_charName);
+        writeInt(_added ? 0x01 : 0x00);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 11 + _charName.length();
-    }
 }

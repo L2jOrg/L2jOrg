@@ -19,10 +19,10 @@ public final class RequestDuelAnswerStart extends IClientIncomingPacket {
     private int _response;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _partyDuel = packet.getInt();
-        _unk1 = packet.getInt();
-        _response = packet.getInt();
+    public void readImpl() {
+        _partyDuel = readInt();
+        _unk1 = readInt();
+        _response = readInt();
     }
 
     @Override

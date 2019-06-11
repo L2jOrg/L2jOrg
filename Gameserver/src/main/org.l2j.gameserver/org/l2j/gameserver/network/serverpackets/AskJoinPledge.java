@@ -18,18 +18,14 @@ public final class AskJoinPledge extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.ASK_JOIN_PLEDGE.writeId(packet);
-        packet.putInt(_requestor.getObjectId());
-        writeString(_requestor.getName(), packet);
-        writeString(_pledgeName, packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.ASK_JOIN_PLEDGE);
+        writeInt(_requestor.getObjectId());
+        writeString(_requestor.getName());
+        writeString(_pledgeName);
         if (_pledgeType != 0) {
-            packet.putInt(_pledgeType);
+            writeInt(_pledgeType);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17 + _requestor.getName().length() * 2 + _pledgeName.length() * 2;
-    }
 }

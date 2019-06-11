@@ -54,13 +54,13 @@ public final class NpcHtmlMessage extends AbstractHtmlPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.NPC_HTML_MESSAGE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.NPC_HTML_MESSAGE);
 
-        packet.putInt(getNpcObjId());
-        writeString(getHtml(), packet);
-        packet.putInt(_itemId);
-        packet.putInt(0x00); // TODO: Find me!
+        writeInt(getNpcObjId());
+        writeString(getHtml());
+        writeInt(_itemId);
+        writeInt(0x00); // TODO: Find me!
     }
 
     @Override
@@ -68,8 +68,4 @@ public final class NpcHtmlMessage extends AbstractHtmlPacket {
         return _itemId == 0 ? HtmlActionScope.NPC_HTML : HtmlActionScope.NPC_ITEM_HTML;
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 20 + getHtml().length() * 2;
-    }
 }

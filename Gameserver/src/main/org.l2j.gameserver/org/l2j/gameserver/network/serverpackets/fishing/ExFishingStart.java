@@ -31,18 +31,14 @@ public class ExFishingStart extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_FISHING_START.writeId(packet);
-        packet.putInt(_player.getObjectId());
-        packet.put((byte) _fishType);
-        packet.putInt(_baitLocation.getX());
-        packet.putInt(_baitLocation.getY());
-        packet.putInt(_baitLocation.getZ());
-        packet.put((byte) _baitType);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_FISHING_START);
+        writeInt(_player.getObjectId());
+        writeByte((byte) _fishType);
+        writeInt(_baitLocation.getX());
+        writeInt(_baitLocation.getY());
+        writeInt(_baitLocation.getZ());
+        writeByte((byte) _baitType);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 23;
-    }
 }

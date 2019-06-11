@@ -93,24 +93,20 @@ public class SpecialCamera extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SPECIAL_CAMERA.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SPECIAL_CAMERA);
 
-        packet.putInt(_id);
-        packet.putInt(_force);
-        packet.putInt(_angle1);
-        packet.putInt(_angle2);
-        packet.putInt(_time);
-        packet.putInt(_duration);
-        packet.putInt(_relYaw);
-        packet.putInt(_relPitch);
-        packet.putInt(_isWide);
-        packet.putInt(_relAngle);
-        packet.putInt(_unk);
+        writeInt(_id);
+        writeInt(_force);
+        writeInt(_angle1);
+        writeInt(_angle2);
+        writeInt(_time);
+        writeInt(_duration);
+        writeInt(_relYaw);
+        writeInt(_relPitch);
+        writeInt(_isWide);
+        writeInt(_relAngle);
+        writeInt(_unk);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 50;
-    }
 }

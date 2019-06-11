@@ -24,32 +24,28 @@ public class ExCuriousHouseMemberList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CURIOUS_HOUSE_MEMBER_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CURIOUS_HOUSE_MEMBER_LIST);
 
-        packet.putInt(_id);
-        packet.putInt(_maxPlayers);
-        packet.putInt(_players.size());
+        writeInt(_id);
+        writeInt(_maxPlayers);
+        writeInt(_players.size());
         for (CeremonyOfChaosMember cocPlayer : _players) {
             final L2PcInstance player = cocPlayer.getPlayer();
-            packet.putInt(cocPlayer.getObjectId());
-            packet.putInt(cocPlayer.getPosition());
+            writeInt(cocPlayer.getObjectId());
+            writeInt(cocPlayer.getPosition());
             if (player != null) {
-                packet.putInt(player.getMaxHp());
-                packet.putInt(player.getMaxCp());
-                packet.putInt((int) player.getCurrentHp());
-                packet.putInt((int) player.getCurrentCp());
+                writeInt(player.getMaxHp());
+                writeInt(player.getMaxCp());
+                writeInt((int) player.getCurrentHp());
+                writeInt((int) player.getCurrentCp());
             } else {
-                packet.putInt(0x00);
-                packet.putInt(0x00);
-                packet.putInt(0x00);
-                packet.putInt(0x00);
+                writeInt(0x00);
+                writeInt(0x00);
+                writeInt(0x00);
+                writeInt(0x00);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17 + _players.size() * 24;
-    }
 }

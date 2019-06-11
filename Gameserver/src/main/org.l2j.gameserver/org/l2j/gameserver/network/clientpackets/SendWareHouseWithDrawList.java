@@ -30,16 +30,16 @@ public final class SendWareHouseWithDrawList extends IClientIncomingPacket {
     private ItemHolder _items[] = null;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        final int count = packet.getInt();
-        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.remaining())) {
+    public void readImpl() throws InvalidDataPacketException {
+        final int count = readInt();
+        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
             throw new InvalidDataPacketException();
         }
 
         _items = new ItemHolder[count];
         for (int i = 0; i < count; i++) {
-            final int objId = packet.getInt();
-            final long cnt = packet.getLong();
+            final int objId = readInt();
+            final long cnt = readLong();
             if ((objId < 1) || (cnt < 0)) {
                 _items = null;
                 throw new InvalidDataPacketException();

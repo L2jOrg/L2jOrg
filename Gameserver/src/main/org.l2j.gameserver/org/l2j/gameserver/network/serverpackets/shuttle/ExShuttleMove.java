@@ -24,19 +24,15 @@ public class ExShuttleMove extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SUTTLE_MOVE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SUTTLE_MOVE);
 
-        packet.putInt(_shuttle.getObjectId());
-        packet.putInt((int) _shuttle.getStat().getMoveSpeed());
-        packet.putInt((int) _shuttle.getStat().getRotationSpeed());
-        packet.putInt(_x);
-        packet.putInt(_y);
-        packet.putInt(_z);
+        writeInt(_shuttle.getObjectId());
+        writeInt((int) _shuttle.getStat().getMoveSpeed());
+        writeInt((int) _shuttle.getStat().getRotationSpeed());
+        writeInt(_x);
+        writeInt(_y);
+        writeInt(_z);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 29;
-    }
 }

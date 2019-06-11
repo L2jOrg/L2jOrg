@@ -61,15 +61,11 @@ public final class SystemMessage extends AbstractMessagePacket<SystemMessage> {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SYSTEM_MESSAGE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SYSTEM_MESSAGE);
 
-        packet.putShort((short) getId());
-        writeMe(packet);
+        writeShort((short) getId());
+        writeMe();
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 7 + writeMeSize(client);
-    }
 }

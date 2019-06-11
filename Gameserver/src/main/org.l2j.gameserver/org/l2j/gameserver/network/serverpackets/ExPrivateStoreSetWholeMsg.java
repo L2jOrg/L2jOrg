@@ -23,15 +23,11 @@ public class ExPrivateStoreSetWholeMsg extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PRIVATE_STORE_WHOLE_MSG.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PRIVATE_STORE_WHOLE_MSG);
 
-        packet.putInt(_objectId);
-        writeString(_msg, packet);
+        writeInt(_objectId);
+        writeString(_msg);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 11 + _msg.length() * 2;
-    }
 }

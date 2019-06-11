@@ -16,14 +16,10 @@ public class ExChangeMpCost extends IClientOutgoingPacket {
     }
 
     @Override
-    protected void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CHANGE_MPCOST.writeId(packet);
-        packet.putInt(skillType);
-        packet.putDouble(modifier);
+    protected void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CHANGE_MPCOST);
+        writeInt(skillType);
+        writeDouble(modifier);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17;
-    }
 }

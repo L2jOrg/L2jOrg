@@ -23,25 +23,21 @@ public class RecipeBookItemList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.RECIPE_BOOK_ITEM_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.RECIPE_BOOK_ITEM_LIST);
 
-        packet.putInt(_isDwarvenCraft ? 0x00 : 0x01); // 0 = Dwarven - 1 = Common
-        packet.putInt(_maxMp);
+        writeInt(_isDwarvenCraft ? 0x00 : 0x01); // 0 = Dwarven - 1 = Common
+        writeInt(_maxMp);
 
         if (_recipes == null) {
-            packet.putInt(0);
+            writeInt(0);
         } else {
-            packet.putInt(_recipes.length); // number of items in recipe book
+            writeInt(_recipes.length); // number of items in recipe book
             for (int i = 0; i < _recipes.length; i++) {
-                packet.putInt(_recipes[i].getId());
-                packet.putInt(i + 1);
+                writeInt(_recipes[i].getId());
+                writeInt(i + 1);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + (nonNull(_recipes) ? _recipes.length * 8 + 4 : 4);
-    }
 }

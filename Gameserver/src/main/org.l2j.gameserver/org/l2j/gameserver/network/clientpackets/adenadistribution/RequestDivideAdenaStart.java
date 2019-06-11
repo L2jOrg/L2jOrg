@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class RequestDivideAdenaStart extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
 
     }
 

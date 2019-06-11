@@ -20,18 +20,14 @@ public final class ExSendManorList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SEND_MANOR_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SEND_MANOR_LIST);
 
         final Collection<Castle> castles = CastleManager.getInstance().getCastles();
-        packet.putInt(castles.size());
+        writeInt(castles.size());
         for (Castle castle : castles) {
-            packet.putInt(castle.getResidenceId());
+            writeInt(castle.getResidenceId());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 +  CastleManager.getInstance().getCastles().size() * 4;
-    }
 }

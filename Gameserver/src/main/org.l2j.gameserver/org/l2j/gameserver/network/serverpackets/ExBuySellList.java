@@ -35,38 +35,34 @@ public class ExBuySellList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BUY_SELL_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BUY_SELL_LIST);
 
-        packet.putInt(0x01); // Type SELL
-        packet.putInt(_inventorySlots);
+        writeInt(0x01); // Type SELL
+        writeInt(_inventorySlots);
 
         if ((_sellList != null)) {
-            packet.putShort((short) _sellList.size());
+            writeShort((short) _sellList.size());
             for (L2ItemInstance item : _sellList) {
-                writeItem(packet, item);
-                packet.putLong((long) ((item.getItem().getReferencePrice() / 2) * _castleTaxRate));
+                writeItem(item);
+                writeLong((long) ((item.getItem().getReferencePrice() / 2) * _castleTaxRate));
             }
         } else {
-            packet.putShort((short) 0x00);
+            writeShort((short) 0x00);
         }
 
         if ((_refundList != null) && !_refundList.isEmpty()) {
-            packet.putShort((short) _refundList.size());
+            writeShort((short) _refundList.size());
             int i = 0;
             for (L2ItemInstance item : _refundList) {
-                writeItem(packet, item);
-                packet.putInt(i++);
-                packet.putLong((item.getItem().getReferencePrice() / 2) * item.getCount());
+                writeItem(item);
+                writeInt(i++);
+                writeLong((item.getItem().getReferencePrice() / 2) * item.getCount());
             }
         } else {
-            packet.putShort((short) 0x00);
+            writeShort((short) 0x00);
         }
-        packet.put((byte)( _done ? 0x01 : 0x00));
+        writeByte((byte)( _done ? 0x01 : 0x00));
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 18 + _sellList.size() * 108 + _refundList.size() * 112;
-    }
 }

@@ -25,17 +25,13 @@ public class ExBrBuffEventState extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BR_BUFF_EVENT_STATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BR_BUFF_EVENT_STATE);
 
-        packet.putInt(_type);
-        packet.putInt(_value);
-        packet.putInt(_state);
-        packet.putInt(_endtime);
+        writeInt(_type);
+        writeInt(_value);
+        writeInt(_state);
+        writeInt(_endtime);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 21;
-    }
 }

@@ -13,14 +13,10 @@ public class TutorialEnableClientEvent extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.TUTORIAL_ENABLE_CLIENT_EVENT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.TUTORIAL_ENABLE_CLIENT_EVENT);
 
-        packet.putInt(_eventId);
+        writeInt(_eventId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

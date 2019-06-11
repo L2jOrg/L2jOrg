@@ -11,8 +11,8 @@ public final class ExSendSelectedQuestZoneID extends IClientIncomingPacket {
     private int _questZoneId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _questZoneId = packet.getInt();
+    public void readImpl() {
+        _questZoneId = readInt();
     }
 
     @Override

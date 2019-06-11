@@ -20,10 +20,10 @@ public final class RequestConfirmSiegeWaitingList extends IClientIncomingPacket 
     private int _clanId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _castleId = packet.getInt();
-        _clanId = packet.getInt();
-        _approved = packet.getInt();
+    public void readImpl() {
+        _castleId = readInt();
+        _clanId = readInt();
+        _approved = readInt();
     }
 
     @Override

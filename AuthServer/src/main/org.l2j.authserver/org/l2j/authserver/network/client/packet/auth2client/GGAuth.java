@@ -22,17 +22,13 @@ public final class GGAuth extends L2LoginServerPacket {
     }
 
     @Override
-    protected void writeImpl(AuthClient client, ByteBuffer buffer) {
-        buffer.put((byte)0x0b);
-        buffer.putInt(_response);
-        buffer.putInt(0x00);
-        buffer.putInt(0x00);
-        buffer.putInt(0x00);
-        buffer.putInt(0x00);
+    protected void writeImpl(AuthClient client) {
+        writeByte((byte)0x0b);
+        writeInt(_response);
+        writeInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
     }
 
-    @Override
-    protected int size(AuthClient client) {
-        return super.size(client) + 21;
-    }
 }

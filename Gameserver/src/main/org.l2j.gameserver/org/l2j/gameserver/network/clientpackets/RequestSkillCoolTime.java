@@ -12,7 +12,7 @@ public class RequestSkillCoolTime extends IClientIncomingPacket {
     }
 
     @Override
-    protected void readImpl(ByteBuffer packet) throws Exception {
+    protected void readImpl() throws Exception {
         client.sendPacket(new SkillCoolTime(client.getActiveChar()));
     }
 }

@@ -21,15 +21,15 @@ public final class RequestDeleteSentPost extends IClientIncomingPacket {
     int[] _msgIds = null;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        final int count = packet.getInt();
-        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.remaining())) {
+    public void readImpl() throws InvalidDataPacketException {
+        final int count = readInt();
+        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
             throw new InvalidDataPacketException();
         }
 
         _msgIds = new int[count];
         for (int i = 0; i < count; i++) {
-            _msgIds[i] = packet.getInt();
+            _msgIds[i] = readInt();
         }
     }
 

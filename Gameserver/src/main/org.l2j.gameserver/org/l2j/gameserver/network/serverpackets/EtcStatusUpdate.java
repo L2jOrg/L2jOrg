@@ -22,20 +22,16 @@ public class EtcStatusUpdate extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.ETC_STATUS_UPDATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.ETC_STATUS_UPDATE);
 
-        packet.put((byte) _activeChar.getCharges()); // 1-7 increase force, lvl
-        packet.putInt(_activeChar.getWeightPenalty()); // 1-4 weight penalty, lvl (1=50%, 2=66.6%, 3=80%, 4=100%)
-        packet.put((byte) _activeChar.getExpertiseWeaponPenalty()); // Weapon Grade Penalty [1-4]
-        packet.put((byte) _activeChar.getExpertiseArmorPenalty()); // Armor Grade Penalty [1-4]
-        packet.put((byte) 0); // Death Penalty [1-15, 0 = disabled)], not used anymore in Ertheia
-        packet.put((byte) _activeChar.getChargedSouls());
-        packet.put((byte) _mask);
+        writeByte((byte) _activeChar.getCharges()); // 1-7 increase force, lvl
+        writeInt(_activeChar.getWeightPenalty()); // 1-4 weight penalty, lvl (1=50%, 2=66.6%, 3=80%, 4=100%)
+        writeByte((byte) _activeChar.getExpertiseWeaponPenalty()); // Weapon Grade Penalty [1-4]
+        writeByte((byte) _activeChar.getExpertiseArmorPenalty()); // Armor Grade Penalty [1-4]
+        writeByte((byte) 0); // Death Penalty [1-15, 0 = disabled)], not used anymore in Ertheia
+        writeByte((byte) _activeChar.getChargedSouls());
+        writeByte((byte) _mask);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 15;
-    }
 }

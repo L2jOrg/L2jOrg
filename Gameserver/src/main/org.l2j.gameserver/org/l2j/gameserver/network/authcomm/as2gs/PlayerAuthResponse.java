@@ -31,14 +31,14 @@ public class PlayerAuthResponse extends ReceivablePacket {
     private long phoneNumber;
 
     @Override
-    public void readImpl(ByteBuffer buffer) {
-        account = readString(buffer);
-        authed = buffer.get() == 1;
+    public void readImpl() {
+        account = readString();
+        authed = readByte() == 1;
         if(authed) {
-            gameserverSession = buffer.getInt();
-            gameserverAccountId = buffer.getInt();
-            authAccountId = buffer.getInt();
-            authKey = buffer.getInt();
+            gameserverSession = readInt();
+            gameserverAccountId = readInt();
+            authAccountId = readInt();
+            authKey = readInt();
         }
     }
 

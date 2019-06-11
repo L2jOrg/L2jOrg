@@ -14,21 +14,17 @@ public final class PledgeStatusChanged extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PLEDGE_STATUS_CHANGED.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PLEDGE_STATUS_CHANGED);
 
-        packet.putInt(0x00);
-        packet.putInt(_clan.getLeaderId());
-        packet.putInt(_clan.getId());
-        packet.putInt(_clan.getCrestId());
-        packet.putInt(_clan.getAllyId());
-        packet.putInt(_clan.getAllyCrestId());
-        packet.putInt(_clan.getCrestLargeId());
-        packet.putInt(0x00); // pledge type ?
+        writeInt(0x00);
+        writeInt(_clan.getLeaderId());
+        writeInt(_clan.getId());
+        writeInt(_clan.getCrestId());
+        writeInt(_clan.getAllyId());
+        writeInt(_clan.getAllyCrestId());
+        writeInt(_clan.getCrestLargeId());
+        writeInt(0x00); // pledge type ?
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 35;
-    }
 }

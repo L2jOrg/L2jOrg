@@ -13,16 +13,12 @@ public final class PlayOk extends L2LoginServerPacket {
     }
 
     @Override
-    protected void writeImpl(AuthClient client, ByteBuffer buffer) {
+    protected void writeImpl(AuthClient client) {
         var sessionKey = client.getSessionKey();
-        buffer.put((byte)0x07);
-        buffer.putInt(sessionKey.getGameServerSessionId());
-        buffer.putInt(sessionKey.getGameServerAccountId());
-        buffer.put((byte)serverId);
+        writeByte((byte)0x07);
+        writeInt(sessionKey.getGameServerSessionId());
+        writeInt(sessionKey.getGameServerAccountId());
+        writeByte((byte)serverId);
     }
 
-    @Override
-    protected int size(AuthClient client) {
-        return super.size(client) + 10;
-    }
 }

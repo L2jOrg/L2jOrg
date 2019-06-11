@@ -27,24 +27,20 @@ public class ExPledgeEmblem extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PLEDGE_EMBLEM.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PLEDGE_EMBLEM);
 
-        packet.putInt(getSettings(ServerSettings.class).serverId());
-        packet.putInt(_clanId);
-        packet.putInt(_crestId);
-        packet.putInt(_chunkId);
-        packet.putInt(TOTAL_SIZE);
+        writeInt(getSettings(ServerSettings.class).serverId());
+        writeInt(_clanId);
+        writeInt(_crestId);
+        writeInt(_chunkId);
+        writeInt(TOTAL_SIZE);
         if (_data != null) {
-            packet.putInt(_data.length);
-            packet.put(_data);
+            writeInt(_data.length);
+            writeBytes(_data);
         } else {
-            packet.putInt(0);
+            writeInt(0);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 31 + (nonNull(_data) ? _data.length : 0);
-    }
 }

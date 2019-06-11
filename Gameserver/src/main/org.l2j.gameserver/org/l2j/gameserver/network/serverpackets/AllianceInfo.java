@@ -47,31 +47,27 @@ public class AllianceInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.ALLIANCE_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.ALLIANCE_INFO);
 
-        writeString(_name, packet);
-        packet.putInt(_total);
-        packet.putInt(_online);
-        writeString(_leaderC, packet);
-        writeString(_leaderP, packet);
+        writeString(_name);
+        writeInt(_total);
+        writeInt(_online);
+        writeString(_leaderC);
+        writeString(_leaderP);
 
-        packet.putInt(_allies.length);
+        writeInt(_allies.length);
         for (ClanInfo aci : _allies) {
-            writeString(aci.getClan().getName(), packet);
-            packet.putInt(0x00);
-            packet.putInt(aci.getClan().getLevel());
-            writeString(aci.getClan().getLeaderName(), packet);
-            packet.putInt(aci.getTotal());
-            packet.putInt(aci.getOnline());
+            writeString(aci.getClan().getName());
+            writeInt(0x00);
+            writeInt(aci.getClan().getLevel());
+            writeString(aci.getClan().getLeaderName());
+            writeInt(aci.getTotal());
+            writeInt(aci.getOnline());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 23 + _name.length() * 2 + _leaderC.length() * 2 + _leaderP.length() * 2 + _allies.length * 20 +
-                Arrays.stream(_allies).mapToInt(ally -> ally.getClan().getName().length() * 2 + ally.getClan().getLeaderName().length() * 2).sum();
-    }
+
 
     public String getName() {
         return _name;

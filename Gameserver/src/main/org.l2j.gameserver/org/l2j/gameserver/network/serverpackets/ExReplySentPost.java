@@ -47,36 +47,27 @@ public class ExReplySentPost extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_REPLY_SENT_POST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_REPLY_SENT_POST);
 
-        packet.putInt(0x00); // GOD
-        packet.putInt(_msg.getId());
-        packet.putInt(_msg.isLocked() ? 1 : 0);
-        writeString(_msg.getReceiverName(), packet);
-        writeString(_msg.getSubject(), packet);
-        writeString(_msg.getContent(), packet);
+        writeInt(0x00); // GOD
+        writeInt(_msg.getId());
+        writeInt(_msg.isLocked() ? 1 : 0);
+        writeString(_msg.getReceiverName());
+        writeString(_msg.getSubject());
+        writeString(_msg.getContent());
 
         if ((_items != null) && !_items.isEmpty()) {
-            packet.putInt(_items.size());
+            writeInt(_items.size());
             for (L2ItemInstance item : _items) {
-                writeItem(packet, item);
-                packet.putInt(item.getObjectId());
+                writeItem(item);
+                writeInt(item.getObjectId());
             }
         } else {
-            packet.putInt(0x00);
+            writeInt(0x00);
         }
-        packet.putLong(_msg.getReqAdena());
-        packet.putInt(_msg.hasAttachments() ? 0x01 : 0x00);
-        packet.putInt(_msg.isReturned() ? 0x01 : 00);
-    }
-
-    @Override
-    protected int size(L2GameClient client) {
-        var size = 37 + _msg.getContent().length() * 2 + _msg.getSubject().length() * 2 + _msg.getReceiverName().length() * 2;
-        if(nonNull(_items)) {
-            size += _items.size() * 104;
-        }
-        return size;
+        writeLong(_msg.getReqAdena());
+        writeInt(_msg.hasAttachments() ? 0x01 : 0x00);
+        writeInt(_msg.isReturned() ? 0x01 : 00);
     }
 }

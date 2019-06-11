@@ -38,23 +38,19 @@ public class ExMentorList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_MENTOR_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_MENTOR_LIST);
 
-        packet.putInt(_type);
-        packet.putInt(0x00);
-        packet.putInt(_mentees.size());
+        writeInt(_type);
+        writeInt(0x00);
+        writeInt(_mentees.size());
         for (L2Mentee mentee : _mentees) {
-            packet.putInt(mentee.getObjectId());
-            writeString(mentee.getName(), packet);
-            packet.putInt(mentee.getClassId());
-            packet.putInt(mentee.getLevel());
-            packet.putInt(mentee.isOnlineInt());
+            writeInt(mentee.getObjectId());
+            writeString(mentee.getName());
+            writeInt(mentee.getClassId());
+            writeInt(mentee.getLevel());
+            writeInt(mentee.isOnlineInt());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17 + _mentees.size() * 18 + _mentees.stream().mapToInt(m -> m.getName().length() * 2).sum();
-    }
 }

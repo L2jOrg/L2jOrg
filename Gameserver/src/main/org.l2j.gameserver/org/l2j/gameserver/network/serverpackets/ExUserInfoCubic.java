@@ -17,19 +17,15 @@ public class ExUserInfoCubic extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_USER_INFO_CUBIC.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_USER_INFO_CUBIC);
 
-        packet.putInt(_activeChar.getObjectId());
-        packet.putShort((short) _activeChar.getCubics().size());
+        writeInt(_activeChar.getObjectId());
+        writeShort((short) _activeChar.getCubics().size());
 
-        _activeChar.getCubics().keySet().forEach(key -> packet.putShort(key.shortValue()));
+        _activeChar.getCubics().keySet().forEach(key -> writeShort(key.shortValue()));
 
-        packet.putInt(_activeChar.getAgathionId());
+        writeInt(_activeChar.getAgathionId());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 15 + _activeChar.getCubics().size() * 2;
-    }
 }

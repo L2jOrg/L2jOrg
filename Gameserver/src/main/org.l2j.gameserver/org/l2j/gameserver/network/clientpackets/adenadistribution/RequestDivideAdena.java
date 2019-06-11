@@ -21,9 +21,9 @@ public class RequestDivideAdena extends IClientIncomingPacket {
     private long _adenaCount;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _adenaObjId = packet.getInt();
-        _adenaCount = packet.getLong();
+    public void readImpl() {
+        _adenaObjId = readInt();
+        _adenaCount = readLong();
     }
 
     @Override

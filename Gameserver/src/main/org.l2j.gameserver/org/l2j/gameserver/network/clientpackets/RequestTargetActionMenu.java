@@ -13,9 +13,9 @@ public class RequestTargetActionMenu extends IClientIncomingPacket {
     private int _type;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _objectId = packet.getInt();
-        _type = packet.getShort(); // action?
+    public void readImpl() {
+        _objectId = readInt();
+        _type = readShort(); // action?
     }
 
     @Override

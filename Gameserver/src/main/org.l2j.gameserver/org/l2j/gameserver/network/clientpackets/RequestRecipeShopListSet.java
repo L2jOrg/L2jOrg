@@ -30,16 +30,16 @@ public final class RequestRecipeShopListSet extends IClientIncomingPacket {
     private L2ManufactureItem[] _items = null;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        final int count = packet.getInt();
-        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.remaining())) {
+    public void readImpl() throws InvalidDataPacketException {
+        final int count = readInt();
+        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
             throw new InvalidDataPacketException();
         }
 
         _items = new L2ManufactureItem[count];
         for (int i = 0; i < count; i++) {
-            final int id = packet.getInt();
-            final long cost = packet.getLong();
+            final int id = readInt();
+            final long cost = readLong();
             if (cost < 0) {
                 _items = null;
                 throw new InvalidDataPacketException();

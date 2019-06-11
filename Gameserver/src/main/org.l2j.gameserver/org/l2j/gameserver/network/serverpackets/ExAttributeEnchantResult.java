@@ -26,20 +26,16 @@ public class ExAttributeEnchantResult extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_ATTRIBUTE_ENCHANT_RESULT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_ATTRIBUTE_ENCHANT_RESULT);
 
-        packet.putInt(_result);
-        packet.put((byte) _isWeapon);
-        packet.putShort((short) _type);
-        packet.putShort((short) _before);
-        packet.putShort((short) _after);
-        packet.putShort((short) _successCount);
-        packet.putShort((short) _failedCount);
+        writeInt(_result);
+        writeByte((byte) _isWeapon);
+        writeShort((short) _type);
+        writeShort((short) _before);
+        writeShort((short) _after);
+        writeShort((short) _successCount);
+        writeShort((short) _failedCount);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 20;
-    }
 }

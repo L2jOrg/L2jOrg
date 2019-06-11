@@ -24,26 +24,22 @@ public final class ExEnchantSkillInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_ENCHANT_SKILL_INFO.writeId(packet);
-        packet.putInt(_skillId);
-        packet.putShort((short) _skillLevel);
-        packet.putShort((short) _skillSubLevel);
-        packet.putInt((_skillSubLevel % 1000) == EnchantSkillGroupsData.MAX_ENCHANT_LEVEL ? 0 : 1);
-        packet.putInt(_skillSubLevel > 1000 ? 1 : 0);
-        packet.putInt(_routes.size());
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_ENCHANT_SKILL_INFO);
+        writeInt(_skillId);
+        writeShort((short) _skillLevel);
+        writeShort((short) _skillSubLevel);
+        writeInt((_skillSubLevel % 1000) == EnchantSkillGroupsData.MAX_ENCHANT_LEVEL ? 0 : 1);
+        writeInt(_skillSubLevel > 1000 ? 1 : 0);
+        writeInt(_routes.size());
         _routes.forEach(route ->
         {
             final int routeId = route / 1000;
             final int currentRouteId = _skillSubLevel / 1000;
             final int subLevel = _currentSubLevel > 0 ? (route + (_currentSubLevel % 1000)) - 1 : route;
-            packet.putShort((short) _skillLevel);
-            packet.putShort((short)( currentRouteId != routeId ? subLevel : Math.min(subLevel + 1, route + (EnchantSkillGroupsData.MAX_ENCHANT_LEVEL - 1))));
+            writeShort((short) _skillLevel);
+            writeShort((short)( currentRouteId != routeId ? subLevel : Math.min(subLevel + 1, route + (EnchantSkillGroupsData.MAX_ENCHANT_LEVEL - 1))));
         });
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25 + _routes.size() * 4;
-    }
 }

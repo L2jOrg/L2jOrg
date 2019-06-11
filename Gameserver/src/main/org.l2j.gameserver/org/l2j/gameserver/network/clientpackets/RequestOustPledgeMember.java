@@ -24,8 +24,8 @@ public final class RequestOustPledgeMember extends IClientIncomingPacket {
     private String _target;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _target = readString(packet);
+    public void readImpl() {
+        _target = readString();
     }
 
     @Override

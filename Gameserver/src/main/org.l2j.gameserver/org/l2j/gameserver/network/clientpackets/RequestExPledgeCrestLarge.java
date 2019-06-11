@@ -14,9 +14,9 @@ public final class RequestExPledgeCrestLarge extends IClientIncomingPacket {
     private int _clanId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _crestId = packet.getInt();
-        _clanId = packet.getInt();
+    public void readImpl() {
+        _crestId = readInt();
+        _clanId = readInt();
     }
 
     @Override

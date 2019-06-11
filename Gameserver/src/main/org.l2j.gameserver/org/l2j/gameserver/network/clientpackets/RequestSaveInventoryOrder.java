@@ -22,13 +22,13 @@ public final class RequestSaveInventoryOrder extends IClientIncomingPacket {
     private List<InventoryOrder> _order;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        int sz = packet.getInt();
+    public void readImpl() {
+        int sz = readInt();
         sz = Math.min(sz, LIMIT);
         _order = new ArrayList<>(sz);
         for (int i = 0; i < sz; i++) {
-            final int objectId = packet.getInt();
-            final int order = packet.getInt();
+            final int objectId = readInt();
+            final int order = readInt();
             _order.add(new InventoryOrder(objectId, order));
         }
     }

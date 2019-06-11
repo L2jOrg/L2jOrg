@@ -365,52 +365,48 @@ public class ExServerPrimitive extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SERVER_PRIMITIVE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SERVER_PRIMITIVE);
 
-        writeString(_name, packet);
-        packet.putInt(_x);
-        packet.putInt(_y);
-        packet.putInt(_z);
-        packet.putInt(65535); // has to do something with display range and angle
-        packet.putInt(65535); // has to do something with display range and angle
+        writeString(_name);
+        writeInt(_x);
+        writeInt(_y);
+        writeInt(_z);
+        writeInt(65535); // has to do something with display range and angle
+        writeInt(65535); // has to do something with display range and angle
 
-        packet.putInt(_points.size() + _lines.size());
+        writeInt(_points.size() + _lines.size());
 
         for (Point point : _points) {
-            packet.put((byte) 1); // Its the type in this case Point
-            writeString(point.getName(), packet);
+            writeByte((byte) 1); // Its the type in this case Point
+            writeString(point.getName());
             final int color = point.getColor();
-            packet.putInt((color >> 16) & 0xFF); // R
-            packet.putInt((color >> 8) & 0xFF); // G
-            packet.putInt(color & 0xFF); // B
-            packet.putInt(point.isNameColored() ? 1 : 0);
-            packet.putInt(point.getX());
-            packet.putInt(point.getY());
-            packet.putInt(point.getZ());
+            writeInt((color >> 16) & 0xFF); // R
+            writeInt((color >> 8) & 0xFF); // G
+            writeInt(color & 0xFF); // B
+            writeInt(point.isNameColored() ? 1 : 0);
+            writeInt(point.getX());
+            writeInt(point.getY());
+            writeInt(point.getZ());
         }
 
         for (Line line : _lines) {
-            packet.put((byte) 2); // Its the type in this case Line
-            writeString(line.getName(), packet);
+            writeByte((byte) 2); // Its the type in this case Line
+            writeString(line.getName());
             final int color = line.getColor();
-            packet.putInt((color >> 16) & 0xFF); // R
-            packet.putInt((color >> 8) & 0xFF); // G
-            packet.putInt(color & 0xFF); // B
-            packet.putInt(line.isNameColored() ? 1 : 0);
-            packet.putInt(line.getX());
-            packet.putInt(line.getY());
-            packet.putInt(line.getZ());
-            packet.putInt(line.getX2());
-            packet.putInt(line.getY2());
-            packet.putInt(line.getZ2());
+            writeInt((color >> 16) & 0xFF); // R
+            writeInt((color >> 8) & 0xFF); // G
+            writeInt(color & 0xFF); // B
+            writeInt(line.isNameColored() ? 1 : 0);
+            writeInt(line.getX());
+            writeInt(line.getY());
+            writeInt(line.getZ());
+            writeInt(line.getX2());
+            writeInt(line.getY2());
+            writeInt(line.getZ2());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return (_lines.size() + 10) * 44  + (_points.size() + 10 ) * 32 + 55;
-    }
 
     private static class Point {
         private final String _name;

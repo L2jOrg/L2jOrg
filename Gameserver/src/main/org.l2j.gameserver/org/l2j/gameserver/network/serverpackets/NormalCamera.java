@@ -14,12 +14,8 @@ public class NormalCamera extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.NORMAL_CAMERA.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.NORMAL_CAMERA);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

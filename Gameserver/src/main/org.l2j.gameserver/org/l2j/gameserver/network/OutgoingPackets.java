@@ -862,11 +862,4 @@ public enum OutgoingPackets {
     public int getId2() {
         return _id2;
     }
-
-    public void writeId(ByteBuffer packet) {
-        packet.put((byte) _id1);
-        if (_id2 > 0) {
-            packet.putShort((short) _id2);
-        }
-    }
 }

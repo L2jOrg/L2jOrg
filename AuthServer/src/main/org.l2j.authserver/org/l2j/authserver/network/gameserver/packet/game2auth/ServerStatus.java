@@ -3,8 +3,6 @@ package org.l2j.authserver.network.gameserver.packet.game2auth;
 import io.github.joealisson.primitive.maps.IntIntMap;
 import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
 
-import java.nio.ByteBuffer;
-
 import static java.util.Objects.nonNull;
 
 public class ServerStatus extends GameserverReadablePacket {
@@ -27,11 +25,11 @@ public class ServerStatus extends GameserverReadablePacket {
     IntIntMap status;
 
 	@Override
-	protected void readImpl(ByteBuffer buffer)  {
-        int size = buffer.getInt();
+	protected void readImpl()  {
+        int size = readInt();
 		status = new HashIntIntMap(size);
         for (int i = 0; i < size; i++) {
-            status.put(buffer.getInt(), buffer.getInt());
+            status.put(readInt(), readInt());
         }
 	}
 

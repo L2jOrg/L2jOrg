@@ -17,15 +17,11 @@ public class ShowTownMap extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SHOW_TOWN_MAP.writeId(packet);
-        writeString(_texture, packet);
-        packet.putInt(_x);
-        packet.putInt(_y);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SHOW_TOWN_MAP);
+        writeString(_texture);
+        writeInt(_x);
+        writeInt(_y);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 15 + _texture.length() * 2;
-    }
 }

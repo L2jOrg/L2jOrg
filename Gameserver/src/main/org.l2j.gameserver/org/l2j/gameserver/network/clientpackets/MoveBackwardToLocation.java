@@ -26,14 +26,14 @@ public class MoveBackwardToLocation extends IClientIncomingPacket {
     private int _movementMode;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _targetX = packet.getInt();
-        _targetY = packet.getInt();
-        _targetZ = packet.getInt();
-        _originX = packet.getInt();
-        _originY = packet.getInt();
-        _originZ = packet.getInt();
-        _movementMode = packet.getInt(); // is 0 if cursor keys are used 1 if mouse is used
+    public void readImpl() {
+        _targetX = readInt();
+        _targetY = readInt();
+        _targetZ = readInt();
+        _originX = readInt();
+        _originY = readInt();
+        _originZ = readInt();
+        _movementMode = readInt(); // is 0 if cursor keys are used 1 if mouse is used
     }
 
     @Override

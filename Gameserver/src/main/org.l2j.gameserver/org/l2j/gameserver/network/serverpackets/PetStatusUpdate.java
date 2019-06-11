@@ -32,30 +32,26 @@ public class PetStatusUpdate extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PET_STATUS_UPDATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PET_STATUS_UPDATE);
 
-        packet.putInt(_summon.getSummonType());
-        packet.putInt(_summon.getObjectId());
-        packet.putInt(_summon.getX());
-        packet.putInt(_summon.getY());
-        packet.putInt(_summon.getZ());
-        writeString(_summon.getTitle(), packet);
-        packet.putInt(_curFed);
-        packet.putInt(_maxFed);
-        packet.putInt((int) _summon.getCurrentHp());
-        packet.putInt(_summon.getMaxHp());
-        packet.putInt((int) _summon.getCurrentMp());
-        packet.putInt(_summon.getMaxMp());
-        packet.putInt(_summon.getLevel());
-        packet.putLong(_summon.getStat().getExp());
-        packet.putLong(_summon.getExpForThisLevel()); // 0% absolute value
-        packet.putLong(_summon.getExpForNextLevel()); // 100% absolute value
-        packet.putInt(0x01); // TODO: Find me!
+        writeInt(_summon.getSummonType());
+        writeInt(_summon.getObjectId());
+        writeInt(_summon.getX());
+        writeInt(_summon.getY());
+        writeInt(_summon.getZ());
+        writeString(_summon.getTitle());
+        writeInt(_curFed);
+        writeInt(_maxFed);
+        writeInt((int) _summon.getCurrentHp());
+        writeInt(_summon.getMaxHp());
+        writeInt((int) _summon.getCurrentMp());
+        writeInt(_summon.getMaxMp());
+        writeInt(_summon.getLevel());
+        writeLong(_summon.getStat().getExp());
+        writeLong(_summon.getExpForThisLevel()); // 0% absolute value
+        writeLong(_summon.getExpForNextLevel()); // 100% absolute value
+        writeInt(0x01); // TODO: Find me!
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 85 + _summon.getTitle().length() * 2;
-    }
 }

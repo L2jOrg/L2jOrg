@@ -20,9 +20,9 @@ public class RequestNewEnchantRetryToPutItems extends IClientIncomingPacket {
     private int _secondItemObjectId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _firstItemObjectId = packet.getInt();
-        _secondItemObjectId = packet.getInt();
+    public void readImpl() {
+        _firstItemObjectId = readInt();
+        _secondItemObjectId = readInt();
     }
 
     @Override

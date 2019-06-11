@@ -14,16 +14,12 @@ public class ObservationReturn extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.OBSERVER_END.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.OBSERVER_END);
 
-        packet.putInt(_loc.getX());
-        packet.putInt(_loc.getY());
-        packet.putInt(_loc.getZ());
+        writeInt(_loc.getX());
+        writeInt(_loc.getY());
+        writeInt(_loc.getZ());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17;
-    }
 }

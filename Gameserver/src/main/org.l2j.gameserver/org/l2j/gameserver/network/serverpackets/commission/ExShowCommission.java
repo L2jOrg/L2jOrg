@@ -18,14 +18,10 @@ public class ExShowCommission extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_COMMISSION.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_COMMISSION);
 
-        packet.putInt(0x01);
+        writeInt(0x01);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

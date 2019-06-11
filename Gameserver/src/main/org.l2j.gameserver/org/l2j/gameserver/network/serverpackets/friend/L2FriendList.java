@@ -41,25 +41,21 @@ public class L2FriendList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.L2_FRIEND_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.L2_FRIEND_LIST);
 
-        packet.putInt(_info.size());
+        writeInt(_info.size());
         for (FriendInfo info : _info) {
-            packet.putInt(info._objId); // character id
-            writeString(info._name, packet);
-            packet.putInt(info._online ? 0x01 : 0x00); // online
-            packet.putInt(info._online ? info._objId : 0x00); // object id if online
-            packet.putInt(info._level);
-            packet.putInt(info._classId);
-            packet.putShort((short) 0x00);
+            writeInt(info._objId); // character id
+            writeString(info._name);
+            writeInt(info._online ? 0x01 : 0x00); // online
+            writeInt(info._online ? info._objId : 0x00); // object id if online
+            writeInt(info._level);
+            writeInt(info._classId);
+            writeShort((short) 0x00);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + _info.size() * 24 +  _info.stream().mapToInt(info -> info._name.length() * 2).sum();
-    }
 
     private static class FriendInfo {
         int _objId;

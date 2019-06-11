@@ -17,17 +17,13 @@ public class ExRegenMax extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_REGEN_MAX.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_REGEN_MAX);
 
-        packet.putInt(1);
-        packet.putInt(_time);
-        packet.putInt(_tickInterval);
-        packet.putDouble(_amountPerTick);
+        writeInt(1);
+        writeInt(_time);
+        writeInt(_tickInterval);
+        writeDouble(_amountPerTick);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25;
-    }
 }

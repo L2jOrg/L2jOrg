@@ -18,19 +18,15 @@ public class ExMPCCShowPartyMemberInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_MPCCSHOW_PARTY_MEMBER_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_MPCCSHOW_PARTY_MEMBER_INFO);
 
-        packet.putInt(_party.getMemberCount());
+        writeInt(_party.getMemberCount());
         for (L2PcInstance pc : _party.getMembers()) {
-            writeString(pc.getName(), packet);
-            packet.putInt(pc.getObjectId());
-            packet.putInt(pc.getClassId().getId());
+            writeString(pc.getName());
+            writeInt(pc.getObjectId());
+            writeInt(pc.getClassId().getId());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + _party.getMemberCount() * 42;
-    }
 }

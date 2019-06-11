@@ -26,21 +26,17 @@ public final class ExShowTrace extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_TRACE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_TRACE);
 
-        packet.putShort((short) 0); // type broken in H5
-        packet.putInt(0); // time broken in H5
-        packet.putShort((short) _locations.size());
+        writeShort((short) 0); // type broken in H5
+        writeInt(0); // time broken in H5
+        writeShort((short) _locations.size());
         for (Location loc : _locations) {
-            packet.putInt(loc.getX());
-            packet.putInt(loc.getY());
-            packet.putInt(loc.getZ());
+            writeInt(loc.getX());
+            writeInt(loc.getY());
+            writeInt(loc.getZ());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + _locations.size() * 12;
-    }
 }

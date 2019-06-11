@@ -33,30 +33,30 @@ public final class RequestHardWareInfo extends IClientIncomingPacket {
     private String _vgaDriverVersion;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _macAddress = readString(packet);
-        _windowsPlatformId = packet.getInt();
-        _windowsMajorVersion = packet.getInt();
-        _windowsMinorVersion = packet.getInt();
-        _windowsBuildNumber = packet.getInt();
-        _directxVersion = packet.getInt();
-        _directxRevision = packet.getInt();
-        packet.get(new byte[16]);
-        _cpuName = readString(packet);
-        _cpuSpeed = packet.getInt();
-        _cpuCoreCount = packet.get();
-        packet.getInt();
-        _vgaCount = packet.getInt();
-        _vgaPcxSpeed = packet.getInt();
-        _physMemorySlot1 = packet.getInt();
-        _physMemorySlot2 = packet.getInt();
-        _physMemorySlot3 = packet.getInt();
-        packet.get();
-        _videoMemory = packet.getInt();
-        packet.getInt();
-        _vgaVersion = packet.getShort();
-        _vgaName = readString(packet);
-        _vgaDriverVersion = readString(packet);
+    public void readImpl() {
+        _macAddress = readString();
+        _windowsPlatformId = readInt();
+        _windowsMajorVersion = readInt();
+        _windowsMinorVersion = readInt();
+        _windowsBuildNumber = readInt();
+        _directxVersion = readInt();
+        _directxRevision = readInt();
+        readBytes(new byte[16]);
+        _cpuName = readString();
+        _cpuSpeed = readInt();
+        _cpuCoreCount = readByte();
+        readInt();
+        _vgaCount = readInt();
+        _vgaPcxSpeed = readInt();
+        _physMemorySlot1 = readInt();
+        _physMemorySlot2 = readInt();
+        _physMemorySlot3 = readInt();
+        readByte();
+        _videoMemory = readInt();
+        readInt();
+        _vgaVersion = readShort();
+        _vgaName = readString();
+        _vgaDriverVersion = readString();
     }
 
     @Override

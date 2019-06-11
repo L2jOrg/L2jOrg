@@ -26,22 +26,18 @@ public final class MoveToLocation extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.MOVE_TO_LOCATION.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.MOVE_TO_LOCATION);
 
-        packet.putInt(_charObjId);
+        writeInt(_charObjId);
 
-        packet.putInt(_xDst);
-        packet.putInt(_yDst);
-        packet.putInt(_zDst);
+        writeInt(_xDst);
+        writeInt(_yDst);
+        writeInt(_zDst);
 
-        packet.putInt(_x);
-        packet.putInt(_y);
-        packet.putInt(_z);
+        writeInt(_x);
+        writeInt(_y);
+        writeInt(_z);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 33;
-    }
 }

@@ -14,8 +14,8 @@ public final class RequestShortCutDel extends IClientIncomingPacket {
     private int _page;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        final int id = packet.getInt();
+    public void readImpl() {
+        final int id = readInt();
         _slot = id % 12;
         _page = id / 12;
     }

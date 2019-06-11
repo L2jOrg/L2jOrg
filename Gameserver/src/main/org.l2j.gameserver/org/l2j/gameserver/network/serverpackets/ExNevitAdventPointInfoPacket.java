@@ -16,14 +16,10 @@ public class ExNevitAdventPointInfoPacket extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BR_AGATHION_ENERGY_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BR_AGATHION_ENERGY_INFO);
 
-        packet.putInt(_points); // 72 = 1%, max 7200 = 100%
+        writeInt(_points); // 72 = 1%, max 7200 = 100%
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

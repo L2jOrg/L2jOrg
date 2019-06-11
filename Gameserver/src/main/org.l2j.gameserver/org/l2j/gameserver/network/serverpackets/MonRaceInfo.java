@@ -23,37 +23,33 @@ public class MonRaceInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.MON_RACE_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.MON_RACE_INFO);
 
-        packet.putInt(_unknown1);
-        packet.putInt(_unknown2);
-        packet.putInt(0x08);
+        writeInt(_unknown1);
+        writeInt(_unknown2);
+        writeInt(0x08);
 
         for (int i = 0; i < 8; i++) {
-            packet.putInt(_monsters[i].getObjectId()); // npcObjectID
-            packet.putInt(_monsters[i].getTemplate().getId() + 1000000); // npcID
-            packet.putInt(14107); // origin X
-            packet.putInt(181875 + (58 * (7 - i))); // origin Y
-            packet.putInt(-3566); // origin Z
-            packet.putInt(12080); // end X
-            packet.putInt(181875 + (58 * (7 - i))); // end Y
-            packet.putInt(-3566); // end Z
-            packet.putDouble(_monsters[i].getTemplate().getfCollisionHeight()); // coll. height
-            packet.putDouble(_monsters[i].getTemplate().getfCollisionRadius()); // coll. radius
-            packet.putInt(120); // ?? unknown
+            writeInt(_monsters[i].getObjectId()); // npcObjectID
+            writeInt(_monsters[i].getTemplate().getId() + 1000000); // npcID
+            writeInt(14107); // origin X
+            writeInt(181875 + (58 * (7 - i))); // origin Y
+            writeInt(-3566); // origin Z
+            writeInt(12080); // end X
+            writeInt(181875 + (58 * (7 - i))); // end Y
+            writeInt(-3566); // end Z
+            writeDouble(_monsters[i].getTemplate().getfCollisionHeight()); // coll. height
+            writeDouble(_monsters[i].getTemplate().getfCollisionRadius()); // coll. radius
+            writeInt(120); // ?? unknown
             for (int j = 0; j < 20; j++) {
                 if (_unknown1 == 0) {
-                    packet.put((byte) _speeds[i][j]);
+                    writeByte((byte) _speeds[i][j]);
                 } else {
-                    packet.put((byte) 0x00);
+                    writeByte((byte) 0x00);
                 }
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17 + (54 + 20) * 8;
-    }
 }

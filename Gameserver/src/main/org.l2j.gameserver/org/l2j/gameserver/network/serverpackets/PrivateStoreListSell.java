@@ -18,27 +18,23 @@ public class PrivateStoreListSell extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
+    public void writeImpl(L2GameClient client) {
         if (_seller.isSellingBuffs()) {
             SellBuffsManager.getInstance().sendBuffMenu(_player, _seller, 0);
         } else {
-            OutgoingPackets.PRIVATE_STORE_LIST.writeId(packet);
+            writeId(OutgoingPackets.PRIVATE_STORE_LIST);
 
-            packet.putInt(_seller.getObjectId());
-            packet.putInt(_seller.getSellList().isPackaged() ? 1 : 0);
-            packet.putLong(_player.getAdena());
-            packet.putInt(0x00);
-            packet.putInt(_seller.getSellList().getItems().length);
+            writeInt(_seller.getObjectId());
+            writeInt(_seller.getSellList().isPackaged() ? 1 : 0);
+            writeLong(_player.getAdena());
+            writeInt(0x00);
+            writeInt(_seller.getSellList().getItems().length);
             for (TradeItem item : _seller.getSellList().getItems()) {
-                writeItem(packet, item);
-                packet.putLong(item.getPrice());
-                packet.putLong(item.getItem().getReferencePrice() * 2);
+                writeItem(item);
+                writeLong(item.getPrice());
+                writeLong(item.getItem().getReferencePrice() * 2);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 35 * _seller.getSellList().getItems().length * 120;
-    }
 }

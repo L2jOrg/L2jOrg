@@ -14,15 +14,11 @@ public final class PartySmallWindowDelete extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PARTY_SMALL_WINDOW_DELETE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PARTY_SMALL_WINDOW_DELETE);
 
-        packet.putInt(_member.getObjectId());
-        writeString(_member.getName(), packet);
+        writeInt(_member.getObjectId());
+        writeString(_member.getName());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 11 + _member.getName().length() * 2;
-    }
 }

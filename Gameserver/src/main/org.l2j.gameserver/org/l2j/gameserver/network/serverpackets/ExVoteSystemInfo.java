@@ -27,18 +27,14 @@ public class ExVoteSystemInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_VOTE_SYSTEM_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_VOTE_SYSTEM_INFO);
 
-        packet.putInt(_recomLeft);
-        packet.putInt(_recomHave);
-        packet.putInt(_bonusTime);
-        packet.putInt(_bonusVal);
-        packet.putInt(_bonusType);
+        writeInt(_recomLeft);
+        writeInt(_recomHave);
+        writeInt(_bonusTime);
+        writeInt(_bonusVal);
+        writeInt(_bonusType);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25;
-    }
 }

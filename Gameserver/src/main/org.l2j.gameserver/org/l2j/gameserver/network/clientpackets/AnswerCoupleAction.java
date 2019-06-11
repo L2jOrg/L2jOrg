@@ -19,10 +19,10 @@ public class AnswerCoupleAction extends IClientIncomingPacket {
     private int _answer;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _actionId = packet.getInt();
-        _answer = packet.getInt();
-        _charObjId = packet.getInt();
+    public void readImpl() {
+        _actionId = readInt();
+        _answer = readInt();
+        _charObjId = readInt();
     }
 
     @Override

@@ -19,15 +19,11 @@ public class ExTacticalSign extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_TACTICAL_SIGN.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_TACTICAL_SIGN);
 
-        packet.putInt(_target.getObjectId());
-        packet.putInt(_tokenId);
+        writeInt(_target.getObjectId());
+        writeInt(_tokenId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13;
-    }
 }

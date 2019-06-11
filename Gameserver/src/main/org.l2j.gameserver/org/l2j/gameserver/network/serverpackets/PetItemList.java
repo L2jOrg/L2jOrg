@@ -15,17 +15,13 @@ public class PetItemList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PET_ITEM_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PET_ITEM_LIST);
 
-        packet.putShort((short) _items.size());
+        writeShort((short) _items.size());
         for (L2ItemInstance item : _items) {
-            writeItem(packet, item);
+            writeItem(item);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 8 +_items.size() * 100;
-    }
 }

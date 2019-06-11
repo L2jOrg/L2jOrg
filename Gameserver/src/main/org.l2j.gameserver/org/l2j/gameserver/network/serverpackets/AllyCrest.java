@@ -27,21 +27,17 @@ public class AllyCrest extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.ALLIANCE_CREST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.ALLIANCE_CREST);
 
-        packet.putInt(getSettings(ServerSettings.class).serverId());
-        packet.putInt(_crestId);
+        writeInt(getSettings(ServerSettings.class).serverId());
+        writeInt(_crestId);
         if (_data != null) {
-            packet.putInt(_data.length);
-            packet.put(_data);
+            writeInt(_data.length);
+            writeBytes(_data);
         } else {
-            packet.putInt(0);
+            writeInt(0);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17 + (nonNull(_data) ? _data.length : 0);
-    }
 }

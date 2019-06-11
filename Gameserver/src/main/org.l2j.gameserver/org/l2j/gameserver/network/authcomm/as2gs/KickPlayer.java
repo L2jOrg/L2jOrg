@@ -8,16 +8,14 @@ import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.ReceivablePacket;
 import org.l2j.gameserver.network.serverpackets.ServerClose;
 
-import java.nio.ByteBuffer;
-
 public class KickPlayer extends ReceivablePacket
 {
     private String account;
 
     @Override
-    public void readImpl(ByteBuffer buffer)
+    public void readImpl()
     {
-        account = readString(buffer);
+        account = readString();
     }
 
     @Override

@@ -17,16 +17,12 @@ public class PledgeReceivePowerInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PLEDGE_RECEIVE_POWER_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PLEDGE_RECEIVE_POWER_INFO);
 
-        packet.putInt(_member.getPowerGrade()); // power grade
-        writeString(_member.getName(), packet);
-        packet.putInt(_member.getClan().getRankPrivs(_member.getPowerGrade()).getBitmask()); // privileges
+        writeInt(_member.getPowerGrade()); // power grade
+        writeString(_member.getName());
+        writeInt(_member.getClan().getRankPrivs(_member.getPowerGrade()).getBitmask()); // privileges
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 15 + _member.getName().length() * 2;
-    }
 }

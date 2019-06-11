@@ -17,15 +17,11 @@ public class ExAdenaInvenCount extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_ADENA_INVEN_COUNT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_ADENA_INVEN_COUNT);
 
-        packet.putLong(_activeChar.getAdena());
-        packet.putShort((short) _activeChar.getInventory().getSize());
+        writeLong(_activeChar.getAdena());
+        writeShort((short) _activeChar.getInventory().getSize());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 15;
-    }
 }

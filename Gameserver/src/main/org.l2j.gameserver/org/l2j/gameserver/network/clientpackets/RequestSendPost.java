@@ -52,22 +52,22 @@ public final class RequestSendPost extends IClientIncomingPacket {
     }
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        _receiver = readString(packet);
-        _isCod = packet.getInt() != 0;
-        _subject = readString(packet);
-        _text = readString(packet);
+    public void readImpl() throws InvalidDataPacketException {
+        _receiver = readString();
+        _isCod = readInt() != 0;
+        _subject = readString();
+        _text = readString();
 
-        final int attachCount = packet.getInt();
-        if ((attachCount < 0) || (attachCount > Config.MAX_ITEM_IN_PACKET) || (((attachCount * BATCH_LENGTH) + 8) != packet.remaining())) {
+        final int attachCount = readInt();
+        if ((attachCount < 0) || (attachCount > Config.MAX_ITEM_IN_PACKET) || (((attachCount * BATCH_LENGTH) + 8) != available())) {
             throw new InvalidDataPacketException();
         }
 
         if (attachCount > 0) {
             _items = new AttachmentItem[attachCount];
             for (int i = 0; i < attachCount; i++) {
-                final int objectId = packet.getInt();
-                final long count = packet.getLong();
+                final int objectId = readInt();
+                final long count = readLong();
                 if ((objectId < 1) || (count < 0)) {
                     _items = null;
                     throw new InvalidDataPacketException();
@@ -76,7 +76,7 @@ public final class RequestSendPost extends IClientIncomingPacket {
             }
         }
 
-        _reqAdena = packet.getLong();
+        _reqAdena = readLong();
     }
 
     @Override

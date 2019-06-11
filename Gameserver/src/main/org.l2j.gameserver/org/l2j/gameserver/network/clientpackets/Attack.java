@@ -29,12 +29,12 @@ public final class Attack extends IClientIncomingPacket {
     private int _attackId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _objectId = packet.getInt();
-        _originX = packet.getInt();
-        _originY = packet.getInt();
-        _originZ = packet.getInt();
-        _attackId = packet.get(); // 0 for simple click 1 for shift-click
+    public void readImpl() {
+        _objectId = readInt();
+        _originX = readInt();
+        _originY = readInt();
+        _originZ = readInt();
+        _attackId = readByte(); // 0 for simple click 1 for shift-click
     }
 
     @Override

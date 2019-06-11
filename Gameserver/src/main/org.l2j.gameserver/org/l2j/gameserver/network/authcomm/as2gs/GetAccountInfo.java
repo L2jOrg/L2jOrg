@@ -19,9 +19,9 @@ public class GetAccountInfo extends ReceivablePacket
 	private String _account;
 
 	@Override
-	protected void readImpl(ByteBuffer buffer)
+	protected void readImpl()
 	{
-		_account = readString(buffer);
+		_account = readString();
 	}
 
 	@Override

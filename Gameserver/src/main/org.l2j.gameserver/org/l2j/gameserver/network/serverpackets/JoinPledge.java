@@ -13,14 +13,10 @@ public final class JoinPledge extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.JOIN_PLEDGE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.JOIN_PLEDGE);
 
-        packet.putInt(_pledgeId);
+        writeInt(_pledgeId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

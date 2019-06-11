@@ -34,25 +34,21 @@ public class ExSubjobInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SUBJOB_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SUBJOB_INFO);
 
-        packet.put((byte) _type);
-        packet.putInt(_currClassId);
-        packet.putInt(_currRace);
-        packet.putInt(_subs.size());
+        writeByte((byte) _type);
+        writeInt(_currClassId);
+        writeInt(_currRace);
+        writeInt(_subs.size());
         for (SubInfo sub : _subs) {
-            packet.putInt(sub.getIndex());
-            packet.putInt(sub.getClassId());
-            packet.putInt(sub.getLevel());
-            packet.put((byte) sub.getType());
+            writeInt(sub.getIndex());
+            writeInt(sub.getClassId());
+            writeInt(sub.getLevel());
+            writeByte((byte) sub.getType());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 18 + _subs.size() * 13;
-    }
 
     private final class SubInfo {
         private final int _index;

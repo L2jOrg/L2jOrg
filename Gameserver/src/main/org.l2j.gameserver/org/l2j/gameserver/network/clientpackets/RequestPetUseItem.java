@@ -19,11 +19,11 @@ public final class RequestPetUseItem extends IClientIncomingPacket {
 
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _objectId = packet.getInt();
+    public void readImpl() {
+        _objectId = readInt();
         // TODO: implement me properly
-        // packet.getLong();
-        // packet.getInt();
+        // readLong();
+        // readInt();
     }
 
     @Override

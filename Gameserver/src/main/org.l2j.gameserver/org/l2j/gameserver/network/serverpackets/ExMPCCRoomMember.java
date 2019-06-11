@@ -22,23 +22,19 @@ public class ExMPCCRoomMember extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_MPCC_ROOM_MEMBER.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_MPCC_ROOM_MEMBER);
 
-        packet.putInt(_type.ordinal());
-        packet.putInt(_room.getMembersCount());
+        writeInt(_type.ordinal());
+        writeInt(_room.getMembersCount());
         for (L2PcInstance member : _room.getMembers()) {
-            packet.putInt(member.getObjectId());
-            writeString(member.getName(), packet);
-            packet.putInt(member.getLevel());
-            packet.putInt(member.getClassId().getId());
-            packet.putInt(MapRegionManager.getInstance().getBBs(member.getLocation()));
-            packet.putInt(_room.getMemberType(member).ordinal());
+            writeInt(member.getObjectId());
+            writeString(member.getName());
+            writeInt(member.getLevel());
+            writeInt(member.getClassId().getId());
+            writeInt(MapRegionManager.getInstance().getBBs(member.getLocation()));
+            writeInt(_room.getMemberType(member).ordinal());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + _room.getMembersCount() * 54;
-    }
 }

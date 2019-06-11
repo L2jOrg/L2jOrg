@@ -28,42 +28,38 @@ public class ExShowSeedInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_SEED_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_SEED_INFO);
 
-        packet.put((byte) (_hideButtons ? 0x01 : 0x00)); // Hide "Seed Purchase" button
-        packet.putInt(_manorId); // Manor ID
-        packet.putInt(0x00); // Unknown
+        writeByte((byte) (_hideButtons ? 0x01 : 0x00)); // Hide "Seed Purchase" button
+        writeInt(_manorId); // Manor ID
+        writeInt(0x00); // Unknown
         if (_seeds == null) {
-            packet.putInt(0);
+            writeInt(0);
             return;
         }
 
-        packet.putInt(_seeds.size());
+        writeInt(_seeds.size());
         for (SeedProduction seed : _seeds) {
-            packet.putInt(seed.getId()); // Seed id
-            packet.putLong(seed.getAmount()); // Left to buy
-            packet.putLong(seed.getStartAmount()); // Started amount
-            packet.putLong(seed.getPrice()); // Sell Price
+            writeInt(seed.getId()); // Seed id
+            writeLong(seed.getAmount()); // Left to buy
+            writeLong(seed.getStartAmount()); // Started amount
+            writeLong(seed.getPrice()); // Sell Price
             final L2Seed s = CastleManorManager.getInstance().getSeed(seed.getId());
             if (s == null) {
-                packet.putInt(0); // Seed level
-                packet.put((byte) 0x01); // Reward 1
-                packet.putInt(0); // Reward 1 - item id
-                packet.put((byte) 0x01); // Reward 2
-                packet.putInt(0); // Reward 2 - item id
+                writeInt(0); // Seed level
+                writeByte((byte) 0x01); // Reward 1
+                writeInt(0); // Reward 1 - item id
+                writeByte((byte) 0x01); // Reward 2
+                writeInt(0); // Reward 2 - item id
             } else {
-                packet.putInt(s.getLevel()); // Seed level
-                packet.put((byte) 0x01); // Reward 1
-                packet.putInt(s.getReward(1)); // Reward 1 - item id
-                packet.put((byte) 0x01); // Reward 2
-                packet.putInt(s.getReward(2)); // Reward 2 - item id
+                writeInt(s.getLevel()); // Seed level
+                writeByte((byte) 0x01); // Reward 1
+                writeInt(s.getReward(1)); // Reward 1 - item id
+                writeByte((byte) 0x01); // Reward 2
+                writeInt(s.getReward(2)); // Reward 2 - item id
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 18 +  (nonNull(_seeds) ? _seeds.size() * 14 : 4);
-    }
 }

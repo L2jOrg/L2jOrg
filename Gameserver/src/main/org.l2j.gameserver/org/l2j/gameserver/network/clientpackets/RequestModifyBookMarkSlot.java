@@ -15,11 +15,11 @@ public final class RequestModifyBookMarkSlot extends IClientIncomingPacket {
     private String tag;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        id = packet.getInt();
-        name = readString(packet);
-        icon = packet.getInt();
-        tag = readString(packet);
+    public void readImpl() {
+        id = readInt();
+        name = readString();
+        icon = readInt();
+        tag = readString();
     }
 
     @Override

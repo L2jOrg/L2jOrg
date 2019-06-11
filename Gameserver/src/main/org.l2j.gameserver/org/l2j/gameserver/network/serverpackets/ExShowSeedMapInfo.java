@@ -15,23 +15,19 @@ public class ExShowSeedMapInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_SEED_MAP_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_SEED_MAP_INFO);
 
-        packet.putInt(2); // seed count
+        writeInt(2); // seed count
 
         // Seed of Destruction
-        packet.putInt(1); // id 1? Grand Crusade
-        packet.putInt(2770 + GraciaSeedsManager.getInstance().getSoDState()); // sys msg id
+        writeInt(1); // id 1? Grand Crusade
+        writeInt(2770 + GraciaSeedsManager.getInstance().getSoDState()); // sys msg id
 
         // Seed of Infinity
-        packet.putInt(2); // id 2? Grand Crusade
+        writeInt(2); // id 2? Grand Crusade
         // Manager not implemented yet
-        packet.putInt(2766); // sys msg id
+        writeInt(2766); // sys msg id
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25;
-    }
 }

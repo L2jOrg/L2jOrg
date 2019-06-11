@@ -33,18 +33,14 @@ public final class StopMove extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.STOP_MOVE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.STOP_MOVE);
 
-        packet.putInt(_objectId);
-        packet.putInt(_x);
-        packet.putInt(_y);
-        packet.putInt(_z);
-        packet.putInt(_heading);
+        writeInt(_objectId);
+        writeInt(_x);
+        writeInt(_y);
+        writeInt(_z);
+        writeInt(_heading);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25;
-    }
 }

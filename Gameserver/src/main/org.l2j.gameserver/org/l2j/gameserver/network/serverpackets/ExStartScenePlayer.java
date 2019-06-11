@@ -17,14 +17,10 @@ public class ExStartScenePlayer extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_START_SCENE_PLAYER.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_START_SCENE_PLAYER);
 
-        packet.putInt(_movie.getClientId());
+        writeInt(_movie.getClientId());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

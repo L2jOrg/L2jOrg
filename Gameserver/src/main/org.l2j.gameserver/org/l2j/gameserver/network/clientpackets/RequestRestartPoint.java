@@ -34,8 +34,8 @@ public final class RequestRestartPoint extends IClientIncomingPacket {
     protected boolean _continuation;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _requestedPointType = packet.getInt();
+    public void readImpl() {
+        _requestedPointType = readInt();
     }
 
     @Override

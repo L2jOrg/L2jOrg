@@ -11,9 +11,9 @@ public class RequestTutorialLinkHtml extends IClientIncomingPacket {
     private String _bypass;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        packet.getInt();
-        _bypass = readString(packet);
+    public void readImpl() {
+        readInt();
+        _bypass = readString();
     }
 
     @Override

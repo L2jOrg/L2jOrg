@@ -17,29 +17,25 @@ public final class PartySmallWindowAdd extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PARTY_SMALL_WINDOW_ADD.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PARTY_SMALL_WINDOW_ADD);
 
-        packet.putInt(_party.getLeaderObjectId()); // c3
-        packet.putInt(_party.getDistributionType().getId()); // c3
-        packet.putInt(_member.getObjectId());
-        writeString(_member.getName(), packet);
+        writeInt(_party.getLeaderObjectId()); // c3
+        writeInt(_party.getDistributionType().getId()); // c3
+        writeInt(_member.getObjectId());
+        writeString(_member.getName());
 
-        packet.putInt((int) _member.getCurrentCp()); // c4
-        packet.putInt(_member.getMaxCp()); // c4
-        packet.putInt((int) _member.getCurrentHp());
-        packet.putInt(_member.getMaxHp());
-        packet.putInt((int) _member.getCurrentMp());
-        packet.putInt(_member.getMaxMp());
-        packet.putInt(_member.getVitalityPoints());
-        packet.put((byte) _member.getLevel());
-        packet.putShort((short) _member.getClassId().getId());
-        packet.put((byte) 0x00);
-        packet.putShort((short) _member.getRace().ordinal());
+        writeInt((int) _member.getCurrentCp()); // c4
+        writeInt(_member.getMaxCp()); // c4
+        writeInt((int) _member.getCurrentHp());
+        writeInt(_member.getMaxHp());
+        writeInt((int) _member.getCurrentMp());
+        writeInt(_member.getMaxMp());
+        writeInt(_member.getVitalityPoints());
+        writeByte((byte) _member.getLevel());
+        writeShort((short) _member.getClassId().getId());
+        writeByte((byte) 0x00);
+        writeShort((short) _member.getRace().ordinal());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 48 + _member.getName().length() * 2;
-    }
 }

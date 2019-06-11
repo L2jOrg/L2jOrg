@@ -15,15 +15,11 @@ public final class StopPledgeWar extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.STOP_PLEDGE_WAR.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.STOP_PLEDGE_WAR);
 
-        writeString(_pledgeName, packet);
-        writeString(_playerName, packet);
+        writeString(_pledgeName);
+        writeString(_playerName);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + (_playerName.length() + _pledgeName.length() ) * 2;
-    }
 }

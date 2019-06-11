@@ -12,11 +12,11 @@ public final class RequestPledgePower extends IClientIncomingPacket {
     private int _privs;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _rank = packet.getInt();
-        _action = packet.getInt();
+    public void readImpl() {
+        _rank = readInt();
+        _action = readInt();
         if (_action == 2) {
-            _privs = packet.getInt();
+            _privs = readInt();
         } else {
             _privs = 0;
         }

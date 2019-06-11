@@ -16,11 +16,11 @@ public final class RequestExEnchantSkillInfoDetail extends IClientIncomingPacket
     private int _skillSubLvl;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _type = SkillEnchantType.values()[packet.getInt()];
-        _skillId = packet.getInt();
-        _skillLvl = packet.getShort();
-        _skillSubLvl = packet.getShort();
+    public void readImpl() {
+        _type = SkillEnchantType.values()[readInt()];
+        _skillId = readInt();
+        _skillLvl = readShort();
+        _skillSubLvl = readShort();
     }
 
     @Override

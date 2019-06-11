@@ -27,7 +27,7 @@ public class ExPledgeBonusOpen extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) throws InvalidDataPacketException {
+    public void writeImpl(L2GameClient client) throws InvalidDataPacketException {
         final L2Clan clan = _player.getClan();
         if (clan == null) {
             LOGGER.warn("Player: " + _player + " attempting to write to a null clan!");
@@ -53,27 +53,23 @@ public class ExPledgeBonusOpen extends IClientOutgoingPacket {
         }
 
         // General OP Code
-        OutgoingPackets.EX_PLEDGE_BONUS_OPEN.writeId(packet);
+        writeId(OutgoingPackets.EX_PLEDGE_BONUS_OPEN);
 
         // Members online bonus
-        packet.putInt(highestMembersOnlineBonus.getRequiredAmount());
-        packet.putInt(clan.getMaxOnlineMembers());
-        packet.put((byte) 0x00); // 140
-        packet.putInt(membersOnlineBonus != null ? highestMembersOnlineBonus.getSkillReward().getSkillId() : 0x00);
-        packet.put((byte) (membersOnlineBonus != null ? membersOnlineBonus.getLevel() : 0x00));
-        packet.put((byte) (membersOnlineBonus != null ? 0x01 : 0x00));
+        writeInt(highestMembersOnlineBonus.getRequiredAmount());
+        writeInt(clan.getMaxOnlineMembers());
+        writeByte((byte) 0x00); // 140
+        writeInt(membersOnlineBonus != null ? highestMembersOnlineBonus.getSkillReward().getSkillId() : 0x00);
+        writeByte((byte) (membersOnlineBonus != null ? membersOnlineBonus.getLevel() : 0x00));
+        writeByte((byte) (membersOnlineBonus != null ? 0x01 : 0x00));
 
         // Hunting bonus
-        packet.putInt(highestHuntingBonus.getRequiredAmount());
-        packet.putInt(clan.getHuntingPoints());
-        packet.put((byte) 0x00); // 140
-        packet.putInt(huntingBonus != null ? highestHuntingBonus.getItemReward().getId() : 0x00);
-        packet.put((byte) (huntingBonus != null ? huntingBonus.getLevel() : 0x00));
-        packet.put((byte) (huntingBonus != null ? 0x01 : 0x00));
+        writeInt(highestHuntingBonus.getRequiredAmount());
+        writeInt(clan.getHuntingPoints());
+        writeByte((byte) 0x00); // 140
+        writeInt(huntingBonus != null ? highestHuntingBonus.getItemReward().getId() : 0x00);
+        writeByte((byte) (huntingBonus != null ? huntingBonus.getLevel() : 0x00));
+        writeByte((byte) (huntingBonus != null ? 0x01 : 0x00));
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 35;
-    }
 }

@@ -21,26 +21,22 @@ public class ExAcquirableSkillListByClass extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_ACQUIRABLE_SKILL_LIST_BY_CLASS.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_ACQUIRABLE_SKILL_LIST_BY_CLASS);
 
-        packet.putShort((short) _type.getId());
-        packet.putShort((short) _learnable.size());
+        writeShort((short) _type.getId());
+        writeShort((short) _learnable.size());
         for (L2SkillLearn skill : _learnable) {
-            packet.putInt(skill.getSkillId());
-            packet.putShort((short) skill.getSkillLevel());
-            packet.putShort((short) skill.getSkillLevel());
-            packet.put((byte) skill.getGetLevel());
-            packet.putLong(skill.getLevelUpSp());
-            packet.put((byte) skill.getRequiredItems().size());
+            writeInt(skill.getSkillId());
+            writeShort((short) skill.getSkillLevel());
+            writeShort((short) skill.getSkillLevel());
+            writeByte((byte) skill.getGetLevel());
+            writeLong(skill.getLevelUpSp());
+            writeByte((byte) skill.getRequiredItems().size());
             if (_type == AcquireSkillType.SUBPLEDGE) {
-                packet.putShort((short) 0x00);
+                writeShort((short) 0x00);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + _learnable.size() * 19;
-    }
 }

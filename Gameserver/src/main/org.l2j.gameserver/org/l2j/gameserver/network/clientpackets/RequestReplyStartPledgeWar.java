@@ -18,9 +18,9 @@ public final class RequestReplyStartPledgeWar extends IClientIncomingPacket {
     private int _answer;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        readString(packet);
-        _answer = packet.getInt();
+    public void readImpl() {
+        readString();
+        _answer = readInt();
     }
 
     @Override

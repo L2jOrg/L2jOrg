@@ -33,46 +33,42 @@ public class ExReplyReceivedPost extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_REPLY_RECEIVED_POST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_REPLY_RECEIVED_POST);
 
-        packet.putInt(_msg.getMailType().ordinal()); // GOD
+        writeInt(_msg.getMailType().ordinal()); // GOD
         if (_msg.getMailType() == MailType.COMMISSION_ITEM_RETURNED) {
-            packet.putInt(SystemMessageId.THE_REGISTRATION_PERIOD_FOR_THE_ITEM_YOU_REGISTERED_HAS_EXPIRED.getId());
-            packet.putInt(SystemMessageId.THE_AUCTION_HOUSE_REGISTRATION_PERIOD_HAS_EXPIRED_AND_THE_CORRESPONDING_ITEM_IS_BEING_FORWARDED.getId());
+            writeInt(SystemMessageId.THE_REGISTRATION_PERIOD_FOR_THE_ITEM_YOU_REGISTERED_HAS_EXPIRED.getId());
+            writeInt(SystemMessageId.THE_AUCTION_HOUSE_REGISTRATION_PERIOD_HAS_EXPIRED_AND_THE_CORRESPONDING_ITEM_IS_BEING_FORWARDED.getId());
         } else if (_msg.getMailType() == MailType.COMMISSION_ITEM_SOLD) {
-            packet.putInt(_msg.getItemId());
-            packet.putInt(_msg.getEnchantLvl());
+            writeInt(_msg.getItemId());
+            writeInt(_msg.getEnchantLvl());
             for (int i = 0; i < 6; i++) {
-                packet.putInt(_msg.getElementals()[i]);
+                writeInt(_msg.getElementals()[i]);
             }
-            packet.putInt(SystemMessageId.THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD.getId());
-            packet.putInt(SystemMessageId.S1_HAS_BEEN_SOLD.getId());
+            writeInt(SystemMessageId.THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD.getId());
+            writeInt(SystemMessageId.S1_HAS_BEEN_SOLD.getId());
         }
-        packet.putInt(_msg.getId());
-        packet.putInt(_msg.isLocked() ? 1 : 0);
-        packet.putInt(0x00); // Unknown
-        writeString(_msg.getSenderName(), packet);
-        writeString(_msg.getSubject(), packet);
-        writeString(_msg.getContent(), packet);
+        writeInt(_msg.getId());
+        writeInt(_msg.isLocked() ? 1 : 0);
+        writeInt(0x00); // Unknown
+        writeString(_msg.getSenderName());
+        writeString(_msg.getSubject());
+        writeString(_msg.getContent());
 
         if ((_items != null) && !_items.isEmpty()) {
-            packet.putInt(_items.size());
+            writeInt(_items.size());
             for (L2ItemInstance item : _items) {
-                writeItem(packet, item);
-                packet.putInt(item.getObjectId());
+                writeItem(item);
+                writeInt(item.getObjectId());
             }
         } else {
-            packet.putInt(0x00);
+            writeInt(0x00);
         }
 
-        packet.putLong(_msg.getReqAdena());
-        packet.putInt(_msg.hasAttachments() ? 1 : 0);
-        packet.putInt(_msg.isReturned() ? 1 : 0);
+        writeLong(_msg.getReqAdena());
+        writeInt(_msg.hasAttachments() ? 1 : 0);
+        writeInt(_msg.isReturned() ? 1 : 0);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 86 + (nonNull(_items) ? _items.size() * 104 : 4) + (_msg.getContent().length() + _msg.getSubject().length() + _msg.getSenderName().length()) * 2;
-    }
 }

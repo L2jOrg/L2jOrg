@@ -21,47 +21,43 @@ public final class PartySmallWindowUpdate extends AbstractMaskPacket<PartySmallW
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PARTY_SMALL_WINDOW_UPDATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PARTY_SMALL_WINDOW_UPDATE);
 
-        packet.putInt(_member.getObjectId());
-        packet.putShort((short) _flags);
+        writeInt(_member.getObjectId());
+        writeShort((short) _flags);
         if (containsMask(PartySmallWindowUpdateType.CURRENT_CP)) {
-            packet.putInt((int) _member.getCurrentCp()); // c4
+            writeInt((int) _member.getCurrentCp()); // c4
         }
         if (containsMask(PartySmallWindowUpdateType.MAX_CP)) {
-            packet.putInt(_member.getMaxCp()); // c4
+            writeInt(_member.getMaxCp()); // c4
         }
         if (containsMask(PartySmallWindowUpdateType.CURRENT_HP)) {
-            packet.putInt((int) _member.getCurrentHp());
+            writeInt((int) _member.getCurrentHp());
         }
         if (containsMask(PartySmallWindowUpdateType.MAX_HP)) {
-            packet.putInt(_member.getMaxHp());
+            writeInt(_member.getMaxHp());
         }
         if (containsMask(PartySmallWindowUpdateType.CURRENT_MP)) {
-            packet.putInt((int) _member.getCurrentMp());
+            writeInt((int) _member.getCurrentMp());
         }
         if (containsMask(PartySmallWindowUpdateType.MAX_MP)) {
-            packet.putInt(_member.getMaxMp());
+            writeInt(_member.getMaxMp());
         }
         if (containsMask(PartySmallWindowUpdateType.LEVEL)) {
-            packet.put((byte) _member.getLevel());
+            writeByte((byte) _member.getLevel());
         }
         if (containsMask(PartySmallWindowUpdateType.CLASS_ID)) {
-            packet.putShort((short) _member.getClassId().getId());
+            writeShort((short) _member.getClassId().getId());
         }
         if (containsMask(PartySmallWindowUpdateType.PARTY_SUBSTITUTE)) {
-            packet.put((byte) 0x00);
+            writeByte((byte) 0x00);
         }
         if (containsMask(PartySmallWindowUpdateType.VITALITY_POINTS)) {
-            packet.putInt(_member.getVitalityPoints());
+            writeInt(_member.getVitalityPoints());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 45;
-    }
 
     @Override
     protected void addMask(int mask) {

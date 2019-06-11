@@ -12,9 +12,9 @@ public class ExRequestBlockListForAD extends IClientIncomingPacket {
     private String message;
 
     @Override
-    protected void readImpl(ByteBuffer packet) throws Exception {
-        name = readString(packet);
-        message = readString(packet);
+    protected void readImpl() throws Exception {
+        name = readString();
+        message = readString();
         // next is Always Adena Sale ADS text
     }
 

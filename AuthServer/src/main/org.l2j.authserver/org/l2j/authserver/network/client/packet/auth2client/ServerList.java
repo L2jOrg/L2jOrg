@@ -6,10 +6,6 @@ import org.l2j.authserver.network.client.packet.L2LoginServerPacket;
 import org.l2j.authserver.network.gameserver.packet.game2auth.ServerStatus;
 import org.l2j.authserver.settings.AuthServerSettings;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-import java.nio.ByteBuffer;
-
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
@@ -40,44 +36,38 @@ public final class ServerList extends L2LoginServerPacket {
     }
 
     @Override
-    public void writeImpl(AuthClient client, ByteBuffer buffer) {
+    public void writeImpl(AuthClient client) {
         var servers = GameServerManager.getInstance().getRegisteredGameServers();
-        buffer.put((byte)0x04);
-        buffer.put((byte)servers.size());
-        buffer.put((byte)client.getLastServer());
+        writeByte((byte)0x04);
+        writeByte((byte)servers.size());
+        writeByte((byte)client.getLastServer());
 
         for (var server : servers.values()) {
-            buffer.put((byte)server.getId());
+            writeByte((byte)server.getId());
 
             byte[] address = server.getAddressFor(client.getHostAddress());
 
-            buffer.put(address);
-            buffer.putInt(server.getPort());
-            buffer.put(server.getAgeLimit()); // minimum age
-            buffer.put((byte) (server.isPvp() ? 0x01 : 0x00)) ;
-            buffer.putShort((short) server.getOnlinePlayersCount());
-            buffer.putShort((short) server.getMaxPlayers());
+            writeBytes(address);
+            writeInt(server.getPort());
+            writeByte(server.getAgeLimit()); // minimum age
+            writeByte(server.isPvp());
+            writeShort((short) server.getOnlinePlayersCount());
+            writeShort((short) server.getMaxPlayers());
 
             var status = server.getStatus();
             if(ServerStatus.STATUS_GM_ONLY == status && client.getAccessLevel() < getSettings(AuthServerSettings.class).gmMinimumLevel()) {
                 status = ServerStatus.STATUS_DOWN;
             }
 
-            buffer.put((byte) (ServerStatus.STATUS_DOWN == status ? 0x00 : 0x01));
-            buffer.putInt(server.getServerType());
-            buffer.put((byte) (server.isShowingBrackets() ? 0x01 : 0x00)); // Region
+            writeByte((byte) (ServerStatus.STATUS_DOWN == status ? 0x00 : 0x01));
+            writeInt(server.getServerType());
+            writeByte((byte) (server.isShowingBrackets() ? 0x01 : 0x00)); // Region
         }
 
-        buffer.putShort((short)0xa4);
+        writeShort((short)0xa4);
         for (var server : servers.values()) {
-            buffer.put((byte)server.getId());
-            buffer.put((byte)client.getPlayersOnServer(server.getId()));
+            writeByte((byte)server.getId());
+            writeByte((byte)client.getPlayersOnServer(server.getId()));
         }
-    }
-
-    @Override
-    protected int size(AuthClient client) {
-        var serverSize = GameServerManager.getInstance().getRegisteredGameServers().size();
-        return super.size(client) + 5 + serverSize * 24;
     }
 }

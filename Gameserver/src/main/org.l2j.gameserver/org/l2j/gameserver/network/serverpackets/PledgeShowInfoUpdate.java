@@ -17,32 +17,28 @@ public class PledgeShowInfoUpdate extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PLEDGE_SHOW_INFO_UPDATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PLEDGE_SHOW_INFO_UPDATE);
 
         // sending empty data so client will ask all the info in response ;)
-        packet.putInt(_clan.getId());
-        packet.putInt(getSettings(ServerSettings.class).serverId());
-        packet.putInt(_clan.getCrestId());
-        packet.putInt(_clan.getLevel()); // clan level
-        packet.putInt(_clan.getCastleId());
-        packet.putInt(0x00); // castle state ?
-        packet.putInt(_clan.getHideoutId());
-        packet.putInt(_clan.getFortId());
-        packet.putInt(_clan.getRank());
-        packet.putInt(_clan.getReputationScore()); // clan reputation score
-        packet.putInt(0x00); // ?
-        packet.putInt(0x00); // ?
-        packet.putInt(_clan.getAllyId());
-        writeString(_clan.getAllyName(), packet); // c5
-        packet.putInt(_clan.getAllyCrestId()); // c5
-        packet.putInt(_clan.isAtWar() ? 1 : 0); // c5
-        packet.putInt(0x00); // TODO: Find me!
-        packet.putInt(0x00); // TODO: Find me!
+        writeInt(_clan.getId());
+        writeInt(getSettings(ServerSettings.class).serverId());
+        writeInt(_clan.getCrestId());
+        writeInt(_clan.getLevel()); // clan level
+        writeInt(_clan.getCastleId());
+        writeInt(0x00); // castle state ?
+        writeInt(_clan.getHideoutId());
+        writeInt(_clan.getFortId());
+        writeInt(_clan.getRank());
+        writeInt(_clan.getReputationScore()); // clan reputation score
+        writeInt(0x00); // ?
+        writeInt(0x00); // ?
+        writeInt(_clan.getAllyId());
+        writeString(_clan.getAllyName()); // c5
+        writeInt(_clan.getAllyCrestId()); // c5
+        writeInt(_clan.isAtWar() ? 1 : 0); // c5
+        writeInt(0x00); // TODO: Find me!
+        writeInt(0x00); // TODO: Find me!
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 85 + _clan.getAllyName().length() * 2;
-    }
 }

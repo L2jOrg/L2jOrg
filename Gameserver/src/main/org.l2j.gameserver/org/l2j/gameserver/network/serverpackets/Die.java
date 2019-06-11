@@ -85,28 +85,24 @@ public class Die extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.DIE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.DIE);
 
-        packet.putInt(_objectId);
-        packet.putInt(_toVillage ? 0x01 : 0x00);
-        packet.putInt(_toClanHall ? 0x01 : 0x00);
-        packet.putInt(_toCastle ? 0x01 : 0x00);
-        packet.putInt(_toOutpost ? 0x01 : 0x00);
-        packet.putInt(_isSweepable ? 0x01 : 0x00);
-        packet.putInt(_useFeather ? 0x01 : 0x00);
-        packet.putInt(_toFortress ? 0x01 : 0x00);
-        packet.putInt(0x00); // Disables use Feather button for X seconds
-        packet.putInt(0x00); // Adventure's Song
-        packet.put((byte) (_hideAnimation ? 0x01 : 0x00));
+        writeInt(_objectId);
+        writeInt(_toVillage ? 0x01 : 0x00);
+        writeInt(_toClanHall ? 0x01 : 0x00);
+        writeInt(_toCastle ? 0x01 : 0x00);
+        writeInt(_toOutpost ? 0x01 : 0x00);
+        writeInt(_isSweepable ? 0x01 : 0x00);
+        writeInt(_useFeather ? 0x01 : 0x00);
+        writeInt(_toFortress ? 0x01 : 0x00);
+        writeInt(0x00); // Disables use Feather button for X seconds
+        writeInt(0x00); // Adventure's Song
+        writeByte((byte) (_hideAnimation ? 0x01 : 0x00));
 
-        packet.putInt(_itemsEnabled ? 0x01 : 0x00);
-        packet.putInt(getItems().size());
-        getItems().forEach(packet::putInt);
+        writeInt(_itemsEnabled ? 0x01 : 0x00);
+        writeInt(getItems().size());
+        getItems().forEach(this::writeInt);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 54 + getItems().size() * 4;
-    }
 }

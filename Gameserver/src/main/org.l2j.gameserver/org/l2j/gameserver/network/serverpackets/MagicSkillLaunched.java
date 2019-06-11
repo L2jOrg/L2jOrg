@@ -45,21 +45,17 @@ public class MagicSkillLaunched extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.MAGIC_SKILL_LAUNCHED.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.MAGIC_SKILL_LAUNCHED);
 
-        packet.putInt(_castingType.getClientBarId()); // MagicSkillUse castingType
-        packet.putInt(_charObjId);
-        packet.putInt(_skillId);
-        packet.putInt(_skillLevel);
-        packet.putInt(_targets.size());
+        writeInt(_castingType.getClientBarId()); // MagicSkillUse castingType
+        writeInt(_charObjId);
+        writeInt(_skillId);
+        writeInt(_skillLevel);
+        writeInt(_targets.size());
         for (L2Object target : _targets) {
-            packet.putInt(target.getObjectId());
+            writeInt(target.getObjectId());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25 + _targets.size() *  4;
-    }
 }

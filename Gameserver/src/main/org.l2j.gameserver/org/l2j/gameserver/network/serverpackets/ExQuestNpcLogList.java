@@ -33,20 +33,16 @@ public class ExQuestNpcLogList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_QUEST_NPC_LOG_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_QUEST_NPC_LOG_LIST);
 
-        packet.putInt(_questId);
-        packet.put((byte) _npcLogList.size());
+        writeInt(_questId);
+        writeByte((byte) _npcLogList.size());
         for (NpcLogListHolder holder : _npcLogList) {
-            packet.putInt(holder.isNpcString() ? holder.getId() : holder.getId() + 1000000);
-            packet.put((byte)( holder.isNpcString() ? 0x01 : 0x00));
-            packet.putInt(holder.getCount());
+            writeInt(holder.isNpcString() ? holder.getId() : holder.getId() + 1000000);
+            writeByte((byte)( holder.isNpcString() ? 0x01 : 0x00));
+            writeInt(holder.getCount());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 10 + _npcLogList.size() * 9;
-    }
 }

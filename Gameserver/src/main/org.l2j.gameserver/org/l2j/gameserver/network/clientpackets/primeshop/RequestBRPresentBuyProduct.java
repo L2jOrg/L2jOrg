@@ -31,12 +31,12 @@ public final class RequestBRPresentBuyProduct extends RequestBuyProduct {
     private String _mailBody;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        productId = packet.getInt();
-        count = packet.getInt();
-        _charName = readString(packet);
-        _mailTitle = readString(packet);
-        _mailBody = readString(packet);
+    public void readImpl() {
+        productId = readInt();
+        count = readInt();
+        _charName = readString();
+        _mailTitle = readString();
+        _mailBody = readString();
     }
 
     @Override

@@ -19,17 +19,13 @@ public class AskJoinAlly extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.ASK_JOIN_ALLIANCE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.ASK_JOIN_ALLIANCE);
 
-        packet.putInt(_requestorObjId);
-        writeString(null, packet); // Ally Name ?
-        writeString(null, packet); // TODO: Find me!
-        writeString(_requestorName, packet);
+        writeInt(_requestorObjId);
+        writeString(null); // Ally Name ?
+        writeString(null); // TODO: Find me!
+        writeString(_requestorName);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 15 + _requestorName.length() * 2;
-    }
 }

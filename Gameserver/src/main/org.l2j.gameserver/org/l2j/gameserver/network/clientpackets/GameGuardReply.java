@@ -42,10 +42,10 @@ public class GameGuardReply extends IClientIncomingPacket {
     private final byte[] _reply = new byte[8];
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        packet.get(_reply, 0, 4);
-        packet.getInt();
-        packet.get(_reply, 4, 4);
+    public void readImpl() {
+        readBytes(_reply, 0, 4);
+        readInt();
+        readBytes(_reply, 4, 4);
     }
 
     @Override

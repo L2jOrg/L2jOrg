@@ -16,9 +16,9 @@ public class SendChangeAttributeTargetItem extends IClientIncomingPacket {
     private int _itemObjId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _crystalItemId = packet.getInt();
-        _itemObjId = packet.getInt();
+    public void readImpl() {
+        _crystalItemId = readInt();
+        _itemObjId = readInt();
     }
 
     @Override

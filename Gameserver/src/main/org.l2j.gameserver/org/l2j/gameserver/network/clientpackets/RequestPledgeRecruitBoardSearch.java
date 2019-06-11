@@ -21,15 +21,15 @@ public class RequestPledgeRecruitBoardSearch extends IClientIncomingPacket {
     private int _applicationType;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _clanLevel = packet.getInt();
-        _karma = packet.getInt();
-        _type = packet.getInt();
-        _query = readString(packet);
-        _sort = packet.getInt();
-        _descending = packet.getInt() == 2;
-        _page = packet.getInt();
-        _applicationType = packet.getInt(); // Helios2
+    public void readImpl() {
+        _clanLevel = readInt();
+        _karma = readInt();
+        _type = readInt();
+        _query = readString();
+        _sort = readInt();
+        _descending = readInt() == 2;
+        _page = readInt();
+        _applicationType = readInt(); // Helios2
     }
 
     @Override

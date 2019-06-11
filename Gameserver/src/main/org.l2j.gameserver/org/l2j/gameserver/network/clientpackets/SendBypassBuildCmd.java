@@ -17,8 +17,8 @@ public final class SendBypassBuildCmd extends IClientIncomingPacket {
     private String _command;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _command = readString(packet);
+    public void readImpl() {
+        _command = readString();
         if (_command != null) {
             _command = _command.trim();
         }

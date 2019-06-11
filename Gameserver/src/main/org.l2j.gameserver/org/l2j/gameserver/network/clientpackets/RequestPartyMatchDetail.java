@@ -15,10 +15,10 @@ public final class RequestPartyMatchDetail extends IClientIncomingPacket {
     private int _level;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _roomId = packet.getInt();
-        _location = packet.getInt();
-        _level = packet.getInt();
+    public void readImpl() {
+        _roomId = readInt();
+        _location = readInt();
+        _level = readInt();
     }
 
     @Override

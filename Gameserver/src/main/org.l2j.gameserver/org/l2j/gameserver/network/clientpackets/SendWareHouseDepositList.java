@@ -29,16 +29,16 @@ public final class SendWareHouseDepositList extends IClientIncomingPacket {
     private List<ItemHolder> _items = null;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        final int size = packet.getInt();
-        if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != packet.remaining())) {
+    public void readImpl() throws InvalidDataPacketException {
+        final int size = readInt();
+        if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != available())) {
             throw new InvalidDataPacketException();
         }
 
         _items = new ArrayList<>(size);
         for (int i = 0; i < size; i++) {
-            final int objId = packet.getInt();
-            final long count = packet.getLong();
+            final int objId = readInt();
+            final long count = readLong();
             if ((objId < 1) || (count < 0)) {
                 _items = null;
                 throw new InvalidDataPacketException();

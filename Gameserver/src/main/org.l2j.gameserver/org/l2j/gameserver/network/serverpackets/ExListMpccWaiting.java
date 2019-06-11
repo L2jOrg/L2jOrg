@@ -32,25 +32,21 @@ public class ExListMpccWaiting extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_LIST_MPCC_WAITING.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_LIST_MPCC_WAITING);
 
-        packet.putInt(_size);
-        packet.putInt(_rooms.size());
+        writeInt(_size);
+        writeInt(_rooms.size());
         for (MatchingRoom room : _rooms) {
-            packet.putInt(room.getId());
-            writeString(room.getTitle(), packet);
-            packet.putInt(room.getMembersCount());
-            packet.putInt(room.getMinLvl());
-            packet.putInt(room.getMaxLvl());
-            packet.putInt(room.getLocation());
-            packet.putInt(room.getMaxMembers());
-            writeString(room.getLeader().getName(), packet);
+            writeInt(room.getId());
+            writeString(room.getTitle());
+            writeInt(room.getMembersCount());
+            writeInt(room.getMinLvl());
+            writeInt(room.getMaxLvl());
+            writeInt(room.getLocation());
+            writeInt(room.getMaxMembers());
+            writeString(room.getLeader().getName());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + _rooms.size() * 92 ;
-    }
 }

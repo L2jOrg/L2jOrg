@@ -15,15 +15,11 @@ public final class SetSummonRemainTime extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SET_SUMMON_REMAIN_TIME.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SET_SUMMON_REMAIN_TIME);
 
-        packet.putInt(_maxTime);
-        packet.putInt(_remainingTime);
+        writeInt(_maxTime);
+        writeInt(_remainingTime);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13;
-    }
 }

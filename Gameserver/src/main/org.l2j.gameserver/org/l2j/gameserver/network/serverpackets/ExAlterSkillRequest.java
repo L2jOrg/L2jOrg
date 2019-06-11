@@ -20,15 +20,11 @@ public class ExAlterSkillRequest extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_ALTER_SKILL_REQUEST.writeId(packet);
-        packet.putInt(_nextSkillId);
-        packet.putInt(_currentSkillId);
-        packet.putInt(_alterTime);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_ALTER_SKILL_REQUEST);
+        writeInt(_nextSkillId);
+        writeInt(_currentSkillId);
+        writeInt(_alterTime);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17;
-    }
 }

@@ -18,15 +18,11 @@ public class ExAskJoinMPCC extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_ASK_JOIN_MPCC.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_ASK_JOIN_MPCC);
 
-        writeString(_requestorName, packet); // name of CCLeader
-        packet.putInt(0x00); // TODO: Find me
+        writeString(_requestorName); // name of CCLeader
+        writeInt(0x00); // TODO: Find me
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 11 + _requestorName.length() * 2;
-    }
 }

@@ -20,11 +20,11 @@ public class RequestServerLogin extends L2LoginClientPacket {
 	private int _serverId;
 
 	@Override
-	public boolean readImpl(ByteBuffer buffer) {
-		if (buffer.remaining() >= 9) {
-			accountId = buffer.getInt();
-			authKey = buffer.getInt();
-			_serverId = Byte.toUnsignedInt(buffer.get());
+	public boolean readImpl() {
+		if (available() >= 9) {
+			accountId = readInt();
+			authKey = readInt();
+			_serverId = Byte.toUnsignedInt(readByte());
 			return true;
 		}
 		return false;

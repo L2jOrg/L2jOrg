@@ -10,9 +10,9 @@ public class AccountInfo extends GameserverReadablePacket {
     private  String account;
 
     @Override
-    protected void readImpl(ByteBuffer buffer)   {
-        account = readString(buffer);
-        players = buffer.get();
+    protected void readImpl()   {
+        account = readString();
+        players = readByte();
     }
 
     @Override

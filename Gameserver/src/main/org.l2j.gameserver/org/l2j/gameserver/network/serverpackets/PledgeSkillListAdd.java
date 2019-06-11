@@ -18,15 +18,11 @@ public class PledgeSkillListAdd extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PLEDGE_SKILL_LIST_ADD.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PLEDGE_SKILL_LIST_ADD);
 
-        packet.putInt(_id);
-        packet.putInt(_lvl);
+        writeInt(_id);
+        writeInt(_lvl);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13;
-    }
 }

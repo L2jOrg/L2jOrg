@@ -60,29 +60,29 @@ public class MultiSellChoose extends IClientIncomingPacket {
     private EnsoulOption[] _soulCrystalSpecialOptions;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _listId = packet.getInt();
-        _entryId = packet.getInt();
-        _amount = packet.getLong();
-        _enchantLevel = packet.getShort();
-        _augmentOption1 = packet.getInt();
-        _augmentOption2 = packet.getInt();
-        _attackAttribute = packet.getShort();
-        _attributePower = packet.getShort();
-        _fireDefence = packet.getShort();
-        _waterDefence = packet.getShort();
-        _windDefence = packet.getShort();
-        _earthDefence = packet.getShort();
-        _holyDefence = packet.getShort();
-        _darkDefence = packet.getShort();
-        _soulCrystalOptions = new EnsoulOption[packet.get()]; // Ensoul size
+    public void readImpl() {
+        _listId = readInt();
+        _entryId = readInt();
+        _amount = readLong();
+        _enchantLevel = readShort();
+        _augmentOption1 = readInt();
+        _augmentOption2 = readInt();
+        _attackAttribute = readShort();
+        _attributePower = readShort();
+        _fireDefence = readShort();
+        _waterDefence = readShort();
+        _windDefence = readShort();
+        _earthDefence = readShort();
+        _holyDefence = readShort();
+        _darkDefence = readShort();
+        _soulCrystalOptions = new EnsoulOption[readByte()]; // Ensoul size
         for (int i = 0; i < _soulCrystalOptions.length; i++) {
-            final int ensoulId = packet.getInt(); // Ensoul option id
+            final int ensoulId = readInt(); // Ensoul option id
             _soulCrystalOptions[i] = EnsoulData.getInstance().getOption(ensoulId);
         }
-        _soulCrystalSpecialOptions = new EnsoulOption[packet.get()]; // Special ensoul size
+        _soulCrystalSpecialOptions = new EnsoulOption[readByte()]; // Special ensoul size
         for (int i = 0; i < _soulCrystalSpecialOptions.length; i++) {
-            final int ensoulId = packet.getInt(); // Special ensoul option id.
+            final int ensoulId = readInt(); // Special ensoul option id.
             _soulCrystalSpecialOptions[i] = EnsoulData.getInstance().getOption(ensoulId);
         }
     }

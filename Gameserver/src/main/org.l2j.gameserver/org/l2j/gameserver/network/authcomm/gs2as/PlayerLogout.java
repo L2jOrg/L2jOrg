@@ -15,8 +15,8 @@ public class PlayerLogout extends SendablePacket
 	}
 
 	@Override
-	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {
-		buffer.put((byte)0x04);
-		writeString(account, buffer);
+	protected void writeImpl(AuthServerClient client) {
+		writeByte((byte)0x04);
+		writeString(account);
 	}
 }

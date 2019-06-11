@@ -80,12 +80,12 @@ public final class RequestAcquireSkill extends IClientIncomingPacket {
     }
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _id = packet.getInt();
-        _level = packet.getInt();
-        _skillType = AcquireSkillType.getAcquireSkillType(packet.getInt());
+    public void readImpl() {
+        _id = readInt();
+        _level = readInt();
+        _skillType = AcquireSkillType.getAcquireSkillType(readInt());
         if (_skillType == AcquireSkillType.SUBPLEDGE) {
-            _subType = packet.getInt();
+            _subType = readInt();
         }
     }
 

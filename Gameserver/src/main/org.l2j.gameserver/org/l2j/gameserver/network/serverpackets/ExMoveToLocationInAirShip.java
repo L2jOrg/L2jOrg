@@ -24,19 +24,15 @@ public class ExMoveToLocationInAirShip extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_MOVE_TO_LOCATION_IN_AIR_SHIP.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_MOVE_TO_LOCATION_IN_AIR_SHIP);
 
-        packet.putInt(_charObjId);
-        packet.putInt(_airShipId);
-        packet.putInt(_destination.getX());
-        packet.putInt(_destination.getY());
-        packet.putInt(_destination.getZ());
-        packet.putInt(_heading);
+        writeInt(_charObjId);
+        writeInt(_airShipId);
+        writeInt(_destination.getX());
+        writeInt(_destination.getY());
+        writeInt(_destination.getZ());
+        writeInt(_heading);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 29;
-    }
 }

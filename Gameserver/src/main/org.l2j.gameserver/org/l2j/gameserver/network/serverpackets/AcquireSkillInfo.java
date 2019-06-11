@@ -66,26 +66,22 @@ public class AcquireSkillInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.ACQUIRE_SKILL_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.ACQUIRE_SKILL_INFO);
 
-        packet.putInt(_id);
-        packet.putInt(_level);
-        packet.putLong(_spCost);
-        packet.putInt(_type.getId());
-        packet.putInt(_reqs.size());
+        writeInt(_id);
+        writeInt(_level);
+        writeLong(_spCost);
+        writeInt(_type.getId());
+        writeInt(_reqs.size());
         for (Req temp : _reqs) {
-            packet.putInt(temp.type);
-            packet.putInt(temp.itemId);
-            packet.putLong(temp.count);
-            packet.putInt(temp.unk);
+            writeInt(temp.type);
+            writeInt(temp.itemId);
+            writeLong(temp.count);
+            writeInt(temp.unk);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 29 + _reqs.size() * 20;
-    }
 
     /**
      * Private class containing learning skill requisites.

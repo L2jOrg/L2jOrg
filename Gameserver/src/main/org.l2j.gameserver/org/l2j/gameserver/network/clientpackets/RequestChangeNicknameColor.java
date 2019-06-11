@@ -28,10 +28,10 @@ public class RequestChangeNicknameColor extends IClientIncomingPacket {
     private String _title;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _colorNum = packet.getInt();
-        _title = readString(packet);
-        _itemObjectId = packet.getInt();
+    public void readImpl() {
+        _colorNum = readInt();
+        _title = readString();
+        _itemObjectId = readInt();
     }
 
     @Override

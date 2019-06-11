@@ -13,7 +13,7 @@ import java.nio.ByteBuffer;
  */
 public final class RequestPledgeMemberList extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
 
     }
 

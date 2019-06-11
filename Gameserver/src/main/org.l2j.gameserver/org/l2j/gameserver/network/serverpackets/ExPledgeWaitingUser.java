@@ -17,15 +17,11 @@ public class ExPledgeWaitingUser extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PLEDGE_WAITING_USER.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PLEDGE_WAITING_USER);
 
-        packet.putInt(_pledgeRecruitInfo.getPlayerId());
-        writeString(_pledgeRecruitInfo.getMessage(), packet);
+        writeInt(_pledgeRecruitInfo.getPlayerId());
+        writeString(_pledgeRecruitInfo.getMessage());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 11 + _pledgeRecruitInfo.getMessage().length() * 2;
-    }
 }

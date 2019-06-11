@@ -40,55 +40,51 @@ public class SiegeInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.CASTLE_SIEGE_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.CASTLE_SIEGE_INFO);
 
         if (_castle != null) {
-            packet.putInt(_castle.getResidenceId());
+            writeInt(_castle.getResidenceId());
 
             final int ownerId = _castle.getOwnerId();
 
-            packet.putInt(((ownerId == _player.getClanId()) && (_player.isClanLeader())) ? 0x01 : 0x00);
-            packet.putInt(ownerId);
+            writeInt(((ownerId == _player.getClanId()) && (_player.isClanLeader())) ? 0x01 : 0x00);
+            writeInt(ownerId);
             if (ownerId > 0) {
                 final L2Clan owner = ClanTable.getInstance().getClan(ownerId);
                 if (owner != null) {
-                    writeString(owner.getName(), packet); // Clan Name
-                    writeString(owner.getLeaderName(), packet); // Clan Leader Name
-                    packet.putInt(owner.getAllyId()); // Ally ID
-                    writeString(owner.getAllyName(), packet); // Ally Name
+                    writeString(owner.getName()); // Clan Name
+                    writeString(owner.getLeaderName()); // Clan Leader Name
+                    writeInt(owner.getAllyId()); // Ally ID
+                    writeString(owner.getAllyName()); // Ally Name
                 } else {
                     LOGGER.warn("Null owner for castle: " + _castle.getName());
                 }
             } else {
-                writeString("", packet); // Clan Name
-                writeString("", packet); // Clan Leader Name
-                packet.putInt(0); // Ally ID
-                writeString("", packet); // Ally Name
+                writeString(""); // Clan Name
+                writeString(""); // Clan Leader Name
+                writeInt(0); // Ally ID
+                writeString(""); // Ally Name
             }
 
-            packet.putInt((int) (System.currentTimeMillis() / 1000));
+            writeInt((int) (System.currentTimeMillis() / 1000));
             if (!_castle.getIsTimeRegistrationOver() && _player.isClanLeader() && (_player.getClanId() == _castle.getOwnerId())) {
                 final Calendar cal = Calendar.getInstance();
                 cal.setTimeInMillis(_castle.getSiegeDate().getTimeInMillis());
                 cal.set(Calendar.MINUTE, 0);
                 cal.set(Calendar.SECOND, 0);
 
-                packet.putInt(0x00);
-                packet.putInt(Config.SIEGE_HOUR_LIST.size());
+                writeInt(0x00);
+                writeInt(Config.SIEGE_HOUR_LIST.size());
                 for (int hour : Config.SIEGE_HOUR_LIST) {
                     cal.set(Calendar.HOUR_OF_DAY, hour);
-                    packet.putInt((int) (cal.getTimeInMillis() / 1000));
+                    writeInt((int) (cal.getTimeInMillis() / 1000));
                 }
             } else {
-                packet.putInt((int) (_castle.getSiegeDate().getTimeInMillis() / 1000));
-                packet.putInt(0x00);
+                writeInt((int) (_castle.getSiegeDate().getTimeInMillis() / 1000));
+                writeInt(0x00);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 140 + ( nonNull(_castle) ? 34 + Config.SIEGE_HOUR_LIST.size() * 4 : 0);
-    }
 }

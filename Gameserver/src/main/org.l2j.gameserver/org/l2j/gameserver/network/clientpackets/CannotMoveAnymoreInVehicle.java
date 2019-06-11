@@ -17,12 +17,12 @@ public final class CannotMoveAnymoreInVehicle extends IClientIncomingPacket {
     private int _boatId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _boatId = packet.getInt();
-        _x = packet.getInt();
-        _y = packet.getInt();
-        _z = packet.getInt();
-        _heading = packet.getInt();
+    public void readImpl() {
+        _boatId = readInt();
+        _x = readInt();
+        _y = readInt();
+        _z = readInt();
+        _heading = readInt();
     }
 
     @Override

@@ -34,20 +34,16 @@ public class ExColosseumFenceInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_COLOSSEUM_FENCE_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_COLOSSEUM_FENCE_INFO);
 
-        packet.putInt(_objId);
-        packet.putInt(_clientState);
-        packet.putInt(_x);
-        packet.putInt(_y);
-        packet.putInt(_z);
-        packet.putInt(_width);
-        packet.putInt(_length);
+        writeInt(_objId);
+        writeInt(_clientState);
+        writeInt(_x);
+        writeInt(_y);
+        writeInt(_z);
+        writeInt(_width);
+        writeInt(_length);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 33;
-    }
 }

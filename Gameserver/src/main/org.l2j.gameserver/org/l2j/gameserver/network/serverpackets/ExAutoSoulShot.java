@@ -22,16 +22,12 @@ public class ExAutoSoulShot extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_AUTO_SOUL_SHOT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_AUTO_SOUL_SHOT);
 
-        packet.putInt(_itemId);
-        packet.putInt(_enable ? 0x01 : 0x00);
-        packet.putInt(_type);
+        writeInt(_itemId);
+        writeInt(_enable ? 0x01 : 0x00);
+        writeInt(_type);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17;
-    }
 }

@@ -22,23 +22,19 @@ public class ExShowFortressInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_FORTRESS_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_FORTRESS_INFO);
 
         final Collection<Fort> forts = FortManager.getInstance().getForts();
-        packet.putInt(forts.size());
+        writeInt(forts.size());
         for (Fort fort : forts) {
             final L2Clan clan = fort.getOwnerClan();
-            packet.putInt(fort.getResidenceId());
-            writeString(clan != null ? clan.getName() : "", packet);
-            packet.putInt(fort.getSiege().isInProgress() ? 0x01 : 0x00);
+            writeInt(fort.getResidenceId());
+            writeString(clan != null ? clan.getName() : "");
+            writeInt(fort.getSiege().isInProgress() ? 0x01 : 0x00);
             // Time of possession
-            packet.putInt(fort.getOwnedTime());
+            writeInt(fort.getOwnedTime());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + FortManager.getInstance().getForts().size() * 50;
-    }
 }

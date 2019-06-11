@@ -13,8 +13,8 @@ public final class RequestHennaItemList extends IClientIncomingPacket {
     private int _unknown;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _unknown = packet.getInt(); // TODO: Identify.
+    public void readImpl() {
+        _unknown = readInt(); // TODO: Identify.
     }
 
     @Override

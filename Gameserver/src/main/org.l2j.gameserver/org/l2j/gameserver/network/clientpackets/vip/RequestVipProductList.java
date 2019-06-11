@@ -8,7 +8,7 @@ import java.nio.ByteBuffer;
 public class RequestVipProductList extends IClientIncomingPacket {
 
     @Override
-    protected void readImpl(ByteBuffer packet) throws Exception {
+    protected void readImpl() throws Exception {
         // trigger packet
     }
 

@@ -18,15 +18,11 @@ public class ExShowQuestMark extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_QUEST_MARK.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_QUEST_MARK);
 
-        packet.putInt(_questId);
-        packet.putInt(_questState);
+        writeInt(_questId);
+        writeInt(_questState);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13;
-    }
 }

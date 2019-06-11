@@ -6,8 +6,6 @@ import org.l2j.gameserver.network.L2GameClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * Packets received by the game server from clients
  *
@@ -18,9 +16,9 @@ public abstract class IClientIncomingPacket extends ReadablePacket<L2GameClient>
     private static Logger LOGGER = LoggerFactory.getLogger(IClientIncomingPacket.class.getName());
 
     @Override
-    protected boolean read(ByteBuffer packet) {
+    protected boolean read() {
         try {
-            readImpl(packet);
+            readImpl();
             return true;
         } catch (InvalidDataPacketException e) {
             LOGGER.warn("Invalid data packet {} from client {}", this, client);
@@ -30,7 +28,6 @@ public abstract class IClientIncomingPacket extends ReadablePacket<L2GameClient>
         }
         return false;
     }
-
 
     @Override
     public void run() {
@@ -44,5 +41,5 @@ public abstract class IClientIncomingPacket extends ReadablePacket<L2GameClient>
 
     protected abstract void runImpl() throws Exception;
 
-    protected abstract void readImpl(ByteBuffer packet) throws Exception;
+    protected abstract void readImpl() throws Exception;
 }

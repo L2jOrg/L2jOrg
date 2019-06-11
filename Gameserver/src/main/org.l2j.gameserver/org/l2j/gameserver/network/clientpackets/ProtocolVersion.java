@@ -15,8 +15,8 @@ public final class ProtocolVersion extends IClientIncomingPacket {
     private int _version;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _version = packet.getInt();
+    public void readImpl() {
+        _version = readInt();
     }
 
     @Override

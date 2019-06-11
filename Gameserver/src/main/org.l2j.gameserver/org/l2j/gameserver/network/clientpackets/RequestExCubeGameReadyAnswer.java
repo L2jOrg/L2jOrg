@@ -18,11 +18,11 @@ public final class RequestExCubeGameReadyAnswer extends IClientIncomingPacket {
     private int _answer;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
         // client sends -1,0,1,2 for arena parameter
-        _arena = packet.getInt() + 1;
+        _arena = readInt() + 1;
         // client sends 1 if clicked confirm on not clicked, 0 if clicked cancel
-        _answer = packet.getInt();
+        _answer = readInt();
     }
 
     @Override

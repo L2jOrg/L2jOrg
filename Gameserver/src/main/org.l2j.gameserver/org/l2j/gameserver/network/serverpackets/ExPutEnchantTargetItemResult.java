@@ -16,14 +16,10 @@ public class ExPutEnchantTargetItemResult extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PUT_ENCHANT_TARGET_ITEM_RESULT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PUT_ENCHANT_TARGET_ITEM_RESULT);
 
-        packet.putInt(_result);
+        writeInt(_result);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

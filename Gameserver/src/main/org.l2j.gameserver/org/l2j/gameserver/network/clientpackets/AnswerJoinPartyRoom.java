@@ -15,8 +15,8 @@ public final class AnswerJoinPartyRoom extends IClientIncomingPacket {
     private boolean _answer;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _answer = packet.getInt() == 1;
+    public void readImpl() {
+        _answer = readInt() == 1;
     }
 
     @Override

@@ -19,8 +19,8 @@ public final class RequestLinkHtml extends IClientIncomingPacket {
     private String _link;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _link = readString(packet);
+    public void readImpl() {
+        _link = readString();
     }
 
     @Override

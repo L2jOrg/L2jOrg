@@ -12,10 +12,10 @@ import java.nio.ByteBuffer;
  */
 public final class RequestPrivateStoreManageSell extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
         // TODO: implement me properly
-        // packet.getInt();
-        // packet.getLong();
+        // readInt();
+        // readLong();
     }
 
     @Override

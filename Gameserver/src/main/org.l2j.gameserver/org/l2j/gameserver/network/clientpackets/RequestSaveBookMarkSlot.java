@@ -14,10 +14,10 @@ public final class RequestSaveBookMarkSlot extends IClientIncomingPacket {
     private String tag;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        name = readString(packet);
-        icon = packet.getInt();
-        tag = readString(packet);
+    public void readImpl() {
+        name = readString();
+        icon = readInt();
+        tag = readString();
     }
 
     @Override

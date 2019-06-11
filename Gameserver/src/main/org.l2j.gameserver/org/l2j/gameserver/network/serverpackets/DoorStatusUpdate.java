@@ -14,20 +14,16 @@ public final class DoorStatusUpdate extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.DOOR_STATUS_UPDATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.DOOR_STATUS_UPDATE);
 
-        packet.putInt(_door.getObjectId());
-        packet.putInt(_door.isOpen() ? 0 : 1);
-        packet.putInt(_door.getDamage());
-        packet.putInt(_door.isEnemy() ? 1 : 0);
-        packet.putInt(_door.getId());
-        packet.putInt((int) _door.getCurrentHp());
-        packet.putInt(_door.getMaxHp());
+        writeInt(_door.getObjectId());
+        writeInt(_door.isOpen() ? 0 : 1);
+        writeInt(_door.getDamage());
+        writeInt(_door.isEnemy() ? 1 : 0);
+        writeInt(_door.getId());
+        writeInt((int) _door.getCurrentHp());
+        writeInt(_door.getMaxHp());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 33;
-    }
 }

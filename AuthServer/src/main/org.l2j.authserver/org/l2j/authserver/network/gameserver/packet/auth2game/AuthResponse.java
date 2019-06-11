@@ -16,14 +16,10 @@ public class AuthResponse extends GameServerWritablePacket {
 	}
 
 	@Override
-	protected void writeImpl(ServerClient client, ByteBuffer buffer) {
-		buffer.put((byte)0x00);
-		buffer.put((byte)serverId);
-		writeString(serverName, buffer);
+	protected void writeImpl(ServerClient client) {
+		writeByte((byte)0x00);
+		writeByte((byte)serverId);
+		writeString(serverName);
 	}
 
-    @Override
-    protected int size(ServerClient client) {
-        return super.size(client) + 4 + 2 * serverName.length();
-    }
 }

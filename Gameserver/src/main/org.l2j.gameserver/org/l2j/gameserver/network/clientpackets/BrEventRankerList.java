@@ -14,10 +14,10 @@ public class BrEventRankerList extends IClientIncomingPacket {
     private int _ranking;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _eventId = packet.getInt();
-        _day = packet.getInt(); // 0 - current, 1 - previous
-        _ranking = packet.getInt();
+    public void readImpl() {
+        _eventId = readInt();
+        _day = readInt(); // 0 - current, 1 - previous
+        _ranking = readInt();
     }
 
     @Override

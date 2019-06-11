@@ -28,36 +28,32 @@ public class ExOlympiadMatchList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_RECEIVE_OLYMPIAD.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_RECEIVE_OLYMPIAD);
 
-        packet.putInt(0x00); // Type 0 = Match List, 1 = Match Result
+        writeInt(0x00); // Type 0 = Match List, 1 = Match Result
 
-        packet.putInt(_games.size());
-        packet.putInt(0x00);
+        writeInt(_games.size());
+        writeInt(0x00);
 
         for (OlympiadGameTask curGame : _games) {
             final AbstractOlympiadGame game = curGame.getGame();
             if (game != null) {
-                packet.putInt(game.getStadiumId()); // Stadium Id (Arena 1 = 0)
+                writeInt(game.getStadiumId()); // Stadium Id (Arena 1 = 0)
 
                 if (game instanceof OlympiadGameNonClassed) {
-                    packet.putInt(1);
+                    writeInt(1);
                 } else if (game instanceof OlympiadGameClassed) {
-                    packet.putInt(2);
+                    writeInt(2);
                 } else {
-                    packet.putInt(0);
+                    writeInt(0);
                 }
 
-                packet.putInt(curGame.isRunning() ? 0x02 : 0x01); // (1 = Standby, 2 = Playing)
-                writeString(game.getPlayerNames()[0], packet); // Player 1 Name
-                writeString(game.getPlayerNames()[1], packet); // Player 2 Name
+                writeInt(curGame.isRunning() ? 0x02 : 0x01); // (1 = Standby, 2 = Playing)
+                writeString(game.getPlayerNames()[0]); // Player 1 Name
+                writeString(game.getPlayerNames()[1]); // Player 2 Name
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17 + _games.size() * 12 + 68;
-    }
 }

@@ -21,21 +21,17 @@ public class ExPledgeWaitingListApplied extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PLEDGE_WAITING_LIST_APPLIED.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PLEDGE_WAITING_LIST_APPLIED);
 
-        packet.putInt(_pledgeRecruitInfo.getClan().getId());
-        writeString(_pledgeRecruitInfo.getClan().getName(), packet);
-        writeString(_pledgeRecruitInfo.getClan().getLeaderName(), packet);
-        packet.putInt(_pledgeRecruitInfo.getClan().getLevel());
-        packet.putInt(_pledgeRecruitInfo.getClan().getMembersCount());
-        packet.putInt(_pledgeRecruitInfo.getKarma());
-        writeString(_pledgeRecruitInfo.getInformation(), packet);
-        writeString(_pledgePlayerRecruitInfo.getMessage(), packet);
+        writeInt(_pledgeRecruitInfo.getClan().getId());
+        writeString(_pledgeRecruitInfo.getClan().getName());
+        writeString(_pledgeRecruitInfo.getClan().getLeaderName());
+        writeInt(_pledgeRecruitInfo.getClan().getLevel());
+        writeInt(_pledgeRecruitInfo.getClan().getMembersCount());
+        writeInt(_pledgeRecruitInfo.getKarma());
+        writeString(_pledgeRecruitInfo.getInformation());
+        writeString(_pledgePlayerRecruitInfo.getMessage());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 30 + (_pledgeRecruitInfo.getClan().getName().length() + _pledgeRecruitInfo.getClanLeaderName().length() + _pledgeRecruitInfo.getInformation().length() + _pledgePlayerRecruitInfo.getMessage().length()) * 2;
-    }
 }

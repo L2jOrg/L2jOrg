@@ -47,18 +47,18 @@ public class EnterWorld extends IClientIncomingPacket {
     private final int[][] tracert = new int[5][4];
 
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
         for (int i = 0; i < 5; i++) {
             for (int o = 0; o < 4; o++) {
-                tracert[i][o] = packet.get();
+                tracert[i][o] = readByte();
             }
         }
-        packet.getInt(); // Unknown Value
-        packet.getInt(); // Unknown Value
-        packet.getInt(); // Unknown Value
-        packet.getInt(); // Unknown Value
-        packet.get(new byte[64]); // Unknown Byte Array
-        packet.getInt(); // Unknown Value
+        readInt(); // Unknown Value
+        readInt(); // Unknown Value
+        readInt(); // Unknown Value
+        readInt(); // Unknown Value
+        readBytes(new byte[64]); // Unknown Byte Array
+        readInt(); // Unknown Value
     }
 
     @Override

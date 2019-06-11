@@ -34,18 +34,18 @@ public final class RequestSellItem extends IClientIncomingPacket {
     private List<UniqueItemHolder> _items = null;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        _listId = packet.getInt();
-        final int size = packet.getInt();
-        if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != packet.remaining())) {
+    public void readImpl() throws InvalidDataPacketException {
+        _listId = readInt();
+        final int size = readInt();
+        if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != available())) {
             throw new InvalidDataPacketException();
         }
 
         _items = new ArrayList<>(size);
         for (int i = 0; i < size; i++) {
-            final int objectId = packet.getInt();
-            final int itemId = packet.getInt();
-            final long count = packet.getLong();
+            final int objectId = readInt();
+            final int itemId = readInt();
+            final long count = readLong();
             if ((objectId < 1) || (itemId < 1) || (count < 1)) {
                 _items = null;
                 throw new InvalidDataPacketException();

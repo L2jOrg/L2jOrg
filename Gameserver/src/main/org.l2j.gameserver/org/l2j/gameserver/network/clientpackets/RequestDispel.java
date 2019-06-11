@@ -19,11 +19,11 @@ public class RequestDispel extends IClientIncomingPacket {
     private int _skillSubLevel;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _objectId = packet.getInt();
-        _skillId = packet.getInt();
-        _skillLevel = packet.getShort();
-        _skillSubLevel = packet.getShort();
+    public void readImpl() {
+        _objectId = readInt();
+        _skillId = readInt();
+        _skillLevel = readShort();
+        _skillSubLevel = readShort();
     }
 
     @Override

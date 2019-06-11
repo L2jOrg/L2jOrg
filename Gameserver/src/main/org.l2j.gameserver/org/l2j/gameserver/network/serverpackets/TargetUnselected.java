@@ -23,18 +23,14 @@ public class TargetUnselected extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.TARGET_UNSELECTED.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.TARGET_UNSELECTED);
 
-        packet.putInt(_targetObjId);
-        packet.putInt(_x);
-        packet.putInt(_y);
-        packet.putInt(_z);
-        packet.putInt(0x00); // ??
+        writeInt(_targetObjId);
+        writeInt(_x);
+        writeInt(_y);
+        writeInt(_z);
+        writeInt(0x00); // ??
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25;
-    }
 }

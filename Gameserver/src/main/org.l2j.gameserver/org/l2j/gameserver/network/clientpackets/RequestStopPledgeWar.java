@@ -15,8 +15,8 @@ public final class RequestStopPledgeWar extends IClientIncomingPacket {
     private String _pledgeName;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _pledgeName = readString(packet);
+    public void readImpl() {
+        _pledgeName = readString();
     }
 
     @Override

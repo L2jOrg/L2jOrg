@@ -35,10 +35,10 @@ public class RequestLuckyGamePlay extends IClientIncomingPacket {
     private int _reading;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        final int type = CommonUtil.constrain(packet.getInt(), 0, LuckyGameType.values().length);
+    public void readImpl() {
+        final int type = CommonUtil.constrain(readInt(), 0, LuckyGameType.values().length);
         _type = LuckyGameType.values()[type];
-        _reading = CommonUtil.constrain(packet.getInt(), 0, 50); // max play is 50
+        _reading = CommonUtil.constrain(readInt(), 0, 50); // max play is 50
     }
 
     @Override

@@ -16,8 +16,8 @@ public class RequestCommissionInfo extends IClientIncomingPacket {
     private int _itemObjectId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _itemObjectId = packet.getInt();
+    public void readImpl() {
+        _itemObjectId = readInt();
     }
 
     @Override

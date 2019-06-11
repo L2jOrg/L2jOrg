@@ -29,24 +29,20 @@ public class ExUserInfoFishing extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_USER_INFO_FISHING.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_USER_INFO_FISHING);
 
-        packet.putInt(_activeChar.getObjectId());
-        packet.put((byte) (_isFishing ? 1 : 0));
+        writeInt(_activeChar.getObjectId());
+        writeByte((byte) (_isFishing ? 1 : 0));
         if (_baitLocation == null) {
-            packet.putInt(0);
-            packet.putInt(0);
-            packet.putInt(0);
+            writeInt(0);
+            writeInt(0);
+            writeInt(0);
         } else {
-            packet.putInt(_baitLocation.getX());
-            packet.putInt(_baitLocation.getY());
-            packet.putInt(_baitLocation.getZ());
+            writeInt(_baitLocation.getX());
+            writeInt(_baitLocation.getY());
+            writeInt(_baitLocation.getZ());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 22;
-    }
 }

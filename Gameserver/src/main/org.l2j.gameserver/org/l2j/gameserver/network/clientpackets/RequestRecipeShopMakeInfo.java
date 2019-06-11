@@ -17,9 +17,9 @@ public final class RequestRecipeShopMakeInfo extends IClientIncomingPacket {
     private int _recipeId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _playerObjectId = packet.getInt();
-        _recipeId = packet.getInt();
+    public void readImpl() {
+        _playerObjectId = readInt();
+        _recipeId = readInt();
     }
 
     @Override

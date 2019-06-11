@@ -16,12 +16,12 @@ public class PlayerAuthRequest extends GameserverReadablePacket {
 	private int authKey;
 
 	@Override
-	protected void readImpl(ByteBuffer buffer) {
-		account = readString(buffer);
-		sessionId = buffer.getInt();
-		serverAccountId = buffer.getInt();
-		authAccountId = buffer.getInt();
-		authKey = buffer.getInt();
+	protected void readImpl() {
+		account = readString();
+		sessionId = readInt();
+		serverAccountId = readInt();
+		authAccountId = readInt();
+		authKey = readInt();
 	}
 
 	@Override

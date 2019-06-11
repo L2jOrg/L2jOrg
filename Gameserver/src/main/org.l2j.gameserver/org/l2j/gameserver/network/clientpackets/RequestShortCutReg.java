@@ -16,17 +16,17 @@ public final class RequestShortCutReg extends IClientIncomingPacket {
     private int _characterType; // 1 - player, 2 - pet
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        final int typeId = packet.getInt();
+    public void readImpl() {
+        final int typeId = readInt();
         _type = ShortcutType.values()[(typeId < 1) || (typeId > 6) ? 0 : typeId];
-        final int slot = packet.getInt();
+        final int slot = readInt();
         _slot = slot % 12;
         _page = slot / 12;
-        packet.get(); // unk 196
-        _id = packet.getInt();
-        _lvl = packet.getShort();
-        _subLvl = packet.getShort(); // Sublevel
-        _characterType = packet.getInt();
+        readByte(); // unk 196
+        _id = readInt();
+        _lvl = readShort();
+        _subLvl = readShort(); // Sublevel
+        _characterType = readInt();
     }
 
     @Override

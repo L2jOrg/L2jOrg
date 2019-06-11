@@ -30,16 +30,12 @@ public final class SetupGauge extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SETUP_GAUGE.writeId(packet);
-        packet.putInt(_charObjId);
-        packet.putInt(_dat1);
-        packet.putInt(_time);
-        packet.putInt(_time2);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SETUP_GAUGE);
+        writeInt(_charObjId);
+        writeInt(_dat1);
+        writeInt(_time);
+        writeInt(_time2);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 21;
-    }
 }

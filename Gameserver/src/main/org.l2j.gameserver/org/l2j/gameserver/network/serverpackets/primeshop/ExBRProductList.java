@@ -25,48 +25,44 @@ public class ExBRProductList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BR_PRODUCT_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BR_PRODUCT_LIST);
 
-        packet.putLong(_activeChar.getAdena()); // Adena
-        packet.putLong(0x00); // Hero coins
-        packet.put((byte) _type); // Type 0 - Home, 1 - History, 2 - Favorites
-        packet.putInt(_primeList.size());
+        writeLong(_activeChar.getAdena()); // Adena
+        writeLong(0x00); // Hero coins
+        writeByte((byte) _type); // Type 0 - Home, 1 - History, 2 - Favorites
+        writeInt(_primeList.size());
         for (PrimeShopProduct brItem : _primeList) {
-            packet.putInt(brItem.getId());
-            packet.put(brItem.getCategory());
-            packet.put(brItem.getPaymentType()); // Payment Type: 0 - Prime Points, 1 - Adena, 2 - Hero Coins
-            packet.putInt(brItem.getPrice());
-            packet.put(brItem.getPanelType()); // Item Panel Type: 0 - None, 1 - Event, 2 - Sale, 3 - New, 4 - Best
-            packet.putInt(brItem.getRecommended()); // Recommended: (bit flags) 1 - Top, 2 - Left, 4 - Right
-            packet.putInt(brItem.getStartSale());
-            packet.putInt(brItem.getEndSale());
-            packet.put(brItem.getDaysOfWeek());
-            packet.put(brItem.getStartHour());
-            packet.put(brItem.getStartMinute());
-            packet.put(brItem.getStopHour());
-            packet.put(brItem.getStopMinute());
-            packet.putInt(brItem.getStock());
-            packet.putInt(brItem.getTotal());
-            packet.put(brItem.getSalePercent());
-            packet.put(brItem.getMinLevel());
-            packet.put(brItem.getMaxLevel());
-            packet.putInt(brItem.getMinBirthday());
-            packet.putInt(brItem.getMaxBirthday());
-            packet.putInt(brItem.getRestrictionDay());
-            packet.putInt(brItem.getAvailableCount());
-            packet.put((byte) brItem.getItems().size());
+            writeInt(brItem.getId());
+            writeByte(brItem.getCategory());
+            writeByte(brItem.getPaymentType()); // Payment Type: 0 - Prime Points, 1 - Adena, 2 - Hero Coins
+            writeInt(brItem.getPrice());
+            writeByte(brItem.getPanelType()); // Item Panel Type: 0 - None, 1 - Event, 2 - Sale, 3 - New, 4 - Best
+            writeInt(brItem.getRecommended()); // Recommended: (bit flags) 1 - Top, 2 - Left, 4 - Right
+            writeInt(brItem.getStartSale());
+            writeInt(brItem.getEndSale());
+            writeByte(brItem.getDaysOfWeek());
+            writeByte(brItem.getStartHour());
+            writeByte(brItem.getStartMinute());
+            writeByte(brItem.getStopHour());
+            writeByte(brItem.getStopMinute());
+            writeInt(brItem.getStock());
+            writeInt(brItem.getTotal());
+            writeByte(brItem.getSalePercent());
+            writeByte(brItem.getMinLevel());
+            writeByte(brItem.getMaxLevel());
+            writeInt(brItem.getMinBirthday());
+            writeInt(brItem.getMaxBirthday());
+            writeInt(brItem.getRestrictionDay());
+            writeInt(brItem.getAvailableCount());
+            writeByte((byte) brItem.getItems().size());
             for (PrimeShopItem item : brItem.getItems()) {
-                packet.putInt(item.getId());
-                packet.putInt((int) item.getCount());
-                packet.putInt(item.getWeight());
-                packet.putInt(item.isTradable());
+                writeInt(item.getId());
+                writeInt((int) item.getCount());
+                writeInt(item.getWeight());
+                writeInt(item.isTradable());
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 26 + _primeList.size() * 56 + _primeList.stream().mapToInt(product -> product.getItems().size()).sum() * 16;
-    }
 }

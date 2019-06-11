@@ -18,17 +18,13 @@ public class ExNevitAdventTimeChange extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_GET_CRYSTALIZING_ESTIMATION.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_GET_CRYSTALIZING_ESTIMATION);
 
         // state 0 - pause 1 - started
-        packet.put((byte) (_paused ? 0x00 : 0x01));
+        writeByte((byte) (_paused ? 0x00 : 0x01));
         // left time in ms max is 16000 its 4m and state is automatically changed to quit
-        packet.putInt(_time);
+        writeInt(_time);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 10;
-    }
 }

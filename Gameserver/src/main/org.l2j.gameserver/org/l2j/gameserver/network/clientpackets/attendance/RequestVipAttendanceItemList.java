@@ -13,7 +13,7 @@ import java.nio.ByteBuffer;
  */
 public class RequestVipAttendanceItemList extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
     }
 
     @Override

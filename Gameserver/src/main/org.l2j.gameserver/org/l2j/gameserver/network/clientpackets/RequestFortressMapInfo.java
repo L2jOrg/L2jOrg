@@ -17,8 +17,8 @@ public class RequestFortressMapInfo extends IClientIncomingPacket {
     private int _fortressId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _fortressId = packet.getInt();
+    public void readImpl() {
+        _fortressId = readInt();
     }
 
     @Override

@@ -10,8 +10,8 @@ public final class RequestRecipeBookOpen extends IClientIncomingPacket {
     private boolean _isDwarvenCraft;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _isDwarvenCraft = (packet.getInt() == 0);
+    public void readImpl() {
+        _isDwarvenCraft = (readInt() == 0);
     }
 
     @Override

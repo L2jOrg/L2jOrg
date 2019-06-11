@@ -30,18 +30,14 @@ public class QuestList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.QUEST_LIST.writeId(packet);
-        packet.putShort((short) _activeQuests.size());
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.QUEST_LIST);
+        writeShort((short) _activeQuests.size());
         for (QuestState qs : _activeQuests) {
-            packet.putInt(qs.getQuest().getId());
-            packet.putInt(qs.getCond());
+            writeInt(qs.getQuest().getId());
+            writeInt(qs.getCond());
         }
-        packet.put(_oneTimeQuestMask);
+        writeBytes(_oneTimeQuestMask);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 6 + _activeQuests.size() * 8;
-    }
 }

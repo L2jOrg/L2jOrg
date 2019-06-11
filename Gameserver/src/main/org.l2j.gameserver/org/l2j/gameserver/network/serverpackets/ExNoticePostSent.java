@@ -22,14 +22,10 @@ public class ExNoticePostSent extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_REPLY_WRITE_POST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_REPLY_WRITE_POST);
 
-        packet.putInt(_showAnim ? 0x01 : 0x00);
+        writeInt(_showAnim ? 0x01 : 0x00);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

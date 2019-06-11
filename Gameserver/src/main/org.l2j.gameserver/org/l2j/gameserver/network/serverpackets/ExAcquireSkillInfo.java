@@ -42,29 +42,25 @@ public class ExAcquireSkillInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_ACQUIRE_SKILL_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_ACQUIRE_SKILL_INFO);
 
-        packet.putInt(_id);
-        packet.putInt(_level);
-        packet.putLong(_spCost);
-        packet.putShort((short) _minLevel);
-        packet.putShort((short) _dualClassLevel);
-        packet.putInt(_itemReq.size());
+        writeInt(_id);
+        writeInt(_level);
+        writeLong(_spCost);
+        writeShort((short) _minLevel);
+        writeShort((short) _dualClassLevel);
+        writeInt(_itemReq.size());
         for (ItemHolder holder : _itemReq) {
-            packet.putInt(holder.getId());
-            packet.putLong(holder.getCount());
+            writeInt(holder.getId());
+            writeLong(holder.getCount());
         }
 
-        packet.putInt(_skillRem.size());
+        writeInt(_skillRem.size());
         for (Skill skill : _skillRem) {
-            packet.putInt(skill.getId());
-            packet.putInt(skill.getLevel());
+            writeInt(skill.getId());
+            writeInt(skill.getLevel());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 33 + _itemReq.size() * 12 + _skillRem.size() * 8;
-    }
 }

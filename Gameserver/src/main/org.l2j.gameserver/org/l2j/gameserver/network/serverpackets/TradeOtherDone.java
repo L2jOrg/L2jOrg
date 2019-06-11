@@ -14,12 +14,8 @@ public class TradeOtherDone extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.TRADE_PRESS_OTHER_OK.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.TRADE_PRESS_OTHER_OK);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

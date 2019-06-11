@@ -17,8 +17,8 @@ public final class RequestPetGetItem extends IClientIncomingPacket {
     private int _objectId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _objectId = packet.getInt();
+    public void readImpl() {
+        _objectId = readInt();
     }
 
     @Override

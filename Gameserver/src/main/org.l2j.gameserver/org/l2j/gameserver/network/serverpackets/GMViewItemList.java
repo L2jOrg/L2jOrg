@@ -30,23 +30,19 @@ public class GMViewItemList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.GM_VIEW_ITEM_LIST.writeId(packet);
-        packet.put((byte) sendType);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.GM_VIEW_ITEM_LIST);
+        writeByte((byte) sendType);
         if (sendType == 2) {
-            packet.putInt(items.size());
+            writeInt(items.size());
         } else {
-            writeString(playerName, packet);
-            packet.putInt(_limit); // inventory limit
+            writeString(playerName);
+            writeInt(_limit); // inventory limit
         }
-        packet.putInt(items.size());
+        writeInt(items.size());
         for (L2ItemInstance item : items) {
-            writeItem(packet, item);
+            writeItem(item);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return  25 + items.size() * 100 + (sendType == 2 ? 4 :  playerName.length() * 2);
-    }
 }

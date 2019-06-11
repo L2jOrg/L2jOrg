@@ -33,14 +33,10 @@ public final class ActionFailed extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.ACTION_FAIL.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.ACTION_FAIL);
 
-        packet.putInt(_castingType); // MagicSkillUse castingType
+        writeInt(_castingType); // MagicSkillUse castingType
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

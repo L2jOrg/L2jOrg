@@ -16,21 +16,17 @@ public class RecipeShopItemInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.RECIPE_SHOP_ITEM_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.RECIPE_SHOP_ITEM_INFO);
 
-        packet.putInt(_player.getObjectId());
-        packet.putInt(_recipeId);
-        packet.putInt((int) _player.getCurrentMp());
-        packet.putInt(_player.getMaxMp());
-        packet.putInt(0xffffffff);
-        packet.putLong(0x00);
-        packet.put((byte) 0x00); // Trigger offering window if 1
-        packet.putLong(0x00);
+        writeInt(_player.getObjectId());
+        writeInt(_recipeId);
+        writeInt((int) _player.getCurrentMp());
+        writeInt(_player.getMaxMp());
+        writeInt(0xffffffff);
+        writeLong(0x00);
+        writeByte((byte) 0x00); // Trigger offering window if 1
+        writeLong(0x00);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 45;
-    }
 }

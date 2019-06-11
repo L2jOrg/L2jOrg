@@ -13,14 +13,10 @@ public final class ChooseInventoryItem extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.CHOOSE_INVENTORY_ITEM.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.CHOOSE_INVENTORY_ITEM);
 
-        packet.putInt(_itemId);
+        writeInt(_itemId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

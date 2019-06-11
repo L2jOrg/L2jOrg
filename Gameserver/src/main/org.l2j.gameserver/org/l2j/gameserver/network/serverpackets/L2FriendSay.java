@@ -22,17 +22,13 @@ public class L2FriendSay extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.L2_FRIEND_SAY.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.L2_FRIEND_SAY);
 
-        packet.putInt(0); // ??
-        writeString(_receiver, packet);
-        writeString(_sender, packet);
-        writeString(_message, packet);
+        writeInt(0); // ??
+        writeString(_receiver);
+        writeString(_sender);
+        writeString(_message);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 15 + (_receiver.length() + _sender.length() + _message.length()) * 2;
-    }
 }

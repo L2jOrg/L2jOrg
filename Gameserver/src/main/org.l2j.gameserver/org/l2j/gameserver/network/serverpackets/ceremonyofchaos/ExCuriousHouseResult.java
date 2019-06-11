@@ -22,24 +22,20 @@ public class ExCuriousHouseResult extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CURIOUS_HOUSE_RESULT.writeId(packet);
-        packet.putInt(_event.getId());
-        packet.putShort((short) _result.ordinal());
-        packet.putInt(CeremonyOfChaosManager.getInstance().getMaxPlayersInArena());
-        packet.putInt(_event.getMembers().size());
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CURIOUS_HOUSE_RESULT);
+        writeInt(_event.getId());
+        writeShort((short) _result.ordinal());
+        writeInt(CeremonyOfChaosManager.getInstance().getMaxPlayersInArena());
+        writeInt(_event.getMembers().size());
         _event.getMembers().values().forEach(m ->
         {
-            packet.putInt(m.getObjectId());
-            packet.putInt(m.getPosition());
-            packet.putInt(m.getClassId());
-            packet.putInt(m.getLifeTime());
-            packet.putInt(m.getScore());
+            writeInt(m.getObjectId());
+            writeInt(m.getPosition());
+            writeInt(m.getClassId());
+            writeInt(m.getLifeTime());
+            writeInt(m.getScore());
         });
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 20 + _event.getMembers().size() * 20;
-    }
 }

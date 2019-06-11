@@ -42,19 +42,15 @@ public class Earthquake extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EARTHQUAKE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EARTHQUAKE);
 
-        packet.putInt(_x);
-        packet.putInt(_y);
-        packet.putInt(_z);
-        packet.putInt(_intensity);
-        packet.putInt(_duration);
-        packet.putInt(0x00); // Unknown
+        writeInt(_x);
+        writeInt(_y);
+        writeInt(_z);
+        writeInt(_intensity);
+        writeInt(_duration);
+        writeInt(0x00); // Unknown
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 31;
-    }
 }

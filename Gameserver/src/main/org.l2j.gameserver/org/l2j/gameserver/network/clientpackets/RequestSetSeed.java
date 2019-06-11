@@ -23,18 +23,18 @@ public class RequestSetSeed extends IClientIncomingPacket {
     private List<SeedProduction> _items;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        _manorId = packet.getInt();
-        final int count = packet.getInt();
-        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.remaining())) {
+    public void readImpl() throws InvalidDataPacketException {
+        _manorId = readInt();
+        final int count = readInt();
+        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
             throw new InvalidDataPacketException();
         }
 
         _items = new ArrayList<>(count);
         for (int i = 0; i < count; i++) {
-            final int itemId = packet.getInt();
-            final long sales = packet.getLong();
-            final long price = packet.getLong();
+            final int itemId = readInt();
+            final long sales = readLong();
+            final long price = readLong();
             if ((itemId < 1) || (sales < 0) || (price < 0)) {
                 _items.clear();
                 throw new InvalidDataPacketException();

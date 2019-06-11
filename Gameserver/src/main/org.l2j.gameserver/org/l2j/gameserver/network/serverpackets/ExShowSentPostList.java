@@ -21,30 +21,26 @@ public class ExShowSentPostList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_SENT_POST_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_SENT_POST_LIST);
 
-        packet.putInt((int) (System.currentTimeMillis() / 1000));
+        writeInt((int) (System.currentTimeMillis() / 1000));
         if ((_outbox != null) && (_outbox.size() > 0)) {
-            packet.putInt(_outbox.size());
+            writeInt(_outbox.size());
             for (Message msg : _outbox) {
-                packet.putInt(msg.getId());
-                writeString(msg.getSubject(), packet);
-                writeString(msg.getReceiverName(), packet);
-                packet.putInt(msg.isLocked() ? 0x01 : 0x00);
-                packet.putInt(msg.getExpirationSeconds());
-                packet.putInt(msg.isUnread() ? 0x01 : 0x00);
-                packet.putInt(0x01);
-                packet.putInt(msg.hasAttachments() ? 0x01 : 0x00);
-                packet.putInt(0x00);
+                writeInt(msg.getId());
+                writeString(msg.getSubject());
+                writeString(msg.getReceiverName());
+                writeInt(msg.isLocked() ? 0x01 : 0x00);
+                writeInt(msg.getExpirationSeconds());
+                writeInt(msg.isUnread() ? 0x01 : 0x00);
+                writeInt(0x01);
+                writeInt(msg.hasAttachments() ? 0x01 : 0x00);
+                writeInt(0x00);
             }
         } else {
-            packet.putInt(0x00);
+            writeInt(0x00);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + (isNullOrEmpty(_outbox) ? 4 : _outbox.size() * 90);
-    }
 }

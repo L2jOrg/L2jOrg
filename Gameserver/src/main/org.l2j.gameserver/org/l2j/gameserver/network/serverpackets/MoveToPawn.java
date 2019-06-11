@@ -31,23 +31,19 @@ public class MoveToPawn extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.MOVE_TO_PAWN.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.MOVE_TO_PAWN);
 
-        packet.putInt(_charObjId);
-        packet.putInt(_targetId);
-        packet.putInt(_distance);
+        writeInt(_charObjId);
+        writeInt(_targetId);
+        writeInt(_distance);
 
-        packet.putInt(_x);
-        packet.putInt(_y);
-        packet.putInt(_z);
-        packet.putInt(_tx);
-        packet.putInt(_ty);
-        packet.putInt(_tz);
+        writeInt(_x);
+        writeInt(_y);
+        writeInt(_z);
+        writeInt(_tx);
+        writeInt(_ty);
+        writeInt(_tz);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 41;
-    }
 }

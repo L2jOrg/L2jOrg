@@ -35,31 +35,27 @@ public class ListPartyWaiting extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.LIST_PARTY_WATING.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.LIST_PARTY_WATING);
 
-        packet.putInt(_size);
-        packet.putInt(_rooms.size());
+        writeInt(_size);
+        writeInt(_rooms.size());
         for (MatchingRoom room : _rooms) {
-            packet.putInt(room.getId());
-            writeString(room.getTitle(), packet);
-            packet.putInt(room.getLocation());
-            packet.putInt(room.getMinLvl());
-            packet.putInt(room.getMaxLvl());
-            packet.putInt(room.getMaxMembers());
-            writeString(room.getLeader().getName(), packet);
-            packet.putInt(room.getMembersCount());
+            writeInt(room.getId());
+            writeString(room.getTitle());
+            writeInt(room.getLocation());
+            writeInt(room.getMinLvl());
+            writeInt(room.getMaxLvl());
+            writeInt(room.getMaxMembers());
+            writeString(room.getLeader().getName());
+            writeInt(room.getMembersCount());
             for (L2PcInstance member : room.getMembers()) {
-                packet.putInt(member.getClassId().getId());
-                writeString(member.getName(), packet);
+                writeInt(member.getClassId().getId());
+                writeString(member.getName());
             }
         }
-        packet.putInt(L2World.getInstance().getPartyCount()); // Helios
-        packet.putInt(L2World.getInstance().getPartyMemberCount()); // Helios
+        writeInt(L2World.getInstance().getPartyCount()); // Helios
+        writeInt(L2World.getInstance().getPartyMemberCount()); // Helios
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 21 + _rooms.size() * 28 + _rooms.stream().mapToInt(room -> room.getTitle().length() + room.getLeader().getName().length() + room.getMembersCount() * 40).sum();
-    }
 }

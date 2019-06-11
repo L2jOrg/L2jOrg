@@ -12,17 +12,13 @@ import java.nio.ByteBuffer;
 public class ExBRGamePoint extends IClientOutgoingPacket {
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BR_GAME_POINT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BR_GAME_POINT);
 
         var player = client.getActiveChar();
-        packet.putInt(player.getObjectId());
-        packet.putLong(client.getCoin());
-        packet.putInt(0x00);
+        writeInt(player.getObjectId());
+        writeLong(client.getCoin());
+        writeInt(0x00);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 21;
-    }
 }

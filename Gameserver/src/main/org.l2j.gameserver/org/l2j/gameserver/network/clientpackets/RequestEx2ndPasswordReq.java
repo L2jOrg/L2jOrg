@@ -17,11 +17,11 @@ public class RequestEx2ndPasswordReq extends IClientIncomingPacket {
     private String _newPassword;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _changePass = packet.get();
-        _password = readString(packet);
+    public void readImpl() {
+        _changePass = readByte();
+        _password = readString();
         if (_changePass == 2) {
-            _newPassword = readString(packet);
+            _newPassword = readString();
         }
     }
 

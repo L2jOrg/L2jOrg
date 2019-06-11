@@ -20,33 +20,29 @@ public class ExShowCastleInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_CASTLE_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_CASTLE_INFO);
 
         final Collection<Castle> castles = CastleManager.getInstance().getCastles();
-        packet.putInt(castles.size());
+        writeInt(castles.size());
         for (Castle castle : castles) {
-            packet.putInt(castle.getResidenceId());
+            writeInt(castle.getResidenceId());
             if (castle.getOwnerId() > 0) {
                 if (ClanTable.getInstance().getClan(castle.getOwnerId()) != null) {
-                    writeString(ClanTable.getInstance().getClan(castle.getOwnerId()).getName(), packet);
+                    writeString(ClanTable.getInstance().getClan(castle.getOwnerId()).getName());
                 } else {
                     LOGGER.warn("Castle owner with no name! Castle: " + castle.getName() + " has an OwnerId = " + castle.getOwnerId() + " who does not have a  name!");
-                    writeString("", packet);
+                    writeString("");
                 }
             } else {
-                writeString("", packet);
+                writeString("");
             }
-            packet.putInt(castle.getTaxPercent(TaxType.BUY));
-            packet.putInt((int) (castle.getSiege().getSiegeDate().getTimeInMillis() / 1000));
+            writeInt(castle.getTaxPercent(TaxType.BUY));
+            writeInt((int) (castle.getSiege().getSiegeDate().getTimeInMillis() / 1000));
 
-            packet.put((byte)( castle.getSiege().isInProgress() ? 0x01 : 0x00)); // Grand Crusade
-            packet.put((byte) castle.getSide().ordinal()); // Grand Crusade
+            writeByte((byte)( castle.getSiege().isInProgress() ? 0x01 : 0x00)); // Grand Crusade
+            writeByte((byte) castle.getSide().ordinal()); // Grand Crusade
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + CastleManager.getInstance().getCastles().size() * 100;
-    }
 }

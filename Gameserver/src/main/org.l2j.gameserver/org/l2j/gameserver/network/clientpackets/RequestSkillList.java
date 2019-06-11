@@ -9,7 +9,7 @@ import java.nio.ByteBuffer;
  */
 public final class RequestSkillList extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
 
     }
 

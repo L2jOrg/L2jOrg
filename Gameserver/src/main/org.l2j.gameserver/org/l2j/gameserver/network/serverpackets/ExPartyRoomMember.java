@@ -26,30 +26,26 @@ public class ExPartyRoomMember extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PARTY_ROOM_MEMBER.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PARTY_ROOM_MEMBER);
 
-        packet.putInt(_type.ordinal());
-        packet.putInt(_room.getMembersCount());
+        writeInt(_type.ordinal());
+        writeInt(_room.getMembersCount());
         for (L2PcInstance member : _room.getMembers()) {
-            packet.putInt(member.getObjectId());
-            writeString(member.getName(), packet);
-            packet.putInt(member.getActiveClass());
-            packet.putInt(member.getLevel());
-            packet.putInt(MapRegionManager.getInstance().getBBs(member.getLocation()));
-            packet.putInt(_room.getMemberType(member).ordinal());
+            writeInt(member.getObjectId());
+            writeString(member.getName());
+            writeInt(member.getActiveClass());
+            writeInt(member.getLevel());
+            writeInt(MapRegionManager.getInstance().getBBs(member.getLocation()));
+            writeInt(_room.getMemberType(member).ordinal());
             final Map<Integer, Long> _instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(member);
-            packet.putInt(_instanceTimes.size());
+            writeInt(_instanceTimes.size());
             for (Entry<Integer, Long> entry : _instanceTimes.entrySet()) {
                 final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
-                packet.putInt(entry.getKey());
-                packet.putInt((int) instanceTime);
+                writeInt(entry.getKey());
+                writeInt((int) instanceTime);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + _room.getMembersCount() * 60 + _room.getMembers().stream().mapToInt(p -> InstanceManager.getInstance().getAllInstanceTimes(p).size() * 4).sum();
-    }
 }

@@ -16,8 +16,8 @@ public class RequestDivideAdenaCancel extends IClientIncomingPacket {
     private boolean _cancel;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _cancel = packet.get() == 0;
+    public void readImpl() {
+        _cancel = readByte() == 0;
     }
 
     @Override

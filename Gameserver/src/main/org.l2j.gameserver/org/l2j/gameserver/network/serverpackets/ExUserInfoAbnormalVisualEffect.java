@@ -19,25 +19,21 @@ public class ExUserInfoAbnormalVisualEffect extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_USER_INFO_ABNORMAL_VISUAL_EFFECT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_USER_INFO_ABNORMAL_VISUAL_EFFECT);
 
-        packet.putInt(_activeChar.getObjectId());
-        packet.putInt(_activeChar.getTransformationId());
+        writeInt(_activeChar.getObjectId());
+        writeInt(_activeChar.getTransformationId());
 
         final Set<AbnormalVisualEffect> abnormalVisualEffects = _activeChar.getEffectList().getCurrentAbnormalVisualEffects();
         final boolean isInvisible = _activeChar.isInvisible();
-        packet.putInt(abnormalVisualEffects.size() + (isInvisible ? 1 : 0));
+        writeInt(abnormalVisualEffects.size() + (isInvisible ? 1 : 0));
         for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects) {
-            packet.putShort((short) abnormalVisualEffect.getClientId());
+            writeShort((short) abnormalVisualEffect.getClientId());
         }
         if (isInvisible) {
-            packet.putShort((short) AbnormalVisualEffect.STEALTH.getClientId());
+            writeShort((short) AbnormalVisualEffect.STEALTH.getClientId());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 19 + 2 *_activeChar.getEffectList().getCurrentAbnormalVisualEffects().size();
-    }
 }

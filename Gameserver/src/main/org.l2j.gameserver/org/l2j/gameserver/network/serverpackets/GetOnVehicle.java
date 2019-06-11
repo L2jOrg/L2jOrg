@@ -26,18 +26,14 @@ public class GetOnVehicle extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.GET_ON_VEHICLE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.GET_ON_VEHICLE);
 
-        packet.putInt(_charObjId);
-        packet.putInt(_boatObjId);
-        packet.putInt(_pos.getX());
-        packet.putInt(_pos.getY());
-        packet.putInt(_pos.getZ());
+        writeInt(_charObjId);
+        writeInt(_boatObjId);
+        writeInt(_pos.getX());
+        writeInt(_pos.getY());
+        writeInt(_pos.getZ());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25;
-    }
 }

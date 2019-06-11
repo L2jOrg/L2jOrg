@@ -41,9 +41,9 @@ public final class UseItem extends IClientIncomingPacket {
     private int _itemId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _objectId = packet.getInt();
-        _ctrlPressed = packet.getInt() != 0;
+    public void readImpl() {
+        _objectId = readInt();
+        _ctrlPressed = readInt() != 0;
     }
 
     @Override

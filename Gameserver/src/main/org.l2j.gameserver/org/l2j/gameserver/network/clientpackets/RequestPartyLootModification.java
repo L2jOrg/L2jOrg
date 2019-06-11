@@ -13,8 +13,8 @@ public class RequestPartyLootModification extends IClientIncomingPacket {
     private int _partyDistributionTypeId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _partyDistributionTypeId = packet.getInt();
+    public void readImpl() {
+        _partyDistributionTypeId = readInt();
     }
 
     @Override

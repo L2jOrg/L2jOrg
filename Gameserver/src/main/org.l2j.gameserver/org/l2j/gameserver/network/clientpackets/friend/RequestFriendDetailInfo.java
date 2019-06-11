@@ -13,8 +13,8 @@ public class RequestFriendDetailInfo extends IClientIncomingPacket {
     private String _name;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _name = readString(packet);
+    public void readImpl() {
+        _name = readString();
     }
 
     @Override

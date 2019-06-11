@@ -18,12 +18,8 @@ public class ExCuriousHouseEnter extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CURIOUS_HOUSE_ENTER.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CURIOUS_HOUSE_ENTER);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

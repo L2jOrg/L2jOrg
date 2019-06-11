@@ -18,16 +18,12 @@ public final class AccountKicked extends L2LoginServerPacket {
 	}
 	
 	@Override
-	protected void writeImpl(AuthClient client, ByteBuffer buffer)
+	protected void writeImpl(AuthClient client)
 	{
-		buffer.put((byte)0x02);
-		buffer.putInt(_reason.getCode());
+		writeByte((byte)0x02);
+		writeInt(_reason.getCode());
 	}
 
-    @Override
-    protected int size(AuthClient client) {
-        return super.size(client) + 5;
-    }
 
     public enum AccountKickedReason  {
         REASON_FALSE_DATA_STEALER_REPORT(0),

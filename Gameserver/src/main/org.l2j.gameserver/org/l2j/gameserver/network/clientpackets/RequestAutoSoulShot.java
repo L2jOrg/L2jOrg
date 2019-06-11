@@ -47,10 +47,10 @@ public final class RequestAutoSoulShot extends IClientIncomingPacket {
     }
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _itemId = packet.getInt();
-        _enable = packet.getInt() == 1;
-        _type = packet.getInt();
+    public void readImpl() {
+        _itemId = readInt();
+        _enable = readInt() == 1;
+        _type = readInt();
     }
 
     @Override

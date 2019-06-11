@@ -3,8 +3,6 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author KenM
  * @author UnAfraid
@@ -36,19 +34,15 @@ public class ExPCCafePointInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PCCAFE_POINT_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PCCAFE_POINT_INFO);
 
-        packet.putInt(_points); // num points
-        packet.putInt(_mAddPoint); // points inc display
-        packet.put((byte) _mPeriodType); // period(0=don't show window,1=acquisition,2=use points)
-        packet.putInt(_remainTime); // period hours left
-        packet.put((byte) _pointType); // points inc display color(0=yellow, 1=cyan-blue, 2=red, all other black)
-        packet.putInt(_time * 3); // value is in seconds * 3
+        writeInt(_points); // num points
+        writeInt(_mAddPoint); // points inc display
+        writeByte((byte) _mPeriodType); // period(0=don't show window,1=acquisition,2=use points)
+        writeInt(_remainTime); // period hours left
+        writeByte((byte) _pointType); // points inc display color(0=yellow, 1=cyan-blue, 2=red, all other black)
+        writeInt(_time * 3); // value is in seconds * 3
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 23;
-    }
 }

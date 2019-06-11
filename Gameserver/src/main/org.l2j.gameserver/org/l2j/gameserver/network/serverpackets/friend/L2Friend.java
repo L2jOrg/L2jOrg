@@ -32,18 +32,14 @@ public class L2Friend extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.L2_FRIEND.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.L2_FRIEND);
 
-        packet.putInt(_action ? 1 : 3); // 1-add 3-remove
-        packet.putInt(_objid);
-        writeString(_name, packet);
-        packet.putInt(_online ? 1 : 0);
-        packet.putInt(_online ? _objid : 0);
+        writeInt(_action ? 1 : 3); // 1-add 3-remove
+        writeInt(_objid);
+        writeString(_name);
+        writeInt(_online ? 1 : 0);
+        writeInt(_online ? _objid : 0);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 23 + _name.length() * 2;
-    }
 }

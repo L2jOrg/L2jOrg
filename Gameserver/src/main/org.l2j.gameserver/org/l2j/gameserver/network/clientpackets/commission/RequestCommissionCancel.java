@@ -11,7 +11,7 @@ import java.nio.ByteBuffer;
  */
 public class RequestCommissionCancel extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
     }
 
     @Override

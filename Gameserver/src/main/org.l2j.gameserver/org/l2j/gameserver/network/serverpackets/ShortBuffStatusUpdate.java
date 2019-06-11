@@ -21,17 +21,13 @@ public class ShortBuffStatusUpdate extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SHORT_BUFF_STATUS_UPDATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SHORT_BUFF_STATUS_UPDATE);
 
-        packet.putInt(_skillId);
-        packet.putShort((short) _skillLvl);
-        packet.putShort((short) _skillSubLvl);
-        packet.putInt(_duration);
+        writeInt(_skillId);
+        writeShort((short) _skillLvl);
+        writeShort((short) _skillSubLvl);
+        writeInt(_duration);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17;
-    }
 }

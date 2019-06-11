@@ -30,34 +30,30 @@ public class ExPledgeRecruitBoardSearch extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PLEDGE_RECRUIT_BOARD_SEARCH.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PLEDGE_RECRUIT_BOARD_SEARCH);
 
-        packet.putInt(_currentPage);
-        packet.putInt(_totalNumberOfPage);
-        packet.putInt(_clanOnCurrentPage);
+        writeInt(_currentPage);
+        writeInt(_totalNumberOfPage);
+        writeInt(_clanOnCurrentPage);
 
         for (int i = _startIndex; i < _endIndex; i++) {
-            packet.putInt(_clanList.get(i).getClanId());
-            packet.putInt(_clanList.get(i).getClan().getAllyId());
+            writeInt(_clanList.get(i).getClanId());
+            writeInt(_clanList.get(i).getClan().getAllyId());
         }
         for (int i = _startIndex; i < _endIndex; i++) {
             final L2Clan clan = _clanList.get(i).getClan();
-            packet.putInt(clan.getCrestId());
-            packet.putInt(clan.getAllyCrestId());
-            writeString(clan.getName(), packet);
-            writeString(clan.getLeaderName(), packet);
-            packet.putInt(clan.getLevel());
-            packet.putInt(clan.getMembersCount());
-            packet.putInt(_clanList.get(i).getKarma());
-            writeString(_clanList.get(i).getInformation(), packet);
-            packet.putInt(_clanList.get(i).getApplicationType()); // Helios
-            packet.putInt(_clanList.get(i).getRecruitType()); // Helios
+            writeInt(clan.getCrestId());
+            writeInt(clan.getAllyCrestId());
+            writeString(clan.getName());
+            writeString(clan.getLeaderName());
+            writeInt(clan.getLevel());
+            writeInt(clan.getMembersCount());
+            writeInt(_clanList.get(i).getKarma());
+            writeString(_clanList.get(i).getInformation());
+            writeInt(_clanList.get(i).getApplicationType()); // Helios
+            writeInt(_clanList.get(i).getRecruitType()); // Helios
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17 + (_endIndex - _startIndex) * 139;
-    }
 }

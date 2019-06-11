@@ -14,18 +14,14 @@ public class ObservationMode extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.OBSERVER_START.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.OBSERVER_START);
 
-        packet.putInt(_loc.getX());
-        packet.putInt(_loc.getY());
-        packet.putInt(_loc.getZ());
-        packet.putInt(0x00); // TODO: Find me
-        packet.putInt(0xc0); // TODO: Find me
+        writeInt(_loc.getX());
+        writeInt(_loc.getY());
+        writeInt(_loc.getZ());
+        writeInt(0x00); // TODO: Find me
+        writeInt(0xc0); // TODO: Find me
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25;
-    }
 }

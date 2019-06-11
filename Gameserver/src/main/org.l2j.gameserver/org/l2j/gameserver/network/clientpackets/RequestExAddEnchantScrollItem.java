@@ -18,9 +18,9 @@ public class RequestExAddEnchantScrollItem extends IClientIncomingPacket {
     private int _enchantObjectId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _scrollObjectId = packet.getInt();
-        _enchantObjectId = packet.getInt();
+    public void readImpl() {
+        _scrollObjectId = readInt();
+        _enchantObjectId = readInt();
     }
 
     @Override

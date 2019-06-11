@@ -18,10 +18,10 @@ public final class RequestExCubeGameChangeTeam extends IClientIncomingPacket {
     private int _team;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
         // client sends -1,0,1,2 for arena parameter
-        _arena = packet.getInt() + 1;
-        _team = packet.getInt();
+        _arena = readInt() + 1;
+        _team = readInt();
     }
 
     @Override

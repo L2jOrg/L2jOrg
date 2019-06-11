@@ -21,20 +21,16 @@ public class ExResponseCommissionBuyItem extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_RESPONSE_COMMISSION_BUY_ITEM.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_RESPONSE_COMMISSION_BUY_ITEM);
 
-        packet.putInt(_commissionItem != null ? 1 : 0);
+        writeInt(_commissionItem != null ? 1 : 0);
         if (_commissionItem != null) {
             final ItemInfo itemInfo = _commissionItem.getItemInfo();
-            packet.putInt(itemInfo.getEnchantLevel());
-            packet.putInt(itemInfo.getItem().getId());
-            packet.putLong(itemInfo.getCount());
+            writeInt(itemInfo.getEnchantLevel());
+            writeInt(itemInfo.getItem().getId());
+            writeLong(itemInfo.getCount());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25;
-    }
 }

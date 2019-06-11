@@ -18,8 +18,8 @@ public final class AnswerTradeRequest extends IClientIncomingPacket {
     private int _response;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _response = packet.getInt();
+    public void readImpl() {
+        _response = readInt();
     }
 
     @Override

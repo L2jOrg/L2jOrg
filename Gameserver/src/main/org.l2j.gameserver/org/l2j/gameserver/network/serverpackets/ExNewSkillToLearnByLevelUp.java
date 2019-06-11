@@ -15,12 +15,8 @@ public class ExNewSkillToLearnByLevelUp extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_NEW_SKILL_TO_LEARN_BY_LEVEL_UP.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_NEW_SKILL_TO_LEARN_BY_LEVEL_UP);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

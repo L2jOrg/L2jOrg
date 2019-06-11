@@ -19,20 +19,16 @@ public class ExPledgeWaitingList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PLEDGE_WAITING_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PLEDGE_WAITING_LIST);
 
-        packet.putInt(pledgePlayerRecruitInfos.size());
+        writeInt(pledgePlayerRecruitInfos.size());
         for (PledgeApplicantInfo recruitInfo : pledgePlayerRecruitInfos.values()) {
-            packet.putInt(recruitInfo.getPlayerId());
-            writeString(recruitInfo.getPlayerName(), packet);
-            packet.putInt(recruitInfo.getClassId());
-            packet.putInt(recruitInfo.getPlayerLvl());
+            writeInt(recruitInfo.getPlayerId());
+            writeString(recruitInfo.getPlayerName());
+            writeInt(recruitInfo.getClassId());
+            writeInt(recruitInfo.getPlayerLvl());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

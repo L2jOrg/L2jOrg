@@ -15,7 +15,7 @@ public final class RequestExFishRanking extends IClientIncomingPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestExFishRanking.class);
 
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
 
     }
 

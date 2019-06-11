@@ -10,9 +10,9 @@ public class RequestTutorialQuestionMark extends IClientIncomingPacket {
     private int _number = 0;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        packet.get(); // index ?
-        _number = packet.getInt();
+    public void readImpl() {
+        readByte(); // index ?
+        _number = readInt();
     }
 
     @Override

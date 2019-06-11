@@ -18,15 +18,11 @@ public class ExRotation extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_ROTATION.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_ROTATION);
 
-        packet.putInt(_charId);
-        packet.putInt(_heading);
+        writeInt(_charId);
+        writeInt(_heading);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13;
-    }
 }

@@ -13,8 +13,8 @@ public class RequestEx2ndPasswordVerify extends IClientIncomingPacket {
     private String _password;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _password = readString(packet);
+    public void readImpl() {
+        _password = readString();
     }
 
     @Override

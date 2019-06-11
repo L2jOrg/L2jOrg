@@ -25,20 +25,16 @@ public class ExManageMpccRoomMember extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_MANAGE_PARTY_ROOM_MEMBER.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_MANAGE_PARTY_ROOM_MEMBER);
 
-        packet.putInt(_type.ordinal());
-        packet.putInt(_activeChar.getObjectId());
-        writeString(_activeChar.getName(), packet);
-        packet.putInt(_activeChar.getClassId().getId());
-        packet.putInt(_activeChar.getLevel());
-        packet.putInt(MapRegionManager.getInstance().getBBs(_activeChar.getLocation()));
-        packet.putInt(_memberType.ordinal());
+        writeInt(_type.ordinal());
+        writeInt(_activeChar.getObjectId());
+        writeString(_activeChar.getName());
+        writeInt(_activeChar.getClassId().getId());
+        writeInt(_activeChar.getLevel());
+        writeInt(MapRegionManager.getInstance().getBBs(_activeChar.getLocation()));
+        writeInt(_memberType.ordinal());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 31 + _activeChar.getName().length() * 2;
-    }
 }

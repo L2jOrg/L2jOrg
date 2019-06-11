@@ -18,26 +18,22 @@ public class AgitDecoInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.AGIT_DECO_INFO.writeId(packet);
-        packet.putInt(_residense.getResidenceId());
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.AGIT_DECO_INFO);
+        writeInt(_residense.getResidenceId());
         for (ResidenceFunctionType type : ResidenceFunctionType.values()) {
             if (type == ResidenceFunctionType.NONE) {
                 continue;
             }
-            packet.put((byte) (_residense.hasFunction(type) ? 0x01 : 0x00));
+            writeByte((byte) (_residense.hasFunction(type) ? 0x01 : 0x00));
         }
 
         // Unknown
-        packet.putInt(0); // TODO: Find me!
-        packet.putInt(0); // TODO: Find me!
-        packet.putInt(0); // TODO: Find me!
-        packet.putInt(0); // TODO: Find me!
-        packet.putInt(0); // TODO: Find me!
+        writeInt(0); // TODO: Find me!
+        writeInt(0); // TODO: Find me!
+        writeInt(0); // TODO: Find me!
+        writeInt(0); // TODO: Find me!
+        writeInt(0); // TODO: Find me!
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 29 + ResidenceFunctionType.values().length;
-    }
 }

@@ -17,11 +17,11 @@ public class RequestSaveKeyMapping extends IClientIncomingPacket {
     private byte[] _uiKeyMapping;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        final int dataSize = packet.getInt();
+    public void readImpl() {
+        final int dataSize = readInt();
         if (dataSize > 0) {
             _uiKeyMapping = new byte[dataSize];
-            packet.get(_uiKeyMapping);
+            readBytes(_uiKeyMapping);
         }
     }
 

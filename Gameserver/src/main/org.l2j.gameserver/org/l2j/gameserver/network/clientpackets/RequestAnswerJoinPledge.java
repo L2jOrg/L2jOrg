@@ -18,8 +18,8 @@ public final class RequestAnswerJoinPledge extends IClientIncomingPacket {
     private int _answer;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _answer = packet.getInt();
+    public void readImpl() {
+        _answer = readInt();
     }
 
     @Override

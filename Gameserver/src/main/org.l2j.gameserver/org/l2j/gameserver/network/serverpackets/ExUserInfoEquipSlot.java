@@ -45,29 +45,25 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_USER_INFO_EQUIP_SLOT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_USER_INFO_EQUIP_SLOT);
 
-        packet.putInt(_activeChar.getObjectId());
-        packet.putShort((short) InventorySlot.values().length); // 152
-        packet.put(_masks);
+        writeInt(_activeChar.getObjectId());
+        writeShort((short) InventorySlot.values().length); // 152
+        writeBytes(_masks);
 
         final PcInventory inventory = _activeChar.getInventory();
         for (InventorySlot slot : InventorySlot.values()) {
             if (containsMask(slot)) {
                     final VariationInstance augment = inventory.getPaperdollAugmentation(slot.getSlot());
-                packet.putShort((short) 22); // 10 + 4 * 3
-                packet.putInt(inventory.getPaperdollObjectId(slot.getSlot()));
-                packet.putInt(inventory.getPaperdollItemId(slot.getSlot()));
-                packet.putInt(augment != null ? augment.getOption1Id() : 0);
-                packet.putInt(augment != null ? augment.getOption2Id() : 0);
-                packet.putInt(0x00); // Visual ID not used on classic
+                writeShort((short) 22); // 10 + 4 * 3
+                writeInt(inventory.getPaperdollObjectId(slot.getSlot()));
+                writeInt(inventory.getPaperdollItemId(slot.getSlot()));
+                writeInt(augment != null ? augment.getOption1Id() : 0);
+                writeInt(augment != null ? augment.getOption2Id() : 0);
+                writeInt(0x00); // Visual ID not used on classic
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 12 + InventorySlot.values().length * 22;
-    }
 }

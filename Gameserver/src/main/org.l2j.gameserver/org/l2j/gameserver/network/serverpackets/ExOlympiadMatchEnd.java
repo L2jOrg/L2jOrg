@@ -15,12 +15,8 @@ public class ExOlympiadMatchEnd extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_OLYMPIAD_MATCH_END.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_OLYMPIAD_MATCH_END);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

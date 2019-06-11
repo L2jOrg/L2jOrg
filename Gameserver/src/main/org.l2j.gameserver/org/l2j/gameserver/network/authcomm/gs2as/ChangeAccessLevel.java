@@ -18,10 +18,10 @@ public class ChangeAccessLevel extends SendablePacket
 		this.banExpire = banExpire;
 	}
 
-	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {
-		buffer.put((byte)0x11);
-		writeString(account, buffer);
-		buffer.putInt(level);
-		buffer.putInt(banExpire);
+	protected void writeImpl(AuthServerClient client) {
+		writeByte((byte)0x11);
+		writeString(account);
+		writeInt(level);
+		writeInt(banExpire);
 	}
 }

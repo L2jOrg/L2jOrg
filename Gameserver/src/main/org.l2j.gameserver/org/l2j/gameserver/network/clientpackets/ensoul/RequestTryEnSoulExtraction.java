@@ -38,10 +38,10 @@ public class RequestTryEnSoulExtraction extends IClientIncomingPacket {
     private int _position;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _itemObjectId = packet.getInt();
-        _type = packet.get();
-        _position = packet.get() - 1;
+    public void readImpl() {
+        _itemObjectId = readInt();
+        _type = readByte();
+        _position = readByte() - 1;
     }
 
     @Override

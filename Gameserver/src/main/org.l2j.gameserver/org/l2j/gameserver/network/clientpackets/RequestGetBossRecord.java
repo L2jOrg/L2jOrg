@@ -16,8 +16,8 @@ public class RequestGetBossRecord extends IClientIncomingPacket {
     private int _bossId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _bossId = packet.getInt();
+    public void readImpl() {
+        _bossId = readInt();
     }
 
     @Override

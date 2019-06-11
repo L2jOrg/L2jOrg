@@ -10,25 +10,25 @@ import java.nio.ByteBuffer;
 
 public class AuthRequest extends SendablePacket {
 
-	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {
+	protected void writeImpl(AuthServerClient client) {
 		var serverSettings = Configurator.getSettings(ServerSettings.class);
-		buffer.put((byte) 0x00);
-		buffer.put((byte) serverSettings.serverId());
-		buffer.put((byte) (serverSettings.acceptAlternativeId() ? 0x01 : 0x00));
-		buffer.putInt(serverSettings.type());
-		buffer.putInt(serverSettings.maximumOnlineUsers());
-		buffer.put(serverSettings.ageLimit());
+		writeByte((byte) 0x00);
+		writeByte((byte) serverSettings.serverId());
+		writeByte((byte) (serverSettings.acceptAlternativeId() ? 0x01 : 0x00));
+		writeInt(serverSettings.type());
+		writeInt(serverSettings.maximumOnlineUsers());
+		writeByte(serverSettings.ageLimit());
 
-		buffer.put((byte) (serverSettings.isShowingBrackets() ? 0x01 : 0x00));
-		buffer.put((byte) (serverSettings.isPvP() ? 0x01 : 0x00));
+		writeByte((byte) (serverSettings.isShowingBrackets() ? 0x01 : 0x00));
+		writeByte((byte) (serverSettings.isPvP() ? 0x01 : 0x00));
 
 		var hosts = Config.GAME_SERVER_HOSTS.size();
-		buffer.putShort((short) hosts);
+		writeShort((short) hosts);
 
 		for (int i = 0; i < Config.GAME_SERVER_HOSTS.size(); i++) {
-			writeString(Config.GAME_SERVER_HOSTS.get(i), buffer);
-			writeString(Config.GAME_SERVER_SUBNETS.get(i), buffer);
+			writeString(Config.GAME_SERVER_HOSTS.get(i));
+			writeString(Config.GAME_SERVER_SUBNETS.get(i));
 		}
-		buffer.putShort(serverSettings.port());
+		writeShort(serverSettings.port());
 	}
 }

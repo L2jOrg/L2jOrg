@@ -21,9 +21,9 @@ public class RequestExRemoveItemAttribute extends IClientIncomingPacket {
     }
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _objectId = packet.getInt();
-        _element = (byte) packet.getInt();
+    public void readImpl() {
+        _objectId = readInt();
+        _element = (byte) readInt();
     }
 
     @Override

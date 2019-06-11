@@ -21,14 +21,14 @@ public final class RequestExSetPledgeCrestLarge extends IClientIncomingPacket {
     private byte[] _data = null;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        _length = packet.getInt();
+    public void readImpl() throws InvalidDataPacketException {
+        _length = readInt();
         if (_length > 2176) {
             throw new InvalidDataPacketException();
         }
 
         _data = new byte[_length];
-        packet.get(_data);
+        readBytes(_data);
     }
 
     @Override

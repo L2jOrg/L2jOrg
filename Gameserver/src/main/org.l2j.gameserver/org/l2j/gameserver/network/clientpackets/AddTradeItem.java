@@ -26,10 +26,10 @@ public final class AddTradeItem extends IClientIncomingPacket {
     private long _count;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _tradeId = packet.getInt();
-        _objectId = packet.getInt();
-        _count = packet.getLong();
+    public void readImpl() {
+        _tradeId = readInt();
+        _objectId = readInt();
+        _count = readLong();
     }
 
     @Override

@@ -25,9 +25,9 @@ public final class RequestJoinParty extends IClientIncomingPacket {
     private int _partyDistributionTypeId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _name = readString(packet);
-        _partyDistributionTypeId = packet.getInt();
+    public void readImpl() {
+        _name = readString();
+        _partyDistributionTypeId = readInt();
     }
 
     private void scheduleDeny(L2PcInstance player) {

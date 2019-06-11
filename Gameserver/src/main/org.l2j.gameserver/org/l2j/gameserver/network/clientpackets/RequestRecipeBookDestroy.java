@@ -11,8 +11,8 @@ public final class RequestRecipeBookDestroy extends IClientIncomingPacket {
     private int _recipeID;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _recipeID = packet.getInt();
+    public void readImpl() {
+        _recipeID = readInt();
     }
 
     @Override

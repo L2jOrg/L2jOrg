@@ -20,18 +20,14 @@ public final class NpcQuestHtmlMessage extends AbstractHtmlPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_NPC_QUEST_HTML_MESSAGE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_NPC_QUEST_HTML_MESSAGE);
 
-        packet.putInt(getNpcObjId());
-        writeString(getHtml(), packet);
-        packet.putInt(_questId);
+        writeInt(getNpcObjId());
+        writeString(getHtml());
+        writeInt(_questId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + getHtml().length() * 2;
-    }
 
     @Override
     public HtmlActionScope getScope() {

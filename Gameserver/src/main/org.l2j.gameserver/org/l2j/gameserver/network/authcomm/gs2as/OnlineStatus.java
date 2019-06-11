@@ -14,8 +14,8 @@ public class OnlineStatus extends SendablePacket
 		_online = online;
 	}
 
-	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {
-		buffer.put((byte)0x01);
-		buffer.put((byte) (_online ? 0x01 : 0x00));
+	protected void writeImpl(AuthServerClient client) {
+		writeByte((byte)0x01);
+		writeByte((byte) (_online ? 0x01 : 0x00));
 	}
 }

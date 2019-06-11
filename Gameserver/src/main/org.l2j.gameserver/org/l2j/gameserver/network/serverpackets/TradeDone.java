@@ -13,14 +13,10 @@ public class TradeDone extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.TRADE_DONE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.TRADE_DONE);
 
-        packet.putInt(_num);
+        writeInt(_num);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

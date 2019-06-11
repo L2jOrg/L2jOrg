@@ -26,19 +26,15 @@ public class ExStopMoveInAirShip extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_STOP_MOVE_IN_AIR_SHIP.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_STOP_MOVE_IN_AIR_SHIP);
 
-        packet.putInt(_activeChar.getObjectId());
-        packet.putInt(_shipObjId);
-        packet.putInt(_loc.getX());
-        packet.putInt(_loc.getY());
-        packet.putInt(_loc.getZ());
-        packet.putInt(_h);
+        writeInt(_activeChar.getObjectId());
+        writeInt(_shipObjId);
+        writeInt(_loc.getX());
+        writeInt(_loc.getY());
+        writeInt(_loc.getZ());
+        writeInt(_h);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 29;
-    }
 }

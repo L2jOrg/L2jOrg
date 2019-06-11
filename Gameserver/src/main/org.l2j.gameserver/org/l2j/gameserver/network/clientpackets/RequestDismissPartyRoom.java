@@ -13,9 +13,9 @@ public class RequestDismissPartyRoom extends IClientIncomingPacket {
     private int _roomid;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _roomid = packet.getInt();
-        packet.getInt();
+    public void readImpl() {
+        _roomid = readInt();
+        readInt();
     }
 
     @Override

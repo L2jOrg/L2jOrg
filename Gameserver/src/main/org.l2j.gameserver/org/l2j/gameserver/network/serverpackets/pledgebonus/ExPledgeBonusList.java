@@ -15,18 +15,14 @@ import java.util.Comparator;
  */
 public class ExPledgeBonusList extends IClientOutgoingPacket {
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PLEDGE_BONUS_LIST.writeId(packet);
-        packet.put((byte) 0x00); // 140
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PLEDGE_BONUS_LIST);
+        writeByte((byte) 0x00); // 140
         ClanRewardData.getInstance().getClanRewardBonuses(ClanRewardType.MEMBERS_ONLINE).stream().sorted(Comparator.comparingInt(ClanRewardBonus::getLevel)).forEach(bonus ->
-                packet.putInt(bonus.getSkillReward().getSkillId()));
-        packet.put((byte) 0x01); // 140
+                writeInt(bonus.getSkillReward().getSkillId()));
+        writeByte((byte) 0x01); // 140
         ClanRewardData.getInstance().getClanRewardBonuses(ClanRewardType.HUNTING_MONSTERS).stream().sorted(Comparator.comparingInt(ClanRewardBonus::getLevel)).forEach(bonus ->
-                packet.putInt(bonus.getItemReward().getId()));
+                writeInt(bonus.getItemReward().getId()));
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 6 + ClanRewardData.getInstance().getClanRewardBonuses().size() * 4;
-    }
 }

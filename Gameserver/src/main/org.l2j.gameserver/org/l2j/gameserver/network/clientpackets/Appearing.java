@@ -17,7 +17,7 @@ import java.nio.ByteBuffer;
  */
 public final class Appearing extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
 
     }
 

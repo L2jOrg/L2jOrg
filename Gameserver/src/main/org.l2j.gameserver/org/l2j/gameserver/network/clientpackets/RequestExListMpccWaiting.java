@@ -14,10 +14,10 @@ public class RequestExListMpccWaiting extends IClientIncomingPacket {
     private int _level;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _page = packet.getInt();
-        _location = packet.getInt();
-        _level = packet.getInt();
+    public void readImpl() {
+        _page = readInt();
+        _location = readInt();
+        _level = readInt();
     }
 
     @Override

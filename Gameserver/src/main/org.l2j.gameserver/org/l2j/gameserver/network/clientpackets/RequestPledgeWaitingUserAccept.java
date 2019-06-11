@@ -20,10 +20,10 @@ public class RequestPledgeWaitingUserAccept extends IClientIncomingPacket {
     private int _clanId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _acceptRequest = packet.getInt() == 1;
-        _playerId = packet.getInt();
-        _clanId = packet.getInt();
+    public void readImpl() {
+        _acceptRequest = readInt() == 1;
+        _playerId = readInt();
+        _clanId = readInt();
     }
 
     @Override

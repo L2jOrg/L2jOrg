@@ -26,12 +26,12 @@ public class ValidatePosition extends IClientIncomingPacket {
     private int _data; // vehicle id
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _x = packet.getInt();
-        _y = packet.getInt();
-        _z = packet.getInt();
-        _heading = packet.getInt();
-        _data = packet.getInt();
+    public void readImpl() {
+        _x = readInt();
+        _y = readInt();
+        _z = readInt();
+        _heading = readInt();
+        _data = readInt();
     }
 
     @Override

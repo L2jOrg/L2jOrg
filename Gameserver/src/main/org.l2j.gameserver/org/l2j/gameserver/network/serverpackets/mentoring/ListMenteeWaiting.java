@@ -29,30 +29,26 @@ public class ListMenteeWaiting extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.LIST_MENTEE_WAITING.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.LIST_MENTEE_WAITING);
 
-        packet.putInt(0x01); // always 1 in retail
+        writeInt(0x01); // always 1 in retail
         if (_possibleCandiates.isEmpty()) {
-            packet.putInt(0x00);
-            packet.putInt(0x00);
+            writeInt(0x00);
+            writeInt(0x00);
             return;
         }
 
-        packet.putInt(_possibleCandiates.size());
-        packet.putInt(_possibleCandiates.size() % PLAYERS_PER_PAGE);
+        writeInt(_possibleCandiates.size());
+        writeInt(_possibleCandiates.size() % PLAYERS_PER_PAGE);
 
         for (L2PcInstance player : _possibleCandiates) {
             if ((1 <= (PLAYERS_PER_PAGE * _page)) && (1 > (PLAYERS_PER_PAGE * (_page - 1)))) {
-                writeString(player.getName(), packet);
-                packet.putInt(player.getActiveClass());
-                packet.putInt(player.getLevel());
+                writeString(player.getName());
+                writeInt(player.getActiveClass());
+                writeInt(player.getLevel());
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17 + _possibleCandiates.size() * 10 + _possibleCandiates.stream().mapToInt(c -> c.getName().length() * 2).sum();
-    }
 }

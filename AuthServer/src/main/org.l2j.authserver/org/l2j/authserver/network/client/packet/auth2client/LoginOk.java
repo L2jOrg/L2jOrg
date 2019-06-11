@@ -11,22 +11,18 @@ import java.nio.ByteBuffer;
 public final class LoginOk extends L2LoginServerPacket {
 
 	@Override
-	protected void writeImpl(AuthClient client, ByteBuffer buffer) {
+	protected void writeImpl(AuthClient client) {
 		var sessionKey = client.getSessionKey();
-		buffer.put((byte)0x03);
-		buffer.putInt(sessionKey.getAuthAccountId());
-		buffer.putInt(sessionKey.getAuthKey());
-		buffer.put(new byte[8]);
-		buffer.putInt(0x000003ea); // billing type: 1002 Free, x200 paid time, x500 flat rate pre paid, others subscription
-		buffer.putInt(0x00); // paid time
-		buffer.putInt(0x00);
-		buffer.putInt(0x00); // warning mask
-		buffer.put(new byte[16]); // forbidden servers
-		buffer.putInt(0x00);
+		writeByte((byte)0x03);
+		writeInt(sessionKey.getAuthAccountId());
+		writeInt(sessionKey.getAuthKey());
+		writeBytes(new byte[8]);
+		writeInt(0x000003ea); // billing type: 1002 Free, x200 paid time, x500 flat rate pre paid, others subscription
+		writeInt(0x00); // paid time
+		writeInt(0x00);
+		writeInt(0x00); // warning mask
+		writeBytes(new byte[16]); // forbidden servers
+		writeInt(0x00);
 	}
 
-	@Override
-	protected int size(AuthClient client) {
-		return super.size(client) + 53;
-	}
 }

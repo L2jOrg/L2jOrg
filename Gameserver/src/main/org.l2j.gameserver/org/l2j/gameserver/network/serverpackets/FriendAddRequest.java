@@ -16,15 +16,11 @@ public class FriendAddRequest extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.FRIEND_ADD_REQUEST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.FRIEND_ADD_REQUEST);
 
-        packet.put((byte) 0x01);
-        writeString(_requestorName, packet);
+        writeByte((byte) 0x01);
+        writeString(_requestorName);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 8 + _requestorName.length() * 2;
-    }
 }

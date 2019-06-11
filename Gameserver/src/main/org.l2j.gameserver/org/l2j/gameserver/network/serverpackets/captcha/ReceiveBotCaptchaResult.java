@@ -20,13 +20,9 @@ public class ReceiveBotCaptchaResult extends IClientOutgoingPacket {
     }
 
     @Override
-    protected void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.RECEIVE_BOT_CAPTCHA_ANSWER_RESULT.writeId(packet);
-        packet.putInt(answer);
+    protected void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.RECEIVE_BOT_CAPTCHA_ANSWER_RESULT);
+        writeInt(answer);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

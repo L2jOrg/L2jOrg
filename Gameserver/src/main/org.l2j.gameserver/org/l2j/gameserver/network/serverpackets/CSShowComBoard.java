@@ -13,15 +13,11 @@ public final class CSShowComBoard extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SHOW_BOARD.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SHOW_BOARD);
 
-        packet.put((byte) 0x01); // c4 1 to show community 00 to hide
-        packet.put(_html);
+        writeByte((byte) 0x01); // c4 1 to show community 00 to hide
+        writeBytes(_html);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13;
-    }
 }

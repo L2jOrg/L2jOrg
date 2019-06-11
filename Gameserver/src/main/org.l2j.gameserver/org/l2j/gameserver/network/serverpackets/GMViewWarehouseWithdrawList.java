@@ -27,19 +27,15 @@ public class GMViewWarehouseWithdrawList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.GM_VIEW_WAREHOUSE_WITHDRAW_LIST.writeId(packet);
-        writeString(playerName, packet);
-        packet.putLong(_money);
-        packet.putShort((short) _items.size());
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.GM_VIEW_WAREHOUSE_WITHDRAW_LIST);
+        writeString(playerName);
+        writeLong(_money);
+        writeShort((short) _items.size());
         for (L2ItemInstance item : _items) {
-            writeItem(packet, item);
-            packet.putInt(item.getObjectId());
+            writeItem(item);
+            writeInt(item.getObjectId());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 21 + playerName.length() * 2 + _items.size() * 104;
-    }
 }

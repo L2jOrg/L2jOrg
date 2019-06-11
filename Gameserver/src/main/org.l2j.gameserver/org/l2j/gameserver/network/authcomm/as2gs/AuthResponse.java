@@ -7,10 +7,6 @@ import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-import java.util.Arrays;
-import java.util.List;
-
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class AuthResponse extends ReceivablePacket {
@@ -21,9 +17,9 @@ public class AuthResponse extends ReceivablePacket {
     private String serverName;
 
     @Override
-    protected void readImpl(ByteBuffer buffer) {
-        serverId = buffer.get();
-        serverName = readString(buffer);
+    protected void readImpl() {
+        serverId = readByte();
+        serverName = readString();
     }
 
     @Override

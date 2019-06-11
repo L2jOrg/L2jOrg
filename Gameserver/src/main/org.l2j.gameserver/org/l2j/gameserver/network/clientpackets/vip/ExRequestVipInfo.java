@@ -8,7 +8,7 @@ import java.nio.ByteBuffer;
 public class ExRequestVipInfo extends IClientIncomingPacket {
 
     @Override
-    protected void readImpl(ByteBuffer packet) throws Exception {
+    protected void readImpl() throws Exception {
         // just trigger packet
     }
 

@@ -36,17 +36,13 @@ public class GameGuardQuery extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.GAME_GUARD_QUERY.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.GAME_GUARD_QUERY);
 
-        packet.putInt(0x27533DD9);
-        packet.putInt(0x2E72A51D);
-        packet.putInt(0x2017038B);
-        packet.putInt(0xC35B1EA3);
+        writeInt(0x27533DD9);
+        writeInt(0x2E72A51D);
+        writeInt(0x2017038B);
+        writeInt(0xC35B1EA3);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 21;
-    }
 }

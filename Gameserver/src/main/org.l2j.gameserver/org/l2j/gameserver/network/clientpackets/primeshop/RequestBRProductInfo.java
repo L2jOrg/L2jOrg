@@ -13,8 +13,8 @@ public final class RequestBRProductInfo extends IClientIncomingPacket {
     private int _brId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _brId = packet.getInt();
+    public void readImpl() {
+        _brId = readInt();
     }
 
     @Override

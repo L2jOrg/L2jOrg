@@ -19,19 +19,15 @@ public class ExGetCrystalizingEstimation extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_GET_CRYSTALIZING_ESTIMATION.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_GET_CRYSTALIZING_ESTIMATION);
 
-        packet.putInt(_items.size());
+        writeInt(_items.size());
         for (ItemChanceHolder holder : _items) {
-            packet.putInt(holder.getId());
-            packet.putLong(holder.getCount());
-            packet.putDouble(holder.getChance());
+            writeInt(holder.getId());
+            writeLong(holder.getCount());
+            writeDouble(holder.getChance());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + _items.size() * 20;
-    }
 }

@@ -27,16 +27,16 @@ public class RequestItemEnsoul extends IClientIncomingPacket {
     private EnsoulItemOption[] _options;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _itemObjectId = packet.getInt();
-        final int options = packet.get();
+    public void readImpl() {
+        _itemObjectId = readInt();
+        final int options = readByte();
         if ((options > 0) && (options <= 3)) {
             _options = new EnsoulItemOption[options];
             for (int i = 0; i < options; i++) {
-                final int type = packet.get(); // 1 = normal ; 2 = mystic
-                final int position = packet.get();
-                final int soulCrystalObjectId = packet.getInt();
-                final int soulCrystalOption = packet.getInt();
+                final int type = readByte(); // 1 = normal ; 2 = mystic
+                final int position = readByte();
+                final int soulCrystalObjectId = readInt();
+                final int soulCrystalOption = readInt();
                 if ((position > 0) && (position < 3) && ((type == 1) || (type == 2))) {
                     _options[i] = new EnsoulItemOption(type, position, soulCrystalObjectId, soulCrystalOption);
                 }

@@ -13,14 +13,10 @@ public final class MagicSkillCanceld extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.MAGIC_SKILL_CANCELED.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.MAGIC_SKILL_CANCELED);
 
-        packet.putInt(_objectId);
+        writeInt(_objectId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

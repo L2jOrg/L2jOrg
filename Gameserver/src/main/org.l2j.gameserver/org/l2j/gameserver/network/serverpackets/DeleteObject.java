@@ -18,15 +18,11 @@ public final class DeleteObject extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.DELETE_OBJECT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.DELETE_OBJECT);
 
-        packet.putInt(_objectId);
-        packet.put((byte) 0x00); // c2
+        writeInt(_objectId);
+        writeByte((byte) 0x00); // c2
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 10;
-    }
 }

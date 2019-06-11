@@ -23,10 +23,10 @@ public class RequestPledgeWaitingApply extends IClientIncomingPacket {
     private String _message;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _karma = packet.getInt();
-        _clanId = packet.getInt();
-        _message = readString(packet);
+    public void readImpl() {
+        _karma = readInt();
+        _clanId = readInt();
+        _message = readString();
     }
 
     @Override

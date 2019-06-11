@@ -20,17 +20,13 @@ public class ExChangeAttributeItemList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CHANGE_ATTRIBUTE_ITEM_LIST.writeId(packet);
-        packet.putInt(_itemId);
-        packet.putInt(_itemsList.length);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CHANGE_ATTRIBUTE_ITEM_LIST);
+        writeInt(_itemId);
+        writeInt(_itemsList.length);
         for (ItemInfo item : _itemsList) {
-            writeItem(packet, item);
+            writeItem(item);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + _itemsList.length * 100;
-    }
 }

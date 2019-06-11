@@ -4,11 +4,8 @@ import org.l2j.gameserver.model.actor.L2Playable;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
-import java.nio.ByteBuffer;
 import java.util.LinkedList;
 import java.util.List;
-
-import static java.util.Objects.nonNull;
 
 /**
  * @author Luca Baldi
@@ -72,33 +69,29 @@ public final class RelationChanged extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.RELATION_CHANGED.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.RELATION_CHANGED);
 
-        packet.put(_mask);
+        writeByte(_mask);
         if (_multi == null) {
-            writeRelation(packet, _singled);
+            writeRelation(_singled);
         } else {
-            packet.putShort((short) _multi.size());
+            writeShort((short) _multi.size());
             for (Relation r : _multi) {
-                writeRelation(packet, r);
+                writeRelation(r);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 6 + (nonNull(_multi) ? _multi.size() * 14 + 2 : 14);
-    }
 
-    private void writeRelation(ByteBuffer packet, Relation relation) {
-        packet.putInt(relation._objId);
+    private void writeRelation(Relation relation) {
+        writeInt(relation._objId);
 
         if ((_mask & SEND_DEFAULT) == 0) {
-            packet.putInt(relation._relation);
-            packet.put((byte) relation._autoAttackable);
-            packet.putInt(relation._reputation);
-            packet.put((byte) relation._pvpFlag);
+            writeInt(relation._relation);
+            writeByte((byte) relation._autoAttackable);
+            writeInt(relation._reputation);
+            writeByte((byte) relation._pvpFlag);
         }
     }
 

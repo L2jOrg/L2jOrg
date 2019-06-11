@@ -19,11 +19,11 @@ public final class RequestPledgeReorganizeMember extends IClientIncomingPacket {
     private String _selectedMember;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _isMemberSelected = packet.getInt();
-        _memberName = readString(packet);
-        _newPledgeType = packet.getInt();
-        _selectedMember = readString(packet);
+    public void readImpl() {
+        _isMemberSelected = readInt();
+        _memberName = readString();
+        _newPledgeType = readInt();
+        _selectedMember = readString();
     }
 
     @Override

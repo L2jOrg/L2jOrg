@@ -29,21 +29,17 @@ public class MoveToLocationInVehicle extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.MOVE_TO_LOCATION_IN_VEHICLE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.MOVE_TO_LOCATION_IN_VEHICLE);
 
-        packet.putInt(_charObjId);
-        packet.putInt(_boatId);
-        packet.putInt(_destination.getX());
-        packet.putInt(_destination.getY());
-        packet.putInt(_destination.getZ());
-        packet.putInt(_origin.getX());
-        packet.putInt(_origin.getY());
-        packet.putInt(_origin.getZ());
+        writeInt(_charObjId);
+        writeInt(_boatId);
+        writeInt(_destination.getX());
+        writeInt(_destination.getY());
+        writeInt(_destination.getZ());
+        writeInt(_origin.getX());
+        writeInt(_origin.getY());
+        writeInt(_origin.getZ());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 37;
-    }
 }

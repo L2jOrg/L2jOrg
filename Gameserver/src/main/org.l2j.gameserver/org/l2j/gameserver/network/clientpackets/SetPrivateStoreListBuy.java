@@ -28,15 +28,15 @@ public final class SetPrivateStoreListBuy extends IClientIncomingPacket {
     private TradeItem[] _items = null;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        final int count = packet.getInt();
+    public void readImpl() throws InvalidDataPacketException {
+        final int count = readInt();
         if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET)) {
             throw new InvalidDataPacketException();
         }
 
         _items = new TradeItem[count];
         for (int i = 0; i < count; i++) {
-            int itemId = packet.getInt();
+            int itemId = readInt();
 
             final L2Item template = ItemTable.getInstance().getTemplate(itemId);
             if (template == null) {
@@ -44,36 +44,36 @@ public final class SetPrivateStoreListBuy extends IClientIncomingPacket {
                 throw new InvalidDataPacketException();
             }
 
-            final int enchantLevel = packet.getShort();
-            packet.getShort(); // TODO analyse this
+            final int enchantLevel = readShort();
+            readShort(); // TODO analyse this
 
-            long cnt = packet.getLong();
-            long price = packet.getLong();
+            long cnt = readLong();
+            long price = readLong();
 
             if ((itemId < 1) || (cnt < 1) || (price < 0)) {
                 _items = null;
                 throw new InvalidDataPacketException();
             }
 
-            final int option1 = packet.getInt();
-            final int option2 = packet.getInt();
-            final short attackAttributeId = packet.getShort();
-            final int attackAttributeValue = packet.getShort();
-            final int defenceFire = packet.getShort();
-            final int defenceWater = packet.getShort();
-            final int defenceWind = packet.getShort();
-            final int defenceEarth = packet.getShort();
-            final int defenceHoly = packet.getShort();
-            final int defenceDark = packet.getShort();
-            packet.getInt(); // Visual ID is not used on Classic
+            final int option1 = readInt();
+            final int option2 = readInt();
+            final short attackAttributeId = readShort();
+            final int attackAttributeValue = readShort();
+            final int defenceFire = readShort();
+            final int defenceWater = readShort();
+            final int defenceWind = readShort();
+            final int defenceEarth = readShort();
+            final int defenceHoly = readShort();
+            final int defenceDark = readShort();
+            readInt(); // Visual ID is not used on Classic
 
-            final EnsoulOption[] soulCrystalOptions = new EnsoulOption[packet.get()];
+            final EnsoulOption[] soulCrystalOptions = new EnsoulOption[readByte()];
             for (int k = 0; k < soulCrystalOptions.length; k++) {
-                soulCrystalOptions[k] = EnsoulData.getInstance().getOption(packet.getInt());
+                soulCrystalOptions[k] = EnsoulData.getInstance().getOption(readInt());
             }
-            final EnsoulOption[] soulCrystalSpecialOptions = new EnsoulOption[packet.get()];
+            final EnsoulOption[] soulCrystalSpecialOptions = new EnsoulOption[readByte()];
             for (int k = 0; k < soulCrystalSpecialOptions.length; k++) {
-                soulCrystalSpecialOptions[k] = EnsoulData.getInstance().getOption(packet.getInt());
+                soulCrystalSpecialOptions[k] = EnsoulData.getInstance().getOption(readInt());
             }
 
             final TradeItem item = new TradeItem(template, cnt, price);

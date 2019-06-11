@@ -15,8 +15,8 @@ public final class RequestSiegeAttackerList extends IClientIncomingPacket {
     private int _castleId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _castleId = packet.getInt();
+    public void readImpl() {
+        _castleId = readInt();
     }
 
     @Override

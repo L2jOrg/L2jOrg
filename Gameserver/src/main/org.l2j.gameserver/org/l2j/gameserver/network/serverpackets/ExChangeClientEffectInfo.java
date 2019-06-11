@@ -34,16 +34,12 @@ public class ExChangeClientEffectInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CHANGE_CLIENT_EFFECT_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CHANGE_CLIENT_EFFECT_INFO);
 
-        packet.putInt(_type);
-        packet.putInt(_key);
-        packet.putInt(_value);
+        writeInt(_type);
+        writeInt(_key);
+        writeInt(_value);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17;
-    }
 }

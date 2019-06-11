@@ -18,61 +18,57 @@ public final class PartySmallWindowAll extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PARTY_SMALL_WINDOW_ALL.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PARTY_SMALL_WINDOW_ALL);
 
-        packet.putInt(_party.getLeaderObjectId());
-        packet.put((byte) _party.getDistributionType().getId());
-        packet.put((byte) (_party.getMemberCount() - 1));
+        writeInt(_party.getLeaderObjectId());
+        writeByte((byte) _party.getDistributionType().getId());
+        writeByte((byte) (_party.getMemberCount() - 1));
 
         for (L2PcInstance member : _party.getMembers()) {
             if ((member != null) && (member != _exclude)) {
-                packet.putInt(member.getObjectId());
-                writeString(member.getName(), packet);
+                writeInt(member.getObjectId());
+                writeString(member.getName());
 
-                packet.putInt((int) member.getCurrentCp()); // c4
-                packet.putInt(member.getMaxCp()); // c4
+                writeInt((int) member.getCurrentCp()); // c4
+                writeInt(member.getMaxCp()); // c4
 
-                packet.putInt((int) member.getCurrentHp());
-                packet.putInt(member.getMaxHp());
-                packet.putInt((int) member.getCurrentMp());
-                packet.putInt(member.getMaxMp());
-                packet.putInt(member.getVitalityPoints());
-                packet.put((byte) member.getLevel());
-                packet.putShort((short) member.getClassId().getId());
-                packet.put((byte) 0x01); // Unk
-                packet.putShort((short) member.getRace().ordinal());
+                writeInt((int) member.getCurrentHp());
+                writeInt(member.getMaxHp());
+                writeInt((int) member.getCurrentMp());
+                writeInt(member.getMaxMp());
+                writeInt(member.getVitalityPoints());
+                writeByte((byte) member.getLevel());
+                writeShort((short) member.getClassId().getId());
+                writeByte((byte) 0x01); // Unk
+                writeShort((short) member.getRace().ordinal());
                 final L2Summon pet = member.getPet();
-                packet.putInt(member.getServitors().size() + (pet != null ? 1 : 0)); // Summon size, one only atm
+                writeInt(member.getServitors().size() + (pet != null ? 1 : 0)); // Summon size, one only atm
                 if (pet != null) {
-                    packet.putInt(pet.getObjectId());
-                    packet.putInt(pet.getId() + 1000000);
-                    packet.put((byte) pet.getSummonType());
-                    writeString(pet.getName(), packet);
-                    packet.putInt((int) pet.getCurrentHp());
-                    packet.putInt(pet.getMaxHp());
-                    packet.putInt((int) pet.getCurrentMp());
-                    packet.putInt(pet.getMaxMp());
-                    packet.put((byte) pet.getLevel());
+                    writeInt(pet.getObjectId());
+                    writeInt(pet.getId() + 1000000);
+                    writeByte((byte) pet.getSummonType());
+                    writeString(pet.getName());
+                    writeInt((int) pet.getCurrentHp());
+                    writeInt(pet.getMaxHp());
+                    writeInt((int) pet.getCurrentMp());
+                    writeInt(pet.getMaxMp());
+                    writeByte((byte) pet.getLevel());
                 }
                 member.getServitors().values().forEach(s ->
                 {
-                    packet.putInt(s.getObjectId());
-                    packet.putInt(s.getId() + 1000000);
-                    packet.put((byte) s.getSummonType());
-                    writeString(s.getName(), packet);
-                    packet.putInt((int) s.getCurrentHp());
-                    packet.putInt(s.getMaxHp());
-                    packet.putInt((int) s.getCurrentMp());
-                    packet.putInt(s.getMaxMp());
-                    packet.put((byte) s.getLevel());
+                    writeInt(s.getObjectId());
+                    writeInt(s.getId() + 1000000);
+                    writeByte((byte) s.getSummonType());
+                    writeString(s.getName());
+                    writeInt((int) s.getCurrentHp());
+                    writeInt(s.getMaxHp());
+                    writeInt((int) s.getCurrentMp());
+                    writeInt(s.getMaxMp());
+                    writeByte((byte) s.getLevel());
                 });
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 50 + _party.getMemberCount() * 72 + _party.getMembers().stream().mapToInt(member -> member.getName().length()*2 +  member.getServitors().size() * 60).sum();
-    }
 }

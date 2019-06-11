@@ -19,24 +19,20 @@ public final class KeyPacket extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.VERSION_CHECK.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.VERSION_CHECK);
 
-        packet.put((byte) _result); // 0 - wrong protocol, 1 - protocol ok
+        writeByte((byte) _result); // 0 - wrong protocol, 1 - protocol ok
         for (int i = 0; i < 8; i++) {
-            packet.put(_key[i]); // key
+            writeByte(_key[i]); // key
         }
         var serverSettings = getSettings(ServerSettings.class);
-        packet.putInt(0x01); // ciphen enabled
-        packet.putInt(serverSettings.serverId());
-        packet.put((byte) 0x00); // merged server
-        packet.putInt(0x00); // obfuscation key
-        packet.put((byte) ((serverSettings.type() & CLASSIC.getMask()) != 0 ? 0x01 : 0x00)); // isClassic
-        packet.put((byte) 0x00); // queued ?
+        writeInt(0x01); // ciphen enabled
+        writeInt(serverSettings.serverId());
+        writeByte((byte) 0x00); // merged server
+        writeInt(0x00); // obfuscation key
+        writeByte((byte) ((serverSettings.type() & CLASSIC.getMask()) != 0 ? 0x01 : 0x00)); // isClassic
+        writeByte((byte) 0x00); // queued ?
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 26;
-    }
 }

@@ -141,17 +141,13 @@ public final class ExBasicActionList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BASIC_ACTION_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BASIC_ACTION_LIST);
 
-        packet.putInt(_actionIds.length);
+        writeInt(_actionIds.length);
         for (int _actionId : _actionIds) {
-            packet.putInt(_actionId);
+            writeInt(_actionId);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + _actionIds.length * 4;
-    }
 }

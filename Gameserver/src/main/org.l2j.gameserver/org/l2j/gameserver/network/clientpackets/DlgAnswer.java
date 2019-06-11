@@ -21,10 +21,10 @@ public final class DlgAnswer extends IClientIncomingPacket {
     private int _requesterId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _messageId = packet.getInt();
-        _answer = packet.getInt();
-        _requesterId = packet.getInt();
+    public void readImpl() {
+        _messageId = readInt();
+        _answer = readInt();
+        _requesterId = readInt();
     }
 
     @Override

@@ -19,21 +19,17 @@ public class NpcInfoAbnormalVisualEffect extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.NPC_INFO_ABNORMAL_VISUAL_EFFECT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.NPC_INFO_ABNORMAL_VISUAL_EFFECT);
 
-        packet.putInt(_npc.getObjectId());
-        packet.putInt(_npc.getTransformationDisplayId());
+        writeInt(_npc.getObjectId());
+        writeInt(_npc.getTransformationDisplayId());
 
         final Set<AbnormalVisualEffect> abnormalVisualEffects = _npc.getEffectList().getCurrentAbnormalVisualEffects();
-        packet.putInt(abnormalVisualEffects.size());
+        writeInt(abnormalVisualEffects.size());
         for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects) {
-            packet.putShort((short) abnormalVisualEffect.getClientId());
+            writeShort((short) abnormalVisualEffect.getClientId());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17 + _npc.getEffectList().getCurrentAbnormalVisualEffects().size() * 2;
-    }
 }

@@ -4,6 +4,7 @@ import io.github.joealisson.mmocore.WritablePacket;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.OutgoingPackets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,9 +14,8 @@ import java.nio.ByteBuffer;
  * @author KenM
  */
 public abstract class IClientOutgoingPacket extends WritablePacket<L2GameClient> {
-    private static Logger LOG_PACKET_INFO = LoggerFactory.getLogger("packet.info");
-    static Logger LOGGER = LoggerFactory.getLogger(IClientOutgoingPacket.class);
 
+    static Logger LOGGER = LoggerFactory.getLogger(IClientOutgoingPacket.class);
 
     int[] PAPERDOLL_ORDER = new int[] {
         Inventory.PAPERDOLL_UNDER,
@@ -105,10 +105,9 @@ public abstract class IClientOutgoingPacket extends WritablePacket<L2GameClient>
     }
 
     @Override
-    protected boolean write(L2GameClient client, ByteBuffer packet) {
+    protected boolean write(L2GameClient client) {
         try {
-            writeImpl(client, packet);
-            LOG_PACKET_INFO.debug("{} : {}", toString(), packet.position());
+            writeImpl(client);
             return true;
         } catch (Exception e) {
             LOGGER.error("Error writing packet {} to client {}", this, client);
@@ -121,14 +120,21 @@ public abstract class IClientOutgoingPacket extends WritablePacket<L2GameClient>
 
     }
 
-    public void writeOptionalD(ByteBuffer packet, int value) {
+    public void writeOptionalD(int value) {
         if (value >= Short.MAX_VALUE) {
-            packet.putShort(Short.MAX_VALUE);
-            packet.putInt(value);
+            writeShort(Short.MAX_VALUE);
+            writeInt(value);
         } else {
-            packet.putShort((short) value);
+            writeShort((short) value);
         }
     }
 
-    protected abstract void writeImpl(L2GameClient client, ByteBuffer packet) throws Exception;
+    protected void writeId(OutgoingPackets packet) {
+        writeByte(packet.getId1());
+        if(packet.getId2() > 0) {
+            writeShort(packet.getId2());
+        }
+    }
+
+    protected abstract void writeImpl(L2GameClient client) throws Exception;
 }

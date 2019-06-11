@@ -19,17 +19,13 @@ public class ExAskModifyPartyLooting extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_ASK_MODIFY_PARTY_LOOTING.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_ASK_MODIFY_PARTY_LOOTING);
 
-        writeString(_requestor, packet);
-        packet.putInt(_partyDistributionType.getId());
+        writeString(_requestor);
+        writeInt(_partyDistributionType.getId());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 11 + _requestor.length() * 2;
-    }
 }
 
 

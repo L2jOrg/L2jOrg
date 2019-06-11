@@ -12,12 +12,8 @@ public class ExNotifyPremiumItem extends IClientOutgoingPacket {
     public static final ExNotifyPremiumItem STATIC_PACKET = new ExNotifyPremiumItem();
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_NOTIFY_PREMIUM_ITEM.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_NOTIFY_PREMIUM_ITEM);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

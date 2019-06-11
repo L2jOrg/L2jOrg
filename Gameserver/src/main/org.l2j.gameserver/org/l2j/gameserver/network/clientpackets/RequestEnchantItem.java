@@ -34,9 +34,9 @@ public final class RequestEnchantItem extends IClientIncomingPacket {
     private int _supportId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _objectId = packet.getInt();
-        _supportId = packet.getInt();
+    public void readImpl() {
+        _objectId = readInt();
+        _supportId = readInt();
     }
 
     @Override

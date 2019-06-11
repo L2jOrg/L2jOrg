@@ -16,14 +16,10 @@ public class ShowXMasSeal extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SHOW_XMAS_SEAL.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SHOW_XMAS_SEAL);
 
-        packet.putInt(_item);
+        writeInt(_item);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

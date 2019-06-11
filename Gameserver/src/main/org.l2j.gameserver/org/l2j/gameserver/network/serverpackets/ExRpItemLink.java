@@ -17,14 +17,10 @@ public final class ExRpItemLink extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_RP_ITEM_LINK.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_RP_ITEM_LINK);
 
-        writeItem(packet, _item);
+        writeItem(_item);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 105;
-    }
 }

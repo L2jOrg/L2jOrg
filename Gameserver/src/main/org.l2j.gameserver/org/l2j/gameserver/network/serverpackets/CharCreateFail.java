@@ -23,14 +23,10 @@ public class CharCreateFail extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.CHARACTER_CREATE_FAIL.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.CHARACTER_CREATE_FAIL);
 
-        packet.putInt(_error);
+        writeInt(_error);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

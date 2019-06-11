@@ -12,8 +12,8 @@ public final class SnoopQuit extends IClientIncomingPacket {
     private int _snoopID;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _snoopID = packet.getInt();
+    public void readImpl() {
+        _snoopID = readInt();
     }
 
     @Override

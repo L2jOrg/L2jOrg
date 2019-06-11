@@ -16,9 +16,9 @@ public final class RequestBidItemAuction extends IClientIncomingPacket {
     private long _bid;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _instanceId = packet.getInt();
-        _bid = packet.getLong();
+    public void readImpl() {
+        _instanceId = readInt();
+        _bid = readLong();
     }
 
     @Override

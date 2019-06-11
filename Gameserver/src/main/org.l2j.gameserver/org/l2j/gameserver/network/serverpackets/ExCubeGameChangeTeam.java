@@ -25,18 +25,14 @@ public class ExCubeGameChangeTeam extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BLOCK_UP_SET_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BLOCK_UP_SET_LIST);
 
-        packet.putInt(0x05);
+        writeInt(0x05);
 
-        packet.putInt(_player.getObjectId());
-        packet.putInt(_fromRedTeam ? 0x01 : 0x00);
-        packet.putInt(_fromRedTeam ? 0x00 : 0x01);
+        writeInt(_player.getObjectId());
+        writeInt(_fromRedTeam ? 0x01 : 0x00);
+        writeInt(_fromRedTeam ? 0x00 : 0x01);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 21;
-    }
 }

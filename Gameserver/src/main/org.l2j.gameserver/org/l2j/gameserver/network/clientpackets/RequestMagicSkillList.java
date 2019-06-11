@@ -17,10 +17,10 @@ public class RequestMagicSkillList extends IClientIncomingPacket {
     private int _unk;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _objectId = packet.getInt();
-        _charId = packet.getInt();
-        _unk = packet.getInt();
+    public void readImpl() {
+        _objectId = readInt();
+        _charId = readInt();
+        _unk = readInt();
     }
 
     @Override

@@ -13,10 +13,10 @@ public final class RequestAllyCrest extends IClientIncomingPacket {
     private int _crestId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _crestId = packet.getInt();
-        packet.getInt(); // Ally ID
-        packet.getInt(); // Server ID
+    public void readImpl() {
+        _crestId = readInt();
+        readInt(); // Ally ID
+        readInt(); // Server ID
     }
 
     @Override

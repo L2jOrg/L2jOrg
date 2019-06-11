@@ -17,13 +17,9 @@ public class ExShowQuestInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_QUEST_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_QUEST_INFO);
 
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

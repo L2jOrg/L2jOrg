@@ -24,9 +24,9 @@ public final class RequestGiveItemToPet extends IClientIncomingPacket {
     private long _amount;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _objectId = packet.getInt();
-        _amount = packet.getLong();
+    public void readImpl() {
+        _objectId = readInt();
+        _amount = readLong();
     }
 
     @Override

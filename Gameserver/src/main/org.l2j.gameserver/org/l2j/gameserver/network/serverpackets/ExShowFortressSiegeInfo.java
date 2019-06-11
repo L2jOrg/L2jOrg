@@ -29,29 +29,29 @@ public class ExShowFortressSiegeInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_FORTRESS_SIEGE_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_FORTRESS_SIEGE_INFO);
 
-        packet.putInt(_fortId); // Fortress Id
-        packet.putInt(_size); // Total Barracks Count
+        writeInt(_fortId); // Fortress Id
+        writeInt(_size); // Total Barracks Count
         if (_csize > 0) {
             switch (_csize) {
                 case 3: {
                     switch (_csize2) {
                         case 0: {
-                            packet.putInt(0x03);
+                            writeInt(0x03);
                             break;
                         }
                         case 1: {
-                            packet.putInt(0x02);
+                            writeInt(0x02);
                             break;
                         }
                         case 2: {
-                            packet.putInt(0x01);
+                            writeInt(0x01);
                             break;
                         }
                         case 3: {
-                            packet.putInt(0x00);
+                            writeInt(0x00);
                             break;
                         }
                     }
@@ -62,23 +62,23 @@ public class ExShowFortressSiegeInfo extends IClientOutgoingPacket {
                     switch (_csize2) {
                         // TODO: once control room supported, update packet.putInt(0x0x) to support 5th room
                         case 0: {
-                            packet.putInt(0x05);
+                            writeInt(0x05);
                             break;
                         }
                         case 1: {
-                            packet.putInt(0x04);
+                            writeInt(0x04);
                             break;
                         }
                         case 2: {
-                            packet.putInt(0x03);
+                            writeInt(0x03);
                             break;
                         }
                         case 3: {
-                            packet.putInt(0x02);
+                            writeInt(0x02);
                             break;
                         }
                         case 4: {
-                            packet.putInt(0x01);
+                            writeInt(0x01);
                             break;
                         }
                     }
@@ -87,13 +87,9 @@ public class ExShowFortressSiegeInfo extends IClientOutgoingPacket {
             }
         } else {
             for (int i = 0; i < _size; i++) {
-                packet.putInt(0x00);
+                writeInt(0x00);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17 + _size * 4;
-    }
 }

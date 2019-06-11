@@ -5,8 +5,6 @@ import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
 import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
 
-import java.nio.ByteBuffer;
-
 public class ServerStatus extends SendablePacket {
 
     public static final int SERVER_LIST_STATUS = 0x01;
@@ -24,9 +22,9 @@ public class ServerStatus extends SendablePacket {
     }
 
     @Override
-    protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {
-        buffer.put((byte) 0x06);
-        buffer.putInt(status.size());
-        status.entrySet().forEach(entry -> buffer.putInt(entry.getKey()).putInt(entry.getValue()));
+    protected void writeImpl(AuthServerClient client) {
+        writeByte((byte) 0x06);
+        writeInt(status.size());
+        status.entrySet().forEach(entry ->  { writeInt(entry.getKey()); writeInt(entry.getValue()); });
     }
 }

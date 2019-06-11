@@ -17,19 +17,15 @@ public class ValidateLocation extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.VALIDATE_LOCATION.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.VALIDATE_LOCATION);
 
-        packet.putInt(_charObjId);
-        packet.putInt(_loc.getX());
-        packet.putInt(_loc.getY());
-        packet.putInt(_loc.getZ());
-        packet.putInt(_loc.getHeading());
-        packet.put((byte) 0xFF); // TODO: Find me!
+        writeInt(_charObjId);
+        writeInt(_loc.getX());
+        writeInt(_loc.getY());
+        writeInt(_loc.getZ());
+        writeInt(_loc.getHeading());
+        writeByte((byte) 0xFF); // TODO: Find me!
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 26;
-    }
 }

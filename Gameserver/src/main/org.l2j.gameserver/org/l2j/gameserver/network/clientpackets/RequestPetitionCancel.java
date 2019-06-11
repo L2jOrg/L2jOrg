@@ -26,8 +26,8 @@ public final class RequestPetitionCancel extends IClientIncomingPacket {
     // private int _unknown;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        // _unknown = packet.getInt(); This is pretty much a trigger packet.
+    public void readImpl() {
+        // _unknown = readInt(); This is pretty much a trigger packet.
     }
 
     @Override

@@ -20,15 +20,11 @@ public class ChairSit extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.CHAIR_SIT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.CHAIR_SIT);
 
-        packet.putInt(_activeChar.getObjectId());
-        packet.putInt(_staticObjectId);
+        writeInt(_activeChar.getObjectId());
+        writeInt(_staticObjectId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13;
-    }
 }

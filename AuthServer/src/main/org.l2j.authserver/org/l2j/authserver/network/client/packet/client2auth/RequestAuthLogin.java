@@ -7,8 +7,6 @@ import org.slf4j.LoggerFactory;
 
 import javax.crypto.Cipher;
 
-import java.nio.ByteBuffer;
-
 import static org.l2j.authserver.network.client.packet.auth2client.LoginFail.LoginFailReason.REASON_SYSTEM_ERROR;
 
 /**
@@ -21,26 +19,26 @@ public class RequestAuthLogin extends L2LoginClientPacket {
     private boolean useNewAuth;
 
     @Override
-    public boolean readImpl(ByteBuffer buffer) {
-        if (buffer.remaining() >= 256) {
+    public boolean readImpl() {
+        if (available() >= 256) {
             useNewAuth = true;
-            buffer.get(userData);
-            buffer.get(authData);
+            readBytes(userData);
+            readBytes(authData);
             return true;
         }
 
-        if(buffer.remaining() >= 128) {
-            buffer.get(userData);
-            buffer.getInt(); // sessionId
-            buffer.getInt(); // GG
-            buffer.getInt(); // GG
-            buffer.getInt(); // GG
-            buffer.getInt(); // GG
-            buffer.getInt(); // Game Id ?
-            buffer.getShort();
-            buffer.get();
+        if(available() >= 128) {
+            readBytes(userData);
+            readInt(); // sessionId
+            readInt(); // GG
+            readInt(); // GG
+            readInt(); // GG
+            readInt(); // GG
+            readInt(); // Game Id ?
+            readShort();
+            readByte();
             byte[] unk = new byte[16];
-            buffer.get(unk);
+            readBytes(unk);
             return true;
         }
 

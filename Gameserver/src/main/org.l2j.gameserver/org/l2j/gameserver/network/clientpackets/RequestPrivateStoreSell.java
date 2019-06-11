@@ -24,31 +24,31 @@ public final class RequestPrivateStoreSell extends IClientIncomingPacket {
     private ItemRequest[] _items = null;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        _storePlayerId = packet.getInt();
-        int itemsCount = packet.getInt();
+    public void readImpl() throws InvalidDataPacketException {
+        _storePlayerId = readInt();
+        int itemsCount = readInt();
         if ((itemsCount <= 0) || (itemsCount > Config.MAX_ITEM_IN_PACKET)) {
             throw new InvalidDataPacketException();
         }
         _items = new ItemRequest[itemsCount];
 
         for (int i = 0; i < itemsCount; i++) {
-            final int slot = packet.getInt();
-            final int itemId = packet.getInt();
-            packet.getShort(); // TODO analyse this
-            packet.getShort(); // TODO analyse this
-            final long count = packet.getLong();
-            final long price = packet.getLong();
-            packet.getInt(); // visual id
-            packet.getInt(); // option 1
-            packet.getInt(); // option 2
-            int soulCrystals = packet.get();
+            final int slot = readInt();
+            final int itemId = readInt();
+            readShort(); // TODO analyse this
+            readShort(); // TODO analyse this
+            final long count = readLong();
+            final long price = readLong();
+            readInt(); // visual id
+            readInt(); // option 1
+            readInt(); // option 2
+            int soulCrystals = readByte();
             for (int s = 0; s < soulCrystals; s++) {
-                packet.getInt(); // soul crystal option
+                readInt(); // soul crystal option
             }
-            int soulCrystals2 = packet.get();
+            int soulCrystals2 = readByte();
             for (int s = 0; s < soulCrystals2; s++) {
-                packet.getInt(); // sa effect
+                readInt(); // sa effect
             }
             if (/* (slot < 1) || */ (itemId < 1) || (count < 1) || (price < 0)) {
                 _items = null;

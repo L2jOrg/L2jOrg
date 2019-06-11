@@ -19,12 +19,8 @@ public class TutorialCloseHtml extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.TUTORIAL_CLOSE_HTML.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.TUTORIAL_CLOSE_HTML);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

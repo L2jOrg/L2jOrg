@@ -15,12 +15,8 @@ public class ExClosePartyRoom extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CLOSE_PARTY_ROOM.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CLOSE_PARTY_ROOM);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

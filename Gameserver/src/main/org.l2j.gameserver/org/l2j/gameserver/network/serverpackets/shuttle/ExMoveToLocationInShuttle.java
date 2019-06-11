@@ -32,21 +32,17 @@ public class ExMoveToLocationInShuttle extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_MOVE_TO_LOCATION_IN_SUTTLE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_MOVE_TO_LOCATION_IN_SUTTLE);
 
-        packet.putInt(_charObjId);
-        packet.putInt(_airShipId);
-        packet.putInt(_targetX);
-        packet.putInt(_targetY);
-        packet.putInt(_targetZ);
-        packet.putInt(_fromX);
-        packet.putInt(_fromY);
-        packet.putInt(_fromZ);
+        writeInt(_charObjId);
+        writeInt(_airShipId);
+        writeInt(_targetX);
+        writeInt(_targetY);
+        writeInt(_targetZ);
+        writeInt(_fromX);
+        writeInt(_fromY);
+        writeInt(_fromZ);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 37;
-    }
 }

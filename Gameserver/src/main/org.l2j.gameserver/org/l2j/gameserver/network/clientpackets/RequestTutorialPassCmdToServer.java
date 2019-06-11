@@ -13,8 +13,8 @@ public class RequestTutorialPassCmdToServer extends IClientIncomingPacket {
     private String _bypass = null;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _bypass = readString(packet);
+    public void readImpl() {
+        _bypass = readString();
     }
 
     @Override

@@ -22,13 +22,13 @@ public class RequestPledgeRecruitBoardAccess extends IClientIncomingPacket {
     private int _recruitingType;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _applyType = packet.getInt();
-        _karma = packet.getInt();
-        _information = readString(packet);
-        _datailedInformation = readString(packet);
-        _applicationType = packet.getInt(); // 0 - Allow, 1 - Public
-        _recruitingType = packet.getInt(); // 0 - Main clan
+    public void readImpl() {
+        _applyType = readInt();
+        _karma = readInt();
+        _information = readString();
+        _datailedInformation = readString();
+        _applicationType = readInt(); // 0 - Allow, 1 - Public
+        _recruitingType = readInt(); // 0 - Main clan
     }
 
     @Override

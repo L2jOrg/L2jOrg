@@ -34,20 +34,16 @@ public class L2FriendStatus extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.FRIEND_STATUS.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.FRIEND_STATUS);
 
-        packet.putInt(_type);
-        writeString(_name, packet);
+        writeInt(_type);
+        writeString(_name);
         switch (_type) {
-            case MODE_OFFLINE -> packet.putInt(_objectId);
-            case MODE_LEVEL -> packet.putInt(_level);
-            case MODE_CLASS -> packet.putInt(_classId);
+            case MODE_OFFLINE -> writeInt(_objectId);
+            case MODE_LEVEL -> writeInt(_level);
+            case MODE_CLASS -> writeInt(_classId);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 15 + _name.length() * 2;
-    }
 }

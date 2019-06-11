@@ -38,29 +38,25 @@ public class ExListPartyMatchingWaitingRoom extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_LIST_PARTY_MATCHING_WAITING_ROOM.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_LIST_PARTY_MATCHING_WAITING_ROOM);
 
-        packet.putInt(_size);
-        packet.putInt(_players.size());
+        writeInt(_size);
+        writeInt(_players.size());
         for (L2PcInstance player : _players) {
-            writeString(player.getName(), packet);
-            packet.putInt(player.getClassId().getId());
-            packet.putInt(player.getLevel());
+            writeString(player.getName());
+            writeInt(player.getClassId().getId());
+            writeInt(player.getLevel());
             final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
-            packet.putInt((instance != null) && (instance.getTemplateId() >= 0) ? instance.getTemplateId() : -1);
+            writeInt((instance != null) && (instance.getTemplateId() >= 0) ? instance.getTemplateId() : -1);
             final Map<Integer, Long> _instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player);
-            packet.putInt(_instanceTimes.size());
+            writeInt(_instanceTimes.size());
             for (Entry<Integer, Long> entry : _instanceTimes.entrySet()) {
                 final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
-                packet.putInt(entry.getKey());
-                packet.putInt((int) instanceTime);
+                writeInt(entry.getKey());
+                writeInt((int) instanceTime);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + _players.size() * 50 + _players.stream().mapToInt(p -> InstanceManager.getInstance().getAllInstanceTimes(p).size() * 4).sum();
-    }
 }

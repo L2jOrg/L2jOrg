@@ -43,28 +43,24 @@ public final class PledgeShowMemberListUpdate extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_UPDATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_UPDATE);
 
-        writeString(_name, packet);
-        packet.putInt(_level);
-        packet.putInt(_classId);
-        packet.putInt(_sex);
-        packet.putInt(_race);
+        writeString(_name);
+        writeInt(_level);
+        writeInt(_classId);
+        writeInt(_sex);
+        writeInt(_race);
         if (_onlineStatus > 0) {
-            packet.putInt(_objectId);
-            packet.putInt(_pledgeType);
+            writeInt(_objectId);
+            writeInt(_pledgeType);
         } else {
             // when going offline send as 0
-            packet.putInt(0);
-            packet.putInt(0);
+            writeInt(0);
+            writeInt(0);
         }
-        packet.putInt(_hasSponsor);
-        packet.put((byte) _onlineStatus);
+        writeInt(_hasSponsor);
+        writeByte((byte) _onlineStatus);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 36 + _name.length() * 2;
-    }
 }

@@ -18,9 +18,9 @@ public class RequestPledgeSignInForOpenJoiningMethod extends IClientIncomingPack
     private int _clanId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _clanId = packet.getInt();
-        packet.getInt();
+    public void readImpl() {
+        _clanId = readInt();
+        readInt();
     }
 
     @Override

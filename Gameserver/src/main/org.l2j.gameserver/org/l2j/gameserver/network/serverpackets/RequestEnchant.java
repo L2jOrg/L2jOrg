@@ -16,14 +16,10 @@ public class RequestEnchant extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PRIVATE_STORE_WHOLE_MSG.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PRIVATE_STORE_WHOLE_MSG);
 
-        packet.putInt(_result);
+        writeInt(_result);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

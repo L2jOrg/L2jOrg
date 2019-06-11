@@ -17,9 +17,9 @@ public class ChangeAllowedHwid extends SendablePacket
 	}
 
 	@Override
-	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {
-		buffer.put((byte)0x09);
-		writeString(account, buffer);
-		writeString(hwid, buffer);
+	protected void writeImpl(AuthServerClient client) {
+		writeByte((byte)0x09);
+		writeString(account);
+		writeString(hwid);
 	}
 }

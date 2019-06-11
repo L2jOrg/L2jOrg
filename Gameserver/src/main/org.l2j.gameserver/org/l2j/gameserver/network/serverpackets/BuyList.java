@@ -25,24 +25,20 @@ public final class BuyList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BUY_SELL_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BUY_SELL_LIST);
 
-        packet.putInt(0x00); // Type BUY
-        packet.putLong(_money); // current money
-        packet.putInt(_listId);
-        packet.putInt(_inventorySlots);
-        packet.putShort((short) _list.size());
+        writeInt(0x00); // Type BUY
+        writeLong(_money); // current money
+        writeInt(_listId);
+        writeInt(_inventorySlots);
+        writeShort((short) _list.size());
         for (Product product : _list) {
             if ((product.getCount() > 0) || !product.hasLimitedStock()) {
-                writeItem(packet, product);
-                packet.putLong((long) (product.getPrice() * (1.0 + _castleTaxRate + product.getBaseTaxRate())));
+                writeItem(product);
+                writeLong((long) (product.getPrice() * (1.0 + _castleTaxRate + product.getBaseTaxRate())));
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 27 + _list.size() * 108;
-    }
 }

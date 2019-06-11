@@ -34,27 +34,23 @@ public final class ExItemAuctionInfoPacket extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_ITEM_AUCTION_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_ITEM_AUCTION_INFO);
 
-        packet.put((byte) (_refresh ? 0x00 : 0x01));
-        packet.putInt(_currentAuction.getInstanceId());
+        writeByte((byte) (_refresh ? 0x00 : 0x01));
+        writeInt(_currentAuction.getInstanceId());
 
         final ItemAuctionBid highestBid = _currentAuction.getHighestBid();
-        packet.putLong(highestBid != null ? highestBid.getLastBid() : _currentAuction.getAuctionInitBid());
+        writeLong(highestBid != null ? highestBid.getLastBid() : _currentAuction.getAuctionInitBid());
 
-        packet.putInt(_timeRemaining);
-        writeItem(packet, _currentAuction.getItemInfo());
+        writeInt(_timeRemaining);
+        writeItem(_currentAuction.getItemInfo());
 
         if (_nextAuction != null) {
-            packet.putLong(_nextAuction.getAuctionInitBid());
-            packet.putInt((int) (_nextAuction.getStartingTime() / 1000)); // unix time in seconds
-            writeItem(packet, _nextAuction.getItemInfo());
+            writeLong(_nextAuction.getAuctionInitBid());
+            writeInt((int) (_nextAuction.getStartingTime() / 1000)); // unix time in seconds
+            writeItem(_nextAuction.getItemInfo());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 240;
-    }
 }

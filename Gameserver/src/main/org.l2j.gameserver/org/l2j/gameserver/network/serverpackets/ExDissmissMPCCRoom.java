@@ -17,12 +17,8 @@ public class ExDissmissMPCCRoom extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_DISSMISS_MPCC_ROOM.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_DISSMISS_MPCC_ROOM);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

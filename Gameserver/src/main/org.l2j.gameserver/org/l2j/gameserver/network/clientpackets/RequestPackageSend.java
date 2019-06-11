@@ -31,18 +31,18 @@ public class RequestPackageSend extends IClientIncomingPacket {
     private int _objectId;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        _objectId = packet.getInt();
+    public void readImpl() throws InvalidDataPacketException {
+        _objectId = readInt();
 
-        final int count = packet.getInt();
-        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.remaining())) {
+        final int count = readInt();
+        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
             throw new InvalidDataPacketException();
         }
 
         _items = new ItemHolder[count];
         for (int i = 0; i < count; i++) {
-            final int objId = packet.getInt();
-            final long cnt = packet.getLong();
+            final int objId = readInt();
+            final long cnt = readLong();
             if ((objId < 1) || (cnt < 0)) {
                 _items = null;
                 throw new InvalidDataPacketException();

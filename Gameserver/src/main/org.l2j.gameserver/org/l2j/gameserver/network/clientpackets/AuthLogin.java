@@ -26,12 +26,12 @@ public final class AuthLogin extends IClientIncomingPacket {
     private int authKey;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        account = readString(packet).toLowerCase();
-        accountId = packet.getInt();
-        sessionId = packet.getInt();
-        authAccountId = packet.getInt();
-        authKey = packet.getInt();
+    public void readImpl() {
+        account = readString().toLowerCase();
+        accountId = readInt();
+        sessionId = readInt();
+        authAccountId = readInt();
+        authKey = readInt();
         // packet.ge
     }
 

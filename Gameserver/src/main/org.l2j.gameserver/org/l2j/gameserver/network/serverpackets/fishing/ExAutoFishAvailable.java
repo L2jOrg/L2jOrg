@@ -20,13 +20,9 @@ public class ExAutoFishAvailable extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_AUTO_FISH_AVAILABLE.writeId(packet);
-        packet.put((byte) (_available ? 1 : 0));
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_AUTO_FISH_AVAILABLE);
+        writeByte((byte) (_available ? 1 : 0));
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 6;
-    }
 }

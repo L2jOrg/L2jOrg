@@ -24,10 +24,10 @@ public final class RequestGetItemFromPet extends IClientIncomingPacket {
     private int _unknown;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _objectId = packet.getInt();
-        _amount = packet.getLong();
-        _unknown = packet.getInt(); // = 0 for most trades
+    public void readImpl() {
+        _objectId = readInt();
+        _amount = readLong();
+        _unknown = readInt(); // = 0 for most trades
     }
 
     @Override

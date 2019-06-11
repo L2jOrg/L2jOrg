@@ -15,8 +15,8 @@ public final class RequestTargetCanceld extends IClientIncomingPacket {
     private int _unselect;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _unselect = packet.getShort();
+    public void readImpl() {
+        _unselect = readShort();
     }
 
     @Override

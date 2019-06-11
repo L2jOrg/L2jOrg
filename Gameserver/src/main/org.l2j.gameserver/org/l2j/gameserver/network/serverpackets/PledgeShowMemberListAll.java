@@ -43,56 +43,52 @@ public class PledgeShowMemberListAll extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_ALL.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_ALL);
 
-        packet.putInt(_isSubPledge ? 0x00 : 0x01);
-        packet.putInt(_clan.getId());
-        packet.putInt(getSettings(ServerSettings.class).serverId());
-        packet.putInt(_pledgeId);
-        writeString(_name, packet);
-        writeString(_leaderName, packet);
+        writeInt(_isSubPledge ? 0x00 : 0x01);
+        writeInt(_clan.getId());
+        writeInt(getSettings(ServerSettings.class).serverId());
+        writeInt(_pledgeId);
+        writeString(_name);
+        writeString(_leaderName);
 
-        packet.putInt(_clan.getCrestId()); // crest id .. is used again
-        packet.putInt(_clan.getLevel());
-        packet.putInt(_clan.getCastleId());
-        packet.putInt(0x00);
-        packet.putInt(_clan.getHideoutId());
-        packet.putInt(_clan.getFortId());
-        packet.putInt(_clan.getRank());
-        packet.putInt(_clan.getReputationScore());
-        packet.putInt(0x00); // 0
-        packet.putInt(0x00); // 0
-        packet.putInt(_clan.getAllyId());
-        writeString(_clan.getAllyName(), packet);
-        packet.putInt(_clan.getAllyCrestId());
-        packet.putInt(_clan.isAtWar() ? 1 : 0); // new c3
-        packet.putInt(0x00); // Territory castle ID
-        packet.putInt(_clan.getSubPledgeMembersCount(_pledgeId));
+        writeInt(_clan.getCrestId()); // crest id .. is used again
+        writeInt(_clan.getLevel());
+        writeInt(_clan.getCastleId());
+        writeInt(0x00);
+        writeInt(_clan.getHideoutId());
+        writeInt(_clan.getFortId());
+        writeInt(_clan.getRank());
+        writeInt(_clan.getReputationScore());
+        writeInt(0x00); // 0
+        writeInt(0x00); // 0
+        writeInt(_clan.getAllyId());
+        writeString(_clan.getAllyName());
+        writeInt(_clan.getAllyCrestId());
+        writeInt(_clan.isAtWar() ? 1 : 0); // new c3
+        writeInt(0x00); // Territory castle ID
+        writeInt(_clan.getSubPledgeMembersCount(_pledgeId));
 
         for (L2ClanMember m : _members) {
             if (m.getPledgeType() != _pledgeId) {
                 continue;
             }
-            writeString(m.getName(), packet);
-            packet.putInt(m.getLevel());
-            packet.putInt(m.getClassId());
+            writeString(m.getName());
+            writeInt(m.getLevel());
+            writeInt(m.getClassId());
             final L2PcInstance player = m.getPlayerInstance();
             if (player != null) {
-                packet.putInt(player.getAppearance().getSex() ? 1 : 0); // no visible effect
-                packet.putInt(player.getRace().ordinal()); // packet.putInt(1);
+                writeInt(player.getAppearance().getSex() ? 1 : 0); // no visible effect
+                writeInt(player.getRace().ordinal()); // packet.putInt(1);
             } else {
-                packet.putInt(0x01); // no visible effect
-                packet.putInt(0x01); // packet.putInt(1);
+                writeInt(0x01); // no visible effect
+                writeInt(0x01); // packet.putInt(1);
             }
-            packet.putInt(m.isOnline() ? m.getObjectId() : 0); // objectId = online 0 = offline
-            packet.putInt(m.getSponsor() != 0 ? 1 : 0);
-            packet.put((byte) m.getOnlineStatus());
+            writeInt(m.isOnline() ? m.getObjectId() : 0); // objectId = online 0 = offline
+            writeInt(m.getSponsor() != 0 ? 1 : 0);
+            writeByte((byte) m.getOnlineStatus());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 82 + (_name.length() + _leaderName.length()) * 2 + _members.size() * 70;
-    }
 }

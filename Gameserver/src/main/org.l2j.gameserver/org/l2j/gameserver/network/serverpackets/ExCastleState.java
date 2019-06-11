@@ -20,15 +20,11 @@ public class ExCastleState extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CASTLE_STATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CASTLE_STATE);
 
-        packet.putInt(_castleId);
-        packet.putInt(_castleSide.ordinal());
+        writeInt(_castleId);
+        writeInt(_castleSide.ordinal());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13;
-    }
 }

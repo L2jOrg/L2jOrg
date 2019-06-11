@@ -18,23 +18,19 @@ public class ExPledgeRecruitInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PLEDGE_RECRUIT_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PLEDGE_RECRUIT_INFO);
 
         final L2Clan.SubPledge[] subPledges = _clan.getAllSubPledges();
-        writeString(_clan.getName(), packet);
-        writeString(_clan.getLeaderName(), packet);
-        packet.putInt(_clan.getLevel());
-        packet.putInt(_clan.getMembersCount());
-        packet.putInt(subPledges.length);
+        writeString(_clan.getName());
+        writeString(_clan.getLeaderName());
+        writeInt(_clan.getLevel());
+        writeInt(_clan.getMembersCount());
+        writeInt(subPledges.length);
         for (L2Clan.SubPledge subPledge : subPledges) {
-            packet.putInt(subPledge.getId());
-            writeString(subPledge.getName(), packet);
+            writeInt(subPledge.getId());
+            writeString(subPledge.getName());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 23 + (_clan.getLeaderName().length() + _clan.getName().length()) * 2;
-    }
 }

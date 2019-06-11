@@ -13,14 +13,10 @@ public class PledgeShowMemberListDelete extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_DELETE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_DELETE);
 
-        writeString(_player, packet);
+        writeString(_player);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 7 +_player.length() * 2;
-    }
 }

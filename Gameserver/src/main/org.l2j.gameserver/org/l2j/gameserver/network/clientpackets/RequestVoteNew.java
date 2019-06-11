@@ -13,8 +13,8 @@ public final class RequestVoteNew extends IClientIncomingPacket {
     private int _targetId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _targetId = packet.getInt();
+    public void readImpl() {
+        _targetId = readInt();
     }
 
     @Override

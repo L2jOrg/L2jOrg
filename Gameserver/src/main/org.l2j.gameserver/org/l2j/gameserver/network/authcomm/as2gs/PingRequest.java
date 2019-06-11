@@ -9,7 +9,7 @@ import java.nio.ByteBuffer;
 public class PingRequest extends ReceivablePacket {
 
 	@Override
-	public void readImpl(ByteBuffer buffer) {
+	public void readImpl() {
 
 	}
 

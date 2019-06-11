@@ -23,9 +23,9 @@ public final class RequestBRBuyProduct extends RequestBuyProduct {
     private int count;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        productId = packet.getInt();
-        count = packet.getInt();
+    public void readImpl() {
+        productId = readInt();
+        count = readInt();
     }
 
     @Override

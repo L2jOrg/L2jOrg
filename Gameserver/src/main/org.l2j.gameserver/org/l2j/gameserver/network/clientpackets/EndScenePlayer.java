@@ -15,8 +15,8 @@ public final class EndScenePlayer extends IClientIncomingPacket {
     private int _movieId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _movieId = packet.getInt();
+    public void readImpl() {
+        _movieId = readInt();
     }
 
     @Override

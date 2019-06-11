@@ -18,11 +18,11 @@ public final class RequestGetOffVehicle extends IClientIncomingPacket {
     private int _z;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _boatId = packet.getInt();
-        _x = packet.getInt();
-        _y = packet.getInt();
-        _z = packet.getInt();
+    public void readImpl() {
+        _boatId = readInt();
+        _x = readInt();
+        _y = readInt();
+        _z = readInt();
     }
 
     @Override

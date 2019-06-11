@@ -24,9 +24,9 @@ public final class RequestSendFriendMsg extends IClientIncomingPacket {
     private String _reciever;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _message = readString(packet);
-        _reciever = readString(packet);
+    public void readImpl() {
+        _message = readString();
+        _reciever = readString();
     }
 
     @Override

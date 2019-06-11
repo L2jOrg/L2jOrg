@@ -17,18 +17,14 @@ public class VehicleCheckLocation extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.VEHICLE_CHECK_LOCATION.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.VEHICLE_CHECK_LOCATION);
 
-        packet.putInt(_boat.getObjectId());
-        packet.putInt(_boat.getX());
-        packet.putInt(_boat.getY());
-        packet.putInt(_boat.getZ());
-        packet.putInt(_boat.getHeading());
+        writeInt(_boat.getObjectId());
+        writeInt(_boat.getX());
+        writeInt(_boat.getY());
+        writeInt(_boat.getZ());
+        writeInt(_boat.getHeading());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25;
-    }
 }

@@ -16,14 +16,10 @@ public class ExChangeToAwakenedClass extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CHANGE_TO_AWAKENED_CLASS.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CHANGE_TO_AWAKENED_CLASS);
 
-        packet.putInt(_classId);
+        writeInt(_classId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

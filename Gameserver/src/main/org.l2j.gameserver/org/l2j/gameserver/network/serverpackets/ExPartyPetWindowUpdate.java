@@ -17,21 +17,17 @@ public class ExPartyPetWindowUpdate extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PARTY_PET_WINDOW_UPDATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PARTY_PET_WINDOW_UPDATE);
 
-        packet.putInt(_summon.getObjectId());
-        packet.putInt(_summon.getTemplate().getDisplayId() + 1000000);
-        packet.put((byte) _summon.getSummonType());
-        packet.putInt(_summon.getOwner().getObjectId());
-        packet.putInt((int) _summon.getCurrentHp());
-        packet.putInt(_summon.getMaxHp());
-        packet.putInt((int) _summon.getCurrentMp());
-        packet.putInt(_summon.getMaxMp());
+        writeInt(_summon.getObjectId());
+        writeInt(_summon.getTemplate().getDisplayId() + 1000000);
+        writeByte((byte) _summon.getSummonType());
+        writeInt(_summon.getOwner().getObjectId());
+        writeInt((int) _summon.getCurrentHp());
+        writeInt(_summon.getMaxHp());
+        writeInt((int) _summon.getCurrentMp());
+        writeInt(_summon.getMaxMp());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 35;
-    }
 }

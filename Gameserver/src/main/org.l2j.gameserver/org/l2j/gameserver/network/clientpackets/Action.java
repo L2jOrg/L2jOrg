@@ -29,12 +29,12 @@ public final class Action extends IClientIncomingPacket {
     private int _actionId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _objectId = packet.getInt(); // Target object Identifier
-        _originX = packet.getInt();
-        _originY = packet.getInt();
-        _originZ = packet.getInt();
-        _actionId = packet.get(); // Action identifier : 0-Simple click, 1-Shift click
+    public void readImpl() {
+        _objectId = readInt(); // Target object Identifier
+        _originX = readInt();
+        _originY = readInt();
+        _originZ = readInt();
+        _actionId = readByte(); // Action identifier : 0-Simple click, 1-Shift click
     }
 
     @Override

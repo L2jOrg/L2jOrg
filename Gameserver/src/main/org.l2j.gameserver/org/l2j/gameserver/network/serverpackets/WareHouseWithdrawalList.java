@@ -53,29 +53,25 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.WAREHOUSE_WITHDRAW_LIST.writeId(packet);
-        packet.put((byte) _sendType);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.WAREHOUSE_WITHDRAW_LIST);
+        writeByte((byte) _sendType);
         if (_sendType == 2) {
-            packet.putShort((short) 0x00);
-            packet.putInt(_invSize);
-            packet.putInt(_items.size());
+            writeShort((short) 0x00);
+            writeInt(_invSize);
+            writeInt(_items.size());
             for (L2ItemInstance item : _items) {
-                writeItem(packet, item);
-                packet.putInt(item.getObjectId());
-                packet.putInt(0x00);
-                packet.putInt(0x00);
+                writeItem(item);
+                writeInt(item.getObjectId());
+                writeInt(0x00);
+                writeInt(0x00);
             }
         } else {
-            packet.putShort((short) _whType);
-            packet.putLong(_playerAdena);
-            packet.putInt(_invSize);
-            packet.putInt(_items.size());
+            writeShort((short) _whType);
+            writeLong(_playerAdena);
+            writeInt(_invSize);
+            writeInt(_items.size());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 20 + (_sendType == 2 ? _items.size() * 120 : 8);
-    }
 }

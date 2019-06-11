@@ -18,16 +18,12 @@ public class ExShowContactList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CONFIRM_ADDING_POST_FRIEND.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CONFIRM_ADDING_POST_FRIEND);
 
-        packet.putInt(_contacts.size());
-        _contacts.forEach(contact -> writeString(contact, packet));
+        writeInt(_contacts.size());
+        _contacts.forEach(contact -> writeString(contact));
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + (_contacts.stream().mapToInt(String::length).sum() + _contacts.size()) *2;
-    }
 }
 

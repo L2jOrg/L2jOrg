@@ -21,21 +21,17 @@ public class ExEnsoulResult extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_ENSOUL_RESULT.writeId(packet);
-        packet.put((byte) _success); // success / failure
-        packet.put((byte) _item.getSpecialAbilities().size());
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_ENSOUL_RESULT);
+        writeByte((byte) _success); // success / failure
+        writeByte((byte) _item.getSpecialAbilities().size());
         for (EnsoulOption option : _item.getSpecialAbilities()) {
-            packet.putInt(option.getId());
+            writeInt(option.getId());
         }
-        packet.put((byte) _item.getAdditionalSpecialAbilities().size());
+        writeByte((byte) _item.getAdditionalSpecialAbilities().size());
         for (EnsoulOption option : _item.getAdditionalSpecialAbilities()) {
-            packet.putInt(option.getId());
+            writeInt(option.getId());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 8 + _item.getSpecialAbilities().size() * 4 + _item.getAdditionalSpecialAbilities().size() * 4;
-    }
 }

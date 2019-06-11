@@ -13,14 +13,10 @@ public class ShowCalculator extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SHOW_CALC.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SHOW_CALC);
 
-        packet.putInt(_calculatorId);
+        writeInt(_calculatorId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

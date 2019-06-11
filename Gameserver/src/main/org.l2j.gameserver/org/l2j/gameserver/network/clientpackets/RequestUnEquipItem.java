@@ -22,8 +22,8 @@ public class RequestUnEquipItem extends IClientIncomingPacket {
      * Packet type id 0x16 format: cd
      */
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _slot = packet.getInt();
+    public void readImpl() {
+        _slot = readInt();
     }
 
     @Override

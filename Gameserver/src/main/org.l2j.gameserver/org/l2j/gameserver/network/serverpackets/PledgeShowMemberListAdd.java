@@ -31,20 +31,16 @@ public final class PledgeShowMemberListAdd extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_ADD.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_ADD);
 
-        writeString(_name, packet);
-        packet.putInt(_lvl);
-        packet.putInt(_classId);
-        packet.putInt(0x00);
-        packet.putInt(0x01);
-        packet.putInt(_isOnline); // 1 = online 0 = offline
-        packet.putInt(_pledgeType);
+        writeString(_name);
+        writeInt(_lvl);
+        writeInt(_classId);
+        writeInt(0x00);
+        writeInt(0x01);
+        writeInt(_isOnline); // 1 = online 0 = offline
+        writeInt(_pledgeType);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 31 + _name.length() * 2;
-    }
 }

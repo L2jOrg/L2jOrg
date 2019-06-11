@@ -16,9 +16,9 @@ public class RequestPledgeDraftListApply extends IClientIncomingPacket {
     private int _karma;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _applyType = packet.getInt();
-        _karma = packet.getInt();
+    public void readImpl() {
+        _applyType = readInt();
+        _karma = readInt();
     }
 
     @Override

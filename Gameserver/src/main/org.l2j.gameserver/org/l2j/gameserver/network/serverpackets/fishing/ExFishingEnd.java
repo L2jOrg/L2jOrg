@@ -20,16 +20,12 @@ public class ExFishingEnd extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_FISHING_END.writeId(packet);
-        packet.putInt(_player.getObjectId());
-        packet.put((byte) _reason.getReason());
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_FISHING_END);
+        writeInt(_player.getObjectId());
+        writeByte((byte) _reason.getReason());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 10;
-    }
 
     public enum FishingEndReason {
         LOSE(0),

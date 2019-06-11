@@ -20,28 +20,24 @@ public class PledgeSkillList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PLEDGE_SKILL_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PLEDGE_SKILL_LIST);
 
-        packet.putInt(_skills.length);
-        packet.putInt(_subSkills.length); // Squad skill length
+        writeInt(_skills.length);
+        writeInt(_subSkills.length); // Squad skill length
         for (Skill sk : _skills) {
-            packet.putInt(sk.getDisplayId());
-            packet.putShort((short) sk.getDisplayLevel());
-            packet.putShort((short) 0x00); // Sub level
+            writeInt(sk.getDisplayId());
+            writeShort((short) sk.getDisplayLevel());
+            writeShort((short) 0x00); // Sub level
         }
         for (SubPledgeSkill sk : _subSkills) {
-            packet.putInt(sk._subType); // Clan Sub-unit types
-            packet.putInt(sk._skillId);
-            packet.putShort((short) sk._skillLvl);
-            packet.putShort((short) 0x00); // Sub level
+            writeInt(sk._subType); // Clan Sub-unit types
+            writeInt(sk._skillId);
+            writeShort((short) sk._skillLvl);
+            writeShort((short) 0x00); // Sub level
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + _skills.length * 8 + _subSkills.length * 12;
-    }
 
     public static class SubPledgeSkill {
         int _subType;

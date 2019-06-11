@@ -25,9 +25,9 @@ public final class RequestPetition extends IClientIncomingPacket {
     private int _type; // 1 = on : 0 = off;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _content = readString(packet);
-        _type = packet.getInt();
+    public void readImpl() {
+        _content = readString();
+        _type = readInt();
     }
 
     @Override

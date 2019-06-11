@@ -71,8 +71,8 @@ public final class RequestBypassToServer extends IClientIncomingPacket {
     }
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _command = readString(packet);
+    public void readImpl() {
+        _command = readString();
     }
 
     @Override

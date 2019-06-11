@@ -24,30 +24,26 @@ public class ExVipAttendanceItemList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_VIP_ATTENDANCE_ITEM_LIST.writeId(packet);
-        packet.put((byte) (_available ? _index + 1 : _index)); // index to receive?
-        packet.put((byte) _index); // last received index?
-        packet.putInt(0x00);
-        packet.putInt(0x00);
-        packet.put((byte) 0x01);
-        packet.put((byte) (_available ? 0x01 : 0x00)); // player can receive reward today?
-        packet.put((byte) 250);
-        packet.put((byte) AttendanceRewardData.getInstance().getRewardsCount()); // reward size
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_VIP_ATTENDANCE_ITEM_LIST);
+        writeByte((byte) (_available ? _index + 1 : _index)); // index to receive?
+        writeByte((byte) _index); // last received index?
+        writeInt(0x00);
+        writeInt(0x00);
+        writeByte((byte) 0x01);
+        writeByte((byte) (_available ? 0x01 : 0x00)); // player can receive reward today?
+        writeByte((byte) 250);
+        writeByte((byte) AttendanceRewardData.getInstance().getRewardsCount()); // reward size
         int rewardCounter = 0;
         for (ItemHolder reward : AttendanceRewardData.getInstance().getRewards()) {
             rewardCounter++;
-            packet.putInt(reward.getId());
-            packet.putLong(reward.getCount());
-            packet.put((byte) 0x01); // is unknown?
-            packet.put((byte) ((rewardCounter % 7) == 0 ? 0x01 : 0x00)); // is last in row?
+            writeInt(reward.getId());
+            writeLong(reward.getCount());
+            writeByte((byte) 0x01); // is unknown?
+            writeByte((byte) ((rewardCounter % 7) == 0 ? 0x01 : 0x00)); // is last in row?
         }
-        packet.put((byte) 0x00);
-        packet.putInt(0x00);
+        writeByte((byte) 0x00);
+        writeInt(0x00);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 24 + AttendanceRewardData.getInstance().getRewardsCount() * 14;
-    }
 }

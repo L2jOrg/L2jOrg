@@ -73,10 +73,10 @@ public final class Say2 extends IClientIncomingPacket {
     private String _target;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _text = readString(packet);
-        _type = packet.getInt();
-        _target = (_type == ChatType.WHISPER.getClientId()) ? readString(packet) : null;
+    public void readImpl() {
+        _text = readString();
+        _type = readInt();
+        _target = (_type == ChatType.WHISPER.getClientId()) ? readString() : null;
     }
 
     @Override

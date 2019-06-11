@@ -47,30 +47,26 @@ public final class TradeStart extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) throws InvalidDataPacketException {
+    public void writeImpl(L2GameClient client) throws InvalidDataPacketException {
         if ((_activeChar.getActiveTradeList() == null) || (_partner == null)) {
             throw new InvalidDataPacketException();
         }
 
-        OutgoingPackets.TRADE_START.writeId(packet);
-        packet.put((byte) _sendType);
+        writeId(OutgoingPackets.TRADE_START);
+        writeByte((byte) _sendType);
         if (_sendType == 2) {
-            packet.putInt(_itemList.size());
-            packet.putInt(_itemList.size());
+            writeInt(_itemList.size());
+            writeInt(_itemList.size());
             for (L2ItemInstance item : _itemList) {
-                writeItem(packet, item);
+                writeItem(item);
             }
         } else {
-            packet.putInt(_partner.getObjectId());
-            packet.put((byte) _mask); // some kind of mask
+            writeInt(_partner.getObjectId());
+            writeByte((byte) _mask); // some kind of mask
             if ((_mask & 0x10) == 0) {
-                packet.put((byte) _partner.getLevel());
+                writeByte((byte) _partner.getLevel());
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 20 + (_sendType == 2 ? _itemList.size() * 100 : 0);
-    }
 }

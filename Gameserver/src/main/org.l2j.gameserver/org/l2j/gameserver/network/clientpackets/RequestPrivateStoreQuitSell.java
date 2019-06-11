@@ -12,7 +12,7 @@ import java.nio.ByteBuffer;
  */
 public final class RequestPrivateStoreQuitSell extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
 
     }
 

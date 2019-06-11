@@ -17,16 +17,12 @@ public class ExPartyPetWindowDelete extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PARTY_PET_WINDOW_DELETE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PARTY_PET_WINDOW_DELETE);
 
-        packet.putInt(_summon.getObjectId());
-        packet.put((byte) _summon.getSummonType());
-        packet.putInt(_summon.getOwner().getObjectId());
+        writeInt(_summon.getObjectId());
+        writeByte((byte) _summon.getSummonType());
+        writeInt(_summon.getOwner().getObjectId());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 14;
-    }
 }

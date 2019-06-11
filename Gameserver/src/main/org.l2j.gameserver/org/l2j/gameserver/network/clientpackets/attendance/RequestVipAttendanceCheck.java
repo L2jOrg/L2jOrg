@@ -19,7 +19,7 @@ import java.nio.ByteBuffer;
  */
 public class RequestVipAttendanceCheck extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
     }
 
     @Override

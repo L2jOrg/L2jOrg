@@ -14,10 +14,10 @@ public class RequestCommissionDelete extends IClientIncomingPacket {
     private long _commissionId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _commissionId = packet.getLong();
-        // packet.getInt(); // CommissionItemType
-        // packet.getInt(); // CommissionDurationType
+    public void readImpl() {
+        _commissionId = readLong();
+        // readInt(); // CommissionItemType
+        // readInt(); // CommissionDurationType
     }
 
     @Override

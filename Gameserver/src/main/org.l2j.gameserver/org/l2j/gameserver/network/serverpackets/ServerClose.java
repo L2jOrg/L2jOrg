@@ -17,12 +17,8 @@ public class ServerClose extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SEVER_CLOSE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SEVER_CLOSE);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

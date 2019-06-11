@@ -11,8 +11,8 @@ public final class ExRequestAutoFish extends IClientIncomingPacket {
     private boolean _start;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _start = packet.get() != 0;
+    public void readImpl() {
+        _start = readByte() != 0;
     }
 
     @Override

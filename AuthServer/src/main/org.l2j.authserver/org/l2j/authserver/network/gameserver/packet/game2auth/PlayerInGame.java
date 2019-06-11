@@ -10,11 +10,11 @@ public class PlayerInGame extends GameserverReadablePacket {
     private List<String> accounts;
 
     @Override
-    protected void readImpl(ByteBuffer buffer) {
-        int size = buffer.getShort();
+    protected void readImpl() {
+        int size = readShort();
         accounts = new ArrayList<>(size);
         for (int i = 0; i < size; i++) {
-            accounts.add(readString(buffer));
+            accounts.add(readString());
         }
     }
 

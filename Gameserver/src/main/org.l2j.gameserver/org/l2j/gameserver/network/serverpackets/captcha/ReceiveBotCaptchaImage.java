@@ -5,8 +5,6 @@ import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
 
-import java.nio.ByteBuffer;
-
 public class ReceiveBotCaptchaImage extends IClientOutgoingPacket {
 
     private final Captcha captcha;
@@ -18,16 +16,12 @@ public class ReceiveBotCaptchaImage extends IClientOutgoingPacket {
     }
 
     @Override
-    protected void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.RECEIVE_BOT_CAPTCHA_IMAGE.writeId(packet);
-        packet.putLong(captcha.getId());
-        packet.put((byte) 0x02); // unk
-        packet.putInt(time);
-        packet.put(captcha.getData());
+    protected void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.RECEIVE_BOT_CAPTCHA_IMAGE);
+        writeLong(captcha.getId());
+        writeByte((byte) 0x02); // unk
+        writeInt(time);
+        writeBytes(captcha.getData());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 18 + captcha.getData().length;
-    }
 }

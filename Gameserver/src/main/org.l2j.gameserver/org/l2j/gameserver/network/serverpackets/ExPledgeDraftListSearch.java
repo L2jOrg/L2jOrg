@@ -18,21 +18,17 @@ public class ExPledgeDraftListSearch extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PLEDGE_DRAFT_LIST_SEARCH.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PLEDGE_DRAFT_LIST_SEARCH);
 
-        packet.putInt(_pledgeRecruitList.size());
+        writeInt(_pledgeRecruitList.size());
         for (PledgeWaitingInfo prl : _pledgeRecruitList) {
-            packet.putInt(prl.getPlayerId());
-            writeString(prl.getPlayerName(), packet);
-            packet.putInt(prl.getKarma());
-            packet.putInt(prl.getPlayerClassId());
-            packet.putInt(prl.getPlayerLvl());
+            writeInt(prl.getPlayerId());
+            writeString(prl.getPlayerName());
+            writeInt(prl.getKarma());
+            writeInt(prl.getPlayerClassId());
+            writeInt(prl.getPlayerLvl());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + _pledgeRecruitList.size() * 55;
-    }
 }

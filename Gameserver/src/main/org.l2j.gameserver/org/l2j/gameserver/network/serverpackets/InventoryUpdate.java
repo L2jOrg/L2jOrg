@@ -24,9 +24,9 @@ public class InventoryUpdate extends AbstractInventoryUpdate {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.INVENTORY_UPDATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.INVENTORY_UPDATE);
 
-        writeItems(packet);
+        writeItems();
     }
 }

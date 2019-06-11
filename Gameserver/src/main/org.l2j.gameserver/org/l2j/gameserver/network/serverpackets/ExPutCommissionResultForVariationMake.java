@@ -37,18 +37,14 @@ public class ExPutCommissionResultForVariationMake extends IClientOutgoingPacket
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PUT_COMMISSION_RESULT_FOR_VARIATION_MAKE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PUT_COMMISSION_RESULT_FOR_VARIATION_MAKE);
 
-        packet.putInt(_gemstoneObjId);
-        packet.putInt(_itemId);
-        packet.putLong(_gemstoneCount);
-        packet.putLong(_unk1);
-        packet.putInt(_unk2);
+        writeInt(_gemstoneObjId);
+        writeInt(_itemId);
+        writeLong(_gemstoneCount);
+        writeLong(_unk1);
+        writeInt(_unk2);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 33;
-    }
 }

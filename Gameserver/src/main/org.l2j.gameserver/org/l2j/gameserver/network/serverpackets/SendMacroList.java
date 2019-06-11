@@ -6,10 +6,6 @@ import org.l2j.gameserver.model.MacroCmd;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
-import java.nio.ByteBuffer;
-
-import static java.util.Objects.nonNull;
-
 public class SendMacroList extends IClientOutgoingPacket {
     private final int _count;
     private final Macro _macro;
@@ -22,38 +18,31 @@ public class SendMacroList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.MACRO_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.MACRO_LIST);
 
-        packet.put((byte) _updateType.getId());
-        packet.putInt(_updateType != MacroUpdateType.LIST ? _macro.getId() : 0x00); // modified, created or deleted macro's id
-        packet.put((byte) _count); // count of Macros
-        packet.put((byte) (_macro != null ? 1 : 0)); // unknown
+        writeByte((byte) _updateType.getId());
+        writeInt(_updateType != MacroUpdateType.LIST ? _macro.getId() : 0x00); // modified, created or deleted macro's id
+        writeByte((byte) _count); // count of Macros
+        writeByte((byte) (_macro != null ? 1 : 0)); // unknown
 
         if ((_macro != null) && (_updateType != MacroUpdateType.DELETE)) {
-            packet.putInt(_macro.getId()); // Macro ID
-            writeString(_macro.getName(), packet); // Macro Name
-            writeString(_macro.getDescr(), packet); // Desc
-            writeString(_macro.getAcronym(), packet); // acronym
-            packet.putInt(_macro.getIcon()); // icon
+            writeInt(_macro.getId()); // Macro ID
+            writeString(_macro.getName()); // Macro Name
+            writeString(_macro.getDescr()); // Desc
+            writeString(_macro.getAcronym()); // acronym
+            writeInt(_macro.getIcon()); // icon
 
-            packet.put((byte) _macro.getCommands().size()); // count
+            writeByte((byte) _macro.getCommands().size()); // count
 
             int i = 1;
             for (MacroCmd cmd : _macro.getCommands()) {
-                packet.put((byte) i++); // command count
-                packet.put((byte) cmd.getType().ordinal()); // type 1 = skill, 3 = action, 4 = shortcut
-                packet.putInt(cmd.getD1()); // skill id
-                packet.put((byte) cmd.getD2()); // shortcut id
-                writeString(cmd.getCmd(), packet); // command name
+                writeByte((byte) i++); // command count
+                writeByte((byte) cmd.getType().ordinal()); // type 1 = skill, 3 = action, 4 = shortcut
+                writeInt(cmd.getD1()); // skill id
+                writeByte((byte) cmd.getD2()); // shortcut id
+                writeString(cmd.getCmd()); // command name
             }
         }
-    }
-
-    @Override
-    protected int size(L2GameClient client) {
-        return 12 + (nonNull(_macro) ? 15 +
-                (_macro.getName().length() + _macro.getDescr().length() + _macro.getAcronym().length()) *2 +
-                _macro.getCommands().stream().mapToInt(cmd -> cmd.getCmd().length() * 2 + 7).sum() : 0);
     }
 }

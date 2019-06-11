@@ -25,8 +25,8 @@ public final class CharacterDelete extends IClientIncomingPacket {
     private int _charSlot;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _charSlot = packet.getInt();
+    public void readImpl() {
+        _charSlot = readInt();
     }
 
     @Override

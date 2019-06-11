@@ -17,15 +17,11 @@ public class ExPrivateStoreSellingResult extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PRIVATE_STORE_SELLING_RESULT.writeId(packet);
-        packet.putInt(_objectId);
-        packet.putLong(_count);
-        writeString(_buyer, packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PRIVATE_STORE_SELLING_RESULT);
+        writeInt(_objectId);
+        writeLong(_count);
+        writeString(_buyer);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 20 + _buyer.length() * 2;
-    }
 }

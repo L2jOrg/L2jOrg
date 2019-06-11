@@ -42,21 +42,17 @@ public class PlaySound extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PLAY_SOUND.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PLAY_SOUND);
 
-        packet.putInt(_unknown1); // unknown 0 for quest and ship;
-        writeString(_soundFile, packet);
-        packet.putInt(_unknown3); // unknown 0 for quest; 1 for ship;
-        packet.putInt(_unknown4); // 0 for quest; objectId of ship
-        packet.putInt(_unknown5); // x
-        packet.putInt(_unknown6); // y
-        packet.putInt(_unknown7); // z
-        packet.putInt(_unknown8);
+        writeInt(_unknown1); // unknown 0 for quest and ship;
+        writeString(_soundFile);
+        writeInt(_unknown3); // unknown 0 for quest; 1 for ship;
+        writeInt(_unknown4); // 0 for quest; objectId of ship
+        writeInt(_unknown5); // x
+        writeInt(_unknown6); // y
+        writeInt(_unknown7); // z
+        writeInt(_unknown8);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 35 + _soundFile.length() * 2;
-    }
 }

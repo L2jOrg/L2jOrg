@@ -13,15 +13,11 @@ public final class JoinParty extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.JOIN_PARTY.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.JOIN_PARTY);
 
-        packet.putInt(_response);
-        packet.putInt(0x00); // TODO: Find me!
+        writeInt(_response);
+        writeInt(0x00); // TODO: Find me!
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13;
-    }
 }

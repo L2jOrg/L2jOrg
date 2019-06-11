@@ -29,17 +29,13 @@ public final class TutorialShowHtml extends AbstractHtmlPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.TUTORIAL_SHOW_HTML.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.TUTORIAL_SHOW_HTML);
 
-        packet.putInt(_type);
-        writeString(getHtml(), packet);
+        writeInt(_type);
+        writeString(getHtml());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + getHtml().length() * 2;
-    }
 
     @Override
     public HtmlActionScope getScope() {

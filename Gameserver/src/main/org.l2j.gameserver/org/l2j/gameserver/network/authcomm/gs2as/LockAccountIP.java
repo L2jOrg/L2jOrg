@@ -23,10 +23,10 @@ public class LockAccountIP extends SendablePacket
 	}
 
 	@Override
-	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {
-		buffer.put((byte)0x0b);
-		writeString(_account, buffer);
-		writeString(_IP, buffer);
-		buffer.putInt(_time);
+	protected void writeImpl(AuthServerClient client) {
+		writeByte((byte)0x0b);
+		writeString(_account);
+		writeString(_IP);
+		writeInt(_time);
 	}
 }

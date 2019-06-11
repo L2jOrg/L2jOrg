@@ -22,18 +22,14 @@ public class ExVitalityEffectInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_VITALITY_EFFECT_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_VITALITY_EFFECT_INFO);
 
-        packet.putInt(_points);
-        packet.putInt(_vitalityBonus); // Vitality Bonus
-        packet.putShort((short) 0x00); // Vitality additional bonus in %
-        packet.putShort((short) _vitalityItemsRemaining); // How much vitality items remaining for use
-        packet.putShort((short) Config.VITALITY_MAX_ITEMS_ALLOWED); // Max number of items for use
+        writeInt(_points);
+        writeInt(_vitalityBonus); // Vitality Bonus
+        writeShort((short) 0x00); // Vitality additional bonus in %
+        writeShort((short) _vitalityItemsRemaining); // How much vitality items remaining for use
+        writeShort((short) Config.VITALITY_MAX_ITEMS_ALLOWED); // Max number of items for use
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 19;
-    }
 }

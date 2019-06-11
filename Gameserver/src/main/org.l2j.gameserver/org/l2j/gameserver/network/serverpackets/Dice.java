@@ -23,19 +23,15 @@ public class Dice extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.DICE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.DICE);
 
-        packet.putInt(_charObjId); // object id of player
-        packet.putInt(_itemId); // item id of dice (spade) 4625,4626,4627,4628
-        packet.putInt(_number); // number rolled
-        packet.putInt(_x); // x
-        packet.putInt(_y); // y
-        packet.putInt(_z); // z
+        writeInt(_charObjId); // object id of player
+        writeInt(_itemId); // item id of dice (spade) 4625,4626,4627,4628
+        writeInt(_number); // number rolled
+        writeInt(_x); // x
+        writeInt(_y); // y
+        writeInt(_z); // z
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 29;
-    }
 }

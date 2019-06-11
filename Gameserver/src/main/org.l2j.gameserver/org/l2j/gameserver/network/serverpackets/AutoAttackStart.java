@@ -16,14 +16,10 @@ public final class AutoAttackStart extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.AUTO_ATTACK_START.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.AUTO_ATTACK_START);
 
-        packet.putInt(_targetObjId);
+        writeInt(_targetObjId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

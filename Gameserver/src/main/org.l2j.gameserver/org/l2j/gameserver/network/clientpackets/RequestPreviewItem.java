@@ -36,10 +36,10 @@ public final class RequestPreviewItem extends IClientIncomingPacket {
     private int[] _items;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        _unk = packet.getInt();
-        _listId = packet.getInt();
-        _count = packet.getInt();
+    public void readImpl() throws InvalidDataPacketException {
+        _unk = readInt();
+        _listId = readInt();
+        _count = readInt();
 
         if (_count < 0) {
             _count = 0;
@@ -53,7 +53,7 @@ public final class RequestPreviewItem extends IClientIncomingPacket {
 
         // Fill _items table with all ItemID to Wear
         for (int i = 0; i < _count; i++) {
-            _items[i] = packet.getInt();
+            _items[i] = readInt();
         }
     }
 

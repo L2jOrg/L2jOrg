@@ -4,7 +4,6 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.network.serverpackets.ExListPartyMatchingWaitingRoom;
 
-import java.nio.ByteBuffer;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -19,20 +18,20 @@ public class RequestListPartyMatchingWaitingRoom extends IClientIncomingPacket {
     private String _query;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _page = packet.getInt();
-        _minLevel = packet.getInt();
-        _maxLevel = packet.getInt();
-        final int size = packet.getInt();
+    public void readImpl() {
+        _page = readInt();
+        _minLevel = readInt();
+        _maxLevel = readInt();
+        final int size = readInt();
 
         if ((size > 0) && (size < 128)) {
             _classId = new LinkedList<>();
             for (int i = 0; i < size; i++) {
-                _classId.add(ClassId.getClassId(packet.getInt()));
+                _classId.add(ClassId.getClassId(readInt()));
             }
         }
-        if (packet.hasRemaining()) {
-            _query = readString(packet);
+        if (available() > 0) {
+            _query = readString();
         }
     }
 

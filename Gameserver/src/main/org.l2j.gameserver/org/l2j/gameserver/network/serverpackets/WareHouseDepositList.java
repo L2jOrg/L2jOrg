@@ -5,7 +5,6 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,26 +44,22 @@ public final class WareHouseDepositList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.WAREHOUSE_DEPOSIT_LIST.writeId(packet);
-        packet.put((byte) _sendType);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.WAREHOUSE_DEPOSIT_LIST);
+        writeByte((byte) _sendType);
         if (_sendType == 2) {
-            packet.putInt(_whType);
-            packet.putInt(_items.size());
+            writeInt(_whType);
+            writeInt(_items.size());
             for (L2ItemInstance item : _items) {
-                writeItem(packet, item);
-                packet.putInt(item.getObjectId());
+                writeItem(item);
+                writeInt(item.getObjectId());
             }
         } else {
-            packet.putShort((short) _whType);
-            packet.putLong(_playerAdena);
-            packet.putInt(_itemsStackable.size());
-            packet.putInt(_items.size());
+            writeShort((short) _whType);
+            writeLong(_playerAdena);
+            writeInt(_itemsStackable.size());
+            writeInt(_items.size());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-     return 20 + (_sendType == 2 ? _items.size() * 110 : 10);
-    }
 }

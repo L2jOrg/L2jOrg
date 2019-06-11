@@ -107,7 +107,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
 
     protected void storePlayerEntry(DailyMissionPlayerData entry) {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("REPLACE INTO character_daily_rewards (charId, rewardId, status, progress, lastCompleted) VALUES (?, ?, ?, ?, ?)")) {
+             PreparedStatement ps = con.prepareStatement("REPLACE INTO character_daily_missions(char_id, mission_id, status, progress, last_completed) VALUES (?, ?, ?, ?, ?)")) {
             ps.setInt(1, entry.getObjectId());
             ps.setInt(2, entry.getRewardId());
             ps.setInt(3, entry.getStatus().getClientId());
@@ -129,7 +129,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
         }
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("SELECT * FROM character_daily_rewards WHERE charId = ? AND rewardId = ?")) {
+             PreparedStatement ps = con.prepareStatement("SELECT * FROM character_daily_missions WHERE char_id = ? AND mission_id = ?")) {
             ps.setInt(1, objectId);
             ps.setInt(2, holder.getId());
             try (ResultSet rs = ps.executeQuery()) {

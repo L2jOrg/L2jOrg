@@ -17,15 +17,11 @@ public class ExMPCCPartymasterList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_MPCC_PARTYMASTER_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_MPCC_PARTYMASTER_LIST);
 
-        packet.putInt(_leadersName.size());
-        _leadersName.forEach(name -> writeString(name, packet));
+        writeInt(_leadersName.size());
+        _leadersName.forEach(this::writeString);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + _leadersName.size() * 2  + _leadersName.stream().mapToInt(l -> l.length() * 2).sum();
-    }
 }

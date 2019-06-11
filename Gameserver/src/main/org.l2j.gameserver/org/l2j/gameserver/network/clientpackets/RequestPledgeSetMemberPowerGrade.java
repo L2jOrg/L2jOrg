@@ -20,9 +20,9 @@ public final class RequestPledgeSetMemberPowerGrade extends IClientIncomingPacke
     private int _powerGrade;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _member = readString(packet);
-        _powerGrade = packet.getInt();
+    public void readImpl() {
+        _member = readString();
+        _powerGrade = readInt();
     }
 
     @Override

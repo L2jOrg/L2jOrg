@@ -16,14 +16,10 @@ public class ExRequestChangeNicknameColor extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CHANGE_NICKNAME_NCOLOR.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CHANGE_NICKNAME_NCOLOR);
 
-        packet.putInt(_itemObjectId);
+        writeInt(_itemObjectId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

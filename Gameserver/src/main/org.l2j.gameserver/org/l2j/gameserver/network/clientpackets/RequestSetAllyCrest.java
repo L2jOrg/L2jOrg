@@ -9,8 +9,6 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
-
 /**
  * Client packet for setting ally crest.
  */
@@ -19,14 +17,14 @@ public final class RequestSetAllyCrest extends IClientIncomingPacket {
     private byte[] _data = null;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        _length = packet.getInt();
+    public void readImpl() throws InvalidDataPacketException {
+        _length = readInt();
         if (_length > 192) {
             throw new InvalidDataPacketException();
         }
 
         _data = new byte[_length];
-        packet.get(_data);
+        readBytes(_data);
     }
 
     @Override

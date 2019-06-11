@@ -15,8 +15,8 @@ public final class RequestPCCafeCouponUse extends IClientIncomingPacket {
     private String _str;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _str = readString(packet);
+    public void readImpl() {
+        _str = readString();
     }
 
     @Override

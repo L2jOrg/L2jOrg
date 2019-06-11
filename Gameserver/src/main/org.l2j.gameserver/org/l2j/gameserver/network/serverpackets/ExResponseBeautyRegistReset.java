@@ -25,20 +25,16 @@ public class ExResponseBeautyRegistReset extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_RESPONSE_BEAUTY_REGIST_RESET.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_RESPONSE_BEAUTY_REGIST_RESET);
 
-        packet.putLong(_activeChar.getAdena());
-        packet.putLong(_activeChar.getBeautyTickets());
-        packet.putInt(_type);
-        packet.putInt(_result);
-        packet.putInt(_activeChar.getVisualHair());
-        packet.putInt(_activeChar.getVisualFace());
-        packet.putInt(_activeChar.getVisualHairColor());
+        writeLong(_activeChar.getAdena());
+        writeLong(_activeChar.getBeautyTickets());
+        writeInt(_type);
+        writeInt(_result);
+        writeInt(_activeChar.getVisualHair());
+        writeInt(_activeChar.getVisualFace());
+        writeInt(_activeChar.getVisualHairColor());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 41;
-    }
 }

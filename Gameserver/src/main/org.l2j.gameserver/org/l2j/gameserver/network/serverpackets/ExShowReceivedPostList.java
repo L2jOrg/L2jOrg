@@ -25,39 +25,35 @@ public class ExShowReceivedPostList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_RECEIVED_POST_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_RECEIVED_POST_LIST);
 
-        packet.putInt((int) (System.currentTimeMillis() / 1000));
+        writeInt((int) (System.currentTimeMillis() / 1000));
         if ((_inbox != null) && (_inbox.size() > 0)) {
-            packet.putInt(_inbox.size());
+            writeInt(_inbox.size());
             for (Message msg : _inbox) {
-                packet.putInt(msg.getMailType().ordinal());
+                writeInt(msg.getMailType().ordinal());
                 if (msg.getMailType() == MailType.COMMISSION_ITEM_SOLD) {
-                    packet.putInt(SystemMessageId.THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD.getId());
+                    writeInt(SystemMessageId.THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD.getId());
                 } else if (msg.getMailType() == MailType.COMMISSION_ITEM_RETURNED) {
-                    packet.putInt(SystemMessageId.THE_REGISTRATION_PERIOD_FOR_THE_ITEM_YOU_REGISTERED_HAS_EXPIRED.getId());
+                    writeInt(SystemMessageId.THE_REGISTRATION_PERIOD_FOR_THE_ITEM_YOU_REGISTERED_HAS_EXPIRED.getId());
                 }
-                packet.putInt(msg.getId());
-                writeString(msg.getSubject(), packet);
-                writeString(msg.getSenderName(), packet);
-                packet.putInt(msg.isLocked() ? 0x01 : 0x00);
-                packet.putInt(msg.getExpirationSeconds());
-                packet.putInt(msg.isUnread() ? 0x01 : 0x00);
-                packet.putInt(((msg.getMailType() == MailType.COMMISSION_ITEM_SOLD) || (msg.getMailType() == MailType.COMMISSION_ITEM_RETURNED)) ? 0 : 1);
-                packet.putInt(msg.hasAttachments() ? 0x01 : 0x00);
-                packet.putInt(msg.isReturned() ? 0x01 : 0x00);
-                packet.putInt(0x00); // SysString in some case it seems
+                writeInt(msg.getId());
+                writeString(msg.getSubject());
+                writeString(msg.getSenderName());
+                writeInt(msg.isLocked() ? 0x01 : 0x00);
+                writeInt(msg.getExpirationSeconds());
+                writeInt(msg.isUnread() ? 0x01 : 0x00);
+                writeInt(((msg.getMailType() == MailType.COMMISSION_ITEM_SOLD) || (msg.getMailType() == MailType.COMMISSION_ITEM_RETURNED)) ? 0 : 1);
+                writeInt(msg.hasAttachments() ? 0x01 : 0x00);
+                writeInt(msg.isReturned() ? 0x01 : 0x00);
+                writeInt(0x00); // SysString in some case it seems
             }
         } else {
-            packet.putInt(0x00);
+            writeInt(0x00);
         }
-        packet.putInt(MESSAGE_FEE);
-        packet.putInt(MESSAGE_FEE_PER_SLOT);
+        writeInt(MESSAGE_FEE);
+        writeInt(MESSAGE_FEE_PER_SLOT);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 21 + (nonNull(_inbox ) ?  _inbox.size() * 100 + 4 : 4);
-    }
 }

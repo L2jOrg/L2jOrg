@@ -17,9 +17,9 @@ public final class FinishRotating extends IClientIncomingPacket {
     private int _unknown;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _degree = packet.getInt();
-        _unknown = packet.getInt();
+    public void readImpl() {
+        _degree = readInt();
+        _unknown = readInt();
     }
 
     @Override

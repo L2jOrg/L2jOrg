@@ -16,9 +16,9 @@ public class ReduceAccountPoints extends SendablePacket
 		this.count = count;
 	}
 
-	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {
-		buffer.put((byte)0x12);
-		writeString(account, buffer);
-		buffer.putInt(count);
+	protected void writeImpl(AuthServerClient client) {
+		writeByte((byte)0x12);
+		writeString(account);
+		writeInt(count);
 	}
 }

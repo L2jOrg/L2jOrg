@@ -14,9 +14,9 @@ public class RequestClanAskJoinByName extends IClientIncomingPacket {
     private int _pledgeType;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _playerName = readString(packet);
-        _pledgeType = packet.getInt();
+    public void readImpl() {
+        _playerName = readString();
+        _pledgeType = readInt();
     }
 
     @Override

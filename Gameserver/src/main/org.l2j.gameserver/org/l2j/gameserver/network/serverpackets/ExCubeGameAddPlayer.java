@@ -25,20 +25,16 @@ public class ExCubeGameAddPlayer extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BLOCK_UP_SET_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BLOCK_UP_SET_LIST);
 
-        packet.putInt(0x01);
+        writeInt(0x01);
 
-        packet.putInt(0xffffffff);
+        writeInt(0xffffffff);
 
-        packet.putInt(_isRedTeam ? 0x01 : 0x00);
-        packet.putInt(_player.getObjectId());
-        writeString(_player.getName(), packet);
+        writeInt(_isRedTeam ? 0x01 : 0x00);
+        writeInt(_player.getObjectId());
+        writeString(_player.getName());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 23 + _player.getName().length()*2;
-    }
 }

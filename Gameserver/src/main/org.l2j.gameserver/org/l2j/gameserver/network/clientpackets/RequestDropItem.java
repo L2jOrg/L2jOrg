@@ -35,12 +35,12 @@ public final class RequestDropItem extends IClientIncomingPacket {
     private int _z;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _objectId = packet.getInt();
-        _count = packet.getLong();
-        _x = packet.getInt();
-        _y = packet.getInt();
-        _z = packet.getInt();
+    public void readImpl() {
+        _objectId = readInt();
+        _count = readLong();
+        _x = readInt();
+        _y = readInt();
+        _z = readInt();
     }
 
     @Override

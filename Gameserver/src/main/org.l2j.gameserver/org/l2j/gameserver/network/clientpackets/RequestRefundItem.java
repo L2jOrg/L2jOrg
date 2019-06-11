@@ -34,16 +34,16 @@ public final class RequestRefundItem extends IClientIncomingPacket {
     private int[] _items = null;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        _listId = packet.getInt();
-        final int count = packet.getInt();
-        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.remaining())) {
+    public void readImpl() throws InvalidDataPacketException {
+        _listId = readInt();
+        final int count = readInt();
+        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
             throw new InvalidDataPacketException();
         }
 
         _items = new int[count];
         for (int i = 0; i < count; i++) {
-            _items[i] = packet.getInt();
+            _items[i] = readInt();
         }
     }
 

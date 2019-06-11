@@ -20,13 +20,9 @@ public class LoginGameServerFail extends GameServerWritablePacket {
 	}
 
 	@Override
-	protected void writeImpl(ServerClient client, ByteBuffer buffer) {
-		buffer.put((byte)0x01);
-		buffer.put((byte)reason);
+	protected void writeImpl(ServerClient client) {
+		writeByte((byte)0x01);
+		writeByte((byte)reason);
 	}
 
-	@Override
-	protected int size(ServerClient client) {
-		return super.size(client) + 2;
-	}
 }

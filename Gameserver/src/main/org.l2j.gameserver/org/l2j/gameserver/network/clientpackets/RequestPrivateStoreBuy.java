@@ -35,18 +35,18 @@ public final class RequestPrivateStoreBuy extends IClientIncomingPacket {
     private Set<ItemRequest> _items = null;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        _storePlayerId = packet.getInt();
-        final int count = packet.getInt();
-        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.remaining())) {
+    public void readImpl() throws InvalidDataPacketException {
+        _storePlayerId = readInt();
+        final int count = readInt();
+        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
             throw new InvalidDataPacketException();
         }
         _items = new HashSet<>();
 
         for (int i = 0; i < count; i++) {
-            final int objectId = packet.getInt();
-            final long cnt = packet.getLong();
-            final long price = packet.getLong();
+            final int objectId = readInt();
+            final long cnt = readLong();
+            final long price = readLong();
 
             if ((objectId < 1) || (cnt < 1) || (price < 0)) {
                 _items = null;

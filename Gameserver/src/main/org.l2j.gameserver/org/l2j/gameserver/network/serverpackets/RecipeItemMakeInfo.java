@@ -27,25 +27,21 @@ public class RecipeItemMakeInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) throws InvalidDataPacketException {
+    public void writeImpl(L2GameClient client) throws InvalidDataPacketException {
         final L2RecipeList recipe = RecipeData.getInstance().getRecipeList(_id);
         if (recipe != null) {
-            OutgoingPackets.RECIPE_ITEM_MAKE_INFO.writeId(packet);
-            packet.putInt(_id);
-            packet.putInt(recipe.isDwarvenRecipe() ? 0 : 1); // 0 = Dwarven - 1 = Common
-            packet.putInt((int) _activeChar.getCurrentMp());
-            packet.putInt(_activeChar.getMaxMp());
-            packet.putInt(_success ? 1 : 0); // item creation success/failed
-            packet.put((byte) 0x00);
-            packet.putLong(0x00);
+            writeId(OutgoingPackets.RECIPE_ITEM_MAKE_INFO);
+            writeInt(_id);
+            writeInt(recipe.isDwarvenRecipe() ? 0 : 1); // 0 = Dwarven - 1 = Common
+            writeInt((int) _activeChar.getCurrentMp());
+            writeInt(_activeChar.getMaxMp());
+            writeInt(_success ? 1 : 0); // item creation success/failed
+            writeByte((byte) 0x00);
+            writeLong(0x00);
         } else {
             LOGGER.info("Character: " + _activeChar + ": Requested unexisting recipe with id = " + _id);
             throw new InvalidDataPacketException();
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 35;
-    }
 }

@@ -16,9 +16,9 @@ public final class StartRotating extends IClientIncomingPacket {
     private int _side;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _degree = packet.getInt();
-        _side = packet.getInt();
+    public void readImpl() {
+        _degree = readInt();
+        _side = readInt();
     }
 
     @Override

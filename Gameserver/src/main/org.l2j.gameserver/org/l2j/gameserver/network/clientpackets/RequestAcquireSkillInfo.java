@@ -27,10 +27,10 @@ public final class RequestAcquireSkillInfo extends IClientIncomingPacket {
     private AcquireSkillType _skillType;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _id = packet.getInt();
-        _level = packet.getInt();
-        _skillType = AcquireSkillType.getAcquireSkillType(packet.getInt());
+    public void readImpl() {
+        _id = readInt();
+        _level = readInt();
+        _skillType = AcquireSkillType.getAcquireSkillType(readInt());
     }
 
     @Override

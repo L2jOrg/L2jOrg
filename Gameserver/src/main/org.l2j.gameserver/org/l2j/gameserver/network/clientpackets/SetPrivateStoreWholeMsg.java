@@ -16,8 +16,8 @@ public class SetPrivateStoreWholeMsg extends IClientIncomingPacket {
     private String _msg;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _msg = readString(packet);
+    public void readImpl() {
+        _msg = readString();
     }
 
     @Override

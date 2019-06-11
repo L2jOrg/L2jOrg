@@ -5,7 +5,6 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
 public class PrivateStoreManageListSell extends AbstractItemPacket {
@@ -27,36 +26,32 @@ public class PrivateStoreManageListSell extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PRIVATE_STORE_MANAGE_LIST.writeId(packet);
-        packet.put((byte) _sendType);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PRIVATE_STORE_MANAGE_LIST);
+        writeByte((byte) _sendType);
         if (_sendType == 2) {
-            packet.putInt(_itemList.size());
-            packet.putInt(_itemList.size());
+            writeInt(_itemList.size());
+            writeInt(_itemList.size());
             for (TradeItem item : _itemList) {
-                writeItem(packet, item);
-                packet.putLong(item.getItem().getReferencePrice() * 2);
+                writeItem(item);
+                writeLong(item.getItem().getReferencePrice() * 2);
             }
         } else {
-            packet.putInt(_objId);
-            packet.putInt(_packageSale ? 1 : 0);
-            packet.putLong(_playerAdena);
-            packet.putInt(0x00);
+            writeInt(_objId);
+            writeInt(_packageSale ? 1 : 0);
+            writeLong(_playerAdena);
+            writeInt(0x00);
             for (TradeItem item : _itemList) {
-                writeItem(packet, item);
-                packet.putLong(item.getItem().getReferencePrice() * 2);
+                writeItem(item);
+                writeLong(item.getItem().getReferencePrice() * 2);
             }
-            packet.putInt(0x00);
+            writeInt(0x00);
             for (TradeItem item2 : _sellList) {
-                writeItem(packet, item2);
-                packet.putLong(item2.getPrice());
-                packet.putLong(item2.getItem().getReferencePrice() * 2);
+                writeItem(item2);
+                writeLong(item2.getPrice());
+                writeLong(item2.getItem().getReferencePrice() * 2);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 35 + _itemList.size() * 110  + (_sendType == 2 ? 0 : _sellList.length * 120);
-    }
 }

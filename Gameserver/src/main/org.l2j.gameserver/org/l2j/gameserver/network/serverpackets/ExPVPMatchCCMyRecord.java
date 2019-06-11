@@ -16,13 +16,9 @@ public class ExPVPMatchCCMyRecord extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PVP_MATCH_CCMY_RECORD.writeId(packet);
-        packet.putInt(_points);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PVP_MATCH_CCMY_RECORD);
+        writeInt(_points);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

@@ -23,15 +23,11 @@ public class VehicleStarted extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.VEHICLE_START.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.VEHICLE_START);
 
-        packet.putInt(_objectId);
-        packet.putInt(_state);
+        writeInt(_objectId);
+        writeInt(_state);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13;
-    }
 }

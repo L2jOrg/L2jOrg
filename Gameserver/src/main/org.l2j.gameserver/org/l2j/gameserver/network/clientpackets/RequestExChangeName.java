@@ -18,10 +18,10 @@ public class RequestExChangeName extends IClientIncomingPacket {
     private int _charSlot;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _type = packet.getInt();
-        _newName = readString(packet);
-        _charSlot = packet.getInt();
+    public void readImpl() {
+        _type = readInt();
+        _newName = readString();
+        _charSlot = readInt();
     }
 
     @Override

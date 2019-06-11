@@ -16,9 +16,9 @@ public class RequestPledgeWaitingUser extends IClientIncomingPacket {
     private int _playerId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _clanId = packet.getInt();
-        _playerId = packet.getInt();
+    public void readImpl() {
+        _clanId = readInt();
+        _playerId = readInt();
     }
 
     @Override

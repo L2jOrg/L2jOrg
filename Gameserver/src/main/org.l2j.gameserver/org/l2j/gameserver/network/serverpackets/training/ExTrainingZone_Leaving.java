@@ -13,12 +13,8 @@ public class ExTrainingZone_Leaving extends IClientOutgoingPacket {
     public static ExTrainingZone_Leaving STATIC_PACKET = new ExTrainingZone_Leaving();
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_TRAINING_ZONE_LEAVING.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_TRAINING_ZONE_LEAVING);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

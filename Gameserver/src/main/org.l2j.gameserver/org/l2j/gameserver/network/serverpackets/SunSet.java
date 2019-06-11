@@ -14,12 +14,8 @@ public class SunSet extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SUN_SET.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SUN_SET);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

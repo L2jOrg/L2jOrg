@@ -46,12 +46,12 @@ public class CharacterSelect extends IClientIncomingPacket {
     private int _unk4; // new in C4
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _charSlot = packet.getInt();
-        _unk1 = packet.getShort();
-        _unk2 = packet.getInt();
-        _unk3 = packet.getInt();
-        _unk4 = packet.getInt();
+    public void readImpl() {
+        _charSlot = readInt();
+        _unk1 = readShort();
+        _unk2 = readInt();
+        _unk3 = readInt();
+        _unk4 = readInt();
 
     }
 

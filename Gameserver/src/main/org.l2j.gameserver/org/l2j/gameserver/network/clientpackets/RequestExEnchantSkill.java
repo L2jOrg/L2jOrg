@@ -36,17 +36,17 @@ public final class RequestExEnchantSkill extends IClientIncomingPacket {
     private int _skillSubLvl;
 
     @Override
-    public void readImpl(ByteBuffer packet) throws InvalidDataPacketException {
-        final int type = packet.getInt();
+    public void readImpl() throws InvalidDataPacketException {
+        final int type = readInt();
         if ((type < 0) || (type >= SkillEnchantType.values().length)) {
             LOGGER.warn("Client: " + client + " send incorrect type " + type + " on packet: " + getClass().getSimpleName());
             throw new InvalidDataPacketException();
         }
 
         _type = SkillEnchantType.values()[type];
-        _skillId = packet.getInt();
-        _skillLvl = packet.getShort();
-        _skillSubLvl = packet.getShort();
+        _skillId = readInt();
+        _skillLvl = readShort();
+        _skillSubLvl = readShort();
     }
 
     @Override

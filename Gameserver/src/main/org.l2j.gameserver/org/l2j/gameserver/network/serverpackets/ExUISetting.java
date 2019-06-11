@@ -23,18 +23,14 @@ public class ExUISetting extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_UI_SETTING.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_UI_SETTING);
         if (_uiKeyMapping != null) {
-            packet.putInt(_uiKeyMapping.length);
-            packet.put(_uiKeyMapping);
+            writeInt(_uiKeyMapping.length);
+            writeBytes(_uiKeyMapping);
         } else {
-            packet.putInt(0);
+            writeInt(0);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 10;
-    }
 }

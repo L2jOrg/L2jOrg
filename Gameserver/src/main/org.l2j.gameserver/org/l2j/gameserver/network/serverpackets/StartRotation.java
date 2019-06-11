@@ -19,17 +19,13 @@ public final class StartRotation extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.START_ROTATING.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.START_ROTATING);
 
-        packet.putInt(_charObjId);
-        packet.putInt(_degree);
-        packet.putInt(_side);
-        packet.putInt(_speed);
+        writeInt(_charObjId);
+        writeInt(_degree);
+        writeInt(_side);
+        writeInt(_speed);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 21;
-    }
 }

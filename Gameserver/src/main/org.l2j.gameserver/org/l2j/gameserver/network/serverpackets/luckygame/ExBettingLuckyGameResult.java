@@ -45,23 +45,19 @@ public class ExBettingLuckyGameResult extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BETTING_LUCKY_GAME_RESULT.writeId(packet);
-        packet.putInt(_result.getClientId());
-        packet.putInt(_type.ordinal());
-        packet.putInt(_ticketCount);
-        packet.putInt(_size);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BETTING_LUCKY_GAME_RESULT);
+        writeInt(_result.getClientId());
+        writeInt(_type.ordinal());
+        writeInt(_ticketCount);
+        writeInt(_size);
         for (Entry<LuckyGameItemType, List<ItemHolder>> reward : rewards.entrySet()) {
             for (ItemHolder item : reward.getValue()) {
-                packet.putInt(reward.getKey().getClientId());
-                packet.putInt(item.getId());
-                packet.putInt((int) item.getCount());
+                writeInt(reward.getKey().getClientId());
+                writeInt(item.getId());
+                writeInt((int) item.getCount());
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 21 + rewards.values().stream().mapToInt(List::size).sum() * 12;
-    }
 }

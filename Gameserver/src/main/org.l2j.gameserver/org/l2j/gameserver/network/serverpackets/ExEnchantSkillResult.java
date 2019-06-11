@@ -21,14 +21,10 @@ public class ExEnchantSkillResult extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_ENCHANT_SKILL_RESULT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_ENCHANT_SKILL_RESULT);
 
-        packet.putInt(_enchanted ? 1 : 0);
+        writeInt(_enchanted ? 1 : 0);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

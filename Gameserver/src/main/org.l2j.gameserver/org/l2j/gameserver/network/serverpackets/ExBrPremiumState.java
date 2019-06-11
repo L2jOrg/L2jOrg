@@ -11,15 +11,11 @@ import java.nio.ByteBuffer;
 public class ExBrPremiumState extends IClientOutgoingPacket {
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BR_PREMIUM_STATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BR_PREMIUM_STATE);
         var activeChar = client.getActiveChar();
-        packet.putInt(activeChar.getObjectId());
-        packet.put((byte) (activeChar.getVipTier() > 0 ? 0x01 : 0x00));
+        writeInt(activeChar.getObjectId());
+        writeByte((byte) (activeChar.getVipTier() > 0 ? 0x01 : 0x00));
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 10;
-    }
 }

@@ -9,8 +9,6 @@ import org.l2j.gameserver.model.actor.instance.L2AirShipInstance;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
-
 public class MoveToLocationAirShip extends IClientIncomingPacket {
     public static final int MIN_Z = -895;
     public static final int MAX_Z = 6105;
@@ -21,11 +19,11 @@ public class MoveToLocationAirShip extends IClientIncomingPacket {
     private int _param2 = 0;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _command = packet.getInt();
-        _param1 = packet.getInt();
-        if (packet.remaining() > 0) {
-            _param2 = packet.getInt();
+    public void readImpl() {
+        _command = readInt();
+        _param1 = readInt();
+        if (available() > 0) {
+            _param2 = readInt();
         }
     }
 

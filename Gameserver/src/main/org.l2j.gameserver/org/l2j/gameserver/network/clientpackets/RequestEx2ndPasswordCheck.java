@@ -12,7 +12,7 @@ import java.nio.ByteBuffer;
  */
 public class RequestEx2ndPasswordCheck extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
 
     }
 

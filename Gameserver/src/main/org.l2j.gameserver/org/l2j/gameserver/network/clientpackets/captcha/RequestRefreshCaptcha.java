@@ -15,8 +15,8 @@ public class RequestRefreshCaptcha extends IClientIncomingPacket {
     private long captchaId;
 
     @Override
-    protected void readImpl(ByteBuffer packet) throws Exception {
-        captchaId = packet.getLong();
+    protected void readImpl() throws Exception {
+        captchaId = readLong();
     }
 
     @Override

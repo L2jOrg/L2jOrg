@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network;
 
+import io.github.joealisson.mmocore.PacketBuffer;
 import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
 
 import java.nio.ByteBuffer;
@@ -30,7 +31,7 @@ interface PacketFactory {
         return false;
     }
 
-    default PacketFactory handleExtension(ByteBuffer buffer) {
+    default PacketFactory handleExtension(PacketBuffer buffer) {
         return NULLABLE_PACKET_FACTORY;
     }
 

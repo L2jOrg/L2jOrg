@@ -14,14 +14,10 @@ public class CharCreateOk extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.CHARACTER_CREATE_SUCCESS.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.CHARACTER_CREATE_SUCCESS);
 
-        packet.putInt(0x01);
+        writeInt(0x01);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

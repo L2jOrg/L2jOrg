@@ -17,23 +17,19 @@ public class ExDuelUpdateUserInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_DUEL_UPDATE_USER_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_DUEL_UPDATE_USER_INFO);
 
-        writeString(_activeChar.getName(), packet);
-        packet.putInt(_activeChar.getObjectId());
-        packet.putInt(_activeChar.getClassId().getId());
-        packet.putInt(_activeChar.getLevel());
-        packet.putInt((int) _activeChar.getCurrentHp());
-        packet.putInt(_activeChar.getMaxHp());
-        packet.putInt((int) _activeChar.getCurrentMp());
-        packet.putInt(_activeChar.getMaxMp());
-        packet.putInt((int) _activeChar.getCurrentCp());
-        packet.putInt(_activeChar.getMaxCp());
+        writeString(_activeChar.getName());
+        writeInt(_activeChar.getObjectId());
+        writeInt(_activeChar.getClassId().getId());
+        writeInt(_activeChar.getLevel());
+        writeInt((int) _activeChar.getCurrentHp());
+        writeInt(_activeChar.getMaxHp());
+        writeInt((int) _activeChar.getCurrentMp());
+        writeInt(_activeChar.getMaxMp());
+        writeInt((int) _activeChar.getCurrentCp());
+        writeInt(_activeChar.getMaxCp());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 43 + _activeChar.getName().length() * 2;
-    }
 }

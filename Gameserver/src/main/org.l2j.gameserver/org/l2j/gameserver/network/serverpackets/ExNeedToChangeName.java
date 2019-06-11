@@ -25,16 +25,12 @@ public class ExNeedToChangeName extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_NEED_TO_CHANGE_NAME.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_NEED_TO_CHANGE_NAME);
 
-        packet.putInt(_type);
-        packet.putInt(_subType);
-        writeString(_name, packet);
+        writeInt(_type);
+        writeInt(_subType);
+        writeString(_name);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 15 + _name.length() *2;
-    }
 }

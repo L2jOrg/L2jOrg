@@ -19,16 +19,12 @@ public class ExConfirmVipAttendanceCheck extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CONFIRM_VIP_ATTENDANCE_CHECK.writeId(packet);
-        packet.put((byte) (_available ? 0x01 : 0x00)); // can receive reward today? 1 else 0
-        packet.put((byte) _index); // active reward index
-        packet.putInt(0);
-        packet.putInt(0);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CONFIRM_VIP_ATTENDANCE_CHECK);
+        writeByte((byte) (_available ? 0x01 : 0x00)); // can receive reward today? 1 else 0
+        writeByte((byte) _index); // active reward index
+        writeInt(0);
+        writeInt(0);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 15;
-    }
 }

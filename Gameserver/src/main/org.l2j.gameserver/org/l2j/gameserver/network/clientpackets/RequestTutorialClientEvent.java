@@ -9,8 +9,8 @@ public class RequestTutorialClientEvent extends IClientIncomingPacket {
     int _eventId = 0;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _eventId = packet.getInt();
+    public void readImpl() {
+        _eventId = readInt();
     }
 
     @Override

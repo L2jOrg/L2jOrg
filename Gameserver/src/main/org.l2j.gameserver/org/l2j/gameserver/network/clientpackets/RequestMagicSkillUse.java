@@ -18,10 +18,10 @@ public final class RequestMagicSkillUse extends IClientIncomingPacket {
     private boolean _shiftPressed;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _magicId = packet.getInt(); // Identifier of the used skill
-        _ctrlPressed = packet.getInt() != 0; // True if it's a ForceAttack : Ctrl pressed
-        _shiftPressed = packet.get() != 0; // True if Shift pressed
+    public void readImpl() {
+        _magicId = readInt(); // Identifier of the used skill
+        _ctrlPressed = readInt() != 0; // True if it's a ForceAttack : Ctrl pressed
+        _shiftPressed = readByte() != 0; // True if Shift pressed
     }
 
     @Override

@@ -7,7 +7,7 @@ import java.nio.ByteBuffer;
  */
 public class RequestPVPMatchRecord extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
 
     }
 

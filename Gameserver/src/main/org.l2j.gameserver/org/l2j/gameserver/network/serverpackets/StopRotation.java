@@ -17,17 +17,13 @@ public class StopRotation extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.FINISH_ROTATING.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.FINISH_ROTATING);
 
-        packet.putInt(_charObjId);
-        packet.putInt(_degree);
-        packet.putInt(_speed);
-        packet.putInt(0); // ?
+        writeInt(_charObjId);
+        writeInt(_degree);
+        writeInt(_speed);
+        writeInt(0); // ?
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 21;
-    }
 }

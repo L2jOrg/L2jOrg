@@ -7,7 +7,7 @@ import java.nio.ByteBuffer;
 
 public class RequestVipLuckGameInfo  extends IClientIncomingPacket {
     @Override
-    protected void readImpl(ByteBuffer packet) throws Exception {
+    protected void readImpl() throws Exception {
         // trigger packet
     }
 

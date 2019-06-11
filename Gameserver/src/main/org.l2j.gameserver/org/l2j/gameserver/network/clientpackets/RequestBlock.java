@@ -21,10 +21,10 @@ public final class RequestBlock extends IClientIncomingPacket {
     private Integer _type;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _type = packet.getInt(); // 0x00 - block, 0x01 - unblock, 0x03 - allblock, 0x04 - allunblock
+    public void readImpl() {
+        _type = readInt(); // 0x00 - block, 0x01 - unblock, 0x03 - allblock, 0x04 - allunblock
         if ((_type == BLOCK) || (_type == UNBLOCK)) {
-            _name = readString(packet);
+            _name = readString();
         }
     }
 

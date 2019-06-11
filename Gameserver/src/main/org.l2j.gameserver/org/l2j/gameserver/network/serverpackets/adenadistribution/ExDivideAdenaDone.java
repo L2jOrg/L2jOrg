@@ -27,19 +27,15 @@ public class ExDivideAdenaDone extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_DIVIDE_ADENA_DONE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_DIVIDE_ADENA_DONE);
 
-        packet.put((byte) (_isPartyLeader ? 0x01 : 0x00));
-        packet.put((byte) (_isCCLeader ? 0x01 : 0x00));
-        packet.putInt(_memberCount);
-        packet.putLong(_distributedAdenaCount);
-        packet.putLong(_adenaCount);
-        writeString(_distributorName, packet);
+        writeByte((byte) (_isPartyLeader ? 0x01 : 0x00));
+        writeByte((byte) (_isCCLeader ? 0x01 : 0x00));
+        writeInt(_memberCount);
+        writeLong(_distributedAdenaCount);
+        writeLong(_adenaCount);
+        writeString(_distributorName);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 27 + _distributorName.length() * 2;
-    }
 }

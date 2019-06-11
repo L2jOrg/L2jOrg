@@ -26,27 +26,23 @@ public class PrivateStoreListBuy extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PRIVATE_STORE_BUY_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PRIVATE_STORE_BUY_LIST);
 
-        packet.putInt(_objId);
-        packet.putLong(_playerAdena);
-        packet.putInt(0x00); // Viewer's item count?
-        packet.putInt(_items.size());
+        writeInt(_objId);
+        writeLong(_playerAdena);
+        writeInt(0x00); // Viewer's item count?
+        writeInt(_items.size());
 
         int slotNumber = 0;
         for (TradeItem item : _items) {
             slotNumber++;
-            writeItem(packet, item);
-            packet.putInt(slotNumber); // Slot in shop
-            packet.putLong(item.getPrice());
-            packet.putLong(item.getItem().getReferencePrice() * 2);
-            packet.putLong(item.getStoreCount());
+            writeItem(item);
+            writeInt(slotNumber); // Slot in shop
+            writeLong(item.getPrice());
+            writeLong(item.getItem().getReferencePrice() * 2);
+            writeLong(item.getStoreCount());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 30 + _items.size() * 130;
-    }
 }

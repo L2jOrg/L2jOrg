@@ -18,10 +18,10 @@ public final class RequestJoinSiege extends IClientIncomingPacket {
     private int _isJoining;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _castleId = packet.getInt();
-        _isAttacker = packet.getInt();
-        _isJoining = packet.getInt();
+    public void readImpl() {
+        _castleId = readInt();
+        _isAttacker = readInt();
+        _isJoining = readInt();
     }
 
     @Override

@@ -17,8 +17,8 @@ public class RequestOneDayRewardReceive extends IClientIncomingPacket {
     private int _id;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _id = packet.getShort();
+    public void readImpl() {
+        _id = readShort();
     }
 
     @Override

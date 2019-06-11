@@ -39,24 +39,20 @@ public class ExChooseInventoryAttributeItem extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CHOOSE_INVENTORY_ATTRIBUTE_ITEM.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CHOOSE_INVENTORY_ATTRIBUTE_ITEM);
 
-        packet.putInt(_itemId);
-        packet.putLong(_count);
-        packet.putInt(_atribute == AttributeType.FIRE ? 1 : 0); // Fire
-        packet.putInt(_atribute == AttributeType.WATER ? 1 : 0); // Water
-        packet.putInt(_atribute == AttributeType.WIND ? 1 : 0); // Wind
-        packet.putInt(_atribute == AttributeType.EARTH ? 1 : 0); // Earth
-        packet.putInt(_atribute == AttributeType.HOLY ? 1 : 0); // Holy
-        packet.putInt(_atribute == AttributeType.DARK ? 1 : 0); // Unholy
-        packet.putInt(_level); // Item max attribute level
-        packet.putInt(_items.size());
-        _items.forEach(packet::putInt);
+        writeInt(_itemId);
+        writeLong(_count);
+        writeInt(_atribute == AttributeType.FIRE ? 1 : 0); // Fire
+        writeInt(_atribute == AttributeType.WATER ? 1 : 0); // Water
+        writeInt(_atribute == AttributeType.WIND ? 1 : 0); // Wind
+        writeInt(_atribute == AttributeType.EARTH ? 1 : 0); // Earth
+        writeInt(_atribute == AttributeType.HOLY ? 1 : 0); // Holy
+        writeInt(_atribute == AttributeType.DARK ? 1 : 0); // Unholy
+        writeInt(_level); // Item max attribute level
+        writeInt(_items.size());
+        _items.forEach(this::writeInt);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 49 + _items.size() * 4;
-    }
 }

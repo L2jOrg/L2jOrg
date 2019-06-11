@@ -18,9 +18,9 @@ public final class RequestGMCommand extends IClientIncomingPacket {
     private int _command;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _targetName = readString(packet);
-        _command = packet.getInt();
+    public void readImpl() {
+        _targetName = readString();
+        _command = readInt();
     }
 
     @Override

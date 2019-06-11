@@ -29,39 +29,35 @@ public final class BuyListSeed extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.BUY_LIST_SEED.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.BUY_LIST_SEED);
 
-        packet.putLong(_money); // current money
-        packet.putInt(0x00); // TODO: Find me!
-        packet.putInt(_manorId); // manor id
+        writeLong(_money); // current money
+        writeInt(0x00); // TODO: Find me!
+        writeInt(_manorId); // manor id
 
         if (!_list.isEmpty()) {
-            packet.putShort((short) _list.size()); // list length
+            writeShort((short) _list.size()); // list length
             for (SeedProduction s : _list) {
-                packet.put((byte) 0x00); // mask item 0 to print minimal item information
-                packet.putInt(s.getId()); // ObjectId
-                packet.putInt(s.getId()); // ItemId
-                packet.put((byte) 0xFF); // T1
-                packet.putLong(s.getAmount()); // Quantity
-                packet.put((byte) 0x05); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
-                packet.put((byte) 0x00); // Filler (always 0)
-                packet.putShort((short) 0x00); // Equipped : 00-No, 01-yes
-                packet.putLong(0x00); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
-                packet.putShort((short) 0x00); // Enchant level (pet level shown in control item)
-                packet.putInt(-1);
-                packet.putInt(-9999);
-                packet.put((byte) 0x01); // GOD Item enabled = 1 disabled (red) = 0
-                packet.putLong(s.getPrice()); // price
+                writeByte((byte) 0x00); // mask item 0 to print minimal item information
+                writeInt(s.getId()); // ObjectId
+                writeInt(s.getId()); // ItemId
+                writeByte((byte) 0xFF); // T1
+                writeLong(s.getAmount()); // Quantity
+                writeByte((byte) 0x05); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
+                writeByte((byte) 0x00); // Filler (always 0)
+                writeShort((short) 0x00); // Equipped : 00-No, 01-yes
+                writeLong(0x00); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
+                writeShort((short) 0x00); // Enchant level (pet level shown in control item)
+                writeInt(-1);
+                writeInt(-9999);
+                writeByte((byte) 0x01); // GOD Item enabled = 1 disabled (red) = 0
+                writeLong(s.getPrice()); // price
             }
             _list.clear();
         } else {
-            packet.putShort((short) 0x00);
+            writeShort((short) 0x00);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 23 + _list.size() * 49;
-    }
 }

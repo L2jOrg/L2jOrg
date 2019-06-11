@@ -23,20 +23,16 @@ public class ExReplyPostItemList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_REPLY_POST_ITEM_LIST.writeId(packet);
-        packet.put((byte) _sendType);
-        packet.putInt(_itemList.size());
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_REPLY_POST_ITEM_LIST);
+        writeByte((byte) _sendType);
+        writeInt(_itemList.size());
         if (_sendType == 2) {
-            packet.putInt(_itemList.size());
+            writeInt(_itemList.size());
             for (L2ItemInstance item : _itemList) {
-                writeItem(packet, item);
+                writeItem(item);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17 + _itemList.size() * 100;
-    }
 }

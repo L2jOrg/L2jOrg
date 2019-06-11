@@ -17,27 +17,23 @@ public class RecipeShopSellList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.RECIPE_SHOP_SELL_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.RECIPE_SHOP_SELL_LIST);
 
-        packet.putInt(_manufacturer.getObjectId());
-        packet.putInt((int) _manufacturer.getCurrentMp()); // Creator's MP
-        packet.putInt(_manufacturer.getMaxMp()); // Creator's MP
-        packet.putLong(_buyer.getAdena()); // Buyer Adena
+        writeInt(_manufacturer.getObjectId());
+        writeInt((int) _manufacturer.getCurrentMp()); // Creator's MP
+        writeInt(_manufacturer.getMaxMp()); // Creator's MP
+        writeLong(_buyer.getAdena()); // Buyer Adena
         if (!_manufacturer.hasManufactureShop()) {
-            packet.putInt(0x00);
+            writeInt(0x00);
         } else {
-            packet.putInt(_manufacturer.getManufactureItems().size());
+            writeInt(_manufacturer.getManufactureItems().size());
             for (L2ManufactureItem temp : _manufacturer.getManufactureItems().values()) {
-                packet.putInt(temp.getRecipeId());
-                packet.putInt(0x00); // unknown
-                packet.putLong(temp.getCost());
+                writeInt(temp.getRecipeId());
+                writeInt(0x00); // unknown
+                writeLong(temp.getCost());
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 29 + (_manufacturer.hasManufactureShop() ? _manufacturer.getManufactureItems().size() * 16 + 4: 4);
-    }
 }

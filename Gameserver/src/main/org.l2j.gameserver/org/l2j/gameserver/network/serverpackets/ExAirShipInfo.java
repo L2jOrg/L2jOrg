@@ -31,42 +31,38 @@ public class ExAirShipInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_AIR_SHIP_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_AIR_SHIP_INFO);
 
-        packet.putInt(_ship.getObjectId());
-        packet.putInt(_x);
-        packet.putInt(_y);
-        packet.putInt(_z);
-        packet.putInt(_heading);
+        writeInt(_ship.getObjectId());
+        writeInt(_x);
+        writeInt(_y);
+        writeInt(_z);
+        writeInt(_heading);
 
-        packet.putInt(_captain);
-        packet.putInt(_moveSpeed);
-        packet.putInt(_rotationSpeed);
-        packet.putInt(_helm);
+        writeInt(_captain);
+        writeInt(_moveSpeed);
+        writeInt(_rotationSpeed);
+        writeInt(_helm);
         if (_helm != 0) {
             // TODO: unhardcode these!
-            packet.putInt(0x16e); // Controller X
-            packet.putInt(0x00); // Controller Y
-            packet.putInt(0x6b); // Controller Z
-            packet.putInt(0x15c); // Captain X
-            packet.putInt(0x00); // Captain Y
-            packet.putInt(0x69); // Captain Z
+            writeInt(0x16e); // Controller X
+            writeInt(0x00); // Controller Y
+            writeInt(0x6b); // Controller Z
+            writeInt(0x15c); // Captain X
+            writeInt(0x00); // Captain Y
+            writeInt(0x69); // Captain Z
         } else {
-            packet.putInt(0x00);
-            packet.putInt(0x00);
-            packet.putInt(0x00);
-            packet.putInt(0x00);
-            packet.putInt(0x00);
-            packet.putInt(0x00);
+            writeInt(0x00);
+            writeInt(0x00);
+            writeInt(0x00);
+            writeInt(0x00);
+            writeInt(0x00);
+            writeInt(0x00);
         }
 
-        packet.putInt(_ship.getFuel());
-        packet.putInt(_ship.getMaxFuel());
+        writeInt(_ship.getFuel());
+        writeInt(_ship.getMaxFuel());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 73;
-    }
 }

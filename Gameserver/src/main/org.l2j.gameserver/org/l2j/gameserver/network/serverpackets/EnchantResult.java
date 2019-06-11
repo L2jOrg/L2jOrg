@@ -36,20 +36,16 @@ public class EnchantResult extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.ENCHANT_RESULT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.ENCHANT_RESULT);
 
-        packet.putInt(_result);
-        packet.putInt(_crystal);
-        packet.putLong(_count);
-        packet.putInt(_enchantLevel);
+        writeInt(_result);
+        writeInt(_crystal);
+        writeLong(_count);
+        writeInt(_enchantLevel);
         for (int option : _enchantOptions) {
-            packet.putShort((short) option);
+            writeShort((short) option);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25 + _enchantOptions.length * 2;
-    }
 }

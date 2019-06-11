@@ -20,14 +20,10 @@ public class GMHide extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.GM_HIDE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.GM_HIDE);
 
-        packet.putInt(_mode);
+        writeInt(_mode);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

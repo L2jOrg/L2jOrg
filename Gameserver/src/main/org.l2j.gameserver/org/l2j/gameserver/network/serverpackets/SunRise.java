@@ -14,12 +14,8 @@ public class SunRise extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SUN_RISE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SUN_RISE);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

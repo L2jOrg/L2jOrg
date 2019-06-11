@@ -17,9 +17,9 @@ public class ChangeAllowedIp extends SendablePacket
 	}
 
 	@Override
-	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {
-		buffer.put((byte)0x07);
-		writeString(account, buffer);
-		writeString(ip, buffer);
+	protected void writeImpl(AuthServerClient client) {
+		writeByte((byte)0x07);
+		writeString(account);
+		writeString(ip);
 	}
 }

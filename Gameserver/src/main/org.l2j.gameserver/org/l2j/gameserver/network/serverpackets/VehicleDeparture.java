@@ -27,19 +27,15 @@ public class VehicleDeparture extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.VEHICLE_DEPARTURE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.VEHICLE_DEPARTURE);
 
-        packet.putInt(_objId);
-        packet.putInt(_moveSpeed);
-        packet.putInt(_rotationSpeed);
-        packet.putInt(_x);
-        packet.putInt(_y);
-        packet.putInt(_z);
+        writeInt(_objId);
+        writeInt(_moveSpeed);
+        writeInt(_rotationSpeed);
+        writeInt(_x);
+        writeInt(_y);
+        writeInt(_z);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 31;
-    }
 }

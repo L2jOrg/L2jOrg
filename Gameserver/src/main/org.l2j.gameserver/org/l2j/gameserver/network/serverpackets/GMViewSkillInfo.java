@@ -18,27 +18,23 @@ public class GMViewSkillInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.GM_VIEW_SKILL_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.GM_VIEW_SKILL_INFO);
 
-        writeString(_activeChar.getName(), packet);
-        packet.putInt(_skills.size());
+        writeString(_activeChar.getName());
+        writeInt(_skills.size());
 
         final boolean isDisabled = (_activeChar.getClan() != null) && (_activeChar.getClan().getReputationScore() < 0);
 
         for (Skill skill : _skills) {
-            packet.putInt(skill.isPassive() ? 1 : 0);
-            packet.putShort((short) skill.getDisplayLevel());
-            packet.putShort((short) skill.getSubLevel());
-            packet.putInt(skill.getDisplayId());
-            packet.putInt(0x00);
-            packet.put((byte) (isDisabled && skill.isClanSkill() ? 1 : 0));
-            packet.put((byte)(skill.isEnchantable() ? 1 : 0));
+            writeInt(skill.isPassive() ? 1 : 0);
+            writeShort((short) skill.getDisplayLevel());
+            writeShort((short) skill.getSubLevel());
+            writeInt(skill.getDisplayId());
+            writeInt(0x00);
+            writeByte((byte) (isDisabled && skill.isClanSkill() ? 1 : 0));
+            writeByte((byte)(skill.isEnchantable() ? 1 : 0));
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 11 + _activeChar.getName().length() * 2 + _skills.size() * 18;
-    }
 }

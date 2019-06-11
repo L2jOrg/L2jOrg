@@ -18,16 +18,12 @@ public class ExMentorAdd extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_MENTOR_ADD.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_MENTOR_ADD);
 
-        writeString(_mentor.getName(), packet);
-        packet.putInt(_mentor.getActiveClass());
-        packet.putInt(_mentor.getLevel());
+        writeString(_mentor.getName());
+        writeInt(_mentor.getActiveClass());
+        writeInt(_mentor.getLevel());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 15 + _mentor.getName().length() * 2;
-    }
 }

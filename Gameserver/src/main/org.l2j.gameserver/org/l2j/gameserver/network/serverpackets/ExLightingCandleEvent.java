@@ -19,8 +19,8 @@ public class ExLightingCandleEvent extends IClientOutgoingPacket {
     }
 
     @Override
-    protected void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_LIGHTING_CANDLE_EVENT.writeId(packet);
-        packet.putShort(enabled);
+    protected void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_LIGHTING_CANDLE_EVENT);
+        writeShort(enabled);
     }
 }

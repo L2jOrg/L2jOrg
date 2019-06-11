@@ -28,8 +28,8 @@ public final class RequestPostAttachment extends IClientIncomingPacket {
     private int _msgId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _msgId = packet.getInt();
+    public void readImpl() {
+        _msgId = readInt();
     }
 
     @Override

@@ -18,16 +18,12 @@ public class ExBaseAttributeCancelResult extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BASE_ATTRIBUTE_CANCEL_RESULT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BASE_ATTRIBUTE_CANCEL_RESULT);
 
-        packet.putInt(0x01); // result
-        packet.putInt(_objId);
-        packet.putInt(_attribute);
+        writeInt(0x01); // result
+        writeInt(_objId);
+        writeInt(_attribute);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17;
-    }
 }

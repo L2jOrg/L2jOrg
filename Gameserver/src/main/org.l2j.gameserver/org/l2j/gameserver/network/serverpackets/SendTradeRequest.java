@@ -13,14 +13,10 @@ public class SendTradeRequest extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.TRADE_REQUEST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.TRADE_REQUEST);
 
-        packet.putInt(_senderId);
+        writeInt(_senderId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

@@ -18,10 +18,10 @@ public class RequestRegistBeauty extends IClientIncomingPacket {
     private int _colorId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _hairId = packet.getInt();
-        _faceId = packet.getInt();
-        _colorId = packet.getInt();
+    public void readImpl() {
+        _hairId = readInt();
+        _faceId = readInt();
+        _colorId = readInt();
     }
 
     @Override

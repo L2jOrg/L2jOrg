@@ -84,9 +84,9 @@ public class ConfirmMenteeAdd extends IClientIncomingPacket {
     }
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _confirmed = packet.getInt();
-        _mentor = readString(packet);
+    public void readImpl() {
+        _confirmed = readInt();
+        _mentor = readString();
     }
 
     @Override

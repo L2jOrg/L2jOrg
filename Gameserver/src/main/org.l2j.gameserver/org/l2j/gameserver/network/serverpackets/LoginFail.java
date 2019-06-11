@@ -34,15 +34,11 @@ public class LoginFail extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.LOGIN_FAIL.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.LOGIN_FAIL);
 
-        packet.putInt(_success);
-        packet.putInt(_reason);
+        writeInt(_success);
+        writeInt(_reason);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13;
-    }
 }

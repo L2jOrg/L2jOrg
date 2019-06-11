@@ -34,23 +34,19 @@ public class ShowBoard extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SHOW_BOARD.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SHOW_BOARD);
 
-        packet.put((byte) _showBoard); // c4 1 to show community 00 to hide
-        writeString("bypass _bbshome", packet); // top
-        writeString("bypass _bbsgetfav", packet); // favorite
-        writeString("bypass _bbsloc", packet); // region
-        writeString("bypass _bbsclan", packet); // clan
-        writeString("bypass _bbsmemo", packet); // memo
-        writeString("bypass _bbsmail", packet); // mail
-        writeString("bypass _bbsfriends", packet); // friends
-        writeString("bypass bbs_add_fav", packet); // add fav.
-        writeString(_content, packet);
+        writeByte((byte) _showBoard); // c4 1 to show community 00 to hide
+        writeString("bypass _bbshome"); // top
+        writeString("bypass _bbsgetfav"); // favorite
+        writeString("bypass _bbsloc"); // region
+        writeString("bypass _bbsclan"); // clan
+        writeString("bypass _bbsmemo"); // memo
+        writeString("bypass _bbsmail"); // mail
+        writeString("bypass _bbsfriends"); // friends
+        writeString("bypass bbs_add_fav"); // add fav.
+        writeString(_content);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 7 + (_content.length() + BOARD_MENU_SIZE ) * 2;
-    }
 }

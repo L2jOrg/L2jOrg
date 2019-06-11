@@ -5,7 +5,6 @@ import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -27,24 +26,20 @@ public class ExAbnormalStatusUpdateFromTarget extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_ABNORMAL_STATUS_UPDATE_FROM_TARGET.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_ABNORMAL_STATUS_UPDATE_FROM_TARGET);
 
-        packet.putInt(_character.getObjectId());
-        packet.putShort((short) _effects.size());
+        writeInt(_character.getObjectId());
+        writeShort((short) _effects.size());
 
         for (BuffInfo info : _effects) {
-            packet.putInt(info.getSkill().getDisplayId());
-            packet.putShort((short) info.getSkill().getDisplayLevel());
-            // packet.putShort((short)info.getSkill().getSubLevel());
-            packet.putShort((short) info.getSkill().getAbnormalType().getClientId());
-            writeOptionalD(packet, info.getSkill().isAura() ? -1 : info.getTime());
-            packet.putInt(info.getEffectorObjectId());
+            writeInt(info.getSkill().getDisplayId());
+            writeShort((short) info.getSkill().getDisplayLevel());
+            // writeShort((short)info.getSkill().getSubLevel());
+            writeShort((short) info.getSkill().getAbnormalType().getClientId());
+            writeOptionalD(info.getSkill().isAura() ? -1 : info.getTime());
+            writeInt(info.getEffectorObjectId());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 11 + _effects.size() * 18;
-    }
 }

@@ -20,23 +20,19 @@ public class ExMultiPartyCommandChannelInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_MULTI_PARTY_COMMAND_CHANNEL_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_MULTI_PARTY_COMMAND_CHANNEL_INFO);
 
-        writeString(_channel.getLeader().getName(), packet);
-        packet.putInt(0x00); // Channel loot 0 or 1
-        packet.putInt(_channel.getMemberCount());
+        writeString(_channel.getLeader().getName());
+        writeInt(0x00); // Channel loot 0 or 1
+        writeInt(_channel.getMemberCount());
 
-        packet.putInt(_channel.getPartys().size());
+        writeInt(_channel.getPartys().size());
         for (L2Party p : _channel.getPartys()) {
-            writeString(p.getLeader().getName(), packet);
-            packet.putInt(p.getLeaderObjectId());
-            packet.putInt(p.getMemberCount());
+            writeString(p.getLeader().getName());
+            writeInt(p.getLeaderObjectId());
+            writeInt(p.getMemberCount());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 19 + _channel.getLeader().getName().length() * 2 + _channel.getPartys().size() * 42;
-    }
 }

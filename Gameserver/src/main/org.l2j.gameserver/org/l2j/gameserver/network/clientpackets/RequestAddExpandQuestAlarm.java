@@ -13,8 +13,8 @@ public class RequestAddExpandQuestAlarm extends IClientIncomingPacket {
     private int _questId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _questId = packet.getInt();
+    public void readImpl() {
+        _questId = readInt();
     }
 
     @Override

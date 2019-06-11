@@ -18,8 +18,8 @@ public final class RequestHennaItemRemoveInfo extends IClientIncomingPacket {
     private int _symbolId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _symbolId = packet.getInt();
+    public void readImpl() {
+        _symbolId = readInt();
     }
 
     @Override

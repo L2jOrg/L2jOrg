@@ -18,18 +18,14 @@ public class ExRaidBossSpawnInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_RAID_BOSS_SPAWN_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_RAID_BOSS_SPAWN_INFO);
 
-        packet.putInt(_bossIds.size()); // alive count
+        writeInt(_bossIds.size()); // alive count
         for (int id : _bossIds) // alive ids
         {
-            packet.putInt(id);
+            writeInt(id);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + _bossIds.size() * 4;
-    }
 }

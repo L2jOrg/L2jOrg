@@ -17,10 +17,10 @@ public final class RequestPartyMatchConfig extends IClientIncomingPacket {
     private PartyMatchingRoomLevelType _type;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _page = packet.getInt();
-        _location = packet.getInt();
-        _type = packet.getInt() == 0 ? PartyMatchingRoomLevelType.MY_LEVEL_RANGE : PartyMatchingRoomLevelType.ALL;
+    public void readImpl() {
+        _page = readInt();
+        _location = readInt();
+        _type = readInt() == 0 ? PartyMatchingRoomLevelType.MY_LEVEL_RANGE : PartyMatchingRoomLevelType.ALL;
     }
 
     @Override

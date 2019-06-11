@@ -35,18 +35,14 @@ public class ExResponseCommissionInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_RESPONSE_COMMISSION_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_RESPONSE_COMMISSION_INFO);
 
-        packet.putInt(_result);
-        packet.putInt(_itemId);
-        packet.putLong(_presetPricePerUnit);
-        packet.putLong(_presetAmount);
-        packet.putInt(_presetDurationType);
+        writeInt(_result);
+        writeInt(_itemId);
+        writeLong(_presetPricePerUnit);
+        writeLong(_presetAmount);
+        writeInt(_presetDurationType);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 33;
-    }
 }

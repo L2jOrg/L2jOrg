@@ -39,15 +39,11 @@ public class ExChangeAttributeInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CHANGE_ATTRIBUTE_INFO.writeId(packet);
-        packet.putInt(_crystalItemId);
-        packet.putInt(_attributes);
-        packet.putInt(_itemObjId);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CHANGE_ATTRIBUTE_INFO);
+        writeInt(_crystalItemId);
+        writeInt(_attributes);
+        writeInt(_itemObjId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17;
-    }
 }

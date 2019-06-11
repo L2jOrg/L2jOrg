@@ -26,26 +26,22 @@ public class SellListProcure extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SELL_LIST_PROCURE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SELL_LIST_PROCURE);
 
-        packet.putLong(_money); // money
-        packet.putInt(0x00); // lease ?
-        packet.putShort((short) _sellList.size()); // list size
+        writeLong(_money); // money
+        writeInt(0x00); // lease ?
+        writeShort((short) _sellList.size()); // list size
 
         for (L2ItemInstance item : _sellList.keySet()) {
-            packet.putShort((short) item.getItem().getType1());
-            packet.putInt(item.getObjectId());
-            packet.putInt(item.getDisplayId());
-            packet.putLong(_sellList.get(item)); // count
-            packet.putShort((short) item.getItem().getType2());
-            packet.putShort((short) 0); // unknown
-            packet.putLong(0); // price, u shouldnt get any adena for crops, only raw materials
+            writeShort((short) item.getItem().getType1());
+            writeInt(item.getObjectId());
+            writeInt(item.getDisplayId());
+            writeLong(_sellList.get(item)); // count
+            writeShort((short) item.getItem().getType2());
+            writeShort((short) 0); // unknown
+            writeLong(0); // price, u shouldnt get any adena for crops, only raw materials
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 19 + _sellList.size() * 30;
-    }
 }

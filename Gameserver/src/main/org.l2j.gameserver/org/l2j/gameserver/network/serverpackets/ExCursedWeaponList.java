@@ -4,7 +4,6 @@ import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
-import java.nio.ByteBuffer;
 import java.util.Set;
 
 /**
@@ -12,16 +11,12 @@ import java.util.Set;
  */
 public class ExCursedWeaponList extends IClientOutgoingPacket {
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CURSED_WEAPON_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CURSED_WEAPON_LIST);
 
         final Set<Integer> ids = CursedWeaponsManager.getInstance().getCursedWeaponsIds();
-        packet.putInt(ids.size());
-        ids.forEach(packet::putInt);
+        writeInt(ids.size());
+        ids.forEach(this::writeInt);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + CursedWeaponsManager.getInstance().getCursedWeaponsIds().size() * 4;
-    }
 }

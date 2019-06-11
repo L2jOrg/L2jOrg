@@ -5,7 +5,6 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,29 +20,20 @@ public final class ItemList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.ITEM_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.ITEM_LIST);
         if (_sendType == 2) {
-            packet.put((byte) _sendType);
-            packet.putInt(_items.size());
-            packet.putInt(_items.size());
+            writeByte((byte) _sendType);
+            writeInt(_items.size());
+            writeInt(_items.size());
             for (L2ItemInstance item : _items) {
-                writeItem(packet, item);
+                writeItem(item);
             }
         } else {
-            packet.put((byte) 0x01); // _showWindow ? 0x01 : 0x00
-            packet.putInt(0x00);
-            packet.putInt(_items.size());
+            writeByte((byte) 0x01); // _showWindow ? 0x01 : 0x00
+            writeInt(0x00);
+            writeInt(_items.size());
         }
-        writeInventoryBlock(packet, _activeChar.getInventory());
-    }
-
-    @Override
-    protected int size(L2GameClient client) {
-        var size = 15 + (_activeChar.getInventory().hasInventoryBlock() ? _activeChar.getInventory().getBlockItems().size() * 4 : 2);
-        if(_sendType == 2) {
-            size += _items.size() * 100;
-        }
-        return  size;
+        writeInventoryBlock(_activeChar.getInventory());
     }
 }

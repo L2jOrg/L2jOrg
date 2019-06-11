@@ -20,16 +20,12 @@ public class ExSubPledgeSkillAdd extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SUB_PLEDGET_SKILL_ADD.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SUB_PLEDGET_SKILL_ADD);
 
-        packet.putInt(_type);
-        packet.putInt(_skillId);
-        packet.putInt(_skillLevel);
+        writeInt(_type);
+        writeInt(_skillId);
+        writeInt(_skillLevel);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17;
-    }
 }

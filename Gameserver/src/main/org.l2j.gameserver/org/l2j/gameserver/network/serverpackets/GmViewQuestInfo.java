@@ -22,23 +22,19 @@ public class GmViewQuestInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.GM_VIEW_QUEST_INFO.writeId(packet);
-        writeString(_activeChar.getName(), packet);
-        packet.putShort((short) _questList.size()); // quest count
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.GM_VIEW_QUEST_INFO);
+        writeString(_activeChar.getName());
+        writeShort((short) _questList.size()); // quest count
 
         for (Quest quest : _questList) {
             final QuestState qs = _activeChar.getQuestState(quest.getName());
 
-            packet.putInt(quest.getId());
-            packet.putInt(qs == null ? 0 : qs.getCond());
+            writeInt(quest.getId());
+            writeInt(qs == null ? 0 : qs.getCond());
         }
-        packet.putShort((short) 0x00); // some size
+        writeShort((short) 0x00); // some size
         // for size; ddQQ
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + _activeChar.getName().length() * 2 + _questList.size() * 8;
-    }
 }

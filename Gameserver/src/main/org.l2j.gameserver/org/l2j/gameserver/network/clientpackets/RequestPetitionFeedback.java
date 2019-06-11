@@ -23,11 +23,11 @@ public class RequestPetitionFeedback extends IClientIncomingPacket {
     private String _message;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
         // _unknown =
-        packet.getInt(); // unknown
-        _rate = packet.getInt();
-        _message = readString(packet);
+        readInt(); // unknown
+        _rate = readInt();
+        _message = readString();
     }
 
     @Override

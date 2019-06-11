@@ -6,12 +6,8 @@ import java.nio.ByteBuffer;
 
 public class RequestServerIdentity extends GameServerWritablePacket {
     @Override
-    protected void writeImpl(ServerClient client, ByteBuffer buffer) {
-        buffer.put((byte)0x06);
+    protected void writeImpl(ServerClient client) {
+        writeByte((byte)0x06);
     }
 
-    @Override
-    protected int size(ServerClient client) {
-        return super.size(client) + 1;
-    }
 }

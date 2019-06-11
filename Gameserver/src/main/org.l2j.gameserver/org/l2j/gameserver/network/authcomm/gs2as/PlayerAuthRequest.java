@@ -20,12 +20,12 @@ public class PlayerAuthRequest extends SendablePacket
 		loginOkID2 = client.getSessionId().getAuthKey();
 	}
 
-	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {
-		buffer.put((byte)0x02);
-		writeString(account, buffer);
-		buffer.putInt(playOkID1);
-		buffer.putInt(playOkID2);
-		buffer.putInt(loginOkID1);
-		buffer.putInt(loginOkID2);
+	protected void writeImpl(AuthServerClient client) {
+		writeByte((byte)0x02);
+		writeString(account);
+		writeInt(playOkID1);
+		writeInt(playOkID2);
+		writeInt(loginOkID1);
+		writeInt(loginOkID2);
 	}
 }

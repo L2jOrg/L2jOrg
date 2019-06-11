@@ -24,9 +24,9 @@ public class PetInventoryUpdate extends AbstractInventoryUpdate {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PET_INVENTORY_UPDATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PET_INVENTORY_UPDATE);
 
-        writeItems(packet);
+        writeItems();
     }
 }

@@ -17,8 +17,8 @@ public final class RequestConfirmTargetItem extends AbstractRefinePacket {
     private int _itemObjId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _itemObjId = packet.getInt();
+    public void readImpl() {
+        _itemObjId = readInt();
     }
 
     @Override

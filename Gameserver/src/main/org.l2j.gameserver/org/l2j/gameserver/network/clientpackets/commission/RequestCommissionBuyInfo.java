@@ -17,9 +17,9 @@ public class RequestCommissionBuyInfo extends IClientIncomingPacket {
     private long _commissionId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _commissionId = packet.getLong();
-        // packet.getInt(); // CommissionItemType
+    public void readImpl() {
+        _commissionId = readLong();
+        // readInt(); // CommissionItemType
     }
 
     @Override

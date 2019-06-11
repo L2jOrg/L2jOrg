@@ -14,12 +14,8 @@ public class ExRaidServerInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_RAID_SERVER_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_RAID_SERVER_INFO);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

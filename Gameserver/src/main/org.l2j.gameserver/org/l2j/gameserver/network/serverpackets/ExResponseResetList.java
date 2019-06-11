@@ -17,19 +17,15 @@ public class ExResponseResetList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_RESPONSE_RESET_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_RESPONSE_RESET_LIST);
 
-        packet.putLong(_activeChar.getAdena());
-        packet.putLong(_activeChar.getBeautyTickets());
+        writeLong(_activeChar.getAdena());
+        writeLong(_activeChar.getBeautyTickets());
 
-        packet.putInt(_activeChar.getAppearance().getHairStyle());
-        packet.putInt(_activeChar.getAppearance().getHairColor());
-        packet.putInt(_activeChar.getAppearance().getFace());
+        writeInt(_activeChar.getAppearance().getHairStyle());
+        writeInt(_activeChar.getAppearance().getHairColor());
+        writeInt(_activeChar.getAppearance().getFace());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 33;
-    }
 }

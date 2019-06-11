@@ -232,31 +232,27 @@ public class ExShowScreenMessage extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_SCREEN_MESSAGE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_SCREEN_MESSAGE);
 
-        packet.putInt(_type);
-        packet.putInt(_sysMessageId);
-        packet.putInt(_position);
-        packet.putInt(_unk1);
-        packet.putInt(_size);
-        packet.putInt(_unk2);
-        packet.putInt(_unk3);
-        packet.putInt(_effect ? 0x01 : 0x00);
-        packet.putInt(_time);
-        packet.putInt(_fade ? 0x01 : 0x00);
-        packet.putInt(_npcString);
+        writeInt(_type);
+        writeInt(_sysMessageId);
+        writeInt(_position);
+        writeInt(_unk1);
+        writeInt(_size);
+        writeInt(_unk2);
+        writeInt(_unk3);
+        writeInt(_effect ? 0x01 : 0x00);
+        writeInt(_time);
+        writeInt(_fade ? 0x01 : 0x00);
+        writeInt(_npcString);
         if (_npcString == -1) {
-            writeString(_text, packet);
+            writeString(_text);
         } else if (_parameters != null) {
             for (String s : _parameters) {
-                writeString(s, packet);
+                writeString(s);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 51 + (_npcString == -1 ? _text.length()  : _parameters.stream().mapToInt(String::length).sum()) * 2;
-    }
 }

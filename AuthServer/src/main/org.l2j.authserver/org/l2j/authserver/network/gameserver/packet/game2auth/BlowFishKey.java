@@ -10,10 +10,10 @@ public class BlowFishKey extends GameserverReadablePacket {
     private byte[] receivedKey;
 
     @Override
-    protected void readImpl(ByteBuffer buffer) {
-        var size = buffer.getInt();
+    protected void readImpl() {
+        var size = readInt();
         receivedKey = new byte[size];
-        buffer.get(receivedKey);
+        readBytes(receivedKey);
     }
 
     @Override

@@ -20,26 +20,22 @@ public class ExHeroList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_HERO_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_HERO_LIST);
 
-        packet.putInt(_heroList.size());
+        writeInt(_heroList.size());
         for (Integer heroId : _heroList.keySet()) {
             final StatsSet hero = _heroList.get(heroId);
-            writeString(hero.getString(Olympiad.CHAR_NAME), packet);
-            packet.putInt(hero.getInt(Olympiad.CLASS_ID));
-            writeString(hero.getString(Hero.CLAN_NAME, ""), packet);
-            packet.putInt(hero.getInt(Hero.CLAN_CREST, 0));
-            writeString(hero.getString(Hero.ALLY_NAME, ""), packet);
-            packet.putInt(hero.getInt(Hero.ALLY_CREST, 0));
-            packet.putInt(hero.getInt(Hero.COUNT));
-            packet.putInt(0x00);
+            writeString(hero.getString(Olympiad.CHAR_NAME));
+            writeInt(hero.getInt(Olympiad.CLASS_ID));
+            writeString(hero.getString(Hero.CLAN_NAME, ""));
+            writeInt(hero.getInt(Hero.CLAN_CREST, 0));
+            writeString(hero.getString(Hero.ALLY_NAME, ""));
+            writeInt(hero.getInt(Hero.ALLY_CREST, 0));
+            writeInt(hero.getInt(Hero.COUNT));
+            writeInt(0x00);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + _heroList.size() * 26 + _heroList.values().stream().mapToInt(h -> h.getString(Olympiad.CHAR_NAME).length() * 2
-                + h.getString(Hero.CLAN_NAME).length() * 2 + h.getString(Hero.ALLY_NAME).length() * 2).sum();
-    }
+
 }

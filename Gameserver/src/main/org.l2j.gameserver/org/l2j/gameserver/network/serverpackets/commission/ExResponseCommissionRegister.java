@@ -22,14 +22,10 @@ public class ExResponseCommissionRegister extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_RESPONSE_COMMISSION_REGISTER.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_RESPONSE_COMMISSION_REGISTER);
 
-        packet.putInt(_result);
+        writeInt(_result);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

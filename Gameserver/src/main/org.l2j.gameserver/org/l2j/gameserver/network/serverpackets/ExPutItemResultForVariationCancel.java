@@ -22,19 +22,15 @@ public class ExPutItemResultForVariationCancel extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PUT_ITEM_RESULT_FOR_VARIATION_CANCEL.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PUT_ITEM_RESULT_FOR_VARIATION_CANCEL);
 
-        packet.putInt(_itemObjId);
-        packet.putInt(_itemId);
-        packet.putInt(_itemAug1);
-        packet.putInt(_itemAug2);
-        packet.putLong(_price);
-        packet.putInt(0x01);
+        writeInt(_itemObjId);
+        writeInt(_itemId);
+        writeInt(_itemAug1);
+        writeInt(_itemAug2);
+        writeLong(_price);
+        writeInt(0x01);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 33;
-    }
 }

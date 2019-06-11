@@ -19,9 +19,9 @@ public class RequestCaptchaAnswer extends IClientIncomingPacket {
     private int answer;
 
     @Override
-    protected void readImpl(ByteBuffer packet) throws Exception {
-        packet.getLong(); // captchaId not needed since we store the information on CaptchaRequest
-        answer = packet.getInt();
+    protected void readImpl() throws Exception {
+        readLong(); // captchaId not needed since we store the information on CaptchaRequest
+        answer = readInt();
     }
 
     @Override

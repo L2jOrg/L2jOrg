@@ -14,8 +14,8 @@ public class PlayerLogout extends GameserverReadablePacket {
 	}
 
 	@Override
-	protected void readImpl(ByteBuffer buffer) {
-		account = readString(buffer);
+	protected void readImpl() {
+		account = readString();
 	}
 
 	@Override

@@ -17,10 +17,10 @@ public class RequestRaidBossSpawnInfo extends IClientIncomingPacket {
     private final List<Integer> _bossIds = new ArrayList<>();
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        final int count = packet.getInt();
+    public void readImpl() {
+        final int count = readInt();
         for (int i = 0; i < count; i++) {
-            final int bossId = packet.getInt();
+            final int bossId = readInt();
             if (DBSpawnManager.getInstance().getNpcStatusId(bossId) == DBStatusType.ALIVE) {
                 _bossIds.add(bossId);
             } else if (GrandBossManager.getInstance().getBossStatus(bossId) == 0) {

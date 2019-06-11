@@ -9,7 +9,7 @@ import java.nio.ByteBuffer;
  */
 public class RequestSiegeInfo extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
 
     }
 

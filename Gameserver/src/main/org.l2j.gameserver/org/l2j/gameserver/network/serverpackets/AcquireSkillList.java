@@ -25,34 +25,30 @@ public class AcquireSkillList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.ACQUIRE_SKILL_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.ACQUIRE_SKILL_LIST);
 
-        packet.putShort((short) _learnable.size());
+        writeShort((short) _learnable.size());
         for (L2SkillLearn skill : _learnable) {
             if (skill == null) {
                 continue;
             }
-            packet.putInt(skill.getSkillId());
-            packet.putShort((short) skill.getSkillLevel());
-            packet.putLong(skill.getLevelUpSp());
-            packet.put((byte) skill.getGetLevel());
-            packet.putShort((short) 0x00); // Salvation: Changed from byte to short.
+            writeInt(skill.getSkillId());
+            writeShort((short) skill.getSkillLevel());
+            writeLong(skill.getLevelUpSp());
+            writeByte((byte) skill.getGetLevel());
+            writeShort((short) 0x00); // Salvation: Changed from byte to short.
             if (skill.getRequiredItems().size() > 0) {
                 for (ItemHolder item : skill.getRequiredItems()) {
-                    packet.put((byte) 0x01);
-                    packet.putInt(item.getId());
-                    packet.putLong(item.getCount());
+                    writeByte((byte) 0x01);
+                    writeInt(item.getId());
+                    writeLong(item.getCount());
                 }
             } else {
-                packet.put((byte) 0x00);
+                writeByte((byte) 0x00);
             }
-            packet.put((byte) 0x00);
+            writeByte((byte) 0x00);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 7 + _learnable.size() * 19 + _learnable.stream().mapToInt(skill -> skill.getRequiredItems().size()).sum() * 13;
-    }
 }

@@ -19,9 +19,9 @@ public class RequestExTryToPutEnchantSupportItem extends IClientIncomingPacket {
     private int _enchantObjectId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _supportObjectId = packet.getInt();
-        _enchantObjectId = packet.getInt();
+    public void readImpl() {
+        _supportObjectId = readInt();
+        _enchantObjectId = readInt();
     }
 
     @Override

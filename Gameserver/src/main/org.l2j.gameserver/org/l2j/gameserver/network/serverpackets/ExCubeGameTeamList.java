@@ -33,28 +33,24 @@ public class ExCubeGameTeamList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BLOCK_UP_SET_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BLOCK_UP_SET_LIST);
 
-        packet.putInt(0x00);
+        writeInt(0x00);
 
-        packet.putInt(_roomNumber);
-        packet.putInt(0xffffffff);
+        writeInt(_roomNumber);
+        writeInt(0xffffffff);
 
-        packet.putInt(_bluePlayers.size());
+        writeInt(_bluePlayers.size());
         for (L2PcInstance player : _bluePlayers) {
-            packet.putInt(player.getObjectId());
-            writeString(player.getName(), packet);
+            writeInt(player.getObjectId());
+            writeString(player.getName());
         }
-        packet.putInt(_redPlayers.size());
+        writeInt(_redPlayers.size());
         for (L2PcInstance player : _redPlayers) {
-            packet.putInt(player.getObjectId());
-            writeString(player.getName(), packet);
+            writeInt(player.getObjectId());
+            writeString(player.getName());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25 + Stream.concat(_redPlayers.stream(), _bluePlayers.stream()).mapToInt(p -> p.getName().length() * 2 + 6).sum();
-    }
 }

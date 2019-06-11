@@ -19,18 +19,14 @@ public class PackageToList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PACKAGE_TO_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PACKAGE_TO_LIST);
 
-        packet.putInt(_players.size());
+        writeInt(_players.size());
         for (Entry<Integer, String> entry : _players.entrySet()) {
-            packet.putInt(entry.getKey());
-            writeString(entry.getValue(), packet);
+            writeInt(entry.getKey());
+            writeString(entry.getValue());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + _players.size() * 6 + _players.values().stream().mapToInt(String::length).sum() * 2;
-    }
 }

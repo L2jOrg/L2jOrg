@@ -25,18 +25,14 @@ public class VehicleInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.VEHICLE_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.VEHICLE_INFO);
 
-        packet.putInt(_objId);
-        packet.putInt(_x);
-        packet.putInt(_y);
-        packet.putInt(_z);
-        packet.putInt(_heading);
+        writeInt(_objId);
+        writeInt(_x);
+        writeInt(_y);
+        writeInt(_z);
+        writeInt(_heading);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25;
-    }
 }

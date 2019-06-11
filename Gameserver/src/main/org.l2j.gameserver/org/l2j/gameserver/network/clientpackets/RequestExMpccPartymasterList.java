@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
  */
 public class RequestExMpccPartymasterList extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
 
     }
 

@@ -24,28 +24,24 @@ public class ExGetBossRecord extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_GET_BOSS_RECORD.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_GET_BOSS_RECORD);
 
-        packet.putInt(_ranking);
-        packet.putInt(_totalPoints);
+        writeInt(_ranking);
+        writeInt(_totalPoints);
         if (_bossRecordInfo == null) {
-            packet.putInt(0x00);
-            packet.putInt(0x00);
-            packet.putInt(0x00);
-            packet.putInt(0x00);
+            writeInt(0x00);
+            writeInt(0x00);
+            writeInt(0x00);
+            writeInt(0x00);
         } else {
-            packet.putInt(_bossRecordInfo.size()); // list size
+            writeInt(_bossRecordInfo.size()); // list size
             for (Entry<Integer, Integer> entry : _bossRecordInfo.entrySet()) {
-                packet.putInt(entry.getKey());
-                packet.putInt(entry.getValue());
-                packet.putInt(0x00); // ??
+                writeInt(entry.getKey());
+                writeInt(entry.getValue());
+                writeInt(0x00); // ??
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17 + (nonNull(_bossRecordInfo) ?  _bossRecordInfo.size() * 12 : 16);
-    }
 }

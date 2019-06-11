@@ -30,23 +30,19 @@ public class ExShowProcureCropDetail extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_PROCURE_CROP_DETAIL.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_PROCURE_CROP_DETAIL);
 
-        packet.putInt(_cropId); // crop id
-        packet.putInt(_castleCrops.size()); // size
+        writeInt(_cropId); // crop id
+        writeInt(_castleCrops.size()); // size
 
         for (Map.Entry<Integer, CropProcure> entry : _castleCrops.entrySet()) {
             final CropProcure crop = entry.getValue();
-            packet.putInt(entry.getKey()); // manor name
-            packet.putLong(crop.getAmount()); // buy residual
-            packet.putLong(crop.getPrice()); // buy price
-            packet.put((byte) crop.getReward()); // reward type
+            writeInt(entry.getKey()); // manor name
+            writeLong(crop.getAmount()); // buy residual
+            writeLong(crop.getPrice()); // buy price
+            writeByte((byte) crop.getReward()); // reward type
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + _castleCrops.size() * 21;
-    }
 }

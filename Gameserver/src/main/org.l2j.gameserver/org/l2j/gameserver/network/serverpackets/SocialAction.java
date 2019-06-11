@@ -18,16 +18,12 @@ public class SocialAction extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SOCIAL_ACTION.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SOCIAL_ACTION);
 
-        packet.putInt(_charObjId);
-        packet.putInt(_actionId);
-        packet.putInt(0x00); // TODO: Find me!
+        writeInt(_charObjId);
+        writeInt(_actionId);
+        writeInt(0x00); // TODO: Find me!
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17;
-    }
 }

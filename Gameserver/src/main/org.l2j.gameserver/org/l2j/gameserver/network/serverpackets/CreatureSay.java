@@ -9,11 +9,8 @@ import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.OutgoingPackets;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
-
-import static java.util.Objects.nonNull;
 
 public final class CreatureSay extends IClientOutgoingPacket {
     private final int _objectId;
@@ -123,42 +120,30 @@ public final class CreatureSay extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SAY2.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SAY2);
 
-        packet.putInt(_objectId);
-        packet.putInt(_textType.getClientId());
+        writeInt(_objectId);
+        writeInt(_textType.getClientId());
         if (_charName != null) {
-            writeString(_charName, packet);
+            writeString(_charName);
         } else {
-            packet.putInt(_charId);
+            writeInt(_charId);
         }
-        packet.putInt(_npcString); // High Five NPCString ID
+        writeInt(_npcString); // High Five NPCString ID
         if (_text != null) {
-            writeString(_text, packet);
+            writeString(_text);
             if ((_charLevel > 0) && (_textType == ChatType.WHISPER)) {
-                packet.put((byte) _mask);
+                writeByte((byte) _mask);
                 if ((_mask & 0x10) == 0) {
-                    packet.put((byte) _charLevel);
+                    writeByte((byte) _charLevel);
                 }
             }
         } else if (_parameters != null) {
             for (String s : _parameters) {
-                writeString(s, packet);
+                writeString(s);
             }
         }
-    }
-
-    @Override
-    protected int size(L2GameClient client) {
-        var size = 23;
-        size += nonNull(_charName) ? _charName.length() * 2 : 4;
-        if(nonNull(_text)) {
-            size +=  _text.length() * 2 + 2;
-        } else if(nonNull(_parameters)) {
-            size += _parameters.stream().mapToInt(String::length).sum() + _parameters.size() * 2;
-        }
-        return size;
     }
 
     @Override

@@ -19,9 +19,9 @@ public final class RequestDuelStart extends IClientIncomingPacket {
     private int _partyDuel;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _player = readString(packet);
-        _partyDuel = packet.getInt();
+    public void readImpl() {
+        _player = readString();
+        _partyDuel = readInt();
     }
 
     private void scheduleDeny(L2PcInstance player, String name) {

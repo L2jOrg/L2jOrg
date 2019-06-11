@@ -24,25 +24,21 @@ public class ExBRProductInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BR_PRODUCT_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BR_PRODUCT_INFO);
 
-        packet.putInt(_item.getId());
-        packet.putInt(_item.getPrice());
-        packet.putInt(_item.getItems().size());
+        writeInt(_item.getId());
+        writeInt(_item.getPrice());
+        writeInt(_item.getItems().size());
         for (PrimeShopItem item : _item.getItems()) {
-            packet.putInt(item.getId());
-            packet.putInt((int) item.getCount());
-            packet.putInt(item.getWeight());
-            packet.putInt(item.isTradable());
+            writeInt(item.getId());
+            writeInt((int) item.getCount());
+            writeInt(item.getWeight());
+            writeInt(item.isTradable());
         }
-        packet.putLong(_charAdena);
-        packet.putLong(_charPoints);
-        packet.putLong(0x00); // Hero coins
+        writeLong(_charAdena);
+        writeLong(_charPoints);
+        writeLong(0x00); // Hero coins
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 41 + _item.getItems().size() * 16;
-    }
 }

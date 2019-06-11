@@ -31,21 +31,17 @@ public class PartyMemberPosition extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PARTY_MEMBER_POSITION.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PARTY_MEMBER_POSITION);
 
-        packet.putInt(locations.size());
+        writeInt(locations.size());
         for (Map.Entry<Integer, Location> entry : locations.entrySet()) {
             final Location loc = entry.getValue();
-            packet.putInt(entry.getKey());
-            packet.putInt(loc.getX());
-            packet.putInt(loc.getY());
-            packet.putInt(loc.getZ());
+            writeInt(entry.getKey());
+            writeInt(loc.getX());
+            writeInt(loc.getY());
+            writeInt(loc.getZ());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + locations.size() * 16;
-    }
 }

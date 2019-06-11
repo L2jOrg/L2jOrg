@@ -18,26 +18,22 @@ public class ExGetBookMarkInfoPacket extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_GET_BOOK_MARK_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_GET_BOOK_MARK_INFO);
 
-        packet.putInt(0x00); // Dummy
-        packet.putInt(player.getBookmarkslot());
-        packet.putInt(player.getTeleportBookmarks().size());
+        writeInt(0x00); // Dummy
+        writeInt(player.getBookmarkslot());
+        writeInt(player.getTeleportBookmarks().size());
 
         for (TeleportBookmark tpbm : player.getTeleportBookmarks()) {
-            packet.putInt(tpbm.getId());
-            packet.putInt(tpbm.getX());
-            packet.putInt(tpbm.getY());
-            packet.putInt(tpbm.getZ());
-            writeString(tpbm.getName(), packet);
-            packet.putInt(tpbm.getIcon());
-            writeString(tpbm.getTag(), packet);
+            writeInt(tpbm.getId());
+            writeInt(tpbm.getX());
+            writeInt(tpbm.getY());
+            writeInt(tpbm.getZ());
+            writeString(tpbm.getName());
+            writeInt(tpbm.getIcon());
+            writeString(tpbm.getTag());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17 + player.getTeleportBookmarks().size() * 24 + player.getTeleportBookmarks().stream().mapToInt(t -> (t.getName().length() + t.getTag().length() *2)).sum();
-    }
 }

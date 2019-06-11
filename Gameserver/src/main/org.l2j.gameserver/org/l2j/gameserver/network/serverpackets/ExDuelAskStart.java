@@ -18,15 +18,11 @@ public class ExDuelAskStart extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_DUEL_ASK_START.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_DUEL_ASK_START);
 
-        writeString(_requestorName, packet);
-        packet.putInt(_partyDuel);
+        writeString(_requestorName);
+        writeInt(_partyDuel);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 11 + _requestorName.length() * 2;
-    }
 }

@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network;
 
+import io.github.joealisson.mmocore.PacketBuffer;
 import org.l2j.gameserver.network.clientpackets.*;
 import org.l2j.gameserver.network.clientpackets.adenadistribution.RequestDivideAdena;
 import org.l2j.gameserver.network.clientpackets.adenadistribution.RequestDivideAdenaCancel;
@@ -450,32 +451,23 @@ public enum ExIncomingPackets implements PacketFactory {
     }
 
     @Override
-    public PacketFactory handleExtension(ByteBuffer buffer) {
-        switch (_packetId) {
-            case 0x4E:
-                return handleBookMarkPaket(buffer);
-
+    public PacketFactory handleExtension(PacketBuffer buffer) {
+        if (_packetId == 0x4E) {
+            return handleBookMarkPaket(buffer);
         }
         return NULLABLE_PACKET_FACTORY;
     }
 
-    private PacketFactory handleBookMarkPaket(ByteBuffer buffer) {
-        final int packetId = buffer.getInt();
-        switch (packetId) {
-            case 0:
-                return new DynamicPacketFactory(RequestBookMarkSlotInfo::new);
-            case 1:
-                return new DynamicPacketFactory(RequestSaveBookMarkSlot::new);
-            case 2:
-                return new DynamicPacketFactory(RequestModifyBookMarkSlot::new);
-            case 3:
-                return new DynamicPacketFactory(RequestDeleteBookMarkSlot::new);
-            case 4:
-                return new DynamicPacketFactory(RequestTeleportBookMark::new);
-            case 5:
-                return new DynamicPacketFactory(RequestChangeBookMarkSlot::new);
-        }
-        return NULLABLE_PACKET_FACTORY;
+    private PacketFactory handleBookMarkPaket(PacketBuffer packet) {
+        return switch (packet.readInt()) {
+            case 0 -> new DynamicPacketFactory(RequestBookMarkSlotInfo::new);
+            case 1 -> new DynamicPacketFactory(RequestSaveBookMarkSlot::new);
+            case 2 -> new DynamicPacketFactory(RequestModifyBookMarkSlot::new);
+            case 3 -> new DynamicPacketFactory(RequestDeleteBookMarkSlot::new);
+            case 4 -> new DynamicPacketFactory(RequestTeleportBookMark::new);
+            case 5 -> new DynamicPacketFactory(RequestChangeBookMarkSlot::new);
+            default -> NULLABLE_PACKET_FACTORY;
+        };
     }
 
     @Override

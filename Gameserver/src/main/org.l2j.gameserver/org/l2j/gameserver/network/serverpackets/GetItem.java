@@ -16,19 +16,15 @@ public final class GetItem extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.GET_ITEM.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.GET_ITEM);
 
-        packet.putInt(_playerId);
-        packet.putInt(_item.getObjectId());
+        writeInt(_playerId);
+        writeInt(_item.getObjectId());
 
-        packet.putInt(_item.getX());
-        packet.putInt(_item.getY());
-        packet.putInt(_item.getZ());
+        writeInt(_item.getX());
+        writeInt(_item.getY());
+        writeInt(_item.getZ());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25;
-    }
 }

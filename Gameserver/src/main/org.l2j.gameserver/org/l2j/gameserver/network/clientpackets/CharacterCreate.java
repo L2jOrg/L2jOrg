@@ -49,23 +49,23 @@ public final class CharacterCreate extends IClientIncomingPacket {
     }
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        name = readString(packet);
-        packet.getInt(); // Race
-        female = packet.getInt() != 0;
-        classId = packet.getInt();
+    public void readImpl() {
+        name = readString();
+        readInt(); // Race
+        female = readInt() != 0;
+        classId = readInt();
 
         // Don't trust these values from client
-        packet.getInt(); // INT
-        packet.getInt(); // STR
-        packet.getInt(); // CON
-        packet.getInt(); // MEN
-        packet.getInt(); // DEX
-        packet.getInt(); // WIT
+        readInt(); // INT
+        readInt(); // STR
+        readInt(); // CON
+        readInt(); // MEN
+        readInt(); // DEX
+        readInt(); // WIT
 
-        hairStyle = (byte) packet.getInt();
-        hairColor = (byte) packet.getInt();
-        face = (byte) packet.getInt();
+        hairStyle = (byte) readInt();
+        hairColor = (byte) readInt();
+        face = (byte) readInt();
     }
 
     @Override

@@ -12,8 +12,8 @@ public class RequestShowBeautyList extends IClientIncomingPacket {
     private int _type;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _type = packet.getInt();
+    public void readImpl() {
+        _type = readInt();
     }
 
     @Override

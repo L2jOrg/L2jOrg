@@ -29,19 +29,15 @@ public class ExChangePostState extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CHANGE_POST_STATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CHANGE_POST_STATE);
 
-        packet.putInt(_receivedBoard ? 1 : 0);
-        packet.putInt(_changedMsgIds.length);
+        writeInt(_receivedBoard ? 1 : 0);
+        writeInt(_changedMsgIds.length);
         for (int postId : _changedMsgIds) {
-            packet.putInt(postId); // postId
-            packet.putInt(_changeId); // state
+            writeInt(postId); // postId
+            writeInt(_changeId); // state
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + _changedMsgIds.length * 8;
-    }
 }

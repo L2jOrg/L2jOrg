@@ -89,24 +89,20 @@ public final class NpcSay extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.NPC_SAY.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.NPC_SAY);
 
-        packet.putInt(_objectId);
-        packet.putInt(_textType.getClientId());
-        packet.putInt(_npcId);
-        packet.putInt(_npcString);
+        writeInt(_objectId);
+        writeInt(_textType.getClientId());
+        writeInt(_npcId);
+        writeInt(_npcString);
         if (_npcString == -1) {
-            writeString(_text, packet);
+            writeString(_text);
         } else if (_parameters != null) {
             for (String s : _parameters) {
-                writeString(s, packet);
+                writeString(s);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 21 + (_npcString == -1 ? _text.length() : _parameters.stream().mapToInt(String::length).sum()) * 2;
-    }
 }

@@ -25,14 +25,14 @@ public class MoveToLocationInAirShip extends IClientIncomingPacket {
     private int _originZ;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _shipId = packet.getInt();
-        _targetX = packet.getInt();
-        _targetY = packet.getInt();
-        _targetZ = packet.getInt();
-        _originX = packet.getInt();
-        _originY = packet.getInt();
-        _originZ = packet.getInt();
+    public void readImpl() {
+        _shipId = readInt();
+        _targetX = readInt();
+        _targetY = readInt();
+        _targetZ = readInt();
+        _originX = readInt();
+        _originY = readInt();
+        _originZ = readInt();
     }
 
     @Override

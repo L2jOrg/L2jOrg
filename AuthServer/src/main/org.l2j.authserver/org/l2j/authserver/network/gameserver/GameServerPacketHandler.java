@@ -1,5 +1,6 @@
 package org.l2j.authserver.network.gameserver;
 
+import io.github.joealisson.mmocore.PacketBuffer;
 import io.github.joealisson.mmocore.PacketExecutor;
 import io.github.joealisson.mmocore.PacketHandler;
 import io.github.joealisson.mmocore.ReadablePacket;
@@ -7,8 +8,6 @@ import org.l2j.authserver.network.gameserver.packet.game2auth.*;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.nio.ByteBuffer;
 
 import static java.lang.Byte.toUnsignedInt;
 import static org.l2j.authserver.network.gameserver.packet.auth2game.LoginGameServerFail.NOT_AUTHED;
@@ -18,8 +17,8 @@ public final class GameServerPacketHandler implements PacketHandler<ServerClient
     private static final Logger logger = LoggerFactory.getLogger(GameServerPacketHandler.class);
 
     @Override
-    public ReadablePacket<ServerClient> handlePacket(ByteBuffer buffer, ServerClient client) {
-        var opcode = toUnsignedInt(buffer.get());
+    public ReadablePacket<ServerClient> handlePacket(PacketBuffer buffer, ServerClient client) {
+        var opcode = toUnsignedInt(buffer.read());
         switch (client.getState()) {
             case CONNECTED:
                 return handlePacketInConnected(client, opcode);

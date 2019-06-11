@@ -17,7 +17,7 @@ import java.nio.ByteBuffer;
  */
 public final class RequestWithdrawalPledge extends IClientIncomingPacket {
     @Override
-    public void readImpl(ByteBuffer packet) {
+    public void readImpl() {
 
     }
 

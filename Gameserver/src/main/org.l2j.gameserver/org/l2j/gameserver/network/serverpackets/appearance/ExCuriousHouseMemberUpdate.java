@@ -35,18 +35,14 @@ public class ExCuriousHouseMemberUpdate extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_CURIOUS_HOUSE_MEMBER_UPDATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_CURIOUS_HOUSE_MEMBER_UPDATE);
 
-        packet.putInt(_objId);
-        packet.putInt(_maxHp);
-        packet.putInt(_maxCp);
-        packet.putInt(_currentHp);
-        packet.putInt(_currentCp);
+        writeInt(_objId);
+        writeInt(_maxHp);
+        writeInt(_maxCp);
+        writeInt(_currentHp);
+        writeInt(_currentCp);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25;
-    }
 }

@@ -21,9 +21,9 @@ public class SetAccountInfo extends SendablePacket
 	}
 
 	@Override
-	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {
-		buffer.put((byte)0x05);
-		writeString(_account, buffer);
-		buffer.put((byte)_size);
+	protected void writeImpl(AuthServerClient client) {
+		writeByte((byte)0x05);
+		writeString(_account);
+		writeByte((byte)_size);
 	}
 }

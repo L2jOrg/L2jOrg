@@ -20,17 +20,13 @@ public class ExVariationResult extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_VARIATION_RESULT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_VARIATION_RESULT);
 
-        packet.putInt(_option1);
-        packet.putInt(_option2);
-        packet.putInt(_success);
+        writeInt(_option1);
+        writeInt(_option2);
+        writeInt(_success);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17;
-    }
 }
 

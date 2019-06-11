@@ -23,12 +23,12 @@ public class RequestCommissionList extends IClientIncomingPacket {
     private String _query;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _treeViewDepth = packet.getInt();
-        _itemType = packet.getInt();
-        _type = packet.getInt();
-        _grade = packet.getInt();
-        _query = readString(packet);
+    public void readImpl() {
+        _treeViewDepth = readInt();
+        _itemType = readInt();
+        _type = readInt();
+        _grade = readInt();
+        _query = readString();
     }
 
     @Override

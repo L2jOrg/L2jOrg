@@ -17,20 +17,16 @@ public class ExShowBaseAttributeCancelWindow extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_BASE_ATTRIBUTE_CANCEL_WINDOW.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_BASE_ATTRIBUTE_CANCEL_WINDOW);
 
-        packet.putInt(_items.size());
+        writeInt(_items.size());
         for (L2ItemInstance item : _items) {
-            packet.putInt(item.getObjectId());
-            packet.putLong(getPrice(item));
+            writeInt(item.getObjectId());
+            writeLong(getPrice(item));
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + _items.size() * 12;
-    }
 
     /**
      * TODO: Unhardcode! Update prices for Top/Mid/Low S80/S84

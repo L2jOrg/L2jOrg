@@ -30,16 +30,12 @@ public class ExMagicAttackInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_MAGIC_ATTACK_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_MAGIC_ATTACK_INFO);
 
-        packet.putInt(_caster);
-        packet.putInt(_target);
-        packet.putInt(_type);
+        writeInt(_caster);
+        writeInt(_target);
+        writeInt(_type);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17;
-    }
 }

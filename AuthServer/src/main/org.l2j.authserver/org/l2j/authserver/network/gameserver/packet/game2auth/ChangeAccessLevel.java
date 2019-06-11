@@ -10,9 +10,9 @@ public class ChangeAccessLevel extends GameserverReadablePacket {
 	private String account;
 
 	@Override
-	protected void readImpl(ByteBuffer buffer)  {
-		level = buffer.getShort();
-		account = readString(buffer);
+	protected void readImpl()  {
+		level = readShort();
+		account = readString();
 	}
 
 	@Override

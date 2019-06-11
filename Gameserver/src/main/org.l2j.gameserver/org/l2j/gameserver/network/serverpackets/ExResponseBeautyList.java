@@ -30,22 +30,18 @@ public class ExResponseBeautyList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_RESPONSE_BEAUTY_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_RESPONSE_BEAUTY_LIST);
 
-        packet.putLong(_activeChar.getAdena());
-        packet.putLong(_activeChar.getBeautyTickets());
-        packet.putInt(_type);
-        packet.putInt(_beautyItem.size());
+        writeLong(_activeChar.getAdena());
+        writeLong(_activeChar.getBeautyTickets());
+        writeInt(_type);
+        writeInt(_beautyItem.size());
         for (BeautyItem item : _beautyItem.values()) {
-            packet.putInt(item.getId());
-            packet.putInt(1); // Limit
+            writeInt(item.getId());
+            writeInt(1); // Limit
         }
-        packet.putInt(0);
+        writeInt(0);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 33 + _beautyItem.size() * 8;
-    }
 }

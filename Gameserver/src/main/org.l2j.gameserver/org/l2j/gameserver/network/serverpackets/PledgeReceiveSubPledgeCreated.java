@@ -19,19 +19,15 @@ public class PledgeReceiveSubPledgeCreated extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PLEDGE_RECEIVE_SUB_PLEDGE_CREATED.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PLEDGE_RECEIVE_SUB_PLEDGE_CREATED);
 
-        packet.putInt(0x01);
-        packet.putInt(_subPledge.getId());
-        writeString(_subPledge.getName(), packet);
-        writeString(getLeaderName(), packet);
+        writeInt(0x01);
+        writeInt(_subPledge.getId());
+        writeString(_subPledge.getName());
+        writeString(getLeaderName());
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17 + (getLeaderName().length() + _subPledge.getName().length()) * 2 ;
-    }
 
     private String getLeaderName() {
         final int LeaderId = _subPledge.getLeaderId();

@@ -39,39 +39,35 @@ public class RecipeShopManageList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.RECIPE_SHOP_MANAGE_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.RECIPE_SHOP_MANAGE_LIST);
 
-        packet.putInt(_seller.getObjectId());
-        packet.putInt((int) _seller.getAdena());
-        packet.putInt(_isDwarven ? 0x00 : 0x01);
+        writeInt(_seller.getObjectId());
+        writeInt((int) _seller.getAdena());
+        writeInt(_isDwarven ? 0x00 : 0x01);
 
         if (_recipes == null) {
-            packet.putInt(0);
+            writeInt(0);
         } else {
-            packet.putInt(_recipes.length); // number of items in recipe book
+            writeInt(_recipes.length); // number of items in recipe book
 
             for (int i = 0; i < _recipes.length; i++) {
                 final L2RecipeList temp = _recipes[i];
-                packet.putInt(temp.getId());
-                packet.putInt(i + 1);
+                writeInt(temp.getId());
+                writeInt(i + 1);
             }
         }
 
         if (!_seller.hasManufactureShop()) {
-            packet.putInt(0x00);
+            writeInt(0x00);
         } else {
-            packet.putInt(_seller.getManufactureItems().size());
+            writeInt(_seller.getManufactureItems().size());
             for (L2ManufactureItem item : _seller.getManufactureItems().values()) {
-                packet.putInt(item.getRecipeId());
-                packet.putInt(0x00);
-                packet.putLong(item.getCost());
+                writeInt(item.getRecipeId());
+                writeInt(0x00);
+                writeLong(item.getCost());
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 20 + (nonNull(_recipes) ? _recipes.length * 8 : 4) + (_seller.hasManufactureShop() ? _seller.getManufactureItems().size() * 16 : 4);
-    }
 }

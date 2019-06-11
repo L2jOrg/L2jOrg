@@ -40,43 +40,39 @@ public final class SiegeAttackerList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.CASTLE_SIEGE_ATTACKER_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.CASTLE_SIEGE_ATTACKER_LIST);
 
-        packet.putInt(_castle.getResidenceId());
-        packet.putInt(0x00); // 0
-        packet.putInt(0x01); // 1
-        packet.putInt(0x00); // 0
+        writeInt(_castle.getResidenceId());
+        writeInt(0x00); // 0
+        writeInt(0x01); // 1
+        writeInt(0x00); // 0
         final int size = _castle.getSiege().getAttackerClans().size();
         if (size > 0) {
             L2Clan clan;
 
-            packet.putInt(size);
-            packet.putInt(size);
+            writeInt(size);
+            writeInt(size);
             for (L2SiegeClan siegeclan : _castle.getSiege().getAttackerClans()) {
                 clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
                 if (clan == null) {
                     continue;
                 }
 
-                packet.putInt(clan.getId());
-                writeString(clan.getName(), packet);
-                writeString(clan.getLeaderName(), packet);
-                packet.putInt(clan.getCrestId());
-                packet.putInt(0x00); // signed time (seconds) (not storated by L2J)
-                packet.putInt(clan.getAllyId());
-                writeString(clan.getAllyName(), packet);
-                writeString("", packet); // AllyLeaderName
-                packet.putInt(clan.getAllyCrestId());
+                writeInt(clan.getId());
+                writeString(clan.getName());
+                writeString(clan.getLeaderName());
+                writeInt(clan.getCrestId());
+                writeInt(0x00); // signed time (seconds) (not storated by L2J)
+                writeInt(clan.getAllyId());
+                writeString(clan.getAllyName());
+                writeString(""); // AllyLeaderName
+                writeInt(clan.getAllyCrestId());
             }
         } else {
-            packet.putInt(0x00);
-            packet.putInt(0x00);
+            writeInt(0x00);
+            writeInt(0x00);
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 30 + _castle.getSiege().getAttackerClans().size() * 148;
-    }
 }

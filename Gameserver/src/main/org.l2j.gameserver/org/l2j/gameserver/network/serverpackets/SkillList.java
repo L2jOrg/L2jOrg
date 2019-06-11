@@ -22,26 +22,22 @@ public final class SkillList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SKILL_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SKILL_LIST);
         _skills.sort(Comparator.comparing(s -> SkillData.getInstance().getSkill(s.id, s.level, s.subLevel).isToggle() ? 1 : 0));
-        packet.putInt(_skills.size());
+        writeInt(_skills.size());
         for (Skill temp : _skills) {
-            packet.putInt(temp.passive ? 1 : 0);
-            packet.putShort((short) temp.level);
-            packet.putShort((short) temp.subLevel);
-            packet.putInt(temp.id);
-            packet.putInt(temp.reuseDelayGroup); // GOD ReuseDelayShareGroupID
-            packet.put((byte) (temp.disabled ? 1 : 0)); // iSkillDisabled
-            packet.put((byte) (temp.enchanted ? 1 : 0)); // CanEnchant
+            writeInt(temp.passive ? 1 : 0);
+            writeShort((short) temp.level);
+            writeShort((short) temp.subLevel);
+            writeInt(temp.id);
+            writeInt(temp.reuseDelayGroup); // GOD ReuseDelayShareGroupID
+            writeByte((byte) (temp.disabled ? 1 : 0)); // iSkillDisabled
+            writeByte((byte) (temp.enchanted ? 1 : 0)); // CanEnchant
         }
-        packet.putInt(_lastLearnedSkillId);
+        writeInt(_lastLearnedSkillId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + _skills.size() * 18;
-    }
 
     static class Skill {
         public int id;

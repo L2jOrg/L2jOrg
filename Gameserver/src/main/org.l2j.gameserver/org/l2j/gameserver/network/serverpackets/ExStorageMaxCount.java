@@ -37,26 +37,22 @@ public class ExStorageMaxCount extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_STORAGE_MAX_COUNT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_STORAGE_MAX_COUNT);
 
-        packet.putInt(_inventory);
-        packet.putInt(_warehouse);
-        // packet.putInt(_freight); // Removed with 152.
-        packet.putInt(_clan);
-        packet.putInt(_privateSell);
-        packet.putInt(_privateBuy);
-        packet.putInt(_receipeD);
-        packet.putInt(_recipe);
-        packet.putInt(_inventoryExtraSlots); // Belt inventory slots increase count
-        packet.putInt(_inventoryQuestItems);
-        packet.putInt(40); // TODO: Find me!
-        packet.putInt(40); // TODO: Find me!
-        packet.putInt(0x64); // Artifact slots (Fixed)
+        writeInt(_inventory);
+        writeInt(_warehouse);
+        // writeInt(_freight); // Removed with 152.
+        writeInt(_clan);
+        writeInt(_privateSell);
+        writeInt(_privateBuy);
+        writeInt(_receipeD);
+        writeInt(_recipe);
+        writeInt(_inventoryExtraSlots); // Belt inventory slots increase count
+        writeInt(_inventoryQuestItems);
+        writeInt(40); // TODO: Find me!
+        writeInt(40); // TODO: Find me!
+        writeInt(0x64); // Artifact slots (Fixed)
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 53;
-    }
 }

@@ -14,8 +14,8 @@ public class RequestChangeToAwakenedClass extends IClientIncomingPacket {
     private boolean _change;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _change = packet.getInt() == 1;
+    public void readImpl() {
+        _change = readInt() == 1;
     }
 
     @Override

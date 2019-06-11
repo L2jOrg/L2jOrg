@@ -28,8 +28,8 @@ public final class AllyDismiss extends IClientIncomingPacket {
     private String _clanName;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _clanName = readString(packet);
+    public void readImpl() {
+        _clanName = readString();
     }
 
     @Override

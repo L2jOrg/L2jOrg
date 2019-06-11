@@ -17,13 +17,9 @@ public class ExBRNewIconCashBtnWnd extends IClientOutgoingPacket {
     }
 
     @Override
-    protected void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BR_NEW_ICON_CASH_BTN_WND.writeId(packet);
-        packet.putShort(show); // Show icon
+    protected void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BR_NEW_ICON_CASH_BTN_WND);
+        writeShort(show); // Show icon
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 7;
-    }
 }

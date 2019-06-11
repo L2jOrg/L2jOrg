@@ -18,23 +18,19 @@ public class AbnormalStatusUpdate extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.ABNORMAL_STATUS_UPDATE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.ABNORMAL_STATUS_UPDATE);
 
-        packet.putShort((short) _effects.size());
+        writeShort((short) _effects.size());
         for (BuffInfo info : _effects) {
             if ((info != null) && info.isInUse()) {
-                packet.putInt(info.getSkill().getDisplayId());
-                packet.putShort((short) info.getSkill().getDisplayLevel());
-                // packet.putShort((short)info.getSkill().getSubLevel());
-                packet.putInt(info.getSkill().getAbnormalType().getClientId());
-                writeOptionalD(packet, info.getSkill().isAura() ? -1 : info.getTime());
+                writeInt(info.getSkill().getDisplayId());
+                writeShort((short) info.getSkill().getDisplayLevel());
+                // writeShort((short)info.getSkill().getSubLevel());
+                writeInt(info.getSkill().getAbnormalType().getClientId());
+                writeOptionalD(info.getSkill().isAura() ? -1 : info.getTime());
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5 + _effects.size() * 16;
-    }
 }

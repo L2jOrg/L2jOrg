@@ -20,10 +20,10 @@ public final class RequestPledgeSetAcademyMaster extends IClientIncomingPacket {
     private String _targetPlayerName;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _set = packet.getInt();
-        _currPlayerName = readString(packet);
-        _targetPlayerName = readString(packet);
+    public void readImpl() {
+        _set = readInt();
+        _currPlayerName = readString();
+        _targetPlayerName = readString();
     }
 
     @Override

@@ -19,15 +19,11 @@ public class PetStatusShow extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PET_STATUS_SHOW.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PET_STATUS_SHOW);
 
-        packet.putInt(_summonType);
-        packet.putInt(_summonObjectId);
+        writeInt(_summonType);
+        writeInt(_summonObjectId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13;
-    }
 }

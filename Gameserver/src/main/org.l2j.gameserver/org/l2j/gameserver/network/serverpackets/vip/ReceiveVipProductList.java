@@ -7,57 +7,51 @@ import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
 
-import java.nio.ByteBuffer;
-
 import static java.util.Objects.nonNull;
 
 public class ReceiveVipProductList extends IClientOutgoingPacket {
 
     @Override
-    protected void writeImpl(L2GameClient client, ByteBuffer packet) {
+    protected void writeImpl(L2GameClient client) {
         var player = client.getActiveChar();
         var products = PrimeShopData.getInstance().getPrimeItems();
         var gift = PrimeShopData.getInstance().getVipGiftOfTier(player.getVipTier());
 
-        OutgoingPackets.RECEIVE_VIP_PRODUCT_LIST.writeId(packet);
-        packet.putLong(player.getAdena());
-        packet.putLong(player.getRustyCoin()); // Rusty Coin Amount
-        packet.putLong(player.getSilverCoin()); // Silver Coin Amount
-        packet.put((byte) 1); // Show Reward tab
+        writeId(OutgoingPackets.RECEIVE_VIP_PRODUCT_LIST);
+        writeLong(player.getAdena());
+        writeLong(player.getRustyCoin()); // Rusty Coin Amount
+        writeLong(player.getSilverCoin()); // Silver Coin Amount
+        writeByte((byte) 1); // Show Reward tab
 
         if(nonNull(gift)) {
-            packet.putInt(products.size() + 1);
-            putProduct(packet, gift);
+            writeInt(products.size() + 1);
+            putProduct(gift);
         } else {
-            packet.putInt(products.size());
+            writeInt(products.size());
         }
 
         for (var product : products.values()) {
-            putProduct(packet, product);
+            putProduct(product);
         }
     }
 
-    private void putProduct(ByteBuffer packet, PrimeShopProduct product) {
-        packet.putInt(product.getId());
-        packet.put(product.getCategory());
-        packet.put(product.getPaymentType());
-        packet.putInt(product.getPrice()); // L2 Coin | Rusty Coin seems to use the same field based on payment type
-        packet.putInt(product.getSilverCoin());
-        packet.put(product.getPanelType()); // NEW - 6; HOT - 5 ... Unk
-        packet.put(product.getVipTier());
-        packet.put((byte) 7); // Unk
+    private void putProduct(PrimeShopProduct product) {
+        writeInt(product.getId());
+        writeByte(product.getCategory());
+        writeByte(product.getPaymentType());
+        writeInt(product.getPrice()); // L2 Coin | Rusty Coin seems to use the same field based on payment type
+        writeInt(product.getSilverCoin());
+        writeByte(product.getPanelType()); // NEW - 6; HOT - 5 ... Unk
+        writeByte(product.getVipTier());
+        writeByte((byte) 7); // Unk
 
-        packet.put((byte) product.getItems().size());
+        writeByte((byte) product.getItems().size());
 
         for (PrimeShopItem item : product.getItems()) {
-            packet.putInt(item.getId());
-            packet.putInt((int) item.getCount());
+            writeInt(item.getId());
+            writeInt((int) item.getCount());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        var products = PrimeShopData.getInstance().getPrimeItems();
-        return 32 + (products.size() + 1) * 18 + products.values().stream().mapToInt(product -> product.getItems().size()).sum() * 8;
-    }
+
 }

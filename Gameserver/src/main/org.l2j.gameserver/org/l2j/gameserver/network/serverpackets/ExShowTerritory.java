@@ -28,20 +28,16 @@ public class ExShowTerritory extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SHOW_TERRITORY.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SHOW_TERRITORY);
 
-        packet.putInt(_vertices.size());
-        packet.putInt(_minZ);
-        packet.putInt(_maxZ);
+        writeInt(_vertices.size());
+        writeInt(_minZ);
+        writeInt(_maxZ);
         for (ILocational loc : _vertices) {
-            packet.putInt(loc.getX());
-            packet.putInt(loc.getY());
+            writeInt(loc.getX());
+            writeInt(loc.getY());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17 + _vertices.size() * 8;
-    }
 }

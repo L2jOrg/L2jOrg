@@ -18,18 +18,14 @@ public class BlockListPacket extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.BLOCK_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.BLOCK_LIST);
 
-        packet.putInt(_playersId.size());
+        writeInt(_playersId.size());
         for (int playerId : _playersId) {
-            writeString(CharNameTable.getInstance().getNameById(playerId), packet);
-            writeString("", packet); // memo ?
+            writeString(CharNameTable.getInstance().getNameById(playerId));
+            writeString(""); // memo ?
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 +  _playersId.size() * 64;
-    }
 }

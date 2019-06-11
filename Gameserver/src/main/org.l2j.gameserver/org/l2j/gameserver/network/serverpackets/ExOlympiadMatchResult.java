@@ -4,7 +4,6 @@ import org.l2j.gameserver.model.olympiad.OlympiadInfo;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 /**
@@ -31,39 +30,35 @@ public class ExOlympiadMatchResult extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_RECEIVE_OLYMPIAD.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_RECEIVE_OLYMPIAD);
 
-        packet.putInt(0x01); // Type 0 = Match List, 1 = Match Result
+        writeInt(0x01); // Type 0 = Match List, 1 = Match Result
 
-        packet.putInt(_tie ? 1 : 0); // 0 - win, 1 - tie
-        writeString(_winnerList.get(0).getName(), packet);
-        packet.putInt(_winTeam);
-        packet.putInt(_winnerList.size());
+        writeInt(_tie ? 1 : 0); // 0 - win, 1 - tie
+        writeString(_winnerList.get(0).getName());
+        writeInt(_winTeam);
+        writeInt(_winnerList.size());
         for (OlympiadInfo info : _winnerList) {
-            writeParticipant(packet, info);
+            writeParticipant(info);
         }
 
-        packet.putInt(_loseTeam);
-        packet.putInt(_loserList.size());
+        writeInt(_loseTeam);
+        writeInt(_loserList.size());
         for (OlympiadInfo info : _loserList) {
-            writeParticipant(packet, info);
+            writeParticipant(info);
         }
     }
 
-    private void writeParticipant(ByteBuffer packet, OlympiadInfo info) {
-        writeString(info.getName(), packet);
-        writeString(info.getClanName(), packet);
-        packet.putInt(info.getClanId());
-        packet.putInt(info.getClassId());
-        packet.putInt(info.getDamage());
-        packet.putInt(info.getCurrentPoints());
-        packet.putInt(info.getDiffPoints());
-        packet.putInt(0x00); // Helios
+    private void writeParticipant(OlympiadInfo info) {
+        writeString(info.getName());
+        writeString(info.getClanName());
+        writeInt(info.getClanId());
+        writeInt(info.getClassId());
+        writeInt(info.getDamage());
+        writeInt(info.getCurrentPoints());
+        writeInt(info.getDiffPoints());
+        writeInt(0x00); // Helios
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 27 + _winnerList.get(0).getName().length() * 2 + (_winnerList.size() + _loserList.size()) * 100;
-    }
 }

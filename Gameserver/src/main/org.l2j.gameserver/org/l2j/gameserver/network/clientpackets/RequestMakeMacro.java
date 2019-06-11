@@ -16,24 +16,24 @@ public final class RequestMakeMacro extends IClientIncomingPacket {
     private int _commandsLenght = 0;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        final int _id = packet.getInt();
-        final String _name = readString(packet);
-        final String _desc = readString(packet);
-        final String _acronym = readString(packet);
-        final int icon = packet.getInt();
-        int count = packet.get();
+    public void readImpl() {
+        final int _id = readInt();
+        final String _name = readString();
+        final String _desc = readString();
+        final String _acronym = readString();
+        final int icon = readInt();
+        int count = readByte();
         if (count > MAX_MACRO_LENGTH) {
             count = MAX_MACRO_LENGTH;
         }
 
         final List<MacroCmd> commands = new ArrayList<>(count);
         for (int i = 0; i < count; i++) {
-            final int entry = packet.get();
-            final int type = packet.get(); // 1 = skill, 3 = action, 4 = shortcut
-            final int d1 = packet.getInt(); // skill or page number for shortcuts
-            final int d2 = packet.get();
-            final String command = readString(packet);
+            final int entry = readByte();
+            final int type = readByte(); // 1 = skill, 3 = action, 4 = shortcut
+            final int d1 = readInt(); // skill or page number for shortcuts
+            final int d2 = readByte();
+            final String command = readString();
             _commandsLenght += command.length();
             commands.add(new MacroCmd(entry, MacroType.values()[(type < 1) || (type > 6) ? 0 : type], d1, d2, command));
         }

@@ -20,8 +20,8 @@ public class RequestCharacterNameCreatable extends IClientIncomingPacket {
     private int result;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _name = readString(packet);
+    public void readImpl() {
+        _name = readString();
     }
 
     @Override

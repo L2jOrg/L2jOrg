@@ -16,21 +16,17 @@ public class PlayerAuthResponse extends GameServerWritablePacket {
 	}
 
 	@Override
-	protected void writeImpl(ServerClient client, ByteBuffer buffer)  {
-		buffer.put((byte)0x02);
-		writeString(account, buffer);
-		buffer.put((byte) (response ? 0x01 : 0x00));
+	protected void writeImpl(ServerClient client)  {
+		writeByte((byte)0x02);
+		writeString(account);
+		writeByte((byte) (response ? 0x01 : 0x00));
 		if(response) {
 			var key  = AuthController.getInstance().getKeyForAccount(account);
-			buffer.putInt(key.getGameServerSessionId());
-			buffer.putInt(key.getGameServerAccountId());
-			buffer.putInt(key.getAuthAccountId());
-			buffer.putInt(key.getAuthKey());
+			writeInt(key.getGameServerSessionId());
+			writeInt(key.getGameServerAccountId());
+			writeInt(key.getAuthAccountId());
+			writeInt(key.getAuthKey());
 		}
 	}
 
-	@Override
-	protected int size(ServerClient client) {
-		return super.size(client) + 16 + 2 * account.length();
-	}
 }

@@ -23,9 +23,9 @@ public class RequestExEnchantItemAttribute extends IClientIncomingPacket {
     private long _count;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _objectId = packet.getInt();
-        _count = packet.getLong();
+    public void readImpl() {
+        _objectId = readInt();
+        _count = readLong();
     }
 
     @Override

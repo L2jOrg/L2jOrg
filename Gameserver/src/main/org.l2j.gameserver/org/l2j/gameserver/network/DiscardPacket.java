@@ -12,7 +12,7 @@ public final class DiscardPacket extends IClientIncomingPacket {
     }
 
     @Override
-    protected void readImpl(ByteBuffer packet) {
+    protected void readImpl() {
 
     }
 }

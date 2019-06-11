@@ -22,9 +22,9 @@ public class RequestMentorCancel extends IClientIncomingPacket {
     private String _name;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _confirmed = packet.getInt();
-        _name = readString(packet);
+    public void readImpl() {
+        _confirmed = readInt();
+        _name = readString();
     }
 
     @Override

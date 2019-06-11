@@ -38,47 +38,43 @@ public class ExBeautyItemList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BEAUTY_ITEM_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BEAUTY_ITEM_LIST);
 
-        packet.putInt(HAIR_TYPE);
-        packet.putInt(_beautyData.getHairList().size());
+        writeInt(HAIR_TYPE);
+        writeInt(_beautyData.getHairList().size());
         for (BeautyItem hair : _beautyData.getHairList().values()) {
-            packet.putInt(0); // ?
-            packet.putInt(hair.getId());
-            packet.putInt(hair.getAdena());
-            packet.putInt(hair.getResetAdena());
-            packet.putInt(hair.getBeautyShopTicket());
-            packet.putInt(1); // Limit
+            writeInt(0); // ?
+            writeInt(hair.getId());
+            writeInt(hair.getAdena());
+            writeInt(hair.getResetAdena());
+            writeInt(hair.getBeautyShopTicket());
+            writeInt(1); // Limit
         }
 
-        packet.putInt(FACE_TYPE);
-        packet.putInt(_beautyData.getFaceList().size());
+        writeInt(FACE_TYPE);
+        writeInt(_beautyData.getFaceList().size());
         for (BeautyItem face : _beautyData.getFaceList().values()) {
-            packet.putInt(0); // ?
-            packet.putInt(face.getId());
-            packet.putInt(face.getAdena());
-            packet.putInt(face.getResetAdena());
-            packet.putInt(face.getBeautyShopTicket());
-            packet.putInt(1); // Limit
+            writeInt(0); // ?
+            writeInt(face.getId());
+            writeInt(face.getAdena());
+            writeInt(face.getResetAdena());
+            writeInt(face.getBeautyShopTicket());
+            writeInt(1); // Limit
         }
 
-        packet.putInt(COLOR_TYPE);
-        packet.putInt(_colorCount);
+        writeInt(COLOR_TYPE);
+        writeInt(_colorCount);
         for (int hairId : _colorData.keySet()) {
             for (BeautyItem color : _colorData.get(hairId)) {
-                packet.putInt(hairId);
-                packet.putInt(color.getId());
-                packet.putInt(color.getAdena());
-                packet.putInt(color.getResetAdena());
-                packet.putInt(color.getBeautyShopTicket());
-                packet.putInt(1);
+                writeInt(hairId);
+                writeInt(color.getId());
+                writeInt(color.getAdena());
+                writeInt(color.getResetAdena());
+                writeInt(color.getBeautyShopTicket());
+                writeInt(1);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 29 + 24 * (_beautyData.getHairList().size() + _beautyData.getFaceList().size() + _colorData.size() * _colorData.values().stream().mapToInt(List::size).sum());
-    }
 }

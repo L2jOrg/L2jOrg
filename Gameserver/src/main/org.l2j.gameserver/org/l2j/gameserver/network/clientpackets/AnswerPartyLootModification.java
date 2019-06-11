@@ -12,8 +12,8 @@ public class AnswerPartyLootModification extends IClientIncomingPacket {
     public int _answer;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _answer = packet.getInt();
+    public void readImpl() {
+        _answer = readInt();
     }
 
     @Override

@@ -22,20 +22,16 @@ public class ExResponseCommissionBuyInfo extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_RESPONSE_COMMISSION_BUY_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_RESPONSE_COMMISSION_BUY_INFO);
 
-        packet.putInt(_commissionItem != null ? 1 : 0);
+        writeInt(_commissionItem != null ? 1 : 0);
         if (_commissionItem != null) {
-            packet.putLong(_commissionItem.getPricePerUnit());
-            packet.putLong(_commissionItem.getCommissionId());
-            packet.putInt(0); // CommissionItemType seems client does not really need it.
-            writeItem(packet, _commissionItem.getItemInfo());
+            writeLong(_commissionItem.getPricePerUnit());
+            writeLong(_commissionItem.getCommissionId());
+            writeInt(0); // CommissionItemType seems client does not really need it.
+            writeItem(_commissionItem.getItemInfo());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + (nonNull(_commissionItem) ? 120 : 0);
-    }
 }

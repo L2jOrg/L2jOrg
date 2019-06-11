@@ -20,13 +20,13 @@ public class RequestExManageMpccRoom extends IClientIncomingPacket {
     private String _title;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _roomId = packet.getInt();
-        _maxMembers = packet.getInt();
-        _minLevel = packet.getInt();
-        _maxLevel = packet.getInt();
-        packet.getInt(); // Party Distrubtion Type
-        _title = readString(packet);
+    public void readImpl() {
+        _roomId = readInt();
+        _maxMembers = readInt();
+        _minLevel = readInt();
+        _maxLevel = readInt();
+        readInt(); // Party Distrubtion Type
+        _title = readString();
     }
 
     @Override

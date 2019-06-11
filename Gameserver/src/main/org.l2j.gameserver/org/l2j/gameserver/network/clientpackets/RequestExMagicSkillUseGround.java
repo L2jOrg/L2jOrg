@@ -29,13 +29,13 @@ public final class RequestExMagicSkillUseGround extends IClientIncomingPacket {
     private boolean _shiftPressed;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _x = packet.getInt();
-        _y = packet.getInt();
-        _z = packet.getInt();
-        _skillId = packet.getInt();
-        _ctrlPressed = packet.getInt() != 0;
-        _shiftPressed = packet.get() != 0;
+    public void readImpl() {
+        _x = readInt();
+        _y = readInt();
+        _z = readInt();
+        _skillId = readInt();
+        _ctrlPressed = readInt() != 0;
+        _shiftPressed = readByte() != 0;
     }
 
     @Override

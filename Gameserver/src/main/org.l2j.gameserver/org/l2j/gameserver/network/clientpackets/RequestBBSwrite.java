@@ -18,13 +18,13 @@ public final class RequestBBSwrite extends IClientIncomingPacket {
     private String _arg5;
 
     @Override
-    public final void readImpl(ByteBuffer packet) {
-        _url = readString(packet);
-        _arg1 = readString(packet);
-        _arg2 = readString(packet);
-        _arg3 = readString(packet);
-        _arg4 = readString(packet);
-        _arg5 = readString(packet);
+    public final void readImpl() {
+        _url = readString();
+        _arg1 = readString();
+        _arg2 = readString();
+        _arg3 = readString();
+        _arg4 = readString();
+        _arg5 = readString();
     }
 
     @Override

@@ -18,49 +18,45 @@ public class GMViewPledgeInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.GM_VIEW_PLEDGE_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.GM_VIEW_PLEDGE_INFO);
 
-        packet.putInt(0x00);
-        writeString(_activeChar.getName(), packet);
-        packet.putInt(_clan.getId());
-        packet.putInt(0x00);
-        writeString(_clan.getName(), packet);
-        writeString(_clan.getLeaderName(), packet);
+        writeInt(0x00);
+        writeString(_activeChar.getName());
+        writeInt(_clan.getId());
+        writeInt(0x00);
+        writeString(_clan.getName());
+        writeString(_clan.getLeaderName());
 
-        packet.putInt(_clan.getCrestId()); // -> no, it's no longer used (nuocnam) fix by game
-        packet.putInt(_clan.getLevel());
-        packet.putInt(_clan.getCastleId());
-        packet.putInt(_clan.getHideoutId());
-        packet.putInt(_clan.getFortId());
-        packet.putInt(_clan.getRank());
-        packet.putInt(_clan.getReputationScore());
-        packet.putInt(0x00);
-        packet.putInt(0x00);
-        packet.putInt(0x00);
-        packet.putInt(_clan.getAllyId()); // c2
-        writeString(_clan.getAllyName(), packet); // c2
-        packet.putInt(_clan.getAllyCrestId()); // c2
-        packet.putInt(_clan.isAtWar() ? 1 : 0); // c3
-        packet.putInt(0x00); // T3 Unknown
+        writeInt(_clan.getCrestId()); // -> no, it's no longer used (nuocnam) fix by game
+        writeInt(_clan.getLevel());
+        writeInt(_clan.getCastleId());
+        writeInt(_clan.getHideoutId());
+        writeInt(_clan.getFortId());
+        writeInt(_clan.getRank());
+        writeInt(_clan.getReputationScore());
+        writeInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
+        writeInt(_clan.getAllyId()); // c2
+        writeString(_clan.getAllyName()); // c2
+        writeInt(_clan.getAllyCrestId()); // c2
+        writeInt(_clan.isAtWar() ? 1 : 0); // c3
+        writeInt(0x00); // T3 Unknown
 
-        packet.putInt(_clan.getMembers().size());
+        writeInt(_clan.getMembers().size());
         for (L2ClanMember member : _clan.getMembers()) {
             if (member != null) {
-                writeString(member.getName(), packet);
-                packet.putInt(member.getLevel());
-                packet.putInt(member.getClassId());
-                packet.putInt(member.getSex() ? 1 : 0);
-                packet.putInt(member.getRaceOrdinal());
-                packet.putInt(member.isOnline() ? member.getObjectId() : 0);
-                packet.putInt(member.getSponsor() != 0 ? 1 : 0);
+                writeString(member.getName());
+                writeInt(member.getLevel());
+                writeInt(member.getClassId());
+                writeInt(member.getSex() ? 1 : 0);
+                writeInt(member.getRaceOrdinal());
+                writeInt(member.isOnline() ? member.getObjectId() : 0);
+                writeInt(member.getSponsor() != 0 ? 1 : 0);
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 85 + _clan.getMembersCount() * 26 +
-                (_clan.getMembers().stream().mapToInt(m -> m.getName().length()).sum() + _activeChar.getName().length() + _clan.getName().length() + _clan.getLeaderName().length()) * 2;
-    }
+
 }

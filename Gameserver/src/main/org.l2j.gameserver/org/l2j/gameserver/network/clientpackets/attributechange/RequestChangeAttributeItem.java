@@ -25,10 +25,10 @@ public class RequestChangeAttributeItem extends IClientIncomingPacket {
     private int _newElementId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _consumeItemId = packet.getInt();
-        _itemObjId = packet.getInt();
-        _newElementId = packet.getInt();
+    public void readImpl() {
+        _consumeItemId = readInt();
+        _itemObjId = readInt();
+        _newElementId = readInt();
     }
 
     @Override

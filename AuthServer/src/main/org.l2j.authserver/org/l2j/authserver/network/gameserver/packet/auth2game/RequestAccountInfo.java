@@ -13,13 +13,9 @@ public class RequestAccountInfo extends GameServerWritablePacket {
     }
 
     @Override
-    protected void writeImpl(ServerClient client, ByteBuffer buffer) {
-        buffer.put((byte)0x04);
-        writeString(account, buffer);
+    protected void writeImpl(ServerClient client) {
+        writeByte((byte)0x04);
+        writeString(account);
     }
 
-    @Override
-    protected int size(ServerClient client) {
-        return super.size(client) + 3 + 2 * account.length();
-    }
 }

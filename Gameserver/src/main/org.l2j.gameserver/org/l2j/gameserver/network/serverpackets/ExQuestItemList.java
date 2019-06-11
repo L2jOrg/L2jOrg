@@ -5,7 +5,6 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
 /**
@@ -23,27 +22,18 @@ public class ExQuestItemList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_QUEST_ITEM_LIST.writeId(packet);
-        packet.put((byte) _sendType);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_QUEST_ITEM_LIST);
+        writeByte((byte) _sendType);
         if (_sendType == 2) {
-            packet.putInt(_items.size());
+            writeInt(_items.size());
         } else {
-            packet.putShort((short) 0);
+            writeShort((short) 0);
         }
-        packet.putInt(_items.size());
+        writeInt(_items.size());
         for (L2ItemInstance item : _items) {
-            writeItem(packet, item);
+            writeItem(item);
         }
-        writeInventoryBlock(packet, _activeChar.getInventory());
-    }
-
-    @Override
-    protected int size(L2GameClient client) {
-        var size = 17 + _items.size() * 100;
-        if(_activeChar.getInventory().hasInventoryBlock()) {
-            size += _activeChar.getInventory().getBlockItems().size() * 4;
-        }
-        return size;
+        writeInventoryBlock(_activeChar.getInventory());
     }
 }

@@ -50,29 +50,25 @@ public class ExOlympiadUserInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_OLYMPIAD_USER_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_OLYMPIAD_USER_INFO);
 
         if (_player != null) {
-            packet.put((byte) _player.getOlympiadSide());
-            packet.putInt(_player.getObjectId());
-            writeString(_player.getName(), packet);
-            packet.putInt(_player.getClassId().getId());
+            writeByte((byte) _player.getOlympiadSide());
+            writeInt(_player.getObjectId());
+            writeString(_player.getName());
+            writeInt(_player.getClassId().getId());
         } else {
-            packet.put((byte) _par.getSide());
-            packet.putInt(_par.getObjectId());
-            writeString(_par.getName(), packet);
-            packet.putInt(_par.getBaseClass());
+            writeByte((byte) _par.getSide());
+            writeInt(_par.getObjectId());
+            writeString(_par.getName());
+            writeInt(_par.getBaseClass());
         }
 
-        packet.putInt(_curHp);
-        packet.putInt(_maxHp);
-        packet.putInt(_curCp);
-        packet.putInt(_maxCp);
+        writeInt(_curHp);
+        writeInt(_maxHp);
+        writeInt(_curCp);
+        writeInt(_maxCp);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 80;
-    }
 }

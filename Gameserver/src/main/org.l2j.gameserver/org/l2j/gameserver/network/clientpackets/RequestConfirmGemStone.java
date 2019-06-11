@@ -21,11 +21,11 @@ public final class RequestConfirmGemStone extends AbstractRefinePacket {
     private long _feeCount;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _targetItemObjId = packet.getInt();
-        _mineralItemObjId = packet.getInt();
-        _feeItemObjId = packet.getInt();
-        _feeCount = packet.getLong();
+    public void readImpl() {
+        _targetItemObjId = readInt();
+        _mineralItemObjId = readInt();
+        _feeItemObjId = readInt();
+        _feeCount = readLong();
     }
 
     @Override

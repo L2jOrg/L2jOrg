@@ -18,9 +18,9 @@ public final class RequestPledgeMemberInfo extends IClientIncomingPacket {
     private String _player;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _unk1 = packet.getInt();
-        _player = readString(packet);
+    public void readImpl() {
+        _unk1 = readInt();
+        _player = readString();
     }
 
     @Override

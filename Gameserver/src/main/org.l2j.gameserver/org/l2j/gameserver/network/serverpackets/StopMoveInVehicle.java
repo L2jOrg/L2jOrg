@@ -24,19 +24,15 @@ public class StopMoveInVehicle extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.STOP_MOVE_IN_VEHICLE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.STOP_MOVE_IN_VEHICLE);
 
-        packet.putInt(_charObjId);
-        packet.putInt(_boatId);
-        packet.putInt(_pos.getX());
-        packet.putInt(_pos.getY());
-        packet.putInt(_pos.getZ());
-        packet.putInt(_heading);
+        writeInt(_charObjId);
+        writeInt(_boatId);
+        writeInt(_pos.getX());
+        writeInt(_pos.getY());
+        writeInt(_pos.getZ());
+        writeInt(_heading);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 30;
-    }
 }

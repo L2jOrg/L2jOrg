@@ -23,22 +23,18 @@ public class ExGetPremiumItemList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_GET_PREMIUM_ITEM_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_GET_PREMIUM_ITEM_LIST);
 
-        packet.putInt(_map.size());
+        writeInt(_map.size());
         for (Entry<Integer, L2PremiumItem> entry : _map.entrySet()) {
             final L2PremiumItem item = entry.getValue();
-            packet.putLong(entry.getKey());
-            packet.putInt(item.getItemId());
-            packet.putLong(item.getCount());
-            packet.putInt(0x00); // ?
-            writeString(item.getSender(), packet);
+            writeLong(entry.getKey());
+            writeInt(item.getItemId());
+            writeLong(item.getCount());
+            writeInt(0x00); // ?
+            writeString(item.getSender());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + _map.size() * 26 + _map.values().stream().mapToInt(it -> it.getSender().length() * 2).sum();
-    }
 }

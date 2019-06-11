@@ -21,16 +21,12 @@ public class ExCubeGameChangeTimeToStart extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BLOCK_UP_SET_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BLOCK_UP_SET_LIST);
 
-        packet.putInt(0x03);
+        writeInt(0x03);
 
-        packet.putInt(_seconds);
+        writeInt(_seconds);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13;
-    }
 }

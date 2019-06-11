@@ -25,26 +25,22 @@ public class PackageSendableList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.PACKAGE_SENDABLE_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.PACKAGE_SENDABLE_LIST);
 
-        packet.put((byte) _sendType);
+        writeByte((byte) _sendType);
         if (_sendType == 2) {
-            packet.putInt(_items.size());
-            packet.putInt(_items.size());
+            writeInt(_items.size());
+            writeInt(_items.size());
             for (L2ItemInstance item : _items) {
-                writeItem(packet, item);
-                packet.putInt(item.getObjectId());
+                writeItem(item);
+                writeInt(item.getObjectId());
             }
         } else {
-            packet.putInt(_objectId);
-            packet.putLong(_adena);
-            packet.putInt(_items.size());
+            writeInt(_objectId);
+            writeLong(_adena);
+            writeInt(_items.size());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 18 + (_sendType == 2 ?  _items.size() * 104 : 8);
-    }
 }

@@ -19,48 +19,44 @@ public final class ShortCutInit extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.SHORT_CUT_INIT.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.SHORT_CUT_INIT);
 
-        packet.putInt(_shortCuts.length);
+        writeInt(_shortCuts.length);
         for (Shortcut sc : _shortCuts) {
-            packet.putInt(sc.getType().ordinal());
-            packet.putInt(sc.getSlot() + (sc.getPage() * 12));
-            packet.put((byte) 0x00);
+            writeInt(sc.getType().ordinal());
+            writeInt(sc.getSlot() + (sc.getPage() * 12));
+            writeByte((byte) 0x00);
             switch (sc.getType()) {
                 case ITEM: {
-                    packet.putInt(sc.getId());
-                    packet.putInt(0x01); // Enabled or not
-                    packet.putInt(sc.getSharedReuseGroup());
-                    packet.putInt(0x00);
-                    packet.putInt(0x00);
-                    packet.putInt(0x00); // Augment effect 1
-                    packet.putInt(0x00); // Augment effect 2
-                    packet.putInt(0x00); // Visual id
+                    writeInt(sc.getId());
+                    writeInt(0x01); // Enabled or not
+                    writeInt(sc.getSharedReuseGroup());
+                    writeInt(0x00);
+                    writeInt(0x00);
+                    writeInt(0x00); // Augment effect 1
+                    writeInt(0x00); // Augment effect 2
+                    writeInt(0x00); // Visual id
                     break;
                 }
                 case SKILL: {
-                    packet.putInt(sc.getId());
-                    packet.putShort((short) sc.getLevel());
-                    packet.putShort((short) sc.getSubLevel());
-                    packet.putInt(sc.getSharedReuseGroup());
-                    packet.put((byte) 0x00); // C5
-                    packet.putInt(0x01); // C6
+                    writeInt(sc.getId());
+                    writeShort((short) sc.getLevel());
+                    writeShort((short) sc.getSubLevel());
+                    writeInt(sc.getSharedReuseGroup());
+                    writeByte((byte) 0x00); // C5
+                    writeInt(0x01); // C6
                     break;
                 }
                 case ACTION:
                 case MACRO:
                 case RECIPE:
                 case BOOKMARK: {
-                    packet.putInt(sc.getId());
-                    packet.putInt(0x01); // C6
+                    writeInt(sc.getId());
+                    writeInt(0x01); // C6
                 }
             }
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9 + _shortCuts.length * 40;
-    }
 }

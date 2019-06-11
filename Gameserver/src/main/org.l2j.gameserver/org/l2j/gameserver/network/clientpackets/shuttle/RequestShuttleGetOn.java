@@ -19,11 +19,11 @@ public class RequestShuttleGetOn extends IClientIncomingPacket {
     private int _z;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        packet.getInt(); // charId
-        _x = packet.getInt();
-        _y = packet.getInt();
-        _z = packet.getInt();
+    public void readImpl() {
+        readInt(); // charId
+        _x = readInt();
+        _y = readInt();
+        _z = readInt();
     }
 
     @Override

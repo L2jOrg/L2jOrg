@@ -22,20 +22,16 @@ public class ExEnchantSkillList extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_ENCHANT_SKILL_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_ENCHANT_SKILL_LIST);
 
-        packet.putInt(_type.ordinal());
-        packet.putInt(_skills.size());
+        writeInt(_type.ordinal());
+        writeInt(_skills.size());
         for (Skill skill : _skills) {
-            packet.putInt(skill.getId());
-            packet.putShort((short) skill.getLevel());
-            packet.putShort((short) skill.getSubLevel());
+            writeInt(skill.getId());
+            writeShort((short) skill.getLevel());
+            writeShort((short) skill.getSubLevel());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + _skills.size() * 8;
-    }
 }

@@ -15,8 +15,8 @@ public class BypassUserCmd extends IClientIncomingPacket {
     private int _command;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _command = packet.getInt();
+    public void readImpl() {
+        _command = readInt();
     }
 
     @Override

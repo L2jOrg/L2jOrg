@@ -41,44 +41,35 @@ public class ExResponseCommissionList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_RESPONSE_COMMISSION_LIST.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_RESPONSE_COMMISSION_LIST);
 
-        packet.putInt(_replyType.getClientId());
+        writeInt(_replyType.getClientId());
         switch (_replyType) {
             case PLAYER_AUCTIONS:
             case AUCTIONS: {
-                packet.putInt((int) Instant.now().getEpochSecond());
-                packet.putInt(_chunkId);
+                writeInt((int) Instant.now().getEpochSecond());
+                writeInt(_chunkId);
 
                 int chunkSize = _items.size() - _listIndexStart;
                 if (chunkSize > MAX_CHUNK_SIZE) {
                     chunkSize = MAX_CHUNK_SIZE;
                 }
 
-                packet.putInt(chunkSize);
+                writeInt(chunkSize);
                 for (int i = _listIndexStart; i < (_listIndexStart + chunkSize); i++) {
                     final CommissionItem commissionItem = _items.get(i);
-                    packet.putLong(commissionItem.getCommissionId());
-                    packet.putLong(commissionItem.getPricePerUnit());
-                    packet.putInt(0); // CommissionItemType seems client does not really need it.
-                    packet.putInt((commissionItem.getDurationInDays() - 1) / 2);
-                    packet.putInt((int) commissionItem.getEndTime().getEpochSecond());
-                    writeString(null, packet); // Seller Name its not displayed somewhere so i am not sending it to decrease traffic.
-                    writeItem(packet, commissionItem.getItemInfo());
+                    writeLong(commissionItem.getCommissionId());
+                    writeLong(commissionItem.getPricePerUnit());
+                    writeInt(0); // CommissionItemType seems client does not really need it.
+                    writeInt((commissionItem.getDurationInDays() - 1) / 2);
+                    writeInt((int) commissionItem.getEndTime().getEpochSecond());
+                    writeString(null); // Seller Name its not displayed somewhere so i am not sending it to decrease traffic.
+                    writeItem(commissionItem.getItemInfo());
                 }
                 break;
             }
         }
-    }
-
-    @Override
-    protected int size(L2GameClient client) {
-        int chunkSize = _items.size() - _listIndexStart;
-        if (chunkSize > MAX_CHUNK_SIZE) {
-            chunkSize = MAX_CHUNK_SIZE;
-        }
-        return 17 + chunkSize * 130;
     }
 
     public enum CommissionListReplyType {

@@ -18,15 +18,11 @@ public final class TutorialShowQuestionMark extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.TUTORIAL_SHOW_QUESTION_MARK.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.TUTORIAL_SHOW_QUESTION_MARK);
 
-        packet.put((byte) _markType);
-        packet.putInt(_markId);
+        writeByte((byte) _markType);
+        writeInt(_markId);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 10;
-    }
 }

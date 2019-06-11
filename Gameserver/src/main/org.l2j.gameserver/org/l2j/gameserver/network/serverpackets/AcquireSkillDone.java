@@ -11,12 +11,8 @@ import java.nio.ByteBuffer;
 public class AcquireSkillDone extends IClientOutgoingPacket {
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.ACQUIRE_SKILL_DONE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.ACQUIRE_SKILL_DONE);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 5;
-    }
 }

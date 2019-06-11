@@ -19,28 +19,24 @@ public class ExConnectedTimeAndGettableReward extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
+    public void writeImpl(L2GameClient client) {
         if (!DailyMissionData.getInstance().isAvailable()) {
             return;
         }
 
-        OutgoingPackets.EX_CONNECTED_TIME_AND_GETTABLE_REWARD.writeId(packet);
-        packet.putInt(0x00);
-        packet.putInt(_oneDayRewardAvailableCount);
-        packet.putInt(0x00);
-        packet.putInt(0x00);
-        packet.putInt(0x00);
-        packet.putInt(0x00);
-        packet.putInt(0x00);
-        packet.putInt(0x00);
-        packet.putInt(0x00);
-        packet.putInt(0x00);
-        packet.putInt(0x00);
-        packet.putInt(0x00);
+        writeId(OutgoingPackets.EX_CONNECTED_TIME_AND_GETTABLE_REWARD);
+        writeInt(0x00);
+        writeInt(_oneDayRewardAvailableCount);
+        writeInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 53;
-    }
 }

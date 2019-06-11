@@ -25,14 +25,10 @@ public class ExSetCompassZoneCode extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_SET_COMPASS_ZONE_CODE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_SET_COMPASS_ZONE_CODE);
 
-        packet.putInt(_zoneType);
+        writeInt(_zoneType);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }

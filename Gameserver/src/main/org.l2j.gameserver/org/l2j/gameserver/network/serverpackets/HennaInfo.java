@@ -29,30 +29,26 @@ public final class HennaInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.HENNA_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.HENNA_INFO);
 
-        packet.putShort((short) _activeChar.getHennaValue(BaseStats.INT)); // equip INT
-        packet.putShort((short) _activeChar.getHennaValue(BaseStats.STR)); // equip STR
-        packet.putShort((short) _activeChar.getHennaValue(BaseStats.CON)); // equip CON
-        packet.putShort((short) _activeChar.getHennaValue(BaseStats.MEN)); // equip MEN
-        packet.putShort((short) _activeChar.getHennaValue(BaseStats.DEX)); // equip DEX
-        packet.putShort((short) _activeChar.getHennaValue(BaseStats.WIT)); // equip WIT
-        packet.putShort((short) 0x00); // equip LUC
-        packet.putShort((short) 0x00); // equip CHA
-        packet.putInt(3 - _activeChar.getHennaEmptySlots()); // Slots
-        packet.putInt(_hennas.size()); // Size
+        writeShort((short) _activeChar.getHennaValue(BaseStats.INT)); // equip INT
+        writeShort((short) _activeChar.getHennaValue(BaseStats.STR)); // equip STR
+        writeShort((short) _activeChar.getHennaValue(BaseStats.CON)); // equip CON
+        writeShort((short) _activeChar.getHennaValue(BaseStats.MEN)); // equip MEN
+        writeShort((short) _activeChar.getHennaValue(BaseStats.DEX)); // equip DEX
+        writeShort((short) _activeChar.getHennaValue(BaseStats.WIT)); // equip WIT
+        writeShort((short) 0x00); // equip LUC
+        writeShort((short) 0x00); // equip CHA
+        writeInt(3 - _activeChar.getHennaEmptySlots()); // Slots
+        writeInt(_hennas.size()); // Size
         for (L2Henna henna : _hennas) {
-            packet.putInt(henna.getDyeId());
-            packet.putInt(henna.isAllowedClass(_activeChar.getClassId()) ? 0x01 : 0x00);
+            writeInt(henna.getDyeId());
+            writeInt(henna.isAllowedClass(_activeChar.getClassId()) ? 0x01 : 0x00);
         }
-        packet.putInt(0x00); // Premium Slot Dye ID
-        packet.putInt(0x00); // Premium Slot Dye Time Left
-        packet.putInt(0x00); // Premium Slot Dye ID isValid
+        writeInt(0x00); // Premium Slot Dye ID
+        writeInt(0x00); // Premium Slot Dye Time Left
+        writeInt(0x00); // Premium Slot Dye ID isValid
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 41 + _hennas.size() * 8;
-    }
 }

@@ -15,8 +15,8 @@ public final class RequestExMPCCShowPartyMembersInfo extends IClientIncomingPack
     private int _partyLeaderId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _partyLeaderId = packet.getInt();
+    public void readImpl() {
+        _partyLeaderId = readInt();
     }
 
     @Override

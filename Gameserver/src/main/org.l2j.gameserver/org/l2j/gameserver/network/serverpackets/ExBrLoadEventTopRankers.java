@@ -24,18 +24,14 @@ public class ExBrLoadEventTopRankers extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_BR_LOAD_EVENT_TOP_RANKERS.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_BR_LOAD_EVENT_TOP_RANKERS);
 
-        packet.putInt(_eventId);
-        packet.putInt(_day);
-        packet.putInt(_count);
-        packet.putInt(_bestScore);
-        packet.putInt(_myScore);
+        writeInt(_eventId);
+        writeInt(_day);
+        writeInt(_count);
+        writeInt(_bestScore);
+        writeInt(_myScore);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25;
-    }
 }

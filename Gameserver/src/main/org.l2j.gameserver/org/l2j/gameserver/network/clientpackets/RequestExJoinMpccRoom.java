@@ -13,8 +13,8 @@ public class RequestExJoinMpccRoom extends IClientIncomingPacket {
     private int _roomId;
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _roomId = packet.getInt();
+    public void readImpl() {
+        _roomId = readInt();
     }
 
     @Override

@@ -21,18 +21,14 @@ public class RadarControl extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.RADAR_CONTROL.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.RADAR_CONTROL);
 
-        packet.putInt(_showRadar);
-        packet.putInt(_type); // maybe type
-        packet.putInt(_x);
-        packet.putInt(_y);
-        packet.putInt(_z);
+        writeInt(_showRadar);
+        writeInt(_type); // maybe type
+        writeInt(_x);
+        writeInt(_y);
+        writeInt(_z);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 25;
-    }
 }

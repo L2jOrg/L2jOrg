@@ -57,26 +57,22 @@ public final class FlyToLocation extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.FLY_TO_LOCATION.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.FLY_TO_LOCATION);
 
-        packet.putInt(_chaObjId);
-        packet.putInt(_destX);
-        packet.putInt(_destY);
-        packet.putInt(_destZ);
-        packet.putInt(_chaX);
-        packet.putInt(_chaY);
-        packet.putInt(_chaZ);
-        packet.putInt(_type.ordinal());
-        packet.putInt(_flySpeed);
-        packet.putInt(_flyDelay);
-        packet.putInt(_animationSpeed);
+        writeInt(_chaObjId);
+        writeInt(_destX);
+        writeInt(_destY);
+        writeInt(_destZ);
+        writeInt(_chaX);
+        writeInt(_chaY);
+        writeInt(_chaZ);
+        writeInt(_type.ordinal());
+        writeInt(_flySpeed);
+        writeInt(_flyDelay);
+        writeInt(_animationSpeed);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 49;
-    }
 
     public enum FlyType {
         THROW_UP,

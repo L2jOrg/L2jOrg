@@ -25,18 +25,14 @@ public class ExPVPMatchCCRecord extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_PVP_MATCH_CCRECORD.writeId(packet);
-        packet.putInt(_state); // 0 - initialize, 1 - update, 2 - finish
-        packet.putInt(_players.size());
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_PVP_MATCH_CCRECORD);
+        writeInt(_state); // 0 - initialize, 1 - update, 2 - finish
+        writeInt(_players.size());
         for (Entry<L2PcInstance, Integer> entry : _players.entrySet()) {
-            writeString(entry.getKey().getName(), packet);
-            packet.putInt(entry.getValue());
+            writeString(entry.getKey().getName());
+            writeInt(entry.getValue());
         }
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 13 + _players.size() * 50;
-    }
 }

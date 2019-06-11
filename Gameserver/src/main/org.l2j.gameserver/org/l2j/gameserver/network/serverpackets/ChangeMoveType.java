@@ -19,16 +19,12 @@ public class ChangeMoveType extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.CHANGE_MOVE_TYPE.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.CHANGE_MOVE_TYPE);
 
-        packet.putInt(_charObjId);
-        packet.putInt(_running ? RUN : WALK);
-        packet.putInt(0); // c2
+        writeInt(_charObjId);
+        writeInt(_running ? RUN : WALK);
+        writeInt(0); // c2
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 17;
-    }
 }

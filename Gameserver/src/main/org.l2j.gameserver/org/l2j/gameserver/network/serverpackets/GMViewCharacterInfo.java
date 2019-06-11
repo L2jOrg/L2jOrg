@@ -31,135 +31,131 @@ public class GMViewCharacterInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.GM_VIEW_CHARACTER_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.GM_VIEW_CHARACTER_INFO);
 
-        packet.putInt(_activeChar.getX());
-        packet.putInt(_activeChar.getY());
-        packet.putInt(_activeChar.getZ());
-        packet.putInt(_activeChar.getHeading());
-        packet.putInt(_activeChar.getObjectId());
-        writeString(_activeChar.getName(), packet);
-        packet.putInt(_activeChar.getRace().ordinal());
-        packet.putInt(_activeChar.getAppearance().getSex() ? 1 : 0);
-        packet.putInt(_activeChar.getClassId().getId());
-        packet.putInt(_activeChar.getLevel());
-        packet.putLong(_activeChar.getExp());
-        packet.putDouble((float) (_activeChar.getExp() - ExperienceData.getInstance().getExpForLevel(_activeChar.getLevel())) / (ExperienceData.getInstance().getExpForLevel(_activeChar.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(_activeChar.getLevel()))); // High Five exp %
-        packet.putInt(_activeChar.getSTR());
-        packet.putInt(_activeChar.getDEX());
-        packet.putInt(_activeChar.getCON());
-        packet.putInt(_activeChar.getINT());
-        packet.putInt(_activeChar.getWIT());
-        packet.putInt(_activeChar.getMEN());
-        packet.putInt(0x00); // LUC
-        packet.putInt(0x00); // CHA
-        packet.putInt(_activeChar.getMaxHp());
-        packet.putInt((int) _activeChar.getCurrentHp());
-        packet.putInt(_activeChar.getMaxMp());
-        packet.putInt((int) _activeChar.getCurrentMp());
-        packet.putLong(_activeChar.getSp());
-        packet.putInt(_activeChar.getCurrentLoad());
-        packet.putInt(_activeChar.getMaxLoad());
-        packet.putInt(_activeChar.getPkKills());
+        writeInt(_activeChar.getX());
+        writeInt(_activeChar.getY());
+        writeInt(_activeChar.getZ());
+        writeInt(_activeChar.getHeading());
+        writeInt(_activeChar.getObjectId());
+        writeString(_activeChar.getName());
+        writeInt(_activeChar.getRace().ordinal());
+        writeInt(_activeChar.getAppearance().getSex() ? 1 : 0);
+        writeInt(_activeChar.getClassId().getId());
+        writeInt(_activeChar.getLevel());
+        writeLong(_activeChar.getExp());
+        writeDouble((float) (_activeChar.getExp() - ExperienceData.getInstance().getExpForLevel(_activeChar.getLevel())) / (ExperienceData.getInstance().getExpForLevel(_activeChar.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(_activeChar.getLevel()))); // High Five exp %
+        writeInt(_activeChar.getSTR());
+        writeInt(_activeChar.getDEX());
+        writeInt(_activeChar.getCON());
+        writeInt(_activeChar.getINT());
+        writeInt(_activeChar.getWIT());
+        writeInt(_activeChar.getMEN());
+        writeInt(0x00); // LUC
+        writeInt(0x00); // CHA
+        writeInt(_activeChar.getMaxHp());
+        writeInt((int) _activeChar.getCurrentHp());
+        writeInt(_activeChar.getMaxMp());
+        writeInt((int) _activeChar.getCurrentMp());
+        writeLong(_activeChar.getSp());
+        writeInt(_activeChar.getCurrentLoad());
+        writeInt(_activeChar.getMaxLoad());
+        writeInt(_activeChar.getPkKills());
 
         for (int slot : getPaperdollOrder()) {
-            packet.putInt(_activeChar.getInventory().getPaperdollObjectId(slot));
+            writeInt(_activeChar.getInventory().getPaperdollObjectId(slot));
         }
 
         for (int slot : getPaperdollOrder()) {
-            packet.putInt(_activeChar.getInventory().getPaperdollItemDisplayId(slot));
+            writeInt(_activeChar.getInventory().getPaperdollItemDisplayId(slot));
         }
 
         for (int slot : getPaperdollOrder()) {
             final VariationInstance augment = _activeChar.getInventory().getPaperdollAugmentation(slot);
-            packet.putInt(augment != null ? augment.getOption1Id() : 0); // Confirmed
-            packet.putInt(augment != null ? augment.getOption2Id() : 0); // Confirmed
+            writeInt(augment != null ? augment.getOption1Id() : 0); // Confirmed
+            writeInt(augment != null ? augment.getOption2Id() : 0); // Confirmed
         }
 
-        packet.put((byte) _activeChar.getInventory().getTalismanSlots()); // CT2.3
-        packet.put((byte)(_activeChar.getInventory().canEquipCloak() ? 1 : 0)); // CT2.3
-        packet.putInt(0x00);
-        packet.putShort((short) 0x00);
-        packet.putInt(_activeChar.getPAtk());
-        packet.putInt(_activeChar.getPAtkSpd());
-        packet.putInt(_activeChar.getPDef());
-        packet.putInt(_activeChar.getEvasionRate());
-        packet.putInt(_activeChar.getAccuracy());
-        packet.putInt(_activeChar.getCriticalHit());
-        packet.putInt(_activeChar.getMAtk());
+        writeByte((byte) _activeChar.getInventory().getTalismanSlots()); // CT2.3
+        writeByte((byte)(_activeChar.getInventory().canEquipCloak() ? 1 : 0)); // CT2.3
+        writeInt(0x00);
+        writeShort((short) 0x00);
+        writeInt(_activeChar.getPAtk());
+        writeInt(_activeChar.getPAtkSpd());
+        writeInt(_activeChar.getPDef());
+        writeInt(_activeChar.getEvasionRate());
+        writeInt(_activeChar.getAccuracy());
+        writeInt(_activeChar.getCriticalHit());
+        writeInt(_activeChar.getMAtk());
 
-        packet.putInt(_activeChar.getMAtkSpd());
-        packet.putInt(_activeChar.getPAtkSpd());
+        writeInt(_activeChar.getMAtkSpd());
+        writeInt(_activeChar.getPAtkSpd());
 
-        packet.putInt(_activeChar.getMDef());
-        packet.putInt(_activeChar.getMagicEvasionRate());
-        packet.putInt(_activeChar.getMagicAccuracy());
-        packet.putInt(_activeChar.getMCriticalHit());
+        writeInt(_activeChar.getMDef());
+        writeInt(_activeChar.getMagicEvasionRate());
+        writeInt(_activeChar.getMagicAccuracy());
+        writeInt(_activeChar.getMCriticalHit());
 
-        packet.putInt(_activeChar.getPvpFlag()); // 0-non-pvp 1-pvp = violett name
-        packet.putInt(_activeChar.getReputation());
+        writeInt(_activeChar.getPvpFlag()); // 0-non-pvp 1-pvp = violett name
+        writeInt(_activeChar.getReputation());
 
-        packet.putInt(_runSpd);
-        packet.putInt(_walkSpd);
-        packet.putInt(_swimRunSpd);
-        packet.putInt(_swimWalkSpd);
-        packet.putInt(_flyRunSpd);
-        packet.putInt(_flyWalkSpd);
-        packet.putInt(_flyRunSpd);
-        packet.putInt(_flyWalkSpd);
-        packet.putDouble(_moveMultiplier);
-        packet.putDouble(_activeChar.getAttackSpeedMultiplier()); // 2.9);//
-        packet.putDouble(_activeChar.getCollisionRadius()); // scale
-        packet.putDouble(_activeChar.getCollisionHeight()); // y offset ??!? fem dwarf 4033
-        packet.putInt(_activeChar.getAppearance().getHairStyle());
-        packet.putInt(_activeChar.getAppearance().getHairColor());
-        packet.putInt(_activeChar.getAppearance().getFace());
-        packet.putInt(_activeChar.isGM() ? 0x01 : 0x00); // builder level
+        writeInt(_runSpd);
+        writeInt(_walkSpd);
+        writeInt(_swimRunSpd);
+        writeInt(_swimWalkSpd);
+        writeInt(_flyRunSpd);
+        writeInt(_flyWalkSpd);
+        writeInt(_flyRunSpd);
+        writeInt(_flyWalkSpd);
+        writeDouble(_moveMultiplier);
+        writeDouble(_activeChar.getAttackSpeedMultiplier()); // 2.9);//
+        writeDouble(_activeChar.getCollisionRadius()); // scale
+        writeDouble(_activeChar.getCollisionHeight()); // y offset ??!? fem dwarf 4033
+        writeInt(_activeChar.getAppearance().getHairStyle());
+        writeInt(_activeChar.getAppearance().getHairColor());
+        writeInt(_activeChar.getAppearance().getFace());
+        writeInt(_activeChar.isGM() ? 0x01 : 0x00); // builder level
 
-        writeString(_activeChar.getTitle(), packet);
-        packet.putInt(_activeChar.getClanId()); // pledge id
-        packet.putInt(_activeChar.getClanCrestId()); // pledge crest id
-        packet.putInt(_activeChar.getAllyId()); // ally id
-        packet.put((byte) _activeChar.getMountType().ordinal()); // mount type
-        packet.put((byte) _activeChar.getPrivateStoreType().getId());
-        packet.put((byte)(_activeChar.hasDwarvenCraft() ? 1 : 0));
-        packet.putInt(_activeChar.getPkKills());
-        packet.putInt(_activeChar.getPvpKills());
+        writeString(_activeChar.getTitle());
+        writeInt(_activeChar.getClanId()); // pledge id
+        writeInt(_activeChar.getClanCrestId()); // pledge crest id
+        writeInt(_activeChar.getAllyId()); // ally id
+        writeByte((byte) _activeChar.getMountType().ordinal()); // mount type
+        writeByte((byte) _activeChar.getPrivateStoreType().getId());
+        writeByte((byte)(_activeChar.hasDwarvenCraft() ? 1 : 0));
+        writeInt(_activeChar.getPkKills());
+        writeInt(_activeChar.getPvpKills());
 
-        packet.putShort((short) _activeChar.getRecomLeft());
-        packet.putShort((short) _activeChar.getRecomHave()); // Blue value for name (0 = white, 255 = pure blue)
-        packet.putInt(_activeChar.getClassId().getId());
-        packet.putInt(0x00); // special effects? circles around player...
-        packet.putInt(_activeChar.getMaxCp());
-        packet.putInt((int) _activeChar.getCurrentCp());
+        writeShort((short) _activeChar.getRecomLeft());
+        writeShort((short) _activeChar.getRecomHave()); // Blue value for name (0 = white, 255 = pure blue)
+        writeInt(_activeChar.getClassId().getId());
+        writeInt(0x00); // special effects? circles around player...
+        writeInt(_activeChar.getMaxCp());
+        writeInt((int) _activeChar.getCurrentCp());
 
-        packet.put((byte)(_activeChar.isRunning() ? 0x01 : 0x00)); // changes the Speed display on Status Window
+        writeByte((byte)(_activeChar.isRunning() ? 0x01 : 0x00)); // changes the Speed display on Status Window
 
-        packet.put((byte) 321);
+        writeByte((byte) 321);
 
-        packet.putInt(_activeChar.getPledgeClass()); // changes the text above CP on Status Window
+        writeInt(_activeChar.getPledgeClass()); // changes the text above CP on Status Window
 
-        packet.put((byte) (_activeChar.isNoble() ? 0x01 : 0x00));
-        packet.put((byte) (_activeChar.isHero() ? 0x01 : 0x00));
+        writeByte((byte) (_activeChar.isNoble() ? 0x01 : 0x00));
+        writeByte((byte) (_activeChar.isHero() ? 0x01 : 0x00));
 
-        packet.putInt(_activeChar.getAppearance().getNameColor());
-        packet.putInt(_activeChar.getAppearance().getTitleColor());
+        writeInt(_activeChar.getAppearance().getNameColor());
+        writeInt(_activeChar.getAppearance().getTitleColor());
 
         final AttributeType attackAttribute = _activeChar.getAttackElement();
-        packet.putShort((short) attackAttribute.getClientId());
-        packet.putShort((short) _activeChar.getAttackElementValue(attackAttribute));
+        writeShort((short) attackAttribute.getClientId());
+        writeShort((short) _activeChar.getAttackElementValue(attackAttribute));
         for (AttributeType type : AttributeType.ATTRIBUTE_TYPES) {
-            packet.putShort((short) _activeChar.getDefenseElementValue(type));
+            writeShort((short) _activeChar.getDefenseElementValue(type));
         }
-        packet.putInt(_activeChar.getFame());
-        packet.putInt(_activeChar.getVitalityPoints());
-        packet.putInt(0x00);
-        packet.putInt(0x00);
+        writeInt(_activeChar.getFame());
+        writeInt(_activeChar.getVitalityPoints());
+        writeInt(0x00);
+        writeInt(0x00);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 360 + (AttributeType.ATTRIBUTE_TYPES.length + _activeChar.getName().length() + _activeChar.getTitle().length()) * 2 + PAPERDOLL_ORDER.length * 16 ;
-    }
 }

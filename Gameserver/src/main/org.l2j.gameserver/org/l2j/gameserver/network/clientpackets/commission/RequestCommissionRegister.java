@@ -22,14 +22,14 @@ public class RequestCommissionRegister extends IClientIncomingPacket {
     private int _durationType; // -1 = None, 0 = 1 Day, 1 = 3 Days, 2 = 5 Days, 3 = 7 Days
 
     @Override
-    public void readImpl(ByteBuffer packet) {
-        _itemObjectId = packet.getInt();
-        readString(packet); // Item Name they use it for search we will use server side available names.
-        _pricePerUnit = packet.getLong();
-        _itemCount = packet.getLong();
-        _durationType = packet.getInt();
-        // packet.getInt(); // Unknown
-        // packet.getInt(); // Unknown
+    public void readImpl() {
+        _itemObjectId = readInt();
+        readString(); // Item Name they use it for search we will use server side available names.
+        _pricePerUnit = readLong();
+        _itemCount = readLong();
+        _durationType = readInt();
+        // readInt(); // Unknown
+        // readInt(); // Unknown
     }
 
     @Override

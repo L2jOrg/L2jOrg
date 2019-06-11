@@ -16,14 +16,10 @@ public class ExVitalityPointInfo extends IClientOutgoingPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client, ByteBuffer packet) {
-        OutgoingPackets.EX_VITALITY_POINT_INFO.writeId(packet);
+    public void writeImpl(L2GameClient client) {
+        writeId(OutgoingPackets.EX_VITALITY_POINT_INFO);
 
-        packet.putInt(_vitalityPoints);
+        writeInt(_vitalityPoints);
     }
 
-    @Override
-    protected int size(L2GameClient client) {
-        return 9;
-    }
 }
