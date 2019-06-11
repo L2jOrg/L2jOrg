@@ -56,24 +56,23 @@
 	</spawn>
 	<spawn>
 		<territories>
-			<territory name="gludio03_mb1821_02" minZ="-2799" maxZ="-2299">
-				<node x="-44640" y="122634" />
-				<node x="-44136" y="122634" />
-				<node x="-44144" y="123145" />
-				<node x="-44647" y="123138" />
+			<territory name="gludio03_mb1821_02" minZ="-3880" maxZ="-3280">
+				<node x="-45896" y="110708" />
+				<node x="-44836" y="110992" />
+				<node x="-45296" y="111588" />
+				<node x="-46060" y="111556" />
+				<node x="-46476" y="111088" />
 			</territory>
 		</territories>
 		<npc id="25369" dbSave="true" dbName="soul_scavenger" respawnTime="24hour" respawnRandom="12hour" /> <!-- Soul Scavenger -->
 	</spawn>
 	<spawn>
 		<territories>
-			<territory name="gludio04_mb1823_01" minZ="-3788" maxZ="-3088">
-				<node x="-55023" y="172477" />
-				<node x="-54417" y="171840" />
-				<node x="-53308" y="172132" />
-				<node x="-53269" y="172696" />
-				<node x="-53577" y="173504" />
-				<node x="-54440" y="173010" />
+			<territory name="gludio04_mb1823_01" minZ="-3300" maxZ="-2700">
+				<node x="-54788" y="169384" />
+				<node x="-53992" y="170104" />
+				<node x="-54024" y="170920" />
+				<node x="-55264" y="170876" />
 			</territory>
 		</territories>
 		<npc id="25169" x="-54127" y="172510" z="-3632" dbSave="true" dbName="ragraman" respawnTime="24hour" respawnRandom="12hour" /> <!-- Ragraman -->
@@ -149,38 +148,37 @@
 	</spawn>
 	<spawn>
 		<territories>
-			<territory name="gludio02_mb1922_02" minZ="-3749" maxZ="-3249">
-				<node x="-30506" y="131738" />
-				<node x="-29294" y="131735" />
-				<node x="-29284" y="133353" />
-				<node x="-30495" y="133356" />
+			<territory name="gludio02_mb1922_02" minZ="-3136" maxZ="-2636">
+				<node x="-22036" y="152044" />
+				<node x="-21642" y="151796" />
+				<node x="-21536" y="152076" />
+				<node x="-21896" y="152344" />
 			</territory>
 		</territories>
-		<npc id="25166" x="-29797" y="132470" z="-3664" dbSave="true" dbName="ikuntai" respawnTime="24hour" respawnRandom="12hour" /> <!-- Ikuntai -->
+		<npc id="25166" dbSave="true" dbName="ikuntai" respawnTime="24hour" respawnRandom="12hour" /> <!-- Ikuntai -->
 	</spawn>
 	<spawn>
 		<territories>
-			<territory name="gludio04_mb1923_01" minZ="-3305" maxZ="-2805">
-				<node x="-17304" y="174316" />
-				<node x="-16671" y="174203" />
-				<node x="-16329" y="174872" />
-				<node x="-16557" y="175322" />
-				<node x="-17215" y="175234" />
+			<territory name="gludio04_mb1923_01" minZ="-3584" maxZ="-2984">
+				<node x="-17460" y="174700" />
+				<node x="-16872" y="174032" />
+				<node x="-16212" y="174712" />
+				<node x="-16368" y="175456" />
+				<node x="-17304" y="175548" />
 			</territory>
 		</territories>
 		<npc id="25352" dbSave="true" dbName="giant_wasteland_basil" respawnTime="24hour" respawnRandom="12hour" /> <!-- Giant Wasteland Basilisk -->
 	</spawn>
 	<spawn>
 		<territories>
-			<territory name="gludio04_mb1923_02" minZ="-3961" maxZ="-3361">
-				<node x="-16700" y="183404" />
-				<node x="-16055" y="183047" />
-				<node x="-15421" y="183852" />
-				<node x="-15753" y="184318" />
-				<node x="-16423" y="184242" />
+			<territory name="gludio04_mb1923_02" minZ="-3964" maxZ="-3364">
+				<node x="-16560" y="183800" />
+				<node x="-15540" y="183892" />
+				<node x="-15552" y="184648" />
+				<node x="-16704" y="184840" />
 			</territory>
 		</territories>
-		<npc id="25354" x="-15909" y="183768" z="-3872" dbSave="true" dbName="gargoyle_lord_sirocco" respawnTime="24hour" respawnRandom="12hour" /> <!-- Gargoyle Lord Sirocco -->
+		<npc id="25354" x="-16072" y="184361" z="-3807" dbSave="true" dbName="gargoyle_lord_sirocco" respawnTime="24hour" respawnRandom="12hour" /> <!-- Gargoyle Lord Sirocco -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -410,7 +408,7 @@
 				<node x="9952" y="127352" />
 			</territory>
 		</territories>
-		<npc id="25041" dbSave="true" dbName="ikuntai" respawnTime="24hour" respawnRandom="12hour" /> <!-- Remmel -->
+		<npc id="25041" dbSave="true" dbName="remmel" respawnTime="24hour" respawnRandom="12hour" /> <!-- Remmel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -421,7 +419,7 @@
 				<node x="25290" y="122425" />
 			</territory>
 		</territories>
-		<npc id="25170" dbSave="true" dbName="remmel" respawnTime="24hour" respawnRandom="12hour" /> <!-- Lizardmen Captain Hellion -->
+		<npc id="25170" dbSave="true" dbName="lizardman_leader_hellion" respawnTime="24hour" respawnRandom="12hour" /> <!-- Lizardmen Captain Hellion -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -893,33 +891,86 @@
 		</territories>
 		<npc id="25463" dbSave="true" dbName="harit_tutelar_garangky" respawnTime="24hour" respawnRandom="12hour" /> <!-- Harit Guardian Garangky -->
 	</spawn>
-	<!-- Greyclaw Kutus -->
 	<spawn>
-		<npc id="25001" x="-53289" y="147314" z="-2776" heading="0" dbSave="true" dbName="Greyclaw Kutus" respawnTime="24hour" respawnRandom="12hour" />
+		<territories>
+			<territory name="gludio09_mb1822_01" minZ="-3000" maxZ="-2400">
+				<node x="-54440" y="145764" />
+				<node x="-53532" y="146480" />
+				<node x="-54220" y="147364" />
+				<node x="-54988" y="147000" />
+				<node x="-55140" y="146252" />
+			</territory>
+		</territories>
+		<npc id="25001" dbSave="true" dbName="greyclaw_kutus" respawnTime="24hour" respawnRandom="12hour" /> <!-- Greyclaw Kutus -->
 	</spawn>
-	<!-- Evil Spirit Bifrons -->
 	<spawn>
-		<npc id="25146" x="-13056" y="215680" z="-3760" heading="0" dbSave="true" dbName="Evil Spirit Bifrons" respawnTime="24hour" respawnRandom="12hour" />
+		<territories>
+			<territory name="gludio01_mb1924_01" minZ="-3800" maxZ="-3300">
+				<node x="-14144" y="213916" />
+				<node x="-13904" y="214320" />
+				<node x="-13280" y="213720" />
+				<node x="-13464" y="213228" />
+			</territory>
+		</territories>
+		<npc id="25146" dbSave="true" dbName="serpent_demon_bifrons" respawnTime="24hour" respawnRandom="12hour" /> <!-- Evil Spirit Bifrons -->
 	</spawn>
-	<!-- Zombie Lord Crowl -->
 	<spawn>
-		<npc id="25149" x="-12624" y="138112" z="-3552" heading="0" dbSave="true" dbName="Zombie Lord Crowl" respawnTime="24hour" respawnRandom="12hour" />
+		<territories>
+			<territory name="gludio02_mb1922_01" minZ="-3720" maxZ="-3120">
+				<node x="-13166" y="138211" />
+				<node x="-12594" y="137645" />
+				<node x="-12128" y="138291" />
+				<node x="-12722" y="138652" />
+			</territory>
+		</territories>
+		<npc id="25149" dbSave="true" dbName="zombie_lord_crowl" respawnTime="24hour" respawnRandom="12hour" /> <!-- Zombie Lord Crowl -->
 	</spawn>
-	<!-- Skyla -->
 	<spawn>
-		<npc id="25401" x="117808" y="102880" z="-3592" heading="0" dbSave="true" dbName="Skyla" respawnTime="24hour" respawnRandom="12hour" />
+		<territories>
+			<territory name="giran03_mb2321_03" minZ="-3740" maxZ="-3140">
+				<node x="116704" y="103332" />
+				<node x="117488" y="101996" />
+				<node x="119064" y="102712" />
+				<node x="117992" y="103752" />
+			</territory>
+		</territories>
+		<npc id="25401" dbSave="true" dbName="antaras_adherent_skyla" respawnTime="24hour" respawnRandom="12hour" /> <!-- Skyla -->
 	</spawn>
-	<!-- Execution Grounds Watchman Guillotine -->
 	<spawn>
-		<npc id="25118" x="50872" y="146616" z="-3632" heading="0" dbSave="true" dbName="Execution Grounds Watchman Guillotine" respawnTime="24hour" respawnRandom="12hour" />
+		<territories>
+			<territory name="dion02_mb2122_02" minZ="-3677" maxZ="-3077">
+				<node x="50325" y="146283" />
+				<node x="50978" y="145946" />
+				<node x="51400" y="146676" />
+				<node x="51137" y="147486" />
+				<node x="50574" y="147430" />
+			</territory>
+		</territories>
+		<npc id="25118" dbSave="true" dbName="warden_guillotine" respawnTime="24hour" respawnRandom="12hour" /> <!-- Execution Grounds Watchman Guillotine -->
 	</spawn>
-	<!-- Soul Collector Acheron -->
 	<spawn>
-		<npc id="25223" x="43152" y="152352" z="-2840" heading="0" dbSave="true" dbName="Soul Collector Acheron" respawnTime="24hour" respawnRandom="12hour" />
+		<territories>
+			<territory name="dion02_mb2122_03" minZ="-2894" maxZ="-2294">
+				<node x="42227" y="152067" />
+				<node x="43611" y="152017" />
+				<node x="43446" y="152927" />
+				<node x="42965" y="152958" />
+			</territory>
+		</territories>
+		<npc id="25223" dbSave="true" dbName="soul_collector_acheron" respawnTime="24hour" respawnRandom="12hour" /> <!-- Soul Collector Acheron -->
 	</spawn>
-	<!-- Evil Spirit Tempest -->
 	<spawn>
-		<npc id="25385" x="53600" y="143472" z="-3864" heading="0" dbSave="true" dbName="Evil Spirit Tempest" respawnTime="24hour" respawnRandom="12hour" />
+		<territories>
+			<territory name="dion02_mb2122_01" minZ="-3932" maxZ="-3332">
+				<node x="53151" y="142897" />
+				<node x="53548" y="142749" />
+				<node x="54119" y="142852" />
+				<node x="53643" y="144591" />
+				<node x="53200" y="144369" />
+				<node x="52850" y="143748" />
+			</territory>
+		</territories>
+		<npc id="25385" dbSave="true" dbName="demon_tempest" respawnTime="24hour" respawnRandom="12hour" /> <!-- Evil Spirit Tempest -->
 	</spawn>
 	<!-- Necrosentinel Royal Guard -->
 	<spawn>

@@ -1,5 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="6901" name="Recipe: Arrow of Light (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Arrow of Light. Requires Create Item Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="200000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="625" />
+		<set name="handler" val="Recipes" />
+	</item>
 	<item id="6917" name="Monster Only (Poisonous Dart)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />

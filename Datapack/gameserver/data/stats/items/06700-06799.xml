@@ -1,5 +1,125 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="6700" name="Sealed Tateossian Necklace Chain" type="EtcItem">
+		<!-- Main ingredient required for a Dwarf to make a Sealed Tateossian Necklace. Can be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="60" />
+		<set name="price" val="16706" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6701" name="Sealed Imperial Crusader Breastplate Part" type="EtcItem">
+		<!-- Main ingredient required for a Dwarf to make a Sealed Imperial Crusader Breastplate. Can be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="60" />
+		<set name="price" val="37565" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6702" name="Sealed Imperial Crusader Gaiter Pattern" type="EtcItem">
+		<!-- Main ingredient required for a Dwarf to make Sealed Imperial Crusader Gaiters. Can be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="60" />
+		<set name="price" val="29182" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6703" name="Sealed Imperial Crusader Gauntlets Design" type="EtcItem">
+		<!-- Main ingredient required for a Dwarf to make Sealed Imperial Crusader Gauntlets. Can be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="60" />
+		<set name="price" val="14047" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6704" name="Sealed Imperial Crusader Boots Design" type="EtcItem">
+		<!-- Main ingredient required for a Dwarf to make Sealed Imperial Crusader Boots. Can be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="60" />
+		<set name="price" val="14047" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6705" name="Sealed Imperial Crusader Shield Fragment" type="EtcItem">
+		<!-- Main ingredient required for a Dwarf to make Sealed Imperial Crusader Shield. Can be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="60" />
+		<set name="price" val="14341" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6706" name="Sealed Imperial Crusader Helmet Pattern" type="EtcItem">
+		<!-- Main ingredient required for a Dwarf to make a Sealed Imperial Crusader Helmet. Can be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="60" />
+		<set name="price" val="12329" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6707" name="Sealed Draconic Leather Armor Part" type="EtcItem">
+		<!-- Main ingredient required for a Dwarf to make Sealed Draconic Leather Armor. Can be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="60" />
+		<set name="price" val="40365" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6708" name="Sealed Draconic Leather Glove Fabric" type="EtcItem">
+		<!-- Main ingredient required for a Dwarf to make Sealed Draconic Leather Gloves. Can be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="60" />
+		<set name="price" val="14047" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6709" name="Sealed Draconic Leather Boots Design" type="EtcItem">
+		<!-- Main ingredient required for a Dwarf to make Sealed Draconic Leather Boots. Can be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="60" />
+		<set name="price" val="14047" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6710" name="Sealed Draconic Leather Helmet Pattern" type="EtcItem">
+		<!-- Main ingredient required for a Dwarf to make Sealed Draconic Leather Helmet. Can be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="60" />
+		<set name="price" val="12329" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6711" name="Sealed Major Arcana Robe Part" type="EtcItem">
+		<!-- Main ingredient required for a Dwarf to make a Sealed Major Arcana Robe. Can be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="60" />
+		<set name="price" val="40365" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6712" name="Sealed Major Arcana Gloves fabric" type="EtcItem">
+		<!-- Main ingredient required for a Dwarf to make Sealed Major Arcana Gloves. Can be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="60" />
+		<set name="price" val="14047" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6713" name="Sealed Major Arcana Boots Design" type="EtcItem">
+		<!-- Main ingredient required for a Dwarf to make Sealed Major Arcana Boots. Can be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="60" />
+		<set name="price" val="14047" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6714" name="Sealed Major Arcana Circlet Pattern" type="EtcItem">
+		<!-- Main ingredient required for a Dwarf to make a Sealed Major Arcana Circlet. Can be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="60" />
+		<set name="price" val="12329" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="6715" name="Monster Only (Silenos Archer)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -184,6 +304,54 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="6724" name="Sealed Tateossian Earring" type="Armor">
+		<!-- The seal can be removed by a blacksmith in any village. Once the seal is removed, M. Def. +13 and MP +31. -->
+		<set name="icon" val="icon.accessory_tateossian_earring_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="157" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="3270000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">68</stat>
+		</stats>
+	</item>
+	<item id="6725" name="Sealed Tateossian Ring" type="Armor">
+		<!-- The seal can be removed by a blacksmith in any village. Once the seal is removed, M. Def. +13 and MP +21. -->
+		<set name="icon" val="icon.accessory_tateossian_ring_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="105" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="2180000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">46</stat>
+		</stats>
+	</item>
+	<item id="6726" name="Sealed Tateossian Necklace" type="Armor">
+		<!-- The seal can be removed by a blacksmith in any village. Once the seal is removed, M. Def. +29 and MP +42. -->
+		<set name="icon" val="icon.accessory_tateossian_necklace_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="209" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="4361000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">91</stat>
 		</stats>
 	</item>
 </list>

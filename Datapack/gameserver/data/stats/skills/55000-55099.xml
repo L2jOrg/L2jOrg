@@ -32,7 +32,6 @@
 					<value level="3">50</value>
 					<value level="4">100</value>
 				</amount>
-				<mode>DIFF</mode> <!-- FIX -->
 			</effect>
 			<effect name="SpModify">
 				<amount>
@@ -41,7 +40,6 @@
 					<value level="3">50</value>
 					<value level="4">100</value>
 				</amount>
-				<mode>DIFF</mode> <!-- FIX -->
 			</effect>
 		</effects>
 	</skill>
@@ -567,11 +565,9 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>20</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>20</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -592,11 +588,9 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>10</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>10</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1157,11 +1151,9 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>30</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>30</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1393,14 +1385,12 @@
 					<value level="1">35</value>
 					<value level="2">35</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>
 					<value level="1">35</value>
 					<value level="2">35</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1432,14 +1422,12 @@
 					<value level="1">45</value>
 					<value level="2">45</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>
 					<value level="1">45</value>
 					<value level="2">45</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

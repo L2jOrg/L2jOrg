@@ -949,6 +949,16 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="45018" toLevel="1" name="Immortal Zaken's Earring - Special Ability">
+		<!-- During PvP, limits the CP, HP, and MP recovery of the target to maximum $s2 for $s1 -->
+		<icon>icon.accessory_earring_of_zaken_i04</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45019" toLevel="1" name="Immortal Antharas' Earring - Special Ability">
+		<!-- Blocks all the enemy's physical and magical skills for 24 sec. -->
+		<icon>icon.accessory_earring_of_antaras_i04</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="45020" toLevel="1" name="Zaken's Cloak">
 		<!-- Max. HP +5%. -->
 		<icon>BranchSys2.Icon.br_zaken_cloak_i00</icon>
@@ -957,92 +967,362 @@
 	<skill id="45021" toLevel="1" name="White Uniform Hat (STR+1 INT+1)">
 		<!-- STR+1, INT+1. -->
 		<icon>BranchSys2.icon.br_navy_cap_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45022" toLevel="1" name="White Uniform Hat (DEX +1 WIT +1)">
 		<!-- DEX +1, and WIT +1. -->
 		<icon>BranchSys2.icon.br_navy_cap_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45023" toLevel="1" name="White Uniform Hat (CON+1 MEN+1)">
 		<!-- CON+1, MEN+1 -->
 		<icon>BranchSys2.icon.br_navy_cap_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45024" toLevel="1" name="Napoleon Hat (STR+1 INT+1)">
 		<!-- STR+1, INT+1. -->
 		<icon>BranchSys.icon.br_napoleonic_cap_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45025" toLevel="1" name="Napoleon Hat (DEX +1 WIT +1)">
 		<!-- DEX +1, and WIT +1. -->
 		<icon>BranchSys.icon.br_napoleonic_cap_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45026" toLevel="1" name="Napoleon Hat (CON +1 MEN +1)">
 		<!-- CON+1, MEN+1 -->
 		<icon>BranchSys.icon.br_napoleonic_cap_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45027" toLevel="1" name="Ninja Hair Accessory (STR+1 INT+1)">
 		<!-- STR+1, INT+1. -->
 		<icon>BranchSys3.icon1.g_co_ninja_hair</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45028" toLevel="1" name="Ninja Hair Accessory (DEX +1 WIT +1)">
 		<!-- DEX +1, and WIT +1. -->
 		<icon>BranchSys3.icon1.g_co_ninja_hair</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45029" toLevel="1" name="Ninja Hair Accessory (CON+1 MEN+1)">
 		<!-- CON+1, MEN+1 -->
 		<icon>BranchSys3.icon1.g_co_ninja_hair</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45030" toLevel="1" name="Warrior's Helmet (STR+1 INT+1)">
 		<!-- STR+1, INT+1. -->
 		<icon>BranchSys2.icon.br_close_helmet_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45031" toLevel="1" name="Warrior's Helmet (DEX +1 WIT +1)">
 		<!-- DEX +1, and WIT +1. -->
 		<icon>BranchSys2.icon.br_close_helmet_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45032" toLevel="1" name="Warrior's Helmet (CON+1 MEN+1)">
 		<!-- CON+1, MEN+1 -->
 		<icon>BranchSys2.icon.br_close_helmet_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45033" toLevel="1" name="First Mate Hat (STR+1 INT+1)">
 		<!-- STR+1, INT+1. -->
 		<icon>icon.Accessary_middle_ages_i01</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45034" toLevel="1" name="First Mate Hat (DEX +1 WIT +1)">
 		<!-- DEX +1, and WIT +1. -->
 		<icon>icon.Accessary_middle_ages_i01</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45035" toLevel="1" name="First Mate Hat (CON+1 MEN+1)">
 		<!-- CON+1, MEN+1 -->
 		<icon>icon.Accessary_middle_ages_i01</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45036" toLevel="1" name="Artisan's Goggles (STR+1 INT+1)">
 		<!-- STR+1, INT+1. -->
 		<icon>icon.accessory_dwarf_goggle_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45037" toLevel="1" name="Artisan's Goggles (DEX +1 WIT +1)">
 		<!-- DEX +1, and WIT +1. -->
 		<icon>icon.accessory_dwarf_goggle_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45038" toLevel="1" name="Artisan's Goggles (CON+1 MEN+1)">
 		<!-- CON+1, MEN+1 -->
 		<icon>icon.accessory_dwarf_goggle_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45039" toLevel="1" name="Fire Dragon Belt">
 		<!-- STR +1, INT +1, HP Recovery Bonus +2.31, Max MP +1.54, CP Recovery +3.07, Max HP/ MP/ CP +10%, Inventory Slots +6, Weight Gauge +7000, M. Critical Damage +4%, Healing Potions Effect +100, Incoming Damage -6%. (Can be applied to Melissa's Recovery Potion, Warrior's Quick Healing Potion). -->

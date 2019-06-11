@@ -118,4 +118,332 @@
 	<skill id="51226" toLevel="1" name="Mysterious Transformation Sealbook Box">
 		<operateType>A1</operateType>
 	</skill>
+	<skill id="51227" toLevel="3" name="Spring Energy">
+		<!-- For 20 min., Max HP/ MP +3%, P. Atk. +3%, M. Atk. +5%, Atk. Spd./ Casting Spd. +3%, P./ M. Def +3%, Acquired XP/ SP +3%, Sayha's Grace Consumption -3%. -->
+		<icon>icon.etc_leaf_green_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51228" toLevel="1" name="Sayha's Spring Wind">
+		<!-- Momentum consumption speed while hunting +100%, acquired XP/ SP +150% for 20 min. Buff does not disappear after death. Cooldown: 20 min. -->
+		<icon>icon.ev_magic_flame_game_wind1</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51229" toLevel="1" name="Spring's Blessing Chest">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51230" toLevel="1" name="Primavera's Blessing Regeneration">
+		<!-- Primavera recovers Sayha's Grace. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51231" toLevel="2" name="Greater Ruby">
+		<!-- Soulshot Damage +$s1. -->
+		<icon>icon.bm_jewel_ssdmg_high_lv1_lavianrose</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51232" toLevel="1" name="Greater Ruby">
+		<!-- Beast Soulshot Damage +$s1. -->
+		<icon>icon.bm_jewel_ssdmg_high_lv1_lavianrose</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51233" toLevel="5" name="Greater Ruby">
+		<!-- Soulshot, Blessed Soulshot and Beast Soulshot damage +17%, P. Atk. +$s1. -->
+		<icon>icon.bm_jewel_ssdmg_high_lv1_lavianrose</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51234" toLevel="2" name="Greater Sapphire">
+		<!-- Spiritshot Damage +$s1. -->
+		<icon>icon.bm_jewel_spsdmg_high_lv1_lavianrose</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51235" toLevel="1" name="Greater Sapphire">
+		<!-- Beast Spiritshot Damage +$s1. -->
+		<icon>icon.bm_jewel_spsdmg_high_lv1_lavianrose</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51236" toLevel="5" name="Greater Sapphire">
+		<!-- Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +17%, M. Atk. +$s1. -->
+		<icon>icon.bm_jewel_spsdmg_high_lv1_lavianrose</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51237" toLevel="10" name="Emerald">
+		<!-- CON +1. -->
+		<icon>
+			<value level="1">icon.etc_bm_jewel_emerald_i00</value>
+			<value level="2">icon.etc_bm_jewel_emerald_i00</value>
+			<value level="3">icon.etc_bm_jewel_emerald_i00</value>
+			<value level="4">icon.etc_bm_jewel_emerald_i00</value>
+			<value level="5">icon.etc_bm_jewel_emerald_i00</value>
+			<value level="6">icon.bm_jewel_allstat_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_allstat_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_allstat_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_allstat_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_allstat_high_lv1_lavianrose</value>
+		</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51238" toLevel="1" name="Radiant Jewelry Box">
+		<icon>icon.bm_special_jewelbox_lv5</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51239" toLevel="3" name="Skilled Fisherman's Rune - Professional">
+		<!-- When in inventory, Acquired XP/ SP during fishing +300%. For Lv. 76 and below characters. -->
+		<icon>icon.fishing_zone_ticket_1</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51240" toLevel="1" name="Night Goblin Liquor">
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P./ M. Def. +$s4, Atk. Spd./ Casting Spd. +$s5, HP/ MP Bonus Recovery +$s6. Disappears after restart. -->
+		<icon>icon.bm_goblin_buff_herong</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51241" toLevel="1" name="Manuscript - Disarm">
+		<!-- Allows you to learn Disarm skill. Item will disappear after using. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51242" toLevel="1" name="Manuscript - Armor Break">
+		<!-- Allows you to learn Armor Break skill. Item will disappear after using. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51243" toLevel="1" name="Manuscript - Spell Break">
+		<!-- Allows you to learn Spell Break skill. Item will disappear after using. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51244" toLevel="1" name="Manuscript - Jump">
+		<!-- Allows you to learn Jump skill. Item will disappear after using. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51245" toLevel="1" name="Manuscript - Blaze">
+		<!-- Allows you to learn Blaze skill. Item will disappear after using. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51246" toLevel="1" name="Manuscript - Berserker Mode">
+		<!-- Allows you to learn Berserker Mode skill. Item will disappear after using. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51247" toLevel="1" name="Disarm">
+		<!-- For $s1 makes target's and nearby enemies' weapon useless, P./ M. Atk. -$s2, Speed -$s3. -->
+		<icon>icon.skill0485</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51248" toLevel="1" name="Armor Break">
+		<!-- For $s1 makes target's and nearby enemies' armor useless, P./ M. Def. -$s2, Speed -$s3. -->
+		<icon>icon.skill10703</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51249" toLevel="1" name="Spell Break">
+		<!-- For $s1 makes target's and nearby enemies' Skills useless. -->
+		<icon>icon.skill1412</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51250" toLevel="1" name="Jump">
+		<!-- Cancels target of enemy and nearby enemies, moves forward. -->
+		<icon>icon.skill11057</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51251" toLevel="1" name="Blaze">
+		<!-- Cancels target of enemy and nearby enemies, for $s1, you cannot be targeted. -->
+		<icon>icon.skill1417</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51252" toLevel="1" name="Berserker Mode">
+		<!-- For $s1 P./ M. Atk., and Atk./ Casting Spd. +50%. Cannot be stacked with Berserker Spirit that will be available after transformation into Dragon Berserker. -->
+		<icon>icon.skill10274</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51253" toLevel="1" name="Elmoreden XP Scroll">
+		<!-- 500,000 XP. -->
+		<icon>icon.bm_elmoaden_exp_scrl</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51254" toLevel="1" name="High Quality Elmoreden XP Scroll">
+		<!-- 20,000,000 XP. -->
+		<icon>icon.bm_elmoaden_exp_scrl</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51255" toLevel="1" name="Elmoreden Treasure Chest">
+		<icon>[icon.bm_elmoaden_box</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51256" toLevel="1" name="Elmoreden Relic Pouch">
+		<icon>[icon.bm_elmoaden_pocket</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51257" toLevel="1" name="Golden Elmoreden Chest">
+		<icon>[icon.bm_elmoaden_gold_box</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51258" toLevel="1" name="Silver Elmoreden Chest">
+		<icon>[icon.bm_elmoaden_silver_box</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51259" toLevel="1" name="+10 White Sayha's Cloak Chest">
+		<icon>[icon.etc_treasure_box_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51260" toLevel="1" name="+10 Black Sayha's Cloak Chest">
+		<icon>[icon.etc_treasure_box_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51261" toLevel="1" name="+10 Red Sayha's Cloak Chest">
+		<icon>[icon.etc_treasure_box_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51262" toLevel="1" name="Victory Balls Basket">
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P./ M. Def. +$s4, Atk. Spd./ Casting Spd. +$s5, HP/ MP Bonus Recovery +$s6. Disappears after restart. -->
+		<icon>BranchSys2.icon.br_soccer_ball_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51263" toLevel="1" name="High Quality Solid Scroll: Enchant Weapon (D-grade)">
+		<icon>icon.giant_scrl_of_ench_wp_d</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51264" toLevel="1" name="High Quality Solid Scroll: Enchant Armor (D-grade)">
+		<icon>icon.giant_scrl_of_ench_am_d</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51265" toLevel="1" name="High Quality Solid Scroll: Enchant Weapon (C-grade)">
+		<icon>icon.giant_scrl_of_ench_wp_c</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51266" toLevel="1" name="High Quality Solid Scroll: Enchant Armor (C-grade)">
+		<icon>icon.giant_scrl_of_ench_am_c</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51267" toLevel="1" name="High Quality Solid Scroll: Enchant Weapon (B-grade)">
+		<icon>icon.giant_scrl_of_ench_wp_b</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51268" toLevel="1" name="High Quality Solid Scroll: Enchant Armor (B-grade)">
+		<icon>icon.giant_scrl_of_ench_am_b</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51269" toLevel="1" name="High Quality Solid Scroll: Enchant Weapon (A-grade)">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51270" toLevel="1" name="High Quality Solid Scroll: Enchant Armor (A-grade)">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51271" toLevel="5" name="Dye of War">
+		<!-- PvP Damage +$s1. -->
+		<icon>icon.skill50008</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51272" toLevel="5" name="Didactic">
+		<!-- Acquired XP/ SP +$s1. -->
+		<icon>icon.skill51272</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51273" toLevel="5" name="Courage Mastery">
+		<!-- Max CP +$s1. -->
+		<icon>icon.skill11755</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51274" toLevel="5" name="Honor Recovery">
+		<!-- Death XP penalty -$s1. -->
+		<icon>icon.skill19308</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51275" toLevel="5" name="Sword Resist">
+		<!-- Resistance to sword attacks +$s1. -->
+		<icon>icon.skill4447</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51276" toLevel="5" name="Blunt Resistance">
+		<!-- Resistance to blunt weapon attacks +$s1. -->
+		<icon>icon.skill4443</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51277" toLevel="5" name="Spear Resistance">
+		<!-- Resistance to spear attacks +$s1. -->
+		<icon>icon.skill4445</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51278" toLevel="5" name="Fist Weapon Resist">
+		<!-- Resistance to fist weapon attacks +$s1. -->
+		<icon>icon.skill4442</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51279" toLevel="5" name="Dagger Resist">
+		<!-- Resistance to dagger attacks +$s1. -->
+		<icon>icon.skill4448</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51280" toLevel="5" name="Bow Resist">
+		<!-- Resistance to bow attacks +$s1. -->
+		<icon>icon.skill4444</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51281" toLevel="5" name="Dual Sword Resist">
+		<!-- Resistance to dual sword attacks +$s1. -->
+		<icon>icon.skill4446</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51282" toLevel="1" name="Sealed Agathion Virgo +5">
+		<icon>icon.etc_treasure_box_i04</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51283" toLevel="1" name="Sealed Agathion Capricorn +5">
+		<icon>icon.etc_treasure_box_i04</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51284" toLevel="1" name="Sealed Agathion Libra +5">
+		<icon>icon.etc_treasure_box_i04</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51285" toLevel="1" name="Sealed Agathion Taurus +5">
+		<icon>icon.etc_treasure_box_i04</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51286" toLevel="1" name="Sealed Agathion Leo +5">
+		<icon>icon.etc_treasure_box_i04</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51287" toLevel="1" name="Sealed Agathion Gemini +5">
+		<icon>icon.etc_treasure_box_i04</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51288" toLevel="1" name="Sealed Agathion Scorpio +5">
+		<icon>icon.etc_treasure_box_i04</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51289" toLevel="1" name="Sealed Agathion Aquarius +5">
+		<icon>icon.etc_treasure_box_i04</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51290" toLevel="1" name="Sealed Agathion Sagittarius +5">
+		<icon>icon.etc_treasure_box_i04</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51291" toLevel="1" name="Blessed Scroll: Enchant Weapon (S-grade)">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51292" toLevel="1" name="Blessed Scroll: Enchant Armor (S-grade)">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51293" toLevel="1" name="Solid Scroll: Enchant Weapon (S-grade)">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51294" toLevel="1" name="Solid Scroll: Enchant Armor (S-grade)">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51295" toLevel="1" name="Improved Scroll: Enchant Weapon (S-grade)">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51296" toLevel="1" name="Improved Scroll: Enchant Armor (S-grade)">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51297" toLevel="2" name="Frintesa's Doll Spell">
+		<!-- CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Paralysis/ Stun Atk. Rate +10%. -->
+		<icon>icon.bm_doll_frintessa_30d</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51298" toLevel="1" name="Dimensional Barrier">
+		<!-- For 15 sec., makes you immune to 10 attacks of enemy. -->
+		<icon>icon.skill11621</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="51299" toLevel="10" name="Dimensional Guard">
+		<!-- For $s1 success rate of attacks targeting the character's vital points -$s2. -->
+		<icon>icon.skill11876</icon>
+		<operateType>A1</operateType>
+	</skill>
 </list>

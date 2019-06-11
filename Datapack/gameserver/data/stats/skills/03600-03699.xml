@@ -508,7 +508,6 @@
 			</effect>
 			<effect name="DamageShield">
 				<amount>4</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceAttribute">
 				<amount>15</amount>
@@ -526,7 +525,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3605" toLevel="1" name="Set Effect - Moon Heavy Armor">
+	<skill id="3605" toLevel="1" name="Set Effect - Moon Heavy Armor, 4-piece">
 		<!-- HP Recovery Bonus +3%, Max HP +25, P. Def. +3%. -->
 		<icon>icon.armor_t1001_ul_i00</icon>
 		<magicLvl>1</magicLvl>
@@ -589,8 +588,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3608" toLevel="3" name="Improved Apella Heavy Armor Set">
-		<!-- Increases Max CP/ CP Recovery Bonus, and decreases the skill player's death XP penalty. Increases one's own M. Def. when attacked. Decreases Critical Damage success rate. -->
+	<skill id="3608" toLevel="3" name="Set Effect - Apella Heavy Armor">
+		<!-- Increases Max CP/ CP Recovery Bonus, and decreases the skill player's death XP penalty. Increases one's own M. Def. when attacked. Decreases P. Critical Damage success rate. -->
 		<icon>icon.armor_t1004_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -661,8 +660,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3609" toLevel="3" name="Improved Apella Light Armor Set">
-		<!-- Increases Max CP/ CP Recovery Bonus, and decreases the player's death XP penalty. Increases Evasion when attacked. Decreases received Critical Damage. -->
+	<skill id="3609" toLevel="3" name="Set Effect - Apella Light Armor">
+		<!-- Increases Max CP/ CP Recovery Bonus, decreases the skill player's death XP penalty. Increases one's own P. Evasion when attacked. Decreases Received P. Critical Damage. -->
 		<icon>icon.armor_t1005_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

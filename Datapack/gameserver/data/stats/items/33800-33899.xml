@@ -36,6 +36,18 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="33810" name="Improved Scroll: Enchant Weapon (S-grade)" type="EtcItem">
+		<!-- When enchanted, P. Atk. +5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +6 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubled. Random enchantment from +1 to +3. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_wp_s" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="33812" name="Improved Scroll: Enchant Armor (D-grade)" type="EtcItem">
 		<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. Random enchantment from +1 to +3. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
@@ -69,6 +81,18 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="33816" name="Improved Scroll: Enchant Armor (S-grade)" type="EtcItem">
+		<!-- When enchanted, P. Def. +2 for S-grade armor and accessories. Starting at +4, P. Def. +8. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. Starting at +4 HP bonus is granted. Random enchantment from +1 to +3. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_am_s" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>

@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="10015" toLevel="2" name="Chain Strike">
-		<!-- Pulls a selected target to you. Requires a shield. -->
+	<skill id="10015" toLevel="3" name="Chain Strike">
+		<!-- Pulls a selected target to you and attacks. -->
 		<icon>icon.skill10015</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
+			<value level="3">3</value>
 		</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -15,12 +16,14 @@
 		<magicLvl>
 			<value level="1">76</value>
 			<value level="2">82</value>
+			<value level="3">84</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
 			<value level="1">69</value>
 			<value level="2">73</value>
+			<value level="3">77</value>
 		</mpConsume>
 		<castRange>600</castRange>
 		<hitTime>1000</hitTime>

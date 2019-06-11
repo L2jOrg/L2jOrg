@@ -236,15 +236,15 @@
 		</effectPoint>
 		<hitTime>1067</hitTime>
 		<magicLvl>
-			<value level="1">43</value>
-			<value level="2">44</value>
-			<value level="3">45</value>
-			<value level="4">46</value>
-			<value level="5">47</value>
-			<value level="6">48</value>
-			<value level="7">49</value>
-			<value level="8">50</value>
-			<value level="9">51</value>
+			<value level="1">76</value>
+			<value level="2">77</value>
+			<value level="3">78</value>
+			<value level="4">79</value>
+			<value level="5">80</value>
+			<value level="6">81</value>
+			<value level="7">82</value>
+			<value level="8">83</value>
+			<value level="9">84</value>
 			<value level="10">52</value>
 			<value level="11">53</value>
 			<value level="12">54</value>
@@ -281,15 +281,15 @@
 			<value level="43">85</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">41</value>
-			<value level="2">42</value>
-			<value level="3">43</value>
-			<value level="4">44</value>
-			<value level="5">46</value>
-			<value level="6">47</value>
-			<value level="7">48</value>
-			<value level="8">50</value>
-			<value level="9">50</value>
+			<value level="1">70</value>
+			<value level="2">78</value>
+			<value level="3">85</value>
+			<value level="4">92</value>
+			<value level="5">99</value>
+			<value level="6">106</value>
+			<value level="7">113</value>
+			<value level="8">120</value>
+			<value level="9">127</value>
 			<value level="10">51</value>
 			<value level="11">52</value>
 			<value level="12">53</value>
@@ -342,15 +342,16 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">893</value>
-					<value level="2">945</value>
-					<value level="3">998</value>
-					<value level="4">1054</value>
-					<value level="5">1112</value>
-					<value level="6">1172</value>
-					<value level="7">1234</value>
-					<value level="8">1298</value>
-					<value level="9">1365</value>
+					<!-- TODO Classic Max Level 9 -->
+					<value level="1">2424</value>
+					<value level="2">2485</value>
+					<value level="3">2545</value>
+					<value level="4">2604</value>
+					<value level="5">2660</value>
+					<value level="6">2716</value>
+					<value level="7">2771</value>
+					<value level="8">2823</value>
+					<value level="9">2874</value>
 					<value level="10">1433</value>
 					<value level="11">1503</value>
 					<value level="12">1575</value>

@@ -260,6 +260,24 @@
 			<skill id="2158" level="1" /> <!-- Spiritshot (A-grade) -->
 		</skills>
 	</item>
+	<item id="2514" name="Spiritshot (S-grade)" type="EtcItem">
+		<!-- The power of Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with S-grade weapons. -->
+		<set name="icon" val="icon.etc_spell_shot_gold_i00" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="150" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="SpiritShot" />
+		<set name="crystal_type" val="S" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<skills>
+			<skill id="2159" level="1" /> <!-- Spiritshot (S-grade) -->
+		</skills>
+	</item>
 	<item id="2516" name="Saber*Saber" type="Weapon">
 		<!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />

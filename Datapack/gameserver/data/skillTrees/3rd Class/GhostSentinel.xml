@@ -11,9 +11,10 @@
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="53" getLevel="76" levelUpSp="6300000" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="38" getLevel="76" levelUpSp="6300000" />
 		<skill skillName="Spirit of Sagittarius" skillId="415" skillLvl="1" getLevel="76" levelUpSp="6300000" />
-		<skill skillName="Sting" skillId="233" skillLvl="50" getLevel="76" levelUpSp="6300000" />
+		<skill skillName="Sting" skillId="223" skillLvl="50" getLevel="76" levelUpSp="6300000" />
 		<skill skillName="Freezing Strike" skillId="105" skillLvl="25" getLevel="76" levelUpSp="6300000" />
 		<skill skillName="Drain HP" skillId="70" skillLvl="54" getLevel="76" levelUpSp="6300000" />
+		<skill skillName="Detect Darkness" skillId="53005" skillLvl="1" getLevel="76" levelUpSp="6300000" />
 		<skill skillName="Fatal Counter" skillId="314" skillLvl="17" getLevel="76" levelUpSp="6300000" />
 		<skill skillName="Stun Shot" skillId="101" skillLvl="41" getLevel="76" levelUpSp="6300000" />
 		<skill skillName="Mount Saber Tooth Cougar" skillId="1835" skillLvl="1" getLevel="76">
@@ -26,8 +27,8 @@
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="49" getLevel="77" levelUpSp="6300000" />
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="54" getLevel="77" levelUpSp="6300000" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="39" getLevel="77" levelUpSp="6300000" />
-		<skill skillName="Sting" skillId="233" skillLvl="51" getLevel="77" levelUpSp="6300000" />
-		<skill skillName="Hamstring Shot" skillId="354" skillLvl="1" getLevel="77" levelUpSp="3000" />
+		<skill skillName="Sting" skillId="223" skillLvl="51" getLevel="77" levelUpSp="6300000" />
+		<skill skillName="Hamstring Shot" skillId="354" skillLvl="1" getLevel="77" levelUpSp="6300000" />
 		<skill skillName="Drain HP" skillId="70" skillLvl="55" getLevel="77" levelUpSp="6300000" />
 		<skill skillName="Fatal Counter" skillId="314" skillLvl="18" getLevel="77" levelUpSp="6300000" />
 		<skill skillName="Stun Shot" skillId="101" skillLvl="42" getLevel="77" levelUpSp="6300000" />
@@ -39,19 +40,19 @@
 			<item id="90062" count="1" /> <!-- Scroll: Real Target -->
 		</skill>
 		<skill skillName="Double Shot" skillId="19" skillLvl="40" getLevel="78" levelUpSp="14700000" />
-		<skill skillName="Sting" skillId="233" skillLvl="52" getLevel="78" levelUpSp="14700000" />
+		<skill skillName="Sting" skillId="223" skillLvl="52" getLevel="78" levelUpSp="14700000" />
 		<skill skillName="Freezing Strike" skillId="105" skillLvl="26" getLevel="78" levelUpSp="14700000" />
 		<skill skillName="Drain HP" skillId="70" skillLvl="56" getLevel="78" levelUpSp="14700000" />
 		<skill skillName="Fatal Counter" skillId="314" skillLvl="19" getLevel="78" levelUpSp="14700000" />
 		<skill skillName="Stun Shot" skillId="101" skillLvl="43" getLevel="78" levelUpSp="14700000" />
 		<skill skillName="Hex" skillId="122" skillLvl="17" getLevel="78" levelUpSp="14700000" />
-		<skill skillName="Power Break" skillId="115" skillLvl="19" getLevel="78" levelUpSp="14700000" />
 		<skill skillName="Lethal Shot" skillId="343" skillLvl="3" getLevel="78" levelUpSp="14700000" />
+		<skill skillName="Power Break" skillId="115" skillLvl="19" getLevel="78" levelUpSp="14700000" />
 		
+		<skill skillName="Lethal Shot" skillId="343" skillLvl="4" getLevel="79" levelUpSp="14700000" />
 		<skill skillName="Death Sting" skillId="990" skillLvl="1" getLevel="79" levelUpSp="14700000">
 			<item id="90063" count="1" /> <!-- Scroll: Death Sting -->
 		</skill>
-		<skill skillName="Lethal Shot" skillId="343" skillLvl="4" getLevel="79" levelUpSp="14700000" />
 		
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="51" getLevel="80" levelUpSp="14700000" />
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="56" getLevel="80" levelUpSp="14700000" />
@@ -72,6 +73,7 @@
 
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="53" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="58" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Real Target" skillId="522" skillLvl="3" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="43" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Stun Shot" skillId="101" skillLvl="46" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Lethal Shot" skillId="343" skillLvl="7" getLevel="82" levelUpSp="170000000" />
@@ -84,8 +86,12 @@
 
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="55" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="60" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Real Target" skillId="522" skillLvl="4" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="45" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Stun Shot" skillId="101" skillLvl="48" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Lethal Shot" skillId="343" skillLvl="9" getLevel="84" levelUpSp="240000000" />
+		
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="56" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Bow Mastery" skillId="208" skillLvl="61" getLevel="85" levelUpSp="840000000" />
 	</skillTree>
 </list>

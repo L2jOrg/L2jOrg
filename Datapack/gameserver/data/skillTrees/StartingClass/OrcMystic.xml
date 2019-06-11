@@ -7,35 +7,37 @@
 		<skill skillName="Spellcraft" skillId="163" skillLvl="1" getLevel="1" autoGet="true" />
 		<skill skillName="Soul Cry" skillId="1001" skillLvl="1" getLevel="1" autoGet="true" />
 		<skill skillName="Toughness" skillId="134" skillLvl="1" getLevel="1" autoGet="true" />
-
-		<skill skillName="Weapon Mastery" skillId="250" skillLvl="1" getLevel="7" levelUpSp="25" />
-		<skill skillName="Robe Mastery" skillId="251" skillLvl="1" getLevel="7" levelUpSp="25" />
-		<skill skillName="Robe Mastery" skillId="251" skillLvl="2" getLevel="7" levelUpSp="25" />
-		<skill skillName="Light Armor Mastery" skillId="252" skillLvl="1" getLevel="7" levelUpSp="25" />
-		<skill skillName="Light Armor Mastery" skillId="252" skillLvl="2" getLevel="7" levelUpSp="25" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="1" getLevel="7" levelUpSp="25" />
+		
+		<skill skillName="Anti Magic" skillId="146" skillLvl="1" getLevel="4" levelUpSp="15" />
+		<skill skillName="Light Armor Mastery" skillId="252" skillLvl="1" getLevel="4" levelUpSp="15" />
+		<skill skillName="Robe Mastery" skillId="251" skillLvl="1" getLevel="4" levelUpSp="15" />
+		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="2" getLevel="7" levelUpSp="25" />
-		<skill skillName="Life Drain" skillId="1090" skillLvl="1" getLevel="7" levelUpSp="25" />
-		<skill skillName="Dreaming Spirit" skillId="1097" skillLvl="1" getLevel="7" levelUpSp="25" />
-		<skill skillName="Chill Flame" skillId="1100" skillLvl="1" getLevel="7" levelUpSp="25" />
-		<skill skillName="Soul Shield" skillId="1010" skillLvl="1" getLevel="7" levelUpSp="25" />
 		<skill skillName="Venom" skillId="1095" skillLvl="1" getLevel="7" levelUpSp="25" />
-
-		<skill skillName="Weapon Mastery" skillId="250" skillLvl="2" getLevel="14" levelUpSp="190" />
-		<skill skillName="Robe Mastery" skillId="251" skillLvl="3" getLevel="14" levelUpSp="190" />
-		<skill skillName="Robe Mastery" skillId="251" skillLvl="4" getLevel="14" levelUpSp="190" />
-		<skill skillName="Light Armor Mastery" skillId="252" skillLvl="3" getLevel="14" levelUpSp="190" />
-		<skill skillName="Light Armor Mastery" skillId="252" skillLvl="4" getLevel="14" levelUpSp="190" />
-		<skill skillName="Heavy Armor Mastery" skillId="253" skillLvl="1" getLevel="14" levelUpSp="190" />
-		<skill skillName="Heavy Armor Mastery" skillId="253" skillLvl="2" getLevel="14" levelUpSp="190" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="3" getLevel="14" levelUpSp="190" />
+		<skill skillName="Light Armor Mastery" skillId="252" skillLvl="2" getLevel="7" levelUpSp="25" />
+		<skill skillName="Robe Mastery" skillId="251" skillLvl="2" getLevel="7" levelUpSp="25" />
+		<skill skillName="Weapon Mastery" skillId="250" skillLvl="1" getLevel="7" levelUpSp="25" />
+		<skill skillName="Drain Energy" skillId="1090" skillLvl="1" getLevel="7" levelUpSp="25" />
+		<skill skillName="Chill Flame" skillId="1100" skillLvl="1" getLevel="7" levelUpSp="25" />
+		<skill skillName="Dreaming Spirit" skillId="1097" skillLvl="1" getLevel="7" levelUpSp="25" />
+		<skill skillName="Soul Shield" skillId="1010" skillLvl="1" getLevel="7" levelUpSp="25" />
+		
+		<skill skillName="Anti Magic" skillId="146" skillLvl="3" getLevel="11" levelUpSp="160" />
+		<skill skillName="Light Armor Mastery" skillId="252" skillLvl="3" getLevel="11" levelUpSp="160" />
+		<skill skillName="Robe Mastery" skillId="251" skillLvl="3" getLevel="11" levelUpSp="160" />
+		<skill skillName="Heavy Armor Mastery" skillId="253" skillLvl="1" getLevel="11" levelUpSp="160" />
+		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="4" getLevel="14" levelUpSp="190" />
-		<skill skillName="Life Drain" skillId="1090" skillLvl="2" getLevel="14" levelUpSp="190" />
-		<skill skillName="Dreaming Spirit" skillId="1097" skillLvl="2" getLevel="14" levelUpSp="190" />
-		<skill skillName="Soul Cry" skillId="1001" skillLvl="2" getLevel="14" levelUpSp="190" />
-		<skill skillName="Fear" skillId="1092" skillLvl="1" getLevel="14" levelUpSp="190" />
-		<skill skillName="Chill Flame" skillId="1100" skillLvl="2" getLevel="14" levelUpSp="190" />
-		<skill skillName="Chant of Battle" skillId="1007" skillLvl="1" getLevel="14" levelUpSp="190" />
 		<skill skillName="Venom" skillId="1095" skillLvl="2" getLevel="14" levelUpSp="190" />
+		<skill skillName="Light Armor Mastery" skillId="252" skillLvl="4" getLevel="14" levelUpSp="190" />
+		<skill skillName="Robe Mastery" skillId="251" skillLvl="4" getLevel="14" levelUpSp="190" />
+		<skill skillName="Weapon Mastery" skillId="250" skillLvl="2" getLevel="14" levelUpSp="190" />
+		<skill skillName="Drain Energy" skillId="1090" skillLvl="2" getLevel="14" levelUpSp="190" />
+		<skill skillName="Chill Flame" skillId="1100" skillLvl="2" getLevel="14" levelUpSp="190" />
+		<skill skillName="Dreaming Spirit" skillId="1097" skillLvl="2" getLevel="14" levelUpSp="190" />
+		<skill skillName="Heavy Armor Mastery" skillId="253" skillLvl="2" getLevel="14" levelUpSp="190" />
+		<skill skillName="Soul Cry" skillId="1001" skillLvl="2" getLevel="14" levelUpSp="190" />
+		<skill skillName="Chant of Battle" skillId="1007" skillLvl="1" getLevel="14" levelUpSp="190" />
+		<skill skillName="Fear" skillId="1092" skillLvl="1" getLevel="14" levelUpSp="190" />
 	</skillTree>
 </list>

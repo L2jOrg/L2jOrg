@@ -1220,22 +1220,34 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3553" toLevel="1" name="Imperial Crusader Heavy Armor Set">
-		<!-- Sleep/ Hold Resistance, Max HP, and P. Def. STR+ 2, DEX-2 -->
+	<skill id="3553" toLevel="4" name="Set Effect - Imperial Crusader Armor, 2-piece">
+		<!-- HP Recovery Bonus +6%. -->
 		<icon>icon.armor_t88_u_i00</icon>
-		<magicLvl>75</magicLvl>
+		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
-				<SLEEP>70</SLEEP>
-				<HOLD>70</HOLD>
+			<effect name="HpRegen" fromLevel="1" toLevel="4">
+				<amount>6</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence">
+			<effect name="PhysicalDefence" fromLevel="2" toLevel="4">
 				<amount>8</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MaxHp">
+			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
+				<SLEEP>70</SLEEP>
+				<HOLD>70</HOLD>
+			</effect>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>4</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>-1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="MaxHp" fromLevel="4" toLevel="4">
 				<amount>445</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1248,60 +1260,80 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
-				<POISON>80</POISON>
-				<BLEED>80</BLEED>
+			<effect name="ShieldDefenceRate">
+				<amount>24</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3555" toLevel="1" name="Draconic Leather Armor Set">
-		<!-- Max MP, Atk. Spd, P. Atk, and weight limit. DEX+ 1, STR+ 1, CON-2 -->
+	<skill id="3555" toLevel="3" name="Set Effect - Draconic Leather Armor, 2-piece">
+		<!-- Weight limit +5759, Max MP +289. -->
 		<icon>icon.armor_t89_ul_i00</icon>
-		<magicLvl>75</magicLvl>
+		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="PAtk">
-				<amount>4</amount>
-				<mode>PER</mode>
+			<effect name="WeightPenalty" fromLevel="1" toLevel="3">
+				<amount>5759</amount>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>4</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MaxMp">
+			<effect name="MaxMp" fromLevel="1" toLevel="3">
 				<amount>289</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="WeightPenalty">
-				<amount>5759</amount>
+			<effect name="PAtk" fromLevel="2" toLevel="3">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed" fromLevel="2" toLevel="3">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>-1</amount>
+				<stat>CON</stat>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3556" toLevel="1" name="Major Arcana Robe Set">
-		<!-- Decreases chance of magic casting being canceled. Increases Stun Resistance, M. Atk., Speed and weight limit. WIT +1, INT +1, MEN -2 -->
+	<skill id="3556" toLevel="3" name="Set Effect - Arcana Robe Armor, 2-piece">
+		<!-- Weight limit +5759, Speed +7. -->
 		<icon>icon.armor_t90_ul_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
-				<SHOCK>50</SHOCK>
+			<effect name="WeightPenalty" fromLevel="1" toLevel="3">
+				<amount>5759</amount>
 			</effect>
-			<effect name="MAtk">
-				<amount>17</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="Speed">
+			<effect name="Speed" fromLevel="1" toLevel="3">
 				<amount>7</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="WeightPenalty">
-				<amount>5759</amount>
+			<effect name="MAtk" fromLevel="2" toLevel="3">
+				<amount>17</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="ReduceCancel">
-				<amount>-50</amount>
-				<mode>DIFF</mode>
+			<effect name="DefenceTrait" fromLevel="2" toLevel="3">
+				<SHOCK>50</SHOCK>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>-1</amount>
+				<stat>MEN</stat>
 			</effect>
 		</effects>
 	</skill>
@@ -1328,7 +1360,6 @@
 			</effect>
 			<effect name="DamageShield">
 				<amount>5</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceAttribute">
 				<amount>15</amount>
@@ -1354,8 +1385,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3558" toLevel="1" name="Antharas' Earring">
-		<!-- Damaged earring. Bleed Resistance and Bleed Atk. Rate +1%. -->
+	<skill id="3558" toLevel="1" name="Damaged Antharas' Earring">
+		<!-- Bleed Resistance/ Atk. Rate +1%. -->
 		<icon>
 			<value level="1">icon.accessory_earring_of_antaras_i00</value>
 			<value level="2">icon.accessory_earring_of_antaras_i00</value>
@@ -1371,6 +1402,7 @@
 			<value level="12">icon.accessory_earring_of_antaras_i00</value>
 			<value level="13">icon.accessory_earring_of_antaras_i01</value>
 			<value level="14">icon.accessory_earring_of_antaras_i02</value>
+			<value level="15">icon.accessory_earring_of_antaras_i04</value>
 		</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1410,9 +1442,25 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3559" toLevel="2" name="Zaken's Earring">
-		<!-- Increases Bleed/ Stun/ Mental Attack Resistance, Bleed/ Stun/ Mental attack bonus and effectiveness of received HP recovery magic, and has a chance of restoring HP by using some of the damage inflicted upon the enemy. -->
-		<icon>icon.accessory_earring_of_zaken_i00</icon>
+	<skill id="3559" toLevel="2" name="Damaged Zaken's Earring">
+		<!-- Bleed Resistance +1%. -->
+		<icon>
+			<value level="1">icon.accessory_earring_of_zaken_i00</value>
+			<value level="2">icon.accessory_earring_of_zaken_i00</value>
+			<value level="3">icon.accessory_earring_of_zaken_i00</value>
+			<value level="4">icon.accessory_earring_of_zaken_i00</value>
+			<value level="5">icon.accessory_earring_of_zaken_i00</value>
+			<value level="6">icon.accessory_earring_of_zaken_i00</value>
+			<value level="7">icon.accessory_earring_of_zaken_i00</value>
+			<value level="8">icon.accessory_earring_of_zaken_i00</value>
+			<value level="9">icon.accessory_earring_of_zaken_i00</value>
+			<value level="10">icon.accessory_earring_of_zaken_i00</value>
+			<value level="11">icon.accessory_earring_of_zaken_i00</value>
+			<value level="12">icon.accessory_earring_of_zaken_i00</value>
+			<value level="13">icon.accessory_earring_of_zaken_i02</value>
+			<value level="14">icon.accessory_earring_of_zaken_i03</value>
+			<value level="15">icon.accessory_earring_of_zaken_i04</value>
+		</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1459,12 +1507,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3560" toLevel="3" name="Refined Orfen's Earring">
+	<skill id="3560" toLevel="3" name="Orfen's Earring">
 		<!-- Hold Resistance and Atk. Rate +10%, Mental Resistance and Atk. Rate +5%, Healing Power +2%, Skill MP Consumption -2%. -->
 		<icon>
 			<value level="1">icon.accessory_earring_of_orfen_i00</value>
 			<value level="2">icon.accessory_earring_of_orfen_i02</value>
 			<value level="3">icon.accessory_earring_of_orfen_i03</value>
+			<value level="4">icon.accessory_earring_of_orfen_i04</value>
 		</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1515,8 +1564,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3561" toLevel="3" name="Damaged Baium's Ring Enchant Effect">
-		<!-- Damaged ring. Bleed Resistance +1%. -->
+	<skill id="3561" toLevel="3" name="Damaged Baium's Ring">
+		<!-- Bleed Resistance +1%. -->
 		<icon>
 			<value level="1">icon.accessory_ring_of_baium_i00</value>
 			<value level="2">icon.accessory_ring_of_baium_i00</value>
@@ -1532,6 +1581,7 @@
 			<value level="12">icon.accessory_ring_of_baium_i00</value>
 			<value level="13">icon.accessory_ring_of_baium_i02</value>
 			<value level="14">icon.accessory_ring_of_baium_i03</value>
+			<value level="15">icon.accessory_ring_of_baium_i04</value>
 		</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1609,6 +1659,7 @@
 			<value level="1">icon.accessory_ring_of_queen_ant_i00</value>
 			<value level="2">icon.accessory_ring_of_queen_ant_i02</value>
 			<value level="3">icon.accessory_ring_of_queen_ant_i03</value>
+			<value level="4">icon.accessory_ring_of_queen_ant_i04</value>
 		</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1684,6 +1735,7 @@
 			<value level="1">icon.accessory_ring_of_core_i00</value>
 			<value level="2">icon.accessory_ring_of_core_i02</value>
 			<value level="3">icon.accessory_ring_of_core_i03</value>
+			<value level="4">icon.accessory_ring_of_core_i04</value>
 		</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1915,7 +1967,6 @@
 		<effects>
 			<effect name="DamageShield">
 				<amount>8</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="ReflectSkill">
 				<amount>8</amount>
@@ -1981,7 +2032,6 @@
 		<effects>
 			<effect name="DamageShield">
 				<amount>10</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="ReflectSkill">
 				<amount>10</amount>

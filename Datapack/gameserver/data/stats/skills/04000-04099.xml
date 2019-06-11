@@ -634,8 +634,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4031" toLevel="3" name="Might">
-		<!-- For $s1 P. Atk. +$s2. -->
+	<skill id="4031" toLevel="3" name="Clan Shield">
+		<!-- For $s1 P. Def. +$s2. -->
 		<icon>icon.skill4031</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2460,8 +2460,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4071" toLevel="5" name="Bow/Crossbow Resistance">
-		<!-- Resistant to Bow/ Crossbow attacks. -->
+	<skill id="4071" toLevel="5" name="Bow Resistance">
+		<!-- Increases resistance to bow attacks. -->
 		<icon>
 			<value level="1">icon.skill4071</value>
 			<value level="2">icon.skill4071</value>
@@ -3635,8 +3635,8 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
-	<skill id="4099" toLevel="2" name="Berserker Spirit">
-		<!-- P. Def. -$s1, M. Def. -$s2, Evasion -$s3, and P. Atk. +$s4, M. Atk. +$s5, Atk. Spd. +$s6, Casting Spd. +$s7, Speed +$s8. -->
+	<skill id="4099" toLevel="2" name="Soul of Berserker">
+		<!-- P. Def. -$s1, M. Def. -$s2, P. Evasion -$s3, P. Atk. +$s4, M. Atk. +$s5, Atk. Spd. +$s6, Casting Spd. +$s7, Speed +$s8. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

@@ -822,6 +822,69 @@
 			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Robe Armor Set +10 -->
 		</skills>
 	</set>
+	<set id="42" minimumPieces="5">
+		<requiredItems>
+			<item id="6373" /> <!-- Imperial Crusader Breastplate -->
+			<item id="6374" /> <!-- Imperial Crusader Gaiters -->
+			<item id="6378" /> <!-- Imperial Crusader Helmet -->
+			<item id="6375" /> <!-- Imperial Crusader Gauntlets -->
+			<item id="6376" /> <!-- Imperial Crusader Boots -->
+		</requiredItems>
+		<optionalItems>
+			<item id="6377" /> <!-- Imperial Crusader Shield -->
+		</optionalItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="5" /> <!-- Equip Set Items -->
+			<skill id="3553" level="1" minimumPieces="2" /> <!-- Imperial Crusader Heavy Armor Set -->
+			<skill id="3553" level="2" minimumPieces="3" /> <!-- Imperial Crusader Heavy Armor Set -->
+			<skill id="3553" level="3" minimumPieces="4" /> <!-- Imperial Crusader Heavy Armor Set -->
+			<skill id="3553" level="4" minimumPieces="5" /> <!-- Imperial Crusader Heavy Armor Set -->
+			<skill id="3554" level="1" optional="true" /> <!-- Equip Shield -->
+			<skill id="13339" level="1" minimumEnchant="6" minimumPieces="5" /> <!-- Heavy Armor Set +6 -->
+			<skill id="13339" level="2" minimumEnchant="7" minimumPieces="5" /> <!-- Heavy Armor Set +7 -->
+			<skill id="13339" level="3" minimumEnchant="8" minimumPieces="5" /> <!-- Heavy Armor Set +8 -->
+			<skill id="13339" level="4" minimumEnchant="9" minimumPieces="5" /> <!-- Heavy Armor Set +9 -->
+			<skill id="13339" level="5" minimumEnchant="10" minimumPieces="5" /> <!-- Heavy Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="43" minimumPieces="4">
+		<requiredItems>
+			<item id="6379" /> <!-- Draconic Leather Armor -->
+			<item id="6382" /> <!-- Draconic Leather Helmet -->
+			<item id="6380" /> <!-- Draconic Leather Gloves -->
+			<item id="6381" /> <!-- Draconic Leather Boots -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="4" /> <!-- Equip Set Items -->
+			<skill id="3555" level="1" minimumPieces="2" /> <!-- Draconic Leather Armor Set -->
+			<skill id="3555" level="2" minimumPieces="3" /> <!-- Draconic Leather Armor Set -->
+			<skill id="3555" level="3" minimumPieces="4" /> <!-- Draconic Leather Armor Set -->
+			<skill id="13340" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Light Armor Set +6 -->
+			<skill id="13340" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Light Armor Set +7 -->
+			<skill id="13340" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Light Armor Set +8 -->
+			<skill id="13340" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Light Armor Set +9 -->
+			<skill id="13340" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Light Armor Set +10 -->
+		</skills>
+	</set>
+	<set id="44" minimumPieces="4">
+		<requiredItems>
+			<item id="6383" /> <!-- Major Arcana Robe -->
+			<item id="6386" /> <!-- Major Arcana Circlet -->
+			<item id="6384" /> <!-- Major Arcana Gloves -->
+			<item id="6385" /> <!-- Major Arcana Boots -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="4" /> <!-- Equip Set Items -->
+			<skill id="3556" level="1" minimumPieces="2" /> <!-- Major Arcana Robe Set -->
+			<skill id="3556" level="2" minimumPieces="3" /> <!-- Major Arcana Robe Set -->
+			<skill id="3556" level="3" minimumPieces="4" /> <!-- Major Arcana Robe Set -->
+			<skill id="13341" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Robe Armor Set +6 -->
+			<skill id="13341" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Robe Armor Set +7 -->
+			<skill id="13341" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Robe Armor Set +8 -->
+			<skill id="13341" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Robe Armor Set +9 -->
+			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Robe Armor Set +10 -->
+		</skills>
+	</set>
 	<set id="45" minimumPieces="4">
 		<requiredItems>
 			<item id="7851" /> <!-- Moon Armor -->

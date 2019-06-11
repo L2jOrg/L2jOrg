@@ -423,14 +423,12 @@
 					<value level="1">100</value>
 					<value level="2">100</value>
 				</amount>
-				<mode>DIFF</mode> <!-- FIX -->
 			</effect>
 			<effect name="SpModify">
 				<amount>
 					<value level="1">100</value>
 					<value level="2">100</value>
 				</amount>
-				<mode>DIFF</mode> <!-- FIX -->
 			</effect>
 		</effects>
 	</skill>
@@ -1699,7 +1697,6 @@
 					<value level="2">7</value>
 					<value level="3">10</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

@@ -267,6 +267,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="GEMSTONE" />
 	</item>
+	<item id="2134" name="Gemstone (S-grade)" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_silver_i00" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="2135" name="Recipe: Durable Braid" type="EtcItem">
 		<!-- For Dwarves only. Recipe for Braided Hemp. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />

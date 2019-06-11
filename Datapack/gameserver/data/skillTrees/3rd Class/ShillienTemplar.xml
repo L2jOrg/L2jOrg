@@ -11,7 +11,7 @@
 		</skill>
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="46" getLevel="76" levelUpSp="4900000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="53" getLevel="76" levelUpSp="4900000" />
-		<skill skillName="Sting" skillId="233" skillLvl="50" getLevel="76" levelUpSp="4900000" />
+		<skill skillName="Sting" skillId="223" skillLvl="50" getLevel="76" levelUpSp="4900000" />
 		<skill skillName="Freezing Strike" skillId="105" skillLvl="25" getLevel="76" levelUpSp="4900000" />
 		<skill skillName="Drain HP" skillId="70" skillLvl="54" getLevel="76" levelUpSp="4900000" />
 		<skill skillName="Life Leech" skillId="289" skillLvl="16" getLevel="76" levelUpSp="4900000" />
@@ -19,18 +19,22 @@
 		<skill skillName="Mount Saber Tooth Cougar" skillId="1835" skillLvl="1" getLevel="76">
 			<item id="90040" count="1" /> <!-- Spellbook: Mount Saber Tooth Cougar -->
 		</skill>
+		<skill skillName="Final Fortress" skillId="291" skillLvl="12" getLevel="76" levelUpSp="4900000" />
 		<skill skillName="Judgment" skillId="401" skillLvl="16" getLevel="76" levelUpSp="4900000" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLvl="9" getLevel="76" levelUpSp="4900000" />
+		<skill skillName="Summon Viper Cubic" skillId="278" skillLvl="8" getLevel="76" levelUpSp="4900000" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLvl="9" getLevel="76" levelUpSp="4900000" />
 		<skill skillName="Hex" skillId="122" skillLvl="16" getLevel="76" levelUpSp="4900000" />
 		<skill skillName="Power Break" skillId="115" skillLvl="18" getLevel="76" levelUpSp="4900000" />
 		<skill skillName="Fortitude" skillId="335" skillLvl="1" getLevel="76" levelUpSp="4900000" />
+		<skill skillName="Critical Vulnerability Decrease" skillId="53004" skillLvl="1" getLevel="76" levelUpSp="4900000" />
 		<skill skillName="Chain Strike" skillId="10015" skillLvl="1" getLevel="76" levelUpSp="4900000" />
-		<skill skillName="Final Fortress" skillId="291" skillLvl="12" getLevel="76" levelUpSp="4900000" />
 		
 		<skill skillName="Aggression" skillId="28" skillLvl="51" getLevel="77" levelUpSp="4900000" />
 		<skill skillName="Aggression Aura" skillId="18" skillLvl="39" getLevel="77" levelUpSp="4900000" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="47" getLevel="77" levelUpSp="4900000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="54" getLevel="77" levelUpSp="4900000" />
-		<skill skillName="Sting" skillId="233" skillLvl="51" getLevel="77" levelUpSp="4900000" />
+		<skill skillName="Sting" skillId="223" skillLvl="51" getLevel="77" levelUpSp="4900000" />
 		<skill skillName="Drain HP" skillId="70" skillLvl="55" getLevel="77" levelUpSp="4900000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="53" getLevel="77" levelUpSp="4900000" />
 		<skill skillName="Vengeance" skillId="368" skillLvl="1" getLevel="77" levelUpSp="4900000">
@@ -43,12 +47,17 @@
 		<skill skillName="Aggression Aura" skillId="18" skillLvl="40" getLevel="78" levelUpSp="11400000" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="48" getLevel="78" levelUpSp="11400000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="55" getLevel="78" levelUpSp="11400000" />
-		<skill skillName="Sting" skillId="233" skillLvl="52" getLevel="78" levelUpSp="11400000" />
+		<skill skillName="Sting" skillId="223" skillLvl="52" getLevel="78" levelUpSp="11400000" />
 		<skill skillName="Freezing Strike" skillId="105" skillLvl="26" getLevel="78" levelUpSp="11400000" />
 		<skill skillName="Drain HP" skillId="70" skillLvl="56" getLevel="78" levelUpSp="11400000" />
 		<skill skillName="Life Leech" skillId="289" skillLvl="17" getLevel="78" levelUpSp="11400000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="54" getLevel="78" levelUpSp="11400000" />
+		<skill skillName="Mass Chain Strike" skillId="53003" skillLvl="1" getLevel="78" levelUpSp="11400000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="14" getLevel="78" levelUpSp="11400000" />
 		<skill skillName="Judgment" skillId="401" skillLvl="17" getLevel="78" levelUpSp="11400000" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLvl="10" getLevel="78" levelUpSp="11400000" />
+		<skill skillName="Summon Viper Cubic" skillId="278" skillLvl="9" getLevel="78" levelUpSp="11400000" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLvl="10" getLevel="78" levelUpSp="11400000" />
 		<skill skillName="Touch of Death" skillId="342" skillLvl="1" getLevel="78" levelUpSp="11400000">
 			<item id="90048" count="1" /> <!-- Scroll: Touch of Death -->
 		</skill>
@@ -57,13 +66,13 @@
 		<skill skillName="Hex" skillId="122" skillLvl="17" getLevel="78" levelUpSp="11400000" />
 		<skill skillName="Power Break" skillId="115" skillLvl="19" getLevel="78" levelUpSp="11400000" />
 		<skill skillName="Corpse Plague" skillId="103" skillLvl="5" getLevel="78" levelUpSp="11400000" />
-		<skill skillName="Final Fortress" skillId="291" skillLvl="14" getLevel="78" levelUpSp="11400000" />
+		<skill skillName="Critical Vulnerability Decrease" skillId="53004" skillLvl="2" getLevel="78" levelUpSp="11400000" />
 		
+		<skill skillName="Final Fortress" skillId="291" skillLvl="15" getLevel="79" levelUpSp="11400000" />
+		<skill skillName="Knighthood" skillId="429" skillLvl="2" getLevel="79" levelUpSp="11400000" />
 		<skill skillName="Shield of Faith" skillId="528" skillLvl="1" getLevel="79" levelUpSp="11400000">
 			<item id="90049" count="1" /> <!-- Scroll: Shield of Faith -->
 		</skill>
-		<skill skillName="Knighthood" skillId="429" skillLvl="2" getLevel="79" levelUpSp="11400000" />
-		<skill skillName="Final Fortress" skillId="291" skillLvl="15" getLevel="79" levelUpSp="11400000" />
 		
 		<skill skillName="Aggression" skillId="28" skillLvl="53" getLevel="80" levelUpSp="11400000" />
 		<skill skillName="Aggression Aura" skillId="18" skillLvl="41" getLevel="80" levelUpSp="11400000" />
@@ -73,50 +82,71 @@
 		<skill skillName="Mass Lightning Strike" skillId="10094" skillLvl="1" getLevel="80" levelUpSp="11400000">
 			<item id="90053" count="1" /> <!-- Scroll: Mass Lightning Strike -->
 		</skill>
-		<skill skillName="Judgment" skillId="401" skillLvl="18" getLevel="80" levelUpSp="11400000" />
-		<skill skillName="Knighthood" skillId="429" skillLvl="3" getLevel="80" levelUpSp="11400000" />
 		<skill skillName="Final Fortress" skillId="291" skillLvl="16" getLevel="80" levelUpSp="11400000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="18" getLevel="80" levelUpSp="11400000" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLvl="11" getLevel="80" levelUpSp="11400000" />
+		<skill skillName="Summon Viper Cubic" skillId="278" skillLvl="10" getLevel="80" levelUpSp="11400000" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLvl="11" getLevel="80" levelUpSp="11400000" />
+		<skill skillName="Knighthood" skillId="429" skillLvl="3" getLevel="80" levelUpSp="11400000" />
+		<skill skillName="Critical Vulnerability Decrease" skillId="53004" skillLvl="3" getLevel="80" levelUpSp="11400000" />
 		
 		<skill skillName="Aggression" skillId="28" skillLvl="54" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Aggression Aura" skillId="18" skillLvl="42" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="50" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="57" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="56" getLevel="81" levelUpSp="160000000" />
-		<skill skillName="Knighthood" skillId="429" skillLvl="4" getLevel="81" levelUpSp="160000000" />
-		<skill skillName="Final Fortress" skillId="291" skillLvl="17" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Mass Lightning Strike" skillId="10094" skillLvl="2" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Mass Chain Strike" skillId="53003" skillLvl="2" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="17" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Knighthood" skillId="429" skillLvl="4" getLevel="81" levelUpSp="160000000" />
 		
 		<skill skillName="Aggression" skillId="28" skillLvl="55" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Aggression Aura" skillId="18" skillLvl="43" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="51" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="58" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="57" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Judgment" skillId="401" skillLvl="19" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Lightning Strike" skillId="279" skillLvl="7" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Chain Strike" skillId="10015" skillLvl="2" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Knighthood" skillId="429" skillLvl="5" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Final Fortress" skillId="291" skillLvl="18" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Mass Lightning Strike" skillId="10094" skillLvl="3" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="18" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="19" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLvl="12" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Summon Viper Cubic" skillId="278" skillLvl="11" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLvl="12" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Knighthood" skillId="429" skillLvl="5" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Lightning Strike" skillId="279" skillLvl="7" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Critical Vulnerability Decrease" skillId="53004" skillLvl="4" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Chain Strike" skillId="10015" skillLvl="2" getLevel="82" levelUpSp="170000000" />
 		
 		<skill skillName="Aggression" skillId="28" skillLvl="56" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Aggression Aura" skillId="18" skillLvl="44" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="52" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="59" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="58" getLevel="83" levelUpSp="240000000" />
-		<skill skillName="Knighthood" skillId="429" skillLvl="6" getLevel="83" levelUpSp="240000000" />
-		<skill skillName="Final Fortress" skillId="291" skillLvl="19" getLevel="83" levelUpSp="240000000" />
-		<skill skillName="Lightning Strike" skillId="279" skillLvl="8" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Mass Lightning Strike" skillId="10094" skillLvl="4" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="19" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Knighthood" skillId="429" skillLvl="6" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Lightning Strike" skillId="279" skillLvl="8" getLevel="83" levelUpSp="240000000" />
 		
 		<skill skillName="Aggression" skillId="28" skillLvl="57" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Aggression Aura" skillId="18" skillLvl="45" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="53" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="60" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="59" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Judgment" skillId="401" skillLvl="20" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Knighthood" skillId="429" skillLvl="7" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Final Fortress" skillId="291" skillLvl="20" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Lightning Strike" skillId="279" skillLvl="9" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Mass Lightning Strike" skillId="10094" skillLvl="5" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Mass Chain Strike" skillId="53003" skillLvl="3" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="20" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Judgment" skillId="401" skillLvl="20" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Summon Vampiric Cubic" skillId="22" skillLvl="13" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Summon Viper Cubic" skillId="278" skillLvl="12" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Summon Phantom Cubic" skillId="33" skillLvl="13" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Knighthood" skillId="429" skillLvl="7" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Lightning Strike" skillId="279" skillLvl="9" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Critical Vulnerability Decrease" skillId="53004" skillLvl="5" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Chain Strike" skillId="10015" skillLvl="3" getLevel="84" levelUpSp="240000000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="54" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="61" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="60" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="21" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Knighthood" skillId="429" skillLvl="8" getLevel="85" levelUpSp="840000000" />
 	</skillTree>
 </list>

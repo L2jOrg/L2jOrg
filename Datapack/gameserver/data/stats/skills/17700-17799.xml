@@ -2,27 +2,87 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="17701" toLevel="5" name="Topaz">
 		<!-- Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of $s1. -->
-		<icon>icon.etc_bm_jewel_topaz_i00</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_topaz_i00</value>
+			<value level="2">icon.etc_bm_jewel_topaz_i00</value>
+			<value level="3">icon.etc_bm_jewel_topaz_i00</value>
+			<value level="4">icon.etc_bm_jewel_topaz_i00</value>
+			<value level="5">icon.etc_bm_jewel_topaz_i00</value>
+			<value level="6">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+		</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="17702" toLevel="1" name="Greater Topaz - Special Ability">
+		<!-- Cancels up to 3 debuffs. -->
+		<icon>icon.bm_jewel_absdmg_high_lv1_lavianrose</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17706" toLevel="5" name="Vital Stone">
-		<!-- Sayha Grace XP/ SP +$s1, while hunting. -->
-		<icon>icon.etc_bm_jewel_vital</icon>
+		<!-- Acquired XP/ SP from Sayha Grace +$s1 while hunting. -->
+		<icon>
+			<value level="1">icon.etc_bm_jewel_vital</value>
+			<value level="2">icon.etc_bm_jewel_vital</value>
+			<value level="3">icon.etc_bm_jewel_vital</value>
+			<value level="4">icon.etc_bm_jewel_vital</value>
+			<value level="5">icon.etc_bm_jewel_vital</value>
+			<value level="6">icon.bm_jewel_vital_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_vital_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_vital_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_vital_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_vital_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17707" toLevel="5" name="Jade">
 		<!-- Atk. Spd./ Casting Spd. +$s1. -->
-		<icon>icon.etc_bm_jewel_jade_i00</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_jade_i00</value>
+			<value level="2">icon.etc_bm_jewel_jade_i00</value>
+			<value level="3">icon.etc_bm_jewel_jade_i00</value>
+			<value level="4">icon.etc_bm_jewel_jade_i00</value>
+			<value level="5">icon.etc_bm_jewel_jade_i00</value>
+			<value level="6">icon.bm_jewel_speedup_lv1_high</value>
+			<value level="7">icon.bm_jewel_speedup_lv1_high</value>
+			<value level="8">icon.bm_jewel_speedup_lv1_high</value>
+			<value level="9">icon.bm_jewel_speedup_lv1_high</value>
+			<value level="10">icon.bm_jewel_speedup_lv1_high</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17708" toLevel="5" name="Diamond">
-		<!-- P. Def. +$s1, when equipped. -->
-		<icon>icon.etc_bm_jewel_diamond_i00</icon>
+		<!-- P. Def. +$s1. -->
+		<icon>
+			<value level="1">icon.etc_bm_jewel_diamond_i00</value>
+			<value level="2">icon.etc_bm_jewel_diamond_i00</value>
+			<value level="3">icon.etc_bm_jewel_diamond_i00</value>
+			<value level="4">icon.etc_bm_jewel_diamond_i00</value>
+			<value level="5">icon.etc_bm_jewel_diamond_i00</value>
+			<value level="6">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17709" toLevel="5" name="Pearl">
 		<!-- M. Def. +$s1. -->
-		<icon>icon.etc_bm_jewel_pearl_i00</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_pearl_i00</value>
+			<value level="2">icon.etc_bm_jewel_pearl_i00</value>
+			<value level="3">icon.etc_bm_jewel_pearl_i00</value>
+			<value level="4">icon.etc_bm_jewel_pearl_i00</value>
+			<value level="5">icon.etc_bm_jewel_pearl_i00</value>
+			<value level="6">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

@@ -28,6 +28,11 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="11317" toLevel="1" name="Mass Summon Soulshots">
+		<!-- With a 100% probability summons 300 Beast Soulshots. Consumes 40 Soulstone(s). -->
+		<icon>BranchIcon.Icon.g_bm_antaras_pocket_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="11318" toLevel="1" name="Summon Spiritshots">
 		<!-- With a 100% probability summons 24 Beast Spiritshots. Consumes 4 Spirit Ore. -->
 		<icon>icon.skill11316</icon>
@@ -55,5 +60,10 @@
 				<itemCount>16</itemCount>
 			</effect>
 		</effects>
+	</skill>
+	<skill id="11319" toLevel="1" name="Mass Summon Spiritshots">
+		<!-- With a 100% probability summons 240 Beast Spiritshots. Consumes 40 Spirit Ore. -->
+		<icon>BranchIcon.Icon.g_bm_antaras_pocket_i00</icon>
+		<operateType>A1</operateType>
 	</skill>
 </list>

@@ -233,6 +233,23 @@
 			<stat type="mDef">48</stat>
 		</stats>
 	</item>
+	<item id="858" name="Tateossian Earring" type="Armor">
+		<!-- When equipped, MP +31. -->
+		<set name="icon" val="icon.accessory_tateossian_earring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="157" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="3270000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">81</stat>
+			<stat type="maxMp">31</stat>
+		</stats>
+	</item>
 	<item id="859" name="Earring of Mana" type="Armor">
 		<set name="icon" val="icon.accessary_earing_of_mana_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -561,6 +578,23 @@
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="mDef">32</stat>
+		</stats>
+	</item>
+	<item id="889" name="Tateossian Ring" type="Armor">
+		<!-- When equipped, MP +21. -->
+		<set name="icon" val="icon.accessory_tateossian_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="105" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="2180000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">58</stat>
+			<stat type="maxMp">21</stat>
 		</stats>
 	</item>
 	<item id="890" name="Ring of Devotion" type="Armor">

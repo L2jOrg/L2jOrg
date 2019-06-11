@@ -50,13 +50,35 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55705" toLevel="5" name="Red Cat's Eye">
-		<!-- P. Critical Damage +2%. -->
-		<icon>icon.bm_jewel_red_catseye</icon>
+		<!-- P. Critical Damage +$s1. -->
+		<icon>
+			<value level="1">icon.bm_jewel_red_catseye</value>
+			<value level="2">icon.bm_jewel_red_catseye</value>
+			<value level="3">icon.bm_jewel_red_catseye</value>
+			<value level="4">icon.bm_jewel_red_catseye</value>
+			<value level="5">icon.bm_jewel_red_catseye</value>
+			<value level="6">icon.bm_jewel_red_catseye_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_red_catseye_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_red_catseye_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_red_catseye_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_red_catseye_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55706" toLevel="5" name="Blue Cat's Eye">
-		<!-- M. Critical Damage +2%. -->
-		<icon>Icon.bm_jewel_blue_catseye</icon>
+		<!-- M. Critical Power +$s1. -->
+		<icon>
+			<value level="1">Icon.bm_jewel_blue_catseye</value>
+			<value level="2">Icon.bm_jewel_blue_catseye</value>
+			<value level="3">Icon.bm_jewel_blue_catseye</value>
+			<value level="4">Icon.bm_jewel_blue_catseye</value>
+			<value level="5">Icon.bm_jewel_blue_catseye</value>
+			<value level="6">icon.bm_jewel_blue_catseye_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_blue_catseye_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_blue_catseye_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_blue_catseye_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_blue_catseye_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55707" toLevel="1" name="Fortune Red Cat's Eye Chest">
@@ -101,7 +123,7 @@
 	<skill id="55713" toLevel="1" name="Lv. 4 Brooch - Additional Effect">
 		<!-- Inventory Slot +12. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="EnlargeSlot">
 				<amount>12</amount>
@@ -233,42 +255,267 @@
 	<skill id="55736" toLevel="1" name="Elmoreden Cloak Basic Effect">
 		<!-- Increases PvP Attack Damage when enchanted and bestows various passive and active skills. -->
 		<icon>BranchIcon.icon.g_bm_elmoreden_cloak_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>0.1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>0.1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55737" toLevel="20" name="Elmoreden Cloak Enchant Effect">
 		<!-- PvP Attack Damage +$s1. -->
 		<icon>BranchIcon.icon.g_bm_elmoreden_cloak_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">0.3</value>
+					<value level="2">0.5</value>
+					<value level="3">0.8</value>
+					<value level="4">1</value>
+					<value level="5">1.3</value>
+					<value level="6">1.5</value>
+					<value level="7">1.8</value>
+					<value level="8">2</value>
+					<value level="9">2.3</value>
+					<value level="10">2.5</value>
+					<value level="11">2.8</value>
+					<value level="12">3</value>
+					<value level="13">3.3</value>
+					<value level="14">3.5</value>
+					<value level="15">3.8</value>
+					<value level="16">4</value>
+					<value level="17">4.3</value>
+					<value level="18">4.5</value>
+					<value level="19">4.8</value>
+					<value level="20">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">0.3</value>
+					<value level="2">0.5</value>
+					<value level="3">0.8</value>
+					<value level="4">1</value>
+					<value level="5">1.3</value>
+					<value level="6">1.5</value>
+					<value level="7">1.8</value>
+					<value level="8">2</value>
+					<value level="9">2.3</value>
+					<value level="10">2.5</value>
+					<value level="11">2.8</value>
+					<value level="12">3</value>
+					<value level="13">3.3</value>
+					<value level="14">3.5</value>
+					<value level="15">3.8</value>
+					<value level="16">4</value>
+					<value level="17">4.3</value>
+					<value level="18">4.5</value>
+					<value level="19">4.8</value>
+					<value level="20">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55738" toLevel="1" name="Aden Cloak Basic Effect">
 		<!-- Increases Magic Attack PvE Damage when enchanted and bestows various passive and active skills. -->
 		<icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>0.1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55739" toLevel="20" name="Aden Cloak Enchant Effect">
 		<!-- Magic PvE Damage to normal monsters +$s1. -->
 		<icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">0.3</value>
+					<value level="2">0.5</value>
+					<value level="3">0.8</value>
+					<value level="4">1</value>
+					<value level="5">1.3</value>
+					<value level="6">1.5</value>
+					<value level="7">1.8</value>
+					<value level="8">2</value>
+					<value level="9">2.3</value>
+					<value level="10">2.5</value>
+					<value level="11">2.8</value>
+					<value level="12">3</value>
+					<value level="13">3.3</value>
+					<value level="14">3.5</value>
+					<value level="15">3.8</value>
+					<value level="16">4</value>
+					<value level="17">4.3</value>
+					<value level="18">4.5</value>
+					<value level="19">4.8</value>
+					<value level="20">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55740" toLevel="1" name="Elmore Cloak Basic Effect">
 		<!-- Increases Physical Attack PvE Damage when enchanted and bestows various passive and active skills. -->
 		<icon>BranchIcon.icon.g_bm_elmore_cloak_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>0.1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>0.1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55741" toLevel="20" name="Elmore Cloak Enchant Effect">
 		<!-- Physical PvE Damage to normal monsters +$s1. -->
 		<icon>BranchIcon.icon.g_bm_elmore_cloak_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">0.3</value>
+					<value level="2">0.5</value>
+					<value level="3">0.8</value>
+					<value level="4">1</value>
+					<value level="5">1.3</value>
+					<value level="6">1.5</value>
+					<value level="7">1.8</value>
+					<value level="8">2</value>
+					<value level="9">2.3</value>
+					<value level="10">2.5</value>
+					<value level="11">2.8</value>
+					<value level="12">3</value>
+					<value level="13">3.3</value>
+					<value level="14">3.5</value>
+					<value level="15">3.8</value>
+					<value level="16">4</value>
+					<value level="17">4.3</value>
+					<value level="18">4.5</value>
+					<value level="19">4.8</value>
+					<value level="20">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">0.3</value>
+					<value level="2">0.5</value>
+					<value level="3">0.8</value>
+					<value level="4">1</value>
+					<value level="5">1.3</value>
+					<value level="6">1.5</value>
+					<value level="7">1.8</value>
+					<value level="8">2</value>
+					<value level="9">2.3</value>
+					<value level="10">2.5</value>
+					<value level="11">2.8</value>
+					<value level="12">3</value>
+					<value level="13">3.3</value>
+					<value level="14">3.5</value>
+					<value level="15">3.8</value>
+					<value level="16">4</value>
+					<value level="17">4.3</value>
+					<value level="18">4.5</value>
+					<value level="19">4.8</value>
+					<value level="20">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55742" toLevel="1" name="Ferios Cloak Basic Effect">
 		<!-- Decreases received damage when enchanted and bestows various passive and active skills. -->
 		<icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>-0.5</amount>
+				<type>PK</type>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-0.5</amount>
+				<type>ENEMY_ALL</type>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55743" toLevel="20" name="Ferios Cloak Enchant Effect">
 		<!-- Damage Received -$s1. -->
 		<icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+					<value level="8">-8</value>
+					<value level="9">-9</value>
+					<value level="10">-10</value>
+					<value level="11">-11</value>
+					<value level="12">-12</value>
+					<value level="13">-13</value>
+					<value level="14">-14</value>
+					<value level="15">-15</value>
+					<value level="16">-16</value>
+					<value level="17">-17</value>
+					<value level="18">-18</value>
+					<value level="19">-19</value>
+					<value level="20">-20</value>
+				</amount>
+				<type>PK</type>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+					<value level="8">-8</value>
+					<value level="9">-9</value>
+					<value level="10">-10</value>
+					<value level="11">-11</value>
+					<value level="12">-12</value>
+					<value level="13">-13</value>
+					<value level="14">-14</value>
+					<value level="15">-15</value>
+					<value level="16">-16</value>
+					<value level="17">-17</value>
+					<value level="18">-18</value>
+					<value level="19">-19</value>
+					<value level="20">-20</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55744" toLevel="1" name="Blessing of Elmoreden">
 		<!-- Makes you invincible for $s1 and Speed +100. -->

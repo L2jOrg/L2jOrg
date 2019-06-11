@@ -437,6 +437,24 @@
 			<skill id="2163" level="1" /> <!-- Blessed Spiritshot (A-grade) -->
 		</skills>
 	</item>
+	<item id="3952" name="Blessed Spiritshot (S-grade)" type="EtcItem">
+		<!-- The power of Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with S-grade weapons. -->
+		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="350" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="crystal_type" val="S" />
+		<set name="enchant_enabled" val="1" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="2164" level="1" /> <!-- Blessed Spiritshot (S-grade) -->
+		</skills>
+	</item>
 	<item id="3953" name="Recipe: Blessed Spiritshot (D-grade)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for the Blessed Spiritshot (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
@@ -491,6 +509,19 @@
 		<set name="recipe_id" val="326" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="3957" name="Recipe: Blessed Spiritshot (S-grade) (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Blessed Spiritshot (S-grade). Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="450000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="327" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3958" name="Blessed Scroll of Escape" type="EtcItem">

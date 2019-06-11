@@ -230,4 +230,19 @@
 		<icon>icon.sayha2017_blink</icon>
 		<operateType>A1</operateType>
 	</skill>
+	<skill id="54041" toLevel="4" name="Frintezza's Necklace">
+		<!-- Sleep Resistance/ Atk. Rate +10%, Paralysis Resistance/ Atk. Rate +5%, Damage Reflection Resistance +2%, Skill Cooldown -2%. -->
+		<icon>
+			<value level="1">icon.accessory_necklace_of_frintessa_i00</value>
+			<value level="2">icon.accessory_necklace_of_frintessa_i03</value>
+			<value level="3">icon.accessory_necklace_of_frintessa_i04</value>
+			<value level="4">icon.accessory_necklace_of_frintessa_i05</value>
+		</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="54042" toLevel="1" name="Immortal Frintezza's Necklace - Special Ability">
+		<!-- Nearby enemies' P./ M. Skill Cooldown -$s2 for $s1 -->
+		<icon>icon.accessory_necklace_of_frintessa_i05</icon>
+		<operateType>A1</operateType>
+	</skill>
 </list>

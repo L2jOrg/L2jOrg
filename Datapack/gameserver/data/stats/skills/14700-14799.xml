@@ -9,12 +9,11 @@
 		<operateType>A1</operateType>
 		<hitTime>4600</hitTime>
 		<effectPoint>-100</effectPoint>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>4.6</hitCancelTime>
-		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>55</magicLvl>
 		<affectRange>300</affectRange>
 		<affectLimit>5-12</affectLimit>
+		<coolTime>733</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>

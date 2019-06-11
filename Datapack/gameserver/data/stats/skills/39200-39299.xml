@@ -262,11 +262,9 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>10</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>10</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="PAtk">
 				<amount>15</amount>
@@ -735,7 +733,14 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39242" toLevel="1" name="Sapphire">
-		<icon>icon.etc_bm_jewel_ruby_i00</icon>
+		<!-- Beast Spiritshot Damage +$s1. -->
+		<icon>
+			<value level="1">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="2">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="3">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="4">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="5">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39243" toLevel="1" name="Topaz Jewelry Box">
@@ -893,11 +898,9 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>20</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>20</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -995,7 +998,7 @@
 		<icon>icon.bm_magmeld</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39299" toLevel="1" name="Gracia's Cube">
+	<skill id="39299" toLevel="1" name="Forgotten Island's Cube">
 		<icon>icon.sa_cube</icon>
 		<operateType>A1</operateType>
 	</skill>

@@ -558,10 +558,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
-
-		<skills>
-			<skill id="3050" level="2" /> <!-- Special Ability: Focus -->
-		</skills>
 		<stats>
 			<stat type="pAtk">251</stat>
 			<stat type="mAtk">121</stat>

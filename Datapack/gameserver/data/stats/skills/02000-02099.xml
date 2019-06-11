@@ -211,7 +211,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2013" toLevel="1" name="Improved Scroll of Escape">
+	<skill id="2013" toLevel="1" name="Scroll of Escape">
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -335,7 +335,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2024" toLevel="1" name="Firecracker">
+	<skill id="2024" toLevel="1" name="Fireworks">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>6406</itemConsumeId> <!-- Firework -->
@@ -1241,7 +1241,6 @@
 			</effect>
 			<effect name="DamageShield">
 				<amount>20</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>

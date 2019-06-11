@@ -21,7 +21,7 @@
 		</skill>
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="23" getLevel="76" levelUpSp="4800000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="38" getLevel="76" levelUpSp="4800000" />
-
+		
 		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="52" getLevel="77" levelUpSp="4800000" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="47" getLevel="77" levelUpSp="4800000" />
 		<skill skillName="Dual Weapon Mastery" skillId="144" skillLvl="39" getLevel="77" levelUpSp="4800000" />
@@ -49,15 +49,16 @@
 		<skill skillName="Indestructible Sound" skillId="1624" skillLvl="1" getLevel="78" levelUpSp="11300000">
 			<item id="90068" count="1" /> <!-- Scroll: Indestructible Sound -->
 		</skill>
+		<skill skillName="Rush" skillId="994" skillLvl="1" getLevel="78" levelUpSp="11300000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="25" getLevel="78" levelUpSp="11300000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="40" getLevel="78" levelUpSp="11300000" />
 		<skill skillName="Braveheart" skillId="440" skillLvl="1" getLevel="78" levelUpSp="11300000" />
 		
 		<skill skillName="Sonic Mastery" skillId="992" skillLvl="8" getLevel="79" levelUpSp="11300000" />
+		<skill skillName="Sonic Move" skillId="451" skillLvl="4" getLevel="79" levelUpSp="11300000" />
 		<skill skillName="Final Secret" skillId="917" skillLvl="1" getLevel="79" levelUpSp="11300000">
 			<item id="90080" count="1" /> <!-- Scroll: Final Secret -->
 		</skill>
-		<skill skillName="Sonic Move" skillId="451" skillLvl="4" getLevel="79" levelUpSp="11300000" />
 		
 		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="54" getLevel="80" levelUpSp="11300000" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="49" getLevel="80" levelUpSp="11300000" />
@@ -66,21 +67,21 @@
 		<skill skillName="Sonic Rage" skillId="345" skillLvl="3" getLevel="80" levelUpSp="11300000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="41" getLevel="80" levelUpSp="11300000" />
 		<skill skillName="War Cry" skillId="78" skillLvl="3" getLevel="80" levelUpSp="11300000" />
+		<skill skillName="Indestructible Sound" skillId="1624" skillLvl="2" getLevel="80" levelUpSp="11300000" />
 		<skill skillName="Maximum Sonic Focus" skillId="919" skillLvl="1" getLevel="80" levelUpSp="11300000">
 			<item id="90069" count="1" /> <!-- Scroll: Maximum Sonic Focus -->
 		</skill>
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="26" getLevel="80" levelUpSp="11300000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="41" getLevel="80" levelUpSp="11300000" />
-		<skill skillName="Indestructible Sound" skillId="1624" skillLvl="2" getLevel="80" levelUpSp="11300000" />
 
 		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="55" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="50" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Dual Weapon Mastery" skillId="144" skillLvl="42" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="55" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Sonic Move" skillId="451" skillLvl="5" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="42" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="27" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="42" getLevel="81" levelUpSp="160000000" />
-		<skill skillName="Sonic Move" skillId="451" skillLvl="5" getLevel="81" levelUpSp="160000000" />
 
 		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="56" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="51" getLevel="82" levelUpSp="170000000" />
@@ -89,9 +90,9 @@
 		<skill skillName="Duelist Spirit" skillId="297" skillLvl="3" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Sonic Rage" skillId="345" skillLvl="4" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="43" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Indestructible Sound" skillId="1624" skillLvl="3" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="28" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="43" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Indestructible Sound" skillId="1624" skillLvl="3" getLevel="82" levelUpSp="170000000" />
 
 		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="57" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="52" getLevel="83" levelUpSp="240000000" />
@@ -106,10 +107,15 @@
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="53" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Dual Weapon Mastery" skillId="144" skillLvl="45" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="58" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Sonic Blaster" skillId="6" skillLvl="45" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Sonic Rage" skillId="345" skillLvl="5" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Sonic Blaster" skillId="6" skillLvl="45" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Indestructible Sound" skillId="1624" skillLvl="4" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="30" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="45" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Indestructible Sound" skillId="1624" skillLvl="4" getLevel="84" levelUpSp="240000000" />
+		
+		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="59" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="54" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Dual Weapon Mastery" skillId="144" skillLvl="46" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="59" getLevel="85" levelUpSp="840000000" />
 	</skillTree>
 </list>

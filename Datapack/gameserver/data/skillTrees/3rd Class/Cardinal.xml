@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="97" parentClassId="16">
-		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="46" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Balance Life" skillId="1335" skillLvl="1" getLevel="76" levelUpSp="5700000">
 			<item id="90122" count="1" />
@@ -17,14 +16,14 @@
 		<skill skillName="Greater Group Heal" skillId="1219" skillLvl="34" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLvl="34" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="42" getLevel="76" levelUpSp="5700000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="42" getLevel="76" levelUpSp="5700000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="42" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="43" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Magical Backfire" skillId="1396" skillLvl="11" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Mount Gold Maned Lion" skillId="1833" skillLvl="1" getLevel="76">
 			<item id="90038" count="1" /> <!-- Spellbook: Mount Golden Lion -->
 		</skill>
 		<skill skillName="Hold Undead" skillId="1042" skillLvl="13" getLevel="76" levelUpSp="5700000" />
-		<skill skillName="Might Of Heaven" skillId="1028" skillLvl="20" getLevel="76" levelUpSp="5700000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="20" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="43" getLevel="76" levelUpSp="5700000" />
 		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="47" getLevel="77" levelUpSp="5700000" />
@@ -32,7 +31,7 @@
 		<skill skillName="Greater Group Heal" skillId="1219" skillLvl="35" getLevel="77" levelUpSp="5700000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLvl="35" getLevel="77" levelUpSp="5700000" />
 		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="43" getLevel="77" levelUpSp="5700000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="43" getLevel="77" levelUpSp="5700000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="43" getLevel="77" levelUpSp="5700000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="44" getLevel="77" levelUpSp="5700000" />
 		<skill skillName="Cleanse" skillId="1409" skillLvl="1" getLevel="77" levelUpSp="5700000">
 			<item id="90123" count="1" /> <!-- Scroll: Cleanse -->
@@ -44,52 +43,60 @@
 		<skill skillName="Greater Group Heal" skillId="1219" skillLvl="36" getLevel="78" levelUpSp="12500000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLvl="36" getLevel="78" levelUpSp="12500000" />
 		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="44" getLevel="78" levelUpSp="12500000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="44" getLevel="78" levelUpSp="12500000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="44" getLevel="78" levelUpSp="12500000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="45" getLevel="78" levelUpSp="12500000" />
 		<skill skillName="Magical Backfire" skillId="1396" skillLvl="12" getLevel="78" levelUpSp="12500000" />
 		<skill skillName="Hold Undead" skillId="1042" skillLvl="14" getLevel="78" levelUpSp="12500000" />
-		<skill skillName="Might Of Heaven" skillId="1028" skillLvl="21" getLevel="78" levelUpSp="12500000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="21" getLevel="78" levelUpSp="12500000" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="45" getLevel="78" levelUpSp="12500000" />
 		<skill skillName="Chain Heal" skillId="1553" skillLvl="1" getLevel="78" levelUpSp="12500000">
 			<item id="90124" count="1" /> <!-- Scroll: Chain Heal -->
 		</skill>
 		
+		<skill skillName="Magical Backfire" skillId="1396" skillLvl="13" getLevel="79" levelUpSp="12500000" />
 		<skill skillName="Salvation" skillId="1410" skillLvl="1" getLevel="79" levelUpSp="12500000">
 			<item id="90125" count="1" /> <!-- Scroll: Salvation -->
 		</skill>
+		<skill skillName="Sleep" skillId="1069" skillLvl="46" getLevel="79" levelUpSp="12500000" />
 		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="49" getLevel="80" levelUpSp="12500000" />
 		<skill skillName="Greater Battle Heal" skillId="1218" skillLvl="37" getLevel="80" levelUpSp="12500000" />
 		<skill skillName="Greater Group Heal" skillId="1219" skillLvl="37" getLevel="80" levelUpSp="12500000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLvl="37" getLevel="80" levelUpSp="12500000" />
 		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="45" getLevel="80" levelUpSp="12500000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="45" getLevel="80" levelUpSp="12500000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="45" getLevel="80" levelUpSp="12500000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="46" getLevel="80" levelUpSp="12500000" />
-		<skill skillName="Might Of Heaven" skillId="1028" skillLvl="22" getLevel="80" levelUpSp="12500000" />
+		<skill skillName="Magical Backfire" skillId="1396" skillLvl="14" getLevel="80" levelUpSp="12500000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="22" getLevel="80" levelUpSp="12500000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="47" getLevel="80" levelUpSp="12500000" />
 		<skill skillName="Miracle" skillId="1426" skillLvl="1" getLevel="80" levelUpSp="12500000">
 			<item id="90126" count="1" /> <!-- Scroll: Miracle -->
 		</skill>
-
+		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="50" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Sublime Self-Sacrifice" skillId="1505" skillLvl="1" getLevel="81" levelUpSp="160000000">
+			<item id="91202" count="1" /> <!-- Scroll: Sublime Self-Sacrifice -->
+		</skill>
 		<skill skillName="Greater Battle Heal" skillId="1218" skillLvl="38" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Greater Group Heal" skillId="1219" skillLvl="38" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLvl="38" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="46" getLevel="81" levelUpSp="160000000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="46" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="46" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="47" getLevel="81" levelUpSp="160000000" />
-		<skill skillName="Might Of Heaven" skillId="1028" skillLvl="23" getLevel="81" levelUpSp="160000000" />
-		<skill skillName="Sublime Self-Sacrifice" skillId="1505" skillLvl="1" getLevel="81" levelUpSp="160000000">
-			<item id="91202" count="1" /> <!-- Scroll: Sublime Self-Sacrifice -->
-		</skill>
+		<skill skillName="Magical Backfire" skillId="1396" skillLvl="15" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="23" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="48" getLevel="81" levelUpSp="160000000" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLvl="51" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Greater Battle Heal" skillId="1218" skillLvl="39" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Greater Group Heal" skillId="1219" skillLvl="39" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLvl="39" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="47" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="47" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="47" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="48" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Might Of Heaven" skillId="1028" skillLvl="24" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Magical Backfire" skillId="1396" skillLvl="16" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="24" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="49" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Chain Heal" skillId="1553" skillLvl="2" getLevel="82" levelUpSp="170000000" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLvl="52" getLevel="83" levelUpSp="240000000" />
@@ -97,17 +104,26 @@
 		<skill skillName="Greater Group Heal" skillId="1219" skillLvl="40" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLvl="40" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="48" getLevel="83" levelUpSp="240000000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="48" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="48" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="49" getLevel="83" levelUpSp="240000000" />
-		<skill skillName="Might Of Heaven" skillId="1028" skillLvl="25" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Magical Backfire" skillId="1396" skillLvl="17" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="25" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="50" getLevel="83" levelUpSp="240000000" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLvl="53" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Greater Battle Heal" skillId="1218" skillLvl="41" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Greater Group Heal" skillId="1219" skillLvl="41" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLvl="41" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="49" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="49" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="49" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="50" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Might Of Heaven" skillId="1028" skillLvl="26" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Magical Backfire" skillId="1396" skillLvl="18" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="26" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="51" getLevel="84" levelUpSp="240000000" />
+		
+		<skill skillName="Anti Magic" skillId="146" skillLvl="54" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="50" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="50" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="51" getLevel="85" levelUpSp="840000000" />
 	</skillTree>
 </list>

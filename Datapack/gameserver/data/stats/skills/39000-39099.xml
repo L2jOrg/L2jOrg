@@ -805,11 +805,9 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>20</amount>
-				<mode>DIFF</mode> <!-- FIX -->
 			</effect>
 			<effect name="SpModify">
 				<amount>20</amount>
-				<mode>DIFF</mode> <!-- FIX -->
 			</effect>
 		</effects>
 	</skill>
@@ -1231,11 +1229,9 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>30</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>30</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1409,11 +1405,9 @@
 			</effect>
 			<effect name="ExpModify">
 				<amount>5</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>5</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

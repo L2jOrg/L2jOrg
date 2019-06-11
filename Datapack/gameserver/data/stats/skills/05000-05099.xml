@@ -82,6 +82,11 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="5004" toLevel="1" name="Dimensional Stun">
+		<!-- Immobilizes and stuns target. -->
+		<icon>icon.skill0100</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="5005" toLevel="1" name="Frintezza Pose">
 		<!-- Frintezza is in temporary state of paralysis. -->
 		<abnormalLvl>1</abnormalLvl>
@@ -115,7 +120,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5007" toLevel="5" name="Frintezza Rampage Music">
+	<skill id="5007" toLevel="5" name="Frintezza Heal Music">
 		<!-- Music to soothe the soul. -->
 		<effectPoint>100</effectPoint>
 		<hitTime>
@@ -133,7 +138,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5008" toLevel="5" name="Frintezza Rampage Music">
+	<skill id="5008" toLevel="5" name="Frintezza Heal Music">
 		<!-- Music to soothe the soul. -->
 		<icon>
 			<value level="1">icon.skill0000</value>

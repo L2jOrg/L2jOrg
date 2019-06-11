@@ -19,11 +19,11 @@
 		<ingredient count="1" id="6662" /> <!-- Ring of Core -->
 		<ingredient count="1" id="6662" /> <!-- Ring of Core -->
 		<ingredient count="1000000" id="57" /> <!-- Adena -->
-		<production count="1" id="49576" /> <!-- Enchanced Ring of Core -->
+		<production count="1" id="49576" /> <!-- Enhanced Ring of Core -->
 	</item>
 	<item>
-		<ingredient count="1" id="49576" /> <!-- Enchanced Ring of Core -->
-		<ingredient count="1" id="49576" /> <!-- Enchanced Ring of Core -->
+		<ingredient count="1" id="49576" /> <!-- Enhanced Ring of Core -->
+		<ingredient count="1" id="49576" /> <!-- Enhanced Ring of Core -->
 		<ingredient count="2000000" id="57" /> <!-- Adena -->
 		<production count="1" id="49579" /> <!-- Refined Ring of Core -->
 	</item>
@@ -31,13 +31,25 @@
 		<ingredient count="1" id="6661" /> <!-- Orfen's Earring -->
 		<ingredient count="1" id="6661" /> <!-- Orfen's Earring -->
 		<ingredient count="1000000" id="57" /> <!-- Adena -->
-		<production count="1" id="49575" /> <!-- Enchanced Orfen's Earring -->
+		<production count="1" id="49575" /> <!-- Enhanced Orfen's Earring -->
 	</item>
 	<item>
-		<ingredient count="1" id="49575" /> <!-- Enchanced Orfen's Earring -->
-		<ingredient count="1" id="49575" /> <!-- Enchanced Orfen's Earring -->
+		<ingredient count="1" id="49575" /> <!-- Enhanced Orfen's Earring -->
+		<ingredient count="1" id="49575" /> <!-- Enhanced Orfen's Earring -->
 		<ingredient count="2000000" id="57" /> <!-- Adena -->
 		<production count="1" id="49578" /> <!-- Refined Orfen's Earring -->
+	</item>
+	<item>
+		<ingredient count="1" id="90763" /> <!-- Zaken's Earring -->
+		<ingredient count="1" id="90763" /> <!-- Zaken's Earring -->
+		<ingredient count="1000000" id="57" /> <!-- Adena -->
+		<production count="1" id="90764" /> <!-- Enhanced Zaken's Earring -->
+	</item>
+	<item>
+		<ingredient count="1" id="90764" /> <!-- Enhanced Zaken's Earring -->
+		<ingredient count="1" id="90764" /> <!-- Enhanced Zaken's Earring -->
+		<ingredient count="2000000" id="57" /> <!-- Adena -->
+		<production count="1" id="90765" /> <!-- Refined Zaken's Earring -->
 	</item>
 	<item>
 		<ingredient count="1" id="49580" /> <!-- Baium's Ring -->
@@ -51,5 +63,4 @@
 		<ingredient count="2000000" id="57" /> <!-- Adena -->
 		<production count="1" id="49582" /> <!-- Refined Baium's Ring -->
 	</item>
-	<!-- Zaken items here -->
 </list>

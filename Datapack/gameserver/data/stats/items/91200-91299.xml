@@ -786,4 +786,80 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="91290" name="Scroll: Critical Creation" additionalName="Lv. 1" type="EtcItem">
+		<!-- Scroll needed to learn the Critical Creation skill. Available to Master. Level required: 76. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91291" name="Scroll: Critical Creation" additionalName="Lv. 2" type="EtcItem">
+		<!-- Scroll needed to learn the Critical Creation Lv. 2 skill. Available to Master. Level required: 79. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91292" name="Scroll: Master of Creation" additionalName="Lv. 1" type="EtcItem">
+		<!-- Scroll needed to learn the Master of Creation skill. Available to Master. Level required: 78. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91293" name="Scroll: Mana Burn" type="EtcItem">
+		<!-- Scroll needed to learn the Mana Burn skill. Available to Hierophant. Level required: 76. -->
+		<set name="icon" val="icon.etc_magic_book_white_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91294" name="Scroll: Bluff" type="EtcItem">
+		<!-- Scroll needed to learn the Bluff skill. Available to Adventurer, Wind Rider, and Ghost Hunter. Level required: 76. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91295" name="Scroll: Hawk Spirit Totem" type="EtcItem">
+		<!-- Scroll needed to learn the Hawk Spirit skill. Available to Grand Khavatari. Level required: 79. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91296" name="Inventory Expansion Ticket - Lv. 4" type="EtcItem">
+		<!-- Item needed to obtain Expand Inventory Lv. 4. Can be obtained from from a fishing guild member. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.etc_ticket_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91297" name="Inventory Expansion Ticket - Lv. 5" type="EtcItem">
+		<!-- Item needed to obtain Expand Inventory Lv. 5. Can be obtained from from a fishing guild member. Cannot be dropped or sold. -->
+		<set name="icon" val="icon.etc_ticket_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91298" name="Spring Energy Lv. 1" type="EtcItem">
+		<!-- For 20 min., Max. HP/ MP +3%, P. Atk. +3%, M. Atk. +5%, Atk. Spd./ Casting Spd. +3%, P./ M. Def. +3%, acquired XP/ SP +3%, Sayha Grace Consumption -3%. Cannot be dropped or sold. <Warning>. If a second Spring Energy effect is used together with the first one, only the highest level effect applies. The item will be deleted after the event is over. Can be exchanged for various items through Primavera. -->
+		<set name="icon" val="icon.etc_leaf_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91299" name="Spring Energy Lv. 2" type="EtcItem">
+		<!-- For 20 min., Max. HP/ MP +5%, P. Atk. +3%, M. Atk. +8%, Atk. Spd./ Casting Spd. +5%, P./ M. Def. +5%, acquired XP/ SP +5%, Sayha Grace Consumption -5%. Cannot be dropped or sold. <Warning>. If a second Spring Energy effect is used together with the first one, only the highest level effect applies. The item will be deleted after the event is over. -->
+		<set name="icon" val="icon.etc_leaf_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
 </list>

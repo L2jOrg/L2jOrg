@@ -5,8 +5,19 @@
 	<skillPointsRate min="0.033" max="0.033" />
 	<baits>
 		<bait itemId="45495" level="1" minPlayerLevel="20" chance="64" timeMin="45000" timeMax="45000" waitMin="15000" waitMax="15000"> <!-- Normal Bait -->
-			<catch itemId="45473" /> <!-- Blue Mackerel -->
-			<catch itemId="45481" /> <!-- Fresh Blue Mackerel -->
+			<catch itemId="45473" chance="65" multiplier="1" /> <!-- Blue Mackerel -->
+			<catch itemId="45481" chance="34" multiplier="1" /> <!-- Fresh Blue Mackerel -->
+			<catch itemId="45488" chance="1" multiplier="1" /> <!-- Golden Treasure Chest -->
+		</bait>
+		<!-- Event Bait -->
+		<bait itemId="49508" level="1" minPlayerLevel="20" chance="64" timeMin="45000" timeMax="45000" waitMin="15000" waitMax="15000"> <!-- Normal Bait -->
+			<catch itemId="45473" chance="65" multiplier="1" /> <!-- Blue Mackerel -->
+			<catch itemId="45481" chance="34" multiplier="1" /> <!-- Fresh Blue Mackerel -->
+			<catch itemId="45488" chance="1" multiplier="1" /> <!-- Golden Treasure Chest -->
 		</bait>
 	</baits>
+	<rods>
+		<rod itemId="45492" /> <!-- Normal Fishing Rod - 1-day -->
+		<rod itemId="49506" /> <!-- Normal Fishing Rod - 10-day -->
+	</rods>
 </list>

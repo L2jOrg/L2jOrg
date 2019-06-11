@@ -112,6 +112,19 @@
 		<set name="handler" val="Recipes" />
 		<set name="commissionItemType" val="RECIPE" />
 	</item>
+	<item id="1808" name="Recipe: Soulshot (S-grade) (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Soulshot (S-grade). Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="450000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="24" />
+		<set name="handler" val="Recipes" />
+	</item>
 	<item id="1814" name="Recipe: Leather" type="EtcItem">
 		<!-- For Dwarves only. Recipe for Leather. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />

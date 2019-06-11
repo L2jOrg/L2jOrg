@@ -271,7 +271,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2117" toLevel="1" name="Greater Blessed Spiritshot Compressed Package (D-grade)">
+	<skill id="2117" toLevel="1" name="Big Blessed Spiritshot Compressed Package (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -740,6 +740,16 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
+	<skill id="2154" toLevel="1" name="Soulshot (S-grade)">
+		<icon>icon.etc_spirit_bullet_white_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
 	<skill id="2155" toLevel="1" name="Spiritshot (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -768,6 +778,16 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2158" toLevel="1" name="Spiritshot (A-grade)">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="2159" toLevel="1" name="Spiritshot (S-grade)">
+		<icon>icon.etc_spirit_bullet_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -812,6 +832,16 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
+	<skill id="2164" toLevel="1" name="Blessed Spiritshot (S-grade)">
+		<icon>icon.etc_spirit_bullet_white_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
 	<skill id="2165" toLevel="1" name="Momentum Stone">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -826,7 +856,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2166" toLevel="2" name="Greater CP Potion">
+	<skill id="2166" toLevel="2" name="CP Potion">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>

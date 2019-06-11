@@ -2542,8 +2542,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1539" toLevel="5" name="Stigma of Shilen">
-		<!-- For $s1, Short-range Weapon Resistance -$s2. -->
+	<skill id="1539" toLevel="11" name="Stigma of Shilen">
+		<!-- For $s1, Melee Weapon Resistance -$s2. -->
 		<icon>icon.skill1539</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2551,6 +2551,12 @@
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
+			<value level="11">11</value>
 		</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>STIGMA_OF_SILEN</abnormalType>
@@ -2561,14 +2567,38 @@
 			<value level="3">800</value>
 			<value level="4">900</value>
 			<value level="5">1000</value>
+			<value level="6">1000</value>
+			<value level="7">1000</value>
+			<value level="8">1000</value>
+			<value level="9">1000</value>
+			<value level="10">1000</value>
+			<value level="11">1000</value>
 		</castRange>
-		<effectPoint>-635</effectPoint>
+		<effectPoint>
+			<value level="1">-379</value>
+			<value level="2">-495</value>
+			<value level="3">-582</value>
+			<value level="4">-635</value>
+			<value level="5">-639</value>
+			<value level="6">-643</value>
+			<value level="7">-646</value>
+			<value level="8">-649</value>
+			<value level="9">-652</value>
+			<value level="10">-654</value>
+			<value level="11">-656</value>
+		</effectPoint>
 		<effectRange>
 			<value level="1">1100</value>
 			<value level="2">1200</value>
 			<value level="3">1300</value>
 			<value level="4">1400</value>
 			<value level="5">1500</value>
+			<value level="6">1500</value>
+			<value level="7">1500</value>
+			<value level="8">1500</value>
+			<value level="9">1500</value>
+			<value level="10">1500</value>
+			<value level="11">1500</value>
 		</effectRange>
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
@@ -2578,6 +2608,12 @@
 			<value level="3">62</value>
 			<value level="4">70</value>
 			<value level="5">78</value>
+			<value level="6">79</value>
+			<value level="7">80</value>
+			<value level="8">81</value>
+			<value level="9">82</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">18</value>
@@ -2585,6 +2621,12 @@
 			<value level="3">29</value>
 			<value level="4">33</value>
 			<value level="5">42</value>
+			<value level="6">43</value>
+			<value level="7">44</value>
+			<value level="8">45</value>
+			<value level="9">46</value>
+			<value level="10">47</value>
+			<value level="11">48</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -2602,6 +2644,12 @@
 					<value level="3">-32</value>
 					<value level="4">-40</value>
 					<value level="5">-48</value>
+					<value level="6">-49</value>
+					<value level="7">-50</value>
+					<value level="8">-51</value>
+					<value level="9">-52</value>
+					<value level="10">-53</value>
+					<value level="11">-54</value>
 				</SWORD>
 				<DAGGER>
 					<value level="1">-16</value>
@@ -2609,6 +2657,12 @@
 					<value level="3">-32</value>
 					<value level="4">-40</value>
 					<value level="5">-48</value>
+					<value level="6">-49</value>
+					<value level="7">-50</value>
+					<value level="8">-51</value>
+					<value level="9">-52</value>
+					<value level="10">-53</value>
+					<value level="11">-54</value>
 				</DAGGER>
 				<DUALFIST>
 					<value level="1">-16</value>
@@ -2616,6 +2670,12 @@
 					<value level="3">-32</value>
 					<value level="4">-40</value>
 					<value level="5">-48</value>
+					<value level="6">-49</value>
+					<value level="7">-50</value>
+					<value level="8">-51</value>
+					<value level="9">-52</value>
+					<value level="10">-53</value>
+					<value level="11">-54</value>
 				</DUALFIST>
 				<ANCIENTSWORD>
 					<value level="1">-16</value>
@@ -2623,6 +2683,12 @@
 					<value level="3">-32</value>
 					<value level="4">-40</value>
 					<value level="5">-48</value>
+					<value level="6">-49</value>
+					<value level="7">-50</value>
+					<value level="8">-51</value>
+					<value level="9">-52</value>
+					<value level="10">-53</value>
+					<value level="11">-54</value>
 				</ANCIENTSWORD>
 				<DUALDAGGER>
 					<value level="1">-16</value>
@@ -2630,6 +2696,12 @@
 					<value level="3">-32</value>
 					<value level="4">-40</value>
 					<value level="5">-48</value>
+					<value level="6">-49</value>
+					<value level="7">-50</value>
+					<value level="8">-51</value>
+					<value level="9">-52</value>
+					<value level="10">-53</value>
+					<value level="11">-54</value>
 				</DUALDAGGER>
 				<BLUNT>
 					<value level="1">-16</value>
@@ -2637,6 +2709,12 @@
 					<value level="3">-32</value>
 					<value level="4">-40</value>
 					<value level="5">-48</value>
+					<value level="6">-49</value>
+					<value level="7">-50</value>
+					<value level="8">-51</value>
+					<value level="9">-52</value>
+					<value level="10">-53</value>
+					<value level="11">-54</value>
 				</BLUNT>
 				<POLE>
 					<value level="1">-16</value>
@@ -2644,6 +2722,12 @@
 					<value level="3">-32</value>
 					<value level="4">-40</value>
 					<value level="5">-48</value>
+					<value level="6">-49</value>
+					<value level="7">-50</value>
+					<value level="8">-51</value>
+					<value level="9">-52</value>
+					<value level="10">-53</value>
+					<value level="11">-54</value>
 				</POLE>
 				<DUAL>
 					<value level="1">-16</value>
@@ -2651,6 +2735,12 @@
 					<value level="3">-32</value>
 					<value level="4">-40</value>
 					<value level="5">-48</value>
+					<value level="6">-49</value>
+					<value level="7">-50</value>
+					<value level="8">-51</value>
+					<value level="9">-52</value>
+					<value level="10">-53</value>
+					<value level="11">-54</value>
 				</DUAL>
 				<RAPIER>
 					<value level="1">-16</value>
@@ -3300,16 +3390,22 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="1556" toLevel="1" name="Arcane Shield">
-		<!-- For 10 sec., damage received -50% and turns the remaining damage into MP Consumption. When MP becomes 0, the skill's effect disappears. -->
+	<skill id="1556" toLevel="5" name="Arcane Shield">
+		<!-- For $s1, damage received -$s2 and turns the remaining damage into MP Consumption. When MP becomes 0, the skill's effect disappears. -->
 		<icon>icon.skill1556</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>30</abnormalTime>
 		<abnormalVisualEffect>MP_SHIELD</abnormalVisualEffect>
 		<effectPoint>138</effectPoint>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>80</magicLvl>
+		<magicLvl>
+			<value level="1">80</value>
+			<value level="2">81</value>
+			<value level="3">82</value>
+			<value level="4">83</value>
+			<value level="5">84</value>
+		</magicLvl>
 		<mpConsume>123</mpConsume>
 		<mpInitialConsume>23</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -3322,12 +3418,18 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MpShield">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">52</value>
+					<value level="3">55</value>
+					<value level="4">57</value>
+					<value level="5">60</value>
+				</amount>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1557" toLevel="1" name="Servitor Share">
-		<!-- Extends the summoner's abilities to the servitor. Using the summoner's abilities as the basis, extends to the servitor P. Atk./ P. Def. by 30%, M. Atk./ M. Def. by 10%, Max HP/ MP by 10%, Atk. Spd. by 10%, and Casting Spd. by 3%. -->
+	<skill id="1557" toLevel="3" name="Servitor Share">
+		<!-- Extends the summoner's abilities to the servitor. Using the summoner's abilities as the basis, extends to the servitor P. Atk./ P. Def. by $s1, M. Atk./ M. Def. by $s2, Max HP/ MP by $s3, Atk. Spd. by $s4, and Casting Spd. by $s5. -->
 		<icon>icon.skill1557</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -3335,8 +3437,16 @@
 		<effectPoint>379</effectPoint>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>80</magicLvl>
-		<mpConsume>105</mpConsume>
+		<magicLvl>
+			<value level="1">76</value>
+			<value level="2">79</value>
+			<value level="3">82</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">105</value>
+			<value level="2">109</value>
+			<value level="3">113</value>
+		</mpConsume>
 		<mpInitialConsume>7</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>

@@ -2152,7 +2152,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="144" toLevel="45" name="Dual Weapon Mastery">
+	<skill id="144" toLevel="46" name="Dual Weapon Mastery">
 		<!-- P. Atk. +$s1 when using a dual sword. -->
 		<icon>icon.skill0144</icon>
 		<magicLvl>
@@ -2201,6 +2201,7 @@
 			<value level="43">82</value>
 			<value level="44">83</value>
 			<value level="45">84</value>
+			<value level="46">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2252,6 +2253,7 @@
 					<value level="43">155</value>
 					<value level="44">158</value>
 					<value level="45">161</value>
+					<value level="46">164</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -2260,7 +2262,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="146" toLevel="53" name="Anti Magic">
+	<skill id="146" toLevel="54" name="Anti Magic">
 		<!-- M. Def. +$s1. -->
 		<icon>icon.skill0146</icon>
 		<magicLvl>
@@ -2317,6 +2319,7 @@
 			<value level="51">82</value>
 			<value level="52">83</value>
 			<value level="53">84</value>
+			<value level="54">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2376,6 +2379,7 @@
 					<value level="51">124</value>
 					<value level="52">126</value>
 					<value level="53">128</value>
+					<value level="54">130</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2429,12 +2433,18 @@
 					<value level="46">30</value>
 					<value level="47">30</value>
 					<value level="48">30</value>
+					<value level="49">30</value>
+					<value level="50">30</value>
+					<value level="51">30</value>
+					<value level="52">30</value>
+					<value level="53">30</value>
+					<value level="54">30</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="147" toLevel="59" name="Magic Resistance">
+	<skill id="147" toLevel="60" name="Magic Resistance">
 		<!-- M. Def. +$s1. -->
 		<icon>icon.skill0147</icon>
 		<magicLvl>
@@ -2497,6 +2507,7 @@
 			<value level="57">82</value>
 			<value level="58">83</value>
 			<value level="59">84</value>
+			<value level="60">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2562,6 +2573,7 @@
 					<value level="57">151</value>
 					<value level="58">154</value>
 					<value level="59">157</value>
+					<value level="60">160</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2626,6 +2638,7 @@
 					<value level="57">20</value>
 					<value level="58">20</value>
 					<value level="59">20</value>
+					<value level="60">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -3142,13 +3155,19 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="181" toLevel="1" name="Revival">
-		<!-- Restores to full HP in an emergency. Only usable if HP is 10 percent or lower. -->
+	<skill id="181" toLevel="2" name="Revival">
+		<!-- Restores to full HP in an emergency. Only usable if HP is $s1 or lower. -->
 		<icon>icon.skill0181</icon>
 		<effectPoint>562</effectPoint>
 		<hitTime>1500</hitTime>
-		<magicLvl>55</magicLvl>
-		<mpConsume>25</mpConsume>
+		<magicLvl>
+			<value level="1">55</value>
+			<value level="2">79</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">25</value>
+			<value level="2">65</value>
+		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>900000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3156,7 +3175,10 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="RemainHpPer">
-				<amount>10</amount>
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+				</amount>
 				<percentType>LESS</percentType>
 				<affectType>CASTER</affectType>
 			</condition>

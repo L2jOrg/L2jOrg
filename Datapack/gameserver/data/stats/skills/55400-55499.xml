@@ -896,116 +896,212 @@
 	</skill>
 	<skill id="55471" toLevel="5" name="Topaz">
 		<!-- Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of $s1. -->
-		<icon>icon.etc_bm_jewel_topaz_i00</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_topaz_i00</value>
+			<value level="2">icon.etc_bm_jewel_topaz_i00</value>
+			<value level="3">icon.etc_bm_jewel_topaz_i00</value>
+			<value level="4">icon.etc_bm_jewel_topaz_i00</value>
+			<value level="5">icon.etc_bm_jewel_topaz_i00</value>
+			<value level="6">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55472" toLevel="5" name="Vital Stone">
 		<!-- XP/ SP +$s1, while hunting. -->
-		<icon>icon.etc_bm_jewel_vital</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_vital</value>
+			<value level="2">icon.etc_bm_jewel_vital</value>
+			<value level="3">icon.etc_bm_jewel_vital</value>
+			<value level="4">icon.etc_bm_jewel_vital</value>
+			<value level="5">icon.etc_bm_jewel_vital</value>
+			<value level="6">icon.bm_jewel_vital_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_vital_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_vital_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_vital_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_vital_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55473" toLevel="3" name="Vital Stone - Vital Wind">
-		<!-- For 15 sec., XP/ SP +50%, while hunting. Cooldown: 20 min. -->
+	<skill id="55473" toLevel="3" name="Vital Stone - Special Ability">
+		<!-- For $s1, XP/ SP +$s2, while hunting. Cooldown: 20 min. -->
 		<icon>icon.etc_bm_jewel_vital</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55474" toLevel="5" name="Jade">
 		<!-- Atk. Spd./ Casting Spd. +$s1. -->
-		<icon>icon.etc_bm_jewel_jade_i00</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_jade_i00</value>
+			<value level="2">icon.etc_bm_jewel_jade_i00</value>
+			<value level="3">icon.etc_bm_jewel_jade_i00</value>
+			<value level="4">icon.etc_bm_jewel_jade_i00</value>
+			<value level="5">icon.etc_bm_jewel_jade_i00</value>
+			<value level="6">icon.bm_jewel_speedup_lv1_high</value>
+			<value level="7">icon.bm_jewel_speedup_lv1_high</value>
+			<value level="8">icon.bm_jewel_speedup_lv1_high</value>
+			<value level="9">icon.bm_jewel_speedup_lv1_high</value>
+			<value level="10">icon.bm_jewel_speedup_lv1_high</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55475" toLevel="5" name="Diamond">
-		<!-- P. Def. +$s1, when equipped. -->
-		<icon>icon.etc_bm_jewel_diamond_i00</icon>
+		<!-- P. Def. +$s1. -->
+		<icon>
+			<value level="1">icon.etc_bm_jewel_diamond_i00</value>
+			<value level="2">icon.etc_bm_jewel_diamond_i00</value>
+			<value level="3">icon.etc_bm_jewel_diamond_i00</value>
+			<value level="4">icon.etc_bm_jewel_diamond_i00</value>
+			<value level="5">icon.etc_bm_jewel_diamond_i00</value>
+			<value level="6">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55476" toLevel="5" name="Pearl">
 		<!-- M. Def. +$s1. -->
-		<icon>icon.etc_bm_jewel_pearl_i00</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_pearl_i00</value>
+			<value level="2">icon.etc_bm_jewel_pearl_i00</value>
+			<value level="3">icon.etc_bm_jewel_pearl_i00</value>
+			<value level="4">icon.etc_bm_jewel_pearl_i00</value>
+			<value level="5">icon.etc_bm_jewel_pearl_i00</value>
+			<value level="6">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55477" toLevel="4" name="Ruby">
 		<!-- Damage received from Soulshots +$s1. -->
-		<icon>icon.etc_bm_jewel_ruby_i00</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="2">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="3">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="4">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="5">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55478" toLevel="2" name="Ruby">
-		<!-- Damage received from Soulshots +5%. -->
-		<icon>icon.etc_bm_jewel_ruby_i00</icon>
+		<!-- Damage received from Blessed Soulshots +$s1. -->
+		<icon>
+			<value level="1">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="2">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="3">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="4">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="5">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55479" toLevel="2" name="Ruby">
-		<!-- Damage received from Soulshots +8%. -->
-		<icon>icon.etc_bm_jewel_ruby_i00</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="55480" toLevel="2" name="Ruby">
-		<!-- Damage received from Soulshots +16%. -->
-		<icon>icon.etc_bm_jewel_ruby_i00</icon>
+		<!-- Damage from Beast Soulshot +$s1. -->
+		<icon>
+			<value level="1">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="2">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="3">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="4">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="5">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55481" toLevel="4" name="Sapphire">
 		<!-- Damage received from Spiritshots +$s1. -->
-		<icon>icon.etc_bm_jewel_sapphire_i00</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="2">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="3">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="4">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="5">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55482" toLevel="2" name="Sapphire">
-		<!-- Damage received from Spiritshots +5%. -->
-		<icon>icon.etc_bm_jewel_sapphire_i00</icon>
+		<!-- Damage received from Blessed Spiritshots +$s1. -->
+		<icon>
+			<value level="1">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="2">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="3">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="4">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="5">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55483" toLevel="2" name="Sapphire">
-		<!-- Damage received from Spiritshots +8%. -->
-		<icon>icon.etc_bm_jewel_sapphire_i00</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="55484" toLevel="2" name="Sapphire">
-		<!-- Damage received from Spiritshots +16%. -->
-		<icon>icon.etc_bm_jewel_sapphire_i00</icon>
+		<!-- Damage from Beast Spiritshot +$s1. -->
+		<icon>
+			<value level="1">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="2">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="3">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="4">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="5">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55485" toLevel="5" name="Garnet">
 		<!-- Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +$s1. -->
-		<icon>icon.etc_bm_jewel_garnet</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_garnet</value>
+			<value level="2">icon.etc_bm_jewel_garnet</value>
+			<value level="3">icon.etc_bm_jewel_garnet</value>
+			<value level="4">icon.etc_bm_jewel_garnet</value>
+			<value level="5">icon.etc_bm_jewel_garnet</value>
+			<value level="6">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55486" toLevel="2" name="Garnet - Special Ability">
-		<!-- Becomes invincible from debuffs for 5 sec. -->
-		<icon>icon.etc_bm_jewel_garnet</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="55487" toLevel="2" name="Ruby">
-		<!-- Damage from Beast Soulshot +$s1. -->
-		<icon>icon.etc_bm_jewel_ruby_i00</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="55488" toLevel="1" name="Ruby">
-		<icon>icon.etc_bm_jewel_ruby_i00</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="55489" toLevel="1" name="Ruby">
-		<icon>icon.etc_bm_jewel_ruby_i00</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="55490" toLevel="1" name="Ruby">
-		<icon>icon.etc_bm_jewel_ruby_i00</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="55491" toLevel="2" name="Sapphire">
-		<!-- Damage from Beast Spiritshot +$s1. -->
-		<icon>icon.etc_bm_jewel_ruby_i00</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="55492" toLevel="1" name="Sapphire">
-		<icon>icon.etc_bm_jewel_ruby_i00</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="55493" toLevel="1" name="Sapphire">
-		<icon>icon.etc_bm_jewel_ruby_i00</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="55494" toLevel="1" name="Sapphire">
-		<icon>icon.etc_bm_jewel_ruby_i00</icon>
+		<!-- Becomes invincible from debuffs for $s1 -->
+		<icon>
+			<value level="1">icon.etc_bm_jewel_garnet</value>
+			<value level="2">icon.etc_bm_jewel_garnet</value>
+			<value level="3">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
+			<value level="4">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
+			<value level="5">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
+			<value level="6">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55495" toLevel="1" name="Fortune Brooch">

@@ -786,6 +786,14 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
+	<item id="1462" name="Crystal (S-grade)" type="EtcItem">
+		<!-- Crystal of S-grade. -->
+		<set name="icon" val="icon.etc_crystal_gold_i00" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="15000" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="1463" name="Soulshot (D-grade)" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a D-grade weapon. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
@@ -856,6 +864,24 @@
 		<set name="commissionItemType" val="SOULSHOT" />
 		<skills>
 			<skill id="2153" level="1" /> <!-- Soulshot (A-grade) -->
+		</skills>
+	</item>
+	<item id="1467" name="Soulshot (S-grade)" type="EtcItem">
+		<!-- The power of Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. Used with S-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
+		<set name="crystal_type" val="S" />
+		<set name="enchant_enabled" val="1" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<skills>
+			<skill id="2154" level="1" /> <!-- Soulshot (S-grade) -->
 		</skills>
 	</item>
 	<item id="1471" name="Silenos Blowgun" type="Weapon">

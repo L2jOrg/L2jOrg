@@ -931,6 +931,21 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="1345" name="Arrow of Light" type="EtcItem">
+		<!-- Very hard arrow made of unknown material. For S-grade bows. -->
+		<set name="icon" val="icon.etc_shining_quiver_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="ARROW" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="3" />
+		<set name="price" val="10" />
+		<set name="crystal_type" val="S" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="1346" name="Golem's Stoneheart" type="EtcItem">
 		<!-- Stone found within the remains of a destroyed golem. Take this to Trader Rorento. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />

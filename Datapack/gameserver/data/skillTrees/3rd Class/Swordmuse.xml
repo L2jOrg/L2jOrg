@@ -17,7 +17,7 @@
 		</skill>
 		<skill skillName="Charm" skillId="15" skillLvl="53" getLevel="76" levelUpSp="10200000" />
 		<skill skillName="Sword Symphony" skillId="98" skillLvl="6" getLevel="76" levelUpSp="10200000" />
-		<skill skillName="Deadly Strike" skillId="986" skillLvl="1" getLevel="76" levelUpSp="10200000" />
+		<skill skillName="Deadly Strike" skillId="1632" skillLvl="1" getLevel="76" levelUpSp="10200000" />
 		
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="47" getLevel="77" levelUpSp="10200000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="54" getLevel="77" levelUpSp="10200000" />
@@ -25,7 +25,7 @@
 		<skill skillName="Song of Renewal" skillId="349" skillLvl="1" getLevel="77" levelUpSp="10200000">
 			<item id="90090" count="1" /> <!-- Scroll: Song of Renewal -->
 		</skill>
-		<skill skillName="Deadly Strike" skillId="986" skillLvl="2" getLevel="77" levelUpSp="10200000" />
+		<skill skillName="Deadly Strike" skillId="1632" skillLvl="2" getLevel="77" levelUpSp="10200000" />
 		
 		<skill skillName="Arrest" skillId="402" skillLvl="12" getLevel="78" levelUpSp="23800000" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="48" getLevel="78" levelUpSp="23800000" />
@@ -36,12 +36,12 @@
 		<skill skillName="Champion Song" skillId="364" skillLvl="1" getLevel="78" levelUpSp="23800000">
 			<item id="90091" count="1" /> <!-- Scroll: Champion Song -->
 		</skill>
-		<skill skillName="Deadly Strike" skillId="986" skillLvl="3" getLevel="78" levelUpSp="23800000" />
+		<skill skillName="Deadly Strike" skillId="1632" skillLvl="3" getLevel="78" levelUpSp="23800000" />
 		
 		<skill skillName="Song of Silence" skillId="437" skillLvl="1" getLevel="79" levelUpSp="23800000">
 			<item id="90092" count="1" />  <!-- Scroll: Song of Silence -->
 		</skill>
-
+		
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="49" getLevel="80" levelUpSp="23800000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="56" getLevel="80" levelUpSp="23800000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="55" getLevel="80" levelUpSp="23800000" />
@@ -49,27 +49,37 @@
 			<item id="90093" count="1" /> <!-- Scroll: Song of Purification -->
 		</skill>
 		<skill skillName="Sword Symphony" skillId="98" skillLvl="7" getLevel="80" levelUpSp="23800000" />
-		<skill skillName="Deadly Strike" skillId="986" skillLvl="4" getLevel="80" levelUpSp="23800000" />
+		<skill skillName="Deadly Strike" skillId="1632" skillLvl="4" getLevel="80" levelUpSp="23800000" />
 
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="50" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="57" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="56" getLevel="81" levelUpSp="160000000" />
-		<skill skillName="Deadly Strike" skillId="986" skillLvl="5" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Song of Wind" skillId="268" skillLvl="2" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Song of Silence" skillId="437" skillLvl="2" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Deadly Strike" skillId="1632" skillLvl="5" getLevel="81" levelUpSp="160000000" />
 
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="51" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="58" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="57" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Deadly Strike" skillId="986" skillLvl="6" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Song of Vitality" skillId="304" skillLvl="2" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Deadly Strike" skillId="1632" skillLvl="6" getLevel="82" levelUpSp="170000000" />
 
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="52" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="59" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="58" getLevel="83" levelUpSp="240000000" />
-		<skill skillName="Deadly Strike" skillId="986" skillLvl="7" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Hunter's Song" skillId="269" skillLvl="2" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Song of Silence" skillId="437" skillLvl="3" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Deadly Strike" skillId="1632" skillLvl="7" getLevel="83" levelUpSp="240000000" />
 
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="53" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="60" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="59" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Song of Renewal" skillId="349" skillLvl="2" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Sword Symphony" skillId="98" skillLvl="8" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Deadly Strike" skillId="986" skillLvl="8" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Deadly Strike" skillId="1632" skillLvl="8" getLevel="84" levelUpSp="240000000" />
+		
+		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="54" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="61" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="60" getLevel="85" levelUpSp="840000000" />
 	</skillTree>
 </list>

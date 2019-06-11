@@ -279,6 +279,23 @@
 			<stat type="mDef">64</stat>
 		</stats>
 	</item>
+	<item id="920" name="Tateossian Necklace" type="Armor">
+		<!-- When equipped, MP +42. -->
+		<set name="icon" val="icon.accessory_tateossian_necklace_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="209" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="4361000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">120</stat>
+			<stat type="maxMp">42</stat>
+		</stats>
+	</item>
 	<item id="922" name="Sage's Necklace" type="Armor">
 		<set name="icon" val="icon.accessary_sages_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -639,6 +656,24 @@
 		<skills>
 			<skill id="2020" level="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
 		</skills>
+	</item>
+	<item id="959" name="Scroll: Enchant Weapon (S-grade)" type="EtcItem">
+		<!-- When enchanted, P. Atk. +5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +6 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubled. -->
+		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="5000000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="960" name="Scroll: Enchant Armor (S-grade)" type="EtcItem">
+		<!-- P. Def. +2 for S-grade armor and accessories. Starting from +4, P. Def. +8. Ordinary armor can be safely enchanted up to +3. One-piece armor can be safely enchanted up to +4. After +4 increases HP. -->
+		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="500000" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="963" name="Orc Arrowhead" type="EtcItem">
 		<!-- Arrowhead that Turath orc marksmen use on Talking Island. Collect these and take to Master Minia. -->

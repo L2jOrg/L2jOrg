@@ -76,7 +76,6 @@
 					<value level="9">30</value>
 					<value level="10">30</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>
@@ -89,7 +88,6 @@
 					<value level="9">30</value>
 					<value level="10">30</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -616,6 +614,16 @@
 			<value level="9">icon.bm_magic_square_talisman</value>
 			<value level="10">icon.bm_magic_square_talisman</value>
 			<value level="11">icon.bm_blessed_magic_square_talisman</value>
+			<value level="12">icon.bm_dimension_tallisman</value>
+			<value level="13">icon.bm_dimension_tallisman</value>
+			<value level="14">icon.bm_dimension_tallisman</value>
+			<value level="15">icon.bm_dimension_tallisman</value>
+			<value level="16">icon.bm_dimension_tallisman</value>
+			<value level="17">icon.bm_dimension_tallisman</value>
+			<value level="18">icon.bm_dimension_tallisman</value>
+			<value level="19">icon.bm_dimension_tallisman</value>
+			<value level="20">icon.bm_dimension_tallisman</value>
+			<value level="21">icon.bm_dimension_tallisman</value>
 		</icon>
 		<operateType>P</operateType>
 		<magicLvl>55</magicLvl>
@@ -795,7 +803,6 @@
 					<value level="10">5</value>
 					<value level="11">5</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>
@@ -827,7 +834,6 @@
 					<value level="10">6</value>
 					<value level="11">8</value>
 				</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="ReflectSkill">
 				<amount>

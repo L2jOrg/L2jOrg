@@ -162,18 +162,27 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="304" toLevel="1" name="Song of Vitality">
+	<skill id="304" toLevel="2" name="Song of Vitality">
 		<!-- All party members' Max HP +30% for 5 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<icon>icon.skill0304</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_VITALITY</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>611</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>66</magicLvl>
-		<mpConsume>60</mpConsume>
+		<magicLvl>
+			<value level="1">66</value>
+			<value level="2">2</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">60</value>
+			<value level="2">73</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -183,7 +192,10 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="MaxHp">
-				<amount>30</amount>
+				<amount>
+					<value level="1">30</value>
+					<value level="2">35</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -367,18 +379,27 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="311" toLevel="1" name="Dance of Protection">
+	<skill id="311" toLevel="2" name="Dance of Protection">
 		<!-- For 5 min., grants all party members +10% Damage Reflect Resistance. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires dual swords. -->
 		<icon>icon.skill0311</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_PROTECTION</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>611</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>66</magicLvl>
-		<mpConsume>60</mpConsume>
+		<magicLvl>
+			<value level="1">44</value>
+			<value level="2">66</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">66</value>
+			<value level="2">73</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -396,7 +417,10 @@
 		</conditions>
 		<effects>
 			<effect name="AreaDamage">
-				<amount>-30</amount>
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-20</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -1145,7 +1169,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="322" toLevel="6" name="Shield Fortress">
+	<skill id="322" toLevel="6" name="Ultimate Shield">
 		<!-- Shield Defense +$s1. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0322</icon>
 		<magicLvl>
@@ -1413,21 +1437,39 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="337" toLevel="1" name="Arcane Power">
-		<!-- Maximizes magic efficiency, M. Atk. +10% and MP Consumption +5%. Every sec., 30 HP is consumed. -->
+	<skill id="337" toLevel="8" name="Arcane Power">
+		<!-- Maximizes magic efficiency, M. Atk. +$s1 and MP Consumption +$s2. Every sec., $s3 HP is consumed. -->
 		<icon>icon.skill0337</icon>
-		<magicLvl>77</magicLvl>
+		<magicLvl>
+			<value level="1">77</value>
+			<value level="2">78</value>
+			<value level="3">79</value>
+			<value level="4">80</value>
+			<value level="5">81</value>
+			<value level="6">82</value>
+			<value level="7">83</value>
+			<value level="8">84</value>
+		</magicLvl>
 		<mpConsume>36</mpConsume>
 		<operateType>T</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
 			<effect name="HealOverTime">
-				<power>-30</power>
-				<ticks>5</ticks>
+				<power>-15</power>
+				<ticks>2</ticks>
 			</effect>
 			<effect name="MAtk">
-				<amount>10</amount>
+				<amount>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">12</value>
+					<value level="4">13</value>
+					<value level="5">14</value>
+					<value level="6">16</value>
+					<value level="7">18</value>
+					<value level="8">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicMpCost">
@@ -1996,18 +2038,27 @@
 			<effect name="Spoil" />
 		</effects>
 	</skill>
-	<skill id="349" toLevel="1" name="Song of Renewal">
-		<!-- For 5 min., all party members' physical/ magic/ song/ dance skills' MP Consumption -5%, and physical/ magic skills' Cooldown -20%. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+	<skill id="349" toLevel="2" name="Song of Renewal">
+		<!-- For $s1, all party members' physical/ magic/ song/ dance skills' MP Consumption -$s2, and physical/ magic skills' Cooldown -$s3. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<icon>icon.skill0349</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_RENEWAL</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>666</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>77</magicLvl>
-		<mpConsume>66</mpConsume>
+		<magicLvl>
+			<value level="1">77</value>
+			<value level="2">84</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">73</value>
+			<value level="2">82</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -2017,22 +2068,34 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="MagicMpCost">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-20</amount>
+				<amount>
+					<value level="1">-20</value>
+					<value level="2">-25</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-20</amount>
+				<amount>
+					<value level="1">-20</value>
+					<value level="2">-25</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
@@ -2382,11 +2445,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="358" toLevel="1" name="Bluff">
-		<!-- Deceives the enemy into turning his back, losing his urge to attack and becoming stunned for 9 sec. Requires a dagger. Target cancel is possible. -->
+	<skill id="358" toLevel="9" name="Bluff">
+		<!-- Deceives the enemy into turning his back, losing his urge to attack and becoming stunned for $s1 Requires a dagger. Target cancel is possible. -->
 		<icon>icon.skill0358</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>9</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>40</activateRate>
@@ -2397,8 +2460,28 @@
 		<hitTime>1000</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>77</magicLvl>
-		<mpConsume>35</mpConsume>
+		<magicLvl>
+			<value level="1">76</value>
+			<value level="2">77</value>
+			<value level="3">78</value>
+			<value level="4">79</value>
+			<value level="5">80</value>
+			<value level="6">81</value>
+			<value level="7">82</value>
+			<value level="8">83</value>
+			<value level="9">84</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">35</value>
+			<value level="2">36</value>
+			<value level="3">37</value>
+			<value level="4">38</value>
+			<value level="5">39</value>
+			<value level="6">40</value>
+			<value level="7">41</value>
+			<value level="8">42</value>
+			<value level="9">43</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2475,8 +2558,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="361" toLevel="3" name="Stun Blast">
-		<!-- Creates a powerful shock wave with 2486 Power added to P. Atk., inflicting damage and stunning the target and nearby enemies for 7 sec. ?heir P. Def. -30% and M. Def. -30%. Requires a polearm. Over-hit. Critical. Ignores Shield Defense. Target cancel is possible. -->
+	<skill id="361" toLevel="3" name="Stun Burst">
+		<!-- Creates a powerful shock wave with $s1 Power added to P. Atk., inflicting damage and stunning the target and nearby enemies for $s2 Their P. Def. -$s3 and M. Def. -$s4. Requires a polearm. Critical. Over-hit. Ignores Shield Defense. Target cancel is possible. -->
 		<icon>icon.skill0361</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -2501,7 +2584,7 @@
 		<magicLvl>
 			<value level="1">77</value>
 			<value level="2">80</value>
-			<value level="2">83</value>
+			<value level="3">83</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">53</value>
@@ -2710,18 +2793,27 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="365" toLevel="1" name="Dance of Siren">
-		<!-- For 5 min., party members' M. Critical Rate +50%. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+	<skill id="365" toLevel="2" name="Dance of Siren">
+		<!-- All party members' M. Critical Rate +$s2 for $s1 MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill0365</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_SIREN</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>669</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>78</magicLvl>
-		<mpConsume>66</mpConsume>
+		<magicLvl>
+			<value level="1">78</value>
+			<value level="2">83</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">73</value>
+			<value level="2">75</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -2738,15 +2830,22 @@
 		</conditions>
 		<effects>
 			<effect name="MagicCriticalRate">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">60</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="366" toLevel="1" name="Dance of Shadows">
-		<!-- For 5 min., all party members' Speed -50% and prevents them from being pre-emptively attacked by monsters. The effect will be canceled if any party member launches an attack. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+	<skill id="366" toLevel="3" name="Dance of Shadows">
+		<!-- For $s1, all party members' Speed -$s2 prevents them from being pre-emptively attacked by monsters. The effect will be canceled if any party member launches an attack. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0366</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_SHADOW</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
@@ -2754,8 +2853,16 @@
 		<effectPoint>666</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>77</magicLvl>
-		<mpConsume>66</mpConsume>
+		<magicLvl>
+			<value level="1">77</value>
+			<value level="2">81</value>
+			<value level="3">84</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">77</value>
+			<value level="2">81</value>
+			<value level="3">85</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -2810,15 +2917,23 @@
 				<allowWeapons>SWORD,BLUNT</allowWeapons>
 			</effect>
 			<effect name="Speed">
-				<amount>-50</amount>
+				<amount>
+					<value level="1">-50</value>
+					<value level="2">-40</value>
+					<value level="3">-30</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="367" toLevel="1" name="Dance of Medusa">
+	<skill id="367" toLevel="3" name="Dance of Medusa">
 		<!-- Dances to stir up the illusion of Medusa. Petrifies nearby enemies for $s1. Requires a dual sword. -->
 		<icon>icon.skill0367</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
@@ -2833,8 +2948,16 @@
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>79</magicLvl>
-		<mpConsume>43</mpConsume>
+		<magicLvl>
+			<value level="1">79</value>
+			<value level="2">81</value>
+			<value level="3">83</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">43</value>
+			<value level="2">50</value>
+			<value level="3">75</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>120000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3433,7 +3556,6 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

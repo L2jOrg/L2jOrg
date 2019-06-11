@@ -2413,7 +2413,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>TOUCH_OF_DEATH</abnormalType>
-		<activateRate>90</activateRate>
+		<activateRate>40</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -2426,8 +2426,7 @@
 		<magicLvl>80</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
-
+		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DEATH</trait>
 		<targetType>SELF</targetType>
@@ -2440,11 +2439,6 @@
 					<item>BLUNT</item>
 				</weaponType>
 			</condition>
-			<condition name="OpCheckAbnormal">
-				<type>SEED_OF_KNIGHT</type>
-				<level>4</level>
-				<hasAbnormal>true</hasAbnormal>
-			</condition>
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
@@ -2455,8 +2449,8 @@
 			</effect>
 			<effect name="DispelByCategory">
 				<slot>BUFF</slot>
-				<rate>25</rate>
-				<max>5</max>
+				<rate>10</rate>
+				<max>1</max>
 			</effect>
 			<effect name="MaxCp">
 				<amount>-90</amount>
@@ -2624,7 +2618,6 @@
 		<mpConsume>36</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>900000</reuseDelay>
-
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -2783,7 +2776,6 @@
 		<mpConsume>280</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>75000</reuseDelay>
-
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -2908,7 +2900,6 @@
 		<mpConsume>58</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
-
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DISARM</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2998,7 +2989,6 @@
 		<operateType>A2</operateType>
 		<reuseDelay>75000</reuseDelay>
 		<trait>SHOCK</trait>
-
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3039,7 +3029,6 @@
 		<mpInitialConsume>14</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3065,7 +3054,6 @@
 		<mpInitialConsume>14</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3091,7 +3079,6 @@
 		<mpInitialConsume>14</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3323,7 +3310,6 @@
 		<magicLvl>81</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>150000</reuseDelay>
-
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
@@ -3374,7 +3360,6 @@
 		<mpInitialConsume>8</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
-
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -3694,7 +3679,6 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
-
 		<soulMaxConsumeCount>5</soulMaxConsumeCount>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
@@ -3818,7 +3802,6 @@
 		<mpConsume>88</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>

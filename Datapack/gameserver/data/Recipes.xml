@@ -168,6 +168,12 @@
 		<production id="1466" count="300" />
 		<statUse name="MP" value="120" />
 	</item>
+	<item id="24" recipeId="1808" name="mk_soulshot_s" craftLevel="8" type="dwarven" successRate="100">
+		<ingredient id="1785" count="40" />
+		<ingredient id="1462" count="1" />
+		<production id="1467" count="350" />
+		<statUse name="MP" value="150" />
+	</item>
 	<item id="25" recipeId="1814" name="mk_leather" craftLevel="1" type="dwarven" successRate="100">
 		<ingredient id="1867" count="6" />
 		<production id="1882" count="1" />
@@ -2766,6 +2772,12 @@
 		<production id="2513" count="200" />
 		<statUse name="MP" value="240" />
 	</item>
+	<item id="321" recipeId="3036" name="mk_spiritshot_s" craftLevel="8" type="dwarven" successRate="100">
+		<ingredient id="3031" count="15" />
+		<ingredient id="1462" count="1" />
+		<production id="2514" count="200" />
+		<statUse name="MP" value="300" />
+	</item>
 	<item id="322" recipeId="3838" name="q_mk_titans_powerstone" craftLevel="2" type="dwarven" successRate="25">
 		<ingredient id="3845" count="1" />
 		<production id="3846" count="1" />
@@ -2794,6 +2806,12 @@
 		<ingredient id="1461" count="2" />
 		<production id="3951" count="200" />
 		<statUse name="MP" value="240" />
+	</item>
+	<item id="327" recipeId="3957" name="mk_blessed_spiritshot_s" craftLevel="8" type="dwarven" successRate="100">
+		<ingredient id="3031" count="50" />
+		<ingredient id="1462" count="2" />
+		<production id="3952" count="200" />
+		<statUse name="MP" value="300" />
 	</item>
 	<item id="328" recipeId="4937" name="mk_adamantite_earing_i" craftLevel="6" type="dwarven" successRate="70">
 		<ingredient id="4937" count="1" />
@@ -6003,6 +6021,351 @@
 		<production id="6328" count="1" />
 		<statUse name="MP" value="201" />
 	</item>
+	<item id="625" recipeId="6901" name="mk_shining_arrow" craftLevel="8" type="dwarven" successRate="100">
+		<ingredient id="1876" count="4" />
+		<ingredient id="1878" count="4" />
+		<production id="1345" count="500" />
+		<statUse name="MP" value="150" />
+	</item>
+	<item id="626" recipeId="6881" name="mk_forgotten_blade_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6881" count="1" />
+		<ingredient id="6688" count="25" />
+		<ingredient id="5554" count="538" />
+		<ingredient id="1890" count="2467" />
+		<ingredient id="1888" count="1580" />
+		<ingredient id="5550" count="800" />
+		<ingredient id="4042" count="650" />
+		<ingredient id="1462" count="400" />
+		<ingredient id="2134" count="400" />
+		<production id="6364" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="628" recipeId="6883" name="mk_basalt_battlehammer_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6883" count="1" />
+		<ingredient id="6689" count="25" />
+		<ingredient id="5554" count="538" />
+		<ingredient id="1890" count="1911" />
+		<ingredient id="1888" count="1580" />
+		<ingredient id="5550" count="800" />
+		<ingredient id="1885" count="2800" />
+		<ingredient id="4042" count="600" />
+		<ingredient id="1462" count="400" />
+		<ingredient id="2134" count="400" />
+		<production id="6365" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="630" recipeId="6885" name="mk_imperial_staff_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6885" count="1" />
+		<ingredient id="6690" count="25" />
+		<ingredient id="5554" count="538" />
+		<ingredient id="1893" count="1800" />
+		<ingredient id="5550" count="500" />
+		<ingredient id="1889" count="1000" />
+		<ingredient id="1881" count="2200" />
+		<ingredient id="4042" count="600" />
+		<ingredient id="1462" count="400" />
+		<ingredient id="2134" count="400" />
+		<production id="6366" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="632" recipeId="6887" name="mk_angel_slayer_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6887" count="1" />
+		<ingredient id="6691" count="25" />
+		<ingredient id="5554" count="538" />
+		<ingredient id="1890" count="2467" />
+		<ingredient id="1888" count="1580" />
+		<ingredient id="5550" count="800" />
+		<ingredient id="4042" count="650" />
+		<ingredient id="1462" count="400" />
+		<ingredient id="2134" count="400" />
+		<production id="6367" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="636" recipeId="6891" name="mk_dragon_hunter_axe_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6891" count="1" />
+		<ingredient id="6693" count="25" />
+		<ingredient id="5554" count="538" />
+		<ingredient id="1890" count="1911" />
+		<ingredient id="1888" count="1580" />
+		<ingredient id="5550" count="800" />
+		<ingredient id="1885" count="2800" />
+		<ingredient id="4042" count="600" />
+		<ingredient id="1462" count="400" />
+		<ingredient id="2134" count="400" />
+		<production id="6369" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="638" recipeId="6893" name="mk_saint_spear_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6893" count="1" />
+		<ingredient id="6694" count="25" />
+		<ingredient id="5554" count="538" />
+		<ingredient id="1890" count="1911" />
+		<ingredient id="1888" count="1580" />
+		<ingredient id="5550" count="800" />
+		<ingredient id="1885" count="2800" />
+		<ingredient id="4042" count="600" />
+		<ingredient id="1462" count="400" />
+		<ingredient id="2134" count="400" />
+		<production id="6370" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="640" recipeId="6895" name="mk_demon_splinter_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6895" count="1" />
+		<ingredient id="6695" count="25" />
+		<ingredient id="5554" count="538" />
+		<ingredient id="1890" count="1911" />
+		<ingredient id="1888" count="1580" />
+		<ingredient id="5550" count="800" />
+		<ingredient id="1885" count="2800" />
+		<ingredient id="4042" count="600" />
+		<ingredient id="1462" count="400" />
+		<ingredient id="2134" count="400" />
+		<production id="6371" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="642" recipeId="6897" name="mk_heavens_divider_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6897" count="1" />
+		<ingredient id="6696" count="25" />
+		<ingredient id="5554" count="538" />
+		<ingredient id="1890" count="2467" />
+		<ingredient id="1888" count="1580" />
+		<ingredient id="5550" count="800" />
+		<ingredient id="4042" count="650" />
+		<ingredient id="1462" count="400" />
+		<ingredient id="2134" count="400" />
+		<production id="6372" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="644" recipeId="6899" name="mk_arcana_mace_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6899" count="1" />
+		<ingredient id="6697" count="25" />
+		<ingredient id="5554" count="538" />
+		<ingredient id="1890" count="1911" />
+		<ingredient id="1888" count="1580" />
+		<ingredient id="5550" count="800" />
+		<ingredient id="1885" count="2800" />
+		<ingredient id="4042" count="600" />
+		<ingredient id="1462" count="400" />
+		<ingredient id="2134" count="400" />
+		<production id="6579" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="646" recipeId="6847" name="mk_sealed_sanddragon's_earing_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6847" count="1" />
+		<ingredient id="6698" count="35" />
+		<ingredient id="5552" count="81" />
+		<ingredient id="1895" count="1200" />
+		<ingredient id="1887" count="158" />
+		<ingredient id="4044" count="120" />
+		<ingredient id="1462" count="80" />
+		<ingredient id="2134" count="60" />
+		<production id="6724" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="648" recipeId="6849" name="mk_sealed_ring_of_aurakyria_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6849" count="1" />
+		<ingredient id="6699" count="35" />
+		<ingredient id="4048" count="127" />
+		<ingredient id="1895" count="1200" />
+		<ingredient id="1887" count="100" />
+		<ingredient id="4044" count="100" />
+		<ingredient id="1462" count="50" />
+		<ingredient id="2134" count="40" />
+		<production id="6725" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="650" recipeId="6851" name="mk_sealed_dragon_necklace_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6851" count="1" />
+		<ingredient id="6700" count="35" />
+		<ingredient id="5552" count="113" />
+		<ingredient id="1895" count="1200" />
+		<ingredient id="1887" count="158" />
+		<ingredient id="4044" count="200" />
+		<ingredient id="1462" count="100" />
+		<ingredient id="2134" count="80" />
+		<production id="6726" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="652" recipeId="6853" name="mk_sealed_imperial_crusader_armor_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6853" count="1" />
+		<ingredient id="6701" count="35" />
+		<ingredient id="5553" count="274" />
+		<ingredient id="1890" count="400" />
+		<ingredient id="4043" count="200" />
+		<ingredient id="1462" count="124" />
+		<ingredient id="2134" count="150" />
+		<production id="6674" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="654" recipeId="6855" name="mk_sealed_imperial_crusader_gaiters_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6855" count="1" />
+		<ingredient id="6702" count="35" />
+		<ingredient id="5553" count="184" />
+		<ingredient id="1890" count="400" />
+		<ingredient id="4043" count="200" />
+		<ingredient id="1462" count="74" />
+		<ingredient id="2134" count="60" />
+		<production id="6675" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="656" recipeId="6857" name="mk_sealed_imperial_crusader_gauntlet_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6857" count="1" />
+		<ingredient id="6703" count="35" />
+		<ingredient id="5552" count="78" />
+		<ingredient id="1894" count="800" />
+		<ingredient id="1885" count="100" />
+		<ingredient id="4043" count="80" />
+		<ingredient id="1462" count="80" />
+		<ingredient id="2134" count="40" />
+		<production id="6676" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="658" recipeId="6859" name="mk_sealed_imperial_crusader_boots_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6859" count="1" />
+		<ingredient id="6704" count="35" />
+		<ingredient id="5552" count="78" />
+		<ingredient id="1894" count="800" />
+		<ingredient id="1885" count="100" />
+		<ingredient id="4043" count="80" />
+		<ingredient id="1462" count="80" />
+		<ingredient id="2134" count="40" />
+		<production id="6677" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="660" recipeId="6861" name="mk_sealed_imperial_crusader_shield_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6861" count="1" />
+		<ingredient id="6705" count="35" />
+		<ingredient id="5551" count="98" />
+		<ingredient id="1890" count="400" />
+		<ingredient id="1894" count="50" />
+		<ingredient id="1888" count="120" />
+		<ingredient id="4043" count="1200" />
+		<ingredient id="1462" count="50" />
+		<ingredient id="2134" count="50" />
+		<production id="6678" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="662" recipeId="6863" name="mk_sealed_imperial_crusader_helmet_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6863" count="1" />
+		<ingredient id="6706" count="35" />
+		<ingredient id="5551" count="215" />
+		<ingredient id="1894" count="650" />
+		<ingredient id="4043" count="412" />
+		<ingredient id="1462" count="55" />
+		<ingredient id="2134" count="40" />
+		<production id="6679" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="664" recipeId="6865" name="mk_sealed_draconic_leather_armor_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6865" count="1" />
+		<ingredient id="6707" count="35" />
+		<ingredient id="5553" count="351" />
+		<ingredient id="1894" count="500" />
+		<ingredient id="1895" count="2000" />
+		<ingredient id="1889" count="320" />
+		<ingredient id="4043" count="1500" />
+		<ingredient id="1462" count="150" />
+		<ingredient id="2134" count="80" />
+		<production id="6680" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="666" recipeId="6867" name="mk_sealed_draconic_leather_gloves_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6867" count="1" />
+		<ingredient id="6708" count="35" />
+		<ingredient id="5552" count="78" />
+		<ingredient id="1894" count="500" />
+		<ingredient id="1885" count="100" />
+		<ingredient id="4043" count="120" />
+		<ingredient id="1462" count="80" />
+		<ingredient id="2134" count="40" />
+		<production id="6681" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="668" recipeId="6869" name="mk_sealed_draconic_leather_boots_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6869" count="1" />
+		<ingredient id="6709" count="35" />
+		<ingredient id="5552" count="78" />
+		<ingredient id="1894" count="500" />
+		<ingredient id="1885" count="100" />
+		<ingredient id="4043" count="120" />
+		<ingredient id="1462" count="80" />
+		<ingredient id="2134" count="40" />
+		<production id="6682" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="670" recipeId="6871" name="mk_sealed_draconic_leather_helmet_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6871" count="1" />
+		<ingredient id="6710" count="35" />
+		<ingredient id="5551" count="215" />
+		<ingredient id="1894" count="650" />
+		<ingredient id="4043" count="412" />
+		<ingredient id="1462" count="55" />
+		<ingredient id="2134" count="40" />
+		<production id="6683" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="672" recipeId="6873" name="mk_sealed_major_arcana_robe_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6873" count="1" />
+		<ingredient id="6711" count="35" />
+		<ingredient id="5553" count="351" />
+		<ingredient id="1894" count="500" />
+		<ingredient id="1895" count="2000" />
+		<ingredient id="1889" count="320" />
+		<ingredient id="4043" count="1500" />
+		<ingredient id="1462" count="150" />
+		<ingredient id="2134" count="80" />
+		<production id="6684" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="674" recipeId="6875" name="mk_sealed_major_arcana_gloves_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6875" count="1" />
+		<ingredient id="6712" count="35" />
+		<ingredient id="5552" count="78" />
+		<ingredient id="1894" count="500" />
+		<ingredient id="1885" count="100" />
+		<ingredient id="4043" count="120" />
+		<ingredient id="1462" count="80" />
+		<ingredient id="2134" count="40" />
+		<production id="6685" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="676" recipeId="6877" name="mk_sealed_major_arcana_boots_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6877" count="1" />
+		<ingredient id="6713" count="35" />
+		<ingredient id="5552" count="78" />
+		<ingredient id="1894" count="500" />
+		<ingredient id="1885" count="100" />
+		<ingredient id="4043" count="120" />
+		<ingredient id="1462" count="80" />
+		<ingredient id="2134" count="40" />
+		<production id="6686" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="678" recipeId="6879" name="mk_sealed_major_arcana_hood_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="6879" count="1" />
+		<ingredient id="6714" count="35" />
+		<ingredient id="5551" count="215" />
+		<ingredient id="1894" count="650" />
+		<ingredient id="4043" count="412" />
+		<ingredient id="1462" count="55" />
+		<ingredient id="2134" count="40" />
+		<production id="6687" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
+	<item id="774" recipeId="7580" name="mk_draconic_bow_i" craftLevel="9" type="dwarven" successRate="30">
+		<ingredient id="7580" count="1" />
+		<ingredient id="7579" count="25" />
+		<ingredient id="5554" count="538" />
+		<ingredient id="1890" count="1911" />
+		<ingredient id="5550" count="1741" />
+		<ingredient id="1885" count="4800" />
+		<ingredient id="1889" count="2800" />
+		<ingredient id="4042" count="600" />
+		<ingredient id="1462" count="400" />
+		<ingredient id="2134" count="400" />
+		<production id="7575" count="1" />
+		<statUse name="MP" value="225" />
+	</item>
 	<item id="783" recipeId="8294" name="mk_iron_sword" craftLevel="2" type="dwarven" successRate="100">
 		<ingredient id="8327" count="4" />
 		<ingredient id="1883" count="3" />
@@ -6160,6 +6523,19 @@
 		<ingredient id="2132" count="143" />
 		<production id="7884" count="1" />
 		<statUse name="MP" value="192" />
+	</item>
+	<item id="844" recipeId="8690" name="mk_sirr_blade_i" craftLevel="8" type="dwarven" successRate="60">
+		<ingredient id="8690" count="1" />
+		<ingredient id="8712" count="20" />
+		<ingredient id="4047" count="11" />
+		<ingredient id="5550" count="102" />
+		<ingredient id="1890" count="204" />
+		<ingredient id="1888" count="204" />
+		<ingredient id="4042" count="102" />
+		<ingredient id="1461" count="254" />
+		<ingredient id="2133" count="100" />
+		<production id="8678" count="1" />
+		<statUse name="MP" value="210" />
 	</item>
 	<item id="845" recipeId="8691" name="mk_sirr_blade_ii" craftLevel="8" type="dwarven" successRate="100">
 		<ingredient id="8691" count="1" />
@@ -6471,5 +6847,11 @@
 		<ingredient id="1461" count="1" />
 		<production id="49743" count="155" />
 		<statUse name="MP" value="120" />
+	</item>
+	<item id="4004" recipeId="91489" name="mk_bless_soulshot_s" craftLevel="8" type="dwarven" successRate="100">
+		<ingredient id="1785" count="200" />
+		<ingredient id="1462" count="1" />
+		<production id="91488" count="216" />
+		<statUse name="MP" value="200" />
 	</item>
 </list>

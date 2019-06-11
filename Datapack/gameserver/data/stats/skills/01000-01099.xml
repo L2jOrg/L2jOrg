@@ -2843,8 +2843,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1062" toLevel="2" name="Berserker Spirit">
-		<!-- Party member's P. Def. -$s2, M. Def. -$s3 and Evasion -$s4, and P. Atk. +$s5, M. Atk. +$s6, Atk. Spd. +$s7, Casting Spd. +$s8 and Speed +$s9 for $s1. -->
+	<skill id="1062" toLevel="2" name="Soul of Berserker">
+		<!-- For $s1 party member's P. Def. -$s2, M. Def. -$s3, P. Evasion -$s4, P. Atk. +$s5, M. Atk. +$s6, Atk. Spd. +$s7, Casting Spd. +$s8 and Speed +$s9. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3126,7 +3126,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1069" toLevel="45" name="Sleep">
+	<skill id="1069" toLevel="51" name="Sleep">
 		<!-- Causes the enemy to sleep for $s1. -->
 		<icon>icon.skill1069</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3182,6 +3182,12 @@
 			<value level="43">-661</value>
 			<value level="44">-666</value>
 			<value level="45">-673</value>
+			<value level="46">-673</value>
+			<value level="47">-673</value>
+			<value level="48">-673</value>
+			<value level="49">-673</value>
+			<value level="50">-673</value>
+			<value level="51">-673</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>10000</hitTime>
@@ -3234,6 +3240,12 @@
 			<value level="43">76</value>
 			<value level="44">77</value>
 			<value level="45">78</value>
+			<value level="46">79</value>
+			<value level="47">80</value>
+			<value level="48">81</value>
+			<value level="49">82</value>
+			<value level="50">83</value>
+			<value level="51">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">17</value>
@@ -3281,6 +3293,12 @@
 			<value level="43">75</value>
 			<value level="44">77</value>
 			<value level="45">79</value>
+			<value level="46">81</value>
+			<value level="47">83</value>
+			<value level="48">85</value>
+			<value level="49">87</value>
+			<value level="50">89</value>
+			<value level="51">91</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">5</value>
@@ -3328,6 +3346,12 @@
 			<value level="43">14</value>
 			<value level="44">14</value>
 			<value level="45">15</value>
+			<value level="46">15</value>
+			<value level="47">15</value>
+			<value level="48">15</value>
+			<value level="49">15</value>
+			<value level="50">15</value>
+			<value level="51">15</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<removedOnDamage>true</removedOnDamage>
@@ -4311,8 +4335,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1090" toLevel="6" name="Life Drain">
-		<!-- Inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. Absorbs $s2 of the damage as HP. -->
+	<skill id="1090" toLevel="6" name="Drain Energy">
+		<!-- Inflicts damage on the enemy with $s1 Power added to M. Atk. Absorbs $s2 of the damage as HP. -->
 		<icon>icon.skill1090</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -4835,7 +4859,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1099" toLevel="17" name="Seal of Slow">
+	<skill id="1099" toLevel="23" name="Seal of Slow">
 		<!-- Nearby enemies' Speed -$s2 for $s1. -->
 		<icon>icon.skill1099</icon>
 		<abnormalLvl>
@@ -4856,6 +4880,12 @@
 			<value level="15">3</value>
 			<value level="16">3</value>
 			<value level="17">3</value>
+			<value level="18">3</value>
+			<value level="19">3</value>
+			<value level="20">3</value>
+			<value level="21">3</value>
+			<value level="22">3</value>
+			<value level="23">3</value>
 		</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -4879,8 +4909,14 @@
 			<value level="13">-635</value>
 			<value level="14">-646</value>
 			<value level="15">-655</value>
-			<value level="16">-664</value>
-			<value level="17">-673</value>
+			<value level="16">-659</value>
+			<value level="17">-663</value>
+			<value level="18">-667</value>
+			<value level="19">-671</value>
+			<value level="20">-675</value>
+			<value level="21">-679</value>
+			<value level="22">-682</value>
+			<value level="23">-684</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
 		<isDebuff>true</isDebuff>
@@ -4904,6 +4940,12 @@
 			<value level="15">74</value>
 			<value level="16">76</value>
 			<value level="17">78</value>
+			<value level="18">79</value>
+			<value level="19">80</value>
+			<value level="20">81</value>
+			<value level="21">82</value>
+			<value level="22">83</value>
+			<value level="23">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">36</value>
@@ -4923,6 +4965,12 @@
 			<value level="15">82</value>
 			<value level="16">113</value>
 			<value level="17">117</value>
+			<value level="18">120</value>
+			<value level="19">123</value>
+			<value level="20">126</value>
+			<value level="21">129</value>
+			<value level="22">132</value>
+			<value level="23">135</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">9</value>
@@ -4942,6 +4990,12 @@
 			<value level="15">21</value>
 			<value level="16">22</value>
 			<value level="17">23</value>
+			<value level="18">24</value>
+			<value level="19">25</value>
+			<value level="20">26</value>
+			<value level="21">27</value>
+			<value level="22">28</value>
+			<value level="23">29</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -4969,6 +5023,12 @@
 					<value level="15">-30</value>
 					<value level="16">-30</value>
 					<value level="17">-30</value>
+					<value level="18">-30</value>
+					<value level="19">-30</value>
+					<value level="20">-30</value>
+					<value level="21">-30</value>
+					<value level="22">-30</value>
+					<value level="23">-30</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>

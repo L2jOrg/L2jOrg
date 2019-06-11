@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="205" toLevel="53" name="Sword/Blunt Weapon Mastery">
+	<skill id="205" toLevel="54" name="Sword/Blunt Weapon Mastery">
 		<!-- P. Atk. +$s1 when using a sword or a blunt weapon, with an additionally +$s2 when using a sword, or +$s3 when using a blunt weapon. -->
 		<icon>icon.skill0217</icon>
 		<magicLvl>
@@ -57,6 +57,7 @@
 			<value level="51">82</value>
 			<value level="52">83</value>
 			<value level="53">84</value>
+			<value level="54">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -137,6 +138,7 @@
 					<value level="51">150</value>
 					<value level="52">153</value>
 					<value level="53">156</value>
+					<value level="54">159</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -199,6 +201,7 @@
 					<value level="51">141</value>
 					<value level="52">144</value>
 					<value level="53">147</value>
+					<value level="54">150</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -260,6 +263,7 @@
 					<value level="51">153</value>
 					<value level="52">156</value>
 					<value level="53">159</value>
+					<value level="54">162</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -268,7 +272,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="208" toLevel="60" name="Bow Mastery">
+	<skill id="208" toLevel="61" name="Bow Mastery">
 		<!-- P. Atk. +$s1 when using a bow. -->
 		<icon>icon.skill0208</icon>
 		<magicLvl>
@@ -332,6 +336,7 @@
 			<value level="58">82</value>
 			<value level="59">83</value>
 			<value level="60">84</value>
+			<value level="61">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -398,6 +403,7 @@
 					<value level="58">861</value>
 					<value level="59">867</value>
 					<value level="60">874</value>
+					<value level="61">880</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -406,7 +412,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="209" toLevel="53" name="Dagger Mastery">
+	<skill id="209" toLevel="54" name="Dagger Mastery">
 		<!-- P. Atk. +$s1 when using a dagger. -->
 		<icon>icon.skill0209</icon>
 		<magicLvl>
@@ -463,6 +469,7 @@
 			<value level="51">82</value>
 			<value level="52">83</value>
 			<value level="53">84</value>
+			<value level="54">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -535,6 +542,7 @@
 					<value level="51">136</value>
 					<value level="52">139</value>
 					<value level="53">142</value>
+					<value level="54">145</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -544,7 +552,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="210" toLevel="53" name="Fist Weapon Mastery">
+	<skill id="210" toLevel="54" name="Fist Weapon Mastery">
 		<!-- P. Atk. +$s1 when using a fist weapon. -->
 		<icon>icon.skill0210</icon>
 		<magicLvl>
@@ -601,6 +609,7 @@
 			<value level="51">82</value>
 			<value level="52">83</value>
 			<value level="53">84</value>
+			<value level="54">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -660,6 +669,7 @@
 					<value level="51">155</value>
 					<value level="52">158</value>
 					<value level="53">161</value>
+					<value level="54">164</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -781,7 +791,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="216" toLevel="53" name="Polearm Mastery">
+	<skill id="216" toLevel="54" name="Polearm Mastery">
 		<!-- P. Atk. +$s1 when using a polearm, and allows an attack on multiple targets. -->
 		<icon>icon.skill0216</icon>
 		<magicLvl>
@@ -838,6 +848,7 @@
 			<value level="51">82</value>
 			<value level="52">83</value>
 			<value level="53">84</value>
+			<value level="54">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -897,6 +908,7 @@
 					<value level="51">158</value>
 					<value level="52">161</value>
 					<value level="53">164</value>
+					<value level="54">167</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -958,6 +970,7 @@
 					<value level="51">10</value>
 					<value level="52">10</value>
 					<value level="53">10</value>
+					<value level="54">10</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -966,7 +979,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="217" toLevel="53" name="Sword/Blunt Weapon Mastery">
+	<skill id="217" toLevel="54" name="Sword/Blunt Weapon Mastery">
 		<!-- P. Atk. +$s1 when using a sword or blunt weapon. -->
 		<icon>icon.skill0217</icon>
 		<magicLvl>
@@ -1023,6 +1036,7 @@
 			<value level="51">82</value>
 			<value level="52">83</value>
 			<value level="53">84</value>
+			<value level="54">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1082,6 +1096,7 @@
 					<value level="51">87</value>
 					<value level="52">88</value>
 					<value level="53">89</value>
+					<value level="54">90</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -1543,8 +1558,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="227" toLevel="58" name="Light Armor Mastery">
-		<!-- P. Def. +$s1 and Evasion +$s2 when equipped with light armor. -->
+	<skill id="227" toLevel="59" name="Light Armor Mastery">
+		<!-- P. Def. +$s1 and P. Evasion +$s2 when equipped with light armor. -->
 		<icon>icon.skill0227</icon>
 		<magicLvl>
 			<value level="1">18</value>
@@ -1605,6 +1620,7 @@
 			<value level="56">82</value>
 			<value level="57">83</value>
 			<value level="58">84</value>
+			<value level="59">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1669,6 +1685,7 @@
 					<value level="56">97</value>
 					<value level="57">99</value>
 					<value level="58">101</value>
+					<value level="59">103</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -1735,6 +1752,7 @@
 					<value level="56">6</value>
 					<value level="57">6</value>
 					<value level="58">6</value>
+					<value level="59">6</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -1836,68 +1854,69 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="231" toLevel="58" name="Heavy Armor Mastery">
+	<skill id="231" toLevel="59" name="Heavy Armor Mastery">
 		<!-- When equipped with Heavy Armor, P. Def. +$s1. -->
 		<icon>icon.skill0231</icon>
 		<magicLvl>
-			<value level="1">18</value>
-			<value level="2">19</value>
-			<value level="3">20</value>
-			<value level="4">22</value>
-			<value level="5">23</value>
-			<value level="6">24</value>
-			<value level="7">26</value>
-			<value level="8">27</value>
-			<value level="9">28</value>
-			<value level="10">30</value>
-			<value level="11">31</value>
-			<value level="12">32</value>
-			<value level="13">34</value>
-			<value level="14">35</value>
-			<value level="15">36</value>
-			<value level="16">38</value>
-			<value level="17">39</value>
-			<value level="18">40</value>
-			<value level="19">41</value>
-			<value level="20">42</value>
-			<value level="21">43</value>
-			<value level="22">44</value>
-			<value level="23">45</value>
-			<value level="24">46</value>
-			<value level="25">47</value>
-			<value level="26">48</value>
-			<value level="27">49</value>
-			<value level="28">50</value>
-			<value level="29">51</value>
-			<value level="30">52</value>
-			<value level="31">53</value>
-			<value level="32">54</value>
-			<value level="33">55</value>
-			<value level="34">56</value>
-			<value level="35">57</value>
-			<value level="36">58</value>
-			<value level="37">59</value>
-			<value level="38">60</value>
-			<value level="39">61</value>
-			<value level="40">62</value>
-			<value level="41">63</value>
-			<value level="42">64</value>
-			<value level="43">65</value>
-			<value level="44">66</value>
-			<value level="45">67</value>
-			<value level="46">68</value>
-			<value level="47">69</value>
-			<value level="48">70</value>
-			<value level="49">71</value>
-			<value level="50">72</value>
-			<value level="51">73</value>
-			<value level="52">74</value>
-			<value level="53">76</value>
-			<value level="54">77</value>
-			<value level="55">78</value>
-			<value level="56">80</value>
-			<value level="57">81</value>
-			<value level="58">82</value>
+			<value level="1">20</value>
+			<value level="2">20</value>
+			<value level="3">22</value>
+			<value level="4">24</value>
+			<value level="5">26</value>
+			<value level="6">27</value>
+			<value level="7">28</value>
+			<value level="8">30</value>
+			<value level="9">31</value>
+			<value level="10">32</value>
+			<value level="11">34</value>
+			<value level="12">35</value>
+			<value level="13">36</value>
+			<value level="14">40</value>
+			<value level="15">40</value>
+			<value level="16">40</value>
+			<value level="17">41</value>
+			<value level="18">42</value>
+			<value level="19">43</value>
+			<value level="20">44</value>
+			<value level="21">45</value>
+			<value level="22">46</value>
+			<value level="23">47</value>
+			<value level="24">48</value>
+			<value level="25">49</value>
+			<value level="26">50</value>
+			<value level="27">51</value>
+			<value level="28">52</value>
+			<value level="29">53</value>
+			<value level="30">54</value>
+			<value level="31">55</value>
+			<value level="32">56</value>
+			<value level="33">57</value>
+			<value level="34">58</value>
+			<value level="35">59</value>
+			<value level="36">60</value>
+			<value level="37">61</value>
+			<value level="38">62</value>
+			<value level="39">63</value>
+			<value level="40">64</value>
+			<value level="41">65</value>
+			<value level="42">66</value>
+			<value level="43">67</value>
+			<value level="44">68</value>
+			<value level="45">69</value>
+			<value level="46">70</value>
+			<value level="47">71</value>
+			<value level="48">72</value>
+			<value level="49">73</value>
+			<value level="50">74</value>
+			<value level="51">76</value>
+			<value level="52">77</value>
+			<value level="53">78</value>
+			<value level="54">80</value>
+			<value level="55">81</value>
+			<value level="56">82</value>
+			<value level="57">83</value>
+			<value level="58">84</value>
+			<value level="59">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1970,8 +1989,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="232" toLevel="60" name="Heavy Armor Mastery">
-		<!-- P. Def. +$s1 and received Critical Damage -$s2 when equipped with heavy armor. -->
+	<skill id="232" toLevel="61" name="Heavy Armor Mastery">
+		<!-- P. Def. +$s1 and received P. Critical Damage -$s2 when equipped with heavy armor. -->
 		<icon>icon.skill0232</icon>
 		<magicLvl>
 			<value level="1">18</value>
@@ -2034,6 +2053,7 @@
 			<value level="58">82</value>
 			<value level="59">83</value>
 			<value level="60">84</value>
+			<value level="61">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2100,6 +2120,7 @@
 					<value level="58">199</value>
 					<value level="59">202</value>
 					<value level="60">205</value>
+					<value level="61">208</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -2168,6 +2189,7 @@
 					<value level="58">35</value>
 					<value level="59">35</value>
 					<value level="60">35</value>
+					<value level="61">35</value>
 				</amount>
 				<mode>PER</mode>
 				<armorType>
@@ -2176,10 +2198,67 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="233" toLevel="55" name="Light Armor Mastery">
+	<skill id="233" toLevel="56" name="Light Armor Mastery">
 		<!-- P. Def. +$s1, P. Evasion +$s2 and Chance of receiving P. Critical Attack -$s3 when equipped with light armor. -->
 		<icon>icon.skill0233</icon>
-		<magicLvl>1</magicLvl>
+		<magicLvl>
+			<value level="1">20</value>
+			<value level="2">20</value>
+			<value level="3">22</value>
+			<value level="4">24</value>
+			<value level="5">26</value>
+			<value level="6">28</value>
+			<value level="7">30</value>
+			<value level="8">32</value>
+			<value level="9">34</value>
+			<value level="10">36</value>
+			<value level="11">40</value>
+			<value level="12">40</value>
+			<value level="13">40</value>
+			<value level="14">41</value>
+			<value level="15">42</value>
+			<value level="16">43</value>
+			<value level="17">44</value>
+			<value level="18">45</value>
+			<value level="19">46</value>
+			<value level="20">47</value>
+			<value level="21">48</value>
+			<value level="22">49</value>
+			<value level="23">50</value>
+			<value level="24">51</value>
+			<value level="25">52</value>
+			<value level="26">53</value>
+			<value level="27">54</value>
+			<value level="28">55</value>
+			<value level="29">56</value>
+			<value level="30">57</value>
+			<value level="31">58</value>
+			<value level="32">59</value>
+			<value level="33">60</value>
+			<value level="34">61</value>
+			<value level="35">62</value>
+			<value level="36">63</value>
+			<value level="37">64</value>
+			<value level="38">65</value>
+			<value level="39">66</value>
+			<value level="40">67</value>
+			<value level="41">68</value>
+			<value level="42">69</value>
+			<value level="43">70</value>
+			<value level="44">71</value>
+			<value level="45">72</value>
+			<value level="46">73</value>
+			<value level="47">74</value>
+			<value level="48">76</value>
+			<value level="49">77</value>
+			<value level="50">78</value>
+			<value level="51">80</value>
+			<value level="52">81</value>
+			<value level="53">82</value>
+			<value level="54">83</value>
+			<value level="55">84</value>
+			<value level="56">85</value>
+		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2240,6 +2319,7 @@
 					<value level="53">87</value>
 					<value level="54">90</value>
 					<value level="55">93</value>
+					<value level="56">96</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -2303,6 +2383,7 @@
 					<value level="53">12</value>
 					<value level="54">12</value>
 					<value level="55">12</value>
+					<value level="56">12</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -2366,6 +2447,7 @@
 					<value level="53">-35</value>
 					<value level="54">-35</value>
 					<value level="55">-35</value>
+					<value level="56">-35</value>
 				</amount>
 				<mode>PER</mode>
 				<armorType>
@@ -2374,77 +2456,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="234" toLevel="49" name="Robe Mastery">
-		<!-- When equipped with a Robe, P. Def. +$s1. -->
+	<skill id="234" toLevel="50" name="Robe Mastery">
+		<!-- When equipped with a Robe, P. Def. +$s1, Max HP +$s2. -->
 		<icon>icon.skill0234</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
-		<magicCriticalRate>5</magicCriticalRate>
-		<effects>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="1">7.2</value>
-					<value level="2">8.6</value>
-					<value level="3">11</value>
-					<value level="4">12.7</value>
-					<value level="5">15.4</value>
-					<value level="6">17.4</value>
-					<value level="7">20.5</value>
-					<value level="8">22.7</value>
-					<value level="9">26.3</value>
-					<value level="10">27.6</value>
-					<value level="11">28.8</value>
-					<value level="12">31.5</value>
-					<value level="13">32.9</value>
-					<value level="14">34.2</value>
-					<value level="15">37.1</value>
-					<value level="16">38.6</value>
-					<value level="17">40.1</value>
-					<value level="18">43.2</value>
-					<value level="19">44.8</value>
-					<value level="20">46.4</value>
-					<value level="21">49.8</value>
-					<value level="22">51.5</value>
-					<value level="23">53.2</value>
-					<value level="24">54.9</value>
-					<value level="25">56.7</value>
-					<value level="26">58.5</value>
-					<value level="27">60.3</value>
-					<value level="28">62.1</value>
-					<value level="29">64.0</value>
-					<value level="30">65.9</value>
-					<value level="31">67.7</value>
-					<value level="32">69.7</value>
-					<value level="33">71.6</value>
-					<value level="34">73.5</value>
-					<value level="35">75.5</value>
-					<value level="36">77.4</value>
-					<value level="37">79.4</value>
-					<value level="38">81.4</value>
-					<value level="39">83.4</value>
-					<value level="40">85.4</value>
-					<value level="41">87.4</value>
-					<value level="42">90</value>
-					<value level="43">93</value>
-					<value level="44">96</value>
-					<value level="45">102</value>
-					<value level="46">105</value>
-					<value level="47">108</value>
-					<value level="48">111</value>
-					<value level="49">114</value>
-				</amount>
-				<mode>DIFF</mode>
-				<armorType>
-					<item>MAGIC</item>
-				</armorType>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="235" toLevel="49" name="Robe Mastery">
-		<!-- When equipped with a Robe, P. Def. +$s1. -->
-		<icon>icon.skill0235</icon>
 		<magicLvl>
-			<value level="1">18</value>
+			<value level="1">20</value>
 			<value level="2">20</value>
 			<value level="3">23</value>
 			<value level="4">25</value>
@@ -2452,8 +2469,8 @@
 			<value level="6">30</value>
 			<value level="7">33</value>
 			<value level="8">35</value>
-			<value level="9">38</value>
-			<value level="10">39</value>
+			<value level="9">40</value>
+			<value level="10">40</value>
 			<value level="11">40</value>
 			<value level="12">42</value>
 			<value level="13">43</value>
@@ -2493,8 +2510,8 @@
 			<value level="47">82</value>
 			<value level="48">83</value>
 			<value level="49">84</value>
+			<value level="50">85</value>
 		</magicLvl>
-		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -2548,6 +2565,65 @@
 					<value level="47">76</value>
 					<value level="48">79</value>
 					<value level="49">82</value>
+					<value level="50">85</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">30</value>
+					<value level="3">30</value>
+					<value level="4">35</value>
+					<value level="5">35</value>
+					<value level="6">40</value>
+					<value level="7">40</value>
+					<value level="8">45</value>
+					<value level="9">50</value>
+					<value level="10">54</value>
+					<value level="11">58</value>
+					<value level="12">62</value>
+					<value level="13">66</value>
+					<value level="14">70</value>
+					<value level="15">74</value>
+					<value level="16">78</value>
+					<value level="17">82</value>
+					<value level="18">87</value>
+					<value level="19">92</value>
+					<value level="20">97</value>
+					<value level="21">102</value>
+					<value level="22">107</value>
+					<value level="23">112</value>
+					<value level="24">117</value>
+					<value level="25">122</value>
+					<value level="26">127</value>
+					<value level="27">133</value>
+					<value level="28">139</value>
+					<value level="29">145</value>
+					<value level="30">151</value>
+					<value level="31">157</value>
+					<value level="32">164</value>
+					<value level="33">171</value>
+					<value level="34">178</value>
+					<value level="35">185</value>
+					<value level="36">192</value>
+					<value level="37">200</value>
+					<value level="38">208</value>
+					<value level="39">216</value>
+					<value level="40">224</value>
+					<value level="41">233</value>
+					<value level="42">242</value>
+					<value level="43">251</value>
+					<value level="44">260</value>
+					<value level="45">270</value>
+					<value level="46">280</value>
+					<value level="47">290</value>
+					<value level="48">300</value>
+					<value level="49">310</value>
+					<value level="50">320</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -2556,7 +2632,125 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="236" toLevel="49" name="Light Armor Mastery">
+	<skill id="235" toLevel="50" name="Robe Mastery">
+		<!-- When equipped with a Robe, P. Def. +$s1. -->
+		<icon>icon.skill0235</icon>
+		<magicLvl>
+			<value level="1">18</value>
+			<value level="2">20</value>
+			<value level="3">23</value>
+			<value level="4">25</value>
+			<value level="5">28</value>
+			<value level="6">30</value>
+			<value level="7">33</value>
+			<value level="8">35</value>
+			<value level="9">38</value>
+			<value level="10">39</value>
+			<value level="11">40</value>
+			<value level="12">42</value>
+			<value level="13">43</value>
+			<value level="14">44</value>
+			<value level="15">46</value>
+			<value level="16">47</value>
+			<value level="17">48</value>
+			<value level="18">50</value>
+			<value level="19">51</value>
+			<value level="20">52</value>
+			<value level="21">54</value>
+			<value level="22">55</value>
+			<value level="23">56</value>
+			<value level="24">57</value>
+			<value level="25">58</value>
+			<value level="26">59</value>
+			<value level="27">60</value>
+			<value level="28">61</value>
+			<value level="29">62</value>
+			<value level="30">63</value>
+			<value level="31">64</value>
+			<value level="32">65</value>
+			<value level="33">66</value>
+			<value level="34">67</value>
+			<value level="35">68</value>
+			<value level="36">69</value>
+			<value level="37">70</value>
+			<value level="38">71</value>
+			<value level="39">72</value>
+			<value level="40">73</value>
+			<value level="41">74</value>
+			<value level="42">76</value>
+			<value level="43">77</value>
+			<value level="44">78</value>
+			<value level="45">80</value>
+			<value level="46">81</value>
+			<value level="47">82</value>
+			<value level="48">83</value>
+			<value level="49">84</value>
+			<value level="50">85</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">7.2</value>
+					<value level="2">8.6</value>
+					<value level="3">11</value>
+					<value level="4">12.7</value>
+					<value level="5">15.4</value>
+					<value level="6">17.4</value>
+					<value level="7">20.5</value>
+					<value level="8">22.7</value>
+					<value level="9">26.3</value>
+					<value level="10">27.6</value>
+					<value level="11">28.8</value>
+					<value level="12">31.5</value>
+					<value level="13">32.9</value>
+					<value level="14">34.2</value>
+					<value level="15">37.1</value>
+					<value level="16">38.6</value>
+					<value level="17">40.1</value>
+					<value level="18">43.2</value>
+					<value level="19">44.8</value>
+					<value level="20">46.4</value>
+					<value level="21">49.8</value>
+					<value level="22">51.5</value>
+					<value level="23">53.2</value>
+					<value level="24">54.9</value>
+					<value level="25">56.7</value>
+					<value level="26">58.5</value>
+					<value level="27">60.3</value>
+					<value level="28">62.1</value>
+					<value level="29">64</value>
+					<value level="30">65.9</value>
+					<value level="31">67.7</value>
+					<value level="32">69.7</value>
+					<value level="33">71.6</value>
+					<value level="34">73.5</value>
+					<value level="35">75.5</value>
+					<value level="36">77.4</value>
+					<value level="37">79.4</value>
+					<value level="38">81.4</value>
+					<value level="39">83.4</value>
+					<value level="40">85.4</value>
+					<value level="41">87.4</value>
+					<value level="42">90</value>
+					<value level="43">93</value>
+					<value level="44">96</value>
+					<value level="45">102</value>
+					<value level="46">105</value>
+					<value level="47">108</value>
+					<value level="48">111</value>
+					<value level="49">114</value>
+					<value level="50">117</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="236" toLevel="50" name="Light Armor Mastery">
 		<!-- When equipped with light armor, P. Def. +$s1, Casting Spd. +$s2, Atk. Spd. +$s3, and MP Recovery Bonus +$s4. -->
 		<icon>icon.skill0236</icon>
 		<magicLvl>
@@ -2609,6 +2803,7 @@
 			<value level="47">82</value>
 			<value level="48">83</value>
 			<value level="49">84</value>
+			<value level="50">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2664,6 +2859,7 @@
 					<value level="47">91</value>
 					<value level="48">94</value>
 					<value level="49">97</value>
+					<value level="49">100</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -2900,7 +3096,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="249" toLevel="50" name="Weapon Mastery">
+	<skill id="249" toLevel="51" name="Weapon Mastery">
 		<!-- P. Atk. +$s1, M. Atk. +$s2. -->
 		<icon>icon.skill0249</icon>
 		<magicLvl>
@@ -2954,6 +3150,7 @@
 			<value level="48">82</value>
 			<value level="49">83</value>
 			<value level="50">84</value>
+			<value level="51">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3010,6 +3207,7 @@
 					<value level="48">101</value>
 					<value level="49">104</value>
 					<value level="50">107</value>
+					<value level="51">110</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3065,28 +3263,13 @@
 					<value level="48">123</value>
 					<value level="49">126</value>
 					<value level="50">129</value>
+					<value level="51">132</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="Accuracy">
-				<amount>-8</amount>
-				<mode>DIFF</mode>
-				<weaponType>
-					<item>BOW</item>
-					<item>POLE</item>
-				</weaponType>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>-30</amount>
-				<mode>PER</mode>
-				<weaponType>
-					<item>BOW</item>
-					<item>POLE</item>
-				</weaponType>
-			</effect>
 		</effects>
 	</skill>
-	<skill id="250" toLevel="50" name="Weapon Mastery">
+	<skill id="250" toLevel="51" name="Weapon Mastery">
 		<!-- P. Atk. +$s1, M. Atk. +$s2. -->
 		<icon>icon.skill0250</icon>
 		<magicLvl>
@@ -3140,6 +3323,7 @@
 			<value level="48">82</value>
 			<value level="49">83</value>
 			<value level="50">84</value>
+			<value level="51">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3196,6 +3380,7 @@
 					<value level="48">98</value>
 					<value level="49">101</value>
 					<value level="50">104</value>
+					<value level="51">107</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3251,6 +3436,7 @@
 					<value level="48">120</value>
 					<value level="49">123</value>
 					<value level="50">126</value>
+					<value level="51">129</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3306,28 +3492,13 @@
 					<value level="48">10</value>
 					<value level="49">10</value>
 					<value level="50">10</value>
+					<value level="51">10</value>
 				</amount>
 				<chance>100</chance> <!-- Seven Signs -->
 			</effect>
-			<effect name="Accuracy">
-				<amount>-8</amount>
-				<mode>DIFF</mode>
-				<weaponType>
-					<item>BOW</item>
-					<item>POLE</item>
-				</weaponType>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>-30</amount>
-				<mode>PER</mode>
-				<weaponType>
-					<item>BOW</item>
-					<item>POLE</item>
-				</weaponType>
-			</effect>
 		</effects>
 	</skill>
-	<skill id="251" toLevel="53" name="Robe Mastery">
+	<skill id="251" toLevel="54" name="Robe Mastery">
 		<!-- When equipped with a Robe, P. Def. +$s1. -->
 		<icon>icon.skill0251</icon>
 		<magicLvl>
@@ -3384,6 +3555,7 @@
 			<value level="51">82</value>
 			<value level="52">83</value>
 			<value level="53">84</value>
+			<value level="54">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3443,6 +3615,7 @@
 					<value level="51">152</value>
 					<value level="52">155</value>
 					<value level="53">158</value>
+					<value level="54">161</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -3451,7 +3624,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="252" toLevel="53" name="Light Armor Mastery">
+	<skill id="252" toLevel="54" name="Light Armor Mastery">
 		<!-- When equipped with light armor, P. Def. +$s1, Casting Spd. +$s2, Atk. Spd. +$s3, and MP Recovery Bonus +$s4. -->
 		<icon>icon.skill0252</icon>
 		<magicLvl>
@@ -3508,6 +3681,7 @@
 			<value level="51">82</value>
 			<value level="52">83</value>
 			<value level="53">84</value>
+			<value level="54">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3567,6 +3741,7 @@
 					<value level="51">141</value>
 					<value level="52">144</value>
 					<value level="53">147</value>
+					<value level="54">150</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -3596,7 +3771,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="253" toLevel="51" name="Heavy Armor Mastery">
+	<skill id="253" toLevel="52" name="Heavy Armor Mastery">
 		<!-- When equipped with heavy armor, P. Def. +$s1, Casting Spd. +$s2, and Atk. Spd. +$s3. -->
 		<icon>icon.skill0253</icon>
 		<magicLvl>
@@ -3651,6 +3826,7 @@
 			<value level="49">82</value>
 			<value level="50">83</value>
 			<value level="51">84</value>
+			<value level="52">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3708,6 +3884,7 @@
 					<value level="49">110</value>
 					<value level="50">112</value>
 					<value level="51">114</value>
+					<value level="51">117</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -3915,7 +4092,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="257" toLevel="53" name="Sword/Blunt Weapon Mastery">
+	<skill id="257" toLevel="54" name="Sword/Blunt Weapon Mastery">
 		<!-- P. Atk. +$s1 when using a sword or blunt weapon. -->
 		<icon>icon.skill0257</icon>
 		<magicLvl>
@@ -3972,6 +4149,7 @@
 			<value level="51">82</value>
 			<value level="52">83</value>
 			<value level="53">84</value>
+			<value level="54">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4031,6 +4209,7 @@
 					<value level="51">156</value>
 					<value level="52">160</value>
 					<value level="53">164</value>
+					<value level="54">168</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -4040,7 +4219,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="258" toLevel="41" name="Light Armor Mastery">
+	<skill id="258" toLevel="42" name="Light Armor Mastery">
 		<!-- When equipped with light armor, P. Def. +$s1, Casting Spd. +$s2, Atk. Spd. +$s3, and MP Recovery Bonus +$s4. -->
 		<icon>icon.skill0258</icon>
 		<magicLvl>
@@ -4085,6 +4264,7 @@
 			<value level="39">82</value>
 			<value level="40">83</value>
 			<value level="41">84</value>
+			<value level="42">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4132,6 +4312,7 @@
 					<value level="39">59</value>
 					<value level="40">61</value>
 					<value level="41">63</value>
+					<value level="42">65</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -4161,7 +4342,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="259" toLevel="41" name="Heavy Armor Mastery">
+	<skill id="259" toLevel="42" name="Heavy Armor Mastery">
 		<!-- When equipped with heavy armor, P. Def. +$s1, Casting Spd. +$s2, and Atk. Spd. +$s3. -->
 		<icon>icon.skill0259</icon>
 		<magicLvl>
@@ -4206,6 +4387,7 @@
 			<value level="39">82</value>
 			<value level="40">83</value>
 			<value level="41">84</value>
+			<value level="42">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4253,6 +4435,7 @@
 					<value level="39">77</value>
 					<value level="40">80</value>
 					<value level="41">83</value>
+					<value level="42">86</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -5206,18 +5389,27 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="268" toLevel="1" name="Song of Wind">
-		<!-- All party members' Speed +20 for 5 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+	<skill id="268" toLevel="2" name="Song of Wind">
+		<!-- All party members' Speed +$s2 for $s1 MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<icon>icon.skill0268</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_WIND</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>438</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>46</magicLvl>
-		<mpConsume>60</mpConsume>
+		<magicLvl>
+			<value level="1">46</value>
+			<value level="2">81</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">60</value>
+			<value level="2">75</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5227,23 +5419,35 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="Speed">
-				<amount>20</amount>
+				<amount>
+					<value level="1">20</value>
+					<value level="2">25</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="269" toLevel="1" name="Hunter's Song">
-		<!-- All party members' P. Critical Rate +100% for 5 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+	<skill id="269" toLevel="2" name="Hunter's Song">
+		<!-- All party members' P. Critical Rate +$s2 for $s1 MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<icon>icon.skill0269</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_HUNTER</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>467</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>40</magicLvl>
-		<mpConsume>60</mpConsume>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">83</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">60</value>
+			<value level="2">73</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5253,7 +5457,10 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="CriticalRate">
-				<amount>100</amount>
+				<amount>
+					<value level="1">100</value>
+					<value level="2">105</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -5420,18 +5627,27 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="274" toLevel="1" name="Dance of Fire">
-		<!-- For 5 min., party members' P. Critical Damage +35%. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+	<skill id="274" toLevel="2" name="Dance of Fire">
+		<!-- Party members' P. Critical Damage +$s2 for $s1 MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill0274</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_FIRE</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>379</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>40</magicLvl>
-		<mpConsume>60</mpConsume>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">61</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">66</value>
+			<value level="2">73</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5449,23 +5665,35 @@
 		</conditions>
 		<effects>
 			<effect name="CriticalDamage">
-				<amount>35</amount>
+				<amount>
+					<value level="1">35</value>
+					<value level="2">38</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="275" toLevel="1" name="Dance of Fury">
-		<!-- All party members' Atk. Spd. +15% for 5 min. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+	<skill id="275" toLevel="2" name="Dance of Fury">
+		<!-- All party members' Atk. Spd. +$s2 for $s1 MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill0275</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_FURY</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>549</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>58</magicLvl>
-		<mpConsume>60</mpConsume>
+		<magicLvl>
+			<value level="1">58</value>
+			<value level="2">81</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">60</value>
+			<value level="2">73</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5483,23 +5711,35 @@
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
-				<amount>15</amount>
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="276" toLevel="1" name="Dance of Concentration">
-		<!-- All party members' magic cancel damage -40 and Casting Spd. +30% for 5 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+	<skill id="276" toLevel="2" name="Dance of Concentration">
+		<!-- All party members' magic cancel damage -$s3 and Casting Spd. +$s2 for $s1 Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0276</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_CONCENTRATION</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>495</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>52</magicLvl>
-		<mpConsume>60</mpConsume>
+		<magicLvl>
+			<value level="1">52</value>
+			<value level="2">82</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">60</value>
+			<value level="2">73</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5517,11 +5757,17 @@
 		</conditions>
 		<effects>
 			<effect name="MagicalAttackSpeed">
-				<amount>30</amount>
+				<amount>
+					<value level="1">40</value>
+					<value level="2">50</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="ReduceCancel">
-				<amount>-40</amount>
+				<amount>
+					<value level="1">-30</value>
+					<value level="2">-35</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -5561,7 +5807,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="278" toLevel="6" name="Summon Viper Cubic">
+	<skill id="278" toLevel="12" name="Summon Viper Cubic">
 		<!-- Summons a Viper Cubic. The Viper Cubic uses magic that poisons a targeted enemy. Consumes $s1 Spirit Ore when summoning. -->
 		<icon>icon.skill0278</icon>
 		<hitTime>6000</hitTime>
@@ -5573,6 +5819,12 @@
 			<value level="4">5</value>
 			<value level="5">5</value>
 			<value level="6">5</value>
+			<value level="7">5</value>
+			<value level="8">5</value>
+			<value level="9">5</value>
+			<value level="10">5</value>
+			<value level="11">5</value>
+			<value level="12">5</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
 		<magicLvl>
@@ -5582,14 +5834,26 @@
 			<value level="4">64</value>
 			<value level="5">68</value>
 			<value level="6">72</value>
+			<value level="7">74</value>
+			<value level="8">76</value>
+			<value level="9">78</value>
+			<value level="10">80</value>
+			<value level="11">82</value>
+			<value level="12">84</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">35</value>
-			<value level="2">40</value>
-			<value level="3">44</value>
-			<value level="4">48</value>
-			<value level="5">51</value>
-			<value level="6">53</value>
+			<value level="1">44</value>
+			<value level="2">50</value>
+			<value level="3">55</value>
+			<value level="4">60</value>
+			<value level="5">64</value>
+			<value level="6">67</value>
+			<value level="7">70</value>
+			<value level="8">73</value>
+			<value level="9">76</value>
+			<value level="10">79</value>
+			<value level="11">82</value>
+			<value level="12">85</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">9</value>
@@ -5598,6 +5862,12 @@
 			<value level="4">12</value>
 			<value level="5">13</value>
 			<value level="6">14</value>
+			<value level="7">14</value>
+			<value level="8">14</value>
+			<value level="9">14</value>
+			<value level="10">14</value>
+			<value level="11">14</value>
+			<value level="12">14</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -5617,6 +5887,12 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 					<value level="6">6</value>
+					<value level="7">6</value>
+					<value level="8">6</value>
+					<value level="9">6</value>
+					<value level="10">6</value>
+					<value level="11">6</value>
+					<value level="12">6</value>
 				</cubicLvl>
 			</effect>
 		</effects>
@@ -5699,7 +5975,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="280" toLevel="40" name="Burning Fist">
+	<skill id="280" toLevel="46" name="Burning Fist">
 		<!-- Hurls a fire iron-fist to attack the target with $s1 Power added to P. Atk. Requires a fist weapon. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill0280</icon>
 		<castRange>40</castRange>
@@ -5744,6 +6020,13 @@
 			<value level="38">-394</value>
 			<value level="39">-406</value>
 			<value level="40">-410</value>
+			<!-- TODD ADD FROM CLIENT -->
+			<value level="41">-410</value>
+			<value level="42">-410</value>
+			<value level="43">-410</value>
+			<value level="44">-410</value>
+			<value level="45">-410</value>
+			<value level="46">-410</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<attributeType>FIRE</attributeType>
@@ -5790,6 +6073,12 @@
 			<value level="38">76</value>
 			<value level="39">77</value>
 			<value level="40">78</value>
+			<value level="41">79</value>
+			<value level="42">80</value>
+			<value level="43">81</value>
+			<value level="44">82</value>
+			<value level="45">83</value>
+			<value level="46">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">42</value>
@@ -5832,6 +6121,12 @@
 			<value level="38">96</value>
 			<value level="39">97</value>
 			<value level="40">98</value>
+			<value level="41">99</value>
+			<value level="42">100</value>
+			<value level="43">101</value>
+			<value level="44">102</value>
+			<value level="45">103</value>
+			<value level="46">104</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -5890,6 +6185,12 @@
 					<value level="38">2581</value>
 					<value level="39">2604</value>
 					<value level="40">2627</value>
+					<value level="41">2673</value>
+					<value level="42">2696</value>
+					<value level="43">2719</value>
+					<value level="44">2742</value>
+					<value level="45">2765</value>
+					<value level="46">2788</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
@@ -6565,7 +6866,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="285" toLevel="27" name="Higher Mana Gain">
+	<skill id="285" toLevel="35" name="Higher Mana Gain">
 		<!-- When using the Recharge skill, MP Recovery Rate increases. -->
 		<icon>icon.skill0285</icon>
 		<magicLvl>
@@ -6596,6 +6897,14 @@
 			<value level="25">70</value>
 			<value level="26">72</value>
 			<value level="27">74</value>
+			<value level="28">76</value>
+			<value level="29">77</value>
+			<value level="30">78</value>
+			<value level="31">80</value>
+			<value level="32">81</value>
+			<value level="33">82</value>
+			<value level="34">83</value>
+			<value level="35">84</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -6629,6 +6938,14 @@
 					<value level="25">78</value>
 					<value level="26">79</value>
 					<value level="27">81</value>
+					<value level="28">83</value>
+					<value level="29">85</value>
+					<value level="30">87</value>
+					<value level="31">89</value>
+					<value level="32">91</value>
+					<value level="33">93</value>
+					<value level="34">95</value>
+					<value level="35">97</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -6973,7 +7290,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="291" toLevel="20" name="Final Fortress">
+	<skill id="291" toLevel="21" name="Final Fortress">
 		<!-- P. Def. +$s2 when HP is below $s1. -->
 		<icon>icon.skill0291</icon>
 		<magicLvl>
@@ -6997,6 +7314,7 @@
 			<value level="18">82</value>
 			<value level="19">83</value>
 			<value level="20">84</value>
+			<value level="21">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -7023,6 +7341,7 @@
 					<value level="18">283.125</value>
 					<value level="19">292.75</value>
 					<value level="20">302.375</value>
+					<value level="21">312</value>
 				</amount>
 				<mode>DIFF</mode>
 				<hpPercent>30</hpPercent>
@@ -7082,8 +7401,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="293" toLevel="28" name="Two-handed Weapon Mastery">
-		<!-- P. Atk. +$s1 and Accuracy +$s2 when using a two-handed sword or a two-handed blunt weapon. -->
+	<skill id="293" toLevel="29" name="Two-handed Weapon Mastery">
+		<!-- P. Atk. +$s1 and P. Accuracy +$s2 when using a two-handed sword or a two-handed blunt weapon. -->
 		<icon>icon.skill0293</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -7114,6 +7433,7 @@
 			<value level="26">82</value>
 			<value level="27">83</value>
 			<value level="28">84</value>
+			<value level="29">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -7148,6 +7468,7 @@
 					<value level="26">155</value>
 					<value level="27">158</value>
 					<value level="28">161</value>
+					<value level="29">164</value>
 				</pAtkAmount>
 				<accuracyAmount>3</accuracyAmount>
 				<accuracyMode>DIFF</accuracyMode>
@@ -7182,6 +7503,7 @@
 					<value level="26">155</value>
 					<value level="27">158</value>
 					<value level="28">161</value>
+					<value level="29">164</value>
 				</pAtkAmount>
 				<accuracyAmount>3</accuracyAmount>
 				<accuracyMode>DIFF</accuracyMode>

@@ -16,8 +16,19 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17817" toLevel="2" name="Ruby">
-		<!-- Damage received from Soulshots +16%. -->
-		<icon>icon.etc_bm_jewel_ruby_i00</icon>
+		<!-- Soulshot Damage +$s1. -->
+		<icon>
+			<value level="1">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="2">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="3">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="4">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="5">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17818" toLevel="4" name="Sapphire">
@@ -36,16 +47,55 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17821" toLevel="2" name="Sapphire">
-		<!-- Damage received from Spiritshots +16%. -->
-		<icon>icon.etc_bm_jewel_sapphire_i00</icon>
+		<!-- Spiritshot Damage +$s1. -->
+		<icon>
+			<value level="1">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="2">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="3">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="4">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="5">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17823" toLevel="5" name="Aquamarine">
 		<!-- $s1 chance of recovering $s2 MP. -->
-		<icon>icon.etc_bm_jewel_aquamarine_i00</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_aquamarine_i00</value>
+			<value level="2">icon.etc_bm_jewel_aquamarine_i00</value>
+			<value level="3">icon.etc_bm_jewel_aquamarine_i00</value>
+			<value level="4">icon.etc_bm_jewel_aquamarine_i00</value>
+			<value level="5">icon.etc_bm_jewel_aquamarine_i00</value>
+			<value level="6">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17824" toLevel="5" name="Aquamarine - Mana Drain">
+		<icon>
+			<value level="1">icon.skill0000</value>
+			<value level="2">icon.skill0000</value>
+			<value level="3">icon.skill0000</value>
+			<value level="4">icon.skill0000</value>
+			<value level="5">icon.skill0000</value>
+			<value level="6">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
+		</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="17825" toLevel="1" name="Greater Aquamarine - Special Ability">
+		<!-- When using a special skill immediately recovers 10% MP. -->
+		<icon>icon.bm_jewel_castmpup_high_lv1_lavianrose</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17888" toLevel="2" name="Ruby">
@@ -62,7 +112,14 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17891" toLevel="1" name="Ruby">
-		<icon>icon.etc_bm_jewel_ruby_i00</icon>
+		<!-- Beast Soulshot Damage +$s1. -->
+		<icon>
+			<value level="1">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="2">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="3">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="4">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="5">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17896" toLevel="1" name="Orc Recovery Ban">

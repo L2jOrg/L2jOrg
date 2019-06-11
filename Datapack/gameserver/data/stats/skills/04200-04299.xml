@@ -2996,8 +2996,8 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4272" toLevel="1" name="Greater Bow/Crossbow Resistance">
-		<!-- Highly resistant to Bow/ Crossbows. -->
+	<skill id="4272" toLevel="1" name="Greater Bow Resistance">
+		<!-- Very resistant to bow. -->
 		<icon>icon.skill4272</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3009,8 +3009,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4273" toLevel="5" name="Dagger/Rapier Resistance">
-		<!-- Resistant to Dagger/ Rapier attacks. -->
+	<skill id="4273" toLevel="5" name="Dagger Resistance">
+		<!-- Resistance to dagger. -->
 		<icon>icon.skill4273_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

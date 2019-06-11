@@ -1280,7 +1280,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10" toLevel="8" name="Summon Storm Cubic">
+	<skill id="10" toLevel="13" name="Summon Storm Cubic">
 		<!-- Summons a storm cubic that inflicts damage on the enemy with magic. Consumes $s1 Spirit Ore when summoning. -->
 		<icon>icon.skill0010</icon>
 		<hitTime>6000</hitTime>
@@ -1294,6 +1294,11 @@
 			<value level="6">10</value>
 			<value level="7">11</value>
 			<value level="8">11</value>
+			<value level="9">11</value>
+			<value level="10">11</value>
+			<value level="11">11</value>
+			<value level="12">11</value>
+			<value level="13">11</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
 		<magicLvl>
@@ -1305,6 +1310,11 @@
 			<value level="6">66</value>
 			<value level="7">70</value>
 			<value level="8">74</value>
+			<value level="9">76</value>
+			<value level="10">78</value>
+			<value level="11">80</value>
+			<value level="12">82</value>
+			<value level="13">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">28</value>
@@ -1315,6 +1325,11 @@
 			<value level="6">49</value>
 			<value level="7">52</value>
 			<value level="8">55</value>
+			<value level="9">73</value>
+			<value level="10">77</value>
+			<value level="11">81</value>
+			<value level="12">85</value>
+			<value level="13">89</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">7</value>
@@ -1325,6 +1340,11 @@
 			<value level="6">13</value>
 			<value level="7">13</value>
 			<value level="8">14</value>
+			<value level="9">15</value>
+			<value level="10">16</value>
+			<value level="11">17</value>
+			<value level="12">18</value>
+			<value level="13">19</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -1346,6 +1366,11 @@
 					<value level="6">6</value>
 					<value level="7">7</value>
 					<value level="8">8</value>
+					<value level="9">8</value>
+					<value level="10">8</value>
+					<value level="11">8</value>
+					<value level="12">8</value>
+					<value level="13">8</value>
 				</cubicLvl>
 			</effect>
 		</effects>
@@ -2480,7 +2505,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22" toLevel="7" name="Summon Vampiric Cubic">
+	<skill id="22" toLevel="13" name="Summon Vampiric Cubic">
 		<!-- Summons a Vampiric Cubic. A Vampiric Cubic uses magic that absorbs the target's HP and with it regenerates its master's HP. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill0022</icon>
 		<hitTime>6000</hitTime>
@@ -2493,6 +2518,12 @@
 			<value level="5">9</value>
 			<value level="6">10</value>
 			<value level="7">11</value>
+			<value level="8">11</value>
+			<value level="9">11</value>
+			<value level="10">11</value>
+			<value level="11">11</value>
+			<value level="12">11</value>
+			<value level="13">11</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
 		<magicLvl>
@@ -2503,6 +2534,12 @@
 			<value level="5">64</value>
 			<value level="6">68</value>
 			<value level="7">72</value>
+			<value level="8">74</value>
+			<value level="9">76</value>
+			<value level="10">78</value>
+			<value level="11">80</value>
+			<value level="12">82</value>
+			<value level="13">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">30</value>
@@ -2512,6 +2549,12 @@
 			<value level="5">48</value>
 			<value level="6">51</value>
 			<value level="7">53</value>
+			<value level="8">70</value>
+			<value level="9">73</value>
+			<value level="10">76</value>
+			<value level="11">79</value>
+			<value level="12">82</value>
+			<value level="13">85</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">8</value>
@@ -2521,6 +2564,12 @@
 			<value level="5">12</value>
 			<value level="6">13</value>
 			<value level="7">14</value>
+			<value level="8">14</value>
+			<value level="9">14</value>
+			<value level="10">14</value>
+			<value level="11">14</value>
+			<value level="12">14</value>
+			<value level="13">14</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -2541,12 +2590,18 @@
 					<value level="5">5</value>
 					<value level="6">6</value>
 					<value level="7">7</value>
+					<value level="8">11</value>
+					<value level="9">11</value>
+					<value level="10">11</value>
+					<value level="11">11</value>
+					<value level="12">11</value>
+					<value level="13">11</value>
 				</cubicLvl>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="24" toLevel="34" name="Burst Shot">
-		<!-- Fires an exploding arrow to attack the enemy's surroundings with $s1 Power added to P. Atk. Requires a bow. Over-hit. -->
+	<skill id="24" toLevel="40" name="Burst Shot">
+		<!-- Fires an exploding arrow to attack the enemy's surroundings with $s1 Power added to P. Atk. Requires a bow. Critical. Over-hit. -->
 		<icon>icon.skill0024</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -2587,6 +2642,13 @@
 			<value level="32">-335</value>
 			<value level="33">-338</value>
 			<value level="34">-340</value>
+			<!-- TODO ADD FROM CLIENT -->
+			<value level="35">-340</value>
+			<value level="36">-340</value>
+			<value level="37">-340</value>
+			<value level="38">-340</value>
+			<value level="39">-340</value>
+			<value level="40">-340</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>3200</hitTime>
@@ -2625,6 +2687,12 @@
 			<value level="32">76</value>
 			<value level="33">77</value>
 			<value level="34">78</value>
+			<value level="35">79</value>
+			<value level="36">80</value>
+			<value level="37">81</value>
+			<value level="38">82</value>
+			<value level="39">83</value>
+			<value level="40">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">125</value>
@@ -2661,6 +2729,12 @@
 			<value level="32">246</value>
 			<value level="33">248</value>
 			<value level="34">250</value>
+			<value level="35">252</value>
+			<value level="36">254</value>
+			<value level="37">256</value>
+			<value level="38">258</value>
+			<value level="39">260</value>
+			<value level="40">262</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
@@ -2712,6 +2786,12 @@
 					<value level="32">1230</value>
 					<value level="33">1241</value>
 					<value level="34">1252</value>
+					<value level="35">1264</value>
+					<value level="36">1276</value>
+					<value level="37">1288</value>
+					<value level="38">1300</value>
+					<value level="39">1313</value>
+					<value level="40">1326</value>
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -3569,8 +3649,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33" toLevel="8" name="Summon Phantom Cubic">
-		<!-- Summons Phantom Cubic. A Phantom Cubic uses magic that decreases the target's P. Atk., P. Def., and Atk. Spd. Consumes $s1 Spirit Ore. -->
+	<skill id="33" toLevel="13" name="Summon Phantom Cubic">
+		<!-- Summoned Phantom Cubic uses magic that decreases the target's P. Atk., P. Def., and Atk. Spd. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill0033</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -3583,6 +3663,11 @@
 			<value level="6">5</value>
 			<value level="7">5</value>
 			<value level="8">6</value>
+			<value level="9">6</value>
+			<value level="10">6</value>
+			<value level="11">6</value>
+			<value level="12">6</value>
+			<value level="13">6</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
 		<magicLvl>
@@ -3594,16 +3679,26 @@
 			<value level="6">66</value>
 			<value level="7">70</value>
 			<value level="8">74</value>
+			<value level="9">76</value>
+			<value level="10">78</value>
+			<value level="11">80</value>
+			<value level="12">82</value>
+			<value level="13">84</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">28</value>
-			<value level="2">33</value>
-			<value level="3">38</value>
-			<value level="4">43</value>
-			<value level="5">46</value>
-			<value level="6">49</value>
-			<value level="7">52</value>
-			<value level="8">55</value>
+			<value level="1">35</value>
+			<value level="2">42</value>
+			<value level="3">48</value>
+			<value level="4">54</value>
+			<value level="5">58</value>
+			<value level="6">62</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">77</value>
+			<value level="10">77</value>
+			<value level="11">81</value>
+			<value level="12">85</value>
+			<value level="13">89</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">7</value>
@@ -3614,6 +3709,11 @@
 			<value level="6">13</value>
 			<value level="7">13</value>
 			<value level="8">14</value>
+			<value level="9">14</value>
+			<value level="10">14</value>
+			<value level="11">14</value>
+			<value level="12">14</value>
+			<value level="13">14</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -3635,6 +3735,11 @@
 					<value level="6">6</value>
 					<value level="7">7</value>
 					<value level="8">8</value>
+					<value level="9">8</value>
+					<value level="10">8</value>
+					<value level="11">8</value>
+					<value level="12">8</value>
+					<value level="13">8</value>
 				</cubicLvl>
 			</effect>
 		</effects>
@@ -5223,7 +5328,7 @@
 		</effects>
 	</skill>
 	<skill id="58" toLevel="55" name="Elemental Heal">
-		<!-- Restores HP with $s1 Power. -->
+		<!-- Restores the target's HP with $s1 Power. -->
 		<icon>icon.skill0058</icon>
 		<effectPoint>
 			<value level="1">101</value>
@@ -5540,7 +5645,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="61" toLevel="3" name="Cure Bleeding">
+	<skill id="61" toLevel="3" name="Cure Bleed">
 		<!-- Cures minor bleeding. -->
 		<icon>icon.skill0061</icon>
 		<effectPoint>
@@ -5683,7 +5788,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="67" toLevel="7" name="Summon Life Cubic">
+	<skill id="67" toLevel="13" name="Summon Life Cubic">
 		<!-- Summons a Life Cubic. The Life Cubic uses magic to regenerate HP to its owner and party members. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill0067</icon>
 		<hitTime>6000</hitTime>
@@ -5696,6 +5801,12 @@
 			<value level="5">9</value>
 			<value level="6">10</value>
 			<value level="7">11</value>
+			<value level="8">11</value>
+			<value level="9">11</value>
+			<value level="10">11</value>
+			<value level="11">11</value>
+			<value level="12">11</value>
+			<value level="13">11</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
 		<magicLvl>
@@ -5706,6 +5817,12 @@
 			<value level="5">64</value>
 			<value level="6">68</value>
 			<value level="7">72</value>
+			<value level="8">74</value>
+			<value level="9">76</value>
+			<value level="10">78</value>
+			<value level="11">80</value>
+			<value level="12">82</value>
+			<value level="13">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">30</value>
@@ -5715,6 +5832,12 @@
 			<value level="5">48</value>
 			<value level="6">51</value>
 			<value level="7">53</value>
+			<value level="8">70</value>
+			<value level="9">79</value>
+			<value level="10">76</value>
+			<value level="11">79</value>
+			<value level="12">82</value>
+			<value level="13">85</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">8</value>
@@ -5724,6 +5847,12 @@
 			<value level="5">12</value>
 			<value level="6">13</value>
 			<value level="7">14</value>
+			<value level="8">14</value>
+			<value level="9">14</value>
+			<value level="10">14</value>
+			<value level="11">14</value>
+			<value level="12">14</value>
+			<value level="13">14</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -5744,6 +5873,12 @@
 					<value level="5">5</value>
 					<value level="6">6</value>
 					<value level="7">7</value>
+					<value level="8">11</value>
+					<value level="9">11</value>
+					<value level="10">11</value>
+					<value level="11">11</value>
+					<value level="12">11</value>
+					<value level="13">11</value>
 				</cubicLvl>
 			</effect>
 		</effects>
@@ -7127,7 +7262,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="95" toLevel="22" name="Cripple">
+	<skill id="95" toLevel="28" name="Cripple">
 		<!-- Enemy's Speed -$s2 for $s1. Requires a fist weapon. -->
 		<icon>icon.skill0095</icon>
 		<abnormalLvl>
@@ -7153,6 +7288,12 @@
 			<value level="20">3</value>
 			<value level="21">3</value>
 			<value level="22">3</value>
+			<value level="23">3</value>
+			<value level="24">3</value>
+			<value level="25">3</value>
+			<value level="26">3</value>
+			<value level="27">3</value>
+			<value level="28">3</value>
 		</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -7183,6 +7324,13 @@
 			<value level="20">-655</value>
 			<value level="21">-664</value>
 			<value level="22">-673</value>
+			<!-- TODO ADD FROM CLIENT -->
+			<value level="23">-673</value>
+			<value level="24">-673</value>
+			<value level="25">-673</value>
+			<value level="26">-673</value>
+			<value level="27">-673</value>
+			<value level="28">-673</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1604</hitTime>
@@ -7211,6 +7359,12 @@
 			<value level="20">74</value>
 			<value level="21">76</value>
 			<value level="22">78</value>
+			<value level="23">79</value>
+			<value level="24">80</value>
+			<value level="25">81</value>
+			<value level="26">82</value>
+			<value level="27">83</value>
+			<value level="28">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">10</value>
@@ -7235,6 +7389,12 @@
 			<value level="20">34</value>
 			<value level="21">37</value>
 			<value level="22">38</value>
+			<value level="23">40</value>
+			<value level="24">41</value>
+			<value level="25">43</value>
+			<value level="26">44</value>
+			<value level="27">46</value>
+			<value level="28">47</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
@@ -7273,12 +7433,18 @@
 					<value level="20">-30</value>
 					<value level="21">-30</value>
 					<value level="22">-30</value>
+					<value level="23">-30</value>
+					<value level="24">-30</value>
+					<value level="25">-30</value>
+					<value level="26">-30</value>
+					<value level="27">-30</value>
+					<value level="28">-30</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="96" toLevel="7" name="Bleed">
+	<skill id="96" toLevel="15" name="Bleed">
 		<!-- Enemy's Speed -$s2 for $s1, and inflicts Bleed, causing them to lose $s3 HP every sec. Requires a dagger. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
@@ -7289,6 +7455,14 @@
 			<value level="5">7</value>
 			<value level="6">8</value>
 			<value level="7">9</value>
+			<value level="8">10</value>
+			<value level="9">11</value>
+			<value level="10">12</value>
+			<value level="11">13</value>
+			<value level="12">14</value>
+			<value level="13">15</value>
+			<value level="14">16</value>
+			<value level="15">17</value>
 		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -7306,6 +7480,14 @@
 			<value level="5">-311</value>
 			<value level="6">-323</value>
 			<value level="7">-354</value>
+			<value level="8">-354</value>
+			<value level="9">-354</value>
+			<value level="10">-354</value>
+			<value level="11">-354</value>
+			<value level="12">-354</value>
+			<value level="13">-354</value>
+			<value level="14">-354</value>
+			<value level="15">-354</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
@@ -7319,6 +7501,14 @@
 			<value level="5">66</value>
 			<value level="6">70</value>
 			<value level="7">76</value>
+			<value level="8">77</value>
+			<value level="9">78</value>
+			<value level="10">79</value>
+			<value level="11">80</value>
+			<value level="12">81</value>
+			<value level="13">82</value>
+			<value level="14">83</value>
+			<value level="15">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">28</value>
@@ -7328,6 +7518,14 @@
 			<value level="5">83</value>
 			<value level="6">89</value>
 			<value level="7">97</value>
+			<value level="8">105</value>
+			<value level="9">113</value>
+			<value level="10">121</value>
+			<value level="11">129</value>
+			<value level="12">137</value>
+			<value level="13">146</value>
+			<value level="14">152</value>
+			<value level="15">158</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -7354,6 +7552,14 @@
 					<value level="5">62</value>
 					<value level="6">67</value>
 					<value level="7">72</value>
+					<value level="8">77</value>
+					<value level="9">82</value>
+					<value level="10">87</value>
+					<value level="11">92</value>
+					<value level="12">97</value>
+					<value level="13">102</value>
+					<value level="14">106</value>
+					<value level="15">110</value>
 				</power>
 				<ticks>5</ticks>
 			</effect>

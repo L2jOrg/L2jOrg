@@ -46,16 +46,20 @@
 			<item id="90071" count="1" /> <!-- Scroll: Rush -->
 		</skill>
 		<skill skillName="Hurricane Assault" skillId="284" skillLvl="43" getLevel="78" levelUpSp="14200000" />
-		<skill skillName="Braveheart" skillId="284" skillLvl="1" getLevel="78" levelUpSp="14200000" />
+		<skill skillName="Braveheart" skillId="440" skillLvl="1" getLevel="78" levelUpSp="14200000" />
 		<skill skillName="Cripple" skillId="95" skillLvl="22" getLevel="78" levelUpSp="14200000" />
 		
 		<skill skillName="Force Mastery" skillId="993" skillLvl="8" getLevel="79" levelUpSp="14200000" />
+		<skill skillName="Burning Fist" skillId="280" skillLvl="41" getLevel="79" levelUpSp="14200000" />
 		<skill skillName="Final Secret" skillId="917" skillLvl="1" getLevel="79" levelUpSp="14200000">
 			<item id="90080" count="1" /> <!-- Scroll: Final Secret -->
 		</skill>
-
+		<skill skillName="Hawk Spirit Totem" skillId="425" skillLvl="1" getLevel="79" levelUpSp="14200000" />
+		<skill skillName="Cripple" skillId="95" skillLvl="23" getLevel="79" levelUpSp="14200000" />
+		
 		<skill skillName="Fist Weapon Mastery" skillId="210" skillLvl="49" getLevel="80" levelUpSp="14200000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="51" getLevel="80" levelUpSp="14200000" />
+		<skill skillName="Burning Fist" skillId="280" skillLvl="42" getLevel="80" levelUpSp="14200000" />
 		<skill skillName="Force Blaster" skillId="54" skillLvl="53" getLevel="80" levelUpSp="14200000" />
 		<skill skillName="Maximum Force Focus" skillId="918" skillLvl="1" getLevel="80" levelUpSp="14200000">
 		 <item id="90072" count="1" /> <!-- Scroll: Maximum Force Focus -->
@@ -63,31 +67,43 @@
 		<skill skillName="Soul Breaker" skillId="281" skillLvl="41" getLevel="80" levelUpSp="14200000" />
 		<skill skillName="Raging Force" skillId="346" skillLvl="3" getLevel="80" levelUpSp="14200000" />
 		<skill skillName="Hurricane Assault" skillId="284" skillLvl="44" getLevel="80" levelUpSp="14200000" />
+		<skill skillName="Cripple" skillId="95" skillLvl="24" getLevel="80" levelUpSp="14200000" />
 
-		<skill skillName="Fist Weapon Mastery" skillId="210" skillLvl="50" getLevel="81" levelUpSp="251000000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="52" getLevel="81" levelUpSp="251000000" />
-		<skill skillName="Force Blaster" skillId="54" skillLvl="54" getLevel="81" levelUpSp="251000000" />
-		<skill skillName="Soul Breaker" skillId="281" skillLvl="42" getLevel="81" levelUpSp="251000000" />
-		<skill skillName="Hurricane Assault" skillId="284" skillLvl="45" getLevel="81" levelUpSp="251000000" />
+		<skill skillName="Fist Weapon Mastery" skillId="210" skillLvl="50" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="52" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Burning Fist" skillId="280" skillLvl="43" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Force Blaster" skillId="54" skillLvl="54" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Soul Breaker" skillId="281" skillLvl="42" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Hurricane Assault" skillId="284" skillLvl="45" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Cripple" skillId="95" skillLvl="25" getLevel="81" levelUpSp="160000000" />
 
-		<skill skillName="Fist Weapon Mastery" skillId="210" skillLvl="51" getLevel="82" levelUpSp="258000000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="53" getLevel="82" levelUpSp="258000000" />
-		<skill skillName="Force Blaster" skillId="54" skillLvl="55" getLevel="82" levelUpSp="258000000" />
-		<skill skillName="Soul Breaker" skillId="281" skillLvl="43" getLevel="82" levelUpSp="258000000" />
-		<skill skillName="Raging Force" skillId="346" skillLvl="4" getLevel="82" levelUpSp="258000000" />
-		<skill skillName="Hurricane Assault" skillId="284" skillLvl="46" getLevel="82" levelUpSp="258000000" />
+		<skill skillName="Fist Weapon Mastery" skillId="210" skillLvl="51" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="53" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Burning Fist" skillId="280" skillLvl="44" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Force Blaster" skillId="54" skillLvl="55" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Soul Breaker" skillId="281" skillLvl="43" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Raging Force" skillId="346" skillLvl="4" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Hurricane Assault" skillId="284" skillLvl="46" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Cripple" skillId="95" skillLvl="26" getLevel="82" levelUpSp="170000000" />
 
-		<skill skillName="Fist Weapon Mastery" skillId="210" skillLvl="52" getLevel="83" levelUpSp="353000000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="54" getLevel="83" levelUpSp="353000000" />
-		<skill skillName="Force Blaster" skillId="54" skillLvl="56" getLevel="83" levelUpSp="353000000" />
-		<skill skillName="Soul Breaker" skillId="281" skillLvl="44" getLevel="83" levelUpSp="353000000" />
-		<skill skillName="Hurricane Assault" skillId="284" skillLvl="47" getLevel="83" levelUpSp="353000000" />
+		<skill skillName="Fist Weapon Mastery" skillId="210" skillLvl="52" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="54" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Burning Fist" skillId="280" skillLvl="45" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Force Blaster" skillId="54" skillLvl="56" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Soul Breaker" skillId="281" skillLvl="44" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Hurricane Assault" skillId="284" skillLvl="47" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Cripple" skillId="95" skillLvl="27" getLevel="83" levelUpSp="240000000" />
 
-		<skill skillName="Fist Weapon Mastery" skillId="210" skillLvl="53" getLevel="84" levelUpSp="379000000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="55" getLevel="84" levelUpSp="379000000" />
-		<skill skillName="Force Blaster" skillId="54" skillLvl="57" getLevel="84" levelUpSp="379000000" />
-		<skill skillName="Soul Breaker" skillId="281" skillLvl="45" getLevel="84" levelUpSp="379000000" />
-		<skill skillName="Raging Force" skillId="346" skillLvl="5" getLevel="84" levelUpSp="379000000" />
-		<skill skillName="Hurricane Assault" skillId="284" skillLvl="48" getLevel="84" levelUpSp="379000000" />
+		<skill skillName="Fist Weapon Mastery" skillId="210" skillLvl="53" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="55" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Burning Fist" skillId="280" skillLvl="46" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Force Blaster" skillId="54" skillLvl="57" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Soul Breaker" skillId="281" skillLvl="45" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Raging Force" skillId="346" skillLvl="5" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Hurricane Assault" skillId="284" skillLvl="48" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Cripple" skillId="95" skillLvl="28" getLevel="84" levelUpSp="240000000" />
+		
+		<skill skillName="Fist Weapon Mastery" skillId="210" skillLvl="54" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="56" getLevel="85" levelUpSp="840000000" />
 	</skillTree>
 </list>

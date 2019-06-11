@@ -2,21 +2,21 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
 	<npc id="30848"> <!-- Elisa -->
 		<teleport type="NORMAL">
-			<!-- feeCount from Interlude, unconfirmed from retail classic -->
-			<location npcStringId="1010013" x="82971" y="53207" z="-1488" feeCount="6900" /> <!-- Town of Oren -->
-			<location npcStringId="1010020" x="117088" y="76931" z="-2696" feeCount="5900" /> <!-- Hunter's Village -->
-			<location npcStringId="1010007" x="83551" y="147945" z="-3400" feeCount="13000" /> <!-- The Town of Giran -->
+			<!-- feeCount from retail classic -->
+			<location npcStringId="1010013" x="82971" y="53207" z="-1488" feeCount="5500" /> <!-- Town of Oren -->
+			<location npcStringId="1010020" x="117088" y="76931" z="-2696" feeCount="4700" /> <!-- Hunter's Village -->
+			<location npcStringId="1010007" x="83551" y="147945" z="-3400" feeCount="10000" /> <!-- The Town of Giran -->
 			<location npcStringId="1010199" x="147911" y="-55276" z="-2736" feeCount="9400" /> <!-- Goddard -->
-			<location npcStringId="1010053" x="146440" y="46723" z="-3432" feeCount="2000" /> <!-- Coliseum -->
-			<location npcStringId="1010585" x="142065" y="81300" z="-3000" feeCount="4400" /> <!-- Forest of Mirrors (Lv. 45) -->
+			<location npcStringId="1010053" x="146440" y="46723" z="-3432" feeCount="2500" /> <!-- Coliseum -->
+			<location npcStringId="1010585" x="142065" y="81300" z="-3000" feeCount="6600" /> <!-- Forest of Mirrors (Lv. 45) -->
 			<location npcStringId="1010181" x="183543" y="-14974" z="-2768" feeCount="6500" /> <!-- Fields of Massacre (Lv. 55) -->
 			<location npcStringId="1010057" x="106517" y="-2871" z="-3416" feeCount="5900" /> <!-- Ancient Battleground (Lv. 60) -->
 			<location npcStringId="1010604" x="187383" y="20498" z="-3584" feeCount="3300" /> <!-- Seal of Shilen (Lv. 61) -->
 			<location npcStringId="1010060" x="155310" y="-16339" z="-3320" feeCount="6800" /> <!-- Blazing Swamp (Lv. 65) -->
 			<location npcStringId="1010182" x="184222" y="46666" z="-5864" feeCount="6100" /> <!-- Silent Valley (Lv. 72) -->
 			<location npcStringId="1010059" x="114649" y="11115" z="-5120" feeCount="4200" /> <!-- Entrance to the Tower of Insolence -->
-			<location npcStringId="1010062" x="177116" y="45786" z="-4168" feeCount="3400" /> <!-- Entrance to the Giant's Cave -->
-			<location npcStringId="1010698" x="11235" y="-24026" z="-3640" feeCount="6400" /> <!-- Forgotten Island -->
+			<location npcStringId="1010062" x="177116" y="45786" z="-4168" feeCount="4300" /> <!-- Entrance to the Giant's Cave -->
+			<location npcStringId="1010698" x="11235" y="-24026" z="-3640" feeCount="17000" /> <!-- Forgotten Island -->
 		</teleport>
 	</npc>
 </list>

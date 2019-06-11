@@ -601,6 +601,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
+		<skills>
+			<skill id="3056" level="2" /> <!-- Special Ability: Rsk. Haste -->
+		</skills>
 		<stats>
 			<stat type="pAtk">203</stat>
 			<stat type="mAtk">114</stat>
@@ -659,10 +662,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
-
-		<skills>
-			<skill id="3050" level="1" /> <!-- Special Ability: Focus -->
-		</skills>
 		<stats>
 			<stat type="pAtk">259</stat>
 			<stat type="mAtk">107</stat>

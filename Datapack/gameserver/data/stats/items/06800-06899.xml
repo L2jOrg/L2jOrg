@@ -227,4 +227,342 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
+	<item id="6847" name="Recipe: Sealed Tateossian Earring (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Tateossian Earring. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="74000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="646" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6849" name="Recipe: Sealed Tateossian Ring (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Tateossian Ring. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="49400" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="648" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6851" name="Recipe: Sealed Tateossian Necklace (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Tateossian Necklace. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="98800" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="650" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6853" name="Recipe: Sealed Imperial Crusader Breastplate (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Imperial Crusader Breastplate. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="286000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="652" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6855" name="Recipe: Sealed Imperial Crusader Gaiters (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Imperial Crusader Gaiters. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="179200" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="654" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6857" name="Recipe: Sealed Imperial Crusader Gauntlets (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Imperial Crusader Gauntlets. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="71600" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="656" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6859" name="Recipe: Sealed Imperial Crusader Boots (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Imperial Crusader Boots. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="71600" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="658" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6861" name="Recipe: Sealed Imperial Crusader Shield (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Imperial Crusader Shield. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="75200" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="660" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6863" name="Recipe: Sealed Imperial Crusader Helmet (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Imperial Crusader Helmet. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="107400" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="662" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6865" name="Recipe: Sealed Draconic Leather Armor (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Draconic Leather Armor. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="348000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="664" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6867" name="Recipe: Sealed Draconic Leather Gloves (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Draconic Leather Gloves. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="71600" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="666" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6869" name="Recipe: Sealed Draconic Leather Boots (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Draconic Leather Boots. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="71600" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="668" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6871" name="Recipe: Sealed Draconic Leather Helmet (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Draconic Leather Helmet. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="107400" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="670" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6873" name="Recipe: Sealed Major Arcana Robe (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Major Arcana Robe. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="348000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="672" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6875" name="Recipe: Sealed Major Arcana Gloves (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Major Arcana Gloves. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="71600" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="674" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6877" name="Recipe: Sealed Major Arcana Boots (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Major Arcana Boots. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="71600" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="676" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6879" name="Recipe: Sealed Major Arcana Circlet (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Sealed Major Arcana Circlet. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="107400" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="678" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6881" name="Recipe: Forgotten Blade (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Forgotten Blade. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="976000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="626" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6883" name="Recipe: Basalt Battlehammer (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Basalt Battlehammer. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="976000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="628" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6885" name="Recipe: Imperial Staff (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Imperial Staff. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="976000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="630" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6887" name="Recipe: Angel Slayer (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Angel Slayer. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="976000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="632" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6891" name="Recipe: Dragon Hunter Axe (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Dragon Hunter Axe. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="976000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="636" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6893" name="Recipe: Saint Spear (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Saint Spear. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="976000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="638" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6895" name="Recipe: Demon Splinter (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Demon Splinter. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="976000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="640" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6897" name="Recipe: Heaven's Divider (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Heaven's Divider. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="976000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="642" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6899" name="Recipe: Arcana Mace (30%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Arcana Mace. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="976000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="644" />
+		<set name="handler" val="Recipes" />
+	</item>
 </list>

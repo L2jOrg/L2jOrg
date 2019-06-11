@@ -30,17 +30,35 @@
 										<xs:element name="catch" maxOccurs="unbounded" minOccurs="1">
 											<xs:complexType>
 												<xs:attribute type="xs:positiveInteger" name="itemId" use="required" />
+												<xs:attribute type="xs:double" name="chance" />
+												<xs:attribute type="xs:double" name="multiplier" />
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>
 									<xs:attribute type="xs:positiveInteger" name="itemId" use="required" />
-									<xs:attribute type="xs:positiveInteger" name="level" use="required" />
+									<xs:attribute type="xs:positiveInteger" name="level" />
 									<xs:attribute type="xs:positiveInteger" name="minPlayerLevel" use="required" />
+									<xs:attribute type="xs:positiveInteger" name="maxPlayerLevel" />
 									<xs:attribute type="xs:double" name="chance" use="required" />
 									<xs:attribute type="xs:positiveInteger" name="timeMin" use="required" />
-									<xs:attribute type="xs:positiveInteger" name="timeMax" use="required" />
+									<xs:attribute type="xs:positiveInteger" name="timeMax" />
 									<xs:attribute type="xs:positiveInteger" name="waitMin" use="required" />
-									<xs:attribute type="xs:positiveInteger" name="waitMax" use="required" />
+									<xs:attribute type="xs:positiveInteger" name="waitMax" />
+									<xs:attribute type="xs:boolean" name="isPremiumOnly" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="rods">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="rod" maxOccurs="unbounded" minOccurs="1">
+								<xs:complexType>
+									<xs:attribute type="xs:positiveInteger" name="itemId" use="required" />
+									<xs:attribute type="xs:positiveInteger" name="reduceFishingTime" />
+									<xs:attribute type="xs:double" name="xpMultiplier" />
+									<xs:attribute type="xs:double" name="spMultiplier" />
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>

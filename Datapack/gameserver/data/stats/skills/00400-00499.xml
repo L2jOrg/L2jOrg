@@ -1717,7 +1717,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="417" toLevel="5" name="Pain of Sagittarius">
+	<skill id="417" toLevel="7" name="Pain of Sagittarius">
 		<!-- Sacrifices your own HP to regenerate MP with $s1 Power. -->
 		<icon>icon.skill0417</icon>
 		<effectPoint>
@@ -1726,14 +1726,18 @@
 			<value level="3">611</value>
 			<value level="4">635</value>
 			<value level="5">655</value>
+			<value level="6">676</value>
+			<value level="7">700</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
 		<hpConsume>
-			<value level="1">318</value>
-			<value level="2">343</value>
-			<value level="3">366</value>
-			<value level="4">387</value>
-			<value level="5">407</value>
+			<value level="1">300</value>
+			<value level="2">350</value>
+			<value level="3">400</value>
+			<value level="4">450</value>
+			<value level="5">500</value>
+			<value level="6">550</value>
+			<value level="7">600</value>
 		</hpConsume>
 		<magicLvl>
 			<value level="1">58</value>
@@ -1741,6 +1745,8 @@
 			<value level="3">66</value>
 			<value level="4">70</value>
 			<value level="5">74</value>
+			<value level="6">78</value>
+			<value level="7">82</value>
 		</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
@@ -1750,11 +1756,13 @@
 		<effects>
 			<effect name="Mp">
 				<amount>
-					<value level="1">36</value>
-					<value level="2">39</value>
-					<value level="3">41</value>
-					<value level="4">43</value>
-					<value level="5">46</value>
+					<value level="1">120</value>
+					<value level="2">140</value>
+					<value level="3">160</value>
+					<value level="4">180</value>
+					<value level="5">200</value>
+					<value level="6">220</value>
+					<value level="7">240</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2117,7 +2125,7 @@
 				</weaponType>
 			</effect>
 			<effect name="CriticalRate">
-				<amount>100</amount>
+				<amount>50</amount>
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>DUALFIST</item>
@@ -2195,8 +2203,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="429" toLevel="7" name="Knighthood">
-		<!-- P. Def. +87.1, Shield Defense +10%, and Bow Resistance +10% when equipped with heavy armor. -->
+	<skill id="429" toLevel="8" name="Knighthood">
+		<!-- P. Def. +$s1, Shield Defense +$s2, and Bow Resistance +$s3 when equipped with heavy armor. -->
 		<icon>icon.skill0429</icon>
 		<magicLvl>
 			<value level="1">78</value>
@@ -2206,6 +2214,7 @@
 			<value level="5">82</value>
 			<value level="6">83</value>
 			<value level="7">84</value>
+			<value level="8">85</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2219,6 +2228,7 @@
 					<value level="5">99</value>
 					<value level="6">102</value>
 					<value level="7">105</value>
+					<value level="8">108</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -2403,10 +2413,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="437" toLevel="1" name="Song of Silence">
+	<skill id="437" toLevel="3" name="Song of Silence">
 		<!-- Sings a Song of Silence. Blocks all the enemies' physical/ magic skills for $s1. -->
 		<icon>icon.skill0437</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -2419,8 +2433,16 @@
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>79</magicLvl>
-		<mpConsume>50</mpConsume>
+		<magicLvl>
+			<value level="1">79</value>
+			<value level="2">81</value>
+			<value level="3">84</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">75</value>
+			<value level="3">90</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>120000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2720,7 +2742,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="449" toLevel="4" name="Summon Attractive Cubic">
+	<skill id="449" toLevel="9" name="Summon Attractive Cubic">
 		<!-- Summons Attractive Cubic. Attractive Cubic can continuously use hate and hold magic on the enemy. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill0449</icon>
 		<hitTime>6000</hitTime>
@@ -2730,6 +2752,11 @@
 			<value level="2">9</value>
 			<value level="3">10</value>
 			<value level="4">11</value>
+			<value level="5">11</value>
+			<value level="6">11</value>
+			<value level="7">11</value>
+			<value level="8">11</value>
+			<value level="9">11</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
 		<magicLvl>
@@ -2737,12 +2764,22 @@
 			<value level="2">66</value>
 			<value level="3">70</value>
 			<value level="4">74</value>
+			<value level="5">76</value>
+			<value level="6">78</value>
+			<value level="7">80</value>
+			<value level="8">82</value>
+			<value level="9">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">58</value>
 			<value level="2">62</value>
 			<value level="3">65</value>
 			<value level="4">69</value>
+			<value level="5">73</value>
+			<value level="6">77</value>
+			<value level="7">81</value>
+			<value level="8">85</value>
+			<value level="9">89</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -2760,6 +2797,11 @@
 					<value level="2">2</value>
 					<value level="3">3</value>
 					<value level="4">4</value>
+					<value level="5">4</value>
+					<value level="6">4</value>
+					<value level="7">4</value>
+					<value level="8">4</value>
+					<value level="9">4</value>
 				</cubicLvl>
 			</effect>
 		</effects>
@@ -2912,7 +2954,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="452" toLevel="5" name="Stun Stomp">
+	<skill id="452" toLevel="5" name="Stun Stump">
 		<!-- Performs a mighty foot stomp that stuns nearby enemies for $s1 Requires a polearm. Target cancel is possible. -->
 		<icon>icon.skill0452</icon>
 		<abnormalLvl>1</abnormalLvl>

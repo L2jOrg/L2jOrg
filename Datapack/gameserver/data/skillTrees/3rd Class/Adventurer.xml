@@ -1,35 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="93" parentClassId="8">
-		<skill skillName="Throw Dagger in Wrist" skillId="1629" skillLvl="1" getLevel="76" levelUpSp="8300000" />
-		<skill skillName="Dagger Mastery" skillId="209" skillLvl="46" getLevel="76" levelUpSp="8300000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="48" getLevel="76" levelUpSp="8300000" />
-		<skill skillName="Deadly Blow" skillId="263" skillLvl="38" getLevel="76" levelUpSp="8300000" />
-		<skill skillName="Lethal Blow" skillId="344" skillLvl="1" getLevel="76" levelUpSp="8300000" />
-		<skill skillName="Backstab" skillId="30" skillLvl="38" getLevel="76" levelUpSp="8300000" />
+		<skill skillName="Bluff" skillId="358" skillLvl="1" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="8300000">
 			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
 		</skill>
 		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="8300000">
 			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
 		</skill>
+		<skill skillName="Throw Dagger in Wrist" skillId="1629" skillLvl="1" getLevel="76" levelUpSp="8300000" />
+		<skill skillName="Dagger Mastery" skillId="209" skillLvl="46" getLevel="76" levelUpSp="8300000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="48" getLevel="76" levelUpSp="8300000" />
+		<skill skillName="Bleed" skillId="96" skillLvl="7" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Mount Gold Maned Lion" skillId="1833" skillLvl="1" getLevel="76">
 			<item id="90038" count="1" /> <!-- Spellbook: Mount Golden Lion -->
 		</skill>
+		<skill skillName="Deadly Blow" skillId="263" skillLvl="38" getLevel="76" levelUpSp="8300000" />
+		<skill skillName="Lethal Blow" skillId="344" skillLvl="1" getLevel="76" levelUpSp="8300000" />
+		<skill skillName="Backstab" skillId="30" skillLvl="38" getLevel="76" levelUpSp="8300000" />
 		
+		<skill skillName="Bluff" skillId="358" skillLvl="2" getLevel="77" levelUpSp="8300000" />
 		<skill skillName="Dagger Mastery" skillId="209" skillLvl="47" getLevel="77" levelUpSp="8300000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="49" getLevel="77" levelUpSp="8300000" />
 		<skill skillName="Critical Wound" skillId="531" skillLvl="1" getLevel="77" levelUpSp="8300000">
 			<item id="90055" count="1" /> <!-- Scroll: Critical Wound -->
 		</skill>
+		<skill skillName="Bleed" skillId="96" skillLvl="8" getLevel="77" levelUpSp="8300000" />
 		<skill skillName="Clear Movements" skillId="1631" skillLvl="1" getLevel="77" levelUpSp="8300000">
 			<item id="90054" count="1" /> <!-- Scroll: Clear Movements -->
 		</skill>
 		<skill skillName="Deadly Blow" skillId="263" skillLvl="39" getLevel="77" levelUpSp="8300000" />
 		<skill skillName="Backstab" skillId="30" skillLvl="39" getLevel="77" levelUpSp="8300000" />
-
+		
+		<skill skillName="Bluff" skillId="358" skillLvl="3" getLevel="78" levelUpSp="19400000" />
 		<skill skillName="Dagger Mastery" skillId="209" skillLvl="48" getLevel="78" levelUpSp="19400000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="50" getLevel="78" levelUpSp="19400000" />
+		<skill skillName="Bleed" skillId="96" skillLvl="9" getLevel="78" levelUpSp="19400000" />
 		<skill skillName="Sand Bomb" skillId="412" skillLvl="11" getLevel="78" levelUpSp="19400000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLvl="40" getLevel="78" levelUpSp="19400000" />
 		<skill skillName="Backstab" skillId="30" skillLvl="40" getLevel="78" levelUpSp="19400000" />
@@ -41,40 +47,54 @@
 		</skill>
 		<skill skillName="Shadow Step" skillId="821" skillLvl="8" getLevel="78" levelUpSp="19400000" />
 		
+		<skill skillName="Bluff" skillId="358" skillLvl="4" getLevel="79" levelUpSp="19400000" />
+		<skill skillName="Bleed" skillId="96" skillLvl="10" getLevel="79" levelUpSp="19400000" />
 		<skill skillName="Mirage" skillId="445" skillLvl="1" getLevel="79" levelUpSp="19400000">
 			<item id="90059" count="1" /> <!-- Scroll: Mirage -->
 		</skill>
-
+		
+		<skill skillName="Bluff" skillId="358" skillLvl="5" getLevel="80" levelUpSp="19400000" />
 		<skill skillName="Dagger Mastery" skillId="209" skillLvl="49" getLevel="80" levelUpSp="19400000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="51" getLevel="80" levelUpSp="19400000" />
+		<skill skillName="Bleed" skillId="96" skillLvl="11" getLevel="80" levelUpSp="19400000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLvl="41" getLevel="80" levelUpSp="19400000" />
 		<skill skillName="Exciting Adventure" skillId="768" skillLvl="1" getLevel="80" levelUpSp="19400000">
 			<item id="90133" count="1" /> <!-- Scroll: Exciting Adventure -->
 		</skill>
 		<skill skillName="Backstab" skillId="30" skillLvl="41" getLevel="80" levelUpSp="19400000" />
 
-		<skill skillName="Dagger Mastery" skillId="209" skillLvl="50" getLevel="81" levelUpSp="300000000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="52" getLevel="81" levelUpSp="300000000" />
-		<skill skillName="Clear Movements" skillId="1631" skillLvl="2" getLevel="81" levelUpSp="300000000" />
-		<skill skillName="Critical Wound" skillId="531" skillLvl="2" getLevel="81" levelUpSp="300000000" />
-		<skill skillName="Deadly Blow" skillId="263" skillLvl="42" getLevel="81" levelUpSp="300000000" />
-		<skill skillName="Backstab" skillId="30" skillLvl="42" getLevel="81" levelUpSp="300000000" />
+		<skill skillName="Bluff" skillId="358" skillLvl="6" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Dagger Mastery" skillId="209" skillLvl="50" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="52" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Critical Wound" skillId="531" skillLvl="2" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Bleed" skillId="96" skillLvl="12" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Clear Movements" skillId="1631" skillLvl="2" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Deadly Blow" skillId="263" skillLvl="42" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Backstab" skillId="30" skillLvl="42" getLevel="81" levelUpSp="160000000" />
 
-		<skill skillName="Dagger Mastery" skillId="209" skillLvl="51" getLevel="82" levelUpSp="308000000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="53" getLevel="82" levelUpSp="308000000" />
-		<skill skillName="Deadly Blow" skillId="263" skillLvl="43" getLevel="82" levelUpSp="308000000" />
-		<skill skillName="Lethal Blow" skillId="344" skillLvl="2" getLevel="82" levelUpSp="308000000" />
-		<skill skillName="Backstab" skillId="30" skillLvl="43" getLevel="82" levelUpSp="308000000" />
+		<skill skillName="Bluff" skillId="358" skillLvl="7" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Dagger Mastery" skillId="209" skillLvl="51" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="53" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Bleed" skillId="96" skillLvl="13" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Deadly Blow" skillId="263" skillLvl="43" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Lethal Blow" skillId="344" skillLvl="2" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Backstab" skillId="30" skillLvl="43" getLevel="82" levelUpSp="170000000" />
 		
-		<skill skillName="Dagger Mastery" skillId="209" skillLvl="52" getLevel="83" levelUpSp="421000000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="54" getLevel="83" levelUpSp="421000000" />
-		<skill skillName="Deadly Blow" skillId="263" skillLvl="44" getLevel="83" levelUpSp="421000000" />
-		<skill skillName="Backstab" skillId="30" skillLvl="44" getLevel="83" levelUpSp="421000000" />
+		<skill skillName="Bluff" skillId="358" skillLvl="8" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Dagger Mastery" skillId="209" skillLvl="52" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="54" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Bleed" skillId="96" skillLvl="14" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Deadly Blow" skillId="263" skillLvl="44" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Backstab" skillId="30" skillLvl="44" getLevel="83" levelUpSp="240000000" />
 		
-		<skill skillName="Dagger Mastery" skillId="209" skillLvl="53" getLevel="84" levelUpSp="452000000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="55" getLevel="84" levelUpSp="452000000" />
-		<skill skillName="Deadly Blow" skillId="263" skillLvl="45" getLevel="84" levelUpSp="452000000" />
-		<skill skillName="Backstab" skillId="30" skillLvl="45" getLevel="84" levelUpSp="452000000" />
+		<skill skillName="Bluff" skillId="358" skillLvl="9" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Dagger Mastery" skillId="209" skillLvl="53" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="55" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Bleed" skillId="96" skillLvl="15" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Deadly Blow" skillId="263" skillLvl="45" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Backstab" skillId="30" skillLvl="45" getLevel="84" levelUpSp="240000000" />
 		
+		<skill skillName="Dagger Mastery" skillId="209" skillLvl="54" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="56" getLevel="85" levelUpSp="840000000" />
 	</skillTree>
 </list>

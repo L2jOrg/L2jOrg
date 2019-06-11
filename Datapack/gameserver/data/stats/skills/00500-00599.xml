@@ -1377,12 +1377,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="522" toLevel="2" name="Real Target">
-		<!-- Bow Resistance -$s2 for $s1. -->
+	<skill id="522" toLevel="4" name="Real Target">
+		<!-- Bow Resistance -$s2 and Stun Resistance -$s3 for $s1 -->
 		<icon>icon.skill0522</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
@@ -1395,10 +1397,14 @@
 		<magicLvl>
 			<value level="1">78</value>
 			<value level="2">80</value>
+			<value level="3">82</value>
+			<value level="4">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">55</value>
 			<value level="2">58</value>
+			<value level="3">61</value>
+			<value level="4">64</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -1411,7 +1417,15 @@
 				<BOW>
 					<value level="1">-12</value>
 					<value level="2">-16</value>
+					<value level="3">-18</value>
+					<value level="4">-20</value>
 				</BOW>
+				<SHOCK>
+					<value level="1">-10</value>
+					<value level="2">-15</value>
+					<value level="3">-20</value>
+					<value level="4">-25</value>
+				</SHOCK>
 			</effect>
 		</effects>
 	</skill>
@@ -2074,7 +2088,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="560" toLevel="4" name="Double Slash">
+	<skill id="560" toLevel="4" name="Power Slash">
 		<!-- A powerful frontal attack that involves swinging a polearm to assault enemies. Over-hit. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectRange>200</affectRange>

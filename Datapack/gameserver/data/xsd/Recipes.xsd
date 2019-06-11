@@ -69,6 +69,7 @@
 								<xs:restriction base="xs:integer">
 									<xs:enumeration value="10" />
 									<xs:enumeration value="25" />
+									<xs:enumeration value="30" />
 									<xs:enumeration value="60" />
 									<xs:enumeration value="70" />
 									<xs:enumeration value="95" />

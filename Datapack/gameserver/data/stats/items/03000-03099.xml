@@ -589,6 +589,19 @@
 		<set name="handler" val="Recipes" />
 		<set name="commissionItemType" val="RECIPE" />
 	</item>
+	<item id="3036" name="Recipe: Spiritshot (S-grade) (100%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Spiritshot (S-grade). Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="450000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="321" />
+		<set name="handler" val="Recipes" />
+	</item>
 	<item id="3037" name="Kakan's Letter" type="EtcItem">
 		<!-- Kakan's reply letter to Sla. Collect three reply letters from Sla's disciples and deliver them to Sla. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />

@@ -9,9 +9,10 @@
 			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
 		</skill>
 		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="42" getLevel="76" levelUpSp="7400000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="42" getLevel="76" levelUpSp="7400000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="42" getLevel="76" levelUpSp="7400000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="43" getLevel="76" levelUpSp="7400000" />
 		<skill skillName="Dryad Root" skillId="1201" skillLvl="34" getLevel="76" levelUpSp="7400000" />
+		<skill skillName="Mass Recharge" skillId="1428" skillLvl="6" getLevel="76" levelUpSp="7400000" />
 		<skill skillName="Wind Shackle" skillId="1206" skillLvl="20" getLevel="76" levelUpSp="7400000" />
 		<skill skillName="Mount Saber Tooth Cougar" skillId="1835" skillLvl="1" getLevel="76">
 			<item id="90040" count="1" /> <!-- Spellbook: Mount Saber Tooth Cougar -->
@@ -21,11 +22,10 @@
 			<item id="90108" count="1" /> <!-- Scroll: Prophecy of Wind -->
 		</skill>
 		<skill skillName="Might of Heaven" skillId="1028" skillLvl="20" getLevel="76" levelUpSp="7400000" />
-		<skill skillName="Mass Recharge" skillId="1428" skillLvl="6" getLevel="76" levelUpSp="7400000" />
 		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="47" getLevel="77" levelUpSp="7400000" />
 		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="43" getLevel="77" levelUpSp="7400000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="43" getLevel="77" levelUpSp="7400000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="43" getLevel="77" levelUpSp="7400000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="44" getLevel="77" levelUpSp="7400000" />
 		<skill skillName="Mass Purify" skillId="1551" skillLvl="1" getLevel="77" levelUpSp="7400000">
 			<item id="90109" count="1" /> <!-- Scroll: Mass Purify -->
@@ -36,63 +36,94 @@
 		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="48" getLevel="78" levelUpSp="16300000" />
 		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="44" getLevel="78" levelUpSp="16300000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="44" getLevel="78" levelUpSp="16300000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="44" getLevel="78" levelUpSp="16300000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="45" getLevel="78" levelUpSp="16300000" />
 		<skill skillName="Dryad Root" skillId="1201" skillLvl="35" getLevel="78" levelUpSp="16300000" />
+		<skill skillName="Mass Recharge" skillId="1428" skillLvl="7" getLevel="78" levelUpSp="16300000" />
 		<skill skillName="Wind Shackle" skillId="1206" skillLvl="21" getLevel="78" levelUpSp="16300000" />
 		<skill skillName="Recharge" skillId="1013" skillLvl="34" getLevel="78" levelUpSp="16300000" />
+		<skill skillName="Shilen's Cursed Field" skillId="1897" skillLvl="5" getLevel="78" levelUpSp="16300000" />
 		<skill skillName="Enlightenment" skillId="1533" skillLvl="1" getLevel="78" levelUpSp="16300000">
 			<item id="90111" count="1" /> <!-- Scroll: Enlightenment -->
 		</skill>
 		<skill skillName="Might of Heaven" skillId="1028" skillLvl="21" getLevel="78" levelUpSp="16300000" />
 		<skill skillName="Stigma of Shilen" skillId="1539" skillLvl="5" getLevel="78" levelUpSp="16300000" />
-		<skill skillName="Mass Recharge" skillId="1428" skillLvl="7" getLevel="78" levelUpSp="16300000" />
-		<skill skillName="Shilen's Cursed Field" skillId="1897" skillLvl="5" getLevel="78" levelUpSp="16300000" />
 		
+		<skill skillName="Dryad Root" skillId="1201" skillLvl="36" getLevel="79" levelUpSp="16300000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="22" getLevel="79" levelUpSp="16300000" />
 		<skill skillName="Mana Gain" skillId="1460" skillLvl="1" getLevel="79" levelUpSp="16300000">
 			<item id="90106" count="1" /> <!-- Scroll: Mana Gain -->
 		</skill>
-
+		<skill skillName="Shilen's Cursed Field" skillId="1897" skillLvl="6" getLevel="79" levelUpSp="16300000" />
+		<skill skillName="Stigma of Shilen" skillId="1539" skillLvl="6" getLevel="79" levelUpSp="16300000" />
+		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="49" getLevel="80" levelUpSp="16300000" />
 		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="45" getLevel="80" levelUpSp="16300000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="45" getLevel="80" levelUpSp="16300000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="45" getLevel="80" levelUpSp="16300000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="46" getLevel="80" levelUpSp="16300000" />
+		<skill skillName="Dryad Root" skillId="1201" skillLvl="37" getLevel="80" levelUpSp="16300000" />
+		<skill skillName="Mass Recharge" skillId="1428" skillLvl="8" getLevel="80" levelUpSp="16300000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="23" getLevel="80" levelUpSp="16300000" />
 		<skill skillName="Lord of Vampires" skillId="1507" skillLvl="1" getLevel="80" levelUpSp="16300000">
 			<item id="90110" count="1" /> <!-- Scroll: Lord of Vampires -->
 		</skill>
 		<skill skillName="Recharge" skillId="1013" skillLvl="35" getLevel="80" levelUpSp="16300000" />
+		<skill skillName="Mana Gain" skillId="1460" skillLvl="2" getLevel="80" levelUpSp="16300000" />
+		<skill skillName="Shilen's Cursed Field" skillId="1897" skillLvl="7" getLevel="80" levelUpSp="16300000" />
 		<skill skillName="Might of Heaven" skillId="1028" skillLvl="22" getLevel="80" levelUpSp="16300000" />
-		<skill skillName="Mass Recharge" skillId="1428" skillLvl="8" getLevel="80" levelUpSp="16300000" />
+		<skill skillName="Stigma of Shilen" skillId="1539" skillLvl="7" getLevel="80" levelUpSp="16300000" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLvl="50" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="46" getLevel="81" levelUpSp="160000000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="46" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="46" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="47" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Dryad Root" skillId="1201" skillLvl="38" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="24" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Recharge" skillId="1013" skillLvl="36" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Mana Gain" skillId="1460" skillLvl="3" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Shilen's Cursed Field" skillId="1897" skillLvl="8" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Might of Heaven" skillId="1028" skillLvl="23" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Stigma of Shilen" skillId="1539" skillLvl="8" getLevel="81" levelUpSp="160000000" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLvl="51" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="47" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="47" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="47" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="48" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Dryad Root" skillId="1201" skillLvl="39" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Mass Recharge" skillId="1428" skillLvl="9" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="25" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Recharge" skillId="1013" skillLvl="37" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Shilen's Cursed Field" skillId="1897" skillLvl="9" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Prophecy of Wind" skillId="1357" skillLvl="2" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Might of Heaven" skillId="1028" skillLvl="24" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Mass Recharge" skillId="1428" skillLvl="9" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Stigma of Shilen" skillId="1539" skillLvl="9" getLevel="82" levelUpSp="170000000" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLvl="52" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="48" getLevel="83" levelUpSp="240000000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="48" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="48" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="49" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Dryad Root" skillId="1201" skillLvl="40" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="26" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Recharge" skillId="1013" skillLvl="38" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Shilen's Cursed Field" skillId="1897" skillLvl="10" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Might of Heaven" skillId="1028" skillLvl="25" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Stigma of Shilen" skillId="1539" skillLvl="10" getLevel="83" levelUpSp="240000000" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLvl="53" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="49" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="49" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="49" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="50" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Recharge" skillId="1013" skillLvl="39" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Might of Heaven" skillId="1028" skillLvl="26" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Dryad Root" skillId="1201" skillLvl="41" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Mass Recharge" skillId="1428" skillLvl="10" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Wind Shackle" skillId="1206" skillLvl="27" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Recharge" skillId="1013" skillLvl="39" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Shilen's Cursed Field" skillId="1897" skillLvl="11" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Might of Heaven" skillId="1028" skillLvl="26" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Stigma of Shilen" skillId="1539" skillLvl="11" getLevel="84" levelUpSp="240000000" />
+		
+		<skill skillName="Anti Magic" skillId="146" skillLvl="54" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="50" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="50" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="51" getLevel="85" levelUpSp="840000000" />
 	</skillTree>
 </list>

@@ -222,7 +222,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1403" toLevel="1" name="Summon Friend">
+	<skill id="1403" toLevel="1" name="Summon Your Spouse">
 		<!-- Teleports a party member to one's current location. Requires a Summoning Crystal on the target. -->
 		<icon>icon.skill1403</icon>
 		<castRange>-2</castRange>
@@ -308,19 +308,27 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1406" toLevel="2" name="Summon Feline King">
-		<!-- Summons a Feline King. Consumes 12 Spirit Ore. -->
+	<skill id="1406" toLevel="6" name="Summon Feline King">
+		<!-- Summons a Feline King. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1406</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">12</value>
 			<value level="2">14</value>
+			<value level="3">14</value>
+			<value level="4">14</value>
+			<value level="5">16</value>
+			<value level="6">16</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLvl>
 			<value level="1">77</value>
 			<value level="2">81</value>
+			<value level="3">82</value>
+			<value level="4">83</value>
+			<value level="5">84</value>
+			<value level="6">85</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">144</value>
@@ -341,23 +349,35 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1407" toLevel="2" name="Summon Magnus the Unicorn">
-		<!-- Summons Magnus the Unicorn. Requires 12 Spirit Ore. -->
+	<skill id="1407" toLevel="6" name="Summon Magnus the Unicorn">
+		<!-- Summons Magnus the Unicorn. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1407</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">12</value>
 			<value level="2">14</value>
+			<value level="3">14</value>
+			<value level="4">14</value>
+			<value level="5">16</value>
+			<value level="6">16</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLvl>
 			<value level="1">77</value>
 			<value level="2">81</value>
+			<value level="3">82</value>
+			<value level="4">83</value>
+			<value level="5">84</value>
+			<value level="6">85</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">144</value>
 			<value level="2">159</value>
+			<value level="3">162</value>
+			<value level="4">165</value>
+			<value level="5">170</value>
+			<value level="6">175</value>
 		</mpConsume>
 		<mpInitialConsume>29</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -374,8 +394,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1408" toLevel="2" name="Summon Spectral Lord">
-		<!-- Summons a Spectral Lord. Consumes 12 Spirit Ore. -->
+	<skill id="1408" toLevel="6" name="Summon Spectral Lord">
+		<!-- Summons a Spectral Lord. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1408</icon>
 		<hitTime>6000</hitTime>
 		<inheritElementals>true</inheritElementals>
@@ -383,21 +403,29 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">12</value>
-			<value level="1">14</value>
+			<value level="2">14</value>
+			<value level="3">14</value>
+			<value level="4">14</value>
+			<value level="5">16</value>
+			<value level="6">16</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLvl>
-			<value level="1">1</value>
-			<value level="1">2</value>
+			<value level="1">77</value>
+			<value level="2">81</value>
+			<value level="3">82</value>
+			<value level="4">83</value>
+			<value level="5">84</value>
+			<value level="6">85</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">144</value>
-			<value level="1">159</value>
+			<value level="2">159</value>
+			<value level="3">162</value>
+			<value level="4">165</value>
+			<value level="5">170</value>
+			<value level="6">175</value>
 		</mpConsume>
-		<mpInitialConsume>
-			<value level="1">29</value>
-			<value level="1">30</value>
-		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2754,8 +2782,8 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
-	<!--<skill id="1449" toLevel="1" name="Transfer Soul">
-		&lt;!&ndash; Transfer a soul to the target. Only possible when the target is a Kamael. Consumes 1 Soul. &ndash;&gt;
+	<skill id="1449" toLevel="1" name="Transfer Soul">
+		<!-- Transfer a soul to the target. Only possible when the target is a Kamael. Consumes 1 Soul. -->
 		<icon>icon.skill1449</icon>
 		<castRange>400</castRange>
 		<effectPoint>150</effectPoint>
@@ -2784,7 +2812,7 @@
 				<charge>1</charge>
 			</effect>
 		</effects>
-	</skill>-->
+	</skill>
 	<skill id="1450" toLevel="1" name="Chain Lightning">
 		<!-- Hurls thunderbolts and inflicts non-attribute damage the target and nearby enemies with 200 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
 		<icon>icon.skill1450</icon>
@@ -3158,10 +3186,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1460" toLevel="1" name="Mana Gain">
-		<!-- When using the Recharge skill, target's MP Recovery Rate +85 for 20 min. -->
+	<skill id="1460" toLevel="3" name="Mana Gain">
+		<!-- When using the Recharge skill, target's MP Recovery Bonus +$s1 for 20 min. -->
 		<icon>icon.skill1460</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>RECHARGE_UP</abnormalType>
 		<castRange>600</castRange>
@@ -3169,8 +3201,16 @@
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>79</magicLvl>
-		<mpConsume>180</mpConsume>
+		<magicLvl>
+			<value level="1">79</value>
+			<value level="2">80</value>
+			<value level="3">81</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">180</value>
+			<value level="2">184</value>
+			<value level="3">188</value>
+		</mpConsume>
 		<mpInitialConsume>38</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -3186,7 +3226,11 @@
 		</conditions>
 		<effects>
 			<effect name="ManaCharge">
-				<amount>85</amount>
+				<amount>
+					<value level="1">85</value>
+					<value level="2">87</value>
+					<value level="3">89</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
