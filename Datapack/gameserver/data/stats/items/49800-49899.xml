@@ -604,11 +604,18 @@
 		<!-- Instantly recovers MP. Cannot be dropped or sold in the grocery store. -->
 		<set name="icon" val="icon.freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills"/>
+		<skills>
+			<skill id="39198" level="1"/> <!-- Melissa's MP Recovery Potion -->
+		</skills>
 	</item>
 	<item id="49855" name="Sayha's Golden Gift" type="EtcItem">
 		<!-- Double-click to randomly receive one rare accessory or one rare item. Cannot be dropped or sold in the grocery store. -->

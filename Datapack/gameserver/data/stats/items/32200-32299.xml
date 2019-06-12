@@ -77,18 +77,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_infinite" val="true" />
 	</item>
-	<item id="32255" name="Infinite Orichalcum Quiver" type="EtcItem">
-		<!-- Quiver containing arrows made of orichalcum. Used with an R-grade bow. -->
-		<set name="default_action" val="EQUIP" />
-		<set name="etcitem_type" val="ARROW" />
-		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="ORIHARUKON" />
-		<set name="price" val="1716000" />
-		<set name="crystal_type" val="R" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_infinite" val="true" />
-	</item>
 	<item id="32256" name="Infinite Wooden Bolt Container" type="EtcItem">
 		<!-- Quiver with wooden bolts. Used with a No-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_bolts_i00" />

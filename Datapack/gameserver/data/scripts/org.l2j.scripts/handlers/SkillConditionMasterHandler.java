@@ -86,6 +86,7 @@ public class SkillConditionMasterHandler
 		SkillConditionHandler.getInstance().registerHandler("OpHaveSummonedNpc", OpHaveSummonedNpcSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("TargetMyMentee", TargetMyMenteeSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpPeacezone", OpPeacezoneSkillCondition::new);
+		SkillConditionHandler.getInstance().registerHandler("OpNotInPeacezone", OpNotInPeacezoneSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpPkcount", OpPkcountSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpNotCursed", OpNotCursedSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("TargetMyPledge", TargetMyPledgeSkillCondition::new);

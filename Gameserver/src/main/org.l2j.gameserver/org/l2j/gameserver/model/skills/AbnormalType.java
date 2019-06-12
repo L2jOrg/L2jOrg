@@ -522,7 +522,9 @@ public enum AbnormalType {
     CHERRY_FRUIT(-1),
     HERB_EXP(-1),
     HERB_SPEED(-1),
-    HERB_ACCURANCY(-1);
+    HERB_ACCURANCY(-1),
+    WARRIOR_BANE(-1),
+    MAGE_BANE(-1);
 
     protected static final Logger LOGGER = LoggerFactory.getLogger(AbnormalType.class);
     private int _clientId;

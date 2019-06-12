@@ -58,7 +58,8 @@ public final class Antharas extends AbstractNpcAI
 	private static final int HEART = 13001; // Heart of Warding
 	private static final int CUBE = 31859; // Teleportation Cubic
 	private static final Map<Integer, Location> INVISIBLE_NPC = new HashMap<>();
-	{
+
+	static {
 		INVISIBLE_NPC.put(29077, new Location(177229, 113298, -7735));
 		INVISIBLE_NPC.put(29078, new Location(176707, 113585, -7735));
 		INVISIBLE_NPC.put(29079, new Location(176385, 113889, -7735));

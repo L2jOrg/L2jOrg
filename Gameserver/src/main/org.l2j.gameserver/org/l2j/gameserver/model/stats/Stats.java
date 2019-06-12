@@ -74,6 +74,7 @@ public enum Stats {
     PHYSICAL_SKILL_POWER("physicalSkillPower"), // Adding skill power (not multipliers) results in points added directly to final value unmodified by defence, traits, elements, criticals etc.
     // Even when damage is 0 due to general trait immune multiplier, added skill power is active and clearly visible (damage not being 0 but at the value of added skill power).
     MAGICAL_SKILL_POWER("magicalSkillPower"),
+    SKILL_POWER_ADD("skillPowerAdd"),
     CRITICAL_DAMAGE_SKILL("cAtkSkill"),
     CRITICAL_DAMAGE_SKILL_ADD("cAtkSkillAdd"),
     MAGIC_CRITICAL_DAMAGE_ADD("mCritPowerAdd"),

@@ -512,6 +512,21 @@
 	</skill>
 	<skill id="55589" toLevel="1" name="Hero's MP Recovery Potion">
 		<icon>icon.etc_potion_blue_i00</icon>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mp">
+				<amount>60</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55590" toLevel="1" name="Golden Mermaid's Scale">

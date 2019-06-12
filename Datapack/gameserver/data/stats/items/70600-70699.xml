@@ -394,16 +394,23 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="70642" name="Warrior's MP Recovery Potion" additionalName="Event" type="EtcItem">
+	<item id="70642" name="Hero's MP Recovery Potion" additionalName="Event" type="EtcItem">
 		<!-- Immediately restores 60 MP. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="10" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills"/>
+		<skills>
+			<skill id="39258" level="1"/> <!-- Warrior MP Recovery Potion -->
+		</skills>
 	</item>
 	<item id="70643" name="Golden Mermaid's Scale" additionalName="7-day" type="EtcItem">
 		<!-- For 3 hours, during fishing XP / SP +10%. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 7 days. -->

@@ -16,6 +16,7 @@
  */
 package ai.others;
 
+import ai.AbstractNpcAI;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.L2Object;
@@ -29,7 +30,8 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.items.type.WeaponType;
 
-import ai.AbstractNpcAI;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @author Mobius
@@ -60,7 +62,8 @@ public class SiegeGuards extends AbstractNpcAI
 		35134, 35135, 35136, 35176, 35177, 35178, 35218, 35219, 35220, 35261, 35262, 35263, 35264, 35265, 35308, 35309, 35310, 35352, 35353, 35354, 35497, 35498, 35499, 35500, 35501, 35544, 35545, 35546
 	};
 	//@formatter:on
-	
+	private static final List<L2Npc> SPAWNED_GUARDS = new CopyOnWriteArrayList<>();
+
 	public SiegeGuards()
 	{
 		addAttackId(CASTLE_GUARDS);
@@ -69,34 +72,42 @@ public class SiegeGuards extends AbstractNpcAI
 		addSpawnId(CASTLE_GUARDS);
 		addSpawnId(MERCENARIES);
 		addSpawnId(STATIONARY_MERCENARIES);
+		addKillId(CASTLE_GUARDS);
+		addKillId(MERCENARIES);
+		addKillId(STATIONARY_MERCENARIES);
+
+		startQuestTimer("AGGRO_CHECK", 3000, null, null, true);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if ((npc != null) && !npc.isDead())
-		{
-			final L2Object target = npc.getTarget();
-			if (!npc.isInCombat() || (target == null) || (npc.calculateDistance2D(target) > npc.getAggroRange()) || target.isInvul())
-			{
-				for (L2Character nearby : L2World.getInstance().getVisibleObjectsInRange(npc, L2Character.class, npc.getAggroRange()))
-				{
-					if (nearby.isPlayable() && GeoEngine.getInstance().canSeeTarget(npc, nearby))
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+		for (L2Npc guard : SPAWNED_GUARDS) {
+			if (guard != null) {
+				if (guard.isDead()) {
+					SPAWNED_GUARDS.remove(guard);
+				}
+				else {
+					final L2Object target = guard.getTarget();
+					if (!guard.isInCombat() || (target == null) || (guard.calculateDistance2D(target) > guard.getAggroRange()) || target.isInvul()) {
+						for (L2Character nearby : L2World.getInstance().getVisibleObjectsInRange(guard, L2Character.class, guard.getAggroRange()))
 					{
-						final L2Summon summon = nearby.isSummon() ? (L2Summon) nearby : null;
-						final L2PcInstance pl = summon == null ? (L2PcInstance) nearby : summon.getOwner();
-						if (((pl.getSiegeState() != 2) || pl.isRegisteredOnThisSiegeField(npc.getScriptValue())) && ((pl.getSiegeState() != 0) || (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE)))
+							if (nearby.isPlayable() && GeoEngine.getInstance().canSeeTarget(guard, nearby))
+							{
+								final L2Summon summon = nearby.isSummon() ? (L2Summon) nearby : null;
+								final L2PcInstance pl = summon == null ? (L2PcInstance) nearby : summon.getOwner();
+								if (((pl.getSiegeState() != 2) || pl.isRegisteredOnThisSiegeField(guard.getScriptValue())) && ((pl.getSiegeState() != 0) || (guard.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE)))
 						{
 							if (!pl.isInvisible() && !pl.isInvul()) // skip invisible players
 							{
-								addAttackPlayerDesire(npc, pl);
+										addAttackPlayerDesire(guard, pl);
 								break; // no need to search more
 							}
 						}
 					}
 				}
 			}
-			startQuestTimer("AGGRO_CHECK" + npc.getObjectId(), 3000, npc, null);
+				}
+			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -113,6 +124,13 @@ public class SiegeGuards extends AbstractNpcAI
 	}
 	
 	@Override
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	{
+		SPAWNED_GUARDS.remove(npc);
+		return super.onKill(npc, killer, isSummon);
+	}
+
+	@Override
 	public String onSpawn(L2Npc npc)
 	{
 		npc.setRandomWalking(false);
@@ -123,7 +141,7 @@ public class SiegeGuards extends AbstractNpcAI
 		final Castle castle = npc.getCastle();
 		final Fort fortress = npc.getFort();
 		npc.setScriptValue(fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : 0));
-		startQuestTimer("AGGRO_CHECK" + npc.getObjectId(), getRandom(1000, 10000), npc, null);
+		SPAWNED_GUARDS.add(npc);
 		return super.onSpawn(npc);
 	}
 	

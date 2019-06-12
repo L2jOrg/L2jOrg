@@ -2782,37 +2782,6 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
-	<skill id="1449" toLevel="1" name="Transfer Soul">
-		<!-- Transfer a soul to the target. Only possible when the target is a Kamael. Consumes 1 Soul. -->
-		<icon>icon.skill1449</icon>
-		<castRange>400</castRange>
-		<effectPoint>150</effectPoint>
-		<effectRange>900</effectRange>
-		<hitTime>2500</hitTime>
-		<hpConsume>20</hpConsume>
-		<magicLvl>24</magicLvl>
-		<mpConsume>5</mpConsume>
-		<operateType>A1</operateType>
-		<soulMaxConsumeCount>1</soulMaxConsumeCount>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>OTHERS</targetType>
-		<affectScope>SINGLE</affectScope>
-		<targetConditions>
-			<condition name="TargetRace">
-				<race>KAMAEL</race>
-			</condition>
-		</targetConditions>
-		<conditions>
-			<condition name="SoulSaved">
-				<amount>1</amount>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="FocusSouls">
-				<charge>1</charge>
-			</effect>
-		</effects>
-	</skill>
 	<skill id="1450" toLevel="1" name="Chain Lightning">
 		<!-- Hurls thunderbolts and inflicts non-attribute damage the target and nearby enemies with 200 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
 		<icon>icon.skill1450</icon>

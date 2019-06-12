@@ -285,6 +285,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("SkillCriticalDamage", SkillCriticalDamage::new);
 		EffectHandler.getInstance().registerHandler("SkillCriticalProbability", SkillCriticalProbability::new);
 		EffectHandler.getInstance().registerHandler("SkillEvasion", SkillEvasion::new);
+		EffectHandler.getInstance().registerHandler("SkillPowerAdd", SkillPowerAdd::new);
 		EffectHandler.getInstance().registerHandler("SkillTurning", SkillTurning::new);
 		EffectHandler.getInstance().registerHandler("SkillTurningOverTime", SkillTurningOverTime::new);
 		EffectHandler.getInstance().registerHandler("SoulBlow", SoulBlow::new);

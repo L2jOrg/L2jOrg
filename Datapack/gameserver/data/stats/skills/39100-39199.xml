@@ -1621,11 +1621,25 @@
 		<icon>icon.etc_treasure_box_i04</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39198" toLevel="1" name="Melissa�s MP Recovery Potion">
+	<skill id="39198" toLevel="1" name="Melissa's MP Recovery Potion">
 		<icon>icon.etc_bm_hero_red_potion</icon>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay> <!-- need confirm -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ManaHealPercent">
+				<power>100</power>
+			</effect>
+		</effects>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39199" toLevel="1" name="Hero�s Wondrous Cubic - 7-day">
+	<skill id="39199" toLevel="1" name="Hero's Wondrous Cubic - 7-day">
 		<icon>icon.sa_cube</icon>
 		<operateType>A1</operateType>
 	</skill>
