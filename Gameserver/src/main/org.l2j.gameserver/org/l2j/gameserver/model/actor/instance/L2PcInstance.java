@@ -11265,4 +11265,5 @@ public final class L2PcInstance extends L2Playable {
     public void setVipTierExpiration(long expiration) {
         getClient().setVipTierExpiration(expiration);
     }
+
 }

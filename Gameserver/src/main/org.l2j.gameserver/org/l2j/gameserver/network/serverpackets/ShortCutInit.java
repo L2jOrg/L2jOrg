@@ -5,8 +5,6 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
-import java.nio.ByteBuffer;
-
 public final class ShortCutInit extends IClientOutgoingPacket {
     private Shortcut[] _shortCuts;
 
@@ -26,7 +24,6 @@ public final class ShortCutInit extends IClientOutgoingPacket {
         for (Shortcut sc : _shortCuts) {
             writeInt(sc.getType().ordinal());
             writeInt(sc.getSlot() + (sc.getPage() * 12));
-            writeByte((byte) 0x00);
             switch (sc.getType()) {
                 case ITEM: {
                     writeInt(sc.getId());

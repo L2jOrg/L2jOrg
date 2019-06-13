@@ -4,8 +4,6 @@ import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.Shortcut;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 
-import java.nio.ByteBuffer;
-
 public final class RequestShortCutReg extends IClientIncomingPacket {
     private ShortcutType _type;
     private int _id;
@@ -22,7 +20,6 @@ public final class RequestShortCutReg extends IClientIncomingPacket {
         final int slot = readInt();
         _slot = slot % 12;
         _page = slot / 12;
-        readByte(); // unk 196
         _id = readInt();
         _lvl = readShort();
         _subLvl = readShort(); // Sublevel

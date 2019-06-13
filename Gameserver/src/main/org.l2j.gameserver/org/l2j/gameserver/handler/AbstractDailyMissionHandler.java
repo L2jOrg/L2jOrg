@@ -134,7 +134,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
             ps.setInt(2, holder.getId());
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                    final DailyMissionPlayerData entry = new DailyMissionPlayerData(rs.getInt("charId"), rs.getInt("rewardId"), rs.getInt("status"), rs.getInt("progress"), rs.getLong("lastCompleted"));
+                    final DailyMissionPlayerData entry = new DailyMissionPlayerData(rs.getInt("char_id"), rs.getInt("mission_id"), rs.getInt("status"), rs.getInt("progress"), rs.getLong("last_completed"));
                     entries.put(objectId, entry);
                 }
             }

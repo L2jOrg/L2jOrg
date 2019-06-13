@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org xsd/DailyMission.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org"
+      xsi:schemaLocation="http://l2j.org xsd/DailyMission.xsd">
 
     <mission id="24" name="Reach Level (Lv. 2)" requiredCompletion="2" cycle="SINGLE">
         <handler name="level"/>
@@ -13,17 +14,17 @@
 
     <mission id="26" name="Reach Level (Lv. 4)" requiredCompletion="4" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="10650"/>
+        <reward id="10650" count="5"/>
     </mission>
 
     <mission id="27" name="Reach Level (Lv. 5)" requiredCompletion="5" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29651" count="10"/>
+        <reward id="70094"/>
     </mission>
 
     <mission id="28" name="Reach Level (Lv. 6)" requiredCompletion="6" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29648" count="2"/>
+        <reward id="29650" count="3"/>
     </mission>
 
     <mission id="29" name="Reach Level (Lv. 7)" requiredCompletion="7" cycle="SINGLE">
@@ -39,10 +40,12 @@
     <mission id="31" name="Reach Level (Lv. 9)" requiredCompletion="9" cycle="SINGLE">
         <handler name="level"/>
         <reward id="10650" count="5"/>
+        <reward id="49036" count="5"/>
     </mission>
 
     <mission id="32" name="Reach Level (Lv. 10 Warrior only)" requiredCompletion="10" cycle="SINGLE">
-        <classes>0 18 31 44 53 1 4 19 32 45 56 2 3 5 6 20 21 33 34 46 57 88 89 90 91 99 100 106 107 113 117 118</classes>
+        <classes>0 18 31 44 53 1 4 19 32 45 56 2 3 5 6 20 21 33 34 46 57 88 89 90 91 99 100 106 107 113 117 118
+        </classes>
         <handler name="level"/>
         <reward id="70095"/>
         <reward id="70096"/>
@@ -58,7 +61,9 @@
     </mission>
 
     <mission id="32" name="Reach Level (Lv. 10 Wizard only)" requiredCompletion="10">
-        <classes>10 25 38 11 15 26 29 39 42 12 13 14 16 17 27 28 30 40 41 43 49 50 51 52 94 95 96 97 98 103 104 105 110 111 112</classes>
+        <classes>10 25 38 11 15 26 29 39 42 12 13 14 16 17 27 28 30 40 41 43 49 50 51 52 94 95 96 97 98 103 104 105 110
+            111 112
+        </classes>
         <handler name="level"/>
         <reward id="70098"/>
         <reward id="70099"/>
@@ -68,17 +73,16 @@
     <mission id="33" name="Reach Level (Lv. 11)" requiredCompletion="11" cycle="SINGLE">
         <handler name="level"/>
         <reward id="29651" count="10"/>
-        <reward id="49036" count="5"/>
     </mission>
 
     <mission id="34" name="Reach Level (Lv. 12)" requiredCompletion="12" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29648" count="3"/>
+        <reward id="29650" count="3"/>
     </mission>
 
     <mission id="35" name="Reach Level (Lv. 13)" requiredCompletion="13" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29654" count="3"/>
+        <reward id="29654" count="2"/>
     </mission>
 
     <mission id="36" name="Reach Level (Lv. 14)" requiredCompletion="14" cycle="SINGLE">
@@ -88,12 +92,12 @@
 
     <mission id="37" name="Reach Level (Lv. 15)" requiredCompletion="15" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29648" count="2"/>
+        <reward id="70101"/>
     </mission>
 
     <mission id="38" name="Reach Level (Lv. 16)" requiredCompletion="16" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29648" count="2"/>
+        <reward id="29650" count="3"/>
     </mission>
 
     <mission id="39" name="Reach Level (Lv. 17)" requiredCompletion="17" cycle="SINGLE">
@@ -115,7 +119,9 @@
     </mission>
 
     <mission id="40" name="Reach Level (Lv. 18 Wizard only)" requiredCompletion="18" cycle="SINGLE">
-        <classes>10 25 38 11 15 26 29 39 42 12 13 14 16 17 27 28 30 40 41 43 49 50 51 52 94 95 96 97 98 103 104 105 110 111 112</classes>
+        <classes>10 25 38 11 15 26 29 39 42 12 13 14 16 17 27 28 30 40 41 43 49 50 51 52 94 95 96 97 98 103 104 105 110
+            111 112
+        </classes>
         <handler name="level"/>
         <reward id="70103" count="10"/>
     </mission>
@@ -128,11 +134,14 @@
     <mission id="42" name="Reach Level (Lv. 20)" requiredCompletion="20" cycle="SINGLE">
         <handler name="level"/>
         <reward id="70024" count="20"/>
+        <reward id="70182"/>
+        <reward id="70184"/>
+        <reward id="70186"/>
     </mission>
 
     <mission id="43" name="Reach Level (Lv. 21)" requiredCompletion="21" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29648" count="2"/>
+        <reward id="29650" count="3"/>
     </mission>
 
     <mission id="44" name="Reach Level (Lv. 22)" requiredCompletion="22" cycle="SINGLE">
@@ -141,7 +150,8 @@
     </mission>
 
     <mission id="45" name="Reach Level (Lv. 23 Warrior only)" requiredCompletion="23" cycle="SINGLE">
-        <classes>0 18 31 44 53 1 4 19 32 45 56 2 3 5 6 20 21 33 34 46 57 88 89 90 91 99 100 106 107 113 117 118</classes>
+        <classes>0 18 31 44 53 1 4 19 32 45 56 2 3 5 6 20 21 33 34 46 57 88 89 90 91 99 100 106 107 113 117 118
+        </classes>
         <handler name="level"/>
         <reward id="70104" count="3"/>
     </mission>
@@ -149,29 +159,31 @@
     <mission id="45" name="Reach Level (Lv. 23 Warrior only)" requiredCompletion="23" cycle="SINGLE">
         <classes>7 22 35 47 8 9 23 24 36 37 54 55 48 92 93 101 102 108 109 114 115 116</classes>
         <handler name="level"/>
-        <reward id="70102" count="10"/>
+        <reward id="70104" count="3"/>
     </mission>
 
     <mission id="45" name="Reach Level (Lv. 23 Wizard only)" requiredCompletion="23" cycle="SINGLE">
-        <classes>10 25 38 11 15 26 29 39 42 12 13 14 16 17 27 28 30 40 41 43 49 50 51 52 94 95 96 97 98 103 104 105 110 111 112</classes>
+        <classes>10 25 38 11 15 26 29 39 42 12 13 14 16 17 27 28 30 40 41 43 49 50 51 52 94 95 96 97 98 103 104 105 110
+            111 112
+        </classes>
         <handler name="level"/>
         <reward id="70105" count="3"/>
     </mission>
 
     <mission id="46" name="Reach Level (Lv. 24)" requiredCompletion="24" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29648" count="2"/>
-        <reward id="49693"/>
+        <reward id="29648" count="6"/>
     </mission>
 
     <mission id="47" name="Reach Level (Lv. 25)" requiredCompletion="25" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29654" count="3"/>
+        <reward id="70961"/>
+        <reward id="70924"/>
     </mission>
 
     <mission id="48" name="Reach Level (Lv. 26)" requiredCompletion="26" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29648" count="2"/>
+        <reward id="29648" count="6"/>
     </mission>
 
     <mission id="49" name="Reach Level (Lv. 27)" requiredCompletion="27" cycle="SINGLE">
@@ -180,7 +192,8 @@
     </mission>
 
     <mission id="50" name="Reach Level (Lv. 28 Warrior only)" requiredCompletion="28" cycle="SINGLE">
-        <classes>0 18 31 44 53 1 4 19 32 45 56 2 3 5 6 20 21 33 34 46 57 88 89 90 91 99 100 106 107 113 117 118</classes>
+        <classes>0 18 31 44 53 1 4 19 32 45 56 2 3 5 6 20 21 33 34 46 57 88 89 90 91 99 100 106 107 113 117 118
+        </classes>
         <handler name="level"/>
         <reward id="70104" count="3"/>
     </mission>
@@ -192,24 +205,26 @@
     </mission>
 
     <mission id="50" name="Reach Level (Lv. 28 Wizard only)" requiredCompletion="28" cycle="SINGLE">
-        <classes>10 25 38 11 15 26 29 39 42 12 13 14 16 17 27 28 30 40 41 43 49 50 51 52 94 95 96 97 98 103 104 105 110 111 112</classes>
+        <classes>10 25 38 11 15 26 29 39 42 12 13 14 16 17 27 28 30 40 41 43 49 50 51 52 94 95 96 97 98 103 104 105 110
+            111 112
+        </classes>
         <handler name="level"/>
         <reward id="70105" count="3"/>
     </mission>
 
     <mission id="51" name="Reach Level (Lv. 29)" requiredCompletion="29" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29648" count="2"/>
+        <reward id="29648" count="6"/>
     </mission>
 
     <mission id="52" name="Reach Level (Lv. 30)" requiredCompletion="30" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29648" count="3"/>
+        <reward id="70106"/>
     </mission>
 
     <mission id="53" name="Reach Level (Lv. 31)" requiredCompletion="31" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29648" count="2"/>
+        <reward id="29648" count="6"/>
     </mission>
 
     <mission id="54" name="Reach Level (Lv. 32)" requiredCompletion="32" cycle="SINGLE">
@@ -224,12 +239,12 @@
 
     <mission id="56" name="Reach Level (Lv. 34)" requiredCompletion="34" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29648" count="2"/>
+        <reward id="29648" count="6"/>
     </mission>
 
     <mission id="57" name="Reach Level (Lv. 35)" requiredCompletion="35" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29648" count="3"/>
+        <reward id="29648" count="6"/>
     </mission>
 
     <mission id="58" name="Reach Level (Lv. 36)" requiredCompletion="36" cycle="SINGLE">
@@ -243,26 +258,29 @@
     </mission>
 
     <mission id="60" name="Reach Level (Lv. 38 Warrior only)" requiredCompletion="38" cycle="SINGLE">
-        <classes>0 18 31 44 53 1 4 19 32 45 56 2 3 5 6 20 21 33 34 46 57 88 89 90 91 99 100 106 107 113 117 118</classes>
+        <classes>0 18 31 44 53 1 4 19 32 45 56 2 3 5 6 20 21 33 34 46 57 88 89 90 91 99 100 106 107 113 117 118
+        </classes>
         <handler name="level"/>
-        <reward id="70104" count="3"/>
+        <reward id="70108"/>
     </mission>
 
     <mission id="60" name="Reach Level (Lv. 38 Warrior only)" requiredCompletion="38" cycle="SINGLE">
         <classes>7 22 35 47 8 9 23 24 36 37 54 55 48 92 93 101 102 108 109 114 115 116</classes>
         <handler name="level"/>
-        <reward id="70104" count="3"/>
+        <reward id="70108"/>
     </mission>
 
     <mission id="60" name="Reach Level (Lv. 38 Wizard only)" requiredCompletion="38" cycle="SINGLE">
-        <classes>10 25 38 11 15 26 29 39 42 12 13 14 16 17 27 28 30 40 41 43 49 50 51 52 94 95 96 97 98 103 104 105 110 111 112</classes>
+        <classes>10 25 38 11 15 26 29 39 42 12 13 14 16 17 27 28 30 40 41 43 49 50 51 52 94 95 96 97 98 103 104 105 110
+            111 112
+        </classes>
         <handler name="level"/>
-        <reward id="70105" count="3"/>
+        <reward id="70109"/>
     </mission>
 
     <mission id="61" name="Reach Level (Lv. 39)" requiredCompletion="39" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29648" count="2"/>
+        <reward id="29517" count="5"/>
     </mission>
 
     <mission id="62" name="Reach Level (Lv. 40)" requiredCompletion="40" cycle="SINGLE">
@@ -272,17 +290,17 @@
 
     <mission id="63" name="Reach Level (Lv. 41)" requiredCompletion="41" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29648" count="3"/>
+        <reward id="29648" count="6"/>
     </mission>
 
     <mission id="64" name="Reach Level (Lv. 42)" requiredCompletion="42" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29655" count="2"/>
-        <reward id="49695"/>
+        <reward id="29655" count="5"/>
     </mission>
 
     <mission id="65" name="Reach Level (Lv. 43 Warrior only)" requiredCompletion="43" cycle="SINGLE">
-        <classes>0 18 31 44 53 1 4 19 32 45 56 2 3 5 6 20 21 33 34 46 57 88 89 90 91 99 100 106 107 113 117 118</classes>
+        <classes>0 18 31 44 53 1 4 19 32 45 56 2 3 5 6 20 21 33 34 46 57 88 89 90 91 99 100 106 107 113 117 118
+        </classes>
         <handler name="level"/>
         <reward id="70110" count="5"/>
     </mission>
@@ -294,24 +312,26 @@
     </mission>
 
     <mission id="65" name="Reach Level (Lv. 43 Wizard only)" requiredCompletion="43" cycle="SINGLE">
-        <classes>10 25 38 11 15 26 29 39 42 12 13 14 16 17 27 28 30 40 41 43 49 50 51 52 94 95 96 97 98 103 104 105 110 111 112</classes>
+        <classes>10 25 38 11 15 26 29 39 42 12 13 14 16 17 27 28 30 40 41 43 49 50 51 52 94 95 96 97 98 103 104 105 110
+            111 112
+        </classes>
         <handler name="level"/>
         <reward id="70111" count="5"/>
     </mission>
 
     <mission id="66" name="Reach Level (Lv. 44)" requiredCompletion="44" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29655"/>
+        <reward id="29517" count="5"/>
     </mission>
 
     <mission id="67" name="Reach Level (Lv. 45)" requiredCompletion="45" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29648"/>
+        <reward id="70112"/>
     </mission>
 
     <mission id="68" name="Reach Level (Lv. 46)" requiredCompletion="46" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29648" count="3"/>
+        <reward id="29648" count="10"/>
     </mission>
 
     <mission id="69" name="Reach Level (Lv. 47)" requiredCompletion="47" cycle="SINGLE">
@@ -339,136 +359,211 @@
 
     <mission id="71" name="Reach Level (Lv. 49)" requiredCompletion="49" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29655" count="2"/>
+        <reward id="29517" count="5"/>
     </mission>
 
     <mission id="72" name="Reach Level (Lv. 50)" requiredCompletion="50" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="29648"/>
+        <reward id="29477"/>
+        <reward id="49493"/>
+        <reward id="49509"/>
     </mission>
 
     <mission id="73" name="Reach Level (Lv. 51)" requiredCompletion="51" cycle="SINGLE">
         <handler name="level"/>
         <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
         <reward id="29817" count="5"/>
+        <reward id="70101"/>
     </mission>
 
-    <mission id="74" name="Reach Level (Lv. 52)" requiredCompletion="52" cycle="SINGLE">
+    <mission id="74" name="Reach Level (Warrior Only Lv. 52)" requiredCompletion="52" cycle="SINGLE">
+        <classes>0 18 31 44 53 1 4 19 32 45 56 2 3 5 6 20 21 33 34 46 57 88 89 90 91 99 100 106 107 113 117 118</classes>
         <handler name="level"/>
         <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
         <reward id="29817" count="5"/>
+        <reward id="70961"/>
+    </mission>
+
+    <mission id="74" name="Reach Level (Lv. 52 Warrior Only)" requiredCompletion="52" cycle="SINGLE">
+        <classes>7 22 35 47 8 9 23 24 36 37 54 55 48 92 93 101 102 108 109 114 115 116</classes>
+        <handler name="level"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
+        <reward id="29817" count="5"/>
+        <reward id="70961"/>
+    </mission>
+
+    <mission id="74" name="Reach Level (Lv. 52 Warrior Only)" requiredCompletion="52" cycle="SINGLE">
+        <classes>7 22 35 47 8 9 23 24 36 37 54 55 48 92 93 101 102 108 109 114 115 116</classes>
+        <handler name="level"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
+        <reward id="29817" count="5"/>
+        <reward id="70961"/>
+    </mission>
+
+    <mission id="74" name="Reach Level (Lv. 52 Wizard Only)" requiredCompletion="52" cycle="SINGLE">
+        <classes>10 25 38 11 15 26 29 39 42 12 13 14 16 17 27 28 30 40 41 43 49 50 51 52 94 95 96 97 98 103 104 105 110 111 112</classes>
+        <handler name="level"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
+        <reward id="29817" count="5"/>
+        <reward id="70961"/>
     </mission>
 
     <mission id="75" name="Reach Level (Lv. 53)" requiredCompletion="53" cycle="SINGLE">
         <handler name="level"/>
         <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
         <reward id="29817" count="5"/>
     </mission>
 
     <mission id="76" name="Reach Level (Lv. 54)" requiredCompletion="54" cycle="SINGLE">
         <handler name="level"/>
         <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
         <reward id="29817" count="5"/>
     </mission>
 
     <mission id="77" name="Reach Level (Lv. 55)" requiredCompletion="55" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="49488" count="25"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
         <reward id="29817" count="5"/>
+        <reward id="29650" count="3"/>
         <reward id="90793"/>
     </mission>
 
     <mission id="78" name="Reach Level (Lv. 56)" requiredCompletion="56" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="49488" count="25"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
         <reward id="29817" count="5"/>
     </mission>
 
     <mission id="79" name="Reach Level (Lv. 57)" requiredCompletion="57" cycle="SINGLE">
         <handler name="level"/>
         <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
         <reward id="29817" count="5"/>
     </mission>
 
     <mission id="80" name="Reach Level (Lv. 58)" requiredCompletion="58" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="49488" count="25"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
         <reward id="29817" count="5"/>
     </mission>
 
     <mission id="81" name="Reach Level (Lv. 59)" requiredCompletion="59" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="49488" count="25"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
         <reward id="29817" count="5"/>
     </mission>
 
     <mission id="82" name="Reach Level (Lv. 60)" requiredCompletion="60" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="49488" count="25"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
         <reward id="29817" count="5"/>
+        <reward id="29650" count="3"/>
         <reward id="90793"/>
+        <reward id="70101"/>
     </mission>
 
-    <mission id="83" name="Reach Level (Lv. 61)" requiredCompletion="61" cycle="SINGLE">
+    <mission id="83" name="Reach Level (Lv. 61 Warrior Only)" requiredCompletion="61" cycle="SINGLE">
+        <classes>0 18 31 44 53 1 4 19 32 45 56 2 3 5 6 20 21 33 34 46 57 88 89 90 91 99 100 106 107 113 117 118</classes>
         <handler name="level"/>
-        <reward id="49488" count="25"/>
-        <reward id="90415" count="5"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
+        <reward id="29817" count="5"/>
+        <reward id="70961"/>
+    </mission>
+
+    <mission id="83" name="Reach Level (Lv. 61 Warrior Only)" requiredCompletion="61" cycle="SINGLE">
+        <classes>7 22 35 47 8 9 23 24 36 37 54 55 48 92 93 101 102 108 109 114 115 116</classes>
+        <handler name="level"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
+        <reward id="29817" count="5"/>
+        <reward id="70961"/>
+    </mission>
+
+    <mission id="83" name="Reach Level (Lv. 61 Wizard Only)" requiredCompletion="61" cycle="SINGLE">
+        <classes>10 25 38 11 15 26 29 39 42 12 13 14 16 17 27 28 30 40 41 43 49 50 51 52 94 95 96 97 98 103 104 105 110 111 112</classes>
+        <handler name="level"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
+        <reward id="29817" count="5"/>
+        <reward id="70961"/>
     </mission>
 
     <mission id="84" name="Reach Level (Lv. 62)" requiredCompletion="62" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="49488" count="25"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
         <reward id="29817" count="5"/>
     </mission>
 
     <mission id="85" name="Reach Level (Lv. 63)" requiredCompletion="63" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="49488" count="25"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
         <reward id="29817" count="5"/>
     </mission>
 
     <mission id="86" name="Reach Level (Lv. 64)" requiredCompletion="64" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="49488" count="25"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
         <reward id="29817" count="5"/>
     </mission>
 
     <mission id="87" name="Reach Level (Lv. 65)" requiredCompletion="65" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="49488" count="50"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
         <reward id="29817" count="5"/>
+        <reward id="29650" count="3"/>
         <reward id="90793" count="2"/>
     </mission>
 
     <mission id="88" name="Reach Level (Lv. 66)" requiredCompletion="66" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="49488" count="50"/>
-        <reward id="90415" count="5"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
+        <reward id="29817" count="5"/>
     </mission>
 
     <mission id="89" name="Reach Level (Lv. 67)" requiredCompletion="67" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="49488" count="50"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
         <reward id="29817" count="5"/>
     </mission>
 
     <mission id="90" name="Reach Level (Lv. 68)" requiredCompletion="68" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="49488" count="50"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
         <reward id="29817" count="5"/>
     </mission>
 
     <mission id="91" name="Reach Level (Lv. 69)" requiredCompletion="69" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="49488" count="50"/>
+        <reward id="49488" count="20"/>
+        <reward id="90415" count="20"/>
         <reward id="29817" count="5"/>
     </mission>
 
     <mission id="92" name="Reach Level (Lv. 70)" requiredCompletion="70" cycle="SINGLE">
         <handler name="level"/>
         <reward id="49488" count="20"/>
-        <reward id="29012" count="5"/>
-        <reward id="90508" count="5"/>
+        <reward id="90415" count="20"/>
+        <reward id="29817" count="5"/>
         <reward id="29650" count="3"/>
         <reward id="90793" count="2"/>
         <reward id="70112"/>
@@ -484,48 +579,72 @@
     <mission id="94" name="Reach Level (Lv. 72)" requiredCompletion="72" cycle="SINGLE">
         <handler name="level"/>
         <reward id="49488" count="20"/>
-        <reward id="29012" count="5"/>
-        <reward id="90508" count="5"/>
+        <reward id="90415" count="20"/>
+        <reward id="29817" count="5"/>
     </mission>
 
     <mission id="95" name="Reach Level (Lv. 73)" requiredCompletion="73" cycle="SINGLE">
         <handler name="level"/>
         <reward id="49488" count="20"/>
-        <reward id="29012" count="5"/>
-        <reward id="90508" count="5"/>
+        <reward id="90415" count="20"/>
+        <reward id="29817" count="5"/>
     </mission>
 
     <mission id="96" name="Reach Level (Lv. 74)" requiredCompletion="74" cycle="SINGLE">
         <handler name="level"/>
         <reward id="49488" count="20"/>
-        <reward id="29012" count="5"/>
-        <reward id="90508" count="5"/>
+        <reward id="90415" count="20"/>
+        <reward id="29817" count="5"/>
     </mission>
 
     <mission id="97" name="Reach Level (Lv. 75)" requiredCompletion="75" cycle="SINGLE">
         <handler name="level"/>
         <reward id="49488" count="20"/>
-        <reward id="29012" count="5"/>
-        <reward id="90508" count="5"/>
+        <reward id="90415" count="20"/>
+        <reward id="29817" count="5"/>
         <reward id="29650" count="3"/>
         <reward id="90793" count="3"/>
         <reward id="70101"/>
     </mission>
 
-    <mission id="98" name="Reach Level (Lv. 76)" requiredCompletion="76" cycle="SINGLE">
+    <mission id="98" name="Reach Level (Lv. 76 Warrior Only)" requiredCompletion="76" cycle="SINGLE">
+        <classes>0 18 31 44 53 1 4 19 32 45 56 2 3 5 6 20 21 33 34 46 57 88 89 90 91 99 100 106 107 113 117 118</classes>
         <handler name="level"/>
-        <reward id="49488" count="20"/>
-        <reward id="29012" count="5"/>
-        <reward id="90508" count="5"/>
-        <reward id="90834"/>
-        <reward id="90779"/>
+        <reward id="49488" count="30"/>
+        <reward id="90415" count="30"/>
+        <reward id="29817" count="5"/>
+        <reward id="90157"/>
+        <reward id="70991"/>
+        <reward id="90836"/>
+    </mission>
+
+    <mission id="98" name="Reach Level (Lv. 76 Warrior Only)" requiredCompletion="76" cycle="SINGLE">
+        <classes>7 22 35 47 8 9 23 24 36 37 54 55 48 92 93 101 102 108 109 114 115 116</classes>
+        <handler name="level"/>
+        <reward id="49488" count="30"/>
+        <reward id="90415" count="30"/>
+        <reward id="29817" count="5"/>
+        <reward id="90157"/>
+        <reward id="70991"/>
+        <reward id="90836"/>
+    </mission>
+
+    <mission id="98" name="Reach Level (Lv. 76 Wizard Only)" requiredCompletion="76" cycle="SINGLE">
+        <classes>10 25 38 11 15 26 29 39 42 12 13 14 16 17 27 28 30 40 41 43 49 50 51 52 94 95 96 97 98 103 104 105 110 111 112</classes>
+        <handler name="level"/>
+        <reward id="49488" count="30"/>
+        <reward id="90415" count="30"/>
+        <reward id="29817" count="5"/>
+        <reward id="90157"/>
+        <reward id="70991"/>
+        <reward id="90836"/>
     </mission>
 
     <mission id="99" name="Reach Level (Lv. 77)" requiredCompletion="77" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="49488" count="20"/>
-        <reward id="29012" count="5"/>
-        <reward id="90508" count="5"/>
+        <reward id="49488" count="30"/>
+        <reward id="90415" count="30"/>
+        <reward id="29817" count="5"/>
         <reward id="29650" count="3"/>
         <reward id="70220"/>
         <reward id="70221"/>
@@ -534,9 +653,9 @@
 
     <mission id="100" name="Reach Level (Lv. 78)" requiredCompletion="78" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="49488" count="20"/>
-        <reward id="29012" count="5"/>
-        <reward id="90508" count="5"/>
+        <reward id="49488" count="30"/>
+        <reward id="90415" count="30"/>
+        <reward id="29817" count="5"/>
         <reward id="29650" count="3"/>
         <reward id="70220"/>
         <reward id="70221"/>
@@ -545,9 +664,9 @@
 
     <mission id="101" name="Reach Level (Lv. 79)" requiredCompletion="79" cycle="SINGLE">
         <handler name="level"/>
-        <reward id="49488" count="20"/>
-        <reward id="29012" count="5"/>
-        <reward id="90508" count="5"/>
+        <reward id="49488" count="30"/>
+        <reward id="90415" count="30"/>
+        <reward id="29817" count="5"/>
         <reward id="29650" count="3"/>
         <reward id="70220"/>
         <reward id="70221"/>
@@ -567,46 +686,51 @@
         <handler name="level"/>
         <reward id="90826"/>
         <reward id="90827"/>
-        <reward id="49488" count="50"/>
-        <reward id="29012" count="10"/>
+        <reward id="49533" count="30"/>
+        <reward id="90415" count="30"/>
     </mission>
 
     <mission id="104" name="Reach Level (Lv. 82)" requiredCompletion="82" cycle="SINGLE">
         <handler name="level"/>
         <reward id="90825"/>
-        <reward id="49488" count="50"/>
-        <reward id="29012" count="10"/>
+        <reward id="49533" count="30"/>
+        <reward id="90415" count="30"/>
     </mission>
 
     <mission id="105" name="Reach Level (Lv. 83)" requiredCompletion="83" cycle="SINGLE">
         <handler name="level"/>
         <reward id="49593"/>
-        <reward id="49488" count="50"/>
-        <reward id="29012" count="10"/>
+        <reward id="49533" count="30"/>
+        <reward id="90415" count="30"/>
     </mission>
 
-    <mission id="105" name="Reach Level (Lv. 84)" requiredCompletion="84" cycle="SINGLE">
+    <mission id="106" name="Reach Level (Lv. 84)" requiredCompletion="84" cycle="SINGLE">
         <handler name="level"/>
         <reward id="49591"/>
-        <reward id="49488" count="50"/>
-        <reward id="29012" count="10"/>
+        <reward id="49533" count="30"/>
+        <reward id="90415" count="30"/>
     </mission>
 
-    <mission id="224" name="Login All Weekend" cycle="WEEKLY">
+    <mission id="224" name="Login Once During the Weekend" cycle="WEEKLY">
         <handler name="login">
             <param name="days">7 1</param>
         </handler>
         <reward id="49499"/>
     </mission>
 
-    <mission id="225" name="Login All Month" cycle="MONTHLY">
+    <mission id="225" name="Login Once During the Month" cycle="MONTHLY">
         <handler name="login"/>
         <reward id="29648" count="2"/>
     </mission>
 
+    <mission id="226" name="Quest Mania"  requiredCompletion="2">
+        <handler name="quest" />
+        <reward id="29648"/>
+    </mission>
+
     <mission id="231" name="Skilful Fisherman" requiredCompletion="5">
         <handler name="fishing"/>
-        <reward id="49508" count="500"/>
+        <reward id="49508" count="360"/>
     </mission>
 
     <mission id="232" name="Join the Clan!" cycle="SINGLE">
@@ -631,7 +755,7 @@
         <reward id="70280"/>
     </mission>
 
-    <mission id="245" name="Win 15 Olympiad Matches!" requiredCompletion="15">
+    <mission id="241" name="Win 15 Olympiad Matches!" requiredCompletion="15">
         <handler name="olympiad">
             <param name="win">true</param>
         </handler>
@@ -657,12 +781,18 @@
         <reward id="29648"/>
     </mission>
 
+    <mission id="253" name="Enchant Item!" cycle="WEEKLY">
+        <handler name="enchant"/>
+        <reward id="49489"/>
+    </mission>
+
     <mission id="254" name="Daily Hunting (Lv. 20 or lower)" requiredCompletion="30">
         <handler name="hunt">
             <param name="minLevel">1</param>
             <param name="maxLevel">20</param>
         </handler>
-        <reward id="29817"/>
+        <reward id="71438" count="5"/>
+        <reward id="70767"/>
     </mission>
 
     <mission id="255" name="Daily Hunting (Lv. 21-40)" requiredCompletion="30">
@@ -670,7 +800,8 @@
             <param name="minLevel">21</param>
             <param name="maxLevel">40</param>
         </handler>
-        <reward id="29817"/>
+        <reward id="71438" count="5"/>
+        <reward id="70767"/>
     </mission>
 
     <mission id="256" name="Daily Hunting (Lv. 41-50)" requiredCompletion="30">
@@ -678,7 +809,8 @@
             <param name="minLevel">41</param>
             <param name="maxLevel">50</param>
         </handler>
-        <reward id="29817"/>
+        <reward id="71438" count="5"/>
+        <reward id="70767"/>
     </mission>
 
     <mission id="257" name="Daily Hunting (Lv. 51-60)" requiredCompletion="30">
@@ -686,7 +818,8 @@
             <param name="minLevel">51</param>
             <param name="maxLevel">60</param>
         </handler>
-        <reward id="29817"/>
+        <reward id="71438" count="5"/>
+        <reward id="70767"/>
     </mission>
 
     <mission id="258" name="Daily Hunting (Lv. 61-70)" requiredCompletion="30">
@@ -694,7 +827,8 @@
             <param name="minLevel">61</param>
             <param name="maxLevel">70</param>
         </handler>
-        <reward id="29817"/>
+        <reward id="71438" count="5"/>
+        <reward id="70767"/>
     </mission>
 
     <mission id="259" name="Daily Hunting (Lv. 71-75)" requiredCompletion="30">
@@ -702,14 +836,16 @@
             <param name="minLevel">71</param>
             <param name="maxLevel">75</param>
         </handler>
-        <reward id="90508"/>
+        <reward id="71438" count="5"/>
+        <reward id="70767"/>
     </mission>
 
     <mission id="260" name="Daily Hunting (Lv. 76 or higher)" requiredCompletion="30">
         <handler name="hunt">
             <param name="minLevel">76</param>
         </handler>
-        <reward id="90508"/>
+        <reward id="71438" count="5"/>
+        <reward id="70767"/>
     </mission>
 
     <mission id="261" name="Weeky Hunting (Lv. 20 or lower)" requiredCompletion="100" cycle="WEEKLY">
@@ -733,7 +869,7 @@
             <param name="minLevel">41</param>
             <param name="maxLevel">50</param>
         </handler>
-        <reward id="29648" count="2"/>
+        <reward id="29648"/>
     </mission>
 
     <mission id="264" name="Weeky Hunting (Lv. 51-60)" requiredCompletion="250" cycle="WEEKLY">
@@ -741,7 +877,7 @@
             <param name="minLevel">51</param>
             <param name="maxLevel">60</param>
         </handler>
-        <reward id="29648" count="3"/>
+        <reward id="29649"/>
     </mission>
 
     <mission id="265" name="Weeky Hunting (Lv. 61-70)" requiredCompletion="300" cycle="WEEKLY">
@@ -749,7 +885,7 @@
             <param name="minLevel">61</param>
             <param name="maxLevel">70</param>
         </handler>
-        <reward id="29649" count="2"/>
+        <reward id="29649"/>
     </mission>
 
     <mission id="266" name="Weeky Hunting (Lv. 71-75)" requiredCompletion="400" cycle="WEEKLY">
@@ -757,7 +893,7 @@
             <param name="minLevel">71</param>
             <param name="maxLevel">75</param>
         </handler>
-        <reward id="29650" count="2"/>
+        <reward id="29649"/>
     </mission>
 
     <mission id="267" name="Weeky Hunting (Lv. 76 or higher)" requiredCompletion="500" cycle="WEEKLY">
@@ -765,7 +901,7 @@
             <param name="minLevel">71</param>
             <param name="maxLevel">75</param>
         </handler>
-        <reward id="29650" count="3"/>
+        <reward id="29649"/>
     </mission>
 
     <mission id="1095" name="Clan Raid Attack" cycle="WEEKLY">
@@ -776,7 +912,7 @@
         <reward id="29650"/>
     </mission>
 
-    <mission id="1095" name="Clan Raid Suppression" requiredCompletion="20" cycle="SINGLE">
+    <mission id="1096" name="Clan Raid Suppression" requiredCompletion="20" cycle="SINGLE">
         <handler name="clan">
             <param name="minLevel">40</param>
             <param name="kind">ARENA</param> <!-- TODO implement Clan Arena -->
@@ -816,7 +952,7 @@
             <param name="maxLevel">70</param>
             <param name="monsters">20673</param>
         </handler>
-        <reward id="90917"/>
+        <reward id="49781" count="9"/>
     </mission>
 
     <mission id="1105" name="One-day Special Hunt (Level 65-70)" requiredCompletion="30">
@@ -825,7 +961,7 @@
             <param name="maxLevel">75</param>
             <param name="monsters">21021</param>
         </handler>
-        <reward id="90917" count="2"/>
+        <reward id="49781" count="11"/>
     </mission>
 
     <mission id="1106" name="One-day Special Hunt (Level 75+)" requiredCompletion="100">
@@ -911,7 +1047,9 @@
     <mission id="1116" name="Attribute Monster Hunt" requiredCompletion="1800" cycle="WEEKLY">
         <handler name="hunt">
             <param name="minLevel">76</param>
-            <param name="monsters">21785 21791 21787 21790 21788 21771 21829 21831 21830 21828 12450 21663 21670 21672 21762 21661 21664 21667 21668 21669 21671</param>
+            <param name="monsters">21785 21791 21787 21790 21788 21771 21829 21831 21830 21828 12450 21663 21670 21672
+                21762 21661 21664 21667 21668 21669 21671
+            </param>
         </handler>
         <reward id="91030" count="5"/>
     </mission>
@@ -921,7 +1059,8 @@
             <param name="minLevel">76</param>
             <param name="monsters">20651 20652 20654 20656 20657 20658 24015 24016 24021 24022 20655 20771</param>
         </handler>
-        <reward id="90918"/>
+        <reward id="90917" count="3"/>
+        <reward id="91030" count="2"/>
     </mission>
 
     <mission id="1118" name="Exploration of Forgotten Island" requiredCompletion="200">
@@ -929,7 +1068,8 @@
             <param name="minLevel">78</param>
             <param name="monsters">21737 21738 21739 21740 21741 21746 21747 21748 21749 21750 21752 21753</param>
         </handler>
-        <reward id="90918"/>
+        <reward id="90917" count="3"/>
+        <reward id="91030" count="2"/>
     </mission>
 
     <mission id="1119" name="Exploration of Varka Silenos Barracks" requiredCompletion="300">
@@ -937,14 +1077,16 @@
             <param name="minLevel">78</param>
             <param name="monsters">21869 21870 21871 21876 21877 21878 21879 21888</param>
         </handler>
-        <reward id="90918"/>
+        <reward id="90917" count="3"/>
+        <reward id="91030" count="2"/>
     </mission>
 
     <mission id="1120" name="Exploration of Ketra Orc Outpost" requiredCompletion="300">
         <handler name="hunt">
             <param name="monsters">21854 21855 81856 21857 21866 21867</param>
         </handler>
-        <reward id="90918"/>
+        <reward id="90917" count="3"/>
+        <reward id="91030" count="2"/>
     </mission>
 
     <mission id="1121" name="Defeate Spirits King Ignis" requiredCompletion="10" cycle="SINGLE">
@@ -983,8 +1125,8 @@
         <reward id="49592"/>
         <reward id="90950"/>
         <reward id="90820"/>
-        <reward id="49488" count="50"/>
-        <reward id="29012" count="10"/>
+        <reward id="49533" count="30"/>
+        <reward id="90415" count="30"/>
     </mission>
 
     <mission id="1126" name="Reach Level (Lv. 86)" requiredCompletion="86" cycle="SINGLE">
@@ -1002,75 +1144,40 @@
             <param name="minLevel">78</param>
             <param name="monsters">2 <!-- Todo Imperial tomb monsters --> </param>
         </handler>
-        <reward id="91406" count="3"/>
+        <reward id="91406"/>
     </mission>
 
-    <mission id="1141" name="Adventurer's Journey I (Lv. 20-30)" requiredCompletion="100" cycle="SINGLE">
-        <handler name="hunt">
-            <param name="minLevel">20</param>
-            <param name="maxLevel">30</param>
-            <param name="monsters">2 <!-- Todo Windmill Hill  Ruins of Agony  Abondened Camp monsters --> </param>
-        </handler>
-        <reward id="91654"/>
-    </mission>
-
-    <mission id="1142" name="Adventurer's Journey II (Lv. 31-40)" requiredCompletion="200" cycle="SINGLE">
-        <handler name="hunt">
-            <param name="minLevel">31</param>
-            <param name="maxLevel">40</param>
-            <param name="monsters">2 <!-- Todo Gorgon Flower Garden  Ant Nest  Cruma Marshlands  Execution Ground  Death Pass monsters --> </param>
-        </handler>
-        <reward id="91655"/>
-    </mission>
-
-    <mission id="1143" name="Adventurer's Journey III (Lv. 41-60)" requiredCompletion="500" cycle="SINGLE">
-        <handler name="hunt">
-            <param name="minLevel">41</param>
-            <param name="maxLevel">60</param>
-            <param name="monsters">2 <!-- Todo Ivory Tower Crater  Sea Of Spores  Cemetery Enchanted Valley Fields of Massacre monsters --> </param>
-        </handler>
-        <reward id="91656"/>
-    </mission>
-
-    <mission id="1144" name="Adventurer's Journey III (Lv. 61+)" requiredCompletion="700" cycle="SINGLE">
-        <handler name="hunt">
-            <param name="minLevel">61</param>
-            <param name="monsters">2 <!-- Todo Plains of Glory  War-Torn Plains  The Patriot's Necropolis  Necropolis of Devotion  Silent Valley monsters --> </param>
-        </handler>
-        <reward id="91657"/>
-    </mission>
-
-    <mission id="3000" name="Warrior's Traces I" requiredCompletion="80" cycle="SINGLE">
+    <mission id="3000" name="Hero's Way I" requiredCompletion="80" cycle="SINGLE">
         <handler name="level"/>
         <reward id="91481" count="5"/>
     </mission>
 
-    <mission id="3001" name="Warrior's Traces II" requiredCompletion="81" cycle="SINGLE">
+    <mission id="3001" name="Heros's Way II" requiredCompletion="81" cycle="SINGLE">
         <handler name="level"/>
         <reward id="91481" count="10"/>
     </mission>
 
-    <mission id="3002" name="Warrior's Traces III" requiredCompletion="82" cycle="SINGLE">
+    <mission id="3002" name="Hero's Way III" requiredCompletion="82" cycle="SINGLE">
         <handler name="level"/>
         <reward id="91481" count="15"/>
     </mission>
 
-    <mission id="3003" name="Warrior's Traces IV" requiredCompletion="83" cycle="SINGLE">
+    <mission id="3003" name="Hero's Way IV" requiredCompletion="83" cycle="SINGLE">
         <handler name="level"/>
         <reward id="91481" count="20"/>
     </mission>
 
-    <mission id="3004" name="Warrior's Traces V" requiredCompletion="84" cycle="SINGLE">
+    <mission id="3004" name="Hero's Way V" requiredCompletion="84" cycle="SINGLE">
         <handler name="level"/>
         <reward id="91481" count="40"/>
     </mission>
 
-    <mission id="3005" name="Warrior's Traces V" requiredCompletion="85" cycle="SINGLE">
+    <mission id="3005" name="Hero's Way V" requiredCompletion="85" cycle="SINGLE">
         <handler name="level"/>
         <reward id="91481" count="60"/>
     </mission>
 
-    <mission id="3006" name="Warrior's Traces VI" requiredCompletion="86" cycle="SINGLE">
+    <mission id="3006" name="Hero's Way VI" requiredCompletion="86" cycle="SINGLE">
         <handler name="level"/>
         <reward id="91481" count="160"/>
     </mission>

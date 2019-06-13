@@ -1,8 +1,6 @@
 package org.l2j.gameserver.network;
 
 
-import java.nio.ByteBuffer;
-
 /**
  * @author UnAfraid
  */

@@ -1,13 +1,13 @@
 package org.l2j.gameserver.network.clientpackets.dailymission;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.xml.impl.DailyMissionData;
-import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2j.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
 import org.l2j.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
 /**
@@ -28,12 +28,12 @@ public class RequestOneDayRewardReceive extends IClientIncomingPacket {
             return;
         }
 
-        final Collection<DailyMissionDataHolder> reward = DailyMissionData.getInstance().getDailyMissionData(_id);
-        if ((reward == null) || reward.isEmpty()) {
+        final Collection<DailyMissionDataHolder> missions = DailyMissionData.getInstance().getDailyMissionData(_id);
+        if (Util.isNullOrEmpty(missions)) {
             return;
         }
 
-        reward.stream().filter(o -> o.isDisplayable(player)).forEach(r -> r.requestReward(player));
+        missions.stream().filter(o -> o.isDisplayable(player)).forEach(r -> r.requestReward(player));
         player.sendPacket(new ExConnectedTimeAndGettableReward(player));
         player.sendPacket(new ExOneDayReceiveRewardList(player, true));
     }

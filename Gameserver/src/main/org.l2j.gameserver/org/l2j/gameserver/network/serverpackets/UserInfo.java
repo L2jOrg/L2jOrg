@@ -12,9 +12,6 @@ import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
-import java.nio.ByteBuffer;
-import java.util.Arrays;
-
 /**
  * @author Sdw, UnAfraid
  */
@@ -324,12 +321,12 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
         if (containsMask(UserInfoType.ATT_SPIRITS)) // 152
         {
             writeShort((short) 26);
-            writeInt(-1); // Active spirit power
+            writeInt(0X00); // Active spirit power
             writeInt(0x00); // Fire defense
             writeInt(0x00); // Water defense
             writeInt(0x00); // Wind defense
             writeInt(0x00); // Earth defense
-            writeInt(0x00); // unk
+            writeInt(0x00); // Active Spirit 1 - Fire, 2 Water, 3 Wind, 4 Earth
         }
 
     }

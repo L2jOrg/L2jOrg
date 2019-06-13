@@ -4,8 +4,6 @@ import org.l2j.gameserver.model.Shortcut;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 
-import java.nio.ByteBuffer;
-
 public final class ShortCutRegister extends IClientOutgoingPacket {
     private final Shortcut _shortcut;
 
@@ -24,7 +22,6 @@ public final class ShortCutRegister extends IClientOutgoingPacket {
 
         writeInt(_shortcut.getType().ordinal());
         writeInt(_shortcut.getSlot() + (_shortcut.getPage() * 12)); // C4 Client
-        writeByte((byte) 0x00); // 196
         switch (_shortcut.getType()) {
             case ITEM: {
                 writeInt(_shortcut.getId());
