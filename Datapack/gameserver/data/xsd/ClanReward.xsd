@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="membersOnline">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="players" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="skill">
+											<xs:complexType>
+												<xs:attribute type="xs:positiveInteger" name="id" use="required" />
+												<xs:attribute type="xs:short" name="level" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute type="xs:positiveInteger" name="size" use="required" />
+									<xs:attribute type="xs:byte" name="level" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="huntingBonus">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="hunting" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item">
+											<xs:complexType>
+												<xs:attribute type="xs:integer" name="id" use="required" />
+												<xs:attribute type="xs:long" name="count" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute type="xs:positiveInteger" name="points" use="required" />
+									<xs:attribute type="xs:positiveInteger" name="level" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

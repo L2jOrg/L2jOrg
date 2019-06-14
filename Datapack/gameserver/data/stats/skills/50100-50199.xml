@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="50100" toLevel="1" name="Halisha Transformation - Long Distance">
+		<!-- Long distance attack resistance +100%, significant increase of M. Def. -->
+		<icon>icon.skill30515</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50101" toLevel="1" name="Halisha Transformation - Short Distance">
+		<!-- Short distance attack resistance +100%. -->
+		<icon>icon.skill1062</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50102" toLevel="1" name="Halisha Transformation - Dash">
+		<!-- Speed +100%. -->
+		<icon>icon.skill1062</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50103" toLevel="2" name="Breath of Scarlet">
+		<!-- Absorbs nearby enemy's HP. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50104" toLevel="1" name="HP Transfer">
+		<!-- Connects souls and recovers HP. -->
+		<icon>icon.skill1042</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50105" toLevel="1" name="Earth Life">
+		<!-- Resores HP for prolonged time thanks to the Earth Attribute power. -->
+		<operateType>A1</operateType>
+	</skill>
+</list>

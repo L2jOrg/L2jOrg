@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="91600" name="Dimensional Talisman Lv. 9" type="Armor">
+		<!-- When equipped, P./ M. Def. +90, P./ M. Evasion +4, Max. HP/ MP/ CP +1600, Speed +9, Atk. Spd. +50, Casting Spd. +80, Acquired XP/ SP +20%. Activates Dimensional Border Power (at a certain probability, increases attack abilities) Lv. 8, Dimensional Guard Lv. 9 (reduced chance of being hit by a quick stab attack for a certain amount of time, reduced Received P./ M. Critical Damage, increased M. Damage Resistance) skill can be used. Take it to Alchemist Veruti in Giran for upgrade. Dimensional powers cancel the power of Talisman of Border. Effect does not stack with the Talisman of Border. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_dimension_tallisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="91601" name="Dimensional Talisman Lv. 10" type="Armor">
+		<!-- When equipped, P./ M. Def. +100, P./ M. Evasion +5, Max. HP/ MP/ CP +2000, Speed +10, Atk. Spd. +50, Casting Spd. +100, Acquired XP/ SP +30%. Activates Dimensional Border Power (at a certain probability, increases attack abilities) Lv. 9, Dimensional Guard Lv. 10 (reduced chance of being hit by a quick stab attack for a certain amount of time, reduced Received P./ M. Critical Damage, increased M. Damage Resistance) skill can be used, Dimensional Barrier (for 15 sec. protection from 10 enemy attacks) can be used. Effect does not stack with the Talisman of Border. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_dimension_tallisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="91602" name="Sealed Doll of Border - Frintezza" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Doll of Border - Frintezza (30-day). Take it to Alchemist Veruti in Giran to upgrade to Lv. 1-2. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_doll_frintessa_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="91603" name="Doll of Border - Frintezza" additionalName="30-day" type="EtcItem">
+		<!-- A 30-day item. When in inventory, improves the character's stats. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. This item will be deleted after the event is over. <Frintezza Doll Spell>. CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun/ Paralysis Atk. Rate +10%. -->
+		<set name="icon" val="icon.bm_doll_frintessa_30d" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="91604" name="Frintezza Doll" additionalName="Lv. 1" type="EtcItem">
+		<!-- When in inventory, improves the character's stats. Take it to Alchemist Veruti in Giran to upgrade to Lv. 1-2. Cannot be dropped. <Frintezza Doll Spell Lv. 1>. CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun/ Paralysis Atk. Rate +10%. -->
+		<set name="icon" val="icon.bm_doll_frintessa_30d" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="91605" name="Frintezza Doll" additionalName="Lv. 2" type="EtcItem">
+		<!-- When in inventory, improves the character's stats. Cannot be dropped. <Frintezza Doll Spell Lv. 2>. CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun/ Paralysis Atk. Rate +20%, Speed +5. -->
+		<set name="icon" val="icon.bm_doll_frintessa_30d" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+	</item>
+</list>

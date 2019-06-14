@@ -1,0 +1,1241 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="71400" name="Greater Red Cat's Eye" additionalName="Lv. 3" type="Armor">
+		<!-- When equipped, P. Critical Damage +18%, P. Skill Power +3%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71401" name="Greater Red Cat's Eye" additionalName="Lv. 4" type="Armor">
+		<!-- When equipped, P. Critical Damage +19%, P. Skill Power +5%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71402" name="Greater Red Cat's Eye" additionalName="Lv. 5" type="Armor">
+		<!-- When equipped, P. Critical Damage +20%, P. Skill Power +7%, Debuff Resistance +20%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71403" name="Greater Blue Cat's Eye" additionalName="Lv. 1" type="Armor">
+		<!-- When equipped, M. Critical Damage +16%, M. Skill Power +1%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71404" name="Greater Blue Cat's Eye" additionalName="Lv. 2" type="Armor">
+		<!-- When equipped, M. Critical Damage +17%, M. Skill Power +2%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71405" name="Greater Blue Cat's Eye" additionalName="Lv. 3" type="Armor">
+		<!-- When equipped, M. Critical Damage +18%, M. Skill Power +3%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71406" name="Greater Blue Cat's Eye" additionalName="Lv. 4" type="Armor">
+		<!-- When equipped, M. Critical Damage +19%, M. Skill Power +5%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71407" name="Greater Blue Cat's Eye" additionalName="Lv. 5" type="Armor">
+		<!-- When equipped, M. Critical Damage +20%, M. Skill Power +7%, Debuff Resistance +20%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71408" name="Greater Emerald" additionalName="Lv. 1" type="Armor">
+		<!-- When equipped, CON +2, MEN, DEX, WIT, STR, INT +1, Damage Reflection Resistance +2%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71409" name="Greater Emerald" additionalName="Lv. 2" type="Armor">
+		<!-- When equipped, CON, MEN +2, DEX, WIT, STR, INT +1, Damage Reflection Resistance +4%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71410" name="Greater Emerald" additionalName="Lv. 3" type="Armor">
+		<!-- When equipped, CON, MEN, DEX +2, WIT, STR, INT +1, Damage Reflection Resistance +6%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71411" name="Greater Emerald" additionalName="Lv. 4" type="Armor">
+		<!-- When equipped, CON, MEN, DEX, WIT +2, STR, INT +1, Damage Reflection Resistance +10%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71412" name="Greater Emerald" additionalName="Lv. 5" type="Armor">
+		<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +2, Damage Reflection Resistance +20%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71413" name="Brooch" additionalName="Lv. 5" type="Armor">
+		<!-- Activates 6 jewel slots when equipped. Inventory Slots +15. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71414" name="Jewel Power" type="EtcItem">
+		<!-- When combined with the jewel, you can obtain an upper level jewel. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_blessed_jewel" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71415" name="Jewel Power Fragment" type="EtcItem">
+		<!-- Take it to Dimenstional Merchant to exchange for Jewel Power. Cannot be dropped. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_jewel_energy_piece" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71416" name="Fishing Rod Pack (1-day)" type="EtcItem">
+		<!-- You can obtain a Fishing Rod for 1 day. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71417" name="Fishing Rod" additionalName="7-day" type="Weapon">
+		<!-- A Fishing Rod for 7 days. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Consumes 1 Fishing Shot. -->
+		<set name="icon" val="icon.weapon_fishing_rod_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="71418" name="Fishing Rod Pack (7-day)" type="EtcItem">
+		<!-- You can obtain a Fishing Rod for 7 days. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71419" name="Fishing Rod" additionalName="30-day" type="Weapon">
+		<!-- A Fishing Rod for 30 days. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Consumes 1 Fishing Shot. -->
+		<set name="icon" val="icon.weapon_fishing_rod_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="71420" name="Fishing Rod Pack (30-day)" type="EtcItem">
+		<!-- You can obtain a Fishing Rod for 30 days. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71421" name="Fishing XP Growth Amulet Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Fishing XP Growth Amulet (1-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71422" name="Fishing XP Growth Amulet" additionalName="7-day" type="EtcItem">
+		<!-- If stored in the inventory during fishing, for 7-day acquired XP/ SP +30%. If used with High-grade Fishing XP Growth Amulet only the item with higher grade will take effect. Cannot be exchanged, dropped or sold, shared within account. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.fishing_zone_ticket" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="71423" name="Fishing XP Growth Amulet Pack (7-day)" type="EtcItem">
+		<!-- Double-click to obtain Fishing XP Growth Amulet (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71424" name="Fishing XP Growth Amulet" additionalName="30-day" type="EtcItem">
+		<!-- If stored in the inventory during fishing, for 30-day acquired XP/ SP +30%. If used with High-grade Fishing XP Growth Amulet only the item with higher grade will take effect. Cannot be exchanged, dropped or sold, shared within account. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.fishing_zone_ticket" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="71425" name="Fishing XP Growth Amulet Pack (30-day)" type="EtcItem">
+		<!-- Double-click to obtain Fishing XP Growth Amulet (30-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71426" name="High-grade Fishing XP Growth Amulet Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain High-grade Fishing XP Growth Amulet (1-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71427" name="High-grade Fishing XP Growth Amulet" additionalName="7-day" type="EtcItem">
+		<!-- If stored in the inventory during fishing, acquired XP/ SP +50%. Cannot be exchanged, dropped or sold, shared within account. Can be stored in a private warehouse. Duration: 7-day. -->
+		<set name="icon" val="icon.fishing_zone_ticket" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="71428" name="High-grade Fishing XP Growth Amulet Pack (7-day)" type="EtcItem">
+		<!-- Double-click to obtain High-grade Fishing XP Growth Amulet (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71429" name="High-grade Fishing XP Growth Amulet" additionalName="30-day" type="EtcItem">
+		<!-- If stored in the inventory during fishing, acquired XP/ SP +50%. Cannot be exchanged, dropped or sold, shared within account. Can be stored in a private warehouse. Duration: 30-day. -->
+		<set name="icon" val="icon.fishing_zone_ticket" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="71430" name="High-grade Fishing XP Growth Amulet Pack (30-day)" type="EtcItem">
+		<!-- Double-click to obtain High-grade Fishing XP Growth Amulet (30-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71431" name="Fishing Pack Chest (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Fishing Rod Pack (1-day) and Fishing XP Growth Amulet Pack (1-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71432" name="Fishing Pack Chest (30-day)" type="EtcItem">
+		<!-- Double-click to obtain Fishing Rod Pack (30-day) and High-grade Fishing XP Growth Amulet Pack (30-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71433" name="Black Friday Rune Pack" type="EtcItem">
+		<!-- Double-click to obtain Package: XP and SP Rune - 50% (30-day), 2nd Class Buff Scroll x10, Major Warrior Healing Potion x60. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_pi_box_belief_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71434" name="Black Friday Experience Box" type="EtcItem">
+		<!-- Double-click to obtain XP/SP Scroll - Medium x20, 2nd Class Buff Scroll x20, Major Warrior Healing Potion x50. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_pi_box_love_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71435" name="Emerald Chest" type="EtcItem">
+		<!-- Double-click to obtain Emerald Lv. 1. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71436" name="Radiant Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain Vital Stone, Pearl, Diamond, Ruby, Sapphire, Jade, Garnet, Topaz, Aquamarine, Red/ Blue Cat's Eye, Emerald Chest (Lv. 1). Cannot be dropped. -->
+		<set name="icon" val="BranchIcon.icon.bm_2018_jewelbox_random" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71437" name="Shining Jewel Box" type="EtcItem">
+		<!-- Double-click to obtain one of the following jewels: Garnet, Jade, Ruby, Sapphire, Diamond, Pearl, Vital Stone. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71438" name="Jewel Coin" type="EtcItem">
+		<!-- Can be changed through Collector Pona for Shining Jewel Box or Brouch. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchIcon.Icon.etc_premium_coin_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71439" name="Santa Claus" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_santa" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71440" name="School Uniform A" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchSys3.icon1.Br_schoollook" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71441" name="Beach Swimsuit" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_swimsuit_a" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71442" name="Teddy Bear" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="icon.gomdori_chest_change" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71443" name="Toy Cat" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="icon.sayha2017_cat" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71444" name="Toy Panda" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="icon.sayha2017_panda" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71445" name="Baseball Uniform" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_baseball" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71446" name="Seductive Swimsuit" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_swimsuit_event_03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71447" name="School Uniform B" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_schoollook_b" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71448" name="Hanbok" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_korea_traditional" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71449" name="Metal Suit" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71450" name="Samurai" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchSys3.iconArmar.g_co_japan_general_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71451" name="Green Archer" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_archer_green" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71452" name="Formal Wear" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_wedding" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71453" name="Kat the Cat" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="icon.cat_the_cat_change_0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71454" name="Halloween" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_holloween" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71455" name="Alluring Swimsuit" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_swimsuit_event_02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71456" name="Vampire" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchSys3.iconArmar.g_co_vampiric_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71457" name="Dark Knight" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="icon.dark_kninght" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71458" name="Chevalier" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="icon.chevalier_chest_change" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71459" name="Red Archer" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_archer_red" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71460" name="Blue Pirate" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_pirate_blue" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71461" name="Dark Red Wizard" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_wizard_wine" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71462" name="Mystic" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_magician" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71463" name="Pirate" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="icon.bm2018_pirate_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71464" name="Red Noblesse" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="icon.bm2018_rednoblesse_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71465" name="Barbarian Wolf" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="icon.barbarian_chest_change_0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71466" name="Valkyrie" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="icon.valkyrie_chest_change_0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71467" name="Kelbim" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_kelbim" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71468" name="Ninja" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="icon.bm2018_ninja_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71469" name="High Priest" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="icon.bm2018_healer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71470" name="White Noblesse" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="icon.bm2018_whitenoblesse_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71471" name="Purple Cowboy" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="icon.bm2018_cowboy_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71472" name="Blue Musketeer" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="icon.bm2018_bluemusketeer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71473" name="zaken" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_zaken" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71474" name="Dragon Berserker" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="icon.bm2018_dragon_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71475" name="anakim" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_anakim" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71476" name="lilith" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_lilith" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71477" name="Freya" type="Armor">
+		<!-- Appearance for the transformation system. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_freya" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71478" name="Transformation Sealbook: Santa Claus" additionalName="Standard" type="EtcItem">
+		<!-- The book allows you to obtain Standard Santa Claus appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_santa" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71479" name="Transformation Sealbook: Santa Claus" additionalName="High-grade" type="EtcItem">
+		<!-- The book allows you to obtain High-grade Santa Claus appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_santa" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71480" name="Transformation Sealbook: Santa Claus" additionalName="Rare" type="EtcItem">
+		<!-- The book allows you to obtain Rare Santa Claus appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_santa" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71481" name="Transformation Sealbook: Santa Claus" additionalName="Legendary" type="EtcItem">
+		<!-- The book allows you to obtain Legendary Santa Claus appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_santa" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71482" name="Transformation Sealbook: Santa Claus" additionalName="Mythic" type="EtcItem">
+		<!-- The book allows you to obtain Mythic Santa Claus appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_santa" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71483" name="Transformation Sealbook: School Uniform A" additionalName="Standard" type="EtcItem">
+		<!-- The book allows you to obtain Standard School Uniform A appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="BranchSys3.icon1.Br_schoollook" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71484" name="Transformation Sealbook: School Uniform A" additionalName="High-grade" type="EtcItem">
+		<!-- The book allows you to obtain High-grade School Uniform A appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="BranchSys3.icon1.Br_schoollook" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71485" name="Transformation Sealbook: School Uniform A" additionalName="Rare" type="EtcItem">
+		<!-- The book allows you to obtain Rare School Uniform A appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="BranchSys3.icon1.Br_schoollook" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71486" name="Transformation Sealbook: School Uniform A" additionalName="Legendary" type="EtcItem">
+		<!-- The book allows you to obtain Legendary School Uniform A appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="BranchSys3.icon1.Br_schoollook" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71487" name="Transformation Sealbook: School Uniform A" additionalName="Mythic" type="EtcItem">
+		<!-- The book allows you to obtain Mythic School Uniform A appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="BranchSys3.icon1.Br_schoollook" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71488" name="Transformation Sealbook: Beach Swimsuit" additionalName="Standard" type="EtcItem">
+		<!-- The book allows you to obtain Standard Beach Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_swimsuit_a" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71489" name="Transformation Sealbook: Beach Swimsuit" additionalName="High-grade" type="EtcItem">
+		<!-- The book allows you to obtain High-grade Beach Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_swimsuit_a" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71490" name="Transformation Sealbook: Beach Swimsuit" additionalName="Rare" type="EtcItem">
+		<!-- The book allows you to obtain Rare Beach Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_swimsuit_a" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71491" name="Transformation Sealbook: Beach Swimsuit" additionalName="Legendary" type="EtcItem">
+		<!-- The book allows you to obtain Legendary Beach Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_swimsuit_a" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71492" name="Transformation Sealbook: Beach Swimsuit" additionalName="Mythic" type="EtcItem">
+		<!-- The book allows you to obtain Mythic Beach Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_swimsuit_a" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71493" name="Transformation Sealbook: Teddy Bear" additionalName="Standard" type="EtcItem">
+		<!-- The book allows you to obtain Standard Teddy Bear appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.gomdori_chest_change" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71494" name="Transformation Sealbook: Teddy Bear" additionalName="High-grade" type="EtcItem">
+		<!-- The book allows you to obtain High-grade Teddy Bear appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.gomdori_chest_change" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71495" name="Transformation Sealbook: Teddy Bear" additionalName="Rare" type="EtcItem">
+		<!-- The book allows you to obtain Rare Teddy Bear appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.gomdori_chest_change" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71496" name="Transformation Sealbook: Teddy Bear" additionalName="Legendary" type="EtcItem">
+		<!-- The book allows you to obtain Legendary Teddy Bear appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.gomdori_chest_change" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71497" name="Transformation Sealbook: Teddy Bear" additionalName="Mythic" type="EtcItem">
+		<!-- The book allows you to obtain Mythic Teddy Bear appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.gomdori_chest_change" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71498" name="Transformation Sealbook: Toy Cat" additionalName="Standard" type="EtcItem">
+		<!-- The book allows you to obtain Standard Toy Cat appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.sayha2017_cat" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71499" name="Transformation Sealbook: Toy Cat" additionalName="High-grade" type="EtcItem">
+		<!-- The book allows you to obtain High-grade Toy Cat appearance. Cannot be dropped or sold in the grocery store. -->
+		<set name="icon" val="icon.sayha2017_cat" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>
