@@ -7,10 +7,11 @@ import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.DeadLockDetector;
 import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.sql.impl.*;
 import org.l2j.gameserver.data.xml.impl.*;
-import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.ConditionHandler;
@@ -42,6 +43,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class GameServer {
@@ -58,7 +60,7 @@ public class GameServer {
     public GameServer() throws Exception {
         final var serverLoadStart = Instant.now();
 
-        printSection("Identify Factory");
+        printSection("Identity Factory");
         if (!IdFactory.getInstance().isInitialized()) {
             LOGGER.error("Could not read object IDs from database. Please check your configuration.");
             throw new Exception("Could not initialize the ID factory!");
@@ -261,6 +263,9 @@ public class GameServer {
         LOGGER.info("Geodata use {} MB of memory", geodataMemory);
         LOGGER.info("Maximum number of connected players is {}", Config.MAXIMUM_ONLINE_USERS);
         LOGGER.info("Server loaded in {} seconds", serverLoadStart.until(Instant.now(), ChronoUnit.SECONDS));
+
+        printSection("Setting All characters to offline status!");
+        getDAO(CharacterDAO.class).setAllCharactersOffline();
 
         connectionHandler = ConnectionBuilder.create(new InetSocketAddress(Config.PORT_GAME), L2GameClient::new, new ClientPacketHandler(), ThreadPoolManager::execute).build();
         connectionHandler.start();

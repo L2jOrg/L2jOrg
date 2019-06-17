@@ -18,12 +18,11 @@ public abstract class IdFactory {
     boolean initialized;
 
     protected IdFactory() {
-        getDAO(CharacterDAO.class).setAllCharactersOffline();
-        cleanUpDB();
+        cleanUpDatabase();
         cleanUpTimeStamps();
     }
 
-    private void cleanUpDB() {
+    private void cleanUpDatabase() {
         final long cleanupStart = System.currentTimeMillis();
         int cleanCount = 0;
 
@@ -56,7 +55,7 @@ public abstract class IdFactory {
         getDAO(CharacterDAO.class).deleteExpiredSavedSkills(timestamp);
     }
 
-    protected final IntSet extractUsedObjectIDTable() throws Exception {
+    protected final IntSet extractUsedObjectIDTable()  {
         return getDAO(IdFactoryDAO.class).findUsedObjectIds();
     }
 
@@ -65,7 +64,6 @@ public abstract class IdFactory {
     }
 
     public abstract int getNextId();
-
 
     public abstract void releaseId(int id);
 

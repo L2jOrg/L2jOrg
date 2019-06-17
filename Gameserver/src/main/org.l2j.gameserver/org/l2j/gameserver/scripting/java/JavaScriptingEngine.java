@@ -14,6 +14,7 @@ import static java.util.Objects.isNull;
  * @author HorridoJoho, Mobius
  */
 public final class JavaScriptingEngine extends AbstractScriptingEngine {
+
     private volatile JavaCompiler compiler;
 
     public JavaScriptingEngine() {

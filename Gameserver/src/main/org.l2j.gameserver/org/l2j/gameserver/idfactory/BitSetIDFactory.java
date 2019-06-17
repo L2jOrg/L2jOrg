@@ -16,8 +16,8 @@ public final class BitSetIDFactory extends IdFactory {
 
     BitSetIDFactory() {
         synchronized (BitSetIDFactory.class) {
-            ThreadPoolManager.scheduleAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
             initialize();
+            ThreadPoolManager.scheduleAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
         }
         LOGGER.info("{} Identifiers available", freeIds.size());
     }
@@ -47,33 +47,37 @@ public final class BitSetIDFactory extends IdFactory {
     }
 
     @Override
-    public synchronized void releaseId(int objectID) {
-        if ((objectID - FIRST_OID) > -1) {
-            freeIds.clear(objectID - FIRST_OID);
+    public synchronized void releaseId(int objectId) {
+        if ((objectId - FIRST_OID) > -1) {
+            freeIds.clear(objectId - FIRST_OID);
             freeIdCount.incrementAndGet();
         } else {
-            LOGGER.warn("Release objectID " + objectID + " failed (< " + FIRST_OID + ")");
+            LOGGER.warn("Release objectID " + objectId + " failed (< " + FIRST_OID + ")");
         }
     }
 
     @Override
     public synchronized int getNextId() {
-        final int newID = nextFreeId.get();
-        freeIds.set(newID);
+        final int newObjectId = nextFreeId.get();
+        freeIds.set(newObjectId);
         freeIdCount.decrementAndGet();
 
-        final int nextFree = freeIds.nextClearBit(newID) < 0 ? freeIds.nextClearBit(0) : freeIds.nextClearBit(newID);
+        int nextFree = freeIds.nextClearBit(newObjectId);
+
+        if(nextFree < 0) {
+            nextFree = freeIds.nextClearBit(0);
+        }
 
         if (nextFree < 0) {
             if (freeIds.size() >= FREE_OBJECT_ID_SIZE) {
-                throw new NullPointerException("Ran out of valid Id's.");
+                throw new IllegalStateException("Ran out of valid Id's.");
             }
             increaseBitSetCapacity();
         }
 
         nextFreeId.set(nextFree);
 
-        return newID + FIRST_OID;
+        return newObjectId + FIRST_OID;
     }
 
     @Override

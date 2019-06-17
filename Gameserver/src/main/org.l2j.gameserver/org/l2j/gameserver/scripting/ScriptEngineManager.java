@@ -12,7 +12,6 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.*;
 import java.util.Map.Entry;
 
-import static java.util.Objects.isNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
@@ -41,16 +40,16 @@ public final class ScriptEngineManager  {
 
     private Properties loadProperties() {
         var props = new Properties();
-        try (FileInputStream fis = new FileInputStream("config/ScriptEngine.ini")) {
+        try (FileInputStream fis = new FileInputStream("config/ScriptEngine.properties")) {
             props.load(fis);
         } catch (Exception e) {
-            LOGGER.warn("Couldn't load ScriptEngine.ini", e);
+            LOGGER.warn("Couldn't load ScriptEngine.properties", e);
         }
         return props;
     }
 
     private void registerEngine(IScriptingEngine engine, Properties props) {
-        maybeSetProperties("language." + engine.getLanguageName() + ".", props, engine);
+        maybeSetProperties(engine.getLanguageName(), props, engine);
         final IExecutionContext context = engine.createExecutionContext();
         for (String commonExtension : engine.getCommonFileExtensions()) {
             _extEngines.put(commonExtension, context);
@@ -59,17 +58,13 @@ public final class ScriptEngineManager  {
         LOGGER.info("{} {} ({} {})", engine.getEngineName(), engine.getEngineVersion(), engine.getLanguageName(), engine.getLanguageVersion());
     }
 
-    private void maybeSetProperties(String propPrefix, Properties props, IScriptingEngine engine) {
-        if (isNull(props)) {
-            return;
-        }
-
+    private void maybeSetProperties(String language, Properties props, IScriptingEngine engine) {
         for (Entry<Object, Object> prop : props.entrySet()) {
             String key = (String) prop.getKey();
             String value = (String) prop.getValue();
 
-            if (key.startsWith(propPrefix)) {
-                key = key.substring(propPrefix.length());
+            if (key.startsWith(language)) {
+                key = key.substring(language.length() + 1);
                 if (value.startsWith("%") && value.endsWith("%")) {
                     value = System.getProperty(value.substring(1, value.length() - 1));
                 }

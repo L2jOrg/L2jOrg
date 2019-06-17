@@ -87,6 +87,10 @@ public final class L2World {
     private final L2WorldRegion[][] _worldRegions = new L2WorldRegion[REGIONS_X + 1][REGIONS_Y + 1];
 
     private L2World() {
+        initRegions();
+    }
+
+    private void initRegions() {
         for (int x = 0; x <= REGIONS_X; x++) {
             for (int y = 0; y <= REGIONS_Y; y++) {
                 _worldRegions[x][y] = new L2WorldRegion(x, y);

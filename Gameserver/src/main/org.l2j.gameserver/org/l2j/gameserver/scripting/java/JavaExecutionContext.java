@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.lang.module.Configuration;
 import java.lang.module.ModuleFinder;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.nio.charset.StandardCharsets;
@@ -30,8 +31,9 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public final class JavaExecutionContext extends AbstractExecutionContext<JavaScriptingEngine> {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(JavaExecutionContext.class.getName());
-    private final Path destination = Path.of("compiledScripts");
+    private static final Logger LOGGER = LoggerFactory.getLogger(JavaExecutionContext.class);
+
+    private final Path destination;
     private final DiagnosticListener<JavaFileObject> listener = new DefaultDiagnosticListener();
     private final Path sourcePath;
 
@@ -42,6 +44,8 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
         super(engine);
 
         sourcePath = getSettings(ServerSettings.class).dataPackDirectory().resolve(requireNonNullElse(getProperty("source.path"), "data/scripts"));
+        destination = Path.of(getProperty("compiled.path"));
+
         try {
             compileModuleInfo();
             compile(sourcePath);
@@ -57,6 +61,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
         var options = new ArrayList<>(compileOptions());
         options.add("--module-source-path");
         options.add(sourcePath.toString());
+
         compile(findModuleInfo(), options);
     }
 
@@ -68,8 +73,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
     }
 
     private List<Path> findModuleInfo() throws IOException {
-        return Files.find(sourcePath, Integer.MAX_VALUE,
-                (path, attributes) -> "module-info.java".equals(path.getFileName().toString())).collect(Collectors.toList());
+        return Files.find(sourcePath, Integer.MAX_VALUE, (path, attributes) -> "module-info.java".equals(path.getFileName().toString())).collect(Collectors.toList());
     }
 
     private void tryConfigureModuleLayer() {
@@ -125,7 +129,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
     private List<String> compileOptions() {
         var javaVersion = System.getProperty("java.specification.version");
         return List.of("--enable-preview", "--module-path", System.getProperty("jdk.module.path"),
-                    "-g:"  + getProperty("g"), "-target", javaVersion, "--source", javaVersion, "-implicit:class");
+                    "-target", javaVersion, "--source", javaVersion, "-implicit:class");
     }
 
     @Override
@@ -146,7 +150,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
             }
 
             if(isNull(scriptFileInfo)) {
-                LOGGER.error("Compilation successfull, but class coresponding to " + sourcePath.toString() + " not found!");
+                LOGGER.error("Compilation successful, but class corresponding to {} not found!", sourcePath.toString());
                 continue;
             }
 
@@ -158,13 +162,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 
             setCurrentExecutingScript(sourcePath);
             try {
-                var classLoader = getClassLoaderOfScript(scriptFileInfo);
-                final Class<?> javaClass = classLoader.loadClass(scriptFileInfo.getJavaName());
-                Method mainMethod = javaClass.getMethod("main", String[].class);
-
-                if ((mainMethod != null) && Modifier.isStatic(mainMethod.getModifiers()) && !javaClass.isAnnotationPresent(Disabled.class)) {
-                    mainMethod.invoke(null, (Object) new String[] { scriptFileInfo.getSourcePath().toString() });
-                }
+                executeMain(scriptFileInfo);
 
             } catch (NoSuchMethodException e) {
                 LOGGER.warn("There is no main method on script {}", sourcePath);
@@ -176,6 +174,16 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
             }
         }
         return executionFailures;
+    }
+
+    private void executeMain(ScriptingFileInfo scriptFileInfo) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+        var classLoader = getClassLoaderOfScript(scriptFileInfo);
+        final Class<?> javaClass = classLoader.loadClass(scriptFileInfo.getJavaName());
+        Method mainMethod = javaClass.getMethod("main", String[].class);
+
+        if (nonNull(mainMethod) && Modifier.isStatic(mainMethod.getModifiers()) && !javaClass.isAnnotationPresent(Disabled.class)) {
+            mainMethod.invoke(null, (Object) new String[] { scriptFileInfo.getSourcePath().toString() });
+        }
     }
 
     private ClassLoader getClassLoaderOfScript(ScriptingFileInfo scriptFileInfo) {

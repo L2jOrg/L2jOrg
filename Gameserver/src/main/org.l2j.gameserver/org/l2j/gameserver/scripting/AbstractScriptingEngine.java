@@ -10,43 +10,44 @@ import java.util.Map;
  * @author HorridoJoho
  */
 public abstract class AbstractScriptingEngine implements IScriptingEngine {
-    private final String _engineName;
-    private final String _engineVersion;
-    private final String[] _commonFileExtensions;
-    private final Map<String, String> _properties;
+
+    private final String name;
+    private final String version;
+    private final String[] fileExtension;
+    private final Map<String, String> properties;
 
     protected AbstractScriptingEngine(String engineName, String engineVersion, String... commonFileExtensions) {
         if (Util.isNullOrEmpty(engineName) || Util.isNullOrEmpty(engineVersion) || (commonFileExtensions == null) || (commonFileExtensions.length == 0)) {
             throw new IllegalArgumentException();
         }
-        _engineName = engineName;
-        _engineVersion = engineVersion;
-        _commonFileExtensions = commonFileExtensions;
-        _properties = new HashMap<>();
+        name = engineName;
+        version = engineVersion;
+        fileExtension = commonFileExtensions;
+        properties = new HashMap<>();
     }
 
     @Override
     public final String setProperty(String key, String value) {
-        return _properties.put(key, value);
+        return properties.put(key, value);
     }
 
     @Override
     public final String getProperty(String key) {
-        return _properties.get(key);
+        return properties.get(key);
     }
 
     @Override
     public final String getEngineName() {
-        return _engineName;
+        return name;
     }
 
     @Override
     public final String getEngineVersion() {
-        return _engineVersion;
+        return version;
     }
 
     @Override
     public final String[] getCommonFileExtensions() {
-        return Arrays.copyOf(_commonFileExtensions, _commonFileExtensions.length);
+        return Arrays.copyOf(fileExtension, fileExtension.length);
     }
 }
