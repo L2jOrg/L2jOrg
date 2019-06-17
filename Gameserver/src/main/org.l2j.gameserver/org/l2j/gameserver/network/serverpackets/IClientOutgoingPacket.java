@@ -1,14 +1,13 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritablePacket;
+import org.l2j.gameserver.GameServer;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.OutgoingPackets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author KenM
@@ -110,7 +109,7 @@ public abstract class IClientOutgoingPacket extends WritablePacket<L2GameClient>
             writeImpl(client);
             return true;
         } catch (Exception e) {
-            LOGGER.error("Error writing packet {} to client {}", this, client);
+            LOGGER.error("[{{}] Error writing packet {} to client {}", GameServer.fullVersion, this, client);
             LOGGER.error(e.getLocalizedMessage(), e);
         }
         return false;

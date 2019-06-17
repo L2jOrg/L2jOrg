@@ -1,6 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import io.github.joealisson.mmocore.ReadablePacket;
+import org.l2j.gameserver.GameServer;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.L2GameClient;
 import org.slf4j.Logger;
@@ -21,9 +22,9 @@ public abstract class IClientIncomingPacket extends ReadablePacket<L2GameClient>
             readImpl();
             return true;
         } catch (InvalidDataPacketException e) {
-            LOGGER.warn("Invalid data packet {} from client {}", this, client);
+            LOGGER.warn("[{}] Invalid data packet {} from client {}", GameServer.fullVersion, this, client);
         } catch (Exception e) {
-            LOGGER.error("Error while reading packet {} from client {}", this, client);
+            LOGGER.error("[{}] Error while reading packet {} from client {}", GameServer.fullVersion, this, client);
             LOGGER.error(e.getLocalizedMessage(), e);
         }
         return false;
@@ -34,7 +35,7 @@ public abstract class IClientIncomingPacket extends ReadablePacket<L2GameClient>
         try {
             runImpl();
         } catch (Exception e) {
-            LOGGER.error("Error while running packet {} from client {}", this, client);
+            LOGGER.error("[{}] Error while running packet {} from client {}", GameServer.fullVersion, this, client);
             LOGGER.error(e.getLocalizedMessage(), e);
         }
     }

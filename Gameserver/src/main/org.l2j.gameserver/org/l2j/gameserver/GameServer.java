@@ -50,8 +50,8 @@ public class GameServer {
     private static final String LOG4J_CONFIGURATION_FILE = "log4j.configurationFile";
 
     private static Logger LOGGER;
-    private static String version;
     private static GameServer INSTANCE;
+    public static String fullVersion;
     private final DeadLockDetector _deadDetectThread;
     private final ConnectionHandler<L2GameClient> connectionHandler;
 
@@ -310,14 +310,15 @@ public class GameServer {
 
                 var versionProperties = new Properties();
                 versionProperties.load(versionFile);
-                version = versionProperties.getProperty("version");
-
+                var version = versionProperties.getProperty("version");
+                fullVersion = String.format("%s: %s-%s (%s)", UPDATE_NAME, version, versionProperties.getProperty("revision"), versionProperties.getProperty("buildDate"));
                 printSection("Server Info Version");
                 LOGGER.info("Update: .................. {}", UPDATE_NAME);
                 LOGGER.info("Build Version: ........... {}", version);
                 LOGGER.info("Build Revision: .......... {}", versionProperties.getProperty("revision"));
                 LOGGER.info("Build date: .............. {}", versionProperties.getProperty("buildDate"));
                 LOGGER.info("Compiler JDK version: .... {}", versionProperties.getProperty("compilerVersion"));
+
             }
         } catch (IOException e) {
             LOGGER.warn(e.getLocalizedMessage(), e);
