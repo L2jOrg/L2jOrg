@@ -1,10 +1,9 @@
 package org.l2j.gameserver.network;
 
-
 /**
  * @author UnAfraid
  */
-public enum OutgoingPackets {
+public enum ServerPacketId {
     // Packets
     DIE(0x00),
     REVIVE(0x01),
@@ -832,32 +831,23 @@ public enum OutgoingPackets {
     EX_UNK_209(0XFE, 0X209),
     EX_UNK_225(0XFE, 0X225);
 
-    private final int _id1;
-    private final int _id2;
+    private final int id;
+    private final int extId;
 
-    OutgoingPackets(int id1) {
-        this(id1, -1);
+    ServerPacketId(int id) {
+        this(id, -1);
     }
 
-    OutgoingPackets(int id1, int id2) {
-        _id1 = id1;
-        _id2 = id2;
+    ServerPacketId(int id, int extId) {
+        this.id = id;
+        this.extId = extId;
     }
 
-    public static OutgoingPackets getPacket(int id1, int id2) {
-        for (OutgoingPackets packet : values()) {
-            if ((packet.getId1() == id1) && (packet.getId2() == id2)) {
-                return packet;
-            }
-        }
-        return null;
+    public int getId() {
+        return id;
     }
 
-    public int getId1() {
-        return _id1;
-    }
-
-    public int getId2() {
-        return _id2;
+    public int getExtId() {
+        return extId;
     }
 }

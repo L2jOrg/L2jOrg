@@ -5,14 +5,12 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format:(ch) ddd
  *
  * @author -Wooden-
  */
-public final class RequestDuelAnswerStart extends IClientIncomingPacket {
+public final class RequestDuelAnswerStart extends ClientPacket {
     private int _partyDuel;
     @SuppressWarnings("unused")
     private int _unk1;

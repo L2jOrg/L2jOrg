@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.ceremonyofchaos.ExCuriousHouseState;
 import org.slf4j.Logger;
@@ -225,7 +225,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
         }
     }
 
-    public final void broadcastPacket(IClientOutgoingPacket... packets) {
+    public final void broadcastPacket(ServerPacket... packets) {
         getRegisteredPlayers().forEach(member -> member.sendPacket(packets));
     }
 

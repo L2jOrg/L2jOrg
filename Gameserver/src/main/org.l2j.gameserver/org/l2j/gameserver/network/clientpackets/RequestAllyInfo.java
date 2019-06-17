@@ -6,14 +6,12 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.AllianceInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1479 $ $Date: 2005-11-09 00:47:42 +0100 (mer., 09 nov. 2005) $
  */
-public final class RequestAllyInfo extends IClientIncomingPacket {
+public final class RequestAllyInfo extends ClientPacket {
     @Override
     public void readImpl() {
 

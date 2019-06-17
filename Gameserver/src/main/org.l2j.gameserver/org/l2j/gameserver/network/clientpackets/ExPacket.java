@@ -6,12 +6,12 @@ import org.l2j.gameserver.network.InvalidDataPacketException;
 /**
  * @author Nos
  */
-public class ExPacket extends IClientIncomingPacket {
+public class ExPacket extends ClientPacket {
     // private static final Logger LOGGER = LoggerFactory.getLogger(ExPacket.class);
 
     private
     ExIncomingPackets _exIncomingPacket;
-    private IClientIncomingPacket _exPacket;
+    private ClientPacket _exPacket;
 
     @Override
     public void readImpl() throws InvalidDataPacketException {

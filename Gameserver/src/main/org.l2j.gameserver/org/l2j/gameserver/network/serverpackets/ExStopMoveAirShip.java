@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author kerberos
  */
-public class ExStopMoveAirShip extends IClientOutgoingPacket {
+public class ExStopMoveAirShip extends ServerPacket {
     private final int _objectId;
     private final int _x;
     private final int _y;
@@ -26,7 +24,7 @@ public class ExStopMoveAirShip extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_STOP_MOVE_AIR_SHIP);
+        writeId(ServerPacketId.EX_STOP_MOVE_AIR_SHIP);
 
         writeInt(_objectId);
         writeInt(_x);

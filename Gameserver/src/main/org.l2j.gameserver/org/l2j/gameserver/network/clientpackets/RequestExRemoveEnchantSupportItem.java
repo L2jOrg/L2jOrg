@@ -5,12 +5,10 @@ import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.serverpackets.ExRemoveEnchantSupportItemResult;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestExRemoveEnchantSupportItem extends IClientIncomingPacket {
+public class RequestExRemoveEnchantSupportItem extends ClientPacket {
     @Override
     public void readImpl() {
 

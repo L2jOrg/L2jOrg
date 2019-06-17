@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class SocialAction extends IClientOutgoingPacket {
+public class SocialAction extends ServerPacket {
     // TODO: Enum
     public static final int LEVEL_UP = 2122;
 
@@ -19,7 +17,7 @@ public class SocialAction extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SOCIAL_ACTION);
+        writeId(ServerPacketId.SOCIAL_ACTION);
 
         writeInt(_charObjId);
         writeInt(_actionId);

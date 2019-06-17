@@ -3,14 +3,12 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Sdw
  */
-public class ExPledgeRecruitInfo extends IClientOutgoingPacket {
+public class ExPledgeRecruitInfo extends ServerPacket {
     private final L2Clan _clan;
 
     public ExPledgeRecruitInfo(int clanId) {
@@ -19,7 +17,7 @@ public class ExPledgeRecruitInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_PLEDGE_RECRUIT_INFO);
+        writeId(ServerPacketId.EX_PLEDGE_RECRUIT_INFO);
 
         final L2Clan.SubPledge[] subPledges = _clan.getAllSubPledges();
         writeString(_clan.getName());

@@ -12,7 +12,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 /**
  * Client packet for setting ally crest.
  */
-public final class RequestSetAllyCrest extends IClientIncomingPacket {
+public final class RequestSetAllyCrest extends ClientPacket {
     private int _length;
     private byte[] _data = null;
 

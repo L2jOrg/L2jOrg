@@ -6,17 +6,14 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.EnchantSkillHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Set;
-
-import static java.util.Objects.nonNull;
 
 /**
  * @author KenM
  */
-public class ExEnchantSkillInfoDetail extends IClientOutgoingPacket {
+public class ExEnchantSkillInfoDetail extends ServerPacket {
     private final SkillEnchantType _type;
     private final int _skillId;
     private final int _skillLvl;
@@ -34,7 +31,7 @@ public class ExEnchantSkillInfoDetail extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_ENCHANT_SKILL_INFO_DETAIL);
+        writeId(ServerPacketId.EX_ENCHANT_SKILL_INFO_DETAIL);
 
         writeInt(_type.ordinal());
         writeInt(_skillId);

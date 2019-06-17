@@ -4,14 +4,12 @@ import org.l2j.gameserver.data.xml.impl.SecondaryAuthData;
 import org.l2j.gameserver.network.serverpackets.Ex2ndPasswordAck;
 import org.l2j.gameserver.security.SecondaryPasswordAuth;
 
-import java.nio.ByteBuffer;
-
 /**
  * (ch)cS{S} c: change pass? S: current password S: new password
  *
  * @author mrTJO
  */
-public class RequestEx2ndPasswordReq extends IClientIncomingPacket {
+public class RequestEx2ndPasswordReq extends ClientPacket {
     private int _changePass;
     private String _password;
     private String _newPassword;

@@ -4,14 +4,12 @@ import org.l2j.gameserver.network.serverpackets.ExNeedToChangeName;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * Reply for {@link ExNeedToChangeName}
  *
  * @author JIV
  */
-public class RequestExChangeName extends IClientIncomingPacket {
+public class RequestExChangeName extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestExChangeName.class);
     private String _newName;
     private int _type;

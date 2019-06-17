@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class ExAttributeEnchantResult extends IClientOutgoingPacket {
+public class ExAttributeEnchantResult extends ServerPacket {
     private final int _result;
     private final int _isWeapon;
     private final int _type;
@@ -27,7 +25,7 @@ public class ExAttributeEnchantResult extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_ATTRIBUTE_ENCHANT_RESULT);
+        writeId(ServerPacketId.EX_ATTRIBUTE_ENCHANT_RESULT);
 
         writeInt(_result);
         writeByte((byte) _isWeapon);

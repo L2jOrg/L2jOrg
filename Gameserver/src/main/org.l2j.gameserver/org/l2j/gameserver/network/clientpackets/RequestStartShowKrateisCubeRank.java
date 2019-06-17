@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Mobius
  */
-public class RequestStartShowKrateisCubeRank extends IClientIncomingPacket {
+public class RequestStartShowKrateisCubeRank extends ClientPacket {
     @Override
     public void readImpl() {
 

@@ -4,16 +4,15 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
 /**
  * @author UnAfraid
  */
-public class ExBRProductList extends IClientOutgoingPacket {
+public class ExBRProductList extends ServerPacket {
     private final L2PcInstance _activeChar;
     private final int _type;
     private final Collection<PrimeShopProduct> _primeList;
@@ -26,7 +25,7 @@ public class ExBRProductList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_BR_PRODUCT_LIST);
+        writeId(ServerPacketId.EX_BR_PRODUCT_LIST);
 
         writeLong(_activeChar.getAdena()); // Adena
         writeLong(0x00); // Hero coins

@@ -1232,13 +1232,13 @@ public class L2Clan implements IIdentifiable, INamable {
         }
     }
 
-    public void broadcastToOnlineAllyMembers(IClientOutgoingPacket packet) {
+    public void broadcastToOnlineAllyMembers(ServerPacket packet) {
         for (L2Clan clan : ClanTable.getInstance().getClanAllies(getAllyId())) {
             clan.broadcastToOnlineMembers(packet);
         }
     }
 
-    public void broadcastToOnlineMembers(IClientOutgoingPacket packet) {
+    public void broadcastToOnlineMembers(ServerPacket packet) {
         for (L2ClanMember member : _members.values()) {
             if ((member != null) && member.isOnline()) {
                 member.getPlayerInstance().sendPacket(packet);
@@ -1254,7 +1254,7 @@ public class L2Clan implements IIdentifiable, INamable {
         }
     }
 
-    public void broadcastToOtherOnlineMembers(IClientOutgoingPacket packet, L2PcInstance player) {
+    public void broadcastToOtherOnlineMembers(ServerPacket packet, L2PcInstance player) {
         for (L2ClanMember member : _members.values()) {
             if ((member != null) && member.isOnline() && (member.getPlayerInstance() != player)) {
                 member.getPlayerInstance().sendPacket(packet);

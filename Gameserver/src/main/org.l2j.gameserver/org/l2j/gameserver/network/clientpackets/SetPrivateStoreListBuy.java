@@ -20,11 +20,10 @@ import org.l2j.gameserver.network.serverpackets.PrivateStoreMsgBuy;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
 import java.util.Arrays;
 
 
-public final class SetPrivateStoreListBuy extends IClientIncomingPacket {
+public final class SetPrivateStoreListBuy extends ClientPacket {
     private TradeItem[] _items = null;
 
     @Override

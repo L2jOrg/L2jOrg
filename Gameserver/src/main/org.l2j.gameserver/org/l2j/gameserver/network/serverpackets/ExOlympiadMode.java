@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author godson
  */
-public class ExOlympiadMode extends IClientOutgoingPacket {
+public class ExOlympiadMode extends ServerPacket {
     private final int _mode;
 
     /**
@@ -20,7 +18,7 @@ public class ExOlympiadMode extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_OLYMPIAD_MODE);
+        writeId(ServerPacketId.EX_OLYMPIAD_MODE);
 
         writeByte((byte) _mode);
     }

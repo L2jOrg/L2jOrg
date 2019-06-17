@@ -11,9 +11,7 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
-import java.nio.ByteBuffer;
-
-public final class RequestPetGetItem extends IClientIncomingPacket {
+public final class RequestPetGetItem extends ClientPacket {
     private int _objectId;
 
     @Override

@@ -12,12 +12,10 @@ import org.l2j.gameserver.network.serverpackets.ExChangePostState;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Migi, DS
  */
-public final class RequestRejectPostAttachment extends IClientIncomingPacket {
+public final class RequestRejectPostAttachment extends ClientPacket {
     private int _msgId;
 
     @Override

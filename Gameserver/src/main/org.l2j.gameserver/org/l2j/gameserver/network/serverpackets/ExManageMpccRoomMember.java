@@ -6,14 +6,12 @@ import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.matching.CommandChannelMatchingRoom;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Gnacik
  */
-public class ExManageMpccRoomMember extends IClientOutgoingPacket {
+public class ExManageMpccRoomMember extends ServerPacket {
     private final L2PcInstance _activeChar;
     private final MatchingMemberType _memberType;
     private final ExManagePartyRoomMemberType _type;
@@ -26,7 +24,7 @@ public class ExManageMpccRoomMember extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_MANAGE_PARTY_ROOM_MEMBER);
+        writeId(ServerPacketId.EX_MANAGE_PARTY_ROOM_MEMBER);
 
         writeInt(_type.ordinal());
         writeInt(_activeChar.getObjectId());

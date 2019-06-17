@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Mobius
  */
-public class ExPVPMatchCCMyRecord extends IClientOutgoingPacket {
+public class ExPVPMatchCCMyRecord extends ServerPacket {
     private final int _points;
 
     public ExPVPMatchCCMyRecord(int points) {
@@ -17,7 +15,7 @@ public class ExPVPMatchCCMyRecord extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_PVP_MATCH_CCMY_RECORD);
+        writeId(ServerPacketId.EX_PVP_MATCH_CCMY_RECORD);
         writeInt(_points);
     }
 

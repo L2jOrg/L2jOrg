@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.instancemanager.DuelManager;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format:(ch) just a trigger
  *
  * @author -Wooden-
  */
-public final class RequestDuelSurrender extends IClientIncomingPacket {
+public final class RequestDuelSurrender extends ClientPacket {
     @Override
     public void readImpl() {
     }

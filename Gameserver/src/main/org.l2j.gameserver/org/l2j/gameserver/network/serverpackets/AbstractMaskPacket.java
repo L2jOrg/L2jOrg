@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.interfaces.IUpdateTypeComponent;
  * @param <T>
  * @author UnAfraid
  */
-public abstract class AbstractMaskPacket<T extends IUpdateTypeComponent> extends IClientOutgoingPacket {
+public abstract class AbstractMaskPacket<T extends IUpdateTypeComponent> extends ServerPacket {
     protected static final byte[] DEFAULT_FLAG_ARRAY =
             {
                     (byte) 0x80,

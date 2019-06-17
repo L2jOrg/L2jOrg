@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author mochitto
  */
-public class ExNevitAdventTimeChange extends IClientOutgoingPacket {
+public class ExNevitAdventTimeChange extends ServerPacket {
     private final boolean _paused;
     private final int _time;
 
@@ -19,7 +17,7 @@ public class ExNevitAdventTimeChange extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_GET_CRYSTALIZING_ESTIMATION);
+        writeId(ServerPacketId.EX_GET_CRYSTALIZING_ESTIMATION);
 
         // state 0 - pause 1 - started
         writeByte((byte) (_paused ? 0x00 : 0x01));

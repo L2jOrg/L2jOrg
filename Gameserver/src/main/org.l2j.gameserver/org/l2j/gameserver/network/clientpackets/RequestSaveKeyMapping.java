@@ -4,14 +4,12 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.ConnectionState;
 
-import java.nio.ByteBuffer;
-
 /**
  * Request Save Key Mapping client packet.
  *
  * @author Mobius
  */
-public class RequestSaveKeyMapping extends IClientIncomingPacket {
+public class RequestSaveKeyMapping extends ClientPacket {
     public static final String UI_KEY_MAPPING_VAR = "UI_KEY_MAPPING";
     public static final String SPLIT_VAR = "	";
     private byte[] _uiKeyMapping;

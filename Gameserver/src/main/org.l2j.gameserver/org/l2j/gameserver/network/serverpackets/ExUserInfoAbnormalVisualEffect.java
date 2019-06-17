@@ -3,15 +3,14 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Set;
 
 /**
  * @author Sdw
  */
-public class ExUserInfoAbnormalVisualEffect extends IClientOutgoingPacket {
+public class ExUserInfoAbnormalVisualEffect extends ServerPacket {
     private final L2PcInstance _activeChar;
 
     public ExUserInfoAbnormalVisualEffect(L2PcInstance cha) {
@@ -20,7 +19,7 @@ public class ExUserInfoAbnormalVisualEffect extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_USER_INFO_ABNORMAL_VISUAL_EFFECT);
+        writeId(ServerPacketId.EX_USER_INFO_ABNORMAL_VISUAL_EFFECT);
 
         writeInt(_activeChar.getObjectId());
         writeInt(_activeChar.getTransformationId());

@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Sdw
  */
-public class ExShowUsm extends IClientOutgoingPacket {
+public class ExShowUsm extends ServerPacket {
     public static final ExShowUsm GOD_INTRO = new ExShowUsm(2);
     public static final ExShowUsm SECOND_TRANSFER_QUEST = new ExShowUsm(4);
     public static final ExShowUsm OCTAVIS_INSTANCE_END = new ExShowUsm(6);
@@ -26,7 +24,7 @@ public class ExShowUsm extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_USM);
+        writeId(ServerPacketId.EX_SHOW_USM);
 
         writeInt(_videoId);
     }

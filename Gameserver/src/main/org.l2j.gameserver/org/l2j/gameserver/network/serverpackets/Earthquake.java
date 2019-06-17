@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class Earthquake extends IClientOutgoingPacket {
+public class Earthquake extends ServerPacket {
     private final int _x;
     private final int _y;
     private final int _z;
@@ -43,7 +41,7 @@ public class Earthquake extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EARTHQUAKE);
+        writeId(ServerPacketId.EARTHQUAKE);
 
         writeInt(_x);
         writeInt(_y);

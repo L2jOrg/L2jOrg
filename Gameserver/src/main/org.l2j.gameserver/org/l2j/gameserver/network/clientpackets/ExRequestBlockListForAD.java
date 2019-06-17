@@ -4,9 +4,7 @@ import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.model.BlockList;
 
-import java.nio.ByteBuffer;
-
-public class ExRequestBlockListForAD extends IClientIncomingPacket {
+public class ExRequestBlockListForAD extends ClientPacket {
 
     private String name;
     private String message;

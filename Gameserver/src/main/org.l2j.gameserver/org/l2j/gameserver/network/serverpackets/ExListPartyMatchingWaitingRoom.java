@@ -6,9 +6,8 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author Gnacik
  */
-public class ExListPartyMatchingWaitingRoom extends IClientOutgoingPacket {
+public class ExListPartyMatchingWaitingRoom extends ServerPacket {
     private static final int NUM_PER_PAGE = 64;
     private final int _size;
     private final List<L2PcInstance> _players = new LinkedList<>();
@@ -39,7 +38,7 @@ public class ExListPartyMatchingWaitingRoom extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_LIST_PARTY_MATCHING_WAITING_ROOM);
+        writeId(ServerPacketId.EX_LIST_PARTY_MATCHING_WAITING_ROOM);
 
         writeInt(_size);
         writeInt(_players.size());

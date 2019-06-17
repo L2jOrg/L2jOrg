@@ -5,12 +5,10 @@ import org.l2j.gameserver.model.holders.MovieHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author JIV
  */
-public final class EndScenePlayer extends IClientIncomingPacket {
+public final class EndScenePlayer extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(EndScenePlayer.class);
     private int _movieId;
 

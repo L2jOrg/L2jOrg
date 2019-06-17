@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class ShowTownMap extends IClientOutgoingPacket {
+public class ShowTownMap extends ServerPacket {
     private final String _texture;
     private final int _x;
     private final int _y;
@@ -18,7 +16,7 @@ public class ShowTownMap extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SHOW_TOWN_MAP);
+        writeId(ServerPacketId.SHOW_TOWN_MAP);
         writeString(_texture);
         writeInt(_x);
         writeInt(_y);

@@ -3,12 +3,10 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.MovieHolder;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author St3eT
  */
-public final class RequestExEscapeScene extends IClientIncomingPacket {
+public final class RequestExEscapeScene extends ClientPacket {
     @Override
     public void readImpl() {
     }

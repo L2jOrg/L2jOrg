@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author chris_00
  */
-public class ExMPCCPartyInfoUpdate extends IClientOutgoingPacket {
+public class ExMPCCPartyInfoUpdate extends ServerPacket {
     private final int _mode;
     private final int _LeaderOID;
     private final int _memberCount;
@@ -28,7 +26,7 @@ public class ExMPCCPartyInfoUpdate extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_MPCCPARTY_INFO_UPDATE);
+        writeId(ServerPacketId.EX_MPCCPARTY_INFO_UPDATE);
 
         writeString(_name);
         writeInt(_LeaderOID);

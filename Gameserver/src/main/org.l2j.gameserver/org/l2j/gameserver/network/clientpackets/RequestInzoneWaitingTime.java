@@ -3,12 +3,10 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ExInzoneWaiting;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author UnAfraid
  */
-public class RequestInzoneWaitingTime extends IClientIncomingPacket {
+public class RequestInzoneWaitingTime extends ClientPacket {
     @Override
     public void readImpl() {
 

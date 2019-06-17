@@ -13,14 +13,12 @@ import org.l2j.gameserver.network.serverpackets.ExAcquireSkillInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * Request Acquire Skill Info client packet implementation.
  *
  * @author Zoey76
  */
-public final class RequestAcquireSkillInfo extends IClientIncomingPacket {
+public final class RequestAcquireSkillInfo extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestAcquireSkillInfo.class);
     private int _id;
     private int _level;

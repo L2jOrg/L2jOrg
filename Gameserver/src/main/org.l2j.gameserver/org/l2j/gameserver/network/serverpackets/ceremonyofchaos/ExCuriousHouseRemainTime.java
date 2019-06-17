@@ -1,15 +1,13 @@
 package org.l2j.gameserver.network.serverpackets.ceremonyofchaos;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author Sdw
  */
-public class ExCuriousHouseRemainTime extends IClientOutgoingPacket {
+public class ExCuriousHouseRemainTime extends ServerPacket {
     private final int _time;
 
     public ExCuriousHouseRemainTime(int time) {
@@ -18,7 +16,7 @@ public class ExCuriousHouseRemainTime extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_CURIOUS_HOUSE_REMAIN_TIME);
+        writeId(ServerPacketId.EX_CURIOUS_HOUSE_REMAIN_TIME);
         writeInt(_time);
     }
 

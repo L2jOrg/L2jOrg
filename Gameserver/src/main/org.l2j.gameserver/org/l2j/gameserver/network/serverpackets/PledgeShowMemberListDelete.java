@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class PledgeShowMemberListDelete extends IClientOutgoingPacket {
+public class PledgeShowMemberListDelete extends ServerPacket {
     private final String _player;
 
     public PledgeShowMemberListDelete(String playerName) {
@@ -14,7 +12,7 @@ public class PledgeShowMemberListDelete extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_DELETE);
+        writeId(ServerPacketId.PLEDGE_SHOW_MEMBER_LIST_DELETE);
 
         writeString(_player);
     }

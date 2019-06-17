@@ -2,15 +2,14 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Map;
 
 /**
  * * @author Gnacik
  */
-public class ShopPreviewInfo extends IClientOutgoingPacket {
+public class ShopPreviewInfo extends ServerPacket {
     private final Map<Integer, Integer> _itemlist;
 
     public ShopPreviewInfo(Map<Integer, Integer> itemlist) {
@@ -19,7 +18,7 @@ public class ShopPreviewInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SHOP_PREVIEW_INFO);
+        writeId(ServerPacketId.SHOP_PREVIEW_INFO);
 
         writeInt(Inventory.PAPERDOLL_TOTALSLOTS);
         // Slots

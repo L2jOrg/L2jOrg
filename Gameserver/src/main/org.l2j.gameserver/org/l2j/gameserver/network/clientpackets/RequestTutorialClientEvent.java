@@ -3,9 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.quest.QuestState;
 
-import java.nio.ByteBuffer;
-
-public class RequestTutorialClientEvent extends IClientIncomingPacket {
+public class RequestTutorialClientEvent extends ClientPacket {
     int _eventId = 0;
 
     @Override

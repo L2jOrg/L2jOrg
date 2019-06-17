@@ -9,12 +9,10 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExReplySentPost;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Migi, DS
  */
-public final class RequestSentPost extends IClientIncomingPacket {
+public final class RequestSentPost extends ClientPacket {
     private int _msgId;
 
     @Override

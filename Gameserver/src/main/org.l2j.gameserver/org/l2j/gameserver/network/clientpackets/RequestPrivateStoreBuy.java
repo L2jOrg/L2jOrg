@@ -17,7 +17,6 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -27,7 +26,7 @@ import java.util.Set;
  *
  * @version $Revision: 1.2.2.1.2.5 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestPrivateStoreBuy extends IClientIncomingPacket {
+public final class RequestPrivateStoreBuy extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestPrivateStoreBuy.class);
     private static final int BATCH_LENGTH = 20; // length of the one item
 

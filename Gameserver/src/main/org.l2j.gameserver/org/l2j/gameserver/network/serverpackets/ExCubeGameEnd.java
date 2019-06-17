@@ -1,16 +1,14 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * *
  *
  * @author mrTJO
  */
-public class ExCubeGameEnd extends IClientOutgoingPacket {
+public class ExCubeGameEnd extends ServerPacket {
     boolean _isRedTeamWin;
 
     /**
@@ -24,7 +22,7 @@ public class ExCubeGameEnd extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_BLOCK_UP_SET_STATE);
+        writeId(ServerPacketId.EX_BLOCK_UP_SET_STATE);
 
         writeInt(0x01);
 

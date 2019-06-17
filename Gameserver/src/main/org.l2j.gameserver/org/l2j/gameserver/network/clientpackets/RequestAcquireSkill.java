@@ -27,7 +27,6 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 /**
@@ -35,7 +34,7 @@ import java.util.List;
  *
  * @author Zoey76
  */
-public final class RequestAcquireSkill extends IClientIncomingPacket {
+public final class RequestAcquireSkill extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestAcquireSkill.class);
     private static final String[] REVELATION_VAR_NAMES =

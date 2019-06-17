@@ -21,13 +21,12 @@ import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.friend.FriendRemove;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
@@ -36,7 +35,7 @@ import java.sql.PreparedStatement;
  *
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestFriendDel extends IClientIncomingPacket {
+public final class RequestFriendDel extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestFriendDel.class);
 

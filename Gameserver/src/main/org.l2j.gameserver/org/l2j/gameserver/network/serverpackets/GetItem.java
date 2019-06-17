@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public final class GetItem extends IClientOutgoingPacket {
+public final class GetItem extends ServerPacket {
     private final L2ItemInstance _item;
     private final int _playerId;
 
@@ -17,7 +15,7 @@ public final class GetItem extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.GET_ITEM);
+        writeId(ServerPacketId.GET_ITEM);
 
         writeInt(_playerId);
         writeInt(_item.getObjectId());

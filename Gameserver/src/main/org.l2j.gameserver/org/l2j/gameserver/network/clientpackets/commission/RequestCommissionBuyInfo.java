@@ -4,16 +4,14 @@ import org.l2j.gameserver.instancemanager.CommissionManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.commission.CommissionItem;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.commission.ExCloseCommission;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionBuyInfo;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author NosBit
  */
-public class RequestCommissionBuyInfo extends IClientIncomingPacket {
+public class RequestCommissionBuyInfo extends ClientPacket {
     private long _commissionId;
 
     @Override

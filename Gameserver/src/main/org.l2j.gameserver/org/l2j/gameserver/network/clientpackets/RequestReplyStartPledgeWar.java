@@ -7,14 +7,12 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestReplyStartPledgeWar extends IClientIncomingPacket {
+public final class RequestReplyStartPledgeWar extends ClientPacket {
     private int _answer;
 
     @Override

@@ -3,16 +3,15 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
  * @author Sdw
  */
-public class ExListMpccWaiting extends IClientOutgoingPacket {
+public class ExListMpccWaiting extends ServerPacket {
     private static final int NUM_PER_PAGE = 64;
     private final int _size;
     private final List<MatchingRoom> _rooms = new LinkedList<>();
@@ -33,7 +32,7 @@ public class ExListMpccWaiting extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_LIST_MPCC_WAITING);
+        writeId(ServerPacketId.EX_LIST_MPCC_WAITING);
 
         writeInt(_size);
         writeInt(_rooms.size());

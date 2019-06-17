@@ -11,14 +11,13 @@ import org.l2j.gameserver.util.Broadcast;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.util.Calendar;
 import java.util.Date;
 
 /**
  * @author UnAfraid
  */
-public class RequestSetCastleSiegeTime extends IClientIncomingPacket {
+public class RequestSetCastleSiegeTime extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestSetCastleSiegeTime.class);
     private int _castleId;
     private long _time;

@@ -4,17 +4,14 @@ import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.L2Seed;
 import org.l2j.gameserver.model.SeedProduction;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.List;
-
-import static java.util.Objects.nonNull;
 
 /**
  * @author l3x
  */
-public class ExShowSeedInfo extends IClientOutgoingPacket {
+public class ExShowSeedInfo extends ServerPacket {
     private final List<SeedProduction> _seeds;
     private final int _manorId;
     private final boolean _hideButtons;
@@ -29,7 +26,7 @@ public class ExShowSeedInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_SEED_INFO);
+        writeId(ServerPacketId.EX_SHOW_SEED_INFO);
 
         writeByte((byte) (_hideButtons ? 0x01 : 0x00)); // Hide "Seed Purchase" button
         writeInt(_manorId); // Manor ID

@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class LoginFail extends IClientOutgoingPacket {
+public class LoginFail extends ServerPacket {
     public static final int NO_TEXT = 0;
     public static final int SYSTEM_ERROR_LOGIN_LATER = 1;
     public static final int PASSWORD_DOES_NOT_MATCH_THIS_ACCOUNT = 2;
@@ -35,7 +33,7 @@ public class LoginFail extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.LOGIN_FAIL);
+        writeId(ServerPacketId.LOGIN_FAIL);
 
         writeInt(_success);
         writeInt(_reason);

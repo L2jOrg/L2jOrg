@@ -8,12 +8,10 @@ import org.l2j.gameserver.network.serverpackets.HennaItemRemoveInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Zoey76
  */
-public final class RequestHennaItemRemoveInfo extends IClientIncomingPacket {
+public final class RequestHennaItemRemoveInfo extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestHennaItemRemoveInfo.class);
     private int _symbolId;
 

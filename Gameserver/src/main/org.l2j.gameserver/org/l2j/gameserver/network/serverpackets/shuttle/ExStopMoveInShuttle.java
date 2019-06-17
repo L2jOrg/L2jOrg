@@ -3,15 +3,13 @@ package org.l2j.gameserver.network.serverpackets.shuttle;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author UnAfraid
  */
-public class ExStopMoveInShuttle extends IClientOutgoingPacket {
+public class ExStopMoveInShuttle extends ServerPacket {
     private final int _charObjId;
     private final int _boatId;
     private final Location _pos;
@@ -26,7 +24,7 @@ public class ExStopMoveInShuttle extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_STOP_MOVE_IN_SHUTTLE);
+        writeId(ServerPacketId.EX_STOP_MOVE_IN_SHUTTLE);
 
         writeInt(_charObjId);
         writeInt(_boatId);

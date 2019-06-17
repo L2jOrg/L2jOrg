@@ -368,7 +368,7 @@ public abstract class AbstractOlympiadGame {
 
     public abstract void broadcastOlympiadInfo(OlympiadStadium _stadium);
 
-    protected abstract void broadcastPacket(IClientOutgoingPacket packet);
+    protected abstract void broadcastPacket(ServerPacket packet);
 
     protected abstract boolean needBuffers();
 

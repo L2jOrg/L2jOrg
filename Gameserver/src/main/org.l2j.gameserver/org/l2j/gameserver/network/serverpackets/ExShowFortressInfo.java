@@ -5,16 +5,15 @@ import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
 /**
  * @author KenM
  */
 @StaticPacket
-public class ExShowFortressInfo extends IClientOutgoingPacket {
+public class ExShowFortressInfo extends ServerPacket {
     public static final ExShowFortressInfo STATIC_PACKET = new ExShowFortressInfo();
 
     private ExShowFortressInfo() {
@@ -23,7 +22,7 @@ public class ExShowFortressInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_FORTRESS_INFO);
+        writeId(ServerPacketId.EX_SHOW_FORTRESS_INFO);
 
         final Collection<Fort> forts = FortManager.getInstance().getForts();
         writeInt(forts.size());

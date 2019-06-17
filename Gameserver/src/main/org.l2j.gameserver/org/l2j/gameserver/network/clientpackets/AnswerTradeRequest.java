@@ -7,14 +7,12 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.TradeDone;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.5.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class AnswerTradeRequest extends IClientIncomingPacket {
+public final class AnswerTradeRequest extends ClientPacket {
     private int _response;
 
     @Override

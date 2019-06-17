@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class ExMoveToLocationAirShip extends IClientOutgoingPacket {
+public class ExMoveToLocationAirShip extends ServerPacket {
     private final int _objId;
     private final int _tx;
     private final int _ty;
@@ -27,7 +25,7 @@ public class ExMoveToLocationAirShip extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_MOVE_TO_LOCATION_AIR_SHIP);
+        writeId(ServerPacketId.EX_MOVE_TO_LOCATION_AIR_SHIP);
 
         writeInt(_objId);
         writeInt(_tx);

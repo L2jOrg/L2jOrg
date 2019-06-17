@@ -3,15 +3,14 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.L2SkillLearn;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 /**
  * @author UnAfraid
  */
-public class ExAcquirableSkillListByClass extends IClientOutgoingPacket {
+public class ExAcquirableSkillListByClass extends ServerPacket {
     final List<L2SkillLearn> _learnable;
     final AcquireSkillType _type;
 
@@ -22,7 +21,7 @@ public class ExAcquirableSkillListByClass extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_ACQUIRABLE_SKILL_LIST_BY_CLASS);
+        writeId(ServerPacketId.EX_ACQUIRABLE_SKILL_LIST_BY_CLASS);
 
         writeShort((short) _type.getId());
         writeShort((short) _learnable.size());

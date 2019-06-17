@@ -6,12 +6,10 @@ import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExReplyPostItemList;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Migi, DS
  */
-public final class RequestPostItemList extends IClientIncomingPacket {
+public final class RequestPostItemList extends ClientPacket {
     @Override
     public void readImpl() {
 

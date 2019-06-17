@@ -2,9 +2,8 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +12,7 @@ import java.util.List;
  *
  * @author UnAfraid
  */
-public class ExShowTerritory extends IClientOutgoingPacket {
+public class ExShowTerritory extends ServerPacket {
     private final int _minZ;
     private final int _maxZ;
     private final List<ILocational> _vertices = new ArrayList<>();
@@ -29,7 +28,7 @@ public class ExShowTerritory extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_TERRITORY);
+        writeId(ServerPacketId.EX_SHOW_TERRITORY);
 
         writeInt(_vertices.size());
         writeInt(_minZ);

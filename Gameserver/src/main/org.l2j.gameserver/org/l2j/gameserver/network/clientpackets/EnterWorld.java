@@ -26,12 +26,9 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
 import org.l2j.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
 import org.l2j.gameserver.network.serverpackets.friend.L2FriendList;
-import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.nio.ByteBuffer;
 
 /**
  * Enter World Packet Handler
@@ -42,7 +39,7 @@ import java.nio.ByteBuffer;
  * packet format rev87 bddddbdcccccccccccccccccccc
  * <p>
  */
-public class EnterWorld extends IClientIncomingPacket {
+public class EnterWorld extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(EnterWorld.class);
     private final int[][] tracert = new int[5][4];
 

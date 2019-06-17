@@ -3,12 +3,10 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author ShanSoft Packets Structure: chddd
  */
-public final class RequestBookMarkSlotInfo extends IClientIncomingPacket {
+public final class RequestBookMarkSlotInfo extends ClientPacket {
 
     @Override
     public void readImpl() {

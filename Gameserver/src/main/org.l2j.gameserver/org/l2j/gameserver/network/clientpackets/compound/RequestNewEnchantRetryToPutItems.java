@@ -6,16 +6,14 @@ import org.l2j.gameserver.model.actor.request.CompoundRequest;
 import org.l2j.gameserver.model.items.combination.CombinationItem;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.ExEnchantRetryToPutItemFail;
 import org.l2j.gameserver.network.serverpackets.ExEnchantRetryToPutItemOk;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author Sdw
  */
-public class RequestNewEnchantRetryToPutItems extends IClientIncomingPacket {
+public class RequestNewEnchantRetryToPutItems extends ClientPacket {
     private int _firstItemObjectId;
     private int _secondItemObjectId;
 

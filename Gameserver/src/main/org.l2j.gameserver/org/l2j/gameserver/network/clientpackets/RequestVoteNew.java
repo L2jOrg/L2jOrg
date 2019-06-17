@@ -7,9 +7,7 @@ import org.l2j.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 
-import java.nio.ByteBuffer;
-
-public final class RequestVoteNew extends IClientIncomingPacket {
+public final class RequestVoteNew extends ClientPacket {
     private int _targetId;
 
     @Override

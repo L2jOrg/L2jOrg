@@ -1,13 +1,11 @@
 package org.l2j.gameserver.network.clientpackets.raidbossinfo;
 
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 
 /**
  * @author Mobius
  */
-public class RequestRaidServerInfo extends IClientIncomingPacket {
+public class RequestRaidServerInfo extends ClientPacket {
     @Override
     public void readImpl() {
     }

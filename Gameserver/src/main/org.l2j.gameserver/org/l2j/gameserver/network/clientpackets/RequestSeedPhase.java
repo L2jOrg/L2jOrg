@@ -3,12 +3,10 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ExShowSeedMapInfo;
 
-import java.nio.ByteBuffer;
-
 /**
  * RequestSeedPhase client packet
  */
-public class RequestSeedPhase extends IClientIncomingPacket {
+public class RequestSeedPhase extends ClientPacket {
     @Override
     public void readImpl() {
 

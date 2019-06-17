@@ -1,15 +1,13 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Kerberos
  */
 @Deprecated
-public class GMHide extends IClientOutgoingPacket {
+public class GMHide extends ServerPacket {
     private final int _mode;
 
     /**
@@ -21,7 +19,7 @@ public class GMHide extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.GM_HIDE);
+        writeId(ServerPacketId.GM_HIDE);
 
         writeInt(_mode);
     }

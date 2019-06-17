@@ -11,9 +11,7 @@ import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
-import java.nio.ByteBuffer;
-
-public final class AttackRequest extends IClientIncomingPacket {
+public final class AttackRequest extends ClientPacket {
     // cddddc
     private int _objectId;
     @SuppressWarnings("unused")

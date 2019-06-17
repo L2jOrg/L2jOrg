@@ -3,12 +3,10 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author JIV
  */
-public class AnswerPartyLootModification extends IClientIncomingPacket {
+public class AnswerPartyLootModification extends ClientPacket {
     public int _answer;
 
     @Override

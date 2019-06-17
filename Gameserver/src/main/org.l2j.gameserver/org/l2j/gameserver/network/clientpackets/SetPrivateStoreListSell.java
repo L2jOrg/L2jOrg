@@ -15,14 +15,12 @@ import org.l2j.gameserver.network.serverpackets.PrivateStoreMsgSell;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.2.2.1.2.5 $ $Date: 2005/03/27 15:29:30 $
  */
-public class SetPrivateStoreListSell extends IClientIncomingPacket {
+public class SetPrivateStoreListSell extends ClientPacket {
     private static final int BATCH_LENGTH = 20; // length of the one item
 
     private boolean _packageSale;

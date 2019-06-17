@@ -3,11 +3,9 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class MoveToPawn extends IClientOutgoingPacket {
+public class MoveToPawn extends ServerPacket {
     private final int _charObjId;
     private final int _targetId;
     private final int _distance;
@@ -32,7 +30,7 @@ public class MoveToPawn extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.MOVE_TO_PAWN);
+        writeId(ServerPacketId.MOVE_TO_PAWN);
 
         writeInt(_charObjId);
         writeInt(_targetId);

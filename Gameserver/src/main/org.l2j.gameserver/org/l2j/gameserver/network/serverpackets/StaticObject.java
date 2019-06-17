@@ -3,14 +3,12 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author KenM
  */
-public class StaticObject extends IClientOutgoingPacket {
+public class StaticObject extends ServerPacket {
     private final int _staticObjectId;
     private final int _objectId;
     private final int _type;
@@ -53,7 +51,7 @@ public class StaticObject extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.STATIC_OBJECT);
+        writeId(ServerPacketId.STATIC_OBJECT);
 
         writeInt(_staticObjectId);
         writeInt(_objectId);

@@ -4,14 +4,12 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.TargetUnselected;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestTargetCanceld extends IClientIncomingPacket {
+public final class RequestTargetCanceld extends ClientPacket {
     private int _unselect;
 
     @Override

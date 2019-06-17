@@ -19,7 +19,7 @@ package org.l2j.gameserver.model;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -34,7 +34,7 @@ public class L2Request {
     protected L2PcInstance _partner;
     protected boolean _isRequestor;
     protected boolean _isAnswerer;
-    protected IClientIncomingPacket _requestPacket;
+    protected ClientPacket _requestPacket;
 
     public L2Request(L2PcInstance player) {
         _player = player;
@@ -68,7 +68,7 @@ public class L2Request {
      *
      * @return
      */
-    public IClientIncomingPacket getRequestPacket() {
+    public ClientPacket getRequestPacket() {
         return _requestPacket;
     }
 
@@ -77,7 +77,7 @@ public class L2Request {
      *
      * @param packet
      */
-    private synchronized void setRequestPacket(IClientIncomingPacket packet) {
+    private synchronized void setRequestPacket(ClientPacket packet) {
         _requestPacket = packet;
     }
 
@@ -88,7 +88,7 @@ public class L2Request {
      * @param packet
      * @return
      */
-    public synchronized boolean setRequest(L2PcInstance partner, IClientIncomingPacket packet) {
+    public synchronized boolean setRequest(L2PcInstance partner, ClientPacket packet) {
         if (partner == null) {
             _player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
             return false;

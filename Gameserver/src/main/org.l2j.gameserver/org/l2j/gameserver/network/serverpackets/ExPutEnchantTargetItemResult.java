@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author nBd
  */
-public class ExPutEnchantTargetItemResult extends IClientOutgoingPacket {
+public class ExPutEnchantTargetItemResult extends ServerPacket {
     private final int _result;
 
     public ExPutEnchantTargetItemResult(int result) {
@@ -17,7 +15,7 @@ public class ExPutEnchantTargetItemResult extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_PUT_ENCHANT_TARGET_ITEM_RESULT);
+        writeId(ServerPacketId.EX_PUT_ENCHANT_TARGET_ITEM_RESULT);
 
         writeInt(_result);
     }

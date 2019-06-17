@@ -2,13 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.L2RecipeList;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-import static java.util.Objects.nonNull;
-
-public class RecipeBookItemList extends IClientOutgoingPacket {
+public class RecipeBookItemList extends ServerPacket {
     private final boolean _isDwarvenCraft;
     private final int _maxMp;
     private L2RecipeList[] _recipes;
@@ -24,7 +20,7 @@ public class RecipeBookItemList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.RECIPE_BOOK_ITEM_LIST);
+        writeId(ServerPacketId.RECIPE_BOOK_ITEM_LIST);
 
         writeInt(_isDwarvenCraft ? 0x00 : 0x01); // 0 = Dwarven - 1 = Common
         writeInt(_maxMp);

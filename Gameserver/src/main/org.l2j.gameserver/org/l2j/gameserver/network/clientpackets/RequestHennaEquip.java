@@ -13,12 +13,10 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Zoey76
  */
-public final class RequestHennaEquip extends IClientIncomingPacket {
+public final class RequestHennaEquip extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestHennaEquip.class);
     private int _symbolId;
 

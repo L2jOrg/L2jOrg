@@ -2,10 +2,8 @@ package org.l2j.gameserver.network.serverpackets;
 
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.SystemMessageId;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author Forsaiken, UnAfraid
@@ -62,7 +60,7 @@ public final class SystemMessage extends AbstractMessagePacket<SystemMessage> {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SYSTEM_MESSAGE);
+        writeId(ServerPacketId.SYSTEM_MESSAGE);
 
         writeShort((short) getId());
         writeMe();

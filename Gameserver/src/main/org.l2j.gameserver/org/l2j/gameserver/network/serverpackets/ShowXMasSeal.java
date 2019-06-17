@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author devScarlet, mrTJO
  */
-public class ShowXMasSeal extends IClientOutgoingPacket {
+public class ShowXMasSeal extends ServerPacket {
     private final int _item;
 
     public ShowXMasSeal(int item) {
@@ -17,7 +15,7 @@ public class ShowXMasSeal extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SHOW_XMAS_SEAL);
+        writeId(ServerPacketId.SHOW_XMAS_SEAL);
 
         writeInt(_item);
     }

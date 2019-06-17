@@ -3,14 +3,12 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author devScarlet, mrTJO
  */
-public final class ServerObjectInfo extends IClientOutgoingPacket {
+public final class ServerObjectInfo extends ServerPacket {
     private final L2Npc _activeChar;
     private final int _x;
     private final int _y;
@@ -37,7 +35,7 @@ public final class ServerObjectInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SERVER_OBJECT_INFO);
+        writeId(ServerPacketId.SERVER_OBJECT_INFO);
 
         writeInt(_activeChar.getObjectId());
         writeInt(_idTemplate + 1000000);

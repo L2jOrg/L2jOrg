@@ -20,14 +20,13 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * * @author Gnacik
  */
-public final class RequestPreviewItem extends IClientIncomingPacket {
+public final class RequestPreviewItem extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestPreviewItem.class);
     @SuppressWarnings("unused")
     private int _unk;

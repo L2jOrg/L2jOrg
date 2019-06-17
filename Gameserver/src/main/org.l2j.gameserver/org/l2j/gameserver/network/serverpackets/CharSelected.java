@@ -3,9 +3,9 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-public class CharSelected extends IClientOutgoingPacket {
+public class CharSelected extends ServerPacket {
     private final L2PcInstance _activeChar;
     private final int _sessionId;
 
@@ -16,7 +16,7 @@ public class CharSelected extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.CHARACTER_SELECTED);
+        writeId(ServerPacketId.CHARACTER_SELECTED);
 
         writeString(_activeChar.getName());
         writeInt(_activeChar.getObjectId());

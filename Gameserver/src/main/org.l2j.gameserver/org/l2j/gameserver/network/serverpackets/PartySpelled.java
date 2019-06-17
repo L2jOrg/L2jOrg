@@ -4,12 +4,12 @@ import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PartySpelled extends IClientOutgoingPacket {
+public class PartySpelled extends ServerPacket {
     private final List<BuffInfo> _effects = new ArrayList<>();
     private final List<Skill> _effects2 = new ArrayList<>();
     private final L2Character _activeChar;
@@ -28,7 +28,7 @@ public class PartySpelled extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PARTY_SPELLED);
+        writeId(ServerPacketId.PARTY_SPELLED);
 
         writeInt(_activeChar.isServitor() ? 2 : _activeChar.isPet() ? 1 : 0);
         writeInt(_activeChar.getObjectId());

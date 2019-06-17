@@ -5,18 +5,19 @@ import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
-
-import static java.util.Objects.nonNull;
 
 /**
  * @author Migi, DS
  */
 public class ExReplyReceivedPost extends AbstractItemPacket {
+    private static final Logger LOGGER = LoggerFactory.getLogger(ExReplyReceivedPost.class);
+
     private final Message _msg;
     private Collection<L2ItemInstance> _items = null;
 
@@ -34,7 +35,7 @@ public class ExReplyReceivedPost extends AbstractItemPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_REPLY_RECEIVED_POST);
+        writeId(ServerPacketId.EX_REPLY_RECEIVED_POST);
 
         writeInt(_msg.getMailType().ordinal()); // GOD
         if (_msg.getMailType() == MailType.COMMISSION_ITEM_RETURNED) {

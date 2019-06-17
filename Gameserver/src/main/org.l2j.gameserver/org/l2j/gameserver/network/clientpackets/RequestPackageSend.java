@@ -5,7 +5,6 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.itemcontainer.PcFreight;
 import org.l2j.gameserver.model.items.CommonItem;
@@ -17,13 +16,11 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author -Wooden-
  * @author UnAfraid Thanks mrTJO
  */
-public class RequestPackageSend extends IClientIncomingPacket {
+public class RequestPackageSend extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestPackageSend.class);
     private static final int BATCH_LENGTH = 12; // length of the one item
 

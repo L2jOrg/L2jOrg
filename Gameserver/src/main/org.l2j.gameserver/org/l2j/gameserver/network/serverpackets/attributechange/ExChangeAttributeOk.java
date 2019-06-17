@@ -2,24 +2,22 @@ package org.l2j.gameserver.network.serverpackets.attributechange;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author Mobius
  */
 @StaticPacket
-public class ExChangeAttributeOk extends IClientOutgoingPacket {
-    public static final IClientOutgoingPacket STATIC = new ExChangeAttributeOk();
+public class ExChangeAttributeOk extends ServerPacket {
+    public static final ServerPacket STATIC = new ExChangeAttributeOk();
 
     private ExChangeAttributeOk() {
     }
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_CHANGE_ATTRIBUTE_OK);
+        writeId(ServerPacketId.EX_CHANGE_ATTRIBUTE_OK);
     }
 
 }

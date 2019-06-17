@@ -5,11 +5,9 @@ import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class GMViewCharacterInfo extends IClientOutgoingPacket {
+public class GMViewCharacterInfo extends ServerPacket {
     private final L2PcInstance _activeChar;
     private final int _runSpd;
     private final int _walkSpd;
@@ -32,7 +30,7 @@ public class GMViewCharacterInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.GM_VIEW_CHARACTER_INFO);
+        writeId(ServerPacketId.GM_VIEW_CHARACTER_INFO);
 
         writeInt(_activeChar.getX());
         writeInt(_activeChar.getY());

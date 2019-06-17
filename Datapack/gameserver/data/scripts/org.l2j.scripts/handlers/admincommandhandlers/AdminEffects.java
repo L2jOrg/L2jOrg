@@ -707,7 +707,7 @@ public class AdminEffects implements IAdminCommandHandler
 	 */
 	private void adminAtmosphere(String type, String state, int duration, L2PcInstance activeChar)
 	{
-		IClientOutgoingPacket packet = null;
+		ServerPacket packet = null;
 		
 		if (type.equals("sky"))
 		{

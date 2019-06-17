@@ -5,7 +5,7 @@ package org.l2j.gameserver.network.clientpackets;
  *
  * @author -Wooden-
  */
-public class MoveWithDelta extends IClientIncomingPacket {
+public class MoveWithDelta extends ClientPacket {
     @SuppressWarnings("unused")
     private int _dx;
     @SuppressWarnings("unused")

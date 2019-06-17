@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class CharCreateFail extends IClientOutgoingPacket {
+public class CharCreateFail extends ServerPacket {
     // TODO: Enum
     public static final int REASON_CREATION_FAILED = 0x00; // "Your character creation has failed."
     public static final int REASON_TOO_MANY_CHARACTERS = 0x01; // "You cannot create another character. Please delete the existing character and try again." Removes all settings that were selected (race, class, etc).
@@ -24,7 +22,7 @@ public class CharCreateFail extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.CHARACTER_CREATE_FAIL);
+        writeId(ServerPacketId.CHARACTER_CREATE_FAIL);
 
         writeInt(_error);
     }

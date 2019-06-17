@@ -4,12 +4,12 @@ import org.l2j.gameserver.data.xml.impl.PrimeShopData;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
 import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import static java.util.Objects.nonNull;
 
-public class ReceiveVipProductList extends IClientOutgoingPacket {
+public class ReceiveVipProductList extends ServerPacket {
 
     @Override
     protected void writeImpl(L2GameClient client) {
@@ -17,7 +17,7 @@ public class ReceiveVipProductList extends IClientOutgoingPacket {
         var products = PrimeShopData.getInstance().getPrimeItems();
         var gift = PrimeShopData.getInstance().getVipGiftOfTier(player.getVipTier());
 
-        writeId(OutgoingPackets.RECEIVE_VIP_PRODUCT_LIST);
+        writeId(ServerPacketId.RECEIVE_VIP_PRODUCT_LIST);
         writeLong(player.getAdena());
         writeLong(player.getRustyCoin()); // Rusty Coin Amount
         writeLong(player.getSilverCoin()); // Silver Coin Amount

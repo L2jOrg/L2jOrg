@@ -2,10 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.NpcStringId;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +13,7 @@ import java.util.List;
  *
  * @author Kerberos
  */
-public class ExShowScreenMessage extends IClientOutgoingPacket {
+public class ExShowScreenMessage extends ServerPacket {
     // Positions
     public static final byte TOP_LEFT = 0x01;
     public static final byte TOP_CENTER = 0x02;
@@ -233,7 +232,7 @@ public class ExShowScreenMessage extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_SCREEN_MESSAGE);
+        writeId(ServerPacketId.EX_SHOW_SCREEN_MESSAGE);
 
         writeInt(_type);
         writeInt(_sysMessageId);

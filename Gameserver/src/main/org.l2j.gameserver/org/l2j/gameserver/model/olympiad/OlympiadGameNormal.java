@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExOlympiadMatchResult;
 import org.l2j.gameserver.network.serverpackets.ExOlympiadUserInfo;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import java.sql.Connection;
@@ -23,7 +23,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import java.util.logging.Level;
 
 /**
  * @author GodKratos, Pere, DS
@@ -130,7 +129,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
     }
 
     @Override
-    protected final void broadcastPacket(IClientOutgoingPacket packet) {
+    protected final void broadcastPacket(ServerPacket packet) {
         if (_playerOne.updatePlayer()) {
             _playerOne.getPlayer().sendPacket(packet);
         }

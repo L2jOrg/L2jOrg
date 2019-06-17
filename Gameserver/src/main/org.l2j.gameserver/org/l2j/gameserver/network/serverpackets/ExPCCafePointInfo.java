@@ -1,13 +1,13 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author KenM
  * @author UnAfraid
  */
-public class ExPCCafePointInfo extends IClientOutgoingPacket {
+public class ExPCCafePointInfo extends ServerPacket {
     private final int _points;
     private final int _mAddPoint;
     private final int _mPeriodType;
@@ -35,7 +35,7 @@ public class ExPCCafePointInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_PCCAFE_POINT_INFO);
+        writeId(ServerPacketId.EX_PCCAFE_POINT_INFO);
 
         writeInt(_points); // num points
         writeInt(_mAddPoint); // points inc display

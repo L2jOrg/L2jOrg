@@ -21,14 +21,12 @@ import org.l2j.gameserver.model.residences.ResidenceFunctionType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.7.2.3.2.6 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestRestartPoint extends IClientIncomingPacket {
+public final class RequestRestartPoint extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestRestartPoint.class);
     protected int _requestedPointType;
     protected boolean _continuation;

@@ -2,12 +2,10 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.network.serverpackets.ExShowFortressInfo;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author KenM
  */
-public class RequestAllFortressInfo extends IClientIncomingPacket {
+public class RequestAllFortressInfo extends ClientPacket {
     @Override
     public void readImpl() {
     }

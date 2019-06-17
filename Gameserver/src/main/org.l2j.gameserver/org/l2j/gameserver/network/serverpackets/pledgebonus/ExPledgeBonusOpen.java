@@ -7,17 +7,15 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author UnAfraid
  */
-public class ExPledgeBonusOpen extends IClientOutgoingPacket {
+public class ExPledgeBonusOpen extends ServerPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(ExPledgeBonusOpen.class);
 
     private final L2PcInstance _player;
@@ -53,7 +51,7 @@ public class ExPledgeBonusOpen extends IClientOutgoingPacket {
         }
 
         // General OP Code
-        writeId(OutgoingPackets.EX_PLEDGE_BONUS_OPEN);
+        writeId(ServerPacketId.EX_PLEDGE_BONUS_OPEN);
 
         // Members online bonus
         writeInt(highestMembersOnlineBonus.getRequiredAmount());

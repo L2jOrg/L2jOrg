@@ -2,9 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * TutorialShowHtml server packet implementation.
@@ -30,7 +28,7 @@ public final class TutorialShowHtml extends AbstractHtmlPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.TUTORIAL_SHOW_HTML);
+        writeId(ServerPacketId.TUTORIAL_SHOW_HTML);
 
         writeInt(_type);
         writeString(getHtml());

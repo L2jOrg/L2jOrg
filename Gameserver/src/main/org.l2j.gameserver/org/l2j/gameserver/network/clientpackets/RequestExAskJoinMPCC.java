@@ -7,15 +7,13 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExAskJoinMPCC;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format: (ch) S<br>
  * D0 0D 00 5A 00 77 00 65 00 72 00 67 00 00 00
  *
  * @author chris_00
  */
-public final class RequestExAskJoinMPCC extends IClientIncomingPacket {
+public final class RequestExAskJoinMPCC extends ClientPacket {
     private String _name;
 
     @Override

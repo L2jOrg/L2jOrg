@@ -4,14 +4,11 @@ import org.l2j.gameserver.model.L2ManufactureItem;
 import org.l2j.gameserver.model.L2RecipeList;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Iterator;
 
-import static java.util.Objects.nonNull;
-
-public class RecipeShopManageList extends IClientOutgoingPacket {
+public class RecipeShopManageList extends ServerPacket {
     private final L2PcInstance _seller;
     private final boolean _isDwarven;
     private L2RecipeList[] _recipes;
@@ -40,7 +37,7 @@ public class RecipeShopManageList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.RECIPE_SHOP_MANAGE_LIST);
+        writeId(ServerPacketId.RECIPE_SHOP_MANAGE_LIST);
 
         writeInt(_seller.getObjectId());
         writeInt((int) _seller.getAdena());

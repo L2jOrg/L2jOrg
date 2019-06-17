@@ -9,9 +9,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 
-import java.nio.ByteBuffer;
-
-public final class RequestStopPledgeWar extends IClientIncomingPacket {
+public final class RequestStopPledgeWar extends ClientPacket {
     private String _pledgeName;
 
     @Override

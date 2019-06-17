@@ -5,16 +5,15 @@ import org.l2j.gameserver.model.Elementals;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.HashSet;
 import java.util.Set;
 
 /**
  * @author Kerberos
  */
-public class ExChooseInventoryAttributeItem extends IClientOutgoingPacket {
+public class ExChooseInventoryAttributeItem extends ServerPacket {
     private final int _itemId;
     private final long _count;
     private final AttributeType _atribute;
@@ -40,7 +39,7 @@ public class ExChooseInventoryAttributeItem extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_CHOOSE_INVENTORY_ATTRIBUTE_ITEM);
+        writeId(ServerPacketId.EX_CHOOSE_INVENTORY_ATTRIBUTE_ITEM);
 
         writeInt(_itemId);
         writeLong(_count);

@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class FriendAddRequest extends IClientOutgoingPacket {
+public class FriendAddRequest extends ServerPacket {
     private final String _requestorName;
 
     /**
@@ -17,7 +15,7 @@ public class FriendAddRequest extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.FRIEND_ADD_REQUEST);
+        writeId(ServerPacketId.FRIEND_ADD_REQUEST);
 
         writeByte((byte) 0x01);
         writeString(_requestorName);

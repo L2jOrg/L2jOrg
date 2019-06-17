@@ -4,12 +4,10 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.AskJoinPledge;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Mobius
  */
-public class RequestClanAskJoinByName extends IClientIncomingPacket {
+public class RequestClanAskJoinByName extends ClientPacket {
     private String _playerName;
     private int _pledgeType;
 

@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class AutoAttackStop extends IClientOutgoingPacket {
+public class AutoAttackStop extends ServerPacket {
     private final int _targetObjId;
 
     /**
@@ -17,7 +15,7 @@ public class AutoAttackStop extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.AUTO_ATTACK_STOP);
+        writeId(ServerPacketId.AUTO_ATTACK_STOP);
 
         writeInt(_targetObjId);
     }

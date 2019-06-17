@@ -2,10 +2,9 @@ package org.l2j.gameserver.network.serverpackets.commission;
 
 import org.l2j.gameserver.model.commission.CommissionItem;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.AbstractItemPacket;
 
-import java.nio.ByteBuffer;
 import java.time.Instant;
 import java.util.Collections;
 import java.util.List;
@@ -42,7 +41,7 @@ public class ExResponseCommissionList extends AbstractItemPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_RESPONSE_COMMISSION_LIST);
+        writeId(ServerPacketId.EX_RESPONSE_COMMISSION_LIST);
 
         writeInt(_replyType.getClientId());
         switch (_replyType) {

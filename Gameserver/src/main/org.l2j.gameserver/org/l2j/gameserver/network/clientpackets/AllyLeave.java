@@ -5,9 +5,7 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
-
-public final class AllyLeave extends IClientIncomingPacket {
+public final class AllyLeave extends ClientPacket {
     @Override
     public void readImpl() {
 

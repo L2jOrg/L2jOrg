@@ -4,14 +4,12 @@ import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestWithDrawalParty extends IClientIncomingPacket {
+public final class RequestWithDrawalParty extends ClientPacket {
     @Override
     public void readImpl() {
 

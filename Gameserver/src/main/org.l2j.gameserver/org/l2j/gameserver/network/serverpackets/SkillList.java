@@ -2,14 +2,13 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public final class SkillList extends IClientOutgoingPacket {
+public final class SkillList extends ServerPacket {
     private final List<Skill> _skills = new ArrayList<>();
     private int _lastLearnedSkillId = 0;
 
@@ -23,7 +22,7 @@ public final class SkillList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SKILL_LIST);
+        writeId(ServerPacketId.SKILL_LIST);
         _skills.sort(Comparator.comparing(s -> SkillData.getInstance().getSkill(s.id, s.level, s.subLevel).isToggle() ? 1 : 0));
         writeInt(_skills.size());
         for (Skill temp : _skills) {

@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Luca Baldi
  */
-public class ExShowQuestMark extends IClientOutgoingPacket {
+public class ExShowQuestMark extends ServerPacket {
     private final int _questId;
     private final int _questState;
 
@@ -19,7 +17,7 @@ public class ExShowQuestMark extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_QUEST_MARK);
+        writeId(ServerPacketId.EX_SHOW_QUEST_MARK);
 
         writeInt(_questId);
         writeInt(_questState);

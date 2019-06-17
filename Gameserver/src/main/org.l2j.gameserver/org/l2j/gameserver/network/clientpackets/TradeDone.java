@@ -5,12 +5,10 @@ import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
-
 /**
  * This packet manages the trade response.
  */
-public final class TradeDone extends IClientIncomingPacket {
+public final class TradeDone extends ClientPacket {
     private int _response;
 
     @Override

@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.DeleteObject;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.util.Util;
 
 import java.util.Map;
@@ -225,7 +225,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 
     public abstract void sendInfo(L2PcInstance activeChar);
 
-    public void sendPacket(IClientOutgoingPacket... packets) {
+    public void sendPacket(ServerPacket... packets) {
     }
 
     public void sendPacket(SystemMessageId id) {

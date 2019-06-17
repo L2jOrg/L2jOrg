@@ -1,15 +1,13 @@
 package org.l2j.gameserver.network.clientpackets.commission;
 
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 
 /**
  * This Packet doesn't seem to be doing anything.
  *
  * @author NosBit
  */
-public class RequestCommissionCancel extends IClientIncomingPacket {
+public class RequestCommissionCancel extends ClientPacket {
     @Override
     public void readImpl() {
     }

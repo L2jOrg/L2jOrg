@@ -2,15 +2,13 @@ package org.l2j.gameserver.network.serverpackets.fishing;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author -Wooden-
  */
-public class ExFishingEnd extends IClientOutgoingPacket {
+public class ExFishingEnd extends ServerPacket {
     private final L2PcInstance _player;
     private final FishingEndReason _reason;
 
@@ -21,7 +19,7 @@ public class ExFishingEnd extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_FISHING_END);
+        writeId(ServerPacketId.EX_FISHING_END);
         writeInt(_player.getObjectId());
         writeByte((byte) _reason.getReason());
     }

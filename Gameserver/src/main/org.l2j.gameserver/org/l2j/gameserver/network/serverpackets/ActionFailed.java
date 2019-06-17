@@ -2,13 +2,12 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.skills.SkillCastingType;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.EnumMap;
 import java.util.Map;
 
-public final class ActionFailed extends IClientOutgoingPacket {
+public final class ActionFailed extends ServerPacket {
     public static final ActionFailed STATIC_PACKET = new ActionFailed();
     private static final Map<SkillCastingType, ActionFailed> STATIC_PACKET_BY_CASTING_TYPE = new EnumMap<>(SkillCastingType.class);
 
@@ -34,7 +33,7 @@ public final class ActionFailed extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.ACTION_FAIL);
+        writeId(ServerPacketId.ACTION_FAIL);
 
         writeInt(_castingType); // MagicSkillUse castingType
     }

@@ -6,12 +6,10 @@ import org.l2j.gameserver.model.itemauction.ItemAuction;
 import org.l2j.gameserver.model.itemauction.ItemAuctionInstance;
 import org.l2j.gameserver.network.serverpackets.ExItemAuctionInfoPacket;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Forsaiken
  */
-public final class RequestInfoItemAuction extends IClientIncomingPacket {
+public final class RequestInfoItemAuction extends ClientPacket {
     private int _instanceId;
 
     @Override

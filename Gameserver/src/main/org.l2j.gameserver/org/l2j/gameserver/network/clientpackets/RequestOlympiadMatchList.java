@@ -4,14 +4,12 @@ import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
-import java.nio.ByteBuffer;
-
 /**
  * format ch c: (id) 0xD0 h: (subid) 0x13
  *
  * @author -Wooden-
  */
-public final class RequestOlympiadMatchList extends IClientIncomingPacket {
+public final class RequestOlympiadMatchList extends ClientPacket {
     private static final String COMMAND = "arenalist";
 
     @Override

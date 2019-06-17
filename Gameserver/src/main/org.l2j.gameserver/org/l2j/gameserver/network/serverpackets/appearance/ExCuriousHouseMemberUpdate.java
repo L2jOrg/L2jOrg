@@ -3,15 +3,13 @@ package org.l2j.gameserver.network.serverpackets.appearance;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author Sdw
  */
-public class ExCuriousHouseMemberUpdate extends IClientOutgoingPacket {
+public class ExCuriousHouseMemberUpdate extends ServerPacket {
     public final int _objId;
     public final int _maxHp;
     public final int _maxCp;
@@ -36,7 +34,7 @@ public class ExCuriousHouseMemberUpdate extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_CURIOUS_HOUSE_MEMBER_UPDATE);
+        writeId(ServerPacketId.EX_CURIOUS_HOUSE_MEMBER_UPDATE);
 
         writeInt(_objId);
         writeInt(_maxHp);

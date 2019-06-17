@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.actor.instance.L2AirShipInstance;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 
-public class MoveToLocationAirShip extends IClientIncomingPacket {
+public class MoveToLocationAirShip extends ClientPacket {
     public static final int MIN_Z = -895;
     public static final int MAX_Z = 6105;
     public static final int STEP = 300;

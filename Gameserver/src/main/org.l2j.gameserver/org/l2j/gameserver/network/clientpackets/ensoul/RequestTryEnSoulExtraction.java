@@ -22,17 +22,16 @@ import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.ensoul.ExEnSoulExtractionResult;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
 /**
  * @author Mobius
  */
-public class RequestTryEnSoulExtraction extends IClientIncomingPacket {
+public class RequestTryEnSoulExtraction extends ClientPacket {
     private int _itemObjectId;
     private int _type;
     private int _position;

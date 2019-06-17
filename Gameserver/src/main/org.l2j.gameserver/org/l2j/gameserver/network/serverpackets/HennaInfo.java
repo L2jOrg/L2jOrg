@@ -4,9 +4,8 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.L2Henna;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +14,7 @@ import java.util.List;
  *
  * @author Zoey76
  */
-public final class HennaInfo extends IClientOutgoingPacket {
+public final class HennaInfo extends ServerPacket {
     private final L2PcInstance _activeChar;
     private final List<L2Henna> _hennas = new ArrayList<>();
 
@@ -30,7 +29,7 @@ public final class HennaInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.HENNA_INFO);
+        writeId(ServerPacketId.HENNA_INFO);
 
         writeShort((short) _activeChar.getHennaValue(BaseStats.INT)); // equip INT
         writeShort((short) _activeChar.getHennaValue(BaseStats.STR)); // equip STR

@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public final class AskJoinPledge extends IClientOutgoingPacket {
+public final class AskJoinPledge extends ServerPacket {
     private final L2PcInstance _requestor;
     private final int _pledgeType;
     private final String _pledgeName;
@@ -19,7 +17,7 @@ public final class AskJoinPledge extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.ASK_JOIN_PLEDGE);
+        writeId(ServerPacketId.ASK_JOIN_PLEDGE);
         writeInt(_requestor.getObjectId());
         writeString(_requestor.getName());
         writeString(_pledgeName);

@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.clientpackets.vip;
 
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipProductList;
 
-import java.nio.ByteBuffer;
-
-public class RequestVipProductList extends IClientIncomingPacket {
+public class RequestVipProductList extends ClientPacket {
 
     @Override
     protected void readImpl() throws Exception {

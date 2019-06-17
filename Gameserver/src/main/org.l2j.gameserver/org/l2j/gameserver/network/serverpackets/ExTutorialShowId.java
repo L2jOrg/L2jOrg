@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class ExTutorialShowId extends IClientOutgoingPacket {
+public class ExTutorialShowId extends ServerPacket {
     private final int _id;
 
     public ExTutorialShowId(int id) {
@@ -14,7 +12,7 @@ public class ExTutorialShowId extends IClientOutgoingPacket {
     }
 
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_TUTORIAL_SHOW_ID);
+        writeId(ServerPacketId.EX_TUTORIAL_SHOW_ID);
         writeInt(this._id);
     }
 }

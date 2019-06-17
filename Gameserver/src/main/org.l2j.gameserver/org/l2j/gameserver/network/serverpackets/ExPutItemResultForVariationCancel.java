@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class ExPutItemResultForVariationCancel extends IClientOutgoingPacket {
+public class ExPutItemResultForVariationCancel extends ServerPacket {
     private final int _itemObjId;
     private final int _itemId;
     private final int _itemAug1;
@@ -23,7 +21,7 @@ public class ExPutItemResultForVariationCancel extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_PUT_ITEM_RESULT_FOR_VARIATION_CANCEL);
+        writeId(ServerPacketId.EX_PUT_ITEM_RESULT_FOR_VARIATION_CANCEL);
 
         writeInt(_itemObjId);
         writeInt(_itemId);

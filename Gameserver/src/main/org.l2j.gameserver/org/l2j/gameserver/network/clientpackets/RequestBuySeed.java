@@ -18,7 +18,6 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,7 +27,7 @@ import java.util.Map;
 /**
  * @author l3x
  */
-public class RequestBuySeed extends IClientIncomingPacket {
+public class RequestBuySeed extends ClientPacket {
     private static final int BATCH_LENGTH = 12; // length of the one item
     private int _manorId;
     private List<ItemHolder> _items = null;

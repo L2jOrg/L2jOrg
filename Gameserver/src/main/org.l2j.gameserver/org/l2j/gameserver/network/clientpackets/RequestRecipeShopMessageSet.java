@@ -4,14 +4,12 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ... cS
  *
  * @version $Revision: 1.1.2.2.2.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public class RequestRecipeShopMessageSet extends IClientIncomingPacket {
+public class RequestRecipeShopMessageSet extends ClientPacket {
     private static final int MAX_MSG_LENGTH = 29;
 
     private String _name;

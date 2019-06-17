@@ -2,15 +2,13 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author JIV
  */
 @StaticPacket
-public class ExEnchantSkillResult extends IClientOutgoingPacket {
+public class ExEnchantSkillResult extends ServerPacket {
     public static final ExEnchantSkillResult STATIC_PACKET_TRUE = new ExEnchantSkillResult(true);
     public static final ExEnchantSkillResult STATIC_PACKET_FALSE = new ExEnchantSkillResult(false);
 
@@ -22,7 +20,7 @@ public class ExEnchantSkillResult extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_ENCHANT_SKILL_RESULT);
+        writeId(ServerPacketId.EX_ENCHANT_SKILL_RESULT);
 
         writeInt(_enchanted ? 1 : 0);
     }

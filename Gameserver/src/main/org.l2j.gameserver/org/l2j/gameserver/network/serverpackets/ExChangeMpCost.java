@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class ExChangeMpCost extends IClientOutgoingPacket {
+public class ExChangeMpCost extends ServerPacket {
 
     private final double modifier;
     private final int skillType;
@@ -17,7 +15,7 @@ public class ExChangeMpCost extends IClientOutgoingPacket {
 
     @Override
     protected void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_CHANGE_MPCOST);
+        writeId(ServerPacketId.EX_CHANGE_MPCOST);
         writeInt(skillType);
         writeDouble(modifier);
     }

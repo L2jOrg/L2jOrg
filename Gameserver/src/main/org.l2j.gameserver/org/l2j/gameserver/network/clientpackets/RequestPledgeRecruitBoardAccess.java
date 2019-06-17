@@ -8,12 +8,10 @@ import org.l2j.gameserver.model.clan.entry.PledgeRecruitInfo;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestPledgeRecruitBoardAccess extends IClientIncomingPacket {
+public class RequestPledgeRecruitBoardAccess extends ClientPacket {
     private int _applyType;
     private int _karma;
     private String _information;

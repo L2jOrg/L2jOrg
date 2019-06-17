@@ -11,10 +11,9 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
 import java.util.Objects;
 
-public final class RequestSurrenderPledgeWar extends IClientIncomingPacket {
+public final class RequestSurrenderPledgeWar extends ClientPacket {
     private String _pledgeName;
 
     @Override

@@ -13,10 +13,9 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
 import java.util.Objects;
 
-public final class RequestStartPledgeWar extends IClientIncomingPacket {
+public final class RequestStartPledgeWar extends ClientPacket {
     private String _pledgeName;
 
     @Override

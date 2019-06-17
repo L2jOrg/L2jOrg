@@ -7,12 +7,10 @@ import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExMPCCRoomInfo;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestExManageMpccRoom extends IClientIncomingPacket {
+public class RequestExManageMpccRoom extends ClientPacket {
     private int _roomId;
     private int _maxMembers;
     private int _minLevel;

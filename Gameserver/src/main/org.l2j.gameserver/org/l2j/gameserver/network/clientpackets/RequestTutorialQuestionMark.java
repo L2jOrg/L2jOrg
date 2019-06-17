@@ -4,9 +4,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerPressTutorialMark;
 
-import java.nio.ByteBuffer;
-
-public class RequestTutorialQuestionMark extends IClientIncomingPacket {
+public class RequestTutorialQuestionMark extends ClientPacket {
     private int _number = 0;
 
     @Override

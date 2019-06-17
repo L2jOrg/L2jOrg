@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.clientpackets.crystalization;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 
 /**
  * @author UnAfraid
  */
-public class RequestCrystallizeItemCancel extends IClientIncomingPacket {
+public class RequestCrystallizeItemCancel extends ClientPacket {
     @Override
     public void readImpl() {
 

@@ -5,14 +5,12 @@ import org.l2j.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.3.4.4 $ $Date: 2005/04/06 16:13:48 $
  */
-public final class RequestChangePetName extends IClientIncomingPacket {
+public final class RequestChangePetName extends ClientPacket {
     private String _name;
 
     @Override

@@ -3,14 +3,17 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 public final class WareHouseWithdrawalList extends AbstractItemPacket {
+    private static final Logger LOGGER = LoggerFactory.getLogger(WareHouseWithdrawalList.class);
+
     public static final int PRIVATE = 1;
     public static final int CLAN = 2;
     public static final int CASTLE = 3; // not sure
@@ -54,7 +57,7 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.WAREHOUSE_WITHDRAW_LIST);
+        writeId(ServerPacketId.WAREHOUSE_WITHDRAW_LIST);
         writeByte((byte) _sendType);
         if (_sendType == 2) {
             writeShort((short) 0x00);

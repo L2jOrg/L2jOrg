@@ -7,9 +7,8 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
 public final class TradeStart extends AbstractItemPacket {
@@ -52,7 +51,7 @@ public final class TradeStart extends AbstractItemPacket {
             throw new InvalidDataPacketException();
         }
 
-        writeId(OutgoingPackets.TRADE_START);
+        writeId(ServerPacketId.TRADE_START);
         writeByte((byte) _sendType);
         if (_sendType == 2) {
             writeInt(_itemList.size());

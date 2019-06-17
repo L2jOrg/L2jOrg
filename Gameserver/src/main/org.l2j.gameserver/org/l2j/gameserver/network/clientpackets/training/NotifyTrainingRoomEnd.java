@@ -2,15 +2,13 @@ package org.l2j.gameserver.network.clientpackets.training;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.TrainingHolder;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.training.ExTrainingZone_Leaving;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author Sdw
  */
-public class NotifyTrainingRoomEnd extends IClientIncomingPacket {
+public class NotifyTrainingRoomEnd extends ClientPacket {
     @Override
     public void readImpl() {
         // Nothing to read

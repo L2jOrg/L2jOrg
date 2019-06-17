@@ -3,12 +3,10 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author -Wooden-
  */
-public final class SnoopQuit extends IClientIncomingPacket {
+public final class SnoopQuit extends ClientPacket {
     private int _snoopID;
 
     @Override

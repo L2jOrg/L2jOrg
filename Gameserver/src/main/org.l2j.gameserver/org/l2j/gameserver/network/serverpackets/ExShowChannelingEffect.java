@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Sdw
  */
-public class ExShowChannelingEffect extends IClientOutgoingPacket {
+public class ExShowChannelingEffect extends ServerPacket {
     private final L2Character _caster;
     private final L2Character _target;
     private final int _state;
@@ -22,7 +20,7 @@ public class ExShowChannelingEffect extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_CHANNELING_EFFECT);
+        writeId(ServerPacketId.EX_SHOW_CHANNELING_EFFECT);
         writeInt(_caster.getObjectId());
         writeInt(_target.getObjectId());
         writeInt(_state);

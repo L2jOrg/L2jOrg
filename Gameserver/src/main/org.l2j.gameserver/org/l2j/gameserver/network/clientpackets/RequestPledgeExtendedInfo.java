@@ -1,13 +1,11 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format: (c) S S: pledge name?
  *
  * @author -Wooden-
  */
-public class RequestPledgeExtendedInfo extends IClientIncomingPacket {
+public class RequestPledgeExtendedInfo extends ClientPacket {
     @SuppressWarnings("unused")
     private String _name;
 

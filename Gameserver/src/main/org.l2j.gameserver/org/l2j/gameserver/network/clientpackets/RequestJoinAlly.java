@@ -7,9 +7,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.AskJoinAlly;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
-public final class RequestJoinAlly extends IClientIncomingPacket {
+public final class RequestJoinAlly extends ClientPacket {
     private int _objectId;
 
     @Override

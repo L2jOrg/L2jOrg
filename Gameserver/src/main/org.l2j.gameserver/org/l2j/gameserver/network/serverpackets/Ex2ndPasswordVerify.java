@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author mrTJO
  */
-public class Ex2ndPasswordVerify extends IClientOutgoingPacket {
+public class Ex2ndPasswordVerify extends ServerPacket {
     // TODO: Enum
     public static final int PASSWORD_OK = 0x00;
     public static final int PASSWORD_WRONG = 0x01;
@@ -24,7 +22,7 @@ public class Ex2ndPasswordVerify extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_2ND_PASSWORD_VERIFY);
+        writeId(ServerPacketId.EX_2ND_PASSWORD_VERIFY);
 
         writeInt(_mode);
         writeInt(_wrongTentatives);

@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class AskJoinParty extends IClientOutgoingPacket {
+public class AskJoinParty extends ServerPacket {
     private final String _requestorName;
     private final PartyDistributionType _partyDistributionType;
 
@@ -21,7 +19,7 @@ public class AskJoinParty extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.ASK_JOIN_PARTY);
+        writeId(ServerPacketId.ASK_JOIN_PARTY);
 
         writeString(_requestorName);
         writeInt(_partyDistributionType.getId());

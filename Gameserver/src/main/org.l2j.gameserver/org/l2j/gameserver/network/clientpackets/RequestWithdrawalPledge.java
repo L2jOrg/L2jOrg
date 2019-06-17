@@ -8,14 +8,12 @@ import org.l2j.gameserver.network.serverpackets.ExPledgeCount;
 import org.l2j.gameserver.network.serverpackets.PledgeShowMemberListDelete;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestWithdrawalPledge extends IClientIncomingPacket {
+public final class RequestWithdrawalPledge extends ClientPacket {
     @Override
     public void readImpl() {
 

@@ -4,9 +4,7 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
-
-public final class RequestAnswerJoinAlly extends IClientIncomingPacket {
+public final class RequestAnswerJoinAlly extends ClientPacket {
     private int _response;
 
     @Override

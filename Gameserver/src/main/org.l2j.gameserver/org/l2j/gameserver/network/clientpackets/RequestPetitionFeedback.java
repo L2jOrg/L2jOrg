@@ -5,7 +5,6 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -13,7 +12,7 @@ import java.sql.SQLException;
 /**
  * @author Plim
  */
-public class RequestPetitionFeedback extends IClientIncomingPacket {
+public class RequestPetitionFeedback extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestPetitionFeedback.class);
     private static final String INSERT_FEEDBACK = "INSERT INTO petition_feedback VALUES (?,?,?,?,?)";
 

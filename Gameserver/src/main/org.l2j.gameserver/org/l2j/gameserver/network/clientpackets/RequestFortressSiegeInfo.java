@@ -4,12 +4,10 @@ import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.network.serverpackets.ExShowFortressSiegeInfo;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author KenM
  */
-public class RequestFortressSiegeInfo extends IClientIncomingPacket {
+public class RequestFortressSiegeInfo extends ClientPacket {
     @Override
     public void readImpl() {
     }

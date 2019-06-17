@@ -5,12 +5,10 @@ import org.l2j.gameserver.instancemanager.ClanEntryManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ExPledgeDraftListSearch;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestPledgeDraftListSearch extends IClientIncomingPacket {
+public class RequestPledgeDraftListSearch extends ClientPacket {
     private int _levelMin;
     private int _levelMax;
     private int _classId;

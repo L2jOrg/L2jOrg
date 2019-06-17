@@ -5,9 +5,7 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.PledgeInfo;
 
-import java.nio.ByteBuffer;
-
-public final class RequestPledgeInfo extends IClientIncomingPacket {
+public final class RequestPledgeInfo extends ClientPacket {
     private int _clanId;
 
     @Override

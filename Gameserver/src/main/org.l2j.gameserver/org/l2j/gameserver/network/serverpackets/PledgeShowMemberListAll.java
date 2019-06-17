@@ -5,15 +5,14 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.settings.ServerSettings;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
-public class PledgeShowMemberListAll extends IClientOutgoingPacket {
+public class PledgeShowMemberListAll extends ServerPacket {
     private final L2Clan _clan;
     private final L2Clan.SubPledge _pledge;
     private final String _name;
@@ -44,7 +43,7 @@ public class PledgeShowMemberListAll extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_ALL);
+        writeId(ServerPacketId.PLEDGE_SHOW_MEMBER_LIST_ALL);
 
         writeInt(_isSubPledge ? 0x00 : 0x01);
         writeInt(_clan.getId());

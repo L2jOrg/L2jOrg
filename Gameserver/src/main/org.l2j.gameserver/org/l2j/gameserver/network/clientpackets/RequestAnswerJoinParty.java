@@ -9,9 +9,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.JoinParty;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
-public final class RequestAnswerJoinParty extends IClientIncomingPacket {
+public final class RequestAnswerJoinParty extends ClientPacket {
     private int _response;
 
     @Override

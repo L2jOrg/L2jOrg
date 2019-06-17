@@ -7,14 +7,12 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
-
 /**
  * format (ch) d
  *
  * @author -Wooden-
  */
-public final class RequestOustFromPartyRoom extends IClientIncomingPacket {
+public final class RequestOustFromPartyRoom extends ClientPacket {
     private int _charObjId;
 
     @Override

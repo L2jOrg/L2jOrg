@@ -4,9 +4,9 @@ import org.l2j.gameserver.enums.MacroUpdateType;
 import org.l2j.gameserver.model.Macro;
 import org.l2j.gameserver.model.MacroCmd;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-public class SendMacroList extends IClientOutgoingPacket {
+public class SendMacroList extends ServerPacket {
     private final int _count;
     private final Macro _macro;
     private final MacroUpdateType _updateType;
@@ -19,7 +19,7 @@ public class SendMacroList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.MACRO_LIST);
+        writeId(ServerPacketId.MACRO_LIST);
 
         writeByte((byte) _updateType.getId());
         writeInt(_updateType != MacroUpdateType.LIST ? _macro.getId() : 0x00); // modified, created or deleted macro's id

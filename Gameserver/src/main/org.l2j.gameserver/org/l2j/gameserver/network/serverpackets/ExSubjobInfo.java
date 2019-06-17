@@ -5,16 +5,15 @@ import org.l2j.gameserver.enums.SubclassType;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.base.SubClass;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author Sdw
  */
-public class ExSubjobInfo extends IClientOutgoingPacket {
+public class ExSubjobInfo extends ServerPacket {
     private final int _currClassId;
     private final int _currRace;
     private final int _type;
@@ -35,7 +34,7 @@ public class ExSubjobInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SUBJOB_INFO);
+        writeId(ServerPacketId.EX_SUBJOB_INFO);
 
         writeByte((byte) _type);
         writeInt(_currClassId);

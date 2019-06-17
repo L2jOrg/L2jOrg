@@ -8,20 +8,19 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerMenteeAdd;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.mentoring.ExMentorList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 /**
  * @author Gnacik, UnAfraid
  */
-public class ConfirmMenteeAdd extends IClientIncomingPacket {
+public class ConfirmMenteeAdd extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ConfirmMenteeAdd.class);
 

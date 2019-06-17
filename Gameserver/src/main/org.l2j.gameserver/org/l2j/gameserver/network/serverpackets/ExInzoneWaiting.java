@@ -20,9 +20,8 @@ import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
@@ -30,7 +29,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author UnAfraid
  */
-public class ExInzoneWaiting extends IClientOutgoingPacket {
+public class ExInzoneWaiting extends ServerPacket {
     private final int _currentTemplateId;
     private final Map<Integer, Long> _instanceTimes;
     private final boolean _sendByClient;
@@ -44,7 +43,7 @@ public class ExInzoneWaiting extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_INZONE_WAITING_INFO);
+        writeId(ServerPacketId.EX_INZONE_WAITING_INFO);
 
         writeByte((byte) (_sendByClient ? 0x00 : 0x01)); // Grand Crusade
         writeInt(_currentTemplateId);

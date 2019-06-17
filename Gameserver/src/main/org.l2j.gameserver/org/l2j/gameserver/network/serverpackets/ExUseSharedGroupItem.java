@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author KenM
  */
-public class ExUseSharedGroupItem extends IClientOutgoingPacket {
+public class ExUseSharedGroupItem extends ServerPacket {
     private final int _itemId;
     private final int _grpId;
     private final int _remainingTime;
@@ -23,7 +21,7 @@ public class ExUseSharedGroupItem extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_USE_SHARED_GROUP_ITEM);
+        writeId(ServerPacketId.EX_USE_SHARED_GROUP_ITEM);
 
         writeInt(_itemId);
         writeInt(_grpId);

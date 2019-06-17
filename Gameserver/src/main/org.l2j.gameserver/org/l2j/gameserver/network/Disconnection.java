@@ -5,7 +5,7 @@ import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogout;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -115,7 +115,7 @@ public final class Disconnection {
         return this;
     }
 
-    public Disconnection close(IClientOutgoingPacket packet) {
+    public Disconnection close(ServerPacket packet) {
         if (_client != null) {
             _client.close(packet);
         }
@@ -128,7 +128,7 @@ public final class Disconnection {
         close(toLoginScreen);
     }
 
-    public void defaultSequence(IClientOutgoingPacket packet) {
+    public void defaultSequence(ServerPacket packet) {
         defaultSequence();
         close(packet);
     }

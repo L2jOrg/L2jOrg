@@ -4,18 +4,15 @@ import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
 import java.util.List;
-
-import static java.util.Objects.nonNull;
 
 /**
  * @author Migi, DS
  */
-public class ExShowReceivedPostList extends IClientOutgoingPacket {
+public class ExShowReceivedPostList extends ServerPacket {
     private static final int MESSAGE_FEE = 100;
     private static final int MESSAGE_FEE_PER_SLOT = 1000;
     private final List<Message> _inbox;
@@ -26,7 +23,7 @@ public class ExShowReceivedPostList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_RECEIVED_POST_LIST);
+        writeId(ServerPacketId.EX_SHOW_RECEIVED_POST_LIST);
 
         writeInt((int) (System.currentTimeMillis() / 1000));
         if ((_inbox != null) && (_inbox.size() > 0)) {

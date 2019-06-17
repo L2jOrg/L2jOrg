@@ -4,12 +4,10 @@ import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.model.L2Crest;
 import org.l2j.gameserver.network.serverpackets.ExPledgeEmblem;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author -Wooden-, Sdw
  */
-public final class RequestExPledgeCrestLarge extends IClientIncomingPacket {
+public final class RequestExPledgeCrestLarge extends ClientPacket {
     private int _crestId;
     private int _clanId;
 

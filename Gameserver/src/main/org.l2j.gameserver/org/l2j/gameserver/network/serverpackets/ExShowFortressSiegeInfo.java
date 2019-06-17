@@ -4,9 +4,8 @@ import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.model.FortSiegeSpawn;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 /**
@@ -14,7 +13,7 @@ import java.util.List;
  *
  * @author KenM
  */
-public class ExShowFortressSiegeInfo extends IClientOutgoingPacket {
+public class ExShowFortressSiegeInfo extends ServerPacket {
     private final int _fortId;
     private final int _size;
     private final int _csize;
@@ -30,7 +29,7 @@ public class ExShowFortressSiegeInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_FORTRESS_SIEGE_INFO);
+        writeId(ServerPacketId.EX_SHOW_FORTRESS_SIEGE_INFO);
 
         writeInt(_fortId); // Fortress Id
         writeInt(_size); // Total Barracks Count

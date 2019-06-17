@@ -20,14 +20,12 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.16.2.12.2.7 $ $Date: 2005/04/11 10:06:11 $
  */
-public final class Say2 extends IClientIncomingPacket {
+public final class Say2 extends ClientPacket {
     private static final String[] WALKER_COMMAND_LIST =
             {
                     "USESKILL",

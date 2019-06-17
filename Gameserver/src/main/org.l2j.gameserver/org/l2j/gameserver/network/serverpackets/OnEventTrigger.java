@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Gnacik, UnAfraid
  */
-public class OnEventTrigger extends IClientOutgoingPacket {
+public class OnEventTrigger extends ServerPacket {
     private final int _emitterId;
     private final int _enabled;
 
@@ -19,7 +17,7 @@ public class OnEventTrigger extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EVENT_TRIGGER);
+        writeId(ServerPacketId.EVENT_TRIGGER);
 
         writeInt(_emitterId);
         writeByte((byte) _enabled);

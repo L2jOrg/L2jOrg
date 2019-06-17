@@ -7,12 +7,10 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExGetPremiumItemList;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Gnacik
  */
-public final class RequestWithDrawPremiumItem extends IClientIncomingPacket {
+public final class RequestWithDrawPremiumItem extends ClientPacket {
     private int _itemNum;
     private int _charId;
     private long _itemCount;

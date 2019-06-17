@@ -3,15 +3,14 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.L2CommandChannel;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Objects;
 
 /**
  * @author chris_00
  */
-public class ExMultiPartyCommandChannelInfo extends IClientOutgoingPacket {
+public class ExMultiPartyCommandChannelInfo extends ServerPacket {
     private final L2CommandChannel _channel;
 
     public ExMultiPartyCommandChannelInfo(L2CommandChannel channel) {
@@ -21,7 +20,7 @@ public class ExMultiPartyCommandChannelInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_MULTI_PARTY_COMMAND_CHANNEL_INFO);
+        writeId(ServerPacketId.EX_MULTI_PARTY_COMMAND_CHANNEL_INFO);
 
         writeString(_channel.getLeader().getName());
         writeInt(0x00); // Channel loot 0 or 1

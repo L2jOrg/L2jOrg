@@ -2,17 +2,15 @@ package org.l2j.gameserver.network.clientpackets.primeshop;
 
 import org.l2j.gameserver.data.xml.impl.PrimeShopData;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.primeshop.ExBRProductList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Gnacik, UnAfraid
  */
-public final class RequestBRProductList extends IClientIncomingPacket {
+public final class RequestBRProductList extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestBRProductList.class);
     private int _type;
 

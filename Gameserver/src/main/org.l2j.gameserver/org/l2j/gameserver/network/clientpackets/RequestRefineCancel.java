@@ -9,14 +9,12 @@ import org.l2j.gameserver.network.serverpackets.ExVariationCancelResult;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format(ch) d
  *
  * @author -Wooden-
  */
-public final class RequestRefineCancel extends IClientIncomingPacket {
+public final class RequestRefineCancel extends ClientPacket {
     private int _targetItemObjId;
 
     @Override

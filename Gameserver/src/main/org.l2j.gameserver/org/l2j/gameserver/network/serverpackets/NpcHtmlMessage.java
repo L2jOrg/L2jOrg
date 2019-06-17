@@ -2,9 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * NpcHtmlMessage server packet implementation.
@@ -55,7 +53,7 @@ public final class NpcHtmlMessage extends AbstractHtmlPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.NPC_HTML_MESSAGE);
+        writeId(ServerPacketId.NPC_HTML_MESSAGE);
 
         writeInt(getNpcObjId());
         writeString(getHtml());

@@ -3,12 +3,10 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Mobius
  */
-public class RequestTargetActionMenu extends IClientIncomingPacket {
+public class RequestTargetActionMenu extends ClientPacket {
     private int _objectId;
     private int _type;
 

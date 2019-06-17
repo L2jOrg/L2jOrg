@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class ExPutIntensiveResultForVariationMake extends IClientOutgoingPacket {
+public class ExPutIntensiveResultForVariationMake extends ServerPacket {
     private final int _refinerItemObjId;
     private final int _lifestoneItemId;
     private final int _gemstoneItemId;
@@ -22,7 +20,7 @@ public class ExPutIntensiveResultForVariationMake extends IClientOutgoingPacket 
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_PUT_INTENSIVE_RESULT_FOR_VARIATION_MAKE);
+        writeId(ServerPacketId.EX_PUT_INTENSIVE_RESULT_FOR_VARIATION_MAKE);
 
         writeInt(_refinerItemObjId);
         writeInt(_lifestoneItemId);

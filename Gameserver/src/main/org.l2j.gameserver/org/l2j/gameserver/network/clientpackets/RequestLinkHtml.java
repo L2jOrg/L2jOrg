@@ -7,14 +7,12 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * Lets drink to code!
  *
  * @author zabbix, HorridoJoho
  */
-public final class RequestLinkHtml extends IClientIncomingPacket {
+public final class RequestLinkHtml extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestLinkHtml.class);
     private String _link;
 

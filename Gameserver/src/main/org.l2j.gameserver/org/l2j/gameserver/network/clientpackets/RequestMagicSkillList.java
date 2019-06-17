@@ -4,13 +4,11 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author UnAfraid
  */
 @SuppressWarnings("unused")
-public class RequestMagicSkillList extends IClientIncomingPacket {
+public class RequestMagicSkillList extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestMagicSkillList.class);
     private int _objectId;
     private int _charId;

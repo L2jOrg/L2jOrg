@@ -3,14 +3,12 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.PledgeReceiveWarList;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format: (ch) dd
  *
  * @author -Wooden-
  */
-public final class RequestPledgeWarList extends IClientIncomingPacket {
+public final class RequestPledgeWarList extends ClientPacket {
     @SuppressWarnings("unused")
     private int _page;
     private int _tab;

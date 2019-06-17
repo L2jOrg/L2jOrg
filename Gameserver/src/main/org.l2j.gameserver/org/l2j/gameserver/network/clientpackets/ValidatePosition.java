@@ -10,14 +10,12 @@ import org.l2j.gameserver.network.serverpackets.ValidateLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.13.4.7 $ $Date: 2005/03/27 15:29:30 $
  */
-public class ValidatePosition extends IClientIncomingPacket {
+public class ValidatePosition extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(ValidatePosition.class);
     private int _x;
     private int _y;

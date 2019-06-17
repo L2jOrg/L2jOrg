@@ -4,9 +4,7 @@ import org.l2j.gameserver.instancemanager.SellBuffsManager;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 public class PrivateStoreListSell extends AbstractItemPacket {
     private final L2PcInstance _player;
@@ -22,7 +20,7 @@ public class PrivateStoreListSell extends AbstractItemPacket {
         if (_seller.isSellingBuffs()) {
             SellBuffsManager.getInstance().sendBuffMenu(_player, _seller, 0);
         } else {
-            writeId(OutgoingPackets.PRIVATE_STORE_LIST);
+            writeId(ServerPacketId.PRIVATE_STORE_LIST);
 
             writeInt(_seller.getObjectId());
             writeInt(_seller.getSellList().isPackaged() ? 1 : 0);

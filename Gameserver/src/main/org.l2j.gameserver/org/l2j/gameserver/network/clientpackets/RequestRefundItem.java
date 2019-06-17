@@ -17,15 +17,13 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 import static org.l2j.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
 
 
 /**
  * RequestRefundItem client packet class.
  */
-public final class RequestRefundItem extends IClientIncomingPacket {
+public final class RequestRefundItem extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestRefundItem.class);
     private static final int BATCH_LENGTH = 4; // length of the one item
     private static final int CUSTOM_CB_SELL_LIST = 423;

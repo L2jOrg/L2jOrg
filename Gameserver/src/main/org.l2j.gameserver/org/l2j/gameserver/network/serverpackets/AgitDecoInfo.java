@@ -3,14 +3,12 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.model.residences.ResidenceFunctionType;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Steuf, UnAfraid
  */
-public class AgitDecoInfo extends IClientOutgoingPacket {
+public class AgitDecoInfo extends ServerPacket {
     private final AbstractResidence _residense;
 
     public AgitDecoInfo(AbstractResidence residense) {
@@ -19,7 +17,7 @@ public class AgitDecoInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.AGIT_DECO_INFO);
+        writeId(ServerPacketId.AGIT_DECO_INFO);
         writeInt(_residense.getResidenceId());
         for (ResidenceFunctionType type : ResidenceFunctionType.values()) {
             if (type == ResidenceFunctionType.NONE) {

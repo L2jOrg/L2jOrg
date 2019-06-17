@@ -9,13 +9,12 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
 import java.util.Arrays;
 
 /**
  * @author Zoey76
  */
-public class RequestUnEquipItem extends IClientIncomingPacket {
+public class RequestUnEquipItem extends ClientPacket {
     private int _slot;
 
     /**

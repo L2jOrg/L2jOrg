@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.interfaces.INamable;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -668,9 +668,9 @@ public final class Instance implements IIdentifiable, INamable {
      *
      * @param packets packets to be send
      */
-    public void broadcastPacket(IClientOutgoingPacket... packets) {
+    public void broadcastPacket(ServerPacket... packets) {
         for (L2PcInstance player : _players) {
-            for (IClientOutgoingPacket packet : packets) {
+            for (ServerPacket packet : packets) {
                 player.sendPacket(packet);
             }
         }

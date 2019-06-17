@@ -5,14 +5,12 @@ import org.l2j.gameserver.model.L2ClanMember;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.PledgeReceivePowerInfo;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format: (ch) dS
  *
  * @author -Wooden-
  */
-public final class RequestPledgeMemberPowerInfo extends IClientIncomingPacket {
+public final class RequestPledgeMemberPowerInfo extends ClientPacket {
     @SuppressWarnings("unused")
     private int _unk1;
     private String _player;

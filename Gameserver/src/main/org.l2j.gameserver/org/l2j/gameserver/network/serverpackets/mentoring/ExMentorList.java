@@ -5,18 +5,16 @@ import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.L2Mentee;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
-import java.nio.ByteBuffer;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 
 /**
  * @author UnAfraid
  */
-public class ExMentorList extends IClientOutgoingPacket {
+public class ExMentorList extends ServerPacket {
     private final int _type;
     private final Collection<L2Mentee> _mentees;
 
@@ -39,7 +37,7 @@ public class ExMentorList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_MENTOR_LIST);
+        writeId(ServerPacketId.EX_MENTOR_LIST);
 
         writeInt(_type);
         writeInt(0x00);

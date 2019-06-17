@@ -15,14 +15,13 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * SendWareHouseDepositList client packet class.
  */
-public final class SendWareHouseDepositList extends IClientIncomingPacket {
+public final class SendWareHouseDepositList extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(SendWareHouseDepositList.class);
     private static final int BATCH_LENGTH = 12;
 

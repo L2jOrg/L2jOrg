@@ -3,14 +3,12 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.olympiad.Participant;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author godson
  */
-public class ExOlympiadUserInfo extends IClientOutgoingPacket {
+public class ExOlympiadUserInfo extends ServerPacket {
     private final L2PcInstance _player;
     private Participant _par = null;
     private int _curHp;
@@ -51,7 +49,7 @@ public class ExOlympiadUserInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_OLYMPIAD_USER_INFO);
+        writeId(ServerPacketId.EX_OLYMPIAD_USER_INFO);
 
         if (_player != null) {
             writeByte((byte) _player.getOlympiadSide());

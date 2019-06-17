@@ -4,12 +4,15 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author HorridoJoho
  */
-public abstract class AbstractHtmlPacket extends IClientOutgoingPacket {
+public abstract class AbstractHtmlPacket extends ServerPacket {
     public static final char VAR_PARAM_START_CHAR = '$';
+    private static final Logger LOGGER = LoggerFactory.getLogger(AbstractHtmlPacket.class);
 
     private final int _npcObjId;
     private String _html = null;

@@ -4,12 +4,10 @@ import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.quest.Quest;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestAddExpandQuestAlarm extends IClientIncomingPacket {
+public class RequestAddExpandQuestAlarm extends ClientPacket {
     private int _questId;
 
     @Override

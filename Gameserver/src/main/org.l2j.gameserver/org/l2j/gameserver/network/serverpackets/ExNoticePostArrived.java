@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Migi
  */
-public class ExNoticePostArrived extends IClientOutgoingPacket {
+public class ExNoticePostArrived extends ServerPacket {
     private static final ExNoticePostArrived STATIC_PACKET_TRUE = new ExNoticePostArrived(true);
     private static final ExNoticePostArrived STATIC_PACKET_FALSE = new ExNoticePostArrived(false);
     private final boolean _showAnim;
@@ -23,7 +21,7 @@ public class ExNoticePostArrived extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_NOTICE_POST_ARRIVED);
+        writeId(ServerPacketId.EX_NOTICE_POST_ARRIVED);
 
         writeInt(_showAnim ? 0x01 : 0x00);
     }

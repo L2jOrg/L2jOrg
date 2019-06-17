@@ -5,16 +5,15 @@ import org.l2j.gameserver.model.L2SkillLearn;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 /**
  * @author Sdw, Mobius
  * @version Classic 2.0
  */
-public class AcquireSkillList extends IClientOutgoingPacket {
+public class AcquireSkillList extends ServerPacket {
     final L2PcInstance _activeChar;
     final List<L2SkillLearn> _learnable;
 
@@ -26,7 +25,7 @@ public class AcquireSkillList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.ACQUIRE_SKILL_LIST);
+        writeId(ServerPacketId.ACQUIRE_SKILL_LIST);
 
         writeShort((short) _learnable.size());
         for (L2SkillLearn skill : _learnable) {

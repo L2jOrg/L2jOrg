@@ -22,12 +22,11 @@ import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-public final class RequestEnchantItem extends IClientIncomingPacket {
+public final class RequestEnchantItem extends ClientPacket {
     protected static final Logger LOGGER_ENCHANT = LoggerFactory.getLogger("enchant.items");
 
     private int _objectId;

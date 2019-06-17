@@ -7,14 +7,12 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.AskJoinPledge;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.3.4.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestJoinPledge extends IClientIncomingPacket {
+public final class RequestJoinPledge extends ClientPacket {
     private int _target;
     private int _pledgeType;
 

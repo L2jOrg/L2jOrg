@@ -20,7 +20,7 @@ import org.l2j.gameserver.instancemanager.HandysBlockCheckerManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.entity.BlockCheckerEngine;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import java.util.ArrayList;
@@ -91,7 +91,7 @@ public final class ArenaParticipantsHolder {
         return _bluePlayers.size();
     }
 
-    public void broadCastPacketToTeam(IClientOutgoingPacket packet) {
+    public void broadCastPacketToTeam(ServerPacket packet) {
         for (L2PcInstance p : _redPlayers) {
             p.sendPacket(packet);
         }

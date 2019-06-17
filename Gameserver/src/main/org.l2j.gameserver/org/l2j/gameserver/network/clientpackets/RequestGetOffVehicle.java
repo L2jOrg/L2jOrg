@@ -6,12 +6,10 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.GetOffVehicle;
 import org.l2j.gameserver.network.serverpackets.StopMoveInVehicle;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Maktakien
  */
-public final class RequestGetOffVehicle extends IClientIncomingPacket {
+public final class RequestGetOffVehicle extends ClientPacket {
     private int _boatId;
     private int _x;
     private int _y;

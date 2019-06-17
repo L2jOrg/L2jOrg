@@ -8,14 +8,12 @@ import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.GetOnVehicle;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.1.4.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestGetOnVehicle extends IClientIncomingPacket {
+public final class RequestGetOnVehicle extends ClientPacket {
     private int _boatId;
     private Location _pos;
 

@@ -4,16 +4,14 @@ import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2ControllableAirShipInstance;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * MyTargetSelected server packet implementation.
  *
  * @author UnAfraid
  */
-public class MyTargetSelected extends IClientOutgoingPacket {
+public class MyTargetSelected extends ServerPacket {
     private final int _objectId;
     private final int _color;
 
@@ -24,7 +22,7 @@ public class MyTargetSelected extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.MY_TARGET_SELECTED);
+        writeId(ServerPacketId.MY_TARGET_SELECTED);
 
         writeInt(0x01); // Grand Crusade
         writeInt(_objectId);

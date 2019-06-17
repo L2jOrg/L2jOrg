@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * @author Gnacik
  */
-public class RequestListPartyMatchingWaitingRoom extends IClientIncomingPacket {
+public class RequestListPartyMatchingWaitingRoom extends ClientPacket {
     private int _page;
     private int _minLevel;
     private int _maxLevel;

@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public final class Revive extends IClientOutgoingPacket {
+public final class Revive extends ServerPacket {
     private final int _objectId;
 
     public Revive(L2Object obj) {
@@ -15,7 +13,7 @@ public final class Revive extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.REVIVE);
+        writeId(ServerPacketId.REVIVE);
 
         writeInt(_objectId);
     }

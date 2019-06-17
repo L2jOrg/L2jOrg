@@ -2,12 +2,10 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author ShanSoft Packets Structure: chdd
  */
-public final class RequestTeleportBookMark extends IClientIncomingPacket {
+public final class RequestTeleportBookMark extends ClientPacket {
     private int _id;
 
     @Override

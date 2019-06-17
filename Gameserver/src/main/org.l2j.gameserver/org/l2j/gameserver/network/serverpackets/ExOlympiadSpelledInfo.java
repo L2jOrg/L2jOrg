@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * @author godson
  */
-public class ExOlympiadSpelledInfo extends IClientOutgoingPacket {
+public class ExOlympiadSpelledInfo extends ServerPacket {
     private final int _playerId;
     private final List<BuffInfo> _effects = new ArrayList<>();
     private final List<Skill> _effects2 = new ArrayList<>();
@@ -31,7 +31,7 @@ public class ExOlympiadSpelledInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_OLYMPIAD_SPELLED_INFO);
+        writeId(ServerPacketId.EX_OLYMPIAD_SPELLED_INFO);
 
         writeInt(_playerId);
         writeInt(_effects.size() + _effects2.size());

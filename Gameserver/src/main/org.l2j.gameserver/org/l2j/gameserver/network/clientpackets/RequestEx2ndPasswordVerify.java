@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.xml.impl.SecondaryAuthData;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format: (ch)S S: numerical password
  *
  * @author mrTJO
  */
-public class RequestEx2ndPasswordVerify extends IClientIncomingPacket {
+public class RequestEx2ndPasswordVerify extends ClientPacket {
     private String _password;
 
     @Override

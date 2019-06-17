@@ -4,12 +4,10 @@ import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author JIV
  */
-public class RequestPartyLootModification extends IClientIncomingPacket {
+public class RequestPartyLootModification extends ClientPacket {
     private int _partyDistributionTypeId;
 
     @Override

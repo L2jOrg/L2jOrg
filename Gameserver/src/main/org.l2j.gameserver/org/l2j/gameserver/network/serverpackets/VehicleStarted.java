@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Kerberos
  */
-public class VehicleStarted extends IClientOutgoingPacket {
+public class VehicleStarted extends ServerPacket {
     private final int _objectId;
     private final int _state;
 
@@ -24,7 +22,7 @@ public class VehicleStarted extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.VEHICLE_START);
+        writeId(ServerPacketId.VEHICLE_START);
 
         writeInt(_objectId);
         writeInt(_state);

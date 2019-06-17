@@ -3,11 +3,9 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class ValidateLocation extends IClientOutgoingPacket {
+public class ValidateLocation extends ServerPacket {
     private final int _charObjId;
     private final Location _loc;
 
@@ -18,7 +16,7 @@ public class ValidateLocation extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.VALIDATE_LOCATION);
+        writeId(ServerPacketId.VALIDATE_LOCATION);
 
         writeInt(_charObjId);
         writeInt(_loc.getX());

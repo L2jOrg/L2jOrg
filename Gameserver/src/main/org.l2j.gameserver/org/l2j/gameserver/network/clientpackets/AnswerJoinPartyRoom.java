@@ -4,14 +4,12 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format: (ch) d
  *
  * @author -Wooden-, Tryskell
  */
-public final class AnswerJoinPartyRoom extends IClientIncomingPacket {
+public final class AnswerJoinPartyRoom extends ClientPacket {
     private boolean _answer;
 
     @Override

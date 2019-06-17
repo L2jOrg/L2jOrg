@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Mobius
  */
-public final class TutorialShowQuestionMark extends IClientOutgoingPacket {
+public final class TutorialShowQuestionMark extends ServerPacket {
     private final int _markId;
     private final int _markType;
 
@@ -19,7 +17,7 @@ public final class TutorialShowQuestionMark extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.TUTORIAL_SHOW_QUESTION_MARK);
+        writeId(ServerPacketId.TUTORIAL_SHOW_QUESTION_MARK);
 
         writeByte((byte) _markType);
         writeInt(_markId);

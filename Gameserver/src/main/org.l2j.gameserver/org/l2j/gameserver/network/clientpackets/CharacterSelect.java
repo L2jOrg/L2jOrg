@@ -22,15 +22,13 @@ import org.l2j.gameserver.network.serverpackets.ServerClose;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 
 /**
  * This class ...
  *
  * @version $Revision: 1.5.2.1.2.5 $ $Date: 2005/03/27 15:29:30 $
  */
-public class CharacterSelect extends IClientIncomingPacket {
+public class CharacterSelect extends ClientPacket {
     protected static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
 
     // cd

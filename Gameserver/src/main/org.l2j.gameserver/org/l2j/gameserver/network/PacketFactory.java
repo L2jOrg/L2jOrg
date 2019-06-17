@@ -1,23 +1,22 @@
 package org.l2j.gameserver.network;
 
 import io.github.joealisson.mmocore.PacketBuffer;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 
-import java.nio.ByteBuffer;
 import java.util.Collections;
 import java.util.Set;
 import java.util.function.Supplier;
 
 interface PacketFactory {
 
-    Supplier<IClientIncomingPacket> NULL_PACKET_SUPLIER = () -> null;
+    Supplier<ClientPacket> NULL_PACKET_SUPLIER = () -> null;
     PacketFactory NULLABLE_PACKET_FACTORY = () -> null;
 
     default int getPacketId() {
         return -1;
     }
 
-    IClientIncomingPacket newIncomingPacket();
+    ClientPacket newIncomingPacket();
 
     default Set<ConnectionState> getConnectionStates() {
         return Collections.emptySet();

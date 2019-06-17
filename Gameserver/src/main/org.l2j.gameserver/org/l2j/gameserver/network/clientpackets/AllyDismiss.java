@@ -22,9 +22,7 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
-
-public final class AllyDismiss extends IClientIncomingPacket {
+public final class AllyDismiss extends ClientPacket {
     private String _clanName;
 
     @Override

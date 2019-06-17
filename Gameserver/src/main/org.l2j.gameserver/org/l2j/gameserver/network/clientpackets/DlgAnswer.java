@@ -10,12 +10,10 @@ import org.l2j.gameserver.model.holders.DoorRequestHolder;
 import org.l2j.gameserver.model.holders.SummonRequestHolder;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Dezmond_snz
  */
-public final class DlgAnswer extends IClientIncomingPacket {
+public final class DlgAnswer extends ClientPacket {
     private int _messageId;
     private int _answer;
     private int _requesterId;

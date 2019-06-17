@@ -1,12 +1,11 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
-public class ShowBoard extends IClientOutgoingPacket {
+public class ShowBoard extends ServerPacket {
 
     private static final int BOARD_MENU_SIZE = 20 * 8;
     private final String _content;
@@ -35,7 +34,7 @@ public class ShowBoard extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SHOW_BOARD);
+        writeId(ServerPacketId.SHOW_BOARD);
 
         writeByte((byte) _showBoard); // c4 1 to show community 00 to hide
         writeString("bypass _bbshome"); // top

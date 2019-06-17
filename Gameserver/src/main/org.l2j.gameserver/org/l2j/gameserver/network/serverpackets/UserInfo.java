@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Sdw, UnAfraid
@@ -96,7 +96,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.USER_INFO);
+        writeId(ServerPacketId.USER_INFO);
 
         writeInt(_activeChar.getObjectId());
         writeInt(_initSize);

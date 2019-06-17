@@ -23,7 +23,7 @@ import org.l2j.gameserver.instancemanager.PetitionManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.PetitionVotePacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
@@ -131,7 +131,7 @@ public final class Petition {
         return _type.toString().replace("_", " ");
     }
 
-    public void sendPetitionerPacket(IClientOutgoingPacket responsePacket) {
+    public void sendPetitionerPacket(ServerPacket responsePacket) {
         if ((_petitioner == null) || !_petitioner.isOnline()) {
             // Allows petitioners to see the results of their petition when
             // they log back into the game.
@@ -143,7 +143,7 @@ public final class Petition {
         _petitioner.sendPacket(responsePacket);
     }
 
-    public void sendResponderPacket(IClientOutgoingPacket responsePacket) {
+    public void sendResponderPacket(ServerPacket responsePacket) {
         if ((_responder == null) || !_responder.isOnline()) {
             endPetitionConsultation(PetitionState.RESPONDER_MISSING);
             return;

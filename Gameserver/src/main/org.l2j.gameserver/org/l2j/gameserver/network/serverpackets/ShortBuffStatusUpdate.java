@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class ShortBuffStatusUpdate extends IClientOutgoingPacket {
+public class ShortBuffStatusUpdate extends ServerPacket {
     public static final ShortBuffStatusUpdate RESET_SHORT_BUFF = new ShortBuffStatusUpdate(0, 0, 0, 0);
 
     private final int _skillId;
@@ -22,7 +20,7 @@ public class ShortBuffStatusUpdate extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SHORT_BUFF_STATUS_UPDATE);
+        writeId(ServerPacketId.SHORT_BUFF_STATUS_UPDATE);
 
         writeInt(_skillId);
         writeShort((short) _skillLvl);

@@ -2,12 +2,10 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.network.serverpackets.ExShowAgitInfo;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author KenM
  */
-public class RequestAllAgitInfo extends IClientIncomingPacket {
+public class RequestAllAgitInfo extends ClientPacket {
     @Override
     public void readImpl() {
 

@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * Format: (ch)ddd
  */
-public class ExVariationResult extends IClientOutgoingPacket {
+public class ExVariationResult extends ServerPacket {
     private final int _option1;
     private final int _option2;
     private final int _success;
@@ -21,7 +19,7 @@ public class ExVariationResult extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_VARIATION_RESULT);
+        writeId(ServerPacketId.EX_VARIATION_RESULT);
 
         writeInt(_option1);
         writeInt(_option2);

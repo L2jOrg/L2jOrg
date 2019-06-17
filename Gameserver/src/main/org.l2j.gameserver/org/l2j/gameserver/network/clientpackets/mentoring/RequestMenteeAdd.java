@@ -3,16 +3,14 @@ package org.l2j.gameserver.network.clientpackets.mentoring;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.mentoring.ExMentorAdd;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author Gnacik, UnAfraid
  */
-public class RequestMenteeAdd extends IClientIncomingPacket {
+public class RequestMenteeAdd extends ClientPacket {
     private String _target;
 
     @Override

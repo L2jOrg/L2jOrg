@@ -4,12 +4,10 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.network.serverpackets.EnchantResult;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author KenM
  */
-public class RequestExCancelEnchantItem extends IClientIncomingPacket {
+public class RequestExCancelEnchantItem extends ClientPacket {
     @Override
     public void readImpl() {
 

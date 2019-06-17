@@ -18,7 +18,7 @@ import org.l2j.gameserver.model.items.L2Weapon;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.zone.ZoneRegion;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.util.Util;
 
@@ -213,7 +213,7 @@ public abstract class L2Vehicle extends L2Character {
         return _passengers;
     }
 
-    public void broadcastToPassengers(IClientOutgoingPacket sm) {
+    public void broadcastToPassengers(ServerPacket sm) {
         for (L2PcInstance player : _passengers) {
             if (player != null) {
                 player.sendPacket(sm);

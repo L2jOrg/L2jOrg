@@ -7,12 +7,10 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author KenM
  */
-public final class RequestJoinSiege extends IClientIncomingPacket {
+public final class RequestJoinSiege extends ClientPacket {
     private int _castleId;
     private int _isAttacker;
     private int _isJoining;

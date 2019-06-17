@@ -4,15 +4,14 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
 /**
  * @author KenM
  */
-public class ExShowAgitInfo extends IClientOutgoingPacket {
+public class ExShowAgitInfo extends ServerPacket {
     public static final ExShowAgitInfo STATIC_PACKET = new ExShowAgitInfo();
 
     private ExShowAgitInfo() {
@@ -20,7 +19,7 @@ public class ExShowAgitInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_AGIT_INFO);
+        writeId(ServerPacketId.EX_SHOW_AGIT_INFO);
 
         final Collection<ClanHall> clanHalls = ClanHallData.getInstance().getClanHalls();
         writeInt(clanHalls.size());

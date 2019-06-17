@@ -2,10 +2,8 @@ package org.l2j.gameserver.network.serverpackets.attributechange;
 
 import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.AbstractItemPacket;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author Mobius
@@ -21,7 +19,7 @@ public class ExChangeAttributeItemList extends AbstractItemPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_CHANGE_ATTRIBUTE_ITEM_LIST);
+        writeId(ServerPacketId.EX_CHANGE_ATTRIBUTE_ITEM_LIST);
         writeInt(_itemId);
         writeInt(_itemsList.length);
         for (ItemInfo item : _itemsList) {

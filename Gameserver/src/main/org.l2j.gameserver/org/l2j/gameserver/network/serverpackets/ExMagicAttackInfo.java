@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Sdw
  */
-public class ExMagicAttackInfo extends IClientOutgoingPacket {
+public class ExMagicAttackInfo extends ServerPacket {
     // TODO: Enum
     public static final int CRITICAL = 1;
     public static final int CRITICAL_HEAL = 2;
@@ -31,7 +29,7 @@ public class ExMagicAttackInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_MAGIC_ATTACK_INFO);
+        writeId(ServerPacketId.EX_MAGIC_ATTACK_INFO);
 
         writeInt(_caster);
         writeInt(_target);

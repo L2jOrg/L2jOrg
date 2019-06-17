@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CharInfo;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 
 import java.util.concurrent.Future;
@@ -165,7 +165,7 @@ public class L2DecoyInstance extends L2Character {
     }
 
     @Override
-    public void sendPacket(IClientOutgoingPacket... packets) {
+    public void sendPacket(ServerPacket... packets) {
         if (_owner != null) {
             _owner.sendPacket(packets);
         }

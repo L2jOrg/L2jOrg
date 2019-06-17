@@ -1,10 +1,8 @@
 package org.l2j.gameserver.network;
 
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 
-import java.nio.ByteBuffer;
-
-public final class DiscardPacket extends IClientIncomingPacket {
+public final class DiscardPacket extends ClientPacket {
 
     @Override
     protected void runImpl() {

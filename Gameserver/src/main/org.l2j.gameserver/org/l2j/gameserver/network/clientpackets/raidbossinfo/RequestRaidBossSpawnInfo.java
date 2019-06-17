@@ -3,17 +3,16 @@ package org.l2j.gameserver.network.clientpackets.raidbossinfo;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
 import org.l2j.gameserver.instancemanager.DBSpawnManager.DBStatusType;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.raidbossinfo.ExRaidBossSpawnInfo;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author Mobius
  */
-public class RequestRaidBossSpawnInfo extends IClientIncomingPacket {
+public class RequestRaidBossSpawnInfo extends ClientPacket {
     private final List<Integer> _bossIds = new ArrayList<>();
 
     @Override

@@ -4,16 +4,15 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.L2ShuttleInstance;
 import org.l2j.gameserver.model.shuttle.L2ShuttleStop;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 /**
  * @author UnAfraid
  */
-public class ExShuttleInfo extends IClientOutgoingPacket {
+public class ExShuttleInfo extends ServerPacket {
     private final L2ShuttleInstance _shuttle;
     private final List<L2ShuttleStop> _stops;
 
@@ -24,7 +23,7 @@ public class ExShuttleInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHUTTLE_INFO);
+        writeId(ServerPacketId.EX_SHUTTLE_INFO);
 
         writeInt(_shuttle.getObjectId());
         writeInt(_shuttle.getX());

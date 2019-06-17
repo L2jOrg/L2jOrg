@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class ShowMiniMap extends IClientOutgoingPacket {
+public class ShowMiniMap extends ServerPacket {
     private final int _mapId;
 
     public ShowMiniMap(int mapId) {
@@ -14,7 +12,7 @@ public class ShowMiniMap extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SHOW_MINIMAP);
+        writeId(ServerPacketId.SHOW_MINIMAP);
 
         writeInt(_mapId);
         writeByte((byte) 0x00); // Seven Signs state

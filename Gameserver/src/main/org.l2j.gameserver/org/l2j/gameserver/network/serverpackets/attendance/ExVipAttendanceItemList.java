@@ -5,15 +5,13 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author Mobius
  */
-public class ExVipAttendanceItemList extends IClientOutgoingPacket {
+public class ExVipAttendanceItemList extends ServerPacket {
     boolean _available;
     int _index;
 
@@ -25,7 +23,7 @@ public class ExVipAttendanceItemList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_VIP_ATTENDANCE_ITEM_LIST);
+        writeId(ServerPacketId.EX_VIP_ATTENDANCE_ITEM_LIST);
         writeByte((byte) (_available ? _index + 1 : _index)); // index to receive?
         writeByte((byte) _index); // last received index?
         writeInt(0x00);

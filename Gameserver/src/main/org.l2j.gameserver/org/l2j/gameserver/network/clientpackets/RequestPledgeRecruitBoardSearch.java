@@ -4,12 +4,10 @@ import org.l2j.gameserver.instancemanager.ClanEntryManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ExPledgeRecruitBoardSearch;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestPledgeRecruitBoardSearch extends IClientIncomingPacket {
+public class RequestPledgeRecruitBoardSearch extends ClientPacket {
     private int _clanLevel;
     private int _karma;
     private int _type;

@@ -2,12 +2,10 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.network.serverpackets.ExSendManorList;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author l3x
  */
-public class RequestManorList extends IClientIncomingPacket {
+public class RequestManorList extends ClientPacket {
     @Override
     public void readImpl() {
 

@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Sdw
  */
-public class ExTacticalSign extends IClientOutgoingPacket {
+public class ExTacticalSign extends ServerPacket {
     private final L2Character _target;
     private final int _tokenId;
 
@@ -20,7 +18,7 @@ public class ExTacticalSign extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_TACTICAL_SIGN);
+        writeId(ServerPacketId.EX_TACTICAL_SIGN);
 
         writeInt(_target.getObjectId());
         writeInt(_tokenId);

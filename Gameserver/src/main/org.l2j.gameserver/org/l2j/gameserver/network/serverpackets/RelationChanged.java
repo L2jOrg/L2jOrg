@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.L2Playable;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * @author Luca Baldi
  */
-public final class RelationChanged extends IClientOutgoingPacket {
+public final class RelationChanged extends ServerPacket {
     // TODO: Enum
     public static final int RELATION_PARTY1 = 0x00001; // party member
     public static final int RELATION_PARTY2 = 0x00002; // party member
@@ -70,7 +70,7 @@ public final class RelationChanged extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.RELATION_CHANGED);
+        writeId(ServerPacketId.RELATION_CHANGED);
 
         writeByte(_mask);
         if (_multi == null) {

@@ -4,16 +4,15 @@ import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.NpcStringId;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author Kerberos
  */
-public final class NpcSay extends IClientOutgoingPacket {
+public final class NpcSay extends ServerPacket {
     private final int _objectId;
     private final ChatType _textType;
     private final int _npcId;
@@ -90,7 +89,7 @@ public final class NpcSay extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.NPC_SAY);
+        writeId(ServerPacketId.NPC_SAY);
 
         writeInt(_objectId);
         writeInt(_textType.getClientId());

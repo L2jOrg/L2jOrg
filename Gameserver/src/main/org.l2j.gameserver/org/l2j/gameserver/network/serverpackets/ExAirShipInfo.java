@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.L2AirShipInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class ExAirShipInfo extends IClientOutgoingPacket {
+public class ExAirShipInfo extends ServerPacket {
     // store some parameters, because they can be changed during broadcast
     private final L2AirShipInstance _ship;
     private final int _x;
@@ -32,7 +30,7 @@ public class ExAirShipInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_AIR_SHIP_INFO);
+        writeId(ServerPacketId.EX_AIR_SHIP_INFO);
 
         writeInt(_ship.getObjectId());
         writeInt(_x);

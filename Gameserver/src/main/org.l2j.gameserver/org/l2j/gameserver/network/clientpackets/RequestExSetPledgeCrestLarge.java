@@ -9,14 +9,12 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format : chdb c (id) 0xD0 h (subid) 0x11 d data size b raw data (picture i think ;) )
  *
  * @author -Wooden-
  */
-public final class RequestExSetPledgeCrestLarge extends IClientIncomingPacket {
+public final class RequestExSetPledgeCrestLarge extends ClientPacket {
     private int _length;
     private byte[] _data = null;
 

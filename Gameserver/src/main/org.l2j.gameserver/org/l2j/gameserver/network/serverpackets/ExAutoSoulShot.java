@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class ExAutoSoulShot extends IClientOutgoingPacket {
+public class ExAutoSoulShot extends ServerPacket {
     private final int _itemId;
     private final boolean _enable;
     private final int _type;
@@ -23,7 +21,7 @@ public class ExAutoSoulShot extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_AUTO_SOUL_SHOT);
+        writeId(ServerPacketId.EX_AUTO_SOUL_SHOT);
 
         writeInt(_itemId);
         writeInt(_enable ? 0x01 : 0x00);

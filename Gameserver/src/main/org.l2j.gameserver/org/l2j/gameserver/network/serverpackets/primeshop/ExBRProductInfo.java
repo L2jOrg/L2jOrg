@@ -4,15 +4,13 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author Gnacik
  */
-public class ExBRProductInfo extends IClientOutgoingPacket {
+public class ExBRProductInfo extends ServerPacket {
     private final PrimeShopProduct _item;
     private final int _charPoints;
     private final long _charAdena;
@@ -25,7 +23,7 @@ public class ExBRProductInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_BR_PRODUCT_INFO);
+        writeId(ServerPacketId.EX_BR_PRODUCT_INFO);
 
         writeInt(_item.getId());
         writeInt(_item.getPrice());

@@ -1,9 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * Special event info packet.
@@ -11,7 +9,7 @@ import java.nio.ByteBuffer;
  * @author Kerberos
  * @author mrTJO
  */
-public class ExBrBroadcastEventState extends IClientOutgoingPacket {
+public class ExBrBroadcastEventState extends ServerPacket {
     public static final int APRIL_FOOLS = 20090401;
     public static final int EVAS_INFERNO = 20090801; // event state (0 - hide, 1 - show), day (1-14), percent (0-100)
     public static final int HALLOWEEN_EVENT = 20091031; // event state (0 - hide, 1 - show)
@@ -46,7 +44,7 @@ public class ExBrBroadcastEventState extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_BR_BROADCAST_EVENT_STATE);
+        writeId(ServerPacketId.EX_BR_BROADCAST_EVENT_STATE);
 
         writeInt(_eventId);
         writeInt(_eventState);

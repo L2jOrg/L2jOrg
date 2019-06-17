@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class RecipeShopMsg extends IClientOutgoingPacket {
+public class RecipeShopMsg extends ServerPacket {
     private final L2PcInstance _activeChar;
 
     public RecipeShopMsg(L2PcInstance player) {
@@ -15,7 +13,7 @@ public class RecipeShopMsg extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.RECIPE_SHOP_MSG);
+        writeId(ServerPacketId.RECIPE_SHOP_MSG);
 
         writeInt(_activeChar.getObjectId());
         writeString(_activeChar.getStoreName());

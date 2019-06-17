@@ -7,14 +7,12 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExDuelAskStart;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format:(ch) Sd
  *
  * @author -Wooden-
  */
-public final class RequestDuelStart extends IClientIncomingPacket {
+public final class RequestDuelStart extends ClientPacket {
     private String _player;
     private int _partyDuel;
 

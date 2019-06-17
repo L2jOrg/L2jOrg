@@ -9,8 +9,6 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * <p>
  * Format: (c) d
@@ -21,7 +19,7 @@ import java.nio.ByteBuffer;
  *
  * @author -Wooden-, TempyIncursion
  */
-public final class RequestPetitionCancel extends IClientIncomingPacket {
+public final class RequestPetitionCancel extends ClientPacket {
 
     // private int _unknown;
 

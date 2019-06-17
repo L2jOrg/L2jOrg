@@ -5,16 +5,14 @@ import org.l2j.gameserver.engines.captcha.CaptchaEngine;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.captcha.ReceiveBotCaptchaImage;
 import org.l2j.gameserver.network.serverpackets.captcha.ReceiveBotCaptchaResult;
 
-import java.nio.ByteBuffer;
-
 import static java.util.Objects.nonNull;
 
-public class RequestCaptchaAnswer extends IClientIncomingPacket {
+public class RequestCaptchaAnswer extends ClientPacket {
 
     private int answer;
 

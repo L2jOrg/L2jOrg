@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author KenM
  */
-public class ExRedSky extends IClientOutgoingPacket {
+public class ExRedSky extends ServerPacket {
     private final int _duration;
 
     public ExRedSky(int duration) {
@@ -17,7 +15,7 @@ public class ExRedSky extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_RED_SKY);
+        writeId(ServerPacketId.EX_RED_SKY);
 
         writeInt(_duration);
     }

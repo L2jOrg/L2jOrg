@@ -3,14 +3,12 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.enums.FenceState;
 import org.l2j.gameserver.model.actor.instance.L2FenceInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author HoridoJoho / FBIagent
  */
-public class ExColosseumFenceInfo extends IClientOutgoingPacket {
+public class ExColosseumFenceInfo extends ServerPacket {
     private final int _objId;
     private final int _x;
     private final int _y;
@@ -35,7 +33,7 @@ public class ExColosseumFenceInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_COLOSSEUM_FENCE_INFO);
+        writeId(ServerPacketId.EX_COLOSSEUM_FENCE_INFO);
 
         writeInt(_objId);
         writeInt(_clientState);

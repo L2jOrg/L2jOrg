@@ -5,9 +5,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
-public final class RequestReplySurrenderPledgeWar extends IClientIncomingPacket {
+public final class RequestReplySurrenderPledgeWar extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestReplySurrenderPledgeWar.class);
     private String _reqName;
     private int _answer;

@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public final class TargetSelected extends IClientOutgoingPacket {
+public final class TargetSelected extends ServerPacket {
     private final int _objectId;
     private final int _targetObjId;
     private final int _x;
@@ -29,7 +27,7 @@ public final class TargetSelected extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.TARGET_SELECTED);
+        writeId(ServerPacketId.TARGET_SELECTED);
 
         writeInt(_objectId);
         writeInt(_targetObjId);

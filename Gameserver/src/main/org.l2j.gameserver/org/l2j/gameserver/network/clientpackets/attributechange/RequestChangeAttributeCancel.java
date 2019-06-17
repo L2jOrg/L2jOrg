@@ -1,15 +1,13 @@
 package org.l2j.gameserver.network.clientpackets.attributechange;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.attributechange.ExChangeAttributeFail;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author Mobius
  */
-public class RequestChangeAttributeCancel extends IClientIncomingPacket {
+public class RequestChangeAttributeCancel extends ClientPacket {
     @Override
     public void readImpl() {
     }

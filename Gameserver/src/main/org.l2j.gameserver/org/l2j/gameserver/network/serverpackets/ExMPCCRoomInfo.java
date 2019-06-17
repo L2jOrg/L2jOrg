@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.matching.CommandChannelMatchingRoom;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Sdw
  */
-public class ExMPCCRoomInfo extends IClientOutgoingPacket {
+public class ExMPCCRoomInfo extends ServerPacket {
     private final CommandChannelMatchingRoom _room;
 
     public ExMPCCRoomInfo(CommandChannelMatchingRoom room) {
@@ -18,7 +16,7 @@ public class ExMPCCRoomInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_MPCC_ROOM_INFO);
+        writeId(ServerPacketId.EX_MPCC_ROOM_INFO);
 
         writeInt(_room.getId());
         writeInt(_room.getMaxMembers());

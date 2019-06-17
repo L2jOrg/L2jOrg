@@ -16,9 +16,7 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
-
-public class RequestExEnchantItemAttribute extends IClientIncomingPacket {
+public class RequestExEnchantItemAttribute extends ClientPacket {
     private int _objectId;
     private long _count;
 

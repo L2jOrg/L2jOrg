@@ -4,9 +4,8 @@ import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.CropProcure;
 import org.l2j.gameserver.model.L2Seed;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -14,7 +13,7 @@ import java.util.Set;
 /**
  * @author l3x
  */
-public class ExShowCropSetting extends IClientOutgoingPacket {
+public class ExShowCropSetting extends ServerPacket {
     private final int _manorId;
     private final Set<L2Seed> _seeds;
     private final Map<Integer, CropProcure> _current = new HashMap<>();
@@ -40,7 +39,7 @@ public class ExShowCropSetting extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_CROP_SETTING);
+        writeId(ServerPacketId.EX_SHOW_CROP_SETTING);
 
         writeInt(_manorId); // manor id
         writeInt(_seeds.size()); // size

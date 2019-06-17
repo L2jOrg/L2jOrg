@@ -3,16 +3,15 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.SeedProduction;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author l3x
  */
-public final class BuyListSeed extends IClientOutgoingPacket {
+public final class BuyListSeed extends ServerPacket {
     private final int _manorId;
     private final long _money;
     private final List<SeedProduction> _list = new ArrayList<>();
@@ -30,7 +29,7 @@ public final class BuyListSeed extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.BUY_LIST_SEED);
+        writeId(ServerPacketId.BUY_LIST_SEED);
 
         writeLong(_money); // current money
         writeInt(0x00); // TODO: Find me!

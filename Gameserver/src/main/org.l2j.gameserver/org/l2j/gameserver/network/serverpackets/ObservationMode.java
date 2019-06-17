@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class ObservationMode extends IClientOutgoingPacket {
+public class ObservationMode extends ServerPacket {
     private final Location _loc;
 
     public ObservationMode(Location loc) {
@@ -15,7 +13,7 @@ public class ObservationMode extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.OBSERVER_START);
+        writeId(ServerPacketId.OBSERVER_START);
 
         writeInt(_loc.getX());
         writeInt(_loc.getY());

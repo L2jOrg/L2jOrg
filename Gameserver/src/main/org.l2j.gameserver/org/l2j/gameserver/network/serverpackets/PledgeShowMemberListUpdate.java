@@ -4,14 +4,12 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author -Wooden-
  */
-public final class PledgeShowMemberListUpdate extends IClientOutgoingPacket {
+public final class PledgeShowMemberListUpdate extends ServerPacket {
     private final int _pledgeType;
     private final String _name;
     private final int _level;
@@ -44,7 +42,7 @@ public final class PledgeShowMemberListUpdate extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_UPDATE);
+        writeId(ServerPacketId.PLEDGE_SHOW_MEMBER_LIST_UPDATE);
 
         writeString(_name);
         writeInt(_level);

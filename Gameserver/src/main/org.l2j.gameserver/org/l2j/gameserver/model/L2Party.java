@@ -15,7 +15,6 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.instance.L2ServitorInstance;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.stats.Stats;
@@ -215,7 +214,7 @@ public class L2Party extends AbstractPlayerGroup {
      * @param player
      * @param msg
      */
-    public void broadcastToPartyMembers(L2PcInstance player, IClientOutgoingPacket msg) {
+    public void broadcastToPartyMembers(L2PcInstance player, ServerPacket msg) {
         for (L2PcInstance member : _members) {
             if ((member != null) && (member.getObjectId() != player.getObjectId())) {
                 member.sendPacket(msg);

@@ -2,9 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * NpcQuestHtmlMessage server packet implementation.
@@ -21,7 +19,7 @@ public final class NpcQuestHtmlMessage extends AbstractHtmlPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_NPC_QUEST_HTML_MESSAGE);
+        writeId(ServerPacketId.EX_NPC_QUEST_HTML_MESSAGE);
 
         writeInt(getNpcObjId());
         writeString(getHtml());

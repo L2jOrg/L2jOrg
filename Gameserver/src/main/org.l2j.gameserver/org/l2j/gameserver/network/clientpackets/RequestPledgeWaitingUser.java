@@ -6,12 +6,10 @@ import org.l2j.gameserver.model.clan.entry.PledgeApplicantInfo;
 import org.l2j.gameserver.network.serverpackets.ExPledgeWaitingList;
 import org.l2j.gameserver.network.serverpackets.ExPledgeWaitingUser;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestPledgeWaitingUser extends IClientIncomingPacket {
+public class RequestPledgeWaitingUser extends ClientPacket {
     private int _clanId;
     private int _playerId;
 

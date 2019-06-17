@@ -6,9 +6,8 @@ import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +16,7 @@ import java.util.List;
  *
  * @author Zoey76
  */
-public class AcquireSkillInfo extends IClientOutgoingPacket {
+public class AcquireSkillInfo extends ServerPacket {
     private final AcquireSkillType _type;
     private final int _id;
     private final int _level;
@@ -67,7 +66,7 @@ public class AcquireSkillInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.ACQUIRE_SKILL_INFO);
+        writeId(ServerPacketId.ACQUIRE_SKILL_INFO);
 
         writeInt(_id);
         writeInt(_level);

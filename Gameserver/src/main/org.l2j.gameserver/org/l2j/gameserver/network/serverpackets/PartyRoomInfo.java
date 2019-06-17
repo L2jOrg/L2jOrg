@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.matching.PartyMatchingRoom;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Gnacik
  */
-public class PartyRoomInfo extends IClientOutgoingPacket {
+public class PartyRoomInfo extends ServerPacket {
     private final PartyMatchingRoom _room;
 
     public PartyRoomInfo(PartyMatchingRoom room) {
@@ -18,7 +16,7 @@ public class PartyRoomInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PARTY_ROOM_INFO);
+        writeId(ServerPacketId.PARTY_ROOM_INFO);
 
         writeInt(_room.getId());
         writeInt(_room.getMaxMembers());

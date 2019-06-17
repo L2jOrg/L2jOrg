@@ -5,12 +5,10 @@ import org.l2j.gameserver.instancemanager.ClanEntryManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ExPledgeRecruitApplyInfo;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestPledgeRecruitApplyInfo extends IClientIncomingPacket {
+public class RequestPledgeRecruitApplyInfo extends ClientPacket {
     @Override
     public void readImpl() {
 

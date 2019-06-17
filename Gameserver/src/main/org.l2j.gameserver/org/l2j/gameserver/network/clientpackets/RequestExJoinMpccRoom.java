@@ -4,12 +4,10 @@ import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestExJoinMpccRoom extends IClientIncomingPacket {
+public class RequestExJoinMpccRoom extends ClientPacket {
     private int _roomId;
 
     @Override

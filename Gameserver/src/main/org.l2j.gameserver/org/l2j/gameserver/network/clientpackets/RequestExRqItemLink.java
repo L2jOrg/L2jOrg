@@ -5,12 +5,10 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.serverpackets.ExRpItemLink;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author KenM
  */
-public class RequestExRqItemLink extends IClientIncomingPacket {
+public class RequestExRqItemLink extends ClientPacket {
     private int _objectId;
 
     @Override

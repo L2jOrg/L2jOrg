@@ -14,11 +14,9 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 import static org.l2j.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
 
-public final class RequestPrivateStoreSell extends IClientIncomingPacket {
+public final class RequestPrivateStoreSell extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestPrivateStoreSell.class);
     private int _storePlayerId;
     private ItemRequest[] _items = null;

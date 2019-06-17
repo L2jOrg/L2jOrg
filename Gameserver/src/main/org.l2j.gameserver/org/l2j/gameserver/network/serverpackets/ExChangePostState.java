@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Migi
  */
-public class ExChangePostState extends IClientOutgoingPacket {
+public class ExChangePostState extends ServerPacket {
     private final boolean _receivedBoard;
     private final int[] _changedMsgIds;
     private final int _changeId;
@@ -30,7 +28,7 @@ public class ExChangePostState extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_CHANGE_POST_STATE);
+        writeId(ServerPacketId.EX_CHANGE_POST_STATE);
 
         writeInt(_receivedBoard ? 1 : 0);
         writeInt(_changedMsgIds.length);

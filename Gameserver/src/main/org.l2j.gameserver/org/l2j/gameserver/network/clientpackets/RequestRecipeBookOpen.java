@@ -4,9 +4,7 @@ import org.l2j.gameserver.RecipeController;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
-
-public final class RequestRecipeBookOpen extends IClientIncomingPacket {
+public final class RequestRecipeBookOpen extends ClientPacket {
     private boolean _isDwarvenCraft;
 
     @Override

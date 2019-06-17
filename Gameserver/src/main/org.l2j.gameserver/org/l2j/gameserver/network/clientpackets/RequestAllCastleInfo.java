@@ -2,12 +2,10 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.network.serverpackets.ExShowCastleInfo;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author KenM
  */
-public class RequestAllCastleInfo extends IClientIncomingPacket {
+public class RequestAllCastleInfo extends ClientPacket {
     @Override
     public void readImpl() {
 

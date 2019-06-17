@@ -1,10 +1,10 @@
 package org.l2j.gameserver.network.clientpackets.elementalspirits;
 
 import org.l2j.gameserver.enums.UserInfoType;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 
-public class ExElementalSpiritChangeType extends IClientIncomingPacket {
+public class ExElementalSpiritChangeType extends ClientPacket {
 
     private byte element;
 

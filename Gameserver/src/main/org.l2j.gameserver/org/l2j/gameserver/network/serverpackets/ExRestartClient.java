@@ -2,15 +2,13 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author -Wooden-
  */
 @StaticPacket
-public class ExRestartClient extends IClientOutgoingPacket {
+public class ExRestartClient extends ServerPacket {
     public static final ExRestartClient STATIC_PACKET = new ExRestartClient();
 
     private ExRestartClient() {
@@ -18,7 +16,7 @@ public class ExRestartClient extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_RESTART_CLIENT);
+        writeId(ServerPacketId.EX_RESTART_CLIENT);
     }
 
 }

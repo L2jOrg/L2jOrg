@@ -16,14 +16,12 @@
  */
 package org.l2j.gameserver.network.clientpackets.dailymission;
 
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 
 /**
  * @author Mobius
  */
-public class RequestTodoListHTML extends IClientIncomingPacket {
+public class RequestTodoListHTML extends ClientPacket {
     @SuppressWarnings("unused")
     private int _tab;
     @SuppressWarnings("unused")

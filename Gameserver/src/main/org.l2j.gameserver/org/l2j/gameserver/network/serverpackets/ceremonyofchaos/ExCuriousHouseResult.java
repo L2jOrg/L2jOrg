@@ -4,15 +4,13 @@ import org.l2j.gameserver.enums.CeremonyOfChaosResult;
 import org.l2j.gameserver.instancemanager.CeremonyOfChaosManager;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author Sdw
  */
-public class ExCuriousHouseResult extends IClientOutgoingPacket {
+public class ExCuriousHouseResult extends ServerPacket {
     private final CeremonyOfChaosResult _result;
     private final CeremonyOfChaosEvent _event;
 
@@ -23,7 +21,7 @@ public class ExCuriousHouseResult extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_CURIOUS_HOUSE_RESULT);
+        writeId(ServerPacketId.EX_CURIOUS_HOUSE_RESULT);
         writeInt(_event.getId());
         writeShort((short) _result.ordinal());
         writeInt(CeremonyOfChaosManager.getInstance().getMaxPlayersInArena());

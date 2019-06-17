@@ -4,14 +4,12 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.serverpackets.SiegeDefenderList;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestSiegeDefenderList extends IClientIncomingPacket {
+public final class RequestSiegeDefenderList extends ClientPacket {
     private int _castleId;
 
     @Override

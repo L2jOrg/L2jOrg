@@ -3,14 +3,13 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.enums.StatusUpdateType;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-public final class StatusUpdate extends IClientOutgoingPacket {
+public final class StatusUpdate extends ServerPacket {
     private final int _objectId;
     private final boolean _isPlayable;
     private final Map<StatusUpdateType, Integer> _updates = new LinkedHashMap<>();
@@ -51,7 +50,7 @@ public final class StatusUpdate extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.STATUS_UPDATE);
+        writeId(ServerPacketId.STATUS_UPDATE);
 
         writeInt(_objectId); // casterId
         writeInt(_isVisible ? _casterObjectId : 0x00);

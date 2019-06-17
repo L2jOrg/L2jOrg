@@ -17,14 +17,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author mrTJO
  */
-public class Ex2ndPasswordAck extends IClientOutgoingPacket {
+public class Ex2ndPasswordAck extends ServerPacket {
     // TODO: Enum
     public static int SUCCESS = 0x00;
     public static int WRONG_PATTERN = 0x01;
@@ -38,7 +36,7 @@ public class Ex2ndPasswordAck extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_2ND_PASSWORD_ACK);
+        writeId(ServerPacketId.EX_2ND_PASSWORD_ACK);
 
         writeByte((byte) _status);
         writeInt(_response == WRONG_PATTERN ? 0x01 : 0x00);

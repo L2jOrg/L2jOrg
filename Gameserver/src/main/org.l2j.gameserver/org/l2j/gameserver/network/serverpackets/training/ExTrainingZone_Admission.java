@@ -3,15 +3,13 @@ package org.l2j.gameserver.network.serverpackets.training;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author Sdw
  */
-public class ExTrainingZone_Admission extends IClientOutgoingPacket {
+public class ExTrainingZone_Admission extends ServerPacket {
     private final long _timeElapsed;
     private final long _timeRemaining;
     private final double _maxExp;
@@ -26,7 +24,7 @@ public class ExTrainingZone_Admission extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_TRAINING_ZONE_ADMISSION);
+        writeId(ServerPacketId.EX_TRAINING_ZONE_ADMISSION);
         writeInt((int) _timeElapsed); // Training time elapsed in minutes, max : 600 - 10hr RU / 300 - 5hr NA
         writeInt((int) _timeRemaining); // Time remaining in seconds, max : 36000 - 10hr RU / 18000 - 5hr NA
         writeDouble(_maxExp); // Training time elapsed in minutes * this value = acquired exp IN GAME DOESN'T SEEM LIKE THE FIELD IS LIMITED

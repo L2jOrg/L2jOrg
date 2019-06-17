@@ -7,19 +7,17 @@ import org.l2j.gameserver.model.itemcontainer.PcInventory;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.attributechange.ExChangeAttributeFail;
 import org.l2j.gameserver.network.serverpackets.attributechange.ExChangeAttributeOk;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Mobius
  */
-public class RequestChangeAttributeItem extends IClientIncomingPacket {
+public class RequestChangeAttributeItem extends ClientPacket {
     private int _consumeItemId;
     private int _itemObjId;
     private int _newElementId;

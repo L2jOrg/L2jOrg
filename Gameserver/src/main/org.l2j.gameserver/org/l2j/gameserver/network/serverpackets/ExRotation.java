@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author JIV
  */
-public class ExRotation extends IClientOutgoingPacket {
+public class ExRotation extends ServerPacket {
     private final int _charId;
     private final int _heading;
 
@@ -19,7 +17,7 @@ public class ExRotation extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_ROTATION);
+        writeId(ServerPacketId.EX_ROTATION);
 
         writeInt(_charId);
         writeInt(_heading);

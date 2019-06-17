@@ -12,12 +12,10 @@ import org.l2j.gameserver.network.serverpackets.ExPledgeRecruitApplyInfo;
 import org.l2j.gameserver.network.serverpackets.ExPledgeWaitingListAlarm;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestPledgeWaitingApply extends IClientIncomingPacket {
+public class RequestPledgeWaitingApply extends ClientPacket {
     private int _karma;
     private int _clanId;
     private String _message;

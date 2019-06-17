@@ -10,9 +10,7 @@ import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 
-import java.nio.ByteBuffer;
-
-public class RequestExRemoveItemAttribute extends IClientIncomingPacket {
+public class RequestExRemoveItemAttribute extends ClientPacket {
     private int _objectId;
     private long _price;
     private byte _element;

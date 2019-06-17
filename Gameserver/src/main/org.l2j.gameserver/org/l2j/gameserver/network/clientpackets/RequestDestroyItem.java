@@ -18,7 +18,6 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
@@ -27,7 +26,7 @@ import java.sql.PreparedStatement;
  *
  * @version $Revision: 1.7.2.4.2.6 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestDestroyItem extends IClientIncomingPacket {
+public final class RequestDestroyItem extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestDestroyItem.class);
     private int _objectId;
     private long _count;

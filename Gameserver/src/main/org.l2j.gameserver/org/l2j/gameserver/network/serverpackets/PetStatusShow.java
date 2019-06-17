@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Yme
  */
-public class PetStatusShow extends IClientOutgoingPacket {
+public class PetStatusShow extends ServerPacket {
     private final int _summonType;
     private final int _summonObjectId;
 
@@ -20,7 +18,7 @@ public class PetStatusShow extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PET_STATUS_SHOW);
+        writeId(ServerPacketId.PET_STATUS_SHOW);
 
         writeInt(_summonType);
         writeInt(_summonObjectId);

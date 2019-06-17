@@ -4,16 +4,14 @@ import org.l2j.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.actor.instance.L2ServitorInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * This class ...
  *
  * @version $Revision: 1.5.2.3.2.5 $ $Date: 2005/03/29 23:15:10 $
  */
-public class PetStatusUpdate extends IClientOutgoingPacket {
+public class PetStatusUpdate extends ServerPacket {
     private final L2Summon _summon;
     private int _maxFed;
     private int _curFed;
@@ -33,7 +31,7 @@ public class PetStatusUpdate extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PET_STATUS_UPDATE);
+        writeId(ServerPacketId.PET_STATUS_UPDATE);
 
         writeInt(_summon.getSummonType());
         writeInt(_summon.getObjectId());

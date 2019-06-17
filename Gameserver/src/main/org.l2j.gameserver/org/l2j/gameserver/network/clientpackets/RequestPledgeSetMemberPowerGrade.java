@@ -8,14 +8,12 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format: (ch) Sd
  *
  * @author -Wooden-
  */
-public final class RequestPledgeSetMemberPowerGrade extends IClientIncomingPacket {
+public final class RequestPledgeSetMemberPowerGrade extends ClientPacket {
     private String _member;
     private int _powerGrade;
 

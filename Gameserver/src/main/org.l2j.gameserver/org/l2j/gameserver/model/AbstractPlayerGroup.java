@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import java.util.ArrayList;
@@ -93,7 +93,7 @@ public abstract class AbstractPlayerGroup {
      *
      * @param packet the packet to broadcast
      */
-    public void broadcastPacket(IClientOutgoingPacket packet) {
+    public void broadcastPacket(ServerPacket packet) {
         forEachMember(m ->
         {
             if (m != null) {

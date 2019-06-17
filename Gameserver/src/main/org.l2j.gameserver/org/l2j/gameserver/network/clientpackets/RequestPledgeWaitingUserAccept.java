@@ -9,12 +9,10 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestPledgeWaitingUserAccept extends IClientIncomingPacket {
+public class RequestPledgeWaitingUserAccept extends ClientPacket {
     private boolean _acceptRequest;
     private int _playerId;
     private int _clanId;

@@ -9,9 +9,7 @@ import org.l2j.gameserver.model.matching.CommandChannelMatchingRoom;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ListPartyWaiting;
 
-import java.nio.ByteBuffer;
-
-public final class RequestPartyMatchConfig extends IClientIncomingPacket {
+public final class RequestPartyMatchConfig extends ClientPacket {
     private int _page;
     private int _location;
     private PartyMatchingRoomLevelType _type;

@@ -4,12 +4,10 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.L2FriendSay;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.nio.ByteBuffer;
 
 
 /**
@@ -17,7 +15,7 @@ import java.nio.ByteBuffer;
  *
  * @author Tempy
  */
-public final class RequestSendFriendMsg extends IClientIncomingPacket {
+public final class RequestSendFriendMsg extends ClientPacket {
     private static Logger LOGGER_CHAT = LoggerFactory.getLogger("chat");
 
     private String _message;

@@ -4,17 +4,14 @@ import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.CropProcure;
 import org.l2j.gameserver.model.L2Seed;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.List;
-
-import static java.util.Objects.nonNull;
 
 /**
  * @author l3x
  */
-public class ExShowCropInfo extends IClientOutgoingPacket {
+public class ExShowCropInfo extends ServerPacket {
     private final List<CropProcure> _crops;
     private final int _manorId;
     private final boolean _hideButtons;
@@ -29,7 +26,7 @@ public class ExShowCropInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_CROP_INFO);
+        writeId(ServerPacketId.EX_SHOW_CROP_INFO);
 
         writeByte((byte)(_hideButtons ? 0x01 : 0x00)); // Hide "Crop Sales" button
         writeInt(_manorId); // Manor ID

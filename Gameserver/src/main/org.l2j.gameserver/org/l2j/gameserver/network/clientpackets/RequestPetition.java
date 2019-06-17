@@ -7,8 +7,6 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * <p>
  * Format: (c) Sd
@@ -20,7 +18,7 @@ import java.nio.ByteBuffer;
  *
  * @author -Wooden-, TempyIncursion
  */
-public final class RequestPetition extends IClientIncomingPacket {
+public final class RequestPetition extends ClientPacket {
     private String _content;
     private int _type; // 1 = on : 0 = off;
 

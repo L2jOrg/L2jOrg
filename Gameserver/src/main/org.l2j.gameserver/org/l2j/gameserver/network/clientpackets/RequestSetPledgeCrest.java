@@ -9,12 +9,10 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
-
 /**
  * Client packet for setting/deleting clan crest.
  */
-public final class RequestSetPledgeCrest extends IClientIncomingPacket {
+public final class RequestSetPledgeCrest extends ClientPacket {
     private int _length;
     private byte[] _data = null;
 

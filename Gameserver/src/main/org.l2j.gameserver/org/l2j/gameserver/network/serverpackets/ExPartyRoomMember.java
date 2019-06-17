@@ -6,9 +6,8 @@ import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.matching.PartyMatchingRoom;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
@@ -16,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author Gnacik
  */
-public class ExPartyRoomMember extends IClientOutgoingPacket {
+public class ExPartyRoomMember extends ServerPacket {
     private final PartyMatchingRoom _room;
     private final MatchingMemberType _type;
 
@@ -27,7 +26,7 @@ public class ExPartyRoomMember extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_PARTY_ROOM_MEMBER);
+        writeId(ServerPacketId.EX_PARTY_ROOM_MEMBER);
 
         writeInt(_type.ordinal());
         writeInt(_room.getMembersCount());

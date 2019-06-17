@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class Dice extends IClientOutgoingPacket {
+public class Dice extends ServerPacket {
     private final int _charObjId;
     private final int _itemId;
     private final int _number;
@@ -24,7 +22,7 @@ public class Dice extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.DICE);
+        writeId(ServerPacketId.DICE);
 
         writeInt(_charObjId); // object id of player
         writeInt(_itemId); // item id of dice (spade) 4625,4626,4627,4628

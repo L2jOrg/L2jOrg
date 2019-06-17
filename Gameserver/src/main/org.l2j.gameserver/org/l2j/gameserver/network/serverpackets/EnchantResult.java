@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class EnchantResult extends IClientOutgoingPacket {
+public class EnchantResult extends ServerPacket {
     public static int SUCCESS = 0;
     public static int FAIL = 1;
     public static int ERROR = 2;
@@ -37,7 +35,7 @@ public class EnchantResult extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.ENCHANT_RESULT);
+        writeId(ServerPacketId.ENCHANT_RESULT);
 
         writeInt(_result);
         writeInt(_crystal);

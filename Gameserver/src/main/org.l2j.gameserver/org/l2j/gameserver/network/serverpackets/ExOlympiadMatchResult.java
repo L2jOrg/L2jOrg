@@ -2,14 +2,14 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.olympiad.OlympiadInfo;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.List;
 
 /**
  * @author JIV
  */
-public class ExOlympiadMatchResult extends IClientOutgoingPacket {
+public class ExOlympiadMatchResult extends ServerPacket {
     private final boolean _tie;
     private final List<OlympiadInfo> _winnerList;
     private final List<OlympiadInfo> _loserList;
@@ -31,7 +31,7 @@ public class ExOlympiadMatchResult extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_RECEIVE_OLYMPIAD);
+        writeId(ServerPacketId.EX_RECEIVE_OLYMPIAD);
 
         writeInt(0x01); // Type 0 = Match List, 1 = Match Result
 

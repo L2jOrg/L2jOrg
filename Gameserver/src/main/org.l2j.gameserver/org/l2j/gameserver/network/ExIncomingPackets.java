@@ -412,10 +412,10 @@ public enum ExIncomingPackets implements PacketFactory {
 
     private final boolean hasExtension;
     private int _packetId;
-    private Supplier<IClientIncomingPacket> _incomingPacketFactory;
+    private Supplier<ClientPacket> _incomingPacketFactory;
     private Set<ConnectionState> _connectionStates;
 
-    ExIncomingPackets(int packetId, Supplier<IClientIncomingPacket> incomingPacketFactory, boolean hasExtension, ConnectionState... connectionStates) {
+    ExIncomingPackets(int packetId, Supplier<ClientPacket> incomingPacketFactory, boolean hasExtension, ConnectionState... connectionStates) {
         // packetId is an unsigned short
         if (packetId > 0xFFFF) {
             throw new IllegalArgumentException("packetId must not be bigger than 0xFFFF");
@@ -426,7 +426,7 @@ public enum ExIncomingPackets implements PacketFactory {
         this.hasExtension = hasExtension;
     }
 
-    ExIncomingPackets(int packetId, Supplier<IClientIncomingPacket> incomingPacketFactory, ConnectionState... connectionStates) {
+    ExIncomingPackets(int packetId, Supplier<ClientPacket> incomingPacketFactory, ConnectionState... connectionStates) {
         this(packetId, incomingPacketFactory, false, connectionStates);
     }
 
@@ -436,7 +436,7 @@ public enum ExIncomingPackets implements PacketFactory {
     }
 
     @Override
-    public IClientIncomingPacket newIncomingPacket() {
+    public ClientPacket newIncomingPacket() {
         return _incomingPacketFactory.get();
     }
 
@@ -478,9 +478,9 @@ public enum ExIncomingPackets implements PacketFactory {
 
     static class DynamicPacketFactory implements PacketFactory {
 
-        private final Supplier<IClientIncomingPacket> supplier;
+        private final Supplier<ClientPacket> supplier;
 
-        DynamicPacketFactory(Supplier<IClientIncomingPacket> supplier) {
+        DynamicPacketFactory(Supplier<ClientPacket> supplier) {
             this.supplier = supplier;
         }
 
@@ -490,7 +490,7 @@ public enum ExIncomingPackets implements PacketFactory {
         }
 
         @Override
-        public IClientIncomingPacket newIncomingPacket() {
+        public ClientPacket newIncomingPacket() {
             return supplier.get();
         }
     }

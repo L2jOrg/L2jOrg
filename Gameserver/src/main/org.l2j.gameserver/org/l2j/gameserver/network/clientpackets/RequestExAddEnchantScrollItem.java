@@ -8,12 +8,10 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPutEnchantScrollItemResult;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestExAddEnchantScrollItem extends IClientIncomingPacket {
+public class RequestExAddEnchantScrollItem extends ClientPacket {
     private int _scrollObjectId;
     private int _enchantObjectId;
 

@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class ShowCalculator extends IClientOutgoingPacket {
+public class ShowCalculator extends ServerPacket {
     private final int _calculatorId;
 
     public ShowCalculator(int calculatorId) {
@@ -14,7 +12,7 @@ public class ShowCalculator extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SHOW_CALC);
+        writeId(ServerPacketId.SHOW_CALC);
 
         writeInt(_calculatorId);
     }

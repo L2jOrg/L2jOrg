@@ -4,15 +4,14 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 /**
  * @author Tempy
  */
-public class GmViewQuestInfo extends IClientOutgoingPacket {
+public class GmViewQuestInfo extends ServerPacket {
     private final L2PcInstance _activeChar;
     private final List<Quest> _questList;
 
@@ -23,7 +22,7 @@ public class GmViewQuestInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.GM_VIEW_QUEST_INFO);
+        writeId(ServerPacketId.GM_VIEW_QUEST_INFO);
         writeString(_activeChar.getName());
         writeShort((short) _questList.size()); // quest count
 

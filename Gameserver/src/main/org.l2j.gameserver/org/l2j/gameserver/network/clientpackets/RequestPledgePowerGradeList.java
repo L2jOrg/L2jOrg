@@ -4,14 +4,12 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.PledgePowerGradeList;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format: (ch)
  *
  * @author -Wooden-
  */
-public final class RequestPledgePowerGradeList extends IClientIncomingPacket {
+public final class RequestPledgePowerGradeList extends ClientPacket {
     @Override
     public void readImpl() {
 

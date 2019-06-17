@@ -5,10 +5,9 @@ import org.l2j.gameserver.enums.LuckyGameResultType;
 import org.l2j.gameserver.enums.LuckyGameType;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
-import java.nio.ByteBuffer;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Map.Entry;
@@ -16,7 +15,7 @@ import java.util.Map.Entry;
 /**
  * @author Sdw
  */
-public class ExBettingLuckyGameResult extends IClientOutgoingPacket {
+public class ExBettingLuckyGameResult extends ServerPacket {
     public static final ExBettingLuckyGameResult NORMAL_INVALID_ITEM_COUNT = new ExBettingLuckyGameResult(LuckyGameResultType.INVALID_ITEM_COUNT, LuckyGameType.NORMAL);
     public static final ExBettingLuckyGameResult LUXURY_INVALID_ITEM_COUNT = new ExBettingLuckyGameResult(LuckyGameResultType.INVALID_ITEM_COUNT, LuckyGameType.LUXURY);
     public static final ExBettingLuckyGameResult NORMAL_INVALID_CAPACITY = new ExBettingLuckyGameResult(LuckyGameResultType.INVALID_CAPACITY, LuckyGameType.NORMAL);
@@ -46,7 +45,7 @@ public class ExBettingLuckyGameResult extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_BETTING_LUCKY_GAME_RESULT);
+        writeId(ServerPacketId.EX_BETTING_LUCKY_GAME_RESULT);
         writeInt(_result.getClientId());
         writeInt(_type.ordinal());
         writeInt(_ticketCount);

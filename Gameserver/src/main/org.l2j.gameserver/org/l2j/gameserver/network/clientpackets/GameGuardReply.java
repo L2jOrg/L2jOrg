@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.clientpackets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
@@ -13,7 +12,7 @@ import java.util.Arrays;
  *
  * @author KenM
  */
-public class GameGuardReply extends IClientIncomingPacket {
+public class GameGuardReply extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(GameGuardReply.class);
     private static final byte[] VALID =
             {

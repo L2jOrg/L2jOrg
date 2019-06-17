@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public final class CSShowComBoard extends IClientOutgoingPacket {
+public final class CSShowComBoard extends ServerPacket {
     private final byte[] _html;
 
     public CSShowComBoard(byte[] html) {
@@ -14,7 +12,7 @@ public final class CSShowComBoard extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SHOW_BOARD);
+        writeId(ServerPacketId.SHOW_BOARD);
 
         writeByte((byte) 0x01); // c4 1 to show community 00 to hide
         writeBytes(_html);

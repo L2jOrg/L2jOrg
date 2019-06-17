@@ -5,13 +5,12 @@ import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.actor.instance.L2ServitorInstance;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 
-import java.nio.ByteBuffer;
 import java.util.Set;
 
-public class PetInfo extends IClientOutgoingPacket {
+public class PetInfo extends ServerPacket {
     private final L2Summon _summon;
     private final int _val;
     private final int _runSpd;
@@ -68,7 +67,7 @@ public class PetInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PET_INFO);
+        writeId(ServerPacketId.PET_INFO);
 
         writeByte((byte) _summon.getSummonType());
         writeInt(_summon.getObjectId());

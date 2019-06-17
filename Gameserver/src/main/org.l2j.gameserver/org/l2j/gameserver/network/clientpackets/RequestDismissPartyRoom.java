@@ -4,12 +4,10 @@ import org.l2j.gameserver.enums.MatchingRoomType;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Gnacik
  */
-public class RequestDismissPartyRoom extends IClientIncomingPacket {
+public class RequestDismissPartyRoom extends ClientPacket {
     private int _roomid;
 
     @Override

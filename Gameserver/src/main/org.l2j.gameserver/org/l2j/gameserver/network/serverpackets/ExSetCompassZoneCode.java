@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author KenM
  */
-public class ExSetCompassZoneCode extends IClientOutgoingPacket {
+public class ExSetCompassZoneCode extends ServerPacket {
     // TODO: Enum
     public static final int ALTEREDZONE = 0x08;
     public static final int SIEGEWARZONE1 = 0x0A;
@@ -26,7 +24,7 @@ public class ExSetCompassZoneCode extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SET_COMPASS_ZONE_CODE);
+        writeId(ServerPacketId.EX_SET_COMPASS_ZONE_CODE);
 
         writeInt(_zoneType);
     }

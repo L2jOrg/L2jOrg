@@ -4,13 +4,12 @@ import org.l2j.gameserver.instancemanager.ClanEntryManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ExPledgeWaitingListApplied;
 
-import java.nio.ByteBuffer;
 import java.util.OptionalInt;
 
 /**
  * @author Sdw
  */
-public class RequestPledgeWaitingApplied extends IClientIncomingPacket {
+public class RequestPledgeWaitingApplied extends ClientPacket {
     @Override
     public void readImpl() {
 

@@ -4,12 +4,10 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Mobius
  */
-public class ExPCCafeRequestOpenWindowWithoutNPC extends IClientIncomingPacket {
+public class ExPCCafeRequestOpenWindowWithoutNPC extends ClientPacket {
     @Override
     public void readImpl() {
     }

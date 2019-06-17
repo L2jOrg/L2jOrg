@@ -3,14 +3,12 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Sdw
  */
-public class ExVitalityEffectInfo extends IClientOutgoingPacket {
+public class ExVitalityEffectInfo extends ServerPacket {
     private final int _vitalityBonus;
     private final int _vitalityItemsRemaining;
     private final int _points;
@@ -23,7 +21,7 @@ public class ExVitalityEffectInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_VITALITY_EFFECT_INFO);
+        writeId(ServerPacketId.EX_VITALITY_EFFECT_INFO);
 
         writeInt(_points);
         writeInt(_vitalityBonus); // Vitality Bonus

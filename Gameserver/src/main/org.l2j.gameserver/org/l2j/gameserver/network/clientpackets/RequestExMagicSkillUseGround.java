@@ -11,14 +11,12 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * Fromat:(ch) dddddc
  *
  * @author -Wooden-
  */
-public final class RequestExMagicSkillUseGround extends IClientIncomingPacket {
+public final class RequestExMagicSkillUseGround extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestExMagicSkillUseGround.class);
     private int _x;

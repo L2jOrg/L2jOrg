@@ -6,12 +6,10 @@ import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.model.matching.PartyMatchingRoom;
 import org.l2j.gameserver.network.serverpackets.PartyRoomInfo;
 
-import java.nio.ByteBuffer;
-
 /**
  * author: Gnacik
  */
-public class RequestPartyMatchList extends IClientIncomingPacket {
+public class RequestPartyMatchList extends ClientPacket {
     private int _roomId;
     private int _maxMembers;
     private int _minLevel;

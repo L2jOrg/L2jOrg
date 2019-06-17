@@ -7,10 +7,8 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-import java.util.Arrays;
 import java.util.Set;
 
 /**
@@ -180,7 +178,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType> {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_PET_INFO);
+        writeId(ServerPacketId.EX_PET_INFO);
 
         writeInt(_summon.getObjectId());
         writeByte((byte) _val); // // 0=teleported 1=default 2=summoned

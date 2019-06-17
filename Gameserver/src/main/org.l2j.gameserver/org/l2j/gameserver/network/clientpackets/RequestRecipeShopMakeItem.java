@@ -6,12 +6,10 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Administrator
  */
-public final class RequestRecipeShopMakeItem extends IClientIncomingPacket {
+public final class RequestRecipeShopMakeItem extends ClientPacket {
     private int _id;
     private int _recipeId;
     @SuppressWarnings("unused")

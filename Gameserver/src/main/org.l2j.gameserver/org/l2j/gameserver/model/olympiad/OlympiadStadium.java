@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.zone.type.L2OlympiadStadiumZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExOlympiadMatchEnd;
 import org.l2j.gameserver.network.serverpackets.ExOlympiadUserInfo;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -82,11 +82,11 @@ public class OlympiadStadium {
         }
     }
 
-    public final void broadcastPacket(IClientOutgoingPacket packet) {
+    public final void broadcastPacket(ServerPacket packet) {
         _instance.broadcastPacket(packet);
     }
 
-    public final void broadcastPacketToObservers(IClientOutgoingPacket packet) {
+    public final void broadcastPacketToObservers(ServerPacket packet) {
         for (L2PcInstance target : _instance.getPlayers()) {
             if (target.inObserverMode()) {
                 target.sendPacket(packet);

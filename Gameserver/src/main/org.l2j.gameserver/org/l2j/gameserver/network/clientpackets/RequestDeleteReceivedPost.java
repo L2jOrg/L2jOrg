@@ -10,12 +10,10 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExChangePostState;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Migi, DS
  */
-public final class RequestDeleteReceivedPost extends IClientIncomingPacket {
+public final class RequestDeleteReceivedPost extends ClientPacket {
     private static final int BATCH_LENGTH = 4; // length of the one item
 
     int[] _msgIds = null;

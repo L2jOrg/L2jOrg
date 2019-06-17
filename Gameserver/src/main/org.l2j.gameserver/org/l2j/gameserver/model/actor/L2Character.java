@@ -476,7 +476,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
      *
      * @param mov
      */
-    public void broadcastPacket(IClientOutgoingPacket mov) {
+    public void broadcastPacket(ServerPacket mov) {
         L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
         {
             if (isVisibleFor(player)) {
@@ -494,7 +494,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
      * @param mov
      * @param radiusInKnownlist
      */
-    public void broadcastPacket(IClientOutgoingPacket mov, int radiusInKnownlist) {
+    public void broadcastPacket(ServerPacket mov, int radiusInKnownlist) {
         L2World.getInstance().forEachVisibleObjectInRange(this, L2PcInstance.class, radiusInKnownlist, player ->
         {
             if (isVisibleFor(player)) {

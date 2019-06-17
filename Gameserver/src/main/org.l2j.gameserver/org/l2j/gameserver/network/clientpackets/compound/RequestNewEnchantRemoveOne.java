@@ -4,17 +4,15 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.request.CompoundRequest;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.compound.ExEnchantOneFail;
 import org.l2j.gameserver.network.serverpackets.compound.ExEnchantOneRemoveFail;
 import org.l2j.gameserver.network.serverpackets.compound.ExEnchantOneRemoveOK;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author UnAfraid
  */
-public class RequestNewEnchantRemoveOne extends IClientIncomingPacket {
+public class RequestNewEnchantRemoveOne extends ClientPacket {
     private int _objectId;
 
     @Override

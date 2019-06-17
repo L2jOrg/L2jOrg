@@ -6,9 +6,7 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2SiegeClan;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * Populates the Siege Defender List in the SiegeInfo Window<BR>
@@ -34,7 +32,7 @@ import java.nio.ByteBuffer;
  *
  * @author KenM
  */
-public final class SiegeDefenderList extends IClientOutgoingPacket {
+public final class SiegeDefenderList extends ServerPacket {
     private final Castle _castle;
 
     public SiegeDefenderList(Castle castle) {
@@ -43,7 +41,7 @@ public final class SiegeDefenderList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.CASTLE_SIEGE_DEFENDER_LIST);
+        writeId(ServerPacketId.CASTLE_SIEGE_DEFENDER_LIST);
 
         writeInt(_castle.getResidenceId());
         writeInt(0x00); // Unknown

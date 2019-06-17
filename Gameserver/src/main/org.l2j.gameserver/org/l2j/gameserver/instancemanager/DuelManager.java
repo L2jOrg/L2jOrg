@@ -20,7 +20,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.entity.Duel;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -150,7 +150,7 @@ public final class DuelManager {
      * @param player
      * @param packet
      */
-    public void broadcastToOppositTeam(L2PcInstance player, IClientOutgoingPacket packet) {
+    public void broadcastToOppositTeam(L2PcInstance player, ServerPacket packet) {
         if ((player == null) || !player.isInDuel()) {
             return;
         }

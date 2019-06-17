@@ -841,7 +841,7 @@ public abstract class L2Summon extends L2Playable {
     }
 
     @Override
-    public void sendPacket(IClientOutgoingPacket... packets) {
+    public void sendPacket(ServerPacket... packets) {
         if (_owner != null) {
             _owner.sendPacket(packets);
         }

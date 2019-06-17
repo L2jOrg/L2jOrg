@@ -5,14 +5,12 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format: (ch) dSdS
  *
  * @author -Wooden-
  */
-public final class RequestPledgeReorganizeMember extends IClientIncomingPacket {
+public final class RequestPledgeReorganizeMember extends ClientPacket {
     private int _isMemberSelected;
     private String _memberName;
     private int _newPledgeType;

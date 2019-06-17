@@ -9,14 +9,13 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author l3x
  */
-public final class RequestSetCrop extends IClientIncomingPacket {
+public final class RequestSetCrop extends ClientPacket {
     private static final int BATCH_LENGTH = 21; // length of the one item
 
     private int _manorId;

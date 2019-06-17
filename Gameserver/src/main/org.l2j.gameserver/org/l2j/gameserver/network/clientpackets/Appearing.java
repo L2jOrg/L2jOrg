@@ -3,8 +3,6 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 
-import java.nio.ByteBuffer;
-
 /**
  * Appearing Packet Handler
  * <p>
@@ -15,7 +13,7 @@ import java.nio.ByteBuffer;
  *
  * @version $Revision: 1.3.4.4 $ $Date: 2005/03/29 23:15:33 $
  */
-public final class Appearing extends IClientIncomingPacket {
+public final class Appearing extends ClientPacket {
     @Override
     public void readImpl() {
 

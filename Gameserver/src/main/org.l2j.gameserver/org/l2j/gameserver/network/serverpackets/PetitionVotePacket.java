@@ -2,15 +2,13 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Plim
  */
 @StaticPacket
-public class PetitionVotePacket extends IClientOutgoingPacket {
+public class PetitionVotePacket extends ServerPacket {
     public static final PetitionVotePacket STATIC_PACKET = new PetitionVotePacket();
 
     private PetitionVotePacket() {
@@ -18,7 +16,7 @@ public class PetitionVotePacket extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PETITION_VOTE);
+        writeId(ServerPacketId.PETITION_VOTE);
     }
 
 }

@@ -5,12 +5,10 @@ import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.network.serverpackets.ExIsCharNameCreatable;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author UnAfraid
  */
-public class RequestCharacterNameCreatable extends IClientIncomingPacket {
+public class RequestCharacterNameCreatable extends ClientPacket {
     public static int CHARACTER_CREATE_FAILED = 1;
     public static int NAME_ALREADY_EXISTS = 2;
     public static int INVALID_LENGTH = 3;

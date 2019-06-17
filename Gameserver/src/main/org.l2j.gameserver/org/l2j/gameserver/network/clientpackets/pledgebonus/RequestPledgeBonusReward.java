@@ -7,16 +7,14 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author UnAfraid
  */
-public class RequestPledgeBonusReward extends IClientIncomingPacket {
+public class RequestPledgeBonusReward extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestPledgeBonusReward.class);
     private int _type;

@@ -2,9 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
 
-import java.nio.ByteBuffer;
-
-public class RequestSkillCoolTime extends IClientIncomingPacket {
+public class RequestSkillCoolTime extends ClientPacket {
 
     @Override
     protected void runImpl() {

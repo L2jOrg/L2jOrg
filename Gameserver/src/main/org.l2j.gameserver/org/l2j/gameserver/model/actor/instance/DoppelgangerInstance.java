@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -164,7 +164,7 @@ public class DoppelgangerInstance extends L2Npc {
     }
 
     @Override
-    public void sendPacket(IClientOutgoingPacket... packets) {
+    public void sendPacket(ServerPacket... packets) {
         if (getSummoner() != null) {
             getSummoner().sendPacket(packets);
         }

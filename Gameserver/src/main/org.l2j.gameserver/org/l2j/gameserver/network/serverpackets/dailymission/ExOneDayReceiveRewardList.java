@@ -4,8 +4,8 @@ import org.l2j.gameserver.data.xml.impl.DailyMissionData;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.util.cron4j.Predictor;
 
 import java.util.Calendar;
@@ -16,7 +16,7 @@ import java.util.function.Function;
 /**
  * @author Sdw
  */
-public class ExOneDayReceiveRewardList extends IClientOutgoingPacket {
+public class ExOneDayReceiveRewardList extends ServerPacket {
     private static final Function<String, Long> remainTime = pattern -> (new Predictor(pattern).nextMatchingTime() - System.currentTimeMillis()) / 1000;
     private final L2PcInstance player;
     private final Collection<DailyMissionDataHolder> missions;
@@ -38,7 +38,7 @@ public class ExOneDayReceiveRewardList extends IClientOutgoingPacket {
             return;
         }
 
-        writeId(OutgoingPackets.EX_ONE_DAY_RECEIVE_REWARD_LIST);
+        writeId(ServerPacketId.EX_ONE_DAY_RECEIVE_REWARD_LIST);
 
         writeInt((int) dayRemainTime);
         writeInt((int) weekRemainTime);

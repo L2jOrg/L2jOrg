@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author Maktakien
  */
-public class AdminForgePacket extends IClientOutgoingPacket {
+public class AdminForgePacket extends ServerPacket {
     private final List<Part> _parts = new ArrayList<>();
 
     public AdminForgePacket() {

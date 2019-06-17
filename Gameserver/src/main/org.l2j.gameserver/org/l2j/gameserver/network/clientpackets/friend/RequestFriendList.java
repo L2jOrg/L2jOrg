@@ -4,17 +4,15 @@ import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-
-import java.nio.ByteBuffer;
 
 /**
  * This class ...
  *
  * @version $Revision: 1.3.4.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestFriendList extends IClientIncomingPacket {
+public final class RequestFriendList extends ClientPacket {
     @Override
     public void readImpl() {
     }

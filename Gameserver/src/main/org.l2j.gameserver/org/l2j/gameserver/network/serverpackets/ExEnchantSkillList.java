@@ -3,13 +3,12 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.enums.SkillEnchantType;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ExEnchantSkillList extends IClientOutgoingPacket {
+public class ExEnchantSkillList extends ServerPacket {
     private final SkillEnchantType _type;
     private final List<Skill> _skills = new LinkedList<>();
 
@@ -23,7 +22,7 @@ public class ExEnchantSkillList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_ENCHANT_SKILL_LIST);
+        writeId(ServerPacketId.EX_ENCHANT_SKILL_LIST);
 
         writeInt(_type.ordinal());
         writeInt(_skills.size());

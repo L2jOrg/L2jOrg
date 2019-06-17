@@ -8,12 +8,10 @@ import org.l2j.gameserver.network.serverpackets.SocialAction;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author JIV
  */
-public class AnswerCoupleAction extends IClientIncomingPacket {
+public class AnswerCoupleAction extends ClientPacket {
     private int _charObjId;
     private int _actionId;
     private int _answer;

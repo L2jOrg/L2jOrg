@@ -3,15 +3,14 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
 /**
  * @author -Wooden-
  */
-public class PledgeReceiveWarList extends IClientOutgoingPacket {
+public class PledgeReceiveWarList extends ServerPacket {
     private final L2Clan _clan;
     private final int _tab;
     private final Collection<ClanWar> _clanList;
@@ -24,7 +23,7 @@ public class PledgeReceiveWarList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PLEDGE_RECEIVE_WAR_LIST);
+        writeId(ServerPacketId.PLEDGE_RECEIVE_WAR_LIST);
 
         writeInt(_tab); // page
         writeInt(_clanList.size());

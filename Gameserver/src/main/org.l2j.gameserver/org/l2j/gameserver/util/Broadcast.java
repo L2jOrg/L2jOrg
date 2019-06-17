@@ -28,7 +28,7 @@ public final class Broadcast {
      * @param character
      * @param mov
      */
-    public static void toPlayersTargettingMyself(L2Character character, IClientOutgoingPacket mov) {
+    public static void toPlayersTargettingMyself(L2Character character, ServerPacket mov) {
         L2World.getInstance().forEachVisibleObject(character, L2PcInstance.class, player ->
         {
             if (player.getTarget() == character) {
@@ -47,7 +47,7 @@ public final class Broadcast {
      * @param character
      * @param mov
      */
-    public static void toKnownPlayers(L2Character character, IClientOutgoingPacket mov) {
+    public static void toKnownPlayers(L2Character character, ServerPacket mov) {
         L2World.getInstance().forEachVisibleObject(character, L2PcInstance.class, player ->
         {
             try {
@@ -88,7 +88,7 @@ public final class Broadcast {
      * @param mov
      * @param radius
      */
-    public static void toKnownPlayersInRadius(L2Character character, IClientOutgoingPacket mov, int radius) {
+    public static void toKnownPlayersInRadius(L2Character character, ServerPacket mov, int radius) {
         if (radius < 0) {
             radius = 1500;
         }
@@ -105,7 +105,7 @@ public final class Broadcast {
      * @param character
      * @param mov
      */
-    public static void toSelfAndKnownPlayers(L2Character character, IClientOutgoingPacket mov) {
+    public static void toSelfAndKnownPlayers(L2Character character, ServerPacket mov) {
         if (character.isPlayer()) {
             character.sendPacket(mov);
         }
@@ -114,7 +114,7 @@ public final class Broadcast {
     }
 
     // To improve performance we are comparing values of radius^2 instead of calculating sqrt all the time
-    public static void toSelfAndKnownPlayersInRadius(L2Character character, IClientOutgoingPacket mov, int radius) {
+    public static void toSelfAndKnownPlayersInRadius(L2Character character, ServerPacket mov, int radius) {
         if (radius < 0) {
             radius = 600;
         }
@@ -134,7 +134,7 @@ public final class Broadcast {
      *
      * @param packet
      */
-    public static void toAllOnlinePlayers(IClientOutgoingPacket packet) {
+    public static void toAllOnlinePlayers(ServerPacket packet) {
         for (L2PcInstance player : L2World.getInstance().getPlayers()) {
             if (player.isOnline()) {
                 player.sendPacket(packet);

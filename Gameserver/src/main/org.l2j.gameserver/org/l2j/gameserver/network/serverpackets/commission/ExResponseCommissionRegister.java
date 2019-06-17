@@ -2,16 +2,14 @@ package org.l2j.gameserver.network.serverpackets.commission;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author NosBit
  */
 @StaticPacket
-public class ExResponseCommissionRegister extends IClientOutgoingPacket {
+public class ExResponseCommissionRegister extends ServerPacket {
     public static final ExResponseCommissionRegister SUCCEED = new ExResponseCommissionRegister(1);
     public static final ExResponseCommissionRegister FAILED = new ExResponseCommissionRegister(0);
 
@@ -23,7 +21,7 @@ public class ExResponseCommissionRegister extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_RESPONSE_COMMISSION_REGISTER);
+        writeId(ServerPacketId.EX_RESPONSE_COMMISSION_REGISTER);
 
         writeInt(_result);
     }

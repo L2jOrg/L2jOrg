@@ -4,11 +4,9 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class GMViewPledgeInfo extends IClientOutgoingPacket {
+public class GMViewPledgeInfo extends ServerPacket {
     private final L2Clan _clan;
     private final L2PcInstance _activeChar;
 
@@ -19,7 +17,7 @@ public class GMViewPledgeInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.GM_VIEW_PLEDGE_INFO);
+        writeId(ServerPacketId.GM_VIEW_PLEDGE_INFO);
 
         writeInt(0x00);
         writeString(_activeChar.getName());

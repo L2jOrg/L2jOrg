@@ -5,9 +5,8 @@ import org.l2j.gameserver.model.TimeStamp;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +16,7 @@ import java.util.Map;
  *
  * @author KenM, Zoey76
  */
-public class SkillCoolTime extends IClientOutgoingPacket {
+public class SkillCoolTime extends ServerPacket {
     private final List<TimeStamp> _skillReuseTimeStamps = new ArrayList<>();
 
     public SkillCoolTime(L2PcInstance player) {
@@ -34,7 +33,7 @@ public class SkillCoolTime extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SKILL_COOL_TIME);
+        writeId(ServerPacketId.SKILL_COOL_TIME);
 
         writeInt(_skillReuseTimeStamps.size());
         for (TimeStamp ts : _skillReuseTimeStamps) {

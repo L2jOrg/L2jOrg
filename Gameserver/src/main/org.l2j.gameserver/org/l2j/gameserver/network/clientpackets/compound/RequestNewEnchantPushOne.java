@@ -6,17 +6,16 @@ import org.l2j.gameserver.model.actor.request.CompoundRequest;
 import org.l2j.gameserver.model.items.combination.CombinationItem;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.compound.ExEnchantOneFail;
 import org.l2j.gameserver.network.serverpackets.compound.ExEnchantOneOK;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 /**
  * @author UnAfraid
  */
-public class RequestNewEnchantPushOne extends IClientIncomingPacket {
+public class RequestNewEnchantPushOne extends ClientPacket {
     private int _objectId;
 
     @Override

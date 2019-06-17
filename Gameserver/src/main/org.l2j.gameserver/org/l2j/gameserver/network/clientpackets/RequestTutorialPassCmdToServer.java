@@ -7,9 +7,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerBypass;
 
-import java.nio.ByteBuffer;
-
-public class RequestTutorialPassCmdToServer extends IClientIncomingPacket {
+public class RequestTutorialPassCmdToServer extends ClientPacket {
     private String _bypass = null;
 
     @Override

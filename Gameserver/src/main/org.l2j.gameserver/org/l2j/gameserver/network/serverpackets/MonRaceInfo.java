@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class MonRaceInfo extends IClientOutgoingPacket {
+public class MonRaceInfo extends ServerPacket {
     private final int _unknown1;
     private final int _unknown2;
     private final L2Npc[] _monsters;
@@ -24,7 +22,7 @@ public class MonRaceInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.MON_RACE_INFO);
+        writeId(ServerPacketId.MON_RACE_INFO);
 
         writeInt(_unknown1);
         writeInt(_unknown2);

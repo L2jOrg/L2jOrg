@@ -19,7 +19,6 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 /**
@@ -27,7 +26,7 @@ import java.util.List;
  *
  * @version $Revision: 1.2.2.3.2.5 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestCrystallizeItem extends IClientIncomingPacket {
+public final class RequestCrystallizeItem extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestCrystallizeItem.class);
     private int _objectId;
     private long _count;

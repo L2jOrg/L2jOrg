@@ -1,9 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * Eva's Inferno event packet. info params: <br>
@@ -11,7 +9,7 @@ import java.nio.ByteBuffer;
  * value (depending on type: for type 1 - % value; for type 2 - 20573-20575), <br>
  * state (0-1), endtime (only when type 2)
  */
-public class ExBrBuffEventState extends IClientOutgoingPacket {
+public class ExBrBuffEventState extends ServerPacket {
     private final int _type; // 1 - %, 2 - npcId
     private final int _value; // depending on type: for type 1 - % value; for type 2 - 20573-20575
     private final int _state; // 0-1
@@ -26,7 +24,7 @@ public class ExBrBuffEventState extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_BR_BUFF_EVENT_STATE);
+        writeId(ServerPacketId.EX_BR_BUFF_EVENT_STATE);
 
         writeInt(_type);
         writeInt(_value);

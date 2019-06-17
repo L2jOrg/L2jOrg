@@ -11,9 +11,7 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.MoveToLocationInVehicle;
 import org.l2j.gameserver.network.serverpackets.StopMoveInVehicle;
 
-import java.nio.ByteBuffer;
-
-public final class RequestMoveToLocationInVehicle extends IClientIncomingPacket {
+public final class RequestMoveToLocationInVehicle extends ClientPacket {
     private int _boatId;
     private int _targetX;
     private int _targetY;

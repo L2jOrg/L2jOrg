@@ -7,12 +7,10 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.Skill;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author KenM
  */
-public class RequestDispel extends IClientIncomingPacket {
+public class RequestDispel extends ClientPacket {
     private int _objectId;
     private int _skillId;
     private int _skillLevel;

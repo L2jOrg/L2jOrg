@@ -14,7 +14,6 @@ import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.holders.MultisellEntryHolder;
 import org.l2j.gameserver.model.holders.PreparedMultisellListHolder;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.L2Item;
@@ -28,7 +27,6 @@ import org.l2j.gameserver.network.serverpackets.UserInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -39,7 +37,7 @@ import java.util.stream.Collectors;
 /**
  * The Class MultiSellChoose.
  */
-public class MultiSellChoose extends IClientIncomingPacket {
+public class MultiSellChoose extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(MultiSellChoose.class);
 
     private int _listId;

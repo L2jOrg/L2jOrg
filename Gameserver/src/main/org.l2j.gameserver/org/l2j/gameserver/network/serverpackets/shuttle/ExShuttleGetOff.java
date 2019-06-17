@@ -3,15 +3,13 @@ package org.l2j.gameserver.network.serverpackets.shuttle;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.instance.L2ShuttleInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author UnAfraid
  */
-public class ExShuttleGetOff extends IClientOutgoingPacket {
+public class ExShuttleGetOff extends ServerPacket {
     private final int _playerObjectId;
     private final int _shuttleObjectId;
     private final int _x;
@@ -28,7 +26,7 @@ public class ExShuttleGetOff extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SUTTLE_GET_OFF);
+        writeId(ServerPacketId.EX_SUTTLE_GET_OFF);
 
         writeInt(_playerObjectId);
         writeInt(_shuttleObjectId);

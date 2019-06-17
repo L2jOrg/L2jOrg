@@ -5,16 +5,15 @@ import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.CropProcure;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * @author l3x
  */
-public class ExShowProcureCropDetail extends IClientOutgoingPacket {
+public class ExShowProcureCropDetail extends ServerPacket {
     private final int _cropId;
     private final Map<Integer, CropProcure> _castleCrops = new HashMap<>();
 
@@ -31,7 +30,7 @@ public class ExShowProcureCropDetail extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_PROCURE_CROP_DETAIL);
+        writeId(ServerPacketId.EX_SHOW_PROCURE_CROP_DETAIL);
 
         writeInt(_cropId); // crop id
         writeInt(_castleCrops.size()); // size

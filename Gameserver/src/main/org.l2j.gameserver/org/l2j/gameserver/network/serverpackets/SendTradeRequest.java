@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class SendTradeRequest extends IClientOutgoingPacket {
+public class SendTradeRequest extends ServerPacket {
     private final int _senderId;
 
     public SendTradeRequest(int senderId) {
@@ -14,7 +12,7 @@ public class SendTradeRequest extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.TRADE_REQUEST);
+        writeId(ServerPacketId.TRADE_REQUEST);
 
         writeInt(_senderId);
     }

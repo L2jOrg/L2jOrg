@@ -5,7 +5,6 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +13,7 @@ import java.util.List;
  *
  * @author -Wooden-
  */
-public final class RequestSaveInventoryOrder extends IClientIncomingPacket {
+public final class RequestSaveInventoryOrder extends ClientPacket {
     /**
      * client limit
      */

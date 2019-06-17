@@ -4,14 +4,12 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.RecipeShopSellList;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.1.2.1.2.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestRecipeShopManagePrev extends IClientIncomingPacket {
+public final class RequestRecipeShopManagePrev extends ClientPacket {
     @Override
     public void readImpl() {
 

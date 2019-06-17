@@ -2,16 +2,14 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.List;
-import java.util.stream.Stream;
 
 /**
  * @author mrTJO
  */
-public class ExCubeGameTeamList extends IClientOutgoingPacket {
+public class ExCubeGameTeamList extends ServerPacket {
     // Players Lists
     private final List<L2PcInstance> _bluePlayers;
     private final List<L2PcInstance> _redPlayers;
@@ -34,7 +32,7 @@ public class ExCubeGameTeamList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_BLOCK_UP_SET_LIST);
+        writeId(ServerPacketId.EX_BLOCK_UP_SET_LIST);
 
         writeInt(0x00);
 

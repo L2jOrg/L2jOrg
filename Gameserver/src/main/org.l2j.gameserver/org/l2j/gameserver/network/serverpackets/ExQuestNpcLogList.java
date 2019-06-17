@@ -3,16 +3,15 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.holders.NpcLogListHolder;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.NpcStringId;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author UnAfraid
  */
-public class ExQuestNpcLogList extends IClientOutgoingPacket {
+public class ExQuestNpcLogList extends ServerPacket {
     private final int _questId;
     private final List<NpcLogListHolder> _npcLogList = new ArrayList<>();
 
@@ -34,7 +33,7 @@ public class ExQuestNpcLogList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_QUEST_NPC_LOG_LIST);
+        writeId(ServerPacketId.EX_QUEST_NPC_LOG_LIST);
 
         writeInt(_questId);
         writeByte((byte) _npcLogList.size());

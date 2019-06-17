@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class TutorialEnableClientEvent extends IClientOutgoingPacket {
+public class TutorialEnableClientEvent extends ServerPacket {
     private int _eventId = 0;
 
     public TutorialEnableClientEvent(int event) {
@@ -14,7 +12,7 @@ public class TutorialEnableClientEvent extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.TUTORIAL_ENABLE_CLIENT_EVENT);
+        writeId(ServerPacketId.TUTORIAL_ENABLE_CLIENT_EVENT);
 
         writeInt(_eventId);
     }

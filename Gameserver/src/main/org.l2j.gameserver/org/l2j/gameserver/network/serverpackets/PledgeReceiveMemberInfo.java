@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.L2ClanMember;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author -Wooden-
  */
-public class PledgeReceiveMemberInfo extends IClientOutgoingPacket {
+public class PledgeReceiveMemberInfo extends ServerPacket {
     private final L2ClanMember _member;
 
     public PledgeReceiveMemberInfo(L2ClanMember member) {
@@ -18,7 +16,7 @@ public class PledgeReceiveMemberInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PLEDGE_RECEIVE_MEMBER_INFO);
+        writeId(ServerPacketId.PLEDGE_RECEIVE_MEMBER_INFO);
 
         writeInt(_member.getPledgeType());
         writeString(_member.getName());

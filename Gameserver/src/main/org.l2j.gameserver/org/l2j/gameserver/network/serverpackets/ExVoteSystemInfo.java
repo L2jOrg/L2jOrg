@@ -2,16 +2,14 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * ExVoteSystemInfo packet implementation.
  *
  * @author Gnacik
  */
-public class ExVoteSystemInfo extends IClientOutgoingPacket {
+public class ExVoteSystemInfo extends ServerPacket {
     private final int _recomLeft;
     private final int _recomHave;
     private final int _bonusTime;
@@ -28,7 +26,7 @@ public class ExVoteSystemInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_VOTE_SYSTEM_INFO);
+        writeId(ServerPacketId.EX_VOTE_SYSTEM_INFO);
 
         writeInt(_recomLeft);
         writeInt(_recomHave);

@@ -8,16 +8,14 @@ import org.l2j.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.attendance.ExConfirmVipAttendanceCheck;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author Mobius
  */
-public class RequestVipAttendanceCheck extends IClientIncomingPacket {
+public class RequestVipAttendanceCheck extends ClientPacket {
     @Override
     public void readImpl() {
     }

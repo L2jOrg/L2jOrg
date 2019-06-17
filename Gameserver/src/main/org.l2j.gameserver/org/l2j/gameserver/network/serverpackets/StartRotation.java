@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public final class StartRotation extends IClientOutgoingPacket {
+public final class StartRotation extends ServerPacket {
     private final int _charObjId;
     private final int _degree;
     private final int _side;
@@ -20,7 +18,7 @@ public final class StartRotation extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.START_ROTATING);
+        writeId(ServerPacketId.START_ROTATING);
 
         writeInt(_charObjId);
         writeInt(_degree);

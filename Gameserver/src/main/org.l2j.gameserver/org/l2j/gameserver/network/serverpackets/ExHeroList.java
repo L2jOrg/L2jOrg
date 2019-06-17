@@ -4,15 +4,14 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Map;
 
 /**
  * @author -Wooden-, KenM, godson
  */
-public class ExHeroList extends IClientOutgoingPacket {
+public class ExHeroList extends ServerPacket {
     private final Map<Integer, StatsSet> _heroList;
 
     public ExHeroList() {
@@ -21,7 +20,7 @@ public class ExHeroList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_HERO_LIST);
+        writeId(ServerPacketId.EX_HERO_LIST);
 
         writeInt(_heroList.size());
         for (Integer heroId : _heroList.keySet()) {

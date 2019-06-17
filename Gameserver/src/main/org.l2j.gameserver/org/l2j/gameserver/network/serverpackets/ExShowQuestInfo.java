@@ -2,15 +2,13 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Luca Baldi
  */
 @StaticPacket
-public class ExShowQuestInfo extends IClientOutgoingPacket {
+public class ExShowQuestInfo extends ServerPacket {
     public static final ExShowQuestInfo STATIC_PACKET = new ExShowQuestInfo();
 
     private ExShowQuestInfo() {
@@ -18,7 +16,7 @@ public class ExShowQuestInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_QUEST_INFO);
+        writeId(ServerPacketId.EX_SHOW_QUEST_INFO);
 
     }
 

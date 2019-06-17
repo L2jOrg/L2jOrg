@@ -4,14 +4,12 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ExConfirmAddingContact;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format: (ch)S S: Character Name
  *
  * @author UnAfraid & mrTJO
  */
-public class RequestExAddContactToContactList extends IClientIncomingPacket {
+public class RequestExAddContactToContactList extends ClientPacket {
     private String _name;
 
     @Override

@@ -3,10 +3,8 @@ package org.l2j.gameserver.network.serverpackets.friend;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * Support for "Chat with Friends" dialog. <br />
@@ -14,7 +12,7 @@ import java.nio.ByteBuffer;
  *
  * @author JIV
  */
-public class L2Friend extends IClientOutgoingPacket {
+public class L2Friend extends ServerPacket {
     private final boolean _action;
     private final boolean _online;
     private final int _objid;
@@ -33,7 +31,7 @@ public class L2Friend extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.L2_FRIEND);
+        writeId(ServerPacketId.L2_FRIEND);
 
         writeInt(_action ? 1 : 3); // 1-add 3-remove
         writeInt(_objid);

@@ -1,18 +1,16 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Kerberos
  */
-public class AcquireSkillDone extends IClientOutgoingPacket {
+public class AcquireSkillDone extends ServerPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.ACQUIRE_SKILL_DONE);
+        writeId(ServerPacketId.ACQUIRE_SKILL_DONE);
     }
 
 }

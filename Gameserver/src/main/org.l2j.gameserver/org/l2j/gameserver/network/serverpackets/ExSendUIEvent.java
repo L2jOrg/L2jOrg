@@ -3,15 +3,12 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.NpcStringId;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Arrays;
 import java.util.List;
 
-import static java.util.Objects.nonNull;
-
-public class ExSendUIEvent extends IClientOutgoingPacket {
+public class ExSendUIEvent extends ServerPacket {
     // UI Types
     public static int TYPE_COUNT_DOWN = 0;
     public static int TYPE_REMOVE = 1;
@@ -104,7 +101,7 @@ public class ExSendUIEvent extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SEND_UIEVENT);
+        writeId(ServerPacketId.EX_SEND_UIEVENT);
 
         writeInt(_objectId);
         writeInt(_type); // 0 = show, 1 = hide (there is 2 = pause and 3 = resume also but they don't work well you can only pause count down and you cannot resume it because resume hides the counter).

@@ -5,12 +5,10 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerChangeToAwakenedClass;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestChangeToAwakenedClass extends IClientIncomingPacket {
+public class RequestChangeToAwakenedClass extends ClientPacket {
     private boolean _change;
 
     @Override

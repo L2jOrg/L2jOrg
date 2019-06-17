@@ -4,14 +4,12 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.StartRotation;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.1.4.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class StartRotating extends IClientIncomingPacket {
+public final class StartRotating extends ClientPacket {
     private int _degree;
     private int _side;
 

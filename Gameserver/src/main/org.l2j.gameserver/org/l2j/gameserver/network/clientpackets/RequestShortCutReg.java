@@ -4,7 +4,7 @@ import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.Shortcut;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 
-public final class RequestShortCutReg extends IClientIncomingPacket {
+public final class RequestShortCutReg extends ClientPacket {
     private ShortcutType _type;
     private int _id;
     private int _slot;

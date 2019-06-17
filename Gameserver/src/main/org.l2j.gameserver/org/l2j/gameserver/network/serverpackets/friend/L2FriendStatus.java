@@ -2,10 +2,8 @@ package org.l2j.gameserver.network.serverpackets.friend;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * Support for "Chat with Friends" dialog. <br />
@@ -13,7 +11,7 @@ import java.nio.ByteBuffer;
  *
  * @author JIV
  */
-public class L2FriendStatus extends IClientOutgoingPacket {
+public class L2FriendStatus extends ServerPacket {
     public static final int MODE_OFFLINE = 0;
     public static final int MODE_ONLINE = 1;
     public static final int MODE_LEVEL = 2;
@@ -35,7 +33,7 @@ public class L2FriendStatus extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.FRIEND_STATUS);
+        writeId(ServerPacketId.FRIEND_STATUS);
 
         writeInt(_type);
         writeString(_name);

@@ -6,12 +6,10 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.ClientHardwareInfoHolder;
 import org.l2j.gameserver.network.Disconnection;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Mobius
  */
-public final class RequestHardWareInfo extends IClientIncomingPacket {
+public final class RequestHardWareInfo extends ClientPacket {
     private String _macAddress;
     private int _windowsPlatformId;
     private int _windowsMajorVersion;

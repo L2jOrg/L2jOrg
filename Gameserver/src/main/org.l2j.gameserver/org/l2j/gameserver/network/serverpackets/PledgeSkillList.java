@@ -3,14 +3,12 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author -Wooden-
  */
-public class PledgeSkillList extends IClientOutgoingPacket {
+public class PledgeSkillList extends ServerPacket {
     private final Skill[] _skills;
     private final SubPledgeSkill[] _subSkills;
 
@@ -21,7 +19,7 @@ public class PledgeSkillList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PLEDGE_SKILL_LIST);
+        writeId(ServerPacketId.PLEDGE_SKILL_LIST);
 
         writeInt(_skills.length);
         writeInt(_subSkills.length); // Squad skill length

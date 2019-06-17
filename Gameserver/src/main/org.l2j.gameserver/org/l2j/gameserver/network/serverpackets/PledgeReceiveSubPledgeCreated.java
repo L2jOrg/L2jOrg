@@ -2,14 +2,16 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author -Wooden-
  */
-public class PledgeReceiveSubPledgeCreated extends IClientOutgoingPacket {
+public class PledgeReceiveSubPledgeCreated extends ServerPacket {
+    private static final Logger LOGGER = LoggerFactory.getLogger(PledgeReceiveSubPledgeCreated.class);
+
     private final L2Clan.SubPledge _subPledge;
     private final L2Clan _clan;
 
@@ -20,7 +22,7 @@ public class PledgeReceiveSubPledgeCreated extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PLEDGE_RECEIVE_SUB_PLEDGE_CREATED);
+        writeId(ServerPacketId.PLEDGE_RECEIVE_SUB_PLEDGE_CREATED);
 
         writeInt(0x01);
         writeInt(_subPledge.getId());

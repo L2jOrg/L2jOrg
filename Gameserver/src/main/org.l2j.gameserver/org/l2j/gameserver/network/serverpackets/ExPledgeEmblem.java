@@ -1,18 +1,15 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.settings.ServerSettings;
 
-import java.nio.ByteBuffer;
-
-import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author -Wooden-, Sdw
  */
-public class ExPledgeEmblem extends IClientOutgoingPacket {
+public class ExPledgeEmblem extends ServerPacket {
     private static final int TOTAL_SIZE = 65664;
     private final int _crestId;
     private final int _clanId;
@@ -28,7 +25,7 @@ public class ExPledgeEmblem extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_PLEDGE_EMBLEM);
+        writeId(ServerPacketId.EX_PLEDGE_EMBLEM);
 
         writeInt(getSettings(ServerSettings.class).serverId());
         writeInt(_clanId);

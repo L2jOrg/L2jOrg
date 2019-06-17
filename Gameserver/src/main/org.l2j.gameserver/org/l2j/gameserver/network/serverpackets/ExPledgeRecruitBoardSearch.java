@@ -3,15 +3,14 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.clan.entry.PledgeRecruitInfo;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 /**
  * @author Sdw
  */
-public class ExPledgeRecruitBoardSearch extends IClientOutgoingPacket {
+public class ExPledgeRecruitBoardSearch extends ServerPacket {
     static final int CLAN_PER_PAGE = 12;
     final List<PledgeRecruitInfo> _clanList;
     private final int _currentPage;
@@ -31,7 +30,7 @@ public class ExPledgeRecruitBoardSearch extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_PLEDGE_RECRUIT_BOARD_SEARCH);
+        writeId(ServerPacketId.EX_PLEDGE_RECRUIT_BOARD_SEARCH);
 
         writeInt(_currentPage);
         writeInt(_totalNumberOfPage);

@@ -11,12 +11,10 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Unknown, UnAfraid
  */
-public final class RequestAutoSoulShot extends IClientIncomingPacket {
+public final class RequestAutoSoulShot extends ClientPacket {
     private int _itemId;
     private boolean _enable;
     private int _type;

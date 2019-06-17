@@ -5,9 +5,7 @@ import org.l2j.gameserver.model.L2ClanMember;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
-
-public class RequestGiveNickName extends IClientIncomingPacket {
+public class RequestGiveNickName extends ClientPacket {
     private String _target;
     private String _title;
 

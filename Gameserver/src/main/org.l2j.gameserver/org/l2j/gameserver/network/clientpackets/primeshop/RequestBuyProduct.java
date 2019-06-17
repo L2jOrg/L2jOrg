@@ -5,17 +5,16 @@ import org.l2j.gameserver.data.database.dao.PrimeShopDAO;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
 import org.l2j.gameserver.network.serverpackets.primeshop.ExBRBuyProduct.ExBrProductReplyType;
-import org.l2j.gameserver.network.serverpackets.primeshop.ExBRProductList;
 import org.l2j.gameserver.util.Util;
 
 import java.util.Calendar;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
-public abstract class RequestBuyProduct extends IClientIncomingPacket {
+public abstract class RequestBuyProduct extends ClientPacket {
 
     private static final int HERO_COINS = 23805;
 

@@ -5,9 +5,7 @@ import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
-import java.nio.ByteBuffer;
-
-public class RequestTutorialLinkHtml extends IClientIncomingPacket {
+public class RequestTutorialLinkHtml extends ClientPacket {
     private String _bypass;
 
     @Override

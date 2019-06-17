@@ -4,7 +4,6 @@ import io.github.joealisson.mmocore.PacketBuffer;
 import org.l2j.gameserver.network.clientpackets.*;
 import org.l2j.gameserver.network.clientpackets.friend.*;
 
-import java.nio.ByteBuffer;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -199,11 +198,11 @@ public enum IncomingPackets implements PacketFactory {
     }
 
     private short _packetId;
-    private Supplier<IClientIncomingPacket> _incomingPacketFactory;
+    private Supplier<ClientPacket> _incomingPacketFactory;
     private Set<ConnectionState> _connectionStates;
     private boolean hasExtension;
 
-    IncomingPackets(int packetId, Supplier<IClientIncomingPacket> incomingPacketFactory, boolean hasExtension, ConnectionState... connectionStates) {
+    IncomingPackets(int packetId, Supplier<ClientPacket> incomingPacketFactory, boolean hasExtension, ConnectionState... connectionStates) {
         // packetId is an unsigned byte
         if (packetId > 0xFF) {
             throw new IllegalArgumentException("packetId must not be bigger than 0xFF");
@@ -215,7 +214,7 @@ public enum IncomingPackets implements PacketFactory {
         this.hasExtension = hasExtension;
     }
 
-    IncomingPackets(int packetId, Supplier<IClientIncomingPacket> incomingPacketFactory, ConnectionState... connectionStates) {
+    IncomingPackets(int packetId, Supplier<ClientPacket> incomingPacketFactory, ConnectionState... connectionStates) {
         this(packetId, incomingPacketFactory, false, connectionStates);
     }
 
@@ -225,7 +224,7 @@ public enum IncomingPackets implements PacketFactory {
     }
 
     @Override
-    public IClientIncomingPacket newIncomingPacket() {
+    public ClientPacket newIncomingPacket() {
         return _incomingPacketFactory.get();
     }
 

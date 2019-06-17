@@ -23,7 +23,7 @@ import java.util.Arrays;
  *
  * @author Zoey76
  */
-public final class RequestActionUse extends IClientIncomingPacket {
+public final class RequestActionUse extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestActionUse.class);
 
     private int _actionId;

@@ -9,20 +9,19 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.crystalization.ExGetCrystalizingEstimation;
 import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 /**
  * @author UnAfraid
  */
-public class RequestCrystallizeEstimate extends IClientIncomingPacket {
+public class RequestCrystallizeEstimate extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestCrystallizeEstimate.class);
 

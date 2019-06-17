@@ -5,15 +5,18 @@ import org.l2j.gameserver.enums.TaxType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
 /**
  * @author KenM
  */
-public class ExShowCastleInfo extends IClientOutgoingPacket {
+public class ExShowCastleInfo extends ServerPacket {
+    private static final Logger LOGGER = LoggerFactory.getLogger(ExShowCastleInfo.class);
+
     public static final ExShowCastleInfo STATIC_PACKET = new ExShowCastleInfo();
 
     private ExShowCastleInfo() {
@@ -21,7 +24,7 @@ public class ExShowCastleInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_CASTLE_INFO);
+        writeId(ServerPacketId.EX_SHOW_CASTLE_INFO);
 
         final Collection<Castle> castles = CastleManager.getInstance().getCastles();
         writeInt(castles.size());

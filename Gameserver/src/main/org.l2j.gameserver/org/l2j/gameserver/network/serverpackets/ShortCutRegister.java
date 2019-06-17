@@ -2,9 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.Shortcut;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-public final class ShortCutRegister extends IClientOutgoingPacket {
+public final class ShortCutRegister extends ServerPacket {
     private final Shortcut _shortcut;
 
     /**
@@ -18,7 +18,7 @@ public final class ShortCutRegister extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SHORT_CUT_REGISTER);
+        writeId(ServerPacketId.SHORT_CUT_REGISTER);
 
         writeInt(_shortcut.getType().ordinal());
         writeInt(_shortcut.getSlot() + (_shortcut.getPage() * 12)); // C4 Client

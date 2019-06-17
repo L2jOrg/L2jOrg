@@ -2,9 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
-import java.nio.ByteBuffer;
-
-public final class RequestDeleteMacro extends IClientIncomingPacket {
+public final class RequestDeleteMacro extends ClientPacket {
     private int _id;
 
     @Override

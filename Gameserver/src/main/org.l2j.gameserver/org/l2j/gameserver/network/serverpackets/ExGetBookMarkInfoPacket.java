@@ -3,14 +3,12 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.TeleportBookmark;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author ShanSoft
  */
-public class ExGetBookMarkInfoPacket extends IClientOutgoingPacket {
+public class ExGetBookMarkInfoPacket extends ServerPacket {
     private final L2PcInstance player;
 
     public ExGetBookMarkInfoPacket(L2PcInstance cha) {
@@ -19,7 +17,7 @@ public class ExGetBookMarkInfoPacket extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_GET_BOOK_MARK_INFO);
+        writeId(ServerPacketId.EX_GET_BOOK_MARK_INFO);
 
         writeInt(0x00); // Dummy
         writeInt(player.getBookmarkslot());

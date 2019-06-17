@@ -2,10 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
 import java.awt.*;
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +14,7 @@ import java.util.List;
  *
  * @author NosBit
  */
-public class ExServerPrimitive extends IClientOutgoingPacket {
+public class ExServerPrimitive extends ServerPacket {
     private final String _name;
     private final int _x;
     private final int _y;
@@ -366,7 +365,7 @@ public class ExServerPrimitive extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SERVER_PRIMITIVE);
+        writeId(ServerPacketId.EX_SERVER_PRIMITIVE);
 
         writeString(_name);
         writeInt(_x);

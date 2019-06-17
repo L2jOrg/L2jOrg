@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.CharacterDeleteFailType;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class CharDeleteFail extends IClientOutgoingPacket {
+public class CharDeleteFail extends ServerPacket {
     private final int _error;
 
     public CharDeleteFail(CharacterDeleteFailType type) {
@@ -15,7 +13,7 @@ public class CharDeleteFail extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.CHARACTER_DELETE_FAIL);
+        writeId(ServerPacketId.CHARACTER_DELETE_FAIL);
 
         writeInt(_error);
     }

@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class Snoop extends IClientOutgoingPacket {
+public class Snoop extends ServerPacket {
     private final int _convoId;
     private final String _name;
     private final ChatType _type;
@@ -23,7 +21,7 @@ public class Snoop extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SNOOP);
+        writeId(ServerPacketId.SNOOP);
 
         writeInt(_convoId);
         writeString(_name);

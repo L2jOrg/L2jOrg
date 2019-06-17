@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Maktakien
  */
-public class GetOffVehicle extends IClientOutgoingPacket {
+public class GetOffVehicle extends ServerPacket {
     private final int _charObjId;
     private final int _boatObjId;
     private final int _x;
@@ -32,7 +30,7 @@ public class GetOffVehicle extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.GET_OFF_VEHICLE);
+        writeId(ServerPacketId.GET_OFF_VEHICLE);
 
         writeInt(_charObjId);
         writeInt(_boatObjId);

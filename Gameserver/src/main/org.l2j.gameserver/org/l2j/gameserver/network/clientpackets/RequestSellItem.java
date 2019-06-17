@@ -16,7 +16,6 @@ import org.l2j.gameserver.network.serverpackets.ExBuySellList;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +25,7 @@ import static org.l2j.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
 /**
  * RequestSellItem client packet class.
  */
-public final class RequestSellItem extends IClientIncomingPacket {
+public final class RequestSellItem extends ClientPacket {
     private static final int BATCH_LENGTH = 16;
     private static final int CUSTOM_CB_SELL_LIST = 423;
 

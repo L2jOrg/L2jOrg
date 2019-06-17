@@ -3,12 +3,10 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author KenM, Gnacik
  */
-public class RequestChangeNicknameColor extends IClientIncomingPacket {
+public class RequestChangeNicknameColor extends ClientPacket {
     private static final int COLORS[] =
             {
                     0x9393FF, // Pink

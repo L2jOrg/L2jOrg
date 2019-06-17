@@ -4,14 +4,12 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.L2Henna;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Zoey76
  */
-public class HennaItemDrawInfo extends IClientOutgoingPacket {
+public class HennaItemDrawInfo extends ServerPacket {
     private final L2PcInstance _activeChar;
     private final L2Henna _henna;
 
@@ -22,7 +20,7 @@ public class HennaItemDrawInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.HENNA_ITEM_INFO);
+        writeId(ServerPacketId.HENNA_ITEM_INFO);
 
         writeInt(_henna.getDyeId()); // symbol Id
         writeInt(_henna.getDyeItemId()); // item id of dye

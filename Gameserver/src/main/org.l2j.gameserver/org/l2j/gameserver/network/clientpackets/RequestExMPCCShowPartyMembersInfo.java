@@ -4,14 +4,12 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ExMPCCShowPartyMemberInfo;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format:(ch) d
  *
  * @author chris_00
  */
-public final class RequestExMPCCShowPartyMembersInfo extends IClientIncomingPacket {
+public final class RequestExMPCCShowPartyMembersInfo extends ClientPacket {
     private int _partyLeaderId;
 
     @Override

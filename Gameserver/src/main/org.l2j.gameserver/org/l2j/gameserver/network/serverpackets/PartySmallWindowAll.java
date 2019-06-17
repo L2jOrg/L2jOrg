@@ -4,11 +4,9 @@ import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public final class PartySmallWindowAll extends IClientOutgoingPacket {
+public final class PartySmallWindowAll extends ServerPacket {
     private final L2Party _party;
     private final L2PcInstance _exclude;
 
@@ -19,7 +17,7 @@ public final class PartySmallWindowAll extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PARTY_SMALL_WINDOW_ALL);
+        writeId(ServerPacketId.PARTY_SMALL_WINDOW_ALL);
 
         writeInt(_party.getLeaderObjectId());
         writeByte((byte) _party.getDistributionType().getId());

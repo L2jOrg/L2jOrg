@@ -3,12 +3,11 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
-public class GMViewSkillInfo extends IClientOutgoingPacket {
+public class GMViewSkillInfo extends ServerPacket {
     private final L2PcInstance _activeChar;
     private final Collection<Skill> _skills;
 
@@ -19,7 +18,7 @@ public class GMViewSkillInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.GM_VIEW_SKILL_INFO);
+        writeId(ServerPacketId.GM_VIEW_SKILL_INFO);
 
         writeString(_activeChar.getName());
         writeInt(_skills.size());

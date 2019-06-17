@@ -9,12 +9,10 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPutEnchantSupportItemResult;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author KenM
  */
-public class RequestExTryToPutEnchantSupportItem extends IClientIncomingPacket {
+public class RequestExTryToPutEnchantSupportItem extends ClientPacket {
     private int _supportObjectId;
     private int _enchantObjectId;
 

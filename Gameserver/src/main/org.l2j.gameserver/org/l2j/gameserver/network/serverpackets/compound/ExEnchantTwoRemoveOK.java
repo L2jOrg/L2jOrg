@@ -2,16 +2,14 @@ package org.l2j.gameserver.network.serverpackets.compound;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author UnAfraid
  */
 @StaticPacket
-public class ExEnchantTwoRemoveOK extends IClientOutgoingPacket {
+public class ExEnchantTwoRemoveOK extends ServerPacket {
     public static final ExEnchantTwoRemoveOK STATIC_PACKET = new ExEnchantTwoRemoveOK();
 
     private ExEnchantTwoRemoveOK() {
@@ -19,7 +17,7 @@ public class ExEnchantTwoRemoveOK extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_ENCHANT_TWO_REMOVE_OK);
+        writeId(ServerPacketId.EX_ENCHANT_TWO_REMOVE_OK);
     }
 
 }

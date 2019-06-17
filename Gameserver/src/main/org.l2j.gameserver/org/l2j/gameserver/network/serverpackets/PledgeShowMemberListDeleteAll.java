@@ -2,12 +2,10 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 @StaticPacket
-public class PledgeShowMemberListDeleteAll extends IClientOutgoingPacket {
+public class PledgeShowMemberListDeleteAll extends ServerPacket {
     public static final PledgeShowMemberListDeleteAll STATIC_PACKET = new PledgeShowMemberListDeleteAll();
 
     private PledgeShowMemberListDeleteAll() {
@@ -15,7 +13,7 @@ public class PledgeShowMemberListDeleteAll extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_DELETE_ALL);
+        writeId(ServerPacketId.PLEDGE_SHOW_MEMBER_LIST_DELETE_ALL);
     }
 
 }

@@ -2,16 +2,14 @@ package org.l2j.gameserver.network.serverpackets.ensoul;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author UnAfraid
  */
 @StaticPacket
-public class ExShowEnsoulWindow extends IClientOutgoingPacket {
+public class ExShowEnsoulWindow extends ServerPacket {
     public static final ExShowEnsoulWindow STATIC_PACKET = new ExShowEnsoulWindow();
 
     private ExShowEnsoulWindow() {
@@ -19,7 +17,7 @@ public class ExShowEnsoulWindow extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_ENSOUL_WINDOW);
+        writeId(ServerPacketId.EX_SHOW_ENSOUL_WINDOW);
     }
 
 }

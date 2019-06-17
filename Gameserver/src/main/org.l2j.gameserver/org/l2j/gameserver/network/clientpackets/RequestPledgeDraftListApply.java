@@ -6,12 +6,10 @@ import org.l2j.gameserver.model.clan.entry.PledgeWaitingInfo;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestPledgeDraftListApply extends IClientIncomingPacket {
+public class RequestPledgeDraftListApply extends ClientPacket {
     private int _applyType;
     private int _karma;
 

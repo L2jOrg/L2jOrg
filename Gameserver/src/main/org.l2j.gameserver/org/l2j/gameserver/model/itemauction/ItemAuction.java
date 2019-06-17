@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -313,11 +313,11 @@ public final class ItemAuction {
         }
     }
 
-    public final void broadcastToAllBidders(IClientOutgoingPacket packet) {
+    public final void broadcastToAllBidders(ServerPacket packet) {
         ThreadPoolManager.getInstance().execute(() -> broadcastToAllBiddersInternal(packet));
     }
 
-    public final void broadcastToAllBiddersInternal(IClientOutgoingPacket packet) {
+    public final void broadcastToAllBiddersInternal(ServerPacket packet) {
         for (int i = _auctionBids.size(); i-- > 0; ) {
             final ItemAuctionBid bid = _auctionBids.get(i);
             if (bid != null) {

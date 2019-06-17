@@ -14,12 +14,11 @@ import org.l2j.gameserver.model.holders.LuckyGameDataHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.luckygame.ExBettingLuckyGameResult;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.List;
@@ -28,7 +27,7 @@ import java.util.Map.Entry;
 /**
  * @author Sdw
  */
-public class RequestLuckyGamePlay extends IClientIncomingPacket {
+public class RequestLuckyGamePlay extends ClientPacket {
     private static final int FORTUNE_READING_TICKET = 23767;
     private static final int LUXURY_FORTUNE_READING_TICKET = 23768;
     private LuckyGameType _type;

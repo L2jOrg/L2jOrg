@@ -7,9 +7,7 @@ import org.l2j.gameserver.network.serverpackets.KeyPacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
-public final class ProtocolVersion extends IClientIncomingPacket {
+public final class ProtocolVersion extends ClientPacket {
     private static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
 
     private int _version;

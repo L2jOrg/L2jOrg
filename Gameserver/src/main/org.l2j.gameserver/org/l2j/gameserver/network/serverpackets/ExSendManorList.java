@@ -4,16 +4,15 @@ import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
 /**
  * @author l3x
  */
 @StaticPacket
-public final class ExSendManorList extends IClientOutgoingPacket {
+public final class ExSendManorList extends ServerPacket {
     public static final ExSendManorList STATIC_PACKET = new ExSendManorList();
 
     private ExSendManorList() {
@@ -21,7 +20,7 @@ public final class ExSendManorList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SEND_MANOR_LIST);
+        writeId(ServerPacketId.EX_SEND_MANOR_LIST);
 
         final Collection<Castle> castles = CastleManager.getInstance().getCastles();
         writeInt(castles.size());

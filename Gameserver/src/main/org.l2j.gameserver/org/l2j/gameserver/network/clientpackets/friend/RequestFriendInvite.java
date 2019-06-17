@@ -5,13 +5,11 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.friend.FriendAddRequest;
 
-import java.nio.ByteBuffer;
-
-public final class RequestFriendInvite extends IClientIncomingPacket {
+public final class RequestFriendInvite extends ClientPacket {
     private String _name;
 
     @Override

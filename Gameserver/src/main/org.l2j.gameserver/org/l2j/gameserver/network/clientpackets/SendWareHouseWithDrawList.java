@@ -16,14 +16,12 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ... 32 SendWareHouseWithDrawList cd (dd) WootenGil rox :P
  *
  * @version $Revision: 1.2.2.1.2.4 $ $Date: 2005/03/29 23:15:16 $
  */
-public final class SendWareHouseWithDrawList extends IClientIncomingPacket {
+public final class SendWareHouseWithDrawList extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(SendWareHouseWithDrawList.class);
     private static final int BATCH_LENGTH = 12; // length of the one item
 

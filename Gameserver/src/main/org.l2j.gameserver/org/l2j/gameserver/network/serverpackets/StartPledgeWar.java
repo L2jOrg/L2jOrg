@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class StartPledgeWar extends IClientOutgoingPacket {
+public class StartPledgeWar extends ServerPacket {
     private final String _pledgeName;
     private final String _playerName;
 
@@ -16,7 +14,7 @@ public class StartPledgeWar extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.START_PLEDGE_WAR);
+        writeId(ServerPacketId.START_PLEDGE_WAR);
 
         writeString(_playerName);
         writeString(_pledgeName);

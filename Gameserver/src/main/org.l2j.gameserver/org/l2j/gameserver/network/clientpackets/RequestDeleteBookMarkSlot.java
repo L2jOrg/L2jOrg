@@ -2,13 +2,11 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author ShanSoft
  * @structure: chdd
  */
-public final class RequestDeleteBookMarkSlot extends IClientIncomingPacket {
+public final class RequestDeleteBookMarkSlot extends ClientPacket {
     private int _id;
 
     @Override

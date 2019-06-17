@@ -4,12 +4,10 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ExUISetting;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author KenM / mrTJO
  */
-public class RequestKeyMapping extends IClientIncomingPacket {
+public class RequestKeyMapping extends ClientPacket {
     @Override
     public void readImpl() {
 

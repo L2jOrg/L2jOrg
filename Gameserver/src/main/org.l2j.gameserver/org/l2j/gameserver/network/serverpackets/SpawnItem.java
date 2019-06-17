@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public final class SpawnItem extends IClientOutgoingPacket {
+public final class SpawnItem extends ServerPacket {
     private final L2ItemInstance _item;
 
     public SpawnItem(L2ItemInstance item) {
@@ -15,7 +13,7 @@ public final class SpawnItem extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SPAWN_ITEM);
+        writeId(ServerPacketId.SPAWN_ITEM);
 
         writeInt(_item.getObjectId());
         writeInt(_item.getDisplayId());

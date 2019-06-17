@@ -4,12 +4,10 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ExShowSentPostList;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Migi, DS
  */
-public final class RequestSentPostList extends IClientIncomingPacket {
+public final class RequestSentPostList extends ClientPacket {
     @Override
     public void readImpl() {
 

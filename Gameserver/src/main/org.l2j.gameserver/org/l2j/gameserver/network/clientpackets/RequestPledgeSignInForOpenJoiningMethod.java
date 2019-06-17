@@ -9,12 +9,10 @@ import org.l2j.gameserver.model.clan.entry.PledgeRecruitInfo;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Mobius
  */
-public class RequestPledgeSignInForOpenJoiningMethod extends IClientIncomingPacket {
+public class RequestPledgeSignInForOpenJoiningMethod extends ClientPacket {
     private int _clanId;
 
     @Override

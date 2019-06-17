@@ -4,12 +4,10 @@ import org.l2j.gameserver.enums.SkillEnchantType;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ExEnchantSkillInfoDetail;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author -Wooden-
  */
-public final class RequestExEnchantSkillInfoDetail extends IClientIncomingPacket {
+public final class RequestExEnchantSkillInfoDetail extends ClientPacket {
     private SkillEnchantType _type;
     private int _skillId;
     private int _skillLvl;

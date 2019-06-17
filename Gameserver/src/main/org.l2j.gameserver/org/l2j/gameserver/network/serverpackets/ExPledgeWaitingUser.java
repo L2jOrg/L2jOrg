@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.clan.entry.PledgeApplicantInfo;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Sdw
  */
-public class ExPledgeWaitingUser extends IClientOutgoingPacket {
+public class ExPledgeWaitingUser extends ServerPacket {
     private final PledgeApplicantInfo _pledgeRecruitInfo;
 
     public ExPledgeWaitingUser(PledgeApplicantInfo pledgeRecruitInfo) {
@@ -18,7 +16,7 @@ public class ExPledgeWaitingUser extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_PLEDGE_WAITING_USER);
+        writeId(ServerPacketId.EX_PLEDGE_WAITING_USER);
 
         writeInt(_pledgeRecruitInfo.getPlayerId());
         writeString(_pledgeRecruitInfo.getMessage());

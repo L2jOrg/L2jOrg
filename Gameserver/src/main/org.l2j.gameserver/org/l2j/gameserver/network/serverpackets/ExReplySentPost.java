@@ -20,17 +20,19 @@ import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
-
-import static java.util.Objects.nonNull;
 
 /**
  * @author Migi, DS
  */
 public class ExReplySentPost extends AbstractItemPacket {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(ExReplySentPost.class);
+
     private final Message _msg;
     private Collection<L2ItemInstance> _items = null;
 
@@ -48,11 +50,11 @@ public class ExReplySentPost extends AbstractItemPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_REPLY_SENT_POST);
+        writeId(ServerPacketId.EX_REPLY_SENT_POST);
 
         writeInt(0x00); // GOD
         writeInt(_msg.getId());
-        writeInt(_msg.isLocked() ? 1 : 0);
+        writeInt(_msg.isLocked());
         writeString(_msg.getReceiverName());
         writeString(_msg.getSubject());
         writeString(_msg.getContent());
@@ -67,7 +69,7 @@ public class ExReplySentPost extends AbstractItemPacket {
             writeInt(0x00);
         }
         writeLong(_msg.getReqAdena());
-        writeInt(_msg.hasAttachments() ? 0x01 : 0x00);
-        writeInt(_msg.isReturned() ? 0x01 : 00);
+        writeInt(_msg.hasAttachments());
+        writeInt(_msg.isReturned());
     }
 }

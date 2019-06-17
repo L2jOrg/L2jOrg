@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author -Wooden-
  */
-public class PledgeSkillListAdd extends IClientOutgoingPacket {
+public class PledgeSkillListAdd extends ServerPacket {
     private final int _id;
     private final int _lvl;
 
@@ -19,7 +17,7 @@ public class PledgeSkillListAdd extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PLEDGE_SKILL_LIST_ADD);
+        writeId(ServerPacketId.PLEDGE_SKILL_LIST_ADD);
 
         writeInt(_id);
         writeInt(_lvl);

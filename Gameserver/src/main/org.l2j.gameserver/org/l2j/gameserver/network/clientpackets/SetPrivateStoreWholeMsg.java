@@ -5,12 +5,10 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author KenM
  */
-public class SetPrivateStoreWholeMsg extends IClientIncomingPacket {
+public class SetPrivateStoreWholeMsg extends ClientPacket {
     private static final int MAX_MSG_LENGTH = 29;
 
     private String _msg;

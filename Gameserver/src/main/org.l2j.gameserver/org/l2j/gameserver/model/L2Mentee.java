@@ -18,7 +18,7 @@ package org.l2j.gameserver.model;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -105,7 +105,7 @@ public class L2Mentee {
         return isOnline() ? getPlayerInstance().isOnlineInt() : 0;
     }
 
-    public void sendPacket(IClientOutgoingPacket packet) {
+    public void sendPacket(ServerPacket packet) {
         if (isOnline()) {
             getPlayerInstance().sendPacket(packet);
         }

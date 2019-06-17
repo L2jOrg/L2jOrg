@@ -1,15 +1,13 @@
 package org.l2j.gameserver.network.serverpackets.adenadistribution;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author Sdw
  */
-public class ExDivideAdenaDone extends IClientOutgoingPacket {
+public class ExDivideAdenaDone extends ServerPacket {
     private final boolean _isPartyLeader;
     private final boolean _isCCLeader;
     private final long _adenaCount;
@@ -28,7 +26,7 @@ public class ExDivideAdenaDone extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_DIVIDE_ADENA_DONE);
+        writeId(ServerPacketId.EX_DIVIDE_ADENA_DONE);
 
         writeByte((byte) (_isPartyLeader ? 0x01 : 0x00));
         writeByte((byte) (_isCCLeader ? 0x01 : 0x00));

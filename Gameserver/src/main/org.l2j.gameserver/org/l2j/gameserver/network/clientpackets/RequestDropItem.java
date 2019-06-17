@@ -5,7 +5,6 @@ import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -18,14 +17,12 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.11.2.1.2.7 $ $Date: 2005/04/02 21:25:21 $
  */
-public final class RequestDropItem extends IClientIncomingPacket {
+public final class RequestDropItem extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestDropItem.class);
     private int _objectId;

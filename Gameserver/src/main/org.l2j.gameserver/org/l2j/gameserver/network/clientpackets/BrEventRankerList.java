@@ -2,12 +2,10 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.network.serverpackets.ExBrLoadEventTopRankers;
 
-import java.nio.ByteBuffer;
-
 /**
  * Halloween rank list client packet. Format: (ch)ddd
  */
-public class BrEventRankerList extends IClientIncomingPacket {
+public class BrEventRankerList extends ClientPacket {
     private int _eventId;
     private int _day;
     @SuppressWarnings("unused")

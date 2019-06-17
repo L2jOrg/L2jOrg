@@ -6,14 +6,12 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExAskJoinPartyRoom;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format: (ch) S
  *
  * @author -Wooden-, Tryskell
  */
-public class RequestAskJoinPartyRoom extends IClientIncomingPacket {
+public class RequestAskJoinPartyRoom extends ClientPacket {
     private String _name;
 
     @Override

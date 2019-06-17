@@ -4,9 +4,8 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
 public class GMViewItemList extends AbstractItemPacket {
@@ -31,7 +30,7 @@ public class GMViewItemList extends AbstractItemPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.GM_VIEW_ITEM_LIST);
+        writeId(ServerPacketId.GM_VIEW_ITEM_LIST);
         writeByte((byte) sendType);
         if (sendType == 2) {
             writeInt(items.size());

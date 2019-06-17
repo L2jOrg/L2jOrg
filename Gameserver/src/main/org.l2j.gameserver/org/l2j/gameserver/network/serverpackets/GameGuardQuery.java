@@ -18,9 +18,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * Lets drink to code!
@@ -28,7 +26,7 @@ import java.nio.ByteBuffer;
  * @author zabbix
  */
 @StaticPacket
-public class GameGuardQuery extends IClientOutgoingPacket {
+public class GameGuardQuery extends ServerPacket {
     public static final GameGuardQuery STATIC_PACKET = new GameGuardQuery();
 
     private GameGuardQuery() {
@@ -37,7 +35,7 @@ public class GameGuardQuery extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.GAME_GUARD_QUERY);
+        writeId(ServerPacketId.GAME_GUARD_QUERY);
 
         writeInt(0x27533DD9);
         writeInt(0x2E72A51D);

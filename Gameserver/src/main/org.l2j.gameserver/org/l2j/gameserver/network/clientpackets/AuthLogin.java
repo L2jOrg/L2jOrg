@@ -6,14 +6,12 @@ import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.gs2as.PlayerAuthRequest;
 import org.l2j.gameserver.network.serverpackets.ServerClose;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.9.2.3.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class AuthLogin extends IClientIncomingPacket {
+public final class AuthLogin extends ClientPacket {
 
     // account + keys must match what the loginserver used.
     private String account;

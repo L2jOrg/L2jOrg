@@ -6,11 +6,10 @@ import org.l2j.gameserver.model.MacroCmd;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class RequestMakeMacro extends IClientIncomingPacket {
+public final class RequestMakeMacro extends ClientPacket {
     private static final int MAX_MACRO_LENGTH = 12;
     private Macro _macro;
     private int _commandsLenght = 0;

@@ -3,17 +3,16 @@ package org.l2j.gameserver.network.serverpackets.attributechange;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
-import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * @author Mobius
  */
-public class ExChangeAttributeInfo extends IClientOutgoingPacket {
+public class ExChangeAttributeInfo extends ServerPacket {
     private static final Map<AttributeType, Byte> ATTRIBUTE_MASKS = new HashMap<>();
     private final int _crystalItemId;
     private int _attributes;
@@ -40,7 +39,7 @@ public class ExChangeAttributeInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_CHANGE_ATTRIBUTE_INFO);
+        writeId(ServerPacketId.EX_CHANGE_ATTRIBUTE_INFO);
         writeInt(_crystalItemId);
         writeInt(_attributes);
         writeInt(_itemObjId);

@@ -1,19 +1,17 @@
 package org.l2j.gameserver.network.serverpackets.primeshop;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author Gnacik, UnAfraid
  */
-public class ExBRGamePoint extends IClientOutgoingPacket {
+public class ExBRGamePoint extends ServerPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_BR_GAME_POINT);
+        writeId(ServerPacketId.EX_BR_GAME_POINT);
 
         var player = client.getActiveChar();
         writeInt(player.getObjectId());

@@ -4,12 +4,10 @@ import org.l2j.gameserver.enums.MatchingRoomType;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestExWithdrawMpccRoom extends IClientIncomingPacket {
+public class RequestExWithdrawMpccRoom extends ClientPacket {
     @Override
     public void readImpl() {
 

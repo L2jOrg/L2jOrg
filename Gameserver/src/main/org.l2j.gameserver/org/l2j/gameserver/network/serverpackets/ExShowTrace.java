@@ -3,9 +3,8 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +13,7 @@ import java.util.List;
  *
  * @author NosBit
  */
-public final class ExShowTrace extends IClientOutgoingPacket {
+public final class ExShowTrace extends ServerPacket {
     private final List<Location> _locations = new ArrayList<>();
 
     public void addLocation(int x, int y, int z) {
@@ -27,7 +26,7 @@ public final class ExShowTrace extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_TRACE);
+        writeId(ServerPacketId.EX_SHOW_TRACE);
 
         writeShort((short) 0); // type broken in H5
         writeInt(0); // time broken in H5

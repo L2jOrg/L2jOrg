@@ -2,15 +2,13 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Sdw
  */
 @StaticPacket
-public class ExDissmissMPCCRoom extends IClientOutgoingPacket {
+public class ExDissmissMPCCRoom extends ServerPacket {
     public static final ExDissmissMPCCRoom STATIC_PACKET = new ExDissmissMPCCRoom();
 
     private ExDissmissMPCCRoom() {
@@ -18,7 +16,7 @@ public class ExDissmissMPCCRoom extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_DISSMISS_MPCC_ROOM);
+        writeId(ServerPacketId.EX_DISSMISS_MPCC_ROOM);
     }
 
 }

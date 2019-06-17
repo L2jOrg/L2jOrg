@@ -14,9 +14,7 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2j.gameserver.util.Broadcast;
 
-import java.nio.ByteBuffer;
-
-public class MoveBackwardToLocation extends IClientIncomingPacket {
+public class MoveBackwardToLocation extends ClientPacket {
     private int _targetX;
     private int _targetY;
     private int _targetZ;

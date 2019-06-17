@@ -1,15 +1,13 @@
 package org.l2j.gameserver.network.serverpackets.friend;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author UnAfraid
  */
-public class FriendRemove extends IClientOutgoingPacket {
+public class FriendRemove extends ServerPacket {
     private final int _responce;
     private final String _charName;
 
@@ -20,7 +18,7 @@ public class FriendRemove extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.FRIEND_REMOVE);
+        writeId(ServerPacketId.FRIEND_REMOVE);
 
         writeInt(_responce);
         writeString(_charName);

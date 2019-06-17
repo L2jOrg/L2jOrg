@@ -4,9 +4,8 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
 public class GMViewWarehouseWithdrawList extends AbstractItemPacket {
@@ -28,7 +27,7 @@ public class GMViewWarehouseWithdrawList extends AbstractItemPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.GM_VIEW_WAREHOUSE_WITHDRAW_LIST);
+        writeId(ServerPacketId.GM_VIEW_WAREHOUSE_WITHDRAW_LIST);
         writeString(playerName);
         writeLong(_money);
         writeShort((short) _items.size());

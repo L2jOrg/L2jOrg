@@ -3,11 +3,9 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public final class Ride extends IClientOutgoingPacket {
+public final class Ride extends ServerPacket {
     private final int _objectId;
     private final int _mounted;
     private final int _rideType;
@@ -24,7 +22,7 @@ public final class Ride extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.RIDE);
+        writeId(ServerPacketId.RIDE);
 
         writeInt(_objectId);
         writeInt(_mounted);

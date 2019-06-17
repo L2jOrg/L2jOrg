@@ -3,16 +3,15 @@ package org.l2j.gameserver.network.clientpackets.adenadistribution;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.request.AdenaDistributionRequest;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.adenadistribution.ExDivideAdenaCancel;
 
-import java.nio.ByteBuffer;
 import java.util.Objects;
 
 /**
  * @author Sdw
  */
-public class RequestDivideAdenaCancel extends IClientIncomingPacket {
+public class RequestDivideAdenaCancel extends ClientPacket {
     private boolean _cancel;
 
     @Override

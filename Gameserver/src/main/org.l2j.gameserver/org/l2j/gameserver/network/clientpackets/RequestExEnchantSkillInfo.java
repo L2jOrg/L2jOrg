@@ -7,7 +7,6 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.ExEnchantSkillInfo;
 
-import java.nio.ByteBuffer;
 import java.util.Set;
 
 /**
@@ -15,7 +14,7 @@ import java.util.Set;
  *
  * @author -Wooden-
  */
-public final class RequestExEnchantSkillInfo extends IClientIncomingPacket {
+public final class RequestExEnchantSkillInfo extends ClientPacket {
     private int _skillId;
     private int _skillLvl;
     private int _skillSubLvl;

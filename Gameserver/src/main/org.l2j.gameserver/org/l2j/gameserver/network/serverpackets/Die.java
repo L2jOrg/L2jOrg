@@ -8,9 +8,8 @@ import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -18,7 +17,7 @@ import java.util.List;
 /**
  * @author UnAfraid, Nos
  */
-public class Die extends IClientOutgoingPacket {
+public class Die extends ServerPacket {
     private final int _objectId;
     private final boolean _isSweepable;
     private boolean _toVillage;
@@ -86,7 +85,7 @@ public class Die extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.DIE);
+        writeId(ServerPacketId.DIE);
 
         writeInt(_objectId);
         writeInt(_toVillage ? 0x01 : 0x00);

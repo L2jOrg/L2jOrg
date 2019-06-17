@@ -4,14 +4,12 @@ import org.l2j.gameserver.instancemanager.ClanEntryManager;
 import org.l2j.gameserver.model.clan.entry.PledgeApplicantInfo;
 import org.l2j.gameserver.model.clan.entry.PledgeRecruitInfo;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Sdw
  */
-public class ExPledgeWaitingListApplied extends IClientOutgoingPacket {
+public class ExPledgeWaitingListApplied extends ServerPacket {
     private final PledgeApplicantInfo _pledgePlayerRecruitInfo;
     private final PledgeRecruitInfo _pledgeRecruitInfo;
 
@@ -22,7 +20,7 @@ public class ExPledgeWaitingListApplied extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_PLEDGE_WAITING_LIST_APPLIED);
+        writeId(ServerPacketId.EX_PLEDGE_WAITING_LIST_APPLIED);
 
         writeInt(_pledgeRecruitInfo.getClan().getId());
         writeString(_pledgeRecruitInfo.getClan().getName());

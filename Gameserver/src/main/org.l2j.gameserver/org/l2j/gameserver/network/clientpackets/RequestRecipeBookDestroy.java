@@ -5,9 +5,7 @@ import org.l2j.gameserver.model.L2RecipeList;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.RecipeBookItemList;
 
-import java.nio.ByteBuffer;
-
-public final class RequestRecipeBookDestroy extends IClientIncomingPacket {
+public final class RequestRecipeBookDestroy extends ClientPacket {
     private int _recipeID;
 
     @Override

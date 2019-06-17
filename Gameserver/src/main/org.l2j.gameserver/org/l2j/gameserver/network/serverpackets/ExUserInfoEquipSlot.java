@@ -5,9 +5,7 @@ import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Sdw
@@ -46,7 +44,7 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_USER_INFO_EQUIP_SLOT);
+        writeId(ServerPacketId.EX_USER_INFO_EQUIP_SLOT);
 
         writeInt(_activeChar.getObjectId());
         writeShort((short) InventorySlot.values().length); // 152

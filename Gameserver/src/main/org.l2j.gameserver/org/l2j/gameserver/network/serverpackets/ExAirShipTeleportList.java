@@ -2,13 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.VehiclePathPoint;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-import static java.util.Objects.nonNull;
-
-public class ExAirShipTeleportList extends IClientOutgoingPacket {
+public class ExAirShipTeleportList extends ServerPacket {
     private final int _dockId;
     private final VehiclePathPoint[][] _teleports;
     private final int[] _fuelConsumption;
@@ -21,7 +17,7 @@ public class ExAirShipTeleportList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_AIR_SHIP_TELEPORT_LIST);
+        writeId(ServerPacketId.EX_AIR_SHIP_TELEPORT_LIST);
 
         writeInt(_dockId);
         if (_teleports != null) {

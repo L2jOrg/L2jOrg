@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class PlaySound extends IClientOutgoingPacket {
+public class PlaySound extends ServerPacket {
     private final int _unknown1;
     private final String _soundFile;
     private final int _unknown3;
@@ -43,7 +41,7 @@ public class PlaySound extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PLAY_SOUND);
+        writeId(ServerPacketId.PLAY_SOUND);
 
         writeInt(_unknown1); // unknown 0 for quest and ship;
         writeString(_soundFile);

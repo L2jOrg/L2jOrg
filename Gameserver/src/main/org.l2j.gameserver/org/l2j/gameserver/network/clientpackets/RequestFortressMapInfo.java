@@ -7,12 +7,10 @@ import org.l2j.gameserver.network.serverpackets.ExShowFortressMapInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author KenM
  */
-public class RequestFortressMapInfo extends IClientIncomingPacket {
+public class RequestFortressMapInfo extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestFortressMapInfo.class);
     private int _fortressId;
 

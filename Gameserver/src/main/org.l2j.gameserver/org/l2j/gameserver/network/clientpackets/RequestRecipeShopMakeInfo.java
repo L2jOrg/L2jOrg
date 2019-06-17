@@ -5,14 +5,12 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.RecipeShopItemInfo;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ... cdd
  *
  * @version $Revision: 1.1.2.1.2.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestRecipeShopMakeInfo extends IClientIncomingPacket {
+public final class RequestRecipeShopMakeInfo extends ClientPacket {
     private int _playerObjectId;
     private int _recipeId;
 

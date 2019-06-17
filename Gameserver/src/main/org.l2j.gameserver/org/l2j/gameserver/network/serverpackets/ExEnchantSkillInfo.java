@@ -2,12 +2,11 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Set;
 
-public final class ExEnchantSkillInfo extends IClientOutgoingPacket {
+public final class ExEnchantSkillInfo extends ServerPacket {
     private final Set<Integer> _routes;
 
     private final int _skillId;
@@ -25,7 +24,7 @@ public final class ExEnchantSkillInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_ENCHANT_SKILL_INFO);
+        writeId(ServerPacketId.EX_ENCHANT_SKILL_INFO);
         writeInt(_skillId);
         writeShort((short) _skillLevel);
         writeShort((short) _skillSubLevel);

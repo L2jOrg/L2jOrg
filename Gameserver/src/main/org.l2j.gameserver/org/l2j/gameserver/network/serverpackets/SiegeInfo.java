@@ -6,12 +6,11 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.util.Calendar;
-
-import static java.util.Objects.nonNull;
 
 /**
  * Shows the Siege Info<BR>
@@ -30,7 +29,10 @@ import static java.util.Objects.nonNull;
  *
  * @author KenM
  */
-public class SiegeInfo extends IClientOutgoingPacket {
+public class SiegeInfo extends ServerPacket {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(SiegeInfo.class);
+
     private final Castle _castle;
     private final L2PcInstance _player;
 
@@ -41,7 +43,7 @@ public class SiegeInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.CASTLE_SIEGE_INFO);
+        writeId(ServerPacketId.CASTLE_SIEGE_INFO);
 
         if (_castle != null) {
             writeInt(_castle.getResidenceId());

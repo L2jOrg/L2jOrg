@@ -1,18 +1,15 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Map;
 import java.util.Map.Entry;
-
-import static java.util.Objects.nonNull;
 
 /**
  * @author KenM
  */
-public class ExGetBossRecord extends IClientOutgoingPacket {
+public class ExGetBossRecord extends ServerPacket {
     private final Map<Integer, Integer> _bossRecordInfo;
     private final int _ranking;
     private final int _totalPoints;
@@ -25,7 +22,7 @@ public class ExGetBossRecord extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_GET_BOSS_RECORD);
+        writeId(ServerPacketId.EX_GET_BOSS_RECORD);
 
         writeInt(_ranking);
         writeInt(_totalPoints);

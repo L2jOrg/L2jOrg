@@ -3,12 +3,10 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ExPledgeWaitingList;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestPledgeWaitingList extends IClientIncomingPacket {
+public class RequestPledgeWaitingList extends ClientPacket {
     private int _clanId;
 
     @Override

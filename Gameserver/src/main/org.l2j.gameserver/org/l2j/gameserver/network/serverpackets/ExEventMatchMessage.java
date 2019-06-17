@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author janiii
  */
-public class ExEventMatchMessage extends IClientOutgoingPacket {
+public class ExEventMatchMessage extends ServerPacket {
     private final int _type;
     private final String _message;
 
@@ -25,7 +23,7 @@ public class ExEventMatchMessage extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_EVENT_MATCH_MESSAGE);
+        writeId(ServerPacketId.EX_EVENT_MATCH_MESSAGE);
 
         writeByte((byte) _type);
         writeString(_message);

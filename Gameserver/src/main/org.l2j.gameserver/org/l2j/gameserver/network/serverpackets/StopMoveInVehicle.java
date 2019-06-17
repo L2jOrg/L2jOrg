@@ -3,14 +3,12 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Maktakien
  */
-public class StopMoveInVehicle extends IClientOutgoingPacket {
+public class StopMoveInVehicle extends ServerPacket {
     private final int _charObjId;
     private final int _boatId;
     private final Location _pos;
@@ -25,7 +23,7 @@ public class StopMoveInVehicle extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.STOP_MOVE_IN_VEHICLE);
+        writeId(ServerPacketId.STOP_MOVE_IN_VEHICLE);
 
         writeInt(_charObjId);
         writeInt(_boatId);

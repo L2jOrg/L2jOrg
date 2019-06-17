@@ -9,19 +9,17 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.ensoul.ExEnsoulResult;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author UnAfraid
  */
-public class RequestItemEnsoul extends IClientIncomingPacket {
+public class RequestItemEnsoul extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestItemEnsoul.class);
     private int _itemObjectId;
     private EnsoulItemOption[] _options;

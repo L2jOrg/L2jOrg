@@ -3,14 +3,12 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.entity.Hero;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format chS c (id) 0xD0 h (subid) 0x0C S the hero's words :)
  *
  * @author -Wooden-
  */
-public final class RequestWriteHeroWords extends IClientIncomingPacket {
+public final class RequestWriteHeroWords extends ClientPacket {
     private String _heroWords;
 
     @Override

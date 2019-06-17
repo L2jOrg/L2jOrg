@@ -6,16 +6,15 @@ import org.l2j.gameserver.model.L2Seed;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * @author l3x
  */
-public final class ExShowSellCropList extends IClientOutgoingPacket {
+public final class ExShowSellCropList extends ServerPacket {
     private final int _manorId;
     private final Map<Integer, L2ItemInstance> _cropsItems = new HashMap<>();
     private final Map<Integer, CropProcure> _castleCrops = new HashMap<>();
@@ -38,7 +37,7 @@ public final class ExShowSellCropList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_SELL_CROP_LIST);
+        writeId(ServerPacketId.EX_SHOW_SELL_CROP_LIST);
 
         writeInt(_manorId); // manor id
         writeInt(_cropsItems.size()); // size

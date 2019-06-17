@@ -4,15 +4,14 @@ import org.l2j.gameserver.data.xml.impl.HennaData;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.L2Henna;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 /**
  * @author Zoey76
  */
-public class HennaEquipList extends IClientOutgoingPacket {
+public class HennaEquipList extends ServerPacket {
     private final L2PcInstance _player;
     private final List<L2Henna> _hennaEquipList;
 
@@ -28,7 +27,7 @@ public class HennaEquipList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.HENNA_EQUIP_LIST);
+        writeId(ServerPacketId.HENNA_EQUIP_LIST);
         writeLong(_player.getAdena()); // activeChar current amount of Adena
         writeInt(3); // available equip slot
         writeInt(_hennaEquipList.size());

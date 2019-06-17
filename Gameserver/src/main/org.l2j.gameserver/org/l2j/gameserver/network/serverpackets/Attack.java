@@ -4,13 +4,13 @@ import org.l2j.gameserver.model.Hit;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Attack extends IClientOutgoingPacket {
+public class Attack extends ServerPacket {
     private final int _attackerObjId;
     private final Location _attackerLoc;
     private final Location _targetLoc;
@@ -59,7 +59,7 @@ public class Attack extends IClientOutgoingPacket {
         final Iterator<Hit> it = _hits.iterator();
         final Hit firstHit = it.next();
 
-        writeId(OutgoingPackets.ATTACK);
+        writeId(ServerPacketId.ATTACK);
 
         writeInt(_attackerObjId);
         writeInt(firstHit.getTargetId());

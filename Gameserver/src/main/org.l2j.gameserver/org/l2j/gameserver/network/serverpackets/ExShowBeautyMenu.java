@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Sdw
  */
-public class ExShowBeautyMenu extends IClientOutgoingPacket {
+public class ExShowBeautyMenu extends ServerPacket {
     // TODO: Enum
     public static final int MODIFY_APPEARANCE = 0;
     public static final int RESTORE_APPEARANCE = 1;
@@ -23,7 +21,7 @@ public class ExShowBeautyMenu extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_BEAUTY_MENU);
+        writeId(ServerPacketId.EX_SHOW_BEAUTY_MENU);
 
         writeInt(_type);
         writeInt(_activeChar.getVisualHair());

@@ -4,11 +4,9 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.ClanInfo;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.clientpackets.RequestAllyInfo;
 
-import java.nio.ByteBuffer;
-import java.util.Arrays;
 import java.util.Collection;
 
 /**
@@ -16,7 +14,7 @@ import java.util.Collection;
  *
  * @author afk5min
  */
-public class AllianceInfo extends IClientOutgoingPacket {
+public class AllianceInfo extends ServerPacket {
     private final String _name;
     private final int _total;
     private final int _online;
@@ -48,7 +46,7 @@ public class AllianceInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.ALLIANCE_INFO);
+        writeId(ServerPacketId.ALLIANCE_INFO);
 
         writeString(_name);
         writeInt(_total);

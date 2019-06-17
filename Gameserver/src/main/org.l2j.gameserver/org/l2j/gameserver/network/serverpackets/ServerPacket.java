@@ -5,16 +5,16 @@ import org.l2j.gameserver.GameServer;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  * @author KenM
  */
-public abstract class IClientOutgoingPacket extends WritablePacket<L2GameClient> {
+public abstract class ServerPacket extends WritablePacket<L2GameClient> {
 
-    static Logger LOGGER = LoggerFactory.getLogger(IClientOutgoingPacket.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ServerPacket.class);
 
     int[] PAPERDOLL_ORDER = new int[] {
         Inventory.PAPERDOLL_UNDER,
@@ -97,7 +97,7 @@ public abstract class IClientOutgoingPacket extends WritablePacket<L2GameClient>
      * Sends this packet to the target player, useful for lambda operations like <br>
      * {@code L2World.getInstance().getPlayers().forEach(packet::sendTo)}
      *
-     * @param player
+     * @param player to send the packet
      */
     public void sendTo(L2PcInstance player) {
         player.sendPacket(this);
@@ -128,10 +128,10 @@ public abstract class IClientOutgoingPacket extends WritablePacket<L2GameClient>
         }
     }
 
-    protected void writeId(OutgoingPackets packet) {
-        writeByte(packet.getId1());
-        if(packet.getId2() > 0) {
-            writeShort(packet.getId2());
+    protected void writeId(ServerPacketId packet) {
+        writeByte(packet.getId());
+        if(packet.getExtId() > -1) {
+            writeShort(packet.getExtId());
         }
     }
 

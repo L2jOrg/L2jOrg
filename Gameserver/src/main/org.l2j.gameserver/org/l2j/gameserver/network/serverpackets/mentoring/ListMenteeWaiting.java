@@ -4,17 +4,16 @@ import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author UnAfraid
  */
-public class ListMenteeWaiting extends IClientOutgoingPacket {
+public class ListMenteeWaiting extends ServerPacket {
     private final int PLAYERS_PER_PAGE = 64;
     private final List<L2PcInstance> _possibleCandiates = new ArrayList<>();
     private final int _page;
@@ -30,7 +29,7 @@ public class ListMenteeWaiting extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.LIST_MENTEE_WAITING);
+        writeId(ServerPacketId.LIST_MENTEE_WAITING);
 
         writeInt(0x01); // always 1 in retail
         if (_possibleCandiates.isEmpty()) {

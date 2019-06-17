@@ -5,14 +5,12 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * format: (ch) d
  *
  * @author -Wooden-
  */
-public final class RequestExAcceptJoinMPCC extends IClientIncomingPacket {
+public final class RequestExAcceptJoinMPCC extends ClientPacket {
     private int _response;
 
     @Override

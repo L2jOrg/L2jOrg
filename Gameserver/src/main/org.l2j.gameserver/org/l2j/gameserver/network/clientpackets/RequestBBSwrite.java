@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 
-import java.nio.ByteBuffer;
-
 /**
  * RequestBBSwrite client packet implementation.
  *
  * @author -Wooden-, Zoey76
  */
-public final class RequestBBSwrite extends IClientIncomingPacket {
+public final class RequestBBSwrite extends ClientPacket {
     private String _url;
     private String _arg1;
     private String _arg2;

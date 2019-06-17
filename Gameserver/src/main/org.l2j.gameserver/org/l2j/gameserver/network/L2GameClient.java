@@ -236,7 +236,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         super.close(null);
     }
 
-    public void close(IClientOutgoingPacket packet) {
+    public void close(ServerPacket packet) {
         super.close(packet);
     }
 
@@ -294,7 +294,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         _sessionId = sk;
     }
 
-    public void sendPacket(IClientOutgoingPacket packet) {
+    public void sendPacket(ServerPacket packet) {
         if (_isDetached || (packet == null)) {
             return;
         }

@@ -4,12 +4,10 @@ import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Gnacik
  */
-public final class RequestPartyMatchDetail extends IClientIncomingPacket {
+public final class RequestPartyMatchDetail extends ClientPacket {
     private int _roomId;
     private int _location;
     private int _level;

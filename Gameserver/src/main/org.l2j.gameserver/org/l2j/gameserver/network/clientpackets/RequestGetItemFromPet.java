@@ -9,14 +9,12 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.3.4.4 $ $Date: 2005/03/29 23:15:33 $
  */
-public final class RequestGetItemFromPet extends IClientIncomingPacket {
+public final class RequestGetItemFromPet extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestGetItemFromPet.class);
     private int _objectId;
     private long _amount;

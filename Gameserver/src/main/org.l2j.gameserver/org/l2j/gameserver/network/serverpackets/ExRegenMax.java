@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class ExRegenMax extends IClientOutgoingPacket {
+public class ExRegenMax extends ServerPacket {
     private final int _time;
     private final int _tickInterval;
     private final double _amountPerTick;
@@ -18,7 +16,7 @@ public class ExRegenMax extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_REGEN_MAX);
+        writeId(ServerPacketId.EX_REGEN_MAX);
 
         writeInt(1);
         writeInt(_time);

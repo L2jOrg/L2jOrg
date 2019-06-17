@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Sdw
  */
-public class ExResponseResetList extends IClientOutgoingPacket {
+public class ExResponseResetList extends ServerPacket {
     private final L2PcInstance _activeChar;
 
     public ExResponseResetList(L2PcInstance activeChar) {
@@ -18,7 +16,7 @@ public class ExResponseResetList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_RESPONSE_RESET_LIST);
+        writeId(ServerPacketId.EX_RESPONSE_RESET_LIST);
 
         writeLong(_activeChar.getAdena());
         writeLong(_activeChar.getBeautyTickets());

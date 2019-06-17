@@ -2,15 +2,14 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 /**
  * @author Sdw
  */
-public class BlockListPacket extends IClientOutgoingPacket {
+public class BlockListPacket extends ServerPacket {
     private final List<Integer> _playersId;
 
     public BlockListPacket(List<Integer> playersId) {
@@ -19,7 +18,7 @@ public class BlockListPacket extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.BLOCK_LIST);
+        writeId(ServerPacketId.BLOCK_LIST);
 
         writeInt(_playersId.size());
         for (int playerId : _playersId) {

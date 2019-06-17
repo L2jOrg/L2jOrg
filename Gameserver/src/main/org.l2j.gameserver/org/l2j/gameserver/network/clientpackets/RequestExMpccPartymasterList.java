@@ -6,7 +6,6 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.serverpackets.ExMPCCPartymasterList;
 
-import java.nio.ByteBuffer;
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -14,7 +13,7 @@ import java.util.stream.Collectors;
 /**
  * @author Sdw
  */
-public class RequestExMpccPartymasterList extends IClientIncomingPacket {
+public class RequestExMpccPartymasterList extends ClientPacket {
     @Override
     public void readImpl() {
 

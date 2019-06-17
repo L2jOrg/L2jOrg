@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.settings.ServerSettings;
-
-import java.nio.ByteBuffer;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
-public class PledgeShowInfoUpdate extends IClientOutgoingPacket {
+public class PledgeShowInfoUpdate extends ServerPacket {
     private final L2Clan _clan;
 
     public PledgeShowInfoUpdate(L2Clan clan) {
@@ -18,7 +16,7 @@ public class PledgeShowInfoUpdate extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PLEDGE_SHOW_INFO_UPDATE);
+        writeId(ServerPacketId.PLEDGE_SHOW_INFO_UPDATE);
 
         // sending empty data so client will ask all the info in response ;)
         writeInt(_clan.getId());

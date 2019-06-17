@@ -32,7 +32,7 @@ import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.isNull;
 
-public final class UseItem extends IClientIncomingPacket {
+public final class UseItem extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UseItem.class);
     private int _objectId;

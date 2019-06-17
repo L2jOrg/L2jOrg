@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.events.impl.character.OnCreatureZoneEnter;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureZoneExit;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -433,7 +433,7 @@ public abstract class L2ZoneType extends ListenersContainer {
      *
      * @param packet
      */
-    public void broadcastPacket(IClientOutgoingPacket packet) {
+    public void broadcastPacket(ServerPacket packet) {
         if (_characterList.isEmpty()) {
             return;
         }

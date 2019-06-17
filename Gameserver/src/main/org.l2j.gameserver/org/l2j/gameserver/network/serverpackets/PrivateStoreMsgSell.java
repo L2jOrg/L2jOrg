@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class PrivateStoreMsgSell extends IClientOutgoingPacket {
+public class PrivateStoreMsgSell extends ServerPacket {
     private final int _objId;
     private String _storeMsg;
 
@@ -19,7 +17,7 @@ public class PrivateStoreMsgSell extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PRIVATE_STORE_MSG);
+        writeId(ServerPacketId.PRIVATE_STORE_MSG);
 
         writeInt(_objId);
         writeString(_storeMsg);

@@ -3,12 +3,11 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
-public class ExShowBaseAttributeCancelWindow extends IClientOutgoingPacket {
+public class ExShowBaseAttributeCancelWindow extends ServerPacket {
     private final Collection<L2ItemInstance> _items;
     private long _price;
 
@@ -18,7 +17,7 @@ public class ExShowBaseAttributeCancelWindow extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SHOW_BASE_ATTRIBUTE_CANCEL_WINDOW);
+        writeId(ServerPacketId.EX_SHOW_BASE_ATTRIBUTE_CANCEL_WINDOW);
 
         writeInt(_items.size());
         for (L2ItemInstance item : _items) {

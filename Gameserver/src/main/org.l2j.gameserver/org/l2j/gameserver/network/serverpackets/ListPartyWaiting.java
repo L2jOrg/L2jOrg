@@ -6,16 +6,15 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
  * @author Gnacik
  */
-public class ListPartyWaiting extends IClientOutgoingPacket {
+public class ListPartyWaiting extends ServerPacket {
     private static final int NUM_PER_PAGE = 64;
     private final List<MatchingRoom> _rooms = new LinkedList<>();
     private final int _size;
@@ -36,7 +35,7 @@ public class ListPartyWaiting extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.LIST_PARTY_WATING);
+        writeId(ServerPacketId.LIST_PARTY_WATING);
 
         writeInt(_size);
         writeInt(_rooms.size());

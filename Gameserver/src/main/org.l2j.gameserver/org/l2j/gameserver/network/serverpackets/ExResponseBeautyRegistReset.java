@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author Sdw
  */
-public class ExResponseBeautyRegistReset extends IClientOutgoingPacket {
+public class ExResponseBeautyRegistReset extends ServerPacket {
     public static final int FAILURE = 0;
     public static final int SUCCESS = 1;
     public static final int CHANGE = 0;
@@ -26,7 +24,7 @@ public class ExResponseBeautyRegistReset extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_RESPONSE_BEAUTY_REGIST_RESET);
+        writeId(ServerPacketId.EX_RESPONSE_BEAUTY_REGIST_RESET);
 
         writeLong(_activeChar.getAdena());
         writeLong(_activeChar.getBeautyTickets());

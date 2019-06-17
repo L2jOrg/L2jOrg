@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class ChairSit extends IClientOutgoingPacket {
+public class ChairSit extends ServerPacket {
     private final L2PcInstance _activeChar;
     private final int _staticObjectId;
 
@@ -21,7 +19,7 @@ public class ChairSit extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.CHAIR_SIT);
+        writeId(ServerPacketId.CHAIR_SIT);
 
         writeInt(_activeChar.getObjectId());
         writeInt(_staticObjectId);

@@ -4,12 +4,10 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.StopMoveInVehicle;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Maktakien
  */
-public final class CannotMoveAnymoreInVehicle extends IClientIncomingPacket {
+public final class CannotMoveAnymoreInVehicle extends ClientPacket {
     private int _x;
     private int _y;
     private int _z;

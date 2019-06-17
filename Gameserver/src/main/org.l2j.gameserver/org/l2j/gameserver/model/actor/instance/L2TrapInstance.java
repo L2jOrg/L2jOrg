@@ -19,7 +19,7 @@ import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.NpcInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
@@ -69,7 +69,7 @@ public final class L2TrapInstance extends L2Npc {
     }
 
     @Override
-    public void broadcastPacket(IClientOutgoingPacket mov) {
+    public void broadcastPacket(ServerPacket mov) {
         L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
         {
             if (_isTriggered || canBeSeen(player)) {
@@ -79,7 +79,7 @@ public final class L2TrapInstance extends L2Npc {
     }
 
     @Override
-    public void broadcastPacket(IClientOutgoingPacket mov, int radiusInKnownlist) {
+    public void broadcastPacket(ServerPacket mov, int radiusInKnownlist) {
         L2World.getInstance().forEachVisibleObjectInRange(this, L2PcInstance.class, radiusInKnownlist, player ->
         {
             if (_isTriggered || canBeSeen(player)) {

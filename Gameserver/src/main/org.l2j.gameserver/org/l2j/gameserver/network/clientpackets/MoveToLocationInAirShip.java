@@ -8,14 +8,12 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExMoveToLocationInAirShip;
 import org.l2j.gameserver.network.serverpackets.StopMoveInVehicle;
 
-import java.nio.ByteBuffer;
-
 /**
  * format: ddddddd X:%d Y:%d Z:%d OriginX:%d OriginY:%d OriginZ:%d
  *
  * @author GodKratos
  */
-public class MoveToLocationInAirShip extends IClientIncomingPacket {
+public class MoveToLocationInAirShip extends ClientPacket {
     private int _shipId;
     private int _targetX;
     private int _targetY;

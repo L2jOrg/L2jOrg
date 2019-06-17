@@ -1,15 +1,13 @@
 package org.l2j.gameserver.network.clientpackets.friend;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.friend.ExFriendDetailInfo;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author Sdw
  */
-public class RequestFriendDetailInfo extends IClientIncomingPacket {
+public class RequestFriendDetailInfo extends ClientPacket {
     private String _name;
 
     @Override

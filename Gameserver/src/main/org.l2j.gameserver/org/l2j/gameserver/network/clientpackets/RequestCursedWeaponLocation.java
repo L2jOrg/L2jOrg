@@ -6,7 +6,6 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ExCursedWeaponLocation;
 
-import java.nio.ByteBuffer;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -15,7 +14,7 @@ import java.util.List;
  *
  * @author -Wooden-
  */
-public final class RequestCursedWeaponLocation extends IClientIncomingPacket {
+public final class RequestCursedWeaponLocation extends ClientPacket {
     @Override
     public void readImpl() {
     }

@@ -3,13 +3,12 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.LinkedList;
 import java.util.List;
 
-public class QuestList extends IClientOutgoingPacket {
+public class QuestList extends ServerPacket {
     private final List<QuestState> _activeQuests;
     private final byte[] _oneTimeQuestMask;
 
@@ -31,7 +30,7 @@ public class QuestList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.QUEST_LIST);
+        writeId(ServerPacketId.QUEST_LIST);
         writeShort((short) _activeQuests.size());
         for (QuestState qs : _activeQuests) {
             writeInt(qs.getQuest().getId());

@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.L2AdminCommandAccessRight;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.IGameXmlReader;
 import org.slf4j.Logger;
@@ -272,7 +272,7 @@ public final class AdminData extends IGameXmlReader{
      *
      * @param packet the packet
      */
-    public void broadcastToGMs(IClientOutgoingPacket packet) {
+    public void broadcastToGMs(ServerPacket packet) {
         for (L2PcInstance gm : getAllGms(true)) {
             gm.sendPacket(packet);
         }

@@ -2,15 +2,13 @@ package org.l2j.gameserver.network.serverpackets.primeshop;
 
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author Gnacik, UnAfraid
  */
-public class ExBRBuyProduct extends IClientOutgoingPacket {
+public class ExBRBuyProduct extends ServerPacket {
     private final int _reply;
 
     public ExBRBuyProduct(ExBrProductReplyType type) {
@@ -19,7 +17,7 @@ public class ExBRBuyProduct extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_BR_BUY_PRODUCT);
+        writeId(ServerPacketId.EX_BR_BUY_PRODUCT);
 
         writeInt(_reply);
     }

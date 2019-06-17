@@ -7,14 +7,12 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format: (ch) dSS
  *
  * @author -Wooden-
  */
-public final class RequestPledgeSetAcademyMaster extends IClientIncomingPacket {
+public final class RequestPledgeSetAcademyMaster extends ClientPacket {
     private String _currPlayerName;
     private int _set; // 1 set, 0 delete
     private String _targetPlayerName;

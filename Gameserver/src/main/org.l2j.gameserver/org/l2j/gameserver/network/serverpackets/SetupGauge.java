@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public final class SetupGauge extends IClientOutgoingPacket {
+public final class SetupGauge extends ServerPacket {
     public static final int BLUE = 0;
     public static final int RED = 1;
     public static final int CYAN = 2;
@@ -31,7 +29,7 @@ public final class SetupGauge extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SETUP_GAUGE);
+        writeId(ServerPacketId.SETUP_GAUGE);
         writeInt(_charObjId);
         writeInt(_dat1);
         writeInt(_time);

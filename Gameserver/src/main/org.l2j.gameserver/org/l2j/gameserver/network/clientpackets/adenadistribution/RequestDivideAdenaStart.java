@@ -5,16 +5,15 @@ import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.request.AdenaDistributionRequest;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.adenadistribution.ExDivideAdenaStart;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 /**
  * @author Sdw
  */
-public class RequestDivideAdenaStart extends IClientIncomingPacket {
+public class RequestDivideAdenaStart extends ClientPacket {
     @Override
     public void readImpl() {
 

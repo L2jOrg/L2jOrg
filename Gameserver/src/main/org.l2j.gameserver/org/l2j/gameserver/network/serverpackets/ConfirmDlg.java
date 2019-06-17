@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.SystemMessageId;
 
 /**
@@ -44,7 +44,7 @@ public class ConfirmDlg extends AbstractMessagePacket<ConfirmDlg> {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.CONFIRM_DLG);
+        writeId(ServerPacketId.CONFIRM_DLG);
 
         writeInt(getId());
         writeMe();

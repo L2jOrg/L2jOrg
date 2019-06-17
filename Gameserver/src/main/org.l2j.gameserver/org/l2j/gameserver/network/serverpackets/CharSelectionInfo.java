@@ -14,7 +14,7 @@ import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,7 +25,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-public class CharSelectionInfo extends IClientOutgoingPacket {
+public class CharSelectionInfo extends ServerPacket {
     private static final int[] PAPERDOLL_ORDER = new int[]
             {
                     Inventory.PAPERDOLL_UNDER,
@@ -270,7 +270,7 @@ public class CharSelectionInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.CHARACTER_SELECTION_INFO);
+        writeId(ServerPacketId.CHARACTER_SELECTION_INFO);
 
         final int size = _characterPackages.length;
         writeInt(size); // Created character count

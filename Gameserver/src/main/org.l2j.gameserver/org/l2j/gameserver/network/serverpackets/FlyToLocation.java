@@ -3,14 +3,12 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author KenM
  */
-public final class FlyToLocation extends IClientOutgoingPacket {
+public final class FlyToLocation extends ServerPacket {
     private final int _destX;
     private final int _destY;
     private final int _destZ;
@@ -58,7 +56,7 @@ public final class FlyToLocation extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.FLY_TO_LOCATION);
+        writeId(ServerPacketId.FLY_TO_LOCATION);
 
         writeInt(_chaObjId);
         writeInt(_destX);

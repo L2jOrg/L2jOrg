@@ -2,13 +2,11 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author ShanSoft
  * @structure chdSdS
  */
-public final class RequestSaveBookMarkSlot extends IClientIncomingPacket {
+public final class RequestSaveBookMarkSlot extends ClientPacket {
     private int icon;
     private String name;
     private String tag;

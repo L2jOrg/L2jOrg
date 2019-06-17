@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.clientpackets.vip;
 
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipLuckyGameInfo;
 
-import java.nio.ByteBuffer;
-
-public class RequestVipLuckGameInfo  extends IClientIncomingPacket {
+public class RequestVipLuckGameInfo  extends ClientPacket {
     @Override
     protected void readImpl() throws Exception {
         // trigger packet

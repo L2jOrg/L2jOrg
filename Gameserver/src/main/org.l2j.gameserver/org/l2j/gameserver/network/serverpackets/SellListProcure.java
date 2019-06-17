@@ -5,13 +5,12 @@ import org.l2j.gameserver.model.CropProcure;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SellListProcure extends IClientOutgoingPacket {
+public class SellListProcure extends ServerPacket {
     private final long _money;
     private final Map<L2ItemInstance, Long> _sellList = new HashMap<>();
 
@@ -27,7 +26,7 @@ public class SellListProcure extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SELL_LIST_PROCURE);
+        writeId(ServerPacketId.SELL_LIST_PROCURE);
 
         writeLong(_money); // money
         writeInt(0x00); // lease ?

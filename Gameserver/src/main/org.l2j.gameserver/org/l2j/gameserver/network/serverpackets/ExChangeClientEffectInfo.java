@@ -2,15 +2,13 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author UnAfraid
  */
 @StaticPacket
-public class ExChangeClientEffectInfo extends IClientOutgoingPacket {
+public class ExChangeClientEffectInfo extends ServerPacket {
     public static final ExChangeClientEffectInfo STATIC_FREYA_DEFAULT = new ExChangeClientEffectInfo(0, 0, 1);
     public static final ExChangeClientEffectInfo STATIC_FREYA_DESTROYED = new ExChangeClientEffectInfo(0, 0, 2);
 
@@ -35,7 +33,7 @@ public class ExChangeClientEffectInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_CHANGE_CLIENT_EFFECT_INFO);
+        writeId(ServerPacketId.EX_CHANGE_CLIENT_EFFECT_INFO);
 
         writeInt(_type);
         writeInt(_key);

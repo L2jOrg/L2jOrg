@@ -2,16 +2,14 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * Special Camera server packet implementation.
  *
  * @author Zoey76
  */
-public class SpecialCamera extends IClientOutgoingPacket {
+public class SpecialCamera extends ServerPacket {
     private final int _id;
     private final int _force;
     private final int _angle1;
@@ -94,7 +92,7 @@ public class SpecialCamera extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SPECIAL_CAMERA);
+        writeId(ServerPacketId.SPECIAL_CAMERA);
 
         writeInt(_id);
         writeInt(_force);

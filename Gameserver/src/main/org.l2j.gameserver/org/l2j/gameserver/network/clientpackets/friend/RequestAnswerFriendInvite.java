@@ -19,17 +19,16 @@ package org.l2j.gameserver.network.clientpackets.friend;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.friend.FriendAddRequestResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-public final class RequestAnswerFriendInvite extends IClientIncomingPacket {
+public final class RequestAnswerFriendInvite extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestAnswerFriendInvite.class);
 

@@ -6,13 +6,13 @@ import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.NpcStringId;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.SystemMessageId;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public final class CreatureSay extends IClientOutgoingPacket {
+public final class CreatureSay extends ServerPacket {
     private final int _objectId;
     private final ChatType _textType;
     private String _charName = null;
@@ -121,7 +121,7 @@ public final class CreatureSay extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SAY2);
+        writeId(ServerPacketId.SAY2);
 
         writeInt(_objectId);
         writeInt(_textType.getClientId());

@@ -15,12 +15,10 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SendTradeRequest;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.nio.ByteBuffer;
-
 /**
  * This packet manages the trade request.
  */
-public final class TradeRequest extends IClientIncomingPacket {
+public final class TradeRequest extends ClientPacket {
     private int _objectId;
 
     @Override

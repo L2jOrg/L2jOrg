@@ -8,14 +8,12 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPutItemResultForVariationCancel;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format(ch) d
  *
  * @author -Wooden-
  */
-public final class RequestConfirmCancelItem extends IClientIncomingPacket {
+public final class RequestConfirmCancelItem extends ClientPacket {
     private int _objectId;
 
     @Override

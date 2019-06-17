@@ -2,17 +2,15 @@ package org.l2j.gameserver.network.clientpackets.commission;
 
 import org.l2j.gameserver.instancemanager.CommissionManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.commission.ExCloseCommission;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author NosBit
  */
-public class RequestCommissionRegister extends IClientIncomingPacket {
+public class RequestCommissionRegister extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestCommissionRegister.class);
 

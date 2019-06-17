@@ -8,7 +8,6 @@ import org.l2j.gameserver.network.serverpackets.CharSelectionInfo;
 import org.l2j.gameserver.network.serverpackets.RestartResponse;
 import org.l2j.gameserver.util.OfflineTradeUtil;
 
-import java.nio.ByteBuffer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,7 +17,7 @@ import org.slf4j.LoggerFactory;
  *
  * @version $Revision: 1.11.2.1.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestRestart extends IClientIncomingPacket {
+public final class RequestRestart extends ClientPacket {
     protected static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
 
     @Override

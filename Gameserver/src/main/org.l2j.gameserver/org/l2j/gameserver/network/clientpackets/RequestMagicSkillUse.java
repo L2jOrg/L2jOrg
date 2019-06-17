@@ -9,9 +9,7 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
-public final class RequestMagicSkillUse extends IClientIncomingPacket {
+public final class RequestMagicSkillUse extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestMagicSkillUse.class);
     private int _magicId;
     private boolean _ctrlPressed;

@@ -15,7 +15,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 
 import java.util.Arrays;
 
-public abstract class AbstractRefinePacket extends IClientIncomingPacket {
+public abstract class AbstractRefinePacket extends ClientPacket {
     /**
      * Checks player, source item, lifestone and gemstone validity for augmentation process
      *

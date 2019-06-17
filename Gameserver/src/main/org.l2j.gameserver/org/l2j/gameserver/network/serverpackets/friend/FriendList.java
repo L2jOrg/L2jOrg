@@ -5,10 +5,9 @@ import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
-import java.nio.ByteBuffer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -21,7 +20,7 @@ import java.util.List;
  *
  * @author mrTJO, UnAfraid
  */
-public class FriendList extends IClientOutgoingPacket {
+public class FriendList extends ServerPacket {
     private final List<FriendInfo> _info = new LinkedList<>();
 
     public FriendList(L2PcInstance player) {
@@ -61,7 +60,7 @@ public class FriendList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.FRIEND_LIST);
+        writeId(ServerPacketId.FRIEND_LIST);
 
         writeInt(_info.size());
         for (FriendInfo info : _info) {

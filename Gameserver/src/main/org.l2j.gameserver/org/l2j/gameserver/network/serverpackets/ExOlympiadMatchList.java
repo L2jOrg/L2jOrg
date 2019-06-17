@@ -2,16 +2,15 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.olympiad.*;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author mrTJO
  */
-public class ExOlympiadMatchList extends IClientOutgoingPacket {
+public class ExOlympiadMatchList extends ServerPacket {
     private final List<OlympiadGameTask> _games = new ArrayList<>();
 
     public ExOlympiadMatchList() {
@@ -29,7 +28,7 @@ public class ExOlympiadMatchList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_RECEIVE_OLYMPIAD);
+        writeId(ServerPacketId.EX_RECEIVE_OLYMPIAD);
 
         writeInt(0x00); // Type 0 = Match List, 1 = Match Result
 

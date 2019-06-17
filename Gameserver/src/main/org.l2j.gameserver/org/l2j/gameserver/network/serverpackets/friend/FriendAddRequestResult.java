@@ -2,15 +2,13 @@ package org.l2j.gameserver.network.serverpackets.friend;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author UnAfraid
  */
-public class FriendAddRequestResult extends IClientOutgoingPacket {
+public class FriendAddRequestResult extends ServerPacket {
     private final int _result;
     private final int _charId;
     private final String _charName;
@@ -31,7 +29,7 @@ public class FriendAddRequestResult extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.FRIEND_ADD_REQUEST_RESULT);
+        writeId(ServerPacketId.FRIEND_ADD_REQUEST_RESULT);
 
         writeInt(_result);
         writeInt(_charId);

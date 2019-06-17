@@ -5,12 +5,11 @@ import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
-public class ShopPreviewList extends IClientOutgoingPacket {
+public class ShopPreviewList extends ServerPacket {
     private final int _listId;
     private final Collection<Product> _list;
     private final long _money;
@@ -31,7 +30,7 @@ public class ShopPreviewList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.SHOP_PREVIEW_LIST);
+        writeId(ServerPacketId.SHOP_PREVIEW_LIST);
 
         writeInt(5056);
         writeLong(_money); // current money

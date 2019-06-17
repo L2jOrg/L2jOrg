@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author KenM
  */
-public class RequestPVPMatchRecord extends IClientIncomingPacket {
+public class RequestPVPMatchRecord extends ClientPacket {
     @Override
     public void readImpl() {
 

@@ -3,9 +3,8 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 /**
@@ -25,7 +24,7 @@ public class PetInventoryUpdate extends AbstractInventoryUpdate {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PET_INVENTORY_UPDATE);
+        writeId(ServerPacketId.PET_INVENTORY_UPDATE);
 
         writeItems();
     }

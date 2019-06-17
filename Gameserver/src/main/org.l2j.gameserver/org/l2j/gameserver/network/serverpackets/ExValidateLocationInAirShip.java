@@ -3,16 +3,14 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * update 27.8.10
  *
  * @author kerberos JIV
  */
-public class ExValidateLocationInAirShip extends IClientOutgoingPacket {
+public class ExValidateLocationInAirShip extends ServerPacket {
     private final L2PcInstance _activeChar;
     private final int _shipId;
     private final int _heading;
@@ -27,7 +25,7 @@ public class ExValidateLocationInAirShip extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_VALIDATE_LOCATION_IN_AIR_SHIP);
+        writeId(ServerPacketId.EX_VALIDATE_LOCATION_IN_AIR_SHIP);
 
         writeInt(_activeChar.getObjectId());
         writeInt(_shipId);

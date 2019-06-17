@@ -11,9 +11,7 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
-public final class RequestPetUseItem extends IClientIncomingPacket {
+public final class RequestPetUseItem extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestPetUseItem.class);
     private int _objectId;
 

@@ -10,6 +10,8 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.PrintStream;
 import java.util.Arrays;
@@ -19,7 +21,10 @@ import java.util.Arrays;
  * @author UnAfraid
  */
 @SuppressWarnings("unchecked")
-public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> extends IClientOutgoingPacket {
+public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> extends ServerPacket {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(AbstractMessagePacket.class);
+
     private static final SMParam[] EMPTY_PARAM_ARRAY = new SMParam[0];
     private static final byte TYPE_FACTION_NAME = 24; // c(short), faction id.
     // id 22 d (shared with 1-3,17,22

@@ -1,16 +1,14 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * Send Private (Friend) Message
  *
  * @author Tempy
  */
-public class L2FriendSay extends IClientOutgoingPacket {
+public class L2FriendSay extends ServerPacket {
     private final String _sender;
     private final String _receiver;
     private final String _message;
@@ -23,7 +21,7 @@ public class L2FriendSay extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.L2_FRIEND_SAY);
+        writeId(ServerPacketId.L2_FRIEND_SAY);
 
         writeInt(0); // ??
         writeString(_receiver);

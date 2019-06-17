@@ -2,16 +2,14 @@ package org.l2j.gameserver.network.clientpackets.commission;
 
 import org.l2j.gameserver.instancemanager.CommissionManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.commission.ExCloseCommission;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionItemList;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author NosBit
  */
-public class RequestCommissionRegistrableItemList extends IClientIncomingPacket {
+public class RequestCommissionRegistrableItemList extends ClientPacket {
     @Override
     public void readImpl() {
     }

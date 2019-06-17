@@ -373,7 +373,7 @@ public class Duel {
      *
      * @param packet
      */
-    public void broadcastToTeam1(IClientOutgoingPacket packet) {
+    public void broadcastToTeam1(ServerPacket packet) {
         if (_playerA == null) {
             return;
         }
@@ -392,7 +392,7 @@ public class Duel {
      *
      * @param packet
      */
-    public void broadcastToTeam2(IClientOutgoingPacket packet) {
+    public void broadcastToTeam2(ServerPacket packet) {
         if (_playerB == null) {
             return;
         }

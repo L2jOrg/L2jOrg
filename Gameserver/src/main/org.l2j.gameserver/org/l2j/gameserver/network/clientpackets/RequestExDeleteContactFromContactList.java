@@ -3,14 +3,12 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format: (ch)S S: Character Name
  *
  * @author UnAfraid & mrTJO
  */
-public class RequestExDeleteContactFromContactList extends IClientIncomingPacket {
+public class RequestExDeleteContactFromContactList extends ClientPacket {
     private String _name;
 
     @Override

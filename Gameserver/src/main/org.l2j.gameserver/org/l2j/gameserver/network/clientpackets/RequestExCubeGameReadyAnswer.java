@@ -5,14 +5,12 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format: chddd d: Arena d: Answer
  *
  * @author mrTJO
  */
-public final class RequestExCubeGameReadyAnswer extends IClientIncomingPacket {
+public final class RequestExCubeGameReadyAnswer extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestExCubeGameReadyAnswer.class);
     private int _arena;
     private int _answer;

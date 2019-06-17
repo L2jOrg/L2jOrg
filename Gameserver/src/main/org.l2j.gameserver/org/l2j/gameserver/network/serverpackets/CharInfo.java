@@ -12,12 +12,12 @@ import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Set;
 
-public class CharInfo extends IClientOutgoingPacket {
+public class CharInfo extends ServerPacket {
+
     private static final int[] PAPERDOLL_ORDER = new int[]
             {
                     Inventory.PAPERDOLL_UNDER,
@@ -94,7 +94,7 @@ public class CharInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.CHAR_INFO);
+        writeId(ServerPacketId.CHAR_INFO);
         final CeremonyOfChaosEvent event = _activeChar.getEvent(CeremonyOfChaosEvent.class);
         final CeremonyOfChaosMember cocPlayer = event != null ? event.getMember(_activeChar.getObjectId()) : null;
         writeByte((byte) 0x00); // Grand Crusade

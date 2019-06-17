@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class AskJoinAlly extends IClientOutgoingPacket {
+public class AskJoinAlly extends ServerPacket {
     private final String _requestorName;
     private final int _requestorObjId;
 
@@ -20,7 +18,7 @@ public class AskJoinAlly extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.ASK_JOIN_ALLIANCE);
+        writeId(ServerPacketId.ASK_JOIN_ALLIANCE);
 
         writeInt(_requestorObjId);
         writeString(null); // Ally Name ?

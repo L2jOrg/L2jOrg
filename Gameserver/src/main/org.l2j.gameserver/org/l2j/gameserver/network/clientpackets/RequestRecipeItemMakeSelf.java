@@ -4,12 +4,10 @@ import org.l2j.gameserver.RecipeController;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Administrator
  */
-public final class RequestRecipeItemMakeSelf extends IClientIncomingPacket {
+public final class RequestRecipeItemMakeSelf extends ClientPacket {
     private int _id;
 
     @Override

@@ -6,9 +6,7 @@ import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 
-import java.nio.ByteBuffer;
-
-public class RequestRecordInfo extends IClientIncomingPacket {
+public class RequestRecordInfo extends ClientPacket {
     @Override
     public void readImpl() {
 

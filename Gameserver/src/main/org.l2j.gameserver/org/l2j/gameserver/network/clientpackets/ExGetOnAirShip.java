@@ -3,14 +3,12 @@ package org.l2j.gameserver.network.clientpackets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format: (c) dddd d: dx d: dy d: dz d: AirShip id ??
  *
  * @author -Wooden-
  */
-public class ExGetOnAirShip extends IClientIncomingPacket {
+public class ExGetOnAirShip extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ExGetOnAirShip.class);
 

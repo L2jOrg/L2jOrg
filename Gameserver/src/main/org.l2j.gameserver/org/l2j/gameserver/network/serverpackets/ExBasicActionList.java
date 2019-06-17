@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author KenM
  */
-public final class ExBasicActionList extends IClientOutgoingPacket {
+public final class ExBasicActionList extends ServerPacket {
     //@formatter:off
     public static final int[] ACTIONS_ON_TRANSFORM =
             {
@@ -142,7 +140,7 @@ public final class ExBasicActionList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_BASIC_ACTION_LIST);
+        writeId(ServerPacketId.EX_BASIC_ACTION_LIST);
 
         writeInt(_actionIds.length);
         for (int _actionId : _actionIds) {

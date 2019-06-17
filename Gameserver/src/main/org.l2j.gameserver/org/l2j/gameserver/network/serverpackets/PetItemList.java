@@ -2,9 +2,8 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
 public class PetItemList extends AbstractItemPacket {
@@ -16,7 +15,7 @@ public class PetItemList extends AbstractItemPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PET_ITEM_LIST);
+        writeId(ServerPacketId.PET_ITEM_LIST);
 
         writeShort((short) _items.size());
         for (L2ItemInstance item : _items) {

@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class ChangeWaitType extends IClientOutgoingPacket {
+public class ChangeWaitType extends ServerPacket {
     public static final int WT_SITTING = 0;
     public static final int WT_STANDING = 1;
     public static final int WT_START_FAKEDEATH = 2;
@@ -28,7 +26,7 @@ public class ChangeWaitType extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.CHANGE_WAIT_TYPE);
+        writeId(ServerPacketId.CHANGE_WAIT_TYPE);
 
         writeInt(_charObjId);
         writeInt(_moveType);

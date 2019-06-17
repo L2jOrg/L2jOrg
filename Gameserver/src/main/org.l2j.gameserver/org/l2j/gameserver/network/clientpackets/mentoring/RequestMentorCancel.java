@@ -9,15 +9,13 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerMenteeLeft;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerMenteeRemove;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author UnAfraid
  */
-public class RequestMentorCancel extends IClientIncomingPacket {
+public class RequestMentorCancel extends ClientPacket {
     private int _confirmed;
     private String _name;
 

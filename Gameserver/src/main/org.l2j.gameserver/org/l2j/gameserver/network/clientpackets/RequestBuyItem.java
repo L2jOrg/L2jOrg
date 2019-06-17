@@ -20,13 +20,12 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.l2j.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
 
-public final class RequestBuyItem extends IClientIncomingPacket {
+public final class RequestBuyItem extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestBuyItem.class);
     private static final int BATCH_LENGTH = 12;
     private static final int CUSTOM_CB_SELL_LIST = 423;

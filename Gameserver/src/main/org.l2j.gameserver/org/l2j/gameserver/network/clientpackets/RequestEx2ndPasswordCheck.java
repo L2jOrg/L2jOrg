@@ -3,14 +3,12 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.data.xml.impl.SecondaryAuthData;
 import org.l2j.gameserver.network.serverpackets.Ex2ndPasswordCheck;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format: (ch)
  *
  * @author mrTJO
  */
-public class RequestEx2ndPasswordCheck extends IClientIncomingPacket {
+public class RequestEx2ndPasswordCheck extends ClientPacket {
     @Override
     public void readImpl() {
 

@@ -2,16 +2,15 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Map;
 import java.util.Map.Entry;
 
 /**
  * @author Mobius
  */
-public class ExPVPMatchCCRecord extends IClientOutgoingPacket {
+public class ExPVPMatchCCRecord extends ServerPacket {
     public static final int INITIALIZE = 0;
     public static final int UPDATE = 1;
     public static final int FINISH = 2;
@@ -26,7 +25,7 @@ public class ExPVPMatchCCRecord extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_PVP_MATCH_CCRECORD);
+        writeId(ServerPacketId.EX_PVP_MATCH_CCRECORD);
         writeInt(_state); // 0 - initialize, 1 - update, 2 - finish
         writeInt(_players.size());
         for (Entry<L2PcInstance, Integer> entry : _players.entrySet()) {

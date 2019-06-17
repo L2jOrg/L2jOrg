@@ -3,16 +3,14 @@ package org.l2j.gameserver.network.clientpackets.shuttle;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.instance.L2ShuttleInstance;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author UnAfraid
  */
-public class RequestShuttleGetOn extends IClientIncomingPacket {
+public class RequestShuttleGetOn extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestShuttleGetOn.class);
     private int _x;
     private int _y;

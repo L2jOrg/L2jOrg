@@ -2,15 +2,13 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author -Wooden-
  */
 @StaticPacket
-public class ExSearchOrc extends IClientOutgoingPacket {
+public class ExSearchOrc extends ServerPacket {
     public static final ExSearchOrc STATIC_PACKET = new ExSearchOrc();
 
     private ExSearchOrc() {
@@ -18,7 +16,7 @@ public class ExSearchOrc extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_SEARCH_ORC);
+        writeId(ServerPacketId.EX_SEARCH_ORC);
 
     }
 

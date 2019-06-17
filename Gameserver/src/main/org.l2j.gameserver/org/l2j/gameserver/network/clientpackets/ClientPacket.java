@@ -12,9 +12,9 @@ import org.slf4j.LoggerFactory;
  *
  * @author KenM
  */
-public abstract class IClientIncomingPacket extends ReadablePacket<L2GameClient> {
+public abstract class ClientPacket extends ReadablePacket<L2GameClient> {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(IClientIncomingPacket.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(ClientPacket.class);
 
     @Override
     protected boolean read() {

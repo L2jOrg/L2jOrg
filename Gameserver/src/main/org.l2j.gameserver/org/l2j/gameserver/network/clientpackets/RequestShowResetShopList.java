@@ -6,12 +6,10 @@ import org.l2j.gameserver.model.beautyshop.BeautyData;
 import org.l2j.gameserver.model.beautyshop.BeautyItem;
 import org.l2j.gameserver.network.serverpackets.ExResponseBeautyRegistReset;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestShowResetShopList extends IClientIncomingPacket {
+public class RequestShowResetShopList extends ClientPacket {
     private int _hairId;
     private int _faceId;
     private int _colorId;

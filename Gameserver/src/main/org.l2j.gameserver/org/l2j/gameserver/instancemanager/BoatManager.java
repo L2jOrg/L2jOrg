@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.VehiclePathPoint;
 import org.l2j.gameserver.model.actor.instance.L2BoatInstance;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -124,7 +124,7 @@ public class BoatManager {
      * @param point2
      * @param packet
      */
-    public void broadcastPacket(VehiclePathPoint point1, VehiclePathPoint point2, IClientOutgoingPacket packet) {
+    public void broadcastPacket(VehiclePathPoint point1, VehiclePathPoint point2, ServerPacket packet) {
         broadcastPacketsToPlayers(point1, point2, packet);
     }
 
@@ -135,18 +135,18 @@ public class BoatManager {
      * @param point2
      * @param packets
      */
-    public void broadcastPackets(VehiclePathPoint point1, VehiclePathPoint point2, IClientOutgoingPacket... packets) {
+    public void broadcastPackets(VehiclePathPoint point1, VehiclePathPoint point2, ServerPacket... packets) {
         broadcastPacketsToPlayers(point1, point2, packets);
     }
 
-    private void broadcastPacketsToPlayers(VehiclePathPoint point1, VehiclePathPoint point2, IClientOutgoingPacket... packets) {
+    private void broadcastPacketsToPlayers(VehiclePathPoint point1, VehiclePathPoint point2, ServerPacket... packets) {
         for (L2PcInstance player : L2World.getInstance().getPlayers()) {
             if (Math.hypot(player.getX() - point1.getX(), player.getY() - point1.getY()) < Config.BOAT_BROADCAST_RADIUS) {
-                for (IClientOutgoingPacket p : packets) {
+                for (ServerPacket p : packets) {
                     player.sendPacket(p);
                 }
             } else if (Math.hypot(player.getX() - point2.getX(), player.getY() - point2.getY()) < Config.BOAT_BROADCAST_RADIUS) {
-                for (IClientOutgoingPacket p : packets) {
+                for (ServerPacket p : packets) {
                     player.sendPacket(p);
                 }
             }

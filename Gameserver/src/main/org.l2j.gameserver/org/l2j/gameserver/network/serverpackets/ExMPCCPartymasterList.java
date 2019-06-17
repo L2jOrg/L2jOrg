@@ -1,15 +1,14 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Set;
 
 /**
  * @author Sdw
  */
-public class ExMPCCPartymasterList extends IClientOutgoingPacket {
+public class ExMPCCPartymasterList extends ServerPacket {
     private final Set<String> _leadersName;
 
     public ExMPCCPartymasterList(Set<String> leadersName) {
@@ -18,7 +17,7 @@ public class ExMPCCPartymasterList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_MPCC_PARTYMASTER_LIST);
+        writeId(ServerPacketId.EX_MPCC_PARTYMASTER_LIST);
 
         writeInt(_leadersName.size());
         _leadersName.forEach(this::writeString);

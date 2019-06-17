@@ -3,15 +3,15 @@ package org.l2j.gameserver.network.serverpackets.friend;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.Calendar;
 
 /**
  * @author Sdw
  */
-public class ExFriendDetailInfo extends IClientOutgoingPacket {
+public class ExFriendDetailInfo extends ServerPacket {
     private final int _objectId;
     private final L2PcInstance _friend;
     private final String _name;
@@ -26,7 +26,7 @@ public class ExFriendDetailInfo extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_FRIEND_DETAIL_INFO);
+        writeId(ServerPacketId.EX_FRIEND_DETAIL_INFO);
 
         writeInt(_objectId);
 

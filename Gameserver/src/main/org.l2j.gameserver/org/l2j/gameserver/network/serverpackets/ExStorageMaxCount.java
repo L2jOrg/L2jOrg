@@ -4,14 +4,12 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author -Wooden-, KenM
  */
-public class ExStorageMaxCount extends IClientOutgoingPacket {
+public class ExStorageMaxCount extends ServerPacket {
     private final int _inventory;
     private final int _warehouse;
     // private final int _freight; // Removed with 152.
@@ -38,7 +36,7 @@ public class ExStorageMaxCount extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_STORAGE_MAX_COUNT);
+        writeId(ServerPacketId.EX_STORAGE_MAX_COUNT);
 
         writeInt(_inventory);
         writeInt(_warehouse);

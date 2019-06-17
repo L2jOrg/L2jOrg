@@ -26,12 +26,11 @@ import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 import static java.util.Objects.isNull;
 
-public final class CharacterCreate extends IClientIncomingPacket {
+public final class CharacterCreate extends ClientPacket {
 
     private static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
     private static final Logger LOGGER = LoggerFactory.getLogger(CharacterCreate.class);

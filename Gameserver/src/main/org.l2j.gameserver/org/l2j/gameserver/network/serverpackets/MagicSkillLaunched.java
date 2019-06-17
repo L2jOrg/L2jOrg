@@ -4,9 +4,8 @@ import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.skills.SkillCastingType;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
@@ -16,7 +15,7 @@ import java.util.Collections;
  *
  * @author UnAfraid
  */
-public class MagicSkillLaunched extends IClientOutgoingPacket {
+public class MagicSkillLaunched extends ServerPacket {
     private final int _charObjId;
     private final int _skillId;
     private final int _skillLevel;
@@ -46,7 +45,7 @@ public class MagicSkillLaunched extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.MAGIC_SKILL_LAUNCHED);
+        writeId(ServerPacketId.MAGIC_SKILL_LAUNCHED);
 
         writeInt(_castingType.getClientBarId()); // MagicSkillUse castingType
         writeInt(_charObjId);

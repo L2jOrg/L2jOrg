@@ -3492,7 +3492,7 @@ public final class L2PcInstance extends L2Playable {
     }
 
     @Override
-    public final void broadcastPacket(IClientOutgoingPacket mov) {
+    public final void broadcastPacket(ServerPacket mov) {
         if (mov instanceof CharInfo) {
             throw new IllegalArgumentException("CharInfo is being send via broadcastPacket. Do NOT do that! Use broadcastCharInfo() instead.");
         }
@@ -3510,7 +3510,7 @@ public final class L2PcInstance extends L2Playable {
     }
 
     @Override
-    public void broadcastPacket(IClientOutgoingPacket mov, int radiusInKnownlist) {
+    public void broadcastPacket(ServerPacket mov, int radiusInKnownlist) {
         if (mov instanceof CharInfo) {
             new IllegalArgumentException("CharInfo is being send via broadcastPacket. Do NOT do that! Use broadcastCharInfo() instead.");
         }
@@ -3551,9 +3551,9 @@ public final class L2PcInstance extends L2Playable {
      * Send a Server->Client packet StatusUpdate to the L2PcInstance.
      */
     @Override
-    public void sendPacket(IClientOutgoingPacket... packets) {
+    public void sendPacket(ServerPacket... packets) {
         if (_client != null) {
-            for (IClientOutgoingPacket packet : packets) {
+            for (ServerPacket packet : packets) {
                 _client.sendPacket(packet);
             }
         }

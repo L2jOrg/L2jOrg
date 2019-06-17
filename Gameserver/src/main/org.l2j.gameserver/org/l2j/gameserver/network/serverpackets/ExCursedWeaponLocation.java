@@ -2,9 +2,8 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 /**
@@ -12,7 +11,7 @@ import java.util.List;
  *
  * @author -Wooden-
  */
-public class ExCursedWeaponLocation extends IClientOutgoingPacket {
+public class ExCursedWeaponLocation extends ServerPacket {
     private final List<CursedWeaponInfo> _cursedWeaponInfo;
 
     public ExCursedWeaponLocation(List<CursedWeaponInfo> cursedWeaponInfo) {
@@ -21,7 +20,7 @@ public class ExCursedWeaponLocation extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_CURSED_WEAPON_LOCATION);
+        writeId(ServerPacketId.EX_CURSED_WEAPON_LOCATION);
 
         if (!_cursedWeaponInfo.isEmpty()) {
             writeInt(_cursedWeaponInfo.size());

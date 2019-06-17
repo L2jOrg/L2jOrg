@@ -12,14 +12,12 @@ import org.l2j.gameserver.network.serverpackets.TradeUpdate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.5.2.2.2.5 $ $Date: 2005/03/27 15:29:29 $
  */
-public final class AddTradeItem extends IClientIncomingPacket {
+public final class AddTradeItem extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(AddTradeItem.class);
     private int _tradeId;
     private int _objectId;

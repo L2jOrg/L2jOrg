@@ -5,18 +5,17 @@ import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.actor.request.AdenaDistributionRequest;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.adenadistribution.ExDivideAdenaCancel;
 import org.l2j.gameserver.network.serverpackets.adenadistribution.ExDivideAdenaDone;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 import java.util.Objects;
 
 /**
  * @author Sdw
  */
-public class RequestDivideAdena extends IClientIncomingPacket {
+public class RequestDivideAdena extends ClientPacket {
     private int _adenaObjId;
     private long _adenaCount;
 

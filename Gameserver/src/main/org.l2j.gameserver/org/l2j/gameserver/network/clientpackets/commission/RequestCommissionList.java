@@ -6,16 +6,15 @@ import org.l2j.gameserver.model.commission.CommissionItemType;
 import org.l2j.gameserver.model.commission.CommissionTreeType;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.type.CrystalType;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.commission.ExCloseCommission;
 
-import java.nio.ByteBuffer;
 import java.util.function.Predicate;
 
 /**
  * @author NosBit
  */
-public class RequestCommissionList extends IClientIncomingPacket {
+public class RequestCommissionList extends ClientPacket {
     private int _treeViewDepth;
     private int _itemType;
     private int _type;

@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author KenM
  */
-public class ExDuelEnd extends IClientOutgoingPacket {
+public class ExDuelEnd extends ServerPacket {
     public static final ExDuelEnd PLAYER_DUEL = new ExDuelEnd(false);
     public static final ExDuelEnd PARTY_DUEL = new ExDuelEnd(true);
 
@@ -20,7 +18,7 @@ public class ExDuelEnd extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_DUEL_END);
+        writeId(ServerPacketId.EX_DUEL_END);
 
         writeInt(_partyDuel);
     }

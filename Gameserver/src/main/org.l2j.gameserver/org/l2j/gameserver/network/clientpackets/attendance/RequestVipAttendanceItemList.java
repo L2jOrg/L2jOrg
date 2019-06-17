@@ -3,15 +3,13 @@ package org.l2j.gameserver.network.clientpackets.attendance;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author Mobius
  */
-public class RequestVipAttendanceItemList extends IClientIncomingPacket {
+public class RequestVipAttendanceItemList extends ClientPacket {
     @Override
     public void readImpl() {
     }

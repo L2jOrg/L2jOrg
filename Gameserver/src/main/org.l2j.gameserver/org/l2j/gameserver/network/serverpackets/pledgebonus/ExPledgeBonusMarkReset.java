@@ -2,16 +2,14 @@ package org.l2j.gameserver.network.serverpackets.pledgebonus;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author UnAfraid
  */
 @StaticPacket
-public class ExPledgeBonusMarkReset extends IClientOutgoingPacket {
+public class ExPledgeBonusMarkReset extends ServerPacket {
     public static ExPledgeBonusMarkReset STATIC_PACKET = new ExPledgeBonusMarkReset();
 
     private ExPledgeBonusMarkReset() {
@@ -19,7 +17,7 @@ public class ExPledgeBonusMarkReset extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_PLEDGE_BONUS_MARK_RESET);
+        writeId(ServerPacketId.EX_PLEDGE_BONUS_MARK_RESET);
     }
 
 }

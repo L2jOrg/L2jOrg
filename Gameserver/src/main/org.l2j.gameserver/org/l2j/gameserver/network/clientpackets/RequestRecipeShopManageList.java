@@ -5,9 +5,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.RecipeShopManageList;
 
-import java.nio.ByteBuffer;
-
-public final class RequestRecipeShopManageList extends IClientIncomingPacket {
+public final class RequestRecipeShopManageList extends ClientPacket {
     @Override
     public void readImpl() {
 

@@ -2,12 +2,8 @@ package org.l2j.gameserver.network.serverpackets.commission;
 
 import org.l2j.gameserver.model.commission.CommissionItem;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.AbstractItemPacket;
-
-import java.nio.ByteBuffer;
-
-import static java.util.Objects.nonNull;
 
 /**
  * @author NosBit
@@ -23,7 +19,7 @@ public class ExResponseCommissionBuyInfo extends AbstractItemPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_RESPONSE_COMMISSION_BUY_INFO);
+        writeId(ServerPacketId.EX_RESPONSE_COMMISSION_BUY_INFO);
 
         writeInt(_commissionItem != null ? 1 : 0);
         if (_commissionItem != null) {

@@ -4,14 +4,12 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ExShowContactList;
 
-import java.nio.ByteBuffer;
-
 /**
  * Format: (ch)
  *
  * @author mrTJO & UnAfraid
  */
-public final class RequestExShowContactList extends IClientIncomingPacket {
+public final class RequestExShowContactList extends ClientPacket {
     @Override
     public void readImpl() {
     }

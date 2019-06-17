@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class TargetUnselected extends IClientOutgoingPacket {
+public class TargetUnselected extends ServerPacket {
     private final int _targetObjId;
     private final int _x;
     private final int _y;
@@ -24,7 +22,7 @@ public class TargetUnselected extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.TARGET_UNSELECTED);
+        writeId(ServerPacketId.TARGET_UNSELECTED);
 
         writeInt(_targetObjId);
         writeInt(_x);

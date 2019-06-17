@@ -3,15 +3,12 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.model.L2Crest;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.settings.ServerSettings;
 
-import java.nio.ByteBuffer;
-
-import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
-public class AllyCrest extends IClientOutgoingPacket {
+public class AllyCrest extends ServerPacket {
     private final int _crestId;
     private final byte[] _data;
 
@@ -28,7 +25,7 @@ public class AllyCrest extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.ALLIANCE_CREST);
+        writeId(ServerPacketId.ALLIANCE_CREST);
 
         writeInt(getSettings(ServerSettings.class).serverId());
         writeInt(_crestId);

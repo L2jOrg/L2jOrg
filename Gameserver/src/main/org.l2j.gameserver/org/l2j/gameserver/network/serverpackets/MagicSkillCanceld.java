@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public final class MagicSkillCanceld extends IClientOutgoingPacket {
+public final class MagicSkillCanceld extends ServerPacket {
     private final int _objectId;
 
     public MagicSkillCanceld(int objectId) {
@@ -14,7 +12,7 @@ public final class MagicSkillCanceld extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.MAGIC_SKILL_CANCELED);
+        writeId(ServerPacketId.MAGIC_SKILL_CANCELED);
 
         writeInt(_objectId);
     }

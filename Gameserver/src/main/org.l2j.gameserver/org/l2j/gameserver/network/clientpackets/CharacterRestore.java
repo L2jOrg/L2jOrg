@@ -5,14 +5,12 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerRestore;
 import org.l2j.gameserver.network.serverpackets.CharSelectionInfo;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.4.2.1.2.2 $ $Date: 2005/03/27 15:29:29 $
  */
-public final class CharacterRestore extends IClientIncomingPacket {
+public final class CharacterRestore extends ClientPacket {
     // cd
     private int _charSlot;
 

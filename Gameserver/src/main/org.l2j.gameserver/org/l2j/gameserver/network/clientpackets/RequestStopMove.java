@@ -2,12 +2,10 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Mobius
  */
-public class RequestStopMove extends IClientIncomingPacket {
+public class RequestStopMove extends ClientPacket {
     @Override
     public void readImpl() {
 

@@ -3,14 +3,12 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.L2Party.MessageType;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestOustPartyMember extends IClientIncomingPacket {
+public final class RequestOustPartyMember extends ClientPacket {
     private String _name;
 
     @Override

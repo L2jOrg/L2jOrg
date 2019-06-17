@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
 
 /**
  * @author KenM
  */
-public class ExPartyPetWindowUpdate extends IClientOutgoingPacket {
+public class ExPartyPetWindowUpdate extends ServerPacket {
     private final L2Summon _summon;
 
     public ExPartyPetWindowUpdate(L2Summon summon) {
@@ -18,7 +16,7 @@ public class ExPartyPetWindowUpdate extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_PARTY_PET_WINDOW_UPDATE);
+        writeId(ServerPacketId.EX_PARTY_PET_WINDOW_UPDATE);
 
         writeInt(_summon.getObjectId());
         writeInt(_summon.getTemplate().getDisplayId() + 1000000);

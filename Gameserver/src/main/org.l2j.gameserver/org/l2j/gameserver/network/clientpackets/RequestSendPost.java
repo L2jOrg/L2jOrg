@@ -22,12 +22,10 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Migi, DS
  */
-public final class RequestSendPost extends IClientIncomingPacket {
+public final class RequestSendPost extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestSendPost.class);
     private static final int BATCH_LENGTH = 12; // length of the one item
 

@@ -3,12 +3,10 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Gnacik
  */
-public final class RequestExitPartyMatchingWaitingRoom extends IClientIncomingPacket {
+public final class RequestExitPartyMatchingWaitingRoom extends ClientPacket {
     @Override
     public void readImpl() {
 

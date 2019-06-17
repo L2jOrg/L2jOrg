@@ -3,12 +3,10 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.PackageSendableList;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Mobius
  */
-public class RequestPackageSendableItemList extends IClientIncomingPacket {
+public class RequestPackageSendableItemList extends ClientPacket {
     private int _objectId;
 
     @Override

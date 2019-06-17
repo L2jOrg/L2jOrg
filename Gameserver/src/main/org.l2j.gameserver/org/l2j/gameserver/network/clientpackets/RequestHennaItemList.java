@@ -3,12 +3,10 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.HennaEquipList;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Tempy, Zoey76
  */
-public final class RequestHennaItemList extends IClientIncomingPacket {
+public final class RequestHennaItemList extends ClientPacket {
     @SuppressWarnings("unused")
     private int _unknown;
 

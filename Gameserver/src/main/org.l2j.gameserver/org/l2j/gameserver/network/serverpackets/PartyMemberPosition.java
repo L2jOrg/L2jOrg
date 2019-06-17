@@ -4,16 +4,15 @@ import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * @author zabbix
  */
-public class PartyMemberPosition extends IClientOutgoingPacket {
+public class PartyMemberPosition extends ServerPacket {
     private final Map<Integer, Location> locations = new HashMap<>();
 
     public PartyMemberPosition(L2Party party) {
@@ -32,7 +31,7 @@ public class PartyMemberPosition extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PARTY_MEMBER_POSITION);
+        writeId(ServerPacketId.PARTY_MEMBER_POSITION);
 
         writeInt(locations.size());
         for (Map.Entry<Integer, Location> entry : locations.entrySet()) {

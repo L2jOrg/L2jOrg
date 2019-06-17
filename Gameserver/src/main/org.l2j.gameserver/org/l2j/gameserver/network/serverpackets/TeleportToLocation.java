@@ -2,11 +2,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public final class TeleportToLocation extends IClientOutgoingPacket {
+public final class TeleportToLocation extends ServerPacket {
     private final int _targetObjId;
     private final int _x;
     private final int _y;
@@ -23,7 +21,7 @@ public final class TeleportToLocation extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.TELEPORT_TO_LOCATION);
+        writeId(ServerPacketId.TELEPORT_TO_LOCATION);
 
         writeInt(_targetObjId);
         writeInt(_x);

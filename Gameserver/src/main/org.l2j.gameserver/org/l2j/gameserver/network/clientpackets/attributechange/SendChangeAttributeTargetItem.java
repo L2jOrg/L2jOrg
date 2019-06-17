@@ -2,16 +2,14 @@ package org.l2j.gameserver.network.clientpackets.attributechange;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.attributechange.ExChangeAttributeInfo;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author Mobius
  */
-public class SendChangeAttributeTargetItem extends IClientIncomingPacket {
+public class SendChangeAttributeTargetItem extends ClientPacket {
     private int _crystalItemId;
     private int _itemObjId;
 

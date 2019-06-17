@@ -7,9 +7,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
-public final class RequestBlock extends IClientIncomingPacket {
+public final class RequestBlock extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestBlock.class);
     private static final int BLOCK = 0;
     private static final int UNBLOCK = 1;

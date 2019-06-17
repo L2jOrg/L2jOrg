@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.eventengine;
 
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -28,10 +28,10 @@ public abstract class AbstractEventMember<T extends AbstractEvent<?>> {
         return L2World.getInstance().getPlayer(_objectId);
     }
 
-    public void sendPacket(IClientOutgoingPacket... packets) {
+    public void sendPacket(ServerPacket... packets) {
         final L2PcInstance player = getPlayer();
         if (player != null) {
-            for (IClientOutgoingPacket packet : packets) {
+            for (ServerPacket packet : packets) {
                 player.sendPacket(packet);
             }
         }

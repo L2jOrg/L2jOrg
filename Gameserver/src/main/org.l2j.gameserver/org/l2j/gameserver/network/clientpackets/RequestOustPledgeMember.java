@@ -12,14 +12,12 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestOustPledgeMember extends IClientIncomingPacket {
+public final class RequestOustPledgeMember extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestOustPledgeMember.class);
     private String _target;
 

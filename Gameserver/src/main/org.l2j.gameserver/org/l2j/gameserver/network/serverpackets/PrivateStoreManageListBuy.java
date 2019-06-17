@@ -4,9 +4,8 @@ import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.Collection;
 
 public class PrivateStoreManageListBuy extends AbstractItemPacket {
@@ -26,7 +25,7 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.PRIVATE_STORE_BUY_MANAGE_LIST);
+        writeId(ServerPacketId.PRIVATE_STORE_BUY_MANAGE_LIST);
         writeByte((byte) _sendType);
         if (_sendType == 2) {
             writeInt(_itemList.size());

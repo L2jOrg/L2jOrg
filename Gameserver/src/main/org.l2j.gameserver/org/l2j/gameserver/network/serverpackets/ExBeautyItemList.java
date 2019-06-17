@@ -5,9 +5,8 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.beautyshop.BeautyData;
 import org.l2j.gameserver.model.beautyshop.BeautyItem;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,7 +15,7 @@ import java.util.Map;
 /**
  * @author Sdw
  */
-public class ExBeautyItemList extends IClientOutgoingPacket {
+public class ExBeautyItemList extends ServerPacket {
     private static final int HAIR_TYPE = 0;
     private static final int FACE_TYPE = 1;
     private static final int COLOR_TYPE = 2;
@@ -39,7 +38,7 @@ public class ExBeautyItemList extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_BEAUTY_ITEM_LIST);
+        writeId(ServerPacketId.EX_BEAUTY_ITEM_LIST);
 
         writeInt(HAIR_TYPE);
         writeInt(_beautyData.getHairList().size());

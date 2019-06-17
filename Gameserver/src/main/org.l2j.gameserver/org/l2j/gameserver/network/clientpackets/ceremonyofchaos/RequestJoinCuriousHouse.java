@@ -4,15 +4,13 @@ import org.l2j.gameserver.enums.CeremonyOfChaosState;
 import org.l2j.gameserver.instancemanager.CeremonyOfChaosManager;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.ceremonyofchaos.ExCuriousHouseState;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author Sdw
  */
-public class RequestJoinCuriousHouse extends IClientIncomingPacket {
+public class RequestJoinCuriousHouse extends ClientPacket {
     @Override
     public void readImpl() {
         // Nothing to read

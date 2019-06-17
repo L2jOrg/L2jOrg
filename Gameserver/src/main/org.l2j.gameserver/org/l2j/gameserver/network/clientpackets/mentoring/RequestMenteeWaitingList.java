@@ -1,15 +1,13 @@
 package org.l2j.gameserver.network.clientpackets.mentoring;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.mentoring.ListMenteeWaiting;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author UnAfraid
  */
-public class RequestMenteeWaitingList extends IClientIncomingPacket {
+public class RequestMenteeWaitingList extends ClientPacket {
     private int _page;
     private int _minLevel;
     private int _maxLevel;

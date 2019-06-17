@@ -2,15 +2,13 @@ package org.l2j.gameserver.network.serverpackets.pledgebonus;
 
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author UnAfraid
  */
-public class ExPledgeBonusUpdate extends IClientOutgoingPacket {
+public class ExPledgeBonusUpdate extends ServerPacket {
     private final ClanRewardType _type;
     private final int _value;
 
@@ -21,7 +19,7 @@ public class ExPledgeBonusUpdate extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.EX_PLEDGE_BONUS_UPDATE);
+        writeId(ServerPacketId.EX_PLEDGE_BONUS_UPDATE);
         writeByte((byte) _type.getClientId());
         writeInt(_value);
     }

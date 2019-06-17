@@ -1,11 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.L2GameClient;
-import org.l2j.gameserver.network.OutgoingPackets;
+import org.l2j.gameserver.network.ServerPacketId;
 
-import java.nio.ByteBuffer;
-
-public class RadarControl extends IClientOutgoingPacket {
+public class RadarControl extends ServerPacket {
     private final int _showRadar;
     private final int _type;
     private final int _x;
@@ -22,7 +20,7 @@ public class RadarControl extends IClientOutgoingPacket {
 
     @Override
     public void writeImpl(L2GameClient client) {
-        writeId(OutgoingPackets.RADAR_CONTROL);
+        writeId(ServerPacketId.RADAR_CONTROL);
 
         writeInt(_showRadar);
         writeInt(_type); // maybe type

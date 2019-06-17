@@ -15,7 +15,6 @@ import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.Util;
 
-import java.nio.ByteBuffer;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,7 +23,7 @@ import static org.l2j.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 /**
  * RequestRecipeShopListSet client packet class.
  */
-public final class RequestRecipeShopListSet extends IClientIncomingPacket {
+public final class RequestRecipeShopListSet extends ClientPacket {
     private static final int BATCH_LENGTH = 12;
 
     private L2ManufactureItem[] _items = null;

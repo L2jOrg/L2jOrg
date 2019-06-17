@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.eventengine;
 
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.AbstractScript;
-import org.l2j.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.nio.file.Path;
 import java.util.Map;
@@ -44,7 +44,7 @@ public abstract class AbstractEvent<T extends AbstractEventMember<?>> extends Ab
         _members.put(member.getObjectId(), member);
     }
 
-    public final void broadcastPacket(IClientOutgoingPacket... packets) {
+    public final void broadcastPacket(ServerPacket... packets) {
         _members.values().forEach(member -> member.sendPacket(packets));
     }
 

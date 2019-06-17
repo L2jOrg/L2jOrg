@@ -10,14 +10,12 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.serverpackets.QuestList;
 
-import java.nio.ByteBuffer;
-
 /**
  * This class ...
  *
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestQuestAbort extends IClientIncomingPacket {
+public final class RequestQuestAbort extends ClientPacket {
     private int _questId;
 
     @Override

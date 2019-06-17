@@ -5,12 +5,10 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.clan.entry.PledgeRecruitInfo;
 import org.l2j.gameserver.network.serverpackets.ExPledgeRecruitBoardDetail;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author Sdw
  */
-public class RequestPledgeRecruitBoardDetail extends IClientIncomingPacket {
+public class RequestPledgeRecruitBoardDetail extends ClientPacket {
     private int _clanId;
 
     @Override
