@@ -56,7 +56,7 @@ public final class Config {
     private static final String GENERAL_CONFIG_FILE = "./config/General.ini";
     private static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
     private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
-    private static final String IDFACTORY_CONFIG_FILE = "./config/IdFactory.ini";
+
 
     private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
     private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
@@ -723,7 +723,6 @@ public final class Config {
     public static int MAX_REPUTATION;
     public static int REPUTATION_INCREASE;
 
-    public static boolean BAD_ID_CHECKING;
     public static double ENCHANT_CHANCE_ELEMENT_STONE;
     public static double ENCHANT_CHANCE_ELEMENT_CRYSTAL;
     public static double ENCHANT_CHANCE_ELEMENT_JEWEL;
@@ -1448,11 +1447,6 @@ public final class Config {
         TRAINING_CAMP_MAX_LEVEL = trainingCampSettings.getInt("TrainingCampMaxLevel", 127);
         TRAINING_CAMP_EXP_MULTIPLIER = trainingCampSettings.getDouble("TrainingCampExpMultiplier", 1.0);
         TRAINING_CAMP_SP_MULTIPLIER = trainingCampSettings.getDouble("TrainingCampSpMultiplier", 1.0);
-
-        // Load IdFactory config file (if exists)
-        final PropertiesParser IdFactory = new PropertiesParser(IDFACTORY_CONFIG_FILE);
-
-        BAD_ID_CHECKING = IdFactory.getBoolean("BadIdChecking", true);
 
         // Load General config file (if exists)
         final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);

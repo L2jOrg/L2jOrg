@@ -66,9 +66,6 @@ public class GameServer {
             throw new Exception("Could not initialize the ID factory!");
         }
 
-        printSection("Scripting Engine");
-        ScriptEngineManager.getInstance();
-
         printSection("Lineage II World");
         GameTimeController.init(); // start game time control early
         L2World.getInstance();
@@ -277,8 +274,13 @@ public class GameServer {
         logVersionInfo();
         configureDatabase();
         configureNetworkPackets();
+
         printSection("Server Configuration");
-        Config.load();
+        Config.load(); // TODO remove this
+
+        printSection("Scripting Engine");
+        ScriptEngineManager.init();
+
         ThreadPoolManager.getInstance().schedulePurge();
         INSTANCE = new GameServer();
         ThreadPoolManager.execute(AuthServerCommunication.getInstance());

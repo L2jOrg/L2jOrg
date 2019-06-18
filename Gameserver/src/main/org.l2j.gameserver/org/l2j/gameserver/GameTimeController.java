@@ -9,9 +9,12 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Calendar;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+
+import static java.lang.System.currentTimeMillis;
 
 /**
  * Game Time controller class.
@@ -29,9 +32,10 @@ public final class GameTimeController extends Thread {
     public static final int SECONDS_PER_IN_GAME_DAY = MILLIS_PER_IN_GAME_DAY / 1000;
     public static final int TICKS_PER_IN_GAME_DAY = SECONDS_PER_IN_GAME_DAY * TICKS_PER_SECOND;
 
-    private final Set<L2Character> _movingObjects = ConcurrentHashMap.newKeySet();
+    private final Set<L2Character> movingObjects = ConcurrentHashMap.newKeySet();
     private final Set<L2Character> _shadowSenseCharacters = ConcurrentHashMap.newKeySet();
-    private final long _referenceTime;
+
+    private final long referenceTime;
     private volatile boolean shutdown = false;
 
     private GameTimeController() {
@@ -39,12 +43,7 @@ public final class GameTimeController extends Thread {
         super.setDaemon(true);
         super.setPriority(MAX_PRIORITY);
 
-        final Calendar c = Calendar.getInstance();
-        c.set(Calendar.HOUR_OF_DAY, 0);
-        c.set(Calendar.MINUTE, 0);
-        c.set(Calendar.SECOND, 0);
-        c.set(Calendar.MILLISECOND, 0);
-        _referenceTime = c.getTimeInMillis();
+        referenceTime = LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant().toEpochMilli();
     }
 
     public static void init() {
@@ -73,7 +72,7 @@ public final class GameTimeController extends Thread {
      * @return
      */
     public final int getGameTicks() {
-        return (int) ((System.currentTimeMillis() - _referenceTime) / MILLIS_IN_TICK);
+        return (int) ((currentTimeMillis() - referenceTime) / MILLIS_IN_TICK);
     }
 
     /**
@@ -86,7 +85,7 @@ public final class GameTimeController extends Thread {
             return;
         }
 
-        _movingObjects.add(cha);
+        movingObjects.add(cha);
     }
 
     /**
@@ -101,7 +100,7 @@ public final class GameTimeController extends Thread {
      * </ul>
      */
     private void moveObjects() {
-        _movingObjects.removeIf(L2Character::updatePosition);
+        movingObjects.removeIf(L2Character::updatePosition);
     }
 
     public final void stopTimer() {
@@ -117,7 +116,7 @@ public final class GameTimeController extends Thread {
         EventDispatcher.getInstance().notifyEventAsync(OnDayNightChange.of(isNight));
 
         while (!shutdown) {
-            nextTickTime = ((System.currentTimeMillis() / MILLIS_IN_TICK) * MILLIS_IN_TICK) + 100;
+            nextTickTime = ((currentTimeMillis() / MILLIS_IN_TICK) * MILLIS_IN_TICK) + 100;
 
             try {
                 moveObjects();
@@ -125,7 +124,7 @@ public final class GameTimeController extends Thread {
                 LOGGER.warn(e.getLocalizedMessage(), e);
             }
 
-            sleepTime = nextTickTime - System.currentTimeMillis();
+            sleepTime = nextTickTime - currentTimeMillis();
             if (sleepTime > 0) {
                 try {
                     Thread.sleep(sleepTime);

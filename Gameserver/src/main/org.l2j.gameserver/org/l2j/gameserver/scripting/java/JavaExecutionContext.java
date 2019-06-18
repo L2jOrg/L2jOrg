@@ -44,7 +44,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
         super(engine);
 
         sourcePath = getSettings(ServerSettings.class).dataPackDirectory().resolve(requireNonNullElse(getProperty("source.path"), "data/scripts"));
-        destination = Path.of(getProperty("compiled.path"));
+        destination = Path.of(requireNonNullElse(getProperty("compiled.path"), "compiledScripts"));
 
         try {
             compileModuleInfo();

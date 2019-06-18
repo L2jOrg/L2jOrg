@@ -34,6 +34,14 @@ public final class ScriptEngineManager  {
     private IExecutionContext _currentExecutionContext = null;
 
     private ScriptEngineManager() {
+        // no public instances
+    }
+
+    public static void init() {
+        getInstance().loadEngines();
+    }
+
+    private void loadEngines() {
         final var props = loadProperties();
         ServiceLoader.load(IScriptingEngine.class).forEach(engine -> registerEngine(engine, props));
     }
@@ -49,7 +57,7 @@ public final class ScriptEngineManager  {
     }
 
     private void registerEngine(IScriptingEngine engine, Properties props) {
-        maybeSetProperties(engine.getLanguageName(), props, engine);
+        maybeSetProperties(engine.getLanguageName().toLowerCase(), props, engine);
         final IExecutionContext context = engine.createExecutionContext();
         for (String commonExtension : engine.getCommonFileExtensions()) {
             _extEngines.put(commonExtension, context);
@@ -199,6 +207,7 @@ public final class ScriptEngineManager  {
     public Path getCurrentLoadingScript() {
         return _currentExecutionContext != null ? _currentExecutionContext.getCurrentExecutingScript() : null;
     }
+
 
     public static ScriptEngineManager getInstance() {
         return Singleton.INSTANCE;
