@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.network.serverpackets.ExBRNewIconCashBtnWnd;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
@@ -24,7 +24,7 @@ import java.util.function.Consumer;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
-public class VipData extends IGameXmlReader{
+public class VipData extends GameXmlReader {
 
     private static final byte VIP_MAX_TIER = 7;
     private IntObjectMap<VipInfo> vipTiers = new HashIntObjectMap<>(8);

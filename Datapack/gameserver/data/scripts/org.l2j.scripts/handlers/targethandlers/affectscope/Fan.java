@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Fan affect scope implementation. Gathers objects in a certain angle of circular area around yourself (including origin itself).
@@ -41,7 +41,7 @@ public class Fan implements IAffectScopeHandler
 	public void forEachAffected(L2Character activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
-		final double headingAngle = Util.convertHeadingToDegree(activeChar.getHeading());
+		final double headingAngle = GameUtils.convertHeadingToDegree(activeChar.getHeading());
 		final int fanStartAngle = skill.getFanRange()[1];
 		final int fanRadius = skill.getFanRange()[2];
 		final int fanAngle = skill.getFanRange()[3];
@@ -59,7 +59,7 @@ public class Fan implements IAffectScopeHandler
 			{
 				return false;
 			}
-			if (Math.abs(Util.calculateAngleFrom(activeChar, c) - (headingAngle + fanStartAngle)) > fanHalfAngle)
+			if (Math.abs(GameUtils.calculateAngleFrom(activeChar, c) - (headingAngle + fanStartAngle)) > fanHalfAngle)
 			{
 				return false;
 			}

@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -23,7 +23,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author NosBit, xban1x
  */
-public final class CategoryData extends IGameXmlReader{
+public final class CategoryData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(CategoryData.class);
 
     private final Map<CategoryType, Set<Integer>> _categories = new HashMap<>();

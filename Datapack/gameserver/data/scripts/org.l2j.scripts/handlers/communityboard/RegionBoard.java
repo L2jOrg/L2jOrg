@@ -25,7 +25,7 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Region board.
@@ -78,7 +78,7 @@ public class RegionBoard implements IWriteBoardHandler
 			CommunityBoardHandler.getInstance().addBypass(activeChar, "Region>", command);
 			
 			final String id = command.replace("_bbsloc;", "");
-			if (!Util.isDigit(id))
+			if (!GameUtils.isDigit(id))
 			{
 				LOG.warn(RegionBoard.class.getSimpleName() + ": Player " + activeChar + " sent and invalid region bypass " + command + "!");
 				return false;

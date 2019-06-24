@@ -12,7 +12,7 @@ import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.attributechange.ExChangeAttributeFail;
 import org.l2j.gameserver.network.serverpackets.attributechange.ExChangeAttributeOk;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * @author Mobius
@@ -43,7 +43,7 @@ public class RequestChangeAttributeItem extends ClientPacket {
         if (activeChar.getInventory().destroyItemByItemId("ChangeAttribute", _consumeItemId, 1, activeChar, item) == null) {
             client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
             client.sendPacket(ExChangeAttributeFail.STATIC);
-            Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to change attribute without an attribute change crystal.", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to change attribute without an attribute change crystal.", Config.DEFAULT_PUNISH);
             return;
         }
 

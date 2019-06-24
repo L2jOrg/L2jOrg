@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExVariationCancelResult;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Format(ch) d
@@ -36,7 +36,7 @@ public final class RequestRefineCancel extends ClientPacket {
         }
 
         if (targetItem.getOwnerId() != activeChar.getObjectId()) {
-            Util.handleIllegalPlayerAction(client.getActiveChar(), "Warning!! Character " + client.getActiveChar().getName() + " of account " + client.getActiveChar().getAccountName() + " tryied to augment item that doesn't own.", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(client.getActiveChar(), "Warning!! Character " + client.getActiveChar().getName() + " of account " + client.getActiveChar().getAccountName() + " tryied to augment item that doesn't own.", Config.DEFAULT_PUNISH);
             return;
         }
 

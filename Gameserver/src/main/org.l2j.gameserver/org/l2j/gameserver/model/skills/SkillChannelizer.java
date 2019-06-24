@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.MagicSkillLaunched;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -134,7 +134,7 @@ public class SkillChannelizer implements Runnable {
             channelized = targetList;
 
             for (L2Character character : channelized) {
-                if (!Util.checkIfInRange(skill.getEffectRange(), _channelizer, character, true)) {
+                if (!GameUtils.checkIfInRange(skill.getEffectRange(), _channelizer, character, true)) {
                     continue;
                 } else if (!GeoEngine.getInstance().canSeeTarget(_channelizer, character)) {
                     continue;

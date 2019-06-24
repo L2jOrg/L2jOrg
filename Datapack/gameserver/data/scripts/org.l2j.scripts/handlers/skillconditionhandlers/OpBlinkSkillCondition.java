@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * @author Sdw
@@ -60,7 +60,7 @@ public class OpBlinkSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(L2Character caster, Skill skill, L2Object target)
 	{
-		final double angle = Util.convertHeadingToDegree(caster.getHeading());
+		final double angle = GameUtils.convertHeadingToDegree(caster.getHeading());
 		final double radian = Math.toRadians(angle);
 		final double course = Math.toRadians(_angle);
 		final int x1 = (int) (Math.cos(Math.PI + radian + course) * _range);

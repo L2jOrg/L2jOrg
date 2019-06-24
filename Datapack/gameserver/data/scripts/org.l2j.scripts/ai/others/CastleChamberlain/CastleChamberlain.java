@@ -46,7 +46,7 @@ import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.*;
 
@@ -681,7 +681,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_TAXES))
 				{
 					final NpcHtmlMessage html = getHtmlPacket(player, npc, "castlemanagevault.html");
-					html.replace("%tax_income%", Util.formatAdena(castle.getTreasury()));
+					html.replace("%tax_income%", GameUtils.formatAdena(castle.getTreasury()));
 					player.sendPacket(html);
 				}
 				else
@@ -695,7 +695,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_TAXES))
 				{
 					final NpcHtmlMessage html = getHtmlPacket(player, npc, "castlemanagevault_deposit.html");
-					html.replace("%tax_income%", Util.formatAdena(castle.getTreasury()));
+					html.replace("%tax_income%", GameUtils.formatAdena(castle.getTreasury()));
 					player.sendPacket(html);
 				}
 				else
@@ -709,7 +709,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_TAXES))
 				{
 					final NpcHtmlMessage html = getHtmlPacket(player, npc, "castlemanagevault_withdraw.html");
-					html.replace("%tax_income%", Util.formatAdena(castle.getTreasury()));
+					html.replace("%tax_income%", GameUtils.formatAdena(castle.getTreasury()));
 					player.sendPacket(html);
 				}
 				else
@@ -757,8 +757,8 @@ public final class CastleChamberlain extends AbstractNpcAI
 					else
 					{
 						final NpcHtmlMessage html = getHtmlPacket(player, npc, "castlenotenoughbalance.html");
-						html.replace("%tax_income%", Util.formatAdena(castle.getTreasury()));
-						html.replace("%withdraw_amount%", Util.formatAdena(amount));
+						html.replace("%tax_income%", GameUtils.formatAdena(castle.getTreasury()));
+						html.replace("%withdraw_amount%", GameUtils.formatAdena(amount));
 						player.sendPacket(html);
 					}
 				}

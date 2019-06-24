@@ -35,7 +35,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Arrays;
 import java.util.StringTokenizer;
@@ -471,7 +471,7 @@ public class AdminEffects implements IAdminCommandHandler
 				param1 = st.nextToken();
 			}
 			
-			if ((param1 != null) && !Util.isDigit(param1))
+			if ((param1 != null) && !GameUtils.isDigit(param1))
 			{
 				AbnormalVisualEffect ave;
 				
@@ -490,7 +490,7 @@ public class AdminEffects implements IAdminCommandHandler
 				if (st.countTokens() == 1)
 				{
 					param2 = st.nextToken();
-					if (Util.isDigit(param2))
+					if (GameUtils.isDigit(param2))
 					{
 						radius = Integer.parseInt(param2);
 					}

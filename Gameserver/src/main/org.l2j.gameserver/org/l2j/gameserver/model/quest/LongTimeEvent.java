@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.script.DateRange;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.Broadcast;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -82,7 +82,7 @@ public class LongTimeEvent extends Quest {
      * Load event configuration file
      */
     private void loadConfig() {
-        new IGameXmlReader() {
+        new GameXmlReader() {
             @Override
             protected Path getSchemaFilePath() {
                 return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/eventConfig.xsd");

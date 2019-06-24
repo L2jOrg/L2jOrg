@@ -1,25 +1,40 @@
 package org.l2j.gameserver.network.serverpackets.elementalspirits;
 
+import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
+import static java.util.Objects.isNull;
+
 public class ElementalSpiritExtractInfo extends ServerPacket {
+
+    private final byte type;
+
+    public ElementalSpiritExtractInfo(byte type) {
+        this.type = type;
+    }
 
     @Override
     protected void writeImpl(L2GameClient client) {
         writeId(ServerPacketId.EX_ELEMENTAL_SPIRIT_EXTRACT_INFO);
-        writeByte(2); // active elemental spirit
-        writeByte(1); // is extract ?
-        
-        writeByte(2); // cost count
 
-        for (int i = 0; i < 2; i++) { // for each cost count
-            writeInt(57); // item id
-            writeInt(10000); // item count
+        var spirit = client.getActiveChar().getElementalSpirit(ElementalType.of(type));
+        if(isNull(spirit)){
+            writeByte(0);
+            writeByte(0);
+            return;
         }
 
-        writeInt(57); // result item id
-        writeInt(1000); // result item count
+        writeByte(type); // active elemental spirit
+        writeByte(1); // is extract ?
+        
+        writeByte(1); // cost count
+         // for each cost count
+        writeInt(57); // item id
+        writeInt(1000000); // item count
+
+        writeInt(spirit.getExtractItem()); // result item id
+        writeInt((int) (spirit.getExperience() / 1000)); // result item count
     }
 }

@@ -21,7 +21,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 import org.l2j.gameserver.network.serverpackets.friend.L2FriendStatus;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -106,7 +106,7 @@ public class PcStat extends PlayableStat {
 
         // if this player has a pet and it is in his range he takes from the owner's Exp, give the pet Exp now
         final L2PetInstance pet = activeChar.getPet();
-        if ((pet != null) && Util.checkIfInShortRange(Config.ALT_PARTY_RANGE, activeChar, pet, false)) {
+        if ((pet != null) && GameUtils.checkIfInShortRange(Config.ALT_PARTY_RANGE, activeChar, pet, false)) {
             ratioTakenByPlayer = pet.getPetLevelData().getOwnerExpTaken() / 100f;
 
             // only give exp/sp to the pet by taking from the owner if the pet has a non-zero, positive ratio

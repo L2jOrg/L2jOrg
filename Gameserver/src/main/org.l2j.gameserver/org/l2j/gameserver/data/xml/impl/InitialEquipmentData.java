@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.items.PcItemTemplate;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -28,7 +28,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author Zoey76
  */
-public final class InitialEquipmentData extends IGameXmlReader{
+public final class InitialEquipmentData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(InitialEquipmentData.class);
     private static final String NORMAL = "data/stats/initialEquipment.xml";
     private static final String EVENT = "data/stats/initialEquipmentEvent.xml";

@@ -37,7 +37,7 @@ import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -379,7 +379,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			if (st.hasMoreTokens())
 			{
 				final String nextToken = st.nextToken();
-				if (Util.isDigit(nextToken))
+				if (GameUtils.isDigit(nextToken))
 				{
 					count = Integer.parseInt(nextToken);
 				}
@@ -406,7 +406,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 			}
 			BuilderUtil.sendSysMessage(activeChar, "Top " + count + " spawn count.");
-			for (Map.Entry<Integer, Integer> entry : Util.sortByValue(npcsFound, true).entrySet())
+			for (Map.Entry<Integer, Integer> entry : GameUtils.sortByValue(npcsFound, true).entrySet())
 			{
 				count--;
 				if (count < 0)

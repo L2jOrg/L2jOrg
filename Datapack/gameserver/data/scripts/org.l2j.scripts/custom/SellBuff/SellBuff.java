@@ -31,7 +31,7 @@ import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.holders.SellBuffHolder;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.StringTokenizer;
 
@@ -160,7 +160,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 				if (!activeChar.isSellingBuffs())
 				{
 					int index = 0;
-					if ((params != null) && !params.isEmpty() && Util.isDigit(params))
+					if ((params != null) && !params.isEmpty() && GameUtils.isDigit(params))
 					{
 						index = Integer.parseInt(params);
 					}
@@ -386,7 +386,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 					}
 					
 					final Skill skillToBuy = seller.getKnownSkill(skillId);
-					if (!seller.isSellingBuffs() || !Util.checkIfInRange(L2Npc.INTERACTION_DISTANCE, activeChar, seller, true) || (skillToBuy == null))
+					if (!seller.isSellingBuffs() || !GameUtils.checkIfInRange(L2Npc.INTERACTION_DISTANCE, activeChar, seller, true) || (skillToBuy == null))
 					{
 						return false;
 					}

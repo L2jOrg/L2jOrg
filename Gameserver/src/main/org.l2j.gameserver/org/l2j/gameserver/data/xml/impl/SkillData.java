@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.*;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.util.exp4j.ExpressionBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,7 +28,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author NosBit
  */
-public class SkillData extends IGameXmlReader{
+public class SkillData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(SkillData.class.getName());
 
     private final Map<Long, Skill> _skills = new HashMap<>();

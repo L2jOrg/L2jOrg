@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -23,7 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * @author UnAfraid
  */
-public class ClanRewardData extends IGameXmlReader{
+public class ClanRewardData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ClanRewardData.class);
 
     private final Map<ClanRewardType, List<ClanRewardBonus>> _clanRewards = new ConcurrentHashMap<>();

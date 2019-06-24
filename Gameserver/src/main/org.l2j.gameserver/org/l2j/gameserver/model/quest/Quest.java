@@ -42,7 +42,7 @@ import org.l2j.gameserver.network.serverpackets.ExQuestNpcLogList;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.NpcQuestHtmlMessage;
 import org.l2j.gameserver.scripting.ScriptEngineManager;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -309,7 +309,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
     }
 
     private static boolean checkDistanceToTarget(L2PcInstance player, L2Npc target) {
-        return (target == null) || Util.checkIfInRange(Config.ALT_PARTY_RANGE, player, target, true);
+        return (target == null) || GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, player, target, true);
     }
 
     /**

@@ -26,6 +26,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
     private static final Logger LOGGER = LoggerFactory.getLogger(AbstractMessagePacket.class);
 
     private static final SMParam[] EMPTY_PARAM_ARRAY = new SMParam[0];
+    private static final byte TYPE_ELEMENTAL_SPIRIT = 26;
     private static final byte TYPE_FACTION_NAME = 24; // c(short), faction id.
     // id 22 d (shared with 1-3,17,22
     // id 21 h
@@ -51,6 +52,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
     private static final byte TYPE_NPC_NAME = 2;
     private static final byte TYPE_INT_NUMBER = 1;
     private static final byte TYPE_TEXT = 0;
+
     private final SystemMessageId _smId;
     private SMParam[] _params;
     private int _paramIndex;
@@ -273,6 +275,11 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
         return (T) this;
     }
 
+    public final T addElementalSpirit(int elementType) {
+        append(new SMParam(TYPE_ELEMENTAL_SPIRIT, elementType));
+        return (T) this;
+    }
+
     protected void writeParamsSize(int size) {
         writeByte((byte) size);
     }
@@ -289,7 +296,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 
             writeParamType(param.getType());
             switch (param.getType()) {
-                case TYPE_ELEMENT_NAME, TYPE_BYTE, TYPE_FACTION_NAME -> writeByte((byte) param.getIntValue());
+                case TYPE_ELEMENT_NAME, TYPE_BYTE, TYPE_FACTION_NAME, TYPE_ELEMENTAL_SPIRIT -> writeByte((byte) param.getIntValue());
                 case TYPE_CASTLE_NAME, TYPE_SYSTEM_STRING, TYPE_INSTANCE_NAME, TYPE_CLASS_ID -> writeShort((short) param.getIntValue());
                 case TYPE_ITEM_NAME, TYPE_INT_NUMBER, TYPE_NPC_NAME, TYPE_DOOR_NAME -> writeInt(param.getIntValue());
                 case TYPE_LONG_NUMBER -> writeLong(param.getLongValue());

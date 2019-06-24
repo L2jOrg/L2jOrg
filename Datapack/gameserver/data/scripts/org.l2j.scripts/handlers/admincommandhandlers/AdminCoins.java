@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Admin Coins manage admin commands.
@@ -125,7 +125,7 @@ public final class AdminCoins implements IAdminCommandHandler
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		final L2PcInstance target = getTarget(activeChar);
 		html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/coins.htm"));
-		html.replace("%coins%", Util.formatAdena(target.getL2Coins()));
+		html.replace("%coins%", GameUtils.formatAdena(target.getL2Coins()));
 		html.replace("%targetName%", target.getName());
 		activeChar.sendPacket(html);
 	}

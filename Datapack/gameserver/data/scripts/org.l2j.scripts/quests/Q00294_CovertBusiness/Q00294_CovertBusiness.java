@@ -22,7 +22,7 @@ import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -76,7 +76,7 @@ public final class Q00294_CovertBusiness extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
+		if ((qs != null) && qs.isCond(1) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			final int chance = getRandom(10);
 			int count = 0;

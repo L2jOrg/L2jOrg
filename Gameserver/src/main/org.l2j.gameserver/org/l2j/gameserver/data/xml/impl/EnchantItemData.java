@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.items.enchant.EnchantScroll;
 import org.l2j.gameserver.model.items.enchant.EnchantSupportItem;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -24,7 +24,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author UnAfraid
  */
-public class EnchantItemData extends IGameXmlReader{
+public class EnchantItemData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(EnchantItemData.class);
 
     private final Map<Integer, EnchantScroll> _scrolls = new HashMap<>();

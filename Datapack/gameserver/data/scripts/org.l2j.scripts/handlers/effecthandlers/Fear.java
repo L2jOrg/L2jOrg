@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Fear effect implementation.
@@ -95,7 +95,7 @@ public final class Fear extends AbstractEffect
 	
 	private void fearAction(L2Character effector, L2Character effected)
 	{
-		final double radians = Math.toRadians((effector != null) ? Util.calculateAngleFrom(effector, effected) : Util.convertHeadingToDegree(effected.getHeading()));
+		final double radians = Math.toRadians((effector != null) ? GameUtils.calculateAngleFrom(effector, effected) : GameUtils.convertHeadingToDegree(effected.getHeading()));
 		
 		final int posX = (int) (effected.getX() + (FEAR_RANGE * Math.cos(radians)));
 		final int posY = (int) (effected.getY() + (FEAR_RANGE * Math.sin(radians)));

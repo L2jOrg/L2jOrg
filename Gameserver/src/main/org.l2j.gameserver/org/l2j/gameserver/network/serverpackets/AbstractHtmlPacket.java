@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -95,7 +95,7 @@ public abstract class AbstractHtmlPacket extends ServerPacket {
         }
 
         if (player != null) {
-            Util.buildHtmlActionCache(player, getScope(), _npcObjId, _html);
+            GameUtils.buildHtmlActionCache(player, getScope(), _npcObjId, _html);
         }
     }
 

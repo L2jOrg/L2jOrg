@@ -14,7 +14,7 @@ import org.l2j.gameserver.network.serverpackets.ExAttributeEnchantResult;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 public class RequestExEnchantItemAttribute extends ClientPacket {
     private int _objectId;
@@ -92,7 +92,7 @@ public class RequestExEnchantItemAttribute extends ClientPacket {
             }
             default: {
                 player.removeRequest(request.getClass());
-                Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!", Config.DEFAULT_PUNISH);
                 return;
             }
         }
@@ -122,7 +122,7 @@ public class RequestExEnchantItemAttribute extends ClientPacket {
             for (AttributeHolder attribute : item.getAttributes()) {
                 if (attribute.getType() == opositeElement) {
                     player.removeRequest(request.getClass());
-                    Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to add oposite attribute to item!", Config.DEFAULT_PUNISH);
+                    GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to add oposite attribute to item!", Config.DEFAULT_PUNISH);
                     return;
                 }
             }

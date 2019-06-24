@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 public class ChatAdmin implements IVoicedCommandHandler
 {
@@ -67,7 +67,7 @@ public class ChatAdmin implements IVoicedCommandHandler
 					if (st.hasMoreTokens())
 					{
 						final String token = st.nextToken();
-						if (Util.isDigit(token))
+						if (GameUtils.isDigit(token))
 						{
 							expirationTime = Integer.parseInt(token);
 						}

@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.primeshop.PrimeShopItem;
 import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.network.serverpackets.primeshop.ExBRProductInfo;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -28,7 +28,7 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
 /**
  * @author Gnacik, UnAfraid
  */
-public class PrimeShopData extends IGameXmlReader{
+public class PrimeShopData extends GameXmlReader {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PrimeShopData.class);
     private static final int VIP_GIFT_BASE_ID = 100000;

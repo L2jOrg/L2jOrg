@@ -5,7 +5,7 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -21,7 +21,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author Mobius
  */
-public class AttendanceRewardData extends IGameXmlReader{
+public class AttendanceRewardData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(AttendanceRewardData.class);
     private final List<ItemHolder> _rewards = new ArrayList<>();
     private int _rewardsCount = 0;

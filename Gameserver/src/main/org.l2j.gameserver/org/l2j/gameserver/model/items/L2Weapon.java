@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * This class is dedicated to the management of weapons.
@@ -60,7 +60,7 @@ public final class L2Weapon extends L2Item {
         _mpConsume = set.getInt("mp_consume", 0);
         _baseAttackRange = set.getInt("attack_range", 40);
         final String[] damageRange = set.getString("damage_range", "").split(";"); // 0?;0?;fan sector;base attack angle
-        if ((damageRange.length > 1) && Util.isDigit(damageRange[2]) && Util.isDigit(damageRange[3])) {
+        if ((damageRange.length > 1) && GameUtils.isDigit(damageRange[2]) && GameUtils.isDigit(damageRange[3])) {
             _baseAttackRadius = Integer.parseInt(damageRange[2]);
             _baseAttackAngle = 360 - Integer.parseInt(damageRange[3]);
         } else {

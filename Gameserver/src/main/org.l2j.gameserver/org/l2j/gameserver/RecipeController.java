@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -57,7 +57,7 @@ public class RecipeController {
         final List<L2RecipeList> commonRecipes = Arrays.asList(manufacturer.getCommonRecipeBook());
 
         if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList)) {
-            Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
             return;
         }
 
@@ -94,7 +94,7 @@ public class RecipeController {
         final List<L2RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
 
         if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList)) {
-            Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
             return;
         }
 

@@ -35,7 +35,7 @@ import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -130,7 +130,7 @@ public class SkillCaster implements Runnable {
             return null;
         }
 
-        if ((skill.getCastRange() > 0) && !Util.checkIfInRange(skill.getCastRange(), caster, target, false)) {
+        if ((skill.getCastRange() > 0) && !GameUtils.checkIfInRange(skill.getCastRange(), caster, target, false)) {
             return null;
         }
 
@@ -534,7 +534,7 @@ public class SkillCaster implements Runnable {
 
         if (target != caster) {
             // Face the target
-            caster.setHeading(Util.calculateHeadingFrom(caster, target));
+            caster.setHeading(GameUtils.calculateHeadingFrom(caster, target));
             caster.broadcastPacket(new ExRotation(caster.getObjectId(), caster.getHeading())); // TODO: Not sent in retail. Probably moveToPawn is enough
 
             // Send MoveToPawn packet to trigger Blue Bubbles on target become Red, but don't do it while (double) casting, because that will screw up animation... some fucked up stuff, right?
@@ -639,7 +639,7 @@ public class SkillCaster implements Runnable {
             return false;
         }
 
-        if ((_skill.getEffectRange() > 0) && !Util.checkIfInRange(_skill.getEffectRange(), caster, target, true)) {
+        if ((_skill.getEffectRange() > 0) && !GameUtils.checkIfInRange(_skill.getEffectRange(), caster, target, true)) {
             if (caster.isPlayer()) {
                 caster.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
             }
@@ -893,7 +893,7 @@ public class SkillCaster implements Runnable {
             case DA4:
             case DA5: {
                 final double course = _skill.getOperateType() == SkillOperateType.DA4 ? Math.toRadians(270) : Math.toRadians(90);
-                final double radian = Math.toRadians(Util.convertHeadingToDegree(target.getHeading()));
+                final double radian = Math.toRadians(GameUtils.convertHeadingToDegree(target.getHeading()));
                 double nRadius = creature.getCollisionRadius();
                 if (target.isCharacter()) {
                     nRadius += ((L2Character) target).getCollisionRadius();
@@ -905,7 +905,7 @@ public class SkillCaster implements Runnable {
             }
             case DA3: {
                 flyType = FlyToLocation.FlyType.WARP_BACK;
-                final double radian = Math.toRadians(Util.convertHeadingToDegree(creature.getHeading()));
+                final double radian = Math.toRadians(GameUtils.convertHeadingToDegree(creature.getHeading()));
                 x = creature.getX() + (int) (Math.cos(Math.PI + radian) * _skill.getCastRange());
                 y = creature.getY() + (int) (Math.sin(Math.PI + radian) * _skill.getCastRange());
                 z = creature.getZ();
@@ -915,7 +915,7 @@ public class SkillCaster implements Runnable {
             case DA1: {
                 if (creature == target) {
                     final double course = Math.toRadians(180);
-                    final double radian = Math.toRadians(Util.convertHeadingToDegree(creature.getHeading()));
+                    final double radian = Math.toRadians(GameUtils.convertHeadingToDegree(creature.getHeading()));
                     x = creature.getX() + (int) (Math.cos(Math.PI + radian + course) * _skill.getCastRange());
                     y = creature.getY() + (int) (Math.sin(Math.PI + radian + course) * _skill.getCastRange());
                     z = creature.getZ();

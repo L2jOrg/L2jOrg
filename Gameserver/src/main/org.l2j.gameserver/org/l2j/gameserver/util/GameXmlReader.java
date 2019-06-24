@@ -22,7 +22,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author Zoey76
  */
-public abstract class IGameXmlReader extends XmlReader {
+public abstract class GameXmlReader extends XmlReader {
 
     /**
      * Wrapper for {@link #parseFile(File)} method.

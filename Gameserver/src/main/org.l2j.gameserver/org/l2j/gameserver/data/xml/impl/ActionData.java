@@ -3,7 +3,7 @@ package org.l2j.gameserver.data.xml.impl;
 import org.l2j.gameserver.model.ActionDataHolder;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -18,7 +18,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author UnAfraid
  */
-public class ActionData extends IGameXmlReader{
+public class ActionData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ActionData.class);
 
     private final Map<Integer, ActionDataHolder> _actionData = new HashMap<>();

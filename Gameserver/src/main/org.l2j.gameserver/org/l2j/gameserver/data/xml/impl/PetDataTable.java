@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.L2PetData;
 import org.l2j.gameserver.model.L2PetLevelData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -26,7 +26,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author Zoey76 (rework)
  */
-public final class PetDataTable extends IGameXmlReader{
+public final class PetDataTable extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(PetDataTable.class);
 
     private final Map<Integer, L2PetData> _pets = new HashMap<>();

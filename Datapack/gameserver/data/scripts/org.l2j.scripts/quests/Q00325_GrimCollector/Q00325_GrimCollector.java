@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.holders.QuestItemHolder;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -198,7 +198,7 @@ public final class Q00325_GrimCollector extends Quest
 			return super.onKill(npc, killer, isSummon);
 		}
 		
-		if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, killer, npc, true) || !hasQuestItems(killer, ANATOMY_DIAGRAM))
+		if (!GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, killer, npc, true) || !hasQuestItems(killer, ANATOMY_DIAGRAM))
 		{
 			return super.onKill(npc, killer, isSummon);
 		}

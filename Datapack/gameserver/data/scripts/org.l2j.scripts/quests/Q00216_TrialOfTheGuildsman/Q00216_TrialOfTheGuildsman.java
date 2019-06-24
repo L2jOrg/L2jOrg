@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Trial Of The Guildsman (216)
@@ -302,7 +302,7 @@ public final class Q00216_TrialOfTheGuildsman extends Quest
 			case MANDRAGORA_SPROUT2:
 			{
 				final QuestState qs = getQuestState(killer, false);
-				if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
+				if ((qs != null) && qs.isStarted() && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 				{
 					if (hasQuestItems(killer, VALKONS_RECOMMENDATION) && !hasQuestItems(killer, MANDRAGORA_BERRY))
 					{

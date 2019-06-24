@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.ensoul.EnsoulStone;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -23,7 +23,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author UnAfraid
  */
-public class EnsoulData extends IGameXmlReader{
+public class EnsoulData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(EnsoulData.class.getName());
     private final Map<CrystalType, EnsoulFee> _ensoulFees = new EnumMap<>(CrystalType.class);
     private final Map<Integer, EnsoulOption> _ensoulOptions = new HashMap<>();

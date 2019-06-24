@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * This class handles following admin commands: - server_shutdown [sec] = shows menu or shuts down server in sec seconds
@@ -48,7 +48,7 @@ public class AdminShutdown implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(22);
-				if (Util.isDigit(val))
+				if (GameUtils.isDigit(val))
 				{
 					serverShutdown(activeChar, Integer.valueOf(val), false);
 				}
@@ -68,7 +68,7 @@ public class AdminShutdown implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(21);
-				if (Util.isDigit(val))
+				if (GameUtils.isDigit(val))
 				{
 					serverShutdown(activeChar, Integer.parseInt(val), true);
 				}

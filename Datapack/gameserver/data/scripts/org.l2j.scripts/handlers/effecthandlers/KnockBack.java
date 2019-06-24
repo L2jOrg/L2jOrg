@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2j.gameserver.network.serverpackets.ValidateLocation;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Check if this effect is not counted as being stunned.
@@ -107,7 +107,7 @@ public final class KnockBack extends AbstractEffect
 			return;
 		}
 
-		final double radians = Math.toRadians(Util.calculateAngleFrom(effector, effected));
+		final double radians = Math.toRadians(GameUtils.calculateAngleFrom(effector, effected));
 		final int x = (int) (effected.getX() + (_distance * Math.cos(radians)));
 		final int y = (int) (effected.getY() + (_distance * Math.sin(radians)));
 		final int z = effected.getZ();
@@ -117,7 +117,7 @@ public final class KnockBack extends AbstractEffect
 		effected.broadcastPacket(new FlyToLocation(effected, loc, _type, _speed, _delay, _animationSpeed));
 		if (_knockDown)
 		{
-			effected.setHeading(Util.calculateHeadingFrom(effected, effector));
+			effected.setHeading(GameUtils.calculateHeadingFrom(effected, effector));
 		}
 		effected.setXYZ(loc);
 		effected.broadcastPacket(new ValidateLocation(effected));

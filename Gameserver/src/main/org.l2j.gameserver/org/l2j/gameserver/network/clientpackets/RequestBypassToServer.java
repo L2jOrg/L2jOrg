@@ -22,7 +22,7 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -103,7 +103,7 @@ public final class RequestBypassToServer extends ClientPacket {
                 return;
             }
 
-            if ((bypassOriginId > 0) && !Util.isInsideRangeOfObjectId(activeChar, bypassOriginId, L2Npc.INTERACTION_DISTANCE)) {
+            if ((bypassOriginId > 0) && !GameUtils.isInsideRangeOfObjectId(activeChar, bypassOriginId, L2Npc.INTERACTION_DISTANCE)) {
                 // No logging here, this could be a common case where the player has the html still open and run too far away and then clicks a html action
                 return;
             }
@@ -134,7 +134,7 @@ public final class RequestBypassToServer extends ClientPacket {
                     id = _command.substring(4);
                 }
 
-                if (Util.isDigit(id)) {
+                if (GameUtils.isDigit(id)) {
                     final L2Object object = L2World.getInstance().findObject(Integer.parseInt(id));
 
                     if ((object != null) && object.isNpc() && (endOfId > 0) && activeChar.isInsideRadius2D(object, L2Npc.INTERACTION_DISTANCE)) {

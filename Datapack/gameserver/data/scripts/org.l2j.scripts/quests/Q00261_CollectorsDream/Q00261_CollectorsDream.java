@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.quest.State;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Collector's Dream (261)
@@ -59,7 +59,7 @@ public final class Q00261_CollectorsDream extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
+		if ((st != null) && st.isCond(1) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			if (giveItemRandomly(killer, SPIDER_LEG, 1, MAX_LEG_COUNT, 1, true))
 			{

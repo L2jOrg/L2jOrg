@@ -28,7 +28,7 @@ import org.l2j.gameserver.model.quest.QuestTimer;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.scripting.ScriptEngineManager;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -53,7 +53,7 @@ public class AdminQuest implements IAdminCommandHandler
 	
 	private static Quest findScript(String script)
 	{
-		if (Util.isDigit(script))
+		if (GameUtils.isDigit(script))
 		{
 			return QuestManager.getInstance().getQuest(Integer.parseInt(script));
 		}

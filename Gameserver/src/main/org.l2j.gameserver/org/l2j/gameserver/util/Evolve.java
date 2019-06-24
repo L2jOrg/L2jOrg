@@ -42,7 +42,7 @@ public final class Evolve {
 
         final L2PetInstance currentPet = (L2PetInstance) pet;
         if (currentPet.isAlikeDead()) {
-            Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use death pet exploit!", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use death pet exploit!", Config.DEFAULT_PUNISH);
             return false;
         }
 

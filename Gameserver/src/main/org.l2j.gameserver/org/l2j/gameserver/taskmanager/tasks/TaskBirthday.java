@@ -27,7 +27,7 @@ import org.l2j.gameserver.taskmanager.Task;
 import org.l2j.gameserver.taskmanager.TaskManager;
 import org.l2j.gameserver.taskmanager.TaskManager.ExecutableTask;
 import org.l2j.gameserver.taskmanager.TaskType;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -57,7 +57,7 @@ public class TaskBirthday extends Task {
             lastExecDate.setTimeInMillis(lastActivation);
         }
 
-        final String rangeDate = "[" + Util.getDateString(lastExecDate.getTime()) + "] - [" + Util.getDateString(_today.getTime()) + "]";
+        final String rangeDate = "[" + GameUtils.getDateString(lastExecDate.getTime()) + "] - [" + GameUtils.getDateString(_today.getTime()) + "]";
 
         for (; !_today.before(lastExecDate); lastExecDate.add(Calendar.DATE, 1)) {
             checkBirthday(lastExecDate.get(Calendar.YEAR), lastExecDate.get(Calendar.MONTH), lastExecDate.get(Calendar.DATE));

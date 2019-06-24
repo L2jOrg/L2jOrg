@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.zone.type.L2OlympiadStadiumZone;
 import org.l2j.gameserver.model.zone.type.L2RespawnZone;
 import org.l2j.gameserver.model.zone.type.L2SpawnTerritory;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -33,7 +33,7 @@ import java.util.*;
  *
  * @author durgus
  */
-public final class ZoneManager extends IGameXmlReader{
+public final class ZoneManager extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ZoneManager.class);
 
     private static final Map<String, AbstractZoneSettings> SETTINGS = new HashMap<>();

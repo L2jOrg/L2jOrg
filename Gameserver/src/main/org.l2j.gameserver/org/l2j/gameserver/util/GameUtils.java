@@ -23,9 +23,11 @@ import java.util.stream.Collectors;
 
 /**
  * General Utility functions related to game server.
+ *
+ * TODO move generic functions to Util of Commons
  */
-public final class Util {
-    private static final Logger LOGGER = LoggerFactory.getLogger(Util.class);
+public final class GameUtils {
+    private static final Logger LOGGER = LoggerFactory.getLogger(GameUtils.class);
     private static final NumberFormat ADENA_FORMATTER = NumberFormat.getIntegerInstance(Locale.ENGLISH);
 
     public static void handleIllegalPlayerAction(L2PcInstance actor, String message, IllegalActionPunishmentType punishment) {

@@ -28,7 +28,7 @@ import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * A retail-like implementation of //gmspeed builder command.
@@ -65,7 +65,7 @@ public final class AdminGmSpeed implements IAdminCommandHandler
 				return true;
 			}
 			
-			if (!Util.isDouble(token))
+			if (!GameUtils.isDouble(token))
 			{
 				BuilderUtil.sendSysMessage(player, "//gmspeed [0...10]");
 				return false;

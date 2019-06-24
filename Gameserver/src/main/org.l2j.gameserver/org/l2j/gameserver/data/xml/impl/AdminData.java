@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -29,7 +29,7 @@ import java.util.concurrent.ConcurrentHashMap;
  *
  * @author UnAfraid
  */
-public final class AdminData extends IGameXmlReader{
+public final class AdminData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(AdminData.class);
 
     private final Map<Integer, L2AccessLevel> _accessLevels = new HashMap<>();

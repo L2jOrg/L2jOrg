@@ -7,4 +7,13 @@
         <xs:list itemType="xs:short"/>
     </xs:simpleType>
 
+    <xs:simpleType name="intList">
+        <xs:list itemType="xs:int"/>
+    </xs:simpleType>
+
+    <xs:complexType name="ItemInfo">
+        <xs:attribute type="xs:int" name="id" use="required"/>
+        <xs:attribute type="xs:int" name="count" default="1"/>
+    </xs:complexType>
+
 </xs:schema>

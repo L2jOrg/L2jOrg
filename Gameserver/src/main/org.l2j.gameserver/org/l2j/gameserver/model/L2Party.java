@@ -20,7 +20,7 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -123,7 +123,7 @@ public class L2Party extends AbstractPlayerGroup {
     private L2PcInstance getCheckedRandomMember(int itemId, L2Character target) {
         final List<L2PcInstance> availableMembers = new ArrayList<>();
         for (L2PcInstance member : _members) {
-            if (member.getInventory().validateCapacityByItemId(itemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true)) {
+            if (member.getInventory().validateCapacityByItemId(itemId) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true)) {
                 availableMembers.add(member);
             }
         }
@@ -145,7 +145,7 @@ public class L2Party extends AbstractPlayerGroup {
             L2PcInstance member;
             try {
                 member = _members.get(_itemLastLoot);
-                if (member.getInventory().validateCapacityByItemId(ItemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true)) {
+                if (member.getInventory().validateCapacityByItemId(ItemId) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true)) {
                     return member;
                 }
             } catch (Exception e) {
@@ -626,7 +626,7 @@ public class L2Party extends AbstractPlayerGroup {
         // (The party member must be in range to receive its reward)
         final List<L2PcInstance> toReward = new LinkedList<>();
         for (L2PcInstance member : _members) {
-            if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true)) {
+            if (GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true)) {
                 toReward.add(member);
             }
         }

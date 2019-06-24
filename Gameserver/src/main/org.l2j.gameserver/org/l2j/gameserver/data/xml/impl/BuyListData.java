@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -28,7 +28,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author NosBit
  */
-public final class BuyListData extends IGameXmlReader{
+public final class BuyListData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(BuyListData.class.getName());
     private final Map<Integer, ProductList> _buyLists = new HashMap<>();
 

@@ -20,7 +20,7 @@ import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.TutorialCloseHtml;
 import org.l2j.gameserver.network.serverpackets.TutorialShowQuestionMark;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -893,7 +893,7 @@ public final class ClassMaster extends AbstractNpcAI
 		return null;
 	}
 
-	private class DataLoader extends IGameXmlReader {
+	private class DataLoader extends GameXmlReader {
 
 		@Override
 		protected Path getSchemaFilePath() {

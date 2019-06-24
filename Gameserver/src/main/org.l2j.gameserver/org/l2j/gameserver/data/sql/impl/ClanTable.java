@@ -31,7 +31,7 @@ import org.l2j.gameserver.network.serverpackets.PledgeShowMemberListAll;
 import org.l2j.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.EnumIntBitmask;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -139,7 +139,7 @@ public class ClanTable {
             player.sendPacket(SystemMessageId.YOU_MUST_WAIT_10_DAYS_BEFORE_CREATING_A_NEW_CLAN);
             return null;
         }
-        if (!Util.isAlphaNumeric(clanName) || (2 > clanName.length())) {
+        if (!GameUtils.isAlphaNumeric(clanName) || (2 > clanName.length())) {
             player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
             return null;
         }

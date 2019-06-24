@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.actor.L2Playable;
 import org.l2j.gameserver.model.actor.instance.L2ControllableMobInstance;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +49,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
     protected void thinkFollow() {
         final L2Attackable me = (L2Attackable) _actor;
 
-        if (!Util.checkIfInRange(MobGroupTable.FOLLOW_RANGE, me, getForcedTarget(), true)) {
+        if (!GameUtils.checkIfInRange(MobGroupTable.FOLLOW_RANGE, me, getForcedTarget(), true)) {
             final int signX = Rnd.nextBoolean() ? -1 : 1;
             final int signY = Rnd.nextBoolean() ? -1 : 1;
             final int randX = Rnd.get(MobGroupTable.FOLLOW_RANGE);
@@ -123,7 +123,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
             // check distant skills
 
             for (Skill sk : _actor.getAllSkills()) {
-                if (Util.checkIfInRange(sk.getCastRange(), _actor, target, true) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() > _actor.getStat().getMpConsume(sk))) {
+                if (GameUtils.checkIfInRange(sk.getCastRange(), _actor, target, true) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() > _actor.getStat().getMpConsume(sk))) {
                     _actor.doCast(sk);
                     return;
                 }
@@ -360,7 +360,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
         final List<L2Character> potentialTarget = new ArrayList<>();
         L2World.getInstance().forEachVisibleObject(_actor, L2Character.class, target ->
         {
-            if (Util.checkIfInShortRange(((L2Attackable) _actor).getAggroRange(), _actor, target, true) && checkAutoAttackCondition(target)) {
+            if (GameUtils.checkIfInShortRange(((L2Attackable) _actor).getAggroRange(), _actor, target, true) && checkAutoAttackCondition(target)) {
                 potentialTarget.add(target);
             }
         });

@@ -17,7 +17,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.DeleteObject;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -743,11 +743,11 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
      * @return the angle this object has to turn to have the given object in front of it
      */
     public double calculateDirectionTo(ILocational target) {
-        int heading = Util.calculateHeadingFrom(this, target) - _heading;
+        int heading = GameUtils.calculateHeadingFrom(this, target) - _heading;
         if (heading < 0) {
             heading += 65535;
         }
-        return Util.convertHeadingToDegree(heading);
+        return GameUtils.convertHeadingToDegree(heading);
     }
 
     /**

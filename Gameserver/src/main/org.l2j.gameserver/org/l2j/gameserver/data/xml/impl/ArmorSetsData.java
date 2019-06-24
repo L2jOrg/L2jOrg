@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -25,7 +25,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author godson, Luno, UnAfraid
  */
-public final class ArmorSetsData extends IGameXmlReader{
+public final class ArmorSetsData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ArmorSetsData.class);
 
     private final Map<Integer, L2ArmorSet> _armorSets = new HashMap<>();

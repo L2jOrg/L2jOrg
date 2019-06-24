@@ -1,7 +1,7 @@
 package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -22,7 +22,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author mrTJO
  */
-public final class ExperienceData extends IGameXmlReader{
+public final class ExperienceData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ExperienceData.class);
 
     private final Map<Integer, Long> _expTable = new HashMap<>();

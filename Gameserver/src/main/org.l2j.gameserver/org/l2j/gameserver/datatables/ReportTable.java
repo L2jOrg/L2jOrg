@@ -25,6 +25,7 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.captcha.ReceiveBotCaptchaImage;
 import org.l2j.gameserver.network.serverpackets.captcha.ReceiveBotCaptchaResult;
 import org.l2j.gameserver.settings.GeneralSettings;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.Attributes;
@@ -56,7 +57,7 @@ public final class ReportTable {
     public static final int PARTY_ACTION_BLOCK_ID = -3;
     public static final int ACTION_BLOCK_ID = -4;
     public static final int CHAT_BLOCK_ID = -5;
-    // Zoey76: TODO: Split XML parsing from SQL operations, use IGameXmlReader instead of SAXParser.
+    // Zoey76: TODO: Split XML parsing from SQL operations, use GameXmlReader instead of SAXParser.
     private static final Logger LOGGER = LoggerFactory.getLogger(ReportTable.class);
 
     private static final String REPORT_TYPE_ADENA_ADS = "ADENA_ADS";
@@ -175,7 +176,7 @@ public final class ReportTable {
         final int reporterId = reporter.getObjectId();
 
 
-        final int ip = org.l2j.gameserver.util.Util.hashIp(reporter);
+        final int ip = GameUtils.hashIp(reporter);
         if (!timeHasPassed(ipRegistry, ip)) {
             reporter.sendPacket(SystemMessageId.THIS_CHARACTER_CANNOT_MAKE_A_REPORT_THE_TARGET_HAS_ALREADY_BEEN_REPORTED_BY_EITHER_YOUR_CLAN_OR_HAS_ALREADY_BEEN_REPORTED_FROM_YOUR_CURRENT_IP);
             return false;

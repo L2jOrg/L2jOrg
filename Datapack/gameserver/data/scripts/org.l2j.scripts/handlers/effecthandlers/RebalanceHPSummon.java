@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Rebalance HP effect implementation.
@@ -60,7 +60,7 @@ public class RebalanceHPSummon extends AbstractEffect
 		
 		for (L2Summon summon : effector.getServitors().values())
 		{
-			if (!summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true))
+			if (!summon.isDead() && GameUtils.checkIfInRange(skill.getAffectRange(), effector, summon, true))
 			{
 				fullHP += summon.getMaxHp();
 				currentHPs += summon.getCurrentHp();
@@ -73,7 +73,7 @@ public class RebalanceHPSummon extends AbstractEffect
 		double percentHP = currentHPs / fullHP;
 		for (L2Summon summon : effector.getServitors().values())
 		{
-			if (!summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true))
+			if (!summon.isDead() && GameUtils.checkIfInRange(skill.getAffectRange(), effector, summon, true))
 			{
 				double newHP = summon.getMaxHp() * percentHP;
 				if (newHP > summon.getCurrentHp()) // The target gets healed

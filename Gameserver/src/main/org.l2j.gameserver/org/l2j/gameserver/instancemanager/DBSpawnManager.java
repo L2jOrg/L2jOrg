@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -157,7 +157,7 @@ public class DBSpawnManager {
             info.set("respawnTime", respawnTime);
 
             if (!_schedules.containsKey(npc.getId()) && ((respawnMinDelay > 0) || (respawnMaxDelay > 0))) {
-                LOGGER.info(getClass().getSimpleName() + ": Updated " + npc.getName() + " respawn time to " + Util.formatDate(new Date(respawnTime), "dd.MM.yyyy HH:mm"));
+                LOGGER.info(getClass().getSimpleName() + ": Updated " + npc.getName() + " respawn time to " + GameUtils.formatDate(new Date(respawnTime), "dd.MM.yyyy HH:mm"));
 
                 _schedules.put(npc.getId(), ThreadPoolManager.getInstance().schedule(() -> scheduleSpawn(npc.getId()), respawnDelay));
                 updateDb();

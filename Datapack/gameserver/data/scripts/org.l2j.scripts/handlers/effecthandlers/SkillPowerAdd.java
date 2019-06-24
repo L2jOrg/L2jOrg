@@ -8,8 +8,8 @@ import org.l2j.gameserver.model.stats.Stats;
  */
 public class SkillPowerAdd extends AbstractStatAddEffect
 {
-	public SkillPowerAdd(StatsSet params)
-	{
-		super(params, Stats.SKILL_POWER_ADD);
-	}
+    public SkillPowerAdd(StatsSet params)
+    {
+        super(params, Stats.SKILL_POWER_ADD);
+    }
 }

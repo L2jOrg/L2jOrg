@@ -43,7 +43,7 @@ import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ExMagicAttackInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.lang.ref.WeakReference;
 import java.util.*;
@@ -298,7 +298,7 @@ public class L2Attackable extends L2Npc {
                     // Prevent unwanted behavior
                     if (damage > 1) {
                         // Check if damage dealer isn't too far from this (killed monster)
-                        if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, this, attacker, true)) {
+                        if (!GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, this, attacker, true)) {
                             continue;
                         }
 
@@ -453,7 +453,7 @@ public class L2Attackable extends L2Npc {
 
                             // If the L2PcInstance is in the L2Attackable rewards add its damages to party damages
                             if (reward2 != null) {
-                                if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, this, partyPlayer, true)) {
+                                if (GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, this, partyPlayer, true)) {
                                     partyDmg += reward2.getDamage(); // Add L2PcInstance damages to party damages
                                     rewardedMembers.add(partyPlayer);
 
@@ -466,7 +466,7 @@ public class L2Attackable extends L2Npc {
                                     }
                                 }
                                 rewards.remove(partyPlayer); // Remove the L2PcInstance from the L2Attackable rewards
-                            } else if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, this, partyPlayer, true)) {
+                            } else if (GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, this, partyPlayer, true)) {
                                 rewardedMembers.add(partyPlayer);
                                 if (partyPlayer.getLevel() > partyLvl) {
                                     if (attackerParty.isInCommandChannel()) {

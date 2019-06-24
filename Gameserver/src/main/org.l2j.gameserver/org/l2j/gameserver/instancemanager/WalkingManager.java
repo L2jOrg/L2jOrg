@@ -15,7 +15,7 @@ import org.l2j.gameserver.model.actor.tasks.npc.walker.ArrivedTask;
 import org.l2j.gameserver.model.holders.NpcRoutesHolder;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -37,7 +37,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author GKR
  */
-public final class WalkingManager extends IGameXmlReader{
+public final class WalkingManager extends GameXmlReader {
     // Repeat style:
     // -1 - no repeat
     // 0 - go back

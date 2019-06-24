@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -49,7 +49,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author Zoey76
  */
-public final class InitialShortcutData extends IGameXmlReader{
+public final class InitialShortcutData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(InitialShortcutData.class);
 
     private final Map<ClassId, List<Shortcut>> _initialShortcutData = new HashMap<>();

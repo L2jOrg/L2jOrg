@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ValidateLocation;
 import org.l2j.gameserver.util.Broadcast;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -59,7 +59,7 @@ public final class RequestExMagicSkillUseGround extends ClientPacket {
             activeChar.setCurrentSkillWorldPosition(new Location(_x, _y, _z));
 
             // normally magicskilluse packet turns char client side but for these skills, it doesn't (even with correct target)
-            activeChar.setHeading(Util.calculateHeadingFrom(activeChar.getX(), activeChar.getY(), _x, _y));
+            activeChar.setHeading(GameUtils.calculateHeadingFrom(activeChar.getX(), activeChar.getY(), _x, _y));
             Broadcast.toKnownPlayers(activeChar, new ValidateLocation(activeChar));
 
             activeChar.useMagic(skill, null, _ctrlPressed, _shiftPressed);

@@ -21,7 +21,7 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -117,7 +117,7 @@ public class FavoriteBoard implements IParseBoardHandler
 		else if (command.startsWith("_bbsdelfav_"))
 		{
 			final String favId = command.replaceAll("_bbsdelfav_", "");
-			if (!Util.isDigit(favId))
+			if (!GameUtils.isDigit(favId))
 			{
 				LOG.warn(FavoriteBoard.class.getSimpleName() + ": Couldn't delete favorite link, " + favId + " it's not a valid ID!");
 				return false;

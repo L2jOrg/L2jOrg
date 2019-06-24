@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.options.*;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -19,7 +19,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author Pere
  */
-public class VariationData extends IGameXmlReader{
+public class VariationData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(VariationData.class.getSimpleName());
 
     private final Map<Integer, Variation> _variations = new HashMap<>();

@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.zone.type.L2CastleZone;
 import org.l2j.gameserver.model.zone.type.L2ClanHallZone;
 import org.l2j.gameserver.model.zone.type.L2FortZone;
 import org.l2j.gameserver.model.zone.type.L2MotherTreeZone;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Optional;
 
@@ -45,7 +45,7 @@ public class RegenHPFinalizer implements IStatsFunction {
         }
 
         final L2SiegeClan siegeClan = siege.getAttackerClan(activeChar.getClan().getId());
-        if ((siegeClan == null) || siegeClan.getFlag().isEmpty() || !Util.checkIfInRange(200, activeChar, siegeClan.getFlag().stream().findAny().get(), true)) {
+        if ((siegeClan == null) || siegeClan.getFlag().isEmpty() || !GameUtils.checkIfInRange(200, activeChar, siegeClan.getFlag().stream().findAny().get(), true)) {
             return 0;
         }
 

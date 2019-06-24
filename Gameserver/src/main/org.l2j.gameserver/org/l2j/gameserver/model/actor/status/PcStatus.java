@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 public class PcStatus extends PlayableStatus {
     private double _currentCp = 0; // Current CP of the L2PcInstance
@@ -113,7 +113,7 @@ public class PcStatus extends PlayableStatus {
 
             // Check and calculate transfered damage
             final L2Summon summon = getActiveChar().getFirstServitor();
-            if ((summon != null) && Util.checkIfInRange(1000, getActiveChar(), summon, true)) {
+            if ((summon != null) && GameUtils.checkIfInRange(1000, getActiveChar(), summon, true)) {
                 tDmg = ((int) value * (int) getActiveChar().getStat().getValue(Stats.TRANSFER_DAMAGE_SUMMON_PERCENT, 0)) / 100;
 
                 // Only transfer dmg up to current HP, it should not be killed
@@ -144,7 +144,7 @@ public class PcStatus extends PlayableStatus {
             }
 
             final L2PcInstance caster = getActiveChar().getTransferingDamageTo();
-            if ((caster != null) && (getActiveChar().getParty() != null) && Util.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && (getActiveChar() != caster) && getActiveChar().getParty().getMembers().contains(caster)) {
+            if ((caster != null) && (getActiveChar().getParty() != null) && GameUtils.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && (getActiveChar() != caster) && getActiveChar().getParty().getMembers().contains(caster)) {
                 int transferDmg = 0;
 
                 transferDmg = ((int) value * (int) getActiveChar().getStat().getValue(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0)) / 100;
@@ -152,7 +152,7 @@ public class PcStatus extends PlayableStatus {
                 if (transferDmg > 0) {
                     int membersInRange = 0;
                     for (L2PcInstance member : caster.getParty().getMembers()) {
-                        if (Util.checkIfInRange(1000, member, caster, false) && (member != caster)) {
+                        if (GameUtils.checkIfInRange(1000, member, caster, false) && (member != caster)) {
                             membersInRange++;
                         }
                     }

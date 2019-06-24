@@ -22,7 +22,7 @@ import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.serverpackets.CharCreateFail;
 import org.l2j.gameserver.network.serverpackets.CharCreateOk;
 import org.l2j.gameserver.network.serverpackets.CharSelectionInfo;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -94,7 +94,7 @@ public final class CharacterCreate extends ClientPacket {
         }
 
         // Last Verified: May 30, 2009 - Gracia Final
-        if (!Util.isAlphaNumeric(name) || !isValidName(name)) {
+        if (!GameUtils.isAlphaNumeric(name) || !isValidName(name)) {
             client.sendPacket(new CharCreateFail(CharCreateFail.REASON_INCORRECT_NAME));
             return;
         }

@@ -4,7 +4,7 @@ import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.enums.Position;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -22,7 +22,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author Nik
  */
-public final class HitConditionBonusData extends IGameXmlReader{
+public final class HitConditionBonusData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(HitConditionBonusData.class);
 
     private int frontBonus = 0;

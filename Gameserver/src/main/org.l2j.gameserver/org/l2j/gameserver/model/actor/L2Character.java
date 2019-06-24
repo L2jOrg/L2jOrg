@@ -57,7 +57,7 @@ import org.l2j.gameserver.model.zone.ZoneRegion;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -873,7 +873,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
             // Make sure that char is facing selected target
             // also works: setHeading(Util.convertDegreeToClientHeading(Util.calculateAngleFrom(this, target)));
-            setHeading(Util.calculateHeadingFrom(this, target));
+            setHeading(GameUtils.calculateHeadingFrom(this, target));
 
             // Always try to charge soulshots.
             if (!isChargedShot(ShotType.SOULSHOTS))
@@ -968,7 +968,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
         // H5 Changes: without Polearm Mastery (skill 216) max simultaneous attacks is 3 (1 by default + 2 in skill 3599).
         int attackCountMax = (int) _stat.getValue(Stats.ATTACK_COUNT_MAX, 1);
         if ((attackCountMax > 1) && !(_stat.getValue(Stats.PHYSICAL_POLEARM_TARGET_SINGLE, 0) > 0)) {
-            final double headingAngle = Util.convertHeadingToDegree(getHeading());
+            final double headingAngle = GameUtils.convertHeadingToDegree(getHeading());
             final int maxRadius = _stat.getPhysicalAttackRadius();
             final int physicalAttackAngle = _stat.getPhysicalAttackAngle();
             for (L2Character obj : L2World.getInstance().getVisibleObjectsInRange(this, L2Character.class, maxRadius)) {
@@ -2447,7 +2447,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
             if (_cursorKeyMovement // In case of cursor movement, avoid moving through obstacles.
                     || (distance > 3000)) // Stop movement when player has clicked far away and intersected with an obstacle.
             {
-                final double angle = Util.convertHeadingToDegree(getHeading());
+                final double angle = GameUtils.convertHeadingToDegree(getHeading());
                 final double radian = Math.toRadians(angle);
                 final double course = Math.toRadians(180);
                 final double frontDistance = 10 * (_stat.getMoveSpeed() / 100);
@@ -2836,7 +2836,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
         m._heading = 0; // initial value for coordinate sync
         // Does not broke heading on vertical movements
         if (!verticalMovementOnly) {
-            setHeading(Util.calculateHeadingFrom(cos, sin));
+            setHeading(GameUtils.calculateHeadingFrom(cos, sin));
         }
 
         m._moveStartTime = GameTimeController.getInstance().getGameTicks();
@@ -2903,7 +2903,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
         final double distance = Math.hypot(m._xDestination - curX, m._yDestination - curY);
         // Calculate and set the heading of the L2Character
         if (distance != 0) {
-            setHeading(Util.calculateHeadingFrom(curX, curY, m._xDestination, m._yDestination));
+            setHeading(GameUtils.calculateHeadingFrom(curX, curY, m._xDestination, m._yDestination));
         }
 
         // Calculate the number of ticks between the current position and the destination

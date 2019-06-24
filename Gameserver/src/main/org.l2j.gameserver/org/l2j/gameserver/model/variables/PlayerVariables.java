@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.variables;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -166,7 +166,7 @@ public class PlayerVariables extends AbstractVariables {
         final String data = getString(DAILY_MISSION_REWARDS, "");
         if (!data.isEmpty()) {
             for (String s : getString(DAILY_MISSION_REWARDS, "").split(",")) {
-                if (Util.isDigit(s)) {
+                if (GameUtils.isDigit(s)) {
                     final int rewardId = Integer.parseInt(s);
                     if (rewards == null) {
                         rewards = new ArrayList<>();

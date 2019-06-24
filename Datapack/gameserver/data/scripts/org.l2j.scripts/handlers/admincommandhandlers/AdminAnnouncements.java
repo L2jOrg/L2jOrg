@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.html.PageBuilder;
 import org.l2j.gameserver.model.html.PageResult;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.StringTokenizer;
 
@@ -92,7 +92,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 						if (!st.hasMoreTokens())
 						{
 							final String content = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/announces-add.htm");
-							Util.sendCBHtml(activeChar, content);
+							GameUtils.sendCBHtml(activeChar, content);
 							break;
 						}
 						final String annType = st.nextToken();
@@ -104,7 +104,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String annInitDelay = st.nextToken();
-						if (!Util.isDigit(annInitDelay))
+						if (!GameUtils.isDigit(annInitDelay))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -117,7 +117,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String annDelay = st.nextToken();
-						if (!Util.isDigit(annDelay))
+						if (!GameUtils.isDigit(annDelay))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -135,7 +135,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String annRepeat = st.nextToken();
-						if (!Util.isDigit(annRepeat))
+						if (!GameUtils.isDigit(annRepeat))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -178,7 +178,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String annId = st.nextToken();
-						if (!Util.isDigit(annId))
+						if (!GameUtils.isDigit(annId))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces edit <id>");
 							break;
@@ -214,7 +214,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							content = content.replaceAll("%repeat%", announcementRepeat);
 							content = content.replaceAll("%author%", announcementAuthor);
 							content = content.replaceAll("%content%", announcementContent);
-							Util.sendCBHtml(activeChar, content);
+							GameUtils.sendCBHtml(activeChar, content);
 							break;
 						}
 						final String annType = st.nextToken();
@@ -265,7 +265,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String annInitDelay = st.nextToken();
-						if (!Util.isDigit(annInitDelay))
+						if (!GameUtils.isDigit(annInitDelay))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -278,7 +278,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String annDelay = st.nextToken();
-						if (!Util.isDigit(annDelay))
+						if (!GameUtils.isDigit(annDelay))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -296,7 +296,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String annRepeat = st.nextToken();
-						if (!Util.isDigit(annRepeat))
+						if (!GameUtils.isDigit(annRepeat))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -343,7 +343,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String token = st.nextToken();
-						if (!Util.isDigit(token))
+						if (!GameUtils.isDigit(token))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces remove <announcement id>");
 							break;
@@ -375,7 +375,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String token = st.nextToken();
-						if (!Util.isDigit(token))
+						if (!GameUtils.isDigit(token))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces show <announcement id>");
 							break;
@@ -409,7 +409,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String token = st.nextToken();
-						if (!Util.isDigit(token))
+						if (!GameUtils.isDigit(token))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces show <announcement id>");
 							break;
@@ -440,7 +440,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							content = content.replaceAll("%repeat%", announcementRepeat);
 							content = content.replaceAll("%author%", announcementAuthor);
 							content = content.replaceAll("%content%", announcementContent);
-							Util.sendCBHtml(activeChar, content);
+							GameUtils.sendCBHtml(activeChar, content);
 							break;
 						}
 						BuilderUtil.sendSysMessage(activeChar, "Announcement does not exist!");
@@ -452,7 +452,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 						if (st.hasMoreTokens())
 						{
 							final String token = st.nextToken();
-							if (Util.isDigit(token))
+							if (GameUtils.isDigit(token))
 							{
 								page = Integer.valueOf(token);
 							}
@@ -491,7 +491,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 						
 						content = content.replaceAll("%pages%", result.getPagerTemplate().toString());
 						content = content.replaceAll("%announcements%", result.getBodyTemplate().toString());
-						Util.sendCBHtml(activeChar, content);
+						GameUtils.sendCBHtml(activeChar, content);
 						break;
 					}
 				}

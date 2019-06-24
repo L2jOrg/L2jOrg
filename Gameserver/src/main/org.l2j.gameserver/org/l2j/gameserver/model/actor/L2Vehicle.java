@@ -20,7 +20,7 @@ import org.l2j.gameserver.model.zone.ZoneRegion;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -115,7 +115,7 @@ public abstract class L2Vehicle extends L2Character {
 
                         final double distance = Math.hypot(point.getX() - getX(), point.getY() - getY());
                         if (distance > 1) {
-                            setHeading(Util.calculateHeadingFrom(getX(), getY(), point.getX(), point.getY()));
+                            setHeading(GameUtils.calculateHeadingFrom(getX(), getY(), point.getX(), point.getY()));
                         }
 
                         m._moveStartTime = GameTimeController.getInstance().getGameTicks();

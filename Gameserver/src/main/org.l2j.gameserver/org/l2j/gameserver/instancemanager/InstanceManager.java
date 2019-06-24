@@ -18,7 +18,7 @@ import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.model.instancezone.conditions.Condition;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -45,7 +45,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author evill33t, GodKratos, malyelfik
  */
-public final class InstanceManager extends IGameXmlReader{
+public final class InstanceManager extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(InstanceManager.class);
     // Database query
     private static final String DELETE_INSTANCE_TIME = "DELETE FROM character_instance_time WHERE charId=? AND instanceId=?";

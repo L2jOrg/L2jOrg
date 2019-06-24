@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.items.combination.CombinationItem;
 import org.l2j.gameserver.model.items.combination.CombinationItemReward;
 import org.l2j.gameserver.model.items.combination.CombinationItemType;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -22,7 +22,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author UnAfraid
  */
-public class CombinationItemsData extends IGameXmlReader{
+public class CombinationItemsData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(CombinationItemsData.class);
     private final List<CombinationItem> _items = new ArrayList<>();
 

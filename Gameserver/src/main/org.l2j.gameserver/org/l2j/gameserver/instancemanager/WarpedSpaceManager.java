@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.holders.WarpedSpaceHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -40,8 +40,8 @@ public class WarpedSpaceManager {
                     continue;
                 }
                 final int radius = creature.getTemplate().getCollisionRadius();
-                final boolean originInRange = Util.calculateDistance(creature, origin, false, false) <= (holder.getRange() + radius);
-                final boolean destinationInRange = Util.calculateDistance(creature, destination, false, false) <= (holder.getRange() + radius);
+                final boolean originInRange = GameUtils.calculateDistance(creature, origin, false, false) <= (holder.getRange() + radius);
+                final boolean destinationInRange = GameUtils.calculateDistance(creature, destination, false, false) <= (holder.getRange() + radius);
                 return destinationInRange != originInRange;
             }
         }

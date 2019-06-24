@@ -5,7 +5,6 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.HitConditionBonusData;
 import org.l2j.gameserver.data.xml.impl.KarmaData;
-import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
@@ -27,12 +26,10 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static java.util.Objects.nonNull;
 
 /**
  * Global calculations.
@@ -455,7 +452,7 @@ public final class Formulas {
         }
 
         final int degreeside = target.isAffected(EffectFlag.PHYSICAL_SHIELD_ANGLE_ALL) ? 360 : 120;
-        if ((degreeside < 360) && (Math.abs(target.calculateDirectionTo(attacker) - Util.convertHeadingToDegree(target.getHeading())) > (degreeside / 2))) {
+        if ((degreeside < 360) && (Math.abs(target.calculateDirectionTo(attacker) - GameUtils.convertHeadingToDegree(target.getHeading())) > (degreeside / 2))) {
             return 0;
         }
 

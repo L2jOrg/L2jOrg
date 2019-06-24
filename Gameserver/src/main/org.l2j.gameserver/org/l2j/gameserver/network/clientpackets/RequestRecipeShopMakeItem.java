@@ -4,7 +4,7 @@ import org.l2j.gameserver.RecipeController;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * @author Administrator
@@ -55,7 +55,7 @@ public final class RequestRecipeShopMakeItem extends ClientPacket {
             activeChar.sendMessage("You are currently in Craft Mode.");
             return;
         }
-        if (Util.checkIfInRange(150, activeChar, manufacturer, true)) {
+        if (GameUtils.checkIfInRange(150, activeChar, manufacturer, true)) {
             RecipeController.getInstance().requestManufactureItem(manufacturer, _recipeId, activeChar);
         }
     }

@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Dark Winged Spies (275)
@@ -74,7 +74,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 	{
 		final QuestState st = getQuestState(killer, false);
 		
-		if ((st != null) && st.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
+		if ((st != null) && st.isCond(1) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			final long count = getQuestItemsCount(killer, DARKWING_BAT_FANG);
 			

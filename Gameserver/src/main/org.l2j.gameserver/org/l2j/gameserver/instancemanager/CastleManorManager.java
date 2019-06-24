@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.interfaces.IStorable;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -50,7 +50,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author malyelfik
  */
-public final class CastleManorManager extends  IGameXmlReader implements IStorable {
+public final class CastleManorManager extends GameXmlReader implements IStorable {
     private static final Logger LOGGER = LoggerFactory.getLogger(CastleManorManager.class);
 
     // SQL queries

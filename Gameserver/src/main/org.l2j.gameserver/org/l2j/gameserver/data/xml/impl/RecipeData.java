@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.L2RecipeStatInstance;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -27,7 +27,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author Zoey76
  */
-public class RecipeData extends IGameXmlReader{
+public class RecipeData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(RecipeData.class);
 
     private final Map<Integer, L2RecipeList> _recipes = new HashMap<>();

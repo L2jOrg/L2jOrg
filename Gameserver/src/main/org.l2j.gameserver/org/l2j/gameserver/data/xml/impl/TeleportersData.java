@@ -4,7 +4,7 @@ import org.l2j.gameserver.enums.TeleportType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -22,7 +22,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author UnAfraid
  */
-public class TeleportersData extends IGameXmlReader{
+public class TeleportersData extends GameXmlReader {
     // Logger instance
     private static final Logger LOGGER = LoggerFactory.getLogger(TeleportersData.class);
     // Teleporter data

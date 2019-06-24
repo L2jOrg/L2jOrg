@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.network.serverpackets.ExIsCharNameCreatable;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * @author UnAfraid
@@ -26,7 +26,7 @@ public class RequestCharacterNameCreatable extends ClientPacket {
     public void runImpl() {
         final int charId = CharNameTable.getInstance().getIdByName(_name);
 
-        if (!Util.isAlphaNumeric(_name) || !isValidName(_name)) {
+        if (!GameUtils.isAlphaNumeric(_name) || !isValidName(_name)) {
             result = INVALID_NAME;
         } else if (charId > 0) {
             result = NAME_ALREADY_EXISTS;

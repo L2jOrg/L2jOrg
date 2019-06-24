@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -24,7 +24,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author MrPoke, Zoey76
  */
-public class EnchantItemHPBonusData extends IGameXmlReader{
+public class EnchantItemHPBonusData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(EnchantItemHPBonusData.class);
     private static final float FULL_ARMOR_MODIFIER = 1.5f; // TODO: Move it to config!
     private final Map<CrystalType, List<Integer>> _armorHPBonuses = new EnumMap<>(CrystalType.class);

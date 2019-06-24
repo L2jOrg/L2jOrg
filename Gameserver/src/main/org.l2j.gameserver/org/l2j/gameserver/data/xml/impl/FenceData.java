@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.L2FenceInstance;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -27,7 +27,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author HoridoJoho / FBIagent
  */
-public final class FenceData extends IGameXmlReader {
+public final class FenceData extends GameXmlReader {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FenceData.class);
 

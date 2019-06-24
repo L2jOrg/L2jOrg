@@ -109,7 +109,7 @@ public abstract class ServerPacket extends WritablePacket<L2GameClient> {
             writeImpl(client);
             return true;
         } catch (Exception e) {
-            LOGGER.error("[{{}] Error writing packet {} to client {}", GameServer.fullVersion, this, client);
+            LOGGER.error("[{}] Error writing packet {} to client {}", GameServer.fullVersion, this, client);
             LOGGER.error(e.getLocalizedMessage(), e);
         }
         return false;

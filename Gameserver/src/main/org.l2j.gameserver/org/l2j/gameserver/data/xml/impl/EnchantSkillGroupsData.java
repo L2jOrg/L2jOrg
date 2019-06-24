@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -23,7 +23,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author Micr0
  */
-public class EnchantSkillGroupsData extends IGameXmlReader{
+public class EnchantSkillGroupsData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(EnchantSkillGroupsData.class);
     public static int MAX_ENCHANT_LEVEL;
     private final Map<Integer, EnchantSkillHolder> _enchantSkillHolders = new LinkedHashMap<>();

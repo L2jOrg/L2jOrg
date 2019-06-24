@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.SiegeGuardType;
 import org.l2j.gameserver.model.holders.CastleSpawnHolder;
 import org.l2j.gameserver.model.holders.SiegeGuardHolder;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -20,7 +20,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author St3eT
  */
-public final class CastleData extends IGameXmlReader{
+public final class CastleData extends GameXmlReader {
     private static final Map<Integer, List<SiegeGuardHolder>> _siegeGuards = new HashMap<>();
     private final Map<Integer, List<CastleSpawnHolder>> _spawns = new HashMap<>();
 

@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Noise in Woods (11007)
@@ -132,7 +132,7 @@ public class Q11007_NoiseInWoods extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(1500, npc, killer, true))
+		if ((qs != null) && qs.isStarted() && GameUtils.checkIfInRange(1500, npc, killer, true))
 		{
 			switch (npc.getId())
 			{

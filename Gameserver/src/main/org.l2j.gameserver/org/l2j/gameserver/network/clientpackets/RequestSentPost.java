@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExReplySentPost;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * @author Migi, DS
@@ -38,7 +38,7 @@ public final class RequestSentPost extends ClientPacket {
         }
 
         if (msg.getSenderId() != activeChar.getObjectId()) {
-            Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to read not own post!", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to read not own post!", Config.DEFAULT_PUNISH);
             return;
         }
 

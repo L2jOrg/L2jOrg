@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GMAudit;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -229,7 +229,7 @@ public class AdminPunishment implements IAdminCommandHandler
 					BuilderUtil.sendSysMessage(activeChar, "Please fill all the fields!");
 					break;
 				}
-				if (!Util.isDigit(exp) && !exp.equals("-1"))
+				if (!GameUtils.isDigit(exp) && !exp.equals("-1"))
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Incorrect value specified for expiration time!");
 					break;

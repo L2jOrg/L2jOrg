@@ -20,7 +20,7 @@ import org.l2j.gameserver.network.serverpackets.EnchantResult;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -98,7 +98,7 @@ public final class RequestEnchantItem extends ClientPacket {
 
         // fast auto-enchant cheat check
         if ((request.getTimestamp() == 0) || ((System.currentTimeMillis() - request.getTimestamp()) < 2000)) {
-            Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " use autoenchant program ", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " use autoenchant program ", Config.DEFAULT_PUNISH);
             activeChar.removeRequest(request.getClass());
             client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
             return;
@@ -107,7 +107,7 @@ public final class RequestEnchantItem extends ClientPacket {
         // attempting to destroy scroll
         if (activeChar.getInventory().destroyItem("Enchant", scroll.getObjectId(), 1, activeChar, item) == null) {
             client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
-            Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to enchant with a scroll he doesn't have", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to enchant with a scroll he doesn't have", Config.DEFAULT_PUNISH);
             activeChar.removeRequest(request.getClass());
             client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
             return;
@@ -117,7 +117,7 @@ public final class RequestEnchantItem extends ClientPacket {
         if (support != null) {
             if (activeChar.getInventory().destroyItem("Enchant", support.getObjectId(), 1, activeChar, item) == null) {
                 client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
-                Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to enchant with a support item he doesn't have", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to enchant with a support item he doesn't have", Config.DEFAULT_PUNISH);
                 activeChar.removeRequest(request.getClass());
                 client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
                 return;
@@ -278,7 +278,7 @@ public final class RequestEnchantItem extends ClientPacket {
 
                             if (activeChar.getInventory().destroyItem("Enchant", item, activeChar, null) == null) {
                                 // unable to destroy item, cheater ?
-                                Util.handleIllegalPlayerAction(activeChar, "Unable to delete item on enchant failure from player " + activeChar.getName() + ", possible cheater !", Config.DEFAULT_PUNISH);
+                                GameUtils.handleIllegalPlayerAction(activeChar, "Unable to delete item on enchant failure from player " + activeChar.getName() + ", possible cheater !", Config.DEFAULT_PUNISH);
                                 activeChar.removeRequest(request.getClass());
                                 client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 

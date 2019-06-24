@@ -1,0 +1,45 @@
+package org.l2j.gameserver.network.serverpackets.elementalspirits;
+
+import org.l2j.gameserver.data.elemental.ElementalType;
+import org.l2j.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
+
+import static java.util.Objects.isNull;
+import static org.l2j.gameserver.network.ServerPacketId.EX_ELEMENTAL_SPIRIT_EVOLUTION_INFO;
+
+public class ElementalSpiritEvolutionInfo extends ServerPacket {
+
+    private final byte type;
+
+    public ElementalSpiritEvolutionInfo(byte type) {
+        this.type = type;
+    }
+
+    @Override
+    protected void writeImpl(L2GameClient client) {
+        writeId(EX_ELEMENTAL_SPIRIT_EVOLUTION_INFO);
+
+        var player = client.getActiveChar();
+        var spirit = player.getElementalSpirit(ElementalType.of(type));
+
+        if(isNull(spirit)) {
+            writeByte(0);
+            writeInt(0);
+            return;
+        }
+
+        writeByte(type);
+        writeInt(spirit.getNpcId());
+        writeInt(spirit.getLevel());
+        writeInt(spirit.getStage());
+        writeDouble(100);
+
+        var items = spirit.getItemsToEvolve();
+        writeInt(items.size());
+        for (ItemHolder item : items) {
+            writeInt(item.getId());
+            writeLong(item.getCount());
+        }
+    }
+}

@@ -3,7 +3,7 @@ package org.l2j.gameserver.handler;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,7 +39,7 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
      * @param player the player
      */
     public static void separateAndSend(String html, L2PcInstance player) {
-        Util.sendCBHtml(player, html);
+        GameUtils.sendCBHtml(player, html);
     }
 
     @Override

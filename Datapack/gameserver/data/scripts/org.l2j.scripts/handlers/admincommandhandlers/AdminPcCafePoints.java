@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.ExPCCafePointInfo;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Collection;
 import java.util.StringTokenizer;
@@ -193,7 +193,7 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 		final L2PcInstance target = getTarget(activeChar);
 		final int points = target.getPcCafePoints();
 		html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/pccafe.htm"));
-		html.replace("%points%", Util.formatAdena(points));
+		html.replace("%points%", GameUtils.formatAdena(points));
 		html.replace("%targetName%", target.getName());
 		activeChar.sendPacket(html);
 	}

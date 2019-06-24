@@ -27,7 +27,7 @@ import org.l2j.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndR
 import org.l2j.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndType;
 import org.l2j.gameserver.network.serverpackets.fishing.ExFishingStart;
 import org.l2j.gameserver.network.serverpackets.fishing.ExUserInfoFishing;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -326,7 +326,7 @@ public class Fishing {
         final int distMin = FishingData.getInstance().getBaitDistanceMin();
         final int distMax = FishingData.getInstance().getBaitDistanceMax();
         int distance = Rnd.get(distMin, distMax);
-        final double angle = Util.convertHeadingToDegree(_player.getHeading());
+        final double angle = GameUtils.convertHeadingToDegree(_player.getHeading());
         final double radian = Math.toRadians(angle);
         final double sin = Math.sin(radian);
         final double cos = Math.cos(radian);

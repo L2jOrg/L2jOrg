@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.holders.ItemPointHolder;
 import org.l2j.gameserver.model.holders.LuckyGameDataHolder;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -21,7 +21,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author Sdw
  */
-public class LuckyGameData extends IGameXmlReader{
+public class LuckyGameData extends GameXmlReader {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(LuckyGameData.class);
 

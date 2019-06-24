@@ -15,7 +15,7 @@ import org.l2j.gameserver.model.zone.form.ZoneNPoly;
 import org.l2j.gameserver.model.zone.type.L2BannedSpawnTerritory;
 import org.l2j.gameserver.model.zone.type.L2SpawnTerritory;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -32,7 +32,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author UnAfraid
  */
-public class SpawnsData extends IGameXmlReader{
+public class SpawnsData extends GameXmlReader {
     protected static final Logger LOGGER = LoggerFactory.getLogger(SpawnsData.class);
 
     private final List<SpawnTemplate> _spawns = new LinkedList<>();

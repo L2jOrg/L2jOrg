@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -156,7 +156,7 @@ public final class Q00306_CrystalOfFireAndIce extends Quest
 	
 	private static void giveKillReward(L2PcInstance player, L2Npc npc)
 	{
-		if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
+		if (GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			final ItemHolder item = MONSTER_DROPS.get(npc.getId());
 			giveItemRandomly(player, npc, item.getId(), 1, 0, 1000.0 / item.getCount(), true);

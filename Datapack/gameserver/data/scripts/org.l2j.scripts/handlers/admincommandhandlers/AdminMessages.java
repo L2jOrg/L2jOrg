@@ -20,7 +20,7 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Allows Game Masters to test System Messages.<br>
@@ -54,7 +54,7 @@ public class AdminMessages implements IAdminCommandHandler
 		else if (command.startsWith("admin_msgx "))
 		{
 			final String[] tokens = command.split(" ");
-			if ((tokens.length <= 2) || !Util.isDigit(tokens[1]))
+			if ((tokens.length <= 2) || !GameUtils.isDigit(tokens[1]))
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Command format: //msgx <SYSTEM_MSG_ID> [item:Id] [skill:Id] [npc:Id] [zone:x,y,x] [castle:Id] [str:'text']");
 				return false;

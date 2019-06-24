@@ -11,7 +11,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.Broadcast;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -34,7 +34,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author Micht
  */
-public final class CursedWeaponsManager extends IGameXmlReader{
+public final class CursedWeaponsManager extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(CursedWeaponsManager.class);
 
     private final Map<Integer, CursedWeapon> _cursedWeapons = new HashMap<>();

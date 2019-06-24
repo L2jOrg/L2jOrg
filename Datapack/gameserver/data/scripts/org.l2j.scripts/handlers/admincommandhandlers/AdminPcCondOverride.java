@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Handler provides ability to override server's conditions for admin.<br>
@@ -68,7 +68,7 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 					if (st.hasMoreTokens())
 					{
 						final String token = st.nextToken();
-						if (Util.isDigit(token))
+						if (GameUtils.isDigit(token))
 						{
 							final PcCondOverride ex = PcCondOverride.getCondOverride(Integer.valueOf(token));
 							if (ex != null)

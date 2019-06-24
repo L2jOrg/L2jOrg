@@ -43,7 +43,7 @@ import org.l2j.gameserver.network.serverpackets.ExServerPrimitive;
 import org.l2j.gameserver.network.serverpackets.ExShowTerritory;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -179,7 +179,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 							break;
 						}
 						final String indexToken = st.nextToken();
-						if (!Util.isDigit(indexToken))
+						if (!GameUtils.isDigit(indexToken))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Node index should be int!");
 							break;
@@ -196,7 +196,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 							break;
 						}
 						final String indexToken = st.nextToken();
-						if (!Util.isDigit(indexToken))
+						if (!GameUtils.isDigit(indexToken))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Node index should be int!");
 							break;

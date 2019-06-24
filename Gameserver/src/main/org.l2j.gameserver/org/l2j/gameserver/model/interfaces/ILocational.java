@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.interfaces;
 
 import org.l2j.gameserver.enums.Position;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Object world location storage interface.
@@ -65,7 +65,7 @@ public interface ILocational {
      * @return the heading to the target specified
      */
     default int calculateHeadingTo(ILocational to) {
-        return Util.calculateHeadingFrom(getX(), getY(), to.getX(), to.getY());
+        return GameUtils.calculateHeadingFrom(getX(), getY(), to.getX(), to.getY());
     }
 
     /**

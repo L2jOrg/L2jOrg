@@ -31,7 +31,7 @@ import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.olympiad.Participant;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * @author UnAfraid
@@ -230,7 +230,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 	private int parseInt(StringTokenizer st, int defaultVal)
 	{
 		final String token = st.nextToken();
-		if (!Util.isDigit(token))
+		if (!GameUtils.isDigit(token))
 		{
 			return -1;
 		}

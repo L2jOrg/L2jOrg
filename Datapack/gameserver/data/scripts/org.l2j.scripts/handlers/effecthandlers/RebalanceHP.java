@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Rebalance HP effect implementation.
@@ -64,14 +64,14 @@ public final class RebalanceHP extends AbstractEffect
 		{
 			for (L2PcInstance member : party.getMembers())
 			{
-				if (!member.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, member, true))
+				if (!member.isDead() && GameUtils.checkIfInRange(skill.getAffectRange(), effector, member, true))
 				{
 					fullHP += member.getMaxHp();
 					currentHPs += member.getCurrentHp();
 				}
 				
 				final L2Summon summon = member.getPet();
-				if ((summon != null) && (!summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true)))
+				if ((summon != null) && (!summon.isDead() && GameUtils.checkIfInRange(skill.getAffectRange(), effector, summon, true)))
 				{
 					fullHP += summon.getMaxHp();
 					currentHPs += summon.getCurrentHp();
@@ -79,7 +79,7 @@ public final class RebalanceHP extends AbstractEffect
 				
 				for (L2Summon servitors : member.getServitors().values())
 				{
-					if (!servitors.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, servitors, true))
+					if (!servitors.isDead() && GameUtils.checkIfInRange(skill.getAffectRange(), effector, servitors, true))
 					{
 						fullHP += servitors.getMaxHp();
 						currentHPs += servitors.getCurrentHp();
@@ -90,7 +90,7 @@ public final class RebalanceHP extends AbstractEffect
 			double percentHP = currentHPs / fullHP;
 			for (L2PcInstance member : party.getMembers())
 			{
-				if (!member.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, member, true))
+				if (!member.isDead() && GameUtils.checkIfInRange(skill.getAffectRange(), effector, member, true))
 				{
 					double newHP = member.getMaxHp() * percentHP;
 					if (newHP > member.getCurrentHp()) // The target gets healed
@@ -110,7 +110,7 @@ public final class RebalanceHP extends AbstractEffect
 				}
 				
 				final L2Summon summon = member.getPet();
-				if ((summon != null) && (!summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true)))
+				if ((summon != null) && (!summon.isDead() && GameUtils.checkIfInRange(skill.getAffectRange(), effector, summon, true)))
 				{
 					double newHP = summon.getMaxHp() * percentHP;
 					if (newHP > summon.getCurrentHp()) // The target gets healed
@@ -130,7 +130,7 @@ public final class RebalanceHP extends AbstractEffect
 				
 				for (L2Summon servitors : member.getServitors().values())
 				{
-					if (!servitors.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, servitors, true))
+					if (!servitors.isDead() && GameUtils.checkIfInRange(skill.getAffectRange(), effector, servitors, true))
 					{
 						double newHP = servitors.getMaxHp() * percentHP;
 						if (newHP > servitors.getCurrentHp()) // The target gets healed

@@ -19,7 +19,7 @@ package handlers.voicedcommandhandlers;
 import org.l2j.gameserver.handler.IVoicedCommandHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * @author Zoey76
@@ -53,7 +53,7 @@ public class SetVCmd implements IVoicedCommandHandler
 			if (params.startsWith("privileges"))
 			{
 				final String val = params.substring(11);
-				if (!Util.isDigit(val))
+				if (!GameUtils.isDigit(val))
 				{
 					return false;
 				}

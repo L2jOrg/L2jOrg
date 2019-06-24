@@ -1,0 +1,62 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://l2j.org"
+           xmlns="http://l2j.org"
+           elementFormDefault="qualified">
+
+    <xs:include schemaLocation="../xsd/common.xsd"/>
+
+    <!-- Nero Commander 326 xp -->
+    <!-- White tiger 165 | 137 xp -->
+    <!-- Silph 828 | 690  xp -->
+
+    <!-- Canyon Antilope 137 xp -->
+    <!-- Canyon Antilope 249 xp -->
+    <!-- Eye of Guide 143 xp -->
+    <!-- Eye of Restrainer 218 xp -->
+    <!-- Eye of Watchman 155 xp -->
+    <!-- Canyon Bandersnatch Warrior 240  xp -->
+    <!-- Buffalo 326 xp -->
+    <!-- Gaze of Nightmare 246 -->
+    <!-- Valley Buffalo 146 xp -->
+    <!-- Growler 690 xp -->
+
+    <!-- wind rough stone +12%  on 2nd level stage 1-->
+    <!-- earth rough stone +2,80% on 8th level stage 1 -->
+
+    <xs:element name="list">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="spirit" type="SpiritInfo" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="SpiritInfo">
+        <xs:sequence>
+            <xs:element name="level" type="LevelData" maxOccurs="unbounded"/>
+            <xs:element name="itemToEvolve" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="absorbItem" type="AbsorbItemInfo" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="type" type="xs:byte" use="required"/>
+        <xs:attribute name="stage" type="xs:byte" use="required"/>
+        <xs:attribute name="npcId" type="xs:int" use="required"/>
+        <xs:attribute name="extractItem" type="xs:int" use="required"/>
+        <xs:attribute name="maxCharacteristics" type="xs:int" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="LevelData">
+        <xs:attribute name="id"  type="xs:int" use="required"/>
+        <xs:attribute name="atk" type="xs:int" use="required"/>
+        <xs:attribute name="def" type="xs:int" use="required"/>
+        <xs:attribute name="critRate" type="xs:int" use="required"/>
+        <xs:attribute name="critDam" type="xs:int" use="required"/>
+        <xs:attribute name="maxExp" type="xs:long" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="AbsorbItemInfo">
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="experience" type="xs:int" use="required"/>
+    </xs:complexType>
+
+</xs:schema>

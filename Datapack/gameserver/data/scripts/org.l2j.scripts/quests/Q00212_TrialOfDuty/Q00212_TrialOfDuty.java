@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.items.L2Weapon;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Trial of Duty (212)
@@ -138,7 +138,7 @@ public final class Q00212_TrialOfDuty extends Quest
 	{
 		final QuestState qs = getQuestState(killer, false);
 		
-		if ((qs == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, killer, npc, true))
+		if ((qs == null) || !GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, killer, npc, true))
 		{
 			return super.onKill(npc, killer, isSummon);
 		}

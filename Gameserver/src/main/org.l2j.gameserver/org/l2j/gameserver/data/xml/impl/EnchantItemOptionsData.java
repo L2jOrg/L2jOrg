@@ -3,8 +3,8 @@ package org.l2j.gameserver.data.xml.impl;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.options.EnchantOptions;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -20,7 +20,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author UnAfraid
  */
-public class EnchantItemOptionsData extends IGameXmlReader{
+public class EnchantItemOptionsData extends GameXmlReader {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(EnchantItemOptionsData.class);
 
@@ -59,7 +59,7 @@ public class EnchantItemOptionsData extends IGameXmlReader{
 
                                 for (byte i = 0; i < 3; i++) {
                                     final Node att = cd.getAttributes().getNamedItem("option" + (i + 1));
-                                    if ((att != null) && Util.isDigit(att.getNodeValue())) {
+                                    if ((att != null) && GameUtils.isDigit(att.getNodeValue())) {
                                         op.setOption(i, parseInteger(att));
                                     }
                                 }

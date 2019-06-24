@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.options.Options;
 import org.l2j.gameserver.model.options.OptionsSkillHolder;
 import org.l2j.gameserver.model.options.OptionsSkillType;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -24,7 +24,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author UnAfraid
  */
-public class OptionData extends IGameXmlReader{
+public class OptionData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(OptionData.class.getName());
 
     private final Map<Integer, Options> _optionData = new HashMap<>();

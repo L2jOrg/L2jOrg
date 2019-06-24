@@ -1,53 +1,79 @@
 package org.l2j.gameserver.network.serverpackets.elementalspirits;
 
 
+import org.l2j.gameserver.data.elemental.ElementalSpirit;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
+import static java.util.Objects.isNull;
+
 public class ElementalSpiritInfo extends ServerPacket {
+
+    private final byte spiritId;
+    private final byte type;
+
+    public ElementalSpiritInfo(byte id) {
+        spiritId = id;
+        type = 1;
+    }
+
+    public ElementalSpiritInfo(byte id, byte type) {
+        this.spiritId = id;
+        this.type = type;
+    }
 
     public void writeImpl(L2GameClient client) {
         writeId(ServerPacketId.EX_ELEMENTAL_SPIRIT_INFO);
-        writeByte(0x01); // show spirit info 1
-        writeByte(2); // active Spirit element
 
-        writeByte(4); // spirit count
+        var player = client.getActiveChar();
+        var spirits = player.getSpirits();
 
-        for (byte i = 1; i <= 4; i++) {
-            writeByte(i);
-            writeByte(i == 2); // is open ?
-            if(i == 2) { // is open ?
-                writeByte(2); // evolve level
-                writeInt(13566); // Spirit class id
-                writeLong(45); // spirit exp
-                writeLong(9556); // next exp
-                writeLong(4484949849L); // max exp
-                writeInt(3); // current level
-                writeInt(10); // max level
-                writeInt(5); // remain point
-                writeInt(10); // atk point
-                writeInt(45); // def point
-                writeInt(10); // crit rate point
-                writeInt(15); // crit pow point
-                writeInt(25); // Max Atk point
-                writeInt(20); // Max def point
-                writeInt(15); // Max Crit Rate point
-                writeInt(12); // Max crit pow point
+        if(isNull(spirits)) {
+            writeByte(0);
+            writeByte(0);
+            writeByte(0);
+            return;
+        }
 
-                writeByte(2);
+        writeByte(type); // show spirit info window 1; Change type
+        writeByte(player.getActiveElementalSpiritType());
 
-                for (int j = 0; j < 2; j++) {
-                    writeShort(2);
-                    writeLong(10);
-                }
+        writeByte(spirits.length); // spirit count
+
+        for (ElementalSpirit spirit : spirits) {
+            writeByte(spirit.getType());
+            writeByte(0x01); // spirit active ?
+            // if active
+            writeByte(spirit.getStage());
+            writeInt(spirit.getNpcId());
+            writeLong(spirit.getExperience());
+            writeLong(spirit.getExperienceToNextLevel()); // next exp
+            writeLong(spirit.getExperienceToNextLevel()); // max exp
+            writeInt(spirit.getLevel());
+            writeInt(spirit.getMaxLevel());
+            writeInt(spirit.getAvailableCharacteristicsPoints());
+            writeInt(spirit.getAttackPoints());
+            writeInt(spirit.getDefensePoints());
+            writeInt(spirit.getCriticalRatePoints());
+            writeInt(spirit.getCriticalDamagePoints());
+            writeInt(spirit.getMaxCharacteristics());
+            writeInt(spirit.getMaxCharacteristics());
+            writeInt(spirit.getMaxCharacteristics());
+            writeInt(spirit.getMaxCharacteristics());
+
+            writeByte(1); // unk
+
+            for (int j = 0; j < 1; j++) { // unk
+                writeShort(2);
+                writeLong(10);
             }
         }
 
-        writeInt(2); // talent count
-        for (int j = 0; j < 2; j++) { // for each talent
+        writeInt(1); // talent count
+        for (int j = 0; j < 1; j++) { // for each talent
             writeInt(57); // init talent item id
-            writeLong(200000); // init talent item count
+            writeLong(50000); // init talent item count
         }
     }
 }

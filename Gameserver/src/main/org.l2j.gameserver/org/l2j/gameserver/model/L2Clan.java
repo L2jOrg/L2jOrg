@@ -36,7 +36,7 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.PledgeSkillList.SubPledgeSkill;
 import org.l2j.gameserver.network.serverpackets.pledgebonus.ExPledgeBonusMarkReset;
 import org.l2j.gameserver.util.EnumIntBitmask;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -1824,7 +1824,7 @@ public class L2Clan implements IIdentifiable, INamable {
             player.sendPacket(SystemMessageId.AS_YOU_ARE_CURRENTLY_SCHEDULE_FOR_CLAN_DISSOLUTION_NO_ALLIANCE_CAN_BE_CREATED);
             return;
         }
-        if (!Util.isAlphaNumeric(allyName)) {
+        if (!GameUtils.isAlphaNumeric(allyName)) {
             player.sendPacket(SystemMessageId.INCORRECT_ALLIANCE_NAME_PLEASE_TRY_AGAIN);
             return;
         }

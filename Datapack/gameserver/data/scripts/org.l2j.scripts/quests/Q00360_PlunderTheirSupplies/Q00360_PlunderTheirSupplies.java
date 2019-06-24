@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -96,7 +96,7 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		final QuestState st = getQuestState(killer, false);
-		if ((st == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, false))
+		if ((st == null) || !GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, false))
 		{
 			return super.onKill(npc, killer, isPet);
 		}

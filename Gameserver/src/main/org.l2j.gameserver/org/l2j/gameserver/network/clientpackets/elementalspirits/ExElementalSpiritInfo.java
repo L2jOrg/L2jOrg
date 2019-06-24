@@ -6,14 +6,14 @@ import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpirit
 
 public class ExElementalSpiritInfo extends ClientPacket {
 
-    private int _id;
+    private byte id;
 
     public void readImpl() {
-        this._id = readByte();
+        this.id = readByte();
     }
 
     public void runImpl() {
-        client.sendPacket(new ElementalSpiritInfo());
+        client.sendPacket(new ElementalSpiritInfo(id));
     }
 
 }

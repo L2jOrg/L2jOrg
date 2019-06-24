@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Admin Castle manage admin commands.
@@ -55,7 +55,7 @@ public final class AdminCastle implements IAdminCommandHandler
 			{
 				final String param = st.nextToken();
 				final Castle castle;
-				if (Util.isDigit(param))
+				if (GameUtils.isDigit(param))
 				{
 					castle = CastleManager.getInstance().getCastleById(Integer.parseInt(param));
 				}

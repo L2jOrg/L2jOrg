@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.holders.*;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.network.serverpackets.MultiSellList;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -24,7 +24,7 @@ import java.util.*;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
-public final class MultisellData extends IGameXmlReader{
+public final class MultisellData extends GameXmlReader {
     public static final int PAGE_SIZE = 40;
     private static final Logger LOGGER = LoggerFactory.getLogger(MultisellData.class);
     private static final FileFilter NUMERIC_FILTER = new NumericNameFilter();

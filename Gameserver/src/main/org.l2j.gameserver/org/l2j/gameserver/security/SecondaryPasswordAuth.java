@@ -7,7 +7,7 @@ import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.serverpackets.Ex2ndPasswordAck;
 import org.l2j.gameserver.network.serverpackets.Ex2ndPasswordCheck;
 import org.l2j.gameserver.network.serverpackets.Ex2ndPasswordVerify;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -202,7 +202,7 @@ public class SecondaryPasswordAuth {
     }
 
     private boolean validatePassword(String password) {
-        if (!Util.isDigit(password)) {
+        if (!GameUtils.isDigit(password)) {
             return false;
         }
 

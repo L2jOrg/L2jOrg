@@ -19,7 +19,7 @@
 		<xs:sequence>
 			<xs:element type="shortList" name="classes" minOccurs="0" />
 			<xs:element type="handlerType" name="handler" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element type="RewardType" name="reward" maxOccurs="unbounded"/>
+			<xs:element type="ItemInfo" name="reward" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute type="xs:short" name="id" use="required"/>
 		<xs:attribute type="xs:string" name="name" use="required"/>
@@ -39,15 +39,6 @@
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
 				<xs:attribute name="name" type="xs:string" />
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-
-	<xs:complexType name="RewardType">
-		<xs:simpleContent>
-			<xs:extension base="xs:string">
-				<xs:attribute type="xs:int" name="id" use="required"/>
-				<xs:attribute type="xs:int" name="count" default="1"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>

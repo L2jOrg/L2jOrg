@@ -35,7 +35,7 @@ import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.HtmlUtil;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.text.DecimalFormat;
 import java.util.List;
@@ -533,6 +533,6 @@ public class NpcViewMod implements IBypassHandler
 		html = html.replaceAll("%dropListButtons%", getDropListButtons(npc));
 		html = html.replaceAll("%pages%", pagesSb.toString());
 		html = html.replaceAll("%items%", bodySb.toString() + limitReachedMsg);
-		Util.sendCBHtml(activeChar, html);
+		GameUtils.sendCBHtml(activeChar, html);
 	}
 }

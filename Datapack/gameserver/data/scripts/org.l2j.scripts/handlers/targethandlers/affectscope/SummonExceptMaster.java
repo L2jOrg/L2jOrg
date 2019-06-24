@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * @author Nik
@@ -46,7 +46,7 @@ public class SummonExceptMaster implements IAffectScopeHandler
 			//@formatter:off
 			player.getServitorsAndPets().stream()
 			.filter(c -> !c.isDead())
-			.filter(c -> affectRange > 0 ? Util.checkIfInRange(affectRange, c, target, true) : true)
+			.filter(c -> affectRange > 0 ? GameUtils.checkIfInRange(affectRange, c, target, true) : true)
 			.filter(c -> (affectObject == null) || affectObject.checkAffectedObject(activeChar, c))
 			.limit(affectLimit > 0 ? affectLimit : Long.MAX_VALUE)
 			.forEach(action);

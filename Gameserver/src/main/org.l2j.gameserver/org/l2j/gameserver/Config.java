@@ -7,8 +7,8 @@ import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.util.FloodProtectorConfig;
-import org.l2j.gameserver.util.IGameXmlReader;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -1086,7 +1086,7 @@ public final class Config {
         final PropertiesParser Feature = new PropertiesParser(FEATURE_CONFIG_FILE);
         SIEGE_HOUR_LIST = new ArrayList<>();
         for (String hour : Feature.getString("SiegeHourList", "").split(",")) {
-            if (Util.isDigit(hour)) {
+            if (GameUtils.isDigit(hour)) {
                 SIEGE_HOUR_LIST.add(Integer.parseInt(hour));
             }
         }
@@ -2392,7 +2392,7 @@ public final class Config {
         Stack
     }
 
-    private static class IPConfigData extends IGameXmlReader{
+    private static class IPConfigData extends GameXmlReader {
         private static final List<String> _subnets = new ArrayList<>(5);
         private static final List<String>
                 _hosts = new ArrayList<>(5);

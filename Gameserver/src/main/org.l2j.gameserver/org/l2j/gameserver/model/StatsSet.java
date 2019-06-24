@@ -4,7 +4,7 @@ import org.l2j.commons.util.TimeUtil;
 import org.l2j.gameserver.model.holders.MinionHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.interfaces.IParserAdvUtils;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -645,7 +645,7 @@ public class StatsSet implements IParserAdvUtils {
         }
 
         final List<Object> originalList = (List<Object>) obj;
-        if (!originalList.isEmpty() && (obj.getClass().getGenericInterfaces()[0] != clazz) && originalList.stream().allMatch(name -> Util.isEnum(name.toString(), clazz))) {
+        if (!originalList.isEmpty() && (obj.getClass().getGenericInterfaces()[0] != clazz) && originalList.stream().allMatch(name -> GameUtils.isEnum(name.toString(), clazz))) {
             final List<T> convertedList = originalList.stream().map(Object::toString).map(name -> Enum.valueOf(clazz, name)).map(clazz::cast).collect(Collectors.toList());
 
             // Overwrite the existing list with proper generic type
@@ -663,15 +663,15 @@ public class StatsSet implements IParserAdvUtils {
      */
     private <T> List<T> convertList(List<Object> originalList, Class<T> clazz) {
         if (clazz == Integer.class) {
-            if (originalList.stream().map(Object::toString).allMatch(Util::isInteger)) {
+            if (originalList.stream().map(Object::toString).allMatch(GameUtils::isInteger)) {
                 return originalList.stream().map(Object::toString).map(Integer::valueOf).map(clazz::cast).collect(Collectors.toList());
             }
         } else if (clazz == Float.class) {
-            if (originalList.stream().map(Object::toString).allMatch(Util::isFloat)) {
+            if (originalList.stream().map(Object::toString).allMatch(GameUtils::isFloat)) {
                 return originalList.stream().map(Object::toString).map(Float::valueOf).map(clazz::cast).collect(Collectors.toList());
             }
         } else if (clazz == Double.class) {
-            if (originalList.stream().map(Object::toString).allMatch(Util::isDouble)) {
+            if (originalList.stream().map(Object::toString).allMatch(GameUtils::isDouble)) {
                 return originalList.stream().map(Object::toString).map(Double::valueOf).map(clazz::cast).collect(Collectors.toList());
             }
         }

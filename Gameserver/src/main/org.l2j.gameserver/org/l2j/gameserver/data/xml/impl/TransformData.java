@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.holders.AdditionalSkillHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -29,7 +29,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author UnAfraid
  */
-public final class TransformData extends IGameXmlReader{
+public final class TransformData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(TransformData.class);
 
     private final Map<Integer, Transform> _transformData = new HashMap<>();

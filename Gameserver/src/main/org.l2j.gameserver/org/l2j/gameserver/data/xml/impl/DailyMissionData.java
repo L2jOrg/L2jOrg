@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -21,7 +21,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author Sdw
  */
-public class DailyMissionData extends IGameXmlReader{
+public class DailyMissionData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(DailyMissionData.class);
     private final Map<Integer, List<DailyMissionDataHolder>> dailyMissionRewards = new LinkedHashMap<>();
     private boolean available;

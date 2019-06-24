@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.beautyshop.BeautyData;
 import org.l2j.gameserver.model.beautyshop.BeautyItem;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -21,7 +21,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author Sdw
  */
-public final class BeautyShopData extends IGameXmlReader{
+public final class BeautyShopData extends GameXmlReader {
     private final Map<Race, Map<Sex, BeautyData>> _beautyList = new HashMap<>();
     private final Map<Sex, BeautyData> _beautyData = new HashMap<>();
 

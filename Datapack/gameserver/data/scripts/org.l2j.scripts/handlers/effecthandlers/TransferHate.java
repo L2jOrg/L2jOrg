@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * Transfer Hate effect implementation.
@@ -48,7 +48,7 @@ public final class TransferHate extends AbstractEffect
 	@Override
 	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		return Util.checkIfInRange(skill.getEffectRange(), effector, effected, true);
+		return GameUtils.checkIfInRange(skill.getEffectRange(), effector, effected, true);
 	}
 	
 	@Override

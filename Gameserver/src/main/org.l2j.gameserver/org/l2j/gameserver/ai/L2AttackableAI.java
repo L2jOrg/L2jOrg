@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -741,7 +741,7 @@ public class L2AttackableAI extends L2CharacterAI {
             return false;
         }
 
-        if (!Util.checkIfInRange(skill.getCastRange(), getActiveChar(), target, true)) {
+        if (!GameUtils.checkIfInRange(skill.getCastRange(), getActiveChar(), target, true)) {
             return false;
         }
 

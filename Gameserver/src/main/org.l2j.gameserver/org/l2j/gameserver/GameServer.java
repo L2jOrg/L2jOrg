@@ -8,6 +8,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.DeadLockDetector;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.elemental.ElementalSpiritManager;
 import org.l2j.gameserver.data.sql.impl.*;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.datatables.ItemTable;
@@ -85,7 +86,7 @@ public class GameServer {
         DailyMissionHandler.getInstance().executeScript();
         DailyMissionData.getInstance();
         VipData.getInstance();
-
+        ElementalSpiritManager.init();
 
         printSection("Skills");
         SkillConditionHandler.getInstance().executeScript();

@@ -32,7 +32,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * @author UnAfraid, Zoey76
@@ -139,7 +139,7 @@ public class AdminClan implements IAdminCommandHandler
 				if (st.hasMoreElements())
 				{
 					final String token = st.nextToken();
-					if (!Util.isDigit(token))
+					if (!GameUtils.isDigit(token))
 					{
 						break;
 					}
@@ -179,7 +179,7 @@ public class AdminClan implements IAdminCommandHandler
 		{
 			val = st.nextToken();
 			// From the HTML we receive player's object Id.
-			if (Util.isDigit(val))
+			if (GameUtils.isDigit(val))
 			{
 				player = L2World.getInstance().getPlayer(Integer.parseInt(val));
 				if (player == null)

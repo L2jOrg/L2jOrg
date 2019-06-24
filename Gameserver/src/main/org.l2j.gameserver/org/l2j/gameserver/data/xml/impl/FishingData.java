@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.model.FishingBaitData;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -21,7 +21,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author bit
  */
-public final class FishingData extends IGameXmlReader{
+public final class FishingData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(FishingData.class);
     private final Map<Integer, FishingBaitData> _baitData = new HashMap<>();
     private int _baitDistanceMin;

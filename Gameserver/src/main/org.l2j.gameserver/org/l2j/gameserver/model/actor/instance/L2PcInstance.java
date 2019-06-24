@@ -3,7 +3,10 @@ package org.l2j.gameserver.model.actor.instance;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.*;
+import org.l2j.gameserver.Config;
+import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.ItemsAutoDestroy;
+import org.l2j.gameserver.RecipeController;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.ai.L2PlayerAI;
@@ -13,6 +16,8 @@ import org.l2j.gameserver.communitybbs.BB.Forum;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.database.data.CharacterData;
+import org.l2j.gameserver.data.elemental.ElementalSpirit;
+import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
@@ -88,7 +93,7 @@ import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.EnumIntBitmask;
 import org.l2j.gameserver.util.FloodProtectors;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.sql.Date;
 import java.sql.*;
@@ -102,6 +107,7 @@ import java.util.stream.Collectors;
 import static java.lang.Math.min;
 import static java.util.Objects.isNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.commons.util.Util.zeroIfNullElseCompute;
 
 /**
  * This class represents all player characters in the world.<br>
@@ -115,6 +121,8 @@ public final class L2PcInstance extends L2Playable {
     // TODO: This needs to be better integrated and saved/loaded
     private final L2Radar radar;
     private byte vipTier;
+    private ElementalSpirit[] spirits;
+    private ElementalType activeElementalSpiritType;
 
     private L2PcInstance(CharacterData characterData, L2PcTemplate template) {
         super(characterData.getCharId(), template);
@@ -126,8 +134,23 @@ public final class L2PcInstance extends L2Playable {
         appearance = new PcAppearance(this, characterData.getFace(), characterData.getHairColor(), characterData.getHairStyle(), characterData.isFemale());
 
         getAI();
+        setHeading(characterData.getHeading());
+        getStat().setExp(characterData.getExp());
+        getStat().setLevel(characterData.getLevel());
+        getStat().setSp(characterData.getSp());
+        setReputation(characterData.getReputation());
+        setFame(characterData.getFame());
+        setPvpKills(characterData.getPvP());
+        setPkKills(characterData.getPk());
+        setOnlineTime(characterData.getOnlineTime());
+        setNoble(characterData.isNobless());
+        getStat().setVitalityPoints(characterData.getVitalityPoints());
 
         radar = new L2Radar(this);
+
+        if(getLevel() >= 76 && getClassId().level() > 2) {
+            initElementalSpirits();
+        }
 
         for (int i = 0; i < htmlActionCaches.length; ++i) {
             htmlActionCaches[i] = new LinkedList<>();
@@ -151,10 +174,110 @@ public final class L2PcInstance extends L2Playable {
         return null;
     }
 
+    private void initElementalSpirits() {
+        var types = ElementalType.values();
+        spirits = new ElementalSpirit[types.length];
+        for (ElementalType type : types) {
+            spirits[type.ordinal()] = new ElementalSpirit(type);
+        }
+        activeElementalSpiritType = ElementalType.FIRE;
+    }
+
+    public int getActiveElementalSpiritAttack() {
+        return zeroIfNullElseCompute(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getAttack);
+    }
+
+    public int getFireSpiritDefense() {
+        return getElementalSpiritDefense(ElementalType.FIRE);
+    }
+
+    public int getWaterSpiritDefense() {
+        return getElementalSpiritDefense(ElementalType.WATER);
+    }
+
+    public int getWindSpiritDefense() {
+        return getElementalSpiritDefense(ElementalType.WIND);
+    }
+
+    public int getEarthSpiritDefense() {
+        return getElementalSpiritDefense(ElementalType.EARTH);
+    }
+
+    private int getElementalSpiritDefense(ElementalType type) {
+        return zeroIfNullElseCompute(getElementalSpirit(type), ElementalSpirit::getDefense);
+    }
+
+    public ElementalSpirit getElementalSpirit(ElementalType type) {
+        if(isNull(spirits) || isNull(type)) {
+            return null;
+        }
+        return spirits[type.ordinal()];
+    }
+
+    public int getActiveElementalSpiritType() {
+        return zeroIfNullElseCompute(activeElementalSpiritType, ElementalType::getId);
+    }
+
+    public int getActiveElementalNpcId() {
+        return zeroIfNullElseCompute(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getNpcId);
+    }
+
+    public void changeElementalSpirit(byte element) {
+        activeElementalSpiritType = ElementalType.of(element);
+        var userInfo =  new UserInfo(this, false);
+        userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
+        sendPacket(userInfo);
+    }
+
+    public ElementalSpirit[] getSpirits() {
+        return spirits;
+    }
+
+    public byte getVipTier() {
+        return vipTier;
+    }
+
+    public void setVipTier(byte vipTier) {
+        this.vipTier = vipTier;
+    }
+
+    public long getVipPoints() {
+        return getClient().getVipPoints();
+    }
+
+    public void updateVipPoints(long points) {
+        getClient().updateVipPoints(points);
+    }
+
+    public int getL2Coins() {
+        return getClient().getCoin();
+    }
+
+    public void setL2Coins(int coins) {
+        getClient().setCoin(coins);
+    }
+
+    public void updateL2Coins(int coins) {
+        getClient().updateCoin(coins);
+    }
+
+    public long getRustyCoin() {
+        return _inventory.getRustyCoin();
+    }
+
+    public long getSilverCoin() {
+        return _inventory.getSilverCoin();
+    }
+
+    public long getVipTierExpiration() {
+        return getClient().getVipTierExpiration();
+    }
+
+    public void setVipTierExpiration(long expiration) {
+        getClient().setVipTierExpiration(expiration);
+    }
 
     // Unchecked
-
-
 
     public static final String NEWBIE_KEY = "NEWBIE";
     public static final int ID_NONE = -1;
@@ -626,17 +749,6 @@ public final class L2PcInstance extends L2Playable {
         }
         var template = PlayerTemplateData.getInstance().getTemplate(character.getClassId());
         L2PcInstance player = new L2PcInstance(character, template);
-        player.setHeading(character.getHeading());
-        player.getStat().setExp(character.getExp());
-        player.getStat().setLevel(character.getLevel());
-        player.getStat().setSp(character.getSp());
-        player.setReputation(character.getReputation());
-        player.setFame(character.getFame());
-        player.setPvpKills(character.getPvP());
-        player.setPkKills(character.getPk());
-        player.setOnlineTime(character.getOnlineTime());
-        player.setNoble(character.isNobless());
-        player.getStat().setVitalityPoints(character.getVitalityPoints());
 
         player.setHero(Hero.getInstance().isHero(objectId));
 
@@ -988,12 +1100,10 @@ public final class L2PcInstance extends L2Playable {
                     switch (war.getState()) {
                         case DECLARATION, BLOOD_DECLARATION -> {
                             result |= RelationChanged.RELATION_DECLARED_WAR;
-                            break;
                         }
                         case MUTUAL -> {
                             result |= RelationChanged.RELATION_DECLARED_WAR;
                             result |= RelationChanged.RELATION_MUTUAL_WAR;
-                            break;
                         }
                     }
                 }
@@ -3805,7 +3915,7 @@ public final class L2PcInstance extends L2Playable {
     public boolean canOpenPrivateStore() {
         if ((Config.SHOP_MIN_RANGE_FROM_NPC > 0) || (Config.SHOP_MIN_RANGE_FROM_PLAYER > 0)) {
             for (L2Character cha : L2World.getInstance().getVisibleObjectsInRange(this, L2Character.class, 1000)) {
-                if (Util.checkIfInRange(cha.getMinShopDistance(), this, cha, true)) {
+                if (GameUtils.checkIfInRange(cha.getMinShopDistance(), this, cha, true)) {
                     sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE));
                     return false;
                 }
@@ -5079,7 +5189,7 @@ public final class L2PcInstance extends L2Playable {
                 sendPacket(ActionFailed.STATIC_PACKET);
                 sendPacket(SystemMessageId.A_HUNGRY_MOUNT_CANNOT_BE_MOUNTED_OR_DISMOUNTED);
                 return false;
-            } else if (!Util.checkIfInRange(200, this, pet, true)) {
+            } else if (!GameUtils.checkIfInRange(200, this, pet, true)) {
                 sendPacket(ActionFailed.STATIC_PACKET);
                 sendPacket(SystemMessageId.YOU_ARE_TOO_FAR_AWAY_FROM_YOUR_MOUNT_TO_RIDE);
                 return false;
@@ -6060,7 +6170,7 @@ public final class L2PcInstance extends L2Playable {
 
                     if (Config.SKILL_CHECK_ENABLE && (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS) || Config.SKILL_CHECK_GM)) {
                         if (!SkillTreesData.getInstance().isSkillAllowed(this, skill)) {
-                            Util.handleIllegalPlayerAction(this, "Player " + getName() + " has invalid skill " + skill.getName() + " (" + skill.getId() + "/" + skill.getLevel() + "), class:" + ClassListData.getInstance().getClass(getClassId()).getClassName(), IllegalActionPunishmentType.BROADCAST);
+                            GameUtils.handleIllegalPlayerAction(this, "Player " + getName() + " has invalid skill " + skill.getName() + " (" + skill.getId() + "/" + skill.getLevel() + "), class:" + ClassListData.getInstance().getClass(getClassId()).getClassName(), IllegalActionPunishmentType.BROADCAST);
                             if (Config.SKILL_CHECK_REMOVE) {
                                 removeSkill(skill);
                             }
@@ -11221,49 +11331,4 @@ public final class L2PcInstance extends L2Playable {
             getVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
         }
     }
-
-    public byte getVipTier() {
-        return vipTier;
-    }
-
-    public void setVipTier(byte vipTier) {
-        this.vipTier = vipTier;
-    }
-
-    public long getVipPoints() {
-        return getClient().getVipPoints();
-    }
-
-    public void updateVipPoints(long points) {
-        getClient().updateVipPoints(points);
-    }
-
-    public int getL2Coins() {
-        return getClient().getCoin();
-    }
-
-    public void setL2Coins(int coins) {
-        getClient().setCoin(coins);
-    }
-
-    public void updateL2Coins(int coins) {
-        getClient().updateCoin(coins);
-    }
-
-    public long getRustyCoin() {
-        return _inventory.getRustyCoin();
-    }
-
-    public long getSilverCoin() {
-        return _inventory.getSilverCoin();
-    }
-
-    public long getVipTierExpiration() {
-        return getClient().getVipTierExpiration();
-    }
-
-    public void setVipTierExpiration(long expiration) {
-        getClient().setVipTierExpiration(expiration);
-    }
-
 }

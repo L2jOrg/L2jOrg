@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.cubic.conditions.HpCondition;
 import org.l2j.gameserver.model.cubic.conditions.HpCondition.HpConditionType;
 import org.l2j.gameserver.model.cubic.conditions.RangeCondition;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -44,7 +44,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author UnAfraid
  */
-public class CubicData extends IGameXmlReader{
+public class CubicData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(CubicData.class);
 
     private final Map<Integer, Map<Integer, L2CubicTemplate>> _cubics = new HashMap<>();

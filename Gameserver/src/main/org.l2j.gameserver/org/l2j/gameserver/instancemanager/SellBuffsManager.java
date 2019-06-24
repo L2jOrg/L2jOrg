@@ -14,9 +14,9 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
 import org.l2j.gameserver.settings.ServerSettings;
+import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.util.HtmlUtil;
-import org.l2j.gameserver.util.IGameXmlReader;
-import org.l2j.gameserver.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -36,7 +36,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * @author St3eT
  *
  */
-public final class SellBuffsManager extends IGameXmlReader{
+public final class SellBuffsManager extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(SellBuffsManager.class);
     private static final List<Integer> ALLOWED_BUFFS = new ArrayList<>();
     private static final String htmlFolder = "data/html/mods/SellBuffs/";
@@ -178,7 +178,7 @@ public final class SellBuffsManager extends IGameXmlReader{
             sb.append("<td align=left>" + skill.getName() + (skill.getLevel() > 100 ? "<font color=\"LEVEL\"> + " + (skill.getLevel() % 100) + "</font></td>" : "</td>"));
             sb.append("<td align=center>" + ((skill.getLevel() > 100) ? SkillData.getInstance().getMaxLevel(skill.getId()) : skill.getLevel()) + "</td>");
             sb.append("<td align=center> <font color=\"1E90FF\">" + (skill.getMpConsume() * Config.SELLBUFF_MP_MULTIPLER) + "</font></td>");
-            sb.append("<td align=center> " + Util.formatAdena(holder.getPrice()) + " <font color=\"LEVEL\"> " + (item != null ? item.getName() : "") + "</font> </td>");
+            sb.append("<td align=center> " + GameUtils.formatAdena(holder.getPrice()) + " <font color=\"LEVEL\"> " + (item != null ? item.getName() : "") + "</font> </td>");
             sb.append("<td align=center fixwidth=\"50\"><button value=\"Buy Buff\" action=\"bypass -h sellbuffbuyskill " + seller.getObjectId() + " " + skill.getId() + " " + index + "\" width=\"85\" height=\"26\" back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>");
             sb.append("</tr>");
             sb.append("<tr><td><br><br></td></tr>");
@@ -247,7 +247,7 @@ public final class SellBuffsManager extends IGameXmlReader{
                 sb.append("<td align=center><img src=\"" + skill.getIcon() + "\" width=\"32\" height=\"32\"></td>"); // Icon
                 sb.append("<td align=left>" + skill.getName() + (skill.getLevel() > 100 ? "<font color=\"LEVEL\"> + " + (skill.getLevel() % 100) + "</font></td>" : "</td>")); // Name + enchant
                 sb.append("<td align=center>" + ((skill.getLevel() > 100) ? SkillData.getInstance().getMaxLevel(skill.getId()) : skill.getLevel()) + "</td>"); // Level
-                sb.append("<td align=center> " + Util.formatAdena(holder.getPrice()) + " </td>"); // Price show
+                sb.append("<td align=center> " + GameUtils.formatAdena(holder.getPrice()) + " </td>"); // Price show
                 sb.append("<td align=center><edit var=\"price_" + skill.getId() + "\" width=120 type=\"number\"></td>"); // Price edit
                 sb.append("<td align=center><button value=\"Edit\" action=\"bypass -h sellbuffchangeprice " + skill.getId() + " $price_" + skill.getId() + "\" width=\"85\" height=\"26\" back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>");
                 sb.append("<td align=center><button value=\" X \" action=\"bypass -h sellbuffremove " + skill.getId() + "\" width=\"26\" height=\"26\" back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>");

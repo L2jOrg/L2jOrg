@@ -36,7 +36,7 @@ import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.BypassBuilder;
 import org.l2j.gameserver.util.BypassParser;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * @author NosBit
@@ -190,7 +190,7 @@ public class AdminScan implements IAdminCommandHandler
 			sb.append("<tr>");
 			sb.append("<td width=\"45\">").append(character.getId()).append("</td>");
 			sb.append("<td><a action=\"bypass -h admin_move_to ").append(character.getX()).append(SPACE).append(character.getY()).append(SPACE).append(character.getZ()).append("\">").append(npcName.isEmpty() ? "No name NPC" : npcName).append("</a></td>");
-			sb.append("<td width=\"60\">").append(Util.formatAdena(Math.round(activeChar.calculateDistance2D(character)))).append("</td>");
+			sb.append("<td width=\"60\">").append(GameUtils.formatAdena(Math.round(activeChar.calculateDistance2D(character)))).append("</td>");
 			sb.append("<td width=\"54\"><a action=\"").append(builder.toStringBuilder()).append("\"><font color=\"LEVEL\">Delete</font></a></td>");
 			sb.append("</tr>");
 		}).build();

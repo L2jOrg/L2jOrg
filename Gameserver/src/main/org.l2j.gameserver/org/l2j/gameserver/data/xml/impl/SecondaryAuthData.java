@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -14,7 +14,7 @@ import java.util.Set;
 /**
  * @author NosBit
  */
-public class SecondaryAuthData extends IGameXmlReader{
+public class SecondaryAuthData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(SecondaryAuthData.class.getName());
 
     private final Set<String> forbiddenPasswords = new HashSet<>();

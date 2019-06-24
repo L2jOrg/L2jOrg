@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.holders.ClanHallTeleportHolder;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -26,7 +26,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author St3eT
  */
-public final class ClanHallData extends IGameXmlReader{
+public final class ClanHallData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ClanHallData.class);
     private static final Map<Integer, ClanHall> _clanHalls = new HashMap<>();
 

@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -135,7 +135,7 @@ public class L2VillageMasterInstance extends L2NpcInstance {
 
             return;
         }
-        if (!Util.isAlphaNumeric(clanName) || !isValidName(clanName) || (2 > clanName.length())) {
+        if (!GameUtils.isAlphaNumeric(clanName) || !isValidName(clanName) || (2 > clanName.length())) {
             player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
             return;
         }
@@ -214,7 +214,7 @@ public class L2VillageMasterInstance extends L2NpcInstance {
             player.sendMessage("Pledge don't exists.");
             return;
         }
-        if (!Util.isAlphaNumeric(pledgeName) || !isValidName(pledgeName) || (2 > pledgeName.length())) {
+        if (!GameUtils.isAlphaNumeric(pledgeName) || !isValidName(pledgeName) || (2 > pledgeName.length())) {
             player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
             return;
         }

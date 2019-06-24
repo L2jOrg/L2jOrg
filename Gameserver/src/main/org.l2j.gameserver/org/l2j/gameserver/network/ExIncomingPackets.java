@@ -21,8 +21,7 @@ import org.l2j.gameserver.network.clientpackets.crystalization.RequestCrystalliz
 import org.l2j.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;
 import org.l2j.gameserver.network.clientpackets.dailymission.RequestOneDayRewardReceive;
 import org.l2j.gameserver.network.clientpackets.dailymission.RequestTodoList;
-import org.l2j.gameserver.network.clientpackets.elementalspirits.ExElementalSpiritChangeType;
-import org.l2j.gameserver.network.clientpackets.elementalspirits.ExElementalSpiritInfo;
+import org.l2j.gameserver.network.clientpackets.elementalspirits.*;
 import org.l2j.gameserver.network.clientpackets.ensoul.RequestItemEnsoul;
 import org.l2j.gameserver.network.clientpackets.ensoul.RequestTryEnSoulExtraction;
 import org.l2j.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
@@ -381,13 +380,13 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_PLEDGE_ITEM_INFO(0x14E, null, ConnectionState.IN_GAME),
     EX_PLEDGE_ITEM_BUY(0x14F, null, ConnectionState.IN_GAME),
     EX_ELEMENTAL_SPIRIT_INFO(0x150, ExElementalSpiritInfo::new, ConnectionState.IN_GAME),
-    EX_ELEMENTAL_SPIRIT_EXTRACT_INFO(0x151, null, ConnectionState.IN_GAME),
+    EX_ELEMENTAL_SPIRIT_EXTRACT_INFO(0x151, ExElementalSpiritExtractInfo::new, ConnectionState.IN_GAME),
     EX_ELEMENTAL_SPIRIT_EXTRACT(0x152, null, ConnectionState.IN_GAME),
-    EX_ELEMENTAL_SPIRIT_EVOLUTION_INFO(0x153, null, ConnectionState.IN_GAME),
+    EX_ELEMENTAL_SPIRIT_EVOLUTION_INFO(0x153, ExElementalSpiritEvolutionInfo::new, ConnectionState.IN_GAME),
     EX_ELEMENTAL_SPIRIT_EVOLUTION(0x154, null, ConnectionState.IN_GAME),
     EX_ELEMENTAL_SPIRIT_SET_TALENT(0x155, null, ConnectionState.IN_GAME),
     EX_ELEMENTAL_SPIRIT_INIT_TALENT(0x156, null, ConnectionState.IN_GAME),
-    EX_ELEMENTAL_SPIRIT_ABSORB_INFO(0x157, null, ConnectionState.IN_GAME),
+    EX_ELEMENTAL_SPIRIT_ABSORB_INFO(0x157, ExElementalSpiritAbsorbInfo::new, ConnectionState.IN_GAME),
     EX_ELEMENTAL_SPIRIT_ABSORB(0x158, null, ConnectionState.IN_GAME),
     EX_REQUEST_LOCKED_ITEM(0x159, null, ConnectionState.IN_GAME),
     EX_REQUEST_UNLOCKED_ITEM(0x15A, null, ConnectionState.IN_GAME),

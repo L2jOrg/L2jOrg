@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import ai.AbstractNpcAI;
 
@@ -76,7 +76,7 @@ public final class DarkElfChange2 extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (Util.isDigit(event))
+		if (GameUtils.isDigit(event))
 		{
 			final int i = Integer.valueOf(event);
 			final ClassId cid = player.getClassId();

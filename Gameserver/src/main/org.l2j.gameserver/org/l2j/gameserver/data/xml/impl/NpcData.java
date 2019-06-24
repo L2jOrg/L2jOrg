@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -34,7 +34,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *
  * @author NosBit
  */
-public class NpcData extends IGameXmlReader{
+public class NpcData extends GameXmlReader {
     protected static final Logger LOGGER = LoggerFactory.getLogger(NpcData.class);
     private static final List<Integer> _masterMonsterIDs = new ArrayList<>();
     private final Map<Integer, L2NpcTemplate> _npcs = new HashMap<>();

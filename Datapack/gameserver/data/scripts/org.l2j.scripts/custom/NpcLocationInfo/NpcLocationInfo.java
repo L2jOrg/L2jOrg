@@ -21,7 +21,7 @@ import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.util.Util;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -215,7 +215,7 @@ public class NpcLocationInfo extends AbstractNpcAI
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		if (Util.isDigit(event))
+		if (GameUtils.isDigit(event))
 		{
 			htmltext = null;
 			final int npcId = Integer.parseInt(event);

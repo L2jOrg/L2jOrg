@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.stats;
 import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.IGameXmlReader;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -30,7 +30,7 @@ public enum BaseStats {
     public static final int MAX_STAT_VALUE = 201;
 
     static {
-        new IGameXmlReader() {
+        new GameXmlReader() {
             final Logger LOGGER = LoggerFactory.getLogger(BaseStats.class.getName());
 
             @Override
