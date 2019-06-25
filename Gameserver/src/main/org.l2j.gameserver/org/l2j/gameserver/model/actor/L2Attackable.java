@@ -7,6 +7,7 @@ import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.L2AttackableAI;
 import org.l2j.gameserver.ai.L2CharacterAI;
+import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.ExtendDropData;
 import org.l2j.gameserver.datatables.EventDroplist;
 import org.l2j.gameserver.datatables.EventDroplist.DateDrop;
@@ -50,6 +51,8 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
+
+import static java.util.Objects.nonNull;
 
 public class L2Attackable extends L2Npc {
     private final AtomicReference<ItemHolder> _harvestItem = new AtomicReference<>();
@@ -174,7 +177,7 @@ public class L2Attackable extends L2Npc {
                         if (_firstCommandChannelAttacked != null) {
                             _commandChannelTimer = new CommandChannelTimer(this);
                             _commandChannelLastAttack = System.currentTimeMillis();
-                            ThreadPoolManager.getInstance().schedule(_commandChannelTimer, 10000); // check for last attack
+                            ThreadPoolManager.schedule(_commandChannelTimer, 10000); // check for last attack
                             _firstCommandChannelAttacked.broadcastPacket(new CreatureSay(0, ChatType.PARTYROOM_ALL, "", "You have looting rights!")); // TODO: retail msg
                         }
                     }
@@ -431,6 +434,8 @@ public class L2Attackable extends L2Npc {
                                     attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true, false);
                                     PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
                                 }
+
+                                rewardAttributeExp(attacker, damage, totalDamage);
                             }
                         }
                     } else {
@@ -508,12 +513,26 @@ public class L2Attackable extends L2Npc {
                         // Distribute Experience and SP rewards to L2PcInstance Party members in the known area of the last attacker
                         if (partyDmg > 0) {
                             attackerParty.distributeXpAndSp(exp, sp, rewardedMembers, partyLvl, partyDmg, this);
+
+                            for (L2PcInstance rewardedMember : rewardedMembers) {
+                                rewardAttributeExp(rewardedMember, damage, totalDamage);
+                            }
                         }
                     }
                 }
             }
         } catch (Exception e) {
             LOGGER.error("", e);
+        }
+    }
+
+    private void rewardAttributeExp(L2PcInstance rewardedMember, long damage, long totalDamage) {
+        if (rewardedMember.getActiveElementalSpiritType() > 0 && getAttributeExp() > 0 && getElementalType() != ElementalType.NONE) {
+            var attributeExp = getAttributeExp() * damage / totalDamage;
+            var spirit = rewardedMember.getElementalSpirit(getElementalType().getDominating());
+            if (nonNull(spirit)) {
+                spirit.addExperience(attributeExp);
+            }
         }
     }
 

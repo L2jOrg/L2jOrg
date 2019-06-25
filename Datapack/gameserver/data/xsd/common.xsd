@@ -16,4 +16,16 @@
         <xs:attribute type="xs:int" name="count" default="1"/>
     </xs:complexType>
 
+    <xs:complexType name="ElementalType">
+        <xs:simpleContent>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="NONE"/>
+                <xs:enumeration value="FIRE"/>
+                <xs:enumeration value="WATER"/>
+                <xs:enumeration value="WIND"/>
+                <xs:enumeration value="EARTH"/>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+
 </xs:schema>

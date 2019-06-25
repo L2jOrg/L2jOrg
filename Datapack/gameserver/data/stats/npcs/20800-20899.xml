@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="20800" level="82" type="L2Monster" name="Eva's Watchman">
+	<npc id="20800" level="82" type="L2Monster" name="Eva's Watchman" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -14,9 +14,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="303682" sp="9110" />
+		<acquire exp="303682" sp="9110" attribute_exp="1333" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2423.3825125" hpRegen="8.5" mp="3104.58" mpRegen="3" />
+			<vitals hp="39355.3825125" hpRegen="8.5" mp="3508.58" mpRegen="3" />
 			<attack physical="808.61705" magical="731.48967391304" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1682.42625" magical="2804.04375" />
 			<speed>
@@ -45,7 +45,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="20801" level="82" type="L2Monster" name="Piker">
+	<npc id="20801" level="82" type="L2Monster" name="Piker" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -62,9 +62,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="302" /> <!-- Body Slasher -->
-		<acquire exp="384780" sp="10389" />
+		<acquire exp="384780" sp="10389" attribute_exp="1520"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2827.269335" hpRegen="8.5" mp="3415.215" mpRegen="3" />
+			<vitals hp="68871.269335" hpRegen="8.5" mp="3859.215" mpRegen="3" />
 			<attack physical="939.4691" magical="853.40152173913" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1962.8235" magical="3271.3725" />
 			<speed>
@@ -96,7 +96,7 @@
 			<height normal="34.8" />
 		</collision>
 	</npc>
-	<npc id="20802" level="82" type="L2Monster" name="Mage">
+	<npc id="20802" level="82" type="L2Monster" name="Mage" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -115,9 +115,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="192" /> <!-- Crystal Staff -->
-		<acquire exp="370425" sp="10001" />
+		<acquire exp="370425" sp="10001" attribute_exp="1463" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3029.1819575" hpRegen="8.5" mp="4120.56" mpRegen="3" />
+			<vitals hp="49193.1819575" hpRegen="8.5" mp="4656.56" mpRegen="3" />
 			<attack physical="1004.88515" magical="914.34815217391" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2103.00075" magical="3505.00125" />
 			<speed>
@@ -152,7 +152,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="20803" level="83" type="L2Monster" name="Doll Master">
+	<npc id="20803" level="83" type="L2Monster" name="Doll Master" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -168,9 +168,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="391426" sp="10568" />
+		<acquire exp="391426" sp="10568" attribute_exp="1527" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2940.744352" hpRegen="8.5" mp="3483.36" mpRegen="3" />
+			<vitals hp="59696.744352" hpRegen="8.5" mp="3936.36" mpRegen="3" />
 			<attack physical="976.51936" magical="887.65356521739" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2041.6032" magical="3402.672" />
 			<speed>
@@ -3386,7 +3386,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20849" level="83" type="L2Monster" name="Light Worm">
+	<npc id="20849" level="83" type="L2Monster" name="Light Worm" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3400,9 +3400,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="303419" sp="8192" />
+		<acquire exp="303419" sp="8192" attribute_exp="1184" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2450.5997675" hpRegen="8.5" mp="2907.225" mpRegen="3" />
+			<vitals hp="39797.5997675" hpRegen="8.5" mp="3285.225" mpRegen="3" />
 			<attack physical="817.72135" magical="739.70510869565" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1701.32175" magical="2835.53625" />
 			<speed>

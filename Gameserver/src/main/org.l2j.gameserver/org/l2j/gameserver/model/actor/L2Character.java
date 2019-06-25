@@ -846,7 +846,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                         mpConsume = isAffected(EffectFlag.CHEAPSHOT) ? 0 : mpConsume;
                         if (_status.getCurrentMp() < mpConsume) {
                             // If L2PcInstance doesn't have enough MP, stop the attack
-                            ThreadPoolManager.getInstance().schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
+                            ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
                             sendPacket(SystemMessageId.NOT_ENOUGH_MP);
                             sendPacket(ActionFailed.STATIC_PACKET);
                             return;
@@ -2503,7 +2503,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
         m._moveTimestamp = gameTicks;
 
         if (distFraction > 1) {
-            ThreadPoolManager.getInstance().execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
+            ThreadPoolManager.execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
             return true;
         }
 
@@ -3089,7 +3089,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
             }
         }
 
-        _hitTask = ThreadPoolManager.getInstance().schedule(() -> onAttackFinish(attack), attackTime - hitTime);
+        _hitTask = ThreadPoolManager.schedule(() -> onAttackFinish(attack), attackTime - hitTime);
     }
 
     public void onFirstHitTimeForDual(L2Weapon weapon, Attack attack, int hitTime, int attackTime, int delayForSecondAttack) {
@@ -3137,7 +3137,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
             }
         }
 
-        _hitTask = ThreadPoolManager.getInstance().schedule(() -> onAttackFinish(attack), attackTime - (hitTime1 + hitTime2));
+        _hitTask = ThreadPoolManager.schedule(() -> onAttackFinish(attack), attackTime - (hitTime1 + hitTime2));
     }
 
     public void onHitTarget(L2Character target, L2Weapon weapon, Hit hit) {

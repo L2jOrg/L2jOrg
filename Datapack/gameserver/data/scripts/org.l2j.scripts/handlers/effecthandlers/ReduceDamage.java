@@ -22,9 +22,12 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureDamageReceived;
 import org.l2j.gameserver.model.events.listeners.FunctionEventListener;
+import org.l2j.gameserver.model.events.returns.AbstractEventReturn;
 import org.l2j.gameserver.model.events.returns.DamageReturn;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
+
+import java.util.function.Function;
 
 /**
  * @author Sdw
@@ -60,6 +63,6 @@ public class ReduceDamage extends AbstractEffect
 	@Override
 	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		effected.addListener(new FunctionEventListener(effected, EventType.ON_CREATURE_DAMAGE_RECEIVED, (OnCreatureDamageReceived event) -> onDamageReceivedEvent(event), this));
+		effected.addListener(new FunctionEventListener(effected, EventType.ON_CREATURE_DAMAGE_RECEIVED, (Function<OnCreatureDamageReceived, AbstractEventReturn>) this::onDamageReceivedEvent, this));
 	}
 }

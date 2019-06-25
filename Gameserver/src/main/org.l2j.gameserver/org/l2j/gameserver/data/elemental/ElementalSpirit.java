@@ -1,11 +1,14 @@
 package org.l2j.gameserver.data.elemental;
 
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.network.serverpackets.elementalspirits.ExElementalSpiritGetExp;
 
 import java.util.List;
 
 public class ElementalSpirit {
 
+    private final L2PcInstance owner;
     private ElementalSpiritTemplate template;
     private long experience = 0;
     private byte level = 1;
@@ -15,8 +18,9 @@ public class ElementalSpirit {
     private byte critRatePoints = 0;
     private byte critDamagePoints = 0;
 
-    public ElementalSpirit(ElementalType type) {
+    public ElementalSpirit(ElementalType type, L2PcInstance owner) {
         this.template = ElementalSpiritManager.getInstance().getSpirit((byte) (type.ordinal() + 1), stage);
+        this.owner = owner;
     }
 
     public byte getType() {
@@ -90,5 +94,19 @@ public class ElementalSpirit {
 
     public int getExtractItem() {
         return template.getExtractItem();
+    }
+
+    public void addExperience(long experience) {
+        this.experience += experience;
+        long capExperience =  0;
+        if(this.experience > getExperienceToNextLevel()) {
+            if(level < getMaxLevel()) {
+                level++;
+            } else {
+                capExperience = this.experience - getExperienceToNextLevel();
+                this.experience = getExperienceToNextLevel();
+            }
+        }
+        owner.sendPacket(new ExElementalSpiritGetExp(getType(), experience - capExperience));
     }
 }

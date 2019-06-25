@@ -3428,7 +3428,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20792" level="79" type="L2Monster" name="Coral">
+	<npc id="20792" level="79" type="L2Monster" name="Coral" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3442,12 +3442,12 @@
 			<skill name="W_ShortRangeDDMagic" id="4160" level="3" />
 			<skill name="DeBuff" id="4076" level="2" />
 		</parameters>
-		<race>BEAST</race>
+		<race>SPIRIT</race>
 		<sex>MALE</sex>
 		<equipment rhand="192" /> <!-- Monster Only (Parhit Staff) -->
-		<acquire exp="40965" sp="1106" />
+		<acquire exp="40965" sp="1106" attribute_exp="224"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1399.902885" hpRegen="8.5" mp="2683.32" mpRegen="3" />
+			<vitals hp="11367.902885" hpRegen="8.5" mp="3032.32" mpRegen="3" />
 			<attack physical="182.671236" magical="113.4007" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="117.8158109" magical="111.56912" evasion="10" />
 			<speed>
@@ -3560,7 +3560,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20794" level="78" type="L2Monster" name="Stakato">
+	<npc id="20794" level="78" type="L2Monster" name="Stakato" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3575,9 +3575,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="223" /> <!-- Kukuri -->
-		<acquire exp="22942" sp="688" />
+		<acquire exp="22942" sp="688" attribute_exp="141" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1380.32124" hpRegen="8.5" mp="2629.335" mpRegen="3" />
+			<vitals hp="5604.32124" hpRegen="8.5" mp="2971.335" mpRegen="3" />
 			<attack physical="469.5384" magical="416.6452173913" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="958.284" magical="1597.14" />
 			<speed>
@@ -3609,7 +3609,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="20795" level="80" type="L2Monster" name="Stakato Worker">
+	<npc id="20795" level="80" type="L2Monster" name="Stakato Worker" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -3624,9 +3624,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="226" /> <!-- Cursed Dagger -->
-		<acquire exp="25632" sp="692" />
+		<acquire exp="25632" sp="692" attribute_exp="138"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1418.99191" hpRegen="8.5" mp="2739.075" mpRegen="3" />
+			<vitals hp="5761.99191" hpRegen="8.5" mp="3095.075" mpRegen="3" />
 			<attack physical="482.6398" magical="428.31782608696" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="985.131" magical="1641.885" />
 			<speed>
@@ -3657,7 +3657,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="20796" level="80" type="L2Monster" name="Stakato Warrior">
+	<npc id="20796" level="80" type="L2Monster" name="Stakato Warrior" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3672,9 +3672,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="232" /> <!-- Dark Elven Dagger -->
-		<acquire exp="26400" sp="712" />
+		<acquire exp="26400" sp="712" attribute_exp="142" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1418.99191" hpRegen="8.5" mp="2739.075" mpRegen="3" />
+			<vitals hp="5761.99191" hpRegen="8.5" mp="3095.075" mpRegen="3" />
 			<attack physical="482.6398" magical="428.31782608696" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="985.131" magical="1641.885" />
 			<speed>
@@ -3705,7 +3705,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="20797" level="81" type="L2Monster" name="Stakato Drone">
+	<npc id="20797" level="81" type="L2Monster" name="Stakato Drone" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="62" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -3726,9 +3726,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="74" /> <!-- Katana -->
-		<acquire exp="29032" sp="783" />
+		<acquire exp="29032" sp="783" attribute_exp="154"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1436.72623" hpRegen="8.5" mp="2794.83" mpRegen="3" />
+			<vitals hp="5833.72623" hpRegen="8.5" mp="3158.83" mpRegen="3" />
 			<attack physical="488.6718" magical="433.67086956522" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="997.443" magical="1662.405" />
 			<speed>
@@ -3764,7 +3764,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="20798" level="81" type="L2Monster" name="Water Giant">
+	<npc id="20798" level="81" type="L2Monster" name="Water Giant" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3779,9 +3779,9 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="5132" /> <!-- Monster Only (Giant Trident) -->
-		<acquire exp="48971" sp="1322" />
+		<acquire exp="11667" sp="1322" attribute_exp="261"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1436.849385" hpRegen="8.5" mp="2794.83" mpRegen="3" />
+			<vitals hp="1436.849385" hpRegen="8.5" mp="3158.83" mpRegen="3" />
 			<attack physical="488.7117" magical="433.70804347826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="997.5285" magical="1662.5475" />
 			<speed>
@@ -3813,7 +3813,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="20799" level="82" type="L2Monster" name="Queen Lad">
+	<npc id="20799" level="82" type="L2Monster" name="Queen Lad" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3829,9 +3829,9 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="46819" sp="1264" />
+		<acquire exp="46819" sp="1264" attribute_exp="246"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1453.96793" hpRegen="8.5" mp="2850.585" mpRegen="3" />
+			<vitals hp="11806.96793" hpRegen="8.5" mp="3221.585" mpRegen="3" />
 			<attack physical="494.5442" magical="438.8752173913" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1009.413" magical="1682.355" />
 			<speed>

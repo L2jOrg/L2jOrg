@@ -11,6 +11,9 @@ import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+
 /**
  * TODO: This class is a copy of AttackRequest, we should get proper structure for both.
  */
@@ -38,7 +41,7 @@ public final class Attack extends ClientPacket {
     @Override
     public void runImpl() {
         final L2PcInstance activeChar = client.getActiveChar();
-        if (activeChar == null) {
+        if (isNull(activeChar)) {
             return;
         }
 
@@ -50,7 +53,7 @@ public final class Attack extends ClientPacket {
         }
 
         final BuffInfo info = activeChar.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
-        if (info != null) {
+        if (nonNull(info)) {
             for (AbstractEffect effect : info.getEffects()) {
                 if (!effect.checkCondition(-1)) {
                     activeChar.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
@@ -68,7 +71,7 @@ public final class Attack extends ClientPacket {
             target = L2World.getInstance().findObject(_objectId);
         }
 
-        if (target == null) {
+        if (isNull(target )) {
             return;
         }
 

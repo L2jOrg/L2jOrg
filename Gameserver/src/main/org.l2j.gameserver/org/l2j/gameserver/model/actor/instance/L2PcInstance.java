@@ -178,7 +178,7 @@ public final class L2PcInstance extends L2Playable {
         var types = ElementalType.values();
         spirits = new ElementalSpirit[types.length];
         for (ElementalType type : types) {
-            spirits[type.ordinal()] = new ElementalSpirit(type);
+            spirits[type.ordinal()] = new ElementalSpirit(type, this);
         }
         activeElementalSpiritType = ElementalType.FIRE;
     }

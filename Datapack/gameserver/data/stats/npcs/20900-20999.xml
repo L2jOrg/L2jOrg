@@ -5126,7 +5126,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="20994" level="83" type="L2Monster" name="Garden Guard Captain">
+	<npc id="20994" level="83" type="L2Monster" name="Garden Guard Captain" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5145,9 +5145,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="364541" sp="9842" />
+		<acquire exp="403192" sp="10886" attribute_exp="1573" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3029.1819575" hpRegen="8.5" mp="3104.58" mpRegen="3" />
+			<vitals hp="59696.1819575" hpRegen="8.5" mp="3936.58" mpRegen="3" />
 			<attack physical="976.51936" magical="887.65356521739" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2041.6032" magical="3402.672" />
 			<speed>
@@ -5180,7 +5180,7 @@
 			<height normal="34.05" />
 		</collision>
 	</npc>
-	<npc id="20995" level="82" type="L2Monster" name="Garden Guard">
+	<npc id="20995" level="82" type="L2Monster" name="Garden Guard" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5194,8 +5194,10 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
+		<acquire exp="364541" sp="9842" attribute_exp="1440"/>
 		<equipment rhand="94" /> <!-- Bec de Corbin -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="49193.3825125" hpRegen="8.5" mp="3508.58" mpRegen="3" />
 			<attack physical="1004.88515" magical="914.34815217391" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2103.00075" magical="3505.00125" />
 			<speed>

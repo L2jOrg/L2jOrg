@@ -2,6 +2,7 @@ package org.l2j.gameserver.model.actor.templates;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.datatables.ItemTable;
@@ -93,6 +94,8 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
     private MpRewardAffectType _mpRewardAffectType;
 
     private List<Integer> _extendDrop;
+    private ElementalType elementalType;
+    private long attributeExp;
 
     /**
      * Constructor of L2Character.
@@ -151,6 +154,8 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
         setRace(set.getEnum("race", Race.class, Race.NONE));
         _sex = set.getEnum("sex", Sex.class, Sex.ETC);
 
+        elementalType = set.getEnum("element", ElementalType.class);
+
         _chestId = set.getInt("chestId", 0);
         _rhandId = set.getInt("rhandId", 0);
         _lhandId = set.getInt("lhandId", 0);
@@ -159,6 +164,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
         _exp = set.getDouble("exp", 0);
         _sp = set.getDouble("sp", 0);
         _raidPoints = set.getDouble("raidPoints", 0);
+        attributeExp = set.getLong("attribute_exp");
 
         _unique = set.getBoolean("unique", false);
         _attackable = set.getBoolean("attackable", true);
@@ -331,6 +337,14 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 
     public double getSP() {
         return _sp;
+    }
+
+    public long getAttributeExp() {
+        return attributeExp;
+    }
+
+    public ElementalType getElementalType() {
+        return elementalType;
     }
 
     public double getRaidPoints() {

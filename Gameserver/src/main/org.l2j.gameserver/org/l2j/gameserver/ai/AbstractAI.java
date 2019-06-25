@@ -623,7 +623,7 @@ public abstract class AbstractAI implements Ctrl {
         setTarget(target);
 
         final int followRange = range == -1 ? Rnd.get(50, 100) : range;
-        _followTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(() ->
+        _followTask = ThreadPoolManager.scheduleAtFixedRate(() ->
         {
             try {
                 if (_followTask == null) {

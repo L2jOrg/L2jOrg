@@ -3637,7 +3637,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21661" level="82" type="L2Monster" name="Scarlet Worker">
+	<npc id="21661" level="82" type="L2Monster" name="Scarlet Worker" element="FIRE">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" />
@@ -3645,9 +3645,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="235" /> <!-- Bloody Orchid -->
-		<acquire exp="285232" sp="8556" />
+		<acquire exp="285232" sp="8556" attribute_exp="1252"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2423.3825125" hpRegen="8.5" mp="2850.585" mpRegen="3" />
+			<vitals hp="39355.3825125" hpRegen="8.5" mp="3221.585" mpRegen="3" />
 			<attack physical="808.61705" magical="731.48967391304" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1682.42625" magical="2804.04375" />
 			<speed>
@@ -3679,7 +3679,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21662" level="82" type="L2Monster" name="Scarlet Soldier">
+	<npc id="21662" level="82" type="L2Monster" name="Scarlet Soldier" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3694,9 +3694,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="148" /> <!-- Sword of Valhalla -->
-		<acquire exp="352209" sp="10566" />
+		<acquire exp="352209" sp="10566" attribute_exp="1546" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3029.1819575" hpRegen="8.5" mp="2850.585" mpRegen="3" />
+			<vitals hp="49193.1819575" hpRegen="8.5" mp="3221.585" mpRegen="3" />
 			<attack physical="1004.88515" magical="914.34815217391" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2103.00075" magical="3505.00125" />
 			<attribute>
@@ -3733,7 +3733,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="21663" level="82" type="L2Monster" name="Scarlet Noble">
+	<npc id="21663" level="82" type="L2Monster" name="Scarlet Noble" element="FIRE">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -3742,9 +3742,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="235" /> <!-- Bloody Orchid -->
-		<acquire exp="351362" sp="9486" />
+		<acquire exp="351362" sp="9486" attribute_exp="1388"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3029.1819575" hpRegen="8.5" mp="3104.58" mpRegen="3" />
+			<vitals hp="49193.1819575" hpRegen="8.5" mp="3508.58" mpRegen="3" />
 			<attack physical="1004.88515" magical="914.34815217391" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2103.00075" magical="3505.00125" />
 			<speed>
@@ -3776,16 +3776,16 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="21664" level="82" type="L2Monster" name="Tepra Scorpion">
+	<npc id="21664" level="82" type="L2Monster" name="Tepra Scorpion" element="FIRE">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" />
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="366236" sp="9888" />
+		<acquire exp="366236" sp="9888" attribute_exp="1447" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2908.034384" hpRegen="8.5" mp="3415.215" mpRegen="3" />
+			<vitals hp="59032.034384" hpRegen="8.5" mp="3859.215" mpRegen="3" />
 			<attack physical="965.63552" magical="877.78017391304" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2018.8944" magical="3364.824" />
 			<speed>
@@ -3817,16 +3817,16 @@
 			<height normal="52.8" />
 		</collision>
 	</npc>
-	<npc id="21665" level="82" type="L2Monster" name="Tepra Scarab">
+	<npc id="21665" level="82" type="L2Monster" name="Tepra Scarab" element="FIRE">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" />
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="372072" sp="10045" />
+		<acquire exp="372072" sp="10045" attribute_exp="1470" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2908.034384" hpRegen="8.5" mp="3415.215" mpRegen="3" />
+			<vitals hp="59032.034384" hpRegen="8.5" mp="3859.215" mpRegen="3" />
 			<attack physical="965.63552" magical="877.78017391304" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2018.8944" magical="3364.824" />
 			<speed>
@@ -3858,7 +3858,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="21666" level="82" type="L2Monster" name="Assassin Beetle">
+	<npc id="21666" level="82" type="L2Monster" name="Assassin Beetle" element="FIRE">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -3866,9 +3866,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="387793" sp="10470" />
+		<acquire exp="387793" sp="10470" attribute_exp="1532"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2827.269335" hpRegen="8.5" mp="3753.285" mpRegen="3" />
+			<vitals hp="68871.269335" hpRegen="8.5" mp="4241.285" mpRegen="3" />
 			<attack physical="939.4691" magical="853.40152173913" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1962.8235" magical="3271.3725" />
 			<speed>
@@ -3900,7 +3900,7 @@
 			<height normal="54.5" />
 		</collision>
 	</npc>
-	<npc id="21667" level="83" type="L2Monster" name="Mercenary of Destruction">
+	<npc id="21667" level="83" type="L2Monster" name="Mercenary of Destruction" element="FIRE">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -3909,9 +3909,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="70" /> <!-- Homunkulus' Sword -->
-		<acquire exp="303033" sp="8181" />
+		<acquire exp="303033" sp="8181" attribute_exp="1182" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2450.5997675" hpRegen="8.5" mp="2907.225" mpRegen="3" />
+			<vitals hp="39797.5997675" hpRegen="8.5" mp="3285.225" mpRegen="3" />
 			<attack physical="817.72135" magical="739.70510869565" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1701.32175" magical="2835.53625" />
 			<speed>
@@ -3943,7 +3943,7 @@
 			<height normal="30.6" />
 		</collision>
 	</npc>
-	<npc id="21668" level="83" type="L2Monster" name="Knight of Destruction">
+	<npc id="21668" level="83" type="L2Monster" name="Knight of Destruction" element="FIRE">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" />
@@ -3951,9 +3951,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" lhand="945" /> <!-- Skeleton Dagger / Skeleton Buckler -->
-		<acquire exp="375994" sp="10151" />
+		<acquire exp="375994" sp="10151" attribute_exp="1467"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3063.234315" hpRegen="8.5" mp="2907.225" mpRegen="3" />
+			<vitals hp="49746.234315" hpRegen="8.5" mp="3285.225" mpRegen="3" />
 			<attack physical="1016.2039" magical="924.62673913043" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2126.6415" magical="3544.4025" />
 			<speed>
@@ -3985,12 +3985,12 @@
 			<height normal="34.8" />
 		</collision>
 	</npc>
-	<npc id="21669" level="83" type="L2Monster" name="Evil Spirit Wizard of Destruction">
+	<npc id="21669" level="83" type="L2Monster" name="Evil Spirit Wizard of Destruction" element="FIRE">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="313883" sp="8474" />
+		<acquire exp="313883" sp="8474" attribute_exp="1225" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2450.5997675" hpRegen="8.5" mp="3828.51" mpRegen="3" />
+			<vitals hp="39797.5997675" hpRegen="8.5" mp="4326.51" mpRegen="3" />
 			<attack physical="817.72135" magical="739.70510869565" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1701.32175" magical="2835.53625" />
 			<speed>
@@ -4013,7 +4013,7 @@
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 		</skillList>
 	</npc>
-	<npc id="21670" level="83" type="L2Monster" name="Lavastone Golem">
+	<npc id="21670" level="83" type="L2Monster" name="Lavastone Golem" element="FIRE">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4591" level="9" />
@@ -4021,9 +4021,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="384867" sp="10391" />
+		<acquire exp="384867" sp="10391" attribute_exp="1502"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2940.744352" hpRegen="8.5" mp="3483.36" mpRegen="3" />
+			<vitals hp="59696.744352" hpRegen="8.5" mp="3936.36" mpRegen="3" />
 			<attack physical="976.51936" magical="887.65356521739" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2041.6032" magical="3402.672" />
 			<speed>
@@ -4055,7 +4055,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="21671" level="83" type="L2Monster" name="Magma Golem">
+	<npc id="21671" level="83" type="L2Monster" name="Magma Golem" element="FIRE">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4157" level="9" />
@@ -4063,9 +4063,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="400636" sp="10817" />
+		<acquire exp="400636" sp="10817" attribute_exp="1563" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2859.043325" hpRegen="8.5" mp="3166.53" mpRegen="3" />
+			<vitals hp="69645.043325" hpRegen="8.5" mp="3578.53" mpRegen="3" />
 			<attack physical="950.0497" magical="862.99239130435" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1984.8825" magical="3308.1375" />
 			<speed>
@@ -4097,7 +4097,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="21672" level="83" type="L2Monster" name="Arimanes of Destruction">
+	<npc id="21672" level="83" type="L2Monster" name="Arimanes of Destruction" element="FIRE">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4589" level="9" />
@@ -4105,9 +4105,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<acquire exp="399045" sp="10774" />
+		<acquire exp="399045" sp="10774" attribute_exp="1557"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2859.043325" hpRegen="8.5" mp="2907.225" mpRegen="3" />
+			<vitals hp="69645.043325" hpRegen="8.5" mp="3285.225" mpRegen="3" />
 			<attack physical="950.0497" magical="862.99239130435" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1984.8825" magical="3308.1375" />
 			<attribute>
@@ -4142,16 +4142,16 @@
 			<height normal="57.75" grown="69" />
 		</collision>
 	</npc>
-	<npc id="21673" level="78" type="L2Monster" name="Ivlis of Immortality">
+	<npc id="21673" level="78" type="L2Monster" name="Ivlis of Immortality" element="FIRE">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4599" level="9" />
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="21409" sp="642" />
+		<acquire exp="21409" sp="642" attribute_exp="131" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1380.32124" hpRegen="8.5" mp="2629.335" mpRegen="3" />
+			<vitals hp="5604.32124" hpRegen="8.5" mp="2971.335" mpRegen="3" />
 			<attack physical="469.5384" magical="416.6452173913" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="958.284" magical="1597.14" />
 			<attribute>
@@ -4186,12 +4186,12 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="21674" level="79" type="L2Monster" name="Balor of Immortality">
+	<npc id="21674" level="79" type="L2Monster" name="Balor of Immortality" element="FIRE">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="23085" sp="623" />
+		<acquire exp="23085" sp="623" attribute_exp="126"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1399.77973" hpRegen="8.5" mp="2683.32" mpRegen="3" />
+			<vitals hp="5683.77973" hpRegen="8.5" mp="3032.32" mpRegen="3" />
 			<attack physical="476.129" magical="422.51869565217" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="971.793" magical="1619.655" />
 			<speed>
@@ -4213,12 +4213,12 @@
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
 		</skillList>
 	</npc>
-	<npc id="21675" level="80" type="L2Monster" name="Ashuras of Immortality">
+	<npc id="21675" level="80" type="L2Monster" name="Ashuras of Immortality" element="FIRE">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="43737" sp="1180" />
+		<acquire exp="43737" sp="1180" attribute_exp="236"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1418.868755" hpRegen="8.5" mp="2739.075" mpRegen="3" />
+			<vitals hp="11521.868755" hpRegen="8.5" mp="3095.075" mpRegen="3" />
 			<attack physical="482.5999" magical="428.28065217391" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="985.0455" magical="1641.7425" />
 			<speed>
@@ -4241,12 +4241,12 @@
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 		</skillList>
 	</npc>
-	<npc id="21676" level="80" type="L2Monster" name="Lavasillisk">
+	<npc id="21676" level="80" type="L2Monster" name="Lavasillisk" element="FIRE">
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="25440" sp="686" />
+		<acquire exp="25440" sp="686" attribute_exp="137"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1418.99191" hpRegen="8.5" mp="2739.075" mpRegen="3" />
+			<vitals hp="5761.99191" hpRegen="8.5" mp="3095.075" mpRegen="3" />
 			<attack physical="482.6398" magical="428.31782608696" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="985.131" magical="1641.885" />
 			<speed>
@@ -4287,12 +4287,12 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="21678" level="81" type="L2Monster" name="Magma Drake">
+	<npc id="21678" level="81" type="L2Monster" name="Magma Drake" element="FIRE">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="27733" sp="748" />
+		<acquire exp="27733" sp="748" attribute_exp="147"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1436.72623" hpRegen="8.5" mp="2794.83" mpRegen="3" />
+			<vitals hp="5833.72623" hpRegen="8.5" mp="3158.83" mpRegen="3" />
 			<attack physical="488.6718" magical="433.67086956522" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="997.443" magical="1662.405" />
 			<speed>
@@ -4451,12 +4451,12 @@
 			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
 		</skillList>
 	</npc>
-	<npc id="21685" level="81" type="L2Monster" name="Ashuras of Immortality">
+	<npc id="21685" level="81" type="L2Monster" name="Ashuras of Immortality" element="FIRE">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="48262" sp="1303" />
+		<acquire exp="48262" sp="1303" attribute_exp="257"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1436.849385" hpRegen="8.5" mp="2794.83" mpRegen="3" />
+			<vitals hp="11667.849385" hpRegen="8.5" mp="3158.83" mpRegen="3" />
 			<attack physical="482.5999" magical="428.28065217391" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="985.0455" magical="1641.7425" />
 			<speed>
@@ -4479,12 +4479,12 @@
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 		</skillList>
 	</npc>
-	<npc id="21686" level="82" type="L2Monster" name="Flaming Drake">
+	<npc id="21686" level="82" type="L2Monster" name="Flaming Drake" element="FIRE">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="51842" sp="1399" />
+		<acquire exp="51842" sp="1399" attribute_exp="273"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1453.96793" hpRegen="8.5" mp="2850.585" mpRegen="3" />
+			<vitals hp="11806.96793" hpRegen="8.5" mp="3221.585" mpRegen="3" />
 			<attack physical="494.5442" magical="438.8752173913" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1009.413" magical="1682.355" />
 			<speed>
