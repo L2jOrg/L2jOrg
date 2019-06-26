@@ -176,9 +176,12 @@ public final class L2PcInstance extends L2Playable {
 
     private void initElementalSpirits() {
         var types = ElementalType.values();
-        spirits = new ElementalSpirit[types.length];
+        spirits = new ElementalSpirit[types.length - 1]; // exclude None
         for (ElementalType type : types) {
-            spirits[type.ordinal()] = new ElementalSpirit(type, this);
+            if(ElementalType.NONE == type) {
+                continue;
+            }
+            spirits[type.getId() -1] = new ElementalSpirit(type, this);
         }
         activeElementalSpiritType = ElementalType.FIRE;
     }
@@ -211,15 +214,11 @@ public final class L2PcInstance extends L2Playable {
         if(isNull(spirits) || isNull(type)) {
             return null;
         }
-        return spirits[type.ordinal()];
+        return spirits[type.getId() -1];
     }
 
     public int getActiveElementalSpiritType() {
         return zeroIfNullElseCompute(activeElementalSpiritType, ElementalType::getId);
-    }
-
-    public int getActiveElementalNpcId() {
-        return zeroIfNullElseCompute(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getNpcId);
     }
 
     public void changeElementalSpirit(byte element) {

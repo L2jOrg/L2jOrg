@@ -47,7 +47,7 @@ public class NpcData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/npcs.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/stats/npcs/npcs.xsd");
     }
 
     /**
@@ -94,6 +94,7 @@ public class NpcData extends GameXmlReader {
                         set.set("title", parseString(attrs, "title"));
                         set.set("usingServerSideTitle", parseBoolean(attrs, "usingServerSideTitle"));
                         set.set("elementalType", parseEnum(attrs, ElementalType.class, "element"));
+
                         for (Node npcNode = listNode.getFirstChild(); npcNode != null; npcNode = npcNode.getNextSibling()) {
                             attrs = npcNode.getAttributes();
                             switch (npcNode.getNodeName().toLowerCase()) {
@@ -475,13 +476,7 @@ public class NpcData extends GameXmlReader {
                                     }
 
                                     for (AISkillScope aiSkillScope : aiSkillScopes) {
-                                        List<Skill> aiSkills = aiSkillLists.get(aiSkillScope);
-                                        if (aiSkills == null) {
-                                            aiSkills = new ArrayList<>();
-                                            aiSkillLists.put(aiSkillScope, aiSkills);
-                                        }
-
-                                        aiSkills.add(skill);
+                                        aiSkillLists.computeIfAbsent(aiSkillScope, k -> new ArrayList<>()).add(skill);
                                     }
                                 }
                             }

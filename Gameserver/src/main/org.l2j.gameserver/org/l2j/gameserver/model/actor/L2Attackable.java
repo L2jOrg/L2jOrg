@@ -526,10 +526,10 @@ public class L2Attackable extends L2Npc {
         }
     }
 
-    private void rewardAttributeExp(L2PcInstance rewardedMember, long damage, long totalDamage) {
-        if (rewardedMember.getActiveElementalSpiritType() > 0 && getAttributeExp() > 0 && getElementalType() != ElementalType.NONE) {
+    private void rewardAttributeExp(L2PcInstance player, long damage, long totalDamage) {
+        if (player.getActiveElementalSpiritType() > 0 && getAttributeExp() > 0 && getElementalType() != ElementalType.NONE) {
             var attributeExp = getAttributeExp() * damage / totalDamage;
-            var spirit = rewardedMember.getElementalSpirit(getElementalType().getDominating());
+            var spirit = player.getElementalSpirit(getElementalType().getDominating());
             if (nonNull(spirit)) {
                 spirit.addExperience(attributeExp);
             }

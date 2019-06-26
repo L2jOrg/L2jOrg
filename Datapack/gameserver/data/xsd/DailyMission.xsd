@@ -22,7 +22,7 @@
 			<xs:element type="ItemInfo" name="reward" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute type="xs:short" name="id" use="required"/>
-		<xs:attribute type="xs:string" name="name" use="required"/>
+		<xs:attribute type="xs:token" name="name" use="required"/>
 		<xs:attribute type="xs:short" name="requiredCompletion" default="1"/>
 		<xs:attribute type="Cycle" name="cycle" default="DAILY"/>
 		<xs:attribute type="xs:boolean" name="isDisplayedWhenNotAvailable" />
@@ -32,19 +32,19 @@
 		<xs:sequence>
 			<xs:element type="paramType" name="param" maxOccurs="unbounded" minOccurs="0" />
 		</xs:sequence>
-		<xs:attribute name="name" type="xs:string" />
+		<xs:attribute name="name" type="xs:token" />
 	</xs:complexType>
 
 	<xs:complexType name="paramType">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
-				<xs:attribute name="name" type="xs:string" />
+				<xs:attribute name="name" type="xs:token" />
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
 
 	<xs:simpleType name="Cycle">
-		<xs:restriction base="xs:string">
+		<xs:restriction base="xs:token">
 			<xs:whiteSpace value="collapse"/>
 			<xs:enumeration value="DAILY"/>
 			<xs:enumeration value="WEEKLY"/>

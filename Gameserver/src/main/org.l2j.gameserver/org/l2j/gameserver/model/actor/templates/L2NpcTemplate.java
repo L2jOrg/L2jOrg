@@ -154,7 +154,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
         setRace(set.getEnum("race", Race.class, Race.NONE));
         _sex = set.getEnum("sex", Sex.class, Sex.ETC);
 
-        elementalType = set.getEnum("element", ElementalType.class);
+        elementalType = set.getEnum("elementalType", ElementalType.class);
 
         _chestId = set.getInt("chestId", 0);
         _rhandId = set.getInt("rhandId", 0);
@@ -164,7 +164,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
         _exp = set.getDouble("exp", 0);
         _sp = set.getDouble("sp", 0);
         _raidPoints = set.getDouble("raidPoints", 0);
-        attributeExp = set.getLong("attribute_exp");
+        attributeExp = set.getLong("attribute_exp", 0);
 
         _unique = set.getBoolean("unique", false);
         _attackable = set.getBoolean("attackable", true);

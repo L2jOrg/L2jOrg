@@ -19,7 +19,7 @@ public class ElementalSpirit {
     private byte critDamagePoints = 0;
 
     public ElementalSpirit(ElementalType type, L2PcInstance owner) {
-        this.template = ElementalSpiritManager.getInstance().getSpirit((byte) (type.ordinal() + 1), stage);
+        this.template = ElementalSpiritManager.getInstance().getSpirit(type.getId(), stage);
         this.owner = owner;
     }
 

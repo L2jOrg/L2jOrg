@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
 	<npc id="21700" level="80" type="L2Npc" name="Ailith Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
@@ -2603,12 +2603,12 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21764" level="82" type="L2Monster" name="Growler" title="Elite">
+	<npc id="21764" level="82" type="L2Monster" name="Growler" title="Elite" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<race>ELEMENTAL</race>
-		<acquire exp="141405" sp="3817" />
+		<acquire exp="141405" sp="3817" attribute_exp="744"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1453.96793" hpRegen="8.5" mp="2850.585" mpRegen="3" />
+			<vitals hp="11806.96793" hpRegen="8.5" mp="3221.585" mpRegen="3" />
 			<speed>
 				<walk ground="20" />
 				<run ground="175" />
@@ -2635,12 +2635,12 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21765" level="83" type="L2Monster" name="Tree Soldier" title="Elite">
+	<npc id="21765" level="83" type="L2Monster" name="Tree Soldier" title="Elite" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
-		<acquire exp="880166" sp="23764" />
+		<acquire exp="880166" sp="23764" attribute_exp="3435"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2450.5997675" hpRegen="8.5" mp="3483.36" mpRegen="3" />
+			<vitals hp="39797.5997675" hpRegen="8.5" mp="3936.36" mpRegen="3" />
 			<speed>
 				<walk ground="20" />
 				<run ground="175" />
@@ -2667,12 +2667,12 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21766" level="83" type="L2Monster" name="Tortay" title="Master">
+	<npc id="21766" level="83" type="L2Monster" name="Tortay" title="Master" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<race>ELEMENTAL</race>
-		<acquire exp="2525776" sp="68195" />
+		<acquire exp="2525776" sp="68195" attribute_exp="9859"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3063.234315" hpRegen="8.5" mp="3828.51" mpRegen="3" />
+			<vitals hp="49746.234315" hpRegen="8.5" mp="4326.51" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="175" />
@@ -2982,12 +2982,12 @@
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 		</skillList>
 	</npc>
-	<npc id="21774" level="82" type="L2Monster" name="Buffalo" title="Guardian of Gorge">
+	<npc id="21774" level="82" type="L2Monster" name="Buffalo" title="Guardian of Gorge" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<race>BEAST</race>
-		<acquire exp="65216" sp="1760" />
+		<acquire exp="65216" sp="1760"  attribute_exp="343"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1453.96793" hpRegen="8.5" mp="2850.585" mpRegen="3" />
+			<vitals hp="5903.96793" hpRegen="8.5" mp="3221.585" mpRegen="3" />
 			<speed>
 				<walk ground="20" />
 				<run ground="175" />
@@ -3007,12 +3007,12 @@
 			<height normal="37.8" />
 		</collision>
 	</npc>
-	<npc id="21775" level="82" type="L2Monster" name="Arahan" title="Hero of the Past">
+	<npc id="21775" level="82" type="L2Monster" name="Arahan" title="Hero of the Past" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<race>DIVINE</race>
-		<acquire exp="591127" sp="15960" />
+		<acquire exp="591127" sp="15960" attribute_exp="2335" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2423.3825125" hpRegen="8.5" mp="3104.58" mpRegen="3" />
+			<vitals hp="39355.3825125" hpRegen="8.5" mp="3508.58" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="175" />
@@ -3678,7 +3678,7 @@
 			<height normal="27.6" />
 		</collision>
 	</npc>
-	<npc id="21790" level="83" type="L2Monster" name="Wingrow">
+	<npc id="21790" level="83" type="L2Monster" name="Wingrow" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3693,9 +3693,9 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="405458" sp="10947" />
+		<acquire exp="405458" sp="10947" attribute_exp="1582"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2859.043325" hpRegen="8.5" mp="3483.36" mpRegen="3" />
+			<vitals hp="69645.043325" hpRegen="8.5" mp="3936.36" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
