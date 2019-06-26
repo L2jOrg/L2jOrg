@@ -5,7 +5,7 @@ public class AbsorbItem {
     private final int id;
     private final int experience;
 
-    AbsorbItem(Integer itemId, Integer experience) {
+    AbsorbItem(int itemId, int experience) {
         this.id = itemId;
         this.experience = experience;
     }

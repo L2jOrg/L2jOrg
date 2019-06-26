@@ -2,6 +2,10 @@
 
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org elementalSpirits.xsd" >
 
+    <spirit name="Flame Spirit Seed" type="1" stage="0" npcId="13565" extractItem="0" maxCharacteristics="0">
+        <level id="1" atk="0" def="0" critRate="0" critDam="0" maxExp="0"/>
+    </spirit>
+
     <spirit name="Ignis - Minor Flame Spirit"  type="1" stage="1" npcId="13566" extractItem="91040" maxCharacteristics="5">
         <level id="1" atk="35" def="35" critRate="1" critDam="1" maxExp="57713"/>
         <level id="2" atk="40" def="40" critRate="2" critDam="2" maxExp="135313"/>
@@ -46,6 +50,10 @@
         <level id="9" atk="215" def="215" critRate="39" critDam="39" maxExp="45840213"/>
         <level id="10" atk="220" def="220" critRate="40" critDam="40" maxExp="54572992"/>
         <absorbItem id="91036" experience="9300"/>
+    </spirit>
+
+    <spirit name="Water Spirit Seed" type="2" stage="0" npcId="13569" extractItem="0" maxCharacteristics="0">
+        <level id="1" atk="0" def="0" critRate="0" critDam="0" maxExp="0"/>
     </spirit>
 
     <spirit name="Nebula - Minor Water Spirit"  type="2" stage="1" npcId="13570" extractItem="91039" maxCharacteristics="5">
@@ -94,6 +102,10 @@
         <absorbItem id="91035" experience="9300"/>
     </spirit>
 
+    <spirit name="Wind Spirit Seed" type="3" stage="0" npcId="13573" extractItem="0" maxCharacteristics="0">
+        <level id="1" atk="0" def="0" critRate="0" critDam="0" maxExp="0"/>
+    </spirit>
+
     <spirit name="Procella - Minor Wind Spirit"  type="3" stage="1" npcId="13574" extractItem="91041" maxCharacteristics="5">
         <level id="1" atk="35" def="35" critRate="1" critDam="1" maxExp="57713"/>
         <level id="2" atk="40" def="40" critRate="2" critDam="2" maxExp="135313"/>
@@ -138,6 +150,10 @@
         <level id="9" atk="215" def="215" critRate="39" critDam="39" maxExp="45840213"/>
         <level id="10" atk="220" def="220" critRate="40" critDam="40" maxExp="54572992"/>
         <absorbItem id="91037" experience="9300"/>
+    </spirit>
+
+    <spirit name="Earth Spirit Seed" type="4" stage="0" npcId="13577" extractItem="0" maxCharacteristics="0">
+        <level id="1" atk="0" def="0" critRate="0" critDam="0" maxExp="0"/>
     </spirit>
 
     <spirit name="Petram - Minor Earth Spirit"  type="4" stage="1" npcId="13578" extractItem="91042" maxCharacteristics="5">

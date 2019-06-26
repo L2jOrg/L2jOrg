@@ -12,6 +12,7 @@ import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
+import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.MultisellEntryHolder;
 import org.l2j.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
@@ -228,7 +229,7 @@ public class MultiSellChoose extends ClientPacket {
             }
 
             // Summarize all item counts into one map. That would include non-stackable items under 1 id and multiple count.
-            final Map<Integer, Long> itemIdCount = entry.getIngredients().stream().collect(Collectors.toMap(i -> i.getId(), i -> list.getIngredientCount(i), (k1, k2) -> Math.addExact(k1, k2)));
+            final Map<Integer, Long> itemIdCount = entry.getIngredients().stream().collect(Collectors.toMap(ItemHolder::getId, list::getIngredientCount, Math::addExact));
 
             // Check for enchanted level requirements.
             for (ItemChanceHolder ingredient : entry.getIngredients()) {

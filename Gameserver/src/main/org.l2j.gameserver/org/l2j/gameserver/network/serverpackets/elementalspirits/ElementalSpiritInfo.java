@@ -1,14 +1,12 @@
 package org.l2j.gameserver.network.serverpackets.elementalspirits;
 
-
 import org.l2j.gameserver.data.elemental.ElementalSpirit;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import static java.util.Objects.isNull;
 
-public class ElementalSpiritInfo extends ServerPacket {
+public class ElementalSpiritInfo extends AbstractElementalSpiritPacket {
 
     private final byte spiritId;
     private final byte type;
@@ -45,29 +43,7 @@ public class ElementalSpiritInfo extends ServerPacket {
             writeByte(spirit.getType());
             writeByte(0x01); // spirit active ?
             // if active
-            writeByte(spirit.getStage());
-            writeInt(spirit.getNpcId());
-            writeLong(spirit.getExperience());
-            writeLong(spirit.getExperienceToNextLevel()); // next exp
-            writeLong(spirit.getExperienceToNextLevel()); // max exp
-            writeInt(spirit.getLevel());
-            writeInt(spirit.getMaxLevel());
-            writeInt(spirit.getAvailableCharacteristicsPoints());
-            writeInt(spirit.getAttackPoints());
-            writeInt(spirit.getDefensePoints());
-            writeInt(spirit.getCriticalRatePoints());
-            writeInt(spirit.getCriticalDamagePoints());
-            writeInt(spirit.getMaxCharacteristics());
-            writeInt(spirit.getMaxCharacteristics());
-            writeInt(spirit.getMaxCharacteristics());
-            writeInt(spirit.getMaxCharacteristics());
-
-            writeByte(1); // unk
-
-            for (int j = 0; j < 1; j++) { // unk
-                writeShort(2);
-                writeLong(10);
-            }
+            writeSpiritInfo(spirit);
         }
 
         writeInt(1); // talent count

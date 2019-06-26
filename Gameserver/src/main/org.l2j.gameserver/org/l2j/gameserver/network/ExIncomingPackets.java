@@ -387,12 +387,12 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_ELEMENTAL_SPIRIT_SET_TALENT(0x155, null, ConnectionState.IN_GAME),
     EX_ELEMENTAL_SPIRIT_INIT_TALENT(0x156, null, ConnectionState.IN_GAME),
     EX_ELEMENTAL_SPIRIT_ABSORB_INFO(0x157, ExElementalSpiritAbsorbInfo::new, ConnectionState.IN_GAME),
-    EX_ELEMENTAL_SPIRIT_ABSORB(0x158, null, ConnectionState.IN_GAME),
+    EX_ELEMENTAL_SPIRIT_ABSORB(0x158, ExElementalSpiritAbsorb::new, ConnectionState.IN_GAME),
     EX_REQUEST_LOCKED_ITEM(0x159, null, ConnectionState.IN_GAME),
     EX_REQUEST_UNLOCKED_ITEM(0x15A, null, ConnectionState.IN_GAME),
     EX_LOCKED_ITEM_CANCEL(0x15B, null, ConnectionState.IN_GAME),
     EX_UNLOCKED_ITEM_CANCEL(0x15C, null, ConnectionState.IN_GAME),
-    EX_ELEMENTAL_SPIRIT_CHANGE_TYPE(0x15D, ExElementalSpiritChangeType::new, ConnectionState.IN_GAME), // 152
+    EX_ELEMENTAL_SPIRIT_CHANGE_TYPE(0x15D, ExElementalSpiritChangeType::new, ConnectionState.IN_GAME),
     REQUEST_BLOCK_LIST_FOR_AD(0x15E, ExRequestBlockListForAD::new, ConnectionState.IN_GAME),
     REQUEST_USER_BAN_INFO(0x15F, null, ConnectionState.IN_GAME),
     EX_INTERACT_MODIFY(0x160, null, ConnectionState.IN_GAME), // 152

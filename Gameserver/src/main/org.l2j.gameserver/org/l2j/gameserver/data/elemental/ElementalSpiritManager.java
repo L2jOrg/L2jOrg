@@ -28,7 +28,7 @@ public class ElementalSpiritManager extends GameXmlReader {
         getInstance().load();
     }
 
-    public ElementalSpiritTemplate getSpirit(byte type, byte stage) {
+    ElementalSpiritTemplate getSpirit(byte type, byte stage) {
         if(spiritData.containsKey(type)) {
            return spiritData.get(type).get(stage);
         }

@@ -49,15 +49,15 @@ class ElementalSpiritTemplate {
         itemsToEvolve.add(new ItemHolder(itemId, count));
     }
 
-    byte getType() {
+    public byte getType() {
         return type;
     }
 
-    byte getStage() {
+    public byte getStage() {
         return stage;
     }
 
-    int getNpcId() {
+    public int getNpcId() {
         return npcId;
     }
 
@@ -65,7 +65,7 @@ class ElementalSpiritTemplate {
         return levels.get(level).maxExperience;
     }
 
-    int getMaxLevel() {
+    public int getMaxLevel() {
         return levels.size();
     }
 
