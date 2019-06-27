@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.MultisellData;
@@ -134,7 +135,7 @@ public final class RequestBypassToServer extends ClientPacket {
                     id = _command.substring(4);
                 }
 
-                if (GameUtils.isDigit(id)) {
+                if (Util.isNumeric(id)) {
                     final L2Object object = L2World.getInstance().findObject(Integer.parseInt(id));
 
                     if ((object != null) && object.isNpc() && (endOfId > 0) && activeChar.isInsideRadius2D(object, L2Npc.INTERACTION_DISTANCE)) {
