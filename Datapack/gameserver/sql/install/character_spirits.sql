@@ -10,7 +10,7 @@ CREATE TABLE `character_spirits`
     `defense_points`     TINYINT      NOT NULL DEFAULT 0,
     `crit_rate_points`   TINYINT      NOT NULL DEFAULT 0,
     `crit_damage_points` TINYINT      NOT NULL DEFAULT 0,
-
+    `in_use`             BOOLEAN      NOT NULL DEFAULT FALSE,
     PRIMARY KEY (`charId`, `type`),
     FOREIGN KEY FK_CHARACTER_SPIRITS (`charId`) REFERENCES characters (`charId`) ON DELETE CASCADE
 ) ENGINE = InnoDB

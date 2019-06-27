@@ -1,46 +1,50 @@
 package org.l2j.gameserver.data.elemental;
 
-import org.l2j.gameserver.data.elemental.data.ElementalSpiritData;
+import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
+import org.l2j.gameserver.data.database.data.ElementalSpiritData;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ExElementalSpiritGetExp;
 
 import java.util.List;
 
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
+
 public class ElementalSpirit {
 
     private final L2PcInstance owner;
     private ElementalSpiritTemplate template;
     private ElementalSpiritData data;
-    private long experience = 0;
-    private byte level = 1;
-    private byte stage = 0;
-    private byte attackPoints = 0;
-    private byte defensePoints = 0;
-    private byte critRatePoints = 0;
-    private byte critDamagePoints = 0;
 
     public ElementalSpirit(ElementalType type, L2PcInstance owner) {
-        this.template = ElementalSpiritManager.getInstance().getSpirit(type.getId(), stage);
         data = new ElementalSpiritData(type.getId(), owner.getObjectId());
+        this.template = ElementalSpiritManager.getInstance().getSpirit(type.getId(), data.getStage());
         this.owner = owner;
     }
 
+    public ElementalSpirit(ElementalSpiritData data, L2PcInstance owner) {
+        this.owner = owner;
+        this.data = data;
+        this.template = ElementalSpiritManager.getInstance().getSpirit(data.getType(), data.getStage());
+    }
+
     public void addExperience(long experience) {
-        this.experience += experience;
-        if(this.experience > getExperienceToNextLevel()) {
-            if(level < getMaxLevel()) {
-                level++;
+        data.addExperience(experience);
+        if(data.getExperience()> getExperienceToNextLevel()) {
+            if(data.getLevel() < getMaxLevel()) {
+                data.increaseLevel();
             } else {
-                this.experience = getExperienceToNextLevel();
+                data.setExperience(getExperienceToNextLevel());
             }
         }
-        owner.sendPacket(new ExElementalSpiritGetExp(getType(), this.experience));
+        owner.sendPacket(new ExElementalSpiritGetExp(getType(), data.getExperience()));
     }
 
     public int getAvailableCharacteristicsPoints() {
+        var stage = data.getStage();
+        var level = data.getLevel();
         var points = ((stage -1) * 10) +  stage > 2 ? (level -1) * 2 : level -1;
-        return points - attackPoints - defensePoints - critDamagePoints - critRatePoints;
+        return points - data.getAttackPoints() - data.getDefensePoints() - data.getDefensePoints() - data.getCritRatePoints();
     }
 
     public AbsorbItem getAbsorbItem(int itemId) {
@@ -65,15 +69,15 @@ public class ElementalSpirit {
     }
 
     public long getExperience() {
-        return experience;
+        return data.getExperience();
     }
 
     public long getExperienceToNextLevel() {
-        return template.getMaxExperienceAtLevel(level);
+        return template.getMaxExperienceAtLevel(data.getLevel());
     }
 
     public byte getLevel() {
-        return level;
+        return data.getLevel();
     }
 
     public int getMaxLevel() {
@@ -81,11 +85,11 @@ public class ElementalSpirit {
     }
 
     public int getAttack() {
-        return template.getAttackAtLevel(level) + attackPoints * 5;
+        return template.getAttackAtLevel(data.getLevel()) + data.getAttackPoints() * 5;
     }
 
     public int getDefense() {
-        return template.getDefenseAtLevel(level) + defensePoints * 5;
+        return template.getDefenseAtLevel(data.getLevel()) + data.getDefensePoints() * 5;
     }
 
     public int getMaxCharacteristics() {
@@ -93,25 +97,24 @@ public class ElementalSpirit {
     }
 
     public int getAttackPoints() {
-        return attackPoints;
+        return data.getAttackPoints();
     }
 
     public int getDefensePoints() {
-        return defensePoints;
+        return data.getDefensePoints();
     }
 
     public int getCriticalRatePoints() {
-        return critRatePoints;
+        return data.getCritRatePoints();
     }
 
     public int getCriticalDamagePoints() {
-        return critDamagePoints;
+        return data.getCritDamagePoints();
     }
 
     public List<ItemHolder> getItemsToEvolve() {
         return template.getItemsToEvolve();
     }
-
 
     public List<AbsorbItem> getAbsorbItems() {
         return template.getAbsorbItems();
@@ -119,6 +122,10 @@ public class ElementalSpirit {
 
     public int getExtractItem() {
         return template.getExtractItem();
+    }
+
+    public void save() {
+        getDAO(ElementalSpiritDAO.class).save(data);
     }
 
 }

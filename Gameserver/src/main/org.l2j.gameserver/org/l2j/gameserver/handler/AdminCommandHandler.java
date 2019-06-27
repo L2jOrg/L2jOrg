@@ -1,12 +1,11 @@
 package org.l2j.gameserver.handler;
 
-import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.enums.PlayerAction;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2j.gameserver.util.GMAudit;
 import org.l2j.gameserver.util.TimeAmountInterpreter;
@@ -75,8 +74,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 
         if (useConfirm && AdminData.getInstance().requireConfirm(command)) {
             player.setAdminConfirmCmd(fullCommand);
-            final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.S1_3);
-            dlg.addString("Are you sure you want execute command '" + commandNoPrefix + "' ?");
+            final ConfirmDlg dlg = new ConfirmDlg("Are you sure you want execute command '" + commandNoPrefix + "' ?");
             player.addAction(PlayerAction.ADMIN_COMMAND);
             player.sendPacket(dlg);
         } else {

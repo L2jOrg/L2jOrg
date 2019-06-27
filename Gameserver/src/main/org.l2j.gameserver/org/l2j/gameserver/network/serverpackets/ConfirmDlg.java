@@ -36,6 +36,10 @@ public class ConfirmDlg extends AbstractMessagePacket<ConfirmDlg> {
         return this;
     }
 
+    @Override
+    protected void writeParamsSize(int size) {
+        writeInt(size);
+    }
 
     @Override
     protected void writeParamType(int type) {

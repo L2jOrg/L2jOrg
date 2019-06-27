@@ -123,7 +123,6 @@ open module org.l2j.scripts {
             village.master.DarkElfChange2.DarkElfChange2,
 
             //  custom
-            custom.listeners.ListenerTest,
             custom.NpcLocationInfo.NpcLocationInfo;
 
     provides org.l2j.gameserver.handler.IActionHandler

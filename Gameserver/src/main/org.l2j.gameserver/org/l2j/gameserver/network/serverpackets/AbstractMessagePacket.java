@@ -8,7 +8,6 @@ import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -317,18 +316,6 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
         }
     }
 
-    protected int writeMeSize(L2GameClient client) {
-        return _params.length + 1 + Arrays.stream(_params).mapToInt(param ->
-        switch (param.getType()) {
-            case TYPE_ELEMENT_NAME, TYPE_BYTE, TYPE_FACTION_NAME -> 1;
-            case TYPE_CASTLE_NAME, TYPE_SYSTEM_STRING, TYPE_INSTANCE_NAME, TYPE_CLASS_ID -> 2;
-            case TYPE_ITEM_NAME, TYPE_INT_NUMBER, TYPE_NPC_NAME, TYPE_DOOR_NAME -> 4;
-            case TYPE_LONG_NUMBER, TYPE_SKILL_NAME -> 8;
-            case TYPE_TEXT, TYPE_PLAYER_NAME -> 2 + param.getStringValue().length() * 2;
-            case TYPE_POPUP_ID, TYPE_ZONE_NAME -> 12;
-            default -> 0;
-        }).sum();
-    }
 
     public final void printMe(PrintStream out) {
         out.println(0x62);

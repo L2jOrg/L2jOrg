@@ -11,11 +11,6 @@ public class ElementalSpiritInfo extends AbstractElementalSpiritPacket {
     private final byte spiritId;
     private final byte type;
 
-    public ElementalSpiritInfo(byte id) {
-        spiritId = id;
-        type = 1;
-    }
-
     public ElementalSpiritInfo(byte id, byte type) {
         this.spiritId = id;
         this.type = type;
@@ -34,8 +29,8 @@ public class ElementalSpiritInfo extends AbstractElementalSpiritPacket {
             return;
         }
 
-        writeByte(type); // show spirit info window 1; Change type
-        writeByte(player.getActiveElementalSpiritType());
+        writeByte(type); // show spirit info window 1; Change type 2;
+        writeByte(spiritId);
 
         writeByte(spirits.length); // spirit count
 

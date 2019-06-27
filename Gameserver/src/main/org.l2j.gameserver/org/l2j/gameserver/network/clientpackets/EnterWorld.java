@@ -5,7 +5,10 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.AnnouncementsTable;
 import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
-import org.l2j.gameserver.data.xml.impl.*;
+import org.l2j.gameserver.data.xml.impl.AdminData;
+import org.l2j.gameserver.data.xml.impl.BeautyShopData;
+import org.l2j.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.instancemanager.*;
@@ -25,6 +28,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
 import org.l2j.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
+import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 import org.l2j.gameserver.network.serverpackets.friend.L2FriendList;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.slf4j.Logger;
@@ -453,6 +457,10 @@ public class EnterWorld extends ClientPacket {
         activeChar.sendPacket(new ExAutoSoulShot(0, true, 1));
         activeChar.sendPacket(new ExAutoSoulShot(0, true, 2));
         activeChar.sendPacket(new ExAutoSoulShot(0, true, 3));
+
+        if(activeChar.getActiveElementalSpiritType() >= 0) {
+            client.sendPacket(new ElementalSpiritInfo((byte) activeChar.getActiveElementalSpiritType(), (byte) 2));
+        }
 
         // Fix for equipped item skills
         if (!activeChar.getEffectList().getCurrentAbnormalVisualEffects().isEmpty()) {

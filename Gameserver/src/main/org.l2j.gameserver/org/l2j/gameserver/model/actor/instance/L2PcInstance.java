@@ -15,7 +15,9 @@ import org.l2j.gameserver.cache.WarehouseCacheManager;
 import org.l2j.gameserver.communitybbs.BB.Forum;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
 import org.l2j.gameserver.data.database.data.CharacterData;
+import org.l2j.gameserver.data.database.data.ElementalSpiritData;
 import org.l2j.gameserver.data.elemental.ElementalSpirit;
 import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
@@ -106,6 +108,7 @@ import java.util.stream.Collectors;
 
 import static java.lang.Math.min;
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.zeroIfNullElseCompute;
 
@@ -118,8 +121,6 @@ public final class L2PcInstance extends L2Playable {
     private final CharacterData model;
     private final PcAppearance appearance;
 
-    // TODO: This needs to be better integrated and saved/loaded
-    private final L2Radar radar;
     private byte vipTier;
     private ElementalSpirit[] spirits;
     private ElementalType activeElementalSpiritType;
@@ -175,15 +176,40 @@ public final class L2PcInstance extends L2Playable {
     }
 
     private void initElementalSpirits() {
-        var types = ElementalType.values();
-        spirits = new ElementalSpirit[types.length - 1]; // exclude None
-        for (ElementalType type : types) {
-            if(ElementalType.NONE == type) {
-                continue;
+        tryLoadSpirits();
+
+        if(isNull(spirits)) {
+            var types = ElementalType.values();
+            spirits = new ElementalSpirit[types.length -1]; // exclude None
+
+            for (ElementalType type : types) {
+                if(ElementalType.NONE == type) {
+                    continue;
+                }
+
+                var spirit = new ElementalSpirit(type, this);
+                spirits[type.getId() -1] = spirit;
+                spirit.save();
             }
-            spirits[type.getId() -1] = new ElementalSpirit(type, this);
         }
-        activeElementalSpiritType = ElementalType.FIRE;
+
+        if(isNull(activeElementalSpiritType)) {
+            activeElementalSpiritType = ElementalType.FIRE;
+        }
+    }
+
+    private void tryLoadSpirits() {
+        var spiritsData = getDAO(ElementalSpiritDAO.class).findByPlayerId(getObjectId());
+        if (!spiritsData.isEmpty()) {
+            spirits = new ElementalSpirit[ElementalType.values().length - 1]; // exclude None
+
+            for (ElementalSpiritData spiritData : spiritsData) {
+                spirits[spiritData.getType() - 1] = new ElementalSpirit(spiritData, this);
+                if (spiritData.isInUse()) {
+                    activeElementalSpiritType = ElementalType.of(spiritData.getType());
+                }
+            }
+        }
     }
 
     public int getActiveElementalSpiritAttack() {
@@ -211,7 +237,7 @@ public final class L2PcInstance extends L2Playable {
     }
 
     public ElementalSpirit getElementalSpirit(ElementalType type) {
-        if(isNull(spirits) || isNull(type)) {
+        if(isNull(spirits) || isNull(type) || type == ElementalType.NONE) {
             return null;
         }
         return spirits[type.getId() -1];
@@ -278,28 +304,34 @@ public final class L2PcInstance extends L2Playable {
 
     // Unchecked
 
-    public static final String NEWBIE_KEY = "NEWBIE";
+    // TODO: This needs to be better integrated and saved/loaded
+    private final L2Radar radar;
+
     public static final int ID_NONE = -1;
     public static final int REQUEST_TIMEOUT = 15;
+
     // Character Skill SQL String Definitions:
     private static final String RESTORE_SKILLS_FOR_CHAR = "SELECT skill_id,skill_level,skill_sub_level FROM character_skills WHERE charId=? AND class_index=?";
     private static final String UPDATE_CHARACTER_SKILL_LEVEL = "UPDATE character_skills SET skill_level=?, skill_sub_level=?  WHERE skill_id=? AND charId=? AND class_index=?";
     private static final String ADD_NEW_SKILLS = "REPLACE INTO character_skills (charId,skill_id,skill_level,skill_sub_level,class_index) VALUES (?,?,?,?,?)";
     private static final String DELETE_SKILL_FROM_CHAR = "DELETE FROM character_skills WHERE skill_id=? AND charId=? AND class_index=?";
     private static final String DELETE_CHAR_SKILLS = "DELETE FROM character_skills WHERE charId=? AND class_index=?";
+
     // Character Skill Save SQL String Definitions:
     private static final String ADD_SKILL_SAVE = "INSERT INTO character_skills_save (charId,skill_id,skill_level,skill_sub_level,remaining_time,reuse_delay,systime,restore_type,class_index,buff_index) VALUES (?,?,?,?,?,?,?,?,?,?)";
     private static final String RESTORE_SKILL_SAVE = "SELECT skill_id,skill_level,skill_sub_level,remaining_time, reuse_delay, systime, restore_type FROM character_skills_save WHERE charId=? AND class_index=? ORDER BY buff_index ASC";
     private static final String DELETE_SKILL_SAVE = "DELETE FROM character_skills_save WHERE charId=? AND class_index=?";
+
     // Character Item Reuse Time String Definition:
     private static final String ADD_ITEM_REUSE_SAVE = "INSERT INTO character_item_reuse_save (charId,itemId,itemObjId,reuseDelay,systime) VALUES (?,?,?,?,?)";
     private static final String RESTORE_ITEM_REUSE_SAVE = "SELECT charId,itemId,itemObjId,reuseDelay,systime FROM character_item_reuse_save WHERE charId=?";
     private static final String DELETE_ITEM_REUSE_SAVE = "DELETE FROM character_item_reuse_save WHERE charId=?";
+
     // Character Character SQL String Definitions:
     private static final String INSERT_CHARACTER = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,reputation,fame,raidbossPoints,pvpkills,pkkills,clanid,race,classid,cancraft,title,title_color,online,clan_privs,wantspeace,base_class,nobless,power_grade,vitality_points,createDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
     private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,reputation=?,fame=?,raidbossPoints=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,title=?,title_color=?,online=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,bookmarkslot=?,vitality_points=?,language=?,pccafe_points=? WHERE charId=?";
     private static final String UPDATE_CHARACTER_ACCESS = "UPDATE characters SET accesslevel = ? WHERE charId = ?";
-    private static final String RESTORE_CHARACTER = "SELECT * FROM characters WHERE charId=?";
+
     // Character Teleport Bookmark:
     private static final String INSERT_TP_BOOKMARK = "INSERT INTO character_tpbookmark (charId,Id,x,y,z,icon,tag,name) values (?,?,?,?,?,?,?,?)";
     private static final String UPDATE_TP_BOOKMARK = "UPDATE character_tpbookmark SET icon=?,tag=?,name=? where charId=? AND Id=?";
@@ -321,6 +353,7 @@ public final class L2PcInstance extends L2Playable {
     private static final String DELETE_CHAR_RECIPE_SHOP = "DELETE FROM character_recipeshoplist WHERE charId=?";
     private static final String INSERT_CHAR_RECIPE_SHOP = "REPLACE INTO character_recipeshoplist (`charId`, `recipeId`, `price`, `index`) VALUES (?, ?, ?, ?)";
     private static final String RESTORE_CHAR_RECIPE_SHOP = "SELECT * FROM character_recipeshoplist WHERE charId=? ORDER BY `index`";
+
     private static final String COND_OVERRIDE_KEY = "cond_override";
     // during fall validations will be disabled for 1000 ms.
     private static final int FALLING_VALIDATION_DELAY = 1000;
@@ -5734,6 +5767,18 @@ public final class L2PcInstance extends L2Playable {
         final AccountVariables aVars = getScript(AccountVariables.class);
         if (aVars != null) {
             aVars.storeMe();
+        }
+
+        if(nonNull(spirits)) {
+            for (ElementalSpirit spirit : spirits) {
+                if(nonNull(spirit)) {
+                    spirit.save();
+                }
+            }
+
+            if(nonNull(activeElementalSpiritType)) {
+                getDAO(ElementalSpiritDAO.class).updateActiveSpirit(getObjectId(), activeElementalSpiritType.getId());
+            }
         }
     }
 

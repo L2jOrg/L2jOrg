@@ -5,14 +5,14 @@ import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpirit
 
 public class ExElementalSpiritInfo extends ClientPacket {
 
-    private byte id;
+    private byte type;
 
     public void readImpl() {
-        this.id = readByte();
+        this.type = readByte();
     }
 
     public void runImpl() {
-        client.sendPacket(new ElementalSpiritInfo(id));
+        client.sendPacket(new ElementalSpiritInfo((byte) client.getActiveChar().getActiveElementalSpiritType(), type));
     }
 
 }
