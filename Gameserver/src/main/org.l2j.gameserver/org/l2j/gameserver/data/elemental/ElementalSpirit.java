@@ -151,4 +151,21 @@ public class ElementalSpirit {
     public void addCritDamage(byte critDamagePoints) {
         data.addCritDamagePoints(critDamagePoints);
     }
+
+    public int getExtractAmount() {
+        return Math.round(data.getExperience() / ElementalSpiritManager.FRAGMENT_XP_CONSUME);
+    }
+
+    public void resetStage() {
+        data.setLevel((byte) 1);
+        data.setExperience(0);
+        data.setAttackPoints((byte) 0);
+        data.setDefensePoints((byte) 0);
+        data.setCritRatePoints((byte) 0);
+        data.setCritDamagePoints((byte) 0);
+    }
+
+    public boolean canEvolve() {
+        return getStage() < 3 && getLevel() == 10 && getExperience() == getExperienceToNextLevel();
+    }
 }

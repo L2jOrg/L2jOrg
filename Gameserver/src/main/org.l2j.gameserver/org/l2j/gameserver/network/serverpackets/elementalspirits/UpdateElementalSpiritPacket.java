@@ -5,7 +5,7 @@ import org.l2j.gameserver.network.L2GameClient;
 
 import static java.util.Objects.isNull;
 
-public abstract class UpdateElementalSpiritPacket extends  AbstractElementalSpiritPacket {
+public abstract class UpdateElementalSpiritPacket extends AbstractElementalSpiritPacket {
 
     private final byte type;
     private final boolean update;
@@ -16,20 +16,19 @@ public abstract class UpdateElementalSpiritPacket extends  AbstractElementalSpir
     }
 
     protected void writeUpdate(L2GameClient client) {
-
+        var player = client.getActiveChar();
         writeByte(update);
-        writeByte(type);
+        writeByte(player.getActiveElementalSpiritType());
 
         if(update) {
-            var spirit = client.getActiveChar().getElementalSpirit(ElementalType.of(type));
+            var spirit = player.getElementalSpirit(ElementalType.of(type));
 
             if(isNull(spirit)) {
                 return;
             }
 
-            writeByte(spirit.getType());
+            writeByte(type);
             writeSpiritInfo(spirit);
         }
-
     }
 }

@@ -2,8 +2,10 @@ package org.l2j.gameserver.network.clientpackets.elementalspirits;
 
 import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.network.serverpackets.UserInfo;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritAbsorb;
 
 import static java.util.Objects.isNull;
@@ -47,10 +49,16 @@ public class ExElementalSpiritAbsorb extends ClientPacket {
             return;
         }
 
+        var currentLevel = spirit.getLevel();
         spirit.addExperience(absorbItem.getExperience() * amount);
 
         player.sendPacket(new ElementalSpiritAbsorb(type, true));
         player.sendPacket(SystemMessage.getSystemMessage(SUCCESFUL_ABSORPTION));
+        if(currentLevel != spirit.getLevel()) {
+            var userInfo = new UserInfo(player);
+            userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
+            client.sendPacket(userInfo);
+        }
 
     }
 }

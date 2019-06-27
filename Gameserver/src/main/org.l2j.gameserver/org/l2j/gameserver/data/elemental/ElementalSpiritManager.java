@@ -17,6 +17,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public class ElementalSpiritManager extends GameXmlReader {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ElementalSpiritManager.class);
+    public static final float FRAGMENT_XP_CONSUME = 50000.0f;
 
     private final Map<Byte, Map<Byte, ElementalSpiritTemplate>> spiritData;
 

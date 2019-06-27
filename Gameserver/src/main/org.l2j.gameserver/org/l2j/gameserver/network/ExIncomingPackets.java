@@ -381,7 +381,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_PLEDGE_ITEM_BUY(0x14F, null, ConnectionState.IN_GAME),
     EX_ELEMENTAL_SPIRIT_INFO(0x150, ExElementalSpiritInfo::new, ConnectionState.IN_GAME),
     EX_ELEMENTAL_SPIRIT_EXTRACT_INFO(0x151, ExElementalSpiritExtractInfo::new, ConnectionState.IN_GAME),
-    EX_ELEMENTAL_SPIRIT_EXTRACT(0x152, null, ConnectionState.IN_GAME),
+    EX_ELEMENTAL_SPIRIT_EXTRACT(0x152, ExElementalSpiritExtract::new, ConnectionState.IN_GAME),
     EX_ELEMENTAL_SPIRIT_EVOLUTION_INFO(0x153, ExElementalSpiritEvolutionInfo::new, ConnectionState.IN_GAME),
     EX_ELEMENTAL_SPIRIT_EVOLUTION(0x154, null, ConnectionState.IN_GAME),
     EX_ELEMENTAL_SPIRIT_SET_TALENT(0x155, ExElementalSpiritSetTalent::new, ConnectionState.IN_GAME),

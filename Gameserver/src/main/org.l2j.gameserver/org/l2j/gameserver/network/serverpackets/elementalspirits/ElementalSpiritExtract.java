@@ -5,10 +5,15 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import static org.l2j.gameserver.network.ServerPacketId.EX_ELEMENTAL_SPIRIT_EXTRACT;
 
-public class ExElementalSpiritExtract extends ServerPacket {
+public class ElementalSpiritExtract extends UpdateElementalSpiritPacket {
+
+    public ElementalSpiritExtract(byte type, boolean extracted) {
+        super(type, extracted);
+    }
 
     @Override
-    protected void writeImpl(L2GameClient client) throws Exception {
+    protected void writeImpl(L2GameClient client) {
         writeId(EX_ELEMENTAL_SPIRIT_EXTRACT);
+        writeUpdate(client);
     }
 }

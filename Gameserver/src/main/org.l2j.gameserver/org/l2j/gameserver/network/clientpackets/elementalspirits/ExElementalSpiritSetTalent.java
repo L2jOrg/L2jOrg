@@ -1,7 +1,9 @@
 package org.l2j.gameserver.network.clientpackets.elementalspirits;
 
 import org.l2j.gameserver.data.elemental.ElementalType;
+import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
+import org.l2j.gameserver.network.serverpackets.UserInfo;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritSetTalent;
 
 import static java.util.Objects.nonNull;
@@ -33,7 +35,7 @@ public class ExElementalSpiritSetTalent extends ClientPacket {
     }
 
     @Override
-    protected void runImpl() throws Exception {
+    protected void runImpl()  {
         var spirit = client.getActiveChar().getElementalSpirit(ElementalType.of(type));
 
         var result = false;
@@ -61,6 +63,11 @@ public class ExElementalSpiritSetTalent extends ClientPacket {
         }
 
         client.sendPacket(new ElementalSpiritSetTalent(type, result));
+        if(result) {
+            var userInfo = new UserInfo(client.getActiveChar());
+            userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
+            client.sendPacket(userInfo);
+        }
 
     }
 }

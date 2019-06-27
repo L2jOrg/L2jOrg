@@ -31,9 +31,9 @@ public class ElementalSpiritEvolutionInfo extends ServerPacket {
 
         writeByte(type);
         writeInt(spirit.getNpcId());
-        writeInt(spirit.getLevel());
+        writeInt(0x01); // unk
         writeInt(spirit.getStage());
-        writeDouble(100);
+        writeDouble(100); // chance ??
 
         var items = spirit.getItemsToEvolve();
         writeInt(items.size());
