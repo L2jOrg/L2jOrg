@@ -121,4 +121,20 @@ public class ElementalSpiritData {
     public boolean isInUse() {
         return inUse;
     }
+
+    public void addAttackPoints(byte attackPoints) {
+        this.attackPoints += attackPoints;
+    }
+
+    public void addDefensePoints(byte defensePoints) {
+        this.defensePoints += defensePoints;
+    }
+
+    public void addCritRatePoints(byte critRatePoints) {
+        this.critRatePoints = critRatePoints;
+    }
+
+    public void addCritDamagePoints(byte critDamagePoints) {
+        this.critDamagePoints += critDamagePoints;
+    }
 }

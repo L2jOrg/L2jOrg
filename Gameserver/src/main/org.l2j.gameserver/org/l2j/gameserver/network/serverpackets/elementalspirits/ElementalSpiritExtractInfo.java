@@ -35,6 +35,6 @@ public class ElementalSpiritExtractInfo extends ServerPacket {
         writeInt(1000000); // item count
 
         writeInt(spirit.getExtractItem()); // result item id
-        writeInt((int) (spirit.getExperience() / 1000)); // result item count
+        writeInt((int) (spirit.getExperience() / 15000)); // result item count
     }
 }

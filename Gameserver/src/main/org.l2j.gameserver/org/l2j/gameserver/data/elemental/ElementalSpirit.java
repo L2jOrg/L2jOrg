@@ -4,6 +4,7 @@ import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ExElementalSpiritGetExp;
 
 import java.util.List;
@@ -30,14 +31,21 @@ public class ElementalSpirit {
 
     public void addExperience(long experience) {
         data.addExperience(experience);
-        if(data.getExperience()> getExperienceToNextLevel()) {
-            if(data.getLevel() < getMaxLevel()) {
+        if(data.getExperience() > getExperienceToNextLevel()) {
+            levelUp();
+            owner.sendPacket(new ElementalSpiritInfo(getType(), (byte) 2));
+        }
+        owner.sendPacket(new ExElementalSpiritGetExp(getType(), data.getExperience()));
+    }
+
+    private void levelUp() {
+        do {
+            if (data.getLevel() < getMaxLevel()) {
                 data.increaseLevel();
             } else {
                 data.setExperience(getExperienceToNextLevel());
             }
-        }
-        owner.sendPacket(new ExElementalSpiritGetExp(getType(), data.getExperience()));
+        } while (data.getExperience() > getExperienceToNextLevel());
     }
 
     public int getAvailableCharacteristicsPoints() {
@@ -128,4 +136,19 @@ public class ElementalSpirit {
         getDAO(ElementalSpiritDAO.class).save(data);
     }
 
+    public void addAttackPoints(byte attackPoints) {
+        data.addAttackPoints(attackPoints);
+    }
+
+    public void addDefensePoints(byte defensePoints) {
+        data.addDefensePoints(defensePoints);
+    }
+
+    public void addCritRatePoints(byte critRatePoints) {
+        data.addCritRatePoints(critRatePoints);
+    }
+
+    public void addCritDamage(byte critDamagePoints) {
+        data.addCritDamagePoints(critDamagePoints);
+    }
 }

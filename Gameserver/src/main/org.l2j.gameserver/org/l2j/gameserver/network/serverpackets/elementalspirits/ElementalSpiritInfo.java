@@ -8,12 +8,12 @@ import static java.util.Objects.isNull;
 
 public class ElementalSpiritInfo extends AbstractElementalSpiritPacket {
 
-    private final byte spiritId;
+    private final byte spiritType;
     private final byte type;
 
-    public ElementalSpiritInfo(byte id, byte type) {
-        this.spiritId = id;
-        this.type = type;
+    public ElementalSpiritInfo(byte spiritType, byte packetType) {
+        this.spiritType = spiritType;
+        this.type = packetType;
     }
 
     public void writeImpl(L2GameClient client) {
@@ -30,7 +30,7 @@ public class ElementalSpiritInfo extends AbstractElementalSpiritPacket {
         }
 
         writeByte(type); // show spirit info window 1; Change type 2;
-        writeByte(spiritId);
+        writeByte(spiritType);
 
         writeByte(spirits.length); // spirit count
 
