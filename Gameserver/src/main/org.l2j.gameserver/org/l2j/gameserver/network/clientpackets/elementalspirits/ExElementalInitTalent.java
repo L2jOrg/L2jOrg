@@ -8,6 +8,7 @@ import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpirit
 
 import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.network.SystemMessageId.RESET_THE_SELECTED_SPIRIT_S_CHARACTERISTICS_SUCCESSFULLY;
+import static org.l2j.gameserver.network.SystemMessageId.UNABLE_TO_RESET_SPIRIT_ATTRIBUTE_DURING_BATTLE;
 
 public class ExElementalInitTalent extends ClientPacket {
 
@@ -21,6 +22,13 @@ public class ExElementalInitTalent extends ClientPacket {
     @Override
     protected void runImpl() {
         var player = client.getActiveChar();
+
+       if(player.isInBattle()) {
+           client.sendPacket(SystemMessage.getSystemMessage(UNABLE_TO_RESET_SPIRIT_ATTRIBUTE_DURING_BATTLE));
+           client.sendPacket(new ElementalSpiritSetTalent(type, false));
+           return;
+       }
+
         var spirit = player.getElementalSpirit(ElementalType.of(type));
 
         if(nonNull(spirit) && player.reduceAdena("Talent", ElementalSpiritManager.TALENT_INIT_FEE, player, true)) {

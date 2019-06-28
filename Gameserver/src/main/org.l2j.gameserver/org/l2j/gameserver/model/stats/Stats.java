@@ -243,7 +243,9 @@ public enum Stats {
     STAT_BONUS_SPEED("statSpeed"),
     SHOTS_BONUS("shotBonus", new ShotsBonusFinalizer()),
     WORLD_CHAT_POINTS("worldChatPoints"),
-    ATTACK_DAMAGE("attackDamage");
+    ATTACK_DAMAGE("attackDamage"),
+
+    ELEMENTAL_SPIRIT_XP("elementalSpiritXp");
 
     public static final int NUM_STATS = values().length;
     private final String _value;

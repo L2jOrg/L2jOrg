@@ -4,12 +4,15 @@ import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ExElementalSpiritGetExp;
 
 import java.util.List;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.gameserver.network.SystemMessageId.OBTAINED_S2_ATTRIBUTE_XP_OF_S1;
+import static org.l2j.gameserver.network.SystemMessageId.S1_ATTRIBUTE_SPIRIT_BECAME_LEVEL_S2;
 
 public class ElementalSpirit {
 
@@ -36,16 +39,19 @@ public class ElementalSpirit {
             owner.sendPacket(new ElementalSpiritInfo(getType(), (byte) 2));
         }
         owner.sendPacket(new ExElementalSpiritGetExp(getType(), data.getExperience()));
+        owner.sendPacket(SystemMessage.getSystemMessage(OBTAINED_S2_ATTRIBUTE_XP_OF_S1).addInt((int) experience).addElementalSpirit(getType()));
     }
 
     private void levelUp() {
         do {
             if (data.getLevel() < getMaxLevel()) {
                 data.increaseLevel();
+                owner.sendPacket(SystemMessage.getSystemMessage(S1_ATTRIBUTE_SPIRIT_BECAME_LEVEL_S2).addElementalSpirit(getType()).addByte(data.getLevel()));
             } else {
                 data.setExperience(getExperienceToNextLevel());
             }
         } while (data.getExperience() > getExperienceToNextLevel());
+
     }
 
     public int getAvailableCharacteristicsPoints() {

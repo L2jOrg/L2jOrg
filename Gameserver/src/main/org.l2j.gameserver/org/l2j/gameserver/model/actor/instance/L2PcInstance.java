@@ -302,6 +302,14 @@ public final class L2PcInstance extends L2Playable {
         getClient().setVipTierExpiration(expiration);
     }
 
+    public int getElementalSpiritXpBonus() {
+        return getStat().getElementalSpiritXpBonus();
+    }
+
+    public boolean isInBattle() {
+        return AttackStanceTaskManager.getInstance().hasAttackStanceTask(this);
+    }
+
     // Unchecked
 
     // TODO: This needs to be better integrated and saved/loaded

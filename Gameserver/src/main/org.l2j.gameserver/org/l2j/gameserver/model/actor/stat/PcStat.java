@@ -547,6 +547,10 @@ public class PcStat extends PlayableStat {
         return (int) getValue(Stats.ARTIFACT_SLOTS, 0);
     }
 
+    public int getElementalSpiritXpBonus() {
+        return (int) getValue(Stats.ELEMENTAL_SPIRIT_XP, 1);
+    }
+
     @Override
     protected void onRecalculateStats(boolean broadcast) {
         super.onRecalculateStats(broadcast);
