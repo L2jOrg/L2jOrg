@@ -18,6 +18,7 @@ public class ElementalSpiritManager extends GameXmlReader {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ElementalSpiritManager.class);
     public static final float FRAGMENT_XP_CONSUME = 50000.0f;
+    public static final int TALENT_INIT_FEE = 50000;
 
     private final Map<Byte, Map<Byte, ElementalSpiritTemplate>> spiritData;
 

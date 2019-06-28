@@ -137,4 +137,8 @@ public class ElementalSpiritData {
     public void addCritDamagePoints(byte critDamagePoints) {
         this.critDamagePoints += critDamagePoints;
     }
+
+    public void increaseStage() {
+        stage++;
+    }
 }

@@ -804,17 +804,11 @@ public class PcInventory extends Inventory {
     public boolean canManipulateWithItemId(int itemId) {
         final Collection<Integer> blockedItems = _blockItems;
         if (blockedItems != null) {
-            switch (_blockMode) {
-                case NONE: {
-                    return true;
-                }
-                case WHITELIST: {
-                    return blockedItems.stream().anyMatch(id -> id == itemId);
-                }
-                case BLACKLIST: {
-                    return !blockedItems.stream().anyMatch(id -> id == itemId);
-                }
-            }
+            return switch (_blockMode) {
+                case NONE -> true;
+                case WHITELIST -> blockedItems.stream().anyMatch(id -> id == itemId);
+                case BLACKLIST -> blockedItems.stream().noneMatch(id -> id == itemId);
+            };
         }
         return true;
     }

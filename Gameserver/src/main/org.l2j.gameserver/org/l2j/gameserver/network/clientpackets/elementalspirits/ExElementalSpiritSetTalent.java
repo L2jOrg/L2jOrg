@@ -3,10 +3,12 @@ package org.l2j.gameserver.network.clientpackets.elementalspirits;
 import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
+import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritSetTalent;
 
 import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.network.SystemMessageId.CHARACTERISTICS_WERE_APPLIED_SUCCESSFULLY;
 
 public class ExElementalSpiritSetTalent extends ClientPacket {
 
@@ -62,12 +64,13 @@ public class ExElementalSpiritSetTalent extends ClientPacket {
             }
         }
 
-        client.sendPacket(new ElementalSpiritSetTalent(type, result));
         if(result) {
             var userInfo = new UserInfo(client.getActiveChar());
             userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
             client.sendPacket(userInfo);
+            client.sendPacket(SystemMessage.getSystemMessage(CHARACTERISTICS_WERE_APPLIED_SUCCESSFULLY));
         }
+        client.sendPacket(new ElementalSpiritSetTalent(type, result));
 
     }
 }

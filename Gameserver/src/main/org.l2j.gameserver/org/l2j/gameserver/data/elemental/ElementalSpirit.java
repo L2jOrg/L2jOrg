@@ -51,7 +51,7 @@ public class ElementalSpirit {
     public int getAvailableCharacteristicsPoints() {
         var stage = data.getStage();
         var level = data.getLevel();
-        var points = ((stage -1) * 10) +  stage > 2 ? (level -1) * 2 : level -1;
+        var points = ((stage -1) * 11) +  ( stage > 2 ? (level -1) * 2 : level -1);
         return points - data.getAttackPoints() - data.getDefensePoints() - data.getDefensePoints() - data.getCritRatePoints();
     }
 
@@ -62,6 +62,34 @@ public class ElementalSpirit {
             }
         }
         return null;
+    }
+
+    public int getExtractAmount() {
+        return Math.round(data.getExperience() / ElementalSpiritManager.FRAGMENT_XP_CONSUME);
+    }
+
+    public void resetStage() {
+        data.setLevel((byte) 1);
+        data.setExperience(0);
+        resetCharacteristics();
+    }
+
+    public boolean canEvolve() {
+        return getStage() < 3 && getLevel() == 10 && getExperience() == getExperienceToNextLevel();
+    }
+
+    public void upgrade() {
+        data.increaseStage();
+        data.setLevel((byte) 1);
+        data.setExperience(0);
+        template = ElementalSpiritManager.getInstance().getSpirit(data.getType(), data.getStage());
+    }
+
+    public void resetCharacteristics() {
+        data.setAttackPoints((byte) 0);
+        data.setDefensePoints((byte) 0);
+        data.setCritRatePoints((byte) 0);
+        data.setCritDamagePoints((byte) 0);
     }
 
     public byte getType() {
@@ -152,20 +180,4 @@ public class ElementalSpirit {
         data.addCritDamagePoints(critDamagePoints);
     }
 
-    public int getExtractAmount() {
-        return Math.round(data.getExperience() / ElementalSpiritManager.FRAGMENT_XP_CONSUME);
-    }
-
-    public void resetStage() {
-        data.setLevel((byte) 1);
-        data.setExperience(0);
-        data.setAttackPoints((byte) 0);
-        data.setDefensePoints((byte) 0);
-        data.setCritRatePoints((byte) 0);
-        data.setCritDamagePoints((byte) 0);
-    }
-
-    public boolean canEvolve() {
-        return getStage() < 3 && getLevel() == 10 && getExperience() == getExperienceToNextLevel();
-    }
 }

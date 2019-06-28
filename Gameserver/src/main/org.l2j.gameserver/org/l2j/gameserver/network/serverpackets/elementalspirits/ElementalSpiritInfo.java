@@ -41,10 +41,10 @@ public class ElementalSpiritInfo extends AbstractElementalSpiritPacket {
             writeSpiritInfo(spirit);
         }
 
-        writeInt(1); // talent count
-        for (int j = 0; j < 1; j++) { // for each talent
-            writeInt(57); // init talent item id
-            writeLong(50000); // init talent item count
+        writeInt(1); // Reset talent items count
+        for (int j = 0; j < 1; j++) {
+            writeInt(57);
+            writeLong(50000);
         }
     }
 }
