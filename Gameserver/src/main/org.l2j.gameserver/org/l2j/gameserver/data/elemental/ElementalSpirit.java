@@ -2,9 +2,11 @@ package org.l2j.gameserver.data.elemental;
 
 import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
+import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.network.serverpackets.UserInfo;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ExElementalSpiritGetExp;
 
@@ -34,19 +36,23 @@ public class ElementalSpirit {
 
     public void addExperience(long experience) {
         data.addExperience(experience);
+        owner.sendPacket(SystemMessage.getSystemMessage(OBTAINED_S2_ATTRIBUTE_XP_OF_S1).addInt((int) experience).addElementalSpirit(getType()));
         if(data.getExperience() > getExperienceToNextLevel()) {
             levelUp();
-            owner.sendPacket(new ElementalSpiritInfo(getType(), (byte) 2));
+            owner.sendPacket(SystemMessage.getSystemMessage(S1_ATTRIBUTE_SPIRIT_BECAME_LEVEL_S2).addElementalSpirit(getType()).addByte(data.getLevel()));
+            owner.sendPacket(new ElementalSpiritInfo((byte) owner.getActiveElementalSpiritType(), (byte) 0));
+            var userInfo = new UserInfo(owner);
+            userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
+            owner.sendPacket(userInfo);
+
         }
         owner.sendPacket(new ExElementalSpiritGetExp(getType(), data.getExperience()));
-        owner.sendPacket(SystemMessage.getSystemMessage(OBTAINED_S2_ATTRIBUTE_XP_OF_S1).addInt((int) experience).addElementalSpirit(getType()));
     }
 
     private void levelUp() {
         do {
             if (data.getLevel() < getMaxLevel()) {
                 data.increaseLevel();
-                owner.sendPacket(SystemMessage.getSystemMessage(S1_ATTRIBUTE_SPIRIT_BECAME_LEVEL_S2).addElementalSpirit(getType()).addByte(data.getLevel()));
             } else {
                 data.setExperience(getExperienceToNextLevel());
             }
@@ -58,7 +64,7 @@ public class ElementalSpirit {
         var stage = data.getStage();
         var level = data.getLevel();
         var points = ((stage -1) * 11) +  ( stage > 2 ? (level -1) * 2 : level -1);
-        return points - data.getAttackPoints() - data.getDefensePoints() - data.getDefensePoints() - data.getCritRatePoints();
+        return points - data.getAttackPoints() - data.getDefensePoints() - data.getCritDamagePoints() - data.getCritRatePoints();
     }
 
     public AbsorbItem getAbsorbItem(int itemId) {

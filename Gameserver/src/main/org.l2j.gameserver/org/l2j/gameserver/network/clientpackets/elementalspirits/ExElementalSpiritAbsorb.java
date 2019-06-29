@@ -1,10 +1,11 @@
 package org.l2j.gameserver.network.clientpackets.elementalspirits;
 
+import org.l2j.gameserver.data.elemental.ElementalSpirit;
 import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.enums.UserInfoType;
+import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritAbsorb;
 
@@ -30,35 +31,44 @@ public class ExElementalSpiritAbsorb extends ClientPacket {
     protected void runImpl()  {
         var player = client.getActiveChar();
 
-        if(player.getPrivateStoreType() != PrivateStoreType.NONE) {
-            player.sendPacket(SystemMessage.getSystemMessage(CANNOT_EVOLVE_ABSORB_EXTRACT_WHILE_USING_THE_PRIVATE_STORE_WORKSHOP));
-            return;
-        }
-
         var spirit = player.getElementalSpirit(ElementalType.of(type));
 
         if(isNull(spirit)) {
-            player.sendPacket(SystemMessage.getSystemMessage(NO_SPIRITS_ARE_AVAILABLE));
+            client.sendPacket(NO_SPIRITS_ARE_AVAILABLE);
             return;
         }
 
         var absorbItem = spirit.getAbsorbItem(itemId);
 
-        if(amount < 1 || amount > 999999 || isNull(absorbItem) || !player.destroyItemByItemId("Absorb", itemId, amount, player, true)) {
+        if(isNull(absorbItem)) {
             player.sendPacket(new ElementalSpiritAbsorb(type, false));
             return;
         }
 
-        var currentLevel = spirit.getLevel();
-        spirit.addExperience(absorbItem.getExperience() * amount);
-
-        player.sendPacket(new ElementalSpiritAbsorb(type, true));
-        player.sendPacket(SystemMessage.getSystemMessage(SUCCESFUL_ABSORPTION));
-        if(currentLevel != spirit.getLevel()) {
+        var canAbsorb = checkConditions(player, spirit);
+        if(canAbsorb) {
+            client.sendPacket(SUCCESFUL_ABSORPTION);
+            spirit.addExperience(absorbItem.getExperience() * amount);
             var userInfo = new UserInfo(player);
             userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
             client.sendPacket(userInfo);
         }
+        client.sendPacket(new ElementalSpiritAbsorb(type, canAbsorb));
 
+    }
+
+    private boolean checkConditions(L2PcInstance player, ElementalSpirit spirit) {
+        var noMeetConditions = false;
+        if(noMeetConditions = player.getPrivateStoreType() != PrivateStoreType.NONE) {
+            client.sendPacket(CANNOT_EVOLVE_ABSORB_EXTRACT_WHILE_USING_THE_PRIVATE_STORE_WORKSHOP);
+        } else if(noMeetConditions = player.isInBattle()) {
+            client.sendPacket(UNABLE_TO_ABSORB_DURING_BATTLE);
+        } else if(noMeetConditions = (spirit.getLevel() == spirit.getMaxLevel() && spirit.getExperience() == spirit.getExperienceToNextLevel())) {
+            client.sendPacket(UNABLE_TO_ABSORB_BECAUSE_REACHED_MAXIMUM_LEVEL);
+        } else if ( noMeetConditions = (amount < 1 || !player.destroyItemByItemId("Absorb", itemId, amount, player, true))) {
+            client.sendPacket(NOT_ENOUGH_INGREDIENTS_TO_ABSORB);
+        }
+
+        return !noMeetConditions;
     }
 }

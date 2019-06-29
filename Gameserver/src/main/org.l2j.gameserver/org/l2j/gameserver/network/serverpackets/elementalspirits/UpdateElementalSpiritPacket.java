@@ -18,7 +18,7 @@ public abstract class UpdateElementalSpiritPacket extends AbstractElementalSpiri
     protected void writeUpdate(L2GameClient client) {
         var player = client.getActiveChar();
         writeByte(update);
-        writeByte(player.getActiveElementalSpiritType());
+        writeByte(type);
 
         if(update) {
             var spirit = player.getElementalSpirit(ElementalType.of(type));

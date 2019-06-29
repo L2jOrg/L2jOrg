@@ -17,6 +17,8 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public class ElementalSpiritManager extends GameXmlReader {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ElementalSpiritManager.class);
+
+    public static final long EXTRACT_FEE = 1000000;
     public static final float FRAGMENT_XP_CONSUME = 50000.0f;
     public static final int TALENT_INIT_FEE = 50000;
 

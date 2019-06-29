@@ -14,9 +14,8 @@ import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpirit
 
 import java.util.stream.Collectors;
 
-import static java.util.Objects.nonNull;
-import static org.l2j.gameserver.network.SystemMessageId.CANNOT_EVOLVE_ABSORB_EXTRACT_WHILE_USING_THE_PRIVATE_STORE_WORKSHOP;
-import static org.l2j.gameserver.network.SystemMessageId.S1_EVOLVED_TO_S2_STAR;
+import static java.util.Objects.isNull;
+import static org.l2j.gameserver.network.SystemMessageId.*;
 
 public class ExElementalSpiritEvolution extends ClientPacket {
 
@@ -30,26 +29,37 @@ public class ExElementalSpiritEvolution extends ClientPacket {
     @Override
     protected void runImpl()  {
         var player = client.getActiveChar();
+        var spirit = player.getElementalSpirit(ElementalType.of(type));
 
-        if(player.getPrivateStoreType() != PrivateStoreType.NONE) {
-            player.sendPacket(SystemMessage.getSystemMessage(CANNOT_EVOLVE_ABSORB_EXTRACT_WHILE_USING_THE_PRIVATE_STORE_WORKSHOP));
+        if(isNull(spirit)) {
+            client.sendPacket(NO_SPIRITS_ARE_AVAILABLE);
             return;
         }
 
-        var spirit = player.getElementalSpirit(ElementalType.of(type));
-
-        var canEvolve = nonNull(spirit) && spirit.canEvolve() && consumeEvolveItems(player, spirit);
+        var canEvolve = checkConditions(player, spirit);
 
         if(canEvolve) {
             spirit.upgrade();
+            client.sendPacket(SystemMessage.getSystemMessage(S1_EVOLVED_TO_S2_STAR).addElementalSpirit(type).addInt(spirit.getStage()));
             var userInfo = new UserInfo(player);
             userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
             client.sendPacket(userInfo);
-            client.sendPacket(SystemMessage.getSystemMessage(S1_EVOLVED_TO_S2_STAR).addElementalSpirit(type).addInt(spirit.getStage()));
         }
+         client.sendPacket(new ElementalSpiritEvolution(type, canEvolve));
+    }
 
-        player.sendPacket(new ElementalSpiritEvolution(type, canEvolve));
-
+    private boolean checkConditions(L2PcInstance player, ElementalSpirit spirit) {
+        var noMeetConditions = false;
+        if(noMeetConditions = player.getPrivateStoreType() != PrivateStoreType.NONE) {
+            client.sendPacket(CANNOT_EVOLVE_ABSORB_EXTRACT_WHILE_USING_THE_PRIVATE_STORE_WORKSHOP);
+        } else if(noMeetConditions = player.isInBattle()) {
+            client.sendPacket(UNABLE_TO_EVOLVE_DURING_BATTLE);
+        } else if(noMeetConditions = !spirit.canEvolve()) {
+            client.sendPacket(THIS_SPIRIT_CANNOT_EVOLVE);
+        } else if(noMeetConditions = !consumeEvolveItems(player, spirit)) {
+            client.sendPacket(NOT_ENOUGH_INGREDIENTS_FOR_EVOLUTION);
+        }
+        return !noMeetConditions;
     }
 
     private boolean consumeEvolveItems(L2PcInstance player, ElementalSpirit spirit) {

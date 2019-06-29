@@ -29,7 +29,7 @@ public class ElementalSpiritInfo extends AbstractElementalSpiritPacket {
             return;
         }
 
-        writeByte(type); // show spirit info window 1; Change type 2;
+        writeByte(type); // show spirit info window 1; Change type 2; Only update 0
         writeByte(spiritType);
 
         writeByte(spirits.length); // spirit count
