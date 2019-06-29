@@ -18,6 +18,12 @@ sourceSets {
     }
 }
 
+
+configurations.all {
+    // Check for updates every build
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
 dependencies {
     implementation project(':Commons')
     implementation 'io.github.joealisson:async-mmocore:3.0.0-SNAPSHOT'

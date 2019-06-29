@@ -118,6 +118,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("EnlargeAbnormalSlot", EnlargeAbnormalSlot::new);
 		EffectHandler.getInstance().registerHandler("EnlargeSlot", EnlargeSlot::new);
 		EffectHandler.getInstance().registerHandler("Escape", Escape::new);
+		EffectHandler.getInstance().registerHandler("SpiritXpModify", SpiritXpModify::new);
 		EffectHandler.getInstance().registerHandler("ExpModify", ExpModify::new);
 		EffectHandler.getInstance().registerHandler("Faceoff", Faceoff::new);
 		EffectHandler.getInstance().registerHandler("FakeDeath", FakeDeath::new);

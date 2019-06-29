@@ -853,17 +853,31 @@
 		<!-- Use to get Attribute XP Bonus +30% for 20 min. Cannot be dropped or sold. -->
 		<set name="icon" val="icon.elemental_bless_scrl_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="51126" level="1"/> <!-- Intermediate Spirit's Blessing -->
+		</skills>
 	</item>
 	<item id="91186" name="Advanced Spirit's Blessing" type="EtcItem">
 		<!-- Use to get Attribute XP Bonus +50% for 20 min. Cannot be dropped or sold. -->
 		<set name="icon" val="icon.elemental_bless_scrl_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="51127" level="1"/> <!-- Advanced Spirit's Blessing -->
+		</skills>
 	</item>
 	<item id="91187" name="Spirit's Varnish" type="EtcItem">
 		<!-- Enhances characteristics of Spirit's accessories. Depending on the item type, activates special options from level +1 and higher. Cannot be dropped or sold. -->

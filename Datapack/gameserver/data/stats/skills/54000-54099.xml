@@ -163,9 +163,22 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54028" toLevel="1" name="Spirit's Blessing">
-		<!-- For 20 min. Acquired XP +50%. -->
+		<!-- For 20 min. Acquired Attribute XP +20%. -->
 		<icon>icon.elemental_bless_scrl_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>ABNORMAL_ITEM</abnormalType>
+		<magicLvl>1</magicLvl>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SpiritXpModify">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54029" toLevel="4" name="Venir's Blessing">
 		<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +$s1. -->

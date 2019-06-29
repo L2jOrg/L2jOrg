@@ -302,7 +302,7 @@ public final class L2PcInstance extends L2Playable {
         getClient().setVipTierExpiration(expiration);
     }
 
-    public int getElementalSpiritXpBonus() {
+    public double getElementalSpiritXpBonus() {
         return getStat().getElementalSpiritXpBonus();
     }
 

@@ -245,7 +245,7 @@ public enum Stats {
     WORLD_CHAT_POINTS("worldChatPoints"),
     ATTACK_DAMAGE("attackDamage"),
 
-    ELEMENTAL_SPIRIT_XP("elementalSpiritXp");
+    BONUS_SPIRIT_XP("elementalSpiritXp");
 
     public static final int NUM_STATS = values().length;
     private final String _value;

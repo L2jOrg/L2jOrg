@@ -130,12 +130,38 @@
 	<skill id="51126" toLevel="1" name="Intermediate Spirit's Blessing">
 		<!-- For 20 min. Acquired XP +30%. -->
 		<icon>icon.elemental_bless_scrl_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>ABNORMAL_ITEM</abnormalType>
+		<magicLvl>1</magicLvl>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SpiritXpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51127" toLevel="1" name="Advanced Spirit's Blessing">
 		<!-- For 20 min. Acquired XP +50%. -->
 		<icon>icon.elemental_bless_scrl_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>ABNORMAL_ITEM</abnormalType>
+		<magicLvl>1</magicLvl>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SpiritXpModify">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51128" toLevel="1" name="Spirit's Varnish">
 		<icon>icon.ev_charge_scroll</icon>
