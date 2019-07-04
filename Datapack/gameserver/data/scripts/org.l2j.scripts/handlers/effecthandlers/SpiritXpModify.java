@@ -6,6 +6,6 @@ import org.l2j.gameserver.model.stats.Stats;
 public class SpiritXpModify extends  AbstractStatEffect {
 
     public SpiritXpModify(StatsSet params) {
-        super(params, Stats.BONUS_SPIRIT_XP);
+        super(params, Stats.ELEMENTAL_SPIRIT_BONUS_XP);
     }
 }

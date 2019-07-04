@@ -9,6 +9,7 @@ import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.L2AttackableAI;
 import org.l2j.gameserver.ai.L2CharacterAI;
+import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.CategoryData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.TransformData;
@@ -3759,10 +3760,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
             }
         }
 
-        final double damageCap = _stat.getValue(Stats.DAMAGE_LIMIT);
-        if (damageCap > 0) {
-            value = Math.min(value, damageCap);
-        }
+        double elementalDamage = 0;
 
         // Calculate PvP/PvE damage received. It is a post-attack stat.
         if (attacker != null) {
@@ -3771,6 +3769,15 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
             } else {
                 value *= (100 + _stat.getValue(Stats.PVE_DAMAGE_TAKEN)) / 100;
             }
+
+            elementalDamage = Formulas.calcSpiritElementalDamage(attacker, this);
+
+            value += elementalDamage;
+        }
+
+        final double damageCap = _stat.getValue(Stats.DAMAGE_LIMIT);
+        if (damageCap > 0) {
+            value = Math.min(value, damageCap);
         }
 
         if (Config.CHAMPION_ENABLE && isChampion() && (Config.CHAMPION_HP != 0)) {
@@ -3782,7 +3789,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
         }
 
         if (attacker != null) {
-            attacker.sendDamageMessage(this, skill, (int) value, critical, false);
+            attacker.sendDamageMessage(this, skill, (int) value, elementalDamage, critical, false);
         }
     }
 
@@ -3887,14 +3894,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
     /**
      * Send system message about damage.
-     *
-     * @param target
+     *  @param target
      * @param skill
      * @param damage
+     * @param elementalDamage
      * @param crit
      * @param miss
      */
-    public void sendDamageMessage(L2Character target, Skill skill, int damage, boolean crit, boolean miss) {
+    public void sendDamageMessage(L2Character target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss) {
 
     }
 
@@ -4543,6 +4550,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
     public void setCursorKeyMovementActive(boolean value) {
         _cursorKeyMovementActive = value;
+    }
+
+    public double getElementalSpiritDefenseOf(ElementalType type) {
+        return getElementalSpiritType() == type ? 100 : 0;
+    }
+
+    public ElementalType getElementalSpiritType() {
+        return ElementalType.NONE;
     }
 
     /**

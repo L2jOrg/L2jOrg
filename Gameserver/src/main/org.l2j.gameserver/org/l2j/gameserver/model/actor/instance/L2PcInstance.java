@@ -111,6 +111,7 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.zeroIfNullElseCompute;
+import static org.l2j.gameserver.network.SystemMessageId.S1_HAS_INFLICTED_S3_DAMAGE_ATTRIBUTE_DAMAGE_S4_TO_S2;
 
 /**
  * This class represents all player characters in the world.<br>
@@ -212,28 +213,40 @@ public final class L2PcInstance extends L2Playable {
         }
     }
 
-    public int getActiveElementalSpiritAttack() {
-        return zeroIfNullElseCompute(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getAttack);
+    public double getActiveElementalSpiritAttack() {
+        return getStat().getElementalSpiritPower(activeElementalSpiritType, zeroIfNullElseCompute(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getAttack));
     }
 
-    public int getFireSpiritDefense() {
-        return getElementalSpiritDefense(ElementalType.FIRE);
+    public double getFireSpiritDefense() {
+        return getElementalSpiritDefenseOf(ElementalType.FIRE);
     }
 
-    public int getWaterSpiritDefense() {
-        return getElementalSpiritDefense(ElementalType.WATER);
+    public double getWaterSpiritDefense() {
+        return getElementalSpiritDefenseOf(ElementalType.WATER);
     }
 
-    public int getWindSpiritDefense() {
-        return getElementalSpiritDefense(ElementalType.WIND);
+    public double getWindSpiritDefense() {
+        return getElementalSpiritDefenseOf(ElementalType.WIND);
     }
 
-    public int getEarthSpiritDefense() {
-        return getElementalSpiritDefense(ElementalType.EARTH);
+    public double getEarthSpiritDefense() {
+        return getElementalSpiritDefenseOf(ElementalType.EARTH);
     }
 
-    private int getElementalSpiritDefense(ElementalType type) {
-        return zeroIfNullElseCompute(getElementalSpirit(type), ElementalSpirit::getDefense);
+    public double getElementalSpiritDefenseOf(ElementalType type) {
+        return getStat().getElementalSpiritDefense(type, zeroIfNullElseCompute(getElementalSpirit(type), ElementalSpirit::getDefense));
+    }
+
+    public double getElementalSpiritCritRate() {
+        return getStat().getElementalSpiritCriticalRate(zeroIfNullElseCompute(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getCriticalRate));
+    }
+
+    public double getElementalSpiritCritDamage() {
+        return getStat().getElementalSpiritCriticalDamage(zeroIfNullElseCompute(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getCriticalDamage));
+    }
+
+    public double getElementalSpiritXpBonus() {
+        return getStat().getElementalSpiritXpBonus();
     }
 
     public ElementalSpirit getElementalSpirit(ElementalType type) {
@@ -243,8 +256,8 @@ public final class L2PcInstance extends L2Playable {
         return spirits[type.getId() -1];
     }
 
-    public int getActiveElementalSpiritType() {
-        return zeroIfNullElseCompute(activeElementalSpiritType, ElementalType::getId);
+    public byte getActiveElementalSpiritType() {
+        return (byte) zeroIfNullElseCompute(activeElementalSpiritType, ElementalType::getId);
     }
 
     public void changeElementalSpirit(byte element) {
@@ -300,10 +313,6 @@ public final class L2PcInstance extends L2Playable {
 
     public void setVipTierExpiration(long expiration) {
         getClient().setVipTierExpiration(expiration);
-    }
-
-    public double getElementalSpiritXpBonus() {
-        return getStat().getElementalSpiritXpBonus();
     }
 
     public boolean isInBattle() {
@@ -9343,7 +9352,7 @@ public final class L2PcInstance extends L2Playable {
     }
 
     @Override
-    public void sendDamageMessage(L2Character target, Skill skill, int damage, boolean crit, boolean miss) {
+    public void sendDamageMessage(L2Character target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss) {
         // Check if hit is missed
         if (miss) {
             if (skill == null) {
@@ -9389,10 +9398,17 @@ public final class L2PcInstance extends L2Playable {
             sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HIT_FOR_S1_DAMAGE);
             sm.addInt(damage);
         } else if (this != target){
-            sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
+            if(elementalDamage != 0) {
+                sm = SystemMessage.getSystemMessage(S1_HAS_INFLICTED_S3_DAMAGE_ATTRIBUTE_DAMAGE_S4_TO_S2);
+            } else {
+                sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
+            }
             sm.addPcName(this);
             sm.addString(target.getName());
             sm.addInt(damage);
+            if(elementalDamage != 0) {
+                sm.addInt((int) elementalDamage);
+            }
             sm.addPopup(target.getObjectId(), getObjectId(), -damage);
         }
         if(sm != null) {

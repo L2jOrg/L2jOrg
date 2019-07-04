@@ -96,7 +96,7 @@ public final class HealPercent extends AbstractEffect
 		{
 			final double damage = -amount;
 			effected.reduceCurrentHp(damage, effector, skill, false, false, false, false);
-			effector.sendDamageMessage(effected, skill, (int) damage, false, false);
+			effector.sendDamageMessage(effected, skill, (int) damage, 0, false, false);
 		}
 	}
 }

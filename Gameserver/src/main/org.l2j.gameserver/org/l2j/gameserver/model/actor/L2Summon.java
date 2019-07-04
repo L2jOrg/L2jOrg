@@ -589,7 +589,7 @@ public abstract class L2Summon extends L2Playable {
     }
 
     @Override
-    public void sendDamageMessage(L2Character target, Skill skill, int damage, boolean crit, boolean miss) {
+    public void sendDamageMessage(L2Character target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss) {
         if (miss || (_owner == null)) {
             return;
         }

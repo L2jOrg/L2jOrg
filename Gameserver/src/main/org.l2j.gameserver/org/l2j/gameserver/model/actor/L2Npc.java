@@ -741,9 +741,10 @@ public class L2Npc extends L2Character {
         return getTemplate().getAttributeExp();
     }
 
-    public ElementalType getElementalType() {
+    public ElementalType getElementalSpiritType() {
         return getTemplate().getElementalType();
     }
+
 
     /**
      * Kill the L2NpcInstance (the corpse disappeared after 7 seconds).<br>

@@ -40,7 +40,7 @@ public class ElementalSpirit {
         if(data.getExperience() > getExperienceToNextLevel()) {
             levelUp();
             owner.sendPacket(SystemMessage.getSystemMessage(S1_ATTRIBUTE_SPIRIT_BECAME_LEVEL_S2).addElementalSpirit(getType()).addByte(data.getLevel()));
-            owner.sendPacket(new ElementalSpiritInfo((byte) owner.getActiveElementalSpiritType(), (byte) 0));
+            owner.sendPacket(new ElementalSpiritInfo(owner.getActiveElementalSpiritType(), (byte) 0));
             var userInfo = new UserInfo(owner);
             userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
             owner.sendPacket(userInfo);
@@ -192,4 +192,11 @@ public class ElementalSpirit {
         data.addCritDamagePoints(critDamagePoints);
     }
 
+    public int getCriticalRate() {
+        return  template.getCriticalRateAtLevel(data.getLevel()) + getCriticalRatePoints();
+    }
+
+    public int getCriticalDamage() {
+        return template.getCriticalDamageAtLevel(data.getLevel()) + getCriticalRatePoints();
+    }
 }

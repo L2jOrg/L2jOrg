@@ -245,9 +245,19 @@ public enum Stats {
     WORLD_CHAT_POINTS("worldChatPoints"),
     ATTACK_DAMAGE("attackDamage"),
 
-    BONUS_SPIRIT_XP("elementalSpiritXp");
+    ELEMENTAL_SPIRIT_BONUS_XP("elementalSpiritXp"),
+    ELEMENTAL_SPIRIT_FIRE_ATTACK("elementalSpiritFireAttack"),
+    ELEMENTAL_SPIRIT_FIRE_DEFENSE("elementalSpiritFireDefense"),
+    ELEMENTAL_SPIRIT_WATER_ATTACK("elementalSpiritWaterAttack"),
+    ELEMENTAL_SPIRIT_WATER_DEFENSE("elementalSpiritWaterDefense"),
+    ELEMENTAL_SPIRIT_WIND_ATTACK("elementalSpiritWindAttack"),
+    ELEMENTAL_SPIRIT_WIND_DEFENSE("elementalSpiritWindDefense"),
+    ELEMENTAL_SPIRIT_EARTH_ATTACK("elementalSpiritEarthAttack"),
+    ELEMENTAL_SPIRIT_EARTH_DEFENSE("elementalSpiritEarthDefense"),
+    ELEMENTAL_SPIRIT_CRITICAL_RATE("elementalSpiritCriticalRate"),
+    ELEMENTAL_SPIRIT_CRITICAL_DAMAGE("elementalSpiritCriticalDamage")
+    ;
 
-    public static final int NUM_STATS = values().length;
     private final String _value;
     private final IStatsFunction _valueFinalizer;
     private final BiFunction<Double, Double, Double> _addFunction;

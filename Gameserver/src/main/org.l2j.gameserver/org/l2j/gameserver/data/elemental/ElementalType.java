@@ -1,5 +1,7 @@
 package org.l2j.gameserver.data.elemental;
 
+import org.l2j.gameserver.model.stats.Stats;
+
 public enum ElementalType {
     NONE,
     FIRE,
@@ -29,5 +31,23 @@ public enum ElementalType {
         };
     }
 
+    public Stats getAttackStat() {
+        return switch (this) {
+            case EARTH -> Stats.ELEMENTAL_SPIRIT_EARTH_ATTACK;
+            case WIND -> Stats.ELEMENTAL_SPIRIT_WIND_ATTACK;
+            case FIRE -> Stats.ELEMENTAL_SPIRIT_FIRE_ATTACK;
+            case WATER -> Stats.ELEMENTAL_SPIRIT_WATER_ATTACK;
+            default -> null;
+        };
+    }
 
+    public Stats getDefenseStat() {
+        return switch (this) {
+            case EARTH -> Stats.ELEMENTAL_SPIRIT_EARTH_DEFENSE;
+            case WIND -> Stats.ELEMENTAL_SPIRIT_WIND_DEFENSE;
+            case FIRE -> Stats.ELEMENTAL_SPIRIT_FIRE_DEFENSE;
+            case WATER -> Stats.ELEMENTAL_SPIRIT_WATER_DEFENSE;
+            default -> null;
+        };
+    }
 }

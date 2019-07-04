@@ -347,6 +347,9 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
         return elementalType;
     }
 
+
+
+
     public double getRaidPoints() {
         return _raidPoints;
     }

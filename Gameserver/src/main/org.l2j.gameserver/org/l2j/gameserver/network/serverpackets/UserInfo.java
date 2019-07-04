@@ -305,20 +305,20 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
         }
 
         if (containsMask(UserInfoType.TRUE_HERO)) {
-            writeShort((short) 9);
-            writeByte((byte) 0x01);
+            writeShort(9);
+            writeByte(0x01);
             writeInt(0x00);
-            writeByte((byte) 0x00);
+            writeByte(0x00);
             writeByte(activeChar.isTrueHero() ? 100 : 0x00);
         }
 
         if (containsMask(UserInfoType.ATT_SPIRITS)) {
-            writeShort((short) 26);
-            writeInt(activeChar.getActiveElementalSpiritAttack());
-            writeInt(activeChar.getFireSpiritDefense());
-            writeInt(activeChar.getWaterSpiritDefense());
-            writeInt(activeChar.getWindSpiritDefense());
-            writeInt(activeChar.getEarthSpiritDefense());
+            writeShort(26);
+            writeInt((int) activeChar.getActiveElementalSpiritAttack());
+            writeInt((int) activeChar.getFireSpiritDefense());
+            writeInt((int) activeChar.getWaterSpiritDefense());
+            writeInt((int) activeChar.getWindSpiritDefense());
+            writeInt((int) activeChar.getEarthSpiritDefense());
             writeInt(activeChar.getActiveElementalSpiritType());
         }
     }

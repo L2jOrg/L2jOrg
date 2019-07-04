@@ -77,6 +77,14 @@ class ElementalSpiritTemplate {
         return levels.get(level).defense;
     }
 
+    int getCriticalRateAtLevel(byte level) {
+        return levels.get(level).criticalRate;
+    }
+
+    int getCriticalDamageAtLevel(byte level) {
+        return levels.get(level).criticalDamage;
+    }
+
     int getMaxCharacteristics() {
         return maxCharacteristics;
     }
@@ -99,6 +107,7 @@ class ElementalSpiritTemplate {
     int getExtractItem() {
         return extractItem;
     }
+
 
     private static class SpiritLevel {
         long maxExperience;

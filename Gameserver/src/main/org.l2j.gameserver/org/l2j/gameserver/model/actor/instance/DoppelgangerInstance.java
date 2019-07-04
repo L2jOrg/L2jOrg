@@ -108,11 +108,11 @@ public class DoppelgangerInstance extends L2Npc {
     @Override
     public void doAttack(double damage, L2Character target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
         super.doAttack(damage, target, skill, isDOT, directlyToHp, critical, reflect);
-        sendDamageMessage(target, skill, (int) damage, critical, false);
+        sendDamageMessage(target, skill, (int) damage, 0, critical, false);
     }
 
     @Override
-    public void sendDamageMessage(L2Character target, Skill skill, int damage, boolean crit, boolean miss) {
+    public void sendDamageMessage(L2Character target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss) {
         if (miss || (getSummoner() == null) || !getSummoner().isPlayer()) {
             return;
         }

@@ -1,6 +1,7 @@
 package org.l2j.gameserver.model.actor.stat;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2j.gameserver.enums.UserInfoType;
@@ -548,7 +549,23 @@ public class PcStat extends PlayableStat {
     }
 
     public double getElementalSpiritXpBonus() {
-        return getValue(Stats.BONUS_SPIRIT_XP, 1);
+        return getValue(Stats.ELEMENTAL_SPIRIT_BONUS_XP, 1);
+    }
+
+    public double getElementalSpiritPower(ElementalType type, double base) {
+        return getValue(type.getAttackStat(), base);
+    }
+
+    public double getElementalSpiritCriticalRate(int base) {
+        return getValue(Stats.ELEMENTAL_SPIRIT_CRITICAL_RATE, base);
+    }
+
+    public double getElementalSpiritCriticalDamage(double base) {
+        return getValue(Stats.ELEMENTAL_SPIRIT_CRITICAL_DAMAGE, base);
+    }
+
+    public double getElementalSpiritDefense(ElementalType type, double base) {
+        return getValue(type.getDefenseStat(), base);
     }
 
     @Override
