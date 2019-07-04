@@ -2191,6 +2191,16 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                             info.addComponentType(UserInfoType.ATK_ELEMENTAL);
                             break;
                         }
+                        case ELEMENTAL_SPIRIT_EARTH_ATTACK:
+                        case ELEMENTAL_SPIRIT_EARTH_DEFENSE:
+                        case ELEMENTAL_SPIRIT_FIRE_ATTACK:
+                        case ELEMENTAL_SPIRIT_FIRE_DEFENSE:
+                        case ELEMENTAL_SPIRIT_WATER_ATTACK:
+                        case ELEMENTAL_SPIRIT_WATER_DEFENSE:
+                        case ELEMENTAL_SPIRIT_WIND_ATTACK:
+                        case ELEMENTAL_SPIRIT_WIND_DEFENSE:
+                            info.addComponentType(UserInfoType.ATT_SPIRITS);
+                            break;
                     }
                 }
             }

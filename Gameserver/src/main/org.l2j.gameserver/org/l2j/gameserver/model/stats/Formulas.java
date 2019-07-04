@@ -43,7 +43,7 @@ public final class Formulas {
     /**
      * Regeneration Task period.
      */
-    private static final int HP_REGENERATE_PERIOD = 3000; // 3 secs
+    private static final int HP_REGENERATE_PERIOD = 3000; // 3 secsEa
     private static final byte MELEE_ATTACK_RANGE = 40;
 
     /**

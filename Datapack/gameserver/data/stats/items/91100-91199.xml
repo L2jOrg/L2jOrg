@@ -902,36 +902,64 @@
 		<set name="icon" val="icon.etc_fire_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="5" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="51130" level="1"/> <!-- Fire Attribute Attack Potion -->
+		</skills>
 	</item>
 	<item id="91190" name="Water Attribute Attack Potion" type="EtcItem">
 		<!-- Use to get Water Attack Power +50 for 20 min. Cannot be dropped or sold. -->
 		<set name="icon" val="icon.etc_water_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="5" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="51131" level="1"/> <!-- Water Attribute Attack Potion -->
+		</skills>
 	</item>
 	<item id="91191" name="Wind Attribute Attack Potion" type="EtcItem">
 		<!-- Use to get Wind Attack Power +50 for 20 min. Cannot be dropped or sold. -->
 		<set name="icon" val="icon.etc_wind_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="5" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="51132" level="1"/> <!-- Wind Attribute Attack Potion -->
+		</skills>
 	</item>
 	<item id="91192" name="Earth Attribute Attack Potion" type="EtcItem">
 		<!-- Use to get Earth Attack Power +50 for 20 min. Cannot be dropped or sold. -->
 		<set name="icon" val="icon.etc_earth_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="5" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="51133" level="1"/> <!-- Earth Attribute Attack Potion -->
+		</skills>
 	</item>
 	<item id="91193" name="Amulet of Winds" additionalName="30-day" type="EtcItem">
 		<!-- A 30-day item. When in inventory, CON, MEN, DEX, WIT, STR, INT +1. Acquired XP/ SP through hunting +20%, Acquired XP/ SP through fishing +50%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
