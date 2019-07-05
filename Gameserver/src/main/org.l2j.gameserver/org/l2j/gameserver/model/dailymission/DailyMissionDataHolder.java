@@ -96,18 +96,28 @@ public class DailyMissionDataHolder {
         return (handler != null) && handler.getRecentlyCompleted(player);
     }
 
-    public void reset() {
-        if (handler != null && canReset()) {
+    public void reset(long lastReset) {
+        if (handler != null && canReset(lastReset)) {
             handler.reset();
         }
     }
 
-    private boolean canReset() {
+    private boolean canReset(long lastReset) {
         return switch(cycle) {
             case SINGLE -> false;
             case DAILY -> true;
-            case WEEKLY -> Calendar.getInstance().get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY;
-            case MONTHLY -> Calendar.getInstance().get(Calendar.DAY_OF_MONTH) == 1;
+            case WEEKLY -> resetWeekly(lastReset);
+            case MONTHLY -> resetMonthly(lastReset);
         };
+    }
+
+    private boolean resetMonthly(long lastReset) {
+        // TODO check last reset
+        return Calendar.getInstance().get(Calendar.DAY_OF_MONTH) == 1;
+    }
+
+    private boolean resetWeekly(long lastReset) {
+        // TODO check last reset
+        return Calendar.getInstance().get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY;
     }
 }

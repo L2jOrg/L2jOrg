@@ -23,11 +23,13 @@ public class HuntDailyMissionHandler extends AbstractDailyMissionHandler {
     private final int requiredLevel;
     private final int maxLevel;
     private final List<Integer> monsters;
+    private final int classLevel;
 
     public HuntDailyMissionHandler(DailyMissionDataHolder holder) {
         super(holder);
         requiredLevel = holder.getParams().getInt("minLevel", 0);
         maxLevel = holder.getParams().getInt("maxLevel", Byte.MAX_VALUE);
+        classLevel = holder.getParams().getInt("classLevel", 0);
         final String monsters = holder.getParams().getString("monsters", "");
         this.monsters = Arrays.stream(monsters.split(" ")).filter(Util::isNumeric).map(Integer::parseInt).collect(Collectors.toList());
     }
@@ -45,7 +47,7 @@ public class HuntDailyMissionHandler extends AbstractDailyMissionHandler {
 
         final var player = event.getAttacker();
 
-        if(player.getLevel() < requiredLevel || player.getLevel() > maxLevel || (player.getLevel() - monster.getLevel() > 5)) {
+        if(player.getLevel() < requiredLevel || player.getLevel() > maxLevel || (player.getLevel() - monster.getLevel() > 5) || player.getClassId().level() < classLevel) {
             return;
         }
 

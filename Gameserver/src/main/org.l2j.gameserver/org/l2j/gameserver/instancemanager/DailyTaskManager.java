@@ -21,7 +21,6 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.DailyMissionData;
 import org.l2j.gameserver.data.xml.impl.VipData;
-import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
 import org.l2j.gameserver.model.L2World;
@@ -249,7 +248,8 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
     }
 
     private void resetDailyMissionRewards() {
-        DailyMissionData.getInstance().getDailyMissionData().forEach(DailyMissionDataHolder::reset);
+        long lastReset = getScheduler("onReset").getLastRun();
+        DailyMissionData.getInstance().getDailyMissionData().forEach(mission -> mission.reset(lastReset));
     }
 
     public static DailyTaskManager getInstance() {

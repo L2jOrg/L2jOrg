@@ -98,7 +98,7 @@ public final class EventDispatcher {
      */
     public void notifyEventAsyncDelayed(IBaseEvent event, ListenersContainer container, long delay) {
         if (Containers.Global().hasListener(event.getType()) || container.hasListener(event.getType())) {
-            ThreadPoolManager.getInstance().schedule(() -> notifyEvent(event, container, null), delay);
+            ThreadPoolManager.schedule(() -> notifyEvent(event, container, null), delay);
         }
     }
 

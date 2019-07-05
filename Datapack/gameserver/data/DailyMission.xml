@@ -975,7 +975,6 @@
     <mission id="1107" name="Learn Attribute" cycle="SINGLE"> <!-- TODO implement attribute System -->
         <handler name="spirit">
             <param name="kind">LEARN</param>
-            <param name="minLevel">76</param>
         </handler>
         <reward id="91030"/>
     </mission>
@@ -983,7 +982,8 @@
     <mission id="1108" name="Wind Attack Hunting Ground Guide" requiredCompletion="700" cycle="SINGLE">
         <handler name="hunt">
             <param name="minLevel">76</param>
-            <param name="monsters">21785 21791 21787 21790 21788 21771</param>
+            <param name="classLevel">3</param>
+            <param name="monsters">21770 21771 21772 21776 21777 21778 21779 21780 21781 21782 21783 21784 21785 21786 21787 21788 21789 21790 21791 21792 21793</param>
         </handler>
         <reward id="91033"/>
     </mission>
@@ -991,7 +991,8 @@
     <mission id="1109" name="Earth Attack Hunting Ground Guide" requiredCompletion="700 " cycle="SINGLE">
         <handler name="hunt">
             <param name="minLevel">76</param>
-            <param name="monsters">21829 21831 21830 21828</param>
+            <param name="classLevel">3</param>
+            <param name="monsters">21764 21765 21766 21774 21775 21813 21814 21815 21816 21817 21818 21819 21820 21821 21822 21823 21824 21825 21826 21827 21828 21829 21830 21831</param>
         </handler>
         <reward id="91034"/>
     </mission>
@@ -999,7 +1000,8 @@
     <mission id="1110" name="Water Attack Hunting Ground Guide" requiredCompletion="700" cycle="SINGLE">
         <handler name="hunt">
             <param name="minLevel">76</param>
-            <param name="monsters">20849 20801 20802 20994 20803 20773 21768 20849</param>
+            <param name="classLevel">3</param>
+            <param name="monsters">20800 20801 20802 20803 20849 20994 20803 20773 20792 20794 20795 20796 20797 20798 20799 20849 20994 20995 21767 21768 21769 21773 </param>
         </handler>
         <reward id="91031"/>
     </mission>
@@ -1007,15 +1009,15 @@
     <mission id="1111" name="Fire Attack Hunting Ground Guide" requiredCompletion="700" cycle="SINGLE">
         <handler name="hunt">
             <param name="minLevel">76</param>
-            <param name="monsters">12450 21663 21670 21672 21762 21661 21664 21667 21668 21669 21671</param>
+            <param name="classLevel">3</param>
+            <param name="monsters">12450 21661 21662 21663 21664 21665 21666 21667 21668 21669 21670 21671 21672 21673 21674 21675 21676 21678 21685 21686 21761 21762 21763</param>
         </handler>
         <reward id="91032"/>
     </mission>
 
     <mission id="1112" name="Attain Fire Spirits 3 Stars" cycle="SINGLE">
         <handler name="spirit">
-            <param name="kind">EVOLVE_FIRE</param> <!-- TODO implment Attribute system -->
-            <param name="minLevel">76</param>
+            <param name="kind">EVOLVE_FIRE</param> <!-- TODO implement Attribute system -->
         </handler>
         <reward id="91056"/>
     </mission>
@@ -1023,7 +1025,6 @@
     <mission id="1113" name="Attain Water Spirits 3 Stars" cycle="SINGLE">
         <handler name="spirit">
             <param name="kind">EVOLVE_WATER</param> <!-- TODO implment Attribute system -->
-            <param name="minLevel">76</param>
         </handler>
         <reward id="91055"/>
     </mission>
@@ -1031,7 +1032,6 @@
     <mission id="1114" name="Attain Wind Spirits 3 Stars" cycle="SINGLE"> <!-- TODO implment Attribute system -->
         <handler name="spirit">
             <param name="kind">EVOLVE_WIND</param>
-            <param name="minLevel">76</param>
         </handler>
         <reward id="91057"/>
     </mission>
@@ -1039,7 +1039,6 @@
     <mission id="1115" name="Attain Earth Spirits 3 Stars" cycle="SINGLE">
         <handler name="spirit">
             <param name="kind">EVOLVE_EARTH</param>
-            <param name="minLevel">76</param>
         </handler>
         <reward id="91058"/>
     </mission>
@@ -1047,8 +1046,12 @@
     <mission id="1116" name="Attribute Monster Hunt" requiredCompletion="1800" cycle="WEEKLY">
         <handler name="hunt">
             <param name="minLevel">76</param>
-            <param name="monsters">21785 21791 21787 21790 21788 21771 21829 21831 21830 21828 12450 21663 21670 21672
-                21762 21661 21664 21667 21668 21669 21671
+            <param name="classLevel">3</param>
+            <param name="monsters">
+                21770 21771 21772 21776 21777 21778 21779 21780 21781 21782 21783 21784 21785 21786 21787 21788 21789 21790 21791 21792 21793
+                21764 21765 21766 21774 21775 21813 21814 21815 21816 21817 21818 21819 21820 21821 21822 21823 21824 21825 21826 21827 21828 21829 21830 21831
+                20800 20801 20802 20803 20849 20994 20803 20773 20792 20794 20795 20796 20797 20798 20799 20849 20994 20995 21767 21768 21769 21773
+                12450 21661 21662 21663 21664 21665 21666 21667 21668 21669 21670 21671 21672 21673 21674 21675 21676 21678 21685 21686 21761 21762 21763
             </param>
         </handler>
         <reward id="91030" count="5"/>

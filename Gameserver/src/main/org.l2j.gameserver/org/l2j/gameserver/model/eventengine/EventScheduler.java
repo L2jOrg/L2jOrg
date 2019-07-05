@@ -27,6 +27,7 @@ public class EventScheduler {
     private final boolean _repeat;
     private List<EventMethodNotification> _notifications;
     private ScheduledFuture<?> _task;
+    private long lastRun = 0;
 
     public EventScheduler(AbstractEventManager<?> manager, StatsSet set) {
         _eventManager = manager;
@@ -105,19 +106,22 @@ public class EventScheduler {
     }
 
     public boolean updateLastRun() {
+        lastRun = System.currentTimeMillis();
         try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("INSERT INTO event_schedulers (eventName, schedulerName, lastRun) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE eventName = ?, schedulerName = ?, lastRun = ?")) {
+             PreparedStatement ps = con.prepareStatement("REPLACE INTO event_schedulers (eventName, schedulerName, lastRun) VALUES (?, ?, ?)")) {
+
+
+
             ps.setString(1, _eventManager.getName());
             ps.setString(2, _name);
-            ps.setTimestamp(3, new Timestamp(System.currentTimeMillis()));
-            ps.setString(4, _eventManager.getName());
-            ps.setString(5, _name);
-            ps.setTimestamp(6, new Timestamp(System.currentTimeMillis()));
+            ps.setTimestamp(3, new Timestamp(lastRun));
             ps.execute();
+
             return true;
         } catch (Exception e) {
             LOGGER.warn("Failed to insert/update information for scheduled task manager: " + _eventManager.getClass().getSimpleName() + " scheduler: " + _name, e);
         }
+        lastRun = 0;
         return false;
     }
 
@@ -130,6 +134,10 @@ public class EventScheduler {
 
     public long getRemainingTime(TimeUnit unit) {
         return (_task != null) && !_task.isDone() ? _task.getDelay(unit) : 0;
+    }
+
+    public long getLastRun() {
+        return lastRun;
     }
 
     public void run() {
