@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="49500" name="Greater Scroll of Escape" additionalName="Event" type="EtcItem">
 		<!-- Magic scroll used to quickly teleport the character to the nearest town. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="91300" name="Spring Energy Lv. 3" type="EtcItem">
 		<!-- For 20 min., Max. HP/ MP +15%, P. Atk. +15%, M. Atk. +23%, Atk. Spd./ Casting Spd. +15%, P./ M. Def. +15%, acquired XP/ SP +15%, Sayha Grace Consumption -15%. Cannot be dropped or sold. <Warning>. If a second Spring Energy effect is used together with the first one, only the highest level effect applies. The item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_leaf_green_i00" />

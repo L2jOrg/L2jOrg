@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="1785" name="Soulstone" type="EtcItem">
 		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_crystal_white_i00" />

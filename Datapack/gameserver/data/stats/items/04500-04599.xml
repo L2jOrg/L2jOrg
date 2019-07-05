@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="4500" name="Greater Dye of INT (Int + 1 Wit - 2)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 2nd Class Transfer. -->
 		<set name="icon" val="icon.etc_int_hena_i01" />

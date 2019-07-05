@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="7300" name="Resonance Amulet: 2" type="EtcItem">
 		<!-- An item that enables communication with the second mysterious monument. -->
 		<set name="icon" val="icon.etc_resonance_amulet_i00" />

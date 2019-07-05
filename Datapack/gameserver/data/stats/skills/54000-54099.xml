@@ -138,29 +138,94 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54023" toLevel="5" name="Water Attack Defense">
-		<!-- Water Attack Defense +20. -->
+		<!-- Water Attack Defense +20. 40, 60, 80, 100-->
 		<icon>icon.elemental_necklace_water_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="elementalSpiritDefense">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">40</value>
+					<value level="3">60</value>
+					<value level="4">80</value>
+					<value level="5">100</value>
+				</amount>
+				<type>WATER</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54024" toLevel="5" name="Fire Attack Defense">
 		<!-- Fire Attack Defense +20. -->
 		<icon>icon.elemental_necklace_fire_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="elementalSpiritDefense">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">40</value>
+					<value level="3">60</value>
+					<value level="4">80</value>
+					<value level="5">100</value>
+				</amount>
+				<type>FIRE</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54025" toLevel="5" name="Wind Attack Defense">
 		<!-- Wind Attack Defense +20. -->
 		<icon>icon.elemental_necklace_wind_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="elementalSpiritDefense">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">40</value>
+					<value level="3">60</value>
+					<value level="4">80</value>
+					<value level="5">100</value>
+				</amount>
+				<type>WIND</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54026" toLevel="5" name="Earth Attack Defense">
 		<!-- Earth Attack Defense +20. -->
 		<icon>icon.elemental_necklace_earth_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="elementalSpiritDefense">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">40</value>
+					<value level="3">60</value>
+					<value level="4">80</value>
+					<value level="5">100</value>
+				</amount>
+				<type>EARTH</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54027" toLevel="5" name="Attribute XP Increase">
-		<!-- Acquired attribute XP +3%. -->
+		<!-- Acquired attribute XP +3%. 6, 10, 15, 30 -->
 		<icon>icon.skill_transform_s_attack</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="SpiritXpModify">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">6</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+					<value level="5">30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54028" toLevel="1" name="Spirit's Blessing">
 		<!-- For 20 min. Acquired Attribute XP +20%. -->
@@ -192,22 +257,157 @@
 	<skill id="54030" toLevel="11" name="Ignis' Necklace Basic Effect">
 		<!-- Max HP +50. -->
 		<icon>icon.elemental_necklace_fire_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">50</value>
+					<value level="3">100</value>
+					<value level="4">100</value>
+					<value level="5">150</value>
+					<value level="6">150</value>
+					<value level="7">200</value>
+					<value level="8">200</value>
+					<value level="9">300</value>
+					<value level="10">300</value>
+					<value level="11">500</value>
+				</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">3</value>
+					<value level="8">5</value>
+					<value level="9">7</value>
+					<value level="10">10</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54031" toLevel="11" name="Nebula's Necklace Basic Effect">
 		<!-- Max HP +50. -->
 		<icon>icon.elemental_necklace_water_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">50</value>
+					<value level="3">100</value>
+					<value level="4">100</value>
+					<value level="5">150</value>
+					<value level="6">150</value>
+					<value level="7">200</value>
+					<value level="8">200</value>
+					<value level="9">300</value>
+					<value level="10">300</value>
+					<value level="11">500</value>
+				</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">3</value>
+					<value level="8">5</value>
+					<value level="9">7</value>
+					<value level="10">10</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54032" toLevel="11" name="Procella's Necklace Basic Effect">
 		<!-- Max HP +50. -->
 		<icon>icon.elemental_necklace_wind_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">50</value>
+					<value level="3">100</value>
+					<value level="4">100</value>
+					<value level="5">150</value>
+					<value level="6">150</value>
+					<value level="7">200</value>
+					<value level="8">200</value>
+					<value level="9">300</value>
+					<value level="10">300</value>
+					<value level="11">500</value>
+				</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">3</value>
+					<value level="8">5</value>
+					<value level="9">7</value>
+					<value level="10">10</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54033" toLevel="11" name="Petram's Necklace Basic Effect">
 		<!-- Max HP +50. -->
 		<icon>icon.elemental_necklace_earth_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">50</value>
+					<value level="3">100</value>
+					<value level="4">100</value>
+					<value level="5">150</value>
+					<value level="6">150</value>
+					<value level="7">200</value>
+					<value level="8">200</value>
+					<value level="9">300</value>
+					<value level="10">300</value>
+					<value level="11">500</value>
+				</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">3</value>
+					<value level="8">5</value>
+					<value level="9">7</value>
+					<value level="10">10</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54034" toLevel="10" name="Anakim's Power">
 		<!-- When using the Recharge skill, MP Recovery Rate +5, M. Atk. +1%. -->
@@ -258,3 +458,4 @@
 		<operateType>A1</operateType>
 	</skill>
 </list>
+

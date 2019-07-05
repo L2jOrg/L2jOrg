@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="91600" name="Dimensional Talisman Lv. 9" type="Armor">
 		<!-- When equipped, P./ M. Def. +90, P./ M. Evasion +4, Max. HP/ MP/ CP +1600, Speed +9, Atk. Spd. +50, Casting Spd. +80, Acquired XP/ SP +20%. Activates Dimensional Border Power (at a certain probability, increases attack abilities) Lv. 8, Dimensional Guard Lv. 9 (reduced chance of being hit by a quick stab attack for a certain amount of time, reduced Received P./ M. Critical Damage, increased M. Damage Resistance) skill can be used. Take it to Alchemist Veruti in Giran for upgrade. Dimensional powers cancel the power of Talisman of Border. Effect does not stack with the Talisman of Border. Cannot be dropped. -->
 		<set name="icon" val="icon.bm_dimension_tallisman" />

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="38154" name="Fishing Shot" type="EtcItem">
 		<!-- Soulshot for a fishing rod. Doubles the fishing success rate. Cannot be sold. -->
 		<set name="icon" val="icon.etc_spirit_bullet_fish_i05" />

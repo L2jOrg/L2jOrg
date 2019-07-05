@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="91400" name="Manuscript - Armor Break" type="EtcItem">
 		<!-- An ancient manuscript with inscriptions. Double-click to learn Armor Break skill. For characters Lv. 80 and above of any class. -->
 		<set name="icon" val="icon.high_skill_book_i00" />

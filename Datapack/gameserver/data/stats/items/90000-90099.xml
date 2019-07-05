@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="90000" name="Best Dye of DEX (DEX + 4 CON - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv4_1_dye_dex" />

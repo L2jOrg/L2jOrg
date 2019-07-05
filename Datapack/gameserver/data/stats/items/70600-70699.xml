@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="70600" name="Mysterious Blessed Soulshot (D-grade)" type="EtcItem">
 		<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a D-grade weapon. -->
 		<set name="icon" val="icon.etc_bless_spirit_bullet_blue_i00" />

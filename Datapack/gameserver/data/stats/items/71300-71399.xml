@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="71300" name="Fortune Chest" type="EtcItem">
 		<!-- Double-click to obtain a chest with one of the items: Vital Stone, Diamond, Pearl, Aquamarine, Sapphire, Ruby, Jade, Garnet, Topaz, Red Cat's Eye or Blue Cat's Eye. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />

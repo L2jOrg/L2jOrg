@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="34603" name="Mysterious No-grade Soulshot" type="EtcItem">
 		<!-- Soulshot bestowed upon a weapon increases its attack power. Used with No-grade weapons. Cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="icon.etc_spirit_bullet_white_i00" />

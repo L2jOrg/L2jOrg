@@ -5,24 +5,6 @@
 
     <xs:include schemaLocation="../xsd/common.xsd"/>
 
-    <!-- Nero Commander 326 xp -->
-    <!-- White tiger 165 | 137 xp -->
-    <!-- Silph 828 | 690  xp -->
-
-    <!-- Canyon Antilope 137 xp -->
-    <!-- Canyon Antilope 249 xp -->
-    <!-- Eye of Guide 143 xp -->
-    <!-- Eye of Restrainer 218 xp -->
-    <!-- Eye of Watchman 155 xp -->
-    <!-- Canyon Bandersnatch Warrior 240  xp -->
-    <!-- Buffalo 326 xp -->
-    <!-- Gaze of Nightmare 246 -->
-    <!-- Valley Buffalo 146 xp -->
-    <!-- Growler 690 xp -->
-
-    <!-- wind rough stone +12%  on 2nd level stage 1-->
-    <!-- earth rough stone +2,80% on 8th level stage 1 -->
-
     <xs:element name="list">
         <xs:complexType>
             <xs:sequence>

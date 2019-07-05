@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="71400" name="Greater Red Cat's Eye" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, P. Critical Damage +18%, P. Skill Power +3%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose" />

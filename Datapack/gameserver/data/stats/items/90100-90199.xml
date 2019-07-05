@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="90100" name="Scroll: Block Wind Walk" type="EtcItem">
 		<!-- Scroll needed to learn the Block Wind Walk skill. Available to Hierophant. Level required to obtain the scroll: 77 -->
 		<set name="icon" val="icon.etc_magic_book_white_i00" />

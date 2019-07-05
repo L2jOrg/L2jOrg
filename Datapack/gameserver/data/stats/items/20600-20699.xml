@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="20662" name="Agathion - Uthanka" type="Armor">
 		<!-- Bracelet that can be used to summon Agathion - Uthanka. Cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
@@ -41,7 +41,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="7" />
-
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20678" name="Gatekeeper Hat" type="Armor">
@@ -61,7 +60,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="7" />
-
 		<set name="is_mailable" val="false" />
 	</item>
 </list>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="70800" name="Transformation Scroll: White Assassin" additionalName="Event" type="EtcItem">
 		<!-- Makes you armor look like a White Assassin one. P. / M. Atk. +3%, P. / M. Def. +3%, Atk. Spd. +5%, Max. HP/MP +7%, Speed +5, P. / M. Accuracy +2, M. Critical Rate +20. Duration: 60 minutes. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i00" />

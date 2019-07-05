@@ -26,4 +26,53 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="statType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="mAtk" />
+            <xs:enumeration value="mDef" />
+            <xs:enumeration value="pAtk" />
+            <xs:enumeration value="pDef" />
+            <xs:enumeration value="sDef" />
+            <xs:enumeration value="mAtk" />
+            <xs:enumeration value="pAtkAngle" />
+            <xs:enumeration value="pAtkRange" />
+            <xs:enumeration value="pAtkSpd" />
+            <xs:enumeration value="rCrit" />
+            <xs:enumeration value="mCritRate" />
+            <xs:enumeration value="rShld" />
+            <xs:enumeration value="rEvas" />
+            <xs:enumeration value="mEvas" />
+            <xs:enumeration value="accCombat" />
+            <xs:enumeration value="accMagic" />
+            <xs:enumeration value="darkRes" />
+            <xs:enumeration value="earthRes" />
+            <xs:enumeration value="fireRes" />
+            <xs:enumeration value="holyPower" />
+            <xs:enumeration value="holyRes" />
+            <xs:enumeration value="maxMp" />
+            <xs:enumeration value="waterRes" />
+            <xs:enumeration value="windRes" />
+            <xs:enumeration value="magicSuccRes" />
+            <xs:enumeration value="moveSpeed" />
+            <xs:enumeration value="broochJewels" />
+            <xs:enumeration value="inventoryLimit" />
+            <xs:enumeration value="randomDamage" />
+            <xs:enumeration value="firePower" />
+            <xs:enumeration value="waterPower" />
+            <xs:enumeration value="windPower" />
+            <xs:enumeration value="earthPower" />
+            <xs:enumeration value="holyPower" />
+            <xs:enumeration value="darkPower" />
+            <xs:enumeration value="agathionSlots" />
+            <xs:enumeration value="elementalSpiritFireAttack" />
+            <xs:enumeration value="elementalSpiritFireDefense" />
+            <xs:enumeration value="elementalSpiritWaterAttack" />
+            <xs:enumeration value="elementalSpiritWaterDefense" />
+            <xs:enumeration value="elementalSpiritWindAttack" />
+            <xs:enumeration value="elementalSpiritWindDefense" />
+            <xs:enumeration value="elementalSpiritEarthAttack" />
+            <xs:enumeration value="elementalSpiritEarthDefense" />
+        </xs:restriction>
+    </xs:simpleType>
+
 </xs:schema>

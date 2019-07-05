@@ -1,5 +1,11 @@
 <?xml version="1.1" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
+	<xs:include schemaLocation="common.xsd"/>
+
 	<xs:complexType name="skillsType">
 		<xs:sequence>
 			<xs:element name="skill" type="skillType" maxOccurs="unbounded" />
@@ -220,46 +226,6 @@
 		<xs:attribute name="stat" use="required" type="statType" />
 		<xs:attribute name="val" type="xs:integer" fixed="0" use="required" />
 	</xs:complexType>
-	<xs:simpleType name="statType">
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="mAtk" />
-			<xs:enumeration value="mDef" />
-			<xs:enumeration value="pAtk" />
-			<xs:enumeration value="pDef" />
-			<xs:enumeration value="sDef" />
-			<xs:enumeration value="mAtk" />
-			<xs:enumeration value="pAtkAngle" />
-			<xs:enumeration value="pAtkRange" />
-			<xs:enumeration value="pAtkSpd" />
-			<xs:enumeration value="rCrit" />
-			<xs:enumeration value="mCritRate" />
-			<xs:enumeration value="rShld" />
-			<xs:enumeration value="rEvas" />
-			<xs:enumeration value="mEvas" />
-			<xs:enumeration value="accCombat" />
-			<xs:enumeration value="accMagic" />
-			<xs:enumeration value="darkRes" />
-			<xs:enumeration value="earthRes" />
-			<xs:enumeration value="fireRes" />
-			<xs:enumeration value="holyPower" />
-			<xs:enumeration value="holyRes" />
-			<xs:enumeration value="maxMp" />
-			<xs:enumeration value="waterRes" />
-			<xs:enumeration value="windRes" />
-			<xs:enumeration value="magicSuccRes" />
-			<xs:enumeration value="moveSpeed" />
-			<xs:enumeration value="broochJewels" />
-			<xs:enumeration value="inventoryLimit" />
-			<xs:enumeration value="randomDamage" />
-			<xs:enumeration value="firePower" />
-			<xs:enumeration value="waterPower" />
-			<xs:enumeration value="windPower" />
-			<xs:enumeration value="earthPower" />
-			<xs:enumeration value="holyPower" />
-			<xs:enumeration value="darkPower" />
-			<xs:enumeration value="agathionSlots" />
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:complexType name="condType">
 		<xs:choice maxOccurs="unbounded" minOccurs="0">
 			<xs:element name="using" type="usingType" />

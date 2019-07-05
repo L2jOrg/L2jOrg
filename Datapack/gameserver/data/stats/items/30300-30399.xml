@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="30372" name="Hero's Cloak" type="Armor">
 		<!-- Max. HP/MP/CP +10%, P. Def. +5%, M. Def. +10%, any Weapon Resistance +5, P./M. Critical Rate +20, Additional damage in PvP -10%. Returns additional 4% of inflicted damage to the enemy. Not available in a chaotic state. Cannot be exchanged, dropped, or sold. Can be stored in private warehouse. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />

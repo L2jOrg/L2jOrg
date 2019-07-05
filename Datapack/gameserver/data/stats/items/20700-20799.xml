@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="20728" name="Summon Scroll: Lucky Lamp" type="EtcItem">
 		<!-- Summon Scroll: Lucky Lamp allows to resurrect at the place of death. You are invisible for the first 5 sec after resurrection. Monsters' attacks have no effect for 2 min. Movement speed is reduced by 50% for the duration of the effect. -->
 		<set name="icon" val="BranchSys.icon.br_lamp_orange_i00" />

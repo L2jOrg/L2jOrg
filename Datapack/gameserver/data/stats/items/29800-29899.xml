@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="29800" name="Grey Talisman Box - Bond" additionalName="1 hour" type="EtcItem">
 		<!-- By double-clicking it, you will get Grey Talisman - Bond (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />

@@ -114,6 +114,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("DoubleCast", DoubleCast::new);
 		EffectHandler.getInstance().registerHandler("DuelistFury", DuelistFury::new);
 		EffectHandler.getInstance().registerHandler("elementalSpiritAttack", ElementalSpiritAttack::new);
+		EffectHandler.getInstance().registerHandler("elementalSpiritDefense", ElementalSpiritDefense::new);
 		EffectHandler.getInstance().registerHandler("EnableCloak", EnableCloak::new);
 		EffectHandler.getInstance().registerHandler("EnergyAttack", EnergyAttack::new);
 		EffectHandler.getInstance().registerHandler("EnlargeAbnormalSlot", EnlargeAbnormalSlot::new);

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="49000" name="Agathion - Singer and Dancer" additionalName="30-day" type="Armor">
 		<!-- Summons Singer and Dancer Agathion when equipped. 30-day. Cannot be exchanged, dropped, or sold. <Active Skill>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 30 days. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00" />

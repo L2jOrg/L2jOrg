@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="91100" name="Fire Dragon Belt - Venir's Blessing Lv. 3" type="Armor">
 		<!-- STR +1, INT +1, HP Recovery Bonus +2.31, Max MP +1.54, CP Recovery +3.07, Max HP/ MP/ CP +10%, Inventory Slots +6, Weight Gauge +7000, P./ M. Critical Damage +4%, Healing Potions Effect +100 (Can be applied to Melissa's High Grade Recovery Potion, Melissa's Recovery Potion, Warrior's Quick Healing Potion). Applies effect Venir's Blessing Lv. 3. Cannot be dropped. -->
 		<set name="icon" val="icon.bm_vallakas_belt" />
@@ -161,10 +161,13 @@
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="0" />
 		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="54027" level="4"/> <!-- Attribute XP +15% -->
+			<skill id="54023" level="4"/> <!-- Water Attack Defense +80 -->
+		</skills>
 		<stats>
 			<stat type="mDef">96</stat>
 			<stat type="maxMp">42</stat>
-			<stat type="waterRes">80</stat>
 		</stats>
 	</item>
 	<item id="91117" name="Nebula’s Necklace" type="Armor">
@@ -180,10 +183,13 @@
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="0" /> <!-- TODO: Possible Upgrade - https://l2wiki.com/classic/Ignis%27_Necklace -->
 		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="54027" level="5"/> <!-- Attribute XP +30% -->
+			<skill id="54023" level="5"/> <!-- Water Attack Defense +100 -->
+		</skills>
 		<stats>
 			<stat type="mDef">100</stat>
 			<stat type="maxMp">50</stat>
-			<stat type="waterRes">100</stat>
 		</stats>
 	</item>
 	<item id="91118" name="Ignis’ Old Necklace" additionalName="Lv4" type="Armor">
@@ -199,10 +205,13 @@
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="0" />
 		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="54027" level="4"/> <!-- Attribute XP +15% -->
+			<skill id="54024" level="4"/> <!-- Fire Attack Defense +80 -->
+		</skills>
 		<stats>
 			<stat type="mDef">96</stat>
 			<stat type="maxMp">42</stat>
-			<stat type="fireRes">80</stat>
 		</stats>
 	</item>
 	<item id="91119" name="Ignis’ Necklace" type="Armor">
@@ -218,10 +227,13 @@
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="0" /> <!-- TODO: Possible Upgrade - https://l2wiki.com/classic/Ignis%27_Necklace -->
 		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="54027" level="5"/> <!-- Attribute XP +30% -->
+			<skill id="54024" level="5"/> <!-- Fire Attack Defense +100 -->
+		</skills>
 		<stats>
 			<stat type="mDef">100</stat>
 			<stat type="maxMp">50</stat>
-			<stat type="fireRes">100</stat>
 		</stats>
 	</item>
 	<item id="91120" name="Procella’s Old Necklace" additionalName="Lv4" type="Armor">
@@ -237,6 +249,10 @@
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="0" />
 		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="54027" level="4"/> <!-- Attribute XP +15% -->
+			<skill id="54026" level="4"/> <!-- Earth Attack Defense +80 -->
+		</skills>
 		<stats>
 			<stat type="mDef">96</stat>
 			<stat type="maxMp">42</stat>
@@ -256,10 +272,13 @@
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="0" /> <!-- TODO: Possible Upgrade - https://l2wiki.com/classic/Ignis%27_Necklace -->
 		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="54027" level="5"/> <!-- Attribute XP +30% -->
+			<skill id="54025" level="5"/> <!-- Wind Attack Defense +100 -->
+		</skills>
 		<stats>
 			<stat type="mDef">100</stat>
 			<stat type="maxMp">50</stat>
-			<stat type="windRes">100</stat>
 		</stats>
 	</item>
 	<item id="91122" name="Petram’s Old Necklace" additionalName="Lv4" type="Armor">
@@ -275,14 +294,17 @@
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="0" />
 		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="54027" level="4"/> <!-- Attribute XP +15% -->
+			<skill id="54026" level="4"/> <!-- Earth Attack Defense +80 -->
+		</skills>
 		<stats>
 			<stat type="mDef">96</stat>
 			<stat type="maxMp">42</stat>
-			<stat type="earthRes">80</stat>
 		</stats>
 	</item>
 	<item id="91123" name="Petram’s Necklace" type="Armor">
-		<!-- MP +42, Earth Attack Defense +100, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
+		<!-- MP +50, Earth Attack Defense +100, Acquired Attribute XP +30%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.elemental_necklace_earth_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -294,10 +316,13 @@
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="0" /> <!-- TODO: Possible Upgrade - https://l2wiki.com/classic/Ignis%27_Necklace -->
 		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="54027" level="5"/> <!-- Attribute XP +30% -->
+			<skill id="54026" level="5"/> <!-- Earth Attack Defense +100 -->
+		</skills>
 		<stats>
 			<stat type="mDef">100</stat>
 			<stat type="maxMp">50</stat>
-			<stat type="earthRes">100</stat>
 		</stats>
 	</item>
 	<item id="91124" name="Radiant Spirit's Varnish" type="EtcItem">

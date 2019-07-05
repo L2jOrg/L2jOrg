@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="70300" name="Enchant Scroll of Forbidden Limit" type="EtcItem">
 		<!-- An Enchant Scroll enhancing the properties of Talisman of Border. Can be applied to Talisman enchanted up to +8. In case of a failed enchantment, the item does not disappear and the enchantment level is not reset. -->
 		<set name="icon" val="icon.etc_aidcharm_cancel_deathfire_i00" />

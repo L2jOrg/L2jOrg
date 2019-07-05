@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="70000" name="Sealed Rune - Lv. 1" type="EtcItem">
 		<!-- Double-click to receive one Rune - Lv. 1, which you can insert into your weapon. Cannot be sold in the grocery store. -->
 		<set name="icon" val="BranchIcon.Icon.g_green_sealed_rune" />

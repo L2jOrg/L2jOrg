@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="29700" name="Minor Blessed Scroll of Resurrection" additionalName="Event" type="EtcItem">
 		<!-- Magic Scroll resurrecting a character and restoring most part of XP. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />

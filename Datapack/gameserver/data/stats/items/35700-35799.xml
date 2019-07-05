@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="35741" name="Scroll: PK (Low-grade)" type="EtcItem">
 		<!-- Double-click to lower PK value by 1. Must be in Floran Village to use. It can only be used when the PK value is greater than or equal to 1. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />

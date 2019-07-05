@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
 	<item id="6611" name="Infinity Sword" type="Weapon">
 		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Sword. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Speed +5%, when equipped. Infinity Power - Reflect: for 5 min. damage received +8%. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
