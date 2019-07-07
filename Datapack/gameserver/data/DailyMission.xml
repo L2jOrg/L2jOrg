@@ -106,8 +106,7 @@
     </mission>
 
     <mission id="40" name="Reach Level (Lv. 18 Warrior only)" requiredCompletion="18" cycle="SINGLE">
-        <classes>0 18 31 44 53 1 4 19 32 45 56 2 3 5 6 20 21 33 34 46 57 88 89 90 91 99 100 106 107 113 117 118
-        </classes>
+        <classes>0 18 31 44 53 1 4 19 32 45 56 2 3 5 6 20 21 33 34 46 57 88 89 90 91 99 100 106 107 113 117 118</classes>
         <handler name="level"/>
         <reward id="70102" count="10"/>
     </mission>
@@ -1015,30 +1014,34 @@
         <reward id="91032"/>
     </mission>
 
-    <mission id="1112" name="Attain Fire Spirits 3 Stars" cycle="SINGLE">
+    <mission id="1112" name="Attain Fire Spirits 3 Stars" cycle="SINGLE" requiredCompletion="3">
         <handler name="spirit">
-            <param name="kind">EVOLVE_FIRE</param> <!-- TODO implement Attribute system -->
+            <param name="kind">EVOLVE</param>
+            <param name="element">FIRE</param>
         </handler>
         <reward id="91056"/>
     </mission>
 
-    <mission id="1113" name="Attain Water Spirits 3 Stars" cycle="SINGLE">
+    <mission id="1113" name="Attain Water Spirits 3 Stars" cycle="SINGLE" requiredCompletion="3">
         <handler name="spirit">
-            <param name="kind">EVOLVE_WATER</param> <!-- TODO implment Attribute system -->
+            <param name="kind">EVOLVE</param>
+            <param name="element">WATER</param>
         </handler>
         <reward id="91055"/>
     </mission>
 
-    <mission id="1114" name="Attain Wind Spirits 3 Stars" cycle="SINGLE"> <!-- TODO implment Attribute system -->
+    <mission id="1114" name="Attain Wind Spirits 3 Stars" cycle="SINGLE" requiredCompletion="3">
         <handler name="spirit">
-            <param name="kind">EVOLVE_WIND</param>
+            <param name="kind">EVOLVE</param>
+            <param name="element">WIND</param>
         </handler>
         <reward id="91057"/>
     </mission>
 
-    <mission id="1115" name="Attain Earth Spirits 3 Stars" cycle="SINGLE">
+    <mission id="1115" name="Attain Earth Spirits 3 Stars" cycle="SINGLE" requiredCompletion="3">
         <handler name="spirit">
-            <param name="kind">EVOLVE_EARTH</param>
+            <param name="kind">EVOLVE</param>
+            <param name="element">EARTH</param>
         </handler>
         <reward id="91058"/>
     </mission>

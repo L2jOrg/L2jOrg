@@ -7,9 +7,15 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.holders.ItemHolder;
 
-import java.util.Calendar;
+import java.time.DayOfWeek;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.temporal.TemporalAdjusters;
 import java.util.List;
 import java.util.function.Function;
+
+import static java.util.Objects.nonNull;
 
 /**
  * @author Sdw
@@ -74,26 +80,26 @@ public class DailyMissionDataHolder {
             return false;
         }
 
-        // Show only if its repeatable, recently completed or incompleted that has met the checks above.
+        // Show only if its repeatable, recently completed or uncompleted that has met the checks above.
         return (!isOneTime() || getRecentlyCompleted(player) || (status != DailyMissionStatus.COMPLETED.getClientId()));
     }
 
     public void requestReward(L2PcInstance player) {
-        if ((handler != null) && isDisplayable(player)) {
+        if (nonNull(handler)) {
             handler.requestReward(player);
         }
     }
 
     public int getStatus(L2PcInstance player) {
-        return handler != null ? handler.getStatus(player) : DailyMissionStatus.NOT_AVAILABLE.getClientId();
+        return nonNull(handler) ? handler.getStatus(player) : DailyMissionStatus.NOT_AVAILABLE.getClientId();
     }
 
     public int getProgress(L2PcInstance player) {
-        return handler != null ? handler.getProgress(player) : DailyMissionStatus.NOT_AVAILABLE.getClientId();
+        return handler != null ? handler.getProgress(player) : 0;
     }
 
     public boolean getRecentlyCompleted(L2PcInstance player) {
-        return (handler != null) && handler.getRecentlyCompleted(player);
+        return (handler != null) && handler.isRecentlyCompleted(player);
     }
 
     public void reset(long lastReset) {
@@ -112,12 +118,16 @@ public class DailyMissionDataHolder {
     }
 
     private boolean resetMonthly(long lastReset) {
-        // TODO check last reset
-        return Calendar.getInstance().get(Calendar.DAY_OF_MONTH) == 1;
+        var today = LocalDate.now();
+        return today.getDayOfMonth() == 1 || today.with(TemporalAdjusters.firstDayOfMonth()).isAfter(LocalDate.ofInstant(Instant.ofEpochMilli(lastReset), ZoneId.systemDefault()));
     }
 
     private boolean resetWeekly(long lastReset) {
-        // TODO check last reset
-        return Calendar.getInstance().get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY;
+        var today = LocalDate.now();
+        return today.getDayOfWeek() == DayOfWeek.SATURDAY || today.with(TemporalAdjusters.previous(DayOfWeek.SATURDAY)).isAfter(LocalDate.ofInstant(Instant.ofEpochMilli(lastReset), ZoneId.systemDefault()));
+    }
+
+    public boolean isAvailable(L2PcInstance player) {
+        return nonNull(handler) && handler.isAvailable(player);
     }
 }

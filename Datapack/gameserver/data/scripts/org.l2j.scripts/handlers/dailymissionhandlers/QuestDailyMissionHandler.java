@@ -20,7 +20,7 @@ import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 import org.l2j.gameserver.enums.QuestType;
 import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.model.dailymission.DailyMissionPlayerData;
+import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
@@ -49,12 +49,13 @@ public class QuestDailyMissionHandler extends AbstractDailyMissionHandler
 		final L2PcInstance player = event.getActiveChar();
 		if (event.getQuestType() == QuestType.DAILY)
 		{
-			final DailyMissionPlayerData entry = getPlayerEntry(player.getObjectId(), true);
+			final DailyMissionPlayerData entry = getPlayerEntry(player, true);
 			if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)
 			{
-				if (entry.increaseProgress() >= getRequiredCompletition())
+				if (entry.increaseProgress() >= getRequiredCompletion())
 				{
 					entry.setStatus(DailyMissionStatus.AVAILABLE);
+					notifyAvailablesReward(player);
 				}
 				storePlayerEntry(entry);
 			}

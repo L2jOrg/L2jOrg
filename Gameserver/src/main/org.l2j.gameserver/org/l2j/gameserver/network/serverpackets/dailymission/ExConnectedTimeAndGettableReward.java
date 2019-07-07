@@ -10,10 +10,14 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
  * @author Sdw
  */
 public class ExConnectedTimeAndGettableReward extends ServerPacket {
-    private final int _oneDayRewardAvailableCount;
+    private final int oneDayRewardAvailableCount;
 
     public ExConnectedTimeAndGettableReward(L2PcInstance player) {
-        _oneDayRewardAvailableCount = DailyMissionData.getInstance().getDailyMissionData(player).size();
+        oneDayRewardAvailableCount = DailyMissionData.getInstance().getAvailableDailyMissionCount(player);
+    }
+
+    public ExConnectedTimeAndGettableReward(int availableCount) {
+        oneDayRewardAvailableCount = availableCount;
     }
 
     @Override
@@ -24,7 +28,7 @@ public class ExConnectedTimeAndGettableReward extends ServerPacket {
 
         writeId(ServerPacketId.EX_CONNECTED_TIME_AND_GETTABLE_REWARD);
         writeInt(0x00);
-        writeInt(_oneDayRewardAvailableCount);
+        writeInt(oneDayRewardAvailableCount);
         writeInt(0x00);
         writeInt(0x00);
         writeInt(0x00);

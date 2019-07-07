@@ -6,12 +6,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
+import java.util.Objects;
+
+import static java.util.Objects.nonNull;
 
 public class DateTimeHandler implements TypeHandler<LocalDateTime> {
 
     @Override
     public LocalDateTime defaultValue() {
-        return LocalDateTime.now();
+        return null;
     }
 
     @Override
@@ -30,7 +33,8 @@ public class DateTimeHandler implements TypeHandler<LocalDateTime> {
 
     @Override
     public LocalDateTime handleColumn(ResultSet resultSet, int column) throws SQLException {
-        return resultSet.getTimestamp(column).toLocalDateTime();
+        var timestamp = resultSet.getTimestamp(column);
+        return nonNull(timestamp) ? timestamp.toLocalDateTime() : null;
     }
 
     @Override

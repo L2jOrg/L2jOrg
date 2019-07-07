@@ -5,10 +5,7 @@ import io.github.joealisson.primitive.pair.IntObjectPair;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Type;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.regex.Pattern;
 
 import static java.util.Objects.nonNull;
@@ -17,12 +14,11 @@ public class QueryDescriptor implements AutoCloseable {
 
     private static final Pattern SELECT_PATTERN = Pattern.compile("^SELECT.*", Pattern.CASE_INSENSITIVE);
     private static final NoParameterStrategy NO_PARAMETER_STRATEGY = new NoParameterStrategy();
+    private static final ThreadLocal<Statement> statementLocal = new ThreadLocal<>();
 
     private final String query;
     private final Method method;
     private final MapParameterStrategy strategy;
-    private PreparedStatement statement;
-
 
     public QueryDescriptor(Method method, String query) {
         this(method, query, NO_PARAMETER_STRATEGY);
@@ -51,23 +47,28 @@ public class QueryDescriptor implements AutoCloseable {
     }
 
     public ResultSet getResultSet() throws SQLException {
-        return statement.getResultSet();
+        var statement = statementLocal.get();
+        return nonNull(statement) ? statement.getResultSet() : null;
     }
 
     @Override
     public void close() throws SQLException {
+        var statement = statementLocal.get();
         if(nonNull(statement)) {
             statement.close();
+            statementLocal.remove();
         }
     }
 
     public void execute(Connection con, Object[] args) throws SQLException {
-        statement = con.prepareStatement(query);
+        var statement = con.prepareStatement(query);
         strategy.setParameters(statement, args);
         statement.execute();
+        statementLocal.set(statement);
     }
 
     public Integer getUpdateCount() throws SQLException {
-        return statement.getUpdateCount();
+        var statement = statementLocal.get();
+        return nonNull(statement) ? statement.getUpdateCount() : 0;
     }
 }

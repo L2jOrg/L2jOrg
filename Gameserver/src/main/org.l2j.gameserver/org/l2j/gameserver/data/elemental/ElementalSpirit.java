@@ -4,6 +4,8 @@ import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.model.events.impl.character.OnElementalSpiritUpgrade;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
@@ -95,6 +97,8 @@ public class ElementalSpirit {
         data.setLevel((byte) 1);
         data.setExperience(0);
         template = ElementalSpiritManager.getInstance().getSpirit(data.getType(), data.getStage());
+        EventDispatcher.getInstance().notifyEventAsync(new OnElementalSpiritUpgrade(owner, this), owner);
+
     }
 
     public void resetCharacteristics() {

@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 
 public class EntityHandler implements TypeHandler<Object> {
 
@@ -25,7 +26,7 @@ public class EntityHandler implements TypeHandler<Object> {
     @Override
     public Object handleResult(QueryDescriptor queryDescriptor) throws SQLException {
         var resultSet = queryDescriptor.getResultSet();
-        if(resultSet.next()) {
+        if(nonNull(resultSet) && resultSet.next()) {
             return handleType(resultSet, queryDescriptor.getReturnType());
         }
         return defaultValue();
@@ -51,7 +52,7 @@ public class EntityHandler implements TypeHandler<Object> {
                     var handler = TypeHandler.MAP.getOrDefault(f.getType().isEnum() ? "enum" : f.getType().getName(), TypeHandler.MAP.get(Object.class.getName()));
                     f.set(instance, handler.handleColumn(resultSet, i, f.getType()));
                 } else {
-                    throw  new SQLException("No accessible field " + f.getName() + " On type " + type );
+                    throw new SQLException("No accessible field " + f.getName() + " On type " + type );
                 }
             }
             return instance;

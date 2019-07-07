@@ -188,7 +188,9 @@ public enum EventType {
     ON_INSTANCE_DESTROY(OnInstanceDestroy.class, void.class),
     ON_INSTANCE_ENTER(OnInstanceEnter.class, void.class),
     ON_INSTANCE_LEAVE(OnInstanceLeave.class, void.class),
-    ON_INSTANCE_STATUS_CHANGE(OnInstanceStatusChange.class, void.class);
+    ON_INSTANCE_STATUS_CHANGE(OnInstanceStatusChange.class, void.class),
+
+    ON_ELEMENTAL_SPIRIT_UPGRADE(OnElementalSpiritUpgrade.class, Void.class);
 
     private final Class<? extends IBaseEvent> _eventClass;
     private final Class<?>[] _returnClass;

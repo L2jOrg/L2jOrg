@@ -63,12 +63,13 @@ public class HuntDailyMissionHandler extends AbstractDailyMissionHandler {
 
     private void onKillProgress(L2PcInstance player)
     {
-        final var entry = getPlayerEntry(player.getObjectId(), true);
+        final var entry = getPlayerEntry(player, true);
         if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)
         {
-            if (entry.increaseProgress() >= getRequiredCompletition())
+            if (entry.increaseProgress() >= getRequiredCompletion())
             {
                 entry.setStatus(DailyMissionStatus.AVAILABLE);
+                notifyAvailablesReward(player);
             }
             storePlayerEntry(entry);
         }

@@ -35,7 +35,7 @@ public class EntityBasedStrategy implements MapParameterStrategy {
                     var argumentIndex = parameterInfo.getValue().getKey();
                     var value = field.get(entity);
                     var type = parameterInfo.getValue().getValue();
-                    var handler = TypeHandler.MAP.getOrDefault(type.getName(), TypeHandler.MAP.get(Object.class.getName()));
+                    var handler = TypeHandler.MAP.getOrDefault(type.isEnum() ? "enum" : type.getName(), TypeHandler.MAP.get(Object.class.getName()));
                     if(nonNull(value)) {
                         handler.setParameter(statement, argumentIndex, value);
                     } else {

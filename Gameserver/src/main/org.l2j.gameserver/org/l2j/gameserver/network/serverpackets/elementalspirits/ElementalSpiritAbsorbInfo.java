@@ -6,7 +6,7 @@ import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.util.Util.zeroIfNullElseCompute;
+import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 import static org.l2j.gameserver.network.ServerPacketId.EX_ELEMENTAL_SPIRIT_ABSORB_INFO;
 
 public class ElementalSpiritAbsorbInfo extends ServerPacket {
@@ -44,7 +44,7 @@ public class ElementalSpiritAbsorbInfo extends ServerPacket {
         writeInt(absorbItems.size()); //AbsorbCount
         for (AbsorbItem absorbItem : absorbItems) {
             writeInt(absorbItem.getId());
-            writeInt(zeroIfNullElseCompute( player.getInventory().getItemByItemId(absorbItem.getId()), item -> (int) item.getCount()));
+            writeInt(zeroIfNullOrElse( player.getInventory().getItemByItemId(absorbItem.getId()), item -> (int) item.getCount()));
             writeInt(absorbItem.getExperience());
         }
     }

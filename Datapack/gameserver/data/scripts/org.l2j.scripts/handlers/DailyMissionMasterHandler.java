@@ -23,6 +23,7 @@ public class DailyMissionMasterHandler {
 		DailyMissionHandler.getInstance().registerHandler("fishing", FishingDailyMissionHandler::new);
 		DailyMissionHandler.getInstance().registerHandler("clan", ClanDailyMissionHandler::new);
 		DailyMissionHandler.getInstance().registerHandler("hunt", HuntDailyMissionHandler::new);
+		DailyMissionHandler.getInstance().registerHandler("spirit", SpiritDailyMissionHandler::new);
 		LOGGER.info("Loaded {} handlers.", DailyMissionHandler.getInstance().size());
 	}
 }

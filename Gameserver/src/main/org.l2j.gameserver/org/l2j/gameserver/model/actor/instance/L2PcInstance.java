@@ -110,7 +110,7 @@ import static java.lang.Math.min;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-import static org.l2j.commons.util.Util.zeroIfNullElseCompute;
+import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 import static org.l2j.gameserver.network.SystemMessageId.S1_HAS_INFLICTED_S3_DAMAGE_ATTRIBUTE_DAMAGE_S4_TO_S2;
 
 /**
@@ -214,7 +214,7 @@ public final class L2PcInstance extends L2Playable {
     }
 
     public double getActiveElementalSpiritAttack() {
-        return getStat().getElementalSpiritPower(activeElementalSpiritType, zeroIfNullElseCompute(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getAttack));
+        return getStat().getElementalSpiritPower(activeElementalSpiritType, zeroIfNullOrElse(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getAttack));
     }
 
     public double getFireSpiritDefense() {
@@ -234,15 +234,15 @@ public final class L2PcInstance extends L2Playable {
     }
 
     public double getElementalSpiritDefenseOf(ElementalType type) {
-        return getStat().getElementalSpiritDefense(type, zeroIfNullElseCompute(getElementalSpirit(type), ElementalSpirit::getDefense));
+        return getStat().getElementalSpiritDefense(type, zeroIfNullOrElse(getElementalSpirit(type), ElementalSpirit::getDefense));
     }
 
     public double getElementalSpiritCritRate() {
-        return getStat().getElementalSpiritCriticalRate(zeroIfNullElseCompute(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getCriticalRate));
+        return getStat().getElementalSpiritCriticalRate(zeroIfNullOrElse(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getCriticalRate));
     }
 
     public double getElementalSpiritCritDamage() {
-        return getStat().getElementalSpiritCriticalDamage(zeroIfNullElseCompute(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getCriticalDamage));
+        return getStat().getElementalSpiritCriticalDamage(zeroIfNullOrElse(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getCriticalDamage));
     }
 
     public double getElementalSpiritXpBonus() {
@@ -257,7 +257,7 @@ public final class L2PcInstance extends L2Playable {
     }
 
     public byte getActiveElementalSpiritType() {
-        return (byte) zeroIfNullElseCompute(activeElementalSpiritType, ElementalType::getId);
+        return (byte) zeroIfNullOrElse(activeElementalSpiritType, ElementalType::getId);
     }
 
     public void changeElementalSpirit(byte element) {

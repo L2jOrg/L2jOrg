@@ -5,10 +5,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.IntFunction;
-import java.util.function.ToIntFunction;
+import java.util.function.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -33,8 +30,12 @@ public class Util {
         return isNull(collection) || collection.isEmpty();
     }
 
-    public static <T> int  zeroIfNullElseCompute(T obj, ToIntFunction<T> action) {
+    public static <T> int zeroIfNullOrElse(T obj, ToIntFunction<T> action) {
         return isNull(obj) ? 0 : action.applyAsInt(obj);
+    }
+
+    public static <T> boolean falseIfNullOrElse(T obj, Predicate<T> predicate) {
+        return nonNull(obj) && predicate.test(obj);
     }
 
     public static String hash(final String value) throws NoSuchAlgorithmException {

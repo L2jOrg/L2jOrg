@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2SiegeClan;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.model.dailymission.DailyMissionPlayerData;
+import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
 import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
@@ -33,7 +33,7 @@ public class SiegeDailyMissionHandler extends AbstractDailyMissionHandler {
 	
 	@Override
 	public boolean isAvailable(L2PcInstance player) {
-		final DailyMissionPlayerData entry = getPlayerEntry(player.getObjectId(), false);
+		final DailyMissionPlayerData entry = getPlayerEntry(player, false);
 		return nonNull(entry) && DailyMissionStatus.AVAILABLE == entry.getStatus();
 	}
 	
@@ -49,8 +49,9 @@ public class SiegeDailyMissionHandler extends AbstractDailyMissionHandler {
 		{
 			clan.getOnlineMembers(0).forEach(player ->
 			{
-				final DailyMissionPlayerData entry = getPlayerEntry(player.getObjectId(), true);
+				final DailyMissionPlayerData entry = getPlayerEntry(player, true);
 				entry.setStatus(DailyMissionStatus.AVAILABLE);
+				notifyAvailablesReward(player);
 				storePlayerEntry(entry);
 			});
 		}

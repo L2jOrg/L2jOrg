@@ -23,17 +23,10 @@
 				<event name="#onClanLeaderApply" />
 			</schedule>
 
-			<!-- Schedule the vitality reset task every WEDNESDAY at 6:30 -->
-			<!-- <schedule name="vitalityReset" hour="06" minute="30" dayOfWeek="3">
-				<event name="#onVitalityReset" />
-			</schedule> -->
-
-
 			<!-- Attach condition to reset if server boots up in after 6:30 and hasn't reset yet -->
 			<conditionalSchedule>
 				<run name="reset" if="HAVENT_RUN" />
 				<run name="clanLeaderApply" if="HAVENT_RUN" />
-				<run name="vitalityReset" if="HAVENT_RUN" />
 			</conditionalSchedule>
 		</scheduler>
 	</event>

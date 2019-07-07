@@ -3,7 +3,7 @@ package handlers.dailymissionhandlers;
 import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.model.dailymission.DailyMissionPlayerData;
+import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
 import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
@@ -25,7 +25,7 @@ public class ClanDailyMissionHandler extends AbstractDailyMissionHandler {
 
     @Override
     public boolean isAvailable(L2PcInstance player) {
-        final DailyMissionPlayerData entry = getPlayerEntry(player.getObjectId(), false);
+        final DailyMissionPlayerData entry = getPlayerEntry(player, false);
         return (nonNull(entry)) && (DailyMissionStatus.AVAILABLE == entry.getStatus());
     }
 
@@ -37,7 +37,7 @@ public class ClanDailyMissionHandler extends AbstractDailyMissionHandler {
     }
 
     private void onPlayerJoinClan(OnPlayerClanJoin event) {
-        final DailyMissionPlayerData entry = getPlayerEntry(event.getActiveChar().getObjectId(), true);
+        final DailyMissionPlayerData entry = getPlayerEntry(event.getActiveChar().getPlayerInstance(), true);
         if(DailyMissionStatus.COMPLETED.equals(entry.getStatus())) {
             return;
         }
@@ -45,6 +45,7 @@ public class ClanDailyMissionHandler extends AbstractDailyMissionHandler {
         entry.setProgress(1);
         entry.setStatus(DailyMissionStatus.AVAILABLE);
         storePlayerEntry(entry);
+        notifyAvailablesReward(event.getActiveChar().getPlayerInstance());
     }
 
 

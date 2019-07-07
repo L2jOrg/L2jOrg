@@ -7,11 +7,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
+import static java.util.Objects.nonNull;
+
 public class DateHandler implements TypeHandler<LocalDate> {
 
     @Override
     public LocalDate defaultValue() {
-        return LocalDate.now();
+        return null;
     }
 
     @Override
@@ -30,7 +32,8 @@ public class DateHandler implements TypeHandler<LocalDate> {
 
     @Override
     public LocalDate handleColumn(ResultSet resultSet, int column) throws SQLException {
-        return  resultSet.getDate(column).toLocalDate();
+        var date = resultSet.getDate(column);
+        return  nonNull(date) ? date.toLocalDate() : null;
     }
 
     @Override

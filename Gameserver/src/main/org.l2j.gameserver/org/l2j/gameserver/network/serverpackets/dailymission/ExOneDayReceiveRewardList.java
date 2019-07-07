@@ -26,7 +26,7 @@ public class ExOneDayReceiveRewardList extends ServerPacket {
 
     public ExOneDayReceiveRewardList(L2PcInstance player, boolean sendRewards) {
         this.player = player;
-        missions = sendRewards ? DailyMissionData.getInstance().getDailyMissionData(player) : Collections.emptyList();
+        this.missions = sendRewards ? DailyMissionData.getInstance().getDailyMissions(player) : Collections.emptyList();
         dayRemainTime = remainTime.apply("30 6 * * *");
         weekRemainTime = remainTime.apply("30 6 * * 1");
         monthRemainTime = remainTime.apply("30 6 1 * *");

@@ -5,7 +5,7 @@ import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.model.dailymission.DailyMissionPlayerData;
+import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
 import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
@@ -31,7 +31,7 @@ public class LoginDailyMissionHandler extends AbstractDailyMissionHandler {
 
     @Override
     public boolean isAvailable(L2PcInstance player) {
-        final DailyMissionPlayerData entry = getPlayerEntry(player.getObjectId(), false);
+        final DailyMissionPlayerData entry = getPlayerEntry(player, false);
         return (entry != null) && (DailyMissionStatus.AVAILABLE == entry.getStatus());
     }
 
@@ -41,7 +41,7 @@ public class LoginDailyMissionHandler extends AbstractDailyMissionHandler {
     }
 
     private void onPlayerLogin(OnPlayerLogin event) {
-        final DailyMissionPlayerData entry = getPlayerEntry(event.getActiveChar().getObjectId(), true);
+        final DailyMissionPlayerData entry = getPlayerEntry(event.getActiveChar(), true);
         if(DailyMissionStatus.COMPLETED.equals(entry.getStatus())) {
             return;
         }
@@ -53,6 +53,7 @@ public class LoginDailyMissionHandler extends AbstractDailyMissionHandler {
         } else {
             entry.setProgress(1);
             entry.setStatus(DailyMissionStatus.AVAILABLE);
+            notifyAvailablesReward(event.getActiveChar());
         }
     }
 }
