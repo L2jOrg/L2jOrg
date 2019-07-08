@@ -26,6 +26,8 @@ import org.l2j.gameserver.util.GameUtils;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+import static java.util.Objects.isNull;
+
 public class PcStat extends PlayableStat {
     public static final int MAX_VITALITY_POINTS = 140000;
     public static final int MIN_VITALITY_POINTS = 0;
@@ -553,7 +555,7 @@ public class PcStat extends PlayableStat {
     }
 
     public double getElementalSpiritPower(ElementalType type, double base) {
-        return getValue(type.getAttackStat(), base);
+        return isNull(type)  ? 0 : getValue(type.getAttackStat(), base);
     }
 
     public double getElementalSpiritCriticalRate(int base) {
@@ -565,7 +567,7 @@ public class PcStat extends PlayableStat {
     }
 
     public double getElementalSpiritDefense(ElementalType type, double base) {
-        return getValue(type.getDefenseStat(), base);
+        return isNull(type) ? 0 : getValue(type.getDefenseStat(), base);
     }
 
     @Override

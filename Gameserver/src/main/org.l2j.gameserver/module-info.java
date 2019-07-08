@@ -99,6 +99,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.data.database.dao;
     exports org.l2j.gameserver.model.dailymission;
     exports org.l2j.gameserver.data.elemental;
+    exports org.l2j.gameserver.network.serverpackets.elementalspirits;
 
     uses org.l2j.gameserver.scripting.IScriptingEngine;
     provides org.l2j.gameserver.scripting.IScriptingEngine

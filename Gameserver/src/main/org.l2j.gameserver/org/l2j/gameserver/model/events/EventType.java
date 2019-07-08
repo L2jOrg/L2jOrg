@@ -190,7 +190,8 @@ public enum EventType {
     ON_INSTANCE_LEAVE(OnInstanceLeave.class, void.class),
     ON_INSTANCE_STATUS_CHANGE(OnInstanceStatusChange.class, void.class),
 
-    ON_ELEMENTAL_SPIRIT_UPGRADE(OnElementalSpiritUpgrade.class, Void.class);
+    ON_ELEMENTAL_SPIRIT_UPGRADE(OnElementalSpiritUpgrade.class, Void.class),
+    ON_ELEMENTAL_SPIRIT_LEARN(OnElementalSpiritLearn.class, Void.class);
 
     private final Class<? extends IBaseEvent> _eventClass;
     private final Class<?>[] _returnClass;

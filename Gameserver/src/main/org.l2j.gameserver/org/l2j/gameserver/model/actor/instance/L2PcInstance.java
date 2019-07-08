@@ -176,7 +176,7 @@ public final class L2PcInstance extends L2Playable {
         return null;
     }
 
-    private void initElementalSpirits() {
+    public void initElementalSpirits() {
         tryLoadSpirits();
 
         if(isNull(spirits)) {
@@ -192,6 +192,7 @@ public final class L2PcInstance extends L2Playable {
                 spirits[type.getId() -1] = spirit;
                 spirit.save();
             }
+
         }
 
         if(isNull(activeElementalSpiritType)) {
@@ -2147,6 +2148,7 @@ public final class L2PcInstance extends L2Playable {
             setClassTemplate(Id);
             if (getClassId().level() == 3) {
                 sendPacket(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_YOUR_THIRD_CLASS_TRANSFER_QUEST);
+                initElementalSpirits();
             } else {
                 sendPacket(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_A_CLASS_TRANSFER);
             }

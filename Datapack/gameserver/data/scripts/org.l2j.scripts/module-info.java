@@ -68,6 +68,7 @@ open module org.l2j.scripts {
             ai.bosses.QueenAnt.QueenAnt,
             ai.bosses.Zaken.Zaken,
 
+            ai.others.AttributeMaster.AttributeMaster,
             ai.others.CastleBlacksmith.CastleBlacksmith,
             ai.others.CastleChamberlain.CastleChamberlain,
             ai.others.CastleDoorManager.CastleDoorManager,

@@ -19,7 +19,7 @@ public class OnElementalSpiritUpgrade implements IBaseEvent {
         return spirit;
     }
 
-    public L2PcInstance getActivePlayer() {
+    public L2PcInstance getPlayer() {
         return player;
     }
 
