@@ -73,12 +73,14 @@ public class EnterWorld extends ClientPacket {
 
         client.setConnectionState(ConnectionState.IN_GAME);
 
-        final String[] adress = new String[5];
+/*
+        TODO send address to authserver
+        final String[] address = new String[5];
         for (int i = 0; i < 5; i++) {
-            adress[i] = tracert[i][0] + "." + tracert[i][1] + "." + tracert[i][2] + "." + tracert[i][3];
+            address[i] = tracert[i][0] + "." + tracert[i][1] + "." + tracert[i][2] + "." + tracert[i][3];
         }
 
-       // AuthServerCommunication.getInstance().sendClientTracert(activeChar.getAccountName(), adress);
+        AuthServerCommunication.getInstance().sendClientTracert(activeChar.getAccountName(), adress);*/
 
         client.setClientTracert(tracert);
 
@@ -96,54 +98,8 @@ public class EnterWorld extends ClientPacket {
 
         // Apply special GM properties to the GM when entering
         if (activeChar.isGM()) {
-            gmStartupProcess:
-            {
-                if (Config.GM_STARTUP_BUILDER_HIDE && AdminData.getInstance().hasAccess("admin_hide", activeChar.getAccessLevel())) {
-                    BuilderUtil.setHiding(activeChar, true);
-
-                    BuilderUtil.sendSysMessage(activeChar, "hide is default for builder.");
-                    BuilderUtil.sendSysMessage(activeChar, "FriendAddOff is default for builder.");
-                    BuilderUtil.sendSysMessage(activeChar, "whisperoff is default for builder.");
-
-                    // It isn't recommend to use the below custom L2J GMStartup functions together with retail-like GMStartupBuilderHide, so breaking the process at that stage.
-                    break gmStartupProcess;
-                }
-
-                if (Config.GM_STARTUP_INVULNERABLE && AdminData.getInstance().hasAccess("admin_invul", activeChar.getAccessLevel())) {
-                    activeChar.setIsInvul(true);
-                }
-
-                if (Config.GM_STARTUP_INVISIBLE && AdminData.getInstance().hasAccess("admin_invisible", activeChar.getAccessLevel())) {
-                    activeChar.setInvisible(true);
-                    activeChar.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
-                }
-
-                if (Config.GM_STARTUP_SILENCE && AdminData.getInstance().hasAccess("admin_silence", activeChar.getAccessLevel())) {
-                    activeChar.setSilenceMode(true);
-                }
-
-                if (Config.GM_STARTUP_DIET_MODE && AdminData.getInstance().hasAccess("admin_diet", activeChar.getAccessLevel())) {
-                    activeChar.setDietMode(true);
-                    activeChar.refreshOverloaded(true);
-                }
-
-                if (Config.GM_STARTUP_AUTO_LIST && AdminData.getInstance().hasAccess("admin_gmliston", activeChar.getAccessLevel())) {
-                    AdminData.getInstance().addGm(activeChar, false);
-                } else {
-                    AdminData.getInstance().addGm(activeChar, true);
-                }
-            }
-
-            if (Config.GM_GIVE_SPECIAL_SKILLS) {
-                SkillTreesData.getInstance().addSkills(activeChar, false);
-            }
-
-            if (Config.GM_GIVE_SPECIAL_AURA_SKILLS) {
-                SkillTreesData.getInstance().addSkills(activeChar, true);
-            }
+            onGameMasterEnter(activeChar);
         }
-
-        activeChar.broadcastUserInfo();
 
         // Chat banned icon.
         if (activeChar.isChatBanned()) {
@@ -155,10 +111,55 @@ public class EnterWorld extends ClientPacket {
             activeChar.setIsDead(true);
         }
 
+        if (Config.ENABLE_VITALITY) {
+            activeChar.sendPacket(new ExVitalityEffectInfo(activeChar));
+        }
+
+        // Send Macro List
+        activeChar.getMacros().sendAllMacros();
+
+        // Send Teleport Bookmark List
+        client.sendPacket(new ExGetBookMarkInfoPacket(activeChar));
+
+        // Send Item List
+        client.sendPacket(new ItemList(1, activeChar));
+        client.sendPacket(new ItemList(2, activeChar));
+
+        // Send Quest Item List
+        client.sendPacket(new ExQuestItemList(1, activeChar));
+        client.sendPacket(new ExQuestItemList(2, activeChar));
+
+        // Send Adena and Inventory Count
+        client.sendPacket(new ExAdenaInvenCount(activeChar));
+
+        // Send Shortcuts
+        client.sendPacket(new ShortCutInit(activeChar));
+
+        // Send Action list
+        activeChar.sendPacket(ExBasicActionList.STATIC_PACKET);
+
+        // Send blank skill list
+        activeChar.sendPacket(new SkillList());
+
+        // Send castle state.
+        for (Castle castle : CastleManager.getInstance().getCastles()) {
+            activeChar.sendPacket(new ExCastleState(castle));
+        }
+
+        // Send Dye Information
+        activeChar.sendPacket(new HennaInfo(activeChar));
+
+        // Send Skill list
+        activeChar.sendSkillList();
+
+        // Send EtcStatusUpdate
+        activeChar.sendPacket(new EtcStatusUpdate(activeChar));
+
         boolean showClanNotice = false;
 
         // Clan related checks are here
         final L2Clan clan = activeChar.getClan();
+        // Clan packets
         if (clan != null) {
             notifyClanMembers(activeChar);
             notifySponsorOrApprentice(activeChar);
@@ -201,57 +202,7 @@ public class EnterWorld extends ClientPacket {
             }
 
             showClanNotice = clan.isNoticeEnabled();
-        }
 
-        if (Config.ENABLE_VITALITY) {
-            activeChar.sendPacket(new ExVitalityEffectInfo(activeChar));
-        }
-
-        // Send Macro List
-        activeChar.getMacros().sendAllMacros();
-
-        // Send Teleport Bookmark List
-        client.sendPacket(new ExGetBookMarkInfoPacket(activeChar));
-
-        // Send Item List
-        client.sendPacket(new ItemList(1, activeChar));
-        client.sendPacket(new ItemList(2, activeChar));
-
-        // Send Quest Item List
-        client.sendPacket(new ExQuestItemList(1, activeChar));
-        client.sendPacket(new ExQuestItemList(2, activeChar));
-
-        // Send Adena and Inventory Count
-        client.sendPacket(new ExAdenaInvenCount(activeChar));
-
-        // Send Shortcuts
-        client.sendPacket(new ShortCutInit(activeChar));
-
-        // Send Action list
-        activeChar.sendPacket(ExBasicActionList.STATIC_PACKET);
-
-        // Send blank skill list
-        activeChar.sendPacket(new SkillList());
-
-        // Send castle state.
-        for (Castle castle : CastleManager.getInstance().getCastles()) {
-            activeChar.sendPacket(new ExCastleState(castle));
-        }
-
-        // Send GG check
-        // activeChar.queryGameGuard();
-
-        // Send Dye Information
-        activeChar.sendPacket(new HennaInfo(activeChar));
-
-        // Send Skill list
-        activeChar.sendSkillList();
-
-        // Send EtcStatusUpdate
-        activeChar.sendPacket(new EtcStatusUpdate(activeChar));
-
-        // Clan packets
-        if (clan != null) {
             clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(activeChar));
             PledgeShowMemberListAll.sendAllTo(activeChar);
             clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
@@ -318,11 +269,6 @@ public class EnterWorld extends ClientPacket {
 
         // Friend list
         client.sendPacket(new L2FriendList(activeChar));
-
-        if (Config.SHOW_GOD_VIDEO_INTRO && activeChar.getVariables().getBoolean("intro_god_video", false)) {
-            activeChar.getVariables().remove("intro_god_video");
-            activeChar.sendPacket(ExShowUsm.ERTHEIA_INTRO_FOR_OTHERS);
-        }
 
         SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN);
         sm.addString(activeChar.getName());
@@ -447,6 +393,12 @@ public class EnterWorld extends ClientPacket {
             activeChar.sendPacket(new ExBeautyItemList(activeChar));
         }
 
+        if(activeChar.getActiveElementalSpiritType() >= 0) {
+            client.sendPacket(new ElementalSpiritInfo(activeChar.getActiveElementalSpiritType(), (byte) 2));
+        }
+
+        activeChar.broadcastUserInfo();
+
         if (Config.ENABLE_WORLD_CHAT) {
             activeChar.sendPacket(new ExWorldChatCnt(activeChar));
         }
@@ -458,9 +410,6 @@ public class EnterWorld extends ClientPacket {
         activeChar.sendPacket(new ExAutoSoulShot(0, true, 2));
         activeChar.sendPacket(new ExAutoSoulShot(0, true, 3));
 
-        if(activeChar.getActiveElementalSpiritType() >= 0) {
-            client.sendPacket(new ElementalSpiritInfo((byte) activeChar.getActiveElementalSpiritType(), (byte) 2));
-        }
 
         // Fix for equipped item skills
         if (!activeChar.getEffectList().getCurrentAbnormalVisualEffects().isEmpty()) {
@@ -468,20 +417,7 @@ public class EnterWorld extends ClientPacket {
         }
 
         if (Config.ENABLE_ATTENDANCE_REWARDS) {
-            ThreadPoolManager.schedule(() ->
-            {
-                // Check if player can receive reward today.
-                final AttendanceInfoHolder attendanceInfo = activeChar.getAttendanceInfo();
-                if (attendanceInfo.isRewardAvailable()) {
-                    final int lastRewardIndex = attendanceInfo.getRewardIndex() + 1;
-                    activeChar.sendPacket(new ExShowScreenMessage("Your attendance day " + lastRewardIndex + " reward is ready.", ExShowScreenMessage.TOP_CENTER, 7000, 0, true, true));
-                    activeChar.sendMessage("Your attendance day " + lastRewardIndex + " reward is ready.");
-                    activeChar.sendMessage("Click on General Menu -> Attendance Check.");
-                    if (Config.ATTENDANCE_POPUP_WINDOW) {
-                        activeChar.sendPacket(new ExVipAttendanceItemList(activeChar));
-                    }
-                }
-            }, Config.ATTENDANCE_REWARD_DELAY * 60  * 1000);
+            sendAttendanceInfo(activeChar);
         }
 
         if (Config.HARDWARE_INFO_ENABLED) {
@@ -489,15 +425,74 @@ public class EnterWorld extends ClientPacket {
             {
                 if (client.getHardwareInfo() == null) {
                     Disconnection.of(client).defaultSequence(false);
-                    return;
                 }
             }, 5000);
         }
     }
 
-    /**
-     * @param activeChar
-     */
+    private void sendAttendanceInfo(L2PcInstance activeChar) {
+        ThreadPoolManager.schedule(() -> {
+            // Check if player can receive reward today.
+            final AttendanceInfoHolder attendanceInfo = activeChar.getAttendanceInfo();
+            if (attendanceInfo.isRewardAvailable()) {
+                final int lastRewardIndex = attendanceInfo.getRewardIndex() + 1;
+                activeChar.sendPacket(new ExShowScreenMessage("Your attendance day " + lastRewardIndex + " reward is ready.", ExShowScreenMessage.TOP_CENTER, 7000, 0, true, true));
+                activeChar.sendMessage("Your attendance day " + lastRewardIndex + " reward is ready.");
+                activeChar.sendMessage("Click on General Menu -> Attendance Check.");
+                if (Config.ATTENDANCE_POPUP_WINDOW) {
+                    activeChar.sendPacket(new ExVipAttendanceItemList(activeChar));
+                }
+            }
+        }, Config.ATTENDANCE_REWARD_DELAY * 60  * 1000);
+    }
+
+    private void onGameMasterEnter(L2PcInstance activeChar) {
+
+        if (Config.GM_GIVE_SPECIAL_SKILLS) {
+            SkillTreesData.getInstance().addSkills(activeChar, false);
+        }
+
+        if (Config.GM_GIVE_SPECIAL_AURA_SKILLS) {
+            SkillTreesData.getInstance().addSkills(activeChar, true);
+        }
+
+        if (Config.GM_STARTUP_BUILDER_HIDE && AdminData.getInstance().hasAccess("admin_hide", activeChar.getAccessLevel())) {
+            BuilderUtil.setHiding(activeChar, true);
+
+            BuilderUtil.sendSysMessage(activeChar, "hide is default for builder.");
+            BuilderUtil.sendSysMessage(activeChar, "FriendAddOff is default for builder.");
+            BuilderUtil.sendSysMessage(activeChar, "whisperoff is default for builder.");
+
+            // It isn't recommend to use the below custom L2J GMStartup functions together with retail-like GMStartupBuilderHide, so breaking the process at that stage.
+            return;
+        }
+
+        if (Config.GM_STARTUP_INVULNERABLE && AdminData.getInstance().hasAccess("admin_invul", activeChar.getAccessLevel())) {
+            activeChar.setIsInvul(true);
+        }
+
+        if (Config.GM_STARTUP_INVISIBLE && AdminData.getInstance().hasAccess("admin_invisible", activeChar.getAccessLevel())) {
+            activeChar.setInvisible(true);
+            activeChar.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
+        }
+
+        if (Config.GM_STARTUP_SILENCE && AdminData.getInstance().hasAccess("admin_silence", activeChar.getAccessLevel())) {
+            activeChar.setSilenceMode(true);
+        }
+
+        if (Config.GM_STARTUP_DIET_MODE && AdminData.getInstance().hasAccess("admin_diet", activeChar.getAccessLevel())) {
+            activeChar.setDietMode(true);
+            activeChar.refreshOverloaded(true);
+        }
+
+        if (Config.GM_STARTUP_AUTO_LIST && AdminData.getInstance().hasAccess("admin_gmliston", activeChar.getAccessLevel())) {
+            AdminData.getInstance().addGm(activeChar, false);
+        } else {
+            AdminData.getInstance().addGm(activeChar, true);
+        }
+
+    }
+
     private void notifyClanMembers(L2PcInstance activeChar) {
         final L2Clan clan = activeChar.getClan();
         if (clan != null) {
@@ -510,9 +505,6 @@ public class EnterWorld extends ClientPacket {
         }
     }
 
-    /**
-     * @param activeChar
-     */
     private void notifySponsorOrApprentice(L2PcInstance activeChar) {
         if (activeChar.getSponsor() != 0) {
             final L2PcInstance sponsor = L2World.getInstance().getPlayer(activeChar.getSponsor());

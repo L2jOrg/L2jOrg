@@ -136,23 +136,8 @@ public final class L2PcInstance extends L2Playable {
         appearance = new PcAppearance(this, characterData.getFace(), characterData.getHairColor(), characterData.getHairStyle(), characterData.isFemale());
 
         getAI();
-        setHeading(characterData.getHeading());
-        getStat().setExp(characterData.getExp());
-        getStat().setLevel(characterData.getLevel());
-        getStat().setSp(characterData.getSp());
-        setReputation(characterData.getReputation());
-        setFame(characterData.getFame());
-        setPvpKills(characterData.getPvP());
-        setPkKills(characterData.getPk());
-        setOnlineTime(characterData.getOnlineTime());
-        setNoble(characterData.isNobless());
-        getStat().setVitalityPoints(characterData.getVitalityPoints());
 
         radar = new L2Radar(this);
-
-        if(getLevel() >= 76 && getClassId().level() > 2) {
-            initElementalSpirits();
-        }
 
         for (int i = 0; i < htmlActionCaches.length; ++i) {
             htmlActionCaches[i] = new LinkedList<>();
@@ -163,7 +148,6 @@ public final class L2PcInstance extends L2Playable {
         final L2PcInstance player = new L2PcInstance(characterData, template);
 
         player.setAccessLevel(0, false, false);
-
         player.setCreateDate(Calendar.getInstance());
         player.setBaseClass(player.getClassId());
         player.setRecomLeft(20);
@@ -800,7 +784,23 @@ public final class L2PcInstance extends L2Playable {
         var template = PlayerTemplateData.getInstance().getTemplate(character.getClassId());
         L2PcInstance player = new L2PcInstance(character, template);
 
+        player.setHeading(character.getHeading());
+        player.getStat().setExp(character.getExp());
+        player.getStat().setLevel(character.getLevel());
+        player.getStat().setSp(character.getSp());
+        player.setReputation(character.getReputation());
+        player.setFame(character.getFame());
+        player.setPvpKills(character.getPvP());
+        player.setPkKills(character.getPk());
+        player.setOnlineTime(character.getOnlineTime());
+        player.setNoble(character.isNobless());
+        player.getStat().setVitalityPoints(character.getVitalityPoints());
+
         player.setHero(Hero.getInstance().isHero(objectId));
+
+        if(player.getLevel() >= 76 && player.getClassId().level() > 2) {
+            player.initElementalSpirits();
+        }
 
         if (character.getClanId() > 0) {
             player.setClan(ClanTable.getInstance().getClan(character.getClanId()));

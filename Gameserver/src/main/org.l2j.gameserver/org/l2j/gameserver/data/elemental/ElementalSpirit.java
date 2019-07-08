@@ -14,6 +14,7 @@ import org.l2j.gameserver.network.serverpackets.elementalspirits.ExElementalSpir
 
 import java.util.List;
 
+import static java.lang.Math.max;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.network.SystemMessageId.OBTAINED_S2_ATTRIBUTE_XP_OF_S1;
 import static org.l2j.gameserver.network.SystemMessageId.S1_ATTRIBUTE_SPIRIT_BECAME_LEVEL_S2;
@@ -66,7 +67,7 @@ public class ElementalSpirit {
         var stage = data.getStage();
         var level = data.getLevel();
         var points = ((stage -1) * 11) +  ( stage > 2 ? (level -1) * 2 : level -1);
-        return points - data.getAttackPoints() - data.getDefensePoints() - data.getCritDamagePoints() - data.getCritRatePoints();
+        return max(points - data.getAttackPoints() - data.getDefensePoints() - data.getCritDamagePoints() - data.getCritRatePoints(), 0);
     }
 
     public AbsorbItem getAbsorbItem(int itemId) {

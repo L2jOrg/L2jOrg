@@ -582,22 +582,70 @@
 	<skill id="51093" toLevel="1" name="Fire Attribute Attack">
 		<!-- Fire Attribute Attack +100. -->
 		<icon>icon.agathion_fire_1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<magicLvl>1</magicLvl>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="elementalSpiritAttack">
+				<amount>100</amount>
+				<type>FIRE</type>
+			</effect>
+		</effects>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51094" toLevel="1" name="Water Attribute Attack">
 		<!-- Water Attribute Attack +100. -->
 		<icon>icon.agathion_water_1</icon>
 		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<magicLvl>1</magicLvl>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="elementalSpiritAttack">
+				<amount>100</amount>
+				<type>WATER</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51095" toLevel="1" name="Wind Attribute Attack">
 		<!-- Wind Attribute Attack +100. -->
 		<icon>icon.agathion_wind_1</icon>
 		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<magicLvl>1</magicLvl>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="elementalSpiritAttack">
+				<amount>100</amount>
+				<type>WIND</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51096" toLevel="1" name="Earth Attribute Attack">
 		<!-- Earth Attribute Attack +100. -->
 		<icon>icon.agathion_earth_1</icon>
 		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<magicLvl>1</magicLvl>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="elementalSpiritAttack">
+				<amount>50</amount>
+				<type>EARTH</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51097" toLevel="1" name="Radiant Spirit's Varnish">
 		<icon>icon.ev_charge_scroll</icon>

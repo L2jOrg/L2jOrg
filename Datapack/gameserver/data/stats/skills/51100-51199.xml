@@ -8,22 +8,70 @@
 	<skill id="51101" toLevel="1" name="Agathion Summon - Ignis">
 		<!-- Summon Ignis Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13568</npcId> <!-- Median Flame Ignis -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51102" toLevel="1" name="Agathion Summon - Nebula">
 		<!-- Summon Nebula Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13572</npcId> <!-- Median Water Procella-->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51103" toLevel="1" name="Agathion Summon - Procella">
 		<!-- Summon Procella Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13576</npcId> <!-- Median Wind Procella-->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51104" toLevel="1" name="Agathion Summon - Petram">
 		<!-- Summon Petram Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13580</npcId> <!-- Median Earth Petram -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51105" toLevel="1" name="Improved Master Fisherman's Blessing">
 		<!-- For 2 hr. Acquired XP/ SP through fishing +200%. Buff remains even after death. -->

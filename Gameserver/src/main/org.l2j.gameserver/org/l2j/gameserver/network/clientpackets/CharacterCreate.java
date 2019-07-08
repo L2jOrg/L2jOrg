@@ -205,9 +205,7 @@ public final class CharacterCreate extends ClientPacket {
         EventDispatcher.getInstance().notifyEvent(new OnPlayerCreate(newChar, newChar.getObjectId(), newChar.getName(), client), Containers.Players());
 
         newChar.setOnlineStatus(true, false);
-        if (Config.SHOW_GOD_VIDEO_INTRO) {
-            newChar.getVariables().set("intro_god_video", true);
-        }
+
         Disconnection.of(client, newChar).storeMe().deleteMe();
 
         final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().getGameServerSessionId());

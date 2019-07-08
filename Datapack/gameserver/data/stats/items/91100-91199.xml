@@ -372,45 +372,65 @@
 		<!-- Equipping it in the Bracelet's main slot summons the Agathion Ignis and activates the Special Ability option. Fire Attack Power +100. Cannot be dropped. -->
 		<set name="icon" val="icon.agathion_fire_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="51101" level="1"/> <!-- Summon Agathion Ignis -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="51093" level="1"/> <!-- Fire Attack +100 -->
+		</skills>
 	</item>
 	<item id="91130" name="Agathion Nebula" type="Armor">
 		<!-- Equipping it in the Bracelet's main slot summons the Agathion Nebula and activates the Special Ability option. Water Attack Power +100. Cannot be dropped. -->
 		<set name="icon" val="icon.agathion_water_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="51102" level="1"/> <!-- Summon Agathion Nebula -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="51094" level="1"/> <!-- Water Attack +100 -->
+		</skills>
 	</item>
 	<item id="91131" name="Agathion Procella" type="Armor">
 		<!-- Equipping it in the Bracelet's main slot summons the Agathion Procella and activates the Special Ability option. Wind Attack Power +100. Cannot be dropped. -->
 		<set name="icon" val="icon.agathion_wind_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="51103" level="1"/> <!-- Summon Agathion Procella -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="51095" level="1"/> <!-- Wind Attack +100 -->
+		</skills>
 	</item>
 	<item id="91132" name="Agathion Petram" type="Armor">
 		<!-- Equipping it in the Bracelet's main slot summons the Agathion Petram and activates the Special Ability option. Earth Attack Power +100. Cannot be dropped. -->
 		<set name="icon" val="icon.agathion_earth_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="51101" level="1"/> <!-- Summon Agathion Petram -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="51096" level="1"/> <!-- Earth Attack +100 -->
+		</skills>
 	</item>
 	<item id="91133" name="Improved Master Fisherman's Blessing (2 h.)" type="EtcItem">
 		<!-- For 2 h. during fishing Acquired XP/ SP +200%. Effect remains after death. Cannot be dropped or sold. -->

@@ -20,7 +20,7 @@ public class ElementalSpiritExtractInfo extends ServerPacket {
         writeId(ServerPacketId.EX_ELEMENTAL_SPIRIT_EXTRACT_INFO);
 
         var spirit = client.getActiveChar().getElementalSpirit(ElementalType.of(type));
-        if(isNull(spirit)){
+        if(isNull(spirit)) {
             writeByte(0);
             writeByte(0);
             return;

@@ -8,7 +8,8 @@ CREATE TABLE IF NOT EXISTS `announcements` (
   `author` text NOT NULL,
   `content` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 INSERT INTO announcements (`type`, `author`, `content`) VALUES 
-(0, 'L2j', 'Thanks for using L2j Org!');
+(0, 'L2j', 'Welcome to L2j Org!'),
+(0, 'L2j', 'Report any bug at https://github.com/JoeAlisson/L2jOrg/issues');

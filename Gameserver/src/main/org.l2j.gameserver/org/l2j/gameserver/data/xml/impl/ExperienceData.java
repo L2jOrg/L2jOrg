@@ -44,6 +44,7 @@ public final class ExperienceData extends GameXmlReader {
     public void load() {
         _expTable.clear();
         _traningRateTable.clear();
+        _expTable.put(0, 0L);
         parseDatapackFile("data/stats/experience.xml");
         LOGGER.info("Loaded {} levels", _expTable.size());
         LOGGER.info("Max Player Level is: " + (MAX_LEVEL - 1));
