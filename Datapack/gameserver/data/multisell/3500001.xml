@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>34053</npc> <!-- Attribute Master Svein -->
+	</npcs>
+	<item>
+		<ingredient id="91125" count="500" /> <!-- Ignis' Breath -->
+		<ingredient id="57" count="2000000" /> <!-- Adena -->
+		<production id="91129" count="1" /> <!-- Agathion Ignis -->
+	</item>
+	<item>
+		<ingredient id="91126" count="1" /> <!-- Nebula’s Breath-->
+		<ingredient id="57" count="2000000" /> <!-- Adena -->
+		<production id="91130" count="1" /> <!-- Agathion Nebula -->
+	</item>
+	<item>
+		<ingredient id="91127" count="1" /> <!-- Procella’s  Breath-->
+		<ingredient id="57" count="2000000" /> <!-- Adena -->
+		<production id="91131" count="1" /> <!-- Agathion Procella -->
+	</item>
+	<item>
+		<ingredient id="91128" count="1" /> <!-- Petram’s Breath-->
+		<ingredient id="57" count="2000000" /> <!-- Adena -->
+		<production id="91132" count="1" /> <!-- Agathion Petram -->
+	</item>
+</list>
