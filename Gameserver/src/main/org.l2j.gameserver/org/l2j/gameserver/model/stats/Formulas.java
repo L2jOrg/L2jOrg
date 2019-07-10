@@ -1399,16 +1399,16 @@ public final class Formulas {
     }
 
     private static double calcSpiritElementalPvPDamage(double attack, double critDamage, boolean isCrit) {
-        var damage = attack * 1.223;
+        var damage = attack * 1.223 + Rnd.get(-20, +20);
         if(isCrit) {
-            damage +=  (attack * 1.223)  + ( (attack * 0.03 + 24) * critDamage);
+            damage +=  (attack * 1.223)  + ( (attack * 0.03 + 24) * critDamage) + Rnd.get(-5, 30);
         }
         return damage;
     }
 
     private static double calcSpiritElementalPvEDamage(ElementalType attackerType, ElementalType targetType, double attack, double critDamage, boolean isCrit) {
         double damage;
-        double baseDamage = attack * 0.8;
+        double baseDamage = attack * 0.8 + Rnd.get(-25, 25);
         double bonus = 1;
         if(targetType == ElementalType.NONE) {
             damage = attack * 0.735;
@@ -1426,7 +1426,7 @@ public final class Formulas {
         }
 
         if(isCrit) {
-           damage += (40 + (9.2 + attack * 0.048 ) * critDamage) * bonus;
+           damage += (40 + (9.2 + attack * 0.048 ) * critDamage) * bonus + Rnd.get(-10, 50);
         }
 
         return damage;
