@@ -582,6 +582,7 @@
 	<skill id="51093" toLevel="1" name="Fire Attribute Attack">
 		<!-- Fire Attribute Attack +100. -->
 		<icon>icon.agathion_fire_1</icon>
+		<operateType>P</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<magicLvl>1</magicLvl>
@@ -594,12 +595,11 @@
 				<type>FIRE</type>
 			</effect>
 		</effects>
-		<operateType>A1</operateType>
 	</skill>
 	<skill id="51094" toLevel="1" name="Water Attribute Attack">
 		<!-- Water Attribute Attack +100. -->
 		<icon>icon.agathion_water_1</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<magicLvl>1</magicLvl>
@@ -616,7 +616,7 @@
 	<skill id="51095" toLevel="1" name="Wind Attribute Attack">
 		<!-- Wind Attribute Attack +100. -->
 		<icon>icon.agathion_wind_1</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<magicLvl>1</magicLvl>
@@ -633,7 +633,7 @@
 	<skill id="51096" toLevel="1" name="Earth Attribute Attack">
 		<!-- Earth Attribute Attack +100. -->
 		<icon>icon.agathion_earth_1</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<magicLvl>1</magicLvl>
@@ -642,7 +642,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="elementalSpiritAttack">
-				<amount>50</amount>
+				<amount>100</amount>
 				<type>EARTH</type>
 			</effect>
 		</effects>

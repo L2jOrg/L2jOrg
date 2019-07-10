@@ -145,7 +145,8 @@ public class EventScheduler {
             try {
                 notification.execute();
             } catch (Exception e) {
-                LOGGER.warn("Failed to notify to event manager: " + notification.getManager().getClass().getSimpleName() + " method: " + notification.getMethod().getName());
+                LOGGER.warn("Failed to notify to event manager: {} method: {}", notification.getManager().getClass().getSimpleName(),  notification.getMethod().getName());
+                LOGGER.warn(e.getMessage(), e);
             }
         }
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="20800" level="82" type="L2Monster" name="Eva's Watchman" element="WATER">
+	<npc id="20800" level="79" type="L2Monster" name="Eva's Watchman" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -14,7 +14,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="303682" sp="9110" attribute_exp="1333" />
+		<acquire exp="131997" sp="3959" attribute_exp="948" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2423.3825125" hpRegen="8.5" mp="3104.58" mpRegen="3" />
 			<attack physical="808.61705" magical="731.48967391304" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -45,7 +45,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="20801" level="82" type="L2Monster" name="Piker" element="WATER">
+	<npc id="20801" level="80" type="L2Monster" name="Piker" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -62,7 +62,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="302" /> <!-- Body Slasher -->
-		<acquire exp="384780" sp="10389" attribute_exp="1520"/>
+		<acquire exp="136896" sp="4106" attribute_exp="1040"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2827.269335" hpRegen="8.5" mp="3415.215" mpRegen="3" />
 			<attack physical="939.4691" magical="853.40152173913" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -96,7 +96,7 @@
 			<height normal="34.8" />
 		</collision>
 	</npc>
-	<npc id="20802" level="82" type="L2Monster" name="Mage" element="WATER">
+	<npc id="20802" level="80" type="L2Monster" name="Mage" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -115,7 +115,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="192" /> <!-- Crystal Staff -->
-		<acquire exp="370425" sp="10001" attribute_exp="1463" />
+		<acquire exp="168844" sp="5065" attribute_exp="1040" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3029.1819575" hpRegen="8.5" mp="4120.56" mpRegen="3" />
 			<attack physical="1004.88515" magical="914.34815217391" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -152,7 +152,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="20803" level="83" type="L2Monster" name="Doll Master" element="WATER">
+	<npc id="20803" level="82" type="L2Monster" name="Doll Master" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -168,7 +168,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="391426" sp="10568" attribute_exp="1527" />
+		<acquire exp="190141" sp="5704" attribute_exp="1230" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2940.744352" hpRegen="8.5" mp="3483.36" mpRegen="3" />
 			<attack physical="976.51936" magical="887.65356521739" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3400,7 +3400,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="303419" sp="8192" attribute_exp="1184" />
+		<acquire exp="141914" sp="4257" attribute_exp="1134" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2450.5997675" hpRegen="8.5" mp="2907.225" mpRegen="3" />
 			<attack physical="817.72135" magical="739.70510869565" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />

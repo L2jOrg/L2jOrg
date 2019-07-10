@@ -2505,10 +2505,10 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="21761" level="82" type="L2Monster" name="Salamander" title="Elite" element="FIRE">
+	<npc id="21761" level="76" type="L2Monster" name="Salamander" title="Elite" element="FIRE">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="133236" sp="3597" attribute_exp="701" />
+		<acquire exp="240547" sp="7216" attribute_exp="684" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1453.96793" hpRegen="8.5" mp="2850.585" mpRegen="3" />
 			<attack physical="494.5442" magical="438.8752173913" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -2537,10 +2537,10 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21762" level="83" type="L2Monster" name="Lava" title="Elite" element="FIRE">
+	<npc id="21762" level="79" type="L2Monster" name="Lava" title="Elite" element="FIRE">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="687418" sp="18560" attribute_exp="2683" />
+		<acquire exp="374272" sp="11228" attribute_exp="948" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2450.6202933333" hpRegen="8.5" mp="3483.36" mpRegen="3" />
 			<attack physical="817.728" magical="739.71130434783" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -2570,10 +2570,10 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21763" level="83" type="L2Monster" name="Firen" title="Master" element="FIRE">
+	<npc id="21763" level="82" type="L2Monster" name="Firen" title="Master" element="FIRE">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2521725" sp="68086" attribute_exp="9843"/>
+		<acquire exp="1207859" sp="36235" attribute_exp="1230"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3063.234315" hpRegen="8.5" mp="3828.51" mpRegen="3" />
 			<speed>
@@ -2603,10 +2603,9 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21764" level="82" type="L2Monster" name="Growler" title="Elite" element="EARTH">
-		<!-- Classic Seven Sings -->
+	<npc id="21764" level="76" type="L2Monster" name="Growler" title="Elite" element="EARTH">
 		<race>ELEMENTAL</race>
-		<acquire exp="141405" sp="3817" attribute_exp="744"/>
+		<acquire exp="240547" sp="7216" attribute_exp="684"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1453.96793" hpRegen="8.5" mp="2850.585" mpRegen="3" />
 			<speed>
@@ -2635,10 +2634,9 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21765" level="83" type="L2Monster" name="Tree Soldier" title="Elite" element="EARTH">
-		<!-- Classic Seven Sings -->
+	<npc id="21765" level="77" type="L2Monster" name="Tree Soldier" title="Elite" element="EARTH">
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
-		<acquire exp="880166" sp="23764" attribute_exp="3435"/>
+		<acquire exp="356985" sp="10709" attribute_exp="770"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2450.5997675" hpRegen="8.5" mp="3483.36" mpRegen="3" />
 			<speed>
@@ -2667,10 +2665,9 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21766" level="83" type="L2Monster" name="Tortay" title="Master" element="EARTH">
-		<!-- Classic Seven Sings -->
+	<npc id="21766" level="82" type="L2Monster" name="Tortay" title="Master" element="EARTH">
 		<race>ELEMENTAL</race>
-		<acquire exp="2525776" sp="68195" attribute_exp="9859"/>
+		<acquire exp="1207859" sp="36235" attribute_exp="1230"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3063.234315" hpRegen="8.5" mp="3828.51" mpRegen="3" />
 			<speed>
@@ -2700,10 +2697,10 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21767" level="82" type="L2Monster" name="Undine" title="Elite" element="WATER">
+	<npc id="21767" level="76" type="L2Monster" name="Undine" title="Elite" element="WATER">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="141405" sp="3817" attribute_exp="744"/>
+		<acquire exp="240547" sp="7216" attribute_exp="684"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1453.96793" hpRegen="8.5" mp="2850.585" mpRegen="3" />
 			<speed>
@@ -2732,11 +2729,10 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21768" level="83" type="L2Monster" name="Snow Golem" title="Elite" element="WATER">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="21768" level="77" type="L2Monster" name="Snow Golem" title="Elite" element="WATER">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="880166" sp="23764" attribute_exp="3435"/>
+		<acquire exp="355562" sp="10666" attribute_exp="770"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2450.5997675" hpRegen="8.5" mp="3483.36" mpRegen="3" />
 			<speed>
@@ -2765,11 +2761,10 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21769" level="83" type="L2Monster" name="Ishtir" title="Master" element="WATER">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="21769" level="82" type="L2Monster" name="Ishtir" title="Master" element="WATER">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2525776" sp="68195" attribute_exp="9859"/>
+		<acquire exp="1207859" sp="36235" attribute_exp="1230"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3063.234315" hpRegen="8.5" mp="3828.51" mpRegen="3" />
 			<speed>
@@ -2799,7 +2794,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21770" level="82" type="L2Monster" name="Sylph" title="Elite" element="WIND">
+	<npc id="21770" level="76" type="L2Monster" name="Sylph" title="Elite" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2814,7 +2809,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="141405" sp="3817" attribute_exp="744"/>
+		<acquire exp="240547" sp="7216" attribute_exp="684"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1453.96793" hpRegen="8.5" mp="2850.585" mpRegen="3" />
 			<speed>
@@ -2851,7 +2846,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21771" level="83" type="L2Monster" name="Kimerian" title="Elite" element="WIND">
+	<npc id="21771" level="77" type="L2Monster" name="Kimerian" title="Elite" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2866,7 +2861,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="880166" sp="23764" attribute_exp="3435" />
+		<acquire exp="359475" sp="10784" attribute_exp="770" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2450.5997675" hpRegen="8.5" mp="3483.36" mpRegen="3" />
 			<speed>
@@ -2903,7 +2898,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21772" level="83" type="L2Monster" name="Radin" title="Master" element="WIND">
+	<npc id="21772" level="82" type="L2Monster" name="Radin" title="Master" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2918,7 +2913,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="2525776" sp="68195" attribute_exp="9859"/>
+		<acquire exp="1207859" sp="36235" attribute_exp="1230"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3063.234315" hpRegen="8.5" mp="3828.51" mpRegen="3" />
 			<speed>
@@ -2959,7 +2954,7 @@
 	<npc id="21773" level="82" type="L2Monster" name="Captain's Henchman" element="WATER">
 		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="165067" sp="4456"  attribute_exp="652"/>
+		<acquire exp="101142" sp="3034"  attribute_exp="1230"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2423.44409" hpRegen="8.5" mp="2850.585" mpRegen="3" />
 			<attack physical="1055.28566" magical="720.6233026" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -2982,10 +2977,10 @@
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 		</skillList>
 	</npc>
-	<npc id="21774" level="82" type="L2Monster" name="Buffalo" title="Guardian of Gorge" element="EARTH">
+	<npc id="21774" level="78" type="L2Monster" name="Buffalo" title="Guardian of Gorge" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<race>BEAST</race>
-		<acquire exp="65216" sp="1760"  attribute_exp="343"/>
+		<acquire exp="96918" sp="2907"  attribute_exp="858"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1453.96793" hpRegen="8.5" mp="2850.585" mpRegen="3" />
 			<speed>
@@ -3007,10 +3002,10 @@
 			<height normal="37.8" />
 		</collision>
 	</npc>
-	<npc id="21775" level="82" type="L2Monster" name="Arahan" title="Hero of the Past" element="EARTH">
+	<npc id="21775" level="78" type="L2Monster" name="Arahan" title="Hero of the Past" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<race>DIVINE</race>
-		<acquire exp="591127" sp="15960" attribute_exp="2335" />
+		<acquire exp="322658" sp="9679" attribute_exp="858" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2423.3825125" hpRegen="8.5" mp="3104.58" mpRegen="3" />
 			<speed>
@@ -3024,7 +3019,7 @@
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4410" level="13" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
@@ -3034,7 +3029,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="21776" level="82" type="L2Monster" name="Fuish" title="Guardian of Wind" element="WIND">
+	<npc id="21776" level="80" type="L2Monster" name="Fuish" title="Guardian of Wind" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3049,7 +3044,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="110421" sp="2981" attribute_exp="436"/>
+		<acquire exp="182745" sp="5482" attribute_exp="1040"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1453.96793" hpRegen="8.5" mp="2850.585" mpRegen="3" />
 			<speed>
@@ -3080,7 +3075,7 @@
 			<height normal="31.44" />
 		</collision>
 	</npc>
-	<npc id="21777" level="78" type="L2Monster" name="White Tiger" element="WIND">
+	<npc id="21777" level="76" type="L2Monster" name="White Tiger" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3095,7 +3090,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="22942" sp="688" attribute_exp="141"/>
+		<acquire exp="45295" sp="1358" attribute_exp="684"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1380.32124" hpRegen="8.5" mp="2629.335" mpRegen="3" />
 			<speed>
@@ -3126,7 +3121,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="21778" level="79" type="L2Monster" name="Black Tiger" element="WIND">
+	<npc id="21778" level="76" type="L2Monster" name="Black Tiger" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3141,7 +3136,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="42650" sp="1151" attribute_exp="233" />
+		<acquire exp="82723" sp="2481" attribute_exp="684" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1399.902885" hpRegen="8.5" mp="2683.32" mpRegen="3" />
 			<speed>
@@ -3172,7 +3167,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="21779" level="79" type="L2Monster" name="Scorn Warrior" element="WIND">
+	<npc id="21779" level="77" type="L2Monster" name="Scorn Warrior" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3187,7 +3182,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="25744" sp="695" attribute_exp="140"/>
+		<acquire exp="50337" sp="1510" attribute_exp="770"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1399.77973" hpRegen="8.5" mp="2683.32" mpRegen="3" />
 			<speed>
@@ -3217,7 +3212,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21780" level="80" type="L2Monster" name="Porcupine" element="WIND">
+	<npc id="21780" level="77" type="L2Monster" name="Porcupine" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3232,7 +3227,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="45081" sp="1217" attribute_exp="243"/>
+		<acquire exp="86338" sp="2590" attribute_exp="770"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1418.868755" hpRegen="8.5" mp="2739.075" mpRegen="3" />
 			<speed>
@@ -3263,7 +3258,7 @@
 			<height normal="21.3" />
 		</collision>
 	</npc>
-	<npc id="21781" level="80" type="L2Monster" name="Scorn Soldier" element="WIND">
+	<npc id="21781" level="78" type="L2Monster" name="Scorn Soldier" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3278,7 +3273,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="28320" sp="764" attribute_exp="152"/>
+		<acquire exp="54208" sp="1626" attribute_exp="858"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1418.99191" hpRegen="8.5" mp="2739.075" mpRegen="3" />
 			<speed>
@@ -3309,7 +3304,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21782" level="81" type="L2Monster" name="Scorn Seeker" element="WIND">
+	<npc id="21782" level="78" type="L2Monster" name="Scorn Seeker" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3324,7 +3319,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="30607" sp="826" attribute_exp="163" />
+		<acquire exp="97356" sp="2920" attribute_exp="858" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1436.72623" hpRegen="8.5" mp="2794.83" mpRegen="3" />
 			<speed>
@@ -3370,7 +3365,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="52317" sp="1412" attribute_exp="279" />
+		<acquire exp="93128" sp="2793" attribute_exp="948" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1436.849385" hpRegen="8.5" mp="2794.83" mpRegen="3" />
 			<speed>
@@ -3401,7 +3396,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="21784" level="82" type="L2Monster" name="Storm Tapo" element="WIND">
+	<npc id="21784" level="79" type="L2Monster" name="Storm Tapo" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3416,7 +3411,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="52205" sp="1409" attribute_exp="275"/>
+		<acquire exp="98745" sp="2962" attribute_exp="948"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1453.96793" hpRegen="8.5" mp="2850.585" mpRegen="3" />
 			<speed>
@@ -3447,7 +3442,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="21785" level="82" type="L2Monster" name="Breeze Warrior" element="WIND">
+	<npc id="21785" level="80" type="L2Monster" name="Breeze Warrior" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3462,7 +3457,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="356540" sp="10696" attribute_exp="1565" />
+		<acquire exp="169228" sp="5076" attribute_exp="1040" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3029.1819575" hpRegen="8.5" mp="2850.585" mpRegen="3" />
 			<speed>
@@ -3493,7 +3488,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21786" level="82" type="L2Monster" name="Sharp Kau" element="WIND">
+	<npc id="21786" level="80" type="L2Monster" name="Sharp Kau" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3508,7 +3503,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="297563" sp="8034" attribute_exp="1175"/>
+		<acquire exp="172684" sp="5180" attribute_exp="1040"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2423.3825125" hpRegen="8.5" mp="3415.215" mpRegen="3" />
 			<speed>
@@ -3539,7 +3534,7 @@
 			<height normal="21.3" />
 		</collision>
 	</npc>
-	<npc id="21787" level="82" type="L2Monster" name="Breeze Piker" element="WIND">
+	<npc id="21787" level="80" type="L2Monster" name="Breeze Piker" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3554,7 +3549,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="357952" sp="9664" attribute_exp="1414" />
+		<acquire exp="170380" sp="5111" attribute_exp="1040" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3029.1819575" hpRegen="8.5" mp="2850.585" mpRegen="3" />
 			<speed>
@@ -3585,7 +3580,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21788" level="82" type="L2Monster" name="Breeze Mage" element="WIND">
+	<npc id="21788" level="81" type="L2Monster" name="Breeze Mage" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3600,7 +3595,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="299823" sp="8095" attribute_exp="1184"/>
+		<acquire exp="143410" sp="4302" attribute_exp="1134"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2423.3825125" hpRegen="8.5" mp="3753.285" mpRegen="3" />
 			<speed>
@@ -3632,7 +3627,7 @@
 			<height normal="48.6" />
 		</collision>
 	</npc>
-	<npc id="21789" level="83" type="L2Monster" name="Folding" element="WIND">
+	<npc id="21789" level="81" type="L2Monster" name="Folding" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3647,7 +3642,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="311134" sp="8400" attribute_exp="1214"/>
+		<acquire exp="137190" sp="4115" attribute_exp="1134"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2450.5997675" hpRegen="8.5" mp="3166.53" mpRegen="3" />
 			<speed>
@@ -3678,7 +3673,7 @@
 			<height normal="27.6" />
 		</collision>
 	</npc>
-	<npc id="21790" level="83" type="L2Monster" name="Wingrow" element="WIND">
+	<npc id="21790" level="81" type="L2Monster" name="Wingrow" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3693,7 +3688,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="405458" sp="10947" attribute_exp="1582"/>
+		<acquire exp="182264" sp="5467" attribute_exp="1134"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2859.043325" hpRegen="8.5" mp="3483.36" mpRegen="3" />
 			<speed>
@@ -3724,7 +3719,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="21791" level="83" type="L2Monster" name="Storm Lucifer" element="WIND">
+	<npc id="21791" level="82" type="L2Monster" name="Storm Lucifer" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3739,7 +3734,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="402228" sp="10860" attribute_exp="1570"/>
+		<acquire exp="184089" sp="5522" attribute_exp="1230"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2859.043325" hpRegen="8.5" mp="3483.36" mpRegen="3" />
 			<speed>
@@ -3771,7 +3766,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="21792" level="83" type="L2Monster" name="Blow Breaker" element="WIND">
+	<npc id="21792" level="82" type="L2Monster" name="Blow Breaker" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3786,7 +3781,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="398997" sp="10772" attribute_exp="1557"/>
+		<acquire exp="186389" sp="5591" attribute_exp="1230"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2940.744352" hpRegen="8.5" mp="2907.225" mpRegen="3" />
 			<speed>
@@ -3817,7 +3812,7 @@
 			<height normal="27.6" />
 		</collision>
 	</npc>
-	<npc id="21793" level="83" type="L2Monster" name="Brolly Seeker" element="WIND">
+	<npc id="21793" level="82" type="L2Monster" name="Brolly Seeker" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3832,7 +3827,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="407195" sp="10994" attribute_exp="1589" />
+		<acquire exp="193247" sp="5797" attribute_exp="1230" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2940.744352" hpRegen="8.5" mp="3828.51" mpRegen="3" />
 			<speed>
