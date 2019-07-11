@@ -12,7 +12,7 @@ import org.l2j.gameserver.network.serverpackets.ExColosseumFenceInfo;
 /**
  * @author HoridoJoho / FBIagent
  */
-public final class L2FenceInstance extends WorldObject {
+public final class Fence extends WorldObject {
     private final int _xMin;
     private final int _xMax;
     private final int _yMin;
@@ -25,7 +25,7 @@ public final class L2FenceInstance extends WorldObject {
     private FenceState _state;
     private int[] _heightFences;
 
-    public L2FenceInstance(int x, int y, String name, int width, int length, int height, FenceState state) {
+    public Fence(int x, int y, String name, int width, int length, int height, FenceState state) {
         super(IdFactory.getInstance().getNextId());
 
         _xMin = x - (width / 2);

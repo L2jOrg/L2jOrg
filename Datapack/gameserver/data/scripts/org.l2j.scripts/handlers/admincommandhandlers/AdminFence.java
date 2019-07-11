@@ -16,21 +16,21 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.NoSuchElementException;
-import java.util.StringTokenizer;
-
 import org.l2j.gameserver.data.xml.impl.FenceData;
 import org.l2j.gameserver.enums.FenceState;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2FenceInstance;
+import org.l2j.gameserver.model.WorldObject;
+import org.l2j.gameserver.model.actor.instance.Fence;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.html.PageBuilder;
 import org.l2j.gameserver.model.html.PageResult;
 import org.l2j.gameserver.model.html.styles.ButtonsStyle;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
+
+import java.util.NoSuchElementException;
+import java.util.StringTokenizer;
 
 /**
  * @author Sahar, Nik64
@@ -94,9 +94,9 @@ public class AdminFence implements IAdminCommandHandler
 					else
 					{
 						final WorldObject obj = L2World.getInstance().findObject(objId);
-						if (obj instanceof L2FenceInstance)
+						if (obj instanceof Fence)
 						{
-							final L2FenceInstance fence = (L2FenceInstance) obj;
+							final Fence fence = (Fence) obj;
 							final FenceState state = FenceState.values()[fenceTypeOrdinal];
 							fence.setState(state);
 							BuilderUtil.sendSysMessage(activeChar, "Fence " + fence.getName() + "[" + fence.getId() + "]'s state has been changed to " + state.toString());
@@ -119,9 +119,9 @@ public class AdminFence implements IAdminCommandHandler
 				{
 					final int objId = Integer.parseInt(st.nextToken());
 					final WorldObject obj = L2World.getInstance().findObject(objId);
-					if (obj instanceof L2FenceInstance)
+					if (obj instanceof Fence)
 					{
-						((L2FenceInstance) obj).deleteMe();
+						((Fence) obj).deleteMe();
 						BuilderUtil.sendSysMessage(activeChar, "Fence removed succesfully.");
 					}
 					else

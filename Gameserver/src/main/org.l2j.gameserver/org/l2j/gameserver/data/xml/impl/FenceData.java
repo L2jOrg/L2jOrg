@@ -4,7 +4,7 @@ import org.l2j.gameserver.enums.FenceState;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.L2WorldRegion;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.instance.L2FenceInstance;
+import org.l2j.gameserver.model.actor.instance.Fence;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -33,8 +33,8 @@ public final class FenceData extends GameXmlReader {
 
     private static final int MAX_Z_DIFF = 100;
 
-    private final Map<L2WorldRegion, List<L2FenceInstance>> _regions = new ConcurrentHashMap<>();
-    private final Map<Integer, L2FenceInstance> _fences = new ConcurrentHashMap<>();
+    private final Map<L2WorldRegion, List<Fence>> _regions = new ConcurrentHashMap<>();
+    private final Map<Integer, Fence> _fences = new ConcurrentHashMap<>();
 
     private FenceData() {
         load();
@@ -69,12 +69,12 @@ public final class FenceData extends GameXmlReader {
         spawnFence(set.getInt("x"), set.getInt("y"), set.getInt("z"), set.getString("name"), set.getInt("width"), set.getInt("length"), set.getInt("height"), 0, set.getEnum("state", FenceState.class, FenceState.CLOSED));
     }
 
-    public L2FenceInstance spawnFence(int x, int y, int z, int width, int length, int height, int instanceId, FenceState state) {
+    public Fence spawnFence(int x, int y, int z, int width, int length, int height, int instanceId, FenceState state) {
         return spawnFence(x, y, z, null, width, length, height, instanceId, state);
     }
 
-    public L2FenceInstance spawnFence(int x, int y, int z, String name, int width, int length, int height, int instanceId, FenceState state) {
-        final L2FenceInstance fence = new L2FenceInstance(x, y, name, width, length, height, state);
+    public Fence spawnFence(int x, int y, int z, String name, int width, int length, int height, int instanceId, FenceState state) {
+        final Fence fence = new Fence(x, y, name, width, length, height, state);
         if (instanceId > 0) {
             fence.setInstanceById(instanceId);
         }
@@ -84,30 +84,30 @@ public final class FenceData extends GameXmlReader {
         return fence;
     }
 
-    private void addFence(L2FenceInstance fence) {
+    private void addFence(Fence fence) {
         _fences.put(fence.getObjectId(), fence);
         _regions.computeIfAbsent(L2World.getInstance().getRegion(fence), key -> new ArrayList<>()).add(fence);
     }
 
-    public void removeFence(L2FenceInstance fence) {
+    public void removeFence(Fence fence) {
         _fences.remove(fence.getObjectId());
 
-        final List<L2FenceInstance> fencesInRegion = _regions.get(L2World.getInstance().getRegion(fence));
+        final List<Fence> fencesInRegion = _regions.get(L2World.getInstance().getRegion(fence));
         if (fencesInRegion != null) {
             fencesInRegion.remove(fence);
         }
     }
 
-    public Map<Integer, L2FenceInstance> getFences() {
+    public Map<Integer, Fence> getFences() {
         return _fences;
     }
 
-    public L2FenceInstance getFence(int objectId) {
+    public Fence getFence(int objectId) {
         return _fences.get(objectId);
     }
 
     public boolean checkIfFenceBetween(int x, int y, int z, int tx, int ty, int tz, Instance instance) {
-        final Predicate<L2FenceInstance> filter = fence ->
+        final Predicate<Fence> filter = fence ->
         {
             // Check if fence is geodata enabled.
             if (!fence.getState().isGeodataEnabled()) {

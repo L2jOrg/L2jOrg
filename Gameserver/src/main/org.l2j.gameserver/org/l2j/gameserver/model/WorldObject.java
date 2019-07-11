@@ -169,20 +169,6 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 
     public final void spawnMe(int x, int y, int z) {
         synchronized (this) {
-            if (x > L2World.MAP_MAX_X) {
-                x = L2World.MAP_MAX_X - 5000;
-            }
-            if (x < L2World.MAP_MIN_X) {
-                x = L2World.MAP_MIN_X + 5000;
-            }
-            if (y > L2World.MAP_MAX_Y) {
-                y = L2World.MAP_MAX_Y - 5000;
-            }
-            if (y < L2World.MAP_MIN_Y) {
-                y = L2World.MAP_MIN_Y + 5000;
-            }
-
-            // Set the x,y,z position of the WorldObject. If flagged with _isSpawned, setXYZ will automatically update world region, so avoid that.
             setXYZ(x, y, z);
         }
 
@@ -442,19 +428,6 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     }
 
     public final void setXYZInvisible(int x, int y, int z) {
-        if (x > L2World.MAP_MAX_X) {
-            x = L2World.MAP_MAX_X - 5000;
-        }
-        if (x < L2World.MAP_MIN_X) {
-            x = L2World.MAP_MIN_X + 5000;
-        }
-        if (y > L2World.MAP_MAX_Y) {
-            y = L2World.MAP_MAX_Y - 5000;
-        }
-        if (y < L2World.MAP_MIN_Y) {
-            y = L2World.MAP_MIN_Y + 5000;
-        }
-
         setXYZ(x, y, z);
         setSpawned(false);
     }
@@ -575,15 +548,27 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     /**
      * Sets the x, y, z coordinate.
      *
-     * @param newX the X coordinate
-     * @param newY the Y coordinate
-     * @param newZ the Z coordinate
+     * @param x the X coordinate
+     * @param y the Y coordinate
+     * @param z the Z coordinate
      */
     @Override
-    public void setXYZ(int newX, int newY, int newZ) {
-        _x = newX;
-        _y = newY;
-        _z = newZ;
+    public void setXYZ(int x, int y, int z) {
+        if (x > L2World.MAP_MAX_X) {
+            x = L2World.MAP_MAX_X - 5000;
+        }
+        if (x < L2World.MAP_MIN_X) {
+            x = L2World.MAP_MIN_X + 5000;
+        }
+        if (y > L2World.MAP_MAX_Y) {
+            y = L2World.MAP_MAX_Y - 5000;
+        }
+        if (y < L2World.MAP_MIN_Y) {
+            y = L2World.MAP_MIN_Y + 5000;
+        }
+        _x = x;
+        _y = y;
+        _z = z;
 
         if (_isSpawned) {
             final L2WorldRegion newRegion = L2World.getInstance().getRegion(this);

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.FenceState;
-import org.l2j.gameserver.model.actor.instance.L2FenceInstance;
+import org.l2j.gameserver.model.actor.instance.Fence;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -17,7 +17,7 @@ public class ExColosseumFenceInfo extends ServerPacket {
     private final int _length;
     private final int _clientState;
 
-    public ExColosseumFenceInfo(L2FenceInstance fence) {
+    public ExColosseumFenceInfo(Fence fence) {
         this(fence.getObjectId(), fence.getX(), fence.getY(), fence.getZ(), fence.getWidth(), fence.getLength(), fence.getState());
     }
 
