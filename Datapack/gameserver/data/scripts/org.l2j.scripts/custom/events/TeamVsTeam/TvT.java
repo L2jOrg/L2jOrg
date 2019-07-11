@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.L2CommandChannel;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
@@ -118,7 +118,7 @@ public class TvT extends Event implements ScriptEvent
 	private static volatile int BLUE_SCORE;
 	private static volatile int RED_SCORE;
 	private static Instance PVP_WORLD = null;
-	private static L2Npc MANAGER_NPC_INSTANCE = null;
+	private static Npc MANAGER_NPC_INSTANCE = null;
 	private static boolean EVENT_ACTIVE = false;
 	
 	private TvT()
@@ -130,7 +130,7 @@ public class TvT extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (!EVENT_ACTIVE)
 		{
@@ -539,7 +539,7 @@ public class TvT extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, Player player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		// Event not active.
 		if (!EVENT_ACTIVE)

@@ -23,7 +23,7 @@ import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.PlayerEventHolder;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
@@ -159,7 +159,7 @@ public class L2Event {
     public static void unspawnEventNpcs() {
         SpawnTable.getInstance().forEachSpawn(spawn ->
         {
-            final L2Npc npc = spawn.getLastSpawn();
+            final Npc npc = spawn.getLastSpawn();
             if ((npc != null) && npc.getVariables().getBoolean("eventmob", false)) {
                 npc.deleteMe();
                 spawn.stopRespawn();

@@ -25,7 +25,7 @@ import org.l2j.gameserver.handler.VoicedCommandHandler;
 import org.l2j.gameserver.instancemanager.SellBuffsManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.holders.SellBuffHolder;
@@ -340,7 +340,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 					final Player seller = L2World.getInstance().getPlayer(objId);
 					if (seller != null)
 					{
-						if (!seller.isSellingBuffs() || !activeChar.isInsideRadius3D(seller, L2Npc.INTERACTION_DISTANCE))
+						if (!seller.isSellingBuffs() || !activeChar.isInsideRadius3D(seller, Npc.INTERACTION_DISTANCE))
 						{
 							return false;
 						}
@@ -386,7 +386,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 					}
 					
 					final Skill skillToBuy = seller.getKnownSkill(skillId);
-					if (!seller.isSellingBuffs() || !GameUtils.checkIfInRange(L2Npc.INTERACTION_DISTANCE, activeChar, seller, true) || (skillToBuy == null))
+					if (!seller.isSellingBuffs() || !GameUtils.checkIfInRange(Npc.INTERACTION_DISTANCE, activeChar, seller, true) || (skillToBuy == null))
 					{
 						return false;
 					}

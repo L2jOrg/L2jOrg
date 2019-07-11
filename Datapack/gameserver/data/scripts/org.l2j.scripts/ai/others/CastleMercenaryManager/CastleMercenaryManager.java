@@ -20,8 +20,8 @@ import java.util.StringTokenizer;
 
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.PcCondOverride;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2MerchantInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -56,7 +56,7 @@ public final class CastleMercenaryManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		final StringTokenizer st = new StringTokenizer(event, " ");
@@ -85,7 +85,7 @@ public final class CastleMercenaryManager extends AbstractNpcAI
 			case "buy":
 			{
 				final int listId = Integer.parseInt(npc.getId() + st.nextToken());
-				((L2MerchantInstance) npc).showBuyWindow(player, listId, false); // NOTE: Not affected by Castle Taxes, baseTax is 20% (done in merchant buylists)
+				((Merchant) npc).showBuyWindow(player, listId, false); // NOTE: Not affected by Castle Taxes, baseTax is 20% (done in merchant buylists)
 				break;
 			}
 			case "main":
@@ -103,7 +103,7 @@ public final class CastleMercenaryManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, Player player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final String htmltext;
 		if (player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((player.getClanId() == npc.getCastle().getOwnerId()) && player.hasClanPrivilege(ClanPrivilege.CS_MERCENARIES)))

@@ -8,7 +8,7 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.instancemanager.DuelManager;
 import org.l2j.gameserver.instancemanager.PcCafePointsManager;
-import org.l2j.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -577,7 +577,7 @@ public class L2Party extends AbstractPlayerGroup {
      * @param spoil     {@code true} if it's spoil loot
      * @param target    the NPC target
      */
-    public void distributeItem(Player player, int itemId, long itemCount, boolean spoil, L2Attackable target) {
+    public void distributeItem(Player player, int itemId, long itemCount, boolean spoil, Attackable target) {
         if (itemId == CommonItem.ADENA) {
             distributeAdena(player, itemCount, target);
             return;
@@ -603,14 +603,14 @@ public class L2Party extends AbstractPlayerGroup {
     }
 
     /**
-     * Method overload for {@link L2Party#distributeItem(Player, int, long, boolean, L2Attackable)}
+     * Method overload for {@link L2Party#distributeItem(Player, int, long, boolean, Attackable)}
      *
      * @param player the reference player
      * @param item   the item holder
      * @param spoil  {@code true} if it's spoil loot
      * @param target the NPC target
      */
-    public void distributeItem(Player player, ItemHolder item, boolean spoil, L2Attackable target) {
+    public void distributeItem(Player player, ItemHolder item, boolean spoil, Attackable target) {
         distributeItem(player, item.getId(), item.getCount(), spoil, target);
     }
 
@@ -656,7 +656,7 @@ public class L2Party extends AbstractPlayerGroup {
      * @param partyDmg
      * @param target
      */
-    public void distributeXpAndSp(double xpReward, double spReward, List<Player> rewardedMembers, int topLvl, long partyDmg, L2Attackable target) {
+    public void distributeXpAndSp(double xpReward, double spReward, List<Player> rewardedMembers, int topLvl, long partyDmg, Attackable target) {
         final List<Player> validMembers = getValidMembers(rewardedMembers, topLvl);
 
         xpReward *= getExpBonus(validMembers.size(), target.getInstanceWorld());

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="21396" level="84" type="L2Monster" name="Carrion Scarab">
+	<npc id="21396" level="84" type="Monster" name="Carrion Scarab">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="680551" sp="10208" />
@@ -45,7 +45,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21397" level="84" type="L2Monster" name="Carrion Scarab">
+	<npc id="21397" level="84" type="Monster" name="Carrion Scarab">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="1355598" sp="20333" />
@@ -73,7 +73,7 @@
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 		</skillList>
 	</npc>
-	<npc id="21398" level="80" type="L2Npc" name="Soldier Scarab">
+	<npc id="21398" level="80" type="Folk" name="Soldier Scarab">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -92,7 +92,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="21399" level="80" type="L2Npc" name="Soldier Scarab">
+	<npc id="21399" level="80" type="Folk" name="Soldier Scarab">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

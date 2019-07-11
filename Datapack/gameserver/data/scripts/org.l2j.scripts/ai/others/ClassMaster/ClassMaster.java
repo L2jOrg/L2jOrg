@@ -7,7 +7,7 @@ import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.CategoryType;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.events.EventType;
@@ -74,13 +74,13 @@ public final class ClassMaster extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, Player player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "test_server_helper001.html";
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (!_isEnabled)
 		{

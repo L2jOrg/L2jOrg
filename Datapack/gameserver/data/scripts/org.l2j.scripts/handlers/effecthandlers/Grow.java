@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -37,7 +37,7 @@ public final class Grow extends AbstractEffect
 	{
 		if (effected.isNpc())
 		{
-			final L2Npc npc = (L2Npc) effected;
+			final Npc npc = (Npc) effected;
 			npc.setCollisionHeight(npc.getTemplate().getCollisionHeightGrown());
 			npc.setCollisionRadius(npc.getTemplate().getCollisionRadiusGrown());
 		}
@@ -48,7 +48,7 @@ public final class Grow extends AbstractEffect
 	{
 		if (effected.isNpc())
 		{
-			final L2Npc npc = (L2Npc) effected;
+			final Npc npc = (Npc) effected;
 			npc.setCollisionHeight(npc.getTemplate().getCollisionHeight());
 			npc.setCollisionRadius(npc.getTemplate().getfCollisionRadius());
 		}

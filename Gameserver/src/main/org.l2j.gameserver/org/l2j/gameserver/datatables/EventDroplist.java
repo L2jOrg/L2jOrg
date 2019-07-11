@@ -26,7 +26,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * This class manage drop of Special Events created by GM for a defined period.<br>
- * During a Special Event all L2Attackable can drop extra Items.<br>
+ * During a Special Event all Attackable can drop extra Items.<br>
  * Those extra Items are defined in the table <b>allNpcDateDrops</b>.<br>
  * Each Special Event has a start and end date to stop to drop extra Items automatically.
  */

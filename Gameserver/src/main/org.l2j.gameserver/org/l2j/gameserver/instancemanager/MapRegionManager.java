@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.ClanHall;
@@ -240,7 +240,7 @@ public final class MapRegionManager extends GameXmlReader {
                     if (castle != null) {
                         if (castle.getSiege().isInProgress()) {
                             // Check if player's clan is attacker
-                            final Set<L2Npc> flags = castle.getSiege().getFlag(player.getClan());
+                            final Set<Npc> flags = castle.getSiege().getFlag(player.getClan());
                             if ((flags != null) && !flags.isEmpty()) {
                                 // Spawn to flag - Need more work to get player to the nearest flag
                                 return flags.stream().findAny().get().getLocation();
@@ -249,7 +249,7 @@ public final class MapRegionManager extends GameXmlReader {
                     } else if (fort != null) {
                         if (fort.getSiege().isInProgress()) {
                             // Check if player's clan is attacker
-                            final Set<L2Npc> flags = fort.getSiege().getFlag(player.getClan());
+                            final Set<Npc> flags = fort.getSiege().getFlag(player.getClan());
                             if ((flags != null) && !flags.isEmpty()) {
                                 // Spawn to flag - Need more work to get player to the nearest flag
                                 return flags.stream().findAny().get().getLocation();

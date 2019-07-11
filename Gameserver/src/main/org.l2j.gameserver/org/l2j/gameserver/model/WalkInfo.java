@@ -2,7 +2,7 @@ package org.l2j.gameserver.model;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.instancemanager.WalkingManager;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcMoveRouteFinished;
 
@@ -46,7 +46,7 @@ public class WalkInfo {
      *
      * @param npc NPC to debug message to be sent from
      */
-    public synchronized void calculateNextNode(L2Npc npc) {
+    public synchronized void calculateNextNode(Npc npc) {
         // Check this first, within the bounds of random moving, we have no conception of "first" or "last" node
         if (getRoute().getRepeatType() == WalkingManager.REPEAT_RANDOM) {
             int newNode = _currentNode;

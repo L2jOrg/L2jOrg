@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -56,7 +56,7 @@ public final class Instance implements IIdentifiable, INamable {
     // Advanced instance parameters
     private final Set<Player> _allowed = ConcurrentHashMap.newKeySet(); // Players which can enter to instance
     private final Set<Player> _players = ConcurrentHashMap.newKeySet(); // Players inside instance
-    private final Set<L2Npc> _npcs = ConcurrentHashMap.newKeySet(); // Spawned NPCs inside instance
+    private final Set<Npc> _npcs = ConcurrentHashMap.newKeySet(); // Spawned NPCs inside instance
     private final Map<Integer, Door> _doors = new HashMap<>(); // Spawned doors inside instance
     private final StatsSet _parameters = new StatsSet();
     // Timers
@@ -384,7 +384,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param name
      * @return {@code List} of NPCs that are part of specified group
      */
-    public List<L2Npc> getNpcsOfGroup(String name) {
+    public List<Npc> getNpcsOfGroup(String name) {
         return getNpcsOfGroup(name, null);
     }
 
@@ -393,7 +393,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param filter
      * @return {@code List} of NPCs that are part of specified group and matches filter specified
      */
-    public List<L2Npc> getNpcsOfGroup(String groupName, Predicate<L2Npc> filter) {
+    public List<Npc> getNpcsOfGroup(String groupName, Predicate<Npc> filter) {
         return getStreamOfGroup(groupName, filter).collect(Collectors.toList());
     }
 
@@ -402,7 +402,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param filter
      * @return {@code Npc} instance of an NPC that is part of a group and matches filter specified
      */
-    public L2Npc getNpcOfGroup(String groupName, Predicate<L2Npc> filter) {
+    public Npc getNpcOfGroup(String groupName, Predicate<Npc> filter) {
         return getStreamOfGroup(groupName, filter).findFirst().orElse(null);
     }
 
@@ -411,7 +411,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param filter
      * @return {@code Stream<Npc>} of NPCs that is part of a group and matches filter specified
      */
-    public Stream<L2Npc> getStreamOfGroup(String groupName, Predicate<L2Npc> filter) {
+    public Stream<Npc> getStreamOfGroup(String groupName, Predicate<Npc> filter) {
         if (filter == null) {
             filter = Objects::nonNull;
         }
@@ -431,14 +431,14 @@ public final class Instance implements IIdentifiable, INamable {
      * @param name name of group which should be spawned
      * @return list that contains NPCs spawned by this method
      */
-    public List<L2Npc> spawnGroup(String name) {
+    public List<Npc> spawnGroup(String name) {
         final List<SpawnGroup> spawns = getSpawnGroup(name);
         if (spawns == null) {
             LOGGER.warn("Spawn group " + name + " doesn't exist for instance " + _template.getName() + " (" + _id + ")!");
             return Collections.emptyList();
         }
 
-        final List<L2Npc> npcs = new LinkedList<>();
+        final List<Npc> npcs = new LinkedList<>();
         try {
             for (SpawnGroup holder : spawns) {
                 holder.spawnAll(this);
@@ -474,7 +474,7 @@ public final class Instance implements IIdentifiable, INamable {
      *
      * @return set of NPCs from instance
      */
-    public Set<L2Npc> getNpcs() {
+    public Set<Npc> getNpcs() {
         return _npcs;
     }
 
@@ -483,7 +483,7 @@ public final class Instance implements IIdentifiable, INamable {
      *
      * @return set of NPCs from instance
      */
-    public Set<L2Npc> getAliveNpcs() {
+    public Set<Npc> getAliveNpcs() {
         return _npcs.stream().filter(n -> n.getCurrentHp() > 0).collect(Collectors.toSet());
     }
 
@@ -493,7 +493,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param id IDs of NPCs which should be found
      * @return list of filtered NPCs from instance
      */
-    public List<L2Npc> getNpcs(int... id) {
+    public List<Npc> getNpcs(int... id) {
         return _npcs.stream().filter(n -> CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
     }
 
@@ -529,7 +529,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param id IDs of NPCs which should be found
      * @return list of filtered NPCs from instance
      */
-    public List<L2Npc> getAliveNpcs(int... id) {
+    public List<Npc> getAliveNpcs(int... id) {
         return _npcs.stream().filter(n -> (n.getCurrentHp() > 0) && CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
     }
 
@@ -539,15 +539,15 @@ public final class Instance implements IIdentifiable, INamable {
      * @param id ID of NPC to be found
      * @return first found NPC with specified ID, otherwise {@code null}
      */
-    public L2Npc getNpc(int id) {
+    public Npc getNpc(int id) {
         return _npcs.stream().filter(n -> n.getId() == id).findFirst().orElse(null);
     }
 
-    public void addNpc(L2Npc npc) {
+    public void addNpc(Npc npc) {
         _npcs.add(npc);
     }
 
-    public void removeNpc(L2Npc npc) {
+    public void removeNpc(Npc npc) {
         _npcs.remove(npc);
     }
 
@@ -572,7 +572,7 @@ public final class Instance implements IIdentifiable, INamable {
      */
     public void removeNpcs() {
         _spawns.forEach(SpawnTemplate::despawnAll);
-        _npcs.forEach(L2Npc::deleteMe);
+        _npcs.forEach(Npc::deleteMe);
         _npcs.clear();
     }
 
@@ -862,7 +862,7 @@ public final class Instance implements IIdentifiable, INamable {
                 }
             }
         } else if (object.isNpc()) {
-            final L2Npc npc = (L2Npc) object;
+            final Npc npc = (Npc) object;
             if (enter) {
                 addNpc(npc);
             } else {

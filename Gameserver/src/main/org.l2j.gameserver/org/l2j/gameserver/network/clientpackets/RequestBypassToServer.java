@@ -11,7 +11,7 @@ import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -64,7 +64,7 @@ public final class RequestBypassToServer extends ClientPacket {
             return;
         }
         if (obj.isNpc()) {
-            final L2Npc temp = (L2Npc) obj;
+            final Npc temp = (Npc) obj;
             temp.setTarget(activeChar);
             temp.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, activeChar.getLocation());
         }
@@ -104,7 +104,7 @@ public final class RequestBypassToServer extends ClientPacket {
                 return;
             }
 
-            if ((bypassOriginId > 0) && !GameUtils.isInsideRangeOfObjectId(activeChar, bypassOriginId, L2Npc.INTERACTION_DISTANCE)) {
+            if ((bypassOriginId > 0) && !GameUtils.isInsideRangeOfObjectId(activeChar, bypassOriginId, Npc.INTERACTION_DISTANCE)) {
                 // No logging here, this could be a common case where the player has the html still open and run too far away and then clicks a html action
                 return;
             }
@@ -138,8 +138,8 @@ public final class RequestBypassToServer extends ClientPacket {
                 if (Util.isNumeric(id)) {
                     final WorldObject object = L2World.getInstance().findObject(Integer.parseInt(id));
 
-                    if ((object != null) && object.isNpc() && (endOfId > 0) && activeChar.isInsideRadius2D(object, L2Npc.INTERACTION_DISTANCE)) {
-                        ((L2Npc) object).onBypassFeedback(activeChar, _command.substring(endOfId + 1));
+                    if ((object != null) && object.isNpc() && (endOfId > 0) && activeChar.isInsideRadius2D(object, Npc.INTERACTION_DISTANCE)) {
+                        ((Npc) object).onBypassFeedback(activeChar, _command.substring(endOfId + 1));
                     }
                 }
 
@@ -187,7 +187,7 @@ public final class RequestBypassToServer extends ClientPacket {
                     handler.useBypass("arenachange " + (arenaId - 1), activeChar, null);
                 }
             } else if (_command.startsWith("menu_select")) {
-                final L2Npc lastNpc = activeChar.getLastFolkNPC();
+                final Npc lastNpc = activeChar.getLastFolkNPC();
                 if ((lastNpc != null) && lastNpc.canInteract(activeChar)) {
                     final String[] split = _command.substring(_command.indexOf("?") + 1).split("&");
                     final int ask = Integer.parseInt(split[0].split("=")[1]);
@@ -195,7 +195,7 @@ public final class RequestBypassToServer extends ClientPacket {
                     EventDispatcher.getInstance().notifyEventAsync(new OnNpcMenuSelect(activeChar, lastNpc, ask, reply), lastNpc);
                 }
             } else if (_command.startsWith("manor_menu_select")) {
-                final L2Npc lastNpc = activeChar.getLastFolkNPC();
+                final Npc lastNpc = activeChar.getLastFolkNPC();
                 if (Config.ALLOW_MANOR && (lastNpc != null) && lastNpc.canInteract(activeChar)) {
                     final String[] split = _command.substring(_command.indexOf("?") + 1).split("&");
                     final int ask = Integer.parseInt(split[0].split("=")[1]);

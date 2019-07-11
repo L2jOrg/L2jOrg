@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.events.impl.character.npc;
 
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
@@ -11,13 +11,13 @@ import org.l2j.gameserver.model.skills.Skill;
  * @author UnAfraid
  */
 public class OnNpcSkillSee implements IBaseEvent {
-    private final L2Npc _npc;
+    private final Npc _npc;
     private final Player _caster;
     private final Skill _skill;
     private final WorldObject[] _targets;
     private final boolean _isSummon;
 
-    public OnNpcSkillSee(L2Npc npc, Player caster, Skill skill, boolean isSummon, WorldObject... targets) {
+    public OnNpcSkillSee(Npc npc, Player caster, Skill skill, boolean isSummon, WorldObject... targets) {
         _npc = npc;
         _caster = caster;
         _skill = skill;
@@ -25,7 +25,7 @@ public class OnNpcSkillSee implements IBaseEvent {
         _targets = targets;
     }
 
-    public L2Npc getTarget() {
+    public Npc getTarget() {
         return _npc;
     }
 

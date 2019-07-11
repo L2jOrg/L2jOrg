@@ -18,8 +18,8 @@ package handlers.bypasshandlers;
 
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2NpcInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Folk;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 public class SkillList implements IBypassHandler
@@ -36,7 +36,7 @@ public class SkillList implements IBypassHandler
 		{
 			return false;
 		}
-		L2NpcInstance.showSkillList(activeChar, (L2Npc) target, activeChar.getClassId());
+		Folk.showSkillList(activeChar, (Npc) target, activeChar.getClassId());
 		return true;
 	}
 	

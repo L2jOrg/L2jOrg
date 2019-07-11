@@ -2,8 +2,8 @@ package quests.Q00500_BrothersBoundInChains;
 
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.QuestType;
-import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
@@ -51,7 +51,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -122,7 +122,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, Player talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
@@ -220,7 +220,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 		{
 			return;
 		}
-		final L2Attackable target = event.getTarget();
+		final Attackable target = event.getTarget();
 		if (target == null)
 		{
 			return;

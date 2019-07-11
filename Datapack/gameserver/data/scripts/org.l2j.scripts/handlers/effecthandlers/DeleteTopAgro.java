@@ -18,8 +18,8 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -64,7 +64,7 @@ public class DeleteTopAgro extends AbstractEffect
 			return;
 		}
 		
-		final L2Attackable target = (L2Attackable) effected;
+		final Attackable target = (Attackable) effected;
 		target.stopHating(target.getMostHated());
 		target.setWalking();
 		target.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);

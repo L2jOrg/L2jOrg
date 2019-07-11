@@ -8,9 +8,9 @@ import org.l2j.gameserver.data.xml.impl.HitConditionBonusData;
 import org.l2j.gameserver.data.xml.impl.KarmaData;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2SiegeFlagInstance;
+import org.l2j.gameserver.model.actor.instance.SiegeFlag;
 import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.EffectFlag;
@@ -397,7 +397,7 @@ public final class Formulas {
         }
 
         if (creature.isNpc()) {
-            double npcFactor = ((L2Npc) creature).getTemplate().getHitTimeFactorSkill();
+            double npcFactor = ((Npc) creature).getTemplate().getHitTimeFactorSkill();
             if (npcFactor > 0) {
                 factor /= npcFactor;
             }
@@ -529,7 +529,7 @@ public final class Formulas {
      */
     public static boolean calcEffectSuccess(Creature attacker, Creature target, Skill skill) {
         // StaticObjects can not receive continuous effects.
-        if (target.isDoor() || (target instanceof L2SiegeFlagInstance) || (target instanceof StaticWorldObject)) {
+        if (target.isDoor() || (target instanceof SiegeFlag) || (target instanceof StaticWorldObject)) {
             return false;
         }
 

@@ -19,7 +19,7 @@ package quests.Q00344_1000YearsTheEndOfLamentation;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.quest.Quest;
@@ -83,7 +83,7 @@ public final class Q00344_1000YearsTheEndOfLamentation extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
@@ -203,7 +203,7 @@ public final class Q00344_1000YearsTheEndOfLamentation extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, Player talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
@@ -366,7 +366,7 @@ public final class Q00344_1000YearsTheEndOfLamentation extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, Player killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
 		if (qs != null)

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.npc;
 
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
@@ -25,23 +25,23 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnAttackableFactionCall implements IBaseEvent {
-    private final L2Npc _npc;
-    private final L2Npc _caller;
+    private final Npc _npc;
+    private final Npc _caller;
     private final Player _attacker;
     private final boolean _isSummon;
 
-    public OnAttackableFactionCall(L2Npc npc, L2Npc caller, Player attacker, boolean isSummon) {
+    public OnAttackableFactionCall(Npc npc, Npc caller, Player attacker, boolean isSummon) {
         _npc = npc;
         _caller = caller;
         _attacker = attacker;
         _isSummon = isSummon;
     }
 
-    public L2Npc getNpc() {
+    public Npc getNpc() {
         return _npc;
     }
 
-    public L2Npc getCaller() {
+    public Npc getCaller() {
         return _caller;
     }
 

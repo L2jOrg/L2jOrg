@@ -21,7 +21,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
+import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -73,7 +73,7 @@ public final class Spoil extends AbstractEffect
 			return;
 		}
 		
-		final L2MonsterInstance target = (L2MonsterInstance) effected;
+		final Monster target = (Monster) effected;
 		if (target.isSpoiled())
 		{
 			effector.sendPacket(SystemMessageId.IT_HAS_ALREADY_BEEN_SPOILED);

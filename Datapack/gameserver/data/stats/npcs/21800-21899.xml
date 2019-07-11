@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="21800" level="80" type="L2Monster" name="Kookaburra">
+	<npc id="21800" level="80" type="Monster" name="Kookaburra">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="75552" sp="2039" />
@@ -29,7 +29,7 @@
 			<height normal="26.4" />
 		</collision>
 	</npc>
-	<npc id="21801" level="78" type="L2Monster" name="Antelope">
+	<npc id="21801" level="78" type="Monster" name="Antelope">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -100,7 +100,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21802" level="79" type="L2Monster" name="Antelope">
+	<npc id="21802" level="79" type="Monster" name="Antelope">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -173,7 +173,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21803" level="80" type="L2Monster" name="Antelope">
+	<npc id="21803" level="80" type="Monster" name="Antelope">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -223,7 +223,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="21804" level="78" type="L2Monster" name="Bandersnatch">
+	<npc id="21804" level="78" type="Monster" name="Bandersnatch">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -299,7 +299,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21805" level="79" type="L2Monster" name="Bandersnatch">
+	<npc id="21805" level="79" type="Monster" name="Bandersnatch">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -370,7 +370,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21806" level="80" type="L2Monster" name="Bandersnatch">
+	<npc id="21806" level="80" type="Monster" name="Bandersnatch">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -420,7 +420,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21807" level="78" type="L2Monster" name="Buffalo">
+	<npc id="21807" level="78" type="Monster" name="Buffalo">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -494,7 +494,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21808" level="79" type="L2Monster" name="Buffalo">
+	<npc id="21808" level="79" type="Monster" name="Buffalo">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -566,7 +566,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21809" level="80" type="L2Monster" name="Buffalo">
+	<npc id="21809" level="80" type="Monster" name="Buffalo">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -615,7 +615,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="21810" level="78" type="L2Monster" name="Grendel">
+	<npc id="21810" level="78" type="Monster" name="Grendel">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
@@ -692,7 +692,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21811" level="79" type="L2Monster" name="Grendel">
+	<npc id="21811" level="79" type="Monster" name="Grendel">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
@@ -771,7 +771,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21812" level="80" type="L2Monster" name="Grendel">
+	<npc id="21812" level="80" type="Monster" name="Grendel">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
@@ -820,7 +820,7 @@
 			<height normal="39" grown="47.5" />
 		</collision>
 	</npc>
-	<npc id="21813" level="76" type="L2Monster" name="Canyon Antelope" element="EARTH">
+	<npc id="21813" level="76" type="Monster" name="Canyon Antelope" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -868,7 +868,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="21814" level="76" type="L2Monster" name="Canyon Antelope Warrior" element="EARTH">
+	<npc id="21814" level="76" type="Monster" name="Canyon Antelope Warrior" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -921,7 +921,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="21815" level="77" type="L2Monster" name="Canyon Bandersnatch" element="EARTH">
+	<npc id="21815" level="77" type="Monster" name="Canyon Bandersnatch" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -970,7 +970,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21816" level="77" type="L2Monster" name="Canyon Bandersnatch Warrior" element="EARTH">
+	<npc id="21816" level="77" type="Monster" name="Canyon Bandersnatch Warrior" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -1023,7 +1023,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21817" level="77" type="L2Monster" name="Eye of Restrainer" element="EARTH">
+	<npc id="21817" level="77" type="Monster" name="Eye of Restrainer" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1071,7 +1071,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="21818" level="78" type="L2Monster" name="Valley Buffalo" element="EARTH">
+	<npc id="21818" level="78" type="Monster" name="Valley Buffalo" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -1123,7 +1123,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="21819" level="78" type="L2Monster" name="Eye of Guide" element="EARTH">
+	<npc id="21819" level="78" type="Monster" name="Eye of Guide" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1182,7 +1182,7 @@
 			<height normal="43.2" />
 		</collision>
 	</npc>
-	<npc id="21820" level="79" type="L2Monster" name="Gaze of Nightmares" element="EARTH">
+	<npc id="21820" level="79" type="Monster" name="Gaze of Nightmares" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -1243,7 +1243,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="21821" level="79" type="L2Monster" name="Eye of the Watchman" element="EARTH">
+	<npc id="21821" level="79" type="Monster" name="Eye of the Watchman" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1301,7 +1301,7 @@
 			<height normal="49.8" />
 		</collision>
 	</npc>
-	<npc id="21822" level="79" type="L2Monster" name="Homunculus" element="EARTH">
+	<npc id="21822" level="79" type="Monster" name="Homunculus" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1352,7 +1352,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="21823" level="80" type="L2Monster" name="Canyon Grendel Warrior" element="EARTH">
+	<npc id="21823" level="80" type="Monster" name="Canyon Grendel Warrior" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
@@ -1411,7 +1411,7 @@
 			<height normal="39" grown="47.5" />
 		</collision>
 	</npc>
-	<npc id="21824" level="80" type="L2Monster" name="Eye of Pilgrim" element="EARTH">
+	<npc id="21824" level="80" type="Monster" name="Eye of Pilgrim" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1469,7 +1469,7 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="21825" level="80" type="L2Monster" name="Elder Homunculus" element="EARTH">
+	<npc id="21825" level="80" type="Monster" name="Elder Homunculus" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1523,7 +1523,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="21826" level="80" type="L2Monster" name="Eye of Ruler" element="EARTH">
+	<npc id="21826" level="80" type="Monster" name="Eye of Ruler" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1581,7 +1581,7 @@
 			<height normal="56.4" />
 		</collision>
 	</npc>
-	<npc id="21827" level="81" type="L2Monster" name="Sly Hound Dog" element="EARTH">
+	<npc id="21827" level="81" type="Monster" name="Sly Hound Dog" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -1632,7 +1632,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21828" level="81" type="L2Monster" name="Disciple of Protection" element="EARTH">
+	<npc id="21828" level="81" type="Monster" name="Disciple of Protection" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1683,7 +1683,7 @@
 			<height normal="30" grown="36.5" />
 		</collision>
 	</npc>
-	<npc id="21829" level="81" type="L2Monster" name="Disciple of Punishment" element="EARTH">
+	<npc id="21829" level="81" type="Monster" name="Disciple of Punishment" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1738,7 +1738,7 @@
 			<height normal="30" grown="36.5" />
 		</collision>
 	</npc>
-	<npc id="21830" level="82" type="L2Monster" name="Disciple of Conquest" element="EARTH">
+	<npc id="21830" level="82" type="Monster" name="Disciple of Conquest" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1789,7 +1789,7 @@
 			<height normal="30" grown="36.5" />
 		</collision>
 	</npc>
-	<npc id="21831" level="82" type="L2Monster" name="Disciple of Power" element="EARTH">
+	<npc id="21831" level="82" type="Monster" name="Disciple of Power" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1840,7 +1840,7 @@
 			<height normal="38.5" grown="46.5" />
 		</collision>
 	</npc>
-	<npc id="21832" level="82" type="L2Npc" name="Disciple of Authority">
+	<npc id="21832" level="82" type="Folk" name="Disciple of Authority">
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="6718" />
@@ -1868,7 +1868,7 @@
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 		</skillList>
 	</npc>
-	<npc id="21833" level="81" type="L2Monster" name="Hot Springs Bandersnatchling">
+	<npc id="21833" level="81" type="Monster" name="Hot Springs Bandersnatchling">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -1949,7 +1949,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21834" level="81" type="L2Monster" name="Hot Springs Buffalo">
+	<npc id="21834" level="81" type="Monster" name="Hot Springs Buffalo">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -2005,7 +2005,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="21835" level="81" type="L2Monster" name="Hot Springs Flava">
+	<npc id="21835" level="81" type="Monster" name="Hot Springs Flava">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -2086,7 +2086,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21836" level="81" type="L2Monster" name="Hot Springs Atroxspawn">
+	<npc id="21836" level="81" type="Monster" name="Hot Springs Atroxspawn">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2169,7 +2169,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21837" level="81" type="L2Monster" name="Hot Springs Antelope">
+	<npc id="21837" level="81" type="Monster" name="Hot Springs Antelope">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2250,7 +2250,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21838" level="82" type="L2Monster" name="Hot Springs Nepenthes">
+	<npc id="21838" level="82" type="Monster" name="Hot Springs Nepenthes">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -2333,7 +2333,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21839" level="82" type="L2Monster" name="Hot Springs Yeti" title="Ruler of Hot Springs">
+	<npc id="21839" level="82" type="Monster" name="Hot Springs Yeti" title="Ruler of Hot Springs">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2389,7 +2389,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="21840" level="81" type="L2Monster" name="Hot Springs Atroxspawn">
+	<npc id="21840" level="81" type="Monster" name="Hot Springs Atroxspawn">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2473,7 +2473,7 @@
 			<height normal="39" grown="46" />
 		</collision>
 	</npc>
-	<npc id="21841" level="82" type="L2Monster" name="Hot Springs Bandersnatch">
+	<npc id="21841" level="82" type="Monster" name="Hot Springs Bandersnatch">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -2551,7 +2551,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21842" level="82" type="L2Monster" name="Hot Springs Grendel">
+	<npc id="21842" level="82" type="Monster" name="Hot Springs Grendel">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
@@ -2601,7 +2601,7 @@
 			<height normal="39" grown="47.5" />
 		</collision>
 	</npc>
-	<npc id="21843" level="80" type="L2Monster" name="Ketra Orc Footman">
+	<npc id="21843" level="80" type="Monster" name="Ketra Orc Footman">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2685,7 +2685,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21844" level="80" type="L2Monster" name="Ketra's War Hound">
+	<npc id="21844" level="80" type="Monster" name="Ketra's War Hound">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -2737,7 +2737,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21845" level="80" type="L2Monster" name="Grazing Kookaburra">
+	<npc id="21845" level="80" type="Monster" name="Grazing Kookaburra">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
@@ -2789,7 +2789,7 @@
 			<height normal="26.4" />
 		</collision>
 	</npc>
-	<npc id="21846" level="80" type="L2Monster" name="Ketra Orc Raider">
+	<npc id="21846" level="80" type="Monster" name="Ketra Orc Raider">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2854,7 +2854,7 @@
 			<height normal="24" grown="28.8" />
 		</collision>
 	</npc>
-	<npc id="21847" level="80" type="L2Monster" name="Ketra Orc Scout">
+	<npc id="21847" level="80" type="Monster" name="Ketra Orc Scout">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2935,7 +2935,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21848" level="80" type="L2Monster" name="Ketra Orc Shaman">
+	<npc id="21848" level="80" type="Monster" name="Ketra Orc Shaman">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3003,7 +3003,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21849" level="80" type="L2Monster" name="Grazing Buffalo">
+	<npc id="21849" level="80" type="Monster" name="Grazing Buffalo">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -3054,7 +3054,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="21850" level="80" type="L2Monster" name="Ketra Orc Warrior">
+	<npc id="21850" level="80" type="Monster" name="Ketra Orc Warrior">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3136,7 +3136,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21851" level="80" type="L2Monster" name="Ketra Orc Lieutenant">
+	<npc id="21851" level="80" type="Monster" name="Ketra Orc Lieutenant">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
@@ -3226,7 +3226,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21852" level="80" type="L2Monster" name="Grazing Windsus">
+	<npc id="21852" level="80" type="Monster" name="Grazing Windsus">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="95" />
@@ -3276,7 +3276,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="21853" level="81" type="L2Monster" name="Ketra Orc Medium">
+	<npc id="21853" level="81" type="Monster" name="Ketra Orc Medium">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3346,7 +3346,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21854" level="81" type="L2Monster" name="Ketra Orc Elite Soldier">
+	<npc id="21854" level="81" type="Monster" name="Ketra Orc Elite Soldier">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3429,7 +3429,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21855" level="81" type="L2Monster" name="Ketra Orc Centurion">
+	<npc id="21855" level="81" type="Monster" name="Ketra Orc Centurion">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3517,7 +3517,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21856" level="80" type="L2Monster" name="Grazing Elder Buffalo">
+	<npc id="21856" level="80" type="Monster" name="Grazing Elder Buffalo">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -3567,7 +3567,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="21857" level="82" type="L2Monster" name="Ketra Orc Priest">
+	<npc id="21857" level="82" type="Monster" name="Ketra Orc Priest">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3634,7 +3634,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21858" level="82" type="L2Monster" name="Ketra Orc Officer">
+	<npc id="21858" level="82" type="Monster" name="Ketra Orc Officer">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
@@ -3722,7 +3722,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21859" level="82" type="L2Monster" name="Ketra Orc Battalion Commander">
+	<npc id="21859" level="82" type="Monster" name="Ketra Orc Battalion Commander">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -3818,7 +3818,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21860" level="80" type="L2Monster" name="Grazing Elder Kookaburra">
+	<npc id="21860" level="80" type="Monster" name="Grazing Elder Kookaburra">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
@@ -3869,7 +3869,7 @@
 			<height normal="26.4" />
 		</collision>
 	</npc>
-	<npc id="21861" level="82" type="L2Monster" name="Ketra Orc Grand Priest">
+	<npc id="21861" level="82" type="Monster" name="Ketra Orc Grand Priest">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3937,7 +3937,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21862" level="81" type="L2Monster" name="Ketra's Commander">
+	<npc id="21862" level="81" type="Monster" name="Ketra's Commander">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -4012,7 +4012,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21863" level="81" type="L2Monster" name="Ketra's Elite Royal Guard">
+	<npc id="21863" level="81" type="Monster" name="Ketra's Elite Royal Guard">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -4060,7 +4060,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="21864" level="82" type="L2Monster" name="Ketra's Head Shaman">
+	<npc id="21864" level="82" type="Monster" name="Ketra's Head Shaman">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -4136,7 +4136,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21865" level="82" type="L2Monster" name="Ketra's Head Royal Guard">
+	<npc id="21865" level="82" type="Monster" name="Ketra's Head Royal Guard">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -4197,7 +4197,7 @@
 			<height normal="38.5" />
 		</collision>
 	</npc>
-	<npc id="21866" level="82" type="L2Monster" name="Ketra's Prophet">
+	<npc id="21866" level="82" type="Monster" name="Ketra's Prophet">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -4286,7 +4286,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21867" level="82" type="L2Monster" name="Prophet's Escort">
+	<npc id="21867" level="82" type="Monster" name="Prophet's Escort">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
@@ -4357,7 +4357,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21868" level="82" type="L2Monster" name="Prophet's Aide">
+	<npc id="21868" level="82" type="Monster" name="Prophet's Aide">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -4410,7 +4410,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21869" level="80" type="L2Monster" name="Varka Silenos Altar Escort" title="Guardian of the Altar">
+	<npc id="21869" level="80" type="Monster" name="Varka Silenos Altar Escort" title="Guardian of the Altar">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -4472,7 +4472,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="21870" level="80" type="L2Monster" name="Varka Silenos Footman">
+	<npc id="21870" level="80" type="Monster" name="Varka Silenos Footman">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -4550,7 +4550,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21871" level="80" type="L2Monster" name="Grazing Antelope">
+	<npc id="21871" level="80" type="Monster" name="Grazing Antelope">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -4601,7 +4601,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="21872" level="80" type="L2Monster" name="Varka Silenos Scout">
+	<npc id="21872" level="80" type="Monster" name="Varka Silenos Scout">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -4691,7 +4691,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21873" level="80" type="L2Monster" name="Varka Silenos Hunter">
+	<npc id="21873" level="80" type="Monster" name="Varka Silenos Hunter">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -4774,7 +4774,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21874" level="80" type="L2Monster" name="Varka Silenos Altar Shaman" title="Guardian of the Altar">
+	<npc id="21874" level="80" type="Monster" name="Varka Silenos Altar Shaman" title="Guardian of the Altar">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -4841,7 +4841,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="21875" level="80" type="L2Monster" name="Grazing Nepenthes">
+	<npc id="21875" level="80" type="Monster" name="Grazing Nepenthes">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -4893,7 +4893,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="21876" level="80" type="L2Monster" name="Varka Silenos Priest">
+	<npc id="21876" level="80" type="Monster" name="Varka Silenos Priest">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -4955,7 +4955,7 @@
 			<height normal="41.5" />
 		</collision>
 	</npc>
-	<npc id="21877" level="80" type="L2Monster" name="Varka Silenos Warrior">
+	<npc id="21877" level="80" type="Monster" name="Varka Silenos Warrior">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -5047,7 +5047,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21878" level="80" type="L2Monster" name="Grazing Bandersnatch">
+	<npc id="21878" level="80" type="Monster" name="Grazing Bandersnatch">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -5099,7 +5099,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21879" level="81" type="L2Monster" name="Varka Silenos Medium">
+	<npc id="21879" level="81" type="Monster" name="Varka Silenos Medium">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -5188,7 +5188,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21880" level="81" type="L2Monster" name="Varka Silenos Magus">
+	<npc id="21880" level="81" type="Monster" name="Varka Silenos Magus">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -5250,7 +5250,7 @@
 			<height normal="55.2" />
 		</collision>
 	</npc>
-	<npc id="21881" level="81" type="L2Monster" name="Varka Silenos Sergeant">
+	<npc id="21881" level="81" type="Monster" name="Varka Silenos Sergeant">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -5341,7 +5341,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21882" level="80" type="L2Monster" name="Grazing Flava">
+	<npc id="21882" level="80" type="Monster" name="Grazing Flava">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -5394,7 +5394,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="21883" level="82" type="L2Monster" name="Varka Silenos Chief Priest">
+	<npc id="21883" level="82" type="Monster" name="Varka Silenos Chief Priest">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -5484,7 +5484,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21884" level="82" type="L2Monster" name="Varka Silenos Great Magus">
+	<npc id="21884" level="82" type="Monster" name="Varka Silenos Great Magus">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -5550,7 +5550,7 @@
 			<height normal="49.2" />
 		</collision>
 	</npc>
-	<npc id="21885" level="82" type="L2Monster" name="Varka Silenos Officer">
+	<npc id="21885" level="82" type="Monster" name="Varka Silenos Officer">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -5643,7 +5643,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21886" level="80" type="L2Monster" name="Grazing Elder Antelope">
+	<npc id="21886" level="80" type="Monster" name="Grazing Elder Antelope">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5694,7 +5694,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="21887" level="82" type="L2Monster" name="Varka Silenos Grand Priest">
+	<npc id="21887" level="82" type="Monster" name="Varka Silenos Grand Priest">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -5764,7 +5764,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="21888" level="81" type="L2Monster" name="Varka's Commander">
+	<npc id="21888" level="81" type="Monster" name="Varka's Commander">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -5842,7 +5842,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21889" level="81" type="L2Monster" name="Varka's Elite Escort">
+	<npc id="21889" level="81" type="Monster" name="Varka's Elite Escort">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -5890,7 +5890,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="21890" level="82" type="L2Monster" name="Varka's Chief Magus">
+	<npc id="21890" level="82" type="Monster" name="Varka's Chief Magus">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -5967,7 +5967,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21891" level="82" type="L2Monster" name="Varka's Chief Escort">
+	<npc id="21891" level="82" type="Monster" name="Varka's Chief Escort">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -6014,7 +6014,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="21892" level="82" type="L2Monster" name="Varka's Prophet">
+	<npc id="21892" level="82" type="Monster" name="Varka's Prophet">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -6100,7 +6100,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21893" level="82" type="L2Monster" name="Prophet's Royal Guard">
+	<npc id="21893" level="82" type="Monster" name="Prophet's Royal Guard">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -6172,7 +6172,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21894" level="82" type="L2Monster" name="Prophet's Disciple">
+	<npc id="21894" level="82" type="Monster" name="Prophet's Disciple">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -6221,7 +6221,7 @@
 			<height normal="41.5" />
 		</collision>
 	</npc>
-	<npc id="21895" level="76" type="L2Monster" name="Mausoleum Prophet">
+	<npc id="21895" level="76" type="Monster" name="Mausoleum Prophet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -6272,7 +6272,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21896" level="77" type="L2Monster" name="Ancient Holy Ground's Hermit">
+	<npc id="21896" level="77" type="Monster" name="Ancient Holy Ground's Hermit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
@@ -6320,7 +6320,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21897" level="77" type="L2Monster" name="Ancient Holy Ground's Totem">
+	<npc id="21897" level="77" type="Monster" name="Ancient Holy Ground's Totem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -6374,7 +6374,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21898" level="78" type="L2Monster" name="Ancient Holy Ground's Witch">
+	<npc id="21898" level="78" type="Monster" name="Ancient Holy Ground's Witch">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -6418,7 +6418,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21899" level="78" type="L2Monster" name="Ancient Holy Ground's Watchman">
+	<npc id="21899" level="78" type="Monster" name="Ancient Holy Ground's Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>

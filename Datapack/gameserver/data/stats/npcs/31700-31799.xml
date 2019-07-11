@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="31713" level="80" type="L2Npc" name="Fellow" title="Balthus Knight">
+	<npc id="31713" level="80" type="Folk" name="Fellow" title="Balthus Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -19,7 +19,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31714" level="75" type="L2Npc" name="Ateld" title="Balthus Knight">
+	<npc id="31714" level="75" type="Folk" name="Ateld" title="Balthus Knight">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -37,7 +37,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="31715" level="80" type="L2Npc" name="Paulia" title="Balthus Knight">
+	<npc id="31715" level="80" type="Folk" name="Paulia" title="Balthus Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -56,7 +56,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31716" level="80" type="L2Npc" name="Rash" title="Support Troop Lieutenant">
+	<npc id="31716" level="80" type="Folk" name="Rash" title="Support Troop Lieutenant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -76,7 +76,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="31773" level="70" type="L2Warehouse" name="Sonin" title="Warehouse Keeper">
+	<npc id="31773" level="70" type="Warehouse" name="Sonin" title="Warehouse Keeper">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -113,7 +113,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="31774" level="70" type="L2Npc" name="Magrit" title="Soul Tracker">
+	<npc id="31774" level="70" type="Folk" name="Magrit" title="Soul Tracker">
 		<!-- AUTO GENERATED NPC TODO:FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -152,7 +152,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31775" level="70" type="L2Npc" name="Ingrit" title="Soul Tracker">
+	<npc id="31775" level="70" type="Folk" name="Ingrit" title="Soul Tracker">
 		<!-- AUTO GENERATED NPC TODO:FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -191,7 +191,7 @@
 			<height normal="21.2" />
 		</collision>
 	</npc>
-	<npc id="31776" level="70" type="L2Npc" name="Iris" title="Soul Tracker">
+	<npc id="31776" level="70" type="Folk" name="Iris" title="Soul Tracker">
 		<!-- AUTO GENERATED NPC TODO:FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -230,7 +230,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31777" level="70" type="L2Npc" name="Rosammy" title="Soul Tracker">
+	<npc id="31777" level="70" type="Folk" name="Rosammy" title="Soul Tracker">
 		<!-- AUTO GENERATED NPC TODO:FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -269,7 +269,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31778" level="70" type="L2Npc" name="Tores" title="Dungeon of Abyss Officer">
+	<npc id="31778" level="70" type="Folk" name="Tores" title="Dungeon of Abyss Officer">
 		<!-- AUTO GENERATED NPC TODO:FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />

@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
@@ -61,8 +61,8 @@ public class RequestPackageSend extends ClientPacket {
             return;
         }
 
-        final L2Npc manager = player.getLastFolkNPC();
-        if (((manager == null) || !player.isInsideRadius2D(manager, L2Npc.INTERACTION_DISTANCE))) {
+        final Npc manager = player.getLastFolkNPC();
+        if (((manager == null) || !player.isInsideRadius2D(manager, Npc.INTERACTION_DISTANCE))) {
             return;
         }
 

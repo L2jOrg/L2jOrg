@@ -18,7 +18,7 @@ package handlers.bypasshandlers;
 
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
@@ -49,7 +49,7 @@ public class ChatLink implements IBypassHandler
 			
 		}
 		
-		final L2Npc npc = (L2Npc) target;
+		final Npc npc = (Npc) target;
 		if ((val == 0) && npc.hasListener(EventType.ON_NPC_FIRST_TALK))
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(npc, activeChar), npc);

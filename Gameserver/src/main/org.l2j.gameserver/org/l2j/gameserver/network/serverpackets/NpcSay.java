@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -34,7 +34,7 @@ public final class NpcSay extends ServerPacket {
         _text = text;
     }
 
-    public NpcSay(L2Npc npc, ChatType messageType, String text) {
+    public NpcSay(Npc npc, ChatType messageType, String text) {
         _objectId = npc.getObjectId();
         _textType = messageType;
         _npcId = 1000000 + npc.getTemplate().getDisplayId();
@@ -49,7 +49,7 @@ public final class NpcSay extends ServerPacket {
         _npcString = npcString.getId();
     }
 
-    public NpcSay(L2Npc npc, ChatType messageType, NpcStringId npcString) {
+    public NpcSay(Npc npc, ChatType messageType, NpcStringId npcString) {
         _objectId = npc.getObjectId();
         _textType = messageType;
         _npcId = 1000000 + npc.getTemplate().getDisplayId();

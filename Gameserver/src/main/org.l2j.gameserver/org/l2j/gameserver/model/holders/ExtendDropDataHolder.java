@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.holders;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.conditions.ICondition;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -42,7 +42,7 @@ public class ExtendDropDataHolder {
         _systemMessages = set.getMap("systemMessages", Long.class, SystemMessageId.class);
     }
 
-    public void reward(Player player, L2Npc npc) {
+    public void reward(Player player, Npc npc) {
         if (_conditions.isEmpty() || _conditions.stream().allMatch(cond -> cond.test(player, npc))) {
             _items.forEach(i ->
             {

@@ -20,7 +20,7 @@ import java.util.StringTokenizer;
 
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.L2MerchantInstance;
+import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 public class Buy implements IBypassHandler
@@ -33,7 +33,7 @@ public class Buy implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, Player activeChar, Creature target)
 	{
-		if (!(target instanceof L2MerchantInstance))
+		if (!(target instanceof Merchant))
 		{
 			return false;
 		}
@@ -48,7 +48,7 @@ public class Buy implements IBypassHandler
 				return false;
 			}
 			
-			((L2MerchantInstance) target).showBuyWindow(activeChar, Integer.parseInt(st.nextToken()));
+			((Merchant) target).showBuyWindow(activeChar, Integer.parseInt(st.nextToken()));
 			return true;
 		}
 		catch (Exception e)

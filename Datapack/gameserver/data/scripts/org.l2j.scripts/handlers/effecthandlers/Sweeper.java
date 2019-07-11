@@ -21,7 +21,7 @@ import java.util.Collection;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -53,7 +53,7 @@ public final class Sweeper extends AbstractEffect
 		}
 		
 		final Player player = effector.getActingPlayer();
-		final L2Attackable monster = (L2Attackable) effected;
+		final Attackable monster = (Attackable) effected;
 		if (!monster.checkSpoilOwner(player, false))
 		{
 			return;

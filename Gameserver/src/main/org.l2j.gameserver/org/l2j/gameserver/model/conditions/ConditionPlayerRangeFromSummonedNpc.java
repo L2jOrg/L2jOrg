@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.conditions;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -52,7 +52,7 @@ public class ConditionPlayerRangeFromSummonedNpc extends Condition {
     public boolean testImpl(Creature effector, Creature effected, Skill skill, L2Item item) {
         boolean existNpc = false;
         if ((_npcIds != null) && (_npcIds.length > 0) && (_radius > 0)) {
-            for (L2Npc target : L2World.getInstance().getVisibleObjectsInRange(effector, L2Npc.class, _radius)) {
+            for (Npc target : L2World.getInstance().getVisibleObjectsInRange(effector, Npc.class, _radius)) {
                 if (CommonUtil.contains(_npcIds, target.getId()) && (effector == target.getSummoner())) {
                     existNpc = true;
                     break;

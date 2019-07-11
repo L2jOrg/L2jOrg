@@ -20,8 +20,8 @@ import events.ScriptEvent;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.LongTimeEvent;
 import org.l2j.gameserver.model.skills.Skill;
@@ -500,7 +500,7 @@ public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setIsImmobilized(true);
 		npc.disableCoreAI(true);
@@ -512,7 +512,7 @@ public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, Player attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		if (LARGE_SQUASH_LIST.contains(npc.getId()))
 		{
@@ -533,7 +533,7 @@ public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isPet)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isPet)
 	{
 		if (SQUASH_LIST.contains(npc.getId()) && (skill.getId() == NECTAR_SKILL))
 		{
@@ -555,7 +555,7 @@ public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, Player killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		if (SQUASH_LIST.contains(npc.getId()))
 		{
@@ -565,12 +565,12 @@ public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, Player player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + ".htm";
 	}
 	
-	private static final void dropItem(L2Npc mob, Player player)
+	private static final void dropItem(Npc mob, Player player)
 	{
 		final int npcId = mob.getId();
 		final int chance = Rnd.get(100);
@@ -582,11 +582,11 @@ public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
 				{
 					if (drop[1] > 6000)
 					{
-						((L2MonsterInstance) mob).dropItem(player, drop[1], 1);
+						((Monster) mob).dropItem(player, drop[1], 1);
 					}
 					else
 					{
-						((L2MonsterInstance) mob).dropItem(player, drop[1], 1);
+						((Monster) mob).dropItem(player, drop[1], 1);
 					}
 					continue;
 				}
@@ -598,7 +598,7 @@ public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
 		}
 	}
 	
-	private void randomSpawn(int low, int medium, int high, L2Npc npc, boolean delete)
+	private void randomSpawn(int low, int medium, int high, Npc npc, boolean delete)
 	{
 		final int _random = Rnd.get(100);
 		if (_random < 5)
@@ -619,7 +619,7 @@ public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
 		}
 	}
 	
-	private void ChronoText(L2Npc npc)
+	private void ChronoText(Npc npc)
 	{
 		if (Rnd.get(100) < 20)
 		{
@@ -627,7 +627,7 @@ public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
 		}
 	}
 	
-	private void noChronoText(L2Npc npc)
+	private void noChronoText(Npc npc)
 	{
 		if (Rnd.get(100) < 20)
 		{
@@ -635,7 +635,7 @@ public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
 		}
 	}
 	
-	private void nectarText(L2Npc npc)
+	private void nectarText(Npc npc)
 	{
 		if (Rnd.get(100) < 30)
 		{
@@ -643,7 +643,7 @@ public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
 		}
 	}
 	
-	private void spawnNext(int npcId, L2Npc npc)
+	private void spawnNext(int npcId, Npc npc)
 	{
 		addSpawn(npcId, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 60000);
 		npc.deleteMe();

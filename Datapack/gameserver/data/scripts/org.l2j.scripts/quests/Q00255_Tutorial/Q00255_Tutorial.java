@@ -7,7 +7,7 @@ import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
@@ -118,7 +118,7 @@ public class Q00255_Tutorial extends Quest {
     }
 
     @Override
-    public String onAdvEvent(String event, L2Npc npc, Player player) {
+    public String onAdvEvent(String event, Npc npc, Player player) {
         final QuestState qs = getQuestState(player, false);
 
         if (isNull(qs)) {
@@ -199,7 +199,7 @@ public class Q00255_Tutorial extends Quest {
     }
 
     @Override
-    public String onFirstTalk(L2Npc npc, Player player) {
+    public String onFirstTalk(Npc npc, Player player) {
         final QuestState questState = getQuestState(player, false);
         if (nonNull(questState)) {
             // start newbie helpers
@@ -279,7 +279,7 @@ public class Q00255_Tutorial extends Quest {
     }
 
     @Override
-    public String onKill(L2Npc npc, Player killer, boolean isSummon) {
+    public String onKill(Npc npc, Player killer, boolean isSummon) {
         final QuestState qs = getQuestState(killer, false);
         if ((qs != null) && qs.isMemoState(2) && !hasQuestItems(killer, BLUE_GEM) && (getRandom(100) < 30)) {
             // check for too many gems on ground

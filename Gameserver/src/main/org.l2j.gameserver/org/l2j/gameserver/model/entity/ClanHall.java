@@ -10,7 +10,7 @@ import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.holders.ClanHallTeleportHolder;
 import org.l2j.gameserver.model.items.CommonItem;
@@ -164,9 +164,9 @@ public final class ClanHall extends AbstractResidence {
     }
 
     /**
-     * Gets all {@link L2Npc} related to this {@link ClanHall}.
+     * Gets all {@link Npc} related to this {@link ClanHall}.
      *
-     * @return all {@link L2Npc} related to this {@link ClanHall}
+     * @return all {@link Npc} related to this {@link ClanHall}
      */
     public List<Integer> getNpcs() {
         return _npcs;

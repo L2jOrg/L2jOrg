@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.actor.tasks.npc.trap;
 
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.model.actor.instance.L2TrapInstance;
+import org.l2j.gameserver.model.actor.instance.Trap;
 
 /**
  * Trap trigger task.
@@ -9,9 +9,9 @@ import org.l2j.gameserver.model.actor.instance.L2TrapInstance;
  * @author Zoey76
  */
 public class TrapTriggerTask implements Runnable {
-    private final L2TrapInstance _trap;
+    private final Trap _trap;
 
-    public TrapTriggerTask(L2TrapInstance trap) {
+    public TrapTriggerTask(Trap trap) {
         _trap = trap;
     }
 

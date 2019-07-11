@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="31001" level="70" type="L2Npc" name="Claudia Athebaldt">
+	<npc id="31001" level="70" type="Folk" name="Claudia Athebaldt">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="173" />
@@ -37,7 +37,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="31002" level="70" type="L2Npc" name="Reorin" title="Maestro">
+	<npc id="31002" level="70" type="Folk" name="Reorin" title="Maestro">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -74,7 +74,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="31003" level="70" type="L2Monster" name="Here I Come">
+	<npc id="31003" level="70" type="Monster" name="Here I Come">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -108,7 +108,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="31004" level="70" type="L2Monster" name="Half Moon Love">
+	<npc id="31004" level="70" type="Monster" name="Half Moon Love">
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -142,7 +142,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="31005" level="70" type="L2Monster" name="Everlasting">
+	<npc id="31005" level="70" type="Monster" name="Everlasting">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -177,7 +177,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="31006" level="70" type="L2Monster" name="Dark Side of the Moon">
+	<npc id="31006" level="70" type="Monster" name="Dark Side of the Moon">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -211,7 +211,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31007" level="70" type="L2Monster" name="Wind Rider">
+	<npc id="31007" level="70" type="Monster" name="Wind Rider">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -245,7 +245,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="31008" level="70" type="L2Monster" name="Shooting Star">
+	<npc id="31008" level="70" type="Monster" name="Shooting Star">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -279,7 +279,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="31009" level="70" type="L2Monster" name="Cyclone Thunder">
+	<npc id="31009" level="70" type="Monster" name="Cyclone Thunder">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -313,7 +313,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="31010" level="70" type="L2Monster" name="Hungry Baby">
+	<npc id="31010" level="70" type="Monster" name="Hungry Baby">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -347,7 +347,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="31011" level="70" type="L2Monster" name="Salty Dog">
+	<npc id="31011" level="70" type="Monster" name="Salty Dog">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -381,7 +381,7 @@
 			<height normal="11.5" />
 		</collision>
 	</npc>
-	<npc id="31012" level="70" type="L2Monster" name="Raging Revolution">
+	<npc id="31012" level="70" type="Monster" name="Raging Revolution">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -415,7 +415,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="31013" level="70" type="L2Monster" name="Valentine Blue">
+	<npc id="31013" level="70" type="Monster" name="Valentine Blue">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -449,7 +449,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="31014" level="70" type="L2Monster" name="Light My Fire">
+	<npc id="31014" level="70" type="Monster" name="Light My Fire">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -483,7 +483,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="31015" level="70" type="L2Monster" name="Red Bullet">
+	<npc id="31015" level="70" type="Monster" name="Red Bullet">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -517,7 +517,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="31016" level="70" type="L2Monster" name="Shining Silver">
+	<npc id="31016" level="70" type="Monster" name="Shining Silver">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -550,7 +550,7 @@
 			<height normal="4.5" />
 		</collision>
 	</npc>
-	<npc id="31017" level="70" type="L2Monster" name="Over the Top">
+	<npc id="31017" level="70" type="Monster" name="Over the Top">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -584,7 +584,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="31018" level="70" type="L2Monster" name="Royal Straight">
+	<npc id="31018" level="70" type="Monster" name="Royal Straight">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -619,7 +619,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31019" level="70" type="L2Monster" name="All Seven">
+	<npc id="31019" level="70" type="Monster" name="All Seven">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -653,7 +653,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31020" level="70" type="L2Monster" name="Nasty Green">
+	<npc id="31020" level="70" type="Monster" name="Nasty Green">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -687,7 +687,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="31021" level="70" type="L2Monster" name="Shortcut">
+	<npc id="31021" level="70" type="Monster" name="Shortcut">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -721,7 +721,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="31022" level="70" type="L2Monster" name="Typhoon Tiger">
+	<npc id="31022" level="70" type="Monster" name="Typhoon Tiger">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -755,7 +755,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="31023" level="70" type="L2Monster" name="Red Hot">
+	<npc id="31023" level="70" type="Monster" name="Red Hot">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -789,7 +789,7 @@
 			<height normal="6.8" />
 		</collision>
 	</npc>
-	<npc id="31024" level="70" type="L2Monster" name="Galaxy Express">
+	<npc id="31024" level="70" type="Monster" name="Galaxy Express">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -823,7 +823,7 @@
 			<height normal="14.5" />
 		</collision>
 	</npc>
-	<npc id="31025" level="70" type="L2Monster" name="Best Condition">
+	<npc id="31025" level="70" type="Monster" name="Best Condition">
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -857,7 +857,7 @@
 			<height normal="17.8" />
 		</collision>
 	</npc>
-	<npc id="31026" level="70" type="L2Monster" name="Albatross">
+	<npc id="31026" level="70" type="Monster" name="Albatross">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -891,7 +891,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="31027" level="70" type="L2Npc" name="Coffer of the Dead">
+	<npc id="31027" level="70" type="Folk" name="Coffer of the Dead">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -929,7 +929,7 @@
 			<height normal="9" />
 		</collision>
 	</npc>
-	<npc id="31028" level="70" type="L2Npc" name="Chest of Kernon">
+	<npc id="31028" level="70" type="Folk" name="Chest of Kernon">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -967,7 +967,7 @@
 			<height normal="9" />
 		</collision>
 	</npc>
-	<npc id="31029" level="70" type="L2Npc" name="Chest of Golkonda">
+	<npc id="31029" level="70" type="Folk" name="Chest of Golkonda">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1005,7 +1005,7 @@
 			<height normal="9" />
 		</collision>
 	</npc>
-	<npc id="31030" level="70" type="L2Npc" name="Hallate's Chest">
+	<npc id="31030" level="70" type="Folk" name="Hallate's Chest">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1043,7 +1043,7 @@
 			<height normal="9" />
 		</collision>
 	</npc>
-	<npc id="31031" level="70" type="L2Observation" name="Broadcasting Tower">
+	<npc id="31031" level="70" type="Observation" name="Broadcasting Tower">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -1077,7 +1077,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31032" level="80" type="L2Guard" name="Guard">
+	<npc id="31032" level="80" type="Guard" name="Guard">
 		<parameters>
 			<param name="NoFnHi" value="1" />
 			<param name="MoveAroundSocial" value="0" />
@@ -1117,7 +1117,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="31033" level="80" type="L2Guard" name="Sentinel">
+	<npc id="31033" level="80" type="Guard" name="Sentinel">
 		<parameters>
 			<param name="NoFnHi" value="1" />
 			<param name="MoveAroundSocial" value="0" />
@@ -1157,7 +1157,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31034" level="80" type="L2Guard" name="Sentry">
+	<npc id="31034" level="80" type="Guard" name="Sentry">
 		<parameters>
 			<param name="NoFnHi" value="1" />
 			<param name="MoveAroundSocial" value="0" />
@@ -1197,7 +1197,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31035" level="80" type="L2Guard" name="Protector">
+	<npc id="31035" level="80" type="Guard" name="Protector">
 		<parameters>
 			<param name="NoFnHi" value="1" />
 			<param name="MoveAroundSocial" value="0" />
@@ -1237,7 +1237,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="31036" level="80" type="L2Guard" name="Centurion">
+	<npc id="31036" level="80" type="Guard" name="Centurion">
 		<parameters>
 			<param name="NoFnHi" value="1" />
 			<param name="MoveAroundSocial" value="0" />
@@ -1277,7 +1277,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="31042" level="70" type="L2Npc" name="Kantabilon" title="Melody Maestro">
+	<npc id="31042" level="70" type="Folk" name="Kantabilon" title="Melody Maestro">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="165" />
@@ -1314,7 +1314,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="31043" level="70" type="L2Npc" name="Octavia" title="Melody Maestro">
+	<npc id="31043" level="70" type="Folk" name="Octavia" title="Melody Maestro">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="87" />
@@ -1351,7 +1351,7 @@
 			<height normal="18.5" />
 		</collision>
 	</npc>
-	<npc id="31044" level="70" type="L2Merchant" name="Galman" title="Trader of the Valley">
+	<npc id="31044" level="70" type="Merchant" name="Galman" title="Trader of the Valley">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1388,7 +1388,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="31045" level="70" type="L2Merchant" name="Kitzka" title="Trader of the Valley">
+	<npc id="31045" level="70" type="Merchant" name="Kitzka" title="Trader of the Valley">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1425,7 +1425,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="31046" level="70" type="L2Npc" name="Marsden" title="Symbol Maker">
+	<npc id="31046" level="70" type="Folk" name="Marsden" title="Symbol Maker">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1462,7 +1462,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31047" level="70" type="L2Npc" name="Kell" title="Symbol Maker">
+	<npc id="31047" level="70" type="Folk" name="Kell" title="Symbol Maker">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1499,7 +1499,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31048" level="70" type="L2Npc" name="McDermott" title="Symbol Maker">
+	<npc id="31048" level="70" type="Folk" name="McDermott" title="Symbol Maker">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1536,7 +1536,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31049" level="70" type="L2Npc" name="Pepper" title="Symbol Maker">
+	<npc id="31049" level="70" type="Folk" name="Pepper" title="Symbol Maker">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1573,7 +1573,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31050" level="70" type="L2Npc" name="Thora" title="Symbol Maker">
+	<npc id="31050" level="70" type="Folk" name="Thora" title="Symbol Maker">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1610,7 +1610,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31051" level="70" type="L2Npc" name="Keach" title="Symbol Maker">
+	<npc id="31051" level="70" type="Folk" name="Keach" title="Symbol Maker">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1647,7 +1647,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31052" level="70" type="L2Npc" name="Heid" title="Symbol Maker">
+	<npc id="31052" level="70" type="Folk" name="Heid" title="Symbol Maker">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1684,7 +1684,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31053" level="70" type="L2Npc" name="Kidder" title="Symbol Maker">
+	<npc id="31053" level="70" type="Folk" name="Kidder" title="Symbol Maker">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="133" />
@@ -1721,7 +1721,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31067" level="70" type="L2PetManager" name="Rood" title="Pet Manager">
+	<npc id="31067" level="70" type="PetManager" name="Rood" title="Pet Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1790,7 +1790,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31074" level="70" type="L2Npc" name="Corpse of Hutaku">
+	<npc id="31074" level="70" type="Folk" name="Corpse of Hutaku">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1827,7 +1827,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31075" level="70" type="L2Teleporter" name="Gatekeeper Ziggurat">
+	<npc id="31075" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
 		<!-- CLASSIC NPC -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1844,7 +1844,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="31076" level="70" type="L2Teleporter" name="Gatekeeper Ziggurat">
+	<npc id="31076" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
 		<!-- CLASSIC NPC -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1861,7 +1861,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="31077" level="80" type="L2Npc" name="Gatekeeper Ziggurat">
+	<npc id="31077" level="80" type="Folk" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1880,7 +1880,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="31078" level="80" type="L2Npc" name="Gatekeeper Ziggurat">
+	<npc id="31078" level="80" type="Folk" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1899,7 +1899,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="31079" level="80" type="L2Npc" name="Gatekeeper Ziggurat">
+	<npc id="31079" level="80" type="Folk" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1918,7 +1918,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="31080" level="80" type="L2Npc" name="Gatekeeper Ziggurat">
+	<npc id="31080" level="80" type="Folk" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1937,7 +1937,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="31081" level="80" type="L2Npc" name="Gatekeeper Ziggurat">
+	<npc id="31081" level="80" type="Folk" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1956,7 +1956,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="31082" level="80" type="L2Npc" name="Gatekeeper Ziggurat">
+	<npc id="31082" level="80" type="Folk" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1975,7 +1975,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="31083" level="80" type="L2Npc" name="Gatekeeper Ziggurat">
+	<npc id="31083" level="80" type="Folk" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1994,7 +1994,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="31084" level="80" type="L2Npc" name="Gatekeeper Ziggurat">
+	<npc id="31084" level="80" type="Folk" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2013,7 +2013,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="31085" level="80" type="L2Npc" name="Gatekeeper Ziggurat">
+	<npc id="31085" level="80" type="Folk" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2032,7 +2032,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="31086" level="80" type="L2Npc" name="Gatekeeper Ziggurat">
+	<npc id="31086" level="80" type="Folk" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2051,7 +2051,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="31087" level="80" type="L2Npc" name="Gatekeeper Spirit">
+	<npc id="31087" level="80" type="Folk" name="Gatekeeper Spirit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2070,7 +2070,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="31088" level="80" type="L2Npc" name="Gatekeeper Spirit">
+	<npc id="31088" level="80" type="Folk" name="Gatekeeper Spirit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2089,7 +2089,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="31089" level="80" type="L2Npc" name="Gatekeeper Spirit">
+	<npc id="31089" level="80" type="Folk" name="Gatekeeper Spirit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.quest;
 
 import org.l2j.gameserver.model.KeyValuePair;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 import java.util.HashMap;
@@ -50,7 +50,7 @@ public class QuestCondition {
         return _condition.test(player);
     }
 
-    public String getHtml(L2Npc npc) {
+    public String getHtml(Npc npc) {
         return _perNpcDialog != null ? _perNpcDialog.get(npc.getId()) : _html;
     }
 }

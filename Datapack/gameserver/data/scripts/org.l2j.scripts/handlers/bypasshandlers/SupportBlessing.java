@@ -18,7 +18,7 @@ package handlers.bypasshandlers;
 
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.SkillCaster;
@@ -38,7 +38,7 @@ public class SupportBlessing implements IBypassHandler
 			return false;
 		}
 		
-		final L2Npc npc = (L2Npc) target;
+		final Npc npc = (Npc) target;
 		
 		// If the player is too high level, display a message and return
 		if ((activeChar.getLevel() > 39) || (activeChar.getClassId().level() >= 2))

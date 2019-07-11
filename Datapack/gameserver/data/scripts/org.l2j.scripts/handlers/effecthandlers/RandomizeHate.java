@@ -22,8 +22,8 @@ import java.util.List;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -61,14 +61,14 @@ public final class RandomizeHate extends AbstractEffect
 			return;
 		}
 		
-		final L2Attackable effectedMob = (L2Attackable) effected;
+		final Attackable effectedMob = (Attackable) effected;
 		final List<Creature> targetList = new ArrayList<>();
 		L2World.getInstance().forEachVisibleObject(effected, Creature.class, cha ->
 		{
 			if ((cha != effectedMob) && (cha != effector))
 			{
 				// Aggro cannot be transfered to a mob of the same faction.
-				if (cha.isAttackable() && ((L2Attackable) cha).isInMyClan(effectedMob))
+				if (cha.isAttackable() && ((Attackable) cha).isInMyClan(effectedMob))
 				{
 					return;
 				}

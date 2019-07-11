@@ -17,7 +17,7 @@
 package custom.listeners;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
@@ -67,7 +67,7 @@ public class ListenerTest extends AbstractNpcAI
 	}
 	
 	/**
-	 * This method will be invoked as soon as an L2Attackable (Rabbits 20432) is being attacked from Player (a player)
+	 * This method will be invoked as soon as an Attackable (Rabbits 20432) is being attacked from Player (a player)
 	 * @param event
 	 */
 	private void onAttackableAttack(OnAttackableAttack event)
@@ -76,7 +76,7 @@ public class ListenerTest extends AbstractNpcAI
 	}
 	
 	/**
-	 * This method will be invoked as soon as L2Attackable (Rabbits 20432) are being killed by Player (a player)<br>
+	 * This method will be invoked as soon as Attackable (Rabbits 20432) are being killed by Player (a player)<br>
 	 * This listener is registered into individual npcs container.
 	 * @param event
 	 */
@@ -136,7 +136,7 @@ public class ListenerTest extends AbstractNpcAI
 		// Make sure a player killed this monster.
 		if ((event.getAttacker() != null) && event.getAttacker().isPlayable() && event.getTarget().isAttackable())
 		{
-			final L2Attackable monster = (L2Attackable) event.getTarget();
+			final Attackable monster = (Attackable) event.getTarget();
 			monster.dropItem(event.getAttacker().getActingPlayer(), new ItemHolder(57, Rnd.get(100, 1000)));
 		}
 	}

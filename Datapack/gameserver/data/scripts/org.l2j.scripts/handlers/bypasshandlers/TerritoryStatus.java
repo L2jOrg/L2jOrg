@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.TaxType;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -40,7 +40,7 @@ public class TerritoryStatus implements IBypassHandler
 			return false;
 		}
 		
-		final L2Npc npc = (L2Npc) target;
+		final Npc npc = (Npc) target;
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		{
 			if (npc.getCastle().getOwnerId() > 0)

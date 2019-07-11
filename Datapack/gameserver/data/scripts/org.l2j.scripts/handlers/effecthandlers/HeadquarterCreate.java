@@ -20,7 +20,7 @@ import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2SiegeFlagInstance;
+import org.l2j.gameserver.model.actor.instance.SiegeFlag;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -54,7 +54,7 @@ public final class HeadquarterCreate extends AbstractEffect
 			return;
 		}
 		
-		final L2SiegeFlagInstance flag = new L2SiegeFlagInstance(player, NpcData.getInstance().getTemplate(HQ_NPC_ID), _isAdvanced);
+		final SiegeFlag flag = new SiegeFlag(player, NpcData.getInstance().getTemplate(HQ_NPC_ID), _isAdvanced);
 		flag.setTitle(player.getClan().getName());
 		flag.setCurrentHpMp(flag.getMaxHp(), flag.getMaxMp());
 		flag.setHeading(player.getHeading());

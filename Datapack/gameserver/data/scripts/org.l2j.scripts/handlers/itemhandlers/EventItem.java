@@ -22,7 +22,7 @@ import org.l2j.gameserver.instancemanager.HandysBlockCheckerManager;
 import org.l2j.gameserver.model.ArenaParticipantsHolder;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Playable;
-import org.l2j.gameserver.model.actor.instance.L2BlockInstance;
+import org.l2j.gameserver.model.actor.instance.Block;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -87,7 +87,7 @@ public class EventItem implements IItemHandler
 			return false;
 		}
 		
-		final L2BlockInstance block = (L2BlockInstance) castor.getTarget();
+		final Block block = (Block) castor.getTarget();
 		
 		final ArenaParticipantsHolder holder = HandysBlockCheckerManager.getInstance().getHolder(blockCheckerArena);
 		if (holder != null)

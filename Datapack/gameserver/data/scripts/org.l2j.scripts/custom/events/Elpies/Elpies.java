@@ -21,8 +21,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.model.L2Spawn;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2EventMonsterInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.EventMonster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Event;
 import org.l2j.gameserver.util.Broadcast;
@@ -139,7 +139,7 @@ public final class Elpies extends Event implements ScriptEvent
 		
 		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(ELPY))
 		{
-			final L2Npc npc = spawn.getLastSpawn();
+			final Npc npc = spawn.getLastSpawn();
 			if (npc != null)
 			{
 				npc.deleteMe();
@@ -152,7 +152,7 @@ public final class Elpies extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, Player killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (EVENT_ACTIVE)
 		{
@@ -171,10 +171,10 @@ public final class Elpies extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
-		((L2EventMonsterInstance) npc).eventSetDropOnGround(true);
-		((L2EventMonsterInstance) npc).eventSetBlockOffensiveSkills(true);
+		((EventMonster) npc).eventSetDropOnGround(true);
+		((EventMonster) npc).eventSetBlockOffensiveSkills(true);
 		return super.onSpawn(npc);
 	}
 	
@@ -224,7 +224,7 @@ public final class Elpies extends Event implements ScriptEvent
 		}
 	}
 	
-	private static void dropItem(L2Npc mob, Player player, int[][] droplist)
+	private static void dropItem(Npc mob, Player player, int[][] droplist)
 	{
 		final int chance = getRandom(100);
 		

@@ -7,10 +7,10 @@ import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.appearance.PcAppearance;
-import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
+import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -46,7 +46,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember> {
 
     private final int _id;
     private final Instance _instance;
-    private final Set<L2MonsterInstance> _monsters = ConcurrentHashMap.newKeySet();
+    private final Set<Monster> _monsters = ConcurrentHashMap.newKeySet();
     private long _battleStartTime = 0;
 
     public CeremonyOfChaosEvent(int id, InstanceTemplate template) {
@@ -69,7 +69,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember> {
         return _instance;
     }
 
-    public Set<L2MonsterInstance> getMonsters() {
+    public Set<Monster> getMonsters() {
         return _monsters;
     }
 
@@ -405,7 +405,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember> {
     }
 
     @Override
-    public void onTimerEvent(String event, StatsSet params, L2Npc npc, Player player) {
+    public void onTimerEvent(String event, StatsSet params, Npc npc, Player player) {
         switch (event) {
             case "update": {
                 final int time = (int) CeremonyOfChaosManager.getInstance().getScheduler("stopFight").getRemainingTime(TimeUnit.SECONDS);

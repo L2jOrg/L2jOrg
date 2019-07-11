@@ -16,7 +16,7 @@
  */
 package ai.others;
 
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 
 import ai.AbstractNpcAI;
 
@@ -36,7 +36,7 @@ public final class NonLethalableNpcs extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setLethalable(false);
 		return super.onSpawn(npc);

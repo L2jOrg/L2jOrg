@@ -21,7 +21,7 @@ import org.l2j.gameserver.ai.FriendlyNpcAI;
 import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
@@ -34,7 +34,7 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 /**
  * @author GKR, Sdw
  */
-public class FriendlyNpcInstance extends L2Attackable {
+public class FriendlyNpcInstance extends Attackable {
     private boolean _isAutoAttackable = true;
 
     public FriendlyNpcInstance(L2NpcTemplate template) {
@@ -77,7 +77,7 @@ public class FriendlyNpcInstance extends L2Attackable {
 
     @Override
     public boolean doDie(Creature killer) {
-        // Kill the L2NpcInstance (the corpse disappeared after 7 seconds)
+        // Kill the Folk (the corpse disappeared after 7 seconds)
         if (!super.doDie(killer)) {
             return false;
         }
@@ -95,19 +95,19 @@ public class FriendlyNpcInstance extends L2Attackable {
             return;
         }
 
-        // Check if the Player already target the L2GuardInstance
+        // Check if the Player already target the Guard
         if (getObjectId() != player.getTargetId()) {
             // Set the target of the Player player
             player.setTarget(this);
         } else if (interact) {
-            // Calculate the distance between the Player and the L2NpcInstance
+            // Calculate the distance between the Player and the Folk
             if (!canInteract(player)) {
                 // Set the Player Intention to AI_INTENTION_INTERACT
                 player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
             } else {
                 player.setLastFolkNPC(this);
 
-                // Open a chat window on client with the text of the L2GuardInstance
+                // Open a chat window on client with the text of the Guard
                 if (hasListener(EventType.ON_NPC_QUEST_START)) {
                     player.setLastQuestNpcObject(getObjectId());
                 }

@@ -19,7 +19,7 @@ package quests.Q00354_ConquestOfAlligatorIsland;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
@@ -59,7 +59,7 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, false);
 		if (st == null)
@@ -109,7 +109,7 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, Player player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
 		if (st != null)
@@ -129,7 +129,7 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, Player player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

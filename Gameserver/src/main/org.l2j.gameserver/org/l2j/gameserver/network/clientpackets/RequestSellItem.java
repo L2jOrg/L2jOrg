@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.enums.TaxType;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.actor.instance.L2MerchantInstance;
+import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.model.holders.UniqueItemHolder;
@@ -19,7 +19,7 @@ import org.l2j.gameserver.util.GameUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.l2j.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
+import static org.l2j.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
 
 
 /**
@@ -77,14 +77,14 @@ public final class RequestSellItem extends ClientPacket {
         }
 
         final WorldObject target = player.getTarget();
-        L2MerchantInstance merchant = null;
+        Merchant merchant = null;
         if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST)) {
             if ((target == null) || !player.isInsideRadius3D(target, INTERACTION_DISTANCE) || (player.getInstanceId() != target.getInstanceId())) {
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }
-            if (target instanceof L2MerchantInstance) {
-                merchant = (L2MerchantInstance) target;
+            if (target instanceof Merchant) {
+                merchant = (Merchant) target;
             } else {
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 return;

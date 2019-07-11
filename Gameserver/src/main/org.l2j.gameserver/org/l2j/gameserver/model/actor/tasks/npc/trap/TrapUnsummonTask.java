@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.tasks.npc.trap;
 
-import org.l2j.gameserver.model.actor.instance.L2TrapInstance;
+import org.l2j.gameserver.model.actor.instance.Trap;
 
 /**
  * Trap unsummon task.
@@ -8,9 +8,9 @@ import org.l2j.gameserver.model.actor.instance.L2TrapInstance;
  * @author Zoey76
  */
 public class TrapUnsummonTask implements Runnable {
-    private final L2TrapInstance _trap;
+    private final Trap _trap;
 
-    public TrapUnsummonTask(L2TrapInstance trap) {
+    public TrapUnsummonTask(Trap trap) {
         _trap = trap;
     }
 

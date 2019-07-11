@@ -17,11 +17,9 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2ControllableMobInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.ControllableMob;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
-
-import java.util.logging.Level;
 
 /**
  * @author littlecrow A special spawn implementation to spawn controllable mob
@@ -36,7 +34,7 @@ public class L2GroupSpawn extends L2Spawn {
         setAmount(1);
     }
 
-    public L2Npc doGroupSpawn() {
+    public Npc doGroupSpawn() {
         try {
             if (_template.isType("L2Pet") || _template.isType("L2Minion")) {
                 return null;
@@ -58,7 +56,7 @@ public class L2GroupSpawn extends L2Spawn {
             newlocy = getY();
             newlocz = getZ();
 
-            final L2Npc mob = new L2ControllableMobInstance(_template);
+            final Npc mob = new ControllableMob(_template);
             mob.setCurrentHpMp(mob.getMaxHp(), mob.getMaxMp());
 
             mob.setHeading(getHeading() == -1 ? Rnd.get(61794) : getHeading());

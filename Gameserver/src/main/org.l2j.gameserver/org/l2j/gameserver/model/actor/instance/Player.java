@@ -580,7 +580,7 @@ public final class Player extends Playable {
     /**
      * The L2FolkInstance corresponding to the last Folk which one the player talked.
      */
-    private L2Npc _lastFolkNpc = null;
+    private Npc _lastFolkNpc = null;
     /**
      * Last NPC Id talked on a quest
      */
@@ -603,7 +603,7 @@ public final class Player extends Playable {
     private int _agathionId = 0;
     // apparently, a Player CAN have both a summon AND a tamed beast at the same time!!
     // after Freya players can control more than one tamed beast
-    private volatile Set<L2TamedBeastInstance> _tamedBeast = null;
+    private volatile Set<TamedBeast> _tamedBeast = null;
     private boolean _minimapAllowed = false;
     private MatchingRoom _matchingRoom;
     /**
@@ -1429,15 +1429,15 @@ public final class Player extends Playable {
             return;
         }
 
-        final L2Npc target = _lastFolkNpc;
+        final Npc target = _lastFolkNpc;
 
-        if ((target != null) && isInsideRadius2D(target, L2Npc.INTERACTION_DISTANCE)) {
+        if ((target != null) && isInsideRadius2D(target, Npc.INTERACTION_DISTANCE)) {
             quest.notifyEvent(event, target, this);
         } else if (_questNpcObject > 0) {
             final WorldObject object = L2World.getInstance().findObject(getLastQuestNpcObject());
 
-            if (object.isNpc() && isInsideRadius2D(object, L2Npc.INTERACTION_DISTANCE)) {
-                final L2Npc npc = (L2Npc) object;
+            if (object.isNpc() && isInsideRadius2D(object, Npc.INTERACTION_DISTANCE)) {
+                final Npc npc = (Npc) object;
                 quest.notifyEvent(event, npc, this);
             }
         }
@@ -1846,7 +1846,7 @@ public final class Player extends Playable {
         }
 
         if ((getReputation() >= 0) && (reputation < 0)) {
-            L2World.getInstance().forEachVisibleObject(this, L2GuardInstance.class, object ->
+            L2World.getInstance().forEachVisibleObject(this, Guard.class, object ->
             {
                 if (object.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE) {
                     object.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
@@ -3774,7 +3774,7 @@ public final class Player extends Playable {
      * @param itemId    the item ID
      * @param itemCount the item count
      */
-    public void doAutoLoot(L2Attackable target, int itemId, long itemCount) {
+    public void doAutoLoot(Attackable target, int itemId, long itemCount) {
         if (isInParty() && !ItemTable.getInstance().getTemplate(itemId).hasExImmediateEffect()) {
             _party.distributeItem(this, itemId, itemCount, false, target);
         } else if (itemId == CommonItem.ADENA) {
@@ -3785,12 +3785,12 @@ public final class Player extends Playable {
     }
 
     /**
-     * Method overload for {@link Player#doAutoLoot(L2Attackable, int, long)}
+     * Method overload for {@link Player#doAutoLoot(Attackable, int, long)}
      *
      * @param target the NPC dropping the item
      * @param item   the item holder
      */
-    public void doAutoLoot(L2Attackable target, ItemHolder item) {
+    public void doAutoLoot(Attackable target, ItemHolder item) {
         doAutoLoot(target, item.getId(), item.getCount());
     }
 
@@ -4696,8 +4696,8 @@ public final class Player extends Playable {
     /**
      * @return any summoned trap by this player or null.
      */
-    public L2TrapInstance getTrap() {
-        return getSummonedNpcs().stream().filter(L2Npc::isTrap).map(L2TrapInstance.class::cast).findAny().orElse(null);
+    public Trap getTrap() {
+        return getSummonedNpcs().stream().filter(Npc::isTrap).map(Trap.class::cast).findAny().orElse(null);
     }
 
     public void addServitor(Summon servitor) {
@@ -4714,7 +4714,7 @@ public final class Player extends Playable {
     /**
      * @return the Summon of the Player or null.
      */
-    public Set<L2TamedBeastInstance> getTrainedBeasts() {
+    public Set<TamedBeast> getTrainedBeasts() {
         return _tamedBeast;
     }
 
@@ -4723,7 +4723,7 @@ public final class Player extends Playable {
      *
      * @param tamedBeast
      */
-    public void addTrainedBeast(L2TamedBeastInstance tamedBeast) {
+    public void addTrainedBeast(TamedBeast tamedBeast) {
         if (_tamedBeast == null) {
             synchronized (this) {
                 if (_tamedBeast == null) {
@@ -6671,7 +6671,7 @@ public final class Player extends Playable {
      * <B><U>Actions</U>:</B>
      * <ul>
      * <li>Check if the attacker isn't the Player Pet</li>
-     * <li>Check if the attacker is L2MonsterInstance</li>
+     * <li>Check if the attacker is Monster</li>
      * <li>If the attacker is a Player, check if it is not in the same party</li>
      * <li>Check if the Player has Karma</li>
      * <li>If the attacker is a Player, check if it is not in the same siege clan (Attacker, Defender)</li>
@@ -6689,11 +6689,11 @@ public final class Player extends Playable {
         }
 
         // Friendly mobs doesnt attack players
-        if (attacker instanceof L2FriendlyMobInstance) {
+        if (attacker instanceof FriendlyMob) {
             return false;
         }
 
-        // Check if the attacker is a L2MonsterInstance
+        // Check if the attacker is a Monster
         if (attacker.isMonster()) {
             return true;
         }
@@ -6780,14 +6780,14 @@ public final class Player extends Playable {
             }
         }
 
-        if (attacker instanceof L2DefenderInstance) {
+        if (attacker instanceof Defender) {
             if (_clan != null) {
                 final Siege siege = SiegeManager.getInstance().getSiege(this);
                 return ((siege != null) && siege.checkIsAttacker(_clan));
             }
         }
 
-        if (attacker instanceof L2GuardInstance) {
+        if (attacker instanceof Guard) {
             return (getReputation() < 0); // Guards attack only PK players.
         }
 
@@ -7181,7 +7181,7 @@ public final class Player extends Playable {
     /**
      * @return the _lastFolkNpc of the Player corresponding to the last Folk wich one the player talked.
      */
-    public L2Npc getLastFolkNPC() {
+    public Npc getLastFolkNPC() {
         return _lastFolkNpc;
     }
 
@@ -7190,7 +7190,7 @@ public final class Player extends Playable {
      *
      * @param folkNpc
      */
-    public void setLastFolkNPC(L2Npc folkNpc) {
+    public void setLastFolkNPC(Npc folkNpc) {
         _lastFolkNpc = folkNpc;
     }
 
@@ -8498,7 +8498,7 @@ public final class Player extends Playable {
 
         // Trained beast is lost after teleport
         if (_tamedBeast != null) {
-            for (L2TamedBeastInstance tamedBeast : _tamedBeast) {
+            for (TamedBeast tamedBeast : _tamedBeast) {
                 tamedBeast.deleteMe();
             }
             _tamedBeast.clear();
@@ -8585,7 +8585,7 @@ public final class Player extends Playable {
 
         // notify the tamed beast of attacks
         if (_tamedBeast != null) {
-            for (L2TamedBeastInstance tamedBeast : _tamedBeast) {
+            for (TamedBeast tamedBeast : _tamedBeast) {
                 tamedBeast.onOwnerGotAttacked(attacker);
             }
         }
@@ -9396,7 +9396,7 @@ public final class Player extends Playable {
 
         if ((target.isHpBlocked() && !target.isNpc()) || (target.isPlayer() && target.isAffected(EffectFlag.DUELIST_FURY) && !isAffected(EffectFlag.FACEOFF))) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
-        } else if (target.isDoor() || (target instanceof L2ControlTowerInstance)) {
+        } else if (target.isDoor() || (target instanceof ControlTower)) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HIT_FOR_S1_DAMAGE);
             sm.addInt(damage);
         } else if (this != target){

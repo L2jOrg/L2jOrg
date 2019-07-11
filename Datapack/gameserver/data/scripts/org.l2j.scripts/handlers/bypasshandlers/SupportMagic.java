@@ -20,7 +20,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
@@ -87,16 +87,16 @@ public class SupportMagic implements IBypassHandler
 		
 		if (command.equalsIgnoreCase(COMMANDS[0]))
 		{
-			makeSupportMagic(activeChar, (L2Npc) target, true);
+			makeSupportMagic(activeChar, (Npc) target, true);
 		}
 		else if (command.equalsIgnoreCase(COMMANDS[1]))
 		{
-			makeSupportMagic(activeChar, (L2Npc) target, false);
+			makeSupportMagic(activeChar, (Npc) target, false);
 		}
 		return true;
 	}
 	
-	private static void makeSupportMagic(Player player, L2Npc npc, boolean isSummon)
+	private static void makeSupportMagic(Player player, Npc npc, boolean isSummon)
 	{
 		final int level = player.getLevel();
 		if (isSummon && !player.hasServitors())

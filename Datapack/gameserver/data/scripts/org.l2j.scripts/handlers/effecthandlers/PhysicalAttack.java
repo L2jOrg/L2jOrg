@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -109,7 +109,7 @@ public final class PhysicalAttack extends AbstractEffect
 		
 		if (_overHit && effected.isAttackable())
 		{
-			((L2Attackable) effected).overhitEnabled(true);
+			((Attackable) effected).overhitEnabled(true);
 		}
 		
 		final double attack = effector.getPAtk() * _pAtkMod;

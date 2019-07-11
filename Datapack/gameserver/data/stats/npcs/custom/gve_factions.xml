@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../npcs.xsd">
-	<npc id="500" displayId="34209" name="Faction Manager" usingServerSideName="true" title=" " usingServerSideTitle="true" type="L2Npc">
+	<npc id="500" displayId="34209" name="Faction Manager" usingServerSideName="true" title=" " usingServerSideTitle="true" type="Folk">
 		<race>ELF</race>
 		<sex>FEMALE</sex>
 		<stats>
@@ -18,7 +18,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="501" displayId="31033" level="105" type="L2Guard" name="Sentinel" usingServerSideName="true">
+	<npc id="501" displayId="31033" level="105" type="Guard" name="Sentinel" usingServerSideName="true">
 		<parameters>
 			<param name="NoFnHi" value="1" />
 			<param name="MoveAroundSocial" value="0" />
@@ -61,7 +61,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="502" displayId="31036" level="105" type="L2Guard" name="Centurion" usingServerSideName="true">
+	<npc id="502" displayId="31036" level="105" type="Guard" name="Centurion" usingServerSideName="true">
 		<parameters>
 			<param name="NoFnHi" value="1" />
 			<param name="MoveAroundSocial" value="0" />

@@ -19,8 +19,8 @@ package ai.bosses.Zaken;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.GrandBoss;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 
@@ -70,7 +70,7 @@ public class Zaken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("zaken_unlock"))
 		{
@@ -81,14 +81,14 @@ public class Zaken extends AbstractNpcAI
 	
 	private void spawnBoss()
 	{
-		final L2GrandBossInstance zaken = (L2GrandBossInstance) addSpawn(ZAKEN, ZAKEN_X, ZAKEN_Y, ZAKEN_Z, 0, false, 0);
+		final GrandBoss zaken = (GrandBoss) addSpawn(ZAKEN, ZAKEN_X, ZAKEN_Y, ZAKEN_Z, 0, false, 0);
 		GrandBossManager.getInstance().setBossStatus(ZAKEN, ALIVE);
 		GrandBossManager.getInstance().addBoss(zaken);
 		zaken.broadcastPacket(new PlaySound(1, "BS01_A", 1, zaken.getObjectId(), zaken.getX(), zaken.getY(), zaken.getZ()));
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, Player killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 		GrandBossManager.getInstance().setBossStatus(ZAKEN, DEAD);

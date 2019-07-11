@@ -23,9 +23,9 @@ import java.util.Map;
 
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
@@ -81,7 +81,7 @@ public final class PolymorphingOnAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, Player attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (npc.isSpawned() && !npc.isDead())
 		{
@@ -97,7 +97,7 @@ public final class PolymorphingOnAttack extends AbstractNpcAI
 						
 					}
 					npc.deleteMe();
-					final L2Attackable newNpc = (L2Attackable) addSpawn(tmp.get(0), npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
+					final Attackable newNpc = (Attackable) addSpawn(tmp.get(0), npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
 					final Creature originalAttacker = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : attacker;
 					newNpc.setRunning();
 					newNpc.addDamageHate(originalAttacker, 0, 500);

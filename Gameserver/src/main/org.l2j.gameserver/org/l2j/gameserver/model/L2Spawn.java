@@ -6,8 +6,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.geoengine.GeoEngine;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.interfaces.INamable;
@@ -23,16 +23,16 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 
 
 /**
- * This class manages the spawn and respawn of a group of L2NpcInstance that are in the same are and have the same type.<br>
+ * This class manages the spawn and respawn of a group of Folk that are in the same are and have the same type.<br>
  * <B><U>Concept</U>:</B><br>
- * L2NpcInstance can be spawned either in a random position into a location area (if Lox=0 and Locy=0), either at an exact position.<br>
- * The heading of the L2NpcInstance can be a random heading if not defined (value= -1) or an exact heading (ex : merchant...).
+ * Folk can be spawned either in a random position into a location area (if Lox=0 and Locy=0), either at an exact position.<br>
+ * The heading of the Folk can be a random heading if not defined (value= -1) or an exact heading (ex : merchant...).
  *
  * @author Nightmare
  */
 public class L2Spawn extends Location implements IIdentifiable, INamable {
     protected static final Logger LOGGER = LoggerFactory.getLogger(L2Spawn.class);
-    private final Deque<L2Npc> _spawnedNpcs = new ConcurrentLinkedDeque<>();
+    private final Deque<Npc> _spawnedNpcs = new ConcurrentLinkedDeque<>();
     /**
      * The current number of SpawnTask in progress or stand by of this L2Spawn
      */
@@ -46,15 +46,15 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
      */
     private L2NpcTemplate _template;
     /**
-     * The maximum number of L2NpcInstance that can manage this L2Spawn
+     * The maximum number of Folk that can manage this L2Spawn
      */
     private int _maximumCount;
     /**
-     * The current number of L2NpcInstance managed by this L2Spawn
+     * The current number of Folk managed by this L2Spawn
      */
     private int _currentCount;
     /**
-     * The identifier of the location area where L2NpcInstance can be spawned
+     * The identifier of the location area where Folk can be spawned
      */
     private int _locationId;
     /**
@@ -70,11 +70,11 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
      */
     private int _respawnMaxDelay;
     /**
-     * The generic constructor of L2NpcInstance managed by this L2Spawn
+     * The generic constructor of Folk managed by this L2Spawn
      */
-    private Constructor<? extends L2Npc> _constructor;
+    private Constructor<? extends Npc> _constructor;
     /**
-     * If True a L2NpcInstance is respawned each time that another is killed
+     * If True a Folk is respawned each time that another is killed
      */
     private boolean _doRespawn = true;
     private boolean _randomWalk = false; // Is no random walk
@@ -86,20 +86,20 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
      * Each L2Spawn owns generic and static properties (ex : RewardExp, RewardSP, AggroRange...).<br>
      * All of those properties are stored in a different L2NpcTemplate for each type of L2Spawn. Each template is loaded once in the server cache memory (reduce memory use).<br>
      * When a new instance of L2Spawn is created, server just create a link between the instance and the template.<br>
-     * This link is stored in <B>_template</B> Each L2NpcInstance is linked to a L2Spawn that manages its spawn and respawn (delay, location...).<br>
-     * This link is stored in <B>_spawn</B> of the L2NpcInstance.<br>
+     * This link is stored in <B>_template</B> Each Folk is linked to a L2Spawn that manages its spawn and respawn (delay, location...).<br>
+     * This link is stored in <B>_spawn</B> of the Folk.<br>
      * <B><U> Actions</U>:</B><br>
      * <ul>
      * <li>Set the _template of the L2Spawn</li>
-     * <li>Calculate the implementationName used to generate the generic constructor of L2NpcInstance managed by this L2Spawn</li>
-     * <li>Create the generic constructor of L2NpcInstance managed by this L2Spawn</li>
+     * <li>Calculate the implementationName used to generate the generic constructor of Folk managed by this L2Spawn</li>
+     * <li>Create the generic constructor of Folk managed by this L2Spawn</li>
      * </ul>
      *
      * @param template The L2NpcTemplate to link to this L2Spawn
      * @throws SecurityException
      * @throws ClassNotFoundException
      * @throws NoSuchMethodException
-     * @throws ClassCastException     when template type is not subclass of L2Npc
+     * @throws ClassCastException     when template type is not subclass of Npc
      */
     public L2Spawn(L2NpcTemplate template) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException {
         super(0, 0, 0);
@@ -110,10 +110,10 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
             return;
         }
 
-        final String className = "org.l2j.gameserver.model.actor.instance." + _template.getType() + "Instance";
+        final String className = "org.l2j.gameserver.model.actor.instance." + _template.getType();
 
-        // Create the generic constructor of L2Npc managed by this L2Spawn
-        _constructor = Class.forName(className).asSubclass(L2Npc.class).getConstructor(L2NpcTemplate.class);
+        // Create the generic constructor of Npc managed by this L2Spawn
+        _constructor = Class.forName(className).asSubclass(Npc.class).getConstructor(L2NpcTemplate.class);
     }
 
     /**
@@ -129,21 +129,21 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
         super(0, 0, 0);
         _template = Objects.requireNonNull(NpcData.getInstance().getTemplate(npcId), "NpcTemplate not found for NPC ID: " + npcId);
 
-        final String className = "org.l2j.gameserver.model.actor.instance." + _template.getType() + "Instance";
+        final String className = "org.l2j.gameserver.model.actor.instance." + _template.getType();
 
-        // Create the generic constructor of L2Npc managed by this L2Spawn
-        _constructor = Class.forName(className).asSubclass(L2Npc.class).getConstructor(L2NpcTemplate.class);
+        // Create the generic constructor of Npc managed by this L2Spawn
+        _constructor = Class.forName(className).asSubclass(Npc.class).getConstructor(L2NpcTemplate.class);
     }
 
     /**
-     * @return the maximum number of L2NpcInstance that this L2Spawn can manage.
+     * @return the maximum number of Folk that this L2Spawn can manage.
      */
     public int getAmount() {
         return _maximumCount;
     }
 
     /**
-     * Set the maximum number of L2NpcInstance that this L2Spawn can manage.
+     * Set the maximum number of Folk that this L2Spawn can manage.
      *
      * @param amount
      */
@@ -169,14 +169,14 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
     }
 
     /**
-     * @return the Identifier of the location area where L2NpcInstance can be spawned.
+     * @return the Identifier of the location area where Folk can be spawned.
      */
     public int getLocationId() {
         return _locationId;
     }
 
     /**
-     * Set the Identifier of the location area where L2NpcInstance can be spawned.
+     * Set the Identifier of the location area where Folk can be spawned.
      *
      * @param id
      */
@@ -227,21 +227,21 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
     }
 
     /**
-     * Decrease the current number of L2NpcInstance of this L2Spawn and if necessary create a SpawnTask to launch after the respawn Delay. <B><U> Actions</U> :</B>
-     * <li>Decrease the current number of L2NpcInstance of this L2Spawn</li>
+     * Decrease the current number of Folk of this L2Spawn and if necessary create a SpawnTask to launch after the respawn Delay. <B><U> Actions</U> :</B>
+     * <li>Decrease the current number of Folk of this L2Spawn</li>
      * <li>Check if respawn is possible to prevent multiple respawning caused by lag</li>
      * <li>Update the current number of SpawnTask in progress or stand by of this L2Spawn</li>
      * <li>Create a new SpawnTask to launch after the respawn Delay</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : A respawn is possible ONLY if _doRespawn=True and _scheduledCount + _currentCount < _maximumCount</B></FONT>
      *
      * @param oldNpc
      */
-    public void decreaseCount(L2Npc oldNpc) {
+    public void decreaseCount(Npc oldNpc) {
         // sanity check
         if (_currentCount <= 0) {
             return;
         }
 
-        // Decrease the current number of L2NpcInstance of this L2Spawn
+        // Decrease the current number of Folk of this L2Spawn
         _currentCount--;
 
         // Remove this NPC from list of spawned
@@ -260,7 +260,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
     /**
      * Create the initial spawning and set _doRespawn to False, if respawn time set to 0, or set it to True otherwise.
      *
-     * @return The number of L2NpcInstance that were spawned
+     * @return The number of Folk that were spawned
      */
     public int init() {
         while (_currentCount < _maximumCount) {
@@ -292,33 +292,33 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
         _doRespawn = true;
     }
 
-    public L2Npc doSpawn() {
+    public Npc doSpawn() {
         return _doRespawn ? doSpawn(false) : null;
     }
 
     /**
-     * Create the L2NpcInstance, add it to the world and lauch its OnSpawn action.<br>
+     * Create the Folk, add it to the world and lauch its OnSpawn action.<br>
      * <B><U>Concept</U>:</B><br>
-     * L2NpcInstance can be spawned either in a random position into a location area (if Lox=0 and Locy=0), either at an exact position.<br>
-     * The heading of the L2NpcInstance can be a random heading if not defined (value= -1) or an exact heading (ex : merchant...).<br>
+     * Folk can be spawned either in a random position into a location area (if Lox=0 and Locy=0), either at an exact position.<br>
+     * The heading of the Folk can be a random heading if not defined (value= -1) or an exact heading (ex : merchant...).<br>
      * <B><U>Actions for an random spawn into location area</U>:<I> (if Locx=0 and Locy=0)</I></B>
      * <ul>
-     * <li>Get L2NpcInstance Init parameters and its generate an Identifier</li>
-     * <li>Call the constructor of the L2NpcInstance</li>
+     * <li>Get Folk Init parameters and its generate an Identifier</li>
+     * <li>Call the constructor of the Folk</li>
      * <li>Calculate the random position in the location area (if Locx=0 and Locy=0) or get its exact position from the L2Spawn</li>
-     * <li>Set the position of the L2NpcInstance</li>
-     * <li>Set the HP and MP of the L2NpcInstance to the max</li>
-     * <li>Set the heading of the L2NpcInstance (random heading if not defined : value=-1)</li>
-     * <li>Link the L2NpcInstance to this L2Spawn</li>
-     * <li>Init other values of the L2NpcInstance (ex : from its L2CharTemplate for INT, STR, DEX...) and add it in the world</li>
-     * <li>Launch the action OnSpawn fo the L2NpcInstance</li>
-     * <li>Increase the current number of L2NpcInstance managed by this L2Spawn</li>
+     * <li>Set the position of the Folk</li>
+     * <li>Set the HP and MP of the Folk to the max</li>
+     * <li>Set the heading of the Folk (random heading if not defined : value=-1)</li>
+     * <li>Link the Folk to this L2Spawn</li>
+     * <li>Init other values of the Folk (ex : from its L2CharTemplate for INT, STR, DEX...) and add it in the world</li>
+     * <li>Launch the action OnSpawn fo the Folk</li>
+     * <li>Increase the current number of Folk managed by this L2Spawn</li>
      * </ul>
      *
      * @param isSummonSpawn
      * @return
      */
-    public L2Npc doSpawn(boolean isSummonSpawn) {
+    public Npc doSpawn(boolean isSummonSpawn) {
         try {
             // Check if the L2Spawn is not a L2Pet or L2Minion or L2Decoy spawn
             if (_template.isType("L2Pet") || _template.isType("L2Decoy") || _template.isType("L2Trap")) {
@@ -326,8 +326,8 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
                 return null;
             }
 
-            // Call the constructor of the L2Npc
-            final L2Npc npc = _constructor.newInstance(_template);
+            // Call the constructor of the Npc
+            final Npc npc = _constructor.newInstance(_template);
             npc.setInstanceById(_instanceId); // Must be done before object is spawned into visible world
             if (isSummonSpawn) {
                 npc.setShowSummonAnimation(isSummonSpawn);
@@ -344,12 +344,12 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
      * @param npc
      * @return
      */
-    private L2Npc initializeNpcInstance(L2Npc npc) {
+    private Npc initializeNpcInstance(Npc npc) {
         int newlocx = 0;
         int newlocy = 0;
         int newlocz = 0;
 
-        // If Locx and Locy are not defined, the L2NpcInstance must be spawned in an area defined by location or spawn territory
+        // If Locx and Locy are not defined, the Folk must be spawned in an area defined by location or spawn territory
         // New method
         if (_spawnTemplate != null) {
             final Location loc = _spawnTemplate.getSpawnLocation();
@@ -361,7 +361,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
             LOGGER.warn("NPC " + npc + " doesn't have spawn location!");
             return null;
         } else {
-            // The L2NpcInstance is spawned at the exact position (Lox, Locy, Locz)
+            // The Folk is spawned at the exact position (Lox, Locy, Locz)
             newlocx = getX();
             newlocy = getY();
             newlocz = getZ();
@@ -381,7 +381,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
         // Set is not random walk default value
         npc.setRandomWalking(_randomWalk);
 
-        // Set the heading of the L2NpcInstance (random heading if not defined)
+        // Set the heading of the Folk (random heading if not defined)
         if (getHeading() == -1) {
             npc.setHeading(Rnd.get(61794));
         } else {
@@ -399,7 +399,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
         // Reset some variables
         npc.onRespawn();
 
-        // Link the L2NpcInstance to this L2Spawn
+        // Link the Folk to this L2Spawn
         npc.setSpawn(this);
 
         // Spawn NPC
@@ -411,12 +411,12 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
 
         _spawnedNpcs.add(npc);
 
-        // Increase the current number of L2NpcInstance managed by this L2Spawn
+        // Increase the current number of Folk managed by this L2Spawn
         _currentCount++;
 
         // Minions
         if (npc.isMonster() && NpcData.getMasterMonsterIDs().contains(npc.getId())) {
-            ((L2MonsterInstance) npc).getMinionList().spawnMinions(npc.getParameters().getMinionList("Privates"));
+            ((Monster) npc).getMinionList().spawnMinions(npc.getParameters().getMinionList("Privates"));
         }
 
         return npc;
@@ -457,7 +457,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
         return _respawnMinDelay != _respawnMaxDelay;
     }
 
-    public L2Npc getLastSpawn() {
+    public Npc getLastSpawn() {
         if (!_spawnedNpcs.isEmpty()) {
             return _spawnedNpcs.peekLast();
         }
@@ -469,7 +469,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
         return !_spawnedNpcs.isEmpty() && _spawnedNpcs.getLast().deleteMe();
     }
 
-    public final Deque<L2Npc> getSpawnedNpcs() {
+    public final Deque<Npc> getSpawnedNpcs() {
         return _spawnedNpcs;
     }
 

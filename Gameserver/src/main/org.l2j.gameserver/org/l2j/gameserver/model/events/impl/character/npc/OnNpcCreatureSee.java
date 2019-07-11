@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.events.impl.character.npc;
 
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -27,17 +27,17 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnNpcCreatureSee implements IBaseEvent {
-    private final L2Npc _npc;
+    private final Npc _npc;
     private final Creature _creature;
     private final boolean _isSummon;
 
-    public OnNpcCreatureSee(L2Npc npc, Creature creature, boolean isSummon) {
+    public OnNpcCreatureSee(Npc npc, Creature creature, boolean isSummon) {
         _npc = npc;
         _creature = creature;
         _isSummon = isSummon;
     }
 
-    public final L2Npc getNpc() {
+    public final Npc getNpc() {
         return _npc;
     }
 

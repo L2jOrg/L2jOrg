@@ -28,8 +28,8 @@ import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Spawn;
-import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.quest.Quest;
@@ -49,7 +49,7 @@ public class L2NpcActionShift implements IActionShiftHandler
 			// Set the target of the Player activeChar
 			activeChar.setTarget(target);
 			
-			final L2Npc npc = (L2Npc) target;
+			final Npc npc = (Npc) target;
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 			final ClanHall clanHall = ClanHallData.getInstance().getClanHallByNpcId(npc.getId());
 			html.setFile(activeChar, "data/html/admin/npcinfo.htm");
@@ -61,7 +61,7 @@ public class L2NpcActionShift implements IActionShiftHandler
 			html.replace("%lvl%", String.valueOf(npc.getTemplate().getLevel()));
 			html.replace("%name%", npc.getTemplate().getName());
 			html.replace("%tmplid%", String.valueOf(npc.getTemplate().getId()));
-			html.replace("%aggro%", String.valueOf(target.isAttackable() ? ((L2Attackable) target).getAggroRange() : 0));
+			html.replace("%aggro%", String.valueOf(target.isAttackable() ? ((Attackable) target).getAggroRange() : 0));
 			html.replace("%hp%", String.valueOf((int) npc.getCurrentHp()));
 			html.replace("%hpmax%", String.valueOf(npc.getMaxHp()));
 			html.replace("%mp%", String.valueOf((int) npc.getCurrentMp()));
@@ -193,7 +193,7 @@ public class L2NpcActionShift implements IActionShiftHandler
 				return false;
 			}
 			activeChar.setTarget(target);
-			NpcViewMod.sendNpcView(activeChar, (L2Npc) target);
+			NpcViewMod.sendNpcView(activeChar, (Npc) target);
 		}
 		return true;
 	}

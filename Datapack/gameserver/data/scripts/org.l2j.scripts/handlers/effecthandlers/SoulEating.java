@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -87,7 +87,7 @@ public final class SoulEating extends AbstractEffect
 			
 			if ((player.getTarget() != null) && player.getTarget().isNpc())
 			{
-				final L2Npc npc = (L2Npc) playable.getTarget();
+				final Npc npc = (Npc) playable.getTarget();
 				player.broadcastPacket(new ExSpawnEmitter(player, npc), 500);
 			}
 		}

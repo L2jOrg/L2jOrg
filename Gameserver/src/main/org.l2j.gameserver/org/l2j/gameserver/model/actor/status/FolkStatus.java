@@ -17,11 +17,11 @@
 package org.l2j.gameserver.model.actor.status;
 
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2NpcInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Folk;
 
 public class FolkStatus extends NpcStatus {
-    public FolkStatus(L2Npc activeChar) {
+    public FolkStatus(Npc activeChar) {
         super(activeChar);
     }
 
@@ -35,7 +35,7 @@ public class FolkStatus extends NpcStatus {
     }
 
     @Override
-    public L2NpcInstance getActiveChar() {
-        return (L2NpcInstance) super.getActiveChar();
+    public Folk getActiveChar() {
+        return (Folk) super.getActiveChar();
     }
 }

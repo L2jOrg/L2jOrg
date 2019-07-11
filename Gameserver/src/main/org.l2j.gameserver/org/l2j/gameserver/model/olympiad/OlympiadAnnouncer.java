@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.olympiad;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.L2Spawn;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.network.NpcStringId;
 
 import java.util.Set;
@@ -63,7 +63,7 @@ public final class OlympiadAnnouncer implements Runnable {
                 }
 
                 for (L2Spawn spawn : _managers) {
-                    final L2Npc manager = spawn.getLastSpawn();
+                    final Npc manager = spawn.getLastSpawn();
                     if (manager != null) {
                         manager.broadcastSay(ChatType.NPC_SHOUT, npcString, arenaId);
                     }

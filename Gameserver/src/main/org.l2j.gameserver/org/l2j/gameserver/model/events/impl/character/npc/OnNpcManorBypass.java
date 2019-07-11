@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.npc;
 
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
@@ -26,12 +26,12 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  */
 public final class OnNpcManorBypass implements IBaseEvent {
     private final Player _activeChar;
-    private final L2Npc _target;
+    private final Npc _target;
     private final int _request;
     private final int _manorId;
     private final boolean _nextPeriod;
 
-    public OnNpcManorBypass(Player activeChar, L2Npc target, int request, int manorId, boolean nextPeriod) {
+    public OnNpcManorBypass(Player activeChar, Npc target, int request, int manorId, boolean nextPeriod) {
         _activeChar = activeChar;
         _target = target;
         _request = request;
@@ -43,7 +43,7 @@ public final class OnNpcManorBypass implements IBaseEvent {
         return _activeChar;
     }
 
-    public L2Npc getTarget() {
+    public Npc getTarget() {
         return _target;
     }
 

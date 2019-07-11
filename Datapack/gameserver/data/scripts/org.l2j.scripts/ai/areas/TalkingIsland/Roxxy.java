@@ -17,7 +17,7 @@
 package ai.areas.TalkingIsland;
 
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.NpcStringId;
 
@@ -38,7 +38,7 @@ public final class Roxxy extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("TEXT_SPAM") && (npc != null))
 		{
@@ -49,7 +49,7 @@ public final class Roxxy extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("TEXT_SPAM", 10000, npc, null, false);
 		return super.onSpawn(npc);

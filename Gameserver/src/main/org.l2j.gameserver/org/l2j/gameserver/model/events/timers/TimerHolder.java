@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.events.timers;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.instancemanager.TimersManager;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.TimerExecutor;
 
@@ -35,7 +35,7 @@ public class TimerHolder<T> implements Runnable {
     private final T _event;
     private final StatsSet _params;
     private final long _time;
-    private final L2Npc _npc;
+    private final Npc _npc;
     private final Player _player;
     private final boolean _isRepeating;
     private final IEventTimerEvent<T> _eventScript;
@@ -43,7 +43,7 @@ public class TimerHolder<T> implements Runnable {
     private final TimerExecutor<T> _postExecutor;
     private final ScheduledFuture<?> _task;
 
-    public TimerHolder(T event, StatsSet params, long time, L2Npc npc, Player player, boolean isRepeating, IEventTimerEvent<T> eventScript, IEventTimerCancel<T> cancelScript, TimerExecutor<T> postExecutor) {
+    public TimerHolder(T event, StatsSet params, long time, Npc npc, Player player, boolean isRepeating, IEventTimerEvent<T> eventScript, IEventTimerCancel<T> cancelScript, TimerExecutor<T> postExecutor) {
         Objects.requireNonNull(event, getClass().getSimpleName() + ": \"event\" cannot be null!");
         Objects.requireNonNull(eventScript, getClass().getSimpleName() + ": \"script\" cannot be null!");
         Objects.requireNonNull(postExecutor, getClass().getSimpleName() + ": \"postExecutor\" cannot be null!");
@@ -77,7 +77,7 @@ public class TimerHolder<T> implements Runnable {
     /**
      * @return the npc of this timer
      */
-    public L2Npc getNpc() {
+    public Npc getNpc() {
         return _npc;
     }
 
@@ -136,7 +136,7 @@ public class TimerHolder<T> implements Runnable {
      * @param player
      * @return {@code true} if event, npc, player are equals to the ones stored in this TimerHolder, {@code false} otherwise
      */
-    public boolean isEqual(T event, L2Npc npc, Player player) {
+    public boolean isEqual(T event, Npc npc, Player player) {
         return _event.equals(event) && (_npc == npc) && (_player == player);
     }
 

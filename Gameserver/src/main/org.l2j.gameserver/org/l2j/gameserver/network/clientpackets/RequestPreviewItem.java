@@ -4,8 +4,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2MerchantInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
@@ -81,8 +81,8 @@ public final class RequestPreviewItem extends ClientPacket {
         // Check current target of the player and the INTERACTION_DISTANCE
         final WorldObject target = activeChar.getTarget();
         if (!activeChar.isGM() && ((target == null // No target (i.e. GM Shop)
-        ) || !((target instanceof L2MerchantInstance)) // Target not a merchant
-                || !activeChar.isInsideRadius2D(target, L2Npc.INTERACTION_DISTANCE) // Distance is too far
+        ) || !((target instanceof Merchant)) // Target not a merchant
+                || !activeChar.isInsideRadius2D(target, Npc.INTERACTION_DISTANCE) // Distance is too far
         )) {
             return;
         }
@@ -93,7 +93,7 @@ public final class RequestPreviewItem extends ClientPacket {
         }
 
         // Get the current merchant targeted by the player
-        final L2MerchantInstance merchant = (target instanceof L2MerchantInstance) ? (L2MerchantInstance) target : null;
+        final Merchant merchant = (target instanceof Merchant) ? (Merchant) target : null;
         if (merchant == null) {
             LOGGER.warn("Null merchant!");
             return;

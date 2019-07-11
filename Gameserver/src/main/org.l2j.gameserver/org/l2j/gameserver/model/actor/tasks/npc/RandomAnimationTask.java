@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.actor.tasks.npc;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,10 +14,10 @@ import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
  */
 public class RandomAnimationTask implements Runnable {
     private static final Logger LOGGER = LoggerFactory.getLogger(RandomAnimationTask.class);
-    private final L2Npc _npc;
+    private final Npc _npc;
     private boolean _stopTask;
 
-    public RandomAnimationTask(L2Npc npc) {
+    public RandomAnimationTask(Npc npc) {
         _npc = npc;
     }
 

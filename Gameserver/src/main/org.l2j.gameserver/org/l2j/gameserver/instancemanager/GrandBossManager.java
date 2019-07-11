@@ -5,7 +5,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.instancemanager.tasks.GrandBossManagerStoreTask;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
+import org.l2j.gameserver.model.actor.instance.GrandBoss;
 import org.l2j.gameserver.model.interfaces.IStorable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +30,7 @@ public final class GrandBossManager implements IStorable {
 
     protected static Logger LOGGER = LoggerFactory.getLogger(GrandBossManager.class.getName());
 
-    protected static Map<Integer, L2GrandBossInstance> _bosses = new ConcurrentHashMap<>();
+    protected static Map<Integer, GrandBoss> _bosses = new ConcurrentHashMap<>();
 
     protected static Map<Integer, StatsSet> _storedInfo = new HashMap<>();
 
@@ -90,17 +90,17 @@ public final class GrandBossManager implements IStorable {
     }
 
     /**
-     * Adds a L2GrandBossInstance to the list of bosses.
+     * Adds a GrandBoss to the list of bosses.
      *
      * @param boss
      */
-    public void addBoss(L2GrandBossInstance boss) {
+    public void addBoss(GrandBoss boss) {
         if (boss != null) {
             _bosses.put(boss.getId(), boss);
         }
     }
 
-    public L2GrandBossInstance getBoss(int bossId) {
+    public GrandBoss getBoss(int bossId) {
         return _bosses.get(bossId);
     }
 
@@ -117,7 +117,7 @@ public final class GrandBossManager implements IStorable {
     public boolean storeMe() {
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
             for (Entry<Integer, StatsSet> e : _storedInfo.entrySet()) {
-                final L2GrandBossInstance boss = _bosses.get(e.getKey());
+                final GrandBoss boss = _bosses.get(e.getKey());
                 final StatsSet info = e.getValue();
                 if ((boss == null) || (info == null)) {
                     try (PreparedStatement update = con.prepareStatement(UPDATE_GRAND_BOSS_DATA2)) {
@@ -157,7 +157,7 @@ public final class GrandBossManager implements IStorable {
 
     private void updateDb(int bossId, boolean statusOnly) {
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            final L2GrandBossInstance boss = _bosses.get(bossId);
+            final GrandBoss boss = _bosses.get(bossId);
             final StatsSet info = _storedInfo.get(bossId);
 
             if (statusOnly || (boss == null) || (info == null)) {

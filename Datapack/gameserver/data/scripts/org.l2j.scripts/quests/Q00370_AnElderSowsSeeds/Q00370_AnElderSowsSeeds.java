@@ -19,7 +19,7 @@ package quests.Q00370_AnElderSowsSeeds;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
@@ -62,14 +62,14 @@ public final class Q00370_AnElderSowsSeeds extends Quest
 	}
 	
 	@Override
-	public boolean checkPartyMember(Player member, L2Npc npc)
+	public boolean checkPartyMember(Player member, Npc npc)
 	{
 		final QuestState st = getQuestState(member, false);
 		return ((st != null) && st.isStarted());
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, false);
 		if (st == null)
@@ -125,7 +125,7 @@ public final class Q00370_AnElderSowsSeeds extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, Player player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		int npcId = npc.getId();
 		if (MOBS1.containsKey(npcId))
@@ -151,7 +151,7 @@ public final class Q00370_AnElderSowsSeeds extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, Player player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

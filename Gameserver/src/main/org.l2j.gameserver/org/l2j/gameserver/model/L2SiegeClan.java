@@ -17,13 +17,13 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.enums.SiegeClanType;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class L2SiegeClan {
-    private final Set<L2Npc> _flags = ConcurrentHashMap.newKeySet();
+    private final Set<Npc> _flags = ConcurrentHashMap.newKeySet();
     private int _clanId = 0;
     private SiegeClanType _type;
 
@@ -36,11 +36,11 @@ public class L2SiegeClan {
         return _flags.size();
     }
 
-    public void addFlag(L2Npc flag) {
+    public void addFlag(Npc flag) {
         _flags.add(flag);
     }
 
-    public boolean removeFlag(L2Npc flag) {
+    public boolean removeFlag(Npc flag) {
         if (flag == null) {
             return false;
         }
@@ -51,7 +51,7 @@ public class L2SiegeClan {
     }
 
     public void removeFlags() {
-        for (L2Npc flag : _flags) {
+        for (Npc flag : _flags) {
             removeFlag(flag);
         }
     }
@@ -60,7 +60,7 @@ public class L2SiegeClan {
         return _clanId;
     }
 
-    public final Set<L2Npc> getFlag() {
+    public final Set<Npc> getFlag() {
         return _flags;
     }
 

@@ -26,7 +26,7 @@ import org.l2j.gameserver.handler.IAffectScopeHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
@@ -105,11 +105,11 @@ public class Party implements IAffectScopeHandler
 		}
 		else if (target.isNpc())
 		{
-			final L2Npc npc = (L2Npc) target;
+			final Npc npc = (Npc) target;
 			
 			// Create the target filter.
 			final AtomicInteger affected = new AtomicInteger(0);
-			final Predicate<L2Npc> filter = n ->
+			final Predicate<Npc> filter = n ->
 			{
 				if ((affectLimit > 0) && (affected.get() >= affectLimit))
 				{
@@ -139,7 +139,7 @@ public class Party implements IAffectScopeHandler
 			}
 			
 			// Check and add targets.
-			L2World.getInstance().forEachVisibleObjectInRange(npc, L2Npc.class, affectRange, n ->
+			L2World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, affectRange, n ->
 			{
 				if (n == activeChar)
 				{

@@ -18,7 +18,7 @@ package village.master.Clan;
 
 import ai.AbstractNpcAI;
 import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
@@ -69,7 +69,7 @@ public final class Clan extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (LEADER_REQUIRED.containsKey(event))
 		{
@@ -82,7 +82,7 @@ public final class Clan extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, Player talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		return "9000-01.htm";
 	}

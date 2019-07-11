@@ -4,7 +4,7 @@ import instances.AbstractInstance;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.NpcStringId;
@@ -70,7 +70,7 @@ public class MonsterArena extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -125,7 +125,7 @@ public class MonsterArena extends AbstractInstance
 				final Instance world = player.getInstanceWorld();
 				if (world != null)
 				{
-					final L2Npc machine = world.getNpc(MACHINE);
+					final Npc machine = world.getNpc(MACHINE);
 					machine.setScriptValue(player.getClanId());
 					
 					// Initialize progress if it does not exist.
@@ -194,7 +194,7 @@ public class MonsterArena extends AbstractInstance
 						}, 60000);
 						
 						// Mandatory reward.
-						final L2Npc machine = world.getNpc(MACHINE);
+						final Npc machine = world.getNpc(MACHINE);
 						final int progress = GlobalVariablesManager.getInstance().getInt(MONSTER_ARENA_VARIABLE + machine.getScriptValue());
 						if (progress > 16)
 						{
@@ -235,7 +235,7 @@ public class MonsterArena extends AbstractInstance
 				final Instance world = npc.getInstanceWorld();
 				if (world != null)
 				{
-					for (L2Npc aliveNpc : world.getAliveNpcs())
+					for (Npc aliveNpc : world.getAliveNpcs())
 					{
 						if ((aliveNpc != null) && (aliveNpc.getId() == SUPPLIES))
 						{
@@ -256,7 +256,7 @@ public class MonsterArena extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, Player player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -265,7 +265,7 @@ public class MonsterArena extends AbstractInstance
 			world.incStatus();
 			
 			// Make machine talk.
-			final L2Npc machine = world.getNpc(MACHINE);
+			final Npc machine = world.getNpc(MACHINE);
 			machine.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HA_NOT_BAD);
 			
 			// Save progress to global variables.
@@ -293,7 +293,7 @@ public class MonsterArena extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, Player player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + "-01.htm";
 	}

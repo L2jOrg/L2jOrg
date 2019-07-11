@@ -19,7 +19,7 @@ package handlers.targethandlers.affectobject;
 import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
 
@@ -47,7 +47,7 @@ public class Clan implements IAffectObjectHandler
 		}
 		else if (activeChar.isNpc() && target.isNpc())
 		{
-			return ((L2Npc) activeChar).isInMyClan(((L2Npc) target));
+			return ((Npc) activeChar).isInMyClan(((Npc) target));
 		}
 		
 		return false;

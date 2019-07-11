@@ -7,7 +7,7 @@ import org.l2j.gameserver.enums.CeremonyOfChaosState;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
@@ -204,7 +204,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
     }
 
     @Override
-    public void onTimerEvent(String event, StatsSet params, L2Npc npc, Player player) {
+    public void onTimerEvent(String event, StatsSet params, Npc npc, Player player) {
         switch (event) {
             case "count_down": {
                 final int time = params.getInt("time", 0);

@@ -24,9 +24,9 @@ import java.util.StringTokenizer;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2ArtefactInstance;
-import org.l2j.gameserver.model.actor.instance.L2ObservationInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Artefact;
+import org.l2j.gameserver.model.actor.instance.Observation;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -63,11 +63,11 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 				{
 					if (obj.isNpc() //
 						&& !obj.isMonster() //
-						&& !(obj instanceof L2ObservationInstance) //
-						&& !(obj instanceof L2ArtefactInstance) //
+						&& !(obj instanceof Observation) //
+						&& !(obj instanceof Artefact) //
 						&& !results.contains(obj.getId()))
 					{
-						final L2Npc npc = (L2Npc) obj;
+						final Npc npc = (Npc) obj;
 						if ((npc.getLocation().getX() > topLeftX) && (npc.getLocation().getX() < bottomRightX) && (npc.getLocation().getY() > topLeftY) && (npc.getLocation().getY() < bottomRightY) && npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK) && (npc.getHtmlPath(npc.getId(), 0) == "data/html/npcdefault.htm"))
 						{
 							results.add(npc.getId());
@@ -90,11 +90,11 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 				{
 					if (obj.isNpc() //
 						&& !obj.isMonster() //
-						&& !(obj instanceof L2ObservationInstance) //
-						&& !(obj instanceof L2ArtefactInstance) //
+						&& !(obj instanceof Observation) //
+						&& !(obj instanceof Artefact) //
 						&& !results.contains(obj.getId()))
 					{
-						final L2Npc npc = (L2Npc) obj;
+						final Npc npc = (Npc) obj;
 						if (npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK) && (npc.getHtmlPath(npc.getId(), 0) == "data/html/npcdefault.htm"))
 						{
 							results.add(npc.getId());

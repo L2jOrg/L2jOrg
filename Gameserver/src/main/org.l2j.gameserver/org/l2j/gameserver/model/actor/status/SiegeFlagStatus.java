@@ -17,10 +17,10 @@
 package org.l2j.gameserver.model.actor.status;
 
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.L2SiegeFlagInstance;
+import org.l2j.gameserver.model.actor.instance.SiegeFlag;
 
 public class SiegeFlagStatus extends NpcStatus {
-    public SiegeFlagStatus(L2SiegeFlagInstance activeChar) {
+    public SiegeFlagStatus(SiegeFlag activeChar) {
         super(activeChar);
     }
 
@@ -39,7 +39,7 @@ public class SiegeFlagStatus extends NpcStatus {
     }
 
     @Override
-    public L2SiegeFlagInstance getActiveChar() {
-        return (L2SiegeFlagInstance) super.getActiveChar();
+    public SiegeFlag getActiveChar() {
+        return (SiegeFlag) super.getActiveChar();
     }
 }

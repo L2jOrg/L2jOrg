@@ -7,7 +7,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.model.L2Party.MessageType;
-import org.l2j.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.INamable;
@@ -176,11 +176,11 @@ public class CursedWeapon implements INamable {
         }
     }
 
-    private void dropIt(L2Attackable attackable, Player player) {
+    private void dropIt(Attackable attackable, Player player) {
         dropIt(attackable, player, null, true);
     }
 
-    private void dropIt(L2Attackable attackable, Player player, Creature killer, boolean fromMonster) {
+    private void dropIt(Attackable attackable, Player player, Creature killer, boolean fromMonster) {
         _isActivated = false;
 
         if (fromMonster) {
@@ -285,7 +285,7 @@ public class CursedWeapon implements INamable {
 
     }
 
-    public boolean checkDrop(L2Attackable attackable, Player player) {
+    public boolean checkDrop(Attackable attackable, Player player) {
         if (Rnd.get(100000) < _dropRate) {
             // Drop the item
             dropIt(attackable, player);

@@ -251,7 +251,7 @@ public abstract class Summon extends Playable {
         }
 
         if (_owner != null) {
-            L2World.getInstance().forEachVisibleObject(this, L2Attackable.class, TgMob ->
+            L2World.getInstance().forEachVisibleObject(this, Attackable.class, TgMob ->
             {
                 if (TgMob.isDead()) {
                     return;

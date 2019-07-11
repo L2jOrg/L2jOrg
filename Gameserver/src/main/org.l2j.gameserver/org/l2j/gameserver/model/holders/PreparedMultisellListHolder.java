@@ -18,8 +18,7 @@ package org.l2j.gameserver.model.holders;
 
 import org.l2j.gameserver.enums.TaxType;
 import org.l2j.gameserver.model.ItemInfo;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.items.CommonItem;
 
@@ -37,7 +36,7 @@ public class PreparedMultisellListHolder extends MultisellListHolder {
     private double _taxRate;
     private List<ItemInfo> _itemInfos;
 
-    public PreparedMultisellListHolder(MultisellListHolder list, boolean inventoryOnly, ItemContainer inventory, L2Npc npc, double ingredientMultiplier, double productMultiplier) {
+    public PreparedMultisellListHolder(MultisellListHolder list, boolean inventoryOnly, ItemContainer inventory, Npc npc, double ingredientMultiplier, double productMultiplier) {
         super(list.getId(), list.isChanceMultisell(), list.isApplyTaxes(), list.isMaintainEnchantment(), list.getIngredientMultiplier(), list.getProductMultiplier(), list._entries, list._npcsAllowed);
 
         _inventoryOnly = inventoryOnly;

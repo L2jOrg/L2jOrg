@@ -17,7 +17,7 @@
 package ai.areas.TowerOfInsolence.Ateld;
 
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 import ai.AbstractNpcAI;
@@ -39,7 +39,7 @@ public class Ateld extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("teleToBaium"))
 		{
@@ -59,7 +59,7 @@ public class Ateld extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, Player player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "31714.html";
 	}

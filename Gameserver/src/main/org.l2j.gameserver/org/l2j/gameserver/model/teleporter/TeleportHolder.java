@@ -6,7 +6,7 @@ import org.l2j.gameserver.enums.SpecialItemType;
 import org.l2j.gameserver.enums.TeleportType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcTeleportRequest;
@@ -107,7 +107,7 @@ public final class TeleportHolder {
      * @param player receiver of HTML message
      * @param npc    teleporter
      */
-    public void showTeleportList(Player player, L2Npc npc) {
+    public void showTeleportList(Player player, Npc npc) {
         showTeleportList(player, npc, "npc_" + npc.getObjectId() + "_teleport");
     }
 
@@ -118,7 +118,7 @@ public final class TeleportHolder {
      * @param npc    teleporter
      * @param bypass bypass used while building message
      */
-    public void showTeleportList(Player player, L2Npc npc, String bypass) {
+    public void showTeleportList(Player player, Npc npc, String bypass) {
         if (isNoblesse() && !player.isNoble()) {
             LOGGER.warn("Player " + player.getObjectId() + " requested noblesse teleport without being noble!");
             return;
@@ -169,7 +169,7 @@ public final class TeleportHolder {
      * @param npc    teleporter
      * @param locId  destination
      */
-    public void doTeleport(Player player, L2Npc npc, int locId) {
+    public void doTeleport(Player player, Npc npc, int locId) {
         if (isNoblesse() && !player.isNoble()) {
             LOGGER.warn("Player " + player.getObjectId() + " requested noblesse teleport without being noble!");
             return;

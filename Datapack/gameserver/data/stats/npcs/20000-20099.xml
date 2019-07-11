@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="20001" level="1" type="L2Monster" name="Gremlin">
+	<npc id="20001" level="1" type="Monster" name="Gremlin">
 		<!-- L2wiki: https://l2wiki.com/classic/Gremlin -->
 		<race>FAIRY</race>
 		<sex>MALE</sex>
@@ -34,7 +34,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="20002" level="1" type="L2Monster" name="Rabbit">
+	<npc id="20002" level="1" type="Monster" name="Rabbit">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -72,7 +72,7 @@
 			<height normal="4.5" />
 		</collision>
 	</npc>
-	<npc id="20003" level="5" type="L2Monster" name="Goblin">
+	<npc id="20003" level="5" type="Monster" name="Goblin">
 		<parameters>
 			<param name="MoveAroundSocial" value="42" />
 			<param name="MoveAroundSocial1" value="42" />
@@ -125,7 +125,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20004" level="6" type="L2Monster" name="Imp">
+	<npc id="20004" level="6" type="Monster" name="Imp">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -177,7 +177,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20005" level="7" type="L2Monster" name="Imp Elder">
+	<npc id="20005" level="7" type="Monster" name="Imp Elder">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -232,7 +232,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20006" level="8" type="L2Monster" name="Orc Archer">
+	<npc id="20006" level="8" type="Monster" name="Orc Archer">
 		<!-- L2wiki: https://l2wiki.com/classic/Orc_Archer -->
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />
@@ -286,7 +286,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20007" level="9" type="L2Monster" name="Green Fungus">
+	<npc id="20007" level="9" type="Monster" name="Green Fungus">
 		<!-- L2wiki: https://l2wiki.com/classic/Green_Fungus -->
 		<race>PLANT</race>
 		<sex>MALE</sex>
@@ -328,7 +328,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20008" level="14" type="L2Monster" name="Felim Lizardman">
+	<npc id="20008" level="14" type="Monster" name="Felim Lizardman">
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
 			<param name="MoveAroundSocial1" value="58" />
@@ -382,7 +382,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20009" level="14" type="L2Monster" name="Vuku Orc">
+	<npc id="20009" level="14" type="Monster" name="Vuku Orc">
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -434,7 +434,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20010" level="15" type="L2Monster" name="Felim Lizardman Scout">
+	<npc id="20010" level="15" type="Monster" name="Felim Lizardman Scout">
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
 			<param name="MoveAroundSocial1" value="58" />
@@ -488,7 +488,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20011" level="15" type="L2Monster" name="Vuku Orc Archer">
+	<npc id="20011" level="15" type="Monster" name="Vuku Orc Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />
 			<param name="MoveAroundSocial1" value="104" />
@@ -541,7 +541,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20012" level="16" type="L2Monster" name="Gora Werewolf">
+	<npc id="20012" level="16" type="Monster" name="Gora Werewolf">
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
 			<param name="MoveAroundSocial1" value="72" />
@@ -597,7 +597,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20013" level="13" type="L2Monster" name="Dryad">
+	<npc id="20013" level="13" type="Monster" name="Dryad">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -655,7 +655,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20014" level="17" type="L2Monster" name="Felim Lizardman Warrior">
+	<npc id="20014" level="17" type="Monster" name="Felim Lizardman Warrior">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -712,7 +712,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20015" level="13" type="L2Monster" name="Zombie Forest Elf">
+	<npc id="20015" level="13" type="Monster" name="Zombie Forest Elf">
 		<!-- L2wiki: https://l2wiki.com/classic/Zombie_Forest_Elf -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -762,7 +762,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20016" level="13" type="L2Monster" name="Stone Golem">
+	<npc id="20016" level="13" type="Monster" name="Stone Golem">
 		<!-- L2wiki: https://l2wiki.com/classic/Stone_Golem -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -805,7 +805,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20017" level="17" type="L2Monster" name="Vuku Orc Warrior">
+	<npc id="20017" level="17" type="Monster" name="Vuku Orc Warrior">
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -865,7 +865,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20018" level="14" type="L2Monster" name="Carnivorous Fungus">
+	<npc id="20018" level="14" type="Monster" name="Carnivorous Fungus">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -910,7 +910,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="20019" level="14" type="L2Monster" name="Dryad Elder">
+	<npc id="20019" level="14" type="Monster" name="Dryad Elder">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -970,7 +970,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20020" level="14" type="L2Monster" name="Zombie Forest Elf Researcher">
+	<npc id="20020" level="14" type="Monster" name="Zombie Forest Elf Researcher">
 		<!-- L2wiki: https://l2wiki.com/classic/Zombie_Forest_Elf_Researcher -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1019,7 +1019,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20021" level="14" type="L2Monster" name="Red Bear">
+	<npc id="20021" level="14" type="Monster" name="Red Bear">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1074,7 +1074,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20022" level="14" type="L2Monster" name="Misery Skeleton">
+	<npc id="20022" level="14" type="Monster" name="Misery Skeleton">
 		<!-- L2wiki: https://l2wiki.com/classic/Misery_Skeleton -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1123,7 +1123,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20023" level="15" type="L2Monster" name="Shadow Beast">
+	<npc id="20023" level="15" type="Monster" name="Shadow Beast">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1180,7 +1180,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20024" level="17" type="L2Monster" name="Langk Lizardman Warrior">
+	<npc id="20024" level="17" type="Monster" name="Langk Lizardman Warrior">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1239,7 +1239,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20025" level="15" type="L2Monster" name="Lesser Dark Horror">
+	<npc id="20025" level="15" type="Monster" name="Lesser Dark Horror">
 		<!-- L2wiki: https://l2wiki.com/classic/Lesser_Dark_Horror -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1283,7 +1283,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20026" level="15" type="L2Monster" name="Ruin Zombie">
+	<npc id="20026" level="15" type="Monster" name="Ruin Zombie">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1347,7 +1347,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20027" level="16" type="L2Monster" name="Langk Lizardman Scout">
+	<npc id="20027" level="16" type="Monster" name="Langk Lizardman Scout">
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
 			<param name="MoveAroundSocial1" value="58" />
@@ -1404,7 +1404,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20028" level="16" type="L2Monster" name="Pincher">
+	<npc id="20028" level="16" type="Monster" name="Pincher">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1461,7 +1461,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20029" level="16" type="L2Monster" name="Ruin Zombie Leader">
+	<npc id="20029" level="16" type="Monster" name="Ruin Zombie Leader">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1526,7 +1526,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20030" level="15" type="L2Monster" name="Langk Lizardman">
+	<npc id="20030" level="15" type="Monster" name="Langk Lizardman">
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
 			<param name="MoveAroundSocial1" value="58" />
@@ -1576,7 +1576,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20031" level="17" type="L2Monster" name="Onyx Beast">
+	<npc id="20031" level="17" type="Monster" name="Onyx Beast">
 		<!-- L2wiki: https://l2wiki.com/classic/Onyx_Beast -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -1628,7 +1628,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20032" level="17" type="L2Monster" name="Pinrul">
+	<npc id="20032" level="17" type="Monster" name="Pinrul">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1685,7 +1685,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20033" level="17" type="L2Monster" name="Shade Horror">
+	<npc id="20033" level="17" type="Monster" name="Shade Horror">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1746,7 +1746,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20034" level="17" type="L2Monster" name="Prowler">
+	<npc id="20034" level="17" type="Monster" name="Prowler">
 		<!-- L2wiki https://l2wiki.com/classic/Prowler -->
 		<race>BUG</race>
 		<sex>MALE</sex>
@@ -1802,7 +1802,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20035" level="17" type="L2Monster" name="Skeleton Tracker">
+	<npc id="20035" level="17" type="Monster" name="Skeleton Tracker">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1866,7 +1866,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20036" level="18" type="L2Monster" name="Lirein">
+	<npc id="20036" level="18" type="Monster" name="Lirein">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1929,7 +1929,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20037" level="18" type="L2Monster" name="Mana Seeker">
+	<npc id="20037" level="18" type="Monster" name="Mana Seeker">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1976,7 +1976,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="20038" level="18" type="L2Monster" name="Giant Venomous Spider">
+	<npc id="20038" level="18" type="Monster" name="Giant Venomous Spider">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2036,7 +2036,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20039" level="18" type="L2Monster" name="Ratman Scavenger">
+	<npc id="20039" level="18" type="Monster" name="Ratman Scavenger">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2093,7 +2093,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20040" level="18" type="L2Monster" name="Sukar Ratman">
+	<npc id="20040" level="18" type="Monster" name="Sukar Ratman">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2154,7 +2154,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20041" level="18" type="L2Monster" name="Contortion of Lunacy">
+	<npc id="20041" level="18" type="Monster" name="Contortion of Lunacy">
 		<!-- L2wiki: https://l2wiki.com/classic/Contortion_of_Lunacy -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2212,7 +2212,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20042" level="18" type="L2Monster" name="Skeleton Tracker Captain">
+	<npc id="20042" level="18" type="Monster" name="Skeleton Tracker Captain">
 		<!-- L2wiki: https://l2wiki.com/classic/Skeleton_Tracker_Captain -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2280,7 +2280,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20043" level="19" type="L2Monster" name="Arachnid Tracker">
+	<npc id="20043" level="19" type="Monster" name="Arachnid Tracker">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2334,7 +2334,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20044" level="19" type="L2Monster" name="Lirein Elder">
+	<npc id="20044" level="19" type="Monster" name="Lirein Elder">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2398,7 +2398,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20045" level="19" type="L2Monster" name="Skeleton Scout">
+	<npc id="20045" level="19" type="Monster" name="Skeleton Scout">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2469,7 +2469,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20046" level="19" type="L2Monster" name="Stink Zombie">
+	<npc id="20046" level="19" type="Monster" name="Stink Zombie">
 		<!-- L2wiki: https://l2wiki.com/classic/Stink_Zombie -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2526,7 +2526,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20047" level="19" type="L2Monster" name="Sukar Ratman Captain">
+	<npc id="20047" level="19" type="Monster" name="Sukar Ratman Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2586,7 +2586,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20048" level="20" type="L2Monster" name="Lesser Succubus">
+	<npc id="20048" level="20" type="Monster" name="Lesser Succubus">
 		<!-- L2wiki: https://l2wiki.com/classic/Lesser_Succubus -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -2636,7 +2636,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20049" level="20" type="L2Monster" name="Lycanthrope">
+	<npc id="20049" level="20" type="Monster" name="Lycanthrope">
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
 			<param name="MoveAroundSocial1" value="72" />
@@ -2686,7 +2686,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20050" level="20" type="L2Monster" name="Poisonous Thornleg">
+	<npc id="20050" level="20" type="Monster" name="Poisonous Thornleg">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2741,7 +2741,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20051" level="20" type="L2Monster" name="Skeleton Bowman">
+	<npc id="20051" level="20" type="Monster" name="Skeleton Bowman">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2797,7 +2797,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20052" level="21" type="L2Monster" name="Lesser Succubus Turen">
+	<npc id="20052" level="21" type="Monster" name="Lesser Succubus Turen">
 		<!-- L2wiki: https://l2wiki.com/classic/Lesser_Succubus_Turen -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -2857,7 +2857,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20053" level="21" type="L2Monster" name="Ol Mahum Patrol">
+	<npc id="20053" level="21" type="Monster" name="Ol Mahum Patrol">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2917,7 +2917,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20054" level="21" type="L2Monster" name="Ruin Spartoi">
+	<npc id="20054" level="21" type="Monster" name="Ruin Spartoi">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2995,7 +2995,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20055" level="21" type="L2Monster" name="Monster Eye Watchman">
+	<npc id="20055" level="21" type="Monster" name="Monster Eye Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3061,7 +3061,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20056" level="22" type="L2Monster" name="Dre Vanul Disposer">
+	<npc id="20056" level="22" type="Monster" name="Dre Vanul Disposer">
 		<!-- L2wiki: https://l2wiki.com/classic/Dre_Vanul_Disposer -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3132,7 +3132,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20057" level="22" type="L2Monster" name="Lesser Succubus Tilfo">
+	<npc id="20057" level="22" type="Monster" name="Lesser Succubus Tilfo">
 		<!-- L2wiki: https://l2wiki.com/classic/Lesser_Succubus_Tilfo -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -3198,7 +3198,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20058" level="22" type="L2Monster" name="Ol Mahum Guard">
+	<npc id="20058" level="22" type="Monster" name="Ol Mahum Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -3259,7 +3259,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20059" level="22" type="L2Monster" name="Monster Eye Patrol">
+	<npc id="20059" level="22" type="Monster" name="Monster Eye Patrol">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3326,7 +3326,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20060" level="22" type="L2Monster" name="Raging Spartoi">
+	<npc id="20060" level="22" type="Monster" name="Raging Spartoi">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3406,7 +3406,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20061" level="23" type="L2Monster" name="Ol Mahum Straggler">
+	<npc id="20061" level="23" type="Monster" name="Ol Mahum Straggler">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -3463,7 +3463,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20062" level="23" type="L2Monster" name="Tumran Bugbear">
+	<npc id="20062" level="23" type="Monster" name="Tumran Bugbear">
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -3537,7 +3537,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20063" level="24" type="L2Monster" name="Ol Mahum Shooter">
+	<npc id="20063" level="24" type="Monster" name="Ol Mahum Shooter">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3595,7 +3595,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20064" level="24" type="L2Monster" name="Tumran Bugbear Warrior">
+	<npc id="20064" level="24" type="Monster" name="Tumran Bugbear Warrior">
 		<!-- L2wiki: https://l2wiki.com/classic/Tumran_Bugbear_Warrior -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
@@ -3672,7 +3672,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20065" level="25" type="L2Monster" name="Ol Mahum Patrolman">
+	<npc id="20065" level="25" type="Monster" name="Ol Mahum Patrolman">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -3722,7 +3722,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20066" level="25" type="L2Monster" name="Ol Mahum Officer">
+	<npc id="20066" level="25" type="Monster" name="Ol Mahum Officer">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3787,7 +3787,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20067" level="25" type="L2Monster" name="Monster Eye Watcher">
+	<npc id="20067" level="25" type="Monster" name="Monster Eye Watcher">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3856,7 +3856,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20068" level="26" type="L2Monster" name="Monster Eye Destroyer">
+	<npc id="20068" level="26" type="Monster" name="Monster Eye Destroyer">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3927,7 +3927,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20069" level="26" type="L2Monster" name="Selu Lizardman Scout">
+	<npc id="20069" level="26" type="Monster" name="Selu Lizardman Scout">
 		<!-- Todo: Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
@@ -3977,7 +3977,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="20070" level="27" type="L2Monster" name="Lesser Basilisk">
+	<npc id="20070" level="27" type="Monster" name="Lesser Basilisk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4036,7 +4036,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20071" level="27" type="L2Monster" name="Selu Lizardman Warrior">
+	<npc id="20071" level="27" type="Monster" name="Selu Lizardman Warrior">
 		<!-- Todo: Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -4086,7 +4086,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="20072" level="28" type="L2Monster" name="Basilisk">
+	<npc id="20072" level="28" type="Monster" name="Basilisk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4145,7 +4145,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20073" level="28" type="L2Monster" name="Ol Mahum Legionnaire">
+	<npc id="20073" level="28" type="Monster" name="Ol Mahum Legionnaire">
 		<!-- Todo: Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -4195,7 +4195,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20074" level="29" type="L2Monster" name="Androscorpio">
+	<npc id="20074" level="29" type="Monster" name="Androscorpio">
 		<!-- L2wiki: https://l2wiki.com/classic/Androscorpio -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -4250,7 +4250,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20075" level="29" type="L2Monster" name="Ant Larva">
+	<npc id="20075" level="29" type="Monster" name="Ant Larva">
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -4315,7 +4315,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20076" level="29" type="L2Monster" name="Ol Mahum Commander">
+	<npc id="20076" level="29" type="Monster" name="Ol Mahum Commander">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -4379,7 +4379,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20077" level="30" type="L2Monster" name="Androscorpio Hunter">
+	<npc id="20077" level="30" type="Monster" name="Androscorpio Hunter">
 		<!-- Todo: Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -4443,7 +4443,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20078" level="30" type="L2Monster" name="Whispering Wind">
+	<npc id="20078" level="30" type="Monster" name="Whispering Wind">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4514,7 +4514,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20079" level="30" type="L2Monster" name="Ant">
+	<npc id="20079" level="30" type="Monster" name="Ant">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -4578,7 +4578,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20080" level="31" type="L2Monster" name="Ant Captain">
+	<npc id="20080" level="31" type="Monster" name="Ant Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -4639,7 +4639,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20081" level="32" type="L2Monster" name="Ant Overseer">
+	<npc id="20081" level="32" type="Monster" name="Ant Overseer">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -4706,7 +4706,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20082" level="33" type="L2Monster" name="Ant Recruit">
+	<npc id="20082" level="33" type="Monster" name="Ant Recruit">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4771,7 +4771,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20083" level="33" type="L2Monster" name="Granite Golem">
+	<npc id="20083" level="33" type="Monster" name="Granite Golem">
 		<!-- L2wiki: https://l2wiki.com/classic/Granite_Golem -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
@@ -4840,7 +4840,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20084" level="34" type="L2Monster" name="Ant Patrol">
+	<npc id="20084" level="34" type="Monster" name="Ant Patrol">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4907,7 +4907,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20085" level="34" type="L2Monster" name="Puncher">
+	<npc id="20085" level="34" type="Monster" name="Puncher">
 		<!-- L2wiki: https://l2wiki.com/classic/Puncher -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
@@ -4979,7 +4979,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20086" level="35" type="L2Monster" name="Ant Guard">
+	<npc id="20086" level="35" type="Monster" name="Ant Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -5044,7 +5044,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20087" level="35" type="L2Monster" name="Ant Soldier">
+	<npc id="20087" level="35" type="Monster" name="Ant Soldier">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -5112,7 +5112,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20088" level="36" type="L2Monster" name="Ant Warrior Captain">
+	<npc id="20088" level="36" type="Monster" name="Ant Warrior Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -5182,7 +5182,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20089" level="37" type="L2Monster" name="Noble Ant">
+	<npc id="20089" level="37" type="Monster" name="Noble Ant">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5261,7 +5261,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20090" level="38" type="L2Monster" name="Noble Ant Captain">
+	<npc id="20090" level="38" type="Monster" name="Noble Ant Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5334,7 +5334,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20091" level="1" type="L2Monster" name="Young Fox">
+	<npc id="20091" level="1" type="Monster" name="Young Fox">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5373,7 +5373,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="20092" level="10" type="L2Monster" name="Monster Eye">
+	<npc id="20092" level="10" type="Monster" name="Monster Eye">
 		<!-- L2wiki: https://l2wiki.com/classic/Monster_Eye -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5428,7 +5428,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20093" level="10" type="L2Monster" name="Orc Warrior">
+	<npc id="20093" level="10" type="Monster" name="Orc Warrior">
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -5486,7 +5486,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20094" level="10" type="L2Monster" name="Orc Sniper">
+	<npc id="20094" level="10" type="Monster" name="Orc Sniper">
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />
 			<param name="MoveAroundSocial1" value="104" />
@@ -5531,7 +5531,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20095" level="10" type="L2Monster" name="Vampire Bat">
+	<npc id="20095" level="10" type="Monster" name="Vampire Bat">
 		<!-- L2wiki: https://l2wiki.com/classic/Vampire_Bat -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5591,7 +5591,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20096" level="11" type="L2Monster" name="Orc Lieutenant">
+	<npc id="20096" level="11" type="Monster" name="Orc Lieutenant">
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -5650,7 +5650,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20097" level="11" type="L2Monster" name="Clawed Bat">
+	<npc id="20097" level="11" type="Monster" name="Clawed Bat">
 		<!-- L2wiki: https://l2wiki.com/classic/Clawed_Bat -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5705,7 +5705,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20098" level="12" type="L2Monster" name="Orc Captain">
+	<npc id="20098" level="12" type="Monster" name="Orc Captain">
 		<!-- L2wiki: https://l2wiki.com/classic/Orc_Captain -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -5764,7 +5764,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20099" level="12" type="L2Monster" name="Skeleton">
+	<npc id="20099" level="12" type="Monster" name="Skeleton">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>

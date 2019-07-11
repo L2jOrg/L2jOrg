@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="31445" level="70" type="L2Merchant" name="Shutner" title="Mineral Trader">
+	<npc id="31445" level="70" type="Merchant" name="Shutner" title="Mineral Trader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="104" />
@@ -37,7 +37,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="31452" level="80" type="L2Npc" name="Ghost of Wigoth">
+	<npc id="31452" level="80" type="Folk" name="Ghost of Wigoth">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -56,7 +56,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31453" level="80" type="L2Npc" name="Nameless Spirit">
+	<npc id="31453" level="80" type="Folk" name="Nameless Spirit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -75,7 +75,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="31454" level="80" type="L2Npc" name="Ghost of Wigoth">
+	<npc id="31454" level="80" type="Folk" name="Ghost of Wigoth">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -94,7 +94,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31455" level="80" type="L2Npc" name="Key Box">
+	<npc id="31455" level="80" type="Folk" name="Key Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -113,7 +113,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31456" level="80" type="L2Npc" name="Key Box">
+	<npc id="31456" level="80" type="Folk" name="Key Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -132,7 +132,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31457" level="80" type="L2Npc" name="Key Box">
+	<npc id="31457" level="80" type="Folk" name="Key Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -151,7 +151,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31458" level="80" type="L2Npc" name="Key Box">
+	<npc id="31458" level="80" type="Folk" name="Key Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -170,7 +170,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31459" level="80" type="L2Npc" name="Key Box">
+	<npc id="31459" level="80" type="Folk" name="Key Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -189,7 +189,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31460" level="80" type="L2Npc" name="Key Box">
+	<npc id="31460" level="80" type="Folk" name="Key Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -208,7 +208,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31461" level="80" type="L2Npc" name="Key Box">
+	<npc id="31461" level="80" type="Folk" name="Key Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -227,7 +227,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31462" level="80" type="L2Npc" name="Key Box">
+	<npc id="31462" level="80" type="Folk" name="Key Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -246,7 +246,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31463" level="80" type="L2Npc" name="Key Box">
+	<npc id="31463" level="80" type="Folk" name="Key Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -265,7 +265,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31464" level="80" type="L2Npc" name="Key Box">
+	<npc id="31464" level="80" type="Folk" name="Key Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -284,7 +284,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31465" level="80" type="L2Npc" name="Key Box">
+	<npc id="31465" level="80" type="Folk" name="Key Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -303,7 +303,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31466" level="80" type="L2Npc" name="Key Box">
+	<npc id="31466" level="80" type="Folk" name="Key Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -322,7 +322,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31467" level="80" type="L2Npc" name="Key Box">
+	<npc id="31467" level="80" type="Folk" name="Key Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -341,7 +341,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31468" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31468" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -360,7 +360,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31469" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31469" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -379,7 +379,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31470" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31470" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -398,7 +398,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31471" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31471" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -417,7 +417,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31472" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31472" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -436,7 +436,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31473" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31473" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -455,7 +455,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31474" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31474" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -474,7 +474,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31475" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31475" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -493,7 +493,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31476" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31476" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -512,7 +512,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31477" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31477" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -531,7 +531,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31478" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31478" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -550,7 +550,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31479" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31479" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -569,7 +569,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31480" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31480" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -588,7 +588,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31481" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31481" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -607,7 +607,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31482" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31482" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -626,7 +626,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31483" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31483" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -645,7 +645,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31484" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31484" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -664,7 +664,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31485" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31485" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -683,7 +683,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31486" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31486" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -702,7 +702,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="31487" level="80" type="L2Npc" name="Mysterious Box">
+	<npc id="31487" level="80" type="Folk" name="Mysterious Box">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

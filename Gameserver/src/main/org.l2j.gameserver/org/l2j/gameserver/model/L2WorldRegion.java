@@ -3,8 +3,8 @@ package org.l2j.gameserver.model;
 import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Vehicle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,7 +48,7 @@ public final class L2WorldRegion {
             for (WorldObject o : _visibleObjects.values()) {
                 if (o.isAttackable()) {
                     c++;
-                    final L2Attackable mob = (L2Attackable) o;
+                    final Attackable mob = (Attackable) o;
 
                     // Set target to null and cancel attack or cast.
                     mob.setTarget(null);
@@ -77,9 +77,9 @@ public final class L2WorldRegion {
                 if (o.isAttackable()) {
                     c++;
                     // Start HP/MP/CP regeneration task.
-                    ((L2Attackable) o).getStatus().startHpMpRegeneration();
-                } else if (o instanceof L2Npc) {
-                    ((L2Npc) o).startRandomAnimationTask();
+                    ((Attackable) o).getStatus().startHpMpRegeneration();
+                } else if (o instanceof Npc) {
+                    ((Npc) o).startRandomAnimationTask();
                 }
             }
             LOGGER.debug(c + " mobs were turned on");

@@ -25,7 +25,7 @@ import org.l2j.gameserver.instancemanager.DBSpawnManager;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.html.PageBuilder;
 import org.l2j.gameserver.model.html.PageResult;
@@ -82,7 +82,7 @@ public class AdminScan implements IAdminCommandHandler
 					}
 					
 					final WorldObject target = L2World.getInstance().findObject(objectId);
-					final L2Npc npc = target instanceof L2Npc ? (L2Npc) target : null;
+					final Npc npc = target instanceof Npc ? (Npc) target : null;
 					if (npc == null)
 					{
 						BuilderUtil.sendSysMessage(activeChar, "NPC does not exist or object_id does not belong to an NPC");
@@ -128,7 +128,7 @@ public class AdminScan implements IAdminCommandHandler
 		final int radius = parser.getInt("radius", parser.getInt("range", DEFAULT_RADIUS));
 		final int page = parser.getInt("page", 0);
 		
-		final Predicate<L2Npc> condition;
+		final Predicate<Npc> condition;
 		if (id > 0)
 		{
 			condition = npc -> npc.getId() == id;
@@ -168,14 +168,14 @@ public class AdminScan implements IAdminCommandHandler
 		return builder;
 	}
 	
-	private void sendNpcList(Player activeChar, int radius, int page, Predicate<L2Npc> condition, BypassParser parser)
+	private void sendNpcList(Player activeChar, int radius, int page, Predicate<Npc> condition, BypassParser parser)
 	{
 		final BypassBuilder bypassParser = createBypassBuilder(parser, "bypass -h admin_scan");
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(activeChar, "data/html/admin/scan.htm");
 		
 		//@formatter:off
-		final PageResult result = PageBuilder.newBuilder(L2World.getInstance().getVisibleObjectsInRange(activeChar, L2Npc.class, radius, condition), 15, bypassParser.toString())
+		final PageResult result = PageBuilder.newBuilder(L2World.getInstance().getVisibleObjectsInRange(activeChar, Npc.class, radius, condition), 15, bypassParser.toString())
 			.currentPage(page)
 			.pageHandler(NextPrevPageHandler.INSTANCE)
 			.formatter(BypassParserFormatter.INSTANCE)

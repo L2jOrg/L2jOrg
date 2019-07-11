@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.zone.type;
 
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.L2ZoneType;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -46,9 +46,9 @@ public class L2WaterZone extends L2ZoneType {
             L2World.getInstance().forEachVisibleObject(character, Player.class, player ->
             {
                 if (character.getRunSpeed() == 0) {
-                    player.sendPacket(new ServerObjectInfo((L2Npc) character, player));
+                    player.sendPacket(new ServerObjectInfo((Npc) character, player));
                 } else {
-                    player.sendPacket(new NpcInfo((L2Npc) character));
+                    player.sendPacket(new NpcInfo((Npc) character));
                 }
             });
         }
@@ -69,9 +69,9 @@ public class L2WaterZone extends L2ZoneType {
             L2World.getInstance().forEachVisibleObject(character, Player.class, player ->
             {
                 if (character.getRunSpeed() == 0) {
-                    player.sendPacket(new ServerObjectInfo((L2Npc) character, player));
+                    player.sendPacket(new ServerObjectInfo((Npc) character, player));
                 } else {
-                    player.sendPacket(new NpcInfo((L2Npc) character));
+                    player.sendPacket(new NpcInfo((Npc) character));
                 }
             });
         }

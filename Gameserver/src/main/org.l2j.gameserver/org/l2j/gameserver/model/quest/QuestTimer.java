@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.quest;
 
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,12 +13,12 @@ public class QuestTimer {
     protected static final Logger LOGGER = LoggerFactory.getLogger(QuestTimer.class);
     final String _name;
     final Quest _quest;
-    final L2Npc _npc;
+    final Npc _npc;
     final Player _player;
     final boolean _isRepeating;
     private final ScheduledFuture<?> _scheduler;
     boolean _isActive = true;
-    public QuestTimer(Quest quest, String name, long time, L2Npc npc, Player player, boolean repeating) {
+    public QuestTimer(Quest quest, String name, long time, Npc npc, Player player, boolean repeating) {
         _name = name;
         _quest = quest;
         _player = player;
@@ -27,7 +27,7 @@ public class QuestTimer {
         _scheduler = repeating ? ThreadPoolManager.getInstance().scheduleAtFixedRate(new ScheduleTimerTask(), time, time) : ThreadPoolManager.getInstance().schedule(new ScheduleTimerTask(), time);
     }
 
-    public QuestTimer(Quest quest, String name, long time, L2Npc npc, Player player) {
+    public QuestTimer(Quest quest, String name, long time, Npc npc, Player player) {
         this(quest, name, time, npc, player, false);
     }
 
@@ -62,7 +62,7 @@ public class QuestTimer {
      * @param player the player attached to the desired timer (null if no player attached)
      * @return
      */
-    public boolean isMatch(Quest quest, String name, L2Npc npc, Player player) {
+    public boolean isMatch(Quest quest, String name, Npc npc, Player player) {
         if ((quest == null) || (name == null)) {
             return false;
         }
@@ -88,7 +88,7 @@ public class QuestTimer {
         return _name;
     }
 
-    public final L2Npc getNpc() {
+    public final Npc getNpc() {
         return _npc;
     }
 

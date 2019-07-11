@@ -626,7 +626,7 @@ public class NpcData extends GameXmlReader {
      * @return the template list for the given letter.
      */
     public List<L2NpcTemplate> getAllNpcStartingWith(String text) {
-        return getTemplates(template -> template.isType("L2Npc") && template.getName().startsWith(text));
+        return getTemplates(template -> template.isType("Npc") && template.getName().startsWith(text));
     }
 
     /**

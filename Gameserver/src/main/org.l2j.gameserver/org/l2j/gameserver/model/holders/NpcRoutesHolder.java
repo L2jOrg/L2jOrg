@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.holders;
 
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.interfaces.ILocational;
 
 import java.util.HashMap;
@@ -33,7 +33,7 @@ public final class NpcRoutesHolder {
      * @param npc
      * @return route name for given NPC.
      */
-    public String getRouteName(L2Npc npc) {
+    public String getRouteName(Npc npc) {
         if (npc.getSpawn() != null) {
             final String key = getUniqueKey(npc.getSpawn().getLocation());
             return _correspondences.getOrDefault(key, "");

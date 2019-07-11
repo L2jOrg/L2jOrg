@@ -21,7 +21,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Event;
 import org.l2j.gameserver.model.quest.QuestState;
@@ -42,9 +42,9 @@ import java.util.concurrent.ScheduledFuture;
 public final class Race extends Event implements ScriptEvent
 {
 	// Event NPCs list
-	private List<L2Npc> _npclist;
+	private List<Npc> _npclist;
 	// Npc
-	private L2Npc _npc;
+	private Npc _npc;
 	// Player list
 	private List<Player> _players;
 	// Event Task
@@ -215,7 +215,7 @@ public final class Race extends Event implements ScriptEvent
 			}
 		}
 		// Despawn NPCs
-		for (L2Npc _npc : _npclist)
+		for (Npc _npc : _npclist)
 		{
 			if (_npc != null)
 			{
@@ -272,7 +272,7 @@ public final class Race extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final String htmltext = event;
 		final QuestState st = getQuestState(player, false);
@@ -327,7 +327,7 @@ public final class Race extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, Player player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		getQuestState(player, true);
 		
@@ -351,9 +351,9 @@ public final class Race extends Event implements ScriptEvent
 		return _players.contains(player) ? 1 : 0;
 	}
 	
-	private L2Npc recordSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
+	private Npc recordSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
 	{
-		final L2Npc npc = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
+		final Npc npc = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
 		if (npc != null)
 		{
 			_npclist.add(npc);

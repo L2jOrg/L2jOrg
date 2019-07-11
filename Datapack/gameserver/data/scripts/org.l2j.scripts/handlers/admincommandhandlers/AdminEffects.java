@@ -23,8 +23,8 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2ChestInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Chest;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.MovieHolder;
 import org.l2j.gameserver.model.html.PageBuilder;
@@ -587,12 +587,12 @@ public class AdminEffects implements IAdminCommandHandler
 		else if (command.startsWith("admin_set_displayeffect"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			if (!(target instanceof L2Npc))
+			if (!(target instanceof Npc))
 			{
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
-			final L2Npc npc = (L2Npc) target;
+			final Npc npc = (Npc) target;
 			try
 			{
 				final String type = st.nextToken();
@@ -670,7 +670,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			if (target.isCharacter())
 			{
-				if (target instanceof L2ChestInstance)
+				if (target instanceof Chest)
 				{
 					activeChar.sendPacket(SystemMessageId.NOTHING_HAPPENED);
 					return false;

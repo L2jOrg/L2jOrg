@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="31580" level="70" type="L2Npc" name="Galadrid" title="Master">
+	<npc id="31580" level="70" type="Folk" name="Galadrid" title="Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -38,7 +38,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31581" level="70" type="L2Npc" name="Anastia" title="Magister">
+	<npc id="31581" level="70" type="Folk" name="Anastia" title="Magister">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="106" />
@@ -78,7 +78,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31582" level="70" type="L2Npc" name="Mordred" title="Dark Knight">
+	<npc id="31582" level="70" type="Folk" name="Mordred" title="Dark Knight">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -117,7 +117,7 @@
 			<height normal="23.5" grown="29" />
 		</collision>
 	</npc>
-	<npc id="31583" level="80" type="L2Merchant" name="Feynn" title="Blacksmith">
+	<npc id="31583" level="80" type="Merchant" name="Feynn" title="Blacksmith">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -137,7 +137,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="31584" level="80" type="L2Npc" name="Valentine" title="Brewer">
+	<npc id="31584" level="80" type="Folk" name="Valentine" title="Brewer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -156,7 +156,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="31585" level="70" type="L2Npc" name="Sparky the Cat" title="Keats Servitor">
+	<npc id="31585" level="70" type="Folk" name="Sparky the Cat" title="Keats Servitor">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -194,7 +194,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="31586" level="70" type="L2Npc" name="Sparky the Cat" title="Keats Servitor">
+	<npc id="31586" level="70" type="Folk" name="Sparky the Cat" title="Keats Servitor">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -232,7 +232,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="31587" level="80" type="L2VillageMasterMystic" name="Halaster" title="Grand Magister">
+	<npc id="31587" level="80" type="VillageMasterMystic" name="Halaster" title="Grand Magister">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -251,7 +251,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="31589" level="80" type="L2Npc" name="Duda-Mara Totem Spirit">
+	<npc id="31589" level="80" type="Folk" name="Duda-Mara Totem Spirit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -270,7 +270,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="31590" level="70" type="L2Npc" name="Devianne" title="Truth Seeker">
+	<npc id="31590" level="70" type="Folk" name="Devianne" title="Truth Seeker">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -308,7 +308,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31591" level="70" type="L2Npc" name="Sunset Guide Luna">
+	<npc id="31591" level="70" type="Folk" name="Sunset Guide Luna">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -346,7 +346,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31594" level="70" type="L2Npc" name="Mond" title="Chief Inspector">
+	<npc id="31594" level="70" type="Folk" name="Mond" title="Chief Inspector">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="97" />
@@ -383,7 +383,7 @@
 			<height normal="19.5" />
 		</collision>
 	</npc>
-	<npc id="31595" level="70" type="L2Npc" name="Leona Blackbird" title="Fire Dragon Bride">
+	<npc id="31595" level="70" type="Folk" name="Leona Blackbird" title="Fire Dragon Bride">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -421,7 +421,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="31596" level="70" type="L2Npc" name="Tobald" title="Master">
+	<npc id="31596" level="70" type="Folk" name="Tobald" title="Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="144" />
@@ -459,7 +459,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="31597" level="70" type="L2Npc" name="Tobald" title="Master">
+	<npc id="31597" level="70" type="Folk" name="Tobald" title="Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="144" />
@@ -497,7 +497,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="31598" level="70" type="L2Npc" name="Medina Blackheart">
+	<npc id="31598" level="70" type="Folk" name="Medina Blackheart">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -535,7 +535,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="31599" level="70" type="L2Npc" name="Disgraced Knight Waldstein">
+	<npc id="31599" level="70" type="Folk" name="Disgraced Knight Waldstein">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="63" />

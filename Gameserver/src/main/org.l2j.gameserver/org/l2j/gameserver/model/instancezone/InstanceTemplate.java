@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.AbstractPlayerGroup;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2DoorTemplate;
@@ -617,7 +617,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      * @param htmlCallback callback function used to display fail HTML when condition validate failed
      * @return {@code true} when all condition are met, otherwise {@code false}
      */
-    public boolean validateConditions(List<Player> group, L2Npc npc, BiConsumer<Player, String> htmlCallback) {
+    public boolean validateConditions(List<Player> group, Npc npc, BiConsumer<Player, String> htmlCallback) {
         for (Condition cond : _conditions) {
             if (!cond.validate(npc, group, htmlCallback)) {
                 return false;

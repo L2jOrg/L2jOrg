@@ -7,10 +7,10 @@ import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2SkillLearn;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2FishermanInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Fisherman;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2VillageMasterInstance;
+import org.l2j.gameserver.model.actor.instance.VillageMaster;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.base.SubClass;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -101,7 +101,7 @@ public final class RequestAcquireSkill extends ClientPacket {
             return;
         }
 
-        final L2Npc trainer = activeChar.getLastFolkNPC();
+        final Npc trainer = activeChar.getLastFolkNPC();
         if ((_skillType != AcquireSkillType.CLASS) && ((trainer == null) || !trainer.isNpc() || (!trainer.canInteract(activeChar) && !activeChar.isGM()))) {
             return;
         }
@@ -173,7 +173,7 @@ public final class RequestAcquireSkill extends ClientPacket {
                             if (!activeChar.destroyItemByItemId("Consume", item.getId(), item.getCount(), trainer, false)) {
                                 // Doesn't have required item.
                                 activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
-                                L2VillageMasterInstance.showPledgeSkillList(activeChar);
+                                VillageMaster.showPledgeSkillList(activeChar);
                                 return;
                             }
 
@@ -196,10 +196,10 @@ public final class RequestAcquireSkill extends ClientPacket {
 
                     activeChar.sendPacket(new AcquireSkillDone());
 
-                    L2VillageMasterInstance.showPledgeSkillList(activeChar);
+                    VillageMaster.showPledgeSkillList(activeChar);
                 } else {
                     activeChar.sendPacket(SystemMessageId.THE_ATTEMPT_TO_ACQUIRE_THE_SKILL_HAS_FAILED_BECAUSE_OF_AN_INSUFFICIENT_CLAN_REPUTATION);
-                    L2VillageMasterInstance.showPledgeSkillList(activeChar);
+                    VillageMaster.showPledgeSkillList(activeChar);
                 }
                 break;
             }
@@ -269,7 +269,7 @@ public final class RequestAcquireSkill extends ClientPacket {
      * @param skillLearn the skill to be learn.
      * @return {@code true} if all requirements are meet, {@code false} otherwise.
      */
-    private boolean checkPlayerSkill(Player player, L2Npc trainer, L2SkillLearn skillLearn) {
+    private boolean checkPlayerSkill(Player player, Npc trainer, L2SkillLearn skillLearn) {
         if (skillLearn != null) {
             if ((skillLearn.getSkillId() == _id) && (skillLearn.getSkillLevel() == _level)) {
                 // Hack check.
@@ -366,7 +366,7 @@ public final class RequestAcquireSkill extends ClientPacket {
      * @param trainer the Npc teaching a skill.
      * @param skill   the skill to be learn.
      */
-    private void giveSkill(Player player, L2Npc trainer, Skill skill) {
+    private void giveSkill(Player player, Npc trainer, Skill skill) {
         giveSkill(player, trainer, skill, true);
     }
 
@@ -378,7 +378,7 @@ public final class RequestAcquireSkill extends ClientPacket {
      * @param skill   the skill to be learn.
      * @param store
      */
-    private void giveSkill(Player player, L2Npc trainer, Skill skill, boolean store) {
+    private void giveSkill(Player player, Npc trainer, Skill skill, boolean store) {
         // Send message.
         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_LEARNED_S1);
         sm.addSkillName(skill);
@@ -413,9 +413,9 @@ public final class RequestAcquireSkill extends ClientPacket {
      * @param trainer the Npc which the {@code player} is interacting
      * @param player  the active character
      */
-    private void showSkillList(L2Npc trainer, Player player) {
-        if (trainer instanceof L2FishermanInstance) {
-            L2FishermanInstance.showFishSkillList(player);
+    private void showSkillList(Npc trainer, Player player) {
+        if (trainer instanceof Fisherman) {
+            Fisherman.showFishSkillList(player);
         }
     }
 }

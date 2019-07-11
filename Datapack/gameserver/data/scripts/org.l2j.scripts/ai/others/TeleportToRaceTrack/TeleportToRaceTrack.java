@@ -21,7 +21,7 @@ import java.util.Map;
 
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.NpcStringId;
 
@@ -79,7 +79,7 @@ public final class TeleportToRaceTrack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, Player player)
+	public String onTalk(Npc npc, Player player)
 	{
 		if (npc.getId() == RACE_MANAGER)
 		{

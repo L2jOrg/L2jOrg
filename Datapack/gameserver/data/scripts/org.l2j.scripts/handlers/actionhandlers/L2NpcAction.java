@@ -24,7 +24,7 @@ import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.L2Event;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -36,20 +36,20 @@ import org.l2j.gameserver.network.serverpackets.MoveToPawn;
 public class L2NpcAction implements IActionHandler
 {
 	/**
-	 * Manage actions when a player click on the L2Npc.<BR>
+	 * Manage actions when a player click on the Npc.<BR>
 	 * <BR>
-	 * <B><U> Actions on first click on the L2Npc (Select it)</U> :</B><BR>
+	 * <B><U> Actions on first click on the Npc (Select it)</U> :</B><BR>
 	 * <BR>
-	 * <li>Set the L2Npc as target of the Player player (if necessary)</li>
+	 * <li>Set the Npc as target of the Player player (if necessary)</li>
 	 * <li>Send a Server->Client packet MyTargetSelected to the Player player (display the select window)</li>
-	 * <li>If L2Npc is autoAttackable, send a Server->Client packet StatusUpdate to the Player in order to update L2Npc HP bar</li>
-	 * <li>Send a Server->Client packet ValidateLocation to correct the L2Npc position and heading on the client</li><BR>
+	 * <li>If Npc is autoAttackable, send a Server->Client packet StatusUpdate to the Player in order to update Npc HP bar</li>
+	 * <li>Send a Server->Client packet ValidateLocation to correct the Npc position and heading on the client</li><BR>
 	 * <BR>
-	 * <B><U> Actions on second click on the L2Npc (Attack it/Intercat with it)</U> :</B><BR>
+	 * <B><U> Actions on second click on the Npc (Attack it/Intercat with it)</U> :</B><BR>
 	 * <BR>
 	 * <li>Send a Server->Client packet MyTargetSelected to the Player player (display the select window)</li>
-	 * <li>If L2Npc is autoAttackable, notify the Player AI with AI_INTENTION_ATTACK (after a height verification)</li>
-	 * <li>If L2Npc is NOT autoAttackable, notify the Player AI with AI_INTENTION_INTERACT (after a distance verification) and show message</li><BR>
+	 * <li>If Npc is autoAttackable, notify the Player AI with AI_INTENTION_ATTACK (after a height verification)</li>
+	 * <li>If Npc is NOT autoAttackable, notify the Player AI with AI_INTENTION_INTERACT (after a distance verification) and show message</li><BR>
 	 * <BR>
 	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Each group of Server->Client packet must be terminated by a ActionFailed packet in order to avoid that client wait an other packet</B></FONT><BR>
 	 * <BR>
@@ -57,17 +57,17 @@ public class L2NpcAction implements IActionHandler
 	 * <BR>
 	 * <li>Client packet : Action, AttackRequest</li><BR>
 	 * <BR>
-	 * @param activeChar The Player that start an action on the L2Npc
+	 * @param activeChar The Player that start an action on the Npc
 	 */
 	@Override
 	public boolean action(Player activeChar, WorldObject target, boolean interact)
 	{
-		if (!((L2Npc) target).canTarget(activeChar))
+		if (!((Npc) target).canTarget(activeChar))
 		{
 			return false;
 		}
-		activeChar.setLastFolkNPC((L2Npc) target);
-		// Check if the Player already target the L2Npc
+		activeChar.setLastFolkNPC((Npc) target);
+		// Check if the Player already target the Npc
 		if (target != activeChar.getTarget())
 		{
 			// Set the target of the Player activeChar
@@ -75,7 +75,7 @@ public class L2NpcAction implements IActionHandler
 			// Check if the activeChar is attackable (without a forced attack)
 			if (target.isAutoAttackable(activeChar))
 			{
-				((L2Npc) target).getAI(); // wake up ai
+				((Npc) target).getAI(); // wake up ai
 			}
 		}
 		else if (interact)
@@ -97,15 +97,15 @@ public class L2NpcAction implements IActionHandler
 			}
 			else if (!target.isAutoAttackable(activeChar))
 			{
-				// Calculate the distance between the Player and the L2Npc
-				if (!((L2Npc) target).canInteract(activeChar))
+				// Calculate the distance between the Player and the Npc
+				if (!((Npc) target).canInteract(activeChar))
 				{
 					// Notify the Player AI with AI_INTENTION_INTERACT
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 				}
 				else
 				{
-					final L2Npc npc = (L2Npc) target;
+					final Npc npc = (Npc) target;
 					if (!activeChar.isSitting()) // Needed for Mystic Tavern Globe
 					{
 						// Turn NPC to the player.
@@ -115,7 +115,7 @@ public class L2NpcAction implements IActionHandler
 							npc.onRandomAnimation(Rnd.get(8));
 						}
 					}
-					// Open a chat window on client with the text of the L2Npc
+					// Open a chat window on client with the text of the Npc
 					if (npc.getVariables().getBoolean("eventmob", false))
 					{
 						L2Event.showEventHtml(activeChar, String.valueOf(target.getObjectId()));

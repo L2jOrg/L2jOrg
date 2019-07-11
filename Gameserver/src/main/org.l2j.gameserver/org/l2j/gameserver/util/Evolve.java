@@ -6,7 +6,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.model.L2PetData;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -30,7 +30,7 @@ import java.sql.PreparedStatement;
 public final class Evolve {
     protected static final Logger LOGGER = LoggerFactory.getLogger(Evolve.class);
 
-    public static boolean doEvolve(Player player, L2Npc npc, int itemIdtake, int itemIdgive, int petminlvl) {
+    public static boolean doEvolve(Player player, Npc npc, int itemIdtake, int itemIdgive, int petminlvl) {
         if ((itemIdtake == 0) || (itemIdgive == 0) || (petminlvl == 0)) {
             return false;
         }
@@ -127,7 +127,7 @@ public final class Evolve {
         return true;
     }
 
-    public static boolean doRestore(Player player, L2Npc npc, int itemIdtake, int itemIdgive, int petminlvl) {
+    public static boolean doRestore(Player player, Npc npc, int itemIdtake, int itemIdgive, int petminlvl) {
         if ((itemIdtake == 0) || (itemIdgive == 0) || (petminlvl == 0)) {
             return false;
         }

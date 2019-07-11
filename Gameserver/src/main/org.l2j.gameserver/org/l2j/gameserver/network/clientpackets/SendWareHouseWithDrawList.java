@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.ClanPrivilege;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.itemcontainer.ClanWarehouse;
@@ -67,7 +67,7 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
             return;
         }
 
-        final L2Npc manager = player.getLastFolkNPC();
+        final Npc manager = player.getLastFolkNPC();
         if (((manager == null) || !manager.isWarehouse() || !manager.canInteract(player)) && !player.isGM()) {
             return;
         }

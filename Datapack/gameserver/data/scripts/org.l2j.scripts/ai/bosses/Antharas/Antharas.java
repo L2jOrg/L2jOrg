@@ -27,10 +27,10 @@ import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.GrandBoss;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.Skill;
@@ -108,7 +108,7 @@ public final class Antharas extends AbstractNpcAI
 	private static final int DEAD = 3;
 	// Misc
 	private static final int MAX_PEOPLE = 200; // Max allowed players
-	private L2GrandBossInstance _antharas = null;
+	private GrandBoss _antharas = null;
 	private static long _lastAttack = 0;
 	private static int _minionCount = 0;
 	private static int minionMultipler = 0;
@@ -147,14 +147,14 @@ public final class Antharas extends AbstractNpcAI
 		{
 			case ALIVE:
 			{
-				_antharas = (L2GrandBossInstance) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
+				_antharas = (GrandBoss) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
 				_antharas.setCurrentHpMp(curr_hp, curr_mp);
 				addBoss(_antharas);
 				break;
 			}
 			case WAITING:
 			{
-				_antharas = (L2GrandBossInstance) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
+				_antharas = (GrandBoss) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
 				_antharas.setCurrentHpMp(curr_hp, curr_mp);
 				addBoss(_antharas);
 				startQuestTimer("SPAWN_ANTHARAS", Config.ANTHARAS_WAIT_TIME * 60000, null, null);
@@ -162,7 +162,7 @@ public final class Antharas extends AbstractNpcAI
 			}
 			case IN_FIGHT:
 			{
-				_antharas = (L2GrandBossInstance) addSpawn(ANTHARAS, loc_x, loc_y, loc_z, heading, false, 0);
+				_antharas = (GrandBoss) addSpawn(ANTHARAS, loc_x, loc_y, loc_z, heading, false, 0);
 				_antharas.setCurrentHpMp(curr_hp, curr_mp);
 				addBoss(_antharas);
 				_lastAttack = System.currentTimeMillis();
@@ -180,7 +180,7 @@ public final class Antharas extends AbstractNpcAI
 				else
 				{
 					setStatus(ALIVE);
-					_antharas = (L2GrandBossInstance) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
+					_antharas = (GrandBoss) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
 					addBoss(_antharas);
 				}
 				break;
@@ -189,7 +189,7 @@ public final class Antharas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -496,7 +496,7 @@ public final class Antharas extends AbstractNpcAI
 			}
 			case "CLEAR_STATUS":
 			{
-				_antharas = (L2GrandBossInstance) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
+				_antharas = (GrandBoss) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
 				addBoss(_antharas);
 				Broadcast.toAllOnlinePlayers(new Earthquake(185708, 114298, -8221, 20, 10));
 				setStatus(ALIVE);
@@ -600,7 +600,7 @@ public final class Antharas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, Player player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{
 		npc.doCast(DISPEL_BOM.getSkill());
 		npc.doDie(player);
@@ -608,7 +608,7 @@ public final class Antharas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		_lastAttack = System.currentTimeMillis();
 		
@@ -663,7 +663,7 @@ public final class Antharas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, Player killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (zone.isCharacterInZone(killer))
 		{
@@ -692,14 +692,14 @@ public final class Antharas extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onMoveFinished(L2Npc npc)
+	public void onMoveFinished(Npc npc)
 	{
 		npc.doCast(DISPEL_BOM.getSkill());
 		npc.doDie(null);
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (npc.getId() == ANTHARAS)
 		{
@@ -712,7 +712,7 @@ public final class Antharas extends AbstractNpcAI
 			{
 				final int x = npc.getParameters().getInt("suicide" + i + "_x");
 				final int y = npc.getParameters().getInt("suicide" + i + "_y");
-				final L2Attackable bomber = (L2Attackable) addSpawn(BOMBER, npc.getX(), npc.getY(), npc.getZ(), 0, true, 15000, true);
+				final Attackable bomber = (Attackable) addSpawn(BOMBER, npc.getX(), npc.getY(), npc.getZ(), 0, true, 15000, true);
 				bomber.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(x, y, npc.getZ()));
 			}
 			npc.deleteMe();
@@ -721,7 +721,7 @@ public final class Antharas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, Player player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		if ((skill.getId() == ANTH_FEAR.getSkillId()) || (skill.getId() == ANTH_FEAR_SHORT.getSkillId()))
 		{
@@ -747,7 +747,7 @@ public final class Antharas extends AbstractNpcAI
 		return GrandBossManager.getInstance().getBossStatus(ANTHARAS);
 	}
 	
-	private void addBoss(L2GrandBossInstance grandboss)
+	private void addBoss(GrandBoss grandboss)
 	{
 		GrandBossManager.getInstance().addBoss(grandboss);
 	}
@@ -806,7 +806,7 @@ public final class Antharas extends AbstractNpcAI
 		}
 	}
 	
-	private void manageSkills(L2Npc npc)
+	private void manageSkills(Npc npc)
 	{
 		if (npc.isCastingNow(SkillCaster::isAnyNormalType) || npc.isCoreAIDisabled() || !npc.isInCombat())
 		{

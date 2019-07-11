@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="30900" level="70" type="L2VillageMasterFighter" name="Marcus" title="Grand Master">
+	<npc id="30900" level="70" type="VillageMasterFighter" name="Marcus" title="Grand Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -38,7 +38,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="30901" level="70" type="L2Npc" name="Arti" title="Master">
+	<npc id="30901" level="70" type="Folk" name="Arti" title="Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -76,7 +76,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30902" level="70" type="L2Npc" name="Karuna" title="Master">
+	<npc id="30902" level="70" type="Folk" name="Karuna" title="Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -114,7 +114,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30903" level="70" type="L2Npc" name="Traus" title="Master">
+	<npc id="30903" level="70" type="Folk" name="Traus" title="Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="187" />
@@ -151,7 +151,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="30904" level="70" type="L2Npc" name="Naiel" title="Master">
+	<npc id="30904" level="70" type="Folk" name="Naiel" title="Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -188,7 +188,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="30905" level="70" type="L2VillageMasterPriest" name="Squillari" title="High Priest">
+	<npc id="30905" level="70" type="VillageMasterPriest" name="Squillari" title="High Priest">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -226,7 +226,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="30906" level="70" type="L2Npc" name="Ranton" title="Priest">
+	<npc id="30906" level="70" type="Folk" name="Ranton" title="Priest">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -265,7 +265,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30907" level="70" type="L2Npc" name="Minevia" title="Magister">
+	<npc id="30907" level="70" type="Folk" name="Minevia" title="Magister">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="133" />
@@ -302,7 +302,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="30908" level="70" type="L2Npc" name="Tanios" title="Priest">
+	<npc id="30908" level="70" type="Folk" name="Tanios" title="Priest">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="187" />
@@ -341,7 +341,7 @@
 			<height normal="22.2" />
 		</collision>
 	</npc>
-	<npc id="30909" level="70" type="L2Npc" name="Anabel" title="Magister">
+	<npc id="30909" level="70" type="Folk" name="Anabel" title="Magister">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -379,7 +379,7 @@
 			<height normal="21.2" />
 		</collision>
 	</npc>
-	<npc id="30910" level="70" type="L2VillageMasterDElf" name="Xairakin" title="Grand Master">
+	<npc id="30910" level="70" type="VillageMasterDElf" name="Xairakin" title="Grand Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="103" />
@@ -417,7 +417,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30911" level="70" type="L2Npc" name="Brikus" title="Master">
+	<npc id="30911" level="70" type="Folk" name="Brikus" title="Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -454,7 +454,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30912" level="70" type="L2Npc" name="Xenovia" title="Magister">
+	<npc id="30912" level="70" type="Folk" name="Xenovia" title="Magister">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -494,7 +494,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="30913" level="70" type="L2VillageMasterOrc" name="Tushku" title="High Prefect">
+	<npc id="30913" level="70" type="VillageMasterOrc" name="Tushku" title="High Prefect">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="95" />
@@ -532,7 +532,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="30914" level="70" type="L2Npc" name="Sorbo" title="Prefect">
+	<npc id="30914" level="70" type="Folk" name="Sorbo" title="Prefect">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="156" />
@@ -569,7 +569,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="30915" level="70" type="L2Npc" name="Takina" title="Priest">
+	<npc id="30915" level="70" type="Folk" name="Takina" title="Priest">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -606,7 +606,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="30916" level="80" type="L2Guard" name="Gosta" title="Captain">
+	<npc id="30916" level="80" type="Guard" name="Gosta" title="Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -650,7 +650,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="30917" level="80" type="L2Guard" name="Dupuis" title="Guard">
+	<npc id="30917" level="80" type="Guard" name="Dupuis" title="Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -689,7 +689,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="30918" level="80" type="L2Guard" name="Kent" title="Guard">
+	<npc id="30918" level="80" type="Guard" name="Kent" title="Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -728,7 +728,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="30919" level="80" type="L2Guard" name="Rodic" title="Guard">
+	<npc id="30919" level="80" type="Guard" name="Rodic" title="Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -767,7 +767,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="30920" level="80" type="L2Guard" name="Kraisen" title="Guard">
+	<npc id="30920" level="80" type="Guard" name="Kraisen" title="Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -806,7 +806,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="30921" level="80" type="L2Guard" name="Timos" title="Guard">
+	<npc id="30921" level="80" type="Guard" name="Timos" title="Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -845,7 +845,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="30922" level="80" type="L2Guard" name="Cage" title="Guard">
+	<npc id="30922" level="80" type="Guard" name="Cage" title="Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -884,7 +884,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="30923" level="80" type="L2Guard" name="Dunst" title="Guard">
+	<npc id="30923" level="80" type="Guard" name="Dunst" title="Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -923,7 +923,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="30924" level="70" type="L2Merchant" name="Nedy" title="Wharf Manager">
+	<npc id="30924" level="70" type="Merchant" name="Nedy" title="Wharf Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -960,7 +960,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="30925" level="70" type="L2Npc" name="Morelyn" title="High Priestess">
+	<npc id="30925" level="70" type="Folk" name="Morelyn" title="High Priestess">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -998,7 +998,7 @@
 			<height normal="21.2" />
 		</collision>
 	</npc>
-	<npc id="30926" level="70" type="L2Npc" name="Restina" title="Priestess">
+	<npc id="30926" level="70" type="Folk" name="Restina" title="Priestess">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1036,7 +1036,7 @@
 			<height normal="21.2" />
 		</collision>
 	</npc>
-	<npc id="30927" level="70" type="L2Npc" name="Alicia" title="Priestess">
+	<npc id="30927" level="70" type="Folk" name="Alicia" title="Priestess">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1073,7 +1073,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="30928" level="70" type="L2Npc" name="Fenster" title="Mercenary">
+	<npc id="30928" level="70" type="Folk" name="Fenster" title="Mercenary">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="88" />
@@ -1110,7 +1110,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="30929" level="70" type="L2Npc" name="Patrin" title="Antique Dealer">
+	<npc id="30929" level="70" type="Folk" name="Patrin" title="Antique Dealer">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -1147,7 +1147,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="30930" level="70" type="L2Npc" name="Rogent" title="Antique Appraiser">
+	<npc id="30930" level="70" type="Folk" name="Rogent" title="Antique Appraiser">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="132" />
@@ -1184,7 +1184,7 @@
 			<height normal="19.7" />
 		</collision>
 	</npc>
-	<npc id="30931" level="70" type="L2Npc" name="Bentley">
+	<npc id="30931" level="70" type="Folk" name="Bentley">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -1221,7 +1221,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="30932" level="70" type="L2Npc" name="Benica">
+	<npc id="30932" level="70" type="Folk" name="Benica">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1258,7 +1258,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="30933" level="70" type="L2Npc" name="Braki">
+	<npc id="30933" level="70" type="Folk" name="Braki">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="88" />
@@ -1295,7 +1295,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="30934" level="70" type="L2Npc" name="Marsha" title="Collector">
+	<npc id="30934" level="70" type="Folk" name="Marsha" title="Collector">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1332,7 +1332,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="30935" level="70" type="L2Npc" name="Trumpin" title="Collector">
+	<npc id="30935" level="70" type="Folk" name="Trumpin" title="Collector">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="88" />
@@ -1369,7 +1369,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="30936" level="70" type="L2Merchant" name="Pona" title="Collector">
+	<npc id="30936" level="70" type="Merchant" name="Pona" title="Collector">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1407,7 +1407,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="30937" level="70" type="L2Monster" name="Morita">
+	<npc id="30937" level="70" type="Monster" name="Morita">
 		<parameters>
 			<param name="MoveAroundSocial" value="95" />
 			<param name="MoveAroundSocial1" value="95" />
@@ -1445,7 +1445,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="30938" level="70" type="L2Npc" name="Vanutu" title="Priest">
+	<npc id="30938" level="70" type="Folk" name="Vanutu" title="Priest">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -1479,7 +1479,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="30939" level="70" type="L2Npc" name="Jones" title="Moon Knight">
+	<npc id="30939" level="70" type="Folk" name="Jones" title="Moon Knight">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1518,7 +1518,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="30940" level="70" type="L2Npc" name="Amora">
+	<npc id="30940" level="70" type="Folk" name="Amora">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1556,7 +1556,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="30941" level="70" type="L2Npc" name="Gudz" title="Ol Mahum Hierarch">
+	<npc id="30941" level="70" type="Folk" name="Gudz" title="Ol Mahum Hierarch">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -1595,7 +1595,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30942" level="70" type="L2Npc" name="Ruvard" title="Priest">
+	<npc id="30942" level="70" type="Folk" name="Ruvard" title="Priest">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1634,7 +1634,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30943" level="70" type="L2Monster" name="Malcom8" title="Rabbit Prince">
+	<npc id="30943" level="70" type="Monster" name="Malcom8" title="Rabbit Prince">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1671,7 +1671,7 @@
 			<height normal="4.5" />
 		</collision>
 	</npc>
-	<npc id="30944" level="70" type="L2Npc" name="Malcom9" title="Human Prince">
+	<npc id="30944" level="70" type="Folk" name="Malcom9" title="Human Prince">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1708,7 +1708,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30945" level="70" type="L2Npc" name="Malcom10" title="Prince">
+	<npc id="30945" level="70" type="Folk" name="Malcom10" title="Prince">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1745,7 +1745,7 @@
 			<height normal="18.4" />
 		</collision>
 	</npc>
-	<npc id="30946" level="70" type="L2Npc" name="Lucianne Tanford">
+	<npc id="30946" level="70" type="Folk" name="Lucianne Tanford">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -1782,7 +1782,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="30947" level="70" type="L2Npc" name="Rerikya">
+	<npc id="30947" level="70" type="Folk" name="Rerikya">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="156" />
@@ -1819,7 +1819,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="30948" level="70" type="L2Npc" name="Meridien">
+	<npc id="30948" level="70" type="Folk" name="Meridien">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="133" />
@@ -1856,7 +1856,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="30949" level="70" type="L2Npc" name="Keplon" title="Researcher">
+	<npc id="30949" level="70" type="Folk" name="Keplon" title="Researcher">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="132" />
@@ -1893,7 +1893,7 @@
 			<height normal="19.7" />
 		</collision>
 	</npc>
-	<npc id="30950" level="70" type="L2Npc" name="Euclie" title="Researcher">
+	<npc id="30950" level="70" type="Folk" name="Euclie" title="Researcher">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1930,7 +1930,7 @@
 			<height normal="18.5" />
 		</collision>
 	</npc>
-	<npc id="30951" level="70" type="L2Npc" name="Pithgon" title="Researcher">
+	<npc id="30951" level="70" type="Folk" name="Pithgon" title="Researcher">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="132" />
@@ -1967,7 +1967,7 @@
 			<height normal="19.7" />
 		</collision>
 	</npc>
-	<npc id="30952" level="70" type="L2Npc" name="Dimensional Vortex">
+	<npc id="30952" level="70" type="Folk" name="Dimensional Vortex">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2005,7 +2005,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="30953" level="70" type="L2Npc" name="Dimensional Vortex 2">
+	<npc id="30953" level="70" type="Folk" name="Dimensional Vortex 2">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2043,7 +2043,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="30954" level="70" type="L2Npc" name="Dimensional Vortex 3">
+	<npc id="30954" level="70" type="Folk" name="Dimensional Vortex 3">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2081,7 +2081,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="30955" level="70" type="L2Monster" name="Gillian's Revenant">
+	<npc id="30955" level="70" type="Monster" name="Gillian's Revenant">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2119,7 +2119,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="30956" level="70" type="L2Npc" name="Nanarin" title="Musician">
+	<npc id="30956" level="70" type="Folk" name="Nanarin" title="Musician">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="103" />
@@ -2157,7 +2157,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30957" level="70" type="L2Npc" name="Swan" title="Bard">
+	<npc id="30957" level="70" type="Folk" name="Swan" title="Bard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2195,7 +2195,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="30958" level="70" type="L2Npc" name="Galion">
+	<npc id="30958" level="70" type="Folk" name="Galion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -2232,7 +2232,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="30959" level="70" type="L2Npc" name="Barbado" title="Musician">
+	<npc id="30959" level="70" type="Folk" name="Barbado" title="Musician">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="88" />
@@ -2270,7 +2270,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="30960" level="70" type="L2Npc" name="Beer Chest">
+	<npc id="30960" level="70" type="Folk" name="Beer Chest">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2308,7 +2308,7 @@
 			<height normal="14" />
 		</collision>
 	</npc>
-	<npc id="30961" level="70" type="L2Npc" name="Clothes Chest">
+	<npc id="30961" level="70" type="Folk" name="Clothes Chest">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2346,7 +2346,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="30962" level="70" type="L2Npc" name="Chest Caught with an Icy Air Bait">
+	<npc id="30962" level="70" type="Folk" name="Chest Caught with an Icy Air Bait">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2384,7 +2384,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="30963" level="70" type="L2Npc" name="Chest Caught with a Bait of Flame">
+	<npc id="30963" level="70" type="Folk" name="Chest Caught with a Bait of Flame">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2422,7 +2422,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="30964" level="70" type="L2Npc" name="Chest Caught with a Wind Bait">
+	<npc id="30964" level="70" type="Folk" name="Chest Caught with a Wind Bait">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2460,7 +2460,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="30965" level="70" type="L2Npc" name="Chest Caught with an Earth Bait">
+	<npc id="30965" level="70" type="Folk" name="Chest Caught with an Earth Bait">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2498,7 +2498,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="30966" level="70" type="L2Npc" name="Statue of Darkness">
+	<npc id="30966" level="70" type="Folk" name="Statue of Darkness">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2536,7 +2536,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="30967" level="70" type="L2Npc" name="Statue of Light">
+	<npc id="30967" level="70" type="Folk" name="Statue of Light">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2574,7 +2574,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="30968" level="70" type="L2Npc" name="Jennifer" title="Lady Orc">
+	<npc id="30968" level="70" type="Folk" name="Jennifer" title="Lady Orc">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="156" />
@@ -2611,7 +2611,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="30969" level="70" type="L2Npc" name="Iason Heine">
+	<npc id="30969" level="70" type="Folk" name="Iason Heine">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -2648,7 +2648,7 @@
 			<height normal="20.5" />
 		</collision>
 	</npc>
-	<npc id="30970" level="70" type="L2Npc" name="Dorothy" title="Blacksmith">
+	<npc id="30970" level="70" type="Folk" name="Dorothy" title="Blacksmith">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2686,7 +2686,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="30971" level="70" type="L2Npc" name="Orpheus" title="Mad Doctor">
+	<npc id="30971" level="70" type="Folk" name="Orpheus" title="Mad Doctor">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="102" />
@@ -2723,7 +2723,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="30972" level="70" type="L2Monster" name="Orpheus Resurrector">
+	<npc id="30972" level="70" type="Monster" name="Orpheus Resurrector">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2762,7 +2762,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="30973" level="70" type="L2Npc" name="Medium Jar">
+	<npc id="30973" level="70" type="Folk" name="Medium Jar">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2800,7 +2800,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="30974" level="70" type="L2Npc" name="Oliver" title="Resurrected Adventurer">
+	<npc id="30974" level="70" type="Folk" name="Oliver" title="Resurrected Adventurer">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -2838,7 +2838,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30975" level="70" type="L2Npc" name="Clarine" title="Resurrected Adventurer">
+	<npc id="30975" level="70" type="Folk" name="Clarine" title="Resurrected Adventurer">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -2875,7 +2875,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="30976" level="70" type="L2Npc" name="Resurrected Town Maiden">
+	<npc id="30976" level="70" type="Folk" name="Resurrected Town Maiden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2912,7 +2912,7 @@
 			<height normal="20.5" />
 		</collision>
 	</npc>
-	<npc id="30977" level="70" type="L2Npc" name="Holy Ark of Secrecy 1">
+	<npc id="30977" level="70" type="Folk" name="Holy Ark of Secrecy 1">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2950,7 +2950,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="30978" level="70" type="L2Npc" name="Holy Ark of Secrecy 2">
+	<npc id="30978" level="70" type="Folk" name="Holy Ark of Secrecy 2">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2988,7 +2988,7 @@
 			<height normal="9" />
 		</collision>
 	</npc>
-	<npc id="30979" level="70" type="L2Npc" name="Holy Ark of Secrecy 3">
+	<npc id="30979" level="70" type="Folk" name="Holy Ark of Secrecy 3">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3026,7 +3026,7 @@
 			<height normal="9" />
 		</collision>
 	</npc>
-	<npc id="30980" level="70" type="L2Npc" name="Ark Guardian's Corpse">
+	<npc id="30980" level="70" type="Folk" name="Ark Guardian's Corpse">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3063,7 +3063,7 @@
 			<height normal="36.5" />
 		</collision>
 	</npc>
-	<npc id="30981" level="70" type="L2Npc" name="Dark Judge">
+	<npc id="30981" level="70" type="Folk" name="Dark Judge">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="106" />
@@ -3108,7 +3108,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="30982" level="70" type="L2Monster" name="Sleeping Ant Larva1">
+	<npc id="30982" level="70" type="Monster" name="Sleeping Ant Larva1">
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -3146,7 +3146,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="30983" level="70" type="L2Monster" name="Sleeping Ant Larva2">
+	<npc id="30983" level="70" type="Monster" name="Sleeping Ant Larva2">
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -3184,7 +3184,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="30984" level="70" type="L2Monster" name="Sleeping Ant Larva3">
+	<npc id="30984" level="70" type="Monster" name="Sleeping Ant Larva3">
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -3222,7 +3222,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="30985" level="70" type="L2Monster" name="Sleeping Ant Larva4">
+	<npc id="30985" level="70" type="Monster" name="Sleeping Ant Larva4">
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -3260,7 +3260,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="30986" level="70" type="L2Monster" name="Sleeping Ant Larva5">
+	<npc id="30986" level="70" type="Monster" name="Sleeping Ant Larva5">
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -3298,7 +3298,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="30987" level="70" type="L2Monster" name="Sleeping Ant Larva6">
+	<npc id="30987" level="70" type="Monster" name="Sleeping Ant Larva6">
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -3336,7 +3336,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="30988" level="70" type="L2Npc" name="Verce" title="Leathersmith">
+	<npc id="30988" level="70" type="Folk" name="Verce" title="Leathersmith">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -3374,7 +3374,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="30989" level="70" type="L2Npc" name="Chest of Bifrons">
+	<npc id="30989" level="70" type="Folk" name="Chest of Bifrons">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3412,7 +3412,7 @@
 			<height normal="9" />
 		</collision>
 	</npc>
-	<npc id="30990" level="70" type="L2Npc" name="Lottery Ticket Seller">
+	<npc id="30990" level="70" type="Folk" name="Lottery Ticket Seller">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3449,7 +3449,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30991" level="70" type="L2Npc" name="Lottery Ticket Seller">
+	<npc id="30991" level="70" type="Folk" name="Lottery Ticket Seller">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -3486,7 +3486,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="30992" level="70" type="L2Npc" name="Lottery Ticket Seller">
+	<npc id="30992" level="70" type="Folk" name="Lottery Ticket Seller">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="139" />
@@ -3523,7 +3523,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="30993" level="70" type="L2Npc" name="Lottery Ticket Seller">
+	<npc id="30993" level="70" type="Folk" name="Lottery Ticket Seller">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -3560,7 +3560,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="30994" level="70" type="L2Npc" name="Lottery Ticket Seller">
+	<npc id="30994" level="70" type="Folk" name="Lottery Ticket Seller">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="180" />
@@ -3597,7 +3597,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="30995" level="70" type="L2Npc" name="Race Manager" title="Monster Race Track">
+	<npc id="30995" level="70" type="Folk" name="Race Manager" title="Monster Race Track">
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">

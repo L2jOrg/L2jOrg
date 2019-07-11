@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
 import org.l2j.gameserver.model.items.type.WeaponType;
@@ -241,7 +241,7 @@ public final class L2Weapon extends L2Item {
             if (type == ItemSkillType.ON_MAGIC_SKILL) {
                 // notify quests of a skill use
                 if (caster.isPlayer()) {
-                    L2World.getInstance().forEachVisibleObjectInRange(caster, L2Npc.class, 1000, npc ->
+                    L2World.getInstance().forEachVisibleObjectInRange(caster, Npc.class, 1000, npc ->
                     {
                         EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npc, caster.getActingPlayer(), skill, false, target), npc);
                     });

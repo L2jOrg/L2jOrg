@@ -146,7 +146,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
         _id = set.getInt("id");
         _displayId = set.getInt("displayId", _id);
         _level = set.getByte("level", (byte) 70);
-        _type = set.getString("type", "L2Npc");
+        _type = set.getString("type", "Npc");
         _name = set.getString("name", "");
         _usingServerSideName = set.getBoolean("usingServerSideName", false);
         _title = set.getString("title", "");

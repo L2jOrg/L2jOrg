@@ -21,8 +21,8 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.quest.Quest;
@@ -114,7 +114,7 @@ public final class Q00227_TestOfTheReformer extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if ("DESPAWN".equals(event))
 		{
@@ -186,9 +186,9 @@ public final class Q00227_TestOfTheReformer extends Quest
 				qs.setCond(12, true);
 				if (npc.getSummonedNpcCount() < 1)
 				{
-					L2Npc pilgrim = addSpawn(OL_MAHUM_PILGRIM, -9282, -89975, -2331, 0, false, 0);
-					L2Npc wolf = addSpawn(CRIMSON_WEREWOLF, -9382, -89852, -2333, 0, false, 0);
-					((L2Attackable) wolf).addDamageHate(pilgrim, 99999, 99999);
+					Npc pilgrim = addSpawn(OL_MAHUM_PILGRIM, -9282, -89975, -2331, 0, false, 0);
+					Npc wolf = addSpawn(CRIMSON_WEREWOLF, -9382, -89852, -2333, 0, false, 0);
+					((Attackable) wolf).addDamageHate(pilgrim, 99999, 99999);
 					wolf.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, pilgrim);
 				}
 				htmltext = event;
@@ -199,9 +199,9 @@ public final class Q00227_TestOfTheReformer extends Quest
 				qs.setCond(15, true);
 				if (npc.getSummonedNpcCount() < 1)
 				{
-					L2Npc pilgrim = addSpawn(OL_MAHUM_PILGRIM, 125947, -180049, -1778, 0, false, 0);
-					L2Npc lizard = addSpawn(KRUDEL_LIZARDMAN, 126019, -179983, -1781, 0, false, 0);
-					((L2Attackable) lizard).addDamageHate(pilgrim, 99999, 99999);
+					Npc pilgrim = addSpawn(OL_MAHUM_PILGRIM, 125947, -180049, -1778, 0, false, 0);
+					Npc lizard = addSpawn(KRUDEL_LIZARDMAN, 126019, -179983, -1781, 0, false, 0);
+					((Attackable) lizard).addDamageHate(pilgrim, 99999, 99999);
 					lizard.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, pilgrim);
 				}
 				htmltext = event;
@@ -212,7 +212,7 @@ public final class Q00227_TestOfTheReformer extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final QuestState qs = getQuestState(attacker, false);
 		if ((qs != null) && qs.isStarted())
@@ -253,7 +253,7 @@ public final class Q00227_TestOfTheReformer extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, Player killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isStarted() && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
@@ -404,7 +404,7 @@ public final class Q00227_TestOfTheReformer extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, Player player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		final int memoState = qs.getMemoState();
@@ -553,9 +553,9 @@ public final class Q00227_TestOfTheReformer extends Quest
 						qs.setCond(6, true);
 						if (npc.getSummonedNpcCount() < 1)
 						{
-							L2Npc pilgrim = addSpawn(OL_MAHUM_PILGRIM, -4015, 40141, -3664, 0, false, 0);
-							L2Npc inspector = addSpawn(OL_MAHUM_INSPECTOR, -4034, 40201, -3665, 0, false, 0);
-							((L2Attackable) inspector).addDamageHate(pilgrim, 99999, 99999);
+							Npc pilgrim = addSpawn(OL_MAHUM_PILGRIM, -4015, 40141, -3664, 0, false, 0);
+							Npc inspector = addSpawn(OL_MAHUM_INSPECTOR, -4034, 40201, -3665, 0, false, 0);
+							((Attackable) inspector).addDamageHate(pilgrim, 99999, 99999);
 							inspector.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, pilgrim);
 						}
 						htmltext = "30668-01.html";
@@ -657,7 +657,7 @@ public final class Q00227_TestOfTheReformer extends Quest
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		switch (npc.getId())
 		{

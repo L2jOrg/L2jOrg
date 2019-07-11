@@ -4,8 +4,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.CropProcure;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2MerchantInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.UniqueItemHolder;
 import org.l2j.gameserver.model.items.L2Item;
@@ -64,8 +64,8 @@ public class RequestProcureCropList extends ClientPacket {
             return;
         }
 
-        final L2Npc manager = player.getLastFolkNPC();
-        if (!(manager instanceof L2MerchantInstance) || !manager.canInteract(player)) {
+        final Npc manager = player.getLastFolkNPC();
+        if (!(manager instanceof Merchant) || !manager.canInteract(player)) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

@@ -21,7 +21,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.L2ControllableMobAI;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.L2ControllableMobInstance;
+import org.l2j.gameserver.model.actor.instance.ControllableMob;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 
@@ -36,7 +36,7 @@ public final class MobGroup {
     private final int _groupId;
     private final int _maxMobCount;
 
-    private Set<L2ControllableMobInstance> _mobs;
+    private Set<ControllableMob> _mobs;
 
     public MobGroup(int groupId, L2NpcTemplate npcTemplate, int maxMobCount) {
         _groupId = groupId;
@@ -56,7 +56,7 @@ public final class MobGroup {
         return _maxMobCount;
     }
 
-    public Set<L2ControllableMobInstance> getMobs() {
+    public Set<ControllableMob> getMobs() {
         if (_mobs == null) {
             _mobs = ConcurrentHashMap.newKeySet();
         }
@@ -97,8 +97,8 @@ public final class MobGroup {
         return _npcTemplate;
     }
 
-    public boolean isGroupMember(L2ControllableMobInstance mobInst) {
-        for (L2ControllableMobInstance groupMember : getMobs()) {
+    public boolean isGroupMember(ControllableMob mobInst) {
+        for (ControllableMob groupMember : getMobs()) {
             if (groupMember == null) {
                 continue;
             }
@@ -129,7 +129,7 @@ public final class MobGroup {
                 spawn.stopRespawn();
 
                 SpawnTable.getInstance().addNewSpawn(spawn, false);
-                getMobs().add((L2ControllableMobInstance) spawn.doGroupSpawn());
+                getMobs().add((ControllableMob) spawn.doGroupSpawn());
             }
         } catch (ClassNotFoundException e) {
         } catch (NoSuchMethodException e2) {
@@ -143,7 +143,7 @@ public final class MobGroup {
     public void teleportGroup(Player player) {
         removeDead();
 
-        for (L2ControllableMobInstance mobInst : getMobs()) {
+        for (ControllableMob mobInst : getMobs()) {
             if (mobInst == null) {
                 continue;
             }
@@ -158,7 +158,7 @@ public final class MobGroup {
         }
     }
 
-    public L2ControllableMobInstance getRandomMob() {
+    public ControllableMob getRandomMob() {
         removeDead();
 
         if (getMobs().size() == 0) {
@@ -166,7 +166,7 @@ public final class MobGroup {
         }
 
         int choice = Rnd.get(getMobs().size());
-        for (L2ControllableMobInstance mob : getMobs()) {
+        for (ControllableMob mob : getMobs()) {
             if (--choice == 0) {
                 return mob;
             }
@@ -181,7 +181,7 @@ public final class MobGroup {
             return;
         }
 
-        for (L2ControllableMobInstance mobInst : getMobs()) {
+        for (ControllableMob mobInst : getMobs()) {
             if (mobInst == null) {
                 continue;
             }
@@ -199,7 +199,7 @@ public final class MobGroup {
     public void killGroup(Player activeChar) {
         removeDead();
 
-        for (L2ControllableMobInstance mobInst : getMobs()) {
+        for (ControllableMob mobInst : getMobs()) {
             if (mobInst == null) {
                 continue;
             }
@@ -217,7 +217,7 @@ public final class MobGroup {
     public void setAttackRandom() {
         removeDead();
 
-        for (L2ControllableMobInstance mobInst : getMobs()) {
+        for (ControllableMob mobInst : getMobs()) {
             if (mobInst == null) {
                 continue;
             }
@@ -231,7 +231,7 @@ public final class MobGroup {
     public void setAttackTarget(Creature target) {
         removeDead();
 
-        for (L2ControllableMobInstance mobInst : getMobs()) {
+        for (ControllableMob mobInst : getMobs()) {
             if (mobInst == null) {
                 continue;
             }
@@ -243,7 +243,7 @@ public final class MobGroup {
     public void setIdleMode() {
         removeDead();
 
-        for (L2ControllableMobInstance mobInst : getMobs()) {
+        for (ControllableMob mobInst : getMobs()) {
             if (mobInst == null) {
                 continue;
             }
@@ -255,7 +255,7 @@ public final class MobGroup {
     public void returnGroup(Creature activeChar) {
         setIdleMode();
 
-        for (L2ControllableMobInstance mobInst : getMobs()) {
+        for (ControllableMob mobInst : getMobs()) {
             if (mobInst == null) {
                 continue;
             }
@@ -273,7 +273,7 @@ public final class MobGroup {
     public void setFollowMode(Creature character) {
         removeDead();
 
-        for (L2ControllableMobInstance mobInst : getMobs()) {
+        for (ControllableMob mobInst : getMobs()) {
             if (mobInst == null) {
                 continue;
             }
@@ -285,7 +285,7 @@ public final class MobGroup {
     public void setCastMode() {
         removeDead();
 
-        for (L2ControllableMobInstance mobInst : getMobs()) {
+        for (ControllableMob mobInst : getMobs()) {
             if (mobInst == null) {
                 continue;
             }
@@ -297,7 +297,7 @@ public final class MobGroup {
     public void setNoMoveMode(boolean enabled) {
         removeDead();
 
-        for (L2ControllableMobInstance mobInst : getMobs()) {
+        for (ControllableMob mobInst : getMobs()) {
             if (mobInst == null) {
                 continue;
             }
@@ -313,7 +313,7 @@ public final class MobGroup {
     public void setInvul(boolean invulState) {
         removeDead();
 
-        for (L2ControllableMobInstance mobInst : getMobs()) {
+        for (ControllableMob mobInst : getMobs()) {
             if (mobInst != null) {
                 mobInst.setInvul(invulState);
             }
@@ -323,7 +323,7 @@ public final class MobGroup {
     public void setAttackGroup(MobGroup otherGrp) {
         removeDead();
 
-        for (L2ControllableMobInstance mobInst : getMobs()) {
+        for (ControllableMob mobInst : getMobs()) {
             if (mobInst == null) {
                 continue;
             }

@@ -22,7 +22,7 @@ import org.l2j.gameserver.ai.DoppelgangerAI;
 import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
@@ -38,7 +38,7 @@ import org.slf4j.LoggerFactory;
 /**
  * @author Nik
  */
-public class DoppelgangerInstance extends L2Npc {
+public class DoppelgangerInstance extends Npc {
     protected static final Logger log = LoggerFactory.getLogger(DoppelgangerInstance.class.getName());
 
     private boolean _copySummonerEffects = true;

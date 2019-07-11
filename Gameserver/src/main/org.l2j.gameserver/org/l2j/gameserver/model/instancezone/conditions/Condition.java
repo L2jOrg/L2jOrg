@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.instancezone.conditions;
 
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -80,7 +80,7 @@ public abstract class Condition {
      * @param htmlCallback HTML callback function used to display fail HTML to player
      * @return {@code true} when all conditions met, otherwise {@code false}
      */
-    public boolean validate(L2Npc npc, List<Player> group, BiConsumer<Player, String> htmlCallback) {
+    public boolean validate(Npc npc, List<Player> group, BiConsumer<Player, String> htmlCallback) {
         for (Player member : group) {
             if (!test(member, npc, group)) {
                 sendMessage(group, member, htmlCallback);
@@ -177,14 +177,14 @@ public abstract class Condition {
 
     /**
      * Test condition for player.<br>
-     * <i>Calls {@link Condition#test(Player, L2Npc)} by default.</i>
+     * <i>Calls {@link Condition#test(Player, Npc)} by default.</i>
      *
      * @param player instance of player which should meet condition
      * @param npc    instance of NPC used to enter into instance
      * @param group  group of players which wants to enter
      * @return {@code true} on success, {@code false} on fail
      */
-    protected boolean test(Player player, L2Npc npc, List<Player> group) {
+    protected boolean test(Player player, Npc npc, List<Player> group) {
         return test(player, npc);
     }
 
@@ -195,7 +195,7 @@ public abstract class Condition {
      * @param npc    instance of NPC used to enter into instance
      * @return {@code true} on success, {@code false} on fail
      */
-    protected boolean test(Player player, L2Npc npc) {
+    protected boolean test(Player player, Npc npc) {
         return true;
     }
 

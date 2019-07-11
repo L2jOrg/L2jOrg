@@ -1,7 +1,7 @@
 package ai;
 
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.MinionHolder;
 import org.l2j.gameserver.model.quest.Quest;
@@ -26,7 +26,7 @@ public abstract class AbstractNpcAI extends Quest
 	 * Simple on first talk event handler.
 	 */
 	@Override
-	public String onFirstTalk(L2Npc npc, Player player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + ".html";
 	}
@@ -55,11 +55,11 @@ public abstract class AbstractNpcAI extends Quest
 		addFactionCallId(mobs);
 	}
 	
-	public void spawnMinions(L2Npc npc, String spawnName)
+	public void spawnMinions(Npc npc, String spawnName)
 	{
 		for (MinionHolder is : npc.getParameters().getMinionList(spawnName))
 		{
-			addMinion((L2MonsterInstance) npc, is.getId());
+			addMinion((Monster) npc, is.getId());
 		}
 	}
 }

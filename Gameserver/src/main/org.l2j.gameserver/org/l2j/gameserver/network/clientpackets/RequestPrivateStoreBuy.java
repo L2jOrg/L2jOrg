@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.ItemRequest;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.TradeList;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.network.InvalidDataPacketException;
@@ -91,7 +91,7 @@ public final class RequestPrivateStoreBuy extends ClientPacket {
         }
 
         final Player storePlayer = (Player) object;
-        if (!player.isInsideRadius3D(storePlayer, L2Npc.INTERACTION_DISTANCE)) {
+        if (!player.isInsideRadius3D(storePlayer, Npc.INTERACTION_DISTANCE)) {
             return;
         }
 

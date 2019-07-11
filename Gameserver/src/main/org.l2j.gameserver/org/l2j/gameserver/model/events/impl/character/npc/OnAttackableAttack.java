@@ -16,25 +16,25 @@
  */
 package org.l2j.gameserver.model.events.impl.character.npc;
 
-import org.l2j.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.skills.Skill;
 
 /**
- * An instantly executed event when L2Attackable is attacked by Player.
+ * An instantly executed event when Attackable is attacked by Player.
  *
  * @author UnAfraid
  */
 public class OnAttackableAttack implements IBaseEvent {
     private final Player _attacker;
-    private final L2Attackable _target;
+    private final Attackable _target;
     private final int _damage;
     private final Skill _skill;
     private final boolean _isSummon;
 
-    public OnAttackableAttack(Player attacker, L2Attackable target, int damage, Skill skill, boolean isSummon) {
+    public OnAttackableAttack(Player attacker, Attackable target, int damage, Skill skill, boolean isSummon) {
         _attacker = attacker;
         _target = target;
         _damage = damage;
@@ -46,7 +46,7 @@ public class OnAttackableAttack implements IBaseEvent {
         return _attacker;
     }
 
-    public final L2Attackable getTarget() {
+    public final Attackable getTarget() {
         return _target;
     }
 

@@ -19,7 +19,7 @@ package org.l2j.gameserver.model;
 import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 
 import java.util.concurrent.ScheduledFuture;
@@ -34,7 +34,7 @@ public class MpRewardTask {
     private final ScheduledFuture<?> _task;
     private final Creature _creature;
 
-    public MpRewardTask(Creature creature, L2Npc npc) {
+    public MpRewardTask(Creature creature, Npc npc) {
         final L2NpcTemplate template = npc.getTemplate();
         _creature = creature;
         _count = new AtomicInteger(template.getMpRewardTicks());
@@ -47,7 +47,7 @@ public class MpRewardTask {
      * @param creature
      * @return
      */
-    private double calculateBaseValue(L2Npc npc, Creature creature) {
+    private double calculateBaseValue(Npc npc, Creature creature) {
         final L2NpcTemplate template = npc.getTemplate();
         switch (template.getMpRewardType()) {
             case PER: {

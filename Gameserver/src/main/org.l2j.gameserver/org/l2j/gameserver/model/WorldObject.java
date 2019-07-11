@@ -222,9 +222,9 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     }
 
     /**
-     * Verify if object is instance of L2Attackable.
+     * Verify if object is instance of Attackable.
      *
-     * @return {@code true} if object is instance of L2Attackable, {@code false} otherwise
+     * @return {@code true} if object is instance of Attackable, {@code false} otherwise
      */
     public boolean isAttackable() {
         return false;
@@ -249,18 +249,18 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     }
 
     /**
-     * Verify if object is instance of L2MonsterInstance.
+     * Verify if object is instance of Monster.
      *
-     * @return {@code true} if object is instance of L2MonsterInstance, {@code false} otherwise
+     * @return {@code true} if object is instance of Monster, {@code false} otherwise
      */
     public boolean isMonster() {
         return false;
     }
 
     /**
-     * Verify if object is instance of L2Npc.
+     * Verify if object is instance of Npc.
      *
-     * @return {@code true} if object is instance of L2Npc, {@code false} otherwise
+     * @return {@code true} if object is instance of Npc, {@code false} otherwise
      */
     public boolean isNpc() {
         return false;
@@ -313,9 +313,9 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     }
 
     /**
-     * Verify if object is instance of L2TrapInstance.
+     * Verify if object is instance of Trap.
      *
-     * @return {@code true} if object is instance of L2TrapInstance, {@code false} otherwise
+     * @return {@code true} if object is instance of Trap, {@code false} otherwise
      */
     public boolean isTrap() {
         return false;

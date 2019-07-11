@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.events.impl.character.player;
 
 import org.l2j.gameserver.enums.TrapAction;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.L2TrapInstance;
+import org.l2j.gameserver.model.actor.instance.Trap;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -10,17 +10,17 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnTrapAction implements IBaseEvent {
-    private final L2TrapInstance _trap;
+    private final Trap _trap;
     private final Creature _trigger;
     private final TrapAction _action;
 
-    public OnTrapAction(L2TrapInstance trap, Creature trigger, TrapAction action) {
+    public OnTrapAction(Trap trap, Creature trigger, TrapAction action) {
         _trap = trap;
         _trigger = trigger;
         _action = action;
     }
 
-    public L2TrapInstance getTrap() {
+    public Trap getTrap() {
         return _trap;
     }
 

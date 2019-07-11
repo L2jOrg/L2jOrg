@@ -17,7 +17,7 @@
 package events.TotalRecall;
 
 import events.ScriptEvent;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.quest.LongTimeEvent;
@@ -43,7 +43,7 @@ public final class TotalRecall extends LongTimeEvent implements ScriptEvent
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -66,7 +66,7 @@ public final class TotalRecall extends LongTimeEvent implements ScriptEvent
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, Player player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "9013-1.htm";
 	}

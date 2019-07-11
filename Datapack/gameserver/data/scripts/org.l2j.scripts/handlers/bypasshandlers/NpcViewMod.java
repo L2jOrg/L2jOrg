@@ -26,9 +26,9 @@ import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.items.L2Item;
@@ -88,7 +88,7 @@ public class NpcViewMod implements IBypassHandler
 					target = activeChar.getTarget();
 				}
 				
-				final L2Npc npc = target instanceof L2Npc ? (L2Npc) target : null;
+				final Npc npc = target instanceof Npc ? (Npc) target : null;
 				if (npc == null)
 				{
 					return false;
@@ -110,7 +110,7 @@ public class NpcViewMod implements IBypassHandler
 				{
 					final DropType dropListType = Enum.valueOf(DropType.class, dropListTypeString);
 					final WorldObject target = L2World.getInstance().findObject(Integer.parseInt(st.nextToken()));
-					final L2Npc npc = target instanceof L2Npc ? (L2Npc) target : null;
+					final Npc npc = target instanceof Npc ? (Npc) target : null;
 					if (npc == null)
 					{
 						return false;
@@ -148,7 +148,7 @@ public class NpcViewMod implements IBypassHandler
 					target = activeChar.getTarget();
 				}
 				
-				final L2Npc npc = target instanceof L2Npc ? (L2Npc) target : null;
+				final Npc npc = target instanceof Npc ? (Npc) target : null;
 				if (npc == null)
 				{
 					return false;
@@ -176,7 +176,7 @@ public class NpcViewMod implements IBypassHandler
 					target = activeChar.getTarget();
 				}
 				
-				final L2Npc npc = target instanceof L2Npc ? (L2Npc) target : null;
+				final Npc npc = target instanceof Npc ? (Npc) target : null;
 				if (npc == null)
 				{
 					return false;
@@ -196,7 +196,7 @@ public class NpcViewMod implements IBypassHandler
 		return COMMANDS;
 	}
 	
-	public static void sendNpcView(Player activeChar, L2Npc npc)
+	public static void sendNpcView(Player activeChar, Npc npc)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(activeChar, "data/html/mods/NpcView/Info.htm");
@@ -271,7 +271,7 @@ public class NpcViewMod implements IBypassHandler
 		activeChar.sendPacket(html);
 	}
 	
-	private static void sendNpcSkillView(Player activeChar, L2Npc npc)
+	private static void sendNpcSkillView(Player activeChar, Npc npc)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(activeChar, "data/html/mods/NpcView/Skills.htm");
@@ -303,7 +303,7 @@ public class NpcViewMod implements IBypassHandler
 		activeChar.sendPacket(html);
 	}
 	
-	private static void sendAggroListView(Player activeChar, L2Npc npc)
+	private static void sendAggroListView(Player activeChar, Npc npc)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(activeChar, "data/html/mods/NpcView/AggroList.htm");
@@ -312,7 +312,7 @@ public class NpcViewMod implements IBypassHandler
 		
 		if (npc.isAttackable())
 		{
-			((L2Attackable) npc).getAggroList().values().forEach(a ->
+			((Attackable) npc).getAggroList().values().forEach(a ->
 			{
 				sb.append("<table width=277 height=32 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
 				sb.append("<tr><td width=110>");
@@ -335,7 +335,7 @@ public class NpcViewMod implements IBypassHandler
 		activeChar.sendPacket(html);
 	}
 	
-	private static String getDropListButtons(L2Npc npc)
+	private static String getDropListButtons(Npc npc)
 	{
 		final StringBuilder sb = new StringBuilder();
 		final List<DropHolder> dropListDeath = npc.getTemplate().getDropList(DropType.DROP);
@@ -358,7 +358,7 @@ public class NpcViewMod implements IBypassHandler
 		return sb.toString();
 	}
 	
-	private static void sendNpcDropList(Player activeChar, L2Npc npc, DropType dropType, int page)
+	private static void sendNpcDropList(Player activeChar, Npc npc, DropType dropType, int page)
 	{
 		final List<DropHolder> dropList = npc.getTemplate().getDropList(dropType);
 		if (dropList == null)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="23820" level="80" type="L2Npc" name="Ketra Elite Soldier">
+	<npc id="23820" level="80" type="Folk" name="Ketra Elite Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -23,7 +23,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23821" level="80" type="L2Npc" name="Ketra Commando">
+	<npc id="23821" level="80" type="Folk" name="Ketra Commando">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -46,7 +46,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23822" level="80" type="L2Npc" name="Ketra Centurion" title="Ketra Orc Leader">
+	<npc id="23822" level="80" type="Folk" name="Ketra Centurion" title="Ketra Orc Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -69,7 +69,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23823" level="80" type="L2Npc" name="Ketra Shaman">
+	<npc id="23823" level="80" type="Folk" name="Ketra Shaman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -92,7 +92,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="23824" level="80" type="L2Npc" name="Ketra Commander" title="Ketra Orc Leader">
+	<npc id="23824" level="80" type="Folk" name="Ketra Commander" title="Ketra Orc Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -115,7 +115,7 @@
 			<height normal="38.5" />
 		</collision>
 	</npc>
-	<npc id="23825" level="80" type="L2Npc" name="Kel Mahum Ranger">
+	<npc id="23825" level="80" type="Folk" name="Kel Mahum Ranger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -138,7 +138,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="23826" level="80" type="L2Npc" name="Kel Mahum Hunter">
+	<npc id="23826" level="80" type="Folk" name="Kel Mahum Hunter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -161,7 +161,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23827" level="80" type="L2Npc" name="Kel Mahum Elite Leader" title="Kel Mahum Leader">
+	<npc id="23827" level="80" type="Folk" name="Kel Mahum Elite Leader" title="Kel Mahum Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -184,7 +184,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23828" level="80" type="L2Npc" name="Kel Mahum Priest">
+	<npc id="23828" level="80" type="Folk" name="Kel Mahum Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -207,7 +207,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23829" level="80" type="L2Npc" name="Kel Mahum Commander" title="Kel Mahum Leader">
+	<npc id="23829" level="80" type="Folk" name="Kel Mahum Commander" title="Kel Mahum Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -230,7 +230,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="23830" level="80" type="L2Npc" name="Doom Wraith">
+	<npc id="23830" level="80" type="Folk" name="Doom Wraith">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -253,7 +253,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="23831" level="80" type="L2Npc" name="Bloody Maid">
+	<npc id="23831" level="80" type="Folk" name="Bloody Maid">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -276,7 +276,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23832" level="80" type="L2Npc" name="Chaos Skeleton" title="Demon's Servant">
+	<npc id="23832" level="80" type="Folk" name="Chaos Skeleton" title="Demon's Servant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -298,7 +298,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="23833" level="74" type="L2Monster" name="Veil Master">
+	<npc id="23833" level="74" type="Monster" name="Veil Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -339,7 +339,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23834" level="60" type="L2Monster" name="Blood Queen" title="Demon's Servant">
+	<npc id="23834" level="60" type="Monster" name="Blood Queen" title="Demon's Servant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -383,7 +383,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23835" level="80" type="L2Npc" name="Tanta Elite Mercenary">
+	<npc id="23835" level="80" type="Folk" name="Tanta Elite Mercenary">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -405,7 +405,7 @@
 			<height normal="40.25" />
 		</collision>
 	</npc>
-	<npc id="23836" level="80" type="L2Npc" name="Tanta Sharpshooter">
+	<npc id="23836" level="80" type="Folk" name="Tanta Sharpshooter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -428,7 +428,7 @@
 			<height normal="40.25" />
 		</collision>
 	</npc>
-	<npc id="23837" level="80" type="L2Npc" name="Tanta Shaman" title="Tanta Lizardman Leader">
+	<npc id="23837" level="80" type="Folk" name="Tanta Shaman" title="Tanta Lizardman Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -450,7 +450,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="23838" level="80" type="L2Npc" name="Tanta High Priest">
+	<npc id="23838" level="80" type="Folk" name="Tanta High Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -472,7 +472,7 @@
 			<height normal="42.2" />
 		</collision>
 	</npc>
-	<npc id="23839" level="80" type="L2Npc" name="Tanta Commander" title="Tanta Lizardman Leader">
+	<npc id="23839" level="80" type="Folk" name="Tanta Commander" title="Tanta Lizardman Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -494,7 +494,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="23840" level="80" type="L2Npc" name="Frightful Poisonous Spider">
+	<npc id="23840" level="80" type="Folk" name="Frightful Poisonous Spider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -516,7 +516,7 @@
 			<height normal="19.8" />
 		</collision>
 	</npc>
-	<npc id="23841" level="80" type="L2Npc" name="Scorpion of Terror">
+	<npc id="23841" level="80" type="Folk" name="Scorpion of Terror">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -538,7 +538,7 @@
 			<height normal="45.3" />
 		</collision>
 	</npc>
-	<npc id="23842" level="80" type="L2Npc" name="Laikel of Terror" title="Leader of Creation">
+	<npc id="23842" level="80" type="Folk" name="Laikel of Terror" title="Leader of Creation">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -560,7 +560,7 @@
 			<height normal="43.9" />
 		</collision>
 	</npc>
-	<npc id="23843" level="80" type="L2Npc" name="Giant Spider of Terror" title="Leader of Creation">
+	<npc id="23843" level="80" type="Folk" name="Giant Spider of Terror" title="Leader of Creation">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -582,7 +582,7 @@
 			<height normal="26.4" />
 		</collision>
 	</npc>
-	<npc id="23844" level="80" type="L2Npc" name="Riba of Terror" title="Leader of Creation">
+	<npc id="23844" level="80" type="Folk" name="Riba of Terror" title="Leader of Creation">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -604,7 +604,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="23845" level="80" type="L2Npc" name="Stakato Worker">
+	<npc id="23845" level="80" type="Folk" name="Stakato Worker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -626,7 +626,7 @@
 			<height normal="36.4" />
 		</collision>
 	</npc>
-	<npc id="23846" level="80" type="L2Npc" name="Stakato Guard">
+	<npc id="23846" level="80" type="Folk" name="Stakato Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -648,7 +648,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="23847" level="80" type="L2Npc" name="Stakato Invader" title="Stakato Leader">
+	<npc id="23847" level="80" type="Folk" name="Stakato Invader" title="Stakato Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -670,7 +670,7 @@
 			<height normal="48.8" />
 		</collision>
 	</npc>
-	<npc id="23848" level="80" type="L2Npc" name="Stakato Queen" title="Stakato Leader">
+	<npc id="23848" level="80" type="Folk" name="Stakato Queen" title="Stakato Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -692,7 +692,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="23849" level="80" type="L2Npc" name="Ultimate Gatekeeper A1803-1" title="Gatekeeper Leader">
+	<npc id="23849" level="80" type="Folk" name="Ultimate Gatekeeper A1803-1" title="Gatekeeper Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -714,7 +714,7 @@
 			<height normal="463.765" />
 		</collision>
 	</npc>
-	<npc id="23850" level="80" type="L2Npc" name="Hell Assassin">
+	<npc id="23850" level="80" type="Folk" name="Hell Assassin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -736,7 +736,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23851" level="80" type="L2Npc" name="Hell Dark Wizard">
+	<npc id="23851" level="80" type="Folk" name="Hell Dark Wizard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -758,7 +758,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="23852" level="80" type="L2Npc" name="Hell Armor" title="Devil�s Advocate">
+	<npc id="23852" level="80" type="Folk" name="Hell Armor" title="Devil�s Advocate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -781,7 +781,7 @@
 			<height normal="39.4" />
 		</collision>
 	</npc>
-	<npc id="23853" level="80" type="L2Npc" name="Hell Queen" title="Devil�s Advocate">
+	<npc id="23853" level="80" type="Folk" name="Hell Queen" title="Devil�s Advocate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -803,7 +803,7 @@
 			<height normal="55.1" />
 		</collision>
 	</npc>
-	<npc id="23854" level="80" type="L2Npc" name="Hell Lord" title="Devil�s Advocate">
+	<npc id="23854" level="80" type="Folk" name="Hell Lord" title="Devil�s Advocate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -825,7 +825,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23855" level="80" type="L2Npc" name="Heavenly Soldier">
+	<npc id="23855" level="80" type="Folk" name="Heavenly Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -848,7 +848,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="23856" level="80" type="L2Npc" name="Heavenly Priest">
+	<npc id="23856" level="80" type="Folk" name="Heavenly Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -871,7 +871,7 @@
 			<height normal="38.5" />
 		</collision>
 	</npc>
-	<npc id="23857" level="80" type="L2Npc" name="Heavenly Judge" title="Angel�s Advocate">
+	<npc id="23857" level="80" type="Folk" name="Heavenly Judge" title="Angel�s Advocate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -894,7 +894,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="23858" level="80" type="L2Npc" name="Heavenly Wings">
+	<npc id="23858" level="80" type="Folk" name="Heavenly Wings">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -917,7 +917,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="23859" level="80" type="L2Npc" name="Heavenly Guardian" title="Angel�s Advocate">
+	<npc id="23859" level="80" type="Folk" name="Heavenly Guardian" title="Angel�s Advocate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -939,7 +939,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="23860" level="57" type="L2Monster" name="Drake">
+	<npc id="23860" level="57" type="Monster" name="Drake">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -979,7 +979,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23861" level="80" type="L2Npc" name="Mutated Drake">
+	<npc id="23861" level="80" type="Folk" name="Mutated Drake">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1001,7 +1001,7 @@
 			<height normal="53.5" />
 		</collision>
 	</npc>
-	<npc id="23862" level="80" type="L2Npc" name="Drak" title="Dragon�s Advocate">
+	<npc id="23862" level="80" type="Folk" name="Drak" title="Dragon�s Advocate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1023,7 +1023,7 @@
 			<height normal="51.5" />
 		</collision>
 	</npc>
-	<npc id="23863" level="80" type="L2Npc" name="Inferno Drake">
+	<npc id="23863" level="80" type="Folk" name="Inferno Drake">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1045,7 +1045,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="23864" level="80" type="L2Npc" name="Chaos Drake" title="Dragon�s Advocate">
+	<npc id="23864" level="80" type="Folk" name="Chaos Drake" title="Dragon�s Advocate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1067,7 +1067,7 @@
 			<height normal="80.5" />
 		</collision>
 	</npc>
-	<npc id="23865" level="80" type="L2Npc" name="Velociraptor">
+	<npc id="23865" level="80" type="Folk" name="Velociraptor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1089,7 +1089,7 @@
 			<height normal="47.2" />
 		</collision>
 	</npc>
-	<npc id="23866" level="80" type="L2Npc" name="Ornithomimus">
+	<npc id="23866" level="80" type="Folk" name="Ornithomimus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1111,7 +1111,7 @@
 			<height normal="37.2" />
 		</collision>
 	</npc>
-	<npc id="23867" level="80" type="L2Npc" name="Pterosaur" title="Dominator of the Wild">
+	<npc id="23867" level="80" type="Folk" name="Pterosaur" title="Dominator of the Wild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1133,7 +1133,7 @@
 			<height normal="43.7" />
 		</collision>
 	</npc>
-	<npc id="23868" level="80" type="L2Npc" name="Primeval Strider">
+	<npc id="23868" level="80" type="Folk" name="Primeval Strider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1155,7 +1155,7 @@
 			<height normal="44.2" />
 		</collision>
 	</npc>
-	<npc id="23869" level="80" type="L2Npc" name="Tyrannosaurus" title="Dominator of the Wild">
+	<npc id="23869" level="80" type="Folk" name="Tyrannosaurus" title="Dominator of the Wild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1177,7 +1177,7 @@
 			<height normal="89.7" />
 		</collision>
 	</npc>
-	<npc id="23870" level="80" type="L2Npc" name="Giant Golden Pig of Good Fortune" title="Intruding Challenger">
+	<npc id="23870" level="80" type="Folk" name="Giant Golden Pig of Good Fortune" title="Intruding Challenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1199,7 +1199,7 @@
 			<height normal="38.25" />
 		</collision>
 	</npc>
-	<npc id="23871" level="80" type="L2Npc" name="Dancing Bard" title="Intruding Challenger">
+	<npc id="23871" level="80" type="Folk" name="Dancing Bard" title="Intruding Challenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1221,7 +1221,7 @@
 			<height normal="61.5" />
 		</collision>
 	</npc>
-	<npc id="23872" level="80" type="L2Npc" name="Gatekeeper Roxxy" title="Intruding Challenger">
+	<npc id="23872" level="80" type="Folk" name="Gatekeeper Roxxy" title="Intruding Challenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1243,7 +1243,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="23873" level="80" type="L2Npc" name="Super Kat the Cat" title="Intruding Challenger">
+	<npc id="23873" level="80" type="Folk" name="Super Kat the Cat" title="Intruding Challenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1265,7 +1265,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="23874" level="80" type="L2Npc" name="Super Mew the Cat" title="Intruding Challenger">
+	<npc id="23874" level="80" type="Folk" name="Super Mew the Cat" title="Intruding Challenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1287,7 +1287,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="23875" level="80" type="L2Npc" name="Super Queen the Cat" title="Intruding Challenger">
+	<npc id="23875" level="80" type="Folk" name="Super Queen the Cat" title="Intruding Challenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1309,7 +1309,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="23876" level="80" type="L2Npc" name="Roa" title="Intruding Challenger">
+	<npc id="23876" level="80" type="Folk" name="Roa" title="Intruding Challenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1331,7 +1331,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="23877" level="80" type="L2Npc" name="Golden Bat Dandy" title="Intruding Challenger">
+	<npc id="23877" level="80" type="Folk" name="Golden Bat Dandy" title="Intruding Challenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1353,7 +1353,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="23878" level="80" type="L2Npc" name="Ketra Elite Soldier">
+	<npc id="23878" level="80" type="Folk" name="Ketra Elite Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1376,7 +1376,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23879" level="80" type="L2Npc" name="Ketra Commando">
+	<npc id="23879" level="80" type="Folk" name="Ketra Commando">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1399,7 +1399,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23880" level="80" type="L2Npc" name="Ketra Centurion" title="Ketra Orc Leader">
+	<npc id="23880" level="80" type="Folk" name="Ketra Centurion" title="Ketra Orc Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1422,7 +1422,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23881" level="80" type="L2Npc" name="Ketra Shaman">
+	<npc id="23881" level="80" type="Folk" name="Ketra Shaman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1445,7 +1445,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="23882" level="80" type="L2Npc" name="Ketra Commander" title="Ketra Orc Leader">
+	<npc id="23882" level="80" type="Folk" name="Ketra Commander" title="Ketra Orc Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1468,7 +1468,7 @@
 			<height normal="38.5" />
 		</collision>
 	</npc>
-	<npc id="23883" level="80" type="L2Npc" name="Kel Mahum Ranger">
+	<npc id="23883" level="80" type="Folk" name="Kel Mahum Ranger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1491,7 +1491,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="23884" level="80" type="L2Npc" name="Kel Mahum Hunter">
+	<npc id="23884" level="80" type="Folk" name="Kel Mahum Hunter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1514,7 +1514,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23885" level="80" type="L2Npc" name="Kel Mahum Elite Leader" title="Kel Mahum Leader">
+	<npc id="23885" level="80" type="Folk" name="Kel Mahum Elite Leader" title="Kel Mahum Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1537,7 +1537,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23886" level="80" type="L2Npc" name="Kel Mahum Priest">
+	<npc id="23886" level="80" type="Folk" name="Kel Mahum Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1560,7 +1560,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23887" level="80" type="L2Npc" name="Kel Mahum Commander" title="Kel Mahum Leader">
+	<npc id="23887" level="80" type="Folk" name="Kel Mahum Commander" title="Kel Mahum Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1583,7 +1583,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="23888" level="80" type="L2Npc" name="Doom Wraith">
+	<npc id="23888" level="80" type="Folk" name="Doom Wraith">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1606,7 +1606,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="23889" level="80" type="L2Npc" name="Bloody Maid">
+	<npc id="23889" level="80" type="Folk" name="Bloody Maid">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1629,7 +1629,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23890" level="80" type="L2Npc" name="Chaos Skeleton" title="Demon's Servant">
+	<npc id="23890" level="80" type="Folk" name="Chaos Skeleton" title="Demon's Servant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1651,7 +1651,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="23891" level="74" type="L2Monster" name="Veil Master">
+	<npc id="23891" level="74" type="Monster" name="Veil Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1692,7 +1692,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23892" level="60" type="L2Monster" name="Blood Queen" title="Demon's Servant">
+	<npc id="23892" level="60" type="Monster" name="Blood Queen" title="Demon's Servant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1736,7 +1736,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23893" level="80" type="L2Npc" name="Tanta Elite Mercenary">
+	<npc id="23893" level="80" type="Folk" name="Tanta Elite Mercenary">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1758,7 +1758,7 @@
 			<height normal="40.25" />
 		</collision>
 	</npc>
-	<npc id="23894" level="80" type="L2Npc" name="Tanta Sharpshooter">
+	<npc id="23894" level="80" type="Folk" name="Tanta Sharpshooter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1781,7 +1781,7 @@
 			<height normal="40.25" />
 		</collision>
 	</npc>
-	<npc id="23895" level="80" type="L2Npc" name="Tanta Shaman" title="Tanta Lizardman Leader">
+	<npc id="23895" level="80" type="Folk" name="Tanta Shaman" title="Tanta Lizardman Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1803,7 +1803,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="23896" level="80" type="L2Npc" name="Tanta High Priest">
+	<npc id="23896" level="80" type="Folk" name="Tanta High Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1825,7 +1825,7 @@
 			<height normal="42.2" />
 		</collision>
 	</npc>
-	<npc id="23897" level="80" type="L2Npc" name="Tanta Commander" title="Tanta Lizardman Leader">
+	<npc id="23897" level="80" type="Folk" name="Tanta Commander" title="Tanta Lizardman Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1847,7 +1847,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="23898" level="80" type="L2Npc" name="Frightful Poisonous Spider">
+	<npc id="23898" level="80" type="Folk" name="Frightful Poisonous Spider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1869,7 +1869,7 @@
 			<height normal="19.8" />
 		</collision>
 	</npc>
-	<npc id="23899" level="80" type="L2Npc" name="Scorpion of Terror">
+	<npc id="23899" level="80" type="Folk" name="Scorpion of Terror">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>

@@ -22,7 +22,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Door;
-import org.l2j.gameserver.model.actor.instance.L2DefenderInstance;
+import org.l2j.gameserver.model.actor.instance.Defender;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -130,7 +130,7 @@ public class L2DoorAI extends L2CharacterAI {
 
         @Override
         public void run() {
-            L2World.getInstance().forEachVisibleObject(_door, L2DefenderInstance.class, guard ->
+            L2World.getInstance().forEachVisibleObject(_door, Defender.class, guard ->
             {
                 if (_actor.isInsideRadius3D(guard, guard.getTemplate().getClanHelpRange())) {
                     guard.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _attacker, 15);

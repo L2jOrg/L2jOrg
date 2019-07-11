@@ -23,7 +23,7 @@ import org.l2j.gameserver.enums.InstanceReenterType;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PcCondOverride;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.instancezone.InstanceTemplate;
@@ -105,7 +105,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	 * @param npc NPC which allows to enter into instance
 	 * @param templateId template ID of instance where player wants to enter
 	 */
-	protected final void enterInstance(Player player, L2Npc npc, int templateId)
+	protected final void enterInstance(Player player, Npc npc, int templateId)
 	{
 		Instance instance = getPlayerInstance(player);
 		if (instance != null) // Player has already any instance active
@@ -265,7 +265,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	 * @param template template of instance world which should be created
 	 * @return {@code true} when conditions are valid, otherwise {@code false}
 	 */
-	protected boolean validateConditions(List<Player> group, L2Npc npc, InstanceTemplate template)
+	protected boolean validateConditions(List<Player> group, Npc npc, InstanceTemplate template)
 	{
 		return true;
 	}

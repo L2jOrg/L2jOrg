@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="18001" level="60" type="L2Monster" name="">
+	<npc id="18001" level="60" type="Monster" name="">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -66,7 +66,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18002" level="60" type="L2Monster" name="Scarecrow">
+	<npc id="18002" level="60" type="Monster" name="Scarecrow">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -131,7 +131,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="18003" level="1" type="L2Monster" name="Bomb">
+	<npc id="18003" level="1" type="Monster" name="Bomb">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -170,7 +170,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18004" level="49" type="L2Monster" name="Tower">
+	<npc id="18004" level="49" type="Monster" name="Tower">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire sp="1" />
@@ -207,7 +207,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18005" level="52" type="L2Monster" name="">
+	<npc id="18005" level="52" type="Monster" name="">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="4867" sp="1" />
@@ -241,7 +241,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18006" level="68" type="L2Monster" name="">
+	<npc id="18006" level="68" type="Monster" name="">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -295,7 +295,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18007" level="70" type="L2Monster" name="Captain of Blood Knights" title="Chaos Decoy">
+	<npc id="18007" level="70" type="Monster" name="Captain of Blood Knights" title="Chaos Decoy">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -340,7 +340,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="18008" level="70" type="L2Monster" name="">
+	<npc id="18008" level="70" type="Monster" name="">
 		<!-- Todo: Karik Does not exist -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
@@ -391,7 +391,7 @@
 			<height normal="90" grown="109" />
 		</collision>
 	</npc>
-	<npc id="18009" level="34" type="L2FestivalMonster" name="">
+	<npc id="18009" level="34" type="FestivalMonster" name="">
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -446,7 +446,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18010" level="32" type="L2FestivalMonster" name="">
+	<npc id="18010" level="32" type="FestivalMonster" name="">
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -490,7 +490,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18011" level="28" type="L2FestivalMonster" name="">
+	<npc id="18011" level="28" type="FestivalMonster" name="">
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -532,7 +532,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18012" level="29" type="L2FestivalMonster" name="">
+	<npc id="18012" level="29" type="FestivalMonster" name="">
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -579,7 +579,7 @@
 			<height normal="23" grown="27.6" />
 		</collision>
 	</npc>
-	<npc id="18013" level="29" type="L2FestivalMonster" name="">
+	<npc id="18013" level="29" type="FestivalMonster" name="">
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -629,7 +629,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18014" level="37" type="L2FestivalMonster" name="">
+	<npc id="18014" level="37" type="FestivalMonster" name="">
 		<!-- Todo:Does Not exist -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
@@ -678,7 +678,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18015" level="70" type="L2FestivalMonster" name="Blood Knight" title="Chaos Decoy">
+	<npc id="18015" level="70" type="FestivalMonster" name="Blood Knight" title="Chaos Decoy">
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -718,7 +718,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="18016" level="62" type="L2FestivalMonster" name="Treasure Chest" title="Gludio">
+	<npc id="18016" level="62" type="FestivalMonster" name="Treasure Chest" title="Gludio">
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -754,7 +754,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18017" level="80" type="L2Npc" name="Teleport" title="Giant's Cave">
+	<npc id="18017" level="80" type="Folk" name="Teleport" title="Giant's Cave">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -773,7 +773,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18018" level="80" type="L2Npc" name="">
+	<npc id="18018" level="80" type="Folk" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -792,7 +792,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18019" level="80" type="L2Npc" name="">
+	<npc id="18019" level="80" type="Folk" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -811,7 +811,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18020" level="80" type="L2Npc" name="Queen Ant">
+	<npc id="18020" level="80" type="Folk" name="Queen Ant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -830,7 +830,7 @@
 			<height normal="53" />
 		</collision>
 	</npc>
-	<npc id="18021" level="80" type="L2Npc" name="Queen Ant Larva">
+	<npc id="18021" level="80" type="Folk" name="Queen Ant Larva">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -849,7 +849,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="18022" level="80" type="L2Npc" name="Nurse Ant">
+	<npc id="18022" level="80" type="Folk" name="Nurse Ant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -868,7 +868,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18023" level="80" type="L2Npc" name="Escort Ant">
+	<npc id="18023" level="80" type="Folk" name="Escort Ant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -887,7 +887,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18024" level="80" type="L2Npc" name="Royal Guard Ant">
+	<npc id="18024" level="80" type="Folk" name="Royal Guard Ant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -906,7 +906,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18025" level="80" type="L2Npc" name="Nakondas" title="Raid Boss">
+	<npc id="18025" level="80" type="Folk" name="Nakondas" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -925,7 +925,7 @@
 			<height normal="125" />
 		</collision>
 	</npc>
-	<npc id="18026" level="80" type="L2Npc" name="Nakondas' Slave" title="Raid Fighter">
+	<npc id="18026" level="80" type="Folk" name="Nakondas' Slave" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -944,7 +944,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="18027" level="80" type="L2Npc" name="Nakondas' Chain" title="Raid Boss">
+	<npc id="18027" level="80" type="Folk" name="Nakondas' Chain" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -963,7 +963,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="18028" level="80" type="L2Npc" name="Crazy Mechanic Golem" title="Raid Fighter">
+	<npc id="18028" level="80" type="Folk" name="Crazy Mechanic Golem" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -982,7 +982,7 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="18029" level="80" type="L2Npc" name="Orfen">
+	<npc id="18029" level="80" type="Folk" name="Orfen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1001,7 +1001,7 @@
 			<height normal="143" />
 		</collision>
 	</npc>
-	<npc id="18030" level="80" type="L2Npc" name="Laikel">
+	<npc id="18030" level="80" type="Folk" name="Laikel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1020,7 +1020,7 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="18031" level="80" type="L2Npc" name="Laikel Leos">
+	<npc id="18031" level="80" type="Folk" name="Laikel Leos">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1039,7 +1039,7 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="18032" level="80" type="L2Npc" name="Riba">
+	<npc id="18032" level="80" type="Folk" name="Riba">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1058,7 +1058,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="18033" level="80" type="L2Npc" name="Riba Iren">
+	<npc id="18033" level="80" type="Folk" name="Riba Iren">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1077,7 +1077,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="18034" level="80" type="L2Npc" name="Beleth' Seer Sephia" title="Raid Boss">
+	<npc id="18034" level="80" type="Folk" name="Beleth' Seer Sephia" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1096,7 +1096,7 @@
 			<height normal="85" />
 		</collision>
 	</npc>
-	<npc id="18035" level="80" type="L2Npc" name="Soul Drinker" title="Raid Fighter">
+	<npc id="18035" level="80" type="Folk" name="Soul Drinker" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1115,7 +1115,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18036" level="80" type="L2Npc" name="Sephia's Salve" title="Raid Fighter">
+	<npc id="18036" level="80" type="Folk" name="Sephia's Salve" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1134,7 +1134,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="18037" level="80" type="L2Npc" name="Timak Priest Ragoth" title="Raid Boss">
+	<npc id="18037" level="80" type="Folk" name="Timak Priest Ragoth" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1154,7 +1154,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="18038" level="80" type="L2Npc" name="Ragoth' Escort" title="Raid Fighter">
+	<npc id="18038" level="80" type="Folk" name="Ragoth' Escort" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1174,7 +1174,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18039" level="80" type="L2Npc" name="Ragoth' Herald" title="Raid Fighter">
+	<npc id="18039" level="80" type="Folk" name="Ragoth' Herald" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1194,7 +1194,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="18040" level="80" type="L2Npc" name="Lord Ishka" title="Raid Boss">
+	<npc id="18040" level="80" type="Folk" name="Lord Ishka" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1214,7 +1214,7 @@
 			<height normal="67" />
 		</collision>
 	</npc>
-	<npc id="18041" level="80" type="L2Npc" name="Ishka's Elite Officer" title="Raid Fighter">
+	<npc id="18041" level="80" type="Folk" name="Ishka's Elite Officer" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1234,7 +1234,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="18042" level="80" type="L2Npc" name="Ishka's Elite Soldier" title="Raid Fighter">
+	<npc id="18042" level="80" type="Folk" name="Ishka's Elite Soldier" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1254,7 +1254,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="18043" level="80" type="L2Npc" name="Taik High Prefect Arak" title="Raid Boss">
+	<npc id="18043" level="80" type="Folk" name="Taik High Prefect Arak" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1274,7 +1274,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="18044" level="80" type="L2Npc" name="Arak's Archer" title="Raid Fighter">
+	<npc id="18044" level="80" type="Folk" name="Arak's Archer" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1294,7 +1294,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="18045" level="80" type="L2Npc" name="Arak's Footman" title="Raid Fighter">
+	<npc id="18045" level="80" type="Folk" name="Arak's Footman" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1314,7 +1314,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="18046" level="80" type="L2Npc" name="Roaring Lord Kastor" title="Raid Boss">
+	<npc id="18046" level="80" type="Folk" name="Roaring Lord Kastor" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1334,7 +1334,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="18047" level="80" type="L2Npc" name="Kastor's Priest" title="Raid Fighter">
+	<npc id="18047" level="80" type="Folk" name="Kastor's Priest" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1354,7 +1354,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="18048" level="80" type="L2Npc" name="Kastor's Prefect" title="Raid Fighter">
+	<npc id="18048" level="80" type="Folk" name="Kastor's Prefect" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1374,7 +1374,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="18049" level="80" type="L2Npc" name="Shilen's Messenger Cabrio" title="Raid Boss">
+	<npc id="18049" level="80" type="Folk" name="Shilen's Messenger Cabrio" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1394,7 +1394,7 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="18050" level="80" type="L2Npc" name="Cabrio Captor" title="Raid Fighter">
+	<npc id="18050" level="80" type="Folk" name="Cabrio Captor" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1414,7 +1414,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="18051" level="80" type="L2Npc" name="Cabrio Blader" title="Raid Fighter">
+	<npc id="18051" level="80" type="Folk" name="Cabrio Blader" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1434,7 +1434,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="18052" level="80" type="L2Npc" name="Priest of Core Decar" title="Raid Boss">
+	<npc id="18052" level="80" type="Folk" name="Priest of Core Decar" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1453,7 +1453,7 @@
 			<height normal="81.6" />
 		</collision>
 	</npc>
-	<npc id="18053" level="80" type="L2Npc" name="Baium">
+	<npc id="18053" level="80" type="Folk" name="Baium">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1472,7 +1472,7 @@
 			<height normal="174" />
 		</collision>
 	</npc>
-	<npc id="18054" level="80" type="L2Npc" name="Archangel">
+	<npc id="18054" level="80" type="Folk" name="Archangel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1492,7 +1492,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="18055" level="80" type="L2Npc" name="">
+	<npc id="18055" level="80" type="Folk" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1511,7 +1511,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18056" level="80" type="L2Npc" name="Dancing Bard" title="Raid Boss">
+	<npc id="18056" level="80" type="Folk" name="Dancing Bard" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1530,7 +1530,7 @@
 			<height normal="61.5" />
 		</collision>
 	</npc>
-	<npc id="18057" level="80" type="L2Npc" name="Golden Bat Dandy" title="Raid Boss">
+	<npc id="18057" level="80" type="Folk" name="Golden Bat Dandy" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1549,7 +1549,7 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="18058" level="80" type="L2Npc" name="Super Mew the Cat" title="Raid Boss">
+	<npc id="18058" level="80" type="Folk" name="Super Mew the Cat" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1568,7 +1568,7 @@
 			<height normal="53" />
 		</collision>
 	</npc>
-	<npc id="18059" level="80" type="L2Npc" name="Snowman" title="Raid Boss">
+	<npc id="18059" level="80" type="Folk" name="Snowman" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

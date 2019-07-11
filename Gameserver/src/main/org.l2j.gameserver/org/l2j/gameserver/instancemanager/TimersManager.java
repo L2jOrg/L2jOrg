@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.instancemanager;
 
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.timers.TimerHolder;
 
@@ -36,7 +36,7 @@ public class TimersManager {
     }
 
     public void registerTimer(TimerHolder<?> timer) {
-        final L2Npc npc = timer.getNpc();
+        final Npc npc = timer.getNpc();
         if (npc != null) {
             final List<TimerHolder<?>> npcTimers = _timers.computeIfAbsent(npc.getObjectId(), key -> new ArrayList<>());
             synchronized (npcTimers) {

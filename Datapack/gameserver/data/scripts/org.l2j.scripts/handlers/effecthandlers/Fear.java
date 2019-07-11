@@ -23,9 +23,9 @@ import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.L2DefenderInstance;
-import org.l2j.gameserver.model.actor.instance.L2FortCommanderInstance;
-import org.l2j.gameserver.model.actor.instance.L2SiegeFlagInstance;
+import org.l2j.gameserver.model.actor.instance.Defender;
+import org.l2j.gameserver.model.actor.instance.FortCommander;
+import org.l2j.gameserver.model.actor.instance.SiegeFlag;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -60,8 +60,8 @@ public final class Fear extends AbstractEffect
 		}
 
 		return effected.isPlayer() || effected.isSummon() || (effected.isAttackable() //
-				&& !((effected instanceof L2DefenderInstance) || (effected instanceof L2FortCommanderInstance) //
-				|| (effected instanceof L2SiegeFlagInstance) || (effected.getTemplate().getRace() == Race.SIEGE_WEAPON)));
+				&& !((effected instanceof Defender) || (effected instanceof FortCommander) //
+				|| (effected instanceof SiegeFlag) || (effected.getTemplate().getRace() == Race.SIEGE_WEAPON)));
 	}
 	
 	@Override

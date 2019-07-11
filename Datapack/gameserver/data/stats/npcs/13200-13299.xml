@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="13271" level="1" type="L2Npc" name="Young Watermelon">
+	<npc id="13271" level="1" type="Folk" name="Young Watermelon">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -33,7 +33,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="13272" level="1" type="L2Monster" name="Defective Watermelon">
+	<npc id="13272" level="1" type="Monster" name="Defective Watermelon">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -67,7 +67,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="13273" level="1" type="L2Monster" name="Rain Watermelon">
+	<npc id="13273" level="1" type="Monster" name="Rain Watermelon">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -102,7 +102,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="13274" level="1" type="L2Monster" name="Large Rain Watermelon">
+	<npc id="13274" level="1" type="Monster" name="Large Rain Watermelon">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -137,7 +137,7 @@
 			<height normal="65" />
 		</collision>
 	</npc>
-	<npc id="13275" level="1" type="L2Npc" name="Young Honey Watermelon">
+	<npc id="13275" level="1" type="Folk" name="Young Honey Watermelon">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -171,7 +171,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="13276" level="1" type="L2Monster" name="Defective Honey Watermelon">
+	<npc id="13276" level="1" type="Monster" name="Defective Honey Watermelon">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -206,7 +206,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="13277" level="1" type="L2Monster" name="Rain Honey Watermelon">
+	<npc id="13277" level="1" type="Monster" name="Rain Honey Watermelon">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -241,7 +241,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="13278" level="1" type="L2Monster" name="Large Rain Honey Watermelon">
+	<npc id="13278" level="1" type="Monster" name="Large Rain Honey Watermelon">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">

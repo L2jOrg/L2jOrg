@@ -13,10 +13,10 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.GrandBoss;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2RaidBossInstance;
+import org.l2j.gameserver.model.actor.instance.RaidBoss;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -494,9 +494,9 @@ public class AdminTeleport implements IAdminCommandHandler
 	private void recallNPC(Player activeChar)
 	{
 		final WorldObject obj = activeChar.getTarget();
-		if ((obj instanceof L2Npc) && !((L2Npc) obj).isMinion() && !(obj instanceof L2RaidBossInstance) && !(obj instanceof L2GrandBossInstance))
+		if ((obj instanceof Npc) && !((Npc) obj).isMinion() && !(obj instanceof RaidBoss) && !(obj instanceof GrandBoss))
 		{
-			final L2Npc target = (L2Npc) obj;
+			final Npc target = (Npc) obj;
 			
 			final int monsterTemplate = target.getTemplate().getId();
 			final L2NpcTemplate template1 = NpcData.getInstance().getTemplate(monsterTemplate);
@@ -547,9 +547,9 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			
 		}
-		else if (obj instanceof L2RaidBossInstance)
+		else if (obj instanceof RaidBoss)
 		{
-			final L2RaidBossInstance target = (L2RaidBossInstance) obj;
+			final RaidBoss target = (RaidBoss) obj;
 			final L2Spawn spawn = target.getSpawn();
 			final double curHP = target.getCurrentHp();
 			final double curMP = target.getCurrentMp();

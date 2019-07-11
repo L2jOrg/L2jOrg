@@ -1,16 +1,16 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class MonRaceInfo extends ServerPacket {
     private final int _unknown1;
     private final int _unknown2;
-    private final L2Npc[] _monsters;
+    private final Npc[] _monsters;
     private final int[][] _speeds;
 
-    public MonRaceInfo(int unknown1, int unknown2, L2Npc[] monsters, int[][] speeds) {
+    public MonRaceInfo(int unknown1, int unknown2, Npc[] monsters, int[][] speeds) {
         /*
          * -1 0 to initial the race 0 15322 to start race 13765 -1 in middle of race -1 0 to end the race
          */

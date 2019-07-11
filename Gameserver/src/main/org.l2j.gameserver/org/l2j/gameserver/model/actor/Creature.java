@@ -20,10 +20,9 @@ import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.instancemanager.TimersManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.*;
-import org.l2j.gameserver.model.actor.instance.FriendlyNpcInstance;
-import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
-import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2TrapInstance;
+import org.l2j.gameserver.model.actor.instance.*;
+import org.l2j.gameserver.model.actor.instance.Monster;
+import org.l2j.gameserver.model.actor.instance.Trap;
 import org.l2j.gameserver.model.actor.stat.CharStat;
 import org.l2j.gameserver.model.actor.status.CharStatus;
 import org.l2j.gameserver.model.actor.tasks.character.NotifyAITask;
@@ -78,7 +77,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
  * <ul>
  * <li>Door</li>
  * <li>Playable</li>
- * <li>L2Npc</li>
+ * <li>Npc</li>
  * <li>StaticWorldObject</li>
  * <li>L2Trap</li>
  * <li>Vehicle</li>
@@ -165,7 +164,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     /**
      * Map of summoned NPCs by this creature.
      */
-    private volatile Map<Integer, L2Npc> _summonedNpcs = null;
+    private volatile Map<Integer, Npc> _summonedNpcs = null;
     private SkillChannelizer _channelizer = null;
     private SkillChannelized _channelized = null;
     private Optional<Transform> _transform = Optional.empty();
@@ -234,7 +233,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (isNpc()) {
             // Copy the skills of the L2NPCInstance from its template to the Creature Instance
             // The skills list can be affected by spell effects so it's necessary to make a copy
-            // to avoid that a spell affecting a L2NpcInstance, affects others L2NPCInstance of the same type too.
+            // to avoid that a spell affecting a Folk, affects others L2NPCInstance of the same type too.
             for (Skill skill : template.getSkills().values()) {
                 addSkill(skill);
             }
@@ -466,7 +465,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param player The Creature that attacks this one
      */
     public void addAttackerToAttackByList(Creature player) {
-        // DS: moved to L2Attackable
+        // DS: moved to Attackable
     }
 
     /**
@@ -1719,9 +1718,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 }
 
                 if (_stat.getRunSpeed() == 0) {
-                    player.sendPacket(new ServerObjectInfo((L2Npc) this, player));
+                    player.sendPacket(new ServerObjectInfo((Npc) this, player));
                 } else {
-                    player.sendPacket(new NpcInfo((L2Npc) this));
+                    player.sendPacket(new NpcInfo((Npc) this));
                 }
             });
         }
@@ -1863,15 +1862,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
         // Custom level titles
         if (Config.SHOW_NPC_LVL && isMonster()) {
-            String t = "Lv " + getLevel() + (((L2MonsterInstance) this).isAggressive() ? "*" : "");
+            String t = "Lv " + getLevel() + (((Monster) this).isAggressive() ? "*" : "");
             if (_title != null) {
                 t += " " + _title;
             }
             return t;
         }
         // Set trap title
-        if (isTrap() && (((L2TrapInstance) this).getOwner() != null)) {
-            _title = ((L2TrapInstance) this).getOwner().getName();
+        if (isTrap() && (((Trap) this).getOwner() != null)) {
+            _title = ((Trap) this).getOwner().getName();
         }
         return _title != null ? _title : "";
     }
@@ -2228,9 +2227,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                         }
 
                         if (_stat.getRunSpeed() == 0) {
-                            player.sendPacket(new ServerObjectInfo((L2Npc) this, player));
+                            player.sendPacket(new ServerObjectInfo((Npc) this, player));
                         } else {
-                            player.sendPacket(new NpcInfo((L2Npc) this));
+                            player.sendPacket(new NpcInfo((Npc) this));
                         }
                     });
                 } else if (su.hasUpdates()) {
@@ -3232,7 +3231,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * <ul>
      * <li>If Creature or target is in a town area, send a system message TARGET_IN_PEACEZONE a Server->Client packet ActionFailed</li>
      * <li>If target is confused, send a Server->Client packet ActionFailed</li>
-     * <li>If Creature is a L2ArtefactInstance, send a Server->Client packet ActionFailed</li>
+     * <li>If Creature is a Artefact, send a Server->Client packet ActionFailed</li>
      * <li>Send a Server->Client packet MyTargetSelected to start attack and Notify AI with AI_INTENTION_ATTACK</li>
      * </ul>
      *
@@ -4038,7 +4037,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     /**
-     * Dummy method overriden in {@link L2Attackable}
+     * Dummy method overriden in {@link Attackable}
      *
      * @return {@code true} if there is a loot to sweep, {@code false} otherwise.
      */
@@ -4156,7 +4155,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      *
      * @param npc the summoned NPC
      */
-    public final void addSummonedNpc(L2Npc npc) {
+    public final void addSummonedNpc(Npc npc) {
         if (_summonedNpcs == null) {
             synchronized (this) {
                 if (_summonedNpcs == null) {
@@ -4186,7 +4185,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      *
      * @return the summoned NPCs
      */
-    public final Collection<L2Npc> getSummonedNpcs() {
+    public final Collection<Npc> getSummonedNpcs() {
         return _summonedNpcs != null ? _summonedNpcs.values() : Collections.emptyList();
     }
 
@@ -4196,7 +4195,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param objectId the summoned NPC object ID
      * @return the summoned NPC
      */
-    public final L2Npc getSummonedNpc(int objectId) {
+    public final Npc getSummonedNpc(int objectId) {
         if (_summonedNpcs != null) {
             return _summonedNpcs.get(objectId);
         }

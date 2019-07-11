@@ -13,8 +13,8 @@ import org.l2j.gameserver.enums.StatusUpdateType;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -163,7 +163,7 @@ public class SkillCaster implements Runnable {
 
                 // Check raid monster/minion attack and check buffing characters who attack raid monsters. Raid is still affected by skills.
                 if (!Config.RAID_DISABLE_CURSE && creature.isRaid() && creature.giveRaidCurse() && (caster.getLevel() >= (creature.getLevel() + 9))) {
-                    if (skill.isBad() || ((creature.getTarget() == caster) && ((L2Attackable) creature).getAggroList().containsKey(caster))) {
+                    if (skill.isBad() || ((creature.getTarget() == caster) && ((Attackable) creature).getAggroList().containsKey(caster))) {
                         // Skills such as Summon Battle Scar too can trigger magic silence.
                         final CommonSkill curse = skill.isBad() ? CommonSkill.RAID_CURSE2 : CommonSkill.RAID_CURSE;
                         final Skill curseSkill = curse.getSkill();
@@ -213,7 +213,7 @@ public class SkillCaster implements Runnable {
                             }
                         } else if (obj.isAttackable()) {
                             // Add hate to the attackable, and put it in the attack list.
-                            ((L2Attackable) obj).addDamageHate(caster, 0, -skill.getEffectPoint());
+                            ((Attackable) obj).addDamageHate(caster, 0, -skill.getEffectPoint());
                             ((Creature) obj).addAttackerToAttackByList(caster);
                         }
 
@@ -237,13 +237,13 @@ public class SkillCaster implements Runnable {
                 }
 
                 // Mobs in range 1000 see spell
-                L2World.getInstance().forEachVisibleObjectInRange(player, L2Npc.class, 1000, npcMob ->
+                L2World.getInstance().forEachVisibleObjectInRange(player, Npc.class, 1000, npcMob ->
                 {
                     EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npcMob, player, skill, caster.isSummon(), targets.toArray(new WorldObject[0])), npcMob);
 
                     // On Skill See logic
                     if (npcMob.isAttackable()) {
-                        final L2Attackable attackable = (L2Attackable) npcMob;
+                        final Attackable attackable = (Attackable) npcMob;
 
                         if (skill.getEffectPoint() > 0) {
                             if (attackable.hasAI() && (attackable.getAI().getIntention() == AI_INTENTION_ATTACK)) {

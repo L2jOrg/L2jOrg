@@ -4,7 +4,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -35,8 +35,8 @@ public class OlympiadStadium {
     protected OlympiadStadium(L2OlympiadStadiumZone olyzone, int stadium) {
         _zone = olyzone;
         _instance = InstanceManager.getInstance().createInstance(olyzone.getInstanceTemplateId(), null);
-        _buffers = _instance.getNpcs().stream().map(L2Npc::getSpawn).collect(Collectors.toList());
-        _buffers.stream().map(L2Spawn::getLastSpawn).forEach(L2Npc::decayMe);
+        _buffers = _instance.getNpcs().stream().map(Npc::getSpawn).collect(Collectors.toList());
+        _buffers.stream().map(L2Spawn::getLastSpawn).forEach(Npc::decayMe);
     }
 
     public L2OlympiadStadiumZone getZone() {
@@ -70,7 +70,7 @@ public class OlympiadStadium {
 
     public final void deleteBuffers() {
         _buffers.forEach(L2Spawn::stopRespawn);
-        _buffers.stream().map(L2Spawn::getLastSpawn).filter(Objects::nonNull).forEach(L2Npc::deleteMe);
+        _buffers.stream().map(L2Spawn::getLastSpawn).filter(Objects::nonNull).forEach(Npc::deleteMe);
     }
 
     public final void broadcastStatusUpdate(Player player) {

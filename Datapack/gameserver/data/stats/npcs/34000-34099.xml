@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="34011" level="80" type="L2Npc" name="Dandy" title="Dreaming">
+	<npc id="34011" level="80" type="Folk" name="Dandy" title="Dreaming">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -17,7 +17,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="34012" level="80" type="L2Npc" name="Dandy" title="Dreaming">
+	<npc id="34012" level="80" type="Folk" name="Dandy" title="Dreaming">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -34,7 +34,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="34015" level="80" type="L2Npc" name="Bora" title="GM Helper">
+	<npc id="34015" level="80" type="Folk" name="Bora" title="GM Helper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -53,7 +53,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="34016" level="80" type="L2Npc" name="Teleport" title="Escape Device">
+	<npc id="34016" level="80" type="Folk" name="Teleport" title="Escape Device">
 	<!-- Confirmed Antharas -->
 		<race>ETC</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -69,7 +69,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="34017" level="80" type="L2Npc" name="Eigis Ein">
+	<npc id="34017" level="80" type="Folk" name="Eigis Ein">
 	<!-- Confirmed Antharas -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -86,7 +86,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="34018" level="80" type="L2Npc" name="Bodyguard">
+	<npc id="34018" level="80" type="Folk" name="Bodyguard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -105,7 +105,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="34019" level="80" type="L2Npc" name="Fethin" title="Devil's Isle Agent">
+	<npc id="34019" level="80" type="Folk" name="Fethin" title="Devil's Isle Agent">
 	<!-- Confirmed Antharas -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -122,7 +122,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="34020" level="80" type="L2Npc" name="Nikia" title="Devil's Isle Agent">
+	<npc id="34020" level="80" type="Folk" name="Nikia" title="Devil's Isle Agent">
 	<!-- Confirmed Antharas -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -139,7 +139,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="34021" level="80" type="L2Npc" name="Garom" title="Devil's Isle Agent">
+	<npc id="34021" level="80" type="Folk" name="Garom" title="Devil's Isle Agent">
 	<!-- Confirmed Antharas -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -156,7 +156,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="34022" level="80" type="L2Npc" name="Pirate Spirit">
+	<npc id="34022" level="80" type="Folk" name="Pirate Spirit">
 	<!-- Confirmed Antharas -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -173,7 +173,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="34023" level="80" type="L2Npc" name="Pirate Spirit">
+	<npc id="34023" level="80" type="Folk" name="Pirate Spirit">
 	<!-- Confirmed Antharas -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -190,7 +190,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="34024" level="80" type="L2Npc" name="Heap of Bones">
+	<npc id="34024" level="80" type="Folk" name="Heap of Bones">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -209,7 +209,7 @@
 			<height normal="14" />
 		</collision>
 	</npc>
-	<npc id="34025" level="80" type="L2Npc" name="Heap of Bones">
+	<npc id="34025" level="80" type="Folk" name="Heap of Bones">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -228,7 +228,7 @@
 			<height normal="14" />
 		</collision>
 	</npc>
-	<npc id="34026" level="80" type="L2Npc" name="Heap of Bones">
+	<npc id="34026" level="80" type="Folk" name="Heap of Bones">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -247,7 +247,7 @@
 			<height normal="14" />
 		</collision>
 	</npc>
-	<npc id="34027" level="80" type="L2Npc" name="Heap of Bones">
+	<npc id="34027" level="80" type="Folk" name="Heap of Bones">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -266,7 +266,7 @@
 			<height normal="14" />
 		</collision>
 	</npc>
-	<npc id="34028" level="80" type="L2Npc" name="Sombrie">
+	<npc id="34028" level="80" type="Folk" name="Sombrie">
 	<!-- Confirmed Antharas -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -283,7 +283,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="34029" level="80" type="L2Npc" name="Sombrie">
+	<npc id="34029" level="80" type="Folk" name="Sombrie">
 	<!-- Confirmed Antharas -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -300,7 +300,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="34030" level="80" type="L2Npc" name="Rissuos">
+	<npc id="34030" level="80" type="Folk" name="Rissuos">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -319,7 +319,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="34031" level="80" type="L2Npc" name="Rissuos">
+	<npc id="34031" level="80" type="Folk" name="Rissuos">
 	<!-- Confirmed Antharas -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -336,7 +336,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="34032" level="80" type="L2Npc" name="Gallu">
+	<npc id="34032" level="80" type="Folk" name="Gallu">
 	<!-- Confirmed Antharas -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -353,7 +353,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="34033" level="80" type="L2Npc" name="Gallu">
+	<npc id="34033" level="80" type="Folk" name="Gallu">
 	<!-- Confirmed Antharas -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -370,7 +370,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="34034" level="80" type="L2Npc" name="Kukoni">
+	<npc id="34034" level="80" type="Folk" name="Kukoni">
 	<!-- Confirmed Antharas -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -387,7 +387,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="34035" level="80" type="L2Npc" name="Kukoni">
+	<npc id="34035" level="80" type="Folk" name="Kukoni">
 	<!-- Confirmed Antharas -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -404,7 +404,7 @@
 			<height normal="20.5" />
 		</collision>
 	</npc>
-	<npc id="34036" level="80" type="L2Npc" name="Hidden Treasure Chest">
+	<npc id="34036" level="80" type="Folk" name="Hidden Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -423,7 +423,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="34037" level="80" type="L2Merchant" name="Chortie" title="Grocer">
+	<npc id="34037" level="80" type="Merchant" name="Chortie" title="Grocer">
 	<!-- Confirmed Antharas -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -440,7 +440,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="34038" level="80" type="L2Teleporter" name="Teleport">
+	<npc id="34038" level="80" type="Teleporter" name="Teleport">
 	<!-- Confirmed Antharas -->
 		<race>ETC</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -456,7 +456,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="34039" level="80" type="L2Npc" name="Chorong" title="Event Manager">
+	<npc id="34039" level="80" type="Folk" name="Chorong" title="Event Manager">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -475,7 +475,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="34040" level="78" type="L2Teleporter" name="Tyron" title="Treasure Hunter">
+	<npc id="34040" level="78" type="Teleporter" name="Tyron" title="Treasure Hunter">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -491,7 +491,7 @@
 			<height normal="19.7" />
 		</collision>
 	</npc>
-	<npc id="34041" level="80" type="L2Npc" name="Bugati">
+	<npc id="34041" level="80" type="Folk" name="Bugati">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -510,7 +510,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="34042" level="80" type="L2Npc" name="Flame Entrance Manager">
+	<npc id="34042" level="80" type="Folk" name="Flame Entrance Manager">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -529,7 +529,7 @@
 			<height normal="19.7" />
 		</collision>
 	</npc>
-	<npc id="34043" level="80" type="L2Npc" name="Water Entrance Manager">
+	<npc id="34043" level="80" type="Folk" name="Water Entrance Manager">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -548,7 +548,7 @@
 			<height normal="19.7" />
 		</collision>
 	</npc>
-	<npc id="34044" level="80" type="L2Npc" name="Wind Entrance Manager">
+	<npc id="34044" level="80" type="Folk" name="Wind Entrance Manager">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -567,7 +567,7 @@
 			<height normal="19.7" />
 		</collision>
 	</npc>
-	<npc id="34045" level="80" type="L2Npc" name="Earth Entrance Manager">
+	<npc id="34045" level="80" type="Folk" name="Earth Entrance Manager">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -586,7 +586,7 @@
 			<height normal="19.7" />
 		</collision>
 	</npc>
-	<npc id="34046" level="80" type="L2Npc" name="Iris" title="Researcher">
+	<npc id="34046" level="80" type="Folk" name="Iris" title="Researcher">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -605,7 +605,7 @@
 			<height normal="19.7" />
 		</collision>
 	</npc>
-	<npc id="34047" level="78" type="L2Teleporter" name="Tara" title="Researcher">
+	<npc id="34047" level="78" type="Teleporter" name="Tara" title="Researcher">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" lhand="102" />
@@ -622,7 +622,7 @@
 			<height normal="19.7" />
 		</collision>
 	</npc>
-	<npc id="34048" level="80" type="L2Teleporter" name="Wiri" title="Researcher">
+	<npc id="34048" level="80" type="Teleporter" name="Wiri" title="Researcher">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -638,7 +638,7 @@
 			<height normal="19.7" />
 		</collision>
 	</npc>
-	<npc id="34049" level="78" type="L2Teleporter" name="Tritan" title="Researcher">
+	<npc id="34049" level="78" type="Teleporter" name="Tritan" title="Researcher">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -654,7 +654,7 @@
 			<height normal="19.7" />
 		</collision>
 	</npc>
-	<npc id="34050" level="80" type="L2Npc" name="Hermun">
+	<npc id="34050" level="80" type="Folk" name="Hermun">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -673,7 +673,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="34051" level="80" type="L2Npc" name="GM Repi" title="Present Delivering">
+	<npc id="34051" level="80" type="Folk" name="GM Repi" title="Present Delivering">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -692,7 +692,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="34052" level="80" type="L2Npc" name="God of Earth" title="Attribute Master">
+	<npc id="34052" level="80" type="Folk" name="God of Earth" title="Attribute Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -711,7 +711,7 @@
 			<height normal="19.8" />
 		</collision>
 	</npc>
-	<npc id="34053" level="78" type="L2Merchant" name="Svein" title="Attribute Master">
+	<npc id="34053" level="78" type="Merchant" name="Svein" title="Attribute Master">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -727,7 +727,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="34054" level="80" type="L2Npc" name="God of Water" title="Attribute Master">
+	<npc id="34054" level="80" type="Folk" name="God of Water" title="Attribute Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -746,7 +746,7 @@
 			<height normal="23.7" />
 		</collision>
 	</npc>
-	<npc id="34055" level="80" type="L2Npc" name="God of Fire" title="Attribute Master">
+	<npc id="34055" level="80" type="Folk" name="God of Fire" title="Attribute Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -765,7 +765,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="34056" level="78" type="L2Teleporter" name="Tyren" title="Researcher">
+	<npc id="34056" level="78" type="Teleporter" name="Tyren" title="Researcher">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="0" lhand="17300" />
@@ -782,7 +782,7 @@
 			<height normal="19.7" />
 		</collision>
 	</npc>
-	<npc id="34057" level="80" type="L2Npc" name="Santa's Girl" title="Event Manager">
+	<npc id="34057" level="80" type="Folk" name="Santa's Girl" title="Event Manager">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -801,7 +801,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="34058" level="80" type="L2Npc" name="Valentine Lucky Tree">
+	<npc id="34058" level="80" type="Folk" name="Valentine Lucky Tree">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -820,7 +820,7 @@
 			<height normal="72.65" />
 		</collision>
 	</npc>
-	<npc id="34059" level="80" type="L2Npc" name="Valentine Love Tree">
+	<npc id="34059" level="80" type="Folk" name="Valentine Love Tree">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -839,7 +839,7 @@
 			<height normal="72.65" />
 		</collision>
 	</npc>
-	<npc id="34079" level="80" type="L2Merchant" name="Macken" title="Rarities Merchant">
+	<npc id="34079" level="80" type="Merchant" name="Macken" title="Rarities Merchant">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -855,7 +855,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="34080" level="80" type="L2Merchant" name="Pritty" title="Beauty Merchant">
+	<npc id="34080" level="80" type="Merchant" name="Pritty" title="Beauty Merchant">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -871,7 +871,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="34081" level="80" type="L2Merchant" name="Supree" title="Grocer">
+	<npc id="34081" level="80" type="Merchant" name="Supree" title="Grocer">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -887,7 +887,7 @@
 			<height normal="17.7" />
 		</collision>
 	</npc>
-	<npc id="34082" level="80" type="L2Npc" name="Tyke" title="Jolly">
+	<npc id="34082" level="80" type="Folk" name="Tyke" title="Jolly">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -903,7 +903,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="34083" level="80" type="L2Npc" name="Vivianne" title="Market Mistress">
+	<npc id="34083" level="80" type="Folk" name="Vivianne" title="Market Mistress">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -920,7 +920,7 @@
 			<height normal="22.25" />
 		</collision>
 	</npc>
-	<npc id="34084" level="80" type="L2Npc" name="Piero">
+	<npc id="34084" level="80" type="Folk" name="Piero">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -937,7 +937,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="34085" level="80" type="L2Npc" name="Captive Tulio" title="Cubeful of Gifts">
+	<npc id="34085" level="80" type="Folk" name="Captive Tulio" title="Cubeful of Gifts">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -954,7 +954,7 @@
 			<height normal="52.8" />
 		</collision>
 	</npc>
-	<npc id="34086" level="80" type="L2Npc" name="Tulio">
+	<npc id="34086" level="80" type="Folk" name="Tulio">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -971,7 +971,7 @@
 			<height normal="110.4" />
 		</collision>
 	</npc>
-	<npc id="34087" level="80" type="L2Teleporter" name="Santa Claus" title="Collector of Letters">
+	<npc id="34087" level="80" type="Teleporter" name="Santa Claus" title="Collector of Letters">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -988,7 +988,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="34088" level="80" type="L2Npc" name="Christmas Tree" title="Happy Holidays!">
+	<npc id="34088" level="80" type="Folk" name="Christmas Tree" title="Happy Holidays!">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -1005,7 +1005,7 @@
 			<height normal="140" />
 		</collision>
 	</npc>
-	<npc id="34089" level="80" type="L2Npc" name="Roa" title="Character Helper">
+	<npc id="34089" level="80" type="Folk" name="Roa" title="Character Helper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>

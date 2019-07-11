@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="25800" level="74" type="L2Monster" name="Kasha" title="Gosmos' Mentor">
+	<npc id="25800" level="74" type="Monster" name="Kasha" title="Gosmos' Mentor">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="135" />
@@ -35,7 +35,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25801" level="76" type="L2Monster" name="Dorak" title="Kabed's Rival">
+	<npc id="25801" level="76" type="Monster" name="Dorak" title="Kabed's Rival">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<equipment rhand="142" />
@@ -70,7 +70,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25802" level="78" type="L2Monster" name="Turan" title="Leo Tracker">
+	<npc id="25802" level="78" type="Monster" name="Turan" title="Leo Tracker">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="91" />
@@ -104,7 +104,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25803" level="80" type="L2Monster" name="Varkan" title="Varka's Gatekeeper">
+	<npc id="25803" level="80" type="Monster" name="Varkan" title="Varka's Gatekeeper">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="229" />
@@ -138,7 +138,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25804" level="80" type="L2Monster" name="Ketran" title="Ketra's Gatekeeper">
+	<npc id="25804" level="80" type="Monster" name="Ketran" title="Ketra's Gatekeeper">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="175" />
@@ -176,7 +176,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25805" level="80" type="L2Monster" name="Death Lord Likan" title="Hallate's Follower">
+	<npc id="25805" level="80" type="Monster" name="Death Lord Likan" title="Hallate's Follower">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<equipment rhand="78" />
@@ -214,7 +214,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25806" level="80" type="L2Monster" name="Anbarad" title="Barda's Nemesis">
+	<npc id="25806" level="80" type="Monster" name="Anbarad" title="Barda's Nemesis">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -251,7 +251,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25807" level="80" type="L2Monster" name="Baranos" title="Mos' Escort Captain">
+	<npc id="25807" level="80" type="Monster" name="Baranos" title="Mos' Escort Captain">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="79" />
@@ -290,7 +290,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25808" level="80" type="L2Monster" name="Takuran" title="Tayr's Escort Captain">
+	<npc id="25808" level="80" type="Monster" name="Takuran" title="Tayr's Escort Captain">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="171" />
@@ -329,7 +329,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25809" level="80" type="L2Monster" name="Nast" title="Ipos' Agent">
+	<npc id="25809" level="80" type="Monster" name="Nast" title="Ipos' Agent">
 		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -367,7 +367,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25810" level="80" type="L2Monster" name="Keltar" title="Shuriel's Paladin">
+	<npc id="25810" level="80" type="Monster" name="Keltar" title="Shuriel's Paladin">
 		<!-- Source: www.l2wiki.com -->
 		<race>DIVINE</race>
 		<equipment rhand="80" />
@@ -405,7 +405,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25811" level="80" type="L2Monster" name="Satur" title="Shadith' Escort Captain">
+	<npc id="25811" level="80" type="Monster" name="Satur" title="Shadith' Escort Captain">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="2504" />
@@ -444,7 +444,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25812" level="80" type="L2Monster" name="Kosnak" title="Hekaton's Escort Captain">
+	<npc id="25812" level="80" type="Monster" name="Kosnak" title="Hekaton's Escort Captain">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="6719" />
@@ -482,7 +482,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25813" level="80" type="L2Monster" name="Garaki" title="Shax's Shadow">
+	<npc id="25813" level="80" type="Monster" name="Garaki" title="Shax's Shadow">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -520,7 +520,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25814" level="80" type="L2Npc" name="Kutis' Pawn" title="Raid Fighter">
+	<npc id="25814" level="80" type="Folk" name="Kutis' Pawn" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -540,7 +540,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25815" level="80" type="L2Npc" name="Garan's Vanguard" title="Raid Fighter">
+	<npc id="25815" level="80" type="Folk" name="Garan's Vanguard" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -560,7 +560,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25816" level="80" type="L2Npc" name="Batur's Priest" title="Raid Fighter">
+	<npc id="25816" level="80" type="Folk" name="Batur's Priest" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -580,7 +580,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25817" level="80" type="L2Npc" name="Venir's Spirit" title="Raid Fighter">
+	<npc id="25817" level="80" type="Folk" name="Venir's Spirit" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -599,7 +599,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25818" level="80" type="L2Npc" name="Oel's Vanguard" title="Raid Fighter">
+	<npc id="25818" level="80" type="Folk" name="Oel's Vanguard" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -619,7 +619,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25819" level="80" type="L2Npc" name="Taranka's Healer" title="Raid Fighter">
+	<npc id="25819" level="80" type="Folk" name="Taranka's Healer" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -639,7 +639,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="25820" level="80" type="L2Npc" name="Kasha's Marksman" title="Raid Fighter">
+	<npc id="25820" level="80" type="Folk" name="Kasha's Marksman" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -659,7 +659,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="25821" level="80" type="L2Npc" name="Dorak's Evil Spirit" title="Raid Fighter">
+	<npc id="25821" level="80" type="Folk" name="Dorak's Evil Spirit" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -678,7 +678,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25822" level="80" type="L2Npc" name="Turan's Escort" title="Raid Fighter">
+	<npc id="25822" level="80" type="Folk" name="Turan's Escort" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -698,7 +698,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="25823" level="80" type="L2Npc" name="Varkan's Priest" title="Raid Fighter">
+	<npc id="25823" level="80" type="Folk" name="Varkan's Priest" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -718,7 +718,7 @@
 			<height normal="41.5" />
 		</collision>
 	</npc>
-	<npc id="25824" level="80" type="L2Npc" name="Ketran's Sniper" title="Raid Fighter">
+	<npc id="25824" level="80" type="Folk" name="Ketran's Sniper" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -738,7 +738,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25825" level="80" type="L2Npc" name="Likan's Maid" title="Raid Fighter">
+	<npc id="25825" level="80" type="Folk" name="Likan's Maid" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -757,7 +757,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25826" level="80" type="L2Npc" name="Anbarad's Priest" title="Raid Fighter">
+	<npc id="25826" level="80" type="Folk" name="Anbarad's Priest" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -777,7 +777,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25827" level="80" type="L2Npc" name="Baranos' Guard" title="Raid Fighter">
+	<npc id="25827" level="80" type="Folk" name="Baranos' Guard" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -796,7 +796,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="25828" level="80" type="L2Npc" name="Takuran's Protector" title="Raid Fighter">
+	<npc id="25828" level="80" type="Folk" name="Takuran's Protector" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -816,7 +816,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="25829" level="80" type="L2Npc" name="Nast's Pikeman" title="Raid Fighter">
+	<npc id="25829" level="80" type="Folk" name="Nast's Pikeman" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -836,7 +836,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="25830" level="80" type="L2Npc" name="Keltar's Shaman" title="Raid Fighter">
+	<npc id="25830" level="80" type="Folk" name="Keltar's Shaman" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -856,7 +856,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25831" level="80" type="L2Npc" name="Satur's Priest" title="Raid Fighter">
+	<npc id="25831" level="80" type="Folk" name="Satur's Priest" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -876,7 +876,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="25832" level="80" type="L2Npc" name="Kosnak's Escorts" title="Raid Fighter">
+	<npc id="25832" level="80" type="Folk" name="Kosnak's Escorts" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -896,7 +896,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="25833" level="80" type="L2Npc" name="Garaki's Banshee" title="Raid Fighter">
+	<npc id="25833" level="80" type="Folk" name="Garaki's Banshee" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -916,7 +916,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="25834" level="81" type="L2RaidBoss" name="Shadai" title="Chief">
+	<npc id="25834" level="81" type="RaidBoss" name="Shadai" title="Chief">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8679" />
@@ -945,7 +945,7 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skillList>
 	</npc>
-	<npc id="25835" level="82" type="L2RaidBoss" name="Turabait" title="Conqueror">
+	<npc id="25835" level="82" type="RaidBoss" name="Turabait" title="Conqueror">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="80" />
@@ -974,7 +974,7 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skillList>
 	</npc>
-	<npc id="25836" level="83" type="L2RaidBoss" name="Tier" title="Fallen Angel">
+	<npc id="25836" level="83" type="RaidBoss" name="Tier" title="Fallen Angel">
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="8683" />
@@ -1003,7 +1003,7 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skillList>
 	</npc>
-	<npc id="25837" level="84" type="L2RaidBoss" name="Cherkya" title="Demon Apostle">
+	<npc id="25837" level="84" type="RaidBoss" name="Cherkya" title="Demon Apostle">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" raidPoints="0" />
@@ -1031,7 +1031,7 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skillList>
 	</npc>
-	<npc id="25838" level="85" type="L2RaidBoss" name="Spicula" title="Procella's Nemesis">
+	<npc id="25838" level="85" type="RaidBoss" name="Spicula" title="Procella's Nemesis">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" raidPoints="0" />
@@ -1059,7 +1059,7 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skillList>
 	</npc>
-	<npc id="25839" level="80" type="L2Npc" name="Shadai's Priest" title="Raid Fighter">
+	<npc id="25839" level="80" type="Folk" name="Shadai's Priest" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1079,7 +1079,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="25840" level="80" type="L2Npc" name="Turabait's Warrior" title="Raid Fighter">
+	<npc id="25840" level="80" type="Folk" name="Turabait's Warrior" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1099,7 +1099,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="25841" level="80" type="L2Npc" name="Tier's Follower" title="Raid Fighter">
+	<npc id="25841" level="80" type="Folk" name="Tier's Follower" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1119,7 +1119,7 @@
 			<height normal="23.4" />
 		</collision>
 	</npc>
-	<npc id="25842" level="80" type="L2Npc" name="Cherkya's Escort" title="Raid Fighter">
+	<npc id="25842" level="80" type="Folk" name="Cherkya's Escort" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1138,7 +1138,7 @@
 			<height normal="30.6" />
 		</collision>
 	</npc>
-	<npc id="25843" level="80" type="L2Npc" name="Spicula's Follower" title="Raid Fighter">
+	<npc id="25843" level="80" type="Folk" name="Spicula's Follower" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

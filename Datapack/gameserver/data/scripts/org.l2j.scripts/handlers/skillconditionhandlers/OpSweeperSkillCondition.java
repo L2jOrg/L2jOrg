@@ -22,7 +22,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
@@ -51,7 +51,7 @@ public class OpSweeperSkillCondition implements ISkillCondition
 				{
 					if (o.isAttackable())
 					{
-						final L2Attackable a = (L2Attackable) o;
+						final Attackable a = (Attackable) o;
 						if (a.isDead())
 						{
 							if (a.isSpoiled())

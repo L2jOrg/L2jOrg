@@ -15,7 +15,7 @@ import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanJoin;
@@ -2343,7 +2343,7 @@ public class L2Clan implements IIdentifiable, INamable {
      * @param target
      * @param value
      */
-    public synchronized void addHuntingPoints(Player activeChar, L2Npc target, double value) {
+    public synchronized void addHuntingPoints(Player activeChar, Npc target, double value) {
         // TODO: Figure out the retail formula
         final int points = (int) value / 2960; // Reduced / 10 for Classic.
         if (points > 0) {

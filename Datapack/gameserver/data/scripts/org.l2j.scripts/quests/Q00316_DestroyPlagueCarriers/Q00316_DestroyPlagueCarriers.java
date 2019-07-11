@@ -21,7 +21,7 @@ import java.util.Map;
 
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.Race;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.quest.Quest;
@@ -63,13 +63,13 @@ public final class Q00316_DestroyPlagueCarriers extends Quest
 	}
 	
 	@Override
-	public boolean checkPartyMember(QuestState qs, L2Npc npc)
+	public boolean checkPartyMember(QuestState qs, Npc npc)
 	{
 		return ((npc.getId() != VAROOL_FOULCLAW) || !hasQuestItems(qs.getPlayer(), VAROOL_FOULCLAW_FANG));
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
@@ -105,7 +105,7 @@ public final class Q00316_DestroyPlagueCarriers extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, Player attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (npc.isScriptValue(0))
 		{
@@ -116,7 +116,7 @@ public final class Q00316_DestroyPlagueCarriers extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, Player killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
 		if (qs != null)
@@ -129,7 +129,7 @@ public final class Q00316_DestroyPlagueCarriers extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, Player player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

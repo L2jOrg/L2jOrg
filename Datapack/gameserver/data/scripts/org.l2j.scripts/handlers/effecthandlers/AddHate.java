@@ -17,8 +17,8 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -60,11 +60,11 @@ public final class AddHate extends AbstractEffect
 		final double val = _power;
 		if (val > 0)
 		{
-			((L2Attackable) effected).addDamageHate(effector, 0, (int) val);
+			((Attackable) effected).addDamageHate(effector, 0, (int) val);
 		}
 		else if (val < 0)
 		{
-			((L2Attackable) effected).reduceHate(effector, (int) -val);
+			((Attackable) effected).reduceHate(effector, (int) -val);
 		}
 	}
 }

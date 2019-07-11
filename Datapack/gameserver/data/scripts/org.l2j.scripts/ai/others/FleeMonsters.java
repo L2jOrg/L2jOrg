@@ -19,7 +19,7 @@ package ai.others;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.ILocational;
@@ -48,7 +48,7 @@ public final class FleeMonsters extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, Player attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		npc.disableCoreAI(true);
 		npc.setRunning();

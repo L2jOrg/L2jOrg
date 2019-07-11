@@ -5,8 +5,8 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.enums.NpcInfoType;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2GuardInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Guard;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.L2GameClient;
@@ -19,7 +19,7 @@ import java.util.Set;
  * @author UnAfraid
  */
 public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
-    private final L2Npc _npc;
+    private final Npc _npc;
     private final byte[] _masks = new byte[]
             {
                     (byte) 0x00,
@@ -38,7 +38,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
     private int _clanId = 0;
     private int _statusMask = 0;
 
-    public NpcInfo(L2Npc npc) {
+    public NpcInfo(Npc npc) {
         _npc = npc;
         _abnormalVisualEffects = npc.getEffectList().getCurrentAbnormalVisualEffects();
 
@@ -180,7 +180,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
         calcBlockSize(_npc, component);
     }
 
-    private void calcBlockSize(L2Npc npc, NpcInfoType type) {
+    private void calcBlockSize(Npc npc, NpcInfoType type) {
         switch (type) {
             case ATTACKABLE:
             case UNKNOWN1: {
@@ -215,7 +215,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
         writeByte((byte) _initSize);
 
         if (containsMask(NpcInfoType.ATTACKABLE)) {
-            writeByte((byte)(_npc.isAttackable() && !(_npc instanceof L2GuardInstance) ? 0x01 : 0x00));
+            writeByte((byte)(_npc.isAttackable() && !(_npc instanceof Guard) ? 0x01 : 0x00));
         }
         if (containsMask(NpcInfoType.UNKNOWN1)) {
             writeInt(0x00); // unknown

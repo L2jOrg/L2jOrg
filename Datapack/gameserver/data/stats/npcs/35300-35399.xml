@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="35300" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35300" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -44,7 +44,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35301" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35301" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -88,7 +88,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35302" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35302" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -132,7 +132,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35303" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35303" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -176,7 +176,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35304" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35304" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -220,7 +220,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35305" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35305" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -264,7 +264,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35306" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35306" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -308,7 +308,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35307" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35307" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -352,7 +352,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35308" level="75" type="L2Monster" name="Gatekeeper" title="Innadril">
+	<npc id="35308" level="75" type="Monster" name="Gatekeeper" title="Innadril">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -413,7 +413,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35309" level="75" type="L2Monster" name="Gatekeeper" title="Innadril">
+	<npc id="35309" level="75" type="Monster" name="Gatekeeper" title="Innadril">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -474,7 +474,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35310" level="75" type="L2Monster" name="Gatekeeper" title="Innadril">
+	<npc id="35310" level="75" type="Monster" name="Gatekeeper" title="Innadril">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -535,7 +535,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35311" level="70" type="L2Npc" name="Mass Gatekeeper" title="Innadril">
+	<npc id="35311" level="70" type="Folk" name="Mass Gatekeeper" title="Innadril">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -576,7 +576,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35312" level="70" type="L2Npc" name="Outer Castle Gatekeeper" title="Innadril">
+	<npc id="35312" level="70" type="Folk" name="Outer Castle Gatekeeper" title="Innadril">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -623,7 +623,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35313" level="70" type="L2Npc" name="Inner Castle Gatekeeper" title="Innadril">
+	<npc id="35313" level="70" type="Folk" name="Inner Castle Gatekeeper" title="Innadril">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -670,7 +670,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35314" level="70" type="L2Npc" name="Blacksmith" title="Innadril">
+	<npc id="35314" level="70" type="Folk" name="Blacksmith" title="Innadril">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -708,7 +708,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="35315" level="70" type="L2Warehouse" name="Warehouse Keeper" title="Innadril">
+	<npc id="35315" level="70" type="Warehouse" name="Warehouse Keeper" title="Innadril">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -745,7 +745,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="35316" level="75" type="L2Merchant" name="Chamberlain of Light">
+	<npc id="35316" level="75" type="Merchant" name="Chamberlain of Light">
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -799,7 +799,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35317" level="70" type="L2Npc" name="Tate" title="Wyvern Manager">
+	<npc id="35317" level="70" type="Folk" name="Tate" title="Wyvern Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -836,7 +836,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35318" level="70" type="L2Merchant" name="Solinus" title="Mercenary Manager">
+	<npc id="35318" level="70" type="Merchant" name="Solinus" title="Mercenary Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -874,7 +874,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="35319" level="70" type="L2Merchant" name="Manor Manager" title="Innadril">
+	<npc id="35319" level="70" type="Merchant" name="Manor Manager" title="Innadril">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -912,7 +912,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35320" level="70" type="L2Npc" name="Raybell" title="Herald from Innadril">
+	<npc id="35320" level="70" type="Folk" name="Raybell" title="Herald from Innadril">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -951,7 +951,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35322" level="20" type="L2Artefact" name="Altar of Fire">
+	<npc id="35322" level="20" type="Artefact" name="Altar of Fire">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -985,7 +985,7 @@
 			<height normal="65" />
 		</collision>
 	</npc>
-	<npc id="35323" level="20" type="L2Artefact" name="Altar of Water">
+	<npc id="35323" level="20" type="Artefact" name="Altar of Water">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -1019,7 +1019,7 @@
 			<height normal="65" />
 		</collision>
 	</npc>
-	<npc id="35324" level="62" type="L2Defender" name="Heinz" title="Royal Guard Captain">
+	<npc id="35324" level="62" type="Defender" name="Heinz" title="Royal Guard Captain">
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
@@ -1063,7 +1063,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35325" level="65" type="L2Defender" name="Duke Mora Ken Abygail">
+	<npc id="35325" level="65" type="Defender" name="Duke Mora Ken Abygail">
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -1107,7 +1107,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35326" level="60" type="L2Defender" name="Royal Knight" title="Goddard">
+	<npc id="35326" level="60" type="Defender" name="Royal Knight" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -1151,7 +1151,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35327" level="58" type="L2Defender" name="Royal Wizard" title="Goddard">
+	<npc id="35327" level="58" type="Defender" name="Royal Wizard" title="Goddard">
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -1197,7 +1197,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35328" level="58" type="L2Defender" name="Royal Wizard" title="Goddard">
+	<npc id="35328" level="58" type="Defender" name="Royal Wizard" title="Goddard">
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -1243,7 +1243,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35329" level="58" type="L2Defender" name="Royal Guard" title="Goddard">
+	<npc id="35329" level="58" type="Defender" name="Royal Guard" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
 		</parameters>
@@ -1287,7 +1287,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35330" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35330" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1331,7 +1331,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35331" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35331" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1375,7 +1375,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35332" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35332" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1419,7 +1419,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35333" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35333" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1463,7 +1463,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35334" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35334" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1507,7 +1507,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35335" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35335" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1551,7 +1551,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35336" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35336" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1595,7 +1595,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35337" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35337" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1639,7 +1639,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35338" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35338" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1683,7 +1683,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35339" level="60" type="L2Defender" name="Royal Knight" title="Goddard">
+	<npc id="35339" level="60" type="Defender" name="Royal Knight" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -1727,7 +1727,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35340" level="58" type="L2Defender" name="Royal Wizard" title="Goddard">
+	<npc id="35340" level="58" type="Defender" name="Royal Wizard" title="Goddard">
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -1773,7 +1773,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35341" level="58" type="L2Defender" name="Royal Wizard" title="Goddard">
+	<npc id="35341" level="58" type="Defender" name="Royal Wizard" title="Goddard">
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -1819,7 +1819,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35342" level="58" type="L2Defender" name="Royal Guard" title="Goddard">
+	<npc id="35342" level="58" type="Defender" name="Royal Guard" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
 		</parameters>
@@ -1863,7 +1863,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35343" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35343" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1907,7 +1907,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35344" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35344" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1951,7 +1951,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35345" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35345" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1995,7 +1995,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35346" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35346" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2039,7 +2039,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35347" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35347" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2083,7 +2083,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35348" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35348" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2127,7 +2127,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35349" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35349" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2171,7 +2171,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35350" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35350" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2215,7 +2215,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35351" level="56" type="L2Defender" name="Escort" title="Goddard">
+	<npc id="35351" level="56" type="Defender" name="Escort" title="Goddard">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2259,7 +2259,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35352" level="56" type="L2Monster" name="Gatekeeper" title="Goddard">
+	<npc id="35352" level="56" type="Monster" name="Gatekeeper" title="Goddard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2319,7 +2319,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35353" level="56" type="L2Monster" name="Gatekeeper" title="Goddard">
+	<npc id="35353" level="56" type="Monster" name="Gatekeeper" title="Goddard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2379,7 +2379,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35354" level="56" type="L2Monster" name="Gatekeeper" title="Goddard">
+	<npc id="35354" level="56" type="Monster" name="Gatekeeper" title="Goddard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2439,7 +2439,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35355" level="56" type="L2Npc" name="Mass Gatekeeper" title="Goddard">
+	<npc id="35355" level="56" type="Folk" name="Mass Gatekeeper" title="Goddard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2479,7 +2479,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35356" level="70" type="L2Npc" name="Outer Castle Gatekeeper" title="Goddard">
+	<npc id="35356" level="70" type="Folk" name="Outer Castle Gatekeeper" title="Goddard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2525,7 +2525,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35357" level="70" type="L2Npc" name="Inner Castle Gatekeeper" title="Goddard">
+	<npc id="35357" level="70" type="Folk" name="Inner Castle Gatekeeper" title="Goddard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2570,7 +2570,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35358" level="70" type="L2Npc" name="Inner Castle Gatekeeper" title="Goddard">
+	<npc id="35358" level="70" type="Folk" name="Inner Castle Gatekeeper" title="Goddard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2615,7 +2615,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35359" level="70" type="L2Npc" name="Gatekeeper" title="Goddard">
+	<npc id="35359" level="70" type="Folk" name="Gatekeeper" title="Goddard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2660,7 +2660,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35360" level="70" type="L2Npc" name="Gatekeeper" title="Goddard">
+	<npc id="35360" level="70" type="Folk" name="Gatekeeper" title="Goddard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2705,7 +2705,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35361" level="70" type="L2Npc" name="Blacksmith" title="Goddard">
+	<npc id="35361" level="70" type="Folk" name="Blacksmith" title="Goddard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -2743,7 +2743,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="35362" level="70" type="L2Warehouse" name="Warehouse Keeper" title="Goddard">
+	<npc id="35362" level="70" type="Warehouse" name="Warehouse Keeper" title="Goddard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -2780,7 +2780,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="35363" level="70" type="L2Merchant" name="Chamberlain of Light">
+	<npc id="35363" level="70" type="Merchant" name="Chamberlain of Light">
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -2837,7 +2837,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35364" level="70" type="L2Npc" name="Hadley" title="Wyvern Manager">
+	<npc id="35364" level="70" type="Folk" name="Hadley" title="Wyvern Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2874,7 +2874,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35365" level="70" type="L2Merchant" name="Rowell" title="Mercenary Manager">
+	<npc id="35365" level="70" type="Merchant" name="Rowell" title="Mercenary Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2911,7 +2911,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35366" level="70" type="L2Merchant" name="Manor Manager" title="Goddard">
+	<npc id="35366" level="70" type="Merchant" name="Manor Manager" title="Goddard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -2949,7 +2949,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35367" level="70" type="L2Npc" name="Daven" title="Herald from Goddard">
+	<npc id="35367" level="70" type="Folk" name="Daven" title="Herald from Goddard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2987,7 +2987,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35368" level="55" type="L2Monster" name="Bloody Lord Nurka">
+	<npc id="35368" level="55" type="Monster" name="Bloody Lord Nurka">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="72" /> <!-- StormBringer -->
@@ -3029,7 +3029,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="35369" level="40" type="L2Monster" name="Partisan Healer">
+	<npc id="35369" level="40" type="Monster" name="Partisan Healer">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7" /> <!-- Apprentice's Rod -->
@@ -3069,7 +3069,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="35370" level="40" type="L2Monster" name="Partisan Royal Guard">
+	<npc id="35370" level="40" type="Monster" name="Partisan Royal Guard">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="69" /> <!-- Bastard Sword -->
@@ -3109,7 +3109,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="35371" level="40" type="L2Monster" name="Partisan Royal Guard">
+	<npc id="35371" level="40" type="Monster" name="Partisan Royal Guard">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
@@ -3149,7 +3149,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35372" level="35" type="L2Monster" name="Partisan Soldier">
+	<npc id="35372" level="35" type="Monster" name="Partisan Soldier">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- Long Sword -->
@@ -3189,7 +3189,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35373" level="35" type="L2Monster" name="Partisan Wizard">
+	<npc id="35373" level="35" type="Monster" name="Partisan Wizard">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7" /> <!-- Apprentice's Rod -->
@@ -3229,7 +3229,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="35374" level="35" type="L2Monster" name="Partisan Archer">
+	<npc id="35374" level="35" type="Monster" name="Partisan Archer">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
@@ -3269,7 +3269,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35375" level="55" type="L2Monster" name="Bloody Lord Nurka">
+	<npc id="35375" level="55" type="Monster" name="Bloody Lord Nurka">
 		<parameters>
 			<minions name="Privates">
 				<npc id="35376" count="2" respawnTime="60" weightPoint="1" />
@@ -3321,7 +3321,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="35376" level="40" type="L2Monster" name="Partisan Healer">
+	<npc id="35376" level="40" type="Monster" name="Partisan Healer">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7" /> <!-- Apprentice's Rod -->
@@ -3361,7 +3361,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="35377" level="40" type="L2Monster" name="Partisan Royal Guard">
+	<npc id="35377" level="40" type="Monster" name="Partisan Royal Guard">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="69" /> <!-- Bastard Sword -->
@@ -3401,7 +3401,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="35378" level="40" type="L2Monster" name="Partisan Royal Guard">
+	<npc id="35378" level="40" type="Monster" name="Partisan Royal Guard">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
@@ -3441,7 +3441,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35379" level="35" type="L2Monster" name="Partisan Soldier">
+	<npc id="35379" level="35" type="Monster" name="Partisan Soldier">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- Long Sword -->
@@ -3481,7 +3481,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35380" level="35" type="L2Monster" name="Partisan Wizard">
+	<npc id="35380" level="35" type="Monster" name="Partisan Wizard">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7" /> <!-- Apprentice's Rod -->
@@ -3521,7 +3521,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="35381" level="35" type="L2Monster" name="Partisan Archer">
+	<npc id="35381" level="35" type="Monster" name="Partisan Archer">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
@@ -3561,7 +3561,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35382" level="70" type="L2Npc" name="Brakel" title="Partisan Herald">
+	<npc id="35382" level="70" type="Folk" name="Brakel" title="Partisan Herald">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3599,7 +3599,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="35383" level="70" type="L2Npc" name="Tamutak" title="Ol Mahum Steward">
+	<npc id="35383" level="70" type="Folk" name="Tamutak" title="Ol Mahum Steward">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3637,7 +3637,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="35384" level="70" type="L2Merchant" name="Black" title="Clan Hall Manager">
+	<npc id="35384" level="70" type="Merchant" name="Black" title="Clan Hall Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3683,7 +3683,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35385" level="70" type="L2Npc" name="Renny" title="Clan Hall Gatekeeper">
+	<npc id="35385" level="70" type="Folk" name="Renny" title="Clan Hall Gatekeeper">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3720,7 +3720,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35386" level="70" type="L2Merchant" name="Boyer" title="Clan Hall Manager">
+	<npc id="35386" level="70" type="Merchant" name="Boyer" title="Clan Hall Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3766,7 +3766,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35387" level="70" type="L2Npc" name="Baback" title="Clan Hall Gatekeeper">
+	<npc id="35387" level="70" type="Folk" name="Baback" title="Clan Hall Gatekeeper">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3803,7 +3803,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35388" level="70" type="L2Merchant" name="Tim" title="Clan Hall Manager">
+	<npc id="35388" level="70" type="Merchant" name="Tim" title="Clan Hall Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3849,7 +3849,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35389" level="70" type="L2Npc" name="Loring" title="Clan Hall Gatekeeper">
+	<npc id="35389" level="70" type="Folk" name="Loring" title="Clan Hall Gatekeeper">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3886,7 +3886,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35390" level="70" type="L2Merchant" name="Dillon" title="Clan Hall Manager">
+	<npc id="35390" level="70" type="Merchant" name="Dillon" title="Clan Hall Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3932,7 +3932,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35391" level="70" type="L2Npc" name="Latif" title="Clan Hall Gatekeeper">
+	<npc id="35391" level="70" type="Folk" name="Latif" title="Clan Hall Gatekeeper">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3969,7 +3969,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35392" level="70" type="L2Merchant" name="Bremmer" title="Clan Hall Manager">
+	<npc id="35392" level="70" type="Merchant" name="Bremmer" title="Clan Hall Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4015,7 +4015,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35393" level="70" type="L2Npc" name="Faolan" title="Clan Hall Gatekeeper">
+	<npc id="35393" level="70" type="Folk" name="Faolan" title="Clan Hall Gatekeeper">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4052,7 +4052,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35394" level="70" type="L2Merchant" name="Kalis" title="Clan Hall Manager">
+	<npc id="35394" level="70" type="Merchant" name="Kalis" title="Clan Hall Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4098,7 +4098,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35395" level="70" type="L2Npc" name="Kogan" title="Clan Hall Gatekeeper">
+	<npc id="35395" level="70" type="Folk" name="Kogan" title="Clan Hall Gatekeeper">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4135,7 +4135,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35396" level="70" type="L2Merchant" name="Winker" title="Clan Hall Manager">
+	<npc id="35396" level="70" type="Merchant" name="Winker" title="Clan Hall Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4181,7 +4181,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35397" level="70" type="L2Npc" name="Merton" title="Clan Hall Gatekeeper">
+	<npc id="35397" level="70" type="Folk" name="Merton" title="Clan Hall Gatekeeper">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4218,7 +4218,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35398" level="70" type="L2Merchant" name="Ruben" title="Clan Hall Manager">
+	<npc id="35398" level="70" type="Merchant" name="Ruben" title="Clan Hall Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4264,7 +4264,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35399" level="70" type="L2Npc" name="Luce" title="Clan Hall Gatekeeper">
+	<npc id="35399" level="70" type="Folk" name="Luce" title="Clan Hall Gatekeeper">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="12774" level="1" type="L2Monster" name="Young Squash">
+	<npc id="12774" level="1" type="Monster" name="Young Squash">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -34,7 +34,7 @@
 			<height normal="10.5" />
 		</collision>
 	</npc>
-	<npc id="12775" level="1" type="L2Monster" name="High Quality Squash">
+	<npc id="12775" level="1" type="Monster" name="High Quality Squash">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -68,7 +68,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="12776" level="1" type="L2Monster" name="Defective Squash">
+	<npc id="12776" level="1" type="Monster" name="Defective Squash">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -102,7 +102,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="12777" level="1" type="L2Monster" name="Large Young Squash">
+	<npc id="12777" level="1" type="Monster" name="Large Young Squash">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -136,7 +136,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="12778" level="1" type="L2Monster" name="High Quality Large Squash">
+	<npc id="12778" level="1" type="Monster" name="High Quality Large Squash">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -170,7 +170,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="12779" level="1" type="L2Monster" name="Defective Large Squash">
+	<npc id="12779" level="1" type="Monster" name="Defective Large Squash">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">

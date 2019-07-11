@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="36609" level="80" type="L2Npc" name="Proclaimer" title="Gludio">
+	<npc id="36609" level="80" type="Folk" name="Proclaimer" title="Gludio">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -27,7 +27,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36610" level="80" type="L2Npc" name="Proclaimer" title="Dion">
+	<npc id="36610" level="80" type="Folk" name="Proclaimer" title="Dion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -54,7 +54,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36611" level="80" type="L2Npc" name="Proclaimer" title="Giran">
+	<npc id="36611" level="80" type="Folk" name="Proclaimer" title="Giran">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -81,7 +81,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36612" level="80" type="L2Npc" name="Proclaimer" title="Oren">
+	<npc id="36612" level="80" type="Folk" name="Proclaimer" title="Oren">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -108,7 +108,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36613" level="80" type="L2Npc" name="Proclaimer" title="Aden">
+	<npc id="36613" level="80" type="Folk" name="Proclaimer" title="Aden">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -135,7 +135,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36614" level="80" type="L2Npc" name="Proclaimer" title="Innadril">
+	<npc id="36614" level="80" type="Folk" name="Proclaimer" title="Innadril">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -162,7 +162,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36615" level="80" type="L2Npc" name="Proclaimer" title="Goddard">
+	<npc id="36615" level="80" type="Folk" name="Proclaimer" title="Goddard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -189,7 +189,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36616" level="80" type="L2Npc" name="Proclaimer" title="Rune">
+	<npc id="36616" level="80" type="Folk" name="Proclaimer" title="Rune">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -216,7 +216,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36617" level="80" type="L2Npc" name="Proclaimer" title="Schuttgart">
+	<npc id="36617" level="80" type="Folk" name="Proclaimer" title="Schuttgart">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -243,7 +243,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36653" level="80" type="L2Merchant" name="Chamberlain of Darkness">
+	<npc id="36653" level="80" type="Merchant" name="Chamberlain of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
@@ -291,7 +291,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="36654" level="80" type="L2Merchant" name="Chamberlain of Darkness">
+	<npc id="36654" level="80" type="Merchant" name="Chamberlain of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
@@ -339,7 +339,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="36655" level="80" type="L2Merchant" name="Chamberlain of Darkness">
+	<npc id="36655" level="80" type="Merchant" name="Chamberlain of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
@@ -388,7 +388,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="36656" level="80" type="L2Merchant" name="Chamberlain of Darkness">
+	<npc id="36656" level="80" type="Merchant" name="Chamberlain of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
@@ -437,7 +437,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="36657" level="80" type="L2Merchant" name="Chamberlain of Darkness">
+	<npc id="36657" level="80" type="Merchant" name="Chamberlain of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
@@ -494,7 +494,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="36658" level="80" type="L2Merchant" name="Chamberlain of Darkness">
+	<npc id="36658" level="80" type="Merchant" name="Chamberlain of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
@@ -540,7 +540,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="36659" level="80" type="L2Merchant" name="Chamberlain of Darkness">
+	<npc id="36659" level="80" type="Merchant" name="Chamberlain of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
@@ -590,7 +590,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="36660" level="80" type="L2Merchant" name="Chamberlain of Darkness">
+	<npc id="36660" level="80" type="Merchant" name="Chamberlain of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
@@ -638,7 +638,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="36661" level="80" type="L2Merchant" name="Chamberlain of Darkness">
+	<npc id="36661" level="80" type="Merchant" name="Chamberlain of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
@@ -687,7 +687,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="36664" level="75" type="L2Npc" name="Herald of Light">
+	<npc id="36664" level="75" type="Folk" name="Herald of Light">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -715,7 +715,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36665" level="75" type="L2Npc" name="Herald of Light">
+	<npc id="36665" level="75" type="Folk" name="Herald of Light">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -743,7 +743,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36666" level="75" type="L2Npc" name="Herald of Light">
+	<npc id="36666" level="75" type="Folk" name="Herald of Light">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -771,7 +771,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36667" level="75" type="L2Npc" name="Herald of Light">
+	<npc id="36667" level="75" type="Folk" name="Herald of Light">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -799,7 +799,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36668" level="75" type="L2Npc" name="Herald of Light">
+	<npc id="36668" level="75" type="Folk" name="Herald of Light">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -827,7 +827,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36669" level="75" type="L2Npc" name="Herald of Light">
+	<npc id="36669" level="75" type="Folk" name="Herald of Light">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -855,7 +855,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36670" level="75" type="L2Npc" name="Herald of Light">
+	<npc id="36670" level="75" type="Folk" name="Herald of Light">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -883,7 +883,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36671" level="75" type="L2Npc" name="Herald of Light">
+	<npc id="36671" level="75" type="Folk" name="Herald of Light">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -911,7 +911,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36672" level="75" type="L2Npc" name="Herald of Light">
+	<npc id="36672" level="75" type="Folk" name="Herald of Light">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -939,7 +939,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36673" level="75" type="L2Monster" name="Herald of Darkness">
+	<npc id="36673" level="75" type="Monster" name="Herald of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -966,7 +966,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="36674" level="75" type="L2Monster" name="Herald of Darkness">
+	<npc id="36674" level="75" type="Monster" name="Herald of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -993,7 +993,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="36675" level="75" type="L2Monster" name="Herald of Darkness">
+	<npc id="36675" level="75" type="Monster" name="Herald of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1020,7 +1020,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="36676" level="75" type="L2Monster" name="Herald of Darkness">
+	<npc id="36676" level="75" type="Monster" name="Herald of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1047,7 +1047,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="36677" level="75" type="L2Monster" name="Herald of Darkness">
+	<npc id="36677" level="75" type="Monster" name="Herald of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1074,7 +1074,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="36678" level="75" type="L2Monster" name="Herald of Darkness">
+	<npc id="36678" level="75" type="Monster" name="Herald of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1101,7 +1101,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="36679" level="75" type="L2Monster" name="Herald of Darkness">
+	<npc id="36679" level="75" type="Monster" name="Herald of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1128,7 +1128,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="36680" level="75" type="L2Monster" name="Herald of Darkness">
+	<npc id="36680" level="75" type="Monster" name="Herald of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1155,7 +1155,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="36681" level="75" type="L2Monster" name="Herald of Darkness">
+	<npc id="36681" level="75" type="Monster" name="Herald of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>

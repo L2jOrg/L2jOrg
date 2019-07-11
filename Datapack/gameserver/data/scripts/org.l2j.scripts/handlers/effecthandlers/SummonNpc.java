@@ -22,9 +22,9 @@ import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Decoy;
-import org.l2j.gameserver.model.actor.instance.L2EffectPointInstance;
+import org.l2j.gameserver.model.actor.instance.EffectPoint;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -137,7 +137,7 @@ public final class SummonNpc extends AbstractEffect
 			}
 			case "L2EffectPoint": // TODO: Implement proper signet skills.
 			{
-				final L2EffectPointInstance effectPoint = new L2EffectPointInstance(npcTemplate, player);
+				final EffectPoint effectPoint = new EffectPoint(npcTemplate, player);
 				effectPoint.setCurrentHp(effectPoint.getMaxHp());
 				effectPoint.setCurrentMp(effectPoint.getMaxMp());
 				effectPoint.setIsInvul(true);
@@ -174,7 +174,7 @@ public final class SummonNpc extends AbstractEffect
 					player.getSummonedNpcs().stream().filter(npc -> npc.getId() == _npcId).forEach(npc -> npc.deleteMe());
 				}
 				
-				final L2Npc npc = spawn.doSpawn(_isSummonSpawn);
+				final Npc npc = spawn.doSpawn(_isSummonSpawn);
 				player.addSummonedNpc(npc); // npc.setSummoner(player);
 				npc.setName(npcTemplate.getName());
 				npc.setTitle(npcTemplate.getName());

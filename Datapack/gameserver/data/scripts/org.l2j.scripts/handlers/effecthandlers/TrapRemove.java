@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.enums.TrapAction;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.L2TrapInstance;
+import org.l2j.gameserver.model.actor.instance.Trap;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnTrapAction;
@@ -64,7 +64,7 @@ public final class TrapRemove extends AbstractEffect
 			return;
 		}
 		
-		final L2TrapInstance trap = (L2TrapInstance) effected;
+		final Trap trap = (Trap) effected;
 		if (!trap.canBeSeen(effector))
 		{
 			if (effector.isPlayer())

@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -39,7 +39,7 @@ public class ConditionPlayerCanSweep extends Condition {
                 skill.forEachTargetAffected(sweeper, effected, o ->
                 {
                     if ((o != null) && o.isAttackable()) {
-                        final L2Attackable target = (L2Attackable) o;
+                        final Attackable target = (Attackable) o;
                         if (target.isDead()) {
                             if (target.isSpoiled()) {
                                 canSweep.set(target.checkSpoilOwner(sweeper, true));

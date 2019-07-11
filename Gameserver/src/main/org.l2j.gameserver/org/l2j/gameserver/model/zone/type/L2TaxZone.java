@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.zone.type;
 
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.zone.L2ZoneType;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -33,7 +33,7 @@ public class L2TaxZone extends L2ZoneType {
     protected void onEnter(Creature character) {
         character.setInsideZone(ZoneId.TAX, true);
         if (character.isNpc()) {
-            ((L2Npc) character).setTaxZone(this);
+            ((Npc) character).setTaxZone(this);
         }
     }
 
@@ -41,7 +41,7 @@ public class L2TaxZone extends L2ZoneType {
     protected void onExit(Creature character) {
         character.setInsideZone(ZoneId.TAX, false);
         if (character.isNpc()) {
-            ((L2Npc) character).setTaxZone(null);
+            ((Npc) character).setTaxZone(null);
         }
     }
 

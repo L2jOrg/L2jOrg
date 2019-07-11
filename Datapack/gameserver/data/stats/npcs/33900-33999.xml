@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="33922" level="80" type="L2Npc" name="Uldie" title="Event Manager">
+	<npc id="33922" level="80" type="Folk" name="Uldie" title="Event Manager">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -23,7 +23,7 @@
 			<height normal="10.5" />
 		</collision>
 	</npc>
-	<npc id="33923" level="80" type="L2Npc" name="Belldandy" title="12th Anniversary Event!">
+	<npc id="33923" level="80" type="Folk" name="Belldandy" title="12th Anniversary Event!">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
@@ -46,7 +46,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="33977" level="80" type="L2Npc" name="Veruti" title="Alchemist">
+	<npc id="33977" level="80" type="Folk" name="Veruti" title="Alchemist">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

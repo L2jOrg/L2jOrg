@@ -8,8 +8,8 @@ import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -109,7 +109,7 @@ public class L2CharacterAI extends AbstractAI {
             // Also enable random animations for this Creature if allowed
             // This is only for mobs - town npcs are handled in their constructor
             if (_actor.isAttackable()) {
-                ((L2Npc) _actor).startRandomAnimationTask();
+                ((Npc) _actor).startRandomAnimationTask();
             }
 
             // Launch the Think Event
@@ -540,7 +540,7 @@ public class L2CharacterAI extends AbstractAI {
         }
 
         if (getActor().isAttackable()) {
-            ((L2Attackable) getActor()).setisReturningToSpawnPoint(false);
+            ((Attackable) getActor()).setisReturningToSpawnPoint(false);
         }
         clientStoppedMoving();
 
@@ -550,7 +550,7 @@ public class L2CharacterAI extends AbstractAI {
         }
 
         if (_actor.isNpc()) {
-            final L2Npc npc = (L2Npc) _actor;
+            final Npc npc = (Npc) _actor;
             WalkingManager.getInstance().onArrived(npc); // Walking Manager support
 
             // Notify to scripts

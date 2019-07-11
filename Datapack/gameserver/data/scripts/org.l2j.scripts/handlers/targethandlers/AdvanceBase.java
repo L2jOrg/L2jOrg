@@ -19,7 +19,7 @@ package handlers.targethandlers;
 import org.l2j.gameserver.handler.ITargetTypeHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -42,7 +42,7 @@ public class AdvanceBase implements ITargetTypeHandler
 		final WorldObject target = activeChar.getTarget();
 		if ((target != null) && target.isNpc() && (target.getId() == 36590))
 		{
-			if (!((L2Npc) target).isDead())
+			if (!((Npc) target).isDead())
 			{
 				return target;
 			}

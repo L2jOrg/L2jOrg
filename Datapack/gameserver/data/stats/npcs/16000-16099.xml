@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="16049" level="55" type="L2Npc" name="Agathion Love">
+	<npc id="16049" level="55" type="Folk" name="Agathion Love">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -33,7 +33,7 @@
 			<height normal="3.75" />
 		</collision>
 	</npc>
-	<npc id="16055" level="55" type="L2Npc" name="Griffin">
+	<npc id="16055" level="55" type="Folk" name="Griffin">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -66,7 +66,7 @@
 			<height normal="5.5" />
 		</collision>
 	</npc>
-	<npc id="16056" level="55" type="L2Npc" name="Joy">
+	<npc id="16056" level="55" type="Folk" name="Joy">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -99,7 +99,7 @@
 			<height normal="6.5" />
 		</collision>
 	</npc>
-	<npc id="16063" level="55" type="L2Npc" name="Saerom">
+	<npc id="16063" level="55" type="Folk" name="Saerom">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -131,7 +131,7 @@
 			<height normal="5.15" />
 		</collision>
 	</npc>
-	<npc id="16073" level="80" type="L2Npc" name="Agathion Rudolph">
+	<npc id="16073" level="80" type="Folk" name="Agathion Rudolph">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -150,7 +150,7 @@
 			<height normal="5.271" />
 		</collision>
 	</npc>
-	<npc id="16078" level="55" type="L2Npc" name="Nevit's Messenger Kanna">
+	<npc id="16078" level="55" type="Folk" name="Nevit's Messenger Kanna">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>

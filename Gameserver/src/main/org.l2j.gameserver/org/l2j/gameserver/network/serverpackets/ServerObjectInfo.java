@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -9,7 +9,7 @@ import org.l2j.gameserver.network.ServerPacketId;
  * @author devScarlet, mrTJO
  */
 public final class ServerObjectInfo extends ServerPacket {
-    private final L2Npc _activeChar;
+    private final Npc _activeChar;
     private final int _x;
     private final int _y;
     private final int _z;
@@ -20,7 +20,7 @@ public final class ServerObjectInfo extends ServerPacket {
     private final double _collisionRadius;
     private final String _name;
 
-    public ServerObjectInfo(L2Npc activeChar, Creature actor) {
+    public ServerObjectInfo(Npc activeChar, Creature actor) {
         _activeChar = activeChar;
         _idTemplate = _activeChar.getTemplate().getDisplayId();
         _isAttackable = _activeChar.isAutoAttackable(actor);

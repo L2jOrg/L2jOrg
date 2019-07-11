@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="35200" level="56" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35200" level="56" type="Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -44,7 +44,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35201" level="56" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35201" level="56" type="Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -88,7 +88,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35202" level="56" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35202" level="56" type="Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -132,7 +132,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35203" level="56" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35203" level="56" type="Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -176,7 +176,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35204" level="56" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35204" level="56" type="Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -220,7 +220,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35205" level="60" type="L2Defender" name="Royal Knight" title="Oren">
+	<npc id="35205" level="60" type="Defender" name="Royal Knight" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -264,7 +264,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35206" level="58" type="L2Defender" name="Royal Wizard" title="Oren">
+	<npc id="35206" level="58" type="Defender" name="Royal Wizard" title="Oren">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -310,7 +310,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35207" level="58" type="L2Defender" name="Royal Wizard" title="Oren">
+	<npc id="35207" level="58" type="Defender" name="Royal Wizard" title="Oren">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -356,7 +356,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35208" level="58" type="L2Defender" name="Royal Guard" title="Oren">
+	<npc id="35208" level="58" type="Defender" name="Royal Guard" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
 		</parameters>
@@ -400,7 +400,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35209" level="56" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35209" level="56" type="Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -444,7 +444,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35210" level="56" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35210" level="56" type="Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -488,7 +488,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35211" level="56" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35211" level="56" type="Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -532,7 +532,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35212" level="56" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35212" level="56" type="Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -576,7 +576,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35213" level="56" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35213" level="56" type="Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -620,7 +620,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35214" level="56" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35214" level="56" type="Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -664,7 +664,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35215" level="56" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35215" level="56" type="Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -708,7 +708,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35216" level="56" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35216" level="56" type="Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -752,7 +752,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35217" level="56" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35217" level="56" type="Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -796,7 +796,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35218" level="75" type="L2Monster" name="Gatekeeper" title="Oren">
+	<npc id="35218" level="75" type="Monster" name="Gatekeeper" title="Oren">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -857,7 +857,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35219" level="75" type="L2Monster" name="Gatekeeper" title="Oren">
+	<npc id="35219" level="75" type="Monster" name="Gatekeeper" title="Oren">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -918,7 +918,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35220" level="75" type="L2Monster" name="Gatekeeper" title="Oren">
+	<npc id="35220" level="75" type="Monster" name="Gatekeeper" title="Oren">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -979,7 +979,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35221" level="70" type="L2Npc" name="Mass Gatekeeper" title="Oren">
+	<npc id="35221" level="70" type="Folk" name="Mass Gatekeeper" title="Oren">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1020,7 +1020,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35222" level="70" type="L2Npc" name="Outer Castle Gatekeeper" title="Oren">
+	<npc id="35222" level="70" type="Folk" name="Outer Castle Gatekeeper" title="Oren">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1067,7 +1067,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35223" level="70" type="L2Npc" name="Inner Castle Gatekeeper" title="Oren">
+	<npc id="35223" level="70" type="Folk" name="Inner Castle Gatekeeper" title="Oren">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1114,7 +1114,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35224" level="70" type="L2Npc" name="Blacksmith" title="Oren">
+	<npc id="35224" level="70" type="Folk" name="Blacksmith" title="Oren">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -1152,7 +1152,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="35225" level="70" type="L2Warehouse" name="Warehouse Keeper" title="Oren">
+	<npc id="35225" level="70" type="Warehouse" name="Warehouse Keeper" title="Oren">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -1189,7 +1189,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="35226" level="75" type="L2Merchant" name="Chamberlain of Light">
+	<npc id="35226" level="75" type="Merchant" name="Chamberlain of Light">
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -1246,7 +1246,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35227" level="70" type="L2Npc" name="Finrod" title="Wyvern Manager">
+	<npc id="35227" level="70" type="Folk" name="Finrod" title="Wyvern Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -1283,7 +1283,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="35228" level="70" type="L2Merchant" name="Morrison" title="Mercenary Manager">
+	<npc id="35228" level="70" type="Merchant" name="Morrison" title="Mercenary Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1321,7 +1321,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="35229" level="70" type="L2Merchant" name="Manor Manager" title="Oren">
+	<npc id="35229" level="70" type="Merchant" name="Manor Manager" title="Oren">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -1359,7 +1359,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35230" level="70" type="L2Merchant" name="Manor Manager" title="Oren">
+	<npc id="35230" level="70" type="Merchant" name="Manor Manager" title="Oren">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -1397,7 +1397,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="35231" level="70" type="L2Merchant" name="Manor Manager" title="Oren">
+	<npc id="35231" level="70" type="Merchant" name="Manor Manager" title="Oren">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1435,7 +1435,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35232" level="70" type="L2Npc" name="Sherwood" title="Herald from Oren">
+	<npc id="35232" level="70" type="Folk" name="Sherwood" title="Herald from Oren">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1474,7 +1474,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35233" level="20" type="L2Artefact" name="Aden Holy Artifact">
+	<npc id="35233" level="20" type="Artefact" name="Aden Holy Artifact">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="40" sp="10" />
@@ -1509,7 +1509,7 @@
 			<height normal="98" />
 		</collision>
 	</npc>
-	<npc id="35234" level="75" type="L2Defender" name="Amadeo Cadmus" title="King">
+	<npc id="35234" level="75" type="Defender" name="Amadeo Cadmus" title="King">
 		<parameters>
 			<param name="Attack_BoostValue" value="155" />
 		</parameters>
@@ -1553,7 +1553,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35235" level="70" type="L2Defender" name="Royal Knight" title="Aden">
+	<npc id="35235" level="70" type="Defender" name="Royal Knight" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
@@ -1597,7 +1597,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35236" level="68" type="L2Defender" name="Royal Wizard" title="Aden">
+	<npc id="35236" level="68" type="Defender" name="Royal Wizard" title="Aden">
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" />
 			<param name="Attack_BoostValue" value="140" />
@@ -1642,7 +1642,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35237" level="68" type="L2Defender" name="Royal Wizard" title="Aden">
+	<npc id="35237" level="68" type="Defender" name="Royal Wizard" title="Aden">
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" />
 			<param name="Attack_BoostValue" value="140" />
@@ -1687,7 +1687,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35238" level="68" type="L2Defender" name="Royal Guard" title="Aden">
+	<npc id="35238" level="68" type="Defender" name="Royal Guard" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -1730,7 +1730,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35239" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35239" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -1773,7 +1773,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35240" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35240" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -1816,7 +1816,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35241" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35241" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -1859,7 +1859,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35242" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35242" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -1902,7 +1902,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35243" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35243" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -1945,7 +1945,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35244" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35244" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -1988,7 +1988,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35245" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35245" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -2031,7 +2031,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35246" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35246" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -2074,7 +2074,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35247" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35247" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -2117,7 +2117,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35248" level="70" type="L2Defender" name="Royal Knight" title="Aden">
+	<npc id="35248" level="70" type="Defender" name="Royal Knight" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
@@ -2161,7 +2161,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35249" level="68" type="L2Defender" name="Royal Wizard" title="Aden">
+	<npc id="35249" level="68" type="Defender" name="Royal Wizard" title="Aden">
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" />
 			<param name="Attack_BoostValue" value="140" />
@@ -2206,7 +2206,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35250" level="68" type="L2Defender" name="Royal Wizard" title="Aden">
+	<npc id="35250" level="68" type="Defender" name="Royal Wizard" title="Aden">
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" />
 			<param name="Attack_BoostValue" value="140" />
@@ -2251,7 +2251,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35251" level="68" type="L2Defender" name="Royal Guard" title="Aden">
+	<npc id="35251" level="68" type="Defender" name="Royal Guard" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -2294,7 +2294,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35252" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35252" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -2337,7 +2337,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35253" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35253" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -2380,7 +2380,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35254" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35254" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -2423,7 +2423,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35255" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35255" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -2466,7 +2466,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35256" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35256" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -2509,7 +2509,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35257" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35257" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -2552,7 +2552,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35258" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35258" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -2595,7 +2595,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35259" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35259" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -2638,7 +2638,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35260" level="66" type="L2Defender" name="Escort" title="Aden">
+	<npc id="35260" level="66" type="Defender" name="Escort" title="Aden">
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -2681,7 +2681,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35261" level="75" type="L2Monster" name="Gatekeeper" title="Aden">
+	<npc id="35261" level="75" type="Monster" name="Gatekeeper" title="Aden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2760,7 +2760,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35262" level="75" type="L2Monster" name="Gatekeeper" title="Aden">
+	<npc id="35262" level="75" type="Monster" name="Gatekeeper" title="Aden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2839,7 +2839,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35263" level="75" type="L2Monster" name="Gatekeeper" title="Aden">
+	<npc id="35263" level="75" type="Monster" name="Gatekeeper" title="Aden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2918,7 +2918,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35264" level="75" type="L2Monster" name="Gatekeeper" title="Aden">
+	<npc id="35264" level="75" type="Monster" name="Gatekeeper" title="Aden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2997,7 +2997,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35265" level="75" type="L2Monster" name="Gatekeeper" title="Aden">
+	<npc id="35265" level="75" type="Monster" name="Gatekeeper" title="Aden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3076,7 +3076,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35266" level="70" type="L2Npc" name="Mass Gatekeeper" title="Aden">
+	<npc id="35266" level="70" type="Folk" name="Mass Gatekeeper" title="Aden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3117,7 +3117,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35267" level="70" type="L2Npc" name="Outer Castle Gatekeeper" title="Aden">
+	<npc id="35267" level="70" type="Folk" name="Outer Castle Gatekeeper" title="Aden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3164,7 +3164,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35268" level="70" type="L2Npc" name="Inner Castle Gatekeeper" title="Aden">
+	<npc id="35268" level="70" type="Folk" name="Inner Castle Gatekeeper" title="Aden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3211,7 +3211,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35269" level="70" type="L2Npc" name="Hall Gatekeeper" title="Aden">
+	<npc id="35269" level="70" type="Folk" name="Hall Gatekeeper" title="Aden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3258,7 +3258,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35270" level="70" type="L2Npc" name="Inner Castle Gatekeeper" title="Aden">
+	<npc id="35270" level="70" type="Folk" name="Inner Castle Gatekeeper" title="Aden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3305,7 +3305,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35271" level="70" type="L2Npc" name="Gatekeeper" title="Aden">
+	<npc id="35271" level="70" type="Folk" name="Gatekeeper" title="Aden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3350,7 +3350,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35272" level="70" type="L2Npc" name="Blacksmith" title="Aden">
+	<npc id="35272" level="70" type="Folk" name="Blacksmith" title="Aden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -3388,7 +3388,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="35273" level="70" type="L2Warehouse" name="Warehouse Keeper" title="Aden">
+	<npc id="35273" level="70" type="Warehouse" name="Warehouse Keeper" title="Aden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3425,7 +3425,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="35274" level="70" type="L2Merchant" name="Chamberlain of Light">
+	<npc id="35274" level="70" type="Merchant" name="Chamberlain of Light">
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -3490,7 +3490,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35275" level="70" type="L2Npc" name="Kruger" title="Wyvern Manager">
+	<npc id="35275" level="70" type="Folk" name="Kruger" title="Wyvern Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -3528,7 +3528,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35276" level="70" type="L2Merchant" name="Eldon" title="Mercenary Manager">
+	<npc id="35276" level="70" type="Merchant" name="Eldon" title="Mercenary Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3566,7 +3566,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="35277" level="70" type="L2Merchant" name="Manor Manager" title="Aden">
+	<npc id="35277" level="70" type="Merchant" name="Manor Manager" title="Aden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3604,7 +3604,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35278" level="70" type="L2Npc" name="Ruford" title="Herald from Aden">
+	<npc id="35278" level="70" type="Folk" name="Ruford" title="Herald from Aden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3643,7 +3643,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35279" level="20" type="L2Artefact" name="Innadril Holy Artifact">
+	<npc id="35279" level="20" type="Artefact" name="Innadril Holy Artifact">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="40" sp="10" />
@@ -3678,7 +3678,7 @@
 			<height normal="98" />
 		</collision>
 	</npc>
-	<npc id="35280" level="65" type="L2Defender" name="Baron Lionel Hunter">
+	<npc id="35280" level="65" type="Defender" name="Baron Lionel Hunter">
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -3722,7 +3722,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35281" level="62" type="L2Defender" name="Schaht" title="Royal Guard Captain">
+	<npc id="35281" level="62" type="Defender" name="Schaht" title="Royal Guard Captain">
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
@@ -3766,7 +3766,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35282" level="60" type="L2Defender" name="Royal Knight" title="Innadril">
+	<npc id="35282" level="60" type="Defender" name="Royal Knight" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -3810,7 +3810,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35283" level="58" type="L2Defender" name="Royal Wizard" title="Innadril">
+	<npc id="35283" level="58" type="Defender" name="Royal Wizard" title="Innadril">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -3856,7 +3856,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35284" level="58" type="L2Defender" name="Royal Wizard" title="Innadril">
+	<npc id="35284" level="58" type="Defender" name="Royal Wizard" title="Innadril">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -3902,7 +3902,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35285" level="58" type="L2Defender" name="Royal Guard" title="Innadril">
+	<npc id="35285" level="58" type="Defender" name="Royal Guard" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
 		</parameters>
@@ -3946,7 +3946,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35286" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35286" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3990,7 +3990,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35287" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35287" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -4034,7 +4034,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35288" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35288" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -4078,7 +4078,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35289" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35289" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -4122,7 +4122,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35290" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35290" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -4166,7 +4166,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35291" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35291" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -4210,7 +4210,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35292" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35292" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -4254,7 +4254,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35293" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35293" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -4298,7 +4298,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35294" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35294" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -4342,7 +4342,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35295" level="60" type="L2Defender" name="Royal Knight" title="Innadril">
+	<npc id="35295" level="60" type="Defender" name="Royal Knight" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -4386,7 +4386,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35296" level="58" type="L2Defender" name="Royal Wizard" title="Innadril">
+	<npc id="35296" level="58" type="Defender" name="Royal Wizard" title="Innadril">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -4432,7 +4432,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35297" level="58" type="L2Defender" name="Royal Wizard" title="Innadril">
+	<npc id="35297" level="58" type="Defender" name="Royal Wizard" title="Innadril">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -4478,7 +4478,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35298" level="58" type="L2Defender" name="Royal Guard" title="Innadril">
+	<npc id="35298" level="58" type="Defender" name="Royal Guard" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
 		</parameters>
@@ -4522,7 +4522,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35299" level="56" type="L2Defender" name="Escort" title="Innadril">
+	<npc id="35299" level="56" type="Defender" name="Escort" title="Innadril">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>

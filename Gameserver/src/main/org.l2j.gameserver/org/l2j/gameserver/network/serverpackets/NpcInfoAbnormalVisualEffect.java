@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -11,9 +11,9 @@ import java.util.Set;
  * @author Sdw
  */
 public class NpcInfoAbnormalVisualEffect extends ServerPacket {
-    private final L2Npc _npc;
+    private final Npc _npc;
 
-    public NpcInfoAbnormalVisualEffect(L2Npc npc) {
+    public NpcInfoAbnormalVisualEffect(Npc npc) {
         _npc = npc;
     }
 

@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.MentorManager;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.NpcStringId;
@@ -58,7 +58,7 @@ public final class CreatureSay extends ServerPacket {
      * @param messageType
      * @param text
      */
-    public CreatureSay(L2Npc sender, Player receiver, String name, ChatType messageType, String text) {
+    public CreatureSay(Npc sender, Player receiver, String name, ChatType messageType, String text) {
         _objectId = sender.getObjectId();
         _charName = name;
         _charLevel = sender.getLevel();

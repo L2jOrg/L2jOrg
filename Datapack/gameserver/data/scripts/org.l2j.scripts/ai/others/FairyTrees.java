@@ -16,7 +16,7 @@
  */
 package ai.others;
 
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
@@ -53,13 +53,13 @@ public class FairyTrees extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, Player killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (npc.calculateDistance3D(killer) <= MIN_DISTANCE)
 		{
 			for (int i = 0; i < 20; i++)
 			{
-				final L2Npc guardian = addSpawn(SOUL_GUARDIAN, npc, false, 30000);
+				final Npc guardian = addSpawn(SOUL_GUARDIAN, npc, false, 30000);
 				final Playable attacker = isSummon ? killer.getServitors().values().stream().findFirst().orElse(killer.getPet()) : killer;
 				addAttackPlayerDesire(guardian, attacker);
 				if (getRandomBoolean())
@@ -73,7 +73,7 @@ public class FairyTrees extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setRandomWalking(false);
 		npc.setIsImmobilized(true);

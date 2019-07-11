@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="29100" level="80" type="L2Monster" name="Archangel">
+	<npc id="29100" level="80" type="Monster" name="Archangel">
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="93" />
@@ -23,7 +23,7 @@
 			<skill id="4416" level="8" /> <!-- Angel -->
 		</skillList>
 	</npc>
-	<npc id="29101" level="80" type="L2Npc" name="Baium">
+	<npc id="29101" level="80" type="Folk" name="Baium">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -42,7 +42,7 @@
 			<height normal="82" />
 		</collision>
 	</npc>
-	<npc id="29102" level="84" type="L2RaidBoss" name="Antharas" title="Land Dragon">
+	<npc id="29102" level="84" type="RaidBoss" name="Antharas" title="Land Dragon">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" raidPoints="1000" />
@@ -65,7 +65,7 @@
 			<skill id="4122" level="1" /> <!-- Antharas -->
 		</skillList>
 	</npc>
-	<npc id="29103" level="84" type="L2Monster" name="Behemoth Dragon">
+	<npc id="29103" level="84" type="Monster" name="Behemoth Dragon">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -87,7 +87,7 @@
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skillList>
 	</npc>
-	<npc id="29104" level="84" type="L2Monster" name="Tarask Dragon">
+	<npc id="29104" level="84" type="Monster" name="Tarask Dragon">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -109,7 +109,7 @@
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skillList>
 	</npc>
-	<npc id="29105" level="82" type="L2RaidBoss" name="King Ignis">
+	<npc id="29105" level="82" type="RaidBoss" name="King Ignis">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="806880000" sp="21785760" raidPoints="0" />
@@ -203,7 +203,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29106" level="82" type="L2RaidBoss" name="Queen Nebula">
+	<npc id="29106" level="82" type="RaidBoss" name="Queen Nebula">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="806880000" sp="21785760" raidPoints="0" />
@@ -297,7 +297,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29107" level="82" type="L2RaidBoss" name="King Procella">
+	<npc id="29107" level="82" type="RaidBoss" name="King Procella">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="806880000" sp="21785760" raidPoints="0" />
@@ -391,7 +391,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29108" level="82" type="L2RaidBoss" name="King Petram">
+	<npc id="29108" level="82" type="RaidBoss" name="King Petram">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="806880000" sp="21785760" raidPoints="0" />
@@ -485,7 +485,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29109" level="80" type="L2Npc" name="Freya" title="Ice Queen">
+	<npc id="29109" level="80" type="Folk" name="Freya" title="Ice Queen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -504,7 +504,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="29110" level="80" type="L2Npc" name="Safe Zone">
+	<npc id="29110" level="80" type="Folk" name="Safe Zone">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -523,7 +523,7 @@
 			<height normal="0.001" />
 		</collision>
 	</npc>
-	<npc id="29111" level="80" type="L2Npc" name="Water Slime">
+	<npc id="29111" level="80" type="Folk" name="Water Slime">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -542,7 +542,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="29112" level="80" type="L2Npc" name="Procella's Guardian">
+	<npc id="29112" level="80" type="Folk" name="Procella's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -561,7 +561,7 @@
 			<height normal="133" />
 		</collision>
 	</npc>
-	<npc id="29113" level="80" type="L2Npc" name="Procella's Guardian">
+	<npc id="29113" level="80" type="Folk" name="Procella's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -580,7 +580,7 @@
 			<height normal="133" />
 		</collision>
 	</npc>
-	<npc id="29114" level="80" type="L2Npc" name="Procella's Guardian">
+	<npc id="29114" level="80" type="Folk" name="Procella's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -599,7 +599,7 @@
 			<height normal="133" />
 		</collision>
 	</npc>
-	<npc id="29115" level="80" type="L2Npc" name="Procella's Storm">
+	<npc id="29115" level="80" type="Folk" name="Procella's Storm">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -618,7 +618,7 @@
 			<height normal="100" />
 		</collision>
 	</npc>
-	<npc id="29116" level="80" type="L2Npc" name="Petram Piece">
+	<npc id="29116" level="80" type="Folk" name="Petram Piece">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -637,7 +637,7 @@
 			<height normal="61" />
 		</collision>
 	</npc>
-	<npc id="29117" level="80" type="L2Npc" name="Petram Fragment">
+	<npc id="29117" level="80" type="Folk" name="Petram Fragment">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -656,7 +656,7 @@
 			<height normal="61" />
 		</collision>
 	</npc>
-	<npc id="29118" level="80" type="L2Npc" name="Spirit King's Magic">
+	<npc id="29118" level="80" type="Folk" name="Spirit King's Magic">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -675,7 +675,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="29119" level="75" type="L2RaidBoss" name="Zaken">
+	<npc id="29119" level="75" type="RaidBoss" name="Zaken">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" raidPoints="0" />
@@ -697,7 +697,7 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 	</npc>
-	<npc id="29190" level="84" type="L2Monster" name="Tarask Dragon">
+	<npc id="29190" level="84" type="Monster" name="Tarask Dragon">
 		<!-- Todo: CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5095" level="1" />

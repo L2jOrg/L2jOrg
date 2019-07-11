@@ -7,7 +7,7 @@ import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.instancemanager.PlayerCountManager;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -264,11 +264,11 @@ public final class L2World {
         describeObjectToOther(wo, object);
 
         if (wo.isNpc() && object.isCharacter()) {
-            EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((L2Npc) wo, (Creature) object, object.isSummon()), (L2Npc) wo);
+            EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((Npc) wo, (Creature) object, object.isSummon()), (Npc) wo);
         }
 
         if (object.isNpc() && wo.isCharacter()) {
-            EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((L2Npc) object, (Creature) wo, wo.isSummon()), (L2Npc) object);
+            EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((Npc) object, (Creature) wo, wo.isSummon()), (Npc) object);
         }
     }
 
@@ -515,7 +515,7 @@ public final class L2World {
             summon.unSummon(summon.getOwner());
         } else if (_allObjects.remove(object.getObjectId()) != null) {
             if (object.isNpc()) {
-                final L2Npc npc = (L2Npc) object;
+                final Npc npc = (Npc) object;
                 LOGGER.warn("Deleting npc " + object.getName() + " NPCID[" + npc.getId() + "] from invalid location X:" + object.getX() + " Y:" + object.getY() + " Z:" + object.getZ());
                 npc.deleteMe();
 

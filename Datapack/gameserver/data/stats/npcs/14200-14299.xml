@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="14200" level="80" type="L2Pet" name="Mew the Cat">
+	<npc id="14200" level="80" type="Pet" name="Mew the Cat">
 		<parameters>
 			<skill name="DDMagic" id="4261" level="11" />
 			<param name="step1_action01" value="46" />
@@ -41,7 +41,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14201" level="80" type="L2Pet" name="Mew the Cat">
+	<npc id="14201" level="80" type="Pet" name="Mew the Cat">
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12" />
 			<param name="step1_action01" value="46" />
@@ -82,7 +82,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14202" level="80" type="L2Pet" name="Mew the Cat">
+	<npc id="14202" level="80" type="Pet" name="Mew the Cat">
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12" />
 			<param name="step1_action01" value="46" />
@@ -123,7 +123,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14203" level="80" type="L2Pet" name="Mew the Cat">
+	<npc id="14203" level="80" type="Pet" name="Mew the Cat">
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12" />
 			<param name="step1_action01" value="46" />
@@ -164,7 +164,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14204" level="80" type="L2Pet" name="Mew the Cat">
+	<npc id="14204" level="80" type="Pet" name="Mew the Cat">
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12" />
 			<param name="step1_action01" value="46" />
@@ -205,7 +205,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14205" level="80" type="L2Pet" name="Mew the Cat">
+	<npc id="14205" level="80" type="Pet" name="Mew the Cat">
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12" />
 			<param name="step1_action01" value="46" />
@@ -246,7 +246,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14206" level="80" type="L2Pet" name="Mew the Cat">
+	<npc id="14206" level="80" type="Pet" name="Mew the Cat">
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12" />
 			<param name="step1_action01" value="46" />
@@ -287,7 +287,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14207" level="42" type="L2Pet" name="Kai the Cat">
+	<npc id="14207" level="42" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="4" />
 			<param name="step1_action01" value="42" />
@@ -327,7 +327,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14208" level="46" type="L2Pet" name="Kai the Cat">
+	<npc id="14208" level="46" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="4" />
 			<param name="step1_action01" value="42" />
@@ -367,7 +367,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14209" level="50" type="L2Pet" name="Kai the Cat">
+	<npc id="14209" level="50" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="5" />
 			<param name="step1_action01" value="42" />
@@ -407,7 +407,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14210" level="54" type="L2Pet" name="Kai the Cat">
+	<npc id="14210" level="54" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="5" />
 			<param name="step1_action01" value="42" />
@@ -447,7 +447,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14211" level="58" type="L2Pet" name="Kai the Cat">
+	<npc id="14211" level="58" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="5" />
 			<param name="step1_action01" value="42" />
@@ -487,7 +487,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14212" level="60" type="L2Pet" name="Kai the Cat">
+	<npc id="14212" level="60" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="6" />
 			<param name="step1_action01" value="42" />
@@ -527,7 +527,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14213" level="62" type="L2Pet" name="Kai the Cat">
+	<npc id="14213" level="62" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="6" />
 			<param name="step1_action01" value="42" />
@@ -567,7 +567,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14214" level="64" type="L2Pet" name="Kai the Cat">
+	<npc id="14214" level="64" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="6" />
 			<param name="step1_action01" value="42" />
@@ -607,7 +607,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14215" level="66" type="L2Pet" name="Kai the Cat">
+	<npc id="14215" level="66" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="6" />
 			<param name="step1_action01" value="42" />
@@ -647,7 +647,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14216" level="68" type="L2Pet" name="Kai the Cat">
+	<npc id="14216" level="68" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="6" />
 			<param name="step1_action01" value="42" />
@@ -687,7 +687,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14217" level="70" type="L2Pet" name="Kai the Cat">
+	<npc id="14217" level="70" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="7" />
 			<param name="step1_action01" value="42" />
@@ -727,7 +727,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14218" level="72" type="L2Pet" name="Kai the Cat">
+	<npc id="14218" level="72" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="7" />
 			<param name="step1_action01" value="42" />
@@ -767,7 +767,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14219" level="74" type="L2Pet" name="Kai the Cat">
+	<npc id="14219" level="74" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="7" />
 			<param name="step1_action01" value="42" />
@@ -807,7 +807,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14220" level="76" type="L2Pet" name="Kai the Cat">
+	<npc id="14220" level="76" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="7" />
 			<param name="step1_action01" value="42" />
@@ -847,7 +847,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14221" level="78" type="L2Pet" name="Kai the Cat">
+	<npc id="14221" level="78" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8" />
 			<param name="step1_action01" value="42" />
@@ -887,7 +887,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14222" level="78" type="L2Pet" name="Kai the Cat">
+	<npc id="14222" level="78" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8" />
 			<param name="step1_action01" value="42" />
@@ -927,7 +927,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14223" level="78" type="L2Pet" name="Kai the Cat">
+	<npc id="14223" level="78" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8" />
 			<param name="step1_action01" value="42" />
@@ -967,7 +967,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14224" level="78" type="L2Pet" name="Kai the Cat">
+	<npc id="14224" level="78" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8" />
 			<param name="step1_action01" value="42" />
@@ -1007,7 +1007,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14225" level="78" type="L2Pet" name="Kai the Cat">
+	<npc id="14225" level="78" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8" />
 			<param name="step1_action01" value="42" />
@@ -1047,7 +1047,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14226" level="78" type="L2Pet" name="Kai the Cat">
+	<npc id="14226" level="78" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8" />
 			<param name="step1_action01" value="42" />
@@ -1087,7 +1087,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14227" level="78" type="L2Pet" name="Kai the Cat">
+	<npc id="14227" level="78" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9" />
 			<param name="step1_action01" value="42" />
@@ -1127,7 +1127,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14228" level="78" type="L2Pet" name="Kai the Cat">
+	<npc id="14228" level="78" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9" />
 			<param name="step1_action01" value="42" />
@@ -1167,7 +1167,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14229" level="78" type="L2Pet" name="Kai the Cat">
+	<npc id="14229" level="78" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9" />
 			<param name="step1_action01" value="42" />
@@ -1207,7 +1207,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14230" level="79" type="L2Pet" name="Kai the Cat">
+	<npc id="14230" level="79" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9" />
 			<param name="step1_action01" value="42" />
@@ -1247,7 +1247,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14231" level="79" type="L2Pet" name="Kai the Cat">
+	<npc id="14231" level="79" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9" />
 			<param name="step1_action01" value="42" />
@@ -1287,7 +1287,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14232" level="79" type="L2Pet" name="Kai the Cat">
+	<npc id="14232" level="79" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9" />
 			<param name="step1_action01" value="42" />
@@ -1327,7 +1327,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14233" level="79" type="L2Pet" name="Kai the Cat">
+	<npc id="14233" level="79" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10" />
 			<param name="step1_action01" value="42" />
@@ -1367,7 +1367,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14234" level="79" type="L2Pet" name="Kai the Cat">
+	<npc id="14234" level="79" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10" />
 			<param name="step1_action01" value="42" />
@@ -1407,7 +1407,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14235" level="79" type="L2Pet" name="Kai the Cat">
+	<npc id="14235" level="79" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10" />
 			<param name="step1_action01" value="42" />
@@ -1447,7 +1447,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14236" level="79" type="L2Pet" name="Kai the Cat">
+	<npc id="14236" level="79" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10" />
 			<param name="step1_action01" value="42" />
@@ -1487,7 +1487,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14237" level="79" type="L2Pet" name="Kai the Cat">
+	<npc id="14237" level="79" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10" />
 			<param name="step1_action01" value="42" />
@@ -1527,7 +1527,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14238" level="79" type="L2Pet" name="Kai the Cat">
+	<npc id="14238" level="79" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10" />
 			<param name="step1_action01" value="42" />
@@ -1567,7 +1567,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14239" level="80" type="L2Pet" name="Kai the Cat">
+	<npc id="14239" level="80" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11" />
 			<param name="step1_action01" value="42" />
@@ -1607,7 +1607,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14240" level="80" type="L2Pet" name="Kai the Cat">
+	<npc id="14240" level="80" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11" />
 			<param name="step1_action01" value="42" />
@@ -1647,7 +1647,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14241" level="80" type="L2Pet" name="Kai the Cat">
+	<npc id="14241" level="80" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11" />
 			<param name="step1_action01" value="42" />
@@ -1687,7 +1687,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14242" level="80" type="L2Pet" name="Kai the Cat">
+	<npc id="14242" level="80" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11" />
 			<param name="step1_action01" value="42" />
@@ -1727,7 +1727,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14243" level="80" type="L2Pet" name="Kai the Cat">
+	<npc id="14243" level="80" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11" />
 			<param name="step1_action01" value="42" />
@@ -1767,7 +1767,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14244" level="80" type="L2Pet" name="Kai the Cat">
+	<npc id="14244" level="80" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11" />
 			<param name="step1_action01" value="42" />
@@ -1807,7 +1807,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14245" level="80" type="L2Pet" name="Kai the Cat">
+	<npc id="14245" level="80" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12" />
 			<param name="step1_action01" value="42" />
@@ -1848,7 +1848,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14246" level="80" type="L2Pet" name="Kai the Cat">
+	<npc id="14246" level="80" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12" />
 			<param name="step1_action01" value="42" />
@@ -1889,7 +1889,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14247" level="80" type="L2Pet" name="Kai the Cat">
+	<npc id="14247" level="80" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12" />
 			<param name="step1_action01" value="42" />
@@ -1930,7 +1930,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14248" level="80" type="L2Pet" name="Kai the Cat">
+	<npc id="14248" level="80" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12" />
 			<param name="step1_action01" value="42" />
@@ -1971,7 +1971,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14249" level="80" type="L2Pet" name="Kai the Cat">
+	<npc id="14249" level="80" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12" />
 			<param name="step1_action01" value="42" />
@@ -2012,7 +2012,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14250" level="80" type="L2Pet" name="Kai the Cat">
+	<npc id="14250" level="80" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12" />
 			<param name="step1_action01" value="42" />
@@ -2053,7 +2053,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14251" level="58" type="L2Pet" name="Feline Queen">
+	<npc id="14251" level="58" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="1" />
 			<skill name="Buff2" id="4700" level="1" />
@@ -2105,7 +2105,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14252" level="60" type="L2Pet" name="Feline Queen">
+	<npc id="14252" level="60" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="1" />
 			<skill name="Buff2" id="4700" level="1" />
@@ -2157,7 +2157,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14253" level="62" type="L2Pet" name="Feline Queen">
+	<npc id="14253" level="62" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="1" />
 			<skill name="Buff2" id="4700" level="1" />
@@ -2209,7 +2209,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14254" level="64" type="L2Pet" name="Feline Queen">
+	<npc id="14254" level="64" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="2" />
 			<skill name="Buff2" id="4700" level="2" />
@@ -2261,7 +2261,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14255" level="66" type="L2Pet" name="Feline Queen">
+	<npc id="14255" level="66" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="2" />
 			<skill name="Buff2" id="4700" level="2" />
@@ -2313,7 +2313,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14256" level="68" type="L2Pet" name="Feline Queen">
+	<npc id="14256" level="68" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="2" />
 			<skill name="Buff2" id="4700" level="2" />
@@ -2365,7 +2365,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14257" level="70" type="L2Pet" name="Feline Queen">
+	<npc id="14257" level="70" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="3" />
 			<skill name="Buff2" id="4700" level="3" />
@@ -2417,7 +2417,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14258" level="72" type="L2Pet" name="Feline Queen">
+	<npc id="14258" level="72" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="3" />
 			<skill name="Buff2" id="4700" level="3" />
@@ -2469,7 +2469,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14259" level="74" type="L2Pet" name="Feline Queen">
+	<npc id="14259" level="74" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="3" />
 			<skill name="Buff2" id="4700" level="3" />
@@ -2521,7 +2521,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14260" level="76" type="L2Pet" name="Feline Queen">
+	<npc id="14260" level="76" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="3" />
 			<skill name="Buff2" id="4700" level="3" />
@@ -2573,7 +2573,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14265" level="78" type="L2Pet" name="Feline Queen">
+	<npc id="14265" level="78" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="4" />
 			<skill name="Buff2" id="4700" level="4" />
@@ -2625,7 +2625,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14266" level="78" type="L2Pet" name="Feline Queen">
+	<npc id="14266" level="78" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="4" />
 			<skill name="Buff2" id="4700" level="4" />
@@ -2677,7 +2677,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14267" level="78" type="L2Pet" name="Feline Queen">
+	<npc id="14267" level="78" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="4" />
 			<skill name="Buff2" id="4700" level="4" />
@@ -2729,7 +2729,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14268" level="78" type="L2Pet" name="Feline Queen">
+	<npc id="14268" level="78" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="5" />
 			<skill name="Buff2" id="4700" level="5" />
@@ -2781,7 +2781,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14269" level="78" type="L2Pet" name="Feline Queen">
+	<npc id="14269" level="78" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="5" />
 			<skill name="Buff2" id="4700" level="5" />
@@ -2833,7 +2833,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14270" level="78" type="L2Pet" name="Feline Queen">
+	<npc id="14270" level="78" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="5" />
 			<skill name="Buff2" id="4700" level="5" />
@@ -2885,7 +2885,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14271" level="78" type="L2Pet" name="Feline Queen">
+	<npc id="14271" level="78" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="6" />
 			<skill name="Buff2" id="4700" level="6" />
@@ -2937,7 +2937,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14272" level="78" type="L2Pet" name="Feline Queen">
+	<npc id="14272" level="78" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="6" />
 			<skill name="Buff2" id="4700" level="6" />
@@ -2989,7 +2989,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14273" level="78" type="L2Pet" name="Feline Queen">
+	<npc id="14273" level="78" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="6" />
 			<skill name="Buff2" id="4700" level="6" />
@@ -3041,7 +3041,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14274" level="79" type="L2Pet" name="Feline Queen">
+	<npc id="14274" level="79" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="7" />
 			<skill name="Buff2" id="4700" level="7" />
@@ -3093,7 +3093,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14275" level="79" type="L2Pet" name="Feline Queen">
+	<npc id="14275" level="79" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="7" />
 			<skill name="Buff2" id="4700" level="7" />
@@ -3145,7 +3145,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14276" level="79" type="L2Pet" name="Feline Queen">
+	<npc id="14276" level="79" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="7" />
 			<skill name="Buff2" id="4700" level="7" />
@@ -3197,7 +3197,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14277" level="79" type="L2Pet" name="Feline Queen">
+	<npc id="14277" level="79" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="8" />
 			<skill name="Buff2" id="4700" level="8" />
@@ -3249,7 +3249,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14278" level="79" type="L2Pet" name="Feline Queen">
+	<npc id="14278" level="79" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="8" />
 			<skill name="Buff2" id="4700" level="8" />
@@ -3301,7 +3301,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14279" level="79" type="L2Pet" name="Feline Queen">
+	<npc id="14279" level="79" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="8" />
 			<skill name="Buff2" id="4700" level="8" />
@@ -3353,7 +3353,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14280" level="79" type="L2Pet" name="Feline Queen">
+	<npc id="14280" level="79" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="9" />
 			<skill name="Buff2" id="4700" level="9" />
@@ -3405,7 +3405,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14281" level="79" type="L2Pet" name="Feline Queen">
+	<npc id="14281" level="79" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="9" />
 			<skill name="Buff2" id="4700" level="9" />
@@ -3457,7 +3457,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14282" level="79" type="L2Pet" name="Feline Queen">
+	<npc id="14282" level="79" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="9" />
 			<skill name="Buff2" id="4700" level="9" />
@@ -3509,7 +3509,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14283" level="80" type="L2Pet" name="Feline Queen">
+	<npc id="14283" level="80" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="10" />
 			<skill name="Buff2" id="4700" level="10" />
@@ -3561,7 +3561,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14284" level="80" type="L2Pet" name="Feline Queen">
+	<npc id="14284" level="80" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="10" />
 			<skill name="Buff2" id="4700" level="10" />
@@ -3613,7 +3613,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14285" level="80" type="L2Pet" name="Feline Queen">
+	<npc id="14285" level="80" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="10" />
 			<skill name="Buff2" id="4700" level="10" />
@@ -3665,7 +3665,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14286" level="80" type="L2Pet" name="Feline Queen">
+	<npc id="14286" level="80" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="11" />
 			<skill name="Buff2" id="4700" level="11" />
@@ -3717,7 +3717,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14287" level="80" type="L2Pet" name="Feline Queen">
+	<npc id="14287" level="80" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="11" />
 			<skill name="Buff2" id="4700" level="11" />
@@ -3769,7 +3769,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14288" level="80" type="L2Pet" name="Feline Queen">
+	<npc id="14288" level="80" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="11" />
 			<skill name="Buff2" id="4700" level="11" />
@@ -3821,7 +3821,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14289" level="80" type="L2Pet" name="Feline Queen">
+	<npc id="14289" level="80" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="12" />
 			<skill name="Buff2" id="4700" level="12" />
@@ -3873,7 +3873,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14290" level="80" type="L2Pet" name="Feline Queen">
+	<npc id="14290" level="80" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="12" />
 			<skill name="Buff2" id="4700" level="12" />
@@ -3925,7 +3925,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14291" level="80" type="L2Pet" name="Feline Queen">
+	<npc id="14291" level="80" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="12" />
 			<skill name="Buff2" id="4700" level="12" />
@@ -3977,7 +3977,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14292" level="80" type="L2Pet" name="Feline Queen">
+	<npc id="14292" level="80" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="13" />
 			<skill name="Buff2" id="4700" level="13" />
@@ -4029,7 +4029,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14293" level="80" type="L2Pet" name="Feline Queen">
+	<npc id="14293" level="80" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="13" />
 			<skill name="Buff2" id="4700" level="13" />
@@ -4081,7 +4081,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14294" level="80" type="L2Pet" name="Feline Queen">
+	<npc id="14294" level="80" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="13" />
 			<skill name="Buff2" id="4700" level="13" />
@@ -4133,7 +4133,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14295" level="22" type="L2Pet" name="Boxer the Unicorn">
+	<npc id="14295" level="22" type="Pet" name="Boxer the Unicorn">
 		<parameters>
 			<skill name="HealMagic" id="4025" level="2" />
 			<param name="step1_action01" value="45" />
@@ -4173,7 +4173,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="14296" level="32" type="L2Pet" name="Boxer the Unicorn">
+	<npc id="14296" level="32" type="Pet" name="Boxer the Unicorn">
 		<parameters>
 			<skill name="HealMagic" id="4025" level="2" />
 			<param name="step1_action01" value="45" />
@@ -4213,7 +4213,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="14297" level="42" type="L2Pet" name="Boxer the Unicorn">
+	<npc id="14297" level="42" type="Pet" name="Boxer the Unicorn">
 		<parameters>
 			<skill name="HealMagic" id="4025" level="3" />
 			<param name="step1_action01" value="45" />
@@ -4253,7 +4253,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="14298" level="50" type="L2Pet" name="Boxer the Unicorn">
+	<npc id="14298" level="50" type="Pet" name="Boxer the Unicorn">
 		<parameters>
 			<skill name="HealMagic" id="4025" level="3" />
 			<param name="step1_action01" value="45" />
@@ -4293,7 +4293,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="14299" level="58" type="L2Pet" name="Boxer the Unicorn">
+	<npc id="14299" level="58" type="Pet" name="Boxer the Unicorn">
 		<parameters>
 			<skill name="HealMagic" id="4025" level="4" />
 			<param name="step1_action01" value="45" />

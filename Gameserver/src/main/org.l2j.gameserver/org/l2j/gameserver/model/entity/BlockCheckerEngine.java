@@ -10,7 +10,7 @@ import org.l2j.gameserver.instancemanager.HandysBlockCheckerManager;
 import org.l2j.gameserver.model.ArenaParticipantsHolder;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.actor.Summon;
-import org.l2j.gameserver.model.actor.instance.L2BlockInstance;
+import org.l2j.gameserver.model.actor.instance.Block;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
@@ -426,7 +426,7 @@ public final class BlockCheckerEngine {
                     spawn.setRespawnDelay(1);
                     SpawnTable.getInstance().addNewSpawn(spawn, false);
                     spawn.init();
-                    final L2BlockInstance block = (L2BlockInstance) spawn.getLastSpawn();
+                    final Block block = (Block) spawn.getLastSpawn();
                     // switch color
                     if ((random % 2) == 0) {
                         block.setRed(true);

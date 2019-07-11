@@ -19,7 +19,7 @@ package handlers.skillconditionhandlers;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.L2ChestInstance;
+import org.l2j.gameserver.model.actor.instance.Chest;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -36,6 +36,6 @@ public class OpUnlockSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		return (target != null) && (target.isDoor() || (target instanceof L2ChestInstance));
+		return (target != null) && (target.isDoor() || (target instanceof Chest));
 	}
 }

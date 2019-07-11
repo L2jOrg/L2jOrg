@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="31210" level="70" type="L2Npc" name="Race Track Gatekeeper" title="Monster Race Track">
+	<npc id="31210" level="70" type="Folk" name="Race Track Gatekeeper" title="Monster Race Track">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
@@ -19,7 +19,7 @@
 			<height normal="21.3" />
 		</collision>
 	</npc>
-	<npc id="31211" level="70" type="L2Teleporter" name="Race Track Guide">
+	<npc id="31211" level="70" type="Teleporter" name="Race Track Guide">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="87" />
@@ -56,7 +56,7 @@
 			<height normal="18.5" />
 		</collision>
 	</npc>
-	<npc id="31225" level="70" type="L2Warehouse" name="Arena Manager">
+	<npc id="31225" level="70" type="Warehouse" name="Arena Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -93,7 +93,7 @@
 			<height normal="21.3" />
 		</collision>
 	</npc>
-	<npc id="31226" level="70" type="L2Warehouse" name="Arena Director">
+	<npc id="31226" level="70" type="Warehouse" name="Arena Director">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -131,7 +131,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31255" level="70" type="L2Npc" name="Puss the Cat" title="Event Manager">
+	<npc id="31255" level="70" type="Folk" name="Puss the Cat" title="Event Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -169,7 +169,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="31256" level="80" type="L2Npc" name="Leon" title="Weapon Merchant">
+	<npc id="31256" level="80" type="Folk" name="Leon" title="Weapon Merchant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -188,7 +188,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31257" level="80" type="L2Merchant" name="Veronica" title="Weapon Merchant">
+	<npc id="31257" level="80" type="Merchant" name="Veronica" title="Weapon Merchant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -207,7 +207,7 @@
 			<height normal="22.1" />
 		</collision>
 	</npc>
-	<npc id="31258" level="80" type="L2Merchant" name="Helmut" title="Armor Merchant">
+	<npc id="31258" level="80" type="Merchant" name="Helmut" title="Armor Merchant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -226,7 +226,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="31259" level="80" type="L2Npc" name="Janne" title="Armor Merchant">
+	<npc id="31259" level="80" type="Folk" name="Janne" title="Armor Merchant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -245,7 +245,7 @@
 			<height normal="21.1" />
 		</collision>
 	</npc>
-	<npc id="31260" level="80" type="L2Merchant" name="Judith" title="Accessory Merchant">
+	<npc id="31260" level="80" type="Merchant" name="Judith" title="Accessory Merchant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -264,7 +264,7 @@
 			<height normal="22.1" />
 		</collision>
 	</npc>
-	<npc id="31261" level="80" type="L2Npc" name="Renee" title="Accessory Merchant">
+	<npc id="31261" level="80" type="Folk" name="Renee" title="Accessory Merchant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -283,7 +283,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="31262" level="80" type="L2Npc" name="Rupert" title="Merchant">
+	<npc id="31262" level="80" type="Folk" name="Rupert" title="Merchant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -302,7 +302,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="31263" level="80" type="L2Merchant" name="Liesel" title="Grocer">
+	<npc id="31263" level="80" type="Merchant" name="Liesel" title="Grocer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -321,7 +321,7 @@
 			<height normal="21.1" />
 		</collision>
 	</npc>
-	<npc id="31264" level="80" type="L2Npc" name="Olsun" title="Symbol Maker">
+	<npc id="31264" level="80" type="Folk" name="Olsun" title="Symbol Maker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -340,7 +340,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31267" level="80" type="L2Warehouse" name="Lietta" title="Warehouse Keeper">
+	<npc id="31267" level="80" type="Warehouse" name="Lietta" title="Warehouse Keeper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -359,7 +359,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="31268" level="80" type="L2Warehouse" name="Hakon" title="Warehouse Keeper">
+	<npc id="31268" level="80" type="Warehouse" name="Hakon" title="Warehouse Keeper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -378,7 +378,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="31269" level="80" type="L2VillageMasterDwarf" name="Mona" title="Warehouse Chief">
+	<npc id="31269" level="80" type="VillageMasterDwarf" name="Mona" title="Warehouse Chief">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -397,7 +397,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="31270" level="80" type="L2Warehouse" name="Stefano" title="Warehouse Keeper">
+	<npc id="31270" level="80" type="Warehouse" name="Stefano" title="Warehouse Keeper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -416,7 +416,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="31271" level="80" type="L2Merchant" name="Hilda" title="Blacksmith">
+	<npc id="31271" level="80" type="Merchant" name="Hilda" title="Blacksmith">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -436,7 +436,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="31272" level="80" type="L2VillageMasterDwarf" name="Noel" title="Head Blacksmith">
+	<npc id="31272" level="80" type="VillageMasterDwarf" name="Noel" title="Head Blacksmith">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -455,7 +455,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="31273" level="80" type="L2Npc" name="Borodin" title="Blueprint Seller">
+	<npc id="31273" level="80" type="Folk" name="Borodin" title="Blueprint Seller">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -474,7 +474,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="31274" level="80" type="L2Npc" name="Fundin" title="Mineral Trader">
+	<npc id="31274" level="80" type="Folk" name="Fundin" title="Mineral Trader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -494,7 +494,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="31275" level="80" type="L2Teleporter" name="Tatiana" title="Gatekeeper">
+	<npc id="31275" level="80" type="Teleporter" name="Tatiana" title="Gatekeeper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -513,7 +513,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31276" level="80" type="L2VillageMasterFighter" name="Bernhard" title="Grand Master">
+	<npc id="31276" level="80" type="VillageMasterFighter" name="Bernhard" title="Grand Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -533,7 +533,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31277" level="70" type="L2Npc" name="Felix" title="Master">
+	<npc id="31277" level="70" type="Folk" name="Felix" title="Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -571,7 +571,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31278" level="80" type="L2Npc" name="Bronwyn" title="Master">
+	<npc id="31278" level="80" type="Folk" name="Bronwyn" title="Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -591,7 +591,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31279" level="80" type="L2VillageMasterPriest" name="Gregory" title="High Priest">
+	<npc id="31279" level="80" type="VillageMasterPriest" name="Gregory" title="High Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -611,7 +611,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="31280" level="80" type="L2Npc" name="Bastian" title="Priest">
+	<npc id="31280" level="80" type="Folk" name="Bastian" title="Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -630,7 +630,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31281" level="70" type="L2Npc" name="Cerenas" title="Priest">
+	<npc id="31281" level="70" type="Folk" name="Cerenas" title="Priest">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -670,7 +670,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31282" level="80" type="L2Npc" name="Justin" title="Magister">
+	<npc id="31282" level="80" type="Folk" name="Justin" title="Magister">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -689,7 +689,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31283" level="80" type="L2Npc" name="Alminas" title="Magister">
+	<npc id="31283" level="80" type="Folk" name="Alminas" title="Magister">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -709,7 +709,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31284" level="80" type="L2Npc" name="Elena" title="Spellbook Seller">
+	<npc id="31284" level="80" type="Folk" name="Elena" title="Spellbook Seller">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -728,7 +728,7 @@
 			<height normal="22.1" />
 		</collision>
 	</npc>
-	<npc id="31285" level="80" type="L2VillageMasterDElf" name="Samael" title="Grand Master">
+	<npc id="31285" level="80" type="VillageMasterDElf" name="Samael" title="Grand Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -747,7 +747,7 @@
 			<height normal="23.8" />
 		</collision>
 	</npc>
-	<npc id="31286" level="80" type="L2Npc" name="Drakon" title="Master">
+	<npc id="31286" level="80" type="Folk" name="Drakon" title="Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -767,7 +767,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31287" level="80" type="L2Npc" name="Kamilen" title="Magister">
+	<npc id="31287" level="80" type="Folk" name="Kamilen" title="Magister">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -787,7 +787,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31288" level="80" type="L2VillageMasterOrc" name="Aklan" title="High Prefect">
+	<npc id="31288" level="80" type="VillageMasterOrc" name="Aklan" title="High Prefect">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -806,7 +806,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="31289" level="80" type="L2Npc" name="Lakan" title="Prefect">
+	<npc id="31289" level="80" type="Folk" name="Lakan" title="Prefect">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -826,7 +826,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="31290" level="80" type="L2Npc" name="Skahi" title="Priest">
+	<npc id="31290" level="80" type="Folk" name="Skahi" title="Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -846,7 +846,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="31291" level="80" type="L2Npc" name="Terava" title="Amulet Seller">
+	<npc id="31291" level="80" type="Folk" name="Terava" title="Amulet Seller">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -865,7 +865,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="31292" level="80" type="L2Guard" name="Andrei" title="Captain">
+	<npc id="31292" level="80" type="Guard" name="Andrei" title="Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -885,7 +885,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31293" level="80" type="L2Guard" name="Gunter" title="Guard">
+	<npc id="31293" level="80" type="Guard" name="Gunter" title="Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -905,7 +905,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31294" level="80" type="L2Guard" name="Sven" title="Guard">
+	<npc id="31294" level="80" type="Guard" name="Sven" title="Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -925,7 +925,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31295" level="80" type="L2Guard" name="Henrik" title="Guard">
+	<npc id="31295" level="80" type="Guard" name="Henrik" title="Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -945,7 +945,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31296" level="80" type="L2Guard" name="Cadmon" title="Guard">
+	<npc id="31296" level="80" type="Guard" name="Cadmon" title="Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -965,7 +965,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31297" level="80" type="L2Guard" name="Bayard" title="Guard">
+	<npc id="31297" level="80" type="Guard" name="Bayard" title="Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -985,7 +985,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31298" level="80" type="L2Guard" name="Ulrich" title="Guard">
+	<npc id="31298" level="80" type="Guard" name="Ulrich" title="Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1005,7 +1005,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31299" level="80" type="L2Guard" name="Eugen" title="Guard">
+	<npc id="31299" level="80" type="Guard" name="Eugen" title="Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

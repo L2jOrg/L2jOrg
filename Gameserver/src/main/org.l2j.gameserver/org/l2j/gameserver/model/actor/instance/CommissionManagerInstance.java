@@ -18,14 +18,14 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.commission.ExShowCommission;
 
 /**
  * @author NosBit
  */
-public class CommissionManagerInstance extends L2Npc {
+public class CommissionManagerInstance extends Npc {
     public CommissionManagerInstance(L2NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.CommissionManagerInstance);

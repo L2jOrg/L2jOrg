@@ -17,7 +17,7 @@
 package quests.Q00662_AGameOfCards;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
@@ -82,7 +82,7 @@ public final class Q00662_AGameOfCards extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, false);
 		String htmltext = null;
@@ -592,7 +592,7 @@ public final class Q00662_AGameOfCards extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, Player player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -687,7 +687,7 @@ public final class Q00662_AGameOfCards extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, Player killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final List<Player> players = new ArrayList<>();
 		players.add(killer);

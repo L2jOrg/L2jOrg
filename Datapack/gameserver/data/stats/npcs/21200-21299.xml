@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="21200" level="60" type="L2Monster" name="Nephilim Bishop">
+	<npc id="21200" level="60" type="Monster" name="Nephilim Bishop">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -74,7 +74,7 @@
 			<height normal="36.5" grown="46" />
 		</collision>
 	</npc>
-	<npc id="21201" level="63" type="L2Monster" name="Nephilim Centurion">
+	<npc id="21201" level="63" type="Monster" name="Nephilim Centurion">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -145,7 +145,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="21202" level="74" type="L2Monster" name="Nephilim Scout">
+	<npc id="21202" level="74" type="Monster" name="Nephilim Scout">
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -234,7 +234,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21203" level="72" type="L2Monster" name="Nephilim Archbishop">
+	<npc id="21203" level="72" type="Monster" name="Nephilim Archbishop">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -329,7 +329,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21204" level="73" type="L2Monster" name="Nephilim Praetorian">
+	<npc id="21204" level="73" type="Monster" name="Nephilim Praetorian">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -420,7 +420,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21205" level="75" type="L2Monster" name="Nephilim Royal Guard">
+	<npc id="21205" level="75" type="Monster" name="Nephilim Royal Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -486,7 +486,7 @@
 			<height normal="39.6" />
 		</collision>
 	</npc>
-	<npc id="21206" level="68" type="L2Monster" name="Nephilim Cardinal">
+	<npc id="21206" level="68" type="Monster" name="Nephilim Cardinal">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -575,7 +575,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21207" level="68" type="L2Monster" name="Nephilim Commander">
+	<npc id="21207" level="68" type="Monster" name="Nephilim Commander">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -657,7 +657,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21208" level="20" type="L2Monster" name="Martyrium Lookout">
+	<npc id="21208" level="20" type="Monster" name="Martyrium Lookout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -677,7 +677,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="21209" level="22" type="L2Monster" name="Martyrium Watchman">
+	<npc id="21209" level="22" type="Monster" name="Martyrium Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -696,7 +696,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="21210" level="25" type="L2Monster" name="Crypt Lookout">
+	<npc id="21210" level="25" type="Monster" name="Crypt Lookout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>FAIRY</race>
 		<sex>MALE</sex>
@@ -715,7 +715,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="21211" level="27" type="L2Monster" name="Crypt Watchman">
+	<npc id="21211" level="27" type="Monster" name="Crypt Watchman">
 		<!-- Todo: Need confirm retail values -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -784,7 +784,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="21212" level="30" type="L2Monster" name="Martyrium Sentinel">
+	<npc id="21212" level="30" type="Monster" name="Martyrium Sentinel">
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -840,7 +840,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="21213" level="32" type="L2Monster" name="Martyrium Monk">
+	<npc id="21213" level="32" type="Monster" name="Martyrium Monk">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -859,7 +859,7 @@
 			<height normal="25.3" />
 		</collision>
 	</npc>
-	<npc id="21214" level="35" type="L2Monster" name="Crypt Sentinel">
+	<npc id="21214" level="35" type="Monster" name="Crypt Sentinel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>FAIRY</race>
 		<sex>MALE</sex>
@@ -878,7 +878,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="21215" level="37" type="L2Monster" name="Crypt Monk">
+	<npc id="21215" level="37" type="Monster" name="Crypt Monk">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -897,7 +897,7 @@
 			<height normal="43.2" />
 		</collision>
 	</npc>
-	<npc id="21216" level="40" type="L2Monster" name="Martyrium Prefect">
+	<npc id="21216" level="40" type="Monster" name="Martyrium Prefect">
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -953,7 +953,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="21217" level="42" type="L2Monster" name="Martyrium Priest">
+	<npc id="21217" level="42" type="Monster" name="Martyrium Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -972,7 +972,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="21218" level="45" type="L2Monster" name="Crypt Prefect">
+	<npc id="21218" level="45" type="Monster" name="Crypt Prefect">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -992,7 +992,7 @@
 			<height normal="40.5" />
 		</collision>
 	</npc>
-	<npc id="21219" level="47" type="L2Monster" name="Crypt Priest">
+	<npc id="21219" level="47" type="Monster" name="Crypt Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1011,7 +1011,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="21220" level="50" type="L2Monster" name="Mausoleum Archon">
+	<npc id="21220" level="50" type="Monster" name="Mausoleum Archon">
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -1067,7 +1067,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="21221" level="68" type="L2Monster" name="Mausoleum Inquisitor">
+	<npc id="21221" level="68" type="Monster" name="Mausoleum Inquisitor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1122,7 +1122,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21222" level="69" type="L2Monster" name="Sepulcher Archon">
+	<npc id="21222" level="69" type="Monster" name="Sepulcher Archon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1168,7 +1168,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21223" level="69" type="L2Monster" name="Sepulcher Inquisitor">
+	<npc id="21223" level="69" type="Monster" name="Sepulcher Inquisitor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1221,7 +1221,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21224" level="74" type="L2Monster" name="Mausoleum Royal Guardian">
+	<npc id="21224" level="74" type="Monster" name="Mausoleum Royal Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1265,7 +1265,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21225" level="75" type="L2Monster" name="Mausoleum Sage">
+	<npc id="21225" level="75" type="Monster" name="Mausoleum Sage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -1316,7 +1316,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21226" level="75" type="L2Monster" name="Sepulcher Royal Guardian">
+	<npc id="21226" level="75" type="Monster" name="Sepulcher Royal Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1359,7 +1359,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21227" level="67" type="L2Monster" name="Sepulcher Sage">
+	<npc id="21227" level="67" type="Monster" name="Sepulcher Sage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1378,7 +1378,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="21228" level="70" type="L2Monster" name="Mausoleum Royal Guard">
+	<npc id="21228" level="70" type="Monster" name="Mausoleum Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1397,7 +1397,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="21229" level="72" type="L2Monster" name="Mausoleum Prophet">
+	<npc id="21229" level="72" type="Monster" name="Mausoleum Prophet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -1416,7 +1416,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="21230" level="75" type="L2Monster" name="Sepulcher Royal Guard">
+	<npc id="21230" level="75" type="Monster" name="Sepulcher Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1435,7 +1435,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="21231" level="77" type="L2Monster" name="Sepulcher Prophet">
+	<npc id="21231" level="77" type="Monster" name="Sepulcher Prophet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1454,7 +1454,7 @@
 			<height normal="50.4" />
 		</collision>
 	</npc>
-	<npc id="21232" level="20" type="L2Monster" name="Barrow Lookout">
+	<npc id="21232" level="20" type="Monster" name="Barrow Lookout">
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -1505,7 +1505,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="21233" level="22" type="L2Monster" name="Barrow Watchman">
+	<npc id="21233" level="22" type="Monster" name="Barrow Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1558,7 +1558,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="21234" level="25" type="L2Monster" name="Tomb Lookout">
+	<npc id="21234" level="25" type="Monster" name="Tomb Lookout">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1611,7 +1611,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="21235" level="27" type="L2Monster" name="Tomb Watchman">
+	<npc id="21235" level="27" type="Monster" name="Tomb Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1664,7 +1664,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="21236" level="30" type="L2Monster" name="Barrow Sentinel">
+	<npc id="21236" level="30" type="Monster" name="Barrow Sentinel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1684,7 +1684,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="21237" level="32" type="L2Monster" name="Barrow Monk">
+	<npc id="21237" level="32" type="Monster" name="Barrow Monk">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1703,7 +1703,7 @@
 			<height normal="25.3" />
 		</collision>
 	</npc>
-	<npc id="21238" level="35" type="L2Monster" name="Tomb Sentinel">
+	<npc id="21238" level="35" type="Monster" name="Tomb Sentinel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>FAIRY</race>
 		<sex>MALE</sex>
@@ -1722,7 +1722,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="21239" level="37" type="L2Monster" name="Tomb Monk">
+	<npc id="21239" level="37" type="Monster" name="Tomb Monk">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1741,7 +1741,7 @@
 			<height normal="43.2" />
 		</collision>
 	</npc>
-	<npc id="21240" level="40" type="L2Monster" name="Barrow Prefect">
+	<npc id="21240" level="40" type="Monster" name="Barrow Prefect">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1761,7 +1761,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="21241" level="42" type="L2Monster" name="Barrow Priest">
+	<npc id="21241" level="42" type="Monster" name="Barrow Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1780,7 +1780,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="21242" level="45" type="L2Monster" name="Tomb Prefect">
+	<npc id="21242" level="45" type="Monster" name="Tomb Prefect">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1800,7 +1800,7 @@
 			<height normal="40.5" />
 		</collision>
 	</npc>
-	<npc id="21243" level="47" type="L2Monster" name="Tomb Priest">
+	<npc id="21243" level="47" type="Monster" name="Tomb Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1819,7 +1819,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="21244" level="50" type="L2Monster" name="Graveyard Archon">
+	<npc id="21244" level="50" type="Monster" name="Graveyard Archon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1839,7 +1839,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="21245" level="52" type="L2Monster" name="Graveyard Inquisitor">
+	<npc id="21245" level="52" type="Monster" name="Graveyard Inquisitor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1858,7 +1858,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="21246" level="55" type="L2Monster" name="Netherworld Archon">
+	<npc id="21246" level="55" type="Monster" name="Netherworld Archon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1878,7 +1878,7 @@
 			<height normal="49.5" />
 		</collision>
 	</npc>
-	<npc id="21247" level="57" type="L2Monster" name="Netherworld Inquisitor">
+	<npc id="21247" level="57" type="Monster" name="Netherworld Inquisitor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1897,7 +1897,7 @@
 			<height normal="46" />
 		</collision>
 	</npc>
-	<npc id="21248" level="73" type="L2Monster" name="Graveyard Guardian">
+	<npc id="21248" level="73" type="Monster" name="Graveyard Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1941,7 +1941,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21249" level="74" type="L2Monster" name="Graveyard Sage">
+	<npc id="21249" level="74" type="Monster" name="Graveyard Sage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -1985,7 +1985,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21250" level="74" type="L2Monster" name="Netherworld Guardian">
+	<npc id="21250" level="74" type="Monster" name="Netherworld Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2033,7 +2033,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21251" level="75" type="L2Monster" name="Netherworld Sage">
+	<npc id="21251" level="75" type="Monster" name="Netherworld Sage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2081,7 +2081,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21252" level="75" type="L2Monster" name="Graveyard Royal Guard">
+	<npc id="21252" level="75" type="Monster" name="Graveyard Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2122,7 +2122,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21253" level="72" type="L2Monster" name="Graveyard Prophet">
+	<npc id="21253" level="72" type="Monster" name="Graveyard Prophet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -2141,7 +2141,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="21254" level="69" type="L2Monster" name="Netherworld Royal Guard">
+	<npc id="21254" level="69" type="Monster" name="Netherworld Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2185,7 +2185,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21255" level="69" type="L2Monster" name="Netherworld Prophet">
+	<npc id="21255" level="69" type="Monster" name="Netherworld Prophet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2228,7 +2228,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21256" level="23" type="L2Monster" name="Underground Werewolf">
+	<npc id="21256" level="23" type="Monster" name="Underground Werewolf">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2247,7 +2247,7 @@
 			<height normal="29.7" />
 		</collision>
 	</npc>
-	<npc id="21257" level="18" type="L2Monster" name="Evil Eye Seer">
+	<npc id="21257" level="18" type="Monster" name="Evil Eye Seer">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2308,7 +2308,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21258" level="71" type="L2Monster" name="Fallen Orc Shaman">
+	<npc id="21258" level="71" type="Monster" name="Fallen Orc Shaman">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -2348,7 +2348,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21259" level="72" type="L2Monster" name="Fallen Orc Shaman" title="Enhanced">
+	<npc id="21259" level="72" type="Monster" name="Fallen Orc Shaman" title="Enhanced">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -2395,7 +2395,7 @@
 			<height normal="29.4" />
 		</collision>
 	</npc>
-	<npc id="21260" level="50" type="L2Monster" name="Betrayer Orc Hero">
+	<npc id="21260" level="50" type="Monster" name="Betrayer Orc Hero">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2445,7 +2445,7 @@
 			<height normal="24" grown="28.8" />
 		</collision>
 	</npc>
-	<npc id="21261" level="50" type="L2Monster" name="Ol Mahum Transcender">
+	<npc id="21261" level="50" type="Monster" name="Ol Mahum Transcender">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -2500,7 +2500,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21262" level="53" type="L2Monster" name="Ol Mahum Transcender">
+	<npc id="21262" level="53" type="Monster" name="Ol Mahum Transcender">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2555,7 +2555,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="21263" level="55" type="L2Monster" name="Ol Mahum Transcender">
+	<npc id="21263" level="55" type="Monster" name="Ol Mahum Transcender">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2610,7 +2610,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="21264" level="58" type="L2Monster" name="Ol Mahum Transcender">
+	<npc id="21264" level="58" type="Monster" name="Ol Mahum Transcender">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2665,7 +2665,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="21265" level="36" type="L2Monster" name="Cave Ant Larva">
+	<npc id="21265" level="36" type="Monster" name="Cave Ant Larva">
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -2728,7 +2728,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="21266" level="36" type="L2Monster" name="Cave Ant Larva">
+	<npc id="21266" level="36" type="Monster" name="Cave Ant Larva">
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -2788,7 +2788,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="21267" level="36" type="L2Monster" name="Cave Ant Larva">
+	<npc id="21267" level="36" type="Monster" name="Cave Ant Larva">
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -2848,7 +2848,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="21268" level="36" type="L2Monster" name="Cave Ant Larva">
+	<npc id="21268" level="36" type="Monster" name="Cave Ant Larva">
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -2912,7 +2912,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="21269" level="37" type="L2Monster" name="Cave Ant">
+	<npc id="21269" level="37" type="Monster" name="Cave Ant">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2965,7 +2965,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="21270" level="38" type="L2Monster" name="Cave Ant Soldier">
+	<npc id="21270" level="38" type="Monster" name="Cave Ant Soldier">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3017,7 +3017,7 @@
 			<height normal="17" grown="21" />
 		</collision>
 	</npc>
-	<npc id="21271" level="37" type="L2Monster" name="Cave Ant">
+	<npc id="21271" level="37" type="Monster" name="Cave Ant">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3074,7 +3074,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="21272" level="38" type="L2Monster" name="Cave Ant Soldier">
+	<npc id="21272" level="38" type="Monster" name="Cave Ant Soldier">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3130,7 +3130,7 @@
 			<height normal="17" grown="21" />
 		</collision>
 	</npc>
-	<npc id="21273" level="39" type="L2Monster" name="Cave Noble Ant">
+	<npc id="21273" level="39" type="Monster" name="Cave Noble Ant">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />

@@ -19,7 +19,7 @@ package ai.others;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
 import org.l2j.gameserver.model.events.annotations.Id;
@@ -52,7 +52,7 @@ public final class Incarnation extends AbstractNpcAI
 	@Id(13457)
 	public void onNpcSpawn(OnNpcSpawn event)
 	{
-		final L2Npc npc = event.getNpc();
+		final Npc npc = event.getNpc();
 		if (npc.getSummoner() != null)
 		{
 			npc.getSummoner().addListener(new ConsumerEventListener(npc, EventType.ON_CREATURE_ATTACK, (OnCreatureAttack e) -> onOffense(npc, e.getAttacker(), e.getTarget()), this));
@@ -60,7 +60,7 @@ public final class Incarnation extends AbstractNpcAI
 		}
 	}
 	
-	public void onOffense(L2Npc npc, Creature attacker, WorldObject target)
+	public void onOffense(Npc npc, Creature attacker, WorldObject target)
 	{
 		if ((attacker == target) || (npc.getSummoner() == null))
 		{

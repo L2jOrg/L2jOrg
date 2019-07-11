@@ -8,7 +8,7 @@ import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.SpecialItemType;
 import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
@@ -110,7 +110,7 @@ public class MultiSellChoose extends ClientPacket {
             return;
         }
 
-        final L2Npc npc = player.getLastFolkNPC();
+        final Npc npc = player.getLastFolkNPC();
         if (!list.isNpcAllowed(-1) && !isAllowedToUse(player, npc, list)) {
             if (player.isGM()) {
                 player.sendMessage("Multisell " + _listId + " is restricted. Under current conditions cannot be used. Only GMs are allowed to use it.");
@@ -558,11 +558,11 @@ public class MultiSellChoose extends ClientPacket {
      * @param list
      * @return {@code true} if player can buy stuff from the multisell, {@code false} otherwise.
      */
-    private boolean isAllowedToUse(Player player, L2Npc npc, PreparedMultisellListHolder list) {
+    private boolean isAllowedToUse(Player player, Npc npc, PreparedMultisellListHolder list) {
         if (npc != null) {
             if (!list.isNpcAllowed(npc.getId())) {
                 return false;
-            } else if (list.isNpcOnly() && (!list.checkNpcObjectId(npc.getObjectId()) || (npc.getInstanceWorld() != player.getInstanceWorld()) || !player.isInsideRadius3D(npc, L2Npc.INTERACTION_DISTANCE))) {
+            } else if (list.isNpcOnly() && (!list.checkNpcObjectId(npc.getObjectId()) || (npc.getInstanceWorld() != player.getInstanceWorld()) || !player.isInsideRadius3D(npc, Npc.INTERACTION_DISTANCE))) {
                 return false;
             }
         } else if (list.isNpcOnly()) {

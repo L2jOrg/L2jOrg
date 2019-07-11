@@ -9,8 +9,8 @@ import org.l2j.gameserver.model.L2NpcWalkerNode;
 import org.l2j.gameserver.model.L2WalkRoute;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WalkInfo;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.tasks.npc.walker.ArrivedTask;
 import org.l2j.gameserver.model.holders.NpcRoutesHolder;
 import org.l2j.gameserver.network.NpcStringId;
@@ -166,14 +166,14 @@ public final class WalkingManager extends GameXmlReader {
      * @param npc NPC to check
      * @return {@code true} if given NPC, or its leader is controlled by Walking Manager and moves currently.
      */
-    public boolean isOnWalk(L2Npc npc) {
-        L2MonsterInstance monster = null;
+    public boolean isOnWalk(Npc npc) {
+        Monster monster = null;
 
         if (npc.isMonster()) {
-            if (((L2MonsterInstance) npc).getLeader() == null) {
-                monster = (L2MonsterInstance) npc;
+            if (((Monster) npc).getLeader() == null) {
+                monster = (Monster) npc;
             } else {
-                monster = ((L2MonsterInstance) npc).getLeader();
+                monster = ((Monster) npc).getLeader();
             }
         }
 
@@ -196,7 +196,7 @@ public final class WalkingManager extends GameXmlReader {
      * @param npc NPC to check
      * @return {@code true} if given NPC controlled by Walking Manager.
      */
-    public boolean isRegistered(L2Npc npc) {
+    public boolean isRegistered(Npc npc) {
         return _activeRoutes.containsKey(npc.getObjectId());
     }
 
@@ -204,7 +204,7 @@ public final class WalkingManager extends GameXmlReader {
      * @param npc
      * @return name of route
      */
-    public String getRouteName(L2Npc npc) {
+    public String getRouteName(Npc npc) {
         return _activeRoutes.containsKey(npc.getObjectId()) ? _activeRoutes.get(npc.getObjectId()).getRoute().getName() : "";
     }
 
@@ -214,7 +214,7 @@ public final class WalkingManager extends GameXmlReader {
      * @param npc       NPC to move
      * @param routeName name of route to move by
      */
-    public void startMoving(L2Npc npc, String routeName) {
+    public void startMoving(Npc npc, String routeName) {
         if (_routes.containsKey(routeName) && (npc != null) && !npc.isDead()) // check, if these route and NPC present
         {
             if (!_activeRoutes.containsKey(npc.getObjectId())) // new walk task
@@ -281,7 +281,7 @@ public final class WalkingManager extends GameXmlReader {
      *
      * @param npc NPC to cancel
      */
-    public synchronized void cancelMoving(L2Npc npc) {
+    public synchronized void cancelMoving(Npc npc) {
         final WalkInfo walk = _activeRoutes.remove(npc.getObjectId());
         if (walk != null) {
             walk.getWalkCheckTask().cancel(true);
@@ -293,7 +293,7 @@ public final class WalkingManager extends GameXmlReader {
      *
      * @param npc NPC to resume
      */
-    public void resumeMoving(L2Npc npc) {
+    public void resumeMoving(Npc npc) {
         final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
         if (walk != null) {
             walk.setSuspended(false);
@@ -309,14 +309,14 @@ public final class WalkingManager extends GameXmlReader {
      * @param suspend         {@code true} if moving was temporarily suspended for some reasons of AI-controlling script
      * @param stoppedByAttack {@code true} if moving was suspended because of NPC was attacked or desired to attack
      */
-    public void stopMoving(L2Npc npc, boolean suspend, boolean stoppedByAttack) {
-        L2MonsterInstance monster = null;
+    public void stopMoving(Npc npc, boolean suspend, boolean stoppedByAttack) {
+        Monster monster = null;
 
         if (npc.isMonster()) {
-            if (((L2MonsterInstance) npc).getLeader() == null) {
-                monster = (L2MonsterInstance) npc;
+            if (((Monster) npc).getLeader() == null) {
+                monster = (Monster) npc;
             } else {
-                monster = ((L2MonsterInstance) npc).getLeader();
+                monster = ((Monster) npc).getLeader();
             }
         }
 
@@ -343,7 +343,7 @@ public final class WalkingManager extends GameXmlReader {
      *
      * @param npc NPC to manage
      */
-    public void onArrived(L2Npc npc) {
+    public void onArrived(Npc npc) {
         if (_activeRoutes.containsKey(npc.getObjectId())) {
             final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
 
@@ -371,7 +371,7 @@ public final class WalkingManager extends GameXmlReader {
      *
      * @param npc NPC to manage
      */
-    public void onDeath(L2Npc npc) {
+    public void onDeath(Npc npc) {
         cancelMoving(npc);
     }
 
@@ -380,7 +380,7 @@ public final class WalkingManager extends GameXmlReader {
      *
      * @param npc NPC to manage
      */
-    public void onSpawn(L2Npc npc) {
+    public void onSpawn(Npc npc) {
         if (_routesToAttach.containsKey(npc.getId())) {
             final String routeName = _routesToAttach.get(npc.getId()).getRouteName(npc);
             if (!routeName.isEmpty()) {

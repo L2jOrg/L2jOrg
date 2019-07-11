@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../npcs.xsd">
-	<npc id="900100" displayId="22228" level="1" usingServerSideName="true" name="Elpy" type="L2EventMonster">
+	<npc id="900100" displayId="22228" level="1" usingServerSideName="true" name="Elpy" type="EventMonster">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats>
@@ -36,7 +36,7 @@
 			<height normal="12.5" />
 		</collision>
 	</npc>
-	<npc id="900102" displayId="13098" level="80" name="Event Treasure Chest" type="L2Monster">
+	<npc id="900102" displayId="13098" level="80" name="Event Treasure Chest" type="Monster">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats>

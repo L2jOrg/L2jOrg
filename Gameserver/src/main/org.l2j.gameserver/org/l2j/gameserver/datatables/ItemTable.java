@@ -9,9 +9,9 @@ import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.instance.L2EventMonsterInstance;
+import org.l2j.gameserver.model.actor.instance.EventMonster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
@@ -171,16 +171,16 @@ public class ItemTable {
 
         if (process.equalsIgnoreCase("loot") && !Config.AUTO_LOOT_ITEM_IDS.contains(itemId)) {
             ScheduledFuture<?> itemLootShedule;
-            if ((reference instanceof L2Attackable) && ((L2Attackable) reference).isRaid()) // loot privilege for raids
+            if ((reference instanceof Attackable) && ((Attackable) reference).isRaid()) // loot privilege for raids
             {
-                final L2Attackable raid = (L2Attackable) reference;
+                final Attackable raid = (Attackable) reference;
                 // if in CommandChannel and was killing a World/RaidBoss
                 if ((raid.getFirstCommandChannelAttacked() != null) && !Config.AUTO_LOOT_RAIDS) {
                     item.setOwnerId(raid.getFirstCommandChannelAttacked().getLeaderObjectId());
                     itemLootShedule = ThreadPoolManager.getInstance().schedule(new ResetOwner(item), Config.LOOT_RAIDS_PRIVILEGE_INTERVAL);
                     item.setItemLootShedule(itemLootShedule);
                 }
-            } else if (!Config.AUTO_LOOT || ((reference instanceof L2EventMonsterInstance) && ((L2EventMonsterInstance) reference).eventDropOnGround())) {
+            } else if (!Config.AUTO_LOOT || ((reference instanceof EventMonster) && ((EventMonster) reference).eventDropOnGround())) {
                 item.setOwnerId(actor.getObjectId());
                 itemLootShedule = ThreadPoolManager.getInstance().schedule(new ResetOwner(item), 15000);
                 item.setItemLootShedule(itemLootShedule);

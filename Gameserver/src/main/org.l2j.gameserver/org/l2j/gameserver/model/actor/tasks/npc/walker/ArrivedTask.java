@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.actor.tasks.npc.walker;
 
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.WalkInfo;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 
 /**
  * Walker arrive task.
@@ -11,9 +11,9 @@ import org.l2j.gameserver.model.actor.L2Npc;
  */
 public class ArrivedTask implements Runnable {
     private final WalkInfo _walk;
-    private final L2Npc _npc;
+    private final Npc _npc;
 
-    public ArrivedTask(L2Npc npc, WalkInfo walk) {
+    public ArrivedTask(Npc npc, WalkInfo walk) {
         _npc = npc;
         _walk = walk;
     }

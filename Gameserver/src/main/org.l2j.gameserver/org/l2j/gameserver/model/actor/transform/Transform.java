@@ -4,7 +4,7 @@ import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.enums.Sex;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerTransform;
@@ -97,7 +97,7 @@ public final class Transform implements IIdentifiable {
         if (creature.isPlayer()) {
             return (creature.getActingPlayer().getAppearance().getSex() ? _femaleTemplate : _maleTemplate);
         } else if (creature.isNpc()) {
-            return ((L2Npc) creature).getTemplate().getSex() == Sex.FEMALE ? _femaleTemplate : _maleTemplate;
+            return ((Npc) creature).getTemplate().getSex() == Sex.FEMALE ? _femaleTemplate : _maleTemplate;
         }
 
         return null;

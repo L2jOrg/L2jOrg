@@ -11,9 +11,9 @@ import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.enums.TaxType;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.*;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Door;
-import org.l2j.gameserver.model.actor.instance.L2ArtefactInstance;
+import org.l2j.gameserver.model.actor.instance.Artefact;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.CastleSpawnHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
@@ -51,8 +51,8 @@ public final class Castle extends AbstractResidence {
     public static final int FUNC_SUPPORT = 5;
     protected static final Logger LOGGER = LoggerFactory.getLogger(Castle.class);
     private final List<Door> _doors = new ArrayList<>();
-    private final List<L2Npc> _sideNpcs = new ArrayList<>();
-    private final List<L2ArtefactInstance> _artefacts = new ArrayList<>(1);
+    private final List<Npc> _sideNpcs = new ArrayList<>();
+    private final List<Artefact> _artefacts = new ArrayList<>(1);
     private final Map<Integer, CastleFunction> _function = new ConcurrentHashMap<>();
     int _ownerId = 0;
     private Siege _siege = null;
@@ -714,11 +714,11 @@ public final class Castle extends AbstractResidence {
      *
      * @param artefact
      */
-    public void registerArtefact(L2ArtefactInstance artefact) {
+    public void registerArtefact(Artefact artefact) {
         _artefacts.add(artefact);
     }
 
-    public List<L2ArtefactInstance> getArtefacts() {
+    public List<Artefact> getArtefacts() {
         return _artefacts;
     }
 
@@ -810,7 +810,7 @@ public final class Castle extends AbstractResidence {
     }
 
     public void spawnSideNpcs() {
-        _sideNpcs.stream().filter(Objects::nonNull).forEach(L2Npc::deleteMe);
+        _sideNpcs.stream().filter(Objects::nonNull).forEach(Npc::deleteMe);
         _sideNpcs.clear();
 
         for (CastleSpawnHolder holder : getSideSpawns()) {
@@ -824,7 +824,7 @@ public final class Castle extends AbstractResidence {
                 }
                 spawn.setXYZ(holder);
                 spawn.setHeading(holder.getHeading());
-                final L2Npc npc = spawn.doSpawn(false);
+                final Npc npc = spawn.doSpawn(false);
                 spawn.stopRespawn();
                 npc.broadcastInfo();
                 _sideNpcs.add(npc);

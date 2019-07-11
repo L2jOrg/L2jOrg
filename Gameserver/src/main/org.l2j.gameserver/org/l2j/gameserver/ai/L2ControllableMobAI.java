@@ -6,10 +6,10 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.MobGroup;
 import org.l2j.gameserver.model.MobGroupTable;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Playable;
-import org.l2j.gameserver.model.actor.instance.L2ControllableMobInstance;
+import org.l2j.gameserver.model.actor.instance.ControllableMob;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.util.GameUtils;
@@ -41,13 +41,13 @@ public final class L2ControllableMobAI extends L2AttackableAI {
     private Creature _forcedTarget;
     private MobGroup _targetGroup;
 
-    public L2ControllableMobAI(L2ControllableMobInstance controllableMob) {
+    public L2ControllableMobAI(ControllableMob controllableMob) {
         super(controllableMob);
         setAlternateAI(AI_IDLE);
     }
 
     protected void thinkFollow() {
-        final L2Attackable me = (L2Attackable) _actor;
+        final Attackable me = (Attackable) _actor;
 
         if (!GameUtils.checkIfInRange(MobGroupTable.FOLLOW_RANGE, me, getForcedTarget(), true)) {
             final int signX = Rnd.nextBoolean() ? -1 : 1;
@@ -153,7 +153,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
 
         setTarget(target);
         // as a response, we put the target in a forcedattack mode
-        final L2ControllableMobInstance theTarget = (L2ControllableMobInstance) target;
+        final ControllableMob theTarget = (ControllableMob) target;
         final L2ControllableMobAI ctrlAi = (L2ControllableMobAI) theTarget.getAI();
         ctrlAi.forceAttack(_actor);
 
@@ -224,7 +224,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
         if ((target == null) || target.isAlikeDead()) {
             if (target != null) {
                 // stop hating
-                final L2Attackable npc = (L2Attackable) _actor;
+                final Attackable npc = (Attackable) _actor;
                 npc.stopHating(target);
             }
 
@@ -232,10 +232,10 @@ public final class L2ControllableMobAI extends L2AttackableAI {
         } else {
             // notify aggression
             final Creature finalTarget = target;
-            if (((L2Npc) _actor).getTemplate().getClans() != null) {
-                L2World.getInstance().forEachVisibleObject(_actor, L2Npc.class, npc ->
+            if (((Npc) _actor).getTemplate().getClans() != null) {
+                L2World.getInstance().forEachVisibleObject(_actor, Npc.class, npc ->
                 {
-                    if (!npc.isInMyClan((L2Npc) _actor)) {
+                    if (!npc.isInMyClan((Npc) _actor)) {
                         return;
                     }
 
@@ -321,7 +321,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
         if ((target == null) || !_actor.isAttackable()) {
             return false;
         }
-        final L2Attackable me = (L2Attackable) _actor;
+        final Attackable me = (Attackable) _actor;
 
         if (target.isNpc() || target.isDoor()) {
             return false;
@@ -360,7 +360,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
         final List<Creature> potentialTarget = new ArrayList<>();
         L2World.getInstance().forEachVisibleObject(_actor, Creature.class, target ->
         {
-            if (GameUtils.checkIfInShortRange(((L2Attackable) _actor).getAggroRange(), _actor, target, true) && checkAutoAttackCondition(target)) {
+            if (GameUtils.checkIfInShortRange(((Attackable) _actor).getAggroRange(), _actor, target, true) && checkAutoAttackCondition(target)) {
                 potentialTarget.add(target);
             }
         });
@@ -368,7 +368,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
         return !potentialTarget.isEmpty() ? potentialTarget.get(Rnd.get(potentialTarget.size())) : null;
     }
 
-    private L2ControllableMobInstance findNextGroupTarget() {
+    private ControllableMob findNextGroupTarget() {
         return getGroupTarget().getRandomMob();
     }
 

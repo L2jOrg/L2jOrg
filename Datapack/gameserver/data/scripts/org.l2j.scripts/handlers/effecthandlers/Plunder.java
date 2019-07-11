@@ -22,7 +22,7 @@ import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
+import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -81,7 +81,7 @@ public final class Plunder extends AbstractEffect
 			return;
 		}
 		
-		final L2MonsterInstance monster = (L2MonsterInstance) effected;
+		final Monster monster = (Monster) effected;
 		final Player player = effector.getActingPlayer();
 		
 		if (monster.isSpoiled())

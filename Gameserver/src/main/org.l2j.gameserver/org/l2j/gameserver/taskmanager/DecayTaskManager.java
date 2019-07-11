@@ -2,8 +2,8 @@ package org.l2j.gameserver.taskmanager;
 
 import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,7 +46,7 @@ public final class DecayTaskManager {
             delay = Config.DEFAULT_CORPSE_TIME;
         }
 
-        if (character.isAttackable() && (((L2Attackable) character).isSpoiled() || ((L2Attackable) character).isSeeded())) {
+        if (character.isAttackable() && (((Attackable) character).isSpoiled() || ((Attackable) character).isSeeded())) {
             delay += Config.SPOILED_CORPSE_EXTEND_TIME;
         }
 

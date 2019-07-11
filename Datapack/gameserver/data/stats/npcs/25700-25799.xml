@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="25735" level="90" type="L2RaidBoss" name="Giant Golden Pig" title="Raid Boss">
+	<npc id="25735" level="90" type="RaidBoss" name="Giant Golden Pig" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -22,7 +22,7 @@
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="25736" level="90" type="L2RaidBoss" name="Giant Golden Pig" title="Raid Boss">
+	<npc id="25736" level="90" type="RaidBoss" name="Giant Golden Pig" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -43,7 +43,7 @@
 		<height normal="120" />
 	</collision>
 	</npc>
-	<npc id="25737" level="90" type="L2RaidBoss" name="Giant Golden Pig" title="Raid Boss">
+	<npc id="25737" level="90" type="RaidBoss" name="Giant Golden Pig" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -64,7 +64,7 @@
 		<height normal="120" />
 	</collision>
 	</npc>
-	<npc id="25738" level="75" type="L2RaidBoss" name="Queen Ant Drone Priest" title="Raid Boss">
+	<npc id="25738" level="75" type="RaidBoss" name="Queen Ant Drone Priest" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>BUG</race>
 		<acquire exp="174960000" sp="3936600" raidPoints="5" />
@@ -125,7 +125,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25739" level="75" type="L2RaidBoss" name="Angel Priest of Baium" title="Raid Boss">
+	<npc id="25739" level="75" type="RaidBoss" name="Angel Priest of Baium" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>DIVINE</race>
 		<equipment rhand="98" />
@@ -187,7 +187,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25740" level="80" type="L2Npc" name="Angel Blade" title="Raid Fighter">
+	<npc id="25740" level="80" type="Folk" name="Angel Blade" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -207,7 +207,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25741" level="80" type="L2Npc" name="Angel's Staff" title="Raid Fighter">
+	<npc id="25741" level="80" type="Folk" name="Angel's Staff" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -227,7 +227,7 @@
 			<height normal="38.5" />
 		</collision>
 	</npc>
-	<npc id="25742" level="75" type="L2RaidBoss" name="Priest of Core Decar" title="Raid Boss">
+	<npc id="25742" level="75" type="RaidBoss" name="Priest of Core Decar" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
 		<acquire exp="174960000" sp="3936600" raidPoints="5" />
@@ -289,7 +289,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25743" level="75" type="L2RaidBoss" name="Priest Orfen Lord Ipos" title="Raid Boss">
+	<npc id="25743" level="75" type="RaidBoss" name="Priest Orfen Lord Ipos" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="174960000" sp="3936600" raidPoints="5" />
@@ -350,7 +350,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25744" level="55" type="L2RaidBoss" name="Zombie Lord Dorkhon" title="Raid Boss">
+	<npc id="25744" level="55" type="RaidBoss" name="Zombie Lord Dorkhon" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<acquire exp="52925400" sp="1587762" raidPoints="5" />
@@ -393,7 +393,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25745" level="55" type="L2RaidBoss" name="Orc Timak Darphen" title="Raid Boss">
+	<npc id="25745" level="55" type="RaidBoss" name="Orc Timak Darphen" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="52925400" sp="1587762" raidPoints="5" />
@@ -437,7 +437,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25746" level="60" type="L2RaidBoss" name="Evil Magikus" title="Raid Boss">
+	<npc id="25746" level="60" type="RaidBoss" name="Evil Magikus" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>BEAST</race>
 		<acquire exp="83980800" sp="2519424" raidPoints="5" />
@@ -501,7 +501,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25747" level="60" type="L2RaidBoss" name="Rael Mahum Radium" title="Raid Boss">
+	<npc id="25747" level="60" type="RaidBoss" name="Rael Mahum Radium" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="83980800" sp="2519424" raidPoints="5" />
@@ -565,7 +565,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25748" level="60" type="L2RaidBoss" name="Rael Mahum Supercium" title="Raid Boss">
+	<npc id="25748" level="60" type="RaidBoss" name="Rael Mahum Supercium" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="83980800" sp="2519424" raidPoints="5" />
@@ -629,7 +629,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25749" level="60" type="L2RaidBoss" name="Tayga Feron King" title="Raid Boss">
+	<npc id="25749" level="60" type="RaidBoss" name="Tayga Feron King" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="83980800" sp="2519424" raidPoints="5" />
@@ -693,7 +693,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25750" level="60" type="L2RaidBoss" name="Tayga Marga Shaman" title="Raid Boss">
+	<npc id="25750" level="60" type="RaidBoss" name="Tayga Marga Shaman" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="38564" lhand="38432" />
@@ -758,7 +758,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25751" level="60" type="L2RaidBoss" name="Tayga Septon Champion" title="Raid Boss">
+	<npc id="25751" level="60" type="RaidBoss" name="Tayga Septon Champion" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="38429" lhand="38435" />
@@ -823,7 +823,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25752" level="80" type="L2Npc" name="Tayga Warrior" title="Raid Fighter">
+	<npc id="25752" level="80" type="Folk" name="Tayga Warrior" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -843,7 +843,7 @@
 			<height normal="27.4" />
 		</collision>
 	</npc>
-	<npc id="25753" level="80" type="L2Npc" name="Tayga Archer" title="Raid Fighter">
+	<npc id="25753" level="80" type="Folk" name="Tayga Archer" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -863,7 +863,7 @@
 			<height normal="26.6" />
 		</collision>
 	</npc>
-	<npc id="25754" level="65" type="L2RaidBoss" name="Flamestone Giant" title="Raid Boss">
+	<npc id="25754" level="65" type="RaidBoss" name="Flamestone Giant" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
@@ -906,7 +906,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25755" level="65" type="L2RaidBoss" name="Gross Salamander" title="Raid Boss">
+	<npc id="25755" level="65" type="RaidBoss" name="Gross Salamander" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>ELEMENTAL</race>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
@@ -950,7 +950,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25756" level="65" type="L2RaidBoss" name="Gross Dre Vanul" title="Raid Boss">
+	<npc id="25756" level="65" type="RaidBoss" name="Gross Dre Vanul" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
@@ -993,7 +993,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25757" level="65" type="L2RaidBoss" name="Gross Ifrit" title="Raid Boss">
+	<npc id="25757" level="65" type="RaidBoss" name="Gross Ifrit" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
@@ -1036,7 +1036,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25758" level="65" type="L2RaidBoss" name="Fiend Goblier" title="Raid Boss">
+	<npc id="25758" level="65" type="RaidBoss" name="Fiend Goblier" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
@@ -1079,7 +1079,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25759" level="65" type="L2RaidBoss" name="Fiend Cherkia" title="Raid Boss">
+	<npc id="25759" level="65" type="RaidBoss" name="Fiend Cherkia" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
@@ -1122,7 +1122,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25760" level="65" type="L2RaidBoss" name="Fiend Harthemon" title="Raid Boss">
+	<npc id="25760" level="65" type="RaidBoss" name="Fiend Harthemon" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
@@ -1165,7 +1165,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25761" level="65" type="L2RaidBoss" name="Fiend Sarboth" title="Raid Boss">
+	<npc id="25761" level="65" type="RaidBoss" name="Fiend Sarboth" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
@@ -1208,7 +1208,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25762" level="65" type="L2RaidBoss" name="Demon Bedukel" title="Raid Boss">
+	<npc id="25762" level="65" type="RaidBoss" name="Demon Bedukel" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
 		<equipment rhand="8203" lhand="8203" />
@@ -1252,7 +1252,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25763" level="65" type="L2RaidBoss" name="Bloody Witch Rumilla" title="Raid Boss">
+	<npc id="25763" level="65" type="RaidBoss" name="Bloody Witch Rumilla" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
@@ -1295,7 +1295,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25764" level="80" type="L2Npc" name="Demon Collector" title="Raid Fighter">
+	<npc id="25764" level="80" type="Folk" name="Demon Collector" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1314,7 +1314,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="25765" level="80" type="L2Npc" name="Demon Servant" title="Raid Fighter">
+	<npc id="25765" level="80" type="Folk" name="Demon Servant" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1334,7 +1334,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="25766" level="70" type="L2RaidBoss" name="Monster Minotaur" title="Raid Boss">
+	<npc id="25766" level="70" type="RaidBoss" name="Monster Minotaur" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="38448" />
@@ -1410,7 +1410,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25767" level="70" type="L2RaidBoss" name="Monster Bulleroth" title="Raid Boss">
+	<npc id="25767" level="70" type="RaidBoss" name="Monster Bulleroth" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
@@ -1485,7 +1485,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25768" level="70" type="L2RaidBoss" name="Dorcaus" title="Raid Boss">
+	<npc id="25768" level="70" type="RaidBoss" name="Dorcaus" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
@@ -1560,7 +1560,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25769" level="70" type="L2RaidBoss" name="Kerfaus" title="Raid Boss">
+	<npc id="25769" level="70" type="RaidBoss" name="Kerfaus" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
@@ -1635,7 +1635,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25770" level="70" type="L2RaidBoss" name="Milinaus" title="Raid Boss">
+	<npc id="25770" level="70" type="RaidBoss" name="Milinaus" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="38427" />
@@ -1711,7 +1711,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25771" level="80" type="L2Npc" name="Centaur Thrower" title="Raid Fighter">
+	<npc id="25771" level="80" type="Folk" name="Centaur Thrower" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1731,7 +1731,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="25772" level="70" type="L2RaidBoss" name="Evil Orc Zetahl" title="Raid Boss">
+	<npc id="25772" level="70" type="RaidBoss" name="Evil Orc Zetahl" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
@@ -1806,7 +1806,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25773" level="70" type="L2RaidBoss" name="Evil Orc Tabris" title="Raid Boss">
+	<npc id="25773" level="70" type="RaidBoss" name="Evil Orc Tabris" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
@@ -1881,7 +1881,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25774" level="70" type="L2RaidBoss" name="Evil Orc Ravolas" title="Raid Boss">
+	<npc id="25774" level="70" type="RaidBoss" name="Evil Orc Ravolas" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
@@ -1956,7 +1956,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25775" level="70" type="L2RaidBoss" name="Evil Orc Dephracor" title="Raid Boss">
+	<npc id="25775" level="70" type="RaidBoss" name="Evil Orc Dephracor" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
@@ -2031,7 +2031,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25776" level="70" type="L2RaidBoss" name="Amden Orc Turahot" title="Raid Boss">
+	<npc id="25776" level="70" type="RaidBoss" name="Amden Orc Turahot" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
@@ -2106,7 +2106,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25777" level="70" type="L2RaidBoss" name="Amden Orc Turation" title="Raid Boss">
+	<npc id="25777" level="70" type="RaidBoss" name="Amden Orc Turation" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="38425" />
@@ -2182,7 +2182,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25778" level="80" type="L2Npc" name="Puppet Orc Archer" title="Raid Fighter">
+	<npc id="25778" level="80" type="Folk" name="Puppet Orc Archer" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2202,7 +2202,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25779" level="75" type="L2RaidBoss" name="Gariott" title="Raid Boss">
+	<npc id="25779" level="75" type="RaidBoss" name="Gariott" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<acquire exp="131220000" sp="3936600" raidPoints="5" />
@@ -2262,7 +2262,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25780" level="75" type="L2RaidBoss" name="Varbasion" title="Raid Boss">
+	<npc id="25780" level="75" type="RaidBoss" name="Varbasion" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="131220000" sp="3936600" raidPoints="5" />
@@ -2323,7 +2323,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25781" level="75" type="L2RaidBoss" name="Varmoni" title="Raid Boss">
+	<npc id="25781" level="75" type="RaidBoss" name="Varmoni" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="131220000" sp="3936600" raidPoints="5" />
@@ -2383,7 +2383,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25782" level="75" type="L2RaidBoss" name="Overlord Muscel" title="Raid Boss">
+	<npc id="25782" level="75" type="RaidBoss" name="Overlord Muscel" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
 		<acquire exp="131220000" sp="3936600" raidPoints="5" />
@@ -2443,7 +2443,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25783" level="75" type="L2RaidBoss" name="Bathus Elbogen" title="Raid Boss">
+	<npc id="25783" level="75" type="RaidBoss" name="Bathus Elbogen" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
 		<acquire exp="131220000" sp="3936600" raidPoints="5" />
@@ -2503,7 +2503,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25784" level="75" type="L2RaidBoss" name="Daumen Kshana" title="Raid Boss">
+	<npc id="25784" level="75" type="RaidBoss" name="Daumen Kshana" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
 		<acquire exp="131220000" sp="3936600" raidPoints="5" />
@@ -2563,7 +2563,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25785" level="80" type="L2Npc" name="Lesser Giant Warrior" title="Raid Fighter">
+	<npc id="25785" level="80" type="Folk" name="Lesser Giant Warrior" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2583,7 +2583,7 @@
 			<height normal="69" />
 		</collision>
 	</npc>
-	<npc id="25786" level="80" type="L2Npc" name="Lesser Giant Soldier" title="Raid Fighter">
+	<npc id="25786" level="80" type="Folk" name="Lesser Giant Soldier" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2603,7 +2603,7 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="25787" level="35" type="L2RaidBoss" name="Death Knight" title="Raid Soul Drinker">
+	<npc id="25787" level="35" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="2652750" sp="79582" raidPoints="5" />
@@ -2636,7 +2636,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25788" level="45" type="L2RaidBoss" name="Death Knight" title="Raid Soul Drinker">
+	<npc id="25788" level="45" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="4762800" sp="142884" raidPoints="5" />
@@ -2669,7 +2669,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25789" level="55" type="L2RaidBoss" name="Death Knight" title="Raid Soul Drinker">
+	<npc id="25789" level="55" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="7873200" sp="236196" raidPoints="5" />
@@ -2702,7 +2702,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25790" level="65" type="L2RaidBoss" name="Death Knight" title="Raid Soul Drinker">
+	<npc id="25790" level="65" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="52925400" sp="1587762" raidPoints="5" />
@@ -2735,7 +2735,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25791" level="75" type="L2RaidBoss" name="Death Knight" title="Raid Soul Drinker">
+	<npc id="25791" level="75" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
@@ -2768,7 +2768,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25792" level="80" type="L2Npc" name="Death Knight" title="Raid Soul Drinker">
+	<npc id="25792" level="80" type="Folk" name="Death Knight" title="Raid Soul Drinker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2787,7 +2787,7 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="25793" level="80" type="L2Npc" name="Giant Golden Pig" title="Raid Boss">
+	<npc id="25793" level="80" type="Folk" name="Giant Golden Pig" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2806,7 +2806,7 @@
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="25794" level="62" type="L2Monster" name="Kutis" title="Kutus' Nemesis">
+	<npc id="25794" level="62" type="Monster" name="Kutis" title="Kutus' Nemesis">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="77" />
@@ -2840,7 +2840,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25795" level="64" type="L2Monster" name="Garan" title="Korim's Messenger">
+	<npc id="25795" level="64" type="Monster" name="Garan" title="Korim's Messenger">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="160" />
@@ -2874,7 +2874,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25796" level="66" type="L2Monster" name="Batur" title="Kelbar's Leader">
+	<npc id="25796" level="66" type="Monster" name="Batur" title="Kelbar's Leader">
 		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
 		<equipment rhand="75" />
@@ -2918,7 +2918,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25797" level="68" type="L2Monster" name="Venir" title="Kraven's Best Friend">
+	<npc id="25797" level="68" type="Monster" name="Venir" title="Kraven's Best Friend">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<equipment rhand="76" />
@@ -2952,7 +2952,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25798" level="70" type="L2Monster" name="Oel" title="Blue Flag Captain">
+	<npc id="25798" level="70" type="Monster" name="Oel" title="Blue Flag Captain">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="2503" />
@@ -2986,7 +2986,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25799" level="72" type="L2Monster" name="Taranka" title="Kandra's Follower">
+	<npc id="25799" level="72" type="Monster" name="Taranka" title="Kandra's Follower">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="2502" />

@@ -19,7 +19,7 @@ package handlers.bypasshandlers;
 import org.l2j.gameserver.data.xml.impl.MultisellData;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 public class Multisell implements IBypassHandler
@@ -44,13 +44,13 @@ public class Multisell implements IBypassHandler
 			if (command.toLowerCase().startsWith(COMMANDS[0])) // multisell
 			{
 				listId = Integer.parseInt(command.substring(9).trim());
-				MultisellData.getInstance().separateAndSend(listId, activeChar, (L2Npc) target, false);
+				MultisellData.getInstance().separateAndSend(listId, activeChar, (Npc) target, false);
 				return true;
 			}
 			else if (command.toLowerCase().startsWith(COMMANDS[1])) // exc_multisell
 			{
 				listId = Integer.parseInt(command.substring(13).trim());
-				MultisellData.getInstance().separateAndSend(listId, activeChar, (L2Npc) target, true);
+				MultisellData.getInstance().separateAndSend(listId, activeChar, (Npc) target, true);
 				return true;
 			}
 			return false;

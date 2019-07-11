@@ -26,7 +26,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
@@ -56,14 +56,14 @@ public class QuestLink implements IBypassHandler
 		}
 		if (quest.isEmpty())
 		{
-			showQuestWindow(activeChar, (L2Npc) target);
+			showQuestWindow(activeChar, (Npc) target);
 		}
 		else
 		{
 			final int questNameEnd = quest.indexOf(" ");
 			if (questNameEnd == -1)
 			{
-				showQuestWindow(activeChar, (L2Npc) target, quest);
+				showQuestWindow(activeChar, (Npc) target, quest);
 			}
 			else
 			{
@@ -74,14 +74,14 @@ public class QuestLink implements IBypassHandler
 	}
 	
 	/**
-	 * Open a choose quest window on client with all quests available of the L2NpcInstance.<br>
+	 * Open a choose quest window on client with all quests available of the Folk.<br>
 	 * <b><u>Actions</u>:</b><br>
-	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the Player</li>
-	 * @param player The Player that talk with the L2NpcInstance
-	 * @param npc The table containing quests of the L2NpcInstance
+	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the Folk to the Player</li>
+	 * @param player The Player that talk with the Folk
+	 * @param npc The table containing quests of the Folk
 	 * @param quests
 	 */
-	private static void showQuestChooseWindow(Player player, L2Npc npc, Collection<Quest> quests)
+	private static void showQuestChooseWindow(Player player, Npc npc, Collection<Quest> quests)
 	{
 		final StringBuilder sbStarted = new StringBuilder(128);
 		final StringBuilder sbCanStart = new StringBuilder(128);
@@ -169,24 +169,24 @@ public class QuestLink implements IBypassHandler
 			content = Quest.getNoQuestMsg(player);
 		}
 		
-		// Send a Server->Client packet NpcHtmlMessage to the Player in order to display the message of the L2NpcInstance
+		// Send a Server->Client packet NpcHtmlMessage to the Player in order to display the message of the Folk
 		content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
 		player.sendPacket(new NpcHtmlMessage(npc.getObjectId(), content));
 	}
 	
 	/**
-	 * Open a quest window on client with the text of the L2NpcInstance.<br>
+	 * Open a quest window on client with the text of the Folk.<br>
 	 * <b><u>Actions</u>:</b><br>
 	 * <ul>
 	 * <li>Get the text of the quest state in the folder data/scripts/quests/questId/stateId.htm</li>
-	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the Player</li>
+	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the Folk to the Player</li>
 	 * <li>Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet</li>
 	 * </ul>
 	 * @param player the Player that talk with the {@code npc}
-	 * @param npc the L2NpcInstance that chats with the {@code player}
+	 * @param npc the Folk that chats with the {@code player}
 	 * @param questId the Id of the quest to display the message
 	 */
-	private static void showQuestWindow(Player player, L2Npc npc, String questId)
+	private static void showQuestWindow(Player player, Npc npc, String questId)
 	{
 		String content = null;
 		
@@ -225,7 +225,7 @@ public class QuestLink implements IBypassHandler
 			content = Quest.getNoQuestMsg(player); // no quests found
 		}
 		
-		// Send a Server->Client packet NpcHtmlMessage to the Player in order to display the message of the L2NpcInstance
+		// Send a Server->Client packet NpcHtmlMessage to the Player in order to display the message of the Folk
 		if (content != null)
 		{
 			content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
@@ -239,9 +239,9 @@ public class QuestLink implements IBypassHandler
 	/**
 	 * Collect awaiting quests/start points and display a QuestChooseWindow (if several available) or QuestWindow.
 	 * @param player the Player that talk with the {@code npc}.
-	 * @param npc the L2NpcInstance that chats with the {@code player}.
+	 * @param npc the Folk that chats with the {@code player}.
 	 */
-	private static void showQuestWindow(Player player, L2Npc npc)
+	private static void showQuestWindow(Player player, Npc npc)
 	{
 		//@formatter:off
 		final Set<Quest> quests = npc.getListeners(EventType.ON_NPC_TALK).stream()

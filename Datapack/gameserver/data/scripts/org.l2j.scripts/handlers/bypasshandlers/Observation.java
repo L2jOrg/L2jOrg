@@ -20,8 +20,7 @@ import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2ObservationInstance;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -87,7 +86,7 @@ public class Observation implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, Player activeChar, Creature target)
 	{
-		if (!(target instanceof L2ObservationInstance))
+		if (!(target instanceof org.l2j.gameserver.model.actor.instance.Observation))
 		{
 			return false;
 		}
@@ -130,7 +129,7 @@ public class Observation implements IBypassHandler
 			{
 				if (SiegeManager.getInstance().getSiege(loc) != null)
 				{
-					doObserve(activeChar, (L2Npc) target, loc, cost);
+					doObserve(activeChar, (Npc) target, loc, cost);
 				}
 				else
 				{
@@ -140,19 +139,19 @@ public class Observation implements IBypassHandler
 			}
 			case "observeoracle": // Oracle Dusk/Dawn
 			{
-				doObserve(activeChar, (L2Npc) target, loc, cost);
+				doObserve(activeChar, (Npc) target, loc, cost);
 				return true;
 			}
 			case "observe": // Observe
 			{
-				doObserve(activeChar, (L2Npc) target, loc, cost);
+				doObserve(activeChar, (Npc) target, loc, cost);
 				return true;
 			}
 		}
 		return false;
 	}
 	
-	private static void doObserve(Player player, L2Npc npc, Location pos, long cost)
+	private static void doObserve(Player player, Npc npc, Location pos, long cost)
 	{
 		if (player.reduceAdena("Broadcast", cost, npc, true))
 		{

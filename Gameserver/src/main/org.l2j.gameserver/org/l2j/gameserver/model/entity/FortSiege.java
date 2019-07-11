@@ -10,9 +10,9 @@ import org.l2j.gameserver.enums.SiegeClanType;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.model.*;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Door;
-import org.l2j.gameserver.model.actor.instance.L2FortCommanderInstance;
+import org.l2j.gameserver.model.actor.instance.FortCommander;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.sieges.OnFortSiegeFinish;
@@ -371,7 +371,7 @@ public class FortSiege implements Siegable {
      *
      * @param instance
      */
-    public void killedCommander(L2FortCommanderInstance instance) {
+    public void killedCommander(FortCommander instance) {
         if ((_fort != null) && (!_commanders.isEmpty())) {
             final L2Spawn spawn = instance.getSpawn();
             if (spawn != null) {
@@ -438,7 +438,7 @@ public class FortSiege implements Siegable {
      *
      * @param flag
      */
-    public void killedFlag(L2Npc flag) {
+    public void killedFlag(Npc flag) {
         if (flag == null) {
             return;
         }
@@ -901,7 +901,7 @@ public class FortSiege implements Siegable {
     }
 
     @Override
-    public Set<L2Npc> getFlag(L2Clan clan) {
+    public Set<Npc> getFlag(L2Clan clan) {
         if (clan != null) {
             final L2SiegeClan sc = getAttackerClan(clan);
             if (sc != null) {

@@ -21,10 +21,9 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.Summon;
+import org.l2j.gameserver.model.actor.*;
+import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
@@ -62,7 +61,7 @@ public class SiegeGuards extends AbstractNpcAI
 		35134, 35135, 35136, 35176, 35177, 35178, 35218, 35219, 35220, 35261, 35262, 35263, 35264, 35265, 35308, 35309, 35310, 35352, 35353, 35354, 35497, 35498, 35499, 35500, 35501, 35544, 35545, 35546
 	};
 	//@formatter:on
-	private static final List<L2Npc> SPAWNED_GUARDS = new CopyOnWriteArrayList<>();
+	private static final List<Npc> SPAWNED_GUARDS = new CopyOnWriteArrayList<>();
 
 	public SiegeGuards()
 	{
@@ -80,8 +79,8 @@ public class SiegeGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player) {
-		for (L2Npc guard : SPAWNED_GUARDS) {
+	public String onAdvEvent(String event, Npc npc, Player player) {
+		for (Npc guard : SPAWNED_GUARDS) {
 			if (guard != null) {
 				if (guard.isDead()) {
 					SPAWNED_GUARDS.remove(guard);
@@ -113,25 +112,25 @@ public class SiegeGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, Player attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if ((attacker.getSiegeState() == 2) && !attacker.isRegisteredOnThisSiegeField(npc.getScriptValue()))
 		{
-			((L2Attackable) npc).stopHating(attacker);
+			((Attackable) npc).stopHating(attacker);
 			return null;
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, Player killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		SPAWNED_GUARDS.remove(npc);
 		return super.onKill(npc, killer, isSummon);
 	}
 
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setRandomWalking(false);
 		if ((npc.getTemplate().getBaseAttackType() != WeaponType.SWORD) && (npc.getTemplate().getBaseAttackType() != WeaponType.POLE))

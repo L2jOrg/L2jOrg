@@ -17,7 +17,7 @@
 package quests.Q11006_FuturePeople;
 
 import org.l2j.gameserver.enums.Race;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.quest.Quest;
@@ -61,7 +61,7 @@ public class Q11006_FuturePeople extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -138,7 +138,7 @@ public class Q11006_FuturePeople extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, Player talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);

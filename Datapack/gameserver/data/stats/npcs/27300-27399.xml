@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="27300" level="76" type="L2Monster" name="Stone Watchman Ezekiel" title="Quest Monster">
+	<npc id="27300" level="76" type="Monster" name="Stone Watchman Ezekiel" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="98" />
@@ -51,7 +51,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="27301" level="76" type="L2Monster" name="Stone Watchman Ezekiel" title="Quest Monster">
+	<npc id="27301" level="76" type="Monster" name="Stone Watchman Ezekiel" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="98" />
@@ -102,7 +102,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="27302" level="81" type="L2Monster" name="Stone Guardian Azrael" title="Quest Monster">
+	<npc id="27302" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="98" />
@@ -142,7 +142,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="27303" level="81" type="L2Monster" name="Stone Guardian Azrael" title="Quest Monster">
+	<npc id="27303" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="98" />
@@ -182,7 +182,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="27304" level="81" type="L2Monster" name="Stone Guardian Azrael" title="Quest Monster">
+	<npc id="27304" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="98" />
@@ -222,7 +222,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="27305" level="81" type="L2Monster" name="Stone Guardian Azrael" title="Quest Monster">
+	<npc id="27305" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="98" />
@@ -262,7 +262,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="27306" level="81" type="L2Monster" name="Stone Guardian Azrael" title="Quest Monster">
+	<npc id="27306" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="98" />
@@ -302,7 +302,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="27307" level="81" type="L2Monster" name="Stone Guardian Azrael" title="Quest Monster">
+	<npc id="27307" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="98" />
@@ -342,7 +342,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="27308" level="81" type="L2Monster" name="Assassin Frost" title="Quest Monster">
+	<npc id="27308" level="81" type="Monster" name="Assassin Frost" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -382,7 +382,7 @@
 			<height normal="23.5" grown="29" />
 		</collision>
 	</npc>
-	<npc id="27309" level="81" type="L2Monster" name="Minervia Van Hacken" title="Quest Monster">
+	<npc id="27309" level="81" type="Monster" name="Minervia Van Hacken" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -422,7 +422,7 @@
 			<height normal="21.5" grown="25.8" />
 		</collision>
 	</npc>
-	<npc id="27310" level="81" type="L2Monster" name="Kitanis Van Hacken" title="Quest Monster">
+	<npc id="27310" level="81" type="Monster" name="Kitanis Van Hacken" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -461,7 +461,7 @@
 			<height normal="25.8" />
 		</collision>
 	</npc>
-	<npc id="27311" level="81" type="L2Monster" name="Judgment Hound Dog Kelvas" title="Quest Monster">
+	<npc id="27311" level="81" type="Monster" name="Judgment Hound Dog Kelvas" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -500,7 +500,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27312" level="81" type="L2Monster" name="Mysterious Servitor" title="Quest Monster">
+	<npc id="27312" level="81" type="Monster" name="Mysterious Servitor" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="24" />
 			<param name="MoveAroundSocial1" value="24" />
@@ -539,7 +539,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="27313" level="76" type="L2Monster" name="Vision Guardian Shakiel" title="Quest Monster">
+	<npc id="27313" level="76" type="Monster" name="Vision Guardian Shakiel" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -585,7 +585,7 @@
 			<height normal="38.5" grown="46.5" />
 		</collision>
 	</npc>
-	<npc id="27314" level="76" type="L2Monster" name="Vision Guardian Shakiel" title="Quest Monster">
+	<npc id="27314" level="76" type="Monster" name="Vision Guardian Shakiel" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -631,7 +631,7 @@
 			<height normal="38.5" grown="46.5" />
 		</collision>
 	</npc>
-	<npc id="27315" level="76" type="L2Monster" name="Vision Guardian Shakiel" title="Quest Monster">
+	<npc id="27315" level="76" type="Monster" name="Vision Guardian Shakiel" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -677,7 +677,7 @@
 			<height normal="38.5" grown="46.5" />
 		</collision>
 	</npc>
-	<npc id="27316" level="70" type="L2Monster" name="Ice Monster" title="Quest Monster">
+	<npc id="27316" level="70" type="Monster" name="Ice Monster" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -715,7 +715,7 @@
 			<height normal="24" grown="28.8" />
 		</collision>
 	</npc>
-	<npc id="27317" level="70" type="L2Monster" name="Spirit of a Drowned" title="Quest Monster">
+	<npc id="27317" level="70" type="Monster" name="Spirit of a Drowned" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -753,7 +753,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="27318" level="70" type="L2Monster" name="Soul of Cold" title="Quest Monster">
+	<npc id="27318" level="70" type="Monster" name="Soul of Cold" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -791,7 +791,7 @@
 			<height normal="35.6" />
 		</collision>
 	</npc>
-	<npc id="27319" level="70" type="L2Monster" name="Ghost of Solitude" title="Quest Monster">
+	<npc id="27319" level="70" type="Monster" name="Ghost of Solitude" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -829,7 +829,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27320" level="70" type="L2Monster" name="Fiend of Cold" title="Quest Monster">
+	<npc id="27320" level="70" type="Monster" name="Fiend of Cold" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="35" />
 			<param name="MoveAroundSocial1" value="35" />
@@ -868,7 +868,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="27321" level="70" type="L2Monster" name="Spirit of Cold" title="Quest Monster">
+	<npc id="27321" level="70" type="Monster" name="Spirit of Cold" title="Quest Monster">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="291" />
@@ -902,7 +902,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="27322" level="80" type="L2Npc" name="Possessed Windsus" title="Quest Monster">
+	<npc id="27322" level="80" type="Folk" name="Possessed Windsus" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -921,7 +921,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="27323" level="80" type="L2Npc" name="Windsus Whelp" title="Quest Monster">
+	<npc id="27323" level="80" type="Folk" name="Windsus Whelp" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -940,7 +940,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="27324" level="80" type="L2Npc" name="Windsus of Terror" title="Quest Monster">
+	<npc id="27324" level="80" type="Folk" name="Windsus of Terror" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -959,7 +959,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="27325" level="80" type="L2Npc" name="Weak Windsus" title="Quest Monster">
+	<npc id="27325" level="80" type="Folk" name="Weak Windsus" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -978,7 +978,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="27326" level="80" type="L2Npc" name="Lesser Strain" title="Quest Monster">
+	<npc id="27326" level="80" type="Folk" name="Lesser Strain" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -997,7 +997,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="27327" level="80" type="L2Npc" name="Lesser Ghoul" title="Quest Monster">
+	<npc id="27327" level="80" type="Folk" name="Lesser Ghoul" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1016,7 +1016,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="27328" level="80" type="L2Npc" name="Lesser Granite Golem" title="Quest Monster">
+	<npc id="27328" level="80" type="Folk" name="Lesser Granite Golem" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1035,7 +1035,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="27329" level="80" type="L2Npc" name="Lesser Corpse Tracker" title="Quest Monster">
+	<npc id="27329" level="80" type="Folk" name="Lesser Corpse Tracker" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1054,7 +1054,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="27330" level="80" type="L2Npc" name="Iron Wild Boar" title="Quest Monster">
+	<npc id="27330" level="80" type="Folk" name="Iron Wild Boar" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

@@ -20,9 +20,9 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2WarehouseInstance;
+import org.l2j.gameserver.model.actor.instance.Warehouse;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -50,8 +50,8 @@ public class ClanWarehouse implements IBypassHandler
 			return false;
 		}
 		
-		final L2Npc npc = (L2Npc) target;
-		if (!(npc instanceof L2WarehouseInstance) && (npc.getClan() != null))
+		final Npc npc = (Npc) target;
+		if (!(npc instanceof Warehouse) && (npc.getClan() != null))
 		{
 			return false;
 		}

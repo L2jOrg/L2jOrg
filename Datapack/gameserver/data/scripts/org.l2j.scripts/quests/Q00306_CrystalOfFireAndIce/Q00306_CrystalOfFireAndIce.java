@@ -17,7 +17,7 @@
 package quests.Q00306_CrystalOfFireAndIce;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.quest.Quest;
@@ -64,7 +64,7 @@ public final class Q00306_CrystalOfFireAndIce extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, false);
 		if (st == null)
@@ -99,7 +99,7 @@ public final class Q00306_CrystalOfFireAndIce extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, Player killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs;
 		if (npc.getId() == UNDINE_NOBLE) // Undine Noble gives quest drops only for the killer
@@ -122,7 +122,7 @@ public final class Q00306_CrystalOfFireAndIce extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, Player player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -154,7 +154,7 @@ public final class Q00306_CrystalOfFireAndIce extends Quest
 		return htmltext;
 	}
 	
-	private static void giveKillReward(Player player, L2Npc npc)
+	private static void giveKillReward(Player player, Npc npc)
 	{
 		if (GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.npc;
 
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -24,13 +24,13 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author Zealar
  */
 public class OnNpcTeleport implements IBaseEvent {
-    private final L2Npc _npc;
+    private final Npc _npc;
 
-    public OnNpcTeleport(L2Npc npc) {
+    public OnNpcTeleport(Npc npc) {
         _npc = npc;
     }
 
-    public L2Npc getNpc() {
+    public Npc getNpc() {
         return _npc;
     }
 

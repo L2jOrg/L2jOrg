@@ -16,7 +16,7 @@
  */
 package ai.others.OlyBuffer;
 
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 
@@ -53,7 +53,7 @@ public final class OlyBuffer extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, Player player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (npc.getScriptValue() < 5)
@@ -64,7 +64,7 @@ public final class OlyBuffer extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (event.startsWith("giveBuff;") && (npc.getScriptValue() < 5))

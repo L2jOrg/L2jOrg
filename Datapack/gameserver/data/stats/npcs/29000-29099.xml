@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="29001" level="40" type="L2GrandBoss" name="Queen Ant">
+	<npc id="29001" level="40" type="GrandBoss" name="Queen Ant">
 		<parameters>
 			<minions name="Privates">
 				<npc id="29003" count="6" respawnTime="10" weightPoint="1" />
@@ -152,7 +152,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29002" level="29" type="L2Monster" name="Queen Ant Larva">
+	<npc id="29002" level="29" type="Monster" name="Queen Ant Larva">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire sp="1" />
@@ -191,7 +191,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="29003" level="35" type="L2Monster" name="Nurse Ant">
+	<npc id="29003" level="35" type="Monster" name="Nurse Ant">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire sp="1" />
@@ -231,7 +231,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29004" level="37" type="L2Monster" name="Escort Ant">
+	<npc id="29004" level="37" type="Monster" name="Escort Ant">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -275,7 +275,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29005" level="39" type="L2Monster" name="Royal Guard Ant">
+	<npc id="29005" level="39" type="Monster" name="Royal Guard Ant">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -319,7 +319,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29006" level="50" type="L2GrandBoss" name="Core">
+	<npc id="29006" level="50" type="GrandBoss" name="Core">
 		<parameters>
 			<minions name="Privates">
 				<npc id="29008" count="3" respawnTime="360" weightPoint="1" />
@@ -445,7 +445,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29007" level="50" type="L2Monster" name="Death Knight">
+	<npc id="29007" level="50" type="Monster" name="Death Knight">
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -526,7 +526,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="29008" level="55" type="L2Monster" name="Doom Wraith">
+	<npc id="29008" level="55" type="Monster" name="Doom Wraith">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -575,7 +575,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="29009" level="47" type="L2Monster" name="Dicor">
+	<npc id="29009" level="47" type="Monster" name="Dicor">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -649,7 +649,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="29010" level="46" type="L2Monster" name="Validus">
+	<npc id="29010" level="46" type="Monster" name="Validus">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -716,7 +716,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="29011" level="49" type="L2Monster" name="Susceptor">
+	<npc id="29011" level="49" type="Monster" name="Susceptor">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -762,7 +762,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="29012" level="48" type="L2Monster" name="Perum">
+	<npc id="29012" level="48" type="Monster" name="Perum">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -840,7 +840,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="29013" level="45" type="L2Monster" name="Premo">
+	<npc id="29013" level="45" type="Monster" name="Premo">
 		<parameters>
 			<param name="MoveAroundSocial" value="135" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -908,7 +908,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="29014" level="50" type="L2GrandBoss" name="Orfen">
+	<npc id="29014" level="50" type="GrandBoss" name="Orfen">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1013,7 +1013,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29015" level="48" type="L2Monster" name="Laikel">
+	<npc id="29015" level="48" type="Monster" name="Laikel">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1057,7 +1057,7 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="29016" level="49" type="L2Monster" name="Laikel Leos">
+	<npc id="29016" level="49" type="Monster" name="Laikel Leos">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1101,7 +1101,7 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="29017" level="48" type="L2Monster" name="Riba">
+	<npc id="29017" level="48" type="Monster" name="Riba">
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -1145,7 +1145,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="29018" level="49" type="L2Monster" name="Riba Iren">
+	<npc id="29018" level="49" type="Monster" name="Riba Iren">
 		<race>BUG</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2915" sp="215"/> <!-- Need confirm retail values -->
@@ -1185,7 +1185,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="29019" level="79" type="L2GrandBoss" name="Antharas">
+	<npc id="29019" level="79" type="GrandBoss" name="Antharas">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="262720917" sp="63053" />
@@ -1298,7 +1298,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29020" level="80" type="L2GrandBoss" name="Baium">
+	<npc id="29020" level="80" type="GrandBoss" name="Baium">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="1024738848" sp="30742165" raidPoints="450" />
@@ -1405,7 +1405,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29021" level="80" type="L2Monster" name="Archangel">
+	<npc id="29021" level="80" type="Monster" name="Archangel">
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="93" /> <!-- Winged Spear -->
@@ -1438,7 +1438,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="29022" level="75" type="L2GrandBoss" name="Zaken">
+	<npc id="29022" level="75" type="GrandBoss" name="Zaken">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="102487500" sp="3074625" raidPoints="0" />
@@ -1544,7 +1544,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29023" level="74" type="L2Monster" name="Maiden Doll">
+	<npc id="29023" level="74" type="Monster" name="Maiden Doll">
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -1604,7 +1604,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="29024" level="74" type="L2Monster" name="Veil Master">
+	<npc id="29024" level="74" type="Monster" name="Veil Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -1668,7 +1668,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="29025" level="75" type="L2Npc" name="Baium">
+	<npc id="29025" level="75" type="Folk" name="Baium">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
@@ -1701,7 +1701,7 @@
 			<height normal="82" />
 		</collision>
 	</npc>
-	<npc id="29026" level="60" type="L2Monster" name="Pirate Zombie Captain">
+	<npc id="29026" level="60" type="Monster" name="Pirate Zombie Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1743,7 +1743,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="29027" level="57" type="L2Monster" name="Pirate Zombie">
+	<npc id="29027" level="57" type="Monster" name="Pirate Zombie">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1785,7 +1785,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="29066" level="1" type="L2GrandBoss" name="Antharas">
+	<npc id="29066" level="1" type="GrandBoss" name="Antharas">
 		<parameters>
 			<param name="ultra_respawn_time" value="8" />
 		</parameters>
@@ -1895,7 +1895,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29067" level="1" type="L2GrandBoss" name="Antharas">
+	<npc id="29067" level="1" type="GrandBoss" name="Antharas">
 		<parameters>
 			<param name="ultra_respawn_time" value="5" />
 		</parameters>
@@ -2023,7 +2023,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29068" level="84" type="L2GrandBoss" name="Antharas" title="Land Dragon">
+	<npc id="29068" level="84" type="GrandBoss" name="Antharas" title="Land Dragon">
 		<!-- Todo: CT2.5 -->
 		<parameters>
 			<param name="ultra_respawn_time" value="3" />
@@ -2143,7 +2143,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29069" level="84" type="L2Monster" name="Behemoth Dragon">
+	<npc id="29069" level="84" type="Monster" name="Behemoth Dragon">
 		<!-- Todo: CT2.5 -->
 		<parameters>
 			<param name="RootingManage" value="0" />
@@ -2178,7 +2178,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="29070" level="79" type="L2Monster" name="Dragon Bomber">
+	<npc id="29070" level="79" type="Monster" name="Dragon Bomber">
 		<!-- Todo: CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
@@ -2218,7 +2218,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="29071" level="1" type="L2Monster" name="Dragon Bomber">
+	<npc id="29071" level="1" type="Monster" name="Dragon Bomber">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
@@ -2256,7 +2256,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="29072" level="1" type="L2Monster" name="Dragon Bomber">
+	<npc id="29072" level="1" type="Monster" name="Dragon Bomber">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
@@ -2294,7 +2294,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="29073" level="1" type="L2Monster" name="Dragon Bomber">
+	<npc id="29073" level="1" type="Monster" name="Dragon Bomber">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
@@ -2332,7 +2332,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="29074" level="1" type="L2Monster" name="Dragon Bomber">
+	<npc id="29074" level="1" type="Monster" name="Dragon Bomber">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
@@ -2370,7 +2370,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="29075" level="1" type="L2Monster" name="Dragon Bomber">
+	<npc id="29075" level="1" type="Monster" name="Dragon Bomber">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
@@ -2408,7 +2408,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="29076" level="1" type="L2Monster" name="Dragon Bomber">
+	<npc id="29076" level="1" type="Monster" name="Dragon Bomber">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
@@ -2446,7 +2446,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="29077" level="78" type="L2Monster" name="">
+	<npc id="29077" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="177456" />
 			<param name="suicide2_x" value="177120" />
@@ -2496,7 +2496,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29078" level="78" type="L2Monster" name="">
+	<npc id="29078" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="175952" />
 			<param name="suicide2_x" value="175712" />
@@ -2546,7 +2546,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29079" level="78" type="L2Monster" name="">
+	<npc id="29079" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="175120" />
 			<param name="suicide2_x" value="175024" />
@@ -2596,7 +2596,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29080" level="78" type="L2Monster" name="">
+	<npc id="29080" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="174640" />
 			<param name="suicide2_x" value="174576" />
@@ -2646,7 +2646,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29081" level="78" type="L2Monster" name="">
+	<npc id="29081" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="173968" />
 			<param name="suicide2_x" value="173856" />
@@ -2696,7 +2696,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29082" level="78" type="L2Monster" name="">
+	<npc id="29082" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="173920" />
 			<param name="suicide2_x" value="174064" />
@@ -2746,7 +2746,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29083" level="78" type="L2Monster" name="">
+	<npc id="29083" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="174704" />
 			<param name="suicide2_x" value="174800" />
@@ -2796,7 +2796,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29084" level="78" type="L2Monster" name="">
+	<npc id="29084" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="175424" />
 			<param name="suicide2_x" value="175632" />
@@ -2846,7 +2846,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29085" level="78" type="L2Monster" name="">
+	<npc id="29085" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="176880" />
 			<param name="suicide2_x" value="177200" />
@@ -2896,7 +2896,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29086" level="78" type="L2Monster" name="">
+	<npc id="29086" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="178368" />
 			<param name="suicide2_x" value="178592" />
@@ -2946,7 +2946,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29087" level="78" type="L2Monster" name="">
+	<npc id="29087" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="179696" />
 			<param name="suicide2_x" value="179920" />
@@ -2996,7 +2996,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29088" level="78" type="L2Monster" name="">
+	<npc id="29088" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="180592" />
 			<param name="suicide2_x" value="180752" />
@@ -3046,7 +3046,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29089" level="78" type="L2Monster" name="">
+	<npc id="29089" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="180896" />
 			<param name="suicide2_x" value="180784" />
@@ -3096,7 +3096,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29090" level="78" type="L2Monster" name="">
+	<npc id="29090" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="180496" />
 			<param name="suicide2_x" value="180512" />
@@ -3146,7 +3146,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29091" level="78" type="L2Monster" name="">
+	<npc id="29091" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="180896" />
 			<param name="suicide2_x" value="181040" />
@@ -3196,7 +3196,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29092" level="78" type="L2Monster" name="">
+	<npc id="29092" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="180720" />
 			<param name="suicide2_x" value="180640" />
@@ -3246,7 +3246,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29093" level="78" type="L2Monster" name="">
+	<npc id="29093" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="180048" />
 			<param name="suicide2_x" value="179920" />
@@ -3296,7 +3296,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29094" level="78" type="L2Monster" name="">
+	<npc id="29094" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="178848" />
 			<param name="suicide2_x" value="178560" />
@@ -3346,7 +3346,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29099" level="80" type="L2Npc" name="Baium">
+	<npc id="29099" level="80" type="Folk" name="Baium">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

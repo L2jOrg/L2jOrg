@@ -3,7 +3,7 @@ package ai.others.Spawns;
 import ai.AbstractNpcAI;
 import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
@@ -31,7 +31,7 @@ public final class EilhalderVonHellmann extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("delete") && (npc != null))
 		{
@@ -41,7 +41,7 @@ public final class EilhalderVonHellmann extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		// Spawn that comes from RaidBossSpawnManager
 		if ((npc.getSpawn() == null) || (npc.getSpawn().getNpcSpawnTemplate() == null))
@@ -52,14 +52,14 @@ public final class EilhalderVonHellmann extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onSpawnNpc(SpawnTemplate template, SpawnGroup group, L2Npc npc)
+	public void onSpawnNpc(SpawnTemplate template, SpawnGroup group, Npc npc)
 	{
 		LOGGER.info("Spawning Night Raid Boss " + npc.getName());
 		DBSpawnManager.getInstance().notifySpawnNightNpc(npc);
 	}
 	
 	@Override
-	public void onSpawnDespawnNpc(SpawnTemplate template, SpawnGroup group, L2Npc npc)
+	public void onSpawnDespawnNpc(SpawnTemplate template, SpawnGroup group, Npc npc)
 	{
 		LOGGER.info("Despawning Night Raid Boss " + npc.getName());
 	}

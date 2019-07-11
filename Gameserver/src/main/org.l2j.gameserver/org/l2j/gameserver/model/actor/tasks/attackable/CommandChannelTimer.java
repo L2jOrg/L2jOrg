@@ -2,15 +2,15 @@ package org.l2j.gameserver.model.actor.tasks.attackable;
 
 import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.model.actor.Attackable;
 
 /**
  * @author xban1x
  */
 public final class CommandChannelTimer implements Runnable {
-    private final L2Attackable _attackable;
+    private final Attackable _attackable;
 
-    public CommandChannelTimer(L2Attackable attackable) {
+    public CommandChannelTimer(Attackable attackable) {
         _attackable = attackable;
     }
 

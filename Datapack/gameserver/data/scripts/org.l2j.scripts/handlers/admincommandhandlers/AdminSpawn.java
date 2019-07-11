@@ -28,7 +28,7 @@ import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -91,13 +91,13 @@ public class AdminSpawn implements IAdminCommandHandler
 		{
 			final StringTokenizer st = new StringTokenizer(command, " ");
 			final WorldObject target = activeChar.getTarget();
-			if (target instanceof L2Npc)
+			if (target instanceof Npc)
 			{
 				try
 				{
 					st.nextToken();
 					final int type = Integer.parseInt(st.nextToken());
-					printSpawn((L2Npc) target, type);
+					printSpawn((Npc) target, type);
 					if (command.contains("_menu"))
 					{
 						AdminHtml.showAdminHtml(activeChar, "spawns_debug.htm");
@@ -176,7 +176,7 @@ public class AdminSpawn implements IAdminCommandHandler
 					final Instance inst = InstanceManager.getInstance().getInstance(instance);
 					if (inst != null)
 					{
-						for (L2Npc npc : inst.getNpcs())
+						for (Npc npc : inst.getNpcs())
 						{
 							if (!npc.isDead())
 							{
@@ -220,7 +220,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			// Unload all zones.
 			ZoneManager.getInstance().unload();
 			// Delete all spawns.
-			for (L2Npc npc : DBSpawnManager.getInstance().getNpcs().values())
+			for (Npc npc : DBSpawnManager.getInstance().getNpcs().values())
 			{
 				if (npc != null)
 				{
@@ -233,7 +233,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			{
 				if ((obj != null) && obj.isNpc())
 				{
-					final L2Npc target = (L2Npc) obj;
+					final Npc target = (Npc) obj;
 					target.deleteMe();
 					final L2Spawn spawn = target.getSpawn();
 					if (spawn != null)
@@ -255,7 +255,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			// Unload all zones.
 			ZoneManager.getInstance().unload();
 			// Delete all spawns.
-			for (L2Npc npc : DBSpawnManager.getInstance().getNpcs().values())
+			for (Npc npc : DBSpawnManager.getInstance().getNpcs().values())
 			{
 				if (npc != null)
 				{
@@ -268,7 +268,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			{
 				if ((obj != null) && obj.isNpc())
 				{
-					final L2Npc target = (L2Npc) obj;
+					final Npc target = (Npc) obj;
 					target.deleteMe();
 					final L2Spawn spawn = target.getSpawn();
 					if (spawn != null)
@@ -439,7 +439,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
 		{
 			index++;
-			final L2Npc npc = spawn.getLastSpawn();
+			final Npc npc = spawn.getLastSpawn();
 			if (teleportIndex > -1)
 			{
 				if (teleportIndex == index)
@@ -470,7 +470,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 	}
 	
-	private void printSpawn(L2Npc target, int type)
+	private void printSpawn(Npc target, int type)
 	{
 		final int i = target.getId();
 		final int x = target.getSpawn().getX();

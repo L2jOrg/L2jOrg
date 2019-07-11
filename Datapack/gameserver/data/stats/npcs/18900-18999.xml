@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="18919" level="85" type="L2Monster" name="">
+	<npc id="18919" level="85" type="Monster" name="">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -33,7 +33,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18926" level="80" type="L2Npc" name="Varka's Althar">
+	<npc id="18926" level="80" type="Folk" name="Varka's Althar">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -52,7 +52,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="18927" level="80" type="L2Npc" name="Bonfire">
+	<npc id="18927" level="80" type="Folk" name="Bonfire">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -71,7 +71,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="18928" level="80" type="L2Npc" name="Bonfire">
+	<npc id="18928" level="80" type="Folk" name="Bonfire">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

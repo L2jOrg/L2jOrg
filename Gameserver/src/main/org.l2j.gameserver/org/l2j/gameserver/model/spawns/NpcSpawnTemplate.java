@@ -10,8 +10,8 @@ import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.holders.MinionHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -43,7 +43,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
     private final String _dbName;
     private final SpawnTemplate _spawnTemplate;
     private final SpawnGroup _group;
-    private final Set<L2Npc> _spawnedNpcs = ConcurrentHashMap.newKeySet();
+    private final Set<Npc> _spawnedNpcs = ConcurrentHashMap.newKeySet();
     private List<ChanceLocation> _locations;
     private L2SpawnTerritory _zone;
     private StatsSet _parameters;
@@ -202,7 +202,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
         _minions.add(minion);
     }
 
-    public Set<L2Npc> getSpawnedNpcs() {
+    public Set<Npc> getSpawnedNpcs() {
         return _spawnedNpcs;
     }
 
@@ -307,17 +307,17 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
 
         if (_saveInDB) {
             if (!DBSpawnManager.getInstance().isDefined(_id)) {
-                final L2Npc spawnedNpc = DBSpawnManager.getInstance().addNewSpawn(spawn, true);
+                final Npc spawnedNpc = DBSpawnManager.getInstance().addNewSpawn(spawn, true);
                 if ((spawnedNpc != null) && spawnedNpc.isMonster() && (_minions != null)) {
-                    ((L2MonsterInstance) spawnedNpc).getMinionList().spawnMinions(_minions);
+                    ((Monster) spawnedNpc).getMinionList().spawnMinions(_minions);
                 }
 
                 _spawnedNpcs.add(spawnedNpc);
             }
         } else {
-            final L2Npc npc = spawn.doSpawn(_spawnAnimation);
+            final Npc npc = spawn.doSpawn(_spawnAnimation);
             if (npc.isMonster() && (_minions != null)) {
-                ((L2MonsterInstance) npc).getMinionList().spawnMinions(_minions);
+                ((Monster) npc).getMinionList().spawnMinions(_minions);
             }
             _spawnedNpcs.add(npc);
 
@@ -335,15 +335,15 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
         _spawnedNpcs.clear();
     }
 
-    public void notifySpawnNpc(L2Npc npc) {
+    public void notifySpawnNpc(Npc npc) {
         _spawnTemplate.notifyEvent(event -> event.onSpawnNpc(_spawnTemplate, _group, npc));
     }
 
-    public void notifyDespawnNpc(L2Npc npc) {
+    public void notifyDespawnNpc(Npc npc) {
         _spawnTemplate.notifyEvent(event -> event.onSpawnDespawnNpc(_spawnTemplate, _group, npc));
     }
 
-    public void notifyNpcDeath(L2Npc npc, Creature killer) {
+    public void notifyNpcDeath(Npc npc, Creature killer) {
         _spawnTemplate.notifyEvent(event -> event.onSpawnNpcDeath(_spawnTemplate, _group, npc, killer));
     }
 

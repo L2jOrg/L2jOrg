@@ -1,10 +1,10 @@
 package org.l2j.gameserver.model.actor.status;
 
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
 
 public class AttackableStatus extends NpcStatus {
-    public AttackableStatus(L2Attackable activeChar) {
+    public AttackableStatus(Attackable activeChar) {
         super(activeChar);
     }
 
@@ -43,7 +43,7 @@ public class AttackableStatus extends NpcStatus {
     }
 
     @Override
-    public L2Attackable getActiveChar() {
-        return (L2Attackable) super.getActiveChar();
+    public Attackable getActiveChar() {
+        return (Attackable) super.getActiveChar();
     }
 }

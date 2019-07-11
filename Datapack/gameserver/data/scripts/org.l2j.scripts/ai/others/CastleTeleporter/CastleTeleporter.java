@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.network.NpcStringId;
@@ -77,7 +77,7 @@ public final class CastleTeleporter extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final StringTokenizer st = new StringTokenizer(event, " ");
 		final String action = st.nextToken();
@@ -171,7 +171,7 @@ public final class CastleTeleporter extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, Player player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (CommonUtil.contains(MASS_TELEPORTERS, npc.getId()))
@@ -208,7 +208,7 @@ public final class CastleTeleporter extends AbstractNpcAI
 		return loc;
 	}
 	
-	private String getHtmlName(L2Npc npc)
+	private String getHtmlName(Npc npc)
 	{
 		switch (npc.getId())
 		{
@@ -246,7 +246,7 @@ public final class CastleTeleporter extends AbstractNpcAI
 		return String.valueOf(npc.getId());
 	}
 	
-	private boolean isOwner(Player player, L2Npc npc)
+	private boolean isOwner(Player player, Npc npc)
 	{
 		return player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId()) && player.isClanLeader());
 	}

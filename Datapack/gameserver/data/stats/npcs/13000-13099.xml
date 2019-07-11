@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="13001" level="70" type="L2Npc" name="Heart of Warding">
+	<npc id="13001" level="70" type="Folk" name="Heart of Warding">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="490" sp="10" />
@@ -34,7 +34,7 @@
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="13002" level="20" type="L2ControlTower" name="Life Control Tower">
+	<npc id="13002" level="20" type="ControlTower" name="Life Control Tower">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="40" sp="10" />
@@ -68,7 +68,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="13003" level="20" type="L2ControlTower" name="Life Control Tower">
+	<npc id="13003" level="20" type="ControlTower" name="Life Control Tower">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="40" sp="10" />
@@ -102,7 +102,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="13004" level="20" type="L2FlameTower" name="Flame Control Tower">
+	<npc id="13004" level="20" type="FlameTower" name="Flame Control Tower">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="40" sp="10" />
@@ -136,7 +136,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="13005" level="20" type="L2FlameTower" name="Flame Control Tower">
+	<npc id="13005" level="20" type="FlameTower" name="Flame Control Tower">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="40" sp="10" />
@@ -170,7 +170,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="13016" level="81" type="L2Monster" name="King Squash">
+	<npc id="13016" level="81" type="Monster" name="King Squash">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -204,7 +204,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13017" level="81" type="L2Monster" name="Emperor Squash">
+	<npc id="13017" level="81" type="Monster" name="Emperor Squash">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">

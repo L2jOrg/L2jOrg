@@ -3,6 +3,7 @@ package handlers.dailymissionhandlers;
 import java.util.List;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
@@ -10,7 +11,6 @@ import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
 import org.l2j.gameserver.model.L2CommandChannel;
 import org.l2j.gameserver.model.L2Party;
-import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableKill;
@@ -38,7 +38,7 @@ public class BossDailyMissionHandler extends AbstractDailyMissionHandler
 	
 	private void onAttackableKill(OnAttackableKill event)
 	{
-		final L2Attackable monster = event.getTarget();
+		final Attackable monster = event.getTarget();
 		final Player player = event.getAttacker();
 		if (monster.isRaid() && (monster.getInstanceId() > 0) && (player != null))
 		{

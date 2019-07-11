@@ -5,8 +5,8 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.SeedProduction;
-import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2MerchantInstance;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -77,8 +77,8 @@ public class RequestBuySeed extends ClientPacket {
             return;
         }
 
-        final L2Npc manager = player.getLastFolkNPC();
-        if (!(manager instanceof L2MerchantInstance) || !manager.canInteract(player) || (manager.getParameters().getInt("manor_id", -1) != _manorId)) {
+        final Npc manager = player.getLastFolkNPC();
+        if (!(manager instanceof Merchant) || !manager.canInteract(player) || (manager.getParameters().getInt("manor_id", -1) != _manorId)) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

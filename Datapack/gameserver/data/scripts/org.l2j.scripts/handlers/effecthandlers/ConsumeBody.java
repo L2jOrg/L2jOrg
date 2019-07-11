@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -52,7 +52,7 @@ public final class ConsumeBody extends AbstractEffect
 		
 		if (effected.isNpc())
 		{
-			((L2Npc) effected).endDecayTask();
+			((Npc) effected).endDecayTask();
 		}
 	}
 }

@@ -3,7 +3,7 @@ package org.l2j.gameserver.instancemanager;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.CursedWeapon;
-import org.l2j.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.*;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -191,8 +191,8 @@ public final class CursedWeaponsManager extends GameXmlReader {
         }
     }
 
-    public synchronized void checkDrop(L2Attackable attackable, Player player) {
-        if ((attackable instanceof L2DefenderInstance) || (attackable instanceof L2GuardInstance) || (attackable instanceof L2GrandBossInstance) || (attackable instanceof L2FeedableBeastInstance) || (attackable instanceof L2FortCommanderInstance)) {
+    public synchronized void checkDrop(Attackable attackable, Player player) {
+        if ((attackable instanceof Defender) || (attackable instanceof Guard) || (attackable instanceof GrandBoss) || (attackable instanceof FeedableBeast) || (attackable instanceof FortCommander)) {
             return;
         }
 

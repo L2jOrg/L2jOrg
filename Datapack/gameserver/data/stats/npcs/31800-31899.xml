@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="31842" level="70" type="L2Npc" name="Teleportation Cubic">
+	<npc id="31842" level="70" type="Folk" name="Teleportation Cubic">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -39,7 +39,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="31843" level="70" type="L2Teleporter" name="Teleportation Cubic">
+	<npc id="31843" level="70" type="Teleporter" name="Teleportation Cubic">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -78,7 +78,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="31844" level="50" type="L2Monster" name="Aracna">
+	<npc id="31844" level="50" type="Monster" name="Aracna">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -121,7 +121,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="31845" level="50" type="L2FriendlyMob" name="Bloody Pixy">
+	<npc id="31845" level="50" type="FriendlyMob" name="Bloody Pixy">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -164,7 +164,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31846" level="50" type="L2Monster" name="Satyros">
+	<npc id="31846" level="50" type="Monster" name="Satyros">
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -208,7 +208,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31847" level="50" type="L2Monster" name="Pan">
+	<npc id="31847" level="50" type="Monster" name="Pan">
 		<parameters>
 			<param name="Attack_BoostValue" value="155" />
 		</parameters>
@@ -250,7 +250,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31848" level="50" type="L2FriendlyMob" name="Fairy">
+	<npc id="31848" level="50" type="FriendlyMob" name="Fairy">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -293,7 +293,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31849" level="50" type="L2Monster" name="Red Arachne">
+	<npc id="31849" level="50" type="Monster" name="Red Arachne">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -336,7 +336,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="31850" level="50" type="L2FriendlyMob" name="Blight Treant">
+	<npc id="31850" level="50" type="FriendlyMob" name="Blight Treant">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -380,7 +380,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="31851" level="50" type="L2FriendlyMob" name="Treant">
+	<npc id="31851" level="50" type="FriendlyMob" name="Treant">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -424,7 +424,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="31852" level="50" type="L2Npc" name="Pixy Murika">
+	<npc id="31852" level="50" type="Folk" name="Pixy Murika">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -466,7 +466,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31853" level="50" type="L2FriendlyMob" name="Treant Bremec">
+	<npc id="31853" level="50" type="FriendlyMob" name="Treant Bremec">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -509,7 +509,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="31854" level="70" type="L2Npc" name="Event Manager">
+	<npc id="31854" level="70" type="Folk" name="Event Manager">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
@@ -543,7 +543,7 @@
 			<height normal="20.5" />
 		</collision>
 	</npc>
-	<npc id="31855" level="70" type="L2Npc" name="Event Manager">
+	<npc id="31855" level="70" type="Folk" name="Event Manager">
 		<race>ELF</race>
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
@@ -577,7 +577,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="31856" level="70" type="L2Npc" name="Event Manager">
+	<npc id="31856" level="70" type="Folk" name="Event Manager">
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
@@ -611,7 +611,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31857" level="70" type="L2Npc" name="Event Manager">
+	<npc id="31857" level="70" type="Folk" name="Event Manager">
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
@@ -645,7 +645,7 @@
 			<height normal="18.5" />
 		</collision>
 	</npc>
-	<npc id="31858" level="70" type="L2Npc" name="Event Manager">
+	<npc id="31858" level="70" type="Folk" name="Event Manager">
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
@@ -679,7 +679,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31859" level="70" type="L2Npc" name="Teleportation Cubic">
+	<npc id="31859" level="70" type="Folk" name="Teleportation Cubic">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -718,7 +718,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="31860" level="70" type="L2Npc" name="Puss the Cat" title="Event Manager">
+	<npc id="31860" level="70" type="Folk" name="Puss the Cat" title="Event Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -757,7 +757,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="31861" level="56" type="L2Teleporter" name="Gatekeeper">
+	<npc id="31861" level="56" type="Teleporter" name="Gatekeeper">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<acquire exp="313" sp="10" />
@@ -796,7 +796,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31862" level="70" type="L2Npc" name="Angelic Vortex">
+	<npc id="31862" level="70" type="Folk" name="Angelic Vortex">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="490" sp="10" />
@@ -831,7 +831,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31863" level="70" type="L2Npc" name="Sky" title="Blue's Chamberlain">
+	<npc id="31863" level="70" type="Folk" name="Sky" title="Blue's Chamberlain">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="85" />

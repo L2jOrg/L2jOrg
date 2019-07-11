@@ -19,8 +19,8 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -59,11 +59,11 @@ public final class GetAgro extends AbstractEffect
 			effected.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, effector);
 			
 			// Monsters from the same clan should assist.
-			final L2NpcTemplate template = ((L2Attackable) effected).getTemplate();
+			final L2NpcTemplate template = ((Attackable) effected).getTemplate();
 			final Set<Integer> clans = template.getClans();
 			if (clans != null)
 			{
-				for (L2Attackable nearby : L2World.getInstance().getVisibleObjectsInRange(effected, L2Attackable.class, template.getClanHelpRange()))
+				for (Attackable nearby : L2World.getInstance().getVisibleObjectsInRange(effected, Attackable.class, template.getClanHelpRange()))
 				{
 					if (!nearby.isMovementDisabled() && nearby.getTemplate().isClan(clans))
 					{

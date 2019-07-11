@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="18200" level="85" type="L2Monster" name="Charm of Corner">
+	<npc id="18200" level="85" type="Monster" name="Charm of Corner">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="4019412" sp="60291" />
@@ -27,7 +27,7 @@
 			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
 		</skillList>
 	</npc>
-	<npc id="18201" level="85" type="L2Monster" name="Charm of Corner">
+	<npc id="18201" level="85" type="Monster" name="Charm of Corner">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="4019412" sp="60291" />
@@ -54,7 +54,7 @@
 			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
 		</skillList>
 	</npc>
-	<npc id="18202" level="85" type="L2Monster" name="Charm of Corner">
+	<npc id="18202" level="85" type="Monster" name="Charm of Corner">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="4019412" sp="60291" />
@@ -81,7 +81,7 @@
 			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
 		</skillList>
 	</npc>
-	<npc id="18203" level="85" type="L2Monster" name="Charm of Corner">
+	<npc id="18203" level="85" type="Monster" name="Charm of Corner">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="4019412" sp="60291" />
@@ -108,7 +108,7 @@
 			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
 		</skillList>
 	</npc>
-	<npc id="18204" level="85" type="L2Monster" name="Charm of Corner">
+	<npc id="18204" level="85" type="Monster" name="Charm of Corner">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="4019412" sp="60291" />
@@ -135,7 +135,7 @@
 			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
 		</skillList>
 	</npc>
-	<npc id="18205" level="85" type="L2Monster" name="Charm of Corner">
+	<npc id="18205" level="85" type="Monster" name="Charm of Corner">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="4019412" sp="60291" />
@@ -162,7 +162,7 @@
 			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
 		</skillList>
 	</npc>
-	<npc id="18206" level="85" type="L2Monster" name="Charm of Corner">
+	<npc id="18206" level="85" type="Monster" name="Charm of Corner">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="4019412" sp="60291" />
@@ -189,7 +189,7 @@
 			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
 		</skillList>
 	</npc>
-	<npc id="18207" level="85" type="L2Monster" name="Charm of Corner">
+	<npc id="18207" level="85" type="Monster" name="Charm of Corner">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="4019412" sp="60291" />
@@ -216,7 +216,7 @@
 			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
 		</skillList>
 	</npc>
-	<npc id="18208" level="85" type="L2Monster" name="Charm of Corner">
+	<npc id="18208" level="85" type="Monster" name="Charm of Corner">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="4019412" sp="60291" />
@@ -243,7 +243,7 @@
 			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
 		</skillList>
 	</npc>
-	<npc id="18209" level="85" type="L2Monster" name="Charm of Corner">
+	<npc id="18209" level="85" type="Monster" name="Charm of Corner">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="4019412" sp="60291" />
@@ -270,7 +270,7 @@
 			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
 		</skillList>
 	</npc>
-	<npc id="18210" level="85" type="L2Monster" name="Charm of Corner">
+	<npc id="18210" level="85" type="Monster" name="Charm of Corner">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="4019412" sp="60291" />
@@ -297,7 +297,7 @@
 			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
 		</skillList>
 	</npc>
-	<npc id="18211" level="85" type="L2Monster" name="Charm of Corner">
+	<npc id="18211" level="85" type="Monster" name="Charm of Corner">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="4019412" sp="60291" />
@@ -324,7 +324,7 @@
 			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
 		</skillList>
 	</npc>
-	<npc id="18212" level="80" type="L2Npc" name="Halisha's Archon">
+	<npc id="18212" level="80" type="Folk" name="Halisha's Archon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -344,7 +344,7 @@
 			<height normal="57.75" />
 		</collision>
 	</npc>
-	<npc id="18213" level="80" type="L2Npc" name="Halisha's Archon">
+	<npc id="18213" level="80" type="Folk" name="Halisha's Archon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -364,7 +364,7 @@
 			<height normal="57.75" />
 		</collision>
 	</npc>
-	<npc id="18214" level="80" type="L2Npc" name="Halisha's Archon">
+	<npc id="18214" level="80" type="Folk" name="Halisha's Archon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -384,7 +384,7 @@
 			<height normal="57.75" />
 		</collision>
 	</npc>
-	<npc id="18215" level="80" type="L2Npc" name="Halisha's Archon">
+	<npc id="18215" level="80" type="Folk" name="Halisha's Archon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -404,7 +404,7 @@
 			<height normal="57.75" />
 		</collision>
 	</npc>
-	<npc id="18216" level="80" type="L2Npc" name="Halisha's Archon">
+	<npc id="18216" level="80" type="Folk" name="Halisha's Archon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -424,7 +424,7 @@
 			<height normal="57.75" />
 		</collision>
 	</npc>
-	<npc id="18217" level="80" type="L2Npc" name="Halisha's Archon">
+	<npc id="18217" level="80" type="Folk" name="Halisha's Archon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -444,7 +444,7 @@
 			<height normal="57.75" />
 		</collision>
 	</npc>
-	<npc id="18218" level="80" type="L2Npc" name="Halisha's Archon">
+	<npc id="18218" level="80" type="Folk" name="Halisha's Archon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -464,7 +464,7 @@
 			<height normal="57.75" />
 		</collision>
 	</npc>
-	<npc id="18219" level="80" type="L2Npc" name="Halisha's Archon">
+	<npc id="18219" level="80" type="Folk" name="Halisha's Archon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -484,7 +484,7 @@
 			<height normal="57.75" />
 		</collision>
 	</npc>
-	<npc id="18220" level="80" type="L2Npc" name="Shaman of Darkness">
+	<npc id="18220" level="80" type="Folk" name="Shaman of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -504,7 +504,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18221" level="80" type="L2Npc" name="Shaman of Darkness">
+	<npc id="18221" level="80" type="Folk" name="Shaman of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -524,7 +524,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18222" level="80" type="L2Npc" name="Assassin of Darkness">
+	<npc id="18222" level="80" type="Folk" name="Assassin of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -543,7 +543,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="18223" level="80" type="L2Npc" name="Assassin of Darkness">
+	<npc id="18223" level="80" type="Folk" name="Assassin of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -562,7 +562,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="18224" level="80" type="L2Npc" name="Assassin of Darkness">
+	<npc id="18224" level="80" type="Folk" name="Assassin of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -581,7 +581,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="18225" level="80" type="L2Npc" name="Assassin of Darkness">
+	<npc id="18225" level="80" type="Folk" name="Assassin of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -600,7 +600,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="18226" level="85" type="L2Monster" name="Caster of Darkness">
+	<npc id="18226" level="85" type="Monster" name="Caster of Darkness">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="2979228" sp="44688" />
@@ -625,7 +625,7 @@
 			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
 		</skillList>
 	</npc>
-	<npc id="18227" level="85" type="L2Monster" name="Caster of Darkness">
+	<npc id="18227" level="85" type="Monster" name="Caster of Darkness">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="2979228" sp="44688" />
@@ -650,7 +650,7 @@
 			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
 		</skillList>
 	</npc>
-	<npc id="18228" level="85" type="L2Monster" name="Caster of Darkness">
+	<npc id="18228" level="85" type="Monster" name="Caster of Darkness">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="2979228" sp="44688" />
@@ -675,7 +675,7 @@
 			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
 		</skillList>
 	</npc>
-	<npc id="18229" level="85" type="L2Monster" name="Caster of Darkness">
+	<npc id="18229" level="85" type="Monster" name="Caster of Darkness">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="2979228" sp="44688" />
@@ -700,7 +700,7 @@
 			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
 		</skillList>
 	</npc>
-	<npc id="18230" level="80" type="L2Npc" name="Signet of Emperor">
+	<npc id="18230" level="80" type="Folk" name="Signet of Emperor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -719,7 +719,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="18231" level="80" type="L2Npc" name="Statue of Protection">
+	<npc id="18231" level="80" type="Folk" name="Statue of Protection">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -739,7 +739,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18232" level="80" type="L2Npc" name="Statue of Protection">
+	<npc id="18232" level="80" type="Folk" name="Statue of Protection">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -759,7 +759,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18233" level="80" type="L2Npc" name="Statue of Protection">
+	<npc id="18233" level="80" type="Folk" name="Statue of Protection">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -779,7 +779,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18234" level="80" type="L2Npc" name="Statue of Protection">
+	<npc id="18234" level="80" type="Folk" name="Statue of Protection">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -799,7 +799,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18235" level="80" type="L2Npc" name="Statue of Protection">
+	<npc id="18235" level="80" type="Folk" name="Statue of Protection">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -819,7 +819,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18236" level="80" type="L2Npc" name="Statue of Protection">
+	<npc id="18236" level="80" type="Folk" name="Statue of Protection">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -839,7 +839,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18237" level="80" type="L2Npc" name="Statue of Protection">
+	<npc id="18237" level="80" type="Folk" name="Statue of Protection">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -859,7 +859,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18238" level="80" type="L2Npc" name="Statue of Protection">
+	<npc id="18238" level="80" type="Folk" name="Statue of Protection">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -879,7 +879,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18239" level="80" type="L2Npc" name="Statue of Protection">
+	<npc id="18239" level="80" type="Folk" name="Statue of Protection">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -899,7 +899,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18240" level="80" type="L2Npc" name="Statue of Protection">
+	<npc id="18240" level="80" type="Folk" name="Statue of Protection">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -919,7 +919,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18241" level="80" type="L2Npc" name="Statue of Protection">
+	<npc id="18241" level="80" type="Folk" name="Statue of Protection">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -939,7 +939,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18242" level="80" type="L2Npc" name="Statue of Protection">
+	<npc id="18242" level="80" type="Folk" name="Statue of Protection">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -959,7 +959,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18243" level="80" type="L2Npc" name="Statue of Protection">
+	<npc id="18243" level="80" type="Folk" name="Statue of Protection">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -979,7 +979,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18244" level="80" type="L2Npc" name="Watchman of Grave">
+	<npc id="18244" level="80" type="Folk" name="Watchman of Grave">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -998,7 +998,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18245" level="80" type="L2Npc" name="Watchman of Grave">
+	<npc id="18245" level="80" type="Folk" name="Watchman of Grave">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1017,7 +1017,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18246" level="80" type="L2Npc" name="Watchman of Grave">
+	<npc id="18246" level="80" type="Folk" name="Watchman of Grave">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1036,7 +1036,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18247" level="80" type="L2Npc" name="Watchman of Grave">
+	<npc id="18247" level="80" type="Folk" name="Watchman of Grave">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1055,7 +1055,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18248" level="80" type="L2Npc" name="Watchman of Grave">
+	<npc id="18248" level="80" type="Folk" name="Watchman of Grave">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1074,7 +1074,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18249" level="80" type="L2Npc" name="Watchman of Grave">
+	<npc id="18249" level="80" type="Folk" name="Watchman of Grave">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1093,7 +1093,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18250" level="80" type="L2Npc" name="Watchman of Grave">
+	<npc id="18250" level="80" type="Folk" name="Watchman of Grave">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1112,7 +1112,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18251" level="80" type="L2Npc" name="Watchman of Grave">
+	<npc id="18251" level="80" type="Folk" name="Watchman of Grave">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1131,7 +1131,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18252" level="80" type="L2Npc" name="Watchman of Grave">
+	<npc id="18252" level="80" type="Folk" name="Watchman of Grave">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1150,7 +1150,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18253" level="80" type="L2Npc" name="Watchman of Grave">
+	<npc id="18253" level="80" type="Folk" name="Watchman of Grave">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1169,7 +1169,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18254" level="80" type="L2Npc" name="Watchman of Grave">
+	<npc id="18254" level="80" type="Folk" name="Watchman of Grave">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1188,7 +1188,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18255" level="80" type="L2Npc" name="Watchman of Grave">
+	<npc id="18255" level="80" type="Folk" name="Watchman of Grave">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1207,7 +1207,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18256" level="80" type="L2Npc" name="Halisha's Treasure Chest">
+	<npc id="18256" level="80" type="Folk" name="Halisha's Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

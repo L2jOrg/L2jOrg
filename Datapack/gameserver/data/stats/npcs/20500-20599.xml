@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="20500" level="25" type="L2Monster" name="Turek Orc Sentinel">
+	<npc id="20500" level="25" type="Monster" name="Turek Orc Sentinel">
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -63,7 +63,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20501" level="29" type="L2Monster" name="Turek Orc Priest">
+	<npc id="20501" level="29" type="Monster" name="Turek Orc Priest">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -140,7 +140,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20502" level="15" type="L2Monster" name="Twink Puma">
+	<npc id="20502" level="15" type="Monster" name="Twink Puma">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -194,7 +194,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20504" level="14" type="L2Monster" name="Dread Soldier">
+	<npc id="20504" level="14" type="Monster" name="Dread Soldier">
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -254,7 +254,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20505" level="20" type="L2Monster" name="Ruin Bat">
+	<npc id="20505" level="20" type="Monster" name="Ruin Bat">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -331,7 +331,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20506" level="17" type="L2Monster" name="Ruin Imp">
+	<npc id="20506" level="17" type="Monster" name="Ruin Imp">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -402,7 +402,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20507" level="21" type="L2Monster" name="Ruin Imp Elder">
+	<npc id="20507" level="21" type="Monster" name="Ruin Imp Elder">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -482,7 +482,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20508" level="17" type="L2Monster" name="Plunder Tarantula">
+	<npc id="20508" level="17" type="Monster" name="Plunder Tarantula">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -540,7 +540,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20509" level="9" type="L2Monster" name="Spore Fungus">
+	<npc id="20509" level="9" type="Monster" name="Spore Fungus">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -599,7 +599,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20510" level="12" type="L2Monster" name="Crystal Puma">
+	<npc id="20510" level="12" type="Monster" name="Crystal Puma">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -652,7 +652,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20511" level="19" type="L2Monster" name="Pitchstone Golem">
+	<npc id="20511" level="19" type="Monster" name="Pitchstone Golem">
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -713,7 +713,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20512" level="35" type="L2Monster" name="Field Stalker">
+	<npc id="20512" level="35" type="Monster" name="Field Stalker">
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -763,7 +763,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="20513" level="32" type="L2Monster" name="Skeleton Knight">
+	<npc id="20513" level="32" type="Monster" name="Skeleton Knight">
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -814,7 +814,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20514" level="15" type="L2Monster" name="Shield Skeleton">
+	<npc id="20514" level="15" type="Monster" name="Shield Skeleton">
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -869,7 +869,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20515" level="16" type="L2Monster" name="Skeleton Infantryman">
+	<npc id="20515" level="16" type="Monster" name="Skeleton Infantryman">
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -936,7 +936,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20516" level="14" type="L2Monster" name="Skeleton Sentinel">
+	<npc id="20516" level="14" type="Monster" name="Skeleton Sentinel">
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -980,7 +980,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="20517" level="12" type="L2Monster" name="Skeleton Hunter">
+	<npc id="20517" level="12" type="Monster" name="Skeleton Hunter">
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -1036,7 +1036,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20518" level="13" type="L2Monster" name="Skeleton Hunter Archer">
+	<npc id="20518" level="13" type="Monster" name="Skeleton Hunter Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -1091,7 +1091,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20519" level="27" type="L2Monster" name="Skeleton Pikeman">
+	<npc id="20519" level="27" type="Monster" name="Skeleton Pikeman">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1140,7 +1140,7 @@
 			<height normal="28" grown="33" />
 		</collision>
 	</npc>
-	<npc id="20520" level="10" type="L2Monster" name="Pirate Captain Uthanka">
+	<npc id="20520" level="10" type="Monster" name="Pirate Captain Uthanka">
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -1189,7 +1189,7 @@
 			<height normal="26.4" />
 		</collision>
 	</npc>
-	<npc id="20521" level="14" type="L2Monster" name="Whinstone Golem">
+	<npc id="20521" level="14" type="Monster" name="Whinstone Golem">
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -1252,7 +1252,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20522" level="10" type="L2Monster" name="White Fang">
+	<npc id="20522" level="10" type="Monster" name="White Fang">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1298,7 +1298,7 @@
 			<height normal="10.8" />
 		</collision>
 	</npc>
-	<npc id="20524" level="7" type="L2Monster" name="Grey Wolf Elder">
+	<npc id="20524" level="7" type="Monster" name="Grey Wolf Elder">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1337,7 +1337,7 @@
 			<height normal="9" />
 		</collision>
 	</npc>
-	<npc id="20525" level="4" type="L2Monster" name="Gray Wolf">
+	<npc id="20525" level="4" type="Monster" name="Gray Wolf">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1383,7 +1383,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20526" level="15" type="L2Monster" name="Obsidian Golem">
+	<npc id="20526" level="15" type="Monster" name="Obsidian Golem">
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -1448,7 +1448,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20527" level="4" type="L2Monster" name="Snow Wolf">
+	<npc id="20527" level="4" type="Monster" name="Snow Wolf">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1490,7 +1490,7 @@
 			<height normal="11" />
 		</collision>
 	</npc>
-	<npc id="20528" level="13" type="L2Monster" name="Goblin Lord">
+	<npc id="20528" level="13" type="Monster" name="Goblin Lord">
 		<parameters>
 			<param name="MoveAroundSocial" value="42" />
 			<param name="MoveAroundSocial1" value="42" />
@@ -1544,7 +1544,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20529" level="1" type="L2Monster" name="Young Brown Keltir">
+	<npc id="20529" level="1" type="Monster" name="Young Brown Keltir">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1591,7 +1591,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20530" level="1" type="L2Monster" name="Young Red Keltir">
+	<npc id="20530" level="1" type="Monster" name="Young Red Keltir">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1636,7 +1636,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20531" level="1" type="L2Monster" name="Young Prairie Keltir">
+	<npc id="20531" level="1" type="Monster" name="Young Prairie Keltir">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1681,7 +1681,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20532" level="2" type="L2Monster" name="Brown Keltir">
+	<npc id="20532" level="2" type="Monster" name="Brown Keltir">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1726,7 +1726,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20533" level="2" type="L2Monster" name="Longtail Keltir">
+	<npc id="20533" level="2" type="Monster" name="Longtail Keltir">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1770,7 +1770,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20534" level="2" type="L2Monster" name="Red Keltir">
+	<npc id="20534" level="2" type="Monster" name="Red Keltir">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1817,7 +1817,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20535" level="2" type="L2Monster" name="Prairie Keltir">
+	<npc id="20535" level="2" type="Monster" name="Prairie Keltir">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1863,7 +1863,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20536" level="3" type="L2Monster" name="Elder Brown Keltir">
+	<npc id="20536" level="3" type="Monster" name="Elder Brown Keltir">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1908,7 +1908,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20537" level="3" type="L2Monster" name="Elder Red Keltir">
+	<npc id="20537" level="3" type="Monster" name="Elder Red Keltir">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1953,7 +1953,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20538" level="3" type="L2Monster" name="Elder Prairie Keltir">
+	<npc id="20538" level="3" type="Monster" name="Elder Prairie Keltir">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1998,7 +1998,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20539" level="3" type="L2Monster" name="Elder Longtail Keltir">
+	<npc id="20539" level="3" type="Monster" name="Elder Longtail Keltir">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2043,7 +2043,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20540" level="12" type="L2Monster" name="Gemstone Beast">
+	<npc id="20540" level="12" type="Monster" name="Gemstone Beast">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2096,7 +2096,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20541" level="17" type="L2Monster" name="Ore Bat">
+	<npc id="20541" level="17" type="Monster" name="Ore Bat">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2155,7 +2155,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20542" level="19" type="L2Monster" name="Skeleton Longbowman">
+	<npc id="20542" level="19" type="Monster" name="Skeleton Longbowman">
 		<!-- l2WIKI: https://l2wiki.com/classic/Skeleton_Longbowman -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
@@ -2209,7 +2209,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20543" level="20" type="L2Monster" name="Ghost">
+	<npc id="20543" level="20" type="Monster" name="Ghost">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2265,7 +2265,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20544" level="3" type="L2Monster" name="Elder Keltir">
+	<npc id="20544" level="3" type="Monster" name="Elder Keltir">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2315,7 +2315,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20545" level="1" type="L2Monster" name="Young Keltir">
+	<npc id="20545" level="1" type="Monster" name="Young Keltir">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2360,7 +2360,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20546" level="34" type="L2Monster" name="Turek Orc Elder">
+	<npc id="20546" level="34" type="Monster" name="Turek Orc Elder">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -2429,7 +2429,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20547" level="23" type="L2Monster" name="Ol Mahum Support Troop">
+	<npc id="20547" level="23" type="Monster" name="Ol Mahum Support Troop">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -2492,7 +2492,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20548" level="23" type="L2Monster" name="Ol Mahum Deserter">
+	<npc id="20548" level="23" type="Monster" name="Ol Mahum Deserter">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -2550,7 +2550,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20549" level="34" type="L2Monster" name="Ol Mahum Lord">
+	<npc id="20549" level="34" type="Monster" name="Ol Mahum Lord">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2619,7 +2619,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20550" level="36" type="L2Monster" name="Guardian Basilisk">
+	<npc id="20550" level="36" type="Monster" name="Guardian Basilisk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2683,7 +2683,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20551" level="37" type="L2Monster" name="Road Scavenger">
+	<npc id="20551" level="37" type="Monster" name="Road Scavenger">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2747,7 +2747,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20552" level="38" type="L2Monster" name="Fettered Soul">
+	<npc id="20552" level="38" type="Monster" name="Fettered Soul">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -2807,7 +2807,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20553" level="39" type="L2Monster" name="Windsus">
+	<npc id="20553" level="39" type="Monster" name="Windsus">
 		<parameters>
 			<param name="MoveAroundSocial" value="95" />
 			<param name="MoveAroundSocial1" value="95" />
@@ -2866,7 +2866,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20554" level="40" type="L2Monster" name="Grandis">
+	<npc id="20554" level="40" type="Monster" name="Grandis">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2929,7 +2929,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20555" level="40" type="L2Monster" name="Giant Fungus">
+	<npc id="20555" level="40" type="Monster" name="Giant Fungus">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2997,7 +2997,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20556" level="41" type="L2Monster" name="Giant Monster Eye">
+	<npc id="20556" level="41" type="Monster" name="Giant Monster Eye">
 		<!-- L2wiki: https://l2wiki.com/classic/Giant_Monster_Eye -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3063,7 +3063,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20557" level="42" type="L2Monster" name="Dire Wyrm">
+	<npc id="20557" level="42" type="Monster" name="Dire Wyrm">
 		<!-- L2wiki: https://l2wiki.com/classic/Dire_Wyrm -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -3118,7 +3118,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20558" level="43" type="L2Monster" name="Rotting tree">
+	<npc id="20558" level="43" type="Monster" name="Rotting tree">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3184,7 +3184,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20559" level="44" type="L2Monster" name="Rotting Golem">
+	<npc id="20559" level="44" type="Monster" name="Rotting Golem">
 		<!-- L2wiki: https://l2wiki.com/classic/Rotting_Golem -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
@@ -3247,7 +3247,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20560" level="45" type="L2Monster" name="Trisalim">
+	<npc id="20560" level="45" type="Monster" name="Trisalim">
 		<!-- L2wiki: https://l2wiki.com/classic/Trisalim -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3307,7 +3307,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20561" level="46" type="L2Monster" name="Trisalim Tarantula">
+	<npc id="20561" level="46" type="Monster" name="Trisalim Tarantula">
 		<!-- L2wiki: https://l2wiki.com/classic/Trisalim_Tarantula -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3372,7 +3372,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20562" level="47" type="L2Monster" name="Spore Zombie">
+	<npc id="20562" level="47" type="Monster" name="Spore Zombie">
 		<!-- L2wiki: https://l2wiki.com/classic/Spore_Zombie -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -3442,7 +3442,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20563" level="40" type="L2Monster" name="Manashen Gargoyle">
+	<npc id="20563" level="40" type="Monster" name="Manashen Gargoyle">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3520,7 +3520,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20564" level="41" type="L2Monster" name="Reinforced Monster Eye">
+	<npc id="20564" level="41" type="Monster" name="Reinforced Monster Eye">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3591,7 +3591,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20565" level="42" type="L2Monster" name="Reinforced Stone Golem">
+	<npc id="20565" level="42" type="Monster" name="Reinforced Stone Golem">
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -3654,7 +3654,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20566" level="43" type="L2Monster" name="Reinforced Steel Golem">
+	<npc id="20566" level="43" type="Monster" name="Reinforced Steel Golem">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3722,7 +3722,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20567" level="44" type="L2Monster" name="Reinforced Gargoyle">
+	<npc id="20567" level="44" type="Monster" name="Reinforced Gargoyle">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3785,7 +3785,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20568" level="45" type="L2Monster" name="Formor">
+	<npc id="20568" level="45" type="Monster" name="Formor">
 		<parameters>
 			<param name="MoveAroundSocial" value="135" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -3858,7 +3858,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20569" level="46" type="L2Monster" name="Formor Elder">
+	<npc id="20569" level="46" type="Monster" name="Formor Elder">
 		<parameters>
 			<param name="MoveAroundSocial" value="135" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -3925,7 +3925,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20570" level="47" type="L2Monster" name="Tarlk Bugbear">
+	<npc id="20570" level="47" type="Monster" name="Tarlk Bugbear">
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -3987,7 +3987,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20571" level="48" type="L2Monster" name="Tarlk Bugbear Warrior">
+	<npc id="20571" level="48" type="Monster" name="Tarlk Bugbear Warrior">
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -4053,7 +4053,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20572" level="49" type="L2Monster" name="Tarlk Bugbear Captain">
+	<npc id="20572" level="49" type="Monster" name="Tarlk Bugbear Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="149" />
 			<param name="MoveAroundSocial1" value="149" />
@@ -4118,7 +4118,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20573" level="50" type="L2Monster" name="Tarlk Basilisk">
+	<npc id="20573" level="50" type="Monster" name="Tarlk Basilisk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4178,7 +4178,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20574" level="51" type="L2Monster" name="Elder Tarlk Basilisk">
+	<npc id="20574" level="51" type="Monster" name="Elder Tarlk Basilisk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4244,7 +4244,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20575" level="54" type="L2Monster" name="Oel Mahum Warrior">
+	<npc id="20575" level="54" type="Monster" name="Oel Mahum Warrior">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4303,7 +4303,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20576" level="55" type="L2Monster" name="Oel Mahum Shaman">
+	<npc id="20576" level="55" type="Monster" name="Oel Mahum Shaman">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4375,7 +4375,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20577" level="35" type="L2Monster" name="Leto Lizardman">
+	<npc id="20577" level="35" type="Monster" name="Leto Lizardman">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -4435,7 +4435,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20578" level="36" type="L2Monster" name="Leto Lizardman Archer">
+	<npc id="20578" level="36" type="Monster" name="Leto Lizardman Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="125" />
 			<param name="MoveAroundSocial1" value="125" />
@@ -4498,7 +4498,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20579" level="37" type="L2Monster" name="Leto Lizardman Soldier">
+	<npc id="20579" level="37" type="Monster" name="Leto Lizardman Soldier">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -4570,7 +4570,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20580" level="38" type="L2Monster" name="Leto Lizardman Warrior">
+	<npc id="20580" level="38" type="Monster" name="Leto Lizardman Warrior">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4636,7 +4636,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20581" level="39" type="L2Monster" name="Leto Lizardman Shaman">
+	<npc id="20581" level="39" type="Monster" name="Leto Lizardman Shaman">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4703,7 +4703,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20582" level="40" type="L2Monster" name="Leto Lizardman Overlord">
+	<npc id="20582" level="40" type="Monster" name="Leto Lizardman Overlord">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -4770,7 +4770,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20583" level="40" type="L2Monster" name="Timak Orc">
+	<npc id="20583" level="40" type="Monster" name="Timak Orc">
 		<parameters>
 			<param name="MoveAroundSocial" value="35" />
 			<param name="MoveAroundSocial1" value="35" />
@@ -4828,7 +4828,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20584" level="41" type="L2Monster" name="Timak Orc Archer">
+	<npc id="20584" level="41" type="Monster" name="Timak Orc Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -4888,7 +4888,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20585" level="42" type="L2Monster" name="Timak Orc Soldier">
+	<npc id="20585" level="42" type="Monster" name="Timak Orc Soldier">
 		<parameters>
 			<param name="MoveAroundSocial" value="35" />
 			<param name="MoveAroundSocial1" value="35" />
@@ -4952,7 +4952,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20586" level="43" type="L2Monster" name="Timak Orc Warrior">
+	<npc id="20586" level="43" type="Monster" name="Timak Orc Warrior">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -5010,7 +5010,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20587" level="44" type="L2Monster" name="Timak Orc Shaman">
+	<npc id="20587" level="44" type="Monster" name="Timak Orc Shaman">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -5091,7 +5091,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20588" level="45" type="L2Monster" name="Timak Orc Prefect">
+	<npc id="20588" level="45" type="Monster" name="Timak Orc Prefect">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -5164,7 +5164,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20589" level="50" type="L2Monster" name="Fline">
+	<npc id="20589" level="50" type="Monster" name="Fline">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5229,7 +5229,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20590" level="51" type="L2Monster" name="Liele">
+	<npc id="20590" level="51" type="Monster" name="Liele">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5302,7 +5302,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20591" level="52" type="L2Monster" name="Valley Treant">
+	<npc id="20591" level="52" type="Monster" name="Valley Treant">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -5372,7 +5372,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20592" level="53" type="L2Monster" name="Satyr">
+	<npc id="20592" level="53" type="Monster" name="Satyr">
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -5442,7 +5442,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20593" level="54" type="L2Monster" name="Unicorn">
+	<npc id="20593" level="54" type="Monster" name="Unicorn">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -5511,7 +5511,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20594" level="55" type="L2Monster" name="Forest Runner">
+	<npc id="20594" level="55" type="Monster" name="Forest Runner">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5577,7 +5577,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20595" level="56" type="L2Monster" name="Fline Elder">
+	<npc id="20595" level="56" type="Monster" name="Fline Elder">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5645,7 +5645,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20596" level="57" type="L2Monster" name="Liele Elder">
+	<npc id="20596" level="57" type="Monster" name="Liele Elder">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5695,7 +5695,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="20597" level="58" type="L2Monster" name="Valley Treant Elder">
+	<npc id="20597" level="58" type="Monster" name="Valley Treant Elder">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -5763,7 +5763,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20598" level="59" type="L2Monster" name="Satyr Elder">
+	<npc id="20598" level="59" type="Monster" name="Satyr Elder">
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -5828,7 +5828,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20599" level="60" type="L2Monster" name="Elder the Unicorn">
+	<npc id="20599" level="60" type="Monster" name="Elder the Unicorn">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />

@@ -22,7 +22,7 @@ import java.util.StringTokenizer;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
+import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.stats.Formulas;
@@ -186,8 +186,8 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			mid1 = Integer.parseInt(st.nextToken());
 			mid2 = Integer.parseInt(st.nextToken());
 			
-			npc1 = new L2MonsterInstance(NpcData.getInstance().getTemplate(mid1));
-			npc2 = new L2MonsterInstance(NpcData.getInstance().getTemplate(mid2));
+			npc1 = new Monster(NpcData.getInstance().getTemplate(mid1));
+			npc2 = new Monster(NpcData.getInstance().getTemplate(mid2));
 		}
 		
 		int miss1 = 0;

@@ -4,7 +4,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 public class ArtefactInstanceAction implements IActionHandler
@@ -26,7 +26,7 @@ public class ArtefactInstanceAction implements IActionHandler
 	@Override
 	public boolean action(Player player, WorldObject target, boolean interact)
 	{
-		if (!((L2Npc) target).canTarget(player))
+		if (!((Npc) target).canTarget(player))
 		{
 			return false;
 		}
@@ -35,7 +35,7 @@ public class ArtefactInstanceAction implements IActionHandler
 			player.setTarget(target);
 		}
 		// Calculate the distance between the PlayerInstance and the NpcInstance
-		else if (interact && !((L2Npc) target).canInteract(player))
+		else if (interact && !((Npc) target).canInteract(player))
 		{
 			// Notify the PlayerInstance AI with AI_INTENTION_INTERACT
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);

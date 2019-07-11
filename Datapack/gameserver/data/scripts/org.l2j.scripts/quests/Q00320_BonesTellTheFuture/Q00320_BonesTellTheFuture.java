@@ -17,7 +17,7 @@
 package quests.Q00320_BonesTellTheFuture;
 
 import org.l2j.gameserver.enums.Race;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
@@ -54,7 +54,7 @@ public final class Q00320_BonesTellTheFuture extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, false);
 		if ((st != null) && event.equals("30359-04.htm"))
@@ -66,7 +66,7 @@ public final class Q00320_BonesTellTheFuture extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, Player killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
 		if ((qs != null) && giveItemRandomly(killer, npc, BONE_FRAGMENT, 1, REQUIRED_BONE_COUNT, DROP_CHANCE, true))
@@ -77,7 +77,7 @@ public final class Q00320_BonesTellTheFuture extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, Player player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

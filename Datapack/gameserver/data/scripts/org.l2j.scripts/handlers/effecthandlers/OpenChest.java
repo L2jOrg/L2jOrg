@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.L2ChestInstance;
+import org.l2j.gameserver.model.actor.instance.Chest;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -44,13 +44,13 @@ public final class OpenChest extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!(effected instanceof L2ChestInstance))
+		if (!(effected instanceof Chest))
 		{
 			return;
 		}
 		
 		final Player player = effector.getActingPlayer();
-		final L2ChestInstance chest = (L2ChestInstance) effected;
+		final Chest chest = (Chest) effected;
 		if (chest.isDead() || (player.getInstanceWorld() != chest.getInstanceWorld()))
 		{
 			return;

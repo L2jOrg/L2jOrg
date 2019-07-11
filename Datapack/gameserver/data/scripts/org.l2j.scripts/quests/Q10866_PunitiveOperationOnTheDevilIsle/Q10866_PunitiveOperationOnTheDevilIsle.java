@@ -16,7 +16,7 @@
  */
 package quests.Q10866_PunitiveOperationOnTheDevilIsle;
 
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
@@ -45,14 +45,14 @@ public final class Q10866_PunitiveOperationOnTheDevilIsle extends Quest
 	}
 	
 	@Override
-	public boolean checkPartyMember(Player member, L2Npc npc)
+	public boolean checkPartyMember(Player member, Npc npc)
 	{
 		final QuestState qs = getQuestState(member, false);
 		return ((qs != null) && qs.isStarted());
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -97,7 +97,7 @@ public final class Q10866_PunitiveOperationOnTheDevilIsle extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, Player player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

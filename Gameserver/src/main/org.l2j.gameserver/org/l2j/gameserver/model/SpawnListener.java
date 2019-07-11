@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 
 /**
  * This class ...
@@ -24,5 +24,5 @@ import org.l2j.gameserver.model.actor.L2Npc;
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  */
 public interface SpawnListener {
-    void npcSpawned(L2Npc npc);
+    void npcSpawned(Npc npc);
 }

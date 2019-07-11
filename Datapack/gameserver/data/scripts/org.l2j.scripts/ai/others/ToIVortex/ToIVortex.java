@@ -18,7 +18,7 @@ package ai.others.ToIVortex;
 
 import ai.AbstractNpcAI;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.CommonItem;
 
@@ -85,7 +85,7 @@ public final class ToIVortex extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, Player player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final int npcId = npc.getId();
 		

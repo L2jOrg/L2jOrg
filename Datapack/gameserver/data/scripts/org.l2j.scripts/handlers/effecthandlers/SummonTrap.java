@@ -20,7 +20,7 @@ import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2TrapInstance;
+import org.l2j.gameserver.model.actor.instance.Trap;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -80,7 +80,7 @@ public final class SummonTrap extends AbstractEffect
 			return;
 		}
 		
-		final L2TrapInstance trap = new L2TrapInstance(npcTemplate, player, _despawnTime);
+		final Trap trap = new Trap(npcTemplate, player, _despawnTime);
 		trap.setCurrentHp(trap.getMaxHp());
 		trap.setCurrentMp(trap.getMaxMp());
 		trap.setIsInvul(true);

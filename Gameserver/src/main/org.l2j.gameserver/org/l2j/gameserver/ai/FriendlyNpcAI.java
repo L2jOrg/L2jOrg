@@ -5,8 +5,8 @@ import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
 
 import static org.l2j.gameserver.ai.CtrlIntention.*;
 
@@ -15,7 +15,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.*;
  * @author Sdw
  */
 public class FriendlyNpcAI extends L2AttackableAI {
-    public FriendlyNpcAI(L2Attackable attackable) {
+    public FriendlyNpcAI(Attackable attackable) {
         super(attackable);
     }
 
@@ -60,7 +60,7 @@ public class FriendlyNpcAI extends L2AttackableAI {
 
     @Override
     protected void thinkAttack() {
-        final L2Attackable npc = getActiveChar();
+        final Attackable npc = getActiveChar();
         if (npc.isCastingNow() || npc.isCoreAIDisabled()) {
             return;
         }
@@ -88,7 +88,7 @@ public class FriendlyNpcAI extends L2AttackableAI {
         final int combinedCollision = collision + originalAttackTarget.getTemplate().getCollisionRadius();
 
         if (!npc.isMovementDisabled() && (Rnd.get(100) <= 3)) {
-            for (L2Attackable nearby : L2World.getInstance().getVisibleObjects(npc, L2Attackable.class)) {
+            for (Attackable nearby : L2World.getInstance().getVisibleObjects(npc, Attackable.class)) {
                 if (npc.isInsideRadius2D(nearby, collision) && (nearby != originalAttackTarget)) {
                     int newX = combinedCollision + Rnd.get(40);
                     if (Rnd.nextBoolean()) {

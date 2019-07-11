@@ -15,11 +15,11 @@ import org.l2j.gameserver.model.KeyValuePair;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2TrapInstance;
+import org.l2j.gameserver.model.actor.instance.Trap;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.events.AbstractScript;
@@ -308,7 +308,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
         return HtmCache.getInstance().getHtm(player, (type == QuestType.ONE_TIME ? "data/html/alreadyCompleted.html" : "data/html/alreadyCompletedDaily.html"));
     }
 
-    private static boolean checkDistanceToTarget(Player player, L2Npc target) {
+    private static boolean checkDistanceToTarget(Player player, Npc target) {
         return (target == null) || GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, player, target, true);
     }
 
@@ -423,13 +423,13 @@ public class Quest extends AbstractScript implements IIdentifiable {
     /**
      * Add a timer to the quest (if it doesn't exist already) and start it.
      *
-     * @param name   the name of the timer (also passed back as "event" in {@link #onAdvEvent(String, L2Npc, Player)})
+     * @param name   the name of the timer (also passed back as "event" in {@link #onAdvEvent(String, Npc, Player)})
      * @param time   time in ms for when to fire the timer
      * @param npc    the npc associated with this timer (can be null)
      * @param player the player associated with this timer (can be null)
-     * @see #startQuestTimer(String, long, L2Npc, Player, boolean)
+     * @see #startQuestTimer(String, long, Npc, Player, boolean)
      */
-    public void startQuestTimer(String name, long time, L2Npc npc, Player player) {
+    public void startQuestTimer(String name, long time, Npc npc, Player player) {
         startQuestTimer(name, time, npc, player, false);
     }
 
@@ -452,14 +452,14 @@ public class Quest extends AbstractScript implements IIdentifiable {
     /**
      * Add a timer to the quest (if it doesn't exist already) and start it.
      *
-     * @param name      the name of the timer (also passed back as "event" in {@link #onAdvEvent(String, L2Npc, Player)})
+     * @param name      the name of the timer (also passed back as "event" in {@link #onAdvEvent(String, Npc, Player)})
      * @param time      time in ms for when to fire the timer
      * @param npc       the npc associated with this timer (can be null)
      * @param player    the player associated with this timer (can be null)
      * @param repeating indicates whether the timer is repeatable or one-time.<br>
      *                  If {@code true}, the task is repeated every {@code time} milliseconds until explicitly stopped.
      */
-    public void startQuestTimer(String name, long time, L2Npc npc, Player player, boolean repeating) {
+    public void startQuestTimer(String name, long time, Npc npc, Player player, boolean repeating) {
         final List<QuestTimer> timers = getQuestTimers().computeIfAbsent(name, k -> new ArrayList<>(1));
         // if there exists a timer with this name, allow the timer only if the [npc, player] set is unique
         // nulls act as wildcards
@@ -481,7 +481,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param player the player associated with the quest timer to get
      * @return the quest timer that matches the specified parameters or {@code null} if nothing was found
      */
-    public QuestTimer getQuestTimer(String name, L2Npc npc, Player player) {
+    public QuestTimer getQuestTimer(String name, Npc npc, Player player) {
         if (_questTimers == null) {
             return null;
         }
@@ -537,7 +537,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param npc    the NPC associated with the quest timer to cancel
      * @param player the player associated with the quest timer to cancel
      */
-    public void cancelQuestTimer(String name, L2Npc npc, Player player) {
+    public void cancelQuestTimer(String name, Npc npc, Player player) {
         final QuestTimer timer = getQuestTimer(name, npc, player);
         if (timer != null) {
             timer.cancelAndRemove();
@@ -571,7 +571,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param isSummon if {@code true}, the attack was actually made by the player's summon
      * @param skill    the skill used to attack the NPC (can be null)
      */
-    public final void notifyAttack(L2Npc npc, Player attacker, int damage, boolean isSummon, Skill skill) {
+    public final void notifyAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill) {
         String res = null;
         try {
             res = onAttack(npc, attacker, damage, isSummon, skill);
@@ -618,7 +618,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param player
      * @param skill
      */
-    public final void notifySpellFinished(L2Npc instance, Player player, Skill skill) {
+    public final void notifySpellFinished(Npc instance, Player player, Skill skill) {
         String res = null;
         try {
             res = onSpellFinished(instance, player, skill);
@@ -636,7 +636,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param trigger the character which makes effect on the trap
      * @param action  0: trap casting its skill. 1: trigger detects the trap. 2: trigger removes the trap
      */
-    public final void notifyTrapAction(L2TrapInstance trap, Creature trigger, TrapAction action) {
+    public final void notifyTrapAction(Trap trap, Creature trigger, TrapAction action) {
         String res = null;
         try {
             res = onTrapAction(trap, trigger, action);
@@ -655,7 +655,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
     /**
      * @param npc the spawned NPC
      */
-    public final void notifySpawn(L2Npc npc) {
+    public final void notifySpawn(Npc npc) {
         try {
             onSpawn(npc);
         } catch (Exception e) {
@@ -666,7 +666,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
     /**
      * @param npc the teleport NPC
      */
-    public final void notifyTeleport(L2Npc npc) {
+    public final void notifyTeleport(Npc npc) {
         try {
             onTeleport(npc);
         } catch (Exception e) {
@@ -679,7 +679,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param npc
      * @param player
      */
-    public final void notifyEvent(String event, L2Npc npc, Player player) {
+    public final void notifyEvent(String event, Npc npc, Player player) {
         String res = null;
         try {
             res = onAdvEvent(event, npc, player);
@@ -709,7 +709,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param killer
      * @param isSummon
      */
-    public final void notifyKill(L2Npc npc, Player killer, boolean isSummon) {
+    public final void notifyKill(Npc npc, Player killer, boolean isSummon) {
         String res = null;
         try {
             res = onKill(npc, killer, isSummon);
@@ -724,7 +724,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param npc
      * @param player
      */
-    public final void notifyTalk(L2Npc npc, Player player) {
+    public final void notifyTalk(Npc npc, Player player) {
         String res = null;
         try {
             //@formatter:off
@@ -757,7 +757,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param npc    the NPC whose dialogs to override
      * @param player the player talking to the NPC
      */
-    public final void notifyFirstTalk(L2Npc npc, Player player) {
+    public final void notifyFirstTalk(Npc npc, Player player) {
         String res = null;
         try {
             res = onFirstTalk(npc, player);
@@ -776,7 +776,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param skill  the skill
      * @param type   the skill learn type
      */
-    public final void notifyAcquireSkill(L2Npc npc, Player player, Skill skill, AcquireSkillType type) {
+    public final void notifyAcquireSkill(Npc npc, Player player, Skill skill, AcquireSkillType type) {
         String res = null;
         try {
             res = onAcquireSkill(npc, player, skill, type);
@@ -841,7 +841,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param targets
      * @param isSummon
      */
-    public final void notifySkillSee(L2Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon) {
+    public final void notifySkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon) {
         String res = null;
         try {
             res = onSkillSee(npc, caster, skill, targets, isSummon);
@@ -858,7 +858,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param attacker
      * @param isSummon
      */
-    public final void notifyFactionCall(L2Npc npc, L2Npc caller, Player attacker, boolean isSummon) {
+    public final void notifyFactionCall(Npc npc, Npc caller, Player attacker, boolean isSummon) {
         String res = null;
         try {
             res = onFactionCall(npc, caller, attacker, isSummon);
@@ -874,7 +874,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param player
      * @param isSummon
      */
-    public final void notifyAggroRangeEnter(L2Npc npc, Player player, boolean isSummon) {
+    public final void notifyAggroRangeEnter(Npc npc, Player player, boolean isSummon) {
         String res = null;
         try {
             res = onAggroRangeEnter(npc, player, isSummon);
@@ -890,7 +890,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param creature the creature seen by the NPC
      * @param isSummon
      */
-    public final void notifySeeCreature(L2Npc npc, Creature creature, boolean isSummon) {
+    public final void notifySeeCreature(Npc npc, Creature creature, boolean isSummon) {
         Player player = null;
         if (isSummon || creature.isPlayer()) {
             player = creature.getActingPlayer();
@@ -915,7 +915,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param receiver  - NPC, who received event
      * @param reference - WorldObject to pass, if needed
      */
-    public final void notifyEventReceived(String eventName, L2Npc sender, L2Npc receiver, WorldObject reference) {
+    public final void notifyEventReceived(String eventName, Npc sender, Npc receiver, WorldObject reference) {
         try {
             onEventReceived(eventName, sender, receiver, reference);
         } catch (Exception e) {
@@ -979,7 +979,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
     /**
      * @param npc
      */
-    public final void notifyMoveFinished(L2Npc npc) {
+    public final void notifyMoveFinished(Npc npc) {
         try {
             onMoveFinished(npc);
         } catch (Exception e) {
@@ -990,7 +990,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
     /**
      * @param npc
      */
-    public final void notifyRouteFinished(L2Npc npc) {
+    public final void notifyRouteFinished(Npc npc) {
         try {
             onRouteFinished(npc);
         } catch (Exception e) {
@@ -1003,7 +1003,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param player
      * @return {@code true} if player can see this npc, {@code false} otherwise.
      */
-    public final boolean notifyOnCanSeeMe(L2Npc npc, Player player) {
+    public final boolean notifyOnCanSeeMe(Npc npc, Player player) {
         try {
             return onCanSeeMe(npc, player);
         } catch (Exception e) {
@@ -1013,8 +1013,8 @@ public class Quest extends AbstractScript implements IIdentifiable {
     }
 
     /**
-     * This function is called in place of {@link #onAttack(L2Npc, Player, int, boolean, Skill)} if the former is not implemented.<br>
-     * If a script contains both onAttack(..) implementations, then this method will never be called unless the script's {@link #onAttack(L2Npc, Player, int, boolean, Skill)} explicitly calls this method.
+     * This function is called in place of {@link #onAttack(Npc, Player, int, boolean, Skill)} if the former is not implemented.<br>
+     * If a script contains both onAttack(..) implementations, then this method will never be called unless the script's {@link #onAttack(Npc, Player, int, boolean, Skill)} explicitly calls this method.
      *
      * @param npc      this parameter contains a reference to the exact instance of the NPC that got attacked the NPC.
      * @param attacker this parameter contains a reference to the exact instance of the player who attacked.
@@ -1022,13 +1022,13 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param isSummon this parameter if it's {@code false} it denotes that the attacker was indeed the player, else it specifies that the damage was actually dealt by the player's pet.
      * @return
      */
-    public String onAttack(L2Npc npc, Player attacker, int damage, boolean isSummon) {
+    public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon) {
         return null;
     }
 
     /**
      * This function is called whenever a player attacks an NPC that is registered for the quest.<br>
-     * If is not overridden by a subclass, then default to the returned value of the simpler (and older) {@link #onAttack(L2Npc, Player, int, boolean)} override.<br>
+     * If is not overridden by a subclass, then default to the returned value of the simpler (and older) {@link #onAttack(Npc, Player, int, boolean)} override.<br>
      *
      * @param npc      this parameter contains a reference to the exact instance of the NPC that got attacked.
      * @param attacker this parameter contains a reference to the exact instance of the player who attacked the NPC.
@@ -1037,7 +1037,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param skill    parameter is the skill that player used to attack NPC.
      * @return
      */
-    public String onAttack(L2Npc npc, Player attacker, int damage, boolean isSummon, Skill skill) {
+    public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill) {
         return onAttack(npc, attacker, damage, isSummon);
     }
 
@@ -1051,7 +1051,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @return
      */
     public String onDeath(Creature killer, Creature victim, QuestState qs) {
-        return onAdvEvent("", (killer instanceof L2Npc) ? (L2Npc) killer : null, qs.getPlayer());
+        return onAdvEvent("", (killer instanceof Npc) ? (Npc) killer : null, qs.getPlayer());
     }
 
     /**
@@ -1076,7 +1076,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *               This parameter may be {@code null} in certain circumstances.
      * @return the text returned by the event (may be {@code null}, a filename or just text)
      */
-    public String onAdvEvent(String event, L2Npc npc, Player player) {
+    public String onAdvEvent(String event, Npc npc, Player player) {
         if (player != null) {
             final QuestState qs = player.getQuestState(getName());
             if (qs != null) {
@@ -1087,8 +1087,8 @@ public class Quest extends AbstractScript implements IIdentifiable {
     }
 
     /**
-     * This function is called in place of {@link #onAdvEvent(String, L2Npc, Player)} if the former is not implemented.<br>
-     * If a script contains both {@link #onAdvEvent(String, L2Npc, Player)} and this implementation, then this method will never be called unless the script's {@link #onAdvEvent(String, L2Npc, Player)} explicitly calls this method.
+     * This function is called in place of {@link #onAdvEvent(String, Npc, Player)} if the former is not implemented.<br>
+     * If a script contains both {@link #onAdvEvent(String, Npc, Player)} and this implementation, then this method will never be called unless the script's {@link #onAdvEvent(String, Npc, Player)} explicitly calls this method.
      *
      * @param event this parameter contains a string identifier for the event.<br>
      *              Generally, this string is passed directly via the link.<br>
@@ -1114,7 +1114,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param isSummon this parameter if it's {@code false} it denotes that the attacker was indeed the player, else it specifies that the killer was the player's pet.
      * @return the text returned by the event (may be {@code null}, a filename or just text)
      */
-    public String onKill(L2Npc npc, Player killer, boolean isSummon) {
+    public String onKill(Npc npc, Player killer, boolean isSummon) {
         if (!getNpcLogList(killer).isEmpty()) {
             sendNpcLogList(killer);
         }
@@ -1129,7 +1129,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param simulated Used by QuestLink to determine state of quest.
      * @return the text returned by the event (may be {@code null}, a filename or just text)
      */
-    public String onTalk(L2Npc npc, Player talker, boolean simulated) {
+    public String onTalk(Npc npc, Player talker, boolean simulated) {
         final QuestState qs = talker.getQuestState(getName());
         if (qs != null) {
             qs.setSimulated(simulated);
@@ -1145,7 +1145,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param talker this parameter contains a reference to the exact instance of the player who is talking to the NPC.
      * @return the text returned by the event (may be {@code null}, a filename or just text)
      */
-    public String onTalk(L2Npc npc, Player talker) {
+    public String onTalk(Npc npc, Player talker) {
         return null;
     }
 
@@ -1167,7 +1167,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param player this parameter contains a reference to the exact instance of the player who is talking to the NPC.
      * @return the text returned by the event (may be {@code null}, a filename or just text)
      */
-    public String onFirstTalk(L2Npc npc, Player player) {
+    public String onFirstTalk(Npc npc, Player player) {
         return null;
     }
 
@@ -1189,7 +1189,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param player this parameter contains a reference to the exact instance of the player who requested the skill list.
      * @return
      */
-    public String onAcquireSkillList(L2Npc npc, Player player) {
+    public String onAcquireSkillList(Npc npc, Player player) {
         return null;
     }
 
@@ -1201,7 +1201,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param skill  this parameter contains a reference to the skill that the player requested its info.
      * @return
      */
-    public String onAcquireSkillInfo(L2Npc npc, Player player, Skill skill) {
+    public String onAcquireSkillInfo(Npc npc, Player player, Skill skill) {
         return null;
     }
 
@@ -1215,7 +1215,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param type   the skill learn type
      * @return
      */
-    public String onAcquireSkill(L2Npc npc, Player player, Skill skill, AcquireSkillType type) {
+    public String onAcquireSkill(Npc npc, Player player, Skill skill, AcquireSkillType type) {
         return null;
     }
 
@@ -1246,7 +1246,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param isSummon if {@code true}, the skill was actually cast by the player's summon, not the player himself
      * @return
      */
-    public String onSkillSee(L2Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon) {
+    public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon) {
         return null;
     }
 
@@ -1258,7 +1258,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param skill  the actual skill that was used by the NPC.
      * @return
      */
-    public String onSpellFinished(L2Npc npc, Player player, Skill skill) {
+    public String onSpellFinished(Npc npc, Player player, Skill skill) {
         return null;
     }
 
@@ -1270,7 +1270,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param action  this parameter contains a reference to the action that was triggered.
      * @return
      */
-    public String onTrapAction(L2TrapInstance trap, Creature trigger, TrapAction action) {
+    public String onTrapAction(Trap trap, Creature trigger, TrapAction action) {
         return null;
     }
 
@@ -1282,7 +1282,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param npc this parameter contains a reference to the exact instance of the NPC who just (re)spawned.
      * @return
      */
-    public String onSpawn(L2Npc npc) {
+    public String onSpawn(Npc npc) {
         return null;
     }
 
@@ -1291,7 +1291,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npc this parameter contains a reference to the exact instance of the NPC who just teleport.
      */
-    protected void onTeleport(L2Npc npc) {
+    protected void onTeleport(Npc npc) {
     }
 
     /**
@@ -1303,7 +1303,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param isSummon this parameter if it's {@code false} it denotes that the attacker was indeed the player, else it specifies that the attacker was the player's summon.
      * @return
      */
-    public String onFactionCall(L2Npc npc, L2Npc caller, Player attacker, boolean isSummon) {
+    public String onFactionCall(Npc npc, Npc caller, Player attacker, boolean isSummon) {
         return null;
     }
 
@@ -1315,7 +1315,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param isSummon this parameter if it's {@code false} it denotes that the character that entered the aggression range was indeed the player, else it specifies that the character was the player's summon.
      * @return
      */
-    public String onAggroRangeEnter(L2Npc npc, Player player, boolean isSummon) {
+    public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon) {
         return null;
     }
 
@@ -1327,7 +1327,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param isSummon this parameter if it's {@code false} it denotes that the character seen by the NPC was indeed the player, else it specifies that the character was the player's summon
      * @return
      */
-    public String onSeeCreature(L2Npc npc, Creature creature, boolean isSummon) {
+    public String onSeeCreature(Npc npc, Creature creature, boolean isSummon) {
         return null;
     }
 
@@ -1370,7 +1370,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param reference - WorldObject to pass, if needed
      * @return
      */
-    public String onEventReceived(String eventName, L2Npc sender, L2Npc receiver, WorldObject reference) {
+    public String onEventReceived(String eventName, Npc sender, Npc receiver, WorldObject reference) {
         return null;
     }
 
@@ -1398,7 +1398,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npc registered NPC
      */
-    public void onMoveFinished(L2Npc npc) {
+    public void onMoveFinished(Npc npc) {
     }
 
     /**
@@ -1406,7 +1406,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npc registered NPC
      */
-    public void onRouteFinished(L2Npc npc) {
+    public void onRouteFinished(Npc npc) {
     }
 
     /**
@@ -1415,7 +1415,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param isSummon
      * @return {@code true} if npc can hate the playable, {@code false} otherwise.
      */
-    public boolean onNpcHate(L2Attackable mob, Player player, boolean isSummon) {
+    public boolean onNpcHate(Attackable mob, Player player, boolean isSummon) {
         return true;
     }
 
@@ -1472,7 +1472,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npc NPC which will be despawned
      */
-    public void onNpcDespawn(L2Npc npc) {
+    public void onNpcDespawn(Npc npc) {
     }
 
 
@@ -1481,7 +1481,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param player
      * @return {@code true} if player can see this npc, {@code false} otherwise.
      */
-    public boolean onCanSeeMe(L2Npc npc, Player player) {
+    public boolean onCanSeeMe(Npc npc, Player player) {
         return false;
     }
 
@@ -1508,7 +1508,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param player the player to whom to show the result
      * @param res    the message to show to the player
      * @return {@code false} if the message was sent, {@code true} otherwise
-     * @see #showResult(Player, String, L2Npc)
+     * @see #showResult(Player, String, Npc)
      */
     public boolean showResult(Player player, String res) {
         return showResult(player, res, null);
@@ -1529,7 +1529,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param res    the message to show to the player
      * @return {@code false} if the message was sent, {@code true} otherwise
      */
-    public boolean showResult(Player player, String res, L2Npc npc) {
+    public boolean showResult(Player player, String res, Npc npc) {
         if ((res == null) || res.isEmpty() || (player == null)) {
             return true;
         }
@@ -2268,10 +2268,10 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * each member rolls a random number, the one with the highest roll wins.
      *
      * @param player the player whose party to check
-     * @param npc    the NPC used for distance and other checks (if {@link #checkPartyMember(Player, L2Npc)} is overriden)
+     * @param npc    the NPC used for distance and other checks (if {@link #checkPartyMember(Player, Npc)} is overriden)
      * @return the random party member or {@code null}
      */
-    public Player getRandomPartyMember(Player player, L2Npc npc) {
+    public Player getRandomPartyMember(Player player, Npc npc) {
         if ((player == null) || !checkDistanceToTarget(player, npc)) {
             return null;
         }
@@ -2297,14 +2297,14 @@ public class Quest extends AbstractScript implements IIdentifiable {
     }
 
     /**
-     * This method is called for every party member in {@link #getRandomPartyMember(Player, L2Npc)}.<br>
+     * This method is called for every party member in {@link #getRandomPartyMember(Player, Npc)}.<br>
      * It is intended to be overriden by the specific quest implementations.
      *
      * @param player the player to check
-     * @param npc    the NPC that was passed to {@link #getRandomPartyMember(Player, L2Npc)}
+     * @param npc    the NPC that was passed to {@link #getRandomPartyMember(Player, Npc)}
      * @return {@code true} if this party member passes the check, {@code false} otherwise
      */
-    public boolean checkPartyMember(Player player, L2Npc npc) {
+    public boolean checkPartyMember(Player player, Npc npc) {
         return true;
     }
 
@@ -2319,7 +2319,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param target       the NPC to use for the distance check (can be null)
      * @return the {@link QuestState} object of the random party member or {@code null} if none matched the condition
      */
-    public QuestState getRandomPartyMemberState(Player player, int condition, int playerChance, L2Npc target) {
+    public QuestState getRandomPartyMemberState(Player player, int condition, int playerChance, Npc target) {
         if ((player == null) || (playerChance < 1)) {
             return null;
         }
@@ -2355,21 +2355,21 @@ public class Quest extends AbstractScript implements IIdentifiable {
         return !checkDistanceToTarget(qs.getPlayer(), target) ? null : qs;
     }
 
-    private boolean checkPartyMemberConditions(QuestState qs, int condition, L2Npc npc) {
+    private boolean checkPartyMemberConditions(QuestState qs, int condition, Npc npc) {
         return (qs != null) && ((condition == -1) ? qs.isStarted() : qs.isCond(condition)) && checkPartyMember(qs, npc);
     }
 
     /**
-     * This method is called for every party member in {@link #getRandomPartyMemberState(Player, int, int, L2Npc)} if/after all the standard checks are passed.<br>
+     * This method is called for every party member in {@link #getRandomPartyMemberState(Player, int, int, Npc)} if/after all the standard checks are passed.<br>
      * It is intended to be overriden by the specific quest implementations.<br>
      * It can be used in cases when there are more checks performed than simply a quest condition check,<br>
      * for example, if an item is required in the player's inventory.
      *
      * @param qs  the {@link QuestState} object of the party member
-     * @param npc the NPC that was passed as the last parameter to {@link #getRandomPartyMemberState(Player, int, int, L2Npc)}
+     * @param npc the NPC that was passed as the last parameter to {@link #getRandomPartyMemberState(Player, int, int, Npc)}
      * @return {@code true} if this party member passes the check, {@code false} otherwise
      */
-    public boolean checkPartyMember(QuestState qs, L2Npc npc) {
+    public boolean checkPartyMember(QuestState qs, Npc npc) {
         return true;
     }
 
@@ -2379,7 +2379,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param player   the player to send the HTML to
      * @param filename the name of the HTML file to show
      * @return the contents of the HTML file that was sent to the player
-     * @see #showHtmlFile(Player, String, L2Npc)
+     * @see #showHtmlFile(Player, String, Npc)
      */
     public String showHtmlFile(Player player, String filename) {
         return showHtmlFile(player, filename, null);
@@ -2392,9 +2392,9 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param filename the name of the HTML file to show
      * @param npc      the NPC that is showing the HTML file
      * @return the contents of the HTML file that was sent to the player
-     * @see #showHtmlFile(Player, String, L2Npc)
+     * @see #showHtmlFile(Player, String, Npc)
      */
-    public String showHtmlFile(Player player, String filename, L2Npc npc) {
+    public String showHtmlFile(Player player, String filename, Npc npc) {
         final boolean questwindow = !filename.endsWith(".html");
 
         // Create handler to file linked to the quest
@@ -2613,7 +2613,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param npc
      * @return the HTML
      */
-    public String getStartConditionHtml(Player player, L2Npc npc) {
+    public String getStartConditionHtml(Player player, Npc npc) {
         final QuestState st = getQuestState(player, false);
         if ((_startCondition == null) || ((st != null) && !st.isCreated())) {
             return null;
