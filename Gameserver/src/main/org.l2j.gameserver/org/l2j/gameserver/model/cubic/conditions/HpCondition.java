@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.cubic.conditions;
 
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 
 /**
@@ -36,7 +36,7 @@ public class HpCondition implements ICubicCondition {
     @Override
     public boolean test(CubicInstance cubic, Creature owner, WorldObject target) {
         if (target.isCharacter() || target.isDoor()) {
-            final double hpPer = (target.isDoor() ? (L2DoorInstance) target : (Creature) target).getCurrentHpPercent();
+            final double hpPer = (target.isDoor() ? (Door) target : (Creature) target).getCurrentHpPercent();
             switch (_type) {
                 case GREATER: {
                     return hpPer > _hpPer;

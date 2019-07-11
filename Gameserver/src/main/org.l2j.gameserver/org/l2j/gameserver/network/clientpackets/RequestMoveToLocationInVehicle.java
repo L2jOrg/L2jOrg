@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.BoatManager;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.L2BoatInstance;
+import org.l2j.gameserver.model.actor.instance.Boat;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -71,7 +71,7 @@ public final class RequestMoveToLocationInVehicle extends ClientPacket {
             return;
         }
 
-        final L2BoatInstance boat;
+        final Boat boat;
         if (activeChar.isInBoat()) {
             boat = activeChar.getBoat();
             if (boat.getObjectId() != _boatId) {

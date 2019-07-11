@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.actor.stat;
 
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 
 /**
  * @author malyelfik
@@ -24,13 +24,13 @@ import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 public class DoorStat extends CharStat {
     private int _upgradeHpRatio = 1;
 
-    public DoorStat(L2DoorInstance activeChar) {
+    public DoorStat(Door activeChar) {
         super(activeChar);
     }
 
     @Override
-    public L2DoorInstance getActiveChar() {
-        return (L2DoorInstance) super.getActiveChar();
+    public Door getActiveChar() {
+        return (Door) super.getActiveChar();
     }
 
     @Override

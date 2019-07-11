@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -35,7 +35,7 @@ public class StaticObject extends ServerPacket {
         _damageGrade = 0;
     }
 
-    public StaticObject(L2DoorInstance door, boolean targetable) {
+    public StaticObject(Door door, boolean targetable) {
         _staticObjectId = door.getId();
         _objectId = door.getObjectId();
         _type = 1;

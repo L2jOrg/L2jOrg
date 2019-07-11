@@ -9,7 +9,7 @@ import org.l2j.gameserver.instancemanager.DuelManager;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -199,7 +199,7 @@ public class Duel {
             broadcastToTeam1(ExDuelStart.PARTY_DUEL);
             broadcastToTeam2(ExDuelStart.PARTY_DUEL);
 
-            for (L2DoorInstance door : _duelInstance.getDoors()) {
+            for (Door door : _duelInstance.getDoors()) {
                 if ((door != null) && !door.isOpen()) {
                     door.openMe();
                 }

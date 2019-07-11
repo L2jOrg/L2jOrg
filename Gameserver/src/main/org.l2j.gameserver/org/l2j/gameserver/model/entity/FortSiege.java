@@ -11,7 +11,7 @@ import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.L2FortCommanderInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -410,7 +410,7 @@ public class FortSiege implements Siegable {
                         _siegeRestore.cancel(true);
                     }
                     // open doors in main building
-                    for (L2DoorInstance door : _fort.getDoors()) {
+                    for (Door door : _fort.getDoors()) {
                         if (door.getIsShowHp()) {
                             continue;
                         }

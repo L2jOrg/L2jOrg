@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets.shuttle;
 
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2ShuttleInstance;
+import org.l2j.gameserver.model.actor.instance.Shuttle;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,7 +32,7 @@ public class RequestShuttleGetOn extends ClientPacket {
         }
 
         // TODO: better way?
-        for (L2ShuttleInstance shuttle : L2World.getInstance().getVisibleObjects(activeChar, L2ShuttleInstance.class)) {
+        for (Shuttle shuttle : L2World.getInstance().getVisibleObjects(activeChar, Shuttle.class)) {
             if (shuttle.calculateDistance3D(activeChar) < 1000) {
                 shuttle.addPassenger(activeChar);
                 activeChar.getInVehiclePosition().setXYZ(_x, _y, _z);

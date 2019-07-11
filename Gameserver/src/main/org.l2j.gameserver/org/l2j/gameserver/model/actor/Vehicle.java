@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.actor;
 
-import org.l2j.gameserver.GameTimeController;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
@@ -18,8 +18,8 @@ import org.l2j.gameserver.model.items.L2Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.zone.ZoneRegion;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Iterator;
@@ -29,7 +29,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * @author DS
  */
-public abstract class L2Vehicle extends Creature {
+public abstract class Vehicle extends Creature {
     protected final Set<Player> _passengers = ConcurrentHashMap.newKeySet();
     protected int _dockId = 0;
     protected Location _oustLoc = null;
@@ -37,7 +37,7 @@ public abstract class L2Vehicle extends Creature {
     protected int _runState = 0;
     private Runnable _engine = null;
 
-    public L2Vehicle(L2CharTemplate template) {
+    public Vehicle(L2CharTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2Vehicle);
         setIsFlying(true);
@@ -61,7 +61,7 @@ public abstract class L2Vehicle extends Creature {
 
     public void runEngine(int delay) {
         if (_engine != null) {
-            ThreadPoolManager.getInstance().schedule(_engine, delay);
+            ThreadPoolManager.schedule(_engine, delay);
         }
     }
 

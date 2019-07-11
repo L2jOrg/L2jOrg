@@ -5,7 +5,7 @@ import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -56,11 +56,11 @@ public class OlympiadStadium {
     }
 
     public final void openDoors() {
-        _instance.getDoors().forEach(L2DoorInstance::openMe);
+        _instance.getDoors().forEach(Door::openMe);
     }
 
     public final void closeDoors() {
-        _instance.getDoors().forEach(L2DoorInstance::closeMe);
+        _instance.getDoors().forEach(Door::closeMe);
     }
 
     public final void spawnBuffers() {

@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
 import org.l2j.gameserver.model.items.CommonItem;
@@ -49,7 +49,7 @@ public final class Fort extends AbstractResidence {
     public static final int FUNC_RESTORE_EXP = 4;
     public static final int FUNC_SUPPORT = 5;
     protected static final Logger LOGGER = LoggerFactory.getLogger(Fort.class);
-    private final List<L2DoorInstance> _doors = new ArrayList<>();
+    private final List<Door> _doors = new ArrayList<>();
     private final Map<Integer, FortFunction> _function = new ConcurrentHashMap<>();
     private final ScheduledFuture<?>[] _FortUpdater = new ScheduledFuture<?>[2];
     private final Set<L2Spawn> _siegeNpcs = ConcurrentHashMap.newKeySet();
@@ -163,7 +163,7 @@ public final class Fort extends AbstractResidence {
             return;
         }
 
-        final L2DoorInstance door = getDoor(doorId);
+        final Door door = getDoor(doorId);
         if (door != null) {
             if (open) {
                 door.openMe();
@@ -310,7 +310,7 @@ public final class Fort extends AbstractResidence {
      * <BR>
      */
     public void resetDoors() {
-        for (L2DoorInstance door : _doors) {
+        for (Door door : _doors) {
             if (door.isOpen()) {
                 door.closeMe();
             }
@@ -326,7 +326,7 @@ public final class Fort extends AbstractResidence {
 
     // This method upgrade door
     public void upgradeDoor(int doorId, int hp, int pDef, int mDef) {
-        final L2DoorInstance door = getDoor(doorId);
+        final Door door = getDoor(doorId);
         if (door != null) {
             door.setCurrentHp(door.getMaxHp() + hp);
             saveDoorUpgrade(doorId, hp, pDef, mDef);
@@ -452,7 +452,7 @@ public final class Fort extends AbstractResidence {
 
     // This method loads fort door data from database
     private void loadDoor() {
-        for (L2DoorInstance door : DoorData.getInstance().getDoors()) {
+        for (Door door : DoorData.getInstance().getDoors()) {
             if ((door.getFort() != null) && (door.getFort().getResidenceId() == getResidenceId())) {
                 _doors.add(door);
             }
@@ -578,12 +578,12 @@ public final class Fort extends AbstractResidence {
         _fortOwner = clan;
     }
 
-    public final L2DoorInstance getDoor(int doorId) {
+    public final Door getDoor(int doorId) {
         if (doorId <= 0) {
             return null;
         }
 
-        for (L2DoorInstance door : _doors) {
+        for (Door door : _doors) {
             if (door.getId() == doorId) {
                 return door;
             }
@@ -591,7 +591,7 @@ public final class Fort extends AbstractResidence {
         return null;
     }
 
-    public final List<L2DoorInstance> getDoors() {
+    public final List<Door> getDoors() {
         return _doors;
     }
 

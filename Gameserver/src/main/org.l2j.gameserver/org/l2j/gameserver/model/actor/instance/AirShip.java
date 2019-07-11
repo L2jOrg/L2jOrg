@@ -20,17 +20,17 @@ import org.l2j.gameserver.ai.L2AirShipAI;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.AirShipManager;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Vehicle;
+import org.l2j.gameserver.model.actor.Vehicle;
 import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
 import org.l2j.gameserver.network.serverpackets.*;
 
 /**
- * Flying airships. Very similar to Maktakien boats (see L2BoatInstance) but these do fly :P
+ * Flying airships. Very similar to Maktakien boats (see Boat) but these do fly :P
  *
  * @author DrHouse, DS
  */
-public class L2AirShipInstance extends L2Vehicle {
-    public L2AirShipInstance(L2CharTemplate template) {
+public class AirShip extends Vehicle {
+    public AirShip(L2CharTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2AirShipInstance);
         setAI(new L2AirShipAI(this));

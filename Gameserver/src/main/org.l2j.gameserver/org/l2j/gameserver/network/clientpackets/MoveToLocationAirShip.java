@@ -5,7 +5,7 @@ import org.l2j.gameserver.instancemanager.AirShipManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.VehiclePathPoint;
-import org.l2j.gameserver.model.actor.instance.L2AirShipInstance;
+import org.l2j.gameserver.model.actor.instance.AirShip;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 
@@ -38,7 +38,7 @@ public class MoveToLocationAirShip extends ClientPacket {
             return;
         }
 
-        final L2AirShipInstance ship = activeChar.getAirShip();
+        final AirShip ship = activeChar.getAirShip();
         if (!ship.isCaptain(activeChar)) {
             return;
         }

@@ -15,7 +15,7 @@ import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.Summon;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2DoorTemplate;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -57,7 +57,7 @@ public final class Instance implements IIdentifiable, INamable {
     private final Set<Player> _allowed = ConcurrentHashMap.newKeySet(); // Players which can enter to instance
     private final Set<Player> _players = ConcurrentHashMap.newKeySet(); // Players inside instance
     private final Set<L2Npc> _npcs = ConcurrentHashMap.newKeySet(); // Spawned NPCs inside instance
-    private final Map<Integer, L2DoorInstance> _doors = new HashMap<>(); // Spawned doors inside instance
+    private final Map<Integer, Door> _doors = new HashMap<>(); // Spawned doors inside instance
     private final StatsSet _parameters = new StatsSet();
     // Timers
     private final Map<Integer, ScheduledFuture<?>> _ejectDeadTasks = new ConcurrentHashMap<>();
@@ -325,7 +325,7 @@ public final class Instance implements IIdentifiable, INamable {
      *
      * @return collection of spawned doors
      */
-    public Collection<L2DoorInstance> getDoors() {
+    public Collection<Door> getDoors() {
         return _doors.values();
     }
 
@@ -335,7 +335,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param id template ID of door
      * @return instance of door if found, otherwise {@code null}
      */
-    public L2DoorInstance getDoor(int id) {
+    public Door getDoor(int id) {
         return _doors.get(id);
     }
 
@@ -346,7 +346,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param open {@code true} means open door, {@code false} means close door
      */
     public void openCloseDoor(int id, boolean open) {
-        final L2DoorInstance door = _doors.get(id);
+        final Door door = _doors.get(id);
         if (door != null) {
             if (open) {
                 if (!door.isOpen()) {
@@ -563,7 +563,7 @@ public final class Instance implements IIdentifiable, INamable {
      * Despawn doors inside instance world.
      */
     private void removeDoors() {
-        _doors.values().stream().filter(Objects::nonNull).forEach(L2DoorInstance::decayMe);
+        _doors.values().stream().filter(Objects::nonNull).forEach(Door::decayMe);
         _doors.clear();
     }
 

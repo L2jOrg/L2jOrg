@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.VehiclePathPoint;
-import org.l2j.gameserver.model.actor.instance.L2BoatInstance;
+import org.l2j.gameserver.model.actor.instance.Boat;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -16,7 +16,7 @@ public class BoatManager {
     public static final int TALKING_ISLAND = 1;
     public static final int GLUDIN_HARBOR = 2;
     public static final int RUNE_HARBOR = 3;
-    private final Map<Integer, L2BoatInstance> _boats = new HashMap<>();
+    private final Map<Integer, Boat> _boats = new HashMap<>();
     private final boolean[] _docksBusy = new boolean[3];
 
     private BoatManager() {
@@ -25,7 +25,7 @@ public class BoatManager {
         }
     }
 
-    public L2BoatInstance getNewBoat(int boatId, int x, int y, int z, int heading) {
+    public Boat getNewBoat(int boatId, int x, int y, int z, int heading) {
         if (!Config.ALLOW_BOAT) {
             return null;
         }
@@ -74,7 +74,7 @@ public class BoatManager {
         npcDat.set("basePDef", 100);
         npcDat.set("baseMDef", 100);
         final L2CharTemplate template = new L2CharTemplate(npcDat);
-        final L2BoatInstance boat = new L2BoatInstance(template);
+        final Boat boat = new Boat(template);
         _boats.put(boat.getObjectId(), boat);
         boat.setHeading(heading);
         boat.setXYZInvisible(x, y, z);
@@ -86,7 +86,7 @@ public class BoatManager {
      * @param boatId
      * @return
      */
-    public L2BoatInstance getBoat(int boatId) {
+    public Boat getBoat(int boatId) {
         return _boats.get(boatId);
     }
 

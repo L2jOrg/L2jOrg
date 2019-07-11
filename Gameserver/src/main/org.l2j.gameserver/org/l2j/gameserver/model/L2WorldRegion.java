@@ -5,7 +5,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Vehicle;
+import org.l2j.gameserver.model.actor.Vehicle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -67,7 +67,7 @@ public final class L2WorldRegion {
                         mob.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
                         mob.getAI().stopAITask();
                     }
-                } else if (o instanceof L2Vehicle) {
+                } else if (o instanceof Vehicle) {
                     c++;
                 }
             }

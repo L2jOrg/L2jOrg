@@ -3,7 +3,7 @@ package org.l2j.gameserver.data.xml.impl;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.VehiclePathPoint;
-import org.l2j.gameserver.model.actor.instance.L2ShuttleInstance;
+import org.l2j.gameserver.model.actor.instance.Shuttle;
 import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
 import org.l2j.gameserver.model.shuttle.L2ShuttleData;
 import org.l2j.gameserver.model.shuttle.L2ShuttleEngine;
@@ -33,7 +33,7 @@ public final class ShuttleData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ShuttleData.class);
 
     private final Map<Integer, L2ShuttleData> _shuttles = new HashMap<>();
-    private final Map<Integer, L2ShuttleInstance> _shuttleInstances = new HashMap<>();
+    private final Map<Integer, Shuttle> _shuttleInstances = new HashMap<>();
 
     private ShuttleData() {
         load();
@@ -47,7 +47,7 @@ public final class ShuttleData extends GameXmlReader {
     @Override
     public synchronized void load() {
         if (!_shuttleInstances.isEmpty()) {
-            for (L2ShuttleInstance shuttle : _shuttleInstances.values()) {
+            for (Shuttle shuttle : _shuttleInstances.values()) {
                 shuttle.deleteMe();
             }
             _shuttleInstances.clear();
@@ -128,7 +128,7 @@ public final class ShuttleData extends GameXmlReader {
 
     private void init() {
         for (L2ShuttleData data : _shuttles.values()) {
-            final L2ShuttleInstance shuttle = new L2ShuttleInstance(new L2CharTemplate(new StatsSet()));
+            final Shuttle shuttle = new Shuttle(new L2CharTemplate(new StatsSet()));
             shuttle.setData(data);
             shuttle.setHeading(data.getLocation().getHeading());
             shuttle.setLocationInvisible(data.getLocation());
@@ -141,8 +141,8 @@ public final class ShuttleData extends GameXmlReader {
         }
     }
 
-    public L2ShuttleInstance getShuttle(int id) {
-        for (L2ShuttleInstance shuttle : _shuttleInstances.values()) {
+    public Shuttle getShuttle(int id) {
+        for (Shuttle shuttle : _shuttleInstances.values()) {
             if ((shuttle.getObjectId() == id) || (shuttle.getId() == id)) {
                 return shuttle;
             }

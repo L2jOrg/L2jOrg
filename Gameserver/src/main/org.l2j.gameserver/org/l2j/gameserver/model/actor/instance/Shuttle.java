@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.actor.instance;
 import org.l2j.gameserver.ai.L2ShuttleAI;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Vehicle;
+import org.l2j.gameserver.model.actor.Vehicle;
 import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
 import org.l2j.gameserver.model.shuttle.L2ShuttleData;
 import org.l2j.gameserver.model.shuttle.L2ShuttleStop;
@@ -33,10 +33,10 @@ import java.util.List;
 /**
  * @author UnAfraid
  */
-public class L2ShuttleInstance extends L2Vehicle {
+public class Shuttle extends Vehicle {
     private L2ShuttleData _shuttleData;
 
-    public L2ShuttleInstance(L2CharTemplate template) {
+    public Shuttle(L2CharTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2ShuttleInstance);
         setAI(new L2ShuttleAI(this));

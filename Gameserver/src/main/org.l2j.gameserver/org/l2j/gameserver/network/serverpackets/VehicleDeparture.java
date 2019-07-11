@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2BoatInstance;
+import org.l2j.gameserver.model.actor.instance.Boat;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -15,7 +15,7 @@ public class VehicleDeparture extends ServerPacket {
     private final int _moveSpeed;
     private final int _rotationSpeed;
 
-    public VehicleDeparture(L2BoatInstance boat) {
+    public VehicleDeparture(Boat boat) {
         _objId = boat.getObjectId();
         _x = boat.getXdestination();
         _y = boat.getYdestination();

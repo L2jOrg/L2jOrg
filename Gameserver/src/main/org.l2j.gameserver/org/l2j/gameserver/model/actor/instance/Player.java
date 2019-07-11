@@ -524,7 +524,7 @@ public final class Player extends Playable {
     /**
      * Boat and AirShip
      */
-    private L2Vehicle _vehicle = null;
+    private Vehicle _vehicle = null;
     private Location _inVehiclePosition;
     private MountType _mountType = MountType.NONE;
     private int _mountNpcId;
@@ -4037,7 +4037,7 @@ public final class Player extends Playable {
             }
 
             // vehicles cant be targeted
-            if (!isGM() && (newTarget instanceof L2Vehicle)) {
+            if (!isGM() && (newTarget instanceof Vehicle)) {
                 newTarget = null;
             }
         }
@@ -8728,8 +8728,8 @@ public final class Player extends Playable {
     /**
      * @return
      */
-    public L2BoatInstance getBoat() {
-        return (L2BoatInstance) _vehicle;
+    public Boat getBoat() {
+        return (Boat) _vehicle;
     }
 
     /**
@@ -8742,23 +8742,23 @@ public final class Player extends Playable {
     /**
      * @return
      */
-    public L2AirShipInstance getAirShip() {
-        return (L2AirShipInstance) _vehicle;
+    public AirShip getAirShip() {
+        return (AirShip) _vehicle;
     }
 
     public boolean isInShuttle() {
-        return _vehicle instanceof L2ShuttleInstance;
+        return _vehicle instanceof Shuttle;
     }
 
-    public L2ShuttleInstance getShuttle() {
-        return (L2ShuttleInstance) _vehicle;
+    public Shuttle getShuttle() {
+        return (Shuttle) _vehicle;
     }
 
-    public L2Vehicle getVehicle() {
+    public Vehicle getVehicle() {
         return _vehicle;
     }
 
-    public void setVehicle(L2Vehicle v) {
+    public void setVehicle(Vehicle v) {
         if ((v == null) && (_vehicle != null)) {
             _vehicle.removePassenger(this);
         }

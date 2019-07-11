@@ -20,7 +20,7 @@ import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionShiftHandler;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.ClanHall;
@@ -30,7 +30,7 @@ import org.l2j.gameserver.network.serverpackets.StaticObject;
 import org.l2j.gameserver.util.HtmlUtil;
 
 /**
- * This class manage shift + click on {@link L2DoorInstance}.
+ * This class manage shift + click on {@link Door}.
  * @author St3eT
  */
 public class L2DoorInstanceActionShift implements IActionShiftHandler
@@ -41,7 +41,7 @@ public class L2DoorInstanceActionShift implements IActionShiftHandler
 		if (activeChar.isGM())
 		{
 			activeChar.setTarget(target);
-			final L2DoorInstance door = (L2DoorInstance) target;
+			final Door door = (Door) target;
 			final ClanHall clanHall = ClanHallData.getInstance().getClanHallByDoorId(door.getId());
 			final Fort fort = door.getFort();
 			final Castle castle = door.getCastle();

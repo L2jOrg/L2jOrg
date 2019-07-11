@@ -21,8 +21,8 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.L2DefenderInstance;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.skills.Skill;
  * @author mkizub
  */
 public class L2DoorAI extends L2CharacterAI {
-    public L2DoorAI(L2DoorInstance door) {
+    public L2DoorAI(Door door) {
         super(door);
     }
 
@@ -76,7 +76,7 @@ public class L2DoorAI extends L2CharacterAI {
 
     @Override
     protected void onEvtAttacked(Creature attacker) {
-        ThreadPoolManager.getInstance().execute(new onEventAttackedDoorTask((L2DoorInstance) _actor, attacker));
+        ThreadPoolManager.getInstance().execute(new onEventAttackedDoorTask((Door) _actor, attacker));
     }
 
     @Override
@@ -120,10 +120,10 @@ public class L2DoorAI extends L2CharacterAI {
     }
 
     private class onEventAttackedDoorTask implements Runnable {
-        private final L2DoorInstance _door;
+        private final Door _door;
         private final Creature _attacker;
 
-        public onEventAttackedDoorTask(L2DoorInstance door, Creature attacker) {
+        public onEventAttackedDoorTask(Door door, Creature attacker) {
             _door = door;
             _attacker = attacker;
         }

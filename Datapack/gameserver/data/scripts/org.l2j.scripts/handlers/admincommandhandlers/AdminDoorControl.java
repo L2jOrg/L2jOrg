@@ -21,7 +21,7 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.serverpackets.ExServerPrimitive;
@@ -89,13 +89,13 @@ public class AdminDoorControl implements IAdminCommandHandler
 			}
 			else if (command.equals("admin_closeall"))
 			{
-				for (L2DoorInstance door : _doorTable.getDoors())
+				for (Door door : _doorTable.getDoors())
 				{
 					door.closeMe();
 				}
 				for (Castle castle : CastleManager.getInstance().getCastles())
 				{
-					for (L2DoorInstance door : castle.getDoors())
+					for (Door door : castle.getDoors())
 					{
 						door.closeMe();
 					}
@@ -103,13 +103,13 @@ public class AdminDoorControl implements IAdminCommandHandler
 			}
 			else if (command.equals("admin_openall"))
 			{
-				for (L2DoorInstance door : _doorTable.getDoors())
+				for (Door door : _doorTable.getDoors())
 				{
 					door.openMe();
 				}
 				for (Castle castle : CastleManager.getInstance().getCastles())
 				{
-					for (L2DoorInstance door : castle.getDoors())
+					for (Door door : castle.getDoors())
 					{
 						door.openMe();
 					}
@@ -120,7 +120,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 				final WorldObject target = activeChar.getTarget();
 				if ((target != null) && target.isDoor())
 				{
-					((L2DoorInstance) target).openMe();
+					((Door) target).openMe();
 				}
 				else
 				{
@@ -132,7 +132,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 				final WorldObject target = activeChar.getTarget();
 				if ((target != null) && target.isDoor())
 				{
-					((L2DoorInstance) target).closeMe();
+					((Door) target).closeMe();
 				}
 				else
 				{
@@ -141,7 +141,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 			}
 			else if (command.equals("admin_showdoors"))
 			{
-				L2World.getInstance().forEachVisibleObject(activeChar, L2DoorInstance.class, door ->
+				L2World.getInstance().forEachVisibleObject(activeChar, Door.class, door ->
 				{
 					final ExServerPrimitive packet = new ExServerPrimitive("door" + door.getId(), activeChar.getX(), activeChar.getY(), -16000);
 					final Color color = door.isOpen() ? Color.GREEN : Color.RED;

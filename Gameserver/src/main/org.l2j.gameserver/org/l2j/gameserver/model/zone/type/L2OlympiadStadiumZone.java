@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2j.gameserver.model.zone.AbstractZoneSettings;
@@ -26,7 +26,7 @@ import java.util.List;
  * @author durgus, DS
  */
 public class L2OlympiadStadiumZone extends L2ZoneRespawn {
-    private final List<L2DoorInstance> _doors = new ArrayList<>(2);
+    private final List<Door> _doors = new ArrayList<>(2);
     private final List<L2Spawn> _buffers = new ArrayList<>(2);
     private final List<Location> _spectatorLocations = new ArrayList<>(1);
 
@@ -99,7 +99,7 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn {
         }
     }
 
-    public List<L2DoorInstance> getDoors() {
+    public List<Door> getDoors() {
         return _doors;
     }
 

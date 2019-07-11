@@ -16,19 +16,19 @@
  */
 package org.l2j.gameserver.model.holders;
 
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 
 /**
  * @author UnAfraid
  */
 public class DoorRequestHolder {
-    private final L2DoorInstance _target;
+    private final Door _target;
 
-    public DoorRequestHolder(L2DoorInstance door) {
+    public DoorRequestHolder(Door door) {
         _target = door;
     }
 
-    public L2DoorInstance getDoor() {
+    public Door getDoor() {
         return _target;
     }
 }

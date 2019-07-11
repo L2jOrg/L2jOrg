@@ -12,8 +12,8 @@ import org.l2j.gameserver.enums.TaxType;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.L2Npc;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.L2ArtefactInstance;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.CastleSpawnHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
@@ -50,7 +50,7 @@ public final class Castle extends AbstractResidence {
     public static final int FUNC_RESTORE_EXP = 4;
     public static final int FUNC_SUPPORT = 5;
     protected static final Logger LOGGER = LoggerFactory.getLogger(Castle.class);
-    private final List<L2DoorInstance> _doors = new ArrayList<>();
+    private final List<Door> _doors = new ArrayList<>();
     private final List<L2Npc> _sideNpcs = new ArrayList<>();
     private final List<L2ArtefactInstance> _artefacts = new ArrayList<>(1);
     private final Map<Integer, CastleFunction> _function = new ConcurrentHashMap<>();
@@ -258,7 +258,7 @@ public final class Castle extends AbstractResidence {
             return;
         }
 
-        final L2DoorInstance door = getDoor(doorId);
+        final Door door = getDoor(doorId);
         if (door != null) {
             if (open) {
                 door.openMe();
@@ -273,7 +273,7 @@ public final class Castle extends AbstractResidence {
             return;
         }
 
-        final L2DoorInstance door = getDoor(doorName);
+        final Door door = getDoor(doorName);
         if (door != null) {
             if (open) {
                 door.openMe();
@@ -333,7 +333,7 @@ public final class Castle extends AbstractResidence {
      * @param isDoorWeak
      */
     public void spawnDoor(boolean isDoorWeak) {
-        for (L2DoorInstance door : _doors) {
+        for (Door door : _doors) {
             if (door.isDead()) {
                 door.doRevive();
                 door.setCurrentHp((isDoorWeak) ? (door.getMaxHp() / 2) : (door.getMaxHp()));
@@ -451,7 +451,7 @@ public final class Castle extends AbstractResidence {
 
     // This method loads castle door data from database
     private void loadDoor() {
-        for (L2DoorInstance door : DoorData.getInstance().getDoors()) {
+        for (Door door : DoorData.getInstance().getDoors()) {
             if ((door.getCastle() != null) && (door.getCastle().getResidenceId() == getResidenceId())) {
                 _doors.add(door);
             }
@@ -474,7 +474,7 @@ public final class Castle extends AbstractResidence {
     }
 
     private void removeDoorUpgrade() {
-        for (L2DoorInstance door : _doors) {
+        for (Door door : _doors) {
             door.getStat().setUpgradeHpRatio(1);
             door.setCurrentHp(door.getCurrentHp());
         }
@@ -489,7 +489,7 @@ public final class Castle extends AbstractResidence {
     }
 
     public void setDoorUpgrade(int doorId, int ratio, boolean save) {
-        final L2DoorInstance door = (getDoors().isEmpty()) ? DoorData.getInstance().getDoor(doorId) : getDoor(doorId);
+        final Door door = (getDoors().isEmpty()) ? DoorData.getInstance().getDoor(doorId) : getDoor(doorId);
         if (door == null) {
             return;
         }
@@ -542,15 +542,15 @@ public final class Castle extends AbstractResidence {
         }
     }
 
-    public final L2DoorInstance getDoor(int doorId) {
+    public final Door getDoor(int doorId) {
         return _doors.stream().filter(d -> d.getId() == doorId).findFirst().orElse(null);
     }
 
-    public final L2DoorInstance getDoor(String doorName) {
+    public final Door getDoor(String doorName) {
         return _doors.stream().filter(d -> d.getTemplate().getName().equals(doorName)).findFirst().orElse(null);
     }
 
-    public final List<L2DoorInstance> getDoors() {
+    public final List<Door> getDoors() {
         return _doors;
     }
 

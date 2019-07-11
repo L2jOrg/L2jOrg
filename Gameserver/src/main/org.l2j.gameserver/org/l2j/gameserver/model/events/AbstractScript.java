@@ -19,7 +19,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.Playable;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2TrapInstance;
@@ -2805,7 +2805,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param instanceId the ID of the instance the door is in (0 if the door is not not inside an instance)
      */
     public void openDoor(int doorId, int instanceId) {
-        final L2DoorInstance door = getDoor(doorId, instanceId);
+        final Door door = getDoor(doorId, instanceId);
         if (door == null) {
             LOGGER.warn(getClass().getSimpleName() + ": called openDoor(" + doorId + ", " + instanceId + "); but door wasnt found!", new NullPointerException());
         } else if (!door.isOpen()) {
@@ -2820,7 +2820,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param instanceId the ID of the instance the door is in (0 if the door is not not inside an instance)
      */
     public void closeDoor(int doorId, int instanceId) {
-        final L2DoorInstance door = getDoor(doorId, instanceId);
+        final Door door = getDoor(doorId, instanceId);
         if (door == null) {
             LOGGER.warn(getClass().getSimpleName() + ": called closeDoor(" + doorId + ", " + instanceId + "); but door wasnt found!", new NullPointerException());
         } else if (door.isOpen()) {
@@ -2835,8 +2835,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param instanceId the ID of the instance the door is in (0 if the door is not not inside an instance)
      * @return the found door or {@code null} if no door with that ID and instance ID was found
      */
-    public L2DoorInstance getDoor(int doorId, int instanceId) {
-        L2DoorInstance door = null;
+    public Door getDoor(int doorId, int instanceId) {
+        Door door = null;
         if (instanceId <= 0) {
             door = DoorData.getInstance().getDoor(doorId);
         } else {

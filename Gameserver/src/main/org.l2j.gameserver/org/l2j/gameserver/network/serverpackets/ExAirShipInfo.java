@@ -1,12 +1,12 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2AirShipInstance;
+import org.l2j.gameserver.model.actor.instance.AirShip;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class ExAirShipInfo extends ServerPacket {
     // store some parameters, because they can be changed during broadcast
-    private final L2AirShipInstance _ship;
+    private final AirShip _ship;
     private final int _x;
     private final int _y;
     private final int _z;
@@ -16,7 +16,7 @@ public class ExAirShipInfo extends ServerPacket {
     private final int _captain;
     private final int _helm;
 
-    public ExAirShipInfo(L2AirShipInstance ship) {
+    public ExAirShipInfo(AirShip ship) {
         _ship = ship;
         _x = ship.getX();
         _y = ship.getY();

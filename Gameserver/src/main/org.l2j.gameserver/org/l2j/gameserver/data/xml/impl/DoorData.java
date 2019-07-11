@@ -4,7 +4,7 @@ import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.templates.L2DoorTemplate;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -32,9 +32,9 @@ public final class DoorData extends GameXmlReader {
 
     // Info holders
     private final Map<String, Set<Integer>> _groups = new HashMap<>();
-    private final Map<Integer, L2DoorInstance> _doors = new HashMap<>();
+    private final Map<Integer, Door> _doors = new HashMap<>();
     private final Map<Integer, StatsSet> _templates = new HashMap<>();
-    private final Map<Integer, List<L2DoorInstance>> _regions = new HashMap<>();
+    private final Map<Integer, List<Door>> _regions = new HashMap<>();
 
     private DoorData() {
         load();
@@ -109,10 +109,10 @@ public final class DoorData extends GameXmlReader {
         }
     }
 
-    public L2DoorInstance spawnDoor(StatsSet set) {
+    public Door spawnDoor(StatsSet set) {
         // Create door template + door instance
         final L2DoorTemplate template = new L2DoorTemplate(set);
-        final L2DoorInstance door = spawnDoor(template, null);
+        final Door door = spawnDoor(template, null);
 
         // Register the door
         _templates.put(door.getId(), set);
@@ -128,8 +128,8 @@ public final class DoorData extends GameXmlReader {
      * @param instance
      * @return a new door instance based on provided template
      */
-    public L2DoorInstance spawnDoor(L2DoorTemplate template, Instance instance) {
-        final L2DoorInstance door = new L2DoorInstance(template);
+    public Door spawnDoor(L2DoorTemplate template, Instance instance) {
+        final Door door = new Door(template);
         door.setCurrentHp(door.getMaxHp());
 
         // Set instance world if provided
@@ -151,7 +151,7 @@ public final class DoorData extends GameXmlReader {
         return _templates.get(doorId);
     }
 
-    public L2DoorInstance getDoor(int doorId) {
+    public Door getDoor(int doorId) {
         return _doors.get(doorId);
     }
 
@@ -159,7 +159,7 @@ public final class DoorData extends GameXmlReader {
         return _groups.getOrDefault(groupName, Collections.emptySet());
     }
 
-    public Collection<L2DoorInstance> getDoors() {
+    public Collection<Door> getDoors() {
         return _doors.values();
     }
 
@@ -176,12 +176,12 @@ public final class DoorData extends GameXmlReader {
      *
      */
     public boolean checkIfDoorsBetween(int x, int y, int z, int tx, int ty, int tz, Instance instance, boolean doubleFaceCheck) {
-        final Collection<L2DoorInstance> allDoors = (instance != null) ? instance.getDoors() : _regions.get(MapRegionManager.getInstance().getMapRegionLocId(x, y));
+        final Collection<Door> allDoors = (instance != null) ? instance.getDoors() : _regions.get(MapRegionManager.getInstance().getMapRegionLocId(x, y));
         if (allDoors == null) {
             return false;
         }
 
-        for (L2DoorInstance doorInst : allDoors) {
+        for (Door doorInst : allDoors) {
             // check dead and open
             if (doorInst.isDead() || doorInst.isOpen() || !doorInst.checkCollision() || (doorInst.getX(0) == 0)) {
                 continue;

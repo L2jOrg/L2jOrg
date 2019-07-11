@@ -240,9 +240,9 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     }
 
     /**
-     * Verify if object is instance of L2DoorInstance.
+     * Verify if object is instance of Door.
      *
-     * @return {@code true} if object is instance of L2DoorInstance, {@code false} otherwise
+     * @return {@code true} if object is instance of Door, {@code false} otherwise
      */
     public boolean isDoor() {
         return false;

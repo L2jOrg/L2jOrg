@@ -17,7 +17,7 @@
 package org.l2j.gameserver.ai;
 
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.L2BoatInstance;
+import org.l2j.gameserver.model.actor.instance.Boat;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.VehicleDeparture;
 import org.l2j.gameserver.network.serverpackets.VehicleInfo;
@@ -27,7 +27,7 @@ import org.l2j.gameserver.network.serverpackets.VehicleStarted;
  * @author DS
  */
 public class L2BoatAI extends L2VehicleAI {
-    public L2BoatAI(L2BoatInstance boat) {
+    public L2BoatAI(Boat boat) {
         super(boat);
     }
 
@@ -65,7 +65,7 @@ public class L2BoatAI extends L2VehicleAI {
     }
 
     @Override
-    public L2BoatInstance getActor() {
-        return (L2BoatInstance) _actor;
+    public Boat getActor() {
+        return (Boat) _actor;
     }
 }

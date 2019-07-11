@@ -19,7 +19,7 @@ package handlers.targethandlers;
 import org.l2j.gameserver.handler.ITargetTypeHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -42,7 +42,7 @@ public class Artillery implements ITargetTypeHandler
 		final WorldObject target = activeChar.getTarget();
 		if ((target != null) && target.isDoor())
 		{
-			final L2DoorInstance targetDoor = (L2DoorInstance) target;
+			final Door targetDoor = (Door) target;
 			if (!targetDoor.isDead() && targetDoor.isAutoAttackable(activeChar) && targetDoor.isEnemy())
 			{
 				return targetDoor;

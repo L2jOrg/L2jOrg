@@ -18,7 +18,7 @@ package org.l2j.gameserver.ai;
 
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.L2Vehicle;
+import org.l2j.gameserver.model.actor.Vehicle;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -31,7 +31,7 @@ public abstract class L2VehicleAI extends L2CharacterAI {
      *
      * @param vehicle
      */
-    public L2VehicleAI(L2Vehicle vehicle) {
+    public L2VehicleAI(Vehicle vehicle) {
         super(vehicle);
     }
 

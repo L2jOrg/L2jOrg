@@ -76,12 +76,12 @@ import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
  * Mother class of all character objects of the world (PC, NPC...)<br>
  * Creature:<br>
  * <ul>
- * <li>L2DoorInstance</li>
+ * <li>Door</li>
  * <li>Playable</li>
  * <li>L2Npc</li>
  * <li>L2StaticObjectInstance</li>
  * <li>L2Trap</li>
- * <li>L2Vehicle</li>
+ * <li>Vehicle</li>
  * </ul>
  * <br>
  * <b>Concept of L2CharTemplate:</b><br>

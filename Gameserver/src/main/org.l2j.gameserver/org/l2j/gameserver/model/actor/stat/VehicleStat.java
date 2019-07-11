@@ -16,13 +16,13 @@
  */
 package org.l2j.gameserver.model.actor.stat;
 
-import org.l2j.gameserver.model.actor.L2Vehicle;
+import org.l2j.gameserver.model.actor.Vehicle;
 
 public class VehicleStat extends CharStat {
     private float _moveSpeed = 0;
     private int _rotationSpeed = 0;
 
-    public VehicleStat(L2Vehicle activeChar) {
+    public VehicleStat(Vehicle activeChar) {
         super(activeChar);
     }
 

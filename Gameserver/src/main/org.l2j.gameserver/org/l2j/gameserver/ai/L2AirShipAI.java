@@ -17,7 +17,7 @@
 package org.l2j.gameserver.ai;
 
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.L2AirShipInstance;
+import org.l2j.gameserver.model.actor.instance.AirShip;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ExMoveToLocationAirShip;
 import org.l2j.gameserver.network.serverpackets.ExStopMoveAirShip;
@@ -26,7 +26,7 @@ import org.l2j.gameserver.network.serverpackets.ExStopMoveAirShip;
  * @author DS
  */
 public class L2AirShipAI extends L2VehicleAI {
-    public L2AirShipAI(L2AirShipInstance airShip) {
+    public L2AirShipAI(AirShip airShip) {
         super(airShip);
     }
 
@@ -59,7 +59,7 @@ public class L2AirShipAI extends L2VehicleAI {
     }
 
     @Override
-    public L2AirShipInstance getActor() {
-        return (L2AirShipInstance) _actor;
+    public AirShip getActor() {
+        return (AirShip) _actor;
     }
 }

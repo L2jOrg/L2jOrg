@@ -7,7 +7,7 @@ import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.holders.DoorRequestHolder;
@@ -25,7 +25,7 @@ public class L2DoorInstanceAction implements IActionHandler
         }
         else if (interact)
         {
-            final L2DoorInstance door = (L2DoorInstance) target;
+            final Door door = (Door) target;
             final ClanHall clanHall = ClanHallData.getInstance().getClanHallByDoorId(door.getId());
             // MyTargetSelected my = new MyTargetSelected(getObjectId(), activeChar.getLevel());
             // activeChar.sendPacket(my);
@@ -55,7 +55,7 @@ public class L2DoorInstanceAction implements IActionHandler
                     }
                 }
             }
-            else if ((activeChar.getClan() != null) && (((L2DoorInstance) target).getFort() != null) && (activeChar.getClan() == ((L2DoorInstance) target).getFort().getOwnerClan()) && ((L2DoorInstance) target).isOpenableBySkill() && !((L2DoorInstance) target).getFort().getSiege().isInProgress())
+            else if ((activeChar.getClan() != null) && (((Door) target).getFort() != null) && (activeChar.getClan() == ((Door) target).getFort().getOwnerClan()) && ((Door) target).isOpenableBySkill() && !((Door) target).getFort().getSiege().isInProgress())
             {
                 if (!((Creature) target).isInsideRadius2D(activeChar, L2Npc.INTERACTION_DISTANCE))
                 {
@@ -63,8 +63,8 @@ public class L2DoorInstanceAction implements IActionHandler
                 }
                 else
                 {
-                    activeChar.addScript(new DoorRequestHolder((L2DoorInstance) target));
-                    if (!((L2DoorInstance) target).isOpen())
+                    activeChar.addScript(new DoorRequestHolder((Door) target));
+                    if (!((Door) target).isOpen())
                     {
                         activeChar.sendPacket(new ConfirmDlg(1140));
                     }

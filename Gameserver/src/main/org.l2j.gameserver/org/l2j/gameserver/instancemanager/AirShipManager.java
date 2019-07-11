@@ -20,8 +20,8 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.model.AirShipTeleportList;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.VehiclePathPoint;
-import org.l2j.gameserver.model.actor.instance.L2AirShipInstance;
-import org.l2j.gameserver.model.actor.instance.L2ControllableAirShipInstance;
+import org.l2j.gameserver.model.actor.instance.AirShip;
+import org.l2j.gameserver.model.actor.instance.ControllableAirShip;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
 import org.l2j.gameserver.network.serverpackets.ExAirShipTeleportList;
@@ -40,7 +40,7 @@ public class AirShipManager {
     private static final String ADD_DB = "INSERT INTO airships (owner_id,fuel) VALUES (?,?)";
     private static final String UPDATE_DB = "UPDATE airships SET fuel=? WHERE owner_id=?";
     private final Map<Integer, StatsSet> _airShipsInfo = new HashMap<>();
-    private final Map<Integer, L2AirShipInstance> _airShips = new HashMap<>();
+    private final Map<Integer, AirShip> _airShips = new HashMap<>();
     private final Map<Integer, AirShipTeleportList> _teleports = new HashMap<>();
     private L2CharTemplate _airShipTemplate = null;
 
@@ -93,8 +93,8 @@ public class AirShipManager {
         load();
     }
 
-    public L2AirShipInstance getNewAirShip(int x, int y, int z, int heading) {
-        final L2AirShipInstance airShip = new L2AirShipInstance(_airShipTemplate);
+    public AirShip getNewAirShip(int x, int y, int z, int heading) {
+        final AirShip airShip = new AirShip(_airShipTemplate);
 
         airShip.setHeading(heading);
         airShip.setXYZInvisible(x, y, z);
@@ -104,18 +104,18 @@ public class AirShipManager {
         return airShip;
     }
 
-    public L2AirShipInstance getNewAirShip(int x, int y, int z, int heading, int ownerId) {
+    public AirShip getNewAirShip(int x, int y, int z, int heading, int ownerId) {
         final StatsSet info = _airShipsInfo.get(ownerId);
         if (info == null) {
             return null;
         }
 
-        final L2AirShipInstance airShip;
+        final AirShip airShip;
         if (_airShips.containsKey(ownerId)) {
             airShip = _airShips.get(ownerId);
             airShip.refreshID();
         } else {
-            airShip = new L2ControllableAirShipInstance(_airShipTemplate, ownerId);
+            airShip = new ControllableAirShip(_airShipTemplate, ownerId);
             _airShips.put(ownerId, airShip);
 
             airShip.setMaxFuel(600);
@@ -130,7 +130,7 @@ public class AirShipManager {
         return airShip;
     }
 
-    public void removeAirShip(L2AirShipInstance ship) {
+    public void removeAirShip(AirShip ship) {
         if (ship.getOwnerId() != 0) {
             storeInDb(ship.getOwnerId());
             final StatsSet info = _airShipsInfo.get(ship.getOwnerId());
@@ -165,7 +165,7 @@ public class AirShipManager {
     }
 
     public boolean hasAirShip(int ownerId) {
-        final L2AirShipInstance ship = _airShips.get(ownerId);
+        final AirShip ship = _airShips.get(ownerId);
         if ((ship == null) || !(ship.isSpawned() || ship.isTeleporting())) {
             return false;
         }
@@ -186,7 +186,7 @@ public class AirShipManager {
             return;
         }
 
-        final L2AirShipInstance ship = player.getAirShip();
+        final AirShip ship = player.getAirShip();
         if (!ship.isCaptain(player) || !ship.isInDock() || ship.isMoving()) {
             return;
         }

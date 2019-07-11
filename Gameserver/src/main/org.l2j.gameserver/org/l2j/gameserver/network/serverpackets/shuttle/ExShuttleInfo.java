@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.shuttle;
 
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.L2ShuttleInstance;
+import org.l2j.gameserver.model.actor.instance.Shuttle;
 import org.l2j.gameserver.model.shuttle.L2ShuttleStop;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -13,10 +13,10 @@ import java.util.List;
  * @author UnAfraid
  */
 public class ExShuttleInfo extends ServerPacket {
-    private final L2ShuttleInstance _shuttle;
+    private final Shuttle _shuttle;
     private final List<L2ShuttleStop> _stops;
 
-    public ExShuttleInfo(L2ShuttleInstance shuttle) {
+    public ExShuttleInfo(Shuttle shuttle) {
         _shuttle = shuttle;
         _stops = shuttle.getStops();
     }

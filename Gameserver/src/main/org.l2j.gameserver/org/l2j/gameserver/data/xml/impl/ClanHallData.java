@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.ClanHallType;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.holders.ClanHallTeleportHolder;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -47,7 +47,7 @@ public final class ClanHallData extends GameXmlReader {
 
     @Override
     public void parseDocument(Document doc, File f) {
-        final List<L2DoorInstance> doors = new ArrayList<>();
+        final List<Door> doors = new ArrayList<>();
         final List<Integer> npcs = new ArrayList<>();
         final List<ClanHallTeleportHolder> teleports = new ArrayList<>();
         final StatsSet params = new StatsSet();
@@ -86,7 +86,7 @@ public final class ClanHallData extends GameXmlReader {
                                         if ("door".equals(npcNode.getNodeName())) {
                                             final NamedNodeMap np = npcNode.getAttributes();
                                             final int doorId = parseInteger(np, "id");
-                                            final L2DoorInstance door = DoorData.getInstance().getDoor(doorId);
+                                            final Door door = DoorData.getInstance().getDoor(doorId);
                                             if (door != null) {
                                                 doors.add(door);
                                             }
@@ -147,7 +147,7 @@ public final class ClanHallData extends GameXmlReader {
     }
 
     public ClanHall getClanHallByDoorId(int doorId) {
-        final L2DoorInstance door = DoorData.getInstance().getDoor(doorId);
+        final Door door = DoorData.getInstance().getDoor(doorId);
         return _clanHalls.values().stream().filter(ch -> ch.getDoors().contains(door)).findFirst().orElse(null);
     }
 

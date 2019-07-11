@@ -18,7 +18,7 @@ package handlers.voicedcommandhandlers;
 
 import org.l2j.gameserver.handler.IVoicedCommandHandler;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -54,7 +54,7 @@ public class CastleVCmd implements IVoicedCommandHandler
 					return false;
 				}
 				
-				final L2DoorInstance door = (L2DoorInstance) activeChar.getTarget();
+				final Door door = (Door) activeChar.getTarget();
 				if (door == null)
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -93,7 +93,7 @@ public class CastleVCmd implements IVoicedCommandHandler
 					activeChar.sendPacket(SystemMessageId.ONLY_THE_CLAN_LEADER_MAY_ISSUE_COMMANDS);
 					return false;
 				}
-				final L2DoorInstance door2 = (L2DoorInstance) activeChar.getTarget();
+				final Door door2 = (Door) activeChar.getTarget();
 				if (door2 == null)
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);

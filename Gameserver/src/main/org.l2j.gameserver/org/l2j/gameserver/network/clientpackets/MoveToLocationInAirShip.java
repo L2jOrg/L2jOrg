@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.L2AirShipInstance;
+import org.l2j.gameserver.model.actor.instance.AirShip;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -60,7 +60,7 @@ public class MoveToLocationInAirShip extends ClientPacket {
             return;
         }
 
-        final L2AirShipInstance airShip = activeChar.getAirShip();
+        final AirShip airShip = activeChar.getAirShip();
         if (airShip.getObjectId() != _shipId) {
             activeChar.sendPacket(ActionFailed.STATIC_PACKET);
             return;

@@ -1,8 +1,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
-
-import org.l2j.commons.util.Rnd;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.ai.L2DoorAI;
 import org.l2j.gameserver.data.xml.impl.DoorData;
@@ -34,14 +33,14 @@ import java.util.Collection;
 import java.util.Set;
 import java.util.concurrent.Future;
 
-public final class L2DoorInstance extends Creature {
-    boolean _open = false;
-    private boolean _isAttackableDoor = false;
-    private boolean _isInverted = false;
+public final class Door extends Creature {
+    boolean _open;
+    private boolean _isAttackableDoor;
+    private boolean _isInverted;
     private int _meshindex = 1;
     private Future<?> _autoCloseTask;
 
-    public L2DoorInstance(L2DoorTemplate template) {
+    public Door(L2DoorTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2DoorInstance);
         setIsInvul(false);
@@ -82,7 +81,7 @@ public final class L2DoorInstance extends Creature {
         if (getTemplate().getRandomTime() > 0) {
             delay += Rnd.get(getTemplate().getRandomTime());
         }
-        ThreadPoolManager.getInstance().schedule(new TimerOpen(), delay * 1000);
+        ThreadPoolManager.schedule(new TimerOpen(), delay * 1000);
     }
 
     @Override
@@ -173,7 +172,7 @@ public final class L2DoorInstance extends Creature {
     public void setOpen(boolean open) {
         _open = open;
         if (getChildId() > 0) {
-            final L2DoorInstance sibling = getSiblingDoor(getChildId());
+            final Door sibling = getSiblingDoor(getChildId());
             if (sibling != null) {
                 sibling.notifyChildEvent(open);
             } else {
@@ -355,9 +354,9 @@ public final class L2DoorInstance extends Creature {
 
     private void manageGroupOpen(boolean open, String groupName) {
         final Set<Integer> set = DoorData.getInstance().getDoorsByGroup(groupName);
-        L2DoorInstance first = null;
+        Door first = null;
         for (Integer id : set) {
-            final L2DoorInstance door = getSiblingDoor(id);
+            final Door door = getSiblingDoor(id);
             if (first == null) {
                 first = door;
             }
@@ -499,7 +498,7 @@ public final class L2DoorInstance extends Creature {
      * @param doorId
      * @return
      */
-    private L2DoorInstance getSiblingDoor(int doorId) {
+    private Door getSiblingDoor(int doorId) {
         final Instance inst = getInstanceWorld();
         return (inst != null) ? inst.getDoor(doorId) : DoorData.getInstance().getDoor(doorId);
     }
@@ -514,7 +513,7 @@ public final class L2DoorInstance extends Creature {
             _autoCloseTask = null;
             oldTask.cancel(false);
         }
-        _autoCloseTask = ThreadPoolManager.getInstance().schedule(new AutoClose(), getTemplate().getCloseTime() * 1000);
+        _autoCloseTask = ThreadPoolManager.schedule(new AutoClose(), getTemplate().getCloseTime() * 1000);
     }
 
     @Override
@@ -544,7 +543,7 @@ public final class L2DoorInstance extends Creature {
             if (getTemplate().getRandomTime() > 0) {
                 delay += Rnd.get(getTemplate().getRandomTime());
             }
-            ThreadPoolManager.getInstance().schedule(this, delay * 1000);
+            ThreadPoolManager.schedule(this, delay * 1000);
         }
     }
 }

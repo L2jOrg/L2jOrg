@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.instancemanager.BoatManager;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.L2BoatInstance;
+import org.l2j.gameserver.model.actor.instance.Boat;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -30,7 +30,7 @@ public final class RequestGetOnVehicle extends ClientPacket {
             return;
         }
 
-        L2BoatInstance boat;
+        Boat boat;
         if (activeChar.isInBoat()) {
             boat = activeChar.getBoat();
             if (boat.getObjectId() != _boatId) {

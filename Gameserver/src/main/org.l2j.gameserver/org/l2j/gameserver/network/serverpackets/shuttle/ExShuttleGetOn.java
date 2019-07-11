@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.shuttle;
 
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2ShuttleInstance;
+import org.l2j.gameserver.model.actor.instance.Shuttle;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -15,7 +15,7 @@ public class ExShuttleGetOn extends ServerPacket {
     private final int _shuttleObjectId;
     private final Location _pos;
 
-    public ExShuttleGetOn(Player player, L2ShuttleInstance shuttle) {
+    public ExShuttleGetOn(Player player, Shuttle shuttle) {
         _playerObjectId = player.getObjectId();
         _shuttleObjectId = shuttle.getObjectId();
         _pos = player.getInVehiclePosition();

@@ -20,7 +20,7 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.L2BoatInstance;
+import org.l2j.gameserver.model.actor.instance.Boat;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.AdminForgePacket;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -406,7 +406,7 @@ public final class AdminPForge implements IAdminCommandHandler
 						}
 						
 						WorldObject target = null;
-						L2BoatInstance boat = null;
+						Boat boat = null;
 						String value = st.nextToken();
 						switch (value)
 						{

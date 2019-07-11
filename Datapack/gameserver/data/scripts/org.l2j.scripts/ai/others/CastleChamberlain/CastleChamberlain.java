@@ -28,7 +28,7 @@ import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.L2MerchantInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
@@ -534,7 +534,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 							doors[i] = Integer.parseInt(st.nextToken());
 						}
 						
-						final L2DoorInstance door = castle.getDoor(doors[0]);
+						final Door door = castle.getDoor(doors[0]);
 						if (door != null)
 						{
 							final int currentLevel = door.getStat().getUpgradeHpRatio();
