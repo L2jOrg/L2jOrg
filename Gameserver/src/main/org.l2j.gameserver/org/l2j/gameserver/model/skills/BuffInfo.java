@@ -5,7 +5,7 @@ import org.l2j.gameserver.GameTimeController;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.CharEffectList;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectTaskInfo;
 import org.l2j.gameserver.model.effects.EffectTickTask;
@@ -371,7 +371,7 @@ public final class BuffInfo {
         }
 
         // Set the proper system message.
-        if ((_skill != null) && !(_effected.isSummon() && !((L2Summon) _effected).getOwner().hasSummon()) && !_skill.isHidingMessages()) {
+        if ((_skill != null) && !(_effected.isSummon() && !((Summon) _effected).getOwner().hasSummon()) && !_skill.isHidingMessages()) {
             SystemMessageId smId = null;
             if (_skill.isToggle()) {
                 smId = SystemMessageId.S1_HAS_BEEN_ABORTED;

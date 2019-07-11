@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.SkillCaster;
@@ -122,7 +122,7 @@ public class SupportMagic implements IBypassHandler
 		
 		if (isSummon)
 		{
-			for (L2Summon s : player.getServitors().values())
+			for (Summon s : player.getServitors().values())
 			{
 				npc.setTarget(s);
 				for (SkillHolder skill : SUMMON_BUFFS)

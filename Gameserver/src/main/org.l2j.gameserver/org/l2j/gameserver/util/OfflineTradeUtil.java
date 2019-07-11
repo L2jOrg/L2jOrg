@@ -19,7 +19,7 @@ package org.l2j.gameserver.util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
 import org.l2j.gameserver.instancemanager.PlayerCountManager;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -101,7 +101,7 @@ public final class OfflineTradeUtil {
         OlympiadManager.getInstance().unRegisterNoble(player);
 
         // If the Player has Pet, unsummon it
-        L2Summon pet = player.getPet();
+        Summon pet = player.getPet();
         if (pet != null) {
             pet.setRestoreSummon(true);
 

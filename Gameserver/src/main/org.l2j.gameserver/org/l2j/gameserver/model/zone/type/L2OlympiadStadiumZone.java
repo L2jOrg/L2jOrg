@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
@@ -77,7 +77,7 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn {
                     ThreadPoolManager.getInstance().execute(new KickPlayer(player));
                 } else {
                     // check for pet
-                    final L2Summon pet = player.getPet();
+                    final Summon pet = player.getPet();
                     if (pet != null) {
                         pet.unSummon(player);
                     }

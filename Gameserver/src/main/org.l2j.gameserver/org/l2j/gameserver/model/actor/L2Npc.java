@@ -790,7 +790,7 @@ public class L2Npc extends L2Character {
         if ((getTemplate().getMpRewardValue() > 0) && (killer != null) && killer.isPlayable()) {
             final Player killerPlayer = killer.getActingPlayer();
             new MpRewardTask(killerPlayer, this);
-            for (L2Summon summon : killerPlayer.getServitors().values()) {
+            for (Summon summon : killerPlayer.getServitors().values()) {
                 new MpRewardTask(summon, this);
             }
             if (getTemplate().getMpRewardAffectType() == MpRewardAffectType.PARTY) {
@@ -799,7 +799,7 @@ public class L2Npc extends L2Character {
                     for (Player member : party.getMembers()) {
                         if ((member != killerPlayer) && (member.calculateDistance3D(getX(), getY(), getZ()) <= Config.ALT_PARTY_RANGE)) {
                             new MpRewardTask(member, this);
-                            for (L2Summon summon : member.getServitors().values()) {
+                            for (Summon summon : member.getServitors().values()) {
                                 new MpRewardTask(summon, this);
                             }
                         }

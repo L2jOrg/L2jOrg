@@ -20,7 +20,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.holders.SkillHolder;
@@ -174,7 +174,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 			}
 			case "KILLED_ATTACKER":
 			{
-				final L2Summon summon = npc.getVariables().getObject("ATTACKER", L2Summon.class);
+				final Summon summon = npc.getVariables().getObject("ATTACKER", Summon.class);
 				if ((summon != null) && summon.isDead())
 				{
 					npc.deleteMe();
@@ -460,7 +460,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 					}
 					case 1:
 					{
-						if (!isSummon || (npc.getVariables().getObject("ATTACKER", L2Summon.class) != attacker.getAnyServitor()))
+						if (!isSummon || (npc.getVariables().getObject("ATTACKER", Summon.class) != attacker.getAnyServitor()))
 						{
 							final QuestState qs = getQuestState(attacker, false);
 							if (!hasQuestItems(attacker, CRYSTAL_OF_STARTING_1ST) && hasQuestItems(attacker, CRYSTAL_OF_INPROGRESS_1ST) && (qs != null) && qs.isStarted())
@@ -504,7 +504,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 					}
 					case 1:
 					{
-						if (!isSummon || (npc.getVariables().getObject("ATTACKER", L2Summon.class) != attacker.getAnyServitor()))
+						if (!isSummon || (npc.getVariables().getObject("ATTACKER", Summon.class) != attacker.getAnyServitor()))
 						{
 							final QuestState qs = getQuestState(attacker, false);
 							if (!hasQuestItems(attacker, CRYSTAL_OF_STARTING_3RD) && hasQuestItems(attacker, CRYSTAL_OF_INPROGRESS_3RD) && (qs != null) && qs.isStarted())
@@ -547,7 +547,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 					}
 					case 1:
 					{
-						if (!isSummon || (npc.getVariables().getObject("ATTACKER", L2Summon.class) != attacker.getAnyServitor()))
+						if (!isSummon || (npc.getVariables().getObject("ATTACKER", Summon.class) != attacker.getAnyServitor()))
 						{
 							final QuestState qs = getQuestState(attacker, false);
 							if (!hasQuestItems(attacker, CRYSTAL_OF_STARTING_5TH) && hasQuestItems(attacker, CRYSTAL_OF_INPROGRESS_5TH) && (qs != null) && qs.isStarted())
@@ -590,7 +590,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 					}
 					case 1:
 					{
-						if (!isSummon || (npc.getVariables().getObject("ATTACKER", L2Summon.class) != attacker.getAnyServitor()))
+						if (!isSummon || (npc.getVariables().getObject("ATTACKER", Summon.class) != attacker.getAnyServitor()))
 						{
 							final QuestState qs = getQuestState(attacker, false);
 							if (!hasQuestItems(attacker, CRYSTAL_OF_STARTING_2ND) && hasQuestItems(attacker, CRYSTAL_OF_INPROGRESS_2ND) && (qs != null) && qs.isStarted())
@@ -633,7 +633,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 					}
 					case 1:
 					{
-						if (!isSummon || (npc.getVariables().getObject("ATTACKER", L2Summon.class) != attacker.getAnyServitor()))
+						if (!isSummon || (npc.getVariables().getObject("ATTACKER", Summon.class) != attacker.getAnyServitor()))
 						{
 							final QuestState qs = getQuestState(attacker, false);
 							if (!hasQuestItems(attacker, CRYSTAL_OF_STARTING_4TH) && hasQuestItems(attacker, CRYSTAL_OF_INPROGRESS_4TH) && (qs != null) && qs.isStarted())
@@ -676,7 +676,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 					}
 					case 1:
 					{
-						if (!isSummon || (npc.getVariables().getObject("ATTACKER", L2Summon.class) != attacker.getAnyServitor()))
+						if (!isSummon || (npc.getVariables().getObject("ATTACKER", Summon.class) != attacker.getAnyServitor()))
 						{
 							final QuestState qs = getQuestState(attacker, false);
 							if (!hasQuestItems(attacker, CRYSTAL_OF_STARTING_6TH) && hasQuestItems(attacker, CRYSTAL_OF_INPROGRESS_6TH) && (qs != null) && qs.isStarted())

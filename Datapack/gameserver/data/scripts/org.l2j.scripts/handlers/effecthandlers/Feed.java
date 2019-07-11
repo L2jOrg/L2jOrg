@@ -20,8 +20,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -53,7 +53,7 @@ public class Feed extends AbstractEffect
 	{
 		if (effected.isPet())
 		{
-			final L2PetInstance pet = (L2PetInstance) effected;
+			final Pet pet = (Pet) effected;
 			pet.setCurrentFed(pet.getCurrentFed() + (_normal * Config.PET_FOOD_RATE));
 		}
 		else if (effected.isPlayer())

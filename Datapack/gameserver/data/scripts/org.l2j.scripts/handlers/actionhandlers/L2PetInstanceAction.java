@@ -22,9 +22,9 @@ import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSummonTalk;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -42,11 +42,11 @@ public class L2PetInstanceAction implements IActionHandler
 			return false;
 		}
 		
-		final boolean isOwner = activeChar.getObjectId() == ((L2PetInstance) target).getOwner().getObjectId();
+		final boolean isOwner = activeChar.getObjectId() == ((Pet) target).getOwner().getObjectId();
 		
-		if (isOwner && (activeChar != ((L2PetInstance) target).getOwner()))
+		if (isOwner && (activeChar != ((Pet) target).getOwner()))
 		{
-			((L2PetInstance) target).updateRefOwner(activeChar);
+			((Pet) target).updateRefOwner(activeChar);
 		}
 		if (activeChar.getTarget() != target)
 		{
@@ -77,10 +77,10 @@ public class L2PetInstanceAction implements IActionHandler
 			{
 				if (isOwner)
 				{
-					activeChar.sendPacket(new PetStatusShow((L2PetInstance) target));
+					activeChar.sendPacket(new PetStatusShow((Pet) target));
 					
 					// Notify to scripts
-					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonTalk((L2Summon) target), (L2Summon) target);
+					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonTalk((Summon) target), (Summon) target);
 				}
 				activeChar.updateNotMoveUntil();
 			}

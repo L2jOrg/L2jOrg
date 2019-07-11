@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -37,7 +37,7 @@ public final class RelationChanged extends ServerPacket {
     private final List<Relation> _multi;
     private Relation _singled;
     private byte _mask = 0x00;
-    public RelationChanged(L2Playable activeChar, int relation, boolean autoattackable) {
+    public RelationChanged(Playable activeChar, int relation, boolean autoattackable) {
         _mask |= SEND_ONE;
 
         _singled = new Relation();
@@ -54,7 +54,7 @@ public final class RelationChanged extends ServerPacket {
         _multi = new LinkedList<>();
     }
 
-    public void addRelation(L2Playable activeChar, int relation, boolean autoattackable) {
+    public void addRelation(Playable activeChar, int relation, boolean autoattackable) {
         if (activeChar.isInvisible()) {
             // throw new IllegalArgumentException("Cannot add invisible character to multi relation packet");
             return;

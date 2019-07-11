@@ -117,7 +117,7 @@ import static org.l2j.gameserver.network.SystemMessageId.S1_HAS_INFLICTED_S3_DAM
  * This class represents all player characters in the world.<br>
  * There is always a client-thread connected to this (except if a player-store is activated upon logout).
  */
-public final class Player extends L2Playable {
+public final class Player extends Playable {
 
     private final CharacterData model;
     private final PcAppearance appearance;
@@ -592,11 +592,11 @@ public final class Player extends L2Playable {
     /**
      * The Pet of the Player
      */
-    private L2PetInstance _pet = null;
+    private Pet _pet = null;
     /**
      * Servitors of the Player
      */
-    private volatile Map<Integer, L2Summon> _servitors = null;
+    private volatile Map<Integer, Summon> _servitors = null;
     /**
      * The L2Agathion of the Player
      */
@@ -930,13 +930,13 @@ public final class Player extends L2Playable {
 
             // Restore pet if exists in the world
             player.setPet(L2World.getInstance().getPet(player.getObjectId()));
-            final L2Summon pet = player.getPet();
+            final Summon pet = player.getPet();
             if (pet != null) {
                 pet.setOwner(player);
             }
 
             if (player.hasServitors()) {
-                for (L2Summon summon : player.getServitors().values()) {
+                for (Summon summon : player.getServitors().values()) {
                     summon.setOwner(player);
                 }
             }
@@ -1626,7 +1626,7 @@ public final class Player extends L2Playable {
         // If this player has a pet update the pets pvp flag as well
         if (hasSummon()) {
             final RelationChanged rc = new RelationChanged();
-            final L2Summon pet = _pet;
+            final Summon pet = _pet;
             if (pet != null) {
                 rc.addRelation(pet, getRelation(this), false);
             }
@@ -1648,7 +1648,7 @@ public final class Player extends L2Playable {
                 final RelationChanged rc = new RelationChanged();
                 rc.addRelation(this, relation, isAutoAttackable(player));
                 if (hasSummon()) {
-                    final L2Summon pet = _pet;
+                    final Summon pet = _pet;
                     if (pet != null) {
                         rc.addRelation(pet, relation, isAutoAttackable(player));
                     }
@@ -3627,7 +3627,7 @@ public final class Player extends L2Playable {
                     final RelationChanged rc = new RelationChanged();
                     rc.addRelation(this, relation, isAutoAttackable(player));
                     if (hasSummon()) {
-                        final L2Summon pet = getPet();
+                        final Summon pet = getPet();
                         if (pet != null) {
                             rc.addRelation(pet, relation, isAutoAttackable(player));
                         }
@@ -4436,7 +4436,7 @@ public final class Player extends L2Playable {
         }
     }
 
-    public void onPlayerKill(L2Playable killedPlayable) {
+    public void onPlayerKill(Playable killedPlayable) {
         final Player killedPlayer = killedPlayable.getActingPlayer();
 
         // Avoid nulls && check if player != killedPlayer
@@ -4651,7 +4651,7 @@ public final class Player extends L2Playable {
     }
 
     @Override
-    public L2PetInstance getPet() {
+    public Pet getPet() {
         return _pet;
     }
 
@@ -4660,30 +4660,30 @@ public final class Player extends L2Playable {
      *
      * @param pet
      */
-    public void setPet(L2PetInstance pet) {
+    public void setPet(Pet pet) {
         _pet = pet;
     }
 
     @Override
-    public Map<Integer, L2Summon> getServitors() {
+    public Map<Integer, Summon> getServitors() {
         return _servitors == null ? Collections.emptyMap() : _servitors;
     }
 
-    public L2Summon getAnyServitor() {
+    public Summon getAnyServitor() {
         return getServitors().values().stream().findAny().orElse(null);
     }
 
-    public L2Summon getFirstServitor() {
+    public Summon getFirstServitor() {
         return getServitors().values().stream().findFirst().orElse(null);
     }
 
     @Override
-    public L2Summon getServitor(int objectId) {
+    public Summon getServitor(int objectId) {
         return getServitors().get(objectId);
     }
 
-    public List<L2Summon> getServitorsAndPets() {
-        final List<L2Summon> summons = new ArrayList<>();
+    public List<Summon> getServitorsAndPets() {
+        final List<Summon> summons = new ArrayList<>();
         summons.addAll(getServitors().values());
 
         if (_pet != null) {
@@ -4700,7 +4700,7 @@ public final class Player extends L2Playable {
         return getSummonedNpcs().stream().filter(L2Npc::isTrap).map(L2TrapInstance.class::cast).findAny().orElse(null);
     }
 
-    public void addServitor(L2Summon servitor) {
+    public void addServitor(Summon servitor) {
         if (_servitors == null) {
             synchronized (this) {
                 if (_servitors == null) {
@@ -4712,14 +4712,14 @@ public final class Player extends L2Playable {
     }
 
     /**
-     * @return the L2Summon of the Player or null.
+     * @return the Summon of the Player or null.
      */
     public Set<L2TamedBeastInstance> getTrainedBeasts() {
         return _tamedBeast;
     }
 
     /**
-     * Set the L2Summon of the Player.
+     * Set the Summon of the Player.
      *
      * @param tamedBeast
      */
@@ -5152,7 +5152,7 @@ public final class Player extends L2Playable {
         return true;
     }
 
-    public boolean mount(L2Summon pet) {
+    public boolean mount(Summon pet) {
         if (!Config.ALLOW_MOUNTS_DURING_SIEGE && isInsideZone(ZoneId.SIEGE)) {
             return false;
         }
@@ -5194,7 +5194,7 @@ public final class Player extends L2Playable {
         return true;
     }
 
-    public boolean mountPlayer(L2Summon pet) {
+    public boolean mountPlayer(Summon pet) {
         if ((pet != null) && pet.isMountable() && !isMounted() && !isBetrayed()) {
             if (isDead()) {
                 // A strider cannot be ridden when dead
@@ -6725,7 +6725,7 @@ public final class Player extends L2Playable {
             return true;
         }
 
-        // Check if the attacker is a L2Playable
+        // Check if the attacker is a Playable
         if (attacker.isPlayable()) {
             if (isInsideZone(ZoneId.PEACE)) {
                 return false;
@@ -7781,7 +7781,7 @@ public final class Player extends L2Playable {
             _pet.broadcastStatusUpdate();
         }
         if (hasServitors()) {
-            getServitors().values().forEach(L2Summon::broadcastStatusUpdate);
+            getServitors().values().forEach(Summon::broadcastStatusUpdate);
         }
     }
 
@@ -8945,7 +8945,7 @@ public final class Player extends L2Playable {
         // If the Player has Pet, unsummon it
         if (hasSummon()) {
             try {
-                L2Summon pet = _pet;
+                Summon pet = _pet;
                 if (pet != null) {
                     pet.setRestoreSummon(true);
                     pet.unSummon(this);
@@ -10446,7 +10446,7 @@ public final class Player extends L2Playable {
                 return true;
             }
 
-            final Player target = cha.isSummon() ? ((L2Summon) cha).getOwner() : (Player) cha;
+            final Player target = cha.isSummon() ? ((Summon) cha).getOwner() : (Player) cha;
 
             if (isInDuel() && target.isInDuel() && (target.getDuelId() == getDuelId())) {
                 return true;
@@ -10851,7 +10851,7 @@ public final class Player extends L2Playable {
      * @param target the target
      * @return {@code true} if this player got war with the target, {@code false} otherwise.
      */
-    public boolean atWarWith(L2Playable target) {
+    public boolean atWarWith(Playable target) {
         if (target == null) {
             return false;
         }
@@ -11030,7 +11030,7 @@ public final class Player extends L2Playable {
      * @return the amount of points that player used
      */
     public int getSummonPoints() {
-        return getServitors().values().stream().mapToInt(L2Summon::getSummonPoints).sum();
+        return getServitors().values().stream().mapToInt(Summon::getSummonPoints).sum();
     }
 
     /**

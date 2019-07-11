@@ -281,9 +281,9 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
     }
 
     /**
-     * Verify if object is instance of L2PetInstance.
+     * Verify if object is instance of Pet.
      *
-     * @return {@code true} if object is instance of L2PetInstance, {@code false} otherwise
+     * @return {@code true} if object is instance of Pet, {@code false} otherwise
      */
     public boolean isPet() {
         return false;
@@ -299,9 +299,9 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
     }
 
     /**
-     * Verify if object is instance of L2Playable.
+     * Verify if object is instance of Playable.
      *
-     * @return {@code true} if object is instance of L2Playable, {@code false} otherwise
+     * @return {@code true} if object is instance of Playable, {@code false} otherwise
      */
     public boolean isPlayable() {
         return false;
@@ -309,18 +309,18 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 
 
     /**
-     * Verify if object is instance of L2ServitorInstance.
+     * Verify if object is instance of Servitor.
      *
-     * @return {@code true} if object is instance of L2ServitorInstance, {@code false} otherwise
+     * @return {@code true} if object is instance of Servitor, {@code false} otherwise
      */
     public boolean isServitor() {
         return false;
     }
 
     /**
-     * Verify if object is instance of L2Summon.
+     * Verify if object is instance of Summon.
      *
-     * @return {@code true} if object is instance of L2Summon, {@code false} otherwise
+     * @return {@code true} if object is instance of Summon, {@code false} otherwise
      */
     public boolean isSummon() {
         return false;

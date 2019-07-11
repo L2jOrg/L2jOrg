@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
@@ -305,7 +305,7 @@ public final class Baium extends AbstractNpcAI
 					{
 						if (zone.isInsideZone(creature) && !creature.isDead())
 						{
-							addAttackPlayerDesire(npc, (L2Playable) creature);
+							addAttackPlayerDesire(npc, (Playable) creature);
 							break;
 						}
 					}
@@ -331,12 +331,12 @@ public final class Baium extends AbstractNpcAI
 						{
 							mob.clearAggroList();
 						}
-						addAttackPlayerDesire(mob, (L2Playable) mostHated);
+						addAttackPlayerDesire(mob, (Playable) mostHated);
 					}
 					else
 					{
 						boolean found = false;
-						for (L2Playable creature : L2World.getInstance().getVisibleObjectsInRange(mob, L2Playable.class, 1000))
+						for (Playable creature : L2World.getInstance().getVisibleObjectsInRange(mob, Playable.class, 1000))
 						{
 							if (zone.isInsideZone(creature) && !creature.isDead())
 							{

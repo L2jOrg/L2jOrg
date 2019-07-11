@@ -2,7 +2,7 @@ package org.l2j.gameserver.taskmanager;
 
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.network.serverpackets.AutoAttackStop;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -95,7 +95,7 @@ public class AttackStanceTaskManager {
                             actor.broadcastPacket(new AutoAttackStop(actor.getObjectId()));
                             actor.getAI().setAutoAttacking(false);
                             if (actor.isPlayer() && actor.hasSummon()) {
-                                final L2Summon pet = actor.getPet();
+                                final Summon pet = actor.getPet();
                                 if (pet != null) {
                                     pet.broadcastPacket(new AutoAttackStop(pet.getObjectId()));
                                 }

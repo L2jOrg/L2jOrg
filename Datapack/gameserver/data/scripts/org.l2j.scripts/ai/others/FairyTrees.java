@@ -17,7 +17,7 @@
 package ai.others;
 
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 
@@ -60,7 +60,7 @@ public class FairyTrees extends AbstractNpcAI
 			for (int i = 0; i < 20; i++)
 			{
 				final L2Npc guardian = addSpawn(SOUL_GUARDIAN, npc, false, 30000);
-				final L2Playable attacker = isSummon ? killer.getServitors().values().stream().findFirst().orElse(killer.getPet()) : killer;
+				final Playable attacker = isSummon ? killer.getServitors().values().stream().findFirst().orElse(killer.getPet()) : killer;
 				addAttackPlayerDesire(guardian, attacker);
 				if (getRandomBoolean())
 				{

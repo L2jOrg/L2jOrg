@@ -16,7 +16,7 @@
  */
 package handlers.itemhandlers;
 
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -27,7 +27,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 public class ItemSkills extends ItemSkillsTemplate
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		final Player activeChar = playable.getActingPlayer();
 		if ((activeChar != null) && activeChar.isInOlympiadMode())

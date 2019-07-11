@@ -18,14 +18,14 @@ package org.l2j.gameserver.model.actor.status;
 
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 public class PetStatus extends SummonStatus {
-    private int _currentFed = 0; // Current Fed of the L2PetInstance
+    private int _currentFed = 0; // Current Fed of the Pet
 
-    public PetStatus(L2PetInstance activeChar) {
+    public PetStatus(Pet activeChar) {
         super(activeChar);
     }
 
@@ -62,7 +62,7 @@ public class PetStatus extends SummonStatus {
     }
 
     @Override
-    public L2PetInstance getActiveChar() {
-        return (L2PetInstance) super.getActiveChar();
+    public Pet getActiveChar() {
+        return (Pet) super.getActiveChar();
     }
 }

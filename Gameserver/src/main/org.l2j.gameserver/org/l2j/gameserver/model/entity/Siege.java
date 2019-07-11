@@ -12,7 +12,7 @@ import org.l2j.gameserver.instancemanager.SiegeGuardManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.L2ControlTowerInstance;
 import org.l2j.gameserver.model.actor.instance.L2FlameTowerInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -374,7 +374,7 @@ public class Siege implements Siegable {
                         final RelationChanged rc = new RelationChanged();
                         rc.addRelation(member, relation, member.isAutoAttackable(player));
                         if (member.hasSummon()) {
-                            final L2Summon pet = member.getPet();
+                            final Summon pet = member.getPet();
                             if (pet != null) {
                                 rc.addRelation(pet, relation, member.isAutoAttackable(player));
                             }
@@ -422,7 +422,7 @@ public class Siege implements Siegable {
                         final RelationChanged rc = new RelationChanged();
                         rc.addRelation(member, relation, member.isAutoAttackable(player));
                         if (member.hasSummon()) {
-                            final L2Summon pet = member.getPet();
+                            final Summon pet = member.getPet();
                             if (pet != null) {
                                 rc.addRelation(pet, relation, member.isAutoAttackable(player));
                             }

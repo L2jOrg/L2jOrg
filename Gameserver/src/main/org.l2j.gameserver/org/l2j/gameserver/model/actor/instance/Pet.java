@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.L2PetData;
 import org.l2j.gameserver.model.L2PetLevelData;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.stat.PetStat;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
@@ -56,8 +56,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 
 
-public class L2PetInstance extends L2Summon {
-    protected static final Logger LOGGER_PET = LoggerFactory.getLogger(L2PetInstance.class.getName());
+public class Pet extends Summon {
+    protected static final Logger LOGGER_PET = LoggerFactory.getLogger(Pet.class.getName());
 
     private static final String ADD_SKILL_SAVE = "INSERT INTO character_pet_skills_save (petObjItemId,skill_id,skill_level,skill_sub_level,remaining_time,buff_index) VALUES (?,?,?,?,?,?)";
     private static final String RESTORE_SKILL_SAVE = "SELECT petObjItemId,skill_id,skill_level,skill_sub_level,remaining_time,buff_index FROM character_pet_skills_save WHERE petObjItemId=? ORDER BY buff_index ASC";
@@ -84,7 +84,7 @@ public class L2PetInstance extends L2Summon {
      * @param owner
      * @param control
      */
-    public L2PetInstance(L2NpcTemplate template, Player owner, L2ItemInstance control) {
+    public Pet(L2NpcTemplate template, Player owner, L2ItemInstance control) {
         this(template, owner, control, (byte) (template.getDisplayId() == 12564 ? owner.getLevel() : template.getLevel()));
     }
 
@@ -96,7 +96,7 @@ public class L2PetInstance extends L2Summon {
      * @param control
      * @param level
      */
-    public L2PetInstance(L2NpcTemplate template, Player owner, L2ItemInstance control, byte level) {
+    public Pet(L2NpcTemplate template, Player owner, L2ItemInstance control, byte level) {
         super(template, owner);
         setInstanceType(InstanceType.L2PetInstance);
 
@@ -113,13 +113,13 @@ public class L2PetInstance extends L2Summon {
         getPetLevelData();
     }
 
-    public static synchronized L2PetInstance spawnPet(L2NpcTemplate template, Player owner, L2ItemInstance control) {
+    public static synchronized Pet spawnPet(L2NpcTemplate template, Player owner, L2ItemInstance control) {
         if (L2World.getInstance().getPet(owner.getObjectId()) != null) {
             return null; // owner has a pet listed in world
         }
         final L2PetData data = PetDataTable.getInstance().getPetData(template.getId());
 
-        final L2PetInstance pet = restore(control, template, owner);
+        final Pet pet = restore(control, template, owner);
         // add the pet instance to world
         if (pet != null) {
             pet.setTitle(owner.getName());
@@ -133,17 +133,17 @@ public class L2PetInstance extends L2Summon {
         return pet;
     }
 
-    private static L2PetInstance restore(L2ItemInstance control, L2NpcTemplate template, Player owner) {
+    private static Pet restore(L2ItemInstance control, L2NpcTemplate template, Player owner) {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement("SELECT item_obj_id, name, level, curHp, curMp, exp, sp, fed FROM pets WHERE item_obj_id=?")) {
-            L2PetInstance pet;
+            Pet pet;
             statement.setInt(1, control.getObjectId());
             try (ResultSet rset = statement.executeQuery()) {
                 if (!rset.next()) {
-                    return new L2PetInstance(template, owner, control);
+                    return new Pet(template, owner, control);
                 }
 
-                pet = new L2PetInstance(template, owner, control, rset.getByte("level"));
+                pet = new Pet(template, owner, control, rset.getByte("level"));
 
                 pet._respawned = true;
                 pet.setName(rset.getString("name"));
@@ -871,7 +871,7 @@ public class L2PetInstance extends L2Summon {
     }
 
     /**
-     * Restore the specified % of experience this L2PetInstance has lost.<BR>
+     * Restore the specified % of experience this Pet has lost.<BR>
      * <BR>
      *
      * @param restorePercent
@@ -896,7 +896,7 @@ public class L2PetInstance extends L2Summon {
         // Get the Experience before applying penalty
         _expBeforeDeath = getStat().getExp();
 
-        // Set the new Experience value of the L2PetInstance
+        // Set the new Experience value of the Pet
         getStat().addExp(-lostExp);
     }
 
@@ -1113,13 +1113,13 @@ public class L2PetInstance extends L2Summon {
      * Manage Feeding Task.<BR>
      * Feed or kill the pet depending on hunger level.<br>
      * If pet has food in inventory and feed level drops below 55% then consume food from inventory.<br>
-     * Send a broadcastStatusUpdate packet for this L2PetInstance
+     * Send a broadcastStatusUpdate packet for this Pet
      */
     class FeedTask implements Runnable {
         @Override
         public void run() {
             try {
-                final L2Summon pet = getOwner().getPet();
+                final Summon pet = getOwner().getPet();
                 if ((getOwner() == null) || (pet == null) || (pet.getObjectId() != getObjectId())) {
                     stopFeed();
                     return;
@@ -1160,7 +1160,7 @@ public class L2PetInstance extends L2Summon {
                         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_WAS_HUNGRY_SO_IT_ATE_S1);
                         sm.addItemName(food.getId());
                         sendPacket(sm);
-                        handler.useItem(L2PetInstance.this, food, false);
+                        handler.useItem(Pet.this, food, false);
                     }
                 }
 

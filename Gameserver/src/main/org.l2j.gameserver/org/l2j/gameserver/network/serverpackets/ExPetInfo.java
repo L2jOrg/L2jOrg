@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.NpcInfoType;
 import org.l2j.gameserver.enums.Team;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -15,7 +15,7 @@ import java.util.Set;
  * @author Sdw
  */
 public class ExPetInfo extends AbstractMaskPacket<NpcInfoType> {
-    private final L2Summon _summon;
+    private final Summon _summon;
     private final Player _attacker;
     private final int _val;
     private final byte[] _masks = new byte[] {
@@ -36,7 +36,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType> {
     private int _clanId = 0;
     private int _statusMask = 0;
 
-    public ExPetInfo(L2Summon summon, Player attacker, int val) {
+    public ExPetInfo(Summon summon, Player attacker, int val) {
         _summon = summon;
         _attacker = attacker;
         _title = (summon.getOwner() != null) && summon.getOwner().isOnline() ? summon.getOwner().getName() : "";
@@ -154,7 +154,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType> {
         calcBlockSize(_summon, component);
     }
 
-    private void calcBlockSize(L2Summon summon, NpcInfoType type) {
+    private void calcBlockSize(Summon summon, NpcInfoType type) {
         switch (type) {
             case ATTACKABLE:
             case UNKNOWN1: {

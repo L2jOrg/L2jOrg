@@ -5,7 +5,7 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.SiegeGuardManager;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -39,7 +39,7 @@ public final class RequestPetGetItem extends ClientPacket {
             return;
         }
 
-        final L2PetInstance pet = client.getActiveChar().getPet();
+        final Pet pet = client.getActiveChar().getPet();
         if (pet.isDead() || pet.isControlBlocked()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;

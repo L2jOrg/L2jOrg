@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -65,7 +65,7 @@ public class PetSkillData extends GameXmlReader {
         }
     }
 
-    public int getAvailableLevel(L2Summon pet, int skillId) {
+    public int getAvailableLevel(Summon pet, int skillId) {
         int lvl = 0;
         if (!_skillTrees.containsKey(pet.getId())) {
             LOGGER.warn("Pet id {} does not have any skills assigned.", pet.getId());

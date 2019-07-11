@@ -18,8 +18,8 @@ package handlers.playeractions;
 
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 
 /**
@@ -37,7 +37,7 @@ public final class PetAttack implements IPlayerActionHandler
 			return;
 		}
 		
-		final L2PetInstance pet = activeChar.getPet();
+		final Pet pet = activeChar.getPet();
 		if (pet.isUncontrollable())
 		{
 			activeChar.sendPacket(SystemMessageId.WHEN_YOUR_PET_S_HUNGER_GAUGE_IS_AT_0_YOU_CANNOT_USE_YOUR_PET);

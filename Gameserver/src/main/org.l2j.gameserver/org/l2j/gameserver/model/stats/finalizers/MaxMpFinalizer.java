@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
@@ -35,7 +35,7 @@ public class MaxMpFinalizer implements IStatsFunction {
 
         double baseValue = creature.getStat().getValue(stat, calcWeaponPlusBaseValue(creature, stat));
         if (creature.isPet()) {
-            final L2PetInstance pet = (L2PetInstance) creature;
+            final Pet pet = (Pet) creature;
             baseValue += pet.getPetLevelData().getPetMaxMP();
         } else if (creature.isPlayer()) {
             final Player player = creature.getActingPlayer();

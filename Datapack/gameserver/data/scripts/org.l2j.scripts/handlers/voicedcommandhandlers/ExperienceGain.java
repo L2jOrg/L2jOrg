@@ -17,7 +17,7 @@
 package handlers.voicedcommandhandlers;
 
 import org.l2j.gameserver.handler.IVoicedCommandHandler;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayableExpChanged;
@@ -59,7 +59,7 @@ public final class ExperienceGain implements IVoicedCommandHandler
 		return true;
 	}
 	
-	private TerminateReturn onExperienceReceived(L2Playable playable, long exp)
+	private TerminateReturn onExperienceReceived(Playable playable, long exp)
 	{
 		if (playable.isPlayer() && playable.getActingPlayer().isDead())
 		{

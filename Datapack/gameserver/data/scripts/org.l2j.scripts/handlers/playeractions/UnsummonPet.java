@@ -18,9 +18,9 @@ package handlers.playeractions;
 
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 
 /**
@@ -32,13 +32,13 @@ public final class UnsummonPet implements IPlayerActionHandler
 	@Override
 	public void useAction(Player activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
-		final L2Summon pet = activeChar.getPet();
+		final Summon pet = activeChar.getPet();
 		
 		if (pet == null)
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
 		}
-		else if (((L2PetInstance) pet).isUncontrollable())
+		else if (((Pet) pet).isUncontrollable())
 		{
 			activeChar.sendPacket(SystemMessageId.WHEN_YOUR_PET_S_HUNGER_GAUGE_IS_AT_0_YOU_CANNOT_USE_YOUR_PET);
 		}

@@ -20,7 +20,7 @@ import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.ITargetTypeHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
@@ -63,7 +63,7 @@ public class PcBody implements ITargetTypeHandler
 			return null;
 		}
 		
-		final L2Playable target = (L2Playable) selectedTarget;
+		final Playable target = (Playable) selectedTarget;
 		
 		if (target.isDead())
 		{

@@ -7,9 +7,9 @@ import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.model.L2PetData;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -35,12 +35,12 @@ public final class Evolve {
             return false;
         }
 
-        final L2Summon pet = player.getPet();
+        final Summon pet = player.getPet();
         if (pet == null) {
             return false;
         }
 
-        final L2PetInstance currentPet = (L2PetInstance) pet;
+        final Pet currentPet = (Pet) pet;
         if (currentPet.isAlikeDead()) {
             GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use death pet exploit!", Config.DEFAULT_PUNISH);
             return false;
@@ -87,7 +87,7 @@ public final class Evolve {
         item = player.getInventory().addItem("Evolve", itemIdgive, 1, player, npc);
 
         // Summoning new pet
-        final L2PetInstance petSummon = L2PetInstance.spawnPet(npcTemplate, player, item);
+        final Pet petSummon = Pet.spawnPet(npcTemplate, player, item);
 
         if (petSummon == null) {
             return false;
@@ -169,7 +169,7 @@ public final class Evolve {
         final L2ItemInstance addedItem = player.getInventory().addItem("PetRestore", itemIdgive, 1, player, npc);
 
         // Summoning new pet
-        final L2PetInstance petSummon = L2PetInstance.spawnPet(npcTemplate, player, addedItem);
+        final Pet petSummon = Pet.spawnPet(npcTemplate, player, addedItem);
         if (petSummon == null) {
             return false;
         }
@@ -219,9 +219,9 @@ public final class Evolve {
 
     static final class EvolveFeedWait implements Runnable {
         private final Player _activeChar;
-        private final L2PetInstance _petSummon;
+        private final Pet _petSummon;
 
-        EvolveFeedWait(Player activeChar, L2PetInstance petSummon) {
+        EvolveFeedWait(Player activeChar, Pet petSummon) {
             _activeChar = activeChar;
             _petSummon = petSummon;
         }
@@ -242,9 +242,9 @@ public final class Evolve {
 
     static final class EvolveFinalizer implements Runnable {
         private final Player _activeChar;
-        private final L2PetInstance _petSummon;
+        private final Pet _petSummon;
 
-        EvolveFinalizer(Player activeChar, L2PetInstance petSummon) {
+        EvolveFinalizer(Player activeChar, Pet petSummon) {
             _activeChar = activeChar;
             _petSummon = petSummon;
         }

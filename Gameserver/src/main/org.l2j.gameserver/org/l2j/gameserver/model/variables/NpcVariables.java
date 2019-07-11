@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.variables;
 
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
@@ -61,7 +61,7 @@ public class NpcVariables extends AbstractVariables {
      * @param name the name of the variable
      * @return the stored summon or {@code null}
      */
-    public L2Summon getSummon(String name) {
-        return getObject(name, L2Summon.class);
+    public Summon getSummon(String name) {
+        return getObject(name, Summon.class);
     }
 }

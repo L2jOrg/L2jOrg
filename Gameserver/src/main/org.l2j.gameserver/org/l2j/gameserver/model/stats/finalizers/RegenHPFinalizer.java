@@ -9,7 +9,7 @@ import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2SiegeClan;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Castle.CastleFunction;
 import org.l2j.gameserver.model.entity.Fort;
@@ -135,7 +135,7 @@ public class RegenHPFinalizer implements IStatsFunction {
             // Add CON bonus
             baseValue *= creature.getLevelMod() * BaseStats.CON.calcBonus(creature);
         } else if (creature.isPet()) {
-            baseValue = ((L2PetInstance) creature).getPetLevelData().getPetRegenHP() * Config.PET_HP_REGEN_MULTIPLIER;
+            baseValue = ((Pet) creature).getPetLevelData().getPetRegenHP() * Config.PET_HP_REGEN_MULTIPLIER;
         }
 
         return Stats.defaultValue(creature, stat, baseValue);

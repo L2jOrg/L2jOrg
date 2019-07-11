@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2DoorTemplate;
 import org.l2j.gameserver.model.events.ListenersContainer;
@@ -442,7 +442,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      */
     public void removePlayerBuff(Player player) {
         // Make list of affected playable objects
-        final List<L2Playable> affected = new ArrayList<>();
+        final List<Playable> affected = new ArrayList<>();
         affected.add(player);
         player.getServitors().values().forEach(affected::add);
         if (player.hasPet()) {
@@ -451,11 +451,11 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 
         // Now remove buffs by type
         if (_removeBuffType == InstanceRemoveBuffType.ALL) {
-            for (L2Playable playable : affected) {
+            for (Playable playable : affected) {
                 playable.stopAllEffectsExceptThoseThatLastThroughDeath();
             }
         } else {
-            for (L2Playable playable : affected) {
+            for (Playable playable : affected) {
                 // Stop all buffs.
                 playable.getEffectList().stopEffects(info -> !info.getSkill().isIrreplacableBuff() && info.getSkill().getBuffType().isBuff() && hasRemoveBuffException(info.getSkill()), true, true);
             }

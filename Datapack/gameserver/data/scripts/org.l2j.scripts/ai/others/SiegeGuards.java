@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
@@ -93,7 +93,7 @@ public class SiegeGuards extends AbstractNpcAI
 					{
 							if (nearby.isPlayable() && GeoEngine.getInstance().canSeeTarget(guard, nearby))
 							{
-								final L2Summon summon = nearby.isSummon() ? (L2Summon) nearby : null;
+								final Summon summon = nearby.isSummon() ? (Summon) nearby : null;
 								final Player pl = summon == null ? (Player) nearby : summon.getOwner();
 								if (((pl.getSiegeState() != 2) || pl.isRegisteredOnThisSiegeField(guard.getScriptValue())) && ((pl.getSiegeState() != 0) || (guard.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE)))
 						{

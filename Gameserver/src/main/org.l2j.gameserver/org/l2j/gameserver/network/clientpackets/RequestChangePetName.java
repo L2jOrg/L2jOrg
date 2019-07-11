@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.sql.impl.PetNameTable;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 
@@ -25,7 +25,7 @@ public final class RequestChangePetName extends ClientPacket {
             return;
         }
 
-        final L2Summon pet = activeChar.getPet();
+        final Summon pet = activeChar.getPet();
         if (pet == null) {
             return;
         }

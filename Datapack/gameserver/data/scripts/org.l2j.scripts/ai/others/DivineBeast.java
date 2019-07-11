@@ -17,7 +17,7 @@
 package ai.others;
 
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 import ai.AbstractNpcAI;
@@ -38,7 +38,7 @@ public final class DivineBeast extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onSummonSpawn(L2Summon summon)
+	public void onSummonSpawn(Summon summon)
 	{
 		startQuestTimer("VALIDATE_TRANSFORMATION", CHECK_TIME, null, summon.getActingPlayer(), true);
 	}

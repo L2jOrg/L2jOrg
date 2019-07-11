@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -50,7 +50,7 @@ public class ConditionPlayerServitorNpcId extends Condition {
         if (_npcIds == null) {
             return true;
         }
-        for (L2Summon summon : effector.getServitors().values()) {
+        for (Summon summon : effector.getServitors().values()) {
             if (_npcIds.contains(summon.getId())) {
                 return true;
             }

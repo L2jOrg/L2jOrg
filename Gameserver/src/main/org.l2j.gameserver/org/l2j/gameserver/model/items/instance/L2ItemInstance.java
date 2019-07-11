@@ -18,7 +18,7 @@ import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2j.gameserver.instancemanager.SiegeGuardManager;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
@@ -780,7 +780,7 @@ public final class L2ItemInstance extends L2Object {
      * @return if item is available for manipulation
      */
     public boolean isAvailable(Player player, boolean allowAdena, boolean allowNonTradeable) {
-        final L2Summon pet = player.getPet();
+        final Summon pet = player.getPet();
 
         return ((!isEquipped()) // Not equipped
                 && (_item.getType2() != L2Item.TYPE2_QUEST) // Not Quest Item

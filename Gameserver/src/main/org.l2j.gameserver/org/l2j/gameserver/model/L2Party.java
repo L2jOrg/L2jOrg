@@ -10,9 +10,9 @@ import org.l2j.gameserver.instancemanager.DuelManager;
 import org.l2j.gameserver.instancemanager.PcCafePointsManager;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2ServitorInstance;
+import org.l2j.gameserver.model.actor.instance.Servitor;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.items.CommonItem;
@@ -246,7 +246,7 @@ public class L2Party extends AbstractPlayerGroup {
         // sends pets/summons of party members
         for (Player pMember : _members) {
             if (pMember != null) {
-                final L2Summon pet = pMember.getPet();
+                final Summon pet = pMember.getPet();
                 if (pet != null) {
                     player.sendPacket(new ExPartyPetWindowAdd(pet));
                 }
@@ -270,7 +270,7 @@ public class L2Party extends AbstractPlayerGroup {
         // broadcastToPartyMembers(player, new PartyMemberPosition(this));
 
         // if member has pet/summon add it to other as well
-        final L2Summon pet = player.getPet();
+        final Summon pet = player.getPet();
         if (pet != null) {
             broadcastPacket(new ExPartyPetWindowAdd(pet));
         }
@@ -283,7 +283,7 @@ public class L2Party extends AbstractPlayerGroup {
         }
 
         // update partySpelled
-        L2Summon summon;
+        Summon summon;
         for (Player member : _members) {
             if (member != null) {
                 member.updateEffectIcons(true); // update party icons only
@@ -292,7 +292,7 @@ public class L2Party extends AbstractPlayerGroup {
                 if (summon != null) {
                     summon.updateEffectIcons();
                 }
-                member.getServitors().values().forEach(L2Summon::updateEffectIcons);
+                member.getServitors().values().forEach(Summon::updateEffectIcons);
             }
         }
 
@@ -452,7 +452,7 @@ public class L2Party extends AbstractPlayerGroup {
             player.sendPacket(PartySmallWindowDeleteAll.STATIC_PACKET);
             player.setParty(null);
             broadcastPacket(new PartySmallWindowDelete(player));
-            final L2Summon pet = player.getPet();
+            final Summon pet = player.getPet();
             if (pet != null) {
                 broadcastPacket(new ExPartyPetWindowDelete(pet));
             }
@@ -645,7 +645,7 @@ public class L2Party extends AbstractPlayerGroup {
      * Distribute Experience and SP rewards to Player Party members in the known area of the last attacker.<BR>
      * <BR>
      * <B><U> Actions</U> :</B>
-     * <li>Get the Player owner of the L2ServitorInstance (if necessary)</li>
+     * <li>Get the Player owner of the Servitor (if necessary)</li>
      * <li>Calculate the Experience and SP reward distribution rate</li>
      * <li>Add Experience and SP to the Player</li><BR>
      *
@@ -677,9 +677,9 @@ public class L2Party extends AbstractPlayerGroup {
                 // The servitor penalty
                 float penalty = 1;
 
-                final L2Summon summon = member.getServitors().values().stream().filter(s -> ((L2ServitorInstance) s).getExpMultiplier() > 1).findFirst().orElse(null);
+                final Summon summon = member.getServitors().values().stream().filter(s -> ((Servitor) s).getExpMultiplier() > 1).findFirst().orElse(null);
                 if (summon != null) {
-                    penalty = ((L2ServitorInstance) summon).getExpMultiplier();
+                    penalty = ((Servitor) summon).getExpMultiplier();
                 }
 
                 final double sqLevel = member.getLevel() * member.getLevel();

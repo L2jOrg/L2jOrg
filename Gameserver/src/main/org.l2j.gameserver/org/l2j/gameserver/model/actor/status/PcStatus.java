@@ -5,7 +5,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.instancemanager.DuelManager;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PcStat;
 import org.l2j.gameserver.model.effects.EffectFlag;
@@ -112,7 +112,7 @@ public class PcStatus extends PlayableStatus {
             }
 
             // Check and calculate transfered damage
-            final L2Summon summon = getActiveChar().getFirstServitor();
+            final Summon summon = getActiveChar().getFirstServitor();
             if ((summon != null) && GameUtils.checkIfInRange(1000, getActiveChar(), summon, true)) {
                 tDmg = ((int) value * (int) getActiveChar().getStat().getValue(Stats.TRANSFER_DAMAGE_SUMMON_PERCENT, 0)) / 100;
 
@@ -230,7 +230,7 @@ public class PcStatus extends PlayableStatus {
                 stopHpMpRegeneration();
                 getActiveChar().setIsDead(true);
                 getActiveChar().setIsPendingRevive(true);
-                final L2Summon pet = getActiveChar().getPet();
+                final Summon pet = getActiveChar().getPet();
                 if (pet != null) {
                     pet.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
                 }

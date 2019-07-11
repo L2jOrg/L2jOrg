@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.MobGroupTable;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.L2ControllableMobInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
@@ -341,10 +341,10 @@ public final class L2ControllableMobAI extends L2AttackableAI {
             return false;
         }
 
-        // Check if the target is a L2Playable
+        // Check if the target is a Playable
         if (target.isPlayable()) {
             // Check if the target isn't in silent move mode
-            if (((L2Playable) target).isSilentMovingAffected()) {
+            if (((Playable) target).isSilentMovingAffected()) {
                 return false;
             }
         }

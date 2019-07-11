@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.annotations.RegisterEvent;
@@ -367,7 +367,7 @@ public class TvT extends Event implements ScriptEvent
 					participant.setIsInvul(true);
 					participant.setIsImmobilized(true);
 					participant.disableAllSkills();
-					for (L2Summon summon : participant.getServitors().values())
+					for (Summon summon : participant.getServitors().values())
 					{
 						summon.setIsInvul(true);
 						summon.setIsImmobilized(true);
@@ -452,7 +452,7 @@ public class TvT extends Event implements ScriptEvent
 					participant.setIsInvul(false);
 					participant.setIsImmobilized(false);
 					participant.enableAllSkills();
-					for (L2Summon summon : participant.getServitors().values())
+					for (Summon summon : participant.getServitors().values())
 					{
 						summon.setIsInvul(true);
 						summon.setIsImmobilized(true);

@@ -27,10 +27,10 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Playable;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Playable;
+import org.l2j.gameserver.model.actor.Summon;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.html.PageBuilder;
 import org.l2j.gameserver.model.html.PageResult;
@@ -537,7 +537,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			final L2Object target = activeChar.getTarget();
 			if ((target != null) && target.isPet())
 			{
-				final L2PetInstance targetPet = (L2PetInstance) target;
+				final Pet targetPet = (Pet) target;
 				targetPet.setCurrentFed(targetPet.getMaxFed());
 				targetPet.broadcastStatusUpdate();
 			}
@@ -682,7 +682,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			final L2Object target = activeChar.getTarget();
 			if ((target != null) && target.isSummon())
 			{
-				gatherSummonInfo((L2Summon) target, activeChar);
+				gatherSummonInfo((Summon) target, activeChar);
 			}
 			else
 			{
@@ -694,7 +694,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			final L2Object target = activeChar.getTarget();
 			if ((target != null) && target.isSummon())
 			{
-				((L2Summon) target).unSummon(((L2Summon) target).getOwner());
+				((Summon) target).unSummon(((Summon) target).getOwner());
 			}
 			else
 			{
@@ -706,7 +706,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			final L2Object target = activeChar.getTarget();
 			if ((target != null) && target.isPet())
 			{
-				final L2PetInstance pet = (L2PetInstance) target;
+				final Pet pet = (Pet) target;
 				try
 				{
 					final String val = command.substring(20);
@@ -747,7 +747,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			
 			if ((target != null) && target.isPet())
 			{
-				activeChar.sendPacket(new GMViewItemList(1, (L2PetInstance) target));
+				activeChar.sendPacket(new GMViewItemList(1, (Pet) target));
 			}
 			else
 			{
@@ -876,7 +876,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
-				final L2Playable playable = ((L2Playable) target);
+				final Playable playable = ((Playable) target);
 				playable.updatePvPFlag(Math.abs(playable.getPvpFlag() - 1));
 			}
 			catch (Exception e)
@@ -1536,7 +1536,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 	}
 	
-	private void gatherSummonInfo(L2Summon target, Player activeChar)
+	private void gatherSummonInfo(Summon target, Player activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(activeChar, "data/html/admin/petinfo.htm");
@@ -1563,7 +1563,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		if (target.isPet())
 		{
-			html.replace("%food%", ((L2PetInstance) target).getCurrentFed() + "/" + ((L2PetInstance) target).getPetLevelData().getPetMaxFeed());
+			html.replace("%food%", ((Pet) target).getCurrentFed() + "/" + ((Pet) target).getPetLevelData().getPetMaxFeed());
 			html.replace("%load%", target.getInventory().getTotalWeight() + "/" + target.getMaxLoad());
 		}
 		else

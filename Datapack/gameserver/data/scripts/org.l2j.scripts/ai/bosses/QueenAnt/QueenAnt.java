@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
 import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -293,7 +293,7 @@ public final class QueenAnt extends AbstractNpcAI
 		}
 		
 		final boolean isMage;
-		final L2Playable character;
+		final Playable character;
 		if (isSummon)
 		{
 			isMage = false;

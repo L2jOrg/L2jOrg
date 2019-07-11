@@ -7,8 +7,8 @@ import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.model.L2PetData;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
-import org.l2j.gameserver.model.actor.instance.L2ServitorInstance;
+import org.l2j.gameserver.model.actor.instance.Pet;
+import org.l2j.gameserver.model.actor.instance.Servitor;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -107,7 +107,7 @@ public class CharSummonTable {
             return;
         }
 
-        final L2PetInstance pet = L2PetInstance.spawnPet(npcTemplate, activeChar, item);
+        final Pet pet = Pet.spawnPet(npcTemplate, activeChar, item);
         if (pet == null) {
             LOGGER.warn(": Null pet instance for: " + activeChar + " and pet NPC template:" + npcTemplate);
             return;
@@ -159,7 +159,7 @@ public class CharSummonTable {
                     skill.applyEffects(activeChar, activeChar);
 
                     if (activeChar.hasServitors()) {
-                        final L2ServitorInstance summon = activeChar.getServitors().values().stream().map(s -> ((L2ServitorInstance) s)).filter(s -> s.getReferenceSkill() == skillId).findAny().orElse(null);
+                        final Servitor summon = activeChar.getServitors().values().stream().map(s -> ((Servitor) s)).filter(s -> s.getReferenceSkill() == skillId).findAny().orElse(null);
                         if(summon != null) {
                             summon.setCurrentHp(curHp);
                             summon.setCurrentMp(curMp);
@@ -173,7 +173,7 @@ public class CharSummonTable {
         }
     }
 
-    public void saveSummon(L2ServitorInstance summon) {
+    public void saveSummon(Servitor summon) {
         if ((summon == null) || (summon.getLifeTimeRemaining() <= 0)) {
             return;
         }

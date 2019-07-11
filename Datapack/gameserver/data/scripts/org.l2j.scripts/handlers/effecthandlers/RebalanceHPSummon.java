@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -58,7 +58,7 @@ public class RebalanceHPSummon extends AbstractEffect
 		double fullHP = 0;
 		double currentHPs = 0;
 		
-		for (L2Summon summon : effector.getServitors().values())
+		for (Summon summon : effector.getServitors().values())
 		{
 			if (!summon.isDead() && GameUtils.checkIfInRange(skill.getAffectRange(), effector, summon, true))
 			{
@@ -71,7 +71,7 @@ public class RebalanceHPSummon extends AbstractEffect
 		currentHPs += effector.getCurrentHp();
 		
 		double percentHP = currentHPs / fullHP;
-		for (L2Summon summon : effector.getServitors().values())
+		for (Summon summon : effector.getServitors().values())
 		{
 			if (!summon.isDead() && GameUtils.checkIfInRange(skill.getAffectRange(), effector, summon, true))
 			{

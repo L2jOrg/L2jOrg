@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.L2Party;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -40,7 +40,7 @@ public final class PartySmallWindowAll extends ServerPacket {
                 writeShort((short) member.getClassId().getId());
                 writeByte((byte) 0x01); // Unk
                 writeShort((short) member.getRace().ordinal());
-                final L2Summon pet = member.getPet();
+                final Summon pet = member.getPet();
                 writeInt(member.getServitors().size() + (pet != null ? 1 : 0)); // Summon size, one only atm
                 if (pet != null) {
                     writeInt(pet.getObjectId());

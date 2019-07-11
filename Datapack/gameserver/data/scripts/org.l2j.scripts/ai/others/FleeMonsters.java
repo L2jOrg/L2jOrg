@@ -20,7 +20,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.util.GameUtils;
@@ -53,7 +53,7 @@ public final class FleeMonsters extends AbstractNpcAI
 		npc.disableCoreAI(true);
 		npc.setRunning();
 		
-		final L2Summon summon = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : null;
+		final Summon summon = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : null;
 		final ILocational attackerLoc = summon == null ? attacker : summon;
 		final double radians = Math.toRadians(GameUtils.calculateAngleFrom(attackerLoc, npc));
 		final int posX = (int) (npc.getX() + (FLEE_DISTANCE * Math.cos(radians)));

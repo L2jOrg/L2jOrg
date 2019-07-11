@@ -8,9 +8,9 @@ import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.instancemanager.PlayerCountManager;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcCreatureSee;
 import org.l2j.gameserver.network.Disconnection;
@@ -79,7 +79,7 @@ public final class L2World {
     /**
      * Map with the pets instances and their owner ID.
      */
-    private final Map<Integer, L2PetInstance> _petsInstance = new ConcurrentHashMap<>();
+    private final Map<Integer, Pet> _petsInstance = new ConcurrentHashMap<>();
 
     private final AtomicInteger _partyNumber = new AtomicInteger();
     private final AtomicInteger _memberInPartyNumber = new AtomicInteger();
@@ -209,7 +209,7 @@ public final class L2World {
      * @param ownerId ID of the owner
      * @return the pet instance from the given ownerId.
      */
-    public L2PetInstance getPet(int ownerId) {
+    public Pet getPet(int ownerId) {
         return _petsInstance.get(ownerId);
     }
 
@@ -217,10 +217,10 @@ public final class L2World {
      * Add the given pet instance from the given ownerId.
      *
      * @param ownerId ID of the owner
-     * @param pet     L2PetInstance of the pet
+     * @param pet     Pet of the pet
      * @return
      */
-    public L2PetInstance addPet(int ownerId, L2PetInstance pet) {
+    public Pet addPet(int ownerId, Pet pet) {
         return _petsInstance.put(ownerId, pet);
     }
 
@@ -511,7 +511,7 @@ public final class L2World {
         if (object.isPlayer()) {
             ((L2Character) object).stopMove(((Player) object).getLastServerPosition());
         } else if (object.isSummon()) {
-            final L2Summon summon = (L2Summon) object;
+            final Summon summon = (Summon) object;
             summon.unSummon(summon.getOwner());
         } else if (_allObjects.remove(object.getObjectId()) != null) {
             if (object.isNpc()) {

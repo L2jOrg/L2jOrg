@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.serverpackets.PetItemList;
 import org.l2j.gameserver.util.GameUtils;
@@ -44,7 +44,7 @@ public final class RequestGetItemFromPet extends ClientPacket {
             return;
         }
 
-        final L2PetInstance pet = player.getPet();
+        final Pet pet = player.getPet();
         final L2ItemInstance item = pet.getInventory().getItemByObjectId(_objectId);
         if (item == null) {
             return;

@@ -20,7 +20,7 @@ import org.l2j.gameserver.data.xml.impl.CategoryData;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.handler.IItemHandler;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -42,7 +42,7 @@ public class FatedSupportBox implements IItemHandler
 	private static final int FATED_BOX_ORC_WIZARD = 37321;
 	
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{

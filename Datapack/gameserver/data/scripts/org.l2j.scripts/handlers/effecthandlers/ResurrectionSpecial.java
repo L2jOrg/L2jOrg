@@ -22,8 +22,8 @@ import java.util.Set;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -91,7 +91,7 @@ public final class ResurrectionSpecial extends AbstractEffect
 		}
 		else if (effected.isPet())
 		{
-			final L2PetInstance pet = (L2PetInstance) effected;
+			final Pet pet = (Pet) effected;
 			effected.getActingPlayer().reviveRequest(pet.getActingPlayer(), skill, true, _power);
 		}
 	}

@@ -8,7 +8,7 @@ import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.model.FortSiegeSpawn;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.NpcStringId;
@@ -95,7 +95,7 @@ public class L2FortCommanderInstance extends L2DefenderInstance {
                         }
                         case 2: {
                             if (attacker.isSummon()) {
-                                attacker = ((L2Summon) attacker).getOwner();
+                                attacker = ((Summon) attacker).getOwner();
                             }
                             npcString = NpcStringId.EVERYONE_CONCENTRATE_YOUR_ATTACKS_ON_S1_SHOW_THE_ENEMY_YOUR_RESOLVE;
                             break;

@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
@@ -39,7 +39,7 @@ public final class TransferDamageToPlayer extends AbstractStatAddEffect
 	{
 		if (effected.isPlayable() && effector.isPlayer())
 		{
-			((L2Playable) effected).setTransferDamageTo(null);
+			((Playable) effected).setTransferDamageTo(null);
 		}
 	}
 	
@@ -48,7 +48,7 @@ public final class TransferDamageToPlayer extends AbstractStatAddEffect
 	{
 		if (effected.isPlayable() && effector.isPlayer())
 		{
-			((L2Playable) effected).setTransferDamageTo(effector.getActingPlayer());
+			((Playable) effected).setTransferDamageTo(effector.getActingPlayer());
 		}
 	}
 }

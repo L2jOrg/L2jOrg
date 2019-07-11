@@ -18,7 +18,7 @@ package handlers.itemhandlers;
 
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.model.L2PetData;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.PetItemHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -30,7 +30,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 public class SummonItems extends ItemSkillsTemplate
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{

@@ -22,7 +22,7 @@ import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2ServitorInstance;
+import org.l2j.gameserver.model.actor.instance.Servitor;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -83,7 +83,7 @@ public final class Summon extends AbstractEffect
 			player.getServitors().values().forEach(s -> s.unSummon(player));
 		}
 		final L2NpcTemplate template = NpcData.getInstance().getTemplate(_npcId);
-		final L2ServitorInstance summon = new L2ServitorInstance(template, player);
+		final Servitor summon = new Servitor(template, player);
 		final int consumeItemInterval = (_consumeItemInterval > 0 ? _consumeItemInterval : (template.getRace() != Race.SIEGE_WEAPON ? 240 : 60)) * 1000;
 		
 		summon.setName(template.getName());

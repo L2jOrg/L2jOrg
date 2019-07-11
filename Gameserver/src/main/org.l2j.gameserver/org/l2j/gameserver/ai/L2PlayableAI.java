@@ -2,14 +2,14 @@ package org.l2j.gameserver.ai;
 
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 
 /**
- * This class manages AI of L2Playable.<br>
+ * This class manages AI of Playable.<br>
  * L2PlayableAI :
  * <li>L2SummonAI</li>
  * <li>L2PlayerAI</li>
@@ -17,7 +17,7 @@ import org.l2j.gameserver.network.SystemMessageId;
  * @author JIV
  */
 public abstract class L2PlayableAI extends L2CharacterAI {
-    public L2PlayableAI(L2Playable playable) {
+    public L2PlayableAI(Playable playable) {
         super(playable);
     }
 

@@ -18,7 +18,7 @@ package handlers.playeractions;
 
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 
@@ -35,7 +35,7 @@ public final class UnsummonServitor implements IPlayerActionHandler
 		
 		if (activeChar.hasServitors())
 		{
-			for (L2Summon s : activeChar.getServitors().values())
+			for (Summon s : activeChar.getServitors().values())
 			{
 				if (s.isBetrayed())
 				{

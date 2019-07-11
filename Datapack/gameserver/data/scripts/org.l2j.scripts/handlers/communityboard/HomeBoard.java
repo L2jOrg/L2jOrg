@@ -14,9 +14,9 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.serverpackets.BuyList;
@@ -180,7 +180,7 @@ public final class HomeBoard implements IParseBoardHandler {
 			else
 			{
 				activeChar.destroyItemByItemId("CB_Buff", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_BUFF_PRICE * buffCount, activeChar, true);
-				final L2PetInstance pet = activeChar.getPet();
+				final Pet pet = activeChar.getPet();
 				List<L2Character> targets = new ArrayList<>(4);
 				targets.add(activeChar);
 				if (pet != null)
@@ -231,7 +231,7 @@ public final class HomeBoard implements IParseBoardHandler {
 					activeChar.getPet().setCurrentMp(activeChar.getPet().getMaxMp());
 					activeChar.getPet().setCurrentCp(activeChar.getPet().getMaxCp());
 				}
-				for (L2Summon summon : activeChar.getServitors().values())
+				for (Summon summon : activeChar.getServitors().values())
 				{
 					summon.setCurrentHp(summon.getMaxHp());
 					summon.setCurrentMp(summon.getMaxMp());

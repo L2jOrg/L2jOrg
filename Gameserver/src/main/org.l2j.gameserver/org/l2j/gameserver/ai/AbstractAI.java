@@ -6,7 +6,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -500,7 +500,7 @@ public abstract class AbstractAI implements Ctrl {
 
     public void setAutoAttacking(boolean isAutoAttacking) {
         if (_actor.isSummon()) {
-            final L2Summon summon = (L2Summon) _actor;
+            final Summon summon = (Summon) _actor;
             if (summon.getOwner() != null) {
                 summon.getOwner().getAI().setAutoAttacking(isAutoAttacking);
             }
@@ -515,7 +515,7 @@ public abstract class AbstractAI implements Ctrl {
      */
     public void clientStartAutoAttack() {
         if (_actor.isSummon()) {
-            final L2Summon summon = (L2Summon) _actor;
+            final Summon summon = (Summon) _actor;
             if (summon.getOwner() != null) {
                 summon.getOwner().getAI().clientStartAutoAttack();
             }
@@ -523,7 +523,7 @@ public abstract class AbstractAI implements Ctrl {
         }
         if (!_clientAutoAttacking) {
             if (_actor.isPlayer() && _actor.hasSummon()) {
-                final L2Summon pet = _actor.getPet();
+                final Summon pet = _actor.getPet();
                 if (pet != null) {
                     pet.broadcastPacket(new AutoAttackStart(pet.getObjectId()));
                 }
@@ -542,7 +542,7 @@ public abstract class AbstractAI implements Ctrl {
      */
     void clientStopAutoAttack() {
         if (_actor.isSummon()) {
-            final L2Summon summon = (L2Summon) _actor;
+            final Summon summon = (Summon) _actor;
             if (summon.getOwner() != null) {
                 summon.getOwner().getAI().clientStopAutoAttack();
             }
@@ -633,7 +633,7 @@ public abstract class AbstractAI implements Ctrl {
                 final L2Object followTarget = getTarget(); // copy to prevent NPE
                 if (followTarget == null) {
                     if (_actor.isSummon()) {
-                        ((L2Summon) _actor).setFollowStatus(false);
+                        ((Summon) _actor).setFollowStatus(false);
                     }
                     setIntention(AI_INTENTION_IDLE);
                     return;
@@ -643,7 +643,7 @@ public abstract class AbstractAI implements Ctrl {
                     if (!_actor.isInsideRadius3D(followTarget, 3000)) {
                         // if the target is too far (maybe also teleported)
                         if (_actor.isSummon()) {
-                            ((L2Summon) _actor).setFollowStatus(false);
+                            ((Summon) _actor).setFollowStatus(false);
                         }
 
                         setIntention(AI_INTENTION_IDLE);

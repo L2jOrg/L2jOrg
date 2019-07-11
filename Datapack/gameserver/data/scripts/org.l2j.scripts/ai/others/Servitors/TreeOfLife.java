@@ -19,7 +19,7 @@ package ai.others.Servitors;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 import ai.AbstractNpcAI;
@@ -46,7 +46,7 @@ public final class TreeOfLife extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onSummonSpawn(L2Summon summon)
+	public void onSummonSpawn(Summon summon)
 	{
 		getTimers().addTimer("HEAL", 3000, null, summon.getOwner());
 	}
@@ -56,7 +56,7 @@ public final class TreeOfLife extends AbstractNpcAI
 	{
 		if (player != null)
 		{
-			final L2Summon summon = player.getFirstServitor();
+			final Summon summon = player.getFirstServitor();
 			if (event.equals("HEAL") && (summon != null) && CommonUtil.contains(TREE_OF_LIFE, summon.getId()))
 			{
 				summon.doCast(summon.getTemplate().getParameters().getSkillHolder("s_tree_heal").getSkill(), null, false, false);

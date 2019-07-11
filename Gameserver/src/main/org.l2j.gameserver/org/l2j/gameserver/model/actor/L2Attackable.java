@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
 import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2ServitorInstance;
+import org.l2j.gameserver.model.actor.instance.Servitor;
 import org.l2j.gameserver.model.actor.status.AttackableStatus;
 import org.l2j.gameserver.model.actor.tasks.attackable.CommandChannelTimer;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
@@ -234,7 +234,7 @@ public class L2Attackable extends L2Npc {
      * Distribute Exp and SP rewards to Player (including Summon owner) that hit the L2Attackable and to their Party members<br>
      * Notify the Quest Engine of the L2Attackable death if necessary.<br>
      * Kill the L2NpcInstance (the corpse disappeared after 7 seconds)<br>
-     * Caution: This method DOESN'T GIVE rewards to L2PetInstance.
+     * Caution: This method DOESN'T GIVE rewards to Pet.
      *
      * @param killer The L2Character that has killed the L2Attackable
      */
@@ -269,10 +269,10 @@ public class L2Attackable extends L2Npc {
     /**
      * Distribute Exp and SP rewards to Player (including Summon owner) that hit the L2Attackable and to their Party members.<br>
      * Actions:<br>
-     * Get the Player owner of the L2ServitorInstance (if necessary) and L2Party in progress.<br>
+     * Get the Player owner of the Servitor (if necessary) and L2Party in progress.<br>
      * Calculate the Experience and SP rewards in function of the level difference.<br>
      * Add Exp and SP rewards to Player (including Summon penalty) and to Party members in the known area of the last attacker.<br>
-     * Caution : This method DOESN'T GIVE rewards to L2PetInstance.
+     * Caution : This method DOESN'T GIVE rewards to Pet.
      *
      * @param lastAttacker The L2Character that has killed the L2Attackable
      */
@@ -383,9 +383,9 @@ public class L2Attackable extends L2Npc {
                     // If this attacker have servitor, get Exp Penalty applied for the servitor.
                     float penalty = 1;
 
-                    final Optional<L2Summon> summon = attacker.getServitors().values().stream().filter(s -> ((L2ServitorInstance) s).getExpMultiplier() > 1).findFirst();
+                    final Optional<Summon> summon = attacker.getServitors().values().stream().filter(s -> ((Servitor) s).getExpMultiplier() > 1).findFirst();
                     if (summon.isPresent()) {
-                        penalty = ((L2ServitorInstance) summon.get()).getExpMultiplier();
+                        penalty = ((Servitor) summon.get()).getExpMultiplier();
 
                     }
 
@@ -416,7 +416,7 @@ public class L2Attackable extends L2Npc {
                                 exp += calculateOverhitExp(exp);
                             }
 
-                            // Distribute the Exp and SP between the Player and its L2Summon
+                            // Distribute the Exp and SP between the Player and its Summon
                             if (!attacker.isDead()) {
                                 exp = attacker.getStat().getValue(Stats.EXPSP_RATE, exp);
                                 sp = attacker.getStat().getValue(Stats.EXPSP_RATE, sp);
@@ -1085,10 +1085,10 @@ public class L2Attackable extends L2Npc {
     }
 
     /**
-     * Calculate the Experience and SP to distribute to attacker (Player, L2ServitorInstance or L2Party) of the L2Attackable.
+     * Calculate the Experience and SP to distribute to attacker (Player, Servitor or L2Party) of the L2Attackable.
      *
      * @param charLevel   The killer level
-     * @param damage      The damages given by the attacker (Player, L2ServitorInstance or L2Party)
+     * @param damage      The damages given by the attacker (Player, Servitor or L2Party)
      * @param totalDamage The total damage done
      * @return
      */

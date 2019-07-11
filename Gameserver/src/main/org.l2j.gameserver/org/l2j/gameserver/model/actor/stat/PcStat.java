@@ -6,9 +6,9 @@ import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.L2Party;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
@@ -108,7 +108,7 @@ public class PcStat extends PlayableStat {
         double ratioTakenByPlayer = 0;
 
         // if this player has a pet and it is in his range he takes from the owner's Exp, give the pet Exp now
-        final L2PetInstance pet = activeChar.getPet();
+        final Pet pet = activeChar.getPet();
         if ((pet != null) && GameUtils.checkIfInShortRange(Config.ALT_PARTY_RANGE, activeChar, pet, false)) {
             ratioTakenByPlayer = pet.getPetLevelData().getOwnerExpTaken() / 100f;
 
@@ -207,9 +207,9 @@ public class PcStat extends PlayableStat {
         getActiveChar().getTransformation().ifPresent(transform -> transform.onLevelUp(getActiveChar()));
 
         // Synchronize level with pet if possible.
-        final L2Summon sPet = getActiveChar().getPet();
+        final Summon sPet = getActiveChar().getPet();
         if (sPet != null) {
-            final L2PetInstance pet = (L2PetInstance) sPet;
+            final Pet pet = (Pet) sPet;
             if (pet.getPetData().isSynchLevel() && (pet.getLevel() != getLevel())) {
                 final byte availableLevel = (byte) Math.min(pet.getPetData().getMaxLevel(), getLevel());
                 pet.getStat().setLevel(availableLevel);

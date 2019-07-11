@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -38,7 +38,7 @@ public final class TargetMe extends AbstractEffect
 	{
 		if (effected.isPlayable())
 		{
-			((L2Playable) effected).setLockedTarget(null);
+			((Playable) effected).setLockedTarget(null);
 		}
 	}
 	
@@ -52,7 +52,7 @@ public final class TargetMe extends AbstractEffect
 				effected.setTarget(effector);
 			}
 			
-			((L2Playable) effected).setLockedTarget(effector);
+			((Playable) effected).setLockedTarget(effector);
 		}
 	}
 }

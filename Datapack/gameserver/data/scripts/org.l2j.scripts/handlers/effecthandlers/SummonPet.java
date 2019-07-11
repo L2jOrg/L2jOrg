@@ -22,7 +22,7 @@ import org.l2j.gameserver.model.L2PetData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -91,7 +91,7 @@ public final class SummonPet extends AbstractEffect
 		}
 		
 		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
-		final L2PetInstance pet = L2PetInstance.spawnPet(npcTemplate, player, collar);
+		final Pet pet = Pet.spawnPet(npcTemplate, player, collar);
 		
 		pet.setShowSummonAnimation(true);
 		if (!pet.isRespawned())

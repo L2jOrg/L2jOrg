@@ -4,9 +4,9 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayableExpChanged;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
 public class PlayableStat extends CharStat {
     protected static final Logger LOGGER = LoggerFactory.getLogger(PlayableStat.class);
 
-    public PlayableStat(L2Playable activeChar) {
+    public PlayableStat(Playable activeChar) {
         super(activeChar);
     }
 
@@ -43,7 +43,7 @@ public class PlayableStat extends CharStat {
         byte minimumLevel = 1;
         if (getActiveChar().isPet()) {
             // get minimum level from L2NpcTemplate
-            minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((L2PetInstance) getActiveChar()).getTemplate().getId());
+            minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((Pet) getActiveChar()).getTemplate().getId());
         }
 
         byte level = minimumLevel; // minimum level
@@ -84,7 +84,7 @@ public class PlayableStat extends CharStat {
         byte minimumLevel = 1;
         if (getActiveChar().isPet()) {
             // get minimum level from L2NpcTemplate
-            minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((L2PetInstance) getActiveChar()).getTemplate().getId());
+            minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((Pet) getActiveChar()).getTemplate().getId());
         }
         byte level = minimumLevel;
 
@@ -178,8 +178,8 @@ public class PlayableStat extends CharStat {
     }
 
     @Override
-    public L2Playable getActiveChar() {
-        return (L2Playable) super.getActiveChar();
+    public Playable getActiveChar() {
+        return (Playable) super.getActiveChar();
     }
 
     public int getMaxLevel() {

@@ -17,7 +17,7 @@
 package ai.areas.DragonValley;
 
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 import ai.AbstractNpcAI;
@@ -44,7 +44,7 @@ public final class CaveMaiden extends AbstractNpcAI
 		if (getRandom(100) < 20)
 		{
 			final L2Npc spawnBanshee = addSpawn(BANSHEE, npc, false, 300000);
-			final L2Playable attacker = isSummon ? killer.getServitors().values().stream().findFirst().orElse(killer.getPet()) : killer;
+			final Playable attacker = isSummon ? killer.getServitors().values().stream().findFirst().orElse(killer.getPet()) : killer;
 			addAttackPlayerDesire(spawnBanshee, attacker);
 			npc.deleteMe();
 		}

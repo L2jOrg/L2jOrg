@@ -17,7 +17,7 @@
 package handlers.itemhandlers;
 
 import org.l2j.gameserver.handler.IItemHandler;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ShowCalculator;
@@ -28,7 +28,7 @@ import org.l2j.gameserver.network.serverpackets.ShowCalculator;
 public class Calculator implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{

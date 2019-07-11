@@ -1,16 +1,16 @@
 package org.l2j.gameserver.model.actor.stat;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 
 public class SummonStat extends PlayableStat {
-    public SummonStat(L2Summon activeChar) {
+    public SummonStat(Summon activeChar) {
         super(activeChar);
     }
 
     @Override
-    public L2Summon getActiveChar() {
-        return (L2Summon) super.getActiveChar();
+    public Summon getActiveChar() {
+        return (Summon) super.getActiveChar();
     }
 
     @Override

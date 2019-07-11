@@ -12,7 +12,7 @@ import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.skills.AbnormalType;
@@ -38,8 +38,8 @@ import java.util.concurrent.Future;
 /**
  * @author UnAfraid
  */
-public class L2ServitorInstance extends L2Summon implements Runnable {
-    protected static final Logger log = LoggerFactory.getLogger(L2ServitorInstance.class);
+public class Servitor extends Summon implements Runnable {
+    protected static final Logger log = LoggerFactory.getLogger(Servitor.class);
 
     private static final String ADD_SKILL_SAVE = "REPLACE INTO character_summon_skills_save (ownerId,ownerClassIndex,summonSkillId,skill_id,skill_level,remaining_time,buff_index) VALUES (?,?,?,?,?,?,?)";
     private static final String RESTORE_SKILL_SAVE = "SELECT skill_id,skill_level,remaining_time,buff_index FROM character_summon_skills_save WHERE ownerId=? AND ownerClassIndex=? AND summonSkillId=? ORDER BY buff_index ASC";
@@ -53,7 +53,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable {
     private int _consumeItemIntervalRemaining;
     private int _referenceSkill;
 
-    public L2ServitorInstance(L2NpcTemplate template, Player owner) {
+    public Servitor(L2NpcTemplate template, Player owner) {
         super(template, owner);
         setInstanceType(InstanceType.L2ServitorInstance);
         setShowSummonAnimation(true);

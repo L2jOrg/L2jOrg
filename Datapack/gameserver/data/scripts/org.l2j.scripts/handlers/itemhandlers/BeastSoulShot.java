@@ -22,8 +22,8 @@ import java.util.stream.Collectors;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.handler.IItemHandler;
-import org.l2j.gameserver.model.actor.L2Playable;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Playable;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -38,7 +38,7 @@ import org.l2j.gameserver.util.Broadcast;
 public class BeastSoulShot implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -53,14 +53,14 @@ public class BeastSoulShot implements IItemHandler
 			return false;
 		}
 		
-		final L2Summon pet = playable.getPet();
+		final Summon pet = playable.getPet();
 		if ((pet != null) && pet.isDead())
 		{
 			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_SERVITOR_SAD_ISN_T_IT);
 			return false;
 		}
 		
-		final List<L2Summon> aliveServitor = playable.getServitors().values().stream().filter(s -> !s.isDead()).collect(Collectors.toList());
+		final List<Summon> aliveServitor = playable.getServitors().values().stream().filter(s -> !s.isDead()).collect(Collectors.toList());
 		if ((pet == null) && aliveServitor.isEmpty())
 		{
 			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_SERVITOR_SAD_ISN_T_IT);
@@ -80,7 +80,7 @@ public class BeastSoulShot implements IItemHandler
 			}
 		}
 		
-		for (L2Summon servitors : aliveServitor)
+		for (Summon servitors : aliveServitor)
 		{
 			if (!servitors.isChargedShot(ShotType.SOULSHOTS))
 			{

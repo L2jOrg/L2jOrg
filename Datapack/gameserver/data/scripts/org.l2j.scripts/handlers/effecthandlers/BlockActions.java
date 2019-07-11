@@ -20,7 +20,7 @@ import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -74,7 +74,7 @@ public final class BlockActions extends AbstractEffect
 			{
 				if ((effector != null) && !effector.isDead())
 				{
-					((L2Summon) effected).doAttack(effector);
+					((Summon) effected).doAttack(effector);
 				}
 				else
 				{

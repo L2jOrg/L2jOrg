@@ -21,7 +21,7 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
 
@@ -39,7 +39,7 @@ public final class PetSkillUse implements IPlayerActionHandler
 			return;
 		}
 		
-		final L2PetInstance pet = activeChar.getPet();
+		final Pet pet = activeChar.getPet();
 		if (pet == null)
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);

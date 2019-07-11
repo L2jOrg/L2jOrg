@@ -2,8 +2,8 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PetItemList;
@@ -72,7 +72,7 @@ public final class RequestGiveItemToPet extends ClientPacket {
             return;
         }
 
-        final L2PetInstance pet = player.getPet();
+        final Pet pet = player.getPet();
         if (pet.isDead()) {
             player.sendPacket(SystemMessageId.YOUR_PET_IS_DEAD_AND_ANY_ATTEMPT_YOU_MAKE_TO_GIVE_IT_SOMETHING_GOES_UNRECOGNIZED);
             return;

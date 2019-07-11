@@ -15,7 +15,7 @@ import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -209,7 +209,7 @@ public class SkillCaster implements Runnable {
                             player.updatePvPStatus((L2Character) obj);
 
                             if (obj.isSummon()) {
-                                ((L2Summon) obj).updateAndBroadcastStatus(1);
+                                ((Summon) obj).updateAndBroadcastStatus(1);
                             }
                         } else if (obj.isAttackable()) {
                             // Add hate to the attackable, and put it in the attack list.

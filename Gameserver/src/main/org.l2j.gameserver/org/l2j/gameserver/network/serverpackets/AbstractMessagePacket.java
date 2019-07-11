@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.items.L2Item;
@@ -145,7 +145,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
         return addNpcName(npc.getTemplate());
     }
 
-    public final T addNpcName(L2Summon npc) {
+    public final T addNpcName(Summon npc) {
         return addNpcName(npc.getId());
     }
 

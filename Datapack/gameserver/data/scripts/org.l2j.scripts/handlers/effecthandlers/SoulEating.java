@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.events.EventType;
@@ -70,7 +70,7 @@ public final class SoulEating extends AbstractEffect
 		effected.getStat().mergeAdd(Stats.MAX_SOULS, _maxSouls);
 	}
 	
-	private void onExperienceReceived(L2Playable playable, long exp)
+	private void onExperienceReceived(Playable playable, long exp)
 	{
 		// TODO: Verify logic.
 		if (playable.isPlayer() && (exp >= _expNeeded))

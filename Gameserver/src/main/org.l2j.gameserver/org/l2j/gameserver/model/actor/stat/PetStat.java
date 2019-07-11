@@ -18,13 +18,13 @@ package org.l2j.gameserver.model.actor.stat;
 
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 public class PetStat extends SummonStat {
-    public PetStat(L2PetInstance activeChar) {
+    public PetStat(Pet activeChar) {
         super(activeChar);
     }
 
@@ -85,8 +85,8 @@ public class PetStat extends SummonStat {
     }
 
     @Override
-    public L2PetInstance getActiveChar() {
-        return (L2PetInstance) super.getActiveChar();
+    public Pet getActiveChar() {
+        return (Pet) super.getActiveChar();
     }
 
     public final int getFeedBattle() {

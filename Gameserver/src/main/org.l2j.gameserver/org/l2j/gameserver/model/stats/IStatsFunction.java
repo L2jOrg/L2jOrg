@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.stats;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.transform.TransformType;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.L2Item;
@@ -147,7 +147,7 @@ public interface IStatsFunction {
         final double baseTemplateValue = creature.getTemplate().getBaseValue(stat, 0);
         double baseValue = creature.getTransformation().map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElse(baseTemplateValue);
         if (creature.isPet()) {
-            final L2PetInstance pet = (L2PetInstance) creature;
+            final Pet pet = (Pet) creature;
             final L2ItemInstance weapon = pet.getActiveWeaponInstance();
             final double baseVal = stat == Stats.PHYSICAL_ATTACK ? pet.getPetLevelData().getPetPAtk() : stat == Stats.MAGIC_ATTACK ? pet.getPetLevelData().getPetMAtk() : baseTemplateValue;
             baseValue = baseVal + (weapon != null ? weapon.getItem().getStats(stat, baseVal) : 0);

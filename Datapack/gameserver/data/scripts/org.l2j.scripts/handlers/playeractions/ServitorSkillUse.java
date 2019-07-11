@@ -20,7 +20,7 @@ import org.l2j.gameserver.data.xml.impl.PetSkillData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 
@@ -33,7 +33,7 @@ public final class ServitorSkillUse implements IPlayerActionHandler
 	@Override
 	public void useAction(Player activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
-		final L2Summon summon = activeChar.getAnyServitor();
+		final Summon summon = activeChar.getAnyServitor();
 		if ((summon == null) || !summon.isServitor())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR);

@@ -5,7 +5,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
@@ -18,14 +18,14 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
     private static final int AVOID_RADIUS = 70;
 
     private volatile boolean _thinking; // to prevent recursive thinking
-    private volatile boolean _startFollow = ((L2Summon) _actor).getFollowStatus();
+    private volatile boolean _startFollow = ((Summon) _actor).getFollowStatus();
     private L2Character _lastAttack = null;
 
     private volatile boolean _startAvoid;
     private volatile boolean _isDefending;
     private Future<?> _avoidTask = null;
 
-    public L2SummonAI(L2Summon summon) {
+    public L2SummonAI(Summon summon) {
         super(summon);
     }
 
@@ -38,7 +38,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
 
     @Override
     protected void onIntentionActive() {
-        final L2Summon summon = (L2Summon) _actor;
+        final Summon summon = (Summon) _actor;
         if (_startFollow) {
             setIntention(AI_INTENTION_FOLLOW, summon.getOwner());
         } else {
@@ -68,7 +68,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
 
         if (checkTargetLostOrDead(attackTarget)) {
             setTarget(null);
-            ((L2Summon) _actor).setFollowStatus(true);
+            ((Summon) _actor).setFollowStatus(true);
             return;
         }
         if (maybeMoveToPawn(attackTarget, _actor.getPhysicalAttackRange())) {
@@ -79,7 +79,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
     }
 
     private void thinkCast() {
-        final L2Summon summon = (L2Summon) _actor;
+        final Summon summon = (Summon) _actor;
         if (summon.isCastingNow(SkillCaster::isAnyNormalType)) {
             return;
         }
@@ -156,7 +156,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
     @Override
     protected void onEvtFinishCasting() {
         if (_lastAttack == null) {
-            ((L2Summon) _actor).setFollowStatus(_startFollow);
+            ((Summon) _actor).setFollowStatus(_startFollow);
         } else {
             setIntention(AI_INTENTION_ATTACK, _lastAttack);
             _lastAttack = null;
@@ -204,7 +204,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
             return;
         }
 
-        final L2Summon summon = getActor();
+        final Summon summon = getActor();
         if ((summon.getOwner() != null) && (summon.getOwner() != attacker) && !summon.isMoving() && summon.canAttack(attacker, false) && summon.getOwner().isInsideRadius3D(_actor, 2 * AVOID_RADIUS)) {
             summon.doAutoAttack(attacker);
         }
@@ -216,8 +216,8 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
             _startAvoid = false;
 
             if (!_clientMoving && !_actor.isDead() && !_actor.isMovementDisabled() && (_actor.getMoveSpeed() > 0)) {
-                final int ownerX = ((L2Summon) _actor).getOwner().getX();
-                final int ownerY = ((L2Summon) _actor).getOwner().getY();
+                final int ownerX = ((Summon) _actor).getOwner().getX();
+                final int ownerY = ((Summon) _actor).getOwner().getY();
                 final double angle = Math.toRadians(Rnd.get(-90, 90)) + Math.atan2(ownerY - _actor.getY(), ownerX - _actor.getX());
 
                 final int targetX = ownerX + (int) (AVOID_RADIUS * Math.cos(angle));
@@ -237,7 +237,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
             case AI_INTENTION_IDLE:
             case AI_INTENTION_MOVE_TO:
             case AI_INTENTION_PICK_UP: {
-                ((L2Summon) _actor).setFollowStatus(_startFollow);
+                ((Summon) _actor).setFollowStatus(_startFollow);
             }
         }
     }
@@ -276,8 +276,8 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
     }
 
     @Override
-    public L2Summon getActor() {
-        return (L2Summon) super.getActor();
+    public Summon getActor() {
+        return (Summon) super.getActor();
     }
 
     /**

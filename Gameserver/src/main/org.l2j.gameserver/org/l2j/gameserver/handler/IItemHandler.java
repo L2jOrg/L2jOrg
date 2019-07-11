@@ -1,6 +1,6 @@
 package org.l2j.gameserver.handler;
 
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,5 +20,5 @@ public interface IItemHandler {
      * @param forceUse ctrl hold on item use
      * @return {@code true} if the item all conditions are met and the item is used, {@code false} otherwise.
      */
-    boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse);
+    boolean useItem(Playable playable, L2ItemInstance item, boolean forceUse);
 }

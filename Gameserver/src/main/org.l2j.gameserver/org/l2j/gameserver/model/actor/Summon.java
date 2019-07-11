@@ -39,7 +39,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 
-public abstract class L2Summon extends L2Playable {
+public abstract class Summon extends Playable {
     // @formatter:off
     private static final int[] PASSIVE_SUMMONS =
             {
@@ -55,7 +55,7 @@ public abstract class L2Summon extends L2Playable {
     private int _summonPoints = 0;
     // @formatter:on
 
-    public L2Summon(L2NpcTemplate template, Player owner) {
+    public Summon(L2NpcTemplate template, Player owner) {
         super(template);
         setInstanceType(InstanceType.L2Summon);
         setInstance(owner.getInstanceWorld()); // set instance to same as owner
@@ -442,7 +442,7 @@ public abstract class L2Summon extends L2Playable {
     }
 
     /**
-     * Return True if the L2Summon is invulnerable or if the summoner is in spawn protection.
+     * Return True if the Summon is invulnerable or if the summoner is in spawn protection.
      */
     @Override
     public boolean isInvul() {

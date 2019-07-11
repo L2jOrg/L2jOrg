@@ -21,7 +21,7 @@ import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -65,7 +65,7 @@ public final class TeleportToSummon extends AbstractEffect
 	@Override
 	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Summon summon = effected.getActingPlayer().getFirstServitor();
+		final Summon summon = effected.getActingPlayer().getFirstServitor();
 		
 		if ((_maxDistance > 0) && (effector.calculateDistance2D(summon) >= _maxDistance))
 		{

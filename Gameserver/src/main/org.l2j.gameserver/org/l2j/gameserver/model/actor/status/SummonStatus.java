@@ -1,14 +1,14 @@
 package org.l2j.gameserver.model.actor.status;
 
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Duel;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.util.GameUtils;
 
 public class SummonStatus extends PlayableStatus {
-    public SummonStatus(L2Summon activeChar) {
+    public SummonStatus(Summon activeChar) {
         super(activeChar);
     }
 
@@ -76,7 +76,7 @@ public class SummonStatus extends PlayableStatus {
     }
 
     @Override
-    public L2Summon getActiveChar() {
-        return (L2Summon) super.getActiveChar();
+    public Summon getActiveChar() {
+        return (Summon) super.getActiveChar();
     }
 }

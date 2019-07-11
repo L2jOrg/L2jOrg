@@ -18,8 +18,8 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -49,7 +49,7 @@ public class PDefenseFinalizer implements IStatsFunction {
         throwIfPresent(base);
         double baseValue = creature.getTemplate().getBaseValue(stat, 0);
         if (creature.isPet()) {
-            final L2PetInstance pet = (L2PetInstance) creature;
+            final Pet pet = (Pet) creature;
             baseValue = pet.getPetLevelData().getPetPDef();
         }
         baseValue += calcEnchantedItemBonus(creature, stat);

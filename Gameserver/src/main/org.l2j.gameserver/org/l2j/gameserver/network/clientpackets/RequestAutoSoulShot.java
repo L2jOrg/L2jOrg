@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.enums.ShotType;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -76,11 +76,11 @@ public final class RequestAutoSoulShot extends ClientPacket {
                         final boolean isSpiritshot = item.getEtcItem().getDefaultAction() == ActionType.SUMMON_SPIRITSHOT;
                         if (isSoulshot) {
                             int soulshotCount = 0;
-                            final L2Summon pet = activeChar.getPet();
+                            final Summon pet = activeChar.getPet();
                             if (pet != null) {
                                 soulshotCount += pet.getSoulShotsPerHit();
                             }
-                            for (L2Summon servitor : activeChar.getServitors().values()) {
+                            for (Summon servitor : activeChar.getServitors().values()) {
                                 soulshotCount += servitor.getSoulShotsPerHit();
                             }
                             if (soulshotCount > item.getCount()) {
@@ -89,11 +89,11 @@ public final class RequestAutoSoulShot extends ClientPacket {
                             }
                         } else if (isSpiritshot) {
                             int spiritshotCount = 0;
-                            final L2Summon pet = activeChar.getPet();
+                            final Summon pet = activeChar.getPet();
                             if (pet != null) {
                                 spiritshotCount += pet.getSpiritShotsPerHit();
                             }
-                            for (L2Summon servitor : activeChar.getServitors().values()) {
+                            for (Summon servitor : activeChar.getServitors().values()) {
                                 spiritshotCount += servitor.getSpiritShotsPerHit();
                             }
                             if (spiritshotCount > item.getCount()) {
@@ -107,7 +107,7 @@ public final class RequestAutoSoulShot extends ClientPacket {
                         client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
 
                         // Recharge summon's shots
-                        final L2Summon pet = activeChar.getPet();
+                        final Summon pet = activeChar.getPet();
                         if (pet != null) {
                             // Send message
                             if (!pet.isChargedShot(item.getItem().getDefaultAction() == ActionType.SUMMON_SOULSHOT ? ShotType.SOULSHOTS : ((item.getId() == 6647) || (item.getId() == 20334)) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS)) {
@@ -118,7 +118,7 @@ public final class RequestAutoSoulShot extends ClientPacket {
                             // Charge
                             pet.rechargeShots(isSoulshot, isSpiritshot, false);
                         }
-                        for (L2Summon summon : activeChar.getServitors().values()) {
+                        for (Summon summon : activeChar.getServitors().values()) {
                             // Send message
                             if (!summon.isChargedShot(item.getItem().getDefaultAction() == ActionType.SUMMON_SOULSHOT ? ShotType.SOULSHOTS : ((item.getId() == 6647) || (item.getId() == 20334)) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS)) {
                                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);

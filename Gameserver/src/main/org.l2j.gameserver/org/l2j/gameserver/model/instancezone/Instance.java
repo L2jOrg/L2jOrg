@@ -14,7 +14,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2DoorTemplate;
@@ -888,7 +888,7 @@ public final class Instance implements IIdentifiable, INamable {
             if (loc != null) {
                 player.setLocationInvisible(loc);
                 // If player has death pet, put him out of instance world
-                final L2Summon pet = player.getPet();
+                final Summon pet = player.getPet();
                 if (pet != null) {
                     pet.teleToLocation(loc, true);
                 }

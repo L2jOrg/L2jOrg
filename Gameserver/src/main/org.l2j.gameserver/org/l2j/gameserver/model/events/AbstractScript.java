@@ -18,7 +18,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -2854,7 +2854,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param npc      the NPC that performs the attack
      * @param playable the player
      */
-    protected void addAttackPlayerDesire(L2Npc npc, L2Playable playable) {
+    protected void addAttackPlayerDesire(L2Npc npc, Playable playable) {
         addAttackPlayerDesire(npc, playable, 999);
     }
 
@@ -2865,7 +2865,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param target the target of the attack
      * @param desire the desire to perform the attack
      */
-    protected void addAttackPlayerDesire(L2Npc npc, L2Playable target, int desire) {
+    protected void addAttackPlayerDesire(L2Npc npc, Playable target, int desire) {
         if (npc.isAttackable()) {
             ((L2Attackable) npc).addDamageHate(target, 0, desire);
         }
@@ -2902,7 +2902,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param target the target of the cast
      * @param skill  the skill to cast
      */
-    protected void castSkill(L2Npc npc, L2Playable target, SkillHolder skill) {
+    protected void castSkill(L2Npc npc, Playable target, SkillHolder skill) {
         npc.setTarget(target);
         npc.doCast(skill.getSkill());
     }
@@ -2914,7 +2914,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param target the target of the cast
      * @param skill  the skill to cast
      */
-    protected void castSkill(L2Npc npc, L2Playable target, Skill skill) {
+    protected void castSkill(L2Npc npc, Playable target, Skill skill) {
         npc.setTarget(target);
         npc.doCast(skill);
     }

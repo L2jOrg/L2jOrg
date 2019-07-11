@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -53,7 +53,7 @@ public class AdminLevel implements IAdminCommandHandler
 			{
 				if ((targetChar != null) && targetChar.isPlayable())
 				{
-					((L2Playable) targetChar).getStat().addLevel(Byte.parseByte(val));
+					((Playable) targetChar).getStat().addLevel(Byte.parseByte(val));
 				}
 			}
 			catch (NumberFormatException e)

@@ -443,7 +443,7 @@ public final class L2DoorInstance extends L2Character {
                 return;
             }
 
-            final L2ServitorInstance servitor = (L2ServitorInstance) attacker;
+            final Servitor servitor = (Servitor) attacker;
             if (servitor.getTemplate().getRace() != Race.SIEGE_WEAPON) {
                 return;
             }

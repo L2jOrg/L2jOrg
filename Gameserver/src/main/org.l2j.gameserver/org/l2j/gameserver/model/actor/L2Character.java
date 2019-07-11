@@ -77,7 +77,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
  * L2Character:<br>
  * <ul>
  * <li>L2DoorInstance</li>
- * <li>L2Playable</li>
+ * <li>Playable</li>
  * <li>L2Npc</li>
  * <li>L2StaticObjectInstance</li>
  * <li>L2Trap</li>
@@ -213,7 +213,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
      * <li>If L2Character is a L2NPCInstance, copy skills from template to object</li>
      * <li>If L2Character is a L2NPCInstance, link _calculators to NPC_STD_CALCULATOR</li>
      * <li>If L2Character is NOT a L2NPCInstance, create an empty _skills slot</li>
-     * <li>If L2Character is a Player or L2Summon, copy basic Calculator set to object</li>
+     * <li>If L2Character is a Player or Summon, copy basic Calculator set to object</li>
      * </ul>
      *
      * @param objectId Identifier of the object to initialized
@@ -239,9 +239,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                 addSkill(skill);
             }
         } else if (isSummon()) {
-            // Copy the skills of the L2Summon from its template to the L2Character Instance
+            // Copy the skills of the Summon from its template to the L2Character Instance
             // The skills list can be affected by spell effects so it's necessary to make a copy
-            // to avoid that a spell affecting a L2Summon, affects others L2Summon of the same type too.
+            // to avoid that a spell affecting a Summon, affects others Summon of the same type too.
             for (Skill skill : template.getSkills().values()) {
                 addSkill(skill);
             }
@@ -255,7 +255,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     /**
-     * @return character inventory, default null, overridden in L2Playable types and in L2NPcInstance
+     * @return character inventory, default null, overridden in Playable types and in L2NPcInstance
      */
     public Inventory getInventory() {
         return null;
@@ -1643,18 +1643,18 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     /**
      * @return the summon
      */
-    public L2Summon getPet() {
+    public Summon getPet() {
         return null;
     }
 
     /**
      * @return the summon
      */
-    public Map<Integer, L2Summon> getServitors() {
+    public Map<Integer, Summon> getServitors() {
         return Collections.emptyMap();
     }
 
-    public L2Summon getServitor(int objectId) {
+    public Summon getServitor(int objectId) {
         return null;
     }
 
@@ -2096,7 +2096,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
         }
 
         if (isSummon()) {
-            final L2Summon summon = (L2Summon) this;
+            final Summon summon = (Summon) this;
             if (summon.getOwner() != null) {
                 summon.updateAndBroadcastStatus(1);
             }
@@ -2217,7 +2217,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                     broadcastPacket(su);
                 }
                 if (hasServitors() && hasAbnormalType(AbnormalType.ABILITY_CHANGE)) {
-                    getServitors().values().forEach(L2Summon::broadcastStatusUpdate);
+                    getServitors().values().forEach(Summon::broadcastStatusUpdate);
                 }
             } else if (isNpc()) {
                 if (broadcastFull) {
@@ -2824,7 +2824,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
             // If no distance to go through, the movement is canceled
             if ((distance < 1) && (Config.PATHFINDING || isPlayable())) {
                 if (isSummon()) {
-                    ((L2Summon) this).setFollowStatus(false);
+                    ((Summon) this).setFollowStatus(false);
                 }
                 getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
                 return;
@@ -3025,7 +3025,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
      * Add Exp and Sp to the L2Character.<br>
      * <B><U> Overridden in </U> :</B>
      * <li>Player</li>
-     * <li>L2PetInstance</li>
+     * <li>Pet</li>
      *
      * @param addToExp
      * @param addToSp

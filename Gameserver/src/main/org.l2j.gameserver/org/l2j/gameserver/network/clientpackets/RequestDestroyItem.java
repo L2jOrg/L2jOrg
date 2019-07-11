@@ -8,7 +8,7 @@ import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.PcCondOverride;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -120,7 +120,7 @@ public final class RequestDestroyItem extends ClientPacket {
         }
 
         if (itemToRemove.getItem().isPetItem()) {
-            final L2Summon pet = activeChar.getPet();
+            final Summon pet = activeChar.getPet();
             if ((pet != null) && (pet.getControlObjectId() == _objectId)) {
                 pet.unSummon(activeChar);
             }

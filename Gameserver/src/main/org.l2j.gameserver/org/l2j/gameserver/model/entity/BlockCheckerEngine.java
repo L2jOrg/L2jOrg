@@ -9,7 +9,7 @@ import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.instancemanager.HandysBlockCheckerManager;
 import org.l2j.gameserver.model.ArenaParticipantsHolder;
 import org.l2j.gameserver.model.L2Spawn;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.L2BlockInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
@@ -331,7 +331,7 @@ public final class BlockCheckerEngine {
                     player.setTeam(Team.BLUE);
                 }
                 player.stopAllEffects();
-                final L2Summon pet = player.getPet();
+                final Summon pet = player.getPet();
                 if (pet != null) {
                     pet.unSummon(player);
                 }

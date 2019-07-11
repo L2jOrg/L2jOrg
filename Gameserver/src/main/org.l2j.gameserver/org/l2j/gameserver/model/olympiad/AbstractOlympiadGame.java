@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.L2Party.MessageType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -156,7 +156,7 @@ public abstract class AbstractOlympiadGame {
 
             // Remove Summon's Buffs
             if (player.hasSummon()) {
-                final L2Summon pet = player.getPet();
+                final Summon pet = player.getPet();
                 if (pet != null) {
                     pet.unSummon(player);
                 }
@@ -226,7 +226,7 @@ public abstract class AbstractOlympiadGame {
             if (player.getAgathionId() > 0) {
                 player.setAgathionId(0);
             }
-            final L2Summon pet = player.getPet();
+            final Summon pet = player.getPet();
             if ((pet != null) && !pet.isDead()) {
                 pet.setTarget(null);
                 pet.abortAttack();

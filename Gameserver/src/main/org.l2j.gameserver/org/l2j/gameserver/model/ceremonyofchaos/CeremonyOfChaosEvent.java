@@ -8,7 +8,7 @@ import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.appearance.PcAppearance;
 import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -146,7 +146,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember> {
             player.setTarget(null);
 
             // Unsummon pet
-            final L2Summon pet = player.getPet();
+            final Summon pet = player.getPet();
             if (pet != null) {
                 pet.unSummon(player);
             }

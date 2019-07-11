@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
@@ -19,7 +19,7 @@ public class ExBuySellList extends AbstractItemPacket {
     private double _castleTaxRate = 1;
 
     public ExBuySellList(Player player, boolean done) {
-        final L2Summon pet = player.getPet();
+        final Summon pet = player.getPet();
         _sellList = player.getInventory().getItems(item -> !item.isEquipped() && item.isSellable() && ((pet == null) || (item.getObjectId() != pet.getControlObjectId())));
         _inventorySlots = player.getInventory().getItems((item) -> !item.isQuestItem()).size();
         if (player.hasRefund()) {

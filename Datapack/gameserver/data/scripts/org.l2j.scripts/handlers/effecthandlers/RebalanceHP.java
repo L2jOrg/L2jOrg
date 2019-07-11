@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -70,14 +70,14 @@ public final class RebalanceHP extends AbstractEffect
 					currentHPs += member.getCurrentHp();
 				}
 				
-				final L2Summon summon = member.getPet();
+				final Summon summon = member.getPet();
 				if ((summon != null) && (!summon.isDead() && GameUtils.checkIfInRange(skill.getAffectRange(), effector, summon, true)))
 				{
 					fullHP += summon.getMaxHp();
 					currentHPs += summon.getCurrentHp();
 				}
 				
-				for (L2Summon servitors : member.getServitors().values())
+				for (Summon servitors : member.getServitors().values())
 				{
 					if (!servitors.isDead() && GameUtils.checkIfInRange(skill.getAffectRange(), effector, servitors, true))
 					{
@@ -109,7 +109,7 @@ public final class RebalanceHP extends AbstractEffect
 					member.setCurrentHp(newHP);
 				}
 				
-				final L2Summon summon = member.getPet();
+				final Summon summon = member.getPet();
 				if ((summon != null) && (!summon.isDead() && GameUtils.checkIfInRange(skill.getAffectRange(), effector, summon, true)))
 				{
 					double newHP = summon.getMaxHp() * percentHP;
@@ -128,7 +128,7 @@ public final class RebalanceHP extends AbstractEffect
 					summon.setCurrentHp(newHP);
 				}
 				
-				for (L2Summon servitors : member.getServitors().values())
+				for (Summon servitors : member.getServitors().values())
 				{
 					if (!servitors.isDead() && GameUtils.checkIfInRange(skill.getAffectRange(), effector, servitors, true))
 					{

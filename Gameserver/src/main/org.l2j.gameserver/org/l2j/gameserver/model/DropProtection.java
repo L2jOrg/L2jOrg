@@ -2,8 +2,8 @@ package org.l2j.gameserver.model;
 
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 
 import java.util.concurrent.ScheduledFuture;
 
@@ -48,7 +48,7 @@ public class DropProtection implements Runnable {
 
     }
 
-    public boolean tryPickUp(L2PetInstance pet) {
+    public boolean tryPickUp(Pet pet) {
         return tryPickUp(pet.getOwner());
     }
 

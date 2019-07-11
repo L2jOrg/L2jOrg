@@ -23,33 +23,33 @@ import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
 
 /**
  * This class represents all Playable characters in the world.<br>
- * L2Playable:
+ * Playable:
  * <ul>
  * <li>Player</li>
- * <li>L2Summon</li>
+ * <li>Summon</li>
  * </ul>
  */
-public abstract class L2Playable extends L2Character {
+public abstract class Playable extends L2Character {
     private L2Character _lockedTarget = null;
     private Player transferDmgTo = null;
 
     /**
-     * Constructor of L2Playable.<br>
+     * Constructor of Playable.<br>
      * <B><U> Actions</U> :</B>
      * <ul>
-     * <li>Call the L2Character constructor to create an empty _skills slot and link copy basic Calculator set to this L2Playable</li>
+     * <li>Call the L2Character constructor to create an empty _skills slot and link copy basic Calculator set to this Playable</li>
      * </ul>
      *
      * @param objectId the object id
-     * @param template The L2CharTemplate to apply to the L2Playable
+     * @param template The L2CharTemplate to apply to the Playable
      */
-    public L2Playable(int objectId, L2CharTemplate template) {
+    public Playable(int objectId, L2CharTemplate template) {
         super(objectId, template);
         setInstanceType(InstanceType.L2Playable);
         setIsInvul(false);
     }
 
-    public L2Playable(L2CharTemplate template) {
+    public Playable(L2CharTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2Playable);
         setIsInvul(false);
@@ -135,7 +135,7 @@ public abstract class L2Playable extends L2Character {
 
         ZoneManager.getInstance().getRegion(this).onDeath(this);
 
-        // Notify Quest of L2Playable's death
+        // Notify Quest of Playable's death
         final Player actingPlayer = getActingPlayer();
 
         if (!actingPlayer.isNotifyQuestOfDeathEmpty()) {

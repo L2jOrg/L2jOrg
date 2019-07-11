@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.zone.type;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.L2ZoneType;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -65,7 +65,7 @@ public class L2PeaceZone extends L2ZoneType {
                         revalidateInZone(player.getPet());
                     }
 
-                    for (L2Summon summon : player.getServitors().values()) {
+                    for (Summon summon : player.getServitors().values()) {
                         revalidateInZone(summon);
                     }
                 }

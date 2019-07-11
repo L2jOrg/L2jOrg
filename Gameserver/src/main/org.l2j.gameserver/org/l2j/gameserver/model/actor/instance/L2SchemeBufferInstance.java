@@ -5,7 +5,7 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -95,7 +95,7 @@ public class L2SchemeBufferInstance extends L2Npc {
         } else if (currentCommand.startsWith("cleanup")) {
             player.stopAllEffects();
 
-            final L2Summon summon = player.getPet();
+            final Summon summon = player.getPet();
             if (summon != null) {
                 summon.stopAllEffects();
             }
@@ -108,7 +108,7 @@ public class L2SchemeBufferInstance extends L2Npc {
             player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
             player.setCurrentCp(player.getMaxCp());
 
-            final L2Summon summon = player.getPet();
+            final Summon summon = player.getPet();
             if (summon != null) {
                 summon.setCurrentHpMp(summon.getMaxHp(), summon.getMaxMp());
             }

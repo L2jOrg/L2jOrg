@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSummonTalk;
@@ -41,14 +41,14 @@ public class L2SummonAction implements IActionHandler
 			return false;
 		}
 		
-		if ((activeChar == ((L2Summon) target).getOwner()) && (activeChar.getTarget() == target))
+		if ((activeChar == ((Summon) target).getOwner()) && (activeChar.getTarget() == target))
 		{
-			activeChar.sendPacket(new PetStatusShow((L2Summon) target));
+			activeChar.sendPacket(new PetStatusShow((Summon) target));
 			activeChar.updateNotMoveUntil();
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			
 			// Notify to scripts
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonTalk((L2Summon) target), (L2Summon) target);
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonTalk((Summon) target), (Summon) target);
 		}
 		else if (activeChar.getTarget() != target)
 		{
@@ -68,7 +68,7 @@ public class L2SummonAction implements IActionHandler
 			{
 				// This Action Failed packet avoids activeChar getting stuck when clicking three or more times
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				if (((L2Summon) target).isInsideRadius2D(activeChar, 150))
+				if (((Summon) target).isInsideRadius2D(activeChar, 150))
 				{
 					activeChar.updateNotMoveUntil();
 				}

@@ -3,7 +3,7 @@ package org.l2j.gameserver.util;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.slf4j.Logger;
@@ -59,7 +59,7 @@ public final class Broadcast {
                         final RelationChanged rc = new RelationChanged();
                         rc.addRelation((Player) character, relation, character.isAutoAttackable(player));
                         if (character.hasSummon()) {
-                            final L2Summon pet = character.getPet();
+                            final Summon pet = character.getPet();
                             if (pet != null) {
                                 rc.addRelation(pet, relation, character.isAutoAttackable(player));
                             }

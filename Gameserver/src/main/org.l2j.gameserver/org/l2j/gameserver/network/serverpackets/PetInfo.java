@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
-import org.l2j.gameserver.model.actor.instance.L2ServitorInstance;
+import org.l2j.gameserver.model.actor.Summon;
+import org.l2j.gameserver.model.actor.instance.Pet;
+import org.l2j.gameserver.model.actor.instance.Servitor;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -11,7 +11,7 @@ import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import java.util.Set;
 
 public class PetInfo extends ServerPacket {
-    private final L2Summon _summon;
+    private final Summon _summon;
     private final int _val;
     private final int _runSpd;
     private final int _walkSpd;
@@ -26,7 +26,7 @@ public class PetInfo extends ServerPacket {
     private int _curFed;
     private int _statusMask = 0;
 
-    public PetInfo(L2Summon summon, int val) {
+    public PetInfo(Summon summon, int val) {
         _summon = summon;
         _moveMultiplier = summon.getMovementSpeedMultiplier();
         _runSpd = (int) Math.round(summon.getRunSpeed() / _moveMultiplier);
@@ -37,11 +37,11 @@ public class PetInfo extends ServerPacket {
         _flyWalkSpd = summon.isFlying() ? _walkSpd : 0;
         _val = val;
         if (summon.isPet()) {
-            final L2PetInstance pet = (L2PetInstance) _summon;
+            final Pet pet = (Pet) _summon;
             _curFed = pet.getCurrentFed(); // how fed it is
             _maxFed = pet.getMaxFed(); // max fed it can be
         } else if (summon.isServitor()) {
-            final L2ServitorInstance sum = (L2ServitorInstance) _summon;
+            final Servitor sum = (Servitor) _summon;
             _curFed = sum.getLifeTimeRemaining();
             _maxFed = sum.getLifeTime();
         }

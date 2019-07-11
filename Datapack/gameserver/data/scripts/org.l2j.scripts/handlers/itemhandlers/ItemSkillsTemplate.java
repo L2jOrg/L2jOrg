@@ -19,7 +19,7 @@ package handlers.itemhandlers;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.IItemHandler;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
@@ -38,7 +38,7 @@ import java.util.List;
 public class ItemSkillsTemplate implements IItemHandler
 {
     @Override
-    public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+    public boolean useItem(Playable playable, L2ItemInstance item, boolean forceUse)
     {
         if (!playable.isPlayer() && !playable.isPet())
         {
@@ -193,7 +193,7 @@ public class ItemSkillsTemplate implements IItemHandler
      * @param item the item being used
      * @return {@code true} if the the item or skill to check is available, {@code false} otherwise
      */
-    private boolean checkReuse(L2Playable playable, Skill skill, L2ItemInstance item)
+    private boolean checkReuse(Playable playable, Skill skill, L2ItemInstance item)
     {
         final long remainingTime = (skill != null) ? playable.getSkillRemainingReuseTime(skill.getReuseHashCode()) : playable.getItemRemainingReuseTime(item.getObjectId());
         final boolean isAvailable = remainingTime <= 0;

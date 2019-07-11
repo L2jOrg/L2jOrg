@@ -14,7 +14,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.*;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -95,10 +95,10 @@ public class L2AttackableAI extends L2CharacterAI {
             return false;
         }
 
-        // Check if the target is a L2Playable
+        // Check if the target is a Playable
         if (target.isPlayable()) {
             // Check if the AI isn't a Raid Boss, can See Silent Moving players and the target isn't in silent move mode
-            if (!(me.isRaid()) && !(me.canSeeThroughSilentMove()) && ((L2Playable) target).isSilentMovingAffected()) {
+            if (!(me.isRaid()) && !(me.canSeeThroughSilentMove()) && ((Playable) target).isSilentMovingAffected()) {
                 return false;
             }
         }

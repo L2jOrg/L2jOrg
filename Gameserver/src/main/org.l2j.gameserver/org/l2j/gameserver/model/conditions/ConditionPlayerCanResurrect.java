@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.conditions;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.items.L2Item;
@@ -98,7 +98,7 @@ public class ConditionPlayerCanResurrect extends Condition {
                 }
             }
         } else if (effected.isSummon()) {
-            final L2Summon summon = (L2Summon) effected;
+            final Summon summon = (Summon) effected;
             final Player player = summon.getOwner();
             if (!summon.isDead()) {
                 canResurrect = false;

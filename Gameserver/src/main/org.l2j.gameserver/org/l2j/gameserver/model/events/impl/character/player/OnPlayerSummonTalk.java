@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -24,13 +24,13 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author St3eT
  */
 public class OnPlayerSummonTalk implements IBaseEvent {
-    private final L2Summon _summon;
+    private final Summon _summon;
 
-    public OnPlayerSummonTalk(L2Summon summon) {
+    public OnPlayerSummonTalk(Summon summon) {
         _summon = summon;
     }
 
-    public L2Summon getSummon() {
+    public Summon getSummon() {
         return _summon;
     }
 

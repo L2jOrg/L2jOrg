@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.L2Summon;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -8,9 +8,9 @@ import org.l2j.gameserver.network.ServerPacketId;
  * @author KenM
  */
 public final class ExPartyPetWindowAdd extends ServerPacket {
-    private final L2Summon _summon;
+    private final Summon _summon;
 
-    public ExPartyPetWindowAdd(L2Summon summon) {
+    public ExPartyPetWindowAdd(Summon summon) {
         _summon = summon;
     }
 

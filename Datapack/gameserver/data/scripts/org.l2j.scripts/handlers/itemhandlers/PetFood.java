@@ -22,9 +22,9 @@ import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.IItemHandler;
-import org.l2j.gameserver.model.actor.L2Playable;
+import org.l2j.gameserver.model.actor.Playable;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -38,9 +38,9 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 public class PetFood implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (playable.isPet() && !((L2PetInstance) playable).canEatFoodId(item.getId()))
+		if (playable.isPet() && !((Pet) playable).canEatFoodId(item.getId()))
 		{
 			playable.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
 			return false;
@@ -54,14 +54,14 @@ public class PetFood implements IItemHandler
 		return true;
 	}
 	
-	private boolean useFood(L2Playable activeChar, int skillId, int skillLevel, L2ItemInstance item)
+	private boolean useFood(Playable activeChar, int skillId, int skillLevel, L2ItemInstance item)
 	{
 		final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 		if (skill != null)
 		{
 			if (activeChar.isPet())
 			{
-				final L2PetInstance pet = (L2PetInstance) activeChar;
+				final Pet pet = (Pet) activeChar;
 				if (pet.destroyItem("Consume", item.getObjectId(), 1, null, false))
 				{
 					pet.broadcastPacket(new MagicSkillUse(pet, pet, skillId, skillLevel, 0, 0));
