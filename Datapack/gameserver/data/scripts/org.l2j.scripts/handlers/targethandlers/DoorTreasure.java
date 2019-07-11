@@ -17,7 +17,7 @@
 package handlers.targethandlers;
 
 import org.l2j.gameserver.handler.ITargetTypeHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.L2ChestInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -37,9 +37,9 @@ public class DoorTreasure implements ITargetTypeHandler
 	}
 	
 	@Override
-	public L2Object getTarget(Creature activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		final L2Object target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		if ((target != null) && (target.isDoor() || (target instanceof L2ChestInstance)))
 		{
 			return target;

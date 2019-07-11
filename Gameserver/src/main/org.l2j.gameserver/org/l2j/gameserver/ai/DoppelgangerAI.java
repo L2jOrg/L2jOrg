@@ -2,7 +2,7 @@ package org.l2j.gameserver.ai;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.GameTimeController;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.DoppelgangerInstance;
@@ -37,7 +37,7 @@ public class DoppelgangerAI extends L2CharacterAI {
     }
 
     private void thinkAttack() {
-        final L2Object target = getTarget();
+        final WorldObject target = getTarget();
         final Creature attackTarget = (target != null) && target.isCharacter() ? (Creature) target : null;
 
         if (checkTargetLostOrDead(attackTarget)) {
@@ -56,7 +56,7 @@ public class DoppelgangerAI extends L2CharacterAI {
             return;
         }
 
-        final L2Object target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
+        final WorldObject target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
 
         if (checkTargetLost(target)) {
             setTarget(null);
@@ -73,7 +73,7 @@ public class DoppelgangerAI extends L2CharacterAI {
     }
 
     private void thinkInteract() {
-        final L2Object target = getTarget();
+        final WorldObject target = getTarget();
         if (checkTargetLost(target)) {
             return;
         }
@@ -137,7 +137,7 @@ public class DoppelgangerAI extends L2CharacterAI {
     }
 
     @Override
-    protected void onIntentionCast(Skill skill, L2Object target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
+    protected void onIntentionCast(Skill skill, WorldObject target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
         if (getIntention() == CtrlIntention.AI_INTENTION_ATTACK) {
             _lastAttack = (getTarget() != null) && getTarget().isCharacter() ? (Creature) getTarget() : null;
         } else {
@@ -147,7 +147,7 @@ public class DoppelgangerAI extends L2CharacterAI {
     }
 
     @Override
-    protected void moveToPawn(L2Object pawn, int offset) {
+    protected void moveToPawn(WorldObject pawn, int offset) {
         // Check if actor can move
         if (!_actor.isMovementDisabled() && (_actor.getMoveSpeed() > 0)) {
             if (offset < 10) {

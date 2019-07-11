@@ -10,7 +10,7 @@ import org.l2j.gameserver.data.sql.impl.SummonEffectsTable.SummonEffect;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
@@ -383,12 +383,12 @@ public class Servitor extends Summon implements Runnable {
     }
 
     @Override
-    public boolean destroyItem(String process, int objectId, long count, L2Object reference, boolean sendMessage) {
+    public boolean destroyItem(String process, int objectId, long count, WorldObject reference, boolean sendMessage) {
         return getOwner().destroyItem(process, objectId, count, reference, sendMessage);
     }
 
     @Override
-    public boolean destroyItemByItemId(String process, int itemId, long count, L2Object reference, boolean sendMessage) {
+    public boolean destroyItemByItemId(String process, int itemId, long count, WorldObject reference, boolean sendMessage) {
         return getOwner().destroyItemByItemId(process, itemId, count, reference, sendMessage);
     }
 
@@ -468,6 +468,6 @@ public class Servitor extends Summon implements Runnable {
     }
 
     @Override
-    public void doPickupItem(L2Object object) {
+    public void doPickupItem(WorldObject object) {
     }
 }

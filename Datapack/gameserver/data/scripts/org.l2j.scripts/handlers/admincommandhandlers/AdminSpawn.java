@@ -25,7 +25,7 @@ import org.l2j.gameserver.instancemanager.DBSpawnManager;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Npc;
@@ -90,7 +90,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		else if (command.startsWith("admin_spawn_debug_print"))
 		{
 			final StringTokenizer st = new StringTokenizer(command, " ");
-			final L2Object target = activeChar.getTarget();
+			final WorldObject target = activeChar.getTarget();
 			if (target instanceof L2Npc)
 			{
 				try
@@ -229,7 +229,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 			}
 			DBSpawnManager.getInstance().cleanUp();
-			for (L2Object obj : L2World.getInstance().getVisibleObjects())
+			for (WorldObject obj : L2World.getInstance().getVisibleObjects())
 			{
 				if ((obj != null) && obj.isNpc())
 				{
@@ -264,7 +264,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 			}
 			DBSpawnManager.getInstance().cleanUp();
-			for (L2Object obj : L2World.getInstance().getVisibleObjects())
+			for (WorldObject obj : L2World.getInstance().getVisibleObjects())
 			{
 				if ((obj != null) && obj.isNpc())
 				{
@@ -389,7 +389,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 			}
 			final Map<Integer, Integer> npcsFound = new HashMap<>();
-			for (L2Object obj : L2World.getInstance().getVisibleObjects())
+			for (WorldObject obj : L2World.getInstance().getVisibleObjects())
 			{
 				if (!obj.isNpc())
 				{
@@ -500,7 +500,7 @@ public class AdminSpawn implements IAdminCommandHandler
 	
 	private void spawnMonster(Player activeChar, String monsterId, int respawnTime, int mobCount, boolean permanent)
 	{
-		L2Object target = activeChar.getTarget();
+		WorldObject target = activeChar.getTarget();
 		if (target == null)
 		{
 			target = activeChar;
@@ -553,7 +553,7 @@ public class AdminSpawn implements IAdminCommandHandler
 	
 	private void spawnMonster(Player activeChar, int id, int x, int y, int z, int h)
 	{
-		L2Object target = activeChar.getTarget();
+		WorldObject target = activeChar.getTarget();
 		if (target == null)
 		{
 			target = activeChar;

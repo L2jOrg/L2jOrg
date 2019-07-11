@@ -92,7 +92,7 @@ public final class Castle extends AbstractResidence {
         return null;
     }
 
-    public synchronized void engrave(L2Clan clan, L2Object target, CastleSide side) {
+    public synchronized void engrave(L2Clan clan, WorldObject target, CastleSide side) {
         if (!_artefacts.contains(target)) {
             return;
         }
@@ -241,7 +241,7 @@ public final class Castle extends AbstractResidence {
      * @param obj
      * @return
      */
-    public double getDistance(L2Object obj) {
+    public double getDistance(WorldObject obj) {
         return getZone().getDistanceToZone(obj);
     }
 

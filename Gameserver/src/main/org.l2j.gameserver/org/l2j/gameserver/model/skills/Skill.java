@@ -10,7 +10,7 @@ import org.l2j.gameserver.handler.AffectScopeHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
 import org.l2j.gameserver.handler.ITargetTypeHandler;
 import org.l2j.gameserver.handler.TargetHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -952,7 +952,7 @@ public final class Skill implements IIdentifiable {
         return _effectPoint < 0;
     }
 
-    public boolean checkCondition(Creature activeChar, L2Object object) {
+    public boolean checkCondition(Creature activeChar, WorldObject object) {
         if ((activeChar.canOverrideCond(PcCondOverride.SKILL_CONDITIONS) && !Config.GM_SKILL_RESTRICTION)) {
             return true;
         }
@@ -984,7 +984,7 @@ public final class Skill implements IIdentifiable {
      * @param sendMessage send SystemMessageId packet if target is incorrect.
      * @return {@code WorldObject} this skill can be used on, or {@code null} if there is no such.
      */
-    public L2Object getTarget(Creature activeChar, boolean forceUse, boolean dontMove, boolean sendMessage) {
+    public WorldObject getTarget(Creature activeChar, boolean forceUse, boolean dontMove, boolean sendMessage) {
         return getTarget(activeChar, activeChar.getTarget(), forceUse, dontMove, sendMessage);
     }
 
@@ -996,7 +996,7 @@ public final class Skill implements IIdentifiable {
      * @param sendMessage   send SystemMessageId packet if target is incorrect.
      * @return the selected {@code WorldObject} this skill can be used on, or {@code null} if there is no such.
      */
-    public L2Object getTarget(Creature activeChar, L2Object seletedTarget, boolean forceUse, boolean dontMove, boolean sendMessage) {
+    public WorldObject getTarget(Creature activeChar, WorldObject seletedTarget, boolean forceUse, boolean dontMove, boolean sendMessage) {
         final ITargetTypeHandler handler = TargetHandler.getInstance().getHandler(getTargetType());
         if (handler != null) {
             try {
@@ -1014,14 +1014,14 @@ public final class Skill implements IIdentifiable {
      * @param target     the initial target activeChar is focusing upon.
      * @return list containing objects gathered in a specific geometric way that are valid to be affected by this skill.
      */
-    public List<L2Object> getTargetsAffected(Creature activeChar, L2Object target) {
+    public List<WorldObject> getTargetsAffected(Creature activeChar, WorldObject target) {
         if (target == null) {
             return null;
         }
         final IAffectScopeHandler handler = AffectScopeHandler.getInstance().getHandler(getAffectScope());
         if (handler != null) {
             try {
-                final List<L2Object> result = new LinkedList<>();
+                final List<WorldObject> result = new LinkedList<>();
                 handler.forEachAffected(activeChar, target, this, o -> result.add(o));
                 return result;
             } catch (Exception e) {
@@ -1037,7 +1037,7 @@ public final class Skill implements IIdentifiable {
      * @param target     the initial target activeChar is focusing upon.
      * @param action     for each affected target.
      */
-    public void forEachTargetAffected(Creature activeChar, L2Object target, Consumer<? super L2Object> action) {
+    public void forEachTargetAffected(Creature activeChar, WorldObject target, Consumer<? super WorldObject> action) {
         if (target == null) {
             return;
         }
@@ -1268,7 +1268,7 @@ public final class Skill implements IIdentifiable {
      * @param caster  the caster
      * @param targets the targets
      */
-    public void activateSkill(Creature caster, L2Object... targets) {
+    public void activateSkill(Creature caster, WorldObject... targets) {
         activateSkill(caster, null, targets);
     }
 
@@ -1279,7 +1279,7 @@ public final class Skill implements IIdentifiable {
      * @param item
      * @param targets the targets
      */
-    public void activateSkill(Creature caster, L2ItemInstance item, L2Object... targets) {
+    public void activateSkill(Creature caster, L2ItemInstance item, WorldObject... targets) {
         activateSkill(caster, null, item, targets);
     }
 
@@ -1289,7 +1289,7 @@ public final class Skill implements IIdentifiable {
      * @param cubic   the cubic
      * @param targets the targets
      */
-    public void activateSkill(CubicInstance cubic, L2Object... targets) {
+    public void activateSkill(CubicInstance cubic, WorldObject... targets) {
         activateSkill(cubic.getOwner(), cubic, null, targets);
     }
 
@@ -1301,8 +1301,8 @@ public final class Skill implements IIdentifiable {
      * @param item
      * @param targets the targets
      */
-    public final void activateSkill(Creature caster, CubicInstance cubic, L2ItemInstance item, L2Object... targets) {
-        for (L2Object targetObject : targets) {
+    public final void activateSkill(Creature caster, CubicInstance cubic, L2ItemInstance item, WorldObject... targets) {
+        for (WorldObject targetObject : targets) {
             if (!targetObject.isCharacter()) {
                 continue;
             }
@@ -1362,7 +1362,7 @@ public final class Skill implements IIdentifiable {
      * @param target              the target
      * @return {@code false} if at least one condition returns false, {@code true} otherwise
      */
-    public boolean checkConditions(SkillConditionScope skillConditionScope, Creature caster, L2Object target) {
+    public boolean checkConditions(SkillConditionScope skillConditionScope, Creature caster, WorldObject target) {
         return _conditionLists.getOrDefault(skillConditionScope, Collections.emptyList()).stream().allMatch(c -> c.canUse(caster, this, target));
     }
 

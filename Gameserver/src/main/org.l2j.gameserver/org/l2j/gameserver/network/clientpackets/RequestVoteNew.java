@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExVoteSystemInfo;
@@ -22,7 +22,7 @@ public final class RequestVoteNew extends ClientPacket {
             return;
         }
 
-        final L2Object object = activeChar.getTarget();
+        final WorldObject object = activeChar.getTarget();
         if (!(object instanceof Player)) {
             if (object == null) {
                 client.sendPacket(SystemMessageId.SELECT_TARGET);

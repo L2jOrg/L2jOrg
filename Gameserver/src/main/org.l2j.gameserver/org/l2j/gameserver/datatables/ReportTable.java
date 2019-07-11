@@ -11,7 +11,7 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.engines.captcha.CaptchaEngine;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
 import org.l2j.gameserver.model.punishment.PunishmentAffect;
@@ -144,7 +144,7 @@ public final class ReportTable {
      * @return True, if the report was registered, False otherwise
      */
     public boolean reportBot(Player reporter) {
-        final L2Object target = reporter.getTarget();
+        final WorldObject target = reporter.getTarget();
         if (isNull(target) || !target.isPlayer() || target.getObjectId() == reporter.getObjectId()) {
             return false;
         }

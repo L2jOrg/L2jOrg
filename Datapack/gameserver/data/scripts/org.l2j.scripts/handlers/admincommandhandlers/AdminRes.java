@@ -17,7 +17,7 @@
 package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.L2ControllableMobInstance;
@@ -74,7 +74,7 @@ public class AdminRes implements IAdminCommandHandler
 	
 	private void handleRes(Player activeChar, String resParam)
 	{
-		L2Object obj = activeChar.getTarget();
+		WorldObject obj = activeChar.getTarget();
 		
 		if (resParam != null)
 		{
@@ -129,7 +129,7 @@ public class AdminRes implements IAdminCommandHandler
 	
 	private void handleNonPlayerRes(Player activeChar, String radiusStr)
 	{
-		final L2Object obj = activeChar.getTarget();
+		final WorldObject obj = activeChar.getTarget();
 		
 		try
 		{

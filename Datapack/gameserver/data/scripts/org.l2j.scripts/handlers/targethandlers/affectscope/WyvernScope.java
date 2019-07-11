@@ -19,7 +19,7 @@ package handlers.targethandlers.affectscope;
 import java.util.function.Consumer;
 
 import org.l2j.gameserver.handler.IAffectScopeHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
@@ -31,7 +31,7 @@ import org.l2j.gameserver.model.skills.targets.AffectScope;
 public class WyvernScope implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(Creature activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
+	public void forEachAffected(Creature activeChar, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
 	{
 		// TODO Unknown affect scope.
 	}

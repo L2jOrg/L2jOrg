@@ -16,7 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.ISkillCondition;
@@ -33,7 +33,7 @@ public class OpSoulMaxSkillCondition implements ISkillCondition
 	}
 	
 	@Override
-	public boolean canUse(Creature caster, Skill skill, L2Object target)
+	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
 		final int maxSouls = (int) caster.getStat().getValue(Stats.MAX_SOULS);
 		return caster.isPlayable() && (caster.getActingPlayer().getChargedSouls() < maxSouls);

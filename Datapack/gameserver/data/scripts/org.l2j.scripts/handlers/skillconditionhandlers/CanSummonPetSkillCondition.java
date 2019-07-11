@@ -19,7 +19,7 @@ package handlers.skillconditionhandlers;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.enums.PrivateStoreType;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -39,7 +39,7 @@ public class CanSummonPetSkillCondition implements ISkillCondition
 	}
 	
 	@Override
-	public boolean canUse(Creature caster, Skill skill, L2Object target)
+	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
 		final Player player = caster.getActingPlayer();
 		if ((player == null) || player.isSpawnProtected() || player.isTeleportProtected())

@@ -3,7 +3,7 @@ package org.l2j.gameserver.instancemanager;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.InstanceListManager;
 import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.entity.Fort;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,11 +26,11 @@ public final class FortManager implements InstanceListManager {
 
     }
 
-    public final Fort findNearestFort(L2Object obj) {
+    public final Fort findNearestFort(WorldObject obj) {
         return findNearestFort(obj, Long.MAX_VALUE);
     }
 
-    public final Fort findNearestFort(L2Object obj, long maxDistance) {
+    public final Fort findNearestFort(WorldObject obj, long maxDistance) {
         Fort nearestFort = getFort(obj);
         if (nearestFort == null) {
             for (Fort fort : _forts.values()) {
@@ -80,7 +80,7 @@ public final class FortManager implements InstanceListManager {
         return null;
     }
 
-    public final Fort getFort(L2Object activeObject) {
+    public final Fort getFort(WorldObject activeObject) {
         return getFort(activeObject.getX(), activeObject.getY(), activeObject.getZ());
     }
 

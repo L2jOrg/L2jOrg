@@ -93,7 +93,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
  *
  * @version $Revision: 1.53.2.45.2.34 $ $Date: 2005/04/11 10:06:08 $
  */
-public abstract class Creature extends L2Object implements ISkillsHolder, IDeletable {
+public abstract class Creature extends WorldObject implements ISkillsHolder, IDeletable {
     public static final Logger LOGGER = LoggerFactory.getLogger(Creature.class.getName());
     public static final double MAX_STATUS_BAR_PX = 352.0;
     /**
@@ -174,7 +174,7 @@ public abstract class Creature extends L2Object implements ISkillsHolder, IDelet
     /**
      * This creature's target.
      */
-    private L2Object _target;
+    private WorldObject _target;
     // set by the start of attack, in game ticks
     private volatile long _attackEndTime;
     private volatile long _disableRangedAttackEndTime;
@@ -261,13 +261,13 @@ public abstract class Creature extends L2Object implements ISkillsHolder, IDelet
         return null;
     }
 
-    public boolean destroyItemByItemId(String process, int itemId, long count, L2Object reference, boolean sendMessage) {
+    public boolean destroyItemByItemId(String process, int itemId, long count, WorldObject reference, boolean sendMessage) {
         // Default: NPCs consume virtual items for their skills
         // TODO: should be logged if even happens.. should be false
         return true;
     }
 
-    public boolean destroyItem(String process, int objectId, long count, L2Object reference, boolean sendMessage) {
+    public boolean destroyItem(String process, int objectId, long count, WorldObject reference, boolean sendMessage) {
         // Default: NPCs consume virtual items for their skills
         // TODO: should be logged if even happens.. should be false
         return true;
@@ -577,7 +577,7 @@ public abstract class Creature extends L2Object implements ISkillsHolder, IDelet
      * <B><U>Actions</U>:</B>
      * <ul>
      * <li>Stop the movement of the Creature</li>
-     * <li>Set the x,y,z position of the L2Object and if necessary modify its _worldRegion</li>
+     * <li>Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion</li>
      * <li>Send a Server->Client packet TeleportToLocationt to the Creature AND to all Player in its _KnownPlayers</li>
      * <li>Modify the position of the pet if necessary</li>
      * </ul>
@@ -634,7 +634,7 @@ public abstract class Creature extends L2Object implements ISkillsHolder, IDelet
             setInstance(instance);
         }
 
-        // Set the x,y,z position of the L2Object and if necessary modify its _worldRegion
+        // Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion
         setXYZ(x, y, z);
 
         // temporary fix for heading on teleport
@@ -1812,7 +1812,7 @@ public abstract class Creature extends L2Object implements ISkillsHolder, IDelet
     }
 
     /**
-     * Initializes the CharStat class of the L2Object, is overwritten in classes that require a different CharStat Type.<br>
+     * Initializes the CharStat class of the WorldObject, is overwritten in classes that require a different CharStat Type.<br>
      * Removes the need for instanceof checks.
      */
     public void initCharStat() {
@@ -1828,7 +1828,7 @@ public abstract class Creature extends L2Object implements ISkillsHolder, IDelet
     }
 
     /**
-     * Initializes the CharStatus class of the L2Object, is overwritten in classes that require a different CharStatus Type.<br>
+     * Initializes the CharStatus class of the WorldObject, is overwritten in classes that require a different CharStatus Type.<br>
      * Removes the need for instanceof checks.
      */
     public void initCharStatus() {
@@ -2549,7 +2549,7 @@ public abstract class Creature extends L2Object implements ISkillsHolder, IDelet
      * <ul>
      * <li>Delete movement data of the Creature</li>
      * <li>Set the current position (x,y,z), its current L2WorldRegion if necessary and its heading</li>
-     * <li>Remove the L2Object object from _gmList of GmListTable</li>
+     * <li>Remove the WorldObject object from _gmList of GmListTable</li>
      * <li>Remove object from _knownObjects and _knownPlayer of all surrounding L2WorldRegion L2Characters</li>
      * </ul>
      * <FONT COLOR=#FF0000><B><U>Caution</U>: This method DOESN'T send Server->Client packet StopMove/StopRotation</B></FONT>
@@ -2585,7 +2585,7 @@ public abstract class Creature extends L2Object implements ISkillsHolder, IDelet
     }
 
     /**
-     * @return the identifier of the L2Object targeted or -1.
+     * @return the identifier of the WorldObject targeted or -1.
      */
     public final int getTargetId() {
         if (_target != null) {
@@ -2595,27 +2595,27 @@ public abstract class Creature extends L2Object implements ISkillsHolder, IDelet
     }
 
     /**
-     * @return the L2Object targeted or null.
+     * @return the WorldObject targeted or null.
      */
-    public final L2Object getTarget() {
+    public final WorldObject getTarget() {
         return _target;
     }
 
     /**
-     * Target a L2Object (add the target to the Creature _target, _knownObject and Creature to _KnownObject of the L2Object).<br>
+     * Target a WorldObject (add the target to the Creature _target, _knownObject and Creature to _KnownObject of the WorldObject).<br>
      * <B><U>Concept</U>:</B><br>
-     * The L2Object (including Creature) targeted is identified in <B>_target</B> of the Creature.<br>
+     * The WorldObject (including Creature) targeted is identified in <B>_target</B> of the Creature.<br>
      * <B><U>Actions</U>:</B>
      * <ul>
-     * <li>Set the _target of Creature to L2Object</li>
-     * <li>If necessary, add L2Object to _knownObject of the Creature</li>
-     * <li>If necessary, add Creature to _KnownObject of the L2Object</li>
+     * <li>Set the _target of Creature to WorldObject</li>
+     * <li>If necessary, add WorldObject to _knownObject of the Creature</li>
+     * <li>If necessary, add Creature to _KnownObject of the WorldObject</li>
      * <li>If object==null, cancel Attak or Cast</li>
      * </ul>
      *
      * @param object L2object to target
      */
-    public void setTarget(L2Object object) {
+    public void setTarget(WorldObject object) {
         if ((object != null) && !object.isSpawned()) {
             object = null;
         }
@@ -2643,7 +2643,7 @@ public abstract class Creature extends L2Object implements ISkillsHolder, IDelet
      * <FONT COLOR=#FF0000><B><U>Caution</U>: This method DOESN'T send Server->Client packet MoveToPawn/CharMoveToLocation.</B></FONT><br>
      * <B><U>Example of use</U>:</B>
      * <ul>
-     * <li>AI : onIntentionMoveTo(Location), onIntentionPickUp(L2Object), onIntentionInteract(L2Object)</li>
+     * <li>AI : onIntentionMoveTo(Location), onIntentionPickUp(WorldObject), onIntentionInteract(WorldObject)</li>
      * <li>FollowTask</li>
      * </ul>
      *
@@ -3248,7 +3248,7 @@ public abstract class Creature extends L2Object implements ISkillsHolder, IDelet
         }
         if (player.isInOlympiadMode() && (player.getTarget() != null) && player.getTarget().isPlayable()) {
             Player target = null;
-            final L2Object object = player.getTarget();
+            final WorldObject object = player.getTarget();
             if ((object != null) && object.isPlayable()) {
                 target = object.getActingPlayer();
             }
@@ -3287,11 +3287,11 @@ public abstract class Creature extends L2Object implements ISkillsHolder, IDelet
      * @param attacker
      * @return True if inside peace zone.
      */
-    public boolean isInsidePeaceZone(L2Object attacker) {
+    public boolean isInsidePeaceZone(WorldObject attacker) {
         return isInsidePeaceZone(attacker, this);
     }
 
-    public boolean isInsidePeaceZone(L2Object attacker, L2Object target) {
+    public boolean isInsidePeaceZone(WorldObject attacker, WorldObject target) {
         final Instance instanceWorld = getInstanceWorld();
         if ((target == null) || !( target.isPlayable() && attacker.isPlayable()) || ((instanceWorld != null) && instanceWorld.isPvP())) {
             return false;
@@ -3459,7 +3459,7 @@ public abstract class Creature extends L2Object implements ISkillsHolder, IDelet
     }
 
     // Quest event ON_SPELL_FNISHED
-    public void notifyQuestEventSkillFinished(Skill skill, L2Object target) {
+    public void notifyQuestEventSkillFinished(Skill skill, WorldObject target) {
 
     }
 

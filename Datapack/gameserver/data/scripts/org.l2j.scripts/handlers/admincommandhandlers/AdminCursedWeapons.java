@@ -22,7 +22,7 @@ import java.util.StringTokenizer;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.model.CursedWeapon;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -204,7 +204,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 				}
 				else
 				{
-					final L2Object target = activeChar.getTarget();
+					final WorldObject target = activeChar.getTarget();
 					if ((target != null) && target.isPlayer())
 					{
 						((Player) target).addItem("AdminCursedWeaponAdd", id, 1, target, true);

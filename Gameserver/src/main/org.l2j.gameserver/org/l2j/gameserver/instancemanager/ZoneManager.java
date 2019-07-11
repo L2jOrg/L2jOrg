@@ -3,7 +3,7 @@ package org.l2j.gameserver.instancemanager;
 import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.commons.configuration.Configurator;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.interfaces.ILocational;
@@ -87,7 +87,7 @@ public final class ZoneManager extends GameXmlReader {
         load();
 
         // Re-validate all characters in zones.
-        for (L2Object obj : L2World.getInstance().getVisibleObjects()) {
+        for (WorldObject obj : L2World.getInstance().getVisibleObjects()) {
             if (obj.isCharacter()) {
                 ((Creature) obj).revalidateZone(true);
             }
@@ -532,7 +532,7 @@ public final class ZoneManager extends GameXmlReader {
      * @param object
      * @return zones
      */
-    public List<L2SpawnTerritory> getSpawnTerritories(L2Object object) {
+    public List<L2SpawnTerritory> getSpawnTerritories(WorldObject object) {
         final List<L2SpawnTerritory> temp = new ArrayList<>();
         for (L2SpawnTerritory territory : _spawnTerritories.values()) {
             if (territory.isInsideZone(object.getX(), object.getY(), object.getZ())) {

@@ -3,7 +3,7 @@ package org.l2j.gameserver.ai;
 import org.l2j.commons.util.Rnd;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.geoengine.GeoEngine;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -63,7 +63,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
     }
 
     private void thinkAttack() {
-        final L2Object target = getTarget();
+        final WorldObject target = getTarget();
         final Creature attackTarget = (target != null) && target.isCharacter() ? (Creature) target : null;
 
         if (checkTargetLostOrDead(attackTarget)) {
@@ -84,7 +84,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
             return;
         }
 
-        final L2Object target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
+        final WorldObject target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
         if (checkTargetLost(target)) {
             setTarget(null);
             summon.setFollowStatus(true);
@@ -101,7 +101,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
     }
 
     private void thinkPickUp() {
-        final L2Object target = getTarget();
+        final WorldObject target = getTarget();
         if (checkTargetLost(target)) {
             return;
         }
@@ -113,7 +113,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
     }
 
     private void thinkInteract() {
-        final L2Object target = getTarget();
+        final WorldObject target = getTarget();
         if (checkTargetLost(target)) {
             return;
         }
@@ -247,7 +247,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
     }
 
     @Override
-    protected void onIntentionCast(Skill skill, L2Object target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
+    protected void onIntentionCast(Skill skill, WorldObject target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
         if (getIntention() == AI_INTENTION_ATTACK) {
             _lastAttack = (getTarget() != null) && getTarget().isCharacter() ? (Creature) getTarget() : null;
         } else {

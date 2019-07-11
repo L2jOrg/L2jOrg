@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -102,7 +102,7 @@ public final class Synergy extends AbstractEffect
 			
 			if (partyBuffSkill != null)
 			{
-				final L2Object target = partyBuffSkill.getTarget(effector, effected, false, false, false);
+				final WorldObject target = partyBuffSkill.getTarget(effector, effected, false, false, false);
 				
 				if ((target != null) && target.isCharacter())
 				{

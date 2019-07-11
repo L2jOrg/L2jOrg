@@ -96,7 +96,7 @@ public final class GameTimeController extends Thread {
      * <ul>
      * <li>Update the position of each Creature</li>
      * <li>If movement is finished, the Creature is removed from movingObjects</li>
-     * <li>Create a task to update the _knownObject and _knowPlayers of each Creature that finished its movement and of their already known L2Object then notify AI with EVT_ARRIVED</li>
+     * <li>Create a task to update the _knownObject and _knowPlayers of each Creature that finished its movement and of their already known WorldObject then notify AI with EVT_ARRIVED</li>
      * </ul>
      */
     private void moveObjects() {

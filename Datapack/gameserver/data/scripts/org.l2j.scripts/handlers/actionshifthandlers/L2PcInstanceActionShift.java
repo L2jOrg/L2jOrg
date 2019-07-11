@@ -19,13 +19,13 @@ package handlers.actionshifthandlers;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.IActionShiftHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 public class L2PcInstanceActionShift implements IActionShiftHandler
 {
 	@Override
-	public boolean action(Player activeChar, L2Object target, boolean interact)
+	public boolean action(Player activeChar, WorldObject target, boolean interact)
 	{
 		if (activeChar.isGM())
 		{

@@ -923,8 +923,8 @@ public class L2Npc extends Creature {
      * <B><U>Actions</U>:</B>
      * <ul>
      * <li>Remove the L2NpcInstance from the world and update its spawn object</li>
-     * <li>Remove all L2Object from _knownObjects and _knownPlayer of the L2NpcInstance then cancel Attack or Cast and notify AI</li>
-     * <li>Remove L2Object object from _allObjects of L2World</li>
+     * <li>Remove all WorldObject from _knownObjects and _knownPlayer of the L2NpcInstance then cancel Attack or Cast and notify AI</li>
+     * <li>Remove WorldObject object from _allObjects of L2World</li>
      * </ul>
      * <FONT COLOR=#FF0000><B><U>Caution</U>: This method DOESN'T SEND Server->Client packets to players</B></FONT><br>
      * UnAfraid: TODO: Add Listener here
@@ -1048,7 +1048,7 @@ public class L2Npc extends Creature {
     }
 
     @Override
-    public final void notifyQuestEventSkillFinished(Skill skill, L2Object target) {
+    public final void notifyQuestEventSkillFinished(Skill skill, WorldObject target) {
         if (target != null) {
             EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillFinished(this, target.getActingPlayer(), skill), this);
         }
@@ -1185,9 +1185,9 @@ public class L2Npc extends Creature {
      *
      * @param eventName - name of event
      * @param radius    - radius to send event
-     * @param reference - L2Object to pass, if needed
+     * @param reference - WorldObject to pass, if needed
      */
-    public void broadcastEvent(String eventName, int radius, L2Object reference) {
+    public void broadcastEvent(String eventName, int radius, WorldObject reference) {
         L2World.getInstance().forEachVisibleObjectInRange(this, L2Npc.class, radius, obj ->
         {
             if (obj.hasListener(EventType.ON_NPC_EVENT_RECEIVED)) {
@@ -1203,7 +1203,7 @@ public class L2Npc extends Creature {
      * @param receiver  the receiver
      * @param reference the reference
      */
-    public void sendScriptEvent(String eventName, L2Object receiver, L2Object reference) {
+    public void sendScriptEvent(String eventName, WorldObject receiver, WorldObject reference) {
         EventDispatcher.getInstance().notifyEventAsync(new OnNpcEventReceived(eventName, this, (L2Npc) receiver, reference), receiver);
     }
 

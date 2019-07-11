@@ -273,7 +273,7 @@ public class EnterWorld extends ClientPacket {
         SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN);
         sm.addString(activeChar.getName());
         for (int id : activeChar.getFriendList()) {
-            final L2Object obj = L2World.getInstance().findObject(id);
+            final WorldObject obj = L2World.getInstance().findObject(id);
             if (obj != null) {
                 obj.sendPacket(sm);
             }

@@ -16,7 +16,7 @@
  */
 package handlers.conditions;
 
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.conditions.ICondition;
@@ -36,7 +36,7 @@ public class NpcLevelCondition implements ICondition
 	}
 	
 	@Override
-	public boolean test(Creature creature, L2Object object)
+	public boolean test(Creature creature, WorldObject object)
 	{
 		return object.isNpc() && (((Creature) object).getLevel() >= _minLevel) && (((Creature) object).getLevel() < _maxLevel);
 	}

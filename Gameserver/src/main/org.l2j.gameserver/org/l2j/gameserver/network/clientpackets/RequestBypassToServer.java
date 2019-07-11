@@ -8,7 +8,7 @@ import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
@@ -59,7 +59,7 @@ public final class RequestBypassToServer extends ClientPacket {
      * @param activeChar
      */
     private static void comeHere(Player activeChar) {
-        final L2Object obj = activeChar.getTarget();
+        final WorldObject obj = activeChar.getTarget();
         if (obj == null) {
             return;
         }
@@ -136,7 +136,7 @@ public final class RequestBypassToServer extends ClientPacket {
                 }
 
                 if (Util.isNumeric(id)) {
-                    final L2Object object = L2World.getInstance().findObject(Integer.parseInt(id));
+                    final WorldObject object = L2World.getInstance().findObject(Integer.parseInt(id));
 
                     if ((object != null) && object.isNpc() && (endOfId > 0) && activeChar.isInsideRadius2D(object, L2Npc.INTERACTION_DISTANCE)) {
                         ((L2Npc) object).onBypassFeedback(activeChar, _command.substring(endOfId + 1));
@@ -214,7 +214,7 @@ public final class RequestBypassToServer extends ClientPacket {
                 final IBypassHandler handler = BypassHandler.getInstance().getHandler(_command);
                 if (handler != null) {
                     if (bypassOriginId > 0) {
-                        final L2Object bypassOrigin = L2World.getInstance().findObject(bypassOriginId);
+                        final WorldObject bypassOrigin = L2World.getInstance().findObject(bypassOriginId);
                         if ((bypassOrigin != null) && bypassOrigin.isCharacter()) {
                             handler.useBypass(_command, activeChar, (Creature) bypassOrigin);
                         } else {

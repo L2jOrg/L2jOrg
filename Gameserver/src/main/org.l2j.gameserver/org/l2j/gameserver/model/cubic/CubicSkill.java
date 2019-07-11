@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.cubic;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.cubic.conditions.ICubicCondition;
@@ -51,7 +51,7 @@ public class CubicSkill extends SkillHolder implements ICubicConditionHolder {
     }
 
     @Override
-    public boolean validateConditions(CubicInstance cubic, Creature owner, L2Object target) {
+    public boolean validateConditions(CubicInstance cubic, Creature owner, WorldObject target) {
         return (!_targetDebuff || (_targetDebuff && target.isCharacter() && (((Creature) target).getEffectList().getDebuffCount() > 0))) && (_conditions.isEmpty() || _conditions.stream().allMatch(condition -> condition.test(cubic, owner, target)));
     }
 

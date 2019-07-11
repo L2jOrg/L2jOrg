@@ -22,7 +22,7 @@ import java.util.StringTokenizer;
 import org.l2j.gameserver.data.xml.impl.FenceData;
 import org.l2j.gameserver.enums.FenceState;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2FenceInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -93,7 +93,7 @@ public class AdminFence implements IAdminCommandHandler
 					}
 					else
 					{
-						final L2Object obj = L2World.getInstance().findObject(objId);
+						final WorldObject obj = L2World.getInstance().findObject(objId);
 						if (obj instanceof L2FenceInstance)
 						{
 							final L2FenceInstance fence = (L2FenceInstance) obj;
@@ -118,7 +118,7 @@ public class AdminFence implements IAdminCommandHandler
 				try
 				{
 					final int objId = Integer.parseInt(st.nextToken());
-					final L2Object obj = L2World.getInstance().findObject(objId);
+					final WorldObject obj = L2World.getInstance().findObject(objId);
 					if (obj instanceof L2FenceInstance)
 					{
 						((L2FenceInstance) obj).deleteMe();
@@ -151,7 +151,7 @@ public class AdminFence implements IAdminCommandHandler
 				try
 				{
 					final int objId = Integer.parseInt(st.nextToken());
-					final L2Object obj = L2World.getInstance().findObject(objId);
+					final WorldObject obj = L2World.getInstance().findObject(objId);
 					if (obj != null)
 					{
 						activeChar.teleToLocation(obj);

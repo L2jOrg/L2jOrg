@@ -12,7 +12,7 @@ import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.enums.TrapAction;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.KeyValuePair;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
@@ -841,7 +841,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param targets
      * @param isSummon
      */
-    public final void notifySkillSee(L2Npc npc, Player caster, Skill skill, L2Object[] targets, boolean isSummon) {
+    public final void notifySkillSee(L2Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon) {
         String res = null;
         try {
             res = onSkillSee(npc, caster, skill, targets, isSummon);
@@ -913,9 +913,9 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param eventName - name of event
      * @param sender    - NPC, who sent event
      * @param receiver  - NPC, who received event
-     * @param reference - L2Object to pass, if needed
+     * @param reference - WorldObject to pass, if needed
      */
-    public final void notifyEventReceived(String eventName, L2Npc sender, L2Npc receiver, L2Object reference) {
+    public final void notifyEventReceived(String eventName, L2Npc sender, L2Npc receiver, WorldObject reference) {
         try {
             onEventReceived(eventName, sender, receiver, reference);
         } catch (Exception e) {
@@ -1246,7 +1246,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param isSummon if {@code true}, the skill was actually cast by the player's summon, not the player himself
      * @return
      */
-    public String onSkillSee(L2Npc npc, Player caster, Skill skill, L2Object[] targets, boolean isSummon) {
+    public String onSkillSee(L2Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon) {
         return null;
     }
 
@@ -1367,10 +1367,10 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param eventName - name of event
      * @param sender    - NPC, who sent event
      * @param receiver  - NPC, who received event
-     * @param reference - L2Object to pass, if needed
+     * @param reference - WorldObject to pass, if needed
      * @return
      */
-    public String onEventReceived(String eventName, L2Npc sender, L2Npc receiver, L2Object reference) {
+    public String onEventReceived(String eventName, L2Npc sender, L2Npc receiver, WorldObject reference) {
         return null;
     }
 
@@ -2183,7 +2183,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
         // if the player is in a party, gather a list of all matching party members (possibly including this player)
         final List<Player> candidates = new ArrayList<>();
         // get the target for enforcing distance limitations.
-        L2Object target = player.getTarget();
+        WorldObject target = player.getTarget();
         if (target == null) {
             target = player;
         }
@@ -2238,7 +2238,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
         final List<Player> candidates = new ArrayList<>();
 
         // get the target for enforcing distance limitations.
-        L2Object target = player.getTarget();
+        WorldObject target = player.getTarget();
         if (target == null) {
             target = player;
         }
@@ -2556,7 +2556,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
         return Collections.emptySet();
     }
 
-    public <T> boolean isTarget(int[] ids, L2Object target, Class<T> clazz) {
+    public <T> boolean isTarget(int[] ids, WorldObject target, Class<T> clazz) {
         if ((target != null) && clazz.isInstance(target)) {
             return CommonUtil.contains(ids, target.getId());
         }

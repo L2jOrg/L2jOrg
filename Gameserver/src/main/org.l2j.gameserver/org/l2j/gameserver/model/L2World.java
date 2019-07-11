@@ -75,7 +75,7 @@ public final class L2World {
     /**
      * Map containing all visible objects.
      */
-    private final Map<Integer, L2Object> _allObjects = new ConcurrentHashMap<>();
+    private final Map<Integer, WorldObject> _allObjects = new ConcurrentHashMap<>();
     /**
      * Map with the pets instances and their owner ID.
      */
@@ -118,7 +118,7 @@ public final class L2World {
         LOGGER.info("World Region Grid set up: {} by {}", REGIONS_X, REGIONS_Y);
     }
 
-    public void addObject(L2Object object) {
+    public void addObject(WorldObject object) {
         if (_allObjects.putIfAbsent(object.getObjectId(), object) != null) {
             LOGGER.warn("Object {}  already exists in the world. Stack Trace: {}", object, CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
         }
@@ -152,7 +152,7 @@ public final class L2World {
      *
      * @param object the object to remove
      */
-    public void removeObject(L2Object object) {
+    public void removeObject(WorldObject object) {
         _allObjects.remove(object.getObjectId());
         if (object.isPlayer()) {
             PlayerCountManager.getInstance().decConnectedCount();
@@ -172,14 +172,14 @@ public final class L2World {
      * <li>Client packets : Action, AttackRequest, RequestJoinParty, RequestJoinPledge...</li>
      * </ul>
      *
-     * @param objectId Identifier of the L2Object
-     * @return the L2Object object that belongs to an ID or null if no object found.
+     * @param objectId Identifier of the WorldObject
+     * @return the WorldObject object that belongs to an ID or null if no object found.
      */
-    public L2Object findObject(int objectId) {
+    public WorldObject findObject(int objectId) {
         return _allObjects.get(objectId);
     }
 
-    public Collection<L2Object> getVisibleObjects() {
+    public Collection<WorldObject> getVisibleObjects() {
         return _allObjects.values();
     }
 
@@ -234,12 +234,12 @@ public final class L2World {
     }
 
     /**
-     * Add a L2Object in the world. <B><U> Concept</U> :</B> L2Object (including Player) are identified in <B>_visibleObjects</B> of his current L2WorldRegion and in <B>_knownObjects</B> of other surrounding L2Characters <BR>
+     * Add a WorldObject in the world. <B><U> Concept</U> :</B> WorldObject (including Player) are identified in <B>_visibleObjects</B> of his current L2WorldRegion and in <B>_knownObjects</B> of other surrounding L2Characters <BR>
      * Player are identified in <B>_allPlayers</B> of L2World, in <B>_allPlayers</B> of his current L2WorldRegion and in <B>_knownPlayer</B> of other surrounding L2Characters <B><U> Actions</U> :</B>
-     * <li>Add the L2Object object in _allPlayers* of L2World</li>
-     * <li>Add the L2Object object in _gmList** of GmListTable</li>
+     * <li>Add the WorldObject object in _allPlayers* of L2World</li>
+     * <li>Add the WorldObject object in _gmList** of GmListTable</li>
      * <li>Add object in _knownObjects and _knownPlayer* of all surrounding L2WorldRegion L2Characters</li><BR>
-     * <li>If object is a Creature, add all surrounding L2Object in its _knownObjects and all surrounding Player in its _knownPlayer</li><BR>
+     * <li>If object is a Creature, add all surrounding WorldObject in its _knownObjects and all surrounding Player in its _knownPlayer</li><BR>
      * <I>* only if object is a Player</I><BR>
      * <I>** only if object is a GM Player</I> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object in _visibleObjects and _allPlayers* of L2WorldRegion (need synchronisation)</B></FONT><BR>
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object to _allObjects and _allPlayers* of L2World (need synchronisation)</B></FONT> <B><U> Example of use </U> :</B>
@@ -250,15 +250,15 @@ public final class L2World {
      * @param object    L2object to add in the world
      * @param newRegion L2WorldRegion in wich the object will be add (not used)
      */
-    public void addVisibleObject(L2Object object, L2WorldRegion newRegion) {
+    public void addVisibleObject(WorldObject object, L2WorldRegion newRegion) {
         if (!newRegion.isActive()) {
             return;
         }
 
-        forEachVisibleObject(object, L2Object.class, wo -> beAwereOfObject(object, wo));
+        forEachVisibleObject(object, WorldObject.class, wo -> beAwereOfObject(object, wo));
     }
 
-    private void beAwereOfObject(L2Object object, L2Object wo) {
+    private void beAwereOfObject(WorldObject object, WorldObject wo) {
         describeObjectToOther(object, wo);
 
         describeObjectToOther(wo, object);
@@ -272,7 +272,7 @@ public final class L2World {
         }
     }
 
-    private void describeObjectToOther(L2Object object, L2Object wo) {
+    private void describeObjectToOther(WorldObject object, WorldObject wo) {
         if (object.isPlayer() && wo.isVisibleFor((Player) object)) {
             wo.sendInfo((Player) object);
             if (wo.isCharacter()) {
@@ -290,13 +290,13 @@ public final class L2World {
     }
 
     /**
-     * Remove a L2Object from the world. <B><U> Concept</U> :</B> L2Object (including Player) are identified in <B>_visibleObjects</B> of his current L2WorldRegion and in <B>_knownObjects</B> of other surrounding L2Characters <BR>
+     * Remove a WorldObject from the world. <B><U> Concept</U> :</B> WorldObject (including Player) are identified in <B>_visibleObjects</B> of his current L2WorldRegion and in <B>_knownObjects</B> of other surrounding L2Characters <BR>
      * Player are identified in <B>_allPlayers</B> of L2World, in <B>_allPlayers</B> of his current L2WorldRegion and in <B>_knownPlayer</B> of other surrounding L2Characters <B><U> Actions</U> :</B>
-     * <li>Remove the L2Object object from _allPlayers* of L2World</li>
-     * <li>Remove the L2Object object from _visibleObjects and _allPlayers* of L2WorldRegion</li>
-     * <li>Remove the L2Object object from _gmList** of GmListTable</li>
+     * <li>Remove the WorldObject object from _allPlayers* of L2World</li>
+     * <li>Remove the WorldObject object from _visibleObjects and _allPlayers* of L2WorldRegion</li>
+     * <li>Remove the WorldObject object from _gmList** of GmListTable</li>
      * <li>Remove object from _knownObjects and _knownPlayer* of all surrounding L2WorldRegion L2Characters</li><BR>
-     * <li>If object is a Creature, remove all L2Object from its _knownObjects and all Player from its _knownPlayer</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of L2World</B></FONT> <I>* only if object is a Player</I><BR>
+     * <li>If object is a Creature, remove all WorldObject from its _knownObjects and all Player from its _knownPlayer</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of L2World</B></FONT> <I>* only if object is a Player</I><BR>
      * <I>** only if object is a GM Player</I> <B><U> Example of use </U> :</B>
      * <li>Pickup an Item</li>
      * <li>Decay a Creature</li>
@@ -304,7 +304,7 @@ public final class L2World {
      * @param object    L2object to remove from the world
      * @param oldRegion L2WorldRegion in which the object was before removing
      */
-    public void removeVisibleObject(L2Object object, L2WorldRegion oldRegion) {
+    public void removeVisibleObject(WorldObject object, L2WorldRegion oldRegion) {
         if (object == null) {
             return;
         }
@@ -321,7 +321,7 @@ public final class L2World {
         }
     }
 
-    public void switchRegion(L2Object object, L2WorldRegion newRegion) {
+    public void switchRegion(WorldObject object, L2WorldRegion newRegion) {
         final L2WorldRegion oldRegion = object.getWorldRegion();
         if ((oldRegion == null) || (oldRegion == newRegion)) {
             return;
@@ -338,7 +338,7 @@ public final class L2World {
         newRegion.forEachSurroundingRegion(w ->
         {
             if (!oldRegion.isSurroundingRegion(w)) {
-                for (L2Object wo : w.getVisibleObjects().values()) {
+                for (WorldObject wo : w.getVisibleObjects().values()) {
                     if ((wo == object) || (wo.getInstanceWorld() != object.getInstanceWorld())) {
                         continue;
                     }
@@ -350,8 +350,8 @@ public final class L2World {
         });
     }
 
-    private void forgetObjectsInRegion(L2Object object, L2WorldRegion w) {
-        for (L2Object wo : w.getVisibleObjects().values()) {
+    private void forgetObjectsInRegion(WorldObject object, L2WorldRegion w) {
+        for (WorldObject wo : w.getVisibleObjects().values()) {
             if (wo == object) {
                 continue;
             }
@@ -362,7 +362,7 @@ public final class L2World {
         }
     }
 
-    private void forgetObject(L2Object object, L2Object wo) {
+    private void forgetObject(WorldObject object, WorldObject wo) {
         if (object.isCharacter()) {
             final Creature objectCreature = (Creature) object;
             final L2CharacterAI ai = objectCreature.getAI();
@@ -380,12 +380,12 @@ public final class L2World {
         }
     }
 
-    public L2Object getVisibleObject(L2Object reference, int objectId) {
+    public WorldObject getVisibleObject(WorldObject reference, int objectId) {
         var currentRegion = getRegion(reference);
         if(isNull(currentRegion)) {
             return null;
         }
-        L2Object object = null;
+        WorldObject object = null;
         for(var region : currentRegion.getSurroundingRegions()) {
             if( nonNull(object = region.getVisibleObjects().get(objectId)) ) {
                 return object;
@@ -394,13 +394,13 @@ public final class L2World {
         return object;
     }
 
-    public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz) {
+    public <T extends WorldObject> List<T> getVisibleObjects(WorldObject object, Class<T> clazz) {
         final List<T> result = new ArrayList<>();
         forEachVisibleObject(object, clazz, result::add);
         return result;
     }
 
-    public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz, Predicate<T> predicate) {
+    public <T extends WorldObject> List<T> getVisibleObjects(WorldObject object, Class<T> clazz, Predicate<T> predicate) {
         final List<T> result = new ArrayList<>();
         forEachVisibleObject(object, clazz, o ->
         {
@@ -411,7 +411,7 @@ public final class L2World {
         return result;
     }
 
-    public <T extends L2Object> void forEachVisibleObject(L2Object object, Class<T> clazz, Consumer<T> c) {
+    public <T extends WorldObject> void forEachVisibleObject(WorldObject object, Class<T> clazz, Consumer<T> c) {
         if (object == null) {
             return;
         }
@@ -422,7 +422,7 @@ public final class L2World {
         }
 
         for (L2WorldRegion region : centerWorldRegion.getSurroundingRegions()) {
-            for (L2Object visibleObject : region.getVisibleObjects().values()) {
+            for (WorldObject visibleObject : region.getVisibleObjects().values()) {
                 if ((visibleObject == null) || (visibleObject == object) || !clazz.isInstance(visibleObject)) {
                     continue;
                 }
@@ -436,13 +436,13 @@ public final class L2World {
         }
     }
 
-    public <T extends L2Object> List<T> getVisibleObjectsInRange(L2Object object, Class<T> clazz, int range) {
+    public <T extends WorldObject> List<T> getVisibleObjectsInRange(WorldObject object, Class<T> clazz, int range) {
         final List<T> result = new ArrayList<>();
         forEachVisibleObjectInRange(object, clazz, range, result::add);
         return result;
     }
 
-    public <T extends L2Object> List<T> getVisibleObjectsInRange(L2Object object, Class<T> clazz, int range, Predicate<T> predicate) {
+    public <T extends WorldObject> List<T> getVisibleObjectsInRange(WorldObject object, Class<T> clazz, int range, Predicate<T> predicate) {
         final List<T> result = new ArrayList<>();
         forEachVisibleObjectInRange(object, clazz, range, o ->
         {
@@ -453,7 +453,7 @@ public final class L2World {
         return result;
     }
 
-    public <T extends L2Object> void forEachVisibleObjectInRange(L2Object object, Class<T> clazz, int range, Consumer<T> c) {
+    public <T extends WorldObject> void forEachVisibleObjectInRange(WorldObject object, Class<T> clazz, int range, Consumer<T> c) {
         if (object == null) {
             return;
         }
@@ -464,7 +464,7 @@ public final class L2World {
         }
 
         for (L2WorldRegion region : centerWorldRegion.getSurroundingRegions()) {
-            for (L2Object visibleObject : region.getVisibleObjects().values()) {
+            for (WorldObject visibleObject : region.getVisibleObjects().values()) {
                 if ((visibleObject == null) || (visibleObject == object) || !clazz.isInstance(visibleObject)) {
                     continue;
                 }
@@ -482,13 +482,13 @@ public final class L2World {
 
     /**
      * Calculate the current L2WorldRegions of the object according to its position (x,y). <B><U> Example of use </U> :</B>
-     * <li>Set position of a new L2Object (drop, spawn...)</li>
-     * <li>Update position of a L2Object after a movement</li><BR>
+     * <li>Set position of a new WorldObject (drop, spawn...)</li>
+     * <li>Update position of a WorldObject after a movement</li><BR>
      *
      * @param object the object
      * @return
      */
-    public L2WorldRegion getRegion(L2Object object) {
+    public L2WorldRegion getRegion(WorldObject object) {
         try {
             return _worldRegions[(object.getX() >> SHIFT_BY) + OFFSET_X][(object.getY() >> SHIFT_BY) + OFFSET_Y];
         } catch (ArrayIndexOutOfBoundsException e) // Precaution. Moved at invalid region?
@@ -507,7 +507,7 @@ public final class L2World {
         }
     }
 
-    public synchronized void disposeOutOfBoundsObject(L2Object object) {
+    public synchronized void disposeOutOfBoundsObject(WorldObject object) {
         if (object.isPlayer()) {
             ((Creature) object).stopMove(((Player) object).getLastServerPosition());
         } else if (object.isSummon()) {

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.ai;
 
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -194,7 +194,7 @@ public class L2PlayerAI extends L2PlayableAI {
     }
 
     private void thinkAttack() {
-        final L2Object target = getTarget();
+        final WorldObject target = getTarget();
         if ((target == null) || !target.isCharacter()) {
             return;
         }
@@ -212,7 +212,7 @@ public class L2PlayerAI extends L2PlayableAI {
     }
 
     private void thinkCast() {
-        final L2Object target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
+        final WorldObject target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
         if ((_skill.getTargetType() == TargetType.GROUND) && _actor.isPlayer()) {
             if (maybeMoveToPosition(((Player) _actor).getCurrentSkillWorldPosition(), _actor.getMagicalAttackRange(_skill))) {
                 return;
@@ -237,7 +237,7 @@ public class L2PlayerAI extends L2PlayableAI {
         if (_actor.isAllSkillsDisabled() || _actor.isCastingNow()) {
             return;
         }
-        final L2Object target = getTarget();
+        final WorldObject target = getTarget();
         if (checkTargetLost(target)) {
             return;
         }
@@ -252,7 +252,7 @@ public class L2PlayerAI extends L2PlayableAI {
         if (_actor.isAllSkillsDisabled() || _actor.isCastingNow()) {
             return;
         }
-        final L2Object target = getTarget();
+        final WorldObject target = getTarget();
         if (checkTargetLost(target)) {
             return;
         }

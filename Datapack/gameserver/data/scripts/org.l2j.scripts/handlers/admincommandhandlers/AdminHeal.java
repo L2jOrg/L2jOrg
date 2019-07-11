@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -81,7 +81,7 @@ public class AdminHeal implements IAdminCommandHandler
 	private void handleHeal(Player activeChar, String player)
 	{
 		
-		L2Object obj = activeChar.getTarget();
+		WorldObject obj = activeChar.getTarget();
 		if (player != null)
 		{
 			final Player plyr = L2World.getInstance().getPlayer(player);

@@ -22,7 +22,7 @@ public final class L2WorldRegion {
     /**
      * Map containing visible objects in this world region.
      */
-    private volatile Map<Integer, L2Object> _visibleObjects = new ConcurrentHashMap<>();
+    private volatile Map<Integer, WorldObject> _visibleObjects = new ConcurrentHashMap<>();
     /**
      * Map containing nearby regions forming this world region's effective area.
      */
@@ -45,7 +45,7 @@ public final class L2WorldRegion {
 
         int c = 0;
         if (!isOn) {
-            for (L2Object o : _visibleObjects.values()) {
+            for (WorldObject o : _visibleObjects.values()) {
                 if (o.isAttackable()) {
                     c++;
                     final L2Attackable mob = (L2Attackable) o;
@@ -73,7 +73,7 @@ public final class L2WorldRegion {
             }
             LOGGER.debug(c + " mobs were turned off");
         } else {
-            for (L2Object o : _visibleObjects.values()) {
+            for (WorldObject o : _visibleObjects.values()) {
                 if (o.isAttackable()) {
                     c++;
                     // Start HP/MP/CP regeneration task.
@@ -109,7 +109,7 @@ public final class L2WorldRegion {
     }
 
     public boolean areNeighborsEmpty() {
-        return forEachSurroundingRegion(w -> !(w.isActive() && w.getVisibleObjects().values().stream().anyMatch(L2Object::isPlayable)));
+        return forEachSurroundingRegion(w -> !(w.isActive() && w.getVisibleObjects().values().stream().anyMatch(WorldObject::isPlayable)));
     }
 
     /**
@@ -149,12 +149,12 @@ public final class L2WorldRegion {
     }
 
     /**
-     * Add the L2Object in the L2ObjectHashSet(L2Object) _visibleObjects containing L2Object visible in this L2WorldRegion <BR>
-     * If L2Object is a Player, Add the Player in the L2ObjectHashSet(Player) _allPlayable containing Player of all player in game in this L2WorldRegion <BR>
+     * Add the WorldObject in the L2ObjectHashSet(WorldObject) _visibleObjects containing WorldObject visible in this L2WorldRegion <BR>
+     * If WorldObject is a Player, Add the Player in the L2ObjectHashSet(Player) _allPlayable containing Player of all player in game in this L2WorldRegion <BR>
      *
      * @param object
      */
-    public void addVisibleObject(L2Object object) {
+    public void addVisibleObject(WorldObject object) {
         if (object == null) {
             return;
         }
@@ -170,11 +170,11 @@ public final class L2WorldRegion {
     }
 
     /**
-     * Remove the L2Object from the L2ObjectHashSet(L2Object) _visibleObjects in this L2WorldRegion. If L2Object is a Player, remove it from the L2ObjectHashSet(Player) _allPlayable of this L2WorldRegion <BR>
+     * Remove the WorldObject from the L2ObjectHashSet(WorldObject) _visibleObjects in this L2WorldRegion. If WorldObject is a Player, remove it from the L2ObjectHashSet(Player) _allPlayable of this L2WorldRegion <BR>
      *
      * @param object
      */
-    public void removeVisibleObject(L2Object object) {
+    public void removeVisibleObject(WorldObject object) {
         if (object == null) {
             return;
         }
@@ -191,7 +191,7 @@ public final class L2WorldRegion {
         }
     }
 
-    public Map<Integer, L2Object> getVisibleObjects() {
+    public Map<Integer, WorldObject> getVisibleObjects() {
         return _visibleObjects;
     }
 

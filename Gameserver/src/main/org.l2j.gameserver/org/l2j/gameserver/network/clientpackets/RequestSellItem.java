@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.enums.TaxType;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.L2MerchantInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.ProductList;
@@ -76,7 +76,7 @@ public final class RequestSellItem extends ClientPacket {
             return;
         }
 
-        final L2Object target = player.getTarget();
+        final WorldObject target = player.getTarget();
         L2MerchantInstance merchant = null;
         if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST)) {
             if ((target == null) || !player.isInsideRadius3D(target, INTERACTION_DISTANCE) || (player.getInstanceId() != target.getInstanceId())) {

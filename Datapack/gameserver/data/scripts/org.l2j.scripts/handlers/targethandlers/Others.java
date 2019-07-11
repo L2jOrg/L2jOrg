@@ -17,7 +17,7 @@
 package handlers.targethandlers;
 
 import org.l2j.gameserver.handler.ITargetTypeHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
@@ -36,7 +36,7 @@ public class Others implements ITargetTypeHandler
 	}
 	
 	@Override
-	public L2Object getTarget(Creature activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
 		if (selectedTarget == activeChar)
 		{

@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -101,7 +101,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 			}
 			case "admin_addolypoints":
 			{
-				final L2Object target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				final Player player = target != null ? target.getActingPlayer() : null;
 				if (player != null)
 				{
@@ -142,7 +142,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 			}
 			case "admin_removeolypoints":
 			{
-				final L2Object target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				final Player player = target != null ? target.getActingPlayer() : null;
 				if (player != null)
 				{
@@ -184,7 +184,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 			}
 			case "admin_setolypoints":
 			{
-				final L2Object target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				final Player player = target != null ? target.getActingPlayer() : null;
 				if (player != null)
 				{

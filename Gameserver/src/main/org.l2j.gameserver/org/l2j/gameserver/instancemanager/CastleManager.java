@@ -4,7 +4,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.InstanceListManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -41,11 +41,11 @@ public final class CastleManager implements InstanceListManager {
     private CastleManager() {
     }
 
-    public final Castle findNearestCastle(L2Object obj) {
+    public final Castle findNearestCastle(WorldObject obj) {
         return findNearestCastle(obj, Long.MAX_VALUE);
     }
 
-    public final Castle findNearestCastle(L2Object obj, long maxDistance) {
+    public final Castle findNearestCastle(WorldObject obj, long maxDistance) {
         Castle nearestCastle = getCastle(obj);
         if (nearestCastle == null) {
             double distance;
@@ -91,7 +91,7 @@ public final class CastleManager implements InstanceListManager {
         return null;
     }
 
-    public final Castle getCastle(L2Object activeObject) {
+    public final Castle getCastle(WorldObject activeObject) {
         return getCastle(activeObject.getX(), activeObject.getY(), activeObject.getZ());
     }
 

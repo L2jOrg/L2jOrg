@@ -6,7 +6,7 @@ import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.ItemGrade;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.L2ExtractableProduct;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -640,7 +640,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
         _skills.add(holder);
     }
 
-    public boolean checkCondition(Creature activeChar, L2Object object, boolean sendMessage) {
+    public boolean checkCondition(Creature activeChar, WorldObject object, boolean sendMessage) {
         if (activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !Config.GM_ITEM_RESTRICTION) {
             return true;
         }

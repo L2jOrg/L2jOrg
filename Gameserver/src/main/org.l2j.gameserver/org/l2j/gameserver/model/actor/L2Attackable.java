@@ -153,7 +153,7 @@ public class L2Attackable extends L2Npc {
             return;
         }
 
-        final L2Object target = skill.getTarget(this, false, false, false);
+        final WorldObject target = skill.getTarget(this, false, false, false);
         if (target != null) {
             getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill, target);
         }
@@ -1475,13 +1475,13 @@ public class L2Attackable extends L2Npc {
     }
 
     @Override
-    public void setTarget(L2Object object) {
+    public void setTarget(WorldObject object) {
         if (isDead()) {
             return;
         }
 
         if (object == null) {
-            final L2Object target = getTarget();
+            final WorldObject target = getTarget();
             final Map<Creature, AggroInfo> aggroList = _aggroList;
             if (target != null) {
                 if (aggroList != null) {

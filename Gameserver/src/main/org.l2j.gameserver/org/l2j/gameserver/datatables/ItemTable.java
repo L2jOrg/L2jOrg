@@ -7,7 +7,7 @@ import org.l2j.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import org.l2j.gameserver.engines.DocumentEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.idfactory.IdFactory;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
@@ -218,8 +218,8 @@ public class ItemTable {
 
         if ((actor != null) && actor.isGM()) {
             String referenceName = "no-reference";
-            if (reference instanceof L2Object) {
-                referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
+            if (reference instanceof WorldObject) {
+                referenceName = (((WorldObject) reference).getName() != null ? ((WorldObject) reference).getName() : "no-name");
             } else if (reference instanceof String) {
                 referenceName = (String) reference;
             }
@@ -232,7 +232,7 @@ public class ItemTable {
                                 + " name: " + item.getItemName() //
                                 + " objId: " + item.getObjectId() + ")" //
                         , targetName //
-                        , "L2Object referencing this action is: " + referenceName);
+                        , "WorldObject referencing this action is: " + referenceName);
             }
         }
 
@@ -295,8 +295,8 @@ public class ItemTable {
 
             if ((actor != null) && actor.isGM()) {
                 String referenceName = "no-reference";
-                if (reference instanceof L2Object) {
-                    referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
+                if (reference instanceof WorldObject) {
+                    referenceName = (((WorldObject) reference).getName() != null ? ((WorldObject) reference).getName() : "no-name");
                 } else if (reference instanceof String) {
                     referenceName = (String) reference;
                 }
@@ -309,7 +309,7 @@ public class ItemTable {
                                     + " itemObjId: " //
                                     + item.getObjectId() + ")" //
                             , targetName //
-                            , "L2Object referencing this action is: " + referenceName);
+                            , "WorldObject referencing this action is: " + referenceName);
                 }
             }
 

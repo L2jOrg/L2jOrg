@@ -4,7 +4,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.geoengine.GeoEngine;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -117,7 +117,7 @@ public class SkillChannelizer implements Runnable {
 
             // Apply channeling skills on the targets.
             final List<Creature> targetList = new ArrayList<>();
-            final L2Object target = skill.getTarget(_channelizer, false, false, false);
+            final WorldObject target = skill.getTarget(_channelizer, false, false, false);
             if (target != null) {
                 skill.forEachTargetAffected(_channelizer, target, o ->
                 {

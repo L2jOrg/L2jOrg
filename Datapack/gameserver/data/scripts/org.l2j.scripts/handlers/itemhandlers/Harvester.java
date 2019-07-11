@@ -21,7 +21,7 @@ import java.util.List;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.IItemHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -56,7 +56,7 @@ public final class Harvester implements IItemHandler
 		}
 		
 		final Player activeChar = playable.getActingPlayer();
-		final L2Object target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		if ((target == null) || !target.isMonster() || !((Creature) target).isDead())
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);

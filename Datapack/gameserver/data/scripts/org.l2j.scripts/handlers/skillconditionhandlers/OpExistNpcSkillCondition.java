@@ -18,7 +18,7 @@ package handlers.skillconditionhandlers;
 
 import java.util.List;
 
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -43,7 +43,7 @@ public class OpExistNpcSkillCondition implements ISkillCondition
 	}
 	
 	@Override
-	public boolean canUse(Creature caster, Skill skill, L2Object target)
+	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
 		final List<L2Npc> npcs = L2World.getInstance().getVisibleObjectsInRange(caster, L2Npc.class, _range);
 		return _isAround == npcs.stream().anyMatch(npc -> _npcIds.contains(npc.getId()));

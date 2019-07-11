@@ -22,7 +22,7 @@ import java.util.StringTokenizer;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -70,7 +70,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		}
 		else
 		{
-			final L2Object target = activeChar.getTarget();
+			final WorldObject target = activeChar.getTarget();
 			Player player = null;
 			if ((target != null) && target.isPlayer())
 			{

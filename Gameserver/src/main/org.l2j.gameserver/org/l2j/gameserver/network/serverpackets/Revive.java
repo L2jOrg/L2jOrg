@@ -1,13 +1,13 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public final class Revive extends ServerPacket {
     private final int _objectId;
 
-    public Revive(L2Object obj) {
+    public Revive(WorldObject obj) {
         _objectId = obj.getObjectId();
     }
 

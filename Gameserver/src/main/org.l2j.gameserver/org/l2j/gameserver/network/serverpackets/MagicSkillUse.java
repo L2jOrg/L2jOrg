@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -27,11 +27,11 @@ public final class MagicSkillUse extends ServerPacket {
     private final int _actionId; // If skill is called from RequestActionUse, use that ID.
     private final SkillCastingType _castingType; // Defines which client bar is going to use.
     private final Creature _activeChar;
-    private final L2Object _target;
+    private final WorldObject _target;
     private final List<Integer> _unknown = Collections.emptyList();
     private final List<Location> _groundLocations;
 
-    public MagicSkillUse(Creature cha, L2Object target, int skillId, int skillLevel, int hitTime, int reuseDelay, int reuseGroup, int actionId, SkillCastingType castingType) {
+    public MagicSkillUse(Creature cha, WorldObject target, int skillId, int skillLevel, int hitTime, int reuseDelay, int reuseGroup, int actionId, SkillCastingType castingType) {
         _activeChar = cha;
         _target = target;
         _skillId = skillId;
@@ -51,7 +51,7 @@ public final class MagicSkillUse extends ServerPacket {
         _groundLocations = skillWorldPos != null ? Arrays.asList(skillWorldPos) : Collections.emptyList();
     }
 
-    public MagicSkillUse(Creature cha, L2Object target, int skillId, int skillLevel, int hitTime, int reuseDelay) {
+    public MagicSkillUse(Creature cha, WorldObject target, int skillId, int skillLevel, int hitTime, int reuseDelay) {
         this(cha, target, skillId, skillLevel, hitTime, reuseDelay, -1, -1, SkillCastingType.NORMAL);
     }
 

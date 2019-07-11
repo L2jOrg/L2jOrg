@@ -26,7 +26,7 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -200,7 +200,7 @@ public class AdminClan implements IAdminCommandHandler
 		}
 		else
 		{
-			final L2Object targetObj = activeChar.getTarget();
+			final WorldObject targetObj = activeChar.getTarget();
 			if ((targetObj == null) || !targetObj.isPlayer())
 			{
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);

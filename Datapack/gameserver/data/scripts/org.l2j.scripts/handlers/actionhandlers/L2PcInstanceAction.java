@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.IActionHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -52,7 +52,7 @@ public class L2PcInstanceAction implements IActionHandler
 	 * @param activeChar The player that start an action on target Player
 	 */
 	@Override
-	public boolean action(Player activeChar, L2Object target, boolean interact)
+	public boolean action(Player activeChar, WorldObject target, boolean interact)
 	{
 		// Check if the Player is confused
 		if (activeChar.isControlBlocked())

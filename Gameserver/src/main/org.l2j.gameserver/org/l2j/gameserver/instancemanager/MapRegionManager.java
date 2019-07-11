@@ -2,7 +2,7 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.model.L2MapRegion;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
@@ -131,7 +131,7 @@ public final class MapRegionManager extends GameXmlReader {
      * @param obj
      * @return
      */
-    public final L2MapRegion getMapRegion(L2Object obj) {
+    public final L2MapRegion getMapRegion(WorldObject obj) {
         return getMapRegion(obj.getX(), obj.getY());
     }
 
@@ -139,7 +139,7 @@ public final class MapRegionManager extends GameXmlReader {
      * @param obj
      * @return
      */
-    public final int getMapRegionLocId(L2Object obj) {
+    public final int getMapRegionLocId(WorldObject obj) {
         return getMapRegionLocId(obj.getX(), obj.getY());
     }
 

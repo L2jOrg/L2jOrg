@@ -6,7 +6,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PlayableStat;
 import org.l2j.gameserver.model.actor.status.PlayableStatus;
@@ -247,7 +247,7 @@ public abstract class Playable extends Creature {
         return transferDmgTo;
     }
 
-    public abstract void doPickupItem(L2Object object);
+    public abstract void doPickupItem(WorldObject object);
 
     public abstract boolean useMagic(Skill skill, L2ItemInstance item, boolean forceUse, boolean dontMove);
 

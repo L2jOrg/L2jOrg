@@ -22,7 +22,7 @@ import java.util.function.Predicate;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Npc;
@@ -81,7 +81,7 @@ public class AdminScan implements IAdminCommandHandler
 						BuilderUtil.sendSysMessage(activeChar, "objectId is not set!");
 					}
 					
-					final L2Object target = L2World.getInstance().findObject(objectId);
+					final WorldObject target = L2World.getInstance().findObject(objectId);
 					final L2Npc npc = target instanceof L2Npc ? (L2Npc) target : null;
 					if (npc == null)
 					{

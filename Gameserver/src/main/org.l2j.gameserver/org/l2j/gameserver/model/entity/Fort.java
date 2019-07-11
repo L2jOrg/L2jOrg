@@ -13,7 +13,7 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
@@ -146,7 +146,7 @@ public final class Fort extends AbstractResidence {
      * @param obj
      * @return
      */
-    public double getDistance(L2Object obj) {
+    public double getDistance(WorldObject obj) {
         return getZone().getDistanceToZone(obj);
     }
 

@@ -26,7 +26,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionShiftHandler;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.instancemanager.WalkingManager;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Npc;
@@ -41,7 +41,7 @@ import java.util.Set;
 public class L2NpcActionShift implements IActionShiftHandler
 {
 	@Override
-	public boolean action(Player activeChar, L2Object target, boolean interact)
+	public boolean action(Player activeChar, WorldObject target, boolean interact)
 	{
 		// Check if the Player is a GM
 		if (activeChar.isGM())

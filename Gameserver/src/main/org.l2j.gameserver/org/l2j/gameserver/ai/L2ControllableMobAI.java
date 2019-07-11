@@ -1,7 +1,7 @@
 package org.l2j.gameserver.ai;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.MobGroup;
 import org.l2j.gameserver.model.MobGroupTable;
@@ -107,7 +107,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
 
     @Override
     protected void thinkCast() {
-        L2Object target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
+        WorldObject target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
         if ((target == null) || !target.isCharacter() || ((Creature) target).isAlikeDead()) {
             target = _skill.getTarget(_actor, findNextRndTarget(), _forceUse, _dontMove, false);
         }
@@ -307,7 +307,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
         if (_actor.isConfused()) {
             hated = findNextRndTarget();
         } else {
-            final L2Object target = _actor.getTarget();
+            final WorldObject target = _actor.getTarget();
             hated = (target != null) && target.isCharacter() ? (Creature) target : null;
         }
 

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -60,7 +60,7 @@ public final class Action extends ClientPacket {
             }
         }
 
-        final L2Object obj;
+        final WorldObject obj;
         if (activeChar.getTargetId() == _objectId) {
             obj = activeChar.getTarget();
         } else if (activeChar.isInAirShip() && (activeChar.getAirShip().getHelmObjectId() == _objectId)) {

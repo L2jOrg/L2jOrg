@@ -20,7 +20,7 @@ import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2PetData;
 import org.l2j.gameserver.model.L2PetLevelData;
 import org.l2j.gameserver.model.L2World;
@@ -284,12 +284,12 @@ public class Pet extends Summon {
      * @param process     : String Identifier of process triggering this action
      * @param objectId    : int Item Instance identifier of the item to be destroyed
      * @param count       : int Quantity of items to be destroyed
-     * @param reference   : L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      * @return boolean informing if the action was successfull
      */
     @Override
-    public boolean destroyItem(String process, int objectId, long count, L2Object reference, boolean sendMessage) {
+    public boolean destroyItem(String process, int objectId, long count, WorldObject reference, boolean sendMessage) {
         final L2ItemInstance item = _inventory.destroyItem(process, objectId, count, getOwner(), reference);
 
         if (item == null) {
@@ -326,12 +326,12 @@ public class Pet extends Summon {
      * @param process     : String Identifier of process triggering this action
      * @param itemId      : int Item identifier of the item to be destroyed
      * @param count       : int Quantity of items to be destroyed
-     * @param reference   : L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      * @return boolean informing if the action was successfull
      */
     @Override
-    public boolean destroyItemByItemId(String process, int itemId, long count, L2Object reference, boolean sendMessage) {
+    public boolean destroyItemByItemId(String process, int itemId, long count, WorldObject reference, boolean sendMessage) {
         final L2ItemInstance item = _inventory.destroyItemByItemId(process, itemId, count, getOwner(), reference);
 
         if (item == null) {
@@ -363,7 +363,7 @@ public class Pet extends Summon {
     }
 
     @Override
-    public void doPickupItem(L2Object object) {
+    public void doPickupItem(WorldObject object) {
         if (isDead()) {
             return;
         }
@@ -552,7 +552,7 @@ public class Pet extends Summon {
      * @param reference Object referencing current action like NPC selling item or previous item in transformation
      * @return L2ItemInstance corresponding to the new item or the updated item in inventory
      */
-    public L2ItemInstance transferItem(String process, int objectId, long count, Inventory target, Player actor, L2Object reference) {
+    public L2ItemInstance transferItem(String process, int objectId, long count, Inventory target, Player actor, WorldObject reference) {
         final L2ItemInstance oldItem = _inventory.getItemByObjectId(objectId);
         final L2ItemInstance playerOldItem = target.getItemByItemId(oldItem.getId());
         final L2ItemInstance newItem = _inventory.transferItem(process, objectId, count, target, actor, reference);

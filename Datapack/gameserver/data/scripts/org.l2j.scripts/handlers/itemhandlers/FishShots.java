@@ -19,7 +19,7 @@ package handlers.itemhandlers;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.handler.IItemHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
@@ -77,7 +77,7 @@ public class FishShots implements IItemHandler
 		
 		activeChar.chargeShot(ShotType.FISH_SOULSHOTS);
 		activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false);
-		final L2Object oldTarget = activeChar.getTarget();
+		final WorldObject oldTarget = activeChar.getTarget();
 		activeChar.setTarget(activeChar);
 		
 		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);

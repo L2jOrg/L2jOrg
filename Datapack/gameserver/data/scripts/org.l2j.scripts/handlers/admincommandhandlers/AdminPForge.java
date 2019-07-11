@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.L2BoatInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -405,7 +405,7 @@ public final class AdminPForge implements IAdminCommandHandler
 							return false;
 						}
 						
-						L2Object target = null;
+						WorldObject target = null;
 						L2BoatInstance boat = null;
 						String value = st.nextToken();
 						switch (value)

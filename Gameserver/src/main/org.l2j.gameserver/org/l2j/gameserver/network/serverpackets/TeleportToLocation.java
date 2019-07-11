@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -11,7 +11,7 @@ public final class TeleportToLocation extends ServerPacket {
     private final int _z;
     private final int _heading;
 
-    public TeleportToLocation(L2Object obj, int x, int y, int z, int heading) {
+    public TeleportToLocation(WorldObject obj, int x, int y, int z, int heading) {
         _targetObjId = obj.getObjectId();
         _x = x;
         _y = y;

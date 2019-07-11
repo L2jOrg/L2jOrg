@@ -19,7 +19,7 @@ package handlers.actionshifthandlers;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionShiftHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
@@ -36,7 +36,7 @@ import org.l2j.gameserver.util.HtmlUtil;
 public class L2DoorInstanceActionShift implements IActionShiftHandler
 {
 	@Override
-	public boolean action(Player activeChar, L2Object target, boolean interact)
+	public boolean action(Player activeChar, WorldObject target, boolean interact)
 	{
 		if (activeChar.isGM())
 		{

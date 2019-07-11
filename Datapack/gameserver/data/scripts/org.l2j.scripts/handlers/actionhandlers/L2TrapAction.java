@@ -18,14 +18,14 @@ package handlers.actionhandlers;
 
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 
 public class L2TrapAction implements IActionHandler
 {
 	@Override
-	public boolean action(Player activeChar, L2Object target, boolean interact)
+	public boolean action(Player activeChar, WorldObject target, boolean interact)
 	{
 		// Aggression target lock effect
 		if (activeChar.isLockedTarget() && (activeChar.getLockedTarget() != target))

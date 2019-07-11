@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -117,7 +117,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 			}
 			else if (command.equals("admin_open"))
 			{
-				final L2Object target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				if ((target != null) && target.isDoor())
 				{
 					((L2DoorInstance) target).openMe();
@@ -129,7 +129,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 			}
 			else if (command.equals("admin_close"))
 			{
-				final L2Object target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				if ((target != null) && target.isDoor())
 				{
 					((L2DoorInstance) target).closeMe();

@@ -19,7 +19,7 @@ package handlers.actionhandlers;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 
@@ -40,7 +40,7 @@ public class L2ArtefactInstanceAction implements IActionHandler
 	 * <BR>
 	 */
 	@Override
-	public boolean action(Player activeChar, L2Object target, boolean interact)
+	public boolean action(Player activeChar, WorldObject target, boolean interact)
 	{
 		if (!((L2Npc) target).canTarget(activeChar))
 		{

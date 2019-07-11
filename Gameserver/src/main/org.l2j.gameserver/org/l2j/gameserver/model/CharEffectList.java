@@ -907,7 +907,7 @@ public final class CharEffectList {
         // @formatter:off
         _owner.getStatus().getStatusListener().stream()
                 .filter(Objects::nonNull)
-                .filter(L2Object::isPlayer)
+                .filter(WorldObject::isPlayer)
                 .map(Creature::getActingPlayer)
                 .forEach(upd::sendTo);
         // @formatter:on

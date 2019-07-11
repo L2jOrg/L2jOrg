@@ -5,7 +5,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.instancemanager.WalkingManager;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
@@ -206,7 +206,7 @@ public class L2CharacterAI extends AbstractAI {
      * </ul>
      */
     @Override
-    protected void onIntentionCast(Skill skill, L2Object target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
+    protected void onIntentionCast(Skill skill, WorldObject target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
         if ((getIntention() == AI_INTENTION_REST) && skill.isMagic()) {
             clientActionFailed();
             return;
@@ -219,7 +219,7 @@ public class L2CharacterAI extends AbstractAI {
         }
     }
 
-    protected void changeIntentionToCast(Skill skill, L2Object target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
+    protected void changeIntentionToCast(Skill skill, WorldObject target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
         // Set the AI skill used by INTENTION_CAST
         _skill = skill;
 
@@ -334,7 +334,7 @@ public class L2CharacterAI extends AbstractAI {
      * </ul>
      */
     @Override
-    protected void onIntentionPickUp(L2Object object) {
+    protected void onIntentionPickUp(WorldObject object) {
         if (getIntention() == AI_INTENTION_REST) {
             // Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
             clientActionFailed();
@@ -380,7 +380,7 @@ public class L2CharacterAI extends AbstractAI {
      * </ul>
      */
     @Override
-    protected void onIntentionInteract(L2Object object) {
+    protected void onIntentionInteract(WorldObject object) {
         if (getIntention() == AI_INTENTION_REST) {
             // Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
             clientActionFailed();
@@ -609,8 +609,8 @@ public class L2CharacterAI extends AbstractAI {
      * </ul>
      */
     @Override
-    protected void onEvtForgetObject(L2Object object) {
-        final L2Object target = getTarget();
+    protected void onEvtForgetObject(WorldObject object) {
+        final WorldObject target = getTarget();
 
         // Stop any casting pointing to this object.
         getActor().abortCast(sc -> sc.getTarget() == object);
@@ -781,11 +781,11 @@ public class L2CharacterAI extends AbstractAI {
      * <li>L2PLayerAI, L2SummonAI</li>
      * </ul>
      *
-     * @param target The targeted L2Object
+     * @param target The targeted WorldObject
      * @param offset The Interact area radius
      * @return True if a movement must be done
      */
-    protected boolean maybeMoveToPawn(L2Object target, int offset) {
+    protected boolean maybeMoveToPawn(WorldObject target, int offset) {
         // Get the distance between the current position of the Creature and the target (x,y)
         if (target == null) {
             LOGGER.warn("maybeMoveToPawn: target == NULL!");
@@ -872,7 +872,7 @@ public class L2CharacterAI extends AbstractAI {
      * <li>L2PLayerAI, L2SummonAI</li>
      * </ul>
      *
-     * @param target The targeted L2Object
+     * @param target The targeted WorldObject
      * @return True if the target is lost or dead (false if fakedeath)
      */
     protected boolean checkTargetLostOrDead(Creature target) {
@@ -903,10 +903,10 @@ public class L2CharacterAI extends AbstractAI {
      * <li>L2PLayerAI, L2SummonAI</li>
      * </ul>
      *
-     * @param target The targeted L2Object
+     * @param target The targeted WorldObject
      * @return True if the target is lost
      */
-    protected boolean checkTargetLost(L2Object target) {
+    protected boolean checkTargetLost(WorldObject target) {
         // check if player is fakedeath
         if ((target != null) && target.isPlayer()) {
             final Player target2 = (Player) target; // convert object to chara
@@ -951,13 +951,13 @@ public class L2CharacterAI extends AbstractAI {
      */
     public static class CastTask implements Runnable {
         private final Creature _activeChar;
-        private final L2Object _target;
+        private final WorldObject _target;
         private final Skill _skill;
         private final L2ItemInstance _item;
         private final boolean _forceUse;
         private final boolean _dontMove;
 
-        public CastTask(Creature actor, Skill skill, L2Object target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
+        public CastTask(Creature actor, Skill skill, WorldObject target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
             _activeChar = actor;
             _target = target;
             _skill = skill;

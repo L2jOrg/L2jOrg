@@ -5,7 +5,7 @@ import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.data.xml.impl.FenceData;
 import org.l2j.gameserver.geoengine.geodata.*;
 import org.l2j.gameserver.instancemanager.WarpedSpaceManager;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
@@ -320,13 +320,13 @@ public class GeoEngine {
     }
 
     /**
-     * Check line of sight from {@link L2Object} to {@link L2Object}.
+     * Check line of sight from {@link WorldObject} to {@link WorldObject}.
      *
      * @param origin : The origin object.
      * @param target : The target object.
      * @return {@code boolean} : True if origin can see target
      */
-    public final boolean canSeeTarget(L2Object origin, L2Object target) {
+    public final boolean canSeeTarget(WorldObject origin, WorldObject target) {
         if (target.isDoor() || (target.isCharacter() && ((Creature) target).isFlying())) {
             return true;
         }
@@ -388,13 +388,13 @@ public class GeoEngine {
     }
 
     /**
-     * Check line of sight from {@link L2Object} to {@link Location}.
+     * Check line of sight from {@link WorldObject} to {@link Location}.
      *
      * @param origin   : The origin object.
      * @param position : The target position.
      * @return {@code boolean} : True if object can see position
      */
-    public final boolean canSeeTarget(L2Object origin, Location position) {
+    public final boolean canSeeTarget(WorldObject origin, Location position) {
         // get origin and target world coordinates
         final int ox = origin.getX();
         final int oy = origin.getY();

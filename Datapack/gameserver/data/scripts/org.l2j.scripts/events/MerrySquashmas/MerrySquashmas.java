@@ -20,7 +20,7 @@ import events.ScriptEvent;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -536,7 +536,7 @@ public class MerrySquashmas extends LongTimeEvent implements ScriptEvent
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, Player caster, Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isPet)
 	{
 		if (SQUASH_LIST.contains(npc.getId()) && (skill.getId() == SNOWY_NECTAR_SKILL))
 		{

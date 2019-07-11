@@ -17,7 +17,7 @@
 package org.l2j.gameserver.ai;
 
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
@@ -51,7 +51,7 @@ public class L2DoorAI extends L2CharacterAI {
     }
 
     @Override
-    protected void onIntentionCast(Skill skill, L2Object target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
+    protected void onIntentionCast(Skill skill, WorldObject target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
     }
 
     @Override
@@ -63,11 +63,11 @@ public class L2DoorAI extends L2CharacterAI {
     }
 
     @Override
-    protected void onIntentionPickUp(L2Object item) {
+    protected void onIntentionPickUp(WorldObject item) {
     }
 
     @Override
-    protected void onIntentionInteract(L2Object object) {
+    protected void onIntentionInteract(WorldObject object) {
     }
 
     @Override
@@ -108,7 +108,7 @@ public class L2DoorAI extends L2CharacterAI {
     }
 
     @Override
-    protected void onEvtForgetObject(L2Object object) {
+    protected void onEvtForgetObject(WorldObject object) {
     }
 
     @Override

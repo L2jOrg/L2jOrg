@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -9,7 +9,7 @@ public class ValidateLocation extends ServerPacket {
     private final int _charObjId;
     private final Location _loc;
 
-    public ValidateLocation(L2Object obj) {
+    public ValidateLocation(WorldObject obj) {
         _charObjId = obj.getObjectId();
         _loc = obj.getLocation();
     }

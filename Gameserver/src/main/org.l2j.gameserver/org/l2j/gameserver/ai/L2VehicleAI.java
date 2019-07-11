@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.ai;
 
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Vehicle;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -40,7 +40,7 @@ public abstract class L2VehicleAI extends L2CharacterAI {
     }
 
     @Override
-    protected void onIntentionCast(Skill skill, L2Object target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
+    protected void onIntentionCast(Skill skill, WorldObject target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
     }
 
     @Override
@@ -48,11 +48,11 @@ public abstract class L2VehicleAI extends L2CharacterAI {
     }
 
     @Override
-    protected void onIntentionPickUp(L2Object item) {
+    protected void onIntentionPickUp(WorldObject item) {
     }
 
     @Override
-    protected void onIntentionInteract(L2Object object) {
+    protected void onIntentionInteract(WorldObject object) {
     }
 
     @Override
@@ -72,7 +72,7 @@ public abstract class L2VehicleAI extends L2CharacterAI {
     }
 
     @Override
-    protected void onEvtForgetObject(L2Object object) {
+    protected void onEvtForgetObject(WorldObject object) {
     }
 
     @Override
@@ -96,7 +96,7 @@ public abstract class L2VehicleAI extends L2CharacterAI {
     }
 
     @Override
-    protected void moveToPawn(L2Object pawn, int offset) {
+    protected void moveToPawn(WorldObject pawn, int offset) {
     }
 
     @Override

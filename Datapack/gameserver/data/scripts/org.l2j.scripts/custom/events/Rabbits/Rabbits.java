@@ -19,7 +19,7 @@ package custom.events.Rabbits;
 import events.ScriptEvent;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
@@ -204,7 +204,7 @@ public final class Rabbits extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, Player caster, Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(L2Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (skill.getId() == RABBIT_TORNADO.getSkillId())
 		{

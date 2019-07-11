@@ -4,7 +4,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
@@ -16,7 +16,7 @@ import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 public class L2DoorInstanceAction implements IActionHandler
 {
     @Override
-    public boolean action(Player activeChar, L2Object target, boolean interact)
+    public boolean action(Player activeChar, WorldObject target, boolean interact)
     {
         // Check if the Player already target the L2NpcInstance
         if (activeChar.getTarget() != target)

@@ -150,7 +150,7 @@ public class TradeList {
             return null;
         }
 
-        final L2Object o = L2World.getInstance().findObject(objectId);
+        final WorldObject o = L2World.getInstance().findObject(objectId);
         if (!o.isItem()) {
             LOGGER.warn(_owner.getName() + ": Trying to add something other than an item!");
             return null;

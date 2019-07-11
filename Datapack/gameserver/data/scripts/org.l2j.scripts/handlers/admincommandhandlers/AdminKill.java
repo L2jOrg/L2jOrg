@@ -20,7 +20,7 @@ import java.util.StringTokenizer;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.FriendlyNpcInstance;
@@ -109,7 +109,7 @@ public class AdminKill implements IAdminCommandHandler
 			}
 			else
 			{
-				final L2Object obj = activeChar.getTarget();
+				final WorldObject obj = activeChar.getTarget();
 				if ((obj instanceof L2ControllableMobInstance) || !obj.isCharacter())
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);

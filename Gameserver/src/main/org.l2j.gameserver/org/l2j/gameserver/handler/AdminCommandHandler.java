@@ -4,7 +4,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.enums.PlayerAction;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2j.gameserver.util.GMAudit;
@@ -84,7 +84,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
                 final long begin = System.currentTimeMillis();
                 try {
                     if (Config.GMAUDIT) {
-                        final L2Object target = player.getTarget();
+                        final WorldObject target = player.getTarget();
                         GMAudit.auditGMAction(player.getName() + " [" + player.getObjectId() + "]", fullCommand, (target != null ? target.getName() : "no-target"));
                     }
 

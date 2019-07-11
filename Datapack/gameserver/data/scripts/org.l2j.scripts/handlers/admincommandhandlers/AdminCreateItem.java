@@ -20,7 +20,7 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.L2Item;
@@ -124,7 +124,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 		{
 			try
 			{
-				final L2Object target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				if ((target == null) || !target.isPlayer())
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Invalid target.");

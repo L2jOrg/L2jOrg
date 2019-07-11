@@ -25,7 +25,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Base class for all interactive objects.
  */
-public abstract class L2Object extends ListenersContainer implements IIdentifiable, INamable, ISpawnable, IUniqueId, IDecayable, IPositionable {
+public abstract class WorldObject extends ListenersContainer implements IIdentifiable, INamable, ISpawnable, IUniqueId, IDecayable, IPositionable {
     /**
      * Name
      */
@@ -67,7 +67,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
     private boolean _isInvisible;
     private boolean _isTargetable = true;
 
-    public L2Object(int objectId) {
+    public WorldObject(int objectId) {
         setInstanceType(InstanceType.L2Object);
         _objectId = objectId;
     }
@@ -147,19 +147,19 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
     @Override
     public final boolean spawnMe() {
         synchronized (this) {
-            // Set the x,y,z position of the L2Object spawn and update its _worldregion
+            // Set the x,y,z position of the WorldObject spawn and update its _worldregion
             _isSpawned = true;
             setWorldRegion(L2World.getInstance().getRegion(this));
 
-            // Add the L2Object spawn in the _allobjects of L2World
+            // Add the WorldObject spawn in the _allobjects of L2World
             L2World.getInstance().addObject(this);
 
-            // Add the L2Object spawn to _visibleObjects and if necessary to _allplayers of its L2WorldRegion
+            // Add the WorldObject spawn to _visibleObjects and if necessary to _allplayers of its L2WorldRegion
             _worldRegion.addVisibleObject(this);
         }
 
         // this can synchronize on others instances, so it's out of synchronized, to avoid deadlocks
-        // Add the L2Object spawn in the world as a visible object
+        // Add the WorldObject spawn in the world as a visible object
         L2World.getInstance().addVisibleObject(this, getWorldRegion());
 
         onSpawn();
@@ -647,7 +647,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
     }
 
     /**
-     * Calculates 2D distance between this L2Object and given x, y, z.
+     * Calculates 2D distance between this WorldObject and given x, y, z.
      *
      * @param x the X coordinate
      * @param y the Y coordinate
@@ -659,7 +659,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
     }
 
     /**
-     * Calculates the 2D distance between this L2Object and given location.
+     * Calculates the 2D distance between this WorldObject and given location.
      *
      * @param loc the location object
      * @return distance between object and given location.
@@ -669,7 +669,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
     }
 
     /**
-     * Calculates the 3D distance between this L2Object and given x, y, z.
+     * Calculates the 3D distance between this WorldObject and given x, y, z.
      *
      * @param x the X coordinate
      * @param y the Y coordinate
@@ -681,7 +681,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
     }
 
     /**
-     * Calculates 3D distance between this L2Object and given location.
+     * Calculates 3D distance between this WorldObject and given location.
      *
      * @param loc the location object
      * @return distance between object and given location.
@@ -691,7 +691,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
     }
 
     /**
-     * Calculates the non squared 2D distance between this L2Object and given x, y, z.
+     * Calculates the non squared 2D distance between this WorldObject and given x, y, z.
      *
      * @param x the X coordinate
      * @param y the Y coordinate
@@ -703,7 +703,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
     }
 
     /**
-     * Calculates the non squared 2D distance between this L2Object and given location.
+     * Calculates the non squared 2D distance between this WorldObject and given location.
      *
      * @param loc the location object
      * @return distance between object and given location.
@@ -713,7 +713,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
     }
 
     /**
-     * Calculates the non squared 3D distance between this L2Object and given x, y, z.
+     * Calculates the non squared 3D distance between this WorldObject and given x, y, z.
      *
      * @param x the X coordinate
      * @param y the Y coordinate
@@ -725,7 +725,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
     }
 
     /**
-     * Calculates the non squared 3D distance between this L2Object and given location.
+     * Calculates the non squared 3D distance between this WorldObject and given location.
      *
      * @param loc the location object
      * @return distance between object and given location.
@@ -802,7 +802,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
         return false;
     }
 
-    public boolean isInSurroundingRegion(L2Object worldObject) {
+    public boolean isInSurroundingRegion(WorldObject worldObject) {
         if (worldObject == null) {
             return false;
         }
@@ -821,7 +821,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 
     @Override
     public boolean equals(Object obj) {
-        return (obj instanceof L2Object) && (((L2Object) obj).getObjectId() == getObjectId());
+        return (obj instanceof WorldObject) && (((WorldObject) obj).getObjectId() == getObjectId());
     }
 
     @Override

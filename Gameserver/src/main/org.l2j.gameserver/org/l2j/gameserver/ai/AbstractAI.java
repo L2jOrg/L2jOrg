@@ -3,7 +3,7 @@ package org.l2j.gameserver.ai;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.GameTimeController;
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
@@ -68,7 +68,7 @@ public abstract class AbstractAI implements Ctrl {
     /**
      * Different targets this AI maintains
      */
-    private L2Object _target;
+    private WorldObject _target;
     private Future<?> _followTask = null;
 
     protected AbstractAI(Creature creature) {
@@ -165,7 +165,7 @@ public abstract class AbstractAI implements Ctrl {
                 break;
             }
             case AI_INTENTION_CAST: {
-                onIntentionCast((Skill) args[0], (L2Object) args[1], args.length > 2 ? (L2ItemInstance) args[2] : null, args.length > 3 && (boolean) args[3], args.length > 4 && (boolean) args[4]);
+                onIntentionCast((Skill) args[0], (WorldObject) args[1], args.length > 2 ? (L2ItemInstance) args[2] : null, args.length > 3 && (boolean) args[3], args.length > 4 && (boolean) args[4]);
                 break;
             }
             case AI_INTENTION_MOVE_TO: {
@@ -177,11 +177,11 @@ public abstract class AbstractAI implements Ctrl {
                 break;
             }
             case AI_INTENTION_PICK_UP: {
-                onIntentionPickUp((L2Object) args[0]);
+                onIntentionPickUp((WorldObject) args[0]);
                 break;
             }
             case AI_INTENTION_INTERACT: {
-                onIntentionInteract((L2Object) args[0]);
+                onIntentionInteract((WorldObject) args[0]);
                 break;
             }
         }
@@ -285,7 +285,7 @@ public abstract class AbstractAI implements Ctrl {
                 break;
             }
             case EVT_FORGET_OBJECT: {
-                onEvtForgetObject((L2Object) arg0);
+                onEvtForgetObject((WorldObject) arg0);
                 break;
             }
             case EVT_CANCEL: {
@@ -320,15 +320,15 @@ public abstract class AbstractAI implements Ctrl {
 
     protected abstract void onIntentionAttack(Creature target);
 
-    protected abstract void onIntentionCast(Skill skill, L2Object target, L2ItemInstance item, boolean forceUse, boolean dontMove);
+    protected abstract void onIntentionCast(Skill skill, WorldObject target, L2ItemInstance item, boolean forceUse, boolean dontMove);
 
     protected abstract void onIntentionMoveTo(Location destination);
 
     protected abstract void onIntentionFollow(Creature target);
 
-    protected abstract void onIntentionPickUp(L2Object item);
+    protected abstract void onIntentionPickUp(WorldObject item);
 
-    protected abstract void onIntentionInteract(L2Object object);
+    protected abstract void onIntentionInteract(WorldObject object);
 
     protected abstract void onEvtThink();
 
@@ -354,7 +354,7 @@ public abstract class AbstractAI implements Ctrl {
 
     protected abstract void onEvtArrivedBlocked(Location blocked_at_pos);
 
-    protected abstract void onEvtForgetObject(L2Object object);
+    protected abstract void onEvtForgetObject(WorldObject object);
 
     protected abstract void onEvtCancel();
 
@@ -380,7 +380,7 @@ public abstract class AbstractAI implements Ctrl {
      * @param pawn
      * @param offset
      */
-    protected void moveToPawn(L2Object pawn, int offset) {
+    protected void moveToPawn(WorldObject pawn, int offset) {
         // Check if actor can move
         if (!_actor.isMovementDisabled() && !_actor.isAttackingNow() && !_actor.isCastingNow()) {
             if (offset < 10) {
@@ -630,7 +630,7 @@ public abstract class AbstractAI implements Ctrl {
                     return;
                 }
 
-                final L2Object followTarget = getTarget(); // copy to prevent NPE
+                final WorldObject followTarget = getTarget(); // copy to prevent NPE
                 if (followTarget == null) {
                     if (_actor.isSummon()) {
                         ((Summon) _actor).setFollowStatus(false);
@@ -669,11 +669,11 @@ public abstract class AbstractAI implements Ctrl {
         }
     }
 
-    public L2Object getTarget() {
+    public WorldObject getTarget() {
         return _target;
     }
 
-    public void setTarget(L2Object target) {
+    public void setTarget(WorldObject target) {
         _target = target;
     }
 

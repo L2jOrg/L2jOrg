@@ -2,7 +2,7 @@ package org.l2j.gameserver.ai;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.geoengine.GeoEngine;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
@@ -65,7 +65,7 @@ public class FriendlyNpcAI extends L2AttackableAI {
             return;
         }
 
-        final L2Object target = getTarget();
+        final WorldObject target = getTarget();
         final Creature originalAttackTarget = (target != null) && target.isCharacter() ? (Creature) target : null;
         // Check if target is dead or if timeout is expired to stop this attack
         if ((originalAttackTarget == null) || originalAttackTarget.isAlikeDead()) {
@@ -168,7 +168,7 @@ public class FriendlyNpcAI extends L2AttackableAI {
 
     @Override
     protected void thinkCast() {
-        final L2Object target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
+        final WorldObject target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
         if (checkTargetLost(target)) {
             setTarget(null);
             return;

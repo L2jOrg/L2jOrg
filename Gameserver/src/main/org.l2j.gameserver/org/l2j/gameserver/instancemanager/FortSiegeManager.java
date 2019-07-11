@@ -5,7 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.CombatFlag;
 import org.l2j.gameserver.model.FortSiegeSpawn;
 import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.entity.FortSiege;
@@ -178,7 +178,7 @@ public final class FortSiegeManager {
         return _suspiciousMerchantRespawnDelay;
     }
 
-    public final FortSiege getSiege(L2Object activeObject) {
+    public final FortSiege getSiege(WorldObject activeObject) {
         return getSiege(activeObject.getX(), activeObject.getY(), activeObject.getZ());
     }
 

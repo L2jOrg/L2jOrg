@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -52,10 +52,10 @@ public class AdminDelete implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	// TODO: add possibility to delete any L2Object (except Player)
+	// TODO: add possibility to delete any WorldObject (except Player)
 	private void handleDelete(Player activeChar)
 	{
-		final L2Object obj = activeChar.getTarget();
+		final WorldObject obj = activeChar.getTarget();
 		if (obj instanceof L2Npc)
 		{
 			final L2Npc target = (L2Npc) obj;

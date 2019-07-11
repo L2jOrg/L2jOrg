@@ -19,7 +19,7 @@ package handlers.conditions;
 import java.util.List;
 
 import org.l2j.gameserver.enums.CategoryType;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.conditions.ICondition;
@@ -37,7 +37,7 @@ public class CategoryTypeCondition implements ICondition
 	}
 	
 	@Override
-	public boolean test(Creature creature, L2Object target)
+	public boolean test(Creature creature, WorldObject target)
 	{
 		return _categoryTypes.stream().anyMatch(creature::isInCategory);
 	}

@@ -20,7 +20,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
@@ -324,7 +324,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				}
 				case "see":
 				{
-					final L2Object target = activeChar.getTarget();
+					final WorldObject target = activeChar.getTarget();
 					if ((target == null) || !target.isPlayer())
 					{
 						activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
@@ -341,7 +341,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				}
 				case "set":
 				{
-					final L2Object target = activeChar.getTarget();
+					final WorldObject target = activeChar.getTarget();
 					if ((target == null) || !target.isPlayer())
 					{
 						activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);

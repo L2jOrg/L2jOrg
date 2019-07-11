@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
@@ -83,7 +83,7 @@ public class AdminTest implements IAdminCommandHandler
 	private void adminTestSkill(Player activeChar, int id, boolean msu)
 	{
 		Creature caster;
-		final L2Object target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		if (!target.isCharacter())
 		{
 			caster = activeChar;

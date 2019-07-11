@@ -1434,7 +1434,7 @@ public final class Player extends Playable {
         if ((target != null) && isInsideRadius2D(target, L2Npc.INTERACTION_DISTANCE)) {
             quest.notifyEvent(event, target, this);
         } else if (_questNpcObject > 0) {
-            final L2Object object = L2World.getInstance().findObject(getLastQuestNpcObject());
+            final WorldObject object = L2World.getInstance().findObject(getLastQuestNpcObject());
 
             if (object.isNpc() && isInsideRadius2D(object, L2Npc.INTERACTION_DISTANCE)) {
                 final L2Npc npc = (L2Npc) object;
@@ -2651,10 +2651,10 @@ public final class Player extends Playable {
      *
      * @param process     : String Identifier of process triggering this action
      * @param count       : int Quantity of adena to be added
-     * @param reference   : L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      */
-    public void addAdena(String process, long count, L2Object reference, boolean sendMessage) {
+    public void addAdena(String process, long count, WorldObject reference, boolean sendMessage) {
         if (sendMessage) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
             sm.addLong(count);
@@ -2680,11 +2680,11 @@ public final class Player extends Playable {
      *
      * @param process     : String Identifier of process triggering this action
      * @param count       : long Quantity of adena to be reduced
-     * @param reference   : L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      * @return boolean informing if the action was successful
      */
-    public boolean reduceAdena(String process, long count, L2Object reference, boolean sendMessage) {
+    public boolean reduceAdena(String process, long count, WorldObject reference, boolean sendMessage) {
         if (count > _inventory.getAdena()) {
             if (sendMessage) {
                 sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
@@ -2722,11 +2722,11 @@ public final class Player extends Playable {
      *
      * @param process     : String Identifier of process triggering this action
      * @param count       : long Quantity of Beauty Tickets to be reduced
-     * @param reference   : L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      * @return boolean informing if the action was successful
      */
-    public boolean reduceBeautyTickets(String process, long count, L2Object reference, boolean sendMessage) {
+    public boolean reduceBeautyTickets(String process, long count, WorldObject reference, boolean sendMessage) {
         if (count > _inventory.getBeautyTickets()) {
             if (sendMessage) {
                 sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
@@ -2771,10 +2771,10 @@ public final class Player extends Playable {
      *
      * @param process     : String Identifier of process triggering this action
      * @param count       : int Quantity of ancient adena to be added
-     * @param reference   : L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      */
-    public void addAncientAdena(String process, long count, L2Object reference, boolean sendMessage) {
+    public void addAncientAdena(String process, long count, WorldObject reference, boolean sendMessage) {
         if (sendMessage) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
             sm.addItemName(CommonItem.ANCIENT_ADENA);
@@ -2800,11 +2800,11 @@ public final class Player extends Playable {
      *
      * @param process     : String Identifier of process triggering this action
      * @param count       : long Quantity of ancient adena to be reduced
-     * @param reference   : L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      * @return boolean informing if the action was successful
      */
-    public boolean reduceAncientAdena(String process, long count, L2Object reference, boolean sendMessage) {
+    public boolean reduceAncientAdena(String process, long count, WorldObject reference, boolean sendMessage) {
         if (count > _inventory.getAncientAdena()) {
             if (sendMessage) {
                 sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
@@ -2849,10 +2849,10 @@ public final class Player extends Playable {
      *
      * @param process     : String Identifier of process triggering this action
      * @param item        : L2ItemInstance to be added
-     * @param reference   : L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      */
-    public void addItem(String process, L2ItemInstance item, L2Object reference, boolean sendMessage) {
+    public void addItem(String process, L2ItemInstance item, WorldObject reference, boolean sendMessage) {
         if (item.getCount() > 0) {
             // Sends message to client if requested
             if (sendMessage) {
@@ -2899,11 +2899,11 @@ public final class Player extends Playable {
      * @param process     : String Identifier of process triggering this action
      * @param itemId      : int Item Identifier of the item to be added
      * @param count       : long Quantity of items to be added
-     * @param reference   : L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      * @return
      */
-    public L2ItemInstance addItem(String process, int itemId, long count, L2Object reference, boolean sendMessage) {
+    public L2ItemInstance addItem(String process, int itemId, long count, WorldObject reference, boolean sendMessage) {
         if (count > 0) {
             final L2Item item = ItemTable.getInstance().getTemplate(itemId);
             if (item == null) {
@@ -2965,7 +2965,7 @@ public final class Player extends Playable {
      * @param reference   the reference object
      * @param sendMessage if {@code true} a system message will be sent
      */
-    public void addItem(String process, ItemHolder item, L2Object reference, boolean sendMessage) {
+    public void addItem(String process, ItemHolder item, WorldObject reference, boolean sendMessage) {
         addItem(process, item.getId(), item.getCount(), reference, sendMessage);
     }
 
@@ -2974,11 +2974,11 @@ public final class Player extends Playable {
      *
      * @param process     : String Identifier of process triggering this action
      * @param item        : L2ItemInstance to be destroyed
-     * @param reference   : L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      * @return boolean informing if the action was successful
      */
-    public boolean destroyItem(String process, L2ItemInstance item, L2Object reference, boolean sendMessage) {
+    public boolean destroyItem(String process, L2ItemInstance item, WorldObject reference, boolean sendMessage) {
         return destroyItem(process, item, item.getCount(), reference, sendMessage);
     }
 
@@ -2988,11 +2988,11 @@ public final class Player extends Playable {
      * @param process     : String Identifier of process triggering this action
      * @param item        : L2ItemInstance to be destroyed
      * @param count
-     * @param reference   : L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      * @return boolean informing if the action was successful
      */
-    public boolean destroyItem(String process, L2ItemInstance item, long count, L2Object reference, boolean sendMessage) {
+    public boolean destroyItem(String process, L2ItemInstance item, long count, WorldObject reference, boolean sendMessage) {
         item = _inventory.destroyItem(process, item, count, this, reference);
 
         if (item == null) {
@@ -3034,12 +3034,12 @@ public final class Player extends Playable {
      * @param process     : String Identifier of process triggering this action
      * @param objectId    : int Item Instance identifier of the item to be destroyed
      * @param count       : int Quantity of items to be destroyed
-     * @param reference   : L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      * @return boolean informing if the action was successful
      */
     @Override
-    public boolean destroyItem(String process, int objectId, long count, L2Object reference, boolean sendMessage) {
+    public boolean destroyItem(String process, int objectId, long count, WorldObject reference, boolean sendMessage) {
         final L2ItemInstance item = _inventory.getItemByObjectId(objectId);
 
         if (item == null) {
@@ -3058,11 +3058,11 @@ public final class Player extends Playable {
      * @param process     : String Identifier of process triggering this action
      * @param objectId    : int Item Instance identifier of the item to be destroyed
      * @param count       : int Quantity of items to be destroyed
-     * @param reference   : L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      * @return boolean informing if the action was successful
      */
-    public boolean destroyItemWithoutTrace(String process, int objectId, long count, L2Object reference, boolean sendMessage) {
+    public boolean destroyItemWithoutTrace(String process, int objectId, long count, WorldObject reference, boolean sendMessage) {
         final L2ItemInstance item = _inventory.getItemByObjectId(objectId);
 
         if ((item == null) || (item.getCount() < count)) {
@@ -3082,12 +3082,12 @@ public final class Player extends Playable {
      * @param process     : String Identifier of process triggering this action
      * @param itemId      : int Item identifier of the item to be destroyed
      * @param count       : int Quantity of items to be destroyed
-     * @param reference   : L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      * @return boolean informing if the action was successful
      */
     @Override
-    public boolean destroyItemByItemId(String process, int itemId, long count, L2Object reference, boolean sendMessage) {
+    public boolean destroyItemByItemId(String process, int itemId, long count, WorldObject reference, boolean sendMessage) {
         if (itemId == CommonItem.ADENA) {
             return reduceAdena(process, count, reference, sendMessage);
         }
@@ -3135,10 +3135,10 @@ public final class Player extends Playable {
      * @param objectId  : int Item Identifier of the item to be transfered
      * @param count     : long Quantity of items to be transfered
      * @param target
-     * @param reference : L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param reference : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @return L2ItemInstance corresponding to the new item or the updated item in inventory
      */
-    public L2ItemInstance transferItem(String process, int objectId, long count, Inventory target, L2Object reference) {
+    public L2ItemInstance transferItem(String process, int objectId, long count, Inventory target, WorldObject reference) {
         final L2ItemInstance oldItem = checkItemManipulation(objectId, count, "transfer");
         if (oldItem == null) {
             return null;
@@ -3185,7 +3185,7 @@ public final class Player extends Playable {
     }
 
     /**
-     * Use instead of calling {@link #addItem(String, L2ItemInstance, L2Object, boolean)} and {@link #destroyItemByItemId(String, int, long, L2Object, boolean)}<br>
+     * Use instead of calling {@link #addItem(String, L2ItemInstance, WorldObject, boolean)} and {@link #destroyItemByItemId(String, int, long, WorldObject, boolean)}<br>
      * This method validates slots and weight limit, for stackable and non-stackable items.
      *
      * @param process     a generic string representing the process that is exchanging this items
@@ -3197,7 +3197,7 @@ public final class Player extends Playable {
      * @param sendMessage if {@code true} it will send messages to the acting player
      * @return {@code true} if the player successfully exchanged the items, {@code false} otherwise
      */
-    public boolean exchangeItemsById(String process, L2Object reference, int coinId, long cost, int rewardId, long count, boolean sendMessage) {
+    public boolean exchangeItemsById(String process, WorldObject reference, int coinId, long cost, int rewardId, long count, boolean sendMessage) {
         final PcInventory inv = _inventory;
         if (!inv.validateCapacityByItemId(rewardId, count)) {
             if (sendMessage) {
@@ -3225,12 +3225,12 @@ public final class Player extends Playable {
      *
      * @param process     String Identifier of process triggering this action
      * @param item        L2ItemInstance to be dropped
-     * @param reference   L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param reference   WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage boolean Specifies whether to send message to Client about this action
      * @param protectItem whether or not dropped item must be protected temporary against other players
      * @return boolean informing if the action was successful
      */
-    public boolean dropItem(String process, L2ItemInstance item, L2Object reference, boolean sendMessage, boolean protectItem) {
+    public boolean dropItem(String process, L2ItemInstance item, WorldObject reference, boolean sendMessage, boolean protectItem) {
         item = _inventory.dropItem(process, item, this, reference);
 
         if (item == null) {
@@ -3284,7 +3284,7 @@ public final class Player extends Playable {
         return true;
     }
 
-    public boolean dropItem(String process, L2ItemInstance item, L2Object reference, boolean sendMessage) {
+    public boolean dropItem(String process, L2ItemInstance item, WorldObject reference, boolean sendMessage) {
         return dropItem(process, item, reference, sendMessage, false);
     }
 
@@ -3297,12 +3297,12 @@ public final class Player extends Playable {
      * @param x           : int coordinate for drop X
      * @param y           : int coordinate for drop Y
      * @param z           : int coordinate for drop Z
-     * @param reference   : L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      * @param protectItem
      * @return L2ItemInstance corresponding to the new item or the updated item in inventory
      */
-    public L2ItemInstance dropItem(String process, int objectId, long count, int x, int y, int z, L2Object reference, boolean sendMessage, boolean protectItem) {
+    public L2ItemInstance dropItem(String process, int objectId, long count, int x, int y, int z, WorldObject reference, boolean sendMessage, boolean protectItem) {
         final L2ItemInstance invitem = _inventory.getItemByObjectId(objectId);
         final L2ItemInstance item = _inventory.dropItem(process, objectId, count, this, reference);
 
@@ -3806,7 +3806,7 @@ public final class Player extends Playable {
      * @param object The L2ItemInstance to pick up
      */
     @Override
-    public void doPickupItem(L2Object object) {
+    public void doPickupItem(WorldObject object) {
         if (isAlikeDead() || isFakeDeath()) {
             return;
         }
@@ -3814,7 +3814,7 @@ public final class Player extends Playable {
         // Set the AI Intention to AI_INTENTION_IDLE
         getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 
-        // Check if the L2Object to pick up is a L2ItemInstance
+        // Check if the WorldObject to pick up is a L2ItemInstance
         if (!object.isItem()) {
             // dont try to pickup anything that is not an item :)
             LOGGER.warn(this + " trying to pickup wrong target." + getTarget());
@@ -4016,13 +4016,13 @@ public final class Player extends Playable {
      * <ul>
      * <li>Remove the Player from the _statusListener of the old target if it was a Creature</li>
      * <li>Add the Player to the _statusListener of the new target if it's a Creature</li>
-     * <li>Target the new L2Object (add the target to the Player _target, _knownObject and Player to _KnownObject of the L2Object)</li>
+     * <li>Target the new WorldObject (add the target to the Player _target, _knownObject and Player to _KnownObject of the WorldObject)</li>
      * </ul>
      *
-     * @param newTarget The L2Object to target
+     * @param newTarget The WorldObject to target
      */
     @Override
-    public void setTarget(L2Object newTarget) {
+    public void setTarget(WorldObject newTarget) {
         if (newTarget != null) {
             final boolean isInParty = (newTarget.isPlayer() && isInParty() && _party.containsPlayer(newTarget.getActingPlayer()));
 
@@ -4043,7 +4043,7 @@ public final class Player extends Playable {
         }
 
         // Get the current target
-        final L2Object oldTarget = getTarget();
+        final WorldObject oldTarget = getTarget();
 
         if (oldTarget != null) {
             if (oldTarget.equals(newTarget)) // no target change?
@@ -4091,7 +4091,7 @@ public final class Player extends Playable {
             broadcastPacket(new TargetUnselected(this));
         }
 
-        // Target the new L2Object (add the target to the Player _target, _knownObject and Player to _KnownObject of the L2Object)
+        // Target the new WorldObject (add the target to the Player _target, _knownObject and Player to _KnownObject of the WorldObject)
         super.setTarget(newTarget);
     }
 
@@ -6930,8 +6930,8 @@ public final class Player extends Playable {
         }
 
         // ************************************* Check Target *******************************************
-        // Create and set a L2Object containing the target of the skill
-        final L2Object target = skill.getTarget(this, forceUse, dontMove, true);
+        // Create and set a WorldObject containing the target of the skill
+        final WorldObject target = skill.getTarget(this, forceUse, dontMove, true);
         final Location worldPosition = _currentSkillWorldPosition;
 
         if ((skill.getTargetType() == TargetType.GROUND) && (worldPosition == null)) {
@@ -8800,7 +8800,7 @@ public final class Player extends Playable {
      * <li>Remove the Player from the world</li>
      * <li>Stop Party and Unsummon Pet</li>
      * <li>Update database with items in its inventory and remove them from the world</li>
-     * <li>Remove all L2Object from _knownObjects and _knownPlayer of the Creature then cancel Attak or Cast and notify AI</li>
+     * <li>Remove all WorldObject from _knownObjects and _knownPlayer of the Creature then cancel Attak or Cast and notify AI</li>
      * <li>Close the connection with the client</li>
      * </ul>
      * <br>

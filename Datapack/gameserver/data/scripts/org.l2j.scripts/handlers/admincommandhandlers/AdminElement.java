@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
@@ -113,7 +113,7 @@ public class AdminElement implements IAdminCommandHandler
 	private void setElement(Player activeChar, AttributeType type, int value, int armorType)
 	{
 		// get the target
-		L2Object target = activeChar.getTarget();
+		WorldObject target = activeChar.getTarget();
 		if (target == null)
 		{
 			target = activeChar;

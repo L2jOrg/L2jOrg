@@ -20,7 +20,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.Movie;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
@@ -267,7 +267,7 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			try
 			{
-				final L2Object target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				Creature player = null;
 				if (target.isCharacter())
 				{
@@ -301,7 +301,7 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			try
 			{
-				final L2Object target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				Creature player = null;
 				if (target.isCharacter())
 				{
@@ -326,7 +326,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			try
 			{
-				final L2Object target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				Creature player = null;
 				if (target.isCharacter())
 				{
@@ -342,7 +342,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			try
 			{
-				final L2Object target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				Creature player = null;
 				if (target.isCharacter())
 				{
@@ -407,7 +407,7 @@ public class AdminEffects implements IAdminCommandHandler
 			try
 			{
 				String target = null;
-				L2Object obj = activeChar.getTarget();
+				WorldObject obj = activeChar.getTarget();
 				if (st.countTokens() == 2)
 				{
 					final int social = Integer.parseInt(st.nextToken());
@@ -427,7 +427,7 @@ public class AdminEffects implements IAdminCommandHandler
 							try
 							{
 								final int radius = Integer.parseInt(target);
-								L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2Object.class, radius, object -> performSocial(social, object, activeChar));
+								L2World.getInstance().forEachVisibleObjectInRange(activeChar, WorldObject.class, radius, object -> performSocial(social, object, activeChar));
 								activeChar.sendMessage(radius + " units radius affected by your request.");
 							}
 							catch (NumberFormatException nbe)
@@ -498,12 +498,12 @@ public class AdminEffects implements IAdminCommandHandler
 				
 				if (radius > 0)
 				{
-					L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2Object.class, radius, object -> performAbnormalVisualEffect(ave, object));
+					L2World.getInstance().forEachVisibleObjectInRange(activeChar, WorldObject.class, radius, object -> performAbnormalVisualEffect(ave, object));
 					BuilderUtil.sendSysMessage(activeChar, "Affected all characters in radius " + param2 + " by " + param1 + " abnormal visual effect.");
 				}
 				else
 				{
-					final L2Object obj = activeChar.getTarget() != null ? activeChar.getTarget() : activeChar;
+					final WorldObject obj = activeChar.getTarget() != null ? activeChar.getTarget() : activeChar;
 					if (performAbnormalVisualEffect(ave, obj))
 					{
 						activeChar.sendMessage(obj.getName() + " affected by " + param1 + " abnormal visual effect.");
@@ -554,7 +554,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			try
 			{
-				L2Object obj = activeChar.getTarget();
+				WorldObject obj = activeChar.getTarget();
 				int level = 1;
 				int hittime = 1;
 				final int skill = Integer.parseInt(st.nextToken());
@@ -586,7 +586,7 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_set_displayeffect"))
 		{
-			final L2Object target = activeChar.getTarget();
+			final WorldObject target = activeChar.getTarget();
 			if (!(target instanceof L2Npc))
 			{
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -646,7 +646,7 @@ public class AdminEffects implements IAdminCommandHandler
 	 * @param target the target
 	 * @return {@code true} if target's abnormal state was affected, {@code false} otherwise.
 	 */
-	private boolean performAbnormalVisualEffect(AbnormalVisualEffect ave, L2Object target)
+	private boolean performAbnormalVisualEffect(AbnormalVisualEffect ave, WorldObject target)
 	{
 		if (target.isCharacter())
 		{
@@ -664,7 +664,7 @@ public class AdminEffects implements IAdminCommandHandler
 		return false;
 	}
 	
-	private boolean performSocial(int action, L2Object target, Player activeChar)
+	private boolean performSocial(int action, WorldObject target, Player activeChar)
 	{
 		try
 		{

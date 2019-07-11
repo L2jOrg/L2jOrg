@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2ArtefactInstance;
@@ -59,7 +59,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 				final int bottomRightY = (((y - L2World.TILE_ZERO_COORD_Y) * L2World.TILE_SIZE) + L2World.TILE_SIZE) - 1;
 				BuilderUtil.sendSysMessage(activeChar, "GeoMap: " + x + "_" + y + " (" + topLeftX + "," + topLeftY + " to " + bottomRightX + "," + bottomRightY + ")");
 				final List<Integer> results = new ArrayList<>();
-				for (L2Object obj : L2World.getInstance().getVisibleObjects())
+				for (WorldObject obj : L2World.getInstance().getVisibleObjects())
 				{
 					if (obj.isNpc() //
 						&& !obj.isMonster() //
@@ -86,7 +86,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Missing htmls for the whole world.");
 				final List<Integer> results = new ArrayList<>();
-				for (L2Object obj : L2World.getInstance().getVisibleObjects())
+				for (WorldObject obj : L2World.getInstance().getVisibleObjects())
 				{
 					if (obj.isNpc() //
 						&& !obj.isMonster() //

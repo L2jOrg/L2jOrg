@@ -20,7 +20,7 @@ import java.util.StringTokenizer;
 
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -88,7 +88,7 @@ public class AdminGeodata implements IAdminCommandHandler
 			}
 			case "admin_geo_can_move":
 			{
-				final L2Object target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				if (target != null)
 				{
 					if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
@@ -108,7 +108,7 @@ public class AdminGeodata implements IAdminCommandHandler
 			}
 			case "admin_geo_can_see":
 			{
-				final L2Object target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				if (target != null)
 				{
 					if (GeoEngine.getInstance().canSeeTarget(activeChar, target))

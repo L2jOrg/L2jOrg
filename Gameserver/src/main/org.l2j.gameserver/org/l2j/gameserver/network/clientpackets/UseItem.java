@@ -11,7 +11,7 @@ import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -71,7 +71,7 @@ public final class UseItem extends ClientPacket {
         if (item == null) {
             // gm can use other player item
             if (activeChar.isGM()) {
-                final L2Object obj = L2World.getInstance().findObject(_objectId);
+                final WorldObject obj = L2World.getInstance().findObject(_objectId);
                 if (obj.isItem()) {
                     AdminCommandHandler.getInstance().useAdminCommand(activeChar, "admin_use_item " + _objectId, true);
                 }

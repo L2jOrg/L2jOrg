@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
@@ -44,7 +44,7 @@ public class AdminTargetSay implements IAdminCommandHandler
 		{
 			try
 			{
-				final L2Object obj = activeChar.getTarget();
+				final WorldObject obj = activeChar.getTarget();
 				if ((obj instanceof L2StaticObjectInstance) || !obj.isCharacter())
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);

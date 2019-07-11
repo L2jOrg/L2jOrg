@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.PetitionManager;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -101,7 +101,7 @@ public class AdminPetition implements IAdminCommandHandler
 		{
 			try
 			{
-				final L2Object targetChar = activeChar.getTarget();
+				final WorldObject targetChar = activeChar.getTarget();
 				if ((targetChar == null) || !targetChar.isPlayer())
 				{
 					activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);

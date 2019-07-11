@@ -8,7 +8,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.AISkillScope;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.AggroInfo;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
@@ -210,7 +210,7 @@ public class L2AttackableAI extends L2CharacterAI {
     }
 
     @Override
-    protected void changeIntentionToCast(Skill skill, L2Object target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
+    protected void changeIntentionToCast(Skill skill, WorldObject target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
         // Set the AI cast target
         setTarget(target);
         super.changeIntentionToCast(skill, target, item, forceUse, dontMove);
@@ -245,7 +245,7 @@ public class L2AttackableAI extends L2CharacterAI {
     }
 
     protected void thinkCast() {
-        final L2Object target = _skill.getTarget(_actor, getTarget(), _forceUse, _dontMove, false);
+        final WorldObject target = _skill.getTarget(_actor, getTarget(), _forceUse, _dontMove, false);
         if (checkTargetLost(target)) {
             return;
         }
@@ -267,7 +267,7 @@ public class L2AttackableAI extends L2CharacterAI {
      */
     protected void thinkActive() {
         final L2Attackable npc = getActiveChar();
-        L2Object target = getTarget();
+        WorldObject target = getTarget();
         // Update every 1s the _globalAggro counter to come close to 0
         if (_globalAggro != 0) {
             if (_globalAggro < 0) {
@@ -445,7 +445,7 @@ public class L2AttackableAI extends L2CharacterAI {
      * <ul>
      * <li>Update the attack timeout if actor is running</li>
      * <li>If target is dead or timeout is expired, stop this attack and set the Intention to AI_INTENTION_ACTIVE</li>
-     * <li>Call all L2Object of its Faction inside the Faction Range</li>
+     * <li>Call all WorldObject of its Faction inside the Faction Range</li>
      * <li>Chose a target and order to attack it with magic skill or physical attack</li>
      * </ul>
      * TODO: Manage casting rules to healer mobs (like Ant Nurses)
@@ -484,12 +484,12 @@ public class L2AttackableAI extends L2CharacterAI {
 
         final int collision = npc.getTemplate().getCollisionRadius();
 
-        // Handle all L2Object of its Faction inside the Faction Range
+        // Handle all WorldObject of its Faction inside the Faction Range
 
         final Set<Integer> clans = getActiveChar().getTemplate().getClans();
         if ((clans != null) && !clans.isEmpty()) {
             final int factionRange = npc.getTemplate().getClanHelpRange() + collision;
-            // Go through all L2Object that belong to its faction
+            // Go through all WorldObject that belong to its faction
             try {
                 final Creature finalTarget = target;
                 L2World.getInstance().forEachVisibleObjectInRange(npc, L2Npc.class, factionRange, called ->
@@ -498,7 +498,7 @@ public class L2AttackableAI extends L2CharacterAI {
                         return;
                     }
 
-                    // Check if the L2Object is inside the Faction Range of the actor
+                    // Check if the WorldObject is inside the Faction Range of the actor
                     if (called.hasAI()) {
                         if ((Math.abs(finalTarget.getZ() - called.getZ()) < 600) && npc.getAttackByList().stream().anyMatch(o -> o.get() == finalTarget) && ((called.getAI()._intention == CtrlIntention.AI_INTENTION_IDLE) || (called.getAI()._intention == CtrlIntention.AI_INTENTION_ACTIVE))) {
                             if (finalTarget.isPlayable()) {
@@ -731,7 +731,7 @@ public class L2AttackableAI extends L2CharacterAI {
         _actor.doAutoAttack(target);
     }
 
-    private boolean checkSkillTarget(Skill skill, L2Object target) {
+    private boolean checkSkillTarget(Skill skill, WorldObject target) {
         if (target == null) {
             return false;
         }
@@ -776,7 +776,7 @@ public class L2AttackableAI extends L2CharacterAI {
         return true;
     }
 
-    private boolean checkTarget(L2Object target) {
+    private boolean checkTarget(WorldObject target) {
         if (target == null) {
             return false;
         }
@@ -919,7 +919,7 @@ public class L2AttackableAI extends L2CharacterAI {
     @Override
     protected void onEvtAttacked(Creature attacker) {
         final L2Attackable me = getActiveChar();
-        final L2Object target = getTarget();
+        final WorldObject target = getTarget();
         // Calculate the attack timeout
         _attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getInstance().getGameTicks();
 
@@ -1019,13 +1019,13 @@ public class L2AttackableAI extends L2CharacterAI {
     }
 
     @Override
-    public L2Object getTarget() {
+    public WorldObject getTarget() {
         // NPCs share their regular target with AI target.
         return _actor.getTarget();
     }
 
     @Override
-    public void setTarget(L2Object target) {
+    public void setTarget(WorldObject target) {
         // NPCs share their regular target with AI target.
         _actor.setTarget(target);
     }

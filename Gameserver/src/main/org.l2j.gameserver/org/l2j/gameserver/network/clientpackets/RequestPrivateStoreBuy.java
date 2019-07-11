@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.ItemRequest;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.L2Npc;
@@ -85,7 +85,7 @@ public final class RequestPrivateStoreBuy extends ClientPacket {
             return;
         }
 
-        final L2Object object = L2World.getInstance().getPlayer(_storePlayerId);
+        final WorldObject object = L2World.getInstance().getPlayer(_storePlayerId);
         if ((object == null) || player.isCursedWeaponEquipped()) {
             return;
         }

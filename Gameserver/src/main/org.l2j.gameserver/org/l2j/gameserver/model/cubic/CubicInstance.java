@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.cubic;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
@@ -89,7 +89,7 @@ public class CubicInstance {
 
     private void actionToCurrentTarget() {
         final CubicSkill skill = chooseSkill();
-        final L2Object target = _owner.getTarget();
+        final WorldObject target = _owner.getTarget();
         if ((skill != null) && (target != null)) {
             tryToUseSkill(target, skill);
         }
@@ -100,7 +100,7 @@ public class CubicInstance {
         if (skill != null) {
             switch (skill.getTargetType()) {
                 case TARGET: {
-                    final L2Object target = _owner.getTarget();
+                    final WorldObject target = _owner.getTarget();
                     if (target != null) {
                         tryToUseSkill(target, skill);
                     }
@@ -155,7 +155,7 @@ public class CubicInstance {
         }
     }
 
-    private void tryToUseSkill(L2Object target, CubicSkill cubicSkill) {
+    private void tryToUseSkill(WorldObject target, CubicSkill cubicSkill) {
         final Skill skill = cubicSkill.getSkill();
         if ((_template.getTargetType() != CubicTargetType.MASTER) && !((_template.getTargetType() == CubicTargetType.BY_SKILL) && (cubicSkill.getTargetType() == CubicTargetType.MASTER))) {
             target = skill.getTarget(_owner, target, false, false, false);
@@ -174,7 +174,7 @@ public class CubicInstance {
         }
     }
 
-    private void activateCubicSkill(Skill skill, L2Object target) {
+    private void activateCubicSkill(Skill skill, WorldObject target) {
         if (!_owner.hasSkillReuse(skill.getReuseHashCode())) {
             _caster.broadcastPacket(new MagicSkillUse(_owner, target, skill.getDisplayId(), skill.getDisplayLevel(), skill.getHitTime(), skill.getReuseDelay()));
             skill.activateSkill(this, target);

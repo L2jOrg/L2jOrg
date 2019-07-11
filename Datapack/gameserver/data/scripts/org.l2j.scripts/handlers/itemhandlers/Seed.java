@@ -22,7 +22,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Seed;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.L2ChestInstance;
@@ -52,7 +52,7 @@ public class Seed implements IItemHandler
 			return false;
 		}
 		
-		final L2Object tgt = playable.getTarget();
+		final WorldObject tgt = playable.getTarget();
 		if (!tgt.isNpc())
 		{
 			playable.sendPacket(SystemMessageId.INVALID_TARGET);

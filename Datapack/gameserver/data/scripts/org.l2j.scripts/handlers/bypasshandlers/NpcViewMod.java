@@ -23,7 +23,7 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.DropType;
 import org.l2j.gameserver.handler.IBypassHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
@@ -71,7 +71,7 @@ public class NpcViewMod implements IBypassHandler
 		{
 			case "view":
 			{
-				final L2Object target;
+				final WorldObject target;
 				if (st.hasMoreElements())
 				{
 					try
@@ -109,7 +109,7 @@ public class NpcViewMod implements IBypassHandler
 				try
 				{
 					final DropType dropListType = Enum.valueOf(DropType.class, dropListTypeString);
-					final L2Object target = L2World.getInstance().findObject(Integer.parseInt(st.nextToken()));
+					final WorldObject target = L2World.getInstance().findObject(Integer.parseInt(st.nextToken()));
 					final L2Npc npc = target instanceof L2Npc ? (L2Npc) target : null;
 					if (npc == null)
 					{
@@ -131,7 +131,7 @@ public class NpcViewMod implements IBypassHandler
 			}
 			case "skills":
 			{
-				final L2Object target;
+				final WorldObject target;
 				if (st.hasMoreElements())
 				{
 					try
@@ -159,7 +159,7 @@ public class NpcViewMod implements IBypassHandler
 			}
 			case "aggrolist":
 			{
-				final L2Object target;
+				final WorldObject target;
 				if (st.hasMoreElements())
 				{
 					try

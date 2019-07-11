@@ -55,18 +55,18 @@ public class SkillCaster implements Runnable {
     private static final Logger LOGGER = LoggerFactory.getLogger(SkillCaster.class);
 
     private final WeakReference<Creature> _caster;
-    private final WeakReference<L2Object> _target;
+    private final WeakReference<WorldObject> _target;
     private final Skill _skill;
     private final L2ItemInstance _item;
     private final SkillCastingType _castingType;
     private int _hitTime;
     private int _cancelTime;
     private int _coolTime;
-    private Collection<L2Object> _targets;
+    private Collection<WorldObject> _targets;
     private ScheduledFuture<?> _task;
     private int _phase;
 
-    private SkillCaster(Creature caster, L2Object target, Skill skill, L2ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed) {
+    private SkillCaster(Creature caster, WorldObject target, Skill skill, L2ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed) {
         Objects.requireNonNull(caster);
         Objects.requireNonNull(skill);
         Objects.requireNonNull(castingType);
@@ -92,7 +92,7 @@ public class SkillCaster implements Runnable {
      * @param shiftPressed dont move while casting
      * @return {@code SkillCaster} object containing casting data if casting has started or {@code null} if casting was not started.
      */
-    public static SkillCaster castSkill(Creature caster, L2Object target, Skill skill, L2ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed) {
+    public static SkillCaster castSkill(Creature caster, WorldObject target, Skill skill, L2ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed) {
         return castSkill(caster, target, skill, item, castingType, ctrlPressed, shiftPressed, -1);
     }
 
@@ -109,7 +109,7 @@ public class SkillCaster implements Runnable {
      * @param castTime     custom cast time in milliseconds or -1 for default.
      * @return {@code SkillCaster} object containing casting data if casting has started or {@code null} if casting was not started.
      */
-    public static SkillCaster castSkill(Creature caster, L2Object target, Skill skill, L2ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed, int castTime) {
+    public static SkillCaster castSkill(Creature caster, WorldObject target, Skill skill, L2ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed, int castTime) {
         if ((caster == null) || (skill == null) || (castingType == null)) {
             return null;
         }
@@ -140,7 +140,7 @@ public class SkillCaster implements Runnable {
         return skillCaster;
     }
 
-    public static void callSkill(Creature caster, L2Object target, Collection<L2Object> targets, Skill skill, L2ItemInstance item) {
+    public static void callSkill(Creature caster, WorldObject target, Collection<WorldObject> targets, Skill skill, L2ItemInstance item) {
         // Launch the magic skill in order to calculate its effects
         try {
             // Mobius: Disabled characters should not be able to finish bad skills.
@@ -154,7 +154,7 @@ public class SkillCaster implements Runnable {
             }
 
             // Initial checks
-            for (L2Object obj : targets) {
+            for (WorldObject obj : targets) {
                 if ((obj == null) || !obj.isCharacter()) {
                     continue;
                 }
@@ -194,11 +194,11 @@ public class SkillCaster implements Runnable {
             }
 
             // Launch the magic skill and calculate its effects
-            skill.activateSkill(caster, item, targets.toArray(new L2Object[0]));
+            skill.activateSkill(caster, item, targets.toArray(new WorldObject[0]));
 
             final Player player = caster.getActingPlayer();
             if (player != null) {
-                for (L2Object obj : targets) {
+                for (WorldObject obj : targets) {
                     if (!obj.isCharacter()) {
                         continue;
                     }
@@ -239,7 +239,7 @@ public class SkillCaster implements Runnable {
                 // Mobs in range 1000 see spell
                 L2World.getInstance().forEachVisibleObjectInRange(player, L2Npc.class, 1000, npcMob ->
                 {
-                    EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npcMob, player, skill, caster.isSummon(), targets.toArray(new L2Object[0])), npcMob);
+                    EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npcMob, player, skill, caster.isSummon(), targets.toArray(new WorldObject[0])), npcMob);
 
                     // On Skill See logic
                     if (npcMob.isAttackable()) {
@@ -247,8 +247,8 @@ public class SkillCaster implements Runnable {
 
                         if (skill.getEffectPoint() > 0) {
                             if (attackable.hasAI() && (attackable.getAI().getIntention() == AI_INTENTION_ATTACK)) {
-                                final L2Object npcTarget = attackable.getTarget();
-                                for (L2Object skillTarget : targets) {
+                                final WorldObject npcTarget = attackable.getTarget();
+                                for (WorldObject skillTarget : targets) {
                                     if ((npcTarget == skillTarget) || (npcMob == skillTarget)) {
                                         final Creature originalCaster = caster.isSummon() ? caster : player;
                                         attackable.addDamageHate(originalCaster, 0, (skill.getEffectPoint() * 150) / (attackable.getLevel() + 7));
@@ -268,7 +268,7 @@ public class SkillCaster implements Runnable {
         triggerCast(activeChar, target, skill, null, true);
     }
 
-    public static void triggerCast(Creature activeChar, L2Object target, Skill skill, L2ItemInstance item, boolean ignoreTargetType) {
+    public static void triggerCast(Creature activeChar, WorldObject target, Skill skill, L2ItemInstance item, boolean ignoreTargetType) {
         try {
             if ((activeChar == null) || (skill == null)) {
                 return;
@@ -284,13 +284,13 @@ public class SkillCaster implements Runnable {
                 }
 
                 if (!ignoreTargetType) {
-                    final L2Object objTarget = skill.getTarget(activeChar, false, false, false);
+                    final WorldObject objTarget = skill.getTarget(activeChar, false, false, false);
                     if (objTarget != null && objTarget.isCharacter()) {
                         target = objTarget;
                     }
                 }
 
-                final L2Object[] targets = skill.getTargetsAffected(activeChar, target).toArray(new L2Object[0]);
+                final WorldObject[] targets = skill.getTargetsAffected(activeChar, target).toArray(new WorldObject[0]);
 
                 if (!skill.isNotBroadcastable()) {
                     activeChar.broadcastPacket(new MagicSkillUse(activeChar, target, skill.getDisplayId(), skill.getLevel(), 0, 0));
@@ -489,7 +489,7 @@ public class SkillCaster implements Runnable {
 
     public boolean startCasting() {
         final Creature caster = _caster.get();
-        final L2Object target = _target.get();
+        final WorldObject target = _target.get();
 
         if ((caster == null) || (target == null)) {
             return false;
@@ -633,7 +633,7 @@ public class SkillCaster implements Runnable {
 
     public boolean launchSkill() {
         final Creature caster = _caster.get();
-        final L2Object target = _target.get();
+        final WorldObject target = _target.get();
 
         if ((caster == null) || (target == null)) {
             return false;
@@ -663,7 +663,7 @@ public class SkillCaster implements Runnable {
 
     public boolean finishSkill() {
         final Creature caster = _caster.get();
-        final L2Object target = _target.get();
+        final WorldObject target = _target.get();
 
         if ((caster == null) || (target == null)) {
             return false;
@@ -758,7 +758,7 @@ public class SkillCaster implements Runnable {
         }
 
         final Creature caster = _caster.get();
-        final L2Object target = _target.get();
+        final WorldObject target = _target.get();
         if (caster == null) {
             return;
         }
@@ -842,7 +842,7 @@ public class SkillCaster implements Runnable {
     /**
      * @return the target this skill is being cast on.
      */
-    public L2Object getTarget() {
+    public WorldObject getTarget() {
         return _target.get();
     }
 
@@ -884,7 +884,7 @@ public class SkillCaster implements Runnable {
         return super.toString() + " [caster: " + _caster.get() + " skill: " + _skill + " target: " + _target.get() + " type: " + _castingType + "]";
     }
 
-    private void handleSkillFly(Creature creature, L2Object target) {
+    private void handleSkillFly(Creature creature, WorldObject target) {
         int x = 0;
         int y = 0;
         int z = 0;

@@ -5,7 +5,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
@@ -139,7 +139,7 @@ public final class GameUtils {
      * @param includeZAxis
      * @return {@code true} if the two objects are within specified range between each other, {@code false} otherwise
      */
-    public static boolean checkIfInRange(int range, L2Object obj1, L2Object obj2, boolean includeZAxis) {
+    public static boolean checkIfInRange(int range, WorldObject obj1, WorldObject obj2, boolean includeZAxis) {
         if ((obj1 == null) || (obj2 == null) || (obj1.getInstanceWorld() != obj2.getInstanceWorld())) {
             return false;
         }
@@ -167,7 +167,7 @@ public final class GameUtils {
      * @param includeZAxis if true, check also Z axis (3-dimensional check), otherwise only 2D
      * @return {@code true} if objects are within specified range between each other, {@code false} otherwise
      */
-    public static boolean checkIfInShortRange(int range, L2Object obj1, L2Object obj2, boolean includeZAxis) {
+    public static boolean checkIfInShortRange(int range, WorldObject obj1, WorldObject obj2, boolean includeZAxis) {
         if ((obj1 == null) || (obj2 == null)) {
             return false;
         }
@@ -501,8 +501,8 @@ public final class GameUtils {
         activeChar.sendPacket(new ShowBoard(Arrays.asList("0", "0", "0", "0", "0", "0", activeChar.getName(), Integer.toString(activeChar.getObjectId()), activeChar.getAccountName(), "9", " ", " ", text.replaceAll("<br>", Config.EOL), "0", "0", "0", "0")));
     }
 
-    public static boolean isInsideRangeOfObjectId(L2Object obj, int targetObjId, int radius) {
-        final L2Object target = L2World.getInstance().findObject(targetObjId);
+    public static boolean isInsideRangeOfObjectId(WorldObject obj, int targetObjId, int radius) {
+        final WorldObject target = L2World.getInstance().findObject(targetObjId);
         return (target != null) && (obj.calculateDistance3D(target) <= radius);
     }
 

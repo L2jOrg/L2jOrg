@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -139,7 +139,7 @@ public class AbnormalTimeChange extends AbstractEffect
 		// @formatter:off
 		effected.getStatus().getStatusListener().stream()
 			.filter(Objects::nonNull)
-			.filter(L2Object::isPlayer)
+			.filter(WorldObject::isPlayer)
 			.map(Creature::getActingPlayer)
 			.forEach(upd::sendTo);
 		// @formatter:on

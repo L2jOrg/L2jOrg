@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.events.impl.character;
 
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
@@ -15,9 +15,9 @@ public class OnCreatureSkillFinishCast implements IBaseEvent {
     private final Creature _caster;
     private final Skill _skill;
     private final boolean _simultaneously;
-    private final L2Object _target;
+    private final WorldObject _target;
 
-    public OnCreatureSkillFinishCast(Creature caster, L2Object target, Skill skill, boolean simultaneously) {
+    public OnCreatureSkillFinishCast(Creature caster, WorldObject target, Skill skill, boolean simultaneously) {
         _caster = caster;
         _skill = skill;
         _simultaneously = simultaneously;
@@ -28,7 +28,7 @@ public class OnCreatureSkillFinishCast implements IBaseEvent {
         return _caster;
     }
 
-    public final L2Object getTarget() {
+    public final WorldObject getTarget() {
         return _target;
     }
 

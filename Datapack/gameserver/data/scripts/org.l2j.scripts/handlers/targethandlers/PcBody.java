@@ -18,7 +18,7 @@ package handlers.targethandlers;
 
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.ITargetTypeHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -41,7 +41,7 @@ public class PcBody implements ITargetTypeHandler
 	}
 	
 	@Override
-	public L2Object getTarget(Creature activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
 		if (selectedTarget == null)
 		{

@@ -21,7 +21,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.NextAction;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSocialAction;
@@ -113,7 +113,7 @@ public final class SocialAction implements IPlayerActionHandler
 			return;
 		}
 		
-		final L2Object target = player.getTarget();
+		final WorldObject target = player.getTarget();
 		if ((target == null))
 		{
 			player.sendPacket(SystemMessageId.INVALID_TARGET);

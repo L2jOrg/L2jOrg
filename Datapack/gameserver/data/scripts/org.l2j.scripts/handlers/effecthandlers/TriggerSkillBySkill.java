@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.handler.TargetHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -106,7 +106,7 @@ public final class TriggerSkillBySkill extends AbstractEffect
 			}
 		}
 		
-		L2Object target = null;
+		WorldObject target = null;
 		try
 		{
 			target = TargetHandler.getInstance().getHandler(_targetType).getTarget(event.getCaster(), event.getTarget(), triggerSkill, false, false, false);

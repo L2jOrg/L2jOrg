@@ -25,13 +25,13 @@ import java.lang.ref.WeakReference;
  * @author UnAfraid
  */
 public class Hit {
-    private final WeakReference<L2Object> _target;
+    private final WeakReference<WorldObject> _target;
     private final int _targetId;
     private final int _damage;
     private final int _ssGrade;
     private int _flags = 0;
 
-    public Hit(L2Object target, int damage, boolean miss, boolean crit, byte shld, boolean soulshot, int ssGrade) {
+    public Hit(WorldObject target, int damage, boolean miss, boolean crit, byte shld, boolean soulshot, int ssGrade) {
         _target = new WeakReference<>(target);
         _targetId = target.getObjectId();
         _damage = damage;
@@ -59,7 +59,7 @@ public class Hit {
         _flags |= type.getMask();
     }
 
-    public L2Object getTarget() {
+    public WorldObject getTarget() {
         return _target.get();
     }
 

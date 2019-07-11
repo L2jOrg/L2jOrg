@@ -26,7 +26,7 @@ public class Location implements IPositionable {
         _heading = heading;
     }
 
-    public Location(L2Object obj) {
+    public Location(WorldObject obj) {
         this(obj.getX(), obj.getY(), obj.getZ(), obj.getHeading());
     }
 

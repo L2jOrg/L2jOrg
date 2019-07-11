@@ -504,11 +504,11 @@ public abstract class Summon extends Playable {
         }
 
         // Get the target for the skill
-        final L2Object target;
+        final WorldObject target;
         if (skill.getTargetType() == TargetType.OWNER_PET) {
             target = _owner;
         } else {
-            final L2Object currentTarget = _owner.getTarget();
+            final WorldObject currentTarget = _owner.getTarget();
             if (currentTarget != null)
             {
                 target = skill.getTarget(this, forceUse && (!currentTarget.isPlayable() || !currentTarget.isInsideZone(ZoneId.PEACE)), dontMove, false);
@@ -751,7 +751,7 @@ public abstract class Summon extends Playable {
      *
      * @param target the target to attack.
      */
-    public void doAttack(L2Object target) {
+    public void doAttack(WorldObject target) {
         if (_owner != null) {
             if (target != null) {
                 setTarget(target);
@@ -767,7 +767,7 @@ public abstract class Summon extends Playable {
      * @param ctrlPressed {@code true} if Ctrl key is pressed
      * @return {@code true} if the summon can attack, {@code false} otherwise
      */
-    public final boolean canAttack(L2Object target, boolean ctrlPressed) {
+    public final boolean canAttack(WorldObject target, boolean ctrlPressed) {
         if (_owner == null) {
             return false;
         }

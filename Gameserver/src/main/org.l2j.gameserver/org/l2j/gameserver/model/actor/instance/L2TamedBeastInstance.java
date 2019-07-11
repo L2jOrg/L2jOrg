@@ -6,7 +6,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -370,7 +370,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance {
 
                 // if the owner has enough food, call the item handler (use the food and triffer all necessary actions)
                 if ((item != null) && (item.getCount() >= 1)) {
-                    final L2Object oldTarget = owner.getTarget();
+                    final WorldObject oldTarget = owner.getTarget();
                     owner.setTarget(_tamedBeast);
 
                     // emulate a call to the owner using food, but bypass all checks for range, etc

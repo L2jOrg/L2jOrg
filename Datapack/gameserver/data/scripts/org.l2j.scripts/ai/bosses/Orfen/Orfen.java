@@ -16,20 +16,18 @@
  */
 package ai.bosses.Orfen;
 
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
-
+import ai.AbstractNpcAI;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Attackable;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -40,7 +38,8 @@ import org.l2j.gameserver.model.zone.L2ZoneType;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 
-import ai.AbstractNpcAI;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Orfen's AI
@@ -238,7 +237,7 @@ public final class Orfen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, Player caster, Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(L2Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (npc.getId() == ORFEN)
 		{

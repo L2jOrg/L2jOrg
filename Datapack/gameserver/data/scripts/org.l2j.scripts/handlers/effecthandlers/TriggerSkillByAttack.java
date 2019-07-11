@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.TargetHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -138,7 +138,7 @@ public final class TriggerSkillByAttack extends AbstractEffect
 		}
 		
 		final Skill triggerSkill = _skill.getSkill();
-		L2Object target = null;
+		WorldObject target = null;
 		try
 		{
 			target = TargetHandler.getInstance().getHandler(_targetType).getTarget(event.getAttacker(), event.getTarget(), triggerSkill, false, false, false);

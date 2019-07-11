@@ -59,7 +59,7 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  * @version $Revision: 1.4.2.1.2.11 $ $Date: 2005/03/31 16:07:50 $
  */
-public final class L2ItemInstance extends L2Object {
+public final class L2ItemInstance extends WorldObject {
     public static final int UNCHANGED = 0;
     public static final int ADDED = 1;
     public static final int REMOVED = 3;
@@ -233,7 +233,7 @@ public final class L2ItemInstance extends L2Object {
      * <B><U> Actions</U> :</B><BR>
      * <BR>
      * <li>Send a Server->Client Packet GetItem to player that pick up and its _knowPlayers member</li>
-     * <li>Remove the L2Object from the world</li><BR>
+     * <li>Remove the WorldObject from the world</li><BR>
      * <BR>
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of L2World </B></FONT><BR>
      * <BR>
@@ -305,14 +305,14 @@ public final class L2ItemInstance extends L2Object {
 
         if ((creator != null) && creator.isGM()) {
             String referenceName = "no-reference";
-            if (reference instanceof L2Object) {
-                referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
+            if (reference instanceof WorldObject) {
+                referenceName = (((WorldObject) reference).getName() != null ? ((WorldObject) reference).getName() : "no-name");
             } else if (reference instanceof String) {
                 referenceName = (String) reference;
             }
             final String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
             if (Config.GMAUDIT) {
-                GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + _itemId + " name: " + getName() + ")", targetName, "L2Object referencing this action is: " + referenceName);
+                GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + _itemId + " name: " + getName() + ")", targetName, "WorldObject referencing this action is: " + referenceName);
             }
         }
     }
@@ -461,14 +461,14 @@ public final class L2ItemInstance extends L2Object {
 
         if ((creator != null) && creator.isGM()) {
             String referenceName = "no-reference";
-            if (reference instanceof L2Object) {
-                referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
+            if (reference instanceof WorldObject) {
+                referenceName = (((WorldObject) reference).getName() != null ? ((WorldObject) reference).getName() : "no-name");
             } else if (reference instanceof String) {
                 referenceName = (String) reference;
             }
             final String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
             if (Config.GMAUDIT) {
-                GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + _itemId + " objId: " + getObjectId() + " name: " + getName() + " count: " + count + ")", targetName, "L2Object referencing this action is: " + referenceName);
+                GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + _itemId + " objId: " + getObjectId() + " name: " + getName() + " count: " + count + ")", targetName, "WorldObject referencing this action is: " + referenceName);
             }
         }
     }

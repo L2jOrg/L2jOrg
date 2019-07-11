@@ -237,7 +237,7 @@ public class FortSiege implements Siegable {
      * @param object
      * @return true if object is inside the zone
      */
-    public boolean checkIfInZone(L2Object object) {
+    public boolean checkIfInZone(WorldObject object) {
         return checkIfInZone(object.getX(), object.getY(), object.getZ());
     }
 

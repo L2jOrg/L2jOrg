@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.StatusUpdateType;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -17,11 +17,11 @@ public final class StatusUpdate extends ServerPacket {
     private boolean _isVisible = false;
 
     /**
-     * Create {@link StatusUpdate} packet for given {@link L2Object}.
+     * Create {@link StatusUpdate} packet for given {@link WorldObject}.
      *
      * @param object
      */
-    public StatusUpdate(L2Object object) {
+    public StatusUpdate(WorldObject object) {
         _objectId = object.getObjectId();
         _isPlayable = object.isPlayable();
     }
@@ -40,7 +40,7 @@ public final class StatusUpdate extends ServerPacket {
         }
     }
 
-    public void addCaster(L2Object object) {
+    public void addCaster(WorldObject object) {
         _casterObjectId = object.getObjectId();
     }
 

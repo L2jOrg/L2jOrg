@@ -17,7 +17,7 @@
 package handlers.usercommandhandlers;
 
 import org.l2j.gameserver.handler.IUserCommandHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -43,7 +43,7 @@ public class OlympiadStat implements IUserCommandHandler
 		}
 		
 		final int nobleObjId = activeChar.getObjectId();
-		final L2Object target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer() || (target.getActingPlayer().getClassId().level() < 2))
 		{
 			activeChar.sendPacket(SystemMessageId.COMMAND_AVAILABLE_FOR_THOSE_WHO_HAVE_COMPLETED_2ND_CLASS_TRANSFER);

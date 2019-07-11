@@ -20,7 +20,7 @@ import java.util.StringTokenizer;
 
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -37,7 +37,7 @@ public class AdminLevel implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar)
 	{
-		final L2Object targetChar = activeChar.getTarget();
+		final WorldObject targetChar = activeChar.getTarget();
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken(); // Get actual command
 		

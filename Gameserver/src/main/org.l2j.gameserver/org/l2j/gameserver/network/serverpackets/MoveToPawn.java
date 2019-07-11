@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -16,7 +16,7 @@ public class MoveToPawn extends ServerPacket {
     private final int _ty;
     private final int _tz;
 
-    public MoveToPawn(Creature cha, L2Object target, int distance) {
+    public MoveToPawn(Creature cha, WorldObject target, int distance) {
         _charObjId = cha.getObjectId();
         _targetId = target.getObjectId();
         _distance = distance;

@@ -5,7 +5,7 @@ import org.l2j.commons.util.PropertiesParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TowerSpawn;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -176,7 +176,7 @@ public final class SiegeManager {
         return getSiege(loc.getX(), loc.getY(), loc.getZ());
     }
 
-    public final Siege getSiege(L2Object activeObject) {
+    public final Siege getSiege(WorldObject activeObject) {
         return getSiege(activeObject.getX(), activeObject.getY(), activeObject.getZ());
     }
 

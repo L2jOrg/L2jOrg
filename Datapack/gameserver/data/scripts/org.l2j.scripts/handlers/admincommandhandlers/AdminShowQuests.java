@@ -20,7 +20,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.enums.QuestType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.QuestManager;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
@@ -63,7 +63,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 	{
 		final String[] cmdParams = command.split(" ");
 		Player target = null;
-		L2Object targetObject = null;
+		WorldObject targetObject = null;
 		final String[] val = new String[4];
 		val[0] = null;
 		

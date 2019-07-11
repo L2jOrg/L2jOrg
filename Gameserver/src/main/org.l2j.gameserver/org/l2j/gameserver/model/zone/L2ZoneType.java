@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.zone;
 
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
@@ -322,7 +322,7 @@ public abstract class L2ZoneType extends ListenersContainer {
      * @param object
      * @return
      */
-    public boolean isInsideZone(L2Object object) {
+    public boolean isInsideZone(WorldObject object) {
         return isInsideZone(object.getX(), object.getY(), object.getZ());
     }
 
@@ -330,7 +330,7 @@ public abstract class L2ZoneType extends ListenersContainer {
         return _zone.getDistanceToZone(x, y);
     }
 
-    public double getDistanceToZone(L2Object object) {
+    public double getDistanceToZone(WorldObject object) {
         return _zone.getDistanceToZone(object.getX(), object.getY());
     }
 
@@ -503,8 +503,8 @@ public abstract class L2ZoneType extends ListenersContainer {
         //@formatter:off
         _characterList.values().stream()
                 .filter(Objects::nonNull)
-                .filter(L2Object::isPlayer)
-                .map(L2Object::getActingPlayer)
+                .filter(WorldObject::isPlayer)
+                .map(WorldObject::getActingPlayer)
                 .filter(Player::isOnline)
                 .forEach(player -> player.teleToLocation(TeleportWhereType.TOWN));
         //@formatter:off

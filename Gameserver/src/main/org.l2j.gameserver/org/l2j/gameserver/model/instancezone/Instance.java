@@ -8,7 +8,7 @@ import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.enums.InstanceReenterType;
 import org.l2j.gameserver.enums.InstanceTeleportType;
 import org.l2j.gameserver.instancemanager.InstanceManager;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.TeleportWhereType;
@@ -834,7 +834,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param object instance of object which enters/leaves instance
      * @param enter  {@code true} when object enter, {@code false} when object leave
      */
-    public void onInstanceChange(L2Object object, boolean enter) {
+    public void onInstanceChange(WorldObject object, boolean enter) {
         if (object.isPlayer()) {
             final Player player = object.getActingPlayer();
             if (enter) {

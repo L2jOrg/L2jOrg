@@ -9,7 +9,7 @@ import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
@@ -276,7 +276,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			else
 			{
-				final L2Object target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				if ((target != null) && target.isPlayer())
 				{
 					teleportHome(target.getActingPlayer());
@@ -361,7 +361,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	
 	private void showTeleportCharWindow(Player activeChar)
 	{
-		final L2Object target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		Player player = null;
 		if ((target != null) && target.isPlayer())
 		{
@@ -381,7 +381,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	
 	private void teleportCharacter(Player activeChar, String Cords)
 	{
-		final L2Object target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		Player player = null;
 		if ((target != null) && target.isPlayer())
 		{
@@ -440,7 +440,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 	}
 	
-	private void teleportToCharacter(Player activeChar, L2Object target)
+	private void teleportToCharacter(Player activeChar, WorldObject target)
 	{
 		if ((target == null) || !target.isPlayer())
 		{
@@ -493,7 +493,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	
 	private void recallNPC(Player activeChar)
 	{
-		final L2Object obj = activeChar.getTarget();
+		final WorldObject obj = activeChar.getTarget();
 		if ((obj instanceof L2Npc) && !((L2Npc) obj).isMinion() && !(obj instanceof L2RaidBossInstance) && !(obj instanceof L2GrandBossInstance))
 		{
 			final L2Npc target = (L2Npc) obj;

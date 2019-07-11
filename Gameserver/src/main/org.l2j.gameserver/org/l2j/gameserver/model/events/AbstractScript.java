@@ -11,7 +11,7 @@ import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.Movie;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.instancemanager.*;
-import org.l2j.gameserver.model.L2Object;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
@@ -2927,7 +2927,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param skill  the skill to cast
      * @param desire the desire to cast the skill
      */
-    protected void addSkillCastDesire(L2Npc npc, L2Object target, SkillHolder skill, int desire) {
+    protected void addSkillCastDesire(L2Npc npc, WorldObject target, SkillHolder skill, int desire) {
         addSkillCastDesire(npc, target, skill.getSkill(), desire);
     }
 
@@ -2939,7 +2939,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param skill  the skill to cast
      * @param desire the desire to cast the skill
      */
-    protected void addSkillCastDesire(L2Npc npc, L2Object target, Skill skill, int desire) {
+    protected void addSkillCastDesire(L2Npc npc, WorldObject target, Skill skill, int desire) {
         if (npc.isAttackable() && (target != null) && target.isCharacter()) {
             ((L2Attackable) npc).addDamageHate((Creature) target, 0, desire);
         }
