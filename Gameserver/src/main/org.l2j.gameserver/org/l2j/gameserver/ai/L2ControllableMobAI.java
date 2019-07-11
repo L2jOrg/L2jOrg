@@ -5,8 +5,8 @@ import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.MobGroup;
 import org.l2j.gameserver.model.MobGroupTable;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.L2ControllableMobInstance;
@@ -38,7 +38,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
     private boolean _isThinking; // to prevent thinking recursively
     private boolean _isNotMoving;
 
-    private L2Character _forcedTarget;
+    private Creature _forcedTarget;
     private MobGroup _targetGroup;
 
     public L2ControllableMobAI(L2ControllableMobInstance controllableMob) {
@@ -108,7 +108,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
     @Override
     protected void thinkCast() {
         L2Object target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
-        if ((target == null) || !target.isCharacter() || ((L2Character) target).isAlikeDead()) {
+        if ((target == null) || !target.isCharacter() || ((Creature) target).isAlikeDead()) {
             target = _skill.getTarget(_actor, findNextRndTarget(), _forceUse, _dontMove, false);
         }
 
@@ -140,7 +140,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
     }
 
     protected void thinkAttackGroup() {
-        final L2Character target = getForcedTarget();
+        final Creature target = getForcedTarget();
         if ((target == null) || target.isAlikeDead()) {
             // try to get next group target
             setForcedTarget(findNextGroupTarget());
@@ -220,7 +220,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
 
     @Override
     protected void thinkAttack() {
-        L2Character target = getForcedTarget();
+        Creature target = getForcedTarget();
         if ((target == null) || target.isAlikeDead()) {
             if (target != null) {
                 // stop hating
@@ -231,7 +231,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
             setIntention(AI_INTENTION_ACTIVE);
         } else {
             // notify aggression
-            final L2Character finalTarget = target;
+            final Creature finalTarget = target;
             if (((L2Npc) _actor).getTemplate().getClans() != null) {
                 L2World.getInstance().forEachVisibleObject(_actor, L2Npc.class, npc ->
                 {
@@ -268,7 +268,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
             }
 
             // Force mobs to attack anybody if confused.
-            L2Character hated;
+            Creature hated;
 
             if (_actor.isConfused()) {
                 hated = findNextRndTarget();
@@ -302,13 +302,13 @@ public final class L2ControllableMobAI extends L2AttackableAI {
 
     @Override
     protected void thinkActive() {
-        L2Character hated;
+        Creature hated;
 
         if (_actor.isConfused()) {
             hated = findNextRndTarget();
         } else {
             final L2Object target = _actor.getTarget();
-            hated = (target != null) && target.isCharacter() ? (L2Character) target : null;
+            hated = (target != null) && target.isCharacter() ? (Creature) target : null;
         }
 
         if (hated != null) {
@@ -317,7 +317,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
         }
     }
 
-    private boolean checkAutoAttackCondition(L2Character target) {
+    private boolean checkAutoAttackCondition(Creature target) {
         if ((target == null) || !_actor.isAttackable()) {
             return false;
         }
@@ -356,9 +356,9 @@ public final class L2ControllableMobAI extends L2AttackableAI {
         return me.isAggressive();
     }
 
-    private L2Character findNextRndTarget() {
-        final List<L2Character> potentialTarget = new ArrayList<>();
-        L2World.getInstance().forEachVisibleObject(_actor, L2Character.class, target ->
+    private Creature findNextRndTarget() {
+        final List<Creature> potentialTarget = new ArrayList<>();
+        L2World.getInstance().forEachVisibleObject(_actor, Creature.class, target ->
         {
             if (GameUtils.checkIfInShortRange(((L2Attackable) _actor).getAggroRange(), _actor, target, true) && checkAutoAttackCondition(target)) {
                 potentialTarget.add(target);
@@ -380,7 +380,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
         _alternateAI = _alternateai;
     }
 
-    public void forceAttack(L2Character target) {
+    public void forceAttack(Creature target) {
         setAlternateAI(AI_FORCEATTACK);
         setForcedTarget(target);
     }
@@ -400,7 +400,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
         moveTo(x, y, z);
     }
 
-    public void follow(L2Character target) {
+    public void follow(Creature target) {
         setAlternateAI(AI_FOLLOW);
         setForcedTarget(target);
     }
@@ -421,11 +421,11 @@ public final class L2ControllableMobAI extends L2AttackableAI {
         _isNotMoving = isNotMoving;
     }
 
-    private L2Character getForcedTarget() {
+    private Creature getForcedTarget() {
         return _forcedTarget;
     }
 
-    private void setForcedTarget(L2Character forcedTarget) {
+    private void setForcedTarget(Creature forcedTarget) {
         _forcedTarget = forcedTarget;
     }
 

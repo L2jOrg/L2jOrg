@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -54,7 +54,7 @@ public final class ResistSkill extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		for (SkillHolder holder : _skills)
 		{
@@ -63,7 +63,7 @@ public final class ResistSkill extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		for (SkillHolder holder : _skills)
 		{

@@ -19,7 +19,7 @@ package handlers.bypasshandlers;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.handler.IBypassHandler;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -35,7 +35,7 @@ public class Wear implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, L2Character target)
+	public boolean useBypass(String command, Player activeChar, Creature target)
 	{
 		if (!target.isNpc())
 		{

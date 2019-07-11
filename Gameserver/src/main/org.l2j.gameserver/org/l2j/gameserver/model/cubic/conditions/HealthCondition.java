@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.cubic.conditions;
 
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 
@@ -34,9 +34,9 @@ public class HealthCondition implements ICubicCondition {
     }
 
     @Override
-    public boolean test(CubicInstance cubic, L2Character owner, L2Object target) {
+    public boolean test(CubicInstance cubic, Creature owner, L2Object target) {
         if (target.isCharacter() || target.isDoor()) {
-            final double hpPer = (target.isDoor() ? (L2DoorInstance) target : (L2Character) target).getCurrentHpPercent();
+            final double hpPer = (target.isDoor() ? (L2DoorInstance) target : (Creature) target).getCurrentHpPercent();
             return (hpPer > _min) && (hpPer < _max);
         }
         return false;

@@ -8,7 +8,7 @@ import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
@@ -98,7 +98,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
     private long attributeExp;
 
     /**
-     * Constructor of L2Character.
+     * Constructor of Creature.
      *
      * @param set The StatsSet object to transfer data to the method
      */
@@ -622,7 +622,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
         return null;
     }
 
-    public Collection<ItemHolder> calculateDrops(DropType dropType, L2Character victim, L2Character killer) {
+    public Collection<ItemHolder> calculateDrops(DropType dropType, Creature victim, Creature killer) {
         var list = getDropList(dropType);
         if (isNull(list)) {
             return null;
@@ -697,7 +697,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
      * @param killer
      * @return ItemHolder
      */
-    private ItemHolder calculateDrop(DropHolder dropItem, L2Character victim, L2Character killer) {
+    private ItemHolder calculateDrop(DropHolder dropItem, Creature victim, Creature killer) {
         switch (dropItem.getDropType()) {
             case DROP:
             case LUCKY: {

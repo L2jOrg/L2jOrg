@@ -56,7 +56,7 @@ public final class L2WorldRegion {
                     // Stop movement.
                     mob.stopMove(null);
 
-                    // Stop all active skills effects in progress on the L2Character.
+                    // Stop all active skills effects in progress on the Creature.
                     mob.stopAllEffects();
 
                     mob.clearAggroList();

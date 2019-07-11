@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -219,7 +219,7 @@ public class AdminMenu implements IAdminCommandHandler
 	private void handleKill(Player activeChar, String player)
 	{
 		final L2Object obj = activeChar.getTarget();
-		L2Character target = (L2Character) obj;
+		Creature target = (Creature) obj;
 		String filename = "main_menu.htm";
 		if (player != null)
 		{

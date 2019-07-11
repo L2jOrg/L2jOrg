@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.enums.Position;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -93,7 +93,7 @@ public final class HitConditionBonusData extends GameXmlReader {
      * @param target   the attacked character.
      * @return the bonus of the attacker against the target.
      */
-    public double getConditionBonus(L2Character attacker, L2Character target) {
+    public double getConditionBonus(Creature attacker, Creature target) {
         double mod = 100;
         // Get high or low bonus
         if ((attacker.getZ() - target.getZ()) > 50) {

@@ -2,7 +2,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.enums.ReduceDropType;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
@@ -24,7 +24,7 @@ public class ReduceDropPenalty extends AbstractEffect
     }
 
     @Override
-    public void pump(L2Character effected, Skill skill) {
+    public void pump(Creature effected, Skill skill) {
         switch (_type) {
             case MOB -> reduce(effected, Stats.REDUCE_EXP_LOST_BY_MOB, Stats.REDUCE_DEATH_PENALTY_BY_MOB);
             case PK -> reduce(effected, Stats.REDUCE_EXP_LOST_BY_PVP, Stats.REDUCE_DEATH_PENALTY_BY_PVP);
@@ -37,7 +37,7 @@ public class ReduceDropPenalty extends AbstractEffect
         }
     }
 
-    private void reduce(L2Character effected, Stats statExp, Stats statPenalty) {
+    private void reduce(Creature effected, Stats statExp, Stats statPenalty) {
         effected.getStat().mergeMul(statExp, (_exp / 100) + 1);
         effected.getStat().mergeMul(statPenalty, (_deathPenalty / 100) + 1);
     }

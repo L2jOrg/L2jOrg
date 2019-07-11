@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
@@ -29,7 +29,7 @@ import java.util.Optional;
  */
 public class MAttackSpeedFinalizer implements IStatsFunction {
     @Override
-    public double calc(L2Character creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stats stat) {
         throwIfPresent(base);
 
         double baseValue = calcWeaponBaseValue(creature, stat);
@@ -42,7 +42,7 @@ public class MAttackSpeedFinalizer implements IStatsFunction {
         return validateValue(creature, defaultValue(creature, stat, baseValue), 1, Config.MAX_MATK_SPEED);
     }
 
-    private double defaultValue(L2Character creature, Stats stat, double baseValue) {
+    private double defaultValue(Creature creature, Stats stat, double baseValue) {
         final double mul = Math.max(creature.getStat().getMul(stat), 0.7);
         final double add = creature.getStat().getAdd(stat);
         return (baseValue * mul) + add + creature.getStat().getMoveTypeValue(stat, creature.getMoveType());

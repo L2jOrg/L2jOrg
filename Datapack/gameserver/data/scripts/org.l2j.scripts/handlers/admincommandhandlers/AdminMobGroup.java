@@ -21,7 +21,7 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.MobGroup;
 import org.l2j.gameserver.model.MobGroupTable;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -96,7 +96,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		{
 			if (activeChar.getTarget().isCharacter())
 			{
-				final L2Character target = (L2Character) activeChar.getTarget();
+				final Creature target = (Creature) activeChar.getTarget();
 				attack(command, activeChar, target);
 			}
 		}
@@ -210,7 +210,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		group.setAttackRandom();
 	}
 	
-	private void attack(String command, Player activeChar, L2Character target)
+	private void attack(String command, Player activeChar, Creature target)
 	{
 		int groupId;
 		try
@@ -231,7 +231,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		group.setAttackTarget(target);
 	}
 	
-	private void follow(String command, Player activeChar, L2Character target)
+	private void follow(String command, Player activeChar, Creature target)
 	{
 		int groupId;
 		try

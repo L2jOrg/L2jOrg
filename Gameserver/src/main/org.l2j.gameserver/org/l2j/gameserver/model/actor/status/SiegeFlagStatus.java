@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.actor.status;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.L2SiegeFlagInstance;
 
 public class SiegeFlagStatus extends NpcStatus {
@@ -25,12 +25,12 @@ public class SiegeFlagStatus extends NpcStatus {
     }
 
     @Override
-    public void reduceHp(double value, L2Character attacker) {
+    public void reduceHp(double value, Creature attacker) {
         reduceHp(value, attacker, true, false, false);
     }
 
     @Override
-    public void reduceHp(double value, L2Character attacker, boolean awake, boolean isDOT, boolean isHpConsumption) {
+    public void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHpConsumption) {
         if (getActiveChar().isAdvancedHeadquarter()) {
             value /= 2.;
         }

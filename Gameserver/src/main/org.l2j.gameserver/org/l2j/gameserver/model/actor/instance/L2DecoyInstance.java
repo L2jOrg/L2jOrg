@@ -6,7 +6,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.PcCondOverride;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.items.L2Weapon;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -18,7 +18,7 @@ import org.l2j.gameserver.taskmanager.DecayTaskManager;
 
 import java.util.concurrent.Future;
 
-public class L2DecoyInstance extends L2Character {
+public class L2DecoyInstance extends Creature {
     private final Player _owner;
     private int _totalLifeTime;
     private int _timeRemaining;
@@ -40,7 +40,7 @@ public class L2DecoyInstance extends L2Character {
     }
 
     @Override
-    public boolean doDie(L2Character killer) {
+    public boolean doDie(Creature killer) {
         if (!super.doDie(killer)) {
             return false;
         }
@@ -107,7 +107,7 @@ public class L2DecoyInstance extends L2Character {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         return _owner.isAutoAttackable(attacker);
     }
 

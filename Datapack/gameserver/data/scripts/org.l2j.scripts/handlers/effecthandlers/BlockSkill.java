@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureSkillUse;
@@ -51,7 +51,7 @@ public final class BlockSkill extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		if ((_magicTypes == null) || (_magicTypes.length == 0))
 		{
@@ -62,7 +62,7 @@ public final class BlockSkill extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		effected.removeListenerIf(EventType.ON_CREATURE_SKILL_USE, listener -> listener.getOwner() == this);
 	}

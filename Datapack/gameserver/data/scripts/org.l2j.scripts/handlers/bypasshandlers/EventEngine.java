@@ -17,7 +17,7 @@
 package handlers.bypasshandlers;
 
 import org.l2j.gameserver.handler.IBypassHandler;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.L2Event;
 
@@ -30,7 +30,7 @@ public class EventEngine implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, L2Character target)
+	public boolean useBypass(String command, Player activeChar, Creature target)
 	{
 		if (!target.isNpc())
 		{

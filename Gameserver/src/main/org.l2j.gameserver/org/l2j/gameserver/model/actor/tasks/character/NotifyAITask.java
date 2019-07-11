@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.actor.tasks.character;
 
 import org.l2j.gameserver.ai.CtrlEvent;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 
 /**
  * Task dedicated to notify character's AI
@@ -9,10 +9,10 @@ import org.l2j.gameserver.model.actor.L2Character;
  * @author xban1x
  */
 public final class NotifyAITask implements Runnable {
-    private final L2Character _character;
+    private final Creature _character;
     private final CtrlEvent _event;
 
-    public NotifyAITask(L2Character character, CtrlEvent event) {
+    public NotifyAITask(Creature character, CtrlEvent event) {
         _character = character;
         _event = event;
     }

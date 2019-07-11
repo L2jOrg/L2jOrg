@@ -19,7 +19,7 @@ package handlers.targethandlers.affectobject;
 import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Party;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.zone.ZoneId;
 public class NotFriendPc implements IAffectObjectHandler
 {
 	@Override
-	public boolean checkAffectedObject(L2Character activeChar, L2Character target)
+	public boolean checkAffectedObject(Creature activeChar, Creature target)
 	{
 		if (!target.isPlayer())
 		{

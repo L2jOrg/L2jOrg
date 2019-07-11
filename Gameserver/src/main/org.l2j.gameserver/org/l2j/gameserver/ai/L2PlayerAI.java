@@ -2,7 +2,7 @@ package org.l2j.gameserver.ai;
 
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -116,7 +116,7 @@ public class L2PlayerAI extends L2PlayableAI {
     }
 
     @Override
-    protected void onEvtAttacked(L2Character attacker) {
+    protected void onEvtAttacked(Creature attacker) {
         super.onEvtAttacked(attacker);
 
         // Summons in defending mode defend its master when attacked.
@@ -126,7 +126,7 @@ public class L2PlayerAI extends L2PlayableAI {
     }
 
     @Override
-    protected void onEvtEvaded(L2Character attacker) {
+    protected void onEvtEvaded(Creature attacker) {
         super.onEvtEvaded(attacker);
 
         // Summons in defending mode defend its master when attacked.
@@ -178,7 +178,7 @@ public class L2PlayerAI extends L2PlayableAI {
         // Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
         clientStopAutoAttack();
 
-        // Abort the attack of the L2Character and send Server->Client ActionFailed packet
+        // Abort the attack of the Creature and send Server->Client ActionFailed packet
         _actor.abortAttack();
 
         // Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
@@ -198,7 +198,7 @@ public class L2PlayerAI extends L2PlayableAI {
         if ((target == null) || !target.isCharacter()) {
             return;
         }
-        if (checkTargetLostOrDead((L2Character) target)) {
+        if (checkTargetLostOrDead((Creature) target)) {
             // Notify the target
             setTarget(null);
             return;
@@ -208,7 +208,7 @@ public class L2PlayerAI extends L2PlayableAI {
         }
 
         clientStopMoving(null);
-        _actor.doAutoAttack((L2Character) target);
+        _actor.doAutoAttack((Creature) target);
     }
 
     private void thinkCast() {
@@ -260,7 +260,7 @@ public class L2PlayerAI extends L2PlayableAI {
             return;
         }
         if (!(target instanceof L2StaticObjectInstance)) {
-            getActor().doInteract((L2Character) target);
+            getActor().doInteract((Creature) target);
         }
         setIntention(CtrlIntention.AI_INTENTION_IDLE);
     }

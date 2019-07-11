@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -11,7 +11,7 @@ public class ChangeMoveType extends ServerPacket {
     private final int _charObjId;
     private final boolean _running;
 
-    public ChangeMoveType(L2Character character) {
+    public ChangeMoveType(Creature character) {
         _charObjId = character.getObjectId();
         _running = character.isRunning();
     }

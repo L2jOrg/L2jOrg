@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -37,7 +37,7 @@ public class SpecialCamera extends ServerPacket {
      * @param isWide
      * @param relAngle
      */
-    public SpecialCamera(L2Character creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle) {
+    public SpecialCamera(Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle) {
         this(creature, force, angle1, angle2, time, duration, range, relYaw, relPitch, isWide, relAngle, 0);
     }
 
@@ -56,7 +56,7 @@ public class SpecialCamera extends ServerPacket {
      * @param isWide
      * @param relAngle
      */
-    public SpecialCamera(L2Character creature, L2Character talker, int force, int angle1, int angle2, int time, int duration, int relYaw, int relPitch, int isWide, int relAngle) {
+    public SpecialCamera(Creature creature, Creature talker, int force, int angle1, int angle2, int time, int duration, int relYaw, int relPitch, int isWide, int relAngle) {
         this(creature, force, angle1, angle2, time, duration, 0, relYaw, relPitch, isWide, relAngle, 0);
     }
 
@@ -76,7 +76,7 @@ public class SpecialCamera extends ServerPacket {
      * @param relAngle
      * @param unk      unknown post-C4 parameter
      */
-    public SpecialCamera(L2Character creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk) {
+    public SpecialCamera(Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk) {
         _id = creature.getObjectId();
         _force = force;
         _angle1 = angle1;

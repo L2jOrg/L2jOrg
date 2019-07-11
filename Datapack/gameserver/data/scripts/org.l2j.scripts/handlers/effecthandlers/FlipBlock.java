@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.instancemanager.HandysBlockCheckerManager;
 import org.l2j.gameserver.model.ArenaParticipantsHolder;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.L2BlockInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -43,7 +43,7 @@ public final class FlipBlock extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		final L2BlockInstance block = effected instanceof L2BlockInstance ? (L2BlockInstance) effected : null;
 		final Player player = effector.isPlayer() ? (Player) effector : null;

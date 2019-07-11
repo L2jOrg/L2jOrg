@@ -3,8 +3,8 @@ package org.l2j.gameserver.model.actor.instance;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
@@ -17,10 +17,10 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
  */
 public class L2GuardInstance extends L2Attackable {
     /**
-     * Constructor of L2GuardInstance (use L2Character and L2NpcInstance constructor).<br>
+     * Constructor of L2GuardInstance (use Creature and L2NpcInstance constructor).<br>
      * <B><U> Actions</U> :</B>
      * <ul>
-     * <li>Call the L2Character constructor to set the _template of the L2GuardInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
+     * <li>Call the Creature constructor to set the _template of the L2GuardInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
      * <li>Set the name of the L2GuardInstance</li>
      * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li>
      * </ul>
@@ -33,7 +33,7 @@ public class L2GuardInstance extends L2Attackable {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         if (attacker.isMonster()) {
             return true;
         }
@@ -41,7 +41,7 @@ public class L2GuardInstance extends L2Attackable {
     }
 
     @Override
-    public void addDamage(L2Character attacker, int damage, Skill skill) {
+    public void addDamage(Creature attacker, int damage, Skill skill) {
         super.addDamage(attacker, damage, skill);
         getAI().startFollow(attacker);
         addDamageHate(attacker, 0, 10);

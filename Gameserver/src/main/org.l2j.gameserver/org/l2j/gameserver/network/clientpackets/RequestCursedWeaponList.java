@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.serverpackets.ExCursedWeaponList;
 
 /**
@@ -16,7 +16,7 @@ public class RequestCursedWeaponList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2Character activeChar = client.getActiveChar();
+        final Creature activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }

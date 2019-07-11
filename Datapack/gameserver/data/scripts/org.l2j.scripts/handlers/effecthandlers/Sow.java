@@ -22,7 +22,7 @@ import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.L2Seed;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -48,7 +48,7 @@ public final class Sow extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		if (!effector.isPlayer() || !effected.isMonster())
 		{
@@ -96,7 +96,7 @@ public final class Sow extends AbstractEffect
 		target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 	}
 	
-	private static boolean calcSuccess(L2Character activeChar, L2Character target, L2Seed seed)
+	private static boolean calcSuccess(Creature activeChar, Creature target, L2Seed seed)
 	{
 		// TODO: check all the chances
 		final int minlevelSeed = seed.getLevel() - 5;

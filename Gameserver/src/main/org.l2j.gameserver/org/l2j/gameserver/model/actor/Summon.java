@@ -238,7 +238,7 @@ public abstract class Summon extends Playable {
     }
 
     @Override
-    public boolean doDie(L2Character killer) {
+    public boolean doDie(Creature killer) {
         if (isNoblesseBlessedAffected()) {
             stopEffects(EffectFlag.NOBLESS_BLESSING);
             storeEffect(true);
@@ -268,7 +268,7 @@ public abstract class Summon extends Playable {
         return true;
     }
 
-    public boolean doDie(L2Character killer, boolean decayed) {
+    public boolean doDie(Creature killer, boolean decayed) {
         if (!super.doDie(killer)) {
             return false;
         }
@@ -291,7 +291,7 @@ public abstract class Summon extends Playable {
     }
 
     @Override
-    public void broadcastStatusUpdate(L2Character caster) {
+    public void broadcastStatusUpdate(Creature caster) {
         super.broadcastStatusUpdate(caster);
         updateAndBroadcastStatus(1);
     }
@@ -401,7 +401,7 @@ public abstract class Summon extends Playable {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         return (_owner != null) && _owner.isAutoAttackable(attacker);
     }
 
@@ -462,7 +462,7 @@ public abstract class Summon extends Playable {
     }
 
     /**
-     * Return True if the L2Character has a Party in progress.
+     * Return True if the Creature has a Party in progress.
      */
     @Override
     public boolean isInParty() {
@@ -589,7 +589,7 @@ public abstract class Summon extends Playable {
     }
 
     @Override
-    public void sendDamageMessage(L2Character target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss) {
+    public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss) {
         if (miss || (_owner == null)) {
             return;
         }
@@ -625,7 +625,7 @@ public abstract class Summon extends Playable {
     }
 
     @Override
-    public void reduceCurrentHp(double damage, L2Character attacker, Skill skill) {
+    public void reduceCurrentHp(double damage, Creature attacker, Skill skill) {
         super.reduceCurrentHp(damage, attacker, skill);
 
         if (!isDead() && !isHpBlocked() && (_owner != null) && (attacker != null) && (!_owner.isAffected(EffectFlag.DUELIST_FURY) || attacker.isAffected(EffectFlag.FACEOFF))) {

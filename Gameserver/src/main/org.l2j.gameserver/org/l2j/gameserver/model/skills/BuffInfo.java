@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.GameTimeController;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.CharEffectList;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectTaskInfo;
@@ -33,8 +33,8 @@ public final class BuffInfo {
      * Data.
      */
     private final int _effectorObjectId;
-    private final L2Character _effector;
-    private final L2Character _effected;
+    private final Creature _effector;
+    private final Creature _effected;
     private final Skill _skill;
     /**
      * The effects.
@@ -81,7 +81,7 @@ public final class BuffInfo {
      * @param item
      * @param option
      */
-    public BuffInfo(L2Character effector, L2Character effected, Skill skill, boolean hideStartMessage, L2ItemInstance item, Options option) {
+    public BuffInfo(Creature effector, Creature effected, Skill skill, boolean hideStartMessage, L2ItemInstance item, Options option) {
         _effectorObjectId = (effector != null) ? effector.getObjectId() : 0;
         _effector = effector;
         _effected = effected;
@@ -263,7 +263,7 @@ public final class BuffInfo {
      *
      * @return the effector
      */
-    public L2Character getEffector() {
+    public Creature getEffector() {
         return _effector;
     }
 
@@ -272,7 +272,7 @@ public final class BuffInfo {
      *
      * @return the effected
      */
-    public L2Character getEffected() {
+    public Creature getEffected() {
         return _effected;
     }
 

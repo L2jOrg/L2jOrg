@@ -1,7 +1,7 @@
 package org.l2j.gameserver.taskmanager;
 
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.network.serverpackets.AutoAttackStop;
 import org.slf4j.Logger;
@@ -21,7 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class AttackStanceTaskManager {
     public static final long COMBAT_TIME = 15_000;
     protected static final Logger LOGGER = LoggerFactory.getLogger(AttackStanceTaskManager.class);
-    protected static final Map<L2Character, Long> _attackStanceTasks = new ConcurrentHashMap<>();
+    protected static final Map<Creature, Long> _attackStanceTasks = new ConcurrentHashMap<>();
 
     /**
      * Instantiates a new attack stance task manager.
@@ -35,7 +35,7 @@ public class AttackStanceTaskManager {
      *
      * @param actor the actor
      */
-    public void addAttackStanceTask(L2Character actor) {
+    public void addAttackStanceTask(Creature actor) {
         if (actor != null) {
             _attackStanceTasks.put(actor, System.currentTimeMillis());
         }
@@ -46,7 +46,7 @@ public class AttackStanceTaskManager {
      *
      * @param actor the actor
      */
-    public void removeAttackStanceTask(L2Character actor) {
+    public void removeAttackStanceTask(Creature actor) {
         if (actor != null) {
             if (actor.isSummon()) {
                 actor = actor.getActingPlayer();
@@ -61,7 +61,7 @@ public class AttackStanceTaskManager {
      * @param actor the actor
      * @return {@code true} if the character has an attack stance task, {@code false} otherwise
      */
-    public boolean hasAttackStanceTask(L2Character actor) {
+    public boolean hasAttackStanceTask(Creature actor) {
         if (actor != null) {
             if (actor.isSummon()) {
                 actor = actor.getActingPlayer();
@@ -84,9 +84,9 @@ public class AttackStanceTaskManager {
         public void run() {
             final long current = System.currentTimeMillis();
             try {
-                final Iterator<Entry<L2Character, Long>> iter = _attackStanceTasks.entrySet().iterator();
-                Entry<L2Character, Long> e;
-                L2Character actor;
+                final Iterator<Entry<Creature, Long>> iter = _attackStanceTasks.entrySet().iterator();
+                Entry<Creature, Long> e;
+                Creature actor;
                 while (iter.hasNext()) {
                     e = iter.next();
                     if ((current - e.getValue()) > COMBAT_TIME) {

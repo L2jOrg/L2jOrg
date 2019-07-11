@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.L2GameClient;
@@ -12,9 +12,9 @@ import java.util.List;
 public class PartySpelled extends ServerPacket {
     private final List<BuffInfo> _effects = new ArrayList<>();
     private final List<Skill> _effects2 = new ArrayList<>();
-    private final L2Character _activeChar;
+    private final Creature _activeChar;
 
-    public PartySpelled(L2Character cha) {
+    public PartySpelled(Creature cha) {
         _activeChar = cha;
     }
 

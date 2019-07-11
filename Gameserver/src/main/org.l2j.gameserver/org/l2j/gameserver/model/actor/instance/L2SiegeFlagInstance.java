@@ -7,7 +7,7 @@ import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2SiegeClan;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.status.SiegeFlagStatus;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
@@ -54,12 +54,12 @@ public class L2SiegeFlagInstance extends L2Npc {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         return !isInvul();
     }
 
     @Override
-    public boolean doDie(L2Character killer) {
+    public boolean doDie(Creature killer) {
         if (!super.doDie(killer)) {
             return false;
         }
@@ -112,7 +112,7 @@ public class L2SiegeFlagInstance extends L2Npc {
     }
 
     @Override
-    public void reduceCurrentHp(double damage, L2Character attacker, Skill skill) {
+    public void reduceCurrentHp(double damage, Creature attacker, Skill skill) {
         super.reduceCurrentHp(damage, attacker, skill);
         if (canTalk()) {
             if (((getCastle() != null) && getCastle().getSiege().isInProgress()) || ((getFort() != null) && getFort().getSiege().isInProgress())) {

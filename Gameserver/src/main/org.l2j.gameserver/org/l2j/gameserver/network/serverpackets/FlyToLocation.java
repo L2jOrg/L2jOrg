@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -21,7 +21,7 @@ public final class FlyToLocation extends ServerPacket {
     private int _flyDelay;
     private int _animationSpeed;
 
-    public FlyToLocation(L2Character cha, int destX, int destY, int destZ, FlyType type) {
+    public FlyToLocation(Creature cha, int destX, int destY, int destZ, FlyType type) {
         _chaObjId = cha.getObjectId();
         _chaX = cha.getX();
         _chaY = cha.getY();
@@ -32,7 +32,7 @@ public final class FlyToLocation extends ServerPacket {
         _type = type;
     }
 
-    public FlyToLocation(L2Character cha, int destX, int destY, int destZ, FlyType type, int flySpeed, int flyDelay, int animationSpeed) {
+    public FlyToLocation(Creature cha, int destX, int destY, int destZ, FlyType type, int flySpeed, int flyDelay, int animationSpeed) {
         _chaObjId = cha.getObjectId();
         _chaX = cha.getX();
         _chaY = cha.getY();
@@ -46,11 +46,11 @@ public final class FlyToLocation extends ServerPacket {
         _animationSpeed = animationSpeed;
     }
 
-    public FlyToLocation(L2Character cha, ILocational dest, FlyType type) {
+    public FlyToLocation(Creature cha, ILocational dest, FlyType type) {
         this(cha, dest.getX(), dest.getY(), dest.getZ(), type);
     }
 
-    public FlyToLocation(L2Character cha, ILocational dest, FlyType type, int flySpeed, int flyDelay, int animationSpeed) {
+    public FlyToLocation(Creature cha, ILocational dest, FlyType type, int flySpeed, int flyDelay, int animationSpeed) {
         this(cha, dest.getX(), dest.getY(), dest.getZ(), type, flySpeed, flyDelay, animationSpeed);
     }
 

@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -42,20 +42,20 @@ public final class CallSkillOnActionTime extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		effected.getEffectList().stopEffects(Collections.singleton(_skill.getSkill().getAbnormalType()));
 		effected.getEffectList().addBlockedAbnormalTypes(Collections.singleton(_skill.getSkill().getAbnormalType()));
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		effected.getEffectList().removeBlockedAbnormalTypes(Collections.singleton(_skill.getSkill().getAbnormalType()));
 	}
 	
 	@Override
-	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public boolean onActionTime(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		if (effector.isDead())
 		{
@@ -70,13 +70,13 @@ public final class CallSkillOnActionTime extends AbstractEffect
 				triggerSkill.applyEffects(effector, effector);
 			}
 			
-			L2World.getInstance().forEachVisibleObjectInRange(effector, L2Character.class, _skill.getSkill().getAffectRange(), c ->
+			L2World.getInstance().forEachVisibleObjectInRange(effector, Creature.class, _skill.getSkill().getAffectRange(), c ->
 			{
 				final L2Object target = triggerSkill.getTarget(effector, c, false, false, false);
 				
 				if ((target != null) && target.isCharacter())
 				{
-					SkillCaster.triggerCast(effector, (L2Character) target, triggerSkill);
+					SkillCaster.triggerCast(effector, (Creature) target, triggerSkill);
 				}
 			});
 		}

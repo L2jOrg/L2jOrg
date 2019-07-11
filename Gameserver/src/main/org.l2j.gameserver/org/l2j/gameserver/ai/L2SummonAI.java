@@ -4,7 +4,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -19,7 +19,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
 
     private volatile boolean _thinking; // to prevent recursive thinking
     private volatile boolean _startFollow = ((Summon) _actor).getFollowStatus();
-    private L2Character _lastAttack = null;
+    private Creature _lastAttack = null;
 
     private volatile boolean _startAvoid;
     private volatile boolean _isDefending;
@@ -64,7 +64,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
 
     private void thinkAttack() {
         final L2Object target = getTarget();
-        final L2Character attackTarget = (target != null) && target.isCharacter() ? (L2Character) target : null;
+        final Creature attackTarget = (target != null) && target.isCharacter() ? (Creature) target : null;
 
         if (checkTargetLostOrDead(attackTarget)) {
             setTarget(null);
@@ -164,7 +164,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
     }
 
     @Override
-    protected void onEvtAttacked(L2Character attacker) {
+    protected void onEvtAttacked(Creature attacker) {
         super.onEvtAttacked(attacker);
 
         if (_isDefending) {
@@ -175,7 +175,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
     }
 
     @Override
-    protected void onEvtEvaded(L2Character attacker) {
+    protected void onEvtEvaded(Creature attacker) {
         super.onEvtEvaded(attacker);
 
         if (_isDefending) {
@@ -185,20 +185,20 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
         }
     }
 
-    private void avoidAttack(L2Character attacker) {
+    private void avoidAttack(Creature attacker) {
         // Don't move while casting. It breaks casting animation, but still casts the skill... looks so bugged.
         if (_actor.isCastingNow()) {
             return;
         }
 
-        final L2Character owner = getActor().getOwner();
+        final Creature owner = getActor().getOwner();
         // trying to avoid if summon near owner
         if ((owner != null) && (owner != attacker) && owner.isInsideRadius3D(_actor, 2 * AVOID_RADIUS)) {
             _startAvoid = true;
         }
     }
 
-    public void defendAttack(L2Character attacker) {
+    public void defendAttack(Creature attacker) {
         // Cannot defend while attacking or casting.
         if (_actor.isAttackingNow() || _actor.isCastingNow()) {
             return;
@@ -249,7 +249,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
     @Override
     protected void onIntentionCast(Skill skill, L2Object target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
         if (getIntention() == AI_INTENTION_ATTACK) {
-            _lastAttack = (getTarget() != null) && getTarget().isCharacter() ? (L2Character) getTarget() : null;
+            _lastAttack = (getTarget() != null) && getTarget().isCharacter() ? (Creature) getTarget() : null;
         } else {
             _lastAttack = null;
         }

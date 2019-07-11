@@ -25,7 +25,7 @@ import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
@@ -37,7 +37,7 @@ import org.l2j.gameserver.model.skills.targets.AffectScope;
 public class StaticObjectScope implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(L2Character activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
+	public void forEachAffected(Creature activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		final int affectRange = skill.getAffectRange();
@@ -45,7 +45,7 @@ public class StaticObjectScope implements IAffectScopeHandler
 		
 		// Target checks.
 		final AtomicInteger affected = new AtomicInteger(0);
-		final Predicate<L2Character> filter = c ->
+		final Predicate<Creature> filter = c ->
 		{
 			if ((affectLimit > 0) && (affected.get() >= affectLimit))
 			{
@@ -71,13 +71,13 @@ public class StaticObjectScope implements IAffectScopeHandler
 		};
 		
 		// Add object of origin since its skipped in the forEachVisibleObjectInRange method.
-		if (target.isCharacter() && filter.test((L2Character) target))
+		if (target.isCharacter() && filter.test((Creature) target))
 		{
 			action.accept(target);
 		}
 		
 		// Check and add targets.
-		L2World.getInstance().forEachVisibleObjectInRange(target, L2Character.class, affectRange, c ->
+		L2World.getInstance().forEachVisibleObjectInRange(target, Creature.class, affectRange, c ->
 		{
 			if (filter.test(c))
 			{

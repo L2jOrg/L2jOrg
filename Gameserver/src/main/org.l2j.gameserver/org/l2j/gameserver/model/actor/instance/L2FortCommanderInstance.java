@@ -7,7 +7,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.model.FortSiegeSpawn;
 import org.l2j.gameserver.model.L2Spawn;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.skills.Skill;
@@ -26,12 +26,12 @@ public class L2FortCommanderInstance extends L2DefenderInstance {
     }
 
     /**
-     * Return True if a siege is in progress and the L2Character attacker isn't a Defender.
+     * Return True if a siege is in progress and the Creature attacker isn't a Defender.
      *
-     * @param attacker The L2Character that the L2CommanderInstance try to attack
+     * @param attacker The Creature that the L2CommanderInstance try to attack
      */
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         if ((attacker == null) || !attacker.isPlayer()) {
             return false;
         }
@@ -41,7 +41,7 @@ public class L2FortCommanderInstance extends L2DefenderInstance {
     }
 
     @Override
-    public void addDamageHate(L2Character attacker, int damage, int aggro) {
+    public void addDamageHate(Creature attacker, int damage, int aggro) {
         if (attacker == null) {
             return;
         }
@@ -52,7 +52,7 @@ public class L2FortCommanderInstance extends L2DefenderInstance {
     }
 
     @Override
-    public boolean doDie(L2Character killer) {
+    public boolean doDie(Creature killer) {
         if (!super.doDie(killer)) {
             return false;
         }
@@ -81,7 +81,7 @@ public class L2FortCommanderInstance extends L2DefenderInstance {
     }
 
     @Override
-    public final void addDamage(L2Character attacker, int damage, Skill skill) {
+    public final void addDamage(Creature attacker, int damage, Skill skill) {
         final L2Spawn spawn = getSpawn();
         if ((spawn != null) && canTalk()) {
             final List<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId());

@@ -1305,7 +1305,7 @@ public abstract class Inventory extends ItemContainer {
     }
 
     /**
-     * Reduce the arrow number of the L2Character.<br>
+     * Reduce the arrow number of the Creature.<br>
      * <B><U> Overridden in </U> :</B>
      * <li>Player</li>
      *

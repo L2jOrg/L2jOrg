@@ -6,8 +6,8 @@ import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
@@ -24,7 +24,7 @@ public class L2DefenderInstance extends L2Attackable {
     }
 
     @Override
-    public void addDamage(L2Character attacker, int damage, Skill skill) {
+    public void addDamage(Creature attacker, int damage, Skill skill) {
         super.addDamage(attacker, damage, skill);
         L2World.getInstance().forEachVisibleObjectInRange(this, L2DefenderInstance.class, 500, defender ->
         {
@@ -33,12 +33,12 @@ public class L2DefenderInstance extends L2Attackable {
     }
 
     /**
-     * Return True if a siege is in progress and the L2Character attacker isn't a Defender.
+     * Return True if a siege is in progress and the Creature attacker isn't a Defender.
      *
-     * @param attacker The L2Character that the L2SiegeGuardInstance try to attack
+     * @param attacker The Creature that the L2SiegeGuardInstance try to attack
      */
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         // Attackable during siege by all except defenders
         if (!attacker.isPlayable()) {
             return false;
@@ -131,9 +131,9 @@ public class L2DefenderInstance extends L2Attackable {
     @Override
     public void useMagic(Skill skill) {
         if (!skill.isBad()) {
-            L2Character target = this;
+            Creature target = this;
             double lowestHpValue = Double.MAX_VALUE;
-            for (L2Character nearby : L2World.getInstance().getVisibleObjectsInRange(this, L2Character.class, skill.getCastRange())) {
+            for (Creature nearby : L2World.getInstance().getVisibleObjectsInRange(this, Creature.class, skill.getCastRange())) {
                 if ((nearby == null) || nearby.isDead() || !GeoEngine.getInstance().canSeeTarget(this, nearby)) {
                     continue;
                 }
@@ -160,7 +160,7 @@ public class L2DefenderInstance extends L2Attackable {
     }
 
     @Override
-    public void addDamageHate(L2Character attacker, int damage, int aggro) {
+    public void addDamageHate(Creature attacker, int damage, int aggro) {
         if (attacker == null) {
             return;
         }

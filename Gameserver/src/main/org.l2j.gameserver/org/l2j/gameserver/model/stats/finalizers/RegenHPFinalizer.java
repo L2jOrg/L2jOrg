@@ -7,7 +7,7 @@ import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2SiegeClan;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.entity.Castle;
@@ -53,7 +53,7 @@ public class RegenHPFinalizer implements IStatsFunction {
     }
 
     @Override
-    public double calc(L2Character creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stats stat) {
         throwIfPresent(base);
 
         double baseValue = creature.isPlayer() ? creature.getActingPlayer().getTemplate().getBaseHpRegen(creature.getLevel()) : creature.getTemplate().getBaseHpReg();

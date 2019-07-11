@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.enums.DamageByAttackType;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
@@ -44,7 +44,7 @@ public class DamageByAttack extends AbstractEffect
 	}
 	
 	@Override
-	public void pump(L2Character target, Skill skill)
+	public void pump(Creature target, Skill skill)
 	{
 		switch (_type)
 		{

@@ -13,7 +13,7 @@ import org.l2j.gameserver.data.xml.impl.MultisellData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -181,7 +181,7 @@ public final class HomeBoard implements IParseBoardHandler {
 			{
 				activeChar.destroyItemByItemId("CB_Buff", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_BUFF_PRICE * buffCount, activeChar, true);
 				final Pet pet = activeChar.getPet();
-				List<L2Character> targets = new ArrayList<>(4);
+				List<Creature> targets = new ArrayList<>(4);
 				targets.add(activeChar);
 				if (pet != null)
 				{

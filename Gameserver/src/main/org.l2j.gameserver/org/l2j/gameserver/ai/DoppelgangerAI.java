@@ -4,7 +4,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.DoppelgangerInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -14,7 +14,7 @@ import org.l2j.gameserver.network.serverpackets.MoveToLocation;
 public class DoppelgangerAI extends L2CharacterAI {
     private volatile boolean _thinking; // to prevent recursive thinking
     private volatile boolean _startFollow;
-    private L2Character _lastAttack = null;
+    private Creature _lastAttack = null;
 
     public DoppelgangerAI(DoppelgangerInstance clone) {
         super(clone);
@@ -38,7 +38,7 @@ public class DoppelgangerAI extends L2CharacterAI {
 
     private void thinkAttack() {
         final L2Object target = getTarget();
-        final L2Character attackTarget = (target != null) && target.isCharacter() ? (L2Character) target : null;
+        final Creature attackTarget = (target != null) && target.isCharacter() ? (Creature) target : null;
 
         if (checkTargetLostOrDead(attackTarget)) {
             setTarget(null);
@@ -139,7 +139,7 @@ public class DoppelgangerAI extends L2CharacterAI {
     @Override
     protected void onIntentionCast(Skill skill, L2Object target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
         if (getIntention() == CtrlIntention.AI_INTENTION_ATTACK) {
-            _lastAttack = (getTarget() != null) && getTarget().isCharacter() ? (L2Character) getTarget() : null;
+            _lastAttack = (getTarget() != null) && getTarget().isCharacter() ? (Creature) getTarget() : null;
         } else {
             _lastAttack = null;
         }

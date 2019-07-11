@@ -62,7 +62,7 @@ public class L2Attackable extends L2Npc {
     private boolean _isRaidMinion = false;
     //
     private boolean _champion = false;
-    private volatile Map<L2Character, AggroInfo> _aggroList = new ConcurrentHashMap<>();
+    private volatile Map<Creature, AggroInfo> _aggroList = new ConcurrentHashMap<>();
     private boolean _isReturningToSpawnPoint = false;
     private boolean _canReturnToSpawnPoint = true;
     private boolean _seeThroughSilentMove = false;
@@ -76,7 +76,7 @@ public class L2Attackable extends L2Npc {
     // Over-hit
     private boolean _overhit;
     private double _overhitDamage;
-    private L2Character _overhitAttacker;
+    private Creature _overhitAttacker;
     // Command channel
     private volatile L2CommandChannel _firstCommandChannelAttacked = null;
     private CommandChannelTimer _commandChannelTimer = null;
@@ -85,9 +85,9 @@ public class L2Attackable extends L2Npc {
     private boolean _mustGiveExpSp;
 
     /**
-     * Constructor of L2Attackable (use L2Character and L2NpcInstance constructor).<br>
+     * Constructor of L2Attackable (use Creature and L2NpcInstance constructor).<br>
      * Actions:<br>
-     * Call the L2Character constructor to set the _template of the L2Attackable (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)<br>
+     * Call the Creature constructor to set the _template of the L2Attackable (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)<br>
      * Set the name of the L2Attackable<br>
      * Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it.
      *
@@ -115,7 +115,7 @@ public class L2Attackable extends L2Npc {
         return new L2AttackableAI(this);
     }
 
-    public final Map<L2Character, AggroInfo> getAggroList() {
+    public final Map<Creature, AggroInfo> getAggroList() {
         return _aggroList;
     }
 
@@ -162,12 +162,12 @@ public class L2Attackable extends L2Npc {
     /**
      * Reduce the current HP of the L2Attackable, update its _aggroList and launch the doDie Task if necessary.
      *
-     * @param attacker The L2Character who attacks
+     * @param attacker The Creature who attacks
      * @param isDOT
      * @param skill
      */
     @Override
-    public void reduceCurrentHp(double value, L2Character attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
+    public void reduceCurrentHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
         if (_isRaid && !isMinion() && (attacker != null) && (attacker.getParty() != null) && attacker.getParty().isInCommandChannel() && attacker.getParty().getCommandChannel().meetRaidWarCondition(this)) {
             if (_firstCommandChannelAttacked == null) // looting right isn't set
             {
@@ -236,10 +236,10 @@ public class L2Attackable extends L2Npc {
      * Kill the L2NpcInstance (the corpse disappeared after 7 seconds)<br>
      * Caution: This method DOESN'T GIVE rewards to Pet.
      *
-     * @param killer The L2Character that has killed the L2Attackable
+     * @param killer The Creature that has killed the L2Attackable
      */
     @Override
-    public boolean doDie(L2Character killer) {
+    public boolean doDie(Creature killer) {
         // Kill the L2NpcInstance (the corpse disappeared after 7 seconds)
         if (!super.doDie(killer)) {
             return false;
@@ -274,10 +274,10 @@ public class L2Attackable extends L2Npc {
      * Add Exp and SP rewards to Player (including Summon penalty) and to Party members in the known area of the last attacker.<br>
      * Caution : This method DOESN'T GIVE rewards to Pet.
      *
-     * @param lastAttacker The L2Character that has killed the L2Attackable
+     * @param lastAttacker The Creature that has killed the L2Attackable
      */
     @Override
-    protected void calculateRewards(L2Character lastAttacker) {
+    protected void calculateRewards(Creature lastAttacker) {
         try {
             if (_aggroList.isEmpty()) {
                 return;
@@ -292,7 +292,7 @@ public class L2Attackable extends L2Npc {
             // While Iterating over This Map Removing Object is Not Allowed
             // Go through the _aggroList of the L2Attackable
             for (AggroInfo info : _aggroList.values()) {
-                // Get the L2Character corresponding to this attacker
+                // Get the Creature corresponding to this attacker
                 final Player attacker = info.getAttacker().getActingPlayer();
                 if (attacker != null) {
                     // Get damages done by this attacker
@@ -409,7 +409,7 @@ public class L2Attackable extends L2Npc {
                             exp *= penalty;
 
                             // Check for an over-hit enabled strike
-                            final L2Character overhitAttacker = _overhitAttacker;
+                            final Creature overhitAttacker = _overhitAttacker;
                             if (_overhit && (overhitAttacker != null) && (overhitAttacker.getActingPlayer() != null) && (attacker == overhitAttacker.getActingPlayer())) {
                                 attacker.sendPacket(SystemMessageId.OVER_HIT);
                                 attacker.sendPacket(new ExMagicAttackInfo(overhitAttacker.getObjectId(), getObjectId(), ExMagicAttackInfo.OVERHIT));
@@ -444,7 +444,7 @@ public class L2Attackable extends L2Npc {
                         double partyMul = 1;
                         int partyLvl = 0;
 
-                        // Get all L2Character that can be rewarded in the party
+                        // Get all Creature that can be rewarded in the party
                         final List<Player> rewardedMembers = new ArrayList<>();
                         // Go through all Player in the party
                         final List<Player> groupMembers = attackerParty.isInCommandChannel() ? attackerParty.getCommandChannel().getMembers() : attackerParty.getMembers();
@@ -503,7 +503,7 @@ public class L2Attackable extends L2Npc {
 
                         // Check for an over-hit enabled strike
                         // (When in party, the over-hit exp bonus is given to the whole party and splitted proportionally through the party members)
-                        final L2Character overhitAttacker = _overhitAttacker;
+                        final Creature overhitAttacker = _overhitAttacker;
                         if (_overhit && (overhitAttacker != null) && (overhitAttacker.getActingPlayer() != null) && (attacker == overhitAttacker.getActingPlayer())) {
                             attacker.sendPacket(SystemMessageId.OVER_HIT);
                             attacker.sendPacket(new ExMagicAttackInfo(overhitAttacker.getObjectId(), getObjectId(), ExMagicAttackInfo.OVERHIT));
@@ -537,7 +537,7 @@ public class L2Attackable extends L2Npc {
     }
 
     @Override
-    public void addAttackerToAttackByList(L2Character player) {
+    public void addAttackerToAttackByList(Creature player) {
         if ((player == null) || (player == this) || getAttackByList().stream().anyMatch(o -> o.get() == player)) {
             return;
         }
@@ -547,11 +547,11 @@ public class L2Attackable extends L2Npc {
     /**
      * Add damage and hate to the attacker AggroInfo of the L2Attackable _aggroList.
      *
-     * @param attacker The L2Character that gave damages to this L2Attackable
-     * @param damage   The number of damages given by the attacker L2Character
+     * @param attacker The Creature that gave damages to this L2Attackable
+     * @param damage   The number of damages given by the attacker Creature
      * @param skill
      */
-    public void addDamage(L2Character attacker, int damage, Skill skill) {
+    public void addDamage(Creature attacker, int damage, Skill skill) {
         if (attacker == null) {
             return;
         }
@@ -588,23 +588,23 @@ public class L2Attackable extends L2Npc {
     /**
      * Add damage and hate to the attacker AggroInfo of the L2Attackable _aggroList.
      *
-     * @param attacker The L2Character that gave damages to this L2Attackable
-     * @param damage   The number of damages given by the attacker L2Character
-     * @param aggro    The hate (=damage) given by the attacker L2Character
+     * @param attacker The Creature that gave damages to this L2Attackable
+     * @param damage   The number of damages given by the attacker Creature
+     * @param aggro    The hate (=damage) given by the attacker Creature
      */
-    public void addDamageHate(L2Character attacker, int damage, int aggro) {
+    public void addDamageHate(Creature attacker, int damage, int aggro) {
         if ((attacker == null) || (attacker == this)) {
             return;
         }
 
         Player targetPlayer = attacker.getActingPlayer();
-        final L2Character summoner = attacker.getSummoner();
+        final Creature summoner = attacker.getSummoner();
         if (attacker.isNpc() && (summoner != null) && summoner.isPlayer() && !attacker.isTargetable()) {
             targetPlayer = summoner.getActingPlayer();
             attacker = summoner;
         }
 
-        // Get the AggroInfo of the attacker L2Character from the _aggroList of the L2Attackable
+        // Get the AggroInfo of the attacker Creature from the _aggroList of the L2Attackable
         final AggroInfo ai = _aggroList.computeIfAbsent(attacker, AggroInfo::new);
         ai.addDamage(damage);
 
@@ -636,10 +636,10 @@ public class L2Attackable extends L2Npc {
         }
     }
 
-    public void reduceHate(L2Character target, int amount) {
+    public void reduceHate(Creature target, int amount) {
         if (target == null) // whole aggrolist
         {
-            final L2Character mostHated = getMostHated();
+            final Creature mostHated = getMostHated();
             if (mostHated == null) // makes target passive for a moment more
             {
                 ((L2AttackableAI) getAI()).setGlobalAggro(-25);
@@ -676,11 +676,11 @@ public class L2Attackable extends L2Npc {
     }
 
     /**
-     * Clears _aggroList hate of the L2Character without removing from the list.
+     * Clears _aggroList hate of the Creature without removing from the list.
      *
      * @param target
      */
-    public void stopHating(L2Character target) {
+    public void stopHating(Creature target) {
         if (target == null) {
             return;
         }
@@ -692,14 +692,14 @@ public class L2Attackable extends L2Npc {
     }
 
     /**
-     * @return the most hated L2Character of the L2Attackable _aggroList.
+     * @return the most hated Creature of the L2Attackable _aggroList.
      */
-    public L2Character getMostHated() {
+    public Creature getMostHated() {
         if (_aggroList.isEmpty() || isAlikeDead()) {
             return null;
         }
 
-        L2Character mostHated = null;
+        Creature mostHated = null;
         int maxHate = 0;
 
         // While Interacting over This Map Removing Object is Not Allowed
@@ -719,17 +719,17 @@ public class L2Attackable extends L2Npc {
     }
 
     /**
-     * @return the 2 most hated L2Character of the L2Attackable _aggroList.
+     * @return the 2 most hated Creature of the L2Attackable _aggroList.
      */
-    public List<L2Character> get2MostHated() {
+    public List<Creature> get2MostHated() {
         if (_aggroList.isEmpty() || isAlikeDead()) {
             return null;
         }
 
-        L2Character mostHated = null;
-        L2Character secondMostHated = null;
+        Creature mostHated = null;
+        Creature secondMostHated = null;
         int maxHate = 0;
-        final List<L2Character> result = new ArrayList<>();
+        final List<Creature> result = new ArrayList<>();
 
         // While iterating over this map removing objects is not allowed
         // Go through the aggroList of the L2Attackable
@@ -743,7 +743,7 @@ public class L2Attackable extends L2Npc {
 
         result.add(mostHated);
 
-        final L2Character secondMostHatedFinal = secondMostHated;
+        final Creature secondMostHatedFinal = secondMostHated;
         if (getAttackByList().stream().anyMatch(o -> o.get() == secondMostHatedFinal)) {
             result.add(secondMostHated);
         } else {
@@ -752,12 +752,12 @@ public class L2Attackable extends L2Npc {
         return result;
     }
 
-    public List<L2Character> getHateList() {
+    public List<Creature> getHateList() {
         if (_aggroList.isEmpty() || isAlikeDead()) {
             return null;
         }
 
-        final List<L2Character> result = new ArrayList<>();
+        final List<Creature> result = new ArrayList<>();
         for (AggroInfo ai : _aggroList.values()) {
             ai.checkHate(this);
 
@@ -767,10 +767,10 @@ public class L2Attackable extends L2Npc {
     }
 
     /**
-     * @param target The L2Character whose hate level must be returned
-     * @return the hate level of the L2Attackable against this L2Character contained in _aggroList.
+     * @param target The Creature whose hate level must be returned
+     * @return the hate level of the L2Attackable against this Creature contained in _aggroList.
      */
-    public int getHating(L2Character target) {
+    public int getHating(Creature target) {
         if (_aggroList.isEmpty() || (target == null)) {
             return 0;
         }
@@ -801,7 +801,7 @@ public class L2Attackable extends L2Npc {
         return ai.getHate();
     }
 
-    public void doItemDrop(L2Character mainDamageDealer) {
+    public void doItemDrop(Creature mainDamageDealer) {
         doItemDrop(getTemplate(), mainDamageDealer);
     }
 
@@ -817,13 +817,13 @@ public class L2Attackable extends L2Npc {
      * For each possible drops (base + quests), calculate which one must be dropped (random).<br>
      * Get each Item quantity dropped (random).<br>
      * Create this or these L2ItemInstance corresponding to each Item Identifier dropped.<br>
-     * If the autoLoot mode is actif and if the L2Character that has killed the L2Attackable is a Player, Give the item(s) to the Player that has killed the L2Attackable.<br>
-     * If the autoLoot mode isn't actif or if the L2Character that has killed the L2Attackable is not a Player, add this or these item(s) in the world as a visible object at the position where mob was last.
+     * If the autoLoot mode is actif and if the Creature that has killed the L2Attackable is a Player, Give the item(s) to the Player that has killed the L2Attackable.<br>
+     * If the autoLoot mode isn't actif or if the Creature that has killed the L2Attackable is not a Player, add this or these item(s) in the world as a visible object at the position where mob was last.
      *
      * @param npcTemplate
      * @param mainDamageDealer
      */
-    public void doItemDrop(L2NpcTemplate npcTemplate, L2Character mainDamageDealer) {
+    public void doItemDrop(L2NpcTemplate npcTemplate, Creature mainDamageDealer) {
         if (mainDamageDealer == null) {
             return;
         }
@@ -896,12 +896,12 @@ public class L2Attackable extends L2Npc {
      * Get an Item Identifier (random) from the DateDrop Item table of this Event.<br>
      * Get the Item quantity dropped (random).<br>
      * Create this or these L2ItemInstance corresponding to this Item Identifier.<br>
-     * If the autoLoot mode is actif and if the L2Character that has killed the L2Attackable is a Player, Give the item(s) to the Player that has killed the L2Attackable<br>
-     * If the autoLoot mode isn't actif or if the L2Character that has killed the L2Attackable is not a Player, add this or these item(s) in the world as a visible object at the position where mob was last
+     * If the autoLoot mode is actif and if the Creature that has killed the L2Attackable is a Player, Give the item(s) to the Player that has killed the L2Attackable<br>
+     * If the autoLoot mode isn't actif or if the Creature that has killed the L2Attackable is not a Player, add this or these item(s) in the world as a visible object at the position where mob was last
      *
-     * @param lastAttacker The L2Character that has killed the L2Attackable
+     * @param lastAttacker The Creature that has killed the L2Attackable
      */
-    public void doEventDrop(L2Character lastAttacker) {
+    public void doEventDrop(Creature lastAttacker) {
         if (lastAttacker == null) {
             return;
         }
@@ -939,10 +939,10 @@ public class L2Attackable extends L2Npc {
     }
 
     /**
-     * @param player The L2Character searched in the _aggroList of the L2Attackable
-     * @return True if the _aggroList of this L2Attackable contains the L2Character.
+     * @param player The Creature searched in the _aggroList of the L2Attackable
+     * @return True if the _aggroList of this L2Attackable contains the Creature.
      */
-    public boolean containsTarget(L2Character player) {
+    public boolean containsTarget(Creature player) {
         return _aggroList.containsKey(player);
     }
 
@@ -1039,10 +1039,10 @@ public class L2Attackable extends L2Npc {
     /**
      * Set the over-hit values like the attacker who did the strike and the amount of damage done by the skill.
      *
-     * @param attacker The L2Character who hit on the L2Attackable using the over-hit enabled skill
+     * @param attacker The Creature who hit on the L2Attackable using the over-hit enabled skill
      * @param damage   The amount of damage done by the over-hit enabled skill on the L2Attackable
      */
-    public void setOverhitValues(L2Character attacker, double damage) {
+    public void setOverhitValues(Creature attacker, double damage) {
         // Calculate the over-hit damage
         // Ex: mob had 10 HP left, over-hit skill did 50 damage total, over-hit damage is 40
         final double overhitDmg = -(getCurrentHp() - damage);
@@ -1060,11 +1060,11 @@ public class L2Attackable extends L2Npc {
     }
 
     /**
-     * Return the L2Character who hit on the L2Attackable using an over-hit enabled skill.
+     * Return the Creature who hit on the L2Attackable using an over-hit enabled skill.
      *
-     * @return L2Character attacker
+     * @return Creature attacker
      */
-    public L2Character getOverhitAttacker() {
+    public Creature getOverhitAttacker() {
         return _overhitAttacker;
     }
 
@@ -1421,7 +1421,7 @@ public class L2Attackable extends L2Npc {
     }
 
     /**
-     * Return True if the L2Character is RaidBoss or his minion.
+     * Return True if the Creature is RaidBoss or his minion.
      */
     @Override
     public boolean isRaid() {
@@ -1482,7 +1482,7 @@ public class L2Attackable extends L2Npc {
 
         if (object == null) {
             final L2Object target = getTarget();
-            final Map<L2Character, AggroInfo> aggroList = _aggroList;
+            final Map<Creature, AggroInfo> aggroList = _aggroList;
             if (target != null) {
                 if (aggroList != null) {
                     aggroList.remove(target);

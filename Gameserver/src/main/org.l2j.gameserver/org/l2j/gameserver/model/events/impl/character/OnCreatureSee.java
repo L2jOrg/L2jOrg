@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -24,19 +24,19 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnCreatureSee implements IBaseEvent {
-    private final L2Character _seer;
-    private final L2Character _seen;
+    private final Creature _seer;
+    private final Creature _seen;
 
-    public OnCreatureSee(L2Character seer, L2Character seen) {
+    public OnCreatureSee(Creature seer, Creature seen) {
         _seer = seer;
         _seen = seen;
     }
 
-    public final L2Character getSeer() {
+    public final Creature getSeer() {
         return _seer;
     }
 
-    public final L2Character getSeen() {
+    public final Creature getSeen() {
         return _seen;
     }
 

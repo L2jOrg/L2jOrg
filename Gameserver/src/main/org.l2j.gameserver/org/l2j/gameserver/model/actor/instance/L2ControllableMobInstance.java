@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.actor.instance;
 import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.ai.L2ControllableMobAI;
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 
 /**
@@ -64,7 +64,7 @@ public class L2ControllableMobInstance extends L2MonsterInstance {
     }
 
     @Override
-    public boolean doDie(L2Character killer) {
+    public boolean doDie(Creature killer) {
         if (!super.doDie(killer)) {
             return false;
         }

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -12,7 +12,7 @@ public class ExTeleportToLocationActivate extends ServerPacket {
     private final int _objectId;
     private final Location _loc;
 
-    public ExTeleportToLocationActivate(L2Character character) {
+    public ExTeleportToLocationActivate(Creature character) {
         _objectId = character.getObjectId();
         _loc = character.getLocation();
     }

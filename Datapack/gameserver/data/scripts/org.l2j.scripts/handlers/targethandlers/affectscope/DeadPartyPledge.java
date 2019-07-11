@@ -26,7 +26,7 @@ import org.l2j.gameserver.handler.IAffectScopeHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
@@ -39,7 +39,7 @@ import org.l2j.gameserver.model.skills.targets.AffectScope;
 public class DeadPartyPledge implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(L2Character activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
+	public void forEachAffected(Creature activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		final int affectRange = skill.getAffectRange();

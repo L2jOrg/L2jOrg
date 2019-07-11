@@ -10,7 +10,7 @@ import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
@@ -216,7 +216,7 @@ public final class RequestBypassToServer extends ClientPacket {
                     if (bypassOriginId > 0) {
                         final L2Object bypassOrigin = L2World.getInstance().findObject(bypassOriginId);
                         if ((bypassOrigin != null) && bypassOrigin.isCharacter()) {
-                            handler.useBypass(_command, activeChar, (L2Character) bypassOrigin);
+                            handler.useBypass(_command, activeChar, (Creature) bypassOrigin);
                         } else {
                             handler.useBypass(_command, activeChar, null);
                         }

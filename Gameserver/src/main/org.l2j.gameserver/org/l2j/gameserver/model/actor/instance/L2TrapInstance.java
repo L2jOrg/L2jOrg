@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TrapAction;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.tasks.npc.trap.TrapTask;
 import org.l2j.gameserver.model.actor.tasks.npc.trap.TrapTriggerTask;
@@ -94,7 +94,7 @@ public final class L2TrapInstance extends L2Npc {
      * @param cha the character to verify
      * @return {@code true} if the character can see the trap, {@code false} otherwise
      */
-    public boolean canBeSeen(L2Character cha) {
+    public boolean canBeSeen(Creature cha) {
         if ((cha != null) && _playersWhoDetectedMe.contains(cha.getObjectId())) {
             return true;
         }
@@ -178,7 +178,7 @@ public final class L2TrapInstance extends L2Npc {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         return !canBeSeen(attacker);
     }
 
@@ -204,13 +204,13 @@ public final class L2TrapInstance extends L2Npc {
     }
 
     @Override
-    public void doAttack(double damage, L2Character target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
+    public void doAttack(double damage, Creature target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
         super.doAttack(damage, target, skill, isDOT, directlyToHp, critical, reflect);
         sendDamageMessage(target, skill, (int) damage, 0, critical, false);
     }
 
     @Override
-    public void sendDamageMessage(L2Character target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss) {
+    public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss) {
         if (miss || (_owner == null)) {
             return;
         }
@@ -238,7 +238,7 @@ public final class L2TrapInstance extends L2Npc {
         }
     }
 
-    public void setDetected(L2Character detector) {
+    public void setDetected(Creature detector) {
         if (_isInArena) {
             if (detector.isPlayable()) {
                 sendInfo(detector.getActingPlayer());
@@ -269,7 +269,7 @@ public final class L2TrapInstance extends L2Npc {
      *
      * @param target the target
      */
-    public void triggerTrap(L2Character target) {
+    public void triggerTrap(Creature target) {
         if (_trapTask != null) {
             _trapTask.cancel(true);
             _trapTask = null;

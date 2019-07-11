@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 
@@ -13,7 +13,7 @@ import java.util.concurrent.ScheduledFuture;
 public class DropProtection implements Runnable {
     private static final long PROTECTED_MILLIS_TIME = 15000;
     private volatile boolean _isProtected = false;
-    private L2Character _owner = null;
+    private Creature _owner = null;
     private ScheduledFuture<?> _task = null;
 
     @Override
@@ -27,7 +27,7 @@ public class DropProtection implements Runnable {
         return _isProtected;
     }
 
-    public L2Character getOwner() {
+    public Creature getOwner() {
         return _owner;
     }
 
@@ -61,7 +61,7 @@ public class DropProtection implements Runnable {
         _task = null;
     }
 
-    public synchronized void protect(L2Character character) {
+    public synchronized void protect(Creature character) {
         unprotect();
 
         _isProtected = true;

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.actor.status;
 
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureHpChange;
@@ -21,34 +21,34 @@ public class CharStatus {
     protected static final byte REGEN_FLAG_CP = 4;
     private static final byte REGEN_FLAG_HP = 1;
     private static final byte REGEN_FLAG_MP = 2;
-    private final L2Character _activeChar;
+    private final Creature _activeChar;
     protected byte _flagsRegenActive = 0;
-    private double _currentHp = 0; // Current HP of the L2Character
-    private double _currentMp = 0; // Current MP of the L2Character
+    private double _currentHp = 0; // Current HP of the Creature
+    private double _currentMp = 0; // Current MP of the Creature
     /**
-     * Array containing all clients that need to be notified about hp/mp updates of the L2Character
+     * Array containing all clients that need to be notified about hp/mp updates of the Creature
      */
-    private Set<L2Character> _StatusListener;
+    private Set<Creature> _StatusListener;
     private Future<?> _regTask;
 
-    public CharStatus(L2Character activeChar) {
+    public CharStatus(Creature activeChar) {
         _activeChar = activeChar;
     }
 
     /**
-     * Add the object to the list of L2Character that must be informed of HP/MP updates of this L2Character.<br>
+     * Add the object to the list of Creature that must be informed of HP/MP updates of this Creature.<br>
      * <B><U>Concept</U>:</B><br>
-     * Each L2Character owns a list called <B>_statusListener</B> that contains all Player to inform of HP/MP updates.<br>
-     * Players who must be informed are players that target this L2Character.<br>
+     * Each Creature owns a list called <B>_statusListener</B> that contains all Player to inform of HP/MP updates.<br>
+     * Players who must be informed are players that target this Creature.<br>
      * When a RegenTask is in progress sever just need to go through this list to send Server->Client packet StatusUpdate.<br>
      * <B><U>Example of use</U>:</B>
      * <ul>
      * <li>Target a PC or NPC</li>
      * <ul>
      *
-     * @param object L2Character to add to the listener
+     * @param object Creature to add to the listener
      */
-    public final void addStatusListener(L2Character object) {
+    public final void addStatusListener(Creature object) {
         if (object == _activeChar) {
             return;
         }
@@ -57,32 +57,32 @@ public class CharStatus {
     }
 
     /**
-     * Remove the object from the list of L2Character that must be informed of HP/MP updates of this L2Character.<br>
+     * Remove the object from the list of Creature that must be informed of HP/MP updates of this Creature.<br>
      * <B><U>Concept</U>:</B><br>
-     * Each L2Character owns a list called <B>_statusListener</B> that contains all Player to inform of HP/MP updates.<br>
-     * Players who must be informed are players that target this L2Character.<br>
+     * Each Creature owns a list called <B>_statusListener</B> that contains all Player to inform of HP/MP updates.<br>
+     * Players who must be informed are players that target this Creature.<br>
      * When a RegenTask is in progress sever just need to go through this list to send Server->Client packet StatusUpdate.<br>
      * <B><U>Example of use </U>:</B>
      * <ul>
      * <li>Untarget a PC or NPC</li>
      * </ul>
      *
-     * @param object L2Character to add to the listener
+     * @param object Creature to add to the listener
      */
-    public final void removeStatusListener(L2Character object) {
+    public final void removeStatusListener(Creature object) {
         getStatusListener().remove(object);
     }
 
     /**
-     * Return the list of L2Character that must be informed of HP/MP updates of this L2Character.<br>
+     * Return the list of Creature that must be informed of HP/MP updates of this Creature.<br>
      * <B><U>Concept</U>:</B><br>
-     * Each L2Character owns a list called <B>_statusListener</B> that contains all Player to inform of HP/MP updates.<br>
-     * Players who must be informed are players that target this L2Character.<br>
+     * Each Creature owns a list called <B>_statusListener</B> that contains all Player to inform of HP/MP updates.<br>
+     * Players who must be informed are players that target this Creature.<br>
      * When a RegenTask is in progress sever just need to go through this list to send Server->Client packet StatusUpdate.
      *
-     * @return The list of L2Character to inform or null if empty
+     * @return The list of Creature to inform or null if empty
      */
-    public final Set<L2Character> getStatusListener() {
+    public final Set<Creature> getStatusListener() {
         if (_StatusListener == null) {
             _StatusListener = ConcurrentHashMap.newKeySet();
         }
@@ -94,21 +94,21 @@ public class CharStatus {
     }
 
     /**
-     * Reduce the current HP of the L2Character and launch the doDie Task if necessary.
+     * Reduce the current HP of the Creature and launch the doDie Task if necessary.
      *
      * @param value
      * @param attacker
      */
-    public void reduceHp(double value, L2Character attacker) {
+    public void reduceHp(double value, Creature attacker) {
         reduceHp(value, attacker, true, false, false);
     }
 
-    public void reduceHp(double value, L2Character attacker, boolean isHpConsumption) {
+    public void reduceHp(double value, Creature attacker, boolean isHpConsumption) {
         reduceHp(value, attacker, true, false, isHpConsumption);
     }
 
-    public void reduceHp(double value, L2Character attacker, boolean awake, boolean isDOT, boolean isHPConsumption) {
-        final L2Character activeChar = _activeChar;
+    public void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHPConsumption) {
+        final Creature activeChar = _activeChar;
         if (activeChar.isDead()) {
             return;
         }
@@ -217,7 +217,7 @@ public class CharStatus {
      * @return @{code true} if hp was changed, @{code false} otherwise.
      */
     public boolean setCurrentHp(double newHp, boolean broadcastPacket) {
-        // Get the Max HP of the L2Character
+        // Get the Max HP of the Creature
         final int oldHp = (int) _currentHp;
         final double maxHp = _activeChar.getStat().getMaxHp();
 
@@ -282,7 +282,7 @@ public class CharStatus {
      * @return @{code true} if mp was changed, @{code false} otherwise.
      */
     public final boolean setCurrentMp(double newMp, boolean broadcastPacket) {
-        // Get the Max MP of the L2Character
+        // Get the Max MP of the Creature
         final int currentMp = (int) _currentMp;
         final int maxMp = _activeChar.getStat().getMaxMp();
 
@@ -321,7 +321,7 @@ public class CharStatus {
     }
 
     protected void doRegeneration() {
-        // Modify the current HP/MP of the L2Character and broadcast Server->Client packet StatusUpdate
+        // Modify the current HP/MP of the Creature and broadcast Server->Client packet StatusUpdate
         if (!_activeChar.isDead() && ((_currentHp < _activeChar.getMaxRecoverableHp()) || (_currentMp < _activeChar.getMaxRecoverableMp()))) {
             final double newHp = _currentHp + _activeChar.getStat().getValue(Stats.REGENERATE_HP_RATE);
             final double newMp = _currentMp + _activeChar.getStat().getValue(Stats.REGENERATE_MP_RATE);
@@ -331,7 +331,7 @@ public class CharStatus {
         }
     }
 
-    public L2Character getActiveChar() {
+    public Creature getActiveChar() {
         return _activeChar;
     }
 }

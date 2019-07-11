@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -54,7 +54,7 @@ public final class MagicalAbnormalDispelAttack extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		// First dispells the effect, then does damage. Sometimes the damage is evaded, but debuff is still dispelled.
 		if (effector.isAlikeDead() || (_abnormalType == AbnormalType.NONE) || !effected.getEffectList().stopEffects(_abnormalType))

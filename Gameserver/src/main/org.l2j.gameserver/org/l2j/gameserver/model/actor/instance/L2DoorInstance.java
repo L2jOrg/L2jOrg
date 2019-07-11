@@ -14,7 +14,7 @@ import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.stat.DoorStat;
 import org.l2j.gameserver.model.actor.status.DoorStatus;
 import org.l2j.gameserver.model.actor.templates.L2DoorTemplate;
@@ -34,7 +34,7 @@ import java.util.Collection;
 import java.util.Set;
 import java.util.concurrent.Future;
 
-public final class L2DoorInstance extends L2Character {
+public final class L2DoorInstance extends Creature {
     boolean _open = false;
     private boolean _isAttackableDoor = false;
     private boolean _isInverted = false;
@@ -70,7 +70,7 @@ public final class L2DoorInstance extends L2Character {
     }
 
     @Override
-    public void doAutoAttack(L2Character target) {
+    public void doAutoAttack(Creature target) {
     }
 
     @Override
@@ -230,7 +230,7 @@ public final class L2DoorInstance extends L2Character {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         // Doors can`t be attacked by NPCs
         if (!attacker.isPlayable()) {
             return false;
@@ -284,7 +284,7 @@ public final class L2DoorInstance extends L2Character {
     }
 
     @Override
-    public void broadcastStatusUpdate(L2Character caster) {
+    public void broadcastStatusUpdate(Creature caster) {
         final Collection<Player> knownPlayers = L2World.getInstance().getVisibleObjects(this, Player.class);
         if ((knownPlayers == null) || knownPlayers.isEmpty()) {
             return;
@@ -437,7 +437,7 @@ public final class L2DoorInstance extends L2Character {
     }
 
     @Override
-    public void reduceCurrentHp(double value, L2Character attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
+    public void reduceCurrentHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
         if (isWall() && !isInInstance()) {
             if (!attacker.isServitor()) {
                 return;
@@ -452,7 +452,7 @@ public final class L2DoorInstance extends L2Character {
     }
 
     @Override
-    public boolean doDie(L2Character killer) {
+    public boolean doDie(Creature killer) {
         if (!super.doDie(killer)) {
             return false;
         }

@@ -7,7 +7,7 @@ import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.TeleportWhereType;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.entity.FortSiege;
@@ -59,7 +59,7 @@ public class L2SiegeZone extends L2ZoneType {
     }
 
     @Override
-    protected void onEnter(L2Character character) {
+    protected void onEnter(Creature character) {
         if (getSettings().isActiveSiege()) {
             character.setInsideZone(ZoneId.PVP, true);
             character.setInsideZone(ZoneId.SIEGE, true);
@@ -92,7 +92,7 @@ public class L2SiegeZone extends L2ZoneType {
     }
 
     @Override
-    protected void onExit(L2Character character) {
+    protected void onExit(Creature character) {
         character.setInsideZone(ZoneId.PVP, false);
         character.setInsideZone(ZoneId.SIEGE, false);
         character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false); // FIXME: Custom ?
@@ -129,7 +129,7 @@ public class L2SiegeZone extends L2ZoneType {
     }
 
     @Override
-    public void onDieInside(L2Character character) {
+    public void onDieInside(Creature character) {
         if (getSettings().isActiveSiege()) {
             // debuff participants only if they die inside siege zone
             if (character.isPlayer() && character.getActingPlayer().isRegisteredOnThisSiegeField(getSettings().getSiegeableId())) {
@@ -156,14 +156,14 @@ public class L2SiegeZone extends L2ZoneType {
 
     public void updateZoneStatusForCharactersInside() {
         if (getSettings().isActiveSiege()) {
-            for (L2Character character : getCharactersInside()) {
+            for (Creature character : getCharactersInside()) {
                 if (character != null) {
                     onEnter(character);
                 }
             }
         } else {
             Player player;
-            for (L2Character character : getCharactersInside()) {
+            for (Creature character : getCharactersInside()) {
                 if (character == null) {
                     continue;
                 }

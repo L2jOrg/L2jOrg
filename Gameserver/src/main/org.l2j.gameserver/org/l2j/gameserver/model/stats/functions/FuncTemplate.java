@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.stats.functions;
 
 import org.l2j.gameserver.enums.StatFunction;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
@@ -70,7 +70,7 @@ public final class FuncTemplate {
         return _value;
     }
 
-    public boolean meetCondition(L2Character effected, Skill skill) {
+    public boolean meetCondition(Creature effected, Skill skill) {
         if ((_attachCond != null) && !_attachCond.test(effected, effected, skill)) {
             return false;
         }

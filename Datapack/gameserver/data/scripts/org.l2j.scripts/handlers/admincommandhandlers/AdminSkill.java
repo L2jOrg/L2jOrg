@@ -23,7 +23,7 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2SkillLearn;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -248,7 +248,7 @@ public class AdminSkill implements IAdminCommandHandler
 						{
 							if (o.isCharacter())
 							{
-								skill.activateSkill(activeChar, (L2Character) o);
+								skill.activateSkill(activeChar, (Creature) o);
 							}
 						});
 					}

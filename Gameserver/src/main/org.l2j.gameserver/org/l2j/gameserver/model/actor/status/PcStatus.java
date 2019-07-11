@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.instancemanager.DuelManager;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PcStat;
@@ -35,16 +35,16 @@ public class PcStatus extends PlayableStatus {
     }
 
     @Override
-    public final void reduceHp(double value, L2Character attacker) {
+    public final void reduceHp(double value, Creature attacker) {
         reduceHp(value, attacker, true, false, false, false);
     }
 
     @Override
-    public final void reduceHp(double value, L2Character attacker, boolean awake, boolean isDOT, boolean isHPConsumption) {
+    public final void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHPConsumption) {
         reduceHp(value, attacker, awake, isDOT, isHPConsumption, false);
     }
 
-    public final void reduceHp(double value, L2Character attacker, boolean awake, boolean isDOT, boolean isHPConsumption, boolean ignoreCP) {
+    public final void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHPConsumption, boolean ignoreCP) {
         if (getActiveChar().isDead()) {
             return;
         }
@@ -254,7 +254,7 @@ public class PcStatus extends PlayableStatus {
 
     @Override
     public final void setCurrentCp(double newCp, boolean broadcastPacket) {
-        // Get the Max CP of the L2Character
+        // Get the Max CP of the Creature
         final int currentCp = (int) _currentCp;
         final int maxCp = getActiveChar().getStat().getMaxCp();
 
@@ -296,17 +296,17 @@ public class PcStatus extends PlayableStatus {
     protected void doRegeneration() {
         final PcStat charstat = getActiveChar().getStat();
 
-        // Modify the current CP of the L2Character and broadcast Server->Client packet StatusUpdate
+        // Modify the current CP of the Creature and broadcast Server->Client packet StatusUpdate
         if (_currentCp < charstat.getMaxRecoverableCp()) {
             setCurrentCp(_currentCp + getActiveChar().getStat().getValue(Stats.REGENERATE_CP_RATE), false);
         }
 
-        // Modify the current HP of the L2Character and broadcast Server->Client packet StatusUpdate
+        // Modify the current HP of the Creature and broadcast Server->Client packet StatusUpdate
         if (getCurrentHp() < charstat.getMaxRecoverableHp()) {
             setCurrentHp(getCurrentHp() + getActiveChar().getStat().getValue(Stats.REGENERATE_HP_RATE), false);
         }
 
-        // Modify the current MP of the L2Character and broadcast Server->Client packet StatusUpdate
+        // Modify the current MP of the Creature and broadcast Server->Client packet StatusUpdate
         if (getCurrentMp() < charstat.getMaxRecoverableMp()) {
             setCurrentMp(getCurrentMp() + getActiveChar().getStat().getValue(Stats.REGENERATE_MP_RATE), false);
         }

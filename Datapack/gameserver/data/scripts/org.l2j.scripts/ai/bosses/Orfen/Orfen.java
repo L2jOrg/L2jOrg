@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -242,7 +242,7 @@ public final class Orfen extends AbstractNpcAI
 	{
 		if (npc.getId() == ORFEN)
 		{
-			final L2Character originalCaster = isSummon ? caster.getServitors().values().stream().findFirst().orElse(caster.getPet()) : caster;
+			final Creature originalCaster = isSummon ? caster.getServitors().values().stream().findFirst().orElse(caster.getPet()) : caster;
 			if ((skill.getEffectPoint() > 0) && (getRandom(5) == 0) && npc.isInsideRadius2D(originalCaster, 1000))
 			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, TEXT[getRandom(4)], caster.getName());

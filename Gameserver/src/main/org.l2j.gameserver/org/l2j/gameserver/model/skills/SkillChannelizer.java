@@ -5,7 +5,7 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.MagicSkillLaunched;
@@ -26,21 +26,21 @@ import java.util.concurrent.ScheduledFuture;
 public class SkillChannelizer implements Runnable {
     private static final Logger LOGGER = LoggerFactory.getLogger(SkillChannelizer.class);
 
-    private final L2Character _channelizer;
-    private List<L2Character> _channelized;
+    private final Creature _channelizer;
+    private List<Creature> _channelized;
 
     private Skill _skill;
     private volatile ScheduledFuture<?> _task = null;
 
-    public SkillChannelizer(L2Character channelizer) {
+    public SkillChannelizer(Creature channelizer) {
         _channelizer = channelizer;
     }
 
-    public L2Character getChannelizer() {
+    public Creature getChannelizer() {
         return _channelizer;
     }
 
-    public List<L2Character> getChannelized() {
+    public List<Creature> getChannelized() {
         return _channelized;
     }
 
@@ -73,7 +73,7 @@ public class SkillChannelizer implements Runnable {
 
         // Cancel target channelization and unset it.
         if (_channelized != null) {
-            for (L2Character chars : _channelized) {
+            for (Creature chars : _channelized) {
                 chars.getSkillChannelized().removeChannelizer(_skill.getChannelingSkillId(), _channelizer);
             }
             _channelized = null;
@@ -98,7 +98,7 @@ public class SkillChannelizer implements Runnable {
         }
 
         final Skill skill = _skill;
-        List<L2Character> channelized = _channelized;
+        List<Creature> channelized = _channelized;
 
         try {
             if (skill.getMpPerChanneling() > 0) {
@@ -116,14 +116,14 @@ public class SkillChannelizer implements Runnable {
             }
 
             // Apply channeling skills on the targets.
-            final List<L2Character> targetList = new ArrayList<>();
+            final List<Creature> targetList = new ArrayList<>();
             final L2Object target = skill.getTarget(_channelizer, false, false, false);
             if (target != null) {
                 skill.forEachTargetAffected(_channelizer, target, o ->
                 {
                     if (o.isCharacter()) {
-                        targetList.add((L2Character) o);
-                        ((L2Character) o).getSkillChannelized().addChannelizer(skill.getChannelingSkillId(), _channelizer);
+                        targetList.add((Creature) o);
+                        ((Creature) o).getSkillChannelized().addChannelizer(skill.getChannelingSkillId(), _channelizer);
                     }
                 });
             }
@@ -133,7 +133,7 @@ public class SkillChannelizer implements Runnable {
             }
             channelized = targetList;
 
-            for (L2Character character : channelized) {
+            for (Creature character : channelized) {
                 if (!GameUtils.checkIfInRange(skill.getEffectRange(), _channelizer, character, true)) {
                     continue;
                 } else if (!GeoEngine.getInstance().canSeeTarget(_channelizer, character)) {

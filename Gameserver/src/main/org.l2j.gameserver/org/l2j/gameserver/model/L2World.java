@@ -6,7 +6,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.instancemanager.PlayerCountManager;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
@@ -239,12 +239,12 @@ public final class L2World {
      * <li>Add the L2Object object in _allPlayers* of L2World</li>
      * <li>Add the L2Object object in _gmList** of GmListTable</li>
      * <li>Add object in _knownObjects and _knownPlayer* of all surrounding L2WorldRegion L2Characters</li><BR>
-     * <li>If object is a L2Character, add all surrounding L2Object in its _knownObjects and all surrounding Player in its _knownPlayer</li><BR>
+     * <li>If object is a Creature, add all surrounding L2Object in its _knownObjects and all surrounding Player in its _knownPlayer</li><BR>
      * <I>* only if object is a Player</I><BR>
      * <I>** only if object is a GM Player</I> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object in _visibleObjects and _allPlayers* of L2WorldRegion (need synchronisation)</B></FONT><BR>
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object to _allObjects and _allPlayers* of L2World (need synchronisation)</B></FONT> <B><U> Example of use </U> :</B>
      * <li>Drop an Item</li>
-     * <li>Spawn a L2Character</li>
+     * <li>Spawn a Creature</li>
      * <li>Apply Death Penalty of a Player</li>
      *
      * @param object    L2object to add in the world
@@ -264,11 +264,11 @@ public final class L2World {
         describeObjectToOther(wo, object);
 
         if (wo.isNpc() && object.isCharacter()) {
-            EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((L2Npc) wo, (L2Character) object, object.isSummon()), (L2Npc) wo);
+            EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((L2Npc) wo, (Creature) object, object.isSummon()), (L2Npc) wo);
         }
 
         if (object.isNpc() && wo.isCharacter()) {
-            EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((L2Npc) object, (L2Character) wo, wo.isSummon()), (L2Npc) object);
+            EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((L2Npc) object, (Creature) wo, wo.isSummon()), (L2Npc) object);
         }
     }
 
@@ -276,7 +276,7 @@ public final class L2World {
         if (object.isPlayer() && wo.isVisibleFor((Player) object)) {
             wo.sendInfo((Player) object);
             if (wo.isCharacter()) {
-                final L2CharacterAI ai = ((L2Character) wo).getAI();
+                final L2CharacterAI ai = ((Creature) wo).getAI();
                 if (ai != null) {
                     ai.describeStateToPlayer((Player) object);
                     if (wo.isMonster()) {
@@ -296,10 +296,10 @@ public final class L2World {
      * <li>Remove the L2Object object from _visibleObjects and _allPlayers* of L2WorldRegion</li>
      * <li>Remove the L2Object object from _gmList** of GmListTable</li>
      * <li>Remove object from _knownObjects and _knownPlayer* of all surrounding L2WorldRegion L2Characters</li><BR>
-     * <li>If object is a L2Character, remove all L2Object from its _knownObjects and all Player from its _knownPlayer</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of L2World</B></FONT> <I>* only if object is a Player</I><BR>
+     * <li>If object is a Creature, remove all L2Object from its _knownObjects and all Player from its _knownPlayer</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of L2World</B></FONT> <I>* only if object is a Player</I><BR>
      * <I>** only if object is a GM Player</I> <B><U> Example of use </U> :</B>
      * <li>Pickup an Item</li>
-     * <li>Decay a L2Character</li>
+     * <li>Decay a Creature</li>
      *
      * @param object    L2object to remove from the world
      * @param oldRegion L2WorldRegion in which the object was before removing
@@ -364,7 +364,7 @@ public final class L2World {
 
     private void forgetObject(L2Object object, L2Object wo) {
         if (object.isCharacter()) {
-            final L2Character objectCreature = (L2Character) object;
+            final Creature objectCreature = (Creature) object;
             final L2CharacterAI ai = objectCreature.getAI();
             if (ai != null) {
                 ai.notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, wo);
@@ -509,7 +509,7 @@ public final class L2World {
 
     public synchronized void disposeOutOfBoundsObject(L2Object object) {
         if (object.isPlayer()) {
-            ((L2Character) object).stopMove(((Player) object).getLastServerPosition());
+            ((Creature) object).stopMove(((Player) object).getLastServerPosition());
         } else if (object.isSummon()) {
             final Summon summon = (Summon) object;
             summon.unSummon(summon.getOwner());
@@ -525,7 +525,7 @@ public final class L2World {
                 }
             } else if (object.isCharacter()) {
                 LOGGER.warn("Deleting object " + object.getName() + " OID[" + object.getObjectId() + "] from invalid location X:" + object.getX() + " Y:" + object.getY() + " Z:" + object.getZ());
-                ((L2Character) object).deleteMe();
+                ((Creature) object).deleteMe();
             }
 
             if (object.getWorldRegion() != null) {

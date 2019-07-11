@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -47,13 +47,13 @@ public class AdminTransform implements IAdminCommandHandler
 		else if (command.startsWith("admin_untransform"))
 		{
 			final L2Object obj = activeChar.getTarget() == null ? activeChar : activeChar.getTarget();
-			if (!obj.isCharacter() || !((L2Character) obj).isTransformed())
+			if (!obj.isCharacter() || !((Creature) obj).isTransformed())
 			{
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 
-			((L2Character) obj).stopTransformation(true);
+			((Creature) obj).stopTransformation(true);
 		}
 		else if (command.startsWith("admin_transform"))
 		{

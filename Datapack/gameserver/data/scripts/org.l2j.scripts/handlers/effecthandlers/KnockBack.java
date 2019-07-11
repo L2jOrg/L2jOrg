@@ -21,7 +21,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -56,7 +56,7 @@ public final class KnockBack extends AbstractEffect
 	}
 	
 	@Override
-	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
 		return _knockDown || Formulas.calcProbability(100, effector, effected, skill);
 	}
@@ -74,7 +74,7 @@ public final class KnockBack extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		if (!_knockDown)
 		{
@@ -83,7 +83,7 @@ public final class KnockBack extends AbstractEffect
 	}
 	
 	@Override
-	public void continuousInstant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void continuousInstant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		if (_knockDown)
 		{
@@ -92,7 +92,7 @@ public final class KnockBack extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		if (!effected.isPlayer())
 		{
@@ -100,7 +100,7 @@ public final class KnockBack extends AbstractEffect
 		}
 	}
 	
-	private void knockBack(L2Character effector, L2Character effected)
+	private void knockBack(Creature effector, Creature effected)
 	{
 		if ((effected == null) || effected.isRaid())
 		{

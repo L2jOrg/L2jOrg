@@ -21,7 +21,7 @@ import org.l2j.gameserver.handler.ITargetTypeHandler;
 import org.l2j.gameserver.handler.TargetHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureAttackAvoid;
@@ -84,18 +84,18 @@ public final class TriggerSkillByAvoid extends AbstractEffect
 		
 		if ((target != null) && target.isCharacter())
 		{
-			SkillCaster.triggerCast(event.getAttacker(), (L2Character) target, triggerSkill);
+			SkillCaster.triggerCast(event.getAttacker(), (Creature) target, triggerSkill);
 		}
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		effected.removeListenerIf(EventType.ON_CREATURE_ATTACK_AVOID, listener -> listener.getOwner() == this);
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		effected.addListener(new ConsumerEventListener(effected, EventType.ON_CREATURE_ATTACK_AVOID, (OnCreatureAttackAvoid event) -> onAvoidEvent(event), this));
 	}

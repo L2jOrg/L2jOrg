@@ -18,13 +18,12 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.L2Spawn;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Tower;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
 
 /**
  * Class for Control Tower instance.
@@ -38,7 +37,7 @@ public class L2ControlTowerInstance extends L2Tower {
     }
 
     @Override
-    public boolean doDie(L2Character killer) {
+    public boolean doDie(Creature killer) {
         if (getCastle().getSiege().isInProgress()) {
             getCastle().getSiege().killedCT(this);
 

@@ -28,7 +28,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -361,7 +361,7 @@ public final class Antharas extends AbstractNpcAI
 				if ((npc != null) && ((_lastAttack + 900000) < System.currentTimeMillis()))
 				{
 					setStatus(ALIVE);
-					for (L2Character charInside : zone.getCharactersInside())
+					for (Creature charInside : zone.getCharactersInside())
 					{
 						if (charInside != null)
 						{
@@ -436,7 +436,7 @@ public final class Antharas extends AbstractNpcAI
 			}
 			case "CLEAR_ZONE":
 			{
-				for (L2Character charInside : zone.getCharactersInside())
+				for (Creature charInside : zone.getCharactersInside())
 				{
 					if (charInside != null)
 					{
@@ -536,7 +536,7 @@ public final class Antharas extends AbstractNpcAI
 				if (getStatus() == IN_FIGHT)
 				{
 					_minionCount = 0;
-					for (L2Character charInside : zone.getCharactersInside())
+					for (Creature charInside : zone.getCharactersInside())
 					{
 						if ((charInside != null) && charInside.isNpc() && ((charInside.getId() == BEHEMOTH) || (charInside.getId() == TERASQUE)))
 						{
@@ -561,7 +561,7 @@ public final class Antharas extends AbstractNpcAI
 					setStatus(ALIVE);
 					cancelQuestTimer("CHECK_ATTACK", _antharas, null);
 					cancelQuestTimer("SPAWN_MINION", _antharas, null);
-					for (L2Character charInside : zone.getCharactersInside())
+					for (Creature charInside : zone.getCharactersInside())
 					{
 						if (charInside != null)
 						{

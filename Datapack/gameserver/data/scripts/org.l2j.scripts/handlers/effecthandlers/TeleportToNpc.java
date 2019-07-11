@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.interfaces.ILocational;
@@ -57,7 +57,7 @@ public final class TeleportToNpc extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		final ILocational teleLocation = effector.getSummonedNpcs().stream().filter(npc -> npc.getId() == _npcId).findAny().orElse(null);
 		if (teleLocation != null)
@@ -74,7 +74,7 @@ public final class TeleportToNpc extends AbstractEffect
 		}
 	}
 	
-	private void teleport(L2Character effected, ILocational location)
+	private void teleport(Creature effected, ILocational location)
 	{
 		if (effected.isInsideRadius2D(location, 900))
 		{

@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
@@ -58,14 +58,14 @@ public final class BlockActions extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		_allowedSkills.stream().forEach(effected::addBlockActionsAllowedSkill);
 		effected.startParalyze();
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		_allowedSkills.stream().forEach(effected::removeBlockActionsAllowedSkill);
 		if (effected.isPlayable())

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.zone.type;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.zone.ZoneId;
 
 /**
@@ -39,12 +39,12 @@ public final class L2CastleZone extends L2ResidenceZone {
     }
 
     @Override
-    protected void onEnter(L2Character character) {
+    protected void onEnter(Creature character) {
         character.setInsideZone(ZoneId.CASTLE, true);
     }
 
     @Override
-    protected void onExit(L2Character character) {
+    protected void onExit(Creature character) {
         character.setInsideZone(ZoneId.CASTLE, false);
     }
 }

@@ -21,7 +21,7 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.html.PageBuilder;
@@ -80,7 +80,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			{
 				final int skillId = Integer.parseInt(st.nextToken());
 				final int skillLevel = st.hasMoreTokens() ? Integer.parseInt(st.nextToken()) : SkillData.getInstance().getMaxLevel(skillId);
-				final L2Character target = (L2Character) activeChar.getTarget();
+				final Creature target = (Creature) activeChar.getTarget();
 				final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 				if (skill == null)
 				{
@@ -122,7 +122,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			}
 			else if ((activeChar.getTarget() != null) && activeChar.getTarget().isCharacter())
 			{
-				showBuffs(activeChar, (L2Character) activeChar.getTarget(), 0, command.endsWith("_ps"));
+				showBuffs(activeChar, (Creature) activeChar.getTarget(), 0, command.endsWith("_ps"));
 				return true;
 			}
 			else
@@ -194,7 +194,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			{
 				final int radius = Integer.parseInt(val);
 				
-				L2World.getInstance().forEachVisibleObjectInRange(activeChar, Player.class, radius, L2Character::stopAllEffects);
+				L2World.getInstance().forEachVisibleObjectInRange(activeChar, Player.class, radius, Creature::stopAllEffects);
 				
 				BuilderUtil.sendSysMessage(activeChar, "All effects canceled within radius " + radius);
 				return true;
@@ -288,7 +288,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private static void showBuffs(Player activeChar, L2Character target, int page, boolean passive)
+	private static void showBuffs(Player activeChar, Creature target, int page, boolean passive)
 	{
 		final List<BuffInfo> effects = new ArrayList<>();
 		if (!passive)
@@ -351,10 +351,10 @@ public class AdminBuffs implements IAdminCommandHandler
 	
 	private static void removeBuff(Player activeChar, int objId, int skillId)
 	{
-		L2Character target = null;
+		Creature target = null;
 		try
 		{
-			target = (L2Character) L2World.getInstance().findObject(objId);
+			target = (Creature) L2World.getInstance().findObject(objId);
 		}
 		catch (Exception e)
 		{
@@ -378,10 +378,10 @@ public class AdminBuffs implements IAdminCommandHandler
 	
 	private static void removeAllBuffs(Player activeChar, int objId)
 	{
-		L2Character target = null;
+		Creature target = null;
 		try
 		{
-			target = (L2Character) L2World.getInstance().findObject(objId);
+			target = (Creature) L2World.getInstance().findObject(objId);
 		}
 		catch (Exception e)
 		{
@@ -401,10 +401,10 @@ public class AdminBuffs implements IAdminCommandHandler
 	
 	private static void viewBlockedEffects(Player activeChar, int objId)
 	{
-		L2Character target = null;
+		Creature target = null;
 		try
 		{
-			target = (L2Character) L2World.getInstance().findObject(objId);
+			target = (Creature) L2World.getInstance().findObject(objId);
 		}
 		catch (Exception e)
 		{

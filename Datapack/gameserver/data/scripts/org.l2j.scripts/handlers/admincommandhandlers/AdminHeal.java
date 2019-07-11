@@ -21,7 +21,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -95,7 +95,7 @@ public class AdminHeal implements IAdminCommandHandler
 				try
 				{
 					final int radius = Integer.parseInt(player);
-					L2World.getInstance().forEachVisibleObject(activeChar, L2Character.class, character ->
+					L2World.getInstance().forEachVisibleObject(activeChar, Creature.class, character ->
 					{
 						character.setCurrentHpMp(character.getMaxHp(), character.getMaxMp());
 						if (character.isPlayer())
@@ -118,7 +118,7 @@ public class AdminHeal implements IAdminCommandHandler
 		}
 		if (obj.isCharacter())
 		{
-			final L2Character target = (L2Character) obj;
+			final Creature target = (Creature) obj;
 			target.setCurrentHpMp(target.getMaxHp(), target.getMaxMp());
 			if (target.isPlayer())
 			{

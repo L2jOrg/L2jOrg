@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.enums.CastleSide;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -45,7 +45,7 @@ public final class TakeCastle extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		if (!effector.isPlayer())
 		{

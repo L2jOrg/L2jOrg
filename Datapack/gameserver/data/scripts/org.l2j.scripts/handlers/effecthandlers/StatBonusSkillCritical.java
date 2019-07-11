@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import java.util.List;
 
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.conditions.ConditionUsingItemType;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -62,7 +62,7 @@ public class StatBonusSkillCritical extends AbstractEffect
 	}
 	
 	@Override
-	public void pump(L2Character effected, Skill skill)
+	public void pump(Creature effected, Skill skill)
 	{
 		if ((_armorTypeCondition == null) || _armorTypeCondition.test(effected, effected, skill))
 		{

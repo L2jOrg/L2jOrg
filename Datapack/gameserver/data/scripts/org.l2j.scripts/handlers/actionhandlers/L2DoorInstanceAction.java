@@ -5,7 +5,7 @@ import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -57,7 +57,7 @@ public class L2DoorInstanceAction implements IActionHandler
             }
             else if ((activeChar.getClan() != null) && (((L2DoorInstance) target).getFort() != null) && (activeChar.getClan() == ((L2DoorInstance) target).getFort().getOwnerClan()) && ((L2DoorInstance) target).isOpenableBySkill() && !((L2DoorInstance) target).getFort().getSiege().isInProgress())
             {
-                if (!((L2Character) target).isInsideRadius2D(activeChar, L2Npc.INTERACTION_DISTANCE))
+                if (!((Creature) target).isInsideRadius2D(activeChar, L2Npc.INTERACTION_DISTANCE))
                 {
                     activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
                 }

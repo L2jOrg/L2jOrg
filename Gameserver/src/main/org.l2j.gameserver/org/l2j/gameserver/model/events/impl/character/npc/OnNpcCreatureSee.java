@@ -16,22 +16,22 @@
  */
 package org.l2j.gameserver.model.events.impl.character.npc;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
 /**
- * An instantly executed event when L2Character is killed by L2Character.
+ * An instantly executed event when Creature is killed by Creature.
  *
  * @author UnAfraid
  */
 public class OnNpcCreatureSee implements IBaseEvent {
     private final L2Npc _npc;
-    private final L2Character _creature;
+    private final Creature _creature;
     private final boolean _isSummon;
 
-    public OnNpcCreatureSee(L2Npc npc, L2Character creature, boolean isSummon) {
+    public OnNpcCreatureSee(L2Npc npc, Creature creature, boolean isSummon) {
         _npc = npc;
         _creature = creature;
         _isSummon = isSummon;
@@ -41,7 +41,7 @@ public class OnNpcCreatureSee implements IBaseEvent {
         return _npc;
     }
 
-    public final L2Character getCreature() {
+    public final Creature getCreature() {
         return _creature;
     }
 

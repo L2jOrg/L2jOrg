@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureSee;
 
@@ -16,19 +16,19 @@ import java.util.function.Predicate;
  */
 public class CreatureContainer {
     private final Set<Integer> _seen = ConcurrentHashMap.newKeySet();
-    private final L2Character _owner;
+    private final Creature _owner;
     private final int _range;
     private ScheduledFuture<?> _task;
-    private Predicate<L2Character> _condition = null;
+    private Predicate<Creature> _condition = null;
 
-    public CreatureContainer(L2Character owner, int range, Predicate<L2Character> condition) {
+    public CreatureContainer(Creature owner, int range, Predicate<Creature> condition) {
         _owner = owner;
         _range = range;
         _condition = condition;
         start();
     }
 
-    public L2Character getOwner() {
+    public Creature getOwner() {
         return _owner;
     }
 
@@ -64,7 +64,7 @@ public class CreatureContainer {
      */
     private void update() {
         final Set<Integer> verified = new HashSet<>();
-        L2World.getInstance().forEachVisibleObjectInRange(_owner, L2Character.class, _range, creature ->
+        L2World.getInstance().forEachVisibleObjectInRange(_owner, Creature.class, _range, creature ->
         {
             if ((_condition == null) || _condition.test(creature)) {
                 if (_seen.add(creature.getObjectId())) {

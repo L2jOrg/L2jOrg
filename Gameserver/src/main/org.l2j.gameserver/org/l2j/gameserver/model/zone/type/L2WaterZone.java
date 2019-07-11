@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.zone.type;
 
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.L2ZoneType;
@@ -31,7 +31,7 @@ public class L2WaterZone extends L2ZoneType {
     }
 
     @Override
-    protected void onEnter(L2Character character) {
+    protected void onEnter(Creature character) {
         character.setInsideZone(ZoneId.WATER, true);
 
         // TODO: update to only send speed status when that packet is known
@@ -55,7 +55,7 @@ public class L2WaterZone extends L2ZoneType {
     }
 
     @Override
-    protected void onExit(L2Character character) {
+    protected void onExit(Creature character) {
         character.setInsideZone(ZoneId.WATER, false);
 
         // TODO: update to only send speed status when that packet is known

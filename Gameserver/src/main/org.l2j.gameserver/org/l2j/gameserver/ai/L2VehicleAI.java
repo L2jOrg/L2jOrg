@@ -17,7 +17,7 @@
 package org.l2j.gameserver.ai;
 
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Vehicle;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -36,7 +36,7 @@ public abstract class L2VehicleAI extends L2CharacterAI {
     }
 
     @Override
-    protected void onIntentionAttack(L2Character target) {
+    protected void onIntentionAttack(Creature target) {
     }
 
     @Override
@@ -44,7 +44,7 @@ public abstract class L2VehicleAI extends L2CharacterAI {
     }
 
     @Override
-    protected void onIntentionFollow(L2Character target) {
+    protected void onIntentionFollow(Creature target) {
     }
 
     @Override
@@ -56,19 +56,19 @@ public abstract class L2VehicleAI extends L2CharacterAI {
     }
 
     @Override
-    protected void onEvtAttacked(L2Character attacker) {
+    protected void onEvtAttacked(Creature attacker) {
     }
 
     @Override
-    protected void onEvtAggression(L2Character target, int aggro) {
+    protected void onEvtAggression(Creature target, int aggro) {
     }
 
     @Override
-    protected void onEvtActionBlocked(L2Character attacker) {
+    protected void onEvtActionBlocked(Creature attacker) {
     }
 
     @Override
-    protected void onEvtRooted(L2Character attacker) {
+    protected void onEvtRooted(Creature attacker) {
     }
 
     @Override

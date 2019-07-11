@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.TargetHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureDamageReceived;
@@ -92,18 +92,18 @@ public final class TriggerSkillByDamage extends AbstractEffect
 		
 		if ((target != null) && target.isCharacter())
 		{
-			SkillCaster.triggerCast(event.getTarget(), (L2Character) target, triggerSkill);
+			SkillCaster.triggerCast(event.getTarget(), (Creature) target, triggerSkill);
 		}
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		effected.removeListenerIf(EventType.ON_CREATURE_DAMAGE_RECEIVED, listener -> listener.getOwner() == this);
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		effected.addListener(new ConsumerEventListener(effected, EventType.ON_CREATURE_DAMAGE_RECEIVED, (OnCreatureDamageReceived event) -> onDamageReceivedEvent(event), this));
 	}

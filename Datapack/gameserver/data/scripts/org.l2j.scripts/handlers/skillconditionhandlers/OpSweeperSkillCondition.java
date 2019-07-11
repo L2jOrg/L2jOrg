@@ -21,8 +21,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
@@ -39,7 +39,7 @@ public class OpSweeperSkillCondition implements ISkillCondition
 	}
 	
 	@Override
-	public boolean canUse(L2Character caster, Skill skill, L2Object target)
+	public boolean canUse(Creature caster, Skill skill, L2Object target)
 	{
 		final AtomicBoolean canSweep = new AtomicBoolean(false);
 		if (caster.getActingPlayer() != null)

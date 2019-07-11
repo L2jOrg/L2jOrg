@@ -18,7 +18,7 @@ package org.l2j.gameserver.model;
 
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
@@ -68,7 +68,7 @@ public final class CharEffectList {
     /**
      * The owner of this effect list.
      */
-    private final L2Character _owner;
+    private final Creature _owner;
     /**
      * Hidden buffs count, prevents iterations.
      */
@@ -111,7 +111,7 @@ public final class CharEffectList {
      *
      * @param owner the creature that owns this effect list
      */
-    public CharEffectList(L2Character owner) {
+    public CharEffectList(Creature owner) {
         _owner = owner;
     }
 
@@ -908,7 +908,7 @@ public final class CharEffectList {
         _owner.getStatus().getStatusListener().stream()
                 .filter(Objects::nonNull)
                 .filter(L2Object::isPlayer)
-                .map(L2Character::getActingPlayer)
+                .map(Creature::getActingPlayer)
                 .forEach(upd::sendTo);
         // @formatter:on
 

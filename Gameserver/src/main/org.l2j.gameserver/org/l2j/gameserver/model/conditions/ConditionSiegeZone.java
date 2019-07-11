@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortManager;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
@@ -62,7 +62,7 @@ public final class ConditionSiegeZone extends Condition {
      * @param value      the value
      * @return true, if successful
      */
-    public static boolean checkIfOk(L2Character activeChar, Castle castle, int value) {
+    public static boolean checkIfOk(Creature activeChar, Castle castle, int value) {
         if ((activeChar == null) || !activeChar.isPlayer()) {
             return false;
         }
@@ -96,7 +96,7 @@ public final class ConditionSiegeZone extends Condition {
      * @param value      the value
      * @return true, if successful
      */
-    public static boolean checkIfOk(L2Character activeChar, Fort fort, int value) {
+    public static boolean checkIfOk(Creature activeChar, Fort fort, int value) {
         if ((activeChar == null) || !activeChar.isPlayer()) {
             return false;
         }
@@ -123,8 +123,8 @@ public final class ConditionSiegeZone extends Condition {
     }
 
     @Override
-    public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item) {
-        final L2Character target = _self ? effector : effected;
+    public boolean testImpl(Creature effector, Creature effected, Skill skill, L2Item item) {
+        final Creature target = _self ? effector : effected;
         final Castle castle = CastleManager.getInstance().getCastle(target);
         final Fort fort = FortManager.getInstance().getFort(target);
 

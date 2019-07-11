@@ -21,7 +21,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.DoppelgangerAI;
 import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.enums.Team;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
@@ -101,18 +101,18 @@ public class DoppelgangerInstance extends L2Npc {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         return (getSummoner() != null) ? getSummoner().isAutoAttackable(attacker) : super.isAutoAttackable(attacker);
     }
 
     @Override
-    public void doAttack(double damage, L2Character target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
+    public void doAttack(double damage, Creature target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
         super.doAttack(damage, target, skill, isDOT, directlyToHp, critical, reflect);
         sendDamageMessage(target, skill, (int) damage, 0, critical, false);
     }
 
     @Override
-    public void sendDamageMessage(L2Character target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss) {
+    public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss) {
         if (miss || (getSummoner() == null) || !getSummoner().isPlayer()) {
             return;
         }
@@ -140,7 +140,7 @@ public class DoppelgangerInstance extends L2Npc {
     }
 
     @Override
-    public void reduceCurrentHp(double damage, L2Character attacker, Skill skill) {
+    public void reduceCurrentHp(double damage, Creature attacker, Skill skill) {
         super.reduceCurrentHp(damage, attacker, skill);
 
         if ((getSummoner() != null) && getSummoner().isPlayer() && (attacker != null) && !isDead() && !isHpBlocked()) {

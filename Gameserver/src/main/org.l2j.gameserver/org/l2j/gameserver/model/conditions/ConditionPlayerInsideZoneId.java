@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.L2ZoneType;
@@ -35,7 +35,7 @@ public class ConditionPlayerInsideZoneId extends Condition {
     }
 
     @Override
-    public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item) {
+    public boolean testImpl(Creature effector, Creature effected, Skill skill, L2Item item) {
         if (effector.getActingPlayer() == null) {
             return false;
         }

@@ -5,7 +5,7 @@ import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.commons.configuration.Configurator;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.zone.*;
@@ -89,7 +89,7 @@ public final class ZoneManager extends GameXmlReader {
         // Re-validate all characters in zones.
         for (L2Object obj : L2World.getInstance().getVisibleObjects()) {
             if (obj.isCharacter()) {
-                ((L2Character) obj).revalidateZone(true);
+                ((Creature) obj).revalidateZone(true);
             }
         }
 
@@ -549,7 +549,7 @@ public final class ZoneManager extends GameXmlReader {
      * @param character the character
      * @return the olympiad stadium
      */
-    public final L2OlympiadStadiumZone getOlympiadStadium(L2Character character) {
+    public final L2OlympiadStadiumZone getOlympiadStadium(Creature character) {
         if (character == null) {
             return null;
         }

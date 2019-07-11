@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 
 /**
@@ -32,7 +32,7 @@ public class L2FriendlyMobInstance extends L2Attackable {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         if (attacker.isPlayer()) {
             return ((Player) attacker).getReputation() < 0;
         }

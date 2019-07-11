@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.zone.type;
 
 import org.l2j.gameserver.model.TeleportWhereType;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.L2ZoneType;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -36,7 +36,7 @@ public class L2NoRestartZone extends L2ZoneType {
     }
 
     @Override
-    protected void onEnter(L2Character character) {
+    protected void onEnter(Creature character) {
         if (!_enabled) {
             return;
         }
@@ -47,7 +47,7 @@ public class L2NoRestartZone extends L2ZoneType {
     }
 
     @Override
-    protected void onExit(L2Character character) {
+    protected void onExit(Creature character) {
         if (!_enabled) {
             return;
         }

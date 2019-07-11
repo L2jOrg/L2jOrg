@@ -17,7 +17,7 @@
 package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -45,7 +45,7 @@ public class AdminCamera implements IAdminCommandHandler
 			return false;
 		}
 		
-		final L2Character target = (L2Character) activeChar.getTarget();
+		final Creature target = (Creature) activeChar.getTarget();
 		final String[] com = command.split(" ");
 		switch (com[0])
 		{

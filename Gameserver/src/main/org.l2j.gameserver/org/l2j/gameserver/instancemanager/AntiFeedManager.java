@@ -2,7 +2,7 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 
@@ -38,7 +38,7 @@ public final class AntiFeedManager {
      * @param target   Target character
      * @return True if kill is non-feeded.
      */
-    public boolean check(L2Character attacker, L2Character target) {
+    public boolean check(Creature attacker, Creature target) {
         if (!Config.ANTIFEED_ENABLE) {
             return true;
         }

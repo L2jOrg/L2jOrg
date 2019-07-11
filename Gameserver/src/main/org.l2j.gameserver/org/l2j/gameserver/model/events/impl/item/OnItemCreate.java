@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.item;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -27,10 +27,10 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 public class OnItemCreate implements IBaseEvent {
     private final String _process;
     private final L2ItemInstance _item;
-    private final L2Character _activeChar;
+    private final Creature _activeChar;
     private final Object _reference;
 
-    public OnItemCreate(String process, L2ItemInstance item, L2Character actor, Object reference) {
+    public OnItemCreate(String process, L2ItemInstance item, Creature actor, Object reference) {
         _process = process;
         _item = item;
         _activeChar = actor;
@@ -45,7 +45,7 @@ public class OnItemCreate implements IBaseEvent {
         return _item;
     }
 
-    public L2Character getActiveChar() {
+    public Creature getActiveChar() {
         return _activeChar;
     }
 

@@ -5,8 +5,8 @@ import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 
 import static org.l2j.gameserver.ai.CtrlIntention.*;
 
@@ -20,17 +20,17 @@ public class FriendlyNpcAI extends L2AttackableAI {
     }
 
     @Override
-    protected void onEvtAttacked(L2Character attacker) {
+    protected void onEvtAttacked(Creature attacker) {
 
     }
 
     @Override
-    protected void onEvtAggression(L2Character target, int aggro) {
+    protected void onEvtAggression(Creature target, int aggro) {
 
     }
 
     @Override
-    protected void onIntentionAttack(L2Character target) {
+    protected void onIntentionAttack(Creature target) {
         if (target == null) {
             clientActionFailed();
             return;
@@ -66,7 +66,7 @@ public class FriendlyNpcAI extends L2AttackableAI {
         }
 
         final L2Object target = getTarget();
-        final L2Character originalAttackTarget = (target != null) && target.isCharacter() ? (L2Character) target : null;
+        final Creature originalAttackTarget = (target != null) && target.isCharacter() ? (Creature) target : null;
         // Check if target is dead or if timeout is expired to stop this attack
         if ((originalAttackTarget == null) || originalAttackTarget.isAlikeDead()) {
             // Stop hating this target after the attack timeout or if target is dead

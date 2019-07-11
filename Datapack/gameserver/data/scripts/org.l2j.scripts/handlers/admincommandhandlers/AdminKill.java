@@ -22,7 +22,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.FriendlyNpcInstance;
 import org.l2j.gameserver.model.actor.instance.L2ControllableMobInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -30,7 +30,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
 
 /**
- * This class handles following admin commands: - kill = kills target L2Character - kill_monster = kills target non-player - kill <radius> = If radius is specified, then ALL players only in that radius will be killed. - kill_monster <radius> = If radius is specified, then ALL non-players only in
+ * This class handles following admin commands: - kill = kills target Creature - kill_monster = kills target non-player - kill <radius> = If radius is specified, then ALL players only in that radius will be killed. - kill_monster <radius> = If radius is specified, then ALL non-players only in
  * that radius will be killed.
  * @version $Revision: 1.2.4.5 $ $Date: 2007/07/31 10:06:06 $
  */
@@ -61,7 +61,7 @@ public class AdminKill implements IAdminCommandHandler
 						try
 						{
 							final int radius = Integer.parseInt(st.nextToken());
-							L2World.getInstance().forEachVisibleObjectInRange(plyr, L2Character.class, radius, knownChar ->
+							L2World.getInstance().forEachVisibleObjectInRange(plyr, Creature.class, radius, knownChar ->
 							{
 								if ((knownChar instanceof L2ControllableMobInstance) || (knownChar instanceof FriendlyNpcInstance) || (knownChar == activeChar))
 								{
@@ -88,7 +88,7 @@ public class AdminKill implements IAdminCommandHandler
 					{
 						final int radius = Integer.parseInt(firstParam);
 						
-						L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2Character.class, radius, wo ->
+						L2World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, radius, wo ->
 						{
 							if ((wo instanceof L2ControllableMobInstance) || (wo instanceof FriendlyNpcInstance))
 							{
@@ -116,14 +116,14 @@ public class AdminKill implements IAdminCommandHandler
 				}
 				else
 				{
-					kill(activeChar, (L2Character) obj);
+					kill(activeChar, (Creature) obj);
 				}
 			}
 		}
 		return true;
 	}
 	
-	private void kill(Player activeChar, L2Character target)
+	private void kill(Player activeChar, Creature target)
 	{
 		if (target.isPlayer())
 		{

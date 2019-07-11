@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.actor.transform;
 import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.enums.Sex;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -93,7 +93,7 @@ public final class Transform implements IIdentifiable {
         return _title;
     }
 
-    private TransformTemplate getTemplate(L2Character creature) {
+    private TransformTemplate getTemplate(Creature creature) {
         if (creature.isPlayer()) {
             return (creature.getActingPlayer().getAppearance().getSex() ? _femaleTemplate : _maleTemplate);
         } else if (creature.isNpc()) {
@@ -160,7 +160,7 @@ public final class Transform implements IIdentifiable {
         return _type == TransformType.PURE_STAT;
     }
 
-    public double getCollisionHeight(L2Character creature, double defaultCollisionHeight) {
+    public double getCollisionHeight(Creature creature, double defaultCollisionHeight) {
         final TransformTemplate template = getTemplate(creature);
         if ((template != null) && (template.getCollisionHeight() != null)) {
             return template.getCollisionHeight();
@@ -169,7 +169,7 @@ public final class Transform implements IIdentifiable {
         return defaultCollisionHeight;
     }
 
-    public double getCollisionRadius(L2Character creature, double defaultCollisionRadius) {
+    public double getCollisionRadius(Creature creature, double defaultCollisionRadius) {
         final TransformTemplate template = getTemplate(creature);
         if ((template != null) && (template.getCollisionRadius() != null)) {
             return template.getCollisionRadius();
@@ -178,7 +178,7 @@ public final class Transform implements IIdentifiable {
         return defaultCollisionRadius;
     }
 
-    public void onTransform(L2Character creature, boolean addSkills) {
+    public void onTransform(Creature creature, boolean addSkills) {
         // Abort attacking and casting.
         creature.abortAttack();
         creature.abortCast();
@@ -272,7 +272,7 @@ public final class Transform implements IIdentifiable {
         }
     }
 
-    public void onUntransform(L2Character creature) {
+    public void onUntransform(Creature creature) {
         // Abort attacking and casting.
         creature.abortAttack();
         creature.abortCast();
@@ -339,7 +339,7 @@ public final class Transform implements IIdentifiable {
         }
     }
 
-    public WeaponType getBaseAttackType(L2Character creature, WeaponType defaultAttackType) {
+    public WeaponType getBaseAttackType(Creature creature, WeaponType defaultAttackType) {
         final TransformTemplate template = getTemplate(creature);
         if (template != null) {
             final WeaponType weaponType = template.getBaseAttackType();
@@ -350,7 +350,7 @@ public final class Transform implements IIdentifiable {
         return defaultAttackType;
     }
 
-    public double getStats(L2Character creature, Stats stats, double defaultValue) {
+    public double getStats(Creature creature, Stats stats, double defaultValue) {
         double val = defaultValue;
         final TransformTemplate template = getTemplate(creature);
         if (template != null) {
@@ -374,7 +374,7 @@ public final class Transform implements IIdentifiable {
      * @param creature
      * @return {@code -1} if this transformation doesn't alter levelmod, otherwise a new levelmod will be returned.
      */
-    public double getLevelMod(L2Character creature) {
+    public double getLevelMod(Creature creature) {
         double val = 1;
         final TransformTemplate template = getTemplate(creature);
         if (template != null) {

@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 
 public class L2WarehouseInstance extends L2NpcInstance {
@@ -27,7 +27,7 @@ public class L2WarehouseInstance extends L2NpcInstance {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         if (attacker.isMonster()) {
             return true;
         }

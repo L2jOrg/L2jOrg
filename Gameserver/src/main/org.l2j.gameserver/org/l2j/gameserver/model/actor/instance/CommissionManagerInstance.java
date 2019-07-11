@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.commission.ExShowCommission;
@@ -32,7 +32,7 @@ public class CommissionManagerInstance extends L2Npc {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         if (attacker.isMonster()) {
             return true;
         }

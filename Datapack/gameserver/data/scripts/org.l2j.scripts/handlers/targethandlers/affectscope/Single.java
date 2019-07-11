@@ -22,7 +22,7 @@ import org.l2j.gameserver.handler.AffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
 import org.l2j.gameserver.model.skills.targets.TargetType;
@@ -34,7 +34,7 @@ import org.l2j.gameserver.model.skills.targets.TargetType;
 public class Single implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(L2Character activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
+	public void forEachAffected(Creature activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		
@@ -44,7 +44,7 @@ public class Single implements IAffectScopeHandler
 			{
 				action.accept(activeChar); // Return yourself to mark that effects can use your current skill's world position.
 			}
-			if (((affectObject == null) || affectObject.checkAffectedObject(activeChar, (L2Character) target)))
+			if (((affectObject == null) || affectObject.checkAffectedObject(activeChar, (Creature) target)))
 			{
 				action.accept(target); // Return yourself to mark that effects can use your current skill's world position.
 			}

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.effects;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.slf4j.Logger;
@@ -10,9 +10,9 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Abstract effect implementation.<br>
- * Instant effects should not override {@link #onExit(L2Character, L2Character, Skill)}.<br>
- * Instant effects should not override {@link #canStart(L2Character, L2Character, Skill)}, all checks should be done {@link #onStart(L2Character, L2Character, Skill, L2ItemInstance)}.<br>
- *  * Do not call super class methods {@link #onStart(L2Character, L2Character, Skill, L2ItemInstance)} nor {@link #onExit(L2Character, L2Character, Skill)}.
+ * Instant effects should not override {@link #onExit(Creature, Creature, Skill)}.<br>
+ * Instant effects should not override {@link #canStart(Creature, Creature, Skill)}, all checks should be done {@link #onStart(Creature, Creature, Skill, L2ItemInstance)}.<br>
+ *  * Do not call super class methods {@link #onStart(Creature, Creature, Skill, L2ItemInstance)} nor {@link #onExit(Creature, Creature, Skill)}.
  *
  * @author Zoey76
  */
@@ -54,7 +54,7 @@ public abstract class AbstractEffect {
      * @param skill
      * @return {@code true} if this effect land, {@code false} otherwise
      */
-    public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill) {
+    public boolean calcSuccess(Creature effector, Creature effected, Skill skill) {
         return true;
     }
 
@@ -67,23 +67,23 @@ public abstract class AbstractEffect {
      * @param skill
      * @return {@code true} if all the start conditions are meet, {@code false} otherwise
      */
-    public boolean canStart(L2Character effector, L2Character effected, Skill skill) {
+    public boolean canStart(Creature effector, Creature effected, Skill skill) {
         return true;
     }
 
-    public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item) {
+    public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item) {
 
     }
 
-    public void continuousInstant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item) {
+    public void continuousInstant(Creature effector, Creature effected, Skill skill, L2ItemInstance item) {
 
     }
 
-    public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item){
+    public void onStart(Creature effector, Creature effected, Skill skill, L2ItemInstance item){
 
     }
 
-    public void onExit(L2Character effector, L2Character effected, Skill skill) {
+    public void onExit(Creature effector, Creature effected, Skill skill) {
 
     }
 
@@ -97,7 +97,7 @@ public abstract class AbstractEffect {
      * @param item
      * @return if {@code true} this effect will continue forever, if {@code false} it will stop after abnormal time has passed
      */
-    public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item) {
+    public boolean onActionTime(Creature effector, Creature effected, Skill skill, L2ItemInstance item) {
         return false;
     }
 
@@ -129,7 +129,7 @@ public abstract class AbstractEffect {
      * @param skill
      * @return {@code true} if pump can be invoked, {@code false} otherwise
      */
-    public boolean canPump(L2Character effector, L2Character effected, Skill skill) {
+    public boolean canPump(Creature effector, Creature effected, Skill skill) {
         return true;
     }
 
@@ -137,7 +137,7 @@ public abstract class AbstractEffect {
      * @param effected
      * @param skill
      */
-    public void pump(L2Character effected, Skill skill) {
+    public void pump(Creature effected, Skill skill) {
 
     }
 

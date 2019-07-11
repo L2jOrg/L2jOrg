@@ -8,7 +8,7 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -90,7 +90,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance {
         return new Location(_homeX, _homeY, _homeZ);
     }
 
-    public void setHome(L2Character c) {
+    public void setHome(Creature c) {
         setHome(c.getX(), c.getY(), c.getZ());
     }
 
@@ -126,7 +126,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance {
     }
 
     @Override
-    public boolean doDie(L2Character killer) {
+    public boolean doDie(Creature killer) {
         if (!super.doDie(killer)) {
             return false;
         }
@@ -152,7 +152,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         return !_isFreyaBeast;
     }
 
@@ -246,7 +246,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance {
 
     // notification triggered by the owner when the owner is attacked.
     // tamed mobs will heal/recharge or debuff the enemy according to their skills
-    public void onOwnerGotAttacked(L2Character attacker) {
+    public void onOwnerGotAttacked(Creature attacker) {
         // check if the owner is no longer around...if so, despawn
         if ((_owner == null) || !_owner.isOnline()) {
             deleteMe();
@@ -306,7 +306,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance {
      * @param skill
      * @param target
      */
-    protected void sitCastAndFollow(Skill skill, L2Character target) {
+    protected void sitCastAndFollow(Skill skill, Creature target) {
         stopMove(null);
         broadcastPacket(new StopMove(this));
         getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);

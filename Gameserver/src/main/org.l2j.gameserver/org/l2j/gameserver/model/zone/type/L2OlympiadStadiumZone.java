@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.TeleportWhereType;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -58,7 +58,7 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn {
     }
 
     @Override
-    protected final void onEnter(L2Character character) {
+    protected final void onEnter(Creature character) {
         if (getSettings().getOlympiadTask() != null) {
             if (getSettings().getOlympiadTask().isBattleStarted()) {
                 character.setInsideZone(ZoneId.PVP, true);
@@ -87,7 +87,7 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn {
     }
 
     @Override
-    protected final void onExit(L2Character character) {
+    protected final void onExit(Creature character) {
         if (getSettings().getOlympiadTask() != null) {
             if (getSettings().getOlympiadTask().isBattleStarted()) {
                 character.setInsideZone(ZoneId.PVP, false);

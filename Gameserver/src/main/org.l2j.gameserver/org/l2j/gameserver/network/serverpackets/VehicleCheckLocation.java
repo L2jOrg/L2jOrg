@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -8,9 +8,9 @@ import org.l2j.gameserver.network.ServerPacketId;
  * @author Maktakien
  */
 public class VehicleCheckLocation extends ServerPacket {
-    private final L2Character _boat;
+    private final Creature _boat;
 
-    public VehicleCheckLocation(L2Character boat) {
+    public VehicleCheckLocation(Creature boat) {
         _boat = boat;
     }
 

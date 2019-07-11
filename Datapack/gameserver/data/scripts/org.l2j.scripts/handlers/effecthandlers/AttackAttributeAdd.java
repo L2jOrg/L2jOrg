@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
@@ -36,7 +36,7 @@ public class AttackAttributeAdd extends AbstractEffect
 	}
 	
 	@Override
-	public void pump(L2Character effected, Skill skill)
+	public void pump(Creature effected, Skill skill)
 	{
 		Stats stat = Stats.FIRE_POWER;
 		AttributeType maxAttribute = AttributeType.FIRE;

@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.ChanceLocation;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
@@ -343,7 +343,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
         _spawnTemplate.notifyEvent(event -> event.onSpawnDespawnNpc(_spawnTemplate, _group, npc));
     }
 
-    public void notifyNpcDeath(L2Npc npc, L2Character killer) {
+    public void notifyNpcDeath(L2Npc npc, Creature killer) {
         _spawnTemplate.notifyEvent(event -> event.onSpawnNpcDeath(_spawnTemplate, _group, npc, killer));
     }
 

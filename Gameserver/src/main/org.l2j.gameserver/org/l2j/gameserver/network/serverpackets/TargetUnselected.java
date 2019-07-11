@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -13,7 +13,7 @@ public class TargetUnselected extends ServerPacket {
     /**
      * @param character
      */
-    public TargetUnselected(L2Character character) {
+    public TargetUnselected(Creature character) {
         _targetObjId = character.getObjectId();
         _x = character.getX();
         _y = character.getY();

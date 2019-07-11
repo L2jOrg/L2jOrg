@@ -16,32 +16,32 @@
  */
 package org.l2j.gameserver.model.events.impl.character;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.skills.Skill;
 
 /**
- * An instantly executed event when L2Character is attacked by L2Character.
+ * An instantly executed event when Creature is attacked by Creature.
  *
  * @author UnAfraid
  */
 public class OnCreatureAttack implements IBaseEvent {
-    private final L2Character _attacker;
-    private final L2Character _target;
+    private final Creature _attacker;
+    private final Creature _target;
     private final Skill _skill;
 
-    public OnCreatureAttack(L2Character attacker, L2Character target, Skill skill) {
+    public OnCreatureAttack(Creature attacker, Creature target, Skill skill) {
         _attacker = attacker;
         _target = target;
         _skill = skill;
     }
 
-    public final L2Character getAttacker() {
+    public final Creature getAttacker() {
         return _attacker;
     }
 
-    public final L2Character getTarget() {
+    public final Creature getTarget() {
         return _target;
     }
 

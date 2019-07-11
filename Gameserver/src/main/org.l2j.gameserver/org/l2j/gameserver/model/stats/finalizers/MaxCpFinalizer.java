@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.stats.finalizers;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
@@ -29,7 +29,7 @@ import java.util.Optional;
  */
 public class MaxCpFinalizer implements IStatsFunction {
     @Override
-    public double calc(L2Character creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stats stat) {
         throwIfPresent(base);
 
         double baseValue = creature.getTemplate().getBaseValue(stat, 0);

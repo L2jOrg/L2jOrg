@@ -17,11 +17,11 @@
 package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 
 /**
  * @author Sdw
  */
 public interface ICondition {
-    boolean test(L2Character creature, L2Object object);
+    boolean test(Creature creature, L2Object object);
 }

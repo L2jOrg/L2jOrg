@@ -24,7 +24,7 @@ import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.*;
@@ -267,7 +267,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 	}
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, L2Character bypassOrigin)
+	public boolean useBypass(String command, Player activeChar, Creature bypassOrigin)
 	{
 		try
 		{

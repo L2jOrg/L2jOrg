@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -11,7 +11,7 @@ public final class StopMove extends ServerPacket {
     private final int _z;
     private final int _heading;
 
-    public StopMove(L2Character cha) {
+    public StopMove(Creature cha) {
         this(cha.getObjectId(), cha.getX(), cha.getY(), cha.getZ(), cha.getHeading());
     }
 

@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.BuilderUtil;
 
@@ -64,7 +64,7 @@ public class AdminInvul implements IAdminCommandHandler
 			final L2Object target = activeChar.getTarget();
 			if (target.isCharacter())
 			{
-				handleUndying(activeChar, (L2Character) target);
+				handleUndying(activeChar, (Creature) target);
 			}
 		}
 		return true;
@@ -92,7 +92,7 @@ public class AdminInvul implements IAdminCommandHandler
 		BuilderUtil.sendSysMessage(activeChar, text);
 	}
 	
-	private void handleUndying(Player activeChar, L2Character target)
+	private void handleUndying(Player activeChar, Creature target)
 	{
 		String text;
 		if (target.isUndying())

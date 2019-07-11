@@ -26,7 +26,7 @@ import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
@@ -823,7 +823,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
-				((L2Character) target).setCurrentHp(Double.parseDouble(data[1]));
+				((Creature) target).setCurrentHp(Double.parseDouble(data[1]));
 			}
 			catch (Exception e)
 			{
@@ -841,7 +841,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
-				((L2Character) target).setCurrentMp(Double.parseDouble(data[1]));
+				((Creature) target).setCurrentMp(Double.parseDouble(data[1]));
 			}
 			catch (Exception e)
 			{
@@ -859,7 +859,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
-				((L2Character) target).setCurrentCp(Double.parseDouble(data[1]));
+				((Creature) target).setCurrentCp(Double.parseDouble(data[1]));
 			}
 			catch (Exception e)
 			{
@@ -924,7 +924,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				
 				final double value = Double.parseDouble(st.nextToken());
-				final L2Character targetCreature = (L2Character) target;
+				final Creature targetCreature = (Creature) target;
 				if (value >= 0)
 				{
 					targetCreature.getStat().addFixedValue(stat, value);
@@ -974,7 +974,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				return false;
 			}
 			
-			final L2Character targetCreature = (L2Character) target;
+			final Creature targetCreature = (Creature) target;
 			targetCreature.getStat().removeFixedValue(stat);
 			targetCreature.getStat().recalculateStats(true);
 			BuilderUtil.sendSysMessage(activeChar, "Fixed stat: " + stat + " has been removed.");

@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Tower;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.zone.L2ZoneType;
@@ -40,7 +40,7 @@ public class L2FlameTowerInstance extends L2Tower {
     }
 
     @Override
-    public boolean doDie(L2Character killer) {
+    public boolean doDie(Creature killer) {
         enableZones(false);
         return super.doDie(killer);
     }

@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.Position;
 import org.l2j.gameserver.model.CharEffectList;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
@@ -23,7 +23,7 @@ import java.util.function.BiPredicate;
 import java.util.stream.Stream;
 
 public class CharStat {
-    private final L2Character _activeChar;
+    private final Creature _activeChar;
     private final Map<Stats, Double> _statsAdd = new EnumMap<>(Stats.class);
     private final Map<Stats, Double> _statsMul = new EnumMap<>(Stats.class);
     private final Map<Stats, Map<MoveType, Double>> _moveTypeStats = new ConcurrentHashMap<>();
@@ -54,32 +54,32 @@ public class CharStat {
     private double _attackSpeedMultiplier = 1;
     private double _mAttackSpeedMultiplier = 1;
 
-    public CharStat(L2Character activeChar) {
+    public CharStat(Creature activeChar) {
         _activeChar = activeChar;
         Arrays.fill(_attackTraits, 1.0f);
         Arrays.fill(_defenceTraits, 1.0f);
     }
 
     /**
-     * @return the Accuracy (base+modifier) of the L2Character in function of the Weapon Expertise Penalty.
+     * @return the Accuracy (base+modifier) of the Creature in function of the Weapon Expertise Penalty.
      */
     public int getAccuracy() {
         return (int) getValue(Stats.ACCURACY_COMBAT);
     }
 
     /**
-     * @return the Magic Accuracy (base+modifier) of the L2Character
+     * @return the Magic Accuracy (base+modifier) of the Creature
      */
     public int getMagicAccuracy() {
         return (int) getValue(Stats.ACCURACY_MAGIC);
     }
 
-    public L2Character getActiveChar() {
+    public Creature getActiveChar() {
         return _activeChar;
     }
 
     /**
-     * @return the Attack Speed multiplier (base+modifier) of the L2Character to get proper animations.
+     * @return the Attack Speed multiplier (base+modifier) of the Creature to get proper animations.
      */
     public final double getAttackSpeedMultiplier() {
         return _attackSpeedMultiplier;
@@ -90,7 +90,7 @@ public class CharStat {
     }
 
     /**
-     * @return the CON of the L2Character (base+modifier).
+     * @return the CON of the Creature (base+modifier).
      */
     public final int getCON() {
         return (int) getValue(Stats.STAT_CON);
@@ -98,35 +98,35 @@ public class CharStat {
 
     /**
      * @param init
-     * @return the Critical Damage rate (base+modifier) of the L2Character.
+     * @return the Critical Damage rate (base+modifier) of the Creature.
      */
     public final double getCriticalDmg(double init) {
         return getValue(Stats.CRITICAL_DAMAGE, init);
     }
 
     /**
-     * @return the Critical Hit rate (base+modifier) of the L2Character.
+     * @return the Critical Hit rate (base+modifier) of the Creature.
      */
     public int getCriticalHit() {
         return (int) getValue(Stats.CRITICAL_RATE);
     }
 
     /**
-     * @return the DEX of the L2Character (base+modifier).
+     * @return the DEX of the Creature (base+modifier).
      */
     public final int getDEX() {
         return (int) getValue(Stats.STAT_DEX);
     }
 
     /**
-     * @return the Attack Evasion rate (base+modifier) of the L2Character.
+     * @return the Attack Evasion rate (base+modifier) of the Creature.
      */
     public int getEvasionRate() {
         return (int) getValue(Stats.EVASION_RATE);
     }
 
     /**
-     * @return the Attack Evasion rate (base+modifier) of the L2Character.
+     * @return the Attack Evasion rate (base+modifier) of the Creature.
      */
     public int getMagicEvasionRate() {
         return (int) getValue(Stats.MAGIC_EVASION_RATE);
@@ -141,7 +141,7 @@ public class CharStat {
     }
 
     /**
-     * @return the INT of the L2Character (base+modifier).
+     * @return the INT of the Creature (base+modifier).
      */
     public int getINT() {
         return (int) getValue(Stats.STAT_INT);
@@ -157,7 +157,7 @@ public class CharStat {
 
     /**
      * @param skill
-     * @return the Magical Attack range (base+modifier) of the L2Character.
+     * @return the Magical Attack range (base+modifier) of the Creature.
      */
     public final int getMagicalAttackRange(Skill skill) {
         if (skill != null) {
@@ -192,7 +192,7 @@ public class CharStat {
     }
 
     /**
-     * Return the MAtk (base+modifier) of the L2Character.<br>
+     * Return the MAtk (base+modifier) of the Creature.<br>
      * <B><U>Example of use</U>: Calculate Magic damage
      *
      * @return
@@ -202,14 +202,14 @@ public class CharStat {
     }
 
     /**
-     * @return the MAtk Speed (base+modifier) of the L2Character in function of the Armour Expertise Penalty.
+     * @return the MAtk Speed (base+modifier) of the Creature in function of the Armour Expertise Penalty.
      */
     public int getMAtkSpd() {
         return (int) getValue(Stats.MAGIC_ATTACK_SPEED);
     }
 
     /**
-     * @return the Magic Critical Hit rate (base+modifier) of the L2Character.
+     * @return the Magic Critical Hit rate (base+modifier) of the Creature.
      */
     public final int getMCriticalHit() {
         return (int) getValue(Stats.MAGIC_CRITICAL_RATE);
@@ -218,14 +218,14 @@ public class CharStat {
     /**
      * <B><U>Example of use </U>: Calculate Magic damage.
      *
-     * @return the MDef (base+modifier) of the L2Character against a skill in function of abnormal effects in progress.
+     * @return the MDef (base+modifier) of the Creature against a skill in function of abnormal effects in progress.
      */
     public int getMDef() {
         return (int) getValue(Stats.MAGICAL_DEFENCE);
     }
 
     /**
-     * @return the MEN of the L2Character (base+modifier).
+     * @return the MEN of the Creature (base+modifier).
      */
     public final int getMEN() {
         return (int) getValue(Stats.STAT_MEN);
@@ -242,35 +242,35 @@ public class CharStat {
     }
 
     /**
-     * @return the RunSpeed (base+modifier) of the L2Character in function of the Armour Expertise Penalty.
+     * @return the RunSpeed (base+modifier) of the Creature in function of the Armour Expertise Penalty.
      */
     public double getRunSpeed() {
         return getValue(_activeChar.isInsideZone(ZoneId.WATER) ? Stats.SWIM_RUN_SPEED : Stats.RUN_SPEED);
     }
 
     /**
-     * @return the WalkSpeed (base+modifier) of the L2Character.
+     * @return the WalkSpeed (base+modifier) of the Creature.
      */
     public double getWalkSpeed() {
         return getValue(_activeChar.isInsideZone(ZoneId.WATER) ? Stats.SWIM_WALK_SPEED : Stats.WALK_SPEED);
     }
 
     /**
-     * @return the SwimRunSpeed (base+modifier) of the L2Character.
+     * @return the SwimRunSpeed (base+modifier) of the Creature.
      */
     public double getSwimRunSpeed() {
         return getValue(Stats.SWIM_RUN_SPEED);
     }
 
     /**
-     * @return the SwimWalkSpeed (base+modifier) of the L2Character.
+     * @return the SwimWalkSpeed (base+modifier) of the Creature.
      */
     public double getSwimWalkSpeed() {
         return getValue(Stats.SWIM_WALK_SPEED);
     }
 
     /**
-     * @return the RunSpeed (base+modifier) or WalkSpeed (base+modifier) of the L2Character in function of the movement type.
+     * @return the RunSpeed (base+modifier) or WalkSpeed (base+modifier) of the Creature in function of the movement type.
      */
     public double getMoveSpeed() {
         if (_activeChar.isInsideZone(ZoneId.WATER)) {
@@ -280,28 +280,28 @@ public class CharStat {
     }
 
     /**
-     * @return the PAtk (base+modifier) of the L2Character.
+     * @return the PAtk (base+modifier) of the Creature.
      */
     public int getPAtk() {
         return (int) getValue(Stats.PHYSICAL_ATTACK);
     }
 
     /**
-     * @return the PAtk Speed (base+modifier) of the L2Character in function of the Armour Expertise Penalty.
+     * @return the PAtk Speed (base+modifier) of the Creature in function of the Armour Expertise Penalty.
      */
     public int getPAtkSpd() {
         return (int) getValue(Stats.PHYSICAL_ATTACK_SPEED);
     }
 
     /**
-     * @return the PDef (base+modifier) of the L2Character.
+     * @return the PDef (base+modifier) of the Creature.
      */
     public int getPDef() {
         return (int) getValue(Stats.PHYSICAL_DEFENCE);
     }
 
     /**
-     * @return the Physical Attack range (base+modifier) of the L2Character.
+     * @return the Physical Attack range (base+modifier) of the Creature.
      */
     public final int getPhysicalAttackRange() {
         return (int) getValue(Stats.PHYSICAL_ATTACK_RANGE);
@@ -323,7 +323,7 @@ public class CharStat {
     }
 
     /**
-     * @return the ShieldDef rate (base+modifier) of the L2Character.
+     * @return the ShieldDef rate (base+modifier) of the Creature.
      */
     public final int getShldDef() {
         return (int) getValue(Stats.SHIELD_DEFENCE);
@@ -338,14 +338,14 @@ public class CharStat {
     }
 
     /**
-     * @return the STR of the L2Character (base+modifier).
+     * @return the STR of the Creature (base+modifier).
      */
     public final int getSTR() {
         return (int) getValue(Stats.STAT_STR);
     }
 
     /**
-     * @return the WIT of the L2Character (base+modifier).
+     * @return the WIT of the Creature (base+modifier).
      */
     public final int getWIT() {
         return (int) getValue(Stats.STAT_WIT);
@@ -788,7 +788,7 @@ public class CharStat {
      * @param condition
      * @return
      */
-    public boolean addAdditionalStat(Stats stat, double value, BiPredicate<L2Character, StatsHolder> condition) {
+    public boolean addAdditionalStat(Stats stat, double value, BiPredicate<Creature, StatsHolder> condition) {
         return _additionalAdd.add(new StatsHolder(stat, value, condition));
     }
 
@@ -828,7 +828,7 @@ public class CharStat {
      * @param condition
      * @return
      */
-    public boolean mulAdditionalStat(Stats stat, double value, BiPredicate<L2Character, StatsHolder> condition) {
+    public boolean mulAdditionalStat(Stats stat, double value, BiPredicate<Creature, StatsHolder> condition) {
         return _additionalMul.add(new StatsHolder(stat, value, condition));
     }
 

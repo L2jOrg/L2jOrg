@@ -1,6 +1,6 @@
 package org.l2j.gameserver.ai;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 
 /**
  * Interface of AI and client state.<br>
@@ -30,7 +30,7 @@ public interface Ctrl {
      *
      * @return the actor
      */
-    L2Character getActor();
+    Creature getActor();
 
     /**
      * Gets the intention.

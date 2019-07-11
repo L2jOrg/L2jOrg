@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
@@ -26,7 +26,7 @@ public class MDefenseFinalizer implements IStatsFunction {
             };
 
     @Override
-    public double calc(L2Character creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stats stat) {
         throwIfPresent(base);
         double baseValue = creature.getTemplate().getBaseValue(stat, 0);
         if (creature.isPet()) {
@@ -62,7 +62,7 @@ public class MDefenseFinalizer implements IStatsFunction {
         return defaultValue(creature, stat, baseValue);
     }
 
-    private double defaultValue(L2Character creature, Stats stat, double baseValue) {
+    private double defaultValue(Creature creature, Stats stat, double baseValue) {
         final double mul = Math.max(creature.getStat().getMul(stat), 0.5);
         final double add = creature.getStat().getAdd(stat);
         return (baseValue * mul) + add + creature.getStat().getMoveTypeValue(stat, creature.getMoveType());

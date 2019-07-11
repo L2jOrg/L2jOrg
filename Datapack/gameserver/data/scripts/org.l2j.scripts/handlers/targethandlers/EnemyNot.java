@@ -19,7 +19,7 @@ package handlers.targethandlers;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.ITargetTypeHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -37,7 +37,7 @@ public class EnemyNot implements ITargetTypeHandler
 	}
 	
 	@Override
-	public L2Object getTarget(L2Character activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public L2Object getTarget(Creature activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
 		if (selectedTarget == null)
 		{
@@ -49,7 +49,7 @@ public class EnemyNot implements ITargetTypeHandler
 			return null;
 		}
 		
-		final L2Character target = (L2Character) selectedTarget;
+		final Creature target = (Creature) selectedTarget;
 		
 		// You can always target yourself.
 		if (activeChar == target)

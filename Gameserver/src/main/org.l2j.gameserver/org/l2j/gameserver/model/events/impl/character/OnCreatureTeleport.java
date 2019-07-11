@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.events.impl.character;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -9,14 +9,14 @@ import org.l2j.gameserver.model.instancezone.Instance;
  * @author Nik
  */
 public class OnCreatureTeleport implements IBaseEvent {
-    private final L2Character _creature;
+    private final Creature _creature;
     private final int _destX;
     private final int _destY;
     private final int _destZ;
     private final int _destHeading;
     private final Instance _destInstance;
 
-    public OnCreatureTeleport(L2Character creature, int destX, int destY, int destZ, int destHeading, Instance destInstance) {
+    public OnCreatureTeleport(Creature creature, int destX, int destY, int destZ, int destHeading, Instance destInstance) {
         _creature = creature;
         _destX = destX;
         _destY = destY;
@@ -25,7 +25,7 @@ public class OnCreatureTeleport implements IBaseEvent {
         _destInstance = destInstance;
     }
 
-    public L2Character getCreature() {
+    public Creature getCreature() {
         return _creature;
     }
 

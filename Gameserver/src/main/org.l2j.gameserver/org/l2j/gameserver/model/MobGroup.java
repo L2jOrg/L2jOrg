@@ -20,7 +20,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.L2ControllableMobAI;
 import org.l2j.gameserver.datatables.SpawnTable;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.L2ControllableMobInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
@@ -228,7 +228,7 @@ public final class MobGroup {
         }
     }
 
-    public void setAttackTarget(L2Character target) {
+    public void setAttackTarget(Creature target) {
         removeDead();
 
         for (L2ControllableMobInstance mobInst : getMobs()) {
@@ -252,7 +252,7 @@ public final class MobGroup {
         }
     }
 
-    public void returnGroup(L2Character activeChar) {
+    public void returnGroup(Creature activeChar) {
         setIdleMode();
 
         for (L2ControllableMobInstance mobInst : getMobs()) {
@@ -270,7 +270,7 @@ public final class MobGroup {
         }
     }
 
-    public void setFollowMode(L2Character character) {
+    public void setFollowMode(Creature character) {
         removeDead();
 
         for (L2ControllableMobInstance mobInst : getMobs()) {
@@ -307,7 +307,7 @@ public final class MobGroup {
     }
 
     protected void removeDead() {
-        getMobs().removeIf(L2Character::isDead);
+        getMobs().removeIf(Creature::isDead);
     }
 
     public void setInvul(boolean invulState) {

@@ -18,7 +18,7 @@ package ai.areas.DungeonOfAbyss;
 
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.L2ZoneType;
@@ -95,7 +95,7 @@ public class DungeonOfAbyssZone extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onEnterZone(L2Character creature, L2ZoneType zone)
+	public String onEnterZone(Creature creature, L2ZoneType zone)
 	{
 		if (creature.isPlayer())
 		{

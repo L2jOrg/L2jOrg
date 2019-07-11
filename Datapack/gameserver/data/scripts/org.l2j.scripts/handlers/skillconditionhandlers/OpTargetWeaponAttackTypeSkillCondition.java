@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.L2Weapon;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.skills.ISkillCondition;
@@ -44,13 +44,13 @@ public class OpTargetWeaponAttackTypeSkillCondition implements ISkillCondition
 	}
 	
 	@Override
-	public boolean canUse(L2Character caster, Skill skill, L2Object target)
+	public boolean canUse(Creature caster, Skill skill, L2Object target)
 	{
 		if ((target == null) || !target.isCharacter())
 		{
 			return false;
 		}
-		final L2Character targetCreature = (L2Character) target;
+		final Creature targetCreature = (Creature) target;
 		final L2Weapon weapon = targetCreature.getActiveWeaponItem();
 		return _weaponTypes.stream().anyMatch(weaponType -> weaponType == weapon.getItemType());
 	}

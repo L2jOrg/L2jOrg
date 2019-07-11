@@ -19,8 +19,8 @@ package quests.Q00275_DarkWingedSpies;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.Race;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
@@ -112,7 +112,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(L2Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer())
 		{

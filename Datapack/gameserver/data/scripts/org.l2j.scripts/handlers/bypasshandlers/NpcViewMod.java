@@ -26,8 +26,8 @@ import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.DropHolder;
@@ -55,7 +55,7 @@ public class NpcViewMod implements IBypassHandler
 	private static final int DROP_LIST_ITEMS_PER_PAGE = 10;
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, L2Character bypassOrigin)
+	public boolean useBypass(String command, Player activeChar, Creature bypassOrigin)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		st.nextToken();

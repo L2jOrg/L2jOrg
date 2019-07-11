@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.L2BoatInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.AdminForgePacket;
@@ -485,7 +485,7 @@ public final class AdminPForge implements IAdminCommandHandler
 								target = activeChar.getTarget();
 								if ((target != null) && target.isCharacter())
 								{
-									value = ((L2Character) target).getTitle();
+									value = ((Creature) target).getTitle();
 								}
 								else
 								{

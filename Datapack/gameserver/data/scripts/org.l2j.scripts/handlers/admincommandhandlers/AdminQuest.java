@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.QuestManager;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
@@ -160,7 +160,7 @@ public class AdminQuest implements IAdminCommandHandler
 			}
 			else
 			{
-				final L2Character character = (L2Character) activeChar.getTarget();
+				final Creature character = (Creature) activeChar.getTarget();
 				final StringBuilder sb = new StringBuilder();
 				final Set<String> questNames = new TreeSet<>();
 				for (EventType type : EventType.values())

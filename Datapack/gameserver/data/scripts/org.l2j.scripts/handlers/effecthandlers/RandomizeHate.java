@@ -22,8 +22,8 @@ import java.util.List;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -42,7 +42,7 @@ public final class RandomizeHate extends AbstractEffect
 	}
 	
 	@Override
-	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
 		return Formulas.calcProbability(_chance, effector, effected, skill);
 	}
@@ -54,7 +54,7 @@ public final class RandomizeHate extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		if ((effected == effector) || !effected.isAttackable())
 		{
@@ -62,8 +62,8 @@ public final class RandomizeHate extends AbstractEffect
 		}
 		
 		final L2Attackable effectedMob = (L2Attackable) effected;
-		final List<L2Character> targetList = new ArrayList<>();
-		L2World.getInstance().forEachVisibleObject(effected, L2Character.class, cha ->
+		final List<Creature> targetList = new ArrayList<>();
+		L2World.getInstance().forEachVisibleObject(effected, Creature.class, cha ->
 		{
 			if ((cha != effectedMob) && (cha != effector))
 			{
@@ -83,7 +83,7 @@ public final class RandomizeHate extends AbstractEffect
 		}
 		
 		// Choosing randomly a new target
-		final L2Character target = targetList.get(Rnd.get(targetList.size()));
+		final Creature target = targetList.get(Rnd.get(targetList.size()));
 		final int hate = effectedMob.getHating(effector);
 		effectedMob.stopHating(effector);
 		effectedMob.addDamageHate(target, 0, hate);

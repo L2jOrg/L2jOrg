@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.TemplateChanceHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -44,13 +44,13 @@ public final class ChangeBody extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
+	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
 		return !effected.isDoor();
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		final int chance = Rnd.get(100);
 		//@formatter:off
@@ -63,7 +63,7 @@ public final class ChangeBody extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		effected.stopTransformation(false);
 	}

@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.stats;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.PcCondOverride;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.transform.TransformType;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
@@ -127,7 +127,7 @@ public interface IStatsFunction {
         }
     }
 
-    default double calcEnchantBodyPart(L2Character creature, int... slots) {
+    default double calcEnchantBodyPart(Creature creature, int... slots) {
         double value = 0;
         for (int slot : slots) {
             final L2ItemInstance item = creature.getInventory().getPaperdollItemByL2ItemId(slot);
@@ -143,7 +143,7 @@ public interface IStatsFunction {
         return 0;
     }
 
-    default double calcWeaponBaseValue(L2Character creature, Stats stat) {
+    default double calcWeaponBaseValue(Creature creature, Stats stat) {
         final double baseTemplateValue = creature.getTemplate().getBaseValue(stat, 0);
         double baseValue = creature.getTransformation().map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElse(baseTemplateValue);
         if (creature.isPet()) {
@@ -159,7 +159,7 @@ public interface IStatsFunction {
         return baseValue;
     }
 
-    default double calcWeaponPlusBaseValue(L2Character creature, Stats stat) {
+    default double calcWeaponPlusBaseValue(Creature creature, Stats stat) {
         final double baseTemplateValue = creature.getTemplate().getBaseValue(stat, 0);
         double baseValue = creature.getTransformation().filter(transform -> !transform.isStance()).map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElse(baseTemplateValue);
 
@@ -175,7 +175,7 @@ public interface IStatsFunction {
         return baseValue;
     }
 
-    default double calcEnchantedItemBonus(L2Character creature, Stats stat) {
+    default double calcEnchantedItemBonus(Creature creature, Stats stat) {
         if (!creature.isPlayer()) {
             return 0;
         }
@@ -213,7 +213,7 @@ public interface IStatsFunction {
         return value;
     }
 
-    default double validateValue(L2Character creature, double value, double minValue, double maxValue) {
+    default double validateValue(Creature creature, double value, double minValue, double maxValue) {
         if ((value > maxValue) && !creature.canOverrideCond(PcCondOverride.MAX_STATS_VALUE)) {
             return maxValue;
         }
@@ -221,5 +221,5 @@ public interface IStatsFunction {
         return Math.max(minValue, value);
     }
 
-    double calc(L2Character creature, Optional<Double> base, Stats stat);
+    double calc(Creature creature, Optional<Double> base, Stats stat);
 }

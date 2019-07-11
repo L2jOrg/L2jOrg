@@ -20,8 +20,8 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.FriendlyNpcAI;
 import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.enums.InstanceType;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
@@ -48,7 +48,7 @@ public class FriendlyNpcInstance extends L2Attackable {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         return _isAutoAttackable && !attacker.isPlayable() && !(attacker instanceof FriendlyNpcInstance);
     }
 
@@ -58,7 +58,7 @@ public class FriendlyNpcInstance extends L2Attackable {
     }
 
     @Override
-    public void addDamage(L2Character attacker, int damage, Skill skill) {
+    public void addDamage(Creature attacker, int damage, Skill skill) {
         if (!attacker.isPlayable() && !(attacker instanceof FriendlyNpcInstance)) {
             super.addDamage(attacker, damage, skill);
         }
@@ -69,14 +69,14 @@ public class FriendlyNpcInstance extends L2Attackable {
     }
 
     @Override
-    public void addDamageHate(L2Character attacker, int damage, int aggro) {
+    public void addDamageHate(Creature attacker, int damage, int aggro) {
         if (!attacker.isPlayable() && !(attacker instanceof FriendlyNpcInstance)) {
             super.addDamageHate(attacker, damage, aggro);
         }
     }
 
     @Override
-    public boolean doDie(L2Character killer) {
+    public boolean doDie(Creature killer) {
         // Kill the L2NpcInstance (the corpse disappeared after 7 seconds)
         if (!super.doDie(killer)) {
             return false;

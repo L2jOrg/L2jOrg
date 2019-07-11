@@ -15,8 +15,8 @@ import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
@@ -1073,7 +1073,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param isWide
      * @param relAngle
      */
-    public static void specialCamera(Player player, L2Character creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle) {
+    public static void specialCamera(Player player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle) {
         if (player.isSimulatingTalking()) {
             return;
         }
@@ -1097,7 +1097,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param isWide
      * @param relAngle
      */
-    public static void specialCameraEx(Player player, L2Character creature, int force, int angle1, int angle2, int time, int duration, int relYaw, int relPitch, int isWide, int relAngle) {
+    public static void specialCameraEx(Player player, Creature creature, int force, int angle1, int angle2, int time, int duration, int relYaw, int relPitch, int isWide, int relAngle) {
         if (player.isSimulatingTalking()) {
             return;
         }
@@ -1121,7 +1121,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param relAngle
      * @param unk
      */
-    public static void specialCamera3(Player player, L2Character creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk) {
+    public static void specialCamera3(Player player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk) {
         if (player.isSimulatingTalking()) {
             return;
         }
@@ -1130,7 +1130,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     // ---------------------------------------------------------------------------------------------------------------------------
 
-    public static void specialCamera(Instance world, L2Character creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk) {
+    public static void specialCamera(Instance world, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk) {
         world.broadcastPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
     }
 
@@ -1844,7 +1844,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     /**
-     * Provides instant callback operation when {@link L2Character} sees another creature.
+     * Provides instant callback operation when {@link Creature} sees another creature.
      *
      * @param callback
      * @param npcIds
@@ -2040,7 +2040,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     /**
-     * Provides instant callback operation when {@link L2Character} Enters on a {@link L2ZoneType}.
+     * Provides instant callback operation when {@link Creature} Enters on a {@link L2ZoneType}.
      *
      * @param callback
      * @param npcIds
@@ -2051,7 +2051,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     /**
-     * Provides instant callback operation when {@link L2Character} Enters on a {@link L2ZoneType}.
+     * Provides instant callback operation when {@link Creature} Enters on a {@link L2ZoneType}.
      *
      * @param callback
      * @param npcIds
@@ -2062,7 +2062,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     /**
-     * Provides instant callback operation when {@link L2Character} Exits on a {@link L2ZoneType}.
+     * Provides instant callback operation when {@link Creature} Exits on a {@link L2ZoneType}.
      *
      * @param callback
      * @param npcIds
@@ -2073,7 +2073,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     /**
-     * Provides instant callback operation when {@link L2Character} Exits on a {@link L2ZoneType}.
+     * Provides instant callback operation when {@link Creature} Exits on a {@link L2ZoneType}.
      *
      * @param callback
      * @param npcIds
@@ -2662,7 +2662,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param npc
      * @param killer
      */
-    public void onSpawnNpcDeath(SpawnTemplate template, SpawnGroup group, L2Npc npc, L2Character killer) {
+    public void onSpawnNpcDeath(SpawnTemplate template, SpawnGroup group, L2Npc npc, Creature killer) {
 
     }
 
@@ -2879,7 +2879,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param npc    the NPC that performs the attack
      * @param target the target of the attack
      */
-    protected void addAttackDesire(L2Npc npc, L2Character target) {
+    protected void addAttackDesire(L2Npc npc, Creature target) {
         npc.setRunning();
         npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
     }
@@ -2941,7 +2941,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      */
     protected void addSkillCastDesire(L2Npc npc, L2Object target, Skill skill, int desire) {
         if (npc.isAttackable() && (target != null) && target.isCharacter()) {
-            ((L2Attackable) npc).addDamageHate((L2Character) target, 0, desire);
+            ((L2Attackable) npc).addDamageHate((Creature) target, 0, desire);
         }
         npc.setTarget(target != null ? target : npc);
         npc.doCast(skill);

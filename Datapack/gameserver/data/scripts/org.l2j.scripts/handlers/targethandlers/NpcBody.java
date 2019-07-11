@@ -19,7 +19,7 @@ package handlers.targethandlers;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.ITargetTypeHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -38,7 +38,7 @@ public class NpcBody implements ITargetTypeHandler
 	}
 	
 	@Override
-	public L2Object getTarget(L2Character activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public L2Object getTarget(Creature activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
 		if (selectedTarget == null)
 		{
@@ -59,7 +59,7 @@ public class NpcBody implements ITargetTypeHandler
 			return null;
 		}
 		
-		final L2Character cha = (L2Character) selectedTarget;
+		final Creature cha = (Creature) selectedTarget;
 		if (cha.isDead())
 		{
 			// Check for cast range if character cannot move. TODO: char will start follow until within castrange, but if his moving is blocked by geodata, this msg will be sent.

@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.actor.instance;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.ArenaParticipantsHolder;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.entity.BlockCheckerEngine;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -91,7 +91,7 @@ public class L2BlockInstance extends L2MonsterInstance {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         if (attacker.isPlayer()) {
             return (attacker.getActingPlayer() != null) && (attacker.getActingPlayer().getBlockCheckerArena() > -1);
         }
@@ -99,7 +99,7 @@ public class L2BlockInstance extends L2MonsterInstance {
     }
 
     @Override
-    public boolean doDie(L2Character killer) {
+    public boolean doDie(Creature killer) {
         return false;
     }
 

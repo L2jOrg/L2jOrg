@@ -24,7 +24,7 @@ import org.l2j.gameserver.handler.IVoicedCommandHandler;
 import org.l2j.gameserver.handler.VoicedCommandHandler;
 import org.l2j.gameserver.instancemanager.SellBuffsManager;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
@@ -70,7 +70,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 	}
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, L2Character target)
+	public boolean useBypass(String command, Player activeChar, Creature target)
 	{
 		String cmd = "";
 		String params = "";

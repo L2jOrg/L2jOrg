@@ -9,12 +9,11 @@ import org.l2j.gameserver.model.L2ExtractableProduct;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.commission.CommissionItemType;
 import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.events.ListenersContainer;
-import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
@@ -641,7 +640,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
         _skills.add(holder);
     }
 
-    public boolean checkCondition(L2Character activeChar, L2Object object, boolean sendMessage) {
+    public boolean checkCondition(Creature activeChar, L2Object object, boolean sendMessage) {
         if (activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !Config.GM_ITEM_RESTRICTION) {
             return true;
         }
@@ -665,7 +664,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
             return true;
         }
 
-        final L2Character target = object.isCharacter() ? (L2Character) object : null;
+        final Creature target = object.isCharacter() ? (Creature) object : null;
         for (Condition preCondition : _preConditions) {
             if (preCondition == null) {
                 continue;

@@ -21,7 +21,7 @@ import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2DecoyInstance;
 import org.l2j.gameserver.model.actor.instance.L2EffectPointInstance;
@@ -69,7 +69,7 @@ public final class SummonNpc extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		if (!effected.isPlayer() || effected.isAlikeDead() || effected.getActingPlayer().inObserverMode())
 		{

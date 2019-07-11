@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.Hit;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -16,7 +16,7 @@ public class Attack extends ServerPacket {
     private final Location _targetLoc;
     private final List<Hit> _hits = new ArrayList<>();
 
-    public Attack(L2Character attacker, L2Character target) {
+    public Attack(Creature attacker, Creature target) {
         _attackerObjId = attacker.getObjectId();
         _attackerLoc = new Location(attacker);
         _targetLoc = new Location(target);

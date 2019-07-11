@@ -18,8 +18,8 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -54,7 +54,7 @@ public final class EnergyAttack extends AbstractEffect
 	}
 	
 	@Override
-	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
 		// TODO: Verify this on retail
 		return !Formulas.calcPhysicalSkillEvasion(effector, effected, skill);
@@ -73,7 +73,7 @@ public final class EnergyAttack extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		if (!effector.isPlayer())
 		{

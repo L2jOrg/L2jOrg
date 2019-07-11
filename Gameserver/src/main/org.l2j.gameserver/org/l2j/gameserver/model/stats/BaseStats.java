@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.stats;
 
 import org.l2j.commons.xml.XmlReader;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -87,7 +87,7 @@ public enum BaseStats {
         return _stat;
     }
 
-    public int calcValue(L2Character creature) {
+    public int calcValue(Creature creature) {
         if ((creature != null) && (_stat != null)) {
             // return (int) Math.min(_stat.finalize(creature, Optional.empty()), MAX_STAT_VALUE - 1);
             return (int) creature.getStat().getValue(_stat);
@@ -95,7 +95,7 @@ public enum BaseStats {
         return 0;
     }
 
-    public double calcBonus(L2Character creature) {
+    public double calcBonus(Creature creature) {
         if (creature != null) {
             final int value = calcValue(creature);
             if (value < 1) {

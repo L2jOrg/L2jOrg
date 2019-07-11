@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureKilled;
@@ -43,7 +43,7 @@ public final class TriggerSkillByKill extends AbstractEffect
 		_skill = new SkillHolder(params.getInt("skillId", 0), params.getInt("skillLevel", 0));
 	}
 	
-	private void onCreatureKilled(OnCreatureKilled event, L2Character target)
+	private void onCreatureKilled(OnCreatureKilled event, Creature target)
 	{
 		if ((_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0)))
 		{
@@ -64,13 +64,13 @@ public final class TriggerSkillByKill extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		effected.removeListenerIf(EventType.ON_CREATURE_KILLED, listener -> listener.getOwner() == this);
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		effected.addListener(new ConsumerEventListener(effected, EventType.ON_CREATURE_KILLED, (OnCreatureKilled event) -> onCreatureKilled(event, effected), this));
 	}

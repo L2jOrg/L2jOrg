@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -33,19 +33,19 @@ public final class EnableCloak extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
+	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
 		return (effector != null) && (effected != null) && effected.isPlayer();
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		effected.getActingPlayer().getStat().setCloakSlotStatus(true);
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		effected.getActingPlayer().getStat().setCloakSlotStatus(false);
 	}

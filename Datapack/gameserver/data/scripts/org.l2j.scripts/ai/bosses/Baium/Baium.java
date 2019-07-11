@@ -27,8 +27,8 @@ import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
@@ -301,7 +301,7 @@ public final class Baium extends AbstractNpcAI
 				}
 				else
 				{
-					for (L2Character creature : L2World.getInstance().getVisibleObjectsInRange(npc, Player.class, 2000))
+					for (Creature creature : L2World.getInstance().getVisibleObjectsInRange(npc, Player.class, 2000))
 					{
 						if (zone.isInsideZone(creature) && !creature.isDead())
 						{
@@ -317,7 +317,7 @@ public final class Baium extends AbstractNpcAI
 				if (npc != null)
 				{
 					final L2Attackable mob = (L2Attackable) npc;
-					final L2Character mostHated = mob.getMostHated();
+					final Creature mostHated = mob.getMostHated();
 					
 					if ((_baium == null) || _baium.isDead())
 					{
@@ -399,7 +399,7 @@ public final class Baium extends AbstractNpcAI
 			}
 			case "CLEAR_ZONE":
 			{
-				for (L2Character charInside : zone.getCharactersInside())
+				for (Creature charInside : zone.getCharactersInside())
 				{
 					if (charInside != null)
 					{
@@ -450,7 +450,7 @@ public final class Baium extends AbstractNpcAI
 			{
 				if (getStatus() == IN_FIGHT)
 				{
-					for (L2Character charInside : zone.getCharactersInside())
+					for (Creature charInside : zone.getCharactersInside())
 					{
 						if ((charInside != null) && charInside.isNpc() && (charInside.getId() == ARCHANGEL))
 						{
@@ -521,7 +521,7 @@ public final class Baium extends AbstractNpcAI
 		else
 		{
 			final L2Attackable mob = (L2Attackable) npc;
-			final L2Character mostHated = mob.getMostHated();
+			final Creature mostHated = mob.getMostHated();
 			
 			if ((getRandom(100) < 10) && SkillCaster.checkUseConditions(mob, SPEAR_ATTACK.getSkill()))
 			{
@@ -564,7 +564,7 @@ public final class Baium extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(L2Npc npc, Creature creature, boolean isSummon)
 	{
 		if (!zone.isInsideZone(creature) || (creature.isNpc() && (creature.getId() == BAIUM_STONE)))
 		{
@@ -625,19 +625,19 @@ public final class Baium extends AbstractNpcAI
 		return super.unload(removeFromList);
 	}
 	
-	private final void refreshAiParams(L2Character attacker, L2Npc npc, int damage)
+	private final void refreshAiParams(Creature attacker, L2Npc npc, int damage)
 	{
 		refreshAiParams(attacker, npc, damage, damage);
 	}
 	
-	private final void refreshAiParams(L2Character attacker, L2Npc npc, int damage, int aggro)
+	private final void refreshAiParams(Creature attacker, L2Npc npc, int damage, int aggro)
 	{
 		final int newAggroVal = damage + getRandom(3000);
 		final int aggroVal = aggro + 1000;
 		final NpcVariables vars = npc.getVariables();
 		for (int i = 0; i < 3; i++)
 		{
-			if (attacker == vars.getObject("c_quest" + i, L2Character.class))
+			if (attacker == vars.getObject("c_quest" + i, Creature.class))
 			{
 				if (vars.getInt("i_quest" + i) < aggroVal)
 				{
@@ -681,14 +681,14 @@ public final class Baium extends AbstractNpcAI
 		final NpcVariables vars = npc.getVariables();
 		for (int i = 0; i < 3; i++)
 		{
-			final L2Character attacker = vars.getObject("c_quest" + i, L2Character.class);
+			final Creature attacker = vars.getObject("c_quest" + i, Creature.class);
 			if ((attacker == null) || ((npc.calculateDistance3D(attacker) > 9000) || attacker.isDead()))
 			{
 				vars.set("i_quest" + i, 0);
 			}
 		}
 		final int index = CommonUtil.getIndexOfMaxValue(vars.getInt("i_quest0"), vars.getInt("i_quest1"), vars.getInt("i_quest2"));
-		final L2Character player = vars.getObject("c_quest" + index, L2Character.class);
+		final Creature player = vars.getObject("c_quest" + index, Creature.class);
 		final int i2 = vars.getInt("i_quest" + index);
 		if ((i2 > 0) && (getRandom(100) < 70))
 		{

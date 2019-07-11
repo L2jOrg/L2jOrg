@@ -18,8 +18,8 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -40,13 +40,13 @@ public final class TransferHate extends AbstractEffect
 	}
 	
 	@Override
-	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
 		return Formulas.calcProbability(_chance, effector, effected, skill);
 	}
 	
 	@Override
-	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
+	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
 		return GameUtils.checkIfInRange(skill.getEffectRange(), effector, effected, true);
 	}
@@ -58,7 +58,7 @@ public final class TransferHate extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		L2World.getInstance().forEachVisibleObjectInRange(effector, L2Attackable.class, skill.getAffectRange(), hater ->
 		{

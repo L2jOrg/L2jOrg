@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -31,7 +31,7 @@ public class ConditionPlayerCanSweep extends Condition {
     }
 
     @Override
-    public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item) {
+    public boolean testImpl(Creature effector, Creature effected, Skill skill, L2Item item) {
         final AtomicBoolean canSweep = new AtomicBoolean(false);
         if (effector.getActingPlayer() != null) {
             final Player sweeper = effector.getActingPlayer();

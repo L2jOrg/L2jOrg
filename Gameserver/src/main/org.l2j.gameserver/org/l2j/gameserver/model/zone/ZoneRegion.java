@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.zone;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.type.L2PeaceZone;
 
@@ -32,7 +32,7 @@ public class ZoneRegion {
         return _regionY;
     }
 
-    public void revalidateZones(L2Character character) {
+    public void revalidateZones(Creature character) {
         // do NOT update the world region while the character is still in the process of teleporting
         // Once the teleport is COMPLETED, revalidation occurs safely, at that time.
 
@@ -45,7 +45,7 @@ public class ZoneRegion {
         }
     }
 
-    public void removeFromZones(L2Character character) {
+    public void removeFromZones(Creature character) {
         for (L2ZoneType z : _zones.values()) {
             z.removeCharacter(character);
         }
@@ -84,7 +84,7 @@ public class ZoneRegion {
         return true;
     }
 
-    public void onDeath(L2Character character) {
+    public void onDeath(Creature character) {
         for (L2ZoneType z : _zones.values()) {
             if (z.isInsideZone(character)) {
                 z.onDieInside(character);
@@ -92,7 +92,7 @@ public class ZoneRegion {
         }
     }
 
-    public void onRevive(L2Character character) {
+    public void onRevive(Creature character) {
         for (L2ZoneType z : _zones.values()) {
             if (z.isInsideZone(character)) {
                 z.onReviveInside(character);

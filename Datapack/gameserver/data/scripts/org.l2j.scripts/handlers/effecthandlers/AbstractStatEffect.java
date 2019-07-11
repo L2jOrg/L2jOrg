@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.enums.StatModifierType;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.conditions.ConditionPlayerIsInCombat;
 import org.l2j.gameserver.model.conditions.ConditionUsingItemType;
@@ -109,7 +109,7 @@ public abstract class AbstractStatEffect extends AbstractEffect
     }
 
     @Override
-    public void pump(L2Character effected, Skill skill)
+    public void pump(Creature effected, Skill skill)
     {
         if (_conditions.isEmpty() || _conditions.stream().allMatch(cond -> cond.test(effected, effected, skill)))
         {

@@ -4,7 +4,7 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2SiegeClan;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.network.L2GameClient;
@@ -30,7 +30,7 @@ public class Die extends ServerPacket {
     private List<Integer> _items = null;
     private boolean _itemsEnabled;
 
-    public Die(L2Character activeChar) {
+    public Die(Creature activeChar) {
         _objectId = activeChar.getObjectId();
         if (activeChar.isPlayer()) {
             final L2Clan clan = activeChar.getActingPlayer().getClan();

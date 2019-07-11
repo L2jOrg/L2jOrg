@@ -26,7 +26,7 @@ import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
 import org.l2j.gameserver.util.GameUtils;
@@ -38,7 +38,7 @@ import org.l2j.gameserver.util.GameUtils;
 public class SquarePB implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(L2Character activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
+	public void forEachAffected(Creature activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		final int squareStartAngle = skill.getFanRange()[1];
@@ -55,7 +55,7 @@ public class SquarePB implements IAffectScopeHandler
 		
 		// Target checks.
 		final AtomicInteger affected = new AtomicInteger(0);
-		final Predicate<L2Character> filter = c ->
+		final Predicate<Creature> filter = c ->
 		{
 			if ((affectLimit > 0) && (affected.get() >= affectLimit))
 			{
@@ -90,7 +90,7 @@ public class SquarePB implements IAffectScopeHandler
 		};
 		
 		// Check and add targets.
-		L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2Character.class, radius, c ->
+		L2World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, radius, c ->
 		{
 			if (filter.test(c))
 			{

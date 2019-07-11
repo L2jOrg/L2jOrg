@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -65,7 +65,7 @@ public class L2PetInstanceAction implements IActionHandler
 					activeChar.onActionRequest();
 				}
 			}
-			else if (!((L2Character) target).isInsideRadius2D(activeChar, 150))
+			else if (!((Creature) target).isInsideRadius2D(activeChar, 150))
 			{
 				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
 				{

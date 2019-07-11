@@ -1,7 +1,7 @@
 package org.l2j.gameserver.ai;
 
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -22,7 +22,7 @@ public abstract class L2PlayableAI extends L2CharacterAI {
     }
 
     @Override
-    protected void onIntentionAttack(L2Character target) {
+    protected void onIntentionAttack(Creature target) {
         if ((target != null) && target.isPlayable()) {
             if (target.getActingPlayer().isProtectionBlessingAffected() && ((_actor.getActingPlayer().getLevel() - target.getActingPlayer().getLevel()) >= 10) && (_actor.getActingPlayer().getReputation() < 0) && !(target.isInsideZone(ZoneId.PVP))) {
                 // If attacker have karma and have level >= 10 than his target and target have

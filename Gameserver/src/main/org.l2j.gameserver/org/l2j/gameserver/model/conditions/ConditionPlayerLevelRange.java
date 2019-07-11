@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.conditions;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -36,7 +36,7 @@ public class ConditionPlayerLevelRange extends Condition {
     }
 
     @Override
-    public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item) {
+    public boolean testImpl(Creature effector, Creature effected, Skill skill, L2Item item) {
         final int level = effector.getLevel();
         return ((level >= _levels[0]) && (level <= _levels[1]));
     }

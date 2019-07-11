@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -36,7 +36,7 @@ public final class Hide extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		if (effected.isPlayer())
 		{
@@ -47,7 +47,7 @@ public final class Hide extends AbstractEffect
 				effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			}
 			
-			L2World.getInstance().forEachVisibleObject(effected, L2Character.class, target ->
+			L2World.getInstance().forEachVisibleObject(effected, Creature.class, target ->
 			{
 				if ((target.getTarget() == effected))
 				{
@@ -61,7 +61,7 @@ public final class Hide extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		if (effected.isPlayer())
 		{

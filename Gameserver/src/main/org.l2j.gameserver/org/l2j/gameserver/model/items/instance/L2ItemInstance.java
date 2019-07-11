@@ -17,7 +17,7 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2j.gameserver.instancemanager.SiegeGuardManager;
 import org.l2j.gameserver.model.*;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.conditions.Condition;
@@ -244,7 +244,7 @@ public final class L2ItemInstance extends L2Object {
      *
      * @param character Character that pick up the item
      */
-    public final void pickupMe(L2Character character) {
+    public final void pickupMe(Creature character) {
         final L2WorldRegion oldregion = getWorldRegion();
 
         // Create a server->client GetItem packet to pick up the L2ItemInstance
@@ -1218,7 +1218,7 @@ public final class L2ItemInstance extends L2Object {
      * @return boolean false
      */
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         return false;
     }
 
@@ -1255,7 +1255,7 @@ public final class L2ItemInstance extends L2Object {
         }
     }
 
-    public final void dropMe(L2Character dropper, int x, int y, int z) {
+    public final void dropMe(Creature dropper, int x, int y, int z) {
         ThreadPoolManager.getInstance().execute(new ItemDropTask(this, dropper, x, y, z));
         if ((dropper != null) && dropper.isPlayer()) {
             // Notify to scripts
@@ -1423,7 +1423,7 @@ public final class L2ItemInstance extends L2Object {
         {
             return true;
         }
-        L2Character owner = getActingPlayer();
+        Creature owner = getActingPlayer();
         if (owner != null) {
             for (Condition condition : _item.getConditions()) {
                 if (condition == null) {
@@ -1958,11 +1958,11 @@ public final class L2ItemInstance extends L2Object {
      * <li>Call Pet</li><BR>
      */
     public class ItemDropTask implements Runnable {
-        private final L2Character _dropper;
+        private final Creature _dropper;
         private final L2ItemInstance _itеm;
         private int _x, _y, _z;
 
-        public ItemDropTask(L2ItemInstance item, L2Character dropper, int x, int y, int z) {
+        public ItemDropTask(L2ItemInstance item, Creature dropper, int x, int y, int z) {
             _x = x;
             _y = y;
             _z = z;

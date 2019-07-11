@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.zone.type;
 
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.zone.L2ZoneType;
@@ -71,7 +71,7 @@ public class L2SwampZone extends L2ZoneType {
     }
 
     @Override
-    protected void onEnter(L2Character character) {
+    protected void onEnter(Creature character) {
         if (getCastle() != null) {
             // castle zones active only during siege
             if (!getCastle().getSiege().isInProgress() || !isEnabled()) {
@@ -95,7 +95,7 @@ public class L2SwampZone extends L2ZoneType {
     }
 
     @Override
-    protected void onExit(L2Character character) {
+    protected void onExit(Creature character) {
         // don't broadcast info if not needed
         if (character.isInsideZone(ZoneId.SWAMP)) {
             character.setInsideZone(ZoneId.SWAMP, false);

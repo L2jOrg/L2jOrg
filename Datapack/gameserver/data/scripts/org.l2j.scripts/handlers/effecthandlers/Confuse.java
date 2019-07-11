@@ -24,7 +24,7 @@ import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -45,7 +45,7 @@ public final class Confuse extends AbstractEffect
 	}
 	
 	@Override
-	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
 		return Formulas.calcProbability(_chance, effector, effected, skill);
 	}
@@ -63,20 +63,20 @@ public final class Confuse extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		effected.getAI().notifyEvent(CtrlEvent.EVT_CONFUSED);
 		
-		final List<L2Character> targetList = new ArrayList<>();
+		final List<Creature> targetList = new ArrayList<>();
 		// Getting the possible targets
 		
-		L2World.getInstance().forEachVisibleObject(effected, L2Character.class, targetList::add);
+		L2World.getInstance().forEachVisibleObject(effected, Creature.class, targetList::add);
 		
 		// if there is no target, exit function
 		if (!targetList.isEmpty())
 		{
 			// Choosing randomly a new target
-			final L2Character target = targetList.get(Rnd.get(targetList.size()));
+			final Creature target = targetList.get(Rnd.get(targetList.size()));
 			// Attacking the target
 			effected.setTarget(target);
 			effected.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);

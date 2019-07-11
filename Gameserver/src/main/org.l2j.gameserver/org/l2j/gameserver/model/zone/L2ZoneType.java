@@ -4,7 +4,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.ListenersContainer;
@@ -30,7 +30,7 @@ public abstract class L2ZoneType extends ListenersContainer {
     private final int _id;
     protected L2ZoneForm _zone;
     protected List<L2ZoneForm> _blockedZone;
-    protected Map<Integer, L2Character> _characterList = new ConcurrentHashMap<>();
+    protected Map<Integer, Creature> _characterList = new ConcurrentHashMap<>();
     protected boolean _enabled;
     /**
      * Parameters to affect specific characters
@@ -152,7 +152,7 @@ public abstract class L2ZoneType extends ListenersContainer {
      * @param character the player to verify.
      * @return {@code true} if the given character is affected by this zone, {@code false} otherwise.
      */
-    private boolean isAffected(L2Character character) {
+    private boolean isAffected(Creature character) {
         // Check instance
         final Instance world = character.getInstanceWorld();
         if (world != null) {
@@ -334,7 +334,7 @@ public abstract class L2ZoneType extends ListenersContainer {
         return _zone.getDistanceToZone(object.getX(), object.getY());
     }
 
-    public void revalidateInZone(L2Character character) {
+    public void revalidateInZone(Creature character) {
         // If the object is inside the zone...
         if (isInsideZone(character)) {
             // If the character can't be affected by this zone return
@@ -358,7 +358,7 @@ public abstract class L2ZoneType extends ListenersContainer {
      *
      * @param character
      */
-    public void removeCharacter(L2Character character) {
+    public void removeCharacter(Creature character) {
         // Was the character inside this zone?
         if (_characterList.containsKey(character.getObjectId())) {
             // Notify to scripts.
@@ -378,7 +378,7 @@ public abstract class L2ZoneType extends ListenersContainer {
      * @param character
      * @return
      */
-    public boolean isCharacterInZone(L2Character character) {
+    public boolean isCharacterInZone(Creature character) {
         return _characterList.containsKey(character.getObjectId());
     }
 
@@ -393,14 +393,14 @@ public abstract class L2ZoneType extends ListenersContainer {
         _settings = settings;
     }
 
-    protected abstract void onEnter(L2Character character);
+    protected abstract void onEnter(Creature character);
 
-    protected abstract void onExit(L2Character character);
+    protected abstract void onExit(Creature character);
 
-    public void onDieInside(L2Character character) {
+    public void onDieInside(Creature character) {
     }
 
-    public void onReviveInside(L2Character character) {
+    public void onReviveInside(Creature character) {
     }
 
     public void onPlayerLoginInside(Player player) {
@@ -409,17 +409,17 @@ public abstract class L2ZoneType extends ListenersContainer {
     public void onPlayerLogoutInside(Player player) {
     }
 
-    public Map<Integer, L2Character> getCharacters() {
+    public Map<Integer, Creature> getCharacters() {
         return _characterList;
     }
 
-    public Collection<L2Character> getCharactersInside() {
+    public Collection<Creature> getCharactersInside() {
         return _characterList.values();
     }
 
     public List<Player> getPlayersInside() {
         final List<Player> players = new ArrayList<>();
-        for (L2Character ch : _characterList.values()) {
+        for (Creature ch : _characterList.values()) {
             if ((ch != null) && ch.isPlayer()) {
                 players.add(ch.getActingPlayer());
             }
@@ -438,7 +438,7 @@ public abstract class L2ZoneType extends ListenersContainer {
             return;
         }
 
-        for (L2Character character : _characterList.values()) {
+        for (Creature character : _characterList.values()) {
             if ((character != null) && character.isPlayer()) {
                 character.sendPacket(packet);
             }
@@ -518,7 +518,7 @@ public abstract class L2ZoneType extends ListenersContainer {
             return;
         }
 
-        for (L2Character character : _characterList.values()) {
+        for (Creature character : _characterList.values()) {
             if ((character != null) && character.isPlayer()) {
                 final Player player = character.getActingPlayer();
                 if (player.isOnline()) {

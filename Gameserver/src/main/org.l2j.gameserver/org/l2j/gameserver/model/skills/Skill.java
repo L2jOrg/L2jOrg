@@ -13,7 +13,7 @@ import org.l2j.gameserver.handler.TargetHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
@@ -952,7 +952,7 @@ public final class Skill implements IIdentifiable {
         return _effectPoint < 0;
     }
 
-    public boolean checkCondition(L2Character activeChar, L2Object object) {
+    public boolean checkCondition(Creature activeChar, L2Object object) {
         if ((activeChar.canOverrideCond(PcCondOverride.SKILL_CONDITIONS) && !Config.GM_SKILL_RESTRICTION)) {
             return true;
         }
@@ -984,7 +984,7 @@ public final class Skill implements IIdentifiable {
      * @param sendMessage send SystemMessageId packet if target is incorrect.
      * @return {@code WorldObject} this skill can be used on, or {@code null} if there is no such.
      */
-    public L2Object getTarget(L2Character activeChar, boolean forceUse, boolean dontMove, boolean sendMessage) {
+    public L2Object getTarget(Creature activeChar, boolean forceUse, boolean dontMove, boolean sendMessage) {
         return getTarget(activeChar, activeChar.getTarget(), forceUse, dontMove, sendMessage);
     }
 
@@ -996,7 +996,7 @@ public final class Skill implements IIdentifiable {
      * @param sendMessage   send SystemMessageId packet if target is incorrect.
      * @return the selected {@code WorldObject} this skill can be used on, or {@code null} if there is no such.
      */
-    public L2Object getTarget(L2Character activeChar, L2Object seletedTarget, boolean forceUse, boolean dontMove, boolean sendMessage) {
+    public L2Object getTarget(Creature activeChar, L2Object seletedTarget, boolean forceUse, boolean dontMove, boolean sendMessage) {
         final ITargetTypeHandler handler = TargetHandler.getInstance().getHandler(getTargetType());
         if (handler != null) {
             try {
@@ -1014,7 +1014,7 @@ public final class Skill implements IIdentifiable {
      * @param target     the initial target activeChar is focusing upon.
      * @return list containing objects gathered in a specific geometric way that are valid to be affected by this skill.
      */
-    public List<L2Object> getTargetsAffected(L2Character activeChar, L2Object target) {
+    public List<L2Object> getTargetsAffected(Creature activeChar, L2Object target) {
         if (target == null) {
             return null;
         }
@@ -1037,7 +1037,7 @@ public final class Skill implements IIdentifiable {
      * @param target     the initial target activeChar is focusing upon.
      * @param action     for each affected target.
      */
-    public void forEachTargetAffected(L2Character activeChar, L2Object target, Consumer<? super L2Object> action) {
+    public void forEachTargetAffected(Creature activeChar, L2Object target, Consumer<? super L2Object> action) {
         if (target == null) {
             return;
         }
@@ -1120,30 +1120,30 @@ public final class Skill implements IIdentifiable {
     }
 
     /**
-     * Method overload for {@link Skill#applyEffects(L2Character, L2Character, boolean, boolean, boolean, int, L2ItemInstance)}.<br>
+     * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, L2ItemInstance)}.<br>
      * Simplify the calls.
      *
      * @param effector the caster of the skill
      * @param effected the target of the effect
      */
-    public void applyEffects(L2Character effector, L2Character effected) {
+    public void applyEffects(Creature effector, Creature effected) {
         applyEffects(effector, effected, false, false, true, 0, null);
     }
 
     /**
-     * Method overload for {@link Skill#applyEffects(L2Character, L2Character, boolean, boolean, boolean, int, L2ItemInstance)}.<br>
+     * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, L2ItemInstance)}.<br>
      * Simplify the calls.
      *
      * @param effector the caster of the skill
      * @param effected the target of the effect
      * @param item
      */
-    public void applyEffects(L2Character effector, L2Character effected, L2ItemInstance item) {
+    public void applyEffects(Creature effector, Creature effected, L2ItemInstance item) {
         applyEffects(effector, effected, false, false, true, 0, item);
     }
 
     /**
-     * Method overload for {@link Skill#applyEffects(L2Character, L2Character, boolean, boolean, boolean, int, L2ItemInstance)}.<br>
+     * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, L2ItemInstance)}.<br>
      * Simplify the calls, allowing abnormal time time customization.
      *
      * @param effector     the caster of the skill
@@ -1151,7 +1151,7 @@ public final class Skill implements IIdentifiable {
      * @param instant      if {@code true} instant effects will be applied to the effected
      * @param abnormalTime custom abnormal time, if equal or lesser than zero will be ignored
      */
-    public void applyEffects(L2Character effector, L2Character effected, boolean instant, int abnormalTime) {
+    public void applyEffects(Creature effector, Creature effected, boolean instant, int abnormalTime) {
         applyEffects(effector, effected, false, false, instant, abnormalTime, null);
     }
 
@@ -1166,7 +1166,7 @@ public final class Skill implements IIdentifiable {
      * @param abnormalTime custom abnormal time, if equal or lesser than zero will be ignored
      * @param item
      */
-    public void applyEffects(L2Character effector, L2Character effected, boolean self, boolean passive, boolean instant, int abnormalTime, L2ItemInstance item) {
+    public void applyEffects(Creature effector, Creature effected, boolean self, boolean passive, boolean instant, int abnormalTime, L2ItemInstance item) {
         // null targets cannot receive any effects.
         if (effected == null) {
             return;
@@ -1252,7 +1252,7 @@ public final class Skill implements IIdentifiable {
      * @param effector the caster of the skill
      * @param effected the target of the effect
      */
-    public void applyChannelingEffects(L2Character effector, L2Character effected) {
+    public void applyChannelingEffects(Creature effector, Creature effected) {
         // null targets cannot receive any effects.
         if (effected == null) {
             return;
@@ -1268,7 +1268,7 @@ public final class Skill implements IIdentifiable {
      * @param caster  the caster
      * @param targets the targets
      */
-    public void activateSkill(L2Character caster, L2Object... targets) {
+    public void activateSkill(Creature caster, L2Object... targets) {
         activateSkill(caster, null, targets);
     }
 
@@ -1279,7 +1279,7 @@ public final class Skill implements IIdentifiable {
      * @param item
      * @param targets the targets
      */
-    public void activateSkill(L2Character caster, L2ItemInstance item, L2Object... targets) {
+    public void activateSkill(Creature caster, L2ItemInstance item, L2Object... targets) {
         activateSkill(caster, null, item, targets);
     }
 
@@ -1301,13 +1301,13 @@ public final class Skill implements IIdentifiable {
      * @param item
      * @param targets the targets
      */
-    public final void activateSkill(L2Character caster, CubicInstance cubic, L2ItemInstance item, L2Object... targets) {
+    public final void activateSkill(Creature caster, CubicInstance cubic, L2ItemInstance item, L2Object... targets) {
         for (L2Object targetObject : targets) {
             if (!targetObject.isCharacter()) {
                 continue;
             }
 
-            final L2Character target = (L2Character) targetObject;
+            final Creature target = (Creature) targetObject;
             if (Formulas.calcBuffDebuffReflection(target, this)) {
                 // if skill is reflected instant effects should be casted on target
                 // and continuous effects on caster
@@ -1362,7 +1362,7 @@ public final class Skill implements IIdentifiable {
      * @param target              the target
      * @return {@code false} if at least one condition returns false, {@code true} otherwise
      */
-    public boolean checkConditions(SkillConditionScope skillConditionScope, L2Character caster, L2Object target) {
+    public boolean checkConditions(SkillConditionScope skillConditionScope, Creature caster, L2Object target) {
         return _conditionLists.getOrDefault(skillConditionScope, Collections.emptyList()).stream().allMatch(c -> c.canUse(caster, this, target));
     }
 
@@ -1515,7 +1515,7 @@ public final class Skill implements IIdentifiable {
      * @param activeChar
      * @return alternative skill that has been attached due to the effect of toggle skills on the player (e.g Fire Stance, Water Stance).
      */
-    public Skill getAttachedSkill(L2Character activeChar) {
+    public Skill getAttachedSkill(Creature activeChar) {
         // If character is double casting, return double cast skill.
         if ((_doubleCastSkill > 0) && activeChar.isAffected(EffectFlag.DOUBLE_CAST)) {
             return SkillData.getInstance().getSkill(getDoubleCastSkill(), getLevel(), getSubLevel());

@@ -20,7 +20,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -38,7 +38,7 @@ public final class Spoil extends AbstractEffect
 	}
 	
 	@Override
-	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
 		final int lvlDifference = (effected.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : effector.getLevel()));
 		final double lvlModifier = Math.pow(1.3, lvlDifference);
@@ -65,7 +65,7 @@ public final class Spoil extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		if (!effected.isMonster() || effected.isDead())
 		{

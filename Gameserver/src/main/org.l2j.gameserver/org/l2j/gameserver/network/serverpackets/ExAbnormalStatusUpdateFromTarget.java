@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -10,10 +10,10 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class ExAbnormalStatusUpdateFromTarget extends ServerPacket {
-    private final L2Character _character;
+    private final Creature _character;
     private final List<BuffInfo> _effects;
 
-    public ExAbnormalStatusUpdateFromTarget(L2Character character) {
+    public ExAbnormalStatusUpdateFromTarget(Creature character) {
         //@formatter:off
         _character = character;
         _effects = character.getEffectList().getEffects()

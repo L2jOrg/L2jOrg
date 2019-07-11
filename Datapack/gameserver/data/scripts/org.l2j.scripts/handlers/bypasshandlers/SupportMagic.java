@@ -19,7 +19,7 @@ package handlers.bypasshandlers;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.handler.IBypassHandler;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -78,7 +78,7 @@ public class SupportMagic implements IBypassHandler
 	private static final int HASTE_LEVEL_2 = Config.MAX_NEWBIE_BUFF_LEVEL + 1; // disabled
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, L2Character target)
+	public boolean useBypass(String command, Player activeChar, Creature target)
 	{
 		if (!target.isNpc() || activeChar.isCursedWeaponEquipped())
 		{

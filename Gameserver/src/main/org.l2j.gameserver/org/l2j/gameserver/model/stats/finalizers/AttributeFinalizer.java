@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.enums.AttributeType;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -39,7 +39,7 @@ public class AttributeFinalizer implements IStatsFunction {
     }
 
     @Override
-    public double calc(L2Character creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stats stat) {
         throwIfPresent(base);
 
         double baseValue = creature.getTemplate().getBaseValue(stat, 0);

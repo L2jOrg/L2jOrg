@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.skills.Skill;
@@ -31,11 +31,11 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
  */
 public final class L2ArtefactInstance extends L2Npc {
     /**
-     * Constructor of L2ArtefactInstance (use L2Character and L2NpcInstance constructor).<BR>
+     * Constructor of L2ArtefactInstance (use Creature and L2NpcInstance constructor).<BR>
      * <BR>
      * <B><U> Actions</U> :</B><BR>
      * <BR>
-     * <li>Call the L2Character constructor to set the _template of the L2ArtefactInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
+     * <li>Call the Creature constructor to set the _template of the L2ArtefactInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
      * <li>Set the name of the L2ArtefactInstance</li>
      * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li><BR>
      * <BR>
@@ -57,7 +57,7 @@ public final class L2ArtefactInstance extends L2Npc {
      * Return False.
      */
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         return false;
     }
 
@@ -73,10 +73,10 @@ public final class L2ArtefactInstance extends L2Npc {
     }
 
     @Override
-    public void reduceCurrentHp(double damage, L2Character attacker, Skill skill) {
+    public void reduceCurrentHp(double damage, Creature attacker, Skill skill) {
     }
 
     @Override
-    public void reduceCurrentHp(double value, L2Character attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
+    public void reduceCurrentHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
     }
 }

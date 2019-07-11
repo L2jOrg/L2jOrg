@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2PetData;
 import org.l2j.gameserver.model.L2PetLevelData;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.stat.PetStat;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
@@ -503,7 +503,7 @@ public class Pet extends Summon {
     }
 
     @Override
-    public boolean doDie(L2Character killer) {
+    public boolean doDie(Creature killer) {
         final Player owner = getOwner();
         if ((owner != null) && !owner.isInDuel() && (!isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.SIEGE))) {
             deathPenalty();

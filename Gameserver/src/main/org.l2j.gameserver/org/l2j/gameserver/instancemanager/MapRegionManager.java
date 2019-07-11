@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.L2MapRegion;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
@@ -165,7 +165,7 @@ public final class MapRegionManager extends GameXmlReader {
      * @param activeChar
      * @return
      */
-    public String getClosestTownName(L2Character activeChar) {
+    public String getClosestTownName(Creature activeChar) {
         final L2MapRegion region = getMapRegion(activeChar);
         return region == null ? "Aden Castle Town" : region.getTown();
     }
@@ -175,7 +175,7 @@ public final class MapRegionManager extends GameXmlReader {
      * @param teleportWhere
      * @return
      */
-    public Location getTeleToLocation(L2Character activeChar, TeleportWhereType teleportWhere) {
+    public Location getTeleToLocation(Creature activeChar, TeleportWhereType teleportWhere) {
         if (activeChar.isPlayer()) {
             final Player player = activeChar.getActingPlayer();
 
@@ -314,7 +314,7 @@ public final class MapRegionManager extends GameXmlReader {
      * @param point
      * @return
      */
-    public L2MapRegion getRestartRegion(L2Character activeChar, String point) {
+    public L2MapRegion getRestartRegion(Creature activeChar, String point) {
         try {
             final Player player = (Player) activeChar;
             final L2MapRegion region = _regions.get(point);

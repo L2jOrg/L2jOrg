@@ -8,7 +8,7 @@ import org.l2j.gameserver.instancemanager.WarpedSpaceManager;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
@@ -327,7 +327,7 @@ public class GeoEngine {
      * @return {@code boolean} : True if origin can see target
      */
     public final boolean canSeeTarget(L2Object origin, L2Object target) {
-        if (target.isDoor() || (target.isCharacter() && ((L2Character) target).isFlying())) {
+        if (target.isDoor() || (target.isCharacter() && ((Creature) target).isFlying())) {
             return true;
         }
 
@@ -375,12 +375,12 @@ public class GeoEngine {
         // get origin and target height, real height = collision height * 2
         double oheight = 0;
         if (origin.isCharacter()) {
-            oheight = ((L2Character) origin).getCollisionHeight() * 2;
+            oheight = ((Creature) origin).getCollisionHeight() * 2;
         }
 
         double theight = 0;
         if (target.isCharacter()) {
-            theight = ((L2Character) target).getCollisionHeight() * 2;
+            theight = ((Creature) target).getCollisionHeight() * 2;
         }
 
         // perform geodata check
@@ -439,7 +439,7 @@ public class GeoEngine {
         // get origin and target height, real height = collision height * 2
         double oheight = 0;
         if (origin.isCharacter()) {
-            oheight = ((L2Character) origin).getTemplate().getCollisionHeight();
+            oheight = ((Creature) origin).getTemplate().getCollisionHeight();
         }
 
         // perform geodata check

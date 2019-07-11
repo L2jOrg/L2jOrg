@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.actor.instance;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TaxType;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -38,7 +38,7 @@ public class L2MerchantInstance extends L2NpcInstance {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         if (attacker.isMonster()) {
             return true;
         }
@@ -64,13 +64,13 @@ public class L2MerchantInstance extends L2NpcInstance {
     public final void showBuyWindow(Player player, int val, boolean applyCastleTax) {
         final ProductList buyList = BuyListData.getInstance().getBuyList(val);
         if (buyList == null) {
-            L2Character.LOGGER.warn("BuyList not found! BuyListId:" + val);
+            Creature.LOGGER.warn("BuyList not found! BuyListId:" + val);
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
         if (!buyList.isNpcAllowed(getId())) {
-            L2Character.LOGGER.warn("Npc not allowed in BuyList! BuyListId:" + val + " NpcId:" + getId());
+            Creature.LOGGER.warn("Npc not allowed in BuyList! BuyListId:" + val + " NpcId:" + getId());
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

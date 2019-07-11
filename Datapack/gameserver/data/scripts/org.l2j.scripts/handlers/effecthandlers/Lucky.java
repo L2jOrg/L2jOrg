@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -32,7 +32,7 @@ public final class Lucky extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
+	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
 		return (effector != null) && (effected != null) && effected.isPlayer();
 	}

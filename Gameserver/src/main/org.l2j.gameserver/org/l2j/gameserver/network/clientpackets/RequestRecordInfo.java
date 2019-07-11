@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 
@@ -27,11 +27,11 @@ public class RequestRecordInfo extends ClientPacket {
                 object.sendInfo(activeChar);
 
                 if (object.isCharacter()) {
-                    // Update the state of the L2Character object client
+                    // Update the state of the Creature object client
                     // side by sending Server->Client packet
                     // MoveToPawn/CharMoveToLocation and AutoAttackStart to
                     // the Player
-                    final L2Character obj = (L2Character) object;
+                    final Creature obj = (Creature) object;
                     if (obj.getAI() != null) {
                         obj.getAI().describeStateToPlayer(activeChar);
                     }

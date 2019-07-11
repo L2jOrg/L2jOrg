@@ -20,7 +20,7 @@ import org.l2j.gameserver.enums.Position;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.util.GameUtils;
@@ -58,7 +58,7 @@ public class OpBlinkSkillCondition implements ISkillCondition
 	}
 	
 	@Override
-	public boolean canUse(L2Character caster, Skill skill, L2Object target)
+	public boolean canUse(Creature caster, Skill skill, L2Object target)
 	{
 		final double angle = GameUtils.convertHeadingToDegree(caster.getHeading());
 		final double radian = Math.toRadians(angle);

@@ -29,7 +29,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * @author DS
  */
-public abstract class L2Vehicle extends L2Character {
+public abstract class L2Vehicle extends Creature {
     protected final Set<Player> _passengers = ConcurrentHashMap.newKeySet();
     protected int _dockId = 0;
     protected Location _oustLoc = null;
@@ -360,7 +360,7 @@ public abstract class L2Vehicle extends L2Character {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         return false;
     }
 

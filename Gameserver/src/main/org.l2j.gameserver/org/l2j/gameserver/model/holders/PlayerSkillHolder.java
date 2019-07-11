@@ -42,7 +42,7 @@ public class PlayerSkillHolder implements ISkillsHolder {
     }
 
     /**
-     * Return the level of a skill owned by the L2Character.
+     * Return the level of a skill owned by the Creature.
      *
      * @param skillId The identifier of the L2Skill whose level must be returned
      * @return The level of the L2Skill identified by skillId

@@ -6,7 +6,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2CubicTemplate;
 import org.l2j.gameserver.model.skills.Skill;
@@ -126,11 +126,11 @@ public class CubicInstance {
                 final Skill skill = cubicSkill.getSkill();
                 if ((skill != null) && (Rnd.get(100) < cubicSkill.getSuccessRate())) {
                     final L2Party party = _owner.getParty();
-                    Stream<L2Character> stream;
+                    Stream<Creature> stream;
                     if (party != null) {
-                        stream = L2World.getInstance().getVisibleObjectsInRange(_owner, L2Character.class, Config.ALT_PARTY_RANGE, c -> (c.getParty() == party) && _template.validateConditions(this, _owner, c) && cubicSkill.validateConditions(this, _owner, c)).stream();
+                        stream = L2World.getInstance().getVisibleObjectsInRange(_owner, Creature.class, Config.ALT_PARTY_RANGE, c -> (c.getParty() == party) && _template.validateConditions(this, _owner, c) && cubicSkill.validateConditions(this, _owner, c)).stream();
                     } else {
-                        stream = _owner.getServitorsAndPets().stream().filter(summon -> _template.validateConditions(this, _owner, summon) && cubicSkill.validateConditions(this, _owner, summon)).map(L2Character.class::cast);
+                        stream = _owner.getServitorsAndPets().stream().filter(summon -> _template.validateConditions(this, _owner, summon) && cubicSkill.validateConditions(this, _owner, summon)).map(Creature.class::cast);
 
                     }
 
@@ -138,7 +138,7 @@ public class CubicInstance {
                         stream = Stream.concat(stream, Stream.of(_owner));
                     }
 
-                    final L2Character target = stream.sorted(Comparator.comparingInt(L2Character::getCurrentHpPercent)).findFirst().orElse(null);
+                    final Creature target = stream.sorted(Comparator.comparingInt(Creature::getCurrentHpPercent)).findFirst().orElse(null);
                     if (target != null) {
                         activateCubicSkill(skill, target);
                         break;
@@ -184,16 +184,16 @@ public class CubicInstance {
     }
 
     /**
-     * @return the {@link L2Character} that owns this cubic
+     * @return the {@link Creature} that owns this cubic
      */
-    public L2Character getOwner() {
+    public Creature getOwner() {
         return _owner;
     }
 
     /**
-     * @return the {@link L2Character} that casted this cubic
+     * @return the {@link Creature} that casted this cubic
      */
-    public L2Character getCaster() {
+    public Creature getCaster() {
         return _caster;
     }
 

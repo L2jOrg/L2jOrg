@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.conditions;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -44,7 +44,7 @@ public final class ConditionSlotItemId extends ConditionInventory {
     }
 
     @Override
-    public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item) {
+    public boolean testImpl(Creature effector, Creature effected, Skill skill, L2Item item) {
         if ((effector == null) || !effector.isPlayer()) {
             return false;
         }

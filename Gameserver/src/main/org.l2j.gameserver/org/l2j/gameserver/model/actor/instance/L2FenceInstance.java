@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.FenceState;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.serverpackets.DeleteObject;
 import org.l2j.gameserver.network.serverpackets.ExColosseumFenceInfo;
 
@@ -58,7 +58,7 @@ public final class L2FenceInstance extends L2Object {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         return false;
     }
 

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.conditions;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.items.L2Item;
@@ -45,7 +45,7 @@ public class ConditionPlayerHasPet extends Condition {
     }
 
     @Override
-    public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item) {
+    public boolean testImpl(Creature effector, Creature effected, Skill skill, L2Item item) {
         final Summon pet = effector.getActingPlayer().getPet();
         if ((effector.getActingPlayer() == null) || (pet == null)) {
             return false;

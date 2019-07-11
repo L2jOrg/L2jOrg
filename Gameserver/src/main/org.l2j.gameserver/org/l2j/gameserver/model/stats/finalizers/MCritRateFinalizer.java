@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
@@ -14,7 +14,7 @@ import java.util.Optional;
  */
 public class MCritRateFinalizer implements IStatsFunction {
     @Override
-    public double calc(L2Character creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stats stat) {
         throwIfPresent(base);
 
         double baseValue = calcWeaponPlusBaseValue(creature, stat);

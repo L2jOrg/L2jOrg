@@ -24,7 +24,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -78,11 +78,11 @@ public final class AdminGmSpeed implements IAdminCommandHandler
 				return false;
 			}
 			
-			final L2Character targetCharacter;
+			final Creature targetCharacter;
 			final L2Object target = player.getTarget();
 			if ((target != null) && target.isCharacter())
 			{
-				targetCharacter = (L2Character) target;
+				targetCharacter = (Creature) target;
 			}
 			else
 			{

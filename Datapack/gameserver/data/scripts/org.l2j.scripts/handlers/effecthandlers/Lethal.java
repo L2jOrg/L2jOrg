@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -57,7 +57,7 @@ public final class Lethal extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		if (effector.isPlayer() && !effector.getAccessLevel().canGiveDamage())
 		{

@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.L2ControllableMobInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -27,7 +27,7 @@ import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.BuilderUtil;
 
 /**
- * This class handles following admin commands: - res = resurrects target L2Character
+ * This class handles following admin commands: - res = resurrects target Creature
  * @version $Revision: 1.2.4.5 $ $Date: 2005/04/11 10:06:06 $
  */
 public class AdminRes implements IAdminCommandHandler
@@ -119,7 +119,7 @@ public class AdminRes implements IAdminCommandHandler
 			return;
 		}
 		
-		doResurrect((L2Character) obj);
+		doResurrect((Creature) obj);
 	}
 	
 	private void handleNonPlayerRes(Player activeChar)
@@ -139,7 +139,7 @@ public class AdminRes implements IAdminCommandHandler
 			{
 				radius = Integer.parseInt(radiusStr);
 				
-				L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2Character.class, radius, knownChar ->
+				L2World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, radius, knownChar ->
 				{
 					if (!knownChar.isPlayer() && !(knownChar instanceof L2ControllableMobInstance))
 					{
@@ -162,10 +162,10 @@ public class AdminRes implements IAdminCommandHandler
 			return;
 		}
 		
-		doResurrect((L2Character) obj);
+		doResurrect((Creature) obj);
 	}
 	
-	private void doResurrect(L2Character targetChar)
+	private void doResurrect(Creature targetChar)
 	{
 		if (!targetChar.isDead())
 		{

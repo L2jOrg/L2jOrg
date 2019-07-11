@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.stats.finalizers;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
 
@@ -27,7 +27,7 @@ import java.util.Optional;
  */
 public class PRangeFinalizer implements IStatsFunction {
     @Override
-    public double calc(L2Character creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stats stat) {
         throwIfPresent(base);
 
         return Stats.defaultValue(creature, stat, calcWeaponBaseValue(creature, stat));

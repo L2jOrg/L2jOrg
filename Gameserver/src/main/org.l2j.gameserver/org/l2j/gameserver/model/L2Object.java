@@ -7,7 +7,7 @@ import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.handler.IActionShiftHandler;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.InstanceManager;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -199,7 +199,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
         return false;
     }
 
-    public abstract boolean isAutoAttackable(L2Character attacker);
+    public abstract boolean isAutoAttackable(Creature attacker);
 
     public final boolean isSpawned() {
         return _isSpawned;
@@ -245,9 +245,9 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
     }
 
     /**
-     * Verify if object is instance of L2Character.
+     * Verify if object is instance of Creature.
      *
-     * @return {@code true} if object is instance of L2Character, {@code false} otherwise
+     * @return {@code true} if object is instance of Creature, {@code false} otherwise
      */
     public boolean isCharacter() {
         return false;
@@ -373,7 +373,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
         if (_isTargetable != targetable) {
             _isTargetable = targetable;
             if (!targetable) {
-                L2World.getInstance().getVisibleObjects(this, L2Character.class, creature -> this == creature.getTarget()).forEach(creature ->
+                L2World.getInstance().getVisibleObjects(this, Creature.class, creature -> this == creature.getTarget()).forEach(creature ->
                 {
                     creature.setTarget(null);
                     creature.abortAttack();
@@ -437,7 +437,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
         return (T) _scripts.get(script.getName());
     }
 
-    public void removeStatusListener(L2Character object) {
+    public void removeStatusListener(Creature object) {
 
     }
 

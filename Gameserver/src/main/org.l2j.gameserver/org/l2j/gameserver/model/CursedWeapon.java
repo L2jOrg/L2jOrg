@@ -8,7 +8,7 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.model.L2Party.MessageType;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.INamable;
 import org.l2j.gameserver.model.items.L2Item;
@@ -180,7 +180,7 @@ public class CursedWeapon implements INamable {
         dropIt(attackable, player, null, true);
     }
 
-    private void dropIt(L2Attackable attackable, Player player, L2Character killer, boolean fromMonster) {
+    private void dropIt(L2Attackable attackable, Player player, Creature killer, boolean fromMonster) {
         _isActivated = false;
 
         if (fromMonster) {
@@ -389,7 +389,7 @@ public class CursedWeapon implements INamable {
         }
     }
 
-    public void dropIt(L2Character killer) {
+    public void dropIt(Creature killer) {
         if (Rnd.get(100) <= _disapearChance) {
             // Remove it
             endOfLife();

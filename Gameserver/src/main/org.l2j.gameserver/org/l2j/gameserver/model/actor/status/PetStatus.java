@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.actor.status;
 
 import org.l2j.gameserver.ai.CtrlEvent;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -30,12 +30,12 @@ public class PetStatus extends SummonStatus {
     }
 
     @Override
-    public final void reduceHp(double value, L2Character attacker) {
+    public final void reduceHp(double value, Creature attacker) {
         reduceHp(value, attacker, true, false, false);
     }
 
     @Override
-    public final void reduceHp(double value, L2Character attacker, boolean awake, boolean isDOT, boolean isHpConsumption) {
+    public final void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHpConsumption) {
         if (getActiveChar().isDead()) {
             return;
         }

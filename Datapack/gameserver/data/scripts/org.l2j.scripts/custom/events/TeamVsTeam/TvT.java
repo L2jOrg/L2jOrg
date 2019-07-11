@@ -24,7 +24,7 @@ import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2CommandChannel;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -562,7 +562,7 @@ public class TvT extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public String onEnterZone(L2Character character, L2ZoneType zone)
+	public String onEnterZone(Creature character, L2ZoneType zone)
 	{
 		if (character.isPlayable() && character.getActingPlayer().isOnCustomEvent())
 		{
@@ -589,7 +589,7 @@ public class TvT extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public String onExitZone(L2Character character, L2ZoneType zone)
+	public String onExitZone(Creature character, L2ZoneType zone)
 	{
 		if (character.isPlayer() && character.getActingPlayer().isOnCustomEvent())
 		{

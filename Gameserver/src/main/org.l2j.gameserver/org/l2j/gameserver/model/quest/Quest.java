@@ -14,8 +14,8 @@ import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.KeyValuePair;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -587,7 +587,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param victim the character that was killed by the {@code killer}
      * @param qs     the quest state object of the player to be notified of this event
      */
-    public final void notifyDeath(L2Character killer, L2Character victim, QuestState qs) {
+    public final void notifyDeath(Creature killer, Creature victim, QuestState qs) {
         String res = null;
         try {
             res = onDeath(killer, victim, qs);
@@ -636,7 +636,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param trigger the character which makes effect on the trap
      * @param action  0: trap casting its skill. 1: trigger detects the trap. 2: trigger removes the trap
      */
-    public final void notifyTrapAction(L2TrapInstance trap, L2Character trigger, TrapAction action) {
+    public final void notifyTrapAction(L2TrapInstance trap, Creature trigger, TrapAction action) {
         String res = null;
         try {
             res = onTrapAction(trap, trigger, action);
@@ -890,7 +890,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param creature the creature seen by the NPC
      * @param isSummon
      */
-    public final void notifySeeCreature(L2Npc npc, L2Character creature, boolean isSummon) {
+    public final void notifySeeCreature(L2Npc npc, Creature creature, boolean isSummon) {
         Player player = null;
         if (isSummon || creature.isPlayer()) {
             player = creature.getActingPlayer();
@@ -927,7 +927,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param character
      * @param zone
      */
-    public final void notifyEnterZone(L2Character character, L2ZoneType zone) {
+    public final void notifyEnterZone(Creature character, L2ZoneType zone) {
         final Player player = character.getActingPlayer();
         String res = null;
         try {
@@ -947,7 +947,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param character
      * @param zone
      */
-    public final void notifyExitZone(L2Character character, L2ZoneType zone) {
+    public final void notifyExitZone(Creature character, L2ZoneType zone) {
         final Player player = character.getActingPlayer();
         String res = null;
         try {
@@ -1043,14 +1043,14 @@ public class Quest extends AbstractScript implements IIdentifiable {
 
     /**
      * This function is called whenever an <b>exact instance</b> of a character who was previously registered for this event dies.<br>
-     * The registration for {@link #onDeath(L2Character, L2Character, QuestState)} events <b>is not</b> done via the quest itself, but it is instead handled by the QuestState of a particular player.
+     * The registration for {@link #onDeath(Creature, Creature, QuestState)} events <b>is not</b> done via the quest itself, but it is instead handled by the QuestState of a particular player.
      *
      * @param killer this parameter contains a reference to the exact instance of the NPC that <b>killed</b> the character.
      * @param victim this parameter contains a reference to the exact instance of the character that got killed.
      * @param qs     this parameter contains a reference to the QuestState of whomever was interested (waiting) for this kill.
      * @return
      */
-    public String onDeath(L2Character killer, L2Character victim, QuestState qs) {
+    public String onDeath(Creature killer, Creature victim, QuestState qs) {
         return onAdvEvent("", (killer instanceof L2Npc) ? (L2Npc) killer : null, qs.getPlayer());
     }
 
@@ -1270,7 +1270,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param action  this parameter contains a reference to the action that was triggered.
      * @return
      */
-    public String onTrapAction(L2TrapInstance trap, L2Character trigger, TrapAction action) {
+    public String onTrapAction(L2TrapInstance trap, Creature trigger, TrapAction action) {
         return null;
     }
 
@@ -1327,7 +1327,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param isSummon this parameter if it's {@code false} it denotes that the character seen by the NPC was indeed the player, else it specifies that the character was the player's summon
      * @return
      */
-    public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon) {
+    public String onSeeCreature(L2Npc npc, Creature creature, boolean isSummon) {
         return null;
     }
 
@@ -1348,7 +1348,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param zone      this parameter contains a reference to the zone.
      * @return
      */
-    public String onEnterZone(L2Character character, L2ZoneType zone) {
+    public String onEnterZone(Creature character, L2ZoneType zone) {
         return null;
     }
 
@@ -1359,7 +1359,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param zone      this parameter contains a reference to the zone.
      * @return
      */
-    public String onExitZone(L2Character character, L2ZoneType zone) {
+    public String onExitZone(Creature character, L2ZoneType zone) {
         return null;
     }
 

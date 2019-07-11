@@ -20,7 +20,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -69,14 +69,14 @@ public final class Blink extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
+	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
 		// While affected by escape blocking effect you cannot use Blink or Scroll of Escape
 		return !effected.cannotEscape();
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		final double angle = GameUtils.convertHeadingToDegree(effected.getHeading());
 		final double radian = Math.toRadians(angle);

@@ -5,7 +5,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
@@ -117,7 +117,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
     }
 
     @Override
-    public final void sendOlympiadInfo(L2Character player) {
+    public final void sendOlympiadInfo(Creature player) {
         player.sendPacket(new ExOlympiadUserInfo(_playerOne));
         player.sendPacket(new ExOlympiadUserInfo(_playerTwo));
     }

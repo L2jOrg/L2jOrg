@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.stats.functions;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
@@ -40,7 +40,7 @@ public abstract class AbstractFunction {
      */
     protected static final Logger LOG = LoggerFactory.getLogger(AbstractFunction.class.getName());
     /**
-     * Statistics, that is affected by this function (See L2Character.CALCULATOR_XXX constants)
+     * Statistics, that is affected by this function (See Creature.CALCULATOR_XXX constants)
      */
     private final Stats _stat;
     /**
@@ -137,5 +137,5 @@ public abstract class AbstractFunction {
      * @param initVal  the initial value
      * @return the calculated value
      */
-    public abstract double calc(L2Character effector, L2Character effected, Skill skill, double initVal);
+    public abstract double calc(Creature effector, Creature effected, Skill skill, double initVal);
 }

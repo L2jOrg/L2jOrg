@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExCloseMPCC;
@@ -148,7 +148,7 @@ public class L2CommandChannel extends AbstractPlayerGroup {
      * @return true if proper condition for RaidWar
      */
     public boolean meetRaidWarCondition(L2Object obj) {
-        if (!(obj.isCharacter() && ((L2Character) obj).isRaid())) {
+        if (!(obj.isCharacter() && ((Creature) obj).isRaid())) {
             return false;
         }
         return (getMemberCount() >= Config.LOOT_RAIDS_PRIVILEGE_CC_SIZE);

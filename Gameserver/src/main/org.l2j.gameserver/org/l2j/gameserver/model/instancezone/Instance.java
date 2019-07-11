@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.TeleportWhereType;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
@@ -506,7 +506,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return list of filtered NPCs from instance
      */
     @SafeVarargs
-    public final <T extends L2Character> List<T> getNpcs(Class<T> clazz, int... ids) {
+    public final <T extends Creature> List<T> getNpcs(Class<T> clazz, int... ids) {
         return _npcs.stream().filter(n -> (ids.length == 0) || CommonUtil.contains(ids, n.getId())).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
     }
 
@@ -519,7 +519,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return list of filtered NPCs from instance
      */
     @SafeVarargs
-    public final <T extends L2Character> List<T> getAliveNpcs(Class<T> clazz, int... ids) {
+    public final <T extends Creature> List<T> getAliveNpcs(Class<T> clazz, int... ids) {
         return _npcs.stream().filter(n -> ((ids.length == 0) || CommonUtil.contains(ids, n.getId())) && (n.getCurrentHp() > 0)).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
     }
 

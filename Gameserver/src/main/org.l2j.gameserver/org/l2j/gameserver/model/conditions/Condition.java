@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.conditions;
 
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -88,19 +88,19 @@ public abstract class Condition implements ConditionListener {
         notifyChanged();
     }
 
-    public final boolean test(L2Character caster, L2Character target, Skill skill) {
+    public final boolean test(Creature caster, Creature target, Skill skill) {
         return test(caster, target, skill, null);
     }
 
-    public final boolean test(L2Character caster, L2Character target, L2Item item) {
+    public final boolean test(Creature caster, Creature target, L2Item item) {
         return test(caster, target, null, null);
     }
 
-    public final boolean test(L2Character caster, DailyMissionDataHolder onewayreward) {
+    public final boolean test(Creature caster, DailyMissionDataHolder onewayreward) {
         return test(caster, null, null, null);
     }
 
-    public final boolean test(L2Character caster, L2Character target, Skill skill, L2Item item) {
+    public final boolean test(Creature caster, Creature target, Skill skill, L2Item item) {
         final boolean res = testImpl(caster, target, skill, item);
         if ((_listener != null) && (res != _result)) {
             _result = res;
@@ -118,7 +118,7 @@ public abstract class Condition implements ConditionListener {
      * @param item     the item
      * @return {@code true} if successful, {@code false} otherwise
      */
-    public abstract boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item);
+    public abstract boolean testImpl(Creature effector, Creature effected, Skill skill, L2Item item);
 
     @Override
     public void notifyChanged() {

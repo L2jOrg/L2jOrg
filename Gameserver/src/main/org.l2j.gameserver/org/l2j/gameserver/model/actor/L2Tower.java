@@ -40,7 +40,7 @@ public abstract class L2Tower extends L2Npc {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         // Attackable during siege by attacker only
         return (attacker != null) && attacker.isPlayer() && (getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getSiege().isInProgress() && getCastle().getSiege().checkIsAttacker(((Player) attacker).getClan());
     }

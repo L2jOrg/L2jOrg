@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.stats;
 
 import org.l2j.gameserver.enums.AttributeType;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.stats.finalizers.*;
 import org.l2j.gameserver.util.MathUtil;
 
@@ -296,17 +296,17 @@ public enum Stats {
         throw new NoSuchElementException("Unknown name '" + name + "' for enum " + Stats.class.getSimpleName());
     }
 
-    public static double weaponBaseValue(L2Character creature, Stats stat) {
+    public static double weaponBaseValue(Creature creature, Stats stat) {
         return stat._valueFinalizer.calcWeaponBaseValue(creature, stat);
     }
 
-    public static double defaultValue(L2Character creature, Optional<Double> base, Stats stat) {
+    public static double defaultValue(Creature creature, Optional<Double> base, Stats stat) {
         final double mul = creature.getStat().getMul(stat);
         final double add = creature.getStat().getAdd(stat);
         return base.isPresent() ? defaultValue(creature, stat, base.get()) : mul * (add + creature.getStat().getMoveTypeValue(stat, creature.getMoveType()));
     }
 
-    public static double defaultValue(L2Character creature, Stats stat, double baseValue) {
+    public static double defaultValue(Creature creature, Stats stat, double baseValue) {
         final double mul = creature.getStat().getMul(stat);
         final double add = creature.getStat().getAdd(stat);
         return (baseValue * mul) + add + creature.getStat().getMoveTypeValue(stat, creature.getMoveType());
@@ -321,7 +321,7 @@ public enum Stats {
      * @param baseValue
      * @return the final value
      */
-    public Double finalize(L2Character creature, Optional<Double> baseValue) {
+    public Double finalize(Creature creature, Optional<Double> baseValue) {
         try {
             return _valueFinalizer.calc(creature, baseValue, this);
         } catch (Exception e) {

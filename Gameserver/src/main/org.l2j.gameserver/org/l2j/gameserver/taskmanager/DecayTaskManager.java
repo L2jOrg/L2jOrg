@@ -2,8 +2,8 @@ package org.l2j.gameserver.taskmanager;
 
 import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 public final class DecayTaskManager {
     protected static final Logger LOGGER = LoggerFactory.getLogger(DecayTaskManager.class);
 
-    protected final Map<L2Character, ScheduledFuture<?>> _decayTasks = new ConcurrentHashMap<>();
+    protected final Map<Creature, ScheduledFuture<?>> _decayTasks = new ConcurrentHashMap<>();
 
     private DecayTaskManager() {
     }
@@ -34,7 +34,7 @@ public final class DecayTaskManager {
      *
      * @param character the character
      */
-    public void add(L2Character character) {
+    public void add(Creature character) {
         if (character == null) {
             return;
         }
@@ -65,7 +65,7 @@ public final class DecayTaskManager {
      *
      * @param character the character
      */
-    public void cancel(L2Character character) {
+    public void cancel(Creature character) {
         final ScheduledFuture<?> decayTask = _decayTasks.remove(character);
         if (decayTask != null) {
             decayTask.cancel(false);
@@ -78,7 +78,7 @@ public final class DecayTaskManager {
      * @param character the character
      * @return if a decay task exists the remaining time, {@code Long.MAX_VALUE} otherwise
      */
-    public long getRemainingTime(L2Character character) {
+    public long getRemainingTime(Creature character) {
         final ScheduledFuture<?> decayTask = _decayTasks.get(character);
         if (decayTask != null) {
             return decayTask.getDelay(TimeUnit.MILLISECONDS);
@@ -98,7 +98,7 @@ public final class DecayTaskManager {
         ret.append("Tasks dump:");
         ret.append(Config.EOL);
 
-        for (Entry<L2Character, ScheduledFuture<?>> entry : _decayTasks.entrySet()) {
+        for (Entry<Creature, ScheduledFuture<?>> entry : _decayTasks.entrySet()) {
             ret.append("Class/Name: ");
             ret.append(entry.getKey().getClass().getSimpleName());
             ret.append('/');
@@ -121,9 +121,9 @@ public final class DecayTaskManager {
 
     private class DecayTask implements Runnable {
 
-        private final L2Character _character;
+        private final Creature _character;
 
-        protected DecayTask(L2Character character) {
+        protected DecayTask(Creature character) {
             _character = character;
         }
 

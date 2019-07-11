@@ -8,7 +8,7 @@ import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.L2Party.MessageType;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -364,7 +364,7 @@ public abstract class AbstractOlympiadGame {
 
     public abstract boolean containsParticipant(int playerId);
 
-    public abstract void sendOlympiadInfo(L2Character player);
+    public abstract void sendOlympiadInfo(Creature player);
 
     public abstract void broadcastOlympiadInfo(OlympiadStadium _stadium);
 

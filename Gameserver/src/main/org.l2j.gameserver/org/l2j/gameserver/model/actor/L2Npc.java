@@ -48,7 +48,7 @@ import java.util.List;
  * It can be a monster or a friendly character.<br>
  * It uses a template to fetch some static values.
  */
-public class L2Npc extends L2Character {
+public class L2Npc extends Creature {
     /**
      * The interaction distance of the L2NpcInstance(is used as offset in MovetoLocation method)
      */
@@ -116,18 +116,18 @@ public class L2Npc extends L2Character {
     private L2TaxZone _taxZone = null;
 
     /**
-     * Constructor of L2NpcInstance (use L2Character constructor).<br>
+     * Constructor of L2NpcInstance (use Creature constructor).<br>
      * <B><U>Actions</U>:</B>
      * <ul>
-     * <li>Call the L2Character constructor to set the _template of the L2Character (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
-     * <li>Set the name of the L2Character</li>
+     * <li>Call the Creature constructor to set the _template of the Creature (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
+     * <li>Set the name of the Creature</li>
      * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li>
      * </ul>
      *
      * @param template The L2NpcTemplate to apply to the NPC
      */
     public L2Npc(L2NpcTemplate template) {
-        // Call the L2Character constructor to set the _template of the L2Character, copy skills from template to object
+        // Call the Creature constructor to set the _template of the Creature, copy skills from template to object
         // and link _calculators to NPC_STD_CALCULATOR
         super(template);
         setInstanceType(InstanceType.L2Npc);
@@ -317,7 +317,7 @@ public class L2Npc extends L2Character {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         if (attacker == null) {
             return false;
         }
@@ -754,15 +754,15 @@ public class L2Npc extends L2Character {
      * <li>Set target to null and cancel Attack or Cast</li>
      * <li>Stop movement</li>
      * <li>Stop HP/MP/CP Regeneration task</li>
-     * <li>Stop all active skills effects in progress on the L2Character</li>
+     * <li>Stop all active skills effects in progress on the Creature</li>
      * <li>Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform</li>
-     * <li>Notify L2Character AI</li>
+     * <li>Notify Creature AI</li>
      * </ul>
      *
-     * @param killer The L2Character who killed it
+     * @param killer The Creature who killed it
      */
     @Override
-    public boolean doDie(L2Character killer) {
+    public boolean doDie(Creature killer) {
         if (!super.doDie(killer)) {
             return false;
         }
@@ -1233,7 +1233,7 @@ public class L2Npc extends L2Character {
      * @param itemCount the item count
      * @return the dropped item
      */
-    public L2ItemInstance dropItem(L2Character character, int itemId, long itemCount) {
+    public L2ItemInstance dropItem(Creature character, int itemId, long itemCount) {
         L2ItemInstance item = null;
         for (int i = 0; i < itemCount; i++) {
             // Randomize drop position.
@@ -1274,13 +1274,13 @@ public class L2Npc extends L2Character {
     }
 
     /**
-     * Method overload for {@link L2Attackable#dropItem(L2Character, int, long)}
+     * Method overload for {@link L2Attackable#dropItem(Creature, int, long)}
      *
      * @param character the last attacker or main damage dealer
      * @param item      the item holder
      * @return the dropped item
      */
-    public L2ItemInstance dropItem(L2Character character, ItemHolder item) {
+    public L2ItemInstance dropItem(Creature character, ItemHolder item) {
         return dropItem(character, item.getId(), item.getCount());
     }
 
@@ -1512,7 +1512,7 @@ public class L2Npc extends L2Character {
         _titleString = titleString;
     }
 
-    public void sendChannelingEffect(L2Character target, int state) {
+    public void sendChannelingEffect(Creature target, int state) {
         broadcastPacket(new ExShowChannelingEffect(this, target, state));
     }
 

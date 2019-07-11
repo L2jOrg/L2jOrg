@@ -1,6 +1,6 @@
 package org.l2j.gameserver;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.OnDayNightChange;
 import org.l2j.gameserver.model.skills.CommonSkill;
@@ -32,8 +32,8 @@ public final class GameTimeController extends Thread {
     public static final int SECONDS_PER_IN_GAME_DAY = MILLIS_PER_IN_GAME_DAY / 1000;
     public static final int TICKS_PER_IN_GAME_DAY = SECONDS_PER_IN_GAME_DAY * TICKS_PER_SECOND;
 
-    private final Set<L2Character> movingObjects = ConcurrentHashMap.newKeySet();
-    private final Set<L2Character> _shadowSenseCharacters = ConcurrentHashMap.newKeySet();
+    private final Set<Creature> movingObjects = ConcurrentHashMap.newKeySet();
+    private final Set<Creature> _shadowSenseCharacters = ConcurrentHashMap.newKeySet();
 
     private final long referenceTime;
     private volatile boolean shutdown = false;
@@ -76,11 +76,11 @@ public final class GameTimeController extends Thread {
     }
 
     /**
-     * Add a L2Character to movingObjects of GameTimeController.
+     * Add a Creature to movingObjects of GameTimeController.
      *
-     * @param cha The L2Character to add to movingObjects of GameTimeController
+     * @param cha The Creature to add to movingObjects of GameTimeController
      */
-    public final void registerMovingObject(L2Character cha) {
+    public final void registerMovingObject(Creature cha) {
         if (cha == null) {
             return;
         }
@@ -91,16 +91,16 @@ public final class GameTimeController extends Thread {
     /**
      * Move all L2Characters contained in movingObjects of GameTimeController.<BR>
      * <B><U> Concept</U> :</B><BR>
-     * All L2Character in movement are identified in <B>movingObjects</B> of GameTimeController.<BR>
+     * All Creature in movement are identified in <B>movingObjects</B> of GameTimeController.<BR>
      * <B><U> Actions</U> :</B><BR>
      * <ul>
-     * <li>Update the position of each L2Character</li>
-     * <li>If movement is finished, the L2Character is removed from movingObjects</li>
-     * <li>Create a task to update the _knownObject and _knowPlayers of each L2Character that finished its movement and of their already known L2Object then notify AI with EVT_ARRIVED</li>
+     * <li>Update the position of each Creature</li>
+     * <li>If movement is finished, the Creature is removed from movingObjects</li>
+     * <li>Create a task to update the _knownObject and _knowPlayers of each Creature that finished its movement and of their already known L2Object then notify AI with EVT_ARRIVED</li>
      * </ul>
      */
     private void moveObjects() {
-        movingObjects.removeIf(L2Character::updatePosition);
+        movingObjects.removeIf(Creature::updatePosition);
     }
 
     public final void stopTimer() {
@@ -141,7 +141,7 @@ public final class GameTimeController extends Thread {
         }
     }
 
-    public synchronized void addShadowSenseCharacter(L2Character character) {
+    public synchronized void addShadowSenseCharacter(Creature character) {
         if (!_shadowSenseCharacters.contains(character)) {
             _shadowSenseCharacters.add(character);
             if (isNight()) {
@@ -152,14 +152,14 @@ public final class GameTimeController extends Thread {
         }
     }
 
-    public void removeShadowSenseCharacter(L2Character character) {
+    public void removeShadowSenseCharacter(Creature character) {
         _shadowSenseCharacters.remove(character);
     }
 
     private void notifyShadowSense() {
         final SystemMessage msg = SystemMessage.getSystemMessage(isNight() ? SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT : SystemMessageId.IT_IS_DAWN_AND_THE_EFFECT_OF_S1_WILL_NOW_DISAPPEAR);
         msg.addSkillName(CommonSkill.SHADOW_SENSE_ID.getId());
-        for (L2Character character : _shadowSenseCharacters) {
+        for (Creature character : _shadowSenseCharacters) {
             character.getStat().recalculateStats(true);
             character.sendPacket(msg);
         }

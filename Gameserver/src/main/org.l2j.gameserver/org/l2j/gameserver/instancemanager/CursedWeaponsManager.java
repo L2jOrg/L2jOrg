@@ -4,7 +4,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.CursedWeapon;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.*;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -228,7 +228,7 @@ public final class CursedWeaponsManager extends GameXmlReader {
         }
     }
 
-    public void drop(int itemId, L2Character killer) {
+    public void drop(int itemId, Creature killer) {
         final CursedWeapon cw = _cursedWeapons.get(itemId);
 
         cw.dropIt(killer);

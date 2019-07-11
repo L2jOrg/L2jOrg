@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -15,7 +15,7 @@ public class ChangeWaitType extends ServerPacket {
     private final int _y;
     private final int _z;
 
-    public ChangeWaitType(L2Character character, int newMoveType) {
+    public ChangeWaitType(Creature character, int newMoveType) {
         _charObjId = character.getObjectId();
         _moveType = newMoveType;
 

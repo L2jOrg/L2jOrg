@@ -2,7 +2,7 @@ package org.l2j.gameserver.util;
 
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -19,16 +19,16 @@ public final class Broadcast {
     private static final Logger LOGGER = LoggerFactory.getLogger(Broadcast.class);
 
     /**
-     * Send a packet to all Player in the _KnownPlayers of the L2Character that have the Character targeted.<BR>
+     * Send a packet to all Player in the _KnownPlayers of the Creature that have the Character targeted.<BR>
      * <B><U> Concept</U> :</B><BR>
-     * Player in the detection area of the L2Character are identified in <B>_knownPlayers</B>.<BR>
-     * In order to inform other players of state modification on the L2Character, server just need to go through _knownPlayers to send Server->Client Packet<BR>
-     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packet to this L2Character (to do this use method toSelfAndKnownPlayers)</B></FONT><BR>
+     * Player in the detection area of the Creature are identified in <B>_knownPlayers</B>.<BR>
+     * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet<BR>
+     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</B></FONT><BR>
      *
      * @param character
      * @param mov
      */
-    public static void toPlayersTargettingMyself(L2Character character, ServerPacket mov) {
+    public static void toPlayersTargettingMyself(Creature character, ServerPacket mov) {
         L2World.getInstance().forEachVisibleObject(character, Player.class, player ->
         {
             if (player.getTarget() == character) {
@@ -38,16 +38,16 @@ public final class Broadcast {
     }
 
     /**
-     * Send a packet to all Player in the _KnownPlayers of the L2Character.<BR>
+     * Send a packet to all Player in the _KnownPlayers of the Creature.<BR>
      * <B><U> Concept</U> :</B><BR>
-     * Player in the detection area of the L2Character are identified in <B>_knownPlayers</B>.<BR>
-     * In order to inform other players of state modification on the L2Character, server just need to go through _knownPlayers to send Server->Client Packet<BR>
-     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packet to this L2Character (to do this use method toSelfAndKnownPlayers)</B></FONT><BR>
+     * Player in the detection area of the Creature are identified in <B>_knownPlayers</B>.<BR>
+     * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet<BR>
+     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</B></FONT><BR>
      *
      * @param character
      * @param mov
      */
-    public static void toKnownPlayers(L2Character character, ServerPacket mov) {
+    public static void toKnownPlayers(Creature character, ServerPacket mov) {
         L2World.getInstance().forEachVisibleObject(character, Player.class, player ->
         {
             try {
@@ -78,17 +78,17 @@ public final class Broadcast {
     }
 
     /**
-     * Send a packet to all Player in the _KnownPlayers (in the specified radius) of the L2Character.<BR>
+     * Send a packet to all Player in the _KnownPlayers (in the specified radius) of the Creature.<BR>
      * <B><U> Concept</U> :</B><BR>
-     * Player in the detection area of the L2Character are identified in <B>_knownPlayers</B>.<BR>
-     * In order to inform other players of state modification on the L2Character, server just needs to go through _knownPlayers to send Server->Client Packet and check the distance between the targets.<BR>
-     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packet to this L2Character (to do this use method toSelfAndKnownPlayers)</B></FONT><BR>
+     * Player in the detection area of the Creature are identified in <B>_knownPlayers</B>.<BR>
+     * In order to inform other players of state modification on the Creature, server just needs to go through _knownPlayers to send Server->Client Packet and check the distance between the targets.<BR>
+     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</B></FONT><BR>
      *
      * @param character
      * @param mov
      * @param radius
      */
-    public static void toKnownPlayersInRadius(L2Character character, ServerPacket mov, int radius) {
+    public static void toKnownPlayersInRadius(Creature character, ServerPacket mov, int radius) {
         if (radius < 0) {
             radius = 1500;
         }
@@ -97,15 +97,15 @@ public final class Broadcast {
     }
 
     /**
-     * Send a packet to all Player in the _KnownPlayers of the L2Character and to the specified character.<BR>
+     * Send a packet to all Player in the _KnownPlayers of the Creature and to the specified character.<BR>
      * <B><U> Concept</U> :</B><BR>
-     * Player in the detection area of the L2Character are identified in <B>_knownPlayers</B>.<BR>
-     * In order to inform other players of state modification on the L2Character, server just need to go through _knownPlayers to send Server->Client Packet<BR>
+     * Player in the detection area of the Creature are identified in <B>_knownPlayers</B>.<BR>
+     * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet<BR>
      *
      * @param character
      * @param mov
      */
-    public static void toSelfAndKnownPlayers(L2Character character, ServerPacket mov) {
+    public static void toSelfAndKnownPlayers(Creature character, ServerPacket mov) {
         if (character.isPlayer()) {
             character.sendPacket(mov);
         }
@@ -114,7 +114,7 @@ public final class Broadcast {
     }
 
     // To improve performance we are comparing values of radius^2 instead of calculating sqrt all the time
-    public static void toSelfAndKnownPlayersInRadius(L2Character character, ServerPacket mov, int radius) {
+    public static void toSelfAndKnownPlayersInRadius(Creature character, ServerPacket mov, int radius) {
         if (radius < 0) {
             radius = 600;
         }
@@ -129,8 +129,8 @@ public final class Broadcast {
     /**
      * Send a packet to all Player present in the world.<BR>
      * <B><U> Concept</U> :</B><BR>
-     * In order to inform other players of state modification on the L2Character, server just need to go through _allPlayers to send Server->Client Packet<BR>
-     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packet to this L2Character (to do this use method toSelfAndKnownPlayers)</B></FONT><BR>
+     * In order to inform other players of state modification on the Creature, server just need to go through _allPlayers to send Server->Client Packet<BR>
+     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</B></FONT><BR>
      *
      * @param packet
      */

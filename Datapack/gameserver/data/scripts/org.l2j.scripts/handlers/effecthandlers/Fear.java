@@ -22,7 +22,7 @@ import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.L2DefenderInstance;
 import org.l2j.gameserver.model.actor.instance.L2FortCommanderInstance;
 import org.l2j.gameserver.model.actor.instance.L2SiegeFlagInstance;
@@ -52,7 +52,7 @@ public final class Fear extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
+	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
 		if ((effected == null) || effected.isRaid())
 		{
@@ -71,21 +71,21 @@ public final class Fear extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public boolean onActionTime(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		fearAction(null, effected);
 		return false;
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		effected.getAI().notifyEvent(CtrlEvent.EVT_AFRAID);
 		fearAction(effector, effected);
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		if (!effected.isPlayer())
 		{
@@ -93,7 +93,7 @@ public final class Fear extends AbstractEffect
 		}
 	}
 	
-	private void fearAction(L2Character effector, L2Character effected)
+	private void fearAction(Creature effector, Creature effected)
 	{
 		final double radians = Math.toRadians((effector != null) ? GameUtils.calculateAngleFrom(effector, effected) : GameUtils.convertHeadingToDegree(effected.getHeading()));
 		

@@ -14,7 +14,7 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Clan.SubPledge;
 import org.l2j.gameserver.model.L2ClanMember;
 import org.l2j.gameserver.model.L2SkillLearn;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.base.ClassId;
@@ -325,7 +325,7 @@ public class L2VillageMasterInstance extends L2NpcInstance {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         if (attacker.isMonster()) {
             return true;
         }

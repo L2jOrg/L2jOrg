@@ -20,7 +20,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.stats.Stats;
@@ -89,7 +89,7 @@ public class L2DamageZone extends L2ZoneType {
     }
 
     @Override
-    protected void onEnter(L2Character character) {
+    protected void onEnter(Creature character) {
         if ((getSettings().getTask() == null) && ((_damageHPPerSec != 0) || (_damageMPPerSec != 0))) {
             final Player player = character.getActingPlayer();
             if (getCastle() != null) // Castle zone
@@ -109,7 +109,7 @@ public class L2DamageZone extends L2ZoneType {
     }
 
     @Override
-    protected void onExit(L2Character character) {
+    protected void onExit(Creature character) {
         if (_characterList.isEmpty() && (getSettings().getTask() != null)) {
             getSettings().clear();
         }
@@ -157,7 +157,7 @@ public class L2DamageZone extends L2ZoneType {
                 }
             }
 
-            for (L2Character temp : _dmgZone.getCharactersInside()) {
+            for (Creature temp : _dmgZone.getCharactersInside()) {
                 if ((temp != null) && !temp.isDead()) {
                     if (siege) {
                         // during siege defenders not affected

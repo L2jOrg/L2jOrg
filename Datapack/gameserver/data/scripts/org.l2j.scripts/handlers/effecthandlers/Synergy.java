@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -78,7 +78,7 @@ public final class Synergy extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public boolean onActionTime(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		if (effector.isDead())
 		{
@@ -106,7 +106,7 @@ public final class Synergy extends AbstractEffect
 				
 				if ((target != null) && target.isCharacter())
 				{
-					SkillCaster.triggerCast(effector, (L2Character) target, partyBuffSkill);
+					SkillCaster.triggerCast(effector, (Creature) target, partyBuffSkill);
 				}
 			}
 			else

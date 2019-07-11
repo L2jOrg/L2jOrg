@@ -11,8 +11,8 @@ import org.l2j.gameserver.model.AggroInfo;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.*;
@@ -73,7 +73,7 @@ public class L2AttackableAI extends L2CharacterAI {
      * @param target The targeted WorldObject
      * @return {@code true} if target can be auto attacked due aggression.
      */
-    private boolean isAggressiveTowards(L2Character target) {
+    private boolean isAggressiveTowards(Creature target) {
         if ((target == null) || (getActiveChar() == null)) {
             return false;
         }
@@ -219,10 +219,10 @@ public class L2AttackableAI extends L2CharacterAI {
     /**
      * Manage the Attack Intention : Stop current Attack (if necessary), Calculate attack timeout, Start a new Attack and Launch Think Event.
      *
-     * @param target The L2Character to attack
+     * @param target The Creature to attack
      */
     @Override
-    protected void onIntentionAttack(L2Character target) {
+    protected void onIntentionAttack(Creature target) {
         // Calculate the attack timeout
         _attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getInstance().getGameTicks();
 
@@ -260,7 +260,7 @@ public class L2AttackableAI extends L2CharacterAI {
      * Manage AI standard thinks of a L2Attackable (called by onEvtThink). <B><U> Actions</U> :</B>
      * <ul>
      * <li>Update every 1s the _globalAggro counter to come close to 0</li>
-     * <li>If the actor is Aggressive and can attack, add all autoAttackable L2Character in its Aggro Range to its _aggroList, chose a target and order to attack it</li>
+     * <li>If the actor is Aggressive and can attack, add all autoAttackable Creature in its Aggro Range to its _aggroList, chose a target and order to attack it</li>
      * <li>If the actor is a L2GuardInstance that can't attack, order to it to return to its home location</li>
      * <li>If the actor is a L2MonsterInstance that can't attack, order to it to random walk (1/100)</li>
      * </ul>
@@ -277,14 +277,14 @@ public class L2AttackableAI extends L2CharacterAI {
             }
         }
 
-        // Add all autoAttackable L2Character in L2Attackable Aggro Range to its _aggroList with 0 damage and 1 hate
+        // Add all autoAttackable Creature in L2Attackable Aggro Range to its _aggroList with 0 damage and 1 hate
         // A L2Attackable isn't aggressive during 10s after its spawn because _globalAggro is set to -10
         if (_globalAggro >= 0) {
             if (npc.isAggressive() || (npc instanceof L2GuardInstance)) {
                 final int range = npc instanceof L2GuardInstance ? 500 : npc.getAggroRange(); // TODO Make sure how guards behave towards players.
-                L2World.getInstance().forEachVisibleObjectInRange(npc, L2Character.class, range, t ->
+                L2World.getInstance().forEachVisibleObjectInRange(npc, Creature.class, range, t ->
                 {
-                    // For each L2Character check if the target is autoattackable
+                    // For each Creature check if the target is autoattackable
                     if (isAggressiveTowards(t)) // check aggression
                     {
                         if (t.isPlayable()) {
@@ -293,7 +293,7 @@ public class L2AttackableAI extends L2CharacterAI {
                                 return;
                             }
 
-                            // Get the hate level of the L2Attackable against this L2Character target contained in _aggroList
+                            // Get the hate level of the L2Attackable against this Creature target contained in _aggroList
                             final int hating = npc.getHating(t);
 
                             // Add the attacker to the L2Attackable _aggroList with 0 damage and 1 hate
@@ -312,20 +312,20 @@ public class L2AttackableAI extends L2CharacterAI {
             }
 
             // Chose a target from its aggroList
-            L2Character hated;
+            Creature hated;
             if (npc.isConfused() && (target != null) && target.isCharacter()) {
-                hated = (L2Character) target; // effect handles selection
+                hated = (Creature) target; // effect handles selection
             } else {
                 hated = npc.getMostHated();
             }
 
             // Order to the L2Attackable to attack the target
             if ((hated != null) && !npc.isCoreAIDisabled()) {
-                // Get the hate level of the L2Attackable against this L2Character target contained in _aggroList
+                // Get the hate level of the L2Attackable against this Creature target contained in _aggroList
                 final int aggro = npc.getHating(hated);
 
                 if ((aggro + _globalAggro) > 0) {
-                    // Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others Player
+                    // Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player
                     if (!npc.isRunning()) {
                         npc.setRunning();
                     }
@@ -356,7 +356,7 @@ public class L2AttackableAI extends L2CharacterAI {
         }
 
         // Minions following leader
-        final L2Character leader = npc.getLeader();
+        final Creature leader = npc.getLeader();
         if ((leader != null) && !leader.isAlikeDead()) {
             final int offset;
             final int minRadius = 30;
@@ -457,7 +457,7 @@ public class L2AttackableAI extends L2CharacterAI {
             return;
         }
 
-        L2Character target = npc.getMostHated();
+        Creature target = npc.getMostHated();
         if (getTarget() != target) {
             setTarget(target);
         }
@@ -491,7 +491,7 @@ public class L2AttackableAI extends L2CharacterAI {
             final int factionRange = npc.getTemplate().getClanHelpRange() + collision;
             // Go through all L2Object that belong to its faction
             try {
-                final L2Character finalTarget = target;
+                final Creature finalTarget = target;
                 L2World.getInstance().forEachVisibleObjectInRange(npc, L2Npc.class, factionRange, called ->
                 {
                     if (!getActiveChar().getTemplate().isClan(called.getTemplate().getClans())) {
@@ -633,7 +633,7 @@ public class L2AttackableAI extends L2CharacterAI {
             if (!npc.getTemplate().getAISkills(AISkillScope.HEAL).isEmpty()) {
                 final Skill healSkill = npc.getTemplate().getAISkills(AISkillScope.HEAL).get(Rnd.get(npc.getTemplate().getAISkills(AISkillScope.HEAL).size()));
                 if (SkillCaster.checkUseConditions(npc, healSkill)) {
-                    final L2Character healTarget = skillTargetReconsider(healSkill, false);
+                    final Creature healTarget = skillTargetReconsider(healSkill, false);
                     if (healTarget != null) {
                         final double healChance = (100 - healTarget.getCurrentHpPercent()) * 1.5; // Ensure heal chance is always 100% if HP is below 33%.
                         if ((Rnd.get(100) < healChance) && checkSkillTarget(healSkill, healTarget)) {
@@ -650,7 +650,7 @@ public class L2AttackableAI extends L2CharacterAI {
             if (!npc.getTemplate().getAISkills(AISkillScope.BUFF).isEmpty()) {
                 final Skill buffSkill = npc.getTemplate().getAISkills(AISkillScope.BUFF).get(Rnd.get(npc.getTemplate().getAISkills(AISkillScope.BUFF).size()));
                 if (SkillCaster.checkUseConditions(npc, buffSkill)) {
-                    final L2Character buffTarget = skillTargetReconsider(buffSkill, true);
+                    final Creature buffTarget = skillTargetReconsider(buffSkill, true);
                     if (checkSkillTarget(buffSkill, buffTarget)) {
                         setTarget(buffTarget);
                         npc.doCast(buffSkill);
@@ -748,7 +748,7 @@ public class L2AttackableAI extends L2CharacterAI {
         if (target.isCharacter()) {
             // Skip if target is already affected by such skill.
             if (skill.isContinuous()) {
-                if (((L2Character) target).getEffectList().hasAbnormalType(skill.getAbnormalType(), i -> (i.getSkill().getAbnormalLvl() >= skill.getAbnormalLvl()))) {
+                if (((Creature) target).getEffectList().hasAbnormalType(skill.getAbnormalType(), i -> (i.getSkill().getAbnormalLvl() >= skill.getAbnormalLvl()))) {
                     return false;
                 }
 
@@ -761,16 +761,16 @@ public class L2AttackableAI extends L2CharacterAI {
             // Check if target had buffs if skill is bad cancel, or debuffs if skill is good cancel.
             if (skill.hasEffectType(L2EffectType.DISPEL, L2EffectType.DISPEL_BY_SLOT)) {
                 if (skill.isBad()) {
-                    if (((L2Character) target).getEffectList().getBuffCount() == 0) {
+                    if (((Creature) target).getEffectList().getBuffCount() == 0) {
                         return false;
                     }
-                } else if (((L2Character) target).getEffectList().getDebuffCount() == 0) {
+                } else if (((Creature) target).getEffectList().getDebuffCount() == 0) {
                     return false;
                 }
             }
 
             // Check for damaged targets if using healing skill.
-            return (((L2Character) target).getCurrentHp() != ((L2Character) target).getMaxHp()) || !skill.hasEffectType(L2EffectType.HEAL);
+            return (((Creature) target).getCurrentHp() != ((Creature) target).getMaxHp()) || !skill.hasEffectType(L2EffectType.HEAL);
         }
 
         return true;
@@ -783,12 +783,12 @@ public class L2AttackableAI extends L2CharacterAI {
 
         final L2Attackable npc = getActiveChar();
         if (target.isCharacter()) {
-            if (((L2Character) target).isDead()) {
+            if (((Creature) target).isDead()) {
                 return false;
             }
 
             if (npc.isMovementDisabled()) {
-                if (!npc.isInsideRadius2D(target, npc.getPhysicalAttackRange() + npc.getTemplate().getCollisionRadius() + ((L2Character) target).getTemplate().getCollisionRadius())) {
+                if (!npc.isInsideRadius2D(target, npc.getPhysicalAttackRange() + npc.getTemplate().getCollisionRadius() + ((Creature) target).getTemplate().getCollisionRadius())) {
                     return false;
                 }
 
@@ -804,7 +804,7 @@ public class L2AttackableAI extends L2CharacterAI {
         return true; // GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), target.getX(), target.getY(), target.getZ(), npc.getInstanceWorld());
     }
 
-    private L2Character skillTargetReconsider(Skill skill, boolean insideCastRange) {
+    private Creature skillTargetReconsider(Skill skill, boolean insideCastRange) {
         // Check if skill can be casted.
         final L2Attackable npc = getActiveChar();
         if (!SkillCaster.checkUseConditions(npc, skill)) {
@@ -817,7 +817,7 @@ public class L2AttackableAI extends L2CharacterAI {
         // Check current target first.
         final int range = insideCastRange ? skill.getCastRange() + getActiveChar().getTemplate().getCollisionRadius() : 2000; // TODO need some forget range
 
-        Stream<L2Character> stream;
+        Stream<Creature> stream;
         if (isBad) {
             //@formatter:off
             stream = npc.getAggroList().values().stream()
@@ -826,7 +826,7 @@ public class L2AttackableAI extends L2CharacterAI {
                     .sorted(Comparator.comparingInt(npc::getHating).reversed());
             //@formatter:on
         } else {
-            stream = L2World.getInstance().getVisibleObjectsInRange(npc, L2Character.class, range, c -> checkSkillTarget(skill, c)).stream();
+            stream = L2World.getInstance().getVisibleObjectsInRange(npc, Creature.class, range, c -> checkSkillTarget(skill, c)).stream();
 
             // Maybe add self to the list of targets since getVisibleObjects doesn't return yourself.
             if (checkSkillTarget(skill, npc)) {
@@ -835,7 +835,7 @@ public class L2AttackableAI extends L2CharacterAI {
 
             // For heal skills sort by hp missing.
             if (skill.hasEffectType(L2EffectType.HEAL)) {
-                stream = stream.sorted(Comparator.comparingInt(L2Character::getCurrentHpPercent));
+                stream = stream.sorted(Comparator.comparingInt(Creature::getCurrentHpPercent));
             }
         }
 
@@ -844,15 +844,15 @@ public class L2AttackableAI extends L2CharacterAI {
 
     }
 
-    private L2Character targetReconsider(boolean randomTarget) {
+    private Creature targetReconsider(boolean randomTarget) {
         final L2Attackable npc = getActiveChar();
 
         if (randomTarget) {
-            Stream<L2Character> stream = npc.getAggroList().values().stream().map(AggroInfo::getAttacker).filter(this::checkTarget);
+            Stream<Creature> stream = npc.getAggroList().values().stream().map(AggroInfo::getAttacker).filter(this::checkTarget);
 
             // If npc is aggressive, add characters within aggro range too
             if (npc.isAggressive()) {
-                stream = Stream.concat(stream, L2World.getInstance().getVisibleObjectsInRange(npc, L2Character.class, npc.getAggroRange(), this::checkTarget).stream());
+                stream = Stream.concat(stream, L2World.getInstance().getVisibleObjectsInRange(npc, Creature.class, npc.getAggroRange(), this::checkTarget).stream());
             }
 
             return stream.findAny().orElse(null);
@@ -864,7 +864,7 @@ public class L2AttackableAI extends L2CharacterAI {
                 .sorted(Comparator.comparingInt(AggroInfo::getHate))
                 .map(AggroInfo::getAttacker)
                 .findFirst()
-                .orElse(npc.isAggressive() ? L2World.getInstance().getVisibleObjectsInRange(npc, L2Character.class, npc.getAggroRange(), this::checkTarget).stream().findAny().orElse(null) : null);
+                .orElse(npc.isAggressive() ? L2World.getInstance().getVisibleObjectsInRange(npc, Creature.class, npc.getAggroRange(), this::checkTarget).stream().findAny().orElse(null) : null);
         //@formatter:on
     }
 
@@ -910,14 +910,14 @@ public class L2AttackableAI extends L2CharacterAI {
      * <B><U> Actions</U> :</B>
      * <ul>
      * <li>Init the attack : Calculate the attack timeout, Set the _globalAggro to 0, Add the attacker to the actor _aggroList</li>
-     * <li>Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others Player</li>
+     * <li>Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player</li>
      * <li>Set the Intention to AI_INTENTION_ATTACK</li>
      * </ul>
      *
-     * @param attacker The L2Character that attacks the actor
+     * @param attacker The Creature that attacks the actor
      */
     @Override
-    protected void onEvtAttacked(L2Character attacker) {
+    protected void onEvtAttacked(Creature attacker) {
         final L2Attackable me = getActiveChar();
         final L2Object target = getTarget();
         // Calculate the attack timeout
@@ -931,7 +931,7 @@ public class L2AttackableAI extends L2CharacterAI {
         // Add the attacker to the _aggroList of the actor
         me.addDamageHate(attacker, 0, 1);
 
-        // Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others Player
+        // Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player
         if (!me.isRunning()) {
             me.setRunning();
         }
@@ -972,7 +972,7 @@ public class L2AttackableAI extends L2CharacterAI {
      * @param aggro The value of hate to add to the actor against the target
      */
     @Override
-    protected void onEvtAggression(L2Character target, int aggro) {
+    protected void onEvtAggression(Creature target, int aggro) {
         final L2Attackable me = getActiveChar();
         if (me.isDead()) {
             return;
@@ -984,7 +984,7 @@ public class L2AttackableAI extends L2CharacterAI {
 
             // Set the actor AI Intention to AI_INTENTION_ATTACK
             if (getIntention() != CtrlIntention.AI_INTENTION_ATTACK) {
-                // Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others Player
+                // Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player
                 if (!me.isRunning()) {
                     me.setRunning();
                 }

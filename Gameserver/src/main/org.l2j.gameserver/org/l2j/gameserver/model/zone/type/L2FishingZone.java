@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.Fishing;
 import org.l2j.gameserver.model.PcCondOverride;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.L2ZoneType;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -23,7 +23,7 @@ public class L2FishingZone extends L2ZoneType {
     }
 
     @Override
-    protected void onEnter(L2Character character) {
+    protected void onEnter(Creature character) {
         if (character.isPlayer()) {
             if ((Config.ALLOW_FISHING || character.canOverrideCond(PcCondOverride.ZONE_CONDITIONS)) && !character.isInsideZone(ZoneId.FISHING)) {
                 final WeakReference<Player> weakPlayer = new WeakReference<>(character.getActingPlayer());
@@ -54,7 +54,7 @@ public class L2FishingZone extends L2ZoneType {
     }
 
     @Override
-    protected void onExit(L2Character character) {
+    protected void onExit(Creature character) {
         if (character.isPlayer()) {
             character.setInsideZone(ZoneId.FISHING, false);
             character.sendPacket(ExAutoFishAvailable.NO);

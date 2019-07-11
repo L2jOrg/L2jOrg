@@ -22,7 +22,7 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -87,7 +87,7 @@ public class L2PcInstanceAction implements IActionHandler
 				{
 					// activeChar with lvl < 21 can't attack a cursed weapon holder
 					// And a cursed weapon holder can't attack activeChars with lvl < 21
-					if ((((Player) target).isCursedWeaponEquipped() && (activeChar.getLevel() < 21)) || (activeChar.isCursedWeaponEquipped() && (((L2Character) target).getLevel() < 21)))
+					if ((((Player) target).isCursedWeaponEquipped() && (activeChar.getLevel() < 21)) || (activeChar.isCursedWeaponEquipped() && (((Creature) target).getLevel() < 21)))
 					{
 						activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 					}

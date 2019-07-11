@@ -26,7 +26,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.L2ExtractableProductItem;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -67,7 +67,7 @@ public final class RestorationRandom extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		final double rndNum = 100 * Rnd.nextDouble();
 		double chance = 0;

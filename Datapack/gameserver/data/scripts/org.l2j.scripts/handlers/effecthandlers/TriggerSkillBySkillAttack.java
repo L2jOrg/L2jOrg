@@ -23,7 +23,7 @@ import org.l2j.gameserver.handler.ITargetTypeHandler;
 import org.l2j.gameserver.handler.TargetHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureDamageDealt;
@@ -65,13 +65,13 @@ public final class TriggerSkillBySkillAttack extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		effected.addListener(new ConsumerEventListener(effected, EventType.ON_CREATURE_DAMAGE_DEALT, (OnCreatureDamageDealt event) -> onAttackEvent(event), this));
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		effected.removeListenerIf(EventType.ON_CREATURE_DAMAGE_DEALT, listener -> listener.getOwner() == this);
 	}
@@ -130,14 +130,14 @@ public final class TriggerSkillBySkillAttack extends AbstractEffect
 		{
 			if (_skillLevelScaleTo > 0)
 			{
-				final BuffInfo buffInfo = ((L2Character) target).getEffectList().getBuffInfoBySkillId(_skill.getSkillId());
+				final BuffInfo buffInfo = ((Creature) target).getEffectList().getBuffInfoBySkillId(_skill.getSkillId());
 				if (buffInfo != null)
 				{
 					triggerSkill = SkillData.getInstance().getSkill(_skill.getSkillId(), Math.min(_skillLevelScaleTo, buffInfo.getSkill().getLevel() + 1));
 				}
 			}
 			
-			SkillCaster.triggerCast(event.getAttacker(), (L2Character) target, triggerSkill);
+			SkillCaster.triggerCast(event.getAttacker(), (Creature) target, triggerSkill);
 		}
 	}
 }

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -13,7 +13,7 @@ public class ExMoveToLocationAirShip extends ServerPacket {
     private final int _y;
     private final int _z;
 
-    public ExMoveToLocationAirShip(L2Character cha) {
+    public ExMoveToLocationAirShip(Creature cha) {
         _objId = cha.getObjectId();
         _tx = cha.getXdestination();
         _ty = cha.getYdestination();

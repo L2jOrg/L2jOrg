@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.data.xml.impl.ArmorSetsData;
 import org.l2j.gameserver.model.L2ArmorSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.stats.BaseStats;
@@ -34,7 +34,7 @@ import java.util.Set;
  */
 public class BaseStatsFinalizer implements IStatsFunction {
     @Override
-    public double calc(L2Character creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stats stat) {
         throwIfPresent(base);
 
         // Apply template value

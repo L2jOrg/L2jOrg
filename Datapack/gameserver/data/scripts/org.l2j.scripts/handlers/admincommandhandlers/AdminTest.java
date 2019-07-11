@@ -20,7 +20,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
@@ -82,7 +82,7 @@ public class AdminTest implements IAdminCommandHandler
 	 */
 	private void adminTestSkill(Player activeChar, int id, boolean msu)
 	{
-		L2Character caster;
+		Creature caster;
 		final L2Object target = activeChar.getTarget();
 		if (!target.isCharacter())
 		{
@@ -90,7 +90,7 @@ public class AdminTest implements IAdminCommandHandler
 		}
 		else
 		{
-			caster = (L2Character) target;
+			caster = (Creature) target;
 		}
 		
 		final Skill _skill = SkillData.getInstance().getSkill(id, 1);

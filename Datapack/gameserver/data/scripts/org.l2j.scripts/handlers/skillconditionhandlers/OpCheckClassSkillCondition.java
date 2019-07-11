@@ -19,7 +19,7 @@ package handlers.skillconditionhandlers;
 import org.l2j.gameserver.enums.SkillConditionAffectType;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
@@ -41,7 +41,7 @@ public class OpCheckClassSkillCondition implements ISkillCondition
 	}
 	
 	@Override
-	public boolean canUse(L2Character caster, Skill skill, L2Object target)
+	public boolean canUse(Creature caster, Skill skill, L2Object target)
 	{
 		switch (_affectType)
 		{

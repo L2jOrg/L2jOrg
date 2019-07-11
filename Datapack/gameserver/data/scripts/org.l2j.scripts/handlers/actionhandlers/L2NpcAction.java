@@ -23,7 +23,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.L2Event;
@@ -81,7 +81,7 @@ public class L2NpcAction implements IActionHandler
 		else if (interact)
 		{
 			// Check if the activeChar is attackable (without a forced attack) and isn't dead
-			if (target.isAutoAttackable(activeChar) && !((L2Character) target).isAlikeDead())
+			if (target.isAutoAttackable(activeChar) && !((Creature) target).isAlikeDead())
 			{
 				// Check if target is in LoS
 				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))

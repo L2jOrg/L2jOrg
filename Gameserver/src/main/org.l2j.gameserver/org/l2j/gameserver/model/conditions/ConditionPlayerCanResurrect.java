@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Siege;
@@ -40,7 +40,7 @@ public class ConditionPlayerCanResurrect extends Condition {
     }
 
     @Override
-    public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item) {
+    public boolean testImpl(Creature effector, Creature effected, Skill skill, L2Item item) {
         // Need skill rework for fix that properly
         if (skill.getAffectRange() > 0) {
             return true;

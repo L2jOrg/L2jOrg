@@ -9,7 +9,7 @@ import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.instancemanager.DuelManager;
 import org.l2j.gameserver.instancemanager.PcCafePointsManager;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Servitor;
@@ -55,7 +55,7 @@ public class L2Party extends AbstractPlayerGroup {
                     2666,
                     2667
             };
-    private static Map<Integer, L2Character> _tacticalSigns = null;
+    private static Map<Integer, Creature> _tacticalSigns = null;
     private final List<Player> _members = new CopyOnWriteArrayList<>();
     protected PartyMemberPosition _positionPacket;
     private boolean _pendingInvitation = false;
@@ -120,7 +120,7 @@ public class L2Party extends AbstractPlayerGroup {
      * @param target the object of which the member must be within a certain range (must not be null)
      * @return a random member from this party or {@code null} if none of the members have inventory space for the specified item
      */
-    private Player getCheckedRandomMember(int itemId, L2Character target) {
+    private Player getCheckedRandomMember(int itemId, Creature target) {
         final List<Player> availableMembers = new ArrayList<>();
         for (Player member : _members) {
             if (member.getInventory().validateCapacityByItemId(itemId) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true)) {
@@ -137,7 +137,7 @@ public class L2Party extends AbstractPlayerGroup {
      * @param target
      * @return
      */
-    private Player getCheckedNextLooter(int ItemId, L2Character target) {
+    private Player getCheckedNextLooter(int ItemId, Creature target) {
         for (int i = 0; i < getMemberCount(); i++) {
             if (++_itemLastLoot >= getMemberCount()) {
                 _itemLastLoot = 0;
@@ -165,7 +165,7 @@ public class L2Party extends AbstractPlayerGroup {
      * @param target
      * @return
      */
-    private Player getActualLooter(Player player, int ItemId, boolean spoil, L2Character target) {
+    private Player getActualLooter(Player player, int ItemId, boolean spoil, Creature target) {
         Player looter = null;
 
         switch (_distributionType) {
@@ -316,7 +316,7 @@ public class L2Party extends AbstractPlayerGroup {
         L2World.getInstance().incrementPartyMember();
     }
 
-    private Map<Integer, L2Character> getTacticalSigns() {
+    private Map<Integer, Creature> getTacticalSigns() {
         if (_tacticalSigns == null) {
             synchronized (this) {
                 if (_tacticalSigns == null) {
@@ -335,8 +335,8 @@ public class L2Party extends AbstractPlayerGroup {
         _tacticalSigns.forEach((key, value) -> player.sendPacket(new ExTacticalSign(value, remove ? 0 : key)));
     }
 
-    public void addTacticalSign(Player activeChar, int tacticalSignId, L2Character target) {
-        final L2Character tacticalTarget = getTacticalSigns().get(tacticalSignId);
+    public void addTacticalSign(Player activeChar, int tacticalSignId, Creature target) {
+        final Creature tacticalTarget = getTacticalSigns().get(tacticalSignId);
 
         if (tacticalTarget == null) {
             // if the new sign is applied to an existing target, remove the old sign from map
@@ -383,7 +383,7 @@ public class L2Party extends AbstractPlayerGroup {
             return;
         }
 
-        final L2Character tacticalTarget = _tacticalSigns.get(tacticalSignId);
+        final Creature tacticalTarget = _tacticalSigns.get(tacticalSignId);
         if ((tacticalTarget != null) && !tacticalTarget.isInvisible() && tacticalTarget.isTargetable() && !player.isTargetingDisabled()) {
             player.setTarget(tacticalTarget);
         }
@@ -621,7 +621,7 @@ public class L2Party extends AbstractPlayerGroup {
      * @param adena
      * @param target
      */
-    public void distributeAdena(Player player, long adena, L2Character target) {
+    public void distributeAdena(Player player, long adena, Creature target) {
         // Check the number of party members that must be rewarded
         // (The party member must be in range to receive its reward)
         final List<Player> toReward = new LinkedList<>();

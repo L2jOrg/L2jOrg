@@ -19,7 +19,7 @@ package handlers.bypasshandlers;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2ObservationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -85,7 +85,7 @@ public class Observation implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, L2Character target)
+	public boolean useBypass(String command, Player activeChar, Creature target)
 	{
 		if (!(target instanceof L2ObservationInstance))
 		{

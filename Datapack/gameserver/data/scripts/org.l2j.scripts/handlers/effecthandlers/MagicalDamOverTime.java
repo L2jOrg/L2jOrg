@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -48,10 +48,10 @@ public final class MagicalDamOverTime extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public boolean onActionTime(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character activeChar = effector;
-		final L2Character target = effected;
+		final Creature activeChar = effector;
+		final Creature target = effected;
 		
 		if (target.isDead())
 		{

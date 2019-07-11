@@ -20,7 +20,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.L2DefenderInstance;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -47,7 +47,7 @@ public class L2DoorAI extends L2CharacterAI {
     }
 
     @Override
-    protected void onIntentionAttack(L2Character target) {
+    protected void onIntentionAttack(Creature target) {
     }
 
     @Override
@@ -59,7 +59,7 @@ public class L2DoorAI extends L2CharacterAI {
     }
 
     @Override
-    protected void onIntentionFollow(L2Character target) {
+    protected void onIntentionFollow(Creature target) {
     }
 
     @Override
@@ -75,20 +75,20 @@ public class L2DoorAI extends L2CharacterAI {
     }
 
     @Override
-    protected void onEvtAttacked(L2Character attacker) {
+    protected void onEvtAttacked(Creature attacker) {
         ThreadPoolManager.getInstance().execute(new onEventAttackedDoorTask((L2DoorInstance) _actor, attacker));
     }
 
     @Override
-    protected void onEvtAggression(L2Character target, int aggro) {
+    protected void onEvtAggression(Creature target, int aggro) {
     }
 
     @Override
-    protected void onEvtActionBlocked(L2Character attacker) {
+    protected void onEvtActionBlocked(Creature attacker) {
     }
 
     @Override
-    protected void onEvtRooted(L2Character attacker) {
+    protected void onEvtRooted(Creature attacker) {
     }
 
     @Override
@@ -121,9 +121,9 @@ public class L2DoorAI extends L2CharacterAI {
 
     private class onEventAttackedDoorTask implements Runnable {
         private final L2DoorInstance _door;
-        private final L2Character _attacker;
+        private final Creature _attacker;
 
-        public onEventAttackedDoorTask(L2DoorInstance door, L2Character attacker) {
+        public onEventAttackedDoorTask(L2DoorInstance door, Creature attacker) {
             _door = door;
             _attacker = attacker;
         }

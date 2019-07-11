@@ -143,7 +143,7 @@ public class ValidatePosition extends ClientPacket {
             // intended for geodata. Sends a validation packet to client
             // when too far from server calculated true coordinate.
             // Due to geodata/zone errors, some Z axis checks are made. (maybe a temporary solution)
-            // Important: this code part must work together with L2Character.updatePosition
+            // Important: this code part must work together with Creature.updatePosition
             if ((diffSq > 250000) || (Math.abs(dz) > 200)) {
                 // if ((_z - activeChar.getClientZ()) < 200 && Math.abs(activeChar.getLastServerPosition().getZ()-realZ) > 70)
 

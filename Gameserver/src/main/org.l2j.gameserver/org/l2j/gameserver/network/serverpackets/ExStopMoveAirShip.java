@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -14,7 +14,7 @@ public class ExStopMoveAirShip extends ServerPacket {
     private final int _z;
     private final int _heading;
 
-    public ExStopMoveAirShip(L2Character ship) {
+    public ExStopMoveAirShip(Creature ship) {
         _objectId = ship.getObjectId();
         _x = ship.getX();
         _y = ship.getY();

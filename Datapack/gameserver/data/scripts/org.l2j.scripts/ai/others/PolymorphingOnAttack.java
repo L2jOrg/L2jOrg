@@ -24,7 +24,7 @@ import java.util.Map;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.NpcStringId;
@@ -98,7 +98,7 @@ public final class PolymorphingOnAttack extends AbstractNpcAI
 					}
 					npc.deleteMe();
 					final L2Attackable newNpc = (L2Attackable) addSpawn(tmp.get(0), npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
-					final L2Character originalAttacker = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : attacker;
+					final Creature originalAttacker = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : attacker;
 					newNpc.setRunning();
 					newNpc.addDamageHate(originalAttacker, 0, 500);
 					newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalAttacker);

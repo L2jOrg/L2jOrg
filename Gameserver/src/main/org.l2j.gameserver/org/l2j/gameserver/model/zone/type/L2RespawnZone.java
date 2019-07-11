@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.zone.type;
 
 import org.l2j.gameserver.enums.Race;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.L2ZoneRespawn;
 
@@ -21,11 +21,11 @@ public class L2RespawnZone extends L2ZoneRespawn {
     }
 
     @Override
-    protected void onEnter(L2Character character) {
+    protected void onEnter(Creature character) {
     }
 
     @Override
-    protected void onExit(L2Character character) {
+    protected void onExit(Creature character) {
     }
 
     public void addRaceRespawnPoint(String race, String point) {

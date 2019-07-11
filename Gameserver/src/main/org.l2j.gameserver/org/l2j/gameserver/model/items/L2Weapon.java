@@ -4,7 +4,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
@@ -196,12 +196,12 @@ public final class L2Weapon extends L2Item {
     }
 
     /**
-     * @param caster  the L2Character pointing out the caster
-     * @param target  the L2Character pointing out the target
+     * @param caster  the Creature pointing out the caster
+     * @param target  the Creature pointing out the target
      * @param trigger
      * @param type
      */
-    public void applyConditionalSkills(L2Character caster, L2Character target, Skill trigger, ItemSkillType type) {
+    public void applyConditionalSkills(Creature caster, Creature target, Skill trigger, ItemSkillType type) {
         forEachSkill(type, holder ->
         {
             final Skill skill = holder.getSkill();

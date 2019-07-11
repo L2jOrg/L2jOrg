@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.actor.instance;
 import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.stat.StaticObjStat;
 import org.l2j.gameserver.model.actor.status.StaticObjStatus;
 import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
@@ -34,7 +34,7 @@ import org.l2j.gameserver.network.serverpackets.StaticObject;
  *
  * @author godson
  */
-public final class L2StaticObjectInstance extends L2Character {
+public final class L2StaticObjectInstance extends Creature {
     /**
      * The interaction distance of the L2StaticObjectInstance
      */
@@ -132,7 +132,7 @@ public final class L2StaticObjectInstance extends L2Character {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         return false;
     }
 
@@ -178,7 +178,7 @@ public final class L2StaticObjectInstance extends L2Character {
     }
 
     @Override
-    public void doAutoAttack(L2Character target) {
+    public void doAutoAttack(Creature target) {
     }
 
     @Override

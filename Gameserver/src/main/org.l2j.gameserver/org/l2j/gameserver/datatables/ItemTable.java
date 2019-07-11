@@ -9,8 +9,8 @@ import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2EventMonsterInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -161,11 +161,11 @@ public class ItemTable {
      * @param process   : String Identifier of process triggering this action
      * @param itemId    : int Item Identifier of the item to be created
      * @param count     : int Quantity of items to be created for stackable items
-     * @param actor     : L2Character requesting the item creation
+     * @param actor     : Creature requesting the item creation
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return L2ItemInstance corresponding to the new item
      */
-    public L2ItemInstance createItem(String process, int itemId, long count, L2Character actor, Object reference) {
+    public L2ItemInstance createItem(String process, int itemId, long count, Creature actor, Object reference) {
         // Create and Init the L2ItemInstance corresponding to the Item Identifier
         final L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), itemId);
 

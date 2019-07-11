@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.actor.instance;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
@@ -123,7 +123,7 @@ public class L2SchemeBufferInstance extends L2Npc {
             final String schemeName = st.nextToken();
             final int cost = Integer.parseInt(st.nextToken());
 
-            L2Character target = null;
+            Creature target = null;
             if (st.hasMoreTokens()) {
                 final String targetType = st.nextToken();
                 if ((targetType != null) && targetType.equalsIgnoreCase("pet")) {

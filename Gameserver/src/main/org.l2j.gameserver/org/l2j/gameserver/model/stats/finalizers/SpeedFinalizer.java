@@ -20,7 +20,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2PetLevelData;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.stats.BaseStats;
@@ -36,7 +36,7 @@ import java.util.Optional;
  */
 public class SpeedFinalizer implements IStatsFunction {
     @Override
-    public double calc(L2Character creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stats stat) {
         throwIfPresent(base);
 
         double baseValue = getBaseSpeed(creature, stat);
@@ -64,7 +64,7 @@ public class SpeedFinalizer implements IStatsFunction {
         return (0.6 * Math.max(enchantLevel - 3, 0)) + (0.6 * Math.max(enchantLevel - 6, 0));
     }
 
-    private double getBaseSpeed(L2Character creature, Stats stat) {
+    private double getBaseSpeed(Creature creature, Stats stat) {
         double baseValue = calcWeaponPlusBaseValue(creature, stat);
         if (creature.isPlayer()) {
             final Player player = creature.getActingPlayer();

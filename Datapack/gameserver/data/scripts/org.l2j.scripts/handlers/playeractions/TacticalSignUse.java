@@ -18,7 +18,7 @@ package handlers.playeractions;
 
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
@@ -37,6 +37,6 @@ public final class TacticalSignUse implements IPlayerActionHandler
 			return;
 		}
 		
-		activeChar.getParty().addTacticalSign(activeChar, data.getOptionId(), (L2Character) activeChar.getTarget());
+		activeChar.getParty().addTacticalSign(activeChar, data.getOptionId(), (Creature) activeChar.getTarget());
 	}
 }

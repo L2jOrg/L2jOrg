@@ -11,7 +11,7 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -140,7 +140,7 @@ public class Servitor extends Summon implements Runnable {
     }
 
     @Override
-    public boolean doDie(L2Character killer) {
+    public boolean doDie(Creature killer) {
         if (!super.doDie(killer)) {
             return false;
         }

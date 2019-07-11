@@ -18,7 +18,7 @@ package ai.others;
 
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
@@ -60,7 +60,7 @@ public final class Incarnation extends AbstractNpcAI
 		}
 	}
 	
-	public void onOffense(L2Npc npc, L2Character attacker, L2Object target)
+	public void onOffense(L2Npc npc, Creature attacker, L2Object target)
 	{
 		if ((attacker == target) || (npc.getSummoner() == null))
 		{

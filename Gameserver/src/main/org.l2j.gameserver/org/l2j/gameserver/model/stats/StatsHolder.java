@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.stats;
 
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 
 import java.util.function.BiPredicate;
 
@@ -10,9 +10,9 @@ import java.util.function.BiPredicate;
 public class StatsHolder {
     private final Stats _stat;
     private final double _value;
-    private final BiPredicate<L2Character, StatsHolder> _condition;
+    private final BiPredicate<Creature, StatsHolder> _condition;
 
-    public StatsHolder(Stats stat, double value, BiPredicate<L2Character, StatsHolder> condition) {
+    public StatsHolder(Stats stat, double value, BiPredicate<Creature, StatsHolder> condition) {
         _stat = stat;
         _value = value;
         _condition = condition;
@@ -30,7 +30,7 @@ public class StatsHolder {
         return _value;
     }
 
-    public boolean verifyCondition(L2Character creature) {
+    public boolean verifyCondition(Creature creature) {
         return (_condition == null) || _condition.test(creature, this);
     }
 }

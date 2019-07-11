@@ -3532,7 +3532,7 @@ public final class Player extends Playable {
      * <li>Send the Server->Client packet PartySmallWindowUpdate with current HP, MP and Level to all other Player of the Party</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND current HP and MP to all Player of the _statusListener</B></FONT>
      */
     @Override
-    public void broadcastStatusUpdate(L2Character caster) {
+    public void broadcastStatusUpdate(Creature caster) {
         final StatusUpdate su = new StatusUpdate(this);
         if (caster != null) {
             su.addCaster(caster);
@@ -3736,9 +3736,9 @@ public final class Player extends Playable {
      * <li>If the private store is a STORE_PRIVATE_BUY, send a Server->Client PrivateBuyListBuy packet to the Player</li>
      * <li>If the private store is a STORE_PRIVATE_MANUFACTURE, send a Server->Client RecipeShopSellList packet to the Player</li>
      *
-     * @param target The L2Character targeted
+     * @param target The Creature targeted
      */
-    public void doInteract(L2Character target) {
+    public void doInteract(Creature target) {
         if (target == null) {
             return;
         }
@@ -3952,7 +3952,7 @@ public final class Player extends Playable {
     }
 
     @Override
-    public void doAutoAttack(L2Character target) {
+    public void doAutoAttack(Creature target) {
         super.doAutoAttack(target);
         setRecentFakeDeath(false);
     }
@@ -3965,7 +3965,7 @@ public final class Player extends Playable {
 
     public boolean canOpenPrivateStore() {
         if ((Config.SHOP_MIN_RANGE_FROM_NPC > 0) || (Config.SHOP_MIN_RANGE_FROM_PLAYER > 0)) {
-            for (L2Character cha : L2World.getInstance().getVisibleObjectsInRange(this, L2Character.class, 1000)) {
+            for (Creature cha : L2World.getInstance().getVisibleObjectsInRange(this, Creature.class, 1000)) {
                 if (GameUtils.checkIfInRange(cha.getMinShopDistance(), this, cha, true)) {
                     sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE));
                     return false;
@@ -4014,8 +4014,8 @@ public final class Player extends Playable {
     /**
      * Set a target. <B><U> Actions</U> :</B>
      * <ul>
-     * <li>Remove the Player from the _statusListener of the old target if it was a L2Character</li>
-     * <li>Add the Player to the _statusListener of the new target if it's a L2Character</li>
+     * <li>Remove the Player from the _statusListener of the old target if it was a Creature</li>
+     * <li>Add the Player to the _statusListener of the new target if it's a Creature</li>
      * <li>Target the new L2Object (add the target to the Player _target, _knownObject and Player to _KnownObject of the L2Object)</li>
      * </ul>
      *
@@ -4060,7 +4060,7 @@ public final class Player extends Playable {
         }
 
         if ((newTarget != null) && newTarget.isCharacter()) {
-            final L2Character target = (L2Character) newTarget;
+            final Creature target = (Creature) newTarget;
 
             // Validate location of the new target.
             if (newTarget.getObjectId() != getObjectId()) {
@@ -4217,7 +4217,7 @@ public final class Player extends Playable {
     }
 
     /**
-     * Kill the L2Character, Apply Death Penalty, Manage gain/loss Karma and Item Drop. <B><U> Actions</U> :</B>
+     * Kill the Creature, Apply Death Penalty, Manage gain/loss Karma and Item Drop. <B><U> Actions</U> :</B>
      * <li>Reduce the Experience of the Player in function of the calculated Death Penalty</li>
      * <li>If necessary, unsummon the Pet of the killed Player</li>
      * <li>Manage Karma gain for attacker and Karam loss for the killed Player</li>
@@ -4227,7 +4227,7 @@ public final class Player extends Playable {
      * @param killer
      */
     @Override
-    public boolean doDie(L2Character killer) {
+    public boolean doDie(Creature killer) {
         if (killer != null) {
             final Player pk = killer.getActingPlayer();
             if ((pk != null)) {
@@ -4355,7 +4355,7 @@ public final class Player extends Playable {
         return true;
     }
 
-    private void onDieDropItem(L2Character killer) {
+    private void onDieDropItem(Creature killer) {
         if (L2Event.isParticipant(this) || (killer == null)) {
             return;
         }
@@ -4537,7 +4537,7 @@ public final class Player extends Playable {
         }
     }
 
-    public void updatePvPStatus(L2Character target) {
+    public void updatePvPStatus(Creature target) {
         final Player player_target = target.getActingPlayer();
         if (player_target == null) {
             return;
@@ -4592,7 +4592,7 @@ public final class Player extends Playable {
      *
      * @param killer
      */
-    public void calculateDeathExpPenalty(L2Character killer) {
+    public void calculateDeathExpPenalty(Creature killer) {
         final int lvl = getLevel();
         double percentLost = PlayerXpPercentLostData.getInstance().getXpPercent(getLevel());
 
@@ -5341,7 +5341,7 @@ public final class Player extends Playable {
     public void joinParty(L2Party party) {
         if (party != null) {
             // First set the party otherwise this wouldn't be considered
-            // as in a party into the L2Character.updateEffectIcons() call.
+            // as in a party into the Creature.updateEffectIcons() call.
             _party = party;
             party.addPartyMember(this);
         }
@@ -6067,10 +6067,10 @@ public final class Player extends Playable {
     /**
      * Add a skill to the Player _skills and its Func objects to the calculator set of the Player and save update in the character_skills table of the database. <B><U> Concept</U> :</B> All skills own by a Player are identified in <B>_skills</B> <B><U> Actions</U> :</B>
      * <li>Replace oldSkill by newSkill or Add the newSkill</li>
-     * <li>If an old skill has been replaced, remove all its Func objects of L2Character calculator set</li>
-     * <li>Add Func objects of newSkill to the calculator set of the L2Character</li>
+     * <li>If an old skill has been replaced, remove all its Func objects of Creature calculator set</li>
+     * <li>Add Func objects of newSkill to the calculator set of the Creature</li>
      *
-     * @param newSkill The L2Skill to add to the L2Character
+     * @param newSkill The L2Skill to add to the Creature
      * @param store
      * @return The L2Skill replaced or null if just added a new L2Skill
      */
@@ -6096,12 +6096,12 @@ public final class Player extends Playable {
     }
 
     /**
-     * Remove a skill from the L2Character and its Func objects from calculator set of the L2Character and save update in the character_skills table of the database. <B><U> Concept</U> :</B> All skills own by a L2Character are identified in <B>_skills</B> <B><U> Actions</U> :</B>
-     * <li>Remove the skill from the L2Character _skills</li>
-     * <li>Remove all its Func objects from the L2Character calculator set</li> <B><U> Overridden in </U> :</B>
+     * Remove a skill from the Creature and its Func objects from calculator set of the Creature and save update in the character_skills table of the database. <B><U> Concept</U> :</B> All skills own by a Creature are identified in <B>_skills</B> <B><U> Actions</U> :</B>
+     * <li>Remove the skill from the Creature _skills</li>
+     * <li>Remove all its Func objects from the Creature calculator set</li> <B><U> Overridden in </U> :</B>
      * <li>Player : Save update in the character_skills table of the database</li>
      *
-     * @param skill The L2Skill to remove from the L2Character
+     * @param skill The L2Skill to remove from the Creature
      * @return The L2Skill removed
      */
     public Skill removeSkill(Skill skill) {
@@ -6228,7 +6228,7 @@ public final class Player extends Playable {
                         continue;
                     }
 
-                    // Add the L2Skill object to the L2Character _skills and its Func objects to the calculator set of the L2Character
+                    // Add the L2Skill object to the Creature _skills and its Func objects to the calculator set of the Creature
                     addSkill(skill);
 
                     if (Config.SKILL_CHECK_ENABLE && (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS) || Config.SKILL_CHECK_GM)) {
@@ -6678,7 +6678,7 @@ public final class Player extends Playable {
      * </ul>
      */
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         if (attacker == null) {
             return false;
         }
@@ -6847,7 +6847,7 @@ public final class Player extends Playable {
 
         // ************************************* Check Player State *******************************************
 
-        // Abnormal effects(ex : Stun, Sleep...) are checked in L2Character useMagic()
+        // Abnormal effects(ex : Stun, Sleep...) are checked in Creature useMagic()
         if (!skill.canCastWhileDisabled() && (isControlBlocked() || hasBlockActions())) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
@@ -8580,7 +8580,7 @@ public final class Player extends Playable {
     }
 
     @Override
-    public void reduceCurrentHp(double value, L2Character attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
+    public void reduceCurrentHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
         super.reduceCurrentHp(value, attacker, skill, isDOT, directlyToHp, critical, reflect);
 
         // notify the tamed beast of attacks
@@ -8800,7 +8800,7 @@ public final class Player extends Playable {
      * <li>Remove the Player from the world</li>
      * <li>Stop Party and Unsummon Pet</li>
      * <li>Update database with items in its inventory and remove them from the world</li>
-     * <li>Remove all L2Object from _knownObjects and _knownPlayer of the L2Character then cancel Attak or Cast and notify AI</li>
+     * <li>Remove all L2Object from _knownObjects and _knownPlayer of the Creature then cancel Attak or Cast and notify AI</li>
      * <li>Close the connection with the client</li>
      * </ul>
      * <br>
@@ -9354,7 +9354,7 @@ public final class Player extends Playable {
     }
 
     @Override
-    public void sendDamageMessage(L2Character target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss) {
+    public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss) {
         // Check if hit is missed
         if (miss) {
             if (skill == null) {
@@ -10438,7 +10438,7 @@ public final class Player extends Playable {
         return Config.INVENTORY_MAXIMUM_QUEST_ITEMS;
     }
 
-    public boolean canAttackCharacter(L2Character cha) {
+    public boolean canAttackCharacter(Creature cha) {
         if (cha.isAttackable()) {
             return true;
         } else if (cha.isPlayable()) {

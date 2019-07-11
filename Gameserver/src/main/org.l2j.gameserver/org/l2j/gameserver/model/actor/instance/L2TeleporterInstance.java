@@ -20,7 +20,7 @@ import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TeleportType;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
@@ -44,7 +44,7 @@ public final class L2TeleporterInstance extends L2Npc {
     }
 
     @Override
-    public boolean isAutoAttackable(L2Character attacker) {
+    public boolean isAutoAttackable(Creature attacker) {
         return attacker.isMonster() || super.isAutoAttackable(attacker);
     }
 

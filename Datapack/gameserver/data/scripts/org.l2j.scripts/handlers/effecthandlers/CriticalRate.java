@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
 
@@ -33,7 +33,7 @@ public class CriticalRate extends AbstractConditionalHpEffect
 	}
 	
 	@Override
-	public void pump(L2Character effected, Skill skill)
+	public void pump(Creature effected, Skill skill)
 	{
 		if (_conditions.isEmpty() || _conditions.stream().allMatch(cond -> cond.test(effected, effected, skill)))
 		{

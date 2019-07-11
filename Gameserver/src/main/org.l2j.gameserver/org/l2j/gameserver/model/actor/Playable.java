@@ -29,15 +29,15 @@ import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
  * <li>Summon</li>
  * </ul>
  */
-public abstract class Playable extends L2Character {
-    private L2Character _lockedTarget = null;
+public abstract class Playable extends Creature {
+    private Creature _lockedTarget = null;
     private Player transferDmgTo = null;
 
     /**
      * Constructor of Playable.<br>
      * <B><U> Actions</U> :</B>
      * <ul>
-     * <li>Call the L2Character constructor to create an empty _skills slot and link copy basic Calculator set to this Playable</li>
+     * <li>Call the Creature constructor to create an empty _skills slot and link copy basic Calculator set to this Playable</li>
      * </ul>
      *
      * @param objectId the object id
@@ -76,7 +76,7 @@ public abstract class Playable extends L2Character {
     }
 
     @Override
-    public boolean doDie(L2Character killer) {
+    public boolean doDie(Creature killer) {
         final TerminateReturn returnBack = EventDispatcher.getInstance().notifyEvent(new OnCreatureDeath(killer, this), this, TerminateReturn.class);
         if ((returnBack != null) && returnBack.terminate()) {
             return false;
@@ -158,7 +158,7 @@ public abstract class Playable extends L2Character {
             }
         }
 
-        // Notify L2Character AI
+        // Notify Creature AI
         getAI().notifyEvent(CtrlEvent.EVT_DEAD);
         return true;
     }
@@ -231,11 +231,11 @@ public abstract class Playable extends L2Character {
         return _lockedTarget != null;
     }
 
-    public L2Character getLockedTarget() {
+    public Creature getLockedTarget() {
         return _lockedTarget;
     }
 
-    public void setLockedTarget(L2Character cha) {
+    public void setLockedTarget(Creature cha) {
         _lockedTarget = cha;
     }
 

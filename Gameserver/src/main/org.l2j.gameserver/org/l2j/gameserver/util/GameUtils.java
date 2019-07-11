@@ -8,7 +8,7 @@ import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.tasks.player.IllegalPlayerActionTask;
 import org.l2j.gameserver.model.interfaces.ILocational;
@@ -149,10 +149,10 @@ public final class GameUtils {
 
         int radius = 0;
         if (obj1.isCharacter()) {
-            radius += ((L2Character) obj1).getTemplate().getCollisionRadius();
+            radius += ((Creature) obj1).getTemplate().getCollisionRadius();
         }
         if (obj2.isCharacter()) {
-            radius += ((L2Character) obj2).getTemplate().getCollisionRadius();
+            radius += ((Creature) obj2).getTemplate().getCollisionRadius();
         }
 
         return calculateDistance(obj1, obj2, includeZAxis, false) <= (range + radius);

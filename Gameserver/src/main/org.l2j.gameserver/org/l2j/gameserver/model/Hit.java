@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.enums.AttackType;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 
 import java.lang.ref.WeakReference;
 
@@ -50,7 +50,7 @@ public class Hit {
             addMask(AttackType.SHOT_USED);
         }
 
-        if ((target.isCharacter() && ((L2Character) target).isHpBlocked()) || (shld > 0)) {
+        if ((target.isCharacter() && ((Creature) target).isHpBlocked()) || (shld > 0)) {
             addMask(AttackType.BLOCKED);
         }
     }

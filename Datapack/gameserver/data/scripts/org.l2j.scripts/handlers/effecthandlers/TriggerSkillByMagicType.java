@@ -22,7 +22,7 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.handler.TargetHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.L2Character;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureSkillFinishCast;
@@ -83,7 +83,7 @@ public final class TriggerSkillByMagicType extends AbstractEffect
 		}
 		else
 		{
-			final BuffInfo buffInfo = ((L2Character) event.getTarget()).getEffectList().getBuffInfoBySkillId(_skill.getSkillId());
+			final BuffInfo buffInfo = ((Creature) event.getTarget()).getEffectList().getBuffInfoBySkillId(_skill.getSkillId());
 			if (buffInfo != null)
 			{
 				triggerSkill = SkillData.getInstance().getSkill(_skill.getSkillId(), Math.min(_skillLevelScaleTo, buffInfo.getSkill().getLevel() + 1));
@@ -106,12 +106,12 @@ public final class TriggerSkillByMagicType extends AbstractEffect
 		
 		if ((target != null) && target.isCharacter())
 		{
-			SkillCaster.triggerCast(event.getCaster(), (L2Character) target, triggerSkill);
+			SkillCaster.triggerCast(event.getCaster(), (Creature) target, triggerSkill);
 		}
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
 	{
 		if ((_chance == 0) || (_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0) || (_magicTypes.length == 0))
 		{
@@ -122,7 +122,7 @@ public final class TriggerSkillByMagicType extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		effected.removeListenerIf(EventType.ON_CREATURE_SKILL_FINISH_CAST, listener -> listener.getOwner() == this);
 	}
