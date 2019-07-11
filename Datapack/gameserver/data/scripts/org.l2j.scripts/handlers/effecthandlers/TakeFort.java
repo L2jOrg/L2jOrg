@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -48,7 +48,7 @@ public final class TakeFort extends AbstractEffect
 			return;
 		}
 		
-		final Fort fort = FortManager.getInstance().getFort(effector);
+		final Fort fort = FortDataManager.getInstance().getFort(effector);
 		if (fort != null)
 		{
 			fort.endOfSiege(effector.getClan());

@@ -107,7 +107,7 @@ public final class FortSiegeManager {
         _commanderSpawnList = new ConcurrentHashMap<>();
         _flagList = new ConcurrentHashMap<>();
 
-        for (Fort fort : FortManager.getInstance().getForts()) {
+        for (Fort fort : FortDataManager.getInstance().getForts()) {
             final List<FortSiegeSpawn> _commanderSpawns = new CopyOnWriteArrayList<>();
             final List<CombatFlag> _flagSpawns = new CopyOnWriteArrayList<>();
             for (int i = 1; i < 5; i++) {
@@ -183,7 +183,7 @@ public final class FortSiegeManager {
     }
 
     public final FortSiege getSiege(int x, int y, int z) {
-        for (Fort fort : FortManager.getInstance().getForts()) {
+        for (Fort fort : FortDataManager.getInstance().getForts()) {
             if (fort.getSiege().checkIfInZone(x, y, z)) {
                 return fort.getSiege();
             }
@@ -223,7 +223,7 @@ public final class FortSiegeManager {
             return false;
         }
 
-        final Fort fort = FortManager.getInstance().getFort(player);
+        final Fort fort = FortDataManager.getInstance().getFort(player);
 
         final List<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
         for (CombatFlag cf : fcf) {
@@ -245,7 +245,7 @@ public final class FortSiegeManager {
 
         // here check if is siege is in progress
         // here check if is siege is attacker
-        final Fort fort = FortManager.getInstance().getFort(player);
+        final Fort fort = FortDataManager.getInstance().getFort(player);
 
         if ((fort == null) || (fort.getResidenceId() <= 0)) {
             player.sendPacket(sm);
@@ -261,7 +261,7 @@ public final class FortSiegeManager {
     }
 
     public void dropCombatFlag(Player player, int fortId) {
-        final Fort fort = FortManager.getInstance().getFortById(fortId);
+        final Fort fort = FortDataManager.getInstance().getFortById(fortId);
         final List<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
         for (CombatFlag cf : fcf) {
             if (cf.getPlayerObjectId() == player.getObjectId()) {

@@ -198,7 +198,7 @@ public class EnterWorld extends ClientPacket {
             }
 
             if (activeChar.getClan().getFortId() > 0) {
-                FortManager.getInstance().getFortByOwner(clan).giveResidentialSkills(activeChar);
+                FortDataManager.getInstance().getFortByOwner(clan).giveResidentialSkills(activeChar);
             }
 
             showClanNotice = clan.isNoticeEnabled();
@@ -337,7 +337,7 @@ public class EnterWorld extends ClientPacket {
 
         // remove combat flag before teleporting
         if (activeChar.getInventory().getItemByItemId(9819) != null) {
-            final Fort fort = FortManager.getInstance().getFort(activeChar);
+            final Fort fort = FortDataManager.getInstance().getFort(activeChar);
             if (fort != null) {
                 FortSiegeManager.getInstance().dropCombatFlag(activeChar, fort.getResidenceId());
             } else {

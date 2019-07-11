@@ -9,7 +9,7 @@ import org.l2j.gameserver.enums.DoorOpenType;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
@@ -216,7 +216,7 @@ public final class Door extends Creature {
     }
 
     public final Fort getFort() {
-        return FortManager.getInstance().getFort(this);
+        return FortDataManager.getInstance().getFort(this);
     }
 
     public boolean isEnemy() {

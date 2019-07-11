@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2SiegeClan;
@@ -106,7 +106,7 @@ public class RegenHPFinalizer implements IStatsFunction {
                 final int posFortIndex = zone == null ? -1 : zone.getResidenceId();
                 final int fortIndex = player.getClan().getFortId();
                 if ((fortIndex > 0) && (fortIndex == posFortIndex)) {
-                    final Fort fort = FortManager.getInstance().getFortById(player.getClan().getCastleId());
+                    final Fort fort = FortDataManager.getInstance().getFortById(player.getClan().getCastleId());
                     if (fort != null) {
                         final FortFunction func = fort.getFortFunction(Fort.FUNC_RESTORE_HP);
                         if (func != null) {

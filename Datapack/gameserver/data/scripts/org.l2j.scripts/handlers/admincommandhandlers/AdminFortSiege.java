@@ -20,7 +20,7 @@ import java.util.Collection;
 import java.util.StringTokenizer;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -60,7 +60,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		if (st.hasMoreTokens())
 		{
 			fortId = Integer.parseInt(st.nextToken());
-			fort = FortManager.getInstance().getFortById(fortId);
+			fort = FortDataManager.getInstance().getFortById(fortId);
 		}
 		// Get fort
 		if (((fort == null) || (fortId == 0)))
@@ -149,7 +149,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		adminReply.setFile(activeChar, "data/html/admin/forts.htm");
 		
-		final Collection<Fort> forts = FortManager.getInstance().getForts();
+		final Collection<Fort> forts = FortDataManager.getInstance().getForts();
 		final StringBuilder cList = new StringBuilder(forts.size() * 100);
 		
 		for (Fort fort : forts)

@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
@@ -126,7 +126,7 @@ public final class ConditionSiegeZone extends Condition {
     public boolean testImpl(Creature effector, Creature effected, Skill skill, L2Item item) {
         final Creature target = _self ? effector : effected;
         final Castle castle = CastleManager.getInstance().getCastle(target);
-        final Fort fort = FortManager.getInstance().getFort(target);
+        final Fort fort = FortDataManager.getInstance().getFort(target);
 
         if ((castle == null) && (fort == null)) {
             return (_value & COND_NOT_ZONE) != 0;

@@ -16,13 +16,13 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentSkipListMap;
 
 
-public final class FortManager implements InstanceListManager {
+public final class FortDataManager implements InstanceListManager {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(FortManager.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(FortDataManager.class);
 
     private static final Map<Integer, Fort> _forts = new ConcurrentSkipListMap<>();
 
-    private FortManager() {
+    private FortDataManager() {
 
     }
 
@@ -118,11 +118,11 @@ public final class FortManager implements InstanceListManager {
         }
     }
 
-    public static FortManager getInstance() {
+    public static FortDataManager getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final FortManager INSTANCE = new FortManager();
+        private static final FortDataManager INSTANCE = new FortDataManager();
     }
 }

@@ -215,11 +215,11 @@ public final class MapRegionManager extends GameXmlReader {
 
                 // If teleport to fortress
                 if (teleportWhere == TeleportWhereType.FORTRESS) {
-                    fort = FortManager.getInstance().getFortByOwner(player.getClan());
+                    fort = FortDataManager.getInstance().getFortByOwner(player.getClan());
                     // Otherwise check if player is on castle or fortress ground
                     // and player's clan is defender
                     if (fort == null) {
-                        fort = FortManager.getInstance().getFort(player);
+                        fort = FortDataManager.getInstance().getFort(player);
                         if (!((fort != null) && fort.getSiege().isInProgress() && (fort.getOwnerClan() == player.getClan()))) {
                             fort = null;
                         }
@@ -236,7 +236,7 @@ public final class MapRegionManager extends GameXmlReader {
                 // If teleport to SiegeHQ
                 if (teleportWhere == TeleportWhereType.SIEGEFLAG) {
                     castle = CastleManager.getInstance().getCastle(player);
-                    fort = FortManager.getInstance().getFort(player);
+                    fort = FortDataManager.getInstance().getFort(player);
                     if (castle != null) {
                         if (castle.getSiege().isInProgress()) {
                             // Check if player's clan is attacker

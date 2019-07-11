@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.conditions;
 
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Fort;
@@ -50,7 +50,7 @@ public class ConditionPlayerCanTakeFort extends Condition {
             canTakeFort = false;
         }
 
-        final Fort fort = FortManager.getInstance().getFort(player);
+        final Fort fort = FortDataManager.getInstance().getFort(player);
         final SystemMessage sm;
         if ((fort == null) || (fort.getResidenceId() <= 0) || !fort.getSiege().isInProgress() || (fort.getSiege().getAttackerClan(player.getClan()) == null)) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);

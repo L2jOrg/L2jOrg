@@ -2597,7 +2597,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                 break;
             }
             case FORTRESS: {
-                final Fort template = FortManager.getInstance().getFortById(id);
+                final Fort template = FortDataManager.getInstance().getFortById(id);
                 if (template != null) {
                     listeners.add(template.addListener(action.apply(template)));
                 }

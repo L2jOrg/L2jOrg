@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -48,7 +48,7 @@ public final class TakeFortStart extends AbstractEffect
 	{
 		if (effector.isPlayer())
 		{
-			final Fort fort = FortManager.getInstance().getFort(effector);
+			final Fort fort = FortDataManager.getInstance().getFort(effector);
 			final L2Clan clan = effector.getClan();
 			if ((fort != null) && (clan != null))
 			{

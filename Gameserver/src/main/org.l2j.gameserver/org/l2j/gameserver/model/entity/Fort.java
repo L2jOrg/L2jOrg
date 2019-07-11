@@ -10,7 +10,7 @@ import org.l2j.gameserver.data.xml.impl.StaticObjectData;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.WorldObject;
@@ -227,7 +227,7 @@ public final class Fort extends AbstractResidence {
         spawnSpecialEnvoys();
         // if clan have already fortress, remove it
         if (clan.getFortId() > 0) {
-            FortManager.getInstance().getFortByOwner(clan).removeOwner(true);
+            FortDataManager.getInstance().getFortByOwner(clan).removeOwner(true);
         }
 
         setSupplyLvL(0);

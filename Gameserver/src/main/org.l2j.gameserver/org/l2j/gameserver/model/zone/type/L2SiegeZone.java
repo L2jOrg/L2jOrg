@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.zone.type;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.MountType;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.TeleportWhereType;
@@ -116,7 +116,7 @@ public class L2SiegeZone extends L2ZoneType {
 
             if ((getSettings().getSiege() instanceof FortSiege) && (activeChar.getInventory().getItemByItemId(9819) != null)) {
                 // drop combat flag
-                final Fort fort = FortManager.getInstance().getFortById(getSettings().getSiegeableId());
+                final Fort fort = FortDataManager.getInstance().getFortById(getSettings().getSiegeableId());
                 if (fort != null) {
                     FortSiegeManager.getInstance().dropCombatFlag(activeChar, fort.getResidenceId());
                 } else {

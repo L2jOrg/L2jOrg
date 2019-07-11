@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2SiegeClan;
 import org.l2j.gameserver.model.actor.Creature;
@@ -39,7 +39,7 @@ public class Die extends ServerPacket {
 
             L2SiegeClan siegeClan = null;
             final Castle castle = CastleManager.getInstance().getCastle(activeChar);
-            final Fort fort = FortManager.getInstance().getFort(activeChar);
+            final Fort fort = FortDataManager.getInstance().getFort(activeChar);
             if ((castle != null) && castle.getSiege().isInProgress()) {
                 siegeClan = castle.getSiege().getAttackerClan(clan);
                 isInCastleDefense = (siegeClan == null) && castle.getSiege().checkIsDefender(clan);

@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.ClanEntryManager;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.clan.entry.PledgeRecruitInfo;
@@ -49,7 +49,7 @@ public class RequestPledgeSignInForOpenJoiningMethod extends ClientPacket {
                     CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(activeChar);
                 }
                 if (clan.getFortId() > 0) {
-                    FortManager.getInstance().getFortByOwner(clan).giveResidentialSkills(activeChar);
+                    FortDataManager.getInstance().getFortByOwner(clan).giveResidentialSkills(activeChar);
                 }
                 activeChar.sendSkillList();
 

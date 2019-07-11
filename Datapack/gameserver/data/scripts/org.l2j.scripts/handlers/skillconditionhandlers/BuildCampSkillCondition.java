@@ -17,7 +17,7 @@
 package handlers.skillconditionhandlers;
 
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.WorldObject;
@@ -58,7 +58,7 @@ public class BuildCampSkillCondition implements ISkillCondition
 		}
 		
 		final Castle castle = CastleManager.getInstance().getCastle(player);
-		final Fort fort = FortManager.getInstance().getFort(player);
+		final Fort fort = FortDataManager.getInstance().getFort(player);
 		final SystemMessage sm;
 		if ((castle == null) && (fort == null))
 		{

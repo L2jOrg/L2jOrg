@@ -9,7 +9,7 @@ import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.ClanEntryManager;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.ClanPrivilege;
@@ -255,7 +255,7 @@ public class ClanTable {
             }
 
             if (fortId != 0) {
-                final Fort fort = FortManager.getInstance().getFortById(fortId);
+                final Fort fort = FortDataManager.getInstance().getFortById(fortId);
                 if (fort != null) {
                     final L2Clan owner = fort.getOwnerClan();
                     if (clan == owner) {

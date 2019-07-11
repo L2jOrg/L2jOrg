@@ -7,7 +7,7 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.FortTeleportWhoType;
 import org.l2j.gameserver.enums.SiegeClanType;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.L2Npc;
@@ -472,7 +472,7 @@ public class FortSiege implements Siegable {
                 return 1; // Player don't have enough adena to register
             }
 
-            for (Fort fort : FortManager.getInstance().getForts()) {
+            for (Fort fort : FortDataManager.getInstance().getForts()) {
                 if (fort.getSiege().getAttackerClan(player.getClanId()) != null) {
                     return 3; // Players clan is already registered to siege
                 }

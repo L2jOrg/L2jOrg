@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
@@ -52,7 +52,7 @@ public class ConditionPlayerCanCreateOutpost extends Condition {
         }
 
         final Castle castle = CastleManager.getInstance().getCastle(player);
-        final Fort fort = FortManager.getInstance().getFort(player);
+        final Fort fort = FortDataManager.getInstance().getFort(player);
         if ((castle == null) && (fort == null)) {
             canCreateOutpost = false;
         }

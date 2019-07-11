@@ -19,7 +19,7 @@ package handlers.skillconditionhandlers;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.enums.ResidenceType;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
@@ -55,7 +55,7 @@ public class OpHomeSkillCondition implements ISkillCondition
 					}
 					case FORTRESS:
 					{
-						return FortManager.getInstance().getFortByOwner(clan) != null;
+						return FortDataManager.getInstance().getFortByOwner(clan) != null;
 					}
 					case CLANHALL:
 					{

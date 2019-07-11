@@ -2316,7 +2316,7 @@ public final class Player extends Playable {
                 CastleManager.getInstance().getCastleByOwner(getClan()).giveResidentialSkills(this);
             }
             if (_clan.getFortId() > 0) {
-                FortManager.getInstance().getFortByOwner(getClan()).giveResidentialSkills(this);
+                FortDataManager.getInstance().getFortByOwner(getClan()).giveResidentialSkills(this);
             }
         }
 
@@ -2886,7 +2886,7 @@ public final class Player extends Playable {
             // Combat Flag
             else if (FortSiegeManager.getInstance().isCombat(item.getId())) {
                 if (FortSiegeManager.getInstance().activateCombatFlag(this, item)) {
-                    final Fort fort = FortManager.getInstance().getFort(this);
+                    final Fort fort = FortDataManager.getInstance().getFort(this);
                     fort.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ACQUIRED_THE_FLAG), getName());
                 }
             }
@@ -4288,7 +4288,7 @@ public final class Player extends Playable {
             if (isCursedWeaponEquipped()) {
                 CursedWeaponsManager.getInstance().drop(_cursedWeaponEquippedId, killer);
             } else if (_combatFlagEquippedId) {
-                final Fort fort = FortManager.getInstance().getFort(this);
+                final Fort fort = FortDataManager.getInstance().getFort(this);
                 if (fort != null) {
                     FortSiegeManager.getInstance().dropCombatFlag(this, fort.getResidenceId());
                 } else {
@@ -8849,7 +8849,7 @@ public final class Player extends Playable {
         // remove combat flag
         try {
             if (_inventory.getItemByItemId(9819) != null) {
-                final Fort fort = FortManager.getInstance().getFort(this);
+                final Fort fort = FortDataManager.getInstance().getFort(this);
                 if (fort != null) {
                     FortSiegeManager.getInstance().dropCombatFlag(this, fort.getResidenceId());
                 } else {

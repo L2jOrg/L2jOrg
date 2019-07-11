@@ -13,7 +13,7 @@ import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -374,7 +374,7 @@ public class L2Clan implements IIdentifiable, INamable {
                 CastleManager.getInstance().getCastleByOwner(player.getClan()).removeResidentialSkills(player);
             }
             if (player.getClan().getFortId() > 0) {
-                FortManager.getInstance().getFortByOwner(player.getClan()).removeResidentialSkills(player);
+                FortDataManager.getInstance().getFortByOwner(player.getClan()).removeResidentialSkills(player);
             }
             player.sendSkillList();
 

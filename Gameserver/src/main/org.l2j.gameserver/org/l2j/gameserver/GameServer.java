@@ -203,8 +203,8 @@ public class GameServer {
         SiegeManager.getInstance().getSieges();
         CastleManager.getInstance().activateInstances();
         // No fortresses
-        // FortManager.getInstance().loadInstances();
-        // FortManager.getInstance().activateInstances();
+        // FortDataManager.getInstance().loadInstances();
+        // FortDataManager.getInstance().activateInstances();
         // FortSiegeManager.getInstance();
         SiegeScheduleData.getInstance();
 

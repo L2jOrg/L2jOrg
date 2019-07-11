@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.actor.Creature;
@@ -55,7 +55,7 @@ public class ConditionPlayerCanCreateBase extends Condition {
         }
 
         final Castle castle = CastleManager.getInstance().getCastle(player);
-        final Fort fort = FortManager.getInstance().getFort(player);
+        final Fort fort = FortDataManager.getInstance().getFort(player);
         final SystemMessage sm;
         if ((castle == null) && (fort == null)) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);

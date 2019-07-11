@@ -7,7 +7,7 @@ import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.L2Clan;
@@ -84,7 +84,7 @@ public class L2VillageMasterInstance extends L2NpcInstance {
                 return;
             }
         }
-        for (Fort fort : FortManager.getInstance().getForts()) {
+        for (Fort fort : FortDataManager.getInstance().getForts()) {
             if (FortSiegeManager.getInstance().checkIsRegistered(clan, fort.getResidenceId())) {
                 player.sendPacket(SystemMessageId.YOU_CANNOT_DISSOLVE_A_CLAN_DURING_A_SIEGE_OR_WHILE_PROTECTING_A_CASTLE);
                 return;

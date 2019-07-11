@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2SiegeClan;
@@ -146,7 +146,7 @@ public final class RequestRestartPoint extends ClientPacket {
                 }
                 loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.FORTRESS);
 
-                final Fort fort = FortManager.getInstance().getFortByOwner(clan);
+                final Fort fort = FortDataManager.getInstance().getFortByOwner(clan);
                 if (fort != null) {
                     final Fort.FortFunction fortFunction = fort.getFortFunction(Fort.FUNC_RESTORE_EXP);
                     if (fortFunction != null) {
@@ -159,7 +159,7 @@ public final class RequestRestartPoint extends ClientPacket {
             {
                 L2SiegeClan siegeClan = null;
                 final Castle castle = CastleManager.getInstance().getCastle(activeChar);
-                final Fort fort = FortManager.getInstance().getFort(activeChar);
+                final Fort fort = FortDataManager.getInstance().getFort(activeChar);
 
                 if ((castle != null) && castle.getSiege().isInProgress()) {
                     siegeClan = castle.getSiege().getAttackerClan(activeChar.getClan());

@@ -16,7 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -53,7 +53,7 @@ public class OpCheckFlagSkillCondition implements ISkillCondition
 			canTakeFort = false;
 		}
 		
-		final Fort fort = FortManager.getInstance().getFort(player);
+		final Fort fort = FortDataManager.getInstance().getFort(player);
 		final SystemMessage sm;
 		if ((fort == null) || (fort.getResidenceId() <= 0) || !fort.getSiege().isInProgress() || (fort.getSiege().getAttackerClan(player.getClan()) == null))
 		{

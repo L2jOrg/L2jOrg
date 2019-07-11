@@ -23,7 +23,7 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.enums.CastleSide;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.PcCondOverride;
@@ -368,7 +368,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 	// final List<Integer> fortList = FORTRESS.get(castleId);
 	// for (int i = 0; i < numFort; i++)
 	// {
-	// final Fort fortress = FortManager.getInstance().getFortById(fortList.get(i));
+	// final Fort fortress = FortDataManager.getInstance().getFortById(fortList.get(i));
 	// if (fortress.getFortState() == 2)
 	// {
 	// return true;
@@ -409,7 +409,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 					final List<Integer> fort = FORTRESS.get(castle.getResidenceId());
 					for (int id : fort)
 					{
-						final Fort fortress = FortManager.getInstance().getFortById(id);
+						final Fort fortress = FortDataManager.getInstance().getFortById(id);
 						if (fortress == null) {
 							continue;
 						}

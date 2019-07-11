@@ -17,7 +17,7 @@
 package handlers.skillconditionhandlers;
 
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -54,7 +54,7 @@ public class CanSummonSiegeGolemSkillCondition implements ISkillCondition
 		}
 		
 		final Castle castle = CastleManager.getInstance().getCastle(player);
-		final Fort fort = FortManager.getInstance().getFort(player);
+		final Fort fort = FortDataManager.getInstance().getFort(player);
 		if ((castle == null) && (fort == null))
 		{
 			canSummonSiegeGolem = false;

@@ -4,7 +4,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Attackable;
@@ -88,7 +88,7 @@ public class L2DefenderInstance extends L2Attackable {
     public void onSpawn() {
         super.onSpawn();
 
-        _fort = FortManager.getInstance().getFort(getX(), getY(), getZ());
+        _fort = FortDataManager.getInstance().getFort(getX(), getY(), getZ());
         _castle = CastleManager.getInstance().getCastle(getX(), getY(), getZ());
 
         if ((_fort == null) && (_castle == null)) {

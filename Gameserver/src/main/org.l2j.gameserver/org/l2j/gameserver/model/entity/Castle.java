@@ -599,7 +599,7 @@ public final class Castle extends AbstractResidence {
 
         // if clan have fortress, remove it
         if ((clan != null) && (clan.getFortId() > 0)) {
-            FortManager.getInstance().getFortByOwner(clan).removeOwner(true);
+            FortDataManager.getInstance().getFortByOwner(clan).removeOwner(true);
         }
 
         if (getSiege().isInProgress()) {

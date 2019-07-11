@@ -486,7 +486,7 @@ public class L2Npc extends Creature {
      * @return the nearest L2Fort this L2NpcInstance belongs to. Otherwise null.
      */
     public final Fort getFort() {
-        return FortManager.getInstance().findNearestFort(this);
+        return FortDataManager.getInstance().findNearestFort(this);
     }
 
     /**
@@ -496,7 +496,7 @@ public class L2Npc extends Creature {
      * @return Fort
      */
     public final Fort getFort(long maxDistance) {
-        return FortManager.getInstance().findNearestFort(this, maxDistance);
+        return FortDataManager.getInstance().findNearestFort(this, maxDistance);
     }
 
     /**
