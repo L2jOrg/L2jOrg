@@ -1105,7 +1105,7 @@ public class Siege implements Siegable {
     private void spawnControlTower() {
         try {
             for (TowerSpawn ts : SiegeManager.getInstance().getControlTowers(getCastle().getResidenceId())) {
-                final L2Spawn spawn = new L2Spawn(ts.getId());
+                final Spawn spawn = new Spawn(ts.getId());
                 spawn.setLocation(ts.getLocation());
                 _controlTowers.add((ControlTower) spawn.doSpawn());
             }
@@ -1121,7 +1121,7 @@ public class Siege implements Siegable {
     private void spawnFlameTower() {
         try {
             for (TowerSpawn ts : SiegeManager.getInstance().getFlameTowers(getCastle().getResidenceId())) {
-                final L2Spawn spawn = new L2Spawn(ts.getId());
+                final Spawn spawn = new Spawn(ts.getId());
                 spawn.setLocation(ts.getLocation());
                 final FlameTower tower = (FlameTower) spawn.doSpawn();
                 tower.setUpgradeLevel(ts.getUpgradeLevel());
@@ -1141,12 +1141,12 @@ public class Siege implements Siegable {
 
         // Register guard to the closest Control Tower
         // When CT dies, so do all the guards that it controls
-        final Set<L2Spawn> spawned = SiegeGuardManager.getInstance().getSpawnedGuards(getCastle().getResidenceId());
+        final Set<Spawn> spawned = SiegeGuardManager.getInstance().getSpawnedGuards(getCastle().getResidenceId());
         if (!spawned.isEmpty()) {
             ControlTower closestCt;
             double distance;
             double distanceClosest = 0;
-            for (L2Spawn spawn : spawned) {
+            for (Spawn spawn : spawned) {
                 if (spawn == null) {
                     continue;
                 }

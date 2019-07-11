@@ -1,10 +1,8 @@
 package org.l2j.authserver.network.client.packet.client2auth;
 
-import org.l2j.authserver.network.client.packet.L2LoginClientPacket;
+import org.l2j.authserver.network.client.packet.AuthClientPacket;
 import org.l2j.authserver.network.client.packet.auth2client.LoginFail;
 import org.l2j.authserver.network.client.packet.auth2client.ServerList;
-
-import java.nio.ByteBuffer;
 
 /**
  * Format: ddc d: fist part of session id d: second part of session id c: list Type
@@ -21,7 +19,7 @@ import java.nio.ByteBuffer;
  *
  * TYPE_FREYA=5 - Indicates that each game server will have reader's character count(s) specified.
  */
-public class RequestServerList extends L2LoginClientPacket
+public class RequestServerList extends AuthClientPacket
 {
 	private int accountId;
 	private int authId;

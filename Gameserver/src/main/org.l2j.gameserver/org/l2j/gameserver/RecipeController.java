@@ -188,7 +188,7 @@ public class RecipeController {
 
             // check that customer can afford to pay for creation services
             if (_player != _target) {
-                final L2ManufactureItem item = _player.getManufactureItems().get(_recipeList.getId());
+                final ManufactureItem item = _player.getManufactureItems().get(_recipeList.getId());
                 if (item != null) {
                     _price = item.getCost();
                     if (_target.getAdena() < _price) // check price

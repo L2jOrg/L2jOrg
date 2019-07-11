@@ -23,7 +23,7 @@ import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -91,7 +91,7 @@ public class AdminScan implements IAdminCommandHandler
 					
 					npc.deleteMe();
 					
-					final L2Spawn spawn = npc.getSpawn();
+					final Spawn spawn = npc.getSpawn();
 					if (spawn != null)
 					{
 						spawn.stopRespawn();

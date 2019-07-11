@@ -30,11 +30,11 @@ import java.util.concurrent.ConcurrentLinkedDeque;
  *
  * @author Nightmare
  */
-public class L2Spawn extends Location implements IIdentifiable, INamable {
-    protected static final Logger LOGGER = LoggerFactory.getLogger(L2Spawn.class);
+public class Spawn extends Location implements IIdentifiable, INamable {
+    protected static final Logger LOGGER = LoggerFactory.getLogger(Spawn.class);
     private final Deque<Npc> _spawnedNpcs = new ConcurrentLinkedDeque<>();
     /**
-     * The current number of SpawnTask in progress or stand by of this L2Spawn
+     * The current number of SpawnTask in progress or stand by of this Spawn
      */
     protected int _scheduledCount;
     /**
@@ -46,11 +46,11 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
      */
     private NpcTemplate _template;
     /**
-     * The maximum number of Folk that can manage this L2Spawn
+     * The maximum number of Folk that can manage this Spawn
      */
     private int _maximumCount;
     /**
-     * The current number of Folk managed by this L2Spawn
+     * The current number of Folk managed by this Spawn
      */
     private int _currentCount;
     /**
@@ -70,7 +70,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
      */
     private int _respawnMaxDelay;
     /**
-     * The generic constructor of Folk managed by this L2Spawn
+     * The generic constructor of Folk managed by this Spawn
      */
     private Constructor<? extends Npc> _constructor;
     /**
@@ -81,29 +81,29 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
     private NpcSpawnTemplate _spawnTemplate;
 
     /**
-     * Constructor of L2Spawn.<br>
+     * Constructor of Spawn.<br>
      * <B><U>Concept</U>:</B><br>
-     * Each L2Spawn owns generic and static properties (ex : RewardExp, RewardSP, AggroRange...).<br>
-     * All of those properties are stored in a different NpcTemplate for each type of L2Spawn. Each template is loaded once in the server cache memory (reduce memory use).<br>
-     * When a new instance of L2Spawn is created, server just create a link between the instance and the template.<br>
-     * This link is stored in <B>_template</B> Each Folk is linked to a L2Spawn that manages its spawn and respawn (delay, location...).<br>
+     * Each Spawn owns generic and static properties (ex : RewardExp, RewardSP, AggroRange...).<br>
+     * All of those properties are stored in a different NpcTemplate for each type of Spawn. Each template is loaded once in the server cache memory (reduce memory use).<br>
+     * When a new instance of Spawn is created, server just create a link between the instance and the template.<br>
+     * This link is stored in <B>_template</B> Each Folk is linked to a Spawn that manages its spawn and respawn (delay, location...).<br>
      * This link is stored in <B>_spawn</B> of the Folk.<br>
      * <B><U> Actions</U>:</B><br>
      * <ul>
-     * <li>Set the _template of the L2Spawn</li>
-     * <li>Calculate the implementationName used to generate the generic constructor of Folk managed by this L2Spawn</li>
-     * <li>Create the generic constructor of Folk managed by this L2Spawn</li>
+     * <li>Set the _template of the Spawn</li>
+     * <li>Calculate the implementationName used to generate the generic constructor of Folk managed by this Spawn</li>
+     * <li>Create the generic constructor of Folk managed by this Spawn</li>
      * </ul>
      *
-     * @param template The NpcTemplate to link to this L2Spawn
+     * @param template The NpcTemplate to link to this Spawn
      * @throws SecurityException
      * @throws ClassNotFoundException
      * @throws NoSuchMethodException
      * @throws ClassCastException     when template type is not subclass of Npc
      */
-    public L2Spawn(NpcTemplate template) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException {
+    public Spawn(NpcTemplate template) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException {
         super(0, 0, 0);
-        // Set the _template of the L2Spawn
+        // Set the _template of the Spawn
         _template = template;
 
         if (_template == null) {
@@ -112,7 +112,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
 
         final String className = "org.l2j.gameserver.model.actor.instance." + _template.getType();
 
-        // Create the generic constructor of Npc managed by this L2Spawn
+        // Create the generic constructor of Npc managed by this Spawn
         _constructor = Class.forName(className).asSubclass(Npc.class).getConstructor(NpcTemplate.class);
     }
 
@@ -125,25 +125,25 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
      * @throws NoSuchMethodException
      * @throws ClassCastException
      */
-    public L2Spawn(int npcId) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException {
+    public Spawn(int npcId) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException {
         super(0, 0, 0);
         _template = Objects.requireNonNull(NpcData.getInstance().getTemplate(npcId), "NpcTemplate not found for NPC ID: " + npcId);
 
         final String className = "org.l2j.gameserver.model.actor.instance." + _template.getType();
 
-        // Create the generic constructor of Npc managed by this L2Spawn
+        // Create the generic constructor of Npc managed by this Spawn
         _constructor = Class.forName(className).asSubclass(Npc.class).getConstructor(NpcTemplate.class);
     }
 
     /**
-     * @return the maximum number of Folk that this L2Spawn can manage.
+     * @return the maximum number of Folk that this Spawn can manage.
      */
     public int getAmount() {
         return _maximumCount;
     }
 
     /**
-     * Set the maximum number of Folk that this L2Spawn can manage.
+     * Set the maximum number of Folk that this Spawn can manage.
      *
      * @param amount
      */
@@ -227,10 +227,10 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
     }
 
     /**
-     * Decrease the current number of Folk of this L2Spawn and if necessary create a SpawnTask to launch after the respawn Delay. <B><U> Actions</U> :</B>
-     * <li>Decrease the current number of Folk of this L2Spawn</li>
+     * Decrease the current number of Folk of this Spawn and if necessary create a SpawnTask to launch after the respawn Delay. <B><U> Actions</U> :</B>
+     * <li>Decrease the current number of Folk of this Spawn</li>
      * <li>Check if respawn is possible to prevent multiple respawning caused by lag</li>
-     * <li>Update the current number of SpawnTask in progress or stand by of this L2Spawn</li>
+     * <li>Update the current number of SpawnTask in progress or stand by of this Spawn</li>
      * <li>Create a new SpawnTask to launch after the respawn Delay</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : A respawn is possible ONLY if _doRespawn=True and _scheduledCount + _currentCount < _maximumCount</B></FONT>
      *
      * @param oldNpc
@@ -241,7 +241,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
             return;
         }
 
-        // Decrease the current number of Folk of this L2Spawn
+        // Decrease the current number of Folk of this Spawn
         _currentCount--;
 
         // Remove this NPC from list of spawned
@@ -249,7 +249,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
 
         // Check if respawn is possible to prevent multiple respawning caused by lag
         if (_doRespawn && ((_scheduledCount + _currentCount) < _maximumCount)) {
-            // Update the current number of SpawnTask in progress or stand by of this L2Spawn
+            // Update the current number of SpawnTask in progress or stand by of this Spawn
             _scheduledCount++;
 
             // Create a new SpawnTask to launch after the respawn Delay
@@ -279,14 +279,14 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
     }
 
     /**
-     * Set _doRespawn to False to stop respawn in this L2Spawn.
+     * Set _doRespawn to False to stop respawn in this Spawn.
      */
     public void stopRespawn() {
         _doRespawn = false;
     }
 
     /**
-     * Set _doRespawn to True to start or restart respawn in this L2Spawn.
+     * Set _doRespawn to True to start or restart respawn in this Spawn.
      */
     public void startRespawn() {
         _doRespawn = true;
@@ -305,14 +305,14 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
      * <ul>
      * <li>Get Folk Init parameters and its generate an Identifier</li>
      * <li>Call the constructor of the Folk</li>
-     * <li>Calculate the random position in the location area (if Locx=0 and Locy=0) or get its exact position from the L2Spawn</li>
+     * <li>Calculate the random position in the location area (if Locx=0 and Locy=0) or get its exact position from the Spawn</li>
      * <li>Set the position of the Folk</li>
      * <li>Set the HP and MP of the Folk to the max</li>
      * <li>Set the heading of the Folk (random heading if not defined : value=-1)</li>
-     * <li>Link the Folk to this L2Spawn</li>
+     * <li>Link the Folk to this Spawn</li>
      * <li>Init other values of the Folk (ex : from its CreatureTemplate for INT, STR, DEX...) and add it in the world</li>
      * <li>Launch the action OnSpawn fo the Folk</li>
-     * <li>Increase the current number of Folk managed by this L2Spawn</li>
+     * <li>Increase the current number of Folk managed by this Spawn</li>
      * </ul>
      *
      * @param isSummonSpawn
@@ -320,7 +320,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
      */
     public Npc doSpawn(boolean isSummonSpawn) {
         try {
-            // Check if the L2Spawn is not a L2Pet or L2Minion or L2Decoy spawn
+            // Check if the Spawn is not a L2Pet or L2Minion or L2Decoy spawn
             if (_template.isType("L2Pet") || _template.isType("L2Decoy") || _template.isType("L2Trap")) {
                 _currentCount++;
                 return null;
@@ -399,7 +399,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
         // Reset some variables
         npc.onRespawn();
 
-        // Link the Folk to this L2Spawn
+        // Link the Folk to this Spawn
         npc.setSpawn(this);
 
         // Spawn NPC
@@ -411,7 +411,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
 
         _spawnedNpcs.add(npc);
 
-        // Increase the current number of Folk managed by this L2Spawn
+        // Increase the current number of Folk managed by this Spawn
         _currentCount++;
 
         // Minions
@@ -503,7 +503,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
 
     @Override
     public String toString() {
-        return "L2Spawn ID: " + _template.getId() + " X: " + getX() + " Y: " + getY() + " Z: " + getZ() + " Heading: " + getHeading();
+        return "Spawn ID: " + _template.getId() + " X: " + getX() + " Y: " + getY() + " Z: " + getZ() + " Heading: " + getHeading();
     }
 
     /**

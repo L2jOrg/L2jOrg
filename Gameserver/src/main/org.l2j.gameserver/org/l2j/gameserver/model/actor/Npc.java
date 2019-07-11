@@ -64,9 +64,9 @@ public class Npc extends Creature {
     private final boolean _isQuestMonster = getTemplate().isQuestMonster();
     protected RandomAnimationTask _rAniTask;
     /**
-     * The L2Spawn object that manage this Folk
+     * The Spawn object that manage this Folk
      */
-    private L2Spawn _spawn;
+    private Spawn _spawn;
     /**
      * The flag to specify if this Folk is busy
      */
@@ -794,7 +794,7 @@ public class Npc extends Creature {
                 new MpRewardTask(summon, this);
             }
             if (getTemplate().getMpRewardAffectType() == MpRewardAffectType.PARTY) {
-                final L2Party party = killerPlayer.getParty();
+                final Party party = killerPlayer.getParty();
                 if (party != null) {
                     for (Player member : party.getMembers()) {
                         if ((member != killerPlayer) && (member.calculateDistance3D(getX(), getY(), getZ()) <= Config.ALT_PARTY_RANGE)) {
@@ -947,18 +947,18 @@ public class Npc extends Creature {
     }
 
     /**
-     * @return the L2Spawn object that manage this Folk.
+     * @return the Spawn object that manage this Folk.
      */
-    public L2Spawn getSpawn() {
+    public Spawn getSpawn() {
         return _spawn;
     }
 
     /**
      * Set the spawn of the Folk.
      *
-     * @param spawn The L2Spawn that manage the Folk
+     * @param spawn The Spawn that manage the Folk
      */
-    public void setSpawn(L2Spawn spawn) {
+    public void setSpawn(Spawn spawn) {
         _spawn = spawn;
     }
 
@@ -1446,7 +1446,7 @@ public class Npc extends Creature {
             return _params;
         }
 
-        if (_spawn != null) // Minions doesn't have L2Spawn object bound
+        if (_spawn != null) // Minions doesn't have Spawn object bound
         {
             final NpcSpawnTemplate npcSpawnTemplate = _spawn.getNpcSpawnTemplate();
             if ((npcSpawnTemplate != null) && (npcSpawnTemplate.getParameters() != null) && !npcSpawnTemplate.getParameters().isEmpty()) {

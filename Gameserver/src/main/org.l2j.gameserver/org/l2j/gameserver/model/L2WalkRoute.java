@@ -23,12 +23,12 @@ import java.util.List;
  */
 public class L2WalkRoute {
     private final String _name;
-    private final List<L2NpcWalkerNode> _nodeList; // List of nodes
+    private final List<NpcWalkerNode> _nodeList; // List of nodes
     private final boolean _repeatWalk; // Does repeat walk, after arriving into last point in list, or not
     private final byte _repeatType; // Repeat style: 0 - go back, 1 - go to first point (circle style), 2 - teleport to first point (conveyor style), 3 - random walking between points
     private boolean _stopAfterCycle; // Make only one cycle or endlessly
 
-    public L2WalkRoute(String name, List<L2NpcWalkerNode> route, boolean repeat, boolean once, byte repeatType) {
+    public L2WalkRoute(String name, List<NpcWalkerNode> route, boolean repeat, boolean once, byte repeatType) {
         _name = name;
         _nodeList = route;
         _repeatType = repeatType;
@@ -39,11 +39,11 @@ public class L2WalkRoute {
         return _name;
     }
 
-    public List<L2NpcWalkerNode> getNodeList() {
+    public List<NpcWalkerNode> getNodeList() {
         return _nodeList;
     }
 
-    public L2NpcWalkerNode getLastNode() {
+    public NpcWalkerNode getLastNode() {
         return _nodeList.get(_nodeList.size() - 1);
     }
 

@@ -6,13 +6,13 @@ import org.l2j.gameserver.network.NpcStringId;
  * @author Rayan RPG, JIV
  * @since 927
  */
-public class L2NpcWalkerNode extends Location {
+public class NpcWalkerNode extends Location {
     private final String _chatString;
     private final NpcStringId _npcString;
     private final int _delay;
     private final boolean _runToLocation;
 
-    public L2NpcWalkerNode(int moveX, int moveY, int moveZ, int delay, boolean runToLocation, NpcStringId npcString, String chatText) {
+    public NpcWalkerNode(int moveX, int moveY, int moveZ, int delay, boolean runToLocation, NpcStringId npcString, String chatText) {
         super(moveX, moveY, moveZ);
         _delay = delay;
         _runToLocation = runToLocation;

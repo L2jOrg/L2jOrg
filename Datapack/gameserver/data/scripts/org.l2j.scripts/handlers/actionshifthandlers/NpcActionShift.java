@@ -11,7 +11,7 @@ import org.l2j.gameserver.handler.IActionShiftHandler;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -91,7 +91,7 @@ public class NpcActionShift implements IActionShiftHandler
 			html.replace("%ele_dholy%", String.valueOf(npc.getDefenseElementValue(AttributeType.HOLY)));
 			html.replace("%ele_ddark%", String.valueOf(npc.getDefenseElementValue(AttributeType.DARK)));
 			
-			final L2Spawn spawn = npc.getSpawn();
+			final Spawn spawn = npc.getSpawn();
 			if (spawn != null)
 			{
 				final NpcSpawnTemplate template = spawn.getNpcSpawnTemplate();

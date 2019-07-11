@@ -18,7 +18,7 @@ package handlers.targethandlers.affectobject;
 
 import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
@@ -51,8 +51,8 @@ public class Friend implements IAffectObjectHandler
 				}
 				
 				// Party (command channel doesn't make you friends).
-				final L2Party party = player.getParty();
-				final L2Party targetParty = targetPlayer.getParty();
+				final Party party = player.getParty();
+				final Party targetParty = targetPlayer.getParty();
 				if ((party != null) && (targetParty != null) && (party.getLeaderObjectId() == targetParty.getLeaderObjectId()))
 				{
 					return true;

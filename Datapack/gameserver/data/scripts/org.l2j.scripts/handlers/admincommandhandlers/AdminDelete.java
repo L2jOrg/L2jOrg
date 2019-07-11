@@ -19,8 +19,8 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -61,7 +61,7 @@ public class AdminDelete implements IAdminCommandHandler
 			final Npc target = (Npc) obj;
 			target.deleteMe();
 			
-			final L2Spawn spawn = target.getSpawn();
+			final Spawn spawn = target.getSpawn();
 			if (spawn != null)
 			{
 				spawn.stopRespawn();

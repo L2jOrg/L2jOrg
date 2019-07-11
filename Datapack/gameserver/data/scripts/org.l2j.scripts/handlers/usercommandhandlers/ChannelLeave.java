@@ -18,7 +18,7 @@ package handlers.usercommandhandlers;
 
 import org.l2j.gameserver.handler.IUserCommandHandler;
 import org.l2j.gameserver.model.CommandChannel;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -51,7 +51,7 @@ public class ChannelLeave implements IUserCommandHandler
 		if (activeChar.getParty().isInCommandChannel())
 		{
 			final CommandChannel channel = activeChar.getParty().getCommandChannel();
-			final L2Party party = activeChar.getParty();
+			final Party party = activeChar.getParty();
 			channel.removeParty(party);
 			party.getLeader().sendPacket(SystemMessageId.YOU_HAVE_QUIT_THE_COMMAND_CHANNEL);
 			

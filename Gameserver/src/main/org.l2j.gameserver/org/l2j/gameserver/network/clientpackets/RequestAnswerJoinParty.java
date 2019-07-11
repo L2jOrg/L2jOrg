@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.PartyRequest;
 import org.l2j.gameserver.model.matching.MatchingRoom;
@@ -35,8 +35,8 @@ public final class RequestAnswerJoinParty extends ClientPacket {
             return;
         }
 
-        final L2Party party = request.getParty();
-        final L2Party requestorParty = requestor.getParty();
+        final Party party = request.getParty();
+        final Party requestorParty = requestor.getParty();
         if ((requestorParty != null) && (requestorParty != party)) {
             return;
         }
@@ -69,10 +69,10 @@ public final class RequestAnswerJoinParty extends ClientPacket {
             requestor.sendPacket(sm);
 
             if (party.getMemberCount() == 1) {
-                party.removePartyMember(requestor, L2Party.MessageType.NONE);
+                party.removePartyMember(requestor, Party.MessageType.NONE);
             }
         } else if (party.getMemberCount() == 1) {
-            party.removePartyMember(requestor, L2Party.MessageType.NONE);
+            party.removePartyMember(requestor, Party.MessageType.NONE);
         }
 
         party.setPendingInvitation(false);

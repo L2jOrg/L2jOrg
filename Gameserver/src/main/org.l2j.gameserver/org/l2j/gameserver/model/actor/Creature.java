@@ -3329,9 +3329,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     /**
-     * @return the L2Party object of the Creature.
+     * @return the Party object of the Creature.
      */
-    public L2Party getParty() {
+    public Party getParty() {
         return null;
     }
 

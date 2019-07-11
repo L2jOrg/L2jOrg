@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.mentoring;
 
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.instancemanager.MentorManager;
-import org.l2j.gameserver.model.L2Mentee;
+import org.l2j.gameserver.model.Mentee;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -16,7 +16,7 @@ import java.util.Collections;
  */
 public class ExMentorList extends ServerPacket {
     private final int _type;
-    private final Collection<L2Mentee> _mentees;
+    private final Collection<Mentee> _mentees;
 
     public ExMentorList(Player activeChar) {
         if (activeChar.isMentor()) {
@@ -42,7 +42,7 @@ public class ExMentorList extends ServerPacket {
         writeInt(_type);
         writeInt(0x00);
         writeInt(_mentees.size());
-        for (L2Mentee mentee : _mentees) {
+        for (Mentee mentee : _mentees) {
             writeInt(mentee.getObjectId());
             writeString(mentee.getName());
             writeInt(mentee.getClassId());

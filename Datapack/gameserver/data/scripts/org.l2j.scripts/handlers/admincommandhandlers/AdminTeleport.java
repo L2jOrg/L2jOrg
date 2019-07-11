@@ -9,8 +9,8 @@ import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Npc;
@@ -507,7 +507,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				return;
 			}
 			
-			L2Spawn spawn = target.getSpawn();
+			Spawn spawn = target.getSpawn();
 			if (spawn == null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Incorrect monster spawn.");
@@ -522,7 +522,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			
 			try
 			{
-				spawn = new L2Spawn(template1);
+				spawn = new Spawn(template1);
 				spawn.setXYZ(activeChar);
 				spawn.setAmount(1);
 				spawn.setHeading(activeChar.getHeading());
@@ -550,7 +550,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		else if (obj instanceof RaidBoss)
 		{
 			final RaidBoss target = (RaidBoss) obj;
-			final L2Spawn spawn = target.getSpawn();
+			final Spawn spawn = target.getSpawn();
 			final double curHP = target.getCurrentHp();
 			final double curMP = target.getCurrentMp();
 			if (spawn == null)
@@ -562,7 +562,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			DBSpawnManager.getInstance().deleteSpawn(spawn, true);
 			try
 			{
-				final L2Spawn spawnDat = new L2Spawn(target.getId());
+				final Spawn spawnDat = new Spawn(target.getId());
 				spawnDat.setXYZ(activeChar);
 				spawnDat.setAmount(1);
 				spawnDat.setHeading(activeChar.getHeading());

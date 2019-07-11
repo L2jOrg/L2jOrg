@@ -2,7 +2,7 @@ package org.l2j.gameserver.datatables;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.NpcData;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +22,7 @@ import java.util.function.Function;
  */
 public final class SpawnTable {
     private static final Logger LOGGER = LoggerFactory.getLogger(SpawnTable.class);
-    private static final Map<Integer, Set<L2Spawn>> _spawnTable = new ConcurrentHashMap<>();
+    private static final Map<Integer, Set<Spawn>> _spawnTable = new ConcurrentHashMap<>();
     private static final String OTHER_XML_FOLDER = "data/spawns/Others";
 
     private SpawnTable() {}
@@ -33,7 +33,7 @@ public final class SpawnTable {
      *
      * @return the spawn data
      */
-    public Map<Integer, Set<L2Spawn>> getSpawnTable() {
+    public Map<Integer, Set<Spawn>> getSpawnTable() {
         return _spawnTable;
     }
 
@@ -43,7 +43,7 @@ public final class SpawnTable {
      * @param npcId the NPC Id
      * @return the spawn set for the given npcId
      */
-    public Set<L2Spawn> getSpawns(int npcId) {
+    public Set<Spawn> getSpawns(int npcId) {
         return _spawnTable.getOrDefault(npcId, Collections.emptySet());
     }
 
@@ -63,7 +63,7 @@ public final class SpawnTable {
      * @param npcId the NPC Id
      * @return a spawn for the given NPC ID or {@code null}
      */
-    public L2Spawn getAnySpawn(int npcId) {
+    public Spawn getAnySpawn(int npcId) {
         return getSpawns(npcId).stream().findFirst().orElse(null);
     }
 
@@ -73,7 +73,7 @@ public final class SpawnTable {
      * @param spawn the spawn to add
      * @param store if {@code true} it'll be saved in the spawn XML files
      */
-    public synchronized void addNewSpawn(L2Spawn spawn, boolean store) {
+    public synchronized void addNewSpawn(Spawn spawn, boolean store) {
         addSpawn(spawn);
 
         if (store) {
@@ -154,7 +154,7 @@ public final class SpawnTable {
      * @param spawn  the spawn to delete
      * @param update if {@code true} the spawn XML files will be updated
      */
-    public synchronized void deleteSpawn(L2Spawn spawn, boolean update) {
+    public synchronized void deleteSpawn(Spawn spawn, boolean update) {
         if (!removeSpawn(spawn)) {
             return;
         }
@@ -221,7 +221,7 @@ public final class SpawnTable {
      *
      * @param spawn the NPC spawn to add
      */
-    private void addSpawn(L2Spawn spawn) {
+    private void addSpawn(Spawn spawn) {
         _spawnTable.computeIfAbsent(spawn.getId(), k -> ConcurrentHashMap.newKeySet(1)).add(spawn);
     }
 
@@ -231,8 +231,8 @@ public final class SpawnTable {
      * @param spawn the NPC spawn to remove
      * @return {@code true} if the spawn was successfully removed, {@code false} otherwise
      */
-    private boolean removeSpawn(L2Spawn spawn) {
-        final Set<L2Spawn> set = _spawnTable.get(spawn.getId());
+    private boolean removeSpawn(Spawn spawn) {
+        final Set<Spawn> set = _spawnTable.get(spawn.getId());
         if (set != null) {
             final boolean removed = set.remove(spawn);
             if (set.isEmpty()) {
@@ -245,7 +245,7 @@ public final class SpawnTable {
         return false;
     }
 
-    private void notifyRemoved(L2Spawn spawn) {
+    private void notifyRemoved(Spawn spawn) {
         if ((spawn != null) && (spawn.getLastSpawn() != null) && (spawn.getNpcSpawnTemplate() != null)) {
             spawn.getNpcSpawnTemplate().notifyDespawnNpc(spawn.getLastSpawn());
         }
@@ -258,9 +258,9 @@ public final class SpawnTable {
      * @param function the function to execute
      * @return {@code true} if all procedures were executed, {@code false} otherwise
      */
-    public boolean forEachSpawn(Function<L2Spawn, Boolean> function) {
-        for (Set<L2Spawn> set : _spawnTable.values()) {
-            for (L2Spawn spawn : set) {
+    public boolean forEachSpawn(Function<Spawn, Boolean> function) {
+        for (Set<Spawn> set : _spawnTable.values()) {
+            for (Spawn spawn : set) {
                 if (!function.apply(spawn)) {
                     return false;
                 }

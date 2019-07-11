@@ -6,7 +6,7 @@ import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.model.FortSiegeSpawn;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -82,7 +82,7 @@ public class FortCommander extends Defender {
 
     @Override
     public final void addDamage(Creature attacker, int damage, Skill skill) {
-        final L2Spawn spawn = getSpawn();
+        final Spawn spawn = getSpawn();
         if ((spawn != null) && canTalk()) {
             final List<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId());
             for (FortSiegeSpawn spawn2 : commanders) {

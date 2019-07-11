@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2ManufactureItem;
+import org.l2j.gameserver.model.ManufactureItem;
 import org.l2j.gameserver.model.L2RecipeList;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -24,8 +24,8 @@ public class RecipeShopManageList extends ServerPacket {
         }
 
         if (_seller.hasManufactureShop()) {
-            final Iterator<L2ManufactureItem> it = _seller.getManufactureItems().values().iterator();
-            L2ManufactureItem item;
+            final Iterator<ManufactureItem> it = _seller.getManufactureItems().values().iterator();
+            ManufactureItem item;
             while (it.hasNext()) {
                 item = it.next();
                 if ((item.isDwarven() != _isDwarven) || !seller.hasRecipeList(item.getRecipeId())) {
@@ -59,7 +59,7 @@ public class RecipeShopManageList extends ServerPacket {
             writeInt(0x00);
         } else {
             writeInt(_seller.getManufactureItems().size());
-            for (L2ManufactureItem item : _seller.getManufactureItems().values()) {
+            for (ManufactureItem item : _seller.getManufactureItems().values()) {
                 writeInt(item.getRecipeId());
                 writeInt(0x00);
                 writeLong(item.getCost());

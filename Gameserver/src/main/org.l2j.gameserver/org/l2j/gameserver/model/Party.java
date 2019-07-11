@@ -35,8 +35,8 @@ import java.util.concurrent.Future;
  *
  * @author nuocnam
  */
-public class L2Party extends AbstractPlayerGroup {
-    private static final Logger LOGGER = LoggerFactory.getLogger(L2Party.class);
+public class Party extends AbstractPlayerGroup {
+    private static final Logger LOGGER = LoggerFactory.getLogger(Party.class);
 
     // @formatter:off
     private static final double[] BONUS_EXP_SP =
@@ -71,12 +71,12 @@ public class L2Party extends AbstractPlayerGroup {
     private boolean _disbanding = false;
 
     /**
-     * Construct a new L2Party object with a single member - the leader.
+     * Construct a new Party object with a single member - the leader.
      *
      * @param leader                the leader of this party
      * @param partyDistributionType the item distribution rule of this party
      */
-    public L2Party(Player leader, PartyDistributionType partyDistributionType) {
+    public Party(Player leader, PartyDistributionType partyDistributionType) {
         _members.add(leader);
         _partyLvl = leader.getLevel();
         _distributionType = partyDistributionType;
@@ -603,7 +603,7 @@ public class L2Party extends AbstractPlayerGroup {
     }
 
     /**
-     * Method overload for {@link L2Party#distributeItem(Player, int, long, boolean, Attackable)}
+     * Method overload for {@link Party#distributeItem(Player, int, long, boolean, Attackable)}
      *
      * @param player the reference player
      * @param item   the item holder

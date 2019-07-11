@@ -18,7 +18,7 @@ package handlers.targethandlers;
 
 import org.l2j.gameserver.handler.ITargetTypeHandler;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
@@ -40,8 +40,8 @@ public class MyParty implements ITargetTypeHandler
 	{
 		if ((selectedTarget != null) && selectedTarget.isPlayer() && (selectedTarget != activeChar))
 		{
-			final L2Party party = activeChar.getParty();
-			final L2Party targetParty = selectedTarget.getActingPlayer().getParty();
+			final Party party = activeChar.getParty();
+			final Party targetParty = selectedTarget.getActingPlayer().getParty();
 			if ((party != null) && (targetParty != null) && (party.getLeaderObjectId() == targetParty.getLeaderObjectId()))
 			{
 				return selectedTarget;

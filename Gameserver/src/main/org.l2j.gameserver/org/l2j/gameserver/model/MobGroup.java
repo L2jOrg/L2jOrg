@@ -118,7 +118,7 @@ public final class MobGroup {
 
         try {
             for (int i = 0; i < _maxMobCount; i++) {
-                final L2GroupSpawn spawn = new L2GroupSpawn(_npcTemplate);
+                final GroupSpawn spawn = new GroupSpawn(_npcTemplate);
 
                 final int signX = Rnd.nextBoolean() ? -1 : 1;
                 final int signY = Rnd.nextBoolean() ? -1 : 1;

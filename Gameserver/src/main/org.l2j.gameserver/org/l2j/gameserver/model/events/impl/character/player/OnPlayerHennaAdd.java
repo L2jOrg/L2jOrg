@@ -19,16 +19,16 @@ package org.l2j.gameserver.model.events.impl.character.player;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
-import org.l2j.gameserver.model.items.L2Henna;
+import org.l2j.gameserver.model.items.Henna;
 
 /**
  * @author UnAfraid
  */
 public class OnPlayerHennaAdd implements IBaseEvent {
     private final Player _activeChar;
-    private final L2Henna _henna;
+    private final Henna _henna;
 
-    public OnPlayerHennaAdd(Player activeChar, L2Henna henna) {
+    public OnPlayerHennaAdd(Player activeChar, Henna henna) {
         _activeChar = activeChar;
         _henna = henna;
     }
@@ -37,7 +37,7 @@ public class OnPlayerHennaAdd implements IBaseEvent {
         return _activeChar;
     }
 
-    public L2Henna getHenna() {
+    public Henna getHenna() {
         return _henna;
     }
 

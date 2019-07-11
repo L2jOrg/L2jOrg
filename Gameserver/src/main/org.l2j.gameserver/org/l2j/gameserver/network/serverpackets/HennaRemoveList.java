@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.L2Henna;
+import org.l2j.gameserver.model.items.Henna;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -23,7 +23,7 @@ public class HennaRemoveList extends ServerPacket {
         writeInt(0x03); // seems to be max size
         writeInt(3 - _player.getHennaEmptySlots());
 
-        for (L2Henna henna : _player.getHennaList()) {
+        for (Henna henna : _player.getHennaList()) {
             if (henna != null) {
                 writeInt(henna.getDyeId());
                 writeInt(henna.getDyeItemId());

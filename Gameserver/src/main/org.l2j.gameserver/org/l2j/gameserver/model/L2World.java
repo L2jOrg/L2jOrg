@@ -519,7 +519,7 @@ public final class L2World {
                 LOGGER.warn("Deleting npc " + object.getName() + " NPCID[" + npc.getId() + "] from invalid location X:" + object.getX() + " Y:" + object.getY() + " Z:" + object.getZ());
                 npc.deleteMe();
 
-                final L2Spawn spawn = npc.getSpawn();
+                final Spawn spawn = npc.getSpawn();
                 if (spawn != null) {
                     LOGGER.warn("Spawn location X:" + spawn.getX() + " Y:" + spawn.getY() + " Z:" + spawn.getZ() + " Heading:" + spawn.getHeading());
                 }

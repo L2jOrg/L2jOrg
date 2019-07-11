@@ -13,8 +13,8 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -52,9 +52,9 @@ public final class Fort extends AbstractResidence {
     private final List<Door> _doors = new ArrayList<>();
     private final Map<Integer, FortFunction> _function = new ConcurrentHashMap<>();
     private final ScheduledFuture<?>[] _FortUpdater = new ScheduledFuture<?>[2];
-    private final Set<L2Spawn> _siegeNpcs = ConcurrentHashMap.newKeySet();
-    private final Set<L2Spawn> _npcCommanders = ConcurrentHashMap.newKeySet();
-    private final Set<L2Spawn> _specialEnvoys = ConcurrentHashMap.newKeySet();
+    private final Set<Spawn> _siegeNpcs = ConcurrentHashMap.newKeySet();
+    private final Set<Spawn> _npcCommanders = ConcurrentHashMap.newKeySet();
+    private final Set<Spawn> _specialEnvoys = ConcurrentHashMap.newKeySet();
     private final Map<Integer, Integer> _envoyCastles = new HashMap<>(2);
     private final Set<Integer> _availableCastles = new HashSet<>(1);
     Clan _fortOwner = null;
@@ -732,7 +732,7 @@ public final class Fort extends AbstractResidence {
         }
         _isSuspiciousMerchantSpawned = true;
 
-        for (L2Spawn spawnDat : _siegeNpcs) {
+        for (Spawn spawnDat : _siegeNpcs) {
             spawnDat.doSpawn();
             spawnDat.startRespawn();
         }
@@ -744,28 +744,28 @@ public final class Fort extends AbstractResidence {
         }
         _isSuspiciousMerchantSpawned = false;
 
-        for (L2Spawn spawnDat : _siegeNpcs) {
+        for (Spawn spawnDat : _siegeNpcs) {
             spawnDat.stopRespawn();
             spawnDat.getLastSpawn().deleteMe();
         }
     }
 
     public void spawnNpcCommanders() {
-        for (L2Spawn spawnDat : _npcCommanders) {
+        for (Spawn spawnDat : _npcCommanders) {
             spawnDat.doSpawn();
             spawnDat.startRespawn();
         }
     }
 
     public void despawnNpcCommanders() {
-        for (L2Spawn spawnDat : _npcCommanders) {
+        for (Spawn spawnDat : _npcCommanders) {
             spawnDat.stopRespawn();
             spawnDat.getLastSpawn().deleteMe();
         }
     }
 
     public void spawnSpecialEnvoys() {
-        for (L2Spawn spawnDat : _specialEnvoys) {
+        for (Spawn spawnDat : _specialEnvoys) {
             spawnDat.doSpawn();
             spawnDat.startRespawn();
         }
@@ -778,7 +778,7 @@ public final class Fort extends AbstractResidence {
             ps.setInt(2, 0);
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
-                    final L2Spawn spawnDat = new L2Spawn(rs.getInt("npcId"));
+                    final Spawn spawnDat = new Spawn(rs.getInt("npcId"));
                     spawnDat.setAmount(1);
                     spawnDat.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
                     spawnDat.setHeading(rs.getInt("heading"));
@@ -801,7 +801,7 @@ public final class Fort extends AbstractResidence {
             ps.setInt(2, 2);
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
-                    final L2Spawn spawnDat = new L2Spawn(rs.getInt("npcId"));
+                    final Spawn spawnDat = new Spawn(rs.getInt("npcId"));
                     spawnDat.setAmount(1);
                     spawnDat.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
                     spawnDat.setHeading(rs.getInt("heading"));
@@ -822,7 +822,7 @@ public final class Fort extends AbstractResidence {
             ps.setInt(2, 1);
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
-                    final L2Spawn spawnDat = new L2Spawn(rs.getInt("npcId"));
+                    final Spawn spawnDat = new Spawn(rs.getInt("npcId"));
                     spawnDat.setAmount(1);
                     spawnDat.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
                     spawnDat.setHeading(rs.getInt("heading"));
@@ -848,7 +848,7 @@ public final class Fort extends AbstractResidence {
                 while (rs.next()) {
                     final int castleId = rs.getInt("castleId");
                     final int npcId = rs.getInt("npcId");
-                    final L2Spawn spawnDat = new L2Spawn(npcId);
+                    final Spawn spawnDat = new Spawn(npcId);
                     spawnDat.setAmount(1);
                     spawnDat.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
                     spawnDat.setHeading(rs.getInt("heading"));

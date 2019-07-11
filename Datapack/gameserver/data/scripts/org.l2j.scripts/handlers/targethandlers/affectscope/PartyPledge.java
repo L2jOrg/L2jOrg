@@ -24,7 +24,7 @@ import org.l2j.gameserver.handler.AffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Playable;
@@ -49,7 +49,7 @@ public class PartyPledge implements IAffectScopeHandler
 		{
 			final Playable playable = (Playable) target;
 			final Player player = playable.getActingPlayer();
-			final L2Party party = player.getParty();
+			final Party party = player.getParty();
 			
 			// Create the target filter.
 			final AtomicInteger affected = new AtomicInteger(0);

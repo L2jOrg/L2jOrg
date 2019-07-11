@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.CommandChannel;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -27,7 +27,7 @@ public class ExMultiPartyCommandChannelInfo extends ServerPacket {
         writeInt(_channel.getMemberCount());
 
         writeInt(_channel.getPartys().size());
-        for (L2Party p : _channel.getPartys()) {
+        for (Party p : _channel.getPartys()) {
             writeString(p.getLeader().getName());
             writeInt(p.getLeaderObjectId());
             writeInt(p.getMemberCount());

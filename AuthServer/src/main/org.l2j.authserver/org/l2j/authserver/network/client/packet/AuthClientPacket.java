@@ -8,9 +8,9 @@ import org.slf4j.LoggerFactory;
 /**
  * @author KenM
  */
-public abstract class L2LoginClientPacket extends ReadablePacket<AuthClient> {
+public abstract class AuthClientPacket extends ReadablePacket<AuthClient> {
 
-	private static Logger _log = LoggerFactory.getLogger(L2LoginClientPacket.class.getName());
+	private static Logger _log = LoggerFactory.getLogger(AuthClientPacket.class.getName());
 	
 	@Override
 	protected final boolean read() {

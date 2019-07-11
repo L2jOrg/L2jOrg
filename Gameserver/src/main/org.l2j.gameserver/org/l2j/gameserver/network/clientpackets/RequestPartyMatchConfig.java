@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.enums.PartyMatchingRoomLevelType;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.CommandChannel;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.matching.CommandChannelMatchingRoom;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -29,7 +29,7 @@ public final class RequestPartyMatchConfig extends ClientPacket {
             return;
         }
 
-        final L2Party party = activeChar.getParty();
+        final Party party = activeChar.getParty();
         final CommandChannel cc = party == null ? null : party.getCommandChannel();
 
         if ((party != null) && (cc != null) && (cc.getLeader() == activeChar)) {

@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.RecipeData;
 import org.l2j.gameserver.enums.PrivateStoreType;
-import org.l2j.gameserver.model.L2ManufactureItem;
+import org.l2j.gameserver.model.ManufactureItem;
 import org.l2j.gameserver.model.L2RecipeList;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -26,7 +26,7 @@ import static org.l2j.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 public final class RequestRecipeShopListSet extends ClientPacket {
     private static final int BATCH_LENGTH = 12;
 
-    private L2ManufactureItem[] _items = null;
+    private ManufactureItem[] _items = null;
 
     @Override
     public void readImpl() throws InvalidDataPacketException {
@@ -35,7 +35,7 @@ public final class RequestRecipeShopListSet extends ClientPacket {
             throw new InvalidDataPacketException();
         }
 
-        _items = new L2ManufactureItem[count];
+        _items = new ManufactureItem[count];
         for (int i = 0; i < count; i++) {
             final int id = readInt();
             final long cost = readLong();
@@ -43,7 +43,7 @@ public final class RequestRecipeShopListSet extends ClientPacket {
                 _items = null;
                 throw new InvalidDataPacketException();
             }
-            _items[i] = new L2ManufactureItem(id, cost);
+            _items[i] = new ManufactureItem(id, cost);
         }
     }
 
@@ -77,7 +77,7 @@ public final class RequestRecipeShopListSet extends ClientPacket {
 
         player.getManufactureItems().clear();
 
-        for (L2ManufactureItem i : _items) {
+        for (ManufactureItem i : _items) {
             final L2RecipeList list = RecipeData.getInstance().getRecipeList(i.getRecipeId());
             if (!dwarfRecipes.contains(list) && !commonRecipes.contains(list)) {
                 GameUtils.handleIllegalPlayerAction(player, "Warning!! Player " + player.getName() + " of account " + player.getAccountName() + " tried to set recipe which he dont have.", Config.DEFAULT_PUNISH);

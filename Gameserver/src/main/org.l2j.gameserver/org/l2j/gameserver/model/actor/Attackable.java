@@ -268,7 +268,7 @@ public class Attackable extends Npc {
     /**
      * Distribute Exp and SP rewards to Player (including Summon owner) that hit the Attackable and to their Party members.<br>
      * Actions:<br>
-     * Get the Player owner of the Servitor (if necessary) and L2Party in progress.<br>
+     * Get the Player owner of the Servitor (if necessary) and Party in progress.<br>
      * Calculate the Experience and SP rewards in function of the level difference.<br>
      * Add Exp and SP rewards to Player (including Summon penalty) and to Party members in the known area of the last attacker.<br>
      * Caution : This method DOESN'T GIVE rewards to Pet.
@@ -323,7 +323,7 @@ public class Attackable extends Npc {
                 final Player player = (maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker.getActingPlayer();
                 broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
                 final int raidbossPoints = (int) (getTemplate().getRaidPoints() * Config.RATE_RAIDBOSS_POINTS);
-                final L2Party party = player.getParty();
+                final Party party = player.getParty();
 
                 if (party != null) {
                     final CommandChannel command = party.getCommandChannel();
@@ -376,7 +376,7 @@ public class Attackable extends Npc {
                     final long damage = reward.getDamage();
 
                     // Get party
-                    final L2Party attackerParty = attacker.getParty();
+                    final Party attackerParty = attacker.getParty();
 
                     // Penalty applied to the attacker's XP
                     // If this attacker have servitor, get Exp Penalty applied for the servitor.
@@ -1084,10 +1084,10 @@ public class Attackable extends Npc {
     }
 
     /**
-     * Calculate the Experience and SP to distribute to attacker (Player, Servitor or L2Party) of the Attackable.
+     * Calculate the Experience and SP to distribute to attacker (Player, Servitor or Party) of the Attackable.
      *
      * @param charLevel   The killer level
-     * @param damage      The damages given by the attacker (Player, Servitor or L2Party)
+     * @param damage      The damages given by the attacker (Player, Servitor or Party)
      * @param totalDamage The total damage done
      * @return
      */

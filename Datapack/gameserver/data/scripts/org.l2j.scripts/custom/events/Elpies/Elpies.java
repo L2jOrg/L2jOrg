@@ -20,7 +20,7 @@ import events.ScriptEvent;
 import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.datatables.SpawnTable;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.EventMonster;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -137,7 +137,7 @@ public final class Elpies extends Event implements ScriptEvent
 			_eventTask = null;
 		}
 		
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(ELPY))
+		for (Spawn spawn : SpawnTable.getInstance().getSpawns(ELPY))
 		{
 			final Npc npc = spawn.getLastSpawn();
 			if (npc != null)

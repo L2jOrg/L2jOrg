@@ -24,10 +24,10 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 /**
  * @author littlecrow A special spawn implementation to spawn controllable mob
  */
-public class L2GroupSpawn extends L2Spawn {
+public class GroupSpawn extends Spawn {
     private final NpcTemplate _template;
 
-    public L2GroupSpawn(NpcTemplate mobTemplate) throws SecurityException, ClassNotFoundException, NoSuchMethodException {
+    public GroupSpawn(NpcTemplate mobTemplate) throws SecurityException, ClassNotFoundException, NoSuchMethodException {
         super(mobTemplate);
         _template = mobTemplate;
 

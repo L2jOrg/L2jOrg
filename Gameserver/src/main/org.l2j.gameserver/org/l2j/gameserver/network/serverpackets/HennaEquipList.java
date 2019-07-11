@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.xml.impl.HennaData;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.L2Henna;
+import org.l2j.gameserver.model.items.Henna;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -13,14 +13,14 @@ import java.util.List;
  */
 public class HennaEquipList extends ServerPacket {
     private final Player _player;
-    private final List<L2Henna> _hennaEquipList;
+    private final List<Henna> _hennaEquipList;
 
     public HennaEquipList(Player player) {
         _player = player;
         _hennaEquipList = HennaData.getInstance().getHennaList(player.getClassId());
     }
 
-    public HennaEquipList(Player player, List<L2Henna> list) {
+    public HennaEquipList(Player player, List<Henna> list) {
         _player = player;
         _hennaEquipList = list;
     }
@@ -32,7 +32,7 @@ public class HennaEquipList extends ServerPacket {
         writeInt(3); // available equip slot
         writeInt(_hennaEquipList.size());
 
-        for (L2Henna henna : _hennaEquipList) {
+        for (Henna henna : _hennaEquipList) {
             // Player must have at least one dye in inventory
             // to be able to see the Henna that can be applied with it.
             if ((_player.getInventory().getItemByItemId(henna.getDyeItemId())) != null) {

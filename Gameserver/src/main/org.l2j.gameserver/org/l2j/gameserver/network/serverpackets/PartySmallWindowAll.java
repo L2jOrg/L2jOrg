@@ -1,16 +1,16 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public final class PartySmallWindowAll extends ServerPacket {
-    private final L2Party _party;
+    private final Party _party;
     private final Player _exclude;
 
-    public PartySmallWindowAll(Player exclude, L2Party party) {
+    public PartySmallWindowAll(Player exclude, Party party) {
         _exclude = exclude;
         _party = party;
     }

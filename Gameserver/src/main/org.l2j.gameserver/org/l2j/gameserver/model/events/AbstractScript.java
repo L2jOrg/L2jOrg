@@ -12,7 +12,7 @@ import org.l2j.gameserver.enums.Movie;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -349,7 +349,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      */
     public static Npc addSpawn(Npc summoner, int npcId, int x, int y, int z, int heading, boolean randomOffset, long despawnDelay, boolean isSummonSpawn, int instance) {
         try {
-            final L2Spawn spawn = new L2Spawn(npcId);
+            final Spawn spawn = new Spawn(npcId);
 
             if ((x == 0) && (y == 0)) {
                 LOGGER.error("addSpawn(): invalid spawn coordinates for NPC #" + npcId + "!");

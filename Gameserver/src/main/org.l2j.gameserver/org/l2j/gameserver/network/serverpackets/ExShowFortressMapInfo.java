@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.model.FortSiegeSpawn;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -76,7 +76,7 @@ public class ExShowFortressMapInfo extends ServerPacket {
      */
     private boolean isSpawned(int npcId) {
         boolean ret = false;
-        for (L2Spawn spawn : _fortress.getSiege().getCommanders()) {
+        for (Spawn spawn : _fortress.getSiege().getCommanders()) {
             if (spawn.getId() == npcId) {
                 ret = true;
                 break;

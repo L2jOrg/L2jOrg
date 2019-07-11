@@ -4,7 +4,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 
@@ -60,7 +60,7 @@ public class RaidBoss extends Monster {
             return;
         }
 
-        final L2Spawn spawn = getSpawn();
+        final Spawn spawn = getSpawn();
         if (spawn == null) {
             return;
         }

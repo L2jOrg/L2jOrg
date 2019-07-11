@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.L2Henna;
+import org.l2j.gameserver.model.items.Henna;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -11,9 +11,9 @@ import org.l2j.gameserver.network.ServerPacketId;
  */
 public final class HennaItemRemoveInfo extends ServerPacket {
     private final Player _activeChar;
-    private final L2Henna _henna;
+    private final Henna _henna;
 
-    public HennaItemRemoveInfo(L2Henna henna, Player player) {
+    public HennaItemRemoveInfo(Henna henna, Player player) {
         _henna = henna;
         _activeChar = player;
     }

@@ -2,7 +2,7 @@ package org.l2j.authserver.network.client.packet.auth2client;
 
 import org.l2j.authserver.controller.GameServerManager;
 import org.l2j.authserver.network.client.AuthClient;
-import org.l2j.authserver.network.client.packet.L2LoginServerPacket;
+import org.l2j.authserver.network.client.packet.AuthServerPacket;
 import org.l2j.authserver.network.gameserver.packet.game2auth.ServerStatus;
 import org.l2j.authserver.settings.AuthServerSettings;
 
@@ -27,7 +27,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  *  Good when the number of online players is less than half the maximum.
  *  as Normal between half and 4/5 and Full when there's more than 4/5 of the maximum number of players
  */
-public final class ServerList extends L2LoginServerPacket {
+public final class ServerList extends AuthServerPacket {
 
     private final byte listType;
 

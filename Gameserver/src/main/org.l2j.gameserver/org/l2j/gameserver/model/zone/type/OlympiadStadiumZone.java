@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.zone.type;
 
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.TeleportWhereType;
@@ -27,7 +27,7 @@ import java.util.List;
  */
 public class OlympiadStadiumZone extends ZoneRespawn {
     private final List<Door> _doors = new ArrayList<>(2);
-    private final List<L2Spawn> _buffers = new ArrayList<>(2);
+    private final List<Spawn> _buffers = new ArrayList<>(2);
     private final List<Location> _spectatorLocations = new ArrayList<>(1);
 
     public OlympiadStadiumZone(int id) {
@@ -103,7 +103,7 @@ public class OlympiadStadiumZone extends ZoneRespawn {
         return _doors;
     }
 
-    public List<L2Spawn> getBuffers() {
+    public List<Spawn> getBuffers() {
         return _buffers;
     }
 

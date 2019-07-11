@@ -1,14 +1,12 @@
 package org.l2j.authserver.network.client.packet.auth2client;
 
 import org.l2j.authserver.network.client.AuthClient;
-import org.l2j.authserver.network.client.packet.L2LoginServerPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.authserver.network.client.packet.AuthServerPacket;
 
 /**
  * Format: dddddddd f: the session key d: ? d: ? d: ? d: ? d: ? d: ? b: 16 bytes - unknown
  */
-public final class LoginOk extends L2LoginServerPacket {
+public final class LoginOk extends AuthServerPacket {
 
 	@Override
 	protected void writeImpl(AuthClient client) {

@@ -1,7 +1,7 @@
 package org.l2j.authserver.network.client.packet.auth2client;
 
 import org.l2j.authserver.network.client.AuthClient;
-import org.l2j.authserver.network.client.packet.L2LoginServerPacket;
+import org.l2j.authserver.network.client.packet.AuthServerPacket;
 
 /**
  * Format: dd b dddd s
@@ -15,7 +15,7 @@ import org.l2j.authserver.network.client.packet.L2LoginServerPacket;
  * d: unknow
  * s: blowfish key
  */
-public final class Init extends L2LoginServerPacket {
+public final class Init extends AuthServerPacket {
 
     @Override
     protected void writeImpl(AuthClient client) {

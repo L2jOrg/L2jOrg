@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Tower;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -29,7 +29,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * Class for Control Tower instance.
  */
 public class ControlTower extends Tower {
-    private volatile Set<L2Spawn> _guards;
+    private volatile Set<Spawn> _guards;
 
     public ControlTower(NpcTemplate template) {
         super(template);
@@ -42,7 +42,7 @@ public class ControlTower extends Tower {
             getCastle().getSiege().killedCT(this);
 
             if ((_guards != null) && !_guards.isEmpty()) {
-                for (L2Spawn spawn : _guards) {
+                for (Spawn spawn : _guards) {
                     if (spawn == null) {
                         continue;
                     }
@@ -59,11 +59,11 @@ public class ControlTower extends Tower {
         return super.doDie(killer);
     }
 
-    public void registerGuard(L2Spawn guard) {
+    public void registerGuard(Spawn guard) {
         getGuards().add(guard);
     }
 
-    private Set<L2Spawn> getGuards() {
+    private Set<Spawn> getGuards() {
         if (_guards == null) {
             synchronized (this) {
                 if (_guards == null) {

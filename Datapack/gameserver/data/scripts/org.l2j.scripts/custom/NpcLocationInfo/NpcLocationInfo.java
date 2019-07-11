@@ -18,7 +18,7 @@ package custom.NpcLocationInfo;
 
 import ai.AbstractNpcAI;
 import org.l2j.gameserver.datatables.SpawnTable;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.GameUtils;
@@ -222,7 +222,7 @@ public class NpcLocationInfo extends AbstractNpcAI
 			if (NPCRADAR.contains(npcId))
 			{
 				int x = 0, y = 0, z = 0;
-				final L2Spawn spawn = SpawnTable.getInstance().getAnySpawn(npcId);
+				final Spawn spawn = SpawnTable.getInstance().getAnySpawn(npcId);
 				if (spawn != null)
 				{
 					x = spawn.getX();

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.L2Mentee;
+import org.l2j.gameserver.model.Mentee;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
@@ -25,15 +25,15 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnPlayerMenteeLeft implements IBaseEvent {
-    private final L2Mentee _mentor;
+    private final Mentee _mentor;
     private final Player _mentee;
 
-    public OnPlayerMenteeLeft(L2Mentee mentor, Player mentee) {
+    public OnPlayerMenteeLeft(Mentee mentor, Player mentee) {
         _mentor = mentor;
         _mentee = mentee;
     }
 
-    public L2Mentee getMentor() {
+    public Mentee getMentor() {
         return _mentor;
     }
 

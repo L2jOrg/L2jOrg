@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 
@@ -22,9 +22,9 @@ public final class RequestWithDrawalParty extends ClientPacket {
             return;
         }
 
-        final L2Party party = player.getParty();
+        final Party party = player.getParty();
         if (party != null) {
-            party.removePartyMember(player, L2Party.MessageType.LEFT);
+            party.removePartyMember(player, Party.MessageType.LEFT);
 
             final MatchingRoom room = player.getMatchingRoom();
             if (room != null) {

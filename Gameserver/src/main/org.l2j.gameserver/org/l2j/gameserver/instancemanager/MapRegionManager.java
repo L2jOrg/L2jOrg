@@ -1,7 +1,7 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
-import org.l2j.gameserver.model.L2MapRegion;
+import org.l2j.gameserver.model.MapRegion;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
@@ -38,7 +38,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public final class MapRegionManager extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(MapRegionManager.class);
 
-    private final Map<String, L2MapRegion> _regions = new HashMap<>();
+    private final Map<String, MapRegion> _regions = new HashMap<>();
     private final String defaultRespawn = "talking_island_town";
 
     private MapRegionManager() {
@@ -75,7 +75,7 @@ public final class MapRegionManager extends GameXmlReader {
                         locId = parseInteger(attrs, "locId");
                         bbs = parseInteger(attrs, "bbs");
 
-                        final L2MapRegion region = new L2MapRegion(name, town, locId, bbs);
+                        final MapRegion region = new MapRegion(name, town, locId, bbs);
                         for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling()) {
                             attrs = c.getAttributes();
                             if ("respawnPoint".equalsIgnoreCase(c.getNodeName())) {
@@ -109,8 +109,8 @@ public final class MapRegionManager extends GameXmlReader {
         }
     }
 
-    public final L2MapRegion getMapRegion(int locX, int locY) {
-        for (L2MapRegion region : _regions.values()) {
+    public final MapRegion getMapRegion(int locX, int locY) {
+        for (MapRegion region : _regions.values()) {
             if (region.isZoneInRegion(getMapRegionX(locX), getMapRegionY(locY))) {
                 return region;
             }
@@ -120,7 +120,7 @@ public final class MapRegionManager extends GameXmlReader {
 
 
     public final int getMapRegionLocId(int locX, int locY) {
-        final L2MapRegion region = getMapRegion(locX, locY);
+        final MapRegion region = getMapRegion(locX, locY);
         if (region != null) {
             return region.getLocId();
         }
@@ -131,7 +131,7 @@ public final class MapRegionManager extends GameXmlReader {
      * @param obj
      * @return
      */
-    public final L2MapRegion getMapRegion(WorldObject obj) {
+    public final MapRegion getMapRegion(WorldObject obj) {
         return getMapRegion(obj.getX(), obj.getY());
     }
 
@@ -166,7 +166,7 @@ public final class MapRegionManager extends GameXmlReader {
      * @return
      */
     public String getClosestTownName(Creature activeChar) {
-        final L2MapRegion region = getMapRegion(activeChar);
+        final MapRegion region = getMapRegion(activeChar);
         return region == null ? "Aden Castle Town" : region.getTown();
     }
 
@@ -314,10 +314,10 @@ public final class MapRegionManager extends GameXmlReader {
      * @param point
      * @return
      */
-    public L2MapRegion getRestartRegion(Creature activeChar, String point) {
+    public MapRegion getRestartRegion(Creature activeChar, String point) {
         try {
             final Player player = (Player) activeChar;
-            final L2MapRegion region = _regions.get(point);
+            final MapRegion region = _regions.get(point);
 
             if (region.getBannedRace().containsKey(player.getRace())) {
                 getRestartRegion(player, region.getBannedRace().get(player.getRace()));
@@ -332,12 +332,12 @@ public final class MapRegionManager extends GameXmlReader {
      * @param regionName the map region name.
      * @return if exists the map region identified by that name, null otherwise.
      */
-    public L2MapRegion getMapRegionByName(String regionName) {
+    public MapRegion getMapRegionByName(String regionName) {
         return _regions.get(regionName);
     }
 
     public int getBBs(ILocational loc) {
-        final L2MapRegion region = getMapRegion(loc.getX(), loc.getY());
+        final MapRegion region = getMapRegion(loc.getX(), loc.getY());
         return region != null ? region.getBbs() : _regions.get(defaultRespawn).getBbs();
     }
 

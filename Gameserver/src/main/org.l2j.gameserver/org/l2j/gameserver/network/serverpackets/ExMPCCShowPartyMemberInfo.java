@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -9,9 +9,9 @@ import org.l2j.gameserver.network.ServerPacketId;
  * @author chris_00
  */
 public class ExMPCCShowPartyMemberInfo extends ServerPacket {
-    private final L2Party _party;
+    private final Party _party;
 
-    public ExMPCCShowPartyMemberInfo(L2Party party) {
+    public ExMPCCShowPartyMemberInfo(Party party) {
         _party = party;
     }
 

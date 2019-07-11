@@ -858,7 +858,7 @@ public final class CharEffectList {
     public void updateEffectIcons(boolean partyOnly) {
         final Player player = _owner.getActingPlayer();
         if (player != null) {
-            final L2Party party = player.getParty();
+            final Party party = player.getParty();
             final Optional<AbnormalStatusUpdate> asu = (_owner.isPlayer() && !partyOnly) ? Optional.of(new AbnormalStatusUpdate()) : Optional.empty();
             final Optional<PartySpelled> ps = ((party != null) || _owner.isSummon()) ? Optional.of(new PartySpelled(_owner)) : Optional.empty();
             final Optional<ExOlympiadSpelledInfo> os = (player.isInOlympiadMode() && player.isOlympiadStart()) ? Optional.of(new ExOlympiadSpelledInfo(player)) : Optional.empty();

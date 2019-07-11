@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -15,11 +15,11 @@ import java.util.Map;
 public class PartyMemberPosition extends ServerPacket {
     private final Map<Integer, Location> locations = new HashMap<>();
 
-    public PartyMemberPosition(L2Party party) {
+    public PartyMemberPosition(Party party) {
         reuse(party);
     }
 
-    public void reuse(L2Party party) {
+    public void reuse(Party party) {
         locations.clear();
         for (Player member : party.getMembers()) {
             if (member == null) {

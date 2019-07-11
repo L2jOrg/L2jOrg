@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.CeremonyOfChaosResult;
 import org.l2j.gameserver.instancemanager.CeremonyOfChaosManager;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2j.gameserver.instancemanager.InstanceManager;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
@@ -134,9 +134,9 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember> {
             }
 
             // If player in party, leave it
-            final L2Party party = player.getParty();
+            final Party party = player.getParty();
             if (party != null) {
-                party.removePartyMember(player, L2Party.MessageType.EXPELLED);
+                party.removePartyMember(player, Party.MessageType.EXPELLED);
             }
 
             // Cancel any started action

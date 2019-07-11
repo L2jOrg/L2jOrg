@@ -28,7 +28,7 @@ import java.util.Map;
 /**
  * @author Nyaran
  */
-public class L2MapRegion {
+public class MapRegion {
     private final String _name;
     private final String _town;
     private final int _locId;
@@ -40,7 +40,7 @@ public class L2MapRegion {
     private List<Location> _chaoticSpawnLocs = null;
     private List<Location> _banishSpawnLocs = null;
 
-    public L2MapRegion(String name, String town, int locId, int bbs) {
+    public MapRegion(String name, String town, int locId, int bbs) {
         _name = name;
         _town = town;
         _locId = locId;

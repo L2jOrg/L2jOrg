@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -49,7 +49,7 @@ public final class CallTargetParty extends AbstractEffect
 			return;
 		}
 		
-		final L2Party party = player.getParty();
+		final Party party = player.getParty();
 		if (party != null)
 		{
 			party.getMembers().stream().filter(p -> (p != player) && CallPc.checkSummonTargetStatus(p, effector)).forEach(p -> p.teleToLocation(player.getLocation(), true));

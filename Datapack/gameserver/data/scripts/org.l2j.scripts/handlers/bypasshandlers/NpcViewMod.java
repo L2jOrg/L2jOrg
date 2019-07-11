@@ -24,7 +24,7 @@ import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.DropType;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
@@ -204,7 +204,7 @@ public class NpcViewMod implements IBypassHandler
 		html.replace("%hpGauge%", HtmlUtil.getHpGauge(250, (long) npc.getCurrentHp(), npc.getMaxHp(), false));
 		html.replace("%mpGauge%", HtmlUtil.getMpGauge(250, (long) npc.getCurrentMp(), npc.getMaxMp(), false));
 		
-		final L2Spawn npcSpawn = npc.getSpawn();
+		final Spawn npcSpawn = npc.getSpawn();
 		if ((npcSpawn == null) || (npcSpawn.getRespawnMinDelay() == 0))
 		{
 			html.replace("%respawn%", "None");

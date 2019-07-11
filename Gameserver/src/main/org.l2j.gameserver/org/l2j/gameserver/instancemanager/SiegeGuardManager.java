@@ -4,7 +4,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.data.xml.impl.CastleData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.enums.ItemLocation;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Defender;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -32,7 +32,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public final class SiegeGuardManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(SiegeGuardManager.class);
     private static final Set<Item> _droppedTickets = ConcurrentHashMap.newKeySet();
-    private static final Map<Integer, Set<L2Spawn>> _siegeGuardSpawn = new ConcurrentHashMap<>();
+    private static final Map<Integer, Set<Spawn>> _siegeGuardSpawn = new ConcurrentHashMap<>();
 
     private SiegeGuardManager() {
         _droppedTickets.clear();
@@ -222,7 +222,7 @@ public final class SiegeGuardManager {
 
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
-                    final L2Spawn spawn = new L2Spawn(rs.getInt("npcId"));
+                    final Spawn spawn = new Spawn(rs.getInt("npcId"));
                     spawn.setAmount(1);
                     spawn.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
                     spawn.setHeading(rs.getInt("heading"));
@@ -281,7 +281,7 @@ public final class SiegeGuardManager {
             final boolean isHired = (castle.getOwnerId() > 0);
             loadSiegeGuard(castle);
 
-            for (L2Spawn spawn : getSpawnedGuards(castle.getResidenceId())) {
+            for (Spawn spawn : getSpawnedGuards(castle.getResidenceId())) {
                 if (spawn != null) {
                     spawn.init();
                     if (isHired || (spawn.getRespawnDelay() == 0)) {
@@ -307,7 +307,7 @@ public final class SiegeGuardManager {
      * @param castle the castle instance
      */
     public void unspawnSiegeGuard(Castle castle) {
-        for (L2Spawn spawn : getSpawnedGuards(castle.getResidenceId())) {
+        for (Spawn spawn : getSpawnedGuards(castle.getResidenceId())) {
             if ((spawn != null) && (spawn.getLastSpawn() != null)) {
                 spawn.stopRespawn();
                 spawn.getLastSpawn().doDie(spawn.getLastSpawn());
@@ -316,7 +316,7 @@ public final class SiegeGuardManager {
         getSpawnedGuards(castle.getResidenceId()).clear();
     }
 
-    public Set<L2Spawn> getSpawnedGuards(int castleId) {
+    public Set<Spawn> getSpawnedGuards(int castleId) {
         return _siegeGuardSpawn.computeIfAbsent(castleId, key -> ConcurrentHashMap.newKeySet());
     }
 

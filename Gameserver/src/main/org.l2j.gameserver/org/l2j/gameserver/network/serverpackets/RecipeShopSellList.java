@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2ManufactureItem;
+import org.l2j.gameserver.model.ManufactureItem;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -26,7 +26,7 @@ public class RecipeShopSellList extends ServerPacket {
             writeInt(0x00);
         } else {
             writeInt(_manufacturer.getManufactureItems().size());
-            for (L2ManufactureItem temp : _manufacturer.getManufactureItems().values()) {
+            for (ManufactureItem temp : _manufacturer.getManufactureItems().values()) {
                 writeInt(temp.getRecipeId());
                 writeInt(0x00); // unknown
                 writeLong(temp.getCost());

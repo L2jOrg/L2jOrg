@@ -6,7 +6,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
-import org.l2j.gameserver.model.L2Party.MessageType;
+import org.l2j.gameserver.model.Party.MessageType;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;

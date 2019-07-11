@@ -21,7 +21,7 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -130,7 +130,7 @@ public class Event {
      */
     public static void spawnEventNpc(Player target) {
         try {
-            final L2Spawn spawn = new L2Spawn(_npcId);
+            final Spawn spawn = new Spawn(_npcId);
             spawn.setXYZ(target.getX() + 50, target.getY() + 50, target.getZ());
             spawn.setAmount(1);
             spawn.setHeading(target.getHeading());

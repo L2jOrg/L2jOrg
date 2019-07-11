@@ -403,7 +403,7 @@ public final class Player extends Playable {
     /**
      * Hennas
      */
-    private final L2Henna[] _henna = new L2Henna[3];
+    private final Henna[] _henna = new Henna[3];
     private final Map<BaseStats, Integer> _hennaBaseStats = new ConcurrentHashMap<>();
     private final Map<Integer, ScheduledFuture<?>> _hennaRemoveSchedules = new ConcurrentHashMap<>(3);
     // client radar
@@ -564,7 +564,7 @@ public final class Player extends Playable {
     private PrivateStoreType _privateStoreType = PrivateStoreType.NONE;
     private TradeList _activeTradeList;
     private ItemContainer _activeWarehouse;
-    private volatile Map<Integer, L2ManufactureItem> _manufactureItems;
+    private volatile Map<Integer, ManufactureItem> _manufactureItems;
 
     // Clan related attributes
     private String _storeName = "";
@@ -636,7 +636,7 @@ public final class Player extends Playable {
     private boolean _dietMode = false; // ignore weight penalty
     private boolean _tradeRefusal = false; // Trade refusal
     private boolean _exchangeRefusal = false; // Exchange refusal
-    private L2Party _party;
+    private Party _party;
     // this is needed to find the inviting player for Party response
     // there can only be one active party request at once
     private Player _activeRequester;
@@ -1069,7 +1069,7 @@ public final class Player extends Playable {
 
     public int getRelation(Player target) {
         final Clan clan = getClan();
-        final L2Party party = getParty();
+        final Party party = getParty();
         final Clan targetClan = target.getClan();
 
         int result = 0;
@@ -2156,7 +2156,7 @@ public final class Player extends Playable {
             // Remove class permitted hennas.
             for (int slot = 1; slot < 4; slot++)
             {
-                final L2Henna henna = getHenna(slot);
+                final Henna henna = getHenna(slot);
                 if ((henna != null) && !henna.isAllowedClass(getClassId()))
                 {
                     removeHenna(slot);
@@ -4905,7 +4905,7 @@ public final class Player extends Playable {
      *
      * @return the the manufacture items map
      */
-    public Map<Integer, L2ManufactureItem> getManufactureItems() {
+    public Map<Integer, ManufactureItem> getManufactureItems() {
         if (_manufactureItems == null) {
             synchronized (this) {
                 if (_manufactureItems == null) {
@@ -5338,7 +5338,7 @@ public final class Player extends Playable {
      *
      * @param party
      */
-    public void joinParty(L2Party party) {
+    public void joinParty(Party party) {
         if (party != null) {
             // First set the party otherwise this wouldn't be considered
             // as in a party into the Creature.updateEffectIcons() call.
@@ -5352,7 +5352,7 @@ public final class Player extends Playable {
      */
     public void leaveParty() {
         if (isInParty()) {
-            _party.removePartyMember(this, L2Party.MessageType.DISCONNECTED);
+            _party.removePartyMember(this, Party.MessageType.DISCONNECTED);
             _party = null;
         }
     }
@@ -5361,7 +5361,7 @@ public final class Player extends Playable {
      * Return the _party object of the Player.
      */
     @Override
-    public L2Party getParty() {
+    public Party getParty() {
         return _party;
     }
 
@@ -5370,7 +5370,7 @@ public final class Player extends Playable {
      *
      * @param party
      */
-    public void setParty(L2Party party) {
+    public void setParty(Party party) {
         _party = party;
     }
 
@@ -6375,7 +6375,7 @@ public final class Player extends Playable {
                         continue;
                     }
 
-                    final L2Henna henna = HennaData.getInstance().getHenna(symbolId);
+                    final Henna henna = HennaData.getInstance().getHenna(symbolId);
 
                     // Task for henna duration
                     if (henna.getDuration() > 0) {
@@ -6439,7 +6439,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        final L2Henna henna = _henna[slot - 1];
+        final Henna henna = _henna[slot - 1];
         if (henna == null) {
             return false;
         }
@@ -6508,7 +6508,7 @@ public final class Player extends Playable {
      * @param henna the henna to add to the player.
      * @return {@code true} if the henna is added to the player, {@code false} otherwise.
      */
-    public boolean addHenna(L2Henna henna) {
+    public boolean addHenna(Henna henna) {
         for (int i = 1; i < 4; i++) {
             if (_henna[i - 1] == null) {
                 _henna[i - 1] = henna;
@@ -6559,7 +6559,7 @@ public final class Player extends Playable {
      */
     private void recalcHennaStats() {
         _hennaBaseStats.clear();
-        for (L2Henna henna : _henna) {
+        for (Henna henna : _henna) {
             if (henna == null) {
                 continue;
             }
@@ -6574,7 +6574,7 @@ public final class Player extends Playable {
      * @param slot the character inventory henna slot.
      * @return the Henna of this Player corresponding to the selected slot.
      */
-    public L2Henna getHenna(int slot) {
+    public Henna getHenna(int slot) {
         if ((slot < 1) || (slot > 3)) {
             return null;
         }
@@ -6585,7 +6585,7 @@ public final class Player extends Playable {
      * @return {@code true} if player has at least 1 henna symbol, {@code false} otherwise.
      */
     public boolean hasHennas() {
-        for (L2Henna henna : _henna) {
+        for (Henna henna : _henna) {
             if (henna != null) {
                 return true;
             }
@@ -6596,7 +6596,7 @@ public final class Player extends Playable {
     /**
      * @return the henna holder for this player.
      */
-    public L2Henna[] getHennaList() {
+    public Henna[] getHennaList() {
         return _henna;
     }
 
@@ -7432,7 +7432,7 @@ public final class Player extends Playable {
         }
 
         if (_party != null) {
-            _party.removePartyMember(this, L2Party.MessageType.EXPELLED);
+            _party.removePartyMember(this, Party.MessageType.EXPELLED);
         }
 
         _olympiadGameId = id;
@@ -10155,7 +10155,7 @@ public final class Player extends Playable {
                 try (PreparedStatement st = con.prepareStatement(INSERT_CHAR_RECIPE_SHOP)) {
                     final AtomicInteger slot = new AtomicInteger(1);
                     con.setAutoCommit(false);
-                    for (L2ManufactureItem item : _manufactureItems.values()) {
+                    for (ManufactureItem item : _manufactureItems.values()) {
                         st.setInt(1, getObjectId());
                         st.setInt(2, item.getRecipeId());
                         st.setLong(3, item.getCost());
@@ -10181,7 +10181,7 @@ public final class Player extends Playable {
             statement.setInt(1, getObjectId());
             try (ResultSet rset = statement.executeQuery()) {
                 while (rset.next()) {
-                    getManufactureItems().put(rset.getInt("recipeId"), new L2ManufactureItem(rset.getInt("recipeId"), rset.getLong("price")));
+                    getManufactureItems().put(rset.getInt("recipeId"), new ManufactureItem(rset.getInt("recipeId"), rset.getLong("price")));
                 }
             }
         } catch (Exception e) {

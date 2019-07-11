@@ -18,7 +18,7 @@ package handlers.targethandlers;
 
 import org.l2j.gameserver.handler.ITargetTypeHandler;
 import org.l2j.gameserver.instancemanager.MentorManager;
-import org.l2j.gameserver.model.L2Mentee;
+import org.l2j.gameserver.model.Mentee;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
@@ -41,7 +41,7 @@ public class MyMentor implements ITargetTypeHandler
 	{
 		if (activeChar.isPlayer())
 		{
-			final L2Mentee mentor = MentorManager.getInstance().getMentor(activeChar.getObjectId());
+			final Mentee mentor = MentorManager.getInstance().getMentor(activeChar.getObjectId());
 			if (mentor != null)
 			{
 				return mentor.getPlayerInstance();

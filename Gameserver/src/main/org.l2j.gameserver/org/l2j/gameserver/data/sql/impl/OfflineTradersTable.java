@@ -4,7 +4,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.instancemanager.PlayerCountManager;
-import org.l2j.gameserver.model.L2ManufactureItem;
+import org.l2j.gameserver.model.ManufactureItem;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -101,7 +101,7 @@ public class OfflineTradersTable {
                                 if (firstCall) {
                                     title = trader.getStoreName();
                                 }
-                                for (L2ManufactureItem i : trader.getManufactureItems().values()) {
+                                for (ManufactureItem i : trader.getManufactureItems().values()) {
                                     stm3.setInt(1, trader.getObjectId());
                                     stm3.setInt(2, i.getRecipeId());
                                     stm3.setLong(3, 0);
@@ -216,7 +216,7 @@ public class OfflineTradersTable {
                                     continue;
                                 }
                                 title = pc.getStoreName();
-                                for (L2ManufactureItem i : pc.getManufactureItems().values()) {
+                                for (ManufactureItem i : pc.getManufactureItems().values()) {
                                     stm_items.setInt(1, pc.getObjectId());
                                     stm_items.setInt(2, i.getRecipeId());
                                     stm_items.setLong(3, 0);
@@ -328,7 +328,7 @@ public class OfflineTradersTable {
                                 }
                                 case MANUFACTURE: {
                                     while (items.next()) {
-                                        player.getManufactureItems().put(items.getInt(2), new L2ManufactureItem(items.getInt(2), items.getLong(4)));
+                                        player.getManufactureItems().put(items.getInt(2), new ManufactureItem(items.getInt(2), items.getLong(4)));
                                     }
                                     player.setStoreName(rs.getString("title"));
                                     break;

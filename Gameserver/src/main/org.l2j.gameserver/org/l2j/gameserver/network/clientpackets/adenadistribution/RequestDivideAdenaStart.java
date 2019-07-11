@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.adenadistribution;
 
 import org.l2j.gameserver.model.CommandChannel;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.AdenaDistributionRequest;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -26,7 +26,7 @@ public class RequestDivideAdenaStart extends ClientPacket {
             return;
         }
 
-        final L2Party party = player.getParty();
+        final Party party = player.getParty();
 
         if (party == null) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_YOU_ARE_NOT_IN_AN_ALLIANCE_OR_PARTY);

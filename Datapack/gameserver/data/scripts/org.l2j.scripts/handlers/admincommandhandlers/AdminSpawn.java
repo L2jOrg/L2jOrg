@@ -25,8 +25,8 @@ import org.l2j.gameserver.instancemanager.DBSpawnManager;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -235,7 +235,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				{
 					final Npc target = (Npc) obj;
 					target.deleteMe();
-					final L2Spawn spawn = target.getSpawn();
+					final Spawn spawn = target.getSpawn();
 					if (spawn != null)
 					{
 						spawn.stopRespawn();
@@ -270,7 +270,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				{
 					final Npc target = (Npc) obj;
 					target.deleteMe();
-					final L2Spawn spawn = target.getSpawn();
+					final Spawn spawn = target.getSpawn();
 					if (spawn != null)
 					{
 						spawn.stopRespawn();
@@ -436,7 +436,7 @@ public class AdminSpawn implements IAdminCommandHandler
 	private void findNPCInstances(Player activeChar, int npcId, int teleportIndex, boolean showposition)
 	{
 		int index = 0;
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
+		for (Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
 		{
 			index++;
 			final Npc npc = spawn.getLastSpawn();
@@ -523,7 +523,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		
 		try
 		{
-			final L2Spawn spawn = new L2Spawn(template1);
+			final Spawn spawn = new Spawn(template1);
 			spawn.setXYZ(target);
 			spawn.setAmount(mobCount);
 			spawn.setHeading(activeChar.getHeading());
@@ -563,7 +563,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		
 		try
 		{
-			final L2Spawn spawn = new L2Spawn(template1);
+			final Spawn spawn = new Spawn(template1);
 			spawn.setXYZ(x, y, z);
 			spawn.setAmount(1);
 			spawn.setHeading(h);

@@ -5,7 +5,7 @@ import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2j.gameserver.enums.UserInfoType;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -415,7 +415,7 @@ public class PcStat extends PlayableStat {
         final Player player = getActiveChar();
         player.sendPacket(new ExVitalityPointInfo(getVitalityPoints()));
         player.broadcastUserInfo(UserInfoType.VITA_FAME);
-        final L2Party party = player.getParty();
+        final Party party = player.getParty();
         if (party != null) {
             final PartySmallWindowUpdate partyWindow = new PartySmallWindowUpdate(player, false);
             partyWindow.addComponentType(PartySmallWindowUpdateType.VITALITY_POINTS);

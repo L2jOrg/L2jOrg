@@ -8,7 +8,7 @@ import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.instancemanager.HandysBlockCheckerManager;
 import org.l2j.gameserver.model.ArenaParticipantsHolder;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Block;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -90,7 +90,7 @@ public final class BlockCheckerEngine {
     // Current used arena
     protected int _arena = -1;
     // All blocks
-    protected Set<L2Spawn> _spawns = ConcurrentHashMap.newKeySet();
+    protected Set<Spawn> _spawns = ConcurrentHashMap.newKeySet();
     // Sets if the red team won the event at the end of this (used for packets)
     protected boolean _isRedWinner;
     // Time when the event starts. Used on packet sending
@@ -419,7 +419,7 @@ public final class BlockCheckerEngine {
             try {
                 // Creates 50 new blocks
                 for (int i = 0; i < _numOfBoxes; i++) {
-                    final L2Spawn spawn = new L2Spawn(template);
+                    final Spawn spawn = new Spawn(template);
                     spawn.setXYZ(_arenaCoordinates[_arena][4] + Rnd.get(-400, 400), _arenaCoordinates[_arena][5] + Rnd.get(-400, 400), _zCoord);
                     spawn.setAmount(1);
                     spawn.setHeading(1);
@@ -445,7 +445,7 @@ public final class BlockCheckerEngine {
             // Spawn the block carrying girl
             if ((_round == 1) || (_round == 2)) {
                 try {
-                    final L2Spawn girlSpawn = new L2Spawn(18676);
+                    final Spawn girlSpawn = new Spawn(18676);
                     girlSpawn.setXYZ(_arenaCoordinates[_arena][4] + Rnd.get(-400, 400), _arenaCoordinates[_arena][5] + Rnd.get(-400, 400), _zCoord);
                     girlSpawn.setAmount(1);
                     girlSpawn.setHeading(1);
@@ -470,9 +470,9 @@ public final class BlockCheckerEngine {
     }
 
     private class CarryingGirlUnspawn implements Runnable {
-        private final L2Spawn _spawn;
+        private final Spawn _spawn;
 
-        protected CarryingGirlUnspawn(L2Spawn spawn) {
+        protected CarryingGirlUnspawn(Spawn spawn) {
             _spawn = spawn;
         }
 
@@ -505,7 +505,7 @@ public final class BlockCheckerEngine {
             _redTeamPoints.clear();
             HandysBlockCheckerManager.getInstance().setArenaFree(_arena);
 
-            for (L2Spawn spawn : _spawns) {
+            for (Spawn spawn : _spawns) {
                 spawn.stopRespawn();
                 spawn.getLastSpawn().deleteMe();
                 SpawnTable.getInstance().deleteSpawn(spawn, false);

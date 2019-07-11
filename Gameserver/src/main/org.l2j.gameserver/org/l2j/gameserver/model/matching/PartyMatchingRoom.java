@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.MatchingRoomType;
 import org.l2j.gameserver.enums.PartyMatchingRoomLevelType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -109,8 +109,8 @@ public final class PartyMatchingRoom extends MatchingRoom {
             return MatchingMemberType.PARTY_LEADER;
         }
 
-        final L2Party leaderParty = getLeader().getParty();
-        final L2Party playerParty = player.getParty();
+        final Party leaderParty = getLeader().getParty();
+        final Party playerParty = player.getParty();
         if ((leaderParty != null) && (playerParty != null) && (playerParty == leaderParty)) {
             return MatchingMemberType.PARTY_MEMBER;
         }

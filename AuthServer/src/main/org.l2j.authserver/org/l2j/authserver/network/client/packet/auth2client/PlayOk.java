@@ -1,11 +1,9 @@
 package org.l2j.authserver.network.client.packet.auth2client;
 
 import org.l2j.authserver.network.client.AuthClient;
-import org.l2j.authserver.network.client.packet.L2LoginServerPacket;
+import org.l2j.authserver.network.client.packet.AuthServerPacket;
 
-import java.nio.ByteBuffer;
-
-public final class PlayOk extends L2LoginServerPacket {
+public final class PlayOk extends AuthServerPacket {
     private final int serverId;
 
     public PlayOk(int serverId) {

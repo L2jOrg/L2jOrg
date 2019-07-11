@@ -5,7 +5,7 @@ import org.l2j.commons.network.SessionKey;
 import org.l2j.authserver.controller.AuthController;
 import org.l2j.authserver.network.crypt.AuthCrypt;
 import org.l2j.authserver.network.crypt.ScrambledKeyPair;
-import org.l2j.authserver.network.client.packet.L2LoginServerPacket;
+import org.l2j.authserver.network.client.packet.AuthServerPacket;
 import org.l2j.authserver.network.client.packet.auth2client.AccountKicked;
 import org.l2j.authserver.network.client.packet.auth2client.Init;
 import org.l2j.authserver.network.client.packet.auth2client.LoginFail;
@@ -85,7 +85,7 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
         return encryptedSize;
     }
 
-	public void sendPacket(L2LoginServerPacket lsp) {
+	public void sendPacket(AuthServerPacket lsp) {
 	    writePacket(lsp);
 	}
 

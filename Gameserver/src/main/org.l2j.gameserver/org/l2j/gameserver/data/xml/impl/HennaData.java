@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.items.L2Henna;
+import org.l2j.gameserver.model.items.Henna;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -33,7 +33,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public final class HennaData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(HennaData.class);
 
-    private final Map<Integer, L2Henna> _hennaList = new HashMap<>();
+    private final Map<Integer, Henna> _hennaList = new HashMap<>();
 
     private HennaData() {
         load();
@@ -120,7 +120,7 @@ public final class HennaData extends GameXmlReader {
                 }
             }
         }
-        final L2Henna henna = new L2Henna(set);
+        final Henna henna = new Henna(set);
         henna.setSkills(skills);
         henna.setWearClassIds(wearClassIds);
         _hennaList.put(henna.getDyeId(), henna);
@@ -132,7 +132,7 @@ public final class HennaData extends GameXmlReader {
      * @param id of the dye.
      * @return the dye with that id.
      */
-    public L2Henna getHenna(int id) {
+    public Henna getHenna(int id) {
         return _hennaList.get(id);
     }
 
@@ -142,9 +142,9 @@ public final class HennaData extends GameXmlReader {
      * @param classId the player's class Id.
      * @return the list with all the allowed dyes.
      */
-    public List<L2Henna> getHennaList(ClassId classId) {
-        final List<L2Henna> list = new ArrayList<>();
-        for (L2Henna henna : _hennaList.values()) {
+    public List<Henna> getHennaList(ClassId classId) {
+        final List<Henna> list = new ArrayList<>();
+        for (Henna henna : _hennaList.values()) {
             if (henna.isAllowedClass(classId)) {
                 list.add(henna);
             }

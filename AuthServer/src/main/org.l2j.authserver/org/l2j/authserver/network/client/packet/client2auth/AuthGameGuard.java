@@ -1,6 +1,6 @@
 package org.l2j.authserver.network.client.packet.client2auth;
 
-import org.l2j.authserver.network.client.packet.L2LoginClientPacket;
+import org.l2j.authserver.network.client.packet.AuthClientPacket;
 import org.l2j.authserver.network.client.packet.auth2client.GGAuth;
 import org.l2j.authserver.network.client.packet.auth2client.LoginFail.LoginFailReason;
 
@@ -11,7 +11,7 @@ import static org.l2j.authserver.network.client.AuthClientState.AUTHED_GG;
 /**
  * @author -Wooden- Format: ddddd
  */
-public class AuthGameGuard extends L2LoginClientPacket {
+public class AuthGameGuard extends AuthClientPacket {
 
     private int _sessionId;
 

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -67,7 +67,7 @@ public final class RequestDuelStart extends ClientPacket {
         // Duel is a party duel
         if (_partyDuel == 1) {
             // Player must be in a party & the party leader
-            final L2Party party = activeChar.getParty();
+            final Party party = activeChar.getParty();
             if ((party == null) || !party.isLeader(activeChar)) {
                 activeChar.sendMessage("You have to be the leader of a party in order to request a party duel.");
                 return;

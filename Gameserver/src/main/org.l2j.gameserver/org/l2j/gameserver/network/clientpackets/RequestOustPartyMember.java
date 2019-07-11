@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.L2Party.MessageType;
+import org.l2j.gameserver.model.Party.MessageType;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 /**

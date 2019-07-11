@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.Team;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -47,10 +47,10 @@ public class EffectPoint extends Npc {
     }
 
     /**
-     * Return the L2Party object of its Player owner or null.
+     * Return the Party object of its Player owner or null.
      */
     @Override
-    public L2Party getParty() {
+    public Party getParty() {
         if (_owner == null) {
             return null;
         }

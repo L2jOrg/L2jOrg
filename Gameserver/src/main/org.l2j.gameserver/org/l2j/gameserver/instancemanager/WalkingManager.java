@@ -5,7 +5,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.tasks.StartMovingTask;
-import org.l2j.gameserver.model.L2NpcWalkerNode;
+import org.l2j.gameserver.model.NpcWalkerNode;
 import org.l2j.gameserver.model.L2WalkRoute;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WalkInfo;
@@ -102,7 +102,7 @@ public final class WalkingManager extends GameXmlReader {
                     }
                 }
 
-                final List<L2NpcWalkerNode> list = new ArrayList<>();
+                final List<NpcWalkerNode> list = new ArrayList<>();
                 for (Node r = d.getFirstChild(); r != null; r = r.getNextSibling()) {
                     if (r.getNodeName().equals("point")) {
                         final NamedNodeMap attrs = r.getAttributes();
@@ -136,7 +136,7 @@ public final class WalkingManager extends GameXmlReader {
                                 }
                             }
                         }
-                        list.add(new L2NpcWalkerNode(x, y, z, delay, run, npcString, chatString));
+                        list.add(new NpcWalkerNode(x, y, z, delay, run, npcString, chatString));
                     } else if (r.getNodeName().equals("target")) {
                         final NamedNodeMap attrs = r.getAttributes();
                         try {
@@ -222,7 +222,7 @@ public final class WalkingManager extends GameXmlReader {
                 // only if not already moved / not engaged in battle... should not happens if called on spawn
                 if ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE) || (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)) {
                     final WalkInfo walk = new WalkInfo(routeName);
-                    L2NpcWalkerNode node = walk.getCurrentNode();
+                    NpcWalkerNode node = walk.getCurrentNode();
 
                     // adjust next waypoint, if NPC spawns at first waypoint
                     if ((npc.getX() == node.getX()) && (npc.getY() == node.getY())) {
@@ -262,7 +262,7 @@ public final class WalkingManager extends GameXmlReader {
                     }
 
                     walk.setBlocked(true);
-                    final L2NpcWalkerNode node = walk.getCurrentNode();
+                    final NpcWalkerNode node = walk.getCurrentNode();
                     if (node.runToLocation()) {
                         npc.setRunning();
                     } else {
@@ -349,7 +349,7 @@ public final class WalkingManager extends GameXmlReader {
 
             // Opposite should not happen... but happens sometime
             if ((walk.getCurrentNodeId() >= 0) && (walk.getCurrentNodeId() < walk.getRoute().getNodesCount())) {
-                final L2NpcWalkerNode node = walk.getRoute().getNodeList().get(walk.getCurrentNodeId());
+                final NpcWalkerNode node = walk.getRoute().getNodeList().get(walk.getCurrentNodeId());
                 if (npc.isInsideRadius2D(node, 10)) {
                     walk.calculateNextNode(npc);
                     walk.setBlocked(true); // prevents to be ran from walk check task, if there is delay in this node.

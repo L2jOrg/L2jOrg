@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.L2Henna;
+import org.l2j.gameserver.model.items.Henna;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.slf4j.Logger;
@@ -32,7 +32,7 @@ public final class RequestHennaRemove extends ClientPacket {
             return;
         }
 
-        L2Henna henna;
+        Henna henna;
         boolean found = false;
         for (int i = 1; i <= 3; i++) {
             henna = activeChar.getHenna(i);

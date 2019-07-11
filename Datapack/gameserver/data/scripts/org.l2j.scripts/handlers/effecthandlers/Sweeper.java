@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import java.util.Collection;
 
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -69,7 +69,7 @@ public final class Sweeper extends AbstractEffect
 		{
 			for (ItemHolder sweepedItem : items)
 			{
-				final L2Party party = player.getParty();
+				final Party party = player.getParty();
 				if (party != null)
 				{
 					party.distributeItem(player, sweepedItem, true, monster);

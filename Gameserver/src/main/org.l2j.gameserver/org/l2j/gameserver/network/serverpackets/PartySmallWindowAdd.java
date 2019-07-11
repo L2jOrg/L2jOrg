@@ -1,15 +1,15 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public final class PartySmallWindowAdd extends ServerPacket {
     private final Player _member;
-    private final L2Party _party;
+    private final Party _party;
 
-    public PartySmallWindowAdd(Player member, L2Party party) {
+    public PartySmallWindowAdd(Player member, Party party) {
         _member = member;
         _party = party;
     }

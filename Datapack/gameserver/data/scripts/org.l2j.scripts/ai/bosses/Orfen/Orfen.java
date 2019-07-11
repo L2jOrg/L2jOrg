@@ -22,7 +22,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
@@ -143,7 +143,7 @@ public final class Orfen extends AbstractNpcAI
 	{
 		((Attackable) npc).clearAggroList();
 		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null, null);
-		final L2Spawn spawn = npc.getSpawn();
+		final Spawn spawn = npc.getSpawn();
 		spawn.setLocation(POS[index]);
 		npc.teleToLocation(POS[index], false);
 	}

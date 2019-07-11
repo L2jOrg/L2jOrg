@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
@@ -59,7 +59,7 @@ public final class RebalanceHP extends AbstractEffect
 		
 		double fullHP = 0;
 		double currentHPs = 0;
-		final L2Party party = effector.getParty();
+		final Party party = effector.getParty();
 		if (party != null)
 		{
 			for (Player member : party.getMembers())

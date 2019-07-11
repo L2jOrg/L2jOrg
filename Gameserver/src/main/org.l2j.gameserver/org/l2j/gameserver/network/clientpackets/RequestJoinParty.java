@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.model.BlockList;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.PartyRequest;
@@ -134,7 +134,7 @@ public final class RequestJoinParty extends ClientPacket {
      * @param requestor
      */
     private void addTargetToParty(Player target, Player requestor) {
-        final L2Party party = requestor.getParty();
+        final Party party = requestor.getParty();
 
         // summary of ppl already in party and ppl that get invitation
         if (!party.isLeader(requestor)) {
@@ -168,7 +168,7 @@ public final class RequestJoinParty extends ClientPacket {
         }
 
         if (!target.hasRequest(PartyRequest.class)) {
-            final L2Party party = new L2Party(requestor, partyDistributionType);
+            final Party party = new Party(requestor, partyDistributionType);
             party.setPendingInvitation(true);
             final PartyRequest request = new PartyRequest(requestor, target, party);
             request.scheduleTimeout(30 * 1000);

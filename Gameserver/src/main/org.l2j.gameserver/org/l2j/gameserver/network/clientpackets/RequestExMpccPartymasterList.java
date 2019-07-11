@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.enums.MatchingRoomType;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.serverpackets.ExMPCCPartymasterList;
@@ -28,7 +28,7 @@ public class RequestExMpccPartymasterList extends ClientPacket {
 
         final MatchingRoom room = activeChar.getMatchingRoom();
         if ((room != null) && (room.getRoomType() == MatchingRoomType.COMMAND_CHANNEL)) {
-            final Set<String> leadersName = room.getMembers().stream().map(Player::getParty).filter(Objects::nonNull).map(L2Party::getLeader).map(Player::getName).collect(Collectors.toSet());
+            final Set<String> leadersName = room.getMembers().stream().map(Player::getParty).filter(Objects::nonNull).map(Party::getLeader).map(Player::getName).collect(Collectors.toSet());
             activeChar.sendPacket(new ExMPCCPartymasterList(leadersName));
         }
     }

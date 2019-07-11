@@ -1,14 +1,12 @@
 package org.l2j.authserver.network.client.packet.auth2client;
 
 import org.l2j.authserver.network.client.AuthClient;
-import org.l2j.authserver.network.client.packet.L2LoginServerPacket;
-
-import java.nio.ByteBuffer;
+import org.l2j.authserver.network.client.packet.AuthServerPacket;
 
 /**
  * @author KenM
  */
-public final class AccountKicked extends L2LoginServerPacket {
+public final class AccountKicked extends AuthServerPacket {
 
 	
 	private final AccountKickedReason _reason;

@@ -1,9 +1,9 @@
 package org.l2j.authserver.network.client.packet.auth2client;
 
 import org.l2j.authserver.network.client.AuthClient;
-import org.l2j.authserver.network.client.packet.L2LoginServerPacket;
+import org.l2j.authserver.network.client.packet.AuthServerPacket;
 
-public final class PlayFail extends L2LoginServerPacket {
+public final class PlayFail extends AuthServerPacket {
 
 	private final PlayFailReason _reason;
 	

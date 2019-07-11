@@ -6,7 +6,7 @@ import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.ChanceLocation;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -275,7 +275,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
      * @throws SecurityException
      */
     private void spawnNpc(NpcTemplate npcTemplate, Instance instance) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException {
-        final L2Spawn spawn = new L2Spawn(npcTemplate);
+        final Spawn spawn = new Spawn(npcTemplate);
         final Location loc = getSpawnLocation();
         if (loc == null) {
             LOGGER.warn("Couldn't initialize new spawn, no location found!");

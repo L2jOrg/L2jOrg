@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.olympiad;
 
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.network.NpcStringId;
 
@@ -29,7 +29,7 @@ import java.util.Set;
  */
 public final class OlympiadAnnouncer implements Runnable {
     private static final int OLY_MANAGER = 31688;
-    private final Set<L2Spawn> _managers;
+    private final Set<Spawn> _managers;
     private int _currentStadium = 0;
 
     public OlympiadAnnouncer() {
@@ -62,7 +62,7 @@ public final class OlympiadAnnouncer implements Runnable {
                     }
                 }
 
-                for (L2Spawn spawn : _managers) {
+                for (Spawn spawn : _managers) {
                     final Npc manager = spawn.getLastSpawn();
                     if (manager != null) {
                         manager.broadcastSay(ChatType.NPC_SHOUT, npcString, arenaId);

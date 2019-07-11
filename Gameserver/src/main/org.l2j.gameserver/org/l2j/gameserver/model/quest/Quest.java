@@ -12,8 +12,8 @@ import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.enums.TrapAction;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.KeyValuePair;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
@@ -2127,7 +2127,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
         if (player == null) {
             return null;
         }
-        final L2Party party = player.getParty();
+        final Party party = player.getParty();
         if ((party == null) || (party.getMembers().isEmpty())) {
             return player;
         }
@@ -2170,7 +2170,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
 
         // normal cases...if the player is not in a party, check the player's state
         QuestState temp = null;
-        final L2Party party = player.getParty();
+        final Party party = player.getParty();
         // if this player is not in a party, just check if this player instance matches the conditions itself
         if ((party == null) || (party.getMembers().isEmpty())) {
             temp = player.getQuestState(getName());
@@ -2222,7 +2222,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
 
         // normal cases...if the player is not in a party check the player's state
         QuestState temp = null;
-        final L2Party party = player.getParty();
+        final Party party = player.getParty();
         // if this player is not in a party, just check if this player instance matches the conditions itself
         if ((party == null) || (party.getMembers().isEmpty())) {
             temp = player.getQuestState(getName());
@@ -2275,7 +2275,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
         if ((player == null) || !checkDistanceToTarget(player, npc)) {
             return null;
         }
-        final L2Party party = player.getParty();
+        final Party party = player.getParty();
         Player luckyPlayer = null;
         if (party == null) {
             if (checkPartyMember(player, npc)) {

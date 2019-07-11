@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Monster;
@@ -85,7 +85,7 @@ public final class Harvesting extends AbstractEffect
 					player.sendPacket(sm);
 					
 					// Send msg to party
-					final L2Party party = player.getParty();
+					final Party party = player.getParty();
 					if (party != null)
 					{
 						if (item.getCount() == 1)

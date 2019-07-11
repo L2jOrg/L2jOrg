@@ -7,7 +7,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
 import org.l2j.gameserver.datatables.SpawnTable;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -36,7 +36,7 @@ public class DBSpawnManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(DBSpawnManager.class);
 
     protected final Map<Integer, Npc> _npcs = new ConcurrentHashMap<>();
-    protected final Map<Integer, L2Spawn> _spawns = new ConcurrentHashMap<>();
+    protected final Map<Integer, Spawn> _spawns = new ConcurrentHashMap<>();
     protected final Map<Integer, StatsSet> _storedInfo = new ConcurrentHashMap<>();
     protected final Map<Integer, ScheduledFuture<?>> _schedules = new ConcurrentHashMap<>();
 
@@ -63,7 +63,7 @@ public class DBSpawnManager {
             while (rset.next()) {
                 final NpcTemplate template = getValidTemplate(rset.getInt("id"));
                 if (template != null) {
-                    final L2Spawn spawn = new L2Spawn(template);
+                    final Spawn spawn = new Spawn(template);
                     spawn.setXYZ(rset.getInt("x"), rset.getInt("y"), rset.getInt("z"));
                     spawn.setAmount(1);
                     spawn.setHeading(rset.getInt("heading"));
@@ -181,7 +181,7 @@ public class DBSpawnManager {
      * @param currentMP   the current mp
      * @param storeInDb   the store in db
      */
-    public void addNewSpawn(L2Spawn spawn, long respawnTime, double currentHP, double currentMP, boolean storeInDb) {
+    public void addNewSpawn(Spawn spawn, long respawnTime, double currentHP, double currentMP, boolean storeInDb) {
         if (spawn == null) {
             return;
         }
@@ -236,13 +236,13 @@ public class DBSpawnManager {
         }
     }
 
-    public Npc addNewSpawn(L2Spawn spawn, boolean storeInDb) {
+    public Npc addNewSpawn(Spawn spawn, boolean storeInDb) {
         if (spawn == null) {
             return null;
         }
 
         final int npcId = spawn.getId();
-        final L2Spawn existingSpawn = _spawns.get(npcId);
+        final Spawn existingSpawn = _spawns.get(npcId);
         if (existingSpawn != null) {
             return existingSpawn.getLastSpawn();
         }
@@ -292,7 +292,7 @@ public class DBSpawnManager {
      * @param spawn    the spawn dat
      * @param updateDb the update db
      */
-    public void deleteSpawn(L2Spawn spawn, boolean updateDb) {
+    public void deleteSpawn(Spawn spawn, boolean updateDb) {
         if (spawn == null) {
             return;
         }
@@ -476,7 +476,7 @@ public class DBSpawnManager {
      *
      * @return the spawns
      */
-    public Map<Integer, L2Spawn> getSpawns() {
+    public Map<Integer, Spawn> getSpawns() {
         return _spawns;
     }
 

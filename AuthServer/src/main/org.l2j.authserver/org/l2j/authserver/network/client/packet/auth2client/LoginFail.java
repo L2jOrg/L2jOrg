@@ -2,12 +2,12 @@ package org.l2j.authserver.network.client.packet.auth2client;
 
 
 import org.l2j.authserver.network.client.AuthClient;
-import org.l2j.authserver.network.client.packet.L2LoginServerPacket;
+import org.l2j.authserver.network.client.packet.AuthServerPacket;
 
 /**
  * Fromat: d d: the failure reason
  */
-public final class LoginFail extends L2LoginServerPacket {
+public final class LoginFail extends AuthServerPacket {
 	
 	private final LoginFailReason _reason;
 	

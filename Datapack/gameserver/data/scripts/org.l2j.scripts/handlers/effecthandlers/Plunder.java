@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlEvent;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Monster;
@@ -103,7 +103,7 @@ public final class Plunder extends AbstractEffect
 			for (ItemHolder sweepedItem : items)
 			{
 				final ItemHolder rewardedItem = new ItemHolder(sweepedItem.getId(), sweepedItem.getCount());
-				final L2Party party = effector.getParty();
+				final Party party = effector.getParty();
 				if (party != null)
 				{
 					party.distributeItem(player, rewardedItem, true, monster);

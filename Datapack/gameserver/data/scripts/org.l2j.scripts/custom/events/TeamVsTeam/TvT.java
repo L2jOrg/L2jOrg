@@ -22,7 +22,7 @@ import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.CommandChannel;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
@@ -252,14 +252,14 @@ public class TvT extends Event implements ScriptEvent
 				if (BLUE_TEAM.size() > 1)
 				{
 					CommandChannel blueCC = null;
-					L2Party lastBlueParty = null;
+					Party lastBlueParty = null;
 					int blueParticipantCounter = 0;
 					for (Player participant : BLUE_TEAM)
 					{
 						blueParticipantCounter++;
 						if (blueParticipantCounter == 1)
 						{
-							lastBlueParty = new L2Party(participant, PartyDistributionType.FINDERS_KEEPERS);
+							lastBlueParty = new Party(participant, PartyDistributionType.FINDERS_KEEPERS);
 							participant.joinParty(lastBlueParty);
 							if (BLUE_TEAM.size() > PARTY_MEMBER_COUNT)
 							{
@@ -287,14 +287,14 @@ public class TvT extends Event implements ScriptEvent
 				if (RED_TEAM.size() > 1)
 				{
 					CommandChannel redCC = null;
-					L2Party lastRedParty = null;
+					Party lastRedParty = null;
 					int redParticipantCounter = 0;
 					for (Player participant : RED_TEAM)
 					{
 						redParticipantCounter++;
 						if (redParticipantCounter == 1)
 						{
-							lastRedParty = new L2Party(participant, PartyDistributionType.FINDERS_KEEPERS);
+							lastRedParty = new Party(participant, PartyDistributionType.FINDERS_KEEPERS);
 							participant.joinParty(lastRedParty);
 							if (RED_TEAM.size() > PARTY_MEMBER_COUNT)
 							{

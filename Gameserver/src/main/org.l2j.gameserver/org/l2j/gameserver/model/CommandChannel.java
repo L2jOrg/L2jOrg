@@ -20,7 +20,7 @@ import java.util.function.Function;
  * @author chris_00
  */
 public class CommandChannel extends AbstractPlayerGroup {
-    private final List<L2Party> _parties = new CopyOnWriteArrayList<>();
+    private final List<Party> _parties = new CopyOnWriteArrayList<>();
     private Player _commandLeader;
     private int _channelLvl;
 
@@ -31,7 +31,7 @@ public class CommandChannel extends AbstractPlayerGroup {
      */
     public CommandChannel(Player leader) {
         _commandLeader = leader;
-        final L2Party party = leader.getParty();
+        final Party party = leader.getParty();
         _parties.add(party);
         _channelLvl = party.getLevel();
         party.setCommandChannel(this);
@@ -44,7 +44,7 @@ public class CommandChannel extends AbstractPlayerGroup {
      *
      * @param party the party to add
      */
-    public void addParty(L2Party party) {
+    public void addParty(Party party) {
         if (party == null) {
             return;
         }
@@ -65,14 +65,14 @@ public class CommandChannel extends AbstractPlayerGroup {
      *
      * @param party the party to remove
      */
-    public void removeParty(L2Party party) {
+    public void removeParty(Party party) {
         if (party == null) {
             return;
         }
 
         _parties.remove(party);
         _channelLvl = 0;
-        for (L2Party pty : _parties) {
+        for (Party pty : _parties) {
             if (pty.getLevel() > _channelLvl) {
                 _channelLvl = pty.getLevel();
             }
@@ -93,7 +93,7 @@ public class CommandChannel extends AbstractPlayerGroup {
      */
     public void disbandChannel() {
         if (_parties != null) {
-            for (L2Party party : _parties) {
+            for (Party party : _parties) {
                 if (party != null) {
                     removeParty(party);
                 }
@@ -108,7 +108,7 @@ public class CommandChannel extends AbstractPlayerGroup {
     @Override
     public int getMemberCount() {
         int count = 0;
-        for (L2Party party : _parties) {
+        for (Party party : _parties) {
             if (party != null) {
                 count += party.getMemberCount();
             }
@@ -119,7 +119,7 @@ public class CommandChannel extends AbstractPlayerGroup {
     /**
      * @return a list of all parties in this command channel
      */
-    public List<L2Party> getPartys() {
+    public List<Party> getPartys() {
         return _parties;
     }
 
@@ -129,7 +129,7 @@ public class CommandChannel extends AbstractPlayerGroup {
     @Override
     public List<Player> getMembers() {
         final List<Player> members = new LinkedList<>();
-        for (L2Party party : _parties) {
+        for (Party party : _parties) {
             members.addAll(party.getMembers());
         }
         return members;
@@ -179,7 +179,7 @@ public class CommandChannel extends AbstractPlayerGroup {
     @Override
     public boolean containsPlayer(Player player) {
         if ((_parties != null) && !_parties.isEmpty()) {
-            for (L2Party party : _parties) {
+            for (Party party : _parties) {
                 if (party.containsPlayer(player)) {
                     return true;
                 }
@@ -196,7 +196,7 @@ public class CommandChannel extends AbstractPlayerGroup {
     @Override
     public boolean forEachMember(Function<Player, Boolean> function) {
         if ((_parties != null) && !_parties.isEmpty()) {
-            for (L2Party party : _parties) {
+            for (Party party : _parties) {
                 if (!party.forEachMember(function)) {
                     return false;
                 }

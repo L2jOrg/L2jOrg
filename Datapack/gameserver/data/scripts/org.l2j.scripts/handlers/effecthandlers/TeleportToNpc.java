@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -62,7 +62,7 @@ public final class TeleportToNpc extends AbstractEffect
 		final ILocational teleLocation = effector.getSummonedNpcs().stream().filter(npc -> npc.getId() == _npcId).findAny().orElse(null);
 		if (teleLocation != null)
 		{
-			final L2Party party = effected.getParty();
+			final Party party = effected.getParty();
 			if (_party && (party != null))
 			{
 				party.getMembers().forEach(p -> teleport(p, teleLocation));

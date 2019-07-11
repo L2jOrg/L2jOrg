@@ -22,7 +22,7 @@ import org.l2j.gameserver.enums.MatchingRoomType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.CommandChannel;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -102,13 +102,13 @@ public class CommandChannelMatchingRoom extends MatchingRoom {
             return MatchingMemberType.COMMAND_CHANNEL_LEADER;
         }
 
-        final L2Party playerParty = player.getParty();
+        final Party playerParty = player.getParty();
 
         if (playerParty == null) {
             return MatchingMemberType.WAITING_PLAYER_NO_PARTY;
         }
 
-        final L2Party leaderParty = getLeader().getParty();
+        final Party leaderParty = getLeader().getParty();
         if (leaderParty != null) {
             final CommandChannel cc = leaderParty.getCommandChannel();
             if ((leaderParty == playerParty) || ((cc != null) && cc.getPartys().contains(playerParty))) {

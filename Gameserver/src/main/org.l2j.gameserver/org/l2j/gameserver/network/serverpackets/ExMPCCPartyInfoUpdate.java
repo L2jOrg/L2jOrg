@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -17,7 +17,7 @@ public class ExMPCCPartyInfoUpdate extends ServerPacket {
      * @param party
      * @param mode  0 = Remove, 1 = Add
      */
-    public ExMPCCPartyInfoUpdate(L2Party party, int mode) {
+    public ExMPCCPartyInfoUpdate(Party party, int mode) {
         _name = party.getLeader().getName();
         _LeaderOID = party.getLeaderObjectId();
         _memberCount = party.getMemberCount();

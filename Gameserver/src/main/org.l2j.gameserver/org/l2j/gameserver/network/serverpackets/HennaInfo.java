@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.L2Henna;
+import org.l2j.gameserver.model.items.Henna;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -16,11 +16,11 @@ import java.util.List;
  */
 public final class HennaInfo extends ServerPacket {
     private final Player _activeChar;
-    private final List<L2Henna> _hennas = new ArrayList<>();
+    private final List<Henna> _hennas = new ArrayList<>();
 
     public HennaInfo(Player player) {
         _activeChar = player;
-        for (L2Henna henna : _activeChar.getHennaList()) {
+        for (Henna henna : _activeChar.getHennaList()) {
             if (henna != null) {
                 _hennas.add(henna);
             }
@@ -41,7 +41,7 @@ public final class HennaInfo extends ServerPacket {
         writeShort((short) 0x00); // equip CHA
         writeInt(3 - _activeChar.getHennaEmptySlots()); // Slots
         writeInt(_hennas.size()); // Size
-        for (L2Henna henna : _hennas) {
+        for (Henna henna : _hennas) {
             writeInt(henna.getDyeId());
             writeInt(henna.isAllowedClass(_activeChar.getClassId()) ? 0x01 : 0x00);
         }

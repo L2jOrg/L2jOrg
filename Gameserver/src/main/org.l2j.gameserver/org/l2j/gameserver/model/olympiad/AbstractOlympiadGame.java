@@ -5,8 +5,8 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
-import org.l2j.gameserver.model.L2Party;
-import org.l2j.gameserver.model.L2Party.MessageType;
+import org.l2j.gameserver.model.Party;
+import org.l2j.gameserver.model.Party.MessageType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
@@ -174,7 +174,7 @@ public abstract class AbstractOlympiadGame {
 
             // Remove player from his party
             if (removeParty) {
-                final L2Party party = player.getParty();
+                final Party party = player.getParty();
                 if (party != null) {
                     party.removePartyMember(player, MessageType.EXPELLED);
                 }

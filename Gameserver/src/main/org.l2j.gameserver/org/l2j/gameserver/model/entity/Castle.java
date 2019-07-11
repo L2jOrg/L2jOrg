@@ -815,9 +815,9 @@ public final class Castle extends AbstractResidence {
 
         for (CastleSpawnHolder holder : getSideSpawns()) {
             if (holder != null) {
-                L2Spawn spawn;
+                Spawn spawn;
                 try {
-                    spawn = new L2Spawn(holder.getNpcId());
+                    spawn = new Spawn(holder.getNpcId());
                 } catch (Exception e) {
                     LOGGER.warn(Castle.class.getSimpleName() + ": " + e.getMessage());
                     return;

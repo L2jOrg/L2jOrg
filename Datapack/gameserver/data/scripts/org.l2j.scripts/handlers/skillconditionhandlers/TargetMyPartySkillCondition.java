@@ -17,7 +17,7 @@
 package handlers.skillconditionhandlers;
 
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.ISkillCondition;
@@ -43,8 +43,8 @@ public class TargetMyPartySkillCondition implements ISkillCondition
 			return false;
 		}
 		
-		final L2Party party = caster.getParty();
-		final L2Party targetParty = target.getActingPlayer().getParty();
+		final Party party = caster.getParty();
+		final Party targetParty = target.getActingPlayer().getParty();
 		return ((party == null) ? (_includeMe && (caster == target)) : (_includeMe ? party == targetParty : (party == targetParty) && (caster != target)));
 	}
 }

@@ -23,7 +23,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
@@ -210,7 +210,7 @@ public final class Antharas extends AbstractNpcAI
 				}
 				else if (player.isInParty())
 				{
-					final L2Party party = player.getParty();
+					final Party party = player.getParty();
 					final boolean isInCC = party.isInCommandChannel();
 					final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 					final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);

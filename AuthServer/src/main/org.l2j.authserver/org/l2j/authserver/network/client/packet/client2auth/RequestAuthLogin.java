@@ -1,7 +1,7 @@
 package org.l2j.authserver.network.client.packet.client2auth;
 
 import org.l2j.authserver.controller.AuthController;
-import org.l2j.authserver.network.client.packet.L2LoginClientPacket;
+import org.l2j.authserver.network.client.packet.AuthClientPacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,7 +12,7 @@ import static org.l2j.authserver.network.client.packet.auth2client.LoginFail.Log
 /**
  * Format: x 0 (a leading null) x: the rsa encrypted block with the login an password
  */
-public class RequestAuthLogin extends L2LoginClientPacket {
+public class RequestAuthLogin extends AuthClientPacket {
     private static final Logger logger = LoggerFactory.getLogger(RequestAuthLogin.class);
     private final byte[] userData = new byte[128];
     private final byte[] authData = new byte[128];

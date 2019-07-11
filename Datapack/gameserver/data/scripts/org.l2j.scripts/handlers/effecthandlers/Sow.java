@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.QuestSound;
-import org.l2j.gameserver.model.L2Party;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.L2Seed;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -82,7 +82,7 @@ public final class Sow extends AbstractEffect
 			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SEED_WAS_NOT_SOWN);
 		}
 		
-		final L2Party party = player.getParty();
+		final Party party = player.getParty();
 		if (party != null)
 		{
 			party.broadcastPacket(sm);

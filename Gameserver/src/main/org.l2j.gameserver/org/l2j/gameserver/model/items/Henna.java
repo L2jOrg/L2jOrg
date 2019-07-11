@@ -16,7 +16,7 @@ import java.util.Map;
  *
  * @author Zoey76
  */
-public class L2Henna {
+public class Henna {
     private final int _dyeId;
     private final int _dyeItemId;
     private final Map<BaseStats, Integer> _baseStats = new HashMap<>();
@@ -28,7 +28,7 @@ public class L2Henna {
     private final List<Skill> _skills;
     private final List<ClassId> _wear_class;
 
-    public L2Henna(StatsSet set) {
+    public Henna(StatsSet set) {
         _dyeId = set.getInt("dyeId");
         _dyeItemId = set.getInt("dyeItemId");
         _baseStats.put(BaseStats.STR, set.getInt("str", 0));

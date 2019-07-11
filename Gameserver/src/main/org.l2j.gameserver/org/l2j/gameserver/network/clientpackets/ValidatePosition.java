@@ -97,7 +97,7 @@ public class ValidatePosition extends ClientPacket {
         diffSq = ((dx * dx) + (dy * dy));
 
         // Zoey76: TODO: Implement or cleanup.
-        // L2Party party = activeChar.getParty();
+        // Party party = activeChar.getParty();
         // if ((party != null) && (activeChar.getLastPartyPositionDistance(_x, _y, _z) > 150))
         // {
         // activeChar.setLastPartyPosition(_x, _y, _z);

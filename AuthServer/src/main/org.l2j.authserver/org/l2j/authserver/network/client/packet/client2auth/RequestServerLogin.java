@@ -2,10 +2,8 @@ package org.l2j.authserver.network.client.packet.client2auth;
 
 import org.l2j.authserver.controller.AuthController;
 import org.l2j.commons.network.SessionKey;
-import org.l2j.authserver.network.client.packet.L2LoginClientPacket;
+import org.l2j.authserver.network.client.packet.AuthClientPacket;
 import org.l2j.authserver.network.client.packet.auth2client.PlayOk;
-
-import java.nio.ByteBuffer;
 
 import static org.l2j.authserver.network.client.packet.auth2client.LoginFail.LoginFailReason.REASON_ACCESS_FAILED;
 import static org.l2j.authserver.network.client.packet.auth2client.PlayFail.PlayFailReason.REASON_TOO_MANY_PLAYERS;
@@ -13,7 +11,7 @@ import static org.l2j.authserver.network.client.packet.auth2client.PlayFail.Play
 /**
  * Fromat is ddc d: first part of session id d: second part of session id c: server ID
  */
-public class RequestServerLogin extends L2LoginClientPacket {
+public class RequestServerLogin extends AuthClientPacket {
 
 	private int accountId;
 	private int authKey;

@@ -86,7 +86,7 @@ public abstract class Summon extends Playable {
         {
             player.sendPacket(new RelationChanged(this, _owner.getRelation(player), isAutoAttackable(player)));
         });
-        final L2Party party = _owner.getParty();
+        final Party party = _owner.getParty();
         if (party != null) {
             party.broadcastToPartyMembers(_owner, new ExPartyPetWindowAdd(this));
         }
@@ -301,7 +301,7 @@ public abstract class Summon extends Playable {
 
         if (owner != null) {
             owner.sendPacket(new PetDelete(getSummonType(), getObjectId()));
-            final L2Party party = owner.getParty();
+            final Party party = owner.getParty();
             if (party != null) {
                 party.broadcastToPartyMembers(owner, new ExPartyPetWindowDelete(this));
             }
@@ -350,7 +350,7 @@ public abstract class Summon extends Playable {
                 }
 
                 owner.sendPacket(new PetDelete(getSummonType(), getObjectId()));
-                final L2Party party = owner.getParty();
+                final Party party = owner.getParty();
                 if (party != null) {
                     party.broadcastToPartyMembers(owner, new ExPartyPetWindowDelete(this));
                 }
@@ -450,10 +450,10 @@ public abstract class Summon extends Playable {
     }
 
     /**
-     * Return the L2Party object of its Player owner or null.
+     * Return the Party object of its Player owner or null.
      */
     @Override
-    public L2Party getParty() {
+    public Party getParty() {
         if (_owner == null) {
             return null;
         }
@@ -672,7 +672,7 @@ public abstract class Summon extends Playable {
         if (isSpawned()) {
             broadcastNpcInfo(val);
         }
-        final L2Party party = _owner.getParty();
+        final Party party = _owner.getParty();
         if (party != null) {
             party.broadcastToPartyMembers(_owner, new ExPartyPetWindowUpdate(this));
         }

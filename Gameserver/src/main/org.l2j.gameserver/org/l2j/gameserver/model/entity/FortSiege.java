@@ -39,9 +39,9 @@ public class FortSiege implements Siegable {
     private static final String DELETE_FORT_SIEGECLANS = "DELETE FROM fortsiege_clans WHERE fort_id = ?";
     protected final Fort _fort;
     private final Set<L2SiegeClan> _attackerClans = ConcurrentHashMap.newKeySet();
-    private final Collection<L2Spawn> _siegeGuards = new LinkedList<>();
+    private final Collection<Spawn> _siegeGuards = new LinkedList<>();
     // Fort setting
-    protected Set<L2Spawn> _commanders = ConcurrentHashMap.newKeySet();
+    protected Set<Spawn> _commanders = ConcurrentHashMap.newKeySet();
     boolean _isInProgress = false;
     ScheduledFuture<?> _siegeEnd = null;
     ScheduledFuture<?> _siegeRestore = null;
@@ -373,7 +373,7 @@ public class FortSiege implements Siegable {
      */
     public void killedCommander(FortCommander instance) {
         if ((_fort != null) && (!_commanders.isEmpty())) {
-            final L2Spawn spawn = instance.getSpawn();
+            final Spawn spawn = instance.getSpawn();
             if (spawn != null) {
                 for (FortSiegeSpawn spawn2 : FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId())) {
                     if (spawn2.getId() == spawn.getId()) {
@@ -703,7 +703,7 @@ public class FortSiege implements Siegable {
      */
     private void removeCommanders() {
         // Remove all instance of commanders for this fort
-        for (L2Spawn spawn : _commanders) {
+        for (Spawn spawn : _commanders) {
             if (spawn != null) {
                 spawn.stopRespawn();
                 if (spawn.getLastSpawn() != null) {
@@ -777,7 +777,7 @@ public class FortSiege implements Siegable {
         try {
             _commanders.clear();
             for (FortSiegeSpawn _sp : FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId())) {
-                final L2Spawn spawnDat = new L2Spawn(_sp.getId());
+                final Spawn spawnDat = new Spawn(_sp.getId());
                 spawnDat.setAmount(1);
                 spawnDat.setXYZ(_sp.getLocation());
                 spawnDat.setHeading(_sp.getLocation().getHeading());
@@ -816,7 +816,7 @@ public class FortSiege implements Siegable {
             ps.setInt(1, fortId);
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
-                    final L2Spawn spawn = new L2Spawn(rs.getInt("npcId"));
+                    final Spawn spawn = new Spawn(rs.getInt("npcId"));
                     spawn.setAmount(1);
                     spawn.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
                     spawn.setHeading(rs.getInt("heading"));
@@ -836,7 +836,7 @@ public class FortSiege implements Siegable {
      */
     private void spawnSiegeGuard() {
         try {
-            for (L2Spawn spawnDat : _siegeGuards) {
+            for (Spawn spawnDat : _siegeGuards) {
                 spawnDat.doSpawn();
                 if (spawnDat.getRespawnDelay() == 0) {
                     spawnDat.stopRespawn();
@@ -851,7 +851,7 @@ public class FortSiege implements Siegable {
 
     private void unspawnSiegeGuard() {
         try {
-            for (L2Spawn spawnDat : _siegeGuards) {
+            for (Spawn spawnDat : _siegeGuards) {
                 spawnDat.stopRespawn();
                 if (spawnDat.getLastSpawn() != null) {
                     spawnDat.getLastSpawn().doDie(spawnDat.getLastSpawn());
@@ -919,7 +919,7 @@ public class FortSiege implements Siegable {
         _fort.resetDoors();
     }
 
-    public Set<L2Spawn> getCommanders() {
+    public Set<Spawn> getCommanders() {
         return _commanders;
     }
 

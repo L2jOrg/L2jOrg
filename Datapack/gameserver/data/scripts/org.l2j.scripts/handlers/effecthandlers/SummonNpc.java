@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.impl.NpcData;
-import org.l2j.gameserver.model.L2Spawn;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -153,10 +153,10 @@ public final class SummonNpc extends AbstractEffect
 			}
 			default:
 			{
-				L2Spawn spawn;
+				Spawn spawn;
 				try
 				{
-					spawn = new L2Spawn(npcTemplate);
+					spawn = new Spawn(npcTemplate);
 				}
 				catch (Exception e)
 				{

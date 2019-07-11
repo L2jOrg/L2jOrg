@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.xml.impl.HennaData;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.L2Henna;
+import org.l2j.gameserver.model.items.Henna;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.HennaItemDrawInfo;
 import org.slf4j.Logger;
@@ -27,7 +27,7 @@ public final class RequestHennaItemInfo extends ClientPacket {
             return;
         }
 
-        final L2Henna henna = HennaData.getInstance().getHenna(_symbolId);
+        final Henna henna = HennaData.getInstance().getHenna(_symbolId);
         if (henna == null) {
             if (_symbolId != 0) {
                 LOGGER.warn(getClass().getSimpleName() + ": Invalid Henna Id: " + _symbolId + " from player " + activeChar);

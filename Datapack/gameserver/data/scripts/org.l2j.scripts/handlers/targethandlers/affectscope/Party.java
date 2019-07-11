@@ -47,7 +47,7 @@ public class Party implements IAffectScopeHandler
 		if (target.isPlayable())
 		{
 			final Player player = target.getActingPlayer();
-			final org.l2j.gameserver.model.L2Party party = player.getParty();
+			final org.l2j.gameserver.model.Party party = player.getParty();
 			
 			// Create the target filter.
 			final AtomicInteger affected = new AtomicInteger(0);
@@ -72,7 +72,7 @@ public class Party implements IAffectScopeHandler
 				
 				if (p != player)
 				{
-					final org.l2j.gameserver.model.L2Party targetParty = p.getParty();
+					final org.l2j.gameserver.model.Party targetParty = p.getParty();
 					if ((party == null) || (targetParty == null) || (party.getLeaderObjectId() != targetParty.getLeaderObjectId()))
 					{
 						return false;
