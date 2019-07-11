@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -26,7 +26,7 @@ import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
  * @version $Revision: 1.3.2.2.2.5 $ $Date: 2005/03/27 15:29:32 $
  */
 public final class Observation extends Npc {
-    public Observation(L2NpcTemplate template) {
+    public Observation(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2ObservationInstance);
     }

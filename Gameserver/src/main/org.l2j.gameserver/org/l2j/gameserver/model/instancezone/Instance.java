@@ -17,7 +17,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2DoorTemplate;
+import org.l2j.gameserver.model.actor.templates.DoorTemplate;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.instance.*;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
@@ -314,7 +314,7 @@ public final class Instance implements IIdentifiable, INamable {
      * Spawn doors inside instance world.
      */
     private void spawnDoors() {
-        for (L2DoorTemplate template : _template.getDoors().values()) {
+        for (DoorTemplate template : _template.getDoors().values()) {
             // Create new door instance
             _doors.put(template.getId(), DoorData.getInstance().spawnDoor(template, this));
         }

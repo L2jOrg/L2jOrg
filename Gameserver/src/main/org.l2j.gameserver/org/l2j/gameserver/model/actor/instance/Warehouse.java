@@ -18,10 +18,10 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 
 public class Warehouse extends Folk {
-    public Warehouse(L2NpcTemplate template) {
+    public Warehouse(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2WarehouseInstance);
     }

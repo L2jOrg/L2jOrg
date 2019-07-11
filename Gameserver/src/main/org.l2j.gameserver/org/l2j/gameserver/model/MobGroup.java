@@ -23,7 +23,7 @@ import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.ControllableMob;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -32,13 +32,13 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author littlecrow
  */
 public final class MobGroup {
-    private final L2NpcTemplate _npcTemplate;
+    private final NpcTemplate _npcTemplate;
     private final int _groupId;
     private final int _maxMobCount;
 
     private Set<ControllableMob> _mobs;
 
-    public MobGroup(int groupId, L2NpcTemplate npcTemplate, int maxMobCount) {
+    public MobGroup(int groupId, NpcTemplate npcTemplate, int maxMobCount) {
         _groupId = groupId;
         _npcTemplate = npcTemplate;
         _maxMobCount = maxMobCount;
@@ -93,7 +93,7 @@ public final class MobGroup {
         }
     }
 
-    public L2NpcTemplate getTemplate() {
+    public NpcTemplate getTemplate() {
         return _npcTemplate;
     }
 

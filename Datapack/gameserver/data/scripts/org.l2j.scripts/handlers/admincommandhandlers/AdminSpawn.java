@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -506,7 +506,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			target = activeChar;
 		}
 		
-		final L2NpcTemplate template1;
+		final NpcTemplate template1;
 		if (monsterId.matches("[0-9]*"))
 		{
 			// First parameter was an ID number
@@ -559,7 +559,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			target = activeChar;
 		}
 		
-		final L2NpcTemplate template1 = NpcData.getInstance().getTemplate(id);
+		final NpcTemplate template1 = NpcData.getInstance().getTemplate(id);
 		
 		try
 		{
@@ -591,7 +591,7 @@ public class AdminSpawn implements IAdminCommandHandler
 	
 	private void showMonsters(Player activeChar, int level, int from)
 	{
-		final List<L2NpcTemplate> mobs = NpcData.getInstance().getAllMonstersOfLevel(level);
+		final List<NpcTemplate> mobs = NpcData.getInstance().getAllMonstersOfLevel(level);
 		final int mobsCount = mobs.size();
 		final StringBuilder tb = new StringBuilder(500 + (mobsCount * 80));
 		tb.append("<html><title>Spawn Monster:</title><body><p> Level : " + level + "<br>Total NPCs : " + mobsCount + "<br>");
@@ -617,7 +617,7 @@ public class AdminSpawn implements IAdminCommandHandler
 	
 	private void showNpcs(Player activeChar, String starting, int from)
 	{
-		final List<L2NpcTemplate> mobs = NpcData.getInstance().getAllNpcStartingWith(starting);
+		final List<NpcTemplate> mobs = NpcData.getInstance().getAllNpcStartingWith(starting);
 		final int mobsCount = mobs.size();
 		final StringBuilder tb = new StringBuilder(500 + (mobsCount * 80));
 		tb.append("<html><title>Spawn Monster:</title><body><p> There are " + mobsCount + " Npcs whose name starts with " + starting + ":<br>");

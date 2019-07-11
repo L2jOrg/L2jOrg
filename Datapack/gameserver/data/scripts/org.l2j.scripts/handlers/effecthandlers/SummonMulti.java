@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Servitor;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -72,7 +72,7 @@ public final class SummonMulti extends AbstractEffect
 		{
 			return;
 		}
-		final L2NpcTemplate template = NpcData.getInstance().getTemplate(_npcId);
+		final NpcTemplate template = NpcData.getInstance().getTemplate(_npcId);
 		final Servitor summon = new Servitor(template, player);
 		final int consumeItemInterval = (_consumeItemInterval > 0 ? _consumeItemInterval : (template.getRace() != Race.SIEGE_WEAPON ? 240 : 60)) * 1000;
 		

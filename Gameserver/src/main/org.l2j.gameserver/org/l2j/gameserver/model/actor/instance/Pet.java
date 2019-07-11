@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.stat.PetStat;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.PetInventory;
 import org.l2j.gameserver.model.items.CommonItem;
@@ -84,7 +84,7 @@ public class Pet extends Summon {
      * @param owner
      * @param control
      */
-    public Pet(L2NpcTemplate template, Player owner, Item control) {
+    public Pet(NpcTemplate template, Player owner, Item control) {
         this(template, owner, control, (byte) (template.getDisplayId() == 12564 ? owner.getLevel() : template.getLevel()));
     }
 
@@ -96,7 +96,7 @@ public class Pet extends Summon {
      * @param control
      * @param level
      */
-    public Pet(L2NpcTemplate template, Player owner, Item control, byte level) {
+    public Pet(NpcTemplate template, Player owner, Item control, byte level) {
         super(template, owner);
         setInstanceType(InstanceType.L2PetInstance);
 
@@ -113,7 +113,7 @@ public class Pet extends Summon {
         getPetLevelData();
     }
 
-    public static synchronized Pet spawnPet(L2NpcTemplate template, Player owner, Item control) {
+    public static synchronized Pet spawnPet(NpcTemplate template, Player owner, Item control) {
         if (L2World.getInstance().getPet(owner.getObjectId()) != null) {
             return null; // owner has a pet listed in world
         }
@@ -133,7 +133,7 @@ public class Pet extends Summon {
         return pet;
     }
 
-    private static Pet restore(Item control, L2NpcTemplate template, Player owner) {
+    private static Pet restore(Item control, NpcTemplate template, Player owner) {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement("SELECT item_obj_id, name, level, curHp, curMp, exp, sp, fed FROM pets WHERE item_obj_id=?")) {
             Pet pet;

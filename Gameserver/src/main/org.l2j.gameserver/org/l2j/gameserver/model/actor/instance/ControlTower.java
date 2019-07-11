@@ -20,7 +20,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Tower;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -31,7 +31,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ControlTower extends Tower {
     private volatile Set<L2Spawn> _guards;
 
-    public ControlTower(L2NpcTemplate template) {
+    public ControlTower(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2ControlTowerInstance);
     }

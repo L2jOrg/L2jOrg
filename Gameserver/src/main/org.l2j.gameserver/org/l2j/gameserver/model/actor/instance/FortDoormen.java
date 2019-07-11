@@ -17,14 +17,14 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import java.util.StringTokenizer;
 
 public class FortDoormen extends Doormen {
-    public FortDoormen(L2NpcTemplate template) {
+    public FortDoormen(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2FortDoormenInstance);
     }

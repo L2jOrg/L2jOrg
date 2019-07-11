@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Defender;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.holders.SiegeGuardHolder;
 import org.l2j.gameserver.model.interfaces.IPositionable;
@@ -163,7 +163,7 @@ public final class SiegeGuardManager {
      * @param holder SiegeGuardHolder holder
      */
     private void spawnMercenary(IPositionable pos, SiegeGuardHolder holder) {
-        final L2NpcTemplate template = NpcData.getInstance().getTemplate(holder.getNpcId());
+        final NpcTemplate template = NpcData.getInstance().getTemplate(holder.getNpcId());
         if (template != null) {
             final Defender npc = new Defender(template);
             npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());

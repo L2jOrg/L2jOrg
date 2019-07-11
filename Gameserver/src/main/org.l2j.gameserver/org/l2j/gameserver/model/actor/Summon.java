@@ -20,7 +20,7 @@ import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.SummonStat;
 import org.l2j.gameserver.model.actor.status.SummonStatus;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSummonSpawn;
@@ -55,7 +55,7 @@ public abstract class Summon extends Playable {
     private int _summonPoints = 0;
     // @formatter:on
 
-    public Summon(L2NpcTemplate template, Player owner) {
+    public Summon(NpcTemplate template, Player owner) {
         super(template);
         setInstanceType(InstanceType.L2Summon);
         setInstance(owner.getInstanceWorld()); // set instance to same as owner
@@ -126,8 +126,8 @@ public abstract class Summon extends Playable {
     }
 
     @Override
-    public L2NpcTemplate getTemplate() {
-        return (L2NpcTemplate) super.getTemplate();
+    public NpcTemplate getTemplate() {
+        return (NpcTemplate) super.getTemplate();
     }
 
     // this defines the action buttons, 1 for Summon, 2 for Pets

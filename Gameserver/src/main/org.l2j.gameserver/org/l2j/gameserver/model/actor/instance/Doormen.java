@@ -21,7 +21,7 @@ import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TeleportType;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -34,7 +34,7 @@ import java.util.StringTokenizer;
  * @version $Revision$ $Date$
  */
 public class Doormen extends Folk {
-    public Doormen(L2NpcTemplate template) {
+    public Doormen(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2DoormenInstance);
     }

@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.tasks.npc.trap.TrapTask;
 import org.l2j.gameserver.model.actor.tasks.npc.trap.TrapTriggerTask;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnTrapAction;
 import org.l2j.gameserver.model.holders.SkillHolder;
@@ -46,7 +46,7 @@ public final class Trap extends Npc {
     // Tasks
     private ScheduledFuture<?> _trapTask = null;
 
-    public Trap(L2NpcTemplate template, int instanceId, int lifeTime) {
+    public Trap(NpcTemplate template, int instanceId, int lifeTime) {
         super(template);
         setInstanceType(InstanceType.L2TrapInstance);
         setInstanceById(instanceId);
@@ -63,7 +63,7 @@ public final class Trap extends Npc {
         }
     }
 
-    public Trap(L2NpcTemplate template, Player owner, int lifeTime) {
+    public Trap(NpcTemplate template, Player owner, int lifeTime) {
         this(template, owner.getInstanceId(), lifeTime);
         _owner = owner;
     }

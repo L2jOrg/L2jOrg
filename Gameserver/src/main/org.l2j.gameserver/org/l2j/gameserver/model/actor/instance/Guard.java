@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
@@ -27,7 +27,7 @@ public class Guard extends Attackable {
      *
      * @param template to apply to the NPC
      */
-    public Guard(L2NpcTemplate template) {
+    public Guard(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2GuardInstance);
     }

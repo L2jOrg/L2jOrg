@@ -9,7 +9,7 @@ import org.l2j.gameserver.enums.DropType;
 import org.l2j.gameserver.enums.MpRewardAffectType;
 import org.l2j.gameserver.enums.MpRewardType;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.skills.Skill;
@@ -38,7 +38,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public class NpcData extends GameXmlReader {
     protected static final Logger LOGGER = LoggerFactory.getLogger(NpcData.class);
     private static final List<Integer> _masterMonsterIDs = new ArrayList<>();
-    private final Map<Integer, L2NpcTemplate> _npcs = new HashMap<>();
+    private final Map<Integer, NpcTemplate> _npcs = new HashMap<>();
     private final Map<String, Integer> _clans = new HashMap<>();
 
     private NpcData() {
@@ -411,9 +411,9 @@ public class NpcData extends GameXmlReader {
                             }
                         }
 
-                        L2NpcTemplate template = _npcs.get(npcId);
+                        NpcTemplate template = _npcs.get(npcId);
                         if (template == null) {
-                            template = new L2NpcTemplate(set);
+                            template = new NpcTemplate(set);
                             _npcs.put(template.getId(), template);
                         } else {
                             template.set(set);
@@ -566,7 +566,7 @@ public class NpcData extends GameXmlReader {
      * @param id the template Id to get.
      * @return the template for the given id.
      */
-    public L2NpcTemplate getTemplate(int id) {
+    public NpcTemplate getTemplate(int id) {
         return _npcs.get(id);
     }
 
@@ -576,8 +576,8 @@ public class NpcData extends GameXmlReader {
      * @param name of the template to get.
      * @return the template for the given name.
      */
-    public L2NpcTemplate getTemplateByName(String name) {
-        for (L2NpcTemplate npcTemplate : _npcs.values()) {
+    public NpcTemplate getTemplateByName(String name) {
+        for (NpcTemplate npcTemplate : _npcs.values()) {
             if (npcTemplate.getName().equalsIgnoreCase(name)) {
                 return npcTemplate;
             }
@@ -591,7 +591,7 @@ public class NpcData extends GameXmlReader {
      * @param filter
      * @return the template list for the given filter
      */
-    public List<L2NpcTemplate> getTemplates(Predicate<L2NpcTemplate> filter) {
+    public List<NpcTemplate> getTemplates(Predicate<NpcTemplate> filter) {
         //@formatter:off
         return _npcs.values().stream()
                 .filter(filter)
@@ -605,7 +605,7 @@ public class NpcData extends GameXmlReader {
      * @param lvls of all the templates to get.
      * @return the template list for the given level.
      */
-    public List<L2NpcTemplate> getAllOfLevel(int... lvls) {
+    public List<NpcTemplate> getAllOfLevel(int... lvls) {
         return getTemplates(template -> CommonUtil.contains(lvls, template.getLevel()));
     }
 
@@ -615,7 +615,7 @@ public class NpcData extends GameXmlReader {
      * @param lvls of all the monster templates to get.
      * @return the template list for the given level.
      */
-    public List<L2NpcTemplate> getAllMonstersOfLevel(int... lvls) {
+    public List<NpcTemplate> getAllMonstersOfLevel(int... lvls) {
         return getTemplates(template -> CommonUtil.contains(lvls, template.getLevel()) && template.isType("L2Monster"));
     }
 
@@ -625,7 +625,7 @@ public class NpcData extends GameXmlReader {
      * @param text of all the NPC templates which its name start with.
      * @return the template list for the given letter.
      */
-    public List<L2NpcTemplate> getAllNpcStartingWith(String text) {
+    public List<NpcTemplate> getAllNpcStartingWith(String text) {
         return getTemplates(template -> template.isType("Npc") && template.getName().startsWith(text));
     }
 
@@ -635,7 +635,7 @@ public class NpcData extends GameXmlReader {
      * @param classTypes of all the templates to get.
      * @return the template list for the given class type.
      */
-    public List<L2NpcTemplate> getAllNpcOfClassType(String... classTypes) {
+    public List<NpcTemplate> getAllNpcOfClassType(String... classTypes) {
         return getTemplates(template -> CommonUtil.contains(classTypes, template.getType(), true));
     }
 

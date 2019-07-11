@@ -18,11 +18,11 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
 public final class FlyTerrainObject extends Npc {
-    public FlyTerrainObject(L2NpcTemplate template) {
+    public FlyTerrainObject(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2FlyTerrainObjectInstance);
         setIsFlying(true);

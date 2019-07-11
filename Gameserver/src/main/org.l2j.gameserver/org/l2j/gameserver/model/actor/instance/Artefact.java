@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.actor.instance;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
@@ -42,7 +42,7 @@ public final class Artefact extends Npc {
      *
      * @param template to apply to the NPC
      */
-    public Artefact(L2NpcTemplate template) {
+    public Artefact(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2ArtefactInstance);
     }

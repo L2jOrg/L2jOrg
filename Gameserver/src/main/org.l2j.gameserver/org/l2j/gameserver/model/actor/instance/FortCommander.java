@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.FortSiegeSpawn;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.NpcStringId;
 
@@ -19,7 +19,7 @@ public class FortCommander extends Defender {
 
     private boolean _canTalk;
 
-    public FortCommander(L2NpcTemplate template) {
+    public FortCommander(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2FortCommanderInstance);
         _canTalk = true;

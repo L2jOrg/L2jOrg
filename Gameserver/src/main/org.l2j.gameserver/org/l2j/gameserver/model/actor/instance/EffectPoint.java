@@ -5,13 +5,13 @@ import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
 public class EffectPoint extends Npc {
     private final Player _owner;
 
-    public EffectPoint(L2NpcTemplate template, Creature owner) {
+    public EffectPoint(NpcTemplate template, Creature owner) {
         super(template);
         setInstanceType(InstanceType.L2EffectPointInstance);
         setIsInvul(false);

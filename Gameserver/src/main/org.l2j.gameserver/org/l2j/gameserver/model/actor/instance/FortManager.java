@@ -6,7 +6,7 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.ClanPrivilege;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.skills.Skill;
@@ -27,7 +27,7 @@ public class FortManager extends Merchant {
     protected static final int COND_BUSY_BECAUSE_OF_SIEGE = 1;
     protected static final int COND_OWNER = 2;
 
-    public FortManager(L2NpcTemplate template) {
+    public FortManager(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2FortManagerInstance);
     }

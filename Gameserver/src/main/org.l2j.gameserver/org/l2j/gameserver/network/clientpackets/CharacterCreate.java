@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PcStat;
-import org.l2j.gameserver.model.actor.templates.L2PcTemplate;
+import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -100,7 +100,7 @@ public final class CharacterCreate extends ClientPacket {
         }
 
         Player newChar;
-        L2PcTemplate template;
+        PlayerTemplate template;
 
         /*
          * DrHouse: Since checks for duplicate names are done using SQL, lock must be held until data is written to DB as well.
@@ -159,7 +159,7 @@ public final class CharacterCreate extends ClientPacket {
             newChar.addAdena("Init", Config.STARTING_ADENA, null, false);
         }
 
-        final L2PcTemplate template = newChar.getTemplate();
+        final PlayerTemplate template = newChar.getTemplate();
 
         if (Config.CUSTOM_STARTING_LOC) {
             final Location createLoc = new Location(Config.CUSTOM_STARTING_LOC_X, Config.CUSTOM_STARTING_LOC_Y, Config.CUSTOM_STARTING_LOC_Z);

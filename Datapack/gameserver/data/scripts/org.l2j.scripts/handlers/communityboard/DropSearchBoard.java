@@ -35,7 +35,7 @@ import org.l2j.gameserver.enums.DropType;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.L2Item;
@@ -66,7 +66,7 @@ public class DropSearchBoard implements IParseBoardHandler
 		final boolean isSpoil;
 		final boolean isRaid;
 		
-		public CBDropHolder(L2NpcTemplate npcTemplate, DropHolder dropHolder)
+		public CBDropHolder(NpcTemplate npcTemplate, DropHolder dropHolder)
 		{
 			isSpoil = dropHolder.getDropType() == DropType.SPOIL;
 			itemId = dropHolder.getItemId();
@@ -121,7 +121,7 @@ public class DropSearchBoard implements IParseBoardHandler
 		DROP_INDEX_CACHE.values().stream().forEach(l -> l.sort((d1, d2) -> Byte.valueOf(d1.npcLevel).compareTo(Byte.valueOf(d2.npcLevel))));
 	}
 	
-	private void addToDropList(L2NpcTemplate npcTemplate, DropHolder dropHolder)
+	private void addToDropList(NpcTemplate npcTemplate, DropHolder dropHolder)
 	{
 		if (BLOCK_ID.contains(dropHolder.getItemId()))
 		{

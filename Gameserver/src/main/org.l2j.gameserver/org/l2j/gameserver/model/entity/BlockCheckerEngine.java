@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Block;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -414,7 +414,7 @@ public final class BlockCheckerEngine {
             // if != 0, will spawn a blue block
             byte random = 2;
             // common template
-            final L2NpcTemplate template = NpcData.getInstance().getTemplate(18672);
+            final NpcTemplate template = NpcData.getInstance().getTemplate(18672);
             // Spawn blocks
             try {
                 // Creates 50 new blocks

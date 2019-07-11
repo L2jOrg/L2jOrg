@@ -11,7 +11,7 @@ import org.l2j.gameserver.enums.InstanceTeleportType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2DoorTemplate;
+import org.l2j.gameserver.model.actor.templates.DoorTemplate;
 import org.l2j.gameserver.model.holders.InstanceReenterTimeHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.instancezone.InstanceTemplate;
@@ -186,7 +186,7 @@ public final class InstanceManager extends GameXmlReader {
                             mergedSet.merge(parsedSet);
 
                             try {
-                                template.addDoor(doorId, new L2DoorTemplate(mergedSet));
+                                template.addDoor(doorId, new DoorTemplate(mergedSet));
                             } catch (Exception e) {
                                 LOGGER.warn(getClass().getSimpleName() + ": Cannot initialize template for door: " + doorId + ", instance: " + template.getName() + " (" + template.getId() + ")", e);
                             }

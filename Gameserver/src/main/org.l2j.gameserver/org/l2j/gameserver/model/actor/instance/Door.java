@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.stat.DoorStat;
 import org.l2j.gameserver.model.actor.status.DoorStatus;
-import org.l2j.gameserver.model.actor.templates.L2DoorTemplate;
+import org.l2j.gameserver.model.actor.templates.DoorTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -40,7 +40,7 @@ public final class Door extends Creature {
     private int _meshindex = 1;
     private Future<?> _autoCloseTask;
 
-    public Door(L2DoorTemplate template) {
+    public Door(DoorTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2DoorInstance);
         setIsInvul(false);
@@ -85,8 +85,8 @@ public final class Door extends Creature {
     }
 
     @Override
-    public L2DoorTemplate getTemplate() {
-        return (L2DoorTemplate) super.getTemplate();
+    public DoorTemplate getTemplate() {
+        return (DoorTemplate) super.getTemplate();
     }
 
     @Override

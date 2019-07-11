@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcMoveFinished;
@@ -1003,7 +1003,7 @@ public class L2CharacterAI extends AbstractAI {
         }
 
         public void init() {
-            switch (((L2NpcTemplate) _actor.getTemplate()).getAIType()) {
+            switch (((NpcTemplate) _actor.getTemplate()).getAIType()) {
                 case FIGHTER: {
                     isFighter = true;
                     break;

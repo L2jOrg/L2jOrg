@@ -22,7 +22,7 @@ import org.l2j.gameserver.enums.TeleportType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.GameUtils;
@@ -38,7 +38,7 @@ import java.util.StringTokenizer;
 public final class Teleporter extends Npc {
     private static final Logger LOGGER = LoggerFactory.getLogger(Teleporter.class);
 
-    public Teleporter(L2NpcTemplate template) {
+    public Teleporter(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2TeleporterInstance);
     }

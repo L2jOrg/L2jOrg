@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.actor;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
 /**
@@ -28,7 +28,7 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
  * @author Zoey76
  */
 public abstract class Tower extends Npc {
-    public Tower(L2NpcTemplate template) {
+    public Tower(NpcTemplate template) {
         super(template);
         setIsInvul(false);
     }

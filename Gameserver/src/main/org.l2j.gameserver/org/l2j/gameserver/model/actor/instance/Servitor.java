@@ -13,7 +13,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
@@ -53,7 +53,7 @@ public class Servitor extends Summon implements Runnable {
     private int _consumeItemIntervalRemaining;
     private int _referenceSkill;
 
-    public Servitor(L2NpcTemplate template, Player owner) {
+    public Servitor(NpcTemplate template, Player owner) {
         super(template, owner);
         setInstanceType(InstanceType.L2ServitorInstance);
         setShowSummonAnimation(true);

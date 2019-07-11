@@ -22,7 +22,7 @@ import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Attackable;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableAttack;
@@ -37,7 +37,7 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 public class FriendlyNpc extends Attackable {
     private boolean _isAutoAttackable = true;
 
-    public FriendlyNpc(L2NpcTemplate template) {
+    public FriendlyNpc(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.FriendlyNpcInstance);
     }

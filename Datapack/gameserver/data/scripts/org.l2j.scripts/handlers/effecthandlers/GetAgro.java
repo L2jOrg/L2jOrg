@@ -21,7 +21,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -59,7 +59,7 @@ public final class GetAgro extends AbstractEffect
 			effected.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, effector);
 			
 			// Monsters from the same clan should assist.
-			final L2NpcTemplate template = ((Attackable) effected).getTemplate();
+			final NpcTemplate template = ((Attackable) effected).getTemplate();
 			final Set<Integer> clans = template.getClans();
 			if (clans != null)
 			{

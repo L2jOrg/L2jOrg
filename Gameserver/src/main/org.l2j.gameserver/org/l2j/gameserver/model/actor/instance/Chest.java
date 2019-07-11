@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.actor.instance;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 
 /**
  * This class manages all chest.
@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 public final class Chest extends Monster {
     private volatile boolean _specialDrop;
 
-    public Chest(L2NpcTemplate template) {
+    public Chest(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2ChestInstance);
         setRandomWalking(false);
@@ -48,7 +48,7 @@ public final class Chest extends Monster {
     }
 
     @Override
-    public void doItemDrop(L2NpcTemplate npcTemplate, Creature lastAttacker) {
+    public void doItemDrop(NpcTemplate npcTemplate, Creature lastAttacker) {
         int id = getTemplate().getId();
 
         if (!_specialDrop) {

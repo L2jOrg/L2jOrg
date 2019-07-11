@@ -15,7 +15,7 @@ import org.l2j.gameserver.model.L2Clan.SubPledge;
 import org.l2j.gameserver.model.L2ClanMember;
 import org.l2j.gameserver.model.L2SkillLearn;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.PlayerClass;
@@ -49,7 +49,7 @@ public class VillageMaster extends Folk {
      *
      * @param template the village master NPC template
      */
-    public VillageMaster(L2NpcTemplate template) {
+    public VillageMaster(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2VillageMasterInstance);
     }

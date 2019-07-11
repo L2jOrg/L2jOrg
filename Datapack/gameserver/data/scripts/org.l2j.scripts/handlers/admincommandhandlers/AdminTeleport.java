@@ -17,7 +17,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.GrandBoss;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.RaidBoss;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -499,7 +499,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			final Npc target = (Npc) obj;
 			
 			final int monsterTemplate = target.getTemplate().getId();
-			final L2NpcTemplate template1 = NpcData.getInstance().getTemplate(monsterTemplate);
+			final NpcTemplate template1 = NpcData.getInstance().getTemplate(monsterTemplate);
 			if (template1 == null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Incorrect monster template.");

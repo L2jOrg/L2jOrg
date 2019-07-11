@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -53,7 +53,7 @@ public class FortLogistics extends Merchant {
                     36363
             };
 
-    public FortLogistics(L2NpcTemplate template) {
+    public FortLogistics(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2FortLogisticsInstance);
     }
@@ -114,7 +114,7 @@ public class FortLogistics extends Merchant {
                     final int level = getFort().getSupplyLvL();
                     if (level > 0) {
                         // spawn box
-                        final L2NpcTemplate BoxTemplate = NpcData.getInstance().getTemplate(SUPPLY_BOX_IDS[level - 1]);
+                        final NpcTemplate BoxTemplate = NpcData.getInstance().getTemplate(SUPPLY_BOX_IDS[level - 1]);
                         final Monster box = new Monster(BoxTemplate);
                         box.setCurrentHp(box.getMaxHp());
                         box.setCurrentMp(box.getMaxMp());

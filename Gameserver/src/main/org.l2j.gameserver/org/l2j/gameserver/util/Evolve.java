@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -77,7 +77,7 @@ public final class Evolve {
             return false;
         }
 
-        final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcID);
+        final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcID);
 
         currentPet.unSummon(player);
 
@@ -157,7 +157,7 @@ public final class Evolve {
             return false;
         }
 
-        final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcId);
+        final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcId);
 
         // deleting old pet item
         final Item removedItem = player.getInventory().destroyItem("PetRestore", item, player, npc);

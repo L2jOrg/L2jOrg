@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,8 +40,8 @@ public final class DecayTaskManager {
         }
 
         long delay;
-        if (character.getTemplate() instanceof L2NpcTemplate) {
-            delay = ((L2NpcTemplate) character.getTemplate()).getCorpseTime();
+        if (character.getTemplate() instanceof NpcTemplate) {
+            delay = ((NpcTemplate) character.getTemplate()).getCorpseTime();
         } else {
             delay = Config.DEFAULT_CORPSE_TIME;
         }

@@ -4,7 +4,7 @@ import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.ChanceLocation;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.holders.MinionHolder;
 import org.l2j.gameserver.model.interfaces.IParameterized;
 import org.l2j.gameserver.model.interfaces.ITerritorized;
@@ -191,7 +191,7 @@ public class SpawnsData extends GameXmlReader {
      */
     private void parseNpc(Node n, SpawnTemplate spawnTemplate, SpawnGroup group) {
         final NpcSpawnTemplate npcTemplate = new NpcSpawnTemplate(spawnTemplate, group, new StatsSet(parseAttributes(n)));
-        final L2NpcTemplate template = NpcData.getInstance().getTemplate(npcTemplate.getId());
+        final NpcTemplate template = NpcData.getInstance().getTemplate(npcTemplate.getId());
         if (template == null) {
             LOGGER.warn(": Requested spawn for non existing npc: " + npcTemplate.getId() + " in file: " + spawnTemplate.getFile().getName());
             return;

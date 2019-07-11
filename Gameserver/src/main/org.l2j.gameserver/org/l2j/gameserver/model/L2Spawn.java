@@ -8,7 +8,7 @@ import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Monster;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.interfaces.INamable;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
@@ -42,9 +42,9 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
      */
     private String _name;
     /**
-     * The link on the L2NpcTemplate object containing generic and static properties of this spawn (ex : RewardExp, RewardSP, AggroRange...)
+     * The link on the NpcTemplate object containing generic and static properties of this spawn (ex : RewardExp, RewardSP, AggroRange...)
      */
-    private L2NpcTemplate _template;
+    private NpcTemplate _template;
     /**
      * The maximum number of Folk that can manage this L2Spawn
      */
@@ -84,7 +84,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
      * Constructor of L2Spawn.<br>
      * <B><U>Concept</U>:</B><br>
      * Each L2Spawn owns generic and static properties (ex : RewardExp, RewardSP, AggroRange...).<br>
-     * All of those properties are stored in a different L2NpcTemplate for each type of L2Spawn. Each template is loaded once in the server cache memory (reduce memory use).<br>
+     * All of those properties are stored in a different NpcTemplate for each type of L2Spawn. Each template is loaded once in the server cache memory (reduce memory use).<br>
      * When a new instance of L2Spawn is created, server just create a link between the instance and the template.<br>
      * This link is stored in <B>_template</B> Each Folk is linked to a L2Spawn that manages its spawn and respawn (delay, location...).<br>
      * This link is stored in <B>_spawn</B> of the Folk.<br>
@@ -95,13 +95,13 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
      * <li>Create the generic constructor of Folk managed by this L2Spawn</li>
      * </ul>
      *
-     * @param template The L2NpcTemplate to link to this L2Spawn
+     * @param template The NpcTemplate to link to this L2Spawn
      * @throws SecurityException
      * @throws ClassNotFoundException
      * @throws NoSuchMethodException
      * @throws ClassCastException     when template type is not subclass of Npc
      */
-    public L2Spawn(L2NpcTemplate template) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException {
+    public L2Spawn(NpcTemplate template) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException {
         super(0, 0, 0);
         // Set the _template of the L2Spawn
         _template = template;
@@ -113,7 +113,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
         final String className = "org.l2j.gameserver.model.actor.instance." + _template.getType();
 
         // Create the generic constructor of Npc managed by this L2Spawn
-        _constructor = Class.forName(className).asSubclass(Npc.class).getConstructor(L2NpcTemplate.class);
+        _constructor = Class.forName(className).asSubclass(Npc.class).getConstructor(NpcTemplate.class);
     }
 
     /**
@@ -132,7 +132,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
         final String className = "org.l2j.gameserver.model.actor.instance." + _template.getType();
 
         // Create the generic constructor of Npc managed by this L2Spawn
-        _constructor = Class.forName(className).asSubclass(Npc.class).getConstructor(L2NpcTemplate.class);
+        _constructor = Class.forName(className).asSubclass(Npc.class).getConstructor(NpcTemplate.class);
     }
 
     /**
@@ -473,7 +473,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
         return _spawnedNpcs;
     }
 
-    public L2NpcTemplate getTemplate() {
+    public NpcTemplate getTemplate() {
         return _template;
     }
 

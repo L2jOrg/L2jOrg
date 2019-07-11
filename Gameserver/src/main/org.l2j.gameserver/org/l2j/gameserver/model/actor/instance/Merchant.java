@@ -20,7 +20,7 @@ import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TaxType;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.BuyList;
@@ -32,7 +32,7 @@ import org.l2j.gameserver.network.serverpackets.ExBuySellList;
  * @version $Revision: 1.10.4.9 $ $Date: 2005/04/11 10:06:08 $
  */
 public class Merchant extends Folk {
-    public Merchant(L2NpcTemplate template) {
+    public Merchant(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2MerchantInstance);
     }

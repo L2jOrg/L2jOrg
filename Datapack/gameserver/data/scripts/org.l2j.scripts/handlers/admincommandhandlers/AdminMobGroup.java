@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.MobGroup;
 import org.l2j.gameserver.model.MobGroupTable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.SetupGauge;
@@ -278,7 +278,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		final L2NpcTemplate template = NpcData.getInstance().getTemplate(templateId);
+		final NpcTemplate template = NpcData.getInstance().getTemplate(templateId);
 		
 		if (template == null)
 		{

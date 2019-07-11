@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 
 // This class is here mostly for convenience and for avoidance of hardcoded IDs.
 // It refers to Beast (mobs) that can be attacked but can also be fed
@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 // of the target.  However, no additional tasks are needed, since they are all
 // handled by scripted AI.
 public class FeedableBeast extends Monster {
-    public FeedableBeast(L2NpcTemplate template) {
+    public FeedableBeast(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2FeedableBeastInstance);
     }

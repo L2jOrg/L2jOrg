@@ -443,7 +443,7 @@ public class CreatureTemplate extends ListenersContainer {
     }
 
     /**
-     * Overridden in L2NpcTemplate
+     * Overridden in NpcTemplate
      *
      * @return the characters skills
      */

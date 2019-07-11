@@ -20,7 +20,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.ArenaParticipantsHolder;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.BlockCheckerEngine;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -34,7 +34,7 @@ import org.l2j.gameserver.network.serverpackets.NpcInfo;
 public class Block extends Monster {
     private int _colorEffect;
 
-    public Block(L2NpcTemplate template) {
+    public Block(NpcTemplate template) {
         super(template);
     }
 

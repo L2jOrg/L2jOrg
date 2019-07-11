@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Attackable;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -38,7 +38,7 @@ public class Monster extends Attackable {
      *
      * @param template to apply to the NPC
      */
-    public Monster(L2NpcTemplate template) {
+    public Monster(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2MonsterInstance);
         setAutoAttackable(true);

@@ -8,7 +8,7 @@ import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Attackable;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.skills.Skill;
@@ -18,7 +18,7 @@ public class Defender extends Attackable {
     private Castle _castle = null; // the castle which the instance should defend
     private Fort _fort = null; // the fortress which the instance should defend
 
-    public Defender(L2NpcTemplate template) {
+    public Defender(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2DefenderInstance);
     }

@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.Race;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.base.ClassType;
 import org.l2j.gameserver.model.base.PlayerClass;
 
@@ -27,7 +27,7 @@ public final class VillageMasterPriest extends VillageMaster {
      *
      * @param template the village master NPC template
      */
-    public VillageMasterPriest(L2NpcTemplate template) {
+    public VillageMasterPriest(NpcTemplate template) {
         super(template);
     }
 

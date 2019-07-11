@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.interfaces.IIdentifiable;
  *
  * @author JIV
  */
-public class L2DoorTemplate extends CreatureTemplate implements IIdentifiable {
+public class DoorTemplate extends CreatureTemplate implements IIdentifiable {
     private final int _doorId;
     private final int _nodeX[];
     private final int _nodeY[];
@@ -40,7 +40,7 @@ public class L2DoorTemplate extends CreatureTemplate implements IIdentifiable {
     private int _openTime;
     private int _randomTime;
 
-    public L2DoorTemplate(StatsSet set) {
+    public DoorTemplate(StatsSet set) {
         super(set);
         _doorId = set.getInt("id");
         _name = set.getString("name");

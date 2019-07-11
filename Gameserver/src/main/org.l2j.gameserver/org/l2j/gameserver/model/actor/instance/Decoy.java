@@ -7,7 +7,7 @@ import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.items.L2Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -25,7 +25,7 @@ public class Decoy extends Creature {
     private Future<?> _DecoyLifeTask;
     private Future<?> _HateSpam;
 
-    public Decoy(L2NpcTemplate template, Player owner, int totalLifeTime) {
+    public Decoy(NpcTemplate template, Player owner, int totalLifeTime) {
         super(template);
         setInstanceType(InstanceType.L2DecoyInstance);
         _owner = owner;
@@ -155,8 +155,8 @@ public class Decoy extends Creature {
     }
 
     @Override
-    public L2NpcTemplate getTemplate() {
-        return (L2NpcTemplate) super.getTemplate();
+    public NpcTemplate getTemplate() {
+        return (NpcTemplate) super.getTemplate();
     }
 
     @Override

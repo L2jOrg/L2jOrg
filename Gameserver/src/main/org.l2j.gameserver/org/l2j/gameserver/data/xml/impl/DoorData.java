@@ -5,7 +5,7 @@ import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Door;
-import org.l2j.gameserver.model.actor.templates.L2DoorTemplate;
+import org.l2j.gameserver.model.actor.templates.DoorTemplate;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -111,7 +111,7 @@ public final class DoorData extends GameXmlReader {
 
     public Door spawnDoor(StatsSet set) {
         // Create door template + door instance
-        final L2DoorTemplate template = new L2DoorTemplate(set);
+        final DoorTemplate template = new DoorTemplate(set);
         final Door door = spawnDoor(template, null);
 
         // Register the door
@@ -128,7 +128,7 @@ public final class DoorData extends GameXmlReader {
      * @param instance
      * @return a new door instance based on provided template
      */
-    public Door spawnDoor(L2DoorTemplate template, Instance instance) {
+    public Door spawnDoor(DoorTemplate template, Instance instance) {
         final Door door = new Door(template);
         door.setCurrentHp(door.getMaxHp());
 

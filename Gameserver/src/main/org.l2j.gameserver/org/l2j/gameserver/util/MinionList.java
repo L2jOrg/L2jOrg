@@ -7,7 +7,7 @@ import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Monster;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.holders.MinionHolder;
 
 import java.util.List;
@@ -40,12 +40,12 @@ public class MinionList {
      * <BR>
      *
      * @param master   Monster used as master for this minion
-     * @param minionId The L2NpcTemplate Identifier of the Minion to spawn
+     * @param minionId The NpcTemplate Identifier of the Minion to spawn
      * @return
      */
     public static Monster spawnMinion(Monster master, int minionId) {
         // Get the template of the Minion to spawn
-        final L2NpcTemplate minionTemplate = NpcData.getInstance().getTemplate(minionId);
+        final NpcTemplate minionTemplate = NpcData.getInstance().getTemplate(minionId);
         if (minionTemplate == null) {
             return null;
         }

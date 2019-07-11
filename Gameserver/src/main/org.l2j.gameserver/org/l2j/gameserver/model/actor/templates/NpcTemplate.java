@@ -29,7 +29,7 @@ import static java.util.Objects.nonNull;
  *
  * @author NosBit
  */
-public final class L2NpcTemplate extends CreatureTemplate implements IIdentifiable {
+public final class NpcTemplate extends CreatureTemplate implements IIdentifiable {
 
     private int _id;
     private int _displayId;
@@ -102,7 +102,7 @@ public final class L2NpcTemplate extends CreatureTemplate implements IIdentifiab
      *
      * @param set The StatsSet object to transfer data to the method
      */
-    public L2NpcTemplate(StatsSet set) {
+    public NpcTemplate(StatsSet set) {
         super(set);
     }
 

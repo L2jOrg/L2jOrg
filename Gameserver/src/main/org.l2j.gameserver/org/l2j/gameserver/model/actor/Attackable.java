@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.actor.instance.GrandBoss;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.status.AttackableStatus;
 import org.l2j.gameserver.model.actor.tasks.attackable.CommandChannelTimer;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableAggroRangeEnter;
@@ -92,7 +92,7 @@ public class Attackable extends Npc {
      *
      * @param template the template to apply to the NPC.
      */
-    public Attackable(L2NpcTemplate template) {
+    public Attackable(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2Attackable);
         setIsInvul(false);
@@ -812,7 +812,7 @@ public class Attackable extends Npc {
      * Each Special Event has a start and end date to stop to drop extra Items automatically.<br>
      * Actions:<br>
      * Manage drop of Special Events created by GM for a defined period.<br>
-     * Get all possible drops of this Attackable from L2NpcTemplate and add it Quest drops.<br>
+     * Get all possible drops of this Attackable from NpcTemplate and add it Quest drops.<br>
      * For each possible drops (base + quests), calculate which one must be dropped (random).<br>
      * Get each Item quantity dropped (random).<br>
      * Create this or these Item corresponding to each Item Identifier dropped.<br>
@@ -822,7 +822,7 @@ public class Attackable extends Npc {
      * @param npcTemplate
      * @param mainDamageDealer
      */
-    public void doItemDrop(L2NpcTemplate npcTemplate, Creature mainDamageDealer) {
+    public void doItemDrop(NpcTemplate npcTemplate, Creature mainDamageDealer) {
         if (mainDamageDealer == null) {
             return;
         }

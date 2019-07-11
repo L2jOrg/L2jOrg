@@ -42,7 +42,7 @@ public class PlayableStat extends CharStat {
 
         byte minimumLevel = 1;
         if (getActiveChar().isPet()) {
-            // get minimum level from L2NpcTemplate
+            // get minimum level from NpcTemplate
             minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((Pet) getActiveChar()).getTemplate().getId());
         }
 
@@ -83,7 +83,7 @@ public class PlayableStat extends CharStat {
 
         byte minimumLevel = 1;
         if (getActiveChar().isPet()) {
-            // get minimum level from L2NpcTemplate
+            // get minimum level from NpcTemplate
             minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((Pet) getActiveChar()).getTemplate().getId());
         }
         byte level = minimumLevel;

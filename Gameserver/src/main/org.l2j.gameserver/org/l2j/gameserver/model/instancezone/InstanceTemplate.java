@@ -14,7 +14,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2DoorTemplate;
+import org.l2j.gameserver.model.actor.templates.DoorTemplate;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.holders.InstanceReenterTimeHolder;
 import org.l2j.gameserver.model.instancezone.conditions.Condition;
@@ -37,7 +37,7 @@ import java.util.function.BiConsumer;
  * @author malyelfik
  */
 public class InstanceTemplate extends ListenersContainer implements IIdentifiable, INamable {
-    private final Map<Integer, L2DoorTemplate> _doors = new HashMap<>();
+    private final Map<Integer, DoorTemplate> _doors = new HashMap<>();
     private final List<SpawnTemplate> _spawns = new ArrayList<>();
     // Basic instance parameters
     private int _templateId = -1;
@@ -105,7 +105,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      * @param templateId template id of door
      * @param template   door template
      */
-    public void addDoor(int templateId, L2DoorTemplate template) {
+    public void addDoor(int templateId, DoorTemplate template) {
         _doors.put(templateId, template);
     }
 
@@ -386,7 +386,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      *
      * @return map in form <i>doorId, door template</i>
      */
-    public Map<Integer, L2DoorTemplate> getDoors() {
+    public Map<Integer, DoorTemplate> getDoors() {
         return _doors;
     }
 

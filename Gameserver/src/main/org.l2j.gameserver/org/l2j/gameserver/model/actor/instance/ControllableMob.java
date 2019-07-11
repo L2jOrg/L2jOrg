@@ -20,7 +20,7 @@ import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.ai.L2ControllableMobAI;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 
 /**
  * @author littlecrow
@@ -28,7 +28,7 @@ import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 public class ControllableMob extends Monster {
     private boolean _isInvul;
 
-    public ControllableMob(L2NpcTemplate template) {
+    public ControllableMob(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2ControllableMobInstance);
     }

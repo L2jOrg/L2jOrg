@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.actor.instance;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.L2SkillLearn;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
@@ -28,7 +28,7 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import java.util.List;
 
 public final class Fisherman extends Merchant {
-    public Fisherman(L2NpcTemplate template) {
+    public Fisherman(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2FishermanInstance);
     }

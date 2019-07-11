@@ -23,7 +23,7 @@ import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.skills.BuffInfo;
@@ -43,7 +43,7 @@ public class Doppelganger extends Npc {
 
     private boolean _copySummonerEffects = true;
 
-    public Doppelganger(L2NpcTemplate template, Player owner) {
+    public Doppelganger(NpcTemplate template, Player owner) {
         super(template);
 
         setSummoner(owner);

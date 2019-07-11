@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 
 /**
  * This class manages all Grand Bosses.
@@ -31,9 +31,9 @@ public final class GrandBoss extends Monster {
     /**
      * Constructor for GrandBoss. This represent all grandbosses.
      *
-     * @param template L2NpcTemplate of the instance
+     * @param template NpcTemplate of the instance
      */
-    public GrandBoss(L2NpcTemplate template) {
+    public GrandBoss(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2GrandBossInstance);
         setIsRaid(true);

@@ -28,7 +28,7 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.olympiad.Olympiad;
@@ -204,7 +204,7 @@ public class Hero {
                     _diaryentry.set("date", date);
 
                     if (action == ACTION_RAID_KILLED) {
-                        final L2NpcTemplate template = NpcData.getInstance().getTemplate(param);
+                        final NpcTemplate template = NpcData.getInstance().getTemplate(param);
                         if (template != null) {
                             _diaryentry.set("action", template.getName() + " was defeated");
                         }
@@ -642,7 +642,7 @@ public class Hero {
     public void setRBkilled(int charId, int npcId) {
         setDiaryData(charId, ACTION_RAID_KILLED, npcId);
 
-        final L2NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
+        final NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
         final List<StatsSet> list = HERO_DIARY.get(charId);
         if ((list == null) || (template == null)) {
             return;

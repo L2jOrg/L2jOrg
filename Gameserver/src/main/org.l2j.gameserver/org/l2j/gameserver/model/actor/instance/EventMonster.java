@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 
 /**
  * @author Gnacik
@@ -33,7 +33,7 @@ public class EventMonster extends Monster {
     // Todo: Some mobs need protect drop for spawner
     public boolean drop_on_ground = false;
 
-    public EventMonster(L2NpcTemplate template) {
+    public EventMonster(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2EventMobInstance);
     }

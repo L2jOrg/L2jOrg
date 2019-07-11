@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.L2SkillLearn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.status.FolkStatus;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -31,7 +31,7 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import java.util.List;
 
 public class Folk extends Npc {
-    public Folk(L2NpcTemplate template) {
+    public Folk(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2NpcInstance);
         setIsInvul(false);

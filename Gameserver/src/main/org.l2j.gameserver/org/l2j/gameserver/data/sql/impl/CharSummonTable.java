@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.L2PetData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Servitor;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.PetItemList;
@@ -101,7 +101,7 @@ public class CharSummonTable {
             LOGGER.warn(": Null pet data for: " + activeChar + " and summoning item: " + item);
             return;
         }
-        final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
+        final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
         if (npcTemplate == null) {
             LOGGER.warn(": Null pet NPC template for: " + activeChar + " and pet Id:" + petData.getNpcId());
             return;

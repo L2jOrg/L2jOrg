@@ -39,7 +39,7 @@ import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
 import org.l2j.gameserver.model.actor.stat.PcStat;
 import org.l2j.gameserver.model.actor.status.PcStatus;
 import org.l2j.gameserver.model.actor.tasks.player.*;
-import org.l2j.gameserver.model.actor.templates.L2PcTemplate;
+import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.ClassLevel;
@@ -126,7 +126,7 @@ public final class Player extends Playable {
     private ElementalSpirit[] spirits;
     private ElementalType activeElementalSpiritType;
 
-    private Player(CharacterData characterData, L2PcTemplate template) {
+    private Player(CharacterData characterData, PlayerTemplate template) {
         super(characterData.getCharId(), template);
         this.model = characterData;
         setName(characterData.getName());
@@ -144,7 +144,7 @@ public final class Player extends Playable {
         }
     }
 
-    public static Player create(CharacterData characterData, L2PcTemplate template) {
+    public static Player create(CharacterData characterData, PlayerTemplate template) {
         final Player player = new Player(characterData, template);
 
         player.setAccessLevel(0, false, false);
@@ -1205,18 +1205,18 @@ public final class Player extends Playable {
     }
 
     /**
-     * @return the base L2PcTemplate link to the Player.
+     * @return the base PlayerTemplate link to the Player.
      */
-    public final L2PcTemplate getBaseTemplate() {
+    public final PlayerTemplate getBaseTemplate() {
         return PlayerTemplateData.getInstance().getTemplate(_baseClass);
     }
 
     /**
-     * @return the L2PcTemplate link to the Player.
+     * @return the PlayerTemplate link to the Player.
      */
     @Override
-    public final L2PcTemplate getTemplate() {
-        return (L2PcTemplate) super.getTemplate();
+    public final PlayerTemplate getTemplate() {
+        return (PlayerTemplate) super.getTemplate();
     }
 
     /**
@@ -2103,7 +2103,7 @@ public final class Player extends Playable {
     }
 
     /**
-     * @return the ClassId object of the Player contained in L2PcTemplate.
+     * @return the ClassId object of the Player contained in PlayerTemplate.
      */
     public ClassId getClassId() {
         return getTemplate().getClassId();
@@ -2112,7 +2112,7 @@ public final class Player extends Playable {
     /**
      * Set the template of the Player.
      *
-     * @param Id The Identifier of the L2PcTemplate to set to the Player
+     * @param Id The Identifier of the PlayerTemplate to set to the Player
      */
     public void setClassId(int Id) {
         if (!_subclassLock.tryLock()) {
@@ -8045,7 +8045,7 @@ public final class Player extends Playable {
     private void setClassTemplate(int classId) {
         _activeClass = classId;
 
-        final L2PcTemplate pcTemplate = PlayerTemplateData.getInstance().getTemplate(classId);
+        final PlayerTemplate pcTemplate = PlayerTemplateData.getInstance().getTemplate(classId);
         if (pcTemplate == null) {
             LOGGER.error("Missing template for classId: " + classId);
             throw new Error();

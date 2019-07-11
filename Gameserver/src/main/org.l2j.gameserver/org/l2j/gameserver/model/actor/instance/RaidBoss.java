@@ -5,7 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.L2Spawn;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 
 /**
@@ -28,7 +28,7 @@ public class RaidBoss extends Monster {
      *
      * @param template to apply to the NPC
      */
-    public RaidBoss(L2NpcTemplate template) {
+    public RaidBoss(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2RaidBossInstance);
         setIsRaid(true);

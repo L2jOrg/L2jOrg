@@ -17,7 +17,7 @@ import org.l2j.gameserver.model.actor.instance.*;
 import org.l2j.gameserver.model.actor.stat.NpcStat;
 import org.l2j.gameserver.model.actor.status.NpcStatus;
 import org.l2j.gameserver.model.actor.tasks.npc.RandomAnimationTask;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.entity.Fort;
@@ -124,9 +124,9 @@ public class Npc extends Creature {
      * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li>
      * </ul>
      *
-     * @param template The L2NpcTemplate to apply to the NPC
+     * @param template The NpcTemplate to apply to the NPC
      */
-    public Npc(L2NpcTemplate template) {
+    public Npc(NpcTemplate template) {
         // Call the Creature constructor to set the _template of the Creature, copy skills from template to object
         // and link _calculators to NPC_STD_CALCULATOR
         super(template);
@@ -237,11 +237,11 @@ public class Npc extends Creature {
     }
 
     /**
-     * Return the L2NpcTemplate of the Folk.
+     * Return the NpcTemplate of the Folk.
      */
     @Override
-    public final L2NpcTemplate getTemplate() {
-        return (L2NpcTemplate) super.getTemplate();
+    public final NpcTemplate getTemplate() {
+        return (NpcTemplate) super.getTemplate();
     }
 
     /**
@@ -260,7 +260,7 @@ public class Npc extends Creature {
     }
 
     /**
-     * Return the Level of this Folk contained in the L2NpcTemplate.
+     * Return the Level of this Folk contained in the NpcTemplate.
      */
     @Override
     public final int getLevel() {
@@ -275,7 +275,7 @@ public class Npc extends Creature {
     }
 
     /**
-     * @return the Aggro Range of this Folk either contained in the L2NpcTemplate, or overriden by spawnlist AI value.
+     * @return the Aggro Range of this Folk either contained in the NpcTemplate, or overriden by spawnlist AI value.
      */
     public int getAggroRange() {
         return getTemplate().getAggroRange();
@@ -290,7 +290,7 @@ public class Npc extends Creature {
     }
 
     /**
-     * Return True if this Folk is undead in function of the L2NpcTemplate.
+     * Return True if this Folk is undead in function of the NpcTemplate.
      */
     @Override
     public boolean isUndead() {
@@ -332,7 +332,7 @@ public class Npc extends Creature {
             }
 
             // Chaos NPCs attack everything except clan.
-            if (((L2NpcTemplate) attacker.getTemplate()).isChaos()) {
+            if (((NpcTemplate) attacker.getTemplate()).isChaos()) {
                 return true;
             }
 
@@ -348,14 +348,14 @@ public class Npc extends Creature {
     }
 
     /**
-     * @return the Identifier of the item in the left hand of this Folk contained in the L2NpcTemplate.
+     * @return the Identifier of the item in the left hand of this Folk contained in the NpcTemplate.
      */
     public int getLeftHandItem() {
         return _currentLHandId;
     }
 
     /**
-     * @return the Identifier of the item in the right hand of this Folk contained in the L2NpcTemplate.
+     * @return the Identifier of the item in the right hand of this Folk contained in the NpcTemplate.
      */
     public int getRightHandItem() {
         return _currentRHandId;

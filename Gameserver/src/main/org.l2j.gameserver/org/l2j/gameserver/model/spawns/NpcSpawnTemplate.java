@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Monster;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.holders.MinionHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.IParameterized;
@@ -247,7 +247,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
 
     public void spawn(Instance instance) {
         try {
-            final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(_id);
+            final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(_id);
             if (npcTemplate == null) {
                 LOGGER.warn("Attempting to spawn unexisting npc id: " + _id + " file: " + _spawnTemplate.getFile().getName() + " spawn: " + _spawnTemplate.getName() + " group: " + _group.getName());
                 return;
@@ -274,7 +274,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
      * @throws ClassNotFoundException
      * @throws SecurityException
      */
-    private void spawnNpc(L2NpcTemplate npcTemplate, Instance instance) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException {
+    private void spawnNpc(NpcTemplate npcTemplate, Instance instance) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException {
         final L2Spawn spawn = new L2Spawn(npcTemplate);
         final Location loc = getSpawnLocation();
         if (loc == null) {

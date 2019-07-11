@@ -22,7 +22,7 @@ import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.*;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Trap;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.events.annotations.*;
@@ -1261,7 +1261,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                         }
 
                         for (int level = range.from(); level <= range.to(); level++) {
-                            final List<L2NpcTemplate> templates = NpcData.getInstance().getAllOfLevel(level);
+                            final List<NpcTemplate> templates = NpcData.getInstance().getAllOfLevel(level);
                             templates.forEach(template -> ids.add(template.getId()));
                         }
 
@@ -1277,7 +1277,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                             }
 
                             for (int level = range.from(); level <= range.to(); level++) {
-                                final List<L2NpcTemplate> templates = NpcData.getInstance().getAllOfLevel(level);
+                                final List<NpcTemplate> templates = NpcData.getInstance().getAllOfLevel(level);
                                 templates.forEach(template -> ids.add(template.getId()));
                             }
                         }
@@ -2568,7 +2568,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     private void registerListenrWithId(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, List<AbstractEventListener> listeners, int id) {
         switch (registerType) {
             case NPC: {
-                final L2NpcTemplate template = NpcData.getInstance().getTemplate(id);
+                final NpcTemplate template = NpcData.getInstance().getTemplate(id);
                 if (template != null) {
                     listeners.add(template.addListener(action.apply(template)));
                 }
@@ -2676,7 +2676,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @return
      */
     public Trap addTrap(int trapId, int x, int y, int z, int heading, Skill skill, int instanceId) {
-        final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(trapId);
+        final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(trapId);
         final Trap trap = new Trap(npcTemplate, instanceId, -1);
         trap.setCurrentHp(trap.getMaxHp());
         trap.setCurrentMp(trap.getMaxMp());

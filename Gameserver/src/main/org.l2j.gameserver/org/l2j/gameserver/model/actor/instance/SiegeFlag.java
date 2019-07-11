@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.L2SiegeClan;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.status.SiegeFlagStatus;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Siegable;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -23,7 +23,7 @@ public class SiegeFlag extends Npc {
     private Siegable _siege;
     private boolean _canTalk;
 
-    public SiegeFlag(Player player, L2NpcTemplate template, boolean advanced) {
+    public SiegeFlag(Player player, NpcTemplate template, boolean advanced) {
         super(template);
         setInstanceType(InstanceType.L2SiegeFlagInstance);
 

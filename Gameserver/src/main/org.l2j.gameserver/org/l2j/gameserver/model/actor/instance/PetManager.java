@@ -17,12 +17,12 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.Evolve;
 
 public class PetManager extends Merchant {
-    public PetManager(L2NpcTemplate template) {
+    public PetManager(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2PetManagerInstance);
     }

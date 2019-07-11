@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Decoy;
 import org.l2j.gameserver.model.actor.instance.EffectPoint;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -88,7 +88,7 @@ public final class SummonNpc extends AbstractEffect
 			return;
 		}
 		
-		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(_npcId);
+		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(_npcId);
 		if (npcTemplate == null)
 		{
 			LOGGER.warn(SummonNpc.class.getSimpleName() + ": Spawn of the nonexisting NPC ID: " + _npcId + ", skill ID:" + skill.getId());

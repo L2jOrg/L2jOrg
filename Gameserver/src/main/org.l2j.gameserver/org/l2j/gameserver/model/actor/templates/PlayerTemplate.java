@@ -30,7 +30,7 @@ import java.util.Map;
 /**
  * @author mkizub, Zoey76
  */
-public class L2PcTemplate extends CreatureTemplate {
+public class PlayerTemplate extends CreatureTemplate {
     private final ClassId _classId;
 
     private final float[] _baseHp;
@@ -49,7 +49,7 @@ public class L2PcTemplate extends CreatureTemplate {
     private final List<Location> _creationPoints;
     private final Map<Integer, Integer> _baseSlotDef;
 
-    public L2PcTemplate(StatsSet set, List<Location> creationPoints) {
+    public PlayerTemplate(StatsSet set, List<Location> creationPoints) {
         super(set);
         _classId = ClassId.getClassId(set.getInt("classId"));
         setRace(_classId.getRace());
