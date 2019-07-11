@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.VariationData;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExVariationCancelResult;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -29,7 +29,7 @@ public final class RequestRefineCancel extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
+        final Item targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
         if (targetItem == null) {
             client.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
             return;

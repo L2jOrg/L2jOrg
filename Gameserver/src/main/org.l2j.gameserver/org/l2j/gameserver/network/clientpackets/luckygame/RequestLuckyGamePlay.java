@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.LuckyGameDataHolder;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -121,7 +121,7 @@ public class RequestLuckyGamePlay extends ClientPacket {
         final InventoryUpdate iu = new InventoryUpdate();
         for (Entry<LuckyGameItemType, List<ItemHolder>> reward : rewards.entrySet()) {
             for (ItemHolder r : reward.getValue()) {
-                final L2ItemInstance item = player.addItem("LuckyGame", r.getId(), r.getCount(), player, true);
+                final Item item = player.addItem("LuckyGame", r.getId(), r.getCount(), player, true);
                 iu.addItem(item);
                 if (reward.getKey() == LuckyGameItemType.UNIQUE) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_HAS_OBTAINED_S2_OF_S3_THROUGH_FORTUNE_READING);

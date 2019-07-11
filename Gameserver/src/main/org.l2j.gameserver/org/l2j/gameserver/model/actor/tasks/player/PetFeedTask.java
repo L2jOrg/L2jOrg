@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.actor.tasks.player;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
@@ -66,7 +66,7 @@ public class PetFeedTask implements Runnable {
                 if (foodIds.isEmpty()) {
                     return;
                 }
-                L2ItemInstance food = null;
+                Item food = null;
                 for (int id : foodIds) {
                     // TODO: possibly pet inv?
                     food = _player.getInventory().getItemByItemId(id);

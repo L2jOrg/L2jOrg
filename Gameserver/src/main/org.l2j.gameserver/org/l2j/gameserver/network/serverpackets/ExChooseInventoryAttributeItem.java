@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.Elementals;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -20,7 +20,7 @@ public class ExChooseInventoryAttributeItem extends ServerPacket {
     private final int _level;
     private final Set<Integer> _items = new HashSet<>();
 
-    public ExChooseInventoryAttributeItem(Player activeChar, L2ItemInstance stone) {
+    public ExChooseInventoryAttributeItem(Player activeChar, Item stone) {
         _itemId = stone.getDisplayId();
         _count = stone.getCount();
         _atribute = AttributeType.findByClientId(Elementals.getItemElement(_itemId));
@@ -30,7 +30,7 @@ public class ExChooseInventoryAttributeItem extends ServerPacket {
         _level = Elementals.getMaxElementLevel(_itemId);
 
         // Register only items that can be put an attribute stone/crystal
-        for (L2ItemInstance item : activeChar.getInventory().getItems()) {
+        for (Item item : activeChar.getInventory().getItems()) {
             if (item.isElementable()) {
                 _items.add(item.getObjectId());
             }

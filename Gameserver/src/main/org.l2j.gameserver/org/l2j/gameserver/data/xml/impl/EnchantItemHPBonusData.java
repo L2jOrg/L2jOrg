@@ -1,7 +1,7 @@
 package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -73,7 +73,7 @@ public class EnchantItemHPBonusData extends GameXmlReader {
      * @param item the item
      * @return the HP bonus
      */
-    public final int getHPBonus(L2ItemInstance item) {
+    public final int getHPBonus(Item item) {
         final List<Integer> values = _armorHPBonuses.get(item.getItem().getCrystalType());
         if ((values == null) || values.isEmpty() || (item.getOlyEnchantLevel() <= 0)) {
             return 0;

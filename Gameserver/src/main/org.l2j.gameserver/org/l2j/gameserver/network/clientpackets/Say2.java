@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerChat;
 import org.l2j.gameserver.model.events.returns.ChatFilterReturn;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.L2GameClient;
@@ -211,7 +211,7 @@ public final class Say2 extends ClientPacket {
                 result.append(_text.charAt(pos++));
             }
             final int id = Integer.parseInt(result.toString());
-            final L2ItemInstance item = owner.getInventory().getItemByObjectId(id);
+            final Item item = owner.getInventory().getItemByObjectId(id);
 
             if (item == null) {
                 LOGGER.info(client + " trying publish item which doesnt own! ID:" + id);

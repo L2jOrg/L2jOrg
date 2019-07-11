@@ -4,7 +4,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 
@@ -28,7 +28,7 @@ public final class CallLearnedSkill extends AbstractEffect
     }
 
     @Override
-    public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
+    public void instant(Creature effector, Creature effected, Skill skill, Item item)
     {
         final Skill knownSkill = effector.getKnownSkill(_skillId);
         if (knownSkill != null)

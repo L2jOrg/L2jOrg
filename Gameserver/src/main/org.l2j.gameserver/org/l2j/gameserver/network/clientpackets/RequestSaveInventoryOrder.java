@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +38,7 @@ public final class RequestSaveInventoryOrder extends ClientPacket {
         if (player != null) {
             final Inventory inventory = player.getInventory();
             for (InventoryOrder order : _order) {
-                final L2ItemInstance item = inventory.getItemByObjectId(order.objectID);
+                final Item item = inventory.getItemByObjectId(order.objectID);
                 if ((item != null) && (item.getItemLocation() == ItemLocation.INVENTORY)) {
                     item.setItemLocation(ItemLocation.INVENTORY, order.order);
                 }

@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSummonSpawn
 import org.l2j.gameserver.model.itemcontainer.PetInventory;
 import org.l2j.gameserver.model.items.L2EtcItem;
 import org.l2j.gameserver.model.items.L2Weapon;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ActionType;
 import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.skills.Skill;
@@ -422,7 +422,7 @@ public abstract class Summon extends Playable {
     }
 
     @Override
-    public L2ItemInstance getActiveWeaponInstance() {
+    public Item getActiveWeaponInstance() {
         return null;
     }
 
@@ -432,7 +432,7 @@ public abstract class Summon extends Playable {
     }
 
     @Override
-    public L2ItemInstance getSecondaryWeaponInstance() {
+    public Item getSecondaryWeaponInstance() {
         return null;
     }
 
@@ -486,7 +486,7 @@ public abstract class Summon extends Playable {
      * @param dontMove used to prevent movement, if not in range
      */
     @Override
-    public boolean useMagic(Skill skill, L2ItemInstance item, boolean forceUse, boolean dontMove) {
+    public boolean useMagic(Skill skill, Item item, boolean forceUse, boolean dontMove) {
         // Null skill, dead summon or null owner are reasons to prevent casting.
         if ((skill == null) || isDead() || (_owner == null)) {
             return false;
@@ -861,7 +861,7 @@ public abstract class Summon extends Playable {
 
     @Override
     public void rechargeShots(boolean physical, boolean magic, boolean fish) {
-        L2ItemInstance item;
+        Item item;
         IItemHandler handler;
 
         if ((_owner.getAutoSoulShot() == null) || _owner.getAutoSoulShot().isEmpty()) {

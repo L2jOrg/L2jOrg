@@ -6,7 +6,7 @@ import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 
@@ -247,7 +247,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
     }
 
     @Override
-    protected void onIntentionCast(Skill skill, WorldObject target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
+    protected void onIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove) {
         if (getIntention() == AI_INTENTION_ATTACK) {
             _lastAttack = (getTarget() != null) && getTarget().isCharacter() ? (Creature) getTarget() : null;
         } else {

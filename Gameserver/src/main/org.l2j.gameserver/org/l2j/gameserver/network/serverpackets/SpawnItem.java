@@ -1,13 +1,13 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public final class SpawnItem extends ServerPacket {
-    private final L2ItemInstance _item;
+    private final Item _item;
 
-    public SpawnItem(L2ItemInstance item) {
+    public SpawnItem(Item item) {
         _item = item;
     }
 

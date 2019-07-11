@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.Elementals;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemAttributeRequest;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExAttributeEnchantResult;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -67,8 +67,8 @@ public class RequestExEnchantItemAttribute extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
-        final L2ItemInstance stone = request.getEnchantingStone();
+        final Item item = player.getInventory().getItemByObjectId(_objectId);
+        final Item stone = request.getEnchantingStone();
         if ((item == null) || (stone == null)) {
             player.removeRequest(request.getClass());
             client.sendPacket(SystemMessageId.ATTRIBUTE_ITEM_USAGE_HAS_BEEN_CANCELLED);
@@ -215,7 +215,7 @@ public class RequestExEnchantItemAttribute extends ClientPacket {
         player.sendInventoryUpdate(iu);
     }
 
-    private int addElement(Player player, L2ItemInstance stone, L2ItemInstance item, AttributeType elementToAdd) {
+    private int addElement(Player player, Item stone, Item item, AttributeType elementToAdd) {
         final AttributeHolder oldElement = item.getAttribute(elementToAdd);
         final int elementValue = oldElement == null ? 0 : oldElement.getValue();
         final int limit = getLimit(item, stone.getId());
@@ -261,7 +261,7 @@ public class RequestExEnchantItemAttribute extends ClientPacket {
         return success ? 1 : 0;
     }
 
-    public int getLimit(L2ItemInstance item, int sotneId) {
+    public int getLimit(Item item, int sotneId) {
         final Elementals.ElementalItems elementItem = Elementals.getItemElemental(sotneId);
         if (elementItem == null) {
             return 0;
@@ -273,7 +273,7 @@ public class RequestExEnchantItemAttribute extends ClientPacket {
         return Elementals.ARMOR_VALUES[elementItem._type._maxLevel];
     }
 
-    public int getPowerToAdd(int stoneId, int oldValue, L2ItemInstance item) {
+    public int getPowerToAdd(int stoneId, int oldValue, Item item) {
         if (Elementals.getItemElement(stoneId) != -1) {
             if (item.isWeapon()) {
                 if (oldValue == 0) {

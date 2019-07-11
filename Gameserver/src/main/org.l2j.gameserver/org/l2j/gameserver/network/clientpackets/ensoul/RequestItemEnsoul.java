@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.ensoul.EnsoulStone;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -78,7 +78,7 @@ public class RequestItemEnsoul extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance item = player.getInventory().getItemByObjectId(_itemObjectId);
+        final Item item = player.getInventory().getItemByObjectId(_itemObjectId);
         if (item == null) {
             LOGGER.warn("Player: {} attempting to ensoul item without having it!", player);
             return;
@@ -108,7 +108,7 @@ public class RequestItemEnsoul extends ClientPacket {
         final InventoryUpdate iu = new InventoryUpdate();
         for (EnsoulItemOption itemOption : _options) {
             final int position = itemOption.getPosition() - 1;
-            final L2ItemInstance soulCrystal = player.getInventory().getItemByObjectId(itemOption.getSoulCrystalObjectId());
+            final Item soulCrystal = player.getInventory().getItemByObjectId(itemOption.getSoulCrystalObjectId());
             if (soulCrystal == null) {
                 player.sendPacket(SystemMessageId.THE_RUNE_DOES_NOT_FIT);
                 continue;
@@ -157,7 +157,7 @@ public class RequestItemEnsoul extends ClientPacket {
                 continue;
             }
 
-            final L2ItemInstance gemStones = player.getInventory().getItemByItemId(fee.getId());
+            final Item gemStones = player.getInventory().getItemByItemId(fee.getId());
             if ((gemStones == null) || (gemStones.getCount() < fee.getCount())) {
                 continue;
             }

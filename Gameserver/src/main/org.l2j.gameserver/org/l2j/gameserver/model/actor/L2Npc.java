@@ -28,7 +28,7 @@ import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.items.L2Weapon;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
@@ -525,7 +525,7 @@ public class L2Npc extends Creature {
      * Return null (regular NPCs don't have weapons instances).
      */
     @Override
-    public L2ItemInstance getActiveWeaponInstance() {
+    public Item getActiveWeaponInstance() {
         return null;
     }
 
@@ -541,7 +541,7 @@ public class L2Npc extends Creature {
      * Return null (regular NPCs don't have weapons instances).
      */
     @Override
-    public L2ItemInstance getSecondaryWeaponInstance() {
+    public Item getSecondaryWeaponInstance() {
         return null;
     }
 
@@ -1233,8 +1233,8 @@ public class L2Npc extends Creature {
      * @param itemCount the item count
      * @return the dropped item
      */
-    public L2ItemInstance dropItem(Creature character, int itemId, long itemCount) {
-        L2ItemInstance item = null;
+    public Item dropItem(Creature character, int itemId, long itemCount) {
+        Item item = null;
         for (int i = 0; i < itemCount; i++) {
             // Randomize drop position.
             final int newX = (getX() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
@@ -1280,7 +1280,7 @@ public class L2Npc extends Creature {
      * @param item      the item holder
      * @return the dropped item
      */
-    public L2ItemInstance dropItem(Creature character, ItemHolder item) {
+    public Item dropItem(Creature character, ItemHolder item) {
         return dropItem(character, item.getId(), item.getCount());
     }
 

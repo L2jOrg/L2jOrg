@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.conditions;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ArmorType;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -52,7 +52,7 @@ public final class ConditionUsingItemType extends Condition {
         // If ConditionUsingItemType is one between Light, Heavy or Magic
         if (_armor) {
             // Get the itemMask of the weared chest (if exists)
-            final L2ItemInstance chest = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
+            final Item chest = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
             if (chest == null) {
                 return (ArmorType.NONE.mask() & _mask) == ArmorType.NONE.mask();
             }
@@ -71,7 +71,7 @@ public final class ConditionUsingItemType extends Condition {
                 return true;
             }
             // check legs armor
-            final L2ItemInstance legs = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
+            final Item legs = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
             if (legs == null) {
                 return (ArmorType.NONE.mask() & _mask) == ArmorType.NONE.mask();
             }

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.options.EnchantOptions;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -89,7 +89,7 @@ public class EnchantItemOptionsData extends GameXmlReader {
      * @param item
      * @return enchant effects information.
      */
-    public EnchantOptions getOptions(L2ItemInstance item) {
+    public EnchantOptions getOptions(Item item) {
         return item != null ? getOptions(item.getId(), item.getEnchantLevel()) : null;
     }
 

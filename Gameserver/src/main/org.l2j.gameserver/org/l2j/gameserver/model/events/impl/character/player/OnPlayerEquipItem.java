@@ -19,16 +19,16 @@ package org.l2j.gameserver.model.events.impl.character.player;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid
  */
 public class OnPlayerEquipItem implements IBaseEvent {
     private final Player _activeChar;
-    private final L2ItemInstance _item;
+    private final Item _item;
 
-    public OnPlayerEquipItem(Player activeChar, L2ItemInstance item) {
+    public OnPlayerEquipItem(Player activeChar, Item item) {
         _activeChar = activeChar;
         _item = item;
     }
@@ -37,7 +37,7 @@ public class OnPlayerEquipItem implements IBaseEvent {
         return _activeChar;
     }
 
-    public L2ItemInstance getItem() {
+    public Item getItem() {
         return _item;
     }
 

@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerFishing;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.zone.L2ZoneType;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -107,7 +107,7 @@ public class Fishing {
     }
 
     private FishingBaitData getCurrentBaitData() {
-        final L2ItemInstance bait = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+        final Item bait = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
         return bait != null ? FishingData.getInstance().getBaitData(bait.getId()) : null;
     }
 
@@ -163,7 +163,7 @@ public class Fishing {
             return;
         }
 
-        final L2ItemInstance rod = _player.getActiveWeaponInstance();
+        final Item rod = _player.getActiveWeaponInstance();
         if ((rod == null) || (rod.getItemType() != WeaponType.FISHINGROD)) {
             _player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_FISHING_POLE_EQUIPPED);
             _player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -258,7 +258,7 @@ public class Fishing {
         cancelTasks();
 
         try {
-            final L2ItemInstance bait = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+            final Item bait = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
             if (consumeBait) {
                 if ((bait == null) || !_player.getInventory().updateItemCount(null, bait, -1, _player, null)) {
                     reason = FishingEndReason.LOSE; // no bait - no reward

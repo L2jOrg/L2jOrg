@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.itemcontainer.ClanWarehouse;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.itemcontainer.PcWarehouse;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -96,7 +96,7 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
 
         for (ItemHolder i : _items) {
             // Calculate needed slots
-            final L2ItemInstance item = warehouse.getItemByObjectId(i.getId());
+            final Item item = warehouse.getItemByObjectId(i.getId());
             if ((item == null) || (item.getCount() < i.getCount())) {
                 GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to withdraw non-existent item from warehouse.", Config.DEFAULT_PUNISH);
                 return;
@@ -125,12 +125,12 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
         // Proceed to the transfer
         final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
         for (ItemHolder i : _items) {
-            final L2ItemInstance oldItem = warehouse.getItemByObjectId(i.getId());
+            final Item oldItem = warehouse.getItemByObjectId(i.getId());
             if ((oldItem == null) || (oldItem.getCount() < i.getCount())) {
                 LOGGER.warn("Error withdrawing a warehouse object for char " + player.getName() + " (olditem == null)");
                 return;
             }
-            final L2ItemInstance newItem = warehouse.transferItem(warehouse.getName(), i.getId(), i.getCount(), player.getInventory(), player, manager);
+            final Item newItem = warehouse.transferItem(warehouse.getName(), i.getId(), i.getCount(), player.getInventory(), player, manager);
             if (newItem == null) {
                 LOGGER.warn("Error withdrawing a warehouse object for char " + player.getName() + " (newitem == null)");
                 return;

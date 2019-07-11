@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.Position;
 import org.l2j.gameserver.model.CharEffectList;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
@@ -383,7 +383,7 @@ public class CharStat {
     }
 
     public AttributeType getAttackElement() {
-        final L2ItemInstance weaponInstance = _activeChar.getActiveWeaponInstance();
+        final Item weaponInstance = _activeChar.getActiveWeaponInstance();
         // 1st order - weapon element
         if ((weaponInstance != null) && (weaponInstance.getAttackAttributeType() != AttributeType.NONE)) {
             return weaponInstance.getAttackAttributeType();

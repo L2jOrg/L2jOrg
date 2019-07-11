@@ -10,7 +10,7 @@ import org.l2j.gameserver.instancemanager.ItemAuctionManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
@@ -286,7 +286,7 @@ public final class ItemAuctionInstance {
 
         final ItemAuctionBid bid = auction.getHighestBid();
         if (bid != null) {
-            final L2ItemInstance item = auction.createNewItemInstance();
+            final Item item = auction.createNewItemInstance();
             final Player player = bid.getPlayer();
             if (player != null) {
                 player.getWarehouse().addItem("ItemAuction", item, null, null);

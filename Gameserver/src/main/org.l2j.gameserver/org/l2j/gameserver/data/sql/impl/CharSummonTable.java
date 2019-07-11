@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Servitor;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.PetItemList;
 import org.slf4j.Logger;
@@ -91,7 +91,7 @@ public class CharSummonTable {
     }
 
     public void restorePet(Player activeChar) {
-        final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_pets.get(activeChar.getObjectId()));
+        final Item item = activeChar.getInventory().getItemByObjectId(_pets.get(activeChar.getObjectId()));
         if (item == null) {
             LOGGER.warn(": Null pet summoning item for: " + activeChar);
             return;

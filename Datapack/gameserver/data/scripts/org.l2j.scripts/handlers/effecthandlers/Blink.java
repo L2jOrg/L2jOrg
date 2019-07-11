@@ -22,7 +22,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
@@ -76,7 +76,7 @@ public final class Blink extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		final double angle = GameUtils.convertHeadingToDegree(effected.getHeading());
 		final double radian = Math.toRadians(angle);

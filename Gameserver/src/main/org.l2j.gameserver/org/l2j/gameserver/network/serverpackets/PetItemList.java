@@ -1,15 +1,15 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.Collection;
 
 public class PetItemList extends AbstractItemPacket {
-    private final Collection<L2ItemInstance> _items;
+    private final Collection<Item> _items;
 
-    public PetItemList(Collection<L2ItemInstance> items) {
+    public PetItemList(Collection<Item> items) {
         _items = items;
     }
 
@@ -18,7 +18,7 @@ public class PetItemList extends AbstractItemPacket {
         writeId(ServerPacketId.PET_ITEM_LIST);
 
         writeShort((short) _items.size());
-        for (L2ItemInstance item : _items) {
+        for (Item item : _items) {
             writeItem(item);
         }
     }

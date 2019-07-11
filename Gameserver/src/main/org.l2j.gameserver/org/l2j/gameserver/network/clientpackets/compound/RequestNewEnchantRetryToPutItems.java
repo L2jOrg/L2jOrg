@@ -4,7 +4,7 @@ import org.l2j.gameserver.data.xml.impl.CombinationItemsData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.CompoundRequest;
 import org.l2j.gameserver.model.items.combination.CombinationItem;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.ExEnchantRetryToPutItemFail;
@@ -46,7 +46,7 @@ public class RequestNewEnchantRetryToPutItems extends ClientPacket {
 
         // Make sure player owns first item.
         request.setItemOne(_firstItemObjectId);
-        final L2ItemInstance itemOne = request.getItemOne();
+        final Item itemOne = request.getItemOne();
         if (itemOne == null) {
             client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
             activeChar.removeRequest(request.getClass());
@@ -55,7 +55,7 @@ public class RequestNewEnchantRetryToPutItems extends ClientPacket {
 
         // Make sure player owns second item.
         request.setItemTwo(_secondItemObjectId);
-        final L2ItemInstance itemTwo = request.getItemTwo();
+        final Item itemTwo = request.getItemTwo();
         if (itemTwo == null) {
             client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
             activeChar.removeRequest(request.getClass());

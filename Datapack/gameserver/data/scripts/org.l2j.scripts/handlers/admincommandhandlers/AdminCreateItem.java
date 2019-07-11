@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ExAdenaInvenCount;
 import org.l2j.gameserver.network.serverpackets.GMViewItemList;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -219,7 +219,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				idval = Integer.parseInt(id);
 				numval = 1;
 			}
-			final L2ItemInstance item = (L2ItemInstance) L2World.getInstance().findObject(idval);
+			final Item item = (Item) L2World.getInstance().findObject(idval);
 			final int ownerId = item.getOwnerId();
 			if (ownerId > 0)
 			{
@@ -249,7 +249,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 		{
 			final String val = command.substring(15);
 			final int idval = Integer.parseInt(val);
-			final L2ItemInstance item = (L2ItemInstance) L2World.getInstance().findObject(idval);
+			final Item item = (Item) L2World.getInstance().findObject(idval);
 			final int ownerId = item.getOwnerId();
 			if (ownerId > 0)
 			{

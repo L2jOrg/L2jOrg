@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.L2Weapon;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -46,7 +46,7 @@ public final class ConvertItem extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (effected.isAlikeDead() || !effected.isPlayer())
 		{
@@ -65,7 +65,7 @@ public final class ConvertItem extends AbstractEffect
 			return;
 		}
 		
-		L2ItemInstance wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+		Item wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 		if (wpn == null)
 		{
 			wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
@@ -84,9 +84,9 @@ public final class ConvertItem extends AbstractEffect
 		
 		final int enchantLevel = wpn.getEnchantLevel();
 		final AttributeHolder elementals = wpn.getAttributes() == null ? null : wpn.getAttackAttribute();
-		final L2ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
+		final Item[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
 		final InventoryUpdate iu = new InventoryUpdate();
-		for (L2ItemInstance unequippedItem : unequiped)
+		for (Item unequippedItem : unequiped)
 		{
 			iu.addModifiedItem(unequippedItem);
 		}
@@ -97,7 +97,7 @@ public final class ConvertItem extends AbstractEffect
 			return;
 		}
 		byte count = 0;
-		for (L2ItemInstance unequippedItem : unequiped)
+		for (Item unequippedItem : unequiped)
 		{
 			if (!(unequippedItem.getItem() instanceof L2Weapon))
 			{
@@ -125,13 +125,13 @@ public final class ConvertItem extends AbstractEffect
 			return;
 		}
 		
-		final L2ItemInstance destroyItem = player.getInventory().destroyItem("ChangeWeapon", wpn, player, null);
+		final Item destroyItem = player.getInventory().destroyItem("ChangeWeapon", wpn, player, null);
 		if (destroyItem == null)
 		{
 			return;
 		}
 		
-		final L2ItemInstance newItem = player.getInventory().addItem("ChangeWeapon", newItemId, 1, player, destroyItem);
+		final Item newItem = player.getInventory().addItem("ChangeWeapon", newItemId, 1, player, destroyItem);
 		if (newItem == null)
 		{
 			return;

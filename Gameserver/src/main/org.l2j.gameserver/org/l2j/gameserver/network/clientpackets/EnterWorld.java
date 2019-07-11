@@ -17,7 +17,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.*;
 import org.l2j.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.model.variables.PlayerVariables;
@@ -316,7 +316,7 @@ public class EnterWorld extends ClientPacket {
         client.sendPacket(new SkillCoolTime(activeChar));
         client.sendPacket(new ExVoteSystemInfo(activeChar));
 
-        for (L2ItemInstance item : activeChar.getInventory().getItems()) {
+        for (Item item : activeChar.getInventory().getItems()) {
             if (item.isTimeLimitedItem()) {
                 item.scheduleLifeTimeTask();
             }
@@ -325,7 +325,7 @@ public class EnterWorld extends ClientPacket {
             }
         }
 
-        for (L2ItemInstance whItem : activeChar.getWarehouse().getItems()) {
+        for (Item whItem : activeChar.getWarehouse().getItems()) {
             if (whItem.isTimeLimitedItem()) {
                 whItem.scheduleLifeTimeTask();
             }

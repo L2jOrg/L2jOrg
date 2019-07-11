@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets.commission;
 
 import org.l2j.gameserver.instancemanager.CommissionManager;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.commission.ExCloseCommission;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
@@ -30,7 +30,7 @@ public class RequestCommissionInfo extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance itemInstance = player.getInventory().getItemByObjectId(_itemObjectId);
+        final Item itemInstance = player.getInventory().getItemByObjectId(_itemObjectId);
         if (itemInstance != null) {
             client.sendPacket(player.getLastCommissionInfos().getOrDefault(itemInstance.getId(), ExResponseCommissionInfo.EMPTY));
         } else {

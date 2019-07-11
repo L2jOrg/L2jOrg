@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -11,7 +11,7 @@ public class ExPutItemResultForVariationCancel extends ServerPacket {
     private final int _itemAug2;
     private final long _price;
 
-    public ExPutItemResultForVariationCancel(L2ItemInstance item, long price) {
+    public ExPutItemResultForVariationCancel(Item item, long price) {
         _itemObjId = item.getObjectId();
         _itemId = item.getDisplayId();
         _price = price;

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.handler;
 
 import org.l2j.gameserver.model.actor.Playable;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,9 +16,9 @@ public interface IItemHandler {
      * Launch task associated to the item.
      *
      * @param playable the non-NPC character using the item
-     * @param item     L2ItemInstance designating the item to use
+     * @param item     Item designating the item to use
      * @param forceUse ctrl hold on item use
      * @return {@code true} if the item all conditions are met and the item is used, {@code false} otherwise.
      */
-    boolean useItem(Playable playable, L2ItemInstance item, boolean forceUse);
+    boolean useItem(Playable playable, Item item, boolean forceUse);
 }

@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.MacroCmd;
 import org.l2j.gameserver.model.Shortcut;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -251,7 +251,7 @@ public final class InitialShortcutData extends GameXmlReader {
             int shortcutId = shortcut.getId();
             switch (shortcut.getType()) {
                 case ITEM: {
-                    final L2ItemInstance item = player.getInventory().getItemByItemId(shortcutId);
+                    final Item item = player.getInventory().getItemByItemId(shortcutId);
                     if (item == null) {
                         continue;
                     }
@@ -286,7 +286,7 @@ public final class InitialShortcutData extends GameXmlReader {
                 int shortcutId = shortcut.getId();
                 switch (shortcut.getType()) {
                     case ITEM: {
-                        final L2ItemInstance item = player.getInventory().getItemByItemId(shortcutId);
+                        final Item item = player.getInventory().getItemByItemId(shortcutId);
                         if (item == null) {
                             continue;
                         }

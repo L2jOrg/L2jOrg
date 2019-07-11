@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 
 /**
  * Class explanation:<br>
@@ -34,7 +34,7 @@ public final class TempItem {
      * @param item
      * @param quantity of that item
      */
-    public TempItem(L2ItemInstance item, int quantity) {
+    public TempItem(Item item, int quantity) {
         super();
         _itemId = item.getId();
         _quantity = quantity;

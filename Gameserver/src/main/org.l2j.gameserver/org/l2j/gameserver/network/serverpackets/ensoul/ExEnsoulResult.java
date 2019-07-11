@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.ensoul;
 
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -11,9 +11,9 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
  */
 public class ExEnsoulResult extends ServerPacket {
     private final int _success;
-    private final L2ItemInstance _item;
+    private final Item _item;
 
-    public ExEnsoulResult(int success, L2ItemInstance item) {
+    public ExEnsoulResult(int success, Item item) {
         _success = success;
         _item = item;
     }

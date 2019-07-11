@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.holders.SkillUseHolder;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.L2Weapon;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ActionType;
 import org.l2j.gameserver.model.options.OptionsSkillHolder;
 import org.l2j.gameserver.model.options.OptionsSkillType;
@@ -57,7 +57,7 @@ public class SkillCaster implements Runnable {
     private final WeakReference<Creature> _caster;
     private final WeakReference<WorldObject> _target;
     private final Skill _skill;
-    private final L2ItemInstance _item;
+    private final Item _item;
     private final SkillCastingType _castingType;
     private int _hitTime;
     private int _cancelTime;
@@ -66,7 +66,7 @@ public class SkillCaster implements Runnable {
     private ScheduledFuture<?> _task;
     private int _phase;
 
-    private SkillCaster(Creature caster, WorldObject target, Skill skill, L2ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed) {
+    private SkillCaster(Creature caster, WorldObject target, Skill skill, Item item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed) {
         Objects.requireNonNull(caster);
         Objects.requireNonNull(skill);
         Objects.requireNonNull(castingType);
@@ -92,7 +92,7 @@ public class SkillCaster implements Runnable {
      * @param shiftPressed dont move while casting
      * @return {@code SkillCaster} object containing casting data if casting has started or {@code null} if casting was not started.
      */
-    public static SkillCaster castSkill(Creature caster, WorldObject target, Skill skill, L2ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed) {
+    public static SkillCaster castSkill(Creature caster, WorldObject target, Skill skill, Item item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed) {
         return castSkill(caster, target, skill, item, castingType, ctrlPressed, shiftPressed, -1);
     }
 
@@ -109,7 +109,7 @@ public class SkillCaster implements Runnable {
      * @param castTime     custom cast time in milliseconds or -1 for default.
      * @return {@code SkillCaster} object containing casting data if casting has started or {@code null} if casting was not started.
      */
-    public static SkillCaster castSkill(Creature caster, WorldObject target, Skill skill, L2ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed, int castTime) {
+    public static SkillCaster castSkill(Creature caster, WorldObject target, Skill skill, Item item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed, int castTime) {
         if ((caster == null) || (skill == null) || (castingType == null)) {
             return null;
         }
@@ -140,7 +140,7 @@ public class SkillCaster implements Runnable {
         return skillCaster;
     }
 
-    public static void callSkill(Creature caster, WorldObject target, Collection<WorldObject> targets, Skill skill, L2ItemInstance item) {
+    public static void callSkill(Creature caster, WorldObject target, Collection<WorldObject> targets, Skill skill, Item item) {
         // Launch the magic skill in order to calculate its effects
         try {
             // Mobius: Disabled characters should not be able to finish bad skills.
@@ -268,7 +268,7 @@ public class SkillCaster implements Runnable {
         triggerCast(activeChar, target, skill, null, true);
     }
 
-    public static void triggerCast(Creature activeChar, WorldObject target, Skill skill, L2ItemInstance item, boolean ignoreTargetType) {
+    public static void triggerCast(Creature activeChar, WorldObject target, Skill skill, Item item, boolean ignoreTargetType) {
         try {
             if ((activeChar == null) || (skill == null)) {
                 return;
@@ -386,8 +386,8 @@ public class SkillCaster implements Runnable {
 
         // Check if a spell consumes an item.
         if ((skill.getItemConsumeId() > 0) && (skill.getItemConsumeCount() > 0) && (caster.getInventory() != null)) {
-            // Get the L2ItemInstance consumed by the spell
-            final L2ItemInstance requiredItem = caster.getInventory().getItemByItemId(skill.getItemConsumeId());
+            // Get the Item consumed by the spell
+            final Item requiredItem = caster.getInventory().getItemByItemId(skill.getItemConsumeId());
             if ((requiredItem == null) || (requiredItem.getCount() < skill.getItemConsumeCount())) {
                 if (skill.hasEffectType(L2EffectType.SUMMON)) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SUMMONING_A_SERVITOR_COSTS_S2_S1);
@@ -526,7 +526,7 @@ public class SkillCaster implements Runnable {
 
         // Reduce talisman mana on skill use
         if ((_skill.getReferenceItemId() > 0) && (ItemTable.getInstance().getTemplate(_skill.getReferenceItemId()).getBodyPart() == L2Item.SLOT_TALISMAN)) {
-            final L2ItemInstance talisman = caster.getInventory().getItems(i -> i.getId() == _skill.getReferenceItemId(), L2ItemInstance::isEquipped).stream().findAny().orElse(null);
+            final Item talisman = caster.getInventory().getItems(i -> i.getId() == _skill.getReferenceItemId(), Item::isEquipped).stream().findAny().orElse(null);
             if (talisman != null) {
                 talisman.decreaseMana(false, talisman.useSkillDisTime());
             }
@@ -579,8 +579,8 @@ public class SkillCaster implements Runnable {
 
         // Consume reagent item.
         if ((_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0) && (caster.getInventory() != null)) {
-            // Get the L2ItemInstance consumed by the spell.
-            final L2ItemInstance requiredItem = caster.getInventory().getItemByItemId(_skill.getItemConsumeId());
+            // Get the Item consumed by the spell.
+            final Item requiredItem = caster.getInventory().getItemByItemId(_skill.getItemConsumeId());
             if (_skill.isBad() || (requiredItem.getItem().getDefaultAction() == ActionType.NONE)) // Non reagent items are removed at finishSkill or item handler.
             {
                 caster.destroyItem(_skill.toString(), requiredItem.getObjectId(), _skill.getItemConsumeCount(), caster, false);
@@ -849,7 +849,7 @@ public class SkillCaster implements Runnable {
     /**
      * @return the item that has been used in this casting.
      */
-    public L2ItemInstance getItem() {
+    public Item getItem() {
         return _item;
     }
 

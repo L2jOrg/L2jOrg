@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PetItemList;
 import org.l2j.gameserver.util.GameUtils;
@@ -53,7 +53,7 @@ public final class RequestGiveItemToPet extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
+        final Item item = player.getInventory().getItemByObjectId(_objectId);
         if (item == null) {
             return;
         }
@@ -88,7 +88,7 @@ public final class RequestGiveItemToPet extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance transferedItem = player.transferItem("Transfer", _objectId, _amount, pet.getInventory(), pet);
+        final Item transferedItem = player.transferItem("Transfer", _objectId, _amount, pet.getInventory(), pet);
         if (transferedItem != null)
         {
             player.sendPacket(new PetItemList(pet.getInventory().getItems()));

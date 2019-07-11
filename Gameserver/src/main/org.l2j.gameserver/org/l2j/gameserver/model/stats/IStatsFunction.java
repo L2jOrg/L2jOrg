@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.transform.TransformType;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 
 import java.util.Optional;
 
@@ -22,7 +22,7 @@ public interface IStatsFunction {
      * @param enchant
      * @return
      */
-    static double calcEnchantDefBonus(L2ItemInstance item, double blessedBonus, int enchant) {
+    static double calcEnchantDefBonus(Item item, double blessedBonus, int enchant) {
         return enchant + (3 * Math.max(0, enchant - 3));
     }
 
@@ -32,7 +32,7 @@ public interface IStatsFunction {
      * @param enchant
      * @return
      */
-    static double calcEnchantMatkBonus(L2ItemInstance item, double blessedBonus, int enchant) {
+    static double calcEnchantMatkBonus(Item item, double blessedBonus, int enchant) {
         switch (item.getItem().getCrystalType()) {
             case S: {
                 // M. Atk. increases by 4 for all weapons.
@@ -60,7 +60,7 @@ public interface IStatsFunction {
      * @param enchant
      * @return
      */
-    static double calcEnchantedPAtkBonus(L2ItemInstance item, double blessedBonus, int enchant) {
+    static double calcEnchantedPAtkBonus(Item item, double blessedBonus, int enchant) {
         switch (item.getItem().getCrystalType()) {
             case S: {
                 if (item.getWeaponItem().getBodyPart() == L2Item.SLOT_LR_HAND) {
@@ -130,7 +130,7 @@ public interface IStatsFunction {
     default double calcEnchantBodyPart(Creature creature, int... slots) {
         double value = 0;
         for (int slot : slots) {
-            final L2ItemInstance item = creature.getInventory().getPaperdollItemByL2ItemId(slot);
+            final Item item = creature.getInventory().getPaperdollItemByL2ItemId(slot);
             // TODO Confirm if the bonus is applied for any Grade
             if ((item != null) && (item.getEnchantLevel() >= 4)) {
                 value += calcEnchantBodyPartBonus(item.getEnchantLevel(), item.getItem().isBlessed());
@@ -148,11 +148,11 @@ public interface IStatsFunction {
         double baseValue = creature.getTransformation().map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElse(baseTemplateValue);
         if (creature.isPet()) {
             final Pet pet = (Pet) creature;
-            final L2ItemInstance weapon = pet.getActiveWeaponInstance();
+            final Item weapon = pet.getActiveWeaponInstance();
             final double baseVal = stat == Stats.PHYSICAL_ATTACK ? pet.getPetLevelData().getPetPAtk() : stat == Stats.MAGIC_ATTACK ? pet.getPetLevelData().getPetMAtk() : baseTemplateValue;
             baseValue = baseVal + (weapon != null ? weapon.getItem().getStats(stat, baseVal) : 0);
         } else if (creature.isPlayer() && (!creature.isTransformed() || (creature.getTransformation().get().getType() == TransformType.COMBAT) || (creature.getTransformation().get().getType() == TransformType.MODE_CHANGE))) {
-            final L2ItemInstance weapon = creature.getActiveWeaponInstance();
+            final Item weapon = creature.getActiveWeaponInstance();
             baseValue = (weapon != null ? weapon.getItem().getStats(stat, baseTemplateValue) : baseTemplateValue);
         }
 
@@ -166,7 +166,7 @@ public interface IStatsFunction {
         if (creature.isPlayable()) {
             final Inventory inv = creature.getInventory();
             if (inv != null) {
-                for (L2ItemInstance item : inv.getPaperdollItems(L2ItemInstance::isEquipped)) {
+                for (Item item : inv.getPaperdollItems(Item::isEquipped)) {
                     baseValue += item.getItem().getStats(stat, 0);
                 }
             }
@@ -181,7 +181,7 @@ public interface IStatsFunction {
         }
 
         double value = 0;
-        for (L2ItemInstance equippedItem : creature.getInventory().getPaperdollItems(L2ItemInstance::isEquipped, L2ItemInstance::isEnchanted)) {
+        for (Item equippedItem : creature.getInventory().getPaperdollItems(Item::isEquipped, Item::isEnchanted)) {
             final L2Item item = equippedItem.getItem();
             final long bodypart = item.getBodyPart();
             if ((bodypart == L2Item.SLOT_HAIR) || //

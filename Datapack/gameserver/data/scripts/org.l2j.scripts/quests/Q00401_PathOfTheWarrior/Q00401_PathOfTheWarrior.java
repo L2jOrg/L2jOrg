@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
@@ -330,7 +330,7 @@ public final class Q00401_PathOfTheWarrior extends Quest
 	
 	private static boolean checkWeapon(Player player)
 	{
-		L2ItemInstance weapon = player.getActiveWeaponInstance();
+		Item weapon = player.getActiveWeaponInstance();
 		return ((weapon != null) && ((weapon.getId() == RUSTED_BRONZE_SWORD3)));
 	}
 }

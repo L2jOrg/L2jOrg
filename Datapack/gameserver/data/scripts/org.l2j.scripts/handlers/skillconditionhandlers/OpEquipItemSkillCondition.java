@@ -20,7 +20,7 @@ import org.l2j.gameserver.enums.SkillConditionAffectType;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -45,20 +45,20 @@ public class OpEquipItemSkillCondition implements ISkillCondition
 		{
 			case CASTER:
 			{
-				return caster.getInventory().getItems(L2ItemInstance::isEquipped, i -> i.getId() == _itemId).size() > 0;
+				return caster.getInventory().getItems(Item::isEquipped, i -> i.getId() == _itemId).size() > 0;
 			}
 			case TARGET:
 			{
 				if ((target != null) && target.isPlayer())
 				{
-					return target.getActingPlayer().getInventory().getItems(L2ItemInstance::isEquipped, i -> i.getId() == _itemId).size() > 0;
+					return target.getActingPlayer().getInventory().getItems(Item::isEquipped, i -> i.getId() == _itemId).size() > 0;
 				}
 			}
 			case BOTH:
 			{
 				if ((target != null) && target.isPlayer())
 				{
-					return (caster.getInventory().getItems(L2ItemInstance::isEquipped, i -> i.getId() == _itemId).size() > 0) && (target.getActingPlayer().getInventory().getItems(L2ItemInstance::isEquipped, i -> i.getId() == _itemId).size() > 0);
+					return (caster.getInventory().getItems(Item::isEquipped, i -> i.getId() == _itemId).size() > 0) && (target.getActingPlayer().getInventory().getItems(Item::isEquipped, i -> i.getId() == _itemId).size() > 0);
 				}
 			}
 		}

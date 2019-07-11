@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ActionType;
 import org.l2j.gameserver.model.items.type.EtcItemType;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -51,7 +51,7 @@ public final class RequestDropItem extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
+        final Item item = activeChar.getInventory().getItemByObjectId(_objectId);
 
         if ((item == null) || (_count == 0) || !activeChar.validateItemManipulation(_objectId, "drop") || (!Config.ALLOW_DISCARDITEM && !activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) || (!item.isDropable() && !(activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS) && Config.GM_TRADE_RESTRICTED_ITEMS)) || ((item.getItemType() == EtcItemType.PET_COLLAR) && activeChar.havePetInvItems()) || activeChar.isInsideZone(ZoneId.NO_ITEM_DROP)) {
             activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
@@ -137,7 +137,7 @@ public final class RequestDropItem extends ClientPacket {
             activeChar.sendItemList();
         }
 
-        final L2ItemInstance dropedItem = activeChar.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);
+        final Item dropedItem = activeChar.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);
 
         // activeChar.broadcastUserInfo();
 

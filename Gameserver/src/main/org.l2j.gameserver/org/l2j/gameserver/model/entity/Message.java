@@ -22,7 +22,7 @@ import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.model.itemcontainer.Mail;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -164,7 +164,7 @@ public class Message {
         _attachments.setNewMessageId(_messageId);
     }
 
-    public Message(int receiverId, L2ItemInstance item, MailType mailType) {
+    public Message(int receiverId, Item item, MailType mailType) {
         _messageId = IdFactory.getInstance().getNextId();
         _senderId = -1;
         _receiverId = receiverId;

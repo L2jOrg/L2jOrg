@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.actor.instance.Servitor;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -543,7 +543,7 @@ public class L2Party extends AbstractPlayerGroup {
      * @param player
      * @param item
      */
-    public void distributeItem(Player player, L2ItemInstance item) {
+    public void distributeItem(Player player, Item item) {
         if (item.getId() == CommonItem.ADENA) {
             distributeAdena(player, item.getCount(), player);
             ItemTable.getInstance().destroyItem("Party", item, player, null);

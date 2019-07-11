@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ExRemoveEnchantSupportItemResult;
 
 /**
@@ -26,7 +26,7 @@ public class RequestExRemoveEnchantSupportItem extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance supportItem = request.getSupportItem();
+        final Item supportItem = request.getSupportItem();
         if ((supportItem == null) || (supportItem.getCount() < 1)) {
             request.setSupportItem(Player.ID_NONE);
         }

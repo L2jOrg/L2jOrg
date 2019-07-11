@@ -18,7 +18,7 @@ import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.items.L2EtcItem;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ActionType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -67,7 +67,7 @@ public final class UseItem extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
+        final Item item = activeChar.getInventory().getItemByObjectId(_objectId);
         if (item == null) {
             // gm can use other player item
             if (activeChar.isGM()) {
@@ -227,7 +227,7 @@ public final class UseItem extends ClientPacket {
         }
     }
 
-    private void reuseData(Player activeChar, L2ItemInstance item, long remainingTime) {
+    private void reuseData(Player activeChar, Item item, long remainingTime) {
         final int hours = (int) (remainingTime / 3600000);
         final int minutes = (int) (remainingTime % 3600000) / 60000;
         final int seconds = (int) ((remainingTime / 1000) % 60);

@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.itemcontainer.PcFreight;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -89,7 +89,7 @@ public class RequestPackageSend extends ClientPacket {
         final ItemContainer warehouse = new PcFreight(_objectId);
         for (ItemHolder i : _items) {
             // Check validity of requested item
-            final L2ItemInstance item = player.checkItemManipulation(i.getId(), i.getCount(), "freight");
+            final Item item = player.checkItemManipulation(i.getId(), i.getCount(), "freight");
             if (item == null) {
                 LOGGER.warn("Error depositing a warehouse object for char " + player.getName() + " (validity check)");
                 warehouse.deleteMe();
@@ -127,14 +127,14 @@ public class RequestPackageSend extends ClientPacket {
         final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
         for (ItemHolder i : _items) {
             // Check validity of requested item
-            final L2ItemInstance oldItem = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
+            final Item oldItem = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
             if (oldItem == null) {
                 LOGGER.warn("Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
                 warehouse.deleteMe();
                 return;
             }
 
-            final L2ItemInstance newItem = player.getInventory().transferItem("Trade", i.getId(), i.getCount(), warehouse, player, null);
+            final Item newItem = player.getInventory().transferItem("Trade", i.getId(), i.getCount(), warehouse, player, null);
             if (newItem == null) {
                 LOGGER.warn("Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");
                 continue;

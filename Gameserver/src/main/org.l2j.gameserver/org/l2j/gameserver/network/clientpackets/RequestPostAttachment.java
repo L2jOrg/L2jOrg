@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExChangePostState;
@@ -91,7 +91,7 @@ public final class RequestPostAttachment extends ClientPacket {
         int weight = 0;
         int slots = 0;
 
-        for (L2ItemInstance item : attachments.getItems()) {
+        for (Item item : attachments.getItems()) {
             if (item == null) {
                 continue;
             }
@@ -140,7 +140,7 @@ public final class RequestPostAttachment extends ClientPacket {
 
         // Proceed to the transfer
         final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-        for (L2ItemInstance item : attachments.getItems()) {
+        for (Item item : attachments.getItems()) {
             if (item == null) {
                 continue;
             }
@@ -151,7 +151,7 @@ public final class RequestPostAttachment extends ClientPacket {
             }
 
             final long count = item.getCount();
-            final L2ItemInstance newItem = attachments.transferItem(attachments.getName(), item.getObjectId(), item.getCount(), activeChar.getInventory(), activeChar, null);
+            final Item newItem = attachments.transferItem(attachments.getName(), item.getObjectId(), item.getCount(), activeChar.getInventory(), activeChar, null);
             if (newItem == null) {
                 return;
             }
@@ -188,7 +188,7 @@ public final class RequestPostAttachment extends ClientPacket {
                 sm.addString(activeChar.getName());
                 sender.sendPacket(sm);
             } else {
-                final L2ItemInstance paidAdena = ItemTable.getInstance().createItem("PayMail", CommonItem.ADENA, adena, activeChar, null);
+                final Item paidAdena = ItemTable.getInstance().createItem("PayMail", CommonItem.ADENA, adena, activeChar, null);
                 paidAdena.setOwnerId(msg.getSenderId());
                 paidAdena.setItemLocation(ItemLocation.INVENTORY);
                 paidAdena.updateDatabase(true);

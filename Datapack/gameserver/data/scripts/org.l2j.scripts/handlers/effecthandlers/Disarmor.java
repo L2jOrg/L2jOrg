@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -59,7 +59,7 @@ public final class Disarmor extends AbstractEffect
 	}
 	
 	@Override
-	public void continuousInstant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
+	public void continuousInstant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (!effected.isPlayer())
 		{
@@ -67,11 +67,11 @@ public final class Disarmor extends AbstractEffect
 		}
 		
 		final Player player = effected.getActingPlayer();
-		final L2ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
+		final Item[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
 		if (unequiped.length > 0)
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (L2ItemInstance itm : unequiped)
+			for (Item itm : unequiped)
 			{
 				iu.addModifiedItem(itm);
 			}
@@ -110,7 +110,7 @@ public final class Disarmor extends AbstractEffect
 			final Player player = effected.getActingPlayer();
 			player.getInventory().unblockItemSlot(_slot);
 			
-			final L2ItemInstance item = player.getInventory().getItemByObjectId(disarmedObjId);
+			final Item item = player.getInventory().getItemByObjectId(disarmedObjId);
 			if (item != null)
 			{
 				player.getInventory().equipItem(item);

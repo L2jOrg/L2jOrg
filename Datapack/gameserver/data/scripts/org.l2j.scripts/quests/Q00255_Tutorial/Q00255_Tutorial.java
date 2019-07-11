@@ -19,7 +19,7 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemPickup;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerPressTutorialMark;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.NpcStringId;
@@ -283,7 +283,7 @@ public class Q00255_Tutorial extends Quest {
         final QuestState qs = getQuestState(killer, false);
         if ((qs != null) && qs.isMemoState(2) && !hasQuestItems(killer, BLUE_GEM) && (getRandom(100) < 30)) {
             // check for too many gems on ground
-            var counter = L2World.getInstance().getVisibleObjectsInRange(killer, L2ItemInstance.class, 1500).stream().filter( item -> item.getId() == BLUE_GEM).count();
+            var counter = L2World.getInstance().getVisibleObjectsInRange(killer, Item.class, 1500).stream().filter(item -> item.getId() == BLUE_GEM).count();
             if (counter < 10) // do not drop if more than 10
             {
                 npc.dropItem(killer, BLUE_GEM, 1);

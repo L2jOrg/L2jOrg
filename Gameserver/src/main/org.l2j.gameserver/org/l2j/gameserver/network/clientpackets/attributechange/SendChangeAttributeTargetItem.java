@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.attributechange;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.attributechange.ExChangeAttributeInfo;
@@ -26,7 +26,7 @@ public class SendChangeAttributeTargetItem extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_itemObjId);
+        final Item item = activeChar.getInventory().getItemByObjectId(_itemObjId);
         if ((item == null) || !item.isWeapon()) {
             activeChar.sendPacket(ActionFailed.STATIC_PACKET);
             return;

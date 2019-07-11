@@ -46,7 +46,7 @@ import org.l2j.gameserver.model.interfaces.ISkillsHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.L2Weapon;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.EtcItemType;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.options.OptionsSkillHolder;
@@ -1052,7 +1052,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param ctrlPressed  if the player has pressed ctrl key during casting, aka force use.
      * @param shiftPressed if the player has pressed shift key during casting, aka dont move.
      */
-    public synchronized void doCast(Skill skill, L2ItemInstance item, boolean ctrlPressed, boolean shiftPressed) {
+    public synchronized void doCast(Skill skill, Item item, boolean ctrlPressed, boolean shiftPressed) {
         // Get proper casting type.
         SkillCastingType castingType = SkillCastingType.NORMAL;
         if (skill.canDoubleCast() && isAffected(EffectFlag.DOUBLE_CAST) && isCastingNow(castingType)) {
@@ -1083,7 +1083,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param item  the item
      * @param reuse the reuse
      */
-    public final void addTimeStampItem(L2ItemInstance item, long reuse) {
+    public final void addTimeStampItem(Item item, long reuse) {
         addTimeStampItem(item, reuse, -1);
     }
 
@@ -1095,7 +1095,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param reuse   the reuse
      * @param systime the system time
      */
-    public final void addTimeStampItem(L2ItemInstance item, long reuse, long systime) {
+    public final void addTimeStampItem(Item item, long reuse, long systime) {
         if (_reuseTimeStampsItems == null) {
             synchronized (this) {
                 if (_reuseTimeStampsItems == null) {
@@ -3040,7 +3040,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      *
      * @return the active weapon instance (always equiped in the right hand).
      */
-    public abstract L2ItemInstance getActiveWeaponInstance();
+    public abstract Item getActiveWeaponInstance();
 
     /**
      * <B><U> Overridden in </U> :</B>
@@ -3056,7 +3056,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      *
      * @return the secondary weapon instance (always equiped in the left hand).
      */
-    public abstract L2ItemInstance getSecondaryWeaponInstance();
+    public abstract Item getSecondaryWeaponInstance();
 
     /**
      * <B><U> Overridden in </U> :</B>

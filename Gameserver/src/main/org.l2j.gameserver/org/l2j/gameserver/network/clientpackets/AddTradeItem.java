@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.TradeOtherAdd;
 import org.l2j.gameserver.network.serverpackets.TradeOwnAdd;
@@ -70,7 +70,7 @@ public final class AddTradeItem extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance item1 = player.getInventory().getItemByObjectId(_objectId);
+        final Item item1 = player.getInventory().getItemByObjectId(_objectId);
         final TradeItem item2 = trade.addItem(_objectId, _count);
         if (item2 != null) {
             player.sendPacket(new TradeOwnAdd(1, item2));

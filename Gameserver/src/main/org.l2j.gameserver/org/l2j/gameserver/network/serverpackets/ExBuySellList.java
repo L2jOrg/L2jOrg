@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -14,8 +14,8 @@ import java.util.Collection;
 public class ExBuySellList extends AbstractItemPacket {
     private final boolean _done;
     private final int _inventorySlots;
-    private Collection<L2ItemInstance> _sellList;
-    private Collection<L2ItemInstance> _refundList = null;
+    private Collection<Item> _sellList;
+    private Collection<Item> _refundList = null;
     private double _castleTaxRate = 1;
 
     public ExBuySellList(Player player, boolean done) {
@@ -42,7 +42,7 @@ public class ExBuySellList extends AbstractItemPacket {
 
         if ((_sellList != null)) {
             writeShort((short) _sellList.size());
-            for (L2ItemInstance item : _sellList) {
+            for (Item item : _sellList) {
                 writeItem(item);
                 writeLong((long) ((item.getItem().getReferencePrice() / 2) * _castleTaxRate));
             }
@@ -53,7 +53,7 @@ public class ExBuySellList extends AbstractItemPacket {
         if ((_refundList != null) && !_refundList.isEmpty()) {
             writeShort((short) _refundList.size());
             int i = 0;
-            for (L2ItemInstance item : _refundList) {
+            for (Item item : _refundList) {
                 writeItem(item);
                 writeInt(i++);
                 writeLong((item.getItem().getReferencePrice() / 2) * item.getCount());

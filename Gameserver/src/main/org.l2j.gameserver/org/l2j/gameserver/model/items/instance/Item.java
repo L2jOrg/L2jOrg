@@ -59,14 +59,14 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  * @version $Revision: 1.4.2.1.2.11 $ $Date: 2005/03/31 16:07:50 $
  */
-public final class L2ItemInstance extends WorldObject {
+public final class Item extends WorldObject {
     public static final int UNCHANGED = 0;
     public static final int ADDED = 1;
     public static final int REMOVED = 3;
     public static final int MODIFIED = 2;
     //@formatter:off
     public static final int[] DEFAULT_ENCHANT_OPTIONS = new int[]{0, 0, 0};
-    private static final Logger LOGGER = LoggerFactory.getLogger(L2ItemInstance.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(Item.class);
     private static final Logger LOG_ITEMS = LoggerFactory.getLogger("item");
     private static final int MANA_CONSUMPTION_RATE = 60000;
     /**
@@ -149,12 +149,12 @@ public final class L2ItemInstance extends WorldObject {
     private ScheduledFuture<?> _lifeTimeTask;
 
     /**
-     * Constructor of the L2ItemInstance from the objectId and the itemId.
+     * Constructor of the Item from the objectId and the itemId.
      *
      * @param objectId : int designating the ID of the object in the world
      * @param itemId   : int designating the ID of the item
      */
-    public L2ItemInstance(int objectId, int itemId) {
+    public Item(int objectId, int itemId) {
         super(objectId);
         setInstanceType(InstanceType.L2ItemInstance);
         _itemId = itemId;
@@ -173,12 +173,12 @@ public final class L2ItemInstance extends WorldObject {
     }
 
     /**
-     * Constructor of the L2ItemInstance from the objetId and the description of the item given by the L2Item.
+     * Constructor of the Item from the objetId and the description of the item given by the L2Item.
      *
      * @param objectId : int designating the ID of the object in the world
      * @param item     : L2Item containing informations of the item
      */
-    public L2ItemInstance(int objectId, L2Item item) {
+    public Item(int objectId, L2Item item) {
         super(objectId);
         setInstanceType(InstanceType.L2ItemInstance);
         _itemId = item.getId();
@@ -197,7 +197,7 @@ public final class L2ItemInstance extends WorldObject {
      * @param rs
      * @throws SQLException
      */
-    public L2ItemInstance(ResultSet rs) throws SQLException {
+    public Item(ResultSet rs) throws SQLException {
         this(rs.getInt("object_id"), ItemTable.getInstance().getTemplate(rs.getInt("item_id")));
         _count = rs.getLong("count");
         _ownerId = rs.getInt("owner_id");
@@ -223,12 +223,12 @@ public final class L2ItemInstance extends WorldObject {
      *
      * @param itemId the item template ID
      */
-    public L2ItemInstance(int itemId) {
+    public Item(int itemId) {
         this(IdFactory.getInstance().getNextId(), itemId);
     }
 
     /**
-     * Remove a L2ItemInstance from the world and send server->client GetItem packets.<BR>
+     * Remove a Item from the world and send server->client GetItem packets.<BR>
      * <BR>
      * <B><U> Actions</U> :</B><BR>
      * <BR>
@@ -247,7 +247,7 @@ public final class L2ItemInstance extends WorldObject {
     public final void pickupMe(Creature character) {
         final L2WorldRegion oldregion = getWorldRegion();
 
-        // Create a server->client GetItem packet to pick up the L2ItemInstance
+        // Create a server->client GetItem packet to pick up the Item
         character.broadcastPacket(new GetItem(this, character.getObjectId()));
 
         synchronized (this) {
@@ -262,7 +262,7 @@ public final class L2ItemInstance extends WorldObject {
         }
 
         // outside of synchronized to avoid deadlocks
-        // Remove the L2ItemInstance from the world
+        // Remove the Item from the world
         L2World.getInstance().removeVisibleObject(this, oldregion);
 
         if (character.isPlayer()) {
@@ -1170,9 +1170,9 @@ public final class L2ItemInstance extends WorldObject {
 
                 // unequip
                 if (isEquipped()) {
-                    final L2ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(getLocationSlot());
+                    final Item[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(getLocationSlot());
                     final InventoryUpdate iu = new InventoryUpdate();
-                    for (L2ItemInstance item : unequiped) {
+                    for (Item item : unequiped) {
                         iu.addModifiedItem(item);
                     }
                     player.sendInventoryUpdate(iu);
@@ -1181,14 +1181,14 @@ public final class L2ItemInstance extends WorldObject {
 
                 if (_loc != ItemLocation.WAREHOUSE) {
                     // destroy
-                    player.getInventory().destroyItem("L2ItemInstance", this, player, null);
+                    player.getInventory().destroyItem("Item", this, player, null);
 
                     // send update
                     final InventoryUpdate iu = new InventoryUpdate();
                     iu.addRemovedItem(this);
                     player.sendInventoryUpdate(iu);
                 } else {
-                    player.getWarehouse().destroyItem("L2ItemInstance", this, player, null);
+                    player.getWarehouse().destroyItem("Item", this, player, null);
                 }
             } else {
                 // Reschedule if still equipped
@@ -1485,9 +1485,9 @@ public final class L2ItemInstance extends WorldObject {
         final Player player = getActingPlayer();
         if (player != null) {
             if (isEquipped()) {
-                final L2ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(getLocationSlot());
+                final Item[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(getLocationSlot());
                 final InventoryUpdate iu = new InventoryUpdate();
-                for (L2ItemInstance item : unequiped) {
+                for (Item item : unequiped) {
                     iu.addModifiedItem(item);
                 }
                 player.sendInventoryUpdate(iu);
@@ -1495,14 +1495,14 @@ public final class L2ItemInstance extends WorldObject {
 
             if (_loc != ItemLocation.WAREHOUSE) {
                 // destroy
-                player.getInventory().destroyItem("L2ItemInstance", this, player, null);
+                player.getInventory().destroyItem("Item", this, player, null);
 
                 // send update
                 final InventoryUpdate iu = new InventoryUpdate();
                 iu.addRemovedItem(this);
                 player.sendInventoryUpdate(iu);
             } else {
-                player.getWarehouse().destroyItem("L2ItemInstance", this, player, null);
+                player.getWarehouse().destroyItem("Item", this, player, null);
             }
             player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_EXPIRED).addItemName(_itemId));
         }
@@ -1902,9 +1902,9 @@ public final class L2ItemInstance extends WorldObject {
      */
     public static class ScheduleConsumeManaTask implements Runnable {
         private static final Logger LOGGER = LoggerFactory.getLogger(ScheduleConsumeManaTask.class);
-        private final L2ItemInstance _shadowItem;
+        private final Item _shadowItem;
 
-        public ScheduleConsumeManaTask(L2ItemInstance item) {
+        public ScheduleConsumeManaTask(Item item) {
             _shadowItem = item;
         }
 
@@ -1923,9 +1923,9 @@ public final class L2ItemInstance extends WorldObject {
 
     static class ScheduleLifeTimeTask implements Runnable {
         private static final Logger LOGGER = LoggerFactory.getLogger(ScheduleLifeTimeTask.class);
-        private final L2ItemInstance _limitedItem;
+        private final Item _limitedItem;
 
-        ScheduleLifeTimeTask(L2ItemInstance item) {
+        ScheduleLifeTimeTask(Item item) {
             _limitedItem = item;
         }
 
@@ -1942,13 +1942,13 @@ public final class L2ItemInstance extends WorldObject {
     }
 
     /**
-     * Init a dropped L2ItemInstance and add it in the world as a visible object.<BR>
+     * Init a dropped Item and add it in the world as a visible object.<BR>
      * <BR>
      * <B><U> Actions</U> :</B><BR>
      * <BR>
-     * <li>Set the x,y,z position of the L2ItemInstance dropped and update its _worldregion</li>
-     * <li>Add the L2ItemInstance dropped to _visibleObjects of its L2WorldRegion</li>
-     * <li>Add the L2ItemInstance dropped in the world as a <B>visible</B> object</li><BR>
+     * <li>Set the x,y,z position of the Item dropped and update its _worldregion</li>
+     * <li>Add the Item dropped to _visibleObjects of its L2WorldRegion</li>
+     * <li>Add the Item dropped in the world as a <B>visible</B> object</li><BR>
      * <BR>
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object to _allObjects of L2World </B></FONT><BR>
      * <BR>
@@ -1959,10 +1959,10 @@ public final class L2ItemInstance extends WorldObject {
      */
     public class ItemDropTask implements Runnable {
         private final Creature _dropper;
-        private final L2ItemInstance _itеm;
+        private final Item _itеm;
         private int _x, _y, _z;
 
-        public ItemDropTask(L2ItemInstance item, Creature dropper, int x, int y, int z) {
+        public ItemDropTask(Item item, Creature dropper, int x, int y, int z) {
             _x = x;
             _y = y;
             _z = z;
@@ -1984,7 +1984,7 @@ public final class L2ItemInstance extends WorldObject {
             }
 
             synchronized (_itеm) {
-                // Set the x,y,z position of the L2ItemInstance dropped and update its _worldregion
+                // Set the x,y,z position of the Item dropped and update its _worldregion
                 _itеm.setSpawned(true);
                 _itеm.setXYZ(_x, _y, _z);
             }
@@ -1992,7 +1992,7 @@ public final class L2ItemInstance extends WorldObject {
             _itеm.setDropTime(System.currentTimeMillis());
             _itеm.setDropperObjectId(_dropper != null ? _dropper.getObjectId() : 0); // Set the dropper Id for the knownlist packets in sendInfo
 
-            // Add the L2ItemInstance dropped in the world as a visible object
+            // Add the Item dropped in the world as a visible object
             L2World.getInstance().addVisibleObject(_itеm, _itеm.getWorldRegion());
             if (Config.SAVE_DROPPED_ITEM) {
                 ItemsOnGroundManager.getInstance().save(_itеm);

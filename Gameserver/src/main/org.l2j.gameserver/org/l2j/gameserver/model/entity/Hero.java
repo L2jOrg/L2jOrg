@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -511,14 +511,14 @@ public class Hero {
             player.setHero(false);
 
             for (int i = 0; i < Inventory.PAPERDOLL_TOTALSLOTS; i++) {
-                final L2ItemInstance equippedItem = player.getInventory().getPaperdollItem(i);
+                final Item equippedItem = player.getInventory().getPaperdollItem(i);
                 if ((equippedItem != null) && equippedItem.isHeroItem()) {
                     player.getInventory().unEquipItemInSlot(i);
                 }
             }
 
             final InventoryUpdate iu = new InventoryUpdate();
-            for (L2ItemInstance item : player.getInventory().getAvailableItems(false, false, false)) {
+            for (Item item : player.getInventory().getAvailableItems(false, false, false)) {
                 if ((item != null) && item.isHeroItem()) {
                     player.destroyItem("Hero", item, null, true);
                     iu.addRemovedItem(item);

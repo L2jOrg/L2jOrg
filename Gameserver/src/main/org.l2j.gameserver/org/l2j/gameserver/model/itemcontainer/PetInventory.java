@@ -20,7 +20,7 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 
 public class PetInventory extends Inventory {
     private final Pet _owner;
@@ -55,7 +55,7 @@ public class PetInventory extends Inventory {
         _owner.updateAndBroadcastStatus(1);
     }
 
-    public boolean validateCapacity(L2ItemInstance item) {
+    public boolean validateCapacity(Item item) {
         int slots = 0;
 
         if (!(item.isStackable() && (getItemByItemId(item.getId()) != null)) && !item.getItem().hasExImmediateEffect()) {
@@ -70,7 +70,7 @@ public class PetInventory extends Inventory {
         return ((_items.size() + slots) <= _owner.getInventoryLimit());
     }
 
-    public boolean validateWeight(L2ItemInstance item, long count) {
+    public boolean validateWeight(Item item, long count) {
         int weight = 0;
         final L2Item template = ItemTable.getInstance().getTemplate(item.getId());
         if (template == null) {
@@ -99,7 +99,7 @@ public class PetInventory extends Inventory {
     public void restore() {
         super.restore();
         // check for equiped items from other pets
-        for (L2ItemInstance item : _items.values()) {
+        for (Item item : _items.values()) {
             if (item.isEquipped()) {
                 if (!item.getItem().checkCondition(_owner, _owner, false)) {
                     unEquipItemInSlot(item.getLocationSlot());
@@ -109,7 +109,7 @@ public class PetInventory extends Inventory {
     }
 
     public void transferItemsToOwner() {
-        for (L2ItemInstance item : _items.values()) {
+        for (Item item : _items.values()) {
             getOwner().transferItem("return", item.getObjectId(), item.getCount(), getOwner().getOwner().getInventory(), getOwner().getOwner(), getOwner());
         }
     }

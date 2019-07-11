@@ -7,7 +7,7 @@ import org.l2j.gameserver.instancemanager.SiegeGuardManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
@@ -22,7 +22,7 @@ public final class RequestPetGetItem extends ClientPacket {
     @Override
     public void runImpl() {
         final L2World world = L2World.getInstance();
-        final L2ItemInstance item = (L2ItemInstance) world.findObject(_objectId);
+        final Item item = (Item) world.findObject(_objectId);
         if ((item == null) || (client.getActiveChar() == null) || !client.getActiveChar().hasPet()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
 /**
@@ -75,7 +75,7 @@ public class TimeStamp {
      * @param reuse   the reuse time for this item.
      * @param systime overrides the system time with a customized one.
      */
-    public TimeStamp(L2ItemInstance item, long reuse, long systime) {
+    public TimeStamp(Item item, long reuse, long systime) {
         _id1 = item.getId();
         _id2 = item.getObjectId();
         _id3 = 0;

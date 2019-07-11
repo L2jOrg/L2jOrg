@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.L2EtcItem;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -32,7 +32,7 @@ public class RequestUnEquipItem extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance item = activeChar.getInventory().getPaperdollItemByL2ItemId(_slot);
+        final Item item = activeChar.getInventory().getPaperdollItemByL2ItemId(_slot);
         // Wear-items are not to be unequipped.
         if (item == null) {
             return;
@@ -69,7 +69,7 @@ public class RequestUnEquipItem extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance[] unequipped = activeChar.getInventory().unEquipItemInBodySlotAndRecord(_slot);
+        final Item[] unequipped = activeChar.getInventory().unEquipItemInBodySlotAndRecord(_slot);
         activeChar.broadcastUserInfo();
 
         // This can be 0 if the user pressed the right mouse button twice very fast.

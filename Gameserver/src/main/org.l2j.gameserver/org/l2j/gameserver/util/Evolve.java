@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.MagicSkillLaunched;
@@ -46,7 +46,7 @@ public final class Evolve {
             return false;
         }
 
-        L2ItemInstance item = null;
+        Item item = null;
         long petexp = currentPet.getStat().getExp();
         final String oldname = currentPet.getName();
         final int oldX = currentPet.getX();
@@ -132,7 +132,7 @@ public final class Evolve {
             return false;
         }
 
-        final L2ItemInstance item = player.getInventory().getItemByItemId(itemIdtake);
+        final Item item = player.getInventory().getItemByItemId(itemIdtake);
         if (item == null) {
             return false;
         }
@@ -160,13 +160,13 @@ public final class Evolve {
         final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcId);
 
         // deleting old pet item
-        final L2ItemInstance removedItem = player.getInventory().destroyItem("PetRestore", item, player, npc);
+        final Item removedItem = player.getInventory().destroyItem("PetRestore", item, player, npc);
         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
         sm.addItemName(removedItem);
         player.sendPacket(sm);
 
         // Give new pet item
-        final L2ItemInstance addedItem = player.getInventory().addItem("PetRestore", itemIdgive, 1, player, npc);
+        final Item addedItem = player.getInventory().addItem("PetRestore", itemIdgive, 1, player, npc);
 
         // Summoning new pet
         final Pet petSummon = Pet.spawnPet(npcTemplate, player, addedItem);

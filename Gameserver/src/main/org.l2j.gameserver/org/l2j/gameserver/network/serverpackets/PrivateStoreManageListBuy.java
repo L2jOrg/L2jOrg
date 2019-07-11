@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -12,7 +12,7 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket {
     private final int _sendType;
     private final int _objId;
     private final long _playerAdena;
-    private final Collection<L2ItemInstance> _itemList;
+    private final Collection<Item> _itemList;
     private final TradeItem[] _buyList;
 
     public PrivateStoreManageListBuy(int sendType, Player player) {
@@ -30,7 +30,7 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket {
         if (_sendType == 2) {
             writeInt(_itemList.size());
             writeInt(_itemList.size());
-            for (L2ItemInstance item : _itemList) {
+            for (Item item : _itemList) {
                 writeItem(item);
                 writeLong(item.getItem().getReferencePrice() * 2);
             }
@@ -38,7 +38,7 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket {
             writeInt(_objId);
             writeLong(_playerAdena);
             writeInt(0x00);
-            for (L2ItemInstance item : _itemList) {
+            for (Item item : _itemList) {
                 writeItem(item);
                 writeLong(item.getItem().getReferencePrice() * 2);
             }

@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -312,7 +312,7 @@ public abstract class AbstractOlympiadGame {
             final InventoryUpdate iu = new InventoryUpdate();
             list.forEach(holder ->
             {
-                final L2ItemInstance item = player.getInventory().addItem("Olympiad", holder.getId(), holder.getCount(), player, null);
+                final Item item = player.getInventory().addItem("Olympiad", holder.getId(), holder.getCount(), player, null);
                 if (item == null) {
                     return;
                 }

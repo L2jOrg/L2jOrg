@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.NpcStringId;
@@ -822,7 +822,7 @@ public final class Q00229_TestOfWitchcraft extends Quest
 	
 	private boolean checkWeapon(Player player)
 	{
-		L2ItemInstance weapon = player.getActiveWeaponInstance();
+		Item weapon = player.getActiveWeaponInstance();
 		return ((weapon != null) && ((weapon.getId() == SWORD_OF_BINDING)));
 	}
 }

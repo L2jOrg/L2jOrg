@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcMoveFinished;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -206,7 +206,7 @@ public class L2CharacterAI extends AbstractAI {
      * </ul>
      */
     @Override
-    protected void onIntentionCast(Skill skill, WorldObject target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
+    protected void onIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove) {
         if ((getIntention() == AI_INTENTION_REST) && skill.isMagic()) {
             clientActionFailed();
             return;
@@ -219,7 +219,7 @@ public class L2CharacterAI extends AbstractAI {
         }
     }
 
-    protected void changeIntentionToCast(Skill skill, WorldObject target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
+    protected void changeIntentionToCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove) {
         // Set the AI skill used by INTENTION_CAST
         _skill = skill;
 
@@ -350,7 +350,7 @@ public class L2CharacterAI extends AbstractAI {
         // Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
         clientStopAutoAttack();
 
-        if (object.isItem() && (((L2ItemInstance) object).getItemLocation() != ItemLocation.VOID)) {
+        if (object.isItem() && (((Item) object).getItemLocation() != ItemLocation.VOID)) {
             return;
         }
 
@@ -953,11 +953,11 @@ public class L2CharacterAI extends AbstractAI {
         private final Creature _activeChar;
         private final WorldObject _target;
         private final Skill _skill;
-        private final L2ItemInstance _item;
+        private final Item _item;
         private final boolean _forceUse;
         private final boolean _dontMove;
 
-        public CastTask(Creature actor, Skill skill, WorldObject target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
+        public CastTask(Creature actor, Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove) {
             _activeChar = actor;
             _target = target;
             _skill = skill;

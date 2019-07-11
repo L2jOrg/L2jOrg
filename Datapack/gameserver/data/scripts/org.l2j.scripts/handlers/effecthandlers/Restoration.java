@@ -20,7 +20,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PetItemList;
@@ -49,7 +49,7 @@ public final class Restoration extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (!effected.isPlayable())
 		{
@@ -65,7 +65,7 @@ public final class Restoration extends AbstractEffect
 		
 		if (effected.isPlayer())
 		{
-			final L2ItemInstance newItem = effected.getActingPlayer().addItem("Skill", _itemId, _itemCount, effector, true);
+			final Item newItem = effected.getActingPlayer().addItem("Skill", _itemId, _itemCount, effector, true);
 			if (_itemEnchantmentLevel > 0)
 			{
 				newItem.setEnchantLevel(_itemEnchantmentLevel);
@@ -73,7 +73,7 @@ public final class Restoration extends AbstractEffect
 		}
 		else if (effected.isPet())
 		{
-			final L2ItemInstance newItem = effected.getInventory().addItem("Skill", _itemId, _itemCount, effected.getActingPlayer(), effector);
+			final Item newItem = effected.getInventory().addItem("Skill", _itemId, _itemCount, effected.getActingPlayer(), effector);
 			if (_itemEnchantmentLevel > 0)
 			{
 				newItem.setEnchantLevel(_itemEnchantmentLevel);

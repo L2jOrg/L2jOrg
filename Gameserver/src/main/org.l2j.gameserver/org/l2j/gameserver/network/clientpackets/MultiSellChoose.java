@@ -19,7 +19,7 @@ import org.l2j.gameserver.model.itemcontainer.PcInventory;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPCCafePointInfo;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -237,7 +237,7 @@ public class MultiSellChoose extends ClientPacket {
                     continue;
                 }
                 int found = 0;
-                for (L2ItemInstance item : inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel())) {
+                for (Item item : inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel())) {
                     if (item.getEnchantLevel() >= ingredient.getEnchantmentLevel()) {
                         found++;
                     }
@@ -311,7 +311,7 @@ public class MultiSellChoose extends ClientPacket {
                     }
                 } else if (ingredient.getEnchantmentLevel() > 0) {
                     // Take the enchanted item.
-                    final L2ItemInstance destroyedItem = inventory.destroyItem("Multisell", inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel()).iterator().next(), totalCount, player, npc);
+                    final Item destroyedItem = inventory.destroyItem("Multisell", inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel()).iterator().next(), totalCount, player, npc);
                     if (destroyedItem != null) {
                         itemEnchantmentProcessed = true;
                         iu.addItem(destroyedItem);
@@ -323,7 +323,7 @@ public class MultiSellChoose extends ClientPacket {
                     }
                 } else if (!itemEnchantmentProcessed && (itemEnchantment != null) && (itemEnchantment.getItem().getId() == ingredient.getId())) {
                     // Take the enchanted item.
-                    final L2ItemInstance destroyedItem = inventory.destroyItem("Multisell", itemEnchantment.getObjectId(), totalCount, player, npc);
+                    final Item destroyedItem = inventory.destroyItem("Multisell", itemEnchantment.getObjectId(), totalCount, player, npc);
                     if (destroyedItem != null) {
                         itemEnchantmentProcessed = true;
                         iu.addItem(destroyedItem);
@@ -335,7 +335,7 @@ public class MultiSellChoose extends ClientPacket {
                     }
                 } else {
                     // Take a regular item.
-                    final L2ItemInstance destroyedItem = inventory.destroyItemByItemId("Multisell", ingredient.getId(), totalCount, player, npc);
+                    final Item destroyedItem = inventory.destroyItemByItemId("Multisell", ingredient.getId(), totalCount, player, npc);
                     if (destroyedItem != null) {
                         iu.addItem(destroyedItem);
                     } else {
@@ -385,7 +385,7 @@ public class MultiSellChoose extends ClientPacket {
                     }
                 } else {
                     // Give item.
-                    final L2ItemInstance addedItem = inventory.addItem("Multisell", product.getId(), totalCount, player, npc, false);
+                    final Item addedItem = inventory.addItem("Multisell", product.getId(), totalCount, player, npc, false);
 
                     // Check if the newly given item should be enchanted.
                     if (itemEnchantmentProcessed && list.isMaintainEnchantment() && (itemEnchantment != null) && addedItem.isEquipable() && addedItem.getItem().getClass().equals(itemEnchantment.getItem().getClass())) {

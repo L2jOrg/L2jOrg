@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -10,7 +10,7 @@ import java.util.Collection;
 
 public class GMViewItemList extends AbstractItemPacket {
     private final int sendType;
-    private final Collection<L2ItemInstance> items;
+    private final Collection<Item> items;
     private final int _limit;
     private final String playerName;
 
@@ -39,7 +39,7 @@ public class GMViewItemList extends AbstractItemPacket {
             writeInt(_limit); // inventory limit
         }
         writeInt(items.size());
-        for (L2ItemInstance item : items) {
+        for (Item item : items) {
             writeItem(item);
         }
     }

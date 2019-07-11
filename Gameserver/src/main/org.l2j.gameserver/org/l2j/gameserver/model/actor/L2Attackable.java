@@ -34,7 +34,7 @@ import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableAttack;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableKill;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
@@ -816,7 +816,7 @@ public class L2Attackable extends L2Npc {
      * Get all possible drops of this L2Attackable from L2NpcTemplate and add it Quest drops.<br>
      * For each possible drops (base + quests), calculate which one must be dropped (random).<br>
      * Get each Item quantity dropped (random).<br>
-     * Create this or these L2ItemInstance corresponding to each Item Identifier dropped.<br>
+     * Create this or these Item corresponding to each Item Identifier dropped.<br>
      * If the autoLoot mode is actif and if the Creature that has killed the L2Attackable is a Player, Give the item(s) to the Player that has killed the L2Attackable.<br>
      * If the autoLoot mode isn't actif or if the Creature that has killed the L2Attackable is not a Player, add this or these item(s) in the world as a visible object at the position where mob was last.
      *
@@ -895,7 +895,7 @@ public class L2Attackable extends L2Npc {
      * Actions: <I>If an extra drop must be generated</I><br>
      * Get an Item Identifier (random) from the DateDrop Item table of this Event.<br>
      * Get the Item quantity dropped (random).<br>
-     * Create this or these L2ItemInstance corresponding to this Item Identifier.<br>
+     * Create this or these Item corresponding to this Item Identifier.<br>
      * If the autoLoot mode is actif and if the Creature that has killed the L2Attackable is a Player, Give the item(s) to the Player that has killed the L2Attackable<br>
      * If the autoLoot mode isn't actif or if the Creature that has killed the L2Attackable is not a Player, add this or these item(s) in the world as a visible object at the position where mob was last
      *
@@ -934,7 +934,7 @@ public class L2Attackable extends L2Npc {
     /**
      * @return the active weapon of this L2Attackable (= null).
      */
-    public L2ItemInstance getActiveWeapon() {
+    public Item getActiveWeapon() {
         return null;
     }
 
@@ -981,14 +981,14 @@ public class L2Attackable extends L2Npc {
     }
 
     /**
-     * @return table containing all L2ItemInstance that can be spoiled.
+     * @return table containing all Item that can be spoiled.
      */
     public Collection<ItemHolder> takeSweep() {
         return _sweepItems.getAndSet(null);
     }
 
     /**
-     * @return table containing all L2ItemInstance that can be harvested.
+     * @return table containing all Item that can be harvested.
      */
     public ItemHolder takeHarvest() {
         return _harvestItem.getAndSet(null);

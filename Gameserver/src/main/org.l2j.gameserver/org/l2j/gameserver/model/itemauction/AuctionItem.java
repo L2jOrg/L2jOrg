@@ -20,7 +20,7 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 
 /**
  * @author Forsaiken
@@ -69,8 +69,8 @@ public final class AuctionItem {
         return _itemCount;
     }
 
-    public final L2ItemInstance createNewItemInstance() {
-        final L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), _itemId);
+    public final Item createNewItemInstance() {
+        final Item item = new Item(IdFactory.getInstance().getNextId(), _itemId);
         L2World.getInstance().addObject(item);
         item.setCount(_itemCount);
         item.setEnchantLevel(item.getItem().getDefaultEnchantLevel());

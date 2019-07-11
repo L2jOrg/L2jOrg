@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
 
@@ -37,7 +37,7 @@ public class ShotsBonusFinalizer implements IStatsFunction {
         double rubyBonus = 0;
         final Player player = creature.getActingPlayer();
         if (player != null) {
-            final L2ItemInstance weapon = player.getActiveWeaponInstance();
+            final Item weapon = player.getActiveWeaponInstance();
             if ((weapon != null) && weapon.isEnchanted()) {
                 baseValue += (weapon.getEnchantLevel() * 0.7) / 100;
             }

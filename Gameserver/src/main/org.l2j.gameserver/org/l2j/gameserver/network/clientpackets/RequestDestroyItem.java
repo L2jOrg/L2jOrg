@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -68,7 +68,7 @@ public final class RequestDestroyItem extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance itemToRemove = activeChar.getInventory().getItemByObjectId(_objectId);
+        final Item itemToRemove = activeChar.getInventory().getItemByObjectId(_objectId);
 
         // if we can't find the requested item, its actually a cheat
         if (itemToRemove == null) {
@@ -76,8 +76,8 @@ public final class RequestDestroyItem extends ClientPacket {
             if (activeChar.isGM()) {
                 final WorldObject obj = L2World.getInstance().findObject(_objectId);
                 if (obj.isItem()) {
-                    if (_count > ((L2ItemInstance) obj).getCount()) {
-                        count = ((L2ItemInstance) obj).getCount();
+                    if (_count > ((Item) obj).getCount()) {
+                        count = ((Item) obj).getCount();
                     }
                     AdminCommandHandler.getInstance().useAdminCommand(activeChar, "admin_delete_item " + _objectId + " " + count, true);
                 }
@@ -149,16 +149,16 @@ public final class RequestDestroyItem extends ClientPacket {
                 client.sendPacket(sm);
             }
 
-            final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
+            final Item[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
 
             final InventoryUpdate iu = new InventoryUpdate();
-            for (L2ItemInstance itm : unequiped) {
+            for (Item itm : unequiped) {
                 iu.addModifiedItem(itm);
             }
             activeChar.sendInventoryUpdate(iu);
         }
 
-        final L2ItemInstance removedItem = activeChar.getInventory().destroyItem("Destroy", itemToRemove, count, activeChar, null);
+        final Item removedItem = activeChar.getInventory().destroyItem("Destroy", itemToRemove, count, activeChar, null);
 
         if (removedItem == null) {
             return;

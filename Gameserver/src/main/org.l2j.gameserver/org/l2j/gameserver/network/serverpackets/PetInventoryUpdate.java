@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.ItemInfo;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -14,7 +14,7 @@ public class PetInventoryUpdate extends AbstractInventoryUpdate {
     public PetInventoryUpdate() {
     }
 
-    public PetInventoryUpdate(L2ItemInstance item) {
+    public PetInventoryUpdate(Item item) {
         super(item);
     }
 

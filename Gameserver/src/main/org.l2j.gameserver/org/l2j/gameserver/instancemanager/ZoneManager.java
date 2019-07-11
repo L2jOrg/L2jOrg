@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.zone.*;
 import org.l2j.gameserver.model.zone.form.ZoneCuboid;
 import org.l2j.gameserver.model.zone.form.ZoneCylinder;
@@ -46,7 +46,7 @@ public final class ZoneManager extends GameXmlReader {
     private final Map<String, L2SpawnTerritory> _spawnTerritories = new HashMap<>();
     private final ZoneRegion[][] zoneRegions;
     private int _lastDynamicId = 300000;
-    private List<L2ItemInstance> _debugItems;
+    private List<Item> _debugItems;
 
     private ZoneManager() {
         zoneRegions = new ZoneRegion[(L2World.MAP_MAX_X >> SHIFT_BY) + OFFSET_X + 1][(L2World.MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y + 1];
@@ -567,7 +567,7 @@ public final class ZoneManager extends GameXmlReader {
      *
      * @return list of items
      */
-    public List<L2ItemInstance> getDebugItems() {
+    public List<Item> getDebugItems() {
         if (_debugItems == null) {
             _debugItems = new ArrayList<>();
         }
@@ -579,9 +579,9 @@ public final class ZoneManager extends GameXmlReader {
      */
     public void clearDebugItems() {
         if (_debugItems != null) {
-            final Iterator<L2ItemInstance> it = _debugItems.iterator();
+            final Iterator<Item> it = _debugItems.iterator();
             while (it.hasNext()) {
-                final L2ItemInstance item = it.next();
+                final Item item = it.next();
                 if (item != null) {
                     item.decayMe();
                 }

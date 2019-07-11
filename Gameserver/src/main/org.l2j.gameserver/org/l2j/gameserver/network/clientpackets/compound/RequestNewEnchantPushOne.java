@@ -4,7 +4,7 @@ import org.l2j.gameserver.data.xml.impl.CombinationItemsData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.CompoundRequest;
 import org.l2j.gameserver.model.items.combination.CombinationItem;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.compound.ExEnchantOneFail;
@@ -46,7 +46,7 @@ public class RequestNewEnchantPushOne extends ClientPacket {
 
         // Make sure player owns this item.
         request.setItemOne(_objectId);
-        final L2ItemInstance itemOne = request.getItemOne();
+        final Item itemOne = request.getItemOne();
         if (itemOne == null) {
             client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
             activeChar.removeRequest(request.getClass());

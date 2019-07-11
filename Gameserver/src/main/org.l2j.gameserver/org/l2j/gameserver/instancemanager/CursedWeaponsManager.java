@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.CursedWeapon;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.*;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -207,7 +207,7 @@ public final class CursedWeaponsManager extends GameXmlReader {
         }
     }
 
-    public void activate(Player player, L2ItemInstance item) {
+    public void activate(Player player, Item item) {
         final CursedWeapon cw = _cursedWeapons.get(item.getId());
         if (player.isCursedWeaponEquipped()) // cannot own 2 cursed swords
         {

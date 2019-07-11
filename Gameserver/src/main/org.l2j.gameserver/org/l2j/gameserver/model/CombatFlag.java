@@ -3,7 +3,7 @@ package org.l2j.gameserver.model;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -15,8 +15,8 @@ public class CombatFlag {
     private final int _fortId;
     private Player _player = null;
     private int _playerId = 0;
-    private L2ItemInstance _item = null;
-    private L2ItemInstance _itemInstance;
+    private Item _item = null;
+    private Item _itemInstance;
 
     public CombatFlag(int fort_id, int x, int y, int z, int heading, int item_id) {
         _fortId = fort_id;
@@ -25,7 +25,7 @@ public class CombatFlag {
     }
 
     public synchronized void spawnMe() {
-        // Init the dropped L2ItemInstance and add it in the world as a visible object at the position where mob was last
+        // Init the dropped Item and add it in the world as a visible object at the position where mob was last
         _itemInstance = ItemTable.getInstance().createItem("Combat", _itemId, 1, null, null);
         _itemInstance.dropMe(null, _location.getX(), _location.getY(), _location.getZ());
     }
@@ -39,7 +39,7 @@ public class CombatFlag {
         }
     }
 
-    public boolean activate(Player player, L2ItemInstance item) {
+    public boolean activate(Player player, Item item) {
         if (player.isMounted()) {
             player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
             return false;
@@ -87,7 +87,7 @@ public class CombatFlag {
         return _playerId;
     }
 
-    public L2ItemInstance getCombatFlagInstance() {
+    public Item getCombatFlagInstance() {
         return _itemInstance;
     }
 }

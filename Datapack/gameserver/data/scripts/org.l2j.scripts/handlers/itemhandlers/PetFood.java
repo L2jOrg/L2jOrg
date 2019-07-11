@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
@@ -38,7 +38,7 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 public class PetFood implements IItemHandler
 {
 	@Override
-	public boolean useItem(Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
 		if (playable.isPet() && !((Pet) playable).canEatFoodId(item.getId()))
 		{
@@ -54,7 +54,7 @@ public class PetFood implements IItemHandler
 		return true;
 	}
 	
-	private boolean useFood(Playable activeChar, int skillId, int skillLevel, L2ItemInstance item)
+	private boolean useFood(Playable activeChar, int skillId, int skillLevel, Item item)
 	{
 		final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 		if (skill != null)

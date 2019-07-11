@@ -20,7 +20,7 @@ import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
 
@@ -45,7 +45,7 @@ public class AttributeFinalizer implements IStatsFunction {
         double baseValue = creature.getTemplate().getBaseValue(stat, 0);
         if (creature.isPlayable()) {
             if (_isWeapon) {
-                final L2ItemInstance weapon = creature.getActiveWeaponInstance();
+                final Item weapon = creature.getActiveWeaponInstance();
                 if (weapon != null) {
                     final AttributeHolder weaponInstanceHolder = weapon.getAttribute(_type);
                     if (weaponInstanceHolder != null) {
@@ -60,7 +60,7 @@ public class AttributeFinalizer implements IStatsFunction {
             } else {
                 final Inventory inventory = creature.getInventory();
                 if (inventory != null) {
-                    for (L2ItemInstance item : inventory.getPaperdollItems(L2ItemInstance::isArmor)) {
+                    for (Item item : inventory.getPaperdollItems(Item::isArmor)) {
                         final AttributeHolder weaponInstanceHolder = item.getAttribute(_type);
                         if (weaponInstanceHolder != null) {
                             baseValue += weaponInstanceHolder.getValue();

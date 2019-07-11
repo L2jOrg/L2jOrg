@@ -28,7 +28,7 @@ import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.Mail;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.commission.*;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionList.CommissionListReplyType;
@@ -67,13 +67,13 @@ public final class CommissionManager {
     private final Map<Long, CommissionItem> _commissionItems = new ConcurrentSkipListMap<>();
 
     private CommissionManager() {
-        final Map<Integer, L2ItemInstance> itemInstances = new HashMap<>();
+        final Map<Integer, Item> itemInstances = new HashMap<>();
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
             try (PreparedStatement ps = con.prepareStatement(SELECT_ALL_ITEMS)) {
                 ps.setString(1, ItemLocation.COMMISSION.name());
                 try (ResultSet rs = ps.executeQuery()) {
                     while (rs.next()) {
-                        final L2ItemInstance itemInstance = new L2ItemInstance(rs);
+                        final Item itemInstance = new Item(rs);
                         itemInstances.put(itemInstance.getObjectId(), itemInstance);
                     }
                 }
@@ -83,7 +83,7 @@ public final class CommissionManager {
                  ResultSet rs = st.executeQuery(SELECT_ALL_COMMISSION_ITEMS)) {
                 while (rs.next()) {
                     final long commissionId = rs.getLong("commission_id");
-                    final L2ItemInstance itemInstance = itemInstances.get(rs.getInt("item_object_id"));
+                    final Item itemInstance = itemInstances.get(rs.getInt("item_object_id"));
                     if (itemInstance == null) {
                         LOGGER.warn(": Failed loading commission item with commission id " + commissionId + " because item instance does not exist or failed to load.");
                         continue;
@@ -188,7 +188,7 @@ public final class CommissionManager {
             return;
         }
 
-        L2ItemInstance itemInstance = player.getInventory().getItemByObjectId(itemObjectId);
+        Item itemInstance = player.getInventory().getItemByObjectId(itemObjectId);
         if ((itemInstance == null) || !itemInstance.isAvailable(player, false, false) || (itemInstance.getCount() < itemCount)) {
             player.sendPacket(SystemMessageId.THE_ITEM_HAS_FAILED_TO_BE_REGISTERED);
             player.sendPacket(ExResponseCommissionRegister.FAILED);
@@ -306,7 +306,7 @@ public final class CommissionManager {
             return;
         }
 
-        final L2ItemInstance itemInstance = commissionItem.getItemInstance();
+        final Item itemInstance = commissionItem.getItemInstance();
         if (itemInstance.getOwnerId() == player.getObjectId()) {
             player.sendPacket(SystemMessageId.ITEM_PURCHASE_HAS_FAILED);
             player.sendPacket(ExResponseCommissionBuyItem.FAILED);

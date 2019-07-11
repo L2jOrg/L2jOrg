@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.items.L2Armor;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.L2Weapon;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -163,7 +163,7 @@ public final class ItemCrystallizationData extends GameXmlReader {
      * @param item to calculate its worth in crystals.
      * @return List of {@code ItemChanceHolder} for the rewards with altered crystal count.
      */
-    public List<ItemChanceHolder> getCrystallizationRewards(L2ItemInstance item) {
+    public List<ItemChanceHolder> getCrystallizationRewards(Item item) {
         final List<ItemChanceHolder> result = new ArrayList<>();
         final CrystallizationDataHolder data = getCrystallizationData(item.getId());
         if (data != null) {

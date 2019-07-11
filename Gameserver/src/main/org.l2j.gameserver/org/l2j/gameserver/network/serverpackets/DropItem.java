@@ -1,20 +1,20 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class DropItem extends ServerPacket {
-    private final L2ItemInstance _item;
+    private final Item _item;
     private final int _charObjId;
 
     /**
      * Constructor of the DropItem server packet
      *
-     * @param item        : L2ItemInstance designating the item
+     * @param item        : Item designating the item
      * @param playerObjId : int designating the player ID who dropped the item
      */
-    public DropItem(L2ItemInstance item, int playerObjId) {
+    public DropItem(Item item, int playerObjId) {
         _item = item;
         _charObjId = playerObjId;
     }

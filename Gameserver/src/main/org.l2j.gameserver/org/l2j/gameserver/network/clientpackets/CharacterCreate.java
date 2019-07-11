@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerCreate;
 import org.l2j.gameserver.model.items.PcItemTemplate;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.serverpackets.CharCreateFail;
@@ -183,7 +183,7 @@ public final class CharacterCreate extends ClientPacket {
         final List<PcItemTemplate> initialItems = InitialEquipmentData.getInstance().getEquipmentList(newChar.getClassId());
         if (initialItems != null) {
             for (PcItemTemplate ie : initialItems) {
-                final L2ItemInstance item = newChar.getInventory().addItem("Init", ie.getId(), ie.getCount(), newChar, null);
+                final Item item = newChar.getInventory().addItem("Init", ie.getId(), ie.getCount(), newChar, null);
                 if (item == null) {
                     LOGGER.warn("Could not create item during char creation: itemId " + ie.getId() + ", amount " + ie.getCount() + ".");
                     continue;

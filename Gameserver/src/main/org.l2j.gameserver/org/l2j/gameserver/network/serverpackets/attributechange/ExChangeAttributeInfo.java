@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.attributechange;
 
 import org.l2j.gameserver.enums.AttributeType;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -27,7 +27,7 @@ public class ExChangeAttributeInfo extends ServerPacket {
         ATTRIBUTE_MASKS.put(AttributeType.DARK, (byte) 32);
     }
 
-    public ExChangeAttributeInfo(int crystalItemId, L2ItemInstance item) {
+    public ExChangeAttributeInfo(int crystalItemId, Item item) {
         _crystalItemId = crystalItemId;
         _attributes = 0;
         for (AttributeType e : AttributeType.ATTRIBUTE_TYPES) {

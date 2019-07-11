@@ -4,7 +4,7 @@ import org.l2j.gameserver.data.xml.impl.EnchantItemData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.model.items.enchant.EnchantScroll;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPutEnchantScrollItemResult;
 
@@ -36,8 +36,8 @@ public class RequestExAddEnchantScrollItem extends ClientPacket {
         request.setEnchantingItem(_enchantObjectId);
         request.setEnchantingScroll(_scrollObjectId);
 
-        final L2ItemInstance item = request.getEnchantingItem();
-        final L2ItemInstance scroll = request.getEnchantingScroll();
+        final Item item = request.getEnchantingItem();
+        final Item scroll = request.getEnchantingScroll();
         if ((item == null) || (scroll == null)) {
             // message may be custom
             activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);

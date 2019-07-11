@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets.compound;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.CompoundRequest;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.compound.ExEnchantOneFail;
@@ -41,7 +41,7 @@ public class RequestNewEnchantRemoveTwo extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance item = request.getItemTwo();
+        final Item item = request.getItemTwo();
         if ((item == null) || (item.getObjectId() != _objectId)) {
             client.sendPacket(ExEnchantTwoRemoveFail.STATIC_PACKET);
             return;

@@ -7,7 +7,7 @@ import org.l2j.gameserver.instancemanager.ItemAuctionManager;
 import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -61,7 +61,7 @@ public final class ItemAuction {
         _scheduledAuctionEndingExtendState = ItemAuctionExtendState.INITIAL;
         _auctionEndingExtendState = ItemAuctionExtendState.INITIAL;
 
-        final L2ItemInstance item = _auctionItem.createNewItemInstance();
+        final Item item = _auctionItem.createNewItemInstance();
         _itemInfo = new ItemInfo(item);
         L2World.getInstance().removeObject(item);
 
@@ -106,7 +106,7 @@ public final class ItemAuction {
         return _itemInfo;
     }
 
-    public final L2ItemInstance createNewItemInstance() {
+    public final Item createNewItemInstance() {
         return _auctionItem.createNewItemInstance();
     }
 

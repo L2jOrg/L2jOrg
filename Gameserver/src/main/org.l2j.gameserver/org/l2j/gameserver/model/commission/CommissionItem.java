@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.commission;
 
 import org.l2j.gameserver.model.ItemInfo;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -28,14 +28,14 @@ import java.util.concurrent.ScheduledFuture;
  */
 public class CommissionItem {
     private final long _commissionId;
-    private final L2ItemInstance _itemInstance;
+    private final Item _itemInstance;
     private final ItemInfo _itemInfo;
     private final long _pricePerUnit;
     private final Instant _startTime;
     private final byte _durationInDays;
     private ScheduledFuture<?> _saleEndTask;
 
-    public CommissionItem(long commissionId, L2ItemInstance itemInstance, long pricePerUnit, Instant startTime, byte durationInDays) {
+    public CommissionItem(long commissionId, Item itemInstance, long pricePerUnit, Instant startTime, byte durationInDays) {
         _commissionId = commissionId;
         _itemInstance = itemInstance;
         _itemInfo = new ItemInfo(_itemInstance);
@@ -58,7 +58,7 @@ public class CommissionItem {
      *
      * @return the item instance
      */
-    public L2ItemInstance getItemInstance() {
+    public Item getItemInstance() {
         return _itemInstance;
     }
 

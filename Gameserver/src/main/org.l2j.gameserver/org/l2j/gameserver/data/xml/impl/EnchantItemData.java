@@ -3,7 +3,7 @@ package org.l2j.gameserver.data.xml.impl;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.enchant.EnchantScroll;
 import org.l2j.gameserver.model.items.enchant.EnchantSupportItem;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -105,7 +105,7 @@ public class EnchantItemData extends GameXmlReader {
      * @param scroll the scroll
      * @return enchant template for scroll
      */
-    public final EnchantScroll getEnchantScroll(L2ItemInstance scroll) {
+    public final EnchantScroll getEnchantScroll(Item scroll) {
         return _scrolls.get(scroll.getId());
     }
 
@@ -115,7 +115,7 @@ public class EnchantItemData extends GameXmlReader {
      * @param item the item
      * @return enchant template for support item
      */
-    public final EnchantSupportItem getSupportItem(L2ItemInstance item) {
+    public final EnchantSupportItem getSupportItem(Item item) {
         return _supports.get(item.getId());
     }
 

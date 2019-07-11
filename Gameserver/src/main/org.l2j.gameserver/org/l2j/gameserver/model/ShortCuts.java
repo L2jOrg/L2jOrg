@@ -20,7 +20,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.IRestorable;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -59,7 +59,7 @@ public class ShortCuts implements IRestorable {
     public synchronized void registerShortCut(Shortcut shortcut) {
         // Verify shortcut
         if (shortcut.getType() == ShortcutType.ITEM) {
-            final L2ItemInstance item = _owner.getInventory().getItemByObjectId(shortcut.getId());
+            final Item item = _owner.getInventory().getItemByObjectId(shortcut.getId());
             if (item == null) {
                 return;
             }
@@ -153,7 +153,7 @@ public class ShortCuts implements IRestorable {
         // Verify shortcuts
         for (Shortcut sc : getAllShortCuts()) {
             if (sc.getType() == ShortcutType.ITEM) {
-                final L2ItemInstance item = _owner.getInventory().getItemByObjectId(sc.getId());
+                final Item item = _owner.getInventory().getItemByObjectId(sc.getId());
                 if (item == null) {
                     deleteShortCut(sc.getSlot(), sc.getPage());
                 } else if (item.isEtcItem()) {

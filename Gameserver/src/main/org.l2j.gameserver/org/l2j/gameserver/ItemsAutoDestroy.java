@@ -3,20 +3,20 @@ package org.l2j.gameserver;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 public final class ItemsAutoDestroy {
-    private final List<L2ItemInstance> _items = new LinkedList<>();
+    private final List<Item> _items = new LinkedList<>();
 
     private ItemsAutoDestroy() {
         ThreadPoolManager.scheduleAtFixedRate(this::removeItems, 5000, 5000);
     }
 
-    public synchronized void addItem(L2ItemInstance item) {
+    public synchronized void addItem(Item item) {
         item.setDropTime(System.currentTimeMillis());
         _items.add(item);
     }
@@ -27,9 +27,9 @@ public final class ItemsAutoDestroy {
         }
 
         final long curtime = System.currentTimeMillis();
-        final Iterator<L2ItemInstance> itemIterator = _items.iterator();
+        final Iterator<Item> itemIterator = _items.iterator();
         while (itemIterator.hasNext()) {
-            final L2ItemInstance item = itemIterator.next();
+            final Item item = itemIterator.next();
             if ((item.getDropTime() == 0) || (item.getItemLocation() != ItemLocation.VOID)) {
                 itemIterator.remove();
             } else {

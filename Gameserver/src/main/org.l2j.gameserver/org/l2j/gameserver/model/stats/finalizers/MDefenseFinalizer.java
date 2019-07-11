@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
@@ -37,7 +37,7 @@ public class MDefenseFinalizer implements IStatsFunction {
 
         final Inventory inv = creature.getInventory();
         if (inv != null) {
-            for (L2ItemInstance item : inv.getPaperdollItems(L2ItemInstance::isEquipped)) {
+            for (Item item : inv.getPaperdollItems(Item::isEquipped)) {
                 baseValue += item.getItem().getStats(stat, 0);
             }
         }

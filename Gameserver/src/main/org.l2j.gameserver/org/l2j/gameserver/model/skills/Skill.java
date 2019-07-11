@@ -20,7 +20,7 @@ import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.holders.AttachSkillHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
 import org.l2j.gameserver.model.skills.targets.TargetType;
@@ -1120,7 +1120,7 @@ public final class Skill implements IIdentifiable {
     }
 
     /**
-     * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, L2ItemInstance)}.<br>
+     * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, Item)}.<br>
      * Simplify the calls.
      *
      * @param effector the caster of the skill
@@ -1131,19 +1131,19 @@ public final class Skill implements IIdentifiable {
     }
 
     /**
-     * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, L2ItemInstance)}.<br>
+     * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, Item)}.<br>
      * Simplify the calls.
      *
      * @param effector the caster of the skill
      * @param effected the target of the effect
      * @param item
      */
-    public void applyEffects(Creature effector, Creature effected, L2ItemInstance item) {
+    public void applyEffects(Creature effector, Creature effected, Item item) {
         applyEffects(effector, effected, false, false, true, 0, item);
     }
 
     /**
-     * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, L2ItemInstance)}.<br>
+     * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, Item)}.<br>
      * Simplify the calls, allowing abnormal time time customization.
      *
      * @param effector     the caster of the skill
@@ -1166,7 +1166,7 @@ public final class Skill implements IIdentifiable {
      * @param abnormalTime custom abnormal time, if equal or lesser than zero will be ignored
      * @param item
      */
-    public void applyEffects(Creature effector, Creature effected, boolean self, boolean passive, boolean instant, int abnormalTime, L2ItemInstance item) {
+    public void applyEffects(Creature effector, Creature effected, boolean self, boolean passive, boolean instant, int abnormalTime, Item item) {
         // null targets cannot receive any effects.
         if (effected == null) {
             return;
@@ -1279,7 +1279,7 @@ public final class Skill implements IIdentifiable {
      * @param item
      * @param targets the targets
      */
-    public void activateSkill(Creature caster, L2ItemInstance item, WorldObject... targets) {
+    public void activateSkill(Creature caster, Item item, WorldObject... targets) {
         activateSkill(caster, null, item, targets);
     }
 
@@ -1301,7 +1301,7 @@ public final class Skill implements IIdentifiable {
      * @param item
      * @param targets the targets
      */
-    public final void activateSkill(Creature caster, CubicInstance cubic, L2ItemInstance item, WorldObject... targets) {
+    public final void activateSkill(Creature caster, CubicInstance cubic, Item item, WorldObject... targets) {
         for (WorldObject targetObject : targets) {
             if (!targetObject.isCharacter()) {
                 continue;

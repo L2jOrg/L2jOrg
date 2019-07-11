@@ -20,18 +20,18 @@ import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid
  */
 public class OnPlayerAugment implements IBaseEvent {
     private final Player _activeChar;
-    private final L2ItemInstance _item;
+    private final Item _item;
     private final VariationInstance _augmentation;
     private final boolean _isAugment; // true = is being augmented // false = augment is being removed
 
-    public OnPlayerAugment(Player activeChar, L2ItemInstance item, VariationInstance augment, boolean isAugment) {
+    public OnPlayerAugment(Player activeChar, Item item, VariationInstance augment, boolean isAugment) {
         _activeChar = activeChar;
         _item = item;
         _augmentation = augment;
@@ -42,7 +42,7 @@ public class OnPlayerAugment implements IBaseEvent {
         return _activeChar;
     }
 
-    public L2ItemInstance getItem() {
+    public Item getItem() {
         return _item;
     }
 

@@ -14,7 +14,7 @@ import org.l2j.gameserver.model.actor.instance.L2BlockInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -96,7 +96,7 @@ public final class BlockCheckerEngine {
     // Time when the event starts. Used on packet sending
     protected long _startedTime;
     // List of dropped items in event (for later deletion)
-    protected Set<L2ItemInstance> _drops = ConcurrentHashMap.newKeySet();
+    protected Set<Item> _drops = ConcurrentHashMap.newKeySet();
     // Event is started
     protected boolean _isStarted = false;
     // Event end
@@ -223,7 +223,7 @@ public final class BlockCheckerEngine {
      *
      * @param item
      */
-    public void addNewDrop(L2ItemInstance item) {
+    public void addNewDrop(Item item) {
         if (item != null) {
             _drops.add(item);
         }
@@ -512,7 +512,7 @@ public final class BlockCheckerEngine {
             }
             _spawns.clear();
 
-            for (L2ItemInstance item : _drops) {
+            for (Item item : _drops) {
                 // npe
                 if (item == null) {
                     continue;

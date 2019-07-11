@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.holders.PetItemHolder;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PetItemList;
@@ -55,7 +55,7 @@ public final class SummonPet extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (!effector.isPlayer() || !effected.isPlayer() || effected.isAlikeDead())
 		{
@@ -77,7 +77,7 @@ public final class SummonPet extends AbstractEffect
 			return;
 		}
 		
-		final L2ItemInstance collar = holder.getItem();
+		final Item collar = holder.getItem();
 		if (player.getInventory().getItemByObjectId(collar.getObjectId()) != collar)
 		{
 			LOGGER.warn("Player: " + player + " is trying to summon pet from item that he doesn't owns.");

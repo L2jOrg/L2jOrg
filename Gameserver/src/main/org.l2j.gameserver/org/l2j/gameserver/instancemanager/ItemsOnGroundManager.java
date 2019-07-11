@@ -5,7 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,7 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public final class ItemsOnGroundManager implements Runnable {
     private static final Logger LOGGER = LoggerFactory.getLogger(ItemsOnGroundManager.class);
 
-    private final Set<L2ItemInstance> _items = ConcurrentHashMap.newKeySet();
+    private final Set<Item> _items = ConcurrentHashMap.newKeySet();
 
     private ItemsOnGroundManager() {
         if (Config.SAVE_DROPPED_ITEM_INTERVAL > 0) {
@@ -66,9 +66,9 @@ public final class ItemsOnGroundManager implements Runnable {
              PreparedStatement ps = con.prepareStatement("SELECT object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable FROM itemsonground")) {
             int count = 0;
             try (ResultSet rs = ps.executeQuery()) {
-                L2ItemInstance item;
+                Item item;
                 while (rs.next()) {
-                    item = new L2ItemInstance(rs.getInt(1), rs.getInt(2));
+                    item = new Item(rs.getInt(1), rs.getInt(2));
                     L2World.getInstance().addObject(item);
                     // this check and..
                     if (item.isStackable() && (rs.getInt(3) > 1)) {
@@ -108,13 +108,13 @@ public final class ItemsOnGroundManager implements Runnable {
         }
     }
 
-    public void save(L2ItemInstance item) {
+    public void save(Item item) {
         if (Config.SAVE_DROPPED_ITEM) {
             _items.add(item);
         }
     }
 
-    public void removeObject(L2ItemInstance item) {
+    public void removeObject(Item item) {
         if (Config.SAVE_DROPPED_ITEM) {
             _items.remove(item);
         }
@@ -151,7 +151,7 @@ public final class ItemsOnGroundManager implements Runnable {
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement("INSERT INTO itemsonground(object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable) VALUES(?,?,?,?,?,?,?,?,?)")) {
-            for (L2ItemInstance item : _items) {
+            for (Item item : _items) {
                 if (item == null) {
                     continue;
                 }

@@ -20,7 +20,7 @@ import org.l2j.gameserver.data.xml.impl.ArmorSetsData;
 import org.l2j.gameserver.model.L2ArmorSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
@@ -47,9 +47,9 @@ public class BaseStatsFinalizer implements IStatsFunction {
             final Set<L2ArmorSet> appliedSets = new HashSet<>(2);
 
             // Armor sets calculation
-            for (L2ItemInstance item : player.getInventory().getPaperdollItems()) {
+            for (Item item : player.getInventory().getPaperdollItems()) {
                 for (L2ArmorSet set : ArmorSetsData.getInstance().getSets(item.getId())) {
-                    if ((set.getPiecesCount(player, L2ItemInstance::getId) >= set.getMinimumPieces()) && appliedSets.add(set)) {
+                    if ((set.getPiecesCount(player, Item::getId) >= set.getMinimumPieces()) && appliedSets.add(set)) {
                         baseValue += set.getStatsBonus(BaseStats.valueOf(stat));
                     }
                 }

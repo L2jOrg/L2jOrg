@@ -19,18 +19,18 @@ package org.l2j.gameserver.model.events.impl.item;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid
  */
 public class OnItemCreate implements IBaseEvent {
     private final String _process;
-    private final L2ItemInstance _item;
+    private final Item _item;
     private final Creature _activeChar;
     private final Object _reference;
 
-    public OnItemCreate(String process, L2ItemInstance item, Creature actor, Object reference) {
+    public OnItemCreate(String process, Item item, Creature actor, Object reference) {
         _process = process;
         _item = item;
         _activeChar = actor;
@@ -41,7 +41,7 @@ public class OnItemCreate implements IBaseEvent {
         return _process;
     }
 
-    public L2ItemInstance getItem() {
+    public Item getItem() {
         return _item;
     }
 

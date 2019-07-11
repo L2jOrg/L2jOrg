@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.PetItemList;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
@@ -45,7 +45,7 @@ public final class RequestGetItemFromPet extends ClientPacket {
         }
 
         final Pet pet = player.getPet();
-        final L2ItemInstance item = pet.getInventory().getItemByObjectId(_objectId);
+        final Item item = pet.getInventory().getItemByObjectId(_objectId);
         if (item == null) {
             return;
         }
@@ -55,7 +55,7 @@ public final class RequestGetItemFromPet extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance transferedItem = pet.transferItem("Transfer", _objectId, _amount, player.getInventory(), player, pet);
+        final Item transferedItem = pet.transferItem("Transfer", _objectId, _amount, player.getInventory(), player, pet);
         if (transferedItem != null) {
             player.sendPacket(new PetItemList(pet.getInventory().getItems()));
         } else {

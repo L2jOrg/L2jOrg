@@ -20,17 +20,17 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid
  */
 public class OnPlayerItemTransfer implements IBaseEvent {
     private final Player _activeChar;
-    private final L2ItemInstance _item;
+    private final Item _item;
     private final ItemContainer _container;
 
-    public OnPlayerItemTransfer(Player activeChar, L2ItemInstance item, ItemContainer container) {
+    public OnPlayerItemTransfer(Player activeChar, Item item, ItemContainer container) {
         _activeChar = activeChar;
         _item = item;
         _container = container;
@@ -40,7 +40,7 @@ public class OnPlayerItemTransfer implements IBaseEvent {
         return _activeChar;
     }
 
-    public L2ItemInstance getItem() {
+    public Item getItem() {
         return _item;
     }
 

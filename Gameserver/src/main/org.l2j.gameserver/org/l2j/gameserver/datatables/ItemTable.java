@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
 import org.l2j.gameserver.model.items.*;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.util.GMAudit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -153,9 +153,9 @@ public class ItemTable {
     }
 
     /**
-     * Create the L2ItemInstance corresponding to the Item Identifier and quantitiy add logs the activity. <B><U> Actions</U> :</B>
-     * <li>Create and Init the L2ItemInstance corresponding to the Item Identifier and quantity</li>
-     * <li>Add the L2ItemInstance object to _allObjects of L2world</li>
+     * Create the Item corresponding to the Item Identifier and quantitiy add logs the activity. <B><U> Actions</U> :</B>
+     * <li>Create and Init the Item corresponding to the Item Identifier and quantity</li>
+     * <li>Add the Item object to _allObjects of L2world</li>
      * <li>Logs Item creation according to log settings</li>
      *
      * @param process   : String Identifier of process triggering this action
@@ -163,11 +163,11 @@ public class ItemTable {
      * @param count     : int Quantity of items to be created for stackable items
      * @param actor     : Creature requesting the item creation
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
-     * @return L2ItemInstance corresponding to the new item
+     * @return Item corresponding to the new item
      */
-    public L2ItemInstance createItem(String process, int itemId, long count, Creature actor, Object reference) {
-        // Create and Init the L2ItemInstance corresponding to the Item Identifier
-        final L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), itemId);
+    public Item createItem(String process, int itemId, long count, Creature actor, Object reference) {
+        // Create and Init the Item corresponding to the Item Identifier
+        final Item item = new Item(IdFactory.getInstance().getNextId(), itemId);
 
         if (process.equalsIgnoreCase("loot") && !Config.AUTO_LOOT_ITEM_IDS.contains(itemId)) {
             ScheduledFuture<?> itemLootShedule;
@@ -187,7 +187,7 @@ public class ItemTable {
             }
         }
 
-        // Add the L2ItemInstance object to _allObjects of L2world
+        // Add the Item object to _allObjects of L2world
         L2World.getInstance().addObject(item);
 
         // Set Item parameters
@@ -241,16 +241,16 @@ public class ItemTable {
         return item;
     }
 
-    public L2ItemInstance createItem(String process, int itemId, int count, Player actor) {
+    public Item createItem(String process, int itemId, int count, Player actor) {
         return createItem(process, itemId, count, actor, null);
     }
 
     /**
-     * Destroys the L2ItemInstance.<br>
+     * Destroys the Item.<br>
      * <B><U> Actions</U> :</B>
      * <ul>
-     * <li>Sets L2ItemInstance parameters to be unusable</li>
-     * <li>Removes the L2ItemInstance object to _allObjects of L2world</li>
+     * <li>Sets Item parameters to be unusable</li>
+     * <li>Removes the Item object to _allObjects of L2world</li>
      * <li>Logs Item deletion according to log settings</li>
      * </ul>
      *
@@ -259,13 +259,13 @@ public class ItemTable {
      * @param actor     the player requesting the item destroy.
      * @param reference the object referencing current action like NPC selling item or previous item in transformation.
      */
-    public void destroyItem(String process, L2ItemInstance item, Player actor, Object reference) {
+    public void destroyItem(String process, Item item, Player actor, Object reference) {
         synchronized (item) {
             final long old = item.getCount();
             item.setCount(0);
             item.setOwnerId(0);
             item.setItemLocation(ItemLocation.VOID);
-            item.setLastChange(L2ItemInstance.REMOVED);
+            item.setLastChange(Item.REMOVED);
 
             L2World.getInstance().removeObject(item);
             IdFactory.getInstance().releaseId(item.getObjectId());
@@ -338,8 +338,8 @@ public class ItemTable {
 
     protected static class ResetOwner implements Runnable {
 
-        L2ItemInstance _item;
-        public ResetOwner(L2ItemInstance item) {
+        Item _item;
+        public ResetOwner(Item item) {
             _item = item;
         }
 

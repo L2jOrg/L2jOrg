@@ -4,7 +4,7 @@ import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.model.items.type.EtcItemType;
 import org.l2j.gameserver.model.items.type.ItemType;
@@ -100,7 +100,7 @@ public abstract class AbstractEnchantItem {
      * @param supportItem
      * @return {@code true} if this support item can be used with the item to be enchanted, {@code false} otherwise
      */
-    public boolean isValid(L2ItemInstance itemToEnchant, EnchantSupportItem supportItem) {
+    public boolean isValid(Item itemToEnchant, EnchantSupportItem supportItem) {
         if (itemToEnchant == null) {
             return false;
         } else if (itemToEnchant.isEnchantable() == 0) {

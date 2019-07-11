@@ -1,18 +1,18 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.Collection;
 
 public class ExShowBaseAttributeCancelWindow extends ServerPacket {
-    private final Collection<L2ItemInstance> _items;
+    private final Collection<Item> _items;
     private long _price;
 
     public ExShowBaseAttributeCancelWindow(Player player) {
-        _items = player.getInventory().getItems(L2ItemInstance::hasAttributes);
+        _items = player.getInventory().getItems(Item::hasAttributes);
     }
 
     @Override
@@ -20,7 +20,7 @@ public class ExShowBaseAttributeCancelWindow extends ServerPacket {
         writeId(ServerPacketId.EX_SHOW_BASE_ATTRIBUTE_CANCEL_WINDOW);
 
         writeInt(_items.size());
-        for (L2ItemInstance item : _items) {
+        for (Item item : _items) {
             writeInt(item.getObjectId());
             writeLong(getPrice(item));
         }
@@ -33,7 +33,7 @@ public class ExShowBaseAttributeCancelWindow extends ServerPacket {
      * @param item
      * @return
      */
-    private long getPrice(L2ItemInstance item) {
+    private long getPrice(Item item) {
         switch (item.getItem().getCrystalType()) {
             case S: {
                 if (item.isWeapon()) {

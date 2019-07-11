@@ -31,7 +31,7 @@ import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.olympiad.CompetitionType;
 import org.l2j.gameserver.model.olympiad.Participant;
 import org.l2j.gameserver.model.skills.Skill;
@@ -791,7 +791,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param item
      * @param player
      */
-    public final void notifyItemTalk(L2ItemInstance item, Player player) {
+    public final void notifyItemTalk(Item item, Player player) {
         String res = null;
         try {
             res = onItemTalk(item, player);
@@ -807,7 +807,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param player
      * @return
      */
-    public String onItemTalk(L2ItemInstance item, Player player) {
+    public String onItemTalk(Item item, Player player) {
         return null;
     }
 
@@ -816,7 +816,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param player
      * @param event
      */
-    public final void notifyItemEvent(L2ItemInstance item, Player player, String event) {
+    public final void notifyItemEvent(Item item, Player player, String event) {
         String res = null;
         try {
             res = onItemEvent(item, player, event);
@@ -1177,7 +1177,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param event
      * @return
      */
-    public String onItemEvent(L2ItemInstance item, Player player, String event) {
+    public String onItemEvent(Item item, Player player, String event) {
         return null;
     }
 

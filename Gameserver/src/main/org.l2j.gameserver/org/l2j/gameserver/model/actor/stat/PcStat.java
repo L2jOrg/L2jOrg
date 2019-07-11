@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.stats.Formulas;
@@ -87,7 +87,7 @@ public class PcStat extends PlayableStat {
         if (useBonuses) {
             if (activeChar.isFishing()) {
                 // rod fishing skills
-                final L2ItemInstance rod = activeChar.getActiveWeaponInstance();
+                final Item rod = activeChar.getActiveWeaponInstance();
                 if ((rod != null) && (rod.getItemType() == WeaponType.FISHINGROD) && (rod.getItem().getAllSkills() != null)) {
                     for (ItemSkillHolder s : rod.getItem().getAllSkills()) {
                         if (s.getSkill().getId() == FANCY_FISHING_ROD_SKILL) {

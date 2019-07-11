@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.data.xml.impl.VariationData;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.options.Variation;
 import org.l2j.gameserver.model.options.VariationFee;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -36,17 +36,17 @@ public final class RequestRefine extends AbstractRefinePacket {
             return;
         }
 
-        final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
+        final Item targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
         if (targetItem == null) {
             return;
         }
 
-        final L2ItemInstance mineralItem = activeChar.getInventory().getItemByObjectId(_mineralItemObjId);
+        final Item mineralItem = activeChar.getInventory().getItemByObjectId(_mineralItemObjId);
         if (mineralItem == null) {
             return;
         }
 
-        final L2ItemInstance feeItem = activeChar.getInventory().getItemByObjectId(_feeItemObjId);
+        final Item feeItem = activeChar.getInventory().getItemByObjectId(_feeItemObjId);
         if (feeItem == null) {
             return;
         }
@@ -79,8 +79,8 @@ public final class RequestRefine extends AbstractRefinePacket {
         // unequip item
         final InventoryUpdate iu = new InventoryUpdate();
         if (targetItem.isEquipped()) {
-            L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot());
-            for (L2ItemInstance itm : unequiped) {
+            Item[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot());
+            for (Item itm : unequiped) {
                 iu.addModifiedItem(itm);
             }
             activeChar.broadcastUserInfo();

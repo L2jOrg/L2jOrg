@@ -20,7 +20,7 @@ import org.l2j.gameserver.data.xml.impl.EnsoulData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -50,7 +50,7 @@ public class RequestTryEnSoulExtraction extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance item = player.getInventory().getItemByObjectId(_itemObjectId);
+        final Item item = player.getInventory().getItemByObjectId(_itemObjectId);
         if (item == null) {
             return;
         }

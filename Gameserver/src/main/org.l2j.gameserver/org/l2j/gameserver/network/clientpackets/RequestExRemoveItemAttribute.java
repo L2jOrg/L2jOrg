@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.L2Weapon;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExBaseAttributeCancelResult;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -31,7 +31,7 @@ public class RequestExRemoveItemAttribute extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_objectId);
+        final Item targetItem = activeChar.getInventory().getItemByObjectId(_objectId);
         if (targetItem == null) {
             return;
         }
@@ -85,7 +85,7 @@ public class RequestExRemoveItemAttribute extends ClientPacket {
         }
     }
 
-    private long getPrice(L2ItemInstance item) {
+    private long getPrice(Item item) {
         switch (item.getItem().getCrystalType()) {
             case S: {
                 if (item.getItem() instanceof L2Weapon) {

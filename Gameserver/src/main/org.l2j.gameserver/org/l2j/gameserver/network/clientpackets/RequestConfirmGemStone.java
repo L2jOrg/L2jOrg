@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.xml.impl.VariationData;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.options.VariationFee;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPutCommissionResultForVariationMake;
@@ -33,17 +33,17 @@ public final class RequestConfirmGemStone extends AbstractRefinePacket {
             return;
         }
 
-        final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
+        final Item targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
         if (targetItem == null) {
             return;
         }
 
-        final L2ItemInstance refinerItem = activeChar.getInventory().getItemByObjectId(_mineralItemObjId);
+        final Item refinerItem = activeChar.getInventory().getItemByObjectId(_mineralItemObjId);
         if (refinerItem == null) {
             return;
         }
 
-        final L2ItemInstance gemStoneItem = activeChar.getInventory().getItemByObjectId(_feeItemObjId);
+        final Item gemStoneItem = activeChar.getInventory().getItemByObjectId(_feeItemObjId);
         if (gemStoneItem == null) {
             return;
         }

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -11,7 +11,7 @@ import java.util.List;
 public final class ItemList extends AbstractItemPacket {
     private final int _sendType;
     private final Player _activeChar;
-    private final List<L2ItemInstance> _items;
+    private final List<Item> _items;
 
     public ItemList(int sendType, Player activeChar) {
         _sendType = sendType;
@@ -26,7 +26,7 @@ public final class ItemList extends AbstractItemPacket {
             writeByte((byte) _sendType);
             writeInt(_items.size());
             writeInt(_items.size());
-            for (L2ItemInstance item : _items) {
+            for (Item item : _items) {
                 writeItem(item);
             }
         } else {

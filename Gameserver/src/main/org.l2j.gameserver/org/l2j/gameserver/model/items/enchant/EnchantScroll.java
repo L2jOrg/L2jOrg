@@ -20,7 +20,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.impl.EnchantItemGroupsData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.EtcItemType;
 import org.l2j.gameserver.model.items.type.ItemType;
 
@@ -97,7 +97,7 @@ public final class EnchantScroll extends AbstractEnchantItem {
      * @return {@code true} if this scroll can be used with the specified support item and the item to be enchanted, {@code false} otherwise
      */
     @Override
-    public boolean isValid(L2ItemInstance itemToEnchant, EnchantSupportItem supportItem) {
+    public boolean isValid(Item itemToEnchant, EnchantSupportItem supportItem) {
         if ((_items != null) && !_items.contains(itemToEnchant.getId())) {
             return false;
         } else if ((supportItem != null)) {
@@ -119,7 +119,7 @@ public final class EnchantScroll extends AbstractEnchantItem {
      * @param enchantItem
      * @return the chance of current scroll's group.
      */
-    public double getChance(Player player, L2ItemInstance enchantItem) {
+    public double getChance(Player player, Item enchantItem) {
         if (EnchantItemGroupsData.getInstance().getScrollGroup(_scrollGroupId) == null) {
             LOGGER.warn(": Unexistent enchant scroll group specified for enchant scroll: " + getId());
             return -1;
@@ -139,7 +139,7 @@ public final class EnchantScroll extends AbstractEnchantItem {
      * @param supportItem
      * @return the total chance for success rate of this scroll
      */
-    public EnchantResultType calculateSuccess(Player player, L2ItemInstance enchantItem, EnchantSupportItem supportItem) {
+    public EnchantResultType calculateSuccess(Player player, Item enchantItem, EnchantSupportItem supportItem) {
         if (!isValid(enchantItem, supportItem)) {
             return EnchantResultType.ERROR;
         }

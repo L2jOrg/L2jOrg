@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -8,9 +8,9 @@ import org.l2j.gameserver.network.ServerPacketId;
  * @author KenM
  */
 public final class ExRpItemLink extends AbstractItemPacket {
-    private final L2ItemInstance _item;
+    private final Item _item;
 
-    public ExRpItemLink(L2ItemInstance item) {
+    public ExRpItemLink(Item item) {
         _item = item;
     }
 

@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.VariationData;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPutItemResultForVariationCancel;
 import org.l2j.gameserver.util.GameUtils;
@@ -27,7 +27,7 @@ public final class RequestConfirmCancelItem extends ClientPacket {
         if (activeChar == null) {
             return;
         }
-        final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
+        final Item item = activeChar.getInventory().getItemByObjectId(_objectId);
         if (item == null) {
             return;
         }

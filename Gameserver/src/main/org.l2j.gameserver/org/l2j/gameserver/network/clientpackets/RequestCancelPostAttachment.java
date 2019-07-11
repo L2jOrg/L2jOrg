@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExChangePostState;
@@ -81,7 +81,7 @@ public final class RequestCancelPostAttachment extends ClientPacket {
         int weight = 0;
         int slots = 0;
 
-        for (L2ItemInstance item : attachments.getItems()) {
+        for (Item item : attachments.getItems()) {
             if (item == null) {
                 continue;
             }
@@ -121,13 +121,13 @@ public final class RequestCancelPostAttachment extends ClientPacket {
 
         // Proceed to the transfer
         final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-        for (L2ItemInstance item : attachments.getItems()) {
+        for (Item item : attachments.getItems()) {
             if (item == null) {
                 continue;
             }
 
             final long count = item.getCount();
-            final L2ItemInstance newItem = attachments.transferItem(attachments.getName(), item.getObjectId(), count, activeChar.getInventory(), activeChar, null);
+            final Item newItem = attachments.transferItem(attachments.getName(), item.getObjectId(), count, activeChar.getInventory(), activeChar, null);
             if (newItem == null) {
                 return;
             }

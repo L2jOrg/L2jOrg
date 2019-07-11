@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -37,7 +37,7 @@ public class RequestChangeAttributeItem extends ClientPacket {
         }
 
         final PcInventory inventory = activeChar.getInventory();
-        final L2ItemInstance item = inventory.getItemByObjectId(_itemObjId);
+        final Item item = inventory.getItemByObjectId(_itemObjId);
 
         // attempting to destroy item
         if (activeChar.getInventory().destroyItemByItemId("ChangeAttribute", _consumeItemId, 1, activeChar, item) == null) {
@@ -61,7 +61,7 @@ public class RequestChangeAttributeItem extends ClientPacket {
         activeChar.sendPacket(msg);
         InventoryUpdate iu = new InventoryUpdate();
         iu.addModifiedItem(item);
-        for (L2ItemInstance i : activeChar.getInventory().getItemsByItemId(_consumeItemId)) {
+        for (Item i : activeChar.getInventory().getItemsByItemId(_consumeItemId)) {
             iu.addItem(i);
         }
         activeChar.sendPacket(iu);

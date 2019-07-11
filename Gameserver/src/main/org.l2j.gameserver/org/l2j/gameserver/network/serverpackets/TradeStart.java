@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -15,7 +15,7 @@ public final class TradeStart extends AbstractItemPacket {
     private final int _sendType;
     private final Player _activeChar;
     private final Player _partner;
-    private final Collection<L2ItemInstance> _itemList;
+    private final Collection<Item> _itemList;
     private int _mask = 0;
 
     public TradeStart(int sendType, Player player) {
@@ -56,7 +56,7 @@ public final class TradeStart extends AbstractItemPacket {
         if (_sendType == 2) {
             writeInt(_itemList.size());
             writeInt(_itemList.size());
-            for (L2ItemInstance item : _itemList) {
+            for (Item item : _itemList) {
                 writeItem(item);
             }
         } else {

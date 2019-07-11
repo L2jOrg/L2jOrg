@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.model.holders.UniqueItemHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExBuySellList;
@@ -110,7 +110,7 @@ public final class RequestSellItem extends ClientPacket {
         long totalPrice = 0;
         // Proceed the sell
         for (UniqueItemHolder i : _items) {
-            L2ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "sell");
+            Item item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "sell");
             if ((item == null) || (!item.isSellable())) {
                 continue;
             }

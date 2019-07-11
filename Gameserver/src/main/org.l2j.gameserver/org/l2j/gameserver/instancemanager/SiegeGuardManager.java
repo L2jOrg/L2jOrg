@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.holders.SiegeGuardHolder;
 import org.l2j.gameserver.model.interfaces.IPositionable;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,7 +31,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public final class SiegeGuardManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(SiegeGuardManager.class);
-    private static final Set<L2ItemInstance> _droppedTickets = ConcurrentHashMap.newKeySet();
+    private static final Set<Item> _droppedTickets = ConcurrentHashMap.newKeySet();
     private static final Map<Integer, Set<L2Spawn>> _siegeGuardSpawn = new ConcurrentHashMap<>();
 
     private SiegeGuardManager() {
@@ -56,7 +56,7 @@ public final class SiegeGuardManager {
 
                 final SiegeGuardHolder holder = getSiegeGuardByNpc(castle.getResidenceId(), npcId);
                 if ((holder != null) && !castle.getSiege().isInProgress()) {
-                    final L2ItemInstance dropticket = new L2ItemInstance(holder.getItemId());
+                    final Item dropticket = new Item(holder.getItemId());
                     dropticket.setItemLocation(ItemLocation.VOID);
                     dropticket.dropMe(null, x, y, z);
                     L2World.getInstance().addObject(dropticket);
@@ -148,7 +148,7 @@ public final class SiegeGuardManager {
             }
 
             spawnMercenary(player, holder);
-            final L2ItemInstance dropticket = new L2ItemInstance(itemId);
+            final Item dropticket = new Item(itemId);
             dropticket.setItemLocation(ItemLocation.VOID);
             dropticket.dropMe(null, player.getX(), player.getY(), player.getZ());
             L2World.getInstance().addObject(dropticket);
@@ -181,7 +181,7 @@ public final class SiegeGuardManager {
      * @param castleId the ID of the castle
      */
     public void deleteTickets(int castleId) {
-        for (L2ItemInstance ticket : _droppedTickets) {
+        for (Item ticket : _droppedTickets) {
             if ((ticket != null) && (getSiegeGuardByItem(castleId, ticket.getId()) != null)) {
                 ticket.decayMe();
                 _droppedTickets.remove(ticket);
@@ -194,7 +194,7 @@ public final class SiegeGuardManager {
      *
      * @param item the item ID
      */
-    public void removeTicket(L2ItemInstance item) {
+    public void removeTicket(Item item) {
         final Castle castle = CastleManager.getInstance().getCastle(item);
         if (castle == null) {
             return;

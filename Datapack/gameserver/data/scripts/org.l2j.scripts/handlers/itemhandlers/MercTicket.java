@@ -33,7 +33,7 @@ import org.l2j.gameserver.model.events.annotations.RegisterEvent;
 import org.l2j.gameserver.model.events.annotations.RegisterType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerDlgAnswer;
 import org.l2j.gameserver.model.holders.SiegeGuardHolder;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 
@@ -45,14 +45,14 @@ import ai.AbstractNpcAI;
  */
 public final class MercTicket extends AbstractNpcAI implements IItemHandler
 {
-	private final Map<Integer, L2ItemInstance> _items = new ConcurrentHashMap<>();
+	private final Map<Integer, Item> _items = new ConcurrentHashMap<>();
 	
 	public MercTicket()
 	{
 	}
 	
 	@Override
-	public boolean useItem(Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -115,7 +115,7 @@ public final class MercTicket extends AbstractNpcAI implements IItemHandler
 			
 			if (event.getAnswer() == 1)
 			{
-				final L2ItemInstance item = _items.get(activeChar.getObjectId());
+				final Item item = _items.get(activeChar.getObjectId());
 				SiegeGuardManager.getInstance().addTicket(item.getId(), activeChar);
 				activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false); // Remove item from char's inventory
 			}

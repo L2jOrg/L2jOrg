@@ -2,14 +2,14 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.Collection;
 
 public class GMViewWarehouseWithdrawList extends AbstractItemPacket {
-    private final Collection<L2ItemInstance> _items;
+    private final Collection<Item> _items;
     private final String playerName;
     private final long _money;
 
@@ -31,7 +31,7 @@ public class GMViewWarehouseWithdrawList extends AbstractItemPacket {
         writeString(playerName);
         writeLong(_money);
         writeShort((short) _items.size());
-        for (L2ItemInstance item : _items) {
+        for (Item item : _items) {
             writeItem(item);
             writeInt(item.getObjectId());
         }

@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ActionType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExAutoSoulShot;
@@ -59,7 +59,7 @@ public final class RequestAutoSoulShot extends ClientPacket {
         }
 
         if ((activeChar.getPrivateStoreType() == PrivateStoreType.NONE) && (activeChar.getActiveRequester() == null) && !activeChar.isDead()) {
-            final L2ItemInstance item = activeChar.getInventory().getItemByItemId(_itemId);
+            final Item item = activeChar.getInventory().getItemByItemId(_itemId);
             if (item == null) {
                 return;
             }

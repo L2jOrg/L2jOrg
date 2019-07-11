@@ -16,19 +16,19 @@
  */
 package org.l2j.gameserver.model.holders;
 
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid
  */
 public class PetItemHolder {
-    private final L2ItemInstance _item;
+    private final Item _item;
 
-    public PetItemHolder(L2ItemInstance item) {
+    public PetItemHolder(Item item) {
         _item = item;
     }
 
-    public L2ItemInstance getItem() {
+    public Item getItem() {
         return _item;
     }
 }

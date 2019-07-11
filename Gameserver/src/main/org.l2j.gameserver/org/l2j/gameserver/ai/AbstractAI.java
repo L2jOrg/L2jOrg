@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
@@ -57,7 +57,7 @@ public abstract class AbstractAI implements Ctrl {
      * The skill we are currently casting by INTENTION_CAST
      */
     Skill _skill;
-    L2ItemInstance _item;
+    Item _item;
     boolean _forceUse;
     boolean _dontMove;
     private NextAction _nextAction;
@@ -165,7 +165,7 @@ public abstract class AbstractAI implements Ctrl {
                 break;
             }
             case AI_INTENTION_CAST: {
-                onIntentionCast((Skill) args[0], (WorldObject) args[1], args.length > 2 ? (L2ItemInstance) args[2] : null, args.length > 3 && (boolean) args[3], args.length > 4 && (boolean) args[4]);
+                onIntentionCast((Skill) args[0], (WorldObject) args[1], args.length > 2 ? (Item) args[2] : null, args.length > 3 && (boolean) args[3], args.length > 4 && (boolean) args[4]);
                 break;
             }
             case AI_INTENTION_MOVE_TO: {
@@ -320,7 +320,7 @@ public abstract class AbstractAI implements Ctrl {
 
     protected abstract void onIntentionAttack(Creature target);
 
-    protected abstract void onIntentionCast(Skill skill, WorldObject target, L2ItemInstance item, boolean forceUse, boolean dontMove);
+    protected abstract void onIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove);
 
     protected abstract void onIntentionMoveTo(Location destination);
 

@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.L2ExtractableProduct;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.L2EtcItem;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -41,7 +41,7 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 public class ExtractableItems implements IItemHandler
 {
 	@Override
-	public boolean useItem(Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -70,8 +70,8 @@ public class ExtractableItems implements IItemHandler
 			return false;
 		}
 		
-		final Map<L2ItemInstance, Long> extractedItems = new HashMap<>();
-		final List<L2ItemInstance> enchantedItems = new ArrayList<>();
+		final Map<Item, Long> extractedItems = new HashMap<>();
+		final List<Item> enchantedItems = new ArrayList<>();
 		if (etcitem.getExtractableCountMin() > 0)
 		{
 			while (extractedItems.size() < etcitem.getExtractableCountMin())
@@ -96,7 +96,7 @@ public class ExtractableItems implements IItemHandler
 						
 						// Do not extract the same item.
 						boolean alreadyExtracted = false;
-						for (L2ItemInstance i : extractedItems.keySet())
+						for (Item i : extractedItems.keySet())
 						{
 							if (i.getItem().getId() == expi.getId())
 							{
@@ -111,7 +111,7 @@ public class ExtractableItems implements IItemHandler
 						
 						if (ItemTable.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
 						{
-							final L2ItemInstance newItem = activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, false);
+							final Item newItem = activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, false);
 							if (expi.getMaxEnchant() > 0)
 							{
 								newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
@@ -123,7 +123,7 @@ public class ExtractableItems implements IItemHandler
 						{
 							while (createItemAmount > 0)
 							{
-								final L2ItemInstance newItem = activeChar.addItem("Extract", expi.getId(), 1, activeChar, false);
+								final Item newItem = activeChar.addItem("Extract", expi.getId(), 1, activeChar, false);
 								if (expi.getMaxEnchant() > 0)
 								{
 									newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
@@ -159,7 +159,7 @@ public class ExtractableItems implements IItemHandler
 					
 					if (ItemTable.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
 					{
-						final L2ItemInstance newItem = activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, false);
+						final Item newItem = activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, false);
 						if (expi.getMaxEnchant() > 0)
 						{
 							newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
@@ -171,7 +171,7 @@ public class ExtractableItems implements IItemHandler
 					{
 						while (createItemAmount > 0)
 						{
-							final L2ItemInstance newItem = activeChar.addItem("Extract", expi.getId(), 1, activeChar, false);
+							final Item newItem = activeChar.addItem("Extract", expi.getId(), 1, activeChar, false);
 							if (expi.getMaxEnchant() > 0)
 							{
 								newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
@@ -192,14 +192,14 @@ public class ExtractableItems implements IItemHandler
 		if (!enchantedItems.isEmpty())
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			for (L2ItemInstance i : enchantedItems)
+			for (Item i : enchantedItems)
 			{
 				playerIU.addModifiedItem(i);
 			}
 			activeChar.sendPacket(playerIU);
 		}
 		
-		for (L2ItemInstance i : extractedItems.keySet())
+		for (Item i : extractedItems.keySet())
 		{
 			sendMessage(activeChar, i, extractedItems.get(i));
 		}
@@ -207,7 +207,7 @@ public class ExtractableItems implements IItemHandler
 		return true;
 	}
 	
-	private void addItem(Map<L2ItemInstance, Long> extractedItems, L2ItemInstance newItem)
+	private void addItem(Map<Item, Long> extractedItems, Item newItem)
 	{
 		if (extractedItems.get(newItem) != null)
 		{
@@ -219,7 +219,7 @@ public class ExtractableItems implements IItemHandler
 		}
 	}
 	
-	private void sendMessage(Player player, L2ItemInstance item, Long count)
+	private void sendMessage(Player player, Item item, Long count)
 	{
 		final SystemMessage sm;
 		if (count > 1)

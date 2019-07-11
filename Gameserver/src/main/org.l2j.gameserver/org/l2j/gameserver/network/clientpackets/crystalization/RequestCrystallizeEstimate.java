@@ -5,7 +5,7 @@ import org.l2j.gameserver.data.xml.impl.ItemCrystallizationData;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -64,7 +64,7 @@ public class RequestCrystallizeEstimate extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
+        final Item item = activeChar.getInventory().getItemByObjectId(_objectId);
         if ((item == null) || item.isShadowItem() || item.isTimeLimitedItem() || item.isHeroItem()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;

@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.stats.BaseStats;
 
 import java.util.*;
@@ -176,14 +176,14 @@ public final class L2ArmorSet {
      */
     public int getLowestSetEnchant(Player player) {
         // Player don't have full set
-        if (getPiecesCount(player, L2ItemInstance::getId) < _minimumPieces) {
+        if (getPiecesCount(player, Item::getId) < _minimumPieces) {
             return 0;
         }
 
         final PcInventory inv = player.getInventory();
         int enchantLevel = Byte.MAX_VALUE;
         for (int armorSlot : ARMORSET_SLOTS) {
-            final L2ItemInstance itemPart = inv.getPaperdollItem(armorSlot);
+            final Item itemPart = inv.getPaperdollItem(armorSlot);
             if ((itemPart != null) && _requiredItems.contains(itemPart.getId())) {
                 if (enchantLevel > itemPart.getEnchantLevel()) {
                     enchantLevel = itemPart.getEnchantLevel();
@@ -210,7 +210,7 @@ public final class L2ArmorSet {
             case 1: {
 
                 for (int artifactSlot : ARTIFACT_1_SLOTS) {
-                    final L2ItemInstance itemPart = inv.getPaperdollItem(artifactSlot);
+                    final Item itemPart = inv.getPaperdollItem(artifactSlot);
                     if ((itemPart != null) && _requiredItems.contains(itemPart.getId())) {
                         slotMask += artifactSlot;
                     }
@@ -219,7 +219,7 @@ public final class L2ArmorSet {
             }
             case 2: {
                 for (int artifactSlot : ARTIFACT_2_SLOTS) {
-                    final L2ItemInstance itemPart = inv.getPaperdollItem(artifactSlot);
+                    final Item itemPart = inv.getPaperdollItem(artifactSlot);
                     if ((itemPart != null) && _requiredItems.contains(itemPart.getId())) {
                         slotMask += artifactSlot;
                     }
@@ -228,7 +228,7 @@ public final class L2ArmorSet {
             }
             case 3: {
                 for (int artifactSlot : ARTIFACT_3_SLOTS) {
-                    final L2ItemInstance itemPart = inv.getPaperdollItem(artifactSlot);
+                    final Item itemPart = inv.getPaperdollItem(artifactSlot);
                     if ((itemPart != null) && _requiredItems.contains(itemPart.getId())) {
                         slotMask += artifactSlot;
                     }
@@ -239,7 +239,7 @@ public final class L2ArmorSet {
         return slotMask;
     }
 
-    public boolean hasOptionalEquipped(Player player, Function<L2ItemInstance, Integer> idProvider) {
+    public boolean hasOptionalEquipped(Player player, Function<Item, Integer> idProvider) {
         return player.getInventory().getPaperdollItems().stream().anyMatch(item -> _optionalItems.contains(idProvider.apply(item)));
     }
 
@@ -248,7 +248,7 @@ public final class L2ArmorSet {
      * @param idProvider
      * @return the amount of set visual items that player has equipped
      */
-    public long getPiecesCount(Player player, Function<L2ItemInstance, Integer> idProvider) {
+    public long getPiecesCount(Player player, Function<Item, Integer> idProvider) {
         return player.getInventory().getPaperdollItems(item -> _requiredItems.contains(idProvider.apply(item))).size();
     }
 }

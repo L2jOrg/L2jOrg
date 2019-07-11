@@ -20,7 +20,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -59,7 +59,7 @@ public class Mail extends ItemContainer {
 
     public void setNewMessageId(int messageId) {
         _messageId = messageId;
-        for (L2ItemInstance item : _items.values()) {
+        for (Item item : _items.values()) {
             item.setItemLocation(getBaseLocation(), messageId);
         }
 
@@ -67,7 +67,7 @@ public class Mail extends ItemContainer {
     }
 
     public void returnToWh(ItemContainer wh) {
-        for (L2ItemInstance item : _items.values()) {
+        for (Item item : _items.values()) {
             if (wh == null) {
                 item.setItemLocation(ItemLocation.WAREHOUSE);
             } else {
@@ -77,7 +77,7 @@ public class Mail extends ItemContainer {
     }
 
     @Override
-    protected void addItem(L2ItemInstance item) {
+    protected void addItem(Item item) {
         super.addItem(item);
         item.setItemLocation(getBaseLocation(), _messageId);
     }
@@ -87,7 +87,7 @@ public class Mail extends ItemContainer {
      */
     @Override
     public void updateDatabase() {
-        for (L2ItemInstance item : _items.values()) {
+        for (Item item : _items.values()) {
             item.updateDatabase(true);
         }
     }
@@ -101,7 +101,7 @@ public class Mail extends ItemContainer {
             statement.setInt(3, _messageId);
             try (ResultSet inv = statement.executeQuery()) {
                 while (inv.next()) {
-                    final L2ItemInstance item = new L2ItemInstance(inv);
+                    final Item item = new Item(inv);
                     L2World.getInstance().addObject(item);
 
                     // If stackable item is found just add to current quantity
@@ -119,7 +119,7 @@ public class Mail extends ItemContainer {
 
     @Override
     public void deleteMe() {
-        for (L2ItemInstance item : _items.values()) {
+        for (Item item : _items.values()) {
             item.updateDatabase(true);
             item.deleteMe();
             L2World.getInstance().removeObject(item);

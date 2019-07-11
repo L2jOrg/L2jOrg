@@ -22,7 +22,7 @@ import org.l2j.gameserver.model.ArenaParticipantsHolder;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.entity.BlockCheckerEngine;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameChangePoints;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameExtendedChangePoints;
@@ -133,7 +133,7 @@ public class L2BlockInstance extends L2MonsterInstance {
     }
 
     private void dropItem(int id, BlockCheckerEngine eng, Player player) {
-        final L2ItemInstance drop = ItemTable.getInstance().createItem("Loot", id, 1, player, this);
+        final Item drop = ItemTable.getInstance().createItem("Loot", id, 1, player, this);
         final int x = getX() + Rnd.get(50);
         final int y = getY() + Rnd.get(50);
         final int z = getZ();

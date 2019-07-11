@@ -21,7 +21,7 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableFactionCall;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableHate;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -210,7 +210,7 @@ public class L2AttackableAI extends L2CharacterAI {
     }
 
     @Override
-    protected void changeIntentionToCast(Skill skill, WorldObject target, L2ItemInstance item, boolean forceUse, boolean dontMove) {
+    protected void changeIntentionToCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove) {
         // Set the AI cast target
         setTarget(target);
         super.changeIntentionToCast(skill, target, item, forceUse, dontMove);

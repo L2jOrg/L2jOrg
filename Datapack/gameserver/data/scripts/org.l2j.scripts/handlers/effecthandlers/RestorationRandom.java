@@ -31,7 +31,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.holders.RestorationItemHolder;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -67,7 +67,7 @@ public final class RestorationRandom extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		final double rndNum = 100 * Rnd.nextDouble();
 		double chance = 0;
@@ -101,7 +101,7 @@ public final class RestorationRandom extends AbstractEffect
 			return;
 		}
 		
-		final Map<L2ItemInstance, Long> extractedItems = new HashMap<>();
+		final Map<Item, Long> extractedItems = new HashMap<>();
 		for (RestorationItemHolder createdItem : creationList)
 		{
 			if ((createdItem.getId() <= 0) || (createdItem.getCount() <= 0))
@@ -110,7 +110,7 @@ public final class RestorationRandom extends AbstractEffect
 			}
 			
 			long itemCount = (long) (createdItem.getCount() * Config.RATE_EXTRACTABLE);
-			final L2ItemInstance newItem = player.addItem("Extract", createdItem.getId(), itemCount, effector, false);
+			final Item newItem = player.addItem("Extract", createdItem.getId(), itemCount, effector, false);
 			
 			if (createdItem.getMaxEnchant() > 0)
 			{
@@ -130,7 +130,7 @@ public final class RestorationRandom extends AbstractEffect
 		if (!extractedItems.isEmpty())
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			for (Entry<L2ItemInstance, Long> entry : extractedItems.entrySet())
+			for (Entry<Item, Long> entry : extractedItems.entrySet())
 			{
 				playerIU.addModifiedItem(entry.getKey());
 				sendMessage(player, entry.getKey(), entry.getValue());
@@ -145,7 +145,7 @@ public final class RestorationRandom extends AbstractEffect
 		return L2EffectType.EXTRACT_ITEM;
 	}
 	
-	private void sendMessage(Player player, L2ItemInstance item, Long count)
+	private void sendMessage(Player player, Item item, Long count)
 	{
 		final SystemMessage sm;
 		if (count > 1)

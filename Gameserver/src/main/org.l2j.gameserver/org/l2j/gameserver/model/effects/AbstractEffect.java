@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.effects;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,8 +11,8 @@ import org.slf4j.LoggerFactory;
 /**
  * Abstract effect implementation.<br>
  * Instant effects should not override {@link #onExit(Creature, Creature, Skill)}.<br>
- * Instant effects should not override {@link #canStart(Creature, Creature, Skill)}, all checks should be done {@link #onStart(Creature, Creature, Skill, L2ItemInstance)}.<br>
- *  * Do not call super class methods {@link #onStart(Creature, Creature, Skill, L2ItemInstance)} nor {@link #onExit(Creature, Creature, Skill)}.
+ * Instant effects should not override {@link #canStart(Creature, Creature, Skill)}, all checks should be done {@link #onStart(Creature, Creature, Skill, Item)}.<br>
+ *  * Do not call super class methods {@link #onStart(Creature, Creature, Skill, Item)} nor {@link #onExit(Creature, Creature, Skill)}.
  *
  * @author Zoey76
  */
@@ -71,15 +71,15 @@ public abstract class AbstractEffect {
         return true;
     }
 
-    public void instant(Creature effector, Creature effected, Skill skill, L2ItemInstance item) {
+    public void instant(Creature effector, Creature effected, Skill skill, Item item) {
 
     }
 
-    public void continuousInstant(Creature effector, Creature effected, Skill skill, L2ItemInstance item) {
+    public void continuousInstant(Creature effector, Creature effected, Skill skill, Item item) {
 
     }
 
-    public void onStart(Creature effector, Creature effected, Skill skill, L2ItemInstance item){
+    public void onStart(Creature effector, Creature effected, Skill skill, Item item){
 
     }
 
@@ -97,7 +97,7 @@ public abstract class AbstractEffect {
      * @param item
      * @return if {@code true} this effect will continue forever, if {@code false} it will stop after abnormal time has passed
      */
-    public boolean onActionTime(Creature effector, Creature effected, Skill skill, L2ItemInstance item) {
+    public boolean onActionTime(Creature effector, Creature effected, Skill skill, Item item) {
         return false;
     }
 

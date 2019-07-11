@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.VariationInstance;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.options.*;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -177,7 +177,7 @@ public class VariationData extends GameXmlReader {
      * @param targetItem The item on which the variation will be applied
      * @return VariationInstance
      */
-    public VariationInstance generateRandomVariation(Variation variation, L2ItemInstance targetItem) {
+    public VariationInstance generateRandomVariation(Variation variation, Item targetItem) {
         final VariationWeaponType weaponType = ((targetItem.getWeaponItem() != null) && targetItem.getWeaponItem().isMagicWeapon()) ? VariationWeaponType.MAGE : VariationWeaponType.WARRIOR;
         return generateRandomVariation(variation, weaponType);
     }

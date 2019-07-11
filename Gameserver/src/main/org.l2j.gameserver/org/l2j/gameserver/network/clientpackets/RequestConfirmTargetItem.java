@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.xml.impl.VariationData;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPutItemResultForVariationMake;
 
@@ -26,7 +26,7 @@ public final class RequestConfirmTargetItem extends AbstractRefinePacket {
             return;
         }
 
-        final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_itemObjId);
+        final Item item = activeChar.getInventory().getItemByObjectId(_itemObjId);
         if (item == null) {
             return;
         }

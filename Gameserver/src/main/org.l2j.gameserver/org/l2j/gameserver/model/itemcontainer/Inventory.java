@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.EtcItemType;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.skills.Skill;
@@ -109,7 +109,7 @@ public abstract class Inventory extends ItemContainer {
     // Speed percentage mods
     public static final double MAX_ARMOR_WEIGHT = 12000;
     protected static final Logger LOGGER = LoggerFactory.getLogger(Inventory.class);
-    private final L2ItemInstance[] _paperdoll;
+    private final Item[] _paperdoll;
     private final List<PaperdollListener> _paperdollListeners;
     // protected to be accessed from child classes only
     protected int _totalWeight;
@@ -121,7 +121,7 @@ public abstract class Inventory extends ItemContainer {
      * Constructor of the inventory
      */
     protected Inventory() {
-        _paperdoll = new L2ItemInstance[PAPERDOLL_TOTALSLOTS];
+        _paperdoll = new Item[PAPERDOLL_TOTALSLOTS];
         _paperdollListeners = new ArrayList<>();
 
         if (this instanceof PcInventory) {
@@ -209,12 +209,12 @@ public abstract class Inventory extends ItemContainer {
      * Drop item from inventory and updates database
      *
      * @param process   : String Identifier of process triggering this action
-     * @param item      : L2ItemInstance to be dropped
+     * @param item      : Item to be dropped
      * @param actor     : Player Player requesting the item drop
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
-     * @return L2ItemInstance corresponding to the destroyed item or the updated item in inventory
+     * @return Item corresponding to the destroyed item or the updated item in inventory
      */
-    public L2ItemInstance dropItem(String process, L2ItemInstance item, Player actor, Object reference) {
+    public Item dropItem(String process, Item item, Player actor, Object reference) {
         if (item == null) {
             return null;
         }
@@ -227,7 +227,7 @@ public abstract class Inventory extends ItemContainer {
             removeItem(item);
             item.setOwnerId(process, 0, actor, reference);
             item.setItemLocation(ItemLocation.VOID);
-            item.setLastChange(L2ItemInstance.REMOVED);
+            item.setLastChange(Item.REMOVED);
 
             item.updateDatabase();
             refreshWeight();
@@ -243,10 +243,10 @@ public abstract class Inventory extends ItemContainer {
      * @param count     : int Quantity of items to be dropped
      * @param actor     : Player Player requesting the item drop
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
-     * @return L2ItemInstance corresponding to the destroyed item or the updated item in inventory
+     * @return Item corresponding to the destroyed item or the updated item in inventory
      */
-    public L2ItemInstance dropItem(String process, int objectId, long count, Player actor, Object reference) {
-        L2ItemInstance item = getItemByObjectId(objectId);
+    public Item dropItem(String process, int objectId, long count, Player actor, Object reference) {
+        Item item = getItemByObjectId(objectId);
         if (item == null) {
             return null;
         }
@@ -260,7 +260,7 @@ public abstract class Inventory extends ItemContainer {
             // Directly drop entire item
             if (item.getCount() > count) {
                 item.changeCount(process, -count, actor, reference);
-                item.setLastChange(L2ItemInstance.MODIFIED);
+                item.setLastChange(Item.MODIFIED);
                 item.updateDatabase();
 
                 item = ItemTable.getInstance().createItem(process, item.getId(), count, actor, reference);
@@ -275,10 +275,10 @@ public abstract class Inventory extends ItemContainer {
     /**
      * Adds item to inventory for further adjustments and Equip it if necessary (itemlocation defined)
      *
-     * @param item : L2ItemInstance to be added from inventory
+     * @param item : Item to be added from inventory
      */
     @Override
-    protected void addItem(L2ItemInstance item) {
+    protected void addItem(Item item) {
         super.addItem(item);
         if (item.isEquipped()) {
             equipItem(item);
@@ -288,10 +288,10 @@ public abstract class Inventory extends ItemContainer {
     /**
      * Removes item from inventory for further adjustments.
      *
-     * @param item : L2ItemInstance to be removed from inventory
+     * @param item : Item to be removed from inventory
      */
     @Override
-    protected boolean removeItem(L2ItemInstance item) {
+    protected boolean removeItem(Item item) {
         // Unequip item if equiped
         for (int i = 0; i < _paperdoll.length; i++) {
             if (_paperdoll[i] == item) {
@@ -305,7 +305,7 @@ public abstract class Inventory extends ItemContainer {
      * @param slot the slot.
      * @return the item in the paperdoll slot
      */
-    public L2ItemInstance getPaperdollItem(int slot) {
+    public Item getPaperdollItem(int slot) {
         return _paperdoll[slot];
     }
 
@@ -325,9 +325,9 @@ public abstract class Inventory extends ItemContainer {
      * Returns the item in the paperdoll L2Item slot
      *
      * @param slot identifier
-     * @return L2ItemInstance
+     * @return Item
      */
-    public L2ItemInstance getPaperdollItemByL2ItemId(int slot) {
+    public Item getPaperdollItemByL2ItemId(int slot) {
         final int index = getPaperdollIndex(slot);
         if (index == -1) {
             return null;
@@ -342,7 +342,7 @@ public abstract class Inventory extends ItemContainer {
      * @return int designating the ID of the item
      */
     public int getPaperdollItemId(int slot) {
-        final L2ItemInstance item = _paperdoll[slot];
+        final Item item = _paperdoll[slot];
         if (item != null) {
             return item.getId();
         }
@@ -356,12 +356,12 @@ public abstract class Inventory extends ItemContainer {
      * @return int designating the ID of the item
      */
     public int getPaperdollItemDisplayId(int slot) {
-        final L2ItemInstance item = _paperdoll[slot];
+        final Item item = _paperdoll[slot];
         return (item != null) ? item.getDisplayId() : 0;
     }
 
     public VariationInstance getPaperdollAugmentation(int slot) {
-        final L2ItemInstance item = _paperdoll[slot];
+        final Item item = _paperdoll[slot];
         return (item != null) ? item.getAugmentation() : null;
     }
 
@@ -372,7 +372,7 @@ public abstract class Inventory extends ItemContainer {
      * @return int designating the objectID
      */
     public int getPaperdollObjectId(int slot) {
-        final L2ItemInstance item = _paperdoll[slot];
+        final Item item = _paperdoll[slot];
         return (item != null) ? item.getObjectId() : 0;
     }
 
@@ -401,21 +401,21 @@ public abstract class Inventory extends ItemContainer {
      * <U><I>Remark :</I></U> The item <B>must be</B> in the inventory already.
      *
      * @param slot : int pointing out the slot of the paperdoll
-     * @param item : L2ItemInstance pointing out the item to add in slot
-     * @return L2ItemInstance designating the item placed in the slot before
+     * @param item : Item pointing out the item to add in slot
+     * @return Item designating the item placed in the slot before
      */
-    public synchronized L2ItemInstance setPaperdollItem(int slot, L2ItemInstance item) {
-        final L2ItemInstance old = _paperdoll[slot];
+    public synchronized Item setPaperdollItem(int slot, Item item) {
+        final Item old = _paperdoll[slot];
         if (old != item) {
             if (old != null) {
                 _paperdoll[slot] = null;
                 // Put old item from paperdoll slot to base location
                 old.setItemLocation(getBaseLocation());
-                old.setLastChange(L2ItemInstance.MODIFIED);
+                old.setLastChange(Item.MODIFIED);
                 // Get the mask for paperdoll
                 int mask = 0;
                 for (int i = 0; i < PAPERDOLL_TOTALSLOTS; i++) {
-                    final L2ItemInstance pi = _paperdoll[i];
+                    final Item pi = _paperdoll[i];
                     if (pi != null) {
                         mask |= pi.getItem().getItemMask();
                     }
@@ -435,7 +435,7 @@ public abstract class Inventory extends ItemContainer {
             if (item != null) {
                 _paperdoll[slot] = item;
                 item.setItemLocation(getEquipLocation(), slot);
-                item.setLastChange(L2ItemInstance.MODIFIED);
+                item.setLastChange(Item.MODIFIED);
                 _wearedMask |= item.getItem().getItemMask();
                 for (PaperdollListener listener : _paperdollListeners) {
                     if (listener == null) {
@@ -461,7 +461,7 @@ public abstract class Inventory extends ItemContainer {
         return _wearedMask;
     }
 
-    public long getSlotFromItem(L2ItemInstance item) {
+    public long getSlotFromItem(Item item) {
         long slot = -1;
         final int location = item.getLocationSlot();
         switch (location) {
@@ -607,9 +607,9 @@ public abstract class Inventory extends ItemContainer {
      * <B>If you dont need return value use {@link Inventory#unEquipItemInBodySlot(long)} instead</B>
      *
      * @param slot : int designating the slot of the paperdoll
-     * @return L2ItemInstance[] : list of changes
+     * @return Item[] : list of changes
      */
-    public L2ItemInstance[] unEquipItemInBodySlotAndRecord(long slot) {
+    public Item[] unEquipItemInBodySlotAndRecord(long slot) {
         final ChangeRecorder recorder = newRecorder();
 
         try {
@@ -624,9 +624,9 @@ public abstract class Inventory extends ItemContainer {
      * Sets item in slot of the paperdoll to null value
      *
      * @param pdollSlot : int designating the slot
-     * @return L2ItemInstance designating the item in slot before change
+     * @return Item designating the item in slot before change
      */
-    public L2ItemInstance unEquipItemInSlot(int pdollSlot) {
+    public Item unEquipItemInSlot(int pdollSlot) {
         return setPaperdollItem(pdollSlot, null);
     }
 
@@ -635,9 +635,9 @@ public abstract class Inventory extends ItemContainer {
      * <B>If you dont need return value use {@link Inventory#unEquipItemInSlot(int)} instead</B>
      *
      * @param slot : int designating the slot
-     * @return L2ItemInstance[] : list of items altered
+     * @return Item[] : list of items altered
      */
-    public L2ItemInstance[] unEquipItemInSlotAndRecord(int slot) {
+    public Item[] unEquipItemInSlotAndRecord(int slot) {
         final ChangeRecorder recorder = newRecorder();
 
         try {
@@ -655,9 +655,9 @@ public abstract class Inventory extends ItemContainer {
      * Unequips item in slot (i.e. equips with default value)
      *
      * @param slot : int designating the slot
-     * @return {@link L2ItemInstance} designating the item placed in the slot
+     * @return {@link Item} designating the item placed in the slot
      */
-    public L2ItemInstance unEquipItemInBodySlot(long slot) {
+    public Item unEquipItemInBodySlot(long slot) {
         int pdollSlot = -1;
 
         if (slot == L2Item.SLOT_L_EAR) {
@@ -718,7 +718,7 @@ public abstract class Inventory extends ItemContainer {
             LOGGER.info(CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
         }
         if (pdollSlot >= 0) {
-            final L2ItemInstance old = setPaperdollItem(pdollSlot, null);
+            final Item old = setPaperdollItem(pdollSlot, null);
             if (old != null) {
                 if (getOwner().isPlayer()) {
                     ((Player) getOwner()).refreshExpertisePenalty();
@@ -731,12 +731,12 @@ public abstract class Inventory extends ItemContainer {
 
     /**
      * Equips item and returns list of alterations<BR>
-     * <B>If you don't need return value use {@link Inventory#equipItem(L2ItemInstance)} instead</B>
+     * <B>If you don't need return value use {@link Inventory#equipItem(Item)} instead</B>
      *
-     * @param item : L2ItemInstance corresponding to the item
-     * @return L2ItemInstance[] : list of alterations
+     * @param item : Item corresponding to the item
+     * @return Item[] : list of alterations
      */
-    public L2ItemInstance[] equipItemAndRecord(L2ItemInstance item) {
+    public Item[] equipItemAndRecord(Item item) {
         final ChangeRecorder recorder = newRecorder();
 
         try {
@@ -750,9 +750,9 @@ public abstract class Inventory extends ItemContainer {
     /**
      * Equips item in slot of paperdoll.
      *
-     * @param item : L2ItemInstance designating the item and slot used.
+     * @param item : Item designating the item and slot used.
      */
-    public void equipItem(L2ItemInstance item) {
+    public void equipItem(Item item) {
         if (getOwner().isPlayer()) {
             if (((Player) getOwner()).getPrivateStoreType() != PrivateStoreType.NONE) {
                 return;
@@ -768,7 +768,7 @@ public abstract class Inventory extends ItemContainer {
         final long targetSlot = item.getItem().getBodyPart();
 
         // Check if player is using Formal Wear and item isn't Wedding Bouquet.
-        final L2ItemInstance formal = getPaperdollItem(PAPERDOLL_CHEST);
+        final Item formal = getPaperdollItem(PAPERDOLL_CHEST);
         if ((item.getId() != 21163) && (formal != null) && (formal.getItem().getBodyPart() == L2Item.SLOT_ALLDRESS)) {
             // only chest target can pass this
             if ((targetSlot == L2Item.SLOT_LR_HAND) || (targetSlot == L2Item.SLOT_L_HAND) || (targetSlot == L2Item.SLOT_R_HAND) || (targetSlot == L2Item.SLOT_LEGS) || (targetSlot == L2Item.SLOT_FEET) || (targetSlot == L2Item.SLOT_GLOVES) || (targetSlot == L2Item.SLOT_HEAD)) {
@@ -783,7 +783,7 @@ public abstract class Inventory extends ItemContainer {
             setPaperdollItem(PAPERDOLL_LHAND, null);
             setPaperdollItem(PAPERDOLL_RHAND, item);
         } else if (targetSlot == L2Item.SLOT_L_HAND) {
-            final L2ItemInstance rh = getPaperdollItem(PAPERDOLL_RHAND);
+            final Item rh = getPaperdollItem(PAPERDOLL_RHAND);
             if ((rh != null) && (rh.getItem().getBodyPart() == L2Item.SLOT_LR_HAND) && !(((rh.getItemType() == WeaponType.BOW) && (item.getItemType() == EtcItemType.ARROW)) || (((rh.getItemType() == WeaponType.CROSSBOW) || (rh.getItemType() == WeaponType.TWOHANDCROSSBOW)) && (item.getItemType() == EtcItemType.BOLT)) || ((rh.getItemType() == WeaponType.FISHINGROD) && (item.getItemType() == EtcItemType.LURE)))) {
                 setPaperdollItem(PAPERDOLL_RHAND, null);
             }
@@ -814,7 +814,7 @@ public abstract class Inventory extends ItemContainer {
         } else if (targetSlot == L2Item.SLOT_CHEST) {
             setPaperdollItem(PAPERDOLL_CHEST, item);
         } else if (targetSlot == L2Item.SLOT_LEGS) {
-            final L2ItemInstance chest = getPaperdollItem(PAPERDOLL_CHEST);
+            final Item chest = getPaperdollItem(PAPERDOLL_CHEST);
             if ((chest != null) && (chest.getItem().getBodyPart() == L2Item.SLOT_FULL_ARMOR)) {
                 setPaperdollItem(PAPERDOLL_CHEST, null);
             }
@@ -826,7 +826,7 @@ public abstract class Inventory extends ItemContainer {
         } else if (targetSlot == L2Item.SLOT_HEAD) {
             setPaperdollItem(PAPERDOLL_HEAD, item);
         } else if (targetSlot == L2Item.SLOT_HAIR) {
-            final L2ItemInstance hair = getPaperdollItem(PAPERDOLL_HAIR);
+            final Item hair = getPaperdollItem(PAPERDOLL_HAIR);
             if ((hair != null) && (hair.getItem().getBodyPart() == L2Item.SLOT_HAIRALL)) {
                 setPaperdollItem(PAPERDOLL_HAIR2, null);
             } else {
@@ -834,7 +834,7 @@ public abstract class Inventory extends ItemContainer {
             }
             setPaperdollItem(PAPERDOLL_HAIR, item);
         } else if (targetSlot == L2Item.SLOT_HAIR2) {
-            final L2ItemInstance hair2 = getPaperdollItem(PAPERDOLL_HAIR);
+            final Item hair2 = getPaperdollItem(PAPERDOLL_HAIR);
             if ((hair2 != null) && (hair2.getItem().getBodyPart() == L2Item.SLOT_HAIRALL)) {
                 setPaperdollItem(PAPERDOLL_HAIR, null);
             } else {
@@ -886,7 +886,7 @@ public abstract class Inventory extends ItemContainer {
     protected void refreshWeight() {
         long weight = 0;
 
-        for (L2ItemInstance item : _items.values()) {
+        for (Item item : _items.values()) {
             if ((item != null) && (item.getItem() != null)) {
                 weight += item.getItem().getWeight() * item.getCount();
             }
@@ -902,46 +902,46 @@ public abstract class Inventory extends ItemContainer {
     }
 
     /**
-     * Return the L2ItemInstance of the arrows needed for this bow.
+     * Return the Item of the arrows needed for this bow.
      *
      * @param bow : L2Item designating the bow
-     * @return L2ItemInstance pointing out arrows for bow
+     * @return Item pointing out arrows for bow
      */
-    public L2ItemInstance findArrowForBow(L2Item bow) {
+    public Item findArrowForBow(L2Item bow) {
         if (bow == null) {
             return null;
         }
 
-        L2ItemInstance arrow = null;
+        Item arrow = null;
 
-        for (L2ItemInstance item : getItems()) {
+        for (Item item : getItems()) {
             if (item.isEtcItem() && (item.getItem().getCrystalType() == bow.getCrystalType()) && (item.getEtcItem().getItemType() == EtcItemType.ARROW)) {
                 arrow = item;
                 break;
             }
         }
 
-        // Get the L2ItemInstance corresponding to the item identifier and return it
+        // Get the Item corresponding to the item identifier and return it
         return arrow;
     }
 
     /**
-     * Return the L2ItemInstance of the bolts needed for this crossbow.
+     * Return the Item of the bolts needed for this crossbow.
      *
      * @param crossbow : L2Item designating the crossbow
-     * @return L2ItemInstance pointing out bolts for crossbow
+     * @return Item pointing out bolts for crossbow
      */
-    public L2ItemInstance findBoltForCrossBow(L2Item crossbow) {
-        L2ItemInstance bolt = null;
+    public Item findBoltForCrossBow(L2Item crossbow) {
+        Item bolt = null;
 
-        for (L2ItemInstance item : getItems()) {
+        for (Item item : getItems()) {
             if (item.isEtcItem() && (item.getItem().getCrystalType() == crossbow.getCrystalType()) && (item.getEtcItem().getItemType() == EtcItemType.BOLT)) {
                 bolt = item;
                 break;
             }
         }
 
-        // Get the L2ItemInstance corresponding to the item identifier and return it
+        // Get the Item corresponding to the item identifier and return it
         return bolt;
     }
 
@@ -957,7 +957,7 @@ public abstract class Inventory extends ItemContainer {
             ps.setString(3, getEquipLocation().name());
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
-                    final L2ItemInstance item = new L2ItemInstance(rs);
+                    final Item item = new Item(rs);
                     if (getOwner().isPlayer()) {
                         final Player player = (Player) getOwner();
 
@@ -986,7 +986,7 @@ public abstract class Inventory extends ItemContainer {
         return getOwner().getActingPlayer().getStat().getTalismanSlots();
     }
 
-    private void equipTalisman(L2ItemInstance item) {
+    private void equipTalisman(Item item) {
         if (getTalismanSlots() == 0) {
             return;
         }
@@ -1018,7 +1018,7 @@ public abstract class Inventory extends ItemContainer {
         return getOwner().getActingPlayer().getStat().getArtifactSlots();
     }
 
-    private void equipArtifact(L2ItemInstance item) {
+    private void equipArtifact(Item item) {
         if (getArtifactSlots() == 0) {
             return;
         }
@@ -1161,7 +1161,7 @@ public abstract class Inventory extends ItemContainer {
         return getOwner().getActingPlayer().getStat().getBroochJewelSlots();
     }
 
-    private void equipBroochJewel(L2ItemInstance item) {
+    private void equipBroochJewel(Item item) {
         if (getBroochJewelSlots() == 0) {
             return;
         }
@@ -1191,7 +1191,7 @@ public abstract class Inventory extends ItemContainer {
         return getOwner().getActingPlayer().getStat().getAgathionSlots();
     }
 
-    private void equipAgathion(L2ItemInstance item) {
+    private void equipAgathion(Item item) {
         if (getAgathionSlots() == 0) {
             return;
         }
@@ -1227,7 +1227,7 @@ public abstract class Inventory extends ItemContainer {
     public void reloadEquippedItems() {
         int slot;
 
-        for (L2ItemInstance item : _paperdoll) {
+        for (Item item : _paperdoll) {
             if (item == null) {
                 continue;
             }
@@ -1255,7 +1255,7 @@ public abstract class Inventory extends ItemContainer {
 
         final Player player = getOwner().getActingPlayer();
         int maxSetEnchant = 0;
-        for (L2ItemInstance item : getPaperdollItems()) {
+        for (Item item : getPaperdollItems()) {
             for (L2ArmorSet set : ArmorSetsData.getInstance().getSets(item.getId())) {
                 final int enchantEffect = set.getLowestSetEnchant(player);
                 if (enchantEffect > maxSetEnchant) {
@@ -1267,7 +1267,7 @@ public abstract class Inventory extends ItemContainer {
     }
 
     public int getWeaponEnchant() {
-        final L2ItemInstance item = getPaperdollItem(PAPERDOLL_RHAND);
+        final Item item = getPaperdollItem(PAPERDOLL_RHAND);
         return item != null ? item.getEnchantLevel() : 0;
     }
 
@@ -1322,24 +1322,24 @@ public abstract class Inventory extends ItemContainer {
      * @return the filtered items in inventory
      */
     @SafeVarargs
-    public final Collection<L2ItemInstance> getPaperdollItems(Predicate<L2ItemInstance>... filters) {
-        Predicate<L2ItemInstance> filter = Objects::nonNull;
-        for (Predicate<L2ItemInstance> additionalFilter : filters) {
+    public final Collection<Item> getPaperdollItems(Predicate<Item>... filters) {
+        Predicate<Item> filter = Objects::nonNull;
+        for (Predicate<Item> additionalFilter : filters) {
             filter = filter.and(additionalFilter);
         }
         return Arrays.stream(_paperdoll).filter(filter).collect(Collectors.toCollection(LinkedList::new));
     }
 
     public interface PaperdollListener {
-        void notifyEquiped(int slot, L2ItemInstance inst, Inventory inventory);
+        void notifyEquiped(int slot, Item inst, Inventory inventory);
 
-        void notifyUnequiped(int slot, L2ItemInstance inst, Inventory inventory);
+        void notifyUnequiped(int slot, Item inst, Inventory inventory);
     }
 
     // Recorder of alterations in inventory
     private static final class ChangeRecorder implements PaperdollListener {
         private final Inventory _inventory;
-        private final Set<L2ItemInstance> _changed = ConcurrentHashMap.newKeySet();
+        private final Set<Item> _changed = ConcurrentHashMap.newKeySet();
 
         /**
          * Constructor of the ChangeRecorder
@@ -1359,7 +1359,7 @@ public abstract class Inventory extends ItemContainer {
          * @param inventory
          */
         @Override
-        public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyEquiped(int slot, Item item, Inventory inventory) {
             _changed.add(item);
         }
 
@@ -1371,17 +1371,17 @@ public abstract class Inventory extends ItemContainer {
          * @param inventory
          */
         @Override
-        public void notifyUnequiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
             _changed.add(item);
         }
 
         /**
          * Returns alterations in inventory
          *
-         * @return L2ItemInstance[] : array of altered items
+         * @return Item[] : array of altered items
          */
-        public L2ItemInstance[] getChangedItems() {
-            return _changed.toArray(new L2ItemInstance[_changed.size()]);
+        public Item[] getChangedItems() {
+            return _changed.toArray(new Item[_changed.size()]);
         }
     }
 
@@ -1393,24 +1393,24 @@ public abstract class Inventory extends ItemContainer {
         }
 
         @Override
-        public void notifyUnequiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
             if (slot != PAPERDOLL_RHAND) {
                 return;
             }
 
             if (item.getItemType() == WeaponType.BOW) {
-                final L2ItemInstance arrow = inventory.getPaperdollItem(PAPERDOLL_LHAND);
+                final Item arrow = inventory.getPaperdollItem(PAPERDOLL_LHAND);
                 if (arrow != null) {
                     inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
                 }
             }
             else if ((item.getItemType() == WeaponType.CROSSBOW) || (item.getItemType() == WeaponType.TWOHANDCROSSBOW)) {
-                final L2ItemInstance bolts = inventory.getPaperdollItem(PAPERDOLL_LHAND);
+                final Item bolts = inventory.getPaperdollItem(PAPERDOLL_LHAND);
                 if (bolts != null) {
                     inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
                 }
             }else if (item.getItemType() == WeaponType.FISHINGROD) {
-                final L2ItemInstance lure = inventory.getPaperdollItem(PAPERDOLL_LHAND);
+                final Item lure = inventory.getPaperdollItem(PAPERDOLL_LHAND);
                 if (lure != null) {
                     inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
                 }
@@ -1418,18 +1418,18 @@ public abstract class Inventory extends ItemContainer {
         }
 
         @Override
-        public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyEquiped(int slot, Item item, Inventory inventory) {
             if (slot != PAPERDOLL_RHAND) {
                 return;
             }
 
             if (item.getItemType() == WeaponType.BOW) {
-                final L2ItemInstance arrow = inventory.findArrowForBow(item.getItem());
+                final Item arrow = inventory.findArrowForBow(item.getItem());
                 if (arrow != null) {
                     inventory.setPaperdollItem(PAPERDOLL_LHAND, arrow);
                 }
             } else if ((item.getItemType() == WeaponType.CROSSBOW) || (item.getItemType() == WeaponType.TWOHANDCROSSBOW)) {
-                final L2ItemInstance bolts = inventory.findBoltForCrossBow(item.getItem());
+                final Item bolts = inventory.findBoltForCrossBow(item.getItem());
                 if (bolts != null) {
                     inventory.setPaperdollItem(PAPERDOLL_LHAND, bolts);
                 }
@@ -1445,7 +1445,7 @@ public abstract class Inventory extends ItemContainer {
         }
 
         @Override
-        public void notifyUnequiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
             var charStat = inventory.getOwner().getStat();
             item.getItem().getFunctionTemplates().forEach(func -> {
                 if(func.getStat().hasDefaultFinalizer()) {
@@ -1456,7 +1456,7 @@ public abstract class Inventory extends ItemContainer {
         }
 
         @Override
-        public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyEquiped(int slot, Item item, Inventory inventory) {
             var charStat = inventory.getOwner().getStat();
             item.getItem().getFunctionTemplates().forEach(func -> {
                 if(func.getStat().hasDefaultFinalizer()) {
@@ -1475,7 +1475,7 @@ public abstract class Inventory extends ItemContainer {
         }
 
         @Override
-        public void notifyUnequiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
             if (!inventory.getOwner().isPlayer()) {
                 return;
             }
@@ -1528,7 +1528,7 @@ public abstract class Inventory extends ItemContainer {
             });
 
             if (item.isArmor()) {
-                for (L2ItemInstance itm : inventory.getItems()) {
+                for (Item itm : inventory.getItems()) {
                     if (!itm.isEquipped() || (itm.getItem().getSkills(ItemSkillType.NORMAL) == null) || itm.equals(item)) {
                         continue;
                     }
@@ -1586,7 +1586,7 @@ public abstract class Inventory extends ItemContainer {
         }
 
         @Override
-        public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyEquiped(int slot, Item item, Inventory inventory) {
                     if (!inventory.getOwner().isPlayer()) {
                 return;
             }
@@ -1687,7 +1687,7 @@ public abstract class Inventory extends ItemContainer {
             return instance;
         }
 
-        private static boolean applySkills(Player player, L2ItemInstance item, L2ArmorSet armorSet, Function<L2ItemInstance, Integer> idProvider) {
+        private static boolean applySkills(Player player, Item item, L2ArmorSet armorSet, Function<Item, Integer> idProvider) {
             final long piecesCount = armorSet.getPiecesCount(player, idProvider);
             if (piecesCount >= armorSet.getMinimumPieces()) {
                 // Applying all skills that matching the conditions
@@ -1723,7 +1723,7 @@ public abstract class Inventory extends ItemContainer {
             return false;
         }
 
-        private static boolean verifyAndApply(Player player, L2ItemInstance item, Function<L2ItemInstance, Integer> idProvider) {
+        private static boolean verifyAndApply(Player player, Item item, Function<Item, Integer> idProvider) {
             boolean update = false;
             final List<L2ArmorSet> armorSets = ArmorSetsData.getInstance().getSets(idProvider.apply(item));
             for (L2ArmorSet armorSet : armorSets) {
@@ -1734,7 +1734,7 @@ public abstract class Inventory extends ItemContainer {
             return update;
         }
 
-        private static boolean verifyAndRemove(Player player, L2ItemInstance item, Function<L2ItemInstance, Integer> idProvider) {
+        private static boolean verifyAndRemove(Player player, Item item, Function<Item, Integer> idProvider) {
             boolean update = false;
             final List<L2ArmorSet> armorSets = ArmorSetsData.getInstance().getSets(idProvider.apply(item));
             for (L2ArmorSet armorSet : armorSets) {
@@ -1764,7 +1764,7 @@ public abstract class Inventory extends ItemContainer {
         }
 
         @Override
-        public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyEquiped(int slot, Item item, Inventory inventory) {
             if (!inventory.getOwner().isPlayer()) {
                 return;
             }
@@ -1773,7 +1773,7 @@ public abstract class Inventory extends ItemContainer {
             boolean update = false;
 
             // Verify and apply normal set
-            if (verifyAndApply(player, item, L2ItemInstance::getId)) {
+            if (verifyAndApply(player, item, Item::getId)) {
                 update = true;
             }
 
@@ -1787,7 +1787,7 @@ public abstract class Inventory extends ItemContainer {
         }
 
         @Override
-        public void notifyUnequiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
             if (!inventory.getOwner().isPlayer()) {
                 return;
             }
@@ -1796,7 +1796,7 @@ public abstract class Inventory extends ItemContainer {
             boolean remove = false;
 
             // verify and remove normal set bonus
-            if (verifyAndRemove(player, item, L2ItemInstance::getId)) {
+            if (verifyAndRemove(player, item, Item::getId)) {
                 remove = true;
             }
 
@@ -1819,7 +1819,7 @@ public abstract class Inventory extends ItemContainer {
         }
 
         @Override
-        public void notifyUnequiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
             if (item.getItem().getBodyPart() == L2Item.SLOT_R_BRACELET) {
                 inventory.unEquipItemInSlot(TALISMAN1);
                 inventory.unEquipItemInSlot(TALISMAN2);
@@ -1832,7 +1832,7 @@ public abstract class Inventory extends ItemContainer {
 
         // Note (April 3, 2009): Currently on equip, talismans do not display properly, do we need checks here to fix this?
         @Override
-        public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyEquiped(int slot, Item item, Inventory inventory) {
         }
     }
 
@@ -1844,7 +1844,7 @@ public abstract class Inventory extends ItemContainer {
         }
 
         @Override
-        public void notifyUnequiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
             if (item.getItem().getBodyPart() == L2Item.SLOT_BROOCH) {
                 inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL1);
                 inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL2);
@@ -1857,7 +1857,7 @@ public abstract class Inventory extends ItemContainer {
 
         // Note (April 3, 2009): Currently on equip, talismans do not display properly, do we need checks here to fix this?
         @Override
-        public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyEquiped(int slot, Item item, Inventory inventory) {
         }
     }
 
@@ -1869,7 +1869,7 @@ public abstract class Inventory extends ItemContainer {
         }
 
         @Override
-        public void notifyUnequiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
             if (item.getItem().getBodyPart() == L2Item.SLOT_L_BRACELET) {
                 inventory.unEquipItemInSlot(PAPERDOLL_AGATHION1);
                 inventory.unEquipItemInSlot(PAPERDOLL_AGATHION2);
@@ -1880,7 +1880,7 @@ public abstract class Inventory extends ItemContainer {
         }
 
         @Override
-        public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyEquiped(int slot, Item item, Inventory inventory) {
         }
     }
 
@@ -1892,7 +1892,7 @@ public abstract class Inventory extends ItemContainer {
         }
 
         @Override
-        public void notifyUnequiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
             if (item.getItem().getBodyPart() == L2Item.SLOT_ARTIFACT_BOOK) {
                 inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT1);
                 inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT2);
@@ -1920,7 +1920,7 @@ public abstract class Inventory extends ItemContainer {
         }
 
         @Override
-        public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory) {
+        public void notifyEquiped(int slot, Item item, Inventory inventory) {
         }
     }
 }

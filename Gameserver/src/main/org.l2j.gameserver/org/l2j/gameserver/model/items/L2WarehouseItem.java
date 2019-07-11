@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.items;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.model.items.type.ItemType;
 
@@ -11,8 +11,8 @@ import java.util.Collection;
 import java.util.Objects;
 
 /**
- * This class contains L2ItemInstance<BR>
- * Use to sort L2ItemInstance of :
+ * This class contains Item<BR>
+ * Use to sort Item of :
  * <ul>
  * <li>L2Armor</li>
  * <li>L2EtcItem</li>
@@ -49,7 +49,7 @@ public class L2WarehouseItem {
     private byte _elemAtkType = -2;
     private int _elemAtkPower = 0;
 
-    public L2WarehouseItem(L2ItemInstance item) {
+    public L2WarehouseItem(Item item) {
         Objects.requireNonNull(item);
         _item = item.getItem();
         _object = item.getObjectId();

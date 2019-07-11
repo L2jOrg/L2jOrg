@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -26,10 +26,10 @@ public class EnchantResult extends ServerPacket {
     }
 
     public EnchantResult(int result, int crystal, int count) {
-        this(result, crystal, count, 0, L2ItemInstance.DEFAULT_ENCHANT_OPTIONS);
+        this(result, crystal, count, 0, Item.DEFAULT_ENCHANT_OPTIONS);
     }
 
-    public EnchantResult(int result, L2ItemInstance item) {
+    public EnchantResult(int result, Item item) {
         this(result, 0, 0, item.getEnchantLevel(), item.getEnchantOptions());
     }
 

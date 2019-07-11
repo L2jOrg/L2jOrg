@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.slf4j.Logger;
@@ -23,7 +23,7 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket {
     private final List<Integer> _itemsStackable = new ArrayList<>();
     private Player _activeChar;
     private long _playerAdena;
-    private Collection<L2ItemInstance> _items;
+    private Collection<Item> _items;
     /**
      * <ul>
      * <li>0x01-Private Warehouse</li>
@@ -48,7 +48,7 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket {
 
         _items = _activeChar.getActiveWarehouse().getItems();
 
-        for (L2ItemInstance item : _items) {
+        for (Item item : _items) {
             if (item.isStackable()) {
                 _itemsStackable.add(item.getDisplayId());
             }
@@ -63,7 +63,7 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket {
             writeShort((short) 0x00);
             writeInt(_invSize);
             writeInt(_items.size());
-            for (L2ItemInstance item : _items) {
+            for (Item item : _items) {
                 writeItem(item);
                 writeInt(item.getObjectId());
                 writeInt(0x00);

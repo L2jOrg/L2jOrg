@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.Mail;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -218,7 +218,7 @@ public final class RequestSendPost extends ClientPacket {
         if (_items != null) {
             for (AttachmentItem i : _items) {
                 // Check validity of requested item
-                final L2ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
+                final Item item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
                 if ((item == null) || !item.isTradeable() || item.isEquipped()) {
                     player.sendPacket(SystemMessageId.THE_ITEM_THAT_YOU_RE_TRYING_TO_SEND_CANNOT_BE_FORWARDED_BECAUSE_IT_ISN_T_PROPER);
                     return false;
@@ -253,13 +253,13 @@ public final class RequestSendPost extends ClientPacket {
         final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
         for (AttachmentItem i : _items) {
             // Check validity of requested item
-            final L2ItemInstance oldItem = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
+            final Item oldItem = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
             if ((oldItem == null) || !oldItem.isTradeable() || oldItem.isEquipped()) {
                 LOGGER.warn("Error adding attachment for char " + player.getName() + " (olditem == null)");
                 return false;
             }
 
-            final L2ItemInstance newItem = player.getInventory().transferItem("SendMail", i.getObjectId(), i.getCount(), attachments, player, msg.getReceiverName() + "[" + msg.getReceiverId() + "]");
+            final Item newItem = player.getInventory().transferItem("SendMail", i.getObjectId(), i.getCount(), attachments, player, msg.getReceiverName() + "[" + msg.getReceiverId() + "]");
             if (newItem == null) {
                 LOGGER.warn("Error adding attachment for char " + player.getName() + " (newitem == null)");
                 continue;

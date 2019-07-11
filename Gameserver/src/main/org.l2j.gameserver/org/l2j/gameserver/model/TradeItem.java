@@ -3,7 +3,7 @@ package org.l2j.gameserver.model;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -36,7 +36,7 @@ public class TradeItem {
     private int _augmentationOption1 = -1;
     private int _augmentationOption2 = -1;
 
-    public TradeItem(L2ItemInstance item, long count, long price) {
+    public TradeItem(Item item, long count, long price) {
         Objects.requireNonNull(item);
         _objectId = item.getObjectId();
         _item = item.getItem();
@@ -74,7 +74,7 @@ public class TradeItem {
         _price = price;
         _elemAtkType = AttributeType.NONE.getClientId();
         _elemAtkPower = 0;
-        _enchantOptions = L2ItemInstance.DEFAULT_ENCHANT_OPTIONS;
+        _enchantOptions = Item.DEFAULT_ENCHANT_OPTIONS;
         _soulCrystalOptions = Collections.emptyList();
         _soulCrystalSpecialOptions = Collections.emptyList();
     }

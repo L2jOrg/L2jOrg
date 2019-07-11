@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.actor.instance.L2MerchantInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.UniqueItemHolder;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -79,7 +79,7 @@ public class RequestProcureCropList extends ClientPacket {
         int slots = 0;
         int weight = 0;
         for (CropHolder i : _items) {
-            final L2ItemInstance item = player.getInventory().getItemByObjectId(i.getObjectId());
+            final Item item = player.getInventory().getItemByObjectId(i.getObjectId());
             if ((item == null) || (item.getCount() < i.getCount()) || (item.getId() != i.getId())) {
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 return;

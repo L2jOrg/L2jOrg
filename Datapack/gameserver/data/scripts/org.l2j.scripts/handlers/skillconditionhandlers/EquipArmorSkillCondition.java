@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ArmorType;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
@@ -58,7 +58,7 @@ public class EquipArmorSkillCondition implements ISkillCondition
 		final Inventory inv = caster.getInventory();
 		
 		// Get the itemMask of the weared chest (if exists)
-		final L2ItemInstance chest = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
+		final Item chest = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
 		if (chest == null)
 		{
 			return false;
@@ -80,7 +80,7 @@ public class EquipArmorSkillCondition implements ISkillCondition
 			return true;
 		}
 		// check legs armor
-		final L2ItemInstance legs = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
+		final Item legs = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
 		if (legs == null)
 		{
 			return false;

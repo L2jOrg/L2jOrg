@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.L2ClanMember;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -136,7 +136,7 @@ public final class CastleManager implements InstanceListManager {
             // online-player circlet removal
             if (player != null) {
                 try {
-                    final L2ItemInstance circlet = player.getInventory().getItemByItemId(circletId);
+                    final Item circlet = player.getInventory().getItemByItemId(circletId);
                     if (circlet != null) {
                         if (circlet.isEquipped()) {
                             player.getInventory().unEquipItemInSlot(circlet.getLocationSlot());

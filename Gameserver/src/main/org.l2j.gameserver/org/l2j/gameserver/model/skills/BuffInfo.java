@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectTaskInfo;
 import org.l2j.gameserver.model.effects.EffectTickTask;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.options.Options;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -42,7 +42,7 @@ public final class BuffInfo {
     private final List<AbstractEffect> _effects = new ArrayList<>(1);
     // Tasks
     private final boolean _hideStartMessage;
-    private final L2ItemInstance _item;
+    private final Item _item;
     // Time and ticks
     private final Options _option;
     /**
@@ -81,7 +81,7 @@ public final class BuffInfo {
      * @param item
      * @param option
      */
-    public BuffInfo(Creature effector, Creature effected, Skill skill, boolean hideStartMessage, L2ItemInstance item, Options option) {
+    public BuffInfo(Creature effector, Creature effected, Skill skill, boolean hideStartMessage, Item item, Options option) {
         _effectorObjectId = (effector != null) ? effector.getObjectId() : 0;
         _effector = effector;
         _effected = effected;
@@ -178,7 +178,7 @@ public final class BuffInfo {
     /**
      * @return the item that triggered this skill
      */
-    public L2ItemInstance getItem() {
+    public Item getItem() {
         return _item;
     }
 

@@ -5,7 +5,7 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ResidenceFunctionsData;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.AgitDecoInfo;
 
 import java.time.Instant;
@@ -128,7 +128,7 @@ public class ResidenceFunction {
         }
 
         final ItemContainer wh = clan.getWarehouse();
-        final L2ItemInstance item = wh.getItemByItemId(template.getCost().getId());
+        final Item item = wh.getItemByItemId(template.getCost().getId());
         if ((item == null) || (item.getCount() < template.getCost().getCount())) {
             return false;
         }

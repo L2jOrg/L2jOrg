@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureDeath;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
@@ -249,7 +249,7 @@ public abstract class Playable extends Creature {
 
     public abstract void doPickupItem(WorldObject object);
 
-    public abstract boolean useMagic(Skill skill, L2ItemInstance item, boolean forceUse, boolean dontMove);
+    public abstract boolean useMagic(Skill skill, Item item, boolean forceUse, boolean dontMove);
 
     public abstract void storeMe();
 

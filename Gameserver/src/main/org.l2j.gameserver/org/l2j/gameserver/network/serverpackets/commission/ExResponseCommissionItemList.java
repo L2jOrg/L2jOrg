@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.commission;
 
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.AbstractItemPacket;
@@ -12,9 +12,9 @@ import java.util.Collection;
  */
 public class ExResponseCommissionItemList extends AbstractItemPacket {
     private final int sendType;
-    private final Collection<L2ItemInstance> items;
+    private final Collection<Item> items;
 
-    public ExResponseCommissionItemList(int sendType, Collection<L2ItemInstance> items) {
+    public ExResponseCommissionItemList(int sendType, Collection<Item> items) {
         this.sendType = sendType;
         this.items = items;
     }
@@ -26,7 +26,7 @@ public class ExResponseCommissionItemList extends AbstractItemPacket {
         if (sendType == 2) {
             writeInt(items.size());
             writeInt(items.size());
-            for (L2ItemInstance itemInstance : items) {
+            for (Item itemInstance : items) {
                 writeItem(itemInstance);
             }
         } else {

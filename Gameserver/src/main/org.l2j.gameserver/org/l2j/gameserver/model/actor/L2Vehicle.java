@@ -15,7 +15,7 @@ import org.l2j.gameserver.model.actor.stat.VehicleStat;
 import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.items.L2Weapon;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.zone.ZoneRegion;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -235,7 +235,7 @@ public abstract class L2Vehicle extends Creature {
         {
             if (player.isInBoat() && (player.getBoat() == this)) {
                 if (itemId > 0) {
-                    final L2ItemInstance ticket = player.getInventory().getItemByItemId(itemId);
+                    final Item ticket = player.getInventory().getItemByItemId(itemId);
                     if ((ticket == null) || (player.getInventory().destroyItem("Boat", ticket, count, player, this) == null)) {
                         player.sendPacket(SystemMessageId.YOU_DO_NOT_POSSESS_THE_CORRECT_TICKET_TO_BOARD_THE_BOAT);
                         player.teleToLocation(new Location(oustX, oustY, oustZ), true);
@@ -335,7 +335,7 @@ public abstract class L2Vehicle extends Creature {
     }
 
     @Override
-    public L2ItemInstance getActiveWeaponInstance() {
+    public Item getActiveWeaponInstance() {
         return null;
     }
 
@@ -345,7 +345,7 @@ public abstract class L2Vehicle extends Creature {
     }
 
     @Override
-    public L2ItemInstance getSecondaryWeaponInstance() {
+    public Item getSecondaryWeaponInstance() {
         return null;
     }
 

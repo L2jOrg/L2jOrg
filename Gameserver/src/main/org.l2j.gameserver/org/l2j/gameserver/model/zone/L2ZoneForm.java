@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.zone;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 
 /**
  * Abstract base class for any zone form
@@ -32,7 +32,7 @@ public abstract class L2ZoneForm {
     public abstract void visualizeZone(int z);
 
     protected final void dropDebugItem(int itemId, int num, int x, int y, int z) {
-        final L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), itemId);
+        final Item item = new Item(IdFactory.getInstance().getNextId(), itemId);
         item.setCount(num);
         item.spawnMe(x, y, z + 5);
         ZoneManager.getInstance().getDebugItems().add(item);

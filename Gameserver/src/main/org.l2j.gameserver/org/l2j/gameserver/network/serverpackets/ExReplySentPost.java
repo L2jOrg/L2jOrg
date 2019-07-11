@@ -18,7 +18,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.slf4j.Logger;
@@ -34,7 +34,7 @@ public class ExReplySentPost extends AbstractItemPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(ExReplySentPost.class);
 
     private final Message _msg;
-    private Collection<L2ItemInstance> _items = null;
+    private Collection<Item> _items = null;
 
     public ExReplySentPost(Message msg) {
         _msg = msg;
@@ -61,7 +61,7 @@ public class ExReplySentPost extends AbstractItemPacket {
 
         if ((_items != null) && !_items.isEmpty()) {
             writeInt(_items.size());
-            for (L2ItemInstance item : _items) {
+            for (Item item : _items) {
                 writeItem(item);
                 writeInt(item.getObjectId());
             }

@@ -55,7 +55,7 @@ import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.L2EtcItem;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
@@ -499,7 +499,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @return the enchantment level of the item or 0 if the item was not found
      */
     public static int getEnchantLevel(Player player, int itemId) {
-        final L2ItemInstance enchantedItem = player.getInventory().getItemByItemId(itemId);
+        final Item enchantedItem = player.getInventory().getItemByItemId(itemId);
         if (enchantedItem == null) {
             return 0;
         }
@@ -576,7 +576,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         }
 
         // Add items to player's inventory
-        final L2ItemInstance itemInstance = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
+        final Item itemInstance = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
         if (itemInstance == null) {
             return;
         }
@@ -593,7 +593,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param item   the item obtain by the player
      * @param count  the item count
      */
-    private static void sendItemGetMessage(Player player, L2ItemInstance item, long count) {
+    private static void sendItemGetMessage(Player player, Item item, long count) {
         // If item for reward is gold, send message of gold reward to client
         if (item.getId() == CommonItem.ADENA) {
             final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
@@ -670,7 +670,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         }
 
         // Add items to player's inventory
-        final L2ItemInstance item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
+        final Item item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
         if (item == null) {
             return;
         }
@@ -703,7 +703,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         }
 
         // Add items to player's inventory
-        final L2ItemInstance item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
+        final Item item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
         if (item == null) {
             return;
         }
@@ -845,7 +845,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         }
 
         // Get object item from player's inventory list
-        final L2ItemInstance item = player.getInventory().getItemByItemId(itemId);
+        final Item item = player.getInventory().getItemByItemId(itemId);
         if (item == null) {
             return false;
         }
@@ -857,9 +857,9 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
         // Destroy the quantity of items wanted
         if (item.isEquipped()) {
-            final L2ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart());
+            final Item[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart());
             final InventoryUpdate iu = new InventoryUpdate();
-            for (L2ItemInstance itm : unequiped) {
+            for (Item itm : unequiped) {
                 iu.addModifiedItem(itm);
             }
             player.sendInventoryUpdate(iu);
@@ -2705,7 +2705,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      */
     public long getQuestItemsCount(Player player, int... itemIds) {
         long count = 0;
-        for (L2ItemInstance item : player.getInventory().getItems()) {
+        for (Item item : player.getInventory().getItems()) {
             if (item == null) {
                 continue;
             }

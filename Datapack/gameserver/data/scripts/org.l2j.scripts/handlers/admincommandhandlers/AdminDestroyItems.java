@@ -3,7 +3,7 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 
 /**
@@ -24,7 +24,7 @@ public class AdminDestroyItems implements IAdminCommandHandler
     {
         final PcInventory inventory = activeChar.getInventory();
         final InventoryUpdate iu = new InventoryUpdate();
-        for (L2ItemInstance item : inventory.getItems())
+        for (Item item : inventory.getItems())
         {
             if (item.isEquipped() && !command.contains("all"))
             {

@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.actor.request.EnchantItemAttributeRequest;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.model.items.L2Armor;
 import org.l2j.gameserver.model.items.L2Weapon;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.options.VariationFee;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -26,7 +26,7 @@ public abstract class AbstractRefinePacket extends ClientPacket {
      * @param fee
      * @return
      */
-    protected static boolean isValid(Player player, L2ItemInstance item, L2ItemInstance mineralItem, L2ItemInstance feeItem, VariationFee fee) {
+    protected static boolean isValid(Player player, Item item, Item mineralItem, Item feeItem, VariationFee fee) {
         if (fee == null) {
             return false;
         }
@@ -64,7 +64,7 @@ public abstract class AbstractRefinePacket extends ClientPacket {
      * @param mineralItem
      * @return
      */
-    protected static boolean isValid(Player player, L2ItemInstance item, L2ItemInstance mineralItem) {
+    protected static boolean isValid(Player player, Item item, Item mineralItem) {
         if (!isValid(player, item)) {
             return false;
         }
@@ -88,7 +88,7 @@ public abstract class AbstractRefinePacket extends ClientPacket {
      * @param item
      * @return
      */
-    protected static boolean isValid(Player player, L2ItemInstance item) {
+    protected static boolean isValid(Player player, Item item) {
         if (!isValid(player)) {
             return false;
         }

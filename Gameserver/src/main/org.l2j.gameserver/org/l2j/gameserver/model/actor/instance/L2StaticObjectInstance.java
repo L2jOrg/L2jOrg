@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.actor.stat.StaticObjStat;
 import org.l2j.gameserver.model.actor.status.StaticObjStatus;
 import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
 import org.l2j.gameserver.model.items.L2Weapon;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.ShowTownMap;
 import org.l2j.gameserver.network.serverpackets.StaticObject;
@@ -112,7 +112,7 @@ public final class L2StaticObjectInstance extends Creature {
     }
 
     @Override
-    public L2ItemInstance getActiveWeaponInstance() {
+    public Item getActiveWeaponInstance() {
         return null;
     }
 
@@ -122,7 +122,7 @@ public final class L2StaticObjectInstance extends Creature {
     }
 
     @Override
-    public L2ItemInstance getSecondaryWeaponInstance() {
+    public Item getSecondaryWeaponInstance() {
         return null;
     }
 

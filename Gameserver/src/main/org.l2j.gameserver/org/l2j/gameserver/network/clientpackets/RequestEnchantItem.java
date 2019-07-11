@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.enchant.EnchantResultType;
 import org.l2j.gameserver.model.items.enchant.EnchantScroll;
 import org.l2j.gameserver.model.items.enchant.EnchantSupportItem;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -64,9 +64,9 @@ public final class RequestEnchantItem extends ClientPacket {
             return;
         }
 
-        final L2ItemInstance item = request.getEnchantingItem();
-        final L2ItemInstance scroll = request.getEnchantingScroll();
-        final L2ItemInstance support = request.getSupportItem();
+        final Item item = request.getEnchantingItem();
+        final Item scroll = request.getEnchantingScroll();
+        final Item support = request.getSupportItem();
         if ((item == null) || (scroll == null)) {
             activeChar.removeRequest(request.getClass());
             return;
@@ -238,8 +238,8 @@ public final class RequestEnchantItem extends ClientPacket {
                                 client.sendPacket(sm);
                             }
 
-                            final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot());
-                            for (L2ItemInstance itm : unequiped) {
+                            final Item[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot());
+                            for (Item itm : unequiped) {
                                 iu.addModifiedItem(itm);
                             }
 
@@ -299,7 +299,7 @@ public final class RequestEnchantItem extends ClientPacket {
                             }
 
                             L2World.getInstance().removeObject(item);
-                            L2ItemInstance crystals = null;
+                            Item crystals = null;
                             if (crystalId != 0) {
                                 crystals = activeChar.getInventory().addItem("Enchant", crystalId, count, activeChar, item);
 

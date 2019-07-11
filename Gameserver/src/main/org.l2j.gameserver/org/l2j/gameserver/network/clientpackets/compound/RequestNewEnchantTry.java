@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.actor.request.CompoundRequest;
 import org.l2j.gameserver.model.items.combination.CombinationItem;
 import org.l2j.gameserver.model.items.combination.CombinationItemReward;
 import org.l2j.gameserver.model.items.combination.CombinationItemType;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -46,8 +46,8 @@ public class RequestNewEnchantTry extends ClientPacket {
 
         request.setProcessing(true);
 
-        final L2ItemInstance itemOne = request.getItemOne();
-        final L2ItemInstance itemTwo = request.getItemTwo();
+        final Item itemOne = request.getItemOne();
+        final Item itemTwo = request.getItemTwo();
         if ((itemOne == null) || (itemTwo == null)) {
             client.sendPacket(ExEnchantFail.STATIC_PACKET);
             activeChar.removeRequest(request.getClass());
@@ -78,7 +78,7 @@ public class RequestNewEnchantTry extends ClientPacket {
             final double random = (Rnd.nextDouble() * 100);
             final boolean success = random <= combinationItem.getChance();
             final CombinationItemReward rewardItem = combinationItem.getReward(success ? CombinationItemType.ON_SUCCESS : CombinationItemType.ON_FAILURE);
-            final L2ItemInstance item = activeChar.addItem("Compound-Result", rewardItem.getId(), rewardItem.getCount(), null, true);
+            final Item item = activeChar.addItem("Compound-Result", rewardItem.getId(), rewardItem.getCount(), null, true);
 
             if (success) {
                 client.sendPacket(new ExEnchantSucess(item.getId()));

@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.instance.L2ItemInstance;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
@@ -306,7 +306,7 @@ public class RecipeController {
             if ((_target != _player) && (_price > 0)) // customer must pay for services
             {
                 // attempt to pay for item
-                final L2ItemInstance adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
+                final Item adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
 
                 if (adenatransfer == null) {
                     _target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
@@ -467,7 +467,7 @@ public class RecipeController {
 
             for (L2RecipeInstance recipe : recipes) {
                 if (recipe.getQuantity() > 0) {
-                    final L2ItemInstance item = inv.getItemByItemId(recipe.getItemId());
+                    final Item item = inv.getItemByItemId(recipe.getItemId());
                     final long itemQuantityAmount = item == null ? 0 : item.getCount();
 
                     // check materials
