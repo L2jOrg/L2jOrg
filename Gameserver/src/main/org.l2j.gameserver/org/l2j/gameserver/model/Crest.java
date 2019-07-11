@@ -5,12 +5,12 @@ import org.l2j.gameserver.model.interfaces.IIdentifiable;
 /**
  * @author NosBit
  */
-public final class L2Crest implements IIdentifiable {
+public final class Crest implements IIdentifiable {
     private final int _id;
     private final byte[] _data;
     private final CrestType _type;
 
-    public L2Crest(int id, byte[] data, CrestType type) {
+    public Crest(int id, byte[] data, CrestType type) {
         _id = id;
         _data = data;
         _type = type;

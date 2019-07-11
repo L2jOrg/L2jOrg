@@ -369,7 +369,7 @@ public final class Player extends Playable {
 
     public final ReentrantLock soulShotLock = new ReentrantLock();
     private final ReentrantLock _subclassLock = new ReentrantLock();
-    private final L2ContactList _contactList = new L2ContactList(this);
+    private final ContactList _contactList = new ContactList(this);
     private final Map<Integer, TeleportBookmark> _tpbookmarks = new ConcurrentSkipListMap<>();
     /**
      * The table containing all L2RecipeList of the Player
@@ -5378,7 +5378,7 @@ public final class Player extends Playable {
         return isInParty() && _party.isInCommandChannel();
     }
 
-    public L2CommandChannel getCommandChannel() {
+    public CommandChannel getCommandChannel() {
         return (isInCommandChannel()) ? _party.getCommandChannel() : null;
     }
 
@@ -10600,7 +10600,7 @@ public final class Player extends Playable {
         _lastPetitionGmName = gmName;
     }
 
-    public L2ContactList getContactList() {
+    public ContactList getContactList() {
         return _contactList;
     }
 

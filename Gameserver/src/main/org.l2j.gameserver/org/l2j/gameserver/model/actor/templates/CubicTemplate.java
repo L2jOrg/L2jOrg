@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * @author UnAfraid
  */
-public class L2CubicTemplate implements ICubicConditionHolder {
+public class CubicTemplate implements ICubicConditionHolder {
     public final List<CubicSkill> _skills = new ArrayList<>();
     private final int _id;
     private final int _level;
@@ -29,7 +29,7 @@ public class L2CubicTemplate implements ICubicConditionHolder {
     private final CubicTargetType _targetType;
     private final List<ICubicCondition> _conditions = new ArrayList<>();
 
-    public L2CubicTemplate(StatsSet set) {
+    public CubicTemplate(StatsSet set) {
         _id = set.getInt("id");
         _level = set.getInt("level");
         _slot = set.getInt("slot");

@@ -3,8 +3,8 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.L2Crest;
-import org.l2j.gameserver.model.L2Crest.CrestType;
+import org.l2j.gameserver.model.Crest;
+import org.l2j.gameserver.model.Crest.CrestType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -61,7 +61,7 @@ public final class RequestSetAllyCrest extends ClientPacket {
                 leaderClan.changeAllyCrest(0, false);
             }
         } else {
-            final L2Crest crest = CrestTable.getInstance().createCrest(_data, CrestType.ALLY);
+            final Crest crest = CrestTable.getInstance().createCrest(_data, CrestType.ALLY);
             if (crest != null) {
                 leaderClan.changeAllyCrest(crest.getId(), false);
                 activeChar.sendPacket(SystemMessageId.THE_CREST_WAS_SUCCESSFULLY_REGISTERED);

@@ -19,7 +19,7 @@ import java.util.function.Function;
  *
  * @author chris_00
  */
-public class L2CommandChannel extends AbstractPlayerGroup {
+public class CommandChannel extends AbstractPlayerGroup {
     private final List<L2Party> _parties = new CopyOnWriteArrayList<>();
     private Player _commandLeader;
     private int _channelLvl;
@@ -29,7 +29,7 @@ public class L2CommandChannel extends AbstractPlayerGroup {
      *
      * @param leader the leader of this command channel
      */
-    public L2CommandChannel(Player leader) {
+    public CommandChannel(Player leader) {
         _commandLeader = leader;
         final L2Party party = leader.getParty();
         _parties.add(party);

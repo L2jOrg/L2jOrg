@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.holders.DoorRequestHolder;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 
-public class L2DoorInstanceAction implements IActionHandler
+public class DoorAction implements IActionHandler
 {
     @Override
     public boolean action(Player activeChar, WorldObject target, boolean interact)

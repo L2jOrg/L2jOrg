@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.L2CommandChannel;
+import org.l2j.gameserver.model.CommandChannel;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
@@ -251,7 +251,7 @@ public class TvT extends Event implements ScriptEvent
 				// Make Blue CC.
 				if (BLUE_TEAM.size() > 1)
 				{
-					L2CommandChannel blueCC = null;
+					CommandChannel blueCC = null;
 					L2Party lastBlueParty = null;
 					int blueParticipantCounter = 0;
 					for (Player participant : BLUE_TEAM)
@@ -265,7 +265,7 @@ public class TvT extends Event implements ScriptEvent
 							{
 								if (blueCC == null)
 								{
-									blueCC = new L2CommandChannel(participant);
+									blueCC = new CommandChannel(participant);
 								}
 								else
 								{
@@ -286,7 +286,7 @@ public class TvT extends Event implements ScriptEvent
 				// Make Red CC.
 				if (RED_TEAM.size() > 1)
 				{
-					L2CommandChannel redCC = null;
+					CommandChannel redCC = null;
 					L2Party lastRedParty = null;
 					int redParticipantCounter = 0;
 					for (Player participant : RED_TEAM)
@@ -300,7 +300,7 @@ public class TvT extends Event implements ScriptEvent
 							{
 								if (redCC == null)
 								{
-									redCC = new L2CommandChannel(participant);
+									redCC = new CommandChannel(participant);
 								}
 								else
 								{

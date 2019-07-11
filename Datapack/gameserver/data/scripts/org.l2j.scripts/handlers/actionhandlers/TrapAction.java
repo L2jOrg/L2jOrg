@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 
-public class DecoyAction implements IActionHandler
+public class TrapAction implements IActionHandler
 {
 	@Override
 	public boolean action(Player activeChar, WorldObject target, boolean interact)
@@ -25,6 +25,6 @@ public class DecoyAction implements IActionHandler
 	@Override
 	public InstanceType getInstanceType()
 	{
-		return InstanceType.L2Decoy;
+		return InstanceType.L2TrapInstance;
 	}
 }

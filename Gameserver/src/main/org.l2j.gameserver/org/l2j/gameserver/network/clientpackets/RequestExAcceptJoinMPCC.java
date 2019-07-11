@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.L2CommandChannel;
+import org.l2j.gameserver.model.CommandChannel;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -31,7 +31,7 @@ public final class RequestExAcceptJoinMPCC extends ClientPacket {
             if (_response == 1) {
                 boolean newCc = false;
                 if (!requestor.getParty().isInCommandChannel()) {
-                    new L2CommandChannel(requestor); // Create new CC
+                    new CommandChannel(requestor); // Create new CC
                     sm = SystemMessage.getSystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_HAS_BEEN_FORMED);
                     requestor.sendPacket(sm);
                     newCc = true;

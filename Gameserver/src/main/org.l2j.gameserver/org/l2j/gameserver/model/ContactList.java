@@ -39,15 +39,15 @@ import java.util.concurrent.ConcurrentHashMap;
  *
  * @author UnAfraid, mrTJO
  */
-public class L2ContactList {
-    private static final Logger LOGGER = LoggerFactory.getLogger(L2ContactList.class);
+public class ContactList {
+    private static final Logger LOGGER = LoggerFactory.getLogger(ContactList.class);
     private static final String QUERY_ADD = "INSERT INTO character_contacts (charId, contactId) VALUES (?, ?)";
     private static final String QUERY_REMOVE = "DELETE FROM character_contacts WHERE charId = ? and contactId = ?";
     private static final String QUERY_LOAD = "SELECT contactId FROM character_contacts WHERE charId = ?";
     private final Player activeChar;
     private final Set<String> _contacts = ConcurrentHashMap.newKeySet();
 
-    public L2ContactList(Player player) {
+    public ContactList(Player player) {
         activeChar = player;
         restore();
     }

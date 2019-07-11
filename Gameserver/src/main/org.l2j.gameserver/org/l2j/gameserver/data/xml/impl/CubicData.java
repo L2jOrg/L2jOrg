@@ -18,7 +18,7 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.templates.L2CubicTemplate;
+import org.l2j.gameserver.model.actor.templates.CubicTemplate;
 import org.l2j.gameserver.model.cubic.CubicSkill;
 import org.l2j.gameserver.model.cubic.ICubicConditionHolder;
 import org.l2j.gameserver.model.cubic.conditions.HealthCondition;
@@ -47,7 +47,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public class CubicData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(CubicData.class);
 
-    private final Map<Integer, Map<Integer, L2CubicTemplate>> _cubics = new HashMap<>();
+    private final Map<Integer, Map<Integer, CubicTemplate>> _cubics = new HashMap<>();
 
     private CubicData() {
         load();
@@ -69,7 +69,7 @@ public class CubicData extends GameXmlReader {
     public void parseDocument(Document doc, File f) {
         forEach(doc, "list", listNode -> forEach(listNode, "cubic", cubicNode ->
         {
-            parseTemplate(cubicNode, new L2CubicTemplate(new StatsSet(parseAttributes(cubicNode))));
+            parseTemplate(cubicNode, new CubicTemplate(new StatsSet(parseAttributes(cubicNode))));
         }));
     }
 
@@ -77,7 +77,7 @@ public class CubicData extends GameXmlReader {
      * @param cubicNode
      * @param template
      */
-    private void parseTemplate(Node cubicNode, L2CubicTemplate template) {
+    private void parseTemplate(Node cubicNode, CubicTemplate template) {
         forEach(cubicNode, XmlReader::isNode, innerNode ->
         {
             switch (innerNode.getNodeName()) {
@@ -99,7 +99,7 @@ public class CubicData extends GameXmlReader {
      * @param template
      * @param holder
      */
-    private void parseConditions(Node cubicNode, L2CubicTemplate template, ICubicConditionHolder holder) {
+    private void parseConditions(Node cubicNode, CubicTemplate template, ICubicConditionHolder holder) {
         forEach(cubicNode, XmlReader::isNode, conditionNode ->
         {
             switch (conditionNode.getNodeName()) {
@@ -132,7 +132,7 @@ public class CubicData extends GameXmlReader {
      * @param cubicNode
      * @param template
      */
-    private void parseSkills(Node cubicNode, L2CubicTemplate template) {
+    private void parseSkills(Node cubicNode, CubicTemplate template) {
         forEach(cubicNode, "skill", skillNode ->
         {
             final CubicSkill skill = new CubicSkill(new StatsSet(parseAttributes(skillNode)));
@@ -144,9 +144,9 @@ public class CubicData extends GameXmlReader {
     /**
      * @param id
      * @param level
-     * @return the L2CubicTemplate for specified id and level
+     * @return the CubicTemplate for specified id and level
      */
-    public L2CubicTemplate getCubicTemplate(int id, int level) {
+    public CubicTemplate getCubicTemplate(int id, int level) {
         return _cubics.getOrDefault(id, Collections.emptyMap()).get(level);
     }
 

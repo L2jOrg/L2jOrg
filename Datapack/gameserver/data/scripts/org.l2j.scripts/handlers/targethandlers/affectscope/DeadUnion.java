@@ -23,7 +23,7 @@ import java.util.function.Predicate;
 import org.l2j.gameserver.handler.AffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
-import org.l2j.gameserver.model.L2CommandChannel;
+import org.l2j.gameserver.model.CommandChannel;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.L2World;
@@ -50,7 +50,7 @@ public class DeadUnion implements IAffectScopeHandler
 		{
 			final Player player = target.getActingPlayer();
 			final L2Party party = player.getParty();
-			final L2CommandChannel commandChannel = party != null ? party.getCommandChannel() : null;
+			final CommandChannel commandChannel = party != null ? party.getCommandChannel() : null;
 			
 			// Create the target filter.
 			final AtomicInteger affected = new AtomicInteger(0);
@@ -77,7 +77,7 @@ public class DeadUnion implements IAffectScopeHandler
 					
 					if (party.getLeaderObjectId() != targetParty.getLeaderObjectId())
 					{
-						final L2CommandChannel targetCommandChannel = targetParty.getCommandChannel();
+						final CommandChannel targetCommandChannel = targetParty.getCommandChannel();
 						if ((commandChannel == null) || (targetCommandChannel == null) || (commandChannel.getLeaderObjectId() != targetCommandChannel.getLeaderObjectId()))
 						{
 							return false;

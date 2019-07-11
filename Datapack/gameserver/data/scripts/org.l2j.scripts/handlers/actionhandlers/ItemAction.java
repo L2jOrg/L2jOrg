@@ -11,26 +11,26 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.SystemMessageId;
 
-public class ItemInstanceAction implements IActionHandler
+public class ItemAction implements IActionHandler
 {
 	@Override
-	public boolean action(Player player, WorldObject target, boolean interact)
+	public boolean action(Player activeChar, WorldObject target, boolean interact)
 	{
 		final Castle castle = CastleManager.getInstance().getCastle(target);
 		if ((castle != null) && (SiegeGuardManager.getInstance().getSiegeGuardByItem(castle.getResidenceId(), target.getId()) != null))
 		{
-			if ((player.getClan() == null) || (castle.getOwnerId() != player.getClanId()) || !player.hasClanPrivilege(ClanPrivilege.CS_MERCENARIES))
+			if ((activeChar.getClan() == null) || (castle.getOwnerId() != activeChar.getClanId()) || !activeChar.hasClanPrivilege(ClanPrivilege.CS_MERCENARIES))
 			{
-				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_AUTHORITY_TO_CANCEL_MERCENARY_POSITIONING);
-				player.setTarget(target);
-				player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+				activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_AUTHORITY_TO_CANCEL_MERCENARY_POSITIONING);
+				activeChar.setTarget(target);
+				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				return false;
 			}
 		}
 		
-		if (!player.isFlying())
+		if (!activeChar.isFlying())
 		{
-			player.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, target);
+			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, target);
 		}
 		return true;
 	}

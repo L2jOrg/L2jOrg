@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.sql.impl.CrestTable;
-import org.l2j.gameserver.model.L2Crest;
+import org.l2j.gameserver.model.Crest;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -14,7 +14,7 @@ public class AllyCrest extends ServerPacket {
 
     public AllyCrest(int crestId) {
         _crestId = crestId;
-        final L2Crest crest = CrestTable.getInstance().getCrest(crestId);
+        final Crest crest = CrestTable.getInstance().getCrest(crestId);
         _data = crest != null ? crest.getData() : null;
     }
 

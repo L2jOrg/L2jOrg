@@ -66,7 +66,7 @@ public class L2Party extends AbstractPlayerGroup {
     private volatile Future<?> _changeDistributionTypeRequestTask = null;
     private volatile Set<Integer> _changeDistributionTypeAnswers = null;
     private int _itemLastLoot = 0;
-    private L2CommandChannel _commandChannel = null;
+    private CommandChannel _commandChannel = null;
     private Future<?> _positionBroadcastTask = null;
     private boolean _disbanding = false;
 
@@ -838,11 +838,11 @@ public class L2Party extends AbstractPlayerGroup {
         return _commandChannel != null;
     }
 
-    public L2CommandChannel getCommandChannel() {
+    public CommandChannel getCommandChannel() {
         return _commandChannel;
     }
 
-    public void setCommandChannel(L2CommandChannel channel) {
+    public void setCommandChannel(CommandChannel channel) {
         _commandChannel = channel;
     }
 

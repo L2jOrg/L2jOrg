@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2CubicTemplate;
+import org.l2j.gameserver.model.actor.templates.CubicTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoCubic;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
@@ -23,11 +23,11 @@ import java.util.stream.Stream;
 public class CubicInstance {
     private final Player _owner;
     private final Player _caster;
-    private final L2CubicTemplate _template;
+    private final CubicTemplate _template;
     private ScheduledFuture<?> _skillUseTask;
     private ScheduledFuture<?> _expireTask;
 
-    public CubicInstance(Player owner, Player caster, L2CubicTemplate template) {
+    public CubicInstance(Player owner, Player caster, CubicTemplate template) {
         _owner = owner;
         _caster = caster == null ? owner : caster;
         _template = template;
@@ -205,9 +205,9 @@ public class CubicInstance {
     }
 
     /**
-     * @return the {@link L2CubicTemplate} of this cubic
+     * @return the {@link CubicTemplate} of this cubic
      */
-    public L2CubicTemplate getTemplate() {
+    public CubicTemplate getTemplate() {
         return _template;
     }
 }

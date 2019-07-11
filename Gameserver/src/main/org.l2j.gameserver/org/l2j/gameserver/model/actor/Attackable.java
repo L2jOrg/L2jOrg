@@ -77,7 +77,7 @@ public class Attackable extends Npc {
     private double _overhitDamage;
     private Creature _overhitAttacker;
     // Command channel
-    private volatile L2CommandChannel _firstCommandChannelAttacked = null;
+    private volatile CommandChannel _firstCommandChannelAttacked = null;
     private CommandChannelTimer _commandChannelTimer = null;
     private long _commandChannelLastAttack = 0;
     // Misc
@@ -326,7 +326,7 @@ public class Attackable extends Npc {
                 final L2Party party = player.getParty();
 
                 if (party != null) {
-                    final L2CommandChannel command = party.getCommandChannel();
+                    final CommandChannel command = party.getCommandChannel();
                     //@formatter:off
                     final List<Player> members = command != null ?
                             command.getMembers().stream().filter(p -> p.calculateDistance3D(this) < Config.ALT_PARTY_RANGE).collect(Collectors.toList()) :
@@ -1364,11 +1364,11 @@ public class Attackable extends Npc {
         _commandChannelTimer = commandChannelTimer;
     }
 
-    public L2CommandChannel getFirstCommandChannelAttacked() {
+    public CommandChannel getFirstCommandChannelAttacked() {
         return _firstCommandChannelAttacked;
     }
 
-    public void setFirstCommandChannelAttacked(L2CommandChannel firstCommandChannelAttacked) {
+    public void setFirstCommandChannelAttacked(CommandChannel firstCommandChannelAttacked) {
         _firstCommandChannelAttacked = firstCommandChannelAttacked;
     }
 

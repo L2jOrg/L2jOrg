@@ -21,7 +21,7 @@ import org.l2j.gameserver.data.xml.impl.CubicData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2CubicTemplate;
+import org.l2j.gameserver.model.actor.templates.CubicTemplate;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -102,7 +102,7 @@ public final class SummonCubic extends AbstractEffect
 			}
 		}
 		
-		final L2CubicTemplate template = CubicData.getInstance().getCubicTemplate(_cubicId, _cubicLvl);
+		final CubicTemplate template = CubicData.getInstance().getCubicTemplate(_cubicId, _cubicLvl);
 		if (template == null)
 		{
 			LOGGER.warn("Attempting to summon cubic without existing template id: " + _cubicId + " level: " + _cubicLvl);

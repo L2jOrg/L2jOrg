@@ -17,7 +17,7 @@
 package handlers.usercommandhandlers;
 
 import org.l2j.gameserver.handler.IUserCommandHandler;
-import org.l2j.gameserver.model.L2CommandChannel;
+import org.l2j.gameserver.model.CommandChannel;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -45,7 +45,7 @@ public class ChannelDelete implements IUserCommandHandler
 		{
 			if (activeChar.getParty().isLeader(activeChar) && activeChar.getParty().isInCommandChannel() && activeChar.getParty().getCommandChannel().getLeader().equals(activeChar))
 			{
-				final L2CommandChannel channel = activeChar.getParty().getCommandChannel();
+				final CommandChannel channel = activeChar.getParty().getCommandChannel();
 				
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_HAS_BEEN_DISBANDED);
 				channel.broadcastPacket(sm);

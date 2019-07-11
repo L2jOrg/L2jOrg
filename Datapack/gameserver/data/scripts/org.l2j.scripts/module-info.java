@@ -1,4 +1,4 @@
-import handlers.actionhandlers.ArtefactAction;
+import handlers.actionhandlers.*;
 import handlers.admincommandhandlers.AdminCoins;
 
 open module org.l2j.scripts {
@@ -129,15 +129,15 @@ open module org.l2j.scripts {
 
     provides org.l2j.gameserver.handler.IActionHandler
         with ArtefactAction,
-            handlers.actionhandlers.L2DecoyAction,
-            handlers.actionhandlers.L2DoorInstanceAction,
-            handlers.actionhandlers.L2ItemInstanceAction,
-            handlers.actionhandlers.L2NpcAction,
-            handlers.actionhandlers.L2PcInstanceAction,
-            handlers.actionhandlers.L2PetInstanceAction,
-            handlers.actionhandlers.L2StaticObjectInstanceAction,
-            handlers.actionhandlers.L2SummonAction,
-            handlers.actionhandlers.L2TrapAction;
+                DecoyAction,
+                DoorAction,
+                ItemAction,
+                NpcAction,
+                PlayerAction,
+                PetAction,
+                StaticWorldObjectAction,
+                SummonAction,
+                TrapAction;
 
     provides org.l2j.gameserver.handler.IActionShiftHandler
         with handlers.actionshifthandlers.L2DoorInstanceActionShift,
