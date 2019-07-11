@@ -62,7 +62,7 @@ public class FishingZone extends Zone {
     }
 
     /*
-     * getWaterZ() this added function returns the Z value for the water surface. In effect this simply returns the upper Z value of the zone. This required some modification of L2ZoneForm, and zone form extensions.
+     * getWaterZ() this added function returns the Z value for the water surface. In effect this simply returns the upper Z value of the zone. This required some modification of ZoneForm, and zone form extensions.
      */
     public int getWaterZ() {
         return getZone().getHighZ();

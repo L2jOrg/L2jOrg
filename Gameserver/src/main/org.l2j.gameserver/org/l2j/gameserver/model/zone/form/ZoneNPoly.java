@@ -19,9 +19,8 @@ package org.l2j.gameserver.model.zone.form;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.zone.L2ZoneForm;
+import org.l2j.gameserver.model.zone.ZoneForm;
 
 import java.awt.*;
 
@@ -30,7 +29,7 @@ import java.awt.*;
  *
  * @author durgus
  */
-public class ZoneNPoly extends L2ZoneForm {
+public class ZoneNPoly extends ZoneForm {
     private final Polygon _p;
     private final int _z1;
     private final int _z2;

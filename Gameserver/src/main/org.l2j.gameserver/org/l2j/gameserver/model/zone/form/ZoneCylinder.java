@@ -3,16 +3,15 @@ package org.l2j.gameserver.model.zone.form;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.zone.L2ZoneForm;
+import org.l2j.gameserver.model.zone.ZoneForm;
 
 /**
  * A primitive circular zone
  *
  * @author durgus
  */
-public class ZoneCylinder extends L2ZoneForm {
+public class ZoneCylinder extends ZoneForm {
     private final int _x;
     private final int _y;
     private final int _z1;

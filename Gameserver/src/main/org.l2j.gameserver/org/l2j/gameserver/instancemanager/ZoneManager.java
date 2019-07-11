@@ -184,7 +184,7 @@ public final class ZoneManager extends GameXmlReader {
                         zoneShape = parseString(attrs, "shape");
 
                         // Get the zone shape from xml
-                        L2ZoneForm zoneForm = null;
+                        ZoneForm zoneForm = null;
                         try {
                             for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling()) {
                                 if ("node".equalsIgnoreCase(cd.getNodeName())) {

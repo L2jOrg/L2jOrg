@@ -28,8 +28,8 @@ public abstract class Zone extends ListenersContainer {
     protected static final Logger LOGGER = LoggerFactory.getLogger(Zone.class.getName());
 
     private final int _id;
-    protected L2ZoneForm _zone;
-    protected List<L2ZoneForm> _blockedZone;
+    protected ZoneForm _zone;
+    protected List<ZoneForm> _blockedZone;
     protected Map<Integer, Creature> _characterList = new ConcurrentHashMap<>();
     protected boolean _enabled;
     /**
@@ -228,7 +228,7 @@ public abstract class Zone extends ListenersContainer {
      *
      * @return {@link #_zone}
      */
-    public L2ZoneForm getZone() {
+    public ZoneForm getZone() {
         return _zone;
     }
 
@@ -237,18 +237,18 @@ public abstract class Zone extends ListenersContainer {
      *
      * @param zone
      */
-    public void setZone(L2ZoneForm zone) {
+    public void setZone(ZoneForm zone) {
         if (_zone != null) {
             throw new IllegalStateException("Zone already set");
         }
         _zone = zone;
     }
 
-    public List<L2ZoneForm> getBlockedZones() {
+    public List<ZoneForm> getBlockedZones() {
         return _blockedZone;
     }
 
-    public void setBlockedZones(List<L2ZoneForm> blockedZones) {
+    public void setBlockedZones(List<ZoneForm> blockedZones) {
         if (_blockedZone != null) {
             throw new IllegalStateException("Blocked zone already set");
         }

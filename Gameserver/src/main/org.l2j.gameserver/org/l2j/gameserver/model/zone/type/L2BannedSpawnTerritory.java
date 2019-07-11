@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.zone.type;
 
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.zone.L2ZoneForm;
+import org.l2j.gameserver.model.zone.ZoneForm;
 
 /**
  * Just dummy zone, needs only for geometry calculations
@@ -10,9 +10,9 @@ import org.l2j.gameserver.model.zone.L2ZoneForm;
  */
 public class L2BannedSpawnTerritory {
     private final String _name;
-    private final L2ZoneForm _territory;
+    private final ZoneForm _territory;
 
-    public L2BannedSpawnTerritory(String name, L2ZoneForm territory) {
+    public L2BannedSpawnTerritory(String name, ZoneForm territory) {
         _name = name;
         _territory = territory;
     }
