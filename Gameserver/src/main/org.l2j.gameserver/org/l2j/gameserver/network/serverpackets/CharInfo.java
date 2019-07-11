@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.model.VariationInstance;
-import org.l2j.gameserver.model.actor.instance.L2DecoyInstance;
+import org.l2j.gameserver.model.actor.instance.Decoy;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
@@ -83,7 +83,7 @@ public class CharInfo extends ServerPacket {
         _gmSeeInvis = gmSeeInvis;
     }
 
-    public CharInfo(L2DecoyInstance decoy, boolean gmSeeInvis) {
+    public CharInfo(Decoy decoy, boolean gmSeeInvis) {
         this(decoy.getActingPlayer(), gmSeeInvis); // init
         _objId = decoy.getObjectId();
         _x = decoy.getX();

@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2DecoyInstance;
+import org.l2j.gameserver.model.actor.instance.Decoy;
 import org.l2j.gameserver.model.actor.instance.L2EffectPointInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
@@ -126,7 +126,7 @@ public final class SummonNpc extends AbstractEffect
 		{
 			case "L2Decoy":
 			{
-				final L2DecoyInstance decoy = new L2DecoyInstance(npcTemplate, player, _despawnDelay);
+				final Decoy decoy = new Decoy(npcTemplate, player, _despawnDelay);
 				decoy.setCurrentHp(decoy.getMaxHp());
 				decoy.setCurrentMp(decoy.getMaxMp());
 				decoy.setHeading(player.getHeading());

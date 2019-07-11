@@ -18,14 +18,14 @@ import org.l2j.gameserver.taskmanager.DecayTaskManager;
 
 import java.util.concurrent.Future;
 
-public class L2DecoyInstance extends Creature {
+public class Decoy extends Creature {
     private final Player _owner;
     private int _totalLifeTime;
     private int _timeRemaining;
     private Future<?> _DecoyLifeTask;
     private Future<?> _HateSpam;
 
-    public L2DecoyInstance(L2NpcTemplate template, Player owner, int totalLifeTime) {
+    public Decoy(L2NpcTemplate template, Player owner, int totalLifeTime) {
         super(template);
         setInstanceType(InstanceType.L2DecoyInstance);
         _owner = owner;
@@ -181,9 +181,9 @@ public class L2DecoyInstance extends Creature {
     static class DecoyLifetime implements Runnable {
         private final Player _activeChar;
 
-        private final L2DecoyInstance _Decoy;
+        private final Decoy _Decoy;
 
-        DecoyLifetime(Player activeChar, L2DecoyInstance Decoy) {
+        DecoyLifetime(Player activeChar, Decoy Decoy) {
             _activeChar = activeChar;
             _Decoy = Decoy;
         }
@@ -203,10 +203,10 @@ public class L2DecoyInstance extends Creature {
     }
 
     private static class HateSpam implements Runnable {
-        private final L2DecoyInstance _activeChar;
+        private final Decoy _activeChar;
         private final Skill _skill;
 
-        HateSpam(L2DecoyInstance activeChar, Skill Hate) {
+        HateSpam(Decoy activeChar, Skill Hate) {
             _activeChar = activeChar;
             _skill = Hate;
         }
