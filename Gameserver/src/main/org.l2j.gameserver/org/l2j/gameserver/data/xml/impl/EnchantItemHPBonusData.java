@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -80,7 +80,7 @@ public class EnchantItemHPBonusData extends GameXmlReader {
         }
 
         final int bonus = values.get(Math.min(item.getOlyEnchantLevel(), values.size()) - 1);
-        if (item.getItem().getBodyPart() == L2Item.SLOT_FULL_ARMOR) {
+        if (item.getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) {
             return (int) (bonus * FULL_ARMOR_MODIFIER);
         }
         return bonus;

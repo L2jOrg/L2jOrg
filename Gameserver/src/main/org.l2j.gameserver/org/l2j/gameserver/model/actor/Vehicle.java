@@ -14,7 +14,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.VehicleStat;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.zone.ZoneRegion;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -340,7 +340,7 @@ public abstract class Vehicle extends Creature {
     }
 
     @Override
-    public L2Weapon getActiveWeaponItem() {
+    public Weapon getActiveWeaponItem() {
         return null;
     }
 
@@ -350,7 +350,7 @@ public abstract class Vehicle extends Creature {
     }
 
     @Override
-    public L2Weapon getSecondaryWeaponItem() {
+    public Weapon getSecondaryWeaponItem() {
         return null;
     }
 

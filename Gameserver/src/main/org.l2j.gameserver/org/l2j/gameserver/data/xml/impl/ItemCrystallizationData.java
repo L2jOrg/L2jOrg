@@ -4,9 +4,9 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.CrystallizationType;
 import org.l2j.gameserver.model.holders.CrystallizationDataHolder;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
-import org.l2j.gameserver.model.items.L2Armor;
-import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.Armor;
+import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -107,7 +107,7 @@ public final class ItemCrystallizationData extends GameXmlReader {
         return _crystallizationTemplates.size();
     }
 
-    private List<ItemChanceHolder> calculateCrystallizeRewards(L2Item item, List<ItemChanceHolder> crystallizeRewards) {
+    private List<ItemChanceHolder> calculateCrystallizeRewards(ItemTemplate item, List<ItemChanceHolder> crystallizeRewards) {
         if (crystallizeRewards == null) {
             return null;
         }
@@ -133,10 +133,10 @@ public final class ItemCrystallizationData extends GameXmlReader {
     private void generateCrystallizationData() {
         final int previousCount = _items.size();
 
-        for (L2Item item : ItemTable.getInstance().getAllItems()) {
+        for (ItemTemplate item : ItemTable.getInstance().getAllItems()) {
             // Check if the data has not been generated.
-            if (((item instanceof L2Weapon) || (item instanceof L2Armor)) && item.isCrystallizable() && !_items.containsKey(item.getId())) {
-                final List<ItemChanceHolder> holder = _crystallizationTemplates.get(item.getCrystalType()).get((item instanceof L2Weapon) ? CrystallizationType.WEAPON : CrystallizationType.ARMOR);
+            if (((item instanceof Weapon) || (item instanceof Armor)) && item.isCrystallizable() && !_items.containsKey(item.getId())) {
+                final List<ItemChanceHolder> holder = _crystallizationTemplates.get(item.getCrystalType()).get((item instanceof Weapon) ? CrystallizationType.WEAPON : CrystallizationType.ARMOR);
                 if (holder != null) {
                     _items.put(item.getId(), new CrystallizationDataHolder(item.getId(), calculateCrystallizeRewards(item, holder)));
                 }

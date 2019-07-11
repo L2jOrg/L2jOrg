@@ -2,8 +2,8 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.L2EtcItem;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.EtcItem;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -45,12 +45,12 @@ public class RequestUnEquipItem extends ClientPacket {
         }
 
         // Arrows and bolts.
-        if ((_slot == L2Item.SLOT_L_HAND) && (item.getItem() instanceof L2EtcItem)) {
+        if ((_slot == ItemTemplate.SLOT_L_HAND) && (item.getItem() instanceof EtcItem)) {
             return;
         }
 
         // Prevent of unequipping a cursed weapon.
-        if ((_slot == L2Item.SLOT_LR_HAND) && (activeChar.isCursedWeaponEquipped() || activeChar.isCombatFlagEquipped())) {
+        if ((_slot == ItemTemplate.SLOT_LR_HAND) && (activeChar.isCursedWeaponEquipped() || activeChar.isCombatFlagEquipped())) {
             return;
         }
 

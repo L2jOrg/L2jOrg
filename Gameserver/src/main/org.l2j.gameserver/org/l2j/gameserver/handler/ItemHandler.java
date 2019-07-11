@@ -1,6 +1,6 @@
 package org.l2j.gameserver.handler;
 
-import org.l2j.gameserver.model.items.L2EtcItem;
+import org.l2j.gameserver.model.items.EtcItem;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +10,7 @@ import java.util.Map;
  *
  * @author UnAfraid
  */
-public class ItemHandler implements IHandler<IItemHandler, L2EtcItem> {
+public class ItemHandler implements IHandler<IItemHandler, EtcItem> {
     private final Map<String, IItemHandler> _datatable;
 
     private ItemHandler() {
@@ -42,7 +42,7 @@ public class ItemHandler implements IHandler<IItemHandler, L2EtcItem> {
      * @return IItemHandler
      */
     @Override
-    public IItemHandler getHandler(L2EtcItem item) {
+    public IItemHandler getHandler(EtcItem item) {
         if ((item == null) || (item.getHandlerName() == null)) {
             return null;
         }

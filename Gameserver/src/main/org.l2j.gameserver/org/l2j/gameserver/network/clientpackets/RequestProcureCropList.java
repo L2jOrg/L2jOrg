@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.UniqueItemHolder;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -91,7 +91,7 @@ public class RequestProcureCropList extends ClientPacket {
                 return;
             }
 
-            final L2Item template = ItemTable.getInstance().getTemplate(i.getRewardId());
+            final ItemTemplate template = ItemTable.getInstance().getTemplate(i.getRewardId());
             weight += (i.getCount() * template.getWeight());
 
             if (!template.isStackable()) {

@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.ProductList;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -111,7 +111,7 @@ public final class RequestRefundItem extends ClientPacket {
             }
 
             final Item item = refund[idx];
-            final L2Item template = item.getItem();
+            final ItemTemplate template = item.getItem();
             objectIds[i] = item.getObjectId();
 
             // second check for duplicates - object ids

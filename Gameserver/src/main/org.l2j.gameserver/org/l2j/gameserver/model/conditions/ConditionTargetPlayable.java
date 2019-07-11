@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 
 /**
@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.skills.Skill;
  */
 public class ConditionTargetPlayable extends Condition {
     @Override
-    public boolean testImpl(Creature effector, Creature effected, Skill skill, L2Item item) {
+    public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
         return (effected != null) && effected.isPlayable();
     }
 }

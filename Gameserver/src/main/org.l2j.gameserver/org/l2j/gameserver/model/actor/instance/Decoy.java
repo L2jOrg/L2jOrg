@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -117,7 +117,7 @@ public class Decoy extends Creature {
     }
 
     @Override
-    public L2Weapon getActiveWeaponItem() {
+    public Weapon getActiveWeaponItem() {
         return null;
     }
 
@@ -127,7 +127,7 @@ public class Decoy extends Creature {
     }
 
     @Override
-    public L2Weapon getSecondaryWeaponItem() {
+    public Weapon getSecondaryWeaponItem() {
         return null;
     }
 

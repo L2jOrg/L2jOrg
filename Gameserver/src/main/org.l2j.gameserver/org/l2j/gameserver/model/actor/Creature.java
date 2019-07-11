@@ -43,8 +43,8 @@ import org.l2j.gameserver.model.interfaces.IDeletable;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.interfaces.ISkillsHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.EtcItemType;
 import org.l2j.gameserver.model.items.type.WeaponType;
@@ -760,7 +760,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
 
             // Get the active weapon item corresponding to the active weapon instance (always equipped in the right hand)
-            final L2Weapon weaponItem = getActiveWeaponItem();
+            final Weapon weaponItem = getActiveWeaponItem();
             final WeaponType weaponType = getAttackType();
 
             if (getActingPlayer() != null) {
@@ -866,7 +866,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
 
             final WeaponType attackType = getAttackType();
-            final boolean isTwoHanded = (weaponItem != null) && (weaponItem.getBodyPart() == L2Item.SLOT_LR_HAND);
+            final boolean isTwoHanded = (weaponItem != null) && (weaponItem.getBodyPart() == ItemTemplate.SLOT_LR_HAND);
             final int timeAtk = Formulas.calculateTimeBetweenAttacks(_stat.getPAtkSpd());
             final int timeToHit = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, false);
             _attackEndTime = System.nanoTime() + (TimeUnit.MILLISECONDS.toNanos(timeAtk));
@@ -881,7 +881,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 rechargeShots(true, false, false);
             }
 
-            // Get the Attack Reuse Delay of the L2Weapon
+            // Get the Attack Reuse Delay of the Weapon
             final Attack attack = generateAttackTargetData(target, weaponItem, attackType);
             boolean crossbow = false;
             switch (attackType) {
@@ -948,7 +948,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
     }
 
-    private Attack generateAttackTargetData(Creature target, L2Weapon weapon, WeaponType weaponType) {
+    private Attack generateAttackTargetData(Creature target, Weapon weapon, WeaponType weaponType) {
         final boolean isDual = (WeaponType.DUAL == weaponType) || (WeaponType.DUALBLUNT == weaponType) || (WeaponType.DUALDAGGER == weaponType) || (WeaponType.DUALFIST == weaponType);
         final Attack attack = new Attack(this, target);
         boolean shotConsumed = false;
@@ -1005,7 +1005,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return attack;
     }
 
-    private Hit generateHit(Creature target, L2Weapon weapon, boolean shotConsumed, boolean halfDamage) {
+    private Hit generateHit(Creature target, Weapon weapon, boolean shotConsumed, boolean halfDamage) {
         int damage = 0;
         byte shld = 0;
         boolean crit = false;
@@ -3047,7 +3047,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      *
      * @return the active weapon item (always equiped in the right hand).
      */
-    public abstract L2Weapon getActiveWeaponItem();
+    public abstract Weapon getActiveWeaponItem();
 
     /**
      * <B><U> Overridden in </U> :</B>
@@ -3061,9 +3061,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * <B><U> Overridden in </U> :</B>
      * <li>Player</li>
      *
-     * @return the secondary {@link L2Item} item (always equiped in the left hand).
+     * @return the secondary {@link ItemTemplate} item (always equiped in the left hand).
      */
-    public abstract L2Item getSecondaryWeaponItem();
+    public abstract ItemTemplate getSecondaryWeaponItem();
 
     /**
      * Manage hit process (called by Hit Task).<br>
@@ -3080,7 +3080,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param hitTime    the time it took for this hit to occur
      * @param attackTime the time it takes for the whole attack to complete
      */
-    public void onHitTimeNotDual(L2Weapon weapon, Attack attack, int hitTime, int attackTime) {
+    public void onHitTimeNotDual(Weapon weapon, Attack attack, int hitTime, int attackTime) {
         if (_isDead) {
             getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
             return;
@@ -3102,7 +3102,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         _hitTask = ThreadPoolManager.schedule(() -> onAttackFinish(attack), attackTime - hitTime);
     }
 
-    public void onFirstHitTimeForDual(L2Weapon weapon, Attack attack, int hitTime, int attackTime, int delayForSecondAttack) {
+    public void onFirstHitTimeForDual(Weapon weapon, Attack attack, int hitTime, int attackTime, int delayForSecondAttack) {
         if (_isDead) {
             getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
             return;
@@ -3126,7 +3126,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
     }
 
-    public void onSecondHitTimeForDual(L2Weapon weapon, Attack attack, int hitTime1, int hitTime2, int attackTime) {
+    public void onSecondHitTimeForDual(Weapon weapon, Attack attack, int hitTime1, int hitTime2, int attackTime) {
         if (_isDead) {
             getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
             return;
@@ -3150,7 +3150,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         _hitTask = ThreadPoolManager.schedule(() -> onAttackFinish(attack), attackTime - (hitTime1 + hitTime2));
     }
 
-    public void onHitTarget(Creature target, L2Weapon weapon, Hit hit) {
+    public void onHitTarget(Creature target, Weapon weapon, Hit hit) {
         // reduce targets HP
         doAttack(hit.getDamage(), target, null, false, false, hit.isCritical(), false);
 
@@ -4113,7 +4113,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return {@link WeaponType} of current character's weapon or basic weapon type.
      */
     public final WeaponType getAttackType() {
-        final L2Weapon weapon = getActiveWeaponItem();
+        final Weapon weapon = getActiveWeaponItem();
         if (weapon != null) {
             return weapon.getItemType();
         }

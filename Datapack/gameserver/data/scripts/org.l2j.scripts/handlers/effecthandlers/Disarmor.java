@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -45,8 +45,8 @@ public final class Disarmor extends AbstractEffect
 		_unequippedItems = new ConcurrentHashMap<>();
 		
 		final String slot = params.getString("slot", "chest");
-		_slot = ItemTable.SLOTS.getOrDefault(slot, (long) L2Item.SLOT_NONE);
-		if (_slot == L2Item.SLOT_NONE)
+		_slot = ItemTable.SLOTS.getOrDefault(slot, (long) ItemTemplate.SLOT_NONE);
+		if (_slot == ItemTemplate.SLOT_NONE)
 		{
 			LOGGER.error("Unknown bodypart slot for effect: " + slot);
 		}
@@ -55,7 +55,7 @@ public final class Disarmor extends AbstractEffect
 	@Override
 	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
-		return (_slot != L2Item.SLOT_NONE) && effected.isPlayer();
+		return (_slot != ItemTemplate.SLOT_NONE) && effected.isPlayer();
 	}
 	
 	@Override

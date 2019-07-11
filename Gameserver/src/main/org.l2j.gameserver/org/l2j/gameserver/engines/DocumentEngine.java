@@ -3,7 +3,7 @@ package org.l2j.gameserver.engines;
 import org.l2j.commons.util.filter.XMLFilter;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engines.items.DocumentItem;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,10 +42,10 @@ public class DocumentEngine {
     /**
      * Return created items
      *
-     * @return List of {@link L2Item}
+     * @return List of {@link ItemTemplate}
      */
-    public List<L2Item> loadItems() {
-        final List<L2Item> list = new LinkedList<>();
+    public List<ItemTemplate> loadItems() {
+        final List<ItemTemplate> list = new LinkedList<>();
         for (File f : _itemFiles) {
             final DocumentItem document = new DocumentItem(f);
             document.parse();

@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.transform.TransformType;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 
 import java.util.Optional;
@@ -63,7 +63,7 @@ public interface IStatsFunction {
     static double calcEnchantedPAtkBonus(Item item, double blessedBonus, int enchant) {
         switch (item.getItem().getCrystalType()) {
             case S: {
-                if (item.getWeaponItem().getBodyPart() == L2Item.SLOT_LR_HAND) {
+                if (item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND) {
                     if (item.getWeaponItem().getItemType().isRanged()) {
                         // P. Atk. increases by 10 for bows.
                         // Starting at +4, P. Atk. bonus double.
@@ -78,7 +78,7 @@ public interface IStatsFunction {
                 return (5 * enchant) + (10 * Math.max(0, enchant - 3));
             }
             case A: {
-                if (item.getWeaponItem().getBodyPart() == L2Item.SLOT_LR_HAND) {
+                if (item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND) {
                     if (item.getWeaponItem().getItemType().isRanged()) {
                         // P. Atk. increases by 8 for bows.
                         // Starting at +4, P. Atk. bonus double.
@@ -94,7 +94,7 @@ public interface IStatsFunction {
             }
             case B:
             case C: {
-                if (item.getWeaponItem().getBodyPart() == L2Item.SLOT_LR_HAND) {
+                if (item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND) {
                     if (item.getWeaponItem().getItemType().isRanged()) {
                         // P. Atk. increases by 6 for bows.
                         // Starting at +4, P. Atk. bonus double.
@@ -182,11 +182,11 @@ public interface IStatsFunction {
 
         double value = 0;
         for (Item equippedItem : creature.getInventory().getPaperdollItems(Item::isEquipped, Item::isEnchanted)) {
-            final L2Item item = equippedItem.getItem();
+            final ItemTemplate item = equippedItem.getItem();
             final long bodypart = item.getBodyPart();
-            if ((bodypart == L2Item.SLOT_HAIR) || //
-                    (bodypart == L2Item.SLOT_HAIR2) || //
-                    (bodypart == L2Item.SLOT_HAIRALL)) {
+            if ((bodypart == ItemTemplate.SLOT_HAIR) || //
+                    (bodypart == ItemTemplate.SLOT_HAIR2) || //
+                    (bodypart == ItemTemplate.SLOT_HAIRALL)) {
                 // TODO: Item after enchant shows pDef, but scroll says mDef increase.
                 if ((stat != Stats.PHYSICAL_DEFENCE) && (stat != Stats.MAGICAL_DEFENCE)) {
                     continue;

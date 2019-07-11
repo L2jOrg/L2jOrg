@@ -75,9 +75,9 @@ public final class Item extends WorldObject {
     private final int _itemId;
 
     /**
-     * Object L2Item associated to the item
+     * Object ItemTemplate associated to the item
      */
-    private final L2Item _item;
+    private final ItemTemplate _item;
     private final ReentrantLock _dbLock = new ReentrantLock();
     private final DropProtection _dropProtection = new DropProtection();
     private final List<Options> _enchantOptions = new ArrayList<>();
@@ -173,12 +173,12 @@ public final class Item extends WorldObject {
     }
 
     /**
-     * Constructor of the Item from the objetId and the description of the item given by the L2Item.
+     * Constructor of the Item from the objetId and the description of the item given by the ItemTemplate.
      *
      * @param objectId : int designating the ID of the object in the world
-     * @param item     : L2Item containing informations of the item
+     * @param item     : ItemTemplate containing informations of the item
      */
-    public Item(int objectId, L2Item item) {
+    public Item(int objectId, ItemTemplate item) {
         super(objectId);
         setInstanceType(InstanceType.L2ItemInstance);
         _itemId = item.getId();
@@ -496,7 +496,7 @@ public final class Item extends WorldObject {
      * @return boolean
      */
     public boolean isEquipable() {
-        return _item.getBodyPart() != L2Item.SLOT_NONE;
+        return _item.getBodyPart() != ItemTemplate.SLOT_NONE;
     }
 
     /**
@@ -520,9 +520,9 @@ public final class Item extends WorldObject {
     /**
      * Returns the characteristics of the item
      *
-     * @return L2Item
+     * @return ItemTemplate
      */
-    public L2Item getItem() {
+    public ItemTemplate getItem() {
         return _item;
     }
 
@@ -578,49 +578,49 @@ public final class Item extends WorldObject {
      * @return {@code true} if item is an EtcItem, {@code false} otherwise.
      */
     public boolean isEtcItem() {
-        return (_item instanceof L2EtcItem);
+        return (_item instanceof EtcItem);
     }
 
     /**
      * @return {@code true} if item is a Weapon/Shield, {@code false} otherwise.
      */
     public boolean isWeapon() {
-        return (_item instanceof L2Weapon);
+        return (_item instanceof Weapon);
     }
 
     /**
      * @return {@code true} if item is an Armor, {@code false} otherwise.
      */
     public boolean isArmor() {
-        return (_item instanceof L2Armor);
+        return (_item instanceof Armor);
     }
 
     /**
-     * @return the characteristics of the L2EtcItem, {@code false} otherwise.
+     * @return the characteristics of the EtcItem, {@code false} otherwise.
      */
-    public L2EtcItem getEtcItem() {
-        if (_item instanceof L2EtcItem) {
-            return (L2EtcItem) _item;
+    public EtcItem getEtcItem() {
+        if (_item instanceof EtcItem) {
+            return (EtcItem) _item;
         }
         return null;
     }
 
     /**
-     * @return the characteristics of the L2Weapon.
+     * @return the characteristics of the Weapon.
      */
-    public L2Weapon getWeaponItem() {
-        if (_item instanceof L2Weapon) {
-            return (L2Weapon) _item;
+    public Weapon getWeaponItem() {
+        if (_item instanceof Weapon) {
+            return (Weapon) _item;
         }
         return null;
     }
 
     /**
-     * @return the characteristics of the L2Armor.
+     * @return the characteristics of the Armor.
      */
-    public L2Armor getArmorItem() {
-        if (_item instanceof L2Armor) {
-            return (L2Armor) _item;
+    public Armor getArmorItem() {
+        if (_item instanceof Armor) {
+            return (Armor) _item;
         }
         return null;
     }
@@ -783,8 +783,8 @@ public final class Item extends WorldObject {
         final Summon pet = player.getPet();
 
         return ((!isEquipped()) // Not equipped
-                && (_item.getType2() != L2Item.TYPE2_QUEST) // Not Quest Item
-                && ((_item.getType2() != L2Item.TYPE2_MONEY) || (_item.getType1() != L2Item.TYPE1_SHIELD_ARMOR)) // not money, not shield
+                && (_item.getType2() != ItemTemplate.TYPE2_QUEST) // Not Quest Item
+                && ((_item.getType2() != ItemTemplate.TYPE2_MONEY) || (_item.getType1() != ItemTemplate.TYPE1_SHIELD_ARMOR)) // not money, not shield
                 && ((pet == null) || (getObjectId() != pet.getControlObjectId())) // Not Control item of currently summoned pet
                 && !(player.isProcessingItem(getObjectId())) // Not momentarily used enchant scroll
                 && (allowAdena || (_itemId != CommonItem.ADENA)) // Not Adena

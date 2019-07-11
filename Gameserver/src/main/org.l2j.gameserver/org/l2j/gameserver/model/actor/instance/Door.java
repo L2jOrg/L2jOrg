@@ -20,7 +20,7 @@ import org.l2j.gameserver.model.actor.templates.DoorTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -268,7 +268,7 @@ public final class Door extends Creature {
     }
 
     @Override
-    public L2Weapon getActiveWeaponItem() {
+    public Weapon getActiveWeaponItem() {
         return null;
     }
 
@@ -278,7 +278,7 @@ public final class Door extends Creature {
     }
 
     @Override
-    public L2Weapon getSecondaryWeaponItem() {
+    public Weapon getSecondaryWeaponItem() {
         return null;
     }
 

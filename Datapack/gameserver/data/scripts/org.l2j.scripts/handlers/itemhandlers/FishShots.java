@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ActionType;
 import org.l2j.gameserver.model.items.type.WeaponType;
@@ -49,7 +49,7 @@ public class FishShots implements IItemHandler
 		
 		final Player activeChar = playable.getActingPlayer();
 		final Item weaponInst = activeChar.getActiveWeaponInstance();
-		final L2Weapon weaponItem = activeChar.getActiveWeaponItem();
+		final Weapon weaponItem = activeChar.getActiveWeaponItem();
 		
 		if ((weaponInst == null) || (weaponItem.getItemType() != WeaponType.FISHINGROD))
 		{

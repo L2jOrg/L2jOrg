@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.commission.CommissionItem;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.Mail;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.commission.*;
@@ -121,7 +121,7 @@ public final class CommissionManager {
      * @param player the player
      * @param filter the filter
      */
-    public void showAuctions(Player player, Predicate<L2Item> filter) {
+    public void showAuctions(Player player, Predicate<ItemTemplate> filter) {
         //@formatter:off
         final List<CommissionItem> commissionItems = _commissionItems.values().stream()
                 .filter(c -> filter.test(c.getItemInfo().getItem()))

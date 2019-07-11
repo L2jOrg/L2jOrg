@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.conditions.ConditionUsingItemType;
 import org.l2j.gameserver.model.conditions.ConditionUsingSlotType;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
@@ -34,7 +34,7 @@ import org.l2j.gameserver.model.stats.Stats;
 public class TwoHandedSwordBonus extends AbstractEffect
 {
 	private static final Condition _weaponTypeCondition = new ConditionUsingItemType(WeaponType.SWORD.mask());
-	private static final Condition _slotCondition = new ConditionUsingSlotType(L2Item.SLOT_LR_HAND);
+	private static final Condition _slotCondition = new ConditionUsingSlotType(ItemTemplate.SLOT_LR_HAND);
 	
 	private final double _pAtkAmount;
 	private final StatModifierType _pAtkmode;

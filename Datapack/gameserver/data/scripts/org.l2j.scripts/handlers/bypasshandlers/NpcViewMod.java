@@ -31,7 +31,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.DropHolder;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.HtmlUtil;
@@ -413,7 +413,7 @@ public class NpcViewMod implements IBypassHandler
 			
 			int height = 64;
 			final DropHolder dropItem = dropList.get(i);
-			final L2Item item = ItemTable.getInstance().getTemplate(dropItem.getItemId());
+			final ItemTemplate item = ItemTable.getInstance().getTemplate(dropItem.getItemId());
 			
 			// real time server rate calculations
 			double rateChance = 1;

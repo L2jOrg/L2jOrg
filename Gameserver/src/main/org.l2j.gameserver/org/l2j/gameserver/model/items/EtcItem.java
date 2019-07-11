@@ -18,7 +18,6 @@ package org.l2j.gameserver.model.items;
 
 import org.l2j.gameserver.model.L2ExtractableProduct;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.type.EtcItemType;
 
 import java.util.ArrayList;
@@ -27,7 +26,7 @@ import java.util.List;
 /**
  * This class is dedicated to the management of EtcItem.
  */
-public final class L2EtcItem extends L2Item {
+public final class EtcItem extends ItemTemplate {
     private String _handler;
     private EtcItemType _type;
     private List<L2ExtractableProduct> _extractableItems;
@@ -40,7 +39,7 @@ public final class L2EtcItem extends L2Item {
      *
      * @param set StatsSet designating the set of couples (key,value) for description of the Etc
      */
-    public L2EtcItem(StatsSet set) {
+    public EtcItem(StatsSet set) {
         super(set);
     }
 
@@ -48,14 +47,14 @@ public final class L2EtcItem extends L2Item {
     public void set(StatsSet set) {
         super.set(set);
         _type = set.getEnum("etcitem_type", EtcItemType.class, EtcItemType.NONE);
-        _type1 = L2Item.TYPE1_ITEM_QUESTITEM_ADENA;
+        _type1 = ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA;
 
         if (isQuestItem()) {
-            _type2 = L2Item.TYPE2_QUEST;
+            _type2 = ItemTemplate.TYPE2_QUEST;
         } else {
             _type2 = switch (getId()) {
-                case CommonItem.ADENA, CommonItem.ANCIENT_ADENA, CommonItem.RUSTY_COIN, CommonItem.SILVER_COIN -> L2Item.TYPE2_MONEY;
-                default -> L2Item.TYPE2_OTHER;
+                case CommonItem.ADENA, CommonItem.ANCIENT_ADENA, CommonItem.RUSTY_COIN, CommonItem.SILVER_COIN -> ItemTemplate.TYPE2_MONEY;
+                default -> ItemTemplate.TYPE2_OTHER;
             };
         }
 

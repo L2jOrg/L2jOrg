@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
 
@@ -58,7 +58,7 @@ public class PAccuracyFinalizer implements IStatsFunction {
 
         if (creature.isPlayer()) {
             // Enchanted gloves bonus
-            baseValue += calcEnchantBodyPart(creature, L2Item.SLOT_GLOVES);
+            baseValue += calcEnchantBodyPart(creature, ItemTemplate.SLOT_GLOVES);
         }
 
         // Shadow sense

@@ -22,7 +22,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ArmorType;
 import org.l2j.gameserver.model.skills.ISkillCondition;
@@ -75,7 +75,7 @@ public class EquipArmorSkillCondition implements ISkillCondition
 		
 		final long chestBodyPart = chest.getItem().getBodyPart();
 		// return True if chest armor is a Full Armor
-		if (chestBodyPart == L2Item.SLOT_FULL_ARMOR)
+		if (chestBodyPart == ItemTemplate.SLOT_FULL_ARMOR)
 		{
 			return true;
 		}

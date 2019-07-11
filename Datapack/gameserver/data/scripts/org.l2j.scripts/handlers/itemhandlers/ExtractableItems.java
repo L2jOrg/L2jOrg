@@ -28,7 +28,7 @@ import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.L2ExtractableProduct;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.L2EtcItem;
+import org.l2j.gameserver.model.items.EtcItem;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -50,7 +50,7 @@ public class ExtractableItems implements IItemHandler
 		}
 		
 		final Player activeChar = playable.getActingPlayer();
-		final L2EtcItem etcitem = (L2EtcItem) item.getItem();
+		final EtcItem etcitem = (EtcItem) item.getItem();
 		final List<L2ExtractableProduct> exitems = etcitem.getExtractableItems();
 		if (exitems == null)
 		{

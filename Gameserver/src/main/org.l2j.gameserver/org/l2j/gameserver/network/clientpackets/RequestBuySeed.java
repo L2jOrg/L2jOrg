@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -104,7 +104,7 @@ public class RequestBuySeed extends ClientPacket {
             }
 
             // Calculate weight
-            final L2Item template = ItemTable.getInstance().getTemplate(ih.getId());
+            final ItemTemplate template = ItemTable.getInstance().getTemplate(ih.getId());
             totalWeight += ih.getCount() * template.getWeight();
 
             // Calculate slots

@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcTeleportRequest;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.slf4j.Logger;
@@ -279,7 +279,7 @@ public final class TeleportHolder {
                 return "<fstring>1000309</fstring>";
             }
         }
-        final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+        final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
         if (item != null) {
             return item.getName();
         }

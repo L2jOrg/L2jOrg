@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 
 /**
@@ -37,7 +37,7 @@ public class ConditionTargetNpcType extends Condition {
     }
 
     @Override
-    public boolean testImpl(Creature effector, Creature effected, Skill skill, L2Item item) {
+    public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
         if (effected == null) {
             return false;
         }

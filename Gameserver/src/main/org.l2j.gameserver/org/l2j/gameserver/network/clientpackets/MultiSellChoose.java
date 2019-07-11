@@ -17,7 +17,7 @@ import org.l2j.gameserver.model.holders.MultisellEntryHolder;
 import org.l2j.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -184,7 +184,7 @@ public class MultiSellChoose extends ClientPacket {
                     continue;
                 }
 
-                final L2Item template = ItemTable.getInstance().getTemplate(product.getId());
+                final ItemTemplate template = ItemTable.getInstance().getTemplate(product.getId());
                 if (template == null) {
                     player.setMultiSell(null);
                     return;

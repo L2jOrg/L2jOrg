@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
@@ -20,7 +20,7 @@ public class MCritRateFinalizer implements IStatsFunction {
         double baseValue = calcWeaponPlusBaseValue(creature, stat);
         if (creature.isPlayer()) {
             // Enchanted legs bonus
-            baseValue += calcEnchantBodyPart(creature, L2Item.SLOT_LEGS);
+            baseValue += calcEnchantBodyPart(creature, ItemTemplate.SLOT_LEGS);
         }
 
         final double witBonus = creature.getWIT() > 0 ? BaseStats.WIT.calcBonus(creature) : 1.;

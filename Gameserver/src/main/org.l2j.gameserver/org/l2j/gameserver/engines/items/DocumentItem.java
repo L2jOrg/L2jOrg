@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.L2ExtractableProduct;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.model.stats.functions.FuncTemplate;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -29,7 +29,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * @author mkizub, JIV
  */
 public final class DocumentItem extends DocumentBase {
-    private final List<L2Item> _itemsInFile = new LinkedList<>();
+    private final List<ItemTemplate> _itemsInFile = new LinkedList<>();
     Logger LOGGER = LoggerFactory.getLogger(DocumentItem.class.getName());
     private Item _currentItem = null;
 
@@ -163,14 +163,14 @@ public final class DocumentItem extends DocumentBase {
         }
 
         try {
-            final Constructor<?> itemClass = Class.forName("org.l2j.gameserver.model.items.L2" + _currentItem.type).getConstructor(StatsSet.class);
-            _currentItem.item = (L2Item) itemClass.newInstance(_currentItem.set);
+            final Constructor<?> itemClass = Class.forName("org.l2j.gameserver.model.items." + _currentItem.type).getConstructor(StatsSet.class);
+            _currentItem.item = (ItemTemplate) itemClass.newInstance(_currentItem.set);
         } catch (Exception e) {
             throw new InvocationTargetException(e);
         }
     }
 
-    public List<L2Item> getItemList() {
+    public List<ItemTemplate> getItemList() {
         return _itemsInFile;
     }
 

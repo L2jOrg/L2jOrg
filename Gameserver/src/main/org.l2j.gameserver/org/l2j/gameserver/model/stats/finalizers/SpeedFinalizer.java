@@ -22,7 +22,7 @@ import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2PetLevelData;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
@@ -42,7 +42,7 @@ public class SpeedFinalizer implements IStatsFunction {
         double baseValue = getBaseSpeed(creature, stat);
         if (creature.isPlayer()) {
             // Enchanted feet bonus
-            baseValue += calcEnchantBodyPart(creature, L2Item.SLOT_FEET);
+            baseValue += calcEnchantBodyPart(creature, ItemTemplate.SLOT_FEET);
         }
 
         final byte speedStat = (byte) creature.getStat().getAdd(Stats.STAT_BONUS_SPEED, -1);

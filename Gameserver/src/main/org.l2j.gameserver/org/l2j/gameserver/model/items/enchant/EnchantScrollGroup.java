@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.items.enchant;
 
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -63,7 +63,7 @@ public final class EnchantScrollGroup {
      * @param item
      * @return {@link EnchantRateItem}, {@code NULL} in case non of rate items can be used with.
      */
-    public EnchantRateItem getRateGroup(L2Item item) {
+    public EnchantRateItem getRateGroup(ItemTemplate item) {
         for (EnchantRateItem group : getRateGroups()) {
             if (group.validate(item)) {
                 return group;

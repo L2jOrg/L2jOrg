@@ -21,7 +21,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -59,7 +59,7 @@ public final class ConvertItem extends AbstractEffect
 			return;
 		}
 		
-		final L2Weapon weaponItem = player.getActiveWeaponItem();
+		final Weapon weaponItem = player.getActiveWeaponItem();
 		if (weaponItem == null)
 		{
 			return;
@@ -99,7 +99,7 @@ public final class ConvertItem extends AbstractEffect
 		byte count = 0;
 		for (Item unequippedItem : unequiped)
 		{
-			if (!(unequippedItem.getItem() instanceof L2Weapon))
+			if (!(unequippedItem.getItem() instanceof Weapon))
 			{
 				count++;
 				continue;

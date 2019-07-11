@@ -9,7 +9,7 @@ import org.l2j.gameserver.enums.StatusUpdateType;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
@@ -515,7 +515,7 @@ public class RecipeController {
             final int rareProdId = _recipeList.getRareItemId();
             int itemId = _recipeList.getItemId();
             int itemCount = _recipeList.getCount();
-            final L2Item template = ItemTable.getInstance().getTemplate(itemId);
+            final ItemTemplate template = ItemTable.getInstance().getTemplate(itemId);
 
             // check that the current recipe has a rare production or not
             if ((rareProdId != -1) && ((rareProdId == itemId) || Config.CRAFT_MASTERWORK)) {

@@ -22,7 +22,7 @@ import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
@@ -168,7 +168,7 @@ public final class Q00212_TrialOfDuty extends Quest
 			{
 				if (qs.isMemoState(2))
 				{
-					final L2Weapon weapon = killer.getActiveWeaponItem();
+					final Weapon weapon = killer.getActiveWeaponItem();
 					
 					if ((weapon != null) && (weapon.getId() == OLD_KNIGHTS_SWORD))
 					{

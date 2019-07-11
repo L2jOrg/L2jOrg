@@ -2,7 +2,7 @@ package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.ItemTable;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 
 public final class L2Seed {
     private final int _seedId;
@@ -30,7 +30,7 @@ public final class L2Seed {
         _limitCrops = set.getInt("limit_crops");
         _limitSeeds = set.getInt("limit_seed");
         // Set prices
-        L2Item item = ItemTable.getInstance().getTemplate(_cropId);
+        ItemTemplate item = ItemTable.getInstance().getTemplate(_cropId);
         _cropReferencePrice = (item != null) ? item.getReferencePrice() : 1;
         item = ItemTable.getInstance().getTemplate(_seedId);
         _seedReferencePrice = (item != null) ? item.getReferencePrice() : 1;

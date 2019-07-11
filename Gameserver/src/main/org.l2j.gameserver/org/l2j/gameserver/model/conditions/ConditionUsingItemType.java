@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ArmorType;
 import org.l2j.gameserver.model.skills.Skill;
@@ -43,7 +43,7 @@ public final class ConditionUsingItemType extends Condition {
     }
 
     @Override
-    public boolean testImpl(Creature effector, Creature effected, Skill skill, L2Item item) {
+    public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
         if ((effector == null) || !effector.isPlayer()) {
             return false;
         }
@@ -67,7 +67,7 @@ public final class ConditionUsingItemType extends Condition {
 
             final long chestBodyPart = chest.getItem().getBodyPart();
             // return True if chest armor is a Full Armor
-            if (chestBodyPart == L2Item.SLOT_FULL_ARMOR) {
+            if (chestBodyPart == ItemTemplate.SLOT_FULL_ARMOR) {
                 return true;
             }
             // check legs armor

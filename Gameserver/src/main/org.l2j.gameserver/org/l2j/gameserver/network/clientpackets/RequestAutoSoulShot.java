@@ -4,7 +4,7 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ActionType;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -19,7 +19,7 @@ public final class RequestAutoSoulShot extends ClientPacket {
     private boolean _enable;
     private int _type;
 
-    public static boolean isPlayerShot(L2Item item) {
+    public static boolean isPlayerShot(ItemTemplate item) {
         switch (item.getDefaultAction()) {
             case SPIRITSHOT:
             case SOULSHOT:
@@ -32,7 +32,7 @@ public final class RequestAutoSoulShot extends ClientPacket {
         }
     }
 
-    public static boolean isSummonShot(L2Item item) {
+    public static boolean isSummonShot(ItemTemplate item) {
         switch (item.getDefaultAction()) {
             case SUMMON_SPIRITSHOT:
             case SUMMON_SOULSHOT: {

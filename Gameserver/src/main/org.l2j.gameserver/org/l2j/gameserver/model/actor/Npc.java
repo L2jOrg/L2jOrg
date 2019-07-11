@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.events.impl.character.npc.*;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.skills.Skill;
@@ -533,7 +533,7 @@ public class Npc extends Creature {
      * Return the weapon item equipped in the right hand of the Folk or null.
      */
     @Override
-    public L2Weapon getActiveWeaponItem() {
+    public Weapon getActiveWeaponItem() {
         return null;
     }
 
@@ -549,7 +549,7 @@ public class Npc extends Creature {
      * Return the weapon item equipped in the left hand of the Folk or null.
      */
     @Override
-    public L2Weapon getSecondaryWeaponItem() {
+    public Weapon getSecondaryWeaponItem() {
         return null;
     }
 
@@ -774,7 +774,7 @@ public class Npc extends Creature {
         _currentCollisionHeight = getTemplate().getfCollisionHeight();
         _currentCollisionRadius = getTemplate().getfCollisionRadius();
 
-        final L2Weapon weapon = (killer != null) ? killer.getActiveWeaponItem() : null;
+        final Weapon weapon = (killer != null) ? killer.getActiveWeaponItem() : null;
         _killingBlowWeaponId = (weapon != null) ? weapon.getId() : 0;
 
         DecayTaskManager.getInstance().add(this);

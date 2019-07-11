@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayableExpChanged;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -188,13 +188,13 @@ public class PlayableStat extends CharStat {
 
     @Override
     public int getPhysicalAttackRadius() {
-        final L2Weapon weapon = getActiveChar().getActiveWeaponItem();
+        final Weapon weapon = getActiveChar().getActiveWeaponItem();
         return weapon != null ? weapon.getBaseAttackRadius() : super.getPhysicalAttackRadius();
     }
 
     @Override
     public int getPhysicalAttackAngle() {
-        final L2Weapon weapon = getActiveChar().getActiveWeaponItem();
+        final Weapon weapon = getActiveChar().getActiveWeaponItem();
         return weapon != null ? weapon.getBaseAttackAngle() : super.getPhysicalAttackAngle();
     }
 }

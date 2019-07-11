@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.items.enchant;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.model.items.type.EtcItemType;
@@ -70,9 +70,9 @@ public abstract class AbstractEnchantItem {
     }
 
     /**
-     * @return {@link L2Item} current item/scroll
+     * @return {@link ItemTemplate} current item/scroll
      */
-    public final L2Item getItem() {
+    public final ItemTemplate getItem() {
         return ItemTable.getInstance().getTemplate(_id);
     }
 
@@ -120,9 +120,9 @@ public abstract class AbstractEnchantItem {
      * @return {@code true} if current type2 is valid to be enchanted, {@code false} otherwise
      */
     private boolean isValidItemType(int type2) {
-        if (type2 == L2Item.TYPE2_WEAPON) {
+        if (type2 == ItemTemplate.TYPE2_WEAPON) {
             return isWeapon();
-        } else if ((type2 == L2Item.TYPE2_SHIELD_ARMOR) || (type2 == L2Item.TYPE2_ACCESSORY)) {
+        } else if ((type2 == ItemTemplate.TYPE2_SHIELD_ARMOR) || (type2 == ItemTemplate.TYPE2_ACCESSORY)) {
             return !isWeapon();
         }
         return false;

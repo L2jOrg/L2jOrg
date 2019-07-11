@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -165,12 +165,12 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
         return addItemName(item.getId());
     }
 
-    public T addItemName(L2Item item) {
+    public T addItemName(ItemTemplate item) {
         return addItemName(item.getId());
     }
 
     public final T addItemName(int id) {
-        final L2Item item = ItemTable.getInstance().getTemplate(id);
+        final ItemTemplate item = ItemTable.getInstance().getTemplate(id);
         if (item.getDisplayId() != id) {
             return addString(item.getName());
         }

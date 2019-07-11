@@ -6,8 +6,8 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemAttributeRequest;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
-import org.l2j.gameserver.model.items.L2Armor;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.Armor;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.options.VariationFee;
 import org.l2j.gameserver.model.skills.AbnormalType;
@@ -130,7 +130,7 @@ public abstract class AbstractRefinePacket extends ClientPacket {
             }
         }
 
-        if (!(item.getItem() instanceof L2Weapon) && !(item.getItem() instanceof L2Armor)) {
+        if (!(item.getItem() instanceof Weapon) && !(item.getItem() instanceof Armor)) {
             return false; // neither weapon nor armor ?
         }
 

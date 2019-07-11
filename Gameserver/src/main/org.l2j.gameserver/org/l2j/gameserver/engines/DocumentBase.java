@@ -8,7 +8,7 @@ import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.base.PlayerState;
 import org.l2j.gameserver.model.conditions.*;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.type.ArmorType;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.skills.AbnormalType;
@@ -129,8 +129,8 @@ public abstract class DocumentBase extends GameXmlReader {
 
         final Condition applayCond = parseCondition(n.getFirstChild(), template);
         final FuncTemplate ft = new FuncTemplate(attachCond, applayCond, functionName, order, stat, value);
-        if (template instanceof L2Item) {
-            ((L2Item) template).addFunctionTemplate(ft);
+        if (template instanceof ItemTemplate) {
+            ((ItemTemplate) template).addFunctionTemplate(ft);
         } else {
             throw new RuntimeException("Attaching stat to a non-effect template [" + template + "]!!!");
         }

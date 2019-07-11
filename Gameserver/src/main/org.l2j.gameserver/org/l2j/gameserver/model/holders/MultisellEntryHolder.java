@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.holders;
 
 import org.l2j.gameserver.datatables.ItemTable;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 
 import java.util.Collections;
 import java.util.List;
@@ -34,7 +34,7 @@ public class MultisellEntryHolder {
     public MultisellEntryHolder(List<ItemChanceHolder> ingredients, List<ItemChanceHolder> products) {
         _ingredients = Collections.unmodifiableList(ingredients);
         _products = Collections.unmodifiableList(products);
-        _stackable = products.stream().map(i -> ItemTable.getInstance().getTemplate(i.getId())).filter(Objects::nonNull).allMatch(L2Item::isStackable);
+        _stackable = products.stream().map(i -> ItemTable.getInstance().getTemplate(i.getId())).filter(Objects::nonNull).allMatch(ItemTemplate::isStackable);
     }
 
     public final List<ItemChanceHolder> getIngredients() {

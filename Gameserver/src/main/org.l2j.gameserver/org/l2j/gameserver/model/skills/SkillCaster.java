@@ -25,8 +25,8 @@ import org.l2j.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.holders.SkillUseHolder;
-import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ActionType;
 import org.l2j.gameserver.model.options.OptionsSkillHolder;
@@ -175,7 +175,7 @@ public class SkillCaster implements Runnable {
 
                 // Static skills not trigger any chance skills
                 if (!skill.isStatic()) {
-                    final L2Weapon activeWeapon = caster.getActiveWeaponItem();
+                    final Weapon activeWeapon = caster.getActiveWeaponItem();
                     // Launch weapon Special ability skill effect if available
                     if ((activeWeapon != null) && !creature.isDead()) {
                         activeWeapon.applyConditionalSkills(caster, creature, skill, ItemSkillType.ON_MAGIC_SKILL);
@@ -375,7 +375,7 @@ public class SkillCaster implements Runnable {
         }
 
         // Check if the caster's weapon is limited to use only its own skills
-        final L2Weapon weapon = caster.getActiveWeaponItem();
+        final Weapon weapon = caster.getActiveWeaponItem();
         if ((weapon != null) && weapon.useWeaponSkillsOnly() && !caster.canOverrideCond(PcCondOverride.SKILL_CONDITIONS)) {
             final List<ItemSkillHolder> weaponSkills = weapon.getSkills(ItemSkillType.NORMAL);
             if ((weaponSkills != null) && !weaponSkills.stream().anyMatch(sh -> sh.getSkillId() == skill.getId())) {
@@ -525,7 +525,7 @@ public class SkillCaster implements Runnable {
         }
 
         // Reduce talisman mana on skill use
-        if ((_skill.getReferenceItemId() > 0) && (ItemTable.getInstance().getTemplate(_skill.getReferenceItemId()).getBodyPart() == L2Item.SLOT_TALISMAN)) {
+        if ((_skill.getReferenceItemId() > 0) && (ItemTable.getInstance().getTemplate(_skill.getReferenceItemId()).getBodyPart() == ItemTemplate.SLOT_TALISMAN)) {
             final Item talisman = caster.getInventory().getItems(i -> i.getId() == _skill.getReferenceItemId(), Item::isEquipped).stream().findAny().orElse(null);
             if (talisman != null) {
                 talisman.decreaseMana(false, talisman.useSkillDisTime());

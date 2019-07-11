@@ -37,52 +37,52 @@ public class ItemTable {
     public static final Map<String, Long> SLOTS = new HashMap<>();
 
     static {
-        SLOTS.put("shirt", (long) L2Item.SLOT_UNDERWEAR);
-        SLOTS.put("lbracelet", (long) L2Item.SLOT_L_BRACELET);
-        SLOTS.put("rbracelet", (long) L2Item.SLOT_R_BRACELET);
-        SLOTS.put("talisman", (long) L2Item.SLOT_TALISMAN);
-        SLOTS.put("chest", (long) L2Item.SLOT_CHEST);
-        SLOTS.put("fullarmor", (long) L2Item.SLOT_FULL_ARMOR);
-        SLOTS.put("head", (long) L2Item.SLOT_HEAD);
-        SLOTS.put("hair", (long) L2Item.SLOT_HAIR);
-        SLOTS.put("hairall", (long) L2Item.SLOT_HAIRALL);
-        SLOTS.put("underwear", (long) L2Item.SLOT_UNDERWEAR);
-        SLOTS.put("back", (long) L2Item.SLOT_BACK);
-        SLOTS.put("neck", (long) L2Item.SLOT_NECK);
-        SLOTS.put("legs", (long) L2Item.SLOT_LEGS);
-        SLOTS.put("feet", (long) L2Item.SLOT_FEET);
-        SLOTS.put("gloves", (long) L2Item.SLOT_GLOVES);
-        SLOTS.put("chest,legs", (long) L2Item.SLOT_CHEST | L2Item.SLOT_LEGS);
-        SLOTS.put("belt", (long) L2Item.SLOT_BELT);
-        SLOTS.put("rhand", (long) L2Item.SLOT_R_HAND);
-        SLOTS.put("lhand", (long) L2Item.SLOT_L_HAND);
-        SLOTS.put("lrhand", (long) L2Item.SLOT_LR_HAND);
-        SLOTS.put("rear;lear", (long) L2Item.SLOT_R_EAR | L2Item.SLOT_L_EAR);
-        SLOTS.put("rfinger;lfinger", (long) L2Item.SLOT_R_FINGER | L2Item.SLOT_L_FINGER);
-        SLOTS.put("wolf", (long) L2Item.SLOT_WOLF);
-        SLOTS.put("greatwolf", (long) L2Item.SLOT_GREATWOLF);
-        SLOTS.put("hatchling", (long) L2Item.SLOT_HATCHLING);
-        SLOTS.put("strider", (long) L2Item.SLOT_STRIDER);
-        SLOTS.put("babypet", (long) L2Item.SLOT_BABYPET);
-        SLOTS.put("brooch", (long) L2Item.SLOT_BROOCH);
-        SLOTS.put("brooch_jewel", (long) L2Item.SLOT_BROOCH_JEWEL);
-        SLOTS.put("agathion", L2Item.SLOT_AGATHION);
-        SLOTS.put("artifactbook", L2Item.SLOT_ARTIFACT_BOOK);
-        SLOTS.put("artifact", L2Item.SLOT_ARTIFACT);
-        SLOTS.put("none", (long) L2Item.SLOT_NONE);
+        SLOTS.put("shirt", (long) ItemTemplate.SLOT_UNDERWEAR);
+        SLOTS.put("lbracelet", (long) ItemTemplate.SLOT_L_BRACELET);
+        SLOTS.put("rbracelet", (long) ItemTemplate.SLOT_R_BRACELET);
+        SLOTS.put("talisman", (long) ItemTemplate.SLOT_TALISMAN);
+        SLOTS.put("chest", (long) ItemTemplate.SLOT_CHEST);
+        SLOTS.put("fullarmor", (long) ItemTemplate.SLOT_FULL_ARMOR);
+        SLOTS.put("head", (long) ItemTemplate.SLOT_HEAD);
+        SLOTS.put("hair", (long) ItemTemplate.SLOT_HAIR);
+        SLOTS.put("hairall", (long) ItemTemplate.SLOT_HAIRALL);
+        SLOTS.put("underwear", (long) ItemTemplate.SLOT_UNDERWEAR);
+        SLOTS.put("back", (long) ItemTemplate.SLOT_BACK);
+        SLOTS.put("neck", (long) ItemTemplate.SLOT_NECK);
+        SLOTS.put("legs", (long) ItemTemplate.SLOT_LEGS);
+        SLOTS.put("feet", (long) ItemTemplate.SLOT_FEET);
+        SLOTS.put("gloves", (long) ItemTemplate.SLOT_GLOVES);
+        SLOTS.put("chest,legs", (long) ItemTemplate.SLOT_CHEST | ItemTemplate.SLOT_LEGS);
+        SLOTS.put("belt", (long) ItemTemplate.SLOT_BELT);
+        SLOTS.put("rhand", (long) ItemTemplate.SLOT_R_HAND);
+        SLOTS.put("lhand", (long) ItemTemplate.SLOT_L_HAND);
+        SLOTS.put("lrhand", (long) ItemTemplate.SLOT_LR_HAND);
+        SLOTS.put("rear;lear", (long) ItemTemplate.SLOT_R_EAR | ItemTemplate.SLOT_L_EAR);
+        SLOTS.put("rfinger;lfinger", (long) ItemTemplate.SLOT_R_FINGER | ItemTemplate.SLOT_L_FINGER);
+        SLOTS.put("wolf", (long) ItemTemplate.SLOT_WOLF);
+        SLOTS.put("greatwolf", (long) ItemTemplate.SLOT_GREATWOLF);
+        SLOTS.put("hatchling", (long) ItemTemplate.SLOT_HATCHLING);
+        SLOTS.put("strider", (long) ItemTemplate.SLOT_STRIDER);
+        SLOTS.put("babypet", (long) ItemTemplate.SLOT_BABYPET);
+        SLOTS.put("brooch", (long) ItemTemplate.SLOT_BROOCH);
+        SLOTS.put("brooch_jewel", (long) ItemTemplate.SLOT_BROOCH_JEWEL);
+        SLOTS.put("agathion", ItemTemplate.SLOT_AGATHION);
+        SLOTS.put("artifactbook", ItemTemplate.SLOT_ARTIFACT_BOOK);
+        SLOTS.put("artifact", ItemTemplate.SLOT_ARTIFACT);
+        SLOTS.put("none", (long) ItemTemplate.SLOT_NONE);
 
         // retail compatibility
-        SLOTS.put("onepiece", (long) L2Item.SLOT_FULL_ARMOR);
-        SLOTS.put("hair2", (long) L2Item.SLOT_HAIR2);
-        SLOTS.put("dhair", (long) L2Item.SLOT_HAIRALL);
-        SLOTS.put("alldress", (long) L2Item.SLOT_ALLDRESS);
-        SLOTS.put("waist", (long) L2Item.SLOT_BELT);
+        SLOTS.put("onepiece", (long) ItemTemplate.SLOT_FULL_ARMOR);
+        SLOTS.put("hair2", (long) ItemTemplate.SLOT_HAIR2);
+        SLOTS.put("dhair", (long) ItemTemplate.SLOT_HAIRALL);
+        SLOTS.put("alldress", (long) ItemTemplate.SLOT_ALLDRESS);
+        SLOTS.put("waist", (long) ItemTemplate.SLOT_BELT);
     }
 
-    private final Map<Integer, L2EtcItem> _etcItems = new HashMap<>();
-    private final Map<Integer, L2Armor> _armors = new HashMap<>();
-    private final Map<Integer, L2Weapon> _weapons = new HashMap<>();
-    private L2Item[] _allTemplates;
+    private final Map<Integer, EtcItem> _etcItems = new HashMap<>();
+    private final Map<Integer, Armor> _armors = new HashMap<>();
+    private final Map<Integer, Weapon> _weapons = new HashMap<>();
+    private ItemTemplate[] _allTemplates;
 
     private ItemTable() {
         load();
@@ -93,16 +93,16 @@ public class ItemTable {
         _armors.clear();
         _etcItems.clear();
         _weapons.clear();
-        for (L2Item item : DocumentEngine.getInstance().loadItems()) {
+        for (ItemTemplate item : DocumentEngine.getInstance().loadItems()) {
             if (highest < item.getId()) {
                 highest = item.getId();
             }
-            if (item instanceof L2EtcItem) {
-                _etcItems.put(item.getId(), (L2EtcItem) item);
-            } else if (item instanceof L2Armor) {
-                _armors.put(item.getId(), (L2Armor) item);
+            if (item instanceof EtcItem) {
+                _etcItems.put(item.getId(), (EtcItem) item);
+            } else if (item instanceof Armor) {
+                _armors.put(item.getId(), (Armor) item);
             } else {
-                _weapons.put(item.getId(), (L2Weapon) item);
+                _weapons.put(item.getId(), (Weapon) item);
             }
         }
         buildFastLookupTable(highest);
@@ -120,20 +120,20 @@ public class ItemTable {
     private void buildFastLookupTable(int size) {
         // Create a FastLookUp Table called _allTemplates of size : value of the highest item ID
         LOGGER.info("Highest item id used: {}", size);
-        _allTemplates = new L2Item[size + 1];
+        _allTemplates = new ItemTemplate[size + 1];
 
         // Insert armor item in Fast Look Up Table
-        for (L2Armor item : _armors.values()) {
+        for (Armor item : _armors.values()) {
             _allTemplates[item.getId()] = item;
         }
 
         // Insert weapon item in Fast Look Up Table
-        for (L2Weapon item : _weapons.values()) {
+        for (Weapon item : _weapons.values()) {
             _allTemplates[item.getId()] = item;
         }
 
         // Insert etcItem item in Fast Look Up Table
-        for (L2EtcItem item : _etcItems.values()) {
+        for (EtcItem item : _etcItems.values()) {
             _allTemplates[item.getId()] = item;
         }
     }
@@ -142,9 +142,9 @@ public class ItemTable {
      * Returns the item corresponding to the item ID
      *
      * @param id : int designating the item
-     * @return L2Item
+     * @return ItemTemplate
      */
-    public L2Item getTemplate(int id) {
+    public ItemTemplate getTemplate(int id) {
         if ((id >= _allTemplates.length) || (id < 0)) {
             return null;
         }
@@ -332,7 +332,7 @@ public class ItemTable {
         EnchantItemHPBonusData.getInstance().load();
     }
 
-    public L2Item[] getAllItems() {
+    public ItemTemplate[] getAllItems() {
         return _allTemplates;
     }
 

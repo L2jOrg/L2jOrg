@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.enums;
 
-import org.l2j.gameserver.model.items.L2Armor;
-import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.Armor;
+import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.items.Weapon;
 
 /**
  * @author Nik
@@ -29,23 +29,23 @@ public enum CrystallizationType {
     ARMOR,
     ACCESORY;
 
-    public static CrystallizationType getByItem(L2Item item) {
-        if (item instanceof L2Weapon) {
+    public static CrystallizationType getByItem(ItemTemplate item) {
+        if (item instanceof Weapon) {
             return WEAPON;
         }
-        if (item instanceof L2Armor) {
+        if (item instanceof Armor) {
             return ARMOR;
         }
-        if ((item.getBodyPart() == L2Item.SLOT_R_EAR) //
-                || (item.getBodyPart() == L2Item.SLOT_L_EAR) //
-                || (item.getBodyPart() == L2Item.SLOT_R_FINGER) //
-                || (item.getBodyPart() == L2Item.SLOT_L_FINGER) //
-                || (item.getBodyPart() == L2Item.SLOT_NECK) //
-                || (item.getBodyPart() == L2Item.SLOT_HAIR) //
-                || (item.getBodyPart() == L2Item.SLOT_HAIR2) //
-                || (item.getBodyPart() == L2Item.SLOT_HAIRALL) //
-                || (item.getBodyPart() == L2Item.SLOT_ARTIFACT_BOOK) //
-                || (item.getBodyPart() == L2Item.SLOT_ARTIFACT)) {
+        if ((item.getBodyPart() == ItemTemplate.SLOT_R_EAR) //
+                || (item.getBodyPart() == ItemTemplate.SLOT_L_EAR) //
+                || (item.getBodyPart() == ItemTemplate.SLOT_R_FINGER) //
+                || (item.getBodyPart() == ItemTemplate.SLOT_L_FINGER) //
+                || (item.getBodyPart() == ItemTemplate.SLOT_NECK) //
+                || (item.getBodyPart() == ItemTemplate.SLOT_HAIR) //
+                || (item.getBodyPart() == ItemTemplate.SLOT_HAIR2) //
+                || (item.getBodyPart() == ItemTemplate.SLOT_HAIRALL) //
+                || (item.getBodyPart() == ItemTemplate.SLOT_ARTIFACT_BOOK) //
+                || (item.getBodyPart() == ItemTemplate.SLOT_ARTIFACT)) {
             return ACCESORY;
         }
 

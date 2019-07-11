@@ -3,7 +3,7 @@ package org.l2j.gameserver.model;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.L2WarehouseItem;
 import org.l2j.gameserver.model.items.instance.Item;
 
@@ -29,9 +29,9 @@ public class ItemInfo {
      */
     private int _objectId;
     /**
-     * The L2Item template of the Item
+     * The ItemTemplate template of the Item
      */
-    private L2Item _item;
+    private ItemTemplate _item;
     /**
      * The level of enchant on the Item
      */
@@ -85,7 +85,7 @@ public class ItemInfo {
         // Get the Identifier of the Item
         _objectId = item.getObjectId();
 
-        // Get the L2Item of the Item
+        // Get the ItemTemplate of the Item
         _item = item.getItem();
 
         // Get the enchant level of the Item
@@ -149,7 +149,7 @@ public class ItemInfo {
         // Get the Identifier of the Item
         _objectId = item.getObjectId();
 
-        // Get the L2Item of the Item
+        // Get the ItemTemplate of the Item
         _item = item.getItem();
 
         // Get the enchant level of the Item
@@ -198,7 +198,7 @@ public class ItemInfo {
         // Get the Identifier of the Item
         _objectId = 0;
 
-        // Get the L2Item of the Item
+        // Get the ItemTemplate of the Item
         _item = item.getItem();
 
         // Get the enchant level of the Item
@@ -238,7 +238,7 @@ public class ItemInfo {
         // Get the Identifier of the Item
         _objectId = item.getObjectId();
 
-        // Get the L2Item of the Item
+        // Get the ItemTemplate of the Item
         _item = item.getItem();
 
         // Get the enchant level of the Item
@@ -276,7 +276,7 @@ public class ItemInfo {
         return _objectId;
     }
 
-    public L2Item getItem() {
+    public ItemTemplate getItem() {
         return _item;
     }
 

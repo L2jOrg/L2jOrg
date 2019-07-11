@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.items.enchant;
 
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 
 /**
  * @author UnAfraid
@@ -69,7 +69,7 @@ public final class EnchantRateItem {
      * @param item
      * @return {@code true} if item can be used with this rate group, {@code false} otherwise.
      */
-    public boolean validate(L2Item item) {
+    public boolean validate(ItemTemplate item) {
         if ((_itemId != 0) && (_itemId != item.getId())) {
             return false;
         } else if ((_slot != 0) && ((item.getBodyPart() & _slot) == 0)) {

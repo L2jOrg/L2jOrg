@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 
 import java.util.Set;
@@ -36,7 +36,7 @@ public class ConditionCategoryType extends Condition {
     }
 
     @Override
-    public boolean testImpl(Creature effector, Creature effected, Skill skill, L2Item item) {
+    public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
         for (CategoryType type : _categoryTypes) {
             if (effector.isInCategory(type)) {
                 return true;

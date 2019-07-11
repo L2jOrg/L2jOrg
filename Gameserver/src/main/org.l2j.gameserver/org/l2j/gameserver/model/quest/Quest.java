@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.holders.NpcLogListHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.olympiad.CompetitionType;
 import org.l2j.gameserver.model.olympiad.Participant;
@@ -602,7 +602,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param item
      * @param player
      */
-    public final void notifyItemUse(L2Item item, Player player) {
+    public final void notifyItemUse(ItemTemplate item, Player player) {
         String res = null;
         try {
             res = onItemUse(item, player);
@@ -1227,7 +1227,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param player the player who used the item
      * @return
      */
-    public String onItemUse(L2Item item, Player player) {
+    public String onItemUse(ItemTemplate item, Player player) {
         return null;
     }
 

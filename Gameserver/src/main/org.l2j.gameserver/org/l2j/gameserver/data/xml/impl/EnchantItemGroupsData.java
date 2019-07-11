@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.holders.RangeChanceHolder;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.enchant.EnchantItemGroup;
 import org.l2j.gameserver.model.items.enchant.EnchantRateItem;
 import org.l2j.gameserver.model.items.enchant.EnchantScrollGroup;
@@ -110,7 +110,7 @@ public final class EnchantItemGroupsData extends GameXmlReader {
         }
     }
 
-    public EnchantItemGroup getItemGroup(L2Item item, int scrollGroup) {
+    public EnchantItemGroup getItemGroup(ItemTemplate item, int scrollGroup) {
         final EnchantScrollGroup group = _scrollGroups.get(scrollGroup);
         final EnchantRateItem rateGroup = group.getRateGroup(item);
         return rateGroup != null ? _itemGroups.get(rateGroup.getName()) : null;

@@ -5,7 +5,7 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreBuyingResult;
@@ -211,7 +211,7 @@ public class TradeList {
             return null;
         }
 
-        final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+        final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
         if (item == null) {
             LOGGER.warn(_owner.getName() + ": Attempt to add invalid item to TradeList!");
             return null;
@@ -445,7 +445,7 @@ public class TradeList {
             if (item == null) {
                 continue;
             }
-            final L2Item template = ItemTable.getInstance().getTemplate(item.getItem().getId());
+            final ItemTemplate template = ItemTable.getInstance().getTemplate(item.getItem().getId());
             if (template == null) {
                 continue;
             }
@@ -469,7 +469,7 @@ public class TradeList {
             if (item == null) {
                 continue;
             }
-            final L2Item template = ItemTable.getInstance().getTemplate(item.getItem().getId());
+            final ItemTemplate template = ItemTable.getInstance().getTemplate(item.getItem().getId());
             if (template == null) {
                 continue;
             }
@@ -598,7 +598,7 @@ public class TradeList {
                 return 2;
             }
 
-            final L2Item template = ItemTable.getInstance().getTemplate(item.getItemId());
+            final ItemTemplate template = ItemTable.getInstance().getTemplate(item.getItemId());
             if (template == null) {
                 continue;
             }

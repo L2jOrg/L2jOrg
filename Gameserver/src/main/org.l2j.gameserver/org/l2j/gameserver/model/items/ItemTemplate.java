@@ -36,12 +36,12 @@ import java.util.stream.Collectors;
  * This class contains all informations concerning the item (weapon, armor, etc).<BR>
  * Mother class of :
  * <ul>
- * <li>L2Armor</li>
- * <li>L2EtcItem</li>
- * <li>L2Weapon</li>
+ * <li>Armor</li>
+ * <li>EtcItem</li>
+ * <li>Weapon</li>
  * </ul>
  */
-public abstract class L2Item extends ListenersContainer implements IIdentifiable {
+public abstract class ItemTemplate extends ListenersContainer implements IIdentifiable {
     public static final int TYPE1_WEAPON_RING_EARRING_NECKLACE = 0;
     public static final int TYPE1_SHIELD_ARMOR = 1;
     public static final int TYPE1_ITEM_QUESTITEM_ADENA = 4;
@@ -89,7 +89,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
     public static final int SLOT_BABYPET = -103;
     public static final int SLOT_GREATWOLF = -104;
     public static final int SLOT_MULTI_ALLWEAPON = SLOT_LR_HAND | SLOT_R_HAND;
-    protected static final Logger LOGGER = LoggerFactory.getLogger(L2Item.class);
+    protected static final Logger LOGGER = LoggerFactory.getLogger(ItemTemplate.class);
     protected int _type1; // needed for item list (inventory)
     protected int _type2; // different lists for armor, weapon, etc
     protected List<FuncTemplate> _funcTemplates;
@@ -141,12 +141,12 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
     private boolean _isBlessed;
 
     /**
-     * Constructor of the L2Item that fill class variables.<BR>
+     * Constructor of the ItemTemplate that fill class variables.<BR>
      * <BR>
      *
      * @param set : StatsSet corresponding to a set of couples (key,value) for description of the item
      */
-    protected L2Item(StatsSet set) {
+    protected ItemTemplate(StatsSet set) {
         set(set);
     }
 

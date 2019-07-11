@@ -22,7 +22,7 @@ import java.util.List;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
@@ -51,7 +51,7 @@ public class OpTargetWeaponAttackTypeSkillCondition implements ISkillCondition
 			return false;
 		}
 		final Creature targetCreature = (Creature) target;
-		final L2Weapon weapon = targetCreature.getActiveWeaponItem();
+		final Weapon weapon = targetCreature.getActiveWeaponItem();
 		return _weaponTypes.stream().anyMatch(weaponType -> weaponType == weapon.getItemType());
 	}
 }

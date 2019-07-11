@@ -4,7 +4,7 @@ import org.l2j.gameserver.instancemanager.CommissionManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.commission.CommissionItemType;
 import org.l2j.gameserver.model.commission.CommissionTreeType;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.commission.ExCloseCommission;
@@ -42,7 +42,7 @@ public class RequestCommissionList extends ClientPacket {
             return;
         }
 
-        Predicate<L2Item> filter = i -> true;
+        Predicate<ItemTemplate> filter = i -> true;
         switch (_treeViewDepth) {
             case 1: {
                 final CommissionTreeType commissionTreeType = CommissionTreeType.findByClientId(_itemType);

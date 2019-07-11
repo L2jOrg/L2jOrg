@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -117,7 +117,7 @@ public final class RequestPreviewItem extends ClientPacket {
                 return;
             }
 
-            final L2Item template = product.getItem();
+            final ItemTemplate template = product.getItem();
             if (template == null) {
                 continue;
             }

@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.util.GameUtils;
@@ -701,7 +701,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         switch (dropItem.getDropType()) {
             case DROP:
             case LUCKY: {
-                final L2Item item = ItemTable.getInstance().getTemplate(dropItem.getItemId());
+                final ItemTemplate item = ItemTable.getInstance().getTemplate(dropItem.getItemId());
 
                 // chance
                 double rateChance = 1;

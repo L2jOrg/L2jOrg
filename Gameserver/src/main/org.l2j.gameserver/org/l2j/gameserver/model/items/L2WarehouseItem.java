@@ -14,15 +14,15 @@ import java.util.Objects;
  * This class contains Item<BR>
  * Use to sort Item of :
  * <ul>
- * <li>L2Armor</li>
- * <li>L2EtcItem</li>
- * <li>L2Weapon</li>
+ * <li>Armor</li>
+ * <li>EtcItem</li>
+ * <li>Weapon</li>
  * </ul>
  *
  * @version $Revision: 1.7.2.2.2.5 $ $Date: 2005/04/06 18:25:18 $
  */
 public class L2WarehouseItem {
-    private final L2Item _item;
+    private final ItemTemplate _item;
     private final int _object;
     private final long _count;
     private final int _owner;
@@ -77,7 +77,7 @@ public class L2WarehouseItem {
     /**
      * @return the item.
      */
-    public L2Item getItem() {
+    public ItemTemplate getItem() {
         return _item;
     }
 
@@ -162,21 +162,21 @@ public class L2WarehouseItem {
      * @return {@code true} if the item is a weapon, {@code false} otherwise.
      */
     public final boolean isWeapon() {
-        return (_item instanceof L2Weapon);
+        return (_item instanceof Weapon);
     }
 
     /**
      * @return {@code true} if the item is an armor, {@code false} otherwise.
      */
     public final boolean isArmor() {
-        return (_item instanceof L2Armor);
+        return (_item instanceof Armor);
     }
 
     /**
      * @return {@code true} if the item is an etc item, {@code false} otherwise.
      */
     public final boolean isEtcItem() {
-        return (_item instanceof L2EtcItem);
+        return (_item instanceof EtcItem);
     }
 
     /**

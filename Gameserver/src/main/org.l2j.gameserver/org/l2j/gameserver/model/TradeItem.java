@@ -2,7 +2,7 @@ package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 
 import java.util.Collection;
@@ -10,7 +10,7 @@ import java.util.Collections;
 import java.util.Objects;
 
 public class TradeItem {
-    private final L2Item _item;
+    private final ItemTemplate _item;
     private final int _location;
     private final int _type1;
     private final int _type2;
@@ -61,7 +61,7 @@ public class TradeItem {
         }
     }
 
-    public TradeItem(L2Item item, long count, long price) {
+    public TradeItem(ItemTemplate item, long count, long price) {
         Objects.requireNonNull(item);
         _objectId = 0;
         _item = item;
@@ -108,7 +108,7 @@ public class TradeItem {
         _objectId = objectId;
     }
 
-    public L2Item getItem() {
+    public ItemTemplate getItem() {
         return _item;
     }
 

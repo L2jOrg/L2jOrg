@@ -23,7 +23,7 @@ import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ExAdenaInvenCount;
 import org.l2j.gameserver.network.serverpackets.GMViewItemList;
@@ -178,7 +178,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				numval = 1;
 			}
 			int counter = 0;
-			final L2Item template = ItemTable.getInstance().getTemplate(idval);
+			final ItemTemplate template = ItemTable.getInstance().getTemplate(idval);
 			if (template == null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "This item doesn't exist.");
@@ -292,7 +292,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 	
 	private void createItem(Player activeChar, Player target, int id, long num)
 	{
-		final L2Item template = ItemTable.getInstance().getTemplate(id);
+		final ItemTemplate template = ItemTable.getInstance().getTemplate(id);
 		if (template == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "This item doesn't exist.");

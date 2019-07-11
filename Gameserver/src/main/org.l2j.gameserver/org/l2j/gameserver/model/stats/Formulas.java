@@ -16,9 +16,9 @@ import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.items.L2Armor;
-import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.Armor;
+import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.type.ArmorType;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.skills.AbnormalType;
@@ -321,7 +321,7 @@ public final class Formulas {
             init = 15;
         }
         if (Config.ALT_GAME_CANCEL_BOW && target.isAttackingNow()) {
-            final L2Weapon wpn = target.getActiveWeaponItem();
+            final Weapon wpn = target.getActiveWeaponItem();
             if ((wpn != null) && (wpn.getItemType() == WeaponType.BOW)) {
                 init = 15;
             }
@@ -440,8 +440,8 @@ public final class Formulas {
      * @return
      */
     public static byte calcShldUse(Creature attacker, Creature target, boolean sendSysMsg) {
-        final L2Item item = target.getSecondaryWeaponItem();
-        if (!(item instanceof L2Armor) || (((L2Armor) item).getItemType() == ArmorType.SIGIL)) {
+        final ItemTemplate item = target.getSecondaryWeaponItem();
+        if (!(item instanceof Armor) || (((Armor) item).getItemType() == ArmorType.SIGIL)) {
             return 0;
         }
 
@@ -889,7 +889,7 @@ public final class Formulas {
      * @return
      */
     public static boolean calcBlowSuccess(Creature activeChar, Creature target, Skill skill, double chanceBoost) {
-        final L2Weapon weapon = activeChar.getActiveWeaponItem();
+        final Weapon weapon = activeChar.getActiveWeaponItem();
         final double weaponCritical = weapon != null ? weapon.getStats(Stats.CRITICAL_RATE, activeChar.getTemplate().getBaseCritRate()) : activeChar.getTemplate().getBaseCritRate();
         // double dexBonus = BaseStats.DEX.calcBonus(activeChar); Not used in GOD
         final double critHeightBonus = calcCriticalHeightBonus(activeChar, target);
@@ -1166,7 +1166,7 @@ public final class Formulas {
             }
         }
 
-        final L2Weapon weapon = attacker.getActiveWeaponItem();
+        final Weapon weapon = attacker.getActiveWeaponItem();
         final boolean isRanged = (weapon != null) && weapon.getItemType().isRanged();
         final double shotsBonus = attacker.getStat().getValue(Stats.SHOTS_BONUS);
 
@@ -1301,7 +1301,7 @@ public final class Formulas {
      * @param weapon
      * @return {@code (500_000 millis + 333 * WeaponItemReuseDelay) / PAttackSpeed}
      */
-    public static int calculateReuseTime(Creature activeChar, L2Weapon weapon) {
+    public static int calculateReuseTime(Creature activeChar, Weapon weapon) {
         if (weapon == null) {
             return 0;
         }

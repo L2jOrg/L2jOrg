@@ -22,8 +22,8 @@ import java.util.List;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
@@ -47,11 +47,11 @@ public class Op2hWeaponSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		final L2Weapon weapon = caster.getActiveWeaponItem();
+		final Weapon weapon = caster.getActiveWeaponItem();
 		if (weapon == null)
 		{
 			return false;
 		}
-		return _weaponTypes.stream().anyMatch(weaponType -> (weapon.getItemType() == weaponType) && ((weapon.getBodyPart() & L2Item.SLOT_LR_HAND) != 0));
+		return _weaponTypes.stream().anyMatch(weaponType -> (weapon.getItemType() == weaponType) && ((weapon.getBodyPart() & ItemTemplate.SLOT_LR_HAND) != 0));
 	}
 }

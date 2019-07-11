@@ -651,9 +651,9 @@ public final class Player extends Playable {
     // protects a char from aggro mobs when getting up from fake death
     private long _recentFakeDeathEndTime = 0;
     /**
-     * The fists L2Weapon of the Player (used when no weapon is equipped)
+     * The fists Weapon of the Player (used when no weapon is equipped)
      */
-    private L2Weapon _fistsWeaponItem;
+    private Weapon _fistsWeaponItem;
     private int _expertiseArmorPenalty = 0;
     private int _expertiseWeaponPenalty = 0;
     private int _expertisePenaltyBonus = 0;
@@ -2002,7 +2002,7 @@ public final class Player extends Playable {
 
             final long slot = _inventory.getSlotFromItem(item);
             // we can't unequip talisman by body slot
-            if ((slot == L2Item.SLOT_TALISMAN) || (slot == L2Item.SLOT_BROOCH_JEWEL) || (slot == L2Item.SLOT_AGATHION) || (slot == L2Item.SLOT_ARTIFACT)) {
+            if ((slot == ItemTemplate.SLOT_TALISMAN) || (slot == ItemTemplate.SLOT_BROOCH_JEWEL) || (slot == ItemTemplate.SLOT_AGATHION) || (slot == ItemTemplate.SLOT_ARTIFACT)) {
                 items = _inventory.unEquipItemInSlotAndRecord(item.getLocationSlot());
             } else {
                 items = _inventory.unEquipItemInBodySlotAndRecord(slot);
@@ -2024,7 +2024,7 @@ public final class Player extends Playable {
                 // Consume mana - will start a task if required; returns if item is not a shadow item
                 item.decreaseMana(false);
 
-                if ((item.getItem().getBodyPart() & L2Item.SLOT_MULTI_ALLWEAPON) != 0) {
+                if ((item.getItem().getBodyPart() & ItemTemplate.SLOT_MULTI_ALLWEAPON) != 0) {
                     rechargeShots(true, true, false);
                 }
             } else {
@@ -2210,16 +2210,16 @@ public final class Player extends Playable {
     /**
      * @return the fists weapon of the Player (used when no weapon is equipped).
      */
-    public L2Weapon getFistsWeaponItem() {
+    public Weapon getFistsWeaponItem() {
         return _fistsWeaponItem;
     }
 
     /**
      * Set the fists weapon of the Player (used when no weapon is equiped).
      *
-     * @param weaponItem The fists L2Weapon to set to the Player
+     * @param weaponItem The fists Weapon to set to the Player
      */
-    public void setFistsWeaponItem(L2Weapon weaponItem) {
+    public void setFistsWeaponItem(Weapon weaponItem) {
         _fistsWeaponItem = weaponItem;
     }
 
@@ -2227,44 +2227,44 @@ public final class Player extends Playable {
      * @param classId
      * @return the fists weapon of the Player Class (used when no weapon is equipped).
      */
-    public L2Weapon findFistsWeaponItem(int classId) {
-        L2Weapon weaponItem = null;
+    public Weapon findFistsWeaponItem(int classId) {
+        Weapon weaponItem = null;
         if ((classId >= 0x00) && (classId <= 0x09)) {
             // human fighter fists
-            final L2Item temp = ItemTable.getInstance().getTemplate(246);
-            weaponItem = (L2Weapon) temp;
+            final ItemTemplate temp = ItemTable.getInstance().getTemplate(246);
+            weaponItem = (Weapon) temp;
         } else if ((classId >= 0x0a) && (classId <= 0x11)) {
             // human mage fists
-            final L2Item temp = ItemTable.getInstance().getTemplate(251);
-            weaponItem = (L2Weapon) temp;
+            final ItemTemplate temp = ItemTable.getInstance().getTemplate(251);
+            weaponItem = (Weapon) temp;
         } else if ((classId >= 0x12) && (classId <= 0x18)) {
             // elven fighter fists
-            final L2Item temp = ItemTable.getInstance().getTemplate(244);
-            weaponItem = (L2Weapon) temp;
+            final ItemTemplate temp = ItemTable.getInstance().getTemplate(244);
+            weaponItem = (Weapon) temp;
         } else if ((classId >= 0x19) && (classId <= 0x1e)) {
             // elven mage fists
-            final L2Item temp = ItemTable.getInstance().getTemplate(249);
-            weaponItem = (L2Weapon) temp;
+            final ItemTemplate temp = ItemTable.getInstance().getTemplate(249);
+            weaponItem = (Weapon) temp;
         } else if ((classId >= 0x1f) && (classId <= 0x25)) {
             // dark elven fighter fists
-            final L2Item temp = ItemTable.getInstance().getTemplate(245);
-            weaponItem = (L2Weapon) temp;
+            final ItemTemplate temp = ItemTable.getInstance().getTemplate(245);
+            weaponItem = (Weapon) temp;
         } else if ((classId >= 0x26) && (classId <= 0x2b)) {
             // dark elven mage fists
-            final L2Item temp = ItemTable.getInstance().getTemplate(250);
-            weaponItem = (L2Weapon) temp;
+            final ItemTemplate temp = ItemTable.getInstance().getTemplate(250);
+            weaponItem = (Weapon) temp;
         } else if ((classId >= 0x2c) && (classId <= 0x30)) {
             // orc fighter fists
-            final L2Item temp = ItemTable.getInstance().getTemplate(248);
-            weaponItem = (L2Weapon) temp;
+            final ItemTemplate temp = ItemTable.getInstance().getTemplate(248);
+            weaponItem = (Weapon) temp;
         } else if ((classId >= 0x31) && (classId <= 0x34)) {
             // orc mage fists
-            final L2Item temp = ItemTable.getInstance().getTemplate(252);
-            weaponItem = (L2Weapon) temp;
+            final ItemTemplate temp = ItemTable.getInstance().getTemplate(252);
+            weaponItem = (Weapon) temp;
         } else if ((classId >= 0x35) && (classId <= 0x39)) {
             // dwarven fists
-            final L2Item temp = ItemTable.getInstance().getTemplate(247);
-            weaponItem = (L2Weapon) temp;
+            final ItemTemplate temp = ItemTable.getInstance().getTemplate(247);
+            weaponItem = (Weapon) temp;
         }
 
         return weaponItem;
@@ -2905,7 +2905,7 @@ public final class Player extends Playable {
      */
     public Item addItem(String process, int itemId, long count, WorldObject reference, boolean sendMessage) {
         if (count > 0) {
-            final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+            final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
             if (item == null) {
                 LOGGER.error("Item doesn't exist so cannot be added. Item ID: " + itemId);
                 return null;
@@ -2937,7 +2937,7 @@ public final class Player extends Playable {
 
             // Auto-use herbs.
             if (item.hasExImmediateEffect()) {
-                final IItemHandler handler = ItemHandler.getInstance().getHandler(item instanceof L2EtcItem ? (L2EtcItem) item : null);
+                final IItemHandler handler = ItemHandler.getInstance().getHandler(item instanceof EtcItem ? (EtcItem) item : null);
                 if (handler == null) {
                     LOGGER.warn("No item handler registered for Herb ID " + item.getId() + "!");
                 } else {
@@ -3939,7 +3939,7 @@ public final class Player extends Playable {
                 // Auto-Equip arrows/bolts if player has a bow/crossbow and player picks up arrows/bolts.
                 final Item weapon = _inventory.getPaperdollItem(Inventory.PAPERDOLL_RHAND);
                 if (weapon != null) {
-                    final L2EtcItem etcItem = target.getEtcItem();
+                    final EtcItem etcItem = target.getEtcItem();
                     if (etcItem != null) {
                         final EtcItemType itemType = etcItem.getItemType();
                         if (((weapon.getItemType() == WeaponType.BOW) && (itemType == EtcItemType.ARROW)) || (((weapon.getItemType() == WeaponType.CROSSBOW) || (weapon.getItemType() == WeaponType.TWOHANDCROSSBOW)) && (itemType == EtcItemType.BOLT))) {
@@ -4107,13 +4107,13 @@ public final class Player extends Playable {
      * Return the active weapon item (always equiped in the right hand).
      */
     @Override
-    public L2Weapon getActiveWeaponItem() {
+    public Weapon getActiveWeaponItem() {
         final Item weapon = getActiveWeaponInstance();
         if (weapon == null) {
             return _fistsWeaponItem;
         }
 
-        return (L2Weapon) weapon.getItem();
+        return (Weapon) weapon.getItem();
     }
 
     public Item getChestArmorInstance() {
@@ -4124,24 +4124,24 @@ public final class Player extends Playable {
         return _inventory.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
     }
 
-    public L2Armor getActiveChestArmorItem() {
+    public Armor getActiveChestArmorItem() {
         final Item armor = getChestArmorInstance();
 
         if (armor == null) {
             return null;
         }
 
-        return (L2Armor) armor.getItem();
+        return (Armor) armor.getItem();
     }
 
-    public L2Armor getActiveLegsArmorItem() {
+    public Armor getActiveLegsArmorItem() {
         final Item legs = getLegsArmorInstance();
 
         if (legs == null) {
             return null;
         }
 
-        return (L2Armor) legs.getItem();
+        return (Armor) legs.getItem();
     }
 
     public boolean isWearingHeavyArmor() {
@@ -4154,7 +4154,7 @@ public final class Player extends Playable {
             }
         }
         if (armor != null) {
-            if (((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == L2Item.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.HEAVY))) {
+            if (((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.HEAVY))) {
                 return true;
             }
         }
@@ -4171,7 +4171,7 @@ public final class Player extends Playable {
             }
         }
         if (armor != null) {
-            if (((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == L2Item.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.LIGHT))) {
+            if (((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.LIGHT))) {
                 return true;
             }
         }
@@ -4188,7 +4188,7 @@ public final class Player extends Playable {
             }
         }
         if (armor != null) {
-            if (((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == L2Item.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.MAGIC))) {
+            if (((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.MAGIC))) {
                 return true;
             }
         }
@@ -4204,11 +4204,11 @@ public final class Player extends Playable {
     }
 
     /**
-     * Return the secondary L2Item item (always equiped in the left hand).<BR>
+     * Return the secondary ItemTemplate item (always equiped in the left hand).<BR>
      * Arrows, Shield..<BR>
      */
     @Override
-    public L2Item getSecondaryWeaponItem() {
+    public ItemTemplate getSecondaryWeaponItem() {
         final Item item = _inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
         if (item != null) {
             return item.getItem();
@@ -4401,7 +4401,7 @@ public final class Player extends Playable {
                     if (itemDrop.isShadowItem() || // Dont drop Shadow Items
                             itemDrop.isTimeLimitedItem() || // Dont drop Time Limited Items
                             !itemDrop.isDropable() || (itemDrop.getId() == CommonItem.ADENA) || // Adena
-                            (itemDrop.getItem().getType2() == L2Item.TYPE2_QUEST) || // Quest Items
+                            (itemDrop.getItem().getType2() == ItemTemplate.TYPE2_QUEST) || // Quest Items
                             ((_pet != null) && (_pet.getControlObjectId() == itemDrop.getId())) || // Control Item of active pet
                             (Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_ITEMS, itemDrop.getId()) >= 0) || // Item listed in the non droppable item list
                             (Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_PET_ITEMS, itemDrop.getId()) >= 0 // Item listed in the non droppable pet item list
@@ -4411,7 +4411,7 @@ public final class Player extends Playable {
 
                     if (itemDrop.isEquipped()) {
                         // Set proper chance according to Item type of equipped Item
-                        itemDropPercent = itemDrop.getItem().getType2() == L2Item.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
+                        itemDropPercent = itemDrop.getItem().getType2() == ItemTemplate.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
                         _inventory.unEquipItemInSlot(itemDrop.getLocationSlot());
                     } else {
                         itemDropPercent = dropItem; // Item in inventory
@@ -5046,7 +5046,7 @@ public final class Player extends Playable {
     protected boolean checkAndEquipAmmunition(EtcItemType type) {
         Item arrows = _inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
         if (arrows == null) {
-            final L2Weapon weapon = getActiveWeaponItem();
+            final Weapon weapon = getActiveWeaponItem();
             if (type == EtcItemType.ARROW) {
                 arrows = _inventory.findArrowForBow(weapon);
             } else if (type == EtcItemType.BOLT) {
@@ -7228,7 +7228,7 @@ public final class Player extends Playable {
     }
 
     /**
-     * Cancel autoshot for all shots matching crystaltype {@link L2Item#getCrystalType()}.
+     * Cancel autoshot for all shots matching crystaltype {@link ItemTemplate#getCrystalType()}.
      *
      * @param crystalType int type to disable
      */
@@ -9455,7 +9455,7 @@ public final class Player extends Playable {
                 sendInventoryUpdate(iu);
 
                 SystemMessage sm = null;
-                if (equippedItem.getItem().getBodyPart() == L2Item.SLOT_BACK) {
+                if (equippedItem.getItem().getBodyPart() == ItemTemplate.SLOT_BACK) {
                     sendPacket(SystemMessageId.YOUR_CLOAK_HAS_BEEN_UNEQUIPPED_BECAUSE_YOUR_ARMOR_SET_IS_NO_LONGER_COMPLETE);
                     return;
                 }

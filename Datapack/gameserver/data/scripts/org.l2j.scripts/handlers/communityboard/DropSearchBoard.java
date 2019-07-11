@@ -38,7 +38,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.stats.Stats;
 
@@ -188,7 +188,7 @@ public class DropSearchBoard implements IParseBoardHandler
 					}
 					else
 					{
-						final L2Item item = ItemTable.getInstance().getTemplate(cbDropHolder.itemId);
+						final ItemTemplate item = ItemTable.getInstance().getTemplate(cbDropHolder.itemId);
 						
 						if (Config.RATE_DROP_CHANCE_BY_ID.get(cbDropHolder.itemId) != null)
 						{
@@ -285,8 +285,8 @@ public class DropSearchBoard implements IParseBoardHandler
 	{
 		int limit = 0;
 		Set<Integer> existInDropData = DROP_INDEX_CACHE.keySet();
-		List<L2Item> items = new ArrayList<>();
-		for (L2Item item : ItemTable.getInstance().getAllItems())
+		List<ItemTemplate> items = new ArrayList<>();
+		for (ItemTemplate item : ItemTable.getInstance().getAllItems())
 		{
 			if (item == null)
 			{
@@ -319,7 +319,7 @@ public class DropSearchBoard implements IParseBoardHandler
 		
 		StringBuilder builder = new StringBuilder(items.size() * 28);
 		int i = 0;
-		for (L2Item item : items)
+		for (ItemTemplate item : items)
 		{
 			i++;
 			if (i == 1)

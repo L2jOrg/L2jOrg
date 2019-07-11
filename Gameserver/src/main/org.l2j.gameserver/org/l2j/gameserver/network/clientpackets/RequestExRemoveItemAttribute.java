@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExBaseAttributeCancelResult;
@@ -88,7 +88,7 @@ public class RequestExRemoveItemAttribute extends ClientPacket {
     private long getPrice(Item item) {
         switch (item.getItem().getCrystalType()) {
             case S: {
-                if (item.getItem() instanceof L2Weapon) {
+                if (item.getItem() instanceof Weapon) {
                     _price = 50000;
                 } else {
                     _price = 40000;

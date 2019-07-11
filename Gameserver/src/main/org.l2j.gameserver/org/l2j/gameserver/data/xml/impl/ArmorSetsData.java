@@ -3,7 +3,7 @@ package org.l2j.gameserver.data.xml.impl;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.L2ArmorSet;
 import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -67,7 +67,7 @@ public final class ArmorSetsData extends GameXmlReader {
                                     {
                                         final NamedNodeMap attrs = node.getAttributes();
                                         final int itemId = parseInteger(attrs, "id");
-                                        final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+                                        final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
                                         if (item == null) {
                                             LOGGER.warn("Attempting to register non existing required item: " + itemId + " to a set: " + f.getName());
                                         } else if (!set.addRequiredItem(itemId)) {
@@ -81,7 +81,7 @@ public final class ArmorSetsData extends GameXmlReader {
                                     {
                                         final NamedNodeMap attrs = node.getAttributes();
                                         final int itemId = parseInteger(attrs, "id");
-                                        final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+                                        final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
                                         if (item == null) {
                                             LOGGER.warn("Attempting to register non existing optional item: " + itemId + " to a set: " + f.getName());
                                         } else if (!set.addOptionalItem(itemId)) {

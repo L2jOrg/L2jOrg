@@ -31,8 +31,8 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.PetInventory;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.items.L2Item;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
@@ -243,7 +243,7 @@ public class Pet extends Summon {
     @Override
     public Item getActiveWeaponInstance() {
         if (_inventory != null) {
-            return _inventory.getItems(item -> (item.getItemLocation() == ItemLocation.PET_EQUIP) && (item.getItem().getBodyPart() == L2Item.SLOT_R_HAND)).stream().findAny().orElse(null);
+            return _inventory.getItems(item -> (item.getItemLocation() == ItemLocation.PET_EQUIP) && (item.getItem().getBodyPart() == ItemTemplate.SLOT_R_HAND)).stream().findAny().orElse(null);
         }
         return null;
     }
@@ -252,13 +252,13 @@ public class Pet extends Summon {
      * Returns the pet's currently equipped weapon (if any).
      */
     @Override
-    public L2Weapon getActiveWeaponItem() {
+    public Weapon getActiveWeaponItem() {
         final Item weapon = getActiveWeaponInstance();
         if (weapon == null) {
             return null;
         }
 
-        return (L2Weapon) weapon.getItem();
+        return (Weapon) weapon.getItem();
     }
 
     @Override
@@ -268,7 +268,7 @@ public class Pet extends Summon {
     }
 
     @Override
-    public L2Weapon getSecondaryWeaponItem() {
+    public Weapon getSecondaryWeaponItem() {
         // temporary? unavailable
         return null;
     }

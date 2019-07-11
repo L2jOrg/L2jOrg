@@ -51,8 +51,8 @@ import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.model.interfaces.IPositionable;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.items.L2EtcItem;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.EtcItem;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.olympiad.Olympiad;
@@ -533,7 +533,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             return;
         }
 
-        final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+        final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
         if (item == null) {
             return;
         }
@@ -542,8 +542,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             if (itemId == CommonItem.ADENA) {
                 count *= Config.RATE_QUEST_REWARD_ADENA;
             } else if (Config.RATE_QUEST_REWARD_USE_MULTIPLIERS) {
-                if (item instanceof L2EtcItem) {
-                    switch (((L2EtcItem) item).getItemType()) {
+                if (item instanceof EtcItem) {
+                    switch (((EtcItem) item).getItemType()) {
                         case POTION: {
                             count *= Config.RATE_QUEST_REWARD_POTION;
                             break;
@@ -2105,7 +2105,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     /**
-     * Provides instant callback operation when {@link L2Item} receives an event from {@link Player}.
+     * Provides instant callback operation when {@link ItemTemplate} receives an event from {@link Player}.
      *
      * @param callback
      * @param npcIds
@@ -2116,7 +2116,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     /**
-     * Provides instant callback operation when {@link L2Item} receives an event from {@link Player}.
+     * Provides instant callback operation when {@link ItemTemplate} receives an event from {@link Player}.
      *
      * @param callback
      * @param npcIds
@@ -2127,7 +2127,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     /**
-     * Provides instant callback operation when {@link Player} talk to {@link L2Item}.
+     * Provides instant callback operation when {@link Player} talk to {@link ItemTemplate}.
      *
      * @param callback
      * @param npcIds
@@ -2138,7 +2138,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     /**
-     * Provides instant callback operation when {@link Player} talk to {@link L2Item}.
+     * Provides instant callback operation when {@link Player} talk to {@link ItemTemplate}.
      *
      * @param callback
      * @param npcIds
@@ -2582,7 +2582,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                 break;
             }
             case ITEM: {
-                final L2Item template = ItemTable.getInstance().getTemplate(id);
+                final ItemTemplate template = ItemTable.getInstance().getTemplate(id);
                 if (template != null) {
                     listeners.add(template.addListener(action.apply(template)));
                 }

@@ -20,7 +20,7 @@ import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 
 /**
@@ -49,7 +49,7 @@ public class ConditionPlayerRangeFromNpc extends Condition {
     }
 
     @Override
-    public boolean testImpl(Creature effector, Creature effected, Skill skill, L2Item item) {
+    public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
         boolean existNpc = false;
         if ((_npcIds != null) && (_npcIds.length > 0) && (_radius > 0)) {
             for (Npc target : L2World.getInstance().getVisibleObjectsInRange(effector, Npc.class, _radius)) {

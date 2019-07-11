@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.items.type.ArmorType;
 /**
  * This class is dedicated to the management of armors.
  */
-public final class L2Armor extends L2Item {
+public final class Armor extends ItemTemplate {
     private ArmorType _type;
 
     /**
@@ -14,7 +14,7 @@ public final class L2Armor extends L2Item {
      *
      * @param set the StatsSet designating the set of couples (key,value) characterizing the armor.
      */
-    public L2Armor(StatsSet set) {
+    public Armor(StatsSet set) {
         super(set);
     }
 

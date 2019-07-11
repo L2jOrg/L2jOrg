@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -37,7 +37,7 @@ public final class SetPrivateStoreListBuy extends ClientPacket {
         for (int i = 0; i < count; i++) {
             int itemId = readInt();
 
-            final L2Item template = ItemTable.getInstance().getTemplate(itemId);
+            final ItemTemplate template = ItemTable.getInstance().getTemplate(itemId);
             if (template == null) {
                 _items = null;
                 throw new InvalidDataPacketException();

@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 
 /**
@@ -92,7 +92,7 @@ public abstract class Condition implements ConditionListener {
         return test(caster, target, skill, null);
     }
 
-    public final boolean test(Creature caster, Creature target, L2Item item) {
+    public final boolean test(Creature caster, Creature target, ItemTemplate item) {
         return test(caster, target, null, null);
     }
 
@@ -100,7 +100,7 @@ public abstract class Condition implements ConditionListener {
         return test(caster, null, null, null);
     }
 
-    public final boolean test(Creature caster, Creature target, Skill skill, L2Item item) {
+    public final boolean test(Creature caster, Creature target, Skill skill, ItemTemplate item) {
         final boolean res = testImpl(caster, target, skill, item);
         if ((_listener != null) && (res != _result)) {
             _result = res;
@@ -118,7 +118,7 @@ public abstract class Condition implements ConditionListener {
      * @param item     the item
      * @return {@code true} if successful, {@code false} otherwise
      */
-    public abstract boolean testImpl(Creature effector, Creature effected, Skill skill, L2Item item);
+    public abstract boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item);
 
     @Override
     public void notifyChanged() {

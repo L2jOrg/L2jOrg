@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.itemcontainer;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.actor.instance.Pet;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 
 public class PetInventory extends Inventory {
@@ -72,7 +72,7 @@ public class PetInventory extends Inventory {
 
     public boolean validateWeight(Item item, long count) {
         int weight = 0;
-        final L2Item template = ItemTable.getInstance().getTemplate(item.getId());
+        final ItemTemplate template = ItemTable.getInstance().getTemplate(item.getId());
         if (template == null) {
             return false;
         }

@@ -8,7 +8,7 @@ import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.enchant.EnchantResultType;
 import org.l2j.gameserver.model.items.enchant.EnchantScroll;
 import org.l2j.gameserver.model.items.enchant.EnchantSupportItem;
@@ -143,7 +143,7 @@ public final class RequestEnchantItem extends ClientPacket {
                     break;
                 }
                 case SUCCESS: {
-                    final L2Item it = item.getItem();
+                    final ItemTemplate it = item.getItem();
                     // Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
                     if (scrollTemplate.getChance(activeChar, item) > 0) {
                         if (scrollTemplate.isGiant()) {

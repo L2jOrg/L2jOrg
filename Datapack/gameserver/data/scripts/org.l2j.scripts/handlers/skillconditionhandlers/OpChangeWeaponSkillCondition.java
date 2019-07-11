@@ -19,7 +19,7 @@ package handlers.skillconditionhandlers;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -35,7 +35,7 @@ public class OpChangeWeaponSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		final L2Weapon weaponItem = caster.getActiveWeaponItem();
+		final Weapon weaponItem = caster.getActiveWeaponItem();
 		if (weaponItem == null)
 		{
 			return false;

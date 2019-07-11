@@ -1,7 +1,7 @@
 package org.l2j.gameserver.engines.items;
 
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 
 public class Item {
     int id;
@@ -9,5 +9,5 @@ public class Item {
     String name;
     StatsSet set;
     int currentLevel;
-    L2Item item;
+    ItemTemplate item;
 }

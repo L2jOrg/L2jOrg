@@ -32,7 +32,7 @@ import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableAggroRange
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableAttack;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableKill;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.items.L2Item;
+import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
@@ -845,7 +845,7 @@ public class Attackable extends Npc {
         final Collection<ItemHolder> deathItems = npcTemplate.calculateDrops(DropType.DROP, this, player);
         if (deathItems != null) {
             for (ItemHolder drop : deathItems) {
-                final L2Item item = ItemTable.getInstance().getTemplate(drop.getId());
+                final ItemTemplate item = ItemTable.getInstance().getTemplate(drop.getId());
                 // Check if the autoLoot mode is active
                 if (Config.AUTO_LOOT_ITEM_IDS.contains(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && Config.AUTO_LOOT) || (_isRaid && Config.AUTO_LOOT_RAIDS))) || (item.hasExImmediateEffect() && Config.AUTO_LOOT_HERBS)) {
                     player.doAutoLoot(this, drop); // Give the item(s) to the Player that has killed the Attackable
@@ -968,9 +968,9 @@ public class Attackable extends Npc {
     /**
      * @return a copy of dummy items for the spoil loot.
      */
-    public List<L2Item> getSpoilLootItems() {
+    public List<ItemTemplate> getSpoilLootItems() {
         final Collection<ItemHolder> sweepItems = _sweepItems.get();
-        final List<L2Item> lootItems = new LinkedList<>();
+        final List<ItemTemplate> lootItems = new LinkedList<>();
         if (sweepItems != null) {
             for (ItemHolder item : sweepItems) {
                 lootItems.add(ItemTable.getInstance().getTemplate(item.getId()));

@@ -25,8 +25,8 @@ import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSummonSpawn;
 import org.l2j.gameserver.model.itemcontainer.PetInventory;
-import org.l2j.gameserver.model.items.L2EtcItem;
-import org.l2j.gameserver.model.items.L2Weapon;
+import org.l2j.gameserver.model.items.EtcItem;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ActionType;
 import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
@@ -370,7 +370,7 @@ public abstract class Summon extends Playable {
             setTarget(null);
             if (owner != null) {
                 for (int itemId : owner.getAutoSoulShot()) {
-                    final String handler = ((L2EtcItem) ItemTable.getInstance().getTemplate(itemId)).getHandlerName();
+                    final String handler = ((EtcItem) ItemTable.getInstance().getTemplate(itemId)).getHandlerName();
                     if ((handler != null) && handler.contains("Beast")) {
                         owner.disableAutoShot(itemId);
                     }
@@ -409,7 +409,7 @@ public abstract class Summon extends Playable {
         return 0;
     }
 
-    public L2Weapon getActiveWeapon() {
+    public Weapon getActiveWeapon() {
         return null;
     }
 
@@ -427,7 +427,7 @@ public abstract class Summon extends Playable {
     }
 
     @Override
-    public L2Weapon getActiveWeaponItem() {
+    public Weapon getActiveWeaponItem() {
         return null;
     }
 
@@ -437,7 +437,7 @@ public abstract class Summon extends Playable {
     }
 
     @Override
-    public L2Weapon getSecondaryWeaponItem() {
+    public Weapon getSecondaryWeaponItem() {
         return null;
     }
 
