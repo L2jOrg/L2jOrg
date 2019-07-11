@@ -22,8 +22,8 @@ import org.l2j.gameserver.network.serverpackets.shuttle.ExShuttleMove;
 /**
  * @author UnAfraid
  */
-public class L2ShuttleAI extends L2VehicleAI {
-    public L2ShuttleAI(Shuttle shuttle) {
+public class ShuttleAI extends VehicleAI {
+    public ShuttleAI(Shuttle shuttle) {
         super(shuttle);
     }
 

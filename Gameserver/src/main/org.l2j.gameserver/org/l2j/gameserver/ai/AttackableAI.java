@@ -38,8 +38,8 @@ import java.util.stream.Stream;
 /**
  * This class manages AI of Attackable.
  */
-public class L2AttackableAI extends L2CharacterAI {
-    private static final Logger LOGGER = LoggerFactory.getLogger(L2AttackableAI.class);
+public class AttackableAI extends CreatureAI {
+    private static final Logger LOGGER = LoggerFactory.getLogger(AttackableAI.class);
 
     private static final int RANDOM_WALK_RATE = 30; // confirmed
     // private static final int MAX_DRIFT_RANGE = 300;
@@ -63,7 +63,7 @@ public class L2AttackableAI extends L2CharacterAI {
     private boolean _thinking;
     private int chaostime = 0;
 
-    public L2AttackableAI(Attackable attackable) {
+    public AttackableAI(Attackable attackable) {
         super(attackable);
         _attackTimeout = Integer.MAX_VALUE;
         _globalAggro = -10; // 10 seconds timeout of ATTACK after respawn
@@ -164,7 +164,7 @@ public class L2AttackableAI extends L2CharacterAI {
     }
 
     /**
-     * Set the Intention of this L2CharacterAI and create an AI Task executed every 1s (call onEvtThink method) for this Attackable.<br>
+     * Set the Intention of this CreatureAI and create an AI Task executed every 1s (call onEvtThink method) for this Attackable.<br>
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : If actor _knowPlayer isn't EMPTY, AI_INTENTION_IDLE will be change in AI_INTENTION_ACTIVE</B></FONT>
      *
      * @param intention The new Intention to set to the AI
@@ -190,7 +190,7 @@ public class L2AttackableAI extends L2CharacterAI {
             }
 
             if (intention == CtrlIntention.AI_INTENTION_IDLE) {
-                // Set the Intention of this L2AttackableAI to AI_INTENTION_IDLE
+                // Set the Intention of this AttackableAI to AI_INTENTION_IDLE
                 super.changeIntention(CtrlIntention.AI_INTENTION_IDLE);
 
                 stopAITask();
@@ -202,7 +202,7 @@ public class L2AttackableAI extends L2CharacterAI {
             }
         }
 
-        // Set the Intention of this L2AttackableAI to intention
+        // Set the Intention of this AttackableAI to intention
         super.changeIntention(intention, args);
 
         // If not idle - create an AI task (schedule onEvtThink repeatedly)

@@ -2,8 +2,8 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.ai.L2CharacterAI;
-import org.l2j.gameserver.ai.L2DoorAI;
+import org.l2j.gameserver.ai.CreatureAI;
+import org.l2j.gameserver.ai.DoorAI;
 import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.enums.DoorOpenType;
 import org.l2j.gameserver.enums.InstanceType;
@@ -56,8 +56,8 @@ public final class Door extends Creature {
     }
 
     @Override
-    protected L2CharacterAI initAI() {
-        return new L2DoorAI(this);
+    protected CreatureAI initAI() {
+        return new DoorAI(this);
     }
 
     @Override

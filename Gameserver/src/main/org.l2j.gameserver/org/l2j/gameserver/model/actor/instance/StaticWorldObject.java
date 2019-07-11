@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.ai.L2CharacterAI;
+import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
@@ -40,7 +40,7 @@ public final class StaticWorldObject extends Creature {
     }
 
     @Override
-    protected L2CharacterAI initAI() {
+    protected CreatureAI initAI() {
         return null;
     }
 

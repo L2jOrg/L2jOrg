@@ -14,7 +14,7 @@ import java.util.concurrent.Future;
 
 import static org.l2j.gameserver.ai.CtrlIntention.*;
 
-public class L2SummonAI extends L2PlayableAI implements Runnable {
+public class SummonAI extends PlayableAI implements Runnable {
     private static final int AVOID_RADIUS = 70;
 
     private volatile boolean _thinking; // to prevent recursive thinking
@@ -25,7 +25,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable {
     private volatile boolean _isDefending;
     private Future<?> _avoidTask = null;
 
-    public L2SummonAI(Summon summon) {
+    public SummonAI(Summon summon) {
         super(summon);
     }
 

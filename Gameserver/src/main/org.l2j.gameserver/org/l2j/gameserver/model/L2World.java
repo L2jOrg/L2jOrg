@@ -1,9 +1,9 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.util.CommonUtil;
+import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.instancemanager.PlayerCountManager;
 import org.l2j.gameserver.model.actor.Creature;
@@ -276,7 +276,7 @@ public final class L2World {
         if (object.isPlayer() && wo.isVisibleFor((Player) object)) {
             wo.sendInfo((Player) object);
             if (wo.isCharacter()) {
-                final L2CharacterAI ai = ((Creature) wo).getAI();
+                final CreatureAI ai = ((Creature) wo).getAI();
                 if (ai != null) {
                     ai.describeStateToPlayer((Player) object);
                     if (wo.isMonster()) {
@@ -365,7 +365,7 @@ public final class L2World {
     private void forgetObject(WorldObject object, WorldObject wo) {
         if (object.isCharacter()) {
             final Creature objectCreature = (Creature) object;
-            final L2CharacterAI ai = objectCreature.getAI();
+            final CreatureAI ai = objectCreature.getAI();
             if (ai != null) {
                 ai.notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, wo);
             }

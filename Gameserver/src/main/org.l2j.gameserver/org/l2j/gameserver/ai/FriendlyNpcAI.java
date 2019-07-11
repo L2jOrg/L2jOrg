@@ -14,7 +14,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.*;
 /**
  * @author Sdw
  */
-public class FriendlyNpcAI extends L2AttackableAI {
+public class FriendlyNpcAI extends AttackableAI {
     public FriendlyNpcAI(Attackable attackable) {
         super(attackable);
     }

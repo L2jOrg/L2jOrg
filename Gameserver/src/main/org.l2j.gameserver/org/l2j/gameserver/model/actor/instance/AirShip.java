@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.ai.L2AirShipAI;
+import org.l2j.gameserver.ai.AirShipAI;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.AirShipManager;
 import org.l2j.gameserver.model.Location;
@@ -33,7 +33,7 @@ public class AirShip extends Vehicle {
     public AirShip(CreatureTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2AirShipInstance);
-        setAI(new L2AirShipAI(this));
+        setAI(new AirShipAI(this));
     }
 
     @Override

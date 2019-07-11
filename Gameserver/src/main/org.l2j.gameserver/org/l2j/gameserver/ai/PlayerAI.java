@@ -8,12 +8,12 @@ import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 
-public class L2PlayerAI extends L2PlayableAI {
+public class PlayerAI extends PlayableAI {
     private boolean _thinking; // to prevent recursive thinking
 
     private IntentionCommand _nextIntention = null;
 
-    public L2PlayerAI(Player player) {
+    public PlayerAI(Player player) {
         super(player);
     }
 
@@ -27,7 +27,7 @@ public class L2PlayerAI extends L2PlayableAI {
     }
 
     /**
-     * Saves the current Intention for this L2PlayerAI if necessary and calls changeIntention in AbstractAI.
+     * Saves the current Intention for this PlayerAI if necessary and calls changeIntention in AbstractAI.
      *
      * @param intention The new Intention to set to the AI
      * @param args      The first parameter of the Intention
@@ -91,7 +91,7 @@ public class L2PlayerAI extends L2PlayableAI {
     }
 
     /**
-     * Finalize the casting of a skill. This method overrides L2CharacterAI method.<br>
+     * Finalize the casting of a skill. This method overrides CreatureAI method.<br>
      * <B>What it does:</B><br>
      * Check if actual intention is set to CAST and, if so, retrieves latest intention before the actual CAST and set it as the current intention for the player.
      */
@@ -121,7 +121,7 @@ public class L2PlayerAI extends L2PlayableAI {
 
         // Summons in defending mode defend its master when attacked.
         if (_actor.getActingPlayer().hasServitors()) {
-            _actor.getActingPlayer().getServitors().values().stream().filter(summon -> ((L2SummonAI) summon.getAI()).isDefending()).forEach(summon -> ((L2SummonAI) summon.getAI()).defendAttack(attacker));
+            _actor.getActingPlayer().getServitors().values().stream().filter(summon -> ((SummonAI) summon.getAI()).isDefending()).forEach(summon -> ((SummonAI) summon.getAI()).defendAttack(attacker));
         }
     }
 
@@ -131,7 +131,7 @@ public class L2PlayerAI extends L2PlayableAI {
 
         // Summons in defending mode defend its master when attacked.
         if (_actor.getActingPlayer().hasServitors()) {
-            _actor.getActingPlayer().getServitors().values().stream().filter(summon -> ((L2SummonAI) summon.getAI()).isDefending()).forEach(summon -> ((L2SummonAI) summon.getAI()).defendAttack(attacker));
+            _actor.getActingPlayer().getServitors().values().stream().filter(summon -> ((SummonAI) summon.getAI()).isDefending()).forEach(summon -> ((SummonAI) summon.getAI()).defendAttack(attacker));
         }
     }
 

@@ -29,8 +29,8 @@ import org.l2j.gameserver.model.skills.Skill;
 /**
  * @author mkizub
  */
-public class L2DoorAI extends L2CharacterAI {
-    public L2DoorAI(Door door) {
+public class DoorAI extends CreatureAI {
+    public DoorAI(Door door) {
         super(door);
     }
 
@@ -76,7 +76,7 @@ public class L2DoorAI extends L2CharacterAI {
 
     @Override
     protected void onEvtAttacked(Creature attacker) {
-        ThreadPoolManager.getInstance().execute(new onEventAttackedDoorTask((Door) _actor, attacker));
+        ThreadPoolManager.execute(new onEventAttackedDoorTask((Door) _actor, attacker));
     }
 
     @Override

@@ -23,7 +23,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.*;
 /**
  * Mother class of all objects AI in the world.<br>
  * AbastractAI :<br>
- * <li>L2CharacterAI</li>
+ * <li>CreatureAI</li>
  */
 public abstract class AbstractAI implements Ctrl {
     private static final Logger LOGGER = LoggerFactory.getLogger(AbstractAI.class);
@@ -106,7 +106,7 @@ public abstract class AbstractAI implements Ctrl {
     }
 
     /**
-     * Launch the L2CharacterAI onIntention method corresponding to the new Intention.<br>
+     * Launch the CreatureAI onIntention method corresponding to the new Intention.<br>
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : Stop the FOLLOW mode if necessary</B></FONT>
      *
      * @param intention The new Intention to set to the AI
@@ -120,8 +120,8 @@ public abstract class AbstractAI implements Ctrl {
      * Set the Intention of this AbstractAI.<br>
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method is USED by AI classes</B></FONT><B><U><br>
      * Overridden in </U> : </B><BR>
-     * <B>L2AttackableAI</B> : Create an AI Task executed every 1s (if necessary)<BR>
-     * <B>L2PlayerAI</B> : Stores the current AI intention parameters to later restore it if necessary.
+     * <B>AttackableAI</B> : Create an AI Task executed every 1s (if necessary)<BR>
+     * <B>PlayerAI</B> : Stores the current AI intention parameters to later restore it if necessary.
      *
      * @param intention The new Intention to set to the AI
      * @param args      The first parameter of the Intention
@@ -132,7 +132,7 @@ public abstract class AbstractAI implements Ctrl {
     }
 
     /**
-     * Launch the L2CharacterAI onIntention method corresponding to the new Intention.<br>
+     * Launch the CreatureAI onIntention method corresponding to the new Intention.<br>
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : Stop the FOLLOW mode if necessary</B></FONT>
      *
      * @param intention The new Intention to set to the AI
@@ -146,7 +146,7 @@ public abstract class AbstractAI implements Ctrl {
             stopFollow();
         }
 
-        // Launch the onIntention method of the L2CharacterAI corresponding to the new Intention
+        // Launch the onIntention method of the CreatureAI corresponding to the new Intention
         switch (intention) {
             case AI_INTENTION_IDLE: {
                 onIntentionIdle();
@@ -193,7 +193,7 @@ public abstract class AbstractAI implements Ctrl {
     }
 
     /**
-     * Launch the L2CharacterAI onEvt method corresponding to the Event.<br>
+     * Launch the CreatureAI onEvt method corresponding to the Event.<br>
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned period)</B></FONT>
      *
      * @param evt The event whose the AI must be notified
@@ -204,7 +204,7 @@ public abstract class AbstractAI implements Ctrl {
     }
 
     /**
-     * Launch the L2CharacterAI onEvt method corresponding to the Event. <FONT COLOR=#FF0000><B> <U>Caution</U> : The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned period)</B></FONT>
+     * Launch the CreatureAI onEvt method corresponding to the Event. <FONT COLOR=#FF0000><B> <U>Caution</U> : The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned period)</B></FONT>
      *
      * @param evt  The event whose the AI must be notified
      * @param arg0 The first parameter of the Event (optional target)
@@ -215,7 +215,7 @@ public abstract class AbstractAI implements Ctrl {
     }
 
     /**
-     * Launch the L2CharacterAI onEvt method corresponding to the Event. <FONT COLOR=#FF0000><B> <U>Caution</U> : The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned period)</B></FONT>
+     * Launch the CreatureAI onEvt method corresponding to the Event. <FONT COLOR=#FF0000><B> <U>Caution</U> : The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned period)</B></FONT>
      *
      * @param evt  The event whose the AI must be notified
      * @param arg0 The first parameter of the Event (optional target)

@@ -8,9 +8,9 @@ import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.gameserver.RecipeController;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.ai.L2CharacterAI;
-import org.l2j.gameserver.ai.L2PlayerAI;
-import org.l2j.gameserver.ai.L2SummonAI;
+import org.l2j.gameserver.ai.CreatureAI;
+import org.l2j.gameserver.ai.PlayerAI;
+import org.l2j.gameserver.ai.SummonAI;
 import org.l2j.gameserver.cache.WarehouseCacheManager;
 import org.l2j.gameserver.communitybbs.BB.Forum;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
@@ -1227,8 +1227,8 @@ public final class Player extends Playable {
     }
 
     @Override
-    protected L2CharacterAI initAI() {
-        return new L2PlayerAI(this);
+    protected CreatureAI initAI() {
+        return new PlayerAI(this);
     }
 
     /**
@@ -8508,7 +8508,7 @@ public final class Player extends Playable {
         if (_pet != null) {
             _pet.setFollowStatus(false);
             _pet.teleToLocation(getLocation(), false);
-            ((L2SummonAI) _pet.getAI()).setStartFollowController(true);
+            ((SummonAI) _pet.getAI()).setStartFollowController(true);
             _pet.setFollowStatus(true);
             _pet.setInstance(getInstanceWorld());
             _pet.updateAndBroadcastStatus(0);
@@ -8518,7 +8518,7 @@ public final class Player extends Playable {
         {
             s.setFollowStatus(false);
             s.teleToLocation(getLocation(), false);
-            ((L2SummonAI) s.getAI()).setStartFollowController(true);
+            ((SummonAI) s.getAI()).setStartFollowController(true);
             s.setFollowStatus(true);
             s.setInstance(getInstanceWorld());
             s.updateAndBroadcastStatus(0);

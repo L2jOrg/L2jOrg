@@ -5,8 +5,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.ai.L2AttackableAI;
-import org.l2j.gameserver.ai.L2CharacterAI;
+import org.l2j.gameserver.ai.AttackableAI;
+import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.ExtendDropData;
 import org.l2j.gameserver.datatables.EventDroplist;
@@ -110,8 +110,8 @@ public class Attackable extends Npc {
     }
 
     @Override
-    protected L2CharacterAI initAI() {
-        return new L2AttackableAI(this);
+    protected CreatureAI initAI() {
+        return new AttackableAI(this);
     }
 
     public final Map<Creature, AggroInfo> getAggroList() {
@@ -641,7 +641,7 @@ public class Attackable extends Npc {
             final Creature mostHated = getMostHated();
             if (mostHated == null) // makes target passive for a moment more
             {
-                ((L2AttackableAI) getAI()).setGlobalAggro(-25);
+                ((AttackableAI) getAI()).setGlobalAggro(-25);
                 return;
             }
 
@@ -651,7 +651,7 @@ public class Attackable extends Npc {
 
             amount = getHating(mostHated);
             if (amount >= 0) {
-                ((L2AttackableAI) getAI()).setGlobalAggro(-25);
+                ((AttackableAI) getAI()).setGlobalAggro(-25);
                 clearAggroList();
                 getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
                 setWalking();
@@ -667,7 +667,7 @@ public class Attackable extends Npc {
 
         ai.addHate(amount);
         if ((ai.getHate() >= 0) && (getMostHated() == null)) {
-            ((L2AttackableAI) getAI()).setGlobalAggro(-25);
+            ((AttackableAI) getAI()).setGlobalAggro(-25);
             clearAggroList();
             getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
             setWalking();
@@ -1488,8 +1488,8 @@ public class Attackable extends Npc {
                 }
             }
             if ((aggroList != null) && aggroList.isEmpty()) {
-                if (getAI() instanceof L2AttackableAI) {
-                    ((L2AttackableAI) getAI()).setGlobalAggro(-25);
+                if (getAI() instanceof AttackableAI) {
+                    ((AttackableAI) getAI()).setGlobalAggro(-25);
                 }
                 setWalking();
                 clearAggroList();

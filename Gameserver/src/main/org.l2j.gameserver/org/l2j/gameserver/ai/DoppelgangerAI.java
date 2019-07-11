@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.serverpackets.MoveToLocation;
 
-public class DoppelgangerAI extends L2CharacterAI {
+public class DoppelgangerAI extends CreatureAI {
     private volatile boolean _thinking; // to prevent recursive thinking
     private volatile boolean _startFollow;
     private Creature _lastAttack = null;

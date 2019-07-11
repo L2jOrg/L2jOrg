@@ -7,8 +7,8 @@ import org.l2j.gameserver.GameTimeController;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.ai.L2AttackableAI;
-import org.l2j.gameserver.ai.L2CharacterAI;
+import org.l2j.gameserver.ai.AttackableAI;
+import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.CategoryData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
@@ -177,7 +177,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     // set by the start of attack, in game ticks
     private volatile long _attackEndTime;
     private volatile long _disableRangedAttackEndTime;
-    private volatile L2CharacterAI _ai = null;
+    private volatile CreatureAI _ai = null;
     private volatile CreatureContainer _seenCreatures;
     /**
      * A map holding info about basic property mesmerizing system.
@@ -1466,7 +1466,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      *
      * @return the AI
      */
-    public final L2CharacterAI getAI() {
+    public final CreatureAI getAI() {
         if (_ai == null) {
             synchronized (this) {
                 if (_ai == null) {
@@ -1477,9 +1477,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return _ai;
     }
 
-    public void setAI(L2CharacterAI newAI) {
-        final L2CharacterAI oldAI = _ai;
-        if ((oldAI != null) && (oldAI != newAI) && (oldAI instanceof L2AttackableAI)) {
+    public void setAI(CreatureAI newAI) {
+        final CreatureAI oldAI = _ai;
+        if ((oldAI != null) && (oldAI != newAI) && (oldAI instanceof AttackableAI)) {
             oldAI.stopAITask();
         }
         _ai = newAI;
@@ -1491,8 +1491,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      *
      * @return the new AI
      */
-    protected L2CharacterAI initAI() {
-        return new L2CharacterAI(this);
+    protected CreatureAI initAI() {
+        return new CreatureAI(this);
     }
 
     public void detachAI() {

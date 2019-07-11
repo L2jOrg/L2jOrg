@@ -16,9 +16,9 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
+import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.FriendlyNpcAI;
-import org.l2j.gameserver.ai.L2CharacterAI;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -135,7 +135,7 @@ public class FriendlyNpc extends Attackable {
     }
 
     @Override
-    protected L2CharacterAI initAI() {
+    protected CreatureAI initAI() {
         return new FriendlyNpcAI(this);
     }
 }

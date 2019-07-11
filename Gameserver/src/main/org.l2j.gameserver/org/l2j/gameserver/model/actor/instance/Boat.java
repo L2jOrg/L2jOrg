@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.ai.L2BoatAI;
+import org.l2j.gameserver.ai.BoatAI;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Vehicle;
@@ -18,7 +18,7 @@ public class Boat extends Vehicle {
     public Boat(CreatureTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2BoatInstance);
-        setAI(new L2BoatAI(this));
+        setAI(new BoatAI(this));
     }
 
     @Override

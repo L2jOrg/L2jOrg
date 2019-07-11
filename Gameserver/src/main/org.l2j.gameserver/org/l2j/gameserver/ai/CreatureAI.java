@@ -34,18 +34,18 @@ import static org.l2j.gameserver.ai.CtrlIntention.*;
 
 /**
  * This class manages AI of Creature.<br>
- * L2CharacterAI :
+ * CreatureAI :
  * <ul>
- * <li>L2AttackableAI</li>
- * <li>L2DoorAI</li>
- * <li>L2PlayerAI</li>
- * <li>L2SummonAI</li>
+ * <li>AttackableAI</li>
+ * <li>DoorAI</li>
+ * <li>PlayerAI</li>
+ * <li>SummonAI</li>
  * </ul>
  */
-public class L2CharacterAI extends AbstractAI {
-    private static final Logger LOGGER = LoggerFactory.getLogger(L2CharacterAI.class);
+public class CreatureAI extends AbstractAI {
+    private static final Logger LOGGER = LoggerFactory.getLogger(CreatureAI.class);
 
-    public L2CharacterAI(Creature creature) {
+    public CreatureAI(Creature creature) {
         super(creature);
     }
 
@@ -142,7 +142,7 @@ public class L2CharacterAI extends AbstractAI {
      * </ul>
      * <B><U> Overridden in</U> :</B>
      * <ul>
-     * <li>L2AttackableAI : Calculate attack timeout</li>
+     * <li>AttackableAI : Calculate attack timeout</li>
      * </ul>
      */
     @Override
@@ -432,7 +432,7 @@ public class L2CharacterAI extends AbstractAI {
      * <li>Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)</li>
      * <li>Break an attack and send Server->Client ActionFailed packet and a System Message to the Creature</li>
      * <li>Break a cast and send Server->Client ActionFailed packet and a System Message to the Creature</li>
-     * <li>Launch actions corresponding to the Event onAttacked (only for L2AttackableAI after the stunning periode)</li>
+     * <li>Launch actions corresponding to the Event onAttacked (only for AttackableAI after the stunning periode)</li>
      * </ul>
      */
     @Override
@@ -735,7 +735,7 @@ public class L2CharacterAI extends AbstractAI {
                 return true;
             }
 
-            if (!_actor.isRunning() && !(this instanceof L2PlayerAI) && !(this instanceof L2SummonAI)) {
+            if (!_actor.isRunning() && !(this instanceof PlayerAI) && !(this instanceof SummonAI)) {
                 _actor.setRunning();
             }
 
@@ -778,7 +778,7 @@ public class L2CharacterAI extends AbstractAI {
      * </ul>
      * <B><U> Example of use </U> :</B>
      * <ul>
-     * <li>L2PLayerAI, L2SummonAI</li>
+     * <li>L2PLayerAI, SummonAI</li>
      * </ul>
      *
      * @param target The targeted WorldObject
@@ -829,7 +829,7 @@ public class L2CharacterAI extends AbstractAI {
             }
 
             // If not running, set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player
-            if (!_actor.isRunning() && !(this instanceof L2PlayerAI) && !(this instanceof L2SummonAI)) {
+            if (!_actor.isRunning() && !(this instanceof PlayerAI) && !(this instanceof SummonAI)) {
                 _actor.setRunning();
             }
 
@@ -869,7 +869,7 @@ public class L2CharacterAI extends AbstractAI {
      * </ul>
      * <B><U> Example of use </U> :</B>
      * <ul>
-     * <li>L2PLayerAI, L2SummonAI</li>
+     * <li>L2PLayerAI, SummonAI</li>
      * </ul>
      *
      * @param target The targeted WorldObject
@@ -900,7 +900,7 @@ public class L2CharacterAI extends AbstractAI {
      * </ul>
      * <B><U> Example of use </U> :</B>
      * <ul>
-     * <li>L2PLayerAI, L2SummonAI</li>
+     * <li>L2PLayerAI, SummonAI</li>
      * </ul>
      *
      * @param target The targeted WorldObject

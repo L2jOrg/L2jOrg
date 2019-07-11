@@ -3,9 +3,9 @@ package org.l2j.gameserver.model.actor;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.ai.L2CharacterAI;
-import org.l2j.gameserver.ai.L2SummonAI;
+import org.l2j.gameserver.ai.SummonAI;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.InstanceType;
@@ -121,8 +121,8 @@ public abstract class Summon extends Playable {
     }
 
     @Override
-    protected L2CharacterAI initAI() {
-        return new L2SummonAI(this);
+    protected CreatureAI initAI() {
+        return new SummonAI(this);
     }
 
     @Override

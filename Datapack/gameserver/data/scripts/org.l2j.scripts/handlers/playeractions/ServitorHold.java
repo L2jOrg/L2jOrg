@@ -16,7 +16,7 @@
  */
 package handlers.playeractions;
 
-import org.l2j.gameserver.ai.L2SummonAI;
+import org.l2j.gameserver.ai.SummonAI;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -45,7 +45,7 @@ public final class ServitorHold implements IPlayerActionHandler
 				return;
 			}
 			
-			((L2SummonAI) s.getAI()).notifyFollowStatusChange();
+			((SummonAI) s.getAI()).notifyFollowStatusChange();
 		});
 	}
 }

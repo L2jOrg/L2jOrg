@@ -17,30 +17,25 @@
 package org.l2j.gameserver.ai;
 
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.Boat;
+import org.l2j.gameserver.model.actor.instance.AirShip;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.serverpackets.VehicleDeparture;
-import org.l2j.gameserver.network.serverpackets.VehicleInfo;
-import org.l2j.gameserver.network.serverpackets.VehicleStarted;
+import org.l2j.gameserver.network.serverpackets.ExMoveToLocationAirShip;
+import org.l2j.gameserver.network.serverpackets.ExStopMoveAirShip;
 
 /**
  * @author DS
  */
-public class L2BoatAI extends L2VehicleAI {
-    public L2BoatAI(Boat boat) {
-        super(boat);
+public class AirShipAI extends VehicleAI {
+    public AirShipAI(AirShip airShip) {
+        super(airShip);
     }
 
     @Override
     protected void moveTo(int x, int y, int z) {
         if (!_actor.isMovementDisabled()) {
-            if (!_clientMoving) {
-                _actor.broadcastPacket(new VehicleStarted(getActor(), 1));
-            }
-
             _clientMoving = true;
             _actor.moveToLocation(x, y, z, 0);
-            _actor.broadcastPacket(new VehicleDeparture(getActor()));
+            _actor.broadcastPacket(new ExMoveToLocationAirShip(getActor()));
         }
     }
 
@@ -52,20 +47,19 @@ public class L2BoatAI extends L2VehicleAI {
 
         if (_clientMoving || (loc != null)) {
             _clientMoving = false;
-            _actor.broadcastPacket(new VehicleStarted(getActor(), 0));
-            _actor.broadcastPacket(new VehicleInfo(getActor()));
+            _actor.broadcastPacket(new ExStopMoveAirShip(getActor()));
         }
     }
 
     @Override
     public void describeStateToPlayer(Player player) {
         if (_clientMoving) {
-            player.sendPacket(new VehicleDeparture(getActor()));
+            player.sendPacket(new ExMoveToLocationAirShip(getActor()));
         }
     }
 
     @Override
-    public Boat getActor() {
-        return (Boat) _actor;
+    public AirShip getActor() {
+        return (AirShip) _actor;
     }
 }

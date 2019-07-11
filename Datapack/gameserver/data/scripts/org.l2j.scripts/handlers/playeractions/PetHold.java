@@ -16,7 +16,7 @@
  */
 package handlers.playeractions;
 
-import org.l2j.gameserver.ai.L2SummonAI;
+import org.l2j.gameserver.ai.SummonAI;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
 import org.l2j.gameserver.model.actor.instance.Pet;
@@ -49,7 +49,7 @@ public final class PetHold implements IPlayerActionHandler
 		}
 		else
 		{
-			((L2SummonAI) pet.getAI()).notifyFollowStatusChange();
+			((SummonAI) pet.getAI()).notifyFollowStatusChange();
 		}
 	}
 }

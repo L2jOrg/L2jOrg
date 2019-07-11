@@ -16,7 +16,7 @@
  */
 package handlers.playeractions;
 
-import org.l2j.gameserver.ai.L2SummonAI;
+import org.l2j.gameserver.ai.SummonAI;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -49,7 +49,7 @@ public final class ServitorMode implements IPlayerActionHandler
 						return;
 					}
 					
-					((L2SummonAI) s.getAI()).setDefending(false);
+					((SummonAI) s.getAI()).setDefending(false);
 				});
 				break;
 			}
@@ -63,7 +63,7 @@ public final class ServitorMode implements IPlayerActionHandler
 						return;
 					}
 					
-					((L2SummonAI) s.getAI()).setDefending(true);
+					((SummonAI) s.getAI()).setDefending(true);
 				});
 			}
 		}

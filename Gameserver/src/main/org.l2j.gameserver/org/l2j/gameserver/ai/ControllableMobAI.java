@@ -25,7 +25,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
  *
  * @author littlecrow
  */
-public final class L2ControllableMobAI extends L2AttackableAI {
+public final class ControllableMobAI extends AttackableAI {
     public static final int AI_IDLE = 1;
     public static final int AI_NORMAL = 2;
     public static final int AI_FORCEATTACK = 3;
@@ -41,7 +41,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
     private Creature _forcedTarget;
     private MobGroup _targetGroup;
 
-    public L2ControllableMobAI(ControllableMob controllableMob) {
+    public ControllableMobAI(ControllableMob controllableMob) {
         super(controllableMob);
         setAlternateAI(AI_IDLE);
     }
@@ -154,7 +154,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
         setTarget(target);
         // as a response, we put the target in a forcedattack mode
         final ControllableMob theTarget = (ControllableMob) target;
-        final L2ControllableMobAI ctrlAi = (L2ControllableMobAI) theTarget.getAI();
+        final ControllableMobAI ctrlAi = (ControllableMobAI) theTarget.getAI();
         ctrlAi.forceAttack(_actor);
 
         final double dist2 = _actor.calculateDistanceSq2D(target);

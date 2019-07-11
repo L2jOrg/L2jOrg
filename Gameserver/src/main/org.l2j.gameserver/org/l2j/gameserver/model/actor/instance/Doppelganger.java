@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.actor.instance;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.DoppelgangerAI;
-import org.l2j.gameserver.ai.L2CharacterAI;
+import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
@@ -56,7 +56,7 @@ public class Doppelganger extends Npc {
     }
 
     @Override
-    protected L2CharacterAI initAI() {
+    protected CreatureAI initAI() {
         return new DoppelgangerAI(this);
     }
 

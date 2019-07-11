@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.ai.L2CharacterAI;
-import org.l2j.gameserver.ai.L2ControllableMobAI;
+import org.l2j.gameserver.ai.CreatureAI;
+import org.l2j.gameserver.ai.ControllableMobAI;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -45,8 +45,8 @@ public class ControllableMob extends Monster {
     }
 
     @Override
-    protected L2CharacterAI initAI() {
-        return new L2ControllableMobAI(this);
+    protected CreatureAI initAI() {
+        return new ControllableMobAI(this);
     }
 
     @Override

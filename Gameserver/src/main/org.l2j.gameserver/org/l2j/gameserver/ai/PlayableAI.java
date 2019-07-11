@@ -10,14 +10,14 @@ import org.l2j.gameserver.network.SystemMessageId;
 
 /**
  * This class manages AI of Playable.<br>
- * L2PlayableAI :
- * <li>L2SummonAI</li>
- * <li>L2PlayerAI</li>
+ * PlayableAI :
+ * <li>SummonAI</li>
+ * <li>PlayerAI</li>
  *
  * @author JIV
  */
-public abstract class L2PlayableAI extends L2CharacterAI {
-    public L2PlayableAI(Playable playable) {
+public abstract class PlayableAI extends CreatureAI {
+    public PlayableAI(Playable playable) {
         super(playable);
     }
 
