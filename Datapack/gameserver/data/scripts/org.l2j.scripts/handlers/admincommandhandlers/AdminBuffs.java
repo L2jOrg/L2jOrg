@@ -20,7 +20,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -106,7 +106,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			if (st.hasMoreTokens())
 			{
 				final String playername = st.nextToken();
-				final Player player = L2World.getInstance().getPlayer(playername);
+				final Player player = World.getInstance().getPlayer(playername);
 				if (player != null)
 				{
 					int page = 0;
@@ -194,7 +194,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			{
 				final int radius = Integer.parseInt(val);
 				
-				L2World.getInstance().forEachVisibleObjectInRange(activeChar, Player.class, radius, Creature::stopAllEffects);
+				World.getInstance().forEachVisibleObjectInRange(activeChar, Player.class, radius, Creature::stopAllEffects);
 				
 				BuilderUtil.sendSysMessage(activeChar, "All effects canceled within radius " + radius);
 				return true;
@@ -217,7 +217,7 @@ public class AdminBuffs implements IAdminCommandHandler
 				
 				try
 				{
-					player = L2World.getInstance().getPlayer(playername);
+					player = World.getInstance().getPlayer(playername);
 				}
 				catch (Exception e)
 				{
@@ -354,7 +354,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		Creature target = null;
 		try
 		{
-			target = (Creature) L2World.getInstance().findObject(objId);
+			target = (Creature) World.getInstance().findObject(objId);
 		}
 		catch (Exception e)
 		{
@@ -381,7 +381,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		Creature target = null;
 		try
 		{
-			target = (Creature) L2World.getInstance().findObject(objId);
+			target = (Creature) World.getInstance().findObject(objId);
 		}
 		catch (Exception e)
 		{
@@ -404,7 +404,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		Creature target = null;
 		try
 		{
-			target = (Creature) L2World.getInstance().findObject(objId);
+			target = (Creature) World.getInstance().findObject(objId);
 		}
 		catch (Exception e)
 		{

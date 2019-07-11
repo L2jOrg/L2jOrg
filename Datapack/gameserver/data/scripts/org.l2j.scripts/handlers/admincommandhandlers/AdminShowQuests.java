@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.QuestType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
@@ -69,7 +69,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 		
 		if (cmdParams.length > 1)
 		{
-			target = L2World.getInstance().getPlayer(cmdParams[1]);
+			target = World.getInstance().getPlayer(cmdParams[1]);
 			if (cmdParams.length > 2)
 			{
 				if (cmdParams[2].equals("0"))

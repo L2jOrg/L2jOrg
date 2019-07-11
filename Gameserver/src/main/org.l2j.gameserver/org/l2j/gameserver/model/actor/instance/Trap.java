@@ -4,7 +4,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TrapAction;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.tasks.npc.trap.TrapTask;
@@ -70,7 +70,7 @@ public final class Trap extends Npc {
 
     @Override
     public void broadcastPacket(ServerPacket mov) {
-        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
+        World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (_isTriggered || canBeSeen(player)) {
                 player.sendPacket(mov);
@@ -80,7 +80,7 @@ public final class Trap extends Npc {
 
     @Override
     public void broadcastPacket(ServerPacket mov, int radiusInKnownlist) {
-        L2World.getInstance().forEachVisibleObjectInRange(this, Player.class, radiusInKnownlist, player ->
+        World.getInstance().forEachVisibleObjectInRange(this, Player.class, radiusInKnownlist, player ->
         {
             if (_isTriggered || canBeSeen(player)) {
                 player.sendPacket(mov);

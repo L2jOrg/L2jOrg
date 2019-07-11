@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.instancemanager.MailManager;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -62,7 +62,7 @@ public final class RequestRejectPostAttachment extends ClientPacket {
         client.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_RETURNED);
         client.sendPacket(new ExChangePostState(true, _msgId, Message.REJECTED));
 
-        final Player sender = L2World.getInstance().getPlayer(msg.getSenderId());
+        final Player sender = World.getInstance().getPlayer(msg.getSenderId());
         if (sender != null) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_RETURNED_THE_MAIL);
             sm.addString(activeChar.getName());

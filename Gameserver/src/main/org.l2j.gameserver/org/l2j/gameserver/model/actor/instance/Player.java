@@ -137,7 +137,7 @@ public final class Player extends Playable {
 
         getAI();
 
-        radar = new L2Radar(this);
+        radar = new Radar(this);
 
         for (int i = 0; i < htmlActionCaches.length; ++i) {
             htmlActionCaches[i] = new LinkedList<>();
@@ -307,7 +307,7 @@ public final class Player extends Playable {
     // Unchecked
 
     // TODO: This needs to be better integrated and saved/loaded
-    private final L2Radar radar;
+    private final Radar radar;
 
     public static final int ID_NONE = -1;
     public static final int REQUEST_TIMEOUT = 15;
@@ -372,14 +372,14 @@ public final class Player extends Playable {
     private final ContactList _contactList = new ContactList(this);
     private final Map<Integer, TeleportBookmark> _tpbookmarks = new ConcurrentSkipListMap<>();
     /**
-     * The table containing all L2RecipeList of the Player
+     * The table containing all RecipeList of the Player
      */
-    private final Map<Integer, L2RecipeList> _dwarvenRecipeBook = new ConcurrentSkipListMap<>();
-    private final Map<Integer, L2RecipeList> _commonRecipeBook = new ConcurrentSkipListMap<>();
+    private final Map<Integer, RecipeList> _dwarvenRecipeBook = new ConcurrentSkipListMap<>();
+    private final Map<Integer, RecipeList> _commonRecipeBook = new ConcurrentSkipListMap<>();
     /**
      * Premium Items
      */
-    private final Map<Integer, L2PremiumItem> _premiumItems = new ConcurrentSkipListMap<>();
+    private final Map<Integer, PremiumItem> _premiumItems = new ConcurrentSkipListMap<>();
     /**
      * Stored from last ValidatePosition
      **/
@@ -409,7 +409,7 @@ public final class Player extends Playable {
     // client radar
     // charges
     private final AtomicInteger _charges = new AtomicInteger();
-    private final L2Request _request = new L2Request(this);
+    private final Request _request = new Request(this);
     private final Map<Integer, String> _chars = new ConcurrentSkipListMap<>();
     /**
      * Player's cubics.
@@ -463,8 +463,8 @@ public final class Player extends Playable {
      * data for mounted pets
      */
     private int _controlItemId;
-    private L2PetData _data;
-    private L2PetLevelData _leveldata;
+    private PetData _data;
+    private PetLevelData _leveldata;
     private int _curFeed;
     private ScheduledFuture<?> _dismountTask;
     private boolean _petItems = false;
@@ -929,7 +929,7 @@ public final class Player extends Playable {
             }
 
             // Restore pet if exists in the world
-            player.setPet(L2World.getInstance().getPet(player.getObjectId()));
+            player.setPet(World.getInstance().getPet(player.getObjectId()));
             final Summon pet = player.getPet();
             if (pet != null) {
                 pet.setOwner(player);
@@ -1252,26 +1252,26 @@ public final class Player extends Playable {
     }
 
     /**
-     * @return a table containing all Common L2RecipeList of the Player.
+     * @return a table containing all Common RecipeList of the Player.
      */
-    public L2RecipeList[] getCommonRecipeBook() {
-        return _commonRecipeBook.values().toArray(new L2RecipeList[_commonRecipeBook.values().size()]);
+    public RecipeList[] getCommonRecipeBook() {
+        return _commonRecipeBook.values().toArray(new RecipeList[_commonRecipeBook.values().size()]);
     }
 
     /**
-     * @return a table containing all Dwarf L2RecipeList of the Player.
+     * @return a table containing all Dwarf RecipeList of the Player.
      */
-    public L2RecipeList[] getDwarvenRecipeBook() {
-        return _dwarvenRecipeBook.values().toArray(new L2RecipeList[_dwarvenRecipeBook.values().size()]);
+    public RecipeList[] getDwarvenRecipeBook() {
+        return _dwarvenRecipeBook.values().toArray(new RecipeList[_dwarvenRecipeBook.values().size()]);
     }
 
     /**
-     * Add a new L2RecipList to the table _commonrecipebook containing all L2RecipeList of the Player
+     * Add a new L2RecipList to the table _commonrecipebook containing all RecipeList of the Player
      *
-     * @param recipe   The L2RecipeList to add to the _recipebook
+     * @param recipe   The RecipeList to add to the _recipebook
      * @param saveToDb
      */
-    public void registerCommonRecipeList(L2RecipeList recipe, boolean saveToDb) {
+    public void registerCommonRecipeList(RecipeList recipe, boolean saveToDb) {
         _commonRecipeBook.put(recipe.getId(), recipe);
 
         if (saveToDb) {
@@ -1280,12 +1280,12 @@ public final class Player extends Playable {
     }
 
     /**
-     * Add a new L2RecipList to the table _recipebook containing all L2RecipeList of the Player
+     * Add a new L2RecipList to the table _recipebook containing all RecipeList of the Player
      *
-     * @param recipe   The L2RecipeList to add to the _recipebook
+     * @param recipe   The RecipeList to add to the _recipebook
      * @param saveToDb
      */
-    public void registerDwarvenRecipeList(L2RecipeList recipe, boolean saveToDb) {
+    public void registerDwarvenRecipeList(RecipeList recipe, boolean saveToDb) {
         _dwarvenRecipeBook.put(recipe.getId(), recipe);
 
         if (saveToDb) {
@@ -1294,7 +1294,7 @@ public final class Player extends Playable {
     }
 
     /**
-     * @param recipeId The Identifier of the L2RecipeList to check in the player's recipe books
+     * @param recipeId The Identifier of the RecipeList to check in the player's recipe books
      * @return {@code true}if player has the recipe on Common or Dwarven Recipe book else returns {@code false}
      */
     public boolean hasRecipeList(int recipeId) {
@@ -1302,9 +1302,9 @@ public final class Player extends Playable {
     }
 
     /**
-     * Tries to remove a L2RecipList from the table _DwarvenRecipeBook or from table _CommonRecipeBook, those table contain all L2RecipeList of the Player
+     * Tries to remove a L2RecipList from the table _DwarvenRecipeBook or from table _CommonRecipeBook, those table contain all RecipeList of the Player
      *
-     * @param recipeId The Identifier of the L2RecipeList to remove from the _recipebook
+     * @param recipeId The Identifier of the RecipeList to remove from the _recipebook
      */
     public void unregisterRecipeList(int recipeId) {
         if (_dwarvenRecipeBook.remove(recipeId) != null) {
@@ -1434,7 +1434,7 @@ public final class Player extends Playable {
         if ((target != null) && isInsideRadius2D(target, Npc.INTERACTION_DISTANCE)) {
             quest.notifyEvent(event, target, this);
         } else if (_questNpcObject > 0) {
-            final WorldObject object = L2World.getInstance().findObject(getLastQuestNpcObject());
+            final WorldObject object = World.getInstance().findObject(getLastQuestNpcObject());
 
             if (object.isNpc() && isInsideRadius2D(object, Npc.INTERACTION_DISTANCE)) {
                 final Npc npc = (Npc) object;
@@ -1636,7 +1636,7 @@ public final class Player extends Playable {
             sendPacket(rc);
         }
 
-        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
+        World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (!isVisibleFor(player)) {
                 return;
@@ -1846,7 +1846,7 @@ public final class Player extends Playable {
         }
 
         if ((getReputation() >= 0) && (reputation < 0)) {
-            L2World.getInstance().forEachVisibleObject(this, Guard.class, object ->
+            World.getInstance().forEachVisibleObject(this, Guard.class, object ->
             {
                 if (object.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE) {
                     object.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
@@ -2372,10 +2372,10 @@ public final class Player extends Playable {
      */
     public void giveAvailableAutoGetSkills() {
         // Get available skills
-        final List<L2SkillLearn> autoGetSkills = SkillTreesData.getInstance().getAvailableAutoGetSkills(this);
+        final List<SkillLearn> autoGetSkills = SkillTreesData.getInstance().getAvailableAutoGetSkills(this);
         final SkillData st = SkillData.getInstance();
         Skill skill;
-        for (L2SkillLearn s : autoGetSkills) {
+        for (SkillLearn s : autoGetSkills) {
             skill = st.getSkill(s.getSkillId(), s.getSkillLevel());
             if (skill != null) {
                 addSkill(skill, true);
@@ -2396,7 +2396,7 @@ public final class Player extends Playable {
         return PlayerTemplateData.getInstance().getTemplate(_baseClass).getRace();
     }
 
-    public L2Radar getRadar() {
+    public Radar getRadar() {
         return radar;
     }
 
@@ -3356,9 +3356,9 @@ public final class Player extends Playable {
     }
 
     public Item checkItemManipulation(int objectId, long count, String action) {
-        // TODO: if we remove objects that are not visible from the L2World, we'll have to remove this check
-        if (L2World.getInstance().findObject(objectId) == null) {
-            LOGGER.debug(getObjectId() + ": player tried to " + action + " item not available in L2World");
+        // TODO: if we remove objects that are not visible from the World, we'll have to remove this check
+        if (World.getInstance().findObject(objectId) == null) {
+            LOGGER.debug(getObjectId() + ": player tried to " + action + " item not available in World");
             return null;
         }
 
@@ -3611,7 +3611,7 @@ public final class Player extends Playable {
 
     public final void broadcastCharInfo() {
         final CharInfo charInfo = new CharInfo(this, false);
-        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
+        World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (isVisibleFor(player)) {
                 if (isInvisible() && player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)) {
@@ -3660,7 +3660,7 @@ public final class Player extends Playable {
 
         sendPacket(mov);
 
-        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
+        World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (!isVisibleFor(player)) {
                 return;
@@ -3678,7 +3678,7 @@ public final class Player extends Playable {
 
         sendPacket(mov);
 
-        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
+        World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (!isVisibleFor(player) || (calculateDistance3D(player) >= radiusInKnownlist)) {
                 return;
@@ -3965,7 +3965,7 @@ public final class Player extends Playable {
 
     public boolean canOpenPrivateStore() {
         if ((Config.SHOP_MIN_RANGE_FROM_NPC > 0) || (Config.SHOP_MIN_RANGE_FROM_PLAYER > 0)) {
-            for (Creature cha : L2World.getInstance().getVisibleObjectsInRange(this, Creature.class, 1000)) {
+            for (Creature cha : World.getInstance().getVisibleObjectsInRange(this, Creature.class, 1000)) {
                 if (GameUtils.checkIfInRange(cha.getMinShopDistance(), this, cha, true)) {
                     sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE));
                     return false;
@@ -4737,7 +4737,7 @@ public final class Player extends Playable {
     /**
      * @return the Player requester of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).
      */
-    public L2Request getRequest() {
+    public Request getRequest() {
         return _request;
     }
 
@@ -5476,7 +5476,7 @@ public final class Player extends Playable {
     public void broadcastReputation() {
         broadcastUserInfo(UserInfoType.SOCIAL);
 
-        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
+        World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (!isVisibleFor(player)) {
                 return;
@@ -5696,7 +5696,7 @@ public final class Player extends Playable {
             try (ResultSet rset = statement.executeQuery()) {
                 _dwarvenRecipeBook.clear();
 
-                L2RecipeList recipe;
+                RecipeList recipe;
                 final RecipeData rd = RecipeData.getInstance();
                 while (rset.next()) {
                     recipe = rd.getRecipeList(rset.getInt("id"));
@@ -5718,7 +5718,7 @@ public final class Player extends Playable {
         }
     }
 
-    public Map<Integer, L2PremiumItem> getPremiumItemList() {
+    public Map<Integer, PremiumItem> getPremiumItemList() {
         return _premiumItems;
     }
 
@@ -5733,7 +5733,7 @@ public final class Player extends Playable {
                     final int itemId = rset.getInt("itemId");
                     final long itemCount = rset.getLong("itemCount");
                     final String itemSender = rset.getString("itemSender");
-                    _premiumItems.put(itemNum, new L2PremiumItem(itemId, itemCount, itemSender));
+                    _premiumItems.put(itemNum, new PremiumItem(itemId, itemCount, itemSender));
                 }
             }
         } catch (Exception e) {
@@ -6988,7 +6988,7 @@ public final class Player extends Playable {
     }
 
     public boolean isInLooterParty(int LooterId) {
-        final Player looter = L2World.getInstance().getPlayer(LooterId);
+        final Player looter = World.getInstance().getPlayer(LooterId);
 
         // if Player is in a CommandChannel
         if (isInParty() && _party.isInCommandChannel() && (looter != null)) {
@@ -7876,7 +7876,7 @@ public final class Player extends Playable {
             final ClassId subTemplate = ClassId.getClassId(classId);
             final var skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(subTemplate);
             final Map<Integer, Skill> prevSkillList = new HashMap<>();
-            for (L2SkillLearn skillInfo : skillTree.values()) {
+            for (SkillLearn skillInfo : skillTree.values()) {
                 if (skillInfo.getGetLevel() <= newClass.getLevel()) {
                     final Skill prevSkill = prevSkillList.get(skillInfo.getSkillId());
                     final Skill newSkill = SkillData.getInstance().getSkill(skillInfo.getSkillId(), skillInfo.getSkillLevel());
@@ -9597,14 +9597,14 @@ public final class Player extends Playable {
         _data = null;
     }
 
-    public final L2PetData getPetData(int npcId) {
+    public final PetData getPetData(int npcId) {
         if (_data == null) {
             _data = PetDataTable.getInstance().getPetData(npcId);
         }
         return _data;
     }
 
-    private L2PetLevelData getPetLevelData(int npcId) {
+    private PetLevelData getPetLevelData(int npcId) {
         if (_leveldata == null) {
             _leveldata = PetDataTable.getInstance().getPetData(npcId).getPetLevelData(getMountLevel());
         }
@@ -10090,7 +10090,7 @@ public final class Player extends Playable {
     public void notifyFriends(int type) {
         final FriendStatus pkt = new FriendStatus(this, type);
         for (int id : _friendList) {
-            final Player friend = L2World.getInstance().getPlayer(id);
+            final Player friend = World.getInstance().getPlayer(id);
             if (friend != null) {
                 friend.sendPacket(pkt);
             }
@@ -10379,7 +10379,7 @@ public final class Player extends Playable {
      * Check all player skills for skill level. If player level is lower than skill learn level - 9, skill level is decreased to next possible level.
      */
     public void checkPlayerSkills() {
-        L2SkillLearn learn;
+        SkillLearn learn;
         for (Entry<Integer, Skill> e : getSkills().entrySet()) {
             learn = SkillTreesData.getInstance().getClassSkill(e.getKey(), e.getValue().getLevel() % 100, getClassId());
             if (learn != null) {
@@ -10394,7 +10394,7 @@ public final class Player extends Playable {
     private void deacreaseSkillLevel(Skill skill, int lvlDiff) {
         int nextLevel = -1;
         final var skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(getClassId());
-        for (L2SkillLearn sl : skillTree.values()) {
+        for (SkillLearn sl : skillTree.values()) {
             if ((sl.getSkillId() == skill.getId()) && (nextLevel < sl.getSkillLevel()) && (getLevel() >= (sl.getGetLevel() - lvlDiff))) {
                 nextLevel = sl.getSkillLevel(); // next possible skill level
             }

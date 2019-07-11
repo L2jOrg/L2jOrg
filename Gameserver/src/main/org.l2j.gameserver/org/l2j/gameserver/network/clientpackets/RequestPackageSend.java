@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -149,8 +149,8 @@ public class RequestPackageSend extends ClientPacket {
             }
 
             // Remove item objects from the world.
-            L2World.getInstance().removeObject(oldItem);
-            L2World.getInstance().removeObject(newItem);
+            World.getInstance().removeObject(oldItem);
+            World.getInstance().removeObject(newItem);
         }
 
         warehouse.deleteMe();

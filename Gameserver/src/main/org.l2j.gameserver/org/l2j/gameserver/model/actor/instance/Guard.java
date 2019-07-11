@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -45,7 +45,7 @@ public class Guard extends Attackable {
         super.addDamage(attacker, damage, skill);
         getAI().startFollow(attacker);
         addDamageHate(attacker, 0, 10);
-        L2World.getInstance().forEachVisibleObjectInRange(this, Guard.class, 500, guard ->
+        World.getInstance().forEachVisibleObjectInRange(this, Guard.class, 500, guard ->
         {
             guard.getAI().startFollow(attacker);
             guard.addDamageHate(attacker, 0, 10);
@@ -61,7 +61,7 @@ public class Guard extends Attackable {
         setRandomWalking(getTemplate().isRandomWalkEnabled());
         getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
         // check the region where this mob is, do not activate the AI if region is inactive.
-        // final L2WorldRegion region = L2World.getInstance().getRegion(this);
+        // final WorldRegion region = World.getInstance().getRegion(this);
         // if ((region != null) && (!region.isActive()))
         // {
         // getAI().stopAITask();

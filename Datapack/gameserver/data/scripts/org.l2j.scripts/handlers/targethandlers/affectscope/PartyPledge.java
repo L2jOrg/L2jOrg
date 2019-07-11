@@ -25,7 +25,7 @@ import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Party;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -90,7 +90,7 @@ public class PartyPledge implements IAffectScopeHandler
 			}
 			
 			// Check and add targets.
-			L2World.getInstance().forEachVisibleObjectInRange(playable, Playable.class, affectRange, c ->
+			World.getInstance().forEachVisibleObjectInRange(playable, Playable.class, affectRange, c ->
 			{
 				if (filter.test(c))
 				{

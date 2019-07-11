@@ -1,7 +1,7 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.VehiclePathPoint;
 import org.l2j.gameserver.model.actor.instance.Boat;
@@ -140,7 +140,7 @@ public class BoatManager {
     }
 
     private void broadcastPacketsToPlayers(VehiclePathPoint point1, VehiclePathPoint point2, ServerPacket... packets) {
-        for (Player player : L2World.getInstance().getPlayers()) {
+        for (Player player : World.getInstance().getPlayers()) {
             if (Math.hypot(player.getX() - point1.getX(), player.getY() - point1.getY()) < Config.BOAT_BROADCAST_RADIUS) {
                 for (ServerPacket p : packets) {
                     player.sendPacket(p);

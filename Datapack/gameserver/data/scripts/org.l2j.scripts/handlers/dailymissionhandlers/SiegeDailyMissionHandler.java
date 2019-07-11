@@ -3,7 +3,7 @@ package handlers.dailymissionhandlers;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.L2SiegeClan;
+import org.l2j.gameserver.model.SiegeClan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
@@ -42,7 +42,7 @@ public class SiegeDailyMissionHandler extends AbstractDailyMissionHandler {
 		event.getSiege().getDefenderClans().forEach(this::processSiegeClan);
 	}
 	
-	private void processSiegeClan(L2SiegeClan siegeClan)
+	private void processSiegeClan(SiegeClan siegeClan)
 	{
 		final Clan clan = ClanTable.getInstance().getClan(siegeClan.getClanId());
 		if (clan != null)

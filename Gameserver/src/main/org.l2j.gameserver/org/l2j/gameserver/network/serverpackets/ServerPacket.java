@@ -95,7 +95,7 @@ public abstract class ServerPacket extends WritablePacket<GameClient> {
 
     /**
      * Sends this packet to the target player, useful for lambda operations like <br>
-     * {@code L2World.getInstance().getPlayers().forEach(packet::sendTo)}
+     * {@code World.getInstance().getPlayers().forEach(packet::sendTo)}
      *
      * @param player to send the packet
      */

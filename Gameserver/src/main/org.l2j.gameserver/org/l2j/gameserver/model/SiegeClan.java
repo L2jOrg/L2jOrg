@@ -22,12 +22,12 @@ import org.l2j.gameserver.model.actor.Npc;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class L2SiegeClan {
+public class SiegeClan {
     private final Set<Npc> _flags = ConcurrentHashMap.newKeySet();
     private int _clanId = 0;
     private SiegeClanType _type;
 
-    public L2SiegeClan(int clanId, SiegeClanType type) {
+    public SiegeClan(int clanId, SiegeClanType type) {
         _clanId = clanId;
         _type = type;
     }

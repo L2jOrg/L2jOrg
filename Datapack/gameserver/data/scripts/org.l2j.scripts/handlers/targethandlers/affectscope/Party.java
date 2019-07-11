@@ -24,7 +24,7 @@ import org.l2j.gameserver.handler.AffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Playable;
@@ -95,7 +95,7 @@ public class Party implements IAffectScopeHandler
 			}
 			
 			// Check and add targets.
-			L2World.getInstance().forEachVisibleObjectInRange(target, Playable.class, affectRange, c ->
+			World.getInstance().forEachVisibleObjectInRange(target, Playable.class, affectRange, c ->
 			{
 				if (filter.test(c))
 				{
@@ -139,7 +139,7 @@ public class Party implements IAffectScopeHandler
 			}
 			
 			// Check and add targets.
-			L2World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, affectRange, n ->
+			World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, affectRange, n ->
 			{
 				if (n == activeChar)
 				{

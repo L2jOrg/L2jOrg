@@ -37,7 +37,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     /**
      * World Region
      */
-    private L2WorldRegion _worldRegion;
+    private WorldRegion _worldRegion;
     /**
      * Instance type
      */
@@ -133,13 +133,13 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     @Override
     public boolean decayMe() {
         _isSpawned = false;
-        L2World.getInstance().removeVisibleObject(this, _worldRegion);
-        L2World.getInstance().removeObject(this);
+        World.getInstance().removeVisibleObject(this, _worldRegion);
+        World.getInstance().removeObject(this);
         return true;
     }
 
     public void refreshID() {
-        L2World.getInstance().removeObject(this);
+        World.getInstance().removeObject(this);
         IdFactory.getInstance().releaseId(getObjectId());
         _objectId = IdFactory.getInstance().getNextId();
     }
@@ -149,18 +149,18 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
         synchronized (this) {
             // Set the x,y,z position of the WorldObject spawn and update its _worldregion
             _isSpawned = true;
-            setWorldRegion(L2World.getInstance().getRegion(this));
+            setWorldRegion(World.getInstance().getRegion(this));
 
-            // Add the WorldObject spawn in the _allobjects of L2World
-            L2World.getInstance().addObject(this);
+            // Add the WorldObject spawn in the _allobjects of World
+            World.getInstance().addObject(this);
 
-            // Add the WorldObject spawn to _visibleObjects and if necessary to _allplayers of its L2WorldRegion
+            // Add the WorldObject spawn to _visibleObjects and if necessary to _allplayers of its WorldRegion
             _worldRegion.addVisibleObject(this);
         }
 
         // this can synchronize on others instances, so it's out of synchronized, to avoid deadlocks
         // Add the WorldObject spawn in the world as a visible object
-        L2World.getInstance().addVisibleObject(this, getWorldRegion());
+        World.getInstance().addVisibleObject(this, getWorldRegion());
 
         onSpawn();
 
@@ -359,7 +359,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
         if (_isTargetable != targetable) {
             _isTargetable = targetable;
             if (!targetable) {
-                L2World.getInstance().getVisibleObjects(this, Creature.class, creature -> this == creature.getTarget()).forEach(creature ->
+                World.getInstance().getVisibleObjects(this, Creature.class, creature -> this == creature.getTarget()).forEach(creature ->
                 {
                     creature.setTarget(null);
                     creature.abortAttack();
@@ -436,11 +436,11 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
         setXYZInvisible(loc.getX(), loc.getY(), loc.getZ());
     }
 
-    public final L2WorldRegion getWorldRegion() {
+    public final WorldRegion getWorldRegion() {
         return _worldRegion;
     }
 
-    public void setWorldRegion(L2WorldRegion value) {
+    public void setWorldRegion(WorldRegion value) {
         _worldRegion = value;
     }
 
@@ -554,30 +554,30 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      */
     @Override
     public void setXYZ(int x, int y, int z) {
-        if (x > L2World.MAP_MAX_X) {
-            x = L2World.MAP_MAX_X - 5000;
+        if (x > World.MAP_MAX_X) {
+            x = World.MAP_MAX_X - 5000;
         }
-        if (x < L2World.MAP_MIN_X) {
-            x = L2World.MAP_MIN_X + 5000;
+        if (x < World.MAP_MIN_X) {
+            x = World.MAP_MIN_X + 5000;
         }
-        if (y > L2World.MAP_MAX_Y) {
-            y = L2World.MAP_MAX_Y - 5000;
+        if (y > World.MAP_MAX_Y) {
+            y = World.MAP_MAX_Y - 5000;
         }
-        if (y < L2World.MAP_MIN_Y) {
-            y = L2World.MAP_MIN_Y + 5000;
+        if (y < World.MAP_MIN_Y) {
+            y = World.MAP_MIN_Y + 5000;
         }
         _x = x;
         _y = y;
         _z = z;
 
         if (_isSpawned) {
-            final L2WorldRegion newRegion = L2World.getInstance().getRegion(this);
+            final WorldRegion newRegion = World.getInstance().getRegion(this);
             if ((newRegion != null) && (newRegion != _worldRegion)) {
                 if (_worldRegion != null) {
                     _worldRegion.removeVisibleObject(this);
                 }
                 newRegion.addVisibleObject(this);
-                L2World.getInstance().switchRegion(this, newRegion);
+                World.getInstance().switchRegion(this, newRegion);
                 setWorldRegion(newRegion);
             }
         }
@@ -751,7 +751,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
         _isInvisible = invis;
         if (invis) {
             final DeleteObject deletePacket = new DeleteObject(this);
-            L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
+            World.getInstance().forEachVisibleObject(this, Player.class, player ->
             {
                 if (!isVisibleFor(player)) {
                     player.sendPacket(deletePacket);
@@ -775,7 +775,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * Broadcasts describing info to known players.
      */
     public void broadcastInfo() {
-        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
+        World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (isVisibleFor(player)) {
                 sendInfo(player);
@@ -792,7 +792,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
             return false;
         }
 
-        final L2WorldRegion worldRegion = worldObject.getWorldRegion();
+        final WorldRegion worldRegion = worldObject.getWorldRegion();
         if (worldRegion == null) {
             return false;
         }

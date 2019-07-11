@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -60,7 +60,7 @@ public final class TransferHate extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		L2World.getInstance().forEachVisibleObjectInRange(effector, Attackable.class, skill.getAffectRange(), hater ->
+		World.getInstance().forEachVisibleObjectInRange(effector, Attackable.class, skill.getAffectRange(), hater ->
 		{
 			if (hater.isDead())
 			{

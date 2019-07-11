@@ -23,7 +23,6 @@ import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2Seed;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Chest;
 import org.l2j.gameserver.model.actor.instance.Monster;
@@ -76,7 +75,7 @@ public class Seed implements IItemHandler
 			return false;
 		}
 		
-		final L2Seed seed = CastleManorManager.getInstance().getSeed(item.getId());
+		final org.l2j.gameserver.model.Seed seed = CastleManorManager.getInstance().getSeed(item.getId());
 		if (seed == null)
 		{
 			return false;

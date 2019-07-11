@@ -22,7 +22,7 @@ import java.util.List;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -70,7 +70,7 @@ public final class Confuse extends AbstractEffect
 		final List<Creature> targetList = new ArrayList<>();
 		// Getting the possible targets
 		
-		L2World.getInstance().forEachVisibleObject(effected, Creature.class, targetList::add);
+		World.getInstance().forEachVisibleObject(effected, Creature.class, targetList::add);
 		
 		// if there is no target, exit function
 		if (!targetList.isEmpty())

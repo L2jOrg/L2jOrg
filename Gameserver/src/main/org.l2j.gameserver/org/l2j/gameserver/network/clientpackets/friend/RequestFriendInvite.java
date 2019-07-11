@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.friend;
 
 import org.l2j.gameserver.model.BlockList;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -31,7 +31,7 @@ public final class RequestFriendInvite extends ClientPacket {
             return;
         }
 
-        final Player friend = L2World.getInstance().getPlayer(_name);
+        final Player friend = World.getInstance().getPlayer(_name);
 
         // Target is not found in the game.
         if ((friend == null) || !friend.isOnline() || friend.isInvisible()) {

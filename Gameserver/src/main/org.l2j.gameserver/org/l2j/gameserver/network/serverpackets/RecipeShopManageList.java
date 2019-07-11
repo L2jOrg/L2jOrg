@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.ManufactureItem;
-import org.l2j.gameserver.model.L2RecipeList;
+import org.l2j.gameserver.model.RecipeList;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -11,7 +11,7 @@ import java.util.Iterator;
 public class RecipeShopManageList extends ServerPacket {
     private final Player _seller;
     private final boolean _isDwarven;
-    private L2RecipeList[] _recipes;
+    private RecipeList[] _recipes;
 
     public RecipeShopManageList(Player seller, boolean isDwarven) {
         _seller = seller;
@@ -49,7 +49,7 @@ public class RecipeShopManageList extends ServerPacket {
             writeInt(_recipes.length); // number of items in recipe book
 
             for (int i = 0; i < _recipes.length; i++) {
-                final L2RecipeList temp = _recipes[i];
+                final RecipeList temp = _recipes[i];
                 writeInt(temp.getId());
                 writeInt(i + 1);
             }

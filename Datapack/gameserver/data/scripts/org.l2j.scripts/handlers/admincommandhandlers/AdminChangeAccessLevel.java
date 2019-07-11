@@ -24,8 +24,8 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.AccessLevel;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -69,7 +69,7 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 		{
 			final String name = parts[1];
 			final int lvl = Integer.parseInt(parts[2]);
-			final Player player = L2World.getInstance().getPlayer(name);
+			final Player player = World.getInstance().getPlayer(name);
 			if (player != null)
 			{
 				onlineChange(activeChar, player, lvl);

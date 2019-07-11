@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.instancemanager.CastleManorManager;
-import org.l2j.gameserver.model.L2Seed;
+import org.l2j.gameserver.model.Seed;
 import org.l2j.gameserver.model.SeedProduction;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -42,7 +42,7 @@ public class ExShowSeedInfo extends ServerPacket {
             writeLong(seed.getAmount()); // Left to buy
             writeLong(seed.getStartAmount()); // Started amount
             writeLong(seed.getPrice()); // Sell Price
-            final L2Seed s = CastleManorManager.getInstance().getSeed(seed.getId());
+            final Seed s = CastleManorManager.getInstance().getSeed(seed.getId());
             if (s == null) {
                 writeInt(0); // Seed level
                 writeByte((byte) 0x01); // Reward 1

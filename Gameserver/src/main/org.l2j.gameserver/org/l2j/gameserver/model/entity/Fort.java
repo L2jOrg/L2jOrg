@@ -15,7 +15,7 @@ import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
@@ -535,7 +535,7 @@ public final class Fort extends AbstractResidence {
                 sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_VICTORIOUS_IN_THE_FORTRESS_BATTLE_OF_S2);
                 sm.addString(clan.getName());
                 sm.addCastleId(getResidenceId());
-                L2World.getInstance().getPlayers().forEach(p -> p.sendPacket(sm));
+                World.getInstance().getPlayers().forEach(p -> p.sendPacket(sm));
                 clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
                 clan.broadcastToOnlineMembers(new PlaySound(1, "Siege_Victory", 0, 0, 0, 0, 0));
                 if (_FortUpdater[0] != null) {

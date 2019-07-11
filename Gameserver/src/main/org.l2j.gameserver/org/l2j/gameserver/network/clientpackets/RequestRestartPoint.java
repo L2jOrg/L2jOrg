@@ -6,7 +6,7 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.L2SiegeClan;
+import org.l2j.gameserver.model.SiegeClan;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -157,7 +157,7 @@ public final class RequestRestartPoint extends ClientPacket {
             }
             case 4: // to siege HQ
             {
-                L2SiegeClan siegeClan = null;
+                SiegeClan siegeClan = null;
                 final Castle castle = CastleManager.getInstance().getCastle(activeChar);
                 final Fort fort = FortDataManager.getInstance().getFort(activeChar);
 

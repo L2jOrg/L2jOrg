@@ -6,7 +6,7 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.L2SiegeClan;
+import org.l2j.gameserver.model.SiegeClan;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Pet;
@@ -43,7 +43,7 @@ public class RegenHPFinalizer implements IStatsFunction {
             return 0;
         }
 
-        final L2SiegeClan siegeClan = siege.getAttackerClan(activeChar.getClan().getId());
+        final SiegeClan siegeClan = siege.getAttackerClan(activeChar.getClan().getId());
         if ((siegeClan == null) || siegeClan.getFlag().isEmpty() || !GameUtils.checkIfInRange(200, activeChar, siegeClan.getFlag().stream().findAny().get(), true)) {
             return 0;
         }

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.AskJoinPledge;
@@ -43,7 +43,7 @@ public final class RequestJoinPledge extends ClientPacket {
             return;
         }
 
-        final Player target = L2World.getInstance().getPlayer(_target);
+        final Player target = World.getInstance().getPlayer(_target);
         if (target == null) {
             activeChar.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
             return;

@@ -20,8 +20,8 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -189,7 +189,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "This item does not stack - Creation aborted.");
 				return false;
 			}
-			for (Player onlinePlayer : L2World.getInstance().getPlayers())
+			for (Player onlinePlayer : World.getInstance().getPlayers())
 			{
 				if ((activeChar != onlinePlayer) && onlinePlayer.isOnline() && ((onlinePlayer.getClient() != null) && !onlinePlayer.getClient().isDetached()))
 				{
@@ -219,11 +219,11 @@ public class AdminCreateItem implements IAdminCommandHandler
 				idval = Integer.parseInt(id);
 				numval = 1;
 			}
-			final Item item = (Item) L2World.getInstance().findObject(idval);
+			final Item item = (Item) World.getInstance().findObject(idval);
 			final int ownerId = item.getOwnerId();
 			if (ownerId > 0)
 			{
-				final Player player = L2World.getInstance().getPlayer(ownerId);
+				final Player player = World.getInstance().getPlayer(ownerId);
 				if (player == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Player is not online.");
@@ -249,11 +249,11 @@ public class AdminCreateItem implements IAdminCommandHandler
 		{
 			final String val = command.substring(15);
 			final int idval = Integer.parseInt(val);
-			final Item item = (Item) L2World.getInstance().findObject(idval);
+			final Item item = (Item) World.getInstance().findObject(idval);
 			final int ownerId = item.getOwnerId();
 			if (ownerId > 0)
 			{
-				final Player player = L2World.getInstance().getPlayer(ownerId);
+				final Player player = World.getInstance().getPlayer(ownerId);
 				if (player == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Player is not online.");

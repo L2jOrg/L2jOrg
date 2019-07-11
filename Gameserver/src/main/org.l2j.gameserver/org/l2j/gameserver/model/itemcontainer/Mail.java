@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.itemcontainer;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.enums.ItemLocation;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
 
@@ -102,7 +102,7 @@ public class Mail extends ItemContainer {
             try (ResultSet inv = statement.executeQuery()) {
                 while (inv.next()) {
                     final Item item = new Item(inv);
-                    L2World.getInstance().addObject(item);
+                    World.getInstance().addObject(item);
 
                     // If stackable item is found just add to current quantity
                     if (item.isStackable() && (getItemByItemId(item.getId()) != null)) {
@@ -122,7 +122,7 @@ public class Mail extends ItemContainer {
         for (Item item : _items.values()) {
             item.updateDatabase(true);
             item.deleteMe();
-            L2World.getInstance().removeObject(item);
+            World.getInstance().removeObject(item);
         }
 
         _items.clear();

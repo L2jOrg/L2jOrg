@@ -16,7 +16,7 @@ import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ClientHardwareInfoHolder;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
@@ -393,7 +393,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
             return null;
         }
 
-        Player player = L2World.getInstance().getPlayer(objectId);
+        Player player = World.getInstance().getPlayer(objectId);
         if (player != null) {
             // exploit prevention, should not happens in normal way
             if (player.isOnlineInt() == 1) {

@@ -6,7 +6,7 @@ import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.tasks.StartMovingTask;
 import org.l2j.gameserver.model.NpcWalkerNode;
-import org.l2j.gameserver.model.L2WalkRoute;
+import org.l2j.gameserver.model.WalkRoute;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WalkInfo;
 import org.l2j.gameserver.model.actor.Npc;
@@ -50,7 +50,7 @@ public final class WalkingManager extends GameXmlReader {
     public static final byte REPEAT_TELE_FIRST = 2;
     public static final byte REPEAT_RANDOM = 3;
     private static final Logger LOGGER = LoggerFactory.getLogger(WalkingManager.class);
-    private final Map<String, L2WalkRoute> _routes = new HashMap<>(); // all available routes
+    private final Map<String, WalkRoute> _routes = new HashMap<>(); // all available routes
     private final Map<Integer, WalkInfo> _activeRoutes = new HashMap<>(); // each record represents NPC, moving by predefined route from _routes, and moving progress
     private final Map<Integer, NpcRoutesHolder> _routesToAttach = new HashMap<>(); // each record represents NPC and all available routes for it
 
@@ -157,7 +157,7 @@ public final class WalkingManager extends GameXmlReader {
                         }
                     }
                 }
-                _routes.put(routeName, new L2WalkRoute(routeName, list, repeat, false, repeatType));
+                _routes.put(routeName, new WalkRoute(routeName, list, repeat, false, repeatType));
             }
         }
     }
@@ -188,7 +188,7 @@ public final class WalkingManager extends GameXmlReader {
         return true;
     }
 
-    public L2WalkRoute getRoute(String route) {
+    public WalkRoute getRoute(String route) {
         return _routes.get(route);
     }
 

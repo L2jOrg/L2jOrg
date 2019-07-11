@@ -22,7 +22,7 @@ import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2SkillLearn;
+import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
@@ -322,8 +322,8 @@ public class AdminSkill implements IAdminCommandHandler
 			activeChar.sendPacket(sm);
 		}
 		
-		final Map<Integer, L2SkillLearn> skills = SkillTreesData.getInstance().getMaxPledgeSkills(clan, includeSquad);
-		for (L2SkillLearn s : skills.values())
+		final Map<Integer, SkillLearn> skills = SkillTreesData.getInstance().getMaxPledgeSkills(clan, includeSquad);
+		for (SkillLearn s : skills.values())
 		{
 			clan.addNewSkill(SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()));
 		}

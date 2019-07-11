@@ -6,7 +6,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.VehiclePathPoint;
@@ -231,7 +231,7 @@ public abstract class Vehicle extends Creature {
      * @param oustZ
      */
     public void payForRide(int itemId, int count, int oustX, int oustY, int oustZ) {
-        L2World.getInstance().forEachVisibleObjectInRange(this, Player.class, 1000, player ->
+        World.getInstance().forEachVisibleObjectInRange(this, Player.class, 1000, player ->
         {
             if (player.isInBoat() && (player.getBoat() == this)) {
                 if (itemId > 0) {

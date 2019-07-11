@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -26,7 +26,7 @@ public class Defender extends Attackable {
     @Override
     public void addDamage(Creature attacker, int damage, Skill skill) {
         super.addDamage(attacker, damage, skill);
-        L2World.getInstance().forEachVisibleObjectInRange(this, Defender.class, 500, defender ->
+        World.getInstance().forEachVisibleObjectInRange(this, Defender.class, 500, defender ->
         {
             defender.addDamageHate(attacker, 0, 10);
         });
@@ -133,7 +133,7 @@ public class Defender extends Attackable {
         if (!skill.isBad()) {
             Creature target = this;
             double lowestHpValue = Double.MAX_VALUE;
-            for (Creature nearby : L2World.getInstance().getVisibleObjectsInRange(this, Creature.class, skill.getCastRange())) {
+            for (Creature nearby : World.getInstance().getVisibleObjectsInRange(this, Creature.class, skill.getCastRange())) {
                 if ((nearby == null) || nearby.isDead() || !GeoEngine.getInstance().canSeeTarget(this, nearby)) {
                     continue;
                 }

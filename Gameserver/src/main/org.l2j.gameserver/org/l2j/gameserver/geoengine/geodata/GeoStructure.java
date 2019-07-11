@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.geoengine.geodata;
 
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 
 /**
  * @author Hasha
@@ -55,9 +55,9 @@ public final class GeoStructure {
     public static final int REGION_BLOCKS = REGION_BLOCKS_X * REGION_BLOCKS_Y;
 
     // global geodata
-    private static final int GEO_REGIONS_X = ((L2World.TILE_X_MAX - L2World.TILE_X_MIN) + 1);
+    private static final int GEO_REGIONS_X = ((World.TILE_X_MAX - World.TILE_X_MIN) + 1);
     public static final int GEO_BLOCKS_X = GEO_REGIONS_X * REGION_BLOCKS_X;
-    private static final int GEO_REGIONS_Y = ((L2World.TILE_Y_MAX - L2World.TILE_Y_MIN) + 1);
+    private static final int GEO_REGIONS_Y = ((World.TILE_Y_MAX - World.TILE_Y_MIN) + 1);
     public static final int GEO_BLOCKS_Y = GEO_REGIONS_Y * REGION_BLOCKS_Y;
 
     public static final int REGION_CELLS_X = REGION_BLOCKS_X * BLOCK_CELLS_X;

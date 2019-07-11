@@ -22,7 +22,7 @@ import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.model.Spawn;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.PlayerEventHolder;
@@ -314,7 +314,7 @@ public class Event {
             }
 
             final Set<Player> temp = new HashSet<>();
-            for (Player player : L2World.getInstance().getPlayers()) {
+            for (Player player : World.getInstance().getPlayers()) {
                 if (!player.isOnline()) {
                     continue;
                 }
@@ -324,7 +324,7 @@ public class Event {
                     temp.add(player);
                 }
 
-                L2World.getInstance().forEachVisibleObjectInRange(player, Player.class, 1000, temp::add);
+                World.getInstance().forEachVisibleObjectInRange(player, Player.class, 1000, temp::add);
             }
         } catch (Exception e) {
             LOGGER.warn("Event: " + e.getMessage());

@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.CropProcure;
-import org.l2j.gameserver.model.L2Seed;
+import org.l2j.gameserver.model.Seed;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -39,7 +39,7 @@ public class ExShowCropInfo extends ServerPacket {
                 writeLong(crop.getStartAmount()); // Buy
                 writeLong(crop.getPrice()); // Buy price
                 writeByte((byte) crop.getReward()); // Reward
-                final L2Seed seed = CastleManorManager.getInstance().getSeedByCrop(crop.getId());
+                final Seed seed = CastleManorManager.getInstance().getSeedByCrop(crop.getId());
                 if (seed == null) {
                     writeInt(0); // Seed level
                     writeByte((byte) 0x01); // Reward 1

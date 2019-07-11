@@ -5,8 +5,8 @@ import org.l2j.gameserver.data.database.data.CharacterData;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.idfactory.IdFactory;
-import org.l2j.gameserver.model.L2SkillLearn;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.SkillLearn;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PcStat;
@@ -153,7 +153,7 @@ public final class CharacterCreate extends ClientPacket {
     }
 
     private void initNewChar(GameClient client, Player newChar) {
-        L2World.getInstance().addObject(newChar);
+        World.getInstance().addObject(newChar);
 
         if (Config.STARTING_ADENA > 0) {
             newChar.addAdena("Init", Config.STARTING_ADENA, null, false);
@@ -195,7 +195,7 @@ public final class CharacterCreate extends ClientPacket {
             }
         }
 
-        for (L2SkillLearn skill : SkillTreesData.getInstance().getAvailableSkills(newChar, newChar.getClassId(), false, true)) {
+        for (SkillLearn skill : SkillTreesData.getInstance().getAvailableSkills(newChar, newChar.getClassId(), false, true)) {
             newChar.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
         }
 

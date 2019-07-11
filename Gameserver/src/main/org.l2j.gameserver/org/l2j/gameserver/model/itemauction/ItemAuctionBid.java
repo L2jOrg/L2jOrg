@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.itemauction;
 
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
@@ -52,6 +52,6 @@ public final class ItemAuctionBid {
     }
 
     final Player getPlayer() {
-        return L2World.getInstance().getPlayer(_playerObjId);
+        return World.getInstance().getPlayer(_playerObjId);
     }
 }

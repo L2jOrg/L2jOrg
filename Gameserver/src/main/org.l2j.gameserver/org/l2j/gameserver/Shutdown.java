@@ -7,7 +7,7 @@ import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.instancemanager.*;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.olympiad.Olympiad;
@@ -442,7 +442,7 @@ public class Shutdown extends Thread {
      * This disconnects all clients from the server.
      */
     private void disconnectAllCharacters() {
-        for (Player player : L2World.getInstance().getPlayers()) {
+        for (Player player : World.getInstance().getPlayers()) {
             Disconnection.of(player).defaultSequence(true);
         }
     }

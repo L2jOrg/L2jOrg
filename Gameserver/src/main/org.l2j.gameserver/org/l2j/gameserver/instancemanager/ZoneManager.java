@@ -4,7 +4,7 @@ import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.commons.configuration.Configurator;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -14,7 +14,7 @@ import org.l2j.gameserver.model.zone.form.ZoneCylinder;
 import org.l2j.gameserver.model.zone.form.ZoneNPoly;
 import org.l2j.gameserver.model.zone.type.OlympiadStadiumZone;
 import org.l2j.gameserver.model.zone.type.RespawnZone;
-import org.l2j.gameserver.model.zone.type.L2SpawnTerritory;
+import org.l2j.gameserver.model.zone.type.SpawnTerritory;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -39,17 +39,17 @@ public final class ZoneManager extends GameXmlReader {
     private static final Map<String, AbstractZoneSettings> SETTINGS = new HashMap<>();
 
     private static final int SHIFT_BY = 15;
-    private static final int OFFSET_X = Math.abs(L2World.MAP_MIN_X >> SHIFT_BY);
-    private static final int OFFSET_Y = Math.abs(L2World.MAP_MIN_Y >> SHIFT_BY);
+    private static final int OFFSET_X = Math.abs(World.MAP_MIN_X >> SHIFT_BY);
+    private static final int OFFSET_Y = Math.abs(World.MAP_MIN_Y >> SHIFT_BY);
 
     private final Map<Class<? extends Zone>, IntObjectMap<? extends Zone>> _classZones = new HashMap<>();
-    private final Map<String, L2SpawnTerritory> _spawnTerritories = new HashMap<>();
+    private final Map<String, SpawnTerritory> _spawnTerritories = new HashMap<>();
     private final ZoneRegion[][] zoneRegions;
     private int _lastDynamicId = 300000;
     private List<Item> _debugItems;
 
     private ZoneManager() {
-        zoneRegions = new ZoneRegion[(L2World.MAP_MAX_X >> SHIFT_BY) + OFFSET_X + 1][(L2World.MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y + 1];
+        zoneRegions = new ZoneRegion[(World.MAP_MAX_X >> SHIFT_BY) + OFFSET_X + 1][(World.MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y + 1];
         for (int x = 0; x < zoneRegions.length; x++) {
             for (int y = 0; y < zoneRegions[x].length; y++) {
                 zoneRegions[x][y] = new ZoneRegion(x, y);
@@ -87,7 +87,7 @@ public final class ZoneManager extends GameXmlReader {
         load();
 
         // Re-validate all characters in zones.
-        for (WorldObject obj : L2World.getInstance().getVisibleObjects()) {
+        for (WorldObject obj : World.getInstance().getVisibleObjects()) {
             if (obj.isCharacter()) {
                 ((Creature) obj).revalidateZone(true);
             }
@@ -248,7 +248,7 @@ public final class ZoneManager extends GameXmlReader {
 
                         // No further parameters needed, if NpcSpawnTerritory is loading
                         if (zoneType.equalsIgnoreCase("NpcSpawnTerritory")) {
-                            _spawnTerritories.put(zoneName, new L2SpawnTerritory(zoneName, zoneForm));
+                            _spawnTerritories.put(zoneName, new SpawnTerritory(zoneName, zoneForm));
                             continue;
                         }
 
@@ -522,7 +522,7 @@ public final class ZoneManager extends GameXmlReader {
      * @param name name of territory to search
      * @return link to zone form
      */
-    public L2SpawnTerritory getSpawnTerritory(String name) {
+    public SpawnTerritory getSpawnTerritory(String name) {
         return _spawnTerritories.getOrDefault(name, null);
     }
 
@@ -532,9 +532,9 @@ public final class ZoneManager extends GameXmlReader {
      * @param object
      * @return zones
      */
-    public List<L2SpawnTerritory> getSpawnTerritories(WorldObject object) {
-        final List<L2SpawnTerritory> temp = new ArrayList<>();
-        for (L2SpawnTerritory territory : _spawnTerritories.values()) {
+    public List<SpawnTerritory> getSpawnTerritories(WorldObject object) {
+        final List<SpawnTerritory> temp = new ArrayList<>();
+        for (SpawnTerritory territory : _spawnTerritories.values()) {
             if (territory.isInsideZone(object.getX(), object.getY(), object.getZ())) {
                 temp.add(territory);
             }

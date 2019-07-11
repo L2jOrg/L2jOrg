@@ -6,7 +6,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.L2SiegeClan;
+import org.l2j.gameserver.model.SiegeClan;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.status.SiegeFlagStatus;
@@ -37,7 +37,7 @@ public class SiegeFlag extends Npc {
             throw new NullPointerException(getClass().getSimpleName() + ": Initialization failed.");
         }
 
-        final L2SiegeClan sc = _siege.getAttackerClan(_clan);
+        final SiegeClan sc = _siege.getAttackerClan(_clan);
         if (sc == null) {
             throw new NullPointerException(getClass().getSimpleName() + ": Cannot find siege clan.");
         }
@@ -64,7 +64,7 @@ public class SiegeFlag extends Npc {
             return false;
         }
         if ((_siege != null) && (_clan != null)) {
-            final L2SiegeClan sc = _siege.getAttackerClan(_clan);
+            final SiegeClan sc = _siege.getAttackerClan(_clan);
             if (sc != null) {
                 sc.removeFlag(this);
             }

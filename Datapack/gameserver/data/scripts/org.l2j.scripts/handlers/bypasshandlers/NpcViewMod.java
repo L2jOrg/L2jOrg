@@ -25,7 +25,7 @@ import org.l2j.gameserver.enums.DropType;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Spawn;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
@@ -76,7 +76,7 @@ public class NpcViewMod implements IBypassHandler
 				{
 					try
 					{
-						target = L2World.getInstance().findObject(Integer.parseInt(st.nextToken()));
+						target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
 					}
 					catch (NumberFormatException e)
 					{
@@ -109,7 +109,7 @@ public class NpcViewMod implements IBypassHandler
 				try
 				{
 					final DropType dropListType = Enum.valueOf(DropType.class, dropListTypeString);
-					final WorldObject target = L2World.getInstance().findObject(Integer.parseInt(st.nextToken()));
+					final WorldObject target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
 					final Npc npc = target instanceof Npc ? (Npc) target : null;
 					if (npc == null)
 					{
@@ -136,7 +136,7 @@ public class NpcViewMod implements IBypassHandler
 				{
 					try
 					{
-						target = L2World.getInstance().findObject(Integer.parseInt(st.nextToken()));
+						target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
 					}
 					catch (NumberFormatException e)
 					{
@@ -164,7 +164,7 @@ public class NpcViewMod implements IBypassHandler
 				{
 					try
 					{
-						target = L2World.getInstance().findObject(Integer.parseInt(st.nextToken()));
+						target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
 					}
 					catch (NumberFormatException e)
 					{

@@ -4,7 +4,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -89,7 +89,7 @@ public class Decoy extends Creature {
 
     @Override
     public void updateAbnormalVisualEffects() {
-        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
+        World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (isVisibleFor(player)) {
                 player.sendPacket(new CharInfo(this, isInvisible() && player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));

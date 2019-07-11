@@ -30,9 +30,9 @@ import java.util.function.Predicate;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
-public final class L2World {
+public final class World {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(L2World.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(World.class);
 
     /**
      * Gracia border Flying objects not allowed to the east of it.
@@ -84,23 +84,23 @@ public final class L2World {
     private final AtomicInteger _partyNumber = new AtomicInteger();
     private final AtomicInteger _memberInPartyNumber = new AtomicInteger();
 
-    private final L2WorldRegion[][] _worldRegions = new L2WorldRegion[REGIONS_X + 1][REGIONS_Y + 1];
+    private final WorldRegion[][] _worldRegions = new WorldRegion[REGIONS_X + 1][REGIONS_Y + 1];
 
-    private L2World() {
+    private World() {
         initRegions();
     }
 
     private void initRegions() {
         for (int x = 0; x <= REGIONS_X; x++) {
             for (int y = 0; y <= REGIONS_Y; y++) {
-                _worldRegions[x][y] = new L2WorldRegion(x, y);
+                _worldRegions[x][y] = new WorldRegion(x, y);
             }
         }
 
         // Set surrounding regions.
         for (int rx = 0; rx <= REGIONS_X; rx++) {
             for (int ry = 0; ry <= REGIONS_Y; ry++) {
-                final List<L2WorldRegion> surroundingRegions = new ArrayList<>();
+                final List<WorldRegion> surroundingRegions = new ArrayList<>();
                 for (int sx = rx - 1; sx <= (rx + 1); sx++) {
                     for (int sy = ry - 1; sy <= (ry + 1); sy++) {
 
@@ -109,7 +109,7 @@ public final class L2World {
                         }
                     }
                 }
-                L2WorldRegion[] regionArray = new L2WorldRegion[surroundingRegions.size()];
+                WorldRegion[] regionArray = new WorldRegion[surroundingRegions.size()];
                 regionArray = surroundingRegions.toArray(regionArray);
                 _worldRegions[rx][ry].setSurroundingRegions(regionArray);
             }
@@ -234,23 +234,23 @@ public final class L2World {
     }
 
     /**
-     * Add a WorldObject in the world. <B><U> Concept</U> :</B> WorldObject (including Player) are identified in <B>_visibleObjects</B> of his current L2WorldRegion and in <B>_knownObjects</B> of other surrounding L2Characters <BR>
-     * Player are identified in <B>_allPlayers</B> of L2World, in <B>_allPlayers</B> of his current L2WorldRegion and in <B>_knownPlayer</B> of other surrounding L2Characters <B><U> Actions</U> :</B>
-     * <li>Add the WorldObject object in _allPlayers* of L2World</li>
+     * Add a WorldObject in the world. <B><U> Concept</U> :</B> WorldObject (including Player) are identified in <B>_visibleObjects</B> of his current WorldRegion and in <B>_knownObjects</B> of other surrounding L2Characters <BR>
+     * Player are identified in <B>_allPlayers</B> of World, in <B>_allPlayers</B> of his current WorldRegion and in <B>_knownPlayer</B> of other surrounding L2Characters <B><U> Actions</U> :</B>
+     * <li>Add the WorldObject object in _allPlayers* of World</li>
      * <li>Add the WorldObject object in _gmList** of GmListTable</li>
-     * <li>Add object in _knownObjects and _knownPlayer* of all surrounding L2WorldRegion L2Characters</li><BR>
+     * <li>Add object in _knownObjects and _knownPlayer* of all surrounding WorldRegion L2Characters</li><BR>
      * <li>If object is a Creature, add all surrounding WorldObject in its _knownObjects and all surrounding Player in its _knownPlayer</li><BR>
      * <I>* only if object is a Player</I><BR>
-     * <I>** only if object is a GM Player</I> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object in _visibleObjects and _allPlayers* of L2WorldRegion (need synchronisation)</B></FONT><BR>
-     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object to _allObjects and _allPlayers* of L2World (need synchronisation)</B></FONT> <B><U> Example of use </U> :</B>
+     * <I>** only if object is a GM Player</I> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object in _visibleObjects and _allPlayers* of WorldRegion (need synchronisation)</B></FONT><BR>
+     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object to _allObjects and _allPlayers* of World (need synchronisation)</B></FONT> <B><U> Example of use </U> :</B>
      * <li>Drop an Item</li>
      * <li>Spawn a Creature</li>
      * <li>Apply Death Penalty of a Player</li>
      *
      * @param object    L2object to add in the world
-     * @param newRegion L2WorldRegion in wich the object will be add (not used)
+     * @param newRegion WorldRegion in wich the object will be add (not used)
      */
-    public void addVisibleObject(WorldObject object, L2WorldRegion newRegion) {
+    public void addVisibleObject(WorldObject object, WorldRegion newRegion) {
         if (!newRegion.isActive()) {
             return;
         }
@@ -290,21 +290,21 @@ public final class L2World {
     }
 
     /**
-     * Remove a WorldObject from the world. <B><U> Concept</U> :</B> WorldObject (including Player) are identified in <B>_visibleObjects</B> of his current L2WorldRegion and in <B>_knownObjects</B> of other surrounding L2Characters <BR>
-     * Player are identified in <B>_allPlayers</B> of L2World, in <B>_allPlayers</B> of his current L2WorldRegion and in <B>_knownPlayer</B> of other surrounding L2Characters <B><U> Actions</U> :</B>
-     * <li>Remove the WorldObject object from _allPlayers* of L2World</li>
-     * <li>Remove the WorldObject object from _visibleObjects and _allPlayers* of L2WorldRegion</li>
+     * Remove a WorldObject from the world. <B><U> Concept</U> :</B> WorldObject (including Player) are identified in <B>_visibleObjects</B> of his current WorldRegion and in <B>_knownObjects</B> of other surrounding L2Characters <BR>
+     * Player are identified in <B>_allPlayers</B> of World, in <B>_allPlayers</B> of his current WorldRegion and in <B>_knownPlayer</B> of other surrounding L2Characters <B><U> Actions</U> :</B>
+     * <li>Remove the WorldObject object from _allPlayers* of World</li>
+     * <li>Remove the WorldObject object from _visibleObjects and _allPlayers* of WorldRegion</li>
      * <li>Remove the WorldObject object from _gmList** of GmListTable</li>
-     * <li>Remove object from _knownObjects and _knownPlayer* of all surrounding L2WorldRegion L2Characters</li><BR>
-     * <li>If object is a Creature, remove all WorldObject from its _knownObjects and all Player from its _knownPlayer</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of L2World</B></FONT> <I>* only if object is a Player</I><BR>
+     * <li>Remove object from _knownObjects and _knownPlayer* of all surrounding WorldRegion L2Characters</li><BR>
+     * <li>If object is a Creature, remove all WorldObject from its _knownObjects and all Player from its _knownPlayer</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of World</B></FONT> <I>* only if object is a Player</I><BR>
      * <I>** only if object is a GM Player</I> <B><U> Example of use </U> :</B>
      * <li>Pickup an Item</li>
      * <li>Decay a Creature</li>
      *
      * @param object    L2object to remove from the world
-     * @param oldRegion L2WorldRegion in which the object was before removing
+     * @param oldRegion WorldRegion in which the object was before removing
      */
-    public void removeVisibleObject(WorldObject object, L2WorldRegion oldRegion) {
+    public void removeVisibleObject(WorldObject object, WorldRegion oldRegion) {
         if (object == null) {
             return;
         }
@@ -312,7 +312,7 @@ public final class L2World {
         if (oldRegion != null) {
             oldRegion.removeVisibleObject(object);
 
-            // Go through all surrounding L2WorldRegion L2Characters
+            // Go through all surrounding WorldRegion L2Characters
             oldRegion.forEachSurroundingRegion(w ->
             {
                 forgetObjectsInRegion(object, w);
@@ -321,8 +321,8 @@ public final class L2World {
         }
     }
 
-    public void switchRegion(WorldObject object, L2WorldRegion newRegion) {
-        final L2WorldRegion oldRegion = object.getWorldRegion();
+    public void switchRegion(WorldObject object, WorldRegion newRegion) {
+        final WorldRegion oldRegion = object.getWorldRegion();
         if ((oldRegion == null) || (oldRegion == newRegion)) {
             return;
         }
@@ -350,7 +350,7 @@ public final class L2World {
         });
     }
 
-    private void forgetObjectsInRegion(WorldObject object, L2WorldRegion w) {
+    private void forgetObjectsInRegion(WorldObject object, WorldRegion w) {
         for (WorldObject wo : w.getVisibleObjects().values()) {
             if (wo == object) {
                 continue;
@@ -416,12 +416,12 @@ public final class L2World {
             return;
         }
 
-        final L2WorldRegion centerWorldRegion = getRegion(object);
+        final WorldRegion centerWorldRegion = getRegion(object);
         if (centerWorldRegion == null) {
             return;
         }
 
-        for (L2WorldRegion region : centerWorldRegion.getSurroundingRegions()) {
+        for (WorldRegion region : centerWorldRegion.getSurroundingRegions()) {
             for (WorldObject visibleObject : region.getVisibleObjects().values()) {
                 if ((visibleObject == null) || (visibleObject == object) || !clazz.isInstance(visibleObject)) {
                     continue;
@@ -458,12 +458,12 @@ public final class L2World {
             return;
         }
 
-        final L2WorldRegion centerWorldRegion = getRegion(object);
+        final WorldRegion centerWorldRegion = getRegion(object);
         if (centerWorldRegion == null) {
             return;
         }
 
-        for (L2WorldRegion region : centerWorldRegion.getSurroundingRegions()) {
+        for (WorldRegion region : centerWorldRegion.getSurroundingRegions()) {
             for (WorldObject visibleObject : region.getVisibleObjects().values()) {
                 if ((visibleObject == null) || (visibleObject == object) || !clazz.isInstance(visibleObject)) {
                     continue;
@@ -488,7 +488,7 @@ public final class L2World {
      * @param object the object
      * @return
      */
-    public L2WorldRegion getRegion(WorldObject object) {
+    public WorldRegion getRegion(WorldObject object) {
         try {
             return _worldRegions[(object.getX() >> SHIFT_BY) + OFFSET_X][(object.getY() >> SHIFT_BY) + OFFSET_Y];
         } catch (ArrayIndexOutOfBoundsException e) // Precaution. Moved at invalid region?
@@ -498,7 +498,7 @@ public final class L2World {
         }
     }
 
-    public L2WorldRegion getRegion(int x, int y) {
+    public WorldRegion getRegion(int x, int y) {
         try {
             return _worldRegions[(x >> SHIFT_BY) + OFFSET_X][(y >> SHIFT_BY) + OFFSET_Y];
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -559,12 +559,12 @@ public final class L2World {
     }
 
 
-    public static L2World getInstance() {
+    public static World getInstance() {
         return Singleton.INSTANCE;
     }
 
 
     private static class Singleton {
-        private static final L2World INSTANCE = new L2World();
+        private static final World INSTANCE = new World();
     }
 }

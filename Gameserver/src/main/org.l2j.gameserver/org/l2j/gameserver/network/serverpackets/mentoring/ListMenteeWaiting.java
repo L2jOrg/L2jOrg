@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.mentoring;
 
 import org.l2j.gameserver.enums.CategoryType;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -20,7 +20,7 @@ public class ListMenteeWaiting extends ServerPacket {
 
     public ListMenteeWaiting(int page, int minLevel, int maxLevel) {
         _page = page;
-        for (Player player : L2World.getInstance().getPlayers()) {
+        for (Player player : World.getInstance().getPlayers()) {
             if ((player.getLevel() >= minLevel) && (player.getLevel() <= maxLevel) && !player.isMentee() && !player.isMentor() && !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP)) {
                 _possibleCandiates.add(player);
             }

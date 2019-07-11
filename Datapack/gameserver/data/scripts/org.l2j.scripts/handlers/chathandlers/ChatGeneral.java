@@ -6,7 +6,7 @@ import org.l2j.gameserver.handler.IChatHandler;
 import org.l2j.gameserver.handler.IVoicedCommandHandler;
 import org.l2j.gameserver.handler.VoicedCommandHandler;
 import org.l2j.gameserver.model.BlockList;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -63,7 +63,7 @@ public final class ChatGeneral implements IChatHandler {
 			}
 			
 			final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), text);
-			L2World.getInstance().forEachVisibleObjectInRange(activeChar, Player.class, 1250, player -> {
+			World.getInstance().forEachVisibleObjectInRange(activeChar, Player.class, 1250, player -> {
 				if ((player != null) && !BlockList.isBlocked(player, activeChar))
 				{
 					player.sendPacket(cs);

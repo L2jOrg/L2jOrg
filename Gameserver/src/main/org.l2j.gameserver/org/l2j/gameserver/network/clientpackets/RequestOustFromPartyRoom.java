@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.enums.MatchingRoomType;
 import org.l2j.gameserver.model.Party;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -27,7 +27,7 @@ public final class RequestOustFromPartyRoom extends ClientPacket {
             return;
         }
 
-        final Player member = L2World.getInstance().getPlayer(_charObjId);
+        final Player member = World.getInstance().getPlayer(_charObjId);
         if (member == null) {
             return;
         }

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -44,7 +44,7 @@ public final class AddTradeItem extends ClientPacket {
         }
 
         final Player partner = trade.getPartner();
-        if ((partner == null) || (L2World.getInstance().getPlayer(partner.getObjectId()) == null) || (partner.getActiveTradeList() == null)) {
+        if ((partner == null) || (World.getInstance().getPlayer(partner.getObjectId()) == null) || (partner.getActiveTradeList() == null)) {
             // Trade partner not found, cancel trade
             if (partner != null) {
                 LOGGER.warn("Character:" + player.getName() + " requested invalid trade object: " + _objectId);

@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.olympiad;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -64,7 +64,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
                 }
             }
 
-            playerOne = L2World.getInstance().getPlayer(playerOneObjectId);
+            playerOne = World.getInstance().getPlayer(playerOneObjectId);
             if ((playerOne == null) || !playerOne.isOnline()) {
                 continue;
             }
@@ -79,7 +79,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
                 }
             }
 
-            playerTwo = L2World.getInstance().getPlayer(playerTwoObjectId);
+            playerTwo = World.getInstance().getPlayer(playerTwoObjectId);
             if ((playerTwo == null) || !playerTwo.isOnline()) {
                 set.add(playerOneObjectId);
                 continue;

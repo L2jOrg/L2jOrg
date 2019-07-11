@@ -417,7 +417,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     /**
      * Remove the Creature from the world when the decay task is launched.<br>
-     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of L2World </B></FONT><BR>
+     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of World </B></FONT><BR>
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packets to players</B></FONT>
      */
     public void onDecay() {
@@ -477,7 +477,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param mov
      */
     public void broadcastPacket(ServerPacket mov) {
-        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
+        World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (isVisibleFor(player)) {
                 player.sendPacket(mov);
@@ -495,7 +495,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param radiusInKnownlist
      */
     public void broadcastPacket(ServerPacket mov, int radiusInKnownlist) {
-        L2World.getInstance().forEachVisibleObjectInRange(this, Player.class, radiusInKnownlist, player ->
+        World.getInstance().forEachVisibleObjectInRange(this, Player.class, radiusInKnownlist, player ->
         {
             if (isVisibleFor(player)) {
                 player.sendPacket(mov);
@@ -971,7 +971,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             final double headingAngle = GameUtils.convertHeadingToDegree(getHeading());
             final int maxRadius = _stat.getPhysicalAttackRadius();
             final int physicalAttackAngle = _stat.getPhysicalAttackAngle();
-            for (Creature obj : L2World.getInstance().getVisibleObjectsInRange(this, Creature.class, maxRadius)) {
+            for (Creature obj : World.getInstance().getVisibleObjectsInRange(this, Creature.class, maxRadius)) {
                 // Skip main target.
                 if (obj == target) {
                     continue;
@@ -1711,7 +1711,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         } else if (isSummon()) {
             broadcastStatusUpdate();
         } else if (isNpc()) {
-            L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
+            World.getInstance().forEachVisibleObject(this, Player.class, player ->
             {
                 if (!isVisibleFor(player)) {
                     return;
@@ -2220,7 +2220,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 }
             } else if (isNpc()) {
                 if (broadcastFull) {
-                    L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
+                    World.getInstance().forEachVisibleObject(this, Player.class, player ->
                     {
                         if (!isVisibleFor(player)) {
                             return;
@@ -2538,7 +2538,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             region.revalidateZones(this);
         } else // Precaution. Moved at invalid region?
         {
-            L2World.getInstance().disposeOutOfBoundsObject(this);
+            World.getInstance().disposeOutOfBoundsObject(this);
         }
     }
 
@@ -2547,9 +2547,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * <B><U>Actions</U>:</B>
      * <ul>
      * <li>Delete movement data of the Creature</li>
-     * <li>Set the current position (x,y,z), its current L2WorldRegion if necessary and its heading</li>
+     * <li>Set the current position (x,y,z), its current WorldRegion if necessary and its heading</li>
      * <li>Remove the WorldObject object from _gmList of GmListTable</li>
-     * <li>Remove object from _knownObjects and _knownPlayer of all surrounding L2WorldRegion L2Characters</li>
+     * <li>Remove object from _knownObjects and _knownPlayer of all surrounding WorldRegion L2Characters</li>
      * </ul>
      * <FONT COLOR=#FF0000><B><U>Caution</U>: This method DOESN'T send Server->Client packet StopMove/StopRotation</B></FONT>
      *
@@ -2757,8 +2757,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 final int originalX = x;
                 final int originalY = y;
                 final int originalZ = z;
-                final int gtx = (originalX - L2World.MAP_MIN_X) >> 4;
-                final int gty = (originalY - L2World.MAP_MIN_Y) >> 4;
+                final int gtx = (originalX - World.MAP_MIN_X) >> 4;
+                final int gty = (originalY - World.MAP_MIN_Y) >> 4;
 
                 if (isOnGeodataPath()) {
                     try {
@@ -3317,7 +3317,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return true if this character is inside an active grid.
      */
     public boolean isInActiveRegion() {
-        final L2WorldRegion region = getWorldRegion();
+        final WorldRegion region = getWorldRegion();
         return ((region != null) && (region.isActive()));
     }
 

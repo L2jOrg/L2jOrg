@@ -28,8 +28,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * @author Balancer
  * @version 0.1, 2005-03-12
  */
-public class L2Territory {
-    private static final Logger LOGGER = LoggerFactory.getLogger(L2Territory.class);
+public class Territory {
+    private static final Logger LOGGER = LoggerFactory.getLogger(Territory.class);
     private final List<Point> _points = new CopyOnWriteArrayList<>();
     private final int _terr;
     private int _xMin;
@@ -40,7 +40,7 @@ public class L2Territory {
     private int _zMax;
     private int _procMax;
 
-    public L2Territory(int terr) {
+    public Territory(int terr) {
         _terr = terr;
         _xMin = 999999;
         _xMax = -999999;

@@ -7,8 +7,8 @@ import org.l2j.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import org.l2j.gameserver.engines.DocumentEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.idfactory.IdFactory;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.EventMonster;
@@ -188,7 +188,7 @@ public class ItemTable {
         }
 
         // Add the Item object to _allObjects of L2world
-        L2World.getInstance().addObject(item);
+        World.getInstance().addObject(item);
 
         // Set Item parameters
         if (item.isStackable() && (count > 1)) {
@@ -267,7 +267,7 @@ public class ItemTable {
             item.setItemLocation(ItemLocation.VOID);
             item.setLastChange(Item.REMOVED);
 
-            L2World.getInstance().removeObject(item);
+            World.getInstance().removeObject(item);
             IdFactory.getInstance().releaseId(item.getObjectId());
 
             if (Config.LOG_ITEMS) {

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ClientHardwareInfoHolder;
 import org.l2j.gameserver.network.Disconnection;
@@ -62,7 +62,7 @@ public final class RequestHardWareInfo extends ClientPacket {
         client.setHardwareInfo(new ClientHardwareInfoHolder(_macAddress, _windowsPlatformId, _windowsMajorVersion, _windowsMinorVersion, _windowsBuildNumber, _directxVersion, _directxRevision, _cpuName, _cpuSpeed, _cpuCoreCount, _vgaCount, _vgaPcxSpeed, _physMemorySlot1, _physMemorySlot2, _physMemorySlot3, _videoMemory, _vgaVersion, _vgaName, _vgaDriverVersion));
         if (Config.HARDWARE_INFO_ENABLED && (Config.MAX_PLAYERS_PER_HWID > 0)) {
             int count = 0;
-            for (Player player : L2World.getInstance().getPlayers()) {
+            for (Player player : World.getInstance().getPlayers()) {
                 if ((player.isOnlineInt() == 1) && (player.getClient().getHardwareInfo().equals(client.getHardwareInfo()))) {
                     count++;
                 }

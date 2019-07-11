@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.zone.type;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -57,7 +57,7 @@ public class PeaceZone extends Zone {
     public void setEnabled(boolean state) {
         super.setEnabled(state);
         if (state) {
-            for (Player player : L2World.getInstance().getPlayers()) {
+            for (Player player : World.getInstance().getPlayers()) {
                 if ((player != null) && isInsideZone(player)) {
                     revalidateInZone(player);
 

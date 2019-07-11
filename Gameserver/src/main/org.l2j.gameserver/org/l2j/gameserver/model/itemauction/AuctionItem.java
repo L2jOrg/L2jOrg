@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.itemauction;
 
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.idfactory.IdFactory;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.instance.Item;
 
@@ -71,7 +71,7 @@ public final class AuctionItem {
 
     public final Item createNewItemInstance() {
         final Item item = new Item(IdFactory.getInstance().getNextId(), _itemId);
-        L2World.getInstance().addObject(item);
+        World.getInstance().addObject(item);
         item.setCount(_itemCount);
         item.setEnchantLevel(item.getItem().getDefaultEnchantLevel());
         return item;

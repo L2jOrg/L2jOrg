@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.data.xml.impl.FenceData;
 import org.l2j.gameserver.enums.FenceState;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Fence;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -93,7 +93,7 @@ public class AdminFence implements IAdminCommandHandler
 					}
 					else
 					{
-						final WorldObject obj = L2World.getInstance().findObject(objId);
+						final WorldObject obj = World.getInstance().findObject(objId);
 						if (obj instanceof Fence)
 						{
 							final Fence fence = (Fence) obj;
@@ -118,7 +118,7 @@ public class AdminFence implements IAdminCommandHandler
 				try
 				{
 					final int objId = Integer.parseInt(st.nextToken());
-					final WorldObject obj = L2World.getInstance().findObject(objId);
+					final WorldObject obj = World.getInstance().findObject(objId);
 					if (obj instanceof Fence)
 					{
 						((Fence) obj).deleteMe();
@@ -151,7 +151,7 @@ public class AdminFence implements IAdminCommandHandler
 				try
 				{
 					final int objId = Integer.parseInt(st.nextToken());
-					final WorldObject obj = L2World.getInstance().findObject(objId);
+					final WorldObject obj = World.getInstance().findObject(objId);
 					if (obj != null)
 					{
 						activeChar.teleToLocation(obj);

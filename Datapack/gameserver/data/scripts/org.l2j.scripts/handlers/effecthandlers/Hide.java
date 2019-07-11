@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -47,7 +47,7 @@ public final class Hide extends AbstractEffect
 				effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			}
 			
-			L2World.getInstance().forEachVisibleObject(effected, Creature.class, target ->
+			World.getInstance().forEachVisibleObject(effected, Creature.class, target ->
 			{
 				if ((target.getTarget() == effected))
 				{

@@ -17,7 +17,7 @@
 package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.BuilderUtil;
 
@@ -53,7 +53,7 @@ public class AdminTarget implements IAdminCommandHandler
 		try
 		{
 			final String targetName = command.substring(13);
-			final Player player = L2World.getInstance().getPlayer(targetName);
+			final Player player = World.getInstance().getPlayer(targetName);
 			if (player != null)
 			{
 				player.onAction(activeChar);

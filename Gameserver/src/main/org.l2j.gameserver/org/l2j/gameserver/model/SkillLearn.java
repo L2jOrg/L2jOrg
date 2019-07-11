@@ -15,7 +15,7 @@ import java.util.Set;
 /**
  * @author Zoey76
  */
-public final class L2SkillLearn {
+public final class SkillLearn {
     private final String _skillName;
     private final int _skillId;
     private final int _skillLvl;
@@ -38,11 +38,11 @@ public final class L2SkillLearn {
     private SocialClass _socialClass;
 
     /**
-     * Constructor for L2SkillLearn.
+     * Constructor for SkillLearn.
      *
-     * @param set the set with the L2SkillLearn data.
+     * @param set the set with the SkillLearn data.
      */
-    public L2SkillLearn(StatsSet set) {
+    public SkillLearn(StatsSet set) {
         _skillName = set.getString("skillName");
         _skillId = set.getInt("skillId");
         _skillLvl = set.getInt("skillLvl");

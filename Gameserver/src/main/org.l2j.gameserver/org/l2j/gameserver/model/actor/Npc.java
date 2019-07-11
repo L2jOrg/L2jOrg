@@ -302,7 +302,7 @@ public class Npc extends Creature {
      */
     @Override
     public void updateAbnormalVisualEffects() {
-        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
+        World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (!isVisibleFor(player)) {
                 return;
@@ -887,7 +887,7 @@ public class Npc extends Creature {
      * <li>Decrease its spawn counter</li>
      * <li>Manage Siege task (killFlag, killCT)</li>
      * </ul>
-     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of L2World </B></FONT><BR>
+     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of World </B></FONT><BR>
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packets to players</B></FONT>
      */
     @Override
@@ -924,7 +924,7 @@ public class Npc extends Creature {
      * <ul>
      * <li>Remove the Folk from the world and update its spawn object</li>
      * <li>Remove all WorldObject from _knownObjects and _knownPlayer of the Folk then cancel Attack or Cast and notify AI</li>
-     * <li>Remove WorldObject object from _allObjects of L2World</li>
+     * <li>Remove WorldObject object from _allObjects of World</li>
      * </ul>
      * <FONT COLOR=#FF0000><B><U>Caution</U>: This method DOESN'T SEND Server->Client packets to players</B></FONT><br>
      * UnAfraid: TODO: Add Listener here
@@ -1188,7 +1188,7 @@ public class Npc extends Creature {
      * @param reference - WorldObject to pass, if needed
      */
     public void broadcastEvent(String eventName, int radius, WorldObject reference) {
-        L2World.getInstance().forEachVisibleObjectInRange(this, Npc.class, radius, obj ->
+        World.getInstance().forEachVisibleObjectInRange(this, Npc.class, radius, obj ->
         {
             if (obj.hasListener(EventType.ON_NPC_EVENT_RECEIVED)) {
                 EventDispatcher.getInstance().notifyEventAsync(new OnNpcEventReceived(eventName, this, obj, reference), obj);

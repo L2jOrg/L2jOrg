@@ -10,8 +10,8 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.model.Spawn;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.GrandBoss;
@@ -155,7 +155,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			try
 			{
 				final String targetName = command.substring(17);
-				final Player player = L2World.getInstance().getPlayer(targetName);
+				final Player player = World.getInstance().getPlayer(targetName);
 				teleportToCharacter(activeChar, player);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -190,7 +190,7 @@ public class AdminTeleport implements IAdminCommandHandler
 					return false;
 				}
 				final String targetName = param[1];
-				final Player player = L2World.getInstance().getPlayer(targetName);
+				final Player player = World.getInstance().getPlayer(targetName);
 				if (player != null)
 				{
 					teleportCharacter(player, activeChar.getLocation(), activeChar);
@@ -266,7 +266,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			else if (st.countTokens() == 1)
 			{
 				final String name = st.nextToken();
-				final Player player = L2World.getInstance().getPlayer(name);
+				final Player player = World.getInstance().getPlayer(name);
 				if (player == null)
 				{
 					activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);

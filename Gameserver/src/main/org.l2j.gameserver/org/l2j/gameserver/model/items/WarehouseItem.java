@@ -21,7 +21,7 @@ import java.util.Objects;
  *
  * @version $Revision: 1.7.2.2.2.5 $ $Date: 2005/04/06 18:25:18 $
  */
-public class L2WarehouseItem {
+public class WarehouseItem {
     private final ItemTemplate _item;
     private final int _object;
     private final long _count;
@@ -49,7 +49,7 @@ public class L2WarehouseItem {
     private byte _elemAtkType = -2;
     private int _elemAtkPower = 0;
 
-    public L2WarehouseItem(Item item) {
+    public WarehouseItem(Item item) {
         Objects.requireNonNull(item);
         _item = item.getItem();
         _object = item.getObjectId();

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -38,7 +38,7 @@ public final class TradeDone extends ClientPacket {
         }
 
         if (_response == 1) {
-            if ((trade.getPartner() == null) || (L2World.getInstance().getPlayer(trade.getPartner().getObjectId()) == null)) {
+            if ((trade.getPartner() == null) || (World.getInstance().getPlayer(trade.getPartner().getObjectId()) == null)) {
                 // Trade partner not found, cancel trade
                 player.cancelActiveTrade();
                 player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);

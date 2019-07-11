@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.Party;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExAskJoinMPCC;
@@ -28,7 +28,7 @@ public final class RequestExAskJoinMPCC extends ClientPacket {
             return;
         }
 
-        final Player player = L2World.getInstance().getPlayer(_name);
+        final Player player = World.getInstance().getPlayer(_name);
         if (player == null) {
             return;
         }

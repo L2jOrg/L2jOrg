@@ -5,7 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.instancemanager.ItemAuctionManager;
 import org.l2j.gameserver.model.ItemInfo;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -63,7 +63,7 @@ public final class ItemAuction {
 
         final Item item = _auctionItem.createNewItemInstance();
         _itemInfo = new ItemInfo(item);
-        L2World.getInstance().removeObject(item);
+        World.getInstance().removeObject(item);
 
         for (ItemAuctionBid bid : _auctionBids) {
             if ((_highestBid == null) || (_highestBid.getLastBid() < bid.getLastBid())) {

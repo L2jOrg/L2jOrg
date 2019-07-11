@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.xml.impl.RecipeData;
-import org.l2j.gameserver.model.L2RecipeList;
+import org.l2j.gameserver.model.RecipeList;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.GameClient;
@@ -30,7 +30,7 @@ public class RecipeItemMakeInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) throws InvalidDataPacketException {
-        final L2RecipeList recipe = RecipeData.getInstance().getRecipeList(_id);
+        final RecipeList recipe = RecipeData.getInstance().getRecipeList(_id);
         if (recipe != null) {
             writeId(ServerPacketId.RECIPE_ITEM_MAKE_INFO);
             writeInt(_id);

@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.votereward;
 import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.util.Broadcast;
@@ -88,7 +88,7 @@ public abstract class VoteSystem implements Runnable {
         }
 
         if (currentVotes >= (lastVotes + votesDiff)) {
-            Collection<Player> pls = L2World.getInstance().getPlayers();
+            Collection<Player> pls = World.getInstance().getPlayers();
             if (allowReport) {
                 LOGGER.info("VoteSystem: Server votes on " + getSiteName() + ": " + currentVotes);
                 LOGGER.info("VoteSystem: Votes needed for next reward: " + ((currentVotes + votesDiff) - currentVotes));

@@ -1,8 +1,8 @@
 package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.enums.FenceState;
-import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.L2WorldRegion;
+import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.WorldRegion;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Fence;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -33,7 +33,7 @@ public final class FenceData extends GameXmlReader {
 
     private static final int MAX_Z_DIFF = 100;
 
-    private final Map<L2WorldRegion, List<Fence>> _regions = new ConcurrentHashMap<>();
+    private final Map<WorldRegion, List<Fence>> _regions = new ConcurrentHashMap<>();
     private final Map<Integer, Fence> _fences = new ConcurrentHashMap<>();
 
     private FenceData() {
@@ -86,13 +86,13 @@ public final class FenceData extends GameXmlReader {
 
     private void addFence(Fence fence) {
         _fences.put(fence.getObjectId(), fence);
-        _regions.computeIfAbsent(L2World.getInstance().getRegion(fence), key -> new ArrayList<>()).add(fence);
+        _regions.computeIfAbsent(World.getInstance().getRegion(fence), key -> new ArrayList<>()).add(fence);
     }
 
     public void removeFence(Fence fence) {
         _fences.remove(fence.getObjectId());
 
-        final List<Fence> fencesInRegion = _regions.get(L2World.getInstance().getRegion(fence));
+        final List<Fence> fencesInRegion = _regions.get(World.getInstance().getRegion(fence));
         if (fencesInRegion != null) {
             fencesInRegion.remove(fence);
         }
@@ -151,7 +151,7 @@ public final class FenceData extends GameXmlReader {
             return false;
         };
 
-        final L2WorldRegion region = L2World.getInstance().getRegion(x, y); // Should never be null.
+        final WorldRegion region = World.getInstance().getRegion(x, y); // Should never be null.
         return region != null && _regions.getOrDefault(region, Collections.emptyList()).stream().anyMatch(filter);
     }
 

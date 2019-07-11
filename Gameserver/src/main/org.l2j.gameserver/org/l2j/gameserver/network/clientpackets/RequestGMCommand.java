@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.*;
 
@@ -28,7 +28,7 @@ public final class RequestGMCommand extends ClientPacket {
             return;
         }
 
-        final Player player = L2World.getInstance().getPlayer(_targetName);
+        final Player player = World.getInstance().getPlayer(_targetName);
 
         final Clan clan = ClanTable.getInstance().getClanByName(_targetName);
 

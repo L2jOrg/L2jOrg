@@ -22,7 +22,7 @@ import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -80,13 +80,13 @@ public class AdminServerInfo implements IAdminCommandHandler
 		{
 			case "ALL":
 			{
-				return L2World.getInstance().getPlayers().size();
+				return World.getInstance().getPlayers().size();
 			}
 			case "OFF_TRADE":
 			{
 				int offlineCount = 0;
 				
-				final Collection<Player> objs = L2World.getInstance().getPlayers();
+				final Collection<Player> objs = World.getInstance().getPlayers();
 				for (Player player : objs)
 				{
 					if ((player.getClient() == null) || player.getClient().isDetached())
@@ -112,7 +112,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 			{
 				final Set<String> realPlayers = new HashSet<>();
 				
-				for (Player onlinePlayer : L2World.getInstance().getPlayers())
+				for (Player onlinePlayer : World.getInstance().getPlayers())
 				{
 					if ((onlinePlayer != null) && (onlinePlayer.getClient() != null) && !onlinePlayer.getClient().isDetached())
 					{

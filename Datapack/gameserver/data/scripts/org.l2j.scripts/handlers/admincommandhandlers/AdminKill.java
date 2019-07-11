@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.ControllableMob;
@@ -53,7 +53,7 @@ public class AdminKill implements IAdminCommandHandler
 			if (st.hasMoreTokens())
 			{
 				final String firstParam = st.nextToken();
-				final Player plyr = L2World.getInstance().getPlayer(firstParam);
+				final Player plyr = World.getInstance().getPlayer(firstParam);
 				if (plyr != null)
 				{
 					if (st.hasMoreTokens())
@@ -61,7 +61,7 @@ public class AdminKill implements IAdminCommandHandler
 						try
 						{
 							final int radius = Integer.parseInt(st.nextToken());
-							L2World.getInstance().forEachVisibleObjectInRange(plyr, Creature.class, radius, knownChar ->
+							World.getInstance().forEachVisibleObjectInRange(plyr, Creature.class, radius, knownChar ->
 							{
 								if ((knownChar instanceof ControllableMob) || (knownChar instanceof FriendlyNpc) || (knownChar == activeChar))
 								{
@@ -88,7 +88,7 @@ public class AdminKill implements IAdminCommandHandler
 					{
 						final int radius = Integer.parseInt(firstParam);
 						
-						L2World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, radius, wo ->
+						World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, radius, wo ->
 						{
 							if ((wo instanceof ControllableMob) || (wo instanceof FriendlyNpc))
 							{

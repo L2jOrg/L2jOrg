@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
@@ -63,7 +63,7 @@ public final class RandomizeHate extends AbstractEffect
 		
 		final Attackable effectedMob = (Attackable) effected;
 		final List<Creature> targetList = new ArrayList<>();
-		L2World.getInstance().forEachVisibleObject(effected, Creature.class, cha ->
+		World.getInstance().forEachVisibleObject(effected, Creature.class, cha ->
 		{
 			if ((cha != effectedMob) && (cha != effector))
 			{

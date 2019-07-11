@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2SkillLearn;
+import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.skills.Skill;
@@ -30,7 +30,7 @@ public class ExAcquireSkillInfo extends ServerPacket {
      * @param player
      * @param skillLearn the skill learn.
      */
-    public ExAcquireSkillInfo(Player player, L2SkillLearn skillLearn) {
+    public ExAcquireSkillInfo(Player player, SkillLearn skillLearn) {
         _id = skillLearn.getSkillId();
         _level = skillLearn.getSkillLevel();
         _dualClassLevel = skillLearn.getDualClassLevel();

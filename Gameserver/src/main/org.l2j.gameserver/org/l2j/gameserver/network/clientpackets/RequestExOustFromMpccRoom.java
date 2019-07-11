@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.enums.MatchingRoomType;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 
@@ -27,7 +27,7 @@ public class RequestExOustFromMpccRoom extends ClientPacket {
         final MatchingRoom room = activeChar.getMatchingRoom();
 
         if ((room != null) && (room.getLeader() == activeChar) && (room.getRoomType() == MatchingRoomType.COMMAND_CHANNEL)) {
-            final Player player = L2World.getInstance().getPlayer(_objectId);
+            final Player player = World.getInstance().getPlayer(_objectId);
 
             if (player != null) {
                 room.deleteMember(player, true);

@@ -6,7 +6,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -502,7 +502,7 @@ public final class GameUtils {
     }
 
     public static boolean isInsideRangeOfObjectId(WorldObject obj, int targetObjId, int radius) {
-        final WorldObject target = L2World.getInstance().findObject(targetObjId);
+        final WorldObject target = World.getInstance().findObject(targetObjId);
         return (target != null) && (obj.calculateDistance3D(target) <= radius);
     }
 

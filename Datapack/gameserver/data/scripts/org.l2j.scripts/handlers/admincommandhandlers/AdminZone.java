@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.model.zone.type.L2SpawnTerritory;
+import org.l2j.gameserver.model.zone.type.SpawnTerritory;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 
@@ -91,7 +91,7 @@ public class AdminZone implements IAdminCommandHandler
 				{
 					zone.visualizeZone(activeChar.getZ());
 				}
-				for (L2SpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
+				for (SpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
 				{
 					territory.visualizeZone(activeChar.getZ());
 				}
@@ -154,7 +154,7 @@ public class AdminZone implements IAdminCommandHandler
 			}
 			zones.append(" ");
 		}
-		for (L2SpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
+		for (SpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
 		{
 			zones.append(territory.getName());
 			zones.append("<br1>");

@@ -25,7 +25,7 @@ import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -503,7 +503,7 @@ public class Hero {
         updateHeroes(true);
 
         for (Integer objectId : HEROES.keySet()) {
-            final Player player = L2World.getInstance().getPlayer(objectId);
+            final Player player = World.getInstance().getPlayer(objectId);
             if (player == null) {
                 continue;
             }

@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets.mentoring;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.instancemanager.MentorManager;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerMenteeAdd;
@@ -95,7 +95,7 @@ public class ConfirmMenteeAdd extends ClientPacket {
             return;
         }
 
-        final Player mentor = L2World.getInstance().getPlayer(_mentor);
+        final Player mentor = World.getInstance().getPlayer(_mentor);
         if (mentor == null) {
             return;
         }

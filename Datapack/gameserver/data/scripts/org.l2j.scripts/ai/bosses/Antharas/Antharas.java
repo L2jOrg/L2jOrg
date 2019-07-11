@@ -24,7 +24,7 @@ import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.Party;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -310,7 +310,7 @@ public final class Antharas extends AbstractNpcAI
 			}
 			case "START_MOVE":
 			{
-				for (Player players : L2World.getInstance().getVisibleObjectsInRange(npc, Player.class, 4000))
+				for (Player players : World.getInstance().getVisibleObjectsInRange(npc, Player.class, 4000))
 				{
 					if (players.isHero())
 					{

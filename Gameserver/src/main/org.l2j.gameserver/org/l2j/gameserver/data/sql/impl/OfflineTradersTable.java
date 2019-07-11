@@ -5,7 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.instancemanager.PlayerCountManager;
 import org.l2j.gameserver.model.ManufactureItem;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SellBuffHolder;
@@ -160,7 +160,7 @@ public class OfflineTradersTable {
             stm2.execute();
             con.setAutoCommit(false); // avoid halfway done
 
-            for (Player pc : L2World.getInstance().getPlayers()) {
+            for (Player pc : World.getInstance().getPlayers()) {
                 try {
                     if ((pc.getPrivateStoreType() != PrivateStoreType.NONE) && ((pc.getClient() == null) || pc.getClient().isDetached())) {
                         stm3.setInt(1, pc.getObjectId()); // Char Id

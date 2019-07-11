@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.DoorData;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.serverpackets.GetOnVehicle;
@@ -105,7 +105,7 @@ public class ValidatePosition extends ClientPacket {
         // }
 
         // Don't allow flying transformations outside gracia area!
-        if (activeChar.isFlyingMounted() && (_x > L2World.GRACIA_MAX_X)) {
+        if (activeChar.isFlyingMounted() && (_x > World.GRACIA_MAX_X)) {
             activeChar.untransform();
         }
 

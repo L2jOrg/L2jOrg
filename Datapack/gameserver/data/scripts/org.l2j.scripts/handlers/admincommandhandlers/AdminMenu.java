@@ -20,8 +20,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -69,7 +69,7 @@ public class AdminMenu implements IAdminCommandHandler
 			if (data.length == 5)
 			{
 				final String playerName = data[1];
-				final Player player = L2World.getInstance().getPlayer(playerName);
+				final Player player = World.getInstance().getPlayer(playerName);
 				if (player != null)
 				{
 					teleportCharacter(player, new Location(Integer.parseInt(data[2]), Integer.parseInt(data[3]), Integer.parseInt(data[4])), activeChar, "Admin is teleporting you.");
@@ -82,7 +82,7 @@ public class AdminMenu implements IAdminCommandHandler
 			try
 			{
 				final String targetName = command.substring(23);
-				final Player player = L2World.getInstance().getPlayer(targetName);
+				final Player player = World.getInstance().getPlayer(targetName);
 				teleportCharacter(player, activeChar.getLocation(), activeChar, "Admin is teleporting you.");
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -94,7 +94,7 @@ public class AdminMenu implements IAdminCommandHandler
 			try
 			{
 				final String targetName = command.substring(24);
-				final Player player = L2World.getInstance().getPlayer(targetName);
+				final Player player = World.getInstance().getPlayer(targetName);
 				if (player == null)
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -121,7 +121,7 @@ public class AdminMenu implements IAdminCommandHandler
 			try
 			{
 				final String targetName = command.substring(23);
-				final Player player = L2World.getInstance().getPlayer(targetName);
+				final Player player = World.getInstance().getPlayer(targetName);
 				if (player == null)
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -149,7 +149,7 @@ public class AdminMenu implements IAdminCommandHandler
 		{
 			try
 			{
-				final Player player = L2World.getInstance().getPlayer(command.substring(21));
+				final Player player = World.getInstance().getPlayer(command.substring(21));
 				teleportToCharacter(activeChar, player);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -167,7 +167,7 @@ public class AdminMenu implements IAdminCommandHandler
 			{
 				st.nextToken();
 				final String player = st.nextToken();
-				final Player plyr = L2World.getInstance().getPlayer(player);
+				final Player plyr = World.getInstance().getPlayer(player);
 				String text;
 				if (plyr != null)
 				{
@@ -223,7 +223,7 @@ public class AdminMenu implements IAdminCommandHandler
 		String filename = "main_menu.htm";
 		if (player != null)
 		{
-			final Player plyr = L2World.getInstance().getPlayer(player);
+			final Player plyr = World.getInstance().getPlayer(player);
 			if (plyr != null)
 			{
 				target = plyr;

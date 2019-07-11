@@ -8,7 +8,7 @@ import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
@@ -292,7 +292,7 @@ public class Olympiad extends ListenersContainer {
             final int points = getOlympiadTradePoint(noblesId);
             if (points > 0)
             {
-                final Player player = L2World.getInstance().getPlayer(noblesId);
+                final Player player = World.getInstance().getPlayer(noblesId);
                 if (player != null)
                 {
                     player.getVariables().set(UNCLAIMED_OLYMPIAD_POINTS_VAR, points);

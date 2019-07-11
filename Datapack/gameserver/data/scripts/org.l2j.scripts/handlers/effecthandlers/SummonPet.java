@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
-import org.l2j.gameserver.model.L2PetData;
+import org.l2j.gameserver.model.PetData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -84,7 +84,7 @@ public final class SummonPet extends AbstractEffect
 			return;
 		}
 		
-		final L2PetData petData = PetDataTable.getInstance().getPetDataByItemId(collar.getId());
+		final PetData petData = PetDataTable.getInstance().getPetDataByItemId(collar.getId());
 		if ((petData == null) || (petData.getNpcId() == -1))
 		{
 			return;

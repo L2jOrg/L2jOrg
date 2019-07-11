@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.L2SkillLearn;
+import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -34,7 +34,7 @@ public final class Fisherman extends Merchant {
     }
 
     public static void showFishSkillList(Player player) {
-        final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableFishingSkills(player);
+        final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableFishingSkills(player);
 
         if (skills.isEmpty()) {
             final int minlLevel = SkillTreesData.getInstance().getMinLevelForNewSkill(player, SkillTreesData.getInstance().getFishingSkillTree());

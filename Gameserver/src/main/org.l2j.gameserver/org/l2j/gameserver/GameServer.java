@@ -21,7 +21,7 @@ import org.l2j.gameserver.handler.EffectHandler;
 import org.l2j.gameserver.handler.SkillConditionHandler;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.*;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.votereward.VoteSystem;
@@ -69,7 +69,7 @@ public class GameServer {
 
         printSection("Lineage II World");
         GameTimeController.init(); // start game time control early
-        L2World.getInstance();
+        World.getInstance();
         MapRegionManager.getInstance();
         ZoneManager.getInstance();
         DoorData.getInstance();

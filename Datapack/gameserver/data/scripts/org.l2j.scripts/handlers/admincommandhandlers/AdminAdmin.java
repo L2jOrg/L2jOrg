@@ -20,8 +20,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.olympiad.Olympiad;
@@ -319,7 +319,7 @@ public class AdminAdmin implements IAdminCommandHandler
 					}
 					
 					final CreatureSay cs = new CreatureSay(activeChar, ChatType.WORLD, sb.toString());
-					L2World.getInstance().getPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
+					World.getInstance().getPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
 					break;
 				}
 				case "see":

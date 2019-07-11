@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.RecipeData;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.ManufactureItem;
-import org.l2j.gameserver.model.L2RecipeList;
+import org.l2j.gameserver.model.RecipeList;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.InvalidDataPacketException;
@@ -72,13 +72,13 @@ public final class RequestRecipeShopListSet extends ClientPacket {
             return;
         }
 
-        final List<L2RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
-        final List<L2RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
+        final List<RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
+        final List<RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
 
         player.getManufactureItems().clear();
 
         for (ManufactureItem i : _items) {
-            final L2RecipeList list = RecipeData.getInstance().getRecipeList(i.getRecipeId());
+            final RecipeList list = RecipeData.getInstance().getRecipeList(i.getRecipeId());
             if (!dwarfRecipes.contains(list) && !commonRecipes.contains(list)) {
                 GameUtils.handleIllegalPlayerAction(player, "Warning!! Player " + player.getName() + " of account " + player.getAccountName() + " tried to set recipe which he dont have.", Config.DEFAULT_PUNISH);
                 return;

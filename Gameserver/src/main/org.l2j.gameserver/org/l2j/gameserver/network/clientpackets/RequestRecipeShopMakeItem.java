@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.RecipeController;
 import org.l2j.gameserver.enums.PrivateStoreType;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.GameUtils;
 
@@ -33,7 +33,7 @@ public final class RequestRecipeShopMakeItem extends ClientPacket {
             return;
         }
 
-        final Player manufacturer = L2World.getInstance().getPlayer(_id);
+        final Player manufacturer = World.getInstance().getPlayer(_id);
         if (manufacturer == null) {
             return;
         }

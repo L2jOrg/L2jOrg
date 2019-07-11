@@ -23,7 +23,7 @@ import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.handler.IVoicedCommandHandler;
 import org.l2j.gameserver.handler.VoicedCommandHandler;
 import org.l2j.gameserver.instancemanager.SellBuffsManager;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -337,7 +337,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						index = Integer.parseInt(st.nextToken());
 					}
 					
-					final Player seller = L2World.getInstance().getPlayer(objId);
+					final Player seller = World.getInstance().getPlayer(objId);
 					if (seller != null)
 					{
 						if (!seller.isSellingBuffs() || !activeChar.isInsideRadius3D(seller, Npc.INTERACTION_DISTANCE))
@@ -379,7 +379,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						return false;
 					}
 					
-					final Player seller = L2World.getInstance().getPlayer(objId);
+					final Player seller = World.getInstance().getPlayer(objId);
 					if (seller == null)
 					{
 						return false;

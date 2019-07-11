@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.ClanPrivilege;
-import org.l2j.gameserver.model.L2Seed;
+import org.l2j.gameserver.model.Seed;
 import org.l2j.gameserver.model.SeedProduction;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.InvalidDataPacketException;
@@ -67,7 +67,7 @@ public class RequestSetSeed extends ClientPacket {
         // Filter seeds with start amount lower than 0 and incorrect price
         final List<SeedProduction> list = new ArrayList<>(_items.size());
         for (SeedProduction sp : _items) {
-            final L2Seed s = manor.getSeed(sp.getId());
+            final Seed s = manor.getSeed(sp.getId());
             if ((s != null) && (sp.getStartAmount() <= s.getSeedLimit()) && (sp.getPrice() >= s.getSeedMinPrice()) && (sp.getPrice() <= s.getSeedMaxPrice())) {
                 list.add(sp);
             }

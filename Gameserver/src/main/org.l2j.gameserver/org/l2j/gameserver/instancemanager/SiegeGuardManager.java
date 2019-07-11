@@ -5,7 +5,7 @@ import org.l2j.gameserver.data.xml.impl.CastleData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.Spawn;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Defender;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -59,7 +59,7 @@ public final class SiegeGuardManager {
                     final Item dropticket = new Item(holder.getItemId());
                     dropticket.setItemLocation(ItemLocation.VOID);
                     dropticket.dropMe(null, x, y, z);
-                    L2World.getInstance().addObject(dropticket);
+                    World.getInstance().addObject(dropticket);
                     _droppedTickets.add(dropticket);
                 }
             }
@@ -151,7 +151,7 @@ public final class SiegeGuardManager {
             final Item dropticket = new Item(itemId);
             dropticket.setItemLocation(ItemLocation.VOID);
             dropticket.dropMe(null, player.getX(), player.getY(), player.getZ());
-            L2World.getInstance().addObject(dropticket);
+            World.getInstance().addObject(dropticket);
             _droppedTickets.add(dropticket);
         }
     }

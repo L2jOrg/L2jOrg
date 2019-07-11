@@ -8,11 +8,11 @@ import org.l2j.gameserver.model.zone.ZoneForm;
  *
  * @author GKR
  */
-public class L2SpawnTerritory {
+public class SpawnTerritory {
     private final String _name;
     private final ZoneForm _territory;
 
-    public L2SpawnTerritory(String name, ZoneForm territory) {
+    public SpawnTerritory(String name, ZoneForm territory) {
         _name = name;
         _territory = territory;
     }

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.friend;
 
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -38,7 +38,7 @@ public final class RequestFriendList extends ClientPacket {
                 continue;
             }
 
-            friend = L2World.getInstance().getPlayer(friendName);
+            friend = World.getInstance().getPlayer(friendName);
 
             if ((friend == null) || !friend.isOnline()) {
                 // (Currently: Offline)

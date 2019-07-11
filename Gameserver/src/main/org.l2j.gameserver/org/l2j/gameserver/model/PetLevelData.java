@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.model.stats.Stats;
@@ -23,7 +7,7 @@ import org.l2j.gameserver.model.stats.Stats;
  *
  * @author JIV, Zoey76
  */
-public class L2PetLevelData {
+public class PetLevelData {
     private final int _ownerExpTaken;
     private final int _petFeedBattle;
     private final int _petFeedNormal;
@@ -46,7 +30,7 @@ public class L2PetLevelData {
     private final double _slowFlySpeedOnRide;
     private final double _fastFlySpeedOnRide;
 
-    public L2PetLevelData(StatsSet set) {
+    public PetLevelData(StatsSet set) {
         _ownerExpTaken = set.getInt("get_exp_type");
         _petMaxExp = set.getLong("exp");
         _petMaxHP = set.getFloat("org_hp");

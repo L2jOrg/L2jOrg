@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets.shuttle;
 
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Shuttle;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -32,7 +32,7 @@ public class RequestShuttleGetOn extends ClientPacket {
         }
 
         // TODO: better way?
-        for (Shuttle shuttle : L2World.getInstance().getVisibleObjects(activeChar, Shuttle.class)) {
+        for (Shuttle shuttle : World.getInstance().getVisibleObjects(activeChar, Shuttle.class)) {
             if (shuttle.calculateDistance3D(activeChar) < 1000) {
                 shuttle.addPassenger(activeChar);
                 activeChar.getInVehiclePosition().setXYZ(_x, _y, _z);

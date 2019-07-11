@@ -20,7 +20,7 @@ import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.instancemanager.HandysBlockCheckerManager;
 import org.l2j.gameserver.model.ArenaParticipantsHolder;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Block;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -93,7 +93,7 @@ public class EventItem implements IItemHandler
 		if (holder != null)
 		{
 			final int team = holder.getPlayerTeam(castor);
-			L2World.getInstance().forEachVisibleObjectInRange(block, Player.class, sk.getEffectRange(), pc ->
+			World.getInstance().forEachVisibleObjectInRange(block, Player.class, sk.getEffectRange(), pc ->
 			{
 				final int enemyTeam = holder.getPlayerTeam(pc);
 				if ((enemyTeam != -1) && (enemyTeam != team))

@@ -235,7 +235,7 @@ public final class Item extends WorldObject {
      * <li>Send a Server->Client Packet GetItem to player that pick up and its _knowPlayers member</li>
      * <li>Remove the WorldObject from the world</li><BR>
      * <BR>
-     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of L2World </B></FONT><BR>
+     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of World </B></FONT><BR>
      * <BR>
      * <B><U> Example of use </U> :</B><BR>
      * <BR>
@@ -245,7 +245,7 @@ public final class Item extends WorldObject {
      * @param character Character that pick up the item
      */
     public final void pickupMe(Creature character) {
-        final L2WorldRegion oldregion = getWorldRegion();
+        final WorldRegion oldregion = getWorldRegion();
 
         // Create a server->client GetItem packet to pick up the Item
         character.broadcastPacket(new GetItem(this, character.getObjectId()));
@@ -263,7 +263,7 @@ public final class Item extends WorldObject {
 
         // outside of synchronized to avoid deadlocks
         // Remove the Item from the world
-        L2World.getInstance().removeVisibleObject(this, oldregion);
+        World.getInstance().removeVisibleObject(this, oldregion);
 
         if (character.isPlayer()) {
             // Notify to scripts
@@ -1634,7 +1634,7 @@ public final class Item extends WorldObject {
 
     @Override
     public Player getActingPlayer() {
-        return L2World.getInstance().getPlayer(getOwnerId());
+        return World.getInstance().getPlayer(getOwnerId());
     }
 
     public int getEquipReuseDelay() {
@@ -1947,10 +1947,10 @@ public final class Item extends WorldObject {
      * <B><U> Actions</U> :</B><BR>
      * <BR>
      * <li>Set the x,y,z position of the Item dropped and update its _worldregion</li>
-     * <li>Add the Item dropped to _visibleObjects of its L2WorldRegion</li>
+     * <li>Add the Item dropped to _visibleObjects of its WorldRegion</li>
      * <li>Add the Item dropped in the world as a <B>visible</B> object</li><BR>
      * <BR>
-     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object to _allObjects of L2World </B></FONT><BR>
+     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object to _allObjects of World </B></FONT><BR>
      * <BR>
      * <B><U> Example of use </U> :</B><BR>
      * <BR>
@@ -1993,7 +1993,7 @@ public final class Item extends WorldObject {
             _itеm.setDropperObjectId(_dropper != null ? _dropper.getObjectId() : 0); // Set the dropper Id for the knownlist packets in sendInfo
 
             // Add the Item dropped in the world as a visible object
-            L2World.getInstance().addVisibleObject(_itеm, _itеm.getWorldRegion());
+            World.getInstance().addVisibleObject(_itеm, _itеm.getWorldRegion());
             if (Config.SAVE_DROPPED_ITEM) {
                 ItemsOnGroundManager.getInstance().save(_itеm);
             }

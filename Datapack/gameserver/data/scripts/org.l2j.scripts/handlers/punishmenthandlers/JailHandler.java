@@ -19,7 +19,7 @@ package handlers.punishmenthandlers;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IPunishmentHandler;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.tasks.player.TeleportTask;
 import org.l2j.gameserver.model.events.Containers;
@@ -68,7 +68,7 @@ public class JailHandler implements IPunishmentHandler
 			case CHARACTER:
 			{
 				final int objectId = Integer.parseInt(String.valueOf(task.getKey()));
-				final Player player = L2World.getInstance().getPlayer(objectId);
+				final Player player = World.getInstance().getPlayer(objectId);
 				if (player != null)
 				{
 					applyToPlayer(task, player);
@@ -92,7 +92,7 @@ public class JailHandler implements IPunishmentHandler
 			case IP:
 			{
 				final String ip = String.valueOf(task.getKey());
-				for (Player player : L2World.getInstance().getPlayers())
+				for (Player player : World.getInstance().getPlayers())
 				{
 					if (player.getIPAddress().equals(ip))
 					{
@@ -112,7 +112,7 @@ public class JailHandler implements IPunishmentHandler
 			case CHARACTER:
 			{
 				final int objectId = Integer.parseInt(String.valueOf(task.getKey()));
-				final Player player = L2World.getInstance().getPlayer(objectId);
+				final Player player = World.getInstance().getPlayer(objectId);
 				if (player != null)
 				{
 					removeFromPlayer(player);
@@ -136,7 +136,7 @@ public class JailHandler implements IPunishmentHandler
 			case IP:
 			{
 				final String ip = String.valueOf(task.getKey());
-				for (Player player : L2World.getInstance().getPlayers())
+				for (Player player : World.getInstance().getPlayers())
 				{
 					if (player.getIPAddress().equals(ip))
 					{

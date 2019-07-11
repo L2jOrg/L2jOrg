@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.instancemanager.MailManager;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
@@ -154,7 +154,7 @@ public final class RequestCancelPostAttachment extends ClientPacket {
             activeChar.sendItemList();
         }
 
-        final Player receiver = L2World.getInstance().getPlayer(msg.getReceiverId());
+        final Player receiver = World.getInstance().getPlayer(msg.getReceiverId());
         if (receiver != null) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANCELED_THE_SENT_MAIL);
             sm.addString(activeChar.getName());

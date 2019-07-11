@@ -20,8 +20,8 @@ import java.util.StringTokenizer;
 
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -133,9 +133,9 @@ public class AdminGeodata implements IAdminCommandHandler
 			}
 			case "admin_geomap":
 			{
-				final int x = ((activeChar.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
-				final int y = ((activeChar.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
-				BuilderUtil.sendSysMessage(activeChar, "GeoMap: " + x + "_" + y + " (" + ((x - L2World.TILE_ZERO_COORD_X) * L2World.TILE_SIZE) + "," + ((y - L2World.TILE_ZERO_COORD_Y) * L2World.TILE_SIZE) + " to " + ((((x - L2World.TILE_ZERO_COORD_X) * L2World.TILE_SIZE) + L2World.TILE_SIZE) - 1) + "," + ((((y - L2World.TILE_ZERO_COORD_Y) * L2World.TILE_SIZE) + L2World.TILE_SIZE) - 1) + ")");
+				final int x = ((activeChar.getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
+				final int y = ((activeChar.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
+				BuilderUtil.sendSysMessage(activeChar, "GeoMap: " + x + "_" + y + " (" + ((x - World.TILE_ZERO_COORD_X) * World.TILE_SIZE) + "," + ((y - World.TILE_ZERO_COORD_Y) * World.TILE_SIZE) + " to " + ((((x - World.TILE_ZERO_COORD_X) * World.TILE_SIZE) + World.TILE_SIZE) - 1) + "," + ((((y - World.TILE_ZERO_COORD_Y) * World.TILE_SIZE) + World.TILE_SIZE) - 1) + ")");
 				break;
 			}
 		}

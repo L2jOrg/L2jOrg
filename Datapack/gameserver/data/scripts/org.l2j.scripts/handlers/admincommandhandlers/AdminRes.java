@@ -17,8 +17,8 @@
 package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.ControllableMob;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -79,7 +79,7 @@ public class AdminRes implements IAdminCommandHandler
 		if (resParam != null)
 		{
 			// Check if a player name was specified as a param.
-			final Player plyr = L2World.getInstance().getPlayer(resParam);
+			final Player plyr = World.getInstance().getPlayer(resParam);
 			
 			if (plyr != null)
 			{
@@ -92,7 +92,7 @@ public class AdminRes implements IAdminCommandHandler
 				{
 					final int radius = Integer.parseInt(resParam);
 					
-					L2World.getInstance().forEachVisibleObjectInRange(activeChar, Player.class, radius, knownPlayer ->
+					World.getInstance().forEachVisibleObjectInRange(activeChar, Player.class, radius, knownPlayer ->
 					{
 						doResurrect(knownPlayer);
 					});
@@ -139,7 +139,7 @@ public class AdminRes implements IAdminCommandHandler
 			{
 				radius = Integer.parseInt(radiusStr);
 				
-				L2World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, radius, knownChar ->
+				World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, radius, knownChar ->
 				{
 					if (!knownChar.isPlayer() && !(knownChar instanceof ControllableMob))
 					{

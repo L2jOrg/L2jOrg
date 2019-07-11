@@ -24,7 +24,7 @@ import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.*;
@@ -300,7 +300,7 @@ public final class Baium extends AbstractNpcAI
 				}
 				else
 				{
-					for (Creature creature : L2World.getInstance().getVisibleObjectsInRange(npc, Player.class, 2000))
+					for (Creature creature : World.getInstance().getVisibleObjectsInRange(npc, Player.class, 2000))
 					{
 						if (zone.isInsideZone(creature) && !creature.isDead())
 						{
@@ -335,7 +335,7 @@ public final class Baium extends AbstractNpcAI
 					else
 					{
 						boolean found = false;
-						for (Playable creature : L2World.getInstance().getVisibleObjectsInRange(mob, Playable.class, 1000))
+						for (Playable creature : World.getInstance().getVisibleObjectsInRange(mob, Playable.class, 1000))
 						{
 							if (zone.isInsideZone(creature) && !creature.isDead())
 							{

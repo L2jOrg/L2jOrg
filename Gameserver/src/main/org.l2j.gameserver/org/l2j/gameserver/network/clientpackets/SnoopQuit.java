@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
@@ -16,7 +16,7 @@ public final class SnoopQuit extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = L2World.getInstance().getPlayer(_snoopID);
+        final Player player = World.getInstance().getPlayer(_snoopID);
         if (player == null) {
             return;
         }

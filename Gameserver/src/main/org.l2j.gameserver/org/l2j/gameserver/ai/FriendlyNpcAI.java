@@ -3,7 +3,7 @@ package org.l2j.gameserver.ai;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
@@ -88,7 +88,7 @@ public class FriendlyNpcAI extends AttackableAI {
         final int combinedCollision = collision + originalAttackTarget.getTemplate().getCollisionRadius();
 
         if (!npc.isMovementDisabled() && (Rnd.get(100) <= 3)) {
-            for (Attackable nearby : L2World.getInstance().getVisibleObjects(npc, Attackable.class)) {
+            for (Attackable nearby : World.getInstance().getVisibleObjects(npc, Attackable.class)) {
                 if (npc.isInsideRadius2D(nearby, collision) && (nearby != originalAttackTarget)) {
                     int newX = combinedCollision + Rnd.get(40);
                     if (Rnd.nextBoolean()) {

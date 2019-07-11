@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.items.ItemTemplate;
 
-public final class L2Seed {
+public final class Seed {
     private final int _seedId;
     private final int _cropId; // crop type
     private final int _level; // seed level
@@ -18,7 +18,7 @@ public final class L2Seed {
     private final int _seedReferencePrice;
     private final int _cropReferencePrice;
 
-    public L2Seed(StatsSet set) {
+    public Seed(StatsSet set) {
         _cropId = set.getInt("id");
         _seedId = set.getInt("seedId");
         _level = set.getInt("level");

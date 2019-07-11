@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -20,7 +20,7 @@ public final class RequestExOustFromMPCC extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player target = L2World.getInstance().getPlayer(_name);
+        final Player target = World.getInstance().getPlayer(_name);
         final Player activeChar = client.getActiveChar();
 
         if ((target != null) && target.isInParty() && activeChar.isInParty() && activeChar.getParty().isInCommandChannel() && target.getParty().isInCommandChannel() && activeChar.getParty().getCommandChannel().getLeader().equals(activeChar) && activeChar.getParty().getCommandChannel().equals(target.getParty().getCommandChannel())) {

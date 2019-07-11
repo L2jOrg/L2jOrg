@@ -5,7 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.EnchantItemData;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.UserInfoType;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.model.items.ItemTemplate;
@@ -298,7 +298,7 @@ public final class RequestEnchantItem extends ClientPacket {
                                 return;
                             }
 
-                            L2World.getInstance().removeObject(item);
+                            World.getInstance().removeObject(item);
                             Item crystals = null;
                             if (crystalId != 0) {
                                 crystals = activeChar.getInventory().addItem("Enchant", crystalId, count, activeChar, item);

@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -70,7 +70,7 @@ public final class CallSkillOnActionTime extends AbstractEffect
 				triggerSkill.applyEffects(effector, effector);
 			}
 			
-			L2World.getInstance().forEachVisibleObjectInRange(effector, Creature.class, _skill.getSkill().getAffectRange(), c ->
+			World.getInstance().forEachVisibleObjectInRange(effector, Creature.class, _skill.getSkill().getAffectRange(), c ->
 			{
 				final WorldObject target = triggerSkill.getTarget(effector, c, false, false, false);
 				

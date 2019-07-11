@@ -26,8 +26,8 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -181,7 +181,7 @@ public class AdminClan implements IAdminCommandHandler
 			// From the HTML we receive player's object Id.
 			if (GameUtils.isDigit(val))
 			{
-				player = L2World.getInstance().getPlayer(Integer.parseInt(val));
+				player = World.getInstance().getPlayer(Integer.parseInt(val));
 				if (player == null)
 				{
 					activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
@@ -190,7 +190,7 @@ public class AdminClan implements IAdminCommandHandler
 			}
 			else
 			{
-				player = L2World.getInstance().getPlayer(val);
+				player = World.getInstance().getPlayer(val);
 				if (player == null)
 				{
 					activeChar.sendPacket(SystemMessageId.INCORRECT_NAME_PLEASE_TRY_AGAIN);

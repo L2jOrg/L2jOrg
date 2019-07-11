@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.IParameterized;
 import org.l2j.gameserver.model.interfaces.ITerritorized;
 import org.l2j.gameserver.model.zone.type.BannedSpawnTerritory;
-import org.l2j.gameserver.model.zone.type.L2SpawnTerritory;
+import org.l2j.gameserver.model.zone.type.SpawnTerritory;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,7 +19,7 @@ public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<Stat
     private final String _name;
     private final boolean _spawnByDefault;
     private final List<NpcSpawnTemplate> _spawns = new ArrayList<>();
-    private List<L2SpawnTerritory> _territories;
+    private List<SpawnTerritory> _territories;
     private List<BannedSpawnTerritory> _bannedTerritories;
     private StatsSet _parameters;
 
@@ -49,7 +49,7 @@ public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<Stat
     }
 
     @Override
-    public void addTerritory(L2SpawnTerritory territory) {
+    public void addTerritory(SpawnTerritory territory) {
         if (_territories == null) {
             _territories = new ArrayList<>();
         }
@@ -57,7 +57,7 @@ public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<Stat
     }
 
     @Override
-    public List<L2SpawnTerritory> getTerritories() {
+    public List<SpawnTerritory> getTerritories() {
         return _territories != null ? _territories : Collections.emptyList();
     }
 
@@ -110,7 +110,7 @@ public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<Stat
         }
 
         // Clone territories
-        for (L2SpawnTerritory territory : getTerritories()) {
+        for (SpawnTerritory territory : getTerritories()) {
             group.addTerritory(territory);
         }
 

@@ -21,8 +21,8 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Vehicle;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
-import org.l2j.gameserver.model.shuttle.L2ShuttleData;
-import org.l2j.gameserver.model.shuttle.L2ShuttleStop;
+import org.l2j.gameserver.model.shuttle.ShuttleData;
+import org.l2j.gameserver.model.shuttle.ShuttleStop;
 import org.l2j.gameserver.network.serverpackets.shuttle.ExShuttleGetOff;
 import org.l2j.gameserver.network.serverpackets.shuttle.ExShuttleGetOn;
 import org.l2j.gameserver.network.serverpackets.shuttle.ExShuttleInfo;
@@ -34,7 +34,7 @@ import java.util.List;
  * @author UnAfraid
  */
 public class Shuttle extends Vehicle {
-    private L2ShuttleData _shuttleData;
+    private ShuttleData _shuttleData;
 
     public Shuttle(CreatureTemplate template) {
         super(template);
@@ -42,12 +42,12 @@ public class Shuttle extends Vehicle {
         setAI(new ShuttleAI(this));
     }
 
-    public List<L2ShuttleStop> getStops() {
+    public List<ShuttleStop> getStops() {
         return _shuttleData.getStops();
     }
 
     public void closeDoor(int id) {
-        for (L2ShuttleStop stop : _shuttleData.getStops()) {
+        for (ShuttleStop stop : _shuttleData.getStops()) {
             if (stop.getId() == id) {
                 stop.closeDoor();
                 break;
@@ -56,7 +56,7 @@ public class Shuttle extends Vehicle {
     }
 
     public void openDoor(int id) {
-        for (L2ShuttleStop stop : _shuttleData.getStops()) {
+        for (ShuttleStop stop : _shuttleData.getStops()) {
             if (stop.getId() == id) {
                 stop.openDoor();
                 break;
@@ -118,11 +118,11 @@ public class Shuttle extends Vehicle {
         broadcastPacket(new ExShuttleInfo(this));
     }
 
-    public void setData(L2ShuttleData data) {
+    public void setData(ShuttleData data) {
         _shuttleData = data;
     }
 
-    public L2ShuttleData getShuttleData() {
+    public ShuttleData getShuttleData() {
         return _shuttleData;
     }
 }

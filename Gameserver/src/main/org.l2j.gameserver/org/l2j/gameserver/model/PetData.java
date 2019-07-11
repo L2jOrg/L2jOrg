@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.data.xml.impl.SkillData;
@@ -29,9 +13,9 @@ import java.util.Map;
  *
  * @author JIV
  */
-public class L2PetData {
-    private final Map<Integer, L2PetLevelData> _levelStats = new HashMap<>();
-    private final List<L2PetSkillLearn> _skills = new ArrayList<>();
+public class PetData {
+    private final Map<Integer, PetLevelData> _levelStats = new HashMap<>();
+    private final List<PetSkillLearn> _skills = new ArrayList<>();
 
     private final int _npcId;
     private final int _itemId;
@@ -42,7 +26,7 @@ public class L2PetData {
     private int _maxlvl = 0;
     private boolean _syncLevel = false;
 
-    public L2PetData(int npcId, int itemId) {
+    public PetData(int npcId, int itemId) {
         _npcId = npcId;
         _itemId = itemId;
     }
@@ -65,7 +49,7 @@ public class L2PetData {
      * @param level the pet's level.
      * @param data  the pet's data.
      */
-    public void addNewStat(int level, L2PetLevelData data) {
+    public void addNewStat(int level, PetLevelData data) {
         if (_minlvl > level) {
             _minlvl = level;
         }
@@ -79,7 +63,7 @@ public class L2PetData {
      * @param petLevel the pet's level.
      * @return the pet data associated to that pet level.
      */
-    public L2PetLevelData getPetLevelData(int petLevel) {
+    public PetLevelData getPetLevelData(int petLevel) {
         return _levelStats.get(petLevel);
     }
 
@@ -161,7 +145,7 @@ public class L2PetData {
      * @param petLvl   the pet's level when this skill is available.
      */
     public void addNewSkill(int skillId, int skillLvl, int petLvl) {
-        _skills.add(new L2PetSkillLearn(skillId, skillLvl, petLvl));
+        _skills.add(new PetSkillLearn(skillId, skillLvl, petLvl));
     }
 
     /**
@@ -174,7 +158,7 @@ public class L2PetData {
     public int getAvailableLevel(int skillId, int petLvl) {
         int lvl = 0;
         boolean found = false;
-        for (L2PetSkillLearn temp : _skills) {
+        for (PetSkillLearn temp : _skills) {
             if (temp.getSkillId() != skillId) {
                 continue;
             }
@@ -210,11 +194,11 @@ public class L2PetData {
     /**
      * @return the list with the pet's skill data.
      */
-    public List<L2PetSkillLearn> getAvailableSkills() {
+    public List<PetSkillLearn> getAvailableSkills() {
         return _skills;
     }
 
-    public static final class L2PetSkillLearn extends SkillHolder {
+    public static final class PetSkillLearn extends SkillHolder {
         private final int _minLevel;
 
         /**
@@ -222,7 +206,7 @@ public class L2PetData {
          * @param lvl    the skill level.
          * @param minLvl the minimum level when this skill is available.
          */
-        public L2PetSkillLearn(int id, int lvl, int minLvl) {
+        public PetSkillLearn(int id, int lvl, int minLvl) {
             super(id, lvl);
             _minLevel = minLvl;
         }

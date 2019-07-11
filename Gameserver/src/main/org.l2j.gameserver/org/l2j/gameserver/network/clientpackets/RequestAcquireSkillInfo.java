@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.model.ClanPrivilege;
-import org.l2j.gameserver.model.L2SkillLearn;
+import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.AcquireSkillType;
@@ -64,7 +64,7 @@ public final class RequestAcquireSkillInfo extends ClientPacket {
             }
         }
 
-        final L2SkillLearn s = SkillTreesData.getInstance().getSkillLearn(_skillType, _id, _level, activeChar);
+        final SkillLearn s = SkillTreesData.getInstance().getSkillLearn(_skillType, _id, _level, activeChar);
         if (s == null) {
             return;
         }

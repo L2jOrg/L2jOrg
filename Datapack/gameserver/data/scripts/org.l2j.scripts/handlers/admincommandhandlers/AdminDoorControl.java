@@ -19,8 +19,8 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
@@ -141,7 +141,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 			}
 			else if (command.equals("admin_showdoors"))
 			{
-				L2World.getInstance().forEachVisibleObject(activeChar, Door.class, door ->
+				World.getInstance().forEachVisibleObject(activeChar, Door.class, door ->
 				{
 					final ExServerPrimitive packet = new ExServerPrimitive("door" + door.getId(), activeChar.getX(), activeChar.getY(), -16000);
 					final Color color = door.isOpen() ? Color.GREEN : Color.RED;

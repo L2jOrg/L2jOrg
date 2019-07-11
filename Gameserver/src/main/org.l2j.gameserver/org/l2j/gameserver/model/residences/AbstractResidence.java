@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.residences;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
-import org.l2j.gameserver.model.L2SkillLearn;
+import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.SocialClass;
 import org.l2j.gameserver.model.events.ListenersContainer;
@@ -31,7 +31,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
     private final Map<Integer, ResidenceFunction> _functions = new ConcurrentHashMap<>();
     private String _name;
     private ResidenceZone _zone = null;
-    private List<L2SkillLearn> _residentialSkills = new ArrayList<>();
+    private List<SkillLearn> _residentialSkills = new ArrayList<>();
 
     public AbstractResidence(int residenceId) {
         _residenceId = residenceId;
@@ -73,7 +73,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
     public void giveResidentialSkills(Player player) {
         if ((_residentialSkills != null) && !_residentialSkills.isEmpty()) {
             final int playerSocialClass = player.getPledgeClass() + 1;
-            for (L2SkillLearn skill : _residentialSkills) {
+            for (SkillLearn skill : _residentialSkills) {
                 final SocialClass skillSocialClass = skill.getSocialClass();
                 if ((skillSocialClass == null) || (playerSocialClass >= skillSocialClass.ordinal())) {
                     player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), false);
@@ -84,7 +84,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 
     public void removeResidentialSkills(Player player) {
         if ((_residentialSkills != null) && !_residentialSkills.isEmpty()) {
-            for (L2SkillLearn skill : _residentialSkills) {
+            for (SkillLearn skill : _residentialSkills) {
                 player.removeSkill(skill.getSkillId(), false);
             }
         }

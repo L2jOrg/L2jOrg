@@ -20,7 +20,7 @@ import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
@@ -66,7 +66,7 @@ public class AdminGmChat implements IAdminCommandHandler
 		WorldObject target = null;
 		if (command.length() > 12)
 		{
-			target = L2World.getInstance().getPlayer(command.substring(12));
+			target = World.getInstance().getPlayer(command.substring(12));
 		}
 		if (target == null)
 		{

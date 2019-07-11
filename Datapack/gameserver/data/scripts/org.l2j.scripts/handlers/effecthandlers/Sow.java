@@ -20,7 +20,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.Party;
-import org.l2j.gameserver.model.L2Seed;
+import org.l2j.gameserver.model.Seed;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Monster;
@@ -64,7 +64,7 @@ public final class Sow extends AbstractEffect
 		}
 		
 		// Consuming used seed
-		final L2Seed seed = target.getSeed();
+		final Seed seed = target.getSeed();
 		if (!player.destroyItemByItemId("Consume", seed.getSeedId(), 1, target, false))
 		{
 			return;
@@ -96,7 +96,7 @@ public final class Sow extends AbstractEffect
 		target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 	}
 	
-	private static boolean calcSuccess(Creature activeChar, Creature target, L2Seed seed)
+	private static boolean calcSuccess(Creature activeChar, Creature target, Seed seed)
 	{
 		// TODO: check all the chances
 		final int minlevelSeed = seed.getLevel() - 5;

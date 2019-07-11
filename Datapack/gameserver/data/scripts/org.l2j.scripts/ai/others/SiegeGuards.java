@@ -20,7 +20,7 @@ import ai.AbstractNpcAI;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.*;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
@@ -88,7 +88,7 @@ public class SiegeGuards extends AbstractNpcAI
 				else {
 					final WorldObject target = guard.getTarget();
 					if (!guard.isInCombat() || (target == null) || (guard.calculateDistance2D(target) > guard.getAggroRange()) || target.isInvul()) {
-						for (Creature nearby : L2World.getInstance().getVisibleObjectsInRange(guard, Creature.class, guard.getAggroRange()))
+						for (Creature nearby : World.getInstance().getVisibleObjectsInRange(guard, Creature.class, guard.getAggroRange()))
 					{
 							if (nearby.isPlayable() && GeoEngine.getInstance().canSeeTarget(guard, nearby))
 							{

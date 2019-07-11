@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.threading.ThreadPoolManager;
@@ -27,7 +11,7 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
  *
  * @author kriau
  */
-public class L2Request {
+public class Request {
     private static final int REQUEST_TIMEOUT = 15; // in secs
 
     protected Player _player;
@@ -36,7 +20,7 @@ public class L2Request {
     protected boolean _isAnswerer;
     protected ClientPacket _requestPacket;
 
-    public L2Request(Player player) {
+    public Request(Player player) {
         _player = player;
     }
 

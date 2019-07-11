@@ -82,7 +82,7 @@ public abstract class Summon extends Playable {
         setFollowStatus(true);
         updateAndBroadcastStatus(0);
         sendPacket(new RelationChanged(this, _owner.getRelation(_owner), false));
-        L2World.getInstance().forEachVisibleObject(getOwner(), Player.class, player ->
+        World.getInstance().forEachVisibleObject(getOwner(), Player.class, player ->
         {
             player.sendPacket(new RelationChanged(this, _owner.getRelation(player), isAutoAttackable(player)));
         });
@@ -147,7 +147,7 @@ public abstract class Summon extends Playable {
 
     @Override
     public void updateAbnormalVisualEffects() {
-        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
+        World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (player == _owner) {
                 player.sendPacket(new PetInfo(this, 1));
@@ -251,7 +251,7 @@ public abstract class Summon extends Playable {
         }
 
         if (_owner != null) {
-            L2World.getInstance().forEachVisibleObject(this, Attackable.class, TgMob ->
+            World.getInstance().forEachVisibleObject(this, Attackable.class, TgMob ->
             {
                 if (TgMob.isDead()) {
                     return;
@@ -679,7 +679,7 @@ public abstract class Summon extends Playable {
     }
 
     public void broadcastNpcInfo(int val) {
-        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
+        World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if ((player == _owner)) {
                 return;

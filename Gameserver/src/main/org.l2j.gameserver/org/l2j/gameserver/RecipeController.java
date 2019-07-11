@@ -48,13 +48,13 @@ public class RecipeController {
     }
 
     public void requestManufactureItem(Player manufacturer, int recipeListId, Player player) {
-        final L2RecipeList recipeList = RecipeData.getInstance().getValidRecipeList(player, recipeListId);
+        final RecipeList recipeList = RecipeData.getInstance().getValidRecipeList(player, recipeListId);
         if (recipeList == null) {
             return;
         }
 
-        final List<L2RecipeList> dwarfRecipes = Arrays.asList(manufacturer.getDwarvenRecipeBook());
-        final List<L2RecipeList> commonRecipes = Arrays.asList(manufacturer.getCommonRecipeBook());
+        final List<RecipeList> dwarfRecipes = Arrays.asList(manufacturer.getDwarvenRecipeBook());
+        final List<RecipeList> commonRecipes = Arrays.asList(manufacturer.getCommonRecipeBook());
 
         if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList)) {
             GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
@@ -85,13 +85,13 @@ public class RecipeController {
             return;
         }
 
-        final L2RecipeList recipeList = RecipeData.getInstance().getValidRecipeList(player, recipeListId);
+        final RecipeList recipeList = RecipeData.getInstance().getValidRecipeList(player, recipeListId);
         if (recipeList == null) {
             return;
         }
 
-        final List<L2RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
-        final List<L2RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
+        final List<RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
+        final List<RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
 
         if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList)) {
             GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
@@ -121,7 +121,7 @@ public class RecipeController {
     private static class RecipeItemMaker implements Runnable {
         private static final Logger LOGGER = LoggerFactory.getLogger(RecipeItemMaker.class);
 
-        protected final L2RecipeList _recipeList;
+        protected final RecipeList _recipeList;
         protected final Player _player; // "crafter"
         protected final Player _target; // "customer"
         protected final Skill _skill;
@@ -136,7 +136,7 @@ public class RecipeController {
         protected long _price;
         protected int _totalItems;
         protected int _delay;
-        public RecipeItemMaker(Player pPlayer, L2RecipeList pRecipeList, Player pTarget) {
+        public RecipeItemMaker(Player pPlayer, RecipeList pRecipeList, Player pTarget) {
             _player = pPlayer;
             _target = pTarget;
             _recipeList = pRecipeList;
@@ -400,7 +400,7 @@ public class RecipeController {
         private void calculateAltStatChange() {
             _itemGrab = _skillLevel;
 
-            for (L2RecipeStatInstance altStatChange : _recipeList.getAltStatChange()) {
+            for (RecipeStat altStatChange : _recipeList.getAltStatChange()) {
                 if (altStatChange.getType() == StatType.XP) {
                     _exp = altStatChange.getValue();
                 } else if (altStatChange.getType() == StatType.SP) {
@@ -419,7 +419,7 @@ public class RecipeController {
 
         private boolean calculateStatUse(boolean isWait, boolean isReduce) {
             boolean ret = true;
-            for (L2RecipeStatInstance statUse : _recipeList.getStatUse()) {
+            for (RecipeStat statUse : _recipeList.getStatUse()) {
                 final double modifiedValue = statUse.getValue() / _creationPasses;
                 if (statUse.getType() == StatType.HP) {
                     // we do not want to kill the player, so its CurrentHP must be greater than the reduce value
@@ -460,12 +460,12 @@ public class RecipeController {
             return ret;
         }
         private List<TempItem> listItems(boolean remove) {
-            final L2RecipeInstance[] recipes = _recipeList.getRecipes();
+            final Recipe[] recipes = _recipeList.getRecipes();
             final Inventory inv = _target.getInventory();
             final List<TempItem> materials = new ArrayList<>();
             SystemMessage sm;
 
-            for (L2RecipeInstance recipe : recipes) {
+            for (Recipe recipe : recipes) {
                 if (recipe.getQuantity() > 0) {
                     final Item item = inv.getItemByItemId(recipe.getItemId());
                     final long itemQuantityAmount = item == null ? 0 : item.getCount();

@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IChatHandler;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.model.BlockList;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -65,7 +65,7 @@ public final class ChatTrade implements IChatHandler
 		if (Config.DEFAULT_TRADE_CHAT.equalsIgnoreCase("on") || (Config.DEFAULT_TRADE_CHAT.equalsIgnoreCase("gm") && activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS)))
 		{
 			final int region = MapRegionManager.getInstance().getMapRegionLocId(activeChar);
-			for (Player player : L2World.getInstance().getPlayers())
+			for (Player player : World.getInstance().getPlayers())
 			{
 				if ((region == MapRegionManager.getInstance().getMapRegionLocId(player)) && !BlockList.isBlocked(player, activeChar) && (player.getInstanceId() == activeChar.getInstanceId()))
 				{
@@ -81,7 +81,7 @@ public final class ChatTrade implements IChatHandler
 				return;
 			}
 			
-			for (Player player : L2World.getInstance().getPlayers())
+			for (Player player : World.getInstance().getPlayers())
 			{
 				if (!BlockList.isBlocked(player, activeChar))
 				{

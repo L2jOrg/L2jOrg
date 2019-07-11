@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.shuttle;
 
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Shuttle;
-import org.l2j.gameserver.model.shuttle.L2ShuttleStop;
+import org.l2j.gameserver.model.shuttle.ShuttleStop;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class ExShuttleInfo extends ServerPacket {
     private final Shuttle _shuttle;
-    private final List<L2ShuttleStop> _stops;
+    private final List<ShuttleStop> _stops;
 
     public ExShuttleInfo(Shuttle shuttle) {
         _shuttle = shuttle;
@@ -32,7 +32,7 @@ public class ExShuttleInfo extends ServerPacket {
         writeInt(_shuttle.getHeading());
         writeInt(_shuttle.getId());
         writeInt(_stops.size());
-        for (L2ShuttleStop stop : _stops) {
+        for (ShuttleStop stop : _stops) {
             writeInt(stop.getId());
             for (Location loc : stop.getDimensions()) {
                 writeInt(loc.getX());

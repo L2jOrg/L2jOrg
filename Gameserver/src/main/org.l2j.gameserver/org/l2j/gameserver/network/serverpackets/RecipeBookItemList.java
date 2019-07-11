@@ -1,20 +1,20 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2RecipeList;
+import org.l2j.gameserver.model.RecipeList;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class RecipeBookItemList extends ServerPacket {
     private final boolean _isDwarvenCraft;
     private final int _maxMp;
-    private L2RecipeList[] _recipes;
+    private RecipeList[] _recipes;
 
     public RecipeBookItemList(boolean isDwarvenCraft, int maxMp) {
         _isDwarvenCraft = isDwarvenCraft;
         _maxMp = maxMp;
     }
 
-    public void addRecipes(L2RecipeList[] recipeBook) {
+    public void addRecipes(RecipeList[] recipeBook) {
         _recipes = recipeBook;
     }
 

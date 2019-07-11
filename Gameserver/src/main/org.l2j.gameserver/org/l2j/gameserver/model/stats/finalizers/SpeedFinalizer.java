@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.L2PetLevelData;
+import org.l2j.gameserver.model.PetLevelData;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.ItemTemplate;
@@ -69,7 +69,7 @@ public class SpeedFinalizer implements IStatsFunction {
         if (creature.isPlayer()) {
             final Player player = creature.getActingPlayer();
             if (player.isMounted()) {
-                final L2PetLevelData data = PetDataTable.getInstance().getPetLevelData(player.getMountNpcId(), player.getMountLevel());
+                final PetLevelData data = PetDataTable.getInstance().getPetLevelData(player.getMountNpcId(), player.getMountLevel());
                 if (data != null) {
                     baseValue = data.getSpeedOnRide(stat);
                     // if level diff with mount >= 10, it decreases move speed by 50%

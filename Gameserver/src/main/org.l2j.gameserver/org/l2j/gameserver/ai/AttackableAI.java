@@ -8,8 +8,8 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.AISkillScope;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.AggroInfo;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
@@ -117,7 +117,7 @@ public class AttackableAI extends CreatureAI {
             }
 
             if (me instanceof Guard) {
-                L2World.getInstance().forEachVisibleObjectInRange(me, Guard.class, 500, guard ->
+                World.getInstance().forEachVisibleObjectInRange(me, Guard.class, 500, guard ->
                 {
                     if (guard.isAttackingNow() && (guard.getTarget() == player)) {
                         me.getAI().startFollow(player);
@@ -177,7 +177,7 @@ public class AttackableAI extends CreatureAI {
             final Attackable npc = getActiveChar();
             if (!npc.isAlikeDead()) {
                 // If its _knownPlayer isn't empty set the Intention to AI_INTENTION_ACTIVE
-                if (!L2World.getInstance().getVisibleObjects(npc, Player.class).isEmpty()) {
+                if (!World.getInstance().getVisibleObjects(npc, Player.class).isEmpty()) {
                     intention = CtrlIntention.AI_INTENTION_ACTIVE;
                 } else if (npc.getSpawn() != null) {
                     final Location loc = npc.getSpawn();
@@ -282,7 +282,7 @@ public class AttackableAI extends CreatureAI {
         if (_globalAggro >= 0) {
             if (npc.isAggressive() || (npc instanceof Guard)) {
                 final int range = npc instanceof Guard ? 500 : npc.getAggroRange(); // TODO Make sure how guards behave towards players.
-                L2World.getInstance().forEachVisibleObjectInRange(npc, Creature.class, range, t ->
+                World.getInstance().forEachVisibleObjectInRange(npc, Creature.class, range, t ->
                 {
                     // For each Creature check if the target is autoattackable
                     if (isAggressiveTowards(t)) // check aggression
@@ -301,7 +301,7 @@ public class AttackableAI extends CreatureAI {
                                 npc.addDamageHate(t, 0, 1);
                             }
                             if (npc instanceof Guard) {
-                                L2World.getInstance().forEachVisibleObjectInRange(npc, Guard.class, 500, guard ->
+                                World.getInstance().forEachVisibleObjectInRange(npc, Guard.class, 500, guard ->
                                 {
                                     guard.addDamageHate(t, 0, 10);
                                 });
@@ -492,7 +492,7 @@ public class AttackableAI extends CreatureAI {
             // Go through all WorldObject that belong to its faction
             try {
                 final Creature finalTarget = target;
-                L2World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, factionRange, called ->
+                World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, factionRange, called ->
                 {
                     if (!getActiveChar().getTemplate().isClan(called.getTemplate().getClans())) {
                         return;
@@ -539,7 +539,7 @@ public class AttackableAI extends CreatureAI {
         // Note from Gnacik:
         // On l2js because of that sometimes mobs don't attack player only running around player without any sense, so decrease chance for now
         if (!npc.isMovementDisabled() && (Rnd.get(100) <= 3)) {
-            for (Attackable nearby : L2World.getInstance().getVisibleObjects(npc, Attackable.class)) {
+            for (Attackable nearby : World.getInstance().getVisibleObjects(npc, Attackable.class)) {
                 if (npc.isInsideRadius2D(nearby, collision) && (nearby != target)) {
                     int newX = combinedCollision + Rnd.get(40);
                     if (Rnd.nextBoolean()) {
@@ -826,7 +826,7 @@ public class AttackableAI extends CreatureAI {
                     .sorted(Comparator.comparingInt(npc::getHating).reversed());
             //@formatter:on
         } else {
-            stream = L2World.getInstance().getVisibleObjectsInRange(npc, Creature.class, range, c -> checkSkillTarget(skill, c)).stream();
+            stream = World.getInstance().getVisibleObjectsInRange(npc, Creature.class, range, c -> checkSkillTarget(skill, c)).stream();
 
             // Maybe add self to the list of targets since getVisibleObjects doesn't return yourself.
             if (checkSkillTarget(skill, npc)) {
@@ -852,7 +852,7 @@ public class AttackableAI extends CreatureAI {
 
             // If npc is aggressive, add characters within aggro range too
             if (npc.isAggressive()) {
-                stream = Stream.concat(stream, L2World.getInstance().getVisibleObjectsInRange(npc, Creature.class, npc.getAggroRange(), this::checkTarget).stream());
+                stream = Stream.concat(stream, World.getInstance().getVisibleObjectsInRange(npc, Creature.class, npc.getAggroRange(), this::checkTarget).stream());
             }
 
             return stream.findAny().orElse(null);
@@ -864,7 +864,7 @@ public class AttackableAI extends CreatureAI {
                 .sorted(Comparator.comparingInt(AggroInfo::getHate))
                 .map(AggroInfo::getAttacker)
                 .findFirst()
-                .orElse(npc.isAggressive() ? L2World.getInstance().getVisibleObjectsInRange(npc, Creature.class, npc.getAggroRange(), this::checkTarget).stream().findAny().orElse(null) : null);
+                .orElse(npc.isAggressive() ? World.getInstance().getVisibleObjectsInRange(npc, Creature.class, npc.getAggroRange(), this::checkTarget).stream().findAny().orElse(null) : null);
         //@formatter:on
     }
 

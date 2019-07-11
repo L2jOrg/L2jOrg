@@ -9,7 +9,7 @@ import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.ArmorSet;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -966,7 +966,7 @@ public abstract class Inventory extends ItemContainer {
                         }
                     }
 
-                    L2World.getInstance().addObject(item);
+                    World.getInstance().addObject(item);
 
                     // If stackable item is found in inventory just add to current quantity
                     if (item.isStackable() && (getItemByItemId(item.getId()) != null)) {

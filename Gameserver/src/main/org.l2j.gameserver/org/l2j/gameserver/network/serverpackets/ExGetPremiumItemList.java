@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2PremiumItem;
+import org.l2j.gameserver.model.PremiumItem;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -14,7 +14,7 @@ import java.util.Map.Entry;
 public class ExGetPremiumItemList extends ServerPacket {
     private final Player _activeChar;
 
-    private final Map<Integer, L2PremiumItem> _map;
+    private final Map<Integer, PremiumItem> _map;
 
     public ExGetPremiumItemList(Player activeChar) {
         _activeChar = activeChar;
@@ -26,8 +26,8 @@ public class ExGetPremiumItemList extends ServerPacket {
         writeId(ServerPacketId.EX_GET_PREMIUM_ITEM_LIST);
 
         writeInt(_map.size());
-        for (Entry<Integer, L2PremiumItem> entry : _map.entrySet()) {
-            final L2PremiumItem item = entry.getValue();
+        for (Entry<Integer, PremiumItem> entry : _map.entrySet()) {
+            final PremiumItem item = entry.getValue();
             writeLong(entry.getKey());
             writeInt(item.getItemId());
             writeLong(item.getCount());

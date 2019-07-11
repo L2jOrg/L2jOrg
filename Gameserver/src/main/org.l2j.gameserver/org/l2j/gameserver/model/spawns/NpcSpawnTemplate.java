@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.holders.MinionHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.IParameterized;
-import org.l2j.gameserver.model.zone.type.L2SpawnTerritory;
+import org.l2j.gameserver.model.zone.type.SpawnTerritory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,7 +45,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
     private final SpawnGroup _group;
     private final Set<Npc> _spawnedNpcs = ConcurrentHashMap.newKeySet();
     private List<ChanceLocation> _locations;
-    private L2SpawnTerritory _zone;
+    private SpawnTerritory _zone;
     private StatsSet _parameters;
     private List<MinionHolder> _minions;
 
@@ -93,7 +93,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
 
             final String zoneName = set.getString("zone", null);
             if (zoneName != null) {
-                final L2SpawnTerritory zone = ZoneManager.getInstance().getSpawnTerritory(zoneName);
+                final SpawnTerritory zone = ZoneManager.getInstance().getSpawnTerritory(zoneName);
                 if (zone == null) {
                     throw new NullPointerException("Spawn with non existing zone requested " + zoneName);
                 }
@@ -161,7 +161,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
         return _locations;
     }
 
-    public L2SpawnTerritory getZone() {
+    public SpawnTerritory getZone() {
         return _zone;
     }
 
@@ -222,7 +222,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
             loc.setHeading(Rnd.get(65535));
             return loc;
         } else if (!_group.getTerritories().isEmpty()) {
-            final L2SpawnTerritory territory = _group.getTerritories().get(Rnd.get(_group.getTerritories().size()));
+            final SpawnTerritory territory = _group.getTerritories().get(Rnd.get(_group.getTerritories().size()));
             for (int i = 0; i < 100; i++) {
                 final Location loc = territory.getRandomPoint();
                 if (_group.getBannedTerritories().isEmpty() || _group.getBannedTerritories().stream().allMatch(bannedTerritory -> !bannedTerritory.isInsideZone(loc.getX(), loc.getY(), loc.getZ()))) {
@@ -230,7 +230,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
                 }
             }
         } else if (!_spawnTemplate.getTerritories().isEmpty()) {
-            final L2SpawnTerritory territory = _spawnTemplate.getTerritories().get(Rnd.get(_spawnTemplate.getTerritories().size()));
+            final SpawnTerritory territory = _spawnTemplate.getTerritories().get(Rnd.get(_spawnTemplate.getTerritories().size()));
             for (int i = 0; i < 100; i++) {
                 final Location loc = territory.getRandomPoint();
                 if (_spawnTemplate.getBannedTerritories().isEmpty() || _spawnTemplate.getBannedTerritories().stream().allMatch(bannedTerritory -> !bannedTerritory.isInsideZone(loc.getX(), loc.getY(), loc.getZ()))) {

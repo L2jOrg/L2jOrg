@@ -24,13 +24,13 @@ import java.util.List;
 /**
  * @author UnAfraid
  */
-public class L2ShuttleStop {
+public class ShuttleStop {
     private final int _id;
     private final List<Location> _dimensions = new ArrayList<>(3);
     private boolean _isOpen = true;
     private long _lastDoorStatusChanges = System.currentTimeMillis();
 
-    public L2ShuttleStop(int id) {
+    public ShuttleStop(int id) {
         _id = id;
     }
 

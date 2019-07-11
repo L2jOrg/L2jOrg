@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.friend;
 
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -22,7 +22,7 @@ public class FriendListPacket extends ServerPacket {
     public FriendListPacket(Player player) {
         for (int objId : player.getFriendList()) {
             final String name = CharNameTable.getInstance().getNameById(objId);
-            final Player player1 = L2World.getInstance().getPlayer(objId);
+            final Player player1 = World.getInstance().getPlayer(objId);
             boolean online = false;
             int level = 0;
             int classId = 0;

@@ -1146,14 +1146,14 @@ public class Clan implements IIdentifiable, INamable {
 
         final int playerSocialClass = player.getPledgeClass() + 1;
         for (Skill skill : _skills.values()) {
-            final L2SkillLearn skillLearn = SkillTreesData.getInstance().getPledgeSkill(skill.getId(), skill.getLevel());
+            final SkillLearn skillLearn = SkillTreesData.getInstance().getPledgeSkill(skill.getId(), skill.getLevel());
             if ((skillLearn == null) || (skillLearn.getSocialClass() == null) || (playerSocialClass >= skillLearn.getSocialClass().ordinal())) {
                 player.addSkill(skill, false); // Skill is not saved to player DB
             }
         }
         if (player.getPledgeType() == 0) {
             for (Skill skill : _subPledgeSkills.values()) {
-                final L2SkillLearn skillLearn = SkillTreesData.getInstance().getSubPledgeSkill(skill.getId(), skill.getLevel());
+                final SkillLearn skillLearn = SkillTreesData.getInstance().getSubPledgeSkill(skill.getId(), skill.getLevel());
                 if ((skillLearn == null) || (skillLearn.getSocialClass() == null) || (playerSocialClass >= skillLearn.getSocialClass().ordinal())) {
                     player.addSkill(skill, false); // Skill is not saved to player DB
                 }
@@ -2199,7 +2199,7 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public Player getNewLeader() {
-        return L2World.getInstance().getPlayer(_newLeaderId);
+        return World.getInstance().getPlayer(_newLeaderId);
     }
 
     public void setNewLeader(ClanMember member) {

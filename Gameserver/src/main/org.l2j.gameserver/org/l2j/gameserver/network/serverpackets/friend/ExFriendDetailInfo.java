@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.friend;
 
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -20,7 +20,7 @@ public class ExFriendDetailInfo extends ServerPacket {
     public ExFriendDetailInfo(Player player, String name) {
         _objectId = player.getObjectId();
         _name = name;
-        _friend = L2World.getInstance().getPlayer(_name);
+        _friend = World.getInstance().getPlayer(_name);
         _lastAccess = _friend.isBlocked(player) ? 0 : _friend.isOnline() ? (int) System.currentTimeMillis() : (int) (System.currentTimeMillis() - _friend.getLastAccess()) / 1000;
     }
 

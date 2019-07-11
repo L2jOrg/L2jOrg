@@ -26,8 +26,8 @@ import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.Spawn;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -229,7 +229,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 			}
 			DBSpawnManager.getInstance().cleanUp();
-			for (WorldObject obj : L2World.getInstance().getVisibleObjects())
+			for (WorldObject obj : World.getInstance().getVisibleObjects())
 			{
 				if ((obj != null) && obj.isNpc())
 				{
@@ -264,7 +264,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 			}
 			DBSpawnManager.getInstance().cleanUp();
-			for (WorldObject obj : L2World.getInstance().getVisibleObjects())
+			for (WorldObject obj : World.getInstance().getVisibleObjects())
 			{
 				if ((obj != null) && obj.isNpc())
 				{
@@ -389,7 +389,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 			}
 			final Map<Integer, Integer> npcsFound = new HashMap<>();
-			for (WorldObject obj : L2World.getInstance().getVisibleObjects())
+			for (WorldObject obj : World.getInstance().getVisibleObjects())
 			{
 				if (!obj.isNpc())
 				{

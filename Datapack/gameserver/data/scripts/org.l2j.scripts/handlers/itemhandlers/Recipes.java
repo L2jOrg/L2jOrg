@@ -18,7 +18,7 @@ package handlers.itemhandlers;
 
 import org.l2j.gameserver.data.xml.impl.RecipeData;
 import org.l2j.gameserver.handler.IItemHandler;
-import org.l2j.gameserver.model.L2RecipeList;
+import org.l2j.gameserver.model.RecipeList;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -46,7 +46,7 @@ public class Recipes implements IItemHandler
 			return false;
 		}
 		
-		final L2RecipeList rp = RecipeData.getInstance().getRecipeByItemId(item.getId());
+		final RecipeList rp = RecipeData.getInstance().getRecipeByItemId(item.getId());
 		if (rp == null)
 		{
 			return false;

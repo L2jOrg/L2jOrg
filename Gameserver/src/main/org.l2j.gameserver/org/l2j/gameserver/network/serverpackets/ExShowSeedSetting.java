@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.instancemanager.CastleManorManager;
-import org.l2j.gameserver.model.L2Seed;
+import org.l2j.gameserver.model.Seed;
 import org.l2j.gameserver.model.SeedProduction;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -15,7 +15,7 @@ import java.util.Set;
  */
 public class ExShowSeedSetting extends ServerPacket {
     private final int _manorId;
-    private final Set<L2Seed> _seeds;
+    private final Set<Seed> _seeds;
     private final Map<Integer, SeedProduction> _current = new HashMap<>();
     private final Map<Integer, SeedProduction> _next = new HashMap<>();
 
@@ -23,7 +23,7 @@ public class ExShowSeedSetting extends ServerPacket {
         final CastleManorManager manor = CastleManorManager.getInstance();
         _manorId = manorId;
         _seeds = manor.getSeedsForCastle(_manorId);
-        for (L2Seed s : _seeds) {
+        for (Seed s : _seeds) {
             // Current period
             SeedProduction sp = manor.getSeedProduct(manorId, s.getSeedId(), false);
             if (sp != null) {
@@ -44,7 +44,7 @@ public class ExShowSeedSetting extends ServerPacket {
         writeInt(_manorId); // manor id
         writeInt(_seeds.size()); // size
 
-        for (L2Seed s : _seeds) {
+        for (Seed s : _seeds) {
             writeInt(s.getSeedId()); // seed id
             writeInt(s.getLevel()); // level
             writeByte((byte) 1);

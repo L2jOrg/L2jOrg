@@ -5,9 +5,8 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.VehiclePathPoint;
 import org.l2j.gameserver.model.actor.instance.Shuttle;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
-import org.l2j.gameserver.model.shuttle.L2ShuttleData;
-import org.l2j.gameserver.model.shuttle.L2ShuttleEngine;
-import org.l2j.gameserver.model.shuttle.L2ShuttleStop;
+import org.l2j.gameserver.model.shuttle.ShuttleEngine;
+import org.l2j.gameserver.model.shuttle.ShuttleStop;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -32,7 +31,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public final class ShuttleData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ShuttleData.class);
 
-    private final Map<Integer, L2ShuttleData> _shuttles = new HashMap<>();
+    private final Map<Integer, org.l2j.gameserver.model.shuttle.ShuttleData> _shuttles = new HashMap<>();
     private final Map<Integer, Shuttle> _shuttleInstances = new HashMap<>();
 
     private ShuttleData() {
@@ -62,7 +61,7 @@ public final class ShuttleData extends GameXmlReader {
         NamedNodeMap attrs;
         StatsSet set;
         Node att;
-        L2ShuttleData data;
+        org.l2j.gameserver.model.shuttle.ShuttleData data;
         for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling()) {
             if ("list".equalsIgnoreCase(n.getNodeName())) {
                 for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
@@ -73,7 +72,7 @@ public final class ShuttleData extends GameXmlReader {
                             att = attrs.item(i);
                             set.set(att.getNodeName(), att.getNodeValue());
                         }
-                        data = new L2ShuttleData(set);
+                        data = new org.l2j.gameserver.model.shuttle.ShuttleData(set);
                         for (Node b = d.getFirstChild(); b != null; b = b.getNextSibling()) {
                             if ("doors".equalsIgnoreCase(b.getNodeName())) {
                                 for (Node a = b.getFirstChild(); a != null; a = a.getNextSibling()) {
@@ -86,7 +85,7 @@ public final class ShuttleData extends GameXmlReader {
                                 for (Node a = b.getFirstChild(); a != null; a = a.getNextSibling()) {
                                     if ("stop".equalsIgnoreCase(a.getNodeName())) {
                                         attrs = a.getAttributes();
-                                        final L2ShuttleStop stop = new L2ShuttleStop(parseInteger(attrs, "id"));
+                                        final ShuttleStop stop = new ShuttleStop(parseInteger(attrs, "id"));
 
                                         for (Node z = a.getFirstChild(); z != null; z = z.getNextSibling()) {
                                             if ("dimension".equalsIgnoreCase(z.getNodeName())) {
@@ -127,7 +126,7 @@ public final class ShuttleData extends GameXmlReader {
     }
 
     private void init() {
-        for (L2ShuttleData data : _shuttles.values()) {
+        for (org.l2j.gameserver.model.shuttle.ShuttleData data : _shuttles.values()) {
             final Shuttle shuttle = new Shuttle(new CreatureTemplate(new StatsSet()));
             shuttle.setData(data);
             shuttle.setHeading(data.getLocation().getHeading());
@@ -135,7 +134,7 @@ public final class ShuttleData extends GameXmlReader {
             shuttle.spawnMe();
             shuttle.getStat().setMoveSpeed(300);
             shuttle.getStat().setRotationSpeed(0);
-            shuttle.registerEngine(new L2ShuttleEngine(data, shuttle));
+            shuttle.registerEngine(new ShuttleEngine(data, shuttle));
             shuttle.runEngine(1000);
             _shuttleInstances.put(shuttle.getObjectId(), shuttle);
         }

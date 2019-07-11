@@ -1,8 +1,8 @@
 package org.l2j.gameserver.ai;
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.MobGroup;
 import org.l2j.gameserver.model.MobGroupTable;
 import org.l2j.gameserver.model.actor.Creature;
@@ -233,7 +233,7 @@ public final class ControllableMobAI extends AttackableAI {
             // notify aggression
             final Creature finalTarget = target;
             if (((Npc) _actor).getTemplate().getClans() != null) {
-                L2World.getInstance().forEachVisibleObject(_actor, Npc.class, npc ->
+                World.getInstance().forEachVisibleObject(_actor, Npc.class, npc ->
                 {
                     if (!npc.isInMyClan((Npc) _actor)) {
                         return;
@@ -358,7 +358,7 @@ public final class ControllableMobAI extends AttackableAI {
 
     private Creature findNextRndTarget() {
         final List<Creature> potentialTarget = new ArrayList<>();
-        L2World.getInstance().forEachVisibleObject(_actor, Creature.class, target ->
+        World.getInstance().forEachVisibleObject(_actor, Creature.class, target ->
         {
             if (GameUtils.checkIfInShortRange(((Attackable) _actor).getAggroRange(), _actor, target, true) && checkAutoAttackCondition(target)) {
                 potentialTarget.add(target);

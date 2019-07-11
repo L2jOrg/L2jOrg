@@ -30,7 +30,7 @@ public class WalkInfo {
     /**
      * @return name of route of this WalkInfo.
      */
-    public L2WalkRoute getRoute() {
+    public WalkRoute getRoute() {
         return WalkingManager.getInstance().getRoute(_routeName);
     }
 

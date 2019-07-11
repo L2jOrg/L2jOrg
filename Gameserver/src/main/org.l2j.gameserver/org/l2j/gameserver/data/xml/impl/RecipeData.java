@@ -1,8 +1,8 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.model.L2RecipeInstance;
-import org.l2j.gameserver.model.L2RecipeList;
-import org.l2j.gameserver.model.L2RecipeStatInstance;
+import org.l2j.gameserver.model.Recipe;
+import org.l2j.gameserver.model.RecipeList;
+import org.l2j.gameserver.model.RecipeStat;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -30,7 +30,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public class RecipeData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(RecipeData.class);
 
-    private final Map<Integer, L2RecipeList> _recipes = new HashMap<>();
+    private final Map<Integer, RecipeList> _recipes = new HashMap<>();
 
     private RecipeData() {
         load();
@@ -51,9 +51,9 @@ public class RecipeData extends GameXmlReader {
     @Override
     public void parseDocument(Document doc, File f) {
         // TODO: Cleanup checks enforced by XSD.
-        final List<L2RecipeInstance> recipePartList = new ArrayList<>();
-        final List<L2RecipeStatInstance> recipeStatUseList = new ArrayList<>();
-        final List<L2RecipeStatInstance> recipeAltStatChangeList = new ArrayList<>();
+        final List<Recipe> recipePartList = new ArrayList<>();
+        final List<RecipeStat> recipeStatUseList = new ArrayList<>();
+        final List<RecipeStat> recipeAltStatChangeList = new ArrayList<>();
         for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling()) {
             if ("list".equalsIgnoreCase(n.getNodeName())) {
                 RECIPES_FILE:
@@ -116,7 +116,7 @@ public class RecipeData extends GameXmlReader {
                                 final String statName = c.getAttributes().getNamedItem("name").getNodeValue();
                                 final int value = Integer.parseInt(c.getAttributes().getNamedItem("value").getNodeValue());
                                 try {
-                                    recipeStatUseList.add(new L2RecipeStatInstance(statName, value));
+                                    recipeStatUseList.add(new RecipeStat(statName, value));
                                 } catch (Exception e) {
                                     LOGGER.error(": Error in StatUse parameter for recipe item id: " + id + ", skipping");
                                     continue RECIPES_FILE;
@@ -125,7 +125,7 @@ public class RecipeData extends GameXmlReader {
                                 final String statName = c.getAttributes().getNamedItem("name").getNodeValue();
                                 final int value = Integer.parseInt(c.getAttributes().getNamedItem("value").getNodeValue());
                                 try {
-                                    recipeAltStatChangeList.add(new L2RecipeStatInstance(statName, value));
+                                    recipeAltStatChangeList.add(new RecipeStat(statName, value));
                                 } catch (Exception e) {
                                     LOGGER.error(": Error in AltStatChange parameter for recipe item id: " + id + ", skipping");
                                     continue RECIPES_FILE;
@@ -133,7 +133,7 @@ public class RecipeData extends GameXmlReader {
                             } else if ("ingredient".equalsIgnoreCase(c.getNodeName())) {
                                 final int ingId = Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue());
                                 final int ingCount = Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue());
-                                recipePartList.add(new L2RecipeInstance(ingId, ingCount));
+                                recipePartList.add(new Recipe(ingId, ingCount));
                             } else if ("production".equalsIgnoreCase(c.getNodeName())) {
                                 set.set("itemId", Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue()));
                                 set.set("count", Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue()));
@@ -145,14 +145,14 @@ public class RecipeData extends GameXmlReader {
                             }
                         }
 
-                        final L2RecipeList recipeList = new L2RecipeList(set, haveRare);
-                        for (L2RecipeInstance recipePart : recipePartList) {
+                        final RecipeList recipeList = new RecipeList(set, haveRare);
+                        for (Recipe recipePart : recipePartList) {
                             recipeList.addRecipe(recipePart);
                         }
-                        for (L2RecipeStatInstance recipeStatUse : recipeStatUseList) {
+                        for (RecipeStat recipeStatUse : recipeStatUseList) {
                             recipeList.addStatUse(recipeStatUse);
                         }
-                        for (L2RecipeStatInstance recipeAltStatChange : recipeAltStatChangeList) {
+                        for (RecipeStat recipeAltStatChange : recipeAltStatChangeList) {
                             recipeList.addAltStatChange(recipeAltStatChange);
                         }
 
@@ -169,7 +169,7 @@ public class RecipeData extends GameXmlReader {
      * @param listId the list id
      * @return the recipe list
      */
-    public L2RecipeList getRecipeList(int listId) {
+    public RecipeList getRecipeList(int listId) {
         return _recipes.get(listId);
     }
 
@@ -179,8 +179,8 @@ public class RecipeData extends GameXmlReader {
      * @param itemId the item id
      * @return the recipe by item id
      */
-    public L2RecipeList getRecipeByItemId(int itemId) {
-        for (L2RecipeList find : _recipes.values()) {
+    public RecipeList getRecipeByItemId(int itemId) {
+        for (RecipeList find : _recipes.values()) {
             if (find.getRecipeId() == itemId) {
                 return find;
             }
@@ -196,7 +196,7 @@ public class RecipeData extends GameXmlReader {
     public int[] getAllItemIds() {
         final int[] idList = new int[_recipes.size()];
         int i = 0;
-        for (L2RecipeList rec : _recipes.values()) {
+        for (RecipeList rec : _recipes.values()) {
             idList[i++] = rec.getRecipeId();
         }
         return idList;
@@ -209,8 +209,8 @@ public class RecipeData extends GameXmlReader {
      * @param id     the recipe list id
      * @return the valid recipe list
      */
-    public L2RecipeList getValidRecipeList(Player player, int id) {
-        final L2RecipeList recipeList = _recipes.get(id);
+    public RecipeList getValidRecipeList(Player player, int id) {
+        final RecipeList recipeList = _recipes.get(id);
         if ((recipeList == null) || (recipeList.getRecipes().length == 0)) {
             player.sendMessage("No recipe for: " + id);
             player.setIsCrafting(false);

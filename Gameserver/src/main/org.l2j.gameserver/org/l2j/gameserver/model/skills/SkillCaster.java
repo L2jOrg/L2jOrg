@@ -237,7 +237,7 @@ public class SkillCaster implements Runnable {
                 }
 
                 // Mobs in range 1000 see spell
-                L2World.getInstance().forEachVisibleObjectInRange(player, Npc.class, 1000, npcMob ->
+                World.getInstance().forEachVisibleObjectInRange(player, Npc.class, 1000, npcMob ->
                 {
                     EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npcMob, player, skill, caster.isSummon(), targets.toArray(new WorldObject[0])), npcMob);
 

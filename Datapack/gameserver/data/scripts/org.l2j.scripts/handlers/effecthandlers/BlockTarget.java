@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -36,7 +36,7 @@ public class BlockTarget extends AbstractEffect
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		effected.setTargetable(false);
-		L2World.getInstance().forEachVisibleObject(effected, Creature.class, target ->
+		World.getInstance().forEachVisibleObject(effected, Creature.class, target ->
 		{
 			if ((target.getTarget() == effected))
 			{

@@ -22,9 +22,9 @@ import java.util.function.Predicate;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Spawn;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.html.PageBuilder;
@@ -81,7 +81,7 @@ public class AdminScan implements IAdminCommandHandler
 						BuilderUtil.sendSysMessage(activeChar, "objectId is not set!");
 					}
 					
-					final WorldObject target = L2World.getInstance().findObject(objectId);
+					final WorldObject target = World.getInstance().findObject(objectId);
 					final Npc npc = target instanceof Npc ? (Npc) target : null;
 					if (npc == null)
 					{
@@ -175,7 +175,7 @@ public class AdminScan implements IAdminCommandHandler
 		html.setFile(activeChar, "data/html/admin/scan.htm");
 		
 		//@formatter:off
-		final PageResult result = PageBuilder.newBuilder(L2World.getInstance().getVisibleObjectsInRange(activeChar, Npc.class, radius, condition), 15, bypassParser.toString())
+		final PageResult result = PageBuilder.newBuilder(World.getInstance().getVisibleObjectsInRange(activeChar, Npc.class, radius, condition), 15, bypassParser.toString())
 			.currentPage(page)
 			.pageHandler(NextPrevPageHandler.INSTANCE)
 			.formatter(BypassParserFormatter.INSTANCE)

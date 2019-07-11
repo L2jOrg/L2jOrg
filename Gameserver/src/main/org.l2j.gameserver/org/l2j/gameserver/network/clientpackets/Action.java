@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -66,7 +66,7 @@ public final class Action extends ClientPacket {
         } else if (activeChar.isInAirShip() && (activeChar.getAirShip().getHelmObjectId() == _objectId)) {
             obj = activeChar.getAirShip();
         } else {
-            obj = L2World.getInstance().findObject(_objectId);
+            obj = World.getInstance().findObject(_objectId);
         }
 
         // If object requested does not exist, add warn msg into logs

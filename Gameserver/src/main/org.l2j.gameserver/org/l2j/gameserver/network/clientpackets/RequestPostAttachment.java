@@ -5,7 +5,7 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.instancemanager.MailManager;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
@@ -179,7 +179,7 @@ public final class RequestPostAttachment extends ClientPacket {
         msg.removeAttachments();
 
         SystemMessage sm;
-        final Player sender = L2World.getInstance().getPlayer(msg.getSenderId());
+        final Player sender = World.getInstance().getPlayer(msg.getSenderId());
         if (adena > 0) {
             if (sender != null) {
                 sender.addAdena("PayMail", adena, activeChar, false);
@@ -192,7 +192,7 @@ public final class RequestPostAttachment extends ClientPacket {
                 paidAdena.setOwnerId(msg.getSenderId());
                 paidAdena.setItemLocation(ItemLocation.INVENTORY);
                 paidAdena.updateDatabase(true);
-                L2World.getInstance().removeObject(paidAdena);
+                World.getInstance().removeObject(paidAdena);
             }
         } else if (sender != null) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ACQUIRED_THE_ATTACHED_ITEM_TO_YOUR_MAIL);

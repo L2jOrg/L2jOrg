@@ -80,7 +80,7 @@ public class Party extends AbstractPlayerGroup {
         _members.add(leader);
         _partyLvl = leader.getLevel();
         _distributionType = partyDistributionType;
-        L2World.getInstance().incrementParty();
+        World.getInstance().incrementParty();
     }
 
     /**
@@ -313,7 +313,7 @@ public class Party extends AbstractPlayerGroup {
             }, PARTY_POSITION_BROADCAST_INTERVAL.toMillis() / 2, PARTY_POSITION_BROADCAST_INTERVAL.toMillis());
         }
         applyTacticalSigns(player, false);
-        L2World.getInstance().incrementPartyMember();
+        World.getInstance().incrementPartyMember();
     }
 
     private Map<Integer, Creature> getTacticalSigns() {
@@ -446,7 +446,7 @@ public class Party extends AbstractPlayerGroup {
                 broadcastPacket(msg);
             }
 
-            L2World.getInstance().decrementPartyMember();
+            World.getInstance().decrementPartyMember();
 
             // UI update.
             player.sendPacket(PartySmallWindowDeleteAll.STATIC_PACKET);
@@ -510,7 +510,7 @@ public class Party extends AbstractPlayerGroup {
                 }
             }
         }
-        L2World.getInstance().decrementParty();
+        World.getInstance().decrementParty();
     }
 
     /**

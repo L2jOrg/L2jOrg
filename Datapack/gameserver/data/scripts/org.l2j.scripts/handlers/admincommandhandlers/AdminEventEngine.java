@@ -30,7 +30,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Event;
 import org.l2j.gameserver.model.entity.Event.EventState;
@@ -340,7 +340,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				{
 					while (st.hasMoreElements())
 					{
-						final Player player = L2World.getInstance().getPlayer(st.nextToken());
+						final Player player = World.getInstance().getPlayer(st.nextToken());
 						if (player != null)
 						{
 							Event.removeAndResetPlayer(player);

@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -44,7 +44,7 @@ public final class Untargetable extends AbstractEffect
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		// Remove target from those that have the untargetable creature on target.
-		L2World.getInstance().forEachVisibleObject(effected, Creature.class, c ->
+		World.getInstance().forEachVisibleObject(effected, Creature.class, c ->
 		{
 			if (c.getTarget() == effected)
 			{

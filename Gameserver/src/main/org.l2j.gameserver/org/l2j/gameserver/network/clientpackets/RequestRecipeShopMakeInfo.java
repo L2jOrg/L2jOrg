@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.enums.PrivateStoreType;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.RecipeShopItemInfo;
 
@@ -27,7 +27,7 @@ public final class RequestRecipeShopMakeInfo extends ClientPacket {
             return;
         }
 
-        final Player shop = L2World.getInstance().getPlayer(_playerObjectId);
+        final Player shop = World.getInstance().getPlayer(_playerObjectId);
         if ((shop == null) || (shop.getPrivateStoreType() != PrivateStoreType.MANUFACTURE)) {
             return;
         }

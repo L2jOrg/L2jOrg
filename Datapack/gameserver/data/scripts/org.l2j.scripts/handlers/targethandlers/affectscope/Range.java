@@ -21,7 +21,7 @@ import org.l2j.gameserver.handler.AffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
@@ -83,7 +83,7 @@ public class Range implements IAffectScopeHandler
 				final Location worldPosition = activeChar.getActingPlayer().getCurrentSkillWorldPosition();
 				if (worldPosition != null)
 				{
-					L2World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, (int) (affectRange + activeChar.calculateDistance2D(worldPosition)), c ->
+					World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, (int) (affectRange + activeChar.calculateDistance2D(worldPosition)), c ->
 					{
 						if (!c.isInsideRadius3D(worldPosition, affectRange))
 						{
@@ -105,7 +105,7 @@ public class Range implements IAffectScopeHandler
 				action.accept(target);
 			}
 			
-			L2World.getInstance().forEachVisibleObjectInRange(target, Creature.class, affectRange, c ->
+			World.getInstance().forEachVisibleObjectInRange(target, Creature.class, affectRange, c ->
 			{
 				if (filter.test(c))
 				{

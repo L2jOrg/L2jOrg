@@ -1,7 +1,7 @@
 package org.l2j.gameserver.util;
 
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -29,7 +29,7 @@ public final class Broadcast {
      * @param mov
      */
     public static void toPlayersTargettingMyself(Creature character, ServerPacket mov) {
-        L2World.getInstance().forEachVisibleObject(character, Player.class, player ->
+        World.getInstance().forEachVisibleObject(character, Player.class, player ->
         {
             if (player.getTarget() == character) {
                 player.sendPacket(mov);
@@ -48,7 +48,7 @@ public final class Broadcast {
      * @param mov
      */
     public static void toKnownPlayers(Creature character, ServerPacket mov) {
-        L2World.getInstance().forEachVisibleObject(character, Player.class, player ->
+        World.getInstance().forEachVisibleObject(character, Player.class, player ->
         {
             try {
                 player.sendPacket(mov);
@@ -93,7 +93,7 @@ public final class Broadcast {
             radius = 1500;
         }
 
-        L2World.getInstance().forEachVisibleObjectInRange(character, Player.class, radius, mov::sendTo);
+        World.getInstance().forEachVisibleObjectInRange(character, Player.class, radius, mov::sendTo);
     }
 
     /**
@@ -123,7 +123,7 @@ public final class Broadcast {
             character.sendPacket(mov);
         }
 
-        L2World.getInstance().forEachVisibleObjectInRange(character, Player.class, radius, mov::sendTo);
+        World.getInstance().forEachVisibleObjectInRange(character, Player.class, radius, mov::sendTo);
     }
 
     /**
@@ -135,7 +135,7 @@ public final class Broadcast {
      * @param packet
      */
     public static void toAllOnlinePlayers(ServerPacket packet) {
-        for (Player player : L2World.getInstance().getPlayers()) {
+        for (Player player : World.getInstance().getPlayers()) {
             if (player.isOnline()) {
                 player.sendPacket(packet);
             }

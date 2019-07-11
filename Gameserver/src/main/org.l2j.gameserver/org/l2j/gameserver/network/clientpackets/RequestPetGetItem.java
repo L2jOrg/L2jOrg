@@ -4,7 +4,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.SiegeGuardManager;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -21,7 +21,7 @@ public final class RequestPetGetItem extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2World world = L2World.getInstance();
+        final World world = World.getInstance();
         final Item item = (Item) world.findObject(_objectId);
         if ((item == null) || (client.getActiveChar() == null) || !client.getActiveChar().hasPet()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);

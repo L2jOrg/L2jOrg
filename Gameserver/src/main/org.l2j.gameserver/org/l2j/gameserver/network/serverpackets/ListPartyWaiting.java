@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.PartyMatchingRoomLevelType;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.GameClient;
@@ -53,8 +53,8 @@ public class ListPartyWaiting extends ServerPacket {
                 writeString(member.getName());
             }
         }
-        writeInt(L2World.getInstance().getPartyCount()); // Helios
-        writeInt(L2World.getInstance().getPartyMemberCount()); // Helios
+        writeInt(World.getInstance().getPartyCount()); // Helios
+        writeInt(World.getInstance().getPartyMemberCount()); // Helios
     }
 
 }

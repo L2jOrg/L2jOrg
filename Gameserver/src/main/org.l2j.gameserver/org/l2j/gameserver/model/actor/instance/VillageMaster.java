@@ -13,7 +13,7 @@ import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Clan.SubPledge;
 import org.l2j.gameserver.model.ClanMember;
-import org.l2j.gameserver.model.L2SkillLearn;
+import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.base.AcquireSkillType;
@@ -291,7 +291,7 @@ public class VillageMaster extends Folk {
             return;
         }
 
-        final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailablePledgeSkills(player.getClan());
+        final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailablePledgeSkills(player.getClan());
 
         if (skills.isEmpty()) {
             if (player.getClan().getLevel() < 8) {

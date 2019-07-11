@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.instancemanager.CastleManorManager;
-import org.l2j.gameserver.model.L2Seed;
+import org.l2j.gameserver.model.Seed;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -11,7 +11,7 @@ import java.util.List;
  * @author l3x
  */
 public final class ExShowManorDefaultInfo extends ServerPacket {
-    private final List<L2Seed> _crops;
+    private final List<Seed> _crops;
     private final boolean _hideButtons;
 
     public ExShowManorDefaultInfo(boolean hideButtons) {
@@ -25,7 +25,7 @@ public final class ExShowManorDefaultInfo extends ServerPacket {
 
         writeByte((byte) (_hideButtons ? 0x01 : 0x00)); // Hide "Seed Purchase" and "Crop Sales" buttons
         writeInt(_crops.size());
-        for (L2Seed crop : _crops) {
+        for (Seed crop : _crops) {
             writeInt(crop.getCropId()); // crop Id
             writeInt(crop.getLevel()); // level
             writeInt(crop.getSeedReferencePrice()); // seed price

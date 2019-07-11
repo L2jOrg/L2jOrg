@@ -6,7 +6,7 @@ import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.L2SkillLearn;
+import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Fisherman;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -55,7 +55,7 @@ public final class RequestAcquireSkill extends ClientPacket {
     private int _subType;
 
     public static void showSubUnitSkillList(Player activeChar) {
-        final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableSubPledgeSkills(activeChar.getClan());
+        final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableSubPledgeSkills(activeChar.getClan());
 
         if (skills.isEmpty()) {
             activeChar.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
@@ -129,7 +129,7 @@ public final class RequestAcquireSkill extends ClientPacket {
             }
         }
 
-        final L2SkillLearn s = SkillTreesData.getInstance().getSkillLearn(_skillType, _id, _level, activeChar);
+        final SkillLearn s = SkillTreesData.getInstance().getSkillLearn(_skillType, _id, _level, activeChar);
         if (s == null) {
             return;
         }
@@ -269,7 +269,7 @@ public final class RequestAcquireSkill extends ClientPacket {
      * @param skillLearn the skill to be learn.
      * @return {@code true} if all requirements are meet, {@code false} otherwise.
      */
-    private boolean checkPlayerSkill(Player player, Npc trainer, L2SkillLearn skillLearn) {
+    private boolean checkPlayerSkill(Player player, Npc trainer, SkillLearn skillLearn) {
         if (skillLearn != null) {
             if ((skillLearn.getSkillId() == _id) && (skillLearn.getSkillLevel() == _level)) {
                 // Hack check.

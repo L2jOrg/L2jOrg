@@ -150,7 +150,7 @@ public class TradeList {
             return null;
         }
 
-        final WorldObject o = L2World.getInstance().findObject(objectId);
+        final WorldObject o = World.getInstance().findObject(objectId);
         if (!o.isItem()) {
             LOGGER.warn(_owner.getName() + ": Trying to add something other than an item!");
             return null;
@@ -378,7 +378,7 @@ public class TradeList {
      */
     private boolean validate() {
         // Check for Owner validity
-        if ((_owner == null) || (L2World.getInstance().getPlayer(_owner.getObjectId()) == null)) {
+        if ((_owner == null) || (World.getInstance().getPlayer(_owner.getObjectId()) == null)) {
             LOGGER.warn("Invalid owner of TradeList");
             return false;
         }

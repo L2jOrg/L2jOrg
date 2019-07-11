@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
@@ -21,7 +21,7 @@ public class RequestRecordInfo extends ClientPacket {
 
         client.sendPacket(new UserInfo(activeChar));
 
-        L2World.getInstance().forEachVisibleObject(activeChar, WorldObject.class, object ->
+        World.getInstance().forEachVisibleObject(activeChar, WorldObject.class, object ->
         {
             if (object.isVisibleFor(activeChar)) {
                 object.sendInfo(activeChar);

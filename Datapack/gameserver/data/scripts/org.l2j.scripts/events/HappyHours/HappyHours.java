@@ -17,7 +17,7 @@
 package events.HappyHours;
 
 import events.ScriptEvent;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.LongTimeEvent;
@@ -83,7 +83,7 @@ public class HappyHours extends LongTimeEvent implements ScriptEvent
 						final ExShowScreenMessage screenMsg = new ExShowScreenMessage("You obtained 20 Sibi's coins.", ExShowScreenMessage.TOP_CENTER, 7000, 0, true, true);
 						final SystemMessage systemMsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_SIBI_S_COINS);
 						systemMsg.addInt(20);
-						for (Player plr : L2World.getInstance().getPlayers())
+						for (Player plr : World.getInstance().getPlayers())
 						{
 							if ((plr != null) && (plr.isOnlineInt() == 1) && plr.isAffectedBySkill(TRANSFORMATION_SKILL))
 							{

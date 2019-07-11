@@ -4,7 +4,7 @@ import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.model.items.L2WarehouseItem;
+import org.l2j.gameserver.model.items.WarehouseItem;
 import org.l2j.gameserver.model.items.instance.Item;
 
 import java.util.Collection;
@@ -230,7 +230,7 @@ public class ItemInfo {
         _soulCrystalSpecialOptions = Collections.emptyList();
     }
 
-    public ItemInfo(L2WarehouseItem item) {
+    public ItemInfo(WarehouseItem item) {
         if (item == null) {
             return;
         }

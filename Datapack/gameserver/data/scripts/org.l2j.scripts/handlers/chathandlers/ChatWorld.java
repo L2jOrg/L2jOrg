@@ -19,7 +19,7 @@ package handlers.chathandlers;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IChatHandler;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -90,7 +90,7 @@ public final class ChatWorld implements IChatHandler {
 			}
 			
 			final CreatureSay cs = new CreatureSay(activeChar, type, text);
-			L2World.getInstance().getPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
+			World.getInstance().getPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
 			
 			activeChar.setWorldChatUsed(activeChar.getWorldChatUsed() + 1);
 			activeChar.sendPacket(new ExWorldChatCnt(activeChar));

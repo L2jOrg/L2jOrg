@@ -67,7 +67,7 @@ public class Attackable extends Npc {
     private boolean _seeThroughSilentMove = false;
     // Manor
     private boolean _seeded = false;
-    private L2Seed _seed = null;
+    private Seed _seed = null;
     private int _seederObjId = 0;
     // Spoil
     private int _spoilerObjectId;
@@ -1261,10 +1261,10 @@ public class Attackable extends Npc {
     /**
      * Sets the seed parameters, but not the seed state
      *
-     * @param seed   - instance {@link L2Seed} of used seed
+     * @param seed   - instance {@link Seed} of used seed
      * @param seeder - player who sows the seed
      */
-    public final void setSeeded(L2Seed seed, Player seeder) {
+    public final void setSeeded(Seed seed, Player seeder) {
         if (!_seeded) {
             _seed = seed;
             _seederObjId = seeder.getObjectId();
@@ -1275,7 +1275,7 @@ public class Attackable extends Npc {
         return _seederObjId;
     }
 
-    public final L2Seed getSeed() {
+    public final Seed getSeed() {
         return _seed;
     }
 

@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ExPCCafePointInfo;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -139,12 +139,12 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 						
 						if (range <= 0)
 						{
-							final int count = increaseForAll(L2World.getInstance().getPlayers(), value);
+							final int count = increaseForAll(World.getInstance().getPlayers(), value);
 							BuilderUtil.sendSysMessage(activeChar, "You increased PC Cafe point(s) of all online players (" + count + ") by " + value + ".");
 						}
 						else if (range > 0)
 						{
-							final int count = increaseForAll(L2World.getInstance().getVisibleObjectsInRange(activeChar, Player.class, range), value);
+							final int count = increaseForAll(World.getInstance().getVisibleObjectsInRange(activeChar, Player.class, range), value);
 							BuilderUtil.sendSysMessage(activeChar, "You increased PC Cafe point(s) of all players (" + count + ") in range " + range + " by " + value + ".");
 						}
 						break;

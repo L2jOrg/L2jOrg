@@ -5,7 +5,7 @@ import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.enums.Race;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -283,7 +283,7 @@ public class Q00255_Tutorial extends Quest {
         final QuestState qs = getQuestState(killer, false);
         if ((qs != null) && qs.isMemoState(2) && !hasQuestItems(killer, BLUE_GEM) && (getRandom(100) < 30)) {
             // check for too many gems on ground
-            var counter = L2World.getInstance().getVisibleObjectsInRange(killer, Item.class, 1500).stream().filter(item -> item.getId() == BLUE_GEM).count();
+            var counter = World.getInstance().getVisibleObjectsInRange(killer, Item.class, 1500).stream().filter(item -> item.getId() == BLUE_GEM).count();
             if (counter < 10) // do not drop if more than 10
             {
                 npc.dropItem(killer, BLUE_GEM, 1);

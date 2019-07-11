@@ -21,7 +21,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.tasks.MessageDeletionTask;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.network.serverpackets.ExNoticePostArrived;
@@ -161,7 +161,7 @@ public final class MailManager {
             LOGGER.warn(getClass().getSimpleName() + ": Error saving message:", e);
         }
 
-        final Player receiver = L2World.getInstance().getPlayer(msg.getReceiverId());
+        final Player receiver = World.getInstance().getPlayer(msg.getReceiverId());
         if (receiver != null) {
             receiver.sendPacket(ExNoticePostArrived.valueOf(true));
             receiver.sendPacket(new ExUnReadMailCount(receiver));

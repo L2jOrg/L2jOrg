@@ -46,9 +46,9 @@ public class Siege implements Siegable {
     protected static final Logger LOGGER = LoggerFactory.getLogger(Siege.class);
     final Castle _castle;
     // must support Concurrent Modifications
-    private final List<L2SiegeClan> _attackerClans = new CopyOnWriteArrayList<>();
-    private final List<L2SiegeClan> _defenderClans = new CopyOnWriteArrayList<>();
-    private final List<L2SiegeClan> _defenderWaitingClans = new CopyOnWriteArrayList<>();
+    private final List<SiegeClan> _attackerClans = new CopyOnWriteArrayList<>();
+    private final List<SiegeClan> _defenderClans = new CopyOnWriteArrayList<>();
+    private final List<SiegeClan> _defenderWaitingClans = new CopyOnWriteArrayList<>();
     // Castle setting
     private final List<ControlTower> _controlTowers = new ArrayList<>();
     private final List<FlameTower> _flameTowers = new ArrayList<>();
@@ -99,7 +99,7 @@ public class Siege implements Siegable {
                 Broadcast.toAllOnlinePlayers(sm);
             }
 
-            for (L2SiegeClan attackerClan : getAttackerClans()) {
+            for (SiegeClan attackerClan : getAttackerClans()) {
                 final Clan clan = ClanTable.getInstance().getClan(attackerClan.getClanId());
                 if (clan == null) {
                     continue;
@@ -113,7 +113,7 @@ public class Siege implements Siegable {
                 clan.clearSiegeDeaths();
             }
 
-            for (L2SiegeClan defenderClan : getDefenderClans()) {
+            for (SiegeClan defenderClan : getDefenderClans()) {
                 final Clan clan = ClanTable.getInstance().getClan(defenderClan.getClanId());
                 if (clan == null) {
                     continue;
@@ -149,19 +149,19 @@ public class Siege implements Siegable {
         }
     }
 
-    private void removeDefender(L2SiegeClan sc) {
+    private void removeDefender(SiegeClan sc) {
         if (sc != null) {
             getDefenderClans().remove(sc);
         }
     }
 
-    private void removeAttacker(L2SiegeClan sc) {
+    private void removeAttacker(SiegeClan sc) {
         if (sc != null) {
             getAttackerClans().remove(sc);
         }
     }
 
-    private void addDefender(L2SiegeClan sc, SiegeClanType type) {
+    private void addDefender(SiegeClan sc, SiegeClanType type) {
         if (sc == null) {
             return;
         }
@@ -169,7 +169,7 @@ public class Siege implements Siegable {
         getDefenderClans().add(sc);
     }
 
-    private void addAttacker(L2SiegeClan sc) {
+    private void addAttacker(SiegeClan sc) {
         if (sc == null) {
             return;
         }
@@ -191,7 +191,7 @@ public class Siege implements Siegable {
             if (getDefenderClans().isEmpty() && // If defender doesn't exist (Pc vs Npc)
                     (getAttackerClans().size() == 1 // Only 1 attacker
                     )) {
-                final L2SiegeClan sc_newowner = getAttackerClan(_castle.getOwnerId());
+                final SiegeClan sc_newowner = getAttackerClan(_castle.getOwnerId());
                 removeAttacker(sc_newowner);
                 addDefender(sc_newowner, SiegeClanType.OWNER);
                 endSiege();
@@ -205,7 +205,7 @@ public class Siege implements Siegable {
                     // The player's clan is in an alliance
                     if (allyId != 0) {
                         boolean allinsamealliance = true;
-                        for (L2SiegeClan sc : getAttackerClans()) {
+                        for (SiegeClan sc : getAttackerClans()) {
                             if (sc != null) {
                                 if (ClanTable.getInstance().getClan(sc.getClanId()).getAllyId() != allyId) {
                                     allinsamealliance = false;
@@ -213,7 +213,7 @@ public class Siege implements Siegable {
                             }
                         }
                         if (allinsamealliance) {
-                            final L2SiegeClan sc_newowner = getAttackerClan(_castle.getOwnerId());
+                            final SiegeClan sc_newowner = getAttackerClan(_castle.getOwnerId());
                             removeAttacker(sc_newowner);
                             addDefender(sc_newowner, SiegeClanType.OWNER);
                             endSiege();
@@ -222,20 +222,20 @@ public class Siege implements Siegable {
                     }
                 }
 
-                for (L2SiegeClan sc : getDefenderClans()) {
+                for (SiegeClan sc : getDefenderClans()) {
                     if (sc != null) {
                         removeDefender(sc);
                         addAttacker(sc);
                     }
                 }
 
-                final L2SiegeClan sc_newowner = getAttackerClan(_castle.getOwnerId());
+                final SiegeClan sc_newowner = getAttackerClan(_castle.getOwnerId());
                 removeAttacker(sc_newowner);
                 addDefender(sc_newowner, SiegeClanType.OWNER);
 
                 // The player's clan is in an alliance
                 for (Clan clan : ClanTable.getInstance().getClanAllies(allyId)) {
-                    final L2SiegeClan sc = getAttackerClan(clan.getId());
+                    final SiegeClan sc = getAttackerClan(clan.getId());
                     if (sc != null) {
                         removeAttacker(sc);
                         addDefender(sc, SiegeClanType.DEFENDER);
@@ -321,7 +321,7 @@ public class Siege implements Siegable {
      * @param bothSides True - broadcast to both attackers and defenders. False - only to defenders.
      */
     public void announceToPlayer(SystemMessage message, boolean bothSides) {
-        for (L2SiegeClan siegeClans : getDefenderClans()) {
+        for (SiegeClan siegeClans : getDefenderClans()) {
             final Clan clan = ClanTable.getInstance().getClan(siegeClans.getClanId());
             if (clan != null) {
                 clan.getOnlineMembers(0).forEach(message::sendTo);
@@ -329,7 +329,7 @@ public class Siege implements Siegable {
         }
 
         if (bothSides) {
-            for (L2SiegeClan siegeClans : getAttackerClans()) {
+            for (SiegeClan siegeClans : getAttackerClans()) {
                 final Clan clan = ClanTable.getInstance().getClan(siegeClans.getClanId());
                 if (clan != null) {
                     clan.getOnlineMembers(0).forEach(message::sendTo);
@@ -340,7 +340,7 @@ public class Siege implements Siegable {
 
     public void updatePlayerSiegeStateFlags(boolean clear) {
         Clan clan;
-        for (L2SiegeClan siegeclan : getAttackerClans()) {
+        for (SiegeClan siegeclan : getAttackerClans()) {
             if (siegeclan == null) {
                 continue;
             }
@@ -362,7 +362,7 @@ public class Siege implements Siegable {
                 }
                 member.sendPacket(new UserInfo(member));
 
-                L2World.getInstance().forEachVisibleObject(member, Player.class, player ->
+                World.getInstance().forEachVisibleObject(member, Player.class, player ->
                 {
                     if (!member.isVisibleFor(player)) {
                         return;
@@ -388,7 +388,7 @@ public class Siege implements Siegable {
                 });
             }
         }
-        for (L2SiegeClan siegeclan : getDefenderClans()) {
+        for (SiegeClan siegeclan : getDefenderClans()) {
             if (siegeclan == null) {
                 continue;
             }
@@ -410,7 +410,7 @@ public class Siege implements Siegable {
                 }
                 member.sendPacket(new UserInfo(member));
 
-                L2World.getInstance().forEachVisibleObject(member, Player.class, player ->
+                World.getInstance().forEachVisibleObject(member, Player.class, player ->
                 {
                     if (!member.isVisibleFor(player)) {
                         return;
@@ -794,7 +794,7 @@ public class Siege implements Siegable {
      * @param clanId The int of clan's id
      */
     private void addAttacker(int clanId) {
-        getAttackerClans().add(new L2SiegeClan(clanId, SiegeClanType.ATTACKER)); // Add registered attacker to attacker list
+        getAttackerClans().add(new SiegeClan(clanId, SiegeClanType.ATTACKER)); // Add registered attacker to attacker list
     }
 
     /**
@@ -804,7 +804,7 @@ public class Siege implements Siegable {
      * @param clanId The int of clan's id
      */
     private void addDefender(int clanId) {
-        getDefenderClans().add(new L2SiegeClan(clanId, SiegeClanType.DEFENDER)); // Add registered defender to defender list
+        getDefenderClans().add(new SiegeClan(clanId, SiegeClanType.DEFENDER)); // Add registered defender to defender list
     }
 
     /**
@@ -816,7 +816,7 @@ public class Siege implements Siegable {
      * @param type   the type of the clan
      */
     private void addDefender(int clanId, SiegeClanType type) {
-        getDefenderClans().add(new L2SiegeClan(clanId, type));
+        getDefenderClans().add(new SiegeClan(clanId, type));
     }
 
     /**
@@ -826,7 +826,7 @@ public class Siege implements Siegable {
      * @param clanId The int of clan's id
      */
     private void addDefenderWaiting(int clanId) {
-        _defenderWaitingClans.add(new L2SiegeClan(clanId, SiegeClanType.DEFENDER_PENDING)); // Add registered defender to defender list
+        _defenderWaitingClans.add(new SiegeClan(clanId, SiegeClanType.DEFENDER_PENDING)); // Add registered defender to defender list
     }
 
     /**
@@ -960,12 +960,12 @@ public class Siege implements Siegable {
      * Remove all flags.
      */
     private void removeFlags() {
-        for (L2SiegeClan sc : getAttackerClans()) {
+        for (SiegeClan sc : getAttackerClans()) {
             if (sc != null) {
                 sc.removeFlags();
             }
         }
-        for (L2SiegeClan sc : getDefenderClans()) {
+        for (SiegeClan sc : getDefenderClans()) {
             if (sc != null) {
                 sc.removeFlags();
             }
@@ -976,7 +976,7 @@ public class Siege implements Siegable {
      * Remove flags from defenders.
      */
     private void removeDefenderFlags() {
-        for (L2SiegeClan sc : getDefenderClans()) {
+        for (SiegeClan sc : getDefenderClans()) {
             if (sc != null) {
                 sc.removeFlags();
             }
@@ -1174,7 +1174,7 @@ public class Siege implements Siegable {
     }
 
     @Override
-    public final L2SiegeClan getAttackerClan(Clan clan) {
+    public final SiegeClan getAttackerClan(Clan clan) {
         if (clan == null) {
             return null;
         }
@@ -1182,8 +1182,8 @@ public class Siege implements Siegable {
     }
 
     @Override
-    public final L2SiegeClan getAttackerClan(int clanId) {
-        for (L2SiegeClan sc : getAttackerClans()) {
+    public final SiegeClan getAttackerClan(int clanId) {
+        for (SiegeClan sc : getAttackerClans()) {
             if ((sc != null) && (sc.getClanId() == clanId)) {
                 return sc;
             }
@@ -1192,7 +1192,7 @@ public class Siege implements Siegable {
     }
 
     @Override
-    public final List<L2SiegeClan> getAttackerClans() {
+    public final List<SiegeClan> getAttackerClans() {
         if (_isNormalSide) {
             return _attackerClans;
         }
@@ -1208,7 +1208,7 @@ public class Siege implements Siegable {
     }
 
     @Override
-    public final L2SiegeClan getDefenderClan(Clan clan) {
+    public final SiegeClan getDefenderClan(Clan clan) {
         if (clan == null) {
             return null;
         }
@@ -1216,8 +1216,8 @@ public class Siege implements Siegable {
     }
 
     @Override
-    public final L2SiegeClan getDefenderClan(int clanId) {
-        for (L2SiegeClan sc : getDefenderClans()) {
+    public final SiegeClan getDefenderClan(int clanId) {
+        for (SiegeClan sc : getDefenderClans()) {
             if ((sc != null) && (sc.getClanId() == clanId)) {
                 return sc;
             }
@@ -1226,22 +1226,22 @@ public class Siege implements Siegable {
     }
 
     @Override
-    public final List<L2SiegeClan> getDefenderClans() {
+    public final List<SiegeClan> getDefenderClans() {
         if (_isNormalSide) {
             return _defenderClans;
         }
         return _attackerClans;
     }
 
-    public final L2SiegeClan getDefenderWaitingClan(Clan clan) {
+    public final SiegeClan getDefenderWaitingClan(Clan clan) {
         if (clan == null) {
             return null;
         }
         return getDefenderWaitingClan(clan.getId());
     }
 
-    public final L2SiegeClan getDefenderWaitingClan(int clanId) {
-        for (L2SiegeClan sc : _defenderWaitingClans) {
+    public final SiegeClan getDefenderWaitingClan(int clanId) {
+        for (SiegeClan sc : _defenderWaitingClans) {
             if ((sc != null) && (sc.getClanId() == clanId)) {
                 return sc;
             }
@@ -1249,7 +1249,7 @@ public class Siege implements Siegable {
         return null;
     }
 
-    public final List<L2SiegeClan> getDefenderWaitingClans() {
+    public final List<SiegeClan> getDefenderWaitingClans() {
         return _defenderWaitingClans;
     }
 
@@ -1284,7 +1284,7 @@ public class Siege implements Siegable {
     @Override
     public Set<Npc> getFlag(Clan clan) {
         if (clan != null) {
-            final L2SiegeClan sc = getAttackerClan(clan);
+            final SiegeClan sc = getAttackerClan(clan);
             if (sc != null) {
                 return sc.getFlag();
             }

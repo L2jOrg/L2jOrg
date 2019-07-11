@@ -20,10 +20,10 @@ import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2PetData;
-import org.l2j.gameserver.model.L2PetLevelData;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.PetData;
+import org.l2j.gameserver.model.PetLevelData;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.stat.PetStat;
@@ -68,8 +68,8 @@ public class Pet extends Summon {
     int _curFed;
     private boolean _respawned;
     private Future<?> _feedTask;
-    private L2PetData _data;
-    private L2PetLevelData _leveldata;
+    private PetData _data;
+    private PetLevelData _leveldata;
 
     /**
      * The Experience before the last Death Penalty
@@ -114,10 +114,10 @@ public class Pet extends Summon {
     }
 
     public static synchronized Pet spawnPet(NpcTemplate template, Player owner, Item control) {
-        if (L2World.getInstance().getPet(owner.getObjectId()) != null) {
+        if (World.getInstance().getPet(owner.getObjectId()) != null) {
             return null; // owner has a pet listed in world
         }
-        final L2PetData data = PetDataTable.getInstance().getPetData(template.getId());
+        final PetData data = PetDataTable.getInstance().getPetData(template.getId());
 
         final Pet pet = restore(control, template, owner);
         // add the pet instance to world
@@ -128,7 +128,7 @@ public class Pet extends Summon {
                 pet.getStat().setLevel(availableLevel);
                 pet.getStat().setExp(pet.getStat().getExpForLevel(availableLevel));
             }
-            L2World.getInstance().addPet(owner.getObjectId(), pet);
+            World.getInstance().addPet(owner.getObjectId(), pet);
         }
         return pet;
     }
@@ -149,7 +149,7 @@ public class Pet extends Summon {
                 pet.setName(rset.getString("name"));
 
                 long exp = rset.getLong("exp");
-                final L2PetLevelData info = PetDataTable.getInstance().getPetLevelData(pet.getId(), pet.getLevel());
+                final PetLevelData info = PetDataTable.getInstance().getPetLevelData(pet.getId(), pet.getLevel());
                 // DS: update experience based by level
                 // Avoiding pet delevels due to exp per level values changed.
                 if ((info != null) && (exp < info.getPetMaxExp())) {
@@ -176,7 +176,7 @@ public class Pet extends Summon {
         return null;
     }
 
-    public final L2PetLevelData getPetLevelData() {
+    public final PetLevelData getPetLevelData() {
         if (_leveldata == null) {
             _leveldata = PetDataTable.getInstance().getPetLevelData(getTemplate().getId(), getStat().getLevel());
         }
@@ -184,7 +184,7 @@ public class Pet extends Summon {
         return _leveldata;
     }
 
-    public final L2PetData getPetData() {
+    public final PetData getPetData() {
         if (_data == null) {
             _data = PetDataTable.getInstance().getPetData(getTemplate().getId());
         }
@@ -192,7 +192,7 @@ public class Pet extends Summon {
         return _data;
     }
 
-    public final void setPetData(L2PetLevelData value) {
+    public final void setPetData(PetLevelData value) {
         _leveldata = value;
     }
 
@@ -589,7 +589,7 @@ public class Pet extends Summon {
      */
     public void destroyControlItem(Player owner, boolean evolve) {
         // remove the pet instance from world
-        L2World.getInstance().removePet(owner.getObjectId());
+        World.getInstance().removePet(owner.getObjectId());
 
         // delete from inventory
         try {
@@ -866,7 +866,7 @@ public class Pet extends Summon {
             if (_inventory != null) {
                 _inventory.deleteMe();
             }
-            L2World.getInstance().removePet(owner.getObjectId());
+            World.getInstance().removePet(owner.getObjectId());
         }
     }
 
@@ -964,8 +964,8 @@ public class Pet extends Summon {
         final int oldOwnerId = getOwner().getObjectId();
 
         setOwner(owner);
-        L2World.getInstance().removePet(oldOwnerId);
-        L2World.getInstance().addPet(oldOwnerId, this);
+        World.getInstance().removePet(oldOwnerId);
+        World.getInstance().addPet(oldOwnerId, this);
     }
 
     public int getInventoryLimit() {

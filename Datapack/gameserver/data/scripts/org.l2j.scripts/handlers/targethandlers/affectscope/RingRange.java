@@ -25,7 +25,7 @@ import org.l2j.gameserver.handler.AffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
@@ -79,7 +79,7 @@ public class RingRange implements IAffectScopeHandler
 		};
 		
 		// Check and add targets.
-		L2World.getInstance().forEachVisibleObjectInRange(target, Creature.class, affectRange, c ->
+		World.getInstance().forEachVisibleObjectInRange(target, Creature.class, affectRange, c ->
 		{
 			if (filter.test(c))
 			{

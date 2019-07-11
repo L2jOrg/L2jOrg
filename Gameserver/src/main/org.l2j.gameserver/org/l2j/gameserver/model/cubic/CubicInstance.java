@@ -5,7 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.CubicTemplate;
@@ -128,7 +128,7 @@ public class CubicInstance {
                     final Party party = _owner.getParty();
                     Stream<Creature> stream;
                     if (party != null) {
-                        stream = L2World.getInstance().getVisibleObjectsInRange(_owner, Creature.class, Config.ALT_PARTY_RANGE, c -> (c.getParty() == party) && _template.validateConditions(this, _owner, c) && cubicSkill.validateConditions(this, _owner, c)).stream();
+                        stream = World.getInstance().getVisibleObjectsInRange(_owner, Creature.class, Config.ALT_PARTY_RANGE, c -> (c.getParty() == party) && _template.validateConditions(this, _owner, c) && cubicSkill.validateConditions(this, _owner, c)).stream();
                     } else {
                         stream = _owner.getServitorsAndPets().stream().filter(summon -> _template.validateConditions(this, _owner, summon) && cubicSkill.validateConditions(this, _owner, summon)).map(Creature.class::cast);
 

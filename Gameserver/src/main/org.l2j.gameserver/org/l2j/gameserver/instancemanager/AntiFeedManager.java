@@ -1,7 +1,7 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -131,7 +131,7 @@ public final class AntiFeedManager {
 
         if (!Config.DUALBOX_COUNT_OFFLINE_TRADERS) {
             final String address = client.getHostAddress();
-            for (Player player : L2World.getInstance().getPlayers()) {
+            for (Player player : World.getInstance().getPlayers()) {
                 if (((player.getClient() == null) || player.getClient().isDetached()) && player.getIPAddress().equals(address)) {
                     connectionCount.decrementAndGet();
                 }

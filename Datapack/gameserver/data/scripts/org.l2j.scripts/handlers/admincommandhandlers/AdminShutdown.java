@@ -22,7 +22,7 @@ import java.util.Calendar;
 import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.Shutdown;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -108,7 +108,7 @@ public class AdminShutdown implements IAdminCommandHandler
 		cal.set(Calendar.HOUR_OF_DAY, h);
 		cal.set(Calendar.MINUTE, m);
 		adminReply.setFile(activeChar, "data/html/admin/shutdown.htm");
-		adminReply.replace("%count%", String.valueOf(L2World.getInstance().getPlayers().size()));
+		adminReply.replace("%count%", String.valueOf(World.getInstance().getPlayers().size()));
 		adminReply.replace("%used%", String.valueOf(Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()));
 		adminReply.replace("%time%", format.format(cal.getTime()));
 		activeChar.sendPacket(adminReply);

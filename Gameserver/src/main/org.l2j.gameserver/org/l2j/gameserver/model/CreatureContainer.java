@@ -64,7 +64,7 @@ public class CreatureContainer {
      */
     private void update() {
         final Set<Integer> verified = new HashSet<>();
-        L2World.getInstance().forEachVisibleObjectInRange(_owner, Creature.class, _range, creature ->
+        World.getInstance().forEachVisibleObjectInRange(_owner, Creature.class, _range, creature ->
         {
             if ((_condition == null) || _condition.test(creature)) {
                 if (_seen.add(creature.getObjectId())) {

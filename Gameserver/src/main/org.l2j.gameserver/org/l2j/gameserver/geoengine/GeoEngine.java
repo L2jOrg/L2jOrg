@@ -5,8 +5,8 @@ import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.data.xml.impl.FenceData;
 import org.l2j.gameserver.geoengine.geodata.*;
 import org.l2j.gameserver.instancemanager.WarpedSpaceManager;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -45,8 +45,8 @@ public class GeoEngine {
 
         // load geo files according to geoengine config setup
         int loaded = 0;
-        for (int rx = L2World.TILE_X_MIN; rx <= L2World.TILE_X_MAX; rx++) {
-            for (int ry = L2World.TILE_Y_MIN; ry <= L2World.TILE_Y_MAX; ry++) {
+        for (int rx = World.TILE_X_MIN; rx <= World.TILE_X_MAX; rx++) {
+            for (int ry = World.TILE_Y_MIN; ry <= World.TILE_Y_MAX; ry++) {
                 final File f = new File(Config.GEODATA_PATH + String.format(GeoFormat.L2D.getFilename(), rx, ry));
                 if (f.exists() && !f.isDirectory()) {
                     // region file is load-able, try to load it
@@ -85,7 +85,7 @@ public class GeoEngine {
      * @return int : Geo X
      */
     public static int getGeoX(int worldX) {
-        return (MathUtil.limit(worldX, L2World.MAP_MIN_X, L2World.MAP_MAX_X) - L2World.MAP_MIN_X) >> 4;
+        return (MathUtil.limit(worldX, World.MAP_MIN_X, World.MAP_MAX_X) - World.MAP_MIN_X) >> 4;
     }
 
     /**
@@ -95,7 +95,7 @@ public class GeoEngine {
      * @return int : Geo Y
      */
     public static int getGeoY(int worldY) {
-        return (MathUtil.limit(worldY, L2World.MAP_MIN_Y, L2World.MAP_MAX_Y) - L2World.MAP_MIN_Y) >> 4;
+        return (MathUtil.limit(worldY, World.MAP_MIN_Y, World.MAP_MAX_Y) - World.MAP_MIN_Y) >> 4;
     }
 
 
@@ -107,7 +107,7 @@ public class GeoEngine {
      * @return int : World X
      */
     public static int getWorldX(int geoX) {
-        return (MathUtil.limit(geoX, 0, GeoStructure.GEO_CELLS_X) << 4) + L2World.MAP_MIN_X + 8;
+        return (MathUtil.limit(geoX, 0, GeoStructure.GEO_CELLS_X) << 4) + World.MAP_MIN_X + 8;
     }
 
     /**
@@ -117,7 +117,7 @@ public class GeoEngine {
      * @return int : World Y
      */
     public static int getWorldY(int geoY) {
-        return (MathUtil.limit(geoY, 0, GeoStructure.GEO_CELLS_Y) << 4) + L2World.MAP_MIN_Y + 8;
+        return (MathUtil.limit(geoY, 0, GeoStructure.GEO_CELLS_Y) << 4) + World.MAP_MIN_Y + 8;
     }
 
     /**
@@ -162,8 +162,8 @@ public class GeoEngine {
             buffer.order(ByteOrder.LITTLE_ENDIAN);
 
             // get block indexes
-            final int blockX = (regionX - L2World.TILE_X_MIN) * GeoStructure.REGION_BLOCKS_X;
-            final int blockY = (regionY - L2World.TILE_Y_MIN) * GeoStructure.REGION_BLOCKS_Y;
+            final int blockX = (regionX - World.TILE_X_MIN) * GeoStructure.REGION_BLOCKS_X;
+            final int blockY = (regionY - World.TILE_Y_MIN) * GeoStructure.REGION_BLOCKS_Y;
 
             // loop over region blocks
             for (int ix = 0; ix < GeoStructure.REGION_BLOCKS_X; ix++) {
@@ -221,8 +221,8 @@ public class GeoEngine {
      */
     private final void loadNullBlocks(int regionX, int regionY) {
         // get block indexes
-        final int blockX = (regionX - L2World.TILE_X_MIN) * GeoStructure.REGION_BLOCKS_X;
-        final int blockY = (regionY - L2World.TILE_Y_MIN) * GeoStructure.REGION_BLOCKS_Y;
+        final int blockX = (regionX - World.TILE_X_MIN) * GeoStructure.REGION_BLOCKS_X;
+        final int blockY = (regionY - World.TILE_Y_MIN) * GeoStructure.REGION_BLOCKS_Y;
 
         // load all null blocks
         for (int ix = 0; ix < GeoStructure.REGION_BLOCKS_X; ix++) {
@@ -261,7 +261,7 @@ public class GeoEngine {
         final ABlock block = getBlock(geoX, geoY);
         if (block == null) // null block check
         {
-            // TODO: Find when this can be null. (Bad geodata? Check L2World getRegion method.)
+            // TODO: Find when this can be null. (Bad geodata? Check World getRegion method.)
             // LOGGER.warn("Could not find geodata block at " + getWorldX(geoX) + ", " + getWorldY(geoY) + ".");
             return false;
         }

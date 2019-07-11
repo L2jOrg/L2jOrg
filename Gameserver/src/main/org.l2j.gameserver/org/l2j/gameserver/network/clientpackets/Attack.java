@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -68,7 +68,7 @@ public final class Attack extends ClientPacket {
         if (activeChar.getTargetId() == _objectId) {
             target = activeChar.getTarget();
         } else {
-            target = L2World.getInstance().findObject(_objectId);
+            target = World.getInstance().findObject(_objectId);
         }
 
         if (isNull(target )) {

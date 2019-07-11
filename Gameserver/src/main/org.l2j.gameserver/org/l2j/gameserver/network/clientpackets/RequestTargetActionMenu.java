@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
@@ -24,7 +24,7 @@ public class RequestTargetActionMenu extends ClientPacket {
         }
 
         if (_type == 1) {
-            var object = L2World.getInstance().getVisibleObject(player, _objectId);
+            var object = World.getInstance().getVisibleObject(player, _objectId);
             player.setTarget(object);
         }
     }

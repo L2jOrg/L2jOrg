@@ -20,7 +20,7 @@ import ai.AbstractNpcAI;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.StatsSet;
@@ -157,7 +157,7 @@ public final class CastleTeleporter extends AbstractNpcAI
 				msg.addStringParameter(npc.getCastle().getName());
 				npc.getCastle().oustAllPlayers();
 				npc.setScriptValue(0);
-				for (Player pl : L2World.getInstance().getPlayers()) // TODO: Is it possible to get all the players for that region, instead of all players?
+				for (Player pl : World.getInstance().getPlayers()) // TODO: Is it possible to get all the players for that region, instead of all players?
 				{
 					if (region == MapRegionManager.getInstance().getMapRegionLocId(pl))
 					{

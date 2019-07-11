@@ -78,7 +78,7 @@ public class Mentee {
     }
 
     public Player getPlayerInstance() {
-        return L2World.getInstance().getPlayer(_objectId);
+        return World.getInstance().getPlayer(_objectId);
     }
 
     public boolean isOnline() {

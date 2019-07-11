@@ -15,8 +15,8 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.function.Predicate;
 
 
-public final class L2WorldRegion {
-    private static final Logger LOGGER = LoggerFactory.getLogger(L2WorldRegion.class);
+public final class WorldRegion {
+    private static final Logger LOGGER = LoggerFactory.getLogger(WorldRegion.class);
     private final int _regionX;
     private final int _regionY;
     /**
@@ -26,11 +26,11 @@ public final class L2WorldRegion {
     /**
      * Map containing nearby regions forming this world region's effective area.
      */
-    private L2WorldRegion[] _surroundingRegions;
+    private WorldRegion[] _surroundingRegions;
     private boolean _active = false;
     private ScheduledFuture<?> _neighborsTask = null;
 
-    public L2WorldRegion(int regionX, int regionY) {
+    public WorldRegion(int regionX, int regionY) {
         _regionX = regionX;
         _regionY = regionY;
 
@@ -149,8 +149,8 @@ public final class L2WorldRegion {
     }
 
     /**
-     * Add the WorldObject in the L2ObjectHashSet(WorldObject) _visibleObjects containing WorldObject visible in this L2WorldRegion <BR>
-     * If WorldObject is a Player, Add the Player in the L2ObjectHashSet(Player) _allPlayable containing Player of all player in game in this L2WorldRegion <BR>
+     * Add the WorldObject in the L2ObjectHashSet(WorldObject) _visibleObjects containing WorldObject visible in this WorldRegion <BR>
+     * If WorldObject is a Player, Add the Player in the L2ObjectHashSet(Player) _allPlayable containing Player of all player in game in this WorldRegion <BR>
      *
      * @param object
      */
@@ -170,7 +170,7 @@ public final class L2WorldRegion {
     }
 
     /**
-     * Remove the WorldObject from the L2ObjectHashSet(WorldObject) _visibleObjects in this L2WorldRegion. If WorldObject is a Player, remove it from the L2ObjectHashSet(Player) _allPlayable of this L2WorldRegion <BR>
+     * Remove the WorldObject from the L2ObjectHashSet(WorldObject) _visibleObjects in this WorldRegion. If WorldObject is a Player, remove it from the L2ObjectHashSet(Player) _allPlayable of this WorldRegion <BR>
      *
      * @param object
      */
@@ -195,8 +195,8 @@ public final class L2WorldRegion {
         return _visibleObjects;
     }
 
-    public boolean forEachSurroundingRegion(Predicate<L2WorldRegion> p) {
-        for (L2WorldRegion worldRegion : _surroundingRegions) {
+    public boolean forEachSurroundingRegion(Predicate<WorldRegion> p) {
+        for (WorldRegion worldRegion : _surroundingRegions) {
             if (!p.test(worldRegion)) {
                 return false;
             }
@@ -204,15 +204,15 @@ public final class L2WorldRegion {
         return true;
     }
 
-    public L2WorldRegion[] getSurroundingRegions() {
+    public WorldRegion[] getSurroundingRegions() {
         return _surroundingRegions;
     }
 
-    public void setSurroundingRegions(L2WorldRegion[] regions) {
+    public void setSurroundingRegions(WorldRegion[] regions) {
         _surroundingRegions = regions;
     }
 
-    public boolean isSurroundingRegion(L2WorldRegion region) {
+    public boolean isSurroundingRegion(WorldRegion region) {
         return (region != null) && (_regionX >= (region.getRegionX() - 1)) && (_regionX <= (region.getRegionX() + 1)) && (_regionY >= (region.getRegionY() - 1)) && (_regionY <= (region.getRegionY() + 1));
     }
 

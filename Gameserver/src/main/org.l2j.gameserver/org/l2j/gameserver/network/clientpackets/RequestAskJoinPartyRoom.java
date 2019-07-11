@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExAskJoinPartyRoom;
@@ -27,7 +27,7 @@ public class RequestAskJoinPartyRoom extends ClientPacket {
         }
 
         // Send PartyRoom invite request (with activeChar) name to the target
-        final Player target = L2World.getInstance().getPlayer(_name);
+        final Player target = World.getInstance().getPlayer(_name);
         if (target != null) {
             if (!target.isProcessingRequest()) {
                 player.onTransactionRequest(target);

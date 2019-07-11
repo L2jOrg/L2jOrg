@@ -5,7 +5,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.CeremonyOfChaosState;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -87,7 +87,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
         }
 
         // Update data for online players.
-        L2World.getInstance().getPlayers().stream().forEach(player ->
+        World.getInstance().getPlayers().stream().forEach(player ->
         {
             player.getVariables().remove(PlayerVariables.CEREMONY_OF_CHAOS_PROHIBITED_PENALTIES);
             player.getVariables().remove(PlayerVariables.CEREMONY_OF_CHAOS_MARKS);
@@ -116,7 +116,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
         }
 
         setState(CeremonyOfChaosState.REGISTRATION);
-        for (Player player : L2World.getInstance().getPlayers()) {
+        for (Player player : World.getInstance().getPlayers()) {
             if (player.isOnline()) {
                 player.sendPacket(SystemMessageId.REGISTRATION_FOR_THE_CEREMONY_OF_CHAOS_HAS_BEGUN);
                 if (canRegister(player, false)) {
@@ -133,7 +133,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
         }
 
         setState(CeremonyOfChaosState.PREPARING_FOR_TELEPORT);
-        for (Player player : L2World.getInstance().getPlayers()) {
+        for (Player player : World.getInstance().getPlayers()) {
             if (player.isOnline()) {
                 player.sendPacket(SystemMessageId.REGISTRATION_FOR_THE_CEREMONY_OF_CHAOS_HAS_ENDED);
                 if (!isRegistered(player)) {

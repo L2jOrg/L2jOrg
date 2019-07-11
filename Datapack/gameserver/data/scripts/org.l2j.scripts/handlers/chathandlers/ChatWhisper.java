@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IChatHandler;
 import org.l2j.gameserver.model.BlockList;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -41,7 +41,7 @@ public final class ChatWhisper implements IChatHandler {
 			return;
 		}
 		
-		final Player receiver = L2World.getInstance().getPlayer(target);
+		final Player receiver = World.getInstance().getPlayer(target);
 		
 		if ((receiver != null) && !receiver.isSilenceMode(activeChar.getObjectId())) {
 

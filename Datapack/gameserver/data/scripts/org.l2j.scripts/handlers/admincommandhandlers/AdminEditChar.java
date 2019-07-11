@@ -24,8 +24,8 @@ import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.Summon;
@@ -107,7 +107,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			final String[] data = command.split(" ");
 			if ((data.length > 1))
 			{
-				showCharacterInfo(activeChar, L2World.getInstance().getPlayer(data[1]));
+				showCharacterInfo(activeChar, World.getInstance().getPlayer(data[1]));
 			}
 			else if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 			{
@@ -563,7 +563,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				
 				final String playerName = st.nextToken();
 				Player player = null;
-				player = L2World.getInstance().getPlayer(playerName);
+				player = World.getInstance().getPlayer(playerName);
 				
 				if (player == null)
 				{
@@ -631,7 +631,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			Player pl = null;
 			if ((data.length > 1))
 			{
-				pl = L2World.getInstance().getPlayer(data[1]);
+				pl = World.getInstance().getPlayer(data[1]);
 			}
 			else
 			{
@@ -738,7 +738,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				final String val = command.substring(19);
 				final int objId = Integer.parseInt(val);
-				target = L2World.getInstance().getPet(objId);
+				target = World.getInstance().getPet(objId);
 			}
 			catch (Exception e)
 			{
@@ -761,7 +761,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(16);
-				target = L2World.getInstance().getPlayer(val);
+				target = World.getInstance().getPlayer(val);
 				if (target == null)
 				{
 					target = activeChar.getTarget();
@@ -990,7 +990,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	private void listCharacters(Player activeChar, int page)
 	{
-		final List<Player> players = new ArrayList<>(L2World.getInstance().getPlayers());
+		final List<Player> players = new ArrayList<>(World.getInstance().getPlayers());
 		players.sort(Comparator.comparingLong(Player::getUptime));
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
@@ -1147,7 +1147,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		WorldObject target = null;
 		if (targetName != null)
 		{
-			target = L2World.getInstance().getPlayer(targetName);
+			target = World.getInstance().getPlayer(targetName);
 		}
 		else
 		{
@@ -1174,7 +1174,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		final StringBuilder replyMSG = new StringBuilder(1000);
 		
-		final List<Player> players = new ArrayList<>(L2World.getInstance().getPlayers());
+		final List<Player> players = new ArrayList<>(World.getInstance().getPlayers());
 		players.sort(Comparator.comparingLong(Player::getUptime));
 		for (Player player : players)
 		{ // Add player info into new Table row
@@ -1249,7 +1249,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		adminReply.setFile(activeChar, "data/html/admin/ipfind.htm");
 		
-		final List<Player> players = new ArrayList<>(L2World.getInstance().getPlayers());
+		final List<Player> players = new ArrayList<>(World.getInstance().getPlayers());
 		players.sort(Comparator.comparingLong(Player::getUptime));
 		for (Player player : players)
 		{
@@ -1331,7 +1331,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	 */
 	private void findCharactersPerAccount(Player activeChar, String characterName) throws IllegalArgumentException
 	{
-		final Player player = L2World.getInstance().getPlayer(characterName);
+		final Player player = World.getInstance().getPlayer(characterName);
 		if (player == null)
 		{
 			throw new IllegalArgumentException("Player doesn't exist");
@@ -1360,7 +1360,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		GameClient client;
 		final Map<String, Integer> dualboxIPs = new HashMap<>();
 		
-		final List<Player> players = new ArrayList<>(L2World.getInstance().getPlayers());
+		final List<Player> players = new ArrayList<>(World.getInstance().getPlayers());
 		players.sort(Comparator.comparingLong(Player::getUptime));
 		for (Player player : players)
 		{
@@ -1414,7 +1414,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		GameClient client;
 		final Map<IpPack, Integer> dualboxIPs = new HashMap<>();
 		
-		final List<Player> players = new ArrayList<>(L2World.getInstance().getPlayers());
+		final List<Player> players = new ArrayList<>(World.getInstance().getPlayers());
 		players.sort(Comparator.comparingLong(Player::getUptime));
 		for (Player player : players)
 		{

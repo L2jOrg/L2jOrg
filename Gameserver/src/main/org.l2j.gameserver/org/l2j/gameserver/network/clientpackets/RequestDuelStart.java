@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.Party;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExDuelAskStart;
@@ -38,7 +38,7 @@ public final class RequestDuelStart extends ClientPacket {
             return;
         }
 
-        final Player targetChar = L2World.getInstance().getPlayer(_player);
+        final Player targetChar = World.getInstance().getPlayer(_player);
         if (targetChar == null) {
             activeChar.sendPacket(SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL);
             return;

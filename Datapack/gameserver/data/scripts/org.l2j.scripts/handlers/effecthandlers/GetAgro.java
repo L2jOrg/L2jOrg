@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
@@ -63,7 +63,7 @@ public final class GetAgro extends AbstractEffect
 			final Set<Integer> clans = template.getClans();
 			if (clans != null)
 			{
-				for (Attackable nearby : L2World.getInstance().getVisibleObjectsInRange(effected, Attackable.class, template.getClanHelpRange()))
+				for (Attackable nearby : World.getInstance().getVisibleObjectsInRange(effected, Attackable.class, template.getClanHelpRange()))
 				{
 					if (!nearby.isMovementDisabled() && nearby.getTemplate().isClan(clans))
 					{

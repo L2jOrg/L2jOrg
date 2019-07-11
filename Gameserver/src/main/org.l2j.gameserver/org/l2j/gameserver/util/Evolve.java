@@ -5,7 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
-import org.l2j.gameserver.model.L2PetData;
+import org.l2j.gameserver.model.PetData;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
@@ -53,7 +53,7 @@ public final class Evolve {
         final int oldY = currentPet.getY();
         final int oldZ = currentPet.getZ();
 
-        final L2PetData oldData = PetDataTable.getInstance().getPetDataByItemId(itemIdtake);
+        final PetData oldData = PetDataTable.getInstance().getPetDataByItemId(itemIdtake);
 
         if (oldData == null) {
             return false;
@@ -65,7 +65,7 @@ public final class Evolve {
             return false;
         }
 
-        final L2PetData petData = PetDataTable.getInstance().getPetDataByItemId(itemIdgive);
+        final PetData petData = PetDataTable.getInstance().getPetDataByItemId(itemIdgive);
 
         if (petData == null) {
             return false;
@@ -142,12 +142,12 @@ public final class Evolve {
             oldpetlvl = petminlvl;
         }
 
-        final L2PetData oldData = PetDataTable.getInstance().getPetDataByItemId(itemIdtake);
+        final PetData oldData = PetDataTable.getInstance().getPetDataByItemId(itemIdtake);
         if (oldData == null) {
             return false;
         }
 
-        final L2PetData petData = PetDataTable.getInstance().getPetDataByItemId(itemIdgive);
+        final PetData petData = PetDataTable.getInstance().getPetDataByItemId(itemIdgive);
         if (petData == null) {
             return false;
         }

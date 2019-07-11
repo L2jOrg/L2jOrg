@@ -11,7 +11,7 @@ import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.stat.DoorStat;
@@ -284,7 +284,7 @@ public final class Door extends Creature {
 
     @Override
     public void broadcastStatusUpdate(Creature caster) {
-        final Collection<Player> knownPlayers = L2World.getInstance().getVisibleObjects(this, Player.class);
+        final Collection<Player> knownPlayers = World.getInstance().getVisibleObjects(this, Player.class);
         if ((knownPlayers == null) || knownPlayers.isEmpty()) {
             return;
         }

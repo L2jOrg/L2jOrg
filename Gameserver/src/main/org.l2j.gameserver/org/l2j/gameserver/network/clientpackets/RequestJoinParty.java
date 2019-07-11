@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.Party;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.PartyRequest;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
@@ -46,7 +46,7 @@ public final class RequestJoinParty extends ClientPacket {
             return;
         }
 
-        final Player target = L2World.getInstance().getPlayer(_name);
+        final Player target = World.getInstance().getPlayer(_name);
         if (target == null) {
             requestor.sendPacket(SystemMessageId.YOU_MUST_FIRST_SELECT_A_USER_TO_INVITE_TO_YOUR_PARTY);
             return;

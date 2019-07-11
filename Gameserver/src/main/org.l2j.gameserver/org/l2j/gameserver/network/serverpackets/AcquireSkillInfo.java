@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.L2SkillLearn;
+import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.skills.CommonSkill;
@@ -29,7 +29,7 @@ public class AcquireSkillInfo extends ServerPacket {
      * @param skillType  the skill learning type.
      * @param skillLearn the skill learn.
      */
-    public AcquireSkillInfo(AcquireSkillType skillType, L2SkillLearn skillLearn) {
+    public AcquireSkillInfo(AcquireSkillType skillType, SkillLearn skillLearn) {
         _id = skillLearn.getSkillId();
         _level = skillLearn.getSkillLevel();
         _spCost = skillLearn.getLevelUpSp();
@@ -53,7 +53,7 @@ public class AcquireSkillInfo extends ServerPacket {
      * @param skillLearn the skill learn.
      * @param sp         the custom SP amount.
      */
-    public AcquireSkillInfo(AcquireSkillType skillType, L2SkillLearn skillLearn, int sp) {
+    public AcquireSkillInfo(AcquireSkillType skillType, SkillLearn skillLearn, int sp) {
         _id = skillLearn.getSkillId();
         _level = skillLearn.getSkillLevel();
         _spCost = sp;

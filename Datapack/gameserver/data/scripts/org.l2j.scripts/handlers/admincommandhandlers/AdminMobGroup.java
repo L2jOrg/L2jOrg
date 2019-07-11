@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.MobGroup;
 import org.l2j.gameserver.model.MobGroupTable;
 import org.l2j.gameserver.model.actor.Creature;
@@ -585,7 +585,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			
 			if (targetPlayerStr != null)
 			{
-				targetPlayer = L2World.getInstance().getPlayer(targetPlayerStr);
+				targetPlayer = World.getInstance().getPlayer(targetPlayerStr);
 			}
 			
 			if (targetPlayer == null)

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.variables;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
@@ -123,7 +123,7 @@ public class PlayerVariables extends AbstractVariables {
     }
 
     public Player getPlayer() {
-        return L2World.getInstance().getPlayer(_objectId);
+        return World.getInstance().getPlayer(_objectId);
     }
 
     public void addDailyMissionReward(int rewardId) {
