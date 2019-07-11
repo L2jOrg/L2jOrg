@@ -24,12 +24,12 @@ import java.util.Map.Entry;
 
 import org.l2j.gameserver.Config;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.model.L2ExtractableProductItem;
+import org.l2j.gameserver.model.ExtractableProductItem;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.effects.L2EffectType;
+import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.RestorationItemHolder;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -45,7 +45,7 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RestorationRandom extends AbstractEffect
 {
-	private final List<L2ExtractableProductItem> _products = new ArrayList<>();
+	private final List<ExtractableProductItem> _products = new ArrayList<>();
 	
 	public RestorationRandom(StatsSet params)
 	{
@@ -56,7 +56,7 @@ public final class RestorationRandom extends AbstractEffect
 			{
 				items.add(new RestorationItemHolder(item.getInt(".id"), item.getInt(".count"), item.getInt(".minEnchant", 0), item.getInt(".maxEnchant", 0)));
 			}
-			_products.add(new L2ExtractableProductItem(items, group.getFloat(".chance")));
+			_products.add(new ExtractableProductItem(items, group.getFloat(".chance")));
 		}
 	}
 	
@@ -83,7 +83,7 @@ public final class RestorationRandom extends AbstractEffect
 		// If you get chance equal 45% you fall into the second zone 30-80.
 		// Meaning you get the second production list.
 		// Calculate extraction
-		for (L2ExtractableProductItem expi : _products)
+		for (ExtractableProductItem expi : _products)
 		{
 			chance = expi.getChance();
 			if ((rndNum >= chanceFrom) && (rndNum <= (chance + chanceFrom)))
@@ -140,9 +140,9 @@ public final class RestorationRandom extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.EXTRACT_ITEM;
+		return EffectType.EXTRACT_ITEM;
 	}
 	
 	private void sendMessage(Player player, Item item, Long count)

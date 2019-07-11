@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.model.residences.ResidenceFunctionType;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 /**
@@ -16,7 +16,7 @@ public class AgitDecoInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.AGIT_DECO_INFO);
         writeInt(_residense.getResidenceId());
         for (ResidenceFunctionType type : ResidenceFunctionType.values()) {

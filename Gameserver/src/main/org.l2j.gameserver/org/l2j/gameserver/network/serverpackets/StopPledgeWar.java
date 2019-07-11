@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public final class StopPledgeWar extends ServerPacket {
@@ -13,7 +13,7 @@ public final class StopPledgeWar extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.STOP_PLEDGE_WAR);
 
         writeString(_pledgeName);

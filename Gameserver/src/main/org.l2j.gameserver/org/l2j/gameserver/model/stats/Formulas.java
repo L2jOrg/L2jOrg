@@ -14,7 +14,7 @@ import org.l2j.gameserver.model.actor.instance.SiegeFlag;
 import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.EffectFlag;
-import org.l2j.gameserver.model.effects.L2EffectType;
+import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.items.Armor;
 import org.l2j.gameserver.model.items.ItemTemplate;
@@ -122,7 +122,7 @@ public final class Formulas {
         if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(attacker, target, skill)) {
             if (attacker.isPlayer()) {
                 if (calcMagicSuccess(attacker, target, skill)) {
-                    if (skill.hasEffectType(L2EffectType.HP_DRAIN)) {
+                    if (skill.hasEffectType(EffectType.HP_DRAIN)) {
                         attacker.sendPacket(SystemMessageId.DRAIN_WAS_ONLY_50_SUCCESSFUL);
                     } else {
                         attacker.sendPacket(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
@@ -138,7 +138,7 @@ public final class Formulas {
             }
 
             if (target.isPlayer()) {
-                final SystemMessage sm = (skill.hasEffectType(L2EffectType.HP_DRAIN)) ? SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_DRAIN) : SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_MAGIC);
+                final SystemMessage sm = (skill.hasEffectType(EffectType.HP_DRAIN)) ? SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_DRAIN) : SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_MAGIC);
                 sm.addString(attacker.getName());
                 target.sendPacket(sm);
             }

@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.events.returns.ChatFilterReturn;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.network.Disconnection;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.util.GameUtils;
@@ -198,7 +198,7 @@ public final class Say2 extends ClientPacket {
         _text = filteredText;
     }
 
-    private boolean parseAndPublishItem(L2GameClient client, Player owner) {
+    private boolean parseAndPublishItem(GameClient client, Player owner) {
         int pos1 = -1;
         while ((pos1 = _text.indexOf(8, pos1)) > -1) {
             int pos = _text.indexOf("ID=", pos1);

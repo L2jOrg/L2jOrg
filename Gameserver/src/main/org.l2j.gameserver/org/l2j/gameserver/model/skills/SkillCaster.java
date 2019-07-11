@@ -17,7 +17,7 @@ import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.effects.L2EffectType;
+import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureSkillFinishCast;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureSkillUse;
@@ -218,7 +218,7 @@ public class SkillCaster implements Runnable {
                         }
 
                         // notify target AI about the attack
-                        if (((Creature) obj).hasAI() && !skill.hasEffectType(L2EffectType.HATE)) {
+                        if (((Creature) obj).hasAI() && !skill.hasEffectType(EffectType.HATE)) {
                             ((Creature) obj).getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, caster);
                         }
                     }
@@ -389,7 +389,7 @@ public class SkillCaster implements Runnable {
             // Get the Item consumed by the spell
             final Item requiredItem = caster.getInventory().getItemByItemId(skill.getItemConsumeId());
             if ((requiredItem == null) || (requiredItem.getCount() < skill.getItemConsumeCount())) {
-                if (skill.hasEffectType(L2EffectType.SUMMON)) {
+                if (skill.hasEffectType(EffectType.SUMMON)) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SUMMONING_A_SERVITOR_COSTS_S2_S1);
                     sm.addItemName(skill.getItemConsumeId());
                     sm.addInt(skill.getItemConsumeCount());
@@ -413,7 +413,7 @@ public class SkillCaster implements Runnable {
             }
 
             // Check if not in AirShip
-            if (player.isInAirShip() && !skill.hasEffectType(L2EffectType.REFUEL_AIRSHIP)) {
+            if (player.isInAirShip() && !skill.hasEffectType(EffectType.REFUEL_AIRSHIP)) {
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
                 sm.addSkillName(skill);
                 player.sendPacket(sm);

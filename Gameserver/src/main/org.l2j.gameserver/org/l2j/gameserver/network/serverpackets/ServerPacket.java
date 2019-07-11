@@ -4,7 +4,7 @@ import io.github.joealisson.mmocore.WritablePacket;
 import org.l2j.gameserver.GameServer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 /**
  * @author KenM
  */
-public abstract class ServerPacket extends WritablePacket<L2GameClient> {
+public abstract class ServerPacket extends WritablePacket<GameClient> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ServerPacket.class);
 
@@ -104,7 +104,7 @@ public abstract class ServerPacket extends WritablePacket<L2GameClient> {
     }
 
     @Override
-    protected boolean write(L2GameClient client) {
+    protected boolean write(GameClient client) {
         try {
             writeImpl(client);
             return true;
@@ -135,5 +135,5 @@ public abstract class ServerPacket extends WritablePacket<L2GameClient> {
         }
     }
 
-    protected abstract void writeImpl(L2GameClient client) throws Exception;
+    protected abstract void writeImpl(GameClient client) throws Exception;
 }

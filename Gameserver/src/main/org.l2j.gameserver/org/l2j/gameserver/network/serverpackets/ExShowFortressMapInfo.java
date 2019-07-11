@@ -4,7 +4,7 @@ import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.model.FortSiegeSpawn;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.entity.Fort;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.List;
@@ -24,7 +24,7 @@ public class ExShowFortressMapInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_SHOW_FORTRESS_MAP_INFO);
 
         writeInt(_fortress.getResidenceId());

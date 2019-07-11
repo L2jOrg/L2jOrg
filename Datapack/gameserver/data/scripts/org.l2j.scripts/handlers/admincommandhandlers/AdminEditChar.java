@@ -35,7 +35,7 @@ import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.html.PageBuilder;
 import org.l2j.gameserver.model.html.PageResult;
 import org.l2j.gameserver.model.stats.Stats;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -648,7 +648,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				return false;
 			}
 			
-			final L2GameClient client = pl.getClient();
+			final GameClient client = pl.getClient();
 			if (client == null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Client is null.");
@@ -1054,7 +1054,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			return;
 		}
 		
-		final L2GameClient client = player.getClient();
+		final GameClient client = player.getClient();
 		if (client == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Client is null.");
@@ -1243,7 +1243,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		
 		int CharactersFound = 0;
-		L2GameClient client;
+		GameClient client;
 		String ip = "0.0.0.0";
 		final StringBuilder replyMSG = new StringBuilder(1000);
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
@@ -1357,7 +1357,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	{
 		final Map<String, List<Player>> ipMap = new HashMap<>();
 		String ip = "0.0.0.0";
-		L2GameClient client;
+		GameClient client;
 		final Map<String, Integer> dualboxIPs = new HashMap<>();
 		
 		final List<Player> players = new ArrayList<>(L2World.getInstance().getPlayers());
@@ -1411,7 +1411,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	private void findDualboxStrict(Player activeChar, int multibox)
 	{
 		final Map<IpPack, List<Player>> ipMap = new HashMap<>();
-		L2GameClient client;
+		GameClient client;
 		final Map<IpPack, Integer> dualboxIPs = new HashMap<>();
 		
 		final List<Player> players = new ArrayList<>(L2World.getInstance().getPlayers());

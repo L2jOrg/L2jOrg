@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 /**
@@ -16,7 +16,7 @@ public class ExPledgeRecruitInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_PLEDGE_RECRUIT_INFO);
 
         final Clan.SubPledge[] subPledges = _clan.getAllSubPledges();

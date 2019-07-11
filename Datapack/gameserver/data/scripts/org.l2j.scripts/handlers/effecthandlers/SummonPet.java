@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.effects.L2EffectType;
+import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.PetItemHolder;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -43,9 +43,9 @@ public final class SummonPet extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.SUMMON_PET;
+		return EffectType.SUMMON_PET;
 	}
 	
 	@Override

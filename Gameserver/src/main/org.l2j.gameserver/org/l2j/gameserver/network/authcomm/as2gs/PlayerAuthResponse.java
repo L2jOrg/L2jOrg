@@ -6,7 +6,7 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.Disconnection;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.ReceivablePacket;
@@ -43,7 +43,7 @@ public class PlayerAuthResponse extends ReceivablePacket {
 
     @Override
     protected void runImpl() {
-        L2GameClient client = AuthServerCommunication.getInstance().removeWaitingClient(account);
+        GameClient client = AuthServerCommunication.getInstance().removeWaitingClient(account);
         if(isNull(client)) {
             return;
         }
@@ -62,7 +62,7 @@ public class PlayerAuthResponse extends ReceivablePacket {
                 if(!ignored) {
                     int limit = Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_IP;
 
-                    List<L2GameClient> clients = AuthServerCommunication.getInstance().getAuthedClientsByIP(client.getHostAddress());
+                    List<GameClient> clients = AuthServerCommunication.getInstance().getAuthedClientsByIP(client.getHostAddress());
                     clients.add(client);
                     if (hasMoreClientThanLimit(client, limit, clients)) {
                         return;
@@ -75,7 +75,7 @@ public class PlayerAuthResponse extends ReceivablePacket {
 
                 var whId = client.getHardwareInfo().getMacAddress();
 
-                List<L2GameClient> clients = AuthServerCommunication.getInstance().getAuthedClientsByHWID(whId);
+                List<GameClient> clients = AuthServerCommunication.getInstance().getAuthedClientsByHWID(whId);
                 clients.add(client);
                 if(hasMoreClientThanLimit(client, limit, clients)) {
                     return;
@@ -89,7 +89,7 @@ public class PlayerAuthResponse extends ReceivablePacket {
             client.setConnectionState(ConnectionState.AUTHENTICATED);
             client.sendPacket(LoginFail.LOGIN_SUCCESS);
 
-            L2GameClient oldClient = AuthServerCommunication.getInstance().addAuthedClient(client);
+            GameClient oldClient = AuthServerCommunication.getInstance().addAuthedClient(client);
             if(nonNull(oldClient))  {
                 oldClient.setConnectionState(ConnectionState.DISCONNECTED);
                 Player activeChar = oldClient.getActiveChar();
@@ -111,7 +111,7 @@ public class PlayerAuthResponse extends ReceivablePacket {
         }
     }
 
-    private boolean hasMoreClientThanLimit(L2GameClient client, int limit, List<L2GameClient> clients) {
+    private boolean hasMoreClientThanLimit(GameClient client, int limit, List<GameClient> clients) {
         int activeWindows = clients.size();
 
         if(activeWindows >= limit) {

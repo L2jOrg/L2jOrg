@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -69,8 +69,8 @@ public final class AntiFeedManager {
                 return false;
             }
 
-            final L2GameClient targetClient = targetPlayer.getClient();
-            final L2GameClient attackerClient = attackerPlayer.getClient();
+            final GameClient targetClient = targetPlayer.getClient();
+            final GameClient attackerClient = attackerPlayer.getClient();
             if ((targetClient == null) || (attackerClient == null) || targetClient.isDetached() || attackerClient.isDetached()) {
                 // unable to check ip address
                 return !Config.ANTIFEED_DISCONNECTED_AS_DUALBOX;
@@ -116,7 +116,7 @@ public final class AntiFeedManager {
      * @return If number of all simultaneous connections from player's IP address lower than max then increment connection count and return true.<br>
      * False if number of all simultaneous connections from player's IP address higher than max.
      */
-    public boolean tryAddClient(int eventId, L2GameClient client, int max) {
+    public boolean tryAddClient(int eventId, GameClient client, int max) {
         if (client == null) {
             return false; // unable to determine IP address
         }
@@ -163,7 +163,7 @@ public final class AntiFeedManager {
      * @param client
      * @return true if success and false if any problem detected.
      */
-    public boolean removeClient(int eventId, L2GameClient client) {
+    public boolean removeClient(int eventId, GameClient client) {
         if (client == null) {
             return false; // unable to determine IP address
         }
@@ -189,7 +189,7 @@ public final class AntiFeedManager {
      *
      * @param client
      */
-    public void onDisconnect(L2GameClient client) {
+    public void onDisconnect(GameClient client) {
         if ((client == null) || (client.getHostAddress() == null) || (client.getActiveChar() == null)) {
             return;
         }
@@ -226,7 +226,7 @@ public final class AntiFeedManager {
      * @param max
      * @return maximum number of allowed connections (whitelist + max)
      */
-    public int getLimit(L2GameClient client, int max) {
+    public int getLimit(GameClient client, int max) {
         if (client == null) {
             return max;
         }

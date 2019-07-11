@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class ExMoveToLocationInAirShip extends ServerPacket {
@@ -22,7 +22,7 @@ public class ExMoveToLocationInAirShip extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_MOVE_TO_LOCATION_IN_AIR_SHIP);
 
         writeInt(_charObjId);

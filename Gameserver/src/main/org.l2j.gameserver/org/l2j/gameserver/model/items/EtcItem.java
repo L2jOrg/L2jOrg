@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.items;
 
-import org.l2j.gameserver.model.L2ExtractableProduct;
+import org.l2j.gameserver.model.ExtractableProduct;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.type.EtcItemType;
 
@@ -29,7 +29,7 @@ import java.util.List;
 public final class EtcItem extends ItemTemplate {
     private String _handler;
     private EtcItemType _type;
-    private List<L2ExtractableProduct> _extractableItems;
+    private List<ExtractableProduct> _extractableItems;
     private int _extractableCountMin;
     private int _extractableCountMax;
     private boolean _isInfinite;
@@ -95,7 +95,7 @@ public final class EtcItem extends ItemTemplate {
     /**
      * @return the extractable items list.
      */
-    public List<L2ExtractableProduct> getExtractableItems() {
+    public List<ExtractableProduct> getExtractableItems() {
         return _extractableItems;
     }
 
@@ -124,7 +124,7 @@ public final class EtcItem extends ItemTemplate {
      * @param extractableProduct
      */
     @Override
-    public void addCapsuledItem(L2ExtractableProduct extractableProduct) {
+    public void addCapsuledItem(ExtractableProduct extractableProduct) {
         if (_extractableItems == null) {
             _extractableItems = new ArrayList<>();
         }

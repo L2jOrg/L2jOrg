@@ -4,7 +4,7 @@ import org.l2j.gameserver.enums.LuckyGameItemType;
 import org.l2j.gameserver.enums.LuckyGameResultType;
 import org.l2j.gameserver.enums.LuckyGameType;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
@@ -44,7 +44,7 @@ public class ExBettingLuckyGameResult extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_BETTING_LUCKY_GAME_RESULT);
         writeInt(_result.getClientId());
         writeInt(_type.ordinal());

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.primeshop;
 
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
@@ -10,7 +10,7 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 public class ExBRGamePoint extends ServerPacket {
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_BR_GAME_POINT);
 
         var player = client.getActiveChar();

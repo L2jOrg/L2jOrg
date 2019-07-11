@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.commons.network.SessionKey;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.gs2as.PlayerAuthRequest;
 import org.l2j.gameserver.network.serverpackets.ServerClose;
@@ -49,7 +49,7 @@ public final class AuthLogin extends ClientPacket {
             final SessionKey key = new SessionKey(authAccountId, authKey, sessionId, accountId);
             client.setSessionId(key);
 
-            L2GameClient oldClient = AuthServerCommunication.getInstance().addWaitingClient(client);
+            GameClient oldClient = AuthServerCommunication.getInstance().addWaitingClient(client);
             if(oldClient != null)
                 oldClient.close(ServerClose.STATIC_PACKET);
 

@@ -19,7 +19,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.Map;
@@ -42,7 +42,7 @@ public class ExInzoneWaiting extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_INZONE_WAITING_INFO);
 
         writeByte((byte) (_sendByClient ? 0x00 : 0x01)); // Grand Crusade

@@ -19,7 +19,7 @@ package handlers.voicedcommandhandlers;
 import org.l2j.gameserver.handler.IVoicedCommandHandler;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.L2Event;
+import org.l2j.gameserver.model.entity.Event;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -58,7 +58,7 @@ public class StatsVCmd implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (!L2Event.isParticipant(pc) || (pc.getEventStatus() == null))
+		if (!Event.isParticipant(pc) || (pc.getEventStatus() == null))
 		{
 			activeChar.sendMessage("That player is not an event participant.");
 			return false;

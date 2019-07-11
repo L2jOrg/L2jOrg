@@ -48,7 +48,7 @@ import org.l2j.gameserver.model.base.SubClass;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.EffectFlag;
-import org.l2j.gameserver.model.effects.L2EffectType;
+import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.entity.*;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -84,13 +84,13 @@ import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.model.zone.type.WaterZone;
 import org.l2j.gameserver.network.Disconnection;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.gs2as.ChangeAccessLevel;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
-import org.l2j.gameserver.network.serverpackets.friend.L2FriendStatus;
+import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.EnumIntBitmask;
@@ -449,7 +449,7 @@ public final class Player extends Playable {
      */
     protected Set<Integer> _activeSoulShots = ConcurrentHashMap.newKeySet();
 
-    private L2GameClient _client;
+    private GameClient _client;
     private String _ip = "N/A";
 
     private Calendar _createDate = Calendar.getInstance();
@@ -2181,7 +2181,7 @@ public final class Player extends Playable {
                 checkPlayerSkills();
             }
 
-            notifyFriends(L2FriendStatus.MODE_CLASS);
+            notifyFriends(FriendStatus.MODE_CLASS);
         } finally {
             _subclassLock.unlock();
         }
@@ -2554,7 +2554,7 @@ public final class Player extends Playable {
      * Stand up the Player, set the AI Intention to AI_INTENTION_IDLE and send a Server->Client ChangeWaitType packet (broadcast)
      */
     public void standUp() {
-        if (L2Event.isParticipant(this) && eventStatus.isSitForced()) {
+        if (Event.isParticipant(this) && eventStatus.isSitForced()) {
             sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
         } else if (_waitTypeSitting && !isInStoreMode() && !isAlikeDead()) {
             if (getEffectList().isAffected(EffectFlag.RELAXING)) {
@@ -3437,11 +3437,11 @@ public final class Player extends Playable {
     /**
      * @return the client owner of this char.
      */
-    public L2GameClient getClient() {
+    public GameClient getClient() {
         return _client;
     }
 
-    public void setClient(L2GameClient client) {
+    public void setClient(GameClient client) {
         _client = client;
         if ((_client != null) && (_client.getHostAddress() != null)) {
             _ip = _client.getHostAddress();
@@ -4233,7 +4233,7 @@ public final class Player extends Playable {
             if ((pk != null)) {
                 EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPvPKill(pk, this), this);
 
-                if (L2Event.isParticipant(pk)) {
+                if (Event.isParticipant(pk)) {
                     pk.getEventStatus().addKill(this);
                 }
 
@@ -4356,7 +4356,7 @@ public final class Player extends Playable {
     }
 
     private void onDieDropItem(Creature killer) {
-        if (L2Event.isParticipant(this) || (killer == null)) {
+        if (Event.isParticipant(this) || (killer == null)) {
             return;
         }
 
@@ -4613,7 +4613,7 @@ public final class Player extends Playable {
 
         // Calculate the Experience loss
         long lostExp = 0;
-        if (!L2Event.isParticipant(this)) {
+        if (!Event.isParticipant(this)) {
             if (lvl < ExperienceData.getInstance().getMaxLevel()) {
                 lostExp = Math.round(((getStat().getExpForLevel(lvl + 1) - getStat().getExpForLevel(lvl)) * percentLost) / 100);
             } else {
@@ -6828,7 +6828,7 @@ public final class Player extends Playable {
         }
 
         // If Alternate rule Karma punishment is set to true, forbid skill Return to player with Karma
-        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (getReputation() < 0) && skill.hasEffectType(L2EffectType.TELEPORT)) {
+        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (getReputation() < 0) && skill.hasEffectType(EffectType.TELEPORT)) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
@@ -6860,7 +6860,7 @@ public final class Player extends Playable {
         }
 
         // Check if fishing and trying to use non-fishing skills.
-        if (isFishing() && !skill.hasEffectType(L2EffectType.FISHING, L2EffectType.FISHING_START)) {
+        if (isFishing() && !skill.hasEffectType(EffectType.FISHING, EffectType.FISHING_START)) {
             sendPacket(SystemMessageId.ONLY_FISHING_SKILLS_MAY_BE_USED_AT_THIS_TIME);
             return false;
         }
@@ -8304,7 +8304,7 @@ public final class Player extends Playable {
 
         revalidateZone(true);
 
-        notifyFriends(L2FriendStatus.MODE_ONLINE);
+        notifyFriends(FriendStatus.MODE_ONLINE);
         if (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS) && Config.DECREASE_SKILL_LEVEL) {
             checkPlayerSkills();
         }
@@ -9083,12 +9083,12 @@ public final class Player extends Playable {
         }
 
         // we store all data from players who are disconnected while in an event in order to restore it in the next login
-        if (L2Event.isParticipant(this)) {
-            L2Event.savePlayerEventStatus(this);
+        if (Event.isParticipant(this)) {
+            Event.savePlayerEventStatus(this);
         }
 
         try {
-            notifyFriends(L2FriendStatus.MODE_OFFLINE);
+            notifyFriends(FriendStatus.MODE_OFFLINE);
             _blockList.playerLogout();
         } catch (Exception e) {
             LOGGER.warn("Exception on deleteMe() notifyFriends: " + e.getMessage(), e);
@@ -10088,7 +10088,7 @@ public final class Player extends Playable {
     }
 
     public void notifyFriends(int type) {
-        final L2FriendStatus pkt = new L2FriendStatus(this, type);
+        final FriendStatus pkt = new FriendStatus(this, type);
         for (int id : _friendList) {
             final Player friend = L2World.getInstance().getPlayer(id);
             if (friend != null) {

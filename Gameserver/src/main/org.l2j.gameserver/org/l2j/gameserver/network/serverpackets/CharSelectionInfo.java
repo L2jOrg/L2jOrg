@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.network.Disconnection;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -176,7 +176,7 @@ public class CharSelectionInfo extends ServerPacket {
                     clan.removeClanMember(objectId, 0);
                 }
 
-                L2GameClient.deleteCharByObjId(objectId);
+                GameClient.deleteCharByObjId(objectId);
                 return null;
             }
         }
@@ -269,7 +269,7 @@ public class CharSelectionInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.CHARACTER_SELECTION_INFO);
 
         final int size = _characterPackages.length;

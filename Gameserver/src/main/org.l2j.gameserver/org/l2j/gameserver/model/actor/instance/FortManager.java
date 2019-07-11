@@ -7,7 +7,7 @@ import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
-import org.l2j.gameserver.model.effects.L2EffectType;
+import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
@@ -667,7 +667,7 @@ public class FortManager extends Merchant {
                             skill_lvl = Integer.parseInt(st.nextToken());
                         }
                         skill = SkillData.getInstance().getSkill(skill_id, skill_lvl);
-                        if (skill.hasEffectType(L2EffectType.SUMMON)) {
+                        if (skill.hasEffectType(EffectType.SUMMON)) {
                             player.doCast(skill);
                         } else if (!((skill.getMpConsume() + skill.getMpInitialConsume()) > getCurrentMp())) {
                             doCast(skill);

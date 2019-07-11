@@ -9,7 +9,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.effects.L2EffectType;
+import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
@@ -290,7 +290,7 @@ public final class TamedBeast extends FeedableBeast {
             // if the owner has a lot of HP, then debuff the enemy with a random debuff among the available skills
             for (Skill skill : getTemplate().getSkills().values()) {
                 // if the skill is a buff, check if the owner has it already [ owner.getEffect(L2Skill skill) ]
-                if ((Rnd.get(5) < chance) && skill.hasEffectType(L2EffectType.CPHEAL, L2EffectType.HEAL, L2EffectType.MANAHEAL_BY_LEVEL, L2EffectType.MANAHEAL_PERCENT)) {
+                if ((Rnd.get(5) < chance) && skill.hasEffectType(EffectType.CPHEAL, EffectType.HEAL, EffectType.MANAHEAL_BY_LEVEL, EffectType.MANAHEAL_PERCENT)) {
                     sitCastAndFollow(skill, _owner);
                 }
             }

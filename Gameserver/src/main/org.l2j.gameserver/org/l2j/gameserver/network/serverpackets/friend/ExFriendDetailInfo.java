@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.friend;
 
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
@@ -25,7 +25,7 @@ public class ExFriendDetailInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_FRIEND_DETAIL_INFO);
 
         writeInt(_objectId);

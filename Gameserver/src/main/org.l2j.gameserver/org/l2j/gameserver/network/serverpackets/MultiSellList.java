@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.holders.MultisellEntryHolder;
 import org.l2j.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public final class MultiSellList extends AbstractItemPacket {
@@ -29,7 +29,7 @@ public final class MultiSellList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.MULTI_SELL_LIST);
 
         writeByte((byte) 0x00); // Helios

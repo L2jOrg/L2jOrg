@@ -4,7 +4,7 @@ import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -120,7 +120,7 @@ public final class CreatureSay extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.SAY2);
 
         writeInt(_objectId);

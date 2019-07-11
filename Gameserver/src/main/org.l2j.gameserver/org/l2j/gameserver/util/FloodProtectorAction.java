@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.Disconnection;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,7 +29,7 @@ public final class FloodProtectorAction {
     /**
      * Client for this instance of flood protector.
      */
-    private final L2GameClient _client;
+    private final GameClient _client;
     /**
      * Configuration of this instance of flood protector.
      */
@@ -57,7 +57,7 @@ public final class FloodProtectorAction {
      * @param client the game client for which flood protection is being created
      * @param config flood protector configuration
      */
-    public FloodProtectorAction(L2GameClient client, FloodProtectorConfig config) {
+    public FloodProtectorAction(GameClient client, FloodProtectorConfig config) {
         super();
         _client = client;
         _config = config;

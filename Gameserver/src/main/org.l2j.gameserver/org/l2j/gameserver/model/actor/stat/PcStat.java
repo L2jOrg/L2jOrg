@@ -21,7 +21,7 @@ import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
-import org.l2j.gameserver.network.serverpackets.friend.L2FriendStatus;
+import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -186,7 +186,7 @@ public class PcStat extends PlayableStat {
             getActiveChar().setCurrentCp(getMaxCp());
             getActiveChar().broadcastPacket(new SocialAction(getActiveChar().getObjectId(), SocialAction.LEVEL_UP));
             getActiveChar().sendPacket(SystemMessageId.YOUR_LEVEL_HAS_INCREASED);
-            getActiveChar().notifyFriends(L2FriendStatus.MODE_LEVEL);
+            getActiveChar().notifyFriends(FriendStatus.MODE_LEVEL);
         }
 
         // Notify to scripts

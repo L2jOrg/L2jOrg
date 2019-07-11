@@ -17,7 +17,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
-import org.l2j.gameserver.model.effects.L2EffectType;
+import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.AttachSkillHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -900,7 +900,7 @@ public final class Skill implements IIdentifiable {
     }
 
     public boolean useSoulShot() {
-        return hasEffectType(L2EffectType.PHYSICAL_ATTACK, L2EffectType.PHYSICAL_ATTACK_HP_LINK);
+        return hasEffectType(EffectType.PHYSICAL_ATTACK, EffectType.PHYSICAL_ATTACK_HP_LINK);
     }
 
     public boolean useSpiritShot() {
@@ -908,7 +908,7 @@ public final class Skill implements IIdentifiable {
     }
 
     public boolean useFishShot() {
-        return hasEffectType(L2EffectType.FISHING);
+        return hasEffectType(EffectType.FISHING);
     }
 
     public int getMinPledgeClass() {
@@ -1432,9 +1432,9 @@ public final class Skill implements IIdentifiable {
     /**
      * @param effectType  Effect type to check if its present on this skill effects.
      * @param effectTypes Effect types to check if are present on this skill effects.
-     * @return {@code true} if at least one of specified {@link L2EffectType} types is present on this skill effects, {@code false} otherwise.
+     * @return {@code true} if at least one of specified {@link EffectType} types is present on this skill effects, {@code false} otherwise.
      */
-    public boolean hasEffectType(L2EffectType effectType, L2EffectType... effectTypes) {
+    public boolean hasEffectType(EffectType effectType, EffectType... effectTypes) {
         if (_effectTypes == null) {
             synchronized (this) {
                 if (_effectTypes == null) {
@@ -1458,7 +1458,7 @@ public final class Skill implements IIdentifiable {
             return true;
         }
 
-        for (L2EffectType type : effectTypes) {
+        for (EffectType type : effectTypes) {
             if (Arrays.binarySearch(_effectTypes, (byte) type.ordinal()) >= 0) {
                 return true;
             }
@@ -1470,9 +1470,9 @@ public final class Skill implements IIdentifiable {
      * @param effectScope Effect Scope to look inside for the specific effect type.
      * @param effectType  Effect type to check if its present on this skill effects.
      * @param effectTypes Effect types to check if are present on this skill effects.
-     * @return {@code true} if at least one of specified {@link L2EffectType} types is present on this skill effects, {@code false} otherwise.
+     * @return {@code true} if at least one of specified {@link EffectType} types is present on this skill effects, {@code false} otherwise.
      */
-    public boolean hasEffectType(EffectScope effectScope, L2EffectType effectType, L2EffectType... effectTypes) {
+    public boolean hasEffectType(EffectScope effectScope, EffectType effectType, EffectType... effectTypes) {
         if (hasEffects(effectScope)) {
             return false;
         }
@@ -1482,7 +1482,7 @@ public final class Skill implements IIdentifiable {
                 return true;
             }
 
-            for (L2EffectType type : effectTypes) {
+            for (EffectType type : effectTypes) {
                 if (type == effect.getEffectType()) {
                     return true;
                 }

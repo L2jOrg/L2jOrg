@@ -1,7 +1,7 @@
 package org.l2j.gameserver.util;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 
 /**
  * Collection of flood protectors for single player.
@@ -79,7 +79,7 @@ public final class FloodProtectors {
      *
      * @param client game client for which the collection of flood protectors is being created.
      */
-    public FloodProtectors(L2GameClient client) {
+    public FloodProtectors(GameClient client) {
         super();
         _useItem = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_USE_ITEM);
         _rollDice = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_ROLL_DICE);

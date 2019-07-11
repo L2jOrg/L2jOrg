@@ -10,12 +10,12 @@ import static java.lang.Byte.toUnsignedInt;
  * @author UnAfraid, Nos
  */
 public class Crypt {
-    private final L2GameClient _client;
+    private final GameClient _client;
     private final byte[] _inKey = new byte[16];
     private final byte[] outKey = new byte[16];
     private boolean _isEnabled;
 
-    public Crypt(L2GameClient client) {
+    public Crypt(GameClient client) {
         _client = client;
     }
 

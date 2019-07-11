@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.elementalspirits;
 
 import org.l2j.gameserver.data.elemental.AbsorbItem;
 import org.l2j.gameserver.data.elemental.ElementalType;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import static java.util.Objects.isNull;
@@ -18,7 +18,7 @@ public class ElementalSpiritAbsorbInfo extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(L2GameClient client) {
+    protected void writeImpl(GameClient client) {
         writeId(EX_ELEMENTAL_SPIRIT_ABSORB_INFO);
 
         var player = client.getActiveChar();

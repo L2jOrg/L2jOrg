@@ -21,7 +21,7 @@ import org.l2j.gameserver.handler.ITargetTypeHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Playable;
-import org.l2j.gameserver.model.effects.L2EffectType;
+import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -67,7 +67,7 @@ public class PcBody implements ITargetTypeHandler
 		
 		if (target.isDead())
 		{
-			if (skill.hasEffectType(L2EffectType.RESURRECTION))
+			if (skill.hasEffectType(EffectType.RESURRECTION))
 			{
 				if (activeChar.isResurrectionBlocked() || target.isResurrectionBlocked())
 				{

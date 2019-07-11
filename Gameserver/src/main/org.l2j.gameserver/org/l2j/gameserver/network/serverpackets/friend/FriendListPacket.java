@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets.friend;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
@@ -16,10 +16,10 @@ import java.util.List;
  *
  * @author Tempy
  */
-public class L2FriendList extends ServerPacket {
+public class FriendListPacket extends ServerPacket {
     private final List<FriendInfo> _info = new LinkedList<>();
 
-    public L2FriendList(Player player) {
+    public FriendListPacket(Player player) {
         for (int objId : player.getFriendList()) {
             final String name = CharNameTable.getInstance().getNameById(objId);
             final Player player1 = L2World.getInstance().getPlayer(objId);
@@ -40,7 +40,7 @@ public class L2FriendList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.L2_FRIEND_LIST);
 
         writeInt(_info.size());

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.crystalization;
 
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
@@ -18,7 +18,7 @@ public class ExGetCrystalizingEstimation extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_GET_CRYSTALIZING_ESTIMATION);
 
         writeInt(_items.size());

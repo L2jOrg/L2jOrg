@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.StaticPacket;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 @StaticPacket
@@ -17,7 +17,7 @@ public class ExLightingCandleEvent extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(L2GameClient client) {
+    protected void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_LIGHTING_CANDLE_EVENT);
         writeShort(enabled);
     }

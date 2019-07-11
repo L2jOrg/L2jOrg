@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class ExChangeMpCost extends ServerPacket {
@@ -14,7 +14,7 @@ public class ExChangeMpCost extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(L2GameClient client) {
+    protected void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_CHANGE_MPCOST);
         writeInt(skillType);
         writeDouble(modifier);

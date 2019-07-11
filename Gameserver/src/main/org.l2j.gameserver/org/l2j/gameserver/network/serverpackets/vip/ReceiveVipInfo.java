@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.vip;
 
 import org.l2j.gameserver.data.xml.impl.VipData;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
@@ -13,7 +13,7 @@ import static java.lang.Math.max;
 public class ReceiveVipInfo extends ServerPacket {
 
     @Override
-    protected void writeImpl(L2GameClient client) {
+    protected void writeImpl(GameClient client) {
         var player = client.getActiveChar();
         var vipData = VipData.getInstance();
         var vipTier = player.getVipTier();

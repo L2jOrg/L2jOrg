@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
-import org.l2j.gameserver.model.effects.L2EffectType;
+import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcMoveFinished;
 import org.l2j.gameserver.model.interfaces.ILocational;
@@ -1062,14 +1062,14 @@ public class CreatureAI extends AbstractAI {
                     continue;
                 }
 
-                if (sk.hasEffectType(L2EffectType.DISPEL, L2EffectType.DISPEL_BY_SLOT)) {
+                if (sk.hasEffectType(EffectType.DISPEL, EffectType.DISPEL_BY_SLOT)) {
                     cancelSkills.add(sk);
-                } else if (sk.hasEffectType(L2EffectType.HEAL)) {
+                } else if (sk.hasEffectType(EffectType.HEAL)) {
                     healSkills.add(sk);
                     hasHealOrResurrect = true;
-                } else if (sk.hasEffectType(L2EffectType.SLEEP)) {
+                } else if (sk.hasEffectType(EffectType.SLEEP)) {
                     sleepSkills.add(sk);
-                } else if (sk.hasEffectType(L2EffectType.BLOCK_ACTIONS)) {
+                } else if (sk.hasEffectType(EffectType.BLOCK_ACTIONS)) {
                     // hardcoding petrification until improvements are made to
                     // EffectTemplate... petrification is totally different for
                     // AI than paralyze
@@ -1087,13 +1087,13 @@ public class CreatureAI extends AbstractAI {
                             break;
                         }
                     }
-                } else if (sk.hasEffectType(L2EffectType.ROOT)) {
+                } else if (sk.hasEffectType(EffectType.ROOT)) {
                     rootSkills.add(sk);
-                } else if (sk.hasEffectType(L2EffectType.BLOCK_CONTROL)) {
+                } else if (sk.hasEffectType(EffectType.BLOCK_CONTROL)) {
                     debuffSkills.add(sk);
-                } else if (sk.hasEffectType(L2EffectType.MUTE)) {
+                } else if (sk.hasEffectType(EffectType.MUTE)) {
                     muteSkills.add(sk);
-                } else if (sk.hasEffectType(L2EffectType.RESURRECTION)) {
+                } else if (sk.hasEffectType(EffectType.RESURRECTION)) {
                     resurrectSkills.add(sk);
                     hasHealOrResurrect = true;
                 } else {

@@ -19,16 +19,16 @@ package org.l2j.gameserver.model.events.impl.server;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 
 /**
  * @author UnAfraid
  */
 public class OnPacketReceived implements IBaseEvent {
-    private final L2GameClient _client;
+    private final GameClient _client;
     private final byte[] _data;
 
-    public OnPacketReceived(L2GameClient client, byte[] data) {
+    public OnPacketReceived(GameClient client, byte[] data) {
         _client = client;
         _data = data;
     }
@@ -37,7 +37,7 @@ public class OnPacketReceived implements IBaseEvent {
         return _client.getActiveChar();
     }
 
-    public L2GameClient getClient() {
+    public GameClient getClient() {
         return _client;
     }
 

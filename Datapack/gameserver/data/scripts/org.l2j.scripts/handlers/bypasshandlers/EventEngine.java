@@ -19,7 +19,7 @@ package handlers.bypasshandlers;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.L2Event;
+import org.l2j.gameserver.model.entity.Event;
 
 public class EventEngine implements IBypassHandler
 {
@@ -41,12 +41,12 @@ public class EventEngine implements IBypassHandler
 		{
 			if (command.equalsIgnoreCase("event_participate"))
 			{
-				L2Event.registerPlayer(activeChar);
+				Event.registerPlayer(activeChar);
 				return true;
 			}
 			else if (command.equalsIgnoreCase("event_unregister"))
 			{
-				L2Event.removeAndResetPlayer(activeChar);
+				Event.removeAndResetPlayer(activeChar);
 				return true;
 			}
 		}

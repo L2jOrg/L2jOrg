@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class ExPutCommissionResultForVariationMake extends ServerPacket {
@@ -35,7 +35,7 @@ public class ExPutCommissionResultForVariationMake extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_PUT_COMMISSION_RESULT_FOR_VARIATION_MAKE);
 
         writeInt(_gemstoneObjId);

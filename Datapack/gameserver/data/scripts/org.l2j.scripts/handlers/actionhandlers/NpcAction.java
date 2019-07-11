@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.L2Event;
+import org.l2j.gameserver.model.entity.Event;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
@@ -102,7 +102,7 @@ public class NpcAction implements IActionHandler
 					// Open a chat window on client with the text of the Npc
 					if (npc.getVariables().getBoolean("eventmob", false))
 					{
-						L2Event.showEventHtml(activeChar, String.valueOf(target.getObjectId()));
+						Event.showEventHtml(activeChar, String.valueOf(target.getObjectId()));
 					}
 					else
 					{

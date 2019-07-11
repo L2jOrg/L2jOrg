@@ -18,7 +18,7 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerCreate;
 import org.l2j.gameserver.model.items.PcItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.Disconnection;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.serverpackets.CharCreateFail;
 import org.l2j.gameserver.network.serverpackets.CharCreateOk;
 import org.l2j.gameserver.network.serverpackets.CharSelectionInfo;
@@ -152,7 +152,7 @@ public final class CharacterCreate extends ClientPacket {
         LOGGER_ACCOUNTING.info("Created new character {}, {}", newChar, client);
     }
 
-    private void initNewChar(L2GameClient client, Player newChar) {
+    private void initNewChar(GameClient client, Player newChar) {
         L2World.getInstance().addObject(newChar);
 
         if (Config.STARTING_ADENA > 0) {

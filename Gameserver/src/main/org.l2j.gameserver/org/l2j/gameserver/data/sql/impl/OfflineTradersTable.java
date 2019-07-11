@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SellBuffHolder;
 import org.l2j.gameserver.network.Disconnection;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -280,7 +280,7 @@ public class OfflineTradersTable {
                 Player player = null;
 
                 try {
-                    final L2GameClient client = new L2GameClient(null);
+                    final GameClient client = new GameClient(null);
                     client.setDetached(true);
                     player = Player.load(rs.getInt("charId"));
                     client.setActiveChar(player);

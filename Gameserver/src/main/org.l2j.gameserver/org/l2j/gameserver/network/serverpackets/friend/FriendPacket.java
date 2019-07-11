@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.friend;
 
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
@@ -12,7 +12,7 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
  *
  * @author JIV
  */
-public class L2Friend extends ServerPacket {
+public class FriendPacket extends ServerPacket {
     private final boolean _action;
     private final boolean _online;
     private final int _objid;
@@ -22,7 +22,7 @@ public class L2Friend extends ServerPacket {
      * @param action - true for adding, false for remove
      * @param objId
      */
-    public L2Friend(boolean action, int objId) {
+    public FriendPacket(boolean action, int objId) {
         _action = action;
         _objid = objId;
         _name = CharNameTable.getInstance().getNameById(objId);
@@ -30,7 +30,7 @@ public class L2Friend extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.L2_FRIEND);
 
         writeInt(_action ? 1 : 3); // 1-add 3-remove

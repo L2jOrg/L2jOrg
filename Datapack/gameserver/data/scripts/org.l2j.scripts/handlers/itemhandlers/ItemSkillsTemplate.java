@@ -20,7 +20,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.actor.Playable;
-import org.l2j.gameserver.model.effects.L2EffectType;
+import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -79,7 +79,7 @@ public class ItemSkillsTemplate implements IItemHandler
 
             if (itemSkill != null)
             {
-                if (itemSkill.hasEffectType(L2EffectType.EXTRACT_ITEM) && (playable.getActingPlayer() != null) && !playable.getActingPlayer().isInventoryUnder80(false))
+                if (itemSkill.hasEffectType(EffectType.EXTRACT_ITEM) && (playable.getActingPlayer() != null) && !playable.getActingPlayer().isInventoryUnder80(false))
                 {
                     playable.getActingPlayer().sendPacket(SystemMessageId.EMPTY_463);
                     return false;
@@ -90,7 +90,7 @@ public class ItemSkillsTemplate implements IItemHandler
                     hasConsumeSkill = true;
                 }
 
-                if (!itemSkill.hasEffectType(L2EffectType.SUMMON_PET) && !itemSkill.checkCondition(playable, playable.getTarget()))
+                if (!itemSkill.hasEffectType(EffectType.SUMMON_PET) && !itemSkill.checkCondition(playable, playable.getTarget()))
                 {
                     continue;
                 }
@@ -119,7 +119,7 @@ public class ItemSkillsTemplate implements IItemHandler
                     playable.sendPacket(sm);
                 }
 
-                if (playable.isPlayer() && itemSkill.hasEffectType(L2EffectType.SUMMON_PET))
+                if (playable.isPlayer() && itemSkill.hasEffectType(EffectType.SUMMON_PET))
                 {
                     playable.doCast(itemSkill);
                     successfulUse = true;

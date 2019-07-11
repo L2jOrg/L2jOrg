@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public final class PartySmallWindowUpdate extends AbstractMaskPacket<PartySmallWindowUpdateType> {
@@ -19,7 +19,7 @@ public final class PartySmallWindowUpdate extends AbstractMaskPacket<PartySmallW
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.PARTY_SMALL_WINDOW_UPDATE);
 
         writeInt(_member.getObjectId());

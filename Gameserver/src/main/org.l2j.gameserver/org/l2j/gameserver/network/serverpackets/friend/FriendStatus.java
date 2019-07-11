@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.friend;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
@@ -11,7 +11,7 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
  *
  * @author JIV
  */
-public class L2FriendStatus extends ServerPacket {
+public class FriendStatus extends ServerPacket {
     public static final int MODE_OFFLINE = 0;
     public static final int MODE_ONLINE = 1;
     public static final int MODE_LEVEL = 2;
@@ -23,7 +23,7 @@ public class L2FriendStatus extends ServerPacket {
     private final int _level;
     private final String _name;
 
-    public L2FriendStatus(Player player, int type) {
+    public FriendStatus(Player player, int type) {
         _objectId = player.getObjectId();
         _classId = player.getActiveClass();
         _level = player.getLevel();
@@ -32,7 +32,7 @@ public class L2FriendStatus extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.FRIEND_STATUS);
 
         writeInt(_type);

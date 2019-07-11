@@ -12,12 +12,12 @@ import static java.lang.Integer.toHexString;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
-public class ClientPacketHandler implements PacketHandler<L2GameClient> {
+public class ClientPacketHandler implements PacketHandler<GameClient> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ClientPacketHandler.class);
 
     @Override
-    public ReadablePacket<L2GameClient> handlePacket(PacketBuffer buffer, L2GameClient client) {
+    public ReadablePacket<GameClient> handlePacket(PacketBuffer buffer, GameClient client) {
         var opcode = toUnsignedInt(buffer.read());
 
         if(opcode >= IncomingPackets.PACKET_ARRAY.length) {
@@ -30,8 +30,8 @@ public class ClientPacketHandler implements PacketHandler<L2GameClient> {
         return MakePacketWithFactory(buffer, client, opcode, packetFactory);
     }
 
-    private ReadablePacket<L2GameClient> MakePacketWithFactory(PacketBuffer buffer, L2GameClient client, int opcode, PacketFactory packetFactory) {
-        ReadablePacket<L2GameClient> packet;
+    private ReadablePacket<GameClient> MakePacketWithFactory(PacketBuffer buffer, GameClient client, int opcode, PacketFactory packetFactory) {
+        ReadablePacket<GameClient> packet;
 
         if (isNull(packetFactory) || isNull((packet = packetFactory.newIncomingPacket()))) {
             unknownPacket(buffer, opcode, packetFactory);

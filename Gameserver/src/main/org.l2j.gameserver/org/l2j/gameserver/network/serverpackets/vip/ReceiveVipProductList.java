@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets.vip;
 import org.l2j.gameserver.data.xml.impl.PrimeShopData;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
 import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
@@ -12,7 +12,7 @@ import static java.util.Objects.nonNull;
 public class ReceiveVipProductList extends ServerPacket {
 
     @Override
-    protected void writeImpl(L2GameClient client) {
+    protected void writeImpl(GameClient client) {
         var player = client.getActiveChar();
         var products = PrimeShopData.getInstance().getPrimeItems();
         var gift = PrimeShopData.getInstance().getVipGiftOfTier(player.getVipTier());

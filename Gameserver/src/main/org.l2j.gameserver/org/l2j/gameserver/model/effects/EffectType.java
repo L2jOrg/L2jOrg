@@ -5,7 +5,7 @@ package org.l2j.gameserver.model.effects;
  *
  * @author nBd
  */
-public enum L2EffectType {
+public enum EffectType {
     AGGRESSION,
     CHARM_OF_LUCK,
     CPHEAL,

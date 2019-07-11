@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.pledgebonus;
 
 import org.l2j.gameserver.enums.ClanRewardType;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
@@ -18,7 +18,7 @@ public class ExPledgeBonusUpdate extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_PLEDGE_BONUS_UPDATE);
         writeByte((byte) _type.getClientId());
         writeInt(_value);

@@ -4,7 +4,7 @@ import io.github.joealisson.mmocore.Connector;
 import io.github.joealisson.mmocore.PacketExecutor;
 import io.github.joealisson.mmocore.ReadablePacket;
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.authcomm.gs2as.ChangePassword;
 import org.l2j.gameserver.network.authcomm.gs2as.ServerStatus;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -33,8 +33,8 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 
     private static final Logger logger = LoggerFactory.getLogger(AuthServerCommunication.class);
 
-    private final Map<String, L2GameClient> waitingClients = new HashMap<>();
-    private final Map<String, L2GameClient> authedClients = new HashMap<>();
+    private final Map<String, GameClient> waitingClients = new HashMap<>();
+    private final Map<String, GameClient> authedClients = new HashMap<>();
 
     private final ReadWriteLock lock = new ReentrantReadWriteLock();
     private final Lock readLock = lock.readLock();
@@ -67,7 +67,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
         }
     }
 
-    public L2GameClient addWaitingClient(L2GameClient client) {
+    public GameClient addWaitingClient(GameClient client) {
         writeLock.lock();
         try {
             return waitingClients.put(client.getAccountName(), client);
@@ -76,7 +76,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
         }
     }
 
-    public L2GameClient removeWaitingClient(String account) {
+    public GameClient removeWaitingClient(String account) {
         writeLock.lock();
         try {
             return waitingClients.remove(account);
@@ -85,7 +85,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
         }
     }
 
-    public L2GameClient addAuthedClient(L2GameClient client) {
+    public GameClient addAuthedClient(GameClient client) {
         writeLock.lock();
         try {
             return authedClients.put(client.getAccountName(), client);
@@ -94,7 +94,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
         }
     }
 
-    public L2GameClient removeAuthedClient(String login) {
+    public GameClient removeAuthedClient(String login) {
         writeLock.lock();
         try {
             return authedClients.remove(login);
@@ -103,7 +103,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
         }
     }
 
-    public L2GameClient getAuthedClient(String login) {
+    public GameClient getAuthedClient(String login) {
         readLock.lock();
         try {
             return authedClients.get(login);
@@ -112,12 +112,12 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
         }
     }
 
-    public List<L2GameClient> getAuthedClientsByIP(String ip) {
-        List<L2GameClient> clients = new ArrayList<>();
+    public List<GameClient> getAuthedClientsByIP(String ip) {
+        List<GameClient> clients = new ArrayList<>();
 
         readLock.lock();
         try {
-            for(L2GameClient client : authedClients.values()) {
+            for(GameClient client : authedClients.values()) {
                 if(client.getHostAddress().equalsIgnoreCase(ip))
                     clients.add(client);
             }
@@ -127,14 +127,14 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
         return clients;
     }
 
-    public List<L2GameClient> getAuthedClientsByHWID(String hwid) {
-        List<L2GameClient> clients = new ArrayList<>();
+    public List<GameClient> getAuthedClientsByHWID(String hwid) {
+        List<GameClient> clients = new ArrayList<>();
         if(isNullOrEmpty(hwid))
             return clients;
 
         readLock.lock();
         try {
-            for(L2GameClient client : authedClients.values()) {
+            for(GameClient client : authedClients.values()) {
                 String h = client.getHardwareInfo().getMacAddress();
                 if(!isNullOrEmpty(h) && h.equalsIgnoreCase(hwid))
                     clients.add(client);

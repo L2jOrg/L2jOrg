@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.Collection;
@@ -46,7 +46,7 @@ public final class TradeStart extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) throws InvalidDataPacketException {
+    public void writeImpl(GameClient client) throws InvalidDataPacketException {
         if ((_activeChar.getActiveTradeList() == null) || (_partner == null)) {
             throw new InvalidDataPacketException();
         }

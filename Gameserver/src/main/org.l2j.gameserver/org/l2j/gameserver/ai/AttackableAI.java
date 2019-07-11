@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.*;
-import org.l2j.gameserver.model.effects.L2EffectType;
+import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableFactionCall;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableHate;
@@ -759,7 +759,7 @@ public class AttackableAI extends CreatureAI {
             }
 
             // Check if target had buffs if skill is bad cancel, or debuffs if skill is good cancel.
-            if (skill.hasEffectType(L2EffectType.DISPEL, L2EffectType.DISPEL_BY_SLOT)) {
+            if (skill.hasEffectType(EffectType.DISPEL, EffectType.DISPEL_BY_SLOT)) {
                 if (skill.isBad()) {
                     if (((Creature) target).getEffectList().getBuffCount() == 0) {
                         return false;
@@ -770,7 +770,7 @@ public class AttackableAI extends CreatureAI {
             }
 
             // Check for damaged targets if using healing skill.
-            return (((Creature) target).getCurrentHp() != ((Creature) target).getMaxHp()) || !skill.hasEffectType(L2EffectType.HEAL);
+            return (((Creature) target).getCurrentHp() != ((Creature) target).getMaxHp()) || !skill.hasEffectType(EffectType.HEAL);
         }
 
         return true;
@@ -834,7 +834,7 @@ public class AttackableAI extends CreatureAI {
             }
 
             // For heal skills sort by hp missing.
-            if (skill.hasEffectType(L2EffectType.HEAL)) {
+            if (skill.hasEffectType(EffectType.HEAL)) {
                 stream = stream.sorted(Comparator.comparingInt(Creature::getCurrentHpPercent));
             }
         }

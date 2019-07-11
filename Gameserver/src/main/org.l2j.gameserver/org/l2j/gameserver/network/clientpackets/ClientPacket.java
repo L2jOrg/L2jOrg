@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import io.github.joealisson.mmocore.ReadablePacket;
 import org.l2j.gameserver.GameServer;
 import org.l2j.gameserver.network.InvalidDataPacketException;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
  *
  * @author KenM
  */
-public abstract class ClientPacket extends ReadablePacket<L2GameClient> {
+public abstract class ClientPacket extends ReadablePacket<GameClient> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ClientPacket.class);
 

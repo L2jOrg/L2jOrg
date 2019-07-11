@@ -99,7 +99,7 @@ public class CharacterSelect extends ClientPacket {
                     // load up character from disk
                     final Player cha = client.load(_charSlot);
                     if (cha == null) {
-                        return; // handled in L2GameClient
+                        return; // handled in GameClient
                     }
 
                     CharNameTable.getInstance().addName(cha);

@@ -4,7 +4,7 @@ import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.entity.Fort;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.Collection;
@@ -21,7 +21,7 @@ public class ExShowFortressInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_SHOW_FORTRESS_INFO);
 
         final Collection<Fort> forts = FortDataManager.getInstance().getForts();

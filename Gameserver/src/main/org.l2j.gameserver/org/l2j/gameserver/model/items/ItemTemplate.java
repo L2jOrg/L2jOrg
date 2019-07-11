@@ -5,7 +5,7 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.ItemGrade;
 import org.l2j.gameserver.enums.ItemSkillType;
-import org.l2j.gameserver.model.L2ExtractableProduct;
+import org.l2j.gameserver.model.ExtractableProduct;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.StatsSet;
@@ -817,7 +817,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     /**
      * @param extractableProduct
      */
-    public void addCapsuledItem(L2ExtractableProduct extractableProduct) {
+    public void addCapsuledItem(ExtractableProduct extractableProduct) {
     }
 
     public double getStats(Stats stat, double defaultValue) {

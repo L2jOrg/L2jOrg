@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets.ceremonyofchaos;
 import org.l2j.gameserver.enums.CeremonyOfChaosResult;
 import org.l2j.gameserver.instancemanager.CeremonyOfChaosManager;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
@@ -20,7 +20,7 @@ public class ExCuriousHouseResult extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_CURIOUS_HOUSE_RESULT);
         writeInt(_event.getId());
         writeShort((short) _result.ordinal());

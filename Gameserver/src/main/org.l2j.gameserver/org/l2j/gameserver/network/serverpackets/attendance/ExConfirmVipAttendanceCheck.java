@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.attendance;
 
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
@@ -17,7 +17,7 @@ public class ExConfirmVipAttendanceCheck extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_CONFIRM_VIP_ATTENDANCE_CHECK);
         writeByte((byte) (_available ? 0x01 : 0x00)); // can receive reward today? 1 else 0
         writeByte((byte) _index); // active reward index

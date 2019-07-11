@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.L2FriendSay;
+import org.l2j.gameserver.network.serverpackets.FriendSay;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -48,6 +48,6 @@ public final class RequestSendFriendMsg extends ClientPacket {
             LOGGER_CHAT.info("PRIV_MSG [" + activeChar + " to " + targetPlayer + "] " + _message);
         }
 
-        targetPlayer.sendPacket(new L2FriendSay(activeChar.getName(), _reciever, _message));
+        targetPlayer.sendPacket(new FriendSay(activeChar.getName(), _reciever, _message));
     }
 }

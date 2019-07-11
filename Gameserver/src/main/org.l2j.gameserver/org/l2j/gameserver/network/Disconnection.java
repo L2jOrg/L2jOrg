@@ -16,17 +16,17 @@ import org.slf4j.LoggerFactory;
  */
 public final class Disconnection {
     private static final Logger LOGGER = LoggerFactory.getLogger(Disconnection.class);
-    private final L2GameClient _client;
+    private final GameClient _client;
     private final Player _activeChar;
 
-    private Disconnection(L2GameClient client) {
+    private Disconnection(GameClient client) {
         this(client, client.getActiveChar());
     }
     private Disconnection(Player activeChar) {
         this(activeChar.getClient(), activeChar);
     }
 
-    private Disconnection(L2GameClient client, Player activeChar) {
+    private Disconnection(GameClient client, Player activeChar) {
         _client = getClient(client, activeChar);
         _activeChar = getActiveChar(client, activeChar);
 
@@ -42,7 +42,7 @@ public final class Disconnection {
         }
     }
 
-    public static L2GameClient getClient(L2GameClient client, Player activeChar) {
+    public static GameClient getClient(GameClient client, Player activeChar) {
         if (client != null) {
             return client;
         }
@@ -54,7 +54,7 @@ public final class Disconnection {
         return null;
     }
 
-    public static Player getActiveChar(L2GameClient client, Player activeChar) {
+    public static Player getActiveChar(GameClient client, Player activeChar) {
         if (activeChar != null) {
             return activeChar;
         }
@@ -66,7 +66,7 @@ public final class Disconnection {
         return null;
     }
 
-    public static Disconnection of(L2GameClient client) {
+    public static Disconnection of(GameClient client) {
         return new Disconnection(client);
     }
 
@@ -74,7 +74,7 @@ public final class Disconnection {
         return new Disconnection(activeChar);
     }
 
-    public static Disconnection of(L2GameClient client, Player activeChar) {
+    public static Disconnection of(GameClient client, Player activeChar) {
         return new Disconnection(client, activeChar);
     }
 

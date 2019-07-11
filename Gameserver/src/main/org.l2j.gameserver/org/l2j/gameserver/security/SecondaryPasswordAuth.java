@@ -3,7 +3,7 @@ package org.l2j.gameserver.security;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.data.xml.impl.SecondaryAuthData;
 import org.l2j.gameserver.network.Disconnection;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.serverpackets.Ex2ndPasswordAck;
 import org.l2j.gameserver.network.serverpackets.Ex2ndPasswordCheck;
 import org.l2j.gameserver.network.serverpackets.Ex2ndPasswordVerify;
@@ -30,7 +30,7 @@ public class SecondaryPasswordAuth {
     private static final String UPDATE_PASSWORD = "UPDATE account_gsdata SET value=? WHERE account_name=? AND var=?";
     private static final String INSERT_ATTEMPT = "INSERT INTO account_gsdata VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE value=?";
     private final Logger LOGGER = LoggerFactory.getLogger(SecondaryPasswordAuth.class.getName());
-    private final L2GameClient _activeClient;
+    private final GameClient _activeClient;
     private String _password;
     private int _wrongAttempts;
     private boolean _authed;
@@ -38,7 +38,7 @@ public class SecondaryPasswordAuth {
     /**
      * @param activeClient
      */
-    public SecondaryPasswordAuth(L2GameClient activeClient) {
+    public SecondaryPasswordAuth(GameClient activeClient) {
         _activeClient = activeClient;
         _password = null;
         _wrongAttempts = 0;

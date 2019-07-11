@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.SkillEnchantType;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.LinkedList;
@@ -21,7 +21,7 @@ public class ExEnchantSkillList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_ENCHANT_SKILL_LIST);
 
         writeInt(_type.ordinal());

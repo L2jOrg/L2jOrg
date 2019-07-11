@@ -25,7 +25,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.handler.IItemHandler;
-import org.l2j.gameserver.model.L2ExtractableProduct;
+import org.l2j.gameserver.model.ExtractableProduct;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.EtcItem;
@@ -51,7 +51,7 @@ public class ExtractableItems implements IItemHandler
 		
 		final Player activeChar = playable.getActingPlayer();
 		final EtcItem etcitem = (EtcItem) item.getItem();
-		final List<L2ExtractableProduct> exitems = etcitem.getExtractableItems();
+		final List<ExtractableProduct> exitems = etcitem.getExtractableItems();
 		if (exitems == null)
 		{
 			LOGGER.info("No extractable data defined for " + etcitem);
@@ -76,7 +76,7 @@ public class ExtractableItems implements IItemHandler
 		{
 			while (extractedItems.size() < etcitem.getExtractableCountMin())
 			{
-				for (L2ExtractableProduct expi : exitems)
+				for (ExtractableProduct expi : exitems)
 				{
 					if ((etcitem.getExtractableCountMax() > 0) && (extractedItems.size() == etcitem.getExtractableCountMax()))
 					{
@@ -139,7 +139,7 @@ public class ExtractableItems implements IItemHandler
 		}
 		else
 		{
-			for (L2ExtractableProduct expi : exitems)
+			for (ExtractableProduct expi : exitems)
 			{
 				if ((etcitem.getExtractableCountMax() > 0) && (extractedItems.size() == etcitem.getExtractableCountMax()))
 				{

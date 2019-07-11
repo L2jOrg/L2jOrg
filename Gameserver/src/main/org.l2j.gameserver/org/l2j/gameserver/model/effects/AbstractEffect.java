@@ -147,8 +147,8 @@ public abstract class AbstractEffect {
      *
      * @return the effect type
      */
-    public L2EffectType getEffectType() {
-        return L2EffectType.NONE;
+    public EffectType getEffectType() {
+        return EffectType.NONE;
     }
 
     @Override

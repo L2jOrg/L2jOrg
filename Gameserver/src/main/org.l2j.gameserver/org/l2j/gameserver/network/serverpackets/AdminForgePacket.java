@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ public class AdminForgePacket extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         for (Part p : _parts) {
             generate(p.b, p.str);
         }

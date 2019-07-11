@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.compound;
 
 import io.github.joealisson.mmocore.StaticPacket;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
@@ -17,7 +17,7 @@ public class ExEnchantTwoOK extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_ENCHANT_TWO_OK);
     }
 

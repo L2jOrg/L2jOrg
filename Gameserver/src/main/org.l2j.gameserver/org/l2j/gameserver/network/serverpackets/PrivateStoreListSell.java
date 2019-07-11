@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.instancemanager.SellBuffsManager;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class PrivateStoreListSell extends AbstractItemPacket {
@@ -16,7 +16,7 @@ public class PrivateStoreListSell extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         if (_seller.isSellingBuffs()) {
             SellBuffsManager.getInstance().sendBuffMenu(_player, _seller, 0);
         } else {

@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets.dailymission;
 import org.l2j.gameserver.data.xml.impl.DailyMissionData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.util.cron4j.Predictor;
@@ -33,7 +33,7 @@ public class ExOneDayReceiveRewardList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         if (!DailyMissionData.getInstance().isAvailable()) {
             return;
         }

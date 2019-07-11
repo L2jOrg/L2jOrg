@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.votereward.VoteSystem;
 import org.l2j.gameserver.network.ClientPacketHandler;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.scripting.ScriptEngineManager;
 import org.l2j.gameserver.taskmanager.TaskManager;
@@ -56,7 +56,7 @@ public class GameServer {
     private static GameServer INSTANCE;
     public static String fullVersion;
     private final DeadLockDetector _deadDetectThread;
-    private final ConnectionHandler<L2GameClient> connectionHandler;
+    private final ConnectionHandler<GameClient> connectionHandler;
 
     public GameServer() throws Exception {
         final var serverLoadStart = Instant.now();
@@ -265,7 +265,7 @@ public class GameServer {
         printSection("Setting All characters to offline status!");
         getDAO(CharacterDAO.class).setAllCharactersOffline();
 
-        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(Config.PORT_GAME), L2GameClient::new, new ClientPacketHandler(), ThreadPoolManager::execute).build();
+        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(Config.PORT_GAME), GameClient::new, new ClientPacketHandler(), ThreadPoolManager::execute).build();
         connectionHandler.start();
     }
 
@@ -347,7 +347,7 @@ public class GameServer {
         return (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576;
     }
 
-    public ConnectionHandler<L2GameClient> getConnectionHandler() {
+    public ConnectionHandler<GameClient> getConnectionHandler() {
         return connectionHandler;
     }
 

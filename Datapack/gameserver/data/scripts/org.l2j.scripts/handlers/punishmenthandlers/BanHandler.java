@@ -22,7 +22,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.network.Disconnection;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 
 /**
@@ -49,7 +49,7 @@ public class BanHandler implements IPunishmentHandler
 			case ACCOUNT:
 			{
 				final String account = String.valueOf(task.getKey());
-				final L2GameClient client = AuthServerCommunication.getInstance().getAuthedClient(account);
+				final GameClient client = AuthServerCommunication.getInstance().getAuthedClient(account);
 				if (client != null)
 				{
 					final Player player = client.getActiveChar();

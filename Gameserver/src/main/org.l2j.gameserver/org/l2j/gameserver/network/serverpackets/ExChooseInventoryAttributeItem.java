@@ -4,7 +4,7 @@ import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.Elementals;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.HashSet;
@@ -38,7 +38,7 @@ public class ExChooseInventoryAttributeItem extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_CHOOSE_INVENTORY_ATTRIBUTE_ITEM);
 
         writeInt(_itemId);

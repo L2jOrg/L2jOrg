@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
 import org.l2j.gameserver.network.InvalidDataPacketException;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.slf4j.Logger;
@@ -25,7 +25,7 @@ public class ExPledgeBonusOpen extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) throws InvalidDataPacketException {
+    public void writeImpl(GameClient client) throws InvalidDataPacketException {
         final Clan clan = _player.getClan();
         if (clan == null) {
             LOGGER.warn("Player: " + _player + " attempting to write to a null clan!");

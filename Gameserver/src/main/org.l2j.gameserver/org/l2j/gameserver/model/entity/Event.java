@@ -40,13 +40,13 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author Nik
- * @Since 2011/05/17 21:51:39
+ * @since 2011/05/17 21:51:39
  */
-public class L2Event {
+public class Event {
     public static final Map<Integer, String> _teamNames = new ConcurrentHashMap<>();
     public static final Set<Player> _registeredPlayers = ConcurrentHashMap.newKeySet();
     public static final Map<Integer, Set<Player>> _teams = new ConcurrentHashMap<>();
-    protected static final Logger LOGGER = LoggerFactory.getLogger(L2Event.class);
+    protected static final Logger LOGGER = LoggerFactory.getLogger(Event.class);
     private static final Map<Player, PlayerEventHolder> _connectionLossData = new ConcurrentHashMap<>();
     public static EventState eventState = EventState.OFF;
     public static String _eventName = "";
@@ -124,7 +124,7 @@ public class L2Event {
     }
 
     /**
-     * Spawns an event participation NPC near the player. The npc id used to spawning is L2Event._npcId
+     * Spawns an event participation NPC near the player. The npc id used to spawning is Event._npcId
      *
      * @param target
      */
@@ -327,7 +327,7 @@ public class L2Event {
                 L2World.getInstance().forEachVisibleObjectInRange(player, Player.class, 1000, temp::add);
             }
         } catch (Exception e) {
-            LOGGER.warn("L2Event: " + e.getMessage());
+            LOGGER.warn("Event: " + e.getMessage());
             return "Cannot start event participation, an error has occured.";
         }
 
@@ -391,7 +391,7 @@ public class L2Event {
                 i = (i + 1) % _teamsNumber;
             }
         } catch (Exception e) {
-            LOGGER.warn("L2Event: " + e.getMessage());
+            LOGGER.warn("Event: " + e.getMessage());
             return "Cannot start event, an error has occured.";
         }
 

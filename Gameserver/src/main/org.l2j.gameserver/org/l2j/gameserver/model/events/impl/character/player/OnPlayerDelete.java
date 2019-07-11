@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.events.impl.character.player;
 
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 
 /**
  * @author UnAfraid
@@ -26,9 +26,9 @@ import org.l2j.gameserver.network.L2GameClient;
 public class OnPlayerDelete implements IBaseEvent {
     private final int _objectId;
     private final String _name;
-    private final L2GameClient _client;
+    private final GameClient _client;
 
-    public OnPlayerDelete(int objectId, String name, L2GameClient client) {
+    public OnPlayerDelete(int objectId, String name, GameClient client) {
         _objectId = objectId;
         _name = name;
         _client = client;
@@ -42,7 +42,7 @@ public class OnPlayerDelete implements IBaseEvent {
         return _name;
     }
 
-    public L2GameClient getClient() {
+    public GameClient getClient() {
         return _client;
     }
 

@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.L2ManufactureItem;
 import org.l2j.gameserver.model.L2RecipeList;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.Iterator;
@@ -36,7 +36,7 @@ public class RecipeShopManageList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.RECIPE_SHOP_MANAGE_LIST);
 
         writeInt(_seller.getObjectId());

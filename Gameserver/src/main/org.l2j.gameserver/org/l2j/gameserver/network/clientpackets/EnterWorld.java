@@ -29,7 +29,7 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
 import org.l2j.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
-import org.l2j.gameserver.network.serverpackets.friend.L2FriendList;
+import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -248,8 +248,8 @@ public class EnterWorld extends ClientPacket {
 
         activeChar.getInventory().applyItemSkills();
 
-        if (L2Event.isParticipant(activeChar)) {
-            L2Event.restorePlayerEventStatus(activeChar);
+        if (Event.isParticipant(activeChar)) {
+            Event.restorePlayerEventStatus(activeChar);
         }
 
         if (activeChar.isCursedWeaponEquipped()) {
@@ -268,7 +268,7 @@ public class EnterWorld extends ClientPacket {
         activeChar.sendPacket(new ExStorageMaxCount(activeChar));
 
         // Friend list
-        client.sendPacket(new L2FriendList(activeChar));
+        client.sendPacket(new FriendListPacket(activeChar));
 
         SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN);
         sm.addString(activeChar.getName());

@@ -4,7 +4,7 @@ import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.slf4j.Logger;
@@ -34,7 +34,7 @@ public class ExReplyReceivedPost extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(L2GameClient client) {
+    public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_REPLY_RECEIVED_POST);
 
         writeInt(_msg.getMailType().ordinal()); // GOD

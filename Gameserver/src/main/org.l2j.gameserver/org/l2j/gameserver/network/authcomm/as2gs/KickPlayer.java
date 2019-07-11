@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.authcomm.as2gs;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.Disconnection;
-import org.l2j.gameserver.network.L2GameClient;
+import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.ReceivablePacket;
@@ -21,7 +21,7 @@ public class KickPlayer extends ReceivablePacket
     @Override
     protected void runImpl()
     {
-        L2GameClient client = AuthServerCommunication.getInstance().removeWaitingClient(account);
+        GameClient client = AuthServerCommunication.getInstance().removeWaitingClient(account);
         if(client == null)
             client = AuthServerCommunication.getInstance().removeAuthedClient(account);
         if(client == null)

@@ -44,8 +44,8 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  *
  * @author KenM
  */
-public final class L2GameClient extends Client<io.github.joealisson.mmocore.Connection<L2GameClient>> {
-    protected static final Logger LOGGER = LoggerFactory.getLogger(L2GameClient.class);
+public final class GameClient extends Client<io.github.joealisson.mmocore.Connection<GameClient>> {
+    protected static final Logger LOGGER = LoggerFactory.getLogger(GameClient.class);
     protected static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
 
     private final ReentrantLock _activeCharLock = new ReentrantLock();
@@ -69,7 +69,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
     private ConnectionState state;
     private AccountData account;
 
-    public L2GameClient(io.github.joealisson.mmocore.Connection<L2GameClient> connection) {
+    public GameClient(io.github.joealisson.mmocore.Connection<GameClient> connection) {
         super(connection);
         _crypt = new Crypt(this);
     }
