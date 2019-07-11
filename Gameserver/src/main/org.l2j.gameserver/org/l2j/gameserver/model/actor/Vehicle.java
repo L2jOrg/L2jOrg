@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.VehiclePathPoint;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.VehicleStat;
-import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
+import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.items.L2Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -37,7 +37,7 @@ public abstract class Vehicle extends Creature {
     protected int _runState = 0;
     private Runnable _engine = null;
 
-    public Vehicle(L2CharTemplate template) {
+    public Vehicle(CreatureTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2Vehicle);
         setIsFlying(true);

@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.VehiclePathPoint;
 import org.l2j.gameserver.model.actor.instance.Shuttle;
-import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
+import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.shuttle.L2ShuttleData;
 import org.l2j.gameserver.model.shuttle.L2ShuttleEngine;
 import org.l2j.gameserver.model.shuttle.L2ShuttleStop;
@@ -128,7 +128,7 @@ public final class ShuttleData extends GameXmlReader {
 
     private void init() {
         for (L2ShuttleData data : _shuttles.values()) {
-            final Shuttle shuttle = new Shuttle(new L2CharTemplate(new StatsSet()));
+            final Shuttle shuttle = new Shuttle(new CreatureTemplate(new StatsSet()));
             shuttle.setData(data);
             shuttle.setHeading(data.getLocation().getHeading());
             shuttle.setLocationInvisible(data.getLocation());

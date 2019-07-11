@@ -30,7 +30,7 @@ import java.util.Map;
 /**
  * @author mkizub, Zoey76
  */
-public class L2PcTemplate extends L2CharTemplate {
+public class L2PcTemplate extends CreatureTemplate {
     private final ClassId _classId;
 
     private final float[] _baseHp;

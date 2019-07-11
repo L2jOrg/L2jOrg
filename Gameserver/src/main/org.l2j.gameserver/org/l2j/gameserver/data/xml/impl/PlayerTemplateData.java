@@ -79,7 +79,7 @@ public final class PlayerTemplateData extends GameXmlReader {
 
                             if (nd.getChildNodes().getLength() > 1) {
                                 for (Node cnd = nd.getFirstChild(); cnd != null; cnd = cnd.getNextSibling()) {
-                                    // use L2CharTemplate(superclass) fields for male collision height and collision radius
+                                    // use CreatureTemplate(superclass) fields for male collision height and collision radius
                                     if (nd.getNodeName().equalsIgnoreCase("collisionMale")) {
                                         if (cnd.getNodeName().equalsIgnoreCase("radius")) {
                                             set.set("collision_radius", cnd.getTextContent());

@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.VehiclePathPoint;
 import org.l2j.gameserver.model.actor.instance.Boat;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
+import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.HashMap;
@@ -73,7 +73,7 @@ public class BoatManager {
         npcDat.set("baseMpReg", 3.e-3f);
         npcDat.set("basePDef", 100);
         npcDat.set("baseMDef", 100);
-        final L2CharTemplate template = new L2CharTemplate(npcDat);
+        final CreatureTemplate template = new CreatureTemplate(npcDat);
         final Boat boat = new Boat(template);
         _boats.put(boat.getObjectId(), boat);
         boat.setHeading(heading);

@@ -25,8 +25,8 @@ import org.l2j.gameserver.network.serverpackets.commission.ExShowCommission;
 /**
  * @author NosBit
  */
-public class CommissionManagerInstance extends Npc {
-    public CommissionManagerInstance(L2NpcTemplate template) {
+public class CommissionManager extends Npc {
+    public CommissionManager(L2NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.CommissionManagerInstance);
     }

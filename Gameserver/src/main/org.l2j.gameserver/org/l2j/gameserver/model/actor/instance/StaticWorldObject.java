@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.stat.StaticObjStat;
 import org.l2j.gameserver.model.actor.status.StaticObjStatus;
-import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
+import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.items.L2Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -33,7 +33,7 @@ public final class StaticWorldObject extends Creature {
      * @param template
      * @param staticId
      */
-    public StaticWorldObject(L2CharTemplate template, int staticId) {
+    public StaticWorldObject(CreatureTemplate template, int staticId) {
         super(template);
         setInstanceType(InstanceType.L2StaticObjectInstance);
         _staticObjectId = staticId;

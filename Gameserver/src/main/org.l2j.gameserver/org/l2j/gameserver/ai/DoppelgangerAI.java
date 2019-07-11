@@ -5,7 +5,7 @@ import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.DoppelgangerInstance;
+import org.l2j.gameserver.model.actor.instance.Doppelganger;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
@@ -16,7 +16,7 @@ public class DoppelgangerAI extends L2CharacterAI {
     private volatile boolean _startFollow;
     private Creature _lastAttack = null;
 
-    public DoppelgangerAI(DoppelgangerInstance clone) {
+    public DoppelgangerAI(Doppelganger clone) {
         super(clone);
     }
 
@@ -202,7 +202,7 @@ public class DoppelgangerAI extends L2CharacterAI {
     }
 
     @Override
-    public DoppelgangerInstance getActor() {
-        return (DoppelgangerInstance) super.getActor();
+    public Doppelganger getActor() {
+        return (Doppelganger) super.getActor();
     }
 }

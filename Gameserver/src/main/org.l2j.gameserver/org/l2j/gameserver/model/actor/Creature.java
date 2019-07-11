@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.actor.instance.Trap;
 import org.l2j.gameserver.model.actor.stat.CharStat;
 import org.l2j.gameserver.model.actor.status.CharStatus;
 import org.l2j.gameserver.model.actor.tasks.character.NotifyAITask;
-import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
+import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.events.Containers;
@@ -83,7 +83,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
  * <li>Vehicle</li>
  * </ul>
  * <br>
- * <b>Concept of L2CharTemplate:</b><br>
+ * <b>Concept of CreatureTemplate:</b><br>
  * Each Creature owns generic and static properties (ex : all Keltir have the same number of HP...).<br>
  * All of those properties are stored in a different template for each type of Creature.<br>
  * Each template is loaded once in the server cache memory (reduce memory use).<br>
@@ -134,7 +134,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private volatile Map<Integer, AtomicInteger> _blockActionsAllowedSkills = new ConcurrentHashMap<>();
     private CharStat _stat;
     private CharStatus _status;
-    private L2CharTemplate _template; // The link on the L2CharTemplate object containing generic and static properties of this Creature type (ex : Max HP, Speed...)
+    private CreatureTemplate _template; // The link on the CreatureTemplate object containing generic and static properties of this Creature type (ex : Max HP, Speed...)
     private String _title;
     private double _hpUpdateIncCheck = .0;
     private double _hpUpdateDecCheck = .0;
@@ -195,7 +195,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      *
      * @param template the creature template
      */
-    public Creature(L2CharTemplate template) {
+    public Creature(CreatureTemplate template) {
         this(IdFactory.getInstance().getNextId(), template);
     }
 
@@ -216,9 +216,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * </ul>
      *
      * @param objectId Identifier of the object to initialized
-     * @param template The L2CharTemplate to apply to the object
+     * @param template The CreatureTemplate to apply to the object
      */
-    public Creature(int objectId, L2CharTemplate template) {
+    public Creature(int objectId, CreatureTemplate template) {
         super(objectId);
         if (template == null) {
             throw new NullPointerException("Template is null!");
@@ -1834,7 +1834,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         _status = new CharStatus(this);
     }
 
-    public L2CharTemplate getTemplate() {
+    public CreatureTemplate getTemplate() {
         return _template;
     }
 
@@ -1848,7 +1848,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      *
      * @param template
      */
-    protected final void setTemplate(L2CharTemplate template) {
+    protected final void setTemplate(CreatureTemplate template) {
         _template = template;
     }
 
@@ -2752,7 +2752,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
 
             // Movement checks.
-            if (Config.PATHFINDING && !(this instanceof FriendlyNpcInstance)) {
+            if (Config.PATHFINDING && !(this instanceof FriendlyNpc)) {
                 final double originalDistance = distance;
                 final int originalX = x;
                 final int originalY = y;

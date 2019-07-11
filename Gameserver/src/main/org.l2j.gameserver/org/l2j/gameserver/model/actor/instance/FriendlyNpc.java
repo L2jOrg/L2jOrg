@@ -34,10 +34,10 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 /**
  * @author GKR, Sdw
  */
-public class FriendlyNpcInstance extends Attackable {
+public class FriendlyNpc extends Attackable {
     private boolean _isAutoAttackable = true;
 
-    public FriendlyNpcInstance(L2NpcTemplate template) {
+    public FriendlyNpc(L2NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.FriendlyNpcInstance);
     }
@@ -49,7 +49,7 @@ public class FriendlyNpcInstance extends Attackable {
 
     @Override
     public boolean isAutoAttackable(Creature attacker) {
-        return _isAutoAttackable && !attacker.isPlayable() && !(attacker instanceof FriendlyNpcInstance);
+        return _isAutoAttackable && !attacker.isPlayable() && !(attacker instanceof FriendlyNpc);
     }
 
     @Override
@@ -59,7 +59,7 @@ public class FriendlyNpcInstance extends Attackable {
 
     @Override
     public void addDamage(Creature attacker, int damage, Skill skill) {
-        if (!attacker.isPlayable() && !(attacker instanceof FriendlyNpcInstance)) {
+        if (!attacker.isPlayable() && !(attacker instanceof FriendlyNpc)) {
             super.addDamage(attacker, damage, skill);
         }
 
@@ -70,7 +70,7 @@ public class FriendlyNpcInstance extends Attackable {
 
     @Override
     public void addDamageHate(Creature attacker, int damage, int aggro) {
-        if (!attacker.isPlayable() && !(attacker instanceof FriendlyNpcInstance)) {
+        if (!attacker.isPlayable() && !(attacker instanceof FriendlyNpc)) {
             super.addDamageHate(attacker, damage, aggro);
         }
     }

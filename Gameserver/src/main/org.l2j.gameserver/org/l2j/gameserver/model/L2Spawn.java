@@ -310,7 +310,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable {
      * <li>Set the HP and MP of the Folk to the max</li>
      * <li>Set the heading of the Folk (random heading if not defined : value=-1)</li>
      * <li>Link the Folk to this L2Spawn</li>
-     * <li>Init other values of the Folk (ex : from its L2CharTemplate for INT, STR, DEX...) and add it in the world</li>
+     * <li>Init other values of the Folk (ex : from its CreatureTemplate for INT, STR, DEX...) and add it in the world</li>
      * <li>Launch the action OnSpawn fo the Folk</li>
      * <li>Increase the current number of Folk managed by this L2Spawn</li>
      * </ul>

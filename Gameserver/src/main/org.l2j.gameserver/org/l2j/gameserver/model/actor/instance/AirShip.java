@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.AirShipManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Vehicle;
-import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
+import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.network.serverpackets.*;
 
 /**
@@ -30,7 +30,7 @@ import org.l2j.gameserver.network.serverpackets.*;
  * @author DrHouse, DS
  */
 public class AirShip extends Vehicle {
-    public AirShip(L2CharTemplate template) {
+    public AirShip(CreatureTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2AirShipInstance);
         setAI(new L2AirShipAI(this));

@@ -20,7 +20,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.DoppelgangerInstance;
+import org.l2j.gameserver.model.actor.instance.Doppelganger;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -92,7 +92,7 @@ public class SummonHallucination extends AbstractEffect
 			x += (Rnd.nextBoolean() ? Rnd.get(0, 20) : Rnd.get(-20, 0));
 			y += (Rnd.nextBoolean() ? Rnd.get(0, 20) : Rnd.get(-20, 0));
 			
-			final DoppelgangerInstance clone = new DoppelgangerInstance(npcTemplate, player);
+			final Doppelganger clone = new Doppelganger(npcTemplate, player);
 			clone.setCurrentHp(clone.getMaxHp());
 			clone.setCurrentMp(clone.getMaxMp());
 			clone.setSummoner(player);

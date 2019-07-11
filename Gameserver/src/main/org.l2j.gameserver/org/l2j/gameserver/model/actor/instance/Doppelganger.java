@@ -38,12 +38,12 @@ import org.slf4j.LoggerFactory;
 /**
  * @author Nik
  */
-public class DoppelgangerInstance extends Npc {
-    protected static final Logger log = LoggerFactory.getLogger(DoppelgangerInstance.class.getName());
+public class Doppelganger extends Npc {
+    protected static final Logger log = LoggerFactory.getLogger(Doppelganger.class.getName());
 
     private boolean _copySummonerEffects = true;
 
-    public DoppelgangerInstance(L2NpcTemplate template, Player owner) {
+    public Doppelganger(L2NpcTemplate template, Player owner) {
         super(template);
 
         setSummoner(owner);

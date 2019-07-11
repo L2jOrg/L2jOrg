@@ -16,7 +16,7 @@ import java.util.Map;
  *
  * @author Zoey76
  */
-public class L2CharTemplate extends ListenersContainer {
+public class CreatureTemplate extends ListenersContainer {
     protected final Map<Stats, Double> _baseValues = new EnumMap<>(Stats.class);
     // BaseStats
     private WeaponType _baseAttackType;
@@ -24,18 +24,18 @@ public class L2CharTemplate extends ListenersContainer {
      * For client info use {@link #_fCollisionRadius}
      */
     private int _collisionRadius;
+    private double _fCollisionRadius;
     /**
      * For client info use {@link #_fCollisionHeight}
      */
     private int _collisionHeight;
-    private double _fCollisionRadius;
     private double _fCollisionHeight;
     /**
      * The creature's race.
      */
     private Race _race;
 
-    public L2CharTemplate(StatsSet set) {
+    public CreatureTemplate(StatsSet set) {
         set(set);
     }
 

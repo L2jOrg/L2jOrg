@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PlayableStat;
 import org.l2j.gameserver.model.actor.status.PlayableStatus;
-import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
+import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureDeath;
@@ -41,15 +41,15 @@ public abstract class Playable extends Creature {
      * </ul>
      *
      * @param objectId the object id
-     * @param template The L2CharTemplate to apply to the Playable
+     * @param template The CreatureTemplate to apply to the Playable
      */
-    public Playable(int objectId, L2CharTemplate template) {
+    public Playable(int objectId, CreatureTemplate template) {
         super(objectId, template);
         setInstanceType(InstanceType.L2Playable);
         setIsInvul(false);
     }
 
-    public Playable(L2CharTemplate template) {
+    public Playable(CreatureTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2Playable);
         setIsInvul(false);

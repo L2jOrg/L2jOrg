@@ -4,7 +4,7 @@ import org.l2j.gameserver.ai.L2BoatAI;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Vehicle;
-import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
+import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.network.serverpackets.VehicleDeparture;
 import org.l2j.gameserver.network.serverpackets.VehicleInfo;
 import org.l2j.gameserver.network.serverpackets.VehicleStarted;
@@ -15,7 +15,7 @@ import org.l2j.gameserver.network.serverpackets.VehicleStarted;
  */
 public class Boat extends Vehicle {
 
-    public Boat(L2CharTemplate template) {
+    public Boat(CreatureTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2BoatInstance);
         setAI(new L2BoatAI(this));

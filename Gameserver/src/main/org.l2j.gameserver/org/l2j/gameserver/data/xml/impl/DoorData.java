@@ -61,7 +61,7 @@ public final class DoorData extends GameXmlReader {
 
     public StatsSet parseDoor(Node doorNode) {
         final StatsSet params = new StatsSet(parseAttributes(doorNode));
-        params.set("baseHpMax", 1); // Avoid doors without HP value created dead due to default value 0 in L2CharTemplate
+        params.set("baseHpMax", 1); // Avoid doors without HP value created dead due to default value 0 in CreatureTemplate
 
         forEach(doorNode, XmlReader::isNode, innerDoorNode ->
         {

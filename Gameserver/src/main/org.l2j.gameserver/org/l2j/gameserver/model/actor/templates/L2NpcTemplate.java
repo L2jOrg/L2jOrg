@@ -29,7 +29,7 @@ import static java.util.Objects.nonNull;
  *
  * @author NosBit
  */
-public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable {
+public final class L2NpcTemplate extends CreatureTemplate implements IIdentifiable {
 
     private int _id;
     private int _displayId;

@@ -16,18 +16,18 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.StringTokenizer;
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.ControllableMob;
-import org.l2j.gameserver.model.actor.instance.FriendlyNpcInstance;
+import org.l2j.gameserver.model.actor.instance.FriendlyNpc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
+
+import java.util.StringTokenizer;
 
 /**
  * This class handles following admin commands: - kill = kills target Creature - kill_monster = kills target non-player - kill <radius> = If radius is specified, then ALL players only in that radius will be killed. - kill_monster <radius> = If radius is specified, then ALL non-players only in
@@ -63,7 +63,7 @@ public class AdminKill implements IAdminCommandHandler
 							final int radius = Integer.parseInt(st.nextToken());
 							L2World.getInstance().forEachVisibleObjectInRange(plyr, Creature.class, radius, knownChar ->
 							{
-								if ((knownChar instanceof ControllableMob) || (knownChar instanceof FriendlyNpcInstance) || (knownChar == activeChar))
+								if ((knownChar instanceof ControllableMob) || (knownChar instanceof FriendlyNpc) || (knownChar == activeChar))
 								{
 									return;
 								}
@@ -90,7 +90,7 @@ public class AdminKill implements IAdminCommandHandler
 						
 						L2World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, radius, wo ->
 						{
-							if ((wo instanceof ControllableMob) || (wo instanceof FriendlyNpcInstance))
+							if ((wo instanceof ControllableMob) || (wo instanceof FriendlyNpc))
 							{
 								return;
 							}

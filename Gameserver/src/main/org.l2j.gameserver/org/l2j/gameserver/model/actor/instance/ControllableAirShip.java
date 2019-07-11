@@ -4,7 +4,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.actor.stat.ControllableAirShipStat;
-import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
+import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.DeleteObject;
@@ -24,7 +24,7 @@ public class ControllableAirShip extends AirShip {
     private Future<?> _consumeFuelTask;
     private Future<?> _checkTask;
 
-    public ControllableAirShip(L2CharTemplate template, int ownerId) {
+    public ControllableAirShip(CreatureTemplate template, int ownerId) {
         super(template);
         setInstanceType(InstanceType.L2ControllableAirShipInstance);
         _ownerId = ownerId;

@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.VehiclePathPoint;
 import org.l2j.gameserver.model.actor.instance.AirShip;
 import org.l2j.gameserver.model.actor.instance.ControllableAirShip;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
+import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.network.serverpackets.ExAirShipTeleportList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,7 +42,7 @@ public class AirShipManager {
     private final Map<Integer, StatsSet> _airShipsInfo = new HashMap<>();
     private final Map<Integer, AirShip> _airShips = new HashMap<>();
     private final Map<Integer, AirShipTeleportList> _teleports = new HashMap<>();
-    private L2CharTemplate _airShipTemplate = null;
+    private CreatureTemplate _airShipTemplate = null;
 
     private AirShipManager() {
         final StatsSet npcDat = new StatsSet();
@@ -88,7 +88,7 @@ public class AirShipManager {
         npcDat.set("baseMpReg", 3.e-3f);
         npcDat.set("basePDef", 100);
         npcDat.set("baseMDef", 100);
-        _airShipTemplate = new L2CharTemplate(npcDat);
+        _airShipTemplate = new CreatureTemplate(npcDat);
 
         load();
     }

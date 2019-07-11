@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.interfaces.IIdentifiable;
  *
  * @author JIV
  */
-public class L2DoorTemplate extends L2CharTemplate implements IIdentifiable {
+public class L2DoorTemplate extends CreatureTemplate implements IIdentifiable {
     private final int _doorId;
     private final int _nodeX[];
     private final int _nodeY[];
