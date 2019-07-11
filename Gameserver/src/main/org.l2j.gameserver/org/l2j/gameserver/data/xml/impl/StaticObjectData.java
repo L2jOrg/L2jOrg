@@ -17,7 +17,7 @@
 package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
+import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -44,7 +44,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public final class StaticObjectData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(StaticObjectData.class);
 
-    private final Map<Integer, L2StaticObjectInstance> _staticObjects = new HashMap<>();
+    private final Map<Integer, StaticWorldObject> _staticObjects = new HashMap<>();
 
     private StaticObjectData() {
         load();
@@ -87,7 +87,7 @@ public final class StaticObjectData extends GameXmlReader {
      * @param set the stats set to add.
      */
     private void addObject(StatsSet set) {
-        final L2StaticObjectInstance obj = new L2StaticObjectInstance(new L2CharTemplate(new StatsSet()), set.getInt("id"));
+        final StaticWorldObject obj = new StaticWorldObject(new L2CharTemplate(new StatsSet()), set.getInt("id"));
         obj.setType(set.getInt("type", 0));
         obj.setName(set.getString("name"));
         obj.setMap(set.getString("texture", "none"), set.getInt("map_x", 0), set.getInt("map_y", 0));
@@ -100,7 +100,7 @@ public final class StaticObjectData extends GameXmlReader {
      *
      * @return a collection of static objects.
      */
-    public Collection<L2StaticObjectInstance> getStaticObjects() {
+    public Collection<StaticWorldObject> getStaticObjects() {
         return _staticObjects.values();
     }
 

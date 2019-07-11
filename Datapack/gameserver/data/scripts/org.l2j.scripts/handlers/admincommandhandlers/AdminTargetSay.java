@@ -21,7 +21,7 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
+import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -45,7 +45,7 @@ public class AdminTargetSay implements IAdminCommandHandler
 			try
 			{
 				final WorldObject obj = activeChar.getTarget();
-				if ((obj instanceof L2StaticObjectInstance) || !obj.isCharacter())
+				if ((obj instanceof StaticWorldObject) || !obj.isCharacter())
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;

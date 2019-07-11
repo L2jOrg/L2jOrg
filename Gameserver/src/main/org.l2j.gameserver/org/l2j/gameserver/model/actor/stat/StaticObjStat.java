@@ -16,16 +16,16 @@
  */
 package org.l2j.gameserver.model.actor.stat;
 
-import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
+import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 
 public class StaticObjStat extends CharStat {
-    public StaticObjStat(L2StaticObjectInstance activeChar) {
+    public StaticObjStat(StaticWorldObject activeChar) {
         super(activeChar);
     }
 
     @Override
-    public L2StaticObjectInstance getActiveChar() {
-        return (L2StaticObjectInstance) super.getActiveChar();
+    public StaticWorldObject getActiveChar() {
+        return (StaticWorldObject) super.getActiveChar();
     }
 
     @Override

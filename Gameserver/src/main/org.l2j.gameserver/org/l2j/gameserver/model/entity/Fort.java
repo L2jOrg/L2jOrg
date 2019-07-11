@@ -18,7 +18,7 @@ import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
+import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.model.zone.type.L2FortZone;
@@ -58,7 +58,7 @@ public final class Fort extends AbstractResidence {
     private final Map<Integer, Integer> _envoyCastles = new HashMap<>(2);
     private final Set<Integer> _availableCastles = new HashSet<>(1);
     L2Clan _fortOwner = null;
-    private L2StaticObjectInstance _flagPole = null;
+    private StaticWorldObject _flagPole = null;
     private volatile FortSiege _siege = null;
     private Calendar _siegeDate;
     private Calendar _lastOwnedTime;
@@ -299,7 +299,7 @@ public final class Fort extends AbstractResidence {
      * @param val
      */
     public void setVisibleFlag(boolean val) {
-        final L2StaticObjectInstance flagPole = _flagPole;
+        final StaticWorldObject flagPole = _flagPole;
         if (flagPole != null) {
             flagPole.setMeshIndex(val ? 1 : 0);
         }
@@ -460,7 +460,7 @@ public final class Fort extends AbstractResidence {
     }
 
     private void loadFlagPoles() {
-        for (L2StaticObjectInstance obj : StaticObjectData.getInstance().getStaticObjects()) {
+        for (StaticWorldObject obj : StaticObjectData.getInstance().getStaticObjects()) {
             if ((obj.getType() == 3) && obj.getName().startsWith(getName())) {
                 _flagPole = obj;
                 break;
@@ -595,7 +595,7 @@ public final class Fort extends AbstractResidence {
         return _doors;
     }
 
-    public final L2StaticObjectInstance getFlagPole() {
+    public final StaticWorldObject getFlagPole() {
         return _flagPole;
     }
 

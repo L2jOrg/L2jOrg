@@ -79,7 +79,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
  * <li>Door</li>
  * <li>Playable</li>
  * <li>L2Npc</li>
- * <li>L2StaticObjectInstance</li>
+ * <li>StaticWorldObject</li>
  * <li>L2Trap</li>
  * <li>Vehicle</li>
  * </ul>

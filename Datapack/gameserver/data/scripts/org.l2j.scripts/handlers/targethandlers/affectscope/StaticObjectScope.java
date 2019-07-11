@@ -26,7 +26,7 @@ import org.l2j.gameserver.handler.IAffectScopeHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
+import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
 
@@ -56,7 +56,7 @@ public class StaticObjectScope implements IAffectScopeHandler
 				return false;
 			}
 			
-			if (!c.isDoor() && !(c instanceof L2StaticObjectInstance))
+			if (!c.isDoor() && !(c instanceof StaticWorldObject))
 			{
 				return false;
 			}

@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2SiegeFlagInstance;
-import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
+import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -529,7 +529,7 @@ public final class Formulas {
      */
     public static boolean calcEffectSuccess(Creature attacker, Creature target, Skill skill) {
         // StaticObjects can not receive continuous effects.
-        if (target.isDoor() || (target instanceof L2SiegeFlagInstance) || (target instanceof L2StaticObjectInstance)) {
+        if (target.isDoor() || (target instanceof L2SiegeFlagInstance) || (target instanceof StaticWorldObject)) {
             return false;
         }
 

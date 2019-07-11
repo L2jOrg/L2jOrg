@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
+import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 
@@ -259,7 +259,7 @@ public class L2PlayerAI extends L2PlayableAI {
         if (maybeMoveToPawn(target, 36)) {
             return;
         }
-        if (!(target instanceof L2StaticObjectInstance)) {
+        if (!(target instanceof StaticWorldObject)) {
             getActor().doInteract((Creature) target);
         }
         setIntention(CtrlIntention.AI_INTENTION_IDLE);

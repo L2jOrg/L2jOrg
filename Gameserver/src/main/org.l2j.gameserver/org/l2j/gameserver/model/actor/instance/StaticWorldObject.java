@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.ai.L2CharacterAI;
@@ -34,9 +18,9 @@ import org.l2j.gameserver.network.serverpackets.StaticObject;
  *
  * @author godson
  */
-public final class L2StaticObjectInstance extends Creature {
+public final class StaticWorldObject extends Creature {
     /**
-     * The interaction distance of the L2StaticObjectInstance
+     * The interaction distance of the StaticWorldObject
      */
     public static final int INTERACTION_DISTANCE = 150;
 
@@ -49,7 +33,7 @@ public final class L2StaticObjectInstance extends Creature {
      * @param template
      * @param staticId
      */
-    public L2StaticObjectInstance(L2CharTemplate template, int staticId) {
+    public StaticWorldObject(L2CharTemplate template, int staticId) {
         super(template);
         setInstanceType(InstanceType.L2StaticObjectInstance);
         _staticObjectId = staticId;

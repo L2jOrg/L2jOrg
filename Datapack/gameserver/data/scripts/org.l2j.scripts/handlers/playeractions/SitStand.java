@@ -24,7 +24,7 @@ import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
+import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.network.serverpackets.ChairSit;
 
@@ -65,7 +65,7 @@ public final class SitStand implements IPlayerActionHandler
 			return false;
 		}
 		
-		if (!activeChar.isSitting() && (target instanceof L2StaticObjectInstance) && (((L2StaticObjectInstance) target).getType() == 1) && activeChar.isInsideRadius2D(target, L2StaticObjectInstance.INTERACTION_DISTANCE))
+		if (!activeChar.isSitting() && (target instanceof StaticWorldObject) && (((StaticWorldObject) target).getType() == 1) && activeChar.isInsideRadius2D(target, StaticWorldObject.INTERACTION_DISTANCE))
 		{
 			final ChairSit cs = new ChairSit(activeChar, target.getId());
 			activeChar.sendPacket(cs);

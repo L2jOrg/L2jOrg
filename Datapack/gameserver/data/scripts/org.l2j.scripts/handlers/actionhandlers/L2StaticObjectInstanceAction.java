@@ -23,7 +23,7 @@ import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
+import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class L2StaticObjectInstanceAction implements IActionHandler
@@ -31,10 +31,10 @@ public class L2StaticObjectInstanceAction implements IActionHandler
 	@Override
 	public boolean action(Player activeChar, WorldObject target, boolean interact)
 	{
-		final L2StaticObjectInstance staticObject = (L2StaticObjectInstance) target;
+		final StaticWorldObject staticObject = (StaticWorldObject) target;
 		if (staticObject.getType() < 0)
 		{
-			LOGGER.info("L2StaticObjectInstance: StaticObject with invalid type! StaticObjectId: " + staticObject.getId());
+			LOGGER.info("StaticWorldObject: StaticObject with invalid type! StaticObjectId: " + staticObject.getId());
 		}
 		
 		// Check if the Player already target the L2NpcInstance
