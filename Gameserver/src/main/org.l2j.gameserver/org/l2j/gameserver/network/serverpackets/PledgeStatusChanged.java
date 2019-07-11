@@ -1,13 +1,13 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public final class PledgeStatusChanged extends ServerPacket {
-    private final L2Clan _clan;
+    private final Clan _clan;
 
-    public PledgeStatusChanged(L2Clan clan) {
+    public PledgeStatusChanged(Clan clan) {
         _clan = clan;
     }
 

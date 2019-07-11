@@ -4068,7 +4068,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      *
      * @return the clan of current character.
      */
-    public L2Clan getClan() {
+    public Clan getClan() {
         return null;
     }
 

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.L2GameClient;
@@ -19,7 +19,7 @@ public class GMViewWarehouseWithdrawList extends AbstractItemPacket {
         _money = cha.getWarehouse().getAdena();
     }
 
-    public GMViewWarehouseWithdrawList(L2Clan clan) {
+    public GMViewWarehouseWithdrawList(Clan clan) {
         playerName = clan.getLeaderName();
         _items = clan.getWarehouse().getItems();
         _money = clan.getWarehouse().getAdena();

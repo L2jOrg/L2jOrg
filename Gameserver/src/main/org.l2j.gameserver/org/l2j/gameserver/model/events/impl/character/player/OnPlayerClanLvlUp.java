@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
@@ -25,13 +25,13 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnPlayerClanLvlUp implements IBaseEvent {
-    private final L2Clan _clan;
+    private final Clan _clan;
 
-    public OnPlayerClanLvlUp(Player activeChar, L2Clan clan) {
+    public OnPlayerClanLvlUp(Player activeChar, Clan clan) {
         _clan = clan;
     }
 
-    public L2Clan getClan() {
+    public Clan getClan() {
         return _clan;
     }
 

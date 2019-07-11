@@ -241,7 +241,7 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
 
                 // Update manor period
                 for (Castle castle : CastleManager.getInstance().getCastles()) {
-                    final L2Clan owner = castle.getOwner();
+                    final Clan owner = castle.getOwner();
                     if (owner == null) {
                         continue;
                     }
@@ -300,9 +300,9 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
             case MAINTENANCE: {
                 // Notify clan leader about manor mode change
                 for (Castle castle : CastleManager.getInstance().getCastles()) {
-                    final L2Clan owner = castle.getOwner();
+                    final Clan owner = castle.getOwner();
                     if (owner != null) {
-                        final L2ClanMember clanLeader = owner.getLeader();
+                        final ClanMember clanLeader = owner.getLeader();
                         if ((clanLeader != null) && clanLeader.isOnline()) {
                             clanLeader.getPlayerInstance().sendPacket(SystemMessageId.THE_MANOR_INFORMATION_HAS_BEEN_UPDATED);
                         }
@@ -315,7 +315,7 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
                 _mode = ManorMode.APPROVED;
 
                 for (Castle castle : CastleManager.getInstance().getCastles()) {
-                    final L2Clan owner = castle.getOwner();
+                    final Clan owner = castle.getOwner();
                     if (owner == null) {
                         continue;
                     }
@@ -335,7 +335,7 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
                         _procureNext.get(castleId).clear();
 
                         // Notify clan leader
-                        final L2ClanMember clanLeader = owner.getLeader();
+                        final ClanMember clanLeader = owner.getLeader();
                         if ((clanLeader != null) && clanLeader.isOnline()) {
                             clanLeader.getPlayerInstance().sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_FUNDS_IN_THE_CLAN_WAREHOUSE_FOR_THE_MANOR_TO_OPERATE);
                         }

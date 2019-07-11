@@ -16,7 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -39,7 +39,7 @@ public class TargetMyPledgeSkillCondition implements ISkillCondition
 		{
 			return false;
 		}
-		final L2Clan clan = caster.getClan();
+		final Clan clan = caster.getClan();
 		return (clan != null) && (clan == target.getActingPlayer().getClan());
 	}
 }

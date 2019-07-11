@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
-import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2ClanMember;
+import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -13,15 +13,15 @@ import java.util.Collection;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class PledgeShowMemberListAll extends ServerPacket {
-    private final L2Clan _clan;
-    private final L2Clan.SubPledge _pledge;
+    private final Clan _clan;
+    private final Clan.SubPledge _pledge;
     private final String _name;
     private final String _leaderName;
-    private final Collection<L2ClanMember> _members;
+    private final Collection<ClanMember> _members;
     private final int _pledgeId;
     private final boolean _isSubPledge;
 
-    private PledgeShowMemberListAll(L2Clan clan, L2Clan.SubPledge pledge, boolean isSubPledge) {
+    private PledgeShowMemberListAll(Clan clan, Clan.SubPledge pledge, boolean isSubPledge) {
         _clan = clan;
         _pledge = pledge;
         _pledgeId = _pledge == null ? 0x00 : _pledge.getId();
@@ -32,9 +32,9 @@ public class PledgeShowMemberListAll extends ServerPacket {
     }
 
     public static void sendAllTo(Player player) {
-        final L2Clan clan = player.getClan();
+        final Clan clan = player.getClan();
         if (clan != null) {
-            for (L2Clan.SubPledge subPledge : clan.getAllSubPledges()) {
+            for (Clan.SubPledge subPledge : clan.getAllSubPledges()) {
                 player.sendPacket(new PledgeShowMemberListAll(clan, subPledge, false));
             }
             player.sendPacket(new PledgeShowMemberListAll(clan, null, true));
@@ -69,7 +69,7 @@ public class PledgeShowMemberListAll extends ServerPacket {
         writeInt(0x00); // Territory castle ID
         writeInt(_clan.getSubPledgeMembersCount(_pledgeId));
 
-        for (L2ClanMember m : _members) {
+        for (ClanMember m : _members) {
             if (m.getPledgeType() != _pledgeId) {
                 continue;
             }

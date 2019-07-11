@@ -1,7 +1,7 @@
 package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.datatables.ItemTable;
-import org.l2j.gameserver.model.L2ArmorSet;
+import org.l2j.gameserver.model.ArmorSet;
 import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.stats.BaseStats;
@@ -28,8 +28,8 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public final class ArmorSetsData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ArmorSetsData.class);
 
-    private final Map<Integer, L2ArmorSet> _armorSets = new HashMap<>();
-    private final Map<Integer, List<L2ArmorSet>> _armorSetItems = new HashMap<>();
+    private final Map<Integer, ArmorSet> _armorSets = new HashMap<>();
+    private final Map<Integer, List<ArmorSet>> _armorSetItems = new HashMap<>();
 
     private ArmorSetsData() {
         load();
@@ -56,7 +56,7 @@ public final class ArmorSetsData extends GameXmlReader {
                         final int id = parseInteger(setNode.getAttributes(), "id");
                         final int minimumPieces = parseInteger(setNode.getAttributes(), "minimumPieces", 0);
                         final boolean isVisual = parseBoolean(setNode.getAttributes(), "visual", false);
-                        final L2ArmorSet set = new L2ArmorSet(id, minimumPieces, isVisual);
+                        final ArmorSet set = new ArmorSet(id, minimumPieces, isVisual);
                         if (_armorSets.putIfAbsent(id, set) != null) {
                             LOGGER.warn("Duplicate set entry with id: " + id + " in file: " + f.getName());
                         }
@@ -127,7 +127,7 @@ public final class ArmorSetsData extends GameXmlReader {
      * @param setId the set id that is attached to a set
      * @return the armor set associated to the given item id
      */
-    public L2ArmorSet getSet(int setId) {
+    public ArmorSet getSet(int setId) {
         return _armorSets.get(setId);
     }
 
@@ -135,7 +135,7 @@ public final class ArmorSetsData extends GameXmlReader {
      * @param itemId the item id that is attached to a set
      * @return the armor set associated to the given item id
      */
-    public List<L2ArmorSet> getSets(int itemId) {
+    public List<ArmorSet> getSets(int itemId) {
         return _armorSetItems.getOrDefault(itemId, Collections.emptyList());
     }
 

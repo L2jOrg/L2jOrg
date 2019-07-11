@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.ClanPrivilege;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -34,7 +34,7 @@ public final class RequestJoinSiege extends ClientPacket {
             return;
         }
 
-        final L2Clan clan = activeChar.getClan();
+        final Clan clan = activeChar.getClan();
         if (clan == null) {
             return;
         }

@@ -2,9 +2,9 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.CombatFlag;
 import org.l2j.gameserver.model.FortSiegeSpawn;
-import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Fort;
@@ -55,11 +55,11 @@ public final class FortSiegeManager {
     }
 
     /**
-     * @param clan   The L2Clan of the player
+     * @param clan   The Clan of the player
      * @param fortid
      * @return true if the clan is registered or owner of a fort
      */
-    public final boolean checkIsRegistered(L2Clan clan, int fortid) {
+    public final boolean checkIsRegistered(Clan clan, int fortid) {
         if (clan == null) {
             return false;
         }

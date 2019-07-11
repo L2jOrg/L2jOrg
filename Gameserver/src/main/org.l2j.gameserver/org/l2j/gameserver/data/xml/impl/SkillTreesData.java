@@ -11,7 +11,7 @@ import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.Race;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.L2SkillLearn;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -541,7 +541,7 @@ public final class SkillTreesData extends GameXmlReader {
      * @param clan the pledge skill learning clan
      * @return all the available Pledge skills for a given {@code clan}
      */
-    public List<L2SkillLearn> getAvailablePledgeSkills(L2Clan clan) {
+    public List<L2SkillLearn> getAvailablePledgeSkills(Clan clan) {
         final List<L2SkillLearn> result = new ArrayList<>();
 
         for (L2SkillLearn skill : pledgeSkillTree.values()) {
@@ -566,7 +566,7 @@ public final class SkillTreesData extends GameXmlReader {
      * @param includeSquad if squad skill will be added too
      * @return all the available pledge skills for a given {@code clan}
      */
-    public Map<Integer, L2SkillLearn> getMaxPledgeSkills(L2Clan clan, boolean includeSquad) {
+    public Map<Integer, L2SkillLearn> getMaxPledgeSkills(Clan clan, boolean includeSquad) {
         final Map<Integer, L2SkillLearn> result = new HashMap<>();
         for (L2SkillLearn skill : pledgeSkillTree.values()) {
             if (!skill.isResidencialSkill() && (clan.getLevel() >= skill.getGetLevel())) {
@@ -584,7 +584,7 @@ public final class SkillTreesData extends GameXmlReader {
         return result;
     }
 
-    private void checkClanSkillLevel(L2Clan clan, Map<Integer, L2SkillLearn> result, L2SkillLearn skill) {
+    private void checkClanSkillLevel(Clan clan, Map<Integer, L2SkillLearn> result, L2SkillLearn skill) {
         final Skill oldSkill = clan.getSkills().get(skill.getSkillId());
         if ((oldSkill == null) || (oldSkill.getLevel() < skill.getSkillLevel())) {
             result.put(skill.getSkillId(), skill);
@@ -597,7 +597,7 @@ public final class SkillTreesData extends GameXmlReader {
      * @param clan the sub-pledge skill learning clan
      * @return all the available Sub-Pledge skills for a given {@code clan}
      */
-    public List<L2SkillLearn> getAvailableSubPledgeSkills(L2Clan clan) {
+    public List<L2SkillLearn> getAvailableSubPledgeSkills(Clan clan) {
         final List<L2SkillLearn> result = new ArrayList<>();
         for (L2SkillLearn skill : subPledgeSkillTree.values()) {
             if ((clan.getLevel() >= skill.getGetLevel()) && clan.isLearnableSubSkill(skill.getSkillId(), skill.getSkillLevel())) {

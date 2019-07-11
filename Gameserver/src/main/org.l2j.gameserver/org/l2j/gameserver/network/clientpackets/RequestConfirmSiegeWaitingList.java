@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.serverpackets.SiegeDefenderList;
@@ -46,7 +46,7 @@ public final class RequestConfirmSiegeWaitingList extends ClientPacket {
             return;
         }
 
-        final L2Clan clan = ClanTable.getInstance().getClan(_clanId);
+        final Clan clan = ClanTable.getInstance().getClan(_clanId);
         if (clan == null) {
             return;
         }

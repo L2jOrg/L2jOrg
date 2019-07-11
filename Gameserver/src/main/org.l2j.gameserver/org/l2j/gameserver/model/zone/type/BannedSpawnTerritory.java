@@ -8,11 +8,11 @@ import org.l2j.gameserver.model.zone.ZoneForm;
  *
  * @author UnAfraid
  */
-public class L2BannedSpawnTerritory {
+public class BannedSpawnTerritory {
     private final String _name;
     private final ZoneForm _territory;
 
-    public L2BannedSpawnTerritory(String name, ZoneForm territory) {
+    public BannedSpawnTerritory(String name, ZoneForm territory) {
         _name = name;
         _territory = territory;
     }

@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.sql.impl.CrestTable;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanPrivilege;
-import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Crest;
 import org.l2j.gameserver.model.L2Crest.CrestType;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -36,7 +36,7 @@ public final class RequestExSetPledgeCrestLarge extends ClientPacket {
             return;
         }
 
-        final L2Clan clan = activeChar.getClan();
+        final Clan clan = activeChar.getClan();
         if (clan == null) {
             return;
         }

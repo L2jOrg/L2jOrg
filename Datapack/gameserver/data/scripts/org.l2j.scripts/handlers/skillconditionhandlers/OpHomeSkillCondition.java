@@ -20,7 +20,7 @@ import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.enums.ResidenceType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -44,7 +44,7 @@ public class OpHomeSkillCondition implements ISkillCondition
 	{
 		if (caster.isPlayer())
 		{
-			final L2Clan clan = caster.getActingPlayer().getClan();
+			final Clan clan = caster.getActingPlayer().getClan();
 			if (clan != null)
 			{
 				switch (_type)

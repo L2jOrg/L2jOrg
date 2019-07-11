@@ -10,7 +10,7 @@ import org.l2j.gameserver.data.database.data.BotReportData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.engines.captcha.CaptchaEngine;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
@@ -424,7 +424,7 @@ public final class ReportTable {
             return reporters.containsKey(objectId);
         }
 
-        boolean reportedBySameClan(L2Clan clan) {
+        boolean reportedBySameClan(Clan clan) {
             if (isNull(clan)) {
                 return false;
             }

@@ -18,7 +18,7 @@ package handlers.usercommandhandlers;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.handler.IUserCommandHandler;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -55,7 +55,7 @@ public class ClanWarsList implements IUserCommandHandler
 			return false;
 		}
 		
-		final L2Clan clan = activeChar.getClan();
+		final Clan clan = activeChar.getClan();
 		if (clan == null)
 		{
 			activeChar.sendPacket(SystemMessageId.NOT_JOINED_IN_ANY_CLAN);

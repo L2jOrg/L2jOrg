@@ -2,7 +2,7 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.InstanceListManager;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.entity.Fort;
 import org.slf4j.Logger;
@@ -53,7 +53,7 @@ public final class FortDataManager implements InstanceListManager {
         return null;
     }
 
-    public final Fort getFortByOwner(L2Clan clan) {
+    public final Fort getFortByOwner(Clan clan) {
         for (Fort f : _forts.values()) {
             if (f.getOwnerClan() == clan) {
                 return f;

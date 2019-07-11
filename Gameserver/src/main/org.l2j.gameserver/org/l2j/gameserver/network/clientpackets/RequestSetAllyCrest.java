@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.L2Crest;
 import org.l2j.gameserver.model.L2Crest.CrestType;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -49,7 +49,7 @@ public final class RequestSetAllyCrest extends ClientPacket {
             return;
         }
 
-        final L2Clan leaderClan = ClanTable.getInstance().getClan(activeChar.getAllyId());
+        final Clan leaderClan = ClanTable.getInstance().getClan(activeChar.getAllyId());
 
         if ((activeChar.getClanId() != leaderClan.getId()) || !activeChar.isClanLeader()) {
             activeChar.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);

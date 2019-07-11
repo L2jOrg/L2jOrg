@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -59,7 +59,7 @@ public class SendSystemMessageToClan extends AbstractEffect
 			return;
 		}
 		
-		final L2Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		if (clan != null)
 		{
 			clan.broadcastToOnlineMembers(_message);

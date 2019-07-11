@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.IParameterized;
 import org.l2j.gameserver.model.interfaces.ITerritorized;
-import org.l2j.gameserver.model.zone.type.L2BannedSpawnTerritory;
+import org.l2j.gameserver.model.zone.type.BannedSpawnTerritory;
 import org.l2j.gameserver.model.zone.type.L2SpawnTerritory;
 
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<Stat
     private final boolean _spawnByDefault;
     private final List<NpcSpawnTemplate> _spawns = new ArrayList<>();
     private List<L2SpawnTerritory> _territories;
-    private List<L2BannedSpawnTerritory> _bannedTerritories;
+    private List<BannedSpawnTerritory> _bannedTerritories;
     private StatsSet _parameters;
 
     public SpawnGroup(StatsSet set) {
@@ -62,7 +62,7 @@ public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<Stat
     }
 
     @Override
-    public void addBannedTerritory(L2BannedSpawnTerritory territory) {
+    public void addBannedTerritory(BannedSpawnTerritory territory) {
         if (_bannedTerritories == null) {
             _bannedTerritories = new ArrayList<>();
         }
@@ -70,7 +70,7 @@ public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<Stat
     }
 
     @Override
-    public List<L2BannedSpawnTerritory> getBannedTerritories() {
+    public List<BannedSpawnTerritory> getBannedTerritories() {
         return _bannedTerritories != null ? _bannedTerritories : Collections.emptyList();
     }
 
@@ -105,7 +105,7 @@ public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<Stat
         final SpawnGroup group = new SpawnGroup(_name, _spawnByDefault);
 
         // Clone banned territories
-        for (L2BannedSpawnTerritory territory : getBannedTerritories()) {
+        for (BannedSpawnTerritory territory : getBannedTerritories()) {
             group.addBannedTerritory(territory);
         }
 

@@ -18,10 +18,10 @@ import java.sql.SQLException;
 /**
  * This class holds the clan members data.
  */
-public class L2ClanMember {
-    private static final Logger LOGGER = LoggerFactory.getLogger(L2ClanMember.class);
+public class ClanMember {
+    private static final Logger LOGGER = LoggerFactory.getLogger(ClanMember.class);
 
-    private final L2Clan _clan;
+    private final Clan _clan;
     private int _objectId;
     private String _name;
     private String _title;
@@ -43,7 +43,7 @@ public class L2ClanMember {
      * @param clanMember the clan member result set
      * @throws SQLException if the columnLabel is not valid or a database error occurs
      */
-    public L2ClanMember(L2Clan clan, ResultSet clanMember) throws SQLException {
+    public ClanMember(Clan clan, ResultSet clanMember) throws SQLException {
         if (clan == null) {
             throw new IllegalArgumentException("Cannot create a Clan Member with a null clan.");
         }
@@ -67,7 +67,7 @@ public class L2ClanMember {
      * @param clan   the clan where the player belongs
      * @param player the player from which the clan member will be created
      */
-    public L2ClanMember(L2Clan clan, Player player) {
+    public ClanMember(Clan clan, Player player) {
         if (clan == null) {
             throw new IllegalArgumentException("Cannot create a Clan Member if player has a null clan.");
         }
@@ -98,7 +98,7 @@ public class L2ClanMember {
             return pledgeClass;
         }
 
-        final L2Clan clan = player.getClan();
+        final Clan clan = player.getClan();
         if (clan != null) {
             switch (clan.getLevel()) {
                 case 4: {
@@ -634,14 +634,14 @@ public class L2ClanMember {
         }
 
         if (_apprentice != 0) {
-            final L2ClanMember apprentice = _clan.getClanMember(_apprentice);
+            final ClanMember apprentice = _clan.getClanMember(_apprentice);
             if (apprentice != null) {
                 return apprentice.getName();
             }
             return "Error";
         }
         if (_sponsor != 0) {
-            final L2ClanMember sponsor = _clan.getClanMember(_sponsor);
+            final ClanMember sponsor = _clan.getClanMember(_sponsor);
             if (sponsor != null) {
                 return sponsor.getName();
             }
@@ -655,7 +655,7 @@ public class L2ClanMember {
      *
      * @return the clan
      */
-    public L2Clan getClan() {
+    public Clan getClan() {
         return _clan;
     }
 

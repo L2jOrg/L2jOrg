@@ -16,9 +16,8 @@
  */
 package org.l2j.gameserver;
 
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.entity.Fort;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,12 +30,12 @@ import org.slf4j.LoggerFactory;
  */
 public class FortUpdater implements Runnable {
     private static final Logger LOGGER = LoggerFactory.getLogger(FortUpdater.class);
-    private final L2Clan _clan;
+    private final Clan _clan;
     private final Fort _fort;
     private final UpdaterType _updaterType;
     private int _runCount;
 
-    public FortUpdater(Fort fort, L2Clan clan, int runCount, UpdaterType ut) {
+    public FortUpdater(Fort fort, Clan clan, int runCount, UpdaterType ut) {
         _fort = fort;
         _clan = clan;
         _runCount = runCount;

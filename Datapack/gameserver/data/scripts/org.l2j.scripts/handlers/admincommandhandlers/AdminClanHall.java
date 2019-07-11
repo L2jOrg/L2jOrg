@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.ClanHall;
@@ -108,7 +108,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 				{
 					if ((player.getTarget() != null) && (player.getTarget().getActingPlayer() != null))
 					{
-						final L2Clan targetClan = player.getTarget().getActingPlayer().getClan();
+						final Clan targetClan = player.getTarget().getActingPlayer().getClan();
 						if ((targetClan == null) || (targetClan.getHideoutId() != 0))
 						{
 							player.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
@@ -124,7 +124,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 				}
 				case "take":
 				{
-					final L2Clan clan = clanHall.getOwner();
+					final Clan clan = clanHall.getOwner();
 					if (clan != null)
 					{
 						clanHall.setOwner(null);

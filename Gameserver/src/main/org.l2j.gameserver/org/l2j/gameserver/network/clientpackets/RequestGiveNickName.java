@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.ClanPrivilege;
-import org.l2j.gameserver.model.L2ClanMember;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 
@@ -39,7 +39,7 @@ public class RequestGiveNickName extends ClientPacket {
                 return;
             }
 
-            final L2ClanMember member1 = activeChar.getClan().getClanMember(_target);
+            final ClanMember member1 = activeChar.getClan().getClanMember(_target);
             if (member1 != null) {
                 final Player member = member1.getPlayerInstance();
                 if (member != null) {

@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.ClanWar;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PlayableStat;
@@ -177,7 +177,7 @@ public abstract class Playable extends Creature {
             return false;
         }
 
-        final L2Clan playerClan = player.getClan();
+        final Clan playerClan = player.getClan();
 
         if ((playerClan != null) && !player.isAcademyMember() && !target.isAcademyMember()) {
             final ClanWar war = playerClan.getWarWith(target.getClanId());

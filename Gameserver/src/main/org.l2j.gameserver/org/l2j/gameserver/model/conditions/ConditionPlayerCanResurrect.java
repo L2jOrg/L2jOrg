@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.instancemanager.SiegeManager;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -73,7 +73,7 @@ public class ConditionPlayerCanResurrect extends Condition {
             {
                 final Siege siege = SiegeManager.getInstance().getSiege(player);
                 if ((siege != null) && siege.isInProgress()) {
-                    final L2Clan clan = player.getClan();
+                    final Clan clan = player.getClan();
                     if (clan == null) {
                         canResurrect = false;
                         if (effector.isPlayer()) {

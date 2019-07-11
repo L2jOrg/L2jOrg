@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.instancemanager.FortDataManager;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -27,7 +27,7 @@ public class ExShowFortressInfo extends ServerPacket {
         final Collection<Fort> forts = FortDataManager.getInstance().getForts();
         writeInt(forts.size());
         for (Fort fort : forts) {
-            final L2Clan clan = fort.getOwnerClan();
+            final Clan clan = fort.getOwnerClan();
             writeInt(fort.getResidenceId());
             writeString(clan != null ? clan.getName() : "");
             writeInt(fort.getSiege().isInProgress() ? 0x01 : 0x00);

@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.ClanEntryManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.clan.entry.PledgeRecruitInfo;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -30,7 +30,7 @@ public class RequestPledgeSignInForOpenJoiningMethod extends ClientPacket {
 
         final PledgeRecruitInfo pledgeRecruitInfo = ClanEntryManager.getInstance().getClanById(_clanId);
         if (pledgeRecruitInfo != null) {
-            final L2Clan clan = pledgeRecruitInfo.getClan();
+            final Clan clan = pledgeRecruitInfo.getClan();
             if ((clan != null) && (activeChar.getClan() == null)) {
                 activeChar.sendPacket(new JoinPledge(clan.getId()));
 

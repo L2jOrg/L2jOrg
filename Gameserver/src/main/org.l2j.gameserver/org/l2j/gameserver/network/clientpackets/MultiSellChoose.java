@@ -6,8 +6,8 @@ import org.l2j.gameserver.data.xml.impl.MultisellData;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.SpecialItemType;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ItemInfo;
-import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
@@ -167,7 +167,7 @@ public class MultiSellChoose extends ClientPacket {
             return;
         }
 
-        final L2Clan clan = player.getClan();
+        final Clan clan = player.getClan();
         final PcInventory inventory = player.getInventory();
 
         try {
@@ -495,7 +495,7 @@ public class MultiSellChoose extends ClientPacket {
      * @param totalCount
      * @return {@code false} if ingredient amount is not enough, {@code true} otherwise.
      */
-    private boolean checkIngredients(Player player, PreparedMultisellListHolder list, PcInventory inventory, L2Clan clan, int ingredientId, long totalCount) {
+    private boolean checkIngredients(Player player, PreparedMultisellListHolder list, PcInventory inventory, Clan clan, int ingredientId, long totalCount) {
         final SpecialItemType specialItem = SpecialItemType.getByClientId(ingredientId);
         if (specialItem != null) {
             // Check special item.

@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.ClanPrivilege;
-import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2ClanMember;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -27,7 +27,7 @@ public final class RequestPledgeSetAcademyMaster extends ClientPacket {
     @Override
     public void runImpl() {
         final Player activeChar = client.getActiveChar();
-        final L2Clan clan = activeChar.getClan();
+        final Clan clan = activeChar.getClan();
         if (clan == null) {
             return;
         }
@@ -37,15 +37,15 @@ public final class RequestPledgeSetAcademyMaster extends ClientPacket {
             return;
         }
 
-        final L2ClanMember currentMember = clan.getClanMember(_currPlayerName);
-        final L2ClanMember targetMember = clan.getClanMember(_targetPlayerName);
+        final ClanMember currentMember = clan.getClanMember(_currPlayerName);
+        final ClanMember targetMember = clan.getClanMember(_targetPlayerName);
         if ((currentMember == null) || (targetMember == null)) {
             return;
         }
 
-        L2ClanMember apprenticeMember;
-        L2ClanMember sponsorMember;
-        if (currentMember.getPledgeType() == L2Clan.SUBUNIT_ACADEMY) {
+        ClanMember apprenticeMember;
+        ClanMember sponsorMember;
+        if (currentMember.getPledgeType() == Clan.SUBUNIT_ACADEMY) {
             apprenticeMember = currentMember;
             sponsorMember = targetMember;
         } else {

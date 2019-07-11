@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -53,7 +53,7 @@ public class AdminPledge implements IAdminCommandHandler
 		final String cmd = st.nextToken();
 		final WorldObject target = activeChar.getTarget();
 		final Player targetPlayer = (target != null) && target.isPlayer() ? (Player) target : null;
-		L2Clan clan = targetPlayer != null ? targetPlayer.getClan() : null;
+		Clan clan = targetPlayer != null ? targetPlayer.getClan() : null;
 		if (targetPlayer == null)
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);

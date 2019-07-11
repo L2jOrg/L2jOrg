@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.residences;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ResidenceFunctionsData;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.AgitDecoInfo;
@@ -106,7 +106,7 @@ public class ResidenceFunction {
         if (!reactivate()) {
             _residense.removeFunction(this);
 
-            final L2Clan clan = ClanTable.getInstance().getClan(_residense.getOwnerId());
+            final Clan clan = ClanTable.getInstance().getClan(_residense.getOwnerId());
             if (clan != null) {
                 clan.broadcastToOnlineMembers(new AgitDecoInfo(_residense));
             }
@@ -122,7 +122,7 @@ public class ResidenceFunction {
             return false;
         }
 
-        final L2Clan clan = ClanTable.getInstance().getClan(_residense.getOwnerId());
+        final Clan clan = ClanTable.getInstance().getClan(_residense.getOwnerId());
         if (clan == null) {
             return false;
         }

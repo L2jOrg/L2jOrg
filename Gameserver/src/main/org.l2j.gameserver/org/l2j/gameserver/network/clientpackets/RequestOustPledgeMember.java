@@ -2,8 +2,8 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.ClanPrivilege;
-import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2ClanMember;
+import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPledgeCount;
@@ -45,9 +45,9 @@ public final class RequestOustPledgeMember extends ClientPacket {
             return;
         }
 
-        final L2Clan clan = activeChar.getClan();
+        final Clan clan = activeChar.getClan();
 
-        final L2ClanMember member = clan.getClanMember(_target);
+        final ClanMember member = clan.getClanMember(_target);
         if (member == null) {
             LOGGER.warn("Target (" + _target + ") is not member of the clan");
             return;

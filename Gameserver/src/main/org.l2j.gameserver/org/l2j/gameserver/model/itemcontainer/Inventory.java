@@ -8,7 +8,7 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.PrivateStoreType;
-import org.l2j.gameserver.model.L2ArmorSet;
+import org.l2j.gameserver.model.ArmorSet;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.VariationInstance;
@@ -1256,7 +1256,7 @@ public abstract class Inventory extends ItemContainer {
         final Player player = getOwner().getActingPlayer();
         int maxSetEnchant = 0;
         for (Item item : getPaperdollItems()) {
-            for (L2ArmorSet set : ArmorSetsData.getInstance().getSets(item.getId())) {
+            for (ArmorSet set : ArmorSetsData.getInstance().getSets(item.getId())) {
                 final int enchantEffect = set.getLowestSetEnchant(player);
                 if (enchantEffect > maxSetEnchant) {
                     maxSetEnchant = enchantEffect;
@@ -1687,7 +1687,7 @@ public abstract class Inventory extends ItemContainer {
             return instance;
         }
 
-        private static boolean applySkills(Player player, Item item, L2ArmorSet armorSet, Function<Item, Integer> idProvider) {
+        private static boolean applySkills(Player player, Item item, ArmorSet armorSet, Function<Item, Integer> idProvider) {
             final long piecesCount = armorSet.getPiecesCount(player, idProvider);
             if (piecesCount >= armorSet.getMinimumPieces()) {
                 // Applying all skills that matching the conditions
@@ -1725,8 +1725,8 @@ public abstract class Inventory extends ItemContainer {
 
         private static boolean verifyAndApply(Player player, Item item, Function<Item, Integer> idProvider) {
             boolean update = false;
-            final List<L2ArmorSet> armorSets = ArmorSetsData.getInstance().getSets(idProvider.apply(item));
-            for (L2ArmorSet armorSet : armorSets) {
+            final List<ArmorSet> armorSets = ArmorSetsData.getInstance().getSets(idProvider.apply(item));
+            for (ArmorSet armorSet : armorSets) {
                 if (applySkills(player, item, armorSet, idProvider)) {
                     update = true;
                 }
@@ -1736,8 +1736,8 @@ public abstract class Inventory extends ItemContainer {
 
         private static boolean verifyAndRemove(Player player, Item item, Function<Item, Integer> idProvider) {
             boolean update = false;
-            final List<L2ArmorSet> armorSets = ArmorSetsData.getInstance().getSets(idProvider.apply(item));
-            for (L2ArmorSet armorSet : armorSets) {
+            final List<ArmorSet> armorSets = ArmorSetsData.getInstance().getSets(idProvider.apply(item));
+            for (ArmorSet armorSet : armorSets) {
                 // Remove all skills that doesn't matches the conditions
                 for (ArmorsetSkillHolder holder : armorSet.getSkills()) {
                     if (!holder.validateConditions(player, armorSet, idProvider)) {

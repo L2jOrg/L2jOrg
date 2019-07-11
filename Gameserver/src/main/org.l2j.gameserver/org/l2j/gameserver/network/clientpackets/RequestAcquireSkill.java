@@ -5,7 +5,7 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.ClanPrivilege;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.L2SkillLearn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Fisherman;
@@ -165,7 +165,7 @@ public final class RequestAcquireSkill extends ClientPacket {
                     return;
                 }
 
-                final L2Clan clan = activeChar.getClan();
+                final Clan clan = activeChar.getClan();
                 final int repCost = s.getLevelUpSp() > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) s.getLevelUpSp();
                 if (clan.getReputationScore() >= repCost) {
                     if (Config.LIFE_CRYSTAL_NEEDED) {
@@ -208,7 +208,7 @@ public final class RequestAcquireSkill extends ClientPacket {
                     return;
                 }
 
-                final L2Clan clan = activeChar.getClan();
+                final Clan clan = activeChar.getClan();
                 if ((clan.getFortId() == 0) && (clan.getCastleId() == 0)) {
                     return;
                 }

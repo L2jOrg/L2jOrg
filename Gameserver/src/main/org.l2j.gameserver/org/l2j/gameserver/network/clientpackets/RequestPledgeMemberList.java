@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.PledgeShowMemberListAll;
 
@@ -21,7 +21,7 @@ public final class RequestPledgeMemberList extends ClientPacket {
         if (activeChar == null) {
             return;
         }
-        final L2Clan clan = activeChar.getClan();
+        final Clan clan = activeChar.getClan();
         if (clan != null) {
             PledgeShowMemberListAll.sendAllTo(activeChar);
         }

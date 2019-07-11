@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
@@ -127,7 +127,7 @@ public class AdminMenu implements IAdminCommandHandler
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return true;
 				}
-				final L2Clan clan = player.getClan();
+				final Clan clan = player.getClan();
 				if (clan == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Player is not in a clan.");

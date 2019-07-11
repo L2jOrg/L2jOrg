@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -12,7 +12,7 @@ public class PledgeSkillList extends ServerPacket {
     private final Skill[] _skills;
     private final SubPledgeSkill[] _subSkills;
 
-    public PledgeSkillList(L2Clan clan) {
+    public PledgeSkillList(Clan clan) {
         _skills = clan.getAllSkills();
         _subSkills = clan.getAllSubSkills();
     }

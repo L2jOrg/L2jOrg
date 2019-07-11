@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.FortDataManager;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Fort;
@@ -119,7 +119,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 			}
 			else if (command.equalsIgnoreCase("admin_removefort"))
 			{
-				final L2Clan clan = fort.getOwnerClan();
+				final Clan clan = fort.getOwnerClan();
 				if (clan != null)
 				{
 					fort.removeOwner(true);

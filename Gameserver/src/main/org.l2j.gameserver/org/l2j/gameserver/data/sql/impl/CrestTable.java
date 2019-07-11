@@ -17,7 +17,7 @@
 package org.l2j.gameserver.data.sql.impl;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.L2Crest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,7 +48,7 @@ public final class CrestTable {
     public synchronized void load() {
         _crests.clear();
         final Set<Integer> crestsInUse = new HashSet<>();
-        for (L2Clan clan : ClanTable.getInstance().getClans()) {
+        for (Clan clan : ClanTable.getInstance().getClans()) {
             if (clan.getCrestId() != 0) {
                 crestsInUse.add(clan.getCrestId());
             }
@@ -93,7 +93,7 @@ public final class CrestTable {
 
         LOGGER.info(getClass().getSimpleName() + ": Loaded " + _crests.size() + " Crests.");
 
-        for (L2Clan clan : ClanTable.getInstance().getClans()) {
+        for (Clan clan : ClanTable.getInstance().getClans()) {
             if ((clan.getCrestId() != 0) && (getCrest(clan.getCrestId()) == null)) {
                 LOGGER.info("Removing non-existent crest for clan " + clan.getName() + " [" + clan.getId() + "], crestId:" + clan.getCrestId());
                 clan.setCrestId(0);

@@ -15,7 +15,7 @@ import org.l2j.gameserver.instancemanager.CommissionManager;
 import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ClientHardwareInfoHolder;
@@ -343,7 +343,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         } else {
             final int clanId = CharNameTable.getInstance().getClassIdById(objectId);
             if (clanId > 0) {
-                final L2Clan clan = ClanTable.getInstance().getClan(clanId);
+                final Clan clan = ClanTable.getInstance().getClan(clanId);
                 if (clan != null) {
                     if (clan.getLeaderId() == objectId) {
                         return CharacterDeleteFailType.PLEDGE_MASTER;

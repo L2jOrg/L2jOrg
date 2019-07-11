@@ -2,8 +2,8 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.InstanceListManager;
-import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2ClanMember;
+import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
@@ -64,7 +64,7 @@ public final class CastleManager implements InstanceListManager {
         return _castles.get(castleId);
     }
 
-    public final Castle getCastleByOwner(L2Clan clan) {
+    public final Castle getCastleByOwner(Clan clan) {
         for (Castle temp : _castles.values()) {
             if (temp.getOwnerId() == clan.getId()) {
                 return temp;
@@ -120,12 +120,12 @@ public final class CastleManager implements InstanceListManager {
 
     // remove this castle's circlets from the clan
 
-    public void removeCirclet(L2Clan clan, int castleId) {
-        for (L2ClanMember member : clan.getMembers()) {
+    public void removeCirclet(Clan clan, int castleId) {
+        for (ClanMember member : clan.getMembers()) {
             removeCirclet(member, castleId);
         }
     }
-    public void removeCirclet(L2ClanMember member, int castleId) {
+    public void removeCirclet(ClanMember member, int castleId) {
         if (member == null) {
             return;
         }

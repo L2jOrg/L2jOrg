@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.conditions;
 
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
@@ -51,7 +51,7 @@ public final class ConditionPlayerHasClanHall extends Condition {
             return false;
         }
 
-        final L2Clan clan = effector.getActingPlayer().getClan();
+        final Clan clan = effector.getActingPlayer().getClan();
         if (clan == null) {
             return ((_clanHall.size() == 1) && (_clanHall.get(0) == 0));
         }

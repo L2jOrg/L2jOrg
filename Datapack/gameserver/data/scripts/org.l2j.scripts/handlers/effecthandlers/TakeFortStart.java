@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.instancemanager.FortDataManager;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -49,7 +49,7 @@ public final class TakeFortStart extends AbstractEffect
 		if (effector.isPlayer())
 		{
 			final Fort fort = FortDataManager.getInstance().getFort(effector);
-			final L2Clan clan = effector.getClan();
+			final Clan clan = effector.getClan();
 			if ((fort != null) && (clan != null))
 			{
 				fort.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.S1_CLAN_IS_TRYING_TO_DISPLAY_A_FLAG), clan.getName());

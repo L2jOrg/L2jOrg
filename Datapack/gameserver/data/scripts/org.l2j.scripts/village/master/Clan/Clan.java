@@ -17,7 +17,6 @@
 package village.master.Clan;
 
 import ai.AbstractNpcAI;
-import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
@@ -94,7 +93,7 @@ public final class Clan extends AbstractNpcAI
 		final Player activeChar = event.getActiveChar();
 		if (activeChar.isClanLeader())
 		{
-			final L2Clan clan = event.getActiveChar().getClan();
+			final org.l2j.gameserver.model.Clan clan = event.getActiveChar().getClan();
 			clan.getMembers().forEach(member ->
 			{
 				if (member.isOnline())
@@ -116,7 +115,7 @@ public final class Clan extends AbstractNpcAI
 		final Player activeChar = event.getActiveChar();
 		if (activeChar.isClanLeader())
 		{
-			final L2Clan clan = activeChar.getClan();
+			final org.l2j.gameserver.model.Clan clan = activeChar.getClan();
 			clan.getMembers().forEach(member ->
 			{
 				if (member.isOnline())

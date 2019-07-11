@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 
@@ -32,7 +32,7 @@ public final class RequestAnswerJoinAlly extends ClientPacket {
                 return; // hax
             }
 
-            final L2Clan clan = requestor.getClan();
+            final Clan clan = requestor.getClan();
             // we must double check this cause of hack
             if (clan.checkAllyJoinCondition(requestor, activeChar)) {
                 // TODO: Need correct message id

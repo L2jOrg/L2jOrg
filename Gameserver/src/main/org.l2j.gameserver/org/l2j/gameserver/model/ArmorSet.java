@@ -13,7 +13,7 @@ import java.util.function.Function;
 /**
  * @author UnAfraid
  */
-public final class L2ArmorSet {
+public final class ArmorSet {
     private static final int[] ARMORSET_SLOTS = new int[]
             {
                     Inventory.PAPERDOLL_CHEST,
@@ -68,7 +68,7 @@ public final class L2ArmorSet {
      * @param minimumPieces
      * @param isVisual
      */
-    public L2ArmorSet(int id, int minimumPieces, boolean isVisual) {
+    public ArmorSet(int id, int minimumPieces, boolean isVisual) {
         _id = id;
         _minimumPieces = minimumPieces;
         _isVisual = isVisual;

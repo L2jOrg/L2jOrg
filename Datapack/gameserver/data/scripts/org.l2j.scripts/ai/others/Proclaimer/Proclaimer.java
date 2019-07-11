@@ -17,7 +17,7 @@
 package ai.others.Proclaimer;
 
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
@@ -65,7 +65,7 @@ public final class Proclaimer extends AbstractNpcAI
 		{
 			player.sendPacket(new NpcSay(npc.getObjectId(), ChatType.WHISPER, npc.getId(), NpcStringId.WHEN_THE_WORLD_PLUNGES_INTO_CHAOS_WE_WILL_NEED_YOUR_HELP_WE_HOPE_YOU_JOIN_US_WHEN_THE_TIME_COMES));
 			
-			final L2Clan ownerClan = npc.getCastle().getOwner();
+			final Clan ownerClan = npc.getCastle().getOwner();
 			if (ownerClan != null)
 			{
 				final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());

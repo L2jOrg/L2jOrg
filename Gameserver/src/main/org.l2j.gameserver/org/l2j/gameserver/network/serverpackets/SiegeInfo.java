@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.L2GameClient;
@@ -53,7 +53,7 @@ public class SiegeInfo extends ServerPacket {
             writeInt(((ownerId == _player.getClanId()) && (_player.isClanLeader())) ? 0x01 : 0x00);
             writeInt(ownerId);
             if (ownerId > 0) {
-                final L2Clan owner = ClanTable.getInstance().getClan(ownerId);
+                final Clan owner = ClanTable.getInstance().getClan(ownerId);
                 if (owner != null) {
                     writeString(owner.getName()); // Clan Name
                     writeString(owner.getLeaderName()); // Clan Leader Name

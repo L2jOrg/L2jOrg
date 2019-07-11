@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.itemcontainer;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ItemLocation;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanWHItemAdd;
@@ -11,9 +11,9 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanWHItemT
 import org.l2j.gameserver.model.items.instance.Item;
 
 public final class ClanWarehouse extends Warehouse {
-    private final L2Clan _clan;
+    private final Clan _clan;
 
-    public ClanWarehouse(L2Clan clan) {
+    public ClanWarehouse(Clan clan) {
         _clan = clan;
     }
 

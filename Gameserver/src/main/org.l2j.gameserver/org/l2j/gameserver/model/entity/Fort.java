@@ -12,7 +12,7 @@ import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
@@ -57,7 +57,7 @@ public final class Fort extends AbstractResidence {
     private final Set<L2Spawn> _specialEnvoys = ConcurrentHashMap.newKeySet();
     private final Map<Integer, Integer> _envoyCastles = new HashMap<>(2);
     private final Set<Integer> _availableCastles = new HashSet<>(1);
-    L2Clan _fortOwner = null;
+    Clan _fortOwner = null;
     private StaticWorldObject _flagPole = null;
     private volatile FortSiege _siege = null;
     private Calendar _siegeDate;
@@ -101,7 +101,7 @@ public final class Fort extends AbstractResidence {
         return _function.get(type);
     }
 
-    public void endOfSiege(L2Clan clan) {
+    public void endOfSiege(Clan clan) {
         ThreadPoolManager.getInstance().execute(new endFortressSiege(this, clan));
     }
 
@@ -185,7 +185,7 @@ public final class Fort extends AbstractResidence {
      * @param updateClansReputation
      * @return
      */
-    public boolean setOwner(L2Clan clan, boolean updateClansReputation) {
+    public boolean setOwner(Clan clan, boolean updateClansReputation) {
         if (clan == null) {
             LOGGER.warn(": Updating Fort owner with null clan!!!");
             return false;
@@ -195,7 +195,7 @@ public final class Fort extends AbstractResidence {
         sm.addCastleId(getResidenceId());
         getSiege().announceToPlayer(sm);
 
-        final L2Clan oldowner = _fortOwner;
+        final Clan oldowner = _fortOwner;
         if ((oldowner != null) && (clan != oldowner)) {
             // Remove points from old owner
             updateClansReputation(oldowner, true);
@@ -247,7 +247,7 @@ public final class Fort extends AbstractResidence {
     }
 
     public void removeOwner(boolean updateDB) {
-        final L2Clan clan = _fortOwner;
+        final Clan clan = _fortOwner;
         if (clan != null) {
             for (Player member : clan.getOnlineMembers(0)) {
                 removeResidentialSkills(member);
@@ -356,7 +356,7 @@ public final class Fort extends AbstractResidence {
                 }
             }
             if (ownerId > 0) {
-                final L2Clan clan = ClanTable.getInstance().getClan(ownerId); // Try to find clan instance
+                final Clan clan = ClanTable.getInstance().getClan(ownerId); // Try to find clan instance
                 clan.setFortId(getResidenceId());
                 setOwnerClan(clan);
                 final int runCount = getOwnedTime() / (Config.FS_UPDATE_FRQ * 60);
@@ -510,7 +510,7 @@ public final class Fort extends AbstractResidence {
     }
 
     private void updateOwnerInDB() {
-        final L2Clan clan = _fortOwner;
+        final Clan clan = _fortOwner;
         int clanId = 0;
         if (clan != null) {
             clanId = clan.getId();
@@ -559,21 +559,21 @@ public final class Fort extends AbstractResidence {
                 _FortUpdater[1] = null;
             }
         } catch (Exception e) {
-            LOGGER.warn("Exception: updateOwnerInDB(L2Clan clan): " + e.getMessage(), e);
+            LOGGER.warn("Exception: updateOwnerInDB(Clan clan): " + e.getMessage(), e);
         }
     }
 
     @Override
     public final int getOwnerId() {
-        final L2Clan clan = _fortOwner;
+        final Clan clan = _fortOwner;
         return clan != null ? clan.getId() : -1;
     }
 
-    public final L2Clan getOwnerClan() {
+    public final Clan getOwnerClan() {
         return _fortOwner;
     }
 
-    public final void setOwnerClan(L2Clan clan) {
+    public final void setOwnerClan(Clan clan) {
         setVisibleFlag(clan != null);
         _fortOwner = clan;
     }
@@ -630,7 +630,7 @@ public final class Fort extends AbstractResidence {
         return _FortUpdater[0] == null ? 0 : _FortUpdater[0].getDelay(TimeUnit.SECONDS);
     }
 
-    public void updateClansReputation(L2Clan owner, boolean removePoints) {
+    public void updateClansReputation(Clan owner, boolean removePoints) {
         if (owner != null) {
             if (removePoints) {
                 owner.takeReputationScore(Config.LOOSE_FORT_POINTS, true);
@@ -876,9 +876,9 @@ public final class Fort extends AbstractResidence {
 
     private static class endFortressSiege implements Runnable {
         private final Fort _f;
-        private final L2Clan _clan;
+        private final Clan _clan;
 
-        public endFortressSiege(Fort f, L2Clan clan) {
+        public endFortressSiege(Fort f, Clan clan) {
             _f = f;
             _clan = clan;
         }

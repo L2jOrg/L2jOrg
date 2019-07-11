@@ -24,7 +24,7 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -769,7 +769,7 @@ public class Hero {
 
         hero.set(CLAIMED, true);
 
-        final L2Clan clan = player.getClan();
+        final Clan clan = player.getClan();
         if ((clan != null) && (clan.getLevel() >= 5)) {
             clan.addReputationScore(Config.HERO_POINTS, true);
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_C1_WAS_NAMED_A_HERO_S2_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION);

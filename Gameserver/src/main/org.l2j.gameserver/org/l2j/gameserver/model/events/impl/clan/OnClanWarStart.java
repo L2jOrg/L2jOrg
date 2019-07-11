@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.clan;
 
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -24,19 +24,19 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnClanWarStart implements IBaseEvent {
-    private final L2Clan _clan1;
-    private final L2Clan _clan2;
+    private final Clan _clan1;
+    private final Clan _clan2;
 
-    public OnClanWarStart(L2Clan clan1, L2Clan clan2) {
+    public OnClanWarStart(Clan clan1, Clan clan2) {
         _clan1 = clan1;
         _clan2 = clan2;
     }
 
-    public L2Clan getClan1() {
+    public Clan getClan1() {
         return _clan1;
     }
 
-    public L2Clan getClan2() {
+    public Clan getClan2() {
         return _clan2;
     }
 

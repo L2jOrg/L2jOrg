@@ -2,10 +2,10 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.enums.ClanWarState;
+import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.ClanWar;
-import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2ClanMember;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -28,18 +28,18 @@ public final class RequestSurrenderPledgeWar extends ClientPacket {
             return;
         }
 
-        final L2Clan myClan = activeChar.getClan();
+        final Clan myClan = activeChar.getClan();
         if (myClan == null) {
             return;
         }
 
-        if (myClan.getMembers().stream().filter(Objects::nonNull).filter(L2ClanMember::isOnline).map(L2ClanMember::getPlayerInstance).anyMatch(p -> !p.isInCombat())) {
+        if (myClan.getMembers().stream().filter(Objects::nonNull).filter(ClanMember::isOnline).map(ClanMember::getPlayerInstance).anyMatch(p -> !p.isInCombat())) {
             activeChar.sendPacket(SystemMessageId.A_CEASE_FIRE_DURING_A_CLAN_WAR_CAN_NOT_BE_CALLED_WHILE_MEMBERS_OF_YOUR_CLAN_ARE_ENGAGED_IN_BATTLE);
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
-        final L2Clan targetClan = ClanTable.getInstance().getClanByName(_pledgeName);
+        final Clan targetClan = ClanTable.getInstance().getClanByName(_pledgeName);
         if (targetClan == null) {
             activeChar.sendMessage("No such clan.");
             client.sendPacket(ActionFailed.STATIC_PACKET);

@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.clientpackets.pledgebonus;
 
 import org.l2j.gameserver.enums.ClanRewardType;
-import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2ClanMember;
+import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
@@ -35,9 +35,9 @@ public class RequestPledgeBonusReward extends ClientPacket {
             return;
         }
 
-        final L2Clan clan = player.getClan();
+        final Clan clan = player.getClan();
         final ClanRewardType type = ClanRewardType.values()[_type];
-        final L2ClanMember member = clan.getClanMember(player.getObjectId());
+        final ClanMember member = clan.getClanMember(player.getObjectId());
         if (clan.canClaimBonusReward(player, type)) {
             final ClanRewardBonus bonus = type.getAvailableBonus(player.getClan());
             if (bonus != null) {

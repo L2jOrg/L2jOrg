@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -53,7 +53,7 @@ public final class RequestAnswerJoinPledge extends ClientPacket {
             {
                 pledgeType = ((RequestClanAskJoinByName) requestor.getRequest().getRequestPacket()).getPledgeType();
             }
-            final L2Clan clan = requestor.getClan();
+            final Clan clan = requestor.getClan();
             // we must double check this cause during response time conditions can be changed, i.e. another player could join clan
             if (clan.checkClanJoinCondition(requestor, activeChar, pledgeType)) {
                 if (activeChar.getClan() != null) {
@@ -63,7 +63,7 @@ public final class RequestAnswerJoinPledge extends ClientPacket {
                 activeChar.sendPacket(new JoinPledge(requestor.getClanId()));
 
                 activeChar.setPledgeType(pledgeType);
-                if (pledgeType == L2Clan.SUBUNIT_ACADEMY) {
+                if (pledgeType == Clan.SUBUNIT_ACADEMY) {
                     activeChar.setPowerGrade(9); // academy
                     activeChar.setLvlJoinedAcademy(activeChar.getLevel());
                 } else {

@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
@@ -326,7 +326,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
     private int calculateRelation(Player activeChar) {
         int relation = 0;
         final L2Party party = activeChar.getParty();
-        final L2Clan clan = activeChar.getClan();
+        final Clan clan = activeChar.getClan();
 
         if (party != null) {
             relation |= 0x08; // Party member

@@ -17,7 +17,7 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.clanhallauction.ClanHallAuction;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
@@ -66,7 +66,7 @@ public class ClanHallAuctionManager extends AbstractEventManager<AbstractEvent<?
         return AUCTIONS.get(clanHallId);
     }
 
-    public ClanHallAuction getClanHallAuctionByClan(L2Clan clan) {
+    public ClanHallAuction getClanHallAuctionByClan(Clan clan) {
         //@formatter:off
         return AUCTIONS.values().stream()
                 .filter(a -> a.getBids().containsKey(clan.getId()))
@@ -75,7 +75,7 @@ public class ClanHallAuctionManager extends AbstractEventManager<AbstractEvent<?
         //@formatter:on
     }
 
-    public boolean checkForClanBid(int clanHallId, L2Clan clan) {
+    public boolean checkForClanBid(int clanHallId, Clan clan) {
         //@formatter:off
         return AUCTIONS.entrySet().stream()
                 .filter(a -> a.getKey() != clanHallId)

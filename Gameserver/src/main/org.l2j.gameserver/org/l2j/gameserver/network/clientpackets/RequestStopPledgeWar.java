@@ -2,8 +2,8 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.ClanPrivilege;
-import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2ClanMember;
+import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -23,12 +23,12 @@ public final class RequestStopPledgeWar extends ClientPacket {
         if (player == null) {
             return;
         }
-        final L2Clan playerClan = player.getClan();
+        final Clan playerClan = player.getClan();
         if (playerClan == null) {
             return;
         }
 
-        final L2Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
+        final Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
 
         if (clan == null) {
             player.sendMessage("No such clan.");
@@ -48,7 +48,7 @@ public final class RequestStopPledgeWar extends ClientPacket {
             return;
         }
 
-        for (L2ClanMember member : playerClan.getMembers()) {
+        for (ClanMember member : playerClan.getMembers()) {
             if ((member == null) || (member.getPlayerInstance() == null)) {
                 continue;
             }

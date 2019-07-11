@@ -24,8 +24,8 @@ import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
-import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2ClanMember;
+import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -62,7 +62,7 @@ public class AdminClan implements IAdminCommandHandler
 					break;
 				}
 				
-				final L2Clan clan = player.getClan();
+				final Clan clan = player.getClan();
 				if (clan == null)
 				{
 					activeChar.sendPacket(SystemMessageId.THE_TARGET_MUST_BE_A_CLAN_MEMBER);
@@ -93,14 +93,14 @@ public class AdminClan implements IAdminCommandHandler
 					break;
 				}
 				
-				final L2Clan clan = player.getClan();
+				final Clan clan = player.getClan();
 				if (clan == null)
 				{
 					activeChar.sendPacket(SystemMessageId.THE_TARGET_MUST_BE_A_CLAN_MEMBER);
 					return false;
 				}
 				
-				final L2ClanMember member = clan.getClanMember(player.getObjectId());
+				final ClanMember member = clan.getClanMember(player.getObjectId());
 				if (member != null)
 				{
 					if (player.isAcademyMember())
@@ -119,7 +119,7 @@ public class AdminClan implements IAdminCommandHandler
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 				html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/clanchanges.htm"));
 				final StringBuilder sb = new StringBuilder();
-				for (L2Clan clan : ClanTable.getInstance().getClans())
+				for (Clan clan : ClanTable.getInstance().getClans())
 				{
 					if (clan.getNewLeaderId() != 0)
 					{
@@ -145,13 +145,13 @@ public class AdminClan implements IAdminCommandHandler
 					}
 					final int clanId = Integer.parseInt(token);
 					
-					final L2Clan clan = ClanTable.getInstance().getClan(clanId);
+					final Clan clan = ClanTable.getInstance().getClan(clanId);
 					if (clan == null)
 					{
 						break;
 					}
 					
-					final L2ClanMember member = clan.getClanMember(clan.getNewLeaderId());
+					final ClanMember member = clan.getClanMember(clan.getNewLeaderId());
 					if (member == null)
 					{
 						break;

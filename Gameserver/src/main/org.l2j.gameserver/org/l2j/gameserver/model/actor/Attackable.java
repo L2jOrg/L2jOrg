@@ -422,7 +422,7 @@ public class Attackable extends Npc {
 
                                 attacker.addExpAndSp(exp, sp, useVitalityRate());
                                 if (exp > 0) {
-                                    final L2Clan clan = attacker.getClan();
+                                    final Clan clan = attacker.getClan();
                                     if (clan != null) {
                                         double finalExp = exp;
                                         if (useVitalityRate()) {

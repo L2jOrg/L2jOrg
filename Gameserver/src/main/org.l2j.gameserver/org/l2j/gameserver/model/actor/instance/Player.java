@@ -613,7 +613,7 @@ public final class Player extends Playable {
     /**
      * The Clan object of the Player
      */
-    private L2Clan _clan;
+    private Clan _clan;
 
     private volatile EnumIntBitmask<ClanPrivilege> _clanPrivileges = new EnumIntBitmask<>(ClanPrivilege.class, false);
     /**
@@ -816,7 +816,7 @@ public final class Player extends Playable {
                 player.getClanPrivileges().setAll();
                 player.setPowerGrade(1);
             }
-            player.setPledgeClass(L2ClanMember.calculatePledgeClass(player));
+            player.setPledgeClass(ClanMember.calculatePledgeClass(player));
         } else {
             if (player.isNoble()) {
                 player.setPledgeClass(5);
@@ -1068,9 +1068,9 @@ public final class Player extends Playable {
     }
 
     public int getRelation(Player target) {
-        final L2Clan clan = getClan();
+        final Clan clan = getClan();
         final L2Party party = getParty();
-        final L2Clan targetClan = target.getClan();
+        final Clan targetClan = target.getClan();
 
         int result = 0;
 
@@ -1144,7 +1144,7 @@ public final class Player extends Playable {
             }
         }
         if ((clan != null) && (targetClan != null)) {
-            if ((target.getPledgeType() != L2Clan.SUBUNIT_ACADEMY) && (getPledgeType() != L2Clan.SUBUNIT_ACADEMY)) {
+            if ((target.getPledgeType() != Clan.SUBUNIT_ACADEMY) && (getPledgeType() != Clan.SUBUNIT_ACADEMY)) {
                 ClanWar war = clan.getWarWith(target.getClan().getId());
                 if (war != null) {
                     switch (war.getState()) {
@@ -4302,7 +4302,7 @@ public final class Player extends Playable {
                     onDieDropItem(killer); // Check if any item should be dropped
 
                     if (!insidePvpZone && (pk != null)) {
-                        final L2Clan pkClan = pk.getClan();
+                        final Clan pkClan = pk.getClan();
                         if ((pkClan != null) && (_clan != null) && !isAcademyMember() && !(pk.isAcademyMember())) {
                             final ClanWar clanWar = _clan.getWarWith(pkClan.getId());
                             if ((clanWar != null) && AntiFeedManager.getInstance().check(killer, this)) {
@@ -4463,7 +4463,7 @@ public final class Player extends Playable {
         // If both players are in SIEGE zone just increase siege kills/deaths
         if (isInsideZone(ZoneId.SIEGE) && killedPlayer.isInsideZone(ZoneId.SIEGE)) {
             if ((getSiegeState() > 0) && (killedPlayer.getSiegeState() > 0) && (getSiegeState() != killedPlayer.getSiegeState())) {
-                final L2Clan targetClan = killedPlayer.getClan();
+                final Clan targetClan = killedPlayer.getClan();
                 if ((_clan != null) && (targetClan != null)) {
                     _clan.addSiegeKill();
                     targetClan.addSiegeDeath();
@@ -4993,7 +4993,7 @@ public final class Player extends Playable {
      * @return the _clan object of the Player.
      */
     @Override
-    public L2Clan getClan() {
+    public Clan getClan() {
         return _clan;
     }
 
@@ -5002,7 +5002,7 @@ public final class Player extends Playable {
      *
      * @param clan
      */
-    public void setClan(L2Clan clan) {
+    public void setClan(Clan clan) {
         _clan = clan;
 
         if (clan == null) {
@@ -6733,8 +6733,8 @@ public final class Player extends Playable {
 
             // Get Player
             final Player attackerPlayer = attacker.getActingPlayer();
-            final L2Clan clan = getClan();
-            final L2Clan attackerClan = attackerPlayer.getClan();
+            final Clan clan = getClan();
+            final Clan attackerClan = attackerPlayer.getClan();
             if (clan != null) {
                 final Siege siege = SiegeManager.getInstance().getSiege(getX(), getY(), getZ());
                 if (siege != null) {
@@ -8969,7 +8969,7 @@ public final class Player extends Playable {
         if (_clan != null) {
             // set the status for pledge member list to OFFLINE
             try {
-                final L2ClanMember clanMember = _clan.getClanMember(getObjectId());
+                final ClanMember clanMember = _clan.getClanMember(getObjectId());
                 if (clanMember != null) {
                     clanMember.setPlayerInstance(null);
                 }

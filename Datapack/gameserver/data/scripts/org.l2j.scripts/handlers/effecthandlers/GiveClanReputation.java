@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.model.L2ClanMember;
+import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -54,7 +54,7 @@ public final class GiveClanReputation extends AbstractEffect
 		
 		effector.getActingPlayer().getClan().addReputationScore(_reputation, true);
 		
-		for (L2ClanMember member : effector.getActingPlayer().getClan().getMembers())
+		for (ClanMember member : effector.getActingPlayer().getClan().getMembers())
 		{
 			if (member.isOnline())
 			{

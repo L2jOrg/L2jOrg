@@ -6,7 +6,7 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -171,7 +171,7 @@ public class CharSelectionInfo extends ServerPacket {
         final long deletetime = chardata.getLong("deletetime");
         if (deletetime > 0) {
             if (System.currentTimeMillis() > deletetime) {
-                final L2Clan clan = ClanTable.getInstance().getClan(chardata.getInt("clanid"));
+                final Clan clan = ClanTable.getInstance().getClan(chardata.getInt("clanid"));
                 if (clan != null) {
                     clan.removeClanMember(objectId, 0);
                 }

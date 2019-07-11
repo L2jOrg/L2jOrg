@@ -691,7 +691,7 @@ public class L2Party extends AbstractPlayerGroup {
 
                 exp = calculateExpSpPartyCutoff(member.getActingPlayer(), topLvl, exp, sp, target.useVitalityRate());
                 if (exp > 0) {
-                    final L2Clan clan = member.getClan();
+                    final Clan clan = member.getClan();
                     if (clan != null) {
                         double finalExp = exp;
                         if (target.useVitalityRate()) {

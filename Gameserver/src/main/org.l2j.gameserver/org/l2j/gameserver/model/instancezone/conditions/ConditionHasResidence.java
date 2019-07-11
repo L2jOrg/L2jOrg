@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.instancezone.conditions;
 
 import org.l2j.gameserver.enums.ResidenceType;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -35,7 +35,7 @@ public final class ConditionHasResidence extends Condition {
 
     @Override
     protected boolean test(Player player, Npc npc) {
-        final L2Clan clan = player.getClan();
+        final Clan clan = player.getClan();
         if (clan == null) {
             return false;
         }

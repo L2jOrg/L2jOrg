@@ -17,7 +17,7 @@
 package handlers.targethandlers.affectobject;
 
 import org.l2j.gameserver.handler.IAffectObjectHandler;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -77,8 +77,8 @@ public class Friend implements IAffectObjectHandler
 				}
 				
 				// Clan.
-				final L2Clan clan = player.getClan();
-				final L2Clan targetClan = targetPlayer.getClan();
+				final Clan clan = player.getClan();
+				final Clan targetClan = targetPlayer.getClan();
 				if (clan != null)
 				{
 					if (clan == targetClan)

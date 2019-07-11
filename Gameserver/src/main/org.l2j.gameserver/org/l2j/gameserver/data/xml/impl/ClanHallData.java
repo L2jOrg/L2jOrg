@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.enums.ClanHallGrade;
 import org.l2j.gameserver.enums.ClanHallType;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Door;
@@ -142,7 +142,7 @@ public final class ClanHallData extends GameXmlReader {
         return _clanHalls.values().stream().filter(ch -> ch.getNpcs().contains(npcId)).findFirst().orElse(null);
     }
 
-    public ClanHall getClanHallByClan(L2Clan clan) {
+    public ClanHall getClanHallByClan(Clan clan) {
         return _clanHalls.values().stream().filter(ch -> ch.getOwner() == clan).findFirst().orElse(null);
     }
 

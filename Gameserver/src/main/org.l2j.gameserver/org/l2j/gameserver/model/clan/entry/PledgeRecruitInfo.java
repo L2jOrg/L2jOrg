@@ -17,13 +17,13 @@
 package org.l2j.gameserver.model.clan.entry;
 
 import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 
 /**
  * @author Sdw
  */
 public class PledgeRecruitInfo {
-    private final L2Clan _clan;
+    private final Clan _clan;
     private final int _applicationType;
     private final int _recruitType;
     private int _clanId;
@@ -93,7 +93,7 @@ public class PledgeRecruitInfo {
         return _recruitType;
     }
 
-    public L2Clan getClan() {
+    public Clan getClan() {
         return _clan;
     }
 }

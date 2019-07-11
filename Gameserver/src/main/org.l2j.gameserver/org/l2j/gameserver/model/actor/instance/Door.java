@@ -10,7 +10,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
@@ -246,12 +246,12 @@ public final class Door extends Creature {
         final boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getZone().isActive());
 
         if (isFort) {
-            final L2Clan clan = actingPlayer.getClan();
+            final Clan clan = actingPlayer.getClan();
             if ((clan != null) && (clan == getFort().getOwnerClan())) {
                 return false;
             }
         } else if (isCastle) {
-            final L2Clan clan = actingPlayer.getClan();
+            final Clan clan = actingPlayer.getClan();
             if ((clan != null) && (clan.getId() == getCastle().getOwnerId())) {
                 return false;
             }

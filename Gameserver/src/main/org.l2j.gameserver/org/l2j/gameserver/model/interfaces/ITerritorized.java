@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.interfaces;
 
-import org.l2j.gameserver.model.zone.type.L2BannedSpawnTerritory;
+import org.l2j.gameserver.model.zone.type.BannedSpawnTerritory;
 import org.l2j.gameserver.model.zone.type.L2SpawnTerritory;
 
 import java.util.List;
@@ -13,7 +13,7 @@ public interface ITerritorized {
 
     List<L2SpawnTerritory> getTerritories();
 
-    void addBannedTerritory(L2BannedSpawnTerritory territory);
+    void addBannedTerritory(BannedSpawnTerritory territory);
 
-    List<L2BannedSpawnTerritory> getBannedTerritories();
+    List<BannedSpawnTerritory> getBannedTerritories();
 }

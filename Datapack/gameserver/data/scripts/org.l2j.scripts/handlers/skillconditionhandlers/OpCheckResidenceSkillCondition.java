@@ -19,7 +19,7 @@ package handlers.skillconditionhandlers;
 import java.util.List;
 
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -46,7 +46,7 @@ public class OpCheckResidenceSkillCondition implements ISkillCondition
 	{
 		if (caster.isPlayer())
 		{
-			final L2Clan clan = caster.getActingPlayer().getClan();
+			final Clan clan = caster.getActingPlayer().getClan();
 			if (clan != null)
 			{
 				final ClanHall clanHall = ClanHallData.getInstance().getClanHallByClan(clan);

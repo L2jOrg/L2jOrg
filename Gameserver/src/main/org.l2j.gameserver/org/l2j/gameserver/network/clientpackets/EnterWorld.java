@@ -158,7 +158,7 @@ public class EnterWorld extends ClientPacket {
         boolean showClanNotice = false;
 
         // Clan related checks are here
-        final L2Clan clan = activeChar.getClan();
+        final Clan clan = activeChar.getClan();
         // Clan packets
         if (clan != null) {
             notifyClanMembers(activeChar);
@@ -494,7 +494,7 @@ public class EnterWorld extends ClientPacket {
     }
 
     private void notifyClanMembers(Player activeChar) {
-        final L2Clan clan = activeChar.getClan();
+        final Clan clan = activeChar.getClan();
         if (clan != null) {
             clan.getClanMember(activeChar.getObjectId()).setPlayerInstance(activeChar);
 

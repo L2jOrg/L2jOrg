@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.model.zone.form.ZoneNPoly;
-import org.l2j.gameserver.model.zone.type.L2BannedSpawnTerritory;
+import org.l2j.gameserver.model.zone.type.BannedSpawnTerritory;
 import org.l2j.gameserver.model.zone.type.L2SpawnTerritory;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -159,7 +159,7 @@ public class SpawnsData extends GameXmlReader {
                     break;
                 }
                 case "banned_territory": {
-                    spawnTemplate.addBannedTerritory(new L2BannedSpawnTerritory(name, new ZoneNPoly(x, y, minZ, maxZ)));
+                    spawnTemplate.addBannedTerritory(new BannedSpawnTerritory(name, new ZoneNPoly(x, y, minZ, maxZ)));
                     break;
                 }
             }

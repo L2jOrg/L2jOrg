@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.enums.SiegeClanType;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.L2SiegeClan;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.L2GameClient;
@@ -54,7 +54,7 @@ public final class SiegeDefenderList extends ServerPacket {
         writeInt(size);
 
         // Add owners
-        final L2Clan ownerClan = _castle.getOwner();
+        final Clan ownerClan = _castle.getOwner();
         if (ownerClan != null) {
             writeInt(ownerClan.getId());
             writeString(ownerClan.getName());
@@ -70,7 +70,7 @@ public final class SiegeDefenderList extends ServerPacket {
 
         // List of confirmed defenders
         for (L2SiegeClan siegeClan : _castle.getSiege().getDefenderClans()) {
-            final L2Clan defendingClan = ClanTable.getInstance().getClan(siegeClan.getClanId());
+            final Clan defendingClan = ClanTable.getInstance().getClan(siegeClan.getClanId());
             if ((defendingClan == null) || (defendingClan == _castle.getOwner())) {
                 continue;
             }
@@ -89,7 +89,7 @@ public final class SiegeDefenderList extends ServerPacket {
 
         // List of not confirmed defenders
         for (L2SiegeClan siegeClan : _castle.getSiege().getDefenderWaitingClans()) {
-            final L2Clan defendingClan = ClanTable.getInstance().getClan(siegeClan.getClanId());
+            final Clan defendingClan = ClanTable.getInstance().getClan(siegeClan.getClanId());
             if (defendingClan == null) {
                 continue;
             }

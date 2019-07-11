@@ -427,7 +427,7 @@ public class SkillCaster implements Runnable {
 
             // Consume clan reputation points
             if (skill.getClanRepConsume() > 0) {
-                final L2Clan clan = player.getClan();
+                final Clan clan = player.getClan();
                 if ((clan == null) || (clan.getReputationScore() < skill.getClanRepConsume())) {
                     player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
                     return false;
@@ -605,7 +605,7 @@ public class SkillCaster implements Runnable {
 
             // Consume clan reputation points.
             if (_skill.getClanRepConsume() > 0) {
-                final L2Clan clan = player.getClan();
+                final Clan clan = player.getClan();
                 if ((clan == null) || (clan.getReputationScore() < _skill.getClanRepConsume())) {
                     player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
                     return false;

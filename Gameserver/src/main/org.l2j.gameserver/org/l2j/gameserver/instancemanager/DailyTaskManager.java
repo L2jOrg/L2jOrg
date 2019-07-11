@@ -21,8 +21,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.DailyMissionData;
 import org.l2j.gameserver.data.xml.impl.VipData;
-import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2ClanMember;
+import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PcStat;
@@ -81,9 +81,9 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
 
     @ScheduleTarget
     private void onClanLeaderApply() {
-        for (L2Clan clan : ClanTable.getInstance().getClans()) {
+        for (Clan clan : ClanTable.getInstance().getClans()) {
             if (clan.getNewLeaderId() != 0) {
-                final L2ClanMember member = clan.getClanMember(clan.getNewLeaderId());
+                final ClanMember member = clan.getClanMember(clan.getNewLeaderId());
                 if (member == null) {
                     continue;
                 }
@@ -125,7 +125,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
     }
 
     private void resetClanBonus() {
-        ClanTable.getInstance().getClans().forEach(L2Clan::resetClanBonus);
+        ClanTable.getInstance().getClans().forEach(Clan::resetClanBonus);
         LOGGER.info("Daily clan bonus has been resetted.");
     }
 

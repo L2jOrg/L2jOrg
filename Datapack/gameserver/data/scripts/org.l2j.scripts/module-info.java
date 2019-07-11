@@ -1,3 +1,4 @@
+import handlers.actionhandlers.ArtefactAction;
 import handlers.admincommandhandlers.AdminCoins;
 
 open module org.l2j.scripts {
@@ -127,7 +128,7 @@ open module org.l2j.scripts {
             custom.NpcLocationInfo.NpcLocationInfo;
 
     provides org.l2j.gameserver.handler.IActionHandler
-        with handlers.actionhandlers.L2ArtefactInstanceAction,
+        with ArtefactAction,
             handlers.actionhandlers.L2DecoyAction,
             handlers.actionhandlers.L2DoorInstanceAction,
             handlers.actionhandlers.L2ItemInstanceAction,

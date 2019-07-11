@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.PledgePowerGradeList;
 
@@ -22,9 +22,9 @@ public final class RequestPledgePowerGradeList extends ClientPacket {
             return;
         }
 
-        final L2Clan clan = player.getClan();
+        final Clan clan = player.getClan();
         if (clan != null) {
-            final L2Clan.RankPrivs[] privs = clan.getAllRankPrivs();
+            final Clan.RankPrivs[] privs = clan.getAllRankPrivs();
             player.sendPacket(new PledgePowerGradeList(privs));
         }
     }

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2ClanMember;
+import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.PledgeReceiveMemberInfo;
 
@@ -31,12 +31,12 @@ public final class RequestPledgeMemberInfo extends ClientPacket {
         }
 
         // do we need powers to do that??
-        final L2Clan clan = activeChar.getClan();
+        final Clan clan = activeChar.getClan();
         if (clan == null) {
             return;
         }
 
-        final L2ClanMember member = clan.getClanMember(_player);
+        final ClanMember member = clan.getClanMember(_player);
         if (member == null) {
             return;
         }

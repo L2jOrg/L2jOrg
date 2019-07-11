@@ -20,9 +20,8 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.instancemanager.ClanHallAuctionManager;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.entity.ClanHall;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -62,7 +61,7 @@ public class ClanHallAuction {
             ps.setInt(1, _clanHallId);
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
-                    final L2Clan clan = ClanTable.getInstance().getClan(rs.getInt("clanId"));
+                    final Clan clan = ClanTable.getInstance().getClan(rs.getInt("clanId"));
                     addBid(clan, rs.getLong("bid"), rs.getLong("bidTime"));
                 }
             }
@@ -75,11 +74,11 @@ public class ClanHallAuction {
         return _bidders == null ? Collections.emptyMap() : _bidders;
     }
 
-    public void addBid(L2Clan clan, long bid) {
+    public void addBid(Clan clan, long bid) {
         addBid(clan, bid, System.currentTimeMillis());
     }
 
-    public void addBid(L2Clan clan, long bid, long bidTime) {
+    public void addBid(Clan clan, long bid, long bidTime) {
         if (_bidders == null) {
             synchronized (this) {
                 if (_bidders == null) {
@@ -101,7 +100,7 @@ public class ClanHallAuction {
         }
     }
 
-    public void removeBid(L2Clan clan) {
+    public void removeBid(Clan clan) {
         getBids().remove(clan.getId());
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement(DELETE_CLANHALL_BIDDER)) {
@@ -117,7 +116,7 @@ public class ClanHallAuction {
         return getBids().values().stream().mapToLong(Bidder::getBid).max().orElse(clanHall.getMinBid());
     }
 
-    public long getClanBid(L2Clan clan) {
+    public long getClanBid(Clan clan) {
         return getBids().get(clan.getId()).getBid();
     }
 

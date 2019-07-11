@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IWriteBoardHandler;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.GameUtils;
@@ -139,7 +139,7 @@ public class ClanBoard implements IWriteBoardHandler
 	
 	private void clanNotice(Player activeChar, int clanId)
 	{
-		final L2Clan cl = ClanTable.getInstance().getClan(clanId);
+		final Clan cl = ClanTable.getInstance().getClan(clanId);
 		if (cl != null)
 		{
 			if (cl.getLevel() < 2)
@@ -198,7 +198,7 @@ public class ClanBoard implements IWriteBoardHandler
 		html.append("\">[GO TO MY CLAN]</a>&nbsp;&nbsp;</td><td fixWIDTH=5></td></tr><tr><td height=10></td></tr></table><br><table border=0 cellspacing=0 cellpadding=2 bgcolor=5A5A5A width=610><tr><td FIXWIDTH=5></td><td FIXWIDTH=200 align=center>CLAN NAME</td><td FIXWIDTH=200 align=center>CLAN LEADER</td><td FIXWIDTH=100 align=center>CLAN LEVEL</td><td FIXWIDTH=100 align=center>CLAN MEMBERS</td><td FIXWIDTH=5></td></tr></table><img src=\"L2UI.Squareblank\" width=\"1\" height=\"5\">");
 		
 		int i = 0;
-		for (L2Clan cl : ClanTable.getInstance().getClans())
+		for (Clan cl : ClanTable.getInstance().getClans())
 		{
 			if (i > ((index + 1) * 7))
 			{
@@ -281,7 +281,7 @@ public class ClanBoard implements IWriteBoardHandler
 	
 	private void clanHome(Player activeChar, int clanId)
 	{
-		final L2Clan cl = ClanTable.getInstance().getClan(clanId);
+		final Clan cl = ClanTable.getInstance().getClan(clanId);
 		if (cl != null)
 		{
 			if (cl.getLevel() < 2)
@@ -310,7 +310,7 @@ public class ClanBoard implements IWriteBoardHandler
 	{
 		// the only Write bypass that comes to this handler is "Write Notice Set _ Content Content Content";
 		// arg1 = Set, arg2 = _
-		final L2Clan clan = activeChar.getClan();
+		final Clan clan = activeChar.getClan();
 		
 		if ((clan != null) && activeChar.isClanLeader())
 		{

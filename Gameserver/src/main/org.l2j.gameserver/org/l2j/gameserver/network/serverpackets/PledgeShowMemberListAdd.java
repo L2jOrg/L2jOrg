@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2ClanMember;
+import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -20,7 +20,7 @@ public final class PledgeShowMemberListAdd extends ServerPacket {
         _pledgeType = player.getPledgeType();
     }
 
-    public PledgeShowMemberListAdd(L2ClanMember cm) {
+    public PledgeShowMemberListAdd(ClanMember cm) {
         _name = cm.getName();
         _lvl = cm.getLevel();
         _classId = cm.getClassId();

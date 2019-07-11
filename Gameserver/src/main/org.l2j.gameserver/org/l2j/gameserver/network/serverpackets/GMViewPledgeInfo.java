@@ -1,16 +1,16 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.L2ClanMember;
+import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class GMViewPledgeInfo extends ServerPacket {
-    private final L2Clan _clan;
+    private final Clan _clan;
     private final Player _activeChar;
 
-    public GMViewPledgeInfo(L2Clan clan, Player activeChar) {
+    public GMViewPledgeInfo(Clan clan, Player activeChar) {
         _clan = clan;
         _activeChar = activeChar;
     }
@@ -43,7 +43,7 @@ public class GMViewPledgeInfo extends ServerPacket {
         writeInt(0x00); // T3 Unknown
 
         writeInt(_clan.getMembers().size());
-        for (L2ClanMember member : _clan.getMembers()) {
+        for (ClanMember member : _clan.getMembers()) {
             if (member != null) {
                 writeString(member.getName());
                 writeInt(member.getLevel());

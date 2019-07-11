@@ -5,7 +5,7 @@ import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.L2SiegeClan;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
@@ -107,7 +107,7 @@ public final class RequestRestartPoint extends ClientPacket {
             }
             case 2: // to castle
             {
-                final L2Clan clan = activeChar.getClan();
+                final Clan clan = activeChar.getClan();
                 Castle castle = CastleManager.getInstance().getCastle(activeChar);
                 if ((castle != null) && castle.getSiege().isInProgress()) {
                     // Siege in progress
@@ -139,7 +139,7 @@ public final class RequestRestartPoint extends ClientPacket {
             }
             case 3: // to fortress
             {
-                final L2Clan clan = activeChar.getClan();
+                final Clan clan = activeChar.getClan();
                 if ((clan == null) || (clan.getFortId() == 0)) {
                     LOGGER.warn("Player [" + activeChar.getName() + "] called RestartPointPacket - To Fortress and he doesn't have Fortress!");
                     return;

@@ -4,7 +4,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.CeremonyOfChaosState;
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Npc;
@@ -233,7 +233,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
     public boolean canRegister(Player player, boolean sendMessage) {
         boolean canRegister = true;
 
-        final L2Clan clan = player.getClan();
+        final Clan clan = player.getClan();
 
         SystemMessageId sm = null;
 

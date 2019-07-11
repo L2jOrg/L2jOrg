@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanWar;
-import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -11,11 +11,11 @@ import java.util.Collection;
  * @author -Wooden-
  */
 public class PledgeReceiveWarList extends ServerPacket {
-    private final L2Clan _clan;
+    private final Clan _clan;
     private final int _tab;
     private final Collection<ClanWar> _clanList;
 
-    public PledgeReceiveWarList(L2Clan clan, int tab) {
+    public PledgeReceiveWarList(Clan clan, int tab) {
         _clan = clan;
         _tab = tab;
         _clanList = clan.getWarList().values();
@@ -28,7 +28,7 @@ public class PledgeReceiveWarList extends ServerPacket {
         writeInt(_tab); // page
         writeInt(_clanList.size());
         for (ClanWar clanWar : _clanList) {
-            final L2Clan clan = clanWar.getOpposingClan(_clan);
+            final Clan clan = clanWar.getOpposingClan(_clan);
 
             if (clan == null) {
                 continue;

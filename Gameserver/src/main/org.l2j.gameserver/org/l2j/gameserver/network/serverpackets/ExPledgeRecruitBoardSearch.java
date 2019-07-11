@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.L2Clan;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.clan.entry.PledgeRecruitInfo;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -41,7 +41,7 @@ public class ExPledgeRecruitBoardSearch extends ServerPacket {
             writeInt(_clanList.get(i).getClan().getAllyId());
         }
         for (int i = _startIndex; i < _endIndex; i++) {
-            final L2Clan clan = _clanList.get(i).getClan();
+            final Clan clan = _clanList.get(i).getClan();
             writeInt(clan.getCrestId());
             writeInt(clan.getAllyCrestId());
             writeString(clan.getName());
