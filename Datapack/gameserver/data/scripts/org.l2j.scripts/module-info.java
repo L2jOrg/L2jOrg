@@ -1,4 +1,5 @@
 import handlers.actionhandlers.*;
+import handlers.actionshifthandlers.*;
 import handlers.admincommandhandlers.AdminCoins;
 
 open module org.l2j.scripts {
@@ -140,12 +141,12 @@ open module org.l2j.scripts {
                 TrapAction;
 
     provides org.l2j.gameserver.handler.IActionShiftHandler
-        with handlers.actionshifthandlers.L2DoorInstanceActionShift,
-            handlers.actionshifthandlers.L2ItemInstanceActionShift,
-            handlers.actionshifthandlers.L2NpcActionShift,
-            handlers.actionshifthandlers.L2PcInstanceActionShift,
-            handlers.actionshifthandlers.L2StaticObjectInstanceActionShift,
-            handlers.actionshifthandlers.L2SummonActionShift;
+        with DoorActionShift,
+                ItemActionShift,
+                NpcActionShift,
+                PlayerActionShift,
+                StaticWorldObjectActionShift,
+                SummonActionShift;
 
     provides org.l2j.gameserver.handler.IAdminCommandHandler
         with handlers.admincommandhandlers.AdminHtml,
