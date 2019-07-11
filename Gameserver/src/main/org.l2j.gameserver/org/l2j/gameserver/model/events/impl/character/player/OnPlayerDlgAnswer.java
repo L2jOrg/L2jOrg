@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -24,19 +24,19 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnPlayerDlgAnswer implements IBaseEvent {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final int _messageId;
     private final int _answer;
     private final int _requesterId;
 
-    public OnPlayerDlgAnswer(L2PcInstance activeChar, int messageId, int answer, int requesterId) {
+    public OnPlayerDlgAnswer(Player activeChar, int messageId, int answer, int requesterId) {
         _activeChar = activeChar;
         _messageId = messageId;
         _answer = answer;
         _requesterId = requesterId;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _activeChar;
     }
 

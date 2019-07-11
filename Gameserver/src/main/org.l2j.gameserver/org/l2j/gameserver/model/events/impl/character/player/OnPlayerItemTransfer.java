@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
@@ -26,17 +26,17 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
  * @author UnAfraid
  */
 public class OnPlayerItemTransfer implements IBaseEvent {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final L2ItemInstance _item;
     private final ItemContainer _container;
 
-    public OnPlayerItemTransfer(L2PcInstance activeChar, L2ItemInstance item, ItemContainer container) {
+    public OnPlayerItemTransfer(Player activeChar, L2ItemInstance item, ItemContainer container) {
         _activeChar = activeChar;
         _item = item;
         _container = container;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _activeChar;
     }
 

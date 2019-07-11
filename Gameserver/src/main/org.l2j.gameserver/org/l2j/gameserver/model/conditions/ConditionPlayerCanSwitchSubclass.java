@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.items.L2Item;
@@ -39,7 +39,7 @@ public class ConditionPlayerCanSwitchSubclass extends Condition {
     public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item) {
         boolean canSwitchSub = true;
 
-        final L2PcInstance player = effector.getActingPlayer();
+        final Player player = effector.getActingPlayer();
         if ((player == null) || player.isAlikeDead()) {
             canSwitchSub = false;
         } else if (((_subIndex != 0) && (player.getSubClasses().get(_subIndex) == null)) || (player.getClassIndex() == _subIndex)) {

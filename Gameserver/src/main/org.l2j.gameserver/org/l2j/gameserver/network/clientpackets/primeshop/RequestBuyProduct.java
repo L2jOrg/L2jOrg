@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets.primeshop;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.PrimeShopDAO;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -18,7 +18,7 @@ public abstract class RequestBuyProduct extends ClientPacket {
 
     private static final int HERO_COINS = 23805;
 
-    protected static boolean validatePlayer(PrimeShopProduct product, int count, L2PcInstance player) {
+    protected static boolean validatePlayer(PrimeShopProduct product, int count, Player player) {
         final long currentTime = System.currentTimeMillis() / 1000;
 
         if (product == null) {
@@ -85,7 +85,7 @@ public abstract class RequestBuyProduct extends ClientPacket {
         return true;
     }
 
-    protected static int validatePaymentId(L2PcInstance player, PrimeShopProduct item, long amount) {
+    protected static int validatePaymentId(Player player, PrimeShopProduct item, long amount) {
         switch (item.getPaymentType()) {
             case 0: // Prime points
             {
@@ -104,7 +104,7 @@ public abstract class RequestBuyProduct extends ClientPacket {
         return -1;
     }
 
-    protected boolean processPayment(L2PcInstance activeChar, PrimeShopProduct item, int count) {
+    protected boolean processPayment(Player activeChar, PrimeShopProduct item, int count) {
         final int price = (item.getPrice() * count);
         final int paymentId = validatePaymentId(activeChar, item, price);
 

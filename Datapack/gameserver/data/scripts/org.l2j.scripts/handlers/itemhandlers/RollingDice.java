@@ -21,7 +21,7 @@ import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Playable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -41,7 +41,7 @@ public class RollingDice implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
+		final Player activeChar = playable.getActingPlayer();
 		final int itemId = item.getId();
 		
 		if (activeChar.isInOlympiadMode())
@@ -91,7 +91,7 @@ public class RollingDice implements IItemHandler
 	 * @param player
 	 * @return
 	 */
-	private int rollDice(L2PcInstance player)
+	private int rollDice(Player player)
 	{
 		// Check if the dice is ready
 		if (!player.getFloodProtectors().getRollDice().tryPerformAction("roll dice"))

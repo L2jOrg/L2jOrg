@@ -7,7 +7,7 @@ import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.TradeList;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.L2Item;
@@ -94,7 +94,7 @@ public final class SetPrivateStoreListBuy extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if (player == null) {
             return;
         }

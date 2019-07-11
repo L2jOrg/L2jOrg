@@ -21,7 +21,7 @@ import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -53,7 +53,7 @@ public final class Harvesting extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance player = effector.getActingPlayer();
+		final Player player = effector.getActingPlayer();
 		final L2MonsterInstance monster = (L2MonsterInstance) effected;
 		if (player.getObjectId() != monster.getSeederId())
 		{
@@ -116,7 +116,7 @@ public final class Harvesting extends AbstractEffect
 		}
 	}
 	
-	private static boolean calcSuccess(L2PcInstance activeChar, L2MonsterInstance target)
+	private static boolean calcSuccess(Player activeChar, L2MonsterInstance target)
 	{
 		final int levelPlayer = activeChar.getLevel();
 		final int levelTarget = target.getLevel();

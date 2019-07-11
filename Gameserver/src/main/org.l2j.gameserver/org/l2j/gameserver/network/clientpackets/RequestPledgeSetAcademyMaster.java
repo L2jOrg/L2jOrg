@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
@@ -26,7 +26,7 @@ public final class RequestPledgeSetAcademyMaster extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         final L2Clan clan = activeChar.getClan();
         if (clan == null) {
             return;
@@ -53,8 +53,8 @@ public final class RequestPledgeSetAcademyMaster extends ClientPacket {
             sponsorMember = currentMember;
         }
 
-        final L2PcInstance apprentice = apprenticeMember.getPlayerInstance();
-        final L2PcInstance sponsor = sponsorMember.getPlayerInstance();
+        final Player apprentice = apprenticeMember.getPlayerInstance();
+        final Player sponsor = sponsorMember.getPlayerInstance();
 
         SystemMessage sm = null;
         if (_set == 0) {

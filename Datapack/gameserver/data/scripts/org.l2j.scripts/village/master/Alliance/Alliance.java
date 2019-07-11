@@ -17,7 +17,7 @@
 package village.master.Alliance;
 
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 import ai.AbstractNpcAI;
 
@@ -45,7 +45,7 @@ public final class Alliance extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		if (!"9001-01.htm".equals(event) && (player.getClan() == null))
 		{
@@ -55,7 +55,7 @@ public final class Alliance extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(L2Npc npc, Player talker)
 	{
 		return "9001-01.htm";
 	}

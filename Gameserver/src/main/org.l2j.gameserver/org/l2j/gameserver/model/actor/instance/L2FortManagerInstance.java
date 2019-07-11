@@ -37,14 +37,14 @@ public class L2FortManagerInstance extends L2MerchantInstance {
         return true;
     }
 
-    private void sendHtmlMessage(L2PcInstance player, NpcHtmlMessage html) {
+    private void sendHtmlMessage(Player player, NpcHtmlMessage html) {
         html.replace("%objectId%", String.valueOf(getObjectId()));
         html.replace("%npcId%", String.valueOf(getId()));
         player.sendPacket(html);
     }
 
     @Override
-    public void onBypassFeedback(L2PcInstance player, String command) {
+    public void onBypassFeedback(Player player, String command) {
         // BypassValidation Exploit plug.
         if (player.getLastFolkNPC().getObjectId() != getObjectId()) {
             return;
@@ -717,7 +717,7 @@ public class L2FortManagerInstance extends L2MerchantInstance {
     }
 
     @Override
-    public void showChatWindow(L2PcInstance player) {
+    public void showChatWindow(Player player) {
         player.sendPacket(ActionFailed.STATIC_PACKET);
         String filename = "data/html/fortress/foreman-no.htm";
 
@@ -737,7 +737,7 @@ public class L2FortManagerInstance extends L2MerchantInstance {
         player.sendPacket(html);
     }
 
-    protected int validateCondition(L2PcInstance player) {
+    protected int validateCondition(Player player) {
         if ((getFort() != null) && (getFort().getResidenceId() > 0)) {
             if (player.getClan() != null) {
                 if (getFort().getZone().isActive()) {
@@ -750,13 +750,13 @@ public class L2FortManagerInstance extends L2MerchantInstance {
         return COND_ALL_FALSE;
     }
 
-    private void showVaultWindowDeposit(L2PcInstance player) {
+    private void showVaultWindowDeposit(Player player) {
         player.sendPacket(ActionFailed.STATIC_PACKET);
         player.setActiveWarehouse(player.getClan().getWarehouse());
         player.sendPacket(new WareHouseDepositList(1, player, WareHouseDepositList.CLAN));
     }
 
-    private void showVaultWindowWithdraw(L2PcInstance player) {
+    private void showVaultWindowWithdraw(Player player) {
         if (player.isClanLeader() || player.hasClanPrivilege(ClanPrivilege.CL_VIEW_WAREHOUSE)) {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             player.setActiveWarehouse(player.getClan().getWarehouse());

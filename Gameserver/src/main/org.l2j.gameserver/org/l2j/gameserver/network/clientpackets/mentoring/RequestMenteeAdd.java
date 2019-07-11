@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.mentoring;
 
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -20,12 +20,12 @@ public class RequestMenteeAdd extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance mentor = client.getActiveChar();
+        final Player mentor = client.getActiveChar();
         if (mentor == null) {
             return;
         }
 
-        final L2PcInstance mentee = L2World.getInstance().getPlayer(_target);
+        final Player mentee = L2World.getInstance().getPlayer(_target);
         if (mentee == null) {
             return;
         }

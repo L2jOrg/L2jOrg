@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.olympiad;
 
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
  * @author DS, Zoey76
@@ -15,11 +15,11 @@ public final class Participant {
     private final StatsSet stats;
     public String clanName;
     public int clanId;
-    private L2PcInstance player;
+    private Player player;
     private boolean disconnected = false;
     private boolean defaulted = false;
 
-    public Participant(L2PcInstance plr, int olympiadSide) {
+    public Participant(Player plr, int olympiadSide) {
         objectId = plr.getObjectId();
         player = plr;
         name = plr.getName();
@@ -85,14 +85,14 @@ public final class Participant {
     /**
      * @return the player
      */
-    public L2PcInstance getPlayer() {
+    public Player getPlayer() {
         return player;
     }
 
     /**
      * @param noble the player to set
      */
-    public void setPlayer(L2PcInstance noble) {
+    public void setPlayer(Player noble) {
         player = noble;
     }
 

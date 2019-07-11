@@ -26,7 +26,7 @@ import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 
@@ -41,16 +41,16 @@ public class FindPvP implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, Player activeChar, L2Character target)
 	{
 		if (!Config.ENABLE_FIND_PVP || !target.isNpc())
 		{
 			return false;
 		}
 		
-		L2PcInstance mostPvP = null;
+		Player mostPvP = null;
 		int max = -1;
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
+		for (Player player : L2World.getInstance().getPlayers())
 		{
 			if ((player == null) //
 				|| (player.getPvpFlag() == 0) //
@@ -64,7 +64,7 @@ public class FindPvP implements IBypassHandler
 			}
 			
 			int count = 0;
-			for (L2PcInstance pl : L2World.getInstance().getVisibleObjects(player, L2PcInstance.class))
+			for (Player pl : L2World.getInstance().getVisibleObjects(player, Player.class))
 			{
 				if ((pl.getPvpFlag() > 0) && !pl.isInsideZone(ZoneId.PEACE))
 				{
@@ -91,7 +91,7 @@ public class FindPvP implements IBypassHandler
 					allyId = activeChar.getClanId();
 				}
 				clanNumbers.put(allyId, 1);
-				for (L2PcInstance known : L2World.getInstance().getVisibleObjects(mostPvP, L2PcInstance.class))
+				for (Player known : L2World.getInstance().getVisibleObjects(mostPvP, Player.class))
 				{
 					int knownAllyId = known.getAllyId();
 					if (knownAllyId == 0)

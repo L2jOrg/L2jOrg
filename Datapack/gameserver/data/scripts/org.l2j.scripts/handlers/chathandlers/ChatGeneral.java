@@ -8,7 +8,7 @@ import org.l2j.gameserver.handler.VoicedCommandHandler;
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.PcCondOverride;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -29,7 +29,7 @@ public final class ChatGeneral implements IChatHandler {
 	};
 	
 	@Override
-	public void handleChat(ChatType type, L2PcInstance activeChar, String params, String text) {
+	public void handleChat(ChatType type, Player activeChar, String params, String text) {
 		boolean vcd_used = false;
 		if (text.startsWith(".")) {
 			final StringTokenizer st = new StringTokenizer(text);
@@ -63,7 +63,7 @@ public final class ChatGeneral implements IChatHandler {
 			}
 			
 			final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), text);
-			L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2PcInstance.class, 1250, player -> {
+			L2World.getInstance().forEachVisibleObjectInRange(activeChar, Player.class, 1250, player -> {
 				if ((player != null) && !BlockList.isBlocked(player, activeChar))
 				{
 					player.sendPacket(cs);

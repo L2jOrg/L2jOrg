@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -24,15 +24,15 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnPlayerTransform implements IBaseEvent {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final int _transformId;
 
-    public OnPlayerTransform(L2PcInstance activeChar, int transformId) {
+    public OnPlayerTransform(Player activeChar, int transformId) {
         _activeChar = activeChar;
         _transformId = transformId;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _activeChar;
     }
 

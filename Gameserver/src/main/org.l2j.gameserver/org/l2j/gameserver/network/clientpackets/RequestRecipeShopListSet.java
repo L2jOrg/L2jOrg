@@ -5,7 +5,7 @@ import org.l2j.gameserver.data.xml.impl.RecipeData;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.L2ManufactureItem;
 import org.l2j.gameserver.model.L2RecipeList;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -49,7 +49,7 @@ public final class RequestRecipeShopListSet extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if (player == null) {
             return;
         }

@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
@@ -20,7 +20,7 @@ public class RegenCPFinalizer implements IStatsFunction {
             return 0;
         }
 
-        final L2PcInstance player = creature.getActingPlayer();
+        final Player player = creature.getActingPlayer();
         double baseValue = player.getTemplate().getBaseCpRegen(creature.getLevel()) * creature.getLevelMod() * BaseStats.CON.calcBonus(creature) * Config.CP_REGEN_MULTIPLIER;
         if (player.isSitting()) {
             baseValue *= 1.5; // Sitting

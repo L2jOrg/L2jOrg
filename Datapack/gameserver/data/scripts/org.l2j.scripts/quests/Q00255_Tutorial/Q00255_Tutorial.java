@@ -8,7 +8,7 @@ import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
 import org.l2j.gameserver.model.events.annotations.Id;
@@ -118,7 +118,7 @@ public class Q00255_Tutorial extends Quest {
     }
 
     @Override
-    public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+    public String onAdvEvent(String event, L2Npc npc, Player player) {
         final QuestState qs = getQuestState(player, false);
 
         if (isNull(qs)) {
@@ -199,7 +199,7 @@ public class Q00255_Tutorial extends Quest {
     }
 
     @Override
-    public String onFirstTalk(L2Npc npc, L2PcInstance player) {
+    public String onFirstTalk(L2Npc npc, Player player) {
         final QuestState questState = getQuestState(player, false);
         if (nonNull(questState)) {
             // start newbie helpers
@@ -279,7 +279,7 @@ public class Q00255_Tutorial extends Quest {
     }
 
     @Override
-    public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon) {
+    public String onKill(L2Npc npc, Player killer, boolean isSummon) {
         final QuestState qs = getQuestState(killer, false);
         if ((qs != null) && qs.isMemoState(2) && !hasQuestItems(killer, BLUE_GEM) && (getRandom(100) < 30)) {
             // check for too many gems on ground
@@ -296,7 +296,7 @@ public class Q00255_Tutorial extends Quest {
     @RegisterType(ListenerRegisterType.ITEM)
     @Id(BLUE_GEM)
     public void OnPlayerItemPickup(OnPlayerItemPickup event) {
-        final L2PcInstance player = event.getActiveChar();
+        final Player player = event.getActiveChar();
         final QuestState qs = getQuestState(player, false);
         if ((qs != null) && (qs.getMemoState() < 3)) {
             qs.setMemoState(3);
@@ -349,7 +349,7 @@ public class Q00255_Tutorial extends Quest {
     @RegisterEvent(EventType.ON_PLAYER_BYPASS)
     @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
     public void OnPlayerBypass(OnPlayerBypass event) {
-        final L2PcInstance player = event.getActiveChar();
+        final Player player = event.getActiveChar();
         if (event.getCommand().startsWith(TUTORIAL_BYPASS))
         {
             notifyEvent(event.getCommand().replace(TUTORIAL_BYPASS, ""), null, player);
@@ -365,7 +365,7 @@ public class Q00255_Tutorial extends Quest {
             return;
         }
 
-        final L2PcInstance player = event.getActiveChar();
+        final Player player = event.getActiveChar();
         if (player.getLevel() > 6)
         {
             return;
@@ -378,12 +378,12 @@ public class Q00255_Tutorial extends Quest {
         }
     }
 
-    private void showTutorialHtml(L2PcInstance player, String html)
+    private void showTutorialHtml(Player player, String html)
     {
         player.sendPacket(new TutorialShowHtml(getHtm(player, html)));
     }
 
-    public void playTutorialVoice(L2PcInstance player, String voice)
+    public void playTutorialVoice(Player player, String voice)
     {
         player.sendPacket(new PlaySound(2, voice, 0, 0, player.getX(), player.getY(), player.getZ()));
     }

@@ -15,7 +15,7 @@ public final class RelationChanged extends ServerPacket {
     public static final int RELATION_PARTY1 = 0x00001; // party member
     public static final int RELATION_PARTY2 = 0x00002; // party member
     public static final int RELATION_PARTY3 = 0x00004; // party member
-    public static final int RELATION_PARTY4 = 0x00008; // party member (for information, see L2PcInstance.getRelation())
+    public static final int RELATION_PARTY4 = 0x00008; // party member (for information, see Player.getRelation())
     public static final int RELATION_PARTYLEADER = 0x00010; // true if is party leader
     public static final int RELATION_HAS_PARTY = 0x00020; // true if is in party
     public static final int RELATION_CLAN_MEMBER = 0x00040; // true if is in clan

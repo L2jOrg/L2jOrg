@@ -5,7 +5,7 @@ import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.data.xml.impl.PrimeShopData;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.instancemanager.MailManager;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.PrimeShopRequest;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.Mail;
@@ -14,8 +14,6 @@ import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.network.serverpackets.ExBRNewIconCashBtnWnd;
 import org.l2j.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
 import org.l2j.gameserver.network.serverpackets.primeshop.ExBRGamePoint;
-
-import java.nio.ByteBuffer;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
@@ -41,7 +39,7 @@ public final class RequestBRPresentBuyProduct extends RequestBuyProduct {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
 
         if (activeChar == null) {
             return;

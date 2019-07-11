@@ -19,7 +19,7 @@ package village.master.DarkElfChange1;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.util.GameUtils;
 
@@ -61,7 +61,7 @@ public final class DarkElfChange1 extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		if (GameUtils.isDigit(event))
 		{
@@ -99,7 +99,7 @@ public final class DarkElfChange1 extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		if (player.isSubClassActive())

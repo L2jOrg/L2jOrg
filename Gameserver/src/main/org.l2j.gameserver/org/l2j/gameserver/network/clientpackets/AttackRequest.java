@@ -4,7 +4,7 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.PcCondOverride;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
@@ -34,7 +34,7 @@ public final class AttackRequest extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }

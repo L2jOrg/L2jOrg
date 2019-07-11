@@ -19,7 +19,7 @@ package ai.others;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.MinionHolder;
 import org.l2j.gameserver.network.NpcStringId;
 
@@ -46,7 +46,7 @@ public final class TimakOrcTroopLeader extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(L2Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (npc.isMonster())
 		{

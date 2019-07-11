@@ -9,7 +9,7 @@ import org.l2j.gameserver.data.xml.impl.KarmaData;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
 import org.l2j.gameserver.model.cubic.CubicInstance;
@@ -470,7 +470,7 @@ public final class Formulas {
         }
 
         if (sendSysMsg && target.isPlayer()) {
-            final L2PcInstance enemy = target.getActingPlayer();
+            final Player enemy = target.getActingPlayer();
 
             switch (shldSuccess) {
                 case SHIELD_DEFENSE_SUCCEED: {
@@ -1029,7 +1029,7 @@ public final class Formulas {
      * @param finalExp
      * @return the amount of karma player has loosed.
      */
-    public static int calculateKarmaLost(L2PcInstance player, double finalExp) {
+    public static int calculateKarmaLost(Player player, double finalExp) {
         final double karmaLooseMul = KarmaData.getInstance().getMultiplier(player.getLevel());
         if (finalExp > 0) // Received exp
         {

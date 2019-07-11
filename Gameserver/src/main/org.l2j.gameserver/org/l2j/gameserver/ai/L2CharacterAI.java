@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -153,13 +153,13 @@ public class L2CharacterAI extends AbstractAI {
         }
 
         if (getIntention() == AI_INTENTION_REST) {
-            // Cancel action client side by sending Server->Client packet ActionFailed to the L2PcInstance actor
+            // Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
             clientActionFailed();
             return;
         }
 
         if (_actor.isAllSkillsDisabled() || _actor.isCastingNow() || _actor.isControlBlocked()) {
-            // Cancel action client side by sending Server->Client packet ActionFailed to the L2PcInstance actor
+            // Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
             clientActionFailed();
             return;
         }
@@ -199,7 +199,7 @@ public class L2CharacterAI extends AbstractAI {
      * <ul>
      * <li>Set the AI cast target</li>
      * <li>Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)</li>
-     * <li>Cancel action client side by sending Server->Client packet ActionFailed to the L2PcInstance actor</li>
+     * <li>Cancel action client side by sending Server->Client packet ActionFailed to the Player actor</li>
      * <li>Set the AI skill used by INTENTION_CAST</li>
      * <li>Set the Intention of this AI to AI_INTENTION_CAST</li>
      * <li>Launch the Think Event</li>
@@ -249,13 +249,13 @@ public class L2CharacterAI extends AbstractAI {
     @Override
     protected void onIntentionMoveTo(Location loc) {
         if (getIntention() == AI_INTENTION_REST) {
-            // Cancel action client side by sending Server->Client packet ActionFailed to the L2PcInstance actor
+            // Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
             clientActionFailed();
             return;
         }
 
         if (_actor.isAllSkillsDisabled() || _actor.isCastingNow()) {
-            // Cancel action client side by sending Server->Client packet ActionFailed to the L2PcInstance actor
+            // Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
             clientActionFailed();
             return;
         }
@@ -285,19 +285,19 @@ public class L2CharacterAI extends AbstractAI {
     @Override
     protected void onIntentionFollow(L2Character target) {
         if (getIntention() == AI_INTENTION_REST) {
-            // Cancel action client side by sending Server->Client packet ActionFailed to the L2PcInstance actor
+            // Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
             clientActionFailed();
             return;
         }
 
         if (_actor.isAllSkillsDisabled() || _actor.isCastingNow()) {
-            // Cancel action client side by sending Server->Client packet ActionFailed to the L2PcInstance actor
+            // Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
             clientActionFailed();
             return;
         }
 
         if (_actor.isMovementDisabled() || (_actor.getMoveSpeed() <= 0)) {
-            // Cancel action client side by sending Server->Client packet ActionFailed to the L2PcInstance actor
+            // Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
             clientActionFailed();
             return;
         }
@@ -336,13 +336,13 @@ public class L2CharacterAI extends AbstractAI {
     @Override
     protected void onIntentionPickUp(L2Object object) {
         if (getIntention() == AI_INTENTION_REST) {
-            // Cancel action client side by sending Server->Client packet ActionFailed to the L2PcInstance actor
+            // Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
             clientActionFailed();
             return;
         }
 
         if (_actor.isAllSkillsDisabled() || _actor.isCastingNow()) {
-            // Cancel action client side by sending Server->Client packet ActionFailed to the L2PcInstance actor
+            // Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
             clientActionFailed();
             return;
         }
@@ -382,13 +382,13 @@ public class L2CharacterAI extends AbstractAI {
     @Override
     protected void onIntentionInteract(L2Object object) {
         if (getIntention() == AI_INTENTION_REST) {
-            // Cancel action client side by sending Server->Client packet ActionFailed to the L2PcInstance actor
+            // Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
             clientActionFailed();
             return;
         }
 
         if (_actor.isAllSkillsDisabled() || _actor.isCastingNow()) {
-            // Cancel action client side by sending Server->Client packet ActionFailed to the L2PcInstance actor
+            // Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
             clientActionFailed();
             return;
         }
@@ -828,7 +828,7 @@ public class L2CharacterAI extends AbstractAI {
                 return true;
             }
 
-            // If not running, set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others L2PcInstance
+            // If not running, set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others Player
             if (!_actor.isRunning() && !(this instanceof L2PlayerAI) && !(this instanceof L2SummonAI)) {
                 _actor.setRunning();
             }
@@ -878,7 +878,7 @@ public class L2CharacterAI extends AbstractAI {
     protected boolean checkTargetLostOrDead(L2Character target) {
         if ((target == null) || target.isAlikeDead()) {
             // check if player is fakedeath
-            if ((target != null) && target.isPlayer() && ((L2PcInstance) target).isFakeDeath()) {
+            if ((target != null) && target.isPlayer() && ((Player) target).isFakeDeath()) {
                 target.stopFakeDeath(true);
                 return false;
             }
@@ -909,7 +909,7 @@ public class L2CharacterAI extends AbstractAI {
     protected boolean checkTargetLost(L2Object target) {
         // check if player is fakedeath
         if ((target != null) && target.isPlayer()) {
-            final L2PcInstance target2 = (L2PcInstance) target; // convert object to chara
+            final Player target2 = (Player) target; // convert object to chara
 
             if (target2.isFakeDeath()) {
                 target2.stopFakeDeath(true);

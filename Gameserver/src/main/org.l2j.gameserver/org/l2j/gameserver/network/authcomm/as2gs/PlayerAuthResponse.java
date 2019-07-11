@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.authcomm.as2gs;
 import org.l2j.commons.network.SessionKey;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.L2GameClient;
@@ -13,7 +13,6 @@ import org.l2j.gameserver.network.authcomm.ReceivablePacket;
 import org.l2j.gameserver.network.authcomm.gs2as.PlayerInGame;
 import org.l2j.gameserver.network.serverpackets.*;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 
 import static java.util.Objects.isNull;
@@ -93,7 +92,7 @@ public class PlayerAuthResponse extends ReceivablePacket {
             L2GameClient oldClient = AuthServerCommunication.getInstance().addAuthedClient(client);
             if(nonNull(oldClient))  {
                 oldClient.setConnectionState(ConnectionState.DISCONNECTED);
-                L2PcInstance activeChar = oldClient.getActiveChar();
+                Player activeChar = oldClient.getActiveChar();
 
                 if(nonNull(activeChar )) {
                     activeChar.sendPacket(SystemMessageId.YOU_ARE_LOGGED_IN_TO_TWO_PLACES_IF_YOU_SUSPECT_ACCOUNT_THEFT_WE_RECOMMEND_CHANGING_YOUR_PASSWORD_SCANNING_YOUR_COMPUTER_FOR_VIRUSES_AND_USING_AN_ANTI_VIRUS_SOFTWARE);

@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.PetitionManager;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
 
@@ -40,7 +40,7 @@ public class AdminPetition implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		int petitionId = -1;
 		
@@ -107,7 +107,7 @@ public class AdminPetition implements IAdminCommandHandler
 					activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 					return false;
 				}
-				final L2PcInstance targetPlayer = (L2PcInstance) targetChar;
+				final Player targetPlayer = (Player) targetChar;
 				
 				final String val = command.substring(15);
 				

@@ -20,7 +20,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Playable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayableExpChanged;
@@ -75,7 +75,7 @@ public final class SoulEating extends AbstractEffect
 		// TODO: Verify logic.
 		if (playable.isPlayer() && (exp >= _expNeeded))
 		{
-			final L2PcInstance player = playable.getActingPlayer();
+			final Player player = playable.getActingPlayer();
 			final int maxSouls = (int) player.getStat().getValue(Stats.MAX_SOULS, 0);
 			if (player.getChargedSouls() >= maxSouls)
 			{

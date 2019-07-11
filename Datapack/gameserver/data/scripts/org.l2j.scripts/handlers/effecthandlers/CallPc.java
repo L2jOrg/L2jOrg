@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.SummonRequestHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -59,8 +59,8 @@ public final class CallPc extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance target = effected.getActingPlayer();
-		final L2PcInstance activeChar = effector.getActingPlayer();
+		final Player target = effected.getActingPlayer();
+		final Player activeChar = effector.getActingPlayer();
 		if (checkSummonTargetStatus(target, activeChar))
 		{
 			if ((_itemId != 0) && (_itemCount != 0))
@@ -88,7 +88,7 @@ public final class CallPc extends AbstractEffect
 		}
 	}
 	
-	public static boolean checkSummonTargetStatus(L2PcInstance target, L2Character activeChar)
+	public static boolean checkSummonTargetStatus(Player target, L2Character activeChar)
 	{
 		if (target == activeChar)
 		{

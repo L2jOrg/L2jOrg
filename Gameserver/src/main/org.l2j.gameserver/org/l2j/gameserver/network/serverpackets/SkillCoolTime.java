@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.model.TimeStamp;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -19,7 +19,7 @@ import java.util.Map;
 public class SkillCoolTime extends ServerPacket {
     private final List<TimeStamp> _skillReuseTimeStamps = new ArrayList<>();
 
-    public SkillCoolTime(L2PcInstance player) {
+    public SkillCoolTime(Player player) {
         final Map<Long, TimeStamp> skillReuseTimeStamps = player.getSkillReuseTimeStamps();
         if (skillReuseTimeStamps != null) {
             for (TimeStamp ts : skillReuseTimeStamps.values()) {

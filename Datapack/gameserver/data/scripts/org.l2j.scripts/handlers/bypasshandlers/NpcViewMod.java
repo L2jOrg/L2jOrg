@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.stats.Stats;
@@ -55,7 +55,7 @@ public class NpcViewMod implements IBypassHandler
 	private static final int DROP_LIST_ITEMS_PER_PAGE = 10;
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character bypassOrigin)
+	public boolean useBypass(String command, Player activeChar, L2Character bypassOrigin)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		st.nextToken();
@@ -196,7 +196,7 @@ public class NpcViewMod implements IBypassHandler
 		return COMMANDS;
 	}
 	
-	public static void sendNpcView(L2PcInstance activeChar, L2Npc npc)
+	public static void sendNpcView(Player activeChar, L2Npc npc)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(activeChar, "data/html/mods/NpcView/Info.htm");
@@ -271,7 +271,7 @@ public class NpcViewMod implements IBypassHandler
 		activeChar.sendPacket(html);
 	}
 	
-	private static void sendNpcSkillView(L2PcInstance activeChar, L2Npc npc)
+	private static void sendNpcSkillView(Player activeChar, L2Npc npc)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(activeChar, "data/html/mods/NpcView/Skills.htm");
@@ -303,7 +303,7 @@ public class NpcViewMod implements IBypassHandler
 		activeChar.sendPacket(html);
 	}
 	
-	private static void sendAggroListView(L2PcInstance activeChar, L2Npc npc)
+	private static void sendAggroListView(Player activeChar, L2Npc npc)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(activeChar, "data/html/mods/NpcView/AggroList.htm");
@@ -358,7 +358,7 @@ public class NpcViewMod implements IBypassHandler
 		return sb.toString();
 	}
 	
-	private static void sendNpcDropList(L2PcInstance activeChar, L2Npc npc, DropType dropType, int page)
+	private static void sendNpcDropList(Player activeChar, L2Npc npc, DropType dropType, int page)
 	{
 		final List<DropHolder> dropList = npc.getTemplate().getDropList(dropType);
 		if (dropList == null)

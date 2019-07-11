@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
@@ -33,7 +33,7 @@ public class MaxCpFinalizer implements IStatsFunction {
         throwIfPresent(base);
 
         double baseValue = creature.getTemplate().getBaseValue(stat, 0);
-        final L2PcInstance player = creature.getActingPlayer();
+        final Player player = creature.getActingPlayer();
         if (player != null) {
             baseValue = player.getTemplate().getBaseCpMax(player.getLevel());
         }

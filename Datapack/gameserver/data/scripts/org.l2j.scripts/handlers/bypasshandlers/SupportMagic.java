@@ -22,7 +22,7 @@ import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.SkillCaster;
 
@@ -78,7 +78,7 @@ public class SupportMagic implements IBypassHandler
 	private static final int HASTE_LEVEL_2 = Config.MAX_NEWBIE_BUFF_LEVEL + 1; // disabled
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, Player activeChar, L2Character target)
 	{
 		if (!target.isNpc() || activeChar.isCursedWeaponEquipped())
 		{
@@ -96,7 +96,7 @@ public class SupportMagic implements IBypassHandler
 		return true;
 	}
 	
-	private static void makeSupportMagic(L2PcInstance player, L2Npc npc, boolean isSummon)
+	private static void makeSupportMagic(Player player, L2Npc npc, boolean isSummon)
 	{
 		final int level = player.getLevel();
 		if (isSummon && !player.hasServitors())

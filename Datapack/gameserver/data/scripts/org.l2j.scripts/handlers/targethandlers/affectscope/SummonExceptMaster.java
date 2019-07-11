@@ -23,7 +23,7 @@ import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
 import org.l2j.gameserver.util.GameUtils;
@@ -42,7 +42,7 @@ public class SummonExceptMaster implements IAffectScopeHandler
 		
 		if (target.isPlayable())
 		{
-			final L2PcInstance player = target.getActingPlayer();
+			final Player player = target.getActingPlayer();
 			//@formatter:off
 			player.getServitorsAndPets().stream()
 			.filter(c -> !c.isDead())

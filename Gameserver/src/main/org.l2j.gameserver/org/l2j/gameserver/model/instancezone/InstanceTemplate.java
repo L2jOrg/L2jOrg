@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Playable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2DoorTemplate;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.holders.InstanceReenterTimeHolder;
@@ -277,7 +277,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      * @param player player who wants to leave instance
      * @return exit location if instance has any, otherwise {@code null}
      */
-    public Location getExitLocation(L2PcInstance player) {
+    public Location getExitLocation(Player player) {
         Location location = null;
 
         switch (_exitLocationType) {
@@ -440,7 +440,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      *
      * @param player player which loose buffs
      */
-    public void removePlayerBuff(L2PcInstance player) {
+    public void removePlayerBuff(Player player) {
         // Make list of affected playable objects
         final List<L2Playable> affected = new ArrayList<>();
         affected.add(player);
@@ -544,7 +544,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      * @param player player who wants to enter
      * @return group type which can enter if any can enter, otherwise {@code null}
      */
-    private final GroupType getEnterGroupType(L2PcInstance player) {
+    private final GroupType getEnterGroupType(Player player) {
         // If mask doesn't contain any group
         if (_groupMask == 0) {
             return null;
@@ -579,19 +579,19 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
     }
 
     /**
-     * Get player's group based on result of {@link InstanceTemplate#getEnterGroupType(L2PcInstance)}.
+     * Get player's group based on result of {@link InstanceTemplate#getEnterGroupType(Player)}.
      *
      * @param player player who wants to enter into instance
      * @return list of players (first player in list is player who make enter request)
      */
-    public List<L2PcInstance> getEnterGroup(L2PcInstance player) {
+    public List<Player> getEnterGroup(Player player) {
         final GroupType type = getEnterGroupType(player);
         if (type == null) {
             return null;
         }
 
         // Make list of players which can enter into instance world
-        final List<L2PcInstance> group = new ArrayList<>();
+        final List<Player> group = new ArrayList<>();
         group.add(player); // Put player who made request at first position inside list
 
         // Check if player has group in which he can enter
@@ -617,7 +617,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      * @param htmlCallback callback function used to display fail HTML when condition validate failed
      * @return {@code true} when all condition are met, otherwise {@code false}
      */
-    public boolean validateConditions(List<L2PcInstance> group, L2Npc npc, BiConsumer<L2PcInstance, String> htmlCallback) {
+    public boolean validateConditions(List<Player> group, L2Npc npc, BiConsumer<Player, String> htmlCallback) {
         for (Condition cond : _conditions) {
             if (!cond.validate(npc, group, htmlCallback)) {
                 return false;
@@ -631,7 +631,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      *
      * @param group players from enter group
      */
-    public void applyConditionEffects(List<L2PcInstance> group) {
+    public void applyConditionEffects(List<Player> group) {
         _conditions.forEach(c -> c.applyEffect(group));
     }
 

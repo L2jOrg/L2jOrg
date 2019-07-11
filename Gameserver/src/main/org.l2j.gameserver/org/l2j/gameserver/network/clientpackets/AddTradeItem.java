@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.TradeList;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.TradeOtherAdd;
@@ -32,7 +32,7 @@ public final class AddTradeItem extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if (player == null) {
             return;
         }
@@ -43,7 +43,7 @@ public final class AddTradeItem extends ClientPacket {
             return;
         }
 
-        final L2PcInstance partner = trade.getPartner();
+        final Player partner = trade.getPartner();
         if ((partner == null) || (L2World.getInstance().getPlayer(partner.getObjectId()) == null) || (partner.getActiveTradeList() == null)) {
             // Trade partner not found, cancel trade
             if (partner != null) {

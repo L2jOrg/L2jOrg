@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 public class RequestTutorialLinkHtml extends ClientPacket {
     private String _bypass;
@@ -16,7 +16,7 @@ public class RequestTutorialLinkHtml extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if (player == null) {
             return;
         }

@@ -20,7 +20,7 @@ import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
 
 /**
@@ -36,7 +36,7 @@ public class Clan implements IAffectObjectHandler
 			return true;
 		}
 		
-		final L2PcInstance player = activeChar.getActingPlayer();
+		final Player player = activeChar.getActingPlayer();
 		if (player != null)
 		{
 			final L2Clan clan = player.getClan();

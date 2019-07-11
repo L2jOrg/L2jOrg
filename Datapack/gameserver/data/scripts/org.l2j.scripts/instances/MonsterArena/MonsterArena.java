@@ -5,7 +5,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExSendUIEvent;
@@ -55,7 +55,7 @@ public class MonsterArena extends AbstractInstance
 	private static final int TICKET_M = 90946;
 	private static final int TICKET_H = 90947;
 	// Misc
-	private static final List<L2PcInstance> REWARDED_PLAYERS = new CopyOnWriteArrayList<>();
+	private static final List<Player> REWARDED_PLAYERS = new CopyOnWriteArrayList<>();
 	private static final String MONSTER_ARENA_VARIABLE = "MA_C";
 	private static final int TEMPLATE_ID = 192;
 	
@@ -70,7 +70,7 @@ public class MonsterArena extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -86,7 +86,7 @@ public class MonsterArena extends AbstractInstance
 				// If you died, you may return to the arena.
 				if ((player.getClan() != null) && (player.getCommandChannel() != null))
 				{
-					for (L2PcInstance member : player.getCommandChannel().getMembers())
+					for (Player member : player.getCommandChannel().getMembers())
 					{
 						final Instance world = member.getInstanceWorld();
 						if ((world != null) && (world.getTemplateId() == TEMPLATE_ID) && (world.getPlayersCount() < 40) && (player.getClanId() == member.getClanId()))
@@ -111,7 +111,7 @@ public class MonsterArena extends AbstractInstance
 					player.sendMessage("Your clan must be at least level 3.");
 					return null;
 				}
-				for (L2PcInstance member : player.getCommandChannel().getMembers())
+				for (Player member : player.getCommandChannel().getMembers())
 				{
 					if ((member.getClan() == null) || (member.getClanId() != player.getClanId()))
 					{
@@ -162,7 +162,7 @@ public class MonsterArena extends AbstractInstance
 				if (world != null)
 				{
 					world.setStatus(1);
-					for (L2PcInstance plr : world.getPlayers())
+					for (Player plr : world.getPlayers())
 					{
 						plr.sendPacket(new ExSendUIEvent(plr, false, false, 1200, 0, NpcStringId.REMAINING_TIME));
 					}
@@ -250,13 +250,13 @@ public class MonsterArena extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceLeave(L2PcInstance player, Instance instance)
+	public void onInstanceLeave(Player player, Instance instance)
 	{
 		player.sendPacket(new ExSendUIEvent(player, false, false, 0, 0, NpcStringId.REMAINING_TIME));
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(L2Npc npc, Player player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -282,7 +282,7 @@ public class MonsterArena extends AbstractInstance
 			}
 			else // Finish.
 			{
-				for (L2PcInstance plr : world.getPlayers())
+				for (Player plr : world.getPlayers())
 				{
 					plr.sendPacket(new ExSendUIEvent(plr, false, false, 0, 0, NpcStringId.REMAINING_TIME));
 				}
@@ -293,7 +293,7 @@ public class MonsterArena extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		return npc.getId() + "-01.htm";
 	}

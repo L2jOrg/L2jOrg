@@ -26,7 +26,7 @@ import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 
@@ -81,7 +81,7 @@ public final class PolymorphingOnAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(L2Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (npc.isSpawned() && !npc.isDead())
 		{

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.events.impl.instance;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -10,9 +10,9 @@ import org.l2j.gameserver.model.instancezone.Instance;
  */
 public final class OnInstanceCreated implements IBaseEvent {
     private final Instance _instance;
-    private final L2PcInstance _creator;
+    private final Player _creator;
 
-    public OnInstanceCreated(Instance instance, L2PcInstance creator) {
+    public OnInstanceCreated(Instance instance, Player creator) {
         _instance = instance;
         _creator = creator;
     }
@@ -21,7 +21,7 @@ public final class OnInstanceCreated implements IBaseEvent {
         return _instance;
     }
 
-    public L2PcInstance getCreator() {
+    public Player getCreator() {
         return _creator;
     }
 

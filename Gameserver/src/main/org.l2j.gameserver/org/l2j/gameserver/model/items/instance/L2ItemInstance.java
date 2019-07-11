@@ -19,7 +19,7 @@ import org.l2j.gameserver.instancemanager.SiegeGuardManager;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.entity.Castle;
@@ -276,10 +276,10 @@ public final class L2ItemInstance extends L2Object {
      *
      * @param process   : String Identifier of process triggering this action
      * @param owner_id  : int designating the ID of the owner
-     * @param creator   : L2PcInstance Player requesting the item creation
+     * @param creator   : Player Player requesting the item creation
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      */
-    public void setOwnerId(String process, int owner_id, L2PcInstance creator, Object reference) {
+    public void setOwnerId(String process, int owner_id, Player creator, Object reference) {
         setOwnerId(owner_id);
 
         if (Config.LOG_ITEMS) {
@@ -414,10 +414,10 @@ public final class L2ItemInstance extends L2Object {
      *
      * @param process   : String Identifier of process triggering this action
      * @param count     : int
-     * @param creator   : L2PcInstance Player requesting the item creation
+     * @param creator   : Player Player requesting the item creation
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      */
-    public void changeCount(String process, long count, L2PcInstance creator, Object reference) {
+    public void changeCount(String process, long count, Player creator, Object reference) {
         if (count == 0) {
             return;
         }
@@ -474,7 +474,7 @@ public final class L2ItemInstance extends L2Object {
     }
 
     // No logging (function designed for shots only)
-    public void changeCountWithoutTrace(int count, L2PcInstance creator, Object reference) {
+    public void changeCountWithoutTrace(int count, Player creator, Object reference) {
         changeCount(null, count, creator, reference);
     }
 
@@ -779,7 +779,7 @@ public final class L2ItemInstance extends L2Object {
      * @param allowNonTradeable
      * @return if item is available for manipulation
      */
-    public boolean isAvailable(L2PcInstance player, boolean allowAdena, boolean allowNonTradeable) {
+    public boolean isAvailable(Player player, boolean allowAdena, boolean allowNonTradeable) {
         final L2Summon pet = player.getPet();
 
         return ((!isEquipped()) // Not equipped
@@ -1138,7 +1138,7 @@ public final class L2ItemInstance extends L2Object {
             _consumingMana = false;
         }
 
-        final L2PcInstance player = getActingPlayer();
+        final Player player = getActingPlayer();
         if (player != null) {
             SystemMessage sm;
             switch (_mana) {
@@ -1482,7 +1482,7 @@ public final class L2ItemInstance extends L2Object {
     }
 
     public void endOfLife() {
-        final L2PcInstance player = getActingPlayer();
+        final Player player = getActingPlayer();
         if (player != null) {
             if (isEquipped()) {
                 final L2ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(getLocationSlot());
@@ -1526,7 +1526,7 @@ public final class L2ItemInstance extends L2Object {
     }
 
     @Override
-    public void sendInfo(L2PcInstance activeChar) {
+    public void sendInfo(Player activeChar) {
         if (_dropperObjectId != 0) {
             activeChar.sendPacket(new DropItem(this, _dropperObjectId));
         } else {
@@ -1575,7 +1575,7 @@ public final class L2ItemInstance extends L2Object {
     }
 
     public int getOlyEnchantLevel() {
-        final L2PcInstance player = getActingPlayer();
+        final Player player = getActingPlayer();
         int enchant = _enchantLevel;
 
         if (player == null) {
@@ -1598,7 +1598,7 @@ public final class L2ItemInstance extends L2Object {
             return;
         }
 
-        final L2PcInstance player = getActingPlayer();
+        final Player player = getActingPlayer();
         if (player != null) {
             _item.forEachSkill(ItemSkillType.NORMAL, holder ->
             {
@@ -1615,7 +1615,7 @@ public final class L2ItemInstance extends L2Object {
             return;
         }
 
-        final L2PcInstance player = getActingPlayer();
+        final Player player = getActingPlayer();
         if (player != null) {
             _item.forEachSkill(ItemSkillType.NORMAL, holder ->
             {
@@ -1633,7 +1633,7 @@ public final class L2ItemInstance extends L2Object {
     }
 
     @Override
-    public L2PcInstance getActingPlayer() {
+    public Player getActingPlayer() {
         return L2World.getInstance().getPlayer(getOwnerId());
     }
 
@@ -1645,7 +1645,7 @@ public final class L2ItemInstance extends L2Object {
      * @param activeChar
      * @param command
      */
-    public void onBypassFeedback(L2PcInstance activeChar, String command) {
+    public void onBypassFeedback(Player activeChar, String command) {
         if (command.startsWith("Quest")) {
             final String questName = command.substring(6);
             String event = null;
@@ -1761,7 +1761,7 @@ public final class L2ItemInstance extends L2Object {
 
             final Skill skill = option.getSkill();
             if (skill != null) {
-                final L2PcInstance player = getActingPlayer();
+                final Player player = getActingPlayer();
                 if (player != null) {
                     player.removeSkill(skill.getId());
                 }
@@ -1774,7 +1774,7 @@ public final class L2ItemInstance extends L2Object {
     private void applySpecialAbility(EnsoulOption option) {
         final Skill skill = option.getSkill();
         if (skill != null) {
-            final L2PcInstance player = getActingPlayer();
+            final Player player = getActingPlayer();
             if (player != null) {
                 if (player.getSkillLevel(skill.getId()) != skill.getLevel()) {
                     player.addSkill(skill, false);
@@ -1786,7 +1786,7 @@ public final class L2ItemInstance extends L2Object {
     private void clearSpecialAbility(EnsoulOption option) {
         final Skill skill = option.getSkill();
         if (skill != null) {
-            final L2PcInstance player = getActingPlayer();
+            final Player player = getActingPlayer();
             if (player != null) {
                 player.removeSkill(skill, false, true);
             }
@@ -1854,7 +1854,7 @@ public final class L2ItemInstance extends L2Object {
      * Clears all the enchant bonuses if item is enchanted and containing bonuses for enchant value.
      */
     public void clearEnchantStats() {
-        final L2PcInstance player = getActingPlayer();
+        final Player player = getActingPlayer();
         if (player == null) {
             _enchantOptions.clear();
             return;
@@ -1870,7 +1870,7 @@ public final class L2ItemInstance extends L2Object {
      * Clears and applies all the enchant bonuses if item is enchanted and containing bonuses for enchant value.
      */
     public void applyEnchantStats() {
-        final L2PcInstance player = getActingPlayer();
+        final Player player = getActingPlayer();
         if (!isEquipped() || (player == null) || (getEnchantOptions() == DEFAULT_ENCHANT_OPTIONS)) {
             return;
         }

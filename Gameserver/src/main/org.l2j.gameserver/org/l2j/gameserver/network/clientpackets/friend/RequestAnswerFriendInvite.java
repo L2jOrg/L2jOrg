@@ -17,7 +17,7 @@
 package org.l2j.gameserver.network.clientpackets.friend;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -42,12 +42,12 @@ public final class RequestAnswerFriendInvite extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if (player == null) {
             return;
         }
 
-        final L2PcInstance requestor = player.getActiveRequester();
+        final Player requestor = player.getActiveRequester();
         if (requestor == null) {
             return;
         }

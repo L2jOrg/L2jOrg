@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.primeshop;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
 import org.l2j.gameserver.network.L2GameClient;
@@ -15,7 +15,7 @@ public class ExBRProductInfo extends ServerPacket {
     private final int _charPoints;
     private final long _charAdena;
 
-    public ExBRProductInfo(PrimeShopProduct item, L2PcInstance player) {
+    public ExBRProductInfo(PrimeShopProduct item, Player player) {
         _item = item;
         _charPoints = player.getL2Coins();
         _charAdena = player.getAdena();

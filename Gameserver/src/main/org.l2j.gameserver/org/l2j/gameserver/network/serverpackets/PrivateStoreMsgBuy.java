@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -8,7 +8,7 @@ public class PrivateStoreMsgBuy extends ServerPacket {
     private final int _objId;
     private String _storeMsg;
 
-    public PrivateStoreMsgBuy(L2PcInstance player) {
+    public PrivateStoreMsgBuy(Player player) {
         _objId = player.getObjectId();
         if (player.getBuyList() != null) {
             _storeMsg = player.getBuyList().getTitle();

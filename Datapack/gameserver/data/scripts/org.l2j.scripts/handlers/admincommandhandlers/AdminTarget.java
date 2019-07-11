@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.BuilderUtil;
 
 /**
@@ -33,7 +33,7 @@ public class AdminTarget implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_target"))
 		{
@@ -48,12 +48,12 @@ public class AdminTarget implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleTarget(String command, L2PcInstance activeChar)
+	private void handleTarget(String command, Player activeChar)
 	{
 		try
 		{
 			final String targetName = command.substring(13);
-			final L2PcInstance player = L2World.getInstance().getPlayer(targetName);
+			final Player player = L2World.getInstance().getPlayer(targetName);
 			if (player != null)
 			{
 				player.onAction(activeChar);

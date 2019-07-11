@@ -44,7 +44,7 @@ public class L2DefenderInstance extends L2Attackable {
             return false;
         }
 
-        final L2PcInstance player = attacker.getActingPlayer();
+        final Player player = attacker.getActingPlayer();
 
         // Check if siege is in progress
         if (((_fort != null) && _fort.getZone().isActive()) || ((_castle != null) && _castle.getZone().isActive())) {
@@ -100,15 +100,15 @@ public class L2DefenderInstance extends L2Attackable {
      * Custom onAction behaviour. Note that super() is not called because guards need extra check to see if a player should interact or ATTACK them when clicked.
      */
     @Override
-    public void onAction(L2PcInstance player, boolean interact) {
+    public void onAction(Player player, boolean interact) {
         if (!canTarget(player)) {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
-        // Check if the L2PcInstance already target the L2NpcInstance
+        // Check if the Player already target the L2NpcInstance
         if (this != player.getTarget()) {
-            // Set the target of the L2PcInstance player
+            // Set the target of the Player player
             player.setTarget(this);
         } else if (interact) {
             if (isAutoAttackable(player) && !isAlikeDead()) {
@@ -119,12 +119,12 @@ public class L2DefenderInstance extends L2Attackable {
             }
             if (!isAutoAttackable(player)) {
                 if (!canInteract(player)) {
-                    // Notify the L2PcInstance AI with AI_INTENTION_INTERACT
+                    // Notify the Player AI with AI_INTENTION_INTERACT
                     player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
                 }
             }
         }
-        // Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
+        // Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
         player.sendPacket(ActionFailed.STATIC_PACKET);
     }
 
@@ -144,7 +144,7 @@ public class L2DefenderInstance extends L2Attackable {
                         lowestHpValue = targetHp;
                     }
                 } else if (nearby.isPlayer()) {
-                    final L2PcInstance player = (L2PcInstance) nearby;
+                    final Player player = (Player) nearby;
                     if ((player.getSiegeState() == 2) && !player.isRegisteredOnThisSiegeField(getScriptValue())) {
                         final double targetHp = nearby.getCurrentHp();
                         if (lowestHpValue > targetHp) {
@@ -167,7 +167,7 @@ public class L2DefenderInstance extends L2Attackable {
 
         if (!(attacker instanceof L2DefenderInstance)) {
             if ((damage == 0) && (aggro <= 1) && (attacker.isPlayable())) {
-                final L2PcInstance player = attacker.getActingPlayer();
+                final Player player = attacker.getActingPlayer();
                 // Check if siege is in progress
                 if (((_fort != null) && _fort.getZone().isActive()) || ((_castle != null) && _castle.getZone().isActive())) {
                     final int activeSiegeId = (_fort != null) ? _fort.getResidenceId() : _castle.getResidenceId();

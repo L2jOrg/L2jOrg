@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -43,7 +43,7 @@ public class AdminExpSp implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_add_exp_sp"))
 		{
@@ -85,13 +85,13 @@ public class AdminExpSp implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void addExpSp(L2PcInstance activeChar)
+	private void addExpSp(Player activeChar)
 	{
 		final L2Object target = activeChar.getTarget();
-		L2PcInstance player = null;
+		Player player = null;
 		if ((target != null) && target.isPlayer())
 		{
-			player = (L2PcInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -108,13 +108,13 @@ public class AdminExpSp implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private boolean adminAddExpSp(L2PcInstance activeChar, String ExpSp)
+	private boolean adminAddExpSp(Player activeChar, String ExpSp)
 	{
 		final L2Object target = activeChar.getTarget();
-		L2PcInstance player = null;
+		Player player = null;
 		if ((target != null) && target.isPlayer())
 		{
-			player = (L2PcInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -151,13 +151,13 @@ public class AdminExpSp implements IAdminCommandHandler
 		return true;
 	}
 	
-	private boolean adminRemoveExpSP(L2PcInstance activeChar, String ExpSp)
+	private boolean adminRemoveExpSP(Player activeChar, String ExpSp)
 	{
 		final L2Object target = activeChar.getTarget();
-		L2PcInstance player = null;
+		Player player = null;
 		if ((target != null) && target.isPlayer())
 		{
-			player = (L2PcInstance) target;
+			player = (Player) target;
 		}
 		else
 		{

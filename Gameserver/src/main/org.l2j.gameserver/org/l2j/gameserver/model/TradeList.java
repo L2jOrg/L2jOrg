@@ -2,7 +2,7 @@ package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.ItemTable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
 import org.l2j.gameserver.model.items.L2Item;
@@ -29,28 +29,28 @@ import java.util.concurrent.ConcurrentHashMap;
 public class TradeList {
     private static final Logger LOGGER = LoggerFactory.getLogger(TradeList.class);
 
-    private final L2PcInstance _owner;
+    private final Player _owner;
     private final Set<TradeItem> _items = ConcurrentHashMap.newKeySet();
-    private L2PcInstance _partner;
+    private Player _partner;
     private String _title;
     private boolean _packaged;
 
     private boolean _confirmed = false;
     private boolean _locked = false;
 
-    public TradeList(L2PcInstance owner) {
+    public TradeList(Player owner) {
         _owner = owner;
     }
 
-    public L2PcInstance getOwner() {
+    public Player getOwner() {
         return _owner;
     }
 
-    public L2PcInstance getPartner() {
+    public Player getPartner() {
         return _partner;
     }
 
-    public void setPartner(L2PcInstance partner) {
+    public void setPartner(Player partner) {
         _partner = partner;
     }
 
@@ -403,7 +403,7 @@ public class TradeList {
      * @param partnerIU
      * @return
      */
-    private boolean TransferItems(L2PcInstance partner, InventoryUpdate ownerIU, InventoryUpdate partnerIU) {
+    private boolean TransferItems(Player partner, InventoryUpdate ownerIU, InventoryUpdate partnerIU) {
         for (TradeItem titem : _items) {
             final L2ItemInstance oldItem = _owner.getInventory().getItemByObjectId(titem.getObjectId());
             if (oldItem == null) {
@@ -438,7 +438,7 @@ public class TradeList {
      * @param partner
      * @return items slots count
      */
-    private int countItemsSlots(L2PcInstance partner) {
+    private int countItemsSlots(Player partner) {
         int slots = 0;
 
         for (TradeItem item : _items) {
@@ -529,7 +529,7 @@ public class TradeList {
      * @param items
      * @return int: result of trading. 0 - ok, 1 - canceled (no adena), 2 - failed (item error)
      */
-    public synchronized int privateStoreBuy(L2PcInstance player, Set<ItemRequest> items) {
+    public synchronized int privateStoreBuy(Player player, Set<ItemRequest> items) {
         if (_locked) {
             return 1;
         }
@@ -716,7 +716,7 @@ public class TradeList {
      * @param requestedItems
      * @return : boolean true if success
      */
-    public synchronized boolean privateStoreSell(L2PcInstance player, ItemRequest[] requestedItems) {
+    public synchronized boolean privateStoreSell(Player player, ItemRequest[] requestedItems) {
         if (_locked || !_owner.isOnline() || !player.isOnline()) {
             return false;
         }

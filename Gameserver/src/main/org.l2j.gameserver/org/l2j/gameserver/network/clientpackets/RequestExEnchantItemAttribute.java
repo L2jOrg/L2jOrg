@@ -5,7 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.Elementals;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemAttributeRequest;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -28,7 +28,7 @@ public class RequestExEnchantItemAttribute extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if (player == null) {
             return;
         }
@@ -215,7 +215,7 @@ public class RequestExEnchantItemAttribute extends ClientPacket {
         player.sendInventoryUpdate(iu);
     }
 
-    private int addElement(L2PcInstance player, L2ItemInstance stone, L2ItemInstance item, AttributeType elementToAdd) {
+    private int addElement(Player player, L2ItemInstance stone, L2ItemInstance item, AttributeType elementToAdd) {
         final AttributeHolder oldElement = item.getAttribute(elementToAdd);
         final int elementValue = oldElement == null ? 0 : oldElement.getValue();
         final int limit = getLimit(item, stone.getId());

@@ -1,15 +1,15 @@
 package org.l2j.gameserver.model.actor.tasks.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
  * @author Mobius
  */
 public class HennaDurationTask implements Runnable {
-    private final L2PcInstance _player;
+    private final Player _player;
     private final int _slot;
 
-    public HennaDurationTask(L2PcInstance player, int slot) {
+    public HennaDurationTask(Player player, int slot) {
         _player = player;
         _slot = slot;
     }

@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.actor.instance.L2MerchantInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Castle.CastleFunction;
 import org.l2j.gameserver.model.entity.Fort;
@@ -132,14 +132,14 @@ public final class CastleChamberlain extends AbstractNpcAI
 		addFirstTalkId(NPC);
 	}
 	
-	private NpcHtmlMessage getHtmlPacket(L2PcInstance player, L2Npc npc, String htmlFile)
+	private NpcHtmlMessage getHtmlPacket(Player player, L2Npc npc, String htmlFile)
 	{
 		final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
 		packet.setHtml(getHtm(player, htmlFile));
 		return packet;
 	}
 	
-	private final String funcConfirmHtml(L2PcInstance player, L2Npc npc, Castle castle, int func, int level)
+	private final String funcConfirmHtml(Player player, L2Npc npc, Castle castle, int func, int level)
 	{
 		if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_SET_FUNCTIONS))
 		{
@@ -377,13 +377,13 @@ public final class CastleChamberlain extends AbstractNpcAI
 	// return false;
 	// }
 	
-	private final boolean isOwner(L2PcInstance player, L2Npc npc)
+	private final boolean isOwner(Player player, L2Npc npc)
 	{
 		return player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId()));
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		final Castle castle = npc.getCastle();
 		final StringTokenizer st = new StringTokenizer(event, " ");
@@ -1175,7 +1175,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		return (isOwner(player, npc)) ? "chamberlain-01.html" : "chamberlain-04.html";
 	}
@@ -1187,7 +1187,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 	// @formatter:on
 	public final void onNpcManorBypass(OnNpcManorBypass evt)
 	{
-		final L2PcInstance player = evt.getActiveChar();
+		final Player player = evt.getActiveChar();
 		final L2Npc npc = evt.getTarget();
 		if (isOwner(player, npc))
 		{

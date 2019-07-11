@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.conditions;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.items.L2Item;
@@ -67,7 +67,7 @@ public final class ConditionSiegeZone extends Condition {
             return false;
         }
 
-        final L2PcInstance player = (L2PcInstance) activeChar;
+        final Player player = (Player) activeChar;
 
         if (((castle == null) || (castle.getResidenceId() <= 0))) {
             if ((value & COND_NOT_ZONE) != 0) {
@@ -101,7 +101,7 @@ public final class ConditionSiegeZone extends Condition {
             return false;
         }
 
-        final L2PcInstance player = (L2PcInstance) activeChar;
+        final Player player = (Player) activeChar;
 
         if (((fort == null) || (fort.getResidenceId() <= 0))) {
             if ((value & COND_NOT_ZONE) != 0) {

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -12,7 +12,7 @@ import java.util.Set;
 public class ExShowContactList extends ServerPacket {
     private final Set<String> _contacts;
 
-    public ExShowContactList(L2PcInstance player) {
+    public ExShowContactList(Player player) {
         _contacts = player.getContactList().getAllContacts();
     }
 

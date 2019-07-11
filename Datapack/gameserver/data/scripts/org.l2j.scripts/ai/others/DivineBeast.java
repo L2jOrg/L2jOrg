@@ -18,7 +18,7 @@ package ai.others;
 
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 import ai.AbstractNpcAI;
 
@@ -44,7 +44,7 @@ public final class DivineBeast extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		if ((player == null) || !player.hasServitors())
 		{

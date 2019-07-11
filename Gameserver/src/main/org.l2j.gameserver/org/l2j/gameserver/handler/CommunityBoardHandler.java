@@ -1,7 +1,7 @@
 package org.l2j.gameserver.handler;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
@@ -38,7 +38,7 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
      * @param html   the HTML to send
      * @param player the player
      */
-    public static void separateAndSend(String html, L2PcInstance player) {
+    public static void separateAndSend(String html, Player player) {
         GameUtils.sendCBHtml(player, html);
     }
 
@@ -89,7 +89,7 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
      * @param command the command
      * @param player  the player
      */
-    public void handleParseCommand(String command, L2PcInstance player) {
+    public void handleParseCommand(String command, Player player) {
         if (player == null) {
             return;
         }
@@ -119,7 +119,7 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
      * @param arg4   the fourth argument
      * @param arg5   the fifth argument
      */
-    public void handleWriteCommand(L2PcInstance player, String url, String arg1, String arg2, String arg3, String arg4, String arg5) {
+    public void handleWriteCommand(Player player, String url, String arg1, String arg2, String arg3, String arg4, String arg5) {
         if (player == null) {
             return;
         }
@@ -173,7 +173,7 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
      * @param title  the title
      * @param bypass the bypass
      */
-    public void addBypass(L2PcInstance player, String title, String bypass) {
+    public void addBypass(Player player, String title, String bypass) {
         _bypasses.put(player.getObjectId(), title + "&" + bypass);
     }
 
@@ -183,7 +183,7 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
      * @param player the player
      * @return the last bypass used
      */
-    public String removeBypass(L2PcInstance player) {
+    public String removeBypass(Player player) {
         return _bypasses.remove(player.getObjectId());
     }
 

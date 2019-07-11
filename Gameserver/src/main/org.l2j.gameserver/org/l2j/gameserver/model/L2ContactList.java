@@ -18,7 +18,7 @@ package org.l2j.gameserver.model;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
@@ -44,10 +44,10 @@ public class L2ContactList {
     private static final String QUERY_ADD = "INSERT INTO character_contacts (charId, contactId) VALUES (?, ?)";
     private static final String QUERY_REMOVE = "DELETE FROM character_contacts WHERE charId = ? and contactId = ?";
     private static final String QUERY_LOAD = "SELECT contactId FROM character_contacts WHERE charId = ?";
-    private final L2PcInstance activeChar;
+    private final Player activeChar;
     private final Set<String> _contacts = ConcurrentHashMap.newKeySet();
 
-    public L2ContactList(L2PcInstance player) {
+    public L2ContactList(Player player) {
         activeChar = player;
         restore();
     }

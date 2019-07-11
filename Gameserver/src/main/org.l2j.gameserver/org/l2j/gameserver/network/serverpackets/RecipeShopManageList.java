@@ -2,18 +2,18 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.L2ManufactureItem;
 import org.l2j.gameserver.model.L2RecipeList;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.Iterator;
 
 public class RecipeShopManageList extends ServerPacket {
-    private final L2PcInstance _seller;
+    private final Player _seller;
     private final boolean _isDwarven;
     private L2RecipeList[] _recipes;
 
-    public RecipeShopManageList(L2PcInstance seller, boolean isDwarven) {
+    public RecipeShopManageList(Player seller, boolean isDwarven) {
         _seller = seller;
         _isDwarven = isDwarven;
 

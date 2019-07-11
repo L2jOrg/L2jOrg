@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.network.L2GameClient;
@@ -15,7 +15,7 @@ public final class BuyList extends AbstractItemPacket {
     private final int _inventorySlots;
     private final double _castleTaxRate;
 
-    public BuyList(ProductList list, L2PcInstance player, double castleTaxRate) {
+    public BuyList(ProductList list, Player player, double castleTaxRate) {
         _listId = list.getListId();
         _list = list.getProducts();
         _money = player.getAdena();

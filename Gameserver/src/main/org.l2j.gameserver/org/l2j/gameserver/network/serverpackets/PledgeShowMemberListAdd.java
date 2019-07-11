@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.L2ClanMember;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -12,7 +12,7 @@ public final class PledgeShowMemberListAdd extends ServerPacket {
     private final int _isOnline;
     private final int _pledgeType;
 
-    public PledgeShowMemberListAdd(L2PcInstance player) {
+    public PledgeShowMemberListAdd(Player player) {
         _name = player.getName();
         _lvl = player.getLevel();
         _classId = player.getClassId().getId();

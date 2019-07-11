@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.entity;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.idfactory.IdFactory;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -65,7 +65,7 @@ public class Couple {
         }
     }
 
-    public Couple(L2PcInstance player1, L2PcInstance player2) {
+    public Couple(Player player1, Player player2) {
         final int _tempPlayer1Id = player1.getObjectId();
         final int _tempPlayer2Id = player2.getObjectId();
 

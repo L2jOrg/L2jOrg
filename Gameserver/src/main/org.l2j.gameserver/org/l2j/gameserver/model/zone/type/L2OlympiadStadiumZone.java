@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2j.gameserver.model.zone.AbstractZoneSettings;
 import org.l2j.gameserver.model.zone.L2ZoneRespawn;
@@ -70,7 +70,7 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn {
         }
 
         if (character.isPlayable()) {
-            final L2PcInstance player = character.getActingPlayer();
+            final Player player = character.getActingPlayer();
             if (player != null) {
                 // only participants, observers and GMs allowed
                 if (!player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && !player.isInOlympiadMode() && !player.inObserverMode()) {
@@ -112,9 +112,9 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn {
     }
 
     private static final class KickPlayer implements Runnable {
-        private L2PcInstance _player;
+        private Player _player;
 
-        protected KickPlayer(L2PcInstance player) {
+        protected KickPlayer(Player player) {
             _player = player;
         }
 

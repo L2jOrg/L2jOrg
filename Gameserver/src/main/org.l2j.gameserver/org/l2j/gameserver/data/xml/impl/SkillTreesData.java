@@ -14,7 +14,7 @@ import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2SkillLearn;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.SocialClass;
@@ -338,7 +338,7 @@ public final class SkillTreesData extends GameXmlReader {
         return gameMasterAuraSkillTree.values().stream().map(entry -> SkillData.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
     }
 
-    public boolean hasAvailableSkills(L2PcInstance player, ClassId classId) {
+    public boolean hasAvailableSkills(Player player, ClassId classId) {
         final LongObjectMap<L2SkillLearn> skills = getCompleteClassSkillTree(classId);
 
         for (L2SkillLearn skill : skills.values()) {
@@ -364,7 +364,7 @@ public final class SkillTreesData extends GameXmlReader {
      * @param includeAutoGet if {@code true} Auto-Get skills will be included
      * @return all available skills for a given {@code player}, {@code classId}, {@code includeByFs} and {@code includeAutoGet}
      */
-    public List<L2SkillLearn> getAvailableSkills(L2PcInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet) {
+    public List<L2SkillLearn> getAvailableSkills(Player player, ClassId classId, boolean includeByFs, boolean includeAutoGet) {
         return getAvailableSkills(player, classId, includeByFs, includeAutoGet, player);
     }
 
@@ -378,7 +378,7 @@ public final class SkillTreesData extends GameXmlReader {
      * @param holder         the skill holder
      * @return all available skills for a given {@code player}, {@code classId}, {@code includeByFs} and {@code includeAutoGet}
      */
-    private List<L2SkillLearn> getAvailableSkills(L2PcInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet, ISkillsHolder holder) {
+    private List<L2SkillLearn> getAvailableSkills(Player player, ClassId classId, boolean includeByFs, boolean includeAutoGet, ISkillsHolder holder) {
         final List<L2SkillLearn> result = new LinkedList<>();
         final LongObjectMap<L2SkillLearn> skills = getCompleteClassSkillTree(classId);
 
@@ -415,7 +415,7 @@ public final class SkillTreesData extends GameXmlReader {
         return result;
     }
 
-    public Collection<Skill> getAllAvailableSkills(L2PcInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet) {
+    public Collection<Skill> getAllAvailableSkills(Player player, ClassId classId, boolean includeByFs, boolean includeAutoGet) {
         // Get available skills
         final PlayerSkillHolder holder = new PlayerSkillHolder(player);
         final Set<Integer> removed = new HashSet<>();
@@ -468,7 +468,7 @@ public final class SkillTreesData extends GameXmlReader {
      * @param player the player requesting the Auto-Get skills
      * @return all the available Auto-Get skills for a given {@code player}
      */
-    public List<L2SkillLearn> getAvailableAutoGetSkills(L2PcInstance player) {
+    public List<L2SkillLearn> getAvailableAutoGetSkills(Player player) {
         final List<L2SkillLearn> result = new ArrayList<>();
         final LongObjectMap<L2SkillLearn> skills = getCompleteClassSkillTree(player.getClassId());
         if (skills.isEmpty()) {
@@ -508,7 +508,7 @@ public final class SkillTreesData extends GameXmlReader {
      * @param player the player
      * @return all the available Fishing skills for a given {@code player}
      */
-    public List<L2SkillLearn> getAvailableFishingSkills(L2PcInstance player) {
+    public List<L2SkillLearn> getAvailableFishingSkills(Player player) {
         final List<L2SkillLearn> result = new ArrayList<>();
         final Race playerRace = player.getRace();
         for (L2SkillLearn skill : fishingSkillTree.values()) {
@@ -632,7 +632,7 @@ public final class SkillTreesData extends GameXmlReader {
      * @param player    the player learning the skill
      * @return the skill learn for the specified parameters
      */
-    public L2SkillLearn getSkillLearn(AcquireSkillType skillType, int id, int lvl, L2PcInstance player) {
+    public L2SkillLearn getSkillLearn(AcquireSkillType skillType, int id, int lvl, Player player) {
         L2SkillLearn sl = null;
         switch (skillType) {
             case CLASS: {
@@ -722,7 +722,7 @@ public final class SkillTreesData extends GameXmlReader {
      * @param skillTree the skill tree to search the minimum get level
      * @return the minimum level for a new skill for a given {@code player} and {@code skillTree}
      */
-    public int getMinLevelForNewSkill(L2PcInstance player, LongObjectMap<L2SkillLearn> skillTree) {
+    public int getMinLevelForNewSkill(Player player, LongObjectMap<L2SkillLearn> skillTree) {
         int minLevel = 0;
         if (skillTree.isEmpty()) {
             LOGGER.warn(": SkillTree is not defined for getMinLevelForNewSkill!");
@@ -738,7 +738,7 @@ public final class SkillTreesData extends GameXmlReader {
         return minLevel;
     }
 
-    public List<L2SkillLearn> getNextAvailableSkills(L2PcInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet) {
+    public List<L2SkillLearn> getNextAvailableSkills(Player player, ClassId classId, boolean includeByFs, boolean includeAutoGet) {
         final LongObjectMap<L2SkillLearn> completeClassSkillTree = getCompleteClassSkillTree(classId);
         final List<L2SkillLearn> result = new LinkedList<>();
         if (completeClassSkillTree.isEmpty()) {
@@ -760,7 +760,7 @@ public final class SkillTreesData extends GameXmlReader {
         return result;
     }
 
-    public void cleanSkillUponAwakening(L2PcInstance player) {
+    public void cleanSkillUponAwakening(Player player) {
         for (Skill skill : player.getAllSkills()) {
             final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getId());
             final long hashCode = SkillData.getSkillHashCode(skill.getId(), maxLvl);
@@ -821,7 +821,7 @@ public final class SkillTreesData extends GameXmlReader {
      * @param gmchar     the player to add the Game Master skills
      * @param auraSkills if {@code true} it will add "GM Aura" skills, else will add the "GM regular" skills
      */
-    public void addSkills(L2PcInstance gmchar, boolean auraSkills) {
+    public void addSkills(Player gmchar, boolean auraSkills) {
         final Collection<L2SkillLearn> skills = auraSkills ? gameMasterAuraSkillTree.values() : gameMasterSkillTree.values();
         final SkillData st = SkillData.getInstance();
         for (L2SkillLearn sl : skills) {
@@ -909,7 +909,7 @@ public final class SkillTreesData extends GameXmlReader {
      * @param skill  the skill to be verified
      * @return {@code true} if the skill is allowed to the given player
      */
-    public boolean isSkillAllowed(L2PcInstance player, Skill skill) {
+    public boolean isSkillAllowed(Player player, Skill skill) {
         if (skill.isExcludedFromCheck()) {
             return true;
         }

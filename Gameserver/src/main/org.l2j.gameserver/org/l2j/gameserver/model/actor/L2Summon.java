@@ -17,7 +17,7 @@ import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.*;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.SummonStat;
 import org.l2j.gameserver.model.actor.status.SummonStatus;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
@@ -48,14 +48,14 @@ public abstract class L2Summon extends L2Playable {
                     14724, 14725, 14726, 14727, 14728, 14729, 14730, 14731, 14732, 14733, 14734, 14735, 14736
             };
     protected boolean _restoreSummon = true;
-    private L2PcInstance _owner;
+    private Player _owner;
     private int _attackRange = 36; // Melee range
     private boolean _follow = true;
     private boolean _previousFollowStatus = true;
     private int _summonPoints = 0;
     // @formatter:on
 
-    public L2Summon(L2NpcTemplate template, L2PcInstance owner) {
+    public L2Summon(L2NpcTemplate template, Player owner) {
         super(template);
         setInstanceType(InstanceType.L2Summon);
         setInstance(owner.getInstanceWorld()); // set instance to same as owner
@@ -82,7 +82,7 @@ public abstract class L2Summon extends L2Playable {
         setFollowStatus(true);
         updateAndBroadcastStatus(0);
         sendPacket(new RelationChanged(this, _owner.getRelation(_owner), false));
-        L2World.getInstance().forEachVisibleObject(getOwner(), L2PcInstance.class, player ->
+        L2World.getInstance().forEachVisibleObject(getOwner(), Player.class, player ->
         {
             player.sendPacket(new RelationChanged(this, _owner.getRelation(player), isAutoAttackable(player)));
         });
@@ -147,7 +147,7 @@ public abstract class L2Summon extends L2Playable {
 
     @Override
     public void updateAbnormalVisualEffects() {
-        L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
+        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (player == _owner) {
                 player.sendPacket(new PetInfo(this, 1));
@@ -201,11 +201,11 @@ public abstract class L2Summon extends L2Playable {
         return _owner != null ? _owner.getTeam() : Team.NONE;
     }
 
-    public final L2PcInstance getOwner() {
+    public final Player getOwner() {
         return _owner;
     }
 
-    public void setOwner(L2PcInstance newOwner) {
+    public void setOwner(Player newOwner) {
         _owner = newOwner;
     }
 
@@ -296,7 +296,7 @@ public abstract class L2Summon extends L2Playable {
         updateAndBroadcastStatus(1);
     }
 
-    public void deleteMe(L2PcInstance owner) {
+    public void deleteMe(Player owner) {
         super.deleteMe();
 
         if (owner != null) {
@@ -320,7 +320,7 @@ public abstract class L2Summon extends L2Playable {
         decayMe();
     }
 
-    public void unSummon(L2PcInstance owner) {
+    public void unSummon(Player owner) {
         if (isSpawned() && !isDead()) {
 
             // Prevent adding effects while unsummoning.
@@ -450,7 +450,7 @@ public abstract class L2Summon extends L2Playable {
     }
 
     /**
-     * Return the L2Party object of its L2PcInstance owner or null.
+     * Return the L2Party object of its Player owner or null.
      */
     @Override
     public L2Party getParty() {
@@ -512,7 +512,7 @@ public abstract class L2Summon extends L2Playable {
             if (currentTarget != null)
             {
                 target = skill.getTarget(this, forceUse && (!currentTarget.isPlayable() || !currentTarget.isInsideZone(ZoneId.PEACE)), dontMove, false);
-                final L2PcInstance currentTargetPlayer = currentTarget.getActingPlayer();
+                final Player currentTargetPlayer = currentTarget.getActingPlayer();
                 if (!forceUse && (currentTargetPlayer != null) && !currentTargetPlayer.isAutoAttackable(_owner))
                 {
                     sendPacket(SystemMessageId.INVALID_TARGET);
@@ -553,14 +553,14 @@ public abstract class L2Summon extends L2Playable {
 
         // Check if all casting conditions are completed
         if (!skill.checkCondition(this, target)) {
-            // Send a Server->Client packet ActionFailed to the L2PcInstance
+            // Send a Server->Client packet ActionFailed to the Player
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
 
         // Check if this is bad magic skill
         if (skill.isBad()) {
-            // If L2PcInstance is in Olympiad and the match isn't already start, send a Server->Client packet ActionFailed
+            // If Player is in Olympiad and the match isn't already start, send a Server->Client packet ActionFailed
             if (_owner.isInOlympiadMode() && !_owner.isOlympiadStart()) {
                 sendPacket(ActionFailed.STATIC_PACKET);
                 return false;
@@ -604,7 +604,7 @@ public abstract class L2Summon extends L2Playable {
                 }
             }
 
-            if (_owner.isInOlympiadMode() && target.isPlayer() && ((L2PcInstance) target).isInOlympiadMode() && (((L2PcInstance) target).getOlympiadGameId() == _owner.getOlympiadGameId())) {
+            if (_owner.isInOlympiadMode() && target.isPlayer() && ((Player) target).isInOlympiadMode() && (((Player) target).getOlympiadGameId() == _owner.getOlympiadGameId())) {
                 OlympiadGameManager.getInstance().notifyCompetitorDamage(getOwner(), damage);
             }
 
@@ -641,10 +641,10 @@ public abstract class L2Summon extends L2Playable {
     @Override
     public void doCast(Skill skill) {
         if ((skill.getTarget(this, false, false, false) == null) && !_owner.getAccessLevel().allowPeaceAttack()) {
-            // Send a System Message to the L2PcInstance
+            // Send a System Message to the Player
             _owner.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 
-            // Send a Server->Client packet ActionFailed to the L2PcInstance
+            // Send a Server->Client packet ActionFailed to the Player
             _owner.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
@@ -658,7 +658,7 @@ public abstract class L2Summon extends L2Playable {
     }
 
     @Override
-    public L2PcInstance getActingPlayer() {
+    public Player getActingPlayer() {
         return _owner;
     }
 
@@ -679,7 +679,7 @@ public abstract class L2Summon extends L2Playable {
     }
 
     public void broadcastNpcInfo(int val) {
-        L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
+        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if ((player == _owner)) {
                 return;
@@ -702,8 +702,8 @@ public abstract class L2Summon extends L2Playable {
     }
 
     @Override
-    public void sendInfo(L2PcInstance activeChar) {
-        // Check if the L2PcInstance is the owner of the Pet
+    public void sendInfo(Player activeChar) {
+        // Check if the Player is the owner of the Pet
         if (activeChar == _owner) {
             activeChar.sendPacket(new PetInfo(this, isDead() ? 0 : 1));
             if (isPet()) {
@@ -937,7 +937,7 @@ public abstract class L2Summon extends L2Playable {
     }
 
     public void sendInventoryUpdate(InventoryUpdate iu) {
-        final L2PcInstance owner = _owner;
+        final Player owner = _owner;
         if (owner != null) {
             owner.sendInventoryUpdate(iu);
         }

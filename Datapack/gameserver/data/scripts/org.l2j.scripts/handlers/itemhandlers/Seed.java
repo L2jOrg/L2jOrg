@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.L2Seed;
 import org.l2j.gameserver.model.actor.L2Playable;
 import org.l2j.gameserver.model.actor.instance.L2ChestInstance;
 import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -89,7 +89,7 @@ public class Seed implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
+		final Player activeChar = playable.getActingPlayer();
 		target.setSeeded(seed, activeChar);
 		
 		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);

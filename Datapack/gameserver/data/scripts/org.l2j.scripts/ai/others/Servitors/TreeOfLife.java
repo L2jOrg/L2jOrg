@@ -20,7 +20,7 @@ import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 import ai.AbstractNpcAI;
 
@@ -52,7 +52,7 @@ public final class TreeOfLife extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, L2Npc npc, Player player)
 	{
 		if (player != null)
 		{

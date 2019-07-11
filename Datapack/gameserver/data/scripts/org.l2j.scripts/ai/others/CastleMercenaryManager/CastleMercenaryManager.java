@@ -22,7 +22,7 @@ import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2MerchantInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -56,7 +56,7 @@ public final class CastleMercenaryManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		String htmltext = null;
 		final StringTokenizer st = new StringTokenizer(event, " ");
@@ -103,7 +103,7 @@ public final class CastleMercenaryManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		final String htmltext;
 		if (player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((player.getClanId() == npc.getCastle().getOwnerId()) && player.hasClanPrivilege(ClanPrivilege.CS_MERCENARIES)))

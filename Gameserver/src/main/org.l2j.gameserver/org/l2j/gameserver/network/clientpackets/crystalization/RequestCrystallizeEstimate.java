@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets.crystalization;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ItemCrystallizationData;
 import org.l2j.gameserver.enums.PrivateStoreType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.items.type.CrystalType;
@@ -36,7 +36,7 @@ public class RequestCrystallizeEstimate extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if ((activeChar == null) || activeChar.isInCrystallize()) {
             return;
         }

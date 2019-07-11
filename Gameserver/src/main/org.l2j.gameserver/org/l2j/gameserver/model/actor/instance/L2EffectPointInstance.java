@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
 public class L2EffectPointInstance extends L2Npc {
-    private final L2PcInstance _owner;
+    private final Player _owner;
 
     public L2EffectPointInstance(L2NpcTemplate template, L2Character owner) {
         super(template);
@@ -22,7 +22,7 @@ public class L2EffectPointInstance extends L2Npc {
     }
 
     @Override
-    public L2PcInstance getActingPlayer() {
+    public Player getActingPlayer() {
         return _owner;
     }
 
@@ -32,13 +32,13 @@ public class L2EffectPointInstance extends L2Npc {
      * @param player
      */
     @Override
-    public void onAction(L2PcInstance player, boolean interact) {
-        // Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
+    public void onAction(Player player, boolean interact) {
+        // Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
         player.sendPacket(ActionFailed.STATIC_PACKET);
     }
 
     @Override
-    public void onActionShift(L2PcInstance player) {
+    public void onActionShift(Player player) {
         if (player == null) {
             return;
         }
@@ -47,7 +47,7 @@ public class L2EffectPointInstance extends L2Npc {
     }
 
     /**
-     * Return the L2Party object of its L2PcInstance owner or null.
+     * Return the L2Party object of its Player owner or null.
      */
     @Override
     public L2Party getParty() {

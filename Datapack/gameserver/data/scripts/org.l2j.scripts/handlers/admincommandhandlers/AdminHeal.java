@@ -22,7 +22,7 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.slf4j.Logger;
@@ -41,7 +41,7 @@ public class AdminHeal implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		
 		if (command.equals("admin_heal"))
@@ -73,18 +73,18 @@ public class AdminHeal implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleHeal(L2PcInstance activeChar)
+	private void handleHeal(Player activeChar)
 	{
 		handleHeal(activeChar, null);
 	}
 	
-	private void handleHeal(L2PcInstance activeChar, String player)
+	private void handleHeal(Player activeChar, String player)
 	{
 		
 		L2Object obj = activeChar.getTarget();
 		if (player != null)
 		{
-			final L2PcInstance plyr = L2World.getInstance().getPlayer(player);
+			final Player plyr = L2World.getInstance().getPlayer(player);
 			
 			if (plyr != null)
 			{

@@ -22,7 +22,7 @@ import java.util.Set;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
@@ -78,7 +78,7 @@ public final class ResurrectionSpecial extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance caster = effector.getActingPlayer();
+		final Player caster = effector.getActingPlayer();
 		final Instance instance = caster.getInstanceWorld();
 		if (!_instanceId.isEmpty() && ((instance == null) || !_instanceId.contains(instance.getTemplateId())))
 		{

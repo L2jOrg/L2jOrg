@@ -22,14 +22,14 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class L2StaticObjectInstanceAction implements IActionHandler
 {
 	@Override
-	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
+	public boolean action(Player activeChar, L2Object target, boolean interact)
 	{
 		final L2StaticObjectInstance staticObject = (L2StaticObjectInstance) target;
 		if (staticObject.getType() < 0)
@@ -37,18 +37,18 @@ public class L2StaticObjectInstanceAction implements IActionHandler
 			LOGGER.info("L2StaticObjectInstance: StaticObject with invalid type! StaticObjectId: " + staticObject.getId());
 		}
 		
-		// Check if the L2PcInstance already target the L2NpcInstance
+		// Check if the Player already target the L2NpcInstance
 		if (activeChar.getTarget() != staticObject)
 		{
-			// Set the target of the L2PcInstance activeChar
+			// Set the target of the Player activeChar
 			activeChar.setTarget(staticObject);
 		}
 		else if (interact)
 		{
-			// Calculate the distance between the L2PcInstance and the L2NpcInstance
+			// Calculate the distance between the Player and the L2NpcInstance
 			if (!activeChar.isInsideRadius2D(staticObject, L2Npc.INTERACTION_DISTANCE))
 			{
-				// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
+				// Notify the Player AI with AI_INTENTION_INTERACT
 				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, staticObject);
 			}
 			else if (staticObject.getType() == 2)

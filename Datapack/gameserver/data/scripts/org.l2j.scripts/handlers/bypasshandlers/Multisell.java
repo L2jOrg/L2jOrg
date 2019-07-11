@@ -16,13 +16,11 @@
  */
 package handlers.bypasshandlers;
 
-import java.util.logging.Level;
-
 import org.l2j.gameserver.data.xml.impl.MultisellData;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 public class Multisell implements IBypassHandler
 {
@@ -33,7 +31,7 @@ public class Multisell implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, Player activeChar, L2Character target)
 	{
 		if (!target.isNpc())
 		{

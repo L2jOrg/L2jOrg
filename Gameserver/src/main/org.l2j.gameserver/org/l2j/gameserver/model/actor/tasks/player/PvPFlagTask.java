@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.actor.tasks.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
  * Task dedicated to update player's current pvp status.
@@ -24,9 +24,9 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
  * @author UnAfraid
  */
 public class PvPFlagTask implements Runnable {
-    private final L2PcInstance _player;
+    private final Player _player;
 
-    public PvPFlagTask(L2PcInstance player) {
+    public PvPFlagTask(Player player) {
         _player = player;
     }
 

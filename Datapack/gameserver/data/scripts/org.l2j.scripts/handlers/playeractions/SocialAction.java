@@ -22,7 +22,7 @@ import org.l2j.gameserver.ai.NextAction;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSocialAction;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -37,7 +37,7 @@ import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 public final class SocialAction implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		switch (data.getOptionId())
 		{
@@ -78,7 +78,7 @@ public final class SocialAction implements IPlayerActionHandler
 		}
 	}
 	
-	private boolean useSocial(L2PcInstance activeChar, int id)
+	private boolean useSocial(Player activeChar, int id)
 	{
 		if (activeChar.isFishing())
 		{
@@ -97,7 +97,7 @@ public final class SocialAction implements IPlayerActionHandler
 		return true;
 	}
 	
-	private void scheduleDeny(L2PcInstance player)
+	private void scheduleDeny(Player player)
 	{
 		if (player != null)
 		{
@@ -106,7 +106,7 @@ public final class SocialAction implements IPlayerActionHandler
 		}
 	}
 	
-	private void useCoupleSocial(L2PcInstance player, int id)
+	private void useCoupleSocial(Player player, int id)
 	{
 		if (player == null)
 		{
@@ -212,7 +212,7 @@ public final class SocialAction implements IPlayerActionHandler
 		}
 		
 		// Checks for partner.
-		final L2PcInstance partner = target.getActingPlayer();
+		final Player partner = target.getActingPlayer();
 		if (partner.isInStoreMode() || partner.isCrafting())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_PRIVATE_STORE_MODE_OR_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);

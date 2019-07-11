@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets.pledgebonus;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
@@ -26,7 +26,7 @@ public class RequestPledgeBonusReward extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if ((player == null) || (player.getClan() == null)) {
             return;
         }

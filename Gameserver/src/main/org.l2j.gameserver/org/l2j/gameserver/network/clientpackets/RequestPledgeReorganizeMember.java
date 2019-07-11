@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
  * Format: (ch) dSdS
@@ -30,7 +30,7 @@ public final class RequestPledgeReorganizeMember extends ClientPacket {
             return;
         }
 
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }

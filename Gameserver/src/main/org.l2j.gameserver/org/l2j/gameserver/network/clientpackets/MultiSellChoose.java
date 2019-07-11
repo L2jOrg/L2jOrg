@@ -9,7 +9,7 @@ import org.l2j.gameserver.enums.SpecialItemType;
 import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -88,7 +88,7 @@ public class MultiSellChoose extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if (player == null) {
             return;
         }
@@ -495,7 +495,7 @@ public class MultiSellChoose extends ClientPacket {
      * @param totalCount
      * @return {@code false} if ingredient amount is not enough, {@code true} otherwise.
      */
-    private boolean checkIngredients(L2PcInstance player, PreparedMultisellListHolder list, PcInventory inventory, L2Clan clan, int ingredientId, long totalCount) {
+    private boolean checkIngredients(Player player, PreparedMultisellListHolder list, PcInventory inventory, L2Clan clan, int ingredientId, long totalCount) {
         final SpecialItemType specialItem = SpecialItemType.getByClientId(ingredientId);
         if (specialItem != null) {
             // Check special item.
@@ -558,7 +558,7 @@ public class MultiSellChoose extends ClientPacket {
      * @param list
      * @return {@code true} if player can buy stuff from the multisell, {@code false} otherwise.
      */
-    private boolean isAllowedToUse(L2PcInstance player, L2Npc npc, PreparedMultisellListHolder list) {
+    private boolean isAllowedToUse(Player player, L2Npc npc, PreparedMultisellListHolder list) {
         if (npc != null) {
             if (!list.isNpcAllowed(npc.getId())) {
                 return false;

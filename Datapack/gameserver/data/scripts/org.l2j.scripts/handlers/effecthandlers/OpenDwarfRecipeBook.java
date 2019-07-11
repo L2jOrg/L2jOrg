@@ -20,7 +20,7 @@ import org.l2j.gameserver.RecipeController;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -50,7 +50,7 @@ public final class OpenDwarfRecipeBook extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance player = effector.getActingPlayer();
+		final Player player = effector.getActingPlayer();
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
 			player.sendPacket(SystemMessageId.ITEM_CREATION_IS_NOT_POSSIBLE_WHILE_ENGAGED_IN_A_TRADE);

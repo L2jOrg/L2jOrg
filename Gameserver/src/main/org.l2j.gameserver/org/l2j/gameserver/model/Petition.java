@@ -20,7 +20,7 @@ import org.l2j.gameserver.enums.PetitionState;
 import org.l2j.gameserver.enums.PetitionType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.PetitionManager;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -41,11 +41,11 @@ public final class Petition {
     private final PetitionType _type;
     private final String _content;
     private final List<CreatureSay> _messageLog = new CopyOnWriteArrayList<>();
-    private final L2PcInstance _petitioner;
+    private final Player _petitioner;
     private PetitionState _state = PetitionState.PENDING;
-    private L2PcInstance _responder;
+    private Player _responder;
 
-    public Petition(L2PcInstance petitioner, String petitionText, int petitionType) {
+    public Petition(Player petitioner, String petitionText, int petitionType) {
         _id = IdFactory.getInstance().getNextId();
         _type = PetitionType.values()[--petitionType];
         _content = petitionText;
@@ -99,15 +99,15 @@ public final class Petition {
         return _id;
     }
 
-    public L2PcInstance getPetitioner() {
+    public Player getPetitioner() {
         return _petitioner;
     }
 
-    public L2PcInstance getResponder() {
+    public Player getResponder() {
         return _responder;
     }
 
-    public void setResponder(L2PcInstance respondingAdmin) {
+    public void setResponder(Player respondingAdmin) {
         if (_responder != null) {
             return;
         }

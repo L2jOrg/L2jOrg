@@ -1,15 +1,15 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.GameTimeController;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class CharSelected extends ServerPacket {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final int _sessionId;
 
-    public CharSelected(L2PcInstance cha, int sessionId) {
+    public CharSelected(Player cha, int sessionId) {
         _activeChar = cha;
         _sessionId = sessionId;
     }

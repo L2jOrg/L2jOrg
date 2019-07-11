@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.appearance;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -18,7 +18,7 @@ public class ExCuriousHouseMemberUpdate extends ServerPacket {
 
     public ExCuriousHouseMemberUpdate(CeremonyOfChaosMember member) {
         _objId = member.getObjectId();
-        final L2PcInstance player = member.getPlayer();
+        final Player player = member.getPlayer();
         if (player != null) {
             _maxHp = player.getMaxHp();
             _maxCp = player.getMaxCp();

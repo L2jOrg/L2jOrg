@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -23,7 +23,7 @@ public final class CreatureSay extends ServerPacket {
     private int _charLevel = -1;
     private List<String> _parameters;
 
-    public CreatureSay(L2PcInstance sender, L2PcInstance receiver, String name, ChatType messageType, String text) {
+    public CreatureSay(Player sender, Player receiver, String name, ChatType messageType, String text) {
         _objectId = sender.getObjectId();
         _charName = name;
         _charLevel = sender.getLevel();
@@ -58,7 +58,7 @@ public final class CreatureSay extends ServerPacket {
      * @param messageType
      * @param text
      */
-    public CreatureSay(L2Npc sender, L2PcInstance receiver, String name, ChatType messageType, String text) {
+    public CreatureSay(L2Npc sender, Player receiver, String name, ChatType messageType, String text) {
         _objectId = sender.getObjectId();
         _charName = name;
         _charLevel = sender.getLevel();
@@ -79,7 +79,7 @@ public final class CreatureSay extends ServerPacket {
         _text = text;
     }
 
-    public CreatureSay(L2PcInstance player, ChatType messageType, String text) {
+    public CreatureSay(Player player, ChatType messageType, String text) {
         _objectId = player.getObjectId();
         _textType = messageType;
         _charName = player.getAppearance().getVisibleName();
@@ -147,7 +147,7 @@ public final class CreatureSay extends ServerPacket {
     }
 
     @Override
-    public final void runImpl(L2PcInstance player) {
+    public final void runImpl(Player player) {
         if (player != null) {
             player.broadcastSnoop(_textType, _charName, _text);
         }

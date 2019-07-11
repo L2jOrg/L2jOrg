@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.xml.impl.BeautyShopData;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.beautyshop.BeautyData;
 import org.l2j.gameserver.model.beautyshop.BeautyItem;
 import org.l2j.gameserver.network.L2GameClient;
@@ -23,7 +23,7 @@ public class ExBeautyItemList extends ServerPacket {
     private final Map<Integer, List<BeautyItem>> _colorData = new HashMap<>();
     private int _colorCount;
 
-    public ExBeautyItemList(L2PcInstance activeChar) {
+    public ExBeautyItemList(Player activeChar) {
         _beautyData = BeautyShopData.getInstance().getBeautyData(activeChar.getRace(), activeChar.getAppearance().getSexType());
 
         for (BeautyItem hair : _beautyData.getHairList().values()) {

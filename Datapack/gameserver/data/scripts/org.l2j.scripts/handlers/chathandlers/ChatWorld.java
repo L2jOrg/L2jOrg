@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IChatHandler;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.PcCondOverride;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ExWorldChatCnt;
@@ -44,7 +44,7 @@ public final class ChatWorld implements IChatHandler {
 	};
 	
 	@Override
-	public void handleChat(ChatType type, L2PcInstance activeChar, String target, String text) {
+	public void handleChat(ChatType type, Player activeChar, String target, String text) {
 		if (!Config.ENABLE_WORLD_CHAT) {
 			return;
 		}

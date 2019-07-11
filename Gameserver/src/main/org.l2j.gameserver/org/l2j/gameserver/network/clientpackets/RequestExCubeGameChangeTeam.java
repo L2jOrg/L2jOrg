@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.instancemanager.HandysBlockCheckerManager;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,7 +28,7 @@ public final class RequestExCubeGameChangeTeam extends ClientPacket {
         if (HandysBlockCheckerManager.getInstance().arenaIsBeingUsed(_arena)) {
             return;
         }
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
 
         switch (_team) {
             case 0:

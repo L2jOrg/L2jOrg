@@ -13,7 +13,7 @@ public final class RequestBRRecentProductList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        // L2PcInstance player = client.getActiveChar();
+        // Player player = client.getActiveChar();
         // TODO: Implement it.
     }
 }

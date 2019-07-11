@@ -6,7 +6,7 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.instancemanager.DuelManager;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PcStat;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.entity.Duel;
@@ -19,9 +19,9 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.GameUtils;
 
 public class PcStatus extends PlayableStatus {
-    private double _currentCp = 0; // Current CP of the L2PcInstance
+    private double _currentCp = 0; // Current CP of the Player
 
-    public PcStatus(L2PcInstance activeChar) {
+    public PcStatus(Player activeChar) {
         super(activeChar);
     }
 
@@ -90,7 +90,7 @@ public class PcStatus extends PlayableStatus {
         int mpDam = 0;
 
         if ((attacker != null) && (attacker != getActiveChar())) {
-            final L2PcInstance attackerPlayer = attacker.getActingPlayer();
+            final Player attackerPlayer = attacker.getActingPlayer();
 
             if (attackerPlayer != null) {
                 if (attackerPlayer.isGM() && !attackerPlayer.getAccessLevel().canGiveDamage()) {
@@ -143,7 +143,7 @@ public class PcStatus extends PlayableStatus {
                 }
             }
 
-            final L2PcInstance caster = getActiveChar().getTransferingDamageTo();
+            final Player caster = getActiveChar().getTransferingDamageTo();
             if ((caster != null) && (getActiveChar().getParty() != null) && GameUtils.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && (getActiveChar() != caster) && getActiveChar().getParty().getMembers().contains(caster)) {
                 int transferDmg = 0;
 
@@ -151,7 +151,7 @@ public class PcStatus extends PlayableStatus {
                 transferDmg = Math.min((int) caster.getCurrentHp() - 1, transferDmg);
                 if (transferDmg > 0) {
                     int membersInRange = 0;
-                    for (L2PcInstance member : caster.getParty().getMembers()) {
+                    for (Player member : caster.getParty().getMembers()) {
                         if (GameUtils.checkIfInRange(1000, member, caster, false) && (member != caster)) {
                             membersInRange++;
                         }
@@ -185,7 +185,7 @@ public class PcStatus extends PlayableStatus {
             }
 
             if ((fullValue > 0) && !isDOT) {
-                // Send a System Message to the L2PcInstance
+                // Send a System Message to the Player
                 SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);
                 smsg.addString(getActiveChar().getName());
                 smsg.addString(attacker.getName());
@@ -286,7 +286,7 @@ public class PcStatus extends PlayableStatus {
             }
         }
 
-        // Send the Server->Client packet StatusUpdate with current HP and MP to all other L2PcInstance to inform
+        // Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
         if ((currentCp != _currentCp) && broadcastPacket) {
             getActiveChar().broadcastStatusUpdate();
         }
@@ -315,7 +315,7 @@ public class PcStatus extends PlayableStatus {
     }
 
     @Override
-    public L2PcInstance getActiveChar() {
-        return (L2PcInstance) super.getActiveChar();
+    public Player getActiveChar() {
+        return (Player) super.getActiveChar();
     }
 }

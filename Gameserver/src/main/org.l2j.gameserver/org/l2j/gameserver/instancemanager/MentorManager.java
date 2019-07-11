@@ -3,7 +3,7 @@ package org.l2j.gameserver.instancemanager;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.model.L2Mentee;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.variables.PlayerVariables;
@@ -48,7 +48,7 @@ public class MentorManager {
     }
 
     /**
-     * Removes mentee for current L2PcInstance
+     * Removes mentee for current Player
      *
      * @param mentorId
      * @param menteeId
@@ -93,7 +93,7 @@ public class MentorManager {
         return _menteeData;
     }
 
-    public void cancelAllMentoringBuffs(L2PcInstance player) {
+    public void cancelAllMentoringBuffs(Player player) {
         if (player == null) {
             return;
         }
@@ -108,13 +108,13 @@ public class MentorManager {
     }
 
     public void setPenalty(int mentorId, long penalty) {
-        final L2PcInstance player = L2World.getInstance().getPlayer(mentorId);
+        final Player player = L2World.getInstance().getPlayer(mentorId);
         final PlayerVariables vars = player != null ? player.getVariables() : new PlayerVariables(mentorId);
         vars.set("Mentor-Penalty-" + mentorId, String.valueOf(System.currentTimeMillis() + penalty));
     }
 
     public long getMentorPenalty(int mentorId) {
-        final L2PcInstance player = L2World.getInstance().getPlayer(mentorId);
+        final Player player = L2World.getInstance().getPlayer(mentorId);
         final PlayerVariables vars = player != null ? player.getVariables() : new PlayerVariables(mentorId);
         return vars.getLong("Mentor-Penalty-" + mentorId, 0);
     }

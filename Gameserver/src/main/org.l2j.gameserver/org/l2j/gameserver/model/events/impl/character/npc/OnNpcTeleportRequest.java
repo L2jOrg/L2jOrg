@@ -17,29 +17,29 @@
 package org.l2j.gameserver.model.events.impl.character.npc;
 
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.model.teleporter.TeleportLocation;
 
 /**
- * Player teleport request listner - called from {@link TeleportHolder#doTeleport(L2PcInstance, L2Npc, int)}
+ * Player teleport request listner - called from {@link TeleportHolder#doTeleport(Player, L2Npc, int)}
  *
  * @author malyelfik
  */
 public final class OnNpcTeleportRequest implements IBaseEvent {
-    private final L2PcInstance _player;
+    private final Player _player;
     private final L2Npc _npc;
     private final TeleportLocation _loc;
 
-    public OnNpcTeleportRequest(L2PcInstance player, L2Npc npc, TeleportLocation loc) {
+    public OnNpcTeleportRequest(Player player, L2Npc npc, TeleportLocation loc) {
         _player = player;
         _npc = npc;
         _loc = loc;
     }
 
-    public L2PcInstance getPlayer() {
+    public Player getPlayer() {
         return _player;
     }
 

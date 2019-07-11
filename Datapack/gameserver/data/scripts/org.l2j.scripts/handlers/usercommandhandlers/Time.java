@@ -22,7 +22,7 @@ import java.util.Date;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.handler.IUserCommandHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
@@ -39,7 +39,7 @@ public class Time implements IUserCommandHandler
 	private static final SimpleDateFormat fmt = new SimpleDateFormat("H:mm.");
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, Player activeChar)
 	{
 		if (COMMAND_IDS[0] != id)
 		{

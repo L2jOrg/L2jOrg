@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.eventengine;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -12,9 +12,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 public abstract class AbstractEventMember<T extends AbstractEvent<?>> {
     private final T _event;
     private final AtomicInteger _score = new AtomicInteger();
-    private final L2PcInstance player;
+    private final Player player;
 
-    public AbstractEventMember(L2PcInstance player, T event) {
+    public AbstractEventMember(Player player, T event) {
         this.player = player;
         _event = event;
     }
@@ -23,12 +23,12 @@ public abstract class AbstractEventMember<T extends AbstractEvent<?>> {
         return player.getObjectId();
     }
 
-    public L2PcInstance getPlayer() {
+    public Player getPlayer() {
         return player;
     }
 
     public void sendPacket(ServerPacket... packets) {
-        final L2PcInstance player = getPlayer();
+        final Player player = getPlayer();
         if (player != null) {
             for (ServerPacket packet : packets) {
                 player.sendPacket(packet);
@@ -37,7 +37,7 @@ public abstract class AbstractEventMember<T extends AbstractEvent<?>> {
     }
 
     public int getClassId() {
-        final L2PcInstance player = getPlayer();
+        final Player player = getPlayer();
         if (player != null) {
             return player.getClassId().getId();
         }

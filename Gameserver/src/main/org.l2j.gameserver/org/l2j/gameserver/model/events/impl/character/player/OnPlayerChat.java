@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.events.impl.character.player;
 
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -25,19 +25,19 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnPlayerChat implements IBaseEvent {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final String _target;
     private final String _text;
     private final ChatType _type;
 
-    public OnPlayerChat(L2PcInstance activeChar, String target, String text, ChatType type) {
+    public OnPlayerChat(Player activeChar, String target, String text, ChatType type) {
         _activeChar = activeChar;
         _target = target;
         _text = text;
         _type = type;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _activeChar;
     }
 

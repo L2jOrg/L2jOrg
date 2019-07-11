@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.actor.L2Playable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -50,7 +50,7 @@ public class FatedSupportBox implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance player = playable.getActingPlayer();
+		final Player player = playable.getActingPlayer();
 		final Race race = player.getRace();
 		final ClassId classId = player.getClassId();
 		

@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExDuelAskStart;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -22,7 +22,7 @@ public final class RequestDuelStart extends ClientPacket {
         _partyDuel = readInt();
     }
 
-    private void scheduleDeny(L2PcInstance player, String name) {
+    private void scheduleDeny(Player player, String name) {
         if (player != null) {
             SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DECLINED_YOUR_CHALLENGE_TO_A_DUEL);
             sm.addString(name);
@@ -33,12 +33,12 @@ public final class RequestDuelStart extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
 
-        final L2PcInstance targetChar = L2World.getInstance().getPlayer(_player);
+        final Player targetChar = L2World.getInstance().getPlayer(_player);
         if (targetChar == null) {
             activeChar.sendPacket(SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL);
             return;
@@ -84,14 +84,14 @@ public final class RequestDuelStart extends ClientPacket {
             }
 
             // Check if every player is ready for a duel
-            for (L2PcInstance temp : activeChar.getParty().getMembers()) {
+            for (Player temp : activeChar.getParty().getMembers()) {
                 if (!temp.canDuel()) {
                     activeChar.sendMessage("Not all the members of your party are ready for a duel.");
                     return;
                 }
             }
-            L2PcInstance partyLeader = null; // snatch party leader of targetChar's party
-            for (L2PcInstance temp : targetChar.getParty().getMembers()) {
+            Player partyLeader = null; // snatch party leader of targetChar's party
+            for (Player temp : targetChar.getParty().getMembers()) {
                 if (partyLeader == null) {
                     partyLeader = temp;
                 }

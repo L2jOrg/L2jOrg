@@ -9,7 +9,7 @@ import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.instancemanager.ItemAuctionManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -287,7 +287,7 @@ public final class ItemAuctionInstance {
         final ItemAuctionBid bid = auction.getHighestBid();
         if (bid != null) {
             final L2ItemInstance item = auction.createNewItemInstance();
-            final L2PcInstance player = bid.getPlayer();
+            final Player player = bid.getPlayer();
             if (player != null) {
                 player.getWarehouse().addItem("ItemAuction", item, null, null);
                 player.sendPacket(SystemMessageId.YOU_HAVE_BID_THE_HIGHEST_PRICE_AND_HAVE_WON_THE_ITEM_THE_ITEM_CAN_BE_FOUND_IN_YOUR_PERSONAL_WAREHOUSE);

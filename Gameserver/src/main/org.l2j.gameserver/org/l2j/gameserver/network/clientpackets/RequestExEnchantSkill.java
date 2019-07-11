@@ -7,7 +7,7 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.enums.SkillEnchantType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.EnchantSkillHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.skills.Skill;
@@ -53,7 +53,7 @@ public final class RequestExEnchantSkill extends ClientPacket {
             return;
         }
 
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if (player == null) {
             return;
         }

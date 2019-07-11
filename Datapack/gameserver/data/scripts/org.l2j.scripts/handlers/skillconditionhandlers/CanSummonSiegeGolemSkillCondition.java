@@ -21,7 +21,7 @@ import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.skills.ISkillCondition;
@@ -46,7 +46,7 @@ public class CanSummonSiegeGolemSkillCondition implements ISkillCondition
 			return false;
 		}
 		
-		final L2PcInstance player = caster.getActingPlayer();
+		final Player player = caster.getActingPlayer();
 		boolean canSummonSiegeGolem = true;
 		if (player.isAlikeDead() || player.isCursedWeaponEquipped() || (player.getClan() == null))
 		{

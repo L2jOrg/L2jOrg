@@ -22,7 +22,7 @@ import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -75,7 +75,7 @@ public class AdminAdmin implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_admin"))
 		{
@@ -136,7 +136,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				return false;
 			}
 			
-			final L2PcInstance target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
+			final Player target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
 			target.setHero(!target.isHero());
 			target.broadcastUserInfo();
 		}
@@ -148,7 +148,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				return false;
 			}
 			
-			final L2PcInstance target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
+			final Player target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
 			target.setTrueHero(!target.isTrueHero());
 			target.broadcastUserInfo();
 		}
@@ -160,7 +160,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				return false;
 			}
 			
-			final L2PcInstance target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
+			final Player target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
 			if (Hero.getInstance().isHero(target.getObjectId()))
 			{
 				BuilderUtil.sendSysMessage(activeChar, "This player has already claimed the hero status.");
@@ -330,7 +330,7 @@ public class AdminAdmin implements IAdminCommandHandler
 						activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 						break;
 					}
-					final L2PcInstance targetPlayer = target.getActingPlayer();
+					final Player targetPlayer = target.getActingPlayer();
 					if (targetPlayer.getLevel() < Config.WORLD_CHAT_MIN_LEVEL)
 					{
 						BuilderUtil.sendSysMessage(activeChar, "Your target's level is below the minimum: " + Config.WORLD_CHAT_MIN_LEVEL);
@@ -348,7 +348,7 @@ public class AdminAdmin implements IAdminCommandHandler
 						break;
 					}
 					
-					final L2PcInstance targetPlayer = target.getActingPlayer();
+					final Player targetPlayer = target.getActingPlayer();
 					if (targetPlayer.getLevel() < Config.WORLD_CHAT_MIN_LEVEL)
 					{
 						BuilderUtil.sendSysMessage(activeChar, "Your target's level is below the minimum: " + Config.WORLD_CHAT_MIN_LEVEL);
@@ -399,7 +399,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void showMainPage(L2PcInstance activeChar, String command)
+	private void showMainPage(Player activeChar, String command)
 	{
 		int mode = 0;
 		String filename = null;
@@ -456,7 +456,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		AdminHtml.showAdminHtml(activeChar, filename + "_menu.htm");
 	}
 	
-	private void showConfigPage(L2PcInstance activeChar)
+	private void showConfigPage(Player activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		final StringBuilder replyMSG = new StringBuilder("<html><title>L2J :: Config</title><body>");

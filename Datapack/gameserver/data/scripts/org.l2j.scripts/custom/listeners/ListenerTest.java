@@ -67,7 +67,7 @@ public class ListenerTest extends AbstractNpcAI
 	}
 	
 	/**
-	 * This method will be invoked as soon as an L2Attackable (Rabbits 20432) is being attacked from L2PcInstance (a player)
+	 * This method will be invoked as soon as an L2Attackable (Rabbits 20432) is being attacked from Player (a player)
 	 * @param event
 	 */
 	private void onAttackableAttack(OnAttackableAttack event)
@@ -76,7 +76,7 @@ public class ListenerTest extends AbstractNpcAI
 	}
 	
 	/**
-	 * This method will be invoked as soon as L2Attackable (Rabbits 20432) are being killed by L2PcInstance (a player)<br>
+	 * This method will be invoked as soon as L2Attackable (Rabbits 20432) are being killed by Player (a player)<br>
 	 * This listener is registered into individual npcs container.
 	 * @param event
 	 */

@@ -3,7 +3,7 @@ package ai.others.NewbieGuide;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -40,7 +40,7 @@ public class NewbieGuide extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (event.equals("0"))
@@ -66,7 +66,7 @@ public class NewbieGuide extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		if (npc.getRace() != player.getTemplate().getRace())
 		{
@@ -98,7 +98,7 @@ public class NewbieGuide extends AbstractNpcAI
 		return null;
 	}
 	
-	public void playTutorialVoice(L2PcInstance player, String voice)
+	public void playTutorialVoice(Player player, String voice)
 	{
 		player.sendPacket(new PlaySound(2, voice, 0, 0, player.getX(), player.getY(), player.getZ()));
 	}

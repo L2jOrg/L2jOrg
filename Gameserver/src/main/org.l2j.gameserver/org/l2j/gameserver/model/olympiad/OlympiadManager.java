@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.olympiad;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -53,11 +53,11 @@ public class OlympiadManager {
         AntiFeedManager.getInstance().clear(AntiFeedManager.OLYMPIAD_ID);
     }
 
-    public final boolean isRegistered(L2PcInstance noble) {
+    public final boolean isRegistered(Player noble) {
         return isRegistered(noble, noble, false);
     }
 
-    private boolean isRegistered(L2PcInstance noble, L2PcInstance player, boolean showMessage) {
+    private boolean isRegistered(Player noble, Player player, boolean showMessage) {
         final Integer objId = Integer.valueOf(noble.getObjectId());
         if (_nonClassBasedRegisters.contains(objId)) {
             if (showMessage) {
@@ -81,11 +81,11 @@ public class OlympiadManager {
         return false;
     }
 
-    public final boolean isRegisteredInComp(L2PcInstance noble) {
+    public final boolean isRegisteredInComp(Player noble) {
         return isRegistered(noble, noble, false) || isInCompetition(noble, noble, false);
     }
 
-    private boolean isInCompetition(L2PcInstance noble, L2PcInstance player, boolean showMessage) {
+    private boolean isInCompetition(Player noble, Player player, boolean showMessage) {
         if (!Olympiad._inCompPeriod) {
             return false;
         }
@@ -122,7 +122,7 @@ public class OlympiadManager {
         return false;
     }
 
-    public final boolean registerNoble(L2PcInstance player, CompetitionType type) {
+    public final boolean registerNoble(Player player, CompetitionType type) {
         if (!Olympiad._inCompPeriod) {
             player.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
             return false;
@@ -190,7 +190,7 @@ public class OlympiadManager {
         return true;
     }
 
-    public final boolean unRegisterNoble(L2PcInstance noble) {
+    public final boolean unRegisterNoble(Player noble) {
         if (!Olympiad._inCompPeriod) {
             noble.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
             return false;
@@ -236,7 +236,7 @@ public class OlympiadManager {
         return false;
     }
 
-    public final void removeDisconnectedCompetitor(L2PcInstance player) {
+    public final void removeDisconnectedCompetitor(Player player) {
         final OlympiadGameTask task = OlympiadGameManager.getInstance().getOlympiadTask(player.getOlympiadGameId());
         if ((task != null) && task.isGameStarted()) {
             task.getGame().handleDisconnect(player);
@@ -254,7 +254,7 @@ public class OlympiadManager {
         return _nonClassBasedRegisters.size() + _classBasedRegisters.size();
     }
 
-    private int getClassGroup(L2PcInstance player) {
+    private int getClassGroup(Player player) {
         if (player.isInCategory(CategoryType.SIXTH_TIR_GROUP)) {
             return 1001;
         } else if (player.isInCategory(CategoryType.SIXTH_SIGEL_GROUP)) {

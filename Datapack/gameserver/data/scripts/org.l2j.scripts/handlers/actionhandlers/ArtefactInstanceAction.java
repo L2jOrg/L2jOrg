@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 public class ArtefactInstanceAction implements IActionHandler
 {
@@ -24,7 +24,7 @@ public class ArtefactInstanceAction implements IActionHandler
 	 * <BR>
 	 */
 	@Override
-	public boolean action(L2PcInstance player, L2Object target, boolean interact)
+	public boolean action(Player player, L2Object target, boolean interact)
 	{
 		if (!((L2Npc) target).canTarget(player))
 		{

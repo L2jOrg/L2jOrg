@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.handler.PlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
@@ -39,7 +39,7 @@ public final class RequestActionUse extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }

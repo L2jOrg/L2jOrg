@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.dailymission;
 import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2j.gameserver.handler.DailyMissionHandler;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.holders.ItemHolder;
 
@@ -69,7 +69,7 @@ public class DailyMissionDataHolder {
         return isDisplayedWhenNotAvailable;
     }
 
-    public boolean isDisplayable(L2PcInstance player) {
+    public boolean isDisplayable(Player player) {
         // Check for specific class restrictions
         if (!classRestriction.isEmpty() && !classRestriction.contains(player.getClassId())) {
             return false;
@@ -84,21 +84,21 @@ public class DailyMissionDataHolder {
         return (!isOneTime() || getRecentlyCompleted(player) || (status != DailyMissionStatus.COMPLETED.getClientId()));
     }
 
-    public void requestReward(L2PcInstance player) {
+    public void requestReward(Player player) {
         if (nonNull(handler)) {
             handler.requestReward(player);
         }
     }
 
-    public int getStatus(L2PcInstance player) {
+    public int getStatus(Player player) {
         return nonNull(handler) ? handler.getStatus(player) : DailyMissionStatus.NOT_AVAILABLE.getClientId();
     }
 
-    public int getProgress(L2PcInstance player) {
+    public int getProgress(Player player) {
         return handler != null ? handler.getProgress(player) : 0;
     }
 
-    public boolean getRecentlyCompleted(L2PcInstance player) {
+    public boolean getRecentlyCompleted(Player player) {
         return (handler != null) && handler.isRecentlyCompleted(player);
     }
 
@@ -127,7 +127,7 @@ public class DailyMissionDataHolder {
         return today.getDayOfWeek() == DayOfWeek.SATURDAY || today.with(TemporalAdjusters.previous(DayOfWeek.SATURDAY)).isAfter(LocalDate.ofInstant(Instant.ofEpochMilli(lastReset), ZoneId.systemDefault()));
     }
 
-    public boolean isAvailable(L2PcInstance player) {
+    public boolean isAvailable(Player player) {
         return nonNull(handler) && handler.isAvailable(player);
     }
 }

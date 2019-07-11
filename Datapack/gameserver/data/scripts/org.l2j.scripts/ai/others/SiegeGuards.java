@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.items.type.WeaponType;
@@ -80,7 +80,7 @@ public class SiegeGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+	public String onAdvEvent(String event, L2Npc npc, Player player) {
 		for (L2Npc guard : SPAWNED_GUARDS) {
 			if (guard != null) {
 				if (guard.isDead()) {
@@ -94,7 +94,7 @@ public class SiegeGuards extends AbstractNpcAI
 							if (nearby.isPlayable() && GeoEngine.getInstance().canSeeTarget(guard, nearby))
 							{
 								final L2Summon summon = nearby.isSummon() ? (L2Summon) nearby : null;
-								final L2PcInstance pl = summon == null ? (L2PcInstance) nearby : summon.getOwner();
+								final Player pl = summon == null ? (Player) nearby : summon.getOwner();
 								if (((pl.getSiegeState() != 2) || pl.isRegisteredOnThisSiegeField(guard.getScriptValue())) && ((pl.getSiegeState() != 0) || (guard.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE)))
 						{
 							if (!pl.isInvisible() && !pl.isInvul()) // skip invisible players
@@ -113,7 +113,7 @@ public class SiegeGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(L2Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if ((attacker.getSiegeState() == 2) && !attacker.isRegisteredOnThisSiegeField(npc.getScriptValue()))
 		{
@@ -124,7 +124,7 @@ public class SiegeGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(L2Npc npc, Player killer, boolean isSummon)
 	{
 		SPAWNED_GUARDS.remove(npc);
 		return super.onKill(npc, killer, isSummon);

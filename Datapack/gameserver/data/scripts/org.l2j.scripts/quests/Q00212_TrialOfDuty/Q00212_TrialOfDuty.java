@@ -20,7 +20,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.items.L2Weapon;
 import org.l2j.gameserver.model.quest.Quest;
@@ -86,7 +86,7 @@ public final class Q00212_TrialOfDuty extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String html = null;
@@ -134,7 +134,7 @@ public final class Q00212_TrialOfDuty extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(L2Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		
@@ -252,7 +252,7 @@ public final class Q00212_TrialOfDuty extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(L2Npc npc, Player talker)
 	{
 		final QuestState qs = getQuestState(talker, true);
 		String html = getNoQuestMsg(talker);

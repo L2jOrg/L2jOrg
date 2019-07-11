@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.friend;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -23,7 +23,7 @@ public class L2FriendStatus extends ServerPacket {
     private final int _level;
     private final String _name;
 
-    public L2FriendStatus(L2PcInstance player, int type) {
+    public L2FriendStatus(Player player, int type) {
         _objectId = player.getObjectId();
         _classId = player.getActiveClass();
         _level = player.getLevel();

@@ -17,7 +17,7 @@ import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ClientHardwareInfoHolder;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.gs2as.PlayerLogout;
@@ -55,7 +55,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
     private final Crypt _crypt;
     private String accountName;
     private SessionKey _sessionId;
-    private L2PcInstance activeChar;
+    private Player activeChar;
     private SecondaryPasswordAuth _secondaryAuth;
     private ClientHardwareInfoHolder _hardwareInfo;
     private boolean _isAuthedGG;
@@ -250,11 +250,11 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         return key;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return activeChar;
     }
 
-    public void setActiveChar(L2PcInstance activeChar) {
+    public void setActiveChar(Player activeChar) {
         this.activeChar = activeChar;
     }
 
@@ -387,13 +387,13 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
         LOGGER_ACCOUNTING.info("Restore, " + objectId + ", " + this);
     }
 
-    public L2PcInstance load(int characterSlot) {
+    public Player load(int characterSlot) {
         final int objectId = getObjectIdForSlot(characterSlot);
         if (objectId < 0) {
             return null;
         }
 
-        L2PcInstance player = L2World.getInstance().getPlayer(objectId);
+        Player player = L2World.getInstance().getPlayer(objectId);
         if (player != null) {
             // exploit prevention, should not happens in normal way
             if (player.isOnlineInt() == 1) {
@@ -403,7 +403,7 @@ public final class L2GameClient extends Client<io.github.joealisson.mmocore.Conn
             return null;
         }
 
-        player = L2PcInstance.load(objectId);
+        player = Player.load(objectId);
         if (player == null) {
             LOGGER.error("Could not restore in slot: {}", characterSlot);
         }

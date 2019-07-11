@@ -8,7 +8,7 @@ import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2SiegeClan;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Castle.CastleFunction;
@@ -34,7 +34,7 @@ import java.util.Optional;
  * @author UnAfraid
  */
 public class RegenHPFinalizer implements IStatsFunction {
-    private static double calcSiegeRegenModifier(L2PcInstance activeChar) {
+    private static double calcSiegeRegenModifier(Player activeChar) {
         if ((activeChar == null) || (activeChar.getClan() == null)) {
             return 0;
         }
@@ -64,7 +64,7 @@ public class RegenHPFinalizer implements IStatsFunction {
         }
 
         if (creature.isPlayer()) {
-            final L2PcInstance player = creature.getActingPlayer();
+            final Player player = creature.getActingPlayer();
 
             final double siegeModifier = calcSiegeRegenModifier(player);
             if (siegeModifier > 0) {

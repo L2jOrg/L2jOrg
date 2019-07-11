@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.L2DecoyInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
 import org.l2j.gameserver.model.interfaces.ILocational;
@@ -33,7 +33,7 @@ public class CharInfo extends ServerPacket {
                     Inventory.PAPERDOLL_HAIR,
                     Inventory.PAPERDOLL_HAIR2
             };
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final int _mAtkSpd;
     private final int _pAtkSpd;
     private final int _runSpd;
@@ -54,7 +54,7 @@ public class CharInfo extends ServerPacket {
     private int _armorEnchant = 0;
     private int _vehicleId = 0;
 
-    public CharInfo(L2PcInstance cha, boolean gmSeeInvis) {
+    public CharInfo(Player cha, boolean gmSeeInvis) {
         _activeChar = cha;
         _objId = cha.getObjectId();
         if ((_activeChar.getVehicle() != null) && (_activeChar.getInVehiclePosition() != null)) {

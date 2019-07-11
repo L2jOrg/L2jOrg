@@ -3,7 +3,7 @@ package org.l2j.gameserver.ai;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
@@ -13,7 +13,7 @@ public class L2PlayerAI extends L2PlayableAI {
 
     private IntentionCommand _nextIntention = null;
 
-    public L2PlayerAI(L2PcInstance player) {
+    public L2PlayerAI(Player player) {
         super(player);
     }
 
@@ -161,7 +161,7 @@ public class L2PlayerAI extends L2PlayableAI {
     @Override
     protected void onIntentionMoveTo(Location loc) {
         if (getIntention() == CtrlIntention.AI_INTENTION_REST) {
-            // Cancel action client side by sending Server->Client packet ActionFailed to the L2PcInstance actor
+            // Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
             clientActionFailed();
             return;
         }
@@ -214,7 +214,7 @@ public class L2PlayerAI extends L2PlayableAI {
     private void thinkCast() {
         final L2Object target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
         if ((_skill.getTargetType() == TargetType.GROUND) && _actor.isPlayer()) {
-            if (maybeMoveToPosition(((L2PcInstance) _actor).getCurrentSkillWorldPosition(), _actor.getMagicalAttackRange(_skill))) {
+            if (maybeMoveToPosition(((Player) _actor).getCurrentSkillWorldPosition(), _actor.getMagicalAttackRange(_skill))) {
                 return;
             }
         } else {
@@ -288,7 +288,7 @@ public class L2PlayerAI extends L2PlayableAI {
     }
 
     @Override
-    public L2PcInstance getActor() {
-        return (L2PcInstance) super.getActor();
+    public Player getActor() {
+        return (Player) super.getActor();
     }
 }

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.handler;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
  * Community Board interface.
@@ -35,5 +35,5 @@ public interface IWriteBoardHandler extends IParseBoardHandler {
      * @param arg5   the fifth argument
      * @return
      */
-    boolean writeCommunityBoardCommand(L2PcInstance player, String arg1, String arg2, String arg3, String arg4, String arg5);
+    boolean writeCommunityBoardCommand(Player player, String arg1, String arg2, String arg3, String arg4, String arg5);
 }

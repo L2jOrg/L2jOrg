@@ -4,7 +4,7 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 
 /**
@@ -23,11 +23,11 @@ public final class RequestReplyStartPledgeWar extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
-        final L2PcInstance requestor = activeChar.getActiveRequester();
+        final Player requestor = activeChar.getActiveRequester();
         if (requestor == null) {
             return;
         }

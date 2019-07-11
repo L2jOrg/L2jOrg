@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.CropProcure;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -14,7 +14,7 @@ public class SellListProcure extends ServerPacket {
     private final long _money;
     private final Map<L2ItemInstance, Long> _sellList = new HashMap<>();
 
-    public SellListProcure(L2PcInstance player, int castleId) {
+    public SellListProcure(Player player, int castleId) {
         _money = player.getAdena();
         for (CropProcure c : CastleManorManager.getInstance().getCropProcure(castleId, false)) {
             final L2ItemInstance item = player.getInventory().getItemByItemId(c.getId());

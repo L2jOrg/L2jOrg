@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.L2Party;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.PartyRequest;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -19,7 +19,7 @@ public final class RequestAnswerJoinParty extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if (player == null) {
             return;
         }
@@ -30,7 +30,7 @@ public final class RequestAnswerJoinParty extends ClientPacket {
         }
         request.setProcessing(true);
 
-        final L2PcInstance requestor = request.getActiveChar();
+        final Player requestor = request.getActiveChar();
         if (requestor == null) {
             return;
         }

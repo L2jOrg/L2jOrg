@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.events.impl.character.npc;
 
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -26,10 +26,10 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnAttackableHate implements IBaseEvent {
     private final L2Attackable _npc;
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final boolean _isSummon;
 
-    public OnAttackableHate(L2Attackable npc, L2PcInstance activeChar, boolean isSummon) {
+    public OnAttackableHate(L2Attackable npc, Player activeChar, boolean isSummon) {
         _npc = npc;
         _activeChar = activeChar;
         _isSummon = isSummon;
@@ -39,7 +39,7 @@ public class OnAttackableHate implements IBaseEvent {
         return _npc;
     }
 
-    public final L2PcInstance getActiveChar() {
+    public final Player getActiveChar() {
         return _activeChar;
     }
 

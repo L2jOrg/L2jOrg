@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.L2ArmorSet;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.VariationInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.items.L2Item;
@@ -210,11 +210,11 @@ public abstract class Inventory extends ItemContainer {
      *
      * @param process   : String Identifier of process triggering this action
      * @param item      : L2ItemInstance to be dropped
-     * @param actor     : L2PcInstance Player requesting the item drop
+     * @param actor     : Player Player requesting the item drop
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return L2ItemInstance corresponding to the destroyed item or the updated item in inventory
      */
-    public L2ItemInstance dropItem(String process, L2ItemInstance item, L2PcInstance actor, Object reference) {
+    public L2ItemInstance dropItem(String process, L2ItemInstance item, Player actor, Object reference) {
         if (item == null) {
             return null;
         }
@@ -241,11 +241,11 @@ public abstract class Inventory extends ItemContainer {
      * @param process   : String Identifier of process triggering this action
      * @param objectId  : int Item Instance identifier of the item to be dropped
      * @param count     : int Quantity of items to be dropped
-     * @param actor     : L2PcInstance Player requesting the item drop
+     * @param actor     : Player Player requesting the item drop
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return L2ItemInstance corresponding to the destroyed item or the updated item in inventory
      */
-    public L2ItemInstance dropItem(String process, int objectId, long count, L2PcInstance actor, Object reference) {
+    public L2ItemInstance dropItem(String process, int objectId, long count, Player actor, Object reference) {
         L2ItemInstance item = getItemByObjectId(objectId);
         if (item == null) {
             return null;
@@ -643,7 +643,7 @@ public abstract class Inventory extends ItemContainer {
         try {
             unEquipItemInSlot(slot);
             if (getOwner().isPlayer()) {
-                ((L2PcInstance) getOwner()).refreshExpertisePenalty();
+                ((Player) getOwner()).refreshExpertisePenalty();
             }
         } finally {
             removePaperdollListener(recorder);
@@ -721,7 +721,7 @@ public abstract class Inventory extends ItemContainer {
             final L2ItemInstance old = setPaperdollItem(pdollSlot, null);
             if (old != null) {
                 if (getOwner().isPlayer()) {
-                    ((L2PcInstance) getOwner()).refreshExpertisePenalty();
+                    ((Player) getOwner()).refreshExpertisePenalty();
                 }
             }
             return old;
@@ -754,11 +754,11 @@ public abstract class Inventory extends ItemContainer {
      */
     public void equipItem(L2ItemInstance item) {
         if (getOwner().isPlayer()) {
-            if (((L2PcInstance) getOwner()).getPrivateStoreType() != PrivateStoreType.NONE) {
+            if (((Player) getOwner()).getPrivateStoreType() != PrivateStoreType.NONE) {
                 return;
             }
 
-            final L2PcInstance player = (L2PcInstance) getOwner();
+            final Player player = (Player) getOwner();
 
             if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem()) {
                 return;
@@ -959,7 +959,7 @@ public abstract class Inventory extends ItemContainer {
                 while (rs.next()) {
                     final L2ItemInstance item = new L2ItemInstance(rs);
                     if (getOwner().isPlayer()) {
-                        final L2PcInstance player = (L2PcInstance) getOwner();
+                        final Player player = (Player) getOwner();
 
                         if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem()) {
                             item.setItemLocation(ItemLocation.INVENTORY);
@@ -1253,7 +1253,7 @@ public abstract class Inventory extends ItemContainer {
             return 0;
         }
 
-        final L2PcInstance player = getOwner().getActingPlayer();
+        final Player player = getOwner().getActingPlayer();
         int maxSetEnchant = 0;
         for (L2ItemInstance item : getPaperdollItems()) {
             for (L2ArmorSet set : ArmorSetsData.getInstance().getSets(item.getId())) {
@@ -1307,7 +1307,7 @@ public abstract class Inventory extends ItemContainer {
     /**
      * Reduce the arrow number of the L2Character.<br>
      * <B><U> Overridden in </U> :</B>
-     * <li>L2PcInstance</li>
+     * <li>Player</li>
      *
      * @param type
      */
@@ -1480,7 +1480,7 @@ public abstract class Inventory extends ItemContainer {
                 return;
             }
 
-            final L2PcInstance player = (L2PcInstance) inventory.getOwner();
+            final Player player = (Player) inventory.getOwner();
             final L2Item it = item.getItem();
             final AtomicBoolean update = new AtomicBoolean();
             final AtomicBoolean updateTimestamp = new AtomicBoolean();
@@ -1591,7 +1591,7 @@ public abstract class Inventory extends ItemContainer {
                 return;
             }
 
-            final L2PcInstance player = (L2PcInstance) inventory.getOwner();
+            final Player player = (Player) inventory.getOwner();
 
             // Any items equipped that result in expertise penalty do not give any skills at all.
             if (item.getItem().getCrystalType().getId() > player.getExpertiseLevel()) {
@@ -1687,7 +1687,7 @@ public abstract class Inventory extends ItemContainer {
             return instance;
         }
 
-        private static boolean applySkills(L2PcInstance player, L2ItemInstance item, L2ArmorSet armorSet, Function<L2ItemInstance, Integer> idProvider) {
+        private static boolean applySkills(Player player, L2ItemInstance item, L2ArmorSet armorSet, Function<L2ItemInstance, Integer> idProvider) {
             final long piecesCount = armorSet.getPiecesCount(player, idProvider);
             if (piecesCount >= armorSet.getMinimumPieces()) {
                 // Applying all skills that matching the conditions
@@ -1723,7 +1723,7 @@ public abstract class Inventory extends ItemContainer {
             return false;
         }
 
-        private static boolean verifyAndApply(L2PcInstance player, L2ItemInstance item, Function<L2ItemInstance, Integer> idProvider) {
+        private static boolean verifyAndApply(Player player, L2ItemInstance item, Function<L2ItemInstance, Integer> idProvider) {
             boolean update = false;
             final List<L2ArmorSet> armorSets = ArmorSetsData.getInstance().getSets(idProvider.apply(item));
             for (L2ArmorSet armorSet : armorSets) {
@@ -1734,7 +1734,7 @@ public abstract class Inventory extends ItemContainer {
             return update;
         }
 
-        private static boolean verifyAndRemove(L2PcInstance player, L2ItemInstance item, Function<L2ItemInstance, Integer> idProvider) {
+        private static boolean verifyAndRemove(Player player, L2ItemInstance item, Function<L2ItemInstance, Integer> idProvider) {
             boolean update = false;
             final List<L2ArmorSet> armorSets = ArmorSetsData.getInstance().getSets(idProvider.apply(item));
             for (L2ArmorSet armorSet : armorSets) {
@@ -1769,7 +1769,7 @@ public abstract class Inventory extends ItemContainer {
                 return;
             }
 
-            final L2PcInstance player = (L2PcInstance) inventory.getOwner();
+            final Player player = (Player) inventory.getOwner();
             boolean update = false;
 
             // Verify and apply normal set
@@ -1792,7 +1792,7 @@ public abstract class Inventory extends ItemContainer {
                 return;
             }
 
-            final L2PcInstance player = (L2PcInstance) inventory.getOwner();
+            final Player player = (Player) inventory.getOwner();
             boolean remove = false;
 
             // verify and remove normal set bonus

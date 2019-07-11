@@ -94,42 +94,42 @@ public class L2GuardInstance extends L2Attackable {
      * Manage actions when a player click on the L2GuardInstance.<br>
      * <B><U> Actions on first click on the L2GuardInstance (Select it)</U> :</B>
      * <ul>
-     * <li>Set the L2GuardInstance as target of the L2PcInstance player (if necessary)</li>
-     * <li>Send a Server->Client packet MyTargetSelected to the L2PcInstance player (display the select window)</li>
-     * <li>Set the L2PcInstance Intention to AI_INTENTION_IDLE</li>
+     * <li>Set the L2GuardInstance as target of the Player player (if necessary)</li>
+     * <li>Send a Server->Client packet MyTargetSelected to the Player player (display the select window)</li>
+     * <li>Set the Player Intention to AI_INTENTION_IDLE</li>
      * <li>Send a Server->Client packet ValidateLocation to correct the L2GuardInstance position and heading on the client</li>
      * </ul>
      * <B><U> Actions on second click on the L2GuardInstance (Attack it/Interact with it)</U> :</B>
      * <ul>
-     * <li>If L2PcInstance is in the _aggroList of the L2GuardInstance, set the L2PcInstance Intention to AI_INTENTION_ATTACK</li>
-     * <li>If L2PcInstance is NOT in the _aggroList of the L2GuardInstance, set the L2PcInstance Intention to AI_INTENTION_INTERACT (after a distance verification) and show message</li>
+     * <li>If Player is in the _aggroList of the L2GuardInstance, set the Player Intention to AI_INTENTION_ATTACK</li>
+     * <li>If Player is NOT in the _aggroList of the L2GuardInstance, set the Player Intention to AI_INTENTION_INTERACT (after a distance verification) and show message</li>
      * </ul>
      * <B><U> Example of use </U> :</B>
      * <ul>
      * <li>Client packet : Action, AttackRequest</li>
      * </ul>
      *
-     * @param player The L2PcInstance that start an action on the L2GuardInstance
+     * @param player The Player that start an action on the L2GuardInstance
      */
     @Override
-    public void onAction(L2PcInstance player, boolean interact) {
+    public void onAction(Player player, boolean interact) {
         if (!canTarget(player)) {
             return;
         }
 
-        // Check if the L2PcInstance already target the L2GuardInstance
+        // Check if the Player already target the L2GuardInstance
         if (getObjectId() != player.getTargetId()) {
-            // Set the target of the L2PcInstance player
+            // Set the target of the Player player
             player.setTarget(this);
         } else if (interact) {
-            // Check if the L2PcInstance is in the _aggroList of the L2GuardInstance
+            // Check if the Player is in the _aggroList of the L2GuardInstance
             if (containsTarget(player)) {
-                // Set the L2PcInstance Intention to AI_INTENTION_ATTACK
+                // Set the Player Intention to AI_INTENTION_ATTACK
                 player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
             } else {
-                // Calculate the distance between the L2PcInstance and the L2NpcInstance
+                // Calculate the distance between the Player and the L2NpcInstance
                 if (!canInteract(player)) {
-                    // Set the L2PcInstance Intention to AI_INTENTION_INTERACT
+                    // Set the Player Intention to AI_INTENTION_INTERACT
                     player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
                 } else {
                     player.setLastFolkNPC(this);
@@ -147,7 +147,7 @@ public class L2GuardInstance extends L2Attackable {
                 }
             }
         }
-        // Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
+        // Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
         player.sendPacket(ActionFailed.STATIC_PACKET);
     }
 }

@@ -21,7 +21,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.instancemanager.tasks.PenaltyRemoveTask;
 import org.l2j.gameserver.model.ArenaParticipantsHolder;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -134,7 +134,7 @@ public final class HandysBlockCheckerManager {
      * @param arenaId
      * @return
      */
-    public boolean addPlayerToArena(L2PcInstance player, int arenaId) {
+    public boolean addPlayerToArena(Player player, int arenaId) {
         final ArenaParticipantsHolder holder = _arenaPlayers[arenaId];
 
         synchronized (holder) {
@@ -199,7 +199,7 @@ public final class HandysBlockCheckerManager {
      * @param arenaId
      * @param team
      */
-    public void removePlayer(L2PcInstance player, int arenaId, int team) {
+    public void removePlayer(Player player, int arenaId, int team) {
         final ArenaParticipantsHolder holder = _arenaPlayers[arenaId];
         synchronized (holder) {
             final boolean isRed = team == 0;
@@ -225,7 +225,7 @@ public final class HandysBlockCheckerManager {
      * @param arena
      * @param team
      */
-    public void changePlayerToTeam(L2PcInstance player, int arena, int team) {
+    public void changePlayerToTeam(Player player, int arena, int team) {
         final ArenaParticipantsHolder holder = _arenaPlayers[arena];
 
         synchronized (holder) {
@@ -296,7 +296,7 @@ public final class HandysBlockCheckerManager {
      *
      * @param player
      */
-    public void onDisconnect(L2PcInstance player) {
+    public void onDisconnect(Player player) {
         final int arena = player.getBlockCheckerArena();
         final int team = getHolder(arena).getPlayerTeam(player);
         getInstance().removePlayer(player, arena, team);

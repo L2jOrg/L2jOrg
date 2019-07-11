@@ -25,7 +25,7 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.zone.type.L2NoRestartZone;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -55,7 +55,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
@@ -197,7 +197,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void manageHtml(L2PcInstance activeChar, int grandBossId)
+	private void manageHtml(Player activeChar, int grandBossId)
 	{
 		if (Arrays.asList(ANTHARAS, VALAKAS, BAIUM, QUEENANT, ORFEN, CORE).contains(grandBossId))
 		{

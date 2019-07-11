@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.VehiclePathPoint;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.VehicleStat;
 import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
 import org.l2j.gameserver.model.interfaces.ILocational;
@@ -30,7 +30,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author DS
  */
 public abstract class L2Vehicle extends L2Character {
-    protected final Set<L2PcInstance> _passengers = ConcurrentHashMap.newKeySet();
+    protected final Set<Player> _passengers = ConcurrentHashMap.newKeySet();
     protected int _dockId = 0;
     protected Location _oustLoc = null;
     protected VehiclePathPoint[] _currentPath = null;
@@ -165,10 +165,10 @@ public abstract class L2Vehicle extends L2Character {
     }
 
     public void oustPlayers() {
-        L2PcInstance player;
+        Player player;
 
         // Use iterator because oustPlayer will try to remove player from _passengers
-        final Iterator<L2PcInstance> iter = _passengers.iterator();
+        final Iterator<Player> iter = _passengers.iterator();
         while (iter.hasNext()) {
             player = iter.next();
             iter.remove();
@@ -178,13 +178,13 @@ public abstract class L2Vehicle extends L2Character {
         }
     }
 
-    public void oustPlayer(L2PcInstance player) {
+    public void oustPlayer(Player player) {
         player.setVehicle(null);
         player.setInVehiclePosition(null);
         removePassenger(player);
     }
 
-    public boolean addPassenger(L2PcInstance player) {
+    public boolean addPassenger(Player player) {
         if ((player == null) || _passengers.contains(player)) {
             return false;
         }
@@ -198,7 +198,7 @@ public abstract class L2Vehicle extends L2Character {
         return true;
     }
 
-    public void removePassenger(L2PcInstance player) {
+    public void removePassenger(Player player) {
         try {
             _passengers.remove(player);
         } catch (Exception e) {
@@ -209,12 +209,12 @@ public abstract class L2Vehicle extends L2Character {
         return _passengers.isEmpty();
     }
 
-    public Set<L2PcInstance> getPassengers() {
+    public Set<Player> getPassengers() {
         return _passengers;
     }
 
     public void broadcastToPassengers(ServerPacket sm) {
-        for (L2PcInstance player : _passengers) {
+        for (Player player : _passengers) {
             if (player != null) {
                 player.sendPacket(sm);
             }
@@ -231,7 +231,7 @@ public abstract class L2Vehicle extends L2Character {
      * @param oustZ
      */
     public void payForRide(int itemId, int count, int oustX, int oustY, int oustZ) {
-        L2World.getInstance().forEachVisibleObjectInRange(this, L2PcInstance.class, 1000, player ->
+        L2World.getInstance().forEachVisibleObjectInRange(this, Player.class, 1000, player ->
         {
             if (player.isInBoat() && (player.getBoat() == this)) {
                 if (itemId > 0) {
@@ -254,7 +254,7 @@ public abstract class L2Vehicle extends L2Character {
     public boolean updatePosition() {
         final boolean result = super.updatePosition();
 
-        for (L2PcInstance player : _passengers) {
+        for (Player player : _passengers) {
             if ((player != null) && (player.getVehicle() == this)) {
                 player.setXYZ(getX(), getY(), getZ());
                 player.revalidateZone(false);
@@ -274,7 +274,7 @@ public abstract class L2Vehicle extends L2Character {
 
         getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 
-        for (L2PcInstance player : _passengers) {
+        for (Player player : _passengers) {
             if (player != null) {
                 player.teleToLocation(loc, false);
             }

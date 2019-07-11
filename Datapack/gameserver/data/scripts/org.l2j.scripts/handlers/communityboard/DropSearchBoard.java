@@ -34,7 +34,7 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.DropType;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.items.CommonItem;
@@ -139,7 +139,7 @@ public class DropSearchBoard implements IParseBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, L2PcInstance player)
+	public boolean parseCommunityBoardCommand(String command, Player player)
 	{
 		final String navigation = HtmCache.getInstance().getHtm(player, NAVIGATION_PATH);
 		String[] params = command.split(" ");

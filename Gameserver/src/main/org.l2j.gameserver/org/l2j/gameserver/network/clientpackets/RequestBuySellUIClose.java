@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 public class RequestBuySellUIClose extends ClientPacket {
     @Override
@@ -9,7 +9,7 @@ public class RequestBuySellUIClose extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if ((activeChar == null) || activeChar.isInventoryDisabled()) {
             return;
         }

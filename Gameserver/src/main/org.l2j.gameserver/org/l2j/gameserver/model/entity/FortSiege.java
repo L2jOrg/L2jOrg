@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
 import org.l2j.gameserver.model.actor.instance.L2FortCommanderInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.sieges.OnFortSiegeFinish;
 import org.l2j.gameserver.model.events.impl.sieges.OnFortSiegeStart;
@@ -162,7 +162,7 @@ public class FortSiege implements Siegable {
         L2Clan clan;
         for (L2SiegeClan siegeclan : _attackerClans) {
             clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-            for (L2PcInstance member : clan.getOnlineMembers(0)) {
+            for (Player member : clan.getOnlineMembers(0)) {
                 if (member != null) {
                     member.sendPacket(sm);
                 }
@@ -170,7 +170,7 @@ public class FortSiege implements Siegable {
         }
         if (_fort.getOwnerClan() != null) {
             clan = ClanTable.getInstance().getClan(getFort().getOwnerClan().getId());
-            for (L2PcInstance member : clan.getOnlineMembers(0)) {
+            for (Player member : clan.getOnlineMembers(0)) {
                 if (member != null) {
                     member.sendPacket(sm);
                 }
@@ -187,7 +187,7 @@ public class FortSiege implements Siegable {
         L2Clan clan;
         for (L2SiegeClan siegeclan : _attackerClans) {
             clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-            for (L2PcInstance member : clan.getOnlineMembers(0)) {
+            for (Player member : clan.getOnlineMembers(0)) {
                 if (member == null) {
                     continue;
                 }
@@ -210,7 +210,7 @@ public class FortSiege implements Siegable {
         }
         if (_fort.getOwnerClan() != null) {
             clan = ClanTable.getInstance().getClan(getFort().getOwnerClan().getId());
-            for (L2PcInstance member : clan.getOnlineMembers(0)) {
+            for (Player member : clan.getOnlineMembers(0)) {
                 if (member == null) {
                     continue;
                 }
@@ -314,14 +314,14 @@ public class FortSiege implements Siegable {
     }
 
     /**
-     * @return list of L2PcInstance registered as attacker in the zone.
+     * @return list of Player registered as attacker in the zone.
      */
     @Override
-    public List<L2PcInstance> getAttackersInZone() {
-        final List<L2PcInstance> players = new LinkedList<>();
+    public List<Player> getAttackersInZone() {
+        final List<Player> players = new LinkedList<>();
         for (L2SiegeClan siegeclan : _attackerClans) {
             final L2Clan clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-            for (L2PcInstance player : clan.getOnlineMembers(0)) {
+            for (Player player : clan.getOnlineMembers(0)) {
                 if (player == null) {
                     continue;
                 }
@@ -335,24 +335,24 @@ public class FortSiege implements Siegable {
     }
 
     /**
-     * @return list of L2PcInstance in the zone.
+     * @return list of Player in the zone.
      */
-    public List<L2PcInstance> getPlayersInZone() {
+    public List<Player> getPlayersInZone() {
         return _fort.getZone().getPlayersInside();
     }
 
     /**
-     * @return list of L2PcInstance owning the fort in the zone.
+     * @return list of Player owning the fort in the zone.
      */
-    public List<L2PcInstance> getOwnersInZone() {
-        final List<L2PcInstance> players = new LinkedList<>();
+    public List<Player> getOwnersInZone() {
+        final List<Player> players = new LinkedList<>();
         if (_fort.getOwnerClan() != null) {
             final L2Clan clan = ClanTable.getInstance().getClan(getFort().getOwnerClan().getId());
             if (clan != _fort.getOwnerClan()) {
                 return null;
             }
 
-            for (L2PcInstance player : clan.getOnlineMembers(0)) {
+            for (Player player : clan.getOnlineMembers(0)) {
                 if (player == null) {
                     continue;
                 }
@@ -453,7 +453,7 @@ public class FortSiege implements Siegable {
     /**
      * Register clan as attacker.<BR>
      *
-     * @param player          The L2PcInstance of the player trying to register.
+     * @param player          The Player of the player trying to register.
      * @param checkConditions True if should be checked conditions, false otherwise
      * @return Number that defines what happened. <BR>
      * 0 - Player don't have clan.<BR>
@@ -462,7 +462,7 @@ public class FortSiege implements Siegable {
      * 3 - Players clan is already registered to siege.<BR>
      * 4 - Players clan is successfully registered to siege.
      */
-    public int addAttacker(L2PcInstance player, boolean checkConditions) {
+    public int addAttacker(Player player, boolean checkConditions) {
         if (player.getClan() == null) {
             return 0; // Player dont have clan
         }
@@ -613,7 +613,7 @@ public class FortSiege implements Siegable {
      * @param teleportWhere
      */
     public void teleportPlayer(FortTeleportWhoType teleportWho, TeleportWhereType teleportWhere) {
-        List<L2PcInstance> players;
+        List<Player> players;
         switch (teleportWho) {
             case Owner: {
                 players = getOwnersInZone();
@@ -628,7 +628,7 @@ public class FortSiege implements Siegable {
             }
         }
 
-        for (L2PcInstance player : players) {
+        for (Player player : players) {
             if (player.canOverrideCond(PcCondOverride.FORTRESS_CONDITIONS) || player.isJailed()) {
                 continue;
             }

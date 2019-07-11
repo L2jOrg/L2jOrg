@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.AskJoinPledge;
 
 /**
@@ -19,12 +19,12 @@ public class RequestClanAskJoinByName extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if ((activeChar == null) || (activeChar.getClan() == null)) {
             return;
         }
 
-        final L2PcInstance invitedPlayer = L2World.getInstance().getPlayer(_playerName);
+        final Player invitedPlayer = L2World.getInstance().getPlayer(_playerName);
         if (!activeChar.getClan().checkClanJoinCondition(activeChar, invitedPlayer, _pledgeType)) {
             return;
         }

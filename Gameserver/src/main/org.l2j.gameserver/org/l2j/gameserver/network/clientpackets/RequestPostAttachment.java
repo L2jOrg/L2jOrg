@@ -6,7 +6,7 @@ import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.items.CommonItem;
@@ -35,7 +35,7 @@ public final class RequestPostAttachment extends ClientPacket {
             return;
         }
 
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
@@ -179,7 +179,7 @@ public final class RequestPostAttachment extends ClientPacket {
         msg.removeAttachments();
 
         SystemMessage sm;
-        final L2PcInstance sender = L2World.getInstance().getPlayer(msg.getSenderId());
+        final Player sender = L2World.getInstance().getPlayer(msg.getSenderId());
         if (adena > 0) {
             if (sender != null) {
                 sender.addAdena("PayMail", adena, activeChar, false);

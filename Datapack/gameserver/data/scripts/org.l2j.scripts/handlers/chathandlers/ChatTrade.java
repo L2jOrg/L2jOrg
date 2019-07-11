@@ -23,7 +23,7 @@ import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.PcCondOverride;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -43,7 +43,7 @@ public final class ChatTrade implements IChatHandler
 	};
 	
 	@Override
-	public void handleChat(ChatType type, L2PcInstance activeChar, String target, String text)
+	public void handleChat(ChatType type, Player activeChar, String target, String text)
 	{
 		if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
 		{
@@ -65,7 +65,7 @@ public final class ChatTrade implements IChatHandler
 		if (Config.DEFAULT_TRADE_CHAT.equalsIgnoreCase("on") || (Config.DEFAULT_TRADE_CHAT.equalsIgnoreCase("gm") && activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS)))
 		{
 			final int region = MapRegionManager.getInstance().getMapRegionLocId(activeChar);
-			for (L2PcInstance player : L2World.getInstance().getPlayers())
+			for (Player player : L2World.getInstance().getPlayers())
 			{
 				if ((region == MapRegionManager.getInstance().getMapRegionLocId(player)) && !BlockList.isBlocked(player, activeChar) && (player.getInstanceId() == activeChar.getInstanceId()))
 				{
@@ -81,7 +81,7 @@ public final class ChatTrade implements IChatHandler
 				return;
 			}
 			
-			for (L2PcInstance player : L2World.getInstance().getPlayers())
+			for (Player player : L2World.getInstance().getPlayers())
 			{
 				if (!BlockList.isBlocked(player, activeChar))
 				{

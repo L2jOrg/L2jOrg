@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.enums.HtmlActionScope;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,7 +48,7 @@ public abstract class AbstractHtmlPacket extends ServerPacket {
         _disabledValidation = true;
     }
 
-    public final boolean setFile(L2PcInstance player, String path) {
+    public final boolean setFile(Player player, String path) {
         final String content = HtmCache.getInstance().getHtm(player, path);
         if (content == null) {
             setHtml("<html><body>My Text is missing:<br>" + path + "</body></html>");
@@ -85,7 +85,7 @@ public abstract class AbstractHtmlPacket extends ServerPacket {
     }
 
     @Override
-    public final void runImpl(L2PcInstance player) {
+    public final void runImpl(Player player) {
         if (player != null) {
             player.clearHtmlActions(getScope());
         }

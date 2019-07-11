@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.instancezone.conditions;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
 
@@ -36,7 +36,7 @@ public final class ConditionReenter extends Condition {
     }
 
     @Override
-    protected boolean test(L2PcInstance player, L2Npc npc) {
+    protected boolean test(Player player, L2Npc npc) {
         final int instanceId = getParameters().getInt("instanceId", getInstanceTemplate().getId());
         return System.currentTimeMillis() > InstanceManager.getInstance().getInstanceTime(player, instanceId);
     }

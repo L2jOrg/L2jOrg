@@ -9,7 +9,7 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.instancemanager.EventShrineManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.announce.EventAnnouncement;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.holders.DropHolder;
@@ -287,7 +287,7 @@ public class LongTimeEvent extends Quest {
         if (!_destoyItemsOnEnd.isEmpty()) {
             for (int itemId : _destoyItemsOnEnd) {
                 // Remove item from online players.
-                for (L2PcInstance player : L2World.getInstance().getPlayers()) {
+                for (Player player : L2World.getInstance().getPlayers()) {
                     if (player != null) {
                         player.destroyItemByItemId(_eventName, itemId, -1, player, true);
                     }

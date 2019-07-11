@@ -4,7 +4,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.model.L2SkillLearn;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.SocialClass;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.interfaces.INamable;
@@ -70,7 +70,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
         _zone = zone;
     }
 
-    public void giveResidentialSkills(L2PcInstance player) {
+    public void giveResidentialSkills(Player player) {
         if ((_residentialSkills != null) && !_residentialSkills.isEmpty()) {
             final int playerSocialClass = player.getPledgeClass() + 1;
             for (L2SkillLearn skill : _residentialSkills) {
@@ -82,7 +82,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
         }
     }
 
-    public void removeResidentialSkills(L2PcInstance player) {
+    public void removeResidentialSkills(Player player) {
         if ((_residentialSkills != null) && !_residentialSkills.isEmpty()) {
             for (L2SkillLearn skill : _residentialSkills) {
                 player.removeSkill(skill.getSkillId(), false);

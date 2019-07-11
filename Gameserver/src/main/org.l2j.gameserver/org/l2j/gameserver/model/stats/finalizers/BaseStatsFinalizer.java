@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 import org.l2j.gameserver.data.xml.impl.ArmorSetsData;
 import org.l2j.gameserver.model.L2ArmorSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
@@ -43,7 +43,7 @@ public class BaseStatsFinalizer implements IStatsFunction {
         // Should not apply armor set and henna bonus to summons.
         if (creature.isPlayer())
         {
-            final L2PcInstance player = creature.getActingPlayer();
+            final Player player = creature.getActingPlayer();
             final Set<L2ArmorSet> appliedSets = new HashSet<>(2);
 
             // Armor sets calculation

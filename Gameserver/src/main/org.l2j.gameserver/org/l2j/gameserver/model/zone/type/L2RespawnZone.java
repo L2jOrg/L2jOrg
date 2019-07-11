@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.zone.type;
 
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.L2ZoneRespawn;
 
 import java.util.HashMap;
@@ -36,7 +36,7 @@ public class L2RespawnZone extends L2ZoneRespawn {
         return _raceRespawnPoint;
     }
 
-    public String getRespawnPoint(L2PcInstance activeChar) {
+    public String getRespawnPoint(Player activeChar) {
         return _raceRespawnPoint.get(activeChar.getRace());
     }
 }

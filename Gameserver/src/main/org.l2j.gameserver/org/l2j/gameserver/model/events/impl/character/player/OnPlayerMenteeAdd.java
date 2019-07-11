@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -24,19 +24,19 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnPlayerMenteeAdd implements IBaseEvent {
-    private final L2PcInstance _mentor;
-    private final L2PcInstance _mentee;
+    private final Player _mentor;
+    private final Player _mentee;
 
-    public OnPlayerMenteeAdd(L2PcInstance mentor, L2PcInstance mentee) {
+    public OnPlayerMenteeAdd(Player mentor, Player mentee) {
         _mentor = mentor;
         _mentee = mentee;
     }
 
-    public L2PcInstance getMentor() {
+    public Player getMentor() {
         return _mentor;
     }
 
-    public L2PcInstance getMentee() {
+    public Player getMentee() {
         return _mentee;
     }
 

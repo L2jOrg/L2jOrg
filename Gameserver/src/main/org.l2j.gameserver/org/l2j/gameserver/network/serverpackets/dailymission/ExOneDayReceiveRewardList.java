@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.serverpackets.dailymission;
 
 import org.l2j.gameserver.data.xml.impl.DailyMissionData;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -18,13 +18,13 @@ import java.util.function.Function;
  */
 public class ExOneDayReceiveRewardList extends ServerPacket {
     private static final Function<String, Long> remainTime = pattern -> (new Predictor(pattern).nextMatchingTime() - System.currentTimeMillis()) / 1000;
-    private final L2PcInstance player;
+    private final Player player;
     private final Collection<DailyMissionDataHolder> missions;
     private final long dayRemainTime;
     private final long weekRemainTime;
     private final long monthRemainTime;
 
-    public ExOneDayReceiveRewardList(L2PcInstance player, boolean sendRewards) {
+    public ExOneDayReceiveRewardList(Player player, boolean sendRewards) {
         this.player = player;
         this.missions = sendRewards ? DailyMissionData.getInstance().getDailyMissions(player) : Collections.emptyList();
         dayRemainTime = remainTime.apply("30 6 * * *");

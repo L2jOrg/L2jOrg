@@ -18,7 +18,7 @@ package org.l2j.gameserver.ai;
 
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.L2AirShipInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ExMoveToLocationAirShip;
 import org.l2j.gameserver.network.serverpackets.ExStopMoveAirShip;
 
@@ -52,7 +52,7 @@ public class L2AirShipAI extends L2VehicleAI {
     }
 
     @Override
-    public void describeStateToPlayer(L2PcInstance player) {
+    public void describeStateToPlayer(Player player) {
         if (_clientMoving) {
             player.sendPacket(new ExMoveToLocationAirShip(getActor()));
         }

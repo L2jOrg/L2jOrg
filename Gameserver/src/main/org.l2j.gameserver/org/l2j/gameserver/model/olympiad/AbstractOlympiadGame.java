@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.L2Party.MessageType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -53,7 +53,7 @@ public abstract class AbstractOlympiadGame {
      * @param player
      * @return
      */
-    protected static SystemMessage checkDefaulted(L2PcInstance player) {
+    protected static SystemMessage checkDefaulted(Player player) {
         if ((player == null) || !player.isOnline()) {
             return SystemMessage.getSystemMessage(SystemMessageId.YOUR_OPPONENT_MADE_HASTE_WITH_THEIR_TAIL_BETWEEN_THEIR_LEGS_THE_MATCH_HAS_BEEN_CANCELLED);
         }
@@ -98,7 +98,7 @@ public abstract class AbstractOlympiadGame {
     }
 
     protected static boolean portPlayerToArena(Participant par, Location loc, int id, Instance instance) {
-        final L2PcInstance player = par.getPlayer();
+        final Player player = par.getPlayer();
         if ((player == null) || !player.isOnline()) {
             return false;
         }
@@ -123,7 +123,7 @@ public abstract class AbstractOlympiadGame {
         return true;
     }
 
-    protected static void removals(L2PcInstance player, boolean removeParty) {
+    protected static void removals(Player player, boolean removeParty) {
         try {
             if (player == null) {
                 return;
@@ -207,7 +207,7 @@ public abstract class AbstractOlympiadGame {
         }
     }
 
-    protected static void cleanEffects(L2PcInstance player) {
+    protected static void cleanEffects(Player player) {
         try {
             // prevent players kill each other
             player.setIsOlympiadStart(false);
@@ -253,7 +253,7 @@ public abstract class AbstractOlympiadGame {
         }
     }
 
-    protected static void playerStatusBack(L2PcInstance player) {
+    protected static void playerStatusBack(Player player) {
         try {
             if (player.isTransformed()) {
                 player.untransform();
@@ -291,7 +291,7 @@ public abstract class AbstractOlympiadGame {
         }
     }
 
-    protected static void portPlayerBack(L2PcInstance player) {
+    protected static void portPlayerBack(Player player) {
         if (player == null) {
             return;
         }
@@ -303,7 +303,7 @@ public abstract class AbstractOlympiadGame {
         }
     }
 
-    public static void rewardParticipant(L2PcInstance player, List<ItemHolder> list) {
+    public static void rewardParticipant(Player player, List<ItemHolder> list) {
         if ((player == null) || !player.isOnline() || (list == null)) {
             return;
         }
@@ -386,11 +386,11 @@ public abstract class AbstractOlympiadGame {
 
     protected abstract void clearPlayers();
 
-    protected abstract void handleDisconnect(L2PcInstance player);
+    protected abstract void handleDisconnect(Player player);
 
     protected abstract void resetDamage();
 
-    protected abstract void addDamage(L2PcInstance player, int damage);
+    protected abstract void addDamage(Player player, int damage);
 
     protected abstract boolean checkBattleStatus();
 

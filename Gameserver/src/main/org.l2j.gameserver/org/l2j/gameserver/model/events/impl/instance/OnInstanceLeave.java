@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.instance;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -25,15 +25,15 @@ import org.l2j.gameserver.model.instancezone.Instance;
  * @author malyeflik
  */
 public final class OnInstanceLeave implements IBaseEvent {
-    private final L2PcInstance _player;
+    private final Player _player;
     private final Instance _instance;
 
-    public OnInstanceLeave(L2PcInstance player, Instance instance) {
+    public OnInstanceLeave(Player player, Instance instance) {
         _player = player;
         _instance = instance;
     }
 
-    public L2PcInstance getPlayer() {
+    public Player getPlayer() {
         return _player;
     }
 

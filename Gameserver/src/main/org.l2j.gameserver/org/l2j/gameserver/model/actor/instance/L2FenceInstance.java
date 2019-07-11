@@ -63,7 +63,7 @@ public final class L2FenceInstance extends L2Object {
     }
 
     @Override
-    public void sendInfo(L2PcInstance activeChar) {
+    public void sendInfo(Player activeChar) {
         activeChar.sendPacket(new ExColosseumFenceInfo(this));
 
         if (_heightFences != null) {
@@ -81,7 +81,7 @@ public final class L2FenceInstance extends L2Object {
                 deleteObjects[i] = new DeleteObject(_heightFences[i]);
             }
 
-            L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player -> player.sendPacket(deleteObjects));
+            L2World.getInstance().forEachVisibleObject(this, Player.class, player -> player.sendPacket(deleteObjects));
         }
 
         return super.decayMe();

@@ -29,12 +29,12 @@ public final class L2FlyTerrainObjectInstance extends L2Npc {
     }
 
     @Override
-    public void onAction(L2PcInstance player, boolean interact) {
+    public void onAction(Player player, boolean interact) {
         player.sendPacket(ActionFailed.STATIC_PACKET);
     }
 
     @Override
-    public void onActionShift(L2PcInstance player) {
+    public void onActionShift(Player player) {
         if (player.isGM()) {
             super.onActionShift(player);
         } else {

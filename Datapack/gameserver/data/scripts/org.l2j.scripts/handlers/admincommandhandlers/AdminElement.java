@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -45,7 +45,7 @@ public class AdminElement implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		int armorType = -1;
 		
@@ -110,7 +110,7 @@ public class AdminElement implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void setElement(L2PcInstance activeChar, AttributeType type, int value, int armorType)
+	private void setElement(Player activeChar, AttributeType type, int value, int armorType)
 	{
 		// get the target
 		L2Object target = activeChar.getTarget();
@@ -118,10 +118,10 @@ public class AdminElement implements IAdminCommandHandler
 		{
 			target = activeChar;
 		}
-		L2PcInstance player = null;
+		Player player = null;
 		if (target.isPlayer())
 		{
-			player = (L2PcInstance) target;
+			player = (Player) target;
 		}
 		else
 		{

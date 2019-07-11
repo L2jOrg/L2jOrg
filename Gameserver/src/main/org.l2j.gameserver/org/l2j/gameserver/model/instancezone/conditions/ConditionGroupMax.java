@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.instancezone.conditions;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
 
@@ -36,7 +36,7 @@ public final class ConditionGroupMax extends Condition {
     }
 
     @Override
-    protected boolean test(L2PcInstance player, L2Npc npc, List<L2PcInstance> group) {
+    protected boolean test(Player player, L2Npc npc, List<Player> group) {
         return group.size() <= getLimit();
     }
 

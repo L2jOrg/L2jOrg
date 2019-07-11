@@ -16,13 +16,13 @@
  */
 package org.l2j.gameserver.model.actor.request;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
  * @author UnAfraid
  */
 public class PrimeShopRequest extends AbstractRequest {
-    public PrimeShopRequest(L2PcInstance activeChar) {
+    public PrimeShopRequest(Player activeChar) {
         super(activeChar);
     }
 

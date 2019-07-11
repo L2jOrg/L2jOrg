@@ -150,7 +150,7 @@ public final class L2WorldRegion {
 
     /**
      * Add the L2Object in the L2ObjectHashSet(L2Object) _visibleObjects containing L2Object visible in this L2WorldRegion <BR>
-     * If L2Object is a L2PcInstance, Add the L2PcInstance in the L2ObjectHashSet(L2PcInstance) _allPlayable containing L2PcInstance of all player in game in this L2WorldRegion <BR>
+     * If L2Object is a Player, Add the Player in the L2ObjectHashSet(Player) _allPlayable containing Player of all player in game in this L2WorldRegion <BR>
      *
      * @param object
      */
@@ -170,7 +170,7 @@ public final class L2WorldRegion {
     }
 
     /**
-     * Remove the L2Object from the L2ObjectHashSet(L2Object) _visibleObjects in this L2WorldRegion. If L2Object is a L2PcInstance, remove it from the L2ObjectHashSet(L2PcInstance) _allPlayable of this L2WorldRegion <BR>
+     * Remove the L2Object from the L2ObjectHashSet(L2Object) _visibleObjects in this L2WorldRegion. If L2Object is a Player, remove it from the L2ObjectHashSet(Player) _allPlayable of this L2WorldRegion <BR>
      *
      * @param object
      */

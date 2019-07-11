@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.RadarControl;
 
 import java.util.Set;
@@ -26,10 +26,10 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author dalrond
  */
 public final class L2Radar {
-    private final L2PcInstance _player;
+    private final Player _player;
     private final Set<RadarMarker> _markers = ConcurrentHashMap.newKeySet();
 
-    public L2Radar(L2PcInstance player) {
+    public L2Radar(Player player) {
         _player = player;
     }
 

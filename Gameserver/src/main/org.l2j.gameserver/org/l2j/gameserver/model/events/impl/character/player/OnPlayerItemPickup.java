@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -25,15 +25,15 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
  * @author UnAfraid
  */
 public class OnPlayerItemPickup implements IBaseEvent {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final L2ItemInstance _item;
 
-    public OnPlayerItemPickup(L2PcInstance activeChar, L2ItemInstance item) {
+    public OnPlayerItemPickup(Player activeChar, L2ItemInstance item) {
         _activeChar = activeChar;
         _item = item;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _activeChar;
     }
 

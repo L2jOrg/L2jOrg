@@ -172,12 +172,12 @@ public class L2Npc extends L2Character {
     }
 
     /**
-     * Send a packet SocialAction to all L2PcInstance in the _KnownPlayers of the L2NpcInstance and create a new RandomAnimation Task.
+     * Send a packet SocialAction to all Player in the _KnownPlayers of the L2NpcInstance and create a new RandomAnimation Task.
      *
      * @param animationId
      */
     public void onRandomAnimation(int animationId) {
-        // Send a packet SocialAction to all L2PcInstance in the _KnownPlayers of the L2NpcInstance
+        // Send a packet SocialAction to all Player in the _KnownPlayers of the L2NpcInstance
         final long now = System.currentTimeMillis();
         if ((now - _lastSocialBroadcast) > MINIMUM_SOCIAL_INTERVAL) {
             _lastSocialBroadcast = now;
@@ -298,11 +298,11 @@ public class L2Npc extends L2Character {
     }
 
     /**
-     * Send a packet NpcInfo with state of abnormal effect to all L2PcInstance in the _KnownPlayers of the L2NpcInstance.
+     * Send a packet NpcInfo with state of abnormal effect to all Player in the _KnownPlayers of the L2NpcInstance.
      */
     @Override
     public void updateAbnormalVisualEffects() {
-        L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
+        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (!isVisibleFor(player)) {
                 return;
@@ -386,7 +386,7 @@ public class L2Npc extends L2Character {
         return false;
     }
 
-    public boolean canTarget(L2PcInstance player) {
+    public boolean canTarget(Player player) {
         if (player.isControlBlocked()) {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return false;
@@ -401,7 +401,7 @@ public class L2Npc extends L2Character {
         return true;
     }
 
-    public boolean canInteract(L2PcInstance player) {
+    public boolean canInteract(Player player) {
         if (player.isCastingNow()) {
             return false;
         } else if (player.isDead() || player.isFakeDeath()) {
@@ -509,7 +509,7 @@ public class L2Npc extends L2Character {
      * @param player
      * @param command The command string received from client
      */
-    public void onBypassFeedback(L2PcInstance player, String command) {
+    public void onBypassFeedback(Player player, String command) {
         if (canInteract(player))
         {
             final IBypassHandler handler = BypassHandler.getInstance().getHandler(command);
@@ -584,7 +584,7 @@ public class L2Npc extends L2Character {
         return "data/html/npcdefault.htm";
     }
 
-    public void showChatWindow(L2PcInstance player) {
+    public void showChatWindow(Player player) {
         showChatWindow(player, 0);
     }
 
@@ -595,7 +595,7 @@ public class L2Npc extends L2Character {
      * @param type
      * @return boolean
      */
-    private boolean showPkDenyChatWindow(L2PcInstance player, String type) {
+    private boolean showPkDenyChatWindow(Player player, String type) {
         String html = HtmCache.getInstance().getHtm(player, "data/html/" + type + "/" + getId() + "-pk.htm");
         if (html != null) {
             html = html.replaceAll("%objectId%", String.valueOf(getObjectId()));
@@ -611,14 +611,14 @@ public class L2Npc extends L2Character {
      * <B><U>Actions</U>:</B>
      * <ul>
      * <li>Get the text of the selected HTML file in function of the npcId and of the page number</li>
-     * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance</li>
-     * <li>Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet</li>
+     * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the Player</li>
+     * <li>Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet</li>
      * </ul>
      *
-     * @param player The L2PcInstance that talk with the L2NpcInstance
+     * @param player The Player that talk with the L2NpcInstance
      * @param val    The number of the page of the L2NpcInstance to display
      */
-    public void showChatWindow(L2PcInstance player, int val) {
+    public void showChatWindow(Player player, int val) {
         if (!_isTalkable) {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
@@ -691,31 +691,31 @@ public class L2Npc extends L2Character {
             }
         }
 
-        // Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance
+        // Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the Player
         final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
         html.setFile(player, filename);
         html.replace("%npcname%", getName());
         html.replace("%objectId%", String.valueOf(getObjectId()));
         player.sendPacket(html);
 
-        // Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
+        // Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
         player.sendPacket(ActionFailed.STATIC_PACKET);
     }
 
     /**
      * Open a chat window on client with the text specified by the given file name and path, relative to the datapack root.
      *
-     * @param player   The L2PcInstance that talk with the L2NpcInstance
+     * @param player   The Player that talk with the L2NpcInstance
      * @param filename The filename that contains the text to send
      */
-    public void showChatWindow(L2PcInstance player, String filename) {
-        // Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance
+    public void showChatWindow(Player player, String filename) {
+        // Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the Player
         final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
         html.setFile(player, filename);
         html.replace("%objectId%", String.valueOf(getObjectId()));
         player.sendPacket(html);
 
-        // Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
+        // Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
         player.sendPacket(ActionFailed.STATIC_PACKET);
     }
 
@@ -755,7 +755,7 @@ public class L2Npc extends L2Character {
      * <li>Stop movement</li>
      * <li>Stop HP/MP/CP Regeneration task</li>
      * <li>Stop all active skills effects in progress on the L2Character</li>
-     * <li>Send the Server->Client packet StatusUpdate with current HP and MP to all other L2PcInstance to inform</li>
+     * <li>Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform</li>
      * <li>Notify L2Character AI</li>
      * </ul>
      *
@@ -788,7 +788,7 @@ public class L2Npc extends L2Character {
 
         // Apply Mp Rewards
         if ((getTemplate().getMpRewardValue() > 0) && (killer != null) && killer.isPlayable()) {
-            final L2PcInstance killerPlayer = killer.getActingPlayer();
+            final Player killerPlayer = killer.getActingPlayer();
             new MpRewardTask(killerPlayer, this);
             for (L2Summon summon : killerPlayer.getServitors().values()) {
                 new MpRewardTask(summon, this);
@@ -796,7 +796,7 @@ public class L2Npc extends L2Character {
             if (getTemplate().getMpRewardAffectType() == MpRewardAffectType.PARTY) {
                 final L2Party party = killerPlayer.getParty();
                 if (party != null) {
-                    for (L2PcInstance member : party.getMembers()) {
+                    for (Player member : party.getMembers()) {
                         if ((member != killerPlayer) && (member.calculateDistance3D(getX(), getY(), getZ()) <= Config.ALT_PARTY_RANGE)) {
                             new MpRewardTask(member, this);
                             for (L2Summon summon : member.getServitors().values()) {
@@ -1028,7 +1028,7 @@ public class L2Npc extends L2Character {
     }
 
     @Override
-    public void sendInfo(L2PcInstance activeChar) {
+    public void sendInfo(Player activeChar) {
         if (isVisibleFor(activeChar)) {
             if (getRunSpeed() == 0) {
                 activeChar.sendPacket(new ServerObjectInfo(this, activeChar));
@@ -1290,7 +1290,7 @@ public class L2Npc extends L2Character {
     }
 
     @Override
-    public boolean isVisibleFor(L2PcInstance player) {
+    public boolean isVisibleFor(Player player) {
         if (hasListener(EventType.ON_NPC_CAN_BE_SEEN)) {
             final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnNpcCanBeSeen(this, player), this, TerminateReturn.class);
             if (term != null) {

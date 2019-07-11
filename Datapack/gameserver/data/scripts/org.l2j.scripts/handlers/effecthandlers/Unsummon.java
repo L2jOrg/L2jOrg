@@ -20,7 +20,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -79,7 +79,7 @@ public final class Unsummon extends AbstractEffect
 		if (effected.isServitor())
 		{
 			final L2Summon servitor = (L2Summon) effected;
-			final L2PcInstance summonOwner = servitor.getOwner();
+			final Player summonOwner = servitor.getOwner();
 			
 			servitor.abortAttack();
 			servitor.abortCast();

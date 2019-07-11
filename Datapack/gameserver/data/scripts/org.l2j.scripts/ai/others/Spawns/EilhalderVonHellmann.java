@@ -4,7 +4,7 @@ import ai.AbstractNpcAI;
 import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
 import org.l2j.gameserver.model.events.annotations.RegisterEvent;
@@ -31,7 +31,7 @@ public final class EilhalderVonHellmann extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		if (event.equals("delete") && (npc != null))
 		{

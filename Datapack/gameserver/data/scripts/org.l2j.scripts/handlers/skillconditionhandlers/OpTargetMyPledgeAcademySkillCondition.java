@@ -19,7 +19,7 @@ package handlers.skillconditionhandlers;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -39,7 +39,7 @@ public class OpTargetMyPledgeAcademySkillCondition implements ISkillCondition
 		{
 			return false;
 		}
-		final L2PcInstance targetPlayer = target.getActingPlayer();
+		final Player targetPlayer = target.getActingPlayer();
 		return targetPlayer.isAcademyMember() && (targetPlayer.getClan() == caster.getClan());
 	}
 }

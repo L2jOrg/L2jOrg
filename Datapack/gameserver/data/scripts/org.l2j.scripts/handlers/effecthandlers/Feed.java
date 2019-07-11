@@ -20,7 +20,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -58,7 +58,7 @@ public class Feed extends AbstractEffect
 		}
 		else if (effected.isPlayer())
 		{
-			final L2PcInstance player = effected.getActingPlayer();
+			final Player player = effected.getActingPlayer();
 			if (player.getMountType() == MountType.WYVERN)
 			{
 				player.setCurrentFeed(player.getCurrentFeed() + _wyvern);

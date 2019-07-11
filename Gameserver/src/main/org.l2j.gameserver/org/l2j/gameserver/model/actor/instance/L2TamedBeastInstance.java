@@ -34,7 +34,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance {
     private static final int DURATION_CHECK_INTERVAL = 60000; // 1 minute
     private static final int DURATION_INCREASE_INTERVAL = 20000; // 20 secs (gained upon feeding)
     private static final int BUFF_INTERVAL = 5000; // 5 seconds
-    protected L2PcInstance _owner;
+    protected Player _owner;
     protected boolean _isFreyaBeast;
     private int _foodSkillId;
     private int _remainingTime = MAX_DURATION;
@@ -51,7 +51,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance {
         setHome(this);
     }
 
-    public L2TamedBeastInstance(int npcTemplateId, L2PcInstance owner, int foodSkillId, int x, int y, int z) {
+    public L2TamedBeastInstance(int npcTemplateId, Player owner, int foodSkillId, int x, int y, int z) {
         super(NpcData.getInstance().getTemplate(npcTemplateId));
         _isFreyaBeast = false;
         setInstanceType(InstanceType.L2TamedBeastInstance);
@@ -63,7 +63,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance {
         spawnMe(x, y, z);
     }
 
-    public L2TamedBeastInstance(int npcTemplateId, L2PcInstance owner, int food, int x, int y, int z, boolean isFreyaBeast) {
+    public L2TamedBeastInstance(int npcTemplateId, Player owner, int food, int x, int y, int z, boolean isFreyaBeast) {
         super(NpcData.getInstance().getTemplate(npcTemplateId));
         _isFreyaBeast = isFreyaBeast;
         setInstanceType(InstanceType.L2TamedBeastInstance);
@@ -179,11 +179,11 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance {
         ThreadPoolManager.getInstance().schedule(new buffCast(null), delay);
     }
 
-    public L2PcInstance getOwner() {
+    public Player getOwner() {
         return _owner;
     }
 
-    public void setOwner(L2PcInstance owner) {
+    public void setOwner(Player owner) {
         if (owner != null) {
             _owner = owner;
             setTitle(owner.getName());
@@ -317,20 +317,20 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance {
     }
 
     @Override
-    public void onAction(L2PcInstance player, boolean interact) {
+    public void onAction(Player player, boolean interact) {
         if ((player == null) || !canTarget(player)) {
             return;
         }
 
-        // Check if the L2PcInstance already target the L2NpcInstance
+        // Check if the Player already target the L2NpcInstance
         if (this != player.getTarget()) {
-            // Set the target of the L2PcInstance player
+            // Set the target of the Player player
             player.setTarget(this);
         } else if (interact) {
             if (isAutoAttackable(player) && (Math.abs(player.getZ() - getZ()) < 100)) {
                 player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
             } else {
-                // Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
+                // Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
                 player.sendPacket(ActionFailed.STATIC_PACKET);
             }
         }
@@ -346,7 +346,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance {
         @Override
         public void run() {
             final int foodTypeSkillId = _tamedBeast.getFoodType();
-            final L2PcInstance owner = _tamedBeast.getOwner();
+            final Player owner = _tamedBeast.getOwner();
 
             L2ItemInstance item = null;
             if (_tamedBeast._isFreyaBeast) {
@@ -423,7 +423,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance {
 
         @Override
         public void run() {
-            final L2PcInstance owner = _tamedBeast.getOwner();
+            final Player owner = _tamedBeast.getOwner();
 
             // check if the owner is no longer around...if so, despawn
             if ((owner == null) || !owner.isOnline()) {

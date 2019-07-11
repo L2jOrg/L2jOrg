@@ -19,13 +19,12 @@ package org.l2j.gameserver.model.itemcontainer;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.logging.Level;
 
 /**
  * @author DS
@@ -45,7 +44,7 @@ public class Mail extends ItemContainer {
     }
 
     @Override
-    public L2PcInstance getOwner() {
+    public Player getOwner() {
         return null;
     }
 

@@ -20,7 +20,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -93,7 +93,7 @@ public final class Q00403_PathOfTheRogue extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -171,7 +171,7 @@ public final class Q00403_PathOfTheRogue extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(L2Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(attacker, false);
 		if ((qs != null) && qs.isStarted())
@@ -213,7 +213,7 @@ public final class Q00403_PathOfTheRogue extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(L2Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isStarted() && npc.isScriptValue(1) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
@@ -259,14 +259,14 @@ public final class Q00403_PathOfTheRogue extends Quest
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private boolean checkWeapon(L2PcInstance player)
+	private boolean checkWeapon(Player player)
 	{
 		L2ItemInstance weapon = player.getActiveWeaponInstance();
 		return ((weapon != null) && ((weapon.getId() == NETIS_BOW) || (weapon.getId() == NETIS_DAGGER)));
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

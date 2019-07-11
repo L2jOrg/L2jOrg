@@ -23,7 +23,7 @@ import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSummonTalk;
@@ -33,7 +33,7 @@ import org.l2j.gameserver.network.serverpackets.PetStatusShow;
 public class L2PetInstanceAction implements IActionHandler
 {
 	@Override
-	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
+	public boolean action(Player activeChar, L2Object target, boolean interact)
 	{
 		// Aggression target lock effect
 		if (activeChar.isLockedTarget() && (activeChar.getLockedTarget() != target))
@@ -50,7 +50,7 @@ public class L2PetInstanceAction implements IActionHandler
 		}
 		if (activeChar.getTarget() != target)
 		{
-			// Set the target of the L2PcInstance activeChar
+			// Set the target of the Player activeChar
 			activeChar.setTarget(target);
 		}
 		else if (interact)
@@ -60,7 +60,7 @@ public class L2PetInstanceAction implements IActionHandler
 			{
 				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
 				{
-					// Set the L2PcInstance Intention to AI_INTENTION_ATTACK
+					// Set the Player Intention to AI_INTENTION_ATTACK
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 					activeChar.onActionRequest();
 				}

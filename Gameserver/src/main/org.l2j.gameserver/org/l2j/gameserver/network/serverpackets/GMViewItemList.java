@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
@@ -14,7 +14,7 @@ public class GMViewItemList extends AbstractItemPacket {
     private final int _limit;
     private final String playerName;
 
-    public GMViewItemList(int sendType, L2PcInstance cha) {
+    public GMViewItemList(int sendType, Player cha) {
         this.sendType = sendType;
         playerName = cha.getName();
         _limit = cha.getInventoryLimit();

@@ -3,6 +3,7 @@ package handlers.dailymissionhandlers;
 import java.util.List;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
@@ -10,7 +11,6 @@ import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
 import org.l2j.gameserver.model.L2CommandChannel;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableKill;
@@ -39,14 +39,14 @@ public class BossDailyMissionHandler extends AbstractDailyMissionHandler
 	private void onAttackableKill(OnAttackableKill event)
 	{
 		final L2Attackable monster = event.getTarget();
-		final L2PcInstance player = event.getAttacker();
+		final Player player = event.getAttacker();
 		if (monster.isRaid() && (monster.getInstanceId() > 0) && (player != null))
 		{
 			final L2Party party = player.getParty();
 			if (party != null)
 			{
 				final L2CommandChannel channel = party.getCommandChannel();
-				final List<L2PcInstance> members = channel != null ? channel.getMembers() : party.getMembers();
+				final List<Player> members = channel != null ? channel.getMembers() : party.getMembers();
 				members.stream().filter(member -> member.calculateDistance3D(monster) <= Config.ALT_PARTY_RANGE).forEach(this::processPlayerProgress);
 			}
 			else
@@ -56,7 +56,7 @@ public class BossDailyMissionHandler extends AbstractDailyMissionHandler
 		}
 	}
 	
-	private void processPlayerProgress(L2PcInstance player)
+	private void processPlayerProgress(Player player)
 	{
 		final DailyMissionPlayerData entry = getPlayerEntry(player, true);
 		if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)

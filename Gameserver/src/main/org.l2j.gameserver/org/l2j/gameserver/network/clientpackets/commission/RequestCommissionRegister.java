@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.commission;
 
 import org.l2j.gameserver.instancemanager.CommissionManager;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.commission.ExCloseCommission;
 import org.slf4j.Logger;
@@ -32,7 +32,7 @@ public class RequestCommissionRegister extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if (player == null) {
             return;
         }

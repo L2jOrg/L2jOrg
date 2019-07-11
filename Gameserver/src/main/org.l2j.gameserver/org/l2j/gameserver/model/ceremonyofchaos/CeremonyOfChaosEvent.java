@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.model.actor.appearance.PcAppearance;
 import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
@@ -79,7 +79,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember> {
 
         int index = 0;
         for (CeremonyOfChaosMember member : getMembers().values()) {
-            final L2PcInstance player = member.getPlayer();
+            final Player player = member.getPlayer();
 
             if (player.inObserverMode()) {
                 player.leaveObserverMode();
@@ -203,7 +203,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember> {
 
     public void startFight() {
         for (CeremonyOfChaosMember member : getMembers().values()) {
-            final L2PcInstance player = member.getPlayer();
+            final Player player = member.getPlayer();
             if (player != null) {
                 player.sendPacket(SystemMessageId.THE_MATCH_HAS_STARTED_FIGHT);
                 player.setIsImmobilized(false);
@@ -232,7 +232,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember> {
         if (winners.isEmpty() || (winners.size() > 1)) {
             msg = SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
         } else {
-            final L2PcInstance winner = winners.get(0).getPlayer();
+            final Player winner = winners.get(0).getPlayer();
             msg = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
             msg.addString(winner.getName());
 
@@ -310,7 +310,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember> {
         }
 
         for (CeremonyOfChaosMember member : getMembers().values()) {
-            final L2PcInstance player = member.getPlayer();
+            final Player player = member.getPlayer();
             if (player != null) {
                 // Send winner message
                 player.sendPacket(msg);
@@ -329,7 +329,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember> {
 
     private void teleportPlayersOut() {
         for (CeremonyOfChaosMember member : getMembers().values()) {
-            final L2PcInstance player = member.getPlayer();
+            final Player player = member.getPlayer();
             if (player != null) {
                 // Leaves observer mode
                 if (player.inObserverMode()) {
@@ -405,7 +405,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember> {
     }
 
     @Override
-    public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player) {
+    public void onTimerEvent(String event, StatsSet params, L2Npc npc, Player player) {
         switch (event) {
             case "update": {
                 final int time = (int) CeremonyOfChaosManager.getInstance().getScheduler("stopFight").getRemainingTime(TimeUnit.SECONDS);
@@ -472,8 +472,8 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember> {
     @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
     public void onPlayerDeath(OnCreatureDeath event) {
         if (event.getAttacker().isPlayer() && event.getTarget().isPlayer()) {
-            final L2PcInstance attackerPlayer = event.getAttacker().getActingPlayer();
-            final L2PcInstance targetPlayer = event.getTarget().getActingPlayer();
+            final Player attackerPlayer = event.getAttacker().getActingPlayer();
+            final Player targetPlayer = event.getTarget().getActingPlayer();
 
             final CeremonyOfChaosMember attackerMember = getMembers().get(attackerPlayer.getObjectId());
             final CeremonyOfChaosMember targetMember = getMembers().get(targetPlayer.getObjectId());

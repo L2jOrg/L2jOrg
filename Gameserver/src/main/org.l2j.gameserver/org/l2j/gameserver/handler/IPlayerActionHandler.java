@@ -17,11 +17,11 @@
 package org.l2j.gameserver.handler;
 
 import org.l2j.gameserver.model.ActionDataHolder;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
  * @author UnAfraid
  */
 public interface IPlayerActionHandler {
-    void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed);
+    void useAction(Player activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed);
 }

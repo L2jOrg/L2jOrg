@@ -3,7 +3,7 @@ package org.l2j.gameserver.instancemanager;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 
 import java.util.Map;
@@ -47,7 +47,7 @@ public final class AntiFeedManager {
             return false;
         }
 
-        final L2PcInstance targetPlayer = target.getActingPlayer();
+        final Player targetPlayer = target.getActingPlayer();
         if (targetPlayer == null) {
             return false;
         }
@@ -64,7 +64,7 @@ public final class AntiFeedManager {
         }
 
         if (Config.ANTIFEED_DUALBOX && (attacker != null)) {
-            final L2PcInstance attackerPlayer = attacker.getActingPlayer();
+            final Player attackerPlayer = attacker.getActingPlayer();
             if (attackerPlayer == null) {
                 return false;
             }
@@ -105,7 +105,7 @@ public final class AntiFeedManager {
      * @return If number of all simultaneous connections from player's IP address lower than max then increment connection count and return true.<br>
      * False if number of all simultaneous connections from player's IP address higher than max.
      */
-    public boolean tryAddPlayer(int eventId, L2PcInstance player, int max) {
+    public boolean tryAddPlayer(int eventId, Player player, int max) {
         return tryAddClient(eventId, player.getClient(), max);
     }
 
@@ -131,7 +131,7 @@ public final class AntiFeedManager {
 
         if (!Config.DUALBOX_COUNT_OFFLINE_TRADERS) {
             final String address = client.getHostAddress();
-            for (L2PcInstance player : L2World.getInstance().getPlayers()) {
+            for (Player player : L2World.getInstance().getPlayers()) {
                 if (((player.getClient() == null) || player.getClient().isDetached()) && player.getIPAddress().equals(address)) {
                     connectionCount.decrementAndGet();
                 }
@@ -152,7 +152,7 @@ public final class AntiFeedManager {
      * @param player
      * @return true if success and false if any problem detected.
      */
-    public boolean removePlayer(int eventId, L2PcInstance player) {
+    public boolean removePlayer(int eventId, Player player) {
         return removeClient(eventId, player.getClient());
     }
 
@@ -217,7 +217,7 @@ public final class AntiFeedManager {
      * @param max
      * @return maximum number of allowed connections (whitelist + max)
      */
-    public int getLimit(L2PcInstance player, int max) {
+    public int getLimit(Player player, int max) {
         return getLimit(player.getClient(), max);
     }
 

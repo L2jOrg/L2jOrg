@@ -3,7 +3,7 @@ package handlers.dailymissionhandlers;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 import org.l2j.gameserver.model.events.Containers;
@@ -56,12 +56,12 @@ public class HuntDailyMissionHandler extends AbstractDailyMissionHandler {
             onKillProgress(player);
         } else {
             var channel = party.getCommandChannel();
-            final List<L2PcInstance> members = isNull(channel) ? party.getMembers() : channel.getMembers();
+            final List<Player> members = isNull(channel) ? party.getMembers() : channel.getMembers();
             members.stream().filter(member -> member.calculateDistance3D(monster) <= Config.ALT_PARTY_RANGE).forEach(this::onKillProgress);
         }
     }
 
-    private void onKillProgress(L2PcInstance player)
+    private void onKillProgress(Player player)
     {
         final var entry = getPlayerEntry(player, true);
         if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)

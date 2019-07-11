@@ -240,7 +240,7 @@ public final class L2DoorInstance extends L2Character {
             return false;
         }
 
-        final L2PcInstance actingPlayer = attacker.getActingPlayer();
+        final Player actingPlayer = attacker.getActingPlayer();
 
         // Attackable only during siege by everyone (not owner)
         final boolean isCastle = ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getZone().isActive());
@@ -285,7 +285,7 @@ public final class L2DoorInstance extends L2Character {
 
     @Override
     public void broadcastStatusUpdate(L2Character caster) {
-        final Collection<L2PcInstance> knownPlayers = L2World.getInstance().getVisibleObjects(this, L2PcInstance.class);
+        final Collection<Player> knownPlayers = L2World.getInstance().getVisibleObjects(this, Player.class);
         if ((knownPlayers == null) || knownPlayers.isEmpty()) {
             return;
         }
@@ -302,7 +302,7 @@ public final class L2DoorInstance extends L2Character {
             }
         }
 
-        for (L2PcInstance player : knownPlayers) {
+        for (Player player : knownPlayers) {
             if ((player == null) || !isVisibleFor(player)) {
                 continue;
             }
@@ -470,7 +470,7 @@ public final class L2DoorInstance extends L2Character {
     }
 
     @Override
-    public void sendInfo(L2PcInstance activeChar) {
+    public void sendInfo(Player activeChar) {
         if (isVisibleFor(activeChar)) {
             if (getEmitter() > 0) {
                 if (_isInverted) {

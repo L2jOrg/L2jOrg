@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.data.xml.impl.OptionData;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.options.Options;
 
 import java.util.Objects;
@@ -46,12 +46,12 @@ public final class VariationInstance {
         return _option2.getId();
     }
 
-    public void applyBonus(L2PcInstance player) {
+    public void applyBonus(Player player) {
         _option1.apply(player);
         _option2.apply(player);
     }
 
-    public void removeBonus(L2PcInstance player) {
+    public void removeBonus(Player player) {
         _option1.remove(player);
         _option2.remove(player);
     }

@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSummonAgathion;
@@ -58,7 +58,7 @@ public final class SummonAgathion extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance player = effected.getActingPlayer();
+		final Player player = effected.getActingPlayer();
 		
 		player.setAgathionId(_npcId);
 		player.sendPacket(new ExUserInfoCubic(player));

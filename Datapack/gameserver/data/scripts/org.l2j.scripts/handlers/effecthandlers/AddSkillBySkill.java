@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.Skill;
@@ -50,7 +50,7 @@ public class AddSkillBySkill extends AbstractEffect
 	{
 		if (effected.isPlayer())
 		{
-			((L2PcInstance) effected).addSkill(_addedSkill.getSkill(), false);
+			((Player) effected).addSkill(_addedSkill.getSkill(), false);
 		}
 	}
 	

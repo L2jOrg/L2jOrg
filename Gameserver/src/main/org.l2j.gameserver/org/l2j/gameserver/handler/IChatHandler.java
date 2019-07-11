@@ -17,7 +17,7 @@
 package org.l2j.gameserver.handler;
 
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
  * Interface for chat handlers
@@ -33,7 +33,7 @@ public interface IChatHandler {
      * @param target
      * @param text
      */
-    void handleChat(ChatType type, L2PcInstance activeChar, String target, String text);
+    void handleChat(ChatType type, Player activeChar, String target, String text);
 
     /**
      * Returns a list of all chat types registered to this handler

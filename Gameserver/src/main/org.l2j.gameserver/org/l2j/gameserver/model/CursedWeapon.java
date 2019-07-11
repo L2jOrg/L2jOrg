@@ -9,7 +9,7 @@ import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.model.L2Party.MessageType;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.INamable;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -37,7 +37,7 @@ public class CursedWeapon implements INamable {
     // _skillId is the skills ID.
     private final int _skillId;
     private final int _skillMaxLevel;
-    protected L2PcInstance _player = null;
+    protected Player _player = null;
     protected int transformationId = 0;
     long _endTime = 0;
     private int _dropRate;
@@ -176,11 +176,11 @@ public class CursedWeapon implements INamable {
         }
     }
 
-    private void dropIt(L2Attackable attackable, L2PcInstance player) {
+    private void dropIt(L2Attackable attackable, Player player) {
         dropIt(attackable, player, null, true);
     }
 
-    private void dropIt(L2Attackable attackable, L2PcInstance player, L2Character killer, boolean fromMonster) {
+    private void dropIt(L2Attackable attackable, Player player, L2Character killer, boolean fromMonster) {
         _isActivated = false;
 
         if (fromMonster) {
@@ -285,7 +285,7 @@ public class CursedWeapon implements INamable {
 
     }
 
-    public boolean checkDrop(L2Attackable attackable, L2PcInstance player) {
+    public boolean checkDrop(L2Attackable attackable, Player player) {
         if (Rnd.get(100000) < _dropRate) {
             // Drop the item
             dropIt(attackable, player);
@@ -300,7 +300,7 @@ public class CursedWeapon implements INamable {
         return false;
     }
 
-    public void activate(L2PcInstance player, L2ItemInstance item) {
+    public void activate(Player player, L2ItemInstance item) {
         // If the player is mounted, attempt to unmount first.
         // Only allow picking up the cursed weapon if unmounting is successful.
         if (player.isMounted() && !player.dismount()) {
@@ -485,11 +485,11 @@ public class CursedWeapon implements INamable {
         _playerId = playerId;
     }
 
-    public L2PcInstance getPlayer() {
+    public Player getPlayer() {
         return _player;
     }
 
-    public void setPlayer(L2PcInstance player) {
+    public void setPlayer(Player player) {
         _player = player;
     }
 
@@ -540,7 +540,7 @@ public class CursedWeapon implements INamable {
         return _endTime - System.currentTimeMillis();
     }
 
-    public void goTo(L2PcInstance player) {
+    public void goTo(Player player) {
         if (player == null) {
             return;
         }

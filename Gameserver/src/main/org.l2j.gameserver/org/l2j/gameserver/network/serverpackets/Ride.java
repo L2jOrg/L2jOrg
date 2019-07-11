@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -12,7 +12,7 @@ public final class Ride extends ServerPacket {
     private final int _rideNpcId;
     private final Location _loc;
 
-    public Ride(L2PcInstance player) {
+    public Ride(Player player) {
         _objectId = player.getObjectId();
         _mounted = player.isMounted() ? 1 : 0;
         _rideType = player.getMountType().ordinal();

@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
@@ -58,7 +58,7 @@ public final class RequestBypassToServer extends ClientPacket {
     /**
      * @param activeChar
      */
-    private static void comeHere(L2PcInstance activeChar) {
+    private static void comeHere(Player activeChar) {
         final L2Object obj = activeChar.getTarget();
         if (obj == null) {
             return;
@@ -77,7 +77,7 @@ public final class RequestBypassToServer extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
@@ -204,7 +204,7 @@ public final class RequestBypassToServer extends ClientPacket {
                     EventDispatcher.getInstance().notifyEventAsync(new OnNpcManorBypass(activeChar, lastNpc, ask, state, time), lastNpc);
                 }
             } else if (_command.startsWith("pccafe")) {
-                final L2PcInstance player = client.getActiveChar();
+                final Player player = client.getActiveChar();
                 if ((player == null) || !Config.PC_CAFE_ENABLED) {
                     return;
                 }

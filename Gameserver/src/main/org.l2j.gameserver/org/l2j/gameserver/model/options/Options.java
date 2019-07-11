@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.options;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.BuffInfo;
@@ -114,7 +114,7 @@ public class Options {
         _activationSkills.add(holder);
     }
 
-    public void apply(L2PcInstance player) {
+    public void apply(Player player) {
         if (hasEffects()) {
             final BuffInfo info = new BuffInfo(player, player, null, true, null, this);
             for (AbstractEffect effect : _effects) {
@@ -155,7 +155,7 @@ public class Options {
         player.sendSkillList();
     }
 
-    public void remove(L2PcInstance player) {
+    public void remove(Player player) {
         if (hasEffects()) {
             for (BuffInfo info : player.getEffectList().getOptions()) {
                 if (info.getOption() == this) {
@@ -183,7 +183,7 @@ public class Options {
         player.sendSkillList();
     }
 
-    private void addSkill(L2PcInstance player, Skill skill) {
+    private void addSkill(Player player, Skill skill) {
         boolean updateTimeStamp = false;
 
         player.addSkill(skill, false);

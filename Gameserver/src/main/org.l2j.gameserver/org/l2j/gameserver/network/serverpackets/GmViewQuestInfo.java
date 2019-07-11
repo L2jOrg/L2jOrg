@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.L2GameClient;
@@ -12,10 +12,10 @@ import java.util.List;
  * @author Tempy
  */
 public class GmViewQuestInfo extends ServerPacket {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final List<Quest> _questList;
 
-    public GmViewQuestInfo(L2PcInstance cha) {
+    public GmViewQuestInfo(Player cha) {
         _activeChar = cha;
         _questList = cha.getAllActiveQuests();
     }

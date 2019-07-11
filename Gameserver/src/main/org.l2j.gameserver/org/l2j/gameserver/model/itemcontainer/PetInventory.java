@@ -36,7 +36,7 @@ public class PetInventory extends Inventory {
 
     @Override
     public int getOwnerId() {
-        // gets the L2PcInstance-owner's ID
+        // gets the Player-owner's ID
         int id;
         try {
             id = _owner.getOwner().getObjectId();

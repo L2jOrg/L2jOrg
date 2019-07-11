@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.primeshop;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
 import org.l2j.gameserver.network.L2GameClient;
@@ -13,11 +13,11 @@ import java.util.Collection;
  * @author UnAfraid
  */
 public class ExBRProductList extends ServerPacket {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final int _type;
     private final Collection<PrimeShopProduct> _primeList;
 
-    public ExBRProductList(L2PcInstance activeChar, int type, Collection<PrimeShopProduct> items) {
+    public ExBRProductList(Player activeChar, int type, Collection<PrimeShopProduct> items) {
         _activeChar = activeChar;
         _type = type;
         _primeList = items;

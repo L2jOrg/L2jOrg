@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IChatHandler;
 import org.l2j.gameserver.model.PcCondOverride;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
@@ -21,7 +21,7 @@ public class ChatPartyMatchRoom implements IChatHandler
 	};
 	
 	@Override
-	public void handleChat(ChatType type, L2PcInstance activeChar, String target, String text)
+	public void handleChat(ChatType type, Player activeChar, String target, String text)
 	{
 		final MatchingRoom room = activeChar.getMatchingRoom();
 		if (room != null)
@@ -38,7 +38,7 @@ public class ChatPartyMatchRoom implements IChatHandler
 			}
 			
 			final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
-			for (L2PcInstance _member : room.getMembers())
+			for (Player _member : room.getMembers())
 			{
 				_member.sendPacket(cs);
 			}

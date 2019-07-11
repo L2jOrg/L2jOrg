@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.xml.impl.EnchantItemData;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.model.items.enchant.EnchantScroll;
 import org.l2j.gameserver.model.items.enchant.EnchantSupportItem;
@@ -24,7 +24,7 @@ public class RequestExTryToPutEnchantSupportItem extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
@@ -43,8 +43,8 @@ public class RequestExTryToPutEnchantSupportItem extends ClientPacket {
         if ((item == null) || (scroll == null) || (support == null)) {
             // message may be custom
             activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-            request.setEnchantingItem(L2PcInstance.ID_NONE);
-            request.setSupportItem(L2PcInstance.ID_NONE);
+            request.setEnchantingItem(Player.ID_NONE);
+            request.setSupportItem(Player.ID_NONE);
             return;
         }
 
@@ -53,7 +53,7 @@ public class RequestExTryToPutEnchantSupportItem extends ClientPacket {
         if ((scrollTemplate == null) || (supportTemplate == null) || !scrollTemplate.isValid(item, supportTemplate)) {
             // message may be custom
             activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-            request.setSupportItem(L2PcInstance.ID_NONE);
+            request.setSupportItem(Player.ID_NONE);
             activeChar.sendPacket(new ExPutEnchantSupportItemResult(0));
             return;
         }

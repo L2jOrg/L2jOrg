@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.quest;
 
 import org.l2j.gameserver.model.KeyValuePair;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,24 +29,24 @@ import java.util.stream.Stream;
  * @author UnAfraid
  */
 public class QuestCondition {
-    private final Predicate<L2PcInstance> _condition;
+    private final Predicate<Player> _condition;
     private final String _html;
     private Map<Integer, String> _perNpcDialog;
 
-    public QuestCondition(Predicate<L2PcInstance> cond, String html) {
+    public QuestCondition(Predicate<Player> cond, String html) {
         _condition = cond;
         _html = html;
     }
 
     @SafeVarargs
-    public QuestCondition(Predicate<L2PcInstance> cond, KeyValuePair<Integer, String>... pairs) {
+    public QuestCondition(Predicate<Player> cond, KeyValuePair<Integer, String>... pairs) {
         _condition = cond;
         _html = null;
         _perNpcDialog = new HashMap<>();
         Stream.of(pairs).forEach(pair -> _perNpcDialog.put(pair.getKey(), pair.getValue()));
     }
 
-    public boolean test(L2PcInstance player) {
+    public boolean test(Player player) {
         return _condition.test(player);
     }
 

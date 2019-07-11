@@ -5,7 +5,7 @@ import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.enums.TaxType;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.instance.L2MerchantInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.model.holders.UniqueItemHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
@@ -55,7 +55,7 @@ public final class RequestSellItem extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if (player == null) {
             return;
         }

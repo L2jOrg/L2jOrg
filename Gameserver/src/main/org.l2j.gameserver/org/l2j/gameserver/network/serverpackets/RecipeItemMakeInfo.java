@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.xml.impl.RecipeData;
 import org.l2j.gameserver.model.L2RecipeList;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -13,16 +13,16 @@ public class RecipeItemMakeInfo extends ServerPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RecipeItemMakeInfo.class);
 
     private final int _id;
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final boolean _success;
 
-    public RecipeItemMakeInfo(int id, L2PcInstance player, boolean success) {
+    public RecipeItemMakeInfo(int id, Player player, boolean success) {
         _id = id;
         _activeChar = player;
         _success = success;
     }
 
-    public RecipeItemMakeInfo(int id, L2PcInstance player) {
+    public RecipeItemMakeInfo(int id, Player player) {
         _id = id;
         _activeChar = player;
         _success = true;

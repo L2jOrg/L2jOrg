@@ -21,7 +21,7 @@ import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2PetLevelData;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
@@ -67,7 +67,7 @@ public class SpeedFinalizer implements IStatsFunction {
     private double getBaseSpeed(L2Character creature, Stats stat) {
         double baseValue = calcWeaponPlusBaseValue(creature, stat);
         if (creature.isPlayer()) {
-            final L2PcInstance player = creature.getActingPlayer();
+            final Player player = creature.getActingPlayer();
             if (player.isMounted()) {
                 final L2PetLevelData data = PetDataTable.getInstance().getPetLevelData(player.getMountNpcId(), player.getMountLevel());
                 if (data != null) {

@@ -31,7 +31,7 @@ import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
@@ -114,9 +114,9 @@ public final class Antharas extends AbstractNpcAI
 	private static int minionMultipler = 0;
 	private static int moveChance = 0;
 	private static int sandStorm = 0;
-	private static L2PcInstance attacker_1 = null;
-	private static L2PcInstance attacker_2 = null;
-	private static L2PcInstance attacker_3 = null;
+	private static Player attacker_1 = null;
+	private static Player attacker_2 = null;
+	private static Player attacker_3 = null;
 	private static int attacker_1_hate = 0;
 	private static int attacker_2_hate = 0;
 	private static int attacker_3_hate = 0;
@@ -189,7 +189,7 @@ public final class Antharas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -212,7 +212,7 @@ public final class Antharas extends AbstractNpcAI
 				{
 					final L2Party party = player.getParty();
 					final boolean isInCC = party.isInCommandChannel();
-					final List<L2PcInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
+					final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 					final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 					if (!isPartyLeader)
 					{
@@ -228,7 +228,7 @@ public final class Antharas extends AbstractNpcAI
 					}
 					else
 					{
-						for (L2PcInstance member : members)
+						for (Player member : members)
 						{
 							if (member.isInsideRadius3D(npc, 1000))
 							{
@@ -310,7 +310,7 @@ public final class Antharas extends AbstractNpcAI
 			}
 			case "START_MOVE":
 			{
-				for (L2PcInstance players : L2World.getInstance().getVisibleObjectsInRange(npc, L2PcInstance.class, 4000))
+				for (Player players : L2World.getInstance().getVisibleObjectsInRange(npc, Player.class, 4000))
 				{
 					if (players.isHero())
 					{
@@ -600,7 +600,7 @@ public final class Antharas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onAggroRangeEnter(L2Npc npc, Player player, boolean isSummon)
 	{
 		npc.doCast(DISPEL_BOM.getSkill());
 		npc.doDie(player);
@@ -608,7 +608,7 @@ public final class Antharas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(L2Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		_lastAttack = System.currentTimeMillis();
 		
@@ -663,7 +663,7 @@ public final class Antharas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(L2Npc npc, Player killer, boolean isSummon)
 	{
 		if (zone.isCharacterInZone(killer))
 		{
@@ -721,7 +721,7 @@ public final class Antharas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(L2Npc npc, Player player, Skill skill)
 	{
 		if ((skill.getId() == ANTH_FEAR.getSkillId()) || (skill.getId() == ANTH_FEAR_SHORT.getSkillId()))
 		{
@@ -762,7 +762,7 @@ public final class Antharas extends AbstractNpcAI
 		GrandBossManager.getInstance().getStatsSet(ANTHARAS).set("respawn_time", (System.currentTimeMillis() + respawnTime));
 	}
 	
-	private final void refreshAiParams(L2PcInstance attacker, int damage)
+	private final void refreshAiParams(Player attacker, int damage)
 	{
 		if ((attacker_1 != null) && (attacker == attacker_1))
 		{
@@ -815,7 +815,7 @@ public final class Antharas extends AbstractNpcAI
 		
 		int i1 = 0;
 		int i2 = 0;
-		L2PcInstance c2 = null;
+		Player c2 = null;
 		if ((attacker_1 == null) || (npc.calculateDistance3D(attacker_1) > 9000) || attacker_1.isDead())
 		{
 			attacker_1_hate = 0;

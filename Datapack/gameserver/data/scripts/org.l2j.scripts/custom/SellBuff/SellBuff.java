@@ -26,7 +26,7 @@ import org.l2j.gameserver.instancemanager.SellBuffsManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.holders.SellBuffHolder;
 import org.l2j.gameserver.model.items.L2Item;
@@ -70,7 +70,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 	}
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, Player activeChar, L2Character target)
 	{
 		String cmd = "";
 		String params = "";
@@ -94,7 +94,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 	}
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
+	public boolean useVoicedCommand(String command, Player activeChar, String params)
 	{
 		switch (command)
 		{
@@ -108,7 +108,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 		return true;
 	}
 	
-	public boolean useBypass(String command, L2PcInstance activeChar, String params)
+	public boolean useBypass(String command, Player activeChar, String params)
 	{
 		if (!Config.SELLBUFF_ENABLED)
 		{
@@ -337,7 +337,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						index = Integer.parseInt(st.nextToken());
 					}
 					
-					final L2PcInstance seller = L2World.getInstance().getPlayer(objId);
+					final Player seller = L2World.getInstance().getPlayer(objId);
 					if (seller != null)
 					{
 						if (!seller.isSellingBuffs() || !activeChar.isInsideRadius3D(seller, L2Npc.INTERACTION_DISTANCE))
@@ -379,7 +379,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						return false;
 					}
 					
-					final L2PcInstance seller = L2World.getInstance().getPlayer(objId);
+					final Player seller = L2World.getInstance().getPlayer(objId);
 					if (seller == null)
 					{
 						return false;

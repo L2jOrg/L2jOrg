@@ -19,7 +19,7 @@ package handlers.actionshifthandlers;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionShiftHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.StaticObject;
@@ -27,7 +27,7 @@ import org.l2j.gameserver.network.serverpackets.StaticObject;
 public class L2StaticObjectInstanceActionShift implements IActionShiftHandler
 {
 	@Override
-	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
+	public boolean action(Player activeChar, L2Object target, boolean interact)
 	{
 		if (activeChar.isGM())
 		{

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -24,15 +24,15 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author St3eT
  */
 public final class OnPlayerSocialAction implements IBaseEvent {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final int _socialActionId;
 
-    public OnPlayerSocialAction(L2PcInstance activeChar, int socialActionId) {
+    public OnPlayerSocialAction(Player activeChar, int socialActionId) {
         _activeChar = activeChar;
         _socialActionId = socialActionId;
     }
 
-    public final L2PcInstance getActiveChar() {
+    public final Player getActiveChar() {
         return _activeChar;
     }
 

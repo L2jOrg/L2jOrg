@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.events.impl.character.npc;
 
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.skills.Skill;
@@ -27,16 +27,16 @@ import org.l2j.gameserver.model.skills.Skill;
  */
 public class OnNpcSkillFinished implements IBaseEvent {
     private final L2Npc _caster;
-    private final L2PcInstance _target;
+    private final Player _target;
     private final Skill _skill;
 
-    public OnNpcSkillFinished(L2Npc caster, L2PcInstance target, Skill skill) {
+    public OnNpcSkillFinished(L2Npc caster, Player target, Skill skill) {
         _caster = caster;
         _target = target;
         _skill = skill;
     }
 
-    public L2PcInstance getTarget() {
+    public Player getTarget() {
         return _target;
     }
 

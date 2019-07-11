@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets.training;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.TrainingHolder;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.training.ExTrainingZone_Leaving;
@@ -16,7 +16,7 @@ public class NotifyTrainingRoomEnd extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }

@@ -49,7 +49,7 @@ public class L2DoormenInstance extends L2NpcInstance {
     }
 
     @Override
-    public void onBypassFeedback(L2PcInstance player, String command) {
+    public void onBypassFeedback(Player player, String command) {
         if (command.startsWith("Chat")) {
             showChatWindow(player);
             return;
@@ -85,7 +85,7 @@ public class L2DoormenInstance extends L2NpcInstance {
     }
 
     @Override
-    public void showChatWindow(L2PcInstance player) {
+    public void showChatWindow(Player player) {
         player.sendPacket(ActionFailed.STATIC_PACKET);
 
         final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -100,7 +100,7 @@ public class L2DoormenInstance extends L2NpcInstance {
         player.sendPacket(html);
     }
 
-    protected void openDoors(L2PcInstance player, String command) {
+    protected void openDoors(Player player, String command) {
         final StringTokenizer st = new StringTokenizer(command.substring(10), ", ");
         st.nextToken();
 
@@ -109,7 +109,7 @@ public class L2DoormenInstance extends L2NpcInstance {
         }
     }
 
-    protected void closeDoors(L2PcInstance player, String command) {
+    protected void closeDoors(Player player, String command) {
         final StringTokenizer st = new StringTokenizer(command.substring(11), ", ");
         st.nextToken();
 
@@ -118,7 +118,7 @@ public class L2DoormenInstance extends L2NpcInstance {
         }
     }
 
-    protected void cannotManageDoors(L2PcInstance player) {
+    protected void cannotManageDoors(Player player) {
         player.sendPacket(ActionFailed.STATIC_PACKET);
 
         final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -126,7 +126,7 @@ public class L2DoormenInstance extends L2NpcInstance {
         player.sendPacket(html);
     }
 
-    protected boolean isOwnerClan(L2PcInstance player) {
+    protected boolean isOwnerClan(Player player) {
         return true;
     }
 

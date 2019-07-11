@@ -1,6 +1,6 @@
 package org.l2j.gameserver.handler;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,7 +19,7 @@ public interface IParseBoardHandler {
      * @param player  the player
      * @return
      */
-    boolean parseCommunityBoardCommand(String command, L2PcInstance player);
+    boolean parseCommunityBoardCommand(String command, Player player);
 
     /**
      * Gets the community board commands.

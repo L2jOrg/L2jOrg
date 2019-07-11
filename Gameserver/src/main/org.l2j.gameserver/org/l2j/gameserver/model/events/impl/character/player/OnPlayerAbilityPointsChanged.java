@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -24,17 +24,17 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author St3eT
  */
 public class OnPlayerAbilityPointsChanged implements IBaseEvent {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final int _newAbilityPoints;
     private final int _oldAbilityPoints;
 
-    public OnPlayerAbilityPointsChanged(L2PcInstance activeChar, int newAbilityPoints, int oldAbilityPoints) {
+    public OnPlayerAbilityPointsChanged(Player activeChar, int newAbilityPoints, int oldAbilityPoints) {
         _activeChar = activeChar;
         _newAbilityPoints = newAbilityPoints;
         _oldAbilityPoints = oldAbilityPoints;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _activeChar;
     }
 

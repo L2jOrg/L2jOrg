@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.variables;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -122,7 +122,7 @@ public class PlayerVariables extends AbstractVariables {
         return true;
     }
 
-    public L2PcInstance getPlayer() {
+    public Player getPlayer() {
         return L2World.getInstance().getPlayer(_objectId);
     }
 

@@ -6,7 +6,7 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.SpecialItemType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.*;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.network.serverpackets.MultiSellList;
@@ -157,7 +157,7 @@ public final class MultisellData extends GameXmlReader {
      * @param ingredientMultiplier
      * @param productMultiplier
      */
-    public final void separateAndSend(int listId, L2PcInstance player, L2Npc npc, boolean inventoryOnly, double ingredientMultiplier, double productMultiplier) {
+    public final void separateAndSend(int listId, Player player, L2Npc npc, boolean inventoryOnly, double ingredientMultiplier, double productMultiplier) {
         final MultisellListHolder template = _multisells.get(listId);
         if (template == null) {
             LOGGER.warn("Can't find list id: " + listId + " requested by player: " + player.getName() + ", npcId: " + (npc != null ? npc.getId() : 0));
@@ -189,7 +189,7 @@ public final class MultisellData extends GameXmlReader {
         player.setMultiSell(list);
     }
 
-    public final void separateAndSend(int listId, L2PcInstance player, L2Npc npc, boolean inventoryOnly) {
+    public final void separateAndSend(int listId, Player player, L2Npc npc, boolean inventoryOnly) {
         separateAndSend(listId, player, npc, inventoryOnly, Double.NaN, Double.NaN);
     }
 

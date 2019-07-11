@@ -23,7 +23,7 @@ import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.L2CommandChannel;
 import org.l2j.gameserver.model.L2Party;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 
@@ -31,22 +31,22 @@ import org.l2j.gameserver.network.serverpackets.*;
  * @author Sdw
  */
 public class CommandChannelMatchingRoom extends MatchingRoom {
-    public CommandChannelMatchingRoom(String title, int loot, int minlvl, int maxlvl, int maxmem, L2PcInstance leader) {
+    public CommandChannelMatchingRoom(String title, int loot, int minlvl, int maxlvl, int maxmem, Player leader) {
         super(title, loot, minlvl, maxlvl, maxmem, leader);
     }
 
     @Override
-    protected void onRoomCreation(L2PcInstance player) {
+    protected void onRoomCreation(Player player) {
         player.sendPacket(SystemMessageId.THE_COMMAND_CHANNEL_MATCHING_ROOM_WAS_CREATED);
     }
 
     @Override
-    protected void notifyInvalidCondition(L2PcInstance player) {
+    protected void notifyInvalidCondition(Player player) {
         player.sendPacket(SystemMessageId.YOU_CANNOT_ENTER_THE_COMMAND_CHANNEL_MATCHING_ROOM_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
     }
 
     @Override
-    protected void notifyNewMember(L2PcInstance player) {
+    protected void notifyNewMember(Player player) {
         // Update others player
         getMembers().stream().filter(p -> p != player).forEach(p ->
         {
@@ -64,7 +64,7 @@ public class CommandChannelMatchingRoom extends MatchingRoom {
     }
 
     @Override
-    protected void notifyRemovedMember(L2PcInstance player, boolean kicked, boolean leaderChanged) {
+    protected void notifyRemovedMember(Player player, boolean kicked, boolean leaderChanged) {
         getMembers().forEach(p ->
         {
             p.sendPacket(new ExMPCCRoomInfo(this));
@@ -97,7 +97,7 @@ public class CommandChannelMatchingRoom extends MatchingRoom {
     }
 
     @Override
-    public MatchingMemberType getMemberType(L2PcInstance player) {
+    public MatchingMemberType getMemberType(Player player) {
         if (isLeader(player)) {
             return MatchingMemberType.COMMAND_CHANNEL_LEADER;
         }

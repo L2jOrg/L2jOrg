@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.actor.request.impl;
 
 import org.l2j.gameserver.datatables.ReportTable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.AbstractRequest;
 
 import java.time.Duration;
@@ -19,7 +19,7 @@ public class CaptchaRequest extends AbstractRequest {
     private byte count = 0;
     private final Instant timeout;
 
-    public CaptchaRequest(L2PcInstance activeChar, Captcha captcha) {
+    public CaptchaRequest(Player activeChar, Captcha captcha) {
         super(activeChar);
         this.captcha = captcha;
         var currentTime = currentTimeMillis();

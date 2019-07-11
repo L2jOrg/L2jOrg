@@ -18,7 +18,7 @@ package ai.areas.CrumaTower;
 
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -44,7 +44,7 @@ public final class SummonPc extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(L2Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final int chance = getRandom(100);
 		final boolean attacked = npc.getVariables().getBoolean("attacked", false);
@@ -86,7 +86,7 @@ public final class SummonPc extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(L2Npc npc, Player player, Skill skill)
 	{
 		if ((skill.getId() == SUMMON_PC.getSkillId()) && !npc.isDead() && npc.getVariables().getBoolean("attacked", false))
 		{

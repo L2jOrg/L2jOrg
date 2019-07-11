@@ -6,7 +6,7 @@ import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Party;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.L2GameClient;
@@ -16,7 +16,7 @@ import org.l2j.gameserver.network.ServerPacketId;
  * @author Sdw, UnAfraid
  */
 public class UserInfo extends AbstractMaskPacket<UserInfoType> {
-    private final L2PcInstance activeChar;
+    private final Player activeChar;
 
     private final int _relation;
     private final int _runSpd;
@@ -39,11 +39,11 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
     private String _title;
     private int _initSize = 5;
 
-    public UserInfo(L2PcInstance cha) {
+    public UserInfo(Player cha) {
         this(cha, true);
     }
 
-    public UserInfo(L2PcInstance cha, boolean addAll) {
+    public UserInfo(Player cha, boolean addAll) {
         activeChar = cha;
 
         _relation = calculateRelation(cha);
@@ -323,7 +323,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
         }
     }
 
-    private int calculateRelation(L2PcInstance activeChar) {
+    private int calculateRelation(Player activeChar) {
         int relation = 0;
         final L2Party party = activeChar.getParty();
         final L2Clan clan = activeChar.getClan();

@@ -25,7 +25,7 @@ import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GameUtils;
@@ -44,7 +44,7 @@ public final class AdminGmSpeed implements IAdminCommandHandler
 	private static final Set<Stats> SPEED_STATS = EnumSet.of(Stats.RUN_SPEED, Stats.WALK_SPEED, Stats.SWIM_RUN_SPEED, Stats.SWIM_WALK_SPEED, Stats.FLY_RUN_SPEED, Stats.FLY_WALK_SPEED);
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance player)
+	public boolean useAdminCommand(String command, Player player)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String cmd = st.nextToken();
@@ -99,7 +99,7 @@ public final class AdminGmSpeed implements IAdminCommandHandler
 			targetCharacter.getStat().recalculateStats(false);
 			if (targetCharacter.isPlayer())
 			{
-				((L2PcInstance) targetCharacter).broadcastUserInfo();
+				((Player) targetCharacter).broadcastUserInfo();
 			}
 			else
 			{

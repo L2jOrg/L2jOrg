@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.L2GameClient;
@@ -17,7 +17,7 @@ public class ExOlympiadSpelledInfo extends ServerPacket {
     private final List<BuffInfo> _effects = new ArrayList<>();
     private final List<Skill> _effects2 = new ArrayList<>();
 
-    public ExOlympiadSpelledInfo(L2PcInstance player) {
+    public ExOlympiadSpelledInfo(Player player) {
         _playerId = player.getObjectId();
     }
 

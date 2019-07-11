@@ -5,7 +5,7 @@ import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.enums.UserInfoType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -48,7 +48,7 @@ public class ExElementalSpiritEvolution extends ClientPacket {
          client.sendPacket(new ElementalSpiritEvolution(type, canEvolve));
     }
 
-    private boolean checkConditions(L2PcInstance player, ElementalSpirit spirit) {
+    private boolean checkConditions(Player player, ElementalSpirit spirit) {
         var noMeetConditions = false;
         if(noMeetConditions = player.getPrivateStoreType() != PrivateStoreType.NONE) {
             client.sendPacket(CANNOT_EVOLVE_ABSORB_EXTRACT_WHILE_USING_THE_PRIVATE_STORE_WORKSHOP);
@@ -62,7 +62,7 @@ public class ExElementalSpiritEvolution extends ClientPacket {
         return !noMeetConditions;
     }
 
-    private boolean consumeEvolveItems(L2PcInstance player, ElementalSpirit spirit) {
+    private boolean consumeEvolveItems(Player player, ElementalSpirit spirit) {
         var inventory = player.getInventory();
         try {
             inventory.setInventoryBlock(spirit.getItemsToEvolve().stream().map(ItemHolder::getId).collect(Collectors.toList()), InventoryBlockType.BLACKLIST);

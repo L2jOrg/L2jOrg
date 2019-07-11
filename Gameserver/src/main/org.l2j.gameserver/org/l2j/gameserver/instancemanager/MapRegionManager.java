@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.entity.Fort;
@@ -177,7 +177,7 @@ public final class MapRegionManager extends GameXmlReader {
      */
     public Location getTeleToLocation(L2Character activeChar, TeleportWhereType teleportWhere) {
         if (activeChar.isPlayer()) {
-            final L2PcInstance player = activeChar.getActingPlayer();
+            final Player player = activeChar.getActingPlayer();
 
             Castle castle = null;
             Fort fort = null;
@@ -264,7 +264,7 @@ public final class MapRegionManager extends GameXmlReader {
                 try {
                     final L2RespawnZone zone = ZoneManager.getInstance().getZone(player, L2RespawnZone.class);
                     if (zone != null) {
-                        return getRestartRegion(activeChar, zone.getRespawnPoint((L2PcInstance) activeChar)).getChaoticSpawnLoc();
+                        return getRestartRegion(activeChar, zone.getRespawnPoint((Player) activeChar)).getChaoticSpawnLoc();
                     }
                     return getMapRegion(activeChar).getChaoticSpawnLoc();
                 } catch (Exception e) {
@@ -300,7 +300,7 @@ public final class MapRegionManager extends GameXmlReader {
         try {
             final L2RespawnZone zone = ZoneManager.getInstance().getZone(activeChar, L2RespawnZone.class);
             if (zone != null) {
-                return getRestartRegion(activeChar, zone.getRespawnPoint((L2PcInstance) activeChar)).getSpawnLoc();
+                return getRestartRegion(activeChar, zone.getRespawnPoint((Player) activeChar)).getSpawnLoc();
             }
             return getMapRegion(activeChar).getSpawnLoc();
         } catch (Exception e) {
@@ -316,7 +316,7 @@ public final class MapRegionManager extends GameXmlReader {
      */
     public L2MapRegion getRestartRegion(L2Character activeChar, String point) {
         try {
-            final L2PcInstance player = (L2PcInstance) activeChar;
+            final Player player = (Player) activeChar;
             final L2MapRegion region = _regions.get(point);
 
             if (region.getBannedRace().containsKey(player.getRace())) {

@@ -2,15 +2,15 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public final class PartySmallWindowAll extends ServerPacket {
     private final L2Party _party;
-    private final L2PcInstance _exclude;
+    private final Player _exclude;
 
-    public PartySmallWindowAll(L2PcInstance exclude, L2Party party) {
+    public PartySmallWindowAll(Player exclude, L2Party party) {
         _exclude = exclude;
         _party = party;
     }
@@ -23,7 +23,7 @@ public final class PartySmallWindowAll extends ServerPacket {
         writeByte((byte) _party.getDistributionType().getId());
         writeByte((byte) (_party.getMemberCount() - 1));
 
-        for (L2PcInstance member : _party.getMembers()) {
+        for (Player member : _party.getMembers()) {
             if ((member != null) && (member != _exclude)) {
                 writeInt(member.getObjectId());
                 writeString(member.getName());

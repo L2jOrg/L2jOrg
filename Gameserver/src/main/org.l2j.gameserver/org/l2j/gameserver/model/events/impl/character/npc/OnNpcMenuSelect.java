@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.events.impl.character.npc;
 
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author St3eT
  */
 public class OnNpcMenuSelect implements IBaseEvent {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final L2Npc _npc;
     private final int _ask;
     private final int _reply;
@@ -36,14 +36,14 @@ public class OnNpcMenuSelect implements IBaseEvent {
      * @param ask
      * @param reply
      */
-    public OnNpcMenuSelect(L2PcInstance activeChar, L2Npc npc, int ask, int reply) {
+    public OnNpcMenuSelect(Player activeChar, L2Npc npc, int ask, int reply) {
         _activeChar = activeChar;
         _npc = npc;
         _ask = ask;
         _reply = reply;
     }
 
-    public L2PcInstance getTalker() {
+    public Player getTalker() {
         return _activeChar;
     }
 

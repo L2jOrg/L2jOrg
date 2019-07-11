@@ -21,7 +21,7 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -41,7 +41,7 @@ public class AdminTest implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_stats"))
 		{
@@ -80,7 +80,7 @@ public class AdminTest implements IAdminCommandHandler
 	 * @param id
 	 * @param msu
 	 */
-	private void adminTestSkill(L2PcInstance activeChar, int id, boolean msu)
+	private void adminTestSkill(Player activeChar, int id, boolean msu)
 	{
 		L2Character caster;
 		final L2Object target = activeChar.getTarget();

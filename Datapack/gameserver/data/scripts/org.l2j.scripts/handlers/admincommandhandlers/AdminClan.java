@@ -28,7 +28,7 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -48,7 +48,7 @@ public class AdminClan implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String cmd = st.nextToken();
@@ -56,7 +56,7 @@ public class AdminClan implements IAdminCommandHandler
 		{
 			case "admin_clan_info":
 			{
-				final L2PcInstance player = getPlayer(activeChar, st);
+				final Player player = getPlayer(activeChar, st);
 				if (player == null)
 				{
 					break;
@@ -87,7 +87,7 @@ public class AdminClan implements IAdminCommandHandler
 			}
 			case "admin_clan_changeleader":
 			{
-				final L2PcInstance player = getPlayer(activeChar, st);
+				final Player player = getPlayer(activeChar, st);
 				if (player == null)
 				{
 					break;
@@ -171,10 +171,10 @@ public class AdminClan implements IAdminCommandHandler
 	 * @param st
 	 * @return
 	 */
-	private L2PcInstance getPlayer(L2PcInstance activeChar, StringTokenizer st)
+	private Player getPlayer(Player activeChar, StringTokenizer st)
 	{
 		String val;
-		L2PcInstance player = null;
+		Player player = null;
 		if (st.hasMoreTokens())
 		{
 			val = st.nextToken();

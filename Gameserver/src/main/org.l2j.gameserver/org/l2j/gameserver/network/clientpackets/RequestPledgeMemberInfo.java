@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.PledgeReceiveMemberInfo;
 
 /**
@@ -25,7 +25,7 @@ public final class RequestPledgeMemberInfo extends ClientPacket {
     public void runImpl() {
         // LOGGER.info("C5: RequestPledgeMemberInfo d:"+_unk1);
         // LOGGER.info("C5: RequestPledgeMemberInfo S:"+_player);
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }

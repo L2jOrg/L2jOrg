@@ -4,7 +4,7 @@ import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -103,7 +103,7 @@ public class DailyMissionData extends GameXmlReader {
         //@formatter:on
     }
 
-    public Collection<DailyMissionDataHolder> getDailyMissions(L2PcInstance player) {
+    public Collection<DailyMissionDataHolder> getDailyMissions(Player player) {
         //@formatter:off
         return dailyMissionRewards.values()
                 .stream()
@@ -113,7 +113,7 @@ public class DailyMissionData extends GameXmlReader {
         //@formatter:on
     }
 
-    public int getAvailableDailyMissionCount(L2PcInstance player) {
+    public int getAvailableDailyMissionCount(Player player) {
         return (int) dailyMissionRewards.values().stream().flatMap(List::stream).filter(mission -> mission.isAvailable(player)).count();
     }
 
@@ -131,7 +131,7 @@ public class DailyMissionData extends GameXmlReader {
         }
     }
 
-    public IntObjectMap<DailyMissionPlayerData> getStoredDailyMissionData(L2PcInstance player) {
+    public IntObjectMap<DailyMissionPlayerData> getStoredDailyMissionData(Player player) {
         return missionsData.computeIfAbsent(player.getObjectId(), id -> new CHashIntObjectMap<>());
     }
 

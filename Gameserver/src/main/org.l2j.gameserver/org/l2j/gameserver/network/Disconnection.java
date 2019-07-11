@@ -2,7 +2,7 @@ package org.l2j.gameserver.network;
 
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogout;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -17,16 +17,16 @@ import org.slf4j.LoggerFactory;
 public final class Disconnection {
     private static final Logger LOGGER = LoggerFactory.getLogger(Disconnection.class);
     private final L2GameClient _client;
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
 
     private Disconnection(L2GameClient client) {
         this(client, client.getActiveChar());
     }
-    private Disconnection(L2PcInstance activeChar) {
+    private Disconnection(Player activeChar) {
         this(activeChar.getClient(), activeChar);
     }
 
-    private Disconnection(L2GameClient client, L2PcInstance activeChar) {
+    private Disconnection(L2GameClient client, Player activeChar) {
         _client = getClient(client, activeChar);
         _activeChar = getActiveChar(client, activeChar);
 
@@ -42,7 +42,7 @@ public final class Disconnection {
         }
     }
 
-    public static L2GameClient getClient(L2GameClient client, L2PcInstance activeChar) {
+    public static L2GameClient getClient(L2GameClient client, Player activeChar) {
         if (client != null) {
             return client;
         }
@@ -54,7 +54,7 @@ public final class Disconnection {
         return null;
     }
 
-    public static L2PcInstance getActiveChar(L2GameClient client, L2PcInstance activeChar) {
+    public static Player getActiveChar(L2GameClient client, Player activeChar) {
         if (activeChar != null) {
             return activeChar;
         }
@@ -70,11 +70,11 @@ public final class Disconnection {
         return new Disconnection(client);
     }
 
-    public static Disconnection of(L2PcInstance activeChar) {
+    public static Disconnection of(Player activeChar) {
         return new Disconnection(activeChar);
     }
 
-    public static Disconnection of(L2GameClient client, L2PcInstance activeChar) {
+    public static Disconnection of(L2GameClient client, Player activeChar) {
         return new Disconnection(client, activeChar);
     }
 

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -35,7 +35,7 @@ public class ExSendUIEvent extends ServerPacket {
      *
      * @param player
      */
-    public ExSendUIEvent(L2PcInstance player) {
+    public ExSendUIEvent(Player player) {
         this(player, TYPE_REMOVE, 0, 0, 0, 0, 0, -1);
     }
 
@@ -47,7 +47,7 @@ public class ExSendUIEvent extends ServerPacket {
      * @param npcString
      * @param params
      */
-    public ExSendUIEvent(L2PcInstance player, int uiType, int currentPoints, int maxPoints, NpcStringId npcString, String... params) {
+    public ExSendUIEvent(Player player, int uiType, int currentPoints, int maxPoints, NpcStringId npcString, String... params) {
         this(player, uiType, -1, currentPoints, maxPoints, -1, -1, npcString.getId(), params);
     }
 
@@ -59,7 +59,7 @@ public class ExSendUIEvent extends ServerPacket {
      * @param endTime
      * @param text
      */
-    public ExSendUIEvent(L2PcInstance player, boolean hide, boolean countUp, int startTime, int endTime, String text) {
+    public ExSendUIEvent(Player player, boolean hide, boolean countUp, int startTime, int endTime, String text) {
         this(player, hide ? 1 : 0, countUp ? 1 : 0, startTime / 60, startTime % 60, endTime / 60, endTime % 60, -1, text);
     }
 
@@ -72,7 +72,7 @@ public class ExSendUIEvent extends ServerPacket {
      * @param npcString
      * @param params
      */
-    public ExSendUIEvent(L2PcInstance player, boolean hide, boolean countUp, int startTime, int endTime, NpcStringId npcString, String... params) {
+    public ExSendUIEvent(Player player, boolean hide, boolean countUp, int startTime, int endTime, NpcStringId npcString, String... params) {
         this(player, hide ? 1 : 0, countUp ? 1 : 0, startTime / 60, startTime % 60, endTime / 60, endTime % 60, npcString.getId(), params);
     }
 
@@ -87,7 +87,7 @@ public class ExSendUIEvent extends ServerPacket {
      * @param npcstringId
      * @param params
      */
-    public ExSendUIEvent(L2PcInstance player, int type, int countUp, int startTime, int startTime2, int endTime, int endTime2, int npcstringId, String... params) {
+    public ExSendUIEvent(Player player, int type, int countUp, int startTime, int startTime2, int endTime, int endTime2, int npcstringId, String... params) {
         _objectId = player.getObjectId();
         _type = type;
         _countUp = countUp;

@@ -22,10 +22,9 @@ import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.CommissionManagerInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.commission.CommissionItem;
 import org.l2j.gameserver.model.entity.Message;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.Mail;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.L2Item;
@@ -109,7 +108,7 @@ public final class CommissionManager {
      * @param player the player
      * @return {@code true} if the player is allowed to interact, {@code false} otherwise
      */
-    public static boolean isPlayerAllowedToInteract(L2PcInstance player) {
+    public static boolean isPlayerAllowedToInteract(Player player) {
         final L2Npc npc = player.getLastFolkNPC();
         if ((npc != null) && (npc instanceof CommissionManagerInstance)) {
             return npc.calculateDistance3D(player) <= INTERACTION_DISTANCE;
@@ -123,7 +122,7 @@ public final class CommissionManager {
      * @param player the player
      * @param filter the filter
      */
-    public void showAuctions(L2PcInstance player, Predicate<L2Item> filter) {
+    public void showAuctions(Player player, Predicate<L2Item> filter) {
         //@formatter:off
         final List<CommissionItem> commissionItems = _commissionItems.values().stream()
                 .filter(c -> filter.test(c.getItemInfo().getItem()))
@@ -151,7 +150,7 @@ public final class CommissionManager {
      *
      * @param player the player
      */
-    public void showPlayerAuctions(L2PcInstance player) {
+    public void showPlayerAuctions(Player player) {
         //@formatter:off
         final List<CommissionItem> commissionItems = _commissionItems.values().stream()
                 .filter(c -> c.getItemInstance().getOwnerId() == player.getObjectId())
@@ -175,7 +174,7 @@ public final class CommissionManager {
      * @param pricePerUnit   the price per unit
      * @param durationInDays the duration in days
      */
-    public void registerItem(L2PcInstance player, int itemObjectId, long itemCount, long pricePerUnit, byte durationInDays) {
+    public void registerItem(Player player, int itemObjectId, long itemCount, long pricePerUnit, byte durationInDays) {
         if (itemCount < 1) {
             player.sendPacket(SystemMessageId.THE_ITEM_HAS_FAILED_TO_BE_REGISTERED);
             player.sendPacket(ExResponseCommissionRegister.FAILED);
@@ -257,7 +256,7 @@ public final class CommissionManager {
      * @param player       the player
      * @param commissionId the commission id
      */
-    public void deleteItem(L2PcInstance player, long commissionId) {
+    public void deleteItem(Player player, long commissionId) {
         final CommissionItem commissionItem = getCommissionItem(commissionId);
         if (commissionItem == null) {
             player.sendPacket(SystemMessageId.CANCELLATION_OF_SALE_HAS_FAILED_BECAUSE_REQUIREMENTS_ARE_NOT_MET);
@@ -299,7 +298,7 @@ public final class CommissionManager {
      * @param player       the player
      * @param commissionId the commission id
      */
-    public void buyItem(L2PcInstance player, long commissionId) {
+    public void buyItem(Player player, long commissionId) {
         final CommissionItem commissionItem = getCommissionItem(commissionId);
         if (commissionItem == null) {
             player.sendPacket(SystemMessageId.ITEM_PURCHASE_HAS_FAILED);

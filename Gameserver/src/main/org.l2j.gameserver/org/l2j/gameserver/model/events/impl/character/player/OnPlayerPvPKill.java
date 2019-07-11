@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -24,19 +24,19 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnPlayerPvPKill implements IBaseEvent {
-    private final L2PcInstance _activeChar;
-    private final L2PcInstance _target;
+    private final Player _activeChar;
+    private final Player _target;
 
-    public OnPlayerPvPKill(L2PcInstance activeChar, L2PcInstance target) {
+    public OnPlayerPvPKill(Player activeChar, Player target) {
         _activeChar = activeChar;
         _target = target;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _activeChar;
     }
 
-    public L2PcInstance getTarget() {
+    public Player getTarget() {
         return _target;
     }
 

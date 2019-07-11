@@ -19,13 +19,13 @@ import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import java.util.concurrent.Future;
 
 public class L2DecoyInstance extends L2Character {
-    private final L2PcInstance _owner;
+    private final Player _owner;
     private int _totalLifeTime;
     private int _timeRemaining;
     private Future<?> _DecoyLifeTask;
     private Future<?> _HateSpam;
 
-    public L2DecoyInstance(L2NpcTemplate template, L2PcInstance owner, int totalLifeTime) {
+    public L2DecoyInstance(L2NpcTemplate template, Player owner, int totalLifeTime) {
         super(template);
         setInstanceType(InstanceType.L2DecoyInstance);
         _owner = owner;
@@ -53,7 +53,7 @@ public class L2DecoyInstance extends L2Character {
         return true;
     }
 
-    public void unSummon(L2PcInstance owner) {
+    public void unSummon(Player owner) {
         if (_DecoyLifeTask != null) {
             _DecoyLifeTask.cancel(true);
             _DecoyLifeTask = null;
@@ -89,7 +89,7 @@ public class L2DecoyInstance extends L2Character {
 
     @Override
     public void updateAbnormalVisualEffects() {
-        L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
+        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (isVisibleFor(player)) {
                 player.sendPacket(new CharInfo(this, isInvisible() && player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
@@ -141,16 +141,16 @@ public class L2DecoyInstance extends L2Character {
         return getTemplate().getLevel();
     }
 
-    public void deleteMe(L2PcInstance owner) {
+    public void deleteMe(Player owner) {
         decayMe();
     }
 
-    public final L2PcInstance getOwner() {
+    public final Player getOwner() {
         return _owner;
     }
 
     @Override
-    public L2PcInstance getActingPlayer() {
+    public Player getActingPlayer() {
         return _owner;
     }
 
@@ -160,7 +160,7 @@ public class L2DecoyInstance extends L2Character {
     }
 
     @Override
-    public void sendInfo(L2PcInstance activeChar) {
+    public void sendInfo(Player activeChar) {
         activeChar.sendPacket(new CharInfo(this, isInvisible() && activeChar.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
     }
 
@@ -179,11 +179,11 @@ public class L2DecoyInstance extends L2Character {
     }
 
     static class DecoyLifetime implements Runnable {
-        private final L2PcInstance _activeChar;
+        private final Player _activeChar;
 
         private final L2DecoyInstance _Decoy;
 
-        DecoyLifetime(L2PcInstance activeChar, L2DecoyInstance Decoy) {
+        DecoyLifetime(Player activeChar, L2DecoyInstance Decoy) {
             _activeChar = activeChar;
             _Decoy = Decoy;
         }

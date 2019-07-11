@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.base;
 
 import org.l2j.gameserver.enums.Race;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 import java.util.EnumMap;
 import java.util.EnumSet;
@@ -216,7 +216,7 @@ public enum PlayerClass {
         return allOf;
     }
 
-    public final Set<PlayerClass> getAvailableSubclasses(L2PcInstance player) {
+    public final Set<PlayerClass> getAvailableSubclasses(Player player) {
         Set<PlayerClass> subclasses = null;
 
         if (_level == ClassLevel.THIRD) {

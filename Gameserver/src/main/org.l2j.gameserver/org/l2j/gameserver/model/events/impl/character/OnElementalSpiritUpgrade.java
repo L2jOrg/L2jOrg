@@ -1,16 +1,16 @@
 package org.l2j.gameserver.model.events.impl.character;
 
 import org.l2j.gameserver.data.elemental.ElementalSpirit;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
 public class OnElementalSpiritUpgrade implements IBaseEvent {
 
     private final ElementalSpirit spirit;
-    private final L2PcInstance player;
+    private final Player player;
 
-    public OnElementalSpiritUpgrade(L2PcInstance player, ElementalSpirit spirit) {
+    public OnElementalSpiritUpgrade(Player player, ElementalSpirit spirit) {
         this.player = player;
         this.spirit = spirit;
     }
@@ -19,7 +19,7 @@ public class OnElementalSpiritUpgrade implements IBaseEvent {
         return spirit;
     }
 
-    public L2PcInstance getPlayer() {
+    public Player getPlayer() {
         return player;
     }
 

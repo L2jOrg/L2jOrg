@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.zone.type;
 
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.L2ZoneRespawn;
 import org.l2j.gameserver.model.zone.ZoneId;
 
@@ -54,7 +54,7 @@ public class L2ResidenceTeleportZone extends L2ZoneRespawn {
 
     @Override
     public void oustAllPlayers() {
-        for (L2PcInstance player : getPlayersInside()) {
+        for (Player player : getPlayersInside()) {
             if ((player != null) && player.isOnline()) {
                 player.teleToLocation(getSpawnLoc(), 200);
             }

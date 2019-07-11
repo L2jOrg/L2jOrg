@@ -23,7 +23,7 @@ public class L2SiegeFlagInstance extends L2Npc {
     private Siegable _siege;
     private boolean _canTalk;
 
-    public L2SiegeFlagInstance(L2PcInstance player, L2NpcTemplate template, boolean advanced) {
+    public L2SiegeFlagInstance(Player player, L2NpcTemplate template, boolean advanced) {
         super(template);
         setInstanceType(InstanceType.L2SiegeFlagInstance);
 
@@ -73,25 +73,25 @@ public class L2SiegeFlagInstance extends L2Npc {
     }
 
     @Override
-    public void onForcedAttack(L2PcInstance player) {
+    public void onForcedAttack(Player player) {
         onAction(player);
     }
 
     @Override
-    public void onAction(L2PcInstance player, boolean interact) {
+    public void onAction(Player player, boolean interact) {
         if ((player == null) || !canTarget(player)) {
             return;
         }
 
-        // Check if the L2PcInstance already target the L2NpcInstance
+        // Check if the Player already target the L2NpcInstance
         if (this != player.getTarget()) {
-            // Set the target of the L2PcInstance player
+            // Set the target of the Player player
             player.setTarget(this);
         } else if (interact) {
             if (isAutoAttackable(player) && (Math.abs(player.getZ() - getZ()) < 100)) {
                 player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
             } else {
-                // Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
+                // Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
                 player.sendPacket(ActionFailed.STATIC_PACKET);
             }
         }

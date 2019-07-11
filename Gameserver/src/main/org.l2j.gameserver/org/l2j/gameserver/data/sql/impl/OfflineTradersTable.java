@@ -7,7 +7,7 @@ import org.l2j.gameserver.instancemanager.PlayerCountManager;
 import org.l2j.gameserver.model.L2ManufactureItem;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.TradeItem;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SellBuffHolder;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.L2GameClient;
@@ -36,7 +36,7 @@ public class OfflineTradersTable {
     private OfflineTradersTable() {
     }
 
-    public static synchronized void onTransaction(L2PcInstance trader, boolean finished, boolean firstCall) {
+    public static synchronized void onTransaction(Player trader, boolean finished, boolean firstCall) {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement stm1 = con.prepareStatement(CLEAR_OFFLINE_TABLE_ITEMS_PLAYER);
              PreparedStatement stm2 = con.prepareStatement(CLEAR_OFFLINE_TABLE_PLAYER);
@@ -160,7 +160,7 @@ public class OfflineTradersTable {
             stm2.execute();
             con.setAutoCommit(false); // avoid halfway done
 
-            for (L2PcInstance pc : L2World.getInstance().getPlayers()) {
+            for (Player pc : L2World.getInstance().getPlayers()) {
                 try {
                     if ((pc.getPrivateStoreType() != PrivateStoreType.NONE) && ((pc.getClient() == null) || pc.getClient().isDetached())) {
                         stm3.setInt(1, pc.getObjectId()); // Char Id
@@ -277,12 +277,12 @@ public class OfflineTradersTable {
                     continue;
                 }
 
-                L2PcInstance player = null;
+                Player player = null;
 
                 try {
                     final L2GameClient client = new L2GameClient(null);
                     client.setDetached(true);
-                    player = L2PcInstance.load(rs.getInt("charId"));
+                    player = Player.load(rs.getInt("charId"));
                     client.setActiveChar(player);
                     player.setOnlineStatus(true, false);
                     client.setAccountName(player.getAccountNamePlayer());

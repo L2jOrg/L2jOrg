@@ -8,7 +8,7 @@ import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
@@ -74,13 +74,13 @@ public final class ClassMaster extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		return "test_server_helper001.html";
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		if (!_isEnabled)
 		{
@@ -299,7 +299,7 @@ public final class ClassMaster extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private String getFirstOccupationChangeHtml(L2PcInstance player)
+	private String getFirstOccupationChangeHtml(Player player)
 	{
 		String htmltext = null;
 		if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
@@ -380,7 +380,7 @@ public final class ClassMaster extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private String getSecondOccupationChangeHtml(L2PcInstance player)
+	private String getSecondOccupationChangeHtml(Player player)
 	{
 		String htmltext = null;
 		if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
@@ -546,7 +546,7 @@ public final class ClassMaster extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private boolean changeToNextClass(L2PcInstance player)
+	private boolean changeToNextClass(Player player)
 	{
 		ClassId newClass = Arrays.stream(ClassId.values()).filter(cid -> player.getClassId() == cid.getParent()).findAny().orElse(null);
 
@@ -633,7 +633,7 @@ public final class ClassMaster extends AbstractNpcAI
 		}
 	}
 	
-	private void showPopupWindow(L2PcInstance player)
+	private void showPopupWindow(Player player)
 	{
 		if (!_showPopupWindow)
 		{
@@ -655,7 +655,7 @@ public final class ClassMaster extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final Player player = event.getActiveChar();
 		
 		if (!_showPopupWindow || (event.getMarkId() != 2)) // mark id was 1001 - used 2 for quest text
 		{
@@ -720,7 +720,7 @@ public final class ClassMaster extends AbstractNpcAI
 		showPopupWindow(event.getActiveChar());
 	}
 	
-	private String getClassChangeOptions(L2PcInstance player, int selectedClassId)
+	private String getClassChangeOptions(Player player, int selectedClassId)
 	{
 		final StringBuilder sb = new StringBuilder();
 		
@@ -815,7 +815,7 @@ public final class ClassMaster extends AbstractNpcAI
 			return _appliedCategories != null ? _appliedCategories : Collections.emptyList();
 		}
 		
-		public boolean isInCategory(L2PcInstance player)
+		public boolean isInCategory(Player player)
 		{
 			if (_appliedCategories != null)
 			{
@@ -872,7 +872,7 @@ public final class ClassMaster extends AbstractNpcAI
 		}
 	}
 	
-	private boolean checkIfClassChangeHasOptions(L2PcInstance player)
+	private boolean checkIfClassChangeHasOptions(Player player)
 	{
 		boolean showOptions = _classChangeData.stream().filter(ccd -> !ccd.getItemsRequired().isEmpty()).anyMatch(ccd -> ccd.isInCategory(player)); // Check if there are requirements
 		if (!showOptions)

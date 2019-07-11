@@ -7,7 +7,7 @@ import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2DefenderInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.holders.SiegeGuardHolder;
@@ -97,7 +97,7 @@ public final class SiegeGuardManager {
      * @param player the PlayerInstance
      * @return {@code true} if {@code PlayerInstance} is too much close to another ticket, {@code false} otherwise
      */
-    public boolean isTooCloseToAnotherTicket(L2PcInstance player) {
+    public boolean isTooCloseToAnotherTicket(Player player) {
         return _droppedTickets.stream().filter(g -> g.calculateDistance3D(player) < 25).findFirst().orElse(null) != null;
     }
 
@@ -120,7 +120,7 @@ public final class SiegeGuardManager {
      * @param itemId the ID of the item
      * @param player the PlayerInstance
      */
-    public void addTicket(int itemId, L2PcInstance player) {
+    public void addTicket(int itemId, Player player) {
         final Castle castle = CastleManager.getInstance().getCastle(player);
         if (castle == null) {
             return;

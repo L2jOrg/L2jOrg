@@ -24,7 +24,7 @@ import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.PlayerEventHolder;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -44,10 +44,10 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class L2Event {
     public static final Map<Integer, String> _teamNames = new ConcurrentHashMap<>();
-    public static final Set<L2PcInstance> _registeredPlayers = ConcurrentHashMap.newKeySet();
-    public static final Map<Integer, Set<L2PcInstance>> _teams = new ConcurrentHashMap<>();
+    public static final Set<Player> _registeredPlayers = ConcurrentHashMap.newKeySet();
+    public static final Map<Integer, Set<Player>> _teams = new ConcurrentHashMap<>();
     protected static final Logger LOGGER = LoggerFactory.getLogger(L2Event.class);
-    private static final Map<L2PcInstance, PlayerEventHolder> _connectionLossData = new ConcurrentHashMap<>();
+    private static final Map<Player, PlayerEventHolder> _connectionLossData = new ConcurrentHashMap<>();
     public static EventState eventState = EventState.OFF;
     public static String _eventName = "";
     public static String _eventCreator = "";
@@ -59,12 +59,12 @@ public class L2Event {
      * @param player
      * @return The team ID where the player is in, or -1 if player is null or team not found.
      */
-    public static int getPlayerTeamId(L2PcInstance player) {
+    public static int getPlayerTeamId(Player player) {
         if (player == null) {
             return -1;
         }
 
-        for (Entry<Integer, Set<L2PcInstance>> team : _teams.entrySet()) {
+        for (Entry<Integer, Set<Player>> team : _teams.entrySet()) {
             if (team.getValue().contains(player)) {
                 return team.getKey();
             }
@@ -73,10 +73,10 @@ public class L2Event {
         return -1;
     }
 
-    public static List<L2PcInstance> getTopNKillers(int n) {
-        final Map<L2PcInstance, Integer> tmp = new HashMap<>();
-        for (Set<L2PcInstance> teamList : _teams.values()) {
-            for (L2PcInstance player : teamList) {
+    public static List<Player> getTopNKillers(int n) {
+        final Map<Player, Integer> tmp = new HashMap<>();
+        for (Set<Player> teamList : _teams.values()) {
+            for (Player player : teamList) {
                 if (player.getEventStatus() == null) {
                     continue;
                 }
@@ -91,11 +91,11 @@ public class L2Event {
             return new ArrayList<>(tmp.keySet());
         }
 
-        final List<L2PcInstance> toReturn = new ArrayList<>(tmp.keySet());
+        final List<Player> toReturn = new ArrayList<>(tmp.keySet());
         return toReturn.subList(1, n);
     }
 
-    public static void showEventHtml(L2PcInstance player, String objectid) {
+    public static void showEventHtml(Player player, String objectid) {
         // TODO: work on this
         if (eventState == EventState.STANDBY) {
             try {
@@ -128,7 +128,7 @@ public class L2Event {
      *
      * @param target
      */
-    public static void spawnEventNpc(L2PcInstance target) {
+    public static void spawnEventNpc(Player target) {
         try {
             final L2Spawn spawn = new L2Spawn(_npcId);
             spawn.setXYZ(target.getX() + 50, target.getY() + 50, target.getZ());
@@ -173,7 +173,7 @@ public class L2Event {
      * @param player
      * @return False: If player is null, his event status is null or the event state is off. True: if the player is inside the _registeredPlayers list while the event state is STANDBY. If the event state is ON, it will check if the player is inside in one of the teams.
      */
-    public static boolean isParticipant(L2PcInstance player) {
+    public static boolean isParticipant(Player player) {
         if ((player == null) || (player.getEventStatus() == null)) {
             return false;
         }
@@ -186,7 +186,7 @@ public class L2Event {
                 return _registeredPlayers.contains(player);
             }
             case ON: {
-                for (Set<L2PcInstance> teamList : _teams.values()) {
+                for (Set<Player> teamList : _teams.values()) {
                     if (teamList.contains(player)) {
                         return true;
                     }
@@ -201,7 +201,7 @@ public class L2Event {
      *
      * @param player
      */
-    public static void registerPlayer(L2PcInstance player) {
+    public static void registerPlayer(Player player) {
         if (eventState != EventState.STANDBY) {
             player.sendMessage("The registration period for this event is over.");
             return;
@@ -219,7 +219,7 @@ public class L2Event {
      *
      * @param player
      */
-    public static void removeAndResetPlayer(L2PcInstance player) {
+    public static void removeAndResetPlayer(Player player) {
         try {
             if (isParticipant(player)) {
                 if (player.isDead()) {
@@ -257,7 +257,7 @@ public class L2Event {
      *
      * @param player
      */
-    public static void savePlayerEventStatus(L2PcInstance player) {
+    public static void savePlayerEventStatus(Player player) {
         _connectionLossData.put(player, player.getEventStatus());
     }
 
@@ -266,7 +266,7 @@ public class L2Event {
      *
      * @param player
      */
-    public static void restorePlayerEventStatus(L2PcInstance player) {
+    public static void restorePlayerEventStatus(Player player) {
         if (_connectionLossData.containsKey(player)) {
             player.setEventStatus(_connectionLossData.get(player));
             _connectionLossData.remove(player);
@@ -313,8 +313,8 @@ public class L2Event {
                 _eventInfo = br.readLine();
             }
 
-            final Set<L2PcInstance> temp = new HashSet<>();
-            for (L2PcInstance player : L2World.getInstance().getPlayers()) {
+            final Set<Player> temp = new HashSet<>();
+            for (Player player : L2World.getInstance().getPlayers()) {
                 if (!player.isOnline()) {
                     continue;
                 }
@@ -324,7 +324,7 @@ public class L2Event {
                     temp.add(player);
                 }
 
-                L2World.getInstance().forEachVisibleObjectInRange(player, L2PcInstance.class, 1000, temp::add);
+                L2World.getInstance().forEachVisibleObjectInRange(player, Player.class, 1000, temp::add);
             }
         } catch (Exception e) {
             LOGGER.warn("L2Event: " + e.getMessage());
@@ -369,8 +369,8 @@ public class L2Event {
             while (!_registeredPlayers.isEmpty()) {
                 // Get the player with the biggest level
                 int max = 0;
-                L2PcInstance biggestLvlPlayer = null;
-                for (L2PcInstance player : _registeredPlayers) {
+                Player biggestLvlPlayer = null;
+                for (Player player : _registeredPlayers) {
                     if (player == null) {
                         continue;
                     }
@@ -409,7 +409,7 @@ public class L2Event {
                 return "Cannot finish event, it is already off.";
             }
             case STANDBY: {
-                for (L2PcInstance player : _registeredPlayers) {
+                for (Player player : _registeredPlayers) {
                     removeAndResetPlayer(player);
                 }
 
@@ -424,8 +424,8 @@ public class L2Event {
                 return "The event has been stopped at STANDBY mode, all players unregistered and all event npcs unspawned.";
             }
             case ON: {
-                for (Set<L2PcInstance> teamList : _teams.values()) {
-                    for (L2PcInstance player : teamList) {
+                for (Set<Player> teamList : _teams.values()) {
+                    for (Player player : teamList) {
                         removeAndResetPlayer(player);
                     }
                 }
@@ -449,13 +449,13 @@ public class L2Event {
         return "The event has been successfully finished.";
     }
 
-    private static Map<L2PcInstance, Integer> sortByValue(Map<L2PcInstance, Integer> unsortMap) {
-        final List<Entry<L2PcInstance, Integer>> list = new LinkedList<>(unsortMap.entrySet());
+    private static Map<Player, Integer> sortByValue(Map<Player, Integer> unsortMap) {
+        final List<Entry<Player, Integer>> list = new LinkedList<>(unsortMap.entrySet());
 
         list.sort(Comparator.comparing(Entry::getValue));
 
-        final Map<L2PcInstance, Integer> sortedMap = new LinkedHashMap<>();
-        for (Entry<L2PcInstance, Integer> entry : list) {
+        final Map<Player, Integer> sortedMap = new LinkedHashMap<>();
+        for (Entry<Player, Integer> entry : list) {
             sortedMap.put(entry.getKey(), entry.getValue());
         }
         return sortedMap;

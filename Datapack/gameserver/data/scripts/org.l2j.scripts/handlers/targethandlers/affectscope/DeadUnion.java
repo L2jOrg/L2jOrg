@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Playable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
 
@@ -48,7 +48,7 @@ public class DeadUnion implements IAffectScopeHandler
 		
 		if (target.isPlayable())
 		{
-			final L2PcInstance player = target.getActingPlayer();
+			final Player player = target.getActingPlayer();
 			final L2Party party = player.getParty();
 			final L2CommandChannel commandChannel = party != null ? party.getCommandChannel() : null;
 			
@@ -61,7 +61,7 @@ public class DeadUnion implements IAffectScopeHandler
 					return false;
 				}
 				
-				final L2PcInstance p = plbl.getActingPlayer();
+				final Player p = plbl.getActingPlayer();
 				if ((p == null) || !p.isDead())
 				{
 					return false;

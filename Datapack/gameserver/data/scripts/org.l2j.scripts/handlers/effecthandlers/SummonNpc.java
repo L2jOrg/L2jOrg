@@ -16,8 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import java.util.logging.Level;
-
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.model.L2Spawn;
@@ -27,7 +25,7 @@ import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2DecoyInstance;
 import org.l2j.gameserver.model.actor.instance.L2EffectPointInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
@@ -84,7 +82,7 @@ public final class SummonNpc extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance player = effected.getActingPlayer();
+		final Player player = effected.getActingPlayer();
 		if (player.isMounted())
 		{
 			return;

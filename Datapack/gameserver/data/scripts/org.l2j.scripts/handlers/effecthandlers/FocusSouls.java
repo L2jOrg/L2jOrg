@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -52,7 +52,7 @@ public final class FocusSouls extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance target = effected.getActingPlayer();
+		final Player target = effected.getActingPlayer();
 		final int maxSouls = (int) target.getStat().getValue(Stats.MAX_SOULS, 0);
 		if (maxSouls > 0)
 		{

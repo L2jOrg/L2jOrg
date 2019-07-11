@@ -8,7 +8,7 @@ import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.L2SkillLearn;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PcStat;
 import org.l2j.gameserver.model.actor.templates.L2PcTemplate;
 import org.l2j.gameserver.model.base.ClassId;
@@ -99,7 +99,7 @@ public final class CharacterCreate extends ClientPacket {
             return;
         }
 
-        L2PcInstance newChar;
+        Player newChar;
         L2PcTemplate template;
 
         /*
@@ -132,7 +132,7 @@ public final class CharacterCreate extends ClientPacket {
             character.setFemale(female);
             character.setAccountName(client.getAccountName());
 
-            newChar = L2PcInstance.create(character, template);
+            newChar = Player.create(character, template);
 
 
         }
@@ -152,7 +152,7 @@ public final class CharacterCreate extends ClientPacket {
         LOGGER_ACCOUNTING.info("Created new character {}, {}", newChar, client);
     }
 
-    private void initNewChar(L2GameClient client, L2PcInstance newChar) {
+    private void initNewChar(L2GameClient client, Player newChar) {
         L2World.getInstance().addObject(newChar);
 
         if (Config.STARTING_ADENA > 0) {

@@ -16,22 +16,22 @@
  */
 package org.l2j.gameserver.model.holders;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
 
 /**
  * @author UnAfraid
  */
 public class SummonRequestHolder {
-    private final L2PcInstance _target;
+    private final Player _target;
     private final Skill _skill;
 
-    public SummonRequestHolder(L2PcInstance destination, Skill skill) {
+    public SummonRequestHolder(Player destination, Skill skill) {
         _target = destination;
         _skill = skill;
     }
 
-    public L2PcInstance getTarget() {
+    public Player getTarget() {
         return _target;
     }
 

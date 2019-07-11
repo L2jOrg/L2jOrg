@@ -20,7 +20,7 @@ import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.html.PageBuilder;
 import org.l2j.gameserver.model.html.PageResult;
@@ -51,7 +51,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
@@ -63,7 +63,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void doAction(L2PcInstance player, int clanHallId, String action, String actionVal)
+	private void doAction(Player player, int clanHallId, String action, String actionVal)
 	{
 		final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(clanHallId);
 		if (clanHall != null)
@@ -154,7 +154,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 		useAdminCommand("admin_clanhall id=" + clanHallId, player);
 	}
 	
-	private void sendClanHallList(L2PcInstance player, int page, BypassParser parser)
+	private void sendClanHallList(Player player, int page, BypassParser parser)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(player, "data/html/admin/clanhall_list.htm");
@@ -202,7 +202,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 		player.sendPacket(html);
 	}
 	
-	private void sendClanHallDetails(L2PcInstance player, int clanHallId)
+	private void sendClanHallDetails(Player player, int clanHallId)
 	{
 		final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(clanHallId);
 		if (clanHall != null)
@@ -254,7 +254,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 		}
 	}
 	
-	private void processBypass(L2PcInstance player, BypassParser parser)
+	private void processBypass(Player player, BypassParser parser)
 	{
 		final int page = parser.getInt("page", 0);
 		final int clanHallId = parser.getInt("id", 0);

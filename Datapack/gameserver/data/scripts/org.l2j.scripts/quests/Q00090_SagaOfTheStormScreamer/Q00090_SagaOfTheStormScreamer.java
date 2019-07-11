@@ -20,7 +20,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.holders.NpcLogListHolder;
 import org.l2j.gameserver.model.quest.Quest;
@@ -83,7 +83,7 @@ public class Q00090_SagaOfTheStormScreamer extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -241,7 +241,7 @@ public class Q00090_SagaOfTheStormScreamer extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(L2Npc npc, Player talker)
 	{
 		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
@@ -429,7 +429,7 @@ public class Q00090_SagaOfTheStormScreamer extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(L2Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isStarted() && GameUtils.checkIfInRange(1500, npc, killer, true))
@@ -515,7 +515,7 @@ public class Q00090_SagaOfTheStormScreamer extends Quest
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance player)
+	public Set<NpcLogListHolder> getNpcLogList(Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(7))

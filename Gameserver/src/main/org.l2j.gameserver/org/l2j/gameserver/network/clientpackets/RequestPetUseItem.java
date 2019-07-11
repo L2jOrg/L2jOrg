@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -26,7 +26,7 @@ public final class RequestPetUseItem extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if ((activeChar == null) || !activeChar.hasPet()) {
             return;
         }
@@ -70,7 +70,7 @@ public final class RequestPetUseItem extends ClientPacket {
         useItem(pet, item, activeChar);
     }
 
-    private void useItem(L2PetInstance pet, L2ItemInstance item, L2PcInstance activeChar) {
+    private void useItem(L2PetInstance pet, L2ItemInstance item, Player activeChar) {
         if (item.isEquipable()) {
             if (!item.getItem().isConditionAttached()) {
                 activeChar.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);

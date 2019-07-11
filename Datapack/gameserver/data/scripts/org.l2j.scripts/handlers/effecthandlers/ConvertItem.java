@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.L2Weapon;
@@ -53,7 +53,7 @@ public final class ConvertItem extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance player = effected.getActingPlayer();
+		final Player player = effected.getActingPlayer();
 		if (player.hasItemRequest())
 		{
 			return;

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -12,7 +12,7 @@ public class ExCubeGameExtendedChangePoints extends ServerPacket {
     int _bluePoints;
     int _redPoints;
     boolean _isRedTeam;
-    L2PcInstance _player;
+    Player _player;
     int _playerPoints;
 
     /**
@@ -25,7 +25,7 @@ public class ExCubeGameExtendedChangePoints extends ServerPacket {
      * @param player       Player Instance
      * @param playerPoints Current Player Points
      */
-    public ExCubeGameExtendedChangePoints(int timeLeft, int bluePoints, int redPoints, boolean isRedTeam, L2PcInstance player, int playerPoints) {
+    public ExCubeGameExtendedChangePoints(int timeLeft, int bluePoints, int redPoints, boolean isRedTeam, Player player, int playerPoints) {
         _timeLeft = timeLeft;
         _bluePoints = bluePoints;
         _redPoints = redPoints;

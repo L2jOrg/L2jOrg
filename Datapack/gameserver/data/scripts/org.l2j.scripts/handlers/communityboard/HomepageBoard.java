@@ -19,7 +19,7 @@ package handlers.communityboard;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
  * Homepage board.
@@ -39,7 +39,7 @@ public class HomepageBoard implements IParseBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, L2PcInstance activeChar)
+	public boolean parseCommunityBoardCommand(String command, Player activeChar)
 	{
 		CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/homepage.html"), activeChar);
 		return true;

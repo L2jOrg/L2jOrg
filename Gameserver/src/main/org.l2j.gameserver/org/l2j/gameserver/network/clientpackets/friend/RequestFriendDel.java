@@ -19,7 +19,7 @@ package org.l2j.gameserver.network.clientpackets.friend;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -50,7 +50,7 @@ public final class RequestFriendDel extends ClientPacket {
     public void runImpl() {
         SystemMessage sm;
 
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
@@ -87,7 +87,7 @@ public final class RequestFriendDel extends ClientPacket {
             activeChar.getFriendList().remove(Integer.valueOf(id));
             activeChar.sendPacket(new FriendRemove(_name, 1));
 
-            final L2PcInstance player = L2World.getInstance().getPlayer(_name);
+            final Player player = L2World.getInstance().getPlayer(_name);
             if (player != null) {
                 player.getFriendList().remove(Integer.valueOf(activeChar.getObjectId()));
                 player.sendPacket(new FriendRemove(activeChar.getName(), 1));

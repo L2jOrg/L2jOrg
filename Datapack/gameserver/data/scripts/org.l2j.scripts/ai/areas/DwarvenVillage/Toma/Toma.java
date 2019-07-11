@@ -18,7 +18,7 @@ package ai.areas.DwarvenVillage.Toma;
 
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 import ai.AbstractNpcAI;
 
@@ -47,7 +47,7 @@ public class Toma extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		if (event.equals("RESPAWN_TOMA"))
 		{
@@ -57,7 +57,7 @@ public class Toma extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		return "30556.htm";
 	}

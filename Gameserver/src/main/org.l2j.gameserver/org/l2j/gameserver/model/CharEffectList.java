@@ -19,7 +19,7 @@ package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
@@ -856,7 +856,7 @@ public final class CharEffectList {
      * @param partyOnly {@code true} only party icons need to be updated.
      */
     public void updateEffectIcons(boolean partyOnly) {
-        final L2PcInstance player = _owner.getActingPlayer();
+        final Player player = _owner.getActingPlayer();
         if (player != null) {
             final L2Party party = player.getParty();
             final Optional<AbnormalStatusUpdate> asu = (_owner.isPlayer() && !partyOnly) ? Optional.of(new AbnormalStatusUpdate()) : Optional.empty();

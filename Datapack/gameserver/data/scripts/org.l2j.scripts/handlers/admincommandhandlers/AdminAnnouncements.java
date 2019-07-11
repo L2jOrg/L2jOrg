@@ -20,7 +20,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.AnnouncementsTable;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.announce.Announcement;
 import org.l2j.gameserver.model.announce.AnnouncementType;
 import org.l2j.gameserver.model.announce.AutoAnnouncement;
@@ -47,7 +47,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String cmd = st.hasMoreTokens() ? st.nextToken() : "";

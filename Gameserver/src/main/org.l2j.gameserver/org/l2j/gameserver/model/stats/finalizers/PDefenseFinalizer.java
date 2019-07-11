@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.L2Item;
@@ -61,7 +61,7 @@ public class PDefenseFinalizer implements IStatsFunction {
             }
 
             if (creature.isPlayer()) {
-                final L2PcInstance player = creature.getActingPlayer();
+                final Player player = creature.getActingPlayer();
                 for (int slot : SLOTS) {
                     if (!inv.isPaperdollSlotEmpty(slot) || //
                             ((slot == Inventory.PAPERDOLL_LEGS) && !inv.isPaperdollSlotEmpty(Inventory.PAPERDOLL_CHEST) && (inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == L2Item.SLOT_FULL_ARMOR))) {

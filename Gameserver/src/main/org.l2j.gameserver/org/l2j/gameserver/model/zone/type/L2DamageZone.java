@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.model.zone.AbstractZoneSettings;
@@ -91,7 +91,7 @@ public class L2DamageZone extends L2ZoneType {
     @Override
     protected void onEnter(L2Character character) {
         if ((getSettings().getTask() == null) && ((_damageHPPerSec != 0) || (_damageMPPerSec != 0))) {
-            final L2PcInstance player = character.getActingPlayer();
+            final Player player = character.getActingPlayer();
             if (getCastle() != null) // Castle zone
             {
                 if (!(getCastle().getSiege().isInProgress() && (player != null) && (player.getSiegeState() != 2))) // Siege and no defender
@@ -161,7 +161,7 @@ public class L2DamageZone extends L2ZoneType {
                 if ((temp != null) && !temp.isDead()) {
                     if (siege) {
                         // during siege defenders not affected
-                        final L2PcInstance player = temp.getActingPlayer();
+                        final Player player = temp.getActingPlayer();
                         if ((player != null) && player.isInSiege() && (player.getSiegeState() == 2)) {
                             continue;
                         }

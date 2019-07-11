@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.item;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -26,10 +26,10 @@ import org.l2j.gameserver.model.items.instance.L2ItemInstance;
  */
 public class OnItemBypassEvent implements IBaseEvent {
     private final L2ItemInstance _item;
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final String _event;
 
-    public OnItemBypassEvent(L2ItemInstance item, L2PcInstance activeChar, String event) {
+    public OnItemBypassEvent(L2ItemInstance item, Player activeChar, String event) {
         _item = item;
         _activeChar = activeChar;
         _event = event;
@@ -39,7 +39,7 @@ public class OnItemBypassEvent implements IBaseEvent {
         return _item;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _activeChar;
     }
 

@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -36,7 +36,7 @@ public class ConditionPlayerCanEscape extends Condition {
     @Override
     public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item) {
         boolean canTeleport = true;
-        final L2PcInstance player = effector.getActingPlayer();
+        final Player player = effector.getActingPlayer();
         if (player == null) {
             canTeleport = false;
         } else if (player.isInDuel()) {

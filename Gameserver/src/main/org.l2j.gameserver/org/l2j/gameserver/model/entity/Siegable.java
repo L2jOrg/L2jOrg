@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.entity;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2SiegeClan;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 import java.util.Calendar;
 import java.util.Collection;
@@ -24,7 +24,7 @@ public interface Siegable {
 
     Collection<L2SiegeClan> getAttackerClans();
 
-    List<L2PcInstance> getAttackersInZone();
+    List<Player> getAttackersInZone();
 
     boolean checkIsAttacker(L2Clan clan);
 

@@ -20,7 +20,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.sql.Connection;
@@ -53,7 +53,7 @@ public class FavoriteBoard implements IParseBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, L2PcInstance activeChar)
+	public boolean parseCommunityBoardCommand(String command, Player activeChar)
 	{
 		// None of this commands can be added to favorites.
 		if (command.startsWith("_bbsgetfav"))

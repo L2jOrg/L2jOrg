@@ -23,7 +23,7 @@ import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stats;
@@ -45,7 +45,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 	
 	// TODO: remove from gm list etc etc
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		try
 		{
@@ -74,7 +74,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleStart(String params, L2PcInstance activeChar)
+	private void handleStart(String params, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(params);
 		int lvl1 = 0;
@@ -162,7 +162,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void handleShow(String params, L2PcInstance activeChar)
+	private void handleShow(String params, Player activeChar)
 	{
 		params = params.trim();
 		

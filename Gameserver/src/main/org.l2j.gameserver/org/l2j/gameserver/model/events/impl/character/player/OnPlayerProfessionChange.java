@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2PcTemplate;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
@@ -25,17 +25,17 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnPlayerProfessionChange implements IBaseEvent {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final L2PcTemplate _template;
     private final boolean _isSubClass;
 
-    public OnPlayerProfessionChange(L2PcInstance activeChar, L2PcTemplate template, boolean isSubClass) {
+    public OnPlayerProfessionChange(Player activeChar, L2PcTemplate template, boolean isSubClass) {
         _activeChar = activeChar;
         _template = template;
         _isSubClass = isSubClass;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _activeChar;
     }
 

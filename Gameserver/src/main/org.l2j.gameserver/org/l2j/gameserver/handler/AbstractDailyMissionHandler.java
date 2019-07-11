@@ -3,7 +3,7 @@ package org.l2j.gameserver.handler;
 import org.l2j.gameserver.data.database.dao.DailyMissionDAO;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
 import org.l2j.gameserver.data.xml.impl.DailyMissionData;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 import org.l2j.gameserver.model.events.ListenersContainer;
@@ -32,7 +32,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
         return holder;
     }
 
-    public boolean isAvailable(L2PcInstance player) {
+    public boolean isAvailable(Player player) {
         return holder.isDisplayable(player) && falseIfNullOrElse(getPlayerEntry(player, false), entry ->
              switch (entry.getStatus()) {
                 case AVAILABLE -> true;
@@ -51,7 +51,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
 
     public abstract void init();
 
-    public int getStatus(L2PcInstance player) {
+    public int getStatus(Player player) {
         final var entry = getPlayerEntry(player, false);
         return nonNull(entry) ? entry.getStatus().getClientId() : DailyMissionStatus.NOT_AVAILABLE.getClientId();
     }
@@ -60,11 +60,11 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
         return holder.getRequiredCompletions();
     }
 
-    public int getProgress(L2PcInstance player) {
+    public int getProgress(Player player) {
         return zeroIfNullOrElse(getPlayerEntry(player, false), DailyMissionPlayerData::getProgress);
     }
 
-    public boolean isRecentlyCompleted(L2PcInstance player) {
+    public boolean isRecentlyCompleted(Player player) {
         return falseIfNullOrElse(getPlayerEntry(player, false), DailyMissionPlayerData::isRecentlyCompleted);
     }
 
@@ -73,7 +73,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
         DailyMissionData.getInstance().clearMissionData(holder.getId());
     }
 
-    public void requestReward(L2PcInstance player) {
+    public void requestReward(Player player) {
         synchronized (holder) {
             if (isAvailable(player)) {
                 final DailyMissionPlayerData entry = getPlayerEntry(player, true);
@@ -85,7 +85,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
         }
     }
 
-    private void giveRewards(L2PcInstance player) {
+    private void giveRewards(Player player) {
         holder.getRewards().forEach(i -> player.addItem("One Day Reward", i, player, true));
     }
 
@@ -94,7 +94,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
         getDAO(DailyMissionDAO.class).save(entry);
     }
 
-    protected DailyMissionPlayerData getPlayerEntry(L2PcInstance player, boolean createIfNone) {
+    protected DailyMissionPlayerData getPlayerEntry(Player player, boolean createIfNone) {
 
         final var playerMissions = DailyMissionData.getInstance().getStoredDailyMissionData(player);
 
@@ -114,7 +114,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
         return missionData;
     }
 
-    protected void notifyAvailablesReward(L2PcInstance player) {
+    protected void notifyAvailablesReward(Player player) {
         var playerMissions = DailyMissionData.getInstance().getStoredDailyMissionData(player).values();
         player.sendPacket(new ExConnectedTimeAndGettableReward((int) playerMissions.stream().filter(DailyMissionPlayerData::isAvailable).count()));
 

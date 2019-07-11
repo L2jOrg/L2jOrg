@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2TrapInstance;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -61,7 +61,7 @@ public final class SummonTrap extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance player = effected.getActingPlayer();
+		final Player player = effected.getActingPlayer();
 		if (player.inObserverMode() || player.isMounted())
 		{
 			return;

@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.L2ClanMember;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 
 public class RequestGiveNickName extends ClientPacket {
@@ -17,7 +17,7 @@ public class RequestGiveNickName extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
@@ -41,7 +41,7 @@ public class RequestGiveNickName extends ClientPacket {
 
             final L2ClanMember member1 = activeChar.getClan().getClanMember(_target);
             if (member1 != null) {
-                final L2PcInstance member = member1.getPlayerInstance();
+                final Player member = member1.getPlayerInstance();
                 if (member != null) {
                     // is target from the same clan?
                     member.setTitle(_title);

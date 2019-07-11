@@ -27,7 +27,7 @@ import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.html.PageBuilder;
 import org.l2j.gameserver.model.html.PageResult;
 import org.l2j.gameserver.model.html.formatters.BypassParserFormatter;
@@ -70,7 +70,7 @@ public final class AdminInstance implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
@@ -100,7 +100,7 @@ public final class AdminInstance implements IAdminCommandHandler
 				if (template != null)
 				{
 					final String enterGroup = st.hasMoreTokens() ? st.nextToken() : "Alone";
-					final List<L2PcInstance> members = new ArrayList<>();
+					final List<Player> members = new ArrayList<>();
 					
 					switch (enterGroup)
 					{
@@ -148,7 +148,7 @@ public final class AdminInstance implements IAdminCommandHandler
 					final Location loc = instance.getEnterLocation();
 					if (loc != null)
 					{
-						for (L2PcInstance players : members)
+						for (Player players : members)
 						{
 							instance.addAllowed(players);
 							players.teleToLocation(loc, instance);
@@ -198,7 +198,7 @@ public final class AdminInstance implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void sendTemplateDetails(L2PcInstance player, int templateId)
+	private void sendTemplateDetails(Player player, int templateId)
 	{
 		if (InstanceManager.getInstance().getInstanceTemplate(templateId) != null)
 		{
@@ -243,7 +243,7 @@ public final class AdminInstance implements IAdminCommandHandler
 		}
 	}
 	
-	private void sendTemplateList(L2PcInstance player, int page, BypassParser parser)
+	private void sendTemplateList(Player player, int page, BypassParser parser)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(player, "data/html/admin/instances_list.htm");
@@ -287,7 +287,7 @@ public final class AdminInstance implements IAdminCommandHandler
 		player.sendPacket(html);
 	}
 	
-	private void processBypass(L2PcInstance player, BypassParser parser)
+	private void processBypass(Player player, BypassParser parser)
 	{
 		final int page = parser.getInt("page", 0);
 		final int templateId = parser.getInt("id", 0);

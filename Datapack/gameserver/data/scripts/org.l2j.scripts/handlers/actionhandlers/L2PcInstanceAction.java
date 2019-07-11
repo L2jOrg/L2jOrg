@@ -23,38 +23,38 @@ import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
 public class L2PcInstanceAction implements IActionHandler
 {
 	/**
-	 * Manage actions when a player click on this L2PcInstance.<BR>
+	 * Manage actions when a player click on this Player.<BR>
 	 * <BR>
-	 * <B><U> Actions on first click on the L2PcInstance (Select it)</U> :</B><BR>
+	 * <B><U> Actions on first click on the Player (Select it)</U> :</B><BR>
 	 * <BR>
 	 * <li>Set the target of the player</li>
 	 * <li>Send a Server->Client packet MyTargetSelected to the player (display the select window)</li><BR>
 	 * <BR>
-	 * <B><U> Actions on second click on the L2PcInstance (Follow it/Attack it/Intercat with it)</U> :</B><BR>
+	 * <B><U> Actions on second click on the Player (Follow it/Attack it/Intercat with it)</U> :</B><BR>
 	 * <BR>
 	 * <li>Send a Server->Client packet MyTargetSelected to the player (display the select window)</li>
-	 * <li>If target L2PcInstance has a Private Store, notify the player AI with AI_INTENTION_INTERACT</li>
-	 * <li>If target L2PcInstance is autoAttackable, notify the player AI with AI_INTENTION_ATTACK</li> <BR>
+	 * <li>If target Player has a Private Store, notify the player AI with AI_INTENTION_INTERACT</li>
+	 * <li>If target Player is autoAttackable, notify the player AI with AI_INTENTION_ATTACK</li> <BR>
 	 * <BR>
-	 * <li>If target L2PcInstance is NOT autoAttackable, notify the player AI with AI_INTENTION_FOLLOW</li><BR>
+	 * <li>If target Player is NOT autoAttackable, notify the player AI with AI_INTENTION_FOLLOW</li><BR>
 	 * <BR>
 	 * <B><U> Example of use </U> :</B><BR>
 	 * <BR>
 	 * <li>Client packet : Action, AttackRequest</li><BR>
 	 * <BR>
-	 * @param activeChar The player that start an action on target L2PcInstance
+	 * @param activeChar The player that start an action on target Player
 	 */
 	@Override
-	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
+	public boolean action(Player activeChar, L2Object target, boolean interact)
 	{
-		// Check if the L2PcInstance is confused
+		// Check if the Player is confused
 		if (activeChar.isControlBlocked())
 		{
 			return false;
@@ -67,7 +67,7 @@ public class L2PcInstanceAction implements IActionHandler
 			return false;
 		}
 		
-		// Check if the activeChar already target this L2PcInstance
+		// Check if the activeChar already target this Player
 		if (activeChar.getTarget() != target)
 		{
 			// Set the target of the activeChar
@@ -75,19 +75,19 @@ public class L2PcInstanceAction implements IActionHandler
 		}
 		else if (interact)
 		{
-			// Check if this L2PcInstance has a Private Store
-			if (((L2PcInstance) target).getPrivateStoreType() != PrivateStoreType.NONE)
+			// Check if this Player has a Private Store
+			if (((Player) target).getPrivateStoreType() != PrivateStoreType.NONE)
 			{
 				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 			}
 			else
 			{
-				// Check if this L2PcInstance is autoAttackable
+				// Check if this Player is autoAttackable
 				if (target.isAutoAttackable(activeChar))
 				{
 					// activeChar with lvl < 21 can't attack a cursed weapon holder
 					// And a cursed weapon holder can't attack activeChars with lvl < 21
-					if ((((L2PcInstance) target).isCursedWeaponEquipped() && (activeChar.getLevel() < 21)) || (activeChar.isCursedWeaponEquipped() && (((L2Character) target).getLevel() < 21)))
+					if ((((Player) target).isCursedWeaponEquipped() && (activeChar.getLevel() < 21)) || (activeChar.isCursedWeaponEquipped() && (((L2Character) target).getLevel() < 21)))
 					{
 						activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 					}

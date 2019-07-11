@@ -44,7 +44,7 @@ public class L2NpcInstance extends L2Npc {
      * @param npc     the last folk.
      * @param classId player's active class id.
      */
-    public static void showSkillList(L2PcInstance player, L2Npc npc, ClassId classId) {
+    public static void showSkillList(Player player, L2Npc npc, ClassId classId) {
         // Normal skills, No LearnedByFS, no AutoGet skills.
         final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableSkills(player, classId, false, false);
         if (skills.isEmpty()) {

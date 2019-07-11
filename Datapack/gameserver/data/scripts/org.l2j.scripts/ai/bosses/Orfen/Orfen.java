@@ -32,7 +32,7 @@ import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
@@ -174,7 +174,7 @@ public final class Orfen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		if (event.equalsIgnoreCase("orfen_unlock"))
 		{
@@ -238,7 +238,7 @@ public final class Orfen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(L2Npc npc, Player caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if (npc.getId() == ORFEN)
 		{
@@ -255,7 +255,7 @@ public final class Orfen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isSummon)
+	public String onFactionCall(L2Npc npc, L2Npc caller, Player attacker, boolean isSummon)
 	{
 		if ((caller == null) || (npc == null) || npc.isCastingNow(SkillCaster::isAnyNormalType))
 		{
@@ -286,7 +286,7 @@ public final class Orfen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(L2Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final int npcId = npc.getId();
 		if (npcId == ORFEN)
@@ -316,7 +316,7 @@ public final class Orfen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(L2Npc npc, Player killer, boolean isSummon)
 	{
 		if (npc.getId() == ORFEN)
 		{

@@ -32,7 +32,7 @@ public final class L2ObservationInstance extends L2Npc {
     }
 
     @Override
-    public void showChatWindow(L2PcInstance player, int val) {
+    public void showChatWindow(Player player, int val) {
         String filename = null;
 
         if (isInsideRadius2D(-79884, 86529, 0, 50) || isInsideRadius2D(-78858, 111358, 0, 50) || isInsideRadius2D(-76973, 87136, 0, 50) || isInsideRadius2D(-75850, 111968, 0, 50)) {

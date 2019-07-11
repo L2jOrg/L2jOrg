@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.quest;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.enums.QuestType;
 import org.l2j.gameserver.instancemanager.QuestManager;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerQuestComplete;
 import org.l2j.gameserver.network.serverpackets.ExShowQuestMark;
@@ -32,7 +32,7 @@ public final class QuestState {
     /**
      * The "owner" of this QuestState object
      */
-    private final L2PcInstance _player;
+    private final Player _player;
 
     /**
      * The current state of the quest
@@ -61,7 +61,7 @@ public final class QuestState {
      * @param player the owner of this {@link QuestState} object
      * @param state  the initial state of the quest
      */
-    public QuestState(Quest quest, L2PcInstance player, byte state) {
+    public QuestState(Quest quest, Player player, byte state) {
         _questName = quest.getName();
         _player = player;
         _state = state;
@@ -84,9 +84,9 @@ public final class QuestState {
     }
 
     /**
-     * @return the {@link L2PcInstance} object of the owner of this QuestState
+     * @return the {@link Player} object of the owner of this QuestState
      */
-    public L2PcInstance getPlayer() {
+    public Player getPlayer() {
         return _player;
     }
 

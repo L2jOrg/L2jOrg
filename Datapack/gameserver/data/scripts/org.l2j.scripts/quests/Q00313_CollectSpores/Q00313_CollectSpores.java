@@ -18,7 +18,7 @@ package quests.Q00313_CollectSpores;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
@@ -50,7 +50,7 @@ public final class Q00313_CollectSpores extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, false);
 		if (st == null)
@@ -79,7 +79,7 @@ public final class Q00313_CollectSpores extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(L2Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState st = getQuestState(killer, false);
 		if ((st != null) && st.isCond(1) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, false))
@@ -93,7 +93,7 @@ public final class Q00313_CollectSpores extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

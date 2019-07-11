@@ -22,7 +22,7 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Castle.CastleFunction;
@@ -53,7 +53,7 @@ public class RegenMPFinalizer implements IStatsFunction {
         baseValue *= creature.isRaid() ? Config.RAID_MP_REGEN_MULTIPLIER : Config.MP_REGEN_MULTIPLIER;
 
         if (creature.isPlayer()) {
-            final L2PcInstance player = creature.getActingPlayer();
+            final Player player = creature.getActingPlayer();
 
             if (player.isInsideZone(ZoneId.CLAN_HALL) && (player.getClan() != null) && (player.getClan().getHideoutId() > 0)) {
                 final L2ClanHallZone zone = ZoneManager.getInstance().getZone(player, L2ClanHallZone.class);

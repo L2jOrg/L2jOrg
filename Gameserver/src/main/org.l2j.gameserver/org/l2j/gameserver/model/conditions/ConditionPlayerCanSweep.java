@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.conditions;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -34,7 +34,7 @@ public class ConditionPlayerCanSweep extends Condition {
     public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item) {
         final AtomicBoolean canSweep = new AtomicBoolean(false);
         if (effector.getActingPlayer() != null) {
-            final L2PcInstance sweeper = effector.getActingPlayer();
+            final Player sweeper = effector.getActingPlayer();
             if (skill != null) {
                 skill.forEachTargetAffected(sweeper, effected, o ->
                 {

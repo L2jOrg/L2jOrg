@@ -5,7 +5,7 @@ import org.l2j.gameserver.data.elemental.ElementalSpiritManager;
 import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.enums.UserInfoType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
@@ -49,7 +49,7 @@ public class ExElementalSpiritExtract extends ClientPacket {
         client.sendPacket(new ElementalSpiritExtract(type, canExtract));
     }
 
-    private boolean checkConditions(L2PcInstance player, ElementalSpirit spirit) {
+    private boolean checkConditions(Player player, ElementalSpirit spirit) {
         var noMeetConditions = false;
 
         if(noMeetConditions = spirit.getExtractAmount() < 1) {

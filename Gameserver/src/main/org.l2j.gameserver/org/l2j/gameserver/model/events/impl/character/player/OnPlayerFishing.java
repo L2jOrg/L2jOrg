@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.network.serverpackets.fishing.ExFishingEnd;
@@ -25,15 +25,15 @@ import org.l2j.gameserver.network.serverpackets.fishing.ExFishingEnd;
  * @author UnAfraid
  */
 public class OnPlayerFishing implements IBaseEvent {
-    private final L2PcInstance _player;
+    private final Player _player;
     private final ExFishingEnd.FishingEndReason _reason;
 
-    public OnPlayerFishing(L2PcInstance player, ExFishingEnd.FishingEndReason reason) {
+    public OnPlayerFishing(Player player, ExFishingEnd.FishingEndReason reason) {
         _player = player;
         _reason = reason;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _player;
     }
 

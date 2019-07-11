@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
@@ -116,7 +116,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
         }
 
         setState(CeremonyOfChaosState.REGISTRATION);
-        for (L2PcInstance player : L2World.getInstance().getPlayers()) {
+        for (Player player : L2World.getInstance().getPlayers()) {
             if (player.isOnline()) {
                 player.sendPacket(SystemMessageId.REGISTRATION_FOR_THE_CEREMONY_OF_CHAOS_HAS_BEGUN);
                 if (canRegister(player, false)) {
@@ -133,7 +133,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
         }
 
         setState(CeremonyOfChaosState.PREPARING_FOR_TELEPORT);
-        for (L2PcInstance player : L2World.getInstance().getPlayers()) {
+        for (Player player : L2World.getInstance().getPlayers()) {
             if (player.isOnline()) {
                 player.sendPacket(SystemMessageId.REGISTRATION_FOR_THE_CEREMONY_OF_CHAOS_HAS_ENDED);
                 if (!isRegistered(player)) {
@@ -155,11 +155,11 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
         int eventId = 0;
         int position = 1;
         CeremonyOfChaosEvent event = null;
-        final List<L2PcInstance> players = getRegisteredPlayers().stream().sorted(Comparator.comparingInt(L2PcInstance::getLevel)).collect(Collectors.toList());
+        final List<Player> players = getRegisteredPlayers().stream().sorted(Comparator.comparingInt(Player::getLevel)).collect(Collectors.toList());
         final int maxPlayers = getMaxPlayersInArena();
         final List<Integer> templates = getVariables().getList(INSTANCE_TEMPLATES_KEY, Integer.class);
 
-        for (L2PcInstance player : players) {
+        for (Player player : players) {
             if (player.isOnline() && canRegister(player, true)) {
                 if ((event == null) || (event.getMembers().size() >= maxPlayers)) {
                     final int template = templates.get(Rnd.get(templates.size()));
@@ -204,7 +204,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
     }
 
     @Override
-    public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player) {
+    public void onTimerEvent(String event, StatsSet params, L2Npc npc, Player player) {
         switch (event) {
             case "count_down": {
                 final int time = params.getInt("time", 0);
@@ -230,7 +230,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
     }
 
     @Override
-    public boolean canRegister(L2PcInstance player, boolean sendMessage) {
+    public boolean canRegister(Player player, boolean sendMessage) {
         boolean canRegister = true;
 
         final L2Clan clan = player.getClan();
@@ -299,7 +299,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
     @RegisterEvent(EventType.ON_PLAYER_BYPASS)
     @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
     public TerminateReturn OnPlayerBypass(OnPlayerBypass event) {
-        final L2PcInstance player = event.getActiveChar();
+        final Player player = event.getActiveChar();
         if (player == null) {
             return null;
         }
@@ -319,7 +319,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
     @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
     public void OnPlayerLogin(OnPlayerLogin event) {
         if (getState() == CeremonyOfChaosState.REGISTRATION) {
-            final L2PcInstance player = event.getActiveChar();
+            final Player player = event.getActiveChar();
             if (canRegister(player, false)) {
                 player.sendPacket(ExCuriousHouseState.REGISTRATION_PACKET);
             }
@@ -332,7 +332,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
     @RegisterType(ListenerRegisterType.GLOBAL)
     public void OnPlayerLogout(OnPlayerLogout event) {
         if (getState() == CeremonyOfChaosState.REGISTRATION) {
-            final L2PcInstance player = event.getActiveChar();
+            final Player player = event.getActiveChar();
             getRegisteredPlayers().remove(player);
         }
     }

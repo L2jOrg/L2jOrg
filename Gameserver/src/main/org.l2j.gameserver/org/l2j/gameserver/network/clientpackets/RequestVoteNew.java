@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -17,13 +17,13 @@ public final class RequestVoteNew extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
 
         final L2Object object = activeChar.getTarget();
-        if (!(object instanceof L2PcInstance)) {
+        if (!(object instanceof Player)) {
             if (object == null) {
                 client.sendPacket(SystemMessageId.SELECT_TARGET);
             } else {
@@ -32,7 +32,7 @@ public final class RequestVoteNew extends ClientPacket {
             return;
         }
 
-        final L2PcInstance target = (L2PcInstance) object;
+        final Player target = (Player) object;
 
         if (target.getObjectId() != _targetId) {
             return;

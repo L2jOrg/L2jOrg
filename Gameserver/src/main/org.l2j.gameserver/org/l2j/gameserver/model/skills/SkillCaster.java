@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureSkillFinishCast;
@@ -196,7 +196,7 @@ public class SkillCaster implements Runnable {
             // Launch the magic skill and calculate its effects
             skill.activateSkill(caster, item, targets.toArray(new L2Object[0]));
 
-            final L2PcInstance player = caster.getActingPlayer();
+            final Player player = caster.getActingPlayer();
             if (player != null) {
                 for (L2Object obj : targets) {
                     if (!obj.isCharacter()) {
@@ -402,7 +402,7 @@ public class SkillCaster implements Runnable {
         }
 
         if (caster.isPlayer()) {
-            final L2PcInstance player = caster.getActingPlayer();
+            final Player player = caster.getActingPlayer();
             if (player.inObserverMode()) {
                 return false;
             }
@@ -588,7 +588,7 @@ public class SkillCaster implements Runnable {
         }
 
         if (caster.isPlayer()) {
-            final L2PcInstance player = caster.getActingPlayer();
+            final Player player = caster.getActingPlayer();
 
             // Consume fame points.
             if (_skill.getFamePointConsume() > 0) {
@@ -777,7 +777,7 @@ public class SkillCaster implements Runnable {
 
         // If there is a queued skill, launch it and wipe the queue.
         if (caster.isPlayer()) {
-            final L2PcInstance currPlayer = caster.getActingPlayer();
+            final Player currPlayer = caster.getActingPlayer();
             final SkillUseHolder queuedSkill = currPlayer.getQueuedSkill();
 
             if (queuedSkill != null) {

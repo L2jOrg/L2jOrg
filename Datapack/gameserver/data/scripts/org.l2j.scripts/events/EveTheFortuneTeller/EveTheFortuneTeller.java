@@ -19,7 +19,7 @@ package events.EveTheFortuneTeller;
 import events.ScriptEvent;
 import org.l2j.gameserver.enums.LuckyGameType;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.LongTimeEvent;
 import org.l2j.gameserver.network.serverpackets.luckygame.ExStartLuckyGame;
 
@@ -45,7 +45,7 @@ public final class EveTheFortuneTeller extends LongTimeEvent implements ScriptEv
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -71,7 +71,7 @@ public final class EveTheFortuneTeller extends LongTimeEvent implements ScriptEv
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		return "31855.htm";
 	}

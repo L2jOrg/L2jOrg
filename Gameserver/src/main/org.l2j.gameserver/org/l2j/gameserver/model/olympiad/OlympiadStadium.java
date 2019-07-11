@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.model.zone.type.L2OlympiadStadiumZone;
@@ -73,9 +73,9 @@ public class OlympiadStadium {
         _buffers.stream().map(L2Spawn::getLastSpawn).filter(Objects::nonNull).forEach(L2Npc::deleteMe);
     }
 
-    public final void broadcastStatusUpdate(L2PcInstance player) {
+    public final void broadcastStatusUpdate(Player player) {
         final ExOlympiadUserInfo packet = new ExOlympiadUserInfo(player);
-        for (L2PcInstance target : _instance.getPlayers()) {
+        for (Player target : _instance.getPlayers()) {
             if (target.inObserverMode() || (target.getOlympiadSide() != player.getOlympiadSide())) {
                 target.sendPacket(packet);
             }
@@ -87,7 +87,7 @@ public class OlympiadStadium {
     }
 
     public final void broadcastPacketToObservers(ServerPacket packet) {
-        for (L2PcInstance target : _instance.getPlayers()) {
+        for (Player target : _instance.getPlayers()) {
             if (target.inObserverMode()) {
                 target.sendPacket(packet);
             }
@@ -107,7 +107,7 @@ public class OlympiadStadium {
             sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
         }
 
-        for (L2PcInstance player : _instance.getPlayers()) {
+        for (Player player : _instance.getPlayers()) {
             if (player.inObserverMode()) {
                 return;
             }
@@ -128,7 +128,7 @@ public class OlympiadStadium {
             return;
         }
 
-        for (L2PcInstance player : _instance.getPlayers()) {
+        for (Player player : _instance.getPlayers()) {
             if (!player.inObserverMode()) {
                 return;
             }

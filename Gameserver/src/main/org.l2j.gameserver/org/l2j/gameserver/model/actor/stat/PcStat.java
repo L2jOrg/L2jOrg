@@ -7,7 +7,7 @@ import org.l2j.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
@@ -40,13 +40,13 @@ public class PcStat extends PlayableStat {
     private boolean _cloakSlot = false;
     private int _vitalityPoints = 0;
 
-    public PcStat(L2PcInstance activeChar) {
+    public PcStat(Player activeChar) {
         super(activeChar);
     }
 
     @Override
     public boolean addExp(long value) {
-        final L2PcInstance activeChar = getActiveChar();
+        final Player activeChar = getActiveChar();
 
         // Allowed to gain exp?
         if (!activeChar.getAccessLevel().canGainExp()) {
@@ -71,7 +71,7 @@ public class PcStat extends PlayableStat {
     }
 
     public void addExpAndSp(double addToExp, double addToSp, boolean useBonuses) {
-        final L2PcInstance activeChar = getActiveChar();
+        final Player activeChar = getActiveChar();
 
         // Allowed to gain exp/sp?
         if (!activeChar.getAccessLevel().canGainExp()) {
@@ -161,7 +161,7 @@ public class PcStat extends PlayableStat {
         }
 
         if (sendMessage) {
-            // Send a Server->Client System Message to the L2PcInstance
+            // Send a Server->Client System Message to the Player
             SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_XP_HAS_DECREASED_BY_S1);
             sm.addLong(addToExp);
             getActiveChar().sendPacket(sm);
@@ -222,11 +222,11 @@ public class PcStat extends PlayableStat {
         }
 
         getActiveChar().broadcastStatusUpdate();
-        // Update the overloaded status of the L2PcInstance
+        // Update the overloaded status of the Player
         getActiveChar().refreshOverloaded(true);
-        // Update the expertise status of the L2PcInstance
+        // Update the expertise status of the Player
         getActiveChar().refreshExpertisePenalty();
-        // Send a Server->Client packet UserInfo to the L2PcInstance
+        // Send a Server->Client packet UserInfo to the Player
         getActiveChar().sendPacket(new UserInfo(getActiveChar()));
         // Send acquirable skill list
         getActiveChar().sendPacket(new AcquireSkillList(getActiveChar()));
@@ -254,8 +254,8 @@ public class PcStat extends PlayableStat {
     }
 
     @Override
-    public final L2PcInstance getActiveChar() {
-        return (L2PcInstance) super.getActiveChar();
+    public final Player getActiveChar() {
+        return (Player) super.getActiveChar();
     }
 
     @Override
@@ -412,7 +412,7 @@ public class PcStat extends PlayableStat {
             getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_IS_AT_MAXIMUM);
         }
 
-        final L2PcInstance player = getActiveChar();
+        final Player player = getActiveChar();
         player.sendPacket(new ExVitalityPointInfo(getVitalityPoints()));
         player.broadcastUserInfo(UserInfoType.VITA_FAME);
         final L2Party party = player.getParty();
@@ -574,7 +574,7 @@ public class PcStat extends PlayableStat {
     protected void onRecalculateStats(boolean broadcast) {
         super.onRecalculateStats(broadcast);
 
-        final L2PcInstance player = getActiveChar();
+        final Player player = getActiveChar();
         if (player.hasAbnormalType(AbnormalType.ABILITY_CHANGE) && player.hasServitors()) {
             player.getServitors().values().forEach(servitor -> servitor.getStat().recalculateStats(broadcast));
         }

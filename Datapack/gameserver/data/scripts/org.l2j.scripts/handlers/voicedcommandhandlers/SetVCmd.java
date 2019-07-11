@@ -18,7 +18,7 @@ package handlers.voicedcommandhandlers;
 
 import org.l2j.gameserver.handler.IVoicedCommandHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.GameUtils;
 
 /**
@@ -34,7 +34,7 @@ public class SetVCmd implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
+	public boolean useVoicedCommand(String command, Player activeChar, String params)
 	{
 		if (command.equals("set"))
 		{
@@ -44,7 +44,7 @@ public class SetVCmd implements IVoicedCommandHandler
 				return false;
 			}
 			
-			final L2PcInstance player = activeChar.getTarget().getActingPlayer();
+			final Player player = activeChar.getTarget().getActingPlayer();
 			if ((activeChar.getClan() == null) || (player.getClan() == null) || (activeChar.getClan().getId() != player.getClan().getId()))
 			{
 				return false;

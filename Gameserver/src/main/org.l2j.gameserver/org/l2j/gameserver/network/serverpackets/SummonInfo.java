@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.enums.NpcInfoType;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.L2GameClient;
@@ -16,7 +16,7 @@ import java.util.Set;
  */
 public class SummonInfo extends AbstractMaskPacket<NpcInfoType> {
     private final L2Summon _summon;
-    private final L2PcInstance _attacker;
+    private final Player _attacker;
     private final int _val;
     private final byte[] _masks = new byte[]
             {
@@ -37,7 +37,7 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType> {
     private int _clanId = 0;
     private int _statusMask = 0;
 
-    public SummonInfo(L2Summon summon, L2PcInstance attacker, int val) {
+    public SummonInfo(L2Summon summon, Player attacker, int val) {
         _summon = summon;
         _attacker = attacker;
         _title = (summon.getOwner() != null) && summon.getOwner().isOnline() ? summon.getOwner().getName() : "";

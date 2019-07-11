@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.friend;
 
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -13,11 +13,11 @@ import java.util.Calendar;
  */
 public class ExFriendDetailInfo extends ServerPacket {
     private final int _objectId;
-    private final L2PcInstance _friend;
+    private final Player _friend;
     private final String _name;
     private final int _lastAccess;
 
-    public ExFriendDetailInfo(L2PcInstance player, String name) {
+    public ExFriendDetailInfo(Player player, String name) {
         _objectId = player.getObjectId();
         _name = name;
         _friend = L2World.getInstance().getPlayer(_name);

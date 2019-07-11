@@ -2,15 +2,15 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.instancemanager.SellBuffsManager;
 import org.l2j.gameserver.model.TradeItem;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class PrivateStoreListSell extends AbstractItemPacket {
-    private final L2PcInstance _player;
-    private final L2PcInstance _seller;
+    private final Player _player;
+    private final Player _seller;
 
-    public PrivateStoreListSell(L2PcInstance player, L2PcInstance seller) {
+    public PrivateStoreListSell(Player player, Player seller) {
         _player = player;
         _seller = seller;
     }

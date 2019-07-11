@@ -16,20 +16,20 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
  * @author xban1x
  */
 public final class DamageDoneInfo {
-    private final L2PcInstance _attacker;
+    private final Player _attacker;
     private long _damage = 0;
 
-    public DamageDoneInfo(L2PcInstance attacker) {
+    public DamageDoneInfo(Player attacker) {
         _attacker = attacker;
     }
 
-    public L2PcInstance getAttacker() {
+    public Player getAttacker() {
         return _attacker;
     }
 

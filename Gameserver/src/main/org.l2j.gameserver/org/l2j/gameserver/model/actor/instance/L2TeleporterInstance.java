@@ -49,7 +49,7 @@ public final class L2TeleporterInstance extends L2Npc {
     }
 
     @Override
-    public void onBypassFeedback(L2PcInstance player, String command) {
+    public void onBypassFeedback(Player player, String command) {
         // Process bypass
         final StringTokenizer st = new StringTokenizer(command, " ");
         switch (st.nextToken()) {
@@ -127,7 +127,7 @@ public final class L2TeleporterInstance extends L2Npc {
     }
 
     @Override
-    public void showChatWindow(L2PcInstance player) {
+    public void showChatWindow(Player player) {
         // Teleporter isn't on castle ground
         if (CastleManager.getInstance().getCastle(this) == null) {
             super.showChatWindow(player);
@@ -146,7 +146,7 @@ public final class L2TeleporterInstance extends L2Npc {
         sendHtmlMessage(player, filename);
     }
 
-    private void sendHtmlMessage(L2PcInstance player, String filename) {
+    private void sendHtmlMessage(Player player, String filename) {
         final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
         html.setFile(player, filename);
         html.replace("%objectId%", String.valueOf(getObjectId()));

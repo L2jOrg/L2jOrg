@@ -5,7 +5,7 @@ import org.l2j.gameserver.InstanceListManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.slf4j.Logger;
@@ -129,7 +129,7 @@ public final class CastleManager implements InstanceListManager {
         if (member == null) {
             return;
         }
-        final L2PcInstance player = member.getPlayerInstance();
+        final Player player = member.getPlayerInstance();
         final int circletId = getCircletByCastleId(castleId);
 
         if (circletId != 0) {

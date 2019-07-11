@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.enums;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
  * @author Sdw
@@ -24,16 +24,16 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 public enum SkillConditionAlignment {
     LAWFUL {
         @Override
-        public boolean test(L2PcInstance player) {
+        public boolean test(Player player) {
             return player.getReputation() >= 0;
         }
     },
     CHAOTIC {
         @Override
-        public boolean test(L2PcInstance player) {
+        public boolean test(Player player) {
             return player.getReputation() < 0;
         }
     };
 
-    public abstract boolean test(L2PcInstance player);
+    public abstract boolean test(Player player);
 }

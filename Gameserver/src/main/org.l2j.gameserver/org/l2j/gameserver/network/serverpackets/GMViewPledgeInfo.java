@@ -2,15 +2,15 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class GMViewPledgeInfo extends ServerPacket {
     private final L2Clan _clan;
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
 
-    public GMViewPledgeInfo(L2Clan clan, L2PcInstance activeChar) {
+    public GMViewPledgeInfo(L2Clan clan, Player activeChar) {
         _clan = clan;
         _activeChar = activeChar;
     }

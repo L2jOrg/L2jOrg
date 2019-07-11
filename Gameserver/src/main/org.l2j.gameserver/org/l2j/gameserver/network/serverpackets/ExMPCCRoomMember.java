@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.MatchingMemberType;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.matching.CommandChannelMatchingRoom;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -14,7 +14,7 @@ public class ExMPCCRoomMember extends ServerPacket {
     private final CommandChannelMatchingRoom _room;
     private final MatchingMemberType _type;
 
-    public ExMPCCRoomMember(L2PcInstance player, CommandChannelMatchingRoom room) {
+    public ExMPCCRoomMember(Player player, CommandChannelMatchingRoom room) {
         _room = room;
         _type = room.getMemberType(player);
     }
@@ -25,7 +25,7 @@ public class ExMPCCRoomMember extends ServerPacket {
 
         writeInt(_type.ordinal());
         writeInt(_room.getMembersCount());
-        for (L2PcInstance member : _room.getMembers()) {
+        for (Player member : _room.getMembers()) {
             writeInt(member.getObjectId());
             writeString(member.getName());
             writeInt(member.getLevel());

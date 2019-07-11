@@ -17,27 +17,27 @@
 package org.l2j.gameserver.model.events.impl.character.npc;
 
 import org.l2j.gameserver.model.actor.L2Attackable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
 /**
- * An instantly executed event when L2Attackable is killed by L2PcInstance.
+ * An instantly executed event when L2Attackable is killed by Player.
  *
  * @author UnAfraid
  */
 public class OnAttackableKill implements IBaseEvent {
-    private final L2PcInstance _attacker;
+    private final Player _attacker;
     private final L2Attackable _target;
     private final boolean _isSummon;
 
-    public OnAttackableKill(L2PcInstance attacker, L2Attackable target, boolean isSummon) {
+    public OnAttackableKill(Player attacker, L2Attackable target, boolean isSummon) {
         _attacker = attacker;
         _target = target;
         _isSummon = isSummon;
     }
 
-    public final L2PcInstance getAttacker() {
+    public final Player getAttacker() {
         return _attacker;
     }
 

@@ -18,7 +18,7 @@ package handlers.voicedcommandhandlers;
 
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IVoicedCommandHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.slf4j.Logger;
@@ -40,7 +40,7 @@ public class ChangePassword implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String target)
+	public boolean useVoicedCommand(String command, Player activeChar, String target)
 	{
 		if (target != null)
 		{

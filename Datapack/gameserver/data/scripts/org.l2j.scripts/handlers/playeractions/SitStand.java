@@ -23,7 +23,7 @@ import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2StaticObjectInstance;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.network.serverpackets.ChairSit;
@@ -35,7 +35,7 @@ import org.l2j.gameserver.network.serverpackets.ChairSit;
 public final class SitStand implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		if (activeChar.isSitting() || !activeChar.isMoving() || activeChar.isFakeDeath())
 		{
@@ -58,7 +58,7 @@ public final class SitStand implements IPlayerActionHandler
 	 * @param target the target to sit, throne, bench or chair
 	 * @return {@code true} if the player can sit, {@code false} otherwise
 	 */
-	private boolean useSit(L2PcInstance activeChar, L2Object target)
+	private boolean useSit(Player activeChar, L2Object target)
 	{
 		if (activeChar.getMountType() != MountType.NONE)
 		{

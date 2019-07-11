@@ -19,7 +19,7 @@ package handlers.playeractions;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
 /**
@@ -29,7 +29,7 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 public final class TacticalSignUse implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		if ((!activeChar.isInParty() || (activeChar.getTarget() == null) || !activeChar.getTarget().isCharacter()))
 		{

@@ -7,7 +7,7 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.L2AccessLevel;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.Mail;
@@ -83,7 +83,7 @@ public final class RequestSendPost extends ClientPacket {
             return;
         }
 
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
@@ -211,7 +211,7 @@ public final class RequestSendPost extends ClientPacket {
         }
     }
 
-    private boolean removeItems(L2PcInstance player, Message msg) {
+    private boolean removeItems(Player player, Message msg) {
         long currentAdena = player.getAdena();
         long fee = MESSAGE_FEE;
 

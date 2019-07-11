@@ -34,7 +34,7 @@ public class L2FriendlyMobInstance extends L2Attackable {
     @Override
     public boolean isAutoAttackable(L2Character attacker) {
         if (attacker.isPlayer()) {
-            return ((L2PcInstance) attacker).getReputation() < 0;
+            return ((Player) attacker).getReputation() < 0;
         }
 
         return super.isAutoAttackable(attacker);

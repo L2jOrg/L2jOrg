@@ -18,7 +18,7 @@ package ai.others;
 
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Playable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 
 import ai.AbstractNpcAI;
@@ -53,7 +53,7 @@ public class FairyTrees extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(L2Npc npc, Player killer, boolean isSummon)
 	{
 		if (npc.calculateDistance3D(killer) <= MIN_DISTANCE)
 		{

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -24,17 +24,17 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnPlayerPvPChanged implements IBaseEvent {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final int _oldPoints;
     private final int _newPoints;
 
-    public OnPlayerPvPChanged(L2PcInstance activeChar, int oldPoints, int newPoints) {
+    public OnPlayerPvPChanged(Player activeChar, int oldPoints, int newPoints) {
         _activeChar = activeChar;
         _oldPoints = oldPoints;
         _newPoints = newPoints;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _activeChar;
     }
 

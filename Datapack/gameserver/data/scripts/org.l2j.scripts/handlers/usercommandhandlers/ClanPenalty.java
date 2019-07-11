@@ -19,7 +19,7 @@ package handlers.usercommandhandlers;
 import java.text.SimpleDateFormat;
 
 import org.l2j.gameserver.handler.IUserCommandHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -34,7 +34,7 @@ public class ClanPenalty implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, Player activeChar)
 	{
 		if (id != COMMAND_IDS[0])
 		{

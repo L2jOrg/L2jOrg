@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -44,7 +44,7 @@ public class OpSweeperSkillCondition implements ISkillCondition
 		final AtomicBoolean canSweep = new AtomicBoolean(false);
 		if (caster.getActingPlayer() != null)
 		{
-			final L2PcInstance sweeper = caster.getActingPlayer();
+			final Player sweeper = caster.getActingPlayer();
 			if (skill != null)
 			{
 				skill.forEachTargetAffected(sweeper, target, o ->

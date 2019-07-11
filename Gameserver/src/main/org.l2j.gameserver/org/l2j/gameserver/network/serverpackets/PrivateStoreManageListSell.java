@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.TradeItem;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -15,7 +15,7 @@ public class PrivateStoreManageListSell extends AbstractItemPacket {
     private final Collection<TradeItem> _itemList;
     private final TradeItem[] _sellList;
 
-    public PrivateStoreManageListSell(int sendType, L2PcInstance player, boolean isPackageSale) {
+    public PrivateStoreManageListSell(int sendType, Player player, boolean isPackageSale) {
         _sendType = sendType;
         _objId = player.getObjectId();
         _playerAdena = player.getAdena();

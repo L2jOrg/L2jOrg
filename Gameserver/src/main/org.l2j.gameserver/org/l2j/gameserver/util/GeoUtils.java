@@ -18,7 +18,7 @@ package org.l2j.gameserver.util;
 
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.geoengine.geodata.GeoStructure;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ExServerPrimitive;
 
 import java.awt.*;
@@ -27,7 +27,7 @@ import java.awt.*;
  * @author HorridoJoho
  */
 public final class GeoUtils {
-    public static void debug2DLine(L2PcInstance player, int x, int y, int tx, int ty, int z) {
+    public static void debug2DLine(Player player, int x, int y, int tx, int ty, int z) {
         final int gx = GeoEngine.getGeoX(x);
         final int gy = GeoEngine.getGeoY(y);
 
@@ -48,7 +48,7 @@ public final class GeoUtils {
         player.sendPacket(prim);
     }
 
-    public static void debug3DLine(L2PcInstance player, int x, int y, int z, int tx, int ty, int tz) {
+    public static void debug3DLine(Player player, int x, int y, int z, int tx, int ty, int tz) {
         final int gx = GeoEngine.getGeoX(x);
         final int gy = GeoEngine.getGeoY(y);
 
@@ -92,7 +92,7 @@ public final class GeoUtils {
         return Color.RED;
     }
 
-    public static void debugGrid(L2PcInstance player) {
+    public static void debugGrid(Player player) {
         final int geoRadius = 20;
         final int blocksPerPacket = 40;
 

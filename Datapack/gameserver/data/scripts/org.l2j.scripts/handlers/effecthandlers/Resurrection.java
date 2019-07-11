@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -56,7 +56,7 @@ public final class Resurrection extends AbstractEffect
 	{
 		if (effector.isPlayer())
 		{
-			final L2PcInstance player = effected.getActingPlayer();
+			final Player player = effected.getActingPlayer();
 			if (!player.isResurrectionBlocked() && !player.isReviveRequested())
 			{
 				effected.getActingPlayer().reviveRequest(effector.getActingPlayer(), skill, effected.isPet(), _power);

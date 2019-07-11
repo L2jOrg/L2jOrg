@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.xml.impl.SkillData;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -24,8 +24,8 @@ public final class RequestMagicSkillUse extends ClientPacket {
 
     @Override
     public void runImpl() {
-        // Get the current L2PcInstance of the player
-        final L2PcInstance activeChar = client.getActiveChar();
+        // Get the current Player of the player
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }

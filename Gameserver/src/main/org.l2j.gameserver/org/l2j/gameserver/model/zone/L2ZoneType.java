@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureZoneEnter;
@@ -179,7 +179,7 @@ public abstract class L2ZoneType extends ListenersContainer {
         if (character.isPlayer()) {
             // Check class type
             if (_classType != 0) {
-                if (((L2PcInstance) character).isMageClass()) {
+                if (((Player) character).isMageClass()) {
                     if (_classType == 1) {
                         return false;
                     }
@@ -209,7 +209,7 @@ public abstract class L2ZoneType extends ListenersContainer {
                 boolean ok = false;
 
                 for (int _clas : _class) {
-                    if (((L2PcInstance) character).getClassId().ordinal() == _clas) {
+                    if (((Player) character).getClassId().ordinal() == _clas) {
                         ok = true;
                         break;
                     }
@@ -403,10 +403,10 @@ public abstract class L2ZoneType extends ListenersContainer {
     public void onReviveInside(L2Character character) {
     }
 
-    public void onPlayerLoginInside(L2PcInstance player) {
+    public void onPlayerLoginInside(Player player) {
     }
 
-    public void onPlayerLogoutInside(L2PcInstance player) {
+    public void onPlayerLogoutInside(Player player) {
     }
 
     public Map<Integer, L2Character> getCharacters() {
@@ -417,8 +417,8 @@ public abstract class L2ZoneType extends ListenersContainer {
         return _characterList.values();
     }
 
-    public List<L2PcInstance> getPlayersInside() {
-        final List<L2PcInstance> players = new ArrayList<>();
+    public List<Player> getPlayersInside() {
+        final List<Player> players = new ArrayList<>();
         for (L2Character ch : _characterList.values()) {
             if ((ch != null) && ch.isPlayer()) {
                 players.add(ch.getActingPlayer());
@@ -505,7 +505,7 @@ public abstract class L2ZoneType extends ListenersContainer {
                 .filter(Objects::nonNull)
                 .filter(L2Object::isPlayer)
                 .map(L2Object::getActingPlayer)
-                .filter(L2PcInstance::isOnline)
+                .filter(Player::isOnline)
                 .forEach(player -> player.teleToLocation(TeleportWhereType.TOWN));
         //@formatter:off
     }
@@ -520,7 +520,7 @@ public abstract class L2ZoneType extends ListenersContainer {
 
         for (L2Character character : _characterList.values()) {
             if ((character != null) && character.isPlayer()) {
-                final L2PcInstance player = character.getActingPlayer();
+                final Player player = character.getActingPlayer();
                 if (player.isOnline()) {
                     player.teleToLocation(loc);
                 }

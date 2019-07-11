@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.actor.status;
 
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureHpChange;
 import org.l2j.gameserver.model.skills.AbnormalType;
@@ -38,7 +38,7 @@ public class CharStatus {
     /**
      * Add the object to the list of L2Character that must be informed of HP/MP updates of this L2Character.<br>
      * <B><U>Concept</U>:</B><br>
-     * Each L2Character owns a list called <B>_statusListener</B> that contains all L2PcInstance to inform of HP/MP updates.<br>
+     * Each L2Character owns a list called <B>_statusListener</B> that contains all Player to inform of HP/MP updates.<br>
      * Players who must be informed are players that target this L2Character.<br>
      * When a RegenTask is in progress sever just need to go through this list to send Server->Client packet StatusUpdate.<br>
      * <B><U>Example of use</U>:</B>
@@ -59,7 +59,7 @@ public class CharStatus {
     /**
      * Remove the object from the list of L2Character that must be informed of HP/MP updates of this L2Character.<br>
      * <B><U>Concept</U>:</B><br>
-     * Each L2Character owns a list called <B>_statusListener</B> that contains all L2PcInstance to inform of HP/MP updates.<br>
+     * Each L2Character owns a list called <B>_statusListener</B> that contains all Player to inform of HP/MP updates.<br>
      * Players who must be informed are players that target this L2Character.<br>
      * When a RegenTask is in progress sever just need to go through this list to send Server->Client packet StatusUpdate.<br>
      * <B><U>Example of use </U>:</B>
@@ -76,7 +76,7 @@ public class CharStatus {
     /**
      * Return the list of L2Character that must be informed of HP/MP updates of this L2Character.<br>
      * <B><U>Concept</U>:</B><br>
-     * Each L2Character owns a list called <B>_statusListener</B> that contains all L2PcInstance to inform of HP/MP updates.<br>
+     * Each L2Character owns a list called <B>_statusListener</B> that contains all Player to inform of HP/MP updates.<br>
      * Players who must be informed are players that target this L2Character.<br>
      * When a RegenTask is in progress sever just need to go through this list to send Server->Client packet StatusUpdate.
      *
@@ -119,7 +119,7 @@ public class CharStatus {
         }
 
         if (attacker != null) {
-            final L2PcInstance attackerPlayer = attacker.getActingPlayer();
+            final Player attackerPlayer = attacker.getActingPlayer();
             if ((attackerPlayer != null) && attackerPlayer.isGM() && !attackerPlayer.getAccessLevel().canGiveDamage()) {
                 return;
             }
@@ -247,7 +247,7 @@ public class CharStatus {
 
         final boolean hpWasChanged = oldHp != _currentHp;
 
-        // Send the Server->Client packet StatusUpdate with current HP and MP to all other L2PcInstance to inform
+        // Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
         if (hpWasChanged) {
             if (broadcastPacket) {
                 _activeChar.broadcastStatusUpdate();
@@ -312,7 +312,7 @@ public class CharStatus {
 
         final boolean mpWasChanged = currentMp != _currentMp;
 
-        // Send the Server->Client packet StatusUpdate with current HP and MP to all other L2PcInstance to inform
+        // Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
         if (mpWasChanged && broadcastPacket) {
             _activeChar.broadcastStatusUpdate();
         }

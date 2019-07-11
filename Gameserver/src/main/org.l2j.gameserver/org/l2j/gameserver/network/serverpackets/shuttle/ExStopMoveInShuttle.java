@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.shuttle;
 
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -15,7 +15,7 @@ public class ExStopMoveInShuttle extends ServerPacket {
     private final Location _pos;
     private final int _heading;
 
-    public ExStopMoveInShuttle(L2PcInstance player, int boatId) {
+    public ExStopMoveInShuttle(Player player, int boatId) {
         _charObjId = player.getObjectId();
         _boatId = boatId;
         _pos = player.getInVehiclePosition();

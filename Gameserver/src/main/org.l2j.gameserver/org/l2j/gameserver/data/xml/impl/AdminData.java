@@ -3,7 +3,7 @@ package org.l2j.gameserver.data.xml.impl;
 import org.l2j.gameserver.model.L2AccessLevel;
 import org.l2j.gameserver.model.L2AdminCommandAccessRight;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -34,7 +34,7 @@ public final class AdminData extends GameXmlReader {
 
     private final Map<Integer, L2AccessLevel> _accessLevels = new HashMap<>();
     private final Map<String, L2AdminCommandAccessRight> _adminCommandAccessRights = new HashMap<>();
-    private final Map<L2PcInstance, Boolean> _gmList = new ConcurrentHashMap<>();
+    private final Map<Player, Boolean> _gmList = new ConcurrentHashMap<>();
     private int _highestLevel = 0;
 
     private AdminData() {
@@ -168,9 +168,9 @@ public final class AdminData extends GameXmlReader {
      * @param includeHidden the include hidden
      * @return the all GMs
      */
-    public List<L2PcInstance> getAllGms(boolean includeHidden) {
-        final List<L2PcInstance> tmpGmList = new ArrayList<>();
-        for (Entry<L2PcInstance, Boolean> entry : _gmList.entrySet()) {
+    public List<Player> getAllGms(boolean includeHidden) {
+        final List<Player> tmpGmList = new ArrayList<>();
+        for (Entry<Player, Boolean> entry : _gmList.entrySet()) {
             if (includeHidden || !entry.getValue()) {
                 tmpGmList.add(entry.getKey());
             }
@@ -186,7 +186,7 @@ public final class AdminData extends GameXmlReader {
      */
     public List<String> getAllGmNames(boolean includeHidden) {
         final List<String> tmpGmList = new ArrayList<>();
-        for (Entry<L2PcInstance, Boolean> entry : _gmList.entrySet()) {
+        for (Entry<Player, Boolean> entry : _gmList.entrySet()) {
             if (!entry.getValue()) {
                 tmpGmList.add(entry.getKey().getName());
             } else if (includeHidden) {
@@ -197,12 +197,12 @@ public final class AdminData extends GameXmlReader {
     }
 
     /**
-     * Add a L2PcInstance player to the Set _gmList.
+     * Add a Player player to the Set _gmList.
      *
      * @param player the player
      * @param hidden the hidden
      */
-    public void addGm(L2PcInstance player, boolean hidden) {
+    public void addGm(Player player, boolean hidden) {
         _gmList.put(player, hidden);
     }
 
@@ -211,7 +211,7 @@ public final class AdminData extends GameXmlReader {
      *
      * @param player the player
      */
-    public void deleteGm(L2PcInstance player) {
+    public void deleteGm(Player player) {
         _gmList.remove(player);
     }
 
@@ -220,7 +220,7 @@ public final class AdminData extends GameXmlReader {
      *
      * @param player the player
      */
-    public void showGm(L2PcInstance player) {
+    public void showGm(Player player) {
         _gmList.putIfAbsent(player, false);
     }
 
@@ -229,7 +229,7 @@ public final class AdminData extends GameXmlReader {
      *
      * @param player the player
      */
-    public void hideGm(L2PcInstance player) {
+    public void hideGm(Player player) {
         _gmList.putIfAbsent(player, true);
     }
 
@@ -240,7 +240,7 @@ public final class AdminData extends GameXmlReader {
      * @return true, if is GM online
      */
     public boolean isGmOnline(boolean includeHidden) {
-        for (Entry<L2PcInstance, Boolean> entry : _gmList.entrySet()) {
+        for (Entry<Player, Boolean> entry : _gmList.entrySet()) {
             if (includeHidden || !entry.getValue()) {
                 return true;
             }
@@ -253,7 +253,7 @@ public final class AdminData extends GameXmlReader {
      *
      * @param player the player
      */
-    public void sendListToPlayer(L2PcInstance player) {
+    public void sendListToPlayer(Player player) {
         if (isGmOnline(player.isGM())) {
             player.sendPacket(SystemMessageId.GM_LIST);
 
@@ -273,7 +273,7 @@ public final class AdminData extends GameXmlReader {
      * @param packet the packet
      */
     public void broadcastToGMs(ServerPacket packet) {
-        for (L2PcInstance gm : getAllGms(true)) {
+        for (Player gm : getAllGms(true)) {
             gm.sendPacket(packet);
         }
     }
@@ -285,7 +285,7 @@ public final class AdminData extends GameXmlReader {
      * @return the message that was broadcasted
      */
     public String broadcastMessageToGMs(String message) {
-        for (L2PcInstance gm : getAllGms(true)) {
+        for (Player gm : getAllGms(true)) {
             gm.sendMessage(message);
         }
         return message;

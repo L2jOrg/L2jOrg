@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.xml.impl.EnchantItemData;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.model.items.enchant.EnchantScroll;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -23,7 +23,7 @@ public class RequestExAddEnchantScrollItem extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
@@ -42,8 +42,8 @@ public class RequestExAddEnchantScrollItem extends ClientPacket {
             // message may be custom
             activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
             activeChar.sendPacket(new ExPutEnchantScrollItemResult(0));
-            request.setEnchantingItem(L2PcInstance.ID_NONE);
-            request.setEnchantingScroll(L2PcInstance.ID_NONE);
+            request.setEnchantingItem(Player.ID_NONE);
+            request.setEnchantingScroll(Player.ID_NONE);
             return;
         }
 
@@ -52,7 +52,7 @@ public class RequestExAddEnchantScrollItem extends ClientPacket {
             // message may be custom
             activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
             activeChar.sendPacket(new ExPutEnchantScrollItemResult(0));
-            request.setEnchantingScroll(L2PcInstance.ID_NONE);
+            request.setEnchantingScroll(Player.ID_NONE);
             return;
         }
 

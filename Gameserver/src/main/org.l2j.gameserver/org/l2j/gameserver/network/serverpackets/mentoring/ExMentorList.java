@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets.mentoring;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.L2Mentee;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -18,7 +18,7 @@ public class ExMentorList extends ServerPacket {
     private final int _type;
     private final Collection<L2Mentee> _mentees;
 
-    public ExMentorList(L2PcInstance activeChar) {
+    public ExMentorList(Player activeChar) {
         if (activeChar.isMentor()) {
             _type = 0x01;
             _mentees = MentorManager.getInstance().getMentees(activeChar.getObjectId());

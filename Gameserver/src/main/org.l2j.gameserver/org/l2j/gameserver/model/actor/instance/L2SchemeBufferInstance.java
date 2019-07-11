@@ -83,7 +83,7 @@ public class L2SchemeBufferInstance extends L2Npc {
     }
 
     @Override
-    public void onBypassFeedback(L2PcInstance player, String command) {
+    public void onBypassFeedback(Player player, String command) {
         StringTokenizer st = new StringTokenizer(command, " ");
         String currentCommand = st.nextToken();
 
@@ -229,7 +229,7 @@ public class L2SchemeBufferInstance extends L2Npc {
      *
      * @param player : The player to make checks on.
      */
-    private void showGiveBuffsWindow(L2PcInstance player) {
+    private void showGiveBuffsWindow(Player player) {
         final StringBuilder sb = new StringBuilder(200);
 
         final Map<String, ArrayList<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
@@ -262,7 +262,7 @@ public class L2SchemeBufferInstance extends L2Npc {
      * @param schemeName : The scheme to make check.
      * @param page       The page.
      */
-    private void showEditSchemeWindow(L2PcInstance player, String groupType, String schemeName, int page) {
+    private void showEditSchemeWindow(Player player, String groupType, String schemeName, int page) {
         final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
         final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
 
@@ -282,7 +282,7 @@ public class L2SchemeBufferInstance extends L2Npc {
      * @param page       The page.
      * @return a String representing skills available to selection for a given groupType.
      */
-    private String getGroupSkillList(L2PcInstance player, String groupType, String schemeName, int page) {
+    private String getGroupSkillList(Player player, String groupType, String schemeName, int page) {
         // Retrieve the entire skills list based on group type.
         List<Integer> skills = SchemeBufferTable.getInstance().getSkillsIdsByType(groupType);
         if (skills.isEmpty()) {

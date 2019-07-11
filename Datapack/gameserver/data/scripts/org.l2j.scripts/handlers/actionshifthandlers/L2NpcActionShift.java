@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
@@ -41,12 +41,12 @@ import java.util.Set;
 public class L2NpcActionShift implements IActionShiftHandler
 {
 	@Override
-	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
+	public boolean action(Player activeChar, L2Object target, boolean interact)
 	{
-		// Check if the L2PcInstance is a GM
+		// Check if the Player is a GM
 		if (activeChar.isGM())
 		{
-			// Set the target of the L2PcInstance activeChar
+			// Set the target of the Player activeChar
 			activeChar.setTarget(target);
 			
 			final L2Npc npc = (L2Npc) target;

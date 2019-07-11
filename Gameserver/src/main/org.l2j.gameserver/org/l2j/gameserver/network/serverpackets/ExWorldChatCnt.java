@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -11,11 +11,11 @@ import org.l2j.gameserver.network.ServerPacketId;
 public class ExWorldChatCnt extends ServerPacket {
     private final int worldChatCount;
 
-    public ExWorldChatCnt(L2PcInstance activeChar) {
+    public ExWorldChatCnt(Player activeChar) {
         worldChatCount = canUseWorldChat(activeChar) ? Math.max(activeChar.getWorldChatPoints() - activeChar.getWorldChatUsed(), 0) : 0;
     }
 
-    private boolean canUseWorldChat(L2PcInstance activeChar) {
+    private boolean canUseWorldChat(Player activeChar) {
         return activeChar.getLevel() >= Config.WORLD_CHAT_MIN_LEVEL || activeChar.getVipTier() > 0;
     }
 

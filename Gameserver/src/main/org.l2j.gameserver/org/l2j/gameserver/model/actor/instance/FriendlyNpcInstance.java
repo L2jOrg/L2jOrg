@@ -90,19 +90,19 @@ public class FriendlyNpcInstance extends L2Attackable {
     }
 
     @Override
-    public void onAction(L2PcInstance player, boolean interact) {
+    public void onAction(Player player, boolean interact) {
         if (!canTarget(player)) {
             return;
         }
 
-        // Check if the L2PcInstance already target the L2GuardInstance
+        // Check if the Player already target the L2GuardInstance
         if (getObjectId() != player.getTargetId()) {
-            // Set the target of the L2PcInstance player
+            // Set the target of the Player player
             player.setTarget(this);
         } else if (interact) {
-            // Calculate the distance between the L2PcInstance and the L2NpcInstance
+            // Calculate the distance between the Player and the L2NpcInstance
             if (!canInteract(player)) {
-                // Set the L2PcInstance Intention to AI_INTENTION_INTERACT
+                // Set the Player Intention to AI_INTENTION_INTERACT
                 player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
             } else {
                 player.setLastFolkNPC(this);
@@ -119,7 +119,7 @@ public class FriendlyNpcInstance extends L2Attackable {
                 }
             }
         }
-        // Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
+        // Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
         player.sendPacket(ActionFailed.STATIC_PACKET);
     }
 

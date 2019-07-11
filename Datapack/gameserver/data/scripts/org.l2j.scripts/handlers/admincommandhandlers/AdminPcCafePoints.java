@@ -20,7 +20,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ExPCCafePointInfo;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -40,7 +40,7 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
@@ -51,7 +51,7 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 			{
 				final String action = st.nextToken();
 				
-				final L2PcInstance target = getTarget(activeChar);
+				final Player target = getTarget(activeChar);
 				if ((target == null) || !st.hasMoreTokens())
 				{
 					return false;
@@ -144,7 +144,7 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 						}
 						else if (range > 0)
 						{
-							final int count = increaseForAll(L2World.getInstance().getVisibleObjectsInRange(activeChar, L2PcInstance.class, range), value);
+							final int count = increaseForAll(L2World.getInstance().getVisibleObjectsInRange(activeChar, Player.class, range), value);
 							BuilderUtil.sendSysMessage(activeChar, "You increased PC Cafe point(s) of all players (" + count + ") in range " + range + " by " + value + ".");
 						}
 						break;
@@ -156,10 +156,10 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 		return true;
 	}
 	
-	private int increaseForAll(Collection<L2PcInstance> playerList, int value)
+	private int increaseForAll(Collection<Player> playerList, int value)
 	{
 		int counter = 0;
-		for (L2PcInstance temp : playerList)
+		for (Player temp : playerList)
 		{
 			if ((temp != null) && (temp.isOnlineInt() == 1))
 			{
@@ -182,15 +182,15 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 		return counter;
 	}
 	
-	private L2PcInstance getTarget(L2PcInstance activeChar)
+	private Player getTarget(Player activeChar)
 	{
 		return ((activeChar.getTarget() != null) && (activeChar.getTarget().getActingPlayer() != null)) ? activeChar.getTarget().getActingPlayer() : activeChar;
 	}
 	
-	private void showMenuHtml(L2PcInstance activeChar)
+	private void showMenuHtml(Player activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-		final L2PcInstance target = getTarget(activeChar);
+		final Player target = getTarget(activeChar);
 		final int points = target.getPcCafePoints();
 		html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/pccafe.htm"));
 		html.replace("%points%", GameUtils.formatAdena(points));

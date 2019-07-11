@@ -22,7 +22,7 @@ import org.l2j.gameserver.ai.L2ControllableMobAI;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2ControllableMobInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 
 import java.util.Set;
@@ -136,11 +136,11 @@ public final class MobGroup {
         }
     }
 
-    public void spawnGroup(L2PcInstance activeChar) {
+    public void spawnGroup(Player activeChar) {
         spawnGroup(activeChar.getX(), activeChar.getY(), activeChar.getZ());
     }
 
-    public void teleportGroup(L2PcInstance player) {
+    public void teleportGroup(Player player) {
         removeDead();
 
         for (L2ControllableMobInstance mobInst : getMobs()) {
@@ -196,7 +196,7 @@ public final class MobGroup {
         getMobs().clear();
     }
 
-    public void killGroup(L2PcInstance activeChar) {
+    public void killGroup(Player activeChar) {
         removeDead();
 
         for (L2ControllableMobInstance mobInst : getMobs()) {

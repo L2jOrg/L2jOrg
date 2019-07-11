@@ -17,26 +17,26 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * This class manages requests (transactions) between two L2PcInstance.
+ * This class manages requests (transactions) between two Player.
  *
  * @author kriau
  */
 public class L2Request {
     private static final int REQUEST_TIMEOUT = 15; // in secs
 
-    protected L2PcInstance _player;
-    protected L2PcInstance _partner;
+    protected Player _player;
+    protected Player _partner;
     protected boolean _isRequestor;
     protected boolean _isAnswerer;
     protected ClientPacket _requestPacket;
 
-    public L2Request(L2PcInstance player) {
+    public L2Request(Player player) {
         _player = player;
     }
 
@@ -48,18 +48,18 @@ public class L2Request {
     }
 
     /**
-     * @return the L2PcInstance member of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).
+     * @return the Player member of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).
      */
-    public L2PcInstance getPartner() {
+    public Player getPartner() {
         return _partner;
     }
 
     /**
-     * Set the L2PcInstance member of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).
+     * Set the Player member of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).
      *
      * @param partner
      */
-    private synchronized void setPartner(L2PcInstance partner) {
+    private synchronized void setPartner(Player partner) {
         _partner = partner;
     }
 
@@ -88,7 +88,7 @@ public class L2Request {
      * @param packet
      * @return
      */
-    public synchronized boolean setRequest(L2PcInstance partner, ClientPacket packet) {
+    public synchronized boolean setRequest(Player partner, ClientPacket packet) {
         if (partner == null) {
             _player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
             return false;

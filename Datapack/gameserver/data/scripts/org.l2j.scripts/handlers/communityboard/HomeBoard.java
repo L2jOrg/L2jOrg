@@ -15,7 +15,7 @@ import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -60,7 +60,7 @@ public final class HomeBoard implements IParseBoardHandler {
 		Config.COMMUNITYBOARD_ENABLE_HEAL ? "_bbsheal" : null
 	};
 	
-	private static final BiPredicate<String, L2PcInstance> COMBAT_CHECK = (command, activeChar) -> {
+	private static final BiPredicate<String, Player> COMBAT_CHECK = (command, activeChar) -> {
 		boolean commandCheck = false;
 		for (String c : CUSTOM_COMMANDS)
 		{
@@ -74,7 +74,7 @@ public final class HomeBoard implements IParseBoardHandler {
 		return commandCheck && (activeChar.isCastingNow() || activeChar.isInCombat() || activeChar.isInDuel() || activeChar.isInOlympiadMode() || activeChar.isInsideZone(ZoneId.SIEGE) || activeChar.isInsideZone(ZoneId.PVP));
 	};
 	
-	private static final Predicate<L2PcInstance> KARMA_CHECK = player -> Config.COMMUNITYBOARD_KARMA_DISABLED && (player.getReputation() < 0);
+	private static final Predicate<Player> KARMA_CHECK = player -> Config.COMMUNITYBOARD_KARMA_DISABLED && (player.getReputation() < 0);
 	
 	@Override
 	public String[] getCommunityBoardCommands()
@@ -86,7 +86,7 @@ public final class HomeBoard implements IParseBoardHandler {
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, L2PcInstance activeChar)
+	public boolean parseCommunityBoardCommand(String command, Player activeChar)
 	{
 		// Old custom conditions check move to here
 		if (COMBAT_CHECK.test(command, activeChar))
@@ -270,7 +270,7 @@ public final class HomeBoard implements IParseBoardHandler {
 	 * @param player the player
 	 * @return the favorite links count
 	 */
-	private static int getFavoriteCount(L2PcInstance player)
+	private static int getFavoriteCount(Player player)
 	{
 		int count = 0;
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -297,7 +297,7 @@ public final class HomeBoard implements IParseBoardHandler {
 	 * @param player the player
 	 * @return the registered regions count
 	 */
-	private static int getRegionCount(L2PcInstance player)
+	private static int getRegionCount(Player player)
 	{
 		return 0; // TODO: Implement.
 	}

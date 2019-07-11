@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.annotations.RegisterEvent;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureDeath;
@@ -111,10 +111,10 @@ public class TvT extends Event implements ScriptEvent
 	private static final int PARTY_MEMBER_COUNT = 7;
 	private static final ItemHolder REWARD = new ItemHolder(57, 100000); // Adena
 	// Misc
-	private static final Map<L2PcInstance, Integer> PLAYER_SCORES = new ConcurrentHashMap<>();
-	private static final List<L2PcInstance> PLAYER_LIST = new ArrayList<>();
-	private static final List<L2PcInstance> BLUE_TEAM = new ArrayList<>();
-	private static final List<L2PcInstance> RED_TEAM = new ArrayList<>();
+	private static final Map<Player, Integer> PLAYER_SCORES = new ConcurrentHashMap<>();
+	private static final List<Player> PLAYER_LIST = new ArrayList<>();
+	private static final List<Player> BLUE_TEAM = new ArrayList<>();
+	private static final List<Player> RED_TEAM = new ArrayList<>();
 	private static volatile int BLUE_SCORE;
 	private static volatile int RED_SCORE;
 	private static Instance PVP_WORLD = null;
@@ -130,7 +130,7 @@ public class TvT extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		if (!EVENT_ACTIVE)
 		{
@@ -199,7 +199,7 @@ public class TvT extends Event implements ScriptEvent
 			case "TeleportToArena":
 			{
 				// Remove offline players.
-				for (L2PcInstance participant : PLAYER_LIST)
+				for (Player participant : PLAYER_LIST)
 				{
 					if ((participant == null) || (participant.isOnlineInt() != 1))
 					{
@@ -211,7 +211,7 @@ public class TvT extends Event implements ScriptEvent
 				if (PLAYER_LIST.size() < MINIMUM_PARTICIPANT_COUNT)
 				{
 					Broadcast.toAllOnlinePlayers("TvT Event: Event was canceled, not enough participants.");
-					for (L2PcInstance participant : PLAYER_LIST)
+					for (Player participant : PLAYER_LIST)
 					{
 						removeListeners(participant);
 						participant.setOnCustomEvent(false);
@@ -226,7 +226,7 @@ public class TvT extends Event implements ScriptEvent
 				// Randomize player list and separate teams.
 				Collections.shuffle(PLAYER_LIST);
 				boolean team = getRandomBoolean(); // If teams are not even, randomize where extra player goes.
-				for (L2PcInstance participant : PLAYER_LIST)
+				for (Player participant : PLAYER_LIST)
 				{
 					if (team)
 					{
@@ -254,7 +254,7 @@ public class TvT extends Event implements ScriptEvent
 					L2CommandChannel blueCC = null;
 					L2Party lastBlueParty = null;
 					int blueParticipantCounter = 0;
-					for (L2PcInstance participant : BLUE_TEAM)
+					for (Player participant : BLUE_TEAM)
 					{
 						blueParticipantCounter++;
 						if (blueParticipantCounter == 1)
@@ -289,7 +289,7 @@ public class TvT extends Event implements ScriptEvent
 					L2CommandChannel redCC = null;
 					L2Party lastRedParty = null;
 					int redParticipantCounter = 0;
-					for (L2PcInstance participant : RED_TEAM)
+					for (Player participant : RED_TEAM)
 					{
 						redParticipantCounter++;
 						if (redParticipantCounter == 1)
@@ -362,7 +362,7 @@ public class TvT extends Event implements ScriptEvent
 				closeDoor(BLUE_DOOR_ID, PVP_WORLD.getId());
 				closeDoor(RED_DOOR_ID, PVP_WORLD.getId());
 				// Disable players.
-				for (L2PcInstance participant : PLAYER_LIST)
+				for (Player participant : PLAYER_LIST)
 				{
 					participant.setIsInvul(true);
 					participant.setIsImmobilized(true);
@@ -375,7 +375,7 @@ public class TvT extends Event implements ScriptEvent
 					}
 				}
 				// Make sure noone is dead.
-				for (L2PcInstance participant : PLAYER_LIST)
+				for (Player participant : PLAYER_LIST)
 				{
 					if (participant.isDead())
 					{
@@ -387,7 +387,7 @@ public class TvT extends Event implements ScriptEvent
 				{
 					final Skill skill = CommonSkill.FIREWORK.getSkill();
 					broadcastScreenMessageWithEffect("Team Blue won the event!", 7);
-					for (L2PcInstance participant : BLUE_TEAM)
+					for (Player participant : BLUE_TEAM)
 					{
 						if ((participant != null) && (participant.getInstanceWorld() == PVP_WORLD))
 						{
@@ -402,7 +402,7 @@ public class TvT extends Event implements ScriptEvent
 				{
 					final Skill skill = CommonSkill.FIREWORK.getSkill();
 					broadcastScreenMessageWithEffect("Team Red won the event!", 7);
-					for (L2PcInstance participant : RED_TEAM)
+					for (Player participant : RED_TEAM)
 					{
 						if ((participant != null) && (participant.getInstanceWorld() == PVP_WORLD))
 						{
@@ -416,7 +416,7 @@ public class TvT extends Event implements ScriptEvent
 				else
 				{
 					broadcastScreenMessageWithEffect("The event ended with a tie!", 7);
-					for (L2PcInstance participant : PLAYER_LIST)
+					for (Player participant : PLAYER_LIST)
 					{
 						participant.broadcastSocialAction(13);
 					}
@@ -433,7 +433,7 @@ public class TvT extends Event implements ScriptEvent
 			case "TeleportOut":
 			{
 				// Remove event listeners.
-				for (L2PcInstance participant : PLAYER_LIST)
+				for (Player participant : PLAYER_LIST)
 				{
 					removeListeners(participant);
 					participant.setTeam(Team.NONE);
@@ -447,7 +447,7 @@ public class TvT extends Event implements ScriptEvent
 					PVP_WORLD = null;
 				}
 				// Enable players.
-				for (L2PcInstance participant : PLAYER_LIST)
+				for (Player participant : PLAYER_LIST)
 				{
 					participant.setIsInvul(false);
 					participant.setIsImmobilized(false);
@@ -539,7 +539,7 @@ public class TvT extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		// Event not active.
 		if (!EVENT_ACTIVE)
@@ -593,7 +593,7 @@ public class TvT extends Event implements ScriptEvent
 	{
 		if (character.isPlayer() && character.getActingPlayer().isOnCustomEvent())
 		{
-			final L2PcInstance player = character.getActingPlayer();
+			final Player player = character.getActingPlayer();
 			cancelQuestTimer("KickPlayer" + character.getObjectId(), null, player);
 			cancelQuestTimer("KickPlayerWarning" + character.getObjectId(), null, player);
 			// Removed invulnerability shield.
@@ -605,7 +605,7 @@ public class TvT extends Event implements ScriptEvent
 		return super.onExitZone(character, zone);
 	}
 	
-	private boolean canRegister(L2PcInstance player)
+	private boolean canRegister(Player player)
 	{
 		if (PLAYER_LIST.contains(player))
 		{
@@ -687,7 +687,7 @@ public class TvT extends Event implements ScriptEvent
 		return true;
 	}
 	
-	private void sendScreenMessage(L2PcInstance player, String message, int duration)
+	private void sendScreenMessage(Player player, String message, int duration)
 	{
 		player.sendPacket(new ExShowScreenMessage(message, ExShowScreenMessage.TOP_CENTER, duration * 1000, 0, true, false));
 	}
@@ -707,17 +707,17 @@ public class TvT extends Event implements ScriptEvent
 		PVP_WORLD.broadcastPacket(new ExShowScreenMessage("Blue: " + BLUE_SCORE + " - Red: " + RED_SCORE, ExShowScreenMessage.BOTTOM_RIGHT, 15000, 0, true, false));
 	}
 	
-	private void addLogoutListener(L2PcInstance player)
+	private void addLogoutListener(Player player)
 	{
 		player.addListener(new ConsumerEventListener(player, EventType.ON_PLAYER_LOGOUT, (OnPlayerLogout event) -> OnPlayerLogout(event), this));
 	}
 	
-	private void addDeathListener(L2PcInstance player)
+	private void addDeathListener(Player player)
 	{
 		player.addListener(new ConsumerEventListener(player, EventType.ON_CREATURE_DEATH, (OnCreatureDeath event) -> onPlayerDeath(event), this));
 	}
 	
-	private void removeListeners(L2PcInstance player)
+	private void removeListeners(Player player)
 	{
 		for (AbstractEventListener listener : player.getListeners(EventType.ON_PLAYER_LOGOUT))
 		{
@@ -735,7 +735,7 @@ public class TvT extends Event implements ScriptEvent
 		}
 	}
 	
-	private void resetActivityTimers(L2PcInstance player)
+	private void resetActivityTimers(Player player)
 	{
 		cancelQuestTimer("KickPlayer" + player.getObjectId(), null, player);
 		cancelQuestTimer("KickPlayerWarning" + player.getObjectId(), null, player);
@@ -763,7 +763,7 @@ public class TvT extends Event implements ScriptEvent
 	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
 	private void OnPlayerLogout(OnPlayerLogout event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final Player player = event.getActiveChar();
 		// Remove player from lists.
 		PLAYER_LIST.remove(player);
 		PLAYER_SCORES.remove(player);
@@ -782,8 +782,8 @@ public class TvT extends Event implements ScriptEvent
 	{
 		if (event.getTarget().isPlayer())
 		{
-			final L2PcInstance killedPlayer = event.getTarget().getActingPlayer();
-			final L2PcInstance killer = event.getAttacker().getActingPlayer();
+			final Player killedPlayer = event.getTarget().getActingPlayer();
+			final Player killer = event.getAttacker().getActingPlayer();
 			// Confirm Blue team kill.
 			if ((killer.getTeam() == Team.BLUE) && (killedPlayer.getTeam() == Team.RED))
 			{
@@ -806,7 +806,7 @@ public class TvT extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public boolean eventStart(L2PcInstance eventMaker)
+	public boolean eventStart(Player eventMaker)
 	{
 		if (EVENT_ACTIVE)
 		{
@@ -856,7 +856,7 @@ public class TvT extends Event implements ScriptEvent
 			}
 		}
 		// Remove participants.
-		for (L2PcInstance participant : PLAYER_LIST)
+		for (Player participant : PLAYER_LIST)
 		{
 			removeListeners(participant);
 			participant.setTeam(Team.NONE);
@@ -873,7 +873,7 @@ public class TvT extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public boolean eventBypass(L2PcInstance activeChar, String bypass)
+	public boolean eventBypass(Player activeChar, String bypass)
 	{
 		return false;
 	}

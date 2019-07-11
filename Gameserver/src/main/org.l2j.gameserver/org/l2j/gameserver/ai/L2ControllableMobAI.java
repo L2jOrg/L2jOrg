@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Playable;
 import org.l2j.gameserver.model.actor.instance.L2ControllableMobInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.util.GameUtils;
 
@@ -337,7 +337,7 @@ public final class L2ControllableMobAI extends L2AttackableAI {
         }
 
         // Spawn protection (only against mobs)
-        if (target.isPlayer() && ((L2PcInstance) target).isSpawnProtected()) {
+        if (target.isPlayer() && ((Player) target).isSpawnProtected()) {
             return false;
         }
 

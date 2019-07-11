@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.instancemanager.HandysBlockCheckerManager;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.BlockCheckerEngine;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -31,8 +31,8 @@ import java.util.List;
  */
 public final class ArenaParticipantsHolder {
     private final int _arena;
-    private final List<L2PcInstance> _redPlayers;
-    private final List<L2PcInstance> _bluePlayers;
+    private final List<Player> _redPlayers;
+    private final List<Player> _bluePlayers;
     private final BlockCheckerEngine _engine;
 
     public ArenaParticipantsHolder(int arena) {
@@ -42,22 +42,22 @@ public final class ArenaParticipantsHolder {
         _engine = new BlockCheckerEngine(this, _arena);
     }
 
-    public List<L2PcInstance> getRedPlayers() {
+    public List<Player> getRedPlayers() {
         return _redPlayers;
     }
 
-    public List<L2PcInstance> getBluePlayers() {
+    public List<Player> getBluePlayers() {
         return _bluePlayers;
     }
 
-    public List<L2PcInstance> getAllPlayers() {
-        final List<L2PcInstance> all = new ArrayList<>(12);
+    public List<Player> getAllPlayers() {
+        final List<Player> all = new ArrayList<>(12);
         all.addAll(_redPlayers);
         all.addAll(_bluePlayers);
         return all;
     }
 
-    public void addPlayer(L2PcInstance player, int team) {
+    public void addPlayer(Player player, int team) {
         if (team == 0) {
             _redPlayers.add(player);
         } else {
@@ -65,7 +65,7 @@ public final class ArenaParticipantsHolder {
         }
     }
 
-    public void removePlayer(L2PcInstance player, int team) {
+    public void removePlayer(Player player, int team) {
         if (team == 0) {
             _redPlayers.remove(player);
         } else {
@@ -73,7 +73,7 @@ public final class ArenaParticipantsHolder {
         }
     }
 
-    public int getPlayerTeam(L2PcInstance player) {
+    public int getPlayerTeam(Player player) {
         if (_redPlayers.contains(player)) {
             return 0;
         } else if (_bluePlayers.contains(player)) {
@@ -92,10 +92,10 @@ public final class ArenaParticipantsHolder {
     }
 
     public void broadCastPacketToTeam(ServerPacket packet) {
-        for (L2PcInstance p : _redPlayers) {
+        for (Player p : _redPlayers) {
             p.sendPacket(packet);
         }
-        for (L2PcInstance p : _bluePlayers) {
+        for (Player p : _bluePlayers) {
             p.sendPacket(packet);
         }
     }
@@ -120,7 +120,7 @@ public final class ArenaParticipantsHolder {
             broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.TEAM_MEMBERS_WERE_MODIFIED_BECAUSE_THE_TEAMS_WERE_UNBALANCED));
             final int needed = redSize - (blueSize + 1);
             for (int i = 0; i < (needed + 1); i++) {
-                final L2PcInstance plr = _redPlayers.get(i);
+                final Player plr = _redPlayers.get(i);
                 if (plr == null) {
                     continue;
                 }
@@ -130,7 +130,7 @@ public final class ArenaParticipantsHolder {
             broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.TEAM_MEMBERS_WERE_MODIFIED_BECAUSE_THE_TEAMS_WERE_UNBALANCED));
             final int needed = blueSize - (redSize + 1);
             for (int i = 0; i < (needed + 1); i++) {
-                final L2PcInstance plr = _bluePlayers.get(i);
+                final Player plr = _bluePlayers.get(i);
                 if (plr == null) {
                     continue;
                 }

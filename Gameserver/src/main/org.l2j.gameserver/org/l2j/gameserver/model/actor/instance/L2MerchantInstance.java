@@ -57,11 +57,11 @@ public class L2MerchantInstance extends L2NpcInstance {
         return "data/html/merchant/" + pom + ".htm";
     }
 
-    public final void showBuyWindow(L2PcInstance player, int val) {
+    public final void showBuyWindow(Player player, int val) {
         showBuyWindow(player, val, true);
     }
 
-    public final void showBuyWindow(L2PcInstance player, int val, boolean applyCastleTax) {
+    public final void showBuyWindow(Player player, int val, boolean applyCastleTax) {
         final ProductList buyList = BuyListData.getInstance().getBuyList(val);
         if (buyList == null) {
             L2Character.LOGGER.warn("BuyList not found! BuyListId:" + val);

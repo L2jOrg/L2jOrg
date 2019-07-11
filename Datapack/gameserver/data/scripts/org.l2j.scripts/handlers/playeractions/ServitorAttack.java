@@ -18,7 +18,7 @@ package handlers.playeractions;
 
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 
 /**
@@ -28,7 +28,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 public final class ServitorAttack implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		if (activeChar.hasServitors())
 		{

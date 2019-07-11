@@ -124,7 +124,7 @@ public final class CursedWeaponsManager extends GameXmlReader {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              Statement s = con.createStatement();
              ResultSet rs = s.executeQuery("SELECT itemId, charId, playerReputation, playerPkKills, nbKills, endTime FROM cursed_weapons")) {
-            // Retrieve the L2PcInstance from the characters table of the database
+            // Retrieve the Player from the characters table of the database
             CursedWeapon cw;
             while (rs.next()) {
                 cw = _cursedWeapons.get(rs.getInt("itemId"));
@@ -191,7 +191,7 @@ public final class CursedWeaponsManager extends GameXmlReader {
         }
     }
 
-    public synchronized void checkDrop(L2Attackable attackable, L2PcInstance player) {
+    public synchronized void checkDrop(L2Attackable attackable, Player player) {
         if ((attackable instanceof L2DefenderInstance) || (attackable instanceof L2GuardInstance) || (attackable instanceof L2GrandBossInstance) || (attackable instanceof L2FeedableBeastInstance) || (attackable instanceof L2FortCommanderInstance)) {
             return;
         }
@@ -207,7 +207,7 @@ public final class CursedWeaponsManager extends GameXmlReader {
         }
     }
 
-    public void activate(L2PcInstance player, L2ItemInstance item) {
+    public void activate(Player player, L2ItemInstance item) {
         final CursedWeapon cw = _cursedWeapons.get(item.getId());
         if (player.isCursedWeaponEquipped()) // cannot own 2 cursed swords
         {
@@ -246,7 +246,7 @@ public final class CursedWeaponsManager extends GameXmlReader {
         return cw.getLevel();
     }
 
-    public void checkPlayer(L2PcInstance player) {
+    public void checkPlayer(Player player) {
         if (player == null) {
             return;
         }

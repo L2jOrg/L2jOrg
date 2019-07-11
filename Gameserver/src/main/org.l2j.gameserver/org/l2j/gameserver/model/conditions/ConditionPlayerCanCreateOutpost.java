@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.conditions;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.items.L2Item;
@@ -45,7 +45,7 @@ public class ConditionPlayerCanCreateOutpost extends Condition {
             return !_val;
         }
 
-        final L2PcInstance player = effector.getActingPlayer();
+        final Player player = effector.getActingPlayer();
         boolean canCreateOutpost = true;
         if (player.isAlikeDead() || player.isCursedWeaponEquipped() || (player.getClan() == null)) {
             canCreateOutpost = false;

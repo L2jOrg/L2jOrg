@@ -18,16 +18,16 @@ package org.l2j.gameserver.model.actor.tasks.player;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.ItemHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 
 /**
  * @author Mobius
  */
 public class AutoPotionTask implements Runnable {
-    private final L2PcInstance _player;
+    private final Player _player;
 
-    public AutoPotionTask(L2PcInstance player) {
+    public AutoPotionTask(Player player) {
         _player = player;
     }
 

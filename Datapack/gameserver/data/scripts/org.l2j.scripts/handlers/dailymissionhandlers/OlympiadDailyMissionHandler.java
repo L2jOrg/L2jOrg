@@ -1,6 +1,6 @@
 package handlers.dailymissionhandlers;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
@@ -41,7 +41,7 @@ public class OlympiadDailyMissionHandler extends AbstractDailyMissionHandler {
 		}
 	}
 
-	private void increaseProgress(DailyMissionPlayerData entry, L2PcInstance player) {
+	private void increaseProgress(DailyMissionPlayerData entry, Player player) {
 		if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE) {
 			if (entry.increaseProgress() >= getRequiredCompletion()) {
 				entry.setStatus(DailyMissionStatus.AVAILABLE);

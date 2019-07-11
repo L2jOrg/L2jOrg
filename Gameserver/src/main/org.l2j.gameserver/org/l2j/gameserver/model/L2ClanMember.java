@@ -4,7 +4,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.instancemanager.SiegeManager;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +30,7 @@ public class L2ClanMember {
     private int _classId;
     private boolean _sex;
     private int _raceOrdinal;
-    private L2PcInstance _player;
+    private Player _player;
     private int _pledgeType;
     private int _apprentice;
     private int _sponsor;
@@ -67,7 +67,7 @@ public class L2ClanMember {
      * @param clan   the clan where the player belongs
      * @param player the player from which the clan member will be created
      */
-    public L2ClanMember(L2Clan clan, L2PcInstance player) {
+    public L2ClanMember(L2Clan clan, Player player) {
         if (clan == null) {
             throw new IllegalArgumentException("Cannot create a Clan Member if player has a null clan.");
         }
@@ -92,7 +92,7 @@ public class L2ClanMember {
      * @param player the player
      * @return the int
      */
-    public static int calculatePledgeClass(L2PcInstance player) {
+    public static int calculatePledgeClass(Player player) {
         int pledgeClass = 0;
         if (player == null) {
             return pledgeClass;
@@ -405,7 +405,7 @@ public class L2ClanMember {
      *
      * @return the player instance
      */
-    public L2PcInstance getPlayerInstance() {
+    public Player getPlayerInstance() {
         return _player;
     }
 
@@ -414,7 +414,7 @@ public class L2ClanMember {
      *
      * @param player the new player instance
      */
-    public void setPlayerInstance(L2PcInstance player) {
+    public void setPlayerInstance(Player player) {
         if ((player == null) && (_player != null)) {
             // this is here to keep the data when the player logs off
             _name = _player.getName();

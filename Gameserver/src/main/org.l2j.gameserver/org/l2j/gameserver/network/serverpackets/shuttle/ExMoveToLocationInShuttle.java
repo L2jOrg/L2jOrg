@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.shuttle;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -18,7 +18,7 @@ public class ExMoveToLocationInShuttle extends ServerPacket {
     private final int _fromY;
     private final int _fromZ;
 
-    public ExMoveToLocationInShuttle(L2PcInstance player, int fromX, int fromY, int fromZ) {
+    public ExMoveToLocationInShuttle(Player player, int fromX, int fromY, int fromZ) {
         _charObjId = player.getObjectId();
         _airShipId = player.getShuttle().getObjectId();
         _targetX = player.getInVehiclePosition().getX();

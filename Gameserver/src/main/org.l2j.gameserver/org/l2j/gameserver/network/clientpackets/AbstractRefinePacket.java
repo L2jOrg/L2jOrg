@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.PrivateStoreType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemAttributeRequest;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.model.items.L2Armor;
@@ -26,7 +26,7 @@ public abstract class AbstractRefinePacket extends ClientPacket {
      * @param fee
      * @return
      */
-    protected static boolean isValid(L2PcInstance player, L2ItemInstance item, L2ItemInstance mineralItem, L2ItemInstance feeItem, VariationFee fee) {
+    protected static boolean isValid(Player player, L2ItemInstance item, L2ItemInstance mineralItem, L2ItemInstance feeItem, VariationFee fee) {
         if (fee == null) {
             return false;
         }
@@ -64,7 +64,7 @@ public abstract class AbstractRefinePacket extends ClientPacket {
      * @param mineralItem
      * @return
      */
-    protected static boolean isValid(L2PcInstance player, L2ItemInstance item, L2ItemInstance mineralItem) {
+    protected static boolean isValid(Player player, L2ItemInstance item, L2ItemInstance mineralItem) {
         if (!isValid(player, item)) {
             return false;
         }
@@ -88,7 +88,7 @@ public abstract class AbstractRefinePacket extends ClientPacket {
      * @param item
      * @return
      */
-    protected static boolean isValid(L2PcInstance player, L2ItemInstance item) {
+    protected static boolean isValid(Player player, L2ItemInstance item) {
         if (!isValid(player)) {
             return false;
         }
@@ -148,7 +148,7 @@ public abstract class AbstractRefinePacket extends ClientPacket {
      * @param player
      * @return
      */
-    protected static boolean isValid(L2PcInstance player) {
+    protected static boolean isValid(Player player) {
         if (player.getPrivateStoreType() != PrivateStoreType.NONE) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP_IS_IN_OPERATION);
             return false;

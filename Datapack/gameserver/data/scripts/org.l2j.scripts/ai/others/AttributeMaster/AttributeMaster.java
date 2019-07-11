@@ -4,7 +4,7 @@ import ai.AbstractNpcAI;
 import org.l2j.gameserver.data.elemental.ElementalSpirit;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnElementalSpiritLearn;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
@@ -24,7 +24,7 @@ public class AttributeMaster extends AbstractNpcAI {
     }
 
     @Override
-    public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+    public String onAdvEvent(String event, L2Npc npc, Player player) {
         if("learn".equalsIgnoreCase(event)) {
             if(!canLearn(player)) {
                 return "no-3rdClass.htm";
@@ -54,7 +54,7 @@ public class AttributeMaster extends AbstractNpcAI {
         return super.onAdvEvent(event, npc, player);
     }
 
-    private boolean canLearn(L2PcInstance player) {
+    private boolean canLearn(Player player) {
         return player.getLevel() >= 76 && player.getClassId().level() > 2;
     }
 

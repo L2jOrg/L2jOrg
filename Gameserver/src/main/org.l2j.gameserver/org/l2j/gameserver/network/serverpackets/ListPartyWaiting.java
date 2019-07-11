@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.enums.PartyMatchingRoomLevelType;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -48,7 +48,7 @@ public class ListPartyWaiting extends ServerPacket {
             writeInt(room.getMaxMembers());
             writeString(room.getLeader().getName());
             writeInt(room.getMembersCount());
-            for (L2PcInstance member : room.getMembers()) {
+            for (Player member : room.getMembers()) {
                 writeInt(member.getClassId().getId());
                 writeString(member.getName());
             }

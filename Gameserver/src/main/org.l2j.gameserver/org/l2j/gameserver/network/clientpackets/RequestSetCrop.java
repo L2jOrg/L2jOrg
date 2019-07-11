@@ -5,7 +5,7 @@ import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.CropProcure;
 import org.l2j.gameserver.model.L2Seed;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
@@ -59,7 +59,7 @@ public final class RequestSetCrop extends ClientPacket {
         }
 
         // Check player privileges
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if ((player == null) || (player.getClan() == null) || (player.getClan().getCastleId() != _manorId) || !player.hasClanPrivilege(ClanPrivilege.CS_MANOR_ADMIN) || !player.getLastFolkNPC().canInteract(player)) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;

@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.ClanEntryStatus;
 import org.l2j.gameserver.instancemanager.ClanEntryManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.clan.entry.PledgeApplicantInfo;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPledgeRecruitApplyInfo;
@@ -29,7 +29,7 @@ public class RequestPledgeWaitingApply extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if ((activeChar == null) || (activeChar.getClan() != null)) {
             return;
         }
@@ -43,7 +43,7 @@ public class RequestPledgeWaitingApply extends ClientPacket {
         if (ClanEntryManager.getInstance().addPlayerApplicationToClan(_clanId, info)) {
             client.sendPacket(new ExPledgeRecruitApplyInfo(ClanEntryStatus.WAITING));
 
-            final L2PcInstance clanLeader = L2World.getInstance().getPlayer(clan.getLeaderId());
+            final Player clanLeader = L2World.getInstance().getPlayer(clan.getLeaderId());
             if (clanLeader != null) {
                 clanLeader.sendPacket(ExPledgeWaitingListAlarm.STATIC_PACKET);
             }

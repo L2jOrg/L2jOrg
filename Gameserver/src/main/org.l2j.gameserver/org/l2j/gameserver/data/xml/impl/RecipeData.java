@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.L2RecipeInstance;
 import org.l2j.gameserver.model.L2RecipeList;
 import org.l2j.gameserver.model.L2RecipeStatInstance;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -209,7 +209,7 @@ public class RecipeData extends GameXmlReader {
      * @param id     the recipe list id
      * @return the valid recipe list
      */
-    public L2RecipeList getValidRecipeList(L2PcInstance player, int id) {
+    public L2RecipeList getValidRecipeList(Player player, int id) {
         final L2RecipeList recipeList = _recipes.get(id);
         if ((recipeList == null) || (recipeList.getRecipes().length == 0)) {
             player.sendMessage("No recipe for: " + id);

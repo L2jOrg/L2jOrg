@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.model.L2SkillLearn;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -14,10 +14,10 @@ import java.util.List;
  * @version Classic 2.0
  */
 public class AcquireSkillList extends ServerPacket {
-    final L2PcInstance _activeChar;
+    final Player _activeChar;
     final List<L2SkillLearn> _learnable;
 
-    public AcquireSkillList(L2PcInstance activeChar) {
+    public AcquireSkillList(Player activeChar) {
         _activeChar = activeChar;
         _learnable = SkillTreesData.getInstance().getAvailableSkills(activeChar, activeChar.getClassId(), false, false);
         _learnable.addAll(SkillTreesData.getInstance().getNextAvailableSkills(activeChar, activeChar.getClassId(), false, false));

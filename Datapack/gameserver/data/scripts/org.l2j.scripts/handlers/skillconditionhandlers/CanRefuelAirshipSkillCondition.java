@@ -20,7 +20,7 @@ import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2ControllableAirShipInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -40,7 +40,7 @@ public class CanRefuelAirshipSkillCondition implements ISkillCondition
 	public boolean canUse(L2Character caster, Skill skill, L2Object target)
 	{
 		boolean canRefuelAirship = true;
-		final L2PcInstance player = caster.getActingPlayer();
+		final Player player = caster.getActingPlayer();
 		if ((player == null) || (player.getAirShip() == null) || !(player.getAirShip() instanceof L2ControllableAirShipInstance) || ((player.getAirShip().getFuel() + _amount) > player.getAirShip().getMaxFuel()))
 		{
 			canRefuelAirship = false;

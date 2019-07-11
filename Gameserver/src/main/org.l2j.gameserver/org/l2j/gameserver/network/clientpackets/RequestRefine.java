@@ -2,15 +2,13 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.xml.impl.VariationData;
 import org.l2j.gameserver.model.VariationInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.options.Variation;
 import org.l2j.gameserver.model.options.VariationFee;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExVariationResult;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
-
-import java.nio.ByteBuffer;
 
 /**
  * Format:(ch) dddd
@@ -33,7 +31,7 @@ public final class RequestRefine extends AbstractRefinePacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }

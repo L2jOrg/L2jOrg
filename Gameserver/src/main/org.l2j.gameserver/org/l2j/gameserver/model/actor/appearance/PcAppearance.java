@@ -17,12 +17,12 @@
 package org.l2j.gameserver.model.actor.appearance;
 
 import org.l2j.gameserver.enums.Sex;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 public class PcAppearance {
     public static final int DEFAULT_TITLE_COLOR = 0xECF9A2;
 
-    private L2PcInstance owner;
+    private Player owner;
 
     private byte face;
 
@@ -58,7 +58,7 @@ public class PcAppearance {
     private int _visibleAllyId = -1;
     private int _visibleAllyCrestId = -1;
 
-    public PcAppearance(L2PcInstance owner, byte face, byte hairColor, byte hairStyle, boolean female) {
+    public PcAppearance(Player owner, byte face, byte hairColor, byte hairStyle, boolean female) {
         this.owner = owner;
         this.face = face;
         this.hairColor = hairColor;
@@ -190,14 +190,14 @@ public class PcAppearance {
     /**
      * @return Returns the owner.
      */
-    public L2PcInstance getOwner() {
+    public Player getOwner() {
         return owner;
     }
 
     /**
      * @param owner The owner to set.
      */
-    public void setOwner(L2PcInstance owner) {
+    public void setOwner(Player owner) {
         this.owner = owner;
     }
 

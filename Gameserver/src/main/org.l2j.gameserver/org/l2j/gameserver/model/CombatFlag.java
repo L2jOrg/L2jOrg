@@ -2,7 +2,7 @@ package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.ItemTable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -13,7 +13,7 @@ public class CombatFlag {
     private final int _itemId;
     @SuppressWarnings("unused")
     private final int _fortId;
-    private L2PcInstance _player = null;
+    private Player _player = null;
     private int _playerId = 0;
     private L2ItemInstance _item = null;
     private L2ItemInstance _itemInstance;
@@ -39,7 +39,7 @@ public class CombatFlag {
         }
     }
 
-    public boolean activate(L2PcInstance player, L2ItemInstance item) {
+    public boolean activate(Player player, L2ItemInstance item) {
         if (player.isMounted()) {
             player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
             return false;

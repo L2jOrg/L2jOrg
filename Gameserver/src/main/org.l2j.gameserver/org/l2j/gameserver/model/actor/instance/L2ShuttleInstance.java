@@ -70,7 +70,7 @@ public class L2ShuttleInstance extends L2Vehicle {
     }
 
     @Override
-    public boolean addPassenger(L2PcInstance player) {
+    public boolean addPassenger(Player player) {
         if (!super.addPassenger(player)) {
             return false;
         }
@@ -83,7 +83,7 @@ public class L2ShuttleInstance extends L2Vehicle {
         return true;
     }
 
-    public void removePassenger(L2PcInstance player, int x, int y, int z) {
+    public void removePassenger(Player player, int x, int y, int z) {
         oustPlayer(player);
         if (player.isOnline()) {
             player.broadcastPacket(new ExShuttleGetOff(player, this, x, y, z));
@@ -96,10 +96,10 @@ public class L2ShuttleInstance extends L2Vehicle {
 
     @Override
     public void oustPlayers() {
-        L2PcInstance player;
+        Player player;
 
         // Use iterator because oustPlayer will try to remove player from _passengers
-        final Iterator<L2PcInstance> iter = _passengers.iterator();
+        final Iterator<Player> iter = _passengers.iterator();
         while (iter.hasNext()) {
             player = iter.next();
             iter.remove();
@@ -110,7 +110,7 @@ public class L2ShuttleInstance extends L2Vehicle {
     }
 
     @Override
-    public void sendInfo(L2PcInstance activeChar) {
+    public void sendInfo(Player activeChar) {
         activeChar.sendPacket(new ExShuttleInfo(this));
     }
 

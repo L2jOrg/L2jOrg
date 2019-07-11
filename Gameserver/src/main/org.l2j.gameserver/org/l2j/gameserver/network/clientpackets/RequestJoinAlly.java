@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.AskJoinAlly;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -17,12 +17,12 @@ public final class RequestJoinAlly extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
 
-        final L2PcInstance target = L2World.getInstance().getPlayer(_objectId);
+        final Player target = L2World.getInstance().getPlayer(_objectId);
 
         if (target == null) {
             activeChar.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);

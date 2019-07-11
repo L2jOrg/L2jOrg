@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.actor.tasks.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
@@ -28,9 +28,9 @@ import java.util.concurrent.TimeUnit;
  * @author UnAfraid
  */
 public final class WarnUserTakeBreakTask implements Runnable {
-    private final L2PcInstance _player;
+    private final Player _player;
 
-    public WarnUserTakeBreakTask(L2PcInstance player) {
+    public WarnUserTakeBreakTask(Player player) {
         _player = player;
     }
 

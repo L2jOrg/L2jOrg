@@ -6,7 +6,7 @@ import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.model.L2PetData;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.actor.instance.L2ServitorInstance;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
@@ -73,7 +73,7 @@ public class CharSummonTable {
         }
     }
 
-    public void removeServitor(L2PcInstance activeChar, int summonObjectId) {
+    public void removeServitor(Player activeChar, int summonObjectId) {
         _servitors.computeIfPresent(activeChar.getObjectId(), (k, v) ->
         {
             v.remove(summonObjectId);
@@ -90,7 +90,7 @@ public class CharSummonTable {
         }
     }
 
-    public void restorePet(L2PcInstance activeChar) {
+    public void restorePet(Player activeChar) {
         final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_pets.get(activeChar.getObjectId()));
         if (item == null) {
             LOGGER.warn(": Null pet summoning item for: " + activeChar);
@@ -138,7 +138,7 @@ public class CharSummonTable {
         pet.broadcastStatusUpdate();
     }
 
-    public void restoreServitor(L2PcInstance activeChar) {
+    public void restoreServitor(Player activeChar) {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement(LOAD_SUMMON)) {
             ps.setInt(1, activeChar.getObjectId());

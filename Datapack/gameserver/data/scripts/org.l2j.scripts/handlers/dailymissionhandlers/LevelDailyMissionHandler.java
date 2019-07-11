@@ -1,7 +1,7 @@
 package handlers.dailymissionhandlers;
 
 import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
 import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
@@ -29,18 +29,18 @@ public class LevelDailyMissionHandler extends AbstractDailyMissionHandler {
     }
 
     @Override
-    public int getProgress(L2PcInstance player) {
+    public int getProgress(Player player) {
         return player.getLevel();
     }
 
     @Override
-    public int getStatus(L2PcInstance player) {
+    public int getStatus(Player player) {
         final var entry = getPlayerEntry(player, true);
         return nonNull(entry) ? entry.getStatus().getClientId() : DailyMissionStatus.NOT_AVAILABLE.getClientId();
     }
 
     private void onPlayerLevelChanged(OnPlayerLevelChanged event) {
-        final L2PcInstance player = event.getActiveChar();
+        final Player player = event.getActiveChar();
         if ((player.getLevel() >= getRequiredCompletion())) {
             final DailyMissionPlayerData entry = getPlayerEntry(player, true);
             if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE) {

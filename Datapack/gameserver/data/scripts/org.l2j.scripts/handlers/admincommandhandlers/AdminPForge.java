@@ -21,7 +21,7 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2BoatInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.AdminForgePacket;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -185,13 +185,13 @@ public final class AdminPForge implements IAdminCommandHandler
 		};
 	}
 	
-	private void showValuesUsage(L2PcInstance activeChar)
+	private void showValuesUsage(Player activeChar)
 	{
 		BuilderUtil.sendSysMessage(activeChar, "Usage: //forge_values opcode1[ opcode2[ opcode3]] ;[ format]");
 		showMainPage(activeChar);
 	}
 	
-	private void showSendUsage(L2PcInstance activeChar, String[] opCodes, String format)
+	private void showSendUsage(Player activeChar, String[] opCodes, String format)
 	{
 		BuilderUtil.sendSysMessage(activeChar, "Usage: //forge_send sc|sb|cs opcode1[;opcode2[;opcode3]][ format value1 ... valueN] ");
 		if (opCodes == null)
@@ -204,12 +204,12 @@ public final class AdminPForge implements IAdminCommandHandler
 		}
 	}
 	
-	private void showMainPage(L2PcInstance activeChar)
+	private void showMainPage(Player activeChar)
 	{
 		AdminHtml.showAdminHtml(activeChar, "pforge/main.htm");
 	}
 	
-	private void showValuesPage(L2PcInstance activeChar, String[] opCodes, String format)
+	private void showValuesPage(Player activeChar, String[] opCodes, String format)
 	{
 		String sendBypass = null;
 		String valuesHtml = HtmCache.getInstance().getHtmForce(activeChar, "data/html/admin/pforge/values.htm");
@@ -270,7 +270,7 @@ public final class AdminPForge implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_forge"))
 		{

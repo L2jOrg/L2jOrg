@@ -1,12 +1,12 @@
 package org.l2j.gameserver.model.itemcontainer;
 
 import org.l2j.gameserver.enums.ItemLocation;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 public class PcWarehouse extends Warehouse {
-    private final L2PcInstance _owner;
+    private final Player _owner;
 
-    public PcWarehouse(L2PcInstance owner) {
+    public PcWarehouse(Player owner) {
         _owner = owner;
     }
 
@@ -16,7 +16,7 @@ public class PcWarehouse extends Warehouse {
     }
 
     @Override
-    public L2PcInstance getOwner() {
+    public Player getOwner() {
         return _owner;
     }
 

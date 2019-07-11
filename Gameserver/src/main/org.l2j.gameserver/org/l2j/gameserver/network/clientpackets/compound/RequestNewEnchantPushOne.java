@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.compound;
 
 import org.l2j.gameserver.data.xml.impl.CombinationItemsData;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.CompoundRequest;
 import org.l2j.gameserver.model.items.combination.CombinationItem;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -25,7 +25,7 @@ public class RequestNewEnchantPushOne extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         } else if (activeChar.isInStoreMode()) {

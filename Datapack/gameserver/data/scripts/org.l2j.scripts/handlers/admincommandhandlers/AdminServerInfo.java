@@ -23,7 +23,7 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import java.text.SimpleDateFormat;
@@ -45,7 +45,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_serverinfo"))
 		{
@@ -86,8 +86,8 @@ public class AdminServerInfo implements IAdminCommandHandler
 			{
 				int offlineCount = 0;
 				
-				final Collection<L2PcInstance> objs = L2World.getInstance().getPlayers();
-				for (L2PcInstance player : objs)
+				final Collection<Player> objs = L2World.getInstance().getPlayers();
+				for (Player player : objs)
 				{
 					if ((player.getClient() == null) || player.getClient().isDetached())
 					{
@@ -99,7 +99,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 			case "GM":
 			{
 				int onlineGMcount = 0;
-				for (L2PcInstance gm : AdminData.getInstance().getAllGms(true))
+				for (Player gm : AdminData.getInstance().getAllGms(true))
 				{
 					if ((gm != null) && gm.isOnline() && (gm.getClient() != null) && !gm.getClient().isDetached())
 					{
@@ -112,7 +112,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 			{
 				final Set<String> realPlayers = new HashSet<>();
 				
-				for (L2PcInstance onlinePlayer : L2World.getInstance().getPlayers())
+				for (Player onlinePlayer : L2World.getInstance().getPlayers())
 				{
 					if ((onlinePlayer != null) && (onlinePlayer.getClient() != null) && !onlinePlayer.getClient().isDetached())
 					{

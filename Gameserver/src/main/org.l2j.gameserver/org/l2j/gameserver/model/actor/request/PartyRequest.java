@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.actor.request;
 
 import org.l2j.gameserver.model.L2Party;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 import java.util.Objects;
 
@@ -25,10 +25,10 @@ import java.util.Objects;
  * @author UnAfraid
  */
 public class PartyRequest extends AbstractRequest {
-    private final L2PcInstance _targetPlayer;
+    private final Player _targetPlayer;
     private final L2Party _party;
 
-    public PartyRequest(L2PcInstance activeChar, L2PcInstance targetPlayer, L2Party party) {
+    public PartyRequest(Player activeChar, Player targetPlayer, L2Party party) {
         super(activeChar);
         Objects.requireNonNull(targetPlayer);
         Objects.requireNonNull(party);
@@ -36,7 +36,7 @@ public class PartyRequest extends AbstractRequest {
         _party = party;
     }
 
-    public L2PcInstance getTargetPlayer() {
+    public Player getTargetPlayer() {
         return _targetPlayer;
     }
 

@@ -3,7 +3,7 @@ package quests.Q11000_MoonKnight;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
 import org.l2j.gameserver.model.events.annotations.RegisterEvent;
@@ -71,7 +71,7 @@ public class Q11000_MoonKnight extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
@@ -189,7 +189,7 @@ public class Q11000_MoonKnight extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(L2Npc npc, Player talker)
 	{
 		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
@@ -397,7 +397,7 @@ public class Q11000_MoonKnight extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(L2Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
 		if (qs != null)
@@ -443,7 +443,7 @@ public class Q11000_MoonKnight extends Quest
 			return;
 		}
 		
-		final L2PcInstance player = event.getActiveChar();
+		final Player player = event.getActiveChar();
 		final QuestState qs = getQuestState(player, false);
 		
 		if ((qs == null) && (event.getOldLevel() < event.getNewLevel()) && canStartQuest(player))
@@ -462,7 +462,7 @@ public class Q11000_MoonKnight extends Quest
 			return;
 		}
 		
-		final L2PcInstance player = event.getActiveChar();
+		final Player player = event.getActiveChar();
 		final QuestState qs = getQuestState(player, false);
 		
 		if ((qs == null) && canStartQuest(player))
@@ -476,7 +476,7 @@ public class Q11000_MoonKnight extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final Player player = event.getActiveChar();
 		if ((event.getMarkId() == QUESTION_MARK_ID) && canStartQuest(player))
 		{
 			final String html = getHtm(player, "popup.html");

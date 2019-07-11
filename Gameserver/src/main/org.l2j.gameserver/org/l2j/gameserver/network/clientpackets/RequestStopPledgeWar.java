@@ -4,7 +4,7 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
@@ -19,7 +19,7 @@ public final class RequestStopPledgeWar extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if (player == null) {
             return;
         }
@@ -63,11 +63,11 @@ public final class RequestStopPledgeWar extends ClientPacket {
 
         ClanTable.getInstance().deleteClanWars(playerClan.getId(), clan.getId());
 
-        for (L2PcInstance member : playerClan.getOnlineMembers(0)) {
+        for (Player member : playerClan.getOnlineMembers(0)) {
             member.broadcastUserInfo();
         }
 
-        for (L2PcInstance member : clan.getOnlineMembers(0)) {
+        for (Player member : clan.getOnlineMembers(0)) {
             member.broadcastUserInfo();
         }
     }

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -11,8 +11,8 @@ import java.util.List;
  */
 public class ExCubeGameTeamList extends ServerPacket {
     // Players Lists
-    private final List<L2PcInstance> _bluePlayers;
-    private final List<L2PcInstance> _redPlayers;
+    private final List<Player> _bluePlayers;
+    private final List<Player> _redPlayers;
 
     // Common Values
     private final int _roomNumber;
@@ -24,7 +24,7 @@ public class ExCubeGameTeamList extends ServerPacket {
      * @param bluePlayers Blue Players List
      * @param roomNumber  Arena/Room ID
      */
-    public ExCubeGameTeamList(List<L2PcInstance> redPlayers, List<L2PcInstance> bluePlayers, int roomNumber) {
+    public ExCubeGameTeamList(List<Player> redPlayers, List<Player> bluePlayers, int roomNumber) {
         _redPlayers = redPlayers;
         _bluePlayers = bluePlayers;
         _roomNumber = roomNumber - 1;
@@ -40,12 +40,12 @@ public class ExCubeGameTeamList extends ServerPacket {
         writeInt(0xffffffff);
 
         writeInt(_bluePlayers.size());
-        for (L2PcInstance player : _bluePlayers) {
+        for (Player player : _bluePlayers) {
             writeInt(player.getObjectId());
             writeString(player.getName());
         }
         writeInt(_redPlayers.size());
-        for (L2PcInstance player : _redPlayers) {
+        for (Player player : _redPlayers) {
             writeInt(player.getObjectId());
             writeString(player.getName());
         }

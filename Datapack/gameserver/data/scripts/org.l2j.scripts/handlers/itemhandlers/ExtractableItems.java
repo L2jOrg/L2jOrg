@@ -27,7 +27,7 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.L2ExtractableProduct;
 import org.l2j.gameserver.model.actor.L2Playable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.L2EtcItem;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -49,7 +49,7 @@ public class ExtractableItems implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
+		final Player activeChar = playable.getActingPlayer();
 		final L2EtcItem etcitem = (L2EtcItem) item.getItem();
 		final List<L2ExtractableProduct> exitems = etcitem.getExtractableItems();
 		if (exitems == null)
@@ -219,7 +219,7 @@ public class ExtractableItems implements IItemHandler
 		}
 	}
 	
-	private void sendMessage(L2PcInstance player, L2ItemInstance item, Long count)
+	private void sendMessage(Player player, L2ItemInstance item, Long count)
 	{
 		final SystemMessage sm;
 		if (count > 1)

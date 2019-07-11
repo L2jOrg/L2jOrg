@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.BuilderUtil;
 
 /**
@@ -37,7 +37,7 @@ public class AdminInvul implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		
 		if (command.equals("admin_invul"))
@@ -56,7 +56,7 @@ public class AdminInvul implements IAdminCommandHandler
 			final L2Object target = activeChar.getTarget();
 			if ((target != null) && target.isPlayer())
 			{
-				handleInvul((L2PcInstance) target);
+				handleInvul((Player) target);
 			}
 		}
 		else if (command.equals("admin_setundying"))
@@ -76,7 +76,7 @@ public class AdminInvul implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleInvul(L2PcInstance activeChar)
+	private void handleInvul(Player activeChar)
 	{
 		String text;
 		if (activeChar.isInvul())
@@ -92,7 +92,7 @@ public class AdminInvul implements IAdminCommandHandler
 		BuilderUtil.sendSysMessage(activeChar, text);
 	}
 	
-	private void handleUndying(L2PcInstance activeChar, L2Character target)
+	private void handleUndying(Player activeChar, L2Character target)
 	{
 		String text;
 		if (target.isUndying())

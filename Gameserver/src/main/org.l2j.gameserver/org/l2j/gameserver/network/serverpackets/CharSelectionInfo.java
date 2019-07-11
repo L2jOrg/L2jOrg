@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.CharSelectInfoPackage;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.VariationInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.network.Disconnection;
@@ -130,7 +130,7 @@ public class CharSelectionInfo extends ServerPacket {
                     if (charInfopackage != null) {
                         characterList.add(charInfopackage);
 
-                        final L2PcInstance player = L2World.getInstance().getPlayer(charInfopackage.getObjectId());
+                        final Player player = L2World.getInstance().getPlayer(charInfopackage.getObjectId());
                         if (player != null) {
                             IdFactory.getInstance().releaseId(player.getObjectId());
                             Disconnection.of(player).storeMe().deleteMe();

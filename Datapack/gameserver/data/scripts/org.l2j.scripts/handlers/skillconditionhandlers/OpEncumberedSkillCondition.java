@@ -19,7 +19,7 @@ package handlers.skillconditionhandlers;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -46,7 +46,7 @@ public class OpEncumberedSkillCondition implements ISkillCondition
 			return false;
 		}
 		
-		final L2PcInstance player = caster.getActingPlayer();
+		final Player player = caster.getActingPlayer();
 		final int currentSlotsPercent = calcPercent(player.getInventoryLimit(), player.getInventory().getSize(item -> !item.isQuestItem()));
 		final int currentWeightPercent = calcPercent(player.getMaxLoad(), player.getCurrentLoad());
 		return (currentSlotsPercent >= _slotsPercent) && (currentWeightPercent >= _weightPercent);

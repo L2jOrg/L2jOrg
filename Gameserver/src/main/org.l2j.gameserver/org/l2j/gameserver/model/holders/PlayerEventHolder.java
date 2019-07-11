@@ -20,7 +20,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 import java.util.Collections;
 import java.util.Map;
@@ -42,7 +42,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author Nik, xban1x
  */
 public final class PlayerEventHolder {
-    private final L2PcInstance _player;
+    private final Player _player;
     private final String _name;
     private final String _title;
     private final int _clanId;
@@ -51,14 +51,14 @@ public final class PlayerEventHolder {
     private final int _pkKills;
     private final int _reputation;
 
-    private final Map<L2PcInstance, Integer> _kills = new ConcurrentHashMap<>();
+    private final Map<Player, Integer> _kills = new ConcurrentHashMap<>();
     private boolean _sitForced;
 
-    public PlayerEventHolder(L2PcInstance player) {
+    public PlayerEventHolder(Player player) {
         this(player, false);
     }
 
-    public PlayerEventHolder(L2PcInstance player, boolean sitForced) {
+    public PlayerEventHolder(Player player, boolean sitForced) {
         _player = player;
         _name = player.getName();
         _title = player.getTitle();
@@ -92,11 +92,11 @@ public final class PlayerEventHolder {
         _sitForced = sitForced;
     }
 
-    public Map<L2PcInstance, Integer> getKills() {
+    public Map<Player, Integer> getKills() {
         return Collections.unmodifiableMap(_kills);
     }
 
-    public void addKill(L2PcInstance player) {
+    public void addKill(Player player) {
         _kills.merge(player, 1, Integer::sum);
     }
 }

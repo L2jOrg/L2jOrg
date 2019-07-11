@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.eventengine;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
@@ -70,7 +70,7 @@ public abstract class AbstractEvent<T extends AbstractEventMember<?>> extends Ab
      * @param player
      * @return {@code true} if player is on event, {@code false} otherwise.
      */
-    public boolean isOnEvent(L2PcInstance player) {
+    public boolean isOnEvent(Player player) {
         return _members.containsKey(player.getObjectId());
     }
 
@@ -78,7 +78,7 @@ public abstract class AbstractEvent<T extends AbstractEventMember<?>> extends Ab
      * @param player
      * @return {@code true} if player is blocked from leaving the game, {@code false} otherwise.
      */
-    public boolean isBlockingExit(L2PcInstance player) {
+    public boolean isBlockingExit(Player player) {
         return false;
     }
 
@@ -86,7 +86,7 @@ public abstract class AbstractEvent<T extends AbstractEventMember<?>> extends Ab
      * @param player
      * @return {@code true} if player is blocked from receiving death penalty upon death, {@code false} otherwise.
      */
-    public boolean isBlockingDeathPenalty(L2PcInstance player) {
+    public boolean isBlockingDeathPenalty(Player player) {
         return false;
     }
 
@@ -94,7 +94,7 @@ public abstract class AbstractEvent<T extends AbstractEventMember<?>> extends Ab
      * @param player
      * @return {@code true} if player can revive after death, {@code false} otherwise.
      */
-    public boolean canRevive(L2PcInstance player) {
+    public boolean canRevive(Player player) {
         return true;
     }
 }

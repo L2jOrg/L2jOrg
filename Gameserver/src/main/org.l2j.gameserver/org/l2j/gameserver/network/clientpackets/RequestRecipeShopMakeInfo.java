@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.RecipeShopItemInfo;
 
 /**
@@ -22,12 +22,12 @@ public final class RequestRecipeShopMakeInfo extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if (player == null) {
             return;
         }
 
-        final L2PcInstance shop = L2World.getInstance().getPlayer(_playerObjectId);
+        final Player shop = L2World.getInstance().getPlayer(_playerObjectId);
         if ((shop == null) || (shop.getPrivateStoreType() != PrivateStoreType.MANUFACTURE)) {
             return;
         }

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -13,7 +13,7 @@ public class GMViewWarehouseWithdrawList extends AbstractItemPacket {
     private final String playerName;
     private final long _money;
 
-    public GMViewWarehouseWithdrawList(L2PcInstance cha) {
+    public GMViewWarehouseWithdrawList(Player cha) {
         _items = cha.getWarehouse().getItems();
         playerName = cha.getName();
         _money = cha.getWarehouse().getAdena();

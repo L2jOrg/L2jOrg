@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets.friend;
 
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -17,7 +17,7 @@ public final class RequestFriendInvite extends ClientPacket {
         _name = readString();
     }
 
-    private void scheduleDeny(L2PcInstance player) {
+    private void scheduleDeny(Player player) {
         if (player != null) {
             player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_ADD_A_FRIEND_TO_YOUR_FRIENDS_LIST));
             player.onTransactionResponse();
@@ -26,12 +26,12 @@ public final class RequestFriendInvite extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
 
-        final L2PcInstance friend = L2World.getInstance().getPlayer(_name);
+        final Player friend = L2World.getInstance().getPlayer(_name);
 
         // Target is not found in the game.
         if ((friend == null) || !friend.isOnline() || friend.isInvisible()) {

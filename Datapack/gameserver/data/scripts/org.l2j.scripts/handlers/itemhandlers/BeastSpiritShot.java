@@ -24,7 +24,7 @@ import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.actor.L2Playable;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -46,7 +46,7 @@ public class BeastSpiritShot implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeOwner = playable.getActingPlayer();
+		final Player activeOwner = playable.getActingPlayer();
 		if (!activeOwner.hasSummon())
 		{
 			activeOwner.sendPacket(SystemMessageId.SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME);

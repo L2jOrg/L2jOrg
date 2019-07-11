@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.TradeItem;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -17,7 +17,7 @@ public class PrivateStoreListBuy extends AbstractItemPacket {
     private final long _playerAdena;
     private final Collection<TradeItem> _items;
 
-    public PrivateStoreListBuy(L2PcInstance player, L2PcInstance storePlayer) {
+    public PrivateStoreListBuy(Player player, Player storePlayer) {
         _objId = storePlayer.getObjectId();
         _playerAdena = player.getAdena();
         storePlayer.getSellList().updateItems(); // Update SellList for case inventory content has changed

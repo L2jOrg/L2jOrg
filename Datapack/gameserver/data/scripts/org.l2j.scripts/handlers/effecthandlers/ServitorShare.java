@@ -22,7 +22,7 @@ import java.util.Map.Entry;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
@@ -56,7 +56,7 @@ public final class ServitorShare extends AbstractEffect
 	@Override
 	public void pump(L2Character effected, Skill skill)
 	{
-		final L2PcInstance owner = effected.getActingPlayer();
+		final Player owner = effected.getActingPlayer();
 		if (owner != null)
 		{
 			for (Entry<Stats, Float> stats : _sharedStats.entrySet())

@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import org.l2j.gameserver.enums.SkillEnchantType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.EnchantSkillHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.L2GameClient;
@@ -20,7 +20,7 @@ public class ExEnchantSkillInfoDetail extends ServerPacket {
     private final int _skillSubLvl;
     private final EnchantSkillHolder _enchantSkillHolder;
 
-    public ExEnchantSkillInfoDetail(SkillEnchantType type, int skillId, int skillLvl, int skillSubLvl, L2PcInstance player) {
+    public ExEnchantSkillInfoDetail(SkillEnchantType type, int skillId, int skillLvl, int skillSubLvl, Player player) {
         _type = type;
         _skillId = skillId;
         _skillLvl = skillLvl;

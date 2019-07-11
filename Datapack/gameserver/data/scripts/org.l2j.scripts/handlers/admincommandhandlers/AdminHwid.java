@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -33,13 +33,13 @@ public class AdminHwid implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if ((activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer() || (activeChar.getTarget().getActingPlayer().getClient() == null) || (activeChar.getTarget().getActingPlayer().getClient().getHardwareInfo() == null))
 		{
 			return true;
 		}
-		final L2PcInstance target = activeChar.getTarget().getActingPlayer();
+		final Player target = activeChar.getTarget().getActingPlayer();
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/charhwinfo.htm"));
 		html.replace("%name%", target.getName());

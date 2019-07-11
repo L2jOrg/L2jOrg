@@ -42,7 +42,7 @@ public class L2BoatInstance extends L2Vehicle {
     }
 
     @Override
-    public void oustPlayer(L2PcInstance player) {
+    public void oustPlayer(Player player) {
         super.oustPlayer(player);
 
         final Location loc = getOustLoc();
@@ -62,7 +62,7 @@ public class L2BoatInstance extends L2Vehicle {
     }
 
     @Override
-    public void sendInfo(L2PcInstance activeChar) {
+    public void sendInfo(Player activeChar) {
         activeChar.sendPacket(new VehicleInfo(this));
     }
 }

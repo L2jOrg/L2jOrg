@@ -165,7 +165,7 @@ public final class L2StaticObjectInstance extends L2Character {
     }
 
     @Override
-    public void sendInfo(L2PcInstance activeChar) {
+    public void sendInfo(Player activeChar) {
         activeChar.sendPacket(new StaticObject(this));
     }
 

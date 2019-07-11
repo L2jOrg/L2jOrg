@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.events.impl.character.player;
 
 import org.l2j.gameserver.enums.QuestType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -25,17 +25,17 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnPlayerQuestComplete implements IBaseEvent {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final int _questId;
     private final QuestType _questType;
 
-    public OnPlayerQuestComplete(L2PcInstance activeChar, int questId, QuestType questType) {
+    public OnPlayerQuestComplete(Player activeChar, int questId, QuestType questType) {
         _activeChar = activeChar;
         _questId = questId;
         _questType = questType;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _activeChar;
     }
 

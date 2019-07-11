@@ -20,18 +20,18 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.IActionShiftHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 public class L2SummonActionShift implements IActionShiftHandler
 {
 	@Override
-	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
+	public boolean action(Player activeChar, L2Object target, boolean interact)
 	{
 		if (activeChar.isGM())
 		{
 			if (activeChar.getTarget() != target)
 			{
-				// Set the target of the L2PcInstance activeChar
+				// Set the target of the Player activeChar
 				activeChar.setTarget(target);
 			}
 			

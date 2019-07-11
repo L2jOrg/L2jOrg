@@ -4,7 +4,7 @@ import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ServerType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -33,7 +33,7 @@ public class AdminLogin implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_server_gm_only"))
 		{
@@ -152,7 +152,7 @@ public class AdminLogin implements IAdminCommandHandler
 		return true;
 	}
 
-	private void showMainPage(L2PcInstance activeChar)
+	private void showMainPage(Player activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(activeChar, "data/html/admin/login.htm");

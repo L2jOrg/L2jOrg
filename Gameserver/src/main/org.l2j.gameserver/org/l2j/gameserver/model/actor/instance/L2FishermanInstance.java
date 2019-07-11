@@ -33,7 +33,7 @@ public final class L2FishermanInstance extends L2MerchantInstance {
         setInstanceType(InstanceType.L2FishermanInstance);
     }
 
-    public static void showFishSkillList(L2PcInstance player) {
+    public static void showFishSkillList(Player player) {
         final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableFishingSkills(player);
 
         if (skills.isEmpty()) {
@@ -64,7 +64,7 @@ public final class L2FishermanInstance extends L2MerchantInstance {
     }
 
     @Override
-    public void onBypassFeedback(L2PcInstance player, String command) {
+    public void onBypassFeedback(Player player, String command) {
         if (command.equalsIgnoreCase("FishSkillList")) {
             showFishSkillList(player);
         } else {

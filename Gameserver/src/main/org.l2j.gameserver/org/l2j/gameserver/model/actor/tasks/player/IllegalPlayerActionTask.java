@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.actor.tasks.player;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.punishment.PunishmentAffect;
 import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
@@ -21,9 +21,9 @@ public final class IllegalPlayerActionTask implements Runnable {
 
     private final String _message;
     private final IllegalActionPunishmentType _punishment;
-    private final L2PcInstance _actor;
+    private final Player _actor;
 
-    public IllegalPlayerActionTask(L2PcInstance actor, String message, IllegalActionPunishmentType punishment) {
+    public IllegalPlayerActionTask(Player actor, String message, IllegalActionPunishmentType punishment) {
         _message = message;
         _punishment = punishment;
         _actor = actor;

@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
@@ -30,7 +30,7 @@ public class LoginDailyMissionHandler extends AbstractDailyMissionHandler {
     }
 
     @Override
-    public boolean isAvailable(L2PcInstance player) {
+    public boolean isAvailable(Player player) {
         final DailyMissionPlayerData entry = getPlayerEntry(player, false);
         return (entry != null) && (DailyMissionStatus.AVAILABLE == entry.getStatus());
     }

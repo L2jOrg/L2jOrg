@@ -3,7 +3,7 @@ package org.l2j.gameserver.data.elemental;
 import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
 import org.l2j.gameserver.enums.UserInfoType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.OnElementalSpiritUpgrade;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -21,17 +21,17 @@ import static org.l2j.gameserver.network.SystemMessageId.S1_ATTRIBUTE_SPIRIT_BEC
 
 public class ElementalSpirit {
 
-    private final L2PcInstance owner;
+    private final Player owner;
     private ElementalSpiritTemplate template;
     private ElementalSpiritData data;
 
-    public ElementalSpirit(ElementalType type, L2PcInstance owner) {
+    public ElementalSpirit(ElementalType type, Player owner) {
         data = new ElementalSpiritData(type.getId(), owner.getObjectId());
         this.template = ElementalSpiritManager.getInstance().getSpirit(type.getId(), data.getStage());
         this.owner = owner;
     }
 
-    public ElementalSpirit(ElementalSpiritData data, L2PcInstance owner) {
+    public ElementalSpirit(ElementalSpiritData data, Player owner) {
         this.owner = owner;
         this.data = data;
         this.template = ElementalSpiritManager.getInstance().getSpirit(data.getType(), data.getStage());

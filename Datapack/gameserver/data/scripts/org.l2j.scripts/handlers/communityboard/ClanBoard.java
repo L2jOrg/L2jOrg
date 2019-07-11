@@ -23,7 +23,7 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IWriteBoardHandler;
 import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.GameUtils;
 
@@ -47,7 +47,7 @@ public class ClanBoard implements IWriteBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, L2PcInstance activeChar)
+	public boolean parseCommunityBoardCommand(String command, Player activeChar)
 	{
 		if (command.equals("_bbsclan"))
 		{
@@ -137,7 +137,7 @@ public class ClanBoard implements IWriteBoardHandler
 		return true;
 	}
 	
-	private void clanNotice(L2PcInstance activeChar, int clanId)
+	private void clanNotice(Player activeChar, int clanId)
 	{
 		final L2Clan cl = ClanTable.getInstance().getClan(clanId);
 		if (cl != null)
@@ -184,7 +184,7 @@ public class ClanBoard implements IWriteBoardHandler
 		}
 	}
 	
-	private void clanList(L2PcInstance activeChar, int index)
+	private void clanList(Player activeChar, int index)
 	{
 		if (index < 1)
 		{
@@ -274,12 +274,12 @@ public class ClanBoard implements IWriteBoardHandler
 		CommunityBoardHandler.separateAndSend(html.toString(), activeChar);
 	}
 	
-	private void clanHome(L2PcInstance activeChar)
+	private void clanHome(Player activeChar)
 	{
 		clanHome(activeChar, activeChar.getClan().getId());
 	}
 	
-	private void clanHome(L2PcInstance activeChar, int clanId)
+	private void clanHome(Player activeChar, int clanId)
 	{
 		final L2Clan cl = ClanTable.getInstance().getClan(clanId);
 		if (cl != null)
@@ -306,7 +306,7 @@ public class ClanBoard implements IWriteBoardHandler
 	}
 	
 	@Override
-	public boolean writeCommunityBoardCommand(L2PcInstance activeChar, String arg1, String arg2, String arg3, String arg4, String arg5)
+	public boolean writeCommunityBoardCommand(Player activeChar, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
 		// the only Write bypass that comes to this handler is "Write Notice Set _ Content Content Content";
 		// arg1 = Set, arg2 = _

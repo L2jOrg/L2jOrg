@@ -20,7 +20,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2ChestInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -49,7 +49,7 @@ public final class OpenChest extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance player = effector.getActingPlayer();
+		final Player player = effector.getActingPlayer();
 		final L2ChestInstance chest = (L2ChestInstance) effected;
 		if (chest.isDead() || (player.getInstanceWorld() != chest.getInstanceWorld()))
 		{

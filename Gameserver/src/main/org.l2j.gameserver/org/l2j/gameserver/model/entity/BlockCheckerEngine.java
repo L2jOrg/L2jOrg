@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.ArenaParticipantsHolder;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.model.actor.instance.L2BlockInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -82,8 +82,8 @@ public final class BlockCheckerEngine {
     // The object which holds all basic members info
     protected ArenaParticipantsHolder _holder;
     // Maps to hold player of each team and his points
-    protected Map<L2PcInstance, Integer> _redTeamPoints = new ConcurrentHashMap<>();
-    protected Map<L2PcInstance, Integer> _blueTeamPoints = new ConcurrentHashMap<>();
+    protected Map<Player, Integer> _redTeamPoints = new ConcurrentHashMap<>();
+    protected Map<Player, Integer> _blueTeamPoints = new ConcurrentHashMap<>();
     // The initial points of the event
     protected int _redPoints = 15;
     protected int _bluePoints = 15;
@@ -110,10 +110,10 @@ public final class BlockCheckerEngine {
             _arena = arena;
         }
 
-        for (L2PcInstance player : holder.getRedPlayers()) {
+        for (Player player : holder.getRedPlayers()) {
             _redTeamPoints.put(player, 0);
         }
-        for (L2PcInstance player : holder.getBluePlayers()) {
+        for (Player player : holder.getBluePlayers()) {
             _blueTeamPoints.put(player, 0);
         }
     }
@@ -183,7 +183,7 @@ public final class BlockCheckerEngine {
      * @param isRed
      * @return int
      */
-    public int getPlayerPoints(L2PcInstance player, boolean isRed) {
+    public int getPlayerPoints(Player player, boolean isRed) {
         if (!_redTeamPoints.containsKey(player) && !_blueTeamPoints.containsKey(player)) {
             return 0;
         }
@@ -200,7 +200,7 @@ public final class BlockCheckerEngine {
      * @param player
      * @param team
      */
-    public synchronized void increasePlayerPoints(L2PcInstance player, int team) {
+    public synchronized void increasePlayerPoints(Player player, int team) {
         if (player == null) {
             return;
         }
@@ -243,8 +243,8 @@ public final class BlockCheckerEngine {
      *
      * @param plr
      */
-    protected void broadcastRelationChanged(L2PcInstance plr) {
-        for (L2PcInstance p : _holder.getAllPlayers()) {
+    protected void broadcastRelationChanged(Player plr) {
+        for (Player p : _holder.getAllPlayers()) {
             p.sendPacket(new RelationChanged(plr, plr.getRelation(p), plr.isAutoAttackable(p)));
         }
     }
@@ -301,7 +301,7 @@ public final class BlockCheckerEngine {
             final ExCubeGameChangePoints initialPoints = new ExCubeGameChangePoints(300, _bluePoints, _redPoints);
             ExCubeGameExtendedChangePoints clientSetUp;
 
-            for (L2PcInstance player : _holder.getAllPlayers()) {
+            for (Player player : _holder.getAllPlayers()) {
                 if (player == null) {
                     continue;
                 }
@@ -562,10 +562,10 @@ public final class BlockCheckerEngine {
          * @param isRed
          */
         private void rewardAsWinner(boolean isRed) {
-            final Map<L2PcInstance, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
+            final Map<Player, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
 
             // Main give
-            for (Entry<L2PcInstance, Integer> points : tempPoints.entrySet()) {
+            for (Entry<Player, Integer> points : tempPoints.entrySet()) {
                 if (points.getKey() == null) {
                     continue;
                 }
@@ -579,10 +579,10 @@ public final class BlockCheckerEngine {
 
             int first = 0;
             int second = 0;
-            L2PcInstance winner1 = null;
-            L2PcInstance winner2 = null;
-            for (Entry<L2PcInstance, Integer> entry : tempPoints.entrySet()) {
-                final L2PcInstance pc = entry.getKey();
+            Player winner1 = null;
+            Player winner2 = null;
+            for (Entry<Player, Integer> entry : tempPoints.entrySet()) {
+                final Player pc = entry.getKey();
                 final int pcPoints = entry.getValue();
                 if (pcPoints > first) {
                     // Move old data
@@ -610,8 +610,8 @@ public final class BlockCheckerEngine {
          * @param isRed
          */
         private void rewardAsLooser(boolean isRed) {
-            for (Entry<L2PcInstance, Integer> entry : (isRed ? _redTeamPoints : _blueTeamPoints).entrySet()) {
-                final L2PcInstance player = entry.getKey();
+            for (Entry<Player, Integer> entry : (isRed ? _redTeamPoints : _blueTeamPoints).entrySet()) {
+                final Player player = entry.getKey();
                 if ((player != null) && (entry.getValue() >= 10)) {
                     player.addItem("Block Checker", 13067, 2, player, true);
                 }
@@ -624,7 +624,7 @@ public final class BlockCheckerEngine {
         private void setPlayersBack() {
             final ExCubeGameEnd end = new ExCubeGameEnd(_isRedWinner);
 
-            for (L2PcInstance player : _holder.getAllPlayers()) {
+            for (Player player : _holder.getAllPlayers()) {
                 if (player == null) {
                     continue;
                 }

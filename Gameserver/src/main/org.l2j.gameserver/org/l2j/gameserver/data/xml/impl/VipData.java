@@ -3,7 +3,7 @@ package org.l2j.gameserver.data.xml.impl;
 import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.gameserver.data.xml.model.VipInfo;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
@@ -93,7 +93,7 @@ public class VipData extends GameXmlReader {
         }
     }
 
-    public byte getVipTier(L2PcInstance player) {
+    public byte getVipTier(Player player) {
         return getVipInfo(player).getTier();
     }
 
@@ -102,7 +102,7 @@ public class VipData extends GameXmlReader {
     }
 
 
-    private VipInfo getVipInfo(L2PcInstance player) {
+    private VipInfo getVipInfo(Player player) {
         var points =  player.getVipPoints();
         return getVipInfo(points);
     }
@@ -127,15 +127,15 @@ public class VipData extends GameXmlReader {
         return 0;
     }
 
-    public float getSilverCoinDropChance(L2PcInstance player) {
+    public float getSilverCoinDropChance(Player player) {
         return getVipInfo(player).getSilverCoinChance();
     }
 
-    public float getRustyCoinDropChance(L2PcInstance player) {
+    public float getRustyCoinDropChance(Player player) {
         return getVipInfo(player).getRustyCoinChance();
     }
 
-    public boolean checkVipTierExpiration(L2PcInstance player) {
+    public boolean checkVipTierExpiration(Player player) {
         var now = Instant.now();
         if(now.isAfter(Instant.ofEpochMilli(player.getVipTierExpiration()))) {
             player.updateVipPoints(-getPointsDepreciatedOnLevel(player.getVipTier()));

@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -21,7 +21,7 @@ public class PartyMemberPosition extends ServerPacket {
 
     public void reuse(L2Party party) {
         locations.clear();
-        for (L2PcInstance member : party.getMembers()) {
+        for (Player member : party.getMembers()) {
             if (member == null) {
                 continue;
             }

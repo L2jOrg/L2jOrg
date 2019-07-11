@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.tasks.player.TeleportTask;
 import org.l2j.gameserver.model.zone.L2ZoneType;
 import org.l2j.gameserver.model.zone.ZoneId;
@@ -49,7 +49,7 @@ public class L2JailZone extends L2ZoneType {
     @Override
     protected void onExit(L2Character character) {
         if (character.isPlayer()) {
-            final L2PcInstance player = character.getActingPlayer();
+            final Player player = character.getActingPlayer();
             player.setInsideZone(ZoneId.JAIL, false);
             player.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false);
 

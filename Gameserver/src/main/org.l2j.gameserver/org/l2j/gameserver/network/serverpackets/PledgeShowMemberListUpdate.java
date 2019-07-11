@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -20,7 +20,7 @@ public final class PledgeShowMemberListUpdate extends ServerPacket {
     private final int _sex;
     private int _hasSponsor;
 
-    public PledgeShowMemberListUpdate(L2PcInstance player) {
+    public PledgeShowMemberListUpdate(Player player) {
         this(player.getClan().getClanMember(player.getObjectId()));
     }
 

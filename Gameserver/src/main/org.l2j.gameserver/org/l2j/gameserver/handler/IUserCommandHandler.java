@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.handler;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,7 +31,7 @@ public interface IUserCommandHandler {
      * @param activeChar
      * @return command success
      */
-    boolean useUserCommand(int id, L2PcInstance activeChar);
+    boolean useUserCommand(int id, Player activeChar);
 
     /**
      * this method is called at initialization to register all the item ids automatically

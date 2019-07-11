@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets.attendance;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AttendanceRewardData;
 import org.l2j.gameserver.datatables.ItemTable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.items.L2Item;
@@ -22,7 +22,7 @@ public class RequestVipAttendanceCheck extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }

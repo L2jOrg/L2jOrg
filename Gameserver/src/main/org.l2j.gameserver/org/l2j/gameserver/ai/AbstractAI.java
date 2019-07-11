@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -365,7 +365,7 @@ public abstract class AbstractAI implements Ctrl {
     protected abstract void onEvtFinishCasting();
 
     /**
-     * Cancel action client side by sending Server->Client packet ActionFailed to the L2PcInstance actor. <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT>
+     * Cancel action client side by sending Server->Client packet ActionFailed to the Player actor. <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT>
      */
     protected void clientActionFailed() {
         if (_actor.isPlayer()) {
@@ -421,7 +421,7 @@ public abstract class AbstractAI implements Ctrl {
                 return;
             }
 
-            // Send a Server->Client packet MoveToPawn/CharMoveToLocation to the actor and all L2PcInstance in its _knownPlayers
+            // Send a Server->Client packet MoveToPawn/CharMoveToLocation to the actor and all Player in its _knownPlayers
             if (pawn.isCharacter()) {
                 if (_actor.isOnGeodataPath()) {
                     _actor.broadcastPacket(new MoveToLocation(_actor));
@@ -459,7 +459,7 @@ public abstract class AbstractAI implements Ctrl {
             // Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeController
             _actor.moveToLocation(x, y, z, 0);
 
-            // Send a Server->Client packet CharMoveToLocation to the actor and all L2PcInstance in its _knownPlayers
+            // Send a Server->Client packet CharMoveToLocation to the actor and all Player in its _knownPlayers
             _actor.broadcastPacket(new MoveToLocation(_actor));
         } else {
             clientActionFailed();
@@ -529,7 +529,7 @@ public abstract class AbstractAI implements Ctrl {
                 }
                 _actor.getServitors().values().forEach(s -> s.broadcastPacket(new AutoAttackStart(s.getObjectId())));
             }
-            // Send a Server->Client packet AutoAttackStart to the actor and all L2PcInstance in its _knownPlayers
+            // Send a Server->Client packet AutoAttackStart to the actor and all Player in its _knownPlayers
             _actor.broadcastPacket(new AutoAttackStart(_actor.getObjectId()));
             setAutoAttacking(true);
         }
@@ -563,7 +563,7 @@ public abstract class AbstractAI implements Ctrl {
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT>
      */
     protected void clientNotifyDead() {
-        // Send a Server->Client packet Die to the actor and all L2PcInstance in its _knownPlayers
+        // Send a Server->Client packet Die to the actor and all Player in its _knownPlayers
         final Die msg = new Die(_actor);
         _actor.broadcastPacket(msg);
 
@@ -576,19 +576,19 @@ public abstract class AbstractAI implements Ctrl {
     }
 
     /**
-     * Update the state of this actor client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the L2PcInstance player.<br>
+     * Update the state of this actor client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the Player player.<br>
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT>
      *
      * @param player The L2PcIstance to notify with state of this L2Character
      */
-    public void describeStateToPlayer(L2PcInstance player) {
+    public void describeStateToPlayer(Player player) {
         if (_actor.isVisibleFor(player)) {
             if (_clientMoving) {
                 if ((_clientMovingToPawnOffset != 0) && isFollowing()) {
-                    // Send a Server->Client packet MoveToPawn to the actor and all L2PcInstance in its _knownPlayers
+                    // Send a Server->Client packet MoveToPawn to the actor and all Player in its _knownPlayers
                     player.sendPacket(new MoveToPawn(_actor, _target, _clientMovingToPawnOffset));
                 } else {
-                    // Send a Server->Client packet CharMoveToLocation to the actor and all L2PcInstance in its _knownPlayers
+                    // Send a Server->Client packet CharMoveToLocation to the actor and all Player in its _knownPlayers
                     player.sendPacket(new MoveToLocation(_actor));
                 }
             }

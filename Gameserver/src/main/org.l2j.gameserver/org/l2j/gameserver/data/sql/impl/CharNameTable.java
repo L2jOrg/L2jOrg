@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.sql.impl;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,7 +28,7 @@ public class CharNameTable {
         }
     }
 
-    public final void addName(L2PcInstance player) {
+    public final void addName(Player player) {
         if (player != null) {
             addName(player.getObjectId(), player.getName());
             _accessLevels.put(player.getObjectId(), player.getAccessLevel().getLevel());

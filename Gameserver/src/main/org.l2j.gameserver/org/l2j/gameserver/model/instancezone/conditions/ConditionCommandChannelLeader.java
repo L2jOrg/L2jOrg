@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.instancezone.conditions;
 import org.l2j.gameserver.model.AbstractPlayerGroup;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
 
@@ -36,7 +36,7 @@ public final class ConditionCommandChannelLeader extends Condition {
     }
 
     @Override
-    public boolean test(L2PcInstance player, L2Npc npc) {
+    public boolean test(Player player, L2Npc npc) {
         final AbstractPlayerGroup group = player.getCommandChannel();
         return (group != null) && group.isLeader(player);
     }

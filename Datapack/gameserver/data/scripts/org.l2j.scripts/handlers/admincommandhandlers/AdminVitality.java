@@ -20,7 +20,7 @@ import java.util.StringTokenizer;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PcStat;
 import org.l2j.gameserver.util.BuilderUtil;
 
@@ -38,7 +38,7 @@ public class AdminVitality implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (activeChar == null)
 		{
@@ -58,7 +58,7 @@ public class AdminVitality implements IAdminCommandHandler
 		
 		if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 		{
-			final L2PcInstance target = (L2PcInstance) activeChar.getTarget();
+			final Player target = (Player) activeChar.getTarget();
 			
 			if (cmd.equals("admin_set_vitality"))
 			{

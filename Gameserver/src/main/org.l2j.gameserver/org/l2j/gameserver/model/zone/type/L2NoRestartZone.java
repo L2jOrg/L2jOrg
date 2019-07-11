@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.zone.type;
 
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.L2ZoneType;
 import org.l2j.gameserver.model.zone.ZoneId;
 
@@ -58,7 +58,7 @@ public class L2NoRestartZone extends L2ZoneType {
     }
 
     @Override
-    public void onPlayerLoginInside(L2PcInstance player) {
+    public void onPlayerLoginInside(Player player) {
         if (!_enabled) {
             return;
         }

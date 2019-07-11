@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets.mentoring;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.mentoring.ListMenteeWaiting;
 
@@ -21,7 +21,7 @@ public class RequestMenteeWaitingList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }

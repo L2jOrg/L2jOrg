@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.Participant;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -9,14 +9,14 @@ import org.l2j.gameserver.network.ServerPacketId;
  * @author godson
  */
 public class ExOlympiadUserInfo extends ServerPacket {
-    private final L2PcInstance _player;
+    private final Player _player;
     private Participant _par = null;
     private int _curHp;
     private int _maxHp;
     private int _curCp;
     private int _maxCp;
 
-    public ExOlympiadUserInfo(L2PcInstance player) {
+    public ExOlympiadUserInfo(Player player) {
         _player = player;
         if (_player != null) {
             _curHp = (int) _player.getCurrentHp();

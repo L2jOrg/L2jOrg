@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.zone.type;
 
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.L2ZoneType;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -55,7 +55,7 @@ public class L2MotherTreeZone extends L2ZoneType {
     @Override
     protected void onEnter(L2Character character) {
         if (character.isPlayer()) {
-            final L2PcInstance player = character.getActingPlayer();
+            final Player player = character.getActingPlayer();
             character.setInsideZone(ZoneId.MOTHER_TREE, true);
             if (_enterMsg != 0) {
                 player.sendPacket(SystemMessage.getSystemMessage(_enterMsg));
@@ -66,7 +66,7 @@ public class L2MotherTreeZone extends L2ZoneType {
     @Override
     protected void onExit(L2Character character) {
         if (character.isPlayer()) {
-            final L2PcInstance player = character.getActingPlayer();
+            final Player player = character.getActingPlayer();
             player.setInsideZone(ZoneId.MOTHER_TREE, false);
             if (_leaveMsg != 0) {
                 player.sendPacket(SystemMessage.getSystemMessage(_leaveMsg));

@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.IPositionable;
 import org.l2j.gameserver.model.skills.SkillCastingType;
 import org.l2j.gameserver.network.L2GameClient;
@@ -43,7 +43,7 @@ public final class MagicSkillUse extends ServerPacket {
         _castingType = castingType;
         Location skillWorldPos = null;
         if (cha.isPlayer()) {
-            final L2PcInstance player = cha.getActingPlayer();
+            final Player player = cha.getActingPlayer();
             if (player.getCurrentSkillWorldPosition() != null) {
                 skillWorldPos = player.getCurrentSkillWorldPosition();
             }

@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.actor.L2Playable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -53,7 +53,7 @@ public class ChangeAttributeCrystal implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance player = playable.getActingPlayer();
+		final Player player = playable.getActingPlayer();
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CHANGE_AN_ATTRIBUTE_WHILE_USING_A_PRIVATE_STORE_OR_WORKSHOP));

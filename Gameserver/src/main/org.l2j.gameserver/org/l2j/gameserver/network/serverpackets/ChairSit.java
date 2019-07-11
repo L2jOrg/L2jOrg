@@ -1,18 +1,18 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class ChairSit extends ServerPacket {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final int _staticObjectId;
 
     /**
      * @param player
      * @param staticObjectId
      */
-    public ChairSit(L2PcInstance player, int staticObjectId) {
+    public ChairSit(Player player, int staticObjectId) {
         _activeChar = player;
         _staticObjectId = staticObjectId;
     }

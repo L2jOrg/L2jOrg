@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -43,7 +43,7 @@ public class MDefenseFinalizer implements IStatsFunction {
         }
 
         if (creature.isPlayer()) {
-            final L2PcInstance player = creature.getActingPlayer();
+            final Player player = creature.getActingPlayer();
             for (int slot : SLOTS) {
                 if (!player.getInventory().isPaperdollSlotEmpty(slot)) {
                     final int defaultStatValue = player.getTemplate().getBaseDefBySlot(slot);

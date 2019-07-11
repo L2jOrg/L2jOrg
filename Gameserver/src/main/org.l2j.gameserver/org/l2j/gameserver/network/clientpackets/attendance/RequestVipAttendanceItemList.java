@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.attendance;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
@@ -16,7 +16,7 @@ public class RequestVipAttendanceItemList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }

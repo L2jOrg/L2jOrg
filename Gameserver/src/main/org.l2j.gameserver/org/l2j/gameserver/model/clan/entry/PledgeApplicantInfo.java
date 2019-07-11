@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.clan.entry;
 
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
  * @author Sdw
@@ -77,7 +77,7 @@ public class PledgeApplicantInfo {
         return _karma;
     }
 
-    public L2PcInstance getPlayerInstance() {
+    public Player getPlayerInstance() {
         return L2World.getInstance().getPlayer(_playerId);
     }
 

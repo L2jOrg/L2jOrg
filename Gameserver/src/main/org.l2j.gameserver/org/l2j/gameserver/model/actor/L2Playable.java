@@ -7,7 +7,7 @@ import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PlayableStat;
 import org.l2j.gameserver.model.actor.status.PlayableStatus;
 import org.l2j.gameserver.model.actor.templates.L2CharTemplate;
@@ -25,13 +25,13 @@ import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
  * This class represents all Playable characters in the world.<br>
  * L2Playable:
  * <ul>
- * <li>L2PcInstance</li>
+ * <li>Player</li>
  * <li>L2Summon</li>
  * </ul>
  */
 public abstract class L2Playable extends L2Character {
     private L2Character _lockedTarget = null;
-    private L2PcInstance transferDmgTo = null;
+    private Player transferDmgTo = null;
 
     /**
      * Constructor of L2Playable.<br>
@@ -115,7 +115,7 @@ public abstract class L2Playable extends L2Character {
             deleteBuffs = false;
         }
         if (isPlayer()) {
-            final L2PcInstance activeChar = getActingPlayer();
+            final Player activeChar = getActingPlayer();
 
             if (activeChar.hasCharmOfCourage()) {
                 if (activeChar.isInSiege()) {
@@ -130,13 +130,13 @@ public abstract class L2Playable extends L2Character {
             stopAllEffectsExceptThoseThatLastThroughDeath();
         }
 
-        // Send the Server->Client packet StatusUpdate with current HP and MP to all other L2PcInstance to inform
+        // Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
         broadcastStatusUpdate();
 
         ZoneManager.getInstance().getRegion(this).onDeath(this);
 
         // Notify Quest of L2Playable's death
-        final L2PcInstance actingPlayer = getActingPlayer();
+        final Player actingPlayer = getActingPlayer();
 
         if (!actingPlayer.isNotifyQuestOfDeathEmpty()) {
             for (QuestState qs : actingPlayer.getNotifyQuestOfDeath()) {
@@ -152,7 +152,7 @@ public abstract class L2Playable extends L2Character {
         }
 
         if (killer != null) {
-            final L2PcInstance killerPlayer = killer.getActingPlayer();
+            final Player killerPlayer = killer.getActingPlayer();
             if ((killerPlayer != null) && isPlayable()) {
                 killerPlayer.onPlayerKill(this);
             }
@@ -163,8 +163,8 @@ public abstract class L2Playable extends L2Character {
         return true;
     }
 
-    public boolean checkIfPvP(L2PcInstance target) {
-        final L2PcInstance player = getActingPlayer();
+    public boolean checkIfPvP(Player target) {
+        final Player player = getActingPlayer();
 
         if ((player == null) //
                 || (target == null) //
@@ -239,11 +239,11 @@ public abstract class L2Playable extends L2Character {
         _lockedTarget = cha;
     }
 
-    public void setTransferDamageTo(L2PcInstance val) {
+    public void setTransferDamageTo(Player val) {
         transferDmgTo = val;
     }
 
-    public L2PcInstance getTransferingDamageTo() {
+    public Player getTransferingDamageTo() {
         return transferDmgTo;
     }
 

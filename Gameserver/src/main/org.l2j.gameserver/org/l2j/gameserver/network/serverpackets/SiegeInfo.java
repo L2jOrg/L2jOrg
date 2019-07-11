@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -34,9 +34,9 @@ public class SiegeInfo extends ServerPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(SiegeInfo.class);
 
     private final Castle _castle;
-    private final L2PcInstance _player;
+    private final Player _player;
 
-    public SiegeInfo(Castle castle, L2PcInstance player) {
+    public SiegeInfo(Castle castle, Player player) {
         _castle = castle;
         _player = player;
     }

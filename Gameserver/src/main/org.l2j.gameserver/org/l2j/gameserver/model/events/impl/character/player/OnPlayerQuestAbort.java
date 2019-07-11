@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -24,15 +24,15 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author Sdw
  */
 public class OnPlayerQuestAbort implements IBaseEvent {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final int _questId;
 
-    public OnPlayerQuestAbort(L2PcInstance activeChar, int questId) {
+    public OnPlayerQuestAbort(Player activeChar, int questId) {
         _activeChar = activeChar;
         _questId = questId;
     }
 
-    public final L2PcInstance getActiveChar() {
+    public final Player getActiveChar() {
         return _activeChar;
     }
 

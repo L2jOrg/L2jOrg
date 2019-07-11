@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets.pledgebonus;
 import org.l2j.gameserver.data.xml.impl.ClanRewardData;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.L2GameClient;
@@ -18,9 +18,9 @@ import org.slf4j.LoggerFactory;
 public class ExPledgeBonusOpen extends ServerPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(ExPledgeBonusOpen.class);
 
-    private final L2PcInstance _player;
+    private final Player _player;
 
-    public ExPledgeBonusOpen(L2PcInstance player) {
+    public ExPledgeBonusOpen(Player player) {
         _player = player;
     }
 

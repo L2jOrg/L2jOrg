@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.FriendlyNpcInstance;
 import org.l2j.gameserver.model.actor.instance.L2ControllableMobInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
 
@@ -43,7 +43,7 @@ public class AdminKill implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_kill"))
 		{
@@ -53,7 +53,7 @@ public class AdminKill implements IAdminCommandHandler
 			if (st.hasMoreTokens())
 			{
 				final String firstParam = st.nextToken();
-				final L2PcInstance plyr = L2World.getInstance().getPlayer(firstParam);
+				final Player plyr = L2World.getInstance().getPlayer(firstParam);
 				if (plyr != null)
 				{
 					if (st.hasMoreTokens())
@@ -123,7 +123,7 @@ public class AdminKill implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void kill(L2PcInstance activeChar, L2Character target)
+	private void kill(Player activeChar, L2Character target)
 	{
 		if (target.isPlayer())
 		{

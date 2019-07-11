@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.fishing;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -10,17 +10,17 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
  * @author Sdw
  */
 public class ExUserInfoFishing extends ServerPacket {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final boolean _isFishing;
     private final ILocational _baitLocation;
 
-    public ExUserInfoFishing(L2PcInstance activeChar, boolean isFishing, ILocational baitLocation) {
+    public ExUserInfoFishing(Player activeChar, boolean isFishing, ILocational baitLocation) {
         _activeChar = activeChar;
         _isFishing = isFishing;
         _baitLocation = baitLocation;
     }
 
-    public ExUserInfoFishing(L2PcInstance activeChar, boolean isFishing) {
+    public ExUserInfoFishing(Player activeChar, boolean isFishing) {
         _activeChar = activeChar;
         _isFishing = isFishing;
         _baitLocation = null;

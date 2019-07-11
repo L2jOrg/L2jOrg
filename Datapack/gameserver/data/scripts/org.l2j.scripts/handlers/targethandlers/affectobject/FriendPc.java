@@ -20,7 +20,7 @@ import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
 import org.l2j.gameserver.model.zone.ZoneId;
 
@@ -37,8 +37,8 @@ public class FriendPc implements IAffectObjectHandler
 			return false;
 		}
 		
-		final L2PcInstance player = activeChar.getActingPlayer();
-		final L2PcInstance targetPlayer = target.getActingPlayer();
+		final Player player = activeChar.getActingPlayer();
+		final Player targetPlayer = target.getActingPlayer();
 		
 		if (player != null)
 		{

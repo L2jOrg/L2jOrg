@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets.adenadistribution;
 
 import org.l2j.gameserver.model.L2CommandChannel;
 import org.l2j.gameserver.model.L2Party;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.AdenaDistributionRequest;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -27,7 +27,7 @@ public class RequestDivideAdena extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if (player == null) {
             return;
         }
@@ -64,7 +64,7 @@ public class RequestDivideAdena extends ClientPacket {
             return;
         }
 
-        final List<L2PcInstance> targets = commandChannel != null ? commandChannel.getMembers() : party.getMembers();
+        final List<Player> targets = commandChannel != null ? commandChannel.getMembers() : party.getMembers();
 
         if (player.getAdena() < targets.size()) {
             player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_2);
@@ -88,7 +88,7 @@ public class RequestDivideAdena extends ClientPacket {
 
         final long memberAdenaGet = (long) Math.floor(_adenaCount / (float) targets.size());
         if (player.reduceAdena("Adena Distribution", memberAdenaGet * targets.size(), player, false)) {
-            for (L2PcInstance target : targets) {
+            for (Player target : targets) {
                 if ((target == null)) {
                     // TODO : handle that case here + regive adena OR filter with Objects::nonNull on memberCount ?
                     // those sys msg exists and bother me ADENA_WAS_NOT_DISTRIBUTED_TO_S1 / YOU_DID_NOT_RECEIVE_ADENA_DISTRIBUTION

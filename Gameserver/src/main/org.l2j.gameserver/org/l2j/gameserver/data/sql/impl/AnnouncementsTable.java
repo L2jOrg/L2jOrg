@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.sql.impl;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.announce.Announcement;
 import org.l2j.gameserver.model.announce.AnnouncementType;
 import org.l2j.gameserver.model.announce.AutoAnnouncement;
@@ -67,7 +67,7 @@ public final class AnnouncementsTable {
      *
      * @param player
      */
-    public void showAnnouncements(L2PcInstance player) {
+    public void showAnnouncements(Player player) {
         sendAnnouncements(player, AnnouncementType.NORMAL);
         sendAnnouncements(player, AnnouncementType.CRITICAL);
         sendAnnouncements(player, AnnouncementType.EVENT);
@@ -79,7 +79,7 @@ public final class AnnouncementsTable {
      * @param player
      * @param type
      */
-    private void sendAnnouncements(L2PcInstance player, AnnouncementType type) {
+    private void sendAnnouncements(Player player, AnnouncementType type) {
         for (IAnnouncement announce : _announcements.values()) {
             if (announce.isValid() && (announce.getType() == type)) {
                 player.sendPacket(new CreatureSay(0, //

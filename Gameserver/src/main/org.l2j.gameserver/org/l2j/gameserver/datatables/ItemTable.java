@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.instance.L2EventMonsterInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
 import org.l2j.gameserver.model.items.*;
@@ -241,7 +241,7 @@ public class ItemTable {
         return item;
     }
 
-    public L2ItemInstance createItem(String process, int itemId, int count, L2PcInstance actor) {
+    public L2ItemInstance createItem(String process, int itemId, int count, Player actor) {
         return createItem(process, itemId, count, actor, null);
     }
 
@@ -259,7 +259,7 @@ public class ItemTable {
      * @param actor     the player requesting the item destroy.
      * @param reference the object referencing current action like NPC selling item or previous item in transformation.
      */
-    public void destroyItem(String process, L2ItemInstance item, L2PcInstance actor, Object reference) {
+    public void destroyItem(String process, L2ItemInstance item, Player actor, Object reference) {
         synchronized (item) {
             final long old = item.getCount();
             item.setCount(0);

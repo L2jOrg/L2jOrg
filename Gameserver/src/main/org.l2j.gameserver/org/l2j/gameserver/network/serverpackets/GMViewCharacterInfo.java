@@ -3,12 +3,12 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.VariationInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class GMViewCharacterInfo extends ServerPacket {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final int _runSpd;
     private final int _walkSpd;
     private final int _swimRunSpd;
@@ -17,7 +17,7 @@ public class GMViewCharacterInfo extends ServerPacket {
     private final int _flyWalkSpd;
     private final double _moveMultiplier;
 
-    public GMViewCharacterInfo(L2PcInstance cha) {
+    public GMViewCharacterInfo(Player cha) {
         _activeChar = cha;
         _moveMultiplier = cha.getMovementSpeedMultiplier();
         _runSpd = (int) Math.round(cha.getRunSpeed() / _moveMultiplier);

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.shuttle;
 
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2ShuttleInstance;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.slf4j.Logger;
@@ -26,7 +26,7 @@ public class RequestShuttleGetOn extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }

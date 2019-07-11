@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.mentoring;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -9,9 +9,9 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
  * @author Gnacik, UnAfraid
  */
 public class ExMentorAdd extends ServerPacket {
-    final L2PcInstance _mentor;
+    final Player _mentor;
 
-    public ExMentorAdd(L2PcInstance mentor) {
+    public ExMentorAdd(Player mentor) {
         _mentor = mentor;
     }
 

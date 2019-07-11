@@ -6,7 +6,7 @@ import org.l2j.gameserver.handler.IChatHandler;
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.PcCondOverride;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -25,7 +25,7 @@ public final class ChatWhisper implements IChatHandler {
 	};
 	
 	@Override
-	public void handleChat(ChatType type, L2PcInstance activeChar, String target, String text) {
+	public void handleChat(ChatType type, Player activeChar, String target, String text) {
 		if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type)) {
 			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
 			return;
@@ -41,7 +41,7 @@ public final class ChatWhisper implements IChatHandler {
 			return;
 		}
 		
-		final L2PcInstance receiver = L2World.getInstance().getPlayer(target);
+		final Player receiver = L2World.getInstance().getPlayer(target);
 		
 		if ((receiver != null) && !receiver.isSilenceMode(activeChar.getObjectId())) {
 

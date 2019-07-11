@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets.friend;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.L2FriendSay;
@@ -29,7 +29,7 @@ public final class RequestSendFriendMsg extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
@@ -38,7 +38,7 @@ public final class RequestSendFriendMsg extends ClientPacket {
             return;
         }
 
-        final L2PcInstance targetPlayer = L2World.getInstance().getPlayer(_reciever);
+        final Player targetPlayer = L2World.getInstance().getPlayer(_reciever);
         if ((targetPlayer == null) || !targetPlayer.getFriendList().contains(activeChar.getObjectId())) {
             activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
             return;

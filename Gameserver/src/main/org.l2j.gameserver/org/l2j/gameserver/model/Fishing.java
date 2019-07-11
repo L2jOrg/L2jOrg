@@ -7,7 +7,7 @@ import org.l2j.gameserver.data.xml.impl.FishingData;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerFishing;
 import org.l2j.gameserver.model.interfaces.ILocational;
@@ -39,13 +39,13 @@ import java.util.concurrent.ScheduledFuture;
  */
 public class Fishing {
     protected static final Logger LOGGER = LoggerFactory.getLogger(Fishing.class);
-    private final L2PcInstance _player;
+    private final Player _player;
     private volatile ILocational _baitLocation = new Location(0, 0, 0);
     private ScheduledFuture<?> _reelInTask;
     private ScheduledFuture<?> _startFishingTask;
     private boolean _isFishing = false;
 
-    public Fishing(L2PcInstance player) {
+    public Fishing(Player player) {
         _player = player;
     }
 
@@ -59,7 +59,7 @@ public class Fishing {
      * @param waterZone   the water zone
      * @return the bait z or {@link Integer#MIN_VALUE} when you cannot fish here
      */
-    private static int computeBaitZ(L2PcInstance player, int baitX, int baitY, L2FishingZone fishingZone, L2WaterZone waterZone) {
+    private static int computeBaitZ(Player player, int baitX, int baitY, L2FishingZone fishingZone, L2WaterZone waterZone) {
         if ((fishingZone == null)) {
             return Integer.MIN_VALUE;
         }

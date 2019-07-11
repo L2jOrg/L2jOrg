@@ -4,7 +4,7 @@ import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.util.FilterUtil;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.slf4j.Logger;
@@ -59,7 +59,7 @@ public class HtmCache {
         return null;
     }
 
-    public String getHtmForce(L2PcInstance player, String path) {
+    public String getHtmForce(Player player, String path) {
         String content = getHtm(player, path);
         if (content == null) {
             content = "<html><body>My text is missing:<br>" + path + "</body></html>";
@@ -68,7 +68,7 @@ public class HtmCache {
         return content;
     }
 
-    public String getHtm(L2PcInstance player, String path) {
+    public String getHtm(Player player, String path) {
         final String prefix = player != null ? player.getHtmlPrefix() : "en";
         String newPath = null;
         String content;

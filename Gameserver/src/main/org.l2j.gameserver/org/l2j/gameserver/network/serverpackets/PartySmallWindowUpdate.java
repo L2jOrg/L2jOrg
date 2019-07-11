@@ -1,15 +1,15 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.PartySmallWindowUpdateType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public final class PartySmallWindowUpdate extends AbstractMaskPacket<PartySmallWindowUpdateType> {
-    private final L2PcInstance _member;
+    private final Player _member;
     private int _flags = 0;
 
-    public PartySmallWindowUpdate(L2PcInstance member, boolean addAllFlags) {
+    public PartySmallWindowUpdate(Player member, boolean addAllFlags) {
         _member = member;
         if (addAllFlags) {
             for (PartySmallWindowUpdateType type : PartySmallWindowUpdateType.values()) {

@@ -27,7 +27,7 @@ import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.quest.Quest;
@@ -44,7 +44,7 @@ public class QuestLink implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, Player activeChar, L2Character target)
 	{
 		String quest = "";
 		try
@@ -76,12 +76,12 @@ public class QuestLink implements IBypassHandler
 	/**
 	 * Open a choose quest window on client with all quests available of the L2NpcInstance.<br>
 	 * <b><u>Actions</u>:</b><br>
-	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance</li>
-	 * @param player The L2PcInstance that talk with the L2NpcInstance
+	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the Player</li>
+	 * @param player The Player that talk with the L2NpcInstance
 	 * @param npc The table containing quests of the L2NpcInstance
 	 * @param quests
 	 */
-	private static void showQuestChooseWindow(L2PcInstance player, L2Npc npc, Collection<Quest> quests)
+	private static void showQuestChooseWindow(Player player, L2Npc npc, Collection<Quest> quests)
 	{
 		final StringBuilder sbStarted = new StringBuilder(128);
 		final StringBuilder sbCanStart = new StringBuilder(128);
@@ -169,7 +169,7 @@ public class QuestLink implements IBypassHandler
 			content = Quest.getNoQuestMsg(player);
 		}
 		
-		// Send a Server->Client packet NpcHtmlMessage to the L2PcInstance in order to display the message of the L2NpcInstance
+		// Send a Server->Client packet NpcHtmlMessage to the Player in order to display the message of the L2NpcInstance
 		content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
 		player.sendPacket(new NpcHtmlMessage(npc.getObjectId(), content));
 	}
@@ -179,14 +179,14 @@ public class QuestLink implements IBypassHandler
 	 * <b><u>Actions</u>:</b><br>
 	 * <ul>
 	 * <li>Get the text of the quest state in the folder data/scripts/quests/questId/stateId.htm</li>
-	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance</li>
-	 * <li>Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet</li>
+	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the Player</li>
+	 * <li>Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet</li>
 	 * </ul>
-	 * @param player the L2PcInstance that talk with the {@code npc}
+	 * @param player the Player that talk with the {@code npc}
 	 * @param npc the L2NpcInstance that chats with the {@code player}
 	 * @param questId the Id of the quest to display the message
 	 */
-	private static void showQuestWindow(L2PcInstance player, L2Npc npc, String questId)
+	private static void showQuestWindow(Player player, L2Npc npc, String questId)
 	{
 		String content = null;
 		
@@ -225,23 +225,23 @@ public class QuestLink implements IBypassHandler
 			content = Quest.getNoQuestMsg(player); // no quests found
 		}
 		
-		// Send a Server->Client packet NpcHtmlMessage to the L2PcInstance in order to display the message of the L2NpcInstance
+		// Send a Server->Client packet NpcHtmlMessage to the Player in order to display the message of the L2NpcInstance
 		if (content != null)
 		{
 			content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
 			player.sendPacket(new NpcHtmlMessage(npc.getObjectId(), content));
 		}
 		
-		// Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
+		// Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
 	/**
 	 * Collect awaiting quests/start points and display a QuestChooseWindow (if several available) or QuestWindow.
-	 * @param player the L2PcInstance that talk with the {@code npc}.
+	 * @param player the Player that talk with the {@code npc}.
 	 * @param npc the L2NpcInstance that chats with the {@code player}.
 	 */
-	private static void showQuestWindow(L2PcInstance player, L2Npc npc)
+	private static void showQuestWindow(Player player, L2Npc npc)
 	{
 		//@formatter:off
 		final Set<Quest> quests = npc.getListeners(EventType.ON_NPC_TALK).stream()

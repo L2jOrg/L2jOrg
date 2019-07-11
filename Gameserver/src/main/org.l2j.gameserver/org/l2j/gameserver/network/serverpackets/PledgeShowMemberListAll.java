@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -31,7 +31,7 @@ public class PledgeShowMemberListAll extends ServerPacket {
         _isSubPledge = isSubPledge;
     }
 
-    public static void sendAllTo(L2PcInstance player) {
+    public static void sendAllTo(Player player) {
         final L2Clan clan = player.getClan();
         if (clan != null) {
             for (L2Clan.SubPledge subPledge : clan.getAllSubPledges()) {
@@ -76,7 +76,7 @@ public class PledgeShowMemberListAll extends ServerPacket {
             writeString(m.getName());
             writeInt(m.getLevel());
             writeInt(m.getClassId());
-            final L2PcInstance player = m.getPlayerInstance();
+            final Player player = m.getPlayerInstance();
             if (player != null) {
                 writeInt(player.getAppearance().getSex() ? 1 : 0); // no visible effect
                 writeInt(player.getRace().ordinal()); // packet.putInt(1);

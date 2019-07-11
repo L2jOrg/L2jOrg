@@ -2,7 +2,7 @@ package org.l2j.gameserver.util;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoAbnormalVisualEffect;
 
@@ -20,7 +20,7 @@ public final class BuilderUtil {
      * @param player
      * @param message
      */
-    public static void sendSysMessage(L2PcInstance player, String message) {
+    public static void sendSysMessage(Player player, String message) {
         if (Config.GM_STARTUP_BUILDER_HIDE) {
             player.sendPacket(new CreatureSay(0, ChatType.GENERAL, "SYS", message));
         } else {
@@ -34,7 +34,7 @@ public final class BuilderUtil {
      * @param player
      * @param message
      */
-    public static void sendHtmlMessage(L2PcInstance player, String message) {
+    public static void sendHtmlMessage(Player player, String message) {
         player.sendPacket(new CreatureSay(0, ChatType.GENERAL, "HTML", message));
     }
 
@@ -45,7 +45,7 @@ public final class BuilderUtil {
      * @param hide
      * @return {@code true} if hide state was changed, otherwise {@code false}
      */
-    public static boolean setHiding(L2PcInstance player, boolean hide) {
+    public static boolean setHiding(Player player, boolean hide) {
         if (player.isInvisible() && hide) {
             // already hiding
             return false;

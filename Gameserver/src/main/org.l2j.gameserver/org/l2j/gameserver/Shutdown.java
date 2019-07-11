@@ -8,7 +8,7 @@ import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.network.Disconnection;
@@ -196,7 +196,7 @@ public class Shutdown extends Thread {
      * @param seconds    seconds until shutdown
      * @param restart    true if the server will restart after shutdown
      */
-    public void startShutdown(L2PcInstance activeChar, int seconds, boolean restart) {
+    public void startShutdown(Player activeChar, int seconds, boolean restart) {
         _shutdownMode = restart ? GM_RESTART : GM_SHUTDOWN;
 
         if (activeChar != null) {
@@ -245,7 +245,7 @@ public class Shutdown extends Thread {
      *
      * @param activeChar GM who issued the abort command
      */
-    public void abort(L2PcInstance activeChar) {
+    public void abort(Player activeChar) {
         LOGGER.warn("GM: " + (activeChar != null ? activeChar.getName() + "(" + activeChar.getObjectId() + ") " : "") + "issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
         if (_counterInstance != null) {
             _counterInstance._abort();
@@ -442,7 +442,7 @@ public class Shutdown extends Thread {
      * This disconnects all clients from the server.
      */
     private void disconnectAllCharacters() {
-        for (L2PcInstance player : L2World.getInstance().getPlayers()) {
+        for (Player player : L2World.getInstance().getPlayers()) {
             Disconnection.of(player).defaultSequence(true);
         }
     }

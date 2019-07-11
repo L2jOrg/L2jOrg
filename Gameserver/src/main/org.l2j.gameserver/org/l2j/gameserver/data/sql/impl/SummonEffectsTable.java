@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.data.sql.impl;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
 
 import java.util.HashMap;
@@ -47,7 +47,7 @@ public class SummonEffectsTable {
         return _servitorEffects;
     }
 
-    public Map<Integer, List<SummonEffect>> getServitorEffects(L2PcInstance owner) {
+    public Map<Integer, List<SummonEffect>> getServitorEffects(Player owner) {
         final Map<Integer, Map<Integer, List<SummonEffect>>> servitorMap = _servitorEffects.get(owner.getObjectId());
         if (servitorMap == null) {
             return null;

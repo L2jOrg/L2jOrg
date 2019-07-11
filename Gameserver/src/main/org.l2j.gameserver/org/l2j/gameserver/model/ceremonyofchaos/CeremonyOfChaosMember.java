@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.ceremonyofchaos;
 
 import org.l2j.gameserver.enums.CeremonyOfChaosResult;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.eventengine.AbstractEventMember;
 
 /**
@@ -13,7 +13,7 @@ public class CeremonyOfChaosMember extends AbstractEventMember<CeremonyOfChaosEv
     private CeremonyOfChaosResult _resultType = CeremonyOfChaosResult.LOSE;
     private boolean _isDefeated = false;
 
-    public CeremonyOfChaosMember(L2PcInstance player, CeremonyOfChaosEvent event, int position) {
+    public CeremonyOfChaosMember(Player player, CeremonyOfChaosEvent event, int position) {
         super(player, event);
         _position = position;
     }

@@ -18,7 +18,7 @@ package handlers.usercommandhandlers;
 
 import org.l2j.gameserver.handler.IUserCommandHandler;
 import org.l2j.gameserver.model.L2CommandChannel;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ExMultiPartyCommandChannelInfo;
 
 /**
@@ -33,7 +33,7 @@ public class ChannelInfo implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, Player activeChar)
 	{
 		if (id != COMMAND_IDS[0])
 		{

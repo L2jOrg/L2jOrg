@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.enums.SubclassType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.SubClass;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -19,7 +19,7 @@ public class ExSubjobInfo extends ServerPacket {
     private final int _type;
     private final List<SubInfo> _subs;
 
-    public ExSubjobInfo(L2PcInstance player, SubclassInfoType type) {
+    public ExSubjobInfo(Player player, SubclassInfoType type) {
         _currClassId = player.getClassId().getId();
         _currRace = player.getRace().ordinal();
         _type = type.ordinal();
@@ -62,7 +62,7 @@ public class ExSubjobInfo extends ServerPacket {
             _type = sub.isDualClass() ? SubclassType.DUALCLASS.ordinal() : SubclassType.SUBCLASS.ordinal();
         }
 
-        public SubInfo(L2PcInstance player) {
+        public SubInfo(Player player) {
             _index = 0;
             _classId = player.getBaseClass();
             _level = player.getStat().getBaseLevel();

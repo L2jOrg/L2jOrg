@@ -17,7 +17,7 @@
 package quests.Q00303_CollectArrowheads;
 
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
@@ -48,7 +48,7 @@ public final class Q00303_CollectArrowheads extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, false);
 		if ((st != null) && event.equals("30029-04.htm"))
@@ -60,9 +60,9 @@ public final class Q00303_CollectArrowheads extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(L2Npc npc, Player player, boolean isSummon)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
+		final Player partyMember = getRandomPartyMember(player, 1);
 		if (partyMember != null)
 		{
 			final QuestState st = getQuestState(partyMember, false);
@@ -75,7 +75,7 @@ public final class Q00303_CollectArrowheads extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

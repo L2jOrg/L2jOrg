@@ -20,7 +20,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -65,7 +65,7 @@ public final class Hide extends AbstractEffect
 	{
 		if (effected.isPlayer())
 		{
-			final L2PcInstance activeChar = effected.getActingPlayer();
+			final Player activeChar = effected.getActingPlayer();
 			if (!activeChar.inObserverMode())
 			{
 				activeChar.setInvisible(false);

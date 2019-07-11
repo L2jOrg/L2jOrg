@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.events.impl.character.npc;
 
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -26,9 +26,9 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnNpcCanBeSeen implements IBaseEvent {
     private final L2Npc _npc;
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
 
-    public OnNpcCanBeSeen(L2Npc npc, L2PcInstance activeChar) {
+    public OnNpcCanBeSeen(L2Npc npc, Player activeChar) {
         _npc = npc;
         _activeChar = activeChar;
     }
@@ -37,7 +37,7 @@ public class OnNpcCanBeSeen implements IBaseEvent {
         return _npc;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _activeChar;
     }
 

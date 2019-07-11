@@ -24,7 +24,7 @@ import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PcStat;
 import org.l2j.gameserver.model.base.SubClass;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
@@ -100,7 +100,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
             return;
         }
 
-        for (L2PcInstance player : L2World.getInstance().getPlayers()) {
+        for (Player player : L2World.getInstance().getPlayers()) {
             player.setVitalityPoints(PcStat.MAX_VITALITY_POINTS, false);
 
             for (SubClass subclass : player.getSubClasses().values()) {

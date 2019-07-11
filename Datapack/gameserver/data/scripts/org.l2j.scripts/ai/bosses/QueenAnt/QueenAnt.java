@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Playable;
 import org.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
 import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
@@ -157,7 +157,7 @@ public final class QueenAnt extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		if (event.equalsIgnoreCase("heal"))
 		{
@@ -266,7 +266,7 @@ public final class QueenAnt extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isSummon)
+	public String onFactionCall(L2Npc npc, L2Npc caller, Player attacker, boolean isSummon)
 	{
 		if ((caller == null) || (npc == null))
 		{
@@ -285,7 +285,7 @@ public final class QueenAnt extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onAggroRangeEnter(L2Npc npc, Player player, boolean isSummon)
 	{
 		if ((npc == null) || (player.isGM() && player.isInvisible()))
 		{
@@ -339,7 +339,7 @@ public final class QueenAnt extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(L2Npc npc, Player killer, boolean isSummon)
 	{
 		final int npcId = npc.getId();
 		if (npcId == QUEEN)

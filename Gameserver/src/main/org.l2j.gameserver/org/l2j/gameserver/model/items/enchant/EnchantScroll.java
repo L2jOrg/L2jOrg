@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.items.enchant;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.impl.EnchantItemGroupsData;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.items.type.EtcItemType;
 import org.l2j.gameserver.model.items.type.ItemType;
@@ -119,7 +119,7 @@ public final class EnchantScroll extends AbstractEnchantItem {
      * @param enchantItem
      * @return the chance of current scroll's group.
      */
-    public double getChance(L2PcInstance player, L2ItemInstance enchantItem) {
+    public double getChance(Player player, L2ItemInstance enchantItem) {
         if (EnchantItemGroupsData.getInstance().getScrollGroup(_scrollGroupId) == null) {
             LOGGER.warn(": Unexistent enchant scroll group specified for enchant scroll: " + getId());
             return -1;
@@ -139,7 +139,7 @@ public final class EnchantScroll extends AbstractEnchantItem {
      * @param supportItem
      * @return the total chance for success rate of this scroll
      */
-    public EnchantResultType calculateSuccess(L2PcInstance player, L2ItemInstance enchantItem, EnchantSupportItem supportItem) {
+    public EnchantResultType calculateSuccess(Player player, L2ItemInstance enchantItem, EnchantSupportItem supportItem) {
         if (!isValid(enchantItem, supportItem)) {
             return EnchantResultType.ERROR;
         }

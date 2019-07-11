@@ -23,7 +23,7 @@ import org.l2j.gameserver.data.sql.impl.CharNameTable;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.punishment.PunishmentAffect;
 import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
@@ -66,7 +66,7 @@ public class AdminPunishment implements IAdminCommandHandler
 	private static SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		if (!st.hasMoreTokens())
@@ -158,7 +158,7 @@ public class AdminPunishment implements IAdminCommandHandler
 						}
 						case "player":
 						{
-							L2PcInstance target = null;
+							Player target = null;
 							if (st.hasMoreTokens())
 							{
 								final String playerName = st.nextToken();

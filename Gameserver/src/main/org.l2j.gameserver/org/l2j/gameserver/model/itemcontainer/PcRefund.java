@@ -2,18 +2,16 @@ package org.l2j.gameserver.model.itemcontainer;
 
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.ItemLocation;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
-
-import java.util.logging.Level;
 
 /**
  * @author DS
  */
 public class PcRefund extends ItemContainer {
-    private final L2PcInstance _owner;
+    private final Player _owner;
 
-    public PcRefund(L2PcInstance owner) {
+    public PcRefund(Player owner) {
         _owner = owner;
     }
 
@@ -23,7 +21,7 @@ public class PcRefund extends ItemContainer {
     }
 
     @Override
-    public L2PcInstance getOwner() {
+    public Player getOwner() {
         return _owner;
     }
 

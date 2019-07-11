@@ -17,7 +17,7 @@
 package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
 
@@ -45,9 +45,9 @@ public class AdminRide implements IAdminCommandHandler
 	private static final int JET_BIKE_TRANSFORMATION_ID = 20001;
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
-		final L2PcInstance player = getRideTarget(activeChar);
+		final Player player = getRideTarget(activeChar);
 		if (player == null)
 		{
 			return false;
@@ -127,9 +127,9 @@ public class AdminRide implements IAdminCommandHandler
 		return true;
 	}
 	
-	private L2PcInstance getRideTarget(L2PcInstance activeChar)
+	private Player getRideTarget(Player activeChar)
 	{
-		L2PcInstance player = null;
+		Player player = null;
 		
 		if ((activeChar.getTarget() == null) || (activeChar.getTarget().getObjectId() == activeChar.getObjectId()) || !activeChar.getTarget().isPlayer())
 		{
@@ -137,7 +137,7 @@ public class AdminRide implements IAdminCommandHandler
 		}
 		else
 		{
-			player = (L2PcInstance) activeChar.getTarget();
+			player = (Player) activeChar.getTarget();
 		}
 		
 		return player;

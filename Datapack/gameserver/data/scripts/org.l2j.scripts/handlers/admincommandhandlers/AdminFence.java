@@ -25,7 +25,7 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.L2FenceInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.html.PageBuilder;
 import org.l2j.gameserver.model.html.PageResult;
 import org.l2j.gameserver.model.html.styles.ButtonsStyle;
@@ -47,7 +47,7 @@ public class AdminFence implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String cmd = st.nextToken();
@@ -174,7 +174,7 @@ public class AdminFence implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private static void sendHtml(L2PcInstance activeChar, int page)
+	private static void sendHtml(Player activeChar, int page)
 	{
 		final PageResult result = PageBuilder.newBuilder(FenceData.getInstance().getFences().values(), 10, "bypass -h admin_listfence").currentPage(page).style(ButtonsStyle.INSTANCE).bodyHandler((pages, fence, sb) ->
 		{

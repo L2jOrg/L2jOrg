@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets.adenadistribution;
 
 import org.l2j.gameserver.model.L2CommandChannel;
 import org.l2j.gameserver.model.L2Party;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.AdenaDistributionRequest;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -21,7 +21,7 @@ public class RequestDivideAdenaStart extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if (player == null) {
             return;
         }
@@ -43,7 +43,7 @@ public class RequestDivideAdenaStart extends ClientPacket {
             return;
         }
 
-        final List<L2PcInstance> targets = commandChannel != null ? commandChannel.getMembers() : party.getMembers();
+        final List<Player> targets = commandChannel != null ? commandChannel.getMembers() : party.getMembers();
 
         if (player.getAdena() < targets.size()) {
             player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_2);

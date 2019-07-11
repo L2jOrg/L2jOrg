@@ -27,7 +27,7 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -360,7 +360,7 @@ public class Hero {
         HERO_MESSAGE.clear();
     }
 
-    public void showHeroDiary(L2PcInstance activeChar, int heroclass, int charid, int page) {
+    public void showHeroDiary(Player activeChar, int heroclass, int charid, int page) {
         final int perpage = 10;
         final List<StatsSet> mainList = HERO_DIARY.get(charid);
         if (mainList != null) {
@@ -425,7 +425,7 @@ public class Hero {
         }
     }
 
-    public void showHeroFights(L2PcInstance activeChar, int heroclass, int charid, int page) {
+    public void showHeroFights(Player activeChar, int heroclass, int charid, int page) {
         final int perpage = 20;
         int _win = 0;
         int _loss = 0;
@@ -503,7 +503,7 @@ public class Hero {
         updateHeroes(true);
 
         for (Integer objectId : HEROES.keySet()) {
-            final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
+            final Player player = L2World.getInstance().getPlayer(objectId);
             if (player == null) {
                 continue;
             }
@@ -692,7 +692,7 @@ public class Hero {
      * @param player  the player instance
      * @param message String to set
      */
-    public void setHeroMessage(L2PcInstance player, String message) {
+    public void setHeroMessage(Player player, String message) {
         HERO_MESSAGE.put(player.getObjectId(), message);
     }
 
@@ -760,7 +760,7 @@ public class Hero {
      *
      * @param player the player to become hero
      */
-    public void claimHero(L2PcInstance player) {
+    public void claimHero(Player player) {
         StatsSet hero = HEROES.get(player.getObjectId());
         if (hero == null) {
             hero = new StatsSet();

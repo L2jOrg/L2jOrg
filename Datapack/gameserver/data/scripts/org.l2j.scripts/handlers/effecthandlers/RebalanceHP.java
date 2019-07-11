@@ -20,7 +20,7 @@ import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -62,7 +62,7 @@ public final class RebalanceHP extends AbstractEffect
 		final L2Party party = effector.getParty();
 		if (party != null)
 		{
-			for (L2PcInstance member : party.getMembers())
+			for (Player member : party.getMembers())
 			{
 				if (!member.isDead() && GameUtils.checkIfInRange(skill.getAffectRange(), effector, member, true))
 				{
@@ -88,7 +88,7 @@ public final class RebalanceHP extends AbstractEffect
 			}
 			
 			double percentHP = currentHPs / fullHP;
-			for (L2PcInstance member : party.getMembers())
+			for (Player member : party.getMembers())
 			{
 				if (!member.isDead() && GameUtils.checkIfInRange(skill.getAffectRange(), effector, member, true))
 				{

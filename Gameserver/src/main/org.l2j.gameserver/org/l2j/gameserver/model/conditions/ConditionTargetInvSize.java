@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -41,7 +41,7 @@ public class ConditionTargetInvSize extends Condition {
     @Override
     public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item) {
         if ((effected != null) && effected.isPlayer()) {
-            final L2PcInstance target = effected.getActingPlayer();
+            final Player target = effected.getActingPlayer();
             return target.getInventory().getSize(i -> !i.isQuestItem()) <= (target.getInventoryLimit() - _size);
         }
         return false;

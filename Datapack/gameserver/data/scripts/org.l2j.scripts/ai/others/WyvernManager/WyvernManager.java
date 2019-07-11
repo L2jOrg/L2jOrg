@@ -22,7 +22,7 @@ import java.util.Map;
 import org.l2j.gameserver.Config;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Fort;
 
 import ai.AbstractNpcAI;
@@ -80,7 +80,7 @@ public final class WyvernManager extends AbstractNpcAI
 		addFirstTalkId(MANAGERS.keySet());
 	}
 	
-	private String mountWyvern(L2Npc npc, L2PcInstance player)
+	private String mountWyvern(L2Npc npc, Player player)
 	{
 		if (player.isMounted() && (player.getMountLevel() >= STRIDER_LVL) && CommonUtil.contains(STRIDERS, player.getMountNpcId()))
 		{
@@ -96,7 +96,7 @@ public final class WyvernManager extends AbstractNpcAI
 		return replacePart(player, "wyvernmanager-05.html");
 	}
 	
-	private boolean isOwnerClan(L2Npc npc, L2PcInstance player)
+	private boolean isOwnerClan(L2Npc npc, Player player)
 	{
 		switch (MANAGERS.get(npc.getId()))
 		{
@@ -174,18 +174,18 @@ public final class WyvernManager extends AbstractNpcAI
 		}
 	}
 	
-	private String replaceAll(L2Npc npc, L2PcInstance player)
+	private String replaceAll(L2Npc npc, Player player)
 	{
 		return replacePart(player, "wyvernmanager-01.html").replace("%residence_name%", getResidenceName(npc));
 	}
 	
-	private String replacePart(L2PcInstance player, String htmlFile)
+	private String replacePart(Player player, String htmlFile)
 	{
 		return getHtm(player, htmlFile).replace("%wyvern_fee%", String.valueOf(WYVERN_FEE)).replace("%strider_level%", String.valueOf(STRIDER_LVL));
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -244,7 +244,7 @@ public final class WyvernManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (!isOwnerClan(npc, player))

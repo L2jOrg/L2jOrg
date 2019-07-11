@@ -21,7 +21,7 @@ import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.quest.Event;
 import org.l2j.gameserver.model.skills.Skill;
@@ -51,7 +51,7 @@ public final class Rabbits extends Event implements ScriptEvent
 	private static final int TOTAL_CHEST_COUNT = 75;
 	private static final int TRANSFORMATION_ID = 105;
 	private final List<L2Npc> _npcs = new CopyOnWriteArrayList<>();
-	private final List<L2PcInstance> _players = new ArrayList<>();
+	private final List<Player> _players = new ArrayList<>();
 	private boolean _isActive = false;
 	
 	/**
@@ -84,7 +84,7 @@ public final class Rabbits extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public boolean eventStart(L2PcInstance eventMaker)
+	public boolean eventStart(Player eventMaker)
 	{
 		// Don't start event if its active
 		if (_isActive)
@@ -147,7 +147,7 @@ public final class Rabbits extends Event implements ScriptEvent
 		}
 		_npcs.clear();
 		
-		for (L2PcInstance player : _players)
+		for (Player player : _players)
 		{
 			if ((player != null) && (player.getTransformationId() == TRANSFORMATION_ID))
 			{
@@ -163,7 +163,7 @@ public final class Rabbits extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -198,13 +198,13 @@ public final class Rabbits extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		return npc.getId() + ".htm";
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(L2Npc npc, Player caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if (skill.getId() == RABBIT_TORNADO.getSkillId())
 		{
@@ -232,7 +232,7 @@ public final class Rabbits extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(L2Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if (_isActive && ((skill == null) || (skill.getId() != RABBIT_TORNADO.getSkillId())))
 		{
@@ -241,7 +241,7 @@ public final class Rabbits extends Event implements ScriptEvent
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
-	private static void dropItem(L2Npc npc, L2PcInstance player, int[][] droplist)
+	private static void dropItem(L2Npc npc, Player player, int[][] droplist)
 	{
 		final int chance = getRandom(100);
 		for (int[] drop : droplist)
@@ -267,7 +267,7 @@ public final class Rabbits extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public boolean eventBypass(L2PcInstance activeChar, String bypass)
+	public boolean eventBypass(Player activeChar, String bypass)
 	{
 		return false;
 	}

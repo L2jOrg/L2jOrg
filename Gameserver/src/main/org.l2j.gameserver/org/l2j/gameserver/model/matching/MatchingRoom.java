@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.MatchingRoomType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 
 import java.util.Iterator;
@@ -38,10 +38,10 @@ public abstract class MatchingRoom implements IIdentifiable {
     private int _minLvl;
     private int _maxLvl;
     private int _maxCount;
-    private volatile Set<L2PcInstance> _members;
-    private L2PcInstance _leader;
+    private volatile Set<Player> _members;
+    private Player _leader;
 
-    public MatchingRoom(String title, int loot, int minlvl, int maxlvl, int maxmem, L2PcInstance leader) {
+    public MatchingRoom(String title, int loot, int minlvl, int maxlvl, int maxmem, Player leader) {
         _id = MatchingRoomManager.getInstance().addMatchingRoom(this);
         _title = title;
         _loot = loot;
@@ -54,7 +54,7 @@ public abstract class MatchingRoom implements IIdentifiable {
         onRoomCreation(leader);
     }
 
-    public Set<L2PcInstance> getMembers() {
+    public Set<Player> getMembers() {
         if (_members == null) {
             synchronized (this) {
                 if (_members == null) {
@@ -66,7 +66,7 @@ public abstract class MatchingRoom implements IIdentifiable {
         return _members;
     }
 
-    public void addMember(L2PcInstance player) {
+    public void addMember(Player player) {
         if ((player.getLevel() < _minLvl) || (player.getLevel() > _maxLvl) || ((_members != null) && (_members.size() >= _maxCount))) {
             notifyInvalidCondition(player);
             return;
@@ -79,14 +79,14 @@ public abstract class MatchingRoom implements IIdentifiable {
         player.broadcastUserInfo(UserInfoType.CLAN);
     }
 
-    public void deleteMember(L2PcInstance player, boolean kicked) {
+    public void deleteMember(Player player, boolean kicked) {
         boolean leaderChanged = false;
 
         if (player == _leader) {
             if (getMembers().isEmpty()) {
                 MatchingRoomManager.getInstance().removeMatchingRoom(this);
             } else {
-                final Iterator<L2PcInstance> iter = getMembers().iterator();
+                final Iterator<Player> iter = getMembers().iterator();
                 if (iter.hasNext()) {
                     _leader = iter.next();
                     iter.remove();
@@ -157,25 +157,25 @@ public abstract class MatchingRoom implements IIdentifiable {
         _title = title;
     }
 
-    public L2PcInstance getLeader() {
+    public Player getLeader() {
         return _leader;
     }
 
-    public boolean isLeader(L2PcInstance player) {
+    public boolean isLeader(Player player) {
         return player == _leader;
     }
 
-    protected abstract void onRoomCreation(L2PcInstance player);
+    protected abstract void onRoomCreation(Player player);
 
-    protected abstract void notifyInvalidCondition(L2PcInstance player);
+    protected abstract void notifyInvalidCondition(Player player);
 
-    protected abstract void notifyNewMember(L2PcInstance player);
+    protected abstract void notifyNewMember(Player player);
 
-    protected abstract void notifyRemovedMember(L2PcInstance player, boolean kicked, boolean leaderChanged);
+    protected abstract void notifyRemovedMember(Player player, boolean kicked, boolean leaderChanged);
 
     public abstract void disbandRoom();
 
     public abstract MatchingRoomType getRoomType();
 
-    public abstract MatchingMemberType getMemberType(L2PcInstance player);
+    public abstract MatchingMemberType getMemberType(Player player);
 }

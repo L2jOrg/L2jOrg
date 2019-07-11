@@ -2,7 +2,7 @@ package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExCloseMPCC;
 import org.l2j.gameserver.network.serverpackets.ExMPCCPartyInfoUpdate;
@@ -21,7 +21,7 @@ import java.util.function.Function;
  */
 public class L2CommandChannel extends AbstractPlayerGroup {
     private final List<L2Party> _parties = new CopyOnWriteArrayList<>();
-    private L2PcInstance _commandLeader;
+    private Player _commandLeader;
     private int _channelLvl;
 
     /**
@@ -29,7 +29,7 @@ public class L2CommandChannel extends AbstractPlayerGroup {
      *
      * @param leader the leader of this command channel
      */
-    public L2CommandChannel(L2PcInstance leader) {
+    public L2CommandChannel(Player leader) {
         _commandLeader = leader;
         final L2Party party = leader.getParty();
         _parties.add(party);
@@ -127,8 +127,8 @@ public class L2CommandChannel extends AbstractPlayerGroup {
      * @return a list of all members in this command channel
      */
     @Override
-    public List<L2PcInstance> getMembers() {
-        final List<L2PcInstance> members = new LinkedList<>();
+    public List<Player> getMembers() {
+        final List<Player> members = new LinkedList<>();
         for (L2Party party : _parties) {
             members.addAll(party.getMembers());
         }
@@ -158,12 +158,12 @@ public class L2CommandChannel extends AbstractPlayerGroup {
      * @return the leader of this command channel
      */
     @Override
-    public L2PcInstance getLeader() {
+    public Player getLeader() {
         return _commandLeader;
     }
 
     @Override
-    public void setLeader(L2PcInstance leader) {
+    public void setLeader(Player leader) {
         _commandLeader = leader;
         if (leader.getLevel() > _channelLvl) {
             _channelLvl = leader.getLevel();
@@ -177,7 +177,7 @@ public class L2CommandChannel extends AbstractPlayerGroup {
      * @return {@code true} if he does, {@code false} otherwise
      */
     @Override
-    public boolean containsPlayer(L2PcInstance player) {
+    public boolean containsPlayer(Player player) {
         if ((_parties != null) && !_parties.isEmpty()) {
             for (L2Party party : _parties) {
                 if (party.containsPlayer(player)) {
@@ -194,7 +194,7 @@ public class L2CommandChannel extends AbstractPlayerGroup {
      * @see AbstractPlayerGroup#forEachMember(Function)
      */
     @Override
-    public boolean forEachMember(Function<L2PcInstance, Boolean> function) {
+    public boolean forEachMember(Function<Player, Boolean> function) {
         if ((_parties != null) && !_parties.isEmpty()) {
             for (L2Party party : _parties) {
                 if (!party.forEachMember(function)) {

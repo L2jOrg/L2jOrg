@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.enums.ClanWarState;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.clan.OnClanWarStart;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -84,7 +84,7 @@ public final class ClanWar {
         }
     }
 
-    public void onKill(L2PcInstance killer, L2PcInstance victim) {
+    public void onKill(Player killer, Player victim) {
         final L2Clan victimClan = victim.getClan();
         final L2Clan killerClan = killer.getClan();
 
@@ -139,7 +139,7 @@ public final class ClanWar {
         }
     }
 
-    public void cancel(L2PcInstance player, L2Clan cancelor) {
+    public void cancel(Player player, L2Clan cancelor) {
         final L2Clan winnerClan = cancelor.getId() == _attackerClanId ? ClanTable.getInstance().getClan(_attackedClanId) : ClanTable.getInstance().getClan(_attackerClanId);
 
         // Reduce reputation.

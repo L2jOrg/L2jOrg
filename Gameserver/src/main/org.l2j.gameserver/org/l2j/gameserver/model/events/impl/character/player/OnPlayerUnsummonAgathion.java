@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -9,16 +9,16 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerUnsummonAgathion implements IBaseEvent
 {
-    private final L2PcInstance _player;
+    private final Player _player;
     private final int _agathionId;
 
-    public OnPlayerUnsummonAgathion(L2PcInstance player, int agathionId)
+    public OnPlayerUnsummonAgathion(Player player, int agathionId)
     {
         _player = player;
         _agathionId = agathionId;
     }
 
-    public L2PcInstance getPlayer()
+    public Player getPlayer()
     {
         return _player;
     }

@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -57,7 +57,7 @@ public class AdminEnchant implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_enchant"))
 		{
@@ -168,11 +168,11 @@ public class AdminEnchant implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void setEnchant(L2PcInstance activeChar, int ench, int armorType)
+	private void setEnchant(Player activeChar, int ench, int armorType)
 	{
 		// get the target
 		
-		final L2PcInstance player = activeChar.getTarget() != null ? activeChar.getTarget().getActingPlayer() : activeChar;
+		final Player player = activeChar.getTarget() != null ? activeChar.getTarget().getActingPlayer() : activeChar;
 		
 		if (player == null)
 		{
@@ -211,7 +211,7 @@ public class AdminEnchant implements IAdminCommandHandler
 		}
 	}
 	
-	private void showMainPage(L2PcInstance activeChar)
+	private void showMainPage(Player activeChar)
 	{
 		AdminHtml.showAdminHtml(activeChar, "enchant.htm");
 	}

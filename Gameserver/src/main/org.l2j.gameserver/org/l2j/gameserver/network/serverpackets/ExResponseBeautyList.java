@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.xml.impl.BeautyShopData;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.beautyshop.BeautyItem;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -14,11 +14,11 @@ import java.util.Map;
 public class ExResponseBeautyList extends ServerPacket {
     public static final int SHOW_FACESHAPE = 1;
     public static final int SHOW_HAIRSTYLE = 0;
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final int _type;
     private final Map<Integer, BeautyItem> _beautyItem;
 
-    public ExResponseBeautyList(L2PcInstance activeChar, int type) {
+    public ExResponseBeautyList(Player activeChar, int type) {
         _activeChar = activeChar;
         _type = type;
         if (type == SHOW_HAIRSTYLE) {

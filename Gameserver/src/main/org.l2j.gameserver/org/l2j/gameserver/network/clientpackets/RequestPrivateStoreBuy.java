@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -58,7 +58,7 @@ public final class RequestPrivateStoreBuy extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if (player == null) {
             return;
         }
@@ -90,7 +90,7 @@ public final class RequestPrivateStoreBuy extends ClientPacket {
             return;
         }
 
-        final L2PcInstance storePlayer = (L2PcInstance) object;
+        final Player storePlayer = (Player) object;
         if (!player.isInsideRadius3D(storePlayer, L2Npc.INTERACTION_DISTANCE)) {
             return;
         }

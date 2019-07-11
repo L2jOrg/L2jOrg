@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2SkillLearn;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2FishermanInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2VillageMasterInstance;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.base.SubClass;
@@ -54,7 +54,7 @@ public final class RequestAcquireSkill extends ClientPacket {
     private AcquireSkillType _skillType;
     private int _subType;
 
-    public static void showSubUnitSkillList(L2PcInstance activeChar) {
+    public static void showSubUnitSkillList(Player activeChar) {
         final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableSubPledgeSkills(activeChar.getClan());
 
         if (skills.isEmpty()) {
@@ -70,7 +70,7 @@ public final class RequestAcquireSkill extends ClientPacket {
      * @param player the player to verify
      * @return {@code true} if the player meets the required conditions to learn a transformation, {@code false} otherwise
      */
-    public static boolean canTransform(L2PcInstance player) {
+    public static boolean canTransform(Player player) {
         if (Config.ALLOW_TRANSFORM_WITHOUT_QUEST) {
             return true;
         }
@@ -90,7 +90,7 @@ public final class RequestAcquireSkill extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
@@ -269,7 +269,7 @@ public final class RequestAcquireSkill extends ClientPacket {
      * @param skillLearn the skill to be learn.
      * @return {@code true} if all requirements are meet, {@code false} otherwise.
      */
-    private boolean checkPlayerSkill(L2PcInstance player, L2Npc trainer, L2SkillLearn skillLearn) {
+    private boolean checkPlayerSkill(Player player, L2Npc trainer, L2SkillLearn skillLearn) {
         if (skillLearn != null) {
             if ((skillLearn.getSkillId() == _id) && (skillLearn.getSkillLevel() == _level)) {
                 // Hack check.
@@ -366,7 +366,7 @@ public final class RequestAcquireSkill extends ClientPacket {
      * @param trainer the Npc teaching a skill.
      * @param skill   the skill to be learn.
      */
-    private void giveSkill(L2PcInstance player, L2Npc trainer, Skill skill) {
+    private void giveSkill(Player player, L2Npc trainer, Skill skill) {
         giveSkill(player, trainer, skill, true);
     }
 
@@ -378,7 +378,7 @@ public final class RequestAcquireSkill extends ClientPacket {
      * @param skill   the skill to be learn.
      * @param store
      */
-    private void giveSkill(L2PcInstance player, L2Npc trainer, Skill skill, boolean store) {
+    private void giveSkill(Player player, L2Npc trainer, Skill skill, boolean store) {
         // Send message.
         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_LEARNED_S1);
         sm.addSkillName(skill);
@@ -413,7 +413,7 @@ public final class RequestAcquireSkill extends ClientPacket {
      * @param trainer the Npc which the {@code player} is interacting
      * @param player  the active character
      */
-    private void showSkillList(L2Npc trainer, L2PcInstance player) {
+    private void showSkillList(L2Npc trainer, Player player) {
         if (trainer instanceof L2FishermanInstance) {
             L2FishermanInstance.showFishSkillList(player);
         }

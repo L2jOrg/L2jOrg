@@ -16,12 +16,10 @@
  */
 package handlers.bypasshandlers;
 
-import java.util.logging.Level;
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.WareHouseDepositList;
@@ -36,7 +34,7 @@ public class PrivateWarehouse implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, Player activeChar, L2Character target)
 	{
 		if (!Config.ALLOW_WAREHOUSE)
 		{
@@ -79,7 +77,7 @@ public class PrivateWarehouse implements IBypassHandler
 		return false;
 	}
 	
-	private static void showWithdrawWindow(L2PcInstance player)
+	private static void showWithdrawWindow(Player player)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		player.setActiveWarehouse(player.getWarehouse());

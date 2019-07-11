@@ -7,7 +7,7 @@ import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSelect;
@@ -97,7 +97,7 @@ public class CharacterSelect extends ClientPacket {
                     }
 
                     // load up character from disk
-                    final L2PcInstance cha = client.load(_charSlot);
+                    final Player cha = client.load(_charSlot);
                     if (cha == null) {
                         return; // handled in L2GameClient
                     }

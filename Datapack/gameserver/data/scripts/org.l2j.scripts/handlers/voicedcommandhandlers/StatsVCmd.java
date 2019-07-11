@@ -18,7 +18,7 @@ package handlers.voicedcommandhandlers;
 
 import org.l2j.gameserver.handler.IVoicedCommandHandler;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.L2Event;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -35,7 +35,7 @@ public class StatsVCmd implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
+	public boolean useVoicedCommand(String command, Player activeChar, String params)
 	{
 		if (!command.equals("stats") || (params == null) || params.isEmpty())
 		{
@@ -43,7 +43,7 @@ public class StatsVCmd implements IVoicedCommandHandler
 			return false;
 		}
 		
-		final L2PcInstance pc = L2World.getInstance().getPlayer(params);
+		final Player pc = L2World.getInstance().getPlayer(params);
 		if ((pc == null))
 		{
 			activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);

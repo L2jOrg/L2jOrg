@@ -2,13 +2,13 @@ package org.l2j.gameserver.model.itemcontainer;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ItemLocation;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
  * @author UnAfraid
  */
 public class PcFreight extends ItemContainer {
-    private final L2PcInstance _owner;
+    private final Player _owner;
     private final int _ownerId;
 
     public PcFreight(int object_id) {
@@ -17,7 +17,7 @@ public class PcFreight extends ItemContainer {
         restore();
     }
 
-    public PcFreight(L2PcInstance owner) {
+    public PcFreight(Player owner) {
         _owner = owner;
         _ownerId = owner.getObjectId();
     }
@@ -28,7 +28,7 @@ public class PcFreight extends ItemContainer {
     }
 
     @Override
-    public L2PcInstance getOwner() {
+    public Player getOwner() {
         return _owner;
     }
 

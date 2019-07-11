@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2SiegeClan;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.entity.Fort;
@@ -38,7 +38,7 @@ public final class RequestRestartPoint extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
 
         if (activeChar == null) {
             return;
@@ -81,7 +81,7 @@ public final class RequestRestartPoint extends ClientPacket {
         portPlayer(activeChar);
     }
 
-    protected final void portPlayer(L2PcInstance activeChar) {
+    protected final void portPlayer(Player activeChar) {
         Location loc = null;
         Instance instance = null;
 
@@ -218,9 +218,9 @@ public final class RequestRestartPoint extends ClientPacket {
     }
 
     class DeathTask implements Runnable {
-        final L2PcInstance activeChar;
+        final Player activeChar;
 
-        DeathTask(L2PcInstance _activeChar) {
+        DeathTask(Player _activeChar) {
             activeChar = _activeChar;
         }
 

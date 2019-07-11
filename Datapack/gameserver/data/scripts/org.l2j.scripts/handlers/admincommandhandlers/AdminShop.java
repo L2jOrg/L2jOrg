@@ -20,7 +20,7 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.data.xml.impl.MultisellData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.BuyList;
@@ -49,7 +49,7 @@ public class AdminShop implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_buy"))
 		{
@@ -99,7 +99,7 @@ public class AdminShop implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleBuyRequest(L2PcInstance activeChar, String command)
+	private void handleBuyRequest(Player activeChar, String command)
 	{
 		int val = -1;
 		try

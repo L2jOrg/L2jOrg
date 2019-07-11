@@ -4,7 +4,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerMenteeAdd;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -34,7 +34,7 @@ public class ConfirmMenteeAdd extends ClientPacket {
      * @param mentee
      * @return
      */
-    public static boolean validate(L2PcInstance mentor, L2PcInstance mentee) {
+    public static boolean validate(Player mentor, Player mentee) {
         if ((mentor == null) || (mentee == null)) {
             return false;
         } else if (!mentee.isOnline()) {
@@ -90,12 +90,12 @@ public class ConfirmMenteeAdd extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance mentee = client.getActiveChar();
+        final Player mentee = client.getActiveChar();
         if (mentee == null) {
             return;
         }
 
-        final L2PcInstance mentor = L2World.getInstance().getPlayer(_mentor);
+        final Player mentor = L2World.getInstance().getPlayer(_mentor);
         if (mentor == null) {
             return;
         }

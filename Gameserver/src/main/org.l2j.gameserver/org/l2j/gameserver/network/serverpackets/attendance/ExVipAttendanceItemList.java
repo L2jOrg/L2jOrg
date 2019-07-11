@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.attendance;
 
 import org.l2j.gameserver.data.xml.impl.AttendanceRewardData;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.L2GameClient;
@@ -15,7 +15,7 @@ public class ExVipAttendanceItemList extends ServerPacket {
     boolean _available;
     int _index;
 
-    public ExVipAttendanceItemList(L2PcInstance player) {
+    public ExVipAttendanceItemList(Player player) {
         final AttendanceInfoHolder attendanceInfo = player.getAttendanceInfo();
         _available = attendanceInfo.isRewardAvailable();
         _index = attendanceInfo.getRewardIndex();

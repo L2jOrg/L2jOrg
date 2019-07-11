@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.holders;
 
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.ISkillsHolder;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -14,7 +14,7 @@ import java.util.Map;
 public class PlayerSkillHolder implements ISkillsHolder {
     private final Map<Integer, Skill> _skills = new HashMap<>();
 
-    public PlayerSkillHolder(L2PcInstance player) {
+    public PlayerSkillHolder(Player player) {
         for (Skill skill : player.getSkills().values()) {
             // Adding only skills that can be learned by the player.
             if (SkillTreesData.getInstance().isSkillAllowed(player, skill)) {

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.holders;
 
 import org.l2j.gameserver.model.L2ArmorSet;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 
 import java.util.function.Function;
@@ -37,7 +37,7 @@ public class ArmorsetSkillHolder extends SkillHolder {
         return _isOptional;
     }
 
-    public boolean validateConditions(L2PcInstance player, L2ArmorSet armorSet, Function<L2ItemInstance, Integer> idProvider) {
+    public boolean validateConditions(Player player, L2ArmorSet armorSet, Function<L2ItemInstance, Integer> idProvider) {
         // Player's doesn't have full busy (1 of 3) artifact real slot
         if (_artifactSlotMask > armorSet.getArtifactSlotMask(player, _artifactBookSlot)) {
             return false;

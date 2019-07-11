@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -9,15 +9,15 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @since 2.6.0.0
  */
 public class OnPlayerProfessionCancel implements IBaseEvent {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final int _classId;
 
-    public OnPlayerProfessionCancel(L2PcInstance activeChar, int classId) {
+    public OnPlayerProfessionCancel(Player activeChar, int classId) {
         _activeChar = activeChar;
         _classId = classId;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _activeChar;
     }
 

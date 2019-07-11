@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.fishing;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -10,7 +10,7 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
  * @author -Wooden-
  */
 public class ExFishingStart extends ServerPacket {
-    private final L2PcInstance _player;
+    private final Player _player;
     private final int _fishType;
     private final int _baitType;
     private final ILocational _baitLocation;
@@ -21,7 +21,7 @@ public class ExFishingStart extends ServerPacket {
      * @param baitType - 0 = newbie, 1 = normal, 2 = night
      * @param baitLocation
      */
-    public ExFishingStart(L2PcInstance player, int fishType, int baitType, ILocational baitLocation) {
+    public ExFishingStart(Player player, int fishType, int baitType, ILocational baitLocation) {
         _player = player;
         _fishType = fishType;
         _baitType = baitType;

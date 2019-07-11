@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.holders;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 import java.io.Serializable;
 import java.util.concurrent.TimeUnit;
@@ -57,7 +57,7 @@ public class TrainingHolder implements Serializable {
         return _endTime == -1;
     }
 
-    public boolean isValid(L2PcInstance player) {
+    public boolean isValid(Player player) {
         return Config.TRAINING_CAMP_ENABLE && (player.getObjectId() == _objectId) && (player.getClassIndex() == _classIndex);
     }
 

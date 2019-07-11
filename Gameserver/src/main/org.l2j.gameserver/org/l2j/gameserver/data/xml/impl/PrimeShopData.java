@@ -4,7 +4,7 @@ import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.gameserver.data.database.dao.PrimeShopDAO;
 import org.l2j.gameserver.datatables.ItemTable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
 import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
@@ -108,7 +108,7 @@ public class PrimeShopData extends GameXmlReader {
         }
     }
 
-    public void showProductInfo(L2PcInstance player, int brId) {
+    public void showProductInfo(Player player, int brId) {
         final PrimeShopProduct item = primeItems.get(brId);
 
         if ((player == null) || (item == null)) {
@@ -137,7 +137,7 @@ public class PrimeShopData extends GameXmlReader {
         return Singleton.INSTANCE;
     }
 
-    public boolean canReceiveVipGift(L2PcInstance player) {
+    public boolean canReceiveVipGift(Player player) {
         return player.getVipTier() > 0 && !getDAO(PrimeShopDAO.class).hasBougthAnyItemInRangeToday(player.getObjectId(), VIP_GIFT_BASE_ID+1, VIP_GIFT_BASE_ID+7);
     }
 

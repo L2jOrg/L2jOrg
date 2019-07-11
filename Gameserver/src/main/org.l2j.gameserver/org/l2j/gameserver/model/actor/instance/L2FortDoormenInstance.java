@@ -30,7 +30,7 @@ public class L2FortDoormenInstance extends L2DoormenInstance {
     }
 
     @Override
-    public void showChatWindow(L2PcInstance player) {
+    public void showChatWindow(Player player) {
         player.sendPacket(ActionFailed.STATIC_PACKET);
 
         final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -48,7 +48,7 @@ public class L2FortDoormenInstance extends L2DoormenInstance {
     }
 
     @Override
-    protected final void openDoors(L2PcInstance player, String command) {
+    protected final void openDoors(Player player, String command) {
         final StringTokenizer st = new StringTokenizer(command.substring(10), ", ");
         st.nextToken();
 
@@ -58,7 +58,7 @@ public class L2FortDoormenInstance extends L2DoormenInstance {
     }
 
     @Override
-    protected final void closeDoors(L2PcInstance player, String command) {
+    protected final void closeDoors(Player player, String command) {
         final StringTokenizer st = new StringTokenizer(command.substring(11), ", ");
         st.nextToken();
 
@@ -68,7 +68,7 @@ public class L2FortDoormenInstance extends L2DoormenInstance {
     }
 
     @Override
-    protected final boolean isOwnerClan(L2PcInstance player) {
+    protected final boolean isOwnerClan(Player player) {
         if ((player.getClan() != null) && (getFort() != null) && (getFort().getOwnerClan() != null)) {
             if (player.getClanId() == getFort().getOwnerClan().getId()) {
                 return true;

@@ -6,7 +6,7 @@ import org.l2j.gameserver.data.xml.impl.EnchantItemData;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.enchant.EnchantResultType;
@@ -40,7 +40,7 @@ public final class RequestEnchantItem extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }

@@ -25,7 +25,7 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.SiegeGuardManager;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.L2Playable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
@@ -60,7 +60,7 @@ public final class MercTicket extends AbstractNpcAI implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
+		final Player activeChar = playable.getActingPlayer();
 		final Castle castle = CastleManager.getInstance().getCastle(activeChar);
 		if ((castle == null) || (activeChar.getClan() == null) || (castle.getOwnerId() != activeChar.getClanId()) || !activeChar.hasClanPrivilege(ClanPrivilege.CS_MERCENARIES))
 		{
@@ -104,7 +104,7 @@ public final class MercTicket extends AbstractNpcAI implements IItemHandler
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerDlgAnswer(OnPlayerDlgAnswer event)
 	{
-		final L2PcInstance activeChar = event.getActiveChar();
+		final Player activeChar = event.getActiveChar();
 		if (activeChar.removeAction(PlayerAction.MERCENARY_CONFIRM) && _items.containsKey(activeChar.getObjectId()))
 		{
 			if (SiegeGuardManager.getInstance().isTooCloseToAnotherTicket(activeChar))

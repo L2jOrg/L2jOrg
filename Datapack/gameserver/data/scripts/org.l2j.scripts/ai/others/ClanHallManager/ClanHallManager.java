@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2MerchantInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.residences.ResidenceFunction;
@@ -97,7 +97,7 @@ public final class ClanHallManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		final StringTokenizer st = new StringTokenizer(event, " ");
 		final String action = st.nextToken();
@@ -423,7 +423,7 @@ public final class ClanHallManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		String htmltext = null;
 		final ClanHall clanHall = npc.getClanHall();
@@ -463,7 +463,7 @@ public final class ClanHallManager extends AbstractNpcAI
 	
 	private void updateVisualEffects(ClanHall clanHall, L2Npc npc)
 	{
-		L2World.getInstance().forEachVisibleObject(npc, L2PcInstance.class, player -> player.sendPacket(new AgitDecoInfo(clanHall)));
+		L2World.getInstance().forEachVisibleObject(npc, Player.class, player -> player.sendPacket(new AgitDecoInfo(clanHall)));
 	}
 	
 	private String getFunctionInfo(ResidenceFunction func, String htmltext, String name)
@@ -485,7 +485,7 @@ public final class ClanHallManager extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private boolean isOwningClan(L2PcInstance player, L2Npc npc)
+	private boolean isOwningClan(Player player, L2Npc npc)
 	{
 		return ((npc.getClanHall().getOwnerId() == player.getClanId()) && (player.getClanId() != 0));
 	}

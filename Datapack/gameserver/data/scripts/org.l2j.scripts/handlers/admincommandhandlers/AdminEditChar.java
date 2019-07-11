@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Playable;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.html.PageBuilder;
@@ -96,7 +96,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_current_player"))
 		{
@@ -230,7 +230,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final L2Object target = activeChar.getTarget();
 				if (target.isPlayer())
 				{
-					final L2PcInstance player = target.getActingPlayer();
+					final Player player = target.getActingPlayer();
 					player.setPkKills(pk);
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
@@ -260,7 +260,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final L2Object target = activeChar.getTarget();
 				if ((target != null) && target.isPlayer())
 				{
-					final L2PcInstance player = (L2PcInstance) target;
+					final Player player = (Player) target;
 					player.setPvpKills(pvp);
 					player.updatePvpTitleAndColor(false);
 					player.broadcastUserInfo();
@@ -291,7 +291,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final L2Object target = activeChar.getTarget();
 				if ((target != null) && target.isPlayer())
 				{
-					final L2PcInstance player = (L2PcInstance) target;
+					final Player player = (Player) target;
 					player.setFame(fame);
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
@@ -321,7 +321,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final L2Object target = activeChar.getTarget();
 				if ((target != null) && target.isPlayer())
 				{
-					final L2PcInstance player = (L2PcInstance) target;
+					final Player player = (Player) target;
 					player.setRecomHave(recVal);
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
@@ -350,7 +350,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					return false;
 				}
-				final L2PcInstance player = target.getActingPlayer();
+				final Player player = target.getActingPlayer();
 				if ((ClassId.getClassId(classidval) != null) && (player.getClassId().getId() != classidval))
 				{
 					player.setClassId(classidval);
@@ -396,10 +396,10 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				final String val = command.substring(15);
 				final L2Object target = activeChar.getTarget();
-				L2PcInstance player = null;
+				Player player = null;
 				if ((target != null) && target.isPlayer())
 				{
-					player = (L2PcInstance) target;
+					player = (Player) target;
 				}
 				else
 				{
@@ -420,10 +420,10 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				final String val = command.substring(17);
 				final L2Object target = activeChar.getTarget();
-				L2PcInstance player = null;
+				Player player = null;
 				if ((target != null) && target.isPlayer())
 				{
-					player = (L2PcInstance) target;
+					player = (Player) target;
 				}
 				else
 				{
@@ -449,7 +449,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					// Delete party window for other party members
 					player.getParty().broadcastToPartyMembers(player, PartySmallWindowDeleteAll.STATIC_PACKET);
-					for (L2PcInstance member : player.getParty().getMembers())
+					for (Player member : player.getParty().getMembers())
 					{
 						// And re-add
 						if (member != player)
@@ -471,10 +471,10 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_setsex"))
 		{
 			final L2Object target = activeChar.getTarget();
-			L2PcInstance player = null;
+			Player player = null;
 			if ((target != null) && target.isPlayer())
 			{
-				player = (L2PcInstance) target;
+				player = (Player) target;
 			}
 			else
 			{
@@ -490,10 +490,10 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				final String val = command.substring(15);
 				final L2Object target = activeChar.getTarget();
-				L2PcInstance player = null;
+				Player player = null;
 				if ((target != null) && target.isPlayer())
 				{
-					player = (L2PcInstance) target;
+					player = (Player) target;
 				}
 				else
 				{
@@ -514,10 +514,10 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				final String val = command.substring(16);
 				final L2Object target = activeChar.getTarget();
-				L2PcInstance player = null;
+				Player player = null;
 				if ((target != null) && target.isPlayer())
 				{
-					player = (L2PcInstance) target;
+					player = (Player) target;
 				}
 				else
 				{
@@ -562,7 +562,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final boolean changeCreateExpiryTime = st.nextToken().equalsIgnoreCase("create");
 				
 				final String playerName = st.nextToken();
-				L2PcInstance player = null;
+				Player player = null;
 				player = L2World.getInstance().getPlayer(playerName);
 				
 				if (player == null)
@@ -628,7 +628,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_tracert"))
 		{
 			final String[] data = command.split(" ");
-			L2PcInstance pl = null;
+			Player pl = null;
 			if ((data.length > 1))
 			{
 				pl = L2World.getInstance().getPlayer(data[1]);
@@ -638,7 +638,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final L2Object target = activeChar.getTarget();
 				if ((target != null) && target.isPlayer())
 				{
-					pl = (L2PcInstance) target;
+					pl = (Player) target;
 				}
 			}
 			
@@ -774,9 +774,9 @@ public class AdminEditChar implements IAdminCommandHandler
 			
 			if (target.isPlayer())
 			{
-				if (((L2PcInstance) target).isInParty())
+				if (((Player) target).isInParty())
 				{
-					gatherPartyInfo((L2PcInstance) target, activeChar);
+					gatherPartyInfo((Player) target, activeChar);
 				}
 				else
 				{
@@ -791,10 +791,10 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_setnoble"))
 		{
-			L2PcInstance player = null;
+			Player player = null;
 			if ((activeChar.getTarget() != null) && (activeChar.getTarget().isPlayer()))
 			{
-				player = (L2PcInstance) activeChar.getTarget();
+				player = (Player) activeChar.getTarget();
 			}
 			else
 			{
@@ -988,10 +988,10 @@ public class AdminEditChar implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void listCharacters(L2PcInstance activeChar, int page)
+	private void listCharacters(Player activeChar, int page)
 	{
-		final List<L2PcInstance> players = new ArrayList<>(L2World.getInstance().getPlayers());
-		players.sort(Comparator.comparingLong(L2PcInstance::getUptime));
+		final List<Player> players = new ArrayList<>(L2World.getInstance().getPlayers());
+		players.sort(Comparator.comparingLong(Player::getUptime));
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(activeChar, "data/html/admin/charlist.htm");
@@ -1017,14 +1017,14 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(html);
 	}
 	
-	private void showCharacterInfo(L2PcInstance activeChar, L2PcInstance player)
+	private void showCharacterInfo(Player activeChar, Player player)
 	{
 		if (player == null)
 		{
 			final L2Object target = activeChar.getTarget();
 			if ((target != null) && target.isPlayer())
 			{
-				player = (L2PcInstance) target;
+				player = (Player) target;
 			}
 			else
 			{
@@ -1044,7 +1044,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	 * @param player
 	 * @param filename
 	 */
-	private void gatherCharacterInfo(L2PcInstance activeChar, L2PcInstance player, String filename)
+	private void gatherCharacterInfo(Player activeChar, Player player, String filename)
 	{
 		String ip = "N/A";
 		
@@ -1116,13 +1116,13 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void setTargetReputation(L2PcInstance activeChar, int newReputation)
+	private void setTargetReputation(Player activeChar, int newReputation)
 	{
 		final L2Object target = activeChar.getTarget();
-		L2PcInstance player = null;
+		Player player = null;
 		if (target.isPlayer())
 		{
-			player = (L2PcInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -1142,7 +1142,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		BuilderUtil.sendSysMessage(activeChar, "Successfully Changed karma for " + player.getName() + " from (" + oldReputation + ") to (" + newReputation + ").");
 	}
 	
-	private void editCharacter(L2PcInstance activeChar, String targetName)
+	private void editCharacter(Player activeChar, String targetName)
 	{
 		L2Object target = null;
 		if (targetName != null)
@@ -1156,7 +1156,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		if ((target != null) && target.isPlayer())
 		{
-			final L2PcInstance player = (L2PcInstance) target;
+			final Player player = (Player) target;
 			gatherCharacterInfo(activeChar, player, "charedit.htm");
 		}
 	}
@@ -1165,7 +1165,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	 * @param activeChar
 	 * @param CharacterToFind
 	 */
-	private void findCharacter(L2PcInstance activeChar, String CharacterToFind)
+	private void findCharacter(Player activeChar, String CharacterToFind)
 	{
 		int CharactersFound = 0;
 		String name;
@@ -1174,9 +1174,9 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		final StringBuilder replyMSG = new StringBuilder(1000);
 		
-		final List<L2PcInstance> players = new ArrayList<>(L2World.getInstance().getPlayers());
-		players.sort(Comparator.comparingLong(L2PcInstance::getUptime));
-		for (L2PcInstance player : players)
+		final List<Player> players = new ArrayList<>(L2World.getInstance().getPlayers());
+		players.sort(Comparator.comparingLong(Player::getUptime));
+		for (Player player : players)
 		{ // Add player info into new Table row
 			name = player.getName();
 			if (name.toLowerCase().contains(CharacterToFind.toLowerCase()))
@@ -1229,7 +1229,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	 * @param IpAdress
 	 * @throws IllegalArgumentException
 	 */
-	private void findCharactersPerIp(L2PcInstance activeChar, String IpAdress) throws IllegalArgumentException
+	private void findCharactersPerIp(Player activeChar, String IpAdress) throws IllegalArgumentException
 	{
 		boolean findDisconnected = false;
 		
@@ -1249,9 +1249,9 @@ public class AdminEditChar implements IAdminCommandHandler
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		adminReply.setFile(activeChar, "data/html/admin/ipfind.htm");
 		
-		final List<L2PcInstance> players = new ArrayList<>(L2World.getInstance().getPlayers());
-		players.sort(Comparator.comparingLong(L2PcInstance::getUptime));
-		for (L2PcInstance player : players)
+		final List<Player> players = new ArrayList<>(L2World.getInstance().getPlayers());
+		players.sort(Comparator.comparingLong(Player::getUptime));
+		for (Player player : players)
 		{
 			client = player.getClient();
 			if (client == null)
@@ -1329,9 +1329,9 @@ public class AdminEditChar implements IAdminCommandHandler
 	 * @param characterName
 	 * @throws IllegalArgumentException
 	 */
-	private void findCharactersPerAccount(L2PcInstance activeChar, String characterName) throws IllegalArgumentException
+	private void findCharactersPerAccount(Player activeChar, String characterName) throws IllegalArgumentException
 	{
-		final L2PcInstance player = L2World.getInstance().getPlayer(characterName);
+		final Player player = L2World.getInstance().getPlayer(characterName);
 		if (player == null)
 		{
 			throw new IllegalArgumentException("Player doesn't exist");
@@ -1353,16 +1353,16 @@ public class AdminEditChar implements IAdminCommandHandler
 	 * @param activeChar
 	 * @param multibox
 	 */
-	private void findDualbox(L2PcInstance activeChar, int multibox)
+	private void findDualbox(Player activeChar, int multibox)
 	{
-		final Map<String, List<L2PcInstance>> ipMap = new HashMap<>();
+		final Map<String, List<Player>> ipMap = new HashMap<>();
 		String ip = "0.0.0.0";
 		L2GameClient client;
 		final Map<String, Integer> dualboxIPs = new HashMap<>();
 		
-		final List<L2PcInstance> players = new ArrayList<>(L2World.getInstance().getPlayers());
-		players.sort(Comparator.comparingLong(L2PcInstance::getUptime));
-		for (L2PcInstance player : players)
+		final List<Player> players = new ArrayList<>(L2World.getInstance().getPlayers());
+		players.sort(Comparator.comparingLong(Player::getUptime));
+		for (Player player : players)
 		{
 			client = player.getClient();
 			if ((client == null) || client.isDetached())
@@ -1408,15 +1408,15 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void findDualboxStrict(L2PcInstance activeChar, int multibox)
+	private void findDualboxStrict(Player activeChar, int multibox)
 	{
-		final Map<IpPack, List<L2PcInstance>> ipMap = new HashMap<>();
+		final Map<IpPack, List<Player>> ipMap = new HashMap<>();
 		L2GameClient client;
 		final Map<IpPack, Integer> dualboxIPs = new HashMap<>();
 		
-		final List<L2PcInstance> players = new ArrayList<>(L2World.getInstance().getPlayers());
-		players.sort(Comparator.comparingLong(L2PcInstance::getUptime));
-		for (L2PcInstance player : players)
+		final List<Player> players = new ArrayList<>(L2World.getInstance().getPlayers());
+		players.sort(Comparator.comparingLong(Player::getUptime));
+		for (Player player : players)
 		{
 			client = player.getClient();
 			if ((client == null) || client.isDetached())
@@ -1536,7 +1536,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 	}
 	
-	private void gatherSummonInfo(L2Summon target, L2PcInstance activeChar)
+	private void gatherSummonInfo(L2Summon target, Player activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(activeChar, "data/html/admin/petinfo.htm");
@@ -1574,13 +1574,13 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(html);
 	}
 	
-	private void gatherPartyInfo(L2PcInstance target, L2PcInstance activeChar)
+	private void gatherPartyInfo(Player target, Player activeChar)
 	{
 		boolean color = true;
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(activeChar, "data/html/admin/partyinfo.htm");
 		final StringBuilder text = new StringBuilder(400);
-		for (L2PcInstance member : target.getParty().getMembers())
+		for (Player member : target.getParty().getMembers())
 		{
 			if (color)
 			{

@@ -45,7 +45,7 @@ public class L2BlockInstance extends L2MonsterInstance {
      * @param holder
      * @param team
      */
-    public void changeColor(L2PcInstance attacker, ArenaParticipantsHolder holder, int team) {
+    public void changeColor(Player attacker, ArenaParticipantsHolder holder, int team) {
         // Do not update color while sending old info
         synchronized (this) {
             final BlockCheckerEngine event = holder.getEvent();
@@ -104,7 +104,7 @@ public class L2BlockInstance extends L2MonsterInstance {
     }
 
     @Override
-    public void onAction(L2PcInstance player, boolean interact) {
+    public void onAction(Player player, boolean interact) {
         if (!canTarget(player)) {
             return;
         }
@@ -119,7 +119,7 @@ public class L2BlockInstance extends L2MonsterInstance {
         }
     }
 
-    private void increaseTeamPointsAndSend(L2PcInstance player, int team, BlockCheckerEngine eng) {
+    private void increaseTeamPointsAndSend(Player player, int team, BlockCheckerEngine eng) {
         eng.increasePlayerPoints(player, team);
 
         final int timeLeft = (int) ((eng.getStarterTime() - System.currentTimeMillis()) / 1000);
@@ -132,7 +132,7 @@ public class L2BlockInstance extends L2MonsterInstance {
         eng.getHolder().broadCastPacketToTeam(secretPoints);
     }
 
-    private void dropItem(int id, BlockCheckerEngine eng, L2PcInstance player) {
+    private void dropItem(int id, BlockCheckerEngine eng, Player player) {
         final L2ItemInstance drop = ItemTable.getInstance().createItem("Loot", id, 1, player, this);
         final int x = getX() + Rnd.get(50);
         final int y = getY() + Rnd.get(50);

@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.util.Broadcast;
 import org.slf4j.Logger;
@@ -88,7 +88,7 @@ public abstract class VoteSystem implements Runnable {
         }
 
         if (currentVotes >= (lastVotes + votesDiff)) {
-            Collection<L2PcInstance> pls = L2World.getInstance().getPlayers();
+            Collection<Player> pls = L2World.getInstance().getPlayers();
             if (allowReport) {
                 LOGGER.info("VoteSystem: Server votes on " + getSiteName() + ": " + currentVotes);
                 LOGGER.info("VoteSystem: Votes needed for next reward: " + ((currentVotes + votesDiff) - currentVotes));
@@ -96,7 +96,7 @@ public abstract class VoteSystem implements Runnable {
             announce(getSiteName() + ": Everyone has been rewarded.");
             announce(getSiteName() + ": Current vote count is " + currentVotes + ".");
             announce(getSiteName() + ": We need " + votesDiff + " vote(s) for next reward.");
-            for (L2PcInstance p : pls) {
+            for (Player p : pls) {
                 if ((p.getClient() == null) || p.getClient().isDetached()) {
                     continue;
                 }

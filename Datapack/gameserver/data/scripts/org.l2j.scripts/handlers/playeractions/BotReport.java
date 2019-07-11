@@ -20,7 +20,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
  * Bot Report button player action handler.
@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
 public final class BotReport implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		if (Config.BOTREPORT_ENABLE)
 		{

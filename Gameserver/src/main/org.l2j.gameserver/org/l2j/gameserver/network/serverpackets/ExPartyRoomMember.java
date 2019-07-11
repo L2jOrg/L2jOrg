@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.enums.MatchingMemberType;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.matching.PartyMatchingRoom;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -19,7 +19,7 @@ public class ExPartyRoomMember extends ServerPacket {
     private final PartyMatchingRoom _room;
     private final MatchingMemberType _type;
 
-    public ExPartyRoomMember(L2PcInstance player, PartyMatchingRoom room) {
+    public ExPartyRoomMember(Player player, PartyMatchingRoom room) {
         _room = room;
         _type = room.getMemberType(player);
     }
@@ -30,7 +30,7 @@ public class ExPartyRoomMember extends ServerPacket {
 
         writeInt(_type.ordinal());
         writeInt(_room.getMembersCount());
-        for (L2PcInstance member : _room.getMembers()) {
+        for (Player member : _room.getMembers()) {
             writeInt(member.getObjectId());
             writeString(member.getName());
             writeInt(member.getActiveClass());

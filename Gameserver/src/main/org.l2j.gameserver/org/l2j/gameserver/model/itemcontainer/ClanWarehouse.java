@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.itemcontainer;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.L2Clan;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanWHItemAdd;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanWHItemDestroy;
@@ -28,7 +28,7 @@ public final class ClanWarehouse extends Warehouse {
     }
 
     @Override
-    public L2PcInstance getOwner() {
+    public Player getOwner() {
         return _clan.getLeader().getPlayerInstance();
     }
 
@@ -43,7 +43,7 @@ public final class ClanWarehouse extends Warehouse {
     }
 
     @Override
-    public L2ItemInstance addItem(String process, int itemId, long count, L2PcInstance actor, Object reference) {
+    public L2ItemInstance addItem(String process, int itemId, long count, Player actor, Object reference) {
         final L2ItemInstance item = super.addItem(process, itemId, count, actor, reference);
 
         // Notify to scripts
@@ -52,21 +52,21 @@ public final class ClanWarehouse extends Warehouse {
     }
 
     @Override
-    public L2ItemInstance addItem(String process, L2ItemInstance item, L2PcInstance actor, Object reference) {
+    public L2ItemInstance addItem(String process, L2ItemInstance item, Player actor, Object reference) {
         // Notify to scripts
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanWHItemAdd(process, actor, item, this), item.getItem());
         return super.addItem(process, item, actor, reference);
     }
 
     @Override
-    public L2ItemInstance destroyItem(String process, L2ItemInstance item, long count, L2PcInstance actor, Object reference) {
+    public L2ItemInstance destroyItem(String process, L2ItemInstance item, long count, Player actor, Object reference) {
         // Notify to scripts
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanWHItemDestroy(process, actor, item, count, this), item.getItem());
         return super.destroyItem(process, item, count, actor, reference);
     }
 
     @Override
-    public L2ItemInstance transferItem(String process, int objectId, long count, ItemContainer target, L2PcInstance actor, Object reference) {
+    public L2ItemInstance transferItem(String process, int objectId, long count, ItemContainer target, Player actor, Object reference) {
         final L2ItemInstance item = getItemByObjectId(objectId);
 
         // Notify to scripts

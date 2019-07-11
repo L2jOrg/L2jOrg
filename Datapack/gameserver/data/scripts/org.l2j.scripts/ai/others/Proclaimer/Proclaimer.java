@@ -19,7 +19,7 @@ package ai.others.Proclaimer;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.NpcStringId;
@@ -58,7 +58,7 @@ public final class Proclaimer extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (!player.isOnDarkSide())
@@ -84,7 +84,7 @@ public final class Proclaimer extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (event.equals("giveBuff"))

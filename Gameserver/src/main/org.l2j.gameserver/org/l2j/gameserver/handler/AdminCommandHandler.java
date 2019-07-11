@@ -5,7 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.enums.PlayerAction;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2j.gameserver.util.GMAudit;
 import org.l2j.gameserver.util.TimeAmountInterpreter;
@@ -42,7 +42,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
     }
 
     /**
-     * WARNING: Please use {@link #useAdminCommand(L2PcInstance, String, boolean)} instead.
+     * WARNING: Please use {@link #useAdminCommand(Player, String, boolean)} instead.
      */
     @Override
     public IAdminCommandHandler getHandler(String adminCommand) {
@@ -53,7 +53,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
         return _datatable.get(command);
     }
 
-    public void useAdminCommand(L2PcInstance player, String fullCommand, boolean useConfirm) {
+    public void useAdminCommand(Player player, String fullCommand, boolean useConfirm) {
         final String command = fullCommand.split(" ")[0];
         final String commandNoPrefix = command.substring(6);
 

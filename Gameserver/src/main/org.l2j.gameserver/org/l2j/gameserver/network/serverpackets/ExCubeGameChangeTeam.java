@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -8,7 +8,7 @@ import org.l2j.gameserver.network.ServerPacketId;
  * @author mrTJO
  */
 public class ExCubeGameChangeTeam extends ServerPacket {
-    L2PcInstance _player;
+    Player _player;
     boolean _fromRedTeam;
 
     /**
@@ -17,7 +17,7 @@ public class ExCubeGameChangeTeam extends ServerPacket {
      * @param player      Player Instance
      * @param fromRedTeam Is Player from Red Team?
      */
-    public ExCubeGameChangeTeam(L2PcInstance player, boolean fromRedTeam) {
+    public ExCubeGameChangeTeam(Player player, boolean fromRedTeam) {
         _player = player;
         _fromRedTeam = fromRedTeam;
     }

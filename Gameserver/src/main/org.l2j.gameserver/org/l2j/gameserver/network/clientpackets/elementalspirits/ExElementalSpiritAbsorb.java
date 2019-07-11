@@ -4,7 +4,7 @@ import org.l2j.gameserver.data.elemental.ElementalSpirit;
 import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.enums.UserInfoType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritAbsorb;
@@ -57,7 +57,7 @@ public class ExElementalSpiritAbsorb extends ClientPacket {
 
     }
 
-    private boolean checkConditions(L2PcInstance player, ElementalSpirit spirit) {
+    private boolean checkConditions(Player player, ElementalSpirit spirit) {
         var noMeetConditions = false;
         if(noMeetConditions = player.getPrivateStoreType() != PrivateStoreType.NONE) {
             client.sendPacket(CANNOT_EVOLVE_ABSORB_EXTRACT_WHILE_USING_THE_PRIVATE_STORE_WORKSHOP);

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.actor.tasks.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
@@ -27,9 +27,9 @@ import org.l2j.gameserver.network.serverpackets.UserInfo;
  * @author UnAfraid
  */
 public class RecoGiveTask implements Runnable {
-    private final L2PcInstance _player;
+    private final Player _player;
 
-    public RecoGiveTask(L2PcInstance player) {
+    public RecoGiveTask(Player player) {
         _player = player;
     }
 

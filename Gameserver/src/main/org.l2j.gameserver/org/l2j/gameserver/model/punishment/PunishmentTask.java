@@ -6,7 +6,7 @@ import org.l2j.gameserver.handler.IPunishmentHandler;
 import org.l2j.gameserver.handler.PunishmentHandler;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -188,7 +188,7 @@ public class PunishmentTask implements Runnable {
         }
 
         if (_type == PunishmentType.CHAT_BAN && _affect == PunishmentAffect.CHARACTER) {
-            final L2PcInstance player = L2World.getInstance().getPlayer(Integer.valueOf(_key));
+            final Player player = L2World.getInstance().getPlayer(Integer.valueOf(_key));
             if (player != null) {
                 player.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.NO_CHAT);
             }

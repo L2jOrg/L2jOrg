@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.actor.request;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 
 /**
@@ -26,7 +26,7 @@ public class CompoundRequest extends AbstractRequest {
     private int _itemOne;
     private int _itemTwo;
 
-    public CompoundRequest(L2PcInstance activeChar) {
+    public CompoundRequest(Player activeChar) {
         super(activeChar);
     }
 

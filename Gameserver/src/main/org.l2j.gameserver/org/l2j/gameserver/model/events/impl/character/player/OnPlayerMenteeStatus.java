@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -24,15 +24,15 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnPlayerMenteeStatus implements IBaseEvent {
-    private final L2PcInstance _mentee;
+    private final Player _mentee;
     private final boolean _isOnline;
 
-    public OnPlayerMenteeStatus(L2PcInstance mentee, boolean isOnline) {
+    public OnPlayerMenteeStatus(Player mentee, boolean isOnline) {
         _mentee = mentee;
         _isOnline = isOnline;
     }
 
-    public L2PcInstance getMentee() {
+    public Player getMentee() {
         return _mentee;
     }
 

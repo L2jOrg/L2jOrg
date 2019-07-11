@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.ChatHandler;
 import org.l2j.gameserver.handler.IChatHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -79,7 +79,7 @@ public final class Say2 extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
@@ -198,7 +198,7 @@ public final class Say2 extends ClientPacket {
         _text = filteredText;
     }
 
-    private boolean parseAndPublishItem(L2GameClient client, L2PcInstance owner) {
+    private boolean parseAndPublishItem(L2GameClient client, Player owner) {
         int pos1 = -1;
         while ((pos1 = _text.indexOf(8, pos1)) > -1) {
             int pos = _text.indexOf("ID=", pos1);

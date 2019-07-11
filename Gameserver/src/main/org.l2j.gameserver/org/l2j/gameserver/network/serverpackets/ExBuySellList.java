@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -18,7 +18,7 @@ public class ExBuySellList extends AbstractItemPacket {
     private Collection<L2ItemInstance> _refundList = null;
     private double _castleTaxRate = 1;
 
-    public ExBuySellList(L2PcInstance player, boolean done) {
+    public ExBuySellList(Player player, boolean done) {
         final L2Summon pet = player.getPet();
         _sellList = player.getInventory().getItems(item -> !item.isEquipped() && item.isSellable() && ((pet == null) || (item.getObjectId() != pet.getControlObjectId())));
         _inventorySlots = player.getInventory().getItems((item) -> !item.isQuestItem()).size();
@@ -28,7 +28,7 @@ public class ExBuySellList extends AbstractItemPacket {
         _done = done;
     }
 
-    public ExBuySellList(L2PcInstance player, boolean done, double castleTaxRate) {
+    public ExBuySellList(Player player, boolean done, double castleTaxRate) {
         this(player, done);
         _castleTaxRate = 1 - castleTaxRate;
     }

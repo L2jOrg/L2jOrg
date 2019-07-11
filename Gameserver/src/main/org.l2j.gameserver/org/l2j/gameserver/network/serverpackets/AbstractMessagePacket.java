@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2NpcTemplate;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -125,7 +125,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
         return (T) this;
     }
 
-    public final T addPcName(L2PcInstance pc) {
+    public final T addPcName(Player pc) {
         append(new SMParam(TYPE_PLAYER_NAME, pc.getAppearance().getVisibleName()));
         return (T) this;
     }

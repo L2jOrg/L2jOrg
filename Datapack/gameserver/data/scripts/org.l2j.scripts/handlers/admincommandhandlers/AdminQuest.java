@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
 import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
@@ -61,7 +61,7 @@ public class AdminQuest implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_quest_reload"))
 		{
@@ -295,7 +295,7 @@ public class AdminQuest implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void showDir(String dir, L2PcInstance activeChar)
+	private void showDir(String dir, Player activeChar)
 	{
 		String replace = null;
 		File path;

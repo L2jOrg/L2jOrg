@@ -6,7 +6,7 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
@@ -26,7 +26,7 @@ public final class TradeRequest extends ClientPacket {
         _objectId = readInt();
     }
 
-    private void scheduleDeny(L2PcInstance player, String name) {
+    private void scheduleDeny(Player player, String name) {
         if (player != null) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DENIED_YOUR_REQUEST_TO_TRADE);
             sm.addString(name);
@@ -37,7 +37,7 @@ public final class TradeRequest extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance player = client.getActiveChar();
+        final Player player = client.getActiveChar();
         if (player == null) {
             return;
         }
@@ -79,7 +79,7 @@ public final class TradeRequest extends ClientPacket {
             return;
         }
 
-        final L2PcInstance partner = target.getActingPlayer();
+        final Player partner = target.getActingPlayer();
         if (partner.isInOlympiadMode() || player.isInOlympiadMode()) {
             player.sendMessage("A user currently participating in the Olympiad cannot accept or request a trade.");
             return;

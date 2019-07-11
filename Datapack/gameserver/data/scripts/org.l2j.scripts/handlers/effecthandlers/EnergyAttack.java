@@ -20,7 +20,7 @@ import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Attackable;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -80,7 +80,7 @@ public final class EnergyAttack extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance attacker = effector.getActingPlayer();
+		final Player attacker = effector.getActingPlayer();
 		
 		final int charge = Math.min(_chargeConsume, attacker.getCharges());
 		

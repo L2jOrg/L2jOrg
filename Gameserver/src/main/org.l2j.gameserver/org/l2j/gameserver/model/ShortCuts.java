@@ -18,12 +18,9 @@ package org.l2j.gameserver.model;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.enums.ShortcutType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.IRestorable;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
-import org.l2j.gameserver.model.items.type.EtcItemType;
-import org.l2j.gameserver.network.serverpackets.ExAutoSoulShot;
-import org.l2j.gameserver.network.serverpackets.ShortCutInit;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,10 +35,10 @@ import java.util.TreeMap;
 public class ShortCuts implements IRestorable {
     private static final int MAX_SHORTCUTS_PER_BAR = 12;
     private static final Logger LOGGER = LoggerFactory.getLogger(ShortCuts.class);
-    private final L2PcInstance _owner;
+    private final Player _owner;
     private final Map<Integer, Shortcut> _shortCuts = new TreeMap<>();
 
-    public ShortCuts(L2PcInstance owner) {
+    public ShortCuts(Player owner) {
         _owner = owner;
     }
 

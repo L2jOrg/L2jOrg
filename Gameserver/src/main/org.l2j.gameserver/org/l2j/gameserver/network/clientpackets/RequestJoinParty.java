@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.PartyRequest;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -28,7 +28,7 @@ public final class RequestJoinParty extends ClientPacket {
         _partyDistributionTypeId = readInt();
     }
 
-    private void scheduleDeny(L2PcInstance player) {
+    private void scheduleDeny(Player player) {
         if (player != null) {
             if (player.getParty() == null) {
                 player.sendPacket(SystemMessageId.THE_PARTY_HAS_DISPERSED);
@@ -41,12 +41,12 @@ public final class RequestJoinParty extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance requestor = client.getActiveChar();
+        final Player requestor = client.getActiveChar();
         if (requestor == null) {
             return;
         }
 
-        final L2PcInstance target = L2World.getInstance().getPlayer(_name);
+        final Player target = L2World.getInstance().getPlayer(_name);
         if (target == null) {
             requestor.sendPacket(SystemMessageId.YOU_MUST_FIRST_SELECT_A_USER_TO_INVITE_TO_YOUR_PARTY);
             return;
@@ -133,7 +133,7 @@ public final class RequestJoinParty extends ClientPacket {
      * @param target
      * @param requestor
      */
-    private void addTargetToParty(L2PcInstance target, L2PcInstance requestor) {
+    private void addTargetToParty(Player target, Player requestor) {
         final L2Party party = requestor.getParty();
 
         // summary of ppl already in party and ppl that get invitation
@@ -161,7 +161,7 @@ public final class RequestJoinParty extends ClientPacket {
      * @param target
      * @param requestor
      */
-    private void createNewParty(L2PcInstance target, L2PcInstance requestor) {
+    private void createNewParty(Player target, Player requestor) {
         final PartyDistributionType partyDistributionType = PartyDistributionType.findById(_partyDistributionTypeId);
         if (partyDistributionType == null) {
             return;

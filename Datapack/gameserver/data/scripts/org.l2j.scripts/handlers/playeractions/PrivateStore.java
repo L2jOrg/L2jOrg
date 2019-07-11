@@ -20,7 +20,7 @@ package handlers.playeractions;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -39,7 +39,7 @@ public final class PrivateStore implements IPlayerActionHandler
 	private static final Logger LOGGER = LoggerFactory.getLogger(PrivateStore.class);
 	
 	@Override
-	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		final PrivateStoreType type = PrivateStoreType.findById(data.getOptionId());
 		if (type == null)

@@ -1,7 +1,7 @@
 package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -20,7 +20,7 @@ public class AdminDestroyItems implements IAdminCommandHandler
             };
 
     @Override
-    public boolean useAdminCommand(String command, L2PcInstance activeChar)
+    public boolean useAdminCommand(String command, Player activeChar)
     {
         final PcInventory inventory = activeChar.getInventory();
         final InventoryUpdate iu = new InventoryUpdate();

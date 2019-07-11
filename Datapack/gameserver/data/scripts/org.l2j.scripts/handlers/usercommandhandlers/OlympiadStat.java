@@ -18,7 +18,7 @@ package handlers.usercommandhandlers;
 
 import org.l2j.gameserver.handler.IUserCommandHandler;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -35,7 +35,7 @@ public class OlympiadStat implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, Player activeChar)
 	{
 		if (id != COMMAND_IDS[0])
 		{
@@ -54,7 +54,7 @@ public class OlympiadStat implements IUserCommandHandler
 		sm.addInt(Olympiad.getInstance().getCompetitionDone(nobleObjId));
 		sm.addInt(Olympiad.getInstance().getCompetitionWon(nobleObjId));
 		sm.addInt(Olympiad.getInstance().getCompetitionLost(nobleObjId));
-		sm.addInt(Olympiad.getInstance().getNoblePoints((L2PcInstance) target));
+		sm.addInt(Olympiad.getInstance().getNoblePoints((Player) target));
 		activeChar.sendPacket(sm);
 		
 		final SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.THE_MATCHES_THIS_WEEK_ARE_ALL_CLASS_BATTLES_THE_NUMBER_OF_MATCHES_THAT_ARE_ALLOWED_TO_PARTICIPATE_IS_S1);

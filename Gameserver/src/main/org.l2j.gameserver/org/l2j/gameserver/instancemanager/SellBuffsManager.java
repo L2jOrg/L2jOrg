@@ -6,7 +6,7 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SellBuffHolder;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
@@ -72,24 +72,24 @@ public final class SellBuffsManager extends GameXmlReader {
         }
     }
 
-    public void sendSellMenu(L2PcInstance player) {
+    public void sendSellMenu(Player player) {
         final String html = HtmCache.getInstance().getHtm(player, htmlFolder + (player.isSellingBuffs() ? "BuffMenu_already.html" : "BuffMenu.html"));
         CommunityBoardHandler.separateAndSend(html, player);
     }
 
-    public void sendBuffChoiceMenu(L2PcInstance player, int index) {
+    public void sendBuffChoiceMenu(Player player, int index) {
         String html = HtmCache.getInstance().getHtm(player, htmlFolder + "BuffChoice.html");
         html = html.replace("%list%", buildSkillMenu(player, index));
         CommunityBoardHandler.separateAndSend(html, player);
     }
 
-    public void sendBuffEditMenu(L2PcInstance player) {
+    public void sendBuffEditMenu(Player player) {
         String html = HtmCache.getInstance().getHtm(player, htmlFolder + "BuffChoice.html");
         html = html.replace("%list%", buildEditMenu(player));
         CommunityBoardHandler.separateAndSend(html, player);
     }
 
-    public void sendBuffMenu(L2PcInstance player, L2PcInstance seller, int index) {
+    public void sendBuffMenu(Player player, Player seller, int index) {
         if (!seller.isSellingBuffs() || seller.getSellingBuffs().isEmpty()) {
             return;
         }
@@ -99,7 +99,7 @@ public final class SellBuffsManager extends GameXmlReader {
         CommunityBoardHandler.separateAndSend(html, player);
     }
 
-    public void startSellBuffs(L2PcInstance player, String title) {
+    public void startSellBuffs(Player player, String title) {
         player.sitDown();
         player.setIsSellingBuffs(true);
         player.setPrivateStoreType(PrivateStoreType.PACKAGE_SELL);
@@ -110,7 +110,7 @@ public final class SellBuffsManager extends GameXmlReader {
         sendSellMenu(player);
     }
 
-    public void stopSellBuffs(L2PcInstance player) {
+    public void stopSellBuffs(Player player) {
         player.setIsSellingBuffs(false);
         player.setPrivateStoreType(PrivateStoreType.NONE);
         player.standUp();
@@ -118,7 +118,7 @@ public final class SellBuffsManager extends GameXmlReader {
         sendSellMenu(player);
     }
 
-    private String buildBuffMenu(L2PcInstance player, L2PcInstance seller, int index) {
+    private String buildBuffMenu(Player player, Player seller, int index) {
         final int ceiling = 10;
         int nextIndex = -1;
         int previousIndex = -1;
@@ -214,7 +214,7 @@ public final class SellBuffsManager extends GameXmlReader {
         return sb.toString();
     }
 
-    private String buildEditMenu(L2PcInstance player) {
+    private String buildEditMenu(Player player) {
         final StringBuilder sb = new StringBuilder();
 
         sb.append("<table border=0 cellpadding=0 cellspacing=0 background=\"L2UI_CH3.refinewnd_back_Pattern\">");
@@ -260,7 +260,7 @@ public final class SellBuffsManager extends GameXmlReader {
         return sb.toString();
     }
 
-    private String buildSkillMenu(L2PcInstance player, int index) {
+    private String buildSkillMenu(Player player, int index) {
         final int ceiling = index + 10;
         int nextIndex = -1;
         int previousIndex = -1;
@@ -334,11 +334,11 @@ public final class SellBuffsManager extends GameXmlReader {
         return sb.toString();
     }
 
-    public boolean isInSellList(L2PcInstance player, Skill skill) {
+    public boolean isInSellList(Player player, Skill skill) {
         return player.getSellingBuffs().stream().filter(h -> (h.getSkillId() == skill.getId())).findFirst().orElse(null) != null;
     }
 
-    public boolean canStartSellBuffs(L2PcInstance player) {
+    public boolean canStartSellBuffs(Player player) {
         if (player.isAlikeDead()) {
             player.sendMessage("You can't sell buffs in fake death!");
             return false;

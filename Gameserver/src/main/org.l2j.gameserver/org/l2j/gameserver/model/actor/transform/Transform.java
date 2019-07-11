@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.Sex;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerTransform;
 import org.l2j.gameserver.model.holders.AdditionalItemHolder;
@@ -183,7 +183,7 @@ public final class Transform implements IIdentifiable {
         creature.abortAttack();
         creature.abortCast();
 
-        final L2PcInstance player = creature.getActingPlayer();
+        final Player player = creature.getActingPlayer();
 
         // Get off the strider or something else if character is mounted
         if (creature.isPlayer() && player.isMounted()) {
@@ -285,7 +285,7 @@ public final class Transform implements IIdentifiable {
             }
 
             if (creature.isPlayer()) {
-                final L2PcInstance player = creature.getActingPlayer();
+                final Player player = creature.getActingPlayer();
                 final boolean hasTransformSkills = player.hasTransformSkills();
 
                 if (_name != null) {
@@ -323,7 +323,7 @@ public final class Transform implements IIdentifiable {
         }
     }
 
-    public void onLevelUp(L2PcInstance player) {
+    public void onLevelUp(Player player) {
         final TransformTemplate template = getTemplate(player);
         if (template != null) {
             // Add skills depending on level.
@@ -363,7 +363,7 @@ public final class Transform implements IIdentifiable {
         return val;
     }
 
-    public int getBaseDefBySlot(L2PcInstance player, int slot) {
+    public int getBaseDefBySlot(Player player, int slot) {
         final int defaultValue = player.getTemplate().getBaseDefBySlot(slot);
         final TransformTemplate template = getTemplate(player);
 

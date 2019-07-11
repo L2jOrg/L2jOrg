@@ -22,7 +22,7 @@ import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.instance.FriendlyNpcInstance;
 import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2TrapInstance;
 import org.l2j.gameserver.model.actor.stat.CharStat;
 import org.l2j.gameserver.model.actor.status.CharStatus;
@@ -213,7 +213,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
      * <li>If L2Character is a L2NPCInstance, copy skills from template to object</li>
      * <li>If L2Character is a L2NPCInstance, link _calculators to NPC_STD_CALCULATOR</li>
      * <li>If L2Character is NOT a L2NPCInstance, create an empty _skills slot</li>
-     * <li>If L2Character is a L2PcInstance or L2Summon, copy basic Calculator set to object</li>
+     * <li>If L2Character is a Player or L2Summon, copy basic Calculator set to object</li>
      * </ul>
      *
      * @param objectId Identifier of the object to initialized
@@ -360,7 +360,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
         // Mobius: Tempfix for untransform not showing stats.
         // Resend UserInfo to player.
         if (isPlayer()) {
-            sendPacket(new UserInfo((L2PcInstance) this));
+            sendPacket(new UserInfo((Player) this));
         }
     }
 
@@ -402,7 +402,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     /**
-     * Overridden in L2PcInstance.
+     * Overridden in Player.
      *
      * @return the access level.
      */
@@ -470,15 +470,15 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     /**
-     * Send a packet to the L2Character AND to all L2PcInstance in the _KnownPlayers of the L2Character.<br>
+     * Send a packet to the L2Character AND to all Player in the _KnownPlayers of the L2Character.<br>
      * <B><U>Concept</U>:</B><br>
-     * L2PcInstance in the detection area of the L2Character are identified in <B>_knownPlayers</B>.<br>
+     * Player in the detection area of the L2Character are identified in <B>_knownPlayers</B>.<br>
      * In order to inform other players of state modification on the L2Character, server just need to go through _knownPlayers to send Server->Client Packet
      *
      * @param mov
      */
     public void broadcastPacket(ServerPacket mov) {
-        L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
+        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (isVisibleFor(player)) {
                 player.sendPacket(mov);
@@ -487,16 +487,16 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     /**
-     * Send a packet to the L2Character AND to all L2PcInstance in the radius (max knownlist radius) from the L2Character.<br>
+     * Send a packet to the L2Character AND to all Player in the radius (max knownlist radius) from the L2Character.<br>
      * <B><U>Concept</U>:</B><br>
-     * L2PcInstance in the detection area of the L2Character are identified in <B>_knownPlayers</B>.<br>
+     * Player in the detection area of the L2Character are identified in <B>_knownPlayers</B>.<br>
      * In order to inform other players of state modification on the L2Character, server just need to go through _knownPlayers to send Server->Client Packet
      *
      * @param mov
      * @param radiusInKnownlist
      */
     public void broadcastPacket(ServerPacket mov, int radiusInKnownlist) {
-        L2World.getInstance().forEachVisibleObjectInRange(this, L2PcInstance.class, radiusInKnownlist, player ->
+        L2World.getInstance().forEachVisibleObjectInRange(this, Player.class, radiusInKnownlist, player ->
         {
             if (isVisibleFor(player)) {
                 player.sendPacket(mov);
@@ -538,7 +538,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     /**
-     * Send the Server->Client packet StatusUpdate with current HP and MP to all other L2PcInstance to inform.<br>
+     * Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform.<br>
      * <B><U>Actions</U>:</B>
      * <ul>
      * <li>Create the Server->Client packet StatusUpdate with current HP and MP</li>
@@ -578,7 +578,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
      * <ul>
      * <li>Stop the movement of the L2Character</li>
      * <li>Set the x,y,z position of the L2Object and if necessary modify its _worldRegion</li>
-     * <li>Send a Server->Client packet TeleportToLocationt to the L2Character AND to all L2PcInstance in its _KnownPlayers</li>
+     * <li>Send a Server->Client packet TeleportToLocationt to the L2Character AND to all Player in its _KnownPlayers</li>
      * <li>Modify the position of the pet if necessary</li>
      * </ul>
      *
@@ -721,11 +721,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
      * <B><U>Actions</U>:</B>
      * <ul>
      * <li>Get the active weapon (always equipped in the right hand)</li>
-     * <li>If weapon is a bow, check for arrows, MP and bow re-use delay (if necessary, equip the L2PcInstance with arrows in left hand)</li>
+     * <li>If weapon is a bow, check for arrows, MP and bow re-use delay (if necessary, equip the Player with arrows in left hand)</li>
      * <li>If weapon is a bow, consume MP and set the new period of bow non re-use</li>
      * <li>Get the Attack Speed of the L2Character (delay (in milliseconds) before next attack)</li>
      * <li>Select the type of attack to start (Simple, Bow, Pole or Dual) and verify if SoulShot are charged then start calculation</li>
-     * <li>If the Server->Client packet Attack contains at least 1 hit, send the Server->Client packet Attack to the L2Character AND to all L2PcInstance in the _KnownPlayers of the L2Character</li>
+     * <li>If the Server->Client packet Attack contains at least 1 hit, send the Server->Client packet Attack to the L2Character AND to all Player in the _KnownPlayers of the L2Character</li>
      * <li>Notify AI with EVT_READY_TO_ACT</li>
      * </ul>
      *
@@ -823,7 +823,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                     if (isPlayer()) {
                         // Check if there are arrows to use or else cancel the attack.
                         if (!checkAndEquipAmmunition(weaponItem.getItemType().isCrossbow() ? EtcItemType.BOLT : EtcItemType.ARROW)) {
-                            // Cancel the action because the L2PcInstance have no arrow
+                            // Cancel the action because the Player have no arrow
                             getAI().setIntention(AI_INTENTION_ACTIVE);
                             sendPacket(ActionFailed.STATIC_PACKET);
                             sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
@@ -846,14 +846,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                         }
                         mpConsume = isAffected(EffectFlag.CHEAPSHOT) ? 0 : mpConsume;
                         if (_status.getCurrentMp() < mpConsume) {
-                            // If L2PcInstance doesn't have enough MP, stop the attack
+                            // If Player doesn't have enough MP, stop the attack
                             ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
                             sendPacket(SystemMessageId.NOT_ENOUGH_MP);
                             sendPacket(ActionFailed.STATIC_PACKET);
                             return;
                         }
 
-                        // If L2PcInstance have enough MP, the bow consumes it
+                        // If Player have enough MP, the bow consumes it
                         if (mpConsume > 0) {
                             _status.reduceMp(mpConsume);
                         }
@@ -899,7 +899,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                         inventory.reduceArrowCount(crossbow ? EtcItemType.BOLT : EtcItemType.ARROW);
                     }
 
-                    // Check if the L2Character is a L2PcInstance
+                    // Check if the L2Character is a Player
                     if (isPlayer()) {
                         if (crossbow) {
                             sendPacket(SystemMessageId.YOUR_CROSSBOW_IS_PREPARING_TO_FIRE);
@@ -933,13 +933,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
             }
 
             // If the Server->Client packet Attack contains at least 1 hit, send the Server->Client packet Attack
-            // to the L2Character AND to all L2PcInstance in the _KnownPlayers of the L2Character
+            // to the L2Character AND to all Player in the _KnownPlayers of the L2Character
             if (attack.hasHits()) {
                 broadcastPacket(attack);
             }
 
-            // Flag the attacker if it's a L2PcInstance outside a PvP area
-            final L2PcInstance player = getActingPlayer();
+            // Flag the attacker if it's a Player outside a PvP area
+            final Player player = getActingPlayer();
             if (player != null) {
                 AttackStanceTaskManager.getInstance().addAttackStanceTask(player);
                 player.updatePvPStatus(target);
@@ -1338,7 +1338,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
      * <li>Stop movement</li>
      * <li>Stop HP/MP/CP Regeneration task</li>
      * <li>Stop all active skills effects in progress on the L2Character</li>
-     * <li>Send the Server->Client packet StatusUpdate with current HP and MP to all other L2PcInstance to inform</li>
+     * <li>Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform</li>
      * <li>Notify L2Character AI</li>
      * </ul>
      *
@@ -1379,7 +1379,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
             stopAllEffectsExceptThoseThatLastThroughDeath();
         }
 
-        // Send the Server->Client packet StatusUpdate with current HP and MP to all other L2PcInstance to inform
+        // Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
         broadcastStatusUpdate();
 
         // Notify L2Character AI
@@ -1620,7 +1620,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     /**
-     * Set the overloaded status of the L2Character is overloaded (if True, the L2PcInstance can't take more item).
+     * Set the overloaded status of the L2Character is overloaded (if True, the Player can't take more item).
      *
      * @param value
      */
@@ -1712,7 +1712,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
         } else if (isSummon()) {
             broadcastStatusUpdate();
         } else if (isNpc()) {
-            L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
+            L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
             {
                 if (!isVisibleFor(player)) {
                     return;
@@ -1728,7 +1728,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     /**
-     * Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others L2PcInstance.
+     * Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others Player.
      */
     public final void setRunning() {
         setIsRunning(true);
@@ -1890,7 +1890,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     /**
-     * Set the L2Character movement type to walk and send Server->Client packet ChangeMoveType to all others L2PcInstance.
+     * Set the L2Character movement type to walk and send Server->Client packet ChangeMoveType to all others Player.
      */
     public final void setWalking() {
         setIsRunning(false);
@@ -2206,7 +2206,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
             }
 
             if (isPlayer()) {
-                final L2PcInstance player = getActingPlayer();
+                final Player player = getActingPlayer();
                 player.refreshOverloaded(true);
                 player.refreshExpertisePenalty();
                 sendPacket(info);
@@ -2221,7 +2221,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                 }
             } else if (isNpc()) {
                 if (broadcastFull) {
-                    L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
+                    L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
                     {
                         if (!isVisibleFor(player)) {
                             return;
@@ -2940,7 +2940,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
         // the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive
         // to destination by GameTimeController
 
-        // Send a Server->Client packet CharMoveToLocation to the actor and all L2PcInstance in its _knownPlayers
+        // Send a Server->Client packet CharMoveToLocation to the actor and all Player in its _knownPlayers
         broadcastPacket(new MoveToLocation(this));
 
         return true;
@@ -3012,7 +3012,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
     /**
      * <B><U> Overridden in </U> :</B>
-     * <li>L2PcInstance</li>
+     * <li>Player</li>
      *
      * @param type
      * @return True if arrows are available.
@@ -3024,7 +3024,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     /**
      * Add Exp and Sp to the L2Character.<br>
      * <B><U> Overridden in </U> :</B>
-     * <li>L2PcInstance</li>
+     * <li>Player</li>
      * <li>L2PetInstance</li>
      *
      * @param addToExp
@@ -3036,7 +3036,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
     /**
      * <B><U> Overridden in </U> :</B>
-     * <li>L2PcInstance</li>
+     * <li>Player</li>
      *
      * @return the active weapon instance (always equiped in the right hand).
      */
@@ -3044,7 +3044,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
     /**
      * <B><U> Overridden in </U> :</B>
-     * <li>L2PcInstance</li>
+     * <li>Player</li>
      *
      * @return the active weapon item (always equiped in the right hand).
      */
@@ -3052,7 +3052,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
     /**
      * <B><U> Overridden in </U> :</B>
-     * <li>L2PcInstance</li>
+     * <li>Player</li>
      *
      * @return the secondary weapon instance (always equiped in the left hand).
      */
@@ -3060,7 +3060,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
     /**
      * <B><U> Overridden in </U> :</B>
-     * <li>L2PcInstance</li>
+     * <li>Player</li>
      *
      * @return the secondary {@link L2Item} item (always equiped in the left hand).
      */
@@ -3070,8 +3070,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
      * Manage hit process (called by Hit Task).<br>
      * <B><U>Actions</U>:</B>
      * <ul>
-     * <li>If the attacker/target is dead or use fake death, notify the AI with EVT_CANCEL and send a Server->Client packet ActionFailed (if attacker is a L2PcInstance)</li>
-     * <li>If attack isn't aborted, send a message system (critical hit, missed...) to attacker/target if they are L2PcInstance</li>
+     * <li>If the attacker/target is dead or use fake death, notify the AI with EVT_CANCEL and send a Server->Client packet ActionFailed (if attacker is a Player)</li>
+     * <li>If attack isn't aborted, send a message system (critical hit, missed...) to attacker/target if they are Player</li>
      * <li>If attack isn't aborted and hit isn't missed, reduce HP of the target and calculate reflection damage to reduce HP of attacker if necessary</li>
      * <li>if attack isn't aborted and hit isn't missed, manage attack or cast break of the target (calculating rate, sending message...)</li>
      * </ul>
@@ -3175,10 +3175,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
         }
 
         if (isPlayer() && !target.isHpBlocked()) {
-            if (((L2PcInstance) this).isCursedWeaponEquipped()) {
+            if (((Player) this).isCursedWeaponEquipped()) {
                 // If hit by a cursed weapon, CP is reduced to 0
                 target.setCurrentCp(0);
-            } else if (((L2PcInstance) this).isHero() && target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped()) {
+            } else if (((Player) this).isHero() && target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped()) {
                 // If a cursed weapon is hit by a Hero, CP is reduced to 0
                 target.setCurrentCp(0);
             }
@@ -3236,10 +3236,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
      * <li>Send a Server->Client packet MyTargetSelected to start attack and Notify AI with AI_INTENTION_ATTACK</li>
      * </ul>
      *
-     * @param player The L2PcInstance to attack
+     * @param player The Player to attack
      */
     @Override
-    public void onForcedAttack(L2PcInstance player) {
+    public void onForcedAttack(Player player) {
         if (isInsidePeaceZone(player)) {
             // If L2Character or target is in a peace zone, send a system message TARGET_IN_PEACEZONE a Server->Client packet ActionFailed
             player.sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
@@ -3247,14 +3247,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
             return;
         }
         if (player.isInOlympiadMode() && (player.getTarget() != null) && player.getTarget().isPlayable()) {
-            L2PcInstance target = null;
+            Player target = null;
             final L2Object object = player.getTarget();
             if ((object != null) && object.isPlayable()) {
                 target = object.getActingPlayer();
             }
 
             if ((target == null) || (target.isInOlympiadMode() && (!player.isOlympiadStart() || (player.getOlympiadGameId() != target.getOlympiadGameId())))) {
-                // if L2PcInstance is in Olympia and the match isn't already start, send a Server->Client packet ActionFailed
+                // if Player is in Olympia and the match isn't already start, send a Server->Client packet ActionFailed
                 player.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }
@@ -3348,7 +3348,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
      * </ul>
      * <B><U>Overridden in</U>:</B>
      * <ul>
-     * <li>L2PcInstance : Save update in the character_skills table of the database</li>
+     * <li>Player : Save update in the character_skills table of the database</li>
      * </ul>
      *
      * @param newSkill The L2Skill to add to the L2Character
@@ -3482,7 +3482,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     public void updatePvPFlag(int value) {
-        // Overridden in L2PcInstance
+        // Overridden in Player
     }
 
     /**
@@ -4021,7 +4021,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     /**
-     * Dummy method overriden in {@link L2PcInstance}
+     * Dummy method overriden in {@link Player}
      *
      * @return {@code true} if current player can revive and shows 'To Village' button upon death, {@code false} otherwise.
      */
@@ -4030,7 +4030,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     /**
-     * Dummy method overriden in {@link L2PcInstance}
+     * Dummy method overriden in {@link Player}
      *
      * @param val
      */
@@ -4047,7 +4047,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     /**
-     * Dummy method overriden in {@link L2PcInstance}
+     * Dummy method overriden in {@link Player}
      *
      * @return {@code true} if player is on event, {@code false} otherwise.
      */
@@ -4056,7 +4056,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     /**
-     * Dummy method overriden in {@link L2PcInstance}
+     * Dummy method overriden in {@link Player}
      *
      * @return the clan id of current character.
      */
@@ -4065,7 +4065,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     /**
-     * Dummy method overriden in {@link L2PcInstance}
+     * Dummy method overriden in {@link Player}
      *
      * @return the clan of current character.
      */
@@ -4074,7 +4074,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     /**
-     * Dummy method overriden in {@link L2PcInstance}
+     * Dummy method overriden in {@link Player}
      *
      * @return {@code true} if player is in academy, {@code false} otherwise.
      */
@@ -4083,7 +4083,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     /**
-     * Dummy method overriden in {@link L2PcInstance}
+     * Dummy method overriden in {@link Player}
      *
      * @return the pledge type of current character.
      */
@@ -4092,7 +4092,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     }
 
     /**
-     * Dummy method overriden in {@link L2PcInstance}
+     * Dummy method overriden in {@link Player}
      *
      * @return the alliance id of current character.
      */

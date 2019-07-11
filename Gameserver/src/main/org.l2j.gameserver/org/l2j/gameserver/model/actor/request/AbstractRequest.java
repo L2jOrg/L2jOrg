@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.actor.request;
 
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 import java.util.Objects;
 import java.util.concurrent.ScheduledFuture;
@@ -12,17 +12,17 @@ import static java.util.Objects.nonNull;
  * @author UnAfraid
  */
 public abstract class AbstractRequest {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private volatile long _timestamp = 0;
     private volatile boolean _isProcessing;
     private ScheduledFuture<?> _timeOutTask;
 
-    public AbstractRequest(L2PcInstance activeChar) {
+    public AbstractRequest(Player activeChar) {
         Objects.requireNonNull(activeChar);
         _activeChar = activeChar;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _activeChar;
     }
 

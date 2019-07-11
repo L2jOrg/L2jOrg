@@ -19,7 +19,7 @@ package events.HappyHours;
 import events.ScriptEvent;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.LongTimeEvent;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -50,7 +50,7 @@ public class HappyHours extends LongTimeEvent implements ScriptEvent
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -83,7 +83,7 @@ public class HappyHours extends LongTimeEvent implements ScriptEvent
 						final ExShowScreenMessage screenMsg = new ExShowScreenMessage("You obtained 20 Sibi's coins.", ExShowScreenMessage.TOP_CENTER, 7000, 0, true, true);
 						final SystemMessage systemMsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_SIBI_S_COINS);
 						systemMsg.addInt(20);
-						for (L2PcInstance plr : L2World.getInstance().getPlayers())
+						for (Player plr : L2World.getInstance().getPlayers())
 						{
 							if ((plr != null) && (plr.isOnlineInt() == 1) && plr.isAffectedBySkill(TRANSFORMATION_SKILL))
 							{
@@ -106,7 +106,7 @@ public class HappyHours extends LongTimeEvent implements ScriptEvent
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		return "34262.htm";
 	}

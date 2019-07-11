@@ -104,7 +104,7 @@ public class L2AttackableAI extends L2CharacterAI {
         }
 
         // Gets the player if there is any.
-        final L2PcInstance player = target.getActingPlayer();
+        final Player player = target.getActingPlayer();
         if (player != null) {
             // Don't take the aggro if the GM has the access level below or equal to GM_DONT_TAKE_AGGRO
             if (!player.getAccessLevel().canTakeAggro()) {
@@ -177,7 +177,7 @@ public class L2AttackableAI extends L2CharacterAI {
             final L2Attackable npc = getActiveChar();
             if (!npc.isAlikeDead()) {
                 // If its _knownPlayer isn't empty set the Intention to AI_INTENTION_ACTIVE
-                if (!L2World.getInstance().getVisibleObjects(npc, L2PcInstance.class).isEmpty()) {
+                if (!L2World.getInstance().getVisibleObjects(npc, Player.class).isEmpty()) {
                     intention = CtrlIntention.AI_INTENTION_ACTIVE;
                 } else if (npc.getSpawn() != null) {
                     final Location loc = npc.getSpawn();
@@ -325,7 +325,7 @@ public class L2AttackableAI extends L2CharacterAI {
                 final int aggro = npc.getHating(hated);
 
                 if ((aggro + _globalAggro) > 0) {
-                    // Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others L2PcInstance
+                    // Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others Player
                     if (!npc.isRunning()) {
                         npc.setRunning();
                     }
@@ -910,7 +910,7 @@ public class L2AttackableAI extends L2CharacterAI {
      * <B><U> Actions</U> :</B>
      * <ul>
      * <li>Init the attack : Calculate the attack timeout, Set the _globalAggro to 0, Add the attacker to the actor _aggroList</li>
-     * <li>Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others L2PcInstance</li>
+     * <li>Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others Player</li>
      * <li>Set the Intention to AI_INTENTION_ATTACK</li>
      * </ul>
      *
@@ -931,7 +931,7 @@ public class L2AttackableAI extends L2CharacterAI {
         // Add the attacker to the _aggroList of the actor
         me.addDamageHate(attacker, 0, 1);
 
-        // Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others L2PcInstance
+        // Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others Player
         if (!me.isRunning()) {
             me.setRunning();
         }
@@ -984,7 +984,7 @@ public class L2AttackableAI extends L2CharacterAI {
 
             // Set the actor AI Intention to AI_INTENTION_ATTACK
             if (getIntention() != CtrlIntention.AI_INTENTION_ATTACK) {
-                // Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others L2PcInstance
+                // Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others Player
                 if (!me.isRunning()) {
                     me.setRunning();
                 }

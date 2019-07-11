@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.handler;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 public interface IVoicedCommandHandler {
     /**
@@ -27,7 +27,7 @@ public interface IVoicedCommandHandler {
      * @param params
      * @return command success
      */
-    boolean useVoicedCommand(String command, L2PcInstance activeChar, String params);
+    boolean useVoicedCommand(String command, Player activeChar, String params);
 
     /**
      * this method is called at initialization to register all the item ids automatically

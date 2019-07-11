@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.zone.type;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.L2ZoneType;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.serverpackets.NpcInfo;
@@ -36,14 +36,14 @@ public class L2WaterZone extends L2ZoneType {
 
         // TODO: update to only send speed status when that packet is known
         if (character.isPlayer()) {
-            final L2PcInstance player = character.getActingPlayer();
+            final Player player = character.getActingPlayer();
             if (player.checkTransformed(transform -> !transform.canSwim())) {
                 character.stopTransformation(true);
             } else {
                 player.broadcastUserInfo();
             }
         } else if (character.isNpc()) {
-            L2World.getInstance().forEachVisibleObject(character, L2PcInstance.class, player ->
+            L2World.getInstance().forEachVisibleObject(character, Player.class, player ->
             {
                 if (character.getRunSpeed() == 0) {
                     player.sendPacket(new ServerObjectInfo((L2Npc) character, player));
@@ -62,11 +62,11 @@ public class L2WaterZone extends L2ZoneType {
         if (character.isPlayer()) {
             // Mobius: Attempt to stop water task.
             if (!character.isInsideZone(ZoneId.WATER)) {
-                ((L2PcInstance) character).stopWaterTask();
+                ((Player) character).stopWaterTask();
             }
             character.getActingPlayer().broadcastUserInfo();
         } else if (character.isNpc()) {
-            L2World.getInstance().forEachVisibleObject(character, L2PcInstance.class, player ->
+            L2World.getInstance().forEachVisibleObject(character, Player.class, player ->
             {
                 if (character.getRunSpeed() == 0) {
                     player.sendPacket(new ServerObjectInfo((L2Npc) character, player));

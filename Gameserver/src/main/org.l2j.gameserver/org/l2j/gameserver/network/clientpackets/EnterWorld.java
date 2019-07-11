@@ -13,7 +13,7 @@ import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.*;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.*;
 import org.l2j.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -64,7 +64,7 @@ public class EnterWorld extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             LOGGER.warn("EnterWorld failed! activeChar returned 'null'.");
             Disconnection.of(client).defaultSequence(false);
@@ -430,7 +430,7 @@ public class EnterWorld extends ClientPacket {
         }
     }
 
-    private void sendAttendanceInfo(L2PcInstance activeChar) {
+    private void sendAttendanceInfo(Player activeChar) {
         ThreadPoolManager.schedule(() -> {
             // Check if player can receive reward today.
             final AttendanceInfoHolder attendanceInfo = activeChar.getAttendanceInfo();
@@ -446,7 +446,7 @@ public class EnterWorld extends ClientPacket {
         }, Config.ATTENDANCE_REWARD_DELAY * 60  * 1000);
     }
 
-    private void onGameMasterEnter(L2PcInstance activeChar) {
+    private void onGameMasterEnter(Player activeChar) {
 
         if (Config.GM_GIVE_SPECIAL_SKILLS) {
             SkillTreesData.getInstance().addSkills(activeChar, false);
@@ -493,7 +493,7 @@ public class EnterWorld extends ClientPacket {
 
     }
 
-    private void notifyClanMembers(L2PcInstance activeChar) {
+    private void notifyClanMembers(Player activeChar) {
         final L2Clan clan = activeChar.getClan();
         if (clan != null) {
             clan.getClanMember(activeChar.getObjectId()).setPlayerInstance(activeChar);
@@ -505,16 +505,16 @@ public class EnterWorld extends ClientPacket {
         }
     }
 
-    private void notifySponsorOrApprentice(L2PcInstance activeChar) {
+    private void notifySponsorOrApprentice(Player activeChar) {
         if (activeChar.getSponsor() != 0) {
-            final L2PcInstance sponsor = L2World.getInstance().getPlayer(activeChar.getSponsor());
+            final Player sponsor = L2World.getInstance().getPlayer(activeChar.getSponsor());
             if (sponsor != null) {
                 final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_APPRENTICE_S1_HAS_LOGGED_IN);
                 msg.addString(activeChar.getName());
                 sponsor.sendPacket(msg);
             }
         } else if (activeChar.getApprentice() != 0) {
-            final L2PcInstance apprentice = L2World.getInstance().getPlayer(activeChar.getApprentice());
+            final Player apprentice = L2World.getInstance().getPlayer(activeChar.getApprentice());
             if (apprentice != null) {
                 final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SPONSOR_C1_HAS_LOGGED_IN);
                 msg.addString(activeChar.getName());

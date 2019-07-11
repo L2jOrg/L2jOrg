@@ -23,7 +23,7 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -49,7 +49,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		command = st.nextToken(); // Get actual command
@@ -71,10 +71,10 @@ public class AdminFortSiege implements IAdminCommandHandler
 		else
 		{
 			final L2Object target = activeChar.getTarget();
-			L2PcInstance player = null;
+			Player player = null;
 			if ((target != null) && target.isPlayer())
 			{
-				player = (L2PcInstance) target;
+				player = (Player) target;
 			}
 			
 			if (command.equalsIgnoreCase("admin_add_fortattacker"))
@@ -143,7 +143,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void showFortSelectPage(L2PcInstance activeChar)
+	private void showFortSelectPage(Player activeChar)
 	{
 		int i = 0;
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
@@ -171,7 +171,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void showFortSiegePage(L2PcInstance activeChar, Fort fort)
+	private void showFortSiegePage(Player activeChar, Fort fort)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		adminReply.setFile(activeChar, "data/html/admin/fort.htm");

@@ -5,7 +5,7 @@ import org.l2j.gameserver.instancemanager.ClanEntryManager;
 import org.l2j.gameserver.instancemanager.FortManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 
@@ -26,13 +26,13 @@ public class RequestPledgeWaitingUserAccept extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if ((activeChar == null) || (activeChar.getClan() == null)) {
             return;
         }
 
         if (_acceptRequest) {
-            final L2PcInstance player = L2World.getInstance().getPlayer(_playerId);
+            final Player player = L2World.getInstance().getPlayer(_playerId);
             final L2Clan clan = activeChar.getClan();
             if ((player != null) && (player.getClan() == null) && (clan != null)) {
                 player.sendPacket(new JoinPledge(clan.getId()));

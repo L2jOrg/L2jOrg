@@ -19,7 +19,7 @@ package village.master.ElfHumanWizardChange1;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 
 import ai.AbstractNpcAI;
@@ -57,7 +57,7 @@ public final class ElfHumanWizardChange1 extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -148,7 +148,7 @@ public final class ElfHumanWizardChange1 extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private String ClassChangeRequested(L2PcInstance player, L2Npc npc, int classId)
+	private String ClassChangeRequested(Player player, L2Npc npc, int classId)
 	{
 		String htmltext = null;
 		if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP))
@@ -279,7 +279,7 @@ public final class ElfHumanWizardChange1 extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, Player player)
 	{
 		String htmltext = null;
 		final Race playerRace = player.getRace();

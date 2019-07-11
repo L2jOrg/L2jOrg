@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
@@ -23,7 +23,7 @@ public final class RequestLinkHtml extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance actor = client.getActiveChar();
+        final Player actor = client.getActiveChar();
         if (actor == null) {
             return;
         }

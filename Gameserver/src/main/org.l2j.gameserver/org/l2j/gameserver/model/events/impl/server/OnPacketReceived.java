@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.server;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.network.L2GameClient;
@@ -33,7 +33,7 @@ public class OnPacketReceived implements IBaseEvent {
         _data = data;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _client.getActiveChar();
     }
 

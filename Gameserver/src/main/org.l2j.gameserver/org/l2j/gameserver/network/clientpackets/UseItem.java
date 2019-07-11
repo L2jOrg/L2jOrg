@@ -13,7 +13,7 @@ import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.L2EffectType;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.items.L2EtcItem;
@@ -47,7 +47,7 @@ public final class UseItem extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
@@ -227,7 +227,7 @@ public final class UseItem extends ClientPacket {
         }
     }
 
-    private void reuseData(L2PcInstance activeChar, L2ItemInstance item, long remainingTime) {
+    private void reuseData(Player activeChar, L2ItemInstance item, long remainingTime) {
         final int hours = (int) (remainingTime / 3600000);
         final int minutes = (int) (remainingTime % 3600000) / 60000;
         final int seconds = (int) ((remainingTime / 1000) % 60);
@@ -249,7 +249,7 @@ public final class UseItem extends ClientPacket {
         activeChar.sendPacket(sm);
     }
 
-    private void sendSharedGroupUpdate(L2PcInstance activeChar, int group, long remaining, int reuse) {
+    private void sendSharedGroupUpdate(Player activeChar, int group, long remaining, int reuse) {
         if (group > 0) {
             activeChar.sendPacket(new ExUseSharedGroupItem(_itemId, group, remaining, reuse));
         }

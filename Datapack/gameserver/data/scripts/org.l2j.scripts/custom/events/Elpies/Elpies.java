@@ -23,7 +23,7 @@ import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2EventMonsterInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Event;
 import org.l2j.gameserver.util.Broadcast;
 
@@ -73,13 +73,13 @@ public final class Elpies extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public boolean eventBypass(L2PcInstance activeChar, String bypass)
+	public boolean eventBypass(Player activeChar, String bypass)
 	{
 		return false;
 	}
 	
 	@Override
-	public boolean eventStart(L2PcInstance eventMaker)
+	public boolean eventStart(Player eventMaker)
 	{
 		if (EVENT_ACTIVE)
 		{
@@ -152,7 +152,7 @@ public final class Elpies extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(L2Npc npc, Player killer, boolean isSummon)
 	{
 		if (EVENT_ACTIVE)
 		{
@@ -224,7 +224,7 @@ public final class Elpies extends Event implements ScriptEvent
 		}
 	}
 	
-	private static void dropItem(L2Npc mob, L2PcInstance player, int[][] droplist)
+	private static void dropItem(L2Npc mob, Player player, int[][] droplist)
 	{
 		final int chance = getRandom(100);
 		

@@ -26,8 +26,7 @@ import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
-import org.l2j.gameserver.model.entity.Hero;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.*;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExOlympiadMatchList;
@@ -63,7 +62,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		String htmltext = null;
 		
@@ -252,7 +251,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		String htmltext = null;
 		
@@ -268,7 +267,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 	}
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character bypassOrigin)
+	public boolean useBypass(String command, Player activeChar, L2Character bypassOrigin)
 	{
 		try
 		{

@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.AskJoinPledge;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -22,7 +22,7 @@ public final class RequestJoinPledge extends ClientPacket {
         _pledgeType = readInt();
     }
 
-    private void scheduleDeny(L2PcInstance player, String name) {
+    private void scheduleDeny(Player player, String name) {
         if (player != null) {
             SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DID_NOT_RESPOND_INVITATION_TO_THE_CLAN_HAS_BEEN_CANCELLED);
             sm.addString(name);
@@ -33,7 +33,7 @@ public final class RequestJoinPledge extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
@@ -43,7 +43,7 @@ public final class RequestJoinPledge extends ClientPacket {
             return;
         }
 
-        final L2PcInstance target = L2World.getInstance().getPlayer(_target);
+        final Player target = L2World.getInstance().getPlayer(_target);
         if (target == null) {
             activeChar.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
             return;

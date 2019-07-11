@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.CombatFlag;
 import org.l2j.gameserver.model.FortSiegeSpawn;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.entity.FortSiege;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -49,7 +49,7 @@ public final class FortSiegeManager {
         load();
     }
 
-    public final void addSiegeSkills(L2PcInstance character) {
+    public final void addSiegeSkills(Player character) {
         character.addSkill(CommonSkill.SEAL_OF_RULER.getSkill(), false);
         character.addSkill(CommonSkill.BUILD_HEADQUARTERS.getSkill(), false);
     }
@@ -80,7 +80,7 @@ public final class FortSiegeManager {
         return register;
     }
 
-    public final void removeSiegeSkills(L2PcInstance character) {
+    public final void removeSiegeSkills(Player character) {
         character.removeSkill(CommonSkill.SEAL_OF_RULER.getSkill());
         character.removeSkill(CommonSkill.BUILD_HEADQUARTERS.getSkill());
     }
@@ -218,7 +218,7 @@ public final class FortSiegeManager {
         return (itemId == 9819);
     }
 
-    public boolean activateCombatFlag(L2PcInstance player, L2ItemInstance item) {
+    public boolean activateCombatFlag(Player player, L2ItemInstance item) {
         if (!checkIfCanPickup(player)) {
             return false;
         }
@@ -234,7 +234,7 @@ public final class FortSiegeManager {
         return true;
     }
 
-    public boolean checkIfCanPickup(L2PcInstance player) {
+    public boolean checkIfCanPickup(Player player) {
         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_FORTRESS_BATTLE_OF_S1_HAS_FINISHED);
         sm.addItemName(9819);
         // Cannot own 2 combat flag
@@ -260,7 +260,7 @@ public final class FortSiegeManager {
         return true;
     }
 
-    public void dropCombatFlag(L2PcInstance player, int fortId) {
+    public void dropCombatFlag(Player player, int fortId) {
         final Fort fort = FortManager.getInstance().getFortById(fortId);
         final List<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
         for (CombatFlag cf : fcf) {

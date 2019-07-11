@@ -20,7 +20,7 @@ import java.util.StringTokenizer;
 
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.ClanHall;
 
 import ai.AbstractNpcAI;
@@ -57,7 +57,7 @@ public final class ClanHallDoorManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		final StringTokenizer st = new StringTokenizer(event, " ");
 		final String action = st.nextToken();
@@ -93,7 +93,7 @@ public final class ClanHallDoorManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		String htmltext = null;
 		final ClanHall clanHall = npc.getClanHall();
@@ -115,7 +115,7 @@ public final class ClanHallDoorManager extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private boolean isOwningClan(L2PcInstance player, L2Npc npc)
+	private boolean isOwningClan(Player player, L2Npc npc)
 	{
 		return ((npc.getClanHall().getOwnerId() == player.getClanId()) && (player.getClanId() != 0));
 	}

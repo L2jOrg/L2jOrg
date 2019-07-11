@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
@@ -24,17 +24,17 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnPlayerReputationChanged implements IBaseEvent {
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final int _oldReputation;
     private final int _newReputation;
 
-    public OnPlayerReputationChanged(L2PcInstance activeChar, int oldReputation, int newReputation) {
+    public OnPlayerReputationChanged(Player activeChar, int oldReputation, int newReputation) {
         _activeChar = activeChar;
         _oldReputation = oldReputation;
         _newReputation = newReputation;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _activeChar;
     }
 

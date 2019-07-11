@@ -1,15 +1,15 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.L2ManufactureItem;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class RecipeShopSellList extends ServerPacket {
-    private final L2PcInstance _buyer;
-    private final L2PcInstance _manufacturer;
+    private final Player _buyer;
+    private final Player _manufacturer;
 
-    public RecipeShopSellList(L2PcInstance buyer, L2PcInstance manufacturer) {
+    public RecipeShopSellList(Player buyer, Player manufacturer) {
         _buyer = buyer;
         _manufacturer = manufacturer;
     }

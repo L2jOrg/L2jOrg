@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.enums.StorageType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
@@ -75,7 +75,7 @@ public class EnlargeSlot extends AbstractEffect
 		effected.getStat().mergeAdd(stat, _amount);
 		if (effected.isPlayer())
 		{
-			effected.sendPacket(new ExStorageMaxCount((L2PcInstance) effected));
+			effected.sendPacket(new ExStorageMaxCount((Player) effected));
 		}
 	}
 }

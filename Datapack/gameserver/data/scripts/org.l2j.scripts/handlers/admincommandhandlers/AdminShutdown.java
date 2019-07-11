@@ -23,7 +23,7 @@ import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.Shutdown;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GameUtils;
@@ -41,7 +41,7 @@ public class AdminShutdown implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_server_shutdown"))
 		{
@@ -97,7 +97,7 @@ public class AdminShutdown implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void sendHtmlForm(L2PcInstance activeChar)
+	private void sendHtmlForm(Player activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		final int t = GameTimeController.getInstance().getGameTime();
@@ -114,12 +114,12 @@ public class AdminShutdown implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void serverShutdown(L2PcInstance activeChar, int seconds, boolean restart)
+	private void serverShutdown(Player activeChar, int seconds, boolean restart)
 	{
 		Shutdown.getInstance().startShutdown(activeChar, seconds, restart);
 	}
 	
-	private void serverAbort(L2PcInstance activeChar)
+	private void serverAbort(Player activeChar)
 	{
 		Shutdown.getInstance().abort(activeChar);
 	}

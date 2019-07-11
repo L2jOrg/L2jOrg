@@ -18,7 +18,7 @@ package quests.Q00277_GatekeepersOffering;
 
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
@@ -50,7 +50,7 @@ public class Q00277_GatekeepersOffering extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, false);
 		if ((st != null) && event.equalsIgnoreCase("30576-03.htm"))
@@ -66,7 +66,7 @@ public class Q00277_GatekeepersOffering extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(L2Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState st = getQuestState(killer, false);
 		if ((st != null) && st.isStarted() && (getQuestItemsCount(killer, STARSTONE) < STARSTONE_COUT))
@@ -85,7 +85,7 @@ public class Q00277_GatekeepersOffering extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

@@ -5,7 +5,7 @@ import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Crest;
 import org.l2j.gameserver.model.L2Crest.CrestType;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 
@@ -29,7 +29,7 @@ public final class RequestSetAllyCrest extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }

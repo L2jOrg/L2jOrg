@@ -8,7 +8,7 @@ import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.TradeList;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemAdd;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemDestroy;
@@ -34,7 +34,7 @@ import static java.util.Objects.nonNull;
 public class PcInventory extends Inventory {
     private static final Logger LOGGER = LoggerFactory.getLogger(PcInventory.class);
 
-    private final L2PcInstance _owner;
+    private final Player _owner;
     private L2ItemInstance _adena;
     private L2ItemInstance _ancientAdena;
     private L2ItemInstance _beautyTickets;
@@ -45,7 +45,7 @@ public class PcInventory extends Inventory {
 
     private InventoryBlockType _blockMode = InventoryBlockType.NONE;
 
-    public PcInventory(L2PcInstance owner) {
+    public PcInventory(Player owner) {
         _owner = owner;
     }
 
@@ -69,7 +69,7 @@ public class PcInventory extends Inventory {
     }
 
     @Override
-    public L2PcInstance getOwner() {
+    public Player getOwner() {
         return _owner;
     }
 
@@ -255,10 +255,10 @@ public class PcInventory extends Inventory {
      *
      * @param process   : String Identifier of process triggering this action
      * @param count     : int Quantity of adena to be added
-     * @param actor     : L2PcInstance Player requesting the item add
+     * @param actor     : Player Player requesting the item add
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      */
-    public void addAdena(String process, long count, L2PcInstance actor, Object reference) {
+    public void addAdena(String process, long count, Player actor, Object reference) {
         if (count > 0) {
             addItem(process, CommonItem.ADENA, count, actor, reference);
         }
@@ -269,10 +269,10 @@ public class PcInventory extends Inventory {
      *
      * @param process   : String Identifier of process triggering this action
      * @param count     : int Quantity of Beauty Tickets to be added
-     * @param actor     : L2PcInstance Player requesting the item add
+     * @param actor     : Player Player requesting the item add
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      */
-    public void addBeautyTickets(String process, long count, L2PcInstance actor, Object reference) {
+    public void addBeautyTickets(String process, long count, Player actor, Object reference) {
         if (count > 0) {
             addItem(process, BEAUTY_TICKET_ID, count, actor, reference);
         }
@@ -283,11 +283,11 @@ public class PcInventory extends Inventory {
      *
      * @param process   : String Identifier of process triggering this action
      * @param count     : int Quantity of adena to be removed
-     * @param actor     : L2PcInstance Player requesting the item add
+     * @param actor     : Player Player requesting the item add
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return boolean : true if adena was reduced
      */
-    public boolean reduceAdena(String process, long count, L2PcInstance actor, Object reference) {
+    public boolean reduceAdena(String process, long count, Player actor, Object reference) {
         if (count > 0) {
             return destroyItemByItemId(process, CommonItem.ADENA, count, actor, reference) != null;
         }
@@ -299,11 +299,11 @@ public class PcInventory extends Inventory {
      *
      * @param process   : String Identifier of process triggering this action
      * @param count     : int Quantity of Beauty Tickets to be removed
-     * @param actor     : L2PcInstance Player requesting the item add
+     * @param actor     : Player Player requesting the item add
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return boolean : true if adena was reduced
      */
-    public boolean reduceBeautyTickets(String process, long count, L2PcInstance actor, Object reference) {
+    public boolean reduceBeautyTickets(String process, long count, Player actor, Object reference) {
         if (count > 0) {
             return destroyItemByItemId(process, BEAUTY_TICKET_ID, count, actor, reference) != null;
         }
@@ -315,10 +315,10 @@ public class PcInventory extends Inventory {
      *
      * @param process   : String Identifier of process triggering this action
      * @param count     : int Quantity of adena to be added
-     * @param actor     : L2PcInstance Player requesting the item add
+     * @param actor     : Player Player requesting the item add
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      */
-    public void addAncientAdena(String process, long count, L2PcInstance actor, Object reference) {
+    public void addAncientAdena(String process, long count, Player actor, Object reference) {
         if (count > 0) {
             addItem(process,CommonItem.ANCIENT_ADENA, count, actor, reference);
         }
@@ -329,11 +329,11 @@ public class PcInventory extends Inventory {
      *
      * @param process   : String Identifier of process triggering this action
      * @param count     : int Quantity of adena to be removed
-     * @param actor     : L2PcInstance Player requesting the item add
+     * @param actor     : Player Player requesting the item add
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return boolean : true if adena was reduced
      */
-    public boolean reduceAncientAdena(String process, long count, L2PcInstance actor, Object reference) {
+    public boolean reduceAncientAdena(String process, long count, Player actor, Object reference) {
         if (count > 0) {
             return destroyItemByItemId(process, CommonItem.ANCIENT_ADENA, count, actor, reference) != null;
         }
@@ -345,12 +345,12 @@ public class PcInventory extends Inventory {
      *
      * @param process   : String Identifier of process triggering this action
      * @param item      : L2ItemInstance to be added
-     * @param actor     : L2PcInstance Player requesting the item add
+     * @param actor     : Player Player requesting the item add
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return L2ItemInstance corresponding to the new item or the updated item in inventory
      */
     @Override
-    public L2ItemInstance addItem(String process, L2ItemInstance item, L2PcInstance actor, Object reference) {
+    public L2ItemInstance addItem(String process, L2ItemInstance item, Player actor, Object reference) {
         item = super.addItem(process, item, actor, reference);
 
         if (item != null) {
@@ -390,12 +390,12 @@ public class PcInventory extends Inventory {
      * @param process   : String Identifier of process triggering this action
      * @param itemId    : int Item Identifier of the item to be added
      * @param count     : int Quantity of items to be added
-     * @param actor     : L2PcInstance Player requesting the item creation
+     * @param actor     : Player Player requesting the item creation
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return L2ItemInstance corresponding to the new item or the updated item in inventory
      */
     @Override
-    public L2ItemInstance addItem(String process, int itemId, long count, L2PcInstance actor, Object reference) {
+    public L2ItemInstance addItem(String process, int itemId, long count, Player actor, Object reference) {
         return addItem(process, itemId, count, actor, reference, true);
     }
 
@@ -405,12 +405,12 @@ public class PcInventory extends Inventory {
      * @param process   : String Identifier of process triggering this action
      * @param itemId    : int Item Identifier of the item to be added
      * @param count     : int Quantity of items to be added
-     * @param actor     : L2PcInstance Player requesting the item creation
+     * @param actor     : Player Player requesting the item creation
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @param update    : Update inventory (not used by MultiSellChoose packet / it sends update after finish)
      * @return L2ItemInstance corresponding to the new item or the updated item in inventory
      */
-    public L2ItemInstance addItem(String process, int itemId, long count, L2PcInstance actor, Object reference, boolean update) {
+    public L2ItemInstance addItem(String process, int itemId, long count, Player actor, Object reference, boolean update) {
         final L2ItemInstance item = super.addItem(process, itemId, count, actor, reference);
         if (item != null) {
             if ((item.getId() == CommonItem.ADENA) && !item.equals(_adena)) {
@@ -452,7 +452,7 @@ public class PcInventory extends Inventory {
      * @return L2ItemInstance corresponding to the new item or the updated item in inventory
      */
     @Override
-    public L2ItemInstance transferItem(String process, int objectId, long count, ItemContainer target, L2PcInstance actor, Object reference) {
+    public L2ItemInstance transferItem(String process, int objectId, long count, ItemContainer target, Player actor, Object reference) {
         final L2ItemInstance item = super.transferItem(process, objectId, count, target, actor, reference);
 
         if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId()))) {
@@ -469,7 +469,7 @@ public class PcInventory extends Inventory {
     }
 
     @Override
-    public L2ItemInstance detachItem(String process, L2ItemInstance item, long count, ItemLocation newLocation, L2PcInstance actor, Object reference) {
+    public L2ItemInstance detachItem(String process, L2ItemInstance item, long count, ItemLocation newLocation, Player actor, Object reference) {
         item = super.detachItem(process, item, count, newLocation, actor, reference);
 
         if ((item != null) && (actor != null)) {
@@ -483,12 +483,12 @@ public class PcInventory extends Inventory {
      *
      * @param process   : String Identifier of process triggering this action
      * @param item      : L2ItemInstance to be destroyed
-     * @param actor     : L2PcInstance Player requesting the item destroy
+     * @param actor     : Player Player requesting the item destroy
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return L2ItemInstance corresponding to the destroyed item or the updated item in inventory
      */
     @Override
-    public L2ItemInstance destroyItem(String process, L2ItemInstance item, L2PcInstance actor, Object reference) {
+    public L2ItemInstance destroyItem(String process, L2ItemInstance item, Player actor, Object reference) {
         return destroyItem(process, item, item.getCount(), actor, reference);
     }
 
@@ -497,12 +497,12 @@ public class PcInventory extends Inventory {
      *
      * @param process   : String Identifier of process triggering this action
      * @param item      : L2ItemInstance to be destroyed
-     * @param actor     : L2PcInstance Player requesting the item destroy
+     * @param actor     : Player Player requesting the item destroy
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return L2ItemInstance corresponding to the destroyed item or the updated item in inventory
      */
     @Override
-    public L2ItemInstance destroyItem(String process, L2ItemInstance item, long count, L2PcInstance actor, Object reference) {
+    public L2ItemInstance destroyItem(String process, L2ItemInstance item, long count, Player actor, Object reference) {
         item = super.destroyItem(process, item, count, actor, reference);
 
         if ((_adena != null) && (_adena.getCount() <= 0)) {
@@ -526,12 +526,12 @@ public class PcInventory extends Inventory {
      * @param process   : String Identifier of process triggering this action
      * @param objectId  : int Item Instance identifier of the item to be destroyed
      * @param count     : int Quantity of items to be destroyed
-     * @param actor     : L2PcInstance Player requesting the item destroy
+     * @param actor     : Player Player requesting the item destroy
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return L2ItemInstance corresponding to the destroyed item or the updated item in inventory
      */
     @Override
-    public L2ItemInstance destroyItem(String process, int objectId, long count, L2PcInstance actor, Object reference) {
+    public L2ItemInstance destroyItem(String process, int objectId, long count, Player actor, Object reference) {
         final L2ItemInstance item = getItemByObjectId(objectId);
         if (item == null) {
             return null;
@@ -545,12 +545,12 @@ public class PcInventory extends Inventory {
      * @param process   : String Identifier of process triggering this action
      * @param itemId    : int Item identifier of the item to be destroyed
      * @param count     : int Quantity of items to be destroyed
-     * @param actor     : L2PcInstance Player requesting the item destroy
+     * @param actor     : Player Player requesting the item destroy
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return L2ItemInstance corresponding to the destroyed item or the updated item in inventory
      */
     @Override
-    public L2ItemInstance destroyItemByItemId(String process, int itemId, long count, L2PcInstance actor, Object reference) {
+    public L2ItemInstance destroyItemByItemId(String process, int itemId, long count, Player actor, Object reference) {
         final L2ItemInstance item = getItemByItemId(itemId);
         if (item == null) {
             return null;
@@ -563,12 +563,12 @@ public class PcInventory extends Inventory {
      *
      * @param process   : String Identifier of process triggering this action
      * @param item      : L2ItemInstance to be dropped
-     * @param actor     : L2PcInstance Player requesting the item drop
+     * @param actor     : Player Player requesting the item drop
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return L2ItemInstance corresponding to the destroyed item or the updated item in inventory
      */
     @Override
-    public L2ItemInstance dropItem(String process, L2ItemInstance item, L2PcInstance actor, Object reference) {
+    public L2ItemInstance dropItem(String process, L2ItemInstance item, Player actor, Object reference) {
         item = super.dropItem(process, item, actor, reference);
 
         if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId()))) {
@@ -592,12 +592,12 @@ public class PcInventory extends Inventory {
      * @param process   : String Identifier of process triggering this action
      * @param objectId  : int Item Instance identifier of the item to be dropped
      * @param count     : int Quantity of items to be dropped
-     * @param actor     : L2PcInstance Player requesting the item drop
+     * @param actor     : Player Player requesting the item drop
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return L2ItemInstance corresponding to the destroyed item or the updated item in inventory
      */
     @Override
-    public L2ItemInstance dropItem(String process, int objectId, long count, L2PcInstance actor, Object reference) {
+    public L2ItemInstance dropItem(String process, int objectId, long count, Player actor, Object reference) {
         final L2ItemInstance item = super.dropItem(process, objectId, count, actor, reference);
 
         if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId()))) {
@@ -832,7 +832,7 @@ public class PcInventory extends Inventory {
     }
 
     /**
-     * Reduce the number of arrows/bolts owned by the L2PcInstance and send it Server->Client Packet InventoryUpdate or ItemList (to unequip if the last arrow was consumed).
+     * Reduce the number of arrows/bolts owned by the Player and send it Server->Client Packet InventoryUpdate or ItemList (to unequip if the last arrow was consumed).
      *
      * @param type
      */
@@ -871,7 +871,7 @@ public class PcInventory extends Inventory {
      * @param reference
      * @return Amount of items left.
      */
-    public boolean updateItemCountNoDbUpdate(String process, L2ItemInstance item, long countDelta, L2PcInstance creator, Object reference) {
+    public boolean updateItemCountNoDbUpdate(String process, L2ItemInstance item, long countDelta, Player creator, Object reference) {
         final InventoryUpdate iu = new InventoryUpdate();
         final long left = item.getCount() + countDelta;
         try {
@@ -913,7 +913,7 @@ public class PcInventory extends Inventory {
      * @param reference
      * @return Amount of items left.
      */
-    public boolean updateItemCount(String process, L2ItemInstance item, long countDelta, L2PcInstance creator, Object reference) {
+    public boolean updateItemCount(String process, L2ItemInstance item, long countDelta, Player creator, Object reference) {
         if (item != null) {
             try {
                 return updateItemCountNoDbUpdate(process, item, countDelta, creator, reference);

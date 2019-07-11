@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.actor.request;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 
 /**
@@ -27,7 +27,7 @@ public final class EnchantItemRequest extends AbstractRequest {
     private volatile int _enchantingScrollObjectId;
     private volatile int _supportItemObjectId;
 
-    public EnchantItemRequest(L2PcInstance activeChar, int enchantingScrollObjectId) {
+    public EnchantItemRequest(Player activeChar, int enchantingScrollObjectId) {
         super(activeChar);
         _enchantingScrollObjectId = enchantingScrollObjectId;
     }

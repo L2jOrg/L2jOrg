@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2CubicTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoCubic;
@@ -21,13 +21,13 @@ import java.util.stream.Stream;
  * @author UnAfraid
  */
 public class CubicInstance {
-    private final L2PcInstance _owner;
-    private final L2PcInstance _caster;
+    private final Player _owner;
+    private final Player _caster;
     private final L2CubicTemplate _template;
     private ScheduledFuture<?> _skillUseTask;
     private ScheduledFuture<?> _expireTask;
 
-    public CubicInstance(L2PcInstance owner, L2PcInstance caster, L2CubicTemplate template) {
+    public CubicInstance(Player owner, Player caster, L2CubicTemplate template) {
         _owner = owner;
         _caster = caster == null ? owner : caster;
         _template = template;

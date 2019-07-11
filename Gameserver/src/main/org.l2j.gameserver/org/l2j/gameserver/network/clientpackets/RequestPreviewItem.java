@@ -6,7 +6,7 @@ import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2MerchantInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
@@ -63,7 +63,7 @@ public final class RequestPreviewItem extends ClientPacket {
         }
 
         // Get the current player and return if null
-        final L2PcInstance activeChar = client.getActiveChar();
+        final Player activeChar = client.getActiveChar();
         if (activeChar == null) {
             return;
         }
@@ -154,9 +154,9 @@ public final class RequestPreviewItem extends ClientPacket {
     }
 
     private class RemoveWearItemsTask implements Runnable {
-        private final L2PcInstance activeChar;
+        private final Player activeChar;
 
-        protected RemoveWearItemsTask(L2PcInstance player) {
+        protected RemoveWearItemsTask(Player player) {
             activeChar = player;
         }
 

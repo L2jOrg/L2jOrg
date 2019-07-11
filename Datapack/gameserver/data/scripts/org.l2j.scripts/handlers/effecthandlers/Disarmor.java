@@ -22,7 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
@@ -66,7 +66,7 @@ public final class Disarmor extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance player = effected.getActingPlayer();
+		final Player player = effected.getActingPlayer();
 		final L2ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
 		if (unequiped.length > 0)
 		{
@@ -107,7 +107,7 @@ public final class Disarmor extends AbstractEffect
 		final Integer disarmedObjId = _unequippedItems.remove(effected.getObjectId());
 		if ((disarmedObjId != null) && (disarmedObjId > 0))
 		{
-			final L2PcInstance player = effected.getActingPlayer();
+			final Player player = effected.getActingPlayer();
 			player.getInventory().unblockItemSlot(_slot);
 			
 			final L2ItemInstance item = player.getInventory().getItemByObjectId(disarmedObjId);

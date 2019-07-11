@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.actor.tasks.player;
 
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
  * Task dedicated to put player to stand up.
@@ -9,9 +9,9 @@ import org.l2j.gameserver.model.actor.instance.L2PcInstance;
  * @author UnAfraid
  */
 public class StandUpTask implements Runnable {
-    private final L2PcInstance _player;
+    private final Player _player;
 
-    public StandUpTask(L2PcInstance player) {
+    public StandUpTask(Player player) {
         _player = player;
     }
 

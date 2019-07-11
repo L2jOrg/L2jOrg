@@ -12,7 +12,7 @@ import org.l2j.gameserver.engines.captcha.CaptchaEngine;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2Object;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
 import org.l2j.gameserver.model.punishment.PunishmentAffect;
 import org.l2j.gameserver.model.punishment.PunishmentTask;
@@ -140,16 +140,16 @@ public final class ReportTable {
     /**
      * Attempts to perform a bot report. R/W to ip and char id registry is synchronized. Triggers bot punish management<br>
      *
-     * @param reporter (L2PcInstance who issued the report)
+     * @param reporter (Player who issued the report)
      * @return True, if the report was registered, False otherwise
      */
-    public boolean reportBot(L2PcInstance reporter) {
+    public boolean reportBot(Player reporter) {
         final L2Object target = reporter.getTarget();
         if (isNull(target) || !target.isPlayer() || target.getObjectId() == reporter.getObjectId()) {
             return false;
         }
 
-        final L2PcInstance bot = ((L2PcInstance) target);
+        final Player bot = ((Player) target);
 
         if (bot.isInsideZone(ZoneId.PEACE) || bot.isInsideZone(ZoneId.PVP)) {
             reporter.sendPacket(SystemMessageId.YOU_CANNOT_REPORT_A_CHARACTER_WHO_IS_IN_A_PEACE_ZONE_OR_A_BATTLEGROUND);
@@ -243,10 +243,10 @@ public final class ReportTable {
     /**
      * Find the punishs to apply to the given bot and triggers the punish method.
      *
-     * @param bot (L2PcInstance to be punished)
+     * @param bot (Player to be punished)
      * @param rcd (RepotedCharData linked to this bot)
      */
-    private void handleReport(L2PcInstance bot, BotReportedCharData rcd) {
+    private void handleReport(Player bot, BotReportedCharData rcd) {
         // Report count punishment
         punishBot(bot, _punishments.get(rcd.getReportCount()));
 
@@ -272,10 +272,10 @@ public final class ReportTable {
     /**
      * Applies the given punish to the bot if the action is secure
      *
-     * @param bot (L2PcInstance to punish)
+     * @param bot (Player to punish)
      * @param ph  (PunishHolder containing the debuff and a possible system message to send)
      */
-    private void punishBot(L2PcInstance bot, PunishHolder ph) {
+    private void punishBot(Player bot, PunishHolder ph) {
         if (nonNull(ph)) {
             ph._punish.applyEffects(bot, bot);
             if (ph._systemMessageId > -1) {
@@ -327,7 +327,7 @@ public final class ReportTable {
         }
     }
 
-    public void punishBotDueUnsolvedCaptcha(L2PcInstance bot) {
+    public void punishBotDueUnsolvedCaptcha(Player bot) {
         CommonSkill.BOT_REPORT_STATUS.getSkill().applyEffects(bot, bot);
         bot.removeRequest(CaptchaRequest.class);
         var msg = SystemMessage.getSystemMessage(SystemMessageId.IF_A_USER_ENTERS_A_WRONG_AUTHENTICATION_CODE_3_TIMES_IN_A_ROW_OR_DOES_NOT_ENTER_THE_CODE_IN_TIME_THE_SYSTEM_WILL_QUALIFY_HIM_AS_A_RULE_BREAKER_AND_CHARGE_HIS_ACCOUNT_WITH_A_PENALTY_S1);

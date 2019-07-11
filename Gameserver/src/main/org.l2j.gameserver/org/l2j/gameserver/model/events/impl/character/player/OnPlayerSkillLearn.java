@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.events.impl.character.player;
 
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
@@ -28,11 +28,11 @@ import org.l2j.gameserver.model.skills.Skill;
  */
 public class OnPlayerSkillLearn implements IBaseEvent {
     private final L2Npc _trainer;
-    private final L2PcInstance _activeChar;
+    private final Player _activeChar;
     private final Skill _skill;
     private final AcquireSkillType _type;
 
-    public OnPlayerSkillLearn(L2Npc trainer, L2PcInstance activeChar, Skill skill, AcquireSkillType type) {
+    public OnPlayerSkillLearn(L2Npc trainer, Player activeChar, Skill skill, AcquireSkillType type) {
         _trainer = trainer;
         _activeChar = activeChar;
         _skill = skill;
@@ -43,7 +43,7 @@ public class OnPlayerSkillLearn implements IBaseEvent {
         return _trainer;
     }
 
-    public L2PcInstance getActiveChar() {
+    public Player getActiveChar() {
         return _activeChar;
     }
 

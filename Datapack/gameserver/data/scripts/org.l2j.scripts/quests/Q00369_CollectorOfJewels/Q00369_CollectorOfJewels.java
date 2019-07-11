@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.QuestItemHolder;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
@@ -60,14 +60,14 @@ public final class Q00369_CollectorOfJewels extends Quest
 	}
 	
 	@Override
-	public boolean checkPartyMember(L2PcInstance member, L2Npc npc)
+	public boolean checkPartyMember(Player member, L2Npc npc)
 	{
 		final QuestState st = getQuestState(member, false);
 		return ((st != null) && (st.isMemoState(1) || st.isMemoState(3)));
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, false);
 		if (st == null)
@@ -111,12 +111,12 @@ public final class Q00369_CollectorOfJewels extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(L2Npc npc, Player player, boolean isSummon)
 	{
 		final QuestItemHolder item = MOBS_DROP_CHANCES.get(npc.getId());
 		if (getRandom(100) < item.getChance())
 		{
-			L2PcInstance luckyPlayer = getRandomPartyMember(player, npc);
+			Player luckyPlayer = getRandomPartyMember(player, npc);
 			if (luckyPlayer != null)
 			{
 				final QuestState st = getQuestState(luckyPlayer, false);
@@ -133,7 +133,7 @@ public final class Q00369_CollectorOfJewels extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

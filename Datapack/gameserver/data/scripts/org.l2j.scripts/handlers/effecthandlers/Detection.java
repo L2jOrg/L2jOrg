@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.AbnormalType;
@@ -48,8 +48,8 @@ public final class Detection extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance player = effector.getActingPlayer();
-		final L2PcInstance target = effected.getActingPlayer();
+		final Player player = effector.getActingPlayer();
+		final Player target = effected.getActingPlayer();
 		final boolean hasParty = player.isInParty();
 		final boolean hasClan = player.getClanId() > 0;
 		final boolean hasAlly = player.getAllyId() > 0;

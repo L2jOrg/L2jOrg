@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.L2World;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExRotation;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
@@ -25,8 +25,8 @@ public class AnswerCoupleAction extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final L2PcInstance activeChar = client.getActiveChar();
-        final L2PcInstance target = L2World.getInstance().getPlayer(_charObjId);
+        final Player activeChar = client.getActiveChar();
+        final Player target = L2World.getInstance().getPlayer(_charObjId);
         if ((activeChar == null) || (target == null)) {
             return;
         }

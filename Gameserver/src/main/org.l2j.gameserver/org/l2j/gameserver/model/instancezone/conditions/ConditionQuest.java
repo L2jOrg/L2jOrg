@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.instancezone.conditions;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
@@ -38,7 +38,7 @@ public final class ConditionQuest extends Condition {
     }
 
     @Override
-    protected boolean test(L2PcInstance player, L2Npc npc) {
+    protected boolean test(Player player, L2Npc npc) {
         final int id = getParameters().getInt("id");
         final Quest q = QuestManager.getInstance().getQuest(id);
         if (q == null) {

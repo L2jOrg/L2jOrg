@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.L2Summon;
 import org.l2j.gameserver.model.actor.instance.L2DoorInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.L2DoorTemplate;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.instance.*;
@@ -54,8 +54,8 @@ public final class Instance implements IIdentifiable, INamable {
     private final InstanceTemplate _template;
     private final long _startTime;
     // Advanced instance parameters
-    private final Set<L2PcInstance> _allowed = ConcurrentHashMap.newKeySet(); // Players which can enter to instance
-    private final Set<L2PcInstance> _players = ConcurrentHashMap.newKeySet(); // Players inside instance
+    private final Set<Player> _allowed = ConcurrentHashMap.newKeySet(); // Players which can enter to instance
+    private final Set<Player> _players = ConcurrentHashMap.newKeySet(); // Players inside instance
     private final Set<L2Npc> _npcs = ConcurrentHashMap.newKeySet(); // Spawned NPCs inside instance
     private final Map<Integer, L2DoorInstance> _doors = new HashMap<>(); // Spawned doors inside instance
     private final StatsSet _parameters = new StatsSet();
@@ -73,7 +73,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param template template of instance world
      * @param player   player who create instance world.
      */
-    public Instance(int id, InstanceTemplate template, L2PcInstance player) {
+    public Instance(int id, InstanceTemplate template, Player player) {
         // Set basic instance info
         _id = id;
         _template = template;
@@ -187,7 +187,7 @@ public final class Instance implements IIdentifiable, INamable {
      *
      * @param player player instance
      */
-    public void addAllowed(L2PcInstance player) {
+    public void addAllowed(Player player) {
         if (!_allowed.contains(player)) {
             _allowed.add(player);
         }
@@ -199,7 +199,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param player player itself
      * @return {@code true} when can enter, otherwise {@code false}
      */
-    public boolean isAllowed(L2PcInstance player) {
+    public boolean isAllowed(Player player) {
         return _allowed.contains(player);
     }
 
@@ -208,7 +208,7 @@ public final class Instance implements IIdentifiable, INamable {
      *
      * @return allowed players list
      */
-    public Set<L2PcInstance> getAllowed() {
+    public Set<Player> getAllowed() {
         return _allowed;
     }
 
@@ -217,7 +217,7 @@ public final class Instance implements IIdentifiable, INamable {
      *
      * @param player to remove
      */
-    public void removeAllowed(L2PcInstance player) {
+    public void removeAllowed(Player player) {
         _allowed.remove(player);
     }
 
@@ -226,7 +226,7 @@ public final class Instance implements IIdentifiable, INamable {
      *
      * @param player player instance
      */
-    public void addPlayer(L2PcInstance player) {
+    public void addPlayer(Player player) {
         _players.add(player);
         if (_emptyDestroyTask != null) {
             _emptyDestroyTask.cancel(false);
@@ -239,7 +239,7 @@ public final class Instance implements IIdentifiable, INamable {
      *
      * @param player player instance
      */
-    public void removePlayer(L2PcInstance player) {
+    public void removePlayer(Player player) {
         _players.remove(player);
         if (_players.isEmpty()) {
             final long emptyTime = _template.getEmptyDestroyTime();
@@ -257,7 +257,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param player player to be checked
      * @return {@code true} if player is inside, otherwise {@code false}
      */
-    public boolean containsPlayer(L2PcInstance player) {
+    public boolean containsPlayer(Player player) {
         return _players.contains(player);
     }
 
@@ -266,7 +266,7 @@ public final class Instance implements IIdentifiable, INamable {
      *
      * @return players within instance
      */
-    public Set<L2PcInstance> getPlayers() {
+    public Set<Player> getPlayers() {
         return _players;
     }
 
@@ -285,7 +285,7 @@ public final class Instance implements IIdentifiable, INamable {
      *
      * @return first found player, otherwise {@code null}
      */
-    public L2PcInstance getFirstPlayer() {
+    public Player getFirstPlayer() {
         return _players.stream().findFirst().orElse(null);
     }
 
@@ -295,7 +295,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param id objectId of player
      * @return first player by ID, otherwise {@code null}
      */
-    public L2PcInstance getPlayerById(int id) {
+    public Player getPlayerById(int id) {
         return _players.stream().filter(p -> p.getObjectId() == id).findFirst().orElse(null);
     }
 
@@ -306,7 +306,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param radius radius around target
      * @return players within radius
      */
-    public Set<L2PcInstance> getPlayersInsideRadius(ILocational object, int radius) {
+    public Set<Player> getPlayersInsideRadius(ILocational object, int radius) {
         return _players.stream().filter(p -> p.isInsideRadius3D(object, radius)).collect(Collectors.toSet());
     }
 
@@ -652,7 +652,7 @@ public final class Instance implements IIdentifiable, INamable {
      *
      * @param player player that should be moved out
      */
-    public void ejectPlayer(L2PcInstance player) {
+    public void ejectPlayer(Player player) {
         if (player.getInstanceWorld().equals(this)) {
             final Location loc = _template.getExitLocation(player);
             if (loc != null) {
@@ -669,7 +669,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param packets packets to be send
      */
     public void broadcastPacket(ServerPacket... packets) {
-        for (L2PcInstance player : _players) {
+        for (Player player : _players) {
             for (ServerPacket packet : packets) {
                 player.sendPacket(packet);
             }
@@ -734,7 +734,7 @@ public final class Instance implements IIdentifiable, INamable {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("INSERT IGNORE INTO character_instance_time (charId,instanceId,time) VALUES (?,?,?)")) {
             // Save to database
-            for (L2PcInstance player : _allowed) {
+            for (Player player : _allowed) {
                 if (player != null) {
                     ps.setInt(1, player.getObjectId());
                     ps.setInt(2, _template.getId());
@@ -799,7 +799,7 @@ public final class Instance implements IIdentifiable, INamable {
      *
      * @param player
      */
-    public void onDeath(L2PcInstance player) {
+    public void onDeath(Player player) {
         if (!player.isOnCustomEvent() && (_template.getEjectTime() > 0)) {
             // Send message
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MINUTE_S_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANCE_ZONE);
@@ -821,7 +821,7 @@ public final class Instance implements IIdentifiable, INamable {
      *
      * @param player resurrected player
      */
-    public void doRevive(L2PcInstance player) {
+    public void doRevive(Player player) {
         final ScheduledFuture<?> task = _ejectDeadTasks.remove(player.getObjectId());
         if (task != null) {
             task.cancel(true);
@@ -836,7 +836,7 @@ public final class Instance implements IIdentifiable, INamable {
      */
     public void onInstanceChange(L2Object object, boolean enter) {
         if (object.isPlayer()) {
-            final L2PcInstance player = object.getActingPlayer();
+            final Player player = object.getActingPlayer();
             if (enter) {
                 addPlayer(player);
 
@@ -879,7 +879,7 @@ public final class Instance implements IIdentifiable, INamable {
      *
      * @param player player who logout
      */
-    public void onPlayerLogout(L2PcInstance player) {
+    public void onPlayerLogout(Player player) {
         removePlayer(player);
         if (Config.RESTORE_PLAYER_INSTANCE) {
             player.getVariables().set("INSTANCE_RESTORE", _id);
@@ -969,7 +969,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param player instance of player who wants to leave instance world
      * @return {@link Location} object if instance has exit location defined, otherwise {@code null}
      */
-    public Location getExitLocation(L2PcInstance player) {
+    public Location getExitLocation(Player player) {
         return _template.getExitLocation(player);
     }
 

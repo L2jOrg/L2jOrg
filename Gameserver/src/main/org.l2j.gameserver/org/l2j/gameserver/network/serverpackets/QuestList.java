@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -12,7 +12,7 @@ public class QuestList extends ServerPacket {
     private final List<QuestState> _activeQuests;
     private final byte[] _oneTimeQuestMask;
 
-    public QuestList(L2PcInstance player) {
+    public QuestList(Player player) {
         _activeQuests = new LinkedList<>();
         _oneTimeQuestMask = new byte[128];
 

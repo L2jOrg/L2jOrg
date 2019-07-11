@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.zone.type;
 import org.l2j.commons.util.Rnd;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 import java.util.concurrent.ScheduledFuture;
 
@@ -67,7 +67,7 @@ public class L2ResidenceHallTeleportZone extends L2ResidenceTeleportZone {
                 throw new NullPointerException();
             }
 
-            for (L2PcInstance pc : getPlayersInside()) {
+            for (Player pc : getPlayersInside()) {
                 if (pc != null) {
                     pc.teleToLocation(loc, false);
                 }

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -21,7 +21,7 @@ public class ExStorageMaxCount extends ServerPacket {
     private final int _inventoryExtraSlots;
     private final int _inventoryQuestItems;
 
-    public ExStorageMaxCount(L2PcInstance activeChar) {
+    public ExStorageMaxCount(Player activeChar) {
         _inventory = activeChar.getInventoryLimit();
         _warehouse = activeChar.getWareHouseLimit();
         // _freight = Config.ALT_FREIGHT_SLOTS; // Removed with 152.

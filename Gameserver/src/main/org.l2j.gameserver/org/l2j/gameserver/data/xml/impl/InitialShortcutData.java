@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.Macro;
 import org.l2j.gameserver.model.MacroCmd;
 import org.l2j.gameserver.model.Shortcut;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
@@ -241,7 +241,7 @@ public final class InitialShortcutData extends GameXmlReader {
      *
      * @param player the player
      */
-    public void registerAllShortcuts(L2PcInstance player) {
+    public void registerAllShortcuts(Player player) {
         if (player == null) {
             return;
         }

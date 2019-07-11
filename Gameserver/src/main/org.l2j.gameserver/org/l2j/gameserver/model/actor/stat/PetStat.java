@@ -62,7 +62,7 @@ public class PetStat extends SummonStat {
         if (levelIncreased) {
             getActiveChar().broadcastPacket(new SocialAction(getActiveChar().getObjectId(), SocialAction.LEVEL_UP));
         }
-        // Send a Server->Client packet PetInfo to the L2PcInstance
+        // Send a Server->Client packet PetInfo to the Player
         getActiveChar().updateAndBroadcastStatus(1);
 
         if (getActiveChar().getControlItem() != null) {

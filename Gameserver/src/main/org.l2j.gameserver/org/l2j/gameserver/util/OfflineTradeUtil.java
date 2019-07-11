@@ -20,7 +20,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
 import org.l2j.gameserver.instancemanager.PlayerCountManager;
 import org.l2j.gameserver.model.actor.L2Summon;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.L2GameClient;
@@ -44,7 +44,7 @@ public final class OfflineTradeUtil {
      * @param player the player to be check.
      * @return {@code true} if the player is allowed to remain as off-line shop.
      */
-    private static boolean offlineMode(L2PcInstance player) {
+    private static boolean offlineMode(Player player) {
         if ((player == null) || player.isInOlympiadMode() || player.isBlockedFromExit() || player.isJailed() || (player.getVehicle() != null)) {
             return false;
         }
@@ -86,7 +86,7 @@ public final class OfflineTradeUtil {
      * @param player
      * @return {@code true} when player entered offline mode, otherwise {@code false}
      */
-    public static boolean enteredOfflineMode(L2PcInstance player) {
+    public static boolean enteredOfflineMode(Player player) {
         if (!offlineMode(player)) {
             return false;
         }
@@ -100,7 +100,7 @@ public final class OfflineTradeUtil {
         player.leaveParty();
         OlympiadManager.getInstance().unRegisterNoble(player);
 
-        // If the L2PcInstance has Pet, unsummon it
+        // If the Player has Pet, unsummon it
         L2Summon pet = player.getPet();
         if (pet != null) {
             pet.setRestoreSummon(true);

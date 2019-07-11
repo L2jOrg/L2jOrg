@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -11,7 +11,7 @@ public class ExShowBaseAttributeCancelWindow extends ServerPacket {
     private final Collection<L2ItemInstance> _items;
     private long _price;
 
-    public ExShowBaseAttributeCancelWindow(L2PcInstance player) {
+    public ExShowBaseAttributeCancelWindow(Player player) {
         _items = player.getInventory().getItems(L2ItemInstance::hasAttributes);
     }
 

@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.ArenaParticipantsHolder;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.L2Playable;
 import org.l2j.gameserver.model.actor.instance.L2BlockInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -42,7 +42,7 @@ public class EventItem implements IItemHandler
 		
 		boolean used = false;
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
+		final Player activeChar = playable.getActingPlayer();
 		
 		final int itemId = item.getId();
 		switch (itemId)
@@ -65,7 +65,7 @@ public class EventItem implements IItemHandler
 		return used;
 	}
 	
-	private final boolean useBlockCheckerItem(L2PcInstance castor, L2ItemInstance item)
+	private final boolean useBlockCheckerItem(Player castor, L2ItemInstance item)
 	{
 		final int blockCheckerArena = castor.getBlockCheckerArena();
 		if (blockCheckerArena == -1)
@@ -93,7 +93,7 @@ public class EventItem implements IItemHandler
 		if (holder != null)
 		{
 			final int team = holder.getPlayerTeam(castor);
-			L2World.getInstance().forEachVisibleObjectInRange(block, L2PcInstance.class, sk.getEffectRange(), pc ->
+			L2World.getInstance().forEachVisibleObjectInRange(block, Player.class, sk.getEffectRange(), pc ->
 			{
 				final int enemyTeam = holder.getPlayerTeam(pc);
 				if ((enemyTeam != -1) && (enemyTeam != team))

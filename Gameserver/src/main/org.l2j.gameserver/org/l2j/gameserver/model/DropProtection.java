@@ -2,7 +2,7 @@ package org.l2j.gameserver.model;
 
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.L2PetInstance;
 
 import java.util.concurrent.ScheduledFuture;
@@ -31,7 +31,7 @@ public class DropProtection implements Runnable {
         return _owner;
     }
 
-    public synchronized boolean tryPickUp(L2PcInstance actor) {
+    public synchronized boolean tryPickUp(Player actor) {
         if (!_isProtected) {
             return true;
         }

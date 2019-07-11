@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -44,7 +44,7 @@ public class L2Mentee {
     }
 
     public void load() {
-        final L2PcInstance player = getPlayerInstance();
+        final Player player = getPlayerInstance();
         if (player == null) // Only if player is offline
         {
             try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -93,7 +93,7 @@ public class L2Mentee {
         return _currentLevel;
     }
 
-    public L2PcInstance getPlayerInstance() {
+    public Player getPlayerInstance() {
         return L2World.getInstance().getPlayer(_objectId);
     }
 

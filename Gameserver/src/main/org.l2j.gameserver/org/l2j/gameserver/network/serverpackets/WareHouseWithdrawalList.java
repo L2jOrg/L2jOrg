@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -21,7 +21,7 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket {
     private final int _sendType;
     private final int _invSize;
     private final List<Integer> _itemsStackable = new ArrayList<>();
-    private L2PcInstance _activeChar;
+    private Player _activeChar;
     private long _playerAdena;
     private Collection<L2ItemInstance> _items;
     /**
@@ -34,7 +34,7 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket {
      */
     private int _whType;
 
-    public WareHouseWithdrawalList(int sendType, L2PcInstance player, int type) {
+    public WareHouseWithdrawalList(int sendType, Player player, int type) {
         _sendType = sendType;
         _activeChar = player;
         _whType = type;

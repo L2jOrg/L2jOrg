@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.model.L2Party;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.L2ItemInstance;
 import org.l2j.gameserver.model.skills.Skill;
@@ -49,7 +49,7 @@ public final class CallParty extends AbstractEffect
 			return;
 		}
 		
-		for (L2PcInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			if (CallPc.checkSummonTargetStatus(partyMember, effector.getActingPlayer()))
 			{

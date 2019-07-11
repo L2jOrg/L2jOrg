@@ -8,7 +8,7 @@ import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.entity.FortSiege;
 import org.l2j.gameserver.model.entity.Siegable;
@@ -66,7 +66,7 @@ public class L2SiegeZone extends L2ZoneType {
             character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, true); // FIXME: Custom ?
 
             if (character.isPlayer()) {
-                final L2PcInstance plyer = character.getActingPlayer();
+                final Player plyer = character.getActingPlayer();
                 if (plyer.isRegisteredOnThisSiegeField(getSettings().getSiegeableId())) {
                     plyer.setIsInSiege(true); // in siege
                     if (getSettings().getSiege().giveFame() && (getSettings().getSiege().getFameFrequency() > 0)) {
@@ -98,7 +98,7 @@ public class L2SiegeZone extends L2ZoneType {
         character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false); // FIXME: Custom ?
         if (getSettings().isActiveSiege()) {
             if (character.isPlayer()) {
-                final L2PcInstance player = character.getActingPlayer();
+                final Player player = character.getActingPlayer();
                 character.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
                 if (player.getMountType() == MountType.WYVERN) {
                     player.exitedNoLanding();
@@ -110,7 +110,7 @@ public class L2SiegeZone extends L2ZoneType {
             }
         }
         if (character.isPlayer()) {
-            final L2PcInstance activeChar = character.getActingPlayer();
+            final Player activeChar = character.getActingPlayer();
             activeChar.stopFameTask();
             activeChar.setIsInSiege(false);
 
@@ -148,7 +148,7 @@ public class L2SiegeZone extends L2ZoneType {
     }
 
     @Override
-    public void onPlayerLogoutInside(L2PcInstance player) {
+    public void onPlayerLogoutInside(Player player) {
         if (player.getClanId() != getSettings().getSiegeableId()) {
             player.teleToLocation(TeleportWhereType.TOWN);
         }
@@ -162,7 +162,7 @@ public class L2SiegeZone extends L2ZoneType {
                 }
             }
         } else {
-            L2PcInstance player;
+            Player player;
             for (L2Character character : getCharactersInside()) {
                 if (character == null) {
                     continue;
@@ -190,7 +190,7 @@ public class L2SiegeZone extends L2ZoneType {
      * @param message
      */
     public void announceToPlayers(String message) {
-        for (L2PcInstance player : getPlayersInside()) {
+        for (Player player : getPlayersInside()) {
             if (player != null) {
                 player.sendMessage(message);
             }
@@ -219,7 +219,7 @@ public class L2SiegeZone extends L2ZoneType {
      * @param owningClanId
      */
     public void banishForeigners(int owningClanId) {
-        for (L2PcInstance temp : getPlayersInside()) {
+        for (Player temp : getPlayersInside()) {
             if (temp.getClanId() == owningClanId) {
                 continue;
             }

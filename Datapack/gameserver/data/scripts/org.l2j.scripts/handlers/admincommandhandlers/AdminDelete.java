@@ -22,7 +22,7 @@ import org.l2j.gameserver.instancemanager.DBSpawnManager;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.L2Spawn;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.BuilderUtil;
 
 /**
@@ -37,7 +37,7 @@ public class AdminDelete implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_delete"))
 		{
@@ -52,8 +52,8 @@ public class AdminDelete implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	// TODO: add possibility to delete any L2Object (except L2PcInstance)
-	private void handleDelete(L2PcInstance activeChar)
+	// TODO: add possibility to delete any L2Object (except Player)
+	private void handleDelete(Player activeChar)
 	{
 		final L2Object obj = activeChar.getTarget();
 		if (obj instanceof L2Npc)

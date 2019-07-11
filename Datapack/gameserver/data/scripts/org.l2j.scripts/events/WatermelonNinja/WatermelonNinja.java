@@ -22,7 +22,7 @@ import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.L2Object;
 import org.l2j.gameserver.model.actor.L2Npc;
 import org.l2j.gameserver.model.actor.instance.L2MonsterInstance;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.LongTimeEvent;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
@@ -512,7 +512,7 @@ public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		if (LARGE_SQUASH_LIST.contains(npc.getId()))
 		{
@@ -533,7 +533,7 @@ public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, Player caster, Skill skill, L2Object[] targets, boolean isPet)
 	{
 		if (SQUASH_LIST.contains(npc.getId()) && (skill.getId() == NECTAR_SKILL))
 		{
@@ -555,7 +555,7 @@ public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, Player killer, boolean isPet)
 	{
 		if (SQUASH_LIST.contains(npc.getId()))
 		{
@@ -565,12 +565,12 @@ public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		return npc.getId() + ".htm";
 	}
 	
-	private static final void dropItem(L2Npc mob, L2PcInstance player)
+	private static final void dropItem(L2Npc mob, Player player)
 	{
 		final int npcId = mob.getId();
 		final int chance = Rnd.get(100);

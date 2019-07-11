@@ -20,7 +20,7 @@ import java.util.List;
 
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.network.NpcStringId;
@@ -65,7 +65,7 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		String htmltext = null;
 		
@@ -224,7 +224,7 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		if ((!player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) || (player.getLevel() < 55))
 		{
@@ -233,7 +233,7 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 		return "MonumentOfHeroes-noblesse.html";
 	}
 	
-	private int getOlympiadRank(L2PcInstance player)
+	private int getOlympiadRank(Player player)
 	{
 		final List<String> names = Olympiad.getInstance().getClassLeaderBoard(player.getClassId().getId());
 		try

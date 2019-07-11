@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.instancezone.conditions;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 
 /**
@@ -32,7 +32,7 @@ public final class ConditionNoParty extends Condition {
     }
 
     @Override
-    public boolean test(L2PcInstance player, L2Npc npc) {
+    public boolean test(Player player, L2Npc npc) {
         return !player.isInParty();
     }
 }

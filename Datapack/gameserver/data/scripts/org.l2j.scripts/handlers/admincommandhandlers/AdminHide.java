@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.BuilderUtil;
 
 /**
@@ -33,7 +33,7 @@ public final class AdminHide implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance player)
+	public boolean useAdminCommand(String command, Player player)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		st.nextToken();

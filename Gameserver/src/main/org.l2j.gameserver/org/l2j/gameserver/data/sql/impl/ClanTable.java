@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.L2Clan;
 import org.l2j.gameserver.model.L2ClanMember;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.entity.FortSiege;
@@ -122,7 +122,7 @@ public class ClanTable {
      * @param clanName
      * @return NULL if clan with same name already exists
      */
-    public L2Clan createClan(L2PcInstance player, String clanName) {
+    public L2Clan createClan(Player player, String clanName) {
         if (null == player) {
             return null;
         }

@@ -22,7 +22,7 @@ import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 
 import ai.AbstractNpcAI;
@@ -72,7 +72,7 @@ public final class CastleDoorManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, Player player)
 	{
 		final StringTokenizer st = new StringTokenizer(event, " ");
 		final String action = st.nextToken();
@@ -137,7 +137,7 @@ public final class CastleDoorManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, Player player)
 	{
 		return isOwningClan(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_OPEN_DOOR) ? getHtmlName(npc) + ".html" : getHtmlName(npc) + "-no.html";
 	}
@@ -147,7 +147,7 @@ public final class CastleDoorManager extends AbstractNpcAI
 		return CommonUtil.contains(DOORMENS_INNER, npc.getId()) ? "CastleDoorManager-Inner" : "CastleDoorManager-Outter";
 	}
 	
-	private boolean isOwningClan(L2PcInstance player, L2Npc npc)
+	private boolean isOwningClan(Player player, L2Npc npc)
 	{
 		return player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((npc.getCastle().getOwnerId() == player.getClanId()) && (player.getClanId() != 0));
 	}

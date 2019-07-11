@@ -18,13 +18,11 @@ package handlers.voicedcommandhandlers;
 
 import org.l2j.gameserver.handler.IVoicedCommandHandler;
 import org.l2j.gameserver.model.actor.L2Playable;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayableExpChanged;
 import org.l2j.gameserver.model.events.listeners.FunctionEventListener;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
-
-import java.util.Observer;
 
 /**
  * @author xban1x
@@ -38,7 +36,7 @@ public final class ExperienceGain implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
+	public boolean useVoicedCommand(String command, Player activeChar, String params)
 	{
 		if (command.equals("expoff"))
 		{

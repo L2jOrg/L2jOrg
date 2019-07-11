@@ -8,7 +8,7 @@ import org.l2j.gameserver.handler.IActionShiftHandler;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.actor.L2Character;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.*;
@@ -100,11 +100,11 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
         return _instanceType.isTypes(instanceTypes);
     }
 
-    public final void onAction(L2PcInstance player) {
+    public final void onAction(Player player) {
         onAction(player, true);
     }
 
-    public void onAction(L2PcInstance player, boolean interact) {
+    public void onAction(Player player, boolean interact) {
         final IActionHandler handler = ActionHandler.getInstance().getHandler(getInstanceType());
         if (handler != null) {
             handler.action(player, this, interact);
@@ -113,7 +113,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
         player.sendPacket(ActionFailed.STATIC_PACKET);
     }
 
-    public void onActionShift(L2PcInstance player) {
+    public void onActionShift(Player player) {
         final IActionShiftHandler handler = ActionShiftHandler.getInstance().getHandler(getInstanceType());
         if (handler != null) {
             handler.action(player, this, true);
@@ -122,7 +122,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
         player.sendPacket(ActionFailed.STATIC_PACKET);
     }
 
-    public void onForcedAttack(L2PcInstance player) {
+    public void onForcedAttack(Player player) {
         player.sendPacket(ActionFailed.STATIC_PACKET);
     }
 
@@ -223,7 +223,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
         return _objectId;
     }
 
-    public abstract void sendInfo(L2PcInstance activeChar);
+    public abstract void sendInfo(Player activeChar);
 
     public void sendPacket(ServerPacket... packets) {
     }
@@ -231,7 +231,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
     public void sendPacket(SystemMessageId id) {
     }
 
-    public L2PcInstance getActingPlayer() {
+    public Player getActingPlayer() {
         return null;
     }
 
@@ -290,9 +290,9 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
     }
 
     /**
-     * Verify if object is instance of L2PcInstance.
+     * Verify if object is instance of Player.
      *
-     * @return {@code true} if object is instance of L2PcInstance, {@code false} otherwise
+     * @return {@code true} if object is instance of Player, {@code false} otherwise
      */
     public boolean isPlayer() {
         return false;
@@ -766,7 +766,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
         _isInvisible = invis;
         if (invis) {
             final DeleteObject deletePacket = new DeleteObject(this);
-            L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
+            L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
             {
                 if (!isVisibleFor(player)) {
                     player.sendPacket(deletePacket);
@@ -782,7 +782,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
      * @param player
      * @return {@code true} if player can see an invisible object if it's invisible, {@code false} otherwise.
      */
-    public boolean isVisibleFor(L2PcInstance player) {
+    public boolean isVisibleFor(Player player) {
         return !_isInvisible || player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS);
     }
 
@@ -790,7 +790,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
      * Broadcasts describing info to known players.
      */
     public void broadcastInfo() {
-        L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
+        L2World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (isVisibleFor(player)) {
                 sendInfo(player);

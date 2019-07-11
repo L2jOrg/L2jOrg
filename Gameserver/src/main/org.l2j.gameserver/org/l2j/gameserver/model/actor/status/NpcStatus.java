@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.actor.status;
 
 import org.l2j.gameserver.model.actor.L2Character;
 import org.l2j.gameserver.model.actor.L2Npc;
-import org.l2j.gameserver.model.actor.instance.L2PcInstance;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Duel;
 
 public class NpcStatus extends CharStatus {
@@ -22,7 +22,7 @@ public class NpcStatus extends CharStatus {
         }
 
         if (attacker != null) {
-            final L2PcInstance attackerPlayer = attacker.getActingPlayer();
+            final Player attackerPlayer = attacker.getActingPlayer();
             if ((attackerPlayer != null) && attackerPlayer.isInDuel()) {
                 attackerPlayer.setDuelState(Duel.DUELSTATE_INTERRUPTED);
             }
