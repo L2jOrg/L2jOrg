@@ -23,7 +23,7 @@ import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.model.zone.type.L2SpawnTerritory;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -87,7 +87,7 @@ public class AdminZone implements IAdminCommandHandler
 			final String next = st.nextToken();
 			if (next.equalsIgnoreCase("all"))
 			{
-				for (L2ZoneType zone : ZoneManager.getInstance().getZones(activeChar))
+				for (Zone zone : ZoneManager.getInstance().getZones(activeChar))
 				{
 					zone.visualizeZone(activeChar.getZ());
 				}
@@ -135,7 +135,7 @@ public class AdminZone implements IAdminCommandHandler
 		adminReply.replace("%TAX%", (activeChar.isInsideZone(ZoneId.TAX) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 		
 		final StringBuilder zones = new StringBuilder(100);
-		for (L2ZoneType zone : ZoneManager.getInstance().getZones(activeChar))
+		for (Zone zone : ZoneManager.getInstance().getZones(activeChar))
 		{
 			if (zone.getName() != null)
 			{

@@ -4,7 +4,7 @@ import ai.AbstractNpcAI;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.network.serverpackets.ExCastleState;
 
 /**
@@ -33,7 +33,7 @@ public class CastleSideEffect extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onEnterZone(Creature character, L2ZoneType zone)
+	public String onEnterZone(Creature character, Zone zone)
 	{
 		if (character.isPlayer())
 		{

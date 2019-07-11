@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.SocialClass;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.interfaces.INamable;
-import org.l2j.gameserver.model.zone.type.L2ResidenceZone;
+import org.l2j.gameserver.model.zone.type.ResidenceZone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +30,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
     private final int _residenceId;
     private final Map<Integer, ResidenceFunction> _functions = new ConcurrentHashMap<>();
     private String _name;
-    private L2ResidenceZone _zone = null;
+    private ResidenceZone _zone = null;
     private List<L2SkillLearn> _residentialSkills = new ArrayList<>();
 
     public AbstractResidence(int residenceId) {
@@ -62,11 +62,11 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
         _name = name;
     }
 
-    public L2ResidenceZone getResidenceZone() {
+    public ResidenceZone getResidenceZone() {
         return _zone;
     }
 
-    protected void setResidenceZone(L2ResidenceZone zone) {
+    protected void setResidenceZone(ResidenceZone zone) {
         _zone = zone;
     }
 

@@ -60,7 +60,7 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.model.stats.Stats;
-import org.l2j.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -2039,7 +2039,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     /**
-     * Provides instant callback operation when {@link Creature} Enters on a {@link L2ZoneType}.
+     * Provides instant callback operation when {@link Creature} Enters on a {@link Zone}.
      *
      * @param callback
      * @param npcIds
@@ -2050,7 +2050,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     /**
-     * Provides instant callback operation when {@link Creature} Enters on a {@link L2ZoneType}.
+     * Provides instant callback operation when {@link Creature} Enters on a {@link Zone}.
      *
      * @param callback
      * @param npcIds
@@ -2061,7 +2061,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     /**
-     * Provides instant callback operation when {@link Creature} Exits on a {@link L2ZoneType}.
+     * Provides instant callback operation when {@link Creature} Exits on a {@link Zone}.
      *
      * @param callback
      * @param npcIds
@@ -2072,7 +2072,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     /**
-     * Provides instant callback operation when {@link Creature} Exits on a {@link L2ZoneType}.
+     * Provides instant callback operation when {@link Creature} Exits on a {@link Zone}.
      *
      * @param callback
      * @param npcIds
@@ -2575,7 +2575,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                 break;
             }
             case ZONE: {
-                final L2ZoneType template = ZoneManager.getInstance().getZoneById(id);
+                final Zone template = ZoneManager.getInstance().getZoneById(id);
                 if (template != null) {
                     listeners.add(template.addListener(action.apply(template)));
                 }

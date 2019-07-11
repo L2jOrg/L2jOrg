@@ -44,7 +44,7 @@ import org.l2j.gameserver.model.quest.QuestTimer;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
-import org.l2j.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.serverpackets.ExPVPMatchCCRecord;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -97,8 +97,8 @@ public class TvT extends Event implements ScriptEvent
 	private static final Location RED_BUFFER_SPAWN_LOC = new Location(151545, 46528, -3400, 16000);
 	private static final Location BLUE_SPAWN_LOC = new Location(147447, 46722, -3416);
 	private static final Location RED_SPAWN_LOC = new Location(151536, 46722, -3416);
-	private static final L2ZoneType BLUE_PEACE_ZONE = ZoneManager.getInstance().getZoneByName("colosseum_peace1");
-	private static final L2ZoneType RED_PEACE_ZONE = ZoneManager.getInstance().getZoneByName("colosseum_peace2");
+	private static final Zone BLUE_PEACE_ZONE = ZoneManager.getInstance().getZoneByName("colosseum_peace1");
+	private static final Zone RED_PEACE_ZONE = ZoneManager.getInstance().getZoneByName("colosseum_peace2");
 	// Settings
 	private static final int REGISTRATION_TIME = 10; // Minutes
 	private static final int WAIT_TIME = 1; // Minutes
@@ -562,7 +562,7 @@ public class TvT extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public String onEnterZone(Creature character, L2ZoneType zone)
+	public String onEnterZone(Creature character, Zone zone)
 	{
 		if (character.isPlayable() && character.getActingPlayer().isOnCustomEvent())
 		{
@@ -589,7 +589,7 @@ public class TvT extends Event implements ScriptEvent
 	}
 	
 	@Override
-	public String onExitZone(Creature character, L2ZoneType zone)
+	public String onExitZone(Creature character, Zone zone)
 	{
 		if (character.isPlayer() && character.getActingPlayer().isOnCustomEvent())
 		{

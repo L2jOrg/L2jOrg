@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.model.zone.type.L2SwampZone;
+import org.l2j.gameserver.model.zone.type.SwampZone;
 
 import java.util.Optional;
 
@@ -86,7 +86,7 @@ public class SpeedFinalizer implements IStatsFunction {
             baseValue += Config.RUN_SPD_BOOST;
         }
         if (creature.isPlayable() && creature.isInsideZone(ZoneId.SWAMP)) {
-            final L2SwampZone zone = ZoneManager.getInstance().getZone(creature, L2SwampZone.class);
+            final SwampZone zone = ZoneManager.getInstance().getZone(creature, SwampZone.class);
             if (zone != null) {
                 baseValue *= zone.getMoveBonus();
             }

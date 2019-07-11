@@ -34,7 +34,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
-import org.l2j.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 
@@ -71,7 +71,7 @@ public final class Orfen extends AbstractNpcAI
 	
 	private static boolean _IsTeleported;
 	private static Set<Attackable> _minions = ConcurrentHashMap.newKeySet();
-	private static L2ZoneType ZONE;
+	private static Zone ZONE;
 	
 	private static final byte ALIVE = 0;
 	private static final byte DEAD = 1;

@@ -14,10 +14,10 @@ import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.WeaponType;
-import org.l2j.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.model.zone.type.L2FishingZone;
-import org.l2j.gameserver.model.zone.type.L2WaterZone;
+import org.l2j.gameserver.model.zone.type.FishingZone;
+import org.l2j.gameserver.model.zone.type.WaterZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
@@ -59,7 +59,7 @@ public class Fishing {
      * @param waterZone   the water zone
      * @return the bait z or {@link Integer#MIN_VALUE} when you cannot fish here
      */
-    private static int computeBaitZ(Player player, int baitX, int baitY, L2FishingZone fishingZone, L2WaterZone waterZone) {
+    private static int computeBaitZ(Player player, int baitX, int baitY, FishingZone fishingZone, WaterZone waterZone) {
         if ((fishingZone == null)) {
             return Integer.MIN_VALUE;
         }
@@ -334,18 +334,18 @@ public class Fishing {
         int baitY = (int) (_player.getY() + (sin * distance));
 
         // search for fishing zone
-        L2FishingZone fishingZone = null;
-        for (L2ZoneType zone : ZoneManager.getInstance().getZones(_player)) {
-            if (zone instanceof L2FishingZone) {
-                fishingZone = (L2FishingZone) zone;
+        FishingZone fishingZone = null;
+        for (Zone zone : ZoneManager.getInstance().getZones(_player)) {
+            if (zone instanceof FishingZone) {
+                fishingZone = (FishingZone) zone;
                 break;
             }
         }
         // search for water zone
-        L2WaterZone waterZone = null;
-        for (L2ZoneType zone : ZoneManager.getInstance().getZones(baitX, baitY)) {
-            if (zone instanceof L2WaterZone) {
-                waterZone = (L2WaterZone) zone;
+        WaterZone waterZone = null;
+        for (Zone zone : ZoneManager.getInstance().getZones(baitX, baitY)) {
+            if (zone instanceof WaterZone) {
+                waterZone = (WaterZone) zone;
                 break;
             }
         }

@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.zone.type.L2RespawnZone;
+import org.l2j.gameserver.model.zone.type.RespawnZone;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -262,7 +262,7 @@ public final class MapRegionManager extends GameXmlReader {
             // Karma player land out of city
             if (player.getReputation() < 0) {
                 try {
-                    final L2RespawnZone zone = ZoneManager.getInstance().getZone(player, L2RespawnZone.class);
+                    final RespawnZone zone = ZoneManager.getInstance().getZone(player, RespawnZone.class);
                     if (zone != null) {
                         return getRestartRegion(activeChar, zone.getRespawnPoint((Player) activeChar)).getChaoticSpawnLoc();
                     }
@@ -298,7 +298,7 @@ public final class MapRegionManager extends GameXmlReader {
 
         // Get the nearest town
         try {
-            final L2RespawnZone zone = ZoneManager.getInstance().getZone(activeChar, L2RespawnZone.class);
+            final RespawnZone zone = ZoneManager.getInstance().getZone(activeChar, RespawnZone.class);
             if (zone != null) {
                 return getRestartRegion(activeChar, zone.getRespawnPoint((Player) activeChar)).getSpawnLoc();
             }

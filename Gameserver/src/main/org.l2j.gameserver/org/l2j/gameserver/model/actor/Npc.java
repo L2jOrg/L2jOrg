@@ -34,7 +34,7 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.variables.NpcVariables;
 import org.l2j.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.model.zone.type.L2TaxZone;
+import org.l2j.gameserver.model.zone.type.TaxZone;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -113,7 +113,7 @@ public class Npc extends Creature {
     /**
      * Contains information about local tax payments.
      */
-    private L2TaxZone _taxZone = null;
+    private TaxZone _taxZone = null;
 
     /**
      * Constructor of Folk (use Creature constructor).<br>
@@ -425,14 +425,14 @@ public class Npc extends Creature {
      *
      * @param zone newly entered tax zone
      */
-    public final void setTaxZone(L2TaxZone zone) {
+    public final void setTaxZone(TaxZone zone) {
         _taxZone = ((zone != null) && !isInInstance()) ? zone : null;
     }
 
     /**
      * Gets castle for tax payments.
      *
-     * @return instance of {@link Castle} when NPC is inside {@link L2TaxZone} otherwise {@code null}
+     * @return instance of {@link Castle} when NPC is inside {@link TaxZone} otherwise {@code null}
      */
     public final Castle getTaxCastle() {
         return (_taxZone != null) ? _taxZone.getCastle() : null;

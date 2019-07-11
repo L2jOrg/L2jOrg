@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.zone;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.model.zone.type.L2PeaceZone;
+import org.l2j.gameserver.model.zone.type.PeaceZone;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -13,14 +13,14 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ZoneRegion {
     private final int _regionX;
     private final int _regionY;
-    private final Map<Integer, L2ZoneType> _zones = new ConcurrentHashMap<>();
+    private final Map<Integer, Zone> _zones = new ConcurrentHashMap<>();
 
     public ZoneRegion(int regionX, int regionY) {
         _regionX = regionX;
         _regionY = regionY;
     }
 
-    public Map<Integer, L2ZoneType> getZones() {
+    public Map<Integer, Zone> getZones() {
         return _zones;
     }
 
@@ -40,13 +40,13 @@ public class ZoneRegion {
             return;
         }
 
-        for (L2ZoneType z : _zones.values()) {
+        for (Zone z : _zones.values()) {
             z.revalidateInZone(character);
         }
     }
 
     public void removeFromZones(Creature character) {
-        for (L2ZoneType z : _zones.values()) {
+        for (Zone z : _zones.values()) {
             z.removeCharacter(character);
         }
     }
@@ -58,8 +58,8 @@ public class ZoneRegion {
         final int left = x + range;
         final int right = x - range;
 
-        for (L2ZoneType e : _zones.values()) {
-            if (e instanceof L2PeaceZone) {
+        for (Zone e : _zones.values()) {
+            if (e instanceof PeaceZone) {
                 if (e.isInsideZone(x, up, z)) {
                     return false;
                 }
@@ -85,7 +85,7 @@ public class ZoneRegion {
     }
 
     public void onDeath(Creature character) {
-        for (L2ZoneType z : _zones.values()) {
+        for (Zone z : _zones.values()) {
             if (z.isInsideZone(character)) {
                 z.onDieInside(character);
             }
@@ -93,7 +93,7 @@ public class ZoneRegion {
     }
 
     public void onRevive(Creature character) {
-        for (L2ZoneType z : _zones.values()) {
+        for (Zone z : _zones.values()) {
             if (z.isInsideZone(character)) {
                 z.onReviveInside(character);
             }

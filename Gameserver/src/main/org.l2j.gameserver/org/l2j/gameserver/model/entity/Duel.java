@@ -14,7 +14,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.model.zone.type.L2OlympiadStadiumZone;
+import org.l2j.gameserver.model.zone.type.OlympiadStadiumZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.slf4j.Logger;
@@ -347,7 +347,7 @@ public class Duel {
         }
 
         final int instanceId = DuelManager.getInstance().getDuelArena();
-        final L2OlympiadStadiumZone zone = ZoneManager.getInstance().getAllZones(L2OlympiadStadiumZone.class) //
+        final OlympiadStadiumZone zone = ZoneManager.getInstance().getAllZones(OlympiadStadiumZone.class) //
                 .stream().filter(z -> z.getInstanceTemplateId() == instanceId).findFirst().orElse(null);
 
         if (zone == null) {

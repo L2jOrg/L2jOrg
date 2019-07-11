@@ -36,7 +36,7 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerMoveRequest
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.html.PageBuilder;
 import org.l2j.gameserver.model.html.PageResult;
-import org.l2j.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.model.zone.form.ZoneNPoly;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2j.gameserver.network.serverpackets.ExServerPrimitive;
@@ -251,8 +251,8 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	private void buildZonesEditorWindow(Player activeChar)
 	{
 		final StringBuilder sb = new StringBuilder();
-		final List<L2ZoneType> zones = ZoneManager.getInstance().getZones(activeChar);
-		for (L2ZoneType zone : zones)
+		final List<Zone> zones = ZoneManager.getInstance().getZones(activeChar);
+		for (Zone zone : zones)
 		{
 			if (zone.getZone() instanceof ZoneNPoly)
 			{
@@ -275,9 +275,9 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	private void loadZone(Player activeChar, String zoneName)
 	{
 		BuilderUtil.sendSysMessage(activeChar, "Searching for zone: " + zoneName);
-		final List<L2ZoneType> zones = ZoneManager.getInstance().getZones(activeChar);
-		L2ZoneType zoneType = null;
-		for (L2ZoneType zone : zones)
+		final List<Zone> zones = ZoneManager.getInstance().getZones(activeChar);
+		Zone zoneType = null;
+		for (Zone zone : zones)
 		{
 			if (zone.getName().equalsIgnoreCase(zoneName))
 			{

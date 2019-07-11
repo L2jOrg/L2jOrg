@@ -22,10 +22,9 @@ import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.model.zone.type.L2CastleZone;
-import org.l2j.gameserver.model.zone.type.L2ClanHallZone;
-import org.l2j.gameserver.model.zone.type.L2FortZone;
-import org.l2j.gameserver.model.zone.type.L2MotherTreeZone;
+import org.l2j.gameserver.model.zone.type.*;
+import org.l2j.gameserver.model.zone.type.CastleZone;
+import org.l2j.gameserver.model.zone.type.FortZone;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Optional;
@@ -72,7 +71,7 @@ public class RegenHPFinalizer implements IStatsFunction {
             }
 
             if (player.isInsideZone(ZoneId.CLAN_HALL) && (player.getClan() != null) && (player.getClan().getHideoutId() > 0)) {
-                final L2ClanHallZone zone = ZoneManager.getInstance().getZone(player, L2ClanHallZone.class);
+                final ClanHallZone zone = ZoneManager.getInstance().getZone(player, ClanHallZone.class);
                 final int posChIndex = zone == null ? -1 : zone.getResidenceId();
                 final int clanHallIndex = player.getClan().getHideoutId();
                 if ((clanHallIndex > 0) && (clanHallIndex == posChIndex)) {
@@ -87,7 +86,7 @@ public class RegenHPFinalizer implements IStatsFunction {
             }
 
             if (player.isInsideZone(ZoneId.CASTLE) && (player.getClan() != null) && (player.getClan().getCastleId() > 0)) {
-                final L2CastleZone zone = ZoneManager.getInstance().getZone(player, L2CastleZone.class);
+                final CastleZone zone = ZoneManager.getInstance().getZone(player, CastleZone.class);
                 final int posCastleIndex = zone == null ? -1 : zone.getResidenceId();
                 final int castleIndex = player.getClan().getCastleId();
                 if ((castleIndex > 0) && (castleIndex == posCastleIndex)) {
@@ -102,7 +101,7 @@ public class RegenHPFinalizer implements IStatsFunction {
             }
 
             if (player.isInsideZone(ZoneId.FORT) && (player.getClan() != null) && (player.getClan().getFortId() > 0)) {
-                final L2FortZone zone = ZoneManager.getInstance().getZone(player, L2FortZone.class);
+                final FortZone zone = ZoneManager.getInstance().getZone(player, FortZone.class);
                 final int posFortIndex = zone == null ? -1 : zone.getResidenceId();
                 final int fortIndex = player.getClan().getFortId();
                 if ((fortIndex > 0) && (fortIndex == posFortIndex)) {
@@ -118,7 +117,7 @@ public class RegenHPFinalizer implements IStatsFunction {
 
             // Mother Tree effect is calculated at last
             if (player.isInsideZone(ZoneId.MOTHER_TREE)) {
-                final L2MotherTreeZone zone = ZoneManager.getInstance().getZone(player, L2MotherTreeZone.class);
+                final MotherTreeZone zone = ZoneManager.getInstance().getZone(player, MotherTreeZone.class);
                 final int hpBonus = zone == null ? 0 : zone.getHpRegenBonus();
                 baseValue += hpBonus;
             }

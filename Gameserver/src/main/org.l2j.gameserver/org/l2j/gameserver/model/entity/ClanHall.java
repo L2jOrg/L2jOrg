@@ -15,7 +15,7 @@ import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.holders.ClanHallTeleportHolder;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.residences.AbstractResidence;
-import org.l2j.gameserver.model.zone.type.L2ClanHallZone;
+import org.l2j.gameserver.model.zone.type.ClanHallZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -118,7 +118,7 @@ public final class ClanHall extends AbstractResidence {
 
     @Override
     protected void initResidenceZone() {
-        final L2ClanHallZone zone = ZoneManager.getInstance().getAllZones(L2ClanHallZone.class).stream().filter(z -> z.getResidenceId() == getResidenceId()).findFirst().orElse(null);
+        final ClanHallZone zone = ZoneManager.getInstance().getAllZones(ClanHallZone.class).stream().filter(z -> z.getResidenceId() == getResidenceId()).findFirst().orElse(null);
         if (zone != null) {
             setResidenceZone(zone);
         }
@@ -130,7 +130,7 @@ public final class ClanHall extends AbstractResidence {
     }
 
     /**
-     * Teleport all non-owner players from {@link L2ClanHallZone} to {@link ClanHall#getBanishLocation()}.
+     * Teleport all non-owner players from {@link ClanHallZone} to {@link ClanHall#getBanishLocation()}.
      */
     public void banishOthers() {
         getResidenceZone().banishForeigners(getOwnerId());

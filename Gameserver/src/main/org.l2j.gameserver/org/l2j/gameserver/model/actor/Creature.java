@@ -405,7 +405,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      *
      * @return the access level.
      */
-    public L2AccessLevel getAccessLevel() {
+    public AccessLevel getAccessLevel() {
         return null;
     }
 

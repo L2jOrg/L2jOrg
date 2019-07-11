@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.olympiad;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.L2World;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.zone.type.L2OlympiadStadiumZone;
+import org.l2j.gameserver.model.zone.type.OlympiadStadiumZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
@@ -26,12 +26,12 @@ public class OlympiadGameManager implements Runnable {
     private int _delay = 0;
 
     private OlympiadGameManager() {
-        final Collection<L2OlympiadStadiumZone> zones = ZoneManager.getInstance().getAllZones(L2OlympiadStadiumZone.class);
+        final Collection<OlympiadStadiumZone> zones = ZoneManager.getInstance().getAllZones(OlympiadStadiumZone.class);
         if (zones.isEmpty()) {
             throw new Error("No olympiad stadium zones defined !");
         }
 
-        final L2OlympiadStadiumZone[] array = zones.toArray(new L2OlympiadStadiumZone[zones.size()]);
+        final OlympiadStadiumZone[] array = zones.toArray(new OlympiadStadiumZone[zones.size()]);
         _tasks = new ArrayList<>(STADIUM_COUNT);
 
         final int zonesCount = array.length;

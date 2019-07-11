@@ -21,7 +21,7 @@ import org.l2j.gameserver.handler.IUserCommandHandler;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.zone.type.L2RespawnZone;
+import org.l2j.gameserver.model.zone.type.RespawnZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
@@ -39,7 +39,7 @@ public class Loc implements IUserCommandHandler
 	public boolean useUserCommand(int id, Player activeChar)
 	{
 		int region;
-		final L2RespawnZone zone = ZoneManager.getInstance().getZone(activeChar, L2RespawnZone.class);
+		final RespawnZone zone = ZoneManager.getInstance().getZone(activeChar, RespawnZone.class);
 		if (zone != null)
 		{
 			region = MapRegionManager.getInstance().getRestartRegion(activeChar, zone.getAllRespawnPoints().get(Race.HUMAN)).getLocId();

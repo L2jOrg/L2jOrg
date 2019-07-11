@@ -36,7 +36,7 @@ import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.variables.NpcVariables;
-import org.l2j.gameserver.model.zone.type.L2NoRestartZone;
+import org.l2j.gameserver.model.zone.type.NoRestartZone;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.Earthquake;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -71,7 +71,7 @@ public final class Baium extends AbstractNpcAI
 	// Items
 	private static final int FABRIC = 4295; // Blooded Fabric
 	// Zone
-	private static final L2NoRestartZone zone = ZoneManager.getInstance().getZoneById(70051, L2NoRestartZone.class); // Baium zone
+	private static final NoRestartZone zone = ZoneManager.getInstance().getZoneById(70051, NoRestartZone.class); // Baium zone
 	// Status
 	private static final int ALIVE = 0;
 	private static final int WAITING = 1;

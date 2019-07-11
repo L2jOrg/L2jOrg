@@ -6,7 +6,7 @@ import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.model.BlockList;
-import org.l2j.gameserver.model.L2AccessLevel;
+import org.l2j.gameserver.model.AccessLevel;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
@@ -167,7 +167,7 @@ public final class RequestSendPost extends ClientPacket {
         }
 
         final int level = CharNameTable.getInstance().getAccessLevelById(receiverId);
-        final L2AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
+        final AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
 
         if ((accessLevel != null) && accessLevel.isGm() && !activeChar.getAccessLevel().isGm()) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_MESSAGE_TO_C1_DID_NOT_REACH_ITS_RECIPIENT_YOU_CANNOT_SEND_MAIL_TO_THE_GM_STAFF);

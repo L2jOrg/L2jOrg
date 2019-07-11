@@ -80,9 +80,9 @@ import org.l2j.gameserver.model.stats.MoveType;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.model.variables.AccountVariables;
 import org.l2j.gameserver.model.variables.PlayerVariables;
-import org.l2j.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.model.zone.type.L2WaterZone;
+import org.l2j.gameserver.model.zone.type.WaterZone;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -627,7 +627,7 @@ public final class Player extends Playable {
     private ScheduledFuture<?> _soulTask = null;
     // WorldPosition used by TARGET_SIGNET_GROUND
     private Location _currentSkillWorldPosition;
-    private L2AccessLevel _accessLevel;
+    private AccessLevel _accessLevel;
 
     // private byte _updateKnownCounter = 0;
     private boolean _messageRefusal = false; // message refusal mode
@@ -5266,10 +5266,10 @@ public final class Player extends Playable {
     }
 
     public boolean dismount() {
-        L2WaterZone water = null;
-        for (L2ZoneType zone : ZoneManager.getInstance().getZones(getX(), getY(), getZ() - 300)) {
-            if (zone instanceof L2WaterZone) {
-                water = (L2WaterZone) zone;
+        WaterZone water = null;
+        for (Zone zone : ZoneManager.getInstance().getZones(getX(), getY(), getZ() - 300)) {
+            if (zone instanceof WaterZone) {
+                water = (WaterZone) zone;
             }
         }
         if (water == null) {
@@ -5398,7 +5398,7 @@ public final class Player extends Playable {
      * @param updateInDb
      */
     public void setAccessLevel(int level, boolean broadcast, boolean updateInDb) {
-        L2AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
+        AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
         if (accessLevel == null) {
             LOGGER.warn("Can't find access level " + level + " for character " + toString());
             accessLevel = AdminData.getInstance().getAccessLevel(0);
@@ -5449,7 +5449,7 @@ public final class Player extends Playable {
      * @return the _accessLevel of the Player.
      */
     @Override
-    public L2AccessLevel getAccessLevel() {
+    public AccessLevel getAccessLevel() {
         return _accessLevel;
     }
 
@@ -8310,7 +8310,7 @@ public final class Player extends Playable {
         }
 
         try {
-            for (L2ZoneType zone : ZoneManager.getInstance().getZones(this)) {
+            for (Zone zone : ZoneManager.getInstance().getZones(this)) {
                 zone.onPlayerLoginInside(this);
             }
         } catch (Exception e) {
@@ -8812,7 +8812,7 @@ public final class Player extends Playable {
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogout(this), this);
 
         try {
-            for (L2ZoneType zone : ZoneManager.getInstance().getZones(this)) {
+            for (Zone zone : ZoneManager.getInstance().getZones(this)) {
                 zone.onPlayerLogoutInside(this);
             }
         } catch (Exception e) {

@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.model.zone.type.L2OlympiadStadiumZone;
+import org.l2j.gameserver.model.zone.type.OlympiadStadiumZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExOlympiadMatchEnd;
 import org.l2j.gameserver.network.serverpackets.ExOlympiadUserInfo;
@@ -27,19 +27,19 @@ import java.util.stream.Collectors;
  */
 public class OlympiadStadium {
     private static final Logger LOGGER = LoggerFactory.getLogger(OlympiadStadium.class);
-    private final L2OlympiadStadiumZone _zone;
+    private final OlympiadStadiumZone _zone;
     private final Instance _instance;
     private final List<L2Spawn> _buffers;
     private OlympiadGameTask _task = null;
 
-    protected OlympiadStadium(L2OlympiadStadiumZone olyzone, int stadium) {
+    protected OlympiadStadium(OlympiadStadiumZone olyzone, int stadium) {
         _zone = olyzone;
         _instance = InstanceManager.getInstance().createInstance(olyzone.getInstanceTemplateId(), null);
         _buffers = _instance.getNpcs().stream().map(Npc::getSpawn).collect(Collectors.toList());
         _buffers.stream().map(L2Spawn::getLastSpawn).forEach(Npc::decayMe);
     }
 
-    public L2OlympiadStadiumZone getZone() {
+    public OlympiadStadiumZone getZone() {
         return _zone;
     }
 

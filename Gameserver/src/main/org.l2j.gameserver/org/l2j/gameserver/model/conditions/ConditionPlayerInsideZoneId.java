@@ -20,7 +20,7 @@ import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.L2Item;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.model.zone.Zone;
 
 import java.util.List;
 
@@ -40,7 +40,7 @@ public class ConditionPlayerInsideZoneId extends Condition {
             return false;
         }
 
-        for (L2ZoneType zone : ZoneManager.getInstance().getZones(effector)) {
+        for (Zone zone : ZoneManager.getInstance().getZones(effector)) {
             if (_zones.contains(zone.getId())) {
                 return true;
             }

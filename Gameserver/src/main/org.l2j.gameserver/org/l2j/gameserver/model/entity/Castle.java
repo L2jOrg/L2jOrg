@@ -21,9 +21,9 @@ import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.model.zone.type.L2CastleZone;
-import org.l2j.gameserver.model.zone.type.L2ResidenceTeleportZone;
-import org.l2j.gameserver.model.zone.type.L2SiegeZone;
+import org.l2j.gameserver.model.zone.type.CastleZone;
+import org.l2j.gameserver.model.zone.type.ResidenceTeleportZone;
+import org.l2j.gameserver.model.zone.type.SiegeZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExCastleState;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
@@ -62,8 +62,8 @@ public final class Castle extends AbstractResidence {
     private CastleSide _castleSide = null;
     private long _treasury = 0;
     private boolean _showNpcCrest = false;
-    private L2SiegeZone _zone = null;
-    private L2ResidenceTeleportZone _teleZone;
+    private SiegeZone _zone = null;
+    private ResidenceTeleportZone _teleZone;
     private L2Clan _formerOwner = null;
     private int _ticketBuyCount = 0;
 
@@ -202,9 +202,9 @@ public final class Castle extends AbstractResidence {
         return getZone().isInsideZone(x, y, z);
     }
 
-    public L2SiegeZone getZone() {
+    public SiegeZone getZone() {
         if (_zone == null) {
-            for (L2SiegeZone zone : ZoneManager.getInstance().getAllZones(L2SiegeZone.class)) {
+            for (SiegeZone zone : ZoneManager.getInstance().getAllZones(SiegeZone.class)) {
                 if (zone.getSiegeObjectId() == getResidenceId()) {
                     _zone = zone;
                     break;
@@ -215,13 +215,13 @@ public final class Castle extends AbstractResidence {
     }
 
     @Override
-    public L2CastleZone getResidenceZone() {
-        return (L2CastleZone) super.getResidenceZone();
+    public CastleZone getResidenceZone() {
+        return (CastleZone) super.getResidenceZone();
     }
 
-    public L2ResidenceTeleportZone getTeleZone() {
+    public ResidenceTeleportZone getTeleZone() {
         if (_teleZone == null) {
-            for (L2ResidenceTeleportZone zone : ZoneManager.getInstance().getAllZones(L2ResidenceTeleportZone.class)) {
+            for (ResidenceTeleportZone zone : ZoneManager.getInstance().getAllZones(ResidenceTeleportZone.class)) {
                 if (zone.getResidenceId() == getResidenceId()) {
                     _teleZone = zone;
                     break;
@@ -787,7 +787,7 @@ public final class Castle extends AbstractResidence {
 
     @Override
     protected void initResidenceZone() {
-        for (L2CastleZone zone : ZoneManager.getInstance().getAllZones(L2CastleZone.class)) {
+        for (CastleZone zone : ZoneManager.getInstance().getAllZones(CastleZone.class)) {
             if (zone.getResidenceId() == getResidenceId()) {
                 setResidenceZone(zone);
                 break;

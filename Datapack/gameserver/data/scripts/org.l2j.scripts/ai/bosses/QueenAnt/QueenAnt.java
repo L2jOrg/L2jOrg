@@ -34,7 +34,7 @@ import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
-import org.l2j.gameserver.model.zone.L2ZoneType;
+import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 
@@ -75,7 +75,7 @@ public final class QueenAnt extends AbstractNpcAI
 	private static final byte ALIVE = 0; // Queen Ant is spawned.
 	private static final byte DEAD = 1; // Queen Ant has been killed.
 	
-	private static L2ZoneType _zone;
+	private static Zone _zone;
 	
 	private static SkillHolder HEAL1 = new SkillHolder(4020, 1);
 	private static SkillHolder HEAL2 = new SkillHolder(4024, 1);

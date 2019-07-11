@@ -1,7 +1,7 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.model.L2AccessLevel;
-import org.l2j.gameserver.model.L2AdminCommandAccessRight;
+import org.l2j.gameserver.model.AccessLevel;
+import org.l2j.gameserver.model.AdminCommandAccessRight;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -32,8 +32,8 @@ import java.util.concurrent.ConcurrentHashMap;
 public final class AdminData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(AdminData.class);
 
-    private final Map<Integer, L2AccessLevel> _accessLevels = new HashMap<>();
-    private final Map<String, L2AdminCommandAccessRight> _adminCommandAccessRights = new HashMap<>();
+    private final Map<Integer, AccessLevel> _accessLevels = new HashMap<>();
+    private final Map<String, AdminCommandAccessRight> _adminCommandAccessRights = new HashMap<>();
     private final Map<Player, Boolean> _gmList = new ConcurrentHashMap<>();
     private int _highestLevel = 0;
 
@@ -60,8 +60,8 @@ public final class AdminData extends GameXmlReader {
         NamedNodeMap attrs;
         Node attr;
         StatsSet set;
-        L2AccessLevel level;
-        L2AdminCommandAccessRight command;
+        AccessLevel level;
+        AdminCommandAccessRight command;
         for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling()) {
             if ("list".equalsIgnoreCase(n.getNodeName())) {
                 for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
@@ -72,7 +72,7 @@ public final class AdminData extends GameXmlReader {
                             attr = attrs.item(i);
                             set.set(attr.getNodeName(), attr.getNodeValue());
                         }
-                        level = new L2AccessLevel(set);
+                        level = new AccessLevel(set);
                         if (level.getLevel() > _highestLevel) {
                             _highestLevel = level.getLevel();
                         }
@@ -84,7 +84,7 @@ public final class AdminData extends GameXmlReader {
                             attr = attrs.item(i);
                             set.set(attr.getNodeName(), attr.getNodeValue());
                         }
-                        command = new L2AdminCommandAccessRight(set);
+                        command = new AdminCommandAccessRight(set);
                         _adminCommandAccessRights.put(command.getAdminCommand(), command);
                     }
                 }
@@ -98,7 +98,7 @@ public final class AdminData extends GameXmlReader {
      * @param accessLevelNum as int
      * @return the access level instance by char access level
      */
-    public L2AccessLevel getAccessLevel(int accessLevelNum) {
+    public AccessLevel getAccessLevel(int accessLevelNum) {
         if (accessLevelNum < 0) {
             return _accessLevels.get(-1);
         }
@@ -110,7 +110,7 @@ public final class AdminData extends GameXmlReader {
      *
      * @return the master access level
      */
-    public L2AccessLevel getMasterAccessLevel() {
+    public AccessLevel getMasterAccessLevel() {
         return _accessLevels.get(_highestLevel);
     }
 
@@ -131,12 +131,12 @@ public final class AdminData extends GameXmlReader {
      * @param accessLevel  the access level
      * @return {@code true}, if successful, {@code false} otherwise
      */
-    public boolean hasAccess(String adminCommand, L2AccessLevel accessLevel) {
-        L2AdminCommandAccessRight acar = _adminCommandAccessRights.get(adminCommand);
+    public boolean hasAccess(String adminCommand, AccessLevel accessLevel) {
+        AdminCommandAccessRight acar = _adminCommandAccessRights.get(adminCommand);
         if (acar == null) {
             // Trying to avoid the spam for next time when the gm would try to use the same command
             if ((accessLevel.getLevel() > 0) && (accessLevel.getLevel() == _highestLevel)) {
-                acar = new L2AdminCommandAccessRight(adminCommand, true, accessLevel.getLevel());
+                acar = new AdminCommandAccessRight(adminCommand, true, accessLevel.getLevel());
                 _adminCommandAccessRights.put(adminCommand, acar);
                 LOGGER.info(getClass().getSimpleName() + ": No rights defined for admin command " + adminCommand + " auto setting accesslevel: " + accessLevel.getLevel() + " !");
             } else {
@@ -154,7 +154,7 @@ public final class AdminData extends GameXmlReader {
      * @return {@code true}, if the command require confirmation, {@code false} otherwise
      */
     public boolean requireConfirm(String command) {
-        final L2AdminCommandAccessRight acar = _adminCommandAccessRights.get(command);
+        final AdminCommandAccessRight acar = _adminCommandAccessRights.get(command);
         if (acar == null) {
             LOGGER.info(getClass().getSimpleName() + ": No rights defined for admin command " + command + ".");
             return false;

@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.model.zone.type.L2JailZone;
+import org.l2j.gameserver.model.zone.type.JailZone;
 import org.l2j.gameserver.network.L2GameClient;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -162,7 +162,7 @@ public class JailHandler implements IPunishmentHandler
 			OlympiadManager.getInstance().removeDisconnectedCompetitor(player);
 		}
 		
-		ThreadPoolManager.getInstance().schedule(new TeleportTask(player, L2JailZone.getLocationIn()), 2000);
+		ThreadPoolManager.getInstance().schedule(new TeleportTask(player, JailZone.getLocationIn()), 2000);
 		
 		// Open a Html message to inform the player
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
@@ -198,7 +198,7 @@ public class JailHandler implements IPunishmentHandler
 	 */
 	private static void removeFromPlayer(Player player)
 	{
-		ThreadPoolManager.getInstance().schedule(new TeleportTask(player, L2JailZone.getLocationOut()), 2000);
+		ThreadPoolManager.getInstance().schedule(new TeleportTask(player, JailZone.getLocationOut()), 2000);
 		
 		// Open a Html message to inform the player
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
