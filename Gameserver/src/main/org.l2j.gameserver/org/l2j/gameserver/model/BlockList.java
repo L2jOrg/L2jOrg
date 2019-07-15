@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.BlockListPacket;
@@ -68,7 +68,7 @@ public class BlockList {
             return;
         }
 
-        final String charName = CharNameTable.getInstance().getNameById(targetId);
+        final String charName = PlayerNameTable.getInstance().getNameById(targetId);
 
         if (listOwner.getFriendList().contains(targetId)) {
             listOwner.sendPacket(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_ON_YOUR_FRIENDS_LIST);
@@ -102,7 +102,7 @@ public class BlockList {
 
         SystemMessage sm;
 
-        final String charName = CharNameTable.getInstance().getNameById(targetId);
+        final String charName = PlayerNameTable.getInstance().getNameById(targetId);
 
         if (!listOwner.getBlockList().getBlockList().contains(targetId)) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);

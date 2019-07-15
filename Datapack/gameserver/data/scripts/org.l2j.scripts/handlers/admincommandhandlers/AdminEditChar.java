@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.CategoryType;
@@ -429,7 +429,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					return false;
 				}
-				if (CharNameTable.getInstance().getIdByName(val) > 0)
+				if (PlayerNameTable.getInstance().getIdByName(val) > 0)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Warning, player " + val + " already exists");
 					return false;
@@ -437,7 +437,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				player.setName(val);
 				if (Config.CACHE_CHAR_NAMES)
 				{
-					CharNameTable.getInstance().addName(player);
+					PlayerNameTable.getInstance().addName(player);
 				}
 				player.storeMe();
 				

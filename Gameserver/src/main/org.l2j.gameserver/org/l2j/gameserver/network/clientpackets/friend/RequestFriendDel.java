@@ -17,7 +17,7 @@
 package org.l2j.gameserver.network.clientpackets.friend;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -55,7 +55,7 @@ public final class RequestFriendDel extends ClientPacket {
             return;
         }
 
-        final int id = CharNameTable.getInstance().getIdByName(_name);
+        final int id = PlayerNameTable.getInstance().getIdByName(_name);
 
         if (id == -1) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_NOT_ON_YOUR_FRIEND_LIST);

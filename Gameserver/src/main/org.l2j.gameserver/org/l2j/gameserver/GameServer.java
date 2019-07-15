@@ -49,7 +49,7 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class GameServer {
 
-    public static final String UPDATE_NAME = "Classic Secret of Empire";
+    public static final String UPDATE_NAME = "Classic - Secret of Empire";
     private static final String LOG4J_CONFIGURATION_FILE = "log4j.configurationFile";
 
     private static Logger LOGGER;
@@ -127,7 +127,7 @@ public class GameServer {
         KarmaData.getInstance();
         HitConditionBonusData.getInstance();
         PlayerTemplateData.getInstance();
-        CharNameTable.getInstance();
+        PlayerNameTable.getInstance();
         AdminData.getInstance();
         PetDataTable.getInstance();
         CubicData.getInstance();

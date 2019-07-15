@@ -6,7 +6,7 @@ import org.l2j.commons.network.SessionKey;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.AccountDAO;
 import org.l2j.gameserver.data.database.data.AccountData;
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.SecondaryAuthData;
 import org.l2j.gameserver.data.xml.impl.VipData;
@@ -79,7 +79,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
             return;
         }
 
-        CharNameTable.getInstance().removeName(objid);
+        PlayerNameTable.getInstance().removeName(objid);
 
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_contacts WHERE charId=? OR contactId=?")) {
@@ -341,7 +341,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
         } else if (MailManager.getInstance().getMailsInProgress(objectId) > 0) {
             return CharacterDeleteFailType.MAIL;
         } else {
-            final int clanId = CharNameTable.getInstance().getClassIdById(objectId);
+            final int clanId = PlayerNameTable.getInstance().getClassIdById(objectId);
             if (clanId > 0) {
                 final Clan clan = ClanTable.getInstance().getClan(clanId);
                 if (clan != null) {

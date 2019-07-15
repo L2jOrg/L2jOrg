@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.World;
@@ -390,7 +390,7 @@ public class AdminPunishment implements IAdminCommandHandler
 	
 	private static String findCharId(String key)
 	{
-		final int charId = CharNameTable.getInstance().getIdByName(key);
+		final int charId = PlayerNameTable.getInstance().getIdByName(key);
 		if (charId > 0) // Yeah its a char name!
 		{
 			return Integer.toString(charId);

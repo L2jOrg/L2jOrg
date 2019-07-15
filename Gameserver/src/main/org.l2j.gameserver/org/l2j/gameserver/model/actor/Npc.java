@@ -1039,8 +1039,7 @@ public class Npc extends Creature {
     }
 
     public void scheduleDespawn(long delay) {
-        ThreadPoolManager.getInstance().schedule(() ->
-        {
+        ThreadPoolManager.schedule(() -> {
             if (!_isDecayed) {
                 deleteMe();
             }

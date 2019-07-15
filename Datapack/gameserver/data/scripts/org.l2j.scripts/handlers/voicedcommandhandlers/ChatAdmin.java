@@ -18,7 +18,7 @@ package handlers.voicedcommandhandlers;
 
 import java.util.StringTokenizer;
 
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.handler.IVoicedCommandHandler;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
@@ -73,7 +73,7 @@ public class ChatAdmin implements IVoicedCommandHandler
 						}
 					}
 					
-					final int objId = CharNameTable.getInstance().getIdByName(name);
+					final int objId = PlayerNameTable.getInstance().getIdByName(name);
 					if (objId > 0)
 					{
 						final Player player = World.getInstance().getPlayer(objId);
@@ -136,7 +136,7 @@ public class ChatAdmin implements IVoicedCommandHandler
 				{
 					final String name = st.nextToken();
 					
-					final int objId = CharNameTable.getInstance().getIdByName(name);
+					final int objId = PlayerNameTable.getInstance().getIdByName(name);
 					if (objId > 0)
 					{
 						final Player player = World.getInstance().getPlayer(objId);

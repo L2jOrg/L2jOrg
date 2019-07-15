@@ -3,11 +3,11 @@ package org.l2j.gameserver.model;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.CommonUtil;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
-import org.l2j.gameserver.instancemanager.PlayerCountManager;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
@@ -20,14 +20,17 @@ import org.l2j.gameserver.network.serverpackets.DeleteObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.util.GameUtils.*;
 
 public final class World {
 
@@ -35,7 +38,6 @@ public final class World {
 
     /**
      * Gracia border Flying objects not allowed to the east of it.
-     *
      */
     public static final int GRACIA_MAX_X = -166168;
     public static final int GRACIA_MAX_Z = 6105;
@@ -43,7 +45,7 @@ public final class World {
     /**
      * Bit shift, defines number of regions note, shifting by 15 will result in regions corresponding to map tiles shifting by 11 divides one tile to 16x16 regions.
      */
-    public static final int SHIFT_BY = 11;
+    private static final int SHIFT_BY = 11;
     public static final int TILE_SIZE = 32768;
     /**
      * Map dimensions.
@@ -61,8 +63,8 @@ public final class World {
     /**
      * Calculated offset used so top left region is 0,0
      */
-    public static final int OFFSET_X = Math.abs(MAP_MIN_X >> SHIFT_BY);
-    public static final int OFFSET_Y = Math.abs(MAP_MIN_Y >> SHIFT_BY);
+    private static final int OFFSET_X = Math.abs(MAP_MIN_X >> SHIFT_BY);
+    private static final int OFFSET_Y = Math.abs(MAP_MIN_Y >> SHIFT_BY);
     /**
      * Number of regions.
      */
@@ -71,73 +73,84 @@ public final class World {
     /**
      * Map containing all the players in game.
      */
-    private final IntMap<Player> _allPlayers = new CHashIntMap<>();
+    private final IntMap<Player> players = new CHashIntMap<>();
     /**
      * Map containing all visible objects.
      */
-    private final IntMap<WorldObject> _allObjects = new CHashIntMap<>();
+    private final IntMap<WorldObject> objects = new CHashIntMap<>();
     /**
      * Map with the pets instances and their owner ID.
      */
-    private final IntMap<Pet> _petsInstance = new CHashIntMap<>();
+    private final IntMap<Pet> pets = new CHashIntMap<>();
 
     private final AtomicInteger _partyNumber = new AtomicInteger();
     private final AtomicInteger _memberInPartyNumber = new AtomicInteger();
 
-    private final WorldRegion[][] _worldRegions = new WorldRegion[REGIONS_X + 1][REGIONS_Y + 1];
+    private final WorldRegion[][] regions = new WorldRegion[REGIONS_X + 1][REGIONS_Y + 1];
 
     private World() {
         initRegions();
     }
 
     private void initRegions() {
+
         for (int x = 0; x <= REGIONS_X; x++) {
             for (int y = 0; y <= REGIONS_Y; y++) {
-                _worldRegions[x][y] = new WorldRegion(x, y);
-            }
-        }
 
-        // Set surrounding regions.
-        for (int rx = 0; rx <= REGIONS_X; rx++) {
-            for (int ry = 0; ry <= REGIONS_Y; ry++) {
-                final List<WorldRegion> surroundingRegions = new ArrayList<>();
-                for (int sx = rx - 1; sx <= (rx + 1); sx++) {
-                    for (int sy = ry - 1; sy <= (ry + 1); sy++) {
-
-                        if (((sx >= 0) && (sx <= REGIONS_X) && (sy >= 0) && (sy <= REGIONS_Y))) {
-                            surroundingRegions.add(_worldRegions[sx][sy]);
-                        }
-                    }
+                if(isNull(regions[x][y])) {
+                    regions[x][y] = new WorldRegion(x, y);
                 }
-                WorldRegion[] regionArray = new WorldRegion[surroundingRegions.size()];
-                regionArray = surroundingRegions.toArray(regionArray);
-                _worldRegions[rx][ry].setSurroundingRegions(regionArray);
+
+                List<WorldRegion> surroundingRegions = initSurroundingRegions(x, y);
+                regions[x][y].setSurroundingRegions(surroundingRegions.toArray(WorldRegion[]::new));
             }
         }
 
         LOGGER.info("World Region Grid set up: {} by {}", REGIONS_X, REGIONS_Y);
     }
 
+    private List<WorldRegion> initSurroundingRegions(int x, int y) {
+        List<WorldRegion> surroundingRegions = new ArrayList<>();
+
+        for (int sx = x - 1; sx <= (x + 1); sx++) {
+            for (int sy = y - 1; sy <= (y + 1); sy++) {
+
+                if (((sx >= 0) && (sx <= REGIONS_X) && (sy >= 0) && (sy <= REGIONS_Y))) {
+                    if(isNull(regions[sx][sy])) {
+                        regions[sx][sy] = new WorldRegion(sx, sy);
+                    }
+                    surroundingRegions.add(regions[sx][sy]);
+                }
+            }
+        }
+        return surroundingRegions;
+    }
+
     public void addObject(WorldObject object) {
-        if (_allObjects.putIfAbsent(object.getObjectId(), object) != null) {
+        if (objects.putIfAbsent(object.getObjectId(), object) != null) {
             LOGGER.warn("Object {}  already exists in the world. Stack Trace: {}", object, CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
         }
 
-        if (object.isPlayer()) {
-            PlayerCountManager.getInstance().incConnectedCount();
+        if (isPlayer(object)) {
 
-            final Player newPlayer = (Player) object;
-            if (newPlayer.isTeleporting()) // TODO: Drop when we stop removing player from the world while teleporting.
-            {
+            final Player player = (Player) object;
+
+            // TODO: Drop when we stop removing player from the world while teleporting.
+            if (player.isTeleporting()) {
                 return;
             }
 
-            final Player existingPlayer = _allPlayers.putIfAbsent(object.getObjectId(), newPlayer);
-            if (existingPlayer != null) {
-                Disconnection.of(existingPlayer).defaultSequence(false);
-                Disconnection.of(newPlayer).defaultSequence(false);
-                LOGGER.warn(getClass().getSimpleName() + ": Duplicate character!? Disconnected both characters (" + newPlayer.getName() + ")");
-            }
+            onPlayerEnter(player);
+        }
+    }
+
+    private void onPlayerEnter(Player player) {
+        final Player existingPlayer = players.putIfAbsent(player.getObjectId(), player);
+
+        if (nonNull(existingPlayer)) {
+            Disconnection.of(existingPlayer).defaultSequence(false);
+            Disconnection.of(player).defaultSequence(false);
+            LOGGER.warn("Duplicate character!? Disconnected both characters {})", player);
         }
     }
 
@@ -153,16 +166,16 @@ public final class World {
      * @param object the object to remove
      */
     public void removeObject(WorldObject object) {
-        _allObjects.remove(object.getObjectId());
-        if (object.isPlayer()) {
-            PlayerCountManager.getInstance().decConnectedCount();
+        objects.remove(object.getObjectId());
 
+        if (isPlayer(object)) {
             final Player player = (Player) object;
             if (player.isTeleporting()) // TODO: Drop when we stop removing player from the world while teleporting.
             {
                 return;
             }
-            _allPlayers.remove(object.getObjectId());
+
+            players.remove(object.getObjectId());
         }
     }
 
@@ -176,15 +189,15 @@ public final class World {
      * @return the WorldObject object that belongs to an ID or null if no object found.
      */
     public WorldObject findObject(int objectId) {
-        return _allObjects.get(objectId);
+        return objects.get(objectId);
     }
 
     public Collection<WorldObject> getVisibleObjects() {
-        return _allObjects.values();
+        return objects.values();
     }
 
     public Collection<Player> getPlayers() {
-        return _allPlayers.values();
+        return players.values();
     }
 
     /**
@@ -194,7 +207,7 @@ public final class World {
      * @return the player instance corresponding to the given name.
      */
     public Player getPlayer(String name) {
-        return getPlayer(CharNameTable.getInstance().getIdByName(name));
+        return getPlayer(PlayerNameTable.getInstance().getIdByName(name));
     }
 
     /**
@@ -202,7 +215,7 @@ public final class World {
      * @return the player instance corresponding to the given object ID.
      */
     public Player getPlayer(int objectId) {
-        return _allPlayers.get(objectId);
+        return players.get(objectId);
     }
 
     /**
@@ -210,7 +223,7 @@ public final class World {
      * @return the pet instance from the given ownerId.
      */
     public Pet getPet(int ownerId) {
-        return _petsInstance.get(ownerId);
+        return pets.get(ownerId);
     }
 
     /**
@@ -218,10 +231,10 @@ public final class World {
      *
      * @param ownerId ID of the owner
      * @param pet     Pet of the pet
-     * @return
+     * @return existent Pet with ownerId
      */
     public Pet addPet(int ownerId, Pet pet) {
-        return _petsInstance.put(ownerId, pet);
+        return pets.put(ownerId, pet);
     }
 
     /**
@@ -230,19 +243,19 @@ public final class World {
      * @param ownerId ID of the owner
      */
     public void removePet(int ownerId) {
-        _petsInstance.remove(ownerId);
+        pets.remove(ownerId);
     }
 
     /**
      * Add a WorldObject in the world. <B><U> Concept</U> :</B> WorldObject (including Player) are identified in <B>_visibleObjects</B> of his current WorldRegion and in <B>_knownObjects</B> of other surrounding L2Characters <BR>
-     * Player are identified in <B>_allPlayers</B> of World, in <B>_allPlayers</B> of his current WorldRegion and in <B>_knownPlayer</B> of other surrounding L2Characters <B><U> Actions</U> :</B>
-     * <li>Add the WorldObject object in _allPlayers* of World</li>
+     * Player are identified in <B>players</B> of World, in <B>players</B> of his current WorldRegion and in <B>_knownPlayer</B> of other surrounding L2Characters <B><U> Actions</U> :</B>
+     * <li>Add the WorldObject object in players* of World</li>
      * <li>Add the WorldObject object in _gmList** of GmListTable</li>
      * <li>Add object in _knownObjects and _knownPlayer* of all surrounding WorldRegion L2Characters</li><BR>
      * <li>If object is a Creature, add all surrounding WorldObject in its _knownObjects and all surrounding Player in its _knownPlayer</li><BR>
      * <I>* only if object is a Player</I><BR>
-     * <I>** only if object is a GM Player</I> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object in _visibleObjects and _allPlayers* of WorldRegion (need synchronisation)</B></FONT><BR>
-     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object to _allObjects and _allPlayers* of World (need synchronisation)</B></FONT> <B><U> Example of use </U> :</B>
+     * <I>** only if object is a GM Player</I> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object in _visibleObjects and players* of WorldRegion (need synchronisation)</B></FONT><BR>
+     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object to objects and players* of World (need synchronisation)</B></FONT> <B><U> Example of use </U> :</B>
      * <li>Drop an Item</li>
      * <li>Spawn a Creature</li>
      * <li>Apply Death Penalty of a Player</li>
@@ -255,34 +268,39 @@ public final class World {
             return;
         }
 
-        forEachVisibleObject(object, WorldObject.class, wo -> beAwereOfObject(object, wo));
+        forEachVisibleObject(object, WorldObject.class, wo -> beAwereOfEachOther(object, wo));
     }
 
-    private void beAwereOfObject(WorldObject object, WorldObject wo) {
+    private void beAwereOfEachOther(WorldObject object, WorldObject wo) {
         describeObjectToOther(object, wo);
 
         describeObjectToOther(wo, object);
 
-        if (wo.isNpc() && object.isCharacter()) {
+        if (isNpc(wo) && isCreature(object)) {
             EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((Npc) wo, (Creature) object, object.isSummon()), (Npc) wo);
         }
 
-        if (object.isNpc() && wo.isCharacter()) {
+        if (isNpc(object) && isCreature(wo)) {
             EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((Npc) object, (Creature) wo, wo.isSummon()), (Npc) object);
         }
     }
 
     private void describeObjectToOther(WorldObject object, WorldObject wo) {
-        if (object.isPlayer() && wo.isVisibleFor((Player) object)) {
-            wo.sendInfo((Player) object);
-            if (wo.isCharacter()) {
-                final CreatureAI ai = ((Creature) wo).getAI();
-                if (ai != null) {
-                    ai.describeStateToPlayer((Player) object);
-                    if (wo.isMonster()) {
-                        if (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE) {
-                            ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-                        }
+        if(!isPlayer(object) || wo.isVisibleFor((Player) object)) {
+            return;
+        }
+
+        wo.sendInfo((Player) object);
+
+        if (isCreature(wo)) {
+            final CreatureAI ai = ((Creature) wo).getAI();
+
+            if (nonNull(ai)) {
+                ai.describeStateToPlayer((Player) object);
+
+                if (isMonster(wo)) {
+                    if (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE) {
+                        ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
                     }
                 }
             }
@@ -291,12 +309,12 @@ public final class World {
 
     /**
      * Remove a WorldObject from the world. <B><U> Concept</U> :</B> WorldObject (including Player) are identified in <B>_visibleObjects</B> of his current WorldRegion and in <B>_knownObjects</B> of other surrounding L2Characters <BR>
-     * Player are identified in <B>_allPlayers</B> of World, in <B>_allPlayers</B> of his current WorldRegion and in <B>_knownPlayer</B> of other surrounding L2Characters <B><U> Actions</U> :</B>
-     * <li>Remove the WorldObject object from _allPlayers* of World</li>
-     * <li>Remove the WorldObject object from _visibleObjects and _allPlayers* of WorldRegion</li>
+     * Player are identified in <B>players</B> of World, in <B>players</B> of his current WorldRegion and in <B>_knownPlayer</B> of other surrounding L2Characters <B><U> Actions</U> :</B>
+     * <li>Remove the WorldObject object from players* of World</li>
+     * <li>Remove the WorldObject object from _visibleObjects and players* of WorldRegion</li>
      * <li>Remove the WorldObject object from _gmList** of GmListTable</li>
      * <li>Remove object from _knownObjects and _knownPlayer* of all surrounding WorldRegion L2Characters</li><BR>
-     * <li>If object is a Creature, remove all WorldObject from its _knownObjects and all Player from its _knownPlayer</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of World</B></FONT> <I>* only if object is a Player</I><BR>
+     * <li>If object is a Creature, remove all WorldObject from its _knownObjects and all Player from its _knownPlayer</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from objects of World</B></FONT> <I>* only if object is a Player</I><BR>
      * <I>** only if object is a GM Player</I> <B><U> Example of use </U> :</B>
      * <li>Pickup an Item</li>
      * <li>Decay a Creature</li>
@@ -305,25 +323,24 @@ public final class World {
      * @param oldRegion WorldRegion in which the object was before removing
      */
     public void removeVisibleObject(WorldObject object, WorldRegion oldRegion) {
-        if (object == null) {
+        if (Util.isAnyNull(object, oldRegion)) {
             return;
         }
 
-        if (oldRegion != null) {
-            oldRegion.removeVisibleObject(object);
+        oldRegion.removeVisibleObject(object);
 
-            // Go through all surrounding WorldRegion L2Characters
-            oldRegion.forEachSurroundingRegion(w ->
-            {
-                forgetObjectsInRegion(object, w);
-                return true;
-            });
-        }
+        // Go through all surrounding WorldRegion L2Characters
+        oldRegion.forEachSurroundingRegion(w ->
+        {
+            forgetObjectsInRegion(object, w);
+            return true;
+        });
     }
 
-    public void switchRegion(WorldObject object, WorldRegion newRegion) {
+    void switchRegion(WorldObject object, WorldRegion newRegion) {
         final WorldRegion oldRegion = object.getWorldRegion();
-        if ((oldRegion == null) || (oldRegion == newRegion)) {
+
+        if (isNull(oldRegion) || oldRegion.equals(newRegion)) {
             return;
         }
 
@@ -343,7 +360,7 @@ public final class World {
                         continue;
                     }
 
-                    beAwereOfObject(object, wo);
+                    beAwereOfEachOther(object, wo);
                 }
             }
             return true;
@@ -422,7 +439,7 @@ public final class World {
         }
 
         Arrays.stream(centerWorldRegion.getSurroundingRegions()).flatMap(worldRegion -> worldRegion.getVisibleObjects().values().stream()).forEach(visibleObject -> {
-            if (isNull(visibleObject) || visibleObject == object || !clazz.isInstance(visibleObject) || visibleObject.getInstanceWorld() != object.getInstanceWorld()) {
+            if (isNull(visibleObject) || visibleObject == object || !clazz.isInstance(visibleObject) || !visibleObject.getInstanceWorld().equals(object.getInstanceWorld())) {
                 return;
             }
             c.accept(clazz.cast(visibleObject));
@@ -483,7 +500,7 @@ public final class World {
      */
     public WorldRegion getRegion(WorldObject object) {
         try {
-            return _worldRegions[(object.getX() >> SHIFT_BY) + OFFSET_X][(object.getY() >> SHIFT_BY) + OFFSET_Y];
+            return regions[(object.getX() >> SHIFT_BY) + OFFSET_X][(object.getY() >> SHIFT_BY) + OFFSET_Y];
         } catch (ArrayIndexOutOfBoundsException e) // Precaution. Moved at invalid region?
         {
             disposeOutOfBoundsObject(object);
@@ -493,7 +510,7 @@ public final class World {
 
     public WorldRegion getRegion(int x, int y) {
         try {
-            return _worldRegions[(x >> SHIFT_BY) + OFFSET_X][(y >> SHIFT_BY) + OFFSET_Y];
+            return regions[(x >> SHIFT_BY) + OFFSET_X][(y >> SHIFT_BY) + OFFSET_Y];
         } catch (ArrayIndexOutOfBoundsException e) {
             LOGGER.warn(getClass().getSimpleName() + ": Incorrect world region X: " + ((x >> SHIFT_BY) + OFFSET_X) + " Y: " + ((y >> SHIFT_BY) + OFFSET_Y));
             return null;
@@ -506,7 +523,7 @@ public final class World {
         } else if (object.isSummon()) {
             final Summon summon = (Summon) object;
             summon.unSummon(summon.getOwner());
-        } else if (_allObjects.remove(object.getObjectId()) != null) {
+        } else if (objects.remove(object.getObjectId()) != null) {
             if (object.isNpc()) {
                 final Npc npc = (Npc) object;
                 LOGGER.warn("Deleting npc " + object.getName() + " NPCID[" + npc.getId() + "] from invalid location X:" + object.getX() + " Y:" + object.getY() + " Z:" + object.getZ());

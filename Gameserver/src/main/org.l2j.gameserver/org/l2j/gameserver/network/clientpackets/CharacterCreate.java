@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.data.CharacterData;
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.SkillLearn;
@@ -105,13 +105,13 @@ public final class CharacterCreate extends ClientPacket {
         /*
          * DrHouse: Since checks for duplicate names are done using SQL, lock must be held until data is written to DB as well.
          */
-        synchronized (CharNameTable.getInstance()) {
-            if (Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT != 0 && (CharNameTable.getInstance().getAccountCharacterCount(client.getAccountName()) >= Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT)) {
+        synchronized (PlayerNameTable.getInstance()) {
+            if (Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT != 0 && (PlayerNameTable.getInstance().getAccountCharacterCount(client.getAccountName()) >= Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT)) {
                 client.sendPacket(new CharCreateFail(CharCreateFail.REASON_TOO_MANY_CHARACTERS));
                 return;
             }
 
-            if (CharNameTable.getInstance().doesCharNameExist(name)) {
+            if (PlayerNameTable.getInstance().doesCharNameExist(name)) {
                 client.sendPacket(new CharCreateFail(CharCreateFail.REASON_NAME_ALREADY_EXISTS));
                 return;
             }

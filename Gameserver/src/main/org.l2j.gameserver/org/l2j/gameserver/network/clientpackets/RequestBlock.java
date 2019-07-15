@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -29,8 +29,8 @@ public final class RequestBlock extends ClientPacket {
     @Override
     public void runImpl() {
         final Player activeChar = client.getActiveChar();
-        final int targetId = CharNameTable.getInstance().getIdByName(_name);
-        final int targetAL = CharNameTable.getInstance().getAccessLevelById(targetId);
+        final int targetId = PlayerNameTable.getInstance().getIdByName(_name);
+        final int targetAL = PlayerNameTable.getInstance().getAccessLevelById(targetId);
 
         if (activeChar == null) {
             return;

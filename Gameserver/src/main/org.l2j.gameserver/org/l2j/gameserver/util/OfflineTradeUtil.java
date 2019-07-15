@@ -18,7 +18,6 @@ package org.l2j.gameserver.util;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
-import org.l2j.gameserver.instancemanager.PlayerCountManager;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
@@ -90,8 +89,6 @@ public final class OfflineTradeUtil {
         if (!offlineMode(player)) {
             return false;
         }
-
-        PlayerCountManager.getInstance().incOfflineTradeCount();
 
         final GameClient client = player.getClient();
         client.close(true);

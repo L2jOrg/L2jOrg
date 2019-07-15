@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.network.serverpackets.ExIsCharNameCreatable;
 import org.l2j.gameserver.util.GameUtils;
 
@@ -24,7 +24,7 @@ public class RequestCharacterNameCreatable extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final int charId = CharNameTable.getInstance().getIdByName(_name);
+        final int charId = PlayerNameTable.getInstance().getIdByName(_name);
 
         if (!GameUtils.isAlphaNumeric(_name) || !isValidName(_name)) {
             result = INVALID_NAME;

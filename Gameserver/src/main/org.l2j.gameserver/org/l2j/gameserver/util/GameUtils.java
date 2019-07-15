@@ -5,10 +5,12 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
-import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.tasks.player.IllegalPlayerActionTask;
 import org.l2j.gameserver.model.interfaces.ILocational;
@@ -609,5 +611,22 @@ public final class GameUtils {
 
     public static int hashIp(Player player) {
         return org.l2j.commons.util.Util.hashIp(player.getIPAddress());
+    }
+
+
+    public static boolean isPlayer(WorldObject object) {
+        return object instanceof Player;
+    }
+
+    public static boolean isCreature(WorldObject object) {
+        return object instanceof Creature;
+    }
+
+    public static boolean isMonster(WorldObject object) {
+        return object instanceof Monster;
+    }
+
+    public static boolean isNpc(WorldObject object) {
+        return object instanceof Npc;
     }
 }

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.entity;
 
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -232,7 +232,7 @@ public class Message {
     public final String getSenderName() {
         switch (_messageType) {
             case REGULAR: {
-                _senderName = CharNameTable.getInstance().getNameById(_senderId);
+                _senderName = PlayerNameTable.getInstance().getNameById(_senderId);
                 break;
             }
             case PRIME_SHOP_GIFT: // Not in client, tbd
@@ -254,7 +254,7 @@ public class Message {
 
     public final String getReceiverName() {
         if (_receiverName == null) {
-            _receiverName = CharNameTable.getInstance().getNameById(_receiverId);
+            _receiverName = PlayerNameTable.getInstance().getNameById(_receiverId);
             if (_receiverName == null) {
                 _receiverName = "";
             }

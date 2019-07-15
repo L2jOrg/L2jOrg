@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.entity;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
@@ -222,7 +222,7 @@ public class Hero {
             }
             HERO_DIARY.put(charId, diary);
 
-            LOGGER.info("Hero System: Loaded " + diaryentries + " diary entries for Hero: " + CharNameTable.getInstance().getNameById(charId));
+            LOGGER.info("Hero System: Loaded " + diaryentries + " diary entries for Hero: " + PlayerNameTable.getInstance().getNameById(charId));
         } catch (SQLException e) {
             LOGGER.warn("Hero System: Couldnt load Hero Diary for CharId: " + charId + ": " + e.getMessage());
         }
@@ -268,7 +268,7 @@ public class Hero {
                     classed = rset.getInt("classed");
 
                     if (charId == charOneId) {
-                        final String name = CharNameTable.getInstance().getNameById(charTwoId);
+                        final String name = PlayerNameTable.getInstance().getNameById(charTwoId);
                         final String cls = ClassListData.getInstance().getClass(charTwoClass).getClientCode();
                         if ((name != null) && (cls != null)) {
                             final StatsSet fight = new StatsSet();
@@ -296,7 +296,7 @@ public class Hero {
                             numberoffights++;
                         }
                     } else if (charId == charTwoId) {
-                        final String name = CharNameTable.getInstance().getNameById(charOneId);
+                        final String name = PlayerNameTable.getInstance().getNameById(charOneId);
                         final String cls = ClassListData.getInstance().getClass(charOneClass).getClientCode();
                         if ((name != null) && (cls != null)) {
                             final StatsSet fight = new StatsSet();
@@ -334,7 +334,7 @@ public class Hero {
             HERO_COUNTS.put(charId, heroCountData);
             HERO_FIGHTS.put(charId, fights);
 
-            LOGGER.info("Hero System: Loaded " + numberoffights + " fights for Hero: " + CharNameTable.getInstance().getNameById(charId));
+            LOGGER.info("Hero System: Loaded " + numberoffights + " fights for Hero: " + PlayerNameTable.getInstance().getNameById(charId));
         } catch (SQLException e) {
             LOGGER.warn("Hero System: Couldnt load Hero fights history for CharId: " + charId + ": " + e);
         }
@@ -369,7 +369,7 @@ public class Hero {
             final String heroMessage = HERO_MESSAGE.get(charid);
             if ((htmContent != null) && (heroMessage != null)) {
                 diaryReply.setHtml(htmContent);
-                diaryReply.replace("%heroname%", CharNameTable.getInstance().getNameById(charid));
+                diaryReply.replace("%heroname%", PlayerNameTable.getInstance().getNameById(charid));
                 diaryReply.replace("%message%", heroMessage);
                 diaryReply.disableValidation();
 
@@ -437,7 +437,7 @@ public class Hero {
             final String htmContent = HtmCache.getInstance().getHtm(activeChar, "data/html/olympiad/herohistory.htm");
             if (htmContent != null) {
                 FightReply.setHtml(htmContent);
-                FightReply.replace("%heroname%", CharNameTable.getInstance().getNameById(charid));
+                FightReply.replace("%heroname%", PlayerNameTable.getInstance().getNameById(charid));
 
                 if (!heroFights.isEmpty()) {
                     final StatsSet heroCount = HERO_COUNTS.get(charid);
@@ -773,7 +773,7 @@ public class Hero {
         if ((clan != null) && (clan.getLevel() >= 5)) {
             clan.addReputationScore(Config.HERO_POINTS, true);
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_C1_WAS_NAMED_A_HERO_S2_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION);
-            sm.addString(CharNameTable.getInstance().getNameById(player.getObjectId()));
+            sm.addString(PlayerNameTable.getInstance().getNameById(player.getObjectId()));
             sm.addInt(Config.HERO_POINTS);
             clan.broadcastToOnlineMembers(sm);
         }

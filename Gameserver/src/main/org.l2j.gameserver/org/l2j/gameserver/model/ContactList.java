@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -63,7 +63,7 @@ public class ContactList {
                 String contactName;
                 while (rset.next()) {
                     contactId = rset.getInt(1);
-                    contactName = CharNameTable.getInstance().getNameById(contactId);
+                    contactName = PlayerNameTable.getInstance().getNameById(contactId);
                     if ((contactName == null) || contactName.equals(activeChar.getName()) || (contactId == activeChar.getObjectId())) {
                         continue;
                     }
@@ -79,7 +79,7 @@ public class ContactList {
     public boolean add(String name) {
         SystemMessage sm;
 
-        final int contactId = CharNameTable.getInstance().getIdByName(name);
+        final int contactId = PlayerNameTable.getInstance().getIdByName(name);
         if (_contacts.contains(name)) {
             activeChar.sendPacket(SystemMessageId.THE_NAME_ALREADY_EXISTS_ON_THE_ADDED_LIST);
             return false;
@@ -121,7 +121,7 @@ public class ContactList {
     }
 
     public void remove(String name) {
-        final int contactId = CharNameTable.getInstance().getIdByName(name);
+        final int contactId = PlayerNameTable.getInstance().getIdByName(name);
 
         if (!_contacts.contains(name)) {
             activeChar.sendPacket(SystemMessageId.THE_NAME_IS_NOT_CURRENTLY_REGISTERED);

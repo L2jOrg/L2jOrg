@@ -243,7 +243,7 @@ public class EnterWorld extends ClientPacket {
             activeChar.setSpawnProtection(true);
         }
 
-        activeChar.spawnMe(activeChar.getX(), activeChar.getY(), activeChar.getZ());
+        activeChar.spawnMe();
         activeChar.sendPacket(new ExRotation(activeChar.getObjectId(), activeChar.getHeading()));
 
         activeChar.getInventory().applyItemSkills();

@@ -102,4 +102,12 @@ public class Util {
         return Collections.unmodifiableList(fields);
     }
 
+    public static boolean isAnyNull(Object... objects) {
+        for (Object object : objects) {
+            if(isNull(object)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

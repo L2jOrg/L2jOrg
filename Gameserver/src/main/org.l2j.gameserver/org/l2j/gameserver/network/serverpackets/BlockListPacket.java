@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -22,7 +22,7 @@ public class BlockListPacket extends ServerPacket {
 
         writeInt(_playersId.size());
         for (int playerId : _playersId) {
-            writeString(CharNameTable.getInstance().getNameById(playerId));
+            writeString(PlayerNameTable.getInstance().getNameById(playerId));
             writeString(""); // memo ?
         }
     }

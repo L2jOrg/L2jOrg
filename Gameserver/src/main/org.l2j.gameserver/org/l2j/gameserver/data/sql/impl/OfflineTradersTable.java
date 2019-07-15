@@ -3,7 +3,6 @@ package org.l2j.gameserver.data.sql.impl;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.PrivateStoreType;
-import org.l2j.gameserver.instancemanager.PlayerCountManager;
 import org.l2j.gameserver.model.ManufactureItem;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.TradeItem;
@@ -133,7 +132,6 @@ public class OfflineTradersTable {
     }
 
     public static synchronized void removeTrader(int traderObjId) {
-        PlayerCountManager.getInstance().decOfflineTradeCount();
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement stm1 = con.prepareStatement(CLEAR_OFFLINE_TABLE_ITEMS_PLAYER);
@@ -344,7 +342,7 @@ public class OfflineTradersTable {
                     player.setOnlineStatus(true, true);
                     player.restoreEffects();
                     player.broadcastUserInfo();
-                    PlayerCountManager.getInstance().incOfflineTradeCount();
+
                     nTraders++;
                 } catch (Exception e) {
                     LOGGER.warn(getClass().getSimpleName() + ": Error loading trader: " + player, e);

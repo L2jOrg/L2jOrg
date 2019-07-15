@@ -5,7 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.communitybbs.BB.Forum;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.data.xml.impl.SkillData;
@@ -2269,7 +2269,7 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public String getNewLeaderName() {
-        return CharNameTable.getInstance().getNameById(_newLeaderId);
+        return PlayerNameTable.getInstance().getNameById(_newLeaderId);
     }
 
     public int getSiegeKills() {

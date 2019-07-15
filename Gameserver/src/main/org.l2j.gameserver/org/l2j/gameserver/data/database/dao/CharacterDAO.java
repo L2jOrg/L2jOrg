@@ -23,6 +23,9 @@ public interface CharacterDAO extends DAO<CharacterData> {
     @Query("DELETE FROM character_skills_save WHERE restore_type = 1 AND systime <= :timestamp:")
     void deleteExpiredSavedSkills(long timestamp);
 
-    @Query("SELECT  charId, createDate FROM characters WHERE DAYOFMONTH(createDate) = :day: AND MONTH(createDate) = :month: AND YEAR(createDate) < :year:")
+    @Query("SELECT charId, createDate FROM characters WHERE DAYOFMONTH(createDate) = :day: AND MONTH(createDate) = :month: AND YEAR(createDate) < :year:")
     List<CharacterData> findBirthdayCharacters(int year, int month, int day);
+
+    @Query("SELECT charId, accesslevel FROM characters WHERE char_name=?")
+    CharacterData findIdAndAccessLevelByName(String name);
 }

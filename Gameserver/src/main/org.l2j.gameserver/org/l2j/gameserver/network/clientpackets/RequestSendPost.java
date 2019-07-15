@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.instancemanager.MailManager;
@@ -155,7 +155,7 @@ public final class RequestSendPost extends ClientPacket {
             }
         }
 
-        final int receiverId = CharNameTable.getInstance().getIdByName(_receiver);
+        final int receiverId = PlayerNameTable.getInstance().getIdByName(_receiver);
         if (receiverId <= 0) {
             activeChar.sendPacket(SystemMessageId.WHEN_THE_RECIPIENT_DOESN_T_EXIST_OR_THE_CHARACTER_HAS_BEEN_DELETED_SENDING_MAIL_IS_NOT_POSSIBLE);
             return;
@@ -166,7 +166,7 @@ public final class RequestSendPost extends ClientPacket {
             return;
         }
 
-        final int level = CharNameTable.getInstance().getAccessLevelById(receiverId);
+        final int level = PlayerNameTable.getInstance().getAccessLevelById(receiverId);
         final AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
 
         if ((accessLevel != null) && accessLevel.isGm() && !activeChar.getAccessLevel().isGm()) {

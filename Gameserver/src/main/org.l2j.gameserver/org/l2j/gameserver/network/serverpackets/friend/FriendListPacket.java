@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.friend;
 
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -21,7 +21,7 @@ public class FriendListPacket extends ServerPacket {
 
     public FriendListPacket(Player player) {
         for (int objId : player.getFriendList()) {
-            final String name = CharNameTable.getInstance().getNameById(objId);
+            final String name = PlayerNameTable.getInstance().getNameById(objId);
             final Player player1 = World.getInstance().getPlayer(objId);
             boolean online = false;
             int level = 0;
@@ -32,8 +32,8 @@ public class FriendListPacket extends ServerPacket {
                 level = player1.getLevel();
                 classId = player1.getClassId().getId();
             } else {
-                level = CharNameTable.getInstance().getLevelById(objId);
-                classId = CharNameTable.getInstance().getClassIdById(objId);
+                level = PlayerNameTable.getInstance().getLevelById(objId);
+                classId = PlayerNameTable.getInstance().getClassIdById(objId);
             }
             _info.add(new FriendInfo(objId, name, online, level, classId));
         }

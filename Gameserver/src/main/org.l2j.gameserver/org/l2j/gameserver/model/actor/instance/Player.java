@@ -20,7 +20,7 @@ import org.l2j.gameserver.data.database.data.CharacterData;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
 import org.l2j.gameserver.data.elemental.ElementalSpirit;
 import org.l2j.gameserver.data.elemental.ElementalType;
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.*;
@@ -153,7 +153,7 @@ public final class Player extends Playable {
         player.setRecomLeft(20);
         if (player.createDb()) {
             if (Config.CACHE_CHAR_NAMES) {
-                CharNameTable.getInstance().addName(player);
+                PlayerNameTable.getInstance().addName(player);
             }
             return player;
         }
@@ -5432,7 +5432,7 @@ public final class Player extends Playable {
             }
         }
 
-        CharNameTable.getInstance().addName(this);
+        PlayerNameTable.getInstance().addName(this);
 
         if (accessLevel == null) {
             LOGGER.warn("Tryed to set unregistered access level " + level + " for " + toString() + ". Setting access level without privileges!");

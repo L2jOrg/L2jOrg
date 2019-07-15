@@ -1,59 +1,66 @@
 package org.l2j.gameserver.data.sql.impl;
 
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
+
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * Loads name and access level for all players.
  *
  * @version 2005/03/27
  */
-public class CharNameTable {
-    private static final Logger LOGGER = LoggerFactory.getLogger(CharNameTable.class);
+public class PlayerNameTable {
+    private static final Logger LOGGER = LoggerFactory.getLogger(PlayerNameTable.class);
 
-    private final Map<Integer, String> _chars = new ConcurrentHashMap<>();
-    private final Map<Integer, Integer> _accessLevels = new ConcurrentHashMap<>();
+    private final IntMap<String> playerData = new CHashIntMap<>();
+    private final Map<Integer, Integer> accessLevels = new ConcurrentHashMap<>();
 
-    private CharNameTable() {
+    private PlayerNameTable() {
         if (Config.CACHE_CHAR_NAMES) {
             loadAll();
         }
     }
 
     public final void addName(Player player) {
-        if (player != null) {
+        if (nonNull(player)) {
+
             addName(player.getObjectId(), player.getName());
-            _accessLevels.put(player.getObjectId(), player.getAccessLevel().getLevel());
+            accessLevels.put(player.getObjectId(), player.getAccessLevel().getLevel());
         }
     }
 
     private void addName(int objectId, String name) {
         if (name != null) {
-            if (!name.equals(_chars.get(objectId))) {
-                _chars.put(objectId, name);
+            if (!name.equals(playerData.get(objectId))) {
+                playerData.put(objectId, name);
             }
         }
     }
 
     public final void removeName(int objId) {
-        _chars.remove(objId);
-        _accessLevels.remove(objId);
+        playerData.remove(objId);
+        accessLevels.remove(objId);
     }
 
     public final int getIdByName(String name) {
-        if ((name == null) || name.isEmpty()) {
+        if (isNullOrEmpty(name)){
             return -1;
         }
 
-        for (Entry<Integer, String> entry : _chars.entrySet()) {
+        for (var entry : playerData.entrySet()) {
             if (entry.getValue().equalsIgnoreCase(name)) {
                 return entry.getKey();
             }
@@ -63,26 +70,11 @@ public class CharNameTable {
             return -1;
         }
 
-        int id = -1;
-        int accessLevel = 0;
-
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("SELECT charId,accesslevel FROM characters WHERE char_name=?")) {
-            ps.setString(1, name);
-            try (ResultSet rs = ps.executeQuery()) {
-                while (rs.next()) {
-                    id = rs.getInt("charId");
-                    accessLevel = rs.getInt("accesslevel");
-                }
-            }
-        } catch (SQLException e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Could not check existing char name: " + e.getMessage(), e);
-        }
-
-        if (id > 0) {
-            _chars.put(id, name);
-            _accessLevels.put(id, accessLevel);
-            return id;
+        var characterData = getDAO(CharacterDAO.class).findIdAndAccessLevelByName(name);
+        if(nonNull(characterData)) {
+            playerData.put(characterData.getCharId(), name);
+            accessLevels.put(characterData.getCharId(), characterData.getAccessLevel());
+            return  characterData.getCharId();
         }
 
         return -1; // not found
@@ -93,7 +85,7 @@ public class CharNameTable {
             return null;
         }
 
-        String name = _chars.get(id);
+        String name = playerData.get(id);
         if (name != null) {
             return name;
         }
@@ -108,8 +100,8 @@ public class CharNameTable {
             try (ResultSet rset = ps.executeQuery()) {
                 if (rset.next()) {
                     name = rset.getString("char_name");
-                    _chars.put(id, name);
-                    _accessLevels.put(id, rset.getInt("accesslevel"));
+                    playerData.put(id, name);
+                    accessLevels.put(id, rset.getInt("accesslevel"));
                     return name;
                 }
             }
@@ -121,7 +113,7 @@ public class CharNameTable {
     }
 
     public final int getAccessLevelById(int objectId) {
-        return getNameById(objectId) != null ? _accessLevels.get(objectId) : 0;
+        return getNameById(objectId) != null ? accessLevels.get(objectId) : 0;
     }
 
     public synchronized boolean doesCharNameExist(String name) {
@@ -185,41 +177,26 @@ public class CharNameTable {
         return 0;
     }
 
-    public int getClanIdById(int objectId) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("SELECT clanId FROM characters WHERE charId = ?")) {
-            ps.setInt(1, objectId);
-            try (ResultSet rset = ps.executeQuery()) {
-                while (rset.next()) {
-                    return rset.getInt("clanId");
-                }
-            }
-        } catch (SQLException e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Could not check existing char count: " + e.getMessage(), e);
-        }
-        return 0;
-    }
-
     private void loadAll() {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              Statement s = con.createStatement();
              ResultSet rs = s.executeQuery("SELECT charId, char_name, accesslevel FROM characters")) {
             while (rs.next()) {
                 final int id = rs.getInt("charId");
-                _chars.put(id, rs.getString("char_name"));
-                _accessLevels.put(id, rs.getInt("accesslevel"));
+                playerData.put(id, rs.getString("char_name"));
+                accessLevels.put(id, rs.getInt("accesslevel"));
             }
         } catch (SQLException e) {
             LOGGER.warn(getClass().getSimpleName() + ": Couldn't retrieve all char id/name/access: " + e.getMessage(), e);
         }
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _chars.size() + " char names.");
+        LOGGER.info(getClass().getSimpleName() + ": Loaded " + playerData.size() + " char names.");
     }
 
-    public static CharNameTable getInstance() {
+    public static PlayerNameTable getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final CharNameTable INSTANCE = new CharNameTable();
+        private static final PlayerNameTable INSTANCE = new PlayerNameTable();
     }
 }

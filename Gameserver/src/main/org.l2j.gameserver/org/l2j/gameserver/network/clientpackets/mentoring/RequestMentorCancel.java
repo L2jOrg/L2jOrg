@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.mentoring;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.Mentee;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -32,7 +32,7 @@ public class RequestMentorCancel extends ClientPacket {
         }
 
         final Player player = client.getActiveChar();
-        final int objectId = CharNameTable.getInstance().getIdByName(_name);
+        final int objectId = PlayerNameTable.getInstance().getIdByName(_name);
         if (player != null) {
             if (player.isMentor()) {
                 final Mentee mentee = MentorManager.getInstance().getMentee(player.getObjectId(), objectId);

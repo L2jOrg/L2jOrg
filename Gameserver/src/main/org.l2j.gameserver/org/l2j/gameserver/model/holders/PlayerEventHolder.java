@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.holders;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -73,7 +73,7 @@ public final class PlayerEventHolder {
     public void restorePlayerStats() {
         _player.setName(_name);
         if (Config.CACHE_CHAR_NAMES) {
-            CharNameTable.getInstance().addName(_player);
+            PlayerNameTable.getInstance().addName(_player);
         }
         _player.setTitle(_title);
         _player.setClan(ClanTable.getInstance().getClan(_clanId));

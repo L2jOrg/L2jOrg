@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -25,7 +25,7 @@ public class PledgeShowMemberListAll extends ServerPacket {
         _clan = clan;
         _pledge = pledge;
         _pledgeId = _pledge == null ? 0x00 : _pledge.getId();
-        _leaderName = pledge == null ? clan.getLeaderName() : CharNameTable.getInstance().getNameById(pledge.getLeaderId());
+        _leaderName = pledge == null ? clan.getLeaderName() : PlayerNameTable.getInstance().getNameById(pledge.getLeaderId());
         _name = pledge == null ? clan.getName() : pledge.getName();
         _members = _clan.getMembers();
         _isSubPledge = isSubPledge;

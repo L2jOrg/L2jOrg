@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.SecondaryAuthData;
 import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
@@ -102,7 +102,7 @@ public class CharacterSelect extends ClientPacket {
                         return; // handled in GameClient
                     }
 
-                    CharNameTable.getInstance().addName(cha);
+                    PlayerNameTable.getInstance().addName(cha);
 
                     cha.setClient(client);
                     client.setActiveChar(cha);

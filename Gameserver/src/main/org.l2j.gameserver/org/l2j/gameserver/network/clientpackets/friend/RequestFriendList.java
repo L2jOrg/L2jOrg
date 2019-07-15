@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets.friend;
 
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -32,7 +32,7 @@ public final class RequestFriendList extends ClientPacket {
         Player friend;
         for (int id : activeChar.getFriendList()) {
             // int friendId = rset.getInt("friendId");
-            final String friendName = CharNameTable.getInstance().getNameById(id);
+            final String friendName = PlayerNameTable.getInstance().getNameById(id);
 
             if (friendName == null) {
                 continue;

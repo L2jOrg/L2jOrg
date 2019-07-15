@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.primeshop;
 
 import org.l2j.gameserver.data.database.dao.PrimeShopDAO;
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.PrimeShopData;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.instancemanager.MailManager;
@@ -45,7 +45,7 @@ public final class RequestBRPresentBuyProduct extends RequestBuyProduct {
             return;
         }
 
-        final int receiverId = CharNameTable.getInstance().getIdByName(_charName);
+        final int receiverId = PlayerNameTable.getInstance().getIdByName(_charName);
         if (receiverId <= 0) {
             activeChar.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.INVENTORY_FULL0));
             return;

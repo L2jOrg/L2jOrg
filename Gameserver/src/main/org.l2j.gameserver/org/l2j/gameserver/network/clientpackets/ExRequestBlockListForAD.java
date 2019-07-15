@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.sql.impl.CharNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.model.BlockList;
 
@@ -24,7 +24,7 @@ public class ExRequestBlockListForAD extends ClientPacket {
         }
 
         var player = client.getActiveChar();
-        final int reportedId = CharNameTable.getInstance().getIdByName(name);
+        final int reportedId = PlayerNameTable.getInstance().getIdByName(name);
         BlockList.addToBlockList(player, reportedId);
 
         ReportTable.getInstance().reportAdenaADS(player.getObjectId(), reportedId);
