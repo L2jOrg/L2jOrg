@@ -1,7 +1,7 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.HashIntMap;
 import org.l2j.gameserver.data.xml.model.VipInfo;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.Containers;
@@ -27,7 +27,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public class VipData extends GameXmlReader {
 
     private static final byte VIP_MAX_TIER = 7;
-    private IntObjectMap<VipInfo> vipTiers = new HashIntObjectMap<>(8);
+    private IntMap<VipInfo> vipTiers = new HashIntMap<>(8);
 
     private VipData() {
         load();

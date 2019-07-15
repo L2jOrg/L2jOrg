@@ -1,13 +1,11 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import io.github.joealisson.primitive.Containers;
-import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.*;
+
 import io.github.joealisson.primitive.maps.LongObjectMap;
-import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashLongObjectMap;
-import io.github.joealisson.primitive.pair.LongObjectPair;
-import io.github.joealisson.primitive.sets.IntSet;
-import io.github.joealisson.primitive.sets.impl.HashIntSet;
+import io.github.joealisson.primitive.pair.LongObject;
+import io.github.joealisson.primitive.pair.impl.LongObjectImpl;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.Race;
@@ -84,8 +82,8 @@ public final class SkillTreesData extends GameXmlReader {
     private static final Map<ClassId, ClassId> _parentClassMap = new HashMap<>();
     private final AtomicBoolean isLoading = new AtomicBoolean();
     // Checker, sorted arrays of hash codes
-    private IntObjectMap<long[]> _skillsByClassIdHashCodes; // Occupation skills
-    private IntObjectMap<long[]> _skillsByRaceHashCodes; // Race-specific Transformations
+    private IntMap<long[]> _skillsByClassIdHashCodes; // Occupation skills
+    private IntMap<long[]> _skillsByRaceHashCodes; // Race-specific Transformations
     private long[] _allSkillsHashCodes; // Fishing, Collection, Transformations, Common Skills.
 
     private SkillTreesData() {
@@ -391,7 +389,7 @@ public final class SkillTreesData extends GameXmlReader {
         final boolean isAwaken = player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && (player.isDualClassActive());
 
 
-        for (LongObjectPair<SkillLearn> entry : skills.entrySet()) {
+        for (LongObject<SkillLearn> entry : skills.entrySet()) {
             final SkillLearn skill = entry.getValue();
 
             if (((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) && (!Config.AUTO_LEARN_DIVINE_INSPIRATION && includeAutoGet) && !player.isGM()) || (!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()) || isRemoveSkill(classId, skill.getSkillId())) {
@@ -808,7 +806,7 @@ public final class SkillTreesData extends GameXmlReader {
     }
 
     public boolean isRemoveSkill(ClassId classId, int skillId) {
-        return removeSkillCache.getOrDefault(classId, Containers.EMPTY_INT_SET).contains(skillId);
+        return removeSkillCache.getOrDefault(classId, Containers.emptyIntSet()).contains(skillId);
     }
 
     private boolean isCurrentClassSkillNoParent(ClassId classId, Long hashCode) {
@@ -839,7 +837,7 @@ public final class SkillTreesData extends GameXmlReader {
         // Class specific skills:
         LongObjectMap<SkillLearn> tempMap;
         final Set<ClassId> keySet = classSkillTrees.keySet();
-        _skillsByClassIdHashCodes = new HashIntObjectMap<>(keySet.size());
+        _skillsByClassIdHashCodes = new HashIntMap<>(keySet.size());
         for (ClassId cls : keySet) {
             tempMap = getCompleteClassSkillTree(cls);
             array = tempMap.keySet().toArray();
@@ -850,7 +848,7 @@ public final class SkillTreesData extends GameXmlReader {
 
         // Race specific skills from Fishing and Transformation skill trees.
         final List<Long> list = new ArrayList<>();
-        _skillsByRaceHashCodes = new HashIntObjectMap<>(Race.values().length);
+        _skillsByRaceHashCodes = new HashIntMap<>(Race.values().length);
         for (Race r : Race.values()) {
             for (SkillLearn s : fishingSkillTree.values()) {
                 if (s.getRaces().contains(r)) {

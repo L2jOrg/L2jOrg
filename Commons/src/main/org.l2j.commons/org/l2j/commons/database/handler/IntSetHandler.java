@@ -1,8 +1,8 @@
 package org.l2j.commons.database.handler;
 
 
-import io.github.joealisson.primitive.sets.IntSet;
-import io.github.joealisson.primitive.sets.impl.HashIntSet;
+import io.github.joealisson.primitive.IntSet;
+import io.github.joealisson.primitive.HashIntSet;
 import org.l2j.commons.database.helpers.QueryDescriptor;
 
 import java.sql.PreparedStatement;

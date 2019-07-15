@@ -43,6 +43,8 @@ import java.sql.PreparedStatement;
 import java.util.Collections;
 import java.util.List;
 
+import static java.util.Objects.nonNull;
+
 
 /**
  * @author UnAfraid
@@ -248,7 +250,8 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
     }
 
     private void resetDailyMissionRewards() {
-        long lastReset = getScheduler("onReset").getLastRun();
+        var scheduler = getScheduler("reset");
+        long lastReset = nonNull(scheduler) ? scheduler.getLastRun() : 0;
         DailyMissionData.getInstance().getDailyMissions().forEach(mission -> mission.reset(lastReset));
     }
 

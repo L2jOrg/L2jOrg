@@ -1,7 +1,7 @@
 package org.l2j.authserver.data.xml;
 
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.xml.XmlReader;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -11,14 +11,14 @@ import java.nio.file.Path;
 
 public class ServerNameReader extends XmlReader {
 
-    private IntObjectMap<String> serverNames;
+    private IntMap<String> serverNames;
 
     public ServerNameReader() {
-        serverNames = new HashIntObjectMap<>();
+        serverNames = new HashIntMap<>();
         load();
     }
 
-    public IntObjectMap<String> getServerNames() {
+    public IntMap<String> getServerNames() {
         return serverNames;
     }
 

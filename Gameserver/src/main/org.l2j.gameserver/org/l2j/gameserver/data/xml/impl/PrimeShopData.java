@@ -1,7 +1,7 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.HashIntMap;
 import org.l2j.gameserver.data.database.dao.PrimeShopDAO;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -33,8 +33,8 @@ public class PrimeShopData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(PrimeShopData.class);
     private static final int VIP_GIFT_BASE_ID = 100000;
 
-    private final IntObjectMap<PrimeShopProduct> primeItems = new HashIntObjectMap<>(140);
-    private final IntObjectMap<PrimeShopProduct> vipGifts = new HashIntObjectMap<>(7);
+    private final IntMap<PrimeShopProduct> primeItems = new HashIntMap<>(140);
+    private final IntMap<PrimeShopProduct> vipGifts = new HashIntMap<>(7);
 
     private PrimeShopData() {
         load();
@@ -129,7 +129,7 @@ public class PrimeShopData extends GameXmlReader {
         return vipGifts.get(VIP_GIFT_BASE_ID + tier);
     }
 
-    public IntObjectMap<PrimeShopProduct> getPrimeItems() {
+    public IntMap<PrimeShopProduct> getPrimeItems() {
         return primeItems;
     }
 

@@ -1,8 +1,8 @@
 package org.l2j.authserver.controller;
 
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
-import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.authserver.data.database.dao.GameserverDAO;
 import org.l2j.authserver.data.xml.ServerNameReader;
 import org.l2j.authserver.network.GameServerInfo;
@@ -27,9 +27,9 @@ public class GameServerManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(GameServerManager.class);
     private static final int KEYS_SIZE = 10;
 
-    private static IntObjectMap<String> serverNames = new HashIntObjectMap<>();
+    private static IntMap<String> serverNames = new HashIntMap<>();
 
-    private final IntObjectMap<GameServerInfo> gameservers = new CHashIntObjectMap<>();
+    private final IntMap<GameServerInfo> gameservers = new CHashIntMap<>();
     private KeyPair[] _keyPairs;
 
     private GameServerManager() {
@@ -78,7 +78,7 @@ public class GameServerManager {
         LOGGER.info("Cached {} RSA keys for Game Server communication.", _keyPairs.length);
     }
 
-    public IntObjectMap<GameServerInfo> getRegisteredGameServers() {
+    public IntMap<GameServerInfo> getRegisteredGameServers() {
         return gameservers;
     }
 

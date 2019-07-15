@@ -1,9 +1,8 @@
 package org.l2j.commons.database;
 
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
-import io.github.joealisson.primitive.pair.IntObjectPair;
-import io.github.joealisson.primitive.pair.impl.ImmutableIntObjectPairImpl;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntKeyValue;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Query;
@@ -94,10 +93,10 @@ class JDBCInvocation implements InvocationHandler {
         }
 
         var fields = Util.fieldsOf(clazz);
-        Map<String, IntObjectPair<Class<?>>> parameterMap = new HashMap<>(fields.size());
+        Map<String, IntKeyValue<Class<?>>> parameterMap = new HashMap<>(fields.size());
 
         var columns = fields.stream().filter(f -> !f.isAnnotationPresent(Transient.class))
-                .peek(f -> parameterMap.put(f.getName(), new ImmutableIntObjectPairImpl<>(parameterMap.size()+1, f.getType())))
+                .peek(f -> parameterMap.put(f.getName(), new IntKeyValue<>(parameterMap.size()+1, f.getType())))
                 .map(this::fieldToColumnName).collect(Collectors.joining(",", "(", ")"));
 
         var values = "?".repeat(parameterMap.size()).chars().mapToObj(Character::toString).collect(Collectors.joining(",", "(", ")"));
@@ -130,7 +129,7 @@ class JDBCInvocation implements InvocationHandler {
 
         var matcher = PARAMETER_PATTERN.matcher(query);
         var parameterMapper = mapParameters(method.getParameters());
-        IntObjectMap<IntObjectPair<Class<?>>> parameters = new HashIntObjectMap<>();
+        IntMap<IntKeyValue<Class<?>>> parameters = new HashIntMap<>();
 
         var parameterCount = 0;
         while (matcher.find()) {
@@ -144,11 +143,11 @@ class JDBCInvocation implements InvocationHandler {
         return new QueryDescriptor(method, matcher.replaceAll("?"), parameters);
     }
 
-    private Map<String, IntObjectPair<Class<?>>> mapParameters(Parameter[] parameters) {
-        Map<String, IntObjectPair<Class<?>>> parameterMap = new HashMap<>(parameters.length);
+    private Map<String, IntKeyValue<Class<?>>> mapParameters(Parameter[] parameters) {
+        Map<String, IntKeyValue<Class<?>>> parameterMap = new HashMap<>(parameters.length);
         for (int i = 0; i < parameters.length; i++) {
             var parameter = parameters[i];
-            parameterMap.put(parameter.getName(), new ImmutableIntObjectPairImpl<>(i, parameter.getType()));
+            parameterMap.put(parameter.getName(), new IntKeyValue<>(i, parameter.getType()));
         }
         return parameterMap;
     }

@@ -1,8 +1,8 @@
 package org.l2j.gameserver.datatables;
 
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
-import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.BotReportDAO;
@@ -62,17 +62,17 @@ public final class ReportTable {
 
     private static final String REPORT_TYPE_ADENA_ADS = "ADENA_ADS";
 
-    private IntObjectMap<BotReportedCharData> reports;
-    private IntObjectMap<ReporterCharData> reporters;
+    private IntMap<BotReportedCharData> reports;
+    private IntMap<ReporterCharData> reporters;
 
     private Map<Integer, Long> ipRegistry;
     private Map<Integer, PunishHolder> _punishments;
 
     private ReportTable() {
         if (Config.BOTREPORT_ENABLE) {
-            reports = new CHashIntObjectMap<>();
+            reports = new CHashIntMap<>();
             ipRegistry = new HashMap<>();
-            reporters = new CHashIntObjectMap<>();
+            reporters = new CHashIntMap<>();
             _punishments = new ConcurrentHashMap<>();
 
             try {
@@ -408,12 +408,12 @@ public final class ReportTable {
      */
     private final class BotReportedCharData {
 
-        IntObjectMap<BotReportData> reporters;
-        IntObjectMap<BotReportData> adsReporters;
+        IntMap<BotReportData> reporters;
+        IntMap<BotReportData> adsReporters;
 
         BotReportedCharData() {
-            reporters = new HashIntObjectMap<>();
-            adsReporters = new HashIntObjectMap<>();
+            reporters = new HashIntMap<>();
+            adsReporters = new HashIntMap<>();
         }
 
         int getReportCount() {

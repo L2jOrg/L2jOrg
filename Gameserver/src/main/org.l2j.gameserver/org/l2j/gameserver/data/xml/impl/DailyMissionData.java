@@ -1,7 +1,7 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.CHashIntMap;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -29,7 +29,7 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
 public class DailyMissionData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(DailyMissionData.class);
 
-    private final IntObjectMap<IntObjectMap<DailyMissionPlayerData>> missionsData = new CHashIntObjectMap<>();
+    private final IntMap<IntMap<DailyMissionPlayerData>> missionsData = new CHashIntMap<>();
     private final Map<Integer, List<DailyMissionDataHolder>> dailyMissionRewards = new LinkedHashMap<>();
 
     private boolean available;
@@ -127,12 +127,12 @@ public class DailyMissionData extends GameXmlReader {
 
     public void storeMissionData(int missionId, DailyMissionPlayerData data) {
         if(nonNull(data)) {
-            missionsData.computeIfAbsent(data.getObjectId(), id -> new CHashIntObjectMap<>()).putIfAbsent(missionId, data);
+            missionsData.computeIfAbsent(data.getObjectId(), id -> new CHashIntMap<>()).putIfAbsent(missionId, data);
         }
     }
 
-    public IntObjectMap<DailyMissionPlayerData> getStoredDailyMissionData(Player player) {
-        return missionsData.computeIfAbsent(player.getObjectId(), id -> new CHashIntObjectMap<>());
+    public IntMap<DailyMissionPlayerData> getStoredDailyMissionData(Player player) {
+        return missionsData.computeIfAbsent(player.getObjectId(), id -> new CHashIntMap<>());
     }
 
     public boolean isAvailable() {

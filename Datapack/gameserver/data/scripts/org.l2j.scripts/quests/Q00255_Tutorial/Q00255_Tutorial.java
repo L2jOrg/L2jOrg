@@ -1,7 +1,7 @@
 package quests.Q00255_Tutorial;
 
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.HashIntMap;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.enums.Race;
@@ -63,7 +63,7 @@ public class Q00255_Tutorial extends Quest {
     private static final ItemHolder SOULSHOT_REWARD = new ItemHolder(5789, 200);
     private static final ItemHolder SPIRITSHOT_REWARD = new ItemHolder(5790, 100);
     // Others
-    private static final IntObjectMap<QuestSoundHtmlHolder> STARTING_VOICE_HTML = new HashIntObjectMap<>();
+    private static final IntMap<QuestSoundHtmlHolder> STARTING_VOICE_HTML = new HashIntMap<>();
     {
         STARTING_VOICE_HTML.put(0,  new QuestSoundHtmlHolder("tutorial_voice_001a", "tutorial_human_fighter001.html"));
         STARTING_VOICE_HTML.put(10, new QuestSoundHtmlHolder("tutorial_voice_001b", "tutorial_human_mage001.html"));
@@ -76,7 +76,7 @@ public class Q00255_Tutorial extends Quest {
         STARTING_VOICE_HTML.put(53, new QuestSoundHtmlHolder("tutorial_voice_001i", "tutorial_dwarven_fighter001.html"));
     }
 
-    private static final IntObjectMap<Location> HELPER_LOCATION = new HashIntObjectMap<>();
+    private static final IntMap<Location> HELPER_LOCATION = new HashIntMap<>();
     {
         HELPER_LOCATION.put(0, new Location(-71424, 258336, -3109));
         HELPER_LOCATION.put(10, new Location(-91036, 248044, -3568));
@@ -89,7 +89,7 @@ public class Q00255_Tutorial extends Quest {
         HELPER_LOCATION.put(53, new Location(108567, -173994, -406));
     }
 
-    private static final IntObjectMap<Location> COMPLETE_LOCATION = new HashIntObjectMap<>();
+    private static final IntMap<Location> COMPLETE_LOCATION = new HashIntMap<>();
     {
         COMPLETE_LOCATION.put(0, new Location(-84081, 243227, -3723));
         COMPLETE_LOCATION.put(10, new Location(-84081, 243227, -3723));

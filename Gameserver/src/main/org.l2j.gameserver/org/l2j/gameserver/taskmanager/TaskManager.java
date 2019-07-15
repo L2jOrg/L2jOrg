@@ -1,7 +1,7 @@
 package org.l2j.gameserver.taskmanager;
 
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.database.dao.TaskDAO;
 import org.l2j.gameserver.data.database.data.TaskData;
@@ -25,7 +25,7 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
 public final class TaskManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(TaskManager.class.getName());
 
-    private final IntObjectMap<Task> tasks = new CHashIntObjectMap<>();
+    private final IntMap<Task> tasks = new CHashIntMap<>();
 
     private TaskManager() {
         initializate();

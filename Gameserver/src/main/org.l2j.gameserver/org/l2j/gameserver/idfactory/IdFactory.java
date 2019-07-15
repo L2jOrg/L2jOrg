@@ -1,6 +1,6 @@
 package org.l2j.gameserver.idfactory;
 
-import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.data.database.dao.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,7 +1,7 @@
 package org.l2j.commons.database.helpers;
 
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.pair.IntObjectPair;
+import io.github.joealisson.primitive.IntKeyValue;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.handler.TypeHandler;
 
 import java.sql.PreparedStatement;
@@ -11,9 +11,9 @@ import static java.util.Objects.isNull;
 
 public class IndexedValuesStrategy implements MapParameterStrategy {
 
-    private final IntObjectMap<IntObjectPair<Class<?>>> parametersInfo;
+    private final IntMap<IntKeyValue<Class<?>>> parametersInfo;
 
-    public IndexedValuesStrategy(IntObjectMap<IntObjectPair<Class<?>>> parameters) {
+    public IndexedValuesStrategy(IntMap<IntKeyValue<Class<?>>> parameters) {
         this.parametersInfo =  parameters;
     }
 

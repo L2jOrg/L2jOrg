@@ -1,5 +1,7 @@
 package org.l2j.gameserver.model;
 
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlEvent;
@@ -18,10 +20,7 @@ import org.l2j.gameserver.network.serverpackets.DeleteObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
@@ -36,6 +35,7 @@ public final class World {
 
     /**
      * Gracia border Flying objects not allowed to the east of it.
+     *
      */
     public static final int GRACIA_MAX_X = -166168;
     public static final int GRACIA_MAX_Z = 6105;
@@ -71,15 +71,15 @@ public final class World {
     /**
      * Map containing all the players in game.
      */
-    private final Map<Integer, Player> _allPlayers = new ConcurrentHashMap<>();
+    private final IntMap<Player> _allPlayers = new CHashIntMap<>();
     /**
      * Map containing all visible objects.
      */
-    private final Map<Integer, WorldObject> _allObjects = new ConcurrentHashMap<>();
+    private final IntMap<WorldObject> _allObjects = new CHashIntMap<>();
     /**
      * Map with the pets instances and their owner ID.
      */
-    private final Map<Integer, Pet> _petsInstance = new ConcurrentHashMap<>();
+    private final IntMap<Pet> _petsInstance = new CHashIntMap<>();
 
     private final AtomicInteger _partyNumber = new AtomicInteger();
     private final AtomicInteger _memberInPartyNumber = new AtomicInteger();
@@ -412,28 +412,21 @@ public final class World {
     }
 
     public <T extends WorldObject> void forEachVisibleObject(WorldObject object, Class<T> clazz, Consumer<T> c) {
-        if (object == null) {
+        if (isNull(object)) {
             return;
         }
 
         final WorldRegion centerWorldRegion = getRegion(object);
-        if (centerWorldRegion == null) {
+        if (isNull(centerWorldRegion)) {
             return;
         }
 
-        for (WorldRegion region : centerWorldRegion.getSurroundingRegions()) {
-            for (WorldObject visibleObject : region.getVisibleObjects().values()) {
-                if ((visibleObject == null) || (visibleObject == object) || !clazz.isInstance(visibleObject)) {
-                    continue;
-                }
-
-                if (visibleObject.getInstanceWorld() != object.getInstanceWorld()) {
-                    continue;
-                }
-
-                c.accept(clazz.cast(visibleObject));
+        Arrays.stream(centerWorldRegion.getSurroundingRegions()).flatMap(worldRegion -> worldRegion.getVisibleObjects().values().stream()).forEach(visibleObject -> {
+            if (isNull(visibleObject) || visibleObject == object || !clazz.isInstance(visibleObject) || visibleObject.getInstanceWorld() != object.getInstanceWorld()) {
+                return;
             }
-        }
+            c.accept(clazz.cast(visibleObject));
+        });
     }
 
     public <T extends WorldObject> List<T> getVisibleObjectsInRange(WorldObject object, Class<T> clazz, int range) {

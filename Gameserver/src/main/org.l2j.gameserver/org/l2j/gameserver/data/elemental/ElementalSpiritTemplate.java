@@ -1,7 +1,7 @@
 package org.l2j.gameserver.data.elemental;
 
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.HashIntMap;
 import org.l2j.gameserver.model.holders.ItemHolder;
 
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ class ElementalSpiritTemplate {
     private final int maxCharacteristics;
     private final int extractItem;
 
-    private IntObjectMap<SpiritLevel> levels;
+    private IntMap<SpiritLevel> levels;
     private List<ItemHolder> itemsToEvolve;
     private List<AbsorbItem> absorbItems;
 
@@ -28,7 +28,7 @@ class ElementalSpiritTemplate {
         this.npcId = npcId;
         this.extractItem = extractItem;
         this.maxCharacteristics = maxCharacteristics;
-        this.levels = new HashIntObjectMap<>(10);
+        this.levels = new HashIntMap<>(10);
 
     }
 

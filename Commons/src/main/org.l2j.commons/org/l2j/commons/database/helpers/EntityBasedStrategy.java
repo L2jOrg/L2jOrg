@@ -1,6 +1,6 @@
 package org.l2j.commons.database.helpers;
 
-import io.github.joealisson.primitive.pair.IntObjectPair;
+import io.github.joealisson.primitive.IntKeyValue;
 import org.l2j.commons.database.handler.TypeHandler;
 
 import java.sql.PreparedStatement;
@@ -12,9 +12,9 @@ import static java.util.Objects.nonNull;
 
 public class EntityBasedStrategy implements MapParameterStrategy {
 
-    private final Map<String, IntObjectPair<Class<?>>> parametersInfo;
+    private final Map<String, IntKeyValue<Class<?>>> parametersInfo;
 
-    public EntityBasedStrategy(Map<String, IntObjectPair<Class<?>>> parametersInfo) {
+    public EntityBasedStrategy(Map<String, IntKeyValue<Class<?>>> parametersInfo) {
         this.parametersInfo = parametersInfo;
     }
 

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.engines.captcha;
 
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.CHashIntMap;
 import org.l2j.commons.util.Rnd;
 
 import java.awt.*;
@@ -9,7 +9,7 @@ import java.awt.image.BufferedImage;
 
 public class CaptchaEngine {
 
-    private static final IntObjectMap<Captcha> captchas = new CHashIntObjectMap<>();
+    private static final IntMap<Captcha> captchas = new CHashIntMap<>();
     private static final DXT1ImageCompressor compressor = new DXT1ImageCompressor();
 
     private CaptchaEngine() {

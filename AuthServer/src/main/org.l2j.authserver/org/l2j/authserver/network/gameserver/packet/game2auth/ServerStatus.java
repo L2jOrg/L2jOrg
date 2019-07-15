@@ -1,7 +1,7 @@
 package org.l2j.authserver.network.gameserver.packet.game2auth;
 
-import io.github.joealisson.primitive.maps.IntIntMap;
-import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
+import io.github.joealisson.primitive.HashIntIntMap;
+import io.github.joealisson.primitive.IntIntMap;
 
 import static java.util.Objects.nonNull;
 

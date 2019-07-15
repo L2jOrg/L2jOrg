@@ -1,7 +1,7 @@
 package org.l2j.gameserver.instancemanager;
 
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.HashIntMap;
 import org.l2j.commons.configuration.Configurator;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.World;
@@ -42,7 +42,7 @@ public final class ZoneManager extends GameXmlReader {
     private static final int OFFSET_X = Math.abs(World.MAP_MIN_X >> SHIFT_BY);
     private static final int OFFSET_Y = Math.abs(World.MAP_MIN_Y >> SHIFT_BY);
 
-    private final Map<Class<? extends Zone>, IntObjectMap<? extends Zone>> _classZones = new HashMap<>();
+    private final Map<Class<? extends Zone>, IntMap<? extends Zone>> _classZones = new HashMap<>();
     private final Map<String, SpawnTerritory> _spawnTerritories = new HashMap<>();
     private final ZoneRegion[][] zoneRegions;
     private int _lastDynamicId = 300000;
@@ -101,7 +101,7 @@ public final class ZoneManager extends GameXmlReader {
         int count = 0;
 
         // Backup old zone settings
-        for (IntObjectMap<? extends Zone> map : _classZones.values()) {
+        for (IntMap<? extends Zone> map : _classZones.values()) {
             for (Zone zone : map.values()) {
                 if (zone.getSettings() != null) {
                     SETTINGS.put(zone.getName(), zone.getSettings());
@@ -339,7 +339,7 @@ public final class ZoneManager extends GameXmlReader {
      */
     public int getSize() {
         int i = 0;
-        for (IntObjectMap<? extends Zone> map : _classZones.values()) {
+        for (IntMap<? extends Zone> map : _classZones.values()) {
             i += map.size();
         }
         return i;
@@ -352,7 +352,7 @@ public final class ZoneManager extends GameXmlReader {
      * @return true, if successful
      */
     private boolean checkId(int id) {
-        for (IntObjectMap<? extends Zone> map : _classZones.values()) {
+        for (IntMap<? extends Zone> map : _classZones.values()) {
             if (map.containsKey(id)) {
                 return true;
             }
@@ -369,9 +369,9 @@ public final class ZoneManager extends GameXmlReader {
      */
     @SuppressWarnings("unchecked")
     private <T extends Zone> void addZone(Integer id, T zone) {
-        IntObjectMap<T> map = (IntObjectMap<T>) _classZones.get(zone.getClass());
+        IntMap<T> map = (IntMap<T>) _classZones.get(zone.getClass());
         if (map == null) {
-            map = new HashIntObjectMap<>();
+            map = new HashIntMap<>();
             map.put(id, zone);
             _classZones.put(zone.getClass(), map);
         } else {
@@ -399,7 +399,7 @@ public final class ZoneManager extends GameXmlReader {
      * @see #getZoneById(int, Class)
      */
     public Zone getZoneById(int id) {
-        for (IntObjectMap<? extends Zone> map : _classZones.values()) {
+        for (IntMap<? extends Zone> map : _classZones.values()) {
             if (map.containsKey(id)) {
                 return map.get(id);
             }
@@ -414,7 +414,7 @@ public final class ZoneManager extends GameXmlReader {
      * @return the zone by name
      */
     public Zone getZoneByName(String name) {
-        for (IntObjectMap<? extends Zone> map : _classZones.values()) {
+        for (IntMap<? extends Zone> map : _classZones.values()) {
             final Optional<? extends Zone> zoneType = map.values().stream().filter(z -> (z.getName() != null) && z.getName().equals(name)).findAny();
             if (zoneType.isPresent()) {
                 return zoneType.get();

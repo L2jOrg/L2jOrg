@@ -5,7 +5,7 @@ title L2 Classic: Seven Signs (Game Server)
 echo Starting GameServer.
 echo.
 
-java --enable-preview -Dfile.encoding=UTF-8 -Xms512m -Xmx2g -p ./lib -cp config;./lib/* -m org.l2j.gameserver/org.l2j.gameserver.GameServer
+java --enable-preview -Dfile.encoding=UTF-8 -Xms512m -Xmx2g -p ./lib -cp config;./lib/* --add-exports java.base/jdk.internal.misc=io.github.joealisson.primitive -m org.l2j.gameserver/org.l2j.gameserver.GameServer
 
 if ERRORLEVEL 2 goto restart
 if ERRORLEVEL 1 goto error

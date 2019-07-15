@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.database.dao;
 
-import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 

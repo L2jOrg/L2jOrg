@@ -1,11 +1,14 @@
 package org.l2j.commons.database.helpers;
 
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.pair.IntObjectPair;
+import io.github.joealisson.primitive.IntKeyValue;
+import io.github.joealisson.primitive.IntMap;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Type;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.regex.Pattern;
 
 import static java.util.Objects.nonNull;
@@ -24,7 +27,7 @@ public class QueryDescriptor implements AutoCloseable {
         this(method, query, NO_PARAMETER_STRATEGY);
     }
 
-    public QueryDescriptor(Method method, String query, IntObjectMap<IntObjectPair<Class<?>>> parametersInfo) {
+    public QueryDescriptor(Method method, String query, IntMap<IntKeyValue<Class<?>>> parametersInfo) {
         this(method, query, new IndexedValuesStrategy(parametersInfo));
     }
 
