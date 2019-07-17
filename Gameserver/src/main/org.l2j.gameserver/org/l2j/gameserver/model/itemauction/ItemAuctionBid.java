@@ -52,6 +52,6 @@ public final class ItemAuctionBid {
     }
 
     final Player getPlayer() {
-        return World.getInstance().getPlayer(_playerObjId);
+        return World.getInstance().findPlayer(_playerObjId);
     }
 }

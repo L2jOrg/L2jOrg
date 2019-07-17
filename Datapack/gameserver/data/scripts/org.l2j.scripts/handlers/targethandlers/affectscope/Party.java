@@ -132,7 +132,7 @@ public class Party implements IAffectScopeHandler
 				return true;
 			};
 			
-			// Add object of origin since its skipped in the getVisibleObjects method.
+			// Add object of origin since its skipped in the getObjects method.
 			if (filter.test(npc))
 			{
 				action.accept(npc);

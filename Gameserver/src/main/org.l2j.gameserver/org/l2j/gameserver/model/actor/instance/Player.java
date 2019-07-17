@@ -929,7 +929,7 @@ public final class Player extends Playable {
             }
 
             // Restore pet if exists in the world
-            player.setPet(World.getInstance().getPet(player.getObjectId()));
+            player.setPet(World.getInstance().findPet(player.getObjectId()));
             final Summon pet = player.getPet();
             if (pet != null) {
                 pet.setOwner(player);
@@ -6988,7 +6988,7 @@ public final class Player extends Playable {
     }
 
     public boolean isInLooterParty(int LooterId) {
-        final Player looter = World.getInstance().getPlayer(LooterId);
+        final Player looter = World.getInstance().findPlayer(LooterId);
 
         // if Player is in a CommandChannel
         if (isInParty() && _party.isInCommandChannel() && (looter != null)) {
@@ -10090,7 +10090,7 @@ public final class Player extends Playable {
     public void notifyFriends(int type) {
         final FriendStatus pkt = new FriendStatus(this, type);
         for (int id : _friendList) {
-            final Player friend = World.getInstance().getPlayer(id);
+            final Player friend = World.getInstance().findPlayer(id);
             if (friend != null) {
                 friend.sendPacket(pkt);
             }

@@ -108,13 +108,13 @@ public class MentorManager {
     }
 
     public void setPenalty(int mentorId, long penalty) {
-        final Player player = World.getInstance().getPlayer(mentorId);
+        final Player player = World.getInstance().findPlayer(mentorId);
         final PlayerVariables vars = player != null ? player.getVariables() : new PlayerVariables(mentorId);
         vars.set("Mentor-Penalty-" + mentorId, String.valueOf(System.currentTimeMillis() + penalty));
     }
 
     public long getMentorPenalty(int mentorId) {
-        final Player player = World.getInstance().getPlayer(mentorId);
+        final Player player = World.getInstance().findPlayer(mentorId);
         final PlayerVariables vars = player != null ? player.getVariables() : new PlayerVariables(mentorId);
         return vars.getLong("Mentor-Penalty-" + mentorId, 0);
     }

@@ -130,7 +130,7 @@ public class CharSelectionInfo extends ServerPacket {
                     if (charInfopackage != null) {
                         characterList.add(charInfopackage);
 
-                        final Player player = World.getInstance().getPlayer(charInfopackage.getObjectId());
+                        final Player player = World.getInstance().findPlayer(charInfopackage.getObjectId());
                         if (player != null) {
                             IdFactory.getInstance().releaseId(player.getObjectId());
                             Disconnection.of(player).storeMe().deleteMe();

@@ -166,7 +166,7 @@ public class AdminPunishment implements IAdminCommandHandler
 								{
 									return useAdminCommand("admin_punishment", activeChar);
 								}
-								target = World.getInstance().getPlayer(playerName);
+								target = World.getInstance().findPlayer(playerName);
 							}
 							if ((target == null) && ((activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer()))
 							{

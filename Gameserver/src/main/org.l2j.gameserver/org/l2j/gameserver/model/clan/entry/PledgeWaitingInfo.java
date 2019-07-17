@@ -71,7 +71,7 @@ public class PledgeWaitingInfo {
     }
 
     public Player getPlayerInstance() {
-        return World.getInstance().getPlayer(_playerId);
+        return World.getInstance().findPlayer(_playerId);
     }
 
     public boolean isOnline() {

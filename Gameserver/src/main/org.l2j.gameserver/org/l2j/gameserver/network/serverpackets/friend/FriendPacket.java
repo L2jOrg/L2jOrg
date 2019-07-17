@@ -26,7 +26,7 @@ public class FriendPacket extends ServerPacket {
         _action = action;
         _objid = objId;
         _name = PlayerNameTable.getInstance().getNameById(objId);
-        _online = World.getInstance().getPlayer(objId) != null;
+        _online = World.getInstance().findPlayer(objId) != null;
     }
 
     @Override

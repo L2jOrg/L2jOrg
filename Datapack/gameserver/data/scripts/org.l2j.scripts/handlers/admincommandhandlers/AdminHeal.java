@@ -84,7 +84,7 @@ public class AdminHeal implements IAdminCommandHandler
 		WorldObject obj = activeChar.getTarget();
 		if (player != null)
 		{
-			final Player plyr = World.getInstance().getPlayer(player);
+			final Player plyr = World.getInstance().findPlayer(player);
 			
 			if (plyr != null)
 			{

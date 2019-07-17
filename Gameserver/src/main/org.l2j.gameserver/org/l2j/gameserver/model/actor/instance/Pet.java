@@ -114,7 +114,7 @@ public class Pet extends Summon {
     }
 
     public static synchronized Pet spawnPet(NpcTemplate template, Player owner, Item control) {
-        if (World.getInstance().getPet(owner.getObjectId()) != null) {
+        if (World.getInstance().findPet(owner.getObjectId()) != null) {
             return null; // owner has a pet listed in world
         }
         final PetData data = PetDataTable.getInstance().getPetData(template.getId());

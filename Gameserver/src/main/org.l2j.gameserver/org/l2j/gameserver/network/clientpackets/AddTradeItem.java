@@ -44,7 +44,7 @@ public final class AddTradeItem extends ClientPacket {
         }
 
         final Player partner = trade.getPartner();
-        if ((partner == null) || (World.getInstance().getPlayer(partner.getObjectId()) == null) || (partner.getActiveTradeList() == null)) {
+        if ((partner == null) || (World.getInstance().findPlayer(partner.getObjectId()) == null) || (partner.getActiveTradeList() == null)) {
             // Trade partner not found, cancel trade
             if (partner != null) {
                 LOGGER.warn("Character:" + player.getName() + " requested invalid trade object: " + _objectId);

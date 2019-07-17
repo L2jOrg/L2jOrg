@@ -414,7 +414,7 @@ public class AdminEffects implements IAdminCommandHandler
 					target = st.nextToken();
 					if (target != null)
 					{
-						final Player player = World.getInstance().getPlayer(target);
+						final Player player = World.getInstance().findPlayer(target);
 						if (player != null)
 						{
 							if (performSocial(social, player, activeChar))

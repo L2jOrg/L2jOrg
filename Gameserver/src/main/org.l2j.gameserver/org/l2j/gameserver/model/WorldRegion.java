@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
@@ -9,10 +9,15 @@ import org.l2j.gameserver.model.actor.Vehicle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
+
+import static java.util.Objects.isNull;
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
 
 
 public final class WorldRegion {
@@ -22,12 +27,12 @@ public final class WorldRegion {
     /**
      * Map containing visible objects in this world region.
      */
-    private volatile Map<Integer, WorldObject> _visibleObjects = new ConcurrentHashMap<>();
+    private volatile Map<Integer, WorldObject> objects = new ConcurrentHashMap<>();
     /**
      * Map containing nearby regions forming this world region's effective area.
      */
-    private WorldRegion[] _surroundingRegions;
-    private boolean _active = false;
+    private WorldRegion[] surroundingRegions;
+    private boolean active;
     private ScheduledFuture<?> _neighborsTask = null;
 
     public WorldRegion(int regionX, int regionY) {
@@ -35,17 +40,17 @@ public final class WorldRegion {
         _regionY = regionY;
 
         // Default a newly initialized region to inactive, unless always on is specified.
-        _active = Config.GRIDS_ALWAYS_ON;
+        active = Config.GRIDS_ALWAYS_ON;
     }
 
     private void switchAI(boolean isOn) {
-        if (_visibleObjects.isEmpty()) {
+        if (objects.isEmpty()) {
             return;
         }
 
         int c = 0;
         if (!isOn) {
-            for (WorldObject o : _visibleObjects.values()) {
+            for (WorldObject o : objects.values()) {
                 if (o.isAttackable()) {
                     c++;
                     final Attackable mob = (Attackable) o;
@@ -73,7 +78,7 @@ public final class WorldRegion {
             }
             LOGGER.debug(c + " mobs were turned off");
         } else {
-            for (WorldObject o : _visibleObjects.values()) {
+            for (WorldObject o : objects.values()) {
                 if (o.isAttackable()) {
                     c++;
                     // Start HP/MP/CP regeneration task.
@@ -87,7 +92,7 @@ public final class WorldRegion {
     }
 
     public boolean isActive() {
-        return _active;
+        return active;
     }
 
     /**
@@ -96,11 +101,11 @@ public final class WorldRegion {
      * @param value
      */
     public void setActive(boolean value) {
-        if (_active == value) {
+        if (active == value) {
             return;
         }
 
-        _active = value;
+        active = value;
 
         // Turn the AI on or off to match the region's activation.
         switchAI(value);
@@ -109,7 +114,7 @@ public final class WorldRegion {
     }
 
     public boolean areNeighborsEmpty() {
-        return forEachSurroundingRegion(w -> !(w.isActive() && w.getVisibleObjects().values().stream().anyMatch(WorldObject::isPlayable)));
+        return checkEachSurroundingRegion(w -> !(w.isActive() && w.getObjects().values().stream().anyMatch(WorldObject::isPlayable)));
     }
 
     /**
@@ -127,7 +132,7 @@ public final class WorldRegion {
             }
 
             // Then, set a timer to activate the neighbors.
-            _neighborsTask = ThreadPoolManager.getInstance().schedule(new NeighborsTask(true), 1000 * Config.GRID_NEIGHBOR_TURNON_TIME);
+            _neighborsTask = ThreadPoolManager.schedule(new NeighborsTask(true), 1000 * Config.GRID_NEIGHBOR_TURNON_TIME);
         }
     }
 
@@ -144,33 +149,33 @@ public final class WorldRegion {
 
             // Start a timer to "suggest" a deactivate to self and neighbors.
             // Suggest means: first check if a neighbor has L2PcInstances in it. If not, deactivate.
-            _neighborsTask = ThreadPoolManager.getInstance().schedule(new NeighborsTask(false), 1000 * Config.GRID_NEIGHBOR_TURNOFF_TIME);
+            _neighborsTask = ThreadPoolManager.schedule(new NeighborsTask(false), 1000 * Config.GRID_NEIGHBOR_TURNOFF_TIME);
         }
     }
 
     /**
-     * Add the WorldObject in the L2ObjectHashSet(WorldObject) _visibleObjects containing WorldObject visible in this WorldRegion <BR>
+     * Add the WorldObject in the L2ObjectHashSet(WorldObject) objects containing WorldObject visible in this WorldRegion <BR>
      * If WorldObject is a Player, Add the Player in the L2ObjectHashSet(Player) _allPlayable containing Player of all player in game in this WorldRegion <BR>
      *
      * @param object
      */
     public void addVisibleObject(WorldObject object) {
-        if (object == null) {
+        if (isNull(object)) {
             return;
         }
 
-        _visibleObjects.put(object.getObjectId(), object);
+        objects.put(object.getObjectId(), object);
 
-        if (object.isPlayable()) {
+        if (isPlayable(object)) {
             // If this is the first player to enter the region, activate self and neighbors.
-            if (!_active && (!Config.GRIDS_ALWAYS_ON)) {
+            if (!active && (!Config.GRIDS_ALWAYS_ON)) {
                 startActivation();
             }
         }
     }
 
     /**
-     * Remove the WorldObject from the L2ObjectHashSet(WorldObject) _visibleObjects in this WorldRegion. If WorldObject is a Player, remove it from the L2ObjectHashSet(Player) _allPlayable of this WorldRegion <BR>
+     * Remove the WorldObject from the L2ObjectHashSet(WorldObject) objects in this WorldRegion. If WorldObject is a Player, remove it from the L2ObjectHashSet(Player) _allPlayable of this WorldRegion <BR>
      *
      * @param object
      */
@@ -179,24 +184,24 @@ public final class WorldRegion {
             return;
         }
 
-        if (_visibleObjects.isEmpty()) {
+        if (objects.isEmpty()) {
             return;
         }
-        _visibleObjects.remove(object.getObjectId());
+        objects.remove(object.getObjectId());
 
-        if (object.isPlayable()) {
+        if (isPlayable(object)) {
             if (areNeighborsEmpty() && !Config.GRIDS_ALWAYS_ON) {
                 startDeactivation();
             }
         }
     }
 
-    public Map<Integer, WorldObject> getVisibleObjects() {
-        return _visibleObjects;
+    public Map<Integer, WorldObject> getObjects() {
+        return objects;
     }
 
-    public boolean forEachSurroundingRegion(Predicate<WorldRegion> p) {
-        for (WorldRegion worldRegion : _surroundingRegions) {
+    public boolean checkEachSurroundingRegion(Predicate<WorldRegion> p) {
+        for (WorldRegion worldRegion : surroundingRegions) {
             if (!p.test(worldRegion)) {
                 return false;
             }
@@ -204,12 +209,30 @@ public final class WorldRegion {
         return true;
     }
 
+    <T extends WorldObject> void forEachObject(Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
+        getObjects().values().parallelStream().forEach(object -> {
+            T acceptedObject;
+            if(clazz.isInstance(object) && filter.test(acceptedObject = clazz.cast(object))) {
+                action.accept(acceptedObject);
+            }
+        });
+    }
+
+    <T extends WorldObject> void forEachObjectInSurround(Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
+        Arrays.stream(surroundingRegions).flatMap(r -> r.getObjects().values().parallelStream()).forEach(object -> {
+            T acceptedObject;
+            if(clazz.isInstance(object) && filter.test(acceptedObject = clazz.cast(object)) ) {
+                action.accept(acceptedObject);
+            }
+        });
+    }
+
     public WorldRegion[] getSurroundingRegions() {
-        return _surroundingRegions;
+        return surroundingRegions;
     }
 
     public void setSurroundingRegions(WorldRegion[] regions) {
-        _surroundingRegions = regions;
+        surroundingRegions = regions;
     }
 
     public boolean isSurroundingRegion(WorldRegion region) {
@@ -241,7 +264,7 @@ public final class WorldRegion {
 
         @Override
         public void run() {
-            forEachSurroundingRegion(w ->
+            checkEachSurroundingRegion(w ->
             {
                 if (_isActivating || w.areNeighborsEmpty()) {
                     w.setActive(_isActivating);

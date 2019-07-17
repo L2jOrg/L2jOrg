@@ -66,7 +66,7 @@ public class AdminGmChat implements IAdminCommandHandler
 		WorldObject target = null;
 		if (command.length() > 12)
 		{
-			target = World.getInstance().getPlayer(command.substring(12));
+			target = World.getInstance().findPlayer(command.substring(12));
 		}
 		if (target == null)
 		{

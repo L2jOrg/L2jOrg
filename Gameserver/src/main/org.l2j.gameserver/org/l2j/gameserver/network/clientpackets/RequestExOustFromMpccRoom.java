@@ -27,7 +27,7 @@ public class RequestExOustFromMpccRoom extends ClientPacket {
         final MatchingRoom room = activeChar.getMatchingRoom();
 
         if ((room != null) && (room.getLeader() == activeChar) && (room.getRoomType() == MatchingRoomType.COMMAND_CHANNEL)) {
-            final Player player = World.getInstance().getPlayer(_objectId);
+            final Player player = World.getInstance().findPlayer(_objectId);
 
             if (player != null) {
                 room.deleteMember(player, true);

@@ -378,7 +378,7 @@ public class TradeList {
      */
     private boolean validate() {
         // Check for Owner validity
-        if ((_owner == null) || (World.getInstance().getPlayer(_owner.getObjectId()) == null)) {
+        if ((_owner == null) || (World.getInstance().findPlayer(_owner.getObjectId()) == null)) {
             LOGGER.warn("Invalid owner of TradeList");
             return false;
         }

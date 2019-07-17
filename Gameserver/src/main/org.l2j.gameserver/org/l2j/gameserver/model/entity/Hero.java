@@ -503,7 +503,7 @@ public class Hero {
         updateHeroes(true);
 
         for (Integer objectId : HEROES.keySet()) {
-            final Player player = World.getInstance().getPlayer(objectId);
+            final Player player = World.getInstance().findPlayer(objectId);
             if (player == null) {
                 continue;
             }

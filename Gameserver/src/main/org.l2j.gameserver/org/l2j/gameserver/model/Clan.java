@@ -2199,7 +2199,7 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public Player getNewLeader() {
-        return World.getInstance().getPlayer(_newLeaderId);
+        return World.getInstance().findPlayer(_newLeaderId);
     }
 
     public void setNewLeader(ClanMember member) {

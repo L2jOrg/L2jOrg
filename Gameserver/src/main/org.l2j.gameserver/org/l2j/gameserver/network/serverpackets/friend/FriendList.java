@@ -26,7 +26,7 @@ public class FriendList extends ServerPacket {
     public FriendList(Player player) {
         for (int objId : player.getFriendList()) {
             final String name = PlayerNameTable.getInstance().getNameById(objId);
-            final Player player1 = World.getInstance().getPlayer(objId);
+            final Player player1 = World.getInstance().findPlayer(objId);
 
             boolean online = false;
             int classid = 0;

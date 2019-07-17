@@ -27,7 +27,7 @@ public final class RequestRecipeShopMakeInfo extends ClientPacket {
             return;
         }
 
-        final Player shop = World.getInstance().getPlayer(_playerObjectId);
+        final Player shop = World.getInstance().findPlayer(_playerObjectId);
         if ((shop == null) || (shop.getPrivateStoreType() != PrivateStoreType.MANUFACTURE)) {
             return;
         }

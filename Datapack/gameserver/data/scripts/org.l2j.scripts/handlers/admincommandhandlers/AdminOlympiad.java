@@ -61,7 +61,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 					return false;
 				}
 				
-				final Player player = World.getInstance().getPlayer(st.nextToken());
+				final Player player = World.getInstance().findPlayer(st.nextToken());
 				if (player == null)
 				{
 					activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);

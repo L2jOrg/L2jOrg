@@ -38,7 +38,7 @@ public final class RequestDuelStart extends ClientPacket {
             return;
         }
 
-        final Player targetChar = World.getInstance().getPlayer(_player);
+        final Player targetChar = World.getInstance().findPlayer(_player);
         if (targetChar == null) {
             activeChar.sendPacket(SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL);
             return;

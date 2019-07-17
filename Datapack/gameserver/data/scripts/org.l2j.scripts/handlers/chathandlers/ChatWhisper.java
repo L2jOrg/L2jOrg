@@ -41,7 +41,7 @@ public final class ChatWhisper implements IChatHandler {
 			return;
 		}
 		
-		final Player receiver = World.getInstance().getPlayer(target);
+		final Player receiver = World.getInstance().findPlayer(target);
 		
 		if ((receiver != null) && !receiver.isSilenceMode(activeChar.getObjectId())) {
 

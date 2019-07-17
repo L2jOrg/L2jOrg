@@ -708,7 +708,7 @@ public class CreatureAI extends AbstractAI {
         clientStopMoving(null);
 
         // Init AI
-        _intention = AI_INTENTION_IDLE;
+        intention = AI_INTENTION_IDLE;
         setTarget(null);
     }
 
@@ -926,6 +926,12 @@ public class CreatureAI extends AbstractAI {
             return true;
         }
         return false;
+    }
+
+    public void setActiveIfIdle() {
+        if (intention == CtrlIntention.AI_INTENTION_IDLE) {
+            setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+        }
     }
 
     public static class IntentionCommand {

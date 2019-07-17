@@ -585,7 +585,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			
 			if (targetPlayerStr != null)
 			{
-				targetPlayer = World.getInstance().getPlayer(targetPlayerStr);
+				targetPlayer = World.getInstance().findPlayer(targetPlayerStr);
 			}
 			
 			if (targetPlayer == null)

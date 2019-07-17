@@ -1634,7 +1634,7 @@ public final class Item extends WorldObject {
 
     @Override
     public Player getActingPlayer() {
-        return World.getInstance().getPlayer(getOwnerId());
+        return World.getInstance().findPlayer(getOwnerId());
     }
 
     public int getEquipReuseDelay() {

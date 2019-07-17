@@ -123,7 +123,7 @@ public class PlayerVariables extends AbstractVariables {
     }
 
     public Player getPlayer() {
-        return World.getInstance().getPlayer(_objectId);
+        return World.getInstance().findPlayer(_objectId);
     }
 
     public void addDailyMissionReward(int rewardId) {

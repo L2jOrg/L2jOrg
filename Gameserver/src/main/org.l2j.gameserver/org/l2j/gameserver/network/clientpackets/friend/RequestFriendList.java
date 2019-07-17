@@ -38,7 +38,7 @@ public final class RequestFriendList extends ClientPacket {
                 continue;
             }
 
-            friend = World.getInstance().getPlayer(friendName);
+            friend = World.getInstance().findPlayer(friendName);
 
             if ((friend == null) || !friend.isOnline()) {
                 // (Currently: Offline)

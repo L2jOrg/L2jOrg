@@ -28,7 +28,7 @@ public final class RequestExAskJoinMPCC extends ClientPacket {
             return;
         }
 
-        final Player player = World.getInstance().getPlayer(_name);
+        final Player player = World.getInstance().findPlayer(_name);
         if (player == null) {
             return;
         }

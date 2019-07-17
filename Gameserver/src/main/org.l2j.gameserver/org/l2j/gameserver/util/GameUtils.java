@@ -10,6 +10,7 @@ import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.tasks.player.IllegalPlayerActionTask;
@@ -628,5 +629,9 @@ public final class GameUtils {
 
     public static boolean isNpc(WorldObject object) {
         return object instanceof Npc;
+    }
+
+    public static boolean isPlayable(WorldObject object) {
+        return object instanceof Playable;
     }
 }

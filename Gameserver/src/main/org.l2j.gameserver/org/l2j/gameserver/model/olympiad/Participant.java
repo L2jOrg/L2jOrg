@@ -48,7 +48,7 @@ public final class Participant {
      */
     public final boolean updatePlayer() {
         if ((player == null) || !player.isOnline()) {
-            player = World.getInstance().getPlayer(getObjectId());
+            player = World.getInstance().findPlayer(getObjectId());
         }
         return (player != null);
     }

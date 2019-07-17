@@ -33,7 +33,7 @@ public final class RequestRecipeShopMakeItem extends ClientPacket {
             return;
         }
 
-        final Player manufacturer = World.getInstance().getPlayer(_id);
+        final Player manufacturer = World.getInstance().findPlayer(_id);
         if (manufacturer == null) {
             return;
         }

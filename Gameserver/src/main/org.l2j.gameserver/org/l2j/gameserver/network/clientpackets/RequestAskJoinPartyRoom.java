@@ -27,7 +27,7 @@ public class RequestAskJoinPartyRoom extends ClientPacket {
         }
 
         // Send PartyRoom invite request (with activeChar) name to the target
-        final Player target = World.getInstance().getPlayer(_name);
+        final Player target = World.getInstance().findPlayer(_name);
         if (target != null) {
             if (!target.isProcessingRequest()) {
                 player.onTransactionRequest(target);

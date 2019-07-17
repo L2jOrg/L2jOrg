@@ -69,7 +69,7 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 		{
 			final String name = parts[1];
 			final int lvl = Integer.parseInt(parts[2]);
-			final Player player = World.getInstance().getPlayer(name);
+			final Player player = World.getInstance().findPlayer(name);
 			if (player != null)
 			{
 				onlineChange(activeChar, player, lvl);

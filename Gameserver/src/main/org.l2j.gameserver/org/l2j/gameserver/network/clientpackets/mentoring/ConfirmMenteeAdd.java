@@ -95,7 +95,7 @@ public class ConfirmMenteeAdd extends ClientPacket {
             return;
         }
 
-        final Player mentor = World.getInstance().getPlayer(_mentor);
+        final Player mentor = World.getInstance().findPlayer(_mentor);
         if (mentor == null) {
             return;
         }

@@ -24,7 +24,7 @@ public final class RequestExMPCCShowPartyMembersInfo extends ClientPacket {
             return;
         }
 
-        final Player player = World.getInstance().getPlayer(_partyLeaderId);
+        final Player player = World.getInstance().findPlayer(_partyLeaderId);
         if ((player != null) && (player.getParty() != null)) {
             client.sendPacket(new ExMPCCShowPartyMemberInfo(player.getParty()));
         }

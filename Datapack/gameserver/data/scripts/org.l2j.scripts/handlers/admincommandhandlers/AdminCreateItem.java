@@ -223,7 +223,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			final int ownerId = item.getOwnerId();
 			if (ownerId > 0)
 			{
-				final Player player = World.getInstance().getPlayer(ownerId);
+				final Player player = World.getInstance().findPlayer(ownerId);
 				if (player == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Player is not online.");
@@ -253,7 +253,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			final int ownerId = item.getOwnerId();
 			if (ownerId > 0)
 			{
-				final Player player = World.getInstance().getPlayer(ownerId);
+				final Player player = World.getInstance().findPlayer(ownerId);
 				if (player == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Player is not online.");

@@ -85,7 +85,7 @@ public final class RequestPrivateStoreSell extends ClientPacket {
             return;
         }
 
-        final Player storePlayer = World.getInstance().getPlayer(_storePlayerId);
+        final Player storePlayer = World.getInstance().findPlayer(_storePlayerId);
         if ((storePlayer == null) || !player.isInsideRadius3D(storePlayer, INTERACTION_DISTANCE)) {
             return;
         }

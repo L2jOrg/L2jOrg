@@ -20,7 +20,7 @@ public class ExFriendDetailInfo extends ServerPacket {
     public ExFriendDetailInfo(Player player, String name) {
         _objectId = player.getObjectId();
         _name = name;
-        _friend = World.getInstance().getPlayer(_name);
+        _friend = World.getInstance().findPlayer(_name);
         _lastAccess = _friend.isBlocked(player) ? 0 : _friend.isOnline() ? (int) System.currentTimeMillis() : (int) (System.currentTimeMillis() - _friend.getLastAccess()) / 1000;
     }
 

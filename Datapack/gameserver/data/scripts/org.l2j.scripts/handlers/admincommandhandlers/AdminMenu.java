@@ -69,7 +69,7 @@ public class AdminMenu implements IAdminCommandHandler
 			if (data.length == 5)
 			{
 				final String playerName = data[1];
-				final Player player = World.getInstance().getPlayer(playerName);
+				final Player player = World.getInstance().findPlayer(playerName);
 				if (player != null)
 				{
 					teleportCharacter(player, new Location(Integer.parseInt(data[2]), Integer.parseInt(data[3]), Integer.parseInt(data[4])), activeChar, "Admin is teleporting you.");
@@ -82,7 +82,7 @@ public class AdminMenu implements IAdminCommandHandler
 			try
 			{
 				final String targetName = command.substring(23);
-				final Player player = World.getInstance().getPlayer(targetName);
+				final Player player = World.getInstance().findPlayer(targetName);
 				teleportCharacter(player, activeChar.getLocation(), activeChar, "Admin is teleporting you.");
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -94,7 +94,7 @@ public class AdminMenu implements IAdminCommandHandler
 			try
 			{
 				final String targetName = command.substring(24);
-				final Player player = World.getInstance().getPlayer(targetName);
+				final Player player = World.getInstance().findPlayer(targetName);
 				if (player == null)
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -121,7 +121,7 @@ public class AdminMenu implements IAdminCommandHandler
 			try
 			{
 				final String targetName = command.substring(23);
-				final Player player = World.getInstance().getPlayer(targetName);
+				final Player player = World.getInstance().findPlayer(targetName);
 				if (player == null)
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -149,7 +149,7 @@ public class AdminMenu implements IAdminCommandHandler
 		{
 			try
 			{
-				final Player player = World.getInstance().getPlayer(command.substring(21));
+				final Player player = World.getInstance().findPlayer(command.substring(21));
 				teleportToCharacter(activeChar, player);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -167,7 +167,7 @@ public class AdminMenu implements IAdminCommandHandler
 			{
 				st.nextToken();
 				final String player = st.nextToken();
-				final Player plyr = World.getInstance().getPlayer(player);
+				final Player plyr = World.getInstance().findPlayer(player);
 				String text;
 				if (plyr != null)
 				{
@@ -223,7 +223,7 @@ public class AdminMenu implements IAdminCommandHandler
 		String filename = "main_menu.htm";
 		if (player != null)
 		{
-			final Player plyr = World.getInstance().getPlayer(player);
+			final Player plyr = World.getInstance().findPlayer(player);
 			if (plyr != null)
 			{
 				target = plyr;

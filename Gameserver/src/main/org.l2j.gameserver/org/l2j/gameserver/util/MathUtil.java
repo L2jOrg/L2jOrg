@@ -1,25 +1,17 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.util;
+
+import org.l2j.gameserver.model.interfaces.ILocational;
 
 /**
  * @author UnAfraid
+ * @author joeAlisson
  */
 public class MathUtil {
+
+    private MathUtil() {
+
+    }
+
     public static byte add(byte oldValue, byte value) {
         return (byte) (oldValue + value);
     }
@@ -76,5 +68,14 @@ public class MathUtil {
      */
     public static int limit(int numToTest, int min, int max) {
         return (numToTest > max) ? max : ((numToTest < min) ? min : numToTest);
+    }
+
+
+    public static double calculateDistance3DBetween(ILocational object, ILocational other) {
+        return calculateDistance3D(object.getX(), object.getY(), object.getZ(), other.getX(), other.getY(), other.getZ());
+    }
+
+    public static double calculateDistance3D(int x1, int y1, int z1, int x2, int y2, int z2) {
+        return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2) + Math.pow(z1 - z2, 2));
     }
 }

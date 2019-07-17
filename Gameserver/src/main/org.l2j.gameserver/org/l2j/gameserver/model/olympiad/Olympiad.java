@@ -292,7 +292,7 @@ public class Olympiad extends ListenersContainer {
             final int points = getOlympiadTradePoint(noblesId);
             if (points > 0)
             {
-                final Player player = World.getInstance().getPlayer(noblesId);
+                final Player player = World.getInstance().findPlayer(noblesId);
                 if (player != null)
                 {
                     player.getVariables().set(UNCLAIMED_OLYMPIAD_POINTS_VAR, points);

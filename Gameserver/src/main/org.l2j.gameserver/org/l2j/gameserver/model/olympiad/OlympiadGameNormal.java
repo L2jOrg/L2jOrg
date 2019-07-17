@@ -64,7 +64,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
                 }
             }
 
-            playerOne = World.getInstance().getPlayer(playerOneObjectId);
+            playerOne = World.getInstance().findPlayer(playerOneObjectId);
             if ((playerOne == null) || !playerOne.isOnline()) {
                 continue;
             }
@@ -79,7 +79,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
                 }
             }
 
-            playerTwo = World.getInstance().getPlayer(playerTwoObjectId);
+            playerTwo = World.getInstance().findPlayer(playerTwoObjectId);
             if ((playerTwo == null) || !playerTwo.isOnline()) {
                 set.add(playerOneObjectId);
                 continue;

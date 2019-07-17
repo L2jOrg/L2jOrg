@@ -87,7 +87,7 @@ public final class RequestFriendDel extends ClientPacket {
             activeChar.getFriendList().remove(Integer.valueOf(id));
             activeChar.sendPacket(new FriendRemove(_name, 1));
 
-            final Player player = World.getInstance().getPlayer(_name);
+            final Player player = World.getInstance().findPlayer(_name);
             if (player != null) {
                 player.getFriendList().remove(Integer.valueOf(activeChar.getObjectId()));
                 player.sendPacket(new FriendRemove(activeChar.getName(), 1));

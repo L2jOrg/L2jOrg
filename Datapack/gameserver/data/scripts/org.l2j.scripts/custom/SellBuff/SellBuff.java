@@ -337,7 +337,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						index = Integer.parseInt(st.nextToken());
 					}
 					
-					final Player seller = World.getInstance().getPlayer(objId);
+					final Player seller = World.getInstance().findPlayer(objId);
 					if (seller != null)
 					{
 						if (!seller.isSellingBuffs() || !activeChar.isInsideRadius3D(seller, Npc.INTERACTION_DISTANCE))
@@ -379,7 +379,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						return false;
 					}
 					
-					final Player seller = World.getInstance().getPlayer(objId);
+					final Player seller = World.getInstance().findPlayer(objId);
 					if (seller == null)
 					{
 						return false;

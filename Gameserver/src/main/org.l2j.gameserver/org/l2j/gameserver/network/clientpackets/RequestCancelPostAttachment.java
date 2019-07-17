@@ -154,7 +154,7 @@ public final class RequestCancelPostAttachment extends ClientPacket {
             activeChar.sendItemList();
         }
 
-        final Player receiver = World.getInstance().getPlayer(msg.getReceiverId());
+        final Player receiver = World.getInstance().findPlayer(msg.getReceiverId());
         if (receiver != null) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANCELED_THE_SENT_MAIL);
             sm.addString(activeChar.getName());

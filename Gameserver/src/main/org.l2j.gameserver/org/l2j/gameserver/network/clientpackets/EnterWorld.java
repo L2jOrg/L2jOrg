@@ -507,14 +507,14 @@ public class EnterWorld extends ClientPacket {
 
     private void notifySponsorOrApprentice(Player activeChar) {
         if (activeChar.getSponsor() != 0) {
-            final Player sponsor = World.getInstance().getPlayer(activeChar.getSponsor());
+            final Player sponsor = World.getInstance().findPlayer(activeChar.getSponsor());
             if (sponsor != null) {
                 final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_APPRENTICE_S1_HAS_LOGGED_IN);
                 msg.addString(activeChar.getName());
                 sponsor.sendPacket(msg);
             }
         } else if (activeChar.getApprentice() != 0) {
-            final Player apprentice = World.getInstance().getPlayer(activeChar.getApprentice());
+            final Player apprentice = World.getInstance().findPlayer(activeChar.getApprentice());
             if (apprentice != null) {
                 final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SPONSOR_C1_HAS_LOGGED_IN);
                 msg.addString(activeChar.getName());

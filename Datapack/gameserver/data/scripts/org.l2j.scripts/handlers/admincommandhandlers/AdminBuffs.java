@@ -106,7 +106,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			if (st.hasMoreTokens())
 			{
 				final String playername = st.nextToken();
-				final Player player = World.getInstance().getPlayer(playername);
+				final Player player = World.getInstance().findPlayer(playername);
 				if (player != null)
 				{
 					int page = 0;
@@ -217,7 +217,7 @@ public class AdminBuffs implements IAdminCommandHandler
 				
 				try
 				{
-					player = World.getInstance().getPlayer(playername);
+					player = World.getInstance().findPlayer(playername);
 				}
 				catch (Exception e)
 				{

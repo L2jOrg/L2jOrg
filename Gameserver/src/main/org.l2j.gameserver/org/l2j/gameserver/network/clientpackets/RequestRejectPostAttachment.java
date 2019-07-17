@@ -62,7 +62,7 @@ public final class RequestRejectPostAttachment extends ClientPacket {
         client.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_RETURNED);
         client.sendPacket(new ExChangePostState(true, _msgId, Message.REJECTED));
 
-        final Player sender = World.getInstance().getPlayer(msg.getSenderId());
+        final Player sender = World.getInstance().findPlayer(msg.getSenderId());
         if (sender != null) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_RETURNED_THE_MAIL);
             sm.addString(activeChar.getName());

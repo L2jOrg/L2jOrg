@@ -179,7 +179,7 @@ public final class RequestPostAttachment extends ClientPacket {
         msg.removeAttachments();
 
         SystemMessage sm;
-        final Player sender = World.getInstance().getPlayer(msg.getSenderId());
+        final Player sender = World.getInstance().findPlayer(msg.getSenderId());
         if (adena > 0) {
             if (sender != null) {
                 sender.addAdena("PayMail", adena, activeChar, false);

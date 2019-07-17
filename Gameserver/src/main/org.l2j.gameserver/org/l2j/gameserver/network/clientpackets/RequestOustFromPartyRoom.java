@@ -27,7 +27,7 @@ public final class RequestOustFromPartyRoom extends ClientPacket {
             return;
         }
 
-        final Player member = World.getInstance().getPlayer(_charObjId);
+        final Player member = World.getInstance().findPlayer(_charObjId);
         if (member == null) {
             return;
         }

@@ -36,7 +36,7 @@ public abstract class AbstractAI implements Ctrl {
     /**
      * Current long-term intention
      */
-    protected CtrlIntention _intention = AI_INTENTION_IDLE;
+    protected CtrlIntention intention = AI_INTENTION_IDLE;
     /**
      * Current long-term intention parameter
      */
@@ -102,7 +102,7 @@ public abstract class AbstractAI implements Ctrl {
      */
     @Override
     public CtrlIntention getIntention() {
-        return _intention;
+        return intention;
     }
 
     /**
@@ -127,7 +127,7 @@ public abstract class AbstractAI implements Ctrl {
      * @param args      The first parameter of the Intention
      */
     synchronized void changeIntention(CtrlIntention intention, Object... args) {
-        _intention = intention;
+        this.intention = intention;
         _intentionArgs = args;
     }
 
@@ -568,7 +568,7 @@ public abstract class AbstractAI implements Ctrl {
         _actor.broadcastPacket(msg);
 
         // Init AI
-        _intention = AI_INTENTION_IDLE;
+        intention = AI_INTENTION_IDLE;
         _target = null;
 
         // Cancel the follow task if necessary
@@ -596,7 +596,7 @@ public abstract class AbstractAI implements Ctrl {
     }
 
     public boolean isFollowing() {
-        return (_target != null) && _target.isCharacter() && (_intention == AI_INTENTION_FOLLOW);
+        return (_target != null) && _target.isCharacter() && (intention == AI_INTENTION_FOLLOW);
     }
 
     /**

@@ -86,7 +86,7 @@ public class BlockList {
         sm.addString(charName);
         listOwner.sendPacket(sm);
 
-        final Player player = World.getInstance().getPlayer(targetId);
+        final Player player = World.getInstance().findPlayer(targetId);
 
         if (player != null) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
@@ -135,7 +135,7 @@ public class BlockList {
      * @return true if blocked
      */
     public static boolean isInBlockList(int ownerId, int targetId) {
-        final Player player = World.getInstance().getPlayer(ownerId);
+        final Player player = World.getInstance().findPlayer(ownerId);
         if (player != null) {
             return isBlocked(player, targetId);
         }

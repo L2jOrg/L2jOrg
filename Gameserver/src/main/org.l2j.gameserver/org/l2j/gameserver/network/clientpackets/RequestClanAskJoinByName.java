@@ -24,7 +24,7 @@ public class RequestClanAskJoinByName extends ClientPacket {
             return;
         }
 
-        final Player invitedPlayer = World.getInstance().getPlayer(_playerName);
+        final Player invitedPlayer = World.getInstance().findPlayer(_playerName);
         if (!activeChar.getClan().checkClanJoinCondition(activeChar, invitedPlayer, _pledgeType)) {
             return;
         }

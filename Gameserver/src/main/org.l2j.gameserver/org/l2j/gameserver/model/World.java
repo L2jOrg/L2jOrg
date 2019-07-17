@@ -3,10 +3,9 @@ package org.l2j.gameserver.model;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.CommonUtil;
-import org.l2j.commons.util.Util;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlEvent;
-import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
@@ -17,11 +16,11 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcCreatureSee;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.serverpackets.DeleteObject;
+import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -30,6 +29,7 @@ import java.util.function.Predicate;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.isAnyNull;
 import static org.l2j.gameserver.util.GameUtils.*;
 
 public final class World {
@@ -201,20 +201,20 @@ public final class World {
     }
 
     /**
-     * <B>If you have access to player objectId use {@link #getPlayer(int playerObjId)}</B>
+     * <B>If you have access to player objectId use {@link #findPlayer(int playerObjId)}</B>
      *
      * @param name Name of the player to get Instance
      * @return the player instance corresponding to the given name.
      */
-    public Player getPlayer(String name) {
-        return getPlayer(PlayerNameTable.getInstance().getIdByName(name));
+    public Player findPlayer(String name) {
+        return findPlayer(PlayerNameTable.getInstance().getIdByName(name));
     }
 
     /**
      * @param objectId of the player to get Instance
      * @return the player instance corresponding to the given object ID.
      */
-    public Player getPlayer(int objectId) {
+    public Player findPlayer(int objectId) {
         return players.get(objectId);
     }
 
@@ -222,7 +222,7 @@ public final class World {
      * @param ownerId ID of the owner
      * @return the pet instance from the given ownerId.
      */
-    public Pet getPet(int ownerId) {
+    public Pet findPet(int ownerId) {
         return pets.get(ownerId);
     }
 
@@ -299,9 +299,7 @@ public final class World {
                 ai.describeStateToPlayer((Player) object);
 
                 if (isMonster(wo)) {
-                    if (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE) {
-                        ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-                    }
+                    ai.setActiveIfIdle();
                 }
             }
         }
@@ -323,39 +321,42 @@ public final class World {
      * @param oldRegion WorldRegion in which the object was before removing
      */
     public void removeVisibleObject(WorldObject object, WorldRegion oldRegion) {
-        if (Util.isAnyNull(object, oldRegion)) {
+        if (isAnyNull(object, oldRegion)) {
             return;
         }
 
         oldRegion.removeVisibleObject(object);
-
-        // Go through all surrounding WorldRegion L2Characters
-        oldRegion.forEachSurroundingRegion(w ->
-        {
-            forgetObjectsInRegion(object, w);
-            return true;
-        });
+        oldRegion.forEachObjectInSurround(Creature.class, other -> { forgetObject(object, other); forgetObject(other, object); }, other -> !object.equals(other));
     }
 
-    void switchRegion(WorldObject object, WorldRegion newRegion) {
-        final WorldRegion oldRegion = object.getWorldRegion();
+    void switchRegionIfNeed(WorldObject object) {
+        var newRegion = getRegion(object);
+        WorldRegion oldRegion;
 
-        if (isNull(oldRegion) || oldRegion.equals(newRegion)) {
-            return;
+        if (nonNull(newRegion) && !newRegion.equals(oldRegion = object.getWorldRegion())) {
+            if (nonNull(oldRegion)) {
+                oldRegion.removeVisibleObject(object);
+                switchRegion(object, oldRegion, newRegion);
+            }
+            newRegion.addVisibleObject(object);
+            object.setWorldRegion(newRegion);
         }
+    }
 
-        oldRegion.forEachSurroundingRegion(w ->
-        {
+    private void switchRegion(WorldObject object, WorldRegion oldRegion, WorldRegion newRegion) {
+
+        oldRegion.checkEachSurroundingRegion(w -> {
             if (!newRegion.isSurroundingRegion(w)) {
-                forgetObjectsInRegion(object, w);
+
+                w.forEachObject(Creature.class, other -> { forgetObject(other, object); forgetObject(object, other); }, other -> !object.equals(other));
             }
             return true;
         });
 
-        newRegion.forEachSurroundingRegion(w ->
+        newRegion.checkEachSurroundingRegion(w ->
         {
             if (!oldRegion.isSurroundingRegion(w)) {
-                for (WorldObject wo : w.getVisibleObjects().values()) {
+                for (WorldObject wo : w.getObjects().values()) {
                     if ((wo == object) || (wo.getInstanceWorld() != object.getInstanceWorld())) {
                         continue;
                     }
@@ -368,7 +369,7 @@ public final class World {
     }
 
     private void forgetObjectsInRegion(WorldObject object, WorldRegion w) {
-        for (WorldObject wo : w.getVisibleObjects().values()) {
+        for (WorldObject wo : w.getObjects().values()) {
             if (wo == object) {
                 continue;
             }
@@ -380,7 +381,7 @@ public final class World {
     }
 
     private void forgetObject(WorldObject object, WorldObject wo) {
-        if (object.isCharacter()) {
+        if (isCreature(object)) {
             final Creature objectCreature = (Creature) object;
             final CreatureAI ai = objectCreature.getAI();
             if (ai != null) {
@@ -404,7 +405,7 @@ public final class World {
         }
         WorldObject object = null;
         for(var region : currentRegion.getSurroundingRegions()) {
-            if( nonNull(object = region.getVisibleObjects().get(objectId)) ) {
+            if( nonNull(object = region.getObjects().get(objectId)) ) {
                 return object;
             }
         }
@@ -433,17 +434,13 @@ public final class World {
             return;
         }
 
-        final WorldRegion centerWorldRegion = getRegion(object);
-        if (isNull(centerWorldRegion)) {
+        final WorldRegion region = getRegion(object);
+        if (isNull(region)) {
             return;
         }
 
-        Arrays.stream(centerWorldRegion.getSurroundingRegions()).flatMap(worldRegion -> worldRegion.getVisibleObjects().values().stream()).forEach(visibleObject -> {
-            if (isNull(visibleObject) || visibleObject == object || !clazz.isInstance(visibleObject) || !visibleObject.getInstanceWorld().equals(object.getInstanceWorld())) {
-                return;
-            }
-            c.accept(clazz.cast(visibleObject));
-        });
+        region.forEachObjectInSurround(clazz, c, (visible) -> nonNull(visible) && !visible.equals(object) &&
+                visible.getInstanceId() == object.getInstanceId() && MathUtil.calculateDistance3DBetween(object, visible) < Config.ALT_PARTY_RANGE);
     }
 
     public <T extends WorldObject> List<T> getVisibleObjectsInRange(WorldObject object, Class<T> clazz, int range) {
@@ -474,7 +471,7 @@ public final class World {
         }
 
         for (WorldRegion region : centerWorldRegion.getSurroundingRegions()) {
-            for (WorldObject visibleObject : region.getVisibleObjects().values()) {
+            for (WorldObject visibleObject : region.getObjects().values()) {
                 if ((visibleObject == null) || (visibleObject == object) || !clazz.isInstance(visibleObject)) {
                     continue;
                 }
@@ -572,7 +569,6 @@ public final class World {
     public static World getInstance() {
         return Singleton.INSTANCE;
     }
-
 
     private static class Singleton {
         private static final World INSTANCE = new World();

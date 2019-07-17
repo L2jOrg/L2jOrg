@@ -28,7 +28,7 @@ public final class RequestGMCommand extends ClientPacket {
             return;
         }
 
-        final Player player = World.getInstance().getPlayer(_targetName);
+        final Player player = World.getInstance().findPlayer(_targetName);
 
         final Clan clan = ClanTable.getInstance().getClanByName(_targetName);
 

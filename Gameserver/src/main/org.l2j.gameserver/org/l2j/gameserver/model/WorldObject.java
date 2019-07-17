@@ -22,6 +22,8 @@ import org.l2j.gameserver.util.GameUtils;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static org.l2j.commons.util.Util.zeroIfNullOrElse;
+
 /**
  * Base class for all interactive objects.
  */
@@ -288,6 +290,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * Verify if object is instance of Playable.
      *
      * @return {@code true} if object is instance of Playable, {@code false} otherwise
+     *
      */
     public boolean isPlayable() {
         return false;
@@ -500,8 +503,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @return the instance ID
      */
     public int getInstanceId() {
-        final Instance instance = _instance;
-        return (instance != null) ? instance.getId() : 0;
+        return zeroIfNullOrElse(_instance, Instance::getId);
     }
 
     /**
@@ -571,15 +573,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
         _z = z;
 
         if (_isSpawned) {
-            final WorldRegion newRegion = World.getInstance().getRegion(this);
-            if ((newRegion != null) && (newRegion != _worldRegion)) {
-                if (_worldRegion != null) {
-                    _worldRegion.removeVisibleObject(this);
-                }
-                newRegion.addVisibleObject(this);
-                World.getInstance().switchRegion(this, newRegion);
-                setWorldRegion(newRegion);
-            }
+            World.getInstance().switchRegionIfNeed(this);
         }
     }
 

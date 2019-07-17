@@ -43,7 +43,7 @@ public class RequestPledgeWaitingApply extends ClientPacket {
         if (ClanEntryManager.getInstance().addPlayerApplicationToClan(_clanId, info)) {
             client.sendPacket(new ExPledgeRecruitApplyInfo(ClanEntryStatus.WAITING));
 
-            final Player clanLeader = World.getInstance().getPlayer(clan.getLeaderId());
+            final Player clanLeader = World.getInstance().findPlayer(clan.getLeaderId());
             if (clanLeader != null) {
                 clanLeader.sendPacket(ExPledgeWaitingListAlarm.STATIC_PACKET);
             }

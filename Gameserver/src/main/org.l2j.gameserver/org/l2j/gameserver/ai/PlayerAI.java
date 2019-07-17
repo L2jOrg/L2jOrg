@@ -49,13 +49,13 @@ public class PlayerAI extends PlayableAI {
         }
 
         // do nothing if next intention is same as current one.
-        if ((intention == _intention) && (globalArg0 == localArg0) && (globalArg1 == localArg1)) {
+        if ((intention == this.intention) && (globalArg0 == localArg0) && (globalArg1 == localArg1)) {
             super.changeIntention(intention, args);
             return;
         }
 
         // save current intention so it can be used after cast
-        saveNextIntention(_intention, globalArg0, globalArg1);
+        saveNextIntention(this.intention, globalArg0, globalArg1);
         super.changeIntention(intention, args);
     }
 

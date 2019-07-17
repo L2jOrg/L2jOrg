@@ -31,7 +31,7 @@ public final class RequestFriendInvite extends ClientPacket {
             return;
         }
 
-        final Player friend = World.getInstance().getPlayer(_name);
+        final Player friend = World.getInstance().findPlayer(_name);
 
         // Target is not found in the game.
         if ((friend == null) || !friend.isOnline() || friend.isInvisible()) {

@@ -38,7 +38,7 @@ public final class TradeDone extends ClientPacket {
         }
 
         if (_response == 1) {
-            if ((trade.getPartner() == null) || (World.getInstance().getPlayer(trade.getPartner().getObjectId()) == null)) {
+            if ((trade.getPartner() == null) || (World.getInstance().findPlayer(trade.getPartner().getObjectId()) == null)) {
                 // Trade partner not found, cancel trade
                 player.cancelActiveTrade();
                 player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);

@@ -78,7 +78,7 @@ public class Mentee {
     }
 
     public Player getPlayerInstance() {
-        return World.getInstance().getPlayer(_objectId);
+        return World.getInstance().findPlayer(_objectId);
     }
 
     public boolean isOnline() {

@@ -500,13 +500,13 @@ public class AttackableAI extends CreatureAI {
 
                     // Check if the WorldObject is inside the Faction Range of the actor
                     if (called.hasAI()) {
-                        if ((Math.abs(finalTarget.getZ() - called.getZ()) < 600) && npc.getAttackByList().stream().anyMatch(o -> o.get() == finalTarget) && ((called.getAI()._intention == CtrlIntention.AI_INTENTION_IDLE) || (called.getAI()._intention == CtrlIntention.AI_INTENTION_ACTIVE))) {
+                        if ((Math.abs(finalTarget.getZ() - called.getZ()) < 600) && npc.getAttackByList().stream().anyMatch(o -> o.get() == finalTarget) && ((called.getAI().intention == CtrlIntention.AI_INTENTION_IDLE) || (called.getAI().intention == CtrlIntention.AI_INTENTION_ACTIVE))) {
                             if (finalTarget.isPlayable()) {
                                 // By default, when a faction member calls for help, attack the caller's attacker.
                                 // Notify the AI with EVT_AGGRESSION
                                 called.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, finalTarget, 1);
                                 EventDispatcher.getInstance().notifyEventAsync(new OnAttackableFactionCall(called, getActiveChar(), finalTarget.getActingPlayer(), finalTarget.isSummon()), called);
-                            } else if (called.isAttackable() && (called.getAI()._intention != CtrlIntention.AI_INTENTION_ATTACK)) {
+                            } else if (called.isAttackable() && (called.getAI().intention != CtrlIntention.AI_INTENTION_ATTACK)) {
                                 ((Attackable) called).addDamageHate(finalTarget, 0, npc.getHating(finalTarget));
                                 called.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, finalTarget);
                             }
@@ -828,7 +828,7 @@ public class AttackableAI extends CreatureAI {
         } else {
             stream = World.getInstance().getVisibleObjectsInRange(npc, Creature.class, range, c -> checkSkillTarget(skill, c)).stream();
 
-            // Maybe add self to the list of targets since getVisibleObjects doesn't return yourself.
+            // Maybe add self to the list of targets since getObjects doesn't return yourself.
             if (checkSkillTarget(skill, npc)) {
                 stream = Stream.concat(stream, Stream.of(npc));
             }

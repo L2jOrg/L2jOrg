@@ -25,7 +25,7 @@ public class RequestMenteeAdd extends ClientPacket {
             return;
         }
 
-        final Player mentee = World.getInstance().getPlayer(_target);
+        final Player mentee = World.getInstance().findPlayer(_target);
         if (mentee == null) {
             return;
         }

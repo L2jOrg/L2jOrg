@@ -42,7 +42,7 @@ public class AdminKick implements IAdminCommandHandler
 			{
 				st.nextToken();
 				final String player = st.nextToken();
-				final Player plyr = World.getInstance().getPlayer(player);
+				final Player plyr = World.getInstance().findPlayer(player);
 				if (plyr != null)
 				{
 					Disconnection.of(plyr).defaultSequence(false);

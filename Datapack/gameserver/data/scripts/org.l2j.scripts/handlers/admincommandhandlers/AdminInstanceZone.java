@@ -48,7 +48,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 				final StringTokenizer st = new StringTokenizer(command, " ");
 				
 				st.nextToken();
-				final Player player = World.getInstance().getPlayer(st.nextToken());
+				final Player player = World.getInstance().findPlayer(st.nextToken());
 				final int instanceId = Integer.parseInt(st.nextToken());
 				final String name = InstanceManager.getInstance().getInstanceName(instanceId);
 				InstanceManager.getInstance().deleteInstanceTime(player, instanceId);
@@ -76,7 +76,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 				
 				try
 				{
-					player = World.getInstance().getPlayer(playername);
+					player = World.getInstance().findPlayer(playername);
 				}
 				catch (Exception e)
 				{

@@ -69,7 +69,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 		
 		if (cmdParams.length > 1)
 		{
-			target = World.getInstance().getPlayer(cmdParams[1]);
+			target = World.getInstance().findPlayer(cmdParams[1]);
 			if (cmdParams.length > 2)
 			{
 				if (cmdParams[2].equals("0"))

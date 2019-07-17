@@ -340,7 +340,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				{
 					while (st.hasMoreElements())
 					{
-						final Player player = World.getInstance().getPlayer(st.nextToken());
+						final Player player = World.getInstance().findPlayer(st.nextToken());
 						if (player != null)
 						{
 							Event.removeAndResetPlayer(player);

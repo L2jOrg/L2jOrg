@@ -43,7 +43,7 @@ public final class RequestJoinPledge extends ClientPacket {
             return;
         }
 
-        final Player target = World.getInstance().getPlayer(_target);
+        final Player target = World.getInstance().findPlayer(_target);
         if (target == null) {
             activeChar.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
             return;

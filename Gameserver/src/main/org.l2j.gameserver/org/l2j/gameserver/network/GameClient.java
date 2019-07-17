@@ -393,7 +393,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
             return null;
         }
 
-        Player player = World.getInstance().getPlayer(objectId);
+        Player player = World.getInstance().findPlayer(objectId);
         if (player != null) {
             // exploit prevention, should not happens in normal way
             if (player.isOnlineInt() == 1) {

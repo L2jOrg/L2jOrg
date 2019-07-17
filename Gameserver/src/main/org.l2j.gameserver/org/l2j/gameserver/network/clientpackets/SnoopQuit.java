@@ -16,7 +16,7 @@ public final class SnoopQuit extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = World.getInstance().getPlayer(_snoopID);
+        final Player player = World.getInstance().findPlayer(_snoopID);
         if (player == null) {
             return;
         }

@@ -107,7 +107,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			final String[] data = command.split(" ");
 			if ((data.length > 1))
 			{
-				showCharacterInfo(activeChar, World.getInstance().getPlayer(data[1]));
+				showCharacterInfo(activeChar, World.getInstance().findPlayer(data[1]));
 			}
 			else if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 			{
@@ -563,7 +563,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				
 				final String playerName = st.nextToken();
 				Player player = null;
-				player = World.getInstance().getPlayer(playerName);
+				player = World.getInstance().findPlayer(playerName);
 				
 				if (player == null)
 				{
@@ -631,7 +631,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			Player pl = null;
 			if ((data.length > 1))
 			{
-				pl = World.getInstance().getPlayer(data[1]);
+				pl = World.getInstance().findPlayer(data[1]);
 			}
 			else
 			{
@@ -738,7 +738,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				final String val = command.substring(19);
 				final int objId = Integer.parseInt(val);
-				target = World.getInstance().getPet(objId);
+				target = World.getInstance().findPet(objId);
 			}
 			catch (Exception e)
 			{
@@ -761,7 +761,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(16);
-				target = World.getInstance().getPlayer(val);
+				target = World.getInstance().findPlayer(val);
 				if (target == null)
 				{
 					target = activeChar.getTarget();
@@ -1147,7 +1147,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		WorldObject target = null;
 		if (targetName != null)
 		{
-			target = World.getInstance().getPlayer(targetName);
+			target = World.getInstance().findPlayer(targetName);
 		}
 		else
 		{
@@ -1331,7 +1331,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	 */
 	private void findCharactersPerAccount(Player activeChar, String characterName) throws IllegalArgumentException
 	{
-		final Player player = World.getInstance().getPlayer(characterName);
+		final Player player = World.getInstance().findPlayer(characterName);
 		if (player == null)
 		{
 			throw new IllegalArgumentException("Player doesn't exist");

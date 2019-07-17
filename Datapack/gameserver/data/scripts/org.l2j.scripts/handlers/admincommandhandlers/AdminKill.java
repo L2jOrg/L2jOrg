@@ -53,7 +53,7 @@ public class AdminKill implements IAdminCommandHandler
 			if (st.hasMoreTokens())
 			{
 				final String firstParam = st.nextToken();
-				final Player plyr = World.getInstance().getPlayer(firstParam);
+				final Player plyr = World.getInstance().findPlayer(firstParam);
 				if (plyr != null)
 				{
 					if (st.hasMoreTokens())

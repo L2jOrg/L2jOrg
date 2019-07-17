@@ -32,7 +32,7 @@ public class RequestPledgeWaitingUserAccept extends ClientPacket {
         }
 
         if (_acceptRequest) {
-            final Player player = World.getInstance().getPlayer(_playerId);
+            final Player player = World.getInstance().findPlayer(_playerId);
             final Clan clan = activeChar.getClan();
             if ((player != null) && (player.getClan() == null) && (clan != null)) {
                 player.sendPacket(new JoinPledge(clan.getId()));

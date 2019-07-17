@@ -181,7 +181,7 @@ public class AdminClan implements IAdminCommandHandler
 			// From the HTML we receive player's object Id.
 			if (GameUtils.isDigit(val))
 			{
-				player = World.getInstance().getPlayer(Integer.parseInt(val));
+				player = World.getInstance().findPlayer(Integer.parseInt(val));
 				if (player == null)
 				{
 					activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
@@ -190,7 +190,7 @@ public class AdminClan implements IAdminCommandHandler
 			}
 			else
 			{
-				player = World.getInstance().getPlayer(val);
+				player = World.getInstance().findPlayer(val);
 				if (player == null)
 				{
 					activeChar.sendPacket(SystemMessageId.INCORRECT_NAME_PLEASE_TRY_AGAIN);

@@ -46,7 +46,7 @@ public final class RequestJoinParty extends ClientPacket {
             return;
         }
 
-        final Player target = World.getInstance().getPlayer(_name);
+        final Player target = World.getInstance().findPlayer(_name);
         if (target == null) {
             requestor.sendPacket(SystemMessageId.YOU_MUST_FIRST_SELECT_A_USER_TO_INVITE_TO_YOUR_PARTY);
             return;

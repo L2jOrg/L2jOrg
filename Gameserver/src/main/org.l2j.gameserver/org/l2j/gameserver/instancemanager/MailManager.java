@@ -161,7 +161,7 @@ public final class MailManager {
             LOGGER.warn(getClass().getSimpleName() + ": Error saving message:", e);
         }
 
-        final Player receiver = World.getInstance().getPlayer(msg.getReceiverId());
+        final Player receiver = World.getInstance().findPlayer(msg.getReceiverId());
         if (receiver != null) {
             receiver.sendPacket(ExNoticePostArrived.valueOf(true));
             receiver.sendPacket(new ExUnReadMailCount(receiver));

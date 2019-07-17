@@ -39,7 +39,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case CHARACTER:
 			{
 				final int objectId = Integer.parseInt(String.valueOf(task.getKey()));
-				final Player player = World.getInstance().getPlayer(objectId);
+				final Player player = World.getInstance().findPlayer(objectId);
 				if (player != null)
 				{
 					applyToPlayer(task, player);
@@ -83,7 +83,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case CHARACTER:
 			{
 				final int objectId = Integer.parseInt(String.valueOf(task.getKey()));
-				final Player player = World.getInstance().getPlayer(objectId);
+				final Player player = World.getInstance().findPlayer(objectId);
 				if (player != null)
 				{
 					removeFromPlayer(player);

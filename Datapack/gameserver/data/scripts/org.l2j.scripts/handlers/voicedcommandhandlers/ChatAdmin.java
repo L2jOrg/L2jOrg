@@ -76,7 +76,7 @@ public class ChatAdmin implements IVoicedCommandHandler
 					final int objId = PlayerNameTable.getInstance().getIdByName(name);
 					if (objId > 0)
 					{
-						final Player player = World.getInstance().getPlayer(objId);
+						final Player player = World.getInstance().findPlayer(objId);
 						if ((player == null) || !player.isOnline())
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Player not online!");
@@ -139,7 +139,7 @@ public class ChatAdmin implements IVoicedCommandHandler
 					final int objId = PlayerNameTable.getInstance().getIdByName(name);
 					if (objId > 0)
 					{
-						final Player player = World.getInstance().getPlayer(objId);
+						final Player player = World.getInstance().findPlayer(objId);
 						if ((player == null) || !player.isOnline())
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Player not online!");
