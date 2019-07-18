@@ -40,6 +40,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.Broadcast;
+import org.l2j.gameserver.util.MathUtil;
 
 import java.util.List;
 
@@ -797,7 +798,7 @@ public class Npc extends Creature {
                 final Party party = killerPlayer.getParty();
                 if (party != null) {
                     for (Player member : party.getMembers()) {
-                        if ((member != killerPlayer) && (member.calculateDistance3D(getX(), getY(), getZ()) <= Config.ALT_PARTY_RANGE)) {
+                        if ((member != killerPlayer) && MathUtil.isInsideRadius3D(member, getX(), getY(), getZ(), Config.ALT_PARTY_RANGE)) {
                             new MpRewardTask(member, this);
                             for (Summon summon : member.getServitors().values()) {
                                 new MpRewardTask(summon, this);

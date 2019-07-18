@@ -33,27 +33,27 @@ public class BoatAI extends VehicleAI {
 
     @Override
     protected void moveTo(int x, int y, int z) {
-        if (!_actor.isMovementDisabled()) {
+        if (!actor.isMovementDisabled()) {
             if (!_clientMoving) {
-                _actor.broadcastPacket(new VehicleStarted(getActor(), 1));
+                actor.broadcastPacket(new VehicleStarted(getActor(), 1));
             }
 
             _clientMoving = true;
-            _actor.moveToLocation(x, y, z, 0);
-            _actor.broadcastPacket(new VehicleDeparture(getActor()));
+            actor.moveToLocation(x, y, z, 0);
+            actor.broadcastPacket(new VehicleDeparture(getActor()));
         }
     }
 
     @Override
     public void clientStopMoving(Location loc) {
-        if (_actor.isMoving()) {
-            _actor.stopMove(loc);
+        if (actor.isMoving()) {
+            actor.stopMove(loc);
         }
 
         if (_clientMoving || (loc != null)) {
             _clientMoving = false;
-            _actor.broadcastPacket(new VehicleStarted(getActor(), 0));
-            _actor.broadcastPacket(new VehicleInfo(getActor()));
+            actor.broadcastPacket(new VehicleStarted(getActor(), 0));
+            actor.broadcastPacket(new VehicleInfo(getActor()));
         }
     }
 
@@ -66,6 +66,6 @@ public class BoatAI extends VehicleAI {
 
     @Override
     public Boat getActor() {
-        return (Boat) _actor;
+        return (Boat) actor;
     }
 }

@@ -1358,13 +1358,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         EventDispatcher.getInstance().notifyEvent(new OnCreatureDeath(killer, this), this);
         EventDispatcher.getInstance().notifyEvent(new OnCreatureKilled(killer, this), killer);
 
-        abortAttack();
-        abortCast();
+        forgetTarget();
 
         calculateRewards(killer);
 
         // Set target to null and cancel Attack or Cast
-        setTarget(null);
 
         // Stop movement
         stopMove(null);
@@ -1394,6 +1392,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             getSkillChannelized().abortChannelization();
         }
         return true;
+    }
+
+    public void forgetTarget() {
+        abortAttack();
+        abortCast();
+        setTarget(null);
     }
 
     @Override
@@ -2968,6 +2972,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param radius the radius around the target
      * @return true if the Creature is inside the radius.
      */
+    @Deprecated
     public final boolean isInsideRadius2D(ILocational loc, int radius) {
         return isInsideRadius2D(loc.getX(), loc.getY(), loc.getZ(), radius);
     }
@@ -2981,6 +2986,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param radius the radius around the target
      * @return true if the Creature is inside the radius.
      */
+    @Deprecated
     public final boolean isInsideRadius2D(int x, int y, int z, int radius) {
         return calculateDistanceSq2D(x, y, z) < (radius * radius);
     }
@@ -2992,6 +2998,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param radius the radius around the target
      * @return true if the Creature is inside the radius.
      */
+    @Deprecated
     public final boolean isInsideRadius3D(ILocational loc, int radius) {
         return isInsideRadius3D(loc.getX(), loc.getY(), loc.getZ(), radius);
     }
@@ -3004,7 +3011,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param z      Z position of the target
      * @param radius the radius around the target
      * @return true if the Creature is inside the radius.
+     *
      */
+    @Deprecated
     public final boolean isInsideRadius3D(int x, int y, int z, int radius) {
         return calculateDistanceSq3D(x, y, z) < (radius * radius);
     }

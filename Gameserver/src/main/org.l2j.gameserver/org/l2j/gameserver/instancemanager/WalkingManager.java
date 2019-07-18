@@ -16,6 +16,7 @@ import org.l2j.gameserver.model.holders.NpcRoutesHolder;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -30,6 +31,7 @@ import java.util.List;
 import java.util.Map;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 
 /**
@@ -230,7 +232,7 @@ public final class WalkingManager extends GameXmlReader {
                         node = walk.getCurrentNode();
                     }
 
-                    if (!npc.isInsideRadius3D(node, 3000)) {
+                    if (!MathUtil.isInsideRadius3D(npc, node, 3000)) {
                         LOGGER.warn("Route '" + routeName + "': NPC (id=" + npc.getId() + ", x=" + npc.getX() + ", y=" + npc.getY() + ", z=" + npc.getZ() + ") is too far from starting point (node x=" + node.getX() + ", y=" + node.getY() + ", z=" + node.getZ() + ", range=" + npc.calculateDistance3D(node) + "). Teleporting to proper location.");
                         npc.teleToLocation(node);
                     }
@@ -241,11 +243,11 @@ public final class WalkingManager extends GameXmlReader {
                         npc.setWalking();
                     }
                     npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, node);
-                    walk.setWalkCheckTask(ThreadPoolManager.getInstance().scheduleAtFixedRate(new StartMovingTask(npc, routeName), 60000, 60000)); // start walk check task, for resuming walk after fight
+                    walk.setWalkCheckTask(ThreadPoolManager.scheduleAtFixedRate(new StartMovingTask(npc, routeName), 60000, 60000)); // start walk check task, for resuming walk after fight
 
                     _activeRoutes.put(npc.getObjectId(), walk); // register route
                 } else {
-                    ThreadPoolManager.getInstance().schedule(new StartMovingTask(npc, routeName), 60000);
+                    ThreadPoolManager.schedule(new StartMovingTask(npc, routeName), 60000);
                 }
             } else
             // walk was stopped due to some reason (arrived to node, script action, fight or something else), resume it
@@ -350,7 +352,7 @@ public final class WalkingManager extends GameXmlReader {
             // Opposite should not happen... but happens sometime
             if ((walk.getCurrentNodeId() >= 0) && (walk.getCurrentNodeId() < walk.getRoute().getNodesCount())) {
                 final NpcWalkerNode node = walk.getRoute().getNodeList().get(walk.getCurrentNodeId());
-                if (npc.isInsideRadius2D(node, 10)) {
+                if (isInsideRadius2D(npc, node, 10)) {
                     walk.calculateNextNode(npc);
                     walk.setBlocked(true); // prevents to be ran from walk check task, if there is delay in this node.
 
@@ -360,7 +362,7 @@ public final class WalkingManager extends GameXmlReader {
                         npc.broadcastSay(ChatType.NPC_GENERAL, node.getChatText());
                     }
 
-                    ThreadPoolManager.getInstance().schedule(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000));
+                    ThreadPoolManager.schedule(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000));
                 }
             }
         }

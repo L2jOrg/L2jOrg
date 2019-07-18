@@ -29,15 +29,15 @@ public class ShuttleAI extends VehicleAI {
 
     @Override
     public void moveTo(int x, int y, int z) {
-        if (!_actor.isMovementDisabled()) {
+        if (!actor.isMovementDisabled()) {
             _clientMoving = true;
-            _actor.moveToLocation(x, y, z, 0);
-            _actor.broadcastPacket(new ExShuttleMove(getActor(), x, y, z));
+            actor.moveToLocation(x, y, z, 0);
+            actor.broadcastPacket(new ExShuttleMove(getActor(), x, y, z));
         }
     }
 
     @Override
     public Shuttle getActor() {
-        return (Shuttle) _actor;
+        return (Shuttle) actor;
     }
 }

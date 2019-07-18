@@ -3,7 +3,6 @@ package org.l2j.gameserver.model;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.CommonUtil;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
@@ -15,7 +14,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcCreatureSee;
 import org.l2j.gameserver.network.Disconnection;
-import org.l2j.gameserver.network.serverpackets.DeleteObject;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,12 +22,14 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isAnyNull;
 import static org.l2j.gameserver.util.GameUtils.*;
 
@@ -110,7 +111,7 @@ public final class World {
     }
 
     private List<WorldRegion> initSurroundingRegions(int x, int y) {
-        List<WorldRegion> surroundingRegions = new ArrayList<>();
+        List<WorldRegion> surroundingRegions = new ArrayList<>(9);
 
         for (int sx = x - 1; sx <= (x + 1); sx++) {
             for (int sy = y - 1; sy <= (y + 1); sy++) {
@@ -326,7 +327,7 @@ public final class World {
         }
 
         oldRegion.removeVisibleObject(object);
-        oldRegion.forEachObjectInSurround(Creature.class, other -> { forgetObject(object, other); forgetObject(other, object); }, other -> !object.equals(other));
+        oldRegion.forEachObjectInSurrounding(Creature.class, other ->  forgetEachOther(object, other), other -> !object.equals(other));
     }
 
     void switchRegionIfNeed(WorldObject object) {
@@ -336,8 +337,8 @@ public final class World {
         if (nonNull(newRegion) && !newRegion.equals(oldRegion = object.getWorldRegion())) {
             if (nonNull(oldRegion)) {
                 oldRegion.removeVisibleObject(object);
-                switchRegion(object, oldRegion, newRegion);
             }
+            switchRegion(object, oldRegion, newRegion);
             newRegion.addVisibleObject(object);
             object.setWorldRegion(newRegion);
         }
@@ -345,102 +346,66 @@ public final class World {
 
     private void switchRegion(WorldObject object, WorldRegion oldRegion, WorldRegion newRegion) {
 
-        oldRegion.checkEachSurroundingRegion(w -> {
-            if (!newRegion.isSurroundingRegion(w)) {
-
-                w.forEachObject(Creature.class, other -> { forgetObject(other, object); forgetObject(object, other); }, other -> !object.equals(other));
-            }
-            return true;
-        });
-
-        newRegion.checkEachSurroundingRegion(w ->
-        {
-            if (!oldRegion.isSurroundingRegion(w)) {
-                for (WorldObject wo : w.getObjects().values()) {
-                    if ((wo == object) || (wo.getInstanceWorld() != object.getInstanceWorld())) {
-                        continue;
-                    }
-
-                    beAwereOfEachOther(object, wo);
+        if(nonNull(oldRegion)) {
+            oldRegion.forEachSurroundingRegion(w -> {
+                if (!newRegion.isSurroundingRegion(w)) {
+                    w.forEachCreature(other -> this.forgetEachOther(object, other), other -> !object.equals(other));
                 }
+            });
+        }
+
+        newRegion.forEachSurroundingRegion(w -> {
+            if (!w.isSurroundingRegion(oldRegion)) {
+                w.forEachObject(WorldObject.class, other -> beAwereOfEachOther(object, other), other -> !object.equals(other) && Objects.equals(other.getInstanceWorld(), object.getInstanceWorld()));
             }
-            return true;
         });
     }
 
-    private void forgetObjectsInRegion(WorldObject object, WorldRegion w) {
-        for (WorldObject wo : w.getObjects().values()) {
-            if (wo == object) {
-                continue;
-            }
-
-            forgetObject(object, wo);
-
-            forgetObject(wo, object);
-        }
+    private void forgetEachOther(WorldObject object, WorldObject other) {
+        forgetObject(object, other);
+        forgetObject(other, object);
     }
 
     private void forgetObject(WorldObject object, WorldObject wo) {
         if (isCreature(object)) {
             final Creature objectCreature = (Creature) object;
             final CreatureAI ai = objectCreature.getAI();
-            if (ai != null) {
+            if (nonNull(ai)) {
                 ai.notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, wo);
-            }
-
-            if (objectCreature.getTarget() == wo) {
-                objectCreature.setTarget(null);
-            }
-
-            if (object.isPlayer()) {
-                object.sendPacket(new DeleteObject(wo));
             }
         }
     }
 
     public WorldObject getVisibleObject(WorldObject reference, int objectId) {
         var currentRegion = getRegion(reference);
+
         if(isNull(currentRegion)) {
             return null;
         }
-        WorldObject object = null;
-        for(var region : currentRegion.getSurroundingRegions()) {
-            if( nonNull(object = region.getObjects().get(objectId)) ) {
-                return object;
-            }
+
+        return currentRegion.getObjectInSurrounding(reference, objectId, getSettings(CharacterSettings.class).partyRange());
+    }
+
+    public boolean hasVisiblePlayer(WorldObject object) {
+        var region = getRegion(object);
+
+        if(isNull(region)) {
+            return false;
         }
-        return object;
+
+        return region.hasObjectInSurrounding(Player.class, isVisible(object, getSettings(CharacterSettings.class).partyRange()));
     }
 
-    public <T extends WorldObject> List<T> getVisibleObjects(WorldObject object, Class<T> clazz) {
-        final List<T> result = new ArrayList<>();
-        forEachVisibleObject(object, clazz, result::add);
-        return result;
+    public <T extends WorldObject> void forEachVisibleObject(WorldObject object, Class<T> clazz, Consumer<T> action) {
+        forEachVisibleObjectInRange(object, clazz, getSettings(CharacterSettings.class).partyRange(), action);
     }
 
-    public <T extends WorldObject> List<T> getVisibleObjects(WorldObject object, Class<T> clazz, Predicate<T> predicate) {
-        final List<T> result = new ArrayList<>();
-        forEachVisibleObject(object, clazz, o ->
-        {
-            if (predicate.test(o)) {
-                result.add(o);
-            }
-        });
-        return result;
-    }
-
-    public <T extends WorldObject> void forEachVisibleObject(WorldObject object, Class<T> clazz, Consumer<T> c) {
-        if (isNull(object)) {
+    public <T extends WorldObject> void forEachVisibleObject(WorldObject object, Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
+        var region = getRegion(object);
+        if(isNull(region)) {
             return;
         }
-
-        final WorldRegion region = getRegion(object);
-        if (isNull(region)) {
-            return;
-        }
-
-        region.forEachObjectInSurround(clazz, c, (visible) -> nonNull(visible) && !visible.equals(object) &&
-                visible.getInstanceId() == object.getInstanceId() && MathUtil.calculateDistance3DBetween(object, visible) < Config.ALT_PARTY_RANGE);
+        region.forEachObjectInSurrounding(clazz, action, filter.and(isVisible(object, getSettings(CharacterSettings.class).partyRange())));
     }
 
     public <T extends WorldObject> List<T> getVisibleObjectsInRange(WorldObject object, Class<T> clazz, int range) {
@@ -460,31 +425,36 @@ public final class World {
         return result;
     }
 
-    public <T extends WorldObject> void forEachVisibleObjectInRange(WorldObject object, Class<T> clazz, int range, Consumer<T> c) {
-        if (object == null) {
+    public <T extends WorldObject> void forEachVisibleObjectInRange(WorldObject object, Class<T> clazz, int range, Consumer<T> action) {
+        forEachVisibleObjectInRange(object, clazz, range, action, o -> true);
+    }
+
+    public <T extends WorldObject> void forEachVisibleObjectInRange(WorldObject object, Class<T> clazz, int range, Consumer<T> action, Predicate<T> filter) {
+        var region = getRegion(object);
+        if (isNull(region)) {
             return;
         }
 
-        final WorldRegion centerWorldRegion = getRegion(object);
-        if (centerWorldRegion == null) {
+        region.forEachObjectInSurrounding(clazz, action, filter.and(isVisible(object, range)));
+    }
+
+    private static <T extends WorldObject> Predicate<T> isVisible(WorldObject object, int range) {
+        return visible -> nonNull(visible) && !visible.equals(object) &&
+                Objects.equals(visible.getInstanceWorld(),  object.getInstanceWorld()) && MathUtil.isInsideRadius3D(object, visible, range);
+    }
+
+
+    public <T extends WorldObject> void forAnyVisibleObject(WorldObject object, Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
+        forAnyVisibleObjectInRange(object, clazz, getSettings(CharacterSettings.class).partyRange(), action, filter);
+    }
+
+    public <T extends WorldObject> void forAnyVisibleObjectInRange(WorldObject object, Class<T> clazz, int range, Consumer<T> action, Predicate<T> filter) {
+        WorldRegion region = getRegion(object);
+
+        if(isNull(region)) {
             return;
         }
-
-        for (WorldRegion region : centerWorldRegion.getSurroundingRegions()) {
-            for (WorldObject visibleObject : region.getObjects().values()) {
-                if ((visibleObject == null) || (visibleObject == object) || !clazz.isInstance(visibleObject)) {
-                    continue;
-                }
-
-                if (visibleObject.getInstanceWorld() != object.getInstanceWorld()) {
-                    continue;
-                }
-
-                if (visibleObject.calculateDistance3D(object) <= range) {
-                    c.accept(clazz.cast(visibleObject));
-                }
-            }
-        }
+        region.forAnyObjectInSurrounding(clazz, action, filter.and(isVisible(object, range)));
     }
 
     /**
@@ -496,6 +466,9 @@ public final class World {
      * @return
      */
     public WorldRegion getRegion(WorldObject object) {
+        if(isNull(object)) {
+            return null;
+        }
         try {
             return regions[(object.getX() >> SHIFT_BY) + OFFSET_X][(object.getY() >> SHIFT_BY) + OFFSET_Y];
         } catch (ArrayIndexOutOfBoundsException e) // Precaution. Moved at invalid region?

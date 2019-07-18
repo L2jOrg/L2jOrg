@@ -39,7 +39,7 @@ import org.l2j.gameserver.util.GameUtils;
  * <li>Fly Course means the movement direction: imagine a compass above player's head, making north player's heading. So if fly course is 180, player will go backwards (good for blink, e.g.).</li>
  * </ul>
  * By the way, if flyCourse = 360 or 0, player will be moved in in front of him. <br>
- * If target is effector, put in XML self="1", this will make _actor = getEffector(). This, combined with target type, allows more complex actions like flying target's backwards or player's backwards.
+ * If target is effector, put in XML self="1", this will make actor = getEffector(). This, combined with target type, allows more complex actions like flying target's backwards or player's backwards.
  * @author DrHouse
  */
 public final class Blink extends AbstractEffect

@@ -7,6 +7,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExDuelAskStart;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
+
 /**
  * Format:(ch) Sd
  *
@@ -57,7 +59,7 @@ public final class RequestDuelStart extends ClientPacket {
             return;
         }
         // Players may not be too far apart
-        else if (!activeChar.isInsideRadius2D(targetChar, 250)) {
+        else if (!isInsideRadius2D(activeChar, targetChar, 250)) {
             final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_TOO_FAR_AWAY_TO_RECEIVE_A_DUEL_CHALLENGE);
             msg.addString(targetChar.getName());
             activeChar.sendPacket(msg);

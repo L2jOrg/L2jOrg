@@ -26,6 +26,7 @@ import org.l2j.gameserver.network.serverpackets.SiegeInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 import org.l2j.gameserver.util.Broadcast;
+import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -1159,7 +1160,7 @@ public class Siege implements Siegable {
                         continue;
                     }
 
-                    distance = ct.calculateDistanceSq3D(spawn);
+                    distance = MathUtil.calculateDistance3DBetween(ct, spawn);
 
                     if (distance < distanceClosest) {
                         closestCt = ct;

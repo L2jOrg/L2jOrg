@@ -44,32 +44,32 @@ public class DoppelgangerAI extends CreatureAI {
             setTarget(null);
             return;
         }
-        if (maybeMoveToPawn(target, _actor.getPhysicalAttackRange())) {
+        if (maybeMoveToPawn(target, actor.getPhysicalAttackRange())) {
             return;
         }
         clientStopMoving(null);
-        _actor.doAutoAttack(attackTarget);
+        actor.doAutoAttack(attackTarget);
     }
 
     private void thinkCast() {
-        if (_actor.isCastingNow(SkillCaster::isAnyNormalType)) {
+        if (actor.isCastingNow(SkillCaster::isAnyNormalType)) {
             return;
         }
 
-        final WorldObject target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
+        final WorldObject target = _skill.getTarget(actor, _forceUse, _dontMove, false);
 
         if (checkTargetLost(target)) {
             setTarget(null);
             return;
         }
         final boolean val = _startFollow;
-        if (maybeMoveToPawn(target, _actor.getMagicalAttackRange(_skill))) {
+        if (maybeMoveToPawn(target, actor.getMagicalAttackRange(_skill))) {
             return;
         }
         getActor().followSummoner(false);
         setIntention(CtrlIntention.AI_INTENTION_IDLE);
         _startFollow = val;
-        _actor.doCast(_skill, _item, _forceUse, _dontMove);
+        actor.doCast(_skill, _item, _forceUse, _dontMove);
     }
 
     private void thinkInteract() {
@@ -85,7 +85,7 @@ public class DoppelgangerAI extends CreatureAI {
 
     @Override
     protected void onEvtThink() {
-        if (_thinking || _actor.isCastingNow() || _actor.isAllSkillsDisabled()) {
+        if (_thinking || actor.isCastingNow() || actor.isAllSkillsDisabled()) {
             return;
         }
         _thinking = true;
@@ -149,7 +149,7 @@ public class DoppelgangerAI extends CreatureAI {
     @Override
     protected void moveToPawn(WorldObject pawn, int offset) {
         // Check if actor can move
-        if (!_actor.isMovementDisabled() && (_actor.getMoveSpeed() > 0)) {
+        if (!actor.isMovementDisabled() && (actor.getMoveSpeed() > 0)) {
             if (offset < 10) {
                 offset = 10;
             }
@@ -163,7 +163,7 @@ public class DoppelgangerAI extends CreatureAI {
                         return;
                     }
                     sendPacket = false;
-                } else if (_actor.isOnGeodataPath()) {
+                } else if (actor.isOnGeodataPath()) {
                     // minimum time to calculate new route is 2 seconds
                     if (GameTimeController.getInstance().getGameTicks() < (_moveToPawnTimeout + 10)) {
                         return;
@@ -183,18 +183,18 @@ public class DoppelgangerAI extends CreatureAI {
             }
 
             // Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeController
-            // _actor.moveToLocation(pawn.getX(), pawn.getY(), pawn.getZ(), offset);
+            // actor.moveToLocation(pawn.getX(), pawn.getY(), pawn.getZ(), offset);
             final Location loc = new Location(pawn.getX() + Rnd.get(-offset, offset), pawn.getY() + Rnd.get(-offset, offset), pawn.getZ());
-            _actor.moveToLocation(loc.getX(), loc.getY(), loc.getZ(), 0);
+            actor.moveToLocation(loc.getX(), loc.getY(), loc.getZ(), 0);
 
-            if (!_actor.isMoving()) {
+            if (!actor.isMoving()) {
                 clientActionFailed();
                 return;
             }
 
             // Doppelgangers always send MoveToLocation packet.
             if (sendPacket) {
-                _actor.broadcastPacket(new MoveToLocation(_actor));
+                actor.broadcastPacket(new MoveToLocation(actor));
             }
         } else {
             clientActionFailed();

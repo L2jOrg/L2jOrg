@@ -42,8 +42,10 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ExMagicAttackInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 
 import java.lang.ref.WeakReference;
 import java.util.*;
@@ -52,6 +54,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class Attackable extends Npc {
     private final AtomicReference<ItemHolder> _harvestItem = new AtomicReference<>();
@@ -329,8 +332,8 @@ public class Attackable extends Npc {
                     final CommandChannel command = party.getCommandChannel();
                     //@formatter:off
                     final List<Player> members = command != null ?
-                            command.getMembers().stream().filter(p -> p.calculateDistance3D(this) < Config.ALT_PARTY_RANGE).collect(Collectors.toList()) :
-                            player.getParty().getMembers().stream().filter(p -> p.calculateDistance3D(this) < Config.ALT_PARTY_RANGE).collect(Collectors.toList());
+                            command.getMembers().stream().filter(p -> MathUtil.isInsideRadius3D(p, this, getSettings(CharacterSettings.class).partyRange())).collect(Collectors.toList()) :
+                            player.getParty().getMembers().stream().filter(p -> MathUtil.isInsideRadius3D(p, this, getSettings(CharacterSettings.class).partyRange())).collect(Collectors.toList());
                     //@formatter:on
 
                     members.forEach(p ->

@@ -29,6 +29,8 @@ import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
+
 /**
  * RequestBypassToServer client packet implementation.
  *
@@ -138,7 +140,7 @@ public final class RequestBypassToServer extends ClientPacket {
                 if (Util.isNumeric(id)) {
                     final WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
 
-                    if ((object != null) && object.isNpc() && (endOfId > 0) && activeChar.isInsideRadius2D(object, Npc.INTERACTION_DISTANCE)) {
+                    if ((object != null) && object.isNpc() && (endOfId > 0) && isInsideRadius2D(activeChar, object, Npc.INTERACTION_DISTANCE)) {
                         ((Npc) object).onBypassFeedback(activeChar, _command.substring(endOfId + 1));
                     }
                 }

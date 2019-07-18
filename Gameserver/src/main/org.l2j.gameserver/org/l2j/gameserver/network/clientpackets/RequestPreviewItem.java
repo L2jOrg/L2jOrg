@@ -23,6 +23,8 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
+
 /**
  * * @author Gnacik
  */
@@ -80,9 +82,9 @@ public final class RequestPreviewItem extends ClientPacket {
 
         // Check current target of the player and the INTERACTION_DISTANCE
         final WorldObject target = activeChar.getTarget();
-        if (!activeChar.isGM() && ((target == null // No target (i.e. GM Shop)
-        ) || !((target instanceof Merchant)) // Target not a merchant
-                || !activeChar.isInsideRadius2D(target, Npc.INTERACTION_DISTANCE) // Distance is too far
+        // No target (i.e. GM Shop)
+        if (!activeChar.isGM() && (!((target instanceof Merchant)) // Target not a merchant
+                || !isInsideRadius2D(activeChar, target, Npc.INTERACTION_DISTANCE) // Distance is too far
         )) {
             return;
         }

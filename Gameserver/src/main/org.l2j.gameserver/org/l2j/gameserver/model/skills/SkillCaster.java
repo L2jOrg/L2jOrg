@@ -36,6 +36,7 @@ import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -539,7 +540,7 @@ public class SkillCaster implements Runnable {
 
             // Send MoveToPawn packet to trigger Blue Bubbles on target become Red, but don't do it while (double) casting, because that will screw up animation... some fucked up stuff, right?
             if (caster.isPlayer() && !caster.isCastingNow() && target.isCharacter()) {
-                caster.sendPacket(new MoveToPawn(caster, target, (int) caster.calculateDistance2D(target)));
+                caster.sendPacket(new MoveToPawn(caster, target, (int) MathUtil.calculateDistance2D(caster, target)));
                 caster.sendPacket(ActionFailed.STATIC_PACKET);
             }
         }

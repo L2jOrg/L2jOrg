@@ -13,6 +13,7 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.holders.SiegeGuardHolder;
 import org.l2j.gameserver.model.interfaces.IPositionable;
 import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -98,7 +99,7 @@ public final class SiegeGuardManager {
      * @return {@code true} if {@code PlayerInstance} is too much close to another ticket, {@code false} otherwise
      */
     public boolean isTooCloseToAnotherTicket(Player player) {
-        return _droppedTickets.stream().filter(g -> g.calculateDistance3D(player) < 25).findFirst().orElse(null) != null;
+        return _droppedTickets.stream().anyMatch(g -> MathUtil.isInsideRadius3D(g, player, 25));
     }
 
     /**

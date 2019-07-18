@@ -76,7 +76,7 @@ public class DoorAI extends CreatureAI {
 
     @Override
     protected void onEvtAttacked(Creature attacker) {
-        ThreadPoolManager.execute(new onEventAttackedDoorTask((Door) _actor, attacker));
+        ThreadPoolManager.execute(new onEventAttackedDoorTask((Door) actor, attacker));
     }
 
     @Override
@@ -132,7 +132,7 @@ public class DoorAI extends CreatureAI {
         public void run() {
             World.getInstance().forEachVisibleObject(_door, Defender.class, guard ->
             {
-                if (_actor.isInsideRadius3D(guard, guard.getTemplate().getClanHelpRange())) {
+                if (actor.isInsideRadius3D(guard, guard.getTemplate().getClanHelpRange())) {
                     guard.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _attacker, 15);
                 }
             });

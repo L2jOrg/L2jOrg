@@ -1,12 +1,13 @@
 package org.l2j.gameserver.ai;
 
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
+import org.l2j.gameserver.network.serverpackets.DeleteObject;
 
 public class PlayerAI extends PlayableAI {
     private boolean _thinking; // to prevent recursive thinking
@@ -120,8 +121,8 @@ public class PlayerAI extends PlayableAI {
         super.onEvtAttacked(attacker);
 
         // Summons in defending mode defend its master when attacked.
-        if (_actor.getActingPlayer().hasServitors()) {
-            _actor.getActingPlayer().getServitors().values().stream().filter(summon -> ((SummonAI) summon.getAI()).isDefending()).forEach(summon -> ((SummonAI) summon.getAI()).defendAttack(attacker));
+        if (actor.getActingPlayer().hasServitors()) {
+            actor.getActingPlayer().getServitors().values().stream().filter(summon -> ((SummonAI) summon.getAI()).isDefending()).forEach(summon -> ((SummonAI) summon.getAI()).defendAttack(attacker));
         }
     }
 
@@ -130,8 +131,8 @@ public class PlayerAI extends PlayableAI {
         super.onEvtEvaded(attacker);
 
         // Summons in defending mode defend its master when attacked.
-        if (_actor.getActingPlayer().hasServitors()) {
-            _actor.getActingPlayer().getServitors().values().stream().filter(summon -> ((SummonAI) summon.getAI()).isDefending()).forEach(summon -> ((SummonAI) summon.getAI()).defendAttack(attacker));
+        if (actor.getActingPlayer().hasServitors()) {
+            actor.getActingPlayer().getServitors().values().stream().filter(summon -> ((SummonAI) summon.getAI()).isDefending()).forEach(summon -> ((SummonAI) summon.getAI()).defendAttack(attacker));
         }
     }
 
@@ -166,7 +167,7 @@ public class PlayerAI extends PlayableAI {
             return;
         }
 
-        if (_actor.isAllSkillsDisabled() || _actor.isCastingNow() || _actor.isAttackingNow()) {
+        if (actor.isAllSkillsDisabled() || actor.isCastingNow() || actor.isAttackingNow()) {
             clientActionFailed();
             saveNextIntention(CtrlIntention.AI_INTENTION_MOVE_TO, loc, null);
             return;
@@ -179,7 +180,7 @@ public class PlayerAI extends PlayableAI {
         clientStopAutoAttack();
 
         // Abort the attack of the Creature and send Server->Client ActionFailed packet
-        _actor.abortAttack();
+        actor.abortAttack();
 
         // Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
         moveTo(loc.getX(), loc.getY(), loc.getZ());
@@ -203,18 +204,18 @@ public class PlayerAI extends PlayableAI {
             setTarget(null);
             return;
         }
-        if (maybeMoveToPawn(target, _actor.getPhysicalAttackRange())) {
+        if (maybeMoveToPawn(target, actor.getPhysicalAttackRange())) {
             return;
         }
 
         clientStopMoving(null);
-        _actor.doAutoAttack((Creature) target);
+        actor.doAutoAttack((Creature) target);
     }
 
     private void thinkCast() {
-        final WorldObject target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
-        if ((_skill.getTargetType() == TargetType.GROUND) && _actor.isPlayer()) {
-            if (maybeMoveToPosition(((Player) _actor).getCurrentSkillWorldPosition(), _actor.getMagicalAttackRange(_skill))) {
+        final WorldObject target = _skill.getTarget(actor, _forceUse, _dontMove, false);
+        if ((_skill.getTargetType() == TargetType.GROUND) && actor.isPlayer()) {
+            if (maybeMoveToPosition(((Player) actor).getCurrentSkillWorldPosition(), actor.getMagicalAttackRange(_skill))) {
                 return;
             }
         } else {
@@ -225,16 +226,16 @@ public class PlayerAI extends PlayableAI {
                 }
                 return;
             }
-            if ((target != null) && maybeMoveToPawn(target, _actor.getMagicalAttackRange(_skill))) {
+            if ((target != null) && maybeMoveToPawn(target, actor.getMagicalAttackRange(_skill))) {
                 return;
             }
         }
 
-        _actor.doCast(_skill, _item, _forceUse, _dontMove);
+        actor.doCast(_skill, _item, _forceUse, _dontMove);
     }
 
     private void thinkPickUp() {
-        if (_actor.isAllSkillsDisabled() || _actor.isCastingNow()) {
+        if (actor.isAllSkillsDisabled() || actor.isCastingNow()) {
             return;
         }
         final WorldObject target = getTarget();
@@ -249,7 +250,7 @@ public class PlayerAI extends PlayableAI {
     }
 
     private void thinkInteract() {
-        if (_actor.isAllSkillsDisabled() || _actor.isCastingNow()) {
+        if (actor.isAllSkillsDisabled() || actor.isCastingNow()) {
             return;
         }
         final WorldObject target = getTarget();
@@ -285,6 +286,12 @@ public class PlayerAI extends PlayableAI {
         } finally {
             _thinking = false;
         }
+    }
+
+    @Override
+    protected void onEvtForgetObject(WorldObject object) {
+        super.onEvtForgetObject(object);
+        actor.sendPacket(new DeleteObject(object));
     }
 
     @Override

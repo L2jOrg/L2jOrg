@@ -11,8 +11,8 @@ import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.stat.DoorStat;
 import org.l2j.gameserver.model.actor.status.DoorStatus;
@@ -29,14 +29,13 @@ import org.l2j.gameserver.network.serverpackets.OnEventTrigger;
 import org.l2j.gameserver.network.serverpackets.StaticObject;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.util.Collection;
 import java.util.Set;
 import java.util.concurrent.Future;
 
 public final class Door extends Creature {
-    boolean _open;
+    boolean open;
     private boolean _isAttackableDoor;
-    private boolean _isInverted;
+    private boolean inverted;
     private int _meshindex = 1;
     private Future<?> _autoCloseTask;
 
@@ -45,9 +44,9 @@ public final class Door extends Creature {
         setInstanceType(InstanceType.L2DoorInstance);
         setIsInvul(false);
         setLethalable(false);
-        _open = template.isOpenByDefault();
+        open = template.isOpenByDefault();
         _isAttackableDoor = template.isAttackable();
-        _isInverted = template.isInverted();
+        inverted = template.isInverted();
         super.setTargetable(template.isTargetable());
 
         if (isOpenableByTime()) {
@@ -77,7 +76,7 @@ public final class Door extends Creature {
     }
 
     private void startTimerOpen() {
-        int delay = _open ? getTemplate().getOpenTime() : getTemplate().getCloseTime();
+        int delay = open ? getTemplate().getOpenTime() : getTemplate().getCloseTime();
         if (getTemplate().getRandomTime() > 0) {
             delay += Rnd.get(getTemplate().getRandomTime());
         }
@@ -163,14 +162,14 @@ public final class Door extends Creature {
      * @return Returns the open.
      */
     public boolean isOpen() {
-        return _open;
+        return open;
     }
 
     /**
      * @param open The open to set.
      */
     public void setOpen(boolean open) {
-        _open = open;
+        this.open = open;
         if (getChildId() > 0) {
             final Door sibling = getSiblingDoor(getChildId());
             if (sibling != null) {
@@ -190,7 +189,7 @@ public final class Door extends Creature {
     }
 
     public boolean isInverted() {
-        return _isInverted;
+        return inverted;
     }
 
     public boolean getIsShowHp() {
@@ -284,38 +283,25 @@ public final class Door extends Creature {
 
     @Override
     public void broadcastStatusUpdate(Creature caster) {
-        final Collection<Player> knownPlayers = World.getInstance().getVisibleObjects(this, Player.class);
-        if ((knownPlayers == null) || knownPlayers.isEmpty()) {
-            return;
-        }
 
         final StaticObject su = new StaticObject(this, false);
         final StaticObject targetableSu = new StaticObject(this, true);
         final DoorStatusUpdate dsu = new DoorStatusUpdate(this);
-        OnEventTrigger oe = null;
-        if (getEmitter() > 0) {
-            if (_isInverted) {
-                oe = new OnEventTrigger(getEmitter(), !_open);
-            } else {
-                oe = new OnEventTrigger(getEmitter(), _open);
-            }
+        final OnEventTrigger oe = getEmitter() <= 0 ? null : new OnEventTrigger(getEmitter(), inverted ^ open);
+
+        World.getInstance().forAnyVisibleObject(this, Player.class, player -> sendUpdateToPlayer(player, su, targetableSu, dsu, oe), this::isVisibleFor);
+    }
+
+    private void sendUpdateToPlayer(Player player, StaticObject su, StaticObject targetableSu, DoorStatusUpdate dsu, OnEventTrigger oe) {
+        if (player.isGM() || (((getCastle() != null) && (getCastle().getResidenceId() > 0)) || ((getFort() != null) && (getFort().getResidenceId() > 0)))) {
+            player.sendPacket(targetableSu);
+        } else {
+            player.sendPacket(su);
         }
 
-        for (Player player : knownPlayers) {
-            if ((player == null) || !isVisibleFor(player)) {
-                continue;
-            }
-
-            if (player.isGM() || (((getCastle() != null) && (getCastle().getResidenceId() > 0)) || ((getFort() != null) && (getFort().getResidenceId() > 0)))) {
-                player.sendPacket(targetableSu);
-            } else {
-                player.sendPacket(su);
-            }
-
-            player.sendPacket(dsu);
-            if (oe != null) {
-                player.sendPacket(oe);
-            }
+        player.sendPacket(dsu);
+        if (oe != null) {
+            player.sendPacket(oe);
         }
     }
 
@@ -472,10 +458,10 @@ public final class Door extends Creature {
     public void sendInfo(Player activeChar) {
         if (isVisibleFor(activeChar)) {
             if (getEmitter() > 0) {
-                if (_isInverted) {
-                    activeChar.sendPacket(new OnEventTrigger(getEmitter(), !_open));
+                if (inverted) {
+                    activeChar.sendPacket(new OnEventTrigger(getEmitter(), !open));
                 } else {
-                    activeChar.sendPacket(new OnEventTrigger(getEmitter(), _open));
+                    activeChar.sendPacket(new OnEventTrigger(getEmitter(), open));
                 }
             }
             activeChar.sendPacket(new StaticObject(this, activeChar.isGM()));
@@ -524,7 +510,7 @@ public final class Door extends Creature {
     class AutoClose implements Runnable {
         @Override
         public void run() {
-            if (_open) {
+            if (open) {
                 closeMe();
             }
         }
@@ -533,13 +519,13 @@ public final class Door extends Creature {
     class TimerOpen implements Runnable {
         @Override
         public void run() {
-            if (_open) {
+            if (open) {
                 closeMe();
             } else {
                 openMe();
             }
 
-            int delay = _open ? getTemplate().getCloseTime() : getTemplate().getOpenTime();
+            int delay = open ? getTemplate().getCloseTime() : getTemplate().getOpenTime();
             if (getTemplate().getRandomTime() > 0) {
                 delay += Rnd.get(getTemplate().getRandomTime());
             }

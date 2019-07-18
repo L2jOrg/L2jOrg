@@ -32,7 +32,7 @@ public abstract class AbstractAI implements Ctrl {
     /**
      * The character that this AI manages
      */
-    protected final Creature _actor;
+    protected final Creature actor;
     /**
      * Current long-term intention
      */
@@ -72,7 +72,7 @@ public abstract class AbstractAI implements Ctrl {
     private Future<?> _followTask = null;
 
     protected AbstractAI(Creature creature) {
-        _actor = creature;
+        actor = creature;
     }
 
     /**
@@ -94,7 +94,7 @@ public abstract class AbstractAI implements Ctrl {
      */
     @Override
     public Creature getActor() {
-        return _actor;
+        return actor;
     }
 
     /**
@@ -223,7 +223,7 @@ public abstract class AbstractAI implements Ctrl {
      */
     @Override
     public final void notifyEvent(CtrlEvent evt, Object arg0, Object arg1) {
-        if ((!_actor.isSpawned() && !_actor.isTeleporting()) || !_actor.hasAI()) {
+        if ((!actor.isSpawned() && !actor.isTeleporting()) || !actor.hasAI()) {
             return;
         }
 
@@ -261,21 +261,21 @@ public abstract class AbstractAI implements Ctrl {
                 break;
             }
             case EVT_READY_TO_ACT: {
-                if (!_actor.isCastingNow()) {
+                if (!actor.isCastingNow()) {
                     onEvtReadyToAct();
                 }
                 break;
             }
             case EVT_ARRIVED: {
                 // happens e.g. from stopmove but we don't process it if we're casting
-                if (!_actor.isCastingNow()) {
+                if (!actor.isCastingNow()) {
                     onEvtArrived();
                 }
                 break;
             }
             case EVT_ARRIVED_REVALIDATE: {
                 // this is disregarded if the char is not moving any more
-                if (_actor.isMoving()) {
+                if (actor.isMoving()) {
                     onEvtArrivedRevalidate();
                 }
                 break;
@@ -368,8 +368,8 @@ public abstract class AbstractAI implements Ctrl {
      * Cancel action client side by sending Server->Client packet ActionFailed to the Player actor. <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT>
      */
     protected void clientActionFailed() {
-        if (_actor.isPlayer()) {
-            _actor.sendPacket(ActionFailed.STATIC_PACKET);
+        if (actor.isPlayer()) {
+            actor.sendPacket(ActionFailed.STATIC_PACKET);
         }
     }
 
@@ -382,7 +382,7 @@ public abstract class AbstractAI implements Ctrl {
      */
     protected void moveToPawn(WorldObject pawn, int offset) {
         // Check if actor can move
-        if (!_actor.isMovementDisabled() && !_actor.isAttackingNow() && !_actor.isCastingNow()) {
+        if (!actor.isMovementDisabled() && !actor.isAttackingNow() && !actor.isCastingNow()) {
             if (offset < 10) {
                 offset = 10;
             }
@@ -394,7 +394,7 @@ public abstract class AbstractAI implements Ctrl {
                     if (GameTimeController.getInstance().getGameTicks() < _moveToPawnTimeout) {
                         return;
                     }
-                } else if (_actor.isOnGeodataPath()) {
+                } else if (actor.isOnGeodataPath()) {
                     // minimum time to calculate new route is 2 seconds
                     if (GameTimeController.getInstance().getGameTicks() < (_moveToPawnTimeout + 10)) {
                         return;
@@ -414,23 +414,23 @@ public abstract class AbstractAI implements Ctrl {
             }
 
             // Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeController
-            _actor.moveToLocation(pawn.getX(), pawn.getY(), pawn.getZ(), offset);
+            actor.moveToLocation(pawn.getX(), pawn.getY(), pawn.getZ(), offset);
 
-            if (!_actor.isMoving()) {
+            if (!actor.isMoving()) {
                 clientActionFailed();
                 return;
             }
 
             // Send a Server->Client packet MoveToPawn/CharMoveToLocation to the actor and all Player in its _knownPlayers
             if (pawn.isCharacter()) {
-                if (_actor.isOnGeodataPath()) {
-                    _actor.broadcastPacket(new MoveToLocation(_actor));
+                if (actor.isOnGeodataPath()) {
+                    actor.broadcastPacket(new MoveToLocation(actor));
                     _clientMovingToPawnOffset = 0;
                 } else {
-                    _actor.broadcastPacket(new MoveToPawn(_actor, pawn, offset));
+                    actor.broadcastPacket(new MoveToPawn(actor, pawn, offset));
                 }
             } else {
-                _actor.broadcastPacket(new MoveToLocation(_actor));
+                actor.broadcastPacket(new MoveToLocation(actor));
             }
         } else {
             clientActionFailed();
@@ -451,16 +451,16 @@ public abstract class AbstractAI implements Ctrl {
      */
     protected void moveTo(int x, int y, int z) {
         // Check if actor can move
-        if (!_actor.isMovementDisabled()) {
+        if (!actor.isMovementDisabled()) {
             // Set AI movement data
             _clientMoving = true;
             _clientMovingToPawnOffset = 0;
 
             // Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeController
-            _actor.moveToLocation(x, y, z, 0);
+            actor.moveToLocation(x, y, z, 0);
 
             // Send a Server->Client packet CharMoveToLocation to the actor and all Player in its _knownPlayers
-            _actor.broadcastPacket(new MoveToLocation(_actor));
+            actor.broadcastPacket(new MoveToLocation(actor));
         } else {
             clientActionFailed();
         }
@@ -474,8 +474,8 @@ public abstract class AbstractAI implements Ctrl {
      */
     public void clientStopMoving(Location loc) {
         // Stop movement of the Creature
-        if (_actor.isMoving()) {
-            _actor.stopMove(loc);
+        if (actor.isMoving()) {
+            actor.stopMove(loc);
         }
 
         _clientMovingToPawnOffset = 0;
@@ -489,7 +489,7 @@ public abstract class AbstractAI implements Ctrl {
         if (_clientMovingToPawnOffset > 0) // movetoPawn needs to be stopped
         {
             _clientMovingToPawnOffset = 0;
-            _actor.broadcastPacket(new StopMove(_actor));
+            actor.broadcastPacket(new StopMove(actor));
         }
         _clientMoving = false;
     }
@@ -499,8 +499,8 @@ public abstract class AbstractAI implements Ctrl {
     }
 
     public void setAutoAttacking(boolean isAutoAttacking) {
-        if (_actor.isSummon()) {
-            final Summon summon = (Summon) _actor;
+        if (actor.isSummon()) {
+            final Summon summon = (Summon) actor;
             if (summon.getOwner() != null) {
                 summon.getOwner().getAI().setAutoAttacking(isAutoAttacking);
             }
@@ -514,26 +514,26 @@ public abstract class AbstractAI implements Ctrl {
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT>
      */
     public void clientStartAutoAttack() {
-        if (_actor.isSummon()) {
-            final Summon summon = (Summon) _actor;
+        if (actor.isSummon()) {
+            final Summon summon = (Summon) actor;
             if (summon.getOwner() != null) {
                 summon.getOwner().getAI().clientStartAutoAttack();
             }
             return;
         }
         if (!_clientAutoAttacking) {
-            if (_actor.isPlayer() && _actor.hasSummon()) {
-                final Summon pet = _actor.getPet();
+            if (actor.isPlayer() && actor.hasSummon()) {
+                final Summon pet = actor.getPet();
                 if (pet != null) {
                     pet.broadcastPacket(new AutoAttackStart(pet.getObjectId()));
                 }
-                _actor.getServitors().values().forEach(s -> s.broadcastPacket(new AutoAttackStart(s.getObjectId())));
+                actor.getServitors().values().forEach(s -> s.broadcastPacket(new AutoAttackStart(s.getObjectId())));
             }
             // Send a Server->Client packet AutoAttackStart to the actor and all Player in its _knownPlayers
-            _actor.broadcastPacket(new AutoAttackStart(_actor.getObjectId()));
+            actor.broadcastPacket(new AutoAttackStart(actor.getObjectId()));
             setAutoAttacking(true);
         }
-        AttackStanceTaskManager.getInstance().addAttackStanceTask(_actor);
+        AttackStanceTaskManager.getInstance().addAttackStanceTask(actor);
     }
 
     /**
@@ -541,19 +541,19 @@ public abstract class AbstractAI implements Ctrl {
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT>
      */
     void clientStopAutoAttack() {
-        if (_actor.isSummon()) {
-            final Summon summon = (Summon) _actor;
+        if (actor.isSummon()) {
+            final Summon summon = (Summon) actor;
             if (summon.getOwner() != null) {
                 summon.getOwner().getAI().clientStopAutoAttack();
             }
             return;
         }
-        if (_actor.isPlayer()) {
-            if (!AttackStanceTaskManager.getInstance().hasAttackStanceTask(_actor) && isAutoAttacking()) {
-                AttackStanceTaskManager.getInstance().addAttackStanceTask(_actor);
+        if (actor.isPlayer()) {
+            if (!AttackStanceTaskManager.getInstance().hasAttackStanceTask(actor) && isAutoAttacking()) {
+                AttackStanceTaskManager.getInstance().addAttackStanceTask(actor);
             }
         } else if (_clientAutoAttacking) {
-            _actor.broadcastPacket(new AutoAttackStop(_actor.getObjectId()));
+            actor.broadcastPacket(new AutoAttackStop(actor.getObjectId()));
             setAutoAttacking(false);
         }
     }
@@ -564,8 +564,8 @@ public abstract class AbstractAI implements Ctrl {
      */
     protected void clientNotifyDead() {
         // Send a Server->Client packet Die to the actor and all Player in its _knownPlayers
-        final Die msg = new Die(_actor);
-        _actor.broadcastPacket(msg);
+        final Die msg = new Die(actor);
+        actor.broadcastPacket(msg);
 
         // Init AI
         intention = AI_INTENTION_IDLE;
@@ -582,14 +582,14 @@ public abstract class AbstractAI implements Ctrl {
      * @param player The L2PcIstance to notify with state of this Creature
      */
     public void describeStateToPlayer(Player player) {
-        if (_actor.isVisibleFor(player)) {
+        if (actor.isVisibleFor(player)) {
             if (_clientMoving) {
                 if ((_clientMovingToPawnOffset != 0) && isFollowing()) {
                     // Send a Server->Client packet MoveToPawn to the actor and all Player in its _knownPlayers
-                    player.sendPacket(new MoveToPawn(_actor, _target, _clientMovingToPawnOffset));
+                    player.sendPacket(new MoveToPawn(actor, _target, _clientMovingToPawnOffset));
                 } else {
                     // Send a Server->Client packet CharMoveToLocation to the actor and all Player in its _knownPlayers
-                    player.sendPacket(new MoveToLocation(_actor));
+                    player.sendPacket(new MoveToLocation(actor));
                 }
             }
         }
@@ -632,18 +632,18 @@ public abstract class AbstractAI implements Ctrl {
 
                 final WorldObject followTarget = getTarget(); // copy to prevent NPE
                 if (followTarget == null) {
-                    if (_actor.isSummon()) {
-                        ((Summon) _actor).setFollowStatus(false);
+                    if (actor.isSummon()) {
+                        ((Summon) actor).setFollowStatus(false);
                     }
                     setIntention(AI_INTENTION_IDLE);
                     return;
                 }
 
-                if (!_actor.isInsideRadius3D(followTarget, followRange)) {
-                    if (!_actor.isInsideRadius3D(followTarget, 3000)) {
+                if (!actor.isInsideRadius3D(followTarget, followRange)) {
+                    if (!actor.isInsideRadius3D(followTarget, 3000)) {
                         // if the target is too far (maybe also teleported)
-                        if (_actor.isSummon()) {
-                            ((Summon) _actor).setFollowStatus(false);
+                        if (actor.isSummon()) {
+                            ((Summon) actor).setFollowStatus(false);
                         }
 
                         setIntention(AI_INTENTION_IDLE);
@@ -686,6 +686,6 @@ public abstract class AbstractAI implements Ctrl {
 
     @Override
     public String toString() {
-        return "Actor: " + _actor;
+        return "Actor: " + actor;
     }
 }

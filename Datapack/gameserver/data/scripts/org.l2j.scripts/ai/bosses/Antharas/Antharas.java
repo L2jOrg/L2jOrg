@@ -310,14 +310,11 @@ public final class Antharas extends AbstractNpcAI
 			}
 			case "START_MOVE":
 			{
-				for (Player players : World.getInstance().getVisibleObjectsInRange(npc, Player.class, 4000))
-				{
-					if (players.isHero())
-					{
-						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.S1_YOU_CANNOT_HOPE_TO_DEFEAT_ME_WITH_YOUR_MEAGER_STRENGTH, 2, 4000, players.getName()));
-						break;
-					}
-				}
+
+
+				World.getInstance().forAnyVisibleObjectInRange(npc, Player.class, 4000,
+						hero -> zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.S1_YOU_CANNOT_HOPE_TO_DEFEAT_ME_WITH_YOUR_MEAGER_STRENGTH, 2, 4000, hero.getName())),  Player::isHero);
+
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(179011, 114871, -7704));
 				startQuestTimer("CHECK_ATTACK", 60000, npc, null);
 				startQuestTimer("SPAWN_MINION", 300000, npc, null);

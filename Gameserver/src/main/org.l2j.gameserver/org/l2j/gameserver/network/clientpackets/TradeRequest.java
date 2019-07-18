@@ -15,6 +15,8 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SendTradeRequest;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
+
 /**
  * This packet manages the trade request.
  */
@@ -144,7 +146,7 @@ public final class TradeRequest extends ClientPacket {
             return;
         }
 
-        if (player.calculateDistance3D(partner) > 150) {
+        if (!isInsideRadius2D(player, partner, 150)) {
             client.sendPacket(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE);
             return;
         }

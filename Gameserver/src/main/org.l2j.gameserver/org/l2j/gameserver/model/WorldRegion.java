@@ -4,8 +4,10 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Vehicle;
+import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,8 +17,10 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayable;
 
 
@@ -200,7 +204,7 @@ public final class WorldRegion {
         return objects;
     }
 
-    public boolean checkEachSurroundingRegion(Predicate<WorldRegion> p) {
+    boolean checkEachSurroundingRegion(Predicate<WorldRegion> p) {
         for (WorldRegion worldRegion : surroundingRegions) {
             if (!p.test(worldRegion)) {
                 return false;
@@ -209,41 +213,79 @@ public final class WorldRegion {
         return true;
     }
 
+    void forEachSurroundingRegion(Consumer<WorldRegion> action) {
+        Arrays.stream(surroundingRegions).forEach(action);
+    }
+
+    void forEachCreature(Consumer<Creature> action, Predicate<Creature> filter) {
+        forEachObject(Creature.class, action, filter);
+    }
+
     <T extends WorldObject> void forEachObject(Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
-        getObjects().values().parallelStream().forEach(object -> {
-            T acceptedObject;
-            if(clazz.isInstance(object) && filter.test(acceptedObject = clazz.cast(object))) {
-                action.accept(acceptedObject);
-            }
-        });
+        regionToWorldObjectStream(this)
+                .filter(applyInstanceFilter(clazz, filter))
+                .forEach(object -> action.accept(clazz.cast(object)));
     }
 
-    <T extends WorldObject> void forEachObjectInSurround(Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
-        Arrays.stream(surroundingRegions).flatMap(r -> r.getObjects().values().parallelStream()).forEach(object -> {
-            T acceptedObject;
-            if(clazz.isInstance(object) && filter.test(acceptedObject = clazz.cast(object)) ) {
-                action.accept(acceptedObject);
-            }
-        });
+    <T extends WorldObject> void forEachObjectInSurrounding(Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
+        Arrays.stream(surroundingRegions)
+                .flatMap(WorldRegion::regionToWorldObjectStream)
+                .filter(applyInstanceFilter(clazz, filter))
+                .forEach(object -> action.accept(clazz.cast(object)));
     }
 
-    public WorldRegion[] getSurroundingRegions() {
+    private static  <T extends WorldObject> Predicate<? super WorldObject> applyInstanceFilter(Class<T> clazz, Predicate<T> filter) {
+        return object -> clazz.isInstance(object) && filter.test(clazz.cast(object));
+    }
+
+    private static Stream<? extends WorldObject> regionToWorldObjectStream(WorldRegion region) {
+        return region.getObjects().values().parallelStream();
+    }
+
+    <T extends WorldObject> void forAnyObjectInSurrounding(Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
+        Arrays.stream(surroundingRegions)
+                .flatMap(WorldRegion::regionToWorldObjectStream)
+                .filter(applyInstanceFilter(clazz, filter)).findAny().ifPresent(object -> action.accept(clazz.cast(object)));
+    }
+
+    WorldObject getObjectInSurrounding(WorldObject reference, int objectId, int range) {
+        WorldObject object;
+        for(var region : surroundingRegions) {
+            if( nonNull(object = region.getObject(objectId)) ) {
+                if(MathUtil.calculateDistance3DBetween(reference, object) > range) {
+                    return null;
+                }
+                return object;
+            }
+        }
+        return null;
+    }
+
+    <T extends WorldObject> boolean hasObjectInSurrounding(Class<T> clazz, Predicate<T> filter) {
+        return Arrays.stream(surroundingRegions).flatMap(WorldRegion::regionToWorldObjectStream).anyMatch(applyInstanceFilter(clazz, filter));
+    }
+
+    WorldObject getObject(int objectId) {
+        return objects.get(objectId);
+    }
+
+    WorldRegion[] getSurroundingRegions() {
         return surroundingRegions;
     }
 
-    public void setSurroundingRegions(WorldRegion[] regions) {
+    void setSurroundingRegions(WorldRegion[] regions) {
         surroundingRegions = regions;
     }
 
-    public boolean isSurroundingRegion(WorldRegion region) {
+    boolean isSurroundingRegion(WorldRegion region) {
         return (region != null) && (_regionX >= (region.getRegionX() - 1)) && (_regionX <= (region.getRegionX() + 1)) && (_regionY >= (region.getRegionY() - 1)) && (_regionY <= (region.getRegionY() + 1));
     }
 
-    public int getRegionX() {
+    int getRegionX() {
         return _regionX;
     }
 
-    public int getRegionY() {
+    int getRegionY() {
         return _regionY;
     }
 

@@ -26,6 +26,7 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,6 +35,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Future;
 import java.util.stream.Stream;
+
+import static org.l2j.gameserver.util.MathUtil.calculateDistanceSq2D;
 
 /**
  * This class manages AI of Attackable.
@@ -150,7 +153,7 @@ public class AttackableAI extends CreatureAI {
     public void startAITask() {
         // If not idle - create an AI task (schedule onEvtThink repeatedly)
         if (_aiTask == null) {
-            _aiTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(this::onEvtThink, 1000, 1000);
+            _aiTask = ThreadPoolManager.scheduleAtFixedRate(this::onEvtThink, 1000, 1000);
         }
     }
 
@@ -177,7 +180,7 @@ public class AttackableAI extends CreatureAI {
             final Attackable npc = getActiveChar();
             if (!npc.isAlikeDead()) {
                 // If its _knownPlayer isn't empty set the Intention to AI_INTENTION_ACTIVE
-                if (!World.getInstance().getVisibleObjects(npc, Player.class).isEmpty()) {
+                if (World.getInstance().hasVisiblePlayer(npc)) {
                     intention = CtrlIntention.AI_INTENTION_ACTIVE;
                 } else if (npc.getSpawn() != null) {
                     final Location loc = npc.getSpawn();
@@ -196,7 +199,7 @@ public class AttackableAI extends CreatureAI {
                 stopAITask();
 
                 // Cancel the AI
-                _actor.detachAI();
+                actor.detachAI();
 
                 return;
             }
@@ -232,8 +235,8 @@ public class AttackableAI extends CreatureAI {
                 target = skillTargetReconsider(buff, true);
                 if (target != null) {
                     setTarget(target);
-                    _actor.doCast(buff);
-                    LOGGER.debug(this + " used buff skill " + buff + " on " + _actor);
+                    actor.doCast(buff);
+                    LOGGER.debug(this + " used buff skill " + buff + " on " + actor);
                     break;
                 }
             }
@@ -245,15 +248,15 @@ public class AttackableAI extends CreatureAI {
     }
 
     protected void thinkCast() {
-        final WorldObject target = _skill.getTarget(_actor, getTarget(), _forceUse, _dontMove, false);
+        final WorldObject target = _skill.getTarget(actor, getTarget(), _forceUse, _dontMove, false);
         if (checkTargetLost(target)) {
             return;
         }
-        if (maybeMoveToPawn(target, _actor.getMagicalAttackRange(_skill))) {
+        if (maybeMoveToPawn(target, actor.getMagicalAttackRange(_skill))) {
             return;
         }
         setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-        _actor.doCast(_skill, _item, _forceUse, _dontMove);
+        actor.doCast(_skill, _item, _forceUse, _dontMove);
     }
 
     /**
@@ -434,7 +437,7 @@ public class AttackableAI extends CreatureAI {
             }
 
             // Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
-            final Location moveLoc = _actor.isFlying() ? new Location(x1, y1, z1) : GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), x1, y1, z1, npc.getInstanceWorld());
+            final Location moveLoc = actor.isFlying() ? new Location(x1, y1, z1) : GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), x1, y1, z1, npc.getInstanceWorld());
 
             moveTo(moveLoc.getX(), moveLoc.getY(), moveLoc.getZ());
         }
@@ -539,36 +542,14 @@ public class AttackableAI extends CreatureAI {
         // Note from Gnacik:
         // On l2js because of that sometimes mobs don't attack player only running around player without any sense, so decrease chance for now
         if (!npc.isMovementDisabled() && (Rnd.get(100) <= 3)) {
-            for (Attackable nearby : World.getInstance().getVisibleObjects(npc, Attackable.class)) {
-                if (npc.isInsideRadius2D(nearby, collision) && (nearby != target)) {
-                    int newX = combinedCollision + Rnd.get(40);
-                    if (Rnd.nextBoolean()) {
-                        newX += target.getX();
-                    } else {
-                        newX = target.getX() - newX;
-                    }
-                    int newY = combinedCollision + Rnd.get(40);
-                    if (Rnd.nextBoolean()) {
-                        newY += target.getY();
-                    } else {
-                        newY = target.getY() - newY;
-                    }
-
-                    if (!npc.isInsideRadius2D(newX, newY, 0, collision)) {
-                        final int newZ = npc.getZ() + 30;
-
-                        // Mobius: Verify destination. Prevents wall collision issues and fixes monsters not avoiding obstacles.
-                        moveTo(GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceWorld()));
-                    }
-                    return;
-                }
-            }
+            final var actualTarget = target;
+            World.getInstance().forAnyVisibleObject(npc, Attackable.class, nearby -> moveIfNeed(npc, actualTarget, collision, combinedCollision), nearby -> !nearby.equals(actualTarget) && MathUtil.isInsideRadius2D(npc, nearby, collision));
         }
         // Dodge if its needed
         if (!npc.isMovementDisabled() && (npc.getTemplate().getDodge() > 0)) {
             if (Rnd.get(100) <= npc.getTemplate().getDodge()) {
                 // Micht: kepping this one otherwise we should do 2 sqrt
-                final double distance2 = npc.calculateDistanceSq2D(target);
+                final double distance2 = calculateDistanceSq2D(npc, target);
                 if (Math.sqrt(distance2) <= (60 + combinedCollision)) {
                     int posX = npc.getX();
                     int posY = npc.getY();
@@ -728,7 +709,29 @@ public class AttackableAI extends CreatureAI {
         }
 
         // Attacks target
-        _actor.doAutoAttack(target);
+        actor.doAutoAttack(target);
+    }
+
+    private void moveIfNeed(Attackable npc, Creature target, int collision, int combinedCollision) {
+        int newX = combinedCollision + Rnd.get(40);
+        if (Rnd.nextBoolean()) {
+            newX += target.getX();
+        } else {
+            newX = target.getX() - newX;
+        }
+        int newY = combinedCollision + Rnd.get(40);
+        if (Rnd.nextBoolean()) {
+            newY += target.getY();
+        } else {
+            newY = target.getY() - newY;
+        }
+
+        if (!MathUtil.isInsideRadius2D(npc, newX, newY, collision)) {
+            final int newZ = npc.getZ() + 30;
+
+            // Mobius: Verify destination. Prevents wall collision issues and fixes monsters not avoiding obstacles.
+            moveTo(GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceWorld()));
+        }
     }
 
     private boolean checkSkillTarget(Skill skill, WorldObject target) {
@@ -1021,16 +1024,16 @@ public class AttackableAI extends CreatureAI {
     @Override
     public WorldObject getTarget() {
         // NPCs share their regular target with AI target.
-        return _actor.getTarget();
+        return actor.getTarget();
     }
 
     @Override
     public void setTarget(WorldObject target) {
         // NPCs share their regular target with AI target.
-        _actor.setTarget(target);
+        actor.setTarget(target);
     }
 
     public Attackable getActiveChar() {
-        return (Attackable) _actor;
+        return (Attackable) actor;
     }
 }

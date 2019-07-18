@@ -50,10 +50,10 @@ public final class Config {
     public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
     public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
     private static final String ATTENDANCE_CONFIG_FILE = "./config/AttendanceRewards.ini";
-    private static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
+    private static final String CHARACTER_CONFIG_FILE = "config/character.properties";
     private static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
     private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
-    private static final String GENERAL_CONFIG_FILE = "./config/General.ini";
+    private static final String GENERAL_CONFIG_FILE = "config/general.properties";
     private static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
     private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
 
@@ -61,7 +61,7 @@ public final class Config {
     private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
     private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
     private static final String RATES_CONFIG_FILE = "./config/Rates.ini";
-    private static final String SERVER_CONFIG_FILE = "./config/Server.ini";
+    private static final String SERVER_CONFIG_FILE = "config/server.properties";
     private static final String TRAINING_CAMP_CONFIG_FILE = "./config/TrainingCamp.ini";
     private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
     private static final String IPCONFIG_FILE = "./config/ipconfig.xml";

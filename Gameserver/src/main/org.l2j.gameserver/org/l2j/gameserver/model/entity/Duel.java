@@ -17,6 +17,7 @@ import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.model.zone.type.OlympiadStadiumZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -596,7 +597,7 @@ public class Duel {
             }
 
             // Are the players too far apart?
-            if (!_playerA.isInsideRadius2D(_playerB, 1600)) {
+            if (!MathUtil.isInsideRadius2D(_playerA,  _playerB, 1600)) {
                 return DuelResult.CANCELED;
             }
 

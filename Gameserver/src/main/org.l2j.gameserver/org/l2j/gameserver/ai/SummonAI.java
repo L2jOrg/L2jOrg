@@ -18,7 +18,7 @@ public class SummonAI extends PlayableAI implements Runnable {
     private static final int AVOID_RADIUS = 70;
 
     private volatile boolean _thinking; // to prevent recursive thinking
-    private volatile boolean _startFollow = ((Summon) _actor).getFollowStatus();
+    private volatile boolean _startFollow = ((Summon) actor).getFollowStatus();
     private Creature _lastAttack = null;
 
     private volatile boolean _startAvoid;
@@ -38,7 +38,7 @@ public class SummonAI extends PlayableAI implements Runnable {
 
     @Override
     protected void onIntentionActive() {
-        final Summon summon = (Summon) _actor;
+        final Summon summon = (Summon) actor;
         if (_startFollow) {
             setIntention(AI_INTENTION_FOLLOW, summon.getOwner());
         } else {
@@ -68,36 +68,36 @@ public class SummonAI extends PlayableAI implements Runnable {
 
         if (checkTargetLostOrDead(attackTarget)) {
             setTarget(null);
-            ((Summon) _actor).setFollowStatus(true);
+            ((Summon) actor).setFollowStatus(true);
             return;
         }
-        if (maybeMoveToPawn(attackTarget, _actor.getPhysicalAttackRange())) {
+        if (maybeMoveToPawn(attackTarget, actor.getPhysicalAttackRange())) {
             return;
         }
         clientStopMoving(null);
-        _actor.doAutoAttack(attackTarget);
+        actor.doAutoAttack(attackTarget);
     }
 
     private void thinkCast() {
-        final Summon summon = (Summon) _actor;
+        final Summon summon = (Summon) actor;
         if (summon.isCastingNow(SkillCaster::isAnyNormalType)) {
             return;
         }
 
-        final WorldObject target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
+        final WorldObject target = _skill.getTarget(actor, _forceUse, _dontMove, false);
         if (checkTargetLost(target)) {
             setTarget(null);
             summon.setFollowStatus(true);
             return;
         }
         final boolean val = _startFollow;
-        if (maybeMoveToPawn(target, _actor.getMagicalAttackRange(_skill))) {
+        if (maybeMoveToPawn(target, actor.getMagicalAttackRange(_skill))) {
             return;
         }
         summon.setFollowStatus(false);
         setIntention(AI_INTENTION_IDLE);
         _startFollow = val;
-        _actor.doCast(_skill, _item, _forceUse, _dontMove);
+        actor.doCast(_skill, _item, _forceUse, _dontMove);
     }
 
     private void thinkPickUp() {
@@ -125,7 +125,7 @@ public class SummonAI extends PlayableAI implements Runnable {
 
     @Override
     protected void onEvtThink() {
-        if (_thinking || _actor.isCastingNow() || _actor.isAllSkillsDisabled()) {
+        if (_thinking || actor.isCastingNow() || actor.isAllSkillsDisabled()) {
             return;
         }
         _thinking = true;
@@ -156,7 +156,7 @@ public class SummonAI extends PlayableAI implements Runnable {
     @Override
     protected void onEvtFinishCasting() {
         if (_lastAttack == null) {
-            ((Summon) _actor).setFollowStatus(_startFollow);
+            ((Summon) actor).setFollowStatus(_startFollow);
         } else {
             setIntention(AI_INTENTION_ATTACK, _lastAttack);
             _lastAttack = null;
@@ -187,25 +187,25 @@ public class SummonAI extends PlayableAI implements Runnable {
 
     private void avoidAttack(Creature attacker) {
         // Don't move while casting. It breaks casting animation, but still casts the skill... looks so bugged.
-        if (_actor.isCastingNow()) {
+        if (actor.isCastingNow()) {
             return;
         }
 
         final Creature owner = getActor().getOwner();
         // trying to avoid if summon near owner
-        if ((owner != null) && (owner != attacker) && owner.isInsideRadius3D(_actor, 2 * AVOID_RADIUS)) {
+        if ((owner != null) && (owner != attacker) && owner.isInsideRadius3D(actor, 2 * AVOID_RADIUS)) {
             _startAvoid = true;
         }
     }
 
     public void defendAttack(Creature attacker) {
         // Cannot defend while attacking or casting.
-        if (_actor.isAttackingNow() || _actor.isCastingNow()) {
+        if (actor.isAttackingNow() || actor.isCastingNow()) {
             return;
         }
 
         final Summon summon = getActor();
-        if ((summon.getOwner() != null) && (summon.getOwner() != attacker) && !summon.isMoving() && summon.canAttack(attacker, false) && summon.getOwner().isInsideRadius3D(_actor, 2 * AVOID_RADIUS)) {
+        if ((summon.getOwner() != null) && (summon.getOwner() != attacker) && !summon.isMoving() && summon.canAttack(attacker, false) && summon.getOwner().isInsideRadius3D(actor, 2 * AVOID_RADIUS)) {
             summon.doAutoAttack(attacker);
         }
     }
@@ -215,15 +215,15 @@ public class SummonAI extends PlayableAI implements Runnable {
         if (_startAvoid) {
             _startAvoid = false;
 
-            if (!_clientMoving && !_actor.isDead() && !_actor.isMovementDisabled() && (_actor.getMoveSpeed() > 0)) {
-                final int ownerX = ((Summon) _actor).getOwner().getX();
-                final int ownerY = ((Summon) _actor).getOwner().getY();
-                final double angle = Math.toRadians(Rnd.get(-90, 90)) + Math.atan2(ownerY - _actor.getY(), ownerX - _actor.getX());
+            if (!_clientMoving && !actor.isDead() && !actor.isMovementDisabled() && (actor.getMoveSpeed() > 0)) {
+                final int ownerX = ((Summon) actor).getOwner().getX();
+                final int ownerY = ((Summon) actor).getOwner().getY();
+                final double angle = Math.toRadians(Rnd.get(-90, 90)) + Math.atan2(ownerY - actor.getY(), ownerX - actor.getX());
 
                 final int targetX = ownerX + (int) (AVOID_RADIUS * Math.cos(angle));
                 final int targetY = ownerY + (int) (AVOID_RADIUS * Math.sin(angle));
-                if (GeoEngine.getInstance().canMoveToTarget(_actor.getX(), _actor.getY(), _actor.getZ(), targetX, targetY, _actor.getZ(), _actor.getInstanceWorld())) {
-                    moveTo(targetX, targetY, _actor.getZ());
+                if (GeoEngine.getInstance().canMoveToTarget(actor.getX(), actor.getY(), actor.getZ(), targetX, targetY, actor.getZ(), actor.getInstanceWorld())) {
+                    moveTo(targetX, targetY, actor.getZ());
                 }
             }
         }
@@ -237,7 +237,7 @@ public class SummonAI extends PlayableAI implements Runnable {
             case AI_INTENTION_IDLE:
             case AI_INTENTION_MOVE_TO:
             case AI_INTENTION_PICK_UP: {
-                ((Summon) _actor).setFollowStatus(_startFollow);
+                ((Summon) actor).setFollowStatus(_startFollow);
             }
         }
     }

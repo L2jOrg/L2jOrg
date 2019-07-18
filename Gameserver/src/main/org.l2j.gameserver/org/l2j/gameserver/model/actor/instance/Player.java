@@ -92,10 +92,7 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
-import org.l2j.gameserver.util.Broadcast;
-import org.l2j.gameserver.util.EnumIntBitmask;
-import org.l2j.gameserver.util.FloodProtectors;
-import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.*;
 
 import java.sql.Date;
 import java.sql.*;
@@ -1431,12 +1428,12 @@ public final class Player extends Playable {
 
         final Npc target = _lastFolkNpc;
 
-        if ((target != null) && isInsideRadius2D(target, Npc.INTERACTION_DISTANCE)) {
+        if ((target != null) && MathUtil.isInsideRadius2D(this, target, Npc.INTERACTION_DISTANCE)) {
             quest.notifyEvent(event, target, this);
         } else if (_questNpcObject > 0) {
             final WorldObject object = World.getInstance().findObject(getLastQuestNpcObject());
 
-            if (object.isNpc() && isInsideRadius2D(object, Npc.INTERACTION_DISTANCE)) {
+            if (object.isNpc() && MathUtil.isInsideRadius2D(this, object, Npc.INTERACTION_DISTANCE)) {
                 final Npc npc = (Npc) object;
                 quest.notifyEvent(event, npc, this);
             }
@@ -3672,15 +3669,16 @@ public final class Player extends Playable {
 
     @Override
     public void broadcastPacket(ServerPacket mov, int radiusInKnownlist) {
+
         if (mov instanceof CharInfo) {
-            new IllegalArgumentException("CharInfo is being send via broadcastPacket. Do NOT do that! Use broadcastCharInfo() instead.");
+            LOGGER.warn("CharInfo is being send via broadcastPacket. Do NOT do that! Use broadcastCharInfo() instead.");
         }
 
         sendPacket(mov);
 
         World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
-            if (!isVisibleFor(player) || (calculateDistance3D(player) >= radiusInKnownlist)) {
+            if (!isVisibleFor(player) || !MathUtil.isInsideRadius3D(this, player,  radiusInKnownlist)) {
                 return;
             }
             player.sendPacket(mov);

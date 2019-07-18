@@ -362,15 +362,11 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
         if (_isTargetable != targetable) {
             _isTargetable = targetable;
             if (!targetable) {
-                World.getInstance().getVisibleObjects(this, Creature.class, creature -> this == creature.getTarget()).forEach(creature ->
-                {
-                    creature.setTarget(null);
-                    creature.abortAttack();
-                    creature.abortCast();
-                });
+                World.getInstance().forEachVisibleObject(this, Creature.class, Creature::forgetTarget,  creature -> this == creature.getTarget());
             }
         }
     }
+
 
     /**
      * Check if the object is in the given zone Id.
@@ -632,7 +628,9 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @param y the Y coordinate
      * @param z the Z coordinate
      * @return distance between object and given x, y, z.
+     *
      */
+    @Deprecated
     public double calculateDistance2D(int x, int y, int z) {
         return Math.sqrt(Math.pow(x - _x, 2) + Math.pow(y - _y, 2));
     }
@@ -643,6 +641,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @param loc the location object
      * @return distance between object and given location.
      */
+    @Deprecated
     public double calculateDistance2D(ILocational loc) {
         return calculateDistance2D(loc.getX(), loc.getY(), loc.getZ());
     }
@@ -655,6 +654,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @param z the Z coordinate
      * @return distance between object and given x, y, z.
      */
+    @Deprecated
     public double calculateDistance3D(int x, int y, int z) {
         return Math.sqrt(Math.pow(x - _x, 2) + Math.pow(y - _y, 2) + Math.pow(z - _z, 2));
     }
@@ -665,6 +665,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @param loc the location object
      * @return distance between object and given location.
      */
+    @Deprecated
     public double calculateDistance3D(ILocational loc) {
         return calculateDistance3D(loc.getX(), loc.getY(), loc.getZ());
     }
@@ -677,6 +678,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @param z the Z coordinate
      * @return distance between object and given x, y, z.
      */
+    @Deprecated
     public double calculateDistanceSq2D(int x, int y, int z) {
         return Math.pow(x - _x, 2) + Math.pow(y - _y, 2);
     }
@@ -687,6 +689,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @param loc the location object
      * @return distance between object and given location.
      */
+    @Deprecated
     public double calculateDistanceSq2D(ILocational loc) {
         return calculateDistanceSq2D(loc.getX(), loc.getY(), loc.getZ());
     }
@@ -699,6 +702,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @param z the Z coordinate
      * @return distance between object and given x, y, z.
      */
+    @Deprecated
     public double calculateDistanceSq3D(int x, int y, int z) {
         return Math.pow(x - _x, 2) + Math.pow(y - _y, 2) + Math.pow(z - _z, 2);
     }
@@ -709,6 +713,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @param loc the location object
      * @return distance between object and given location.
      */
+    @Deprecated
     public double calculateDistanceSq3D(ILocational loc) {
         return calculateDistanceSq3D(loc.getX(), loc.getY(), loc.getZ());
     }

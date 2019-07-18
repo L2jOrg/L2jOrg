@@ -31,6 +31,7 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.commission.*;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionList.CommissionListReplyType;
+import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -109,8 +110,8 @@ public final class CommissionManager {
      */
     public static boolean isPlayerAllowedToInteract(Player player) {
         final Npc npc = player.getLastFolkNPC();
-        if ((npc != null) && (npc instanceof org.l2j.gameserver.model.actor.instance.CommissionManager)) {
-            return npc.calculateDistance3D(player) <= INTERACTION_DISTANCE;
+        if (npc instanceof org.l2j.gameserver.model.actor.instance.CommissionManager) {
+            return MathUtil.isInsideRadius3D(npc,player, INTERACTION_DISTANCE);
         }
         return false;
     }

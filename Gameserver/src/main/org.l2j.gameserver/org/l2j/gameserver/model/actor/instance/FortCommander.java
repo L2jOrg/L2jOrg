@@ -12,6 +12,7 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.NpcStringId;
+import org.l2j.gameserver.util.MathUtil;
 
 import java.util.List;
 
@@ -70,7 +71,7 @@ public class FortCommander extends Defender {
      */
     @Override
     public void returnHome() {
-        if (!isInsideRadius2D(getSpawn(), 200)) {
+        if (!MathUtil.isInsideRadius2D(this, getSpawn(), 200)) {
             setisReturningToSpawnPoint(true);
             clearAggroList();
 

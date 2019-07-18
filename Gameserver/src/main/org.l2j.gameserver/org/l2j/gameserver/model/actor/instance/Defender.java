@@ -13,6 +13,7 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.util.MathUtil;
 
 public class Defender extends Attackable {
     private Castle _castle = null; // the castle which the instance should defend
@@ -74,7 +75,7 @@ public class Defender extends Attackable {
         if (getSpawn() == null) {
             return;
         }
-        if (!isInsideRadius2D(getSpawn(), 40)) {
+        if (!MathUtil.isInsideRadius2D(this, getSpawn(), 40)) {
             setisReturningToSpawnPoint(true);
             clearAggroList();
 

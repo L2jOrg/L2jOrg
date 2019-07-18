@@ -17,6 +17,8 @@ import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
+
 /**
  * This class ...
  *
@@ -121,7 +123,7 @@ public final class RequestDropItem extends ClientPacket {
             return;
         }
 
-        if (!activeChar.isInsideRadius2D(_x, _y, 0, 150) || (Math.abs(_z - activeChar.getZ()) > 50)) {
+        if (!isInsideRadius2D(activeChar, _x, _y, 150) || (Math.abs(_z - activeChar.getZ()) > 50)) {
             activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DISCARD_SOMETHING_THAT_FAR_AWAY_FROM_YOU);
             return;
         }

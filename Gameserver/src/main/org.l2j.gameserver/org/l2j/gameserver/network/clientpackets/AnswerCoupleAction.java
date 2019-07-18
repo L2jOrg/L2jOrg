@@ -7,6 +7,7 @@ import org.l2j.gameserver.network.serverpackets.ExRotation;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 
 /**
  * @author JIV
@@ -38,7 +39,7 @@ public class AnswerCoupleAction extends ClientPacket {
             target.sendPacket(SystemMessageId.THE_COUPLE_ACTION_WAS_DENIED);
         } else if (_answer == 1) // approve
         {
-            final int distance = (int) activeChar.calculateDistance2D(target);
+            final int distance = (int) MathUtil.calculateDistance2D(activeChar, target);
             if ((distance > 125) || (distance < 15) || (activeChar.getObjectId() == target.getObjectId())) {
                 client.sendPacket(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);
                 target.sendPacket(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);

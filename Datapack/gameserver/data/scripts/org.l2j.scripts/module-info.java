@@ -237,7 +237,6 @@ open module org.l2j.scripts {
             handlers.bypasshandlers.ClanWarehouse,
             handlers.bypasshandlers.EnsoulWindow,
             handlers.bypasshandlers.EventEngine,
-            handlers.bypasshandlers.FindPvP,
             handlers.bypasshandlers.Freight,
             handlers.bypasshandlers.ItemAuctionLink,
             handlers.bypasshandlers.Link,

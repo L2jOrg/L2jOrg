@@ -4,6 +4,7 @@ import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.util.MathUtil;
 
 /**
  * This packet manages the trade response.
@@ -60,7 +61,7 @@ public final class TradeDone extends ClientPacket {
                 return;
             }
 
-            if (player.calculateDistance3D(trade.getPartner()) > 150) {
+            if (!MathUtil.isInsideRadius3D(player, trade.getPartner(), 150)) {
                 player.cancelActiveTrade();
                 return;
             }

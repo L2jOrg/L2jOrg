@@ -32,22 +32,22 @@ public class AirShipAI extends VehicleAI {
 
     @Override
     protected void moveTo(int x, int y, int z) {
-        if (!_actor.isMovementDisabled()) {
+        if (!actor.isMovementDisabled()) {
             _clientMoving = true;
-            _actor.moveToLocation(x, y, z, 0);
-            _actor.broadcastPacket(new ExMoveToLocationAirShip(getActor()));
+            actor.moveToLocation(x, y, z, 0);
+            actor.broadcastPacket(new ExMoveToLocationAirShip(getActor()));
         }
     }
 
     @Override
     public void clientStopMoving(Location loc) {
-        if (_actor.isMoving()) {
-            _actor.stopMove(loc);
+        if (actor.isMoving()) {
+            actor.stopMove(loc);
         }
 
         if (_clientMoving || (loc != null)) {
             _clientMoving = false;
-            _actor.broadcastPacket(new ExStopMoveAirShip(getActor()));
+            actor.broadcastPacket(new ExStopMoveAirShip(getActor()));
         }
     }
 
@@ -60,6 +60,6 @@ public class AirShipAI extends VehicleAI {
 
     @Override
     public AirShip getActor() {
-        return (AirShip) _actor;
+        return (AirShip) actor;
     }
 }

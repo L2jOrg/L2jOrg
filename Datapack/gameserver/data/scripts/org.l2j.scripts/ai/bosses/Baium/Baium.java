@@ -45,6 +45,8 @@ import org.l2j.gameserver.network.serverpackets.SocialAction;
 
 import ai.AbstractNpcAI;
 
+import java.util.function.Predicate;
+
 /**
  * Baium AI.
  * @author St3eT
@@ -300,14 +302,7 @@ public final class Baium extends AbstractNpcAI
 				}
 				else
 				{
-					for (Creature creature : World.getInstance().getVisibleObjectsInRange(npc, Player.class, 2000))
-					{
-						if (zone.isInsideZone(creature) && !creature.isDead())
-						{
-							addAttackPlayerDesire(npc, (Playable) creature);
-							break;
-						}
-					}
+					World.getInstance().forAnyVisibleObjectInRange(npc, Player.class, 2000, visiblePlayer -> addAttackPlayerDesire(npc, visiblePlayer), visiblePlayer ->  zone.isInsideZone(visiblePlayer) && !visiblePlayer.isDead());
 				}
 				break;
 			}
@@ -335,6 +330,10 @@ public final class Baium extends AbstractNpcAI
 					else
 					{
 						boolean found = false;
+
+						World.getInstance().forAnyVisibleObjectInRange(mob, Playable.class, 1000, playable -> playable.getName(), Predicate.not(Creature::isDead) );
+
+
 						for (Playable creature : World.getInstance().getVisibleObjectsInRange(mob, Playable.class, 1000))
 						{
 							if (zone.isInsideZone(creature) && !creature.isDead())

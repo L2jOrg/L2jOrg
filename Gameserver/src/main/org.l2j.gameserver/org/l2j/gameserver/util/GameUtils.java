@@ -506,7 +506,7 @@ public final class GameUtils {
 
     public static boolean isInsideRangeOfObjectId(WorldObject obj, int targetObjId, int radius) {
         final WorldObject target = World.getInstance().findObject(targetObjId);
-        return (target != null) && (obj.calculateDistance3D(target) <= radius);
+        return (target != null) && MathUtil.isInsideRadius3D(obj, target, radius);
     }
 
     /**

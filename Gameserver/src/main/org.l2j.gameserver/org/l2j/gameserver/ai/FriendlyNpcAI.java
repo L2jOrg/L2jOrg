@@ -2,13 +2,15 @@ package org.l2j.gameserver.ai;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.geoengine.GeoEngine;
-import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 
 import static org.l2j.gameserver.ai.CtrlIntention.*;
+import static org.l2j.gameserver.util.MathUtil.calculateDistance2D;
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 
 /**
@@ -41,7 +43,7 @@ public class FriendlyNpcAI extends AttackableAI {
             return;
         }
 
-        if (_actor.isAllSkillsDisabled() || _actor.isCastingNow() || _actor.isControlBlocked()) {
+        if (actor.isAllSkillsDisabled() || actor.isCastingNow() || actor.isControlBlocked()) {
             clientActionFailed();
             return;
         }
@@ -88,36 +90,15 @@ public class FriendlyNpcAI extends AttackableAI {
         final int combinedCollision = collision + originalAttackTarget.getTemplate().getCollisionRadius();
 
         if (!npc.isMovementDisabled() && (Rnd.get(100) <= 3)) {
-            for (Attackable nearby : World.getInstance().getVisibleObjects(npc, Attackable.class)) {
-                if (npc.isInsideRadius2D(nearby, collision) && (nearby != originalAttackTarget)) {
-                    int newX = combinedCollision + Rnd.get(40);
-                    if (Rnd.nextBoolean()) {
-                        newX += originalAttackTarget.getX();
-                    } else {
-                        newX = originalAttackTarget.getX() - newX;
-                    }
-                    int newY = combinedCollision + Rnd.get(40);
-                    if (Rnd.nextBoolean()) {
-                        newY += originalAttackTarget.getY();
-                    } else {
-                        newY = originalAttackTarget.getY() - newY;
-                    }
 
-                    if (!npc.isInsideRadius2D(newX, newY, 0, collision)) {
-                        final int newZ = npc.getZ() + 30;
-                        if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceWorld())) {
-                            moveTo(newX, newY, newZ);
-                        }
-                    }
-                    return;
-                }
-            }
+            World.getInstance().forAnyVisibleObject(npc, Attackable.class, nearby -> moteToTargetIfNeed(npc, originalAttackTarget, collision, combinedCollision), nearby -> !nearby.equals(originalAttackTarget) && isInsideRadius2D(npc, nearby, collision));
+
         }
         // Dodge if its needed
         if (!npc.isMovementDisabled() && (npc.getTemplate().getDodge() > 0)) {
             if (Rnd.get(100) <= npc.getTemplate().getDodge()) {
-                final double distance2 = npc.calculateDistanceSq2D(originalAttackTarget);
-                if (Math.sqrt(distance2) <= (60 + combinedCollision)) {
+
+                if(isInsideRadius2D(npc, originalAttackTarget, 60 + combinedCollision)) {
                     int posX = npc.getX();
                     int posY = npc.getY();
                     final int posZ = npc.getZ() + 30;
@@ -142,7 +123,7 @@ public class FriendlyNpcAI extends AttackableAI {
             }
         }
 
-        final double dist = npc.calculateDistance2D(originalAttackTarget);
+        final double dist = calculateDistance2D(npc, originalAttackTarget);
         final int dist2 = (int) dist - collision;
         int range = npc.getPhysicalAttackRange() + combinedCollision;
         if (originalAttackTarget.isMoving()) {
@@ -163,19 +144,42 @@ public class FriendlyNpcAI extends AttackableAI {
             return;
         }
 
-        _actor.doAutoAttack(originalAttackTarget);
+        actor.doAutoAttack(originalAttackTarget);
+    }
+
+    private void moteToTargetIfNeed(Attackable npc, Creature originalAttackTarget, int collision, int combinedCollision) {
+        int newX = combinedCollision + Rnd.get(40);
+        if (Rnd.nextBoolean()) {
+            newX += originalAttackTarget.getX();
+        } else {
+            newX = originalAttackTarget.getX() - newX;
+        }
+
+        int newY = combinedCollision + Rnd.get(40);
+        if (Rnd.nextBoolean()) {
+            newY += originalAttackTarget.getY();
+        } else {
+            newY = originalAttackTarget.getY() - newY;
+        }
+
+        if (!npc.isInsideRadius2D(newX, newY, 0, collision)) {
+            final int newZ = npc.getZ() + 30;
+            if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceWorld())) {
+                moveTo(newX, newY, newZ);
+            }
+        }
     }
 
     @Override
     protected void thinkCast() {
-        final WorldObject target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
+        final WorldObject target = _skill.getTarget(actor, _forceUse, _dontMove, false);
         if (checkTargetLost(target)) {
             setTarget(null);
             return;
         }
-        if (maybeMoveToPawn(target, _actor.getMagicalAttackRange(_skill))) {
+        if (maybeMoveToPawn(target, actor.getMagicalAttackRange(_skill))) {
             return;
         }
-        _actor.doCast(_skill, _item, _forceUse, _dontMove);
+        actor.doCast(_skill, _item, _forceUse, _dontMove);
     }
 }

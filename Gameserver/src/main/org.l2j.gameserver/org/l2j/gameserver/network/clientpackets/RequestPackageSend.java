@@ -16,6 +16,8 @@ import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
+
 /**
  * @author -Wooden-
  * @author UnAfraid Thanks mrTJO
@@ -62,7 +64,7 @@ public class RequestPackageSend extends ClientPacket {
         }
 
         final Npc manager = player.getLastFolkNPC();
-        if (((manager == null) || !player.isInsideRadius2D(manager, Npc.INTERACTION_DISTANCE))) {
+        if (((manager == null) || !isInsideRadius2D(player, manager, Npc.INTERACTION_DISTANCE))) {
             return;
         }
 
