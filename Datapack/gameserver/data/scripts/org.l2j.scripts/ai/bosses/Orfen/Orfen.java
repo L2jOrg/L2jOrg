@@ -41,6 +41,8 @@ import org.l2j.gameserver.network.serverpackets.PlaySound;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
+
 /**
  * Orfen's AI
  * @author Emperorc
@@ -211,7 +213,7 @@ public final class Orfen extends AbstractNpcAI
 		{
 			for (Attackable mob : _minions)
 			{
-				if (!npc.isInsideRadius2D(mob, 3000))
+				if (!isInsideRadius2D(npc, mob, 3000))
 				{
 					mob.teleToLocation(npc.getLocation());
 					((Attackable) npc).clearAggroList();
@@ -242,7 +244,7 @@ public final class Orfen extends AbstractNpcAI
 		if (npc.getId() == ORFEN)
 		{
 			final Creature originalCaster = isSummon ? caster.getServitors().values().stream().findFirst().orElse(caster.getPet()) : caster;
-			if ((skill.getEffectPoint() > 0) && (getRandom(5) == 0) && npc.isInsideRadius2D(originalCaster, 1000))
+			if ((skill.getEffectPoint() > 0) && (getRandom(5) == 0) && isInsideRadius2D(npc, originalCaster, 1000))
 			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, TEXT[getRandom(4)], caster.getName());
 				originalCaster.teleToLocation(npc.getLocation());
@@ -290,12 +292,12 @@ public final class Orfen extends AbstractNpcAI
 		final int npcId = npc.getId();
 		if (npcId == ORFEN)
 		{
-			if (!_IsTeleported && ((npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2)))
+			if (!_IsTeleported && ((npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2.)))
 			{
 				_IsTeleported = true;
 				setSpawnPoint(npc, 0);
 			}
-			else if (npc.isInsideRadius2D(attacker, 1000) && !npc.isInsideRadius2D(attacker, 300) && (getRandom(10) == 0))
+			else if (isInsideRadius2D(npc, attacker, 1000) && !isInsideRadius2D(npc, attacker, 300) && (getRandom(10) == 0))
 			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, TEXT[getRandom(3)], attacker.getName());
 				attacker.teleToLocation(npc.getLocation());

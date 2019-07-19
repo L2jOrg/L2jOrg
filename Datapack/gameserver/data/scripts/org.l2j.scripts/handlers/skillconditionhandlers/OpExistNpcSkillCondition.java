@@ -16,36 +16,34 @@
  */
 package handlers.skillconditionhandlers;
 
-import java.util.List;
-
+import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
+
+import java.util.List;
 
 /**
  * @author UnAfraid
  */
 public class OpExistNpcSkillCondition implements ISkillCondition
 {
-	private final List<Integer> _npcIds;
-	private final int _range;
-	private final boolean _isAround;
+	private final List<Integer> npcIds;
+	private final int range;
+	private final boolean isAround;
 	
 	public OpExistNpcSkillCondition(StatsSet params)
 	{
-		_npcIds = params.getList("npcIds", Integer.class);
-		_range = params.getInt("range");
-		_isAround = params.getBoolean("isAround");
+		npcIds = params.getList("npcIds", Integer.class);
+		range = params.getInt("range");
+		isAround = params.getBoolean("isAround");
 	}
 	
 	@Override
-	public boolean canUse(Creature caster, Skill skill, WorldObject target)
-	{
-		final List<Npc> npcs = World.getInstance().getVisibleObjectsInRange(caster, Npc.class, _range);
-		return _isAround == npcs.stream().anyMatch(npc -> _npcIds.contains(npc.getId()));
+	public boolean canUse(Creature caster, Skill skill, WorldObject target) {
+		return isAround == World.getInstance().hasAnyVisibleObjectInRange(caster, Npc.class, range, npc -> npcIds.contains(npc.getId()));
 	}
 }

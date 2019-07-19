@@ -1,21 +1,23 @@
 package org.l2j.gameserver.model.cubic;
 
-import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.CubicTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoCubic;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
+import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.util.MathUtil;
 
 import java.util.Comparator;
 import java.util.concurrent.ScheduledFuture;
 import java.util.stream.Stream;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -126,19 +128,20 @@ public class CubicInstance {
                 final Skill skill = cubicSkill.getSkill();
                 if ((skill != null) && (Rnd.get(100) < cubicSkill.getSuccessRate())) {
                     final Party party = _owner.getParty();
+
                     Stream<Creature> stream;
+
                     if (party != null) {
-                        stream = World.getInstance().getVisibleObjectsInRange(_owner, Creature.class, Config.ALT_PARTY_RANGE, c -> (c.getParty() == party) && _template.validateConditions(this, _owner, c) && cubicSkill.validateConditions(this, _owner, c)).stream();
+                        stream = party.getMembers().stream().filter(c -> MathUtil.isInsideRadius3D(_owner, c, getSettings(CharacterSettings.class).partyRange()) &&  _template.validateConditions(this, _owner, c) && cubicSkill.validateConditions(this, _owner, c)).map(c -> c);
                     } else {
                         stream = _owner.getServitorsAndPets().stream().filter(summon -> _template.validateConditions(this, _owner, summon) && cubicSkill.validateConditions(this, _owner, summon)).map(Creature.class::cast);
-
                     }
 
                     if (_template.validateConditions(this, _owner, _owner) && cubicSkill.validateConditions(this, _owner, _owner)) {
                         stream = Stream.concat(stream, Stream.of(_owner));
                     }
 
-                    final Creature target = stream.sorted(Comparator.comparingInt(Creature::getCurrentHpPercent)).findFirst().orElse(null);
+                    final Creature target = stream.min(Comparator.comparingInt(Creature::getCurrentHpPercent)).orElse(null);
                     if (target != null) {
                         activateCubicSkill(skill, target);
                         break;

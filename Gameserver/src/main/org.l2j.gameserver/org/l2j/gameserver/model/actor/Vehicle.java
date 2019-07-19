@@ -6,10 +6,10 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.VehiclePathPoint;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.VehicleStat;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
@@ -20,11 +20,13 @@ import org.l2j.gameserver.model.zone.ZoneRegion;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
-import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+
+import static org.l2j.gameserver.util.MathUtil.calculateDistance2D;
+import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
 
 /**
  * @author DS
@@ -113,9 +115,9 @@ public abstract class Vehicle extends Creature {
                         m._zDestination = point.getZ();
                         m._heading = 0;
 
-                        final double distance = Math.hypot(point.getX() - getX(), point.getY() - getY());
+                        final double distance = calculateDistance2D(point, this);
                         if (distance > 1) {
-                            setHeading(GameUtils.calculateHeadingFrom(getX(), getY(), point.getX(), point.getY()));
+                            setHeading(calculateHeadingFrom(this, point));
                         }
 
                         m._moveStartTime = GameTimeController.getInstance().getGameTicks();

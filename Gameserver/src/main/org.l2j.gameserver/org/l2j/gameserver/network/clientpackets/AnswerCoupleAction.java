@@ -6,8 +6,9 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExRotation;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
+
+import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
 
 /**
  * @author JIV
@@ -45,10 +46,10 @@ public class AnswerCoupleAction extends ClientPacket {
                 target.sendPacket(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);
                 return;
             }
-            int heading = GameUtils.calculateHeadingFrom(activeChar, target);
+            int heading = calculateHeadingFrom(activeChar, target);
             activeChar.broadcastPacket(new ExRotation(activeChar.getObjectId(), heading));
             activeChar.setHeading(heading);
-            heading = GameUtils.calculateHeadingFrom(target, activeChar);
+            heading =  calculateHeadingFrom(target, activeChar);
             target.setHeading(heading);
             target.broadcastPacket(new ExRotation(target.getObjectId(), heading));
             activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), _actionId));

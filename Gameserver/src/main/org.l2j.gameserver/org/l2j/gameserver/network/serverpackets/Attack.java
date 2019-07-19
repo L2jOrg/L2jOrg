@@ -42,6 +42,10 @@ public class Attack extends ServerPacket {
         return !_hits.isEmpty();
     }
 
+    public boolean isShotUsed() {
+        return _hits.stream().anyMatch(Hit::isShotUsed);
+    }
+
     /**
      * Writes current hit
      *

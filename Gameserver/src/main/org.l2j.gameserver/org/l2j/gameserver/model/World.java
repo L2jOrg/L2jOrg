@@ -15,14 +15,10 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcCreatureSee;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.settings.CharacterSettings;
-import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
@@ -84,8 +80,8 @@ public final class World {
      */
     private final IntMap<Pet> pets = new CHashIntMap<>();
 
-    private final AtomicInteger _partyNumber = new AtomicInteger();
-    private final AtomicInteger _memberInPartyNumber = new AtomicInteger();
+    private final AtomicInteger partyNumber = new AtomicInteger();
+    private final AtomicInteger memberInPartyNumber = new AtomicInteger();
 
     private final WorldRegion[][] regions = new WorldRegion[REGIONS_X + 1][REGIONS_Y + 1];
 
@@ -269,10 +265,10 @@ public final class World {
             return;
         }
 
-        forEachVisibleObject(object, WorldObject.class, wo -> beAwereOfEachOther(object, wo));
+        forEachVisibleObject(object, WorldObject.class, wo -> beAwareOfEachOther(object, wo));
     }
 
-    private void beAwereOfEachOther(WorldObject object, WorldObject wo) {
+    private void beAwareOfEachOther(WorldObject object, WorldObject wo) {
         describeObjectToOther(object, wo);
 
         describeObjectToOther(wo, object);
@@ -356,7 +352,7 @@ public final class World {
 
         newRegion.forEachSurroundingRegion(w -> {
             if (!w.isSurroundingRegion(oldRegion)) {
-                w.forEachObject(WorldObject.class, other -> beAwereOfEachOther(object, other), other -> !object.equals(other) && Objects.equals(other.getInstanceWorld(), object.getInstanceWorld()));
+                w.forEachObject(WorldObject.class, other -> beAwareOfEachOther(object, other), other -> !object.equals(other) && Objects.equals(other.getInstanceWorld(), object.getInstanceWorld()));
             }
         });
     }
@@ -376,14 +372,34 @@ public final class World {
         }
     }
 
-    public WorldObject getVisibleObject(WorldObject reference, int objectId) {
-        var currentRegion = getRegion(reference);
+    public WorldObject findVisibleObject(WorldObject reference, int objectId) {
+        var region = getRegion(reference);
 
-        if(isNull(currentRegion)) {
+        if(isNull(region)) {
             return null;
         }
 
-        return currentRegion.getObjectInSurrounding(reference, objectId, getSettings(CharacterSettings.class).partyRange());
+        return region.findObjectInSurrounding(reference, objectId, getSettings(CharacterSettings.class).partyRange());
+    }
+
+    public <T extends WorldObject> T findAnyVisibleObject(WorldObject reference, Class<T> clazz, int range, boolean includeReference, Predicate<T> filter) {
+        var region = getRegion(reference);
+
+        if(isNull(region)) {
+            return includeReference && clazz.isInstance(reference)? clazz.cast(reference) : null;
+        }
+
+        return region.findAnyObjectInSurrounding(clazz, and(isVisible(reference, range, includeReference), filter));
+    }
+
+    public <T extends WorldObject> T findFirstVisibleObject(WorldObject reference, Class<T> clazz, int range, boolean includeReference, Predicate<T> filter, Comparator<T> comparator) {
+        var region = getRegion(reference);
+
+        if(isNull(region)) {
+            return includeReference && clazz.isInstance(reference)? clazz.cast(reference) : null;
+        }
+
+        return region.findFirstObjectInSurrounding(clazz, and(isVisible(reference, range, includeReference), filter), comparator);
     }
 
     public boolean hasVisiblePlayer(WorldObject object) {
@@ -396,66 +412,104 @@ public final class World {
         return region.hasObjectInSurrounding(Player.class, isVisible(object, getSettings(CharacterSettings.class).partyRange()));
     }
 
-    public <T extends WorldObject> void forEachVisibleObject(WorldObject object, Class<T> clazz, Consumer<T> action) {
-        forEachVisibleObjectInRange(object, clazz, getSettings(CharacterSettings.class).partyRange(), action);
+    public <T extends WorldObject> boolean hasAnyVisibleObjectInRange(WorldObject reference, Class<T> clazz, int range, Predicate<T> filter) {
+        var region = getRegion(reference);
+        if(isNull(region)) {
+            return false;
+        }
+        return region.hasObjectInSurrounding(clazz, and(isVisible(reference, range), filter));
     }
 
-    public <T extends WorldObject> void forEachVisibleObject(WorldObject object, Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
-        var region = getRegion(object);
+    public <T extends WorldObject> void forEachVisibleObject(WorldObject reference, Class<T> clazz, Consumer<T> action) {
+        forEachVisibleObjectInRange(reference, clazz, getSettings(CharacterSettings.class).partyRange(), action);
+    }
+
+    public <T extends WorldObject> void forEachVisibleObject(WorldObject reference, Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
+        var region = getRegion(reference);
         if(isNull(region)) {
             return;
         }
-        region.forEachObjectInSurrounding(clazz, action, filter.and(isVisible(object, getSettings(CharacterSettings.class).partyRange())));
+        region.forEachObjectInSurrounding(clazz, action, and(isVisible(reference, getSettings(CharacterSettings.class).partyRange()), filter));
     }
 
-    public <T extends WorldObject> List<T> getVisibleObjectsInRange(WorldObject object, Class<T> clazz, int range) {
-        final List<T> result = new ArrayList<>();
-        forEachVisibleObjectInRange(object, clazz, range, result::add);
-        return result;
+    public <T extends WorldObject> List<T> getVisibleObjectsInRange(WorldObject reference, Class<T> clazz, int range, Predicate<T> filter) {
+        var region = getRegion(reference);
+
+        if(isNull(region)) {
+            return Collections.emptyList();
+        }
+
+        return region.findAllObjectsInSurrounding(clazz, and(isVisible(reference, range), filter));
     }
 
-    public <T extends WorldObject> List<T> getVisibleObjectsInRange(WorldObject object, Class<T> clazz, int range, Predicate<T> predicate) {
-        final List<T> result = new ArrayList<>();
-        forEachVisibleObjectInRange(object, clazz, range, o ->
-        {
-            if (predicate.test(o)) {
-                result.add(o);
-            }
-        });
-        return result;
+    public void forEachPlayerInRange(WorldObject reference, int range, Consumer<Player> action, Predicate<Player> filter) {
+        forEachVisibleObjectInRange(reference, Player.class, range, action, filter);
     }
 
-    public <T extends WorldObject> void forEachVisibleObjectInRange(WorldObject object, Class<T> clazz, int range, Consumer<T> action) {
-        forEachVisibleObjectInRange(object, clazz, range, action, o -> true);
+    public <T extends WorldObject> void forEachVisibleObjectInRange(WorldObject reference, Class<T> clazz, int range, Consumer<T> action) {
+        forEachVisibleObjectInRange(reference, clazz, range, action, o -> true);
     }
 
-    public <T extends WorldObject> void forEachVisibleObjectInRange(WorldObject object, Class<T> clazz, int range, Consumer<T> action, Predicate<T> filter) {
-        var region = getRegion(object);
+    public <T extends WorldObject> void forEachVisibleObjectInRange(WorldObject reference, Class<T> clazz, int range, Consumer<T> action, Predicate<T> filter) {
+        var region = getRegion(reference);
         if (isNull(region)) {
             return;
         }
 
-        region.forEachObjectInSurrounding(clazz, action, filter.and(isVisible(object, range)));
+        region.forEachObjectInSurrounding(clazz, action, and(isVisible(reference, range), filter));
     }
 
-    private static <T extends WorldObject> Predicate<T> isVisible(WorldObject object, int range) {
-        return visible -> nonNull(visible) && !visible.equals(object) &&
-                Objects.equals(visible.getInstanceWorld(),  object.getInstanceWorld()) && MathUtil.isInsideRadius3D(object, visible, range);
+    public <T extends WorldObject> void forVisibleObjectsInRange(WorldObject reference, Class<T> clazz, int range, int maxObjects, Predicate<T> filter, Consumer<T> action) {
+        var region = getRegion(reference);
+        if(isNull(region)) {
+            return;
+        }
+
+        region.forEachObjectInSurroundingLimiting(clazz, maxObjects, and(isVisible(reference, range), filter), action);
     }
 
-
-    public <T extends WorldObject> void forAnyVisibleObject(WorldObject object, Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
-        forAnyVisibleObjectInRange(object, clazz, getSettings(CharacterSettings.class).partyRange(), action, filter);
-    }
-
-    public <T extends WorldObject> void forAnyVisibleObjectInRange(WorldObject object, Class<T> clazz, int range, Consumer<T> action, Predicate<T> filter) {
-        WorldRegion region = getRegion(object);
+    public <T extends WorldObject> void forVisibleOrderedObjectsInRange(WorldObject reference, Class<T> clazz, int range, int maxObjects, Predicate<T> filter, Comparator<T> comparator, Consumer<? super T> action) {
+        var region = getRegion(reference);
 
         if(isNull(region)) {
             return;
         }
-        region.forAnyObjectInSurrounding(clazz, action, filter.and(isVisible(object, range)));
+
+        region.forEachOrderedObjectInSurrounding(clazz, maxObjects, comparator, and(isVisible(reference, range), filter), action);
     }
+
+    public <T extends WorldObject> void forAnyVisibleObject(WorldObject reference, Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
+        forAnyVisibleObjectInRange(reference, clazz, getSettings(CharacterSettings.class).partyRange(), action, filter);
+    }
+
+    public <T extends WorldObject> void forAnyVisibleObjectInRange(WorldObject reference, Class<T> clazz, int range, Consumer<T> action, Predicate<T> filter) {
+        WorldRegion region = getRegion(reference);
+
+        if(isNull(region)) {
+            return;
+        }
+        region.forAnyObjectInSurrounding(clazz, action, and(isVisible(reference, range), filter));
+    }
+
+    public <T extends WorldObject> boolean checkAnyVisibleObjectInRange(WorldObject reference, Class<T> clazz, int range, Predicate<T> filter) {
+        WorldRegion region = getRegion(reference);
+
+        if(isNull(region)) {
+            return false;
+        }
+
+        return region.hasObjectInSurrounding(clazz, and(isVisible(reference, range), filter));
+    }
+
+    public <T extends WorldObject> long countVisibleObjectInRange(WorldObject reference, Class<T> clazz, int range, Predicate<T> filter) {
+        WorldRegion region = getRegion(reference);
+
+        if(isNull(region)) {
+            return 0;
+        }
+        return region.countObjectInSurrounding(clazz, and(isVisible(reference, range), filter));
+    }
+
 
     /**
      * Calculate the current L2WorldRegions of the object according to its position (x,y). <B><U> Example of use </U> :</B>
@@ -488,56 +542,63 @@ public final class World {
     }
 
     public synchronized void disposeOutOfBoundsObject(WorldObject object) {
-        if (object.isPlayer()) {
-            ((Creature) object).stopMove(((Player) object).getLastServerPosition());
-        } else if (object.isSummon()) {
+        if (isPlayer(object)) {
+            Player player = (Player) object;
+            player.stopMove(player.getLastServerPosition());
+
+        } else if (isSummon(object)) {
             final Summon summon = (Summon) object;
             summon.unSummon(summon.getOwner());
-        } else if (objects.remove(object.getObjectId()) != null) {
-            if (object.isNpc()) {
+
+        } else if (nonNull(objects.remove(object.getObjectId()))) {
+
+            if (isNpc(object)) {
                 final Npc npc = (Npc) object;
-                LOGGER.warn("Deleting npc " + object.getName() + " NPCID[" + npc.getId() + "] from invalid location X:" + object.getX() + " Y:" + object.getY() + " Z:" + object.getZ());
                 npc.deleteMe();
+                LOGGER.warn("Deleting npc {} NPCID[{}] from invalid location X:{} Y:{} Z: {}", object.getName(), npc.getId(), object.getX(), object.getY(), object.getZ());
 
                 final Spawn spawn = npc.getSpawn();
-                if (spawn != null) {
-                    LOGGER.warn("Spawn location X:" + spawn.getX() + " Y:" + spawn.getY() + " Z:" + spawn.getZ() + " Heading:" + spawn.getHeading());
+                if (nonNull(spawn)) {
+                    LOGGER.warn("Spawn location X:{} Y:{} Z:{} Heading:{}", spawn.getX(), spawn.getY(), spawn.getZ(), spawn.getHeading());
                 }
-            } else if (object.isCharacter()) {
+            } else if (isCreature(object)) {
                 LOGGER.warn("Deleting object " + object.getName() + " OID[" + object.getObjectId() + "] from invalid location X:" + object.getX() + " Y:" + object.getY() + " Z:" + object.getZ());
                 ((Creature) object).deleteMe();
             }
 
-            if (object.getWorldRegion() != null) {
+            if (nonNull(object.getWorldRegion())) {
                 object.getWorldRegion().removeVisibleObject(object);
             }
         }
     }
 
-    public void incrementParty() {
-        _partyNumber.incrementAndGet();
+    void incrementParty() {
+        partyNumber.incrementAndGet();
     }
 
-    public void decrementParty() {
-        _partyNumber.decrementAndGet();
+    void decrementParty() {
+        partyNumber.decrementAndGet();
     }
 
-    public void incrementPartyMember() {
-        _memberInPartyNumber.incrementAndGet();
+    void incrementPartyMember() {
+        memberInPartyNumber.incrementAndGet();
     }
 
-    public void decrementPartyMember() {
-        _memberInPartyNumber.decrementAndGet();
+    void decrementPartyMember() {
+        memberInPartyNumber.decrementAndGet();
     }
 
     public int getPartyCount() {
-        return _partyNumber.get();
+        return partyNumber.get();
     }
 
     public int getPartyMemberCount() {
-        return _memberInPartyNumber.get();
+        return memberInPartyNumber.get();
     }
 
+    public static <T extends WorldObject> Predicate<T> and(Predicate<T> p1, Predicate<T> p2) {
+        return p1.and(p2);
+    }
 
     public static World getInstance() {
         return Singleton.INSTANCE;

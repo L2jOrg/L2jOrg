@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.playeractions;
 
 import org.l2j.gameserver.ai.CtrlEvent;
@@ -29,6 +13,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExAskCoupleAction;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
+
+import static org.l2j.gameserver.util.MathUtil.calculateDistance2D;
 
 /**
  * Social Action player action handler.
@@ -126,7 +112,7 @@ public final class SocialAction implements IPlayerActionHandler
 			return;
 		}
 		
-		final int distance = (int) player.calculateDistance2D(target);
+		final int distance = (int) calculateDistance2D(player, target);
 		if ((distance > 125) || (distance < 15) || (player.getObjectId() == target.getObjectId()))
 		{
 			player.sendPacket(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);

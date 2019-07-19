@@ -10,6 +10,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
+
 public class StaticWorldObjectAction implements IActionHandler
 {
 	@Override
@@ -30,7 +32,7 @@ public class StaticWorldObjectAction implements IActionHandler
 		else if (interact)
 		{
 			// Calculate the distance between the Player and the Folk
-			if (!activeChar.isInsideRadius2D(staticObject, Npc.INTERACTION_DISTANCE))
+			if (!isInsideRadius2D(activeChar, staticObject, Npc.INTERACTION_DISTANCE))
 			{
 				// Notify the Player AI with AI_INTENTION_INTERACT
 				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, staticObject);

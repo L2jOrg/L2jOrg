@@ -31,6 +31,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
+
 /**
  * Rabbits event.<br>
  * Chests are hidden at Fantasy Isle and players must use the Rabbit transformation's skills to find and open them.
@@ -223,7 +225,7 @@ public final class Rabbits extends Event implements ScriptEvent
 		}
 		else if (skill.getId() == RABBIT_MAGIC_EYE.getSkillId())
 		{
-			if (npc.isInvisible() && npc.isInsideRadius2D(caster, skill.getAffectRange()))
+			if (npc.isInvisible() && isInsideRadius2D(npc, caster, skill.getAffectRange()))
 			{
 				npc.setInvisible(false);
 			}

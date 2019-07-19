@@ -30,6 +30,7 @@ import org.l2j.gameserver.network.serverpackets.FlyToLocation;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2j.gameserver.network.serverpackets.ValidateLocation;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 
 /**
  * Teleport To Target effect implementation.
@@ -67,7 +68,7 @@ public final class TeleportToSummon extends AbstractEffect
 	{
 		final Summon summon = effected.getActingPlayer().getFirstServitor();
 		
-		if ((_maxDistance > 0) && (effector.calculateDistance2D(summon) >= _maxDistance))
+		if (_maxDistance > 0 && !MathUtil.isInsideRadius2D(effector, summon, (int) _maxDistance))
 		{
 			return;
 		}

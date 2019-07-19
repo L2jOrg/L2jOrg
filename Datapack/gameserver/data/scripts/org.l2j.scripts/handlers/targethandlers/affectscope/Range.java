@@ -32,6 +32,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+import static org.l2j.gameserver.util.MathUtil.calculateDistance2D;
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
+
 /**
  * Range affect scope implementation. Gathers objects in area of target origin (including origin itself).
  * @author Nik
@@ -83,9 +86,9 @@ public class Range implements IAffectScopeHandler
 				final Location worldPosition = activeChar.getActingPlayer().getCurrentSkillWorldPosition();
 				if (worldPosition != null)
 				{
-					World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, (int) (affectRange + activeChar.calculateDistance2D(worldPosition)), c ->
+					World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, (int) (affectRange + calculateDistance2D(activeChar, worldPosition)), c ->
 					{
-						if (!c.isInsideRadius3D(worldPosition, affectRange))
+						if (!isInsideRadius3D(c, worldPosition, affectRange))
 						{
 							return;
 						}

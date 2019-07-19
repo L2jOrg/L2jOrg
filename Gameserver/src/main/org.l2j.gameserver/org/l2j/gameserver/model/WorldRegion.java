@@ -12,11 +12,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.Objects.isNull;
@@ -222,37 +225,48 @@ public final class WorldRegion {
     }
 
     <T extends WorldObject> void forEachObject(Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
-        regionToWorldObjectStream(this)
-                .filter(applyInstanceFilter(clazz, filter))
-                .forEach(object -> action.accept(clazz.cast(object)));
+        regionToWorldObjectStream(this).filter(applyInstanceFilter(clazz, filter)).map(clazz::cast).forEach(action);
     }
 
     <T extends WorldObject> void forEachObjectInSurrounding(Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
-        Arrays.stream(surroundingRegions)
-                .flatMap(WorldRegion::regionToWorldObjectStream)
-                .filter(applyInstanceFilter(clazz, filter))
-                .forEach(object -> action.accept(clazz.cast(object)));
-    }
-
-    private static  <T extends WorldObject> Predicate<? super WorldObject> applyInstanceFilter(Class<T> clazz, Predicate<T> filter) {
-        return object -> clazz.isInstance(object) && filter.test(clazz.cast(object));
+        filteredParallelSurroundingObjects(clazz, filter).forEach(action);
     }
 
     private static Stream<? extends WorldObject> regionToWorldObjectStream(WorldRegion region) {
-        return region.getObjects().values().parallelStream();
+        return region.getObjects().values().parallelStream().unordered();
+    }
+
+    private <T extends WorldObject> Stream<T> filteredParallelSurroundingObjects(Class<T> clazz, Predicate<T> filter) {
+        return Arrays.stream(surroundingRegions)
+                .flatMap(WorldRegion::regionToWorldObjectStream)
+                .filter(applyInstanceFilter(clazz, filter)).map(clazz::cast);
+    }
+
+    private static <T extends WorldObject> Predicate<? super WorldObject> applyInstanceFilter(Class<T> clazz, Predicate<T> filter) {
+        return object -> clazz.isInstance(object) && filter.test(clazz.cast(object));
+    }
+
+    <T extends WorldObject> void forEachObjectInSurroundingLimiting(Class<T> clazz, int limit, Predicate<T> filter, Consumer<T> action) {
+        filteredParallelSurroundingObjects(clazz, filter).limit(limit).forEach(action);
+    }
+
+    <T extends WorldObject> void forEachOrderedObjectInSurrounding(Class<T> clazz, int maxObjects, Comparator<T> comparator, Predicate<T> filter, Consumer<? super T> action) {
+        filteredSurroundingObjects(clazz, filter).sorted(comparator).limit(maxObjects).forEach(action);
+    }
+
+    private <T extends WorldObject> Stream<T> filteredSurroundingObjects(Class<T> clazz, Predicate<T> filter) {
+        return Arrays.stream(surroundingRegions).flatMap(r -> r.getObjects().values().stream()).filter(applyInstanceFilter(clazz, filter)).map(clazz::cast);
     }
 
     <T extends WorldObject> void forAnyObjectInSurrounding(Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
-        Arrays.stream(surroundingRegions)
-                .flatMap(WorldRegion::regionToWorldObjectStream)
-                .filter(applyInstanceFilter(clazz, filter)).findAny().ifPresent(object -> action.accept(clazz.cast(object)));
+        filteredParallelSurroundingObjects(clazz, filter).findAny().ifPresent(action);
     }
 
-    WorldObject getObjectInSurrounding(WorldObject reference, int objectId, int range) {
+    WorldObject findObjectInSurrounding(WorldObject reference, int objectId, int range) {
         WorldObject object;
         for(var region : surroundingRegions) {
             if( nonNull(object = region.getObject(objectId)) ) {
-                if(MathUtil.calculateDistance3DBetween(reference, object) > range) {
+                if(!MathUtil.isInsideRadius3D(reference, object, range)) {
                     return null;
                 }
                 return object;
@@ -261,16 +275,28 @@ public final class WorldRegion {
         return null;
     }
 
+    <T extends WorldObject> List<T> findAllObjectsInSurrounding(Class<T> clazz, Predicate<T> filter) {
+        return filteredSurroundingObjects(clazz, filter).collect(Collectors.toList());
+    }
+
+    <T extends WorldObject> T findAnyObjectInSurrounding(Class<T> clazz, Predicate<T> filter) {
+        return  filteredParallelSurroundingObjects(clazz, filter).findAny().orElse(null);
+    }
+
+    <T extends WorldObject> T findFirstObjectInSurrounding(Class<T> clazz, Predicate<T> filter, Comparator<T> comparator) {
+        return filteredSurroundingObjects(clazz, filter).min(comparator).orElse(null);
+    }
+
     <T extends WorldObject> boolean hasObjectInSurrounding(Class<T> clazz, Predicate<T> filter) {
         return Arrays.stream(surroundingRegions).flatMap(WorldRegion::regionToWorldObjectStream).anyMatch(applyInstanceFilter(clazz, filter));
     }
 
-    WorldObject getObject(int objectId) {
-        return objects.get(objectId);
+    <T extends WorldObject> long countObjectInSurrounding(Class<T> clazz, Predicate<T> filter) {
+        return filteredParallelSurroundingObjects(clazz, filter).count();
     }
 
-    WorldRegion[] getSurroundingRegions() {
-        return surroundingRegions;
+    WorldObject getObject(int objectId) {
+        return objects.get(objectId);
     }
 
     void setSurroundingRegions(WorldRegion[] regions) {
@@ -293,6 +319,7 @@ public final class WorldRegion {
     public String toString() {
         return "(" + _regionX + ", " + _regionY + ")";
     }
+
 
     /**
      * Task of AI notification

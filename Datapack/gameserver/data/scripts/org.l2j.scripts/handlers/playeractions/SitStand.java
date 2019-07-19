@@ -28,6 +28,8 @@ import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.network.serverpackets.ChairSit;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
+
 /**
  * Sit/Stand player action handler.
  * @author UnAfraid
@@ -65,7 +67,7 @@ public final class SitStand implements IPlayerActionHandler
 			return false;
 		}
 		
-		if (!activeChar.isSitting() && (target instanceof StaticWorldObject) && (((StaticWorldObject) target).getType() == 1) && activeChar.isInsideRadius2D(target, StaticWorldObject.INTERACTION_DISTANCE))
+		if (!activeChar.isSitting() && (target instanceof StaticWorldObject) && (((StaticWorldObject) target).getType() == 1) && isInsideRadius2D(activeChar, target, StaticWorldObject.INTERACTION_DISTANCE))
 		{
 			final ChairSit cs = new ChairSit(activeChar, target.getId());
 			activeChar.sendPacket(cs);

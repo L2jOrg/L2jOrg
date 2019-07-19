@@ -61,7 +61,7 @@ public class Party extends AbstractPlayerGroup {
     private boolean _pendingInvitation = false;
     private long _pendingInviteTimeout;
     private int _partyLvl = 0;
-    private volatile PartyDistributionType _distributionType = PartyDistributionType.FINDERS_KEEPERS;
+    private volatile PartyDistributionType _distributionType;
     private volatile PartyDistributionType _changeRequestDistributionType;
     private volatile Future<?> _changeDistributionTypeRequestTask = null;
     private volatile Set<Integer> _changeDistributionTypeAnswers = null;
@@ -502,12 +502,10 @@ public class Party extends AbstractPlayerGroup {
      */
     public void disbandParty() {
         _disbanding = true;
-        if (_members != null) {
-            broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_HAS_DISPERSED));
-            for (Player member : _members) {
-                if (member != null) {
-                    removePartyMember(member, MessageType.NONE);
-                }
+        broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_HAS_DISPERSED));
+        for (Player member : _members) {
+            if (member != null) {
+                removePartyMember(member, MessageType.NONE);
             }
         }
         World.getInstance().decrementParty();

@@ -10,6 +10,7 @@ import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableKill;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2j.gameserver.util.MathUtil;
 
 import java.util.Arrays;
 import java.util.List;
@@ -57,7 +58,7 @@ public class HuntDailyMissionHandler extends AbstractDailyMissionHandler {
         } else {
             var channel = party.getCommandChannel();
             final List<Player> members = isNull(channel) ? party.getMembers() : channel.getMembers();
-            members.stream().filter(member -> member.calculateDistance3D(monster) <= Config.ALT_PARTY_RANGE).forEach(this::onKillProgress);
+            members.stream().filter(member -> MathUtil.isInsideRadius3D(member, monster,  Config.ALT_PARTY_RANGE)).forEach(this::onKillProgress);
         }
     }
 

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.conditions;
 
-import org.l2j.commons.util.CommonUtil;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
@@ -51,13 +51,9 @@ public class ConditionPlayerRangeFromNpc extends Condition {
     @Override
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
         boolean existNpc = false;
-        if ((_npcIds != null) && (_npcIds.length > 0) && (_radius > 0)) {
-            for (Npc target : World.getInstance().getVisibleObjectsInRange(effector, Npc.class, _radius)) {
-                if (CommonUtil.contains(_npcIds, target.getId())) {
-                    existNpc = true;
-                    break;
-                }
-            }
+        if(!Util.isNullOrEmpty(_npcIds) && _radius > 0) {
+            existNpc = World.getInstance().hasAnyVisibleObjectInRange(effector, Npc.class, _radius, npc -> Util.contains(_npcIds, npc.getId()));
+
         }
         return existNpc == _val;
     }

@@ -16,12 +16,14 @@
  */
 package org.l2j.gameserver.model.conditions;
 
-import org.l2j.commons.util.CommonUtil;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
+
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * Condition which checks if you are within the given range of a summoned by you npc.
@@ -32,32 +34,27 @@ public class ConditionPlayerRangeFromSummonedNpc extends Condition {
     /**
      * NPC Ids.
      */
-    private final int[] _npcIds;
+    private final int[] npcIds;
     /**
      * Radius to check.
      */
-    private final int _radius;
+    private final int radius;
     /**
      * Expected value.
      */
     private final boolean _val;
 
     public ConditionPlayerRangeFromSummonedNpc(int[] npcIds, int radius, boolean val) {
-        _npcIds = npcIds;
-        _radius = radius;
+        this.npcIds = npcIds;
+        this.radius = radius;
         _val = val;
     }
 
     @Override
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
         boolean existNpc = false;
-        if ((_npcIds != null) && (_npcIds.length > 0) && (_radius > 0)) {
-            for (Npc target : World.getInstance().getVisibleObjectsInRange(effector, Npc.class, _radius)) {
-                if (CommonUtil.contains(_npcIds, target.getId()) && (effector == target.getSummoner())) {
-                    existNpc = true;
-                    break;
-                }
-            }
+        if(!isNullOrEmpty(npcIds) && radius > 0) {
+            existNpc = World.getInstance().hasAnyVisibleObjectInRange(effector, Npc.class, radius, npc -> Util.contains(npcIds, npc.getId()) && effector == npc.getSummoner());
         }
         return existNpc == _val;
     }

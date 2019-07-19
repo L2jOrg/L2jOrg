@@ -29,6 +29,8 @@ import org.l2j.gameserver.network.serverpackets.FlyToLocation;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2j.gameserver.network.serverpackets.ValidateLocation;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
+
 /**
  * Teleport player/party to summoned npc effect implementation.
  * @author Nik
@@ -76,7 +78,7 @@ public final class TeleportToNpc extends AbstractEffect
 	
 	private void teleport(Creature effected, ILocational location)
 	{
-		if (effected.isInsideRadius2D(location, 900))
+		if (isInsideRadius2D(effected, location, 900))
 		{
 			effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			effected.broadcastPacket(new FlyToLocation(effected, location, FlyType.DUMMY));

@@ -35,6 +35,8 @@ import org.l2j.gameserver.util.GameUtils;
 
 import java.util.StringTokenizer;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
+
 /**
  * Sell Buffs voice command
  * @author St3eT
@@ -340,7 +342,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 					final Player seller = World.getInstance().findPlayer(objId);
 					if (seller != null)
 					{
-						if (!seller.isSellingBuffs() || !activeChar.isInsideRadius3D(seller, Npc.INTERACTION_DISTANCE))
+						if (!seller.isSellingBuffs() || !isInsideRadius3D(activeChar, seller, Npc.INTERACTION_DISTANCE))
 						{
 							return false;
 						}

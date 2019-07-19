@@ -448,6 +448,7 @@ public final class CommonUtil
 	 * @param obj - the integer to search for
 	 * @return {@code true} if the {@code array} contains the {@code obj}, {@code false} otherwise
 	 */
+	@Deprecated
 	public static boolean contains(int[] array, int obj)
 	{
 		for (int element : array)

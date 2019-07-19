@@ -37,6 +37,7 @@ import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
+import org.l2j.gameserver.util.MathUtil;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -257,7 +258,7 @@ public final class QueenAnt extends AbstractNpcAI
 				{
 					((Monster) npc).getMinionList().spawnMinions(npc.getParameters().getMinionList("Privates"));
 				}
-				_task = ThreadPoolManager.getInstance().scheduleAtFixedRate(new QueenAntTask(), 5 * 1000, 5 * 1000);
+				_task = ThreadPoolManager.scheduleAtFixedRate(new QueenAntTask(), 5 * 1000, 5 * 1000);
 				break;
 			}
 		}
@@ -403,7 +404,7 @@ public final class QueenAnt extends AbstractNpcAI
 				_task.cancel(false);
 				_task = null;
 			}
-			else if (_queen.calculateDistance2D(QUEEN_X, QUEEN_Y, QUEEN_Z) > 2000.)
+			else if (MathUtil.isInsideRadius2D(_queen, QUEEN_X, QUEEN_Y, 2000))
 			{
 				_queen.clearAggroList();
 				_queen.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(QUEEN_X, QUEEN_Y, QUEEN_Z, 0));

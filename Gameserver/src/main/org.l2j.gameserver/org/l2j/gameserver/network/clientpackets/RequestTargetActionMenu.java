@@ -26,7 +26,7 @@ public class RequestTargetActionMenu extends ClientPacket {
         }
 
         if (_type == 1) {
-            var object = World.getInstance().getVisibleObject(player, _objectId);
+            var object = World.getInstance().findVisibleObject(player, _objectId);
             player.setTarget(object);
         }
     }

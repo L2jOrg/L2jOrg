@@ -61,17 +61,18 @@ public final class GetAgro extends AbstractEffect
 			// Monsters from the same clan should assist.
 			final NpcTemplate template = ((Attackable) effected).getTemplate();
 			final Set<Integer> clans = template.getClans();
-			if (clans != null)
-			{
-				for (Attackable nearby : World.getInstance().getVisibleObjectsInRange(effected, Attackable.class, template.getClanHelpRange()))
-				{
-					if (!nearby.isMovementDisabled() && nearby.getTemplate().isClan(clans))
-					{
-						nearby.addDamageHate(effector, 1, 200);
-						nearby.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, effector);
-					}
-				}
+			if (clans != null) {
+				World.getInstance().forEachVisibleObjectInRange(effected, Attackable.class, template.getClanHelpRange(), attackable -> receiveHate(attackable, effector), nearby -> canReceiveHate(nearby, clans));
 			}
 		}
+	}
+
+	private boolean canReceiveHate(Attackable nearby, Set<Integer> clans) {
+		return !nearby.isMovementDisabled() && nearby.getTemplate().isClan(clans);
+	}
+
+	private void receiveHate(Attackable attackable, Creature effector) {
+		attackable.addDamageHate(effector, 1, 200);
+		attackable.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, effector);
 	}
 }

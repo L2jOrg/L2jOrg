@@ -6,14 +6,17 @@ import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.World;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
+
+import java.util.Comparator;
 
 public class Defender extends Attackable {
     private Castle _castle = null; // the castle which the instance should defend
@@ -132,32 +135,28 @@ public class Defender extends Attackable {
     @Override
     public void useMagic(Skill skill) {
         if (!skill.isBad()) {
-            Creature target = this;
-            double lowestHpValue = Double.MAX_VALUE;
-            for (Creature nearby : World.getInstance().getVisibleObjectsInRange(this, Creature.class, skill.getCastRange())) {
-                if ((nearby == null) || nearby.isDead() || !GeoEngine.getInstance().canSeeTarget(this, nearby)) {
-                    continue;
-                }
-                if (nearby instanceof Defender) {
-                    final double targetHp = nearby.getCurrentHp();
-                    if (lowestHpValue > targetHp) {
-                        target = nearby;
-                        lowestHpValue = targetHp;
-                    }
-                } else if (nearby.isPlayer()) {
-                    final Player player = (Player) nearby;
-                    if ((player.getSiegeState() == 2) && !player.isRegisteredOnThisSiegeField(getScriptValue())) {
-                        final double targetHp = nearby.getCurrentHp();
-                        if (lowestHpValue > targetHp) {
-                            target = nearby;
-                            lowestHpValue = targetHp;
-                        }
-                    }
-                }
-            }
+            Creature target = World.getInstance().findFirstVisibleObject(this, Creature.class, skill.getCastRange(), false, this::isSkillTargetable, Comparator.comparingDouble(Creature::getCurrentHp));
             setTarget(target);
         }
         super.useMagic(skill);
+    }
+
+    private boolean isSkillTargetable(Creature creature) {
+        if(creature.isDead() || !GeoEngine.getInstance().canSeeTarget(this, creature)) {
+            return false;
+        }
+
+        if(creature instanceof Defender) {
+            return true;
+        }
+
+        if(GameUtils.isPlayer(creature)) {
+            Player player = (Player) creature;
+            return player.getSiegeState() == 2 && ! player.isRegisteredOnThisSiegeField(getScriptValue());
+        }
+
+        return false;
+
     }
 
     @Override

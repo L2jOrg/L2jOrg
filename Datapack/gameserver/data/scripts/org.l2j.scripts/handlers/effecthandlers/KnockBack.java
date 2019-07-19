@@ -32,6 +32,8 @@ import org.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2j.gameserver.network.serverpackets.ValidateLocation;
 import org.l2j.gameserver.util.GameUtils;
 
+import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
+
 /**
  * Check if this effect is not counted as being stunned.
  * @author UnAfraid
@@ -117,7 +119,7 @@ public final class KnockBack extends AbstractEffect
 		effected.broadcastPacket(new FlyToLocation(effected, loc, _type, _speed, _delay, _animationSpeed));
 		if (_knockDown)
 		{
-			effected.setHeading(GameUtils.calculateHeadingFrom(effected, effector));
+			effected.setHeading(calculateHeadingFrom(effected, effector));
 		}
 		effected.setXYZ(loc);
 		effected.broadcastPacket(new ValidateLocation(effected));

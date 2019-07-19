@@ -1,10 +1,10 @@
 package org.l2j.gameserver.data.xml.impl;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.options.EnchantOptions;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
-import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -59,7 +59,7 @@ public class EnchantItemOptionsData extends GameXmlReader {
 
                                 for (byte i = 0; i < 3; i++) {
                                     final Node att = cd.getAttributes().getNamedItem("option" + (i + 1));
-                                    if ((att != null) && GameUtils.isDigit(att.getNodeValue())) {
+                                    if ((att != null) && Util.isNumeric(att.getNodeValue())) {
                                         op.setOption(i, parseInteger(att));
                                     }
                                 }

@@ -1160,7 +1160,7 @@ public class Siege implements Siegable {
                         continue;
                     }
 
-                    distance = MathUtil.calculateDistance3DBetween(ct, spawn);
+                    distance = MathUtil.calculateDistance3D(ct, spawn);
 
                     if (distance < distanceClosest) {
                         closestCt = ct;

@@ -35,6 +35,8 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
+
 /**
  * Olympiad Manager AI.
  * @author St3eT
@@ -283,7 +285,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				
 				activeChar.sendPacket(new ExOlympiadMatchList());
 			}
-			else if ((olymanager == null) || (olymanager.getId() != MANAGER) || (!activeChar.inObserverMode() && !activeChar.isInsideRadius2D(olymanager, 300)))
+			else if ((olymanager == null) || (olymanager.getId() != MANAGER) || (!activeChar.inObserverMode() && !isInsideRadius2D(activeChar, olymanager, 300)))
 			{
 				return false;
 			}

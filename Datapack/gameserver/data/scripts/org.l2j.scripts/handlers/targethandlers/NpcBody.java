@@ -23,6 +23,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.util.MathUtil;
 
 /**
  * Target dead monster.
@@ -65,7 +66,7 @@ public class NpcBody implements ITargetTypeHandler
 			// Check for cast range if character cannot move. TODO: char will start follow until within castrange, but if his moving is blocked by geodata, this msg will be sent.
 			if (dontMove)
 			{
-				if (activeChar.calculateDistance2D(cha) > skill.getCastRange())
+				if (!MathUtil.isInsideRadius2D(activeChar, cha, skill.getCastRange()))
 				{
 					if (sendMessage)
 					{

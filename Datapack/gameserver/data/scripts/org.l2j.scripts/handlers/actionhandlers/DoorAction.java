@@ -5,13 +5,14 @@ import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.holders.DoorRequestHolder;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
+
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 public class DoorAction implements IActionHandler
 {
@@ -38,7 +39,7 @@ public class DoorAction implements IActionHandler
             }
             else if ((activeChar.getClan() != null) && (clanHall != null) && (activeChar.getClanId() == clanHall.getOwnerId()))
             {
-                if (!door.isInsideRadius2D(activeChar, Npc.INTERACTION_DISTANCE))
+                if (!isInsideRadius2D(door, activeChar, Npc.INTERACTION_DISTANCE))
                 {
                     activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
                 }
@@ -57,7 +58,7 @@ public class DoorAction implements IActionHandler
             }
             else if ((activeChar.getClan() != null) && (((Door) target).getFort() != null) && (activeChar.getClan() == ((Door) target).getFort().getOwnerClan()) && ((Door) target).isOpenableBySkill() && !((Door) target).getFort().getSiege().isInProgress())
             {
-                if (!((Creature) target).isInsideRadius2D(activeChar, Npc.INTERACTION_DISTANCE))
+                if (!isInsideRadius2D(target, activeChar, Npc.INTERACTION_DISTANCE))
                 {
                     activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
                 }

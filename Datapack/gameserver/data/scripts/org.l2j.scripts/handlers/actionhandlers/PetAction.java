@@ -5,7 +5,6 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -13,6 +12,8 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSummonTalk;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PetStatusShow;
+
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 public class PetAction implements IActionHandler
 {
@@ -49,7 +50,7 @@ public class PetAction implements IActionHandler
 					activeChar.onActionRequest();
 				}
 			}
-			else if (!((Creature) target).isInsideRadius2D(activeChar, 150))
+			else if (!isInsideRadius2D(target, activeChar, 150))
 			{
 				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
 				{

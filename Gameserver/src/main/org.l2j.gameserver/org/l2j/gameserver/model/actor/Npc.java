@@ -1343,11 +1343,6 @@ public class Npc extends Creature {
         _killingBlowWeaponId = weaponId;
     }
 
-    @Override
-    public int getMinShopDistance() {
-        return Config.SHOP_MIN_RANGE_FROM_NPC;
-    }
-
     /**
      * @return The player's object Id this NPC is cloning.
      */

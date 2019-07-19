@@ -1022,7 +1022,7 @@ public final class Skill implements IIdentifiable {
         if (handler != null) {
             try {
                 final List<WorldObject> result = new LinkedList<>();
-                handler.forEachAffected(activeChar, target, this, o -> result.add(o));
+                handler.forEachAffected(activeChar, target, this, result::add);
                 return result;
             } catch (Exception e) {
                 LOGGER.warn("Exception in Skill.getTargetsAffected(): " + e.getMessage(), e);

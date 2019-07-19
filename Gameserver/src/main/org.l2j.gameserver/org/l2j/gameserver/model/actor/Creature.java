@@ -1,14 +1,14 @@
 package org.l2j.gameserver.model.actor;
 
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.EmptyQueue;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.GameTimeController;
-import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.ai.CtrlEvent;
-import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.AttackableAI;
 import org.l2j.gameserver.ai.CreatureAI;
+import org.l2j.gameserver.ai.CtrlEvent;
+import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.CategoryData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
@@ -20,8 +20,9 @@ import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.instancemanager.TimersManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.*;
-import org.l2j.gameserver.model.actor.instance.*;
+import org.l2j.gameserver.model.actor.instance.FriendlyNpc;
 import org.l2j.gameserver.model.actor.instance.Monster;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Trap;
 import org.l2j.gameserver.model.actor.stat.CharStat;
 import org.l2j.gameserver.model.actor.status.CharStatus;
@@ -70,6 +71,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
+import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
 
 /**
  * Mother class of all character objects of the world (PC, NPC...)<br>
@@ -873,7 +875,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
             // Make sure that char is facing selected target
             // also works: setHeading(Util.convertDegreeToClientHeading(Util.calculateAngleFrom(this, target)));
-            setHeading(GameUtils.calculateHeadingFrom(this, target));
+            setHeading(calculateHeadingFrom(this, target));
 
             // Always try to charge soulshots.
             if (!isChargedShot(ShotType.SOULSHOTS))
@@ -971,38 +973,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             final double headingAngle = GameUtils.convertHeadingToDegree(getHeading());
             final int maxRadius = _stat.getPhysicalAttackRadius();
             final int physicalAttackAngle = _stat.getPhysicalAttackAngle();
-            for (Creature obj : World.getInstance().getVisibleObjectsInRange(this, Creature.class, maxRadius)) {
-                // Skip main target.
-                if (obj == target) {
-                    continue;
-                }
 
-                // Skip dead or fake dead target.
-                if (obj.isAlikeDead()) {
-                    continue;
-                }
-
-                // Check if target is auto attackable.
-                if (!obj.isAutoAttackable(this)) {
-                    continue;
-                }
-
-                // Check if target is within attack angle.
-                if (Math.abs(calculateDirectionTo(obj) - headingAngle) > physicalAttackAngle) {
-                    continue;
-                }
-
-                // Launch a simple attack against the additional target.
-                hit = generateHit(obj, weapon, shotConsumed, false);
-                attack.addHit(hit);
-                shotConsumed = hit.isShotUsed();
-                if (--attackCountMax <= 0) {
-                    break;
-                }
-            }
+            World.getInstance().forVisibleObjectsInRange(this, Creature.class, maxRadius, attackCountMax, creature -> canBeAttacked(target, headingAngle, physicalAttackAngle, creature),
+                    creature -> attack.addHit(generateHit(creature, weapon, attack.isShotUsed(), false)));
         }
 
         return attack;
+    }
+
+    private boolean canBeAttacked(Creature target, double headingAngle, int physicalAttackAngle, Creature creature) {
+        return !creature.equals(target) && !creature.isAlikeDead() && creature.isAutoAttackable(this) && Math.abs(calculateDirectionTo(creature) -headingAngle) <= physicalAttackAngle;
     }
 
     private Hit generateHit(Creature target, Weapon weapon, boolean shotConsumed, boolean halfDamage) {
@@ -2850,7 +2830,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         m._heading = 0; // initial value for coordinate sync
         // Does not broke heading on vertical movements
         if (!verticalMovementOnly) {
-            setHeading(GameUtils.calculateHeadingFrom(cos, sin));
+            setHeading(calculateHeadingFrom(cos, sin));
         }
 
         m._moveStartTime = GameTimeController.getInstance().getGameTicks();
@@ -2917,7 +2897,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         final double distance = Math.hypot(m._xDestination - curX, m._yDestination - curY);
         // Calculate and set the heading of the Creature
         if (distance != 0) {
-            setHeading(GameUtils.calculateHeadingFrom(curX, curY, m._xDestination, m._yDestination));
+            setHeading(calculateHeadingFrom(curX, curY, m._xDestination, m._yDestination));
         }
 
         // Calculate the number of ticks between the current position and the destination
@@ -4181,9 +4161,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return true;
     }
 
-    public int getMinShopDistance() {
-        return 0;
-    }
 
     public Collection<SkillCaster> getSkillCasters() {
         return _skillCasters.values();

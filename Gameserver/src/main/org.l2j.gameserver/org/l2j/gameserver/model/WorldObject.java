@@ -23,6 +23,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
+import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
 
 /**
  * Base class for all interactive objects.
@@ -630,7 +631,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @return the angle this object has to turn to have the given object in front of it
      */
     public double calculateDirectionTo(ILocational target) {
-        int heading = GameUtils.calculateHeadingFrom(this, target) - _heading;
+        int heading = calculateHeadingFrom(this, target) - _heading;
         if (heading < 0) {
             heading += 65535;
         }

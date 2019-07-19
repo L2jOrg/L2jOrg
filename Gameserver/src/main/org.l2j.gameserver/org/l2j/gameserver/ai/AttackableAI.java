@@ -822,28 +822,20 @@ public class AttackableAI extends CreatureAI {
 
         Stream<Creature> stream;
         if (isBad) {
+
             //@formatter:off
-            stream = npc.getAggroList().values().stream()
+            return npc.getAggroList().values().stream()
                     .map(AggroInfo::getAttacker)
                     .filter(c -> checkSkillTarget(skill, c))
-                    .sorted(Comparator.comparingInt(npc::getHating).reversed());
+                    .max(Comparator.comparingInt(npc::getHating)).orElse(null);
             //@formatter:on
         } else {
-            stream = World.getInstance().getVisibleObjectsInRange(npc, Creature.class, range, c -> checkSkillTarget(skill, c)).stream();
 
-            // Maybe add self to the list of targets since getObjects doesn't return yourself.
-            if (checkSkillTarget(skill, npc)) {
-                stream = Stream.concat(stream, Stream.of(npc));
-            }
-
-            // For heal skills sort by hp missing.
             if (skill.hasEffectType(EffectType.HEAL)) {
-                stream = stream.sorted(Comparator.comparingInt(Creature::getCurrentHpPercent));
+                return World.getInstance().findFirstVisibleObject(npc, Creature.class, range, true, c -> checkSkillTarget(skill, c), Comparator.comparingInt(Creature::getCurrentHpPercent));
             }
+            return World.getInstance().findAnyVisibleObject(npc, Creature.class, range, true, c -> checkSkillTarget(skill, c));
         }
-
-        // Return any target.
-        return stream.findFirst().orElse(null);
 
     }
 
@@ -864,10 +856,9 @@ public class AttackableAI extends CreatureAI {
         //@formatter:off
         return npc.getAggroList().values().stream()
                 .filter(a -> checkTarget(a.getAttacker()))
-                .sorted(Comparator.comparingInt(AggroInfo::getHate))
+                .min(Comparator.comparingInt(AggroInfo::getHate))
                 .map(AggroInfo::getAttacker)
-                .findFirst()
-                .orElse(npc.isAggressive() ? World.getInstance().getVisibleObjectsInRange(npc, Creature.class, npc.getAggroRange(), this::checkTarget).stream().findAny().orElse(null) : null);
+                .orElse(npc.isAggressive() ? World.getInstance().findAnyVisibleObject(npc, Creature.class, npc.getAggroRange(), false, this::checkTarget) : null);
         //@formatter:on
     }
 

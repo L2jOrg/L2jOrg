@@ -3962,21 +3962,7 @@ public final class Player extends Playable {
     }
 
     public boolean canOpenPrivateStore() {
-        if ((Config.SHOP_MIN_RANGE_FROM_NPC > 0) || (Config.SHOP_MIN_RANGE_FROM_PLAYER > 0)) {
-            for (Creature cha : World.getInstance().getVisibleObjectsInRange(this, Creature.class, 1000)) {
-                if (GameUtils.checkIfInRange(cha.getMinShopDistance(), this, cha, true)) {
-                    sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE));
-                    return false;
-                }
-            }
-        }
-
         return !_isSellingBuffs && !isAlikeDead() && !_inOlympiadMode && !isMounted() && !isInsideZone(ZoneId.NO_STORE) && !isCastingNow();
-    }
-
-    @Override
-    public int getMinShopDistance() {
-        return _waitTypeSitting ? Config.SHOP_MIN_RANGE_FROM_PLAYER : 0;
     }
 
     public void tryOpenPrivateBuyStore() {

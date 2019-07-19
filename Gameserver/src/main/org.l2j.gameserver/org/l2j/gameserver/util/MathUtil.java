@@ -91,10 +91,10 @@ public final class MathUtil {
     }
 
     public static double calculateDistance2D(int x1, int y1, int x2, int y2) {
-        return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+        return Math.hypot(x1 - x2, y1 - y2);
     }
 
-    public static double calculateDistance3DBetween(ILocational object, ILocational other) {
+    public static double calculateDistance3D(ILocational object, ILocational other) {
         return calculateDistance3D(object.getX(), object.getY(), object.getZ(), other.getX(), other.getY(), other.getZ());
     }
 
@@ -102,11 +102,35 @@ public final class MathUtil {
         return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2) + Math.pow(z1 - z2, 2));
     }
 
-    public static boolean isInsideRadius3D(ILocational object, ILocational visible, int range) {
-        return calculateDistance3DBetween(object, visible) <= range;
+    public static boolean isInsideRadius3D(ILocational object, ILocational other, int range) {
+        return calculateDistance3D(object, other) <= range;
     }
 
     public static boolean isInsideRadius3D(ILocational object, int x, int y, int z, int range) {
         return calculateDistance3D(object.getX(), object.getY(), object.getZ(), x, y, z) <= range;
+    }
+
+    public static int calculateHeadingFrom(ILocational from, ILocational to) {
+        return calculateHeadingFrom(from.getX(), from.getY(), to.getX(), to.getY());
+    }
+
+    public static int calculateHeadingFrom(int fromX, int fromY, int toX, int toY) {
+        double angleTarget = Math.toDegrees(Math.atan2(toY - fromY, toX - fromX));
+        if (angleTarget < 0) {
+            angleTarget += 360;
+        }
+        return (int) (angleTarget * 182.044444444);
+    }
+
+    public static int calculateHeadingFrom(double dx, double dy) {
+        double angleTarget = Math.toDegrees(Math.atan2(dy, dx));
+        if (angleTarget < 0) {
+            angleTarget += 360;
+        }
+        return (int) (angleTarget * 182.044444444);
+    }
+
+    public static double convertHeadingToDegree(int clientHeading) {
+        return clientHeading / 182.044444444;
     }
 }

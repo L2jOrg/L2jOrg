@@ -283,7 +283,7 @@ public class Q00255_Tutorial extends Quest {
         final QuestState qs = getQuestState(killer, false);
         if ((qs != null) && qs.isMemoState(2) && !hasQuestItems(killer, BLUE_GEM) && (getRandom(100) < 30)) {
             // check for too many gems on ground
-            var counter = World.getInstance().getVisibleObjectsInRange(killer, Item.class, 1500).stream().filter(item -> item.getId() == BLUE_GEM).count();
+            var counter = World.getInstance().countVisibleObjectInRange(killer, Item.class, 1500, item -> item.getId() == BLUE_GEM);
             if (counter < 10) // do not drop if more than 10
             {
                 npc.dropItem(killer, BLUE_GEM, 1);

@@ -22,6 +22,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.util.MathUtil;
 
 /**
  * @author Mobius
@@ -39,7 +40,7 @@ public class OpCheckCastRangeSkillCondition implements ISkillCondition
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
 		return (target != null) //
-			&& (caster.calculateDistance3D(target) >= _distance) //
+			&& (!MathUtil.isInsideRadius3D(caster,  target, _distance)) //
 			&& GeoEngine.getInstance().canSeeTarget(caster, target);
 	}
 }

@@ -3,7 +3,6 @@ package org.l2j.gameserver.data.xml.impl;
 import org.l2j.gameserver.model.SiegeScheduleDate;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.util.GameXmlReader;
-import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -15,6 +14,8 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+
+import static org.l2j.commons.util.Util.isNumeric;
 
 /**
  * @author UnAfraid
@@ -58,7 +59,7 @@ public class SiegeScheduleData extends GameXmlReader {
                                 final String key = node.getNodeName();
                                 String val = node.getNodeValue();
                                 if ("day".equals(key)) {
-                                    if (!GameUtils.isDigit(val)) {
+                                    if (!isNumeric(val)) {
                                         val = Integer.toString(getValueForField(val));
                                     }
                                 }

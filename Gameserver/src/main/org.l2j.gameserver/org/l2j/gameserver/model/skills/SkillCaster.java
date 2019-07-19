@@ -48,6 +48,7 @@ import java.util.Objects;
 import java.util.concurrent.ScheduledFuture;
 
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
+import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
 
 /**
  * @author Nik
@@ -535,7 +536,7 @@ public class SkillCaster implements Runnable {
 
         if (target != caster) {
             // Face the target
-            caster.setHeading(GameUtils.calculateHeadingFrom(caster, target));
+            caster.setHeading(calculateHeadingFrom(caster, target));
             caster.broadcastPacket(new ExRotation(caster.getObjectId(), caster.getHeading())); // TODO: Not sent in retail. Probably moveToPawn is enough
 
             // Send MoveToPawn packet to trigger Blue Bubbles on target become Red, but don't do it while (double) casting, because that will screw up animation... some fucked up stuff, right?

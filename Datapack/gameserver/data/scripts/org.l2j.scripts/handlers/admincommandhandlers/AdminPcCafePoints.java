@@ -26,7 +26,6 @@ import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GameUtils;
 
-import java.util.Collection;
 import java.util.StringTokenizer;
 
 /**
@@ -57,7 +56,7 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 					return false;
 				}
 				
-				int value = 0;
+				int value;
 				try
 				{
 					value = Integer.parseInt(st.nextToken());
@@ -133,19 +132,20 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 						{
 							range = Integer.parseInt(st.nextToken());
 						}
-						catch (Exception e)
+						catch (Exception ignored)
 						{
 						}
+
+						final var points = value;
 						
 						if (range <= 0)
 						{
-							final int count = increaseForAll(World.getInstance().getPlayers(), value);
-							BuilderUtil.sendSysMessage(activeChar, "You increased PC Cafe point(s) of all online players (" + count + ") by " + value + ".");
+							World.getInstance().getPlayers().forEach(player -> increasePoints(player, points));
+							BuilderUtil.sendSysMessage(activeChar, "You increased PC Cafe point(s) of all online players by " + value + ".");
 						}
-						else if (range > 0)
-						{
-							final int count = increaseForAll(World.getInstance().getVisibleObjectsInRange(activeChar, Player.class, range), value);
-							BuilderUtil.sendSysMessage(activeChar, "You increased PC Cafe point(s) of all players (" + count + ") in range " + range + " by " + value + ".");
+						else {
+							World.getInstance().forEachPlayerInRange(activeChar, range, player -> increasePoints(player, points), this::canReceivePoints);
+							BuilderUtil.sendSysMessage(activeChar, "You increased PC Cafe point(s) of all players  in range " + range + " by " + value + ".");
 						}
 						break;
 					}
@@ -155,32 +155,22 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 		}
 		return true;
 	}
-	
-	private int increaseForAll(Collection<Player> playerList, int value)
-	{
-		int counter = 0;
-		for (Player temp : playerList)
-		{
-			if ((temp != null) && (temp.isOnlineInt() == 1))
-			{
-				if (temp.getPcCafePoints() == Integer.MAX_VALUE)
-				{
-					continue;
-				}
-				
-				int pcCafeCount = Math.min(temp.getPcCafePoints() + value, Integer.MAX_VALUE);
-				if (pcCafeCount < 0)
-				{
-					pcCafeCount = Integer.MAX_VALUE;
-				}
-				temp.setPcCafePoints(pcCafeCount);
-				temp.sendMessage("Admin increased your PC Cafe point(s) by " + value + "!");
-				temp.sendPacket(new ExPCCafePointInfo(pcCafeCount, value, 1));
-				counter++;
-			}
-		}
-		return counter;
+
+	private boolean canReceivePoints(Player player) {
+		return player.isOnlineInt() == 1 &&  player.getPcCafePoints() < Integer.MAX_VALUE;
 	}
+
+	private void increasePoints(Player player, int points) {
+		int pcCafeCount = Math.min(player.getPcCafePoints() + points, Integer.MAX_VALUE);
+		if (pcCafeCount < 0)
+		{
+			pcCafeCount = Integer.MAX_VALUE;
+		}
+		player.setPcCafePoints(pcCafeCount);
+		player.sendMessage("Admin increased your PC Cafe point(s) by " + points + "!");
+		player.sendPacket(new ExPCCafePointInfo(pcCafeCount, points, 1));
+	}
+
 	
 	private Player getTarget(Player activeChar)
 	{

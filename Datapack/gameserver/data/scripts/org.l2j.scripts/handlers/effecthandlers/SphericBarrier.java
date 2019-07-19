@@ -25,6 +25,7 @@ import org.l2j.gameserver.model.events.returns.DamageReturn;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.util.MathUtil;
 
 /**
  * @author Sdw
@@ -50,7 +51,7 @@ public class SphericBarrier extends AbstractStatAddEffect
 	
 	private DamageReturn onDamageReceivedEvent(OnCreatureDamageReceived event)
 	{
-		if (event.getAttacker().calculateDistance3D(event.getTarget()) > _amount)
+		if (!MathUtil.isInsideRadius3D(event.getAttacker(), event.getTarget(), (int) _amount))
 		{
 			return new DamageReturn(false, true, false, 0);
 		}

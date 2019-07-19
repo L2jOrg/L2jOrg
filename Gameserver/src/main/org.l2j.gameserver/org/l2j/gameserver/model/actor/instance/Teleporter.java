@@ -25,11 +25,12 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
+
+import static org.l2j.commons.util.Util.isNumeric;
 
 
 /**
@@ -113,7 +114,7 @@ public final class Teleporter extends Npc {
     private int parseNextInt(StringTokenizer st, int defaultVal) {
         if (st.hasMoreTokens()) {
             final String token = st.nextToken();
-            if (GameUtils.isDigit(token)) {
+            if (isNumeric(token)) {
                 return Integer.valueOf(token);
             }
         }

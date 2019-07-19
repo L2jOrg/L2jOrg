@@ -16,13 +16,14 @@
  */
 package ai.areas.CrumaTower;
 
+import ai.AbstractNpcAI;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.Skill;
 
-import ai.AbstractNpcAI;
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 /**
  * Summon Pc AI.<br>
@@ -48,7 +49,7 @@ public final class SummonPc extends AbstractNpcAI
 	{
 		final int chance = getRandom(100);
 		final boolean attacked = npc.getVariables().getBoolean("attacked", false);
-		if ((npc.calculateDistance3D(attacker) > 300) && !attacked)
+		if (!isInsideRadius3D(npc,  attacker,  300) && !attacked)
 		{
 			if (chance < 50)
 			{
@@ -66,7 +67,7 @@ public final class SummonPc extends AbstractNpcAI
 				}
 			}
 		}
-		else if ((npc.calculateDistance3D(attacker) > 100) && !attacked)
+		else if (!isInsideRadius3D(npc,  attacker, 100) && !attacked)
 		{
 			final Attackable monster = (Attackable) npc;
 			if (monster.getMostHated() != null)

@@ -1,8 +1,5 @@
 package handlers.admincommandhandlers;
 
-import java.util.Collection;
-import java.util.StringTokenizer;
-
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.World;
@@ -10,6 +7,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GameUtils;
+
+import java.util.StringTokenizer;
 
 /**
  * Admin Coins manage admin commands.
@@ -35,7 +34,7 @@ public final class AdminCoins implements IAdminCommandHandler
 					return false;
 				}
 				
-				int value = 0;
+				int value;
 				try {
 					value = Integer.parseInt(st.nextToken());
 				}
@@ -59,8 +58,7 @@ public final class AdminCoins implements IAdminCommandHandler
 							return false;
 						}
 
-						target.updateL2Coins(value);
-						target.sendMessage("Admin increase your Coins by " + value + "!");
+						updateCoin(target, value);
 						BuilderUtil.sendSysMessage(activeChar, "You increased Coins of " + target.getName() + " by " + value);
 						break;
 					}
@@ -83,14 +81,15 @@ public final class AdminCoins implements IAdminCommandHandler
 						}
 						catch (Exception ignored) {
 						}
-						
+
+						final var coinCount = value;
 						if (range <= 0) {
-							final int count = increaseForAll(World.getInstance().getPlayers(), value);
-							BuilderUtil.sendSysMessage(activeChar, "You increased Coins of all online players (" + count + ") by " + value + ".");
+							World.getInstance().getPlayers().forEach(player -> updateCoin(player, coinCount));
+							BuilderUtil.sendSysMessage(activeChar, "You increased Coins of all online players by " + value + ".");
 						}
 						else {
-							final int count = increaseForAll(World.getInstance().getVisibleObjectsInRange(activeChar, Player.class, range), value);
-							BuilderUtil.sendSysMessage(activeChar, "You increased Coins of all players (" + count + ") in range " + range + " by " + value + ".");
+							World.getInstance().forEachPlayerInRange(activeChar, range, player -> updateCoin(player, coinCount), this::canReceiveCoin);
+							BuilderUtil.sendSysMessage(activeChar, "You increased Coins of all players in range " + range + " by " + value + ".");
 						}
 						break;
 					}
@@ -100,23 +99,16 @@ public final class AdminCoins implements IAdminCommandHandler
 		}
 		return true;
 	}
-	
-	private int increaseForAll(Collection<Player> playerList, int value) {
-		int counter = 0;
-		for (Player temp : playerList) {
-			if ((temp != null) && (temp.isOnlineInt() == 1)) {
-				if (temp.getL2Coins() == Integer.MAX_VALUE) {
-					continue;
-				}
 
-				temp.updateL2Coins(value);
-				temp.sendMessage("Admin increase your Coins by " + value + "!");
-				counter++;
-			}
-		}
-		return counter;
+	private boolean canReceiveCoin(Player player) {
+		return player.isOnlineInt() == 1 && player.getL2Coins() < Integer.MAX_VALUE;
 	}
-	
+
+	private void updateCoin(Player player, int coinCount) {
+		player.updateL2Coins(coinCount);
+		player.sendMessage("Admin increase your Coins by " + coinCount + "!");
+	}
+
 	private Player getTarget(Player activeChar) {
 		return ((activeChar.getTarget() != null) && (activeChar.getTarget().getActingPlayer() != null)) ? activeChar.getTarget().getActingPlayer() : activeChar;
 	}

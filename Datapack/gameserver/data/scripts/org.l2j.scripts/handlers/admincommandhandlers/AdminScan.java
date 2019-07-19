@@ -16,15 +16,12 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.StringTokenizer;
-import java.util.function.Predicate;
-
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.html.PageBuilder;
@@ -37,6 +34,11 @@ import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.BypassBuilder;
 import org.l2j.gameserver.util.BypassParser;
 import org.l2j.gameserver.util.GameUtils;
+
+import java.util.StringTokenizer;
+import java.util.function.Predicate;
+
+import static org.l2j.gameserver.util.MathUtil.calculateDistance2D;
 
 /**
  * @author NosBit
@@ -190,7 +192,7 @@ public class AdminScan implements IAdminCommandHandler
 			sb.append("<tr>");
 			sb.append("<td width=\"45\">").append(character.getId()).append("</td>");
 			sb.append("<td><a action=\"bypass -h admin_move_to ").append(character.getX()).append(SPACE).append(character.getY()).append(SPACE).append(character.getZ()).append("\">").append(npcName.isEmpty() ? "No name NPC" : npcName).append("</a></td>");
-			sb.append("<td width=\"60\">").append(GameUtils.formatAdena(Math.round(activeChar.calculateDistance2D(character)))).append("</td>");
+			sb.append("<td width=\"60\">").append(GameUtils.formatAdena(Math.round(calculateDistance2D(activeChar, character)))).append("</td>");
 			sb.append("<td width=\"54\"><a action=\"").append(builder.toStringBuilder()).append("\"><font color=\"LEVEL\">Delete</font></a></td>");
 			sb.append("</tr>");
 		}).build();

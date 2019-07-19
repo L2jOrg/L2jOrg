@@ -16,22 +16,25 @@
  */
 package handlers.targethandlers.affectscope;
 
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
-
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.AffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
-import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
 import org.l2j.gameserver.model.skills.targets.TargetType;
+
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+
+import static org.l2j.gameserver.util.MathUtil.calculateDistance2D;
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 /**
  * Point Blank affect scope implementation. Gathers targets in specific radius except initial target.
@@ -82,9 +85,9 @@ public class PointBlank implements IAffectScopeHandler
 				final Location worldPosition = activeChar.getActingPlayer().getCurrentSkillWorldPosition();
 				if (worldPosition != null)
 				{
-					World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, (int) (affectRange + activeChar.calculateDistance2D(worldPosition)), c ->
+					World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, (int) (affectRange + calculateDistance2D(activeChar, worldPosition)), c ->
 					{
-						if (!c.isInsideRadius3D(worldPosition, affectRange))
+						if (!isInsideRadius3D(c, worldPosition, affectRange))
 						{
 							return;
 						}

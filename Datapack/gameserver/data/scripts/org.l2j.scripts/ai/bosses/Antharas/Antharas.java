@@ -44,6 +44,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static org.l2j.gameserver.util.MathUtil.calculateDistance3D;
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
+
 /**
  * Antharas AI.
  * @author St3eT
@@ -230,7 +233,7 @@ public final class Antharas extends AbstractNpcAI
 					{
 						for (Player member : members)
 						{
-							if (member.isInsideRadius3D(npc, 1000))
+							if (isInsideRadius3D(member, npc, 1000))
 							{
 								member.teleToLocation(179700 + getRandom(700), 113800 + getRandom(2100), -7709);
 							}
@@ -611,7 +614,7 @@ public final class Antharas extends AbstractNpcAI
 		
 		if (npc.getId() == BOMBER)
 		{
-			if (npc.calculateDistance3D(attacker) < 230)
+			if (isInsideRadius3D(npc,  attacker, 230))
 			{
 				npc.doCast(DISPEL_BOM.getSkill());
 				npc.doDie(attacker);
@@ -813,17 +816,17 @@ public final class Antharas extends AbstractNpcAI
 		int i1 = 0;
 		int i2 = 0;
 		Player c2 = null;
-		if ((attacker_1 == null) || (npc.calculateDistance3D(attacker_1) > 9000) || attacker_1.isDead())
+		if ((attacker_1 == null) || !isInsideRadius3D(npc, attacker_1, 9000) || attacker_1.isDead())
 		{
 			attacker_1_hate = 0;
 		}
 		
-		if ((attacker_2 == null) || (npc.calculateDistance3D(attacker_2) > 9000) || attacker_2.isDead())
+		if ((attacker_2 == null) || !isInsideRadius3D(npc, attacker_2, 9000) || attacker_2.isDead())
 		{
 			attacker_2_hate = 0;
 		}
 		
-		if ((attacker_3 == null) || (npc.calculateDistance3D(attacker_3) > 9000) || attacker_3.isDead())
+		if ((attacker_3 == null) || !isInsideRadius3D(npc, attacker_3, 9000) || attacker_3.isDead())
 		{
 			attacker_3_hate = 0;
 		}
@@ -871,7 +874,7 @@ public final class Antharas extends AbstractNpcAI
 				}
 			}
 			
-			final double distance_c2 = npc.calculateDistance3D(c2);
+			final double distance_c2 = calculateDistance3D(npc, c2);
 			final double direction_c2 = npc.calculateDirectionTo(c2);
 			
 			SkillHolder skillToCast = null;

@@ -7,7 +7,6 @@ import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.util.FloodProtectorConfig;
-import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,6 +29,8 @@ import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+
+import static org.l2j.commons.util.Util.isNumeric;
 
 /**
  * This class loads all the game server related configurations from files.<br>
@@ -87,7 +88,6 @@ public final class Config {
     private static final String CUSTOM_PASSWORD_CHANGE_CONFIG_FILE = "./config/Custom/PasswordChange.ini";
     private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
 
-    private static final String CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE = "./config/Custom/PrivateStoreRange.ini";
     private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
     private static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "./config/Custom/PvpRewardItem.ini";
     private static final String CUSTOM_PVP_TITLE_CONFIG_FILE = "./config/Custom/PvpTitleColor.ini";
@@ -927,8 +927,6 @@ public final class Config {
     public static int CUSTOM_STARTING_LOC_X;
     public static int CUSTOM_STARTING_LOC_Y;
     public static int CUSTOM_STARTING_LOC_Z;
-    public static int SHOP_MIN_RANGE_FROM_NPC;
-    public static int SHOP_MIN_RANGE_FROM_PLAYER;
     public static boolean ENABLE_RANDOM_MONSTER_SPAWNS;
     public static int MOB_MIN_SPAWN_RANGE;
     public static int MOB_MAX_SPAWN_RANGE;
@@ -1085,7 +1083,7 @@ public final class Config {
         final PropertiesParser Feature = new PropertiesParser(FEATURE_CONFIG_FILE);
         SIEGE_HOUR_LIST = new ArrayList<>();
         for (String hour : Feature.getString("SiegeHourList", "").split(",")) {
-            if (GameUtils.isDigit(hour)) {
+            if (isNumeric(hour)) {
                 SIEGE_HOUR_LIST.add(Integer.parseInt(hour));
             }
         }
@@ -2143,12 +2141,6 @@ public final class Config {
         if (PC_CAFE_LOW_EXP_KILLS_CHANCE > 100) {
             PC_CAFE_LOW_EXP_KILLS_CHANCE = 100;
         }
-
-        // Load PrivateStoreRange config file (if exists)
-        final PropertiesParser PrivateStoreRange = new PropertiesParser(CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE);
-
-        SHOP_MIN_RANGE_FROM_PLAYER = PrivateStoreRange.getInt("ShopMinRangeFromPlayer", 50);
-        SHOP_MIN_RANGE_FROM_NPC = PrivateStoreRange.getInt("ShopMinRangeFromNpc", 100);
 
         // Load PvpAnnounce config file (if exists)
         final PropertiesParser PvpAnnounce = new PropertiesParser(CUSTOM_PVP_ANNOUNCE_CONFIG_FILE);

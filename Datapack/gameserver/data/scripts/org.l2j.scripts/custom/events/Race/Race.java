@@ -36,6 +36,8 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
+
 /**
  * @author Gnacik
  */
@@ -168,7 +170,7 @@ public final class Race extends Event implements ScriptEvent
 		{
 			if ((player != null) && player.isOnline())
 			{
-				if (player.isInsideRadius2D(_npc, 500))
+				if (isInsideRadius2D(player, _npc, 500))
 				{
 					sendMessage(player, "Race started! Go find Finish NPC as fast as you can... He is located near " + _locations[location]);
 					transformPlayer(player);

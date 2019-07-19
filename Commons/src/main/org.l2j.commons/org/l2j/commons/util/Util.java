@@ -30,12 +30,25 @@ public class Util {
         return isNull(collection) || collection.isEmpty();
     }
 
+    public static boolean isNullOrEmpty(int[] data) {
+        return isNull(data) || data.length == 0;
+    }
+
     public static <T> int zeroIfNullOrElse(T obj, ToIntFunction<T> action) {
         return isNull(obj) ? 0 : action.applyAsInt(obj);
     }
 
     public static <T> boolean falseIfNullOrElse(T obj, Predicate<T> predicate) {
         return nonNull(obj) && predicate.test(obj);
+    }
+
+    public static boolean contains(int[] array, int obj) {
+        for (int element : array) {
+            if (element == obj) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public static String hash(final String value) throws NoSuchAlgorithmException {

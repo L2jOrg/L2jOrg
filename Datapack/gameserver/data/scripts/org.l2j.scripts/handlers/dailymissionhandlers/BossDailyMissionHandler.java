@@ -1,20 +1,21 @@
 package handlers.dailymissionhandlers;
 
-import java.util.List;
-
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
+import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
+import org.l2j.gameserver.model.CommandChannel;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
-import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
-import org.l2j.gameserver.model.CommandChannel;
+import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableKill;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2j.gameserver.util.MathUtil;
+
+import java.util.List;
 
 /**
  * @author UnAfraid
@@ -47,7 +48,7 @@ public class BossDailyMissionHandler extends AbstractDailyMissionHandler
 			{
 				final CommandChannel channel = party.getCommandChannel();
 				final List<Player> members = channel != null ? channel.getMembers() : party.getMembers();
-				members.stream().filter(member -> member.calculateDistance3D(monster) <= Config.ALT_PARTY_RANGE).forEach(this::processPlayerProgress);
+				members.stream().filter(member -> MathUtil.isInsideRadius3D(member, monster, Config.ALT_PARTY_RANGE)).forEach(this::processPlayerProgress);
 			}
 			else
 			{

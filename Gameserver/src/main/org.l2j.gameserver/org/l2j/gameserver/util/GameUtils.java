@@ -11,6 +11,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Playable;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.tasks.player.IllegalPlayerActionTask;
@@ -22,7 +23,10 @@ import org.slf4j.LoggerFactory;
 
 import java.text.*;
 import java.util.*;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
+
+import static java.util.Objects.nonNull;
 
 /**
  * General Utility functions related to game server.
@@ -41,7 +45,10 @@ public final class GameUtils {
      * @param from
      * @param to
      * @return degree value of object 2 to the horizontal line with object 1 being the origin.
+     *
+     * TODO move to MathUtils
      */
+    @Deprecated
     public static double calculateAngleFrom(ILocational from, ILocational to) {
         return calculateAngleFrom(from.getX(), from.getY(), to.getX(), to.getY());
     }
@@ -52,7 +59,9 @@ public final class GameUtils {
      * @param toX
      * @param toY
      * @return degree value of object 2 to the horizontal line with object 1 being the origin
+     * TODO move to MathUtils
      */
+    @Deprecated
     public static double calculateAngleFrom(int fromX, int fromY, int toX, int toY) {
         double angleTarget = Math.toDegrees(Math.atan2(toY - fromY, toX - fromX));
         if (angleTarget < 0) {
@@ -80,28 +89,14 @@ public final class GameUtils {
         return new Location(newX, newY, loc.getZ());
     }
 
+    /**
+     *
+     * @param clientHeading
+     * TODO move to MathUtils
+     */
+    @Deprecated
     public static double convertHeadingToDegree(int clientHeading) {
         return clientHeading / 182.044444444;
-    }
-
-    public static int calculateHeadingFrom(ILocational from, ILocational to) {
-        return calculateHeadingFrom(from.getX(), from.getY(), to.getX(), to.getY());
-    }
-
-    public static int calculateHeadingFrom(int fromX, int fromY, int toX, int toY) {
-        double angleTarget = Math.toDegrees(Math.atan2(toY - fromY, toX - fromX));
-        if (angleTarget < 0) {
-            angleTarget += 360;
-        }
-        return (int) (angleTarget * 182.044444444);
-    }
-
-    public static int calculateHeadingFrom(double dx, double dy) {
-        double angleTarget = Math.toDegrees(Math.atan2(dy, dx));
-        if (angleTarget < 0) {
-            angleTarget += 360;
-        }
-        return (int) (angleTarget * 182.044444444);
     }
 
     /**
@@ -116,7 +111,9 @@ public final class GameUtils {
      * @param includeZAxis - If set to true, Z coordinates will be included.
      * @param squared      - If set to true, distance returned will be squared.
      * @return {@code double} - Distance between object and given x, y , z.
+     * TODO move to MathUtils
      */
+    @Deprecated
     public static double calculateDistance(double x1, double y1, double z1, double x2, double y2, double z2, boolean includeZAxis, boolean squared) {
         final double distance = Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2) + (includeZAxis ? Math.pow(z1 - z2, 2) : 0);
         return (squared) ? distance : Math.sqrt(distance);
@@ -130,7 +127,9 @@ public final class GameUtils {
      * @param includeZAxis - If set to true, Z coordinates will be included.
      * @param squared      - If set to true, distance returned will be squared.
      * @return {@code double} - Distance between object and given location.
+     * TODO move to MathUtils
      */
+    @Deprecated
     public static double calculateDistance(ILocational loc1, ILocational loc2, boolean includeZAxis, boolean squared) {
         return calculateDistance(loc1.getX(), loc1.getY(), loc1.getZ(), loc2.getX(), loc2.getY(), loc2.getZ(), includeZAxis, squared);
     }
@@ -184,7 +183,10 @@ public final class GameUtils {
     /**
      * @param text - the text to check
      * @return {@code true} if {@code text} contains only numbers, {@code false} otherwise
+     *
+     * @deprecated  use Util#isNumeric
      */
+    @Deprecated
     public static boolean isDigit(String text) {
         if ((text == null) || text.isEmpty()) {
             return false;
@@ -200,7 +202,10 @@ public final class GameUtils {
     /**
      * @param text - the text to check
      * @return {@code true} if {@code text} is integer, {@code false} otherwise
+     *
+     * @deprecated use Util#isNumeric
      */
+    @Deprecated
     public static boolean isInteger(String text) {
         if ((text == null) || text.isEmpty()) {
             return false;
@@ -216,7 +221,9 @@ public final class GameUtils {
     /**
      * @param text - the text to check
      * @return {@code true} if {@code text} is float, {@code false} otherwise
+     * @deprecated use Util#isNumeric
      */
+    @Deprecated
     public static boolean isFloat(String text) {
         if ((text == null) || text.isEmpty()) {
             return false;
@@ -232,7 +239,9 @@ public final class GameUtils {
     /**
      * @param text - the text to check
      * @return {@code true} if {@code text} is double, {@code false} otherwise
+     * @deprecated use Util#isNumeric
      */
+    @Deprecated
     public static boolean isDouble(String text) {
         if ((text == null) || text.isEmpty()) {
             return false;
@@ -633,5 +642,18 @@ public final class GameUtils {
 
     public static boolean isPlayable(WorldObject object) {
         return object instanceof Playable;
+    }
+
+    public static boolean isSummon(WorldObject object) {
+        return object instanceof Summon;
+    }
+
+    public static <T extends WorldObject> Predicate<T> isVisible(WorldObject reference, int range) {
+        return isVisible(reference, range, false);
+    }
+
+    public static <T extends WorldObject> Predicate<T> isVisible(WorldObject reference, int range, boolean includeReference) {
+        return visible -> nonNull(visible) && (includeReference || !visible.equals(reference)) &&
+                Objects.equals(visible.getInstanceWorld(),  reference.getInstanceWorld()) && MathUtil.isInsideRadius3D(reference, visible, range);
     }
 }

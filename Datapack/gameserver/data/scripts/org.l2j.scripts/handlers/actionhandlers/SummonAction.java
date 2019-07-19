@@ -13,6 +13,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.PetStatusShow;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
+
 public class SummonAction implements IActionHandler
 {
 	@Override
@@ -52,7 +54,7 @@ public class SummonAction implements IActionHandler
 			{
 				// This Action Failed packet avoids activeChar getting stuck when clicking three or more times
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				if (((Summon) target).isInsideRadius2D(activeChar, 150))
+				if (isInsideRadius2D(target, activeChar, 150))
 				{
 					activeChar.updateNotMoveUntil();
 				}

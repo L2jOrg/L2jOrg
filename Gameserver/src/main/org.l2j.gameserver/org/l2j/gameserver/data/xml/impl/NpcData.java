@@ -29,6 +29,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.util.Util.contains;
 
 /**
  * NPC data parser.
@@ -606,7 +607,7 @@ public class NpcData extends GameXmlReader {
      * @return the template list for the given level.
      */
     public List<NpcTemplate> getAllOfLevel(int... lvls) {
-        return getTemplates(template -> CommonUtil.contains(lvls, template.getLevel()));
+        return getTemplates(template -> contains(lvls, template.getLevel()));
     }
 
     /**
@@ -616,7 +617,7 @@ public class NpcData extends GameXmlReader {
      * @return the template list for the given level.
      */
     public List<NpcTemplate> getAllMonstersOfLevel(int... lvls) {
-        return getTemplates(template -> CommonUtil.contains(lvls, template.getLevel()) && template.isType("L2Monster"));
+        return getTemplates(template -> contains(lvls, template.getLevel()) && template.isType("L2Monster"));
     }
 
     /**

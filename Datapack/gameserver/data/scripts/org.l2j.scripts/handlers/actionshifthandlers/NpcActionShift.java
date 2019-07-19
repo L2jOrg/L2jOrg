@@ -10,8 +10,8 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionShiftHandler;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.instancemanager.WalkingManager;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Spawn;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -21,6 +21,9 @@ import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import java.util.Set;
+
+import static org.l2j.gameserver.util.MathUtil.calculateDistance2D;
+import static org.l2j.gameserver.util.MathUtil.calculateDistance3D;
 
 public class NpcActionShift implements IActionShiftHandler
 {
@@ -78,8 +81,8 @@ public class NpcActionShift implements IActionShiftHandler
 			html.replace("%mpRewardTicks%", npc.getTemplate().getMpRewardTicks());
 			html.replace("%mpRewardType%", npc.getTemplate().getMpRewardType().name());
 			html.replace("%mpRewardAffectType%", npc.getTemplate().getMpRewardAffectType().name());
-			html.replace("%loc2d%", String.valueOf((int) activeChar.calculateDistance2D(npc)));
-			html.replace("%loc3d%", String.valueOf((int) activeChar.calculateDistance3D(npc)));
+			html.replace("%loc2d%", String.valueOf((int) calculateDistance2D(activeChar, npc)));
+			html.replace("%loc3d%", String.valueOf((int) calculateDistance3D(activeChar, npc)));
 			
 			final AttributeType attackAttribute = npc.getAttackElement();
 			html.replace("%ele_atk%", attackAttribute.name());

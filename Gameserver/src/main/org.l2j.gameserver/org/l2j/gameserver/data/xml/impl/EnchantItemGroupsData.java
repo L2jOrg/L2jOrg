@@ -8,7 +8,6 @@ import org.l2j.gameserver.model.items.enchant.EnchantRateItem;
 import org.l2j.gameserver.model.items.enchant.EnchantScrollGroup;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
-import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -21,6 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.util.Util.isNumeric;
 
 /**
  * @author UnAfraid
@@ -66,11 +66,11 @@ public final class EnchantItemGroupsData extends GameXmlReader {
                                 int max = 0;
                                 if (range.contains("-")) {
                                     final String[] split = range.split("-");
-                                    if ((split.length == 2) && GameUtils.isDigit(split[0]) && GameUtils.isDigit(split[1])) {
+                                    if ((split.length == 2) && isNumeric(split[0]) && isNumeric(split[1])) {
                                         min = Integer.parseInt(split[0]);
                                         max = Integer.parseInt(split[1]);
                                     }
-                                } else if (GameUtils.isDigit(range)) {
+                                } else if (isNumeric(range)) {
                                     min = Integer.parseInt(range);
                                     max = min;
                                 }
