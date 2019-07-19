@@ -20,6 +20,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.util.MathUtil;
 
 /**
  * @author NightMarez
@@ -33,9 +34,9 @@ public final class Observation extends Npc {
 
     @Override
     public void showChatWindow(Player player, int val) {
-        String filename = null;
+        String filename;
 
-        if (isInsideRadius2D(-79884, 86529, 0, 50) || isInsideRadius2D(-78858, 111358, 0, 50) || isInsideRadius2D(-76973, 87136, 0, 50) || isInsideRadius2D(-75850, 111968, 0, 50)) {
+        if (MathUtil.isInsideRadius2D(this,-79884, 86529, 50) || MathUtil.isInsideRadius2D(this,-78858, 111358,  50) || MathUtil.isInsideRadius2D(this,-76973, 87136, 50) || MathUtil.isInsideRadius2D(this, -75850, 111968, 50)) {
             if (val == 0) {
                 filename = "data/html/observation/" + getId() + "-Oracle.htm";
             } else {

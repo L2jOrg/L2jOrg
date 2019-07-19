@@ -22,6 +22,7 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SetSummonRemainTime;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -462,7 +463,7 @@ public class Servitor extends Summon implements Runnable {
         sendPacket(new SetSummonRemainTime(_lifeTime, _lifeTimeRemaining));
 
         // Using same task to check if owner is in visible range
-        if (calculateDistance3D(getOwner()) > 2000) {
+        if (!MathUtil.isInsideRadius3D(this, getOwner(),  2000)) {
             getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, getOwner());
         }
     }

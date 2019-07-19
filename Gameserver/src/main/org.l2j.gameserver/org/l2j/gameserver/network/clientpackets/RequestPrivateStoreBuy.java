@@ -20,6 +20,8 @@ import org.slf4j.LoggerFactory;
 import java.util.HashSet;
 import java.util.Set;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
+
 
 /**
  * This class ...
@@ -91,7 +93,7 @@ public final class RequestPrivateStoreBuy extends ClientPacket {
         }
 
         final Player storePlayer = (Player) object;
-        if (!player.isInsideRadius3D(storePlayer, Npc.INTERACTION_DISTANCE)) {
+        if (!isInsideRadius3D(player, storePlayer, Npc.INTERACTION_DISTANCE)) {
             return;
         }
 

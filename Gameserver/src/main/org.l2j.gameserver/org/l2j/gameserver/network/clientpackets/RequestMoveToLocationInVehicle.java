@@ -11,6 +11,8 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.MoveToLocationInVehicle;
 import org.l2j.gameserver.network.serverpackets.StopMoveInVehicle;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
+
 public final class RequestMoveToLocationInVehicle extends ClientPacket {
     private int _boatId;
     private int _targetX;
@@ -80,7 +82,7 @@ public final class RequestMoveToLocationInVehicle extends ClientPacket {
             }
         } else {
             boat = BoatManager.getInstance().getBoat(_boatId);
-            if ((boat == null) || !boat.isInsideRadius3D(activeChar, 300)) {
+            if ((boat == null) || !isInsideRadius3D(boat, activeChar, 300)) {
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }

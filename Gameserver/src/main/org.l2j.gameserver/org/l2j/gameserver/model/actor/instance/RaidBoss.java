@@ -7,6 +7,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
+import org.l2j.gameserver.util.MathUtil;
 
 /**
  * This class manages all RaidBoss.<br>
@@ -70,7 +71,7 @@ public class RaidBoss extends Monster {
         final int spawnZ = spawn.getZ();
 
         if (!isInCombat() && !isMovementDisabled()) {
-            if (!isInsideRadius3D(spawnX, spawnY, spawnZ, Math.max(Config.MAX_DRIFT_RANGE, 200))) {
+            if (!MathUtil.isInsideRadius3D(this, spawnX, spawnY, spawnZ, Math.max(Config.MAX_DRIFT_RANGE, 200))) {
                 teleToLocation(spawnX, spawnY, spawnZ);
             }
         }

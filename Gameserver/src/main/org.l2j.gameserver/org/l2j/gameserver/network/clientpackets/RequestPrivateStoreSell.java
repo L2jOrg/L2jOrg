@@ -15,6 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static org.l2j.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 public final class RequestPrivateStoreSell extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestPrivateStoreSell.class);
@@ -86,7 +87,7 @@ public final class RequestPrivateStoreSell extends ClientPacket {
         }
 
         final Player storePlayer = World.getInstance().findPlayer(_storePlayerId);
-        if ((storePlayer == null) || !player.isInsideRadius3D(storePlayer, INTERACTION_DISTANCE)) {
+        if ((storePlayer == null) || !isInsideRadius3D(player, storePlayer, INTERACTION_DISTANCE)) {
             return;
         }
 

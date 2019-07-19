@@ -162,7 +162,7 @@ public class FriendlyNpcAI extends AttackableAI {
             newY = originalAttackTarget.getY() - newY;
         }
 
-        if (!npc.isInsideRadius2D(newX, newY, 0, collision)) {
+        if (!isInsideRadius2D(npc, newX, newY, collision)) {
             final int newZ = npc.getZ() + 30;
             if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceWorld())) {
                 moveTo(newX, newY, newZ);

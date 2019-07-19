@@ -13,6 +13,7 @@ import org.l2j.gameserver.model.skills.SkillCaster;
 import java.util.concurrent.Future;
 
 import static org.l2j.gameserver.ai.CtrlIntention.*;
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 public class SummonAI extends PlayableAI implements Runnable {
     private static final int AVOID_RADIUS = 70;
@@ -193,7 +194,7 @@ public class SummonAI extends PlayableAI implements Runnable {
 
         final Creature owner = getActor().getOwner();
         // trying to avoid if summon near owner
-        if ((owner != null) && (owner != attacker) && owner.isInsideRadius3D(actor, 2 * AVOID_RADIUS)) {
+        if ((owner != null) && (owner != attacker) && isInsideRadius3D(owner, actor, 2 * AVOID_RADIUS)) {
             _startAvoid = true;
         }
     }
@@ -205,7 +206,7 @@ public class SummonAI extends PlayableAI implements Runnable {
         }
 
         final Summon summon = getActor();
-        if ((summon.getOwner() != null) && (summon.getOwner() != attacker) && !summon.isMoving() && summon.canAttack(attacker, false) && summon.getOwner().isInsideRadius3D(actor, 2 * AVOID_RADIUS)) {
+        if ((summon.getOwner() != null) && (summon.getOwner() != attacker) && !summon.isMoving() && summon.canAttack(attacker, false) && isInsideRadius3D(summon.getOwner(), actor, 2 * AVOID_RADIUS)) {
             summon.doAutoAttack(attacker);
         }
     }

@@ -18,6 +18,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static org.l2j.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 
 /**
@@ -65,7 +66,7 @@ public final class RequestRefundItem extends ClientPacket {
         final WorldObject target = player.getTarget();
         Merchant merchant = null;
         if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST)) {
-            if (!(target instanceof Merchant) || !player.isInsideRadius3D(target, INTERACTION_DISTANCE) || (player.getInstanceId() != target.getInstanceId())) {
+            if (!(target instanceof Merchant) || !isInsideRadius3D(player, target, INTERACTION_DISTANCE) || (player.getInstanceId() != target.getInstanceId())) {
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }

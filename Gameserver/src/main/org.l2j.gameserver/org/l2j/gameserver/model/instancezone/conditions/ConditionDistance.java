@@ -22,6 +22,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
+
 /**
  * Distance instance condition
  *
@@ -36,6 +38,6 @@ public final class ConditionDistance extends Condition {
     @Override
     public boolean test(Player player, Npc npc) {
         final int distance = getParameters().getInt("distance", 1000);
-        return player.isInsideRadius3D(npc, distance);
+        return isInsideRadius3D(player, npc, distance);
     }
 }

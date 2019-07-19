@@ -41,6 +41,8 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
+
 /**
  * Instance world.
  *
@@ -307,7 +309,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return players within radius
      */
     public Set<Player> getPlayersInsideRadius(ILocational object, int radius) {
-        return _players.stream().filter(p -> p.isInsideRadius3D(object, radius)).collect(Collectors.toSet());
+        return _players.stream().filter(p -> isInsideRadius3D(p, object, radius)).collect(Collectors.toSet());
     }
 
     /**

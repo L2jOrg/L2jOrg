@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.l2j.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 public final class RequestBuyItem extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestBuyItem.class);
@@ -79,7 +80,7 @@ public final class RequestBuyItem extends ClientPacket {
         final WorldObject target = player.getTarget();
         Merchant merchant = null;
         if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST)) {
-            if (!(target instanceof Merchant) || (!player.isInsideRadius3D(target, INTERACTION_DISTANCE)) || (player.getInstanceWorld() != target.getInstanceWorld())) {
+            if (!(target instanceof Merchant) || (!isInsideRadius3D(player, target, INTERACTION_DISTANCE)) || (player.getInstanceWorld() != target.getInstanceWorld())) {
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }

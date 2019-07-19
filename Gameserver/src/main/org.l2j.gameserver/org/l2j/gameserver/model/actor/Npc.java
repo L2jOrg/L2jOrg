@@ -411,7 +411,7 @@ public class Npc extends Creature {
             return false;
         } else if (player.getPrivateStoreType() != PrivateStoreType.NONE) {
             return false;
-        } else if (!isInsideRadius3D(player, INTERACTION_DISTANCE)) {
+        } else if (!MathUtil.isInsideRadius3D(this, player, INTERACTION_DISTANCE)) {
             return false;
         } else if (player.getInstanceWorld() != getInstanceWorld()) {
             return false;

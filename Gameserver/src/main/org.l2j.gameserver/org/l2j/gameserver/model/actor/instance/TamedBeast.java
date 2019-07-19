@@ -17,6 +17,7 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.NpcInfo;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
 import org.l2j.gameserver.network.serverpackets.StopMove;
+import org.l2j.gameserver.util.MathUtil;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -210,7 +211,7 @@ public final class TamedBeast extends FeedableBeast {
                 if (_buffTask != null) {
                     _buffTask.cancel(true);
                 }
-                _buffTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new CheckOwnerBuffs(this, totalBuffsAvailable), BUFF_INTERVAL, BUFF_INTERVAL);
+                _buffTask = ThreadPoolManager.scheduleAtFixedRate(new CheckOwnerBuffs(this, totalBuffsAvailable), BUFF_INTERVAL, BUFF_INTERVAL);
             }
         } else {
             deleteMe(); // despawn if no owner
@@ -218,7 +219,7 @@ public final class TamedBeast extends FeedableBeast {
     }
 
     public boolean isTooFarFromHome() {
-        return !isInsideRadius3D(_homeX, _homeY, _homeZ, MAX_DISTANCE_FROM_HOME);
+        return !MathUtil.isInsideRadius3D(this, _homeX, _homeY, _homeZ, MAX_DISTANCE_FROM_HOME);
     }
 
     @Override
@@ -253,7 +254,7 @@ public final class TamedBeast extends FeedableBeast {
             return;
         }
         // if the owner is too far away, stop anything else and immediately run towards the owner.
-        if (!_owner.isInsideRadius3D(this, MAX_DISTANCE_FROM_OWNER)) {
+        if (!MathUtil.isInsideRadius3D(_owner, this, MAX_DISTANCE_FROM_OWNER)) {
             getAI().startFollow(_owner);
             return;
         }
@@ -431,7 +432,7 @@ public final class TamedBeast extends FeedableBeast {
                 return;
             }
             // if the owner is too far away, stop anything else and immediately run towards the owner.
-            if (!isInsideRadius3D(owner, MAX_DISTANCE_FROM_OWNER)) {
+            if (!MathUtil.isInsideRadius3D(TamedBeast.this, owner, MAX_DISTANCE_FROM_OWNER)) {
                 getAI().startFollow(owner);
                 return;
             }

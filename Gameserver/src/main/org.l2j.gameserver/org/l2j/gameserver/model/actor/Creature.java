@@ -2966,59 +2966,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     /**
-     * Check if this object is inside the given 2D radius around the given point.
-     *
-     * @param loc    Location of the target
-     * @param radius the radius around the target
-     * @return true if the Creature is inside the radius.
-     */
-    @Deprecated
-    public final boolean isInsideRadius2D(ILocational loc, int radius) {
-        return isInsideRadius2D(loc.getX(), loc.getY(), loc.getZ(), radius);
-    }
-
-    /**
-     * Check if this object is inside the given 2D radius around the given point.
-     *
-     * @param x      X position of the target
-     * @param y      Y position of the target
-     * @param z      Z position of the target
-     * @param radius the radius around the target
-     * @return true if the Creature is inside the radius.
-     */
-    @Deprecated
-    public final boolean isInsideRadius2D(int x, int y, int z, int radius) {
-        return calculateDistanceSq2D(x, y, z) < (radius * radius);
-    }
-
-    /**
-     * Check if this object is inside the given 3D radius around the given point.
-     *
-     * @param loc    Location of the target
-     * @param radius the radius around the target
-     * @return true if the Creature is inside the radius.
-     */
-    @Deprecated
-    public final boolean isInsideRadius3D(ILocational loc, int radius) {
-        return isInsideRadius3D(loc.getX(), loc.getY(), loc.getZ(), radius);
-    }
-
-    /**
-     * Check if this object is inside the given 3D radius around the given point.
-     *
-     * @param x      X position of the target
-     * @param y      Y position of the target
-     * @param z      Z position of the target
-     * @param radius the radius around the target
-     * @return true if the Creature is inside the radius.
-     *
-     */
-    @Deprecated
-    public final boolean isInsideRadius3D(int x, int y, int z, int radius) {
-        return calculateDistanceSq3D(x, y, z) < (radius * radius);
-    }
-
-    /**
      * <B><U> Overridden in </U> :</B>
      * <li>Player</li>
      *

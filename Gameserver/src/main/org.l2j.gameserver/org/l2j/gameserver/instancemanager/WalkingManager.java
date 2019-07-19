@@ -31,6 +31,7 @@ import java.util.List;
 import java.util.Map;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.gameserver.util.MathUtil.calculateDistance3DBetween;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 
@@ -233,7 +234,7 @@ public final class WalkingManager extends GameXmlReader {
                     }
 
                     if (!MathUtil.isInsideRadius3D(npc, node, 3000)) {
-                        LOGGER.warn("Route '" + routeName + "': NPC (id=" + npc.getId() + ", x=" + npc.getX() + ", y=" + npc.getY() + ", z=" + npc.getZ() + ") is too far from starting point (node x=" + node.getX() + ", y=" + node.getY() + ", z=" + node.getZ() + ", range=" + npc.calculateDistance3D(node) + "). Teleporting to proper location.");
+                        LOGGER.warn("Route '" + routeName + "': NPC (id=" + npc.getId() + ", x=" + npc.getX() + ", y=" + npc.getY() + ", z=" + npc.getZ() + ") is too far from starting point (node x=" + node.getX() + ", y=" + node.getY() + ", z=" + node.getZ() + ", range=" + calculateDistance3DBetween(npc, node) + "). Teleporting to proper location.");
                         npc.teleToLocation(node);
                     }
 

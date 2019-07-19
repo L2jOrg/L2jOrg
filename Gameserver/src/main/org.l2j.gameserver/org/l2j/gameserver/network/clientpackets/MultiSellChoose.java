@@ -35,6 +35,8 @@ import java.util.Map.Entry;
 import java.util.OptionalLong;
 import java.util.stream.Collectors;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
+
 /**
  * The Class MultiSellChoose.
  */
@@ -562,7 +564,7 @@ public class MultiSellChoose extends ClientPacket {
         if (npc != null) {
             if (!list.isNpcAllowed(npc.getId())) {
                 return false;
-            } else if (list.isNpcOnly() && (!list.checkNpcObjectId(npc.getObjectId()) || (npc.getInstanceWorld() != player.getInstanceWorld()) || !player.isInsideRadius3D(npc, Npc.INTERACTION_DISTANCE))) {
+            } else if (list.isNpcOnly() && (!list.checkNpcObjectId(npc.getObjectId()) || (npc.getInstanceWorld() != player.getInstanceWorld()) || !isInsideRadius3D(player, npc, Npc.INTERACTION_DISTANCE))) {
                 return false;
             }
         } else if (list.isNpcOnly()) {

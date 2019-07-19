@@ -19,6 +19,7 @@ package org.l2j.gameserver.model.cubic.conditions;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.cubic.CubicInstance;
+import org.l2j.gameserver.util.MathUtil;
 
 /**
  * @author Sdw
@@ -32,6 +33,6 @@ public class RangeCondition implements ICubicCondition {
 
     @Override
     public boolean test(CubicInstance cubic, Creature owner, WorldObject target) {
-        return owner.calculateDistance2D(target) <= _range;
+        return MathUtil.isInsideRadius2D(owner, target, _range);
     }
 }

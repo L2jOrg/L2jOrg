@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.l2j.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 
 /**
@@ -79,7 +80,7 @@ public final class RequestSellItem extends ClientPacket {
         final WorldObject target = player.getTarget();
         Merchant merchant = null;
         if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST)) {
-            if ((target == null) || !player.isInsideRadius3D(target, INTERACTION_DISTANCE) || (player.getInstanceId() != target.getInstanceId())) {
+            if ((target == null) || !isInsideRadius3D(player, target, INTERACTION_DISTANCE) || (player.getInstanceId() != target.getInstanceId())) {
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }

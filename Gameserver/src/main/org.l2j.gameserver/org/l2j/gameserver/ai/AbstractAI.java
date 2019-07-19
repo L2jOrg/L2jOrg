@@ -19,6 +19,7 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.Future;
 
 import static org.l2j.gameserver.ai.CtrlIntention.*;
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 /**
  * Mother class of all objects AI in the world.<br>
@@ -639,8 +640,8 @@ public abstract class AbstractAI implements Ctrl {
                     return;
                 }
 
-                if (!actor.isInsideRadius3D(followTarget, followRange)) {
-                    if (!actor.isInsideRadius3D(followTarget, 3000)) {
+                if (!isInsideRadius3D(actor, followTarget, followRange)) {
+                    if (!isInsideRadius3D(actor, followTarget, 3000)) {
                         // if the target is too far (maybe also teleported)
                         if (actor.isSummon()) {
                             ((Summon) actor).setFollowStatus(false);

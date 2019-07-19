@@ -20,6 +20,7 @@ import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.util.MathUtil;
 
 public class ConditionMinDistance extends Condition {
 
@@ -33,7 +34,7 @@ public class ConditionMinDistance extends Condition {
     @Override
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
         return (effected != null) //
-                && (effector.calculateDistance3D(effected) >= _distance) //
+                && !MathUtil.isInsideRadius3D(effector, effected, _distance) //
                 && GeoEngine.getInstance().canSeeTarget(effector, effected);
     }
 }

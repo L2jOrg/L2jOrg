@@ -28,6 +28,7 @@ import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -547,13 +548,13 @@ public final class Formulas {
                 final double sphericBarrierRange = target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, 0);
                 if (sphericBarrierRange > 0)
                 {
-                    resisted = attacker.calculateDistance3D(target) > sphericBarrierRange;
+                    resisted = !MathUtil.isInsideRadius3D(attacker, target, (int) sphericBarrierRange);
                 }
             }
 
             final double sphericBarrierRange = target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, 0);
             if (!resisted && (sphericBarrierRange > 0)) {
-                resisted = attacker.calculateDistance3D(target) > sphericBarrierRange;
+                resisted = !MathUtil.isInsideRadius3D(attacker, target, (int) sphericBarrierRange);
             }
 
             if (resisted) {

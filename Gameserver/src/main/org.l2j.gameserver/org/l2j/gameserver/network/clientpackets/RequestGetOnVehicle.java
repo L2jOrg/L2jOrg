@@ -8,6 +8,8 @@ import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.GetOnVehicle;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
+
 /**
  * This class ...
  *
@@ -39,7 +41,7 @@ public final class RequestGetOnVehicle extends ClientPacket {
             }
         } else {
             boat = BoatManager.getInstance().getBoat(_boatId);
-            if ((boat == null) || boat.isMoving() || !activeChar.isInsideRadius3D(boat, 1000)) {
+            if ((boat == null) || boat.isMoving() || !isInsideRadius3D(activeChar, boat, 1000)) {
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }

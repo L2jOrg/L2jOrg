@@ -6,6 +6,8 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.GetOffVehicle;
 import org.l2j.gameserver.network.serverpackets.StopMoveInVehicle;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
+
 /**
  * @author Maktakien
  */
@@ -29,7 +31,7 @@ public final class RequestGetOffVehicle extends ClientPacket {
         if (activeChar == null) {
             return;
         }
-        if (!activeChar.isInBoat() || (activeChar.getBoat().getObjectId() != _boatId) || activeChar.getBoat().isMoving() || !activeChar.isInsideRadius3D(_x, _y, _z, 1000)) {
+        if (!activeChar.isInBoat() || (activeChar.getBoat().getObjectId() != _boatId) || activeChar.getBoat().isMoving() || !isInsideRadius3D(activeChar, _x, _y, _z, 1000)) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

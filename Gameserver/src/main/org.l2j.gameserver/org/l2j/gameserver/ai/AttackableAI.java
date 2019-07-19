@@ -36,7 +36,7 @@ import java.util.Set;
 import java.util.concurrent.Future;
 import java.util.stream.Stream;
 
-import static org.l2j.gameserver.util.MathUtil.calculateDistanceSq2D;
+import static org.l2j.gameserver.util.MathUtil.*;
 
 /**
  * This class manages AI of Attackable.
@@ -186,7 +186,7 @@ public class AttackableAI extends CreatureAI {
                     final Location loc = npc.getSpawn();
                     final int range = Config.MAX_DRIFT_RANGE;
 
-                    if (!npc.isInsideRadius3D(loc, range + range)) {
+                    if (!isInsideRadius3D(npc, loc, range + range)) {
                         intention = CtrlIntention.AI_INTENTION_ACTIVE;
                     }
                 }
@@ -376,7 +376,7 @@ public class AttackableAI extends CreatureAI {
                 npc.setWalking();
             }
 
-            if (npc.calculateDistanceSq2D(leader) > (offset * offset)) {
+            if (!MathUtil.isInsideRadius3D(npc, leader, offset)) {
                 int x1 = Rnd.get(minRadius * 2, offset * 2); // x
                 int y1 = Rnd.get(x1, offset * 2); // distance
                 y1 = (int) Math.sqrt((y1 * y1) - (x1 * x1)); // y
@@ -425,7 +425,7 @@ public class AttackableAI extends CreatureAI {
             y1 = npc.getSpawn().getY();
             z1 = npc.getSpawn().getZ();
 
-            if (!npc.isInsideRadius2D(x1, y1, 0, range)) {
+            if (!isInsideRadius2D(npc, x1, y1, range)) {
                 npc.setisReturningToSpawnPoint(true);
             } else {
                 final int deltaX = Rnd.get(range * 2); // x
@@ -543,7 +543,7 @@ public class AttackableAI extends CreatureAI {
         // On l2js because of that sometimes mobs don't attack player only running around player without any sense, so decrease chance for now
         if (!npc.isMovementDisabled() && (Rnd.get(100) <= 3)) {
             final var actualTarget = target;
-            World.getInstance().forAnyVisibleObject(npc, Attackable.class, nearby -> moveIfNeed(npc, actualTarget, collision, combinedCollision), nearby -> !nearby.equals(actualTarget) && MathUtil.isInsideRadius2D(npc, nearby, collision));
+            World.getInstance().forAnyVisibleObject(npc, Attackable.class, nearby -> moveIfNeed(npc, actualTarget, collision, combinedCollision), nearby -> !nearby.equals(actualTarget) && isInsideRadius2D(npc, nearby, collision));
         }
         // Dodge if its needed
         if (!npc.isMovementDisabled() && (npc.getTemplate().getDodge() > 0)) {
@@ -694,7 +694,7 @@ public class AttackableAI extends CreatureAI {
 
         // Check if target is within range or move.
         final int range = npc.getPhysicalAttackRange() + combinedCollision;
-        if (npc.calculateDistance2D(target) > range) {
+        if (!MathUtil.isInsideRadius2D(npc, target, range)) {
             if (checkTarget(target)) {
                 moveToPawn(target, range);
                 return;
@@ -726,7 +726,7 @@ public class AttackableAI extends CreatureAI {
             newY = target.getY() - newY;
         }
 
-        if (!MathUtil.isInsideRadius2D(npc, newX, newY, collision)) {
+        if (!isInsideRadius2D(npc, newX, newY, collision)) {
             final int newZ = npc.getZ() + 30;
 
             // Mobius: Verify destination. Prevents wall collision issues and fixes monsters not avoiding obstacles.
@@ -791,7 +791,7 @@ public class AttackableAI extends CreatureAI {
             }
 
             if (npc.isMovementDisabled()) {
-                if (!npc.isInsideRadius2D(target, npc.getPhysicalAttackRange() + npc.getTemplate().getCollisionRadius() + ((Creature) target).getTemplate().getCollisionRadius())) {
+                if (!isInsideRadius2D(npc, target, npc.getPhysicalAttackRange() + npc.getTemplate().getCollisionRadius() + ((Creature) target).getTemplate().getCollisionRadius())) {
                     return false;
                 }
 

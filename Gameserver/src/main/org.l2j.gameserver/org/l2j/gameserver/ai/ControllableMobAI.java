@@ -13,12 +13,14 @@ import org.l2j.gameserver.model.actor.instance.ControllableMob;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
+import static org.l2j.gameserver.util.MathUtil.*;
 
 /**
  * AI for controllable mobs
@@ -157,7 +159,7 @@ public final class ControllableMobAI extends AttackableAI {
         final ControllableMobAI ctrlAi = (ControllableMobAI) theTarget.getAI();
         ctrlAi.forceAttack(actor);
 
-        final double dist2 = actor.calculateDistanceSq2D(target);
+        final double dist2 = calculateDistanceSq2D(actor, target);
         final int range = actor.getPhysicalAttackRange() + actor.getTemplate().getCollisionRadius() + target.getTemplate().getCollisionRadius();
         int max_range = range;
 
@@ -191,7 +193,7 @@ public final class ControllableMobAI extends AttackableAI {
         }
 
         setTarget(getForcedTarget());
-        final double dist2 = actor.calculateDistanceSq2D(getForcedTarget());
+        final double dist2 = calculateDistanceSq2D(actor, getForcedTarget());
         final int range = actor.getPhysicalAttackRange() + actor.getTemplate().getCollisionRadius() + getForcedTarget().getTemplate().getCollisionRadius();
         int max_range = range;
 
@@ -239,14 +241,14 @@ public final class ControllableMobAI extends AttackableAI {
                         return;
                     }
 
-                    if (actor.isInsideRadius3D(npc, npc.getTemplate().getClanHelpRange())) {
+                    if (isInsideRadius3D(actor, npc, npc.getTemplate().getClanHelpRange())) {
                         npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, finalTarget, 1);
                     }
                 });
             }
 
             setTarget(target);
-            final double dist2 = actor.calculateDistanceSq2D(target);
+            final double dist2 = calculateDistanceSq2D(actor, target);
             final int range = actor.getPhysicalAttackRange() + actor.getTemplate().getCollisionRadius() + target.getTemplate().getCollisionRadius();
             int max_range = range;
 
@@ -327,7 +329,7 @@ public final class ControllableMobAI extends AttackableAI {
             return false;
         }
 
-        if (target.isAlikeDead() || !me.isInsideRadius2D(target, me.getAggroRange()) || (Math.abs(actor.getZ() - target.getZ()) > 100)) {
+        if (target.isAlikeDead() || !isInsideRadius2D(me, target, me.getAggroRange()) || (Math.abs(actor.getZ() - target.getZ()) > 100)) {
             return false;
         }
 

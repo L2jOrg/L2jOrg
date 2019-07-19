@@ -58,6 +58,8 @@ import java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
+
 /**
  * Quest main class.
  *
@@ -2193,7 +2195,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
                 continue;
             }
             temp = partyMember.getQuestState(getName());
-            if ((temp != null) && (temp.get(var) != null) && (temp.get(var)).equalsIgnoreCase(value) && partyMember.isInsideRadius3D(target, Config.ALT_PARTY_RANGE)) {
+            if ((temp != null) && (temp.get(var) != null) && (temp.get(var)).equalsIgnoreCase(value) && isInsideRadius3D(partyMember, target, Config.ALT_PARTY_RANGE)) {
                 candidates.add(partyMember);
             }
         }
@@ -2248,7 +2250,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
                 continue;
             }
             temp = partyMember.getQuestState(getName());
-            if ((temp != null) && (temp.getState() == state) && partyMember.isInsideRadius3D(target, Config.ALT_PARTY_RANGE)) {
+            if ((temp != null) && (temp.getState() == state) && isInsideRadius3D(partyMember, target, Config.ALT_PARTY_RANGE)) {
                 candidates.add(partyMember);
             }
         }

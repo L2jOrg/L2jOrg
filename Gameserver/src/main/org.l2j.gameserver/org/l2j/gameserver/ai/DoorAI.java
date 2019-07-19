@@ -26,6 +26,8 @@ import org.l2j.gameserver.model.actor.instance.Defender;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
+
 /**
  * @author mkizub
  */
@@ -132,7 +134,7 @@ public class DoorAI extends CreatureAI {
         public void run() {
             World.getInstance().forEachVisibleObject(_door, Defender.class, guard ->
             {
-                if (actor.isInsideRadius3D(guard, guard.getTemplate().getClanHelpRange())) {
+                if (isInsideRadius3D(actor, guard, guard.getTemplate().getClanHelpRange())) {
                     guard.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _attacker, 15);
                 }
             });
