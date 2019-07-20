@@ -4,7 +4,6 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.data.xml.impl.FenceData;
 import org.l2j.gameserver.geoengine.geodata.*;
-import org.l2j.gameserver.instancemanager.WarpedSpaceManager;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
@@ -345,9 +344,7 @@ public class GeoEngine {
         if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld())) {
             return false;
         }
-        if (WarpedSpaceManager.getInstance().checkForWarpedSpace(new Location(ox, oy, oz), new Location(tx, ty, tz), origin.getInstanceWorld())) {
-            return false;
-        }
+
 
         // get origin and check existing geo coordinates
         final int gox = getGeoX(ox);
@@ -407,9 +404,6 @@ public class GeoEngine {
             return false;
         }
         if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld())) {
-            return false;
-        }
-        if (WarpedSpaceManager.getInstance().checkForWarpedSpace(new Location(ox, oy, oz), new Location(tx, ty, tz), origin.getInstanceWorld())) {
             return false;
         }
 
@@ -731,9 +725,7 @@ public class GeoEngine {
         if (FenceData.getInstance().checkIfFenceBetween(gox, goy, goz, gtx, gty, gtz, instance)) {
             return new GeoLocation(gox, goy, goz);
         }
-        if (WarpedSpaceManager.getInstance().checkForWarpedSpace(new Location(gox, goy, goz), new Location(gtx, gty, gtz), instance)) {
-            return new GeoLocation(gox, goy, goz);
-        }
+
 
         // get X delta, signum and direction flag
         final int dx = Math.abs(gtx - gox);
