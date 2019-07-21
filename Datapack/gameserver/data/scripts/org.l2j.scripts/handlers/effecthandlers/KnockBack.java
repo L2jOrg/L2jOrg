@@ -30,8 +30,8 @@ import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2j.gameserver.network.serverpackets.ValidateLocation;
-import org.l2j.gameserver.util.GameUtils;
 
+import static org.l2j.gameserver.util.MathUtil.calculateAngleFrom;
 import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
 
 /**
@@ -109,7 +109,7 @@ public final class KnockBack extends AbstractEffect
 			return;
 		}
 
-		final double radians = Math.toRadians(GameUtils.calculateAngleFrom(effector, effected));
+		final double radians = Math.toRadians(calculateAngleFrom(effector, effected));
 		final int x = (int) (effected.getX() + (_distance * Math.cos(radians)));
 		final int y = (int) (effected.getY() + (_distance * Math.sin(radians)));
 		final int z = effected.getZ();

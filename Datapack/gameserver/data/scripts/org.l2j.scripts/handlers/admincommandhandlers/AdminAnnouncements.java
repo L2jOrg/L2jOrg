@@ -16,6 +16,7 @@
  */
 package handlers.admincommandhandlers;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.AnnouncementsTable;
@@ -32,6 +33,8 @@ import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.StringTokenizer;
+
+import static org.l2j.commons.util.Util.isDigit;
 
 /**
  * @author UnAfraid
@@ -104,7 +107,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String annInitDelay = st.nextToken();
-						if (!GameUtils.isDigit(annInitDelay))
+						if (!Util.isInteger(annInitDelay))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -117,7 +120,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String annDelay = st.nextToken();
-						if (!GameUtils.isDigit(annDelay))
+						if (!isDigit(annDelay))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -135,7 +138,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String annRepeat = st.nextToken();
-						if (!GameUtils.isDigit(annRepeat))
+						if (!isDigit(annRepeat))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -178,7 +181,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String annId = st.nextToken();
-						if (!GameUtils.isDigit(annId))
+						if (!isDigit(annId))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces edit <id>");
 							break;
@@ -265,7 +268,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String annInitDelay = st.nextToken();
-						if (!GameUtils.isDigit(annInitDelay))
+						if (!isDigit(annInitDelay))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -278,7 +281,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String annDelay = st.nextToken();
-						if (!GameUtils.isDigit(annDelay))
+						if (!isDigit(annDelay))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -296,7 +299,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String annRepeat = st.nextToken();
-						if (!GameUtils.isDigit(annRepeat))
+						if (!isDigit(annRepeat))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
@@ -343,7 +346,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String token = st.nextToken();
-						if (!GameUtils.isDigit(token))
+						if (!isDigit(token))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces remove <announcement id>");
 							break;
@@ -375,7 +378,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String token = st.nextToken();
-						if (!GameUtils.isDigit(token))
+						if (!isDigit(token))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces show <announcement id>");
 							break;
@@ -409,7 +412,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							break;
 						}
 						final String token = st.nextToken();
-						if (!GameUtils.isDigit(token))
+						if (!isDigit(token))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Syntax: //announces show <announcement id>");
 							break;
@@ -452,7 +455,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 						if (st.hasMoreTokens())
 						{
 							final String token = st.nextToken();
-							if (GameUtils.isDigit(token))
+							if (isDigit(token))
 							{
 								page = Integer.valueOf(token);
 							}

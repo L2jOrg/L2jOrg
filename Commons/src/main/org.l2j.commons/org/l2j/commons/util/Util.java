@@ -67,13 +67,32 @@ public class Util {
         return rawIp[0] | (rawIp[1] << 8) | (rawIp[2] << 16) | (rawIp[3] << 24);
     }
 
+    public static boolean isDigit(String text) {
+        if (isNullOrEmpty(text)) {
+            return false;
+        }
+        for (char c : text.toCharArray()) {
+            if (!Character.isDigit(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
 
-    public static boolean isNumeric(final String value) {
+    public static boolean isFloat(final String value) {
+        return isNumeric(value, true);
+    }
+
+    public static boolean isInteger(final String value) {
+        return isNumeric(value, false);
+    }
+
+    public static boolean isNumeric(final String value, boolean includePoint) {
         if(isNullOrEmpty(value)) {
             return false;
         }
 
-        if(value.charAt(value.length() -1) == '.') {
+        if(value.charAt(value.length() -1) == '.' && !includePoint) {
             return false;
         }
 
@@ -91,6 +110,9 @@ public class Util {
             var caracter = value.charAt(i);
             final var isPoint = caracter == '.';
             if(isPoint) {
+                if(!includePoint) {
+                    return false;
+                }
                 points++;
             }
 
@@ -99,6 +121,18 @@ public class Util {
             }
 
             if(!isPoint && !Character.isDigit(caracter)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static boolean isAlphaNumeric(String text) {
+        if ((text == null) || text.isEmpty()) {
+            return false;
+        }
+        for (char c : text.toCharArray()) {
+            if (!Character.isLetterOrDigit(c)) {
                 return false;
             }
         }

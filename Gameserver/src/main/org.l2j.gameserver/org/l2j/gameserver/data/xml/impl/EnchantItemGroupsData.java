@@ -1,5 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.holders.RangeChanceHolder;
 import org.l2j.gameserver.model.items.ItemTemplate;
@@ -20,7 +21,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
-import static org.l2j.commons.util.Util.isNumeric;
 
 /**
  * @author UnAfraid
@@ -66,11 +66,11 @@ public final class EnchantItemGroupsData extends GameXmlReader {
                                 int max = 0;
                                 if (range.contains("-")) {
                                     final String[] split = range.split("-");
-                                    if ((split.length == 2) && isNumeric(split[0]) && isNumeric(split[1])) {
+                                    if ((split.length == 2) && Util.isInteger(split[0]) && Util.isInteger(split[1])) {
                                         min = Integer.parseInt(split[0]);
                                         max = Integer.parseInt(split[1]);
                                     }
-                                } else if (isNumeric(range)) {
+                                } else if (Util.isInteger(range)) {
                                     min = Integer.parseInt(range);
                                     max = min;
                                 }

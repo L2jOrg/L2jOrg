@@ -3,7 +3,6 @@ package org.l2j.gameserver.model.variables;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,9 +10,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Map.Entry;
 
 /**
@@ -37,13 +33,12 @@ public class PlayerVariables extends AbstractVariables {
     public static final String EXTEND_DROP = "EXTEND_DROP";
     public static final String FORTUNE_TELLING_VARIABLE = "FortuneTelling";
     public static final String FORTUNE_TELLING_BLACK_CAT_VARIABLE = "FortuneTellingBlackCat";
-    public static final String DELUSION_RETURN = "DELUSION_RETURN";
+
     private static final Logger LOGGER = LoggerFactory.getLogger(PlayerVariables.class.getName());
     // SQL Queries.
     private static final String SELECT_QUERY = "SELECT * FROM character_variables WHERE charId = ?";
     private static final String DELETE_QUERY = "DELETE FROM character_variables WHERE charId = ?";
     private static final String INSERT_QUERY = "INSERT INTO character_variables (charId, var, val) VALUES (?, ?, ?)";
-    private static final String DAILY_MISSION_REWARDS = "DAILY_MISSION_REWARDS";
     private final int _objectId;
 
     public PlayerVariables(int objectId) {
@@ -126,78 +121,25 @@ public class PlayerVariables extends AbstractVariables {
         return World.getInstance().findPlayer(_objectId);
     }
 
-    public void addDailyMissionReward(int rewardId) {
-        String result = getString(DAILY_MISSION_REWARDS, "");
-        if (result.isEmpty()) {
-            result = Integer.toString(rewardId);
-        } else {
-            result += "," + rewardId;
-        }
-        set(DAILY_MISSION_REWARDS, result);
-    }
-
-    public void removeDailyMissionReward(int rewardId) {
-        String result = "";
-        final String data = getString(DAILY_MISSION_REWARDS, "");
-        for (String s : data.split(",")) {
-            if (s.equals(Integer.toString(rewardId))) {
-                continue;
-            } else if (result.isEmpty()) {
-                result = s;
-            } else {
-                result += "," + s;
-            }
-        }
-        set(DAILY_MISSION_REWARDS, result);
-    }
-
-    public boolean hasDailyMissionReward(int rewardId) {
-        final String data = getString(DAILY_MISSION_REWARDS, "");
-        for (String s : data.split(",")) {
-            if (s.equals(Integer.toString(rewardId))) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public List<Integer> getDailyMissionRewards() {
-        List<Integer> rewards = null;
-        final String data = getString(DAILY_MISSION_REWARDS, "");
-        if (!data.isEmpty()) {
-            for (String s : getString(DAILY_MISSION_REWARDS, "").split(",")) {
-                if (GameUtils.isDigit(s)) {
-                    final int rewardId = Integer.parseInt(s);
-                    if (rewards == null) {
-                        rewards = new ArrayList<>();
-                    }
-                    rewards.add(rewardId);
-                }
-            }
-        }
-        return rewards != null ? rewards : Collections.emptyList();
-    }
-
     public void updateExtendDrop(int id, long count) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         final String data = getString(EXTEND_DROP, "");
         if (data.isEmpty()) {
-            result = id + "," + count;
+            result = new StringBuilder(id + "," + count);
         } else if (data.contains(";")) {
             for (String s : data.split(";")) {
                 final String[] drop = s.split(",");
                 if (drop[0].equals(Integer.toString(id))) {
-                    s += ";" + drop[0] + "," + count;
                     continue;
                 }
 
-                result += ";" + s;
+                result.append(";").append(s);
             }
-            result = result.substring(1);
+            result = new StringBuilder(result.substring(1));
         } else {
-            result = id + "," + count;
+            result = new StringBuilder(id + "," + count);
         }
-        set(EXTEND_DROP, result);
+        set(EXTEND_DROP, result.toString());
     }
 
     public long getExtendDropCount(int id) {

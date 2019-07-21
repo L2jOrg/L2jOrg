@@ -25,6 +25,8 @@ import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GameUtils;
 
+import static org.l2j.commons.util.Util.isDigit;
+
 /**
  * Handler provides ability to override server's conditions for admin.<br>
  * Note: //setparam command uses any XML value and ignores case sensitivity.<br>
@@ -68,7 +70,7 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 					if (st.hasMoreTokens())
 					{
 						final String token = st.nextToken();
-						if (GameUtils.isDigit(token))
+						if (isDigit(token))
 						{
 							final PcCondOverride ex = PcCondOverride.getCondOverride(Integer.valueOf(token));
 							if (ex != null)

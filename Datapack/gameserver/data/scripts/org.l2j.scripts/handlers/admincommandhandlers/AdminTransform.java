@@ -22,7 +22,8 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.GameUtils;
+
+import static org.l2j.commons.util.Util.isDigit;
 
 /**
  * @author Mobius
@@ -95,7 +96,7 @@ public class AdminTransform implements IAdminCommandHandler
 			}
 			
 			final String[] parts = command.split(" ");
-			if ((parts.length != 2) || !GameUtils.isDigit(parts[1]))
+			if ((parts.length != 2) || !isDigit(parts[1]))
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //transform <id>");
 				return false;

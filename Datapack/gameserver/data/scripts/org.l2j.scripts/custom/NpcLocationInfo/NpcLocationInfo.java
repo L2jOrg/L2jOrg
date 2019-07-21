@@ -17,14 +17,16 @@
 package custom.NpcLocationInfo;
 
 import ai.AbstractNpcAI;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.util.GameUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.l2j.commons.util.Util.isInteger;
 
 /**
  * Npc Location Info AI.
@@ -215,7 +217,7 @@ public class NpcLocationInfo extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
-		if (GameUtils.isDigit(event))
+		if (isInteger(event))
 		{
 			htmltext = null;
 			final int npcId = Integer.parseInt(event);

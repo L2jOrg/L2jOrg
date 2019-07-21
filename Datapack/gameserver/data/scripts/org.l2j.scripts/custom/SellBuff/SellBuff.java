@@ -16,6 +16,7 @@
  */
 package custom.SellBuff;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.handler.BypassHandler;
@@ -35,6 +36,7 @@ import org.l2j.gameserver.util.GameUtils;
 
 import java.util.StringTokenizer;
 
+import static org.l2j.commons.util.Util.isInteger;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 /**
@@ -162,7 +164,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 				if (!activeChar.isSellingBuffs())
 				{
 					int index = 0;
-					if ((params != null) && !params.isEmpty() && GameUtils.isDigit(params))
+					if ((params != null) && !params.isEmpty() && isInteger(params))
 					{
 						index = Integer.parseInt(params);
 					}

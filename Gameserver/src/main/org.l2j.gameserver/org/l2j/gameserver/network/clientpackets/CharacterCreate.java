@@ -29,6 +29,7 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 
 import static java.util.Objects.isNull;
+import static org.l2j.commons.util.Util.isAlphaNumeric;
 
 public final class CharacterCreate extends ClientPacket {
 
@@ -94,7 +95,7 @@ public final class CharacterCreate extends ClientPacket {
         }
 
         // Last Verified: May 30, 2009 - Gracia Final
-        if (!GameUtils.isAlphaNumeric(name) || !isValidName(name)) {
+        if (!isAlphaNumeric(name) || !isValidName(name)) {
             client.sendPacket(new CharCreateFail(CharCreateFail.REASON_INCORRECT_NAME));
             return;
         }

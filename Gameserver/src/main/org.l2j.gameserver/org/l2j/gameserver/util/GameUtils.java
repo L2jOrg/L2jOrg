@@ -2,6 +2,7 @@ package org.l2j.gameserver.util;
 
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
@@ -27,6 +28,9 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.isAnyNull;
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 /**
  * General Utility functions related to game server.
@@ -39,35 +43,6 @@ public final class GameUtils {
 
     public static void handleIllegalPlayerAction(Player actor, String message, IllegalActionPunishmentType punishment) {
         ThreadPoolManager.schedule(new IllegalPlayerActionTask(actor, message, punishment), 5000);
-    }
-
-    /**
-     * @param from
-     * @param to
-     * @return degree value of object 2 to the horizontal line with object 1 being the origin.
-     *
-     * TODO move to MathUtils
-     */
-    @Deprecated
-    public static double calculateAngleFrom(ILocational from, ILocational to) {
-        return calculateAngleFrom(from.getX(), from.getY(), to.getX(), to.getY());
-    }
-
-    /**
-     * @param fromX
-     * @param fromY
-     * @param toX
-     * @param toY
-     * @return degree value of object 2 to the horizontal line with object 1 being the origin
-     * TODO move to MathUtils
-     */
-    @Deprecated
-    public static double calculateAngleFrom(int fromX, int fromY, int toX, int toY) {
-        double angleTarget = Math.toDegrees(Math.atan2(toY - fromY, toX - fromX));
-        if (angleTarget < 0) {
-            angleTarget += 360;
-        }
-        return angleTarget;
     }
 
     /**
@@ -90,51 +65,6 @@ public final class GameUtils {
     }
 
     /**
-     *
-     * @param clientHeading
-     * TODO move to MathUtils
-     */
-    @Deprecated
-    public static double convertHeadingToDegree(int clientHeading) {
-        return clientHeading / 182.044444444;
-    }
-
-    /**
-     * Calculates distance between one set of x, y, z and another set of x, y, z.
-     *
-     * @param x1           - X coordinate of first point.
-     * @param y1           - Y coordinate of first point.
-     * @param z1           - Z coordinate of first point.
-     * @param x2           - X coordinate of second point.
-     * @param y2           - Y coordinate of second point.
-     * @param z2           - Z coordinate of second point.
-     * @param includeZAxis - If set to true, Z coordinates will be included.
-     * @param squared      - If set to true, distance returned will be squared.
-     * @return {@code double} - Distance between object and given x, y , z.
-     * TODO move to MathUtils
-     */
-    @Deprecated
-    public static double calculateDistance(double x1, double y1, double z1, double x2, double y2, double z2, boolean includeZAxis, boolean squared) {
-        final double distance = Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2) + (includeZAxis ? Math.pow(z1 - z2, 2) : 0);
-        return (squared) ? distance : Math.sqrt(distance);
-    }
-
-    /**
-     * Calculates distance between 2 locations.
-     *
-     * @param loc1         - First location.
-     * @param loc2         - Second location.
-     * @param includeZAxis - If set to true, Z coordinates will be included.
-     * @param squared      - If set to true, distance returned will be squared.
-     * @return {@code double} - Distance between object and given location.
-     * TODO move to MathUtils
-     */
-    @Deprecated
-    public static double calculateDistance(ILocational loc1, ILocational loc2, boolean includeZAxis, boolean squared) {
-        return calculateDistance(loc1.getX(), loc1.getY(), loc1.getZ(), loc2.getX(), loc2.getY(), loc2.getZ(), includeZAxis, squared);
-    }
-
-    /**
      * @param range
      * @param obj1
      * @param obj2
@@ -142,7 +72,7 @@ public final class GameUtils {
      * @return {@code true} if the two objects are within specified range between each other, {@code false} otherwise
      */
     public static boolean checkIfInRange(int range, WorldObject obj1, WorldObject obj2, boolean includeZAxis) {
-        if ((obj1 == null) || (obj2 == null) || (obj1.getInstanceWorld() != obj2.getInstanceWorld())) {
+        if (isAnyNull(obj1, obj2) || (obj1.getInstanceWorld() != obj2.getInstanceWorld())) {
             return false;
         }
         if (range == -1) {
@@ -157,7 +87,7 @@ public final class GameUtils {
             radius += ((Creature) obj2).getTemplate().getCollisionRadius();
         }
 
-        return calculateDistance(obj1, obj2, includeZAxis, false) <= (range + radius);
+        return includeZAxis ? isInsideRadius3D(obj1, obj2, range + radius) : isInsideRadius2D(obj1, obj2, range + radius);
     }
 
     /**
@@ -170,88 +100,14 @@ public final class GameUtils {
      * @return {@code true} if objects are within specified range between each other, {@code false} otherwise
      */
     public static boolean checkIfInShortRange(int range, WorldObject obj1, WorldObject obj2, boolean includeZAxis) {
-        if ((obj1 == null) || (obj2 == null)) {
+        if (isAnyNull(obj1, obj2)) {
             return false;
         }
         if (range == -1) {
             return true; // not limited
         }
 
-        return calculateDistance(obj1, obj2, includeZAxis, false) <= range;
-    }
-
-    /**
-     * @param text - the text to check
-     * @return {@code true} if {@code text} contains only numbers, {@code false} otherwise
-     *
-     * @deprecated  use Util#isNumeric
-     */
-    @Deprecated
-    public static boolean isDigit(String text) {
-        if ((text == null) || text.isEmpty()) {
-            return false;
-        }
-        for (char c : text.toCharArray()) {
-            if (!Character.isDigit(c)) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    /**
-     * @param text - the text to check
-     * @return {@code true} if {@code text} is integer, {@code false} otherwise
-     *
-     * @deprecated use Util#isNumeric
-     */
-    @Deprecated
-    public static boolean isInteger(String text) {
-        if ((text == null) || text.isEmpty()) {
-            return false;
-        }
-        try {
-            Integer.parseInt(text);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    /**
-     * @param text - the text to check
-     * @return {@code true} if {@code text} is float, {@code false} otherwise
-     * @deprecated use Util#isNumeric
-     */
-    @Deprecated
-    public static boolean isFloat(String text) {
-        if ((text == null) || text.isEmpty()) {
-            return false;
-        }
-        try {
-            Float.parseFloat(text);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    /**
-     * @param text - the text to check
-     * @return {@code true} if {@code text} is double, {@code false} otherwise
-     * @deprecated use Util#isNumeric
-     */
-    @Deprecated
-    public static boolean isDouble(String text) {
-        if ((text == null) || text.isEmpty()) {
-            return false;
-        }
-        try {
-            Double.parseDouble(text);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
+        return includeZAxis ? isInsideRadius3D(obj1, obj2, range) : isInsideRadius2D(obj1, obj2, range);
     }
 
     /**
@@ -272,22 +128,6 @@ public final class GameUtils {
     }
 
     /**
-     * @param text - the text to check
-     * @return {@code true} if {@code text} contains only letters and/or numbers, {@code false} otherwise
-     */
-    public static boolean isAlphaNumeric(String text) {
-        if ((text == null) || text.isEmpty()) {
-            return false;
-        }
-        for (char c : text.toCharArray()) {
-            if (!Character.isLetterOrDigit(c)) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    /**
      * Format the specified digit using the digit grouping symbol "," (comma).<br>
      * For example, 123456789 becomes 123,456,789.
      *
@@ -298,16 +138,6 @@ public final class GameUtils {
         synchronized (ADENA_FORMATTER) {
             return ADENA_FORMATTER.format(amount);
         }
-    }
-
-    /**
-     * @param val
-     * @param format
-     * @return formatted double value by specified format.
-     */
-    public static String formatDouble(double val, String format) {
-        final DecimalFormat formatter = new DecimalFormat(format, new DecimalFormatSymbols(Locale.ENGLISH));
-        return formatter.format(val);
     }
 
     /**
@@ -515,7 +345,7 @@ public final class GameUtils {
 
     public static boolean isInsideRangeOfObjectId(WorldObject obj, int targetObjId, int radius) {
         final WorldObject target = World.getInstance().findObject(targetObjId);
-        return (target != null) && MathUtil.isInsideRadius3D(obj, target, radius);
+        return (target != null) && isInsideRadius3D(obj, target, radius);
     }
 
     /**
@@ -654,6 +484,6 @@ public final class GameUtils {
 
     public static <T extends WorldObject> Predicate<T> isVisible(WorldObject reference, int range, boolean includeReference) {
         return visible -> nonNull(visible) && (includeReference || !visible.equals(reference)) &&
-                Objects.equals(visible.getInstanceWorld(),  reference.getInstanceWorld()) && MathUtil.isInsideRadius3D(reference, visible, range);
+                Objects.equals(visible.getInstanceWorld(),  reference.getInstanceWorld()) && isInsideRadius3D(reference, visible, range);
     }
 }

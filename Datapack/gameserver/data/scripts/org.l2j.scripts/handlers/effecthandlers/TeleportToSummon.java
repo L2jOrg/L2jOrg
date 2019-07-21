@@ -29,8 +29,9 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2j.gameserver.network.serverpackets.ValidateLocation;
-import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
+
+import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
 /**
  * Teleport To Target effect implementation.
@@ -75,7 +76,7 @@ public final class TeleportToSummon extends AbstractEffect
 		
 		final int px = summon.getX();
 		final int py = summon.getY();
-		double ph = GameUtils.convertHeadingToDegree(summon.getHeading());
+		double ph = convertHeadingToDegree(summon.getHeading());
 		
 		ph += 180;
 		if (ph > 360)

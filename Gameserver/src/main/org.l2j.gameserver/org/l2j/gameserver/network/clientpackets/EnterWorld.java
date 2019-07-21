@@ -226,15 +226,10 @@ public class EnterWorld extends ClientPacket {
         // Send Adena / Inventory Count Info
         activeChar.sendPacket(new ExAdenaInvenCount(activeChar));
 
-        // Send Equipped Items
-        activeChar.sendPacket(new ExUserInfoEquipSlot(activeChar));
-
         // Send Unread Mail Count
         if (MailManager.getInstance().hasUnreadPost(activeChar)) {
             activeChar.sendPacket(new ExUnReadMailCount(activeChar));
         }
-
-        Quest.playerEnter(activeChar);
 
         // Send Quest List
         activeChar.sendPacket(new QuestList(activeChar));
@@ -310,8 +305,6 @@ public class EnterWorld extends ClientPacket {
             // no broadcast needed since the player will already spawn dead to others
             client.sendPacket(new Die(activeChar));
         }
-
-        activeChar.onPlayerEnter();
 
         client.sendPacket(new SkillCoolTime(activeChar));
         client.sendPacket(new ExVoteSystemInfo(activeChar));
@@ -398,6 +391,8 @@ public class EnterWorld extends ClientPacket {
         }
 
         activeChar.broadcastUserInfo();
+        // Send Equipped Items
+        activeChar.sendPacket(new ExUserInfoEquipSlot(activeChar));
 
         if (Config.ENABLE_WORLD_CHAT) {
             activeChar.sendPacket(new ExWorldChatCnt(activeChar));
@@ -428,6 +423,9 @@ public class EnterWorld extends ClientPacket {
                 }
             }, 5000);
         }
+
+        activeChar.onPlayerEnter();
+        Quest.playerEnter(activeChar);
     }
 
     private void sendAttendanceInfo(Player activeChar) {

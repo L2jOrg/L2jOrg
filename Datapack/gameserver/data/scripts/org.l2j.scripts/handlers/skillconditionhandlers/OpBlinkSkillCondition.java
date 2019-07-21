@@ -18,12 +18,13 @@ package handlers.skillconditionhandlers;
 
 import org.l2j.gameserver.enums.Position;
 import org.l2j.gameserver.geoengine.GeoEngine;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.util.GameUtils;
+
+import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
 /**
  * @author Sdw
@@ -60,7 +61,7 @@ public class OpBlinkSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		final double angle = GameUtils.convertHeadingToDegree(caster.getHeading());
+		final double angle = convertHeadingToDegree(caster.getHeading());
 		final double radian = Math.toRadians(angle);
 		final double course = Math.toRadians(_angle);
 		final int x1 = (int) (Math.cos(Math.PI + radian + course) * _range);

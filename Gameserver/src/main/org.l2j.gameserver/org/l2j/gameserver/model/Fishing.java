@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model;
 
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.FishingData;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.geoengine.GeoEngine;
@@ -27,12 +27,12 @@ import org.l2j.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndR
 import org.l2j.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndType;
 import org.l2j.gameserver.network.serverpackets.fishing.ExFishingStart;
 import org.l2j.gameserver.network.serverpackets.fishing.ExUserInfoFishing;
-import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.ScheduledFuture;
 
+import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
 /**
  * @author bit
@@ -71,11 +71,6 @@ public class Fishing {
         // always use water zone, fishing zone high z is high in the air...
         final int baitZ = waterZone.getWaterZ();
 
-        // if (!GeoEngine.getInstance().canSeeTarget(player.getX(), player.getY(), player.getZ(), baitX, baitY, baitZ))
-        //
-        // return Integer.MIN_VALUE;
-        // }
-
         if (GeoEngine.getInstance().hasGeo(baitX, baitY)) {
             if (GeoEngine.getInstance().getHeight(baitX, baitY, baitZ) > baitZ) {
                 return Integer.MIN_VALUE;
@@ -95,10 +90,6 @@ public class Fishing {
 
     public boolean isAtValidLocation() {
         // TODO: implement checking direction
-        // if (calculateBaitLocation() == null)
-        // {
-        // return false;
-        // }
         return _player.isInsideZone(ZoneId.FISHING);
     }
 
@@ -216,10 +207,10 @@ public class Fishing {
             _player.rechargeShots(false, false, true);
         }
 
-        _reelInTask = ThreadPoolManager.getInstance().schedule(() ->
+        _reelInTask = ThreadPoolManager.schedule(() ->
         {
             _player.getFishing().reelInWithReward();
-            _startFishingTask = ThreadPoolManager.getInstance().schedule(() -> _player.getFishing().castLine(), Rnd.get(baitData.getWaitMin(), baitData.getWaitMax()));
+            _startFishingTask = ThreadPoolManager.schedule(() -> _player.getFishing().castLine(), Rnd.get(baitData.getWaitMin(), baitData.getWaitMax()));
         }, Rnd.get(baitData.getTimeMin(), baitData.getTimeMax()));
         _player.stopMove(null);
         _player.broadcastPacket(new ExFishingStart(_player, -1, baitData.getLevel(), _baitLocation));
@@ -305,14 +296,8 @@ public class Fishing {
             reelIn(FishingEndReason.STOP, false);
             _isFishing = false;
             switch (endType) {
-                case PLAYER_STOP: {
-                    _player.sendPacket(SystemMessageId.YOU_REEL_YOUR_LINE_IN_AND_STOP_FISHING);
-                    break;
-                }
-                case PLAYER_CANCEL: {
-                    _player.sendPacket(SystemMessageId.YOUR_ATTEMPT_AT_FISHING_HAS_BEEN_CANCELLED);
-                    break;
-                }
+                case PLAYER_STOP -> _player.sendPacket(SystemMessageId.YOU_REEL_YOUR_LINE_IN_AND_STOP_FISHING);
+                case PLAYER_CANCEL -> _player.sendPacket(SystemMessageId.YOUR_ATTEMPT_AT_FISHING_HAS_BEEN_CANCELLED);
             }
         }
     }
@@ -326,7 +311,7 @@ public class Fishing {
         final int distMin = FishingData.getInstance().getBaitDistanceMin();
         final int distMax = FishingData.getInstance().getBaitDistanceMax();
         int distance = Rnd.get(distMin, distMax);
-        final double angle = GameUtils.convertHeadingToDegree(_player.getHeading());
+        final double angle = convertHeadingToDegree(_player.getHeading());
         final double radian = Math.toRadians(angle);
         final double sin = Math.sin(radian);
         final double cos = Math.cos(radian);

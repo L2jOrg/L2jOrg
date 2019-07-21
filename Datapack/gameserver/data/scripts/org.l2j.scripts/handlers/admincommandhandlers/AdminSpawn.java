@@ -45,6 +45,8 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static org.l2j.commons.util.Util.isDigit;
+
 /**
  * This class handles following admin commands: - show_spawns = shows menu - spawn_index lvl = shows menu for monsters with respective level - spawn_monster id = spawns monster id on target
  * @version $Revision: 1.2.2.5.2.5 $ $Date: 2005/04/11 10:06:06 $
@@ -379,7 +381,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			if (st.hasMoreTokens())
 			{
 				final String nextToken = st.nextToken();
-				if (GameUtils.isDigit(nextToken))
+				if (isDigit(nextToken))
 				{
 					count = Integer.parseInt(nextToken);
 				}

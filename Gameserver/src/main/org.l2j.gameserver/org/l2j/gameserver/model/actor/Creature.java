@@ -72,6 +72,7 @@ import java.util.stream.Collectors;
 
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
+import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
 /**
  * Mother class of all character objects of the world (PC, NPC...)<br>
@@ -970,7 +971,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         // H5 Changes: without Polearm Mastery (skill 216) max simultaneous attacks is 3 (1 by default + 2 in skill 3599).
         int attackCountMax = (int) _stat.getValue(Stats.ATTACK_COUNT_MAX, 1);
         if ((attackCountMax > 1) && !(_stat.getValue(Stats.PHYSICAL_POLEARM_TARGET_SINGLE, 0) > 0)) {
-            final double headingAngle = GameUtils.convertHeadingToDegree(getHeading());
+            final double headingAngle = convertHeadingToDegree(getHeading());
             final int maxRadius = _stat.getPhysicalAttackRadius();
             final int physicalAttackAngle = _stat.getPhysicalAttackAngle();
 
@@ -2441,7 +2442,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             if (_cursorKeyMovement // In case of cursor movement, avoid moving through obstacles.
                     || (distance > 3000)) // Stop movement when player has clicked far away and intersected with an obstacle.
             {
-                final double angle = GameUtils.convertHeadingToDegree(getHeading());
+                final double angle = convertHeadingToDegree(getHeading());
                 final double radian = Math.toRadians(angle);
                 final double course = Math.toRadians(180);
                 final double frontDistance = 10 * (_stat.getMoveSpeed() / 100);

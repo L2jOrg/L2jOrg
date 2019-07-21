@@ -1,23 +1,24 @@
 package org.l2j.gameserver.security;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.xml.impl.SecondaryAuthData;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.serverpackets.Ex2ndPasswordAck;
 import org.l2j.gameserver.network.serverpackets.Ex2ndPasswordCheck;
 import org.l2j.gameserver.network.serverpackets.Ex2ndPasswordVerify;
-import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Base64;
+import java.util.Objects;
 
 /**
  * @author mrTJO
@@ -35,9 +36,6 @@ public class SecondaryPasswordAuth {
     private int _wrongAttempts;
     private boolean _authed;
 
-    /**
-     * @param activeClient
-     */
     public SecondaryPasswordAuth(GameClient activeClient) {
         _activeClient = activeClient;
         _password = null;
@@ -47,8 +45,8 @@ public class SecondaryPasswordAuth {
     }
 
     private void loadPassword() {
-        String var = null;
-        String value = null;
+        String var;
+        String value;
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement(SELECT_PASSWORD)) {
             statement.setString(1, _activeClient.getAccountName());
@@ -97,7 +95,7 @@ public class SecondaryPasswordAuth {
         return true;
     }
 
-    public boolean insertWrongAttempt(int attempts) {
+    private boolean insertWrongAttempt(int attempts) {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement(INSERT_ATTEMPT)) {
             statement.setString(1, _activeClient.getAccountName());
@@ -149,7 +147,7 @@ public class SecondaryPasswordAuth {
     public boolean checkPassword(String password, boolean skipAuth) {
         password = cryptPassword(password);
 
-        if (!password.equals(_password)) {
+        if (!Objects.equals(password, _password)) {
             _wrongAttempts++;
             if (_wrongAttempts < SecondaryAuthData.getInstance().getMaxAttempts()) {
                 _activeClient.sendPacket(new Ex2ndPasswordVerify(Ex2ndPasswordVerify.PASSWORD_WRONG, _wrongAttempts));
@@ -190,19 +188,17 @@ public class SecondaryPasswordAuth {
     private String cryptPassword(String password) {
         try {
             final MessageDigest md = MessageDigest.getInstance("SHA");
-            final byte[] raw = password.getBytes("UTF-8");
+            final byte[] raw = password.getBytes(StandardCharsets.UTF_8);
             final byte[] hash = md.digest(raw);
             return Base64.getEncoder().encodeToString(hash);
         } catch (NoSuchAlgorithmException e) {
             LOGGER.error("[SecondaryPasswordAuth]Unsupported Algorythm");
-        } catch (UnsupportedEncodingException e) {
-            LOGGER.error("[SecondaryPasswordAuth]Unsupported Encoding");
         }
         return null;
     }
 
     private boolean validatePassword(String password) {
-        if (!GameUtils.isDigit(password)) {
+        if (!Util.isInteger(password)) {
             return false;
         }
 

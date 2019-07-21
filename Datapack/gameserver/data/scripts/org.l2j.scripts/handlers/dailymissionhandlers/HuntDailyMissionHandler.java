@@ -32,7 +32,7 @@ public class HuntDailyMissionHandler extends AbstractDailyMissionHandler {
         maxLevel = holder.getParams().getInt("maxLevel", Byte.MAX_VALUE);
         classLevel = holder.getParams().getInt("classLevel", 0);
         final String monsters = holder.getParams().getString("monsters", "");
-        this.monsters = Arrays.stream(monsters.split(" ")).filter(Util::isNumeric).map(Integer::parseInt).collect(Collectors.toList());
+        this.monsters = Arrays.stream(monsters.split(" ")).filter(Util::isInteger).map(Integer::parseInt).collect(Collectors.toList());
     }
 
     @Override

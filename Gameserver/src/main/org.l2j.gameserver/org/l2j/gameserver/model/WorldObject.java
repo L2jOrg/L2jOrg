@@ -18,12 +18,14 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.DeleteObject;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
+import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
 /**
  * Base class for all interactive objects.
@@ -635,7 +637,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
         if (heading < 0) {
             heading += 65535;
         }
-        return GameUtils.convertHeadingToDegree(heading);
+        return convertHeadingToDegree(heading);
     }
 
     /**

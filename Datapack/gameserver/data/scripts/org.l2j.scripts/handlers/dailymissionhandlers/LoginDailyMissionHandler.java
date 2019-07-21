@@ -15,6 +15,8 @@ import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import java.util.Calendar;
 import java.util.function.Consumer;
 
+import static org.l2j.commons.util.Util.isInteger;
+
 public class LoginDailyMissionHandler extends AbstractDailyMissionHandler {
 
     private byte days = 0;
@@ -23,7 +25,7 @@ public class LoginDailyMissionHandler extends AbstractDailyMissionHandler {
         super(holder);
         var days = holder.getParams().getString("days", "");
         for (String day : days.split(" ")) {
-            if(Util.isNumeric(day)) {
+            if(isInteger(day)) {
                 this.days |= 1 << Integer.parseInt(day);
             }
         }

@@ -16,6 +16,7 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TeleportType;
@@ -29,8 +30,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
-
-import static org.l2j.commons.util.Util.isNumeric;
 
 
 /**
@@ -114,7 +113,7 @@ public final class Teleporter extends Npc {
     private int parseNextInt(StringTokenizer st, int defaultVal) {
         if (st.hasMoreTokens()) {
             final String token = st.nextToken();
-            if (isNumeric(token)) {
+            if (Util.isInteger(token)) {
                 return Integer.valueOf(token);
             }
         }

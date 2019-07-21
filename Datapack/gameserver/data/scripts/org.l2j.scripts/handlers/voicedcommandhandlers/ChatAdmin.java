@@ -16,8 +16,6 @@
  */
 package handlers.voicedcommandhandlers;
 
-import java.util.StringTokenizer;
-
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.handler.IVoicedCommandHandler;
@@ -29,7 +27,10 @@ import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.GameUtils;
+
+import java.util.StringTokenizer;
+
+import static org.l2j.commons.util.Util.isDigit;
 
 public class ChatAdmin implements IVoicedCommandHandler
 {
@@ -67,7 +68,7 @@ public class ChatAdmin implements IVoicedCommandHandler
 					if (st.hasMoreTokens())
 					{
 						final String token = st.nextToken();
-						if (GameUtils.isDigit(token))
+						if (isDigit(token))
 						{
 							expirationTime = Integer.parseInt(token);
 						}

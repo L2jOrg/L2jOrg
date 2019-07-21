@@ -1,9 +1,10 @@
 package org.l2j.gameserver.model.items;
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.enums.ItemSkillType;
-import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -13,7 +14,6 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.util.GameUtils;
 
 /**
  * This class is dedicated to the management of weapons.
@@ -24,7 +24,6 @@ public final class Weapon extends ItemTemplate {
     private int _soulShotCount;
     private int _spiritShotCount;
     private int _mpConsume;
-    private int _baseAttackRange;
     private int _baseAttackRadius;
     private int _baseAttackAngle;
     private int _changeWeaponId;
@@ -58,9 +57,8 @@ public final class Weapon extends ItemTemplate {
         _soulShotCount = set.getInt("soulshots", 0);
         _spiritShotCount = set.getInt("spiritshots", 0);
         _mpConsume = set.getInt("mp_consume", 0);
-        _baseAttackRange = set.getInt("attack_range", 40);
         final String[] damageRange = set.getString("damage_range", "").split(";"); // 0?;0?;fan sector;base attack angle
-        if ((damageRange.length > 1) && GameUtils.isDigit(damageRange[2]) && GameUtils.isDigit(damageRange[3])) {
+        if ((damageRange.length > 1) && Util.isInteger(damageRange[2]) && Util.isInteger(damageRange[3])) {
             _baseAttackRadius = Integer.parseInt(damageRange[2]);
             _baseAttackAngle = 360 - Integer.parseInt(damageRange[3]);
         } else {
@@ -141,10 +139,6 @@ public final class Weapon extends ItemTemplate {
         return _mpConsume;
     }
 
-    public int getBaseAttackRange() {
-        return _baseAttackRange;
-    }
-
     public int getBaseAttackRadius() {
         return _baseAttackRadius;
     }
@@ -198,8 +192,8 @@ public final class Weapon extends ItemTemplate {
     /**
      * @param caster  the Creature pointing out the caster
      * @param target  the Creature pointing out the target
-     * @param trigger
-     * @param type
+     * @param trigger trigger skill
+     * @param type type of skill
      */
     public void applyConditionalSkills(Creature caster, Creature target, Skill trigger, ItemSkillType type) {
         forEachSkill(type, holder ->
@@ -241,10 +235,7 @@ public final class Weapon extends ItemTemplate {
             if (type == ItemSkillType.ON_MAGIC_SKILL) {
                 // notify quests of a skill use
                 if (caster.isPlayer()) {
-                    World.getInstance().forEachVisibleObjectInRange(caster, Npc.class, 1000, npc ->
-                    {
-                        EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npc, caster.getActingPlayer(), skill, false, target), npc);
-                    });
+                    World.getInstance().forEachVisibleObjectInRange(caster, Npc.class, 1000, npc -> EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npc, caster.getActingPlayer(), skill, false, target), npc));
                 }
                 if (caster.isPlayer()) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ACTIVATED);

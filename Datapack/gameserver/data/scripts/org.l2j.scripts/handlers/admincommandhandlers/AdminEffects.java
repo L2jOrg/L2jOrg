@@ -16,6 +16,7 @@
  */
 package handlers.admincommandhandlers;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.Movie;
 import org.l2j.gameserver.enums.Team;
@@ -35,10 +36,11 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Arrays;
 import java.util.StringTokenizer;
+
+import static org.l2j.commons.util.Util.isDigit;
 
 /**
  * This class handles following admin commands:
@@ -471,7 +473,7 @@ public class AdminEffects implements IAdminCommandHandler
 				param1 = st.nextToken();
 			}
 			
-			if ((param1 != null) && !GameUtils.isDigit(param1))
+			if ((param1 != null) && !Util.isDigit(param1))
 			{
 				AbnormalVisualEffect ave;
 				
@@ -490,7 +492,7 @@ public class AdminEffects implements IAdminCommandHandler
 				if (st.countTokens() == 1)
 				{
 					param2 = st.nextToken();
-					if (GameUtils.isDigit(param2))
+					if (isDigit(param2))
 					{
 						radius = Integer.parseInt(param2);
 					}

@@ -16,6 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.util.Util.isInteger;
 
 /**
  * @author UnAfraid
@@ -59,7 +60,7 @@ public class EnchantItemOptionsData extends GameXmlReader {
 
                                 for (byte i = 0; i < 3; i++) {
                                     final Node att = cd.getAttributes().getNamedItem("option" + (i + 1));
-                                    if ((att != null) && Util.isNumeric(att.getNodeValue())) {
+                                    if ((att != null) && isInteger(att.getNodeValue())) {
                                         op.setOption(i, parseInteger(att));
                                     }
                                 }

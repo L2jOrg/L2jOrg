@@ -35,6 +35,8 @@ import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
+import static org.l2j.commons.util.Util.isDigit;
+
 /**
  * @author NosBit
  */
@@ -89,7 +91,7 @@ public class AdminReload implements IAdminCommandHandler
 					if (st.hasMoreElements())
 					{
 						final String value = st.nextToken();
-						if (!GameUtils.isDigit(value))
+						if (!isDigit(value))
 						{
 							QuestManager.getInstance().reload(value);
 							AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Quest Name:" + value + ".");

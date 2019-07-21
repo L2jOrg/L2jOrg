@@ -36,6 +36,8 @@ import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
+import static org.l2j.commons.util.Util.isAlphaNumeric;
+
 /**
  * This class ...
  *
@@ -135,7 +137,7 @@ public class VillageMaster extends Folk {
 
             return;
         }
-        if (!GameUtils.isAlphaNumeric(clanName) || !isValidName(clanName) || (2 > clanName.length())) {
+        if (!isAlphaNumeric(clanName) || !isValidName(clanName) || (2 > clanName.length())) {
             player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
             return;
         }
@@ -214,7 +216,7 @@ public class VillageMaster extends Folk {
             player.sendMessage("Pledge don't exists.");
             return;
         }
-        if (!GameUtils.isAlphaNumeric(pledgeName) || !isValidName(pledgeName) || (2 > pledgeName.length())) {
+        if (!isAlphaNumeric(pledgeName) || !isValidName(pledgeName) || (2 > pledgeName.length())) {
             player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
             return;
         }

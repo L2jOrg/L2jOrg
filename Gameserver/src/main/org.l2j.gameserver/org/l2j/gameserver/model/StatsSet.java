@@ -1,6 +1,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.util.TimeUtil;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.holders.MinionHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.interfaces.IParserAdvUtils;
@@ -663,15 +664,15 @@ public class StatsSet implements IParserAdvUtils {
      */
     private <T> List<T> convertList(List<Object> originalList, Class<T> clazz) {
         if (clazz == Integer.class) {
-            if (originalList.stream().map(Object::toString).allMatch(GameUtils::isInteger)) {
+            if (originalList.stream().map(Object::toString).allMatch(Util::isInteger)) {
                 return originalList.stream().map(Object::toString).map(Integer::valueOf).map(clazz::cast).collect(Collectors.toList());
             }
         } else if (clazz == Float.class) {
-            if (originalList.stream().map(Object::toString).allMatch(GameUtils::isFloat)) {
+            if (originalList.stream().map(Object::toString).allMatch(Util::isFloat)) {
                 return originalList.stream().map(Object::toString).map(Float::valueOf).map(clazz::cast).collect(Collectors.toList());
             }
         } else if (clazz == Double.class) {
-            if (originalList.stream().map(Object::toString).allMatch(GameUtils::isDouble)) {
+            if (originalList.stream().map(Object::toString).allMatch(Util::isFloat)) {
                 return originalList.stream().map(Object::toString).map(Double::valueOf).map(clazz::cast).collect(Collectors.toList());
             }
         }

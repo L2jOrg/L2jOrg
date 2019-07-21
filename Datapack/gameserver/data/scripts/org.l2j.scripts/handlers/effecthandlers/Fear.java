@@ -24,13 +24,14 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Defender;
-import org.l2j.gameserver.model.actor.instance.FortCommander;
 import org.l2j.gameserver.model.actor.instance.SiegeFlag;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.util.GameUtils;
+
+import static org.l2j.gameserver.util.MathUtil.calculateAngleFrom;
+import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
 /**
  * Fear effect implementation.
@@ -59,9 +60,7 @@ public final class Fear extends AbstractEffect
 			return false;
 		}
 
-		return effected.isPlayer() || effected.isSummon() || (effected.isAttackable() //
-				&& !((effected instanceof Defender) || (effected instanceof FortCommander) //
-				|| (effected instanceof SiegeFlag) || (effected.getTemplate().getRace() == Race.SIEGE_WEAPON)));
+		return effected.isPlayer() || effected.isSummon() || effected.isAttackable() && !(effected instanceof Defender || effected instanceof SiegeFlag || effected.getTemplate().getRace() == Race.SIEGE_WEAPON);
 	}
 	
 	@Override
@@ -95,7 +94,7 @@ public final class Fear extends AbstractEffect
 	
 	private void fearAction(Creature effector, Creature effected)
 	{
-		final double radians = Math.toRadians((effector != null) ? GameUtils.calculateAngleFrom(effector, effected) : GameUtils.convertHeadingToDegree(effected.getHeading()));
+		final double radians = Math.toRadians((effector != null) ? calculateAngleFrom(effector, effected) : convertHeadingToDegree(effected.getHeading()));
 		
 		final int posX = (int) (effected.getX() + (FEAR_RANGE * Math.cos(radians)));
 		final int posY = (int) (effected.getY() + (FEAR_RANGE * Math.sin(radians)));

@@ -19,6 +19,7 @@ package handlers.admincommandhandlers;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.Shutdown;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
@@ -26,7 +27,6 @@ import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.GameUtils;
 
 /**
  * This class handles following admin commands: - server_shutdown [sec] = shows menu or shuts down server in sec seconds
@@ -48,7 +48,7 @@ public class AdminShutdown implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(22);
-				if (GameUtils.isDigit(val))
+				if (Util.isInteger(val))
 				{
 					serverShutdown(activeChar, Integer.valueOf(val), false);
 				}
@@ -68,7 +68,7 @@ public class AdminShutdown implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(21);
-				if (GameUtils.isDigit(val))
+				if (Util.isInteger(val))
 				{
 					serverShutdown(activeChar, Integer.parseInt(val), true);
 				}

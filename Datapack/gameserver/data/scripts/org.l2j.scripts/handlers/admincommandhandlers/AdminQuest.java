@@ -36,6 +36,8 @@ import java.io.File;
 import java.nio.file.Paths;
 import java.util.*;
 
+import static org.l2j.commons.util.Util.isDigit;
+
 
 public class AdminQuest implements IAdminCommandHandler
 {
@@ -53,7 +55,7 @@ public class AdminQuest implements IAdminCommandHandler
 	
 	private static Quest findScript(String script)
 	{
-		if (GameUtils.isDigit(script))
+		if (isDigit(script))
 		{
 			return QuestManager.getInstance().getQuest(Integer.parseInt(script));
 		}

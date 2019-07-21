@@ -32,6 +32,8 @@ import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GameUtils;
 
+import static org.l2j.commons.util.Util.isDigit;
+
 /**
  * Admin Castle manage admin commands.
  * @author St3eT
@@ -55,7 +57,7 @@ public final class AdminCastle implements IAdminCommandHandler
 			{
 				final String param = st.nextToken();
 				final Castle castle;
-				if (GameUtils.isDigit(param))
+				if (isDigit(param))
 				{
 					castle = CastleManager.getInstance().getCastleById(Integer.parseInt(param));
 				}

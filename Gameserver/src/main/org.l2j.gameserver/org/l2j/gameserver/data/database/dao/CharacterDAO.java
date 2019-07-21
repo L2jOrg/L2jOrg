@@ -26,6 +26,6 @@ public interface CharacterDAO extends DAO<CharacterData> {
     @Query("SELECT charId, createDate FROM characters WHERE DAYOFMONTH(createDate) = :day: AND MONTH(createDate) = :month: AND YEAR(createDate) < :year:")
     List<CharacterData> findBirthdayCharacters(int year, int month, int day);
 
-    @Query("SELECT charId, accesslevel FROM characters WHERE char_name=?")
+    @Query("SELECT charId, accesslevel FROM characters WHERE char_name=:name:")
     CharacterData findIdAndAccessLevelByName(String name);
 }

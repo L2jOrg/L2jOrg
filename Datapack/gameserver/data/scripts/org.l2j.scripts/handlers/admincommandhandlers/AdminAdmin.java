@@ -36,6 +36,8 @@ import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
+import static org.l2j.commons.util.Util.isDigit;
+
 
 /**
  * This class handles following admin commands: - admin|admin1/admin2/admin3/admin4/admin5 = slots for the 5 starting admin menus - gmliston/gmlistoff = includes/excludes active character from /gmlist results - silence = toggles private messages acceptance mode - diet = toggles weight penalty mode -
@@ -362,7 +364,7 @@ public class AdminAdmin implements IAdminCommandHandler
 					}
 					
 					final String valueToken = st.nextToken();
-					if (!GameUtils.isDigit(valueToken))
+					if (!isDigit(valueToken))
 					{
 						BuilderUtil.sendSysMessage(activeChar, "Incorrect syntax, use: //worldchat set <times used>");
 						break;

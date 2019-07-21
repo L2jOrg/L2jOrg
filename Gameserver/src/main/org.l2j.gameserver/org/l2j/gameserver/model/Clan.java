@@ -50,6 +50,8 @@ import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
+import static org.l2j.commons.util.Util.isAlphaNumeric;
+
 public class Clan implements IIdentifiable, INamable {
     /**
      * Clan leaved ally
@@ -1824,7 +1826,7 @@ public class Clan implements IIdentifiable, INamable {
             player.sendPacket(SystemMessageId.AS_YOU_ARE_CURRENTLY_SCHEDULE_FOR_CLAN_DISSOLUTION_NO_ALLIANCE_CAN_BE_CREATED);
             return;
         }
-        if (!GameUtils.isAlphaNumeric(allyName)) {
+        if (!isAlphaNumeric(allyName)) {
             player.sendPacket(SystemMessageId.INCORRECT_ALLIANCE_NAME_PLEASE_TRY_AGAIN);
             return;
         }

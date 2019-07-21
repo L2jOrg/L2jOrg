@@ -49,6 +49,7 @@ import java.util.concurrent.ScheduledFuture;
 
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
+import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
 /**
  * @author Nik
@@ -895,7 +896,7 @@ public class SkillCaster implements Runnable {
             case DA4:
             case DA5: {
                 final double course = _skill.getOperateType() == SkillOperateType.DA4 ? Math.toRadians(270) : Math.toRadians(90);
-                final double radian = Math.toRadians(GameUtils.convertHeadingToDegree(target.getHeading()));
+                final double radian = Math.toRadians(convertHeadingToDegree(target.getHeading()));
                 double nRadius = creature.getCollisionRadius();
                 if (target.isCharacter()) {
                     nRadius += ((Creature) target).getCollisionRadius();
@@ -907,7 +908,7 @@ public class SkillCaster implements Runnable {
             }
             case DA3: {
                 flyType = FlyToLocation.FlyType.WARP_BACK;
-                final double radian = Math.toRadians(GameUtils.convertHeadingToDegree(creature.getHeading()));
+                final double radian = Math.toRadians(convertHeadingToDegree(creature.getHeading()));
                 x = creature.getX() + (int) (Math.cos(Math.PI + radian) * _skill.getCastRange());
                 y = creature.getY() + (int) (Math.sin(Math.PI + radian) * _skill.getCastRange());
                 z = creature.getZ();
@@ -917,7 +918,7 @@ public class SkillCaster implements Runnable {
             case DA1: {
                 if (creature == target) {
                     final double course = Math.toRadians(180);
-                    final double radian = Math.toRadians(GameUtils.convertHeadingToDegree(creature.getHeading()));
+                    final double radian = Math.toRadians(convertHeadingToDegree(creature.getHeading()));
                     x = creature.getX() + (int) (Math.cos(Math.PI + radian + course) * _skill.getCastRange());
                     y = creature.getY() + (int) (Math.sin(Math.PI + radian + course) * _skill.getCastRange());
                     z = creature.getZ();

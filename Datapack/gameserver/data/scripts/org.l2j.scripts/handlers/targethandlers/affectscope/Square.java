@@ -16,20 +16,21 @@
  */
 package handlers.targethandlers.affectscope;
 
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
-
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.AffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
-import org.l2j.gameserver.util.GameUtils;
+
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+
+import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
 /**
  * Square affect scope implementation (actually more like a rectangle).
@@ -49,7 +50,7 @@ public class Square implements IAffectScopeHandler
 		
 		final int rectX = activeChar.getX();
 		final int rectY = activeChar.getY() - (squareWidth / 2);
-		final double heading = Math.toRadians(squareStartAngle + GameUtils.convertHeadingToDegree(activeChar.getHeading()));
+		final double heading = Math.toRadians(squareStartAngle + convertHeadingToDegree(activeChar.getHeading()));
 		final double cos = Math.cos(-heading);
 		final double sin = Math.sin(-heading);
 		

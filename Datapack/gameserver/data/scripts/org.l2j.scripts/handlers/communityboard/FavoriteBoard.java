@@ -28,6 +28,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 
+import static org.l2j.commons.util.Util.isDigit;
+
 /**
  * Favorite board.
  * @author Zoey76
@@ -117,7 +119,7 @@ public class FavoriteBoard implements IParseBoardHandler
 		else if (command.startsWith("_bbsdelfav_"))
 		{
 			final String favId = command.replaceAll("_bbsdelfav_", "");
-			if (!GameUtils.isDigit(favId))
+			if (!isDigit(favId))
 			{
 				LOG.warn(FavoriteBoard.class.getSimpleName() + ": Couldn't delete favorite link, " + favId + " it's not a valid ID!");
 				return false;

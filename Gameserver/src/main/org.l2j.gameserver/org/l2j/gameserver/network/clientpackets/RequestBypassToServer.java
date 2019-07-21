@@ -137,7 +137,7 @@ public final class RequestBypassToServer extends ClientPacket {
                     id = _command.substring(4);
                 }
 
-                if (Util.isNumeric(id)) {
+                if (Util.isInteger(id)) {
                     final WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
 
                     if ((object != null) && object.isNpc() && (endOfId > 0) && isInsideRadius2D(activeChar, object, Npc.INTERACTION_DISTANCE)) {

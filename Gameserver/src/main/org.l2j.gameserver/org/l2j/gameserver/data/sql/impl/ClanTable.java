@@ -45,6 +45,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static org.l2j.commons.util.Util.isAlphaNumeric;
+
 
 /**
  * This class loads the clan related data.
@@ -139,7 +141,7 @@ public class ClanTable {
             player.sendPacket(SystemMessageId.YOU_MUST_WAIT_10_DAYS_BEFORE_CREATING_A_NEW_CLAN);
             return null;
         }
-        if (!GameUtils.isAlphaNumeric(clanName) || (2 > clanName.length())) {
+        if (!isAlphaNumeric(clanName) || (2 > clanName.length())) {
             player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
             return null;
         }

@@ -25,6 +25,8 @@ import org.l2j.gameserver.util.GameUtils;
 
 import ai.AbstractNpcAI;
 
+import static org.l2j.commons.util.Util.isDigit;
+
 /**
  * Dark Elven Change Part 1.
  * @author nonom
@@ -63,7 +65,7 @@ public final class DarkElfChange1 extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
-		if (GameUtils.isDigit(event))
+		if (isDigit(event))
 		{
 			final int i = Integer.valueOf(event);
 			final ClassId cid = player.getClassId();

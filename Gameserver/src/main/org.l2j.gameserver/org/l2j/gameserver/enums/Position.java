@@ -2,6 +2,8 @@ package org.l2j.gameserver.enums;
 
 import org.l2j.gameserver.model.interfaces.ILocational;
 
+import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
+
 /**
  * @author Sdw
  */
@@ -19,12 +21,12 @@ public enum Position {
      * <li>back: otherwise.</li>
      * </ul>
      *
-     * @param from
-     * @param to
-     * @return
+     * @param from initial location
+     * @param to final location
+     * @return the position
      */
     public static Position getPosition(ILocational from, ILocational to) {
-        final int heading = Math.abs(to.getHeading() - from.calculateHeadingTo(to));
+        final int heading = Math.abs(to.getHeading() - calculateHeadingFrom(from, to));
         if (((heading >= 0x2000) && (heading <= 0x6000)) || (Integer.toUnsignedLong(heading - 0xA000) <= 0x4000)) {
             return SIDE;
         } else if (Integer.toUnsignedLong(heading - 0x2000) <= 0xC000) {

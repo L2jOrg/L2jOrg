@@ -80,7 +80,7 @@ public class AdminLogin implements IAdminCommandHandler
 				boolean isNumeric = true;
 				for (int i = 0; i < (tokens - 1); i++)
 				{
-					isNumeric &= Util.isNumeric(modes[i] = st.nextToken().trim());
+					isNumeric &= Util.isInteger(modes[i] = st.nextToken().trim());
 				}
 				int newType = 0;
 

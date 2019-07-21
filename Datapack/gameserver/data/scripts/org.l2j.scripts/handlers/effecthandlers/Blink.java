@@ -27,7 +27,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2j.gameserver.network.serverpackets.ValidateLocation;
-import org.l2j.gameserver.util.GameUtils;
+
+import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
 /**
  * Blink effect implementation.<br>
@@ -78,7 +79,7 @@ public final class Blink extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		final double angle = GameUtils.convertHeadingToDegree(effected.getHeading());
+		final double angle = convertHeadingToDegree(effected.getHeading());
 		final double radian = Math.toRadians(angle);
 		final double course = Math.toRadians(_flyCourse);
 		final int x1 = (int) (Math.cos(Math.PI + radian + course) * _flyRadius);

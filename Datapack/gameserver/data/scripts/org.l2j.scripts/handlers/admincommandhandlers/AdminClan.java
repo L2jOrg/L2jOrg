@@ -18,6 +18,7 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
@@ -32,7 +33,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.GameUtils;
 
 /**
  * @author UnAfraid, Zoey76
@@ -139,7 +139,7 @@ public class AdminClan implements IAdminCommandHandler
 				if (st.hasMoreElements())
 				{
 					final String token = st.nextToken();
-					if (!GameUtils.isDigit(token))
+					if (!Util.isInteger(token))
 					{
 						break;
 					}
@@ -179,7 +179,7 @@ public class AdminClan implements IAdminCommandHandler
 		{
 			val = st.nextToken();
 			// From the HTML we receive player's object Id.
-			if (GameUtils.isDigit(val))
+			if (Util.isInteger(val))
 			{
 				player = World.getInstance().findPlayer(Integer.parseInt(val));
 				if (player == null)

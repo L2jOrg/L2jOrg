@@ -133,4 +133,16 @@ public final class MathUtil {
     public static double convertHeadingToDegree(int clientHeading) {
         return clientHeading / 182.044444444;
     }
+
+    public static double calculateAngleFrom(ILocational from, ILocational to) {
+        return calculateAngleFrom(from.getX(), from.getY(), to.getX(), to.getY());
+    }
+
+    public static double calculateAngleFrom(int fromX, int fromY, int toX, int toY) {
+        double angleTarget = Math.toDegrees(Math.atan2(toY - fromY, toX - fromX));
+        if (angleTarget < 0) {
+            angleTarget += 360;
+        }
+        return angleTarget;
+    }
 }

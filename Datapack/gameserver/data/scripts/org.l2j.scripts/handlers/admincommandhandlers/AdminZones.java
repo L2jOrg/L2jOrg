@@ -19,6 +19,7 @@ package handlers.admincommandhandlers;
 import ai.AbstractNpcAI;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.PlayerAction;
 import org.l2j.gameserver.geoengine.GeoEngine;
@@ -43,7 +44,6 @@ import org.l2j.gameserver.network.serverpackets.ExServerPrimitive;
 import org.l2j.gameserver.network.serverpackets.ExShowTerritory;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -55,6 +55,8 @@ import java.util.List;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import static org.l2j.commons.util.Util.isDigit;
 
 
 /**
@@ -179,7 +181,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 							break;
 						}
 						final String indexToken = st.nextToken();
-						if (!GameUtils.isDigit(indexToken))
+						if (!Util.isInteger(indexToken))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Node index should be int!");
 							break;
@@ -196,7 +198,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 							break;
 						}
 						final String indexToken = st.nextToken();
-						if (!GameUtils.isDigit(indexToken))
+						if (!isDigit(indexToken))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Node index should be int!");
 							break;

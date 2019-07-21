@@ -3,6 +3,7 @@ package org.l2j.gameserver.model.quest;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.datatables.ItemTable;
@@ -14,8 +15,8 @@ import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.KeyValuePair;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -2556,13 +2557,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
 
     public Set<NpcLogListHolder> getNpcLogList(Player activeChar) {
         return Collections.emptySet();
-    }
-
-    public <T> boolean isTarget(int[] ids, WorldObject target, Class<T> clazz) {
-        if ((target != null) && clazz.isInstance(target)) {
-            return CommonUtil.contains(ids, target.getId());
-        }
-        return false;
     }
 
     public void sendNpcLogList(Player activeChar) {

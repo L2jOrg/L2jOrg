@@ -20,6 +20,7 @@ import java.util.EnumSet;
 import java.util.Set;
 import java.util.StringTokenizer;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
@@ -65,7 +66,7 @@ public final class AdminGmSpeed implements IAdminCommandHandler
 				return true;
 			}
 			
-			if (!GameUtils.isDouble(token))
+			if (!Util.isFloat(token))
 			{
 				BuilderUtil.sendSysMessage(player, "//gmspeed [0...10]");
 				return false;

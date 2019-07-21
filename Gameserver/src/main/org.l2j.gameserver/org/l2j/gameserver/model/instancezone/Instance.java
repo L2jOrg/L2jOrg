@@ -1,18 +1,16 @@
 package org.l2j.gameserver.model.instancezone;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.util.CommonUtil;
-import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.enums.InstanceReenterType;
 import org.l2j.gameserver.enums.InstanceTeleportType;
 import org.l2j.gameserver.instancemanager.InstanceManager;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.TeleportWhereType;
-import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Door;
@@ -21,7 +19,6 @@ import org.l2j.gameserver.model.actor.templates.DoorTemplate;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.instance.*;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
-import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.interfaces.INamable;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
@@ -37,11 +34,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 /**
  * Instance world.
@@ -54,7 +47,7 @@ public final class Instance implements IIdentifiable, INamable {
     // Basic instance parameters
     private final int _id;
     private final InstanceTemplate _template;
-    private final long _startTime;
+
     // Advanced instance parameters
     private final Set<Player> _allowed = ConcurrentHashMap.newKeySet(); // Players which can enter to instance
     private final Set<Player> _players = ConcurrentHashMap.newKeySet(); // Players inside instance
@@ -79,7 +72,6 @@ public final class Instance implements IIdentifiable, INamable {
         // Set basic instance info
         _id = id;
         _template = template;
-        _startTime = System.currentTimeMillis();
         _spawns = new ArrayList<>(template.getSpawns().size());
 
         // Clone and add the spawn templates
@@ -164,16 +156,6 @@ public final class Instance implements IIdentifiable, INamable {
     }
 
     /**
-     * Check if instance status is equal to {@code status}.
-     *
-     * @param status number used for status comparison
-     * @return {@code true} when instance status and {@code status} are equal, otherwise {@code false}
-     */
-    public boolean isStatus(int status) {
-        return getStatus() == status;
-    }
-
-    /**
      * Increment instance world status
      *
      * @return new world status
@@ -215,15 +197,6 @@ public final class Instance implements IIdentifiable, INamable {
     }
 
     /**
-     * Remove player from allowed so he can't enter anymore.
-     *
-     * @param player to remove
-     */
-    public void removeAllowed(Player player) {
-        _allowed.remove(player);
-    }
-
-    /**
      * Add player to instance
      *
      * @param player player instance
@@ -248,7 +221,7 @@ public final class Instance implements IIdentifiable, INamable {
             if ((_template.getDuration() == 0) || (emptyTime == 0)) {
                 destroy();
             } else if ((emptyTime >= 0) && (_emptyDestroyTask == null) && (getRemainingTime() < emptyTime)) {
-                _emptyDestroyTask = ThreadPoolManager.getInstance().schedule(this::destroy, emptyTime);
+                _emptyDestroyTask = ThreadPoolManager.schedule(this::destroy, emptyTime);
             }
         }
     }
@@ -282,37 +255,6 @@ public final class Instance implements IIdentifiable, INamable {
     }
 
     /**
-     * Get first found player from instance world.<br>
-     * <i>This method is useful for instances with one player inside.</i>
-     *
-     * @return first found player, otherwise {@code null}
-     */
-    public Player getFirstPlayer() {
-        return _players.stream().findFirst().orElse(null);
-    }
-
-    /**
-     * Get player by ID from instance.<br>
-     *
-     * @param id objectId of player
-     * @return first player by ID, otherwise {@code null}
-     */
-    public Player getPlayerById(int id) {
-        return _players.stream().filter(p -> p.getObjectId() == id).findFirst().orElse(null);
-    }
-
-    /**
-     * Get all players from instance world inside specified radius.
-     *
-     * @param object location of target
-     * @param radius radius around target
-     * @return players within radius
-     */
-    public Set<Player> getPlayersInsideRadius(ILocational object, int radius) {
-        return _players.stream().filter(p -> isInsideRadius3D(p, object, radius)).collect(Collectors.toSet());
-    }
-
-    /**
      * Spawn doors inside instance world.
      */
     private void spawnDoors() {
@@ -342,35 +284,6 @@ public final class Instance implements IIdentifiable, INamable {
     }
 
     /**
-     * Handle open/close status of instance doors.
-     *
-     * @param id   ID of doors
-     * @param open {@code true} means open door, {@code false} means close door
-     */
-    public void openCloseDoor(int id, boolean open) {
-        final Door door = _doors.get(id);
-        if (door != null) {
-            if (open) {
-                if (!door.isOpen()) {
-                    door.openMe();
-                }
-            } else if (door.isOpen()) {
-                door.closeMe();
-            }
-        }
-    }
-
-    /**
-     * Check if spawn group with name {@code name} exists.
-     *
-     * @param name name of group to be checked
-     * @return {@code true} if group exist, otherwise {@code false}
-     */
-    public boolean isSpawnGroupExist(String name) {
-        return _spawns.stream().flatMap(group -> group.getGroups().stream()).anyMatch(group -> name.equalsIgnoreCase(group.getName()));
-    }
-
-    /**
      * Get spawn group by group name.
      *
      * @param name name of group
@@ -378,53 +291,8 @@ public final class Instance implements IIdentifiable, INamable {
      */
     public List<SpawnGroup> getSpawnGroup(String name) {
         final List<SpawnGroup> spawns = new ArrayList<>();
-        _spawns.stream().forEach(spawnTemplate -> spawns.addAll(spawnTemplate.getGroupsByName(name)));
+        _spawns.forEach(spawnTemplate -> spawns.addAll(spawnTemplate.getGroupsByName(name)));
         return spawns;
-    }
-
-    /**
-     * @param name
-     * @return {@code List} of NPCs that are part of specified group
-     */
-    public List<Npc> getNpcsOfGroup(String name) {
-        return getNpcsOfGroup(name, null);
-    }
-
-    /**
-     * @param groupName
-     * @param filter
-     * @return {@code List} of NPCs that are part of specified group and matches filter specified
-     */
-    public List<Npc> getNpcsOfGroup(String groupName, Predicate<Npc> filter) {
-        return getStreamOfGroup(groupName, filter).collect(Collectors.toList());
-    }
-
-    /**
-     * @param groupName
-     * @param filter
-     * @return {@code Npc} instance of an NPC that is part of a group and matches filter specified
-     */
-    public Npc getNpcOfGroup(String groupName, Predicate<Npc> filter) {
-        return getStreamOfGroup(groupName, filter).findFirst().orElse(null);
-    }
-
-    /**
-     * @param groupName
-     * @param filter
-     * @return {@code Stream<Npc>} of NPCs that is part of a group and matches filter specified
-     */
-    public Stream<Npc> getStreamOfGroup(String groupName, Predicate<Npc> filter) {
-        if (filter == null) {
-            filter = Objects::nonNull;
-        }
-
-        //@formatter:off
-        return _spawns.stream()
-                .flatMap(spawnTemplate -> spawnTemplate.getGroupsByName(groupName).stream())
-                .flatMap(group -> group.getSpawns().stream())
-                .flatMap(npcTemplate -> npcTemplate.getSpawnedNpcs().stream())
-                .filter(filter);
-        //@formatter:on
     }
 
     /**
@@ -452,24 +320,6 @@ public final class Instance implements IIdentifiable, INamable {
         return npcs;
     }
 
-    /**
-     * De-spawns NPCs from group (defined in XML template) from the instance world.
-     *
-     * @param name of group which should be de-spawned
-     */
-    public void despawnGroup(String name) {
-        final List<SpawnGroup> spawns = getSpawnGroup(name);
-        if (spawns == null) {
-            LOGGER.warn("Spawn group " + name + " doesn't exist for instance " + _template.getName() + " (" + _id + ")!");
-            return;
-        }
-
-        try {
-            spawns.forEach(SpawnGroup::despawnAll);
-        } catch (Exception e) {
-            LOGGER.warn("Unable to spawn group " + name + " inside instance " + _template.getName() + " (" + _id + ")");
-        }
-    }
 
     /**
      * Get spawned NPCs from instance.
@@ -487,52 +337,6 @@ public final class Instance implements IIdentifiable, INamable {
      */
     public Set<Npc> getAliveNpcs() {
         return _npcs.stream().filter(n -> n.getCurrentHp() > 0).collect(Collectors.toSet());
-    }
-
-    /**
-     * Get spawned NPCs from instance with specific IDs.
-     *
-     * @param id IDs of NPCs which should be found
-     * @return list of filtered NPCs from instance
-     */
-    public List<Npc> getNpcs(int... id) {
-        return _npcs.stream().filter(n -> CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
-    }
-
-    /**
-     * Get spawned NPCs from instance with specific IDs and class type.
-     *
-     * @param <T>
-     * @param clazz
-     * @param ids   IDs of NPCs which should be found
-     * @return list of filtered NPCs from instance
-     */
-    @SafeVarargs
-    public final <T extends Creature> List<T> getNpcs(Class<T> clazz, int... ids) {
-        return _npcs.stream().filter(n -> (ids.length == 0) || CommonUtil.contains(ids, n.getId())).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
-    }
-
-    /**
-     * Get spawned and alive NPCs from instance with specific IDs and class type.
-     *
-     * @param <T>
-     * @param clazz
-     * @param ids   IDs of NPCs which should be found
-     * @return list of filtered NPCs from instance
-     */
-    @SafeVarargs
-    public final <T extends Creature> List<T> getAliveNpcs(Class<T> clazz, int... ids) {
-        return _npcs.stream().filter(n -> ((ids.length == 0) || CommonUtil.contains(ids, n.getId())) && (n.getCurrentHp() > 0)).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
-    }
-
-    /**
-     * Get alive NPCs from instance with specific IDs.
-     *
-     * @param id IDs of NPCs which should be found
-     * @return list of filtered NPCs from instance
-     */
-    public List<Npc> getAliveNpcs(int... id) {
-        return _npcs.stream().filter(n -> (n.getCurrentHp() > 0) && CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
     }
 
     /**
@@ -611,10 +415,10 @@ public final class Instance implements IIdentifiable, INamable {
             sendWorldDestroyMessage(minutes);
             if (minutes <= 5) // Message 1 minute before destroy
             {
-                _cleanUpTask = ThreadPoolManager.getInstance().schedule(this::cleanUp, millis - 60000);
+                _cleanUpTask = ThreadPoolManager.schedule(this::cleanUp, millis - 60000);
             } else // Message 5 minutes before destroy
             {
-                _cleanUpTask = ThreadPoolManager.getInstance().schedule(this::cleanUp, millis - (5 * 60000));
+                _cleanUpTask = ThreadPoolManager.schedule(this::cleanUp, millis - (5 * 60000));
             }
         }
     }
@@ -676,24 +480,6 @@ public final class Instance implements IIdentifiable, INamable {
                 player.sendPacket(packet);
             }
         }
-    }
-
-    /**
-     * Get instance creation time.
-     *
-     * @return creation time in milliseconds
-     */
-    public long getStartTime() {
-        return _startTime;
-    }
-
-    /**
-     * Get elapsed time since instance create.
-     *
-     * @return elapsed time in milliseconds
-     */
-    public long getElapsedTime() {
-        return System.currentTimeMillis() - _startTime;
     }
 
     /**
@@ -809,7 +595,7 @@ public final class Instance implements IIdentifiable, INamable {
             player.sendPacket(sm);
 
             // Start eject task
-            _ejectDeadTasks.put(player.getObjectId(), ThreadPoolManager.getInstance().schedule(() ->
+            _ejectDeadTasks.put(player.getObjectId(), ThreadPoolManager.schedule(() ->
             {
                 if (player.isDead()) {
                     ejectPlayer(player.getActingPlayer());
@@ -898,18 +684,6 @@ public final class Instance implements IIdentifiable, INamable {
         }
     }
 
-    // ----------------------------------------------
-    // Template methods
-    // ----------------------------------------------
-
-    /**
-     * Get parameters from instance template.<br>
-     *
-     * @return template parameters
-     */
-    public StatsSet getTemplateParameters() {
-        return _template.getParameters();
-    }
 
     /**
      * Get template ID of instance world.
@@ -1013,10 +787,10 @@ public final class Instance implements IIdentifiable, INamable {
     private void cleanUp() {
         if (getRemainingTime() <= TimeUnit.MINUTES.toMillis(1)) {
             sendWorldDestroyMessage(1);
-            _cleanUpTask = ThreadPoolManager.getInstance().schedule(this::destroy, 60 * 1000); // 1 minute
+            _cleanUpTask = ThreadPoolManager.schedule(this::destroy, 60 * 1000); // 1 minute
         } else {
             sendWorldDestroyMessage(5);
-            _cleanUpTask = ThreadPoolManager.getInstance().schedule(this::cleanUp, 5 * 60 * 1000); // 5 minutes
+            _cleanUpTask = ThreadPoolManager.schedule(this::cleanUp, 5 * 60 * 1000); // 5 minutes
         }
     }
 
@@ -1038,7 +812,7 @@ public final class Instance implements IIdentifiable, INamable {
 
     @Override
     public boolean equals(Object obj) {
-        return (obj != null) && (obj instanceof Instance) && (((Instance) obj).getId() == getId());
+        return (obj instanceof Instance) && (((Instance) obj).getId() == getId());
     }
 
     @Override

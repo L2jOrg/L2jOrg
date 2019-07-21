@@ -16,14 +16,15 @@
  */
 package village.master.DarkElfChange2;
 
+import ai.AbstractNpcAI;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.util.GameUtils;
 
-import ai.AbstractNpcAI;
+import static org.l2j.commons.util.Util.isInteger;
 
 /**
  * Dark Elven Change Part 2.
@@ -76,7 +77,7 @@ public final class DarkElfChange2 extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
-		if (GameUtils.isDigit(event))
+		if (isInteger(event))
 		{
 			final int i = Integer.valueOf(event);
 			final ClassId cid = player.getClassId();

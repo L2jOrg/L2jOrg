@@ -33,6 +33,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GameUtils;
 
+import static org.l2j.commons.util.Util.isDigit;
+
 /**
  * @author UnAfraid
  */
@@ -230,7 +232,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 	private int parseInt(StringTokenizer st, int defaultVal)
 	{
 		final String token = st.nextToken();
-		if (!GameUtils.isDigit(token))
+		if (!isDigit(token))
 		{
 			return -1;
 		}

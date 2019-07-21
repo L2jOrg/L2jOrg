@@ -27,6 +27,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.util.GameUtils;
 
+import static org.l2j.commons.util.Util.isDigit;
+
 /**
  * Region board.
  * @author Zoey76
@@ -78,7 +80,7 @@ public class RegionBoard implements IWriteBoardHandler
 			CommunityBoardHandler.getInstance().addBypass(activeChar, "Region>", command);
 			
 			final String id = command.replace("_bbsloc;", "");
-			if (!GameUtils.isDigit(id))
+			if (!isDigit(id))
 			{
 				LOG.warn(RegionBoard.class.getSimpleName() + ": Player " + activeChar + " sent and invalid region bypass " + command + "!");
 				return false;

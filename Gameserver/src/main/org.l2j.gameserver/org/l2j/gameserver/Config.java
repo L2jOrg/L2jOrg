@@ -2,6 +2,7 @@ package org.l2j.gameserver;
 
 import org.l2j.commons.util.PropertiesParser;
 import org.l2j.commons.util.StringUtil;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.model.Location;
@@ -29,8 +30,6 @@ import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-
-import static org.l2j.commons.util.Util.isNumeric;
 
 /**
  * This class loads all the game server related configurations from files.<br>
@@ -1083,7 +1082,7 @@ public final class Config {
         final PropertiesParser Feature = new PropertiesParser(FEATURE_CONFIG_FILE);
         SIEGE_HOUR_LIST = new ArrayList<>();
         for (String hour : Feature.getString("SiegeHourList", "").split(",")) {
-            if (isNumeric(hour)) {
+            if (Util.isInteger(hour)) {
                 SIEGE_HOUR_LIST.add(Integer.parseInt(hour));
             }
         }

@@ -1,6 +1,5 @@
 package org.l2j.gameserver.model.actor;
 
-import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CreatureAI;
@@ -39,6 +38,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 
+import static org.l2j.commons.util.Util.contains;
+
 public abstract class Summon extends Playable {
     // @formatter:off
     private static final int[] PASSIVE_SUMMONS =
@@ -49,7 +50,6 @@ public abstract class Summon extends Playable {
             };
     protected boolean _restoreSummon = true;
     private Player _owner;
-    private int _attackRange = 36; // Melee range
     private boolean _follow = true;
     private boolean _previousFollowStatus = true;
     private int _summonPoints = 0;
@@ -82,10 +82,7 @@ public abstract class Summon extends Playable {
         setFollowStatus(true);
         updateAndBroadcastStatus(0);
         sendPacket(new RelationChanged(this, _owner.getRelation(_owner), false));
-        World.getInstance().forEachVisibleObject(getOwner(), Player.class, player ->
-        {
-            player.sendPacket(new RelationChanged(this, _owner.getRelation(player), isAutoAttackable(player)));
-        });
+        World.getInstance().forEachVisibleObject(getOwner(), Player.class, player -> player.sendPacket(new RelationChanged(this, _owner.getRelation(player), isAutoAttackable(player))));
         final Party party = _owner.getParty();
         if (party != null) {
             party.broadcastToPartyMembers(_owner, new ExPartyPetWindowAdd(this));
@@ -278,10 +275,6 @@ public abstract class Summon extends Playable {
         return true;
     }
 
-    public void stopDecay() {
-        DecayTaskManager.getInstance().cancel(this);
-    }
-
     @Override
     public void onDecay() {
         if (!isPet()) {
@@ -379,14 +372,6 @@ public abstract class Summon extends Playable {
         }
     }
 
-    public int getAttackRange() {
-        return _attackRange;
-    }
-
-    public void setAttackRange(int range) {
-        _attackRange = (range < 36) ? 36 : range;
-    }
-
     public boolean getFollowStatus() {
         return _follow;
     }
@@ -407,10 +392,6 @@ public abstract class Summon extends Playable {
 
     public int getControlObjectId() {
         return 0;
-    }
-
-    public Weapon getActiveWeapon() {
-        return null;
     }
 
     @Override
@@ -778,7 +759,7 @@ public abstract class Summon extends Playable {
 
         // Sin eater, Big Boom, Wyvern can't attack with attack button.
         final int npcId = getId();
-        if (CommonUtil.contains(PASSIVE_SUMMONS, npcId)) {
+        if (contains(PASSIVE_SUMMONS, npcId)) {
             _owner.sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
@@ -833,11 +814,7 @@ public abstract class Summon extends Playable {
         }
 
         // Siege golems AI doesn't support attacking other than doors/walls at the moment.
-        if (target.isDoor() && (getTemplate().getRace() != Race.SIEGE_WEAPON)) {
-            return false;
-        }
-
-        return true;
+        return !target.isDoor() || (getTemplate().getRace() == Race.SIEGE_WEAPON);
     }
 
     @Override
