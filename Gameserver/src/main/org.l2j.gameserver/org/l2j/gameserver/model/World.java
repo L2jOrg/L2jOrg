@@ -283,7 +283,7 @@ public final class World {
     }
 
     private void describeObjectToOther(WorldObject object, WorldObject wo) {
-        if(!isPlayer(object) || wo.isVisibleFor((Player) object)) {
+        if(!isPlayer(object) || !wo.isVisibleFor((Player) object)) {
             return;
         }
 
