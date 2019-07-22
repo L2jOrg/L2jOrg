@@ -26,6 +26,7 @@ import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
@@ -631,6 +632,10 @@ public class CreatureAI extends AbstractAI {
             if (getIntention() != AI_INTENTION_MOVE_TO) {
                 setIntention(AI_INTENTION_ACTIVE);
             }
+        }
+
+        if(Objects.equals(getActor().getTarget(), object)) {
+            getActor().setTarget(null);
         }
 
         // Check if the targeted object was the actor

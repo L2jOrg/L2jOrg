@@ -345,7 +345,7 @@ public final class World {
         if(nonNull(oldRegion)) {
             oldRegion.forEachSurroundingRegion(w -> {
                 if (!newRegion.isSurroundingRegion(w)) {
-                    w.forEachCreature(other -> this.forgetEachOther(object, other), other -> !object.equals(other));
+                    w.forEachObject(WorldObject.class, other -> this.forgetEachOther(object, other), other -> !object.equals(other));
                 }
             });
         }

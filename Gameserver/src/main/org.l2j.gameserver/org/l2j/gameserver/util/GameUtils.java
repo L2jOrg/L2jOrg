@@ -9,10 +9,8 @@ import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.actor.Playable;
-import org.l2j.gameserver.model.actor.Summon;
+import org.l2j.gameserver.model.actor.*;
+import org.l2j.gameserver.model.actor.instance.FriendlyNpc;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.tasks.player.IllegalPlayerActionTask;
@@ -453,7 +451,6 @@ public final class GameUtils {
         return org.l2j.commons.util.Util.hashIp(player.getIPAddress());
     }
 
-
     public static boolean isPlayer(WorldObject object) {
         return object instanceof Player;
     }
@@ -476,6 +473,10 @@ public final class GameUtils {
 
     public static boolean isSummon(WorldObject object) {
         return object instanceof Summon;
+    }
+
+    public static boolean isAttackable(WorldObject object) {
+        return object instanceof Attackable && !(object instanceof FriendlyNpc);
     }
 
     public static <T extends WorldObject> Predicate<T> isVisible(WorldObject reference, int range) {
