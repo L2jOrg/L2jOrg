@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
-<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org MapRegion.xsd">
 	<!-- Giran Castle Town -->
 	<region name="giran_castle_town" town="Giran Castle Town" castle="3" locId="918" bbs="6">
-		<respawnPoint X="82480" Y="149087" Z="-3350" />
-		<respawnPoint X="81440" Y="149119" Z="-3350" />
-		<respawnPoint X="81376" Y="148095" Z="-3350" />
-		<respawnPoint X="82496" Y="148095" Z="-3350" />
-		<respawnPoint X="83473" Y="149223" Z="-3300" />
-		<respawnPoint X="83426" Y="148835" Z="-3300" />
-		<respawnPoint X="83409" Y="148578" Z="-3300" />
-		<respawnPoint X="83415" Y="148235" Z="-3300" />
-		<respawnPoint X="82272" Y="147801" Z="-3350" />
-		<respawnPoint X="81562" Y="147782" Z="-3350" />
-		<respawnPoint X="81062" Y="148144" Z="-3350" />
-		<respawnPoint X="81033" Y="148883" Z="-3350" />
-		<respawnPoint X="81637" Y="149427" Z="-3350" />
-		<respawnPoint X="82292" Y="149450" Z="-3350" />
-		<respawnPoint X="74450" Y="144238" Z="-3730" isChaotic="true" />
-		<respawnPoint X="74209" Y="142395" Z="-3730" isChaotic="true" />
-		<respawnPoint X="77279" Y="145045" Z="-3630" isChaotic="true" />
-		<respawnPoint X="74809" Y="146119" Z="-3600" isChaotic="true" />
-		<respawnPoint X="75006" Y="143520" Z="-3700" isChaotic="true" />
-		<respawnPoint X="81347" Y="140579" Z="-3520" isChaotic="true" />
-		<respawnPoint X="79543" Y="142050" Z="-3500" isChaotic="true" />
-		<respawnPoint X="86223" Y="140993" Z="-3400" isChaotic="true" />
-		<respawnPoint X="78692" Y="154573" Z="-3450" isChaotic="true" />
-		<respawnPoint X="77870" Y="156209" Z="-3430" isChaotic="true" />
-		<respawnPoint X="79832" Y="154009" Z="-3500" isChaotic="true" />
-		<respawnPoint X="75501" Y="147178" Z="-3530" isChaotic="true" />
+		<respawnPoint x="82480" y="149087" z="-3350" />
+		<respawnPoint x="81440" y="149119" z="-3350" />
+		<respawnPoint x="81376" y="148095" z="-3350" />
+		<respawnPoint x="82496" y="148095" z="-3350" />
+		<respawnPoint x="83473" y="149223" z="-3300" />
+		<respawnPoint x="83426" y="148835" z="-3300" />
+		<respawnPoint x="83409" y="148578" z="-3300" />
+		<respawnPoint x="83415" y="148235" z="-3300" />
+		<respawnPoint x="82272" y="147801" z="-3350" />
+		<respawnPoint x="81562" y="147782" z="-3350" />
+		<respawnPoint x="81062" y="148144" z="-3350" />
+		<respawnPoint x="81033" y="148883" z="-3350" />
+		<respawnPoint x="81637" y="149427" z="-3350" />
+		<respawnPoint x="82292" y="149450" z="-3350" />
+		<respawnPoint x="74450" y="144238" z="-3730" isChaotic="true" />
+		<respawnPoint x="74209" y="142395" z="-3730" isChaotic="true" />
+		<respawnPoint x="77279" y="145045" z="-3630" isChaotic="true" />
+		<respawnPoint x="74809" y="146119" z="-3600" isChaotic="true" />
+		<respawnPoint x="75006" y="143520" z="-3700" isChaotic="true" />
+		<respawnPoint x="81347" y="140579" z="-3520" isChaotic="true" />
+		<respawnPoint x="79543" y="142050" z="-3500" isChaotic="true" />
+		<respawnPoint x="86223" y="140993" z="-3400" isChaotic="true" />
+		<respawnPoint x="78692" y="154573" z="-3450" isChaotic="true" />
+		<respawnPoint x="77870" y="156209" z="-3430" isChaotic="true" />
+		<respawnPoint x="79832" y="154009" z="-3500" isChaotic="true" />
+		<respawnPoint x="75501" y="147178" z="-3530" isChaotic="true" />
 		<map X="21" Y="23" />
 		<map X="22" Y="22" />
 		<map X="23" Y="22" />

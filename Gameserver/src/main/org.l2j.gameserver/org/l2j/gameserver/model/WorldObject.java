@@ -17,8 +17,6 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.DeleteObject;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
-import org.l2j.gameserver.util.GameUtils;
-import org.l2j.gameserver.util.MathUtil;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -285,6 +283,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      *
      * @return {@code true} if object is instance of Player, {@code false} otherwise
      */
+    @Deprecated
     public boolean isPlayer() {
         return false;
     }

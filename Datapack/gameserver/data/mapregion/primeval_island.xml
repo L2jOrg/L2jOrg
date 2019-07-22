@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
-<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org MapRegion.xsd">
 	<!-- Primeval Island -->
 	<region name="primeval_island" town="Primeval Island" castle="0" locId="1924" bbs="14">
-		<respawnPoint X="11088" Y="-24768" Z="-3644" />
-		<respawnPoint X="10560" Y="-24656" Z="-3648" />
-		<respawnPoint X="10352" Y="-24240" Z="-3658" />
-		<respawnPoint X="10896" Y="-24112" Z="-3644" />
-		<respawnPoint X="10256" Y="-23680" Z="-3667" isChaotic="true" />
-		<respawnPoint X="10816" Y="-23552" Z="-3653" isChaotic="true" />
-		<respawnPoint X="11424" Y="-24064" Z="-3644" isChaotic="true" />
-		<respawnPoint X="10512" Y="-23072" Z="-3664" isChaotic="true" />
-		<respawnPoint X="9904" Y="-24128" Z="-3728" isChaotic="true" />
-		<respawnPoint X="10560" Y="-23920" Z="-3654" isChaotic="true" />
-		<respawnPoint X="11136" Y="-24384" Z="-3644" isChaotic="true" />
+		<respawnPoint x="11088" y="-24768" z="-3644" />
+		<respawnPoint x="10560" y="-24656" z="-3648" />
+		<respawnPoint x="10352" y="-24240" z="-3658" />
+		<respawnPoint x="10896" y="-24112" z="-3644" />
+		<respawnPoint x="10256" y="-23680" z="-3667" isChaotic="true" />
+		<respawnPoint x="10816" y="-23552" z="-3653" isChaotic="true" />
+		<respawnPoint x="11424" y="-24064" z="-3644" isChaotic="true" />
+		<respawnPoint x="10512" y="-23072" z="-3664" isChaotic="true" />
+		<respawnPoint x="9904" y="-24128" z="-3728" isChaotic="true" />
+		<respawnPoint x="10560" y="-23920" z="-3654" isChaotic="true" />
+		<respawnPoint x="11136" y="-24384" z="-3644" isChaotic="true" />
 		<map X="20" Y="17" />
 	</region>
 </list>

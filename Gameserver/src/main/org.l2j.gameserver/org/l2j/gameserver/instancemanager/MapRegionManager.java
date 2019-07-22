@@ -1,21 +1,22 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
-import org.l2j.gameserver.model.MapRegion;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.MapRegion;
 import org.l2j.gameserver.model.TeleportWhereType;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.entity.Fort;
+import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.zone.type.RespawnZone;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -24,11 +25,15 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Map Region Manager.
@@ -38,7 +43,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public final class MapRegionManager extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(MapRegionManager.class);
 
-    private final Map<String, MapRegion> _regions = new HashMap<>();
+    private final Map<String, MapRegion> regions = new HashMap<>();
     private final String defaultRespawn = "talking_island_town";
 
     private MapRegionManager() {
@@ -47,14 +52,14 @@ public final class MapRegionManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/MapRegion.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/mapregion/MapRegion.xsd");
     }
 
     @Override
     public void load() {
-        _regions.clear();
+        regions.clear();
         parseDatapackDirectory("data/mapregion", false);
-        LOGGER.info("Loaded {}  map regions.", _regions.size());
+        LOGGER.info("Loaded {}  map regions.", regions.size());
     }
 
     @Override
@@ -79,20 +84,14 @@ public final class MapRegionManager extends GameXmlReader {
                         for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling()) {
                             attrs = c.getAttributes();
                             if ("respawnPoint".equalsIgnoreCase(c.getNodeName())) {
-                                final int spawnX = parseInteger(attrs, "X");
-                                final int spawnY = parseInteger(attrs, "Y");
-                                final int spawnZ = parseInteger(attrs, "Z");
+                                final int spawnX = parseInteger(attrs, "x");
+                                final int spawnY = parseInteger(attrs, "y");
+                                final int spawnZ = parseInteger(attrs, "z");
 
-                                final boolean other = parseBoolean(attrs, "isOther", false);
                                 final boolean chaotic = parseBoolean(attrs, "isChaotic", false);
-                                final boolean banish = parseBoolean(attrs, "isBanish", false);
 
-                                if (other) {
-                                    region.addOtherSpawn(spawnX, spawnY, spawnZ);
-                                } else if (chaotic) {
+                                if (chaotic) {
                                     region.addChaoticSpawn(spawnX, spawnY, spawnZ);
-                                } else if (banish) {
-                                    region.addBanishSpawn(spawnX, spawnY, spawnZ);
                                 } else {
                                     region.addSpawn(spawnX, spawnY, spawnZ);
                                 }
@@ -102,7 +101,7 @@ public final class MapRegionManager extends GameXmlReader {
                                 region.addBannedRace(attrs.getNamedItem("race").getNodeValue(), attrs.getNamedItem("point").getNodeValue());
                             }
                         }
-                        _regions.put(name, region);
+                        regions.put(name, region);
                     }
                 }
             }
@@ -110,154 +109,68 @@ public final class MapRegionManager extends GameXmlReader {
     }
 
     public final MapRegion getMapRegion(int locX, int locY) {
-        for (MapRegion region : _regions.values()) {
-            if (region.isZoneInRegion(getMapRegionX(locX), getMapRegionY(locY))) {
-                return region;
-            }
-        }
-        return null;
+        return regions.values().stream().filter(r -> r.isZoneInRegion(getMapRegionX(locX), getMapRegionY(locY))).findAny().orElse(null);
     }
 
 
     public final int getMapRegionLocId(int locX, int locY) {
         final MapRegion region = getMapRegion(locX, locY);
-        if (region != null) {
+        if (nonNull(region)) {
             return region.getLocId();
         }
         return 0;
     }
 
-    /**
-     * @param obj
-     * @return
-     */
     public final MapRegion getMapRegion(WorldObject obj) {
         return getMapRegion(obj.getX(), obj.getY());
     }
 
-    /**
-     * @param obj
-     * @return
-     */
     public final int getMapRegionLocId(WorldObject obj) {
         return getMapRegionLocId(obj.getX(), obj.getY());
     }
 
-    /**
-     * @param posX
-     * @return
-     */
     public final int getMapRegionX(int posX) {
-        return (posX >> 15) + 9 + 11; // + centerTileX;
+        return (posX >> 15) + 9 + 11;
     }
 
-    /**
-     * @param posY
-     * @return
-     */
     public final int getMapRegionY(int posY) {
-        return (posY >> 15) + 10 + 8; // + centerTileX;
+        return (posY >> 15) + 10 + 8;
     }
 
-    /**
-     * Get town name by character position
-     *
-     * @param activeChar
-     * @return
-     */
     public String getClosestTownName(Creature activeChar) {
         final MapRegion region = getMapRegion(activeChar);
-        return region == null ? "Aden Castle Town" : region.getTown();
+        return isNull(region) ? "Aden Castle Town" : region.getTown();
     }
 
-    /**
-     * @param activeChar
-     * @param teleportWhere
-     * @return
-     */
     public Location getTeleToLocation(Creature activeChar, TeleportWhereType teleportWhere) {
-        if (activeChar.isPlayer()) {
+        if (isPlayer(activeChar)) {
             final Player player = activeChar.getActingPlayer();
 
-            Castle castle = null;
-            Fort fort = null;
-            ClanHall clanhall = null;
+            Castle castle;
+            Fort fort;
 
-            if ((player.getClan() != null) && !player.isFlyingMounted() && !player.isFlying()) // flying players in gracia cant use teleports to aden continent
+            Location location = null;
+
+            if ((nonNull(player.getClan())) && !player.isFlyingMounted() && !player.isFlying()) // flying players in gracia cant use teleports to aden continent
             {
-                // If teleport to clan hall
                 if (teleportWhere == TeleportWhereType.CLANHALL) {
-                    clanhall = ClanHallData.getInstance().getClanHallByClan(player.getClan());
-                    if ((clanhall != null) && !player.isFlyingMounted()) {
-                        return clanhall.getOwnerLocation();
-                    }
+                    location = getClanHallLocation(player);
+                }
+                else if (teleportWhere == TeleportWhereType.CASTLE) {
+                    location = getCastleLocation(player);
+                }
+                else if (teleportWhere == TeleportWhereType.FORTRESS) {
+                    location = getFortLocation(player);
+                }
+                else if (teleportWhere == TeleportWhereType.SIEGEFLAG) {
+                    location = getSiegeFlagLocation(player);
                 }
 
-                // If teleport to castle
-                if (teleportWhere == TeleportWhereType.CASTLE) {
-                    castle = CastleManager.getInstance().getCastleByOwner(player.getClan());
-                    // Otherwise check if player is on castle or fortress ground
-                    // and player's clan is defender
-                    if (castle == null) {
-                        castle = CastleManager.getInstance().getCastle(player);
-                        if (!((castle != null) && castle.getSiege().isInProgress() && (castle.getSiege().getDefenderClan(player.getClan()) != null))) {
-                            castle = null;
-                        }
-                    }
-
-                    if ((castle != null) && (castle.getResidenceId() > 0)) {
-                        if (player.getReputation() < 0) {
-                            return castle.getResidenceZone().getChaoticSpawnLoc();
-                        }
-                        return castle.getResidenceZone().getSpawnLoc();
-                    }
-                }
-
-                // If teleport to fortress
-                if (teleportWhere == TeleportWhereType.FORTRESS) {
-                    fort = FortDataManager.getInstance().getFortByOwner(player.getClan());
-                    // Otherwise check if player is on castle or fortress ground
-                    // and player's clan is defender
-                    if (fort == null) {
-                        fort = FortDataManager.getInstance().getFort(player);
-                        if (!((fort != null) && fort.getSiege().isInProgress() && (fort.getOwnerClan() == player.getClan()))) {
-                            fort = null;
-                        }
-                    }
-
-                    if ((fort != null) && (fort.getResidenceId() > 0)) {
-                        if (player.getReputation() < 0) {
-                            return fort.getResidenceZone().getChaoticSpawnLoc();
-                        }
-                        return fort.getResidenceZone().getSpawnLoc();
-                    }
-                }
-
-                // If teleport to SiegeHQ
-                if (teleportWhere == TeleportWhereType.SIEGEFLAG) {
-                    castle = CastleManager.getInstance().getCastle(player);
-                    fort = FortDataManager.getInstance().getFort(player);
-                    if (castle != null) {
-                        if (castle.getSiege().isInProgress()) {
-                            // Check if player's clan is attacker
-                            final Set<Npc> flags = castle.getSiege().getFlag(player.getClan());
-                            if ((flags != null) && !flags.isEmpty()) {
-                                // Spawn to flag - Need more work to get player to the nearest flag
-                                return flags.stream().findAny().get().getLocation();
-                            }
-                        }
-                    } else if (fort != null) {
-                        if (fort.getSiege().isInProgress()) {
-                            // Check if player's clan is attacker
-                            final Set<Npc> flags = fort.getSiege().getFlag(player.getClan());
-                            if ((flags != null) && !flags.isEmpty()) {
-                                // Spawn to flag - Need more work to get player to the nearest flag
-                                return flags.stream().findAny().get().getLocation();
-                            }
-                        }
-                    }
+                if(nonNull(location)) {
+                    return location;
                 }
             }
+
 
             // Karma player land out of city
             if (player.getReputation() < 0) {
@@ -269,9 +182,9 @@ public final class MapRegionManager extends GameXmlReader {
                     return getMapRegion(activeChar).getChaoticSpawnLoc();
                 } catch (Exception e) {
                     if (player.isFlyingMounted()) {
-                        return _regions.get("union_base_of_kserth").getChaoticSpawnLoc();
+                        return regions.get("union_base_of_kserth").getChaoticSpawnLoc();
                     }
-                    return _regions.get(defaultRespawn).getChaoticSpawnLoc();
+                    return regions.get(defaultRespawn).getChaoticSpawnLoc();
                 }
             }
 
@@ -305,26 +218,91 @@ public final class MapRegionManager extends GameXmlReader {
             return getMapRegion(activeChar).getSpawnLoc();
         } catch (Exception e) {
             // Port to the default respawn if no closest town found.
-            return _regions.get(defaultRespawn).getSpawnLoc();
+            return regions.get(defaultRespawn).getSpawnLoc();
         }
     }
 
-    /**
-     * @param activeChar
-     * @param point
-     * @return
-     */
+    private Location getClanHallLocation(Player player) {
+        if(player.isFlyingMounted()) {
+            return null;
+        }
+
+        var clanhall = ClanHallData.getInstance().getClanHallByClan(player.getClan());
+        if ((nonNull(clanhall))) {
+            return clanhall.getOwnerLocation();
+        }
+        return null;
+    }
+
+    private Location getCastleLocation(Player player) {
+        var clan = player.getClan();
+        var castle = CastleManager.getInstance().getCastleByOwner(clan);
+        // Otherwise check if player is on castle or fortress ground
+        // and player's clan is defender
+        if (isNull(castle)) {
+            castle = CastleManager.getInstance().getCastle(player);
+            Siege siege;
+            if (! (nonNull(castle) && (siege = castle.getSiege()).isInProgress() && nonNull(siege.getDefenderClan(clan))) ) {
+                return null;
+            }
+        }
+
+        if (castle.getResidenceId() > 0) {
+            if (player.getReputation() < 0) {
+                return castle.getResidenceZone().getChaoticSpawnLoc();
+            }
+            return castle.getResidenceZone().getSpawnLoc();
+        }
+        return null;
+    }
+
+    private Location getFortLocation(Player player) {
+        Fort fort = FortDataManager.getInstance().getFortByOwner(player.getClan());
+
+        if (isNull(fort)) {
+            fort = FortDataManager.getInstance().getFort(player);
+            if (!(( nonNull(fort)) && fort.getSiege().isInProgress() && (fort.getOwnerClan() == player.getClan()))) {
+               return null;
+            }
+        }
+
+        if (fort.getResidenceId() > 0) {
+            if (player.getReputation() < 0) {
+                return fort.getResidenceZone().getChaoticSpawnLoc();
+            }
+            return fort.getResidenceZone().getSpawnLoc();
+        }
+        return null;
+    }
+    
+    private Location getSiegeFlagLocation(Player player) {
+        Castle castle = CastleManager.getInstance().getCastle(player);
+        Fort fort;
+        Set<Npc> flags = null;
+        if (nonNull(castle) && castle.getSiege().isInProgress()) {
+            flags = castle.getSiege().getFlag(player.getClan());
+        } else if (nonNull(fort = FortDataManager.getInstance().getFort(player)) && fort.getSiege().isInProgress()) {
+            flags = fort.getSiege().getFlag(player.getClan());
+        }
+
+        if(isNull(flags) || flags.isEmpty()) {
+            return null;
+        }
+
+        return flags.stream().min(Comparator.comparingDouble(flag -> MathUtil.calculateDistance3D(flag, player))).map(WorldObject::getLocation).orElse(null);
+    }
+
     public MapRegion getRestartRegion(Creature activeChar, String point) {
         try {
             final Player player = (Player) activeChar;
-            final MapRegion region = _regions.get(point);
+            final MapRegion region = regions.get(point);
 
             if (region.getBannedRace().containsKey(player.getRace())) {
                 getRestartRegion(player, region.getBannedRace().get(player.getRace()));
             }
             return region;
         } catch (Exception e) {
-            return _regions.get(defaultRespawn);
+            return regions.get(defaultRespawn);
         }
     }
 
@@ -333,12 +311,12 @@ public final class MapRegionManager extends GameXmlReader {
      * @return if exists the map region identified by that name, null otherwise.
      */
     public MapRegion getMapRegionByName(String regionName) {
-        return _regions.get(regionName);
+        return regions.get(regionName);
     }
 
     public int getBBs(ILocational loc) {
         final MapRegion region = getMapRegion(loc.getX(), loc.getY());
-        return region != null ? region.getBbs() : _regions.get(defaultRespawn).getBbs();
+        return region != null ? region.getBbs() : regions.get(defaultRespawn).getBbs();
     }
 
 
