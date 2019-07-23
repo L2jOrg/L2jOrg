@@ -9,9 +9,9 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.zone.type.BannedSpawnTerritory;
 import org.l2j.gameserver.model.zone.type.SpawnTerritory;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
@@ -24,21 +24,21 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
     private final String _name;
     private final String _ai;
     private final boolean _spawnByDefault;
-    private final File _file;
-    private final List<SpawnGroup> _groups = new ArrayList<>();
+    private final String filePath;
+    private final List<SpawnGroup> groups = new LinkedList<>();
     private List<SpawnTerritory> _territories;
     private List<BannedSpawnTerritory> _bannedTerritories;
     private StatsSet _parameters;
 
-    public SpawnTemplate(StatsSet set, File file) {
+    public SpawnTemplate(StatsSet set, String file) {
         this(set.getString("name", null), set.getString("ai", null), set.getBoolean("spawnByDefault", true), file);
     }
 
-    private SpawnTemplate(String name, String ai, boolean spawnByDefault, File file) {
+    private SpawnTemplate(String name, String ai, boolean spawnByDefault, String file) {
         _name = name;
         _ai = ai;
         _spawnByDefault = spawnByDefault;
-        _file = file;
+        filePath = file;
     }
 
     public String getName() {
@@ -53,8 +53,8 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
         return _spawnByDefault;
     }
 
-    public File getFile() {
-        return _file;
+    public String getFilePath() {
+        return filePath;
     }
 
     @Override
@@ -84,15 +84,15 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
     }
 
     public void addGroup(SpawnGroup group) {
-        _groups.add(group);
+        groups.add(group);
     }
 
     public List<SpawnGroup> getGroups() {
-        return _groups;
+        return groups;
     }
 
     public List<SpawnGroup> getGroupsByName(String name) {
-        return _groups.stream().filter(group -> String.valueOf(group.getName()).equalsIgnoreCase(name)).collect(Collectors.toList());
+        return groups.stream().filter(group -> String.valueOf(group.getName()).equalsIgnoreCase(name)).collect(Collectors.toList());
     }
 
     @Override
@@ -115,11 +115,7 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
     }
 
     public void spawn(Predicate<SpawnGroup> groupFilter, Instance instance) {
-        _groups.stream().filter(groupFilter).forEach(group -> group.spawnAll(instance));
-    }
-
-    public void spawnAll() {
-        spawnAll(null);
+        groups.parallelStream().filter(groupFilter).forEach(group -> group.spawnAll(instance));
     }
 
     public void spawnAll(Instance instance) {
@@ -131,22 +127,22 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
     }
 
     public void spawnAllIncludingNotDefault(Instance instance) {
-        _groups.forEach(group -> group.spawnAll(instance));
+        groups.forEach(group -> group.spawnAll(instance));
     }
 
     public void despawn(Predicate<SpawnGroup> groupFilter) {
-        _groups.stream().filter(groupFilter).forEach(SpawnGroup::despawnAll);
+        groups.stream().filter(groupFilter).forEach(SpawnGroup::despawnAll);
         notifyEvent(script -> script.onSpawnDeactivate(this));
     }
 
     public void despawnAll() {
-        _groups.forEach(SpawnGroup::despawnAll);
+        groups.forEach(SpawnGroup::despawnAll);
         notifyEvent(script -> script.onSpawnDeactivate(this));
     }
 
     @Override
     public SpawnTemplate clone() {
-        final SpawnTemplate template = new SpawnTemplate(_name, _ai, _spawnByDefault, _file);
+        final SpawnTemplate template = new SpawnTemplate(_name, _ai, _spawnByDefault, filePath);
 
         // Clone parameters
         template.setParameters(_parameters);
@@ -162,7 +158,7 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
         }
 
         // Clone groups
-        for (SpawnGroup group : _groups) {
+        for (SpawnGroup group : groups) {
             template.addGroup(group.clone());
         }
 

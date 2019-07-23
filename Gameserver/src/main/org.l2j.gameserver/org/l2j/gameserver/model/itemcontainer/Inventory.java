@@ -35,6 +35,8 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * This class manages inventory
  *
@@ -1476,7 +1478,7 @@ public abstract class Inventory extends ItemContainer {
 
         @Override
         public void notifyUnequiped(int slot, Item item, Inventory inventory) {
-            if (!inventory.getOwner().isPlayer()) {
+            if (!isPlayer(inventory.getOwner())) {
                 return;
             }
 

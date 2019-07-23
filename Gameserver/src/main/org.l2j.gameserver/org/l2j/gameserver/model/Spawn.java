@@ -431,7 +431,7 @@ public class Spawn extends Location implements IIdentifiable, INamable {
     public void setRespawnDelay(int delay, int randomInterval) {
         if (delay != 0) {
             if (delay < 0) {
-                LOGGER.warn("respawn delay is negative for spawn:" + this);
+                LOGGER.warn("respawn delay is negative for spawn: {}", this);
             }
 
             final int minDelay = delay - randomInterval;

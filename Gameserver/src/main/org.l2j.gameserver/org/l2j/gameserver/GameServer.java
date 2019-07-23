@@ -192,8 +192,8 @@ public class GameServer {
             LOGGER.warn("Failed to execute script list!", e);
         }
 
-        SpawnsData.getInstance().init();
         DBSpawnManager.getInstance();
+        SpawnsData.getInstance().init();
 
         printSection("Event Engine");
         EventEngineData.getInstance();

@@ -32,6 +32,8 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * This class contains all informations concerning the item (weapon, armor, etc).<BR>
  * Mother class of :
@@ -646,7 +648,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         }
 
         // Don't allow hero equipment and restricted items during Olympiad
-        if ((isOlyRestrictedItem() || _heroItem) && (activeChar.isPlayer() && activeChar.getActingPlayer().isInOlympiadMode())) {
+        if ((isOlyRestrictedItem() || _heroItem) && (isPlayer(activeChar) && activeChar.getActingPlayer().isInOlympiadMode())) {
             if (isEquipable()) {
                 activeChar.sendPacket(SystemMessageId.YOU_CANNOT_EQUIP_THAT_ITEM_IN_A_OLYMPIAD_MATCH);
             } else {
@@ -655,7 +657,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
             return false;
         }
 
-        if (_is_coc_restricted && (activeChar.isPlayer() && (activeChar.getActingPlayer().isOnEvent(CeremonyOfChaosEvent.class)))) {
+        if (_is_coc_restricted && (isPlayer(activeChar) && (activeChar.getActingPlayer().isOnEvent(CeremonyOfChaosEvent.class)))) {
             activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ITEM_IN_THE_TOURNAMENT);
             return false;
         }

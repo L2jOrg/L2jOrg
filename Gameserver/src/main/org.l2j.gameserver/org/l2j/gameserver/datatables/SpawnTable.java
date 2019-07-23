@@ -14,6 +14,8 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 
+import static java.util.Objects.nonNull;
+
 
 /**
  * Spawn data retriever.
@@ -162,7 +164,7 @@ public final class SpawnTable {
         if (update) {
             final int x = ((spawn.getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
             final int y = ((spawn.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
-            final File spawnFile = spawn.getNpcSpawnTemplate() != null ? spawn.getNpcSpawnTemplate().getSpawnTemplate().getFile() : new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
+            final File spawnFile = new File( nonNull(spawn.getNpcSpawnTemplate()) ? spawn.getNpcSpawnTemplate().getSpawnTemplate().getFilePath() : OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
             final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
             try {
                 final BufferedReader reader = new BufferedReader(new FileReader(spawnFile));

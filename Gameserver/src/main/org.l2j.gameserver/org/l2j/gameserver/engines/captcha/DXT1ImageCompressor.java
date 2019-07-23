@@ -6,13 +6,12 @@ import java.nio.ByteOrder;
 
 import static java.lang.Math.abs;
 
-/*
+/**
  * https://docs.microsoft.com/pt-br/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#compression-algorithms
- *
- * RGBA
  *
  * http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.215.7942&rep=rep1&type=pdf
  *
+ * @author joeAlisson
  */
 class DXT1ImageCompressor {
 

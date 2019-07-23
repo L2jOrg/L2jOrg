@@ -18,12 +18,6 @@ public class ZoneNPoly extends ZoneForm {
     private final int _z1;
     private final int _z2;
 
-    /**
-     * @param x
-     * @param y
-     * @param z1
-     * @param z2
-     */
     public ZoneNPoly(int[] x, int[] y, int z1, int z2) {
         _p = new Polygon(x, y, x.length);
 
@@ -33,7 +27,7 @@ public class ZoneNPoly extends ZoneForm {
 
     @Override
     public boolean isInsideZone(int x, int y, int z) {
-        return _p.contains(x, y) && (z >= _z1) && (z <= _z2);
+        return _p.contains(x, y) &&  (z >= _z1) && (z <= _z2);
     }
 
     @Override

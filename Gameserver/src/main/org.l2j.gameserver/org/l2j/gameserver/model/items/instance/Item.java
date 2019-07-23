@@ -41,6 +41,7 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.GMAudit;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -265,7 +266,7 @@ public final class Item extends WorldObject {
         // Remove the Item from the world
         World.getInstance().removeVisibleObject(this, oldregion);
 
-        if (character.isPlayer()) {
+        if (GameUtils.isPlayer(character)){
             // Notify to scripts
             EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemPickup(character.getActingPlayer(), this), getItem());
         }
@@ -1256,8 +1257,8 @@ public final class Item extends WorldObject {
     }
 
     public final void dropMe(Creature dropper, int x, int y, int z) {
-        ThreadPoolManager.getInstance().execute(new ItemDropTask(this, dropper, x, y, z));
-        if ((dropper != null) && dropper.isPlayer()) {
+        ThreadPoolManager.execute(new ItemDropTask(this, dropper, x, y, z));
+        if (GameUtils.isPlayer(dropper)) {
             // Notify to scripts
             EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(dropper.getActingPlayer(), this, new Location(x, y, z)), getItem());
         }

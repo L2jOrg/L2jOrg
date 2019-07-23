@@ -10,7 +10,6 @@ import org.l2j.gameserver.model.zone.type.SpawnTerritory;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author UnAfraid
@@ -18,7 +17,7 @@ import java.util.stream.Collectors;
 public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<StatsSet> {
     private final String _name;
     private final boolean _spawnByDefault;
-    private final List<NpcSpawnTemplate> _spawns = new ArrayList<>();
+    private final List<NpcSpawnTemplate> spawns = new ArrayList<>();
     private List<SpawnTerritory> _territories;
     private List<BannedSpawnTerritory> _bannedTerritories;
     private StatsSet _parameters;
@@ -41,11 +40,11 @@ public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<Stat
     }
 
     public void addSpawn(NpcSpawnTemplate template) {
-        _spawns.add(template);
+        spawns.add(template);
     }
 
     public List<NpcSpawnTemplate> getSpawns() {
-        return _spawns;
+        return spawns;
     }
 
     @Override
@@ -84,20 +83,16 @@ public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<Stat
         _parameters = parameters;
     }
 
-    public List<NpcSpawnTemplate> getSpawnsById(int id) {
-        return _spawns.stream().filter(spawn -> spawn.getId() == id).collect(Collectors.toList());
-    }
-
     public void spawnAll() {
         spawnAll(null);
     }
 
     public void spawnAll(Instance instance) {
-        _spawns.forEach(template -> template.spawn(instance));
+        spawns.parallelStream().forEach(template -> template.spawn(instance));
     }
 
     public void despawnAll() {
-        _spawns.forEach(NpcSpawnTemplate::despawn);
+        spawns.forEach(NpcSpawnTemplate::despawn);
     }
 
     @Override
@@ -115,7 +110,7 @@ public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<Stat
         }
 
         // Clone spawns
-        for (NpcSpawnTemplate spawn : _spawns) {
+        for (NpcSpawnTemplate spawn : spawns) {
             group.addSpawn(spawn.clone());
         }
 
