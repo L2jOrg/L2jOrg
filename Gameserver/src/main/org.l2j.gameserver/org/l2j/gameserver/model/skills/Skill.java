@@ -36,6 +36,8 @@ import java.util.*;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 public final class Skill implements IIdentifiable {
     private static final Logger LOGGER = LoggerFactory.getLogger(Skill.class);
 
@@ -957,7 +959,7 @@ public final class Skill implements IIdentifiable {
             return true;
         }
 
-        if (activeChar.isPlayer() && activeChar.getActingPlayer().isMounted() && isBad() && !MountEnabledSkillList.contains(_id)) {
+        if (isPlayer(activeChar) && activeChar.getActingPlayer().isMounted() && isBad() && !MountEnabledSkillList.contains(_id)) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
             sm.addSkillName(_id);
             activeChar.sendPacket(sm);
@@ -1111,7 +1113,7 @@ public final class Skill implements IIdentifiable {
 
                     // tempfix for hp/mp regeneration
                     // TODO: Find where regen stops and make a proper fix
-                    if (info.getEffected().isPlayer() && !info.getSkill().isBad()) {
+                    if (isPlayer(info.getEffected()) && !info.getSkill().isBad()) {
                         info.getEffected().getActingPlayer().getStatus().startHpMpRegeneration();
                     }
                 }
@@ -1205,7 +1207,7 @@ public final class Skill implements IIdentifiable {
             }
 
             // Support for buff sharing feature including healing herbs.
-            if (_isSharedWithSummon && effected.isPlayer() && effected.hasServitors() && !isTransformation()) {
+            if (_isSharedWithSummon && isPlayer(effected) && effected.hasServitors() && !isTransformation()) {
                 if ((addContinuousEffects && isContinuous() && !_isDebuff) || _isRecoveryHerb) {
                     effected.getServitors().values().forEach(s -> applyEffects(effector, s, _isRecoveryHerb, 0));
                 }
@@ -1234,7 +1236,7 @@ public final class Skill implements IIdentifiable {
 
             // Support for buff sharing feature.
             // Avoiding Servitor Share since it's implementation already "shares" the effect.
-            if (addContinuousEffects && _isSharedWithSummon && info.getEffected().isPlayer() && isContinuous() && !_isDebuff && info.getEffected().hasServitors()) {
+            if (addContinuousEffects && _isSharedWithSummon && isPlayer(info.getEffected()) && isContinuous() && !_isDebuff && info.getEffected().hasServitors()) {
                 info.getEffected().getServitors().values().forEach(s -> applyEffects(effector, s, false, 0));
             }
         }

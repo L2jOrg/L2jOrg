@@ -449,7 +449,7 @@ public abstract class Inventory extends ItemContainer {
                 item.updateDatabase();
             }
 
-            if (getOwner().isPlayer()) {
+            if (isPlayer(getOwner())) {
                 getOwner().sendPacket(new ExUserInfoEquipSlot(getOwner().getActingPlayer()));
             }
         }
@@ -644,7 +644,7 @@ public abstract class Inventory extends ItemContainer {
 
         try {
             unEquipItemInSlot(slot);
-            if (getOwner().isPlayer()) {
+            if (isPlayer(getOwner())) {
                 ((Player) getOwner()).refreshExpertisePenalty();
             }
         } finally {
@@ -722,7 +722,7 @@ public abstract class Inventory extends ItemContainer {
         if (pdollSlot >= 0) {
             final Item old = setPaperdollItem(pdollSlot, null);
             if (old != null) {
-                if (getOwner().isPlayer()) {
+                if (isPlayer(getOwner())) {
                     ((Player) getOwner()).refreshExpertisePenalty();
                 }
             }
@@ -755,7 +755,7 @@ public abstract class Inventory extends ItemContainer {
      * @param item : Item designating the item and slot used.
      */
     public void equipItem(Item item) {
-        if (getOwner().isPlayer()) {
+        if (isPlayer(getOwner())) {
             if (((Player) getOwner()).getPrivateStoreType() != PrivateStoreType.NONE) {
                 return;
             }
@@ -960,7 +960,7 @@ public abstract class Inventory extends ItemContainer {
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     final Item item = new Item(rs);
-                    if (getOwner().isPlayer()) {
+                    if (isPlayer(getOwner())) {
                         final Player player = (Player) getOwner();
 
                         if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem()) {
@@ -1245,13 +1245,13 @@ public abstract class Inventory extends ItemContainer {
                 listener.notifyEquiped(slot, item, this);
             }
         }
-        if (getOwner().isPlayer()) {
+        if (isPlayer(getOwner())) {
             getOwner().sendPacket(new ExUserInfoEquipSlot(getOwner().getActingPlayer()));
         }
     }
 
     public int getArmorMinEnchant() {
-        if ((getOwner() == null) || !getOwner().isPlayer()) {
+        if (!isPlayer(getOwner())) {
             return 0;
         }
 
@@ -1589,7 +1589,7 @@ public abstract class Inventory extends ItemContainer {
 
         @Override
         public void notifyEquiped(int slot, Item item, Inventory inventory) {
-                    if (!inventory.getOwner().isPlayer()) {
+            if (!isPlayer(inventory.getOwner())) {
                 return;
             }
 
@@ -1767,7 +1767,7 @@ public abstract class Inventory extends ItemContainer {
 
         @Override
         public void notifyEquiped(int slot, Item item, Inventory inventory) {
-            if (!inventory.getOwner().isPlayer()) {
+            if (!isPlayer(inventory.getOwner())) {
                 return;
             }
 
@@ -1790,7 +1790,7 @@ public abstract class Inventory extends ItemContainer {
 
         @Override
         public void notifyUnequiped(int slot, Item item, Inventory inventory) {
-            if (!inventory.getOwner().isPlayer()) {
+            if (!isPlayer(inventory.getOwner())) {
                 return;
             }
 

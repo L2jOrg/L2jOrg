@@ -20,6 +20,8 @@ import org.l2j.gameserver.network.serverpackets.ExOlympiadMatchEnd;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * An olympiad stadium
  *
@@ -62,7 +64,7 @@ public class OlympiadStadiumZone extends ZoneRespawn {
         if (getSettings().getOlympiadTask() != null) {
             if (getSettings().getOlympiadTask().isBattleStarted()) {
                 character.setInsideZone(ZoneId.PVP, true);
-                if (character.isPlayer()) {
+                if (isPlayer(character)) {
                     character.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
                     getSettings().getOlympiadTask().getGame().sendOlympiadInfo(character);
                 }
@@ -74,7 +76,7 @@ public class OlympiadStadiumZone extends ZoneRespawn {
             if (player != null) {
                 // only participants, observers and GMs allowed
                 if (!player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && !player.isInOlympiadMode() && !player.inObserverMode()) {
-                    ThreadPoolManager.getInstance().execute(new KickPlayer(player));
+                    ThreadPoolManager.execute(new KickPlayer(player));
                 } else {
                     // check for pet
                     final Summon pet = player.getPet();
@@ -91,7 +93,7 @@ public class OlympiadStadiumZone extends ZoneRespawn {
         if (getSettings().getOlympiadTask() != null) {
             if (getSettings().getOlympiadTask().isBattleStarted()) {
                 character.setInsideZone(ZoneId.PVP, false);
-                if (character.isPlayer()) {
+                if (isPlayer(character)) {
                     character.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
                     character.sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
                 }

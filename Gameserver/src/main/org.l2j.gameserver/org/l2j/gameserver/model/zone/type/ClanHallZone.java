@@ -22,6 +22,8 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.zone.ZoneId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * A clan hall zone
  *
@@ -43,14 +45,14 @@ public class ClanHallZone extends ResidenceZone {
 
     @Override
     protected void onEnter(Creature character) {
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             character.setInsideZone(ZoneId.CLAN_HALL, true);
         }
     }
 
     @Override
     protected void onExit(Creature character) {
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             character.setInsideZone(ZoneId.CLAN_HALL, false);
         }
     }

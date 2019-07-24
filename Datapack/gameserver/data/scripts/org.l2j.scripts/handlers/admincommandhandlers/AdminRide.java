@@ -21,6 +21,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author
  */
@@ -131,7 +133,7 @@ public class AdminRide implements IAdminCommandHandler
 	{
 		Player player = null;
 		
-		if ((activeChar.getTarget() == null) || (activeChar.getTarget().getObjectId() == activeChar.getObjectId()) || !activeChar.getTarget().isPlayer())
+		if ((activeChar.getTarget() == null) || (activeChar.getTarget().getObjectId() == activeChar.getObjectId()) || !isPlayer(activeChar.getTarget()))
 		{
 			player = activeChar;
 		}

@@ -16,13 +16,15 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.StringTokenizer;
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PcStat;
 import org.l2j.gameserver.util.BuilderUtil;
+
+import java.util.StringTokenizer;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author Psychokiller1888
@@ -56,7 +58,7 @@ public class AdminVitality implements IAdminCommandHandler
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String cmd = st.nextToken();
 		
-		if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
+		if (isPlayer(activeChar.getTarget()))
 		{
 			final Player target = (Player) activeChar.getTarget();
 			

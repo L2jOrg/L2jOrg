@@ -19,6 +19,8 @@ import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * A siege zone
  *
@@ -65,7 +67,7 @@ public class SiegeZone extends Zone {
             character.setInsideZone(ZoneId.SIEGE, true);
             character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, true); // FIXME: Custom ?
 
-            if (character.isPlayer()) {
+            if (isPlayer(character)) {
                 final Player plyer = character.getActingPlayer();
                 if (plyer.isRegisteredOnThisSiegeField(getSettings().getSiegeableId())) {
                     plyer.setIsInSiege(true); // in siege
@@ -97,7 +99,7 @@ public class SiegeZone extends Zone {
         character.setInsideZone(ZoneId.SIEGE, false);
         character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false); // FIXME: Custom ?
         if (getSettings().isActiveSiege()) {
-            if (character.isPlayer()) {
+            if (isPlayer(character)) {
                 final Player player = character.getActingPlayer();
                 character.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
                 if (player.getMountType() == MountType.WYVERN) {
@@ -109,7 +111,7 @@ public class SiegeZone extends Zone {
                 }
             }
         }
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             final Player activeChar = character.getActingPlayer();
             activeChar.stopFameTask();
             activeChar.setIsInSiege(false);
@@ -132,7 +134,7 @@ public class SiegeZone extends Zone {
     public void onDieInside(Creature character) {
         if (getSettings().isActiveSiege()) {
             // debuff participants only if they die inside siege zone
-            if (character.isPlayer() && character.getActingPlayer().isRegisteredOnThisSiegeField(getSettings().getSiegeableId())) {
+            if (isPlayer(character) && character.getActingPlayer().isRegisteredOnThisSiegeField(getSettings().getSiegeableId())) {
                 int lvl = 1;
                 final BuffInfo info = character.getEffectList().getBuffInfoBySkillId(5660);
                 if (info != null) {
@@ -172,7 +174,7 @@ public class SiegeZone extends Zone {
                 character.setInsideZone(ZoneId.SIEGE, false);
                 character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false);
 
-                if (character.isPlayer()) {
+                if (isPlayer(character)) {
                     player = character.getActingPlayer();
                     character.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
                     player.stopFameTask();

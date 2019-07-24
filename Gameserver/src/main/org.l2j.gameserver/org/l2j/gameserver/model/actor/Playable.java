@@ -20,6 +20,7 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * This class represents all Playable characters in the world.<br>
@@ -114,7 +115,7 @@ public abstract class Playable extends Creature {
             stopEffects(EffectFlag.RESURRECTION_SPECIAL);
             deleteBuffs = false;
         }
-        if (isPlayer()) {
+        if (GameUtils.isPlayer(this)) {
             final Player activeChar = getActingPlayer();
 
             if (activeChar.hasCharmOfCourage()) {
@@ -144,7 +145,7 @@ public abstract class Playable extends Creature {
             }
         }
         // Notify instance
-        if (isPlayer()) {
+        if (GameUtils.isPlayer(this)) {
             final Instance instance = getInstanceWorld();
             if (instance != null) {
                 instance.onDeath(getActingPlayer());

@@ -25,6 +25,8 @@ import org.l2j.gameserver.model.stats.Stats;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -35,7 +37,7 @@ public class MAttackFinalizer implements IStatsFunction {
 
         double baseValue = calcWeaponBaseValue(creature, stat);
         baseValue += calcEnchantedItemBonus(creature, stat);
-        if (creature.isPlayer()) {
+        if (isPlayer(creature)) {
             // Enchanted chest bonus
             baseValue += calcEnchantBodyPart(creature, ItemTemplate.SLOT_CHEST, ItemTemplate.SLOT_FULL_ARMOR);
         }

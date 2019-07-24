@@ -23,6 +23,7 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.NpcInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -106,7 +107,7 @@ public final class Trap extends Npc {
             return true;
         }
 
-        if (cha.isPlayer()) {
+        if (GameUtils.isPlayer(cha)) {
             // observers can't see trap
             if (((Player) cha).inObserverMode()) {
                 return false;
@@ -215,7 +216,7 @@ public final class Trap extends Npc {
             return;
         }
 
-        if (_owner.isInOlympiadMode() && target.isPlayer() && ((Player) target).isInOlympiadMode() && (((Player) target).getOlympiadGameId() == _owner.getOlympiadGameId())) {
+        if (_owner.isInOlympiadMode() && GameUtils.isPlayer(target) && ((Player) target).isInOlympiadMode() && (((Player) target).getOlympiadGameId() == _owner.getOlympiadGameId())) {
             OlympiadGameManager.getInstance().notifyCompetitorDamage(getOwner(), damage);
         }
 

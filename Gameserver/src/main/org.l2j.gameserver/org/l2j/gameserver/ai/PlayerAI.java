@@ -9,6 +9,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.network.serverpackets.DeleteObject;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 public class PlayerAI extends PlayableAI {
     private boolean _thinking; // to prevent recursive thinking
 
@@ -214,7 +216,7 @@ public class PlayerAI extends PlayableAI {
 
     private void thinkCast() {
         final WorldObject target = _skill.getTarget(actor, _forceUse, _dontMove, false);
-        if ((_skill.getTargetType() == TargetType.GROUND) && actor.isPlayer()) {
+        if ((_skill.getTargetType() == TargetType.GROUND) && isPlayer(actor)) {
             if (maybeMoveToPosition(((Player) actor).getCurrentSkillWorldPosition(), actor.getMagicalAttackRange(_skill))) {
                 return;
             }

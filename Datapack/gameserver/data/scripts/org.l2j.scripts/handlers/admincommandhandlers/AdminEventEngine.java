@@ -16,18 +16,8 @@
  */
 package handlers.admincommandhandlers;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-import java.util.StringTokenizer;
-
-import org.l2j.gameserver.Config;
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.World;
@@ -37,6 +27,11 @@ import org.l2j.gameserver.model.entity.Event.EventState;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.util.Broadcast;
+
+import java.io.*;
+import java.util.StringTokenizer;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * This class handles following admin commands: - admin = shows menu
@@ -347,7 +342,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 						}
 					}
 				}
-				else if ((activeChar.getTarget() != null) && (activeChar.getTarget().isPlayer()))
+				else if (isPlayer(activeChar.getTarget()))
 				{
 					Event.removeAndResetPlayer((Player) activeChar.getTarget());
 				}

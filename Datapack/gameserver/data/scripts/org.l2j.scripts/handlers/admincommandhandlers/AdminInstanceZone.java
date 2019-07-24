@@ -16,9 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.Map;
-import java.util.StringTokenizer;
-
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.World;
@@ -26,6 +23,11 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GMAudit;
+
+import java.util.Map;
+import java.util.StringTokenizer;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 public class AdminInstanceZone implements IAdminCommandHandler
 {
@@ -95,7 +97,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 			}
 			else if (activeChar.getTarget() != null)
 			{
-				if (activeChar.getTarget().isPlayer())
+				if (isPlayer(activeChar.getTarget()))
 				{
 					display((Player) activeChar.getTarget(), activeChar);
 				}

@@ -40,6 +40,8 @@ import org.l2j.gameserver.model.zone.type.ClanHallZone;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -48,10 +50,10 @@ public class RegenMPFinalizer implements IStatsFunction {
     public double calc(Creature creature, Optional<Double> base, Stats stat) {
         throwIfPresent(base);
 
-        double baseValue = creature.isPlayer() ? creature.getActingPlayer().getTemplate().getBaseMpRegen(creature.getLevel()) : creature.getTemplate().getBaseMpReg();
+        double baseValue = isPlayer(creature) ? creature.getActingPlayer().getTemplate().getBaseMpRegen(creature.getLevel()) : creature.getTemplate().getBaseMpReg();
         baseValue *= creature.isRaid() ? Config.RAID_MP_REGEN_MULTIPLIER : Config.MP_REGEN_MULTIPLIER;
 
-        if (creature.isPlayer()) {
+        if (isPlayer(creature)) {
             final Player player = creature.getActingPlayer();
 
             if (player.isInsideZone(ZoneId.CLAN_HALL) && (player.getClan() != null) && (player.getClan().getHideoutId() > 0)) {

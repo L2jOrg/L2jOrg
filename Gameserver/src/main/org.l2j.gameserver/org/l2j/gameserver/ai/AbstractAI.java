@@ -19,6 +19,7 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.Future;
 
 import static org.l2j.gameserver.ai.CtrlIntention.*;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 /**
@@ -369,7 +370,7 @@ public abstract class AbstractAI implements Ctrl {
      * Cancel action client side by sending Server->Client packet ActionFailed to the Player actor. <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT>
      */
     protected void clientActionFailed() {
-        if (actor.isPlayer()) {
+        if (isPlayer(actor)) {
             actor.sendPacket(ActionFailed.STATIC_PACKET);
         }
     }
@@ -523,7 +524,7 @@ public abstract class AbstractAI implements Ctrl {
             return;
         }
         if (!_clientAutoAttacking) {
-            if (actor.isPlayer() && actor.hasSummon()) {
+            if (isPlayer(actor) && actor.hasSummon()) {
                 final Summon pet = actor.getPet();
                 if (pet != null) {
                     pet.broadcastPacket(new AutoAttackStart(pet.getObjectId()));
@@ -549,7 +550,7 @@ public abstract class AbstractAI implements Ctrl {
             }
             return;
         }
-        if (actor.isPlayer()) {
+        if (isPlayer(actor)) {
             if (!AttackStanceTaskManager.getInstance().hasAttackStanceTask(actor) && isAutoAttacking()) {
                 AttackStanceTaskManager.getInstance().addAttackStanceTask(actor);
             }

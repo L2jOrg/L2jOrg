@@ -20,6 +20,8 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.model.zone.ZoneId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Zone where 'Build Headquarters' is allowed.
  *
@@ -47,14 +49,14 @@ public class HqZone extends Zone {
 
     @Override
     protected void onEnter(Creature character) {
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             character.setInsideZone(ZoneId.HQ, true);
         }
     }
 
     @Override
     protected void onExit(Creature character) {
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             character.setInsideZone(ZoneId.HQ, false);
         }
     }

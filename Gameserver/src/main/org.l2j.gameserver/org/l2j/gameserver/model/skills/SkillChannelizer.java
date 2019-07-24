@@ -17,6 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 
 /**
  * Skill Channelizer implementation.
@@ -104,7 +106,7 @@ public class SkillChannelizer implements Runnable {
             if (skill.getMpPerChanneling() > 0) {
                 // Validate mana per tick.
                 if (_channelizer.getCurrentMp() < skill.getMpPerChanneling()) {
-                    if (_channelizer.isPlayer()) {
+                    if (isPlayer(_channelizer)) {
                         _channelizer.sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
                     }
                     _channelizer.abortCast();
@@ -154,7 +156,7 @@ public class SkillChannelizer implements Runnable {
                         }
 
                         // Update PvP status
-                        if (character.isPlayable() && _channelizer.isPlayer()) {
+                        if (isPlayer(_channelizer)) {
                             ((Player) _channelizer).updatePvPStatus(character);
                         }
 

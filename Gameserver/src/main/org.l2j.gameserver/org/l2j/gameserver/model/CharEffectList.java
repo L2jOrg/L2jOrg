@@ -26,6 +26,7 @@ import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2j.gameserver.model.skills.*;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,6 +37,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Effect lists.<br>
@@ -262,7 +265,7 @@ public final class CharEffectList {
      * @param info the {@code BuffInfo}
      */
     public void shortBuffStatusUpdate(BuffInfo info) {
-        if (_owner.isPlayer()) {
+        if (isPlayer(_owner)) {
             _shortBuff = info;
             if (info == null) {
                 _owner.sendPacket(ShortBuffStatusUpdate.RESET_SHORT_BUFF);
@@ -736,7 +739,7 @@ public final class CharEffectList {
                     return;
                 }
 
-                if (info.getEffector().isPlayer() && info.getEffected().isPlayer() && info.getEffected().isAffected(EffectFlag.DUELIST_FURY) && !info.getEffector().isAffected(EffectFlag.DUELIST_FURY)) {
+                if (isPlayer(info.getEffector()) && isPlayer(info.getEffected())  && info.getEffected().isAffected(EffectFlag.DUELIST_FURY) && !info.getEffector().isAffected(EffectFlag.DUELIST_FURY)) {
                     return;
                 }
             }
@@ -859,7 +862,7 @@ public final class CharEffectList {
         final Player player = _owner.getActingPlayer();
         if (player != null) {
             final Party party = player.getParty();
-            final Optional<AbnormalStatusUpdate> asu = (_owner.isPlayer() && !partyOnly) ? Optional.of(new AbnormalStatusUpdate()) : Optional.empty();
+            final Optional<AbnormalStatusUpdate> asu = (isPlayer(_owner) && !partyOnly) ? Optional.of(new AbnormalStatusUpdate()) : Optional.empty();
             final Optional<PartySpelled> ps = ((party != null) || _owner.isSummon()) ? Optional.of(new PartySpelled(_owner)) : Optional.empty();
             final Optional<ExOlympiadSpelledInfo> os = (player.isInOlympiadMode() && player.isOlympiadStart()) ? Optional.of(new ExOlympiadSpelledInfo(player)) : Optional.empty();
 
@@ -906,13 +909,12 @@ public final class CharEffectList {
 
         // @formatter:off
         _owner.getStatus().getStatusListener().stream()
-                .filter(Objects::nonNull)
-                .filter(WorldObject::isPlayer)
+                .filter(GameUtils::isPlayer)
                 .map(Creature::getActingPlayer)
                 .forEach(upd::sendTo);
         // @formatter:on
 
-        if (_owner.isPlayer() && (_owner.getTarget() == _owner)) {
+        if (isPlayer(_owner) && (_owner.getTarget() == _owner)) {
             _owner.sendPacket(upd);
         }
     }

@@ -48,6 +48,7 @@ import java.util.Objects;
 import java.util.concurrent.ScheduledFuture;
 
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
 import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
@@ -128,7 +129,7 @@ public class SkillCaster implements Runnable {
         }
 
         // You should not heal/buff monsters without pressing the ctrl button.
-        if (caster.isPlayer() && target.isMonster() && (skill.getEffectPoint() > 0) && !ctrlPressed) {
+        if (isPlayer(caster) && target.isMonster() && (skill.getEffectPoint() > 0) && !ctrlPressed) {
             caster.sendPacket(SystemMessageId.INVALID_TARGET);
             return null;
         }
@@ -404,7 +405,7 @@ public class SkillCaster implements Runnable {
             }
         }
 
-        if (caster.isPlayer()) {
+        if (isPlayer(caster)) {
             final Player player = caster.getActingPlayer();
             if (player.inObserverMode()) {
                 return false;
@@ -541,7 +542,7 @@ public class SkillCaster implements Runnable {
             caster.broadcastPacket(new ExRotation(caster.getObjectId(), caster.getHeading())); // TODO: Not sent in retail. Probably moveToPawn is enough
 
             // Send MoveToPawn packet to trigger Blue Bubbles on target become Red, but don't do it while (double) casting, because that will screw up animation... some fucked up stuff, right?
-            if (caster.isPlayer() && !caster.isCastingNow() && target.isCharacter()) {
+            if (isPlayer(caster) && !caster.isCastingNow() && target.isCharacter()) {
                 caster.sendPacket(new MoveToPawn(caster, target, (int) MathUtil.calculateDistance2D(caster, target)));
                 caster.sendPacket(ActionFailed.STATIC_PACKET);
             }
@@ -572,7 +573,7 @@ public class SkillCaster implements Runnable {
             caster.broadcastPacket(new MagicSkillUse(caster, target, _skill.getDisplayId(), _skill.getDisplayLevel(), displayedCastTime, reuseDelay, _skill.getReuseDelayGroup(), actionId, _castingType));
         }
 
-        if (caster.isPlayer() && !instantCast) {
+        if (isPlayer(caster) && !instantCast) {
             // Send a system message to the player.
             caster.sendPacket(_skill.getId() != 2046 ? SystemMessage.getSystemMessage(SystemMessageId.YOU_USE_S1).addSkillName(_skill) : SystemMessage.getSystemMessage(SystemMessageId.SUMMONING_YOUR_PET));
 
@@ -590,7 +591,7 @@ public class SkillCaster implements Runnable {
             }
         }
 
-        if (caster.isPlayer()) {
+        if (isPlayer(caster)) {
             final Player player = caster.getActingPlayer();
 
             // Consume fame points.
@@ -643,7 +644,7 @@ public class SkillCaster implements Runnable {
         }
 
         if ((_skill.getEffectRange() > 0) && !GameUtils.checkIfInRange(_skill.getEffectRange(), caster, target, true)) {
-            if (caster.isPlayer()) {
+            if (isPlayer(caster)) {
                 caster.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
             }
             return false;
@@ -707,7 +708,7 @@ public class SkillCaster implements Runnable {
             caster.sendPacket(su);
         }
 
-        if (caster.isPlayer()) {
+        if (isPlayer(caster)) {
             // Consume Souls if necessary.
             if ((_skill.getMaxSoulConsumeCount() > 0) && !caster.getActingPlayer().decreaseSouls(_skill.getMaxSoulConsumeCount(), _skill)) {
                 return false;
@@ -779,7 +780,7 @@ public class SkillCaster implements Runnable {
         }
 
         // If there is a queued skill, launch it and wipe the queue.
-        if (caster.isPlayer()) {
+        if (isPlayer(caster)) {
             final Player currPlayer = caster.getActingPlayer();
             final SkillUseHolder queuedSkill = currPlayer.getQueuedSkill();
 

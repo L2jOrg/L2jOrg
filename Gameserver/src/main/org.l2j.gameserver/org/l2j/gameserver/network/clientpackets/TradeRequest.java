@@ -15,6 +15,7 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SendTradeRequest;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 /**
@@ -76,7 +77,7 @@ public final class TradeRequest extends ClientPacket {
             return;
         }
 
-        if (!target.isPlayer()) {
+        if (!isPlayer(target)) {
             client.sendPacket(SystemMessageId.INVALID_TARGET);
             return;
         }

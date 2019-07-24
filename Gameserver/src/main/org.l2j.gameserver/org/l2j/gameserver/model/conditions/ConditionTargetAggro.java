@@ -18,9 +18,10 @@ package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Monster;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * The Class ConditionTargetAggro.
@@ -45,8 +46,8 @@ public class ConditionTargetAggro extends Condition {
             if (effected.isMonster()) {
                 return ((Monster) effected).isAggressive() == _isAggro;
             }
-            if (effected.isPlayer()) {
-                return ((Player) effected).getReputation() < 0;
+            if (isPlayer(effected)) {
+                return effected.getReputation() < 0;
             }
         }
         return false;

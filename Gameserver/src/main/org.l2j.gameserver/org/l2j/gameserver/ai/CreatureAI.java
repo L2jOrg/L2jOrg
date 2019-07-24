@@ -32,6 +32,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
 import static org.l2j.gameserver.ai.CtrlIntention.*;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 
 /**
@@ -828,7 +829,7 @@ public class CreatureAI extends AbstractAI {
             }
 
             // while flying there is no move to cast
-            if ((actor.getAI().getIntention() == AI_INTENTION_CAST) && actor.isPlayer() && actor.checkTransformed(transform -> !transform.isCombat())) {
+            if ((actor.getAI().getIntention() == AI_INTENTION_CAST) && isPlayer(actor) && actor.checkTransformed(transform -> !transform.isCombat())) {
                 actor.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
                 actor.sendPacket(ActionFailed.STATIC_PACKET);
                 return true;
@@ -884,7 +885,7 @@ public class CreatureAI extends AbstractAI {
     protected boolean checkTargetLostOrDead(Creature target) {
         if ((target == null) || target.isAlikeDead()) {
             // check if player is fakedeath
-            if ((target != null) && target.isPlayer() && ((Player) target).isFakeDeath()) {
+            if (isPlayer(target) && ((Player) target).isFakeDeath()) {
                 target.stopFakeDeath(true);
                 return false;
             }
@@ -914,7 +915,7 @@ public class CreatureAI extends AbstractAI {
      */
     protected boolean checkTargetLost(WorldObject target) {
         // check if player is fakedeath
-        if ((target != null) && target.isPlayer()) {
+        if (isPlayer(target)) {
             final Player target2 = (Player) target; // convert object to chara
 
             if (target2.isFakeDeath()) {

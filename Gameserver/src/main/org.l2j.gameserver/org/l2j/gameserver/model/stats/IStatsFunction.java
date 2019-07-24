@@ -11,6 +11,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -151,7 +153,7 @@ public interface IStatsFunction {
             final Item weapon = pet.getActiveWeaponInstance();
             final double baseVal = stat == Stats.PHYSICAL_ATTACK ? pet.getPetLevelData().getPetPAtk() : stat == Stats.MAGIC_ATTACK ? pet.getPetLevelData().getPetMAtk() : baseTemplateValue;
             baseValue = baseVal + (weapon != null ? weapon.getItem().getStats(stat, baseVal) : 0);
-        } else if (creature.isPlayer() && (!creature.isTransformed() || (creature.getTransformation().get().getType() == TransformType.COMBAT) || (creature.getTransformation().get().getType() == TransformType.MODE_CHANGE))) {
+        } else if (isPlayer(creature) && (!creature.isTransformed() || (creature.getTransformation().get().getType() == TransformType.COMBAT) || (creature.getTransformation().get().getType() == TransformType.MODE_CHANGE))) {
             final Item weapon = creature.getActiveWeaponInstance();
             baseValue = (weapon != null ? weapon.getItem().getStats(stat, baseTemplateValue) : baseTemplateValue);
         }
@@ -176,7 +178,7 @@ public interface IStatsFunction {
     }
 
     default double calcEnchantedItemBonus(Creature creature, Stats stat) {
-        if (!creature.isPlayer()) {
+        if (!isPlayer(creature)) {
             return 0;
         }
 

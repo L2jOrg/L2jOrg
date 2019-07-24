@@ -30,6 +30,8 @@ import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Player Can Create Base condition implementation.
  *
@@ -44,7 +46,7 @@ public class ConditionPlayerCanCreateBase extends Condition {
 
     @Override
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
-        if ((effector == null) || !effector.isPlayer()) {
+        if (!isPlayer(effector)) {
             return !_val;
         }
 

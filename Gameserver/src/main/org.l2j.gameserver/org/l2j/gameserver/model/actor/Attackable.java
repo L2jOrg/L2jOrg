@@ -601,7 +601,7 @@ public class Attackable extends Npc {
 
         Player targetPlayer = attacker.getActingPlayer();
         final Creature summoner = attacker.getSummoner();
-        if (attacker.isNpc() && (summoner != null) && summoner.isPlayer() && !attacker.isTargetable()) {
+        if (attacker.isNpc() && GameUtils.isPlayer(summoner) && !attacker.isTargetable()) {
             targetPlayer = summoner.getActingPlayer();
             attacker = summoner;
         }
@@ -782,7 +782,7 @@ public class Attackable extends Npc {
             return 0;
         }
 
-        if (ai.getAttacker().isPlayer()) {
+        if (GameUtils.isPlayer(ai.getAttacker())) {
             final Player act = (Player) ai.getAttacker();
             if (act.isInvisible() || act.isInvul() || act.isSpawnProtected()) {
                 // Remove Object Should Use This Method and Can be Blocked While Interacting

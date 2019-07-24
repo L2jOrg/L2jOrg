@@ -20,6 +20,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * This class represents Friendly Mobs lying over the world.<br>
@@ -33,8 +34,8 @@ public class FriendlyMob extends Attackable {
 
     @Override
     public boolean isAutoAttackable(Creature attacker) {
-        if (attacker.isPlayer()) {
-            return ((Player) attacker).getReputation() < 0;
+        if (GameUtils.isPlayer(attacker)) {
+            return attacker.getReputation() < 0;
         }
 
         return super.isAutoAttackable(attacker);

@@ -32,6 +32,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Physical Attack effect implementation. <br>
  * Current formulas were tested to be the best matching retail, damage appears to be identical: <br>
@@ -102,7 +104,7 @@ public final class PhysicalAttack extends AbstractEffect
 			return;
 		}
 		
-		if (effected.isPlayer() && effected.getActingPlayer().isFakeDeath())
+		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath())
 		{
 			effected.stopFakeDeath(true);
 		}

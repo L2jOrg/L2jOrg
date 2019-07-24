@@ -22,6 +22,8 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Protection Blessing effect implementation.
  * @author kerberos_20
@@ -35,7 +37,7 @@ public final class ProtectionBlessing extends AbstractEffect
 	@Override
 	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
-		return (effector != null) && (effected != null) && effected.isPlayer();
+		return (effector != null) && isPlayer(effected);
 	}
 	
 	@Override

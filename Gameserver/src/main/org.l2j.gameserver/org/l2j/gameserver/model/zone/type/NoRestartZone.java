@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.model.zone.ZoneId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * A simple no restart zone
  *
@@ -41,7 +43,7 @@ public class NoRestartZone extends Zone {
             return;
         }
 
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             character.setInsideZone(ZoneId.NO_RESTART, true);
         }
     }
@@ -52,7 +54,7 @@ public class NoRestartZone extends Zone {
             return;
         }
 
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             character.setInsideZone(ZoneId.NO_RESTART, false);
         }
     }

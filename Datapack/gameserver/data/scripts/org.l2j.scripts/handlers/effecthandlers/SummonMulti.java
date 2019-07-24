@@ -30,6 +30,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * SummonMulti effect implementation.
  * @author UnAfraid
@@ -62,7 +64,7 @@ public final class SummonMulti extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effector.isPlayer())
+		if (!isPlayer(effector))
 		{
 			return;
 		}

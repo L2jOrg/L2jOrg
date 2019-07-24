@@ -37,6 +37,7 @@ import org.l2j.gameserver.model.zone.ZoneRegion;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
+import org.l2j.gameserver.util.GameUtils;
 
 import static org.l2j.commons.util.Util.contains;
 
@@ -585,13 +586,13 @@ public abstract class Summon extends Playable {
                 }
             }
 
-            if (_owner.isInOlympiadMode() && target.isPlayer() && ((Player) target).isInOlympiadMode() && (((Player) target).getOlympiadGameId() == _owner.getOlympiadGameId())) {
+            if (_owner.isInOlympiadMode() && GameUtils.isPlayer(target) && ((Player) target).isInOlympiadMode() && (((Player) target).getOlympiadGameId() == _owner.getOlympiadGameId())) {
                 OlympiadGameManager.getInstance().notifyCompetitorDamage(getOwner(), damage);
             }
 
             final SystemMessage sm;
 
-            if ((target.isHpBlocked() && !target.isNpc()) || (target.isPlayer() && target.isAffected(EffectFlag.DUELIST_FURY) && !_owner.isAffected(EffectFlag.FACEOFF))) {
+            if ((target.isHpBlocked() && !target.isNpc()) || (GameUtils.isPlayer(target) && target.isAffected(EffectFlag.DUELIST_FURY) && !_owner.isAffected(EffectFlag.FACEOFF))) {
                 sm = SystemMessage.getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
             } else {
                 sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);

@@ -9,6 +9,8 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 
 /**
  * This class ...
@@ -52,7 +54,7 @@ public final class Broadcast {
         {
             try {
                 player.sendPacket(mov);
-                if ((mov instanceof CharInfo) && (character.isPlayer())) {
+                if ((mov instanceof CharInfo) && (isPlayer(character))) {
                     final int relation = ((Player) character).getRelation(player);
                     final Integer oldrelation = character.getKnownRelations().get(player.getObjectId());
                     if ((oldrelation != null) && (oldrelation != relation)) {
@@ -106,7 +108,7 @@ public final class Broadcast {
      * @param mov
      */
     public static void toSelfAndKnownPlayers(Creature character, ServerPacket mov) {
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             character.sendPacket(mov);
         }
 
@@ -119,7 +121,7 @@ public final class Broadcast {
             radius = 600;
         }
 
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             character.sendPacket(mov);
         }
 

@@ -21,6 +21,8 @@ import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * The Class ConditionSlotItemId.
  *
@@ -45,7 +47,7 @@ public final class ConditionSlotItemId extends ConditionInventory {
 
     @Override
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
-        if ((effector == null) || !effector.isPlayer()) {
+        if (!isPlayer(effector)) {
             return false;
         }
 

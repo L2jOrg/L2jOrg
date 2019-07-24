@@ -26,6 +26,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.GameUtils;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Player Can Take Castle condition implementation.
  *
@@ -40,7 +42,7 @@ public class ConditionPlayerCanTakeCastle extends Condition {
 
     @Override
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
-        if ((effector == null) || !effector.isPlayer()) {
+        if (!isPlayer(effector)) {
             return !_val;
         }
 

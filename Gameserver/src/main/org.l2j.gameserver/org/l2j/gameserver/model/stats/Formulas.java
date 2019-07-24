@@ -32,6 +32,7 @@ import org.l2j.gameserver.util.MathUtil;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
 /**
@@ -122,7 +123,7 @@ public final class Formulas {
 
         // Failure calculation
         if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(attacker, target, skill)) {
-            if (attacker.isPlayer()) {
+            if (isPlayer(attacker)) {
                 if (calcMagicSuccess(attacker, target, skill)) {
                     if (skill.hasEffectType(EffectType.HP_DRAIN)) {
                         attacker.sendPacket(SystemMessageId.DRAIN_WAS_ONLY_50_SUCCESSFUL);
@@ -139,7 +140,7 @@ public final class Formulas {
                 }
             }
 
-            if (target.isPlayer()) {
+            if (isPlayer(target)) {
                 final SystemMessage sm = (skill.hasEffectType(EffectType.HP_DRAIN)) ? SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_DRAIN) : SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_MAGIC);
                 sm.addString(attacker.getName());
                 target.sendPacket(sm);
@@ -471,7 +472,7 @@ public final class Formulas {
             }
         }
 
-        if (sendSysMsg && target.isPlayer()) {
+        if (sendSysMsg && isPlayer(target)) {
             final Player enemy = target.getActingPlayer();
 
             switch (shldSuccess) {
@@ -696,7 +697,7 @@ public final class Formulas {
         // Bonus Spiritshot
         final double shotsBonus = attacker.getStat().getValue(Stats.SHOTS_BONUS);
         double sapphireBonus = 0;
-        if (attacker.isPlayer() && (attacker.getActingPlayer().getActiveShappireJewel() != null)) {
+        if (isPlayer(attacker) && (attacker.getActingPlayer().getActiveShappireJewel() != null)) {
             sapphireBonus = attacker.getActingPlayer().getActiveShappireJewel().getBonus();
         }
         mAtk *= bss ? 4 * (shotsBonus + sapphireBonus) : sps ? 2 * (shotsBonus + sapphireBonus) : 1;
@@ -707,7 +708,7 @@ public final class Formulas {
 
         // Failure calculation
         if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(attacker, target, skill)) {
-            if (attacker.isPlayer()) {
+            if (isPlayer(attacker)) {
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.DAMAGE_IS_DECREASED_BECAUSE_C1_RESISTED_C2_S_MAGIC);
                 sm.addString(target.getName());
                 sm.addString(attacker.getName());
@@ -715,7 +716,7 @@ public final class Formulas {
                 damage /= 2;
             }
 
-            if (target.isPlayer()) {
+            if (isPlayer(target)) {
                 final SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.C1_WEAKLY_RESISTED_C2_S_MAGIC);
                 sm2.addString(target.getName());
                 sm2.addString(attacker.getName());
@@ -749,12 +750,12 @@ public final class Formulas {
 
     public static boolean calcPhysicalSkillEvasion(Creature activeChar, Creature target, Skill skill) {
         if (Rnd.get(100) < target.getStat().getSkillEvasionTypeValue(skill.getMagicType())) {
-            if (activeChar.isPlayer()) {
+            if (isPlayer(activeChar)) {
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DODGED_THE_ATTACK);
                 sm.addString(target.getName());
                 activeChar.getActingPlayer().sendPacket(sm);
             }
-            if (target.isPlayer()) {
+            if (isPlayer(target)) {
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DODGED_C1_S_ATTACK);
                 sm.addString(activeChar.getName());
                 target.getActingPlayer().sendPacket(sm);
@@ -766,7 +767,7 @@ public final class Formulas {
 
     public static boolean calcSkillMastery(Creature actor, Skill sk) {
         // Static Skills are not affected by Skill Mastery.
-        if (sk.isStatic() || !actor.isPlayer()) {
+        if (sk.isStatic() || !isPlayer(actor)) {
             return false;
         }
 
@@ -824,18 +825,18 @@ public final class Formulas {
 
         final double chance = target.getStat().getValue(Stats.VENGEANCE_SKILL_PHYSICAL_DAMAGE, 0);
         if (Rnd.get(100) < chance) {
-            if (target.isPlayer()) {
+            if (isPlayer(target)) {
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_COUNTERED_C1_S_ATTACK);
                 sm.addString(attacker.getName());
                 target.sendPacket(sm);
             }
-            if (attacker.isPlayer()) {
+            if (isPlayer(attacker)) {
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_PERFORMING_A_COUNTERATTACK);
                 sm.addString(target.getName());
                 attacker.sendPacket(sm);
             }
 
-            double counterdmg = ((target.getPAtk() * 873) / attacker.getPDef()); // Old: (((target.getPAtk(attacker) * 10.0) * 70.0) / attacker.getPDef(target));
+            double counterdmg = ((target.getPAtk() * 873.) / attacker.getPDef()); // Old: (((target.getPAtk(attacker) * 10.0) * 70.0) / attacker.getPDef(target));
             counterdmg *= calcWeaponTraitBonus(attacker, target);
             counterdmg *= calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
             counterdmg *= calcAttributeBonus(attacker, target, skill);
@@ -1379,7 +1380,7 @@ public final class Formulas {
 
     public static double calcSpiritElementalDamage(Creature attacker, Creature target) {
         // TODO find retail calc
-        if(attacker.isPlayer()) {
+        if(isPlayer(attacker)) {
             var attackerPlayer = attacker.getActingPlayer();
             ElementalType type = ElementalType.of(attackerPlayer.getActiveElementalSpiritType());
 
@@ -1391,7 +1392,7 @@ public final class Formulas {
             var isCrit = Math.min(critRate, 380) > Rnd.get(1000);
             var critDamage = attackerPlayer.getElementalSpiritCritDamage();
             var attack = attackerPlayer.getActiveElementalSpiritAttack() - target.getElementalSpiritDefenseOf(type);
-            if(target.isPlayer()) {
+            if(isPlayer(target)) {
                 return calcSpiritElementalPvPDamage(attack, critDamage, isCrit);
             }
             return calcSpiritElementalPvEDamage(type, target.getElementalSpiritType(), attack, critDamage, isCrit);

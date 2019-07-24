@@ -129,7 +129,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private boolean _isImmobilized = false;
     private boolean _isOverloaded = false; // the char is carrying too much
     private boolean _isPendingRevive = false;
-    private boolean _isRunning = isPlayer();
+    private boolean _isRunning;
     private boolean _isInvul = false;
     private boolean _isUndying = false;
     private boolean _isFlying = false;
@@ -358,12 +358,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     public void untransform() {
         _transform.ifPresent(t -> t.onUntransform(this));
         _transform = Optional.empty();
-
-        // Mobius: Tempfix for untransform not showing stats.
-        // Resend UserInfo to player.
-        if (isPlayer()) {
-            sendPacket(new UserInfo((Player) this));
-        }
     }
 
     public Optional<Transform> getTransformation() {
@@ -648,7 +642,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         sendPacket(new ExTeleportToLocationActivate(this));
 
         // allow recall of the detached characters
-        if (!isPlayer() || ((getActingPlayer().getClient() != null) && getActingPlayer().getClient().isDetached())) {
+        if (!GameUtils.isPlayer(this) || ((getActingPlayer().getClient() != null) && getActingPlayer().getClient().isDetached())) {
             onTeleported();
         }
         revalidateZone(true);
@@ -748,7 +742,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     getAI().setIntention(AI_INTENTION_ACTIVE);
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
-                } else if (isPlayer()) {
+                } else if (GameUtils.isPlayer(this)) {
                     if (target.isDead()) {
                         getAI().setIntention(AI_INTENTION_ACTIVE);
                         sendPacket(ActionFailed.STATIC_PACKET);
@@ -814,7 +808,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 if (weaponItem.getItemType().isRanged()) {
                     // Check if bow delay is still active.
                     if (_disableRangedAttackEndTime > System.nanoTime()) {
-                        if (isPlayer()) {
+                        if (GameUtils.isPlayer(this)) {
                             ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
                             sendPacket(ActionFailed.STATIC_PACKET);
                         }
@@ -822,7 +816,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     }
 
                     // Check for arrows and MP
-                    if (isPlayer()) {
+                    if (GameUtils.isPlayer(this)) {
                         // Check if there are arrows to use or else cancel the attack.
                         if (!checkAndEquipAmmunition(weaponItem.getItemType().isCrossbow() ? EtcItemType.BOLT : EtcItemType.ARROW)) {
                             // Cancel the action because the Player have no arrow
@@ -902,7 +896,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     }
 
                     // Check if the Creature is a Player
-                    if (isPlayer()) {
+                    if (GameUtils.isPlayer(this)) {
                         if (crossbow) {
                             sendPacket(SystemMessageId.YOUR_CROSSBOW_IS_PREPARING_TO_FIRE);
                         }
@@ -915,7 +909,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     break;
                 }
                 case FIST: {
-                    if (!isPlayer()) {
+                    if (!GameUtils.isPlayer(this)) {
                         _hitTask = ThreadPoolManager.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
                         break;
                     }
@@ -1041,7 +1035,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         // Try casting the skill
         final SkillCaster skillCaster = SkillCaster.castSkill(this, _target, skill, item, castingType, ctrlPressed, shiftPressed);
-        if ((skillCaster == null) && isPlayer()) {
+        if ((skillCaster == null) && GameUtils.isPlayer(this)) {
             // Skill casting failed, notify player.
             sendPacket(ActionFailed.get(castingType));
             getAI().setIntention(AI_INTENTION_ACTIVE);
@@ -1691,7 +1685,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (_stat.getRunSpeed() != 0) {
             broadcastPacket(new ChangeMoveType(this));
         }
-        if (isPlayer()) {
+        if (GameUtils.isPlayer(this)) {
             getActingPlayer().broadcastUserInfo();
         } else if (isSummon()) {
             broadcastStatusUpdate();
@@ -1884,7 +1878,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * Active the abnormal effect Fake Death flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet.
      */
     public final void startFakeDeath() {
-        if (!isPlayer()) {
+        if (!GameUtils.isPlayer(this)) {
             return;
         }
 
@@ -1969,7 +1963,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
 
         // if this is a player instance, start the grace period for this character (grace from mobs only)!
-        if (isPlayer()) {
+        if (GameUtils.isPlayer(this)) {
             getActingPlayer().setRecentFakeDeath(true);
         }
 
@@ -1989,7 +1983,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             _effectList.stopEffects(AbnormalType.STUN);
         }
 
-        if (!isPlayer()) {
+        if (!GameUtils.isPlayer(this)) {
             getAI().notifyEvent(CtrlEvent.EVT_THINK);
         }
     }
@@ -2015,7 +2009,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             untransform();
         }
 
-        if (!isPlayer()) {
+        if (!GameUtils.isPlayer(this)) {
             getAI().notifyEvent(CtrlEvent.EVT_THINK);
         }
         updateAbnormalVisualEffects();
@@ -2070,7 +2064,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
 
         // Don't broadcast modified stats on login.
-        if (isPlayer() && !getActingPlayer().isOnline()) {
+        if (GameUtils.isPlayer(this) && !getActingPlayer().isOnline()) {
             return;
         }
 
@@ -2088,7 +2082,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             final boolean broadcastFull = true;
             final StatusUpdate su = new StatusUpdate(this);
             UserInfo info = null;
-            if (isPlayer()) {
+            if (GameUtils.isPlayer(this)) {
                 info = new UserInfo(getActingPlayer(), false);
                 info.addComponentType(UserInfoType.SLOTS, UserInfoType.ENCHANTLEVEL);
             }
@@ -2125,7 +2119,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                             break;
                         }
                         case MAX_CP: {
-                            if (isPlayer()) {
+                            if (GameUtils.isPlayer(this)) {
                                 info.addComponentType(UserInfoType.MAX_HPCPMP);
                             } else {
                                 su.addUpdate(StatusUpdateType.MAX_CP, _stat.getMaxCp());
@@ -2133,7 +2127,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                             break;
                         }
                         case MAX_HP: {
-                            if (isPlayer()) {
+                            if (GameUtils.isPlayer(this)) {
                                 info.addComponentType(UserInfoType.MAX_HPCPMP);
                             } else {
                                 su.addUpdate(StatusUpdateType.MAX_HP, _stat.getMaxHp());
@@ -2141,7 +2135,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                             break;
                         }
                         case MAX_MP: {
-                            if (isPlayer()) {
+                            if (GameUtils.isPlayer(this)) {
                                 info.addComponentType(UserInfoType.MAX_HPCPMP);
                             } else {
                                 su.addUpdate(StatusUpdateType.MAX_CP, _stat.getMaxMp());
@@ -2189,7 +2183,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 }
             }
 
-            if (isPlayer()) {
+            if (GameUtils.isPlayer(this)) {
                 final Player player = getActingPlayer();
                 player.refreshOverloaded(true);
                 player.refreshExpertisePenalty();
@@ -2338,7 +2332,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         for (SkillCaster skillCaster : getSkillCasters())
         {
             skillCaster.stopCasting(true);
-            if (isPlayer())
+            if (GameUtils.isPlayer(this))
             {
                 getActingPlayer().setQueuedSkill(null, null, false, false);
             }
@@ -2364,7 +2358,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         final SkillCaster skillCaster = getSkillCaster(SkillCaster::canAbortCast, filter);
         if (skillCaster != null) {
             skillCaster.stopCasting(true);
-            if (isPlayer()) {
+            if (GameUtils.isPlayer(this)) {
                 getActingPlayer().setQueuedSkill(null, null, false, false);
             }
             return true;
@@ -2437,7 +2431,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         // Z coordinate will follow client values
         dz = m._zDestination - zPrev;
 
-        if (isPlayer() && !_isFlying) {
+        if (GameUtils.isPlayer(this) && !_isFlying) {
             final double distance = Math.hypot(dx, dy);
             if (_cursorKeyMovement // In case of cursor movement, avoid moving through obstacles.
                     || (distance > 3000)) // Stop movement when player has clicked far away and intersected with an obstacle.
@@ -2731,7 +2725,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         m.disregardingGeodata = false;
 
         if (!_isFlying && !isInWater && !isVehicle() && !_cursorKeyMovement) {
-            final boolean isInVehicle = isPlayer() && (getActingPlayer().getVehicle() != null);
+            final boolean isInVehicle = GameUtils.isPlayer(this) && (getActingPlayer().getVehicle() != null);
             if (isInVehicle) {
                 m.disregardingGeodata = true;
             }
@@ -2757,7 +2751,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 }
 
                 if (!isInVehicle // Not in vehicle.
-                        && !(isPlayer() && (distance > 3000)) // Should be able to click far away and move.
+                        && !(GameUtils.isPlayer(this) && (distance > 3000)) // Should be able to click far away and move.
                         && !(isMonster() && (Math.abs(dz) > 100)) // Monsters can move on ledges.
                         && !(((curZ - z) > 300) && (distance < 300))) // Prohibit correcting destination if character wants to fall.
                 {
@@ -3110,11 +3104,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             weapon.applyConditionalSkills(this, target, null, ItemSkillType.ON_CRITICAL_SKILL);
         }
 
-        if (isPlayer() && !target.isHpBlocked()) {
+        if (GameUtils.isPlayer(this) && !target.isHpBlocked()) {
             if (((Player) this).isCursedWeaponEquipped()) {
                 // If hit by a cursed weapon, CP is reduced to 0
                 target.setCurrentCp(0);
-            } else if (((Player) this).isHero() && target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped()) {
+            } else if (((Player) this).isHero() && GameUtils.isPlayer(target) && target.getActingPlayer().isCursedWeaponEquipped()) {
                 // If a cursed weapon is hit by a Hero, CP is reduced to 0
                 target.setCurrentCp(0);
             }
@@ -3138,7 +3132,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (isAttackingNow()) {
             // Abort the attack of the Creature and send Server->Client ActionFailed packet
             abortAttack();
-            if (isPlayer()) {
+            if (GameUtils.isPlayer(this)) {
                 // Send a system message
                 sendPacket(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
             }
@@ -3155,7 +3149,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             // Abort the cast of the Creature and send Server->Client MagicSkillCanceld/ActionFailed packet.
             skillCaster.stopCasting(true);
 
-            if (isPlayer()) {
+            if (GameUtils.isPlayer(this)) {
                 // Send a system message
                 sendPacket(SystemMessageId.YOUR_CASTING_HAS_BEEN_INTERRUPTED);
             }
@@ -3728,7 +3722,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         if (Config.CHAMPION_ENABLE && isChampion() && (Config.CHAMPION_HP != 0)) {
             _status.reduceHp(value / Config.CHAMPION_HP, attacker, (skill == null) || !skill.isToggle(), isDOT, false);
-        } else if (isPlayer()) {
+        } else if (GameUtils.isPlayer(this)) {
             getActingPlayer().getStatus().reduceHp(value, attacker, (skill == null) || !skill.isToggle(), isDOT, false, directlyToHp);
         } else {
             _status.reduceHp(value, attacker, (skill == null) || !skill.isToggle(), isDOT, false);
@@ -3808,7 +3802,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return the max weight that the Creature can load.
      */
     public int getMaxLoad() {
-        if (isPlayer() || isPet()) {
+        if (GameUtils.isPlayer(this) || isPet()) {
             // Weight Limit = (CON Modifier*69000) * Skills
             // Source http://l2p.bravehost.com/weightlimit.html (May 2007)
             final double baseLoad = Math.floor(BaseStats.CON.calcBonus(this) * 69000 * Config.ALT_WEIGHT_LIMIT);
@@ -3818,7 +3812,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public int getBonusWeightPenalty() {
-        if (isPlayer() || isPet()) {
+        if (GameUtils.isPlayer(this) || isPet()) {
             return (int) _stat.getValue(Stats.WEIGHT_PENALTY, 1);
         }
         return 0;
@@ -3828,7 +3822,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return the current weight of the Creature.
      */
     public int getCurrentLoad() {
-        if (isPlayer() || isPet()) {
+        if (GameUtils.isPlayer(this) || isPet()) {
             return getInventory().getTotalWeight();
         }
         return 0;
@@ -4260,7 +4254,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     public Queue<AbstractEventListener> getListeners(EventType type) {
         final Queue<AbstractEventListener> objectListenres = super.getListeners(type);
         final Queue<AbstractEventListener> templateListeners = _template.getListeners(type);
-        final Queue<AbstractEventListener> globalListeners = isNpc() && !isMonster() ? Containers.Npcs().getListeners(type) : isMonster() ? Containers.Monsters().getListeners(type) : isPlayer() ? Containers.Players().getListeners(type) : EmptyQueue.emptyQueue();
+        final Queue<AbstractEventListener> globalListeners = isNpc() && !isMonster() ? Containers.Npcs().getListeners(type) : isMonster() ? Containers.Monsters().getListeners(type) : GameUtils.isPlayer(this) ? Containers.Players().getListeners(type) : EmptyQueue.emptyQueue();
 
         // Attempt to do not create collection
         if (objectListenres.isEmpty() && templateListeners.isEmpty() && globalListeners.isEmpty()) {

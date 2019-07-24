@@ -26,6 +26,8 @@ import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Player Can Summon Siege Golem implementation.
  *
@@ -40,7 +42,7 @@ public class ConditionPlayerCanSummonSiegeGolem extends Condition {
 
     @Override
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
-        if ((effector == null) || !effector.isPlayer()) {
+        if (!isPlayer(effector)) {
             return !_val;
         }
 

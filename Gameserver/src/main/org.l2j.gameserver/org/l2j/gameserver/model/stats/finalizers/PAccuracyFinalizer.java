@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.stats.Stats;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -56,7 +58,7 @@ public class PAccuracyFinalizer implements IStatsFunction {
             baseValue += 1;
         }
 
-        if (creature.isPlayer()) {
+        if (isPlayer(creature)) {
             // Enchanted gloves bonus
             baseValue += calcEnchantBodyPart(creature, ItemTemplate.SLOT_GLOVES);
         }

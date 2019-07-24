@@ -21,6 +21,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Buff Info.<br>
  * Complex DTO that holds all the information for a given buff (or debuff or dance/song) set of effects issued by an skill.
@@ -234,7 +236,7 @@ public final class BuffInfo {
         _isInUse = val;
 
         // Send message that the effect is applied or removed.
-        if ((_skill != null) && !_skill.isHidingMessages() && _effected.isPlayer()) {
+        if ((_skill != null) && !_skill.isHidingMessages() && isPlayer(_effected)) {
             if (val) {
                 if (!_hideStartMessage && !_skill.isAura()) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
@@ -299,7 +301,7 @@ public final class BuffInfo {
         }
 
         // When effects are initialized, the successfully landed.
-        if (!_hideStartMessage && _effected.isPlayer() && !_skill.isHidingMessages() && !_skill.isAura()) {
+        if (!_hideStartMessage && isPlayer(_effected) && !_skill.isHidingMessages() && !_skill.isAura()) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
             sm.addSkillName(_skill);
             _effected.sendPacket(sm);

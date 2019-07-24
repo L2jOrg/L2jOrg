@@ -29,6 +29,8 @@ import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Physical Soul Attack effect implementation.<br>
  * <b>Note</b>: Initial formula taken from PhysicalAttack.
@@ -70,7 +72,7 @@ public final class PhysicalSoulAttack extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effector.isPlayer())
+		if (!isPlayer(effector))
 		{
 			return;
 		}
@@ -80,7 +82,7 @@ public final class PhysicalSoulAttack extends AbstractEffect
 			return;
 		}
 		
-		if (effected.isPlayer() && effected.getActingPlayer().isFakeDeath())
+		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath())
 		{
 			effected.stopFakeDeath(true);
 		}

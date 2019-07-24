@@ -20,6 +20,8 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.model.zone.ZoneId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -44,7 +46,7 @@ public class ConditionZone extends Zone {
 
     @Override
     protected void onEnter(Creature character) {
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             if (NO_BOOKMARK) {
                 character.setInsideZone(ZoneId.NO_BOOKMARK, true);
             }
@@ -56,7 +58,7 @@ public class ConditionZone extends Zone {
 
     @Override
     protected void onExit(Creature character) {
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             if (NO_BOOKMARK) {
                 character.setInsideZone(ZoneId.NO_BOOKMARK, false);
             }

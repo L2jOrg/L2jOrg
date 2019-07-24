@@ -20,6 +20,8 @@ import org.l2j.gameserver.model.actor.Creature;
 
 import java.util.function.Function;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -48,7 +50,7 @@ public enum StatusUpdateType {
     CAST_SPD(0x18, Creature::getMAtkSpd),
     M_DEF(0x19, Creature::getMDef),
     PVP_FLAG(0x1A, creature -> (int) creature.getPvpFlag()),
-    REPUTATION(0x1B, creature -> creature.isPlayer() ? creature.getActingPlayer().getReputation() : 0),
+    REPUTATION(0x1B, creature -> isPlayer(creature) ? creature.getActingPlayer().getReputation() : 0),
 
     CUR_CP(0x21, creature -> (int) creature.getCurrentCp()),
     MAX_CP(0x22, Creature::getMaxCp);

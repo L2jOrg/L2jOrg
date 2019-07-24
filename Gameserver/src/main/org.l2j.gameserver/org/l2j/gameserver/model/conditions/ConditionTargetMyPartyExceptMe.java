@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Target My Party Except Me condition implementation.
  *
@@ -39,7 +41,7 @@ public class ConditionTargetMyPartyExceptMe extends Condition {
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
         boolean isPartyMember = true;
         final Player player = effector.getActingPlayer();
-        if ((player == null) || (effected == null) || !effected.isPlayer()) {
+        if ((player == null) || !isPlayer(effected)) {
             isPartyMember = false;
         } else if (player == effected) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ON_YOURSELF);

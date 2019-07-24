@@ -3,7 +3,6 @@ package org.l2j.gameserver.model.quest;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.datatables.ItemTable;
@@ -59,6 +58,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 /**
@@ -895,7 +895,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      */
     public final void notifySeeCreature(Npc npc, Creature creature, boolean isSummon) {
         Player player = null;
-        if (isSummon || creature.isPlayer()) {
+        if (isSummon || isPlayer(creature)) {
             player = creature.getActingPlayer();
         }
         String res = null;

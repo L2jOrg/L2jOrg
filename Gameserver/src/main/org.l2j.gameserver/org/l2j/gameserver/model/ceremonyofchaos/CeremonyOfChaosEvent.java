@@ -38,6 +38,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -471,7 +473,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember> {
     @RegisterEvent(EventType.ON_CREATURE_DEATH)
     @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
     public void onPlayerDeath(OnCreatureDeath event) {
-        if (event.getAttacker().isPlayer() && event.getTarget().isPlayer()) {
+        if (isPlayer(event.getAttacker()) && isPlayer(event.getTarget())) {
             final Player attackerPlayer = event.getAttacker().getActingPlayer();
             final Player targetPlayer = event.getTarget().getActingPlayer();
 

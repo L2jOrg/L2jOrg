@@ -30,13 +30,13 @@ import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ExWorldChatCnt;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
 import static org.l2j.commons.util.Util.isDigit;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 
 /**
@@ -138,7 +138,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				return false;
 			}
 			
-			final Player target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
+			final Player target = isPlayer(activeChar.getTarget()) ? activeChar.getTarget().getActingPlayer() : activeChar;
 			target.setHero(!target.isHero());
 			target.broadcastUserInfo();
 		}
@@ -150,7 +150,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				return false;
 			}
 			
-			final Player target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
+			final Player target = isPlayer(activeChar.getTarget()) ? activeChar.getTarget().getActingPlayer() : activeChar;
 			target.setTrueHero(!target.isTrueHero());
 			target.broadcastUserInfo();
 		}
@@ -162,7 +162,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				return false;
 			}
 			
-			final Player target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
+			final Player target = isPlayer(activeChar.getTarget()) ? activeChar.getTarget().getActingPlayer() : activeChar;
 			if (Hero.getInstance().isHero(target.getObjectId()))
 			{
 				BuilderUtil.sendSysMessage(activeChar, "This player has already claimed the hero status.");

@@ -7,6 +7,7 @@ public class ThreadPoolManager {
 
     private final ScheduledThreadPoolExecutor scheduledExecutor;
     private final ThreadPoolExecutor executor;
+    private final ForkJoinPool forkJoinPool;
 
     private boolean _shutdown;
 
@@ -19,6 +20,12 @@ public class ThreadPoolManager {
 
         executor = new ThreadPoolExecutor(processors * 6, Integer.MAX_VALUE, 5L, TimeUnit.SECONDS, new LinkedBlockingQueue<>(), new PriorityThreadFactory("ThreadPoolExecutor", Thread.NORM_PRIORITY), new ThreadPoolExecutor.CallerRunsPolicy());
         executor.setRejectedExecutionHandler(rejectedHandler);
+
+        forkJoinPool = new ForkJoinPool(processors * 4);
+    }
+
+    public <T> T submit(Callable<T> callable) {
+        return forkJoinPool.submit(callable).join();
     }
 
     public void schedulePurge() {

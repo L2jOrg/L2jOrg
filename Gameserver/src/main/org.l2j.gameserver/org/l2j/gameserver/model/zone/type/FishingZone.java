@@ -12,6 +12,8 @@ import org.l2j.gameserver.network.serverpackets.fishing.ExAutoFishAvailable;
 
 import java.lang.ref.WeakReference;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * A fishing zone
  *
@@ -24,10 +26,10 @@ public class FishingZone extends Zone {
 
     @Override
     protected void onEnter(Creature character) {
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             if ((Config.ALLOW_FISHING || character.canOverrideCond(PcCondOverride.ZONE_CONDITIONS)) && !character.isInsideZone(ZoneId.FISHING)) {
                 final WeakReference<Player> weakPlayer = new WeakReference<>(character.getActingPlayer());
-                ThreadPoolManager.getInstance().execute(new Runnable() {
+                ThreadPoolManager.execute(new Runnable() {
                     @Override
                     public void run() {
                         final Player player = weakPlayer.get();
@@ -41,7 +43,7 @@ public class FishingZone extends Zone {
                                         player.sendPacket(ExAutoFishAvailable.NO);
                                     }
                                 }
-                                ThreadPoolManager.getInstance().schedule(this, 1500);
+                                ThreadPoolManager.schedule(this, 1500);
                             } else {
                                 player.sendPacket(ExAutoFishAvailable.NO);
                             }
@@ -55,7 +57,7 @@ public class FishingZone extends Zone {
 
     @Override
     protected void onExit(Creature character) {
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             character.setInsideZone(ZoneId.FISHING, false);
             character.sendPacket(ExAutoFishAvailable.NO);
         }

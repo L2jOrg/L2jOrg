@@ -139,6 +139,7 @@ public final class Player extends Playable {
         for (int i = 0; i < htmlActionCaches.length; ++i) {
             htmlActionCaches[i] = new LinkedList<>();
         }
+        setRunning();
     }
 
     public static Player create(CharacterData characterData, PlayerTemplate template) {
@@ -3741,7 +3742,7 @@ public final class Player extends Playable {
             return;
         }
 
-        if (target.isPlayer()) {
+        if (GameUtils.isPlayer(target)) {
             final Player targetPlayer = (Player) target;
             sendPacket(ActionFailed.STATIC_PACKET);
 
@@ -4008,7 +4009,7 @@ public final class Player extends Playable {
     @Override
     public void setTarget(WorldObject newTarget) {
         if (newTarget != null) {
-            final boolean isInParty = (newTarget.isPlayer() && isInParty() && _party.containsPlayer(newTarget.getActingPlayer()));
+            final boolean isInParty = (GameUtils.isPlayer(newTarget) && isInParty() && _party.containsPlayer(newTarget.getActingPlayer()));
 
             // Prevents /target exploiting
             if (!isInParty && (Math.abs(newTarget.getZ() - getZ()) > 1000)) {
@@ -6693,7 +6694,7 @@ public final class Player extends Playable {
         }
 
         // Check if the attacker is in olympia and olympia start
-        if (attacker.isPlayer() && attacker.getActingPlayer().isInOlympiadMode()) {
+        if (GameUtils.isPlayer(attacker) && attacker.getActingPlayer().isInOlympiadMode()) {
             if (_inOlympiadMode && _OlympiadStart && (((Player) attacker).getOlympiadGameId() == getOlympiadGameId())) {
                 return true;
             }
@@ -6754,7 +6755,7 @@ public final class Player extends Playable {
             }
 
             // Check if the attacker is not in the same ally
-            if (attacker.isPlayer() && (getAllyId() != 0) && (getAllyId() == attackerPlayer.getAllyId())) {
+            if (GameUtils.isPlayer(attacker) && (getAllyId() != 0) && (getAllyId() == attackerPlayer.getAllyId())) {
                 return false;
             }
 
@@ -9342,7 +9343,7 @@ public final class Player extends Playable {
         // Check if hit is missed
         if (miss) {
             if (skill == null) {
-                if (target.isPlayer()) {
+                if (GameUtils.isPlayer(target)) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
                     sm.addPcName(target.getActingPlayer());
                     sm.addString(getName());
@@ -9372,13 +9373,13 @@ public final class Player extends Playable {
             }
         }
 
-        if (isInOlympiadMode() && target.isPlayer() && target.getActingPlayer().isInOlympiadMode() && (target.getActingPlayer().getOlympiadGameId() == getOlympiadGameId())) {
+        if (isInOlympiadMode() && GameUtils.isPlayer(target) && target.getActingPlayer().isInOlympiadMode() && (target.getActingPlayer().getOlympiadGameId() == getOlympiadGameId())) {
             OlympiadGameManager.getInstance().notifyCompetitorDamage(this, damage);
         }
 
         SystemMessage sm = null;
 
-        if ((target.isHpBlocked() && !target.isNpc()) || (target.isPlayer() && target.isAffected(EffectFlag.DUELIST_FURY) && !isAffected(EffectFlag.FACEOFF))) {
+        if ((target.isHpBlocked() && !target.isNpc()) || (GameUtils.isPlayer(target) && target.isAffected(EffectFlag.DUELIST_FURY) && !isAffected(EffectFlag.FACEOFF))) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
         } else if (target.isDoor() || (target instanceof ControlTower)) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HIT_FOR_S1_DAMAGE);

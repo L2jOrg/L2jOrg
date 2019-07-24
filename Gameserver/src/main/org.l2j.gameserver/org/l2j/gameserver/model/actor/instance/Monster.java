@@ -8,6 +8,7 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MinionList;
 
 import java.util.concurrent.ScheduledFuture;
@@ -190,7 +191,7 @@ public class Monster extends Attackable {
     @Override
     public synchronized void doCast(Skill skill, Item item, boolean ctrlPressed, boolean shiftPressed) {
         // Might need some exceptions here, but it will prevent the monster buffing player bug.
-        if (!skill.isBad() && (getTarget() != null) && getTarget().isPlayer()) {
+        if (!skill.isBad() && GameUtils.isPlayer(getTarget())) {
             abortAllSkillCasters();
             return;
         }

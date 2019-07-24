@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid, Nos
  */
@@ -32,7 +34,7 @@ public class Die extends ServerPacket {
 
     public Die(Creature activeChar) {
         _objectId = activeChar.getObjectId();
-        if (activeChar.isPlayer()) {
+        if (isPlayer(activeChar)) {
             final Clan clan = activeChar.getActingPlayer().getClan();
             boolean isInCastleDefense = false;
             boolean isInFortDefense = false;

@@ -9,6 +9,8 @@ import org.l2j.gameserver.model.stats.Stats;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -18,7 +20,7 @@ public class PCriticalRateFinalizer implements IStatsFunction {
         throwIfPresent(base);
 
         double baseValue = calcWeaponBaseValue(creature, stat);
-        if (creature.isPlayer()) {
+        if (isPlayer(creature)) {
             // Enchanted legs bonus
             baseValue += calcEnchantBodyPart(creature, ItemTemplate.SLOT_LEGS);
         }

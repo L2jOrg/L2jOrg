@@ -22,6 +22,8 @@ import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -94,7 +96,7 @@ public final class Transform implements IIdentifiable {
     }
 
     private TransformTemplate getTemplate(Creature creature) {
-        if (creature.isPlayer()) {
+        if (isPlayer(creature)) {
             return (creature.getActingPlayer().getAppearance().getSex() ? _femaleTemplate : _maleTemplate);
         } else if (creature.isNpc()) {
             return ((Npc) creature).getTemplate().getSex() == Sex.FEMALE ? _femaleTemplate : _maleTemplate;
@@ -186,7 +188,7 @@ public final class Transform implements IIdentifiable {
         final Player player = creature.getActingPlayer();
 
         // Get off the strider or something else if character is mounted
-        if (creature.isPlayer() && player.isMounted()) {
+        if (isPlayer(creature) && player.isMounted()) {
             player.dismount();
         }
 
@@ -200,7 +202,7 @@ public final class Transform implements IIdentifiable {
             // Get player a bit higher so he doesn't drops underground after transformation happens
             creature.setXYZ(creature.getX(), creature.getY(), (int) (creature.getZ() + getCollisionHeight(creature, 0)));
 
-            if (creature.isPlayer()) {
+            if (isPlayer(creature)) {
                 if (_name != null) {
                     player.getAppearance().setVisibleName(_name);
                 }
@@ -284,7 +286,7 @@ public final class Transform implements IIdentifiable {
                 creature.setIsFlying(false);
             }
 
-            if (creature.isPlayer()) {
+            if (isPlayer(creature)) {
                 final Player player = creature.getActingPlayer();
                 final boolean hasTransformSkills = player.hasTransformSkills();
 

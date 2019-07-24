@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Item Effect: Gives teleport bookmark slots to the owner.
  * @author Nik
@@ -46,7 +48,7 @@ public final class AddTeleportBookmarkSlot extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effected.isPlayer())
+		if (!isPlayer(effected))
 		{
 			return;
 		}

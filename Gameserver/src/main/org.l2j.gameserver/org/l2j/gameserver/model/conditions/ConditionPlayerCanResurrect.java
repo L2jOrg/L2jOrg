@@ -27,6 +27,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Player Can Resurrect condition implementation.
  *
@@ -50,23 +52,23 @@ public class ConditionPlayerCanResurrect extends Condition {
         }
         boolean canResurrect = true;
 
-        if (effected.isPlayer()) {
+        if (isPlayer(effected)) {
             final Player player = effected.getActingPlayer();
             if (!player.isDead()) {
                 canResurrect = false;
-                if (effector.isPlayer()) {
+                if (isPlayer(effector)) {
                     final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
                     msg.addSkillName(skill);
                     effector.sendPacket(msg);
                 }
             } else if (player.isResurrectionBlocked()) {
                 canResurrect = false;
-                if (effector.isPlayer()) {
+                if (isPlayer(effector)) {
                     effector.sendPacket(SystemMessageId.REJECT_RESURRECTION);
                 }
             } else if (player.isReviveRequested()) {
                 canResurrect = false;
-                if (effector.isPlayer()) {
+                if (isPlayer(effector)) {
                     effector.sendPacket(SystemMessageId.RESURRECTION_HAS_ALREADY_BEEN_PROPOSED);
                 }
             } else if (skill.getId() != 2393) // Blessed Scroll of Battlefield Resurrection
@@ -76,22 +78,22 @@ public class ConditionPlayerCanResurrect extends Condition {
                     final Clan clan = player.getClan();
                     if (clan == null) {
                         canResurrect = false;
-                        if (effector.isPlayer()) {
+                        if (isPlayer(effector)) {
                             effector.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEGROUNDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
                         }
                     } else if (siege.checkIsDefender(clan) && (siege.getControlTowerCount() == 0)) {
                         canResurrect = false;
-                        if (effector.isPlayer()) {
+                        if (isPlayer(effector)) {
                             effector.sendPacket(SystemMessageId.THE_GUARDIAN_TOWER_HAS_BEEN_DESTROYED_AND_RESURRECTION_IS_NOT_POSSIBLE);
                         }
                     } else if (siege.checkIsAttacker(clan) && (siege.getAttackerClan(clan).getNumFlags() == 0)) {
                         canResurrect = false;
-                        if (effector.isPlayer()) {
+                        if (isPlayer(effector)) {
                             effector.sendPacket(SystemMessageId.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE);
                         }
                     } else {
                         canResurrect = false;
-                        if (effector.isPlayer()) {
+                        if (isPlayer(effector)) {
                             effector.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEGROUNDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
                         }
                     }
@@ -102,19 +104,19 @@ public class ConditionPlayerCanResurrect extends Condition {
             final Player player = summon.getOwner();
             if (!summon.isDead()) {
                 canResurrect = false;
-                if (effector.isPlayer()) {
+                if (isPlayer(effector)) {
                     final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
                     msg.addSkillName(skill);
                     effector.sendPacket(msg);
                 }
             } else if (summon.isResurrectionBlocked()) {
                 canResurrect = false;
-                if (effector.isPlayer()) {
+                if (isPlayer(effector)) {
                     effector.sendPacket(SystemMessageId.REJECT_RESURRECTION);
                 }
             } else if ((player != null) && player.isRevivingPet()) {
                 canResurrect = false;
-                if (effector.isPlayer()) {
+                if (isPlayer(effector)) {
                     effector.sendPacket(SystemMessageId.RESURRECTION_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
                 }
             }

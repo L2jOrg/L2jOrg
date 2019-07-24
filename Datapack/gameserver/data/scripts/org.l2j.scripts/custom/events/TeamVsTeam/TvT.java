@@ -58,6 +58,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Team vs Team event.
  * @author Mobius
@@ -780,7 +782,7 @@ public class TvT extends Event implements ScriptEvent
 	@RegisterEvent(EventType.ON_CREATURE_DEATH)
 	public void onPlayerDeath(OnCreatureDeath event)
 	{
-		if (event.getTarget().isPlayer())
+		if (isPlayer(event.getTarget()))
 		{
 			final Player killedPlayer = event.getTarget().getActingPlayer();
 			final Player killer = event.getAttacker().getActingPlayer();

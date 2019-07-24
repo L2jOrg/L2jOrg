@@ -25,6 +25,8 @@ import org.l2j.gameserver.model.stats.Stats;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -37,7 +39,7 @@ public class MaxMpFinalizer implements IStatsFunction {
         if (creature.isPet()) {
             final Pet pet = (Pet) creature;
             baseValue += pet.getPetLevelData().getPetMaxMP();
-        } else if (creature.isPlayer()) {
+        } else if (isPlayer(creature)) {
             final Player player = creature.getActingPlayer();
             if (player != null) {
                 baseValue += player.getTemplate().getBaseMpMax(player.getLevel());

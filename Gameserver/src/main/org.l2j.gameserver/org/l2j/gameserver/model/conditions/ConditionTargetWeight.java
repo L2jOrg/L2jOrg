@@ -21,6 +21,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * The Class ConditionTargetWeight.
  *
@@ -40,7 +42,7 @@ public class ConditionTargetWeight extends Condition {
 
     @Override
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
-        if ((effected != null) && effected.isPlayer()) {
+        if (isPlayer(effected)) {
             final Player target = effected.getActingPlayer();
             if (!target.getDietMode() && (target.getMaxLoad() > 0)) {
                 final int weightproc = (((target.getCurrentLoad() - target.getBonusWeightPenalty()) * 100) / target.getMaxLoad());

@@ -12,6 +12,7 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.NpcStringId;
+import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
 
 import java.util.List;
@@ -33,7 +34,7 @@ public class FortCommander extends Defender {
      */
     @Override
     public boolean isAutoAttackable(Creature attacker) {
-        if ((attacker == null) || !attacker.isPlayer()) {
+        if (!GameUtils.isPlayer(attacker)) {
             return false;
         }
 

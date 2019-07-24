@@ -40,6 +40,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.StringTokenizer;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 
 /**
  * @author UnAfraid
@@ -162,13 +164,13 @@ public class AdminPunishment implements IAdminCommandHandler
 							if (st.hasMoreTokens())
 							{
 								final String playerName = st.nextToken();
-								if (playerName.isEmpty() && ((activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer()))
+								if (playerName.isEmpty() && !isPlayer(activeChar.getTarget()))
 								{
 									return useAdminCommand("admin_punishment", activeChar);
 								}
 								target = World.getInstance().findPlayer(playerName);
 							}
-							if ((target == null) && ((activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer()))
+							if ((target == null) && (!isPlayer(activeChar.getTarget())))
 							{
 								BuilderUtil.sendSysMessage(activeChar, "You must target player!");
 								break;

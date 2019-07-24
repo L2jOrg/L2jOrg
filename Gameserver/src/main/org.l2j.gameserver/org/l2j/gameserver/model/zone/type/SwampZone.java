@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.serverpackets.OnEventTrigger;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * another type of zone where your speed is changed
  *
@@ -86,7 +88,7 @@ public class SwampZone extends Zone {
         }
 
         character.setInsideZone(ZoneId.SWAMP, true);
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             if (_eventId > 0) {
                 character.sendPacket(new OnEventTrigger(_eventId, true));
             }
@@ -99,7 +101,7 @@ public class SwampZone extends Zone {
         // don't broadcast info if not needed
         if (character.isInsideZone(ZoneId.SWAMP)) {
             character.setInsideZone(ZoneId.SWAMP, false);
-            if (character.isPlayer()) {
+            if (isPlayer(character)) {
                 if (_eventId > 0) {
                     character.sendPacket(new OnEventTrigger(_eventId, false));
                 }

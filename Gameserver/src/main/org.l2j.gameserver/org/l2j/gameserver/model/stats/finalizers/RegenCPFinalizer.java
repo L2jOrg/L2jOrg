@@ -9,6 +9,8 @@ import org.l2j.gameserver.model.stats.Stats;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -16,7 +18,7 @@ public class RegenCPFinalizer implements IStatsFunction {
     @Override
     public double calc(Creature creature, Optional<Double> base, Stats stat) {
         throwIfPresent(base);
-        if (!creature.isPlayer()) {
+        if (!isPlayer(creature)) {
             return 0;
         }
 

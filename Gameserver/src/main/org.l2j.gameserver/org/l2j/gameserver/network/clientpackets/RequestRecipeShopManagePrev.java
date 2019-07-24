@@ -4,6 +4,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.RecipeShopSellList;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * This class ...
  *
@@ -20,7 +22,7 @@ public final class RequestRecipeShopManagePrev extends ClientPacket {
         final Player player = client.getActiveChar();
         if ((player == null)) {
             return;
-        } else if (player.isAlikeDead() || (player.getTarget() == null) || !player.getTarget().isPlayer()) {
+        } else if (player.isAlikeDead() || !isPlayer(player.getTarget())) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

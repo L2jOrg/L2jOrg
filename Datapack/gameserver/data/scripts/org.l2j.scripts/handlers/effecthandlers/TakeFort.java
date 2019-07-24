@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Take Fort effect implementation.
  * @author Adry_85
@@ -43,8 +45,7 @@ public final class TakeFort extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effector.isPlayer())
-		{
+		if (!isPlayer(effector)) {
 			return;
 		}
 		

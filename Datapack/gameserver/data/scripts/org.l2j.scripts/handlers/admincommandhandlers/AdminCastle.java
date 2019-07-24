@@ -16,8 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.StringTokenizer;
-
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
@@ -30,9 +28,11 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.GameUtils;
+
+import java.util.StringTokenizer;
 
 import static org.l2j.commons.util.Util.isDigit;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Admin Castle manage admin commands.
@@ -254,7 +254,7 @@ public final class AdminCastle implements IAdminCommandHandler
 	
 	private boolean checkTarget(Player player)
 	{
-		return ((player.getTarget() != null) && player.getTarget().isPlayer() && (((Player) player.getTarget()).getClan() != null));
+		return (isPlayer(player.getTarget()) && (((Player) player.getTarget()).getClan() != null));
 	}
 	
 	@Override

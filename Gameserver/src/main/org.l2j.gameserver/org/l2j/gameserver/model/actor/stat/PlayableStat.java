@@ -15,6 +15,8 @@ import org.l2j.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 
 public class PlayableStat extends CharStat {
     protected static final Logger LOGGER = LoggerFactory.getLogger(PlayableStat.class);
@@ -60,7 +62,7 @@ public class PlayableStat extends CharStat {
             addLevel((byte) (level - getLevel()));
         }
 
-        if ((getLevel() > oldLevel) && getActiveChar().isPlayer()) {
+        if ((getLevel() > oldLevel) && isPlayer(getActiveChar())) {
             final Player activeChar = getActiveChar().getActingPlayer();
             if (SkillTreesData.getInstance().hasAvailableSkills(activeChar, activeChar.getClassId())) {
                 getActiveChar().sendPacket(ExNewSkillToLearnByLevelUp.STATIC_PACKET);
@@ -71,7 +73,7 @@ public class PlayableStat extends CharStat {
     }
 
     public boolean removeExp(long value) {
-        if (((getExp() - value) < getExpForLevel(getLevel())) && (!Config.PLAYER_DELEVEL || (Config.PLAYER_DELEVEL && (getLevel() <= Config.DELEVEL_MINIMUM)))) {
+        if (getExp() - value < getExpForLevel(getLevel()) && (!Config.PLAYER_DELEVEL || getLevel() <= Config.DELEVEL_MINIMUM)) {
             value = getExp() - getExpForLevel(getLevel());
         }
 
@@ -132,7 +134,7 @@ public class PlayableStat extends CharStat {
             setExp(getExpForLevel(getLevel()));
         }
 
-        if (!levelIncreased && getActiveChar().isPlayer() && !getActiveChar().isGM() && Config.DECREASE_SKILL_LEVEL) {
+        if (!levelIncreased && isPlayer(getActiveChar()) && !getActiveChar().isGM() && Config.DECREASE_SKILL_LEVEL) {
             ((Player) getActiveChar()).checkPlayerSkills();
         }
 

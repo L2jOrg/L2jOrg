@@ -29,6 +29,8 @@ import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -55,14 +57,14 @@ public class RegenHPFinalizer implements IStatsFunction {
     public double calc(Creature creature, Optional<Double> base, Stats stat) {
         throwIfPresent(base);
 
-        double baseValue = creature.isPlayer() ? creature.getActingPlayer().getTemplate().getBaseHpRegen(creature.getLevel()) : creature.getTemplate().getBaseHpReg();
+        double baseValue = isPlayer(creature) ? creature.getActingPlayer().getTemplate().getBaseHpRegen(creature.getLevel()) : creature.getTemplate().getBaseHpReg();
         baseValue *= creature.isRaid() ? Config.RAID_HP_REGEN_MULTIPLIER : Config.HP_REGEN_MULTIPLIER;
 
         if (Config.CHAMPION_ENABLE && creature.isChampion()) {
             baseValue *= Config.CHAMPION_HP_REGEN;
         }
 
-        if (creature.isPlayer()) {
+        if (isPlayer(creature)) {
             final Player player = creature.getActingPlayer();
 
             final double siegeModifier = calcSiegeRegenModifier(player);

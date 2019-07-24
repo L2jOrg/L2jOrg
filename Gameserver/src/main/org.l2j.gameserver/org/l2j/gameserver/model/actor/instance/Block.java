@@ -27,6 +27,7 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameChangePoints;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameExtendedChangePoints;
 import org.l2j.gameserver.network.serverpackets.NpcInfo;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * @author BiggBoss
@@ -92,7 +93,7 @@ public class Block extends Monster {
 
     @Override
     public boolean isAutoAttackable(Creature attacker) {
-        if (attacker.isPlayer()) {
+        if (GameUtils.isPlayer(attacker)) {
             return (attacker.getActingPlayer() != null) && (attacker.getActingPlayer().getBlockCheckerArena() > -1);
         }
         return true;

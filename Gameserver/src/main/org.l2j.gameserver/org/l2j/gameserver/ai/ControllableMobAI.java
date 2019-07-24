@@ -1,25 +1,25 @@
 package org.l2j.gameserver.ai;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.model.World;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.MobGroup;
 import org.l2j.gameserver.model.MobGroupTable;
-import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.ControllableMob;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.util.GameUtils;
-import org.l2j.gameserver.util.MathUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.MathUtil.*;
 
 /**
@@ -339,7 +339,7 @@ public final class ControllableMobAI extends AttackableAI {
         }
 
         // Spawn protection (only against mobs)
-        if (target.isPlayer() && ((Player) target).isSpawnProtected()) {
+        if (isPlayer(target) && ((Player) target).isSpawnProtected()) {
             return false;
         }
 

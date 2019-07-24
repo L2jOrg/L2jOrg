@@ -33,6 +33,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Summon Npc effect implementation.
  * @author Zoey76
@@ -71,7 +73,7 @@ public final class SummonNpc extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effected.isPlayer() || effected.isAlikeDead() || effected.getActingPlayer().inObserverMode())
+		if (!isPlayer(effected) || effected.isAlikeDead() || effected.getActingPlayer().inObserverMode())
 		{
 			return;
 		}

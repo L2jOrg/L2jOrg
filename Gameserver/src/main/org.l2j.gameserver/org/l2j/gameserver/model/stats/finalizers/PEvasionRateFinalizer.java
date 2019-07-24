@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.stats.Stats;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -35,7 +37,7 @@ public class PEvasionRateFinalizer implements IStatsFunction {
         double baseValue = calcWeaponPlusBaseValue(creature, stat);
 
         final int level = creature.getLevel();
-        if (creature.isPlayer()) {
+        if (isPlayer(creature)) {
             // [Square(DEX)] * 5 + lvl;
             baseValue += (Math.sqrt(creature.getDEX()) * 5) + level;
             if (level > 69) {

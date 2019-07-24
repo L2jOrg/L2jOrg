@@ -12,6 +12,8 @@ import org.l2j.gameserver.model.stats.Stats;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -42,7 +44,7 @@ public class MDefenseFinalizer implements IStatsFunction {
             }
         }
 
-        if (creature.isPlayer()) {
+        if (isPlayer(creature)) {
             final Player player = creature.getActingPlayer();
             for (int slot : SLOTS) {
                 if (!player.getInventory().isPaperdollSlotEmpty(slot)) {

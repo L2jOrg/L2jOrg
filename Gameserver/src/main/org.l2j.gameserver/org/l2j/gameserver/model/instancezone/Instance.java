@@ -36,6 +36,8 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Instance world.
  *
@@ -623,7 +625,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param enter  {@code true} when object enter, {@code false} when object leave
      */
     public void onInstanceChange(WorldObject object, boolean enter) {
-        if (object.isPlayer()) {
+        if (isPlayer(object)) {
             final Player player = object.getActingPlayer();
             if (enter) {
                 addPlayer(player);

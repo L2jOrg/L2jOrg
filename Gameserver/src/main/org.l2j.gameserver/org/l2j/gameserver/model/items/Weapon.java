@@ -15,6 +15,8 @@ import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * This class is dedicated to the management of weapons.
  */
@@ -234,10 +236,10 @@ public final class Weapon extends ItemTemplate {
             // TODO: Verify if this applies ONLY to ON_MAGIC_SKILL!
             if (type == ItemSkillType.ON_MAGIC_SKILL) {
                 // notify quests of a skill use
-                if (caster.isPlayer()) {
+                if (isPlayer(caster)) {
                     World.getInstance().forEachVisibleObjectInRange(caster, Npc.class, 1000, npc -> EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npc, caster.getActingPlayer(), skill, false, target), npc));
                 }
-                if (caster.isPlayer()) {
+                if (isPlayer(caster)) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ACTIVATED);
                     sm.addSkillName(skill);
                     caster.sendPacket(sm);

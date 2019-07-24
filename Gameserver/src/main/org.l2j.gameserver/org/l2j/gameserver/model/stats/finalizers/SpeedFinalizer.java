@@ -31,6 +31,8 @@ import org.l2j.gameserver.model.zone.type.SwampZone;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -40,7 +42,7 @@ public class SpeedFinalizer implements IStatsFunction {
         throwIfPresent(base);
 
         double baseValue = getBaseSpeed(creature, stat);
-        if (creature.isPlayer()) {
+        if (isPlayer(creature)) {
             // Enchanted feet bonus
             baseValue += calcEnchantBodyPart(creature, ItemTemplate.SLOT_FEET);
         }
@@ -58,7 +60,7 @@ public class SpeedFinalizer implements IStatsFunction {
     @Override
     public double calcEnchantBodyPartBonus(int enchantLevel, boolean isBlessed) {
         if (isBlessed) {
-            return (1 * Math.max(enchantLevel - 3, 0)) + (1 * Math.max(enchantLevel - 6, 0));
+            return (Math.max(enchantLevel - 3, 0)) + (Math.max(enchantLevel - 6, 0));
         }
 
         return (0.6 * Math.max(enchantLevel - 3, 0)) + (0.6 * Math.max(enchantLevel - 6, 0));
@@ -66,7 +68,7 @@ public class SpeedFinalizer implements IStatsFunction {
 
     private double getBaseSpeed(Creature creature, Stats stat) {
         double baseValue = calcWeaponPlusBaseValue(creature, stat);
-        if (creature.isPlayer()) {
+        if (isPlayer(creature)) {
             final Player player = creature.getActingPlayer();
             if (player.isMounted()) {
                 final PetLevelData data = PetDataTable.getInstance().getPetLevelData(player.getMountNpcId(), player.getMountLevel());

@@ -31,6 +31,7 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -113,19 +114,19 @@ public class Doppelganger extends Npc {
 
     @Override
     public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss) {
-        if (miss || (getSummoner() == null) || !getSummoner().isPlayer()) {
+        if (miss || !GameUtils.isPlayer(getSummoner())) {
             return;
         }
 
         // Prevents the double spam of system messages, if the target is the owning player.
         if (target.getObjectId() != getSummoner().getObjectId()) {
-            if (getActingPlayer().isInOlympiadMode() && (target.isPlayer()) && ((Player) target).isInOlympiadMode() && (((Player) target).getOlympiadGameId() == getActingPlayer().getOlympiadGameId())) {
+            if (getActingPlayer().isInOlympiadMode() && GameUtils.isPlayer(target) && ((Player) target).isInOlympiadMode() && (((Player) target).getOlympiadGameId() == getActingPlayer().getOlympiadGameId())) {
                 OlympiadGameManager.getInstance().notifyCompetitorDamage(getSummoner().getActingPlayer(), damage);
             }
 
             final SystemMessage sm;
 
-            if ((target.isHpBlocked() && !target.isNpc()) || (target.isPlayer() && target.isAffected(EffectFlag.DUELIST_FURY) && !getActingPlayer().isAffected(EffectFlag.FACEOFF))) {
+            if ((target.isHpBlocked() && !target.isNpc()) || (GameUtils.isPlayer(target) && target.isAffected(EffectFlag.DUELIST_FURY) && !getActingPlayer().isAffected(EffectFlag.FACEOFF))) {
                 sm = SystemMessage.getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
             } else {
                 sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
@@ -143,7 +144,7 @@ public class Doppelganger extends Npc {
     public void reduceCurrentHp(double damage, Creature attacker, Skill skill) {
         super.reduceCurrentHp(damage, attacker, skill);
 
-        if ((getSummoner() != null) && getSummoner().isPlayer() && (attacker != null) && !isDead() && !isHpBlocked()) {
+        if (GameUtils.isPlayer(getSummoner()) && (attacker != null) && !isDead() && !isHpBlocked()) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);
             sm.addNpcName(this);
             sm.addString(attacker.getName());

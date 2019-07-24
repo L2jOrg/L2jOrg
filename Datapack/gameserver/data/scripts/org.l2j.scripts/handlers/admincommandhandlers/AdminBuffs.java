@@ -38,6 +38,8 @@ import org.l2j.gameserver.util.GMAudit;
 
 import java.util.*;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 public class AdminBuffs implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
@@ -229,7 +231,7 @@ public class AdminBuffs implements IAdminCommandHandler
 					return false;
 				}
 			}
-			else if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
+			else if ((activeChar.getTarget() != null) && isPlayer(activeChar.getTarget()))
 			{
 				player = activeChar.getTarget().getActingPlayer();
 			}

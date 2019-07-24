@@ -20,6 +20,8 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author NosBit
  */
@@ -32,7 +34,7 @@ public class ConditionUsingSlotType extends Condition {
 
     @Override
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
-        if ((effector == null) || !effector.isPlayer()) {
+        if (!isPlayer(effector)) {
             return false;
         }
 

@@ -46,6 +46,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.*;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 
 /**
  * EditChar admin command implementation.
@@ -109,7 +111,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				showCharacterInfo(activeChar, World.getInstance().findPlayer(data[1]));
 			}
-			else if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
+			else if (isPlayer(activeChar.getTarget()))
 			{
 				showCharacterInfo(activeChar, activeChar.getTarget().getActingPlayer());
 			}
@@ -182,7 +184,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				editCharacter(activeChar, data[1]);
 			}
-			else if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
+			else if (isPlayer(activeChar.getTarget()))
 			{
 				editCharacter(activeChar, null);
 			}
@@ -210,7 +212,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_nokarma"))
 		{
-			if ((activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer())
+			if (!isPlayer(activeChar.getTarget()))
 			{
 				BuilderUtil.sendSysMessage(activeChar, "You must target a player.");
 				return false;
@@ -791,8 +793,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_setnoble"))
 		{
-			Player player = null;
-			if ((activeChar.getTarget() != null) && (activeChar.getTarget().isPlayer()))
+			Player player;
+			if (isPlayer(activeChar.getTarget()))
 			{
 				player = (Player) activeChar.getTarget();
 			}
@@ -800,17 +802,15 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				player = activeChar;
 			}
-			
-			if (player != null)
+
+
+			player.setNoble(!player.isNoble());
+			if (player.getObjectId() != activeChar.getObjectId())
 			{
-				player.setNoble(!player.isNoble());
-				if (player.getObjectId() != activeChar.getObjectId())
-				{
-					BuilderUtil.sendSysMessage(activeChar, "You've changed nobless status of: " + player.getName());
-				}
-				player.broadcastUserInfo();
-				player.sendMessage("GM changed your nobless status!");
+				BuilderUtil.sendSysMessage(activeChar, "You've changed nobless status of: " + player.getName());
 			}
+			player.broadcastUserInfo();
+			player.sendMessage("GM changed your nobless status!");
 		}
 		else if (command.startsWith("admin_set_hp"))
 		{

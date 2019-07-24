@@ -29,6 +29,8 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -41,7 +43,7 @@ public class BaseStatsFinalizer implements IStatsFunction {
         double baseValue = creature.getTemplate().getBaseValue(stat, 0);
 
         // Should not apply armor set and henna bonus to summons.
-        if (creature.isPlayer())
+        if (isPlayer(creature))
         {
             final Player player = creature.getActingPlayer();
             final Set<ArmorSet> appliedSets = new HashSet<>(2);

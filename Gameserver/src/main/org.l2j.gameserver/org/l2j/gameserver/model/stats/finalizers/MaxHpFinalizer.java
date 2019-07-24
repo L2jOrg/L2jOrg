@@ -12,6 +12,8 @@ import org.l2j.gameserver.model.stats.Stats;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -24,7 +26,7 @@ public class MaxHpFinalizer implements IStatsFunction {
         if (creature.isPet()) {
             final Pet pet = (Pet) creature;
             baseValue = pet.getPetLevelData().getPetMaxHP();
-        } else if (creature.isPlayer()) {
+        } else if (isPlayer(creature)) {
             final Player player = creature.getActingPlayer();
             if (player != null) {
                 baseValue = player.getTemplate().getBaseHpMax(player.getLevel());

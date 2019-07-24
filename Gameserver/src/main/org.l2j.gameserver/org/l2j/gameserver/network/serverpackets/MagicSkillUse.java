@@ -13,6 +13,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * MagicSkillUse server packet implementation.
  *
@@ -42,7 +44,7 @@ public final class MagicSkillUse extends ServerPacket {
         _actionId = actionId;
         _castingType = castingType;
         Location skillWorldPos = null;
-        if (cha.isPlayer()) {
+        if (isPlayer(cha)) {
             final Player player = cha.getActingPlayer();
             if (player.getCurrentSkillWorldPosition() != null) {
                 skillWorldPos = player.getCurrentSkillWorldPosition();

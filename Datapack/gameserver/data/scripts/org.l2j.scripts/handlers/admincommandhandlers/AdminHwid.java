@@ -21,6 +21,8 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author Mobius
  */
@@ -35,7 +37,7 @@ public class AdminHwid implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar)
 	{
-		if ((activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer() || (activeChar.getTarget().getActingPlayer().getClient() == null) || (activeChar.getTarget().getActingPlayer().getClient().getHardwareInfo() == null))
+		if (!isPlayer(activeChar.getTarget()) || (activeChar.getTarget().getActingPlayer().getClient() == null) || (activeChar.getTarget().getActingPlayer().getClient().getHardwareInfo() == null))
 		{
 			return true;
 		}

@@ -29,6 +29,8 @@ import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author Mobius
  */
@@ -53,7 +55,7 @@ public class TeleportToPlayer extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if ((effector.getTarget() != null) && (effector.getTarget() != effector) && effector.getTarget().isPlayer())
+		if ((effector.getTarget() != null) && (effector.getTarget() != effector) && isPlayer(effector.getTarget()))
 		{
 			final Player target = (Player) effector.getTarget();
 			if (target.isAlikeDead())

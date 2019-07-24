@@ -1,9 +1,9 @@
 package org.l2j.gameserver.model.zone;
 
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -13,11 +13,17 @@ import org.l2j.gameserver.model.events.impl.character.OnCreatureZoneExit;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Collectors;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Abstract base class for any zone type handles basic operations.
@@ -176,7 +182,7 @@ public abstract class Zone extends ListenersContainer {
             return false;
         }
 
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             // Check class type
             if (_classType != 0) {
                 if (((Player) character).isMageClass()) {
@@ -418,14 +424,7 @@ public abstract class Zone extends ListenersContainer {
     }
 
     public List<Player> getPlayersInside() {
-        final List<Player> players = new ArrayList<>();
-        for (Creature ch : _characterList.values()) {
-            if ((ch != null) && ch.isPlayer()) {
-                players.add(ch.getActingPlayer());
-            }
-        }
-
-        return players;
+        return _characterList.values().stream().filter(GameUtils::isPlayer).map(WorldObject::getActingPlayer).collect(Collectors.toList());
     }
 
     /**
@@ -438,11 +437,7 @@ public abstract class Zone extends ListenersContainer {
             return;
         }
 
-        for (Creature character : _characterList.values()) {
-            if ((character != null) && character.isPlayer()) {
-                character.sendPacket(packet);
-            }
-        }
+        _characterList.values().parallelStream().filter(GameUtils::isPlayer).map(WorldObject::getActingPlayer).forEach(packet::sendTo);
     }
 
     public InstanceType getTargetType() {
@@ -501,9 +496,8 @@ public abstract class Zone extends ListenersContainer {
 
     public void oustAllPlayers() {
         //@formatter:off
-        _characterList.values().stream()
-                .filter(Objects::nonNull)
-                .filter(WorldObject::isPlayer)
+        _characterList.values().parallelStream()
+                .filter(GameUtils::isPlayer)
                 .map(WorldObject::getActingPlayer)
                 .filter(Player::isOnline)
                 .forEach(player -> player.teleToLocation(TeleportWhereType.TOWN));
@@ -518,13 +512,6 @@ public abstract class Zone extends ListenersContainer {
             return;
         }
 
-        for (Creature character : _characterList.values()) {
-            if ((character != null) && character.isPlayer()) {
-                final Player player = character.getActingPlayer();
-                if (player.isOnline()) {
-                    player.teleToLocation(loc);
-                }
-            }
-        }
+        _characterList.values().parallelStream().filter(p -> GameUtils.isPlayer(p) && ((Player)p).isOnline()).forEach(p -> p.teleToLocation(loc));
     }
 }

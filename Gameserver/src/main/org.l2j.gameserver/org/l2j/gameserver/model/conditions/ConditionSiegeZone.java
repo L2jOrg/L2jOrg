@@ -25,6 +25,8 @@ import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * The Class ConditionSiegeZone.
  *
@@ -63,7 +65,7 @@ public final class ConditionSiegeZone extends Condition {
      * @return true, if successful
      */
     public static boolean checkIfOk(Creature activeChar, Castle castle, int value) {
-        if ((activeChar == null) || !activeChar.isPlayer()) {
+        if (!isPlayer(activeChar)) {
             return false;
         }
 
@@ -97,7 +99,7 @@ public final class ConditionSiegeZone extends Condition {
      * @return true, if successful
      */
     public static boolean checkIfOk(Creature activeChar, Fort fort, int value) {
-        if ((activeChar == null) || !activeChar.isPlayer()) {
+        if (!isPlayer(activeChar)) {
             return false;
         }
 

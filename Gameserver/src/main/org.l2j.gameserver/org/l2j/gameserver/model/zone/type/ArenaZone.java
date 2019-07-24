@@ -21,6 +21,8 @@ import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * A PVP Zone
  *
@@ -33,7 +35,7 @@ public class ArenaZone extends Zone {
 
     @Override
     protected void onEnter(Creature character) {
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             if (!character.isInsideZone(ZoneId.PVP)) {
                 character.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
             }
@@ -44,7 +46,7 @@ public class ArenaZone extends Zone {
 
     @Override
     protected void onExit(Creature character) {
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             if (!character.isInsideZone(ZoneId.PVP)) {
                 character.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
             }
