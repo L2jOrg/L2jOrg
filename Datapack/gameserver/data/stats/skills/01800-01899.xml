@@ -916,7 +916,7 @@
 		</effects>
 	</skill>
 	<skill id="1898" toLevel="9" name="Shield Charge">
-		<!-- Uses a shield to rush target with $s1 Power added, Stunning theim for $s2. Can be used while a shield is equipped. Over-hit. -->
+		<!-- Attacks enemies in front of character with $s1 Power added to P. Atk., stunning target for $s2 Requires a shield. Over-hit. -->
 		<icon>icon.skill1898</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>

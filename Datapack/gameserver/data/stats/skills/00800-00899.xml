@@ -33,7 +33,7 @@
 		</effects>
 	</skill>
 	<skill id="802" toLevel="1" name="Wizard Ability: Anti-magic">
-		<!-- Increases the chance of resisting magic damage. -->
+		<!-- Resistance to magic attack +5%. -->
 		<icon>icon.skill0146</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>75</magicLvl>
@@ -65,7 +65,7 @@
 		</effects>
 	</skill>
 	<skill id="804" toLevel="1" name="Knight Ability: Critical Damage Resistance">
-		<!-- Decreases received Critical Damage. -->
+		<!-- Decreases Received P. Critical Damage. -->
 		<icon>icon.skill0232</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>75</magicLvl>
@@ -184,7 +184,7 @@
 		</effects>
 	</skill>
 	<skill id="814" toLevel="43" name="Full Swing">
-		<!-- Widely swings a two-handed weapon to attack nearby enemies with $s1 Power added to P. Atk. Requires a two-handed sword/ two-handed blunt to be equipped. Ignores Shield Defense. Over-hit. Critical. -->
+		<!-- Widely swings a two-handed weapon to attack nearby enemies with $s1 Power added to P. Atk. Ignores Shield Defense. Requires a two-handed sword/ two-handed blunt to be equipped. Critical. Over-hit. -->
 		<icon>icon.skill0814</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -394,7 +394,7 @@
 		</effects>
 	</skill>
 	<skill id="815" toLevel="43" name="Blade Hurricane">
-		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. Requires a dual sword. Ignores Shield Defense. Over-hit. Critical. -->
+		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. Requires a dual sword. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill0815</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -603,7 +603,7 @@
 		</effects>
 	</skill>
 	<skill id="816" toLevel="43" name="Cleave">
-		<!-- Inflicts a powerful blow on the enemy with $s1 Power added to P. Atk. Requires a two-handed sword/ two-handed blunt weapon to be equipped. Ignores Shield Defense. Over-hit. Critical. -->
+		<!-- Attack with $s1 Power added to P. Atk. Ignores Shield Defense. Requires a two-handed sword/ two-handed blunt to be equipped. Critical. Over-hit. -->
 		<icon>icon.skill0816</icon>
 		<castRange>40</castRange>
 		<coolTime>1080</coolTime>
@@ -813,7 +813,7 @@
 		</effects>
 	</skill>
 	<skill id="817" toLevel="43" name="Double Attack">
-		<!-- Uses two swords to inflict a powerful blow on the enemy with $s1 Power added to P. Atk. Requires a dual sword. Ignores Shield Defense. Over-hit. Critical. -->
+		<!-- Attacks by powerful strike of dual sword with $s1 Power added to P. Atk. Requires a dual sword. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill0817</icon>
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
@@ -1022,7 +1022,7 @@
 		</effects>
 	</skill>
 	<skill id="818" toLevel="1" name="Evasion Counter">
-		<!-- During Evasion, counters by stunning the enemy and renders him senseless. -->
+		<!-- After successful P. Evasion has a chance to counter attack and stun the enemy. -->
 		<icon>icon.skill0818</icon>
 		<magicLvl>74</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1038,7 +1038,7 @@
 		</effects>
 	</skill>
 	<skill id="819" toLevel="1" name="Evasion Chance">
-		<!-- During Evasion, increases the rate of successfully striking the enemy's vital organs. -->
+		<!-- After successful P. Evasion, increases the rate of successfully striking the enemy's vital organs. -->
 		<icon>icon.skill0819</icon>
 		<magicLvl>74</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1054,7 +1054,7 @@
 		</effects>
 	</skill>
 	<skill id="820" toLevel="1" name="Evasion Haste">
-		<!-- During Evasion, increases your Atk. Spd. -->
+		<!-- During P. Evasion, increases your Atk. Spd. -->
 		<icon>icon.skill0820</icon>
 		<magicLvl>74</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1267,7 +1267,7 @@
 		</effects>
 	</skill>
 	<skill id="825" toLevel="1" name="Sharpen Edge">
-		<!-- Sharpens a bladed weapon to get P. Atk. +5% and Critical Rate +20% for 20 min. -->
+		<!-- Sharpens a bladed weapon to get P. Atk. +5% and P. Critical Rate +20% for 20 min. -->
 		<icon>icon.skill0825</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -1317,7 +1317,7 @@
 		</effects>
 	</skill>
 	<skill id="826" toLevel="1" name="Spike">
-		<!-- Adds a spike to a weapon to get P. Atk. +10% and Stun Atk. Rate +15% for 20 min. -->
+		<!-- For 20 min., adds a spike to a blunt weapon to get P. Atk. +10%. Additionally, Stun Atk. Rate +15%. -->
 		<icon>icon.skill0826</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -1416,7 +1416,7 @@
 		</effects>
 	</skill>
 	<skill id="829" toLevel="1" name="Hard Tanning">
-		<!-- Tans light armor to get P. Def. +5% and Evasion +2 for 20 min. Cannot be used on pets. -->
+		<!-- Tans light armor to get P. Def. +5% and P. Evasion +2 for 20 min. Cannot be used on pets. -->
 		<icon>icon.skill0829</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -3463,7 +3463,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="899" toLevel="6" name="Cat Roar">
-		<!-- Uses the cry of danger to decrease P. Def./ M. Def./ Speed/ Atk. Spd. of nearby enemies and decreases Magic Spd. Power $s1. -->
+		<!-- Uses the cry of danger to decrease P. Def./ M. Def./ Speed/ Atk. Spd. and Magic Spd. of nearby enemies. Power $s1. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>

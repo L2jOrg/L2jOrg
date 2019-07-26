@@ -1704,7 +1704,7 @@
 			<height normal="90" grown="109" />
 		</collision>
 	</npc>
-	<npc id="25339" level="80" type="Monster" name="Halisha's Shadow" title="Ruler of Sepulcher">
+	<npc id="25339" level="85" type="Monster" name="Halisha's Shadow" title="Ruler of Sepulcher">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25340" count="1" respawnTime="360" weightPoint="1" />
@@ -1716,9 +1716,9 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="6720" /> <!-- Monster Only (Halisha's Shadow) -->
-		<acquire exp="2643172" sp="634" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="5000000.0" hpRegen="73.0538466979355" mp="1708.8" mpRegen="3.03" />
+		<acquire exp="115600000" sp="3468000" raidPoints="0" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="2770987.5" hpRegen="319.2293199" mp="2901.03" mpRegen="3" />
 			<attack physical="866.449808979738" magical="251.110457495066" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="1047.2021481" magical="510.858" evasion="-17" />
 			<speed>
@@ -1752,6 +1752,11 @@
 			<radius normal="23" />
 			<height normal="60" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="7256" min="1" max="1" chance="100" /> <!-- Goblet of Alectia -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25340" level="80" type="Monster" name="Knight of Shadow">
 		<parameters>
@@ -2566,28 +2571,31 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="51" min="1" max="1" chance="4.976" /> <!-- Bracer -->
-				<item id="625" min="1" max="1" chance="4.974" /> <!-- Bone Shield -->
-				<item id="33" min="1" max="1" chance="4.9735" /> <!-- Durable Leather Gaiters -->
-				<item id="26" min="1" max="1" chance="4.968" /> <!-- Bronze Breastplate -->
-				<item id="1105" min="1" max="1" chance="4.9625" /> <!-- Stockings of Magic -->
-				<item id="34" min="1" max="1" chance="4.959" /> <!-- Bronze Gaiters -->
-				<item id="39" min="1" max="1" chance="4.953" /> <!-- Boots -->
-				<item id="1148" min="1" max="1" chance="4.9405" /> <!-- Durable Leather Helmet -->
-				<item id="27" min="1" max="1" chance="4.9325" /> <!-- Durable Leather Shirt -->
-				<item id="1102" min="1" max="1" chance="4.9315" /> <!-- Tunic of Magic -->
-				<item id="100" min="1" max="1" chance="2.526" /> <!-- Voodoo Doll -->
-				<item id="68" min="1" max="1" chance="2.5265" /> <!-- Falchion -->
-				<item id="177" min="1" max="1" chance="2.5255" /> <!-- Mage Staff -->
-				<item id="5284" min="1" max="1" chance="2.523" /> <!-- Zweihander -->
-				<item id="87" min="1" max="1" chance="2.52" /> <!-- Iron Hammer -->
-				<item id="16" min="1" max="1" chance="2.5095" /> <!-- Great Spear -->
-				<item id="257" min="1" max="1" chance="2.494" /> <!-- Viper Fang -->
-				<item id="311" min="1" max="1" chance="2.493" /> <!-- Crucifix of Blessing -->
-				<item id="155" min="1" max="1" chance="2.482" /> <!-- Flanged Mace -->
-				<item id="273" min="1" max="1" chance="2.4745" /> <!-- Compound Bow -->
-				<item id="219" min="1" max="1" chance="2.4695" /> <!-- Sword Breaker -->
+				<item id="1148" min="1" max="1" chance="9.064" /> <!-- Durable Leather Helmet -->
+				<item id="1105" min="1" max="1" chance="9.056" /> <!-- Stockings of Magic -->
+				<item id="27" min="1" max="1" chance="9.042" /> <!-- Durable Leather Shirt -->
+				<item id="33" min="1" max="1" chance="9.003" /> <!-- Durable Leather Gaiters -->
+				<item id="51" min="1" max="1" chance="9.002" /> <!-- Bracer -->
+				<item id="34" min="1" max="1" chance="9" /> <!-- Bronze Gaiters -->
+				<item id="1102" min="1" max="1" chance="8.965" /> <!-- Tunic of Magic -->
+				<item id="39" min="1" max="1" chance="8.955" /> <!-- Boots -->
+				<item id="625" min="1" max="1" chance="8.945" /> <!-- Bone Shield -->
+				<item id="26" min="1" max="1" chance="8.933" /> <!-- Bronze Breastplate -->
+				<item id="100" min="1" max="1" chance="4.6075" /> <!-- Voodoo Doll -->
+				<item id="219" min="1" max="1" chance="4.601" /> <!-- Sword Breaker -->
+				<item id="257" min="1" max="1" chance="4.595" /> <!-- Viper Fang -->
+				<item id="273" min="1" max="1" chance="4.577" /> <!-- Compound Bow -->
+				<item id="311" min="1" max="1" chance="4.572" /> <!-- Crucifix of Blessing -->
+				<item id="16" min="1" max="1" chance="4.5655" /> <!-- Great Spear -->
+				<item id="177" min="1" max="1" chance="4.563" /> <!-- Mage Staff -->
+				<item id="155" min="1" max="1" chance="4.556" /> <!-- Flanged Mace -->
+				<item id="5284" min="1" max="1" chance="4.555" /> <!-- Zweihander -->
+				<item id="68" min="1" max="1" chance="4.514" /> <!-- Falchion -->
+				<item id="87" min="1" max="1" chance="4.504" /> <!-- Iron Hammer -->
 				<item id="956" min="2" max="6" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="91526" min="1" max="1" chance="5.049" /> <!-- Weapon Varnish (D-grade) -->
+				<item id="91540" min="1" max="1" chance="4.99" /> <!-- Accessory Varnish (D-grade) -->
+				<item id="91533" min="1" max="1" chance="4.94" /> <!-- Armor Varnish (D-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2912,19 +2920,22 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="626" min="2" max="8" chance="8.068" /> <!-- Bronze Shield -->
-				<item id="347" min="2" max="4" chance="8.066" /> <!-- Ring Breastplate -->
-				<item id="45" min="2" max="8" chance="8.05" /> <!-- Bone Helmet -->
-				<item id="376" min="2" max="4" chance="8.041" /> <!-- Iron Plate Gaiters -->
-				<item id="432" min="2" max="4" chance="8.026" /> <!-- Cursed Tunic -->
-				<item id="40" min="2" max="8" chance="7.982" /> <!-- Leather Boots -->
-				<item id="604" min="2" max="8" chance="7.97" /> <!-- Quality Leather Gloves -->
-				<item id="465" min="2" max="4" chance="7.95" /> <!-- Cursed Stockings -->
-				<item id="413" min="2" max="4" chance="7.948" /> <!-- Puma Skin Gaiters -->
-				<item id="391" min="2" max="4" chance="7.943" /> <!-- Puma Skin Shirt -->
+				<item id="413" min="2" max="4" chance="8.064" /> <!-- Puma Skin Gaiters -->
+				<item id="465" min="2" max="4" chance="8.061" /> <!-- Cursed Stockings -->
+				<item id="432" min="2" max="4" chance="8.047" /> <!-- Cursed Tunic -->
+				<item id="391" min="2" max="4" chance="8.043" /> <!-- Puma Skin Shirt -->
+				<item id="45" min="2" max="8" chance="8.041" /> <!-- Bone Helmet -->
+				<item id="626" min="2" max="8" chance="7.999" /> <!-- Bronze Shield -->
+				<item id="376" min="2" max="4" chance="7.982" /> <!-- Iron Plate Gaiters -->
+				<item id="604" min="2" max="8" chance="7.953" /> <!-- Quality Leather Gloves -->
+				<item id="347" min="2" max="4" chance="7.95" /> <!-- Ring Breastplate -->
+				<item id="40" min="2" max="8" chance="7.942" /> <!-- Leather Boots -->
 				<item id="955" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="2" max="6" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="91526" min="1" max="1" chance="5.0315" /> <!-- Weapon Varnish (D-grade) -->
+				<item id="91533" min="1" max="1" chance="5.024" /> <!-- Armor Varnish (D-grade) -->
+				<item id="91540" min="1" max="1" chance="4.989" /> <!-- Accessory Varnish (D-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2976,11 +2987,14 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="910" min="2" max="4" chance="18.02" /> <!-- Necklace of Devotion -->
-				<item id="847" min="4" max="8" chance="17.43" /> <!-- Red Crescent -->
-				<item id="890" min="4" max="8" chance="17.21" /> <!-- Ring of Devotion -->
+				<item id="847" min="4" max="8" chance="32.99" /> <!-- Red Crescent -->
+				<item id="910" min="2" max="4" chance="32.77" /> <!-- Necklace of Devotion -->
+				<item id="890" min="4" max="8" chance="31.61" /> <!-- Ring of Devotion -->
 				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="2" max="6" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="91540" min="1" max="1" chance="5.046" /> <!-- Accessory Varnish (D-grade) -->
+				<item id="91526" min="1" max="1" chance="5.033" /> <!-- Weapon Varnish (D-grade) -->
+				<item id="91533" min="1" max="1" chance="4.95" /> <!-- Armor Varnish (D-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3119,19 +3133,22 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="45" min="2" max="6" chance="4.428" /> <!-- Bone Helmet -->
-				<item id="604" min="2" max="6" chance="4.4135" /> <!-- Quality Leather Gloves -->
-				<item id="432" min="1" max="3" chance="4.4125" /> <!-- Cursed Tunic -->
-				<item id="40" min="2" max="6" chance="4.392" /> <!-- Leather Boots -->
-				<item id="465" min="1" max="3" chance="4.388" /> <!-- Cursed Stockings -->
-				<item id="626" min="2" max="6" chance="4.386" /> <!-- Bronze Shield -->
-				<item id="347" min="1" max="3" chance="4.3845" /> <!-- Ring Breastplate -->
-				<item id="413" min="1" max="3" chance="4.3815" /> <!-- Puma Skin Gaiters -->
-				<item id="391" min="1" max="3" chance="4.3735" /> <!-- Puma Skin Shirt -->
-				<item id="376" min="1" max="3" chance="4.367" /> <!-- Iron Plate Gaiters -->
+				<item id="604" min="2" max="6" chance="8.045" /> <!-- Quality Leather Gloves -->
+				<item id="45" min="2" max="6" chance="8.014" /> <!-- Bone Helmet -->
+				<item id="40" min="2" max="6" chance="8.004" /> <!-- Leather Boots -->
+				<item id="347" min="1" max="3" chance="8.002" /> <!-- Ring Breastplate -->
+				<item id="465" min="1" max="3" chance="7.979" /> <!-- Cursed Stockings -->
+				<item id="432" min="1" max="3" chance="7.946" /> <!-- Cursed Tunic -->
+				<item id="413" min="1" max="3" chance="7.943" /> <!-- Puma Skin Gaiters -->
+				<item id="391" min="1" max="3" chance="7.941" /> <!-- Puma Skin Shirt -->
+				<item id="376" min="1" max="3" chance="7.941" /> <!-- Iron Plate Gaiters -->
+				<item id="626" min="2" max="6" chance="7.939" /> <!-- Bronze Shield -->
 				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="91526" min="1" max="1" chance="5.033" /> <!-- Weapon Varnish (D-grade) -->
+				<item id="91533" min="1" max="1" chance="5.016" /> <!-- Armor Varnish (D-grade) -->
+				<item id="91540" min="1" max="1" chance="4.931" /> <!-- Accessory Varnish (D-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4300,9 +4317,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="15746400" sp="472392" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="533467" hpRegen="108.35639820142" mp="266734" mpRegen="2.1" />
+		<acquire exp="7873200" sp="236196" raidPoints="5" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="295646.13931" hpRegen="108.3563982" mp="452998.755" mpRegen="2.1" />
 			<attack physical="667.348949019213" magical="142.928040387499" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="533.36238" magical="260.2" evasion="-18" />
 			<speed>
@@ -4336,16 +4353,19 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="190" min="1" max="1" chance="2.775" /> <!-- Atuba Mace -->
-				<item id="225" min="1" max="1" chance="2.7735" /> <!-- Mithril Dagger -->
-				<item id="189" min="1" max="1" chance="2.773" /> <!-- Staff of Life -->
-				<item id="322" min="1" max="1" chance="2.7735" /> <!-- Vajra Wand -->
-				<item id="188" min="1" max="1" chance="2.765" /> <!-- Ghost Staff -->
-				<item id="321" min="1" max="1" chance="2.7555" /> <!-- Demon's Fangs -->
-				<item id="320" min="1" max="1" chance="2.738" /> <!-- Blue Crystal Skull -->
+				<item id="321" min="1" max="1" chance="5.049" /> <!-- Demon's Fangs -->
+				<item id="320" min="1" max="1" chance="5.038" /> <!-- Blue Crystal Skull -->
+				<item id="322" min="1" max="1" chance="5.033" /> <!-- Vajra Wand -->
+				<item id="190" min="1" max="1" chance="5.011" /> <!-- Atuba Mace -->
+				<item id="188" min="1" max="1" chance="5.005" /> <!-- Ghost Staff -->
+				<item id="225" min="1" max="1" chance="4.994" /> <!-- Mithril Dagger -->
+				<item id="189" min="1" max="1" chance="4.985" /> <!-- Staff of Life -->
 				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="6" max="18" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="91526" min="1" max="1" chance="10.024" /> <!-- Weapon Varnish (D-grade) -->
+				<item id="91540" min="1" max="1" chance="9.941" /> <!-- Accessory Varnish (D-grade) -->
+				<item id="91533" min="1" max="1" chance="9.938" /> <!-- Armor Varnish (D-grade) -->
 			</drop>
 		</dropLists>
 	</npc>

@@ -8,6 +8,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.model.zone.ZoneId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * A Peace Zone
  *
@@ -24,7 +26,7 @@ public class PeaceZone extends Zone {
             return;
         }
 
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             final Player player = character.getActingPlayer();
             // PVP possible during siege, now for siege participants only
             // Could also check if this town is in siege, or if any siege is going on

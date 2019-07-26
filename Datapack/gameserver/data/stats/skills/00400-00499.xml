@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="400" toLevel="20" name="Tribunal">
-		<!-- Inflicts physical damage on the enemy with $s1 Power added to P. Atk. and enemy's Critical Rate -$s3 for $s2. Requires a sword or blunt weapon to be equipped. Over-hit. -->
+		<!-- Inflicts physical damage on the enemy with $s1 Power added to P. Atk. and enemy's P. Critical Rate -$s3 for $s2. Requires a sword, blunt weapon or dual sword. Over-hit. -->
 		<icon>icon.skill0400</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -169,7 +169,7 @@
 		</effects>
 	</skill>
 	<skill id="401" toLevel="20" name="Judgment">
-		<!-- Inflicts physical damage on the enemy with $s1 Power added to P. Atk. and enemy's Critical Damage -$s3 for $s2 sec. when a sword, blunt weapon or dual sword is used. Over-hit. -->
+		<!-- Inflicts physical damage on the enemy with $s1 Power added to P. Atk. and enemy's P. Critical Damage -$s3 for $s2 Requires a sword, blunt weapon or dual sword. Over-hit. -->
 		<icon>icon.skill0401</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -339,7 +339,7 @@
 		</effects>
 	</skill>
 	<skill id="402" toLevel="12" name="Arrest">
-		<!-- Provokes the enemy to attack, then immobilizes them for $s1. -->
+		<!-- For $s1, immobilizes the enemy. -->
 		<icon>icon.skill0402</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -408,7 +408,7 @@
 		</effects>
 	</skill>
 	<skill id="403" toLevel="10" name="Shackle">
-		<!-- Provokes the enemy to attack, then immobilizes them for $s1. -->
+		<!-- For $s1, immobilizes the enemy. -->
 		<icon>icon.skill0403</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -471,7 +471,7 @@
 		</effects>
 	</skill>
 	<skill id="404" toLevel="17" name="Mass Shackling">
-		<!-- Provokes nearby enemies and inflicts Hold for $s1. -->
+		<!-- Holds nearby enemies for $s1. -->
 		<icon>icon.skill0404</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -924,7 +924,7 @@
 		</effects>
 	</skill>
 	<skill id="408" toLevel="10" name="Demonic Blade Dance">
-		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. and P. Atk./ M. Atk. -$s3 for $s2. Over-hit. Critical. -->
+		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. and P. Atk./ M. Atk. -$s3 for $s2. Critical. Over-hit. -->
 		<icon>icon.skill0408</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1272,7 +1272,7 @@
 		</effects>
 	</skill>
 	<skill id="411" toLevel="3" name="Stealth">
-		<!-- Prevents being pre-emptively attacked by monsters for $s1, and Evasion -$s2, P. Def. -$s3, M. Def. -$s4, Accuracy -$s5 and P. Atk. -$s6. -->
+		<!-- Prevents being pre-emptively attacked by monsters for $s1, and P. Evasion -$s2, P. Def. -$s3, M. Def. -$s4, P. Accuracy -$s5 and P. Atk. -$s6. -->
 		<icon>icon.skill0411</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1431,7 +1431,7 @@
 		</effects>
 	</skill>
 	<skill id="413" toLevel="9" name="Rapid Fire">
-		<!-- For $s1, P. Atk. +$s2, Atk. Spd. +$s3, Range -$s4. Requires a bow. -->
+		<!-- For $s1, when using a bow, P. Atk. +$s2, Atk. Spd. +$s3, Range -$s4. Requires a bow. -->
 		<icon>icon.skill0413</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1537,7 +1537,7 @@
 		</effects>
 	</skill>
 	<skill id="414" toLevel="9" name="Dead Eye">
-		<!-- For $s1, when using a bow, one's own P. Accuracy +$s2, P. Atk. +$s3, and P. Critical Damage +$s4. Atk. Spd. -$s5. Requires a bow. -->
+		<!-- For $s1, when using a bow, P. Accuracy +$s2, P. Atk. +$s3, and P. Critical Damage +$s4. Atk. Spd. -$s5. Requires a bow. -->
 		<icon>icon.skill0414</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1790,7 +1790,7 @@
 		</effects>
 	</skill>
 	<skill id="420" toLevel="3" name="Zealot">
-		<!-- Channels the power of your guardian deity for $s1, Debuff Resistance +$s2, Buff-canceling Attack Resistance +$s3, Speed +$s4, P. Accuracy +$s5 when using a sword, blunt weapon or spear/ fist weapon, Atk. Spd. +$s6, P. Critical Rate +$s7 when using a sword/ spear, and P. Critical Damage +$s8 when using a sword/ blunt/ fist weapon. Physical skill MP Consumption -$s9 and the Healing power received -$s10. Available when HP is $s11 or lower. -->
+		<!-- Channels the power of your guardian deity for $s1, Debuff Resistance +$s2, Buff-canceling Attack Resistance +$s3, Speed +$s4, P. Accuracy +$s5 when using a sword, blunt weapon or spear/ fist weapon, Atk. Spd. +$s6, P. Critical Rate +$s7 when using a sword/ spear, and P. Critical Damage +$s8 when using a sword/ blunt/ fist weapon. Physical skill MP Consumption -$s9 and Received Healing -$s10. Available when HP is $s11 or lower. -->
 		<icon>icon.skill0420</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1970,7 +1970,7 @@
 		</effects>
 	</skill>
 	<skill id="422" toLevel="3" name="Polearm Accuracy">
-		<!-- Accuracy +$s1 when using a spear. Continuously consumes MP proportionately to your level. -->
+		<!-- P. Accuracy +$s1 when using a spear. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0422</icon>
 		<magicLvl>
 			<value level="1">58</value>
@@ -2087,7 +2087,7 @@
 		</effects>
 	</skill>
 	<skill id="425" toLevel="1" name="Hawk Spirit Totem">
-		<!-- Possessed by a Hawk's Spirit. For 5 min., when using a fist weapon, Accuracy +6, Critical Rate +100, and Critical Damage +30%. Requires a fist weapon. -->
+		<!-- Possessed by a Hawk's Spirit. For 5 min., when using a fist weapon, P. Accuracy +6, P. Critical Rate +50, and P. Critical Damage +30%. Requires a fist weapon. -->
 		<icon>icon.skill0425</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2159,7 +2159,7 @@
 		</conditions>
 	</skill>
 	<skill id="427" toLevel="1" name="Spell Stance">
-		<!-- Transfers your magical strength to a party member. The effect can be canceled if you incur damage. -->
+		<!-- Transfers your strength to a party member. The effect can be canceled if you incur damage. -->
 		<icon>icon.skill0427</icon>
 		<castRange>400</castRange>
 		<channelingSkillId>5105</channelingSkillId> <!-- Spell Force -->
@@ -2578,7 +2578,7 @@
 		</effects>
 	</skill>
 	<skill id="443" toLevel="1" name="Force Barrier">
-		<!-- Uses spirit to make user invincible against standard attacks, skills and debuffs for 10 sec. Requires a fist weapon. Momentum level 4. -->
+		<!-- Uses Momentum make user invincible against standard attacks, skills and debuffs for 10 sec. Requires a fist weapon. Requires Momentum level 4. -->
 		<icon>icon.skill0443</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2658,7 +2658,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Mirage -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<chance>80</chance>
@@ -2670,7 +2670,7 @@
 		</effects>
 	</skill>
 	<skill id="446" toLevel="1" name="Evasion">
-		<!-- Allows user to evade short-range and long-range physical attack skills for 15 sec. -->
+		<!-- Allows to evade P./ M. Skill for 1 min. -->
 		<icon>icon.skill0446</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2693,7 +2693,7 @@
 		</effects>
 	</skill>
 	<skill id="447" toLevel="1" name="Counterattack">
-		<!-- For 15 sec., transfers damage from melee attacks and skills back to the enemy. -->
+		<!-- For 40 sec., returns received 20% damage back to the enemy. -->
 		<icon>icon.skill0447</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3149,7 +3149,7 @@
 		</effects>
 	</skill>
 	<skill id="465" toLevel="50" name="Light Armor Mastery">
-		<!-- When equipped with light armor, P. Def. +$s1 and Evasion +$s2, and the enemy's Critical Rate/ Damage -$s3. -->
+		<!-- P. Def. +$s1, P. Evasion +$s2 and Chance of receiving P. Critical Attack and received P. Critical Damage -$s3 when equipped with light armor. -->
 		<icon>icon.skill0465</icon>
 		<magicLvl>
 			<value level="1">18</value>
@@ -3613,7 +3613,7 @@
 				<skillId>5548</skillId> <!-- Critical Momentum Attack -->
 				<skillLevel>1</skillLevel>
 				<allowWeapons>ALL</allowWeapons>
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<targetType>SELF</targetType>
@@ -4551,7 +4551,7 @@
 		</effects>
 	</skill>
 	<skill id="481" toLevel="2" name="Dark Armor">
-		<!-- Dark Attack Resistance -$s1. -->
+		<!-- Dark Attack Resistance +$s1. -->
 		<icon>icon.skill0481</icon>
 		<magicLvl>
 			<value level="1">32</value>
@@ -4571,7 +4571,7 @@
 		</effects>
 	</skill>
 	<skill id="482" toLevel="2" name="Furious Soul">
-		<!-- For $s1, Critical Rate +$s2 and Critical Damage +$s3. P. Def. -$s4. -->
+		<!-- For $s1, P. Critical Rate +$s2 and P. Critical Damage +$s3, P. Def. -$s4. -->
 		<icon>icon.skill0482</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4711,7 +4711,7 @@
 		</effects>
 	</skill>
 	<skill id="484" toLevel="1" name="Elementary Rush">
-		<!-- Charges into the enemy. Can be used while dagger, ancient sword, short sword is equipped. -->
+		<!-- Charges into the enemy. Can be used while sword, ancient sword or short sword is equipped. -->
 		<icon>icon.skill0484</icon>
 		<castRange>400</castRange>
 		<coolTime>200</coolTime>
@@ -5941,7 +5941,7 @@
 		</effects>
 	</skill>
 	<skill id="497" toLevel="16" name="Crushing Pain">
-		<!-- Attack targets with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon,spear, fist weapon, dual blunt weapon, or dual sword to be equipped. Over-hit. Ignores shield defense. -->
+		<!-- Attack targets with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword to be equipped. Ignores shield defense. Over-hit. -->
 		<icon>icon.skill0497</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
@@ -6047,7 +6047,7 @@
 		</effects>
 	</skill>
 	<skill id="498" toLevel="12" name="Contagion">
-		<!-- Attacks the enemy's wound with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s1 souls. Requires an ancient sword or a sword. Over-hit. Ignores Shield Defense. -->
+		<!-- Attacks the enemy's wound with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s1 souls. Requires an ancient sword or a sword. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill0498</icon>
 		<castRange>40</castRange>
 		<coolTime>700</coolTime>

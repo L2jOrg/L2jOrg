@@ -10,6 +10,8 @@ import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * A jail zone
  *
@@ -33,7 +35,7 @@ public class JailZone extends Zone {
 
     @Override
     protected void onEnter(Creature character) {
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             character.setInsideZone(ZoneId.JAIL, true);
             character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, true);
             if (Config.JAIL_IS_PVP) {
@@ -48,7 +50,7 @@ public class JailZone extends Zone {
 
     @Override
     protected void onExit(Creature character) {
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             final Player player = character.getActingPlayer();
             player.setInsideZone(ZoneId.JAIL, false);
             player.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false);
@@ -60,7 +62,7 @@ public class JailZone extends Zone {
 
             if (player.isJailed()) {
                 // when a player wants to exit jail even if he is still jailed, teleport him back to jail
-                ThreadPoolManager.getInstance().schedule(new TeleportTask(player, JAIL_IN_LOC), 2000);
+                ThreadPoolManager.schedule(new TeleportTask(player, JAIL_IN_LOC), 2000);
                 character.sendMessage("You cannot cheat your way out of here. You must wait until your jail time is over.");
             }
             if (Config.JAIL_DISABLE_TRANSACTION) {

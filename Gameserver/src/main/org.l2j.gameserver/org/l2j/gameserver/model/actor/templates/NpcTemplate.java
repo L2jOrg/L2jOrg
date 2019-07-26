@@ -686,6 +686,26 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
             calculatedDrops.add(drop);
         }
 
+        if (victim.isChampion())
+        {
+            if ((victim.getLevel() < killer.getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE))
+            {
+                return calculatedDrops;
+            }
+            if ((victim.getLevel() > killer.getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE))
+            {
+                return calculatedDrops;
+            }
+
+            // create list
+            if (calculatedDrops == null)
+            {
+                calculatedDrops = new ArrayList<>();
+            }
+
+            calculatedDrops.add(new ItemHolder(Config.CHAMPION_REWARD_ID, Config.CHAMPION_REWARD_QTY));
+        }
+
         return calculatedDrops;
     }
 
@@ -701,18 +721,24 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         switch (dropItem.getDropType()) {
             case DROP:
             case LUCKY: {
-                final ItemTemplate item = ItemTable.getInstance().getTemplate(dropItem.getItemId());
+                final int itemId = dropItem.getItemId();
+                final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
+                final boolean champion = victim.isChampion();
 
                 // chance
                 double rateChance = 1;
-                if (Config.RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId()) != null) {
+                if (Config.RATE_DROP_CHANCE_BY_ID.get(itemId) != null) {
                     rateChance *= Config.RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId());
+                    if (champion && (itemId == CommonItem.ADENA))
+                    {
+                        rateChance *= Config.CHAMPION_ADENAS_REWARDS_CHANCE;
+                    }
                 } else if (item.hasExImmediateEffect()) {
                     rateChance *= Config.RATE_HERB_DROP_CHANCE_MULTIPLIER;
                 } else if (victim.isRaid()) {
                     rateChance *= Config.RATE_RAID_DROP_CHANCE_MULTIPLIER;
                 } else {
-                    rateChance *= Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER;
+                    rateChance *= Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER * (champion ? Config.CHAMPION_REWARDS_CHANCE : 1);
                 }
 
                 // bonus drop rate effect
@@ -722,21 +748,26 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                 if ((Rnd.nextDouble() * 100) < (dropItem.getChance() * rateChance)) {
                     // amount is calculated after chance returned success
                     double rateAmount = 1;
-                    if (Config.RATE_DROP_AMOUNT_BY_ID.get(dropItem.getItemId()) != null) {
-                        rateAmount *= Config.RATE_DROP_AMOUNT_BY_ID.get(dropItem.getItemId());
+                    if (Config.RATE_DROP_AMOUNT_BY_ID.get(itemId) != null)
+                    {
+                        rateAmount *= Config.RATE_DROP_AMOUNT_BY_ID.get(itemId);
+                        if (champion && (itemId == CommonItem.ADENA))
+                        {
+                            rateAmount *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
+                        }
                     } else if (item.hasExImmediateEffect()) {
                         rateAmount *= Config.RATE_HERB_DROP_AMOUNT_MULTIPLIER;
                     } else if (victim.isRaid()) {
                         rateAmount *= Config.RATE_RAID_DROP_AMOUNT_MULTIPLIER;
                     } else {
-                        rateAmount *= Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER;
+                        rateAmount *= Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER * (champion ? Config.CHAMPION_REWARDS_AMOUNT : 1);
                     }
 
                     // bonus drop amount effect
                     rateAmount *= killer.getStat().getValue(Stats.BONUS_DROP_AMOUNT, 1);
 
                     // finally
-                    return new ItemHolder(dropItem.getItemId(), (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
+                    return new ItemHolder(itemId, (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
                 }
                 break;
             }

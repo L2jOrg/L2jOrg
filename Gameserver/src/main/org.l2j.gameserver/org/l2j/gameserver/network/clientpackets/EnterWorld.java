@@ -454,6 +454,12 @@ public class EnterWorld extends ClientPacket {
             SkillTreesData.getInstance().addSkills(activeChar, true);
         }
 
+        if (Config.GM_STARTUP_AUTO_LIST && AdminData.getInstance().hasAccess("admin_gmliston", activeChar.getAccessLevel())) {
+            AdminData.getInstance().addGm(activeChar, false);
+        } else {
+            AdminData.getInstance().addGm(activeChar, true);
+        }
+
         if (Config.GM_STARTUP_BUILDER_HIDE && AdminData.getInstance().hasAccess("admin_hide", activeChar.getAccessLevel())) {
             BuilderUtil.setHiding(activeChar, true);
 
@@ -482,13 +488,6 @@ public class EnterWorld extends ClientPacket {
             activeChar.setDietMode(true);
             activeChar.refreshOverloaded(true);
         }
-
-        if (Config.GM_STARTUP_AUTO_LIST && AdminData.getInstance().hasAccess("admin_gmliston", activeChar.getAccessLevel())) {
-            AdminData.getInstance().addGm(activeChar, false);
-        } else {
-            AdminData.getInstance().addGm(activeChar, true);
-        }
-
     }
 
     private void notifyClanMembers(Player activeChar) {

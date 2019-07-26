@@ -1498,7 +1498,7 @@
 		</effects>
 	</skill>
 	<skill id="1028" toLevel="26" name="Might of Heaven">
-		<!-- Inflicts holy damage with $s1 Power. -->
+		<!-- Inflicts holy damage with $s1 Power added to M. Atk. -->
 		<icon>icon.skill1028</icon>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -1726,7 +1726,7 @@
 		</effects>
 	</skill>
 	<skill id="1032" toLevel="3" name="Invigor">
-		<!-- Bleed Resistance +$s2 for $s1. -->
+		<!-- For $s1, Bleed Resistance +$s2. -->
 		<icon>icon.skill1032</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1771,7 +1771,7 @@
 		</effects>
 	</skill>
 	<skill id="1033" toLevel="3" name="Poison Resistance">
-		<!-- Poison Resistance +$s2 for $s1. -->
+		<!-- For $s1, Poison Resistance +$s2. -->
 		<icon>icon.skill1033</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1886,7 +1886,7 @@
 		</effects>
 	</skill>
 	<skill id="1035" toLevel="4" name="Mental Shield">
-		<!-- Hold/ Sleep/ Mental Attack Resistance +$s2 for $s1. -->
+		<!-- For $s1, Hold/ Sleep/ Mental Attack Resistance +$s2. -->
 		<icon>icon.skill1035</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1954,7 +1954,7 @@
 		</effects>
 	</skill>
 	<skill id="1036" toLevel="4" name="Magic Barrier">
-		<!-- M. Def. +$s2 for $s1. -->
+		<!-- For $s1, M. Def. +$s2. -->
 		<icon>icon.skill1036</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2011,7 +2011,7 @@
 		</effects>
 	</skill>
 	<skill id="1040" toLevel="9" name="Shield">
-		<!-- P. Def. +$s2 for $s1. -->
+		<!-- For $s1, P. Def. +$s2. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2098,7 +2098,7 @@
 		</effects>
 	</skill>
 	<skill id="1042" toLevel="14" name="Hold Undead">
-		<!-- Paralyzes an undead monster for $s1. -->
+		<!-- For $s1, paralyzes an undead monster. -->
 		<icon>icon.skill1042</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2225,7 +2225,7 @@
 		</effects>
 	</skill>
 	<skill id="1044" toLevel="6" name="Regeneration">
-		<!-- HP Regeneration +$s2 for $s1. -->
+		<!-- For $s1, HP Recovery Bonus +$s2. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2294,7 +2294,7 @@
 		</effects>
 	</skill>
 	<skill id="1045" toLevel="12" name="Blessed Body">
-		<!-- Max HP +$s2 for $s1. -->
+		<!-- For $s1, Max HP +$s2. -->
 		<icon>icon.skill1045</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2468,7 +2468,7 @@
 		</effects>
 	</skill>
 	<skill id="1048" toLevel="12" name="Blessed Soul">
-		<!-- Max MP +$s2 for $s1. -->
+		<!-- For $s1, Max MP +$s2. -->
 		<icon>icon.skill1048</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2943,7 +2943,7 @@
 		</effects>
 	</skill>
 	<skill id="1064" toLevel="16" name="Silence">
-		<!-- Blocks the enemy's use of magic for $s1. -->
+		<!-- For $s1, blocks the enemy's use of magic. -->
 		<icon>icon.skill1064</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>24</abnormalTime>
@@ -3040,7 +3040,7 @@
 		</effects>
 	</skill>
 	<skill id="1068" toLevel="9" name="Might">
-		<!-- P. Atk. +$s2 for $s1. -->
+		<!-- For $s1, P. Atk. +$s2. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3464,7 +3464,7 @@
 		</effects>
 	</skill>
 	<skill id="1072" toLevel="6" name="Sleeping Cloud">
-		<!-- Casts Sleep on target and nearby enemies for $s1. -->
+		<!-- For $s1, casts Sleep on target and nearby enemies. -->
 		<icon>icon.skill1072</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3528,7 +3528,7 @@
 		</effects>
 	</skill>
 	<skill id="1073" toLevel="2" name="Eva's Kiss">
-		<!-- For 10 min., M. Skill Power +5%. -->
+		<!-- For $s1 min., M. Skill Power +$s1. -->
 		<icon>icon.skill1073</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -3715,7 +3715,7 @@
 		</effects>
 	</skill>
 	<skill id="1077" toLevel="9" name="Focus">
-		<!-- Critical Rate +$s2 for $s1. -->
+		<!-- For $s1, P. Critical Rate +$s2. -->
 		<icon>icon.skill1077</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3802,7 +3802,7 @@
 		</effects>
 	</skill>
 	<skill id="1078" toLevel="18" name="Concentration">
-		<!-- Magic cancel damage -$s2 for $s1. -->
+		<!-- For $s1, magic cancel damage -$s2. -->
 		<icon>icon.skill1078</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4192,7 +4192,7 @@
 		</effects>
 	</skill>
 	<skill id="1086" toLevel="4" name="Haste">
-		<!-- Atk. Spd. +$s2 for $s1. -->
+		<!-- For $s1, Atk. Spd. +$s2. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4249,7 +4249,7 @@
 		</effects>
 	</skill>
 	<skill id="1087" toLevel="9" name="Agility">
-		<!-- Evasion +$s2 for $s1. -->
+		<!-- P. Evasion +$s2 for $s1. -->
 		<icon>icon.skill1087</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4512,7 +4512,7 @@
 		</effects>
 	</skill>
 	<skill id="1095" toLevel="5" name="Venom">
-		<!-- Poisons the target, causing loss of $s2 HP per sec. for $s1. -->
+		<!-- For $s1, poisons the target, causing loss of $s2 HP per sec. -->
 		<icon>icon.skill1095</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

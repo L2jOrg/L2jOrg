@@ -27,6 +27,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stats;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Physical Attack effect implementation. <br>
  * <b>Note</b>: Initial formula taken from PhysicalAttack.
@@ -75,7 +77,7 @@ public final class PhysicalAttackSaveHp extends AbstractEffect
 			return;
 		}
 		
-		if (effected.isPlayer() && effected.getActingPlayer().isFakeDeath())
+		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath())
 		{
 			effected.stopFakeDeath(true);
 		}
@@ -113,13 +115,15 @@ public final class PhysicalAttackSaveHp extends AbstractEffect
 			// Trait, elements
 			final double weaponTraitMod = Formulas.calcWeaponTraitBonus(effector, effected);
 			final double generalTraitMod = Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), true);
+			final double weaknessMod = Formulas.calcWeaknessBonus(effector, effected, skill.getTraitType());
 			final double attributeMod = Formulas.calcAttributeBonus(effector, effected, skill);
 			final double pvpPveMod = Formulas.calculatePvpPveBonus(effector, effected, skill, true);
 			final double randomMod = effector.getRandomDamageMultiplier();
 			
 			// Skill specific mods.
-			final double wpnMod = effector.getAttackType().isRanged() ? 70 : 77;
-			final double rangedBonus = effector.getAttackType().isRanged() ? (attack + _power) : 0;
+			final double weaponMod = effector.getAttackType().isRanged() ? 70 : 77;
+			final double power = _power + effector.getStat().getValue(Stats.SKILL_POWER_ADD, 0);
+			final double rangedBonus = effector.getAttackType().isRanged() ? attack + power : 0;
 			final double critMod = critical ? Formulas.calcCritDamage(effector, effected, skill) : 1;
 			double ssmod = 1;
 			if (skill.useSoulShot())
@@ -137,9 +141,9 @@ public final class PhysicalAttackSaveHp extends AbstractEffect
 			// ...................____________Melee Damage_____________......................................___________________Ranged Damage____________________
 			// ATTACK CALCULATION 77 * ((pAtk * lvlMod) + power) / pdef            RANGED ATTACK CALCULATION 70 * ((pAtk * lvlMod) + power + patk + power) / pdef
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^``````````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-			final double baseMod = (wpnMod * ((attack * effector.getLevelMod()) + _power + rangedBonus)) / defence;
-			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * attributeMod * pvpPveMod * randomMod;
-			damage = effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, damage);
+			final double baseMod = (weaponMod * ((attack * effector.getLevelMod()) + power + rangedBonus)) / defence;
+			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * pvpPveMod * randomMod;
+			damage *= effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 1);
 		}
 		
 		final double minHp = (effected.getMaxHp() * _saveHp) / 100;

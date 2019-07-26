@@ -69,6 +69,9 @@ abstract class AbstractConditionalHpEffect extends AbstractStatEffect
 	{
 		final Creature activeChar = event.getCreature();
 		final AtomicBoolean update = _updates.get(activeChar);
+		if (update == null) {
+			return;
+		}
 		if (canPump(null, activeChar, null))
 		{
 			if (update.get())

@@ -1,5 +1,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
@@ -7,8 +9,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.gameserver.RecipeController;
-import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.CreatureAI;
+import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.PlayerAI;
 import org.l2j.gameserver.ai.SummonAI;
 import org.l2j.gameserver.cache.WarehouseCacheManager;
@@ -20,9 +22,9 @@ import org.l2j.gameserver.data.database.data.CharacterData;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
 import org.l2j.gameserver.data.elemental.ElementalSpirit;
 import org.l2j.gameserver.data.elemental.ElementalType;
-import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.*;
@@ -33,7 +35,7 @@ import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.*;
-import org.l2j.gameserver.model.actor.appearance.PcAppearance;
+import org.l2j.gameserver.model.actor.appearance.PlayerAppearance;
 import org.l2j.gameserver.model.actor.request.AbstractRequest;
 import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
 import org.l2j.gameserver.model.actor.stat.PcStat;
@@ -117,7 +119,7 @@ import static org.l2j.gameserver.network.SystemMessageId.S1_HAS_INFLICTED_S3_DAM
 public final class Player extends Playable {
 
     private final CharacterData model;
-    private final PcAppearance appearance;
+    private final PlayerAppearance appearance;
 
     private byte vipTier;
     private ElementalSpirit[] spirits;
@@ -130,7 +132,7 @@ public final class Player extends Playable {
         setInstanceType(InstanceType.L2PcInstance);
         initCharStatusUpdateValues();
 
-        appearance = new PcAppearance(this, characterData.getFace(), characterData.getHairColor(), characterData.getHairStyle(), characterData.isFemale());
+        appearance = new PlayerAppearance(this, characterData.getFace(), characterData.getHairColor(), characterData.getHairStyle(), characterData.isFemale());
 
         getAI();
 
@@ -469,7 +471,7 @@ public final class Player extends Playable {
     /**
      * The list of sub-classes this character has.
      */
-    private volatile Map<Integer, SubClass> _subClasses;
+    private final IntMap<SubClass> _subClasses = new CHashIntMap<>();
 
     /**
      * The number of player killed during a PvP (the player killed was PvP Flagged)
@@ -831,7 +833,7 @@ public final class Player extends Playable {
         player.setAccessLevel(character.getAccessLevel(), false, false);
 
 
-        if (character.getTitleColr() != PcAppearance.DEFAULT_TITLE_COLOR) {
+        if (character.getTitleColr() != PlayerAppearance.DEFAULT_TITLE_COLOR) {
             player.getAppearance().setTitleColor(character.getTitleColr());
         }
 
@@ -1190,7 +1192,7 @@ public final class Player extends Playable {
         setStatus(new PcStatus(this));
     }
 
-    public final PcAppearance getAppearance() {
+    public final PlayerAppearance getAppearance() {
         return appearance;
     }
 
@@ -1989,7 +1991,7 @@ public final class Player extends Playable {
 
         if (isEquiped) {
             if (item.getEnchantLevel() > 0) {
-                sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+                sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
                 sm.addInt(item.getEnchantLevel());
                 sm.addItemName(item);
             } else {
@@ -3698,10 +3700,7 @@ public final class Player extends Playable {
     }
 
     public int getAllyCrestId() {
-        if (_clanId == 0) {
-            return 0;
-        }
-        if (_clan.getAllyId() == 0) {
+        if ((_clanId == 0) || (_clan == null) || (_clan.getAllyId() == 0)) {
             return 0;
         }
         return _clan.getAllyCrestId();
@@ -5090,7 +5089,7 @@ public final class Player extends Playable {
         if (unequiped.length > 0) {
             final SystemMessage sm;
             if (unequiped[0].getEnchantLevel() > 0) {
-                sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+                sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
                 sm.addInt(unequiped[0].getEnchantLevel());
                 sm.addItemName(unequiped[0]);
             } else {
@@ -5124,7 +5123,7 @@ public final class Player extends Playable {
             if (unequiped.length > 0) {
                 SystemMessage sm = null;
                 if (unequiped[0].getEnchantLevel() > 0) {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+                    sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
                     sm.addInt(unequiped[0].getEnchantLevel());
                     sm.addItemName(unequiped[0]);
                 } else {
@@ -6340,6 +6339,16 @@ public final class Player extends Playable {
     private void restoreHenna() {
         for (int i = 1; i < 4; i++) {
             _henna[i - 1] = null;
+        }
+
+        for (Entry<Integer, ScheduledFuture<?>> entry : _hennaRemoveSchedules.entrySet())
+        {
+            final ScheduledFuture<?> task = entry.getValue();
+            if ((task != null) && !task.isCancelled() && !task.isDone())
+            {
+                task.cancel(true);
+            }
+            _hennaRemoveSchedules.remove(entry.getKey());
         }
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -7970,7 +7979,14 @@ public final class Player extends Playable {
     }
 
     public boolean isDualClassActive() {
-        return isSubClassActive() && getSubClasses().get(_classIndex).isDualClass();
+
+        if (!isSubClassActive() || _subClasses.isEmpty()) {
+            return false;
+        }
+
+        final SubClass subClass = _subClasses.get(_classIndex);
+
+        return nonNull(subClass) && subClass.isDualClass();
     }
 
     public boolean hasDualClass() {
@@ -7987,15 +8003,7 @@ public final class Player extends Playable {
         }
     }
 
-    public Map<Integer, SubClass> getSubClasses() {
-        if (_subClasses == null) {
-            synchronized (this) {
-                if (_subClasses == null) {
-                    _subClasses = new ConcurrentHashMap<>();
-                }
-            }
-        }
-
+    public IntMap<SubClass> getSubClasses() {
         return _subClasses;
     }
 
@@ -9446,7 +9454,7 @@ public final class Player extends Playable {
                 }
 
                 if (equippedItem.getEnchantLevel() > 0) {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+                    sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
                     sm.addInt(equippedItem.getEnchantLevel());
                     sm.addItemName(equippedItem);
                 } else {
@@ -11378,11 +11386,20 @@ public final class Player extends Playable {
     }
 
     public void setAttendanceInfo(int rewardIndex) {
+
+        final Calendar nextReward = Calendar.getInstance();
+        nextReward.set(Calendar.MINUTE, 30);
+        if (nextReward.get(Calendar.HOUR_OF_DAY) >= 6)
+        {
+            nextReward.add(Calendar.DATE, 1);
+        }
+        nextReward.set(Calendar.HOUR_OF_DAY, 6);
+
         if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT) {
-            getAccountVariables().set(ATTENDANCE_DATE_VAR, System.currentTimeMillis());
+            getAccountVariables().set(ATTENDANCE_DATE_VAR, nextReward.getTimeInMillis());
             getAccountVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
         } else {
-            getVariables().set(ATTENDANCE_DATE_VAR, System.currentTimeMillis());
+            getVariables().set(ATTENDANCE_DATE_VAR, nextReward.getTimeInMillis());
             getVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
         }
     }

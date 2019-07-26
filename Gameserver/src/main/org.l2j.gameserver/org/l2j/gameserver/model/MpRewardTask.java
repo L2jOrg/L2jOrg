@@ -25,6 +25,8 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author UnAfraid
  */
@@ -58,7 +60,7 @@ public class MpRewardTask {
     }
 
     private void run() {
-        if ((_count.decrementAndGet() <= 0) || (_creature.isPlayer() && !_creature.getActingPlayer().isOnline())) {
+        if ((_count.decrementAndGet() <= 0) || (isPlayer(_creature) && !_creature.getActingPlayer().isOnline())) {
             _task.cancel(false);
             return;
         }

@@ -187,7 +187,7 @@ public class ItemInfo {
 
         _option = item.getEnchantOptions();
         _soulCrystalOptions = item.getSoulCrystalOptions();
-        _soulCrystalOptions = item.getSoulCrystalSpecialOptions();
+        _soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
     }
 
     public ItemInfo(Product item) {
@@ -269,7 +269,7 @@ public class ItemInfo {
         }
         _option = item.getEnchantOptions();
         _soulCrystalOptions = item.getSoulCrystalOptions();
-        _soulCrystalOptions = item.getSoulCrystalSpecialOptions();
+        _soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
     }
 
     public int getObjectId() {

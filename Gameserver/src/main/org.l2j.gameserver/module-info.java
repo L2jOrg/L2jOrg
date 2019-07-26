@@ -100,6 +100,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.dailymission;
     exports org.l2j.gameserver.data.elemental;
     exports org.l2j.gameserver.network.serverpackets.elementalspirits;
+    exports org.l2j.gameserver.network.serverpackets.equipmentupgrade;
 
     uses org.l2j.gameserver.scripting.IScriptingEngine;
     provides org.l2j.gameserver.scripting.IScriptingEngine

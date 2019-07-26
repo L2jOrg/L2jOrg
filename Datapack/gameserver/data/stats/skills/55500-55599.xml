@@ -57,7 +57,7 @@
 		</effects>
 	</skill>
 	<skill id="55511" toLevel="1" name="Lv. 3 Brooch - Additional Effect">
-		<!-- Inventory Slot +12. -->
+		<!-- Inventory slots +12. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -75,7 +75,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55514" toLevel="1" name="Unimaginable Horror">
-		<!-- In a desperate attempt to unsee what you have just seen you close your eyes and fall into a mindless rampage of monster killing. For 2 hr., acquired XP/ SP +50%. Buff remains after death. -->
+		<!-- In a desperate attempt to unsee what you have just seen you close your eyes and fall into a mindless rampage of monster killing. For 2 h., acquired XP/ SP +50%. Effect remains after death. -->
 		<icon>icon.skill30522</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -119,106 +119,106 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55523" toLevel="1" name="Focus - Event">
-		<!-- For 1 hr., P. Critical Rate +30%. -->
+		<!-- For 1 h., P. Critical Rate +30%. -->
 		<icon>icon.skill1077</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55524" toLevel="1" name="Death Whisper - Event">
-		<!-- For 1 hr., P. Critical Damage +35%. -->
+		<!-- For 1 h., P. Critical Damage +35%. -->
 		<icon>icon.skill1242</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55525" toLevel="1" name="Haste - Event">
-		<!-- For 1 hr., Atk. Spd. +33%. -->
+		<!-- For 1 h., Atk. Spd. +33%. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55526" toLevel="1" name="Guidance - Event">
-		<!-- For 1 hr., P. Accuracy +4. -->
+		<!-- For 1 h., P. Accuracy +4. -->
 		<icon>icon.skill1240</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55527" toLevel="1" name="Noble Blessed Body - Event">
-		<!-- For 1 hr., Max. HP +35%. -->
+		<!-- For 1 h., Max. HP +35%. -->
 		<icon>icon.skill1045</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55528" toLevel="1" name="Noble Blessed Soul - Event">
-		<!-- For 1 hr., Max. MP +35%. -->
+		<!-- For 1 h., Max. MP +35%. -->
 		<icon>icon.skill1048</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55529" toLevel="1" name="Agility - Event">
-		<!-- For 1 hr., P. Evasion +4. -->
+		<!-- For 1 h., P. Evasion +4. -->
 		<icon>icon.skill1087</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55530" toLevel="1" name="Acumen - Event">
-		<!-- For 1 hr., Casting Spd. +30%. -->
+		<!-- For 1 h., Casting Spd. +30%. -->
 		<icon>icon.skill1085</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55531" toLevel="1" name="Decrease Weight - Event">
-		<!-- For 1 hr., weight penalty interval +9000. -->
+		<!-- For 1 h., weight penalty interval +9000. -->
 		<icon>icon.skill1257</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55532" toLevel="1" name="Might - Event">
-		<!-- For 1 hr., P. Atk. +15%. -->
+		<!-- For 1 h., P. Atk. +15%. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55533" toLevel="1" name="Shield - Event">
-		<!-- For 1 hr., P. Def. +15%. -->
+		<!-- For 1 h., P. Def. +15%. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55534" toLevel="1" name="Magic Barrier - Event">
-		<!-- For 1 hr., M. Def. +30%. -->
+		<!-- For 1 h., M. Def. +30%. -->
 		<icon>icon.skill1036</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55535" toLevel="1" name="Vampiric Rage - Event">
-		<!-- For 1 hr., with a certain probability recovers as HP 9% of the P. melee damage inflicted. -->
+		<!-- For 1 h., with a certain probability recovers as HP 9% of the P. melee damage inflicted. -->
 		<icon>icon.skill1268</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55536" toLevel="1" name="Empower - Event">
-		<!-- For 1 hr., M. Atk. +75%. -->
+		<!-- For 1 h., M. Atk. +75%. -->
 		<icon>icon.skill1059</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55537" toLevel="1" name="Wind Walk - Event">
-		<!-- For 1 hr., Speed +33. -->
+		<!-- For 1 h., Speed +33. -->
 		<icon>icon.skill1204</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55538" toLevel="1" name="Berserker Spirit - Event">
-		<!-- For 1 hr., P. Def. -8%, M. Def. -16%, Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8. -->
+		<!-- For 1 h., P. Def. -8%, M. Def. -16%, Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55539" toLevel="1" name="Greater Might - Event">
-		<!-- For 1 hr., P. Atk. +10%. -->
+		<!-- For 1 h., P. Atk. +10%. -->
 		<icon>icon.skill1388</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55540" toLevel="1" name="Greater Shield - Event">
-		<!-- For 1 hr., P. Def. +15%. -->
+		<!-- For 1 h., P. Def. +15%. -->
 		<icon>icon.skill1389</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55541" toLevel="1" name="Wild Magic - Event">
-		<!-- For 1 hr., M. Critical Rate +20. -->
+		<!-- For 1 h., M. Critical Rate +20. -->
 		<icon>icon.skill1303</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55542" toLevel="1" name="Clarity - Event">
-		<!-- For 1 hr., physical skill MP consumption -20%, magic skill's MP consumption -10%, and song/ dance skill's MP consumption -20%. -->
+		<!-- For 1 h., physical skill MP consumption -20%, magic skill's MP consumption -10%, and song/ dance skill's MP consumption -20%. -->
 		<icon>icon.skill1397</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55543" toLevel="1" name="Summon Agathion - Minion Eye">
+	<skill id="55543" toLevel="1" name="Summon Agathion Minion Eye">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -235,12 +235,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55544" toLevel="1" name="Summon Agathion - Matryoshka">
+	<skill id="55544" toLevel="1" name="Summon Agathion Matryoshka">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55545" toLevel="1" name="Summon Agathion - Babayaga">
+	<skill id="55545" toLevel="1" name="Summon Agathion Babayaga">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -251,7 +251,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55547" toLevel="1" name="Elk's Blessing">
-		<!-- For 1 hr., acquired XP/ SP +30%. -->
+		<!-- For 1 h., acquired XP/ SP +30%. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -355,7 +355,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55555" toLevel="1" name="Matryoshka's Blessing">
-		<!-- For 20 min XP/ SP +30%. -->
+		<!-- For 20 min., Acquired XP/ SP +30%. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -463,27 +463,27 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55579" toLevel="2" name="XP Growth Amulet">
-		<!-- XP/ SP +$s1, while hunting. -->
+		<!-- Acquired XP/ SP +$s1. -->
 		<icon>icon.skill19226</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55580" toLevel="2" name="Fishing XP Growth Amulet">
-		<!-- If stored in the inventory during fishing, acquired XP/ SP +$s1. -->
+		<!-- Acquired XP/ SP during fishing +$s1. -->
 		<icon>icon.fishing_zone_ticket</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55581" toLevel="1" name="Blue Dynasty Transformation Scroll">
-		<!-- Makes you armor look like Blue Dynasty armor. Combat stats are improved. Remains after death. -->
+		<!-- Makes you armor look like Blue Dynasty armor. Combat stats are improved. Effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55582" toLevel="1" name="Red Zubei Transformation Scroll">
-		<!-- Makes you armor look like Red Zubei armor. Combat stats are improved. Remains after death. -->
+		<!-- Makes you armor look like Red Zubei armor. Combat stats are improved. Effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i04</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55583" toLevel="1" name="Formal Wear Appearance Scroll">
-		<!-- Makes you armor look like Formal Wear. Combat stats are improved. Remains after death. -->
+		<!-- Makes you armor look like Formal Wear. Combat stats are improved. Effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -535,7 +535,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55591" toLevel="1" name="Growth Amulet">
-		<!-- If stored in the inventory, acquired XP/ SP +40%. -->
+		<!-- Acquired XP/ SP +40%. -->
 		<icon>BranchSys3.lcon.g_rune_itemdrop_up</icon>
 		<operateType>A1</operateType>
 	</skill>

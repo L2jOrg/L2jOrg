@@ -238,12 +238,12 @@ public class GeoEngine {
      * @param geoY : Geodata Y
      * @return {@link ABlock} : Block of geodata.
      */
-    private final ABlock getBlock(int geoX, int geoY) {
+    private ABlock getBlock(int geoX, int geoY) {
         final int x = geoX / GeoStructure.BLOCK_CELLS_X;
         final int y = geoY / GeoStructure.BLOCK_CELLS_Y;
 
         // if x or y is out of array return null
-        if ((x < GeoStructure.GEO_BLOCKS_X) && (y < GeoStructure.GEO_BLOCKS_Y)) {
+        if ((x > -1) && (y > -1) && (x < GeoStructure.GEO_BLOCKS_X) && (y < GeoStructure.GEO_BLOCKS_Y)) {
             return _blocks[x][y];
         }
         return null;

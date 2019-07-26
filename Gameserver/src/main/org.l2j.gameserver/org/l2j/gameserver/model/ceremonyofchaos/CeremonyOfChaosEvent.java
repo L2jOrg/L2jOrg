@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
-import org.l2j.gameserver.model.actor.appearance.PcAppearance;
+import org.l2j.gameserver.model.actor.appearance.PlayerAppearance;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
@@ -95,7 +95,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember> {
             player.setLastLocation();
 
             // Hide player information
-            final PcAppearance app = player.getAppearance();
+            final PlayerAppearance app = player.getAppearance();
             app.setVisibleName("Challenger" + member.getPosition());
             app.setVisibleTitle("");
             app.setVisibleClanData(0, 0, 0, 0, 0);
@@ -362,7 +362,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember> {
                 player.teleToLocation(player.getLastLocation(), null);
 
                 // Restore player information
-                final PcAppearance app = player.getAppearance();
+                final PlayerAppearance app = player.getAppearance();
                 app.setVisibleName(null);
                 app.setVisibleTitle(null);
                 app.setVisibleClanData(-1, -1, -1, -1, -1);

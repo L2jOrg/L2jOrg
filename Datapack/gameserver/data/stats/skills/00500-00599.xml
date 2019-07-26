@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="500" toLevel="2" name="True Berserker">
-		<!-- P. Def. -$s1 and Evasion -$s2. P. Atk. and Atk. Spd. +$s3 and Accuracy +$s4. Continuously consumes MP proportionately to your level. -->
+		<!-- P. Def. -$s1 and P. Evasion -$s2. P. Atk. and Atk. Spd. +$s3 and P. Accuracy +$s4. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0500</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -583,7 +583,7 @@
 		</effects>
 	</skill>
 	<skill id="507" toLevel="37" name="Twin Shot">
-		<!-- Fires $s1 powerful bolts with $s2 Power added to P. Atk. Increases Power upon the consumption of up to $s3 souls. Requires a crossbow. Over-hit. Critical. -->
+		<!-- Fires $s1 powerful bolts with $s2 Power added to P. Atk. Increases Power upon the consumption of up to $s3 souls. Requires a crossbow. Critical. Over-hit. -->
 		<icon>icon.skill0507</icon>
 		<castRange>900</castRange>
 		<coolTime>1000</coolTime>
@@ -1259,7 +1259,7 @@
 		</conditions>
 	</skill>
 	<skill id="521" toLevel="8" name="Sharpshooting">
-		<!-- For $s1, when using a crossbow, P. Atk. +$s2, Critical Rate +$s3, Accuracy +$s4, and Range +$s5. User cannot move while skill is in effect. Requires a crossbow. -->
+		<!-- For $s1, when using a crossbow, P. Atk. +$s2, P. Critical Rate +$s3, P. Accuracy +$s4, and Range +$s5. User cannot move while skill is in effect. Requires a crossbow. -->
 		<icon>icon.skill0521</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1617,7 +1617,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Iron Shield -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
@@ -1699,7 +1699,7 @@
 		</effects>
 	</skill>
 	<skill id="530" toLevel="1" name="Dance of Alignment">
-		<!-- All party members' Holy/ Dark Attack Resistance +30 for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- Party members' Holy/ Dark Attack Resistance +30 for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0530</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -1737,7 +1737,7 @@
 		</effects>
 	</skill>
 	<skill id="531" toLevel="2" name="Critical Wound">
-		<!-- Critical Damage inflicted on the enemy +10%. Vital points attack resistance -10%. Requires a dagger. -->
+		<!-- P. Critical Damage inflicted on the enemy +$s1. Vital points attack resistance -$s2. Requires a dagger. -->
 		<icon>icon.skill0531</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1797,7 +1797,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Counter Chance -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>5</chance>
@@ -1817,7 +1817,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Counter Rapid Shot -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>5</chance>
@@ -1837,7 +1837,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Counter Dash -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>5</chance>
@@ -1857,7 +1857,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Counter Mind -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>5</chance>
@@ -2027,7 +2027,7 @@
 		</effects>
 	</skill>
 	<skill id="559" toLevel="4" name="Spear">
-		<!-- A strong polearm thrust that has a chance of causing the enemy to bleed. Over-hit. Power $s1. Effect $s2 -->
+		<!-- A strong polearm thrust that has a chance of causing the enemy to bleed. Over-hit. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>
 			<value level="1">6</value>
@@ -2174,7 +2174,7 @@
 		</effects>
 	</skill>
 	<skill id="562" toLevel="4" name="Wind of Angel">
-		<!-- A divine Wind that increases Evasion of all party members. -->
+		<!-- A divine Wind that increases P. Evasion of all party members. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2540,7 +2540,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="571" toLevel="4" name="Poison Dust">
-		<!-- Sprays a poisonous powder all over nearby enemies. Effect $s1 -->
+		<!-- Sprays a poisonous powder all over nearby enemies. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>
 			<value level="1">6</value>
@@ -2599,7 +2599,7 @@
 		</effects>
 	</skill>
 	<skill id="572" toLevel="4" name="Double Slasher">
-		<!-- Attacks a distant enemy by using Momentum. Over-hit. Power $s1. -->
+		<!-- Releases the energy of a sword to attack a distant enemy. Over-hit. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -2641,7 +2641,7 @@
 		</effects>
 	</skill>
 	<skill id="573" toLevel="4" name="Earthquake">
-		<!-- Makes the Earth shake and stuns nearby enemies. Over-hit. Power $s1. -->
+		<!-- Ground shakes, knocks down enemies around and stuns them. Power $s1 -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2830,7 +2830,7 @@
 		</effects>
 	</skill>
 	<skill id="578" toLevel="4" name="Blaze Quake">
-		<!-- Inflict a burning Fire attack on nearby enemies. Over-hit. Power $s1. Effect $s2 -->
+		<!-- Inflict a burning Fire attack on nearby enemies. Over-hit. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>
 			<value level="1">6</value>
@@ -3008,7 +3008,7 @@
 		</effects>
 	</skill>
 	<skill id="581" toLevel="4" name="Sand Cloud">
-		<!-- Uses blinding sand to decrease nearby enemies' Accuracy. -->
+		<!-- Uses blinding sand to decrease nearby enemies' P. Accuracy. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -3053,7 +3053,7 @@
 		</effects>
 	</skill>
 	<skill id="582" toLevel="4" name="Scope Bleed">
-		<!-- Attacks nearby enemies with a lethal blow and causes them to bleed. Over-hit. Power $s1. Effect $s2 -->
+		<!-- Attacks nearby enemies with a lethal blow and causes them to bleed. Over-hit. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>
 			<value level="1">6</value>
@@ -3160,7 +3160,7 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<!-- Cancel Shadow Move -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>107</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -3173,7 +3173,7 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<!-- Cancel Shadow Move -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>107</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -3420,7 +3420,7 @@
 		</effects>
 	</skill>
 	<skill id="594" toLevel="1" name="Residence Moral">
-		<!-- CP recovery bonus of clan members in residence increases by 1.09. -->
+		<!-- CP recovery bonus of clan members in residence +1.09. -->
 		<icon>icon.skill0374</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3433,7 +3433,7 @@
 		</effects>
 	</skill>
 	<skill id="595" toLevel="1" name="Residence Clarity">
-		<!-- CP recovery bonus of clan members in residence +0.47. -->
+		<!-- MP recovery bonus of clan members in residence +0.47. -->
 		<icon>icon.skill0375</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

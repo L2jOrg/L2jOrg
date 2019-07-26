@@ -1,8 +1,8 @@
 package org.l2j.gameserver.util;
 
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
@@ -12,6 +12,7 @@ import org.l2j.gameserver.model.holders.MinionHolder;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ScheduledFuture;
 
 /**
  * @author luisantonioa, DS, Mobius
@@ -19,6 +20,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class MinionList {
     protected final Monster _master;
     private final List<Monster> _spawnedMinions = new CopyOnWriteArrayList<>();
+    private final List<ScheduledFuture<?>> _respawnTasks = new CopyOnWriteArrayList<>();
 
     public MinionList(Monster pMaster) {
         if (pMaster == null) {
@@ -155,7 +157,19 @@ public class MinionList {
                 }
                 _spawnedMinions.clear();
             }
-        }
+
+			if (!_respawnTasks.isEmpty())
+			{
+				for (ScheduledFuture<?> task : _respawnTasks)
+				{
+					if ((task != null) && !task.isCancelled() && !task.isDone())
+					{
+						task.cancel(true);
+					}
+            }
+                _respawnTasks.clear();
+            }
+		}
     }
 
     /**
@@ -169,8 +183,9 @@ public class MinionList {
         _spawnedMinions.remove(minion);
 
         final int time = respawnTime < 0 ? _master.isRaid() ? (int) Config.RAID_MINION_RESPAWN_TIMER : 0 : respawnTime;
-        if ((time > 0) && !_master.isAlikeDead()) {
-            ThreadPoolManager.getInstance().schedule(new MinionRespawnTask(minion), time);
+		if ((time > 0) && !_master.isAlikeDead())
+		{
+			_respawnTasks.add(ThreadPoolManager.schedule(new MinionRespawnTask(minion), time));
         }
     }
 

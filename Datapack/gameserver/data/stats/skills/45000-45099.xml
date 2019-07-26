@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="45000" toLevel="20" name="Item Skill: Stun">
-		<!-- Chance: Momentarily inflicts Stun on the target during an normal physical attack. -->
+		<!-- In case of success: Momentarily inflicts Stun on the target during a normal physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -324,7 +324,7 @@
 		</effects>
 	</skill>
 	<skill id="45007" toLevel="22" name="Yul's Critical Damage">
-		<!-- Critical Damage +$s1. -->
+		<!-- P. Critical Damage +$s1. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_yr_lv01</value>
 			<value level="2">BranchIcon.Icon.g_rune_yr_lv01</value>
@@ -517,7 +517,7 @@
 		</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>
 					<value level="1">28</value>
 					<value level="2">36</value>
@@ -882,9 +882,9 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45017" toLevel="3" name="Damaged Zaken's Earring Base Effect">
-		<!-- Damaged earring. Bleed Resistance +1%. -->
-		<icon>icon.accessory_earring_of_zaken_i00</icon>
+	<skill id="45017" toLevel="3" name="Immortal Orfen's Earring - Special Ability">
+		<!-- Target's MP -$s1 in PvP. -->
+		<icon>icon.accessory_earring_of_orfen_i04</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1005,7 +1005,7 @@
 		</effects>
 	</skill>
 	<skill id="45023" toLevel="1" name="White Uniform Hat (CON+1 MEN+1)">
-		<!-- CON+1, MEN+1 -->
+		<!-- CON +1, MEN +1. -->
 		<icon>BranchSys2.icon.br_navy_cap_i00</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1065,7 +1065,7 @@
 		</effects>
 	</skill>
 	<skill id="45026" toLevel="1" name="Napoleon Hat (CON +1 MEN +1)">
-		<!-- CON+1, MEN+1 -->
+		<!-- CON +1, MEN +1. -->
 		<icon>BranchSys.icon.br_napoleonic_cap_i00</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1125,7 +1125,7 @@
 		</effects>
 	</skill>
 	<skill id="45029" toLevel="1" name="Ninja Hair Accessory (CON+1 MEN+1)">
-		<!-- CON+1, MEN+1 -->
+		<!-- CON +1, MEN +1. -->
 		<icon>BranchSys3.icon1.g_co_ninja_hair</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1185,7 +1185,7 @@
 		</effects>
 	</skill>
 	<skill id="45032" toLevel="1" name="Warrior's Helmet (CON+1 MEN+1)">
-		<!-- CON+1, MEN+1 -->
+		<!-- CON +1, MEN +1. -->
 		<icon>BranchSys2.icon.br_close_helmet_i00</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1245,7 +1245,7 @@
 		</effects>
 	</skill>
 	<skill id="45035" toLevel="1" name="First Mate Hat (CON+1 MEN+1)">
-		<!-- CON+1, MEN+1 -->
+		<!-- CON +1, MEN +1. -->
 		<icon>icon.Accessary_middle_ages_i01</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1305,7 +1305,7 @@
 		</effects>
 	</skill>
 	<skill id="45038" toLevel="1" name="Artisan's Goggles (CON+1 MEN+1)">
-		<!-- CON+1, MEN+1 -->
+		<!-- CON +1, MEN +1. -->
 		<icon>icon.accessory_dwarf_goggle_i00</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1325,52 +1325,52 @@
 		</effects>
 	</skill>
 	<skill id="45039" toLevel="1" name="Fire Dragon Belt">
-		<!-- STR +1, INT +1, HP Recovery Bonus +2.31, Max MP +1.54, CP Recovery +3.07, Max HP/ MP/ CP +10%, Inventory Slots +6, Weight Gauge +7000, M. Critical Damage +4%, Healing Potions Effect +100, Incoming Damage -6%. (Can be applied to Melissa's Recovery Potion, Warrior's Quick Healing Potion). -->
+		<!-- When using the Belt, STR +1, INT +1, HP Recovery Bonus +2.31, MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/ MP/ CP +10%, Healing Potions Effect +100, P./ M. Critical Damage +4%. (Can be applied to Melissa's Recovery Potion, Warrior's Quick Healing Potion) -->
 		<icon>icon.bm_vallakas_belt</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="45040" toLevel="6" name="">
+	<skill id="45040" toLevel="6" name="Dragon Pendant Lv. 1">
 		<!-- M. Def. +$s1. -->
 		<icon>icon.bm_pendant_dragon_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="45041" toLevel="6" name="">
-		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, Received P./ M. Damage -$s3, Atk. Spd./ Casting Spd. +$s4. -->
+	<skill id="45041" toLevel="6" name="Dragon Pendant Lv. 2">
+		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, P./ M. Damage Received -$s3, Atk. Spd./ Casting Spd. +$s4. -->
 		<icon>icon.bm_pendant_dragon_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="45042" toLevel="6" name="">
-		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, Received P./ M. Damage -$s3, Atk. Spd./ Casting Spd. +$s4, P./ M. Critical Damage +$s5. -->
+	<skill id="45042" toLevel="6" name="Dragon Pendant Lv. 3">
+		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, P./ M. Damage Received -$s3, Atk. Spd./ Casting Spd. +$s4, P./ M. Critical Damage +$s5. -->
 		<icon>icon.bm_pendant_dragon_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="45043" toLevel="6" name="">
-		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, Received P./ M. Damage -$s3, Atk. Spd./ Casting Spd. +$s4, P./ M. Critical Damage +$s5, P./ M. Atk.+$s6. -->
+	<skill id="45043" toLevel="6" name="Dragon Pendant Lv. 4">
+		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, P./ M. Damage Received -$s3, Atk. Spd./ Casting Spd. +$s4, P./ M. Critical Damage +$s5, P./M. Atk. +$s6. -->
 		<icon>icon.bm_pendant_dragon_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="45044" toLevel="1" name="">
-		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, Received P./ M. Damage -$s3, Atk. Spd./ Casting Spd. +$s4, P./ M. Critical Damage +$s5, P./ M. Atk.+$s6, Damage Reflect Resistance +$s7. -->
+	<skill id="45044" toLevel="1" name="Blessed Dragon Pendant Effect">
+		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, P./ M. Damage Received -$s3, Atk. Spd./ Casting Spd. +$s4, P./ M. Critical Damage +$s5, P./M. Atk. +$s6, Damage Reflection Resistance +$s7. -->
 		<icon>icon.bm_pendant_dragon_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="45045" toLevel="1" name="">
+	<skill id="45045" toLevel="1" name="Dragon Meditation">
 		<!-- For $s1, HP Recovery Bonus +$s2, MP Recovery Bonus +$s3, Received Healing +$s4. -->
 		<icon>icon.dragon_invocation</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="45046" toLevel="1" name="">
+	<skill id="45046" toLevel="1" name="Dragon Barrier">
 		<!-- For 10 sec. creates temporary defensive barrier that reflects normal attacks, skills and debuffs. -->
 		<icon>icon.dragon_barrier</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="45047" toLevel="1" name="">
+	<skill id="45047" toLevel="1" name="Dragon Evasion">
 		<!-- For 5 sec., you cannot be targeted. -->
 		<icon>icon.dragon_evasion</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="45048" toLevel="1" name="">
-		<!-- Max HP/ MP/ CP +10%, P. Def. +5%, M. Def. +10%, resistance to all weapons +5%, P./ M. Critical Rate +20, Received PvP Damage -10%, Damage Resistance +4%. -->
+	<skill id="45048" toLevel="1" name="Glorious Cloak">
+		<!-- Max HP/ MP/ CP +10%, P. Def. +5%, M. Def. +10%, all weapon resistance +5, M./ P. Critical Rate +20, received PvP damage -10%. Reflects 4% of the damage received back to the enemy. -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>A1</operateType>
 	</skill>

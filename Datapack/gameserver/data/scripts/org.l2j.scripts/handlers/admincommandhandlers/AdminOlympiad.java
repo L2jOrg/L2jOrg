@@ -1,37 +1,15 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.admincommandhandlers;
 
-import java.util.StringTokenizer;
-
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.olympiad.Olympiad;
-import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
-import org.l2j.gameserver.model.olympiad.OlympiadGameNonClassed;
-import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
-import org.l2j.gameserver.model.olympiad.OlympiadManager;
-import org.l2j.gameserver.model.olympiad.Participant;
+import org.l2j.gameserver.model.olympiad.*;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.GameUtils;
+
+import java.util.StringTokenizer;
 
 import static org.l2j.commons.util.Util.isDigit;
 
@@ -202,7 +180,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 						final StatsSet statDat = getPlayerSet(player);
 						final int oldpoints = Olympiad.getInstance().getNoblePoints(player);
 						final int points = oldpoints - val;
-						if ((points < 1) && (points > 1000))
+						if ((points < 1) || (points > 1000))
 						{
 							BuilderUtil.sendSysMessage(activeChar, "You can't set more than 1000 or less than 0 Olympiad points! or lower then 0");
 							return false;
@@ -253,9 +231,6 @@ public class AdminOlympiad implements IAdminCommandHandler
 			statDat.set(Olympiad.COMP_LOST, 0);
 			statDat.set(Olympiad.COMP_DRAWN, 0);
 			statDat.set(Olympiad.COMP_DONE_WEEK, 0);
-			statDat.set(Olympiad.COMP_DONE_WEEK_CLASSED, 0);
-			statDat.set(Olympiad.COMP_DONE_WEEK_NON_CLASSED, 0);
-			statDat.set(Olympiad.COMP_DONE_WEEK_TEAM, 0);
 			statDat.set("to_save", true);
 			Olympiad.addNobleStats(player.getObjectId(), statDat);
 		}

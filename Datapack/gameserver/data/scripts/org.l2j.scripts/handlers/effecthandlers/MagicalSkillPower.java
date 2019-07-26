@@ -26,6 +26,6 @@ public class MagicalSkillPower extends AbstractStatEffect
 {
 	public MagicalSkillPower(StatsSet params)
 	{
-		super(params, Stats.MAGICAL_SKILL_POWER);
+		super(params, Stats.MAGICAL_SKILL_POWER, Stats.SKILL_POWER_ADD);
 	}
 }

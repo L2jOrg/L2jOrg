@@ -333,6 +333,10 @@
 		<mpConsume>
 			<value level="1">144</value>
 			<value level="2">159</value>
+			<value level="3">162</value>
+			<value level="4">165</value>
+			<value level="5">170</value>
+			<value level="6">175</value>
 		</mpConsume>
 		<mpInitialConsume>29</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -441,7 +445,7 @@
 		</effects>
 	</skill>
 	<skill id="1409" toLevel="1" name="Cleanse">
-		<!-- Removes debuffs from the target. Consumes 40 Spirit Ore. -->
+		<!-- Removes debuffs from the target. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1409</icon>
 		<castRange>600</castRange>
 		<effectPoint>1</effectPoint>
@@ -467,7 +471,7 @@
 		</effects>
 	</skill>
 	<skill id="1410" toLevel="1" name="Salvation">
-		<!-- Resurrects from death fully recovered. Maintains buffs and debuffs even after death. Consumes 200 Spirit Ore. -->
+		<!-- Resurrects from death fully recovered. Maintains buffs and debuffs even after death. Consumes 100 Spirit Ore. -->
 		<icon>icon.skill1410</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -496,7 +500,7 @@
 		</effects>
 	</skill>
 	<skill id="1411" toLevel="3" name="Mystic Immunity">
-		<!-- Becomes invincible from debuffs for $s1. Can only be used on party members. -->
+		<!-- Becomes invincible from debuffs for $s1 Can only be used on party members. -->
 		<icon>icon.skill1411</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
@@ -558,7 +562,7 @@
 		</effects>
 	</skill>
 	<skill id="1413" toLevel="1" name="Chant of Magnus">
-		<!-- For 5 min., a powerful spirit acts to get all party members' Max MP +15%, MP Recovery Bonus +1.5 when equipped with light or heavy armor, MP Recovery Bonus +4 when equipped with a robe, M. Def. +30%, M. Atk. +30%, Casting Spd. +20%, Fire/ Water/ Wind/ Earth Resistance +10, Debuff Resistance +25, and Buff-canceling Attack Resistance +40. Consumes 40 Spirit Ore. -->
+		<!-- For 5 min., a powerful spirit acts to get all party members' Max MP +15%, MP Recovery Bonus +1.5 when equipped with light or heavy armor, MP Recovery Bonus +4 when equipped with a robe, M. Def. +30%, M. Atk. +30%, Casting Spd. +20%, Fire/ Water/ Wind/ Earth Resistance +10, Debuff Resistance +25%, and Buff-canceling Attack Resistance +40%. Consumes 40 Spirit Ore. -->
 		<icon>icon.skill1413</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -638,7 +642,7 @@
 		</effects>
 	</skill>
 	<skill id="1414" toLevel="2" name="Victories of Pa'agrio">
-		<!-- For 10 min., a powerful spirit acts to get nearby clan members' Max CP +10%, CP Recovery bonus +20%, P./ M. Accuracy +4, P./ M. Evasion +4, P./ M. Atk. +15%, Atk. Spd./ Casting Spd. +10%, P./ M. Critical Rate +15%, P./ M. Critical Damage +15%. Consumes 60 Spirit Ore. -->
+		<!-- For $s1, party member's Max CP +$s2, CP Recovery Bonus +$s3, P./ M. Accuracy +$s4, P./ M. Evasion +$s5, P./ M. Atk. +$s6, Atk. Spd./ Casting Spd. +$s7, P./ M. Critical Rate +$s8, P./ M. Critical Damage +$s9. Consumes $s10 Spirit Ore. -->
 		<icon>icon.skill1414</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -779,7 +783,7 @@
 		</effects>
 	</skill>
 	<skill id="1416" toLevel="1" name="Pa'agrio's Fist">
-		<!-- For $s1, restores and increases clan members' Max CP +$s2. -->
+		<!-- Nearby clan members' Max CP +$s2 for $s1 -->
 		<icon>icon.skill1416</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -811,7 +815,7 @@
 		</effects>
 	</skill>
 	<skill id="1417" toLevel="5" name="Aura Flash">
-		<!-- Inflicts non-attribute damage on nearby enemies with $s1 Power added to M. Atk. Consumes $s2 Spirit Ore(s). Cancel target. -->
+		<!-- Attacks nearby enemies with $s1 Power added to M. Atk. Consumes $s2 Spirit Ore. -->
 		<icon>icon.skill1417</icon>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -1058,7 +1062,7 @@
 		</effects>
 	</skill>
 	<skill id="1423" toLevel="1" name="Gehenna">
-		<!-- Continuously inflicts powerful dark damage. User cannot move while casting, and there is additional MP Consumption each time the effect occurs. Consumes 1 Magic Symbol. -->
+		<!-- Continuously inflicts powerful Dark damage. User cannot move while casting, and there is additional MP Consumption each time the effect occurs. Consumes 1 Magic Symbol. -->
 		<icon>icon.skill1423</icon>
 		<affectLimit>15-25</affectLimit>
 		<affectRange>200</affectRange>
@@ -1162,7 +1166,7 @@
 		</effects>
 	</skill>
 	<skill id="1426" toLevel="1" name="Miracle">
-		<!-- Fully recovers HP of nearby clan members. Consumes 200 Spirit Ore. -->
+		<!-- Fully recovers HP of nearby clan members. Consumes 100 Spirit Ore. -->
 		<icon>icon.skill1426</icon>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1226,7 +1230,7 @@
 		</effects>
 	</skill>
 	<skill id="1428" toLevel="10" name="Mass Recharge">
-		<!-- Recovers up to 240 MP depending on the party member level. Consumes 5 Spirit Ore. -->
+		<!-- Recovers up to $s1 MP depending on the party member level. Consumes $s2 Spirit Ore. -->
 		<icon>icon.skill1428</icon>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1491,7 +1495,7 @@
 		</effects>
 	</skill>
 	<skill id="1433" toLevel="10" name="Abyssal Blaze">
-		<!-- Inflicts dark damage on the enemy with $s1 Power added to M. Atk. Increases Power upon the consumption of up to $s2 souls. -->
+		<!-- Attacks an enemy with $s1 Power added to P. Atk. and inflicts Dark damage on the enemy. Increases Power upon the consumption of up to $s2 souls. -->
 		<icon>icon.skill1433</icon>
 		<castRange>750</castRange>
 		<effectPoint>
@@ -1751,7 +1755,7 @@
 		</effects>
 	</skill>
 	<skill id="1436" toLevel="30" name="Soul of Pain">
-		<!-- Throws a soul to inflict dark damage on the enemy with $s1 Power added to M. Atk. Increases Power upon the consumption of up to $s2 souls. Cancels target. -->
+		<!-- Attacks with $s1 Power added to P. Atk. and inflicts Dark damage on the enemy. Increases Power upon the consumption of up to $s2 souls. -->
 		<icon>icon.skill1436</icon>
 		<castRange>700</castRange>
 		<effectPoint>
@@ -2111,7 +2115,7 @@
 		</effects>
 	</skill>
 	<skill id="1438" toLevel="9" name="Annihilation Circle">
-		<!-- Inflicts dark damage on the target and nearby enemies with $s1 Power added to M. Atk. Increases Power upon the consumption of up to $s2 souls. -->
+		<!-- Attacks an enemy with $s1 Power added to P. Atk. and inflicts Dark damage on the enemy. Increases Power upon the consumption of up to $s2 souls. -->
 		<icon>icon.skill1438</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -2189,7 +2193,7 @@
 		</effects>
 	</skill>
 	<skill id="1439" toLevel="5" name="Curse of Divinity">
-		<!-- Inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. Power changes depending on the target's altered state condition. -->
+		<!-- Inflicts magic damage on the enemy with $s1 Power added to M. Atk. Power changes depending on the target's altered state condition. -->
 		<icon>icon.skill1439</icon>
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
@@ -2782,8 +2786,39 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
+	<skill id="1449" toLevel="1" name="Transfer Soul">
+		<!-- Transfer a soul to the target. Only possible when the target is a Kamael. Consumes 1 Soul. -->
+		<icon>icon.skill1449</icon>
+		<castRange>400</castRange>
+		<effectPoint>150</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>2500</hitTime>
+		<hpConsume>20</hpConsume>
+		<magicLvl>24</magicLvl>
+		<mpConsume>5</mpConsume>
+		<operateType>A1</operateType>
+		<soulMaxConsumeCount>1</soulMaxConsumeCount>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>OTHERS</targetType>
+		<affectScope>SINGLE</affectScope>
+		<targetConditions>
+			<condition name="TargetRace">
+				<race>KAMAEL</race>
+			</condition>
+		</targetConditions>
+		<conditions>
+			<condition name="SoulSaved">
+				<amount>1</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="FocusSouls">
+				<charge>1</charge>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="1450" toLevel="1" name="Chain Lightning">
-		<!-- Hurls thunderbolts and inflicts non-attribute damage the target and nearby enemies with 200 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
+		<!-- Hurls thunderbolts and inflicts damage on the target and nearby enemies with 200 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
 		<icon>icon.skill1450</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -2811,7 +2846,7 @@
 		</effects>
 	</skill>
 	<skill id="1451" toLevel="2" name="Fire Vortex Buster">
-		<!-- Detonates a Fire Vortex that inflicts Fire damage on the enemy with 175 Power added to M. Atk. -->
+		<!-- Attacks by fire vortex and inflicts fire damage on the target with $s1 Power added to M. Atk. -->
 		<icon>icon.skill1451</icon>
 		<castRange>900</castRange>
 		<effectPoint>-1009</effectPoint>
@@ -2888,7 +2923,7 @@
 		</effects>
 	</skill>
 	<skill id="1453" toLevel="2" name="Ice Vortex Crusher">
-		<!-- Creates an Ice Vortex that inflicts Water damage on the enemy with 175 Power added to M. Atk. -->
+		<!-- Attacks by ice vortex and inflicts water damage on the target with $s1 Power added to M. Atk. -->
 		<icon>icon.skill1453</icon>
 		<castRange>900</castRange>
 		<effectPoint>-1009</effectPoint>
@@ -2998,7 +3033,7 @@
 		</effects>
 	</skill>
 	<skill id="1456" toLevel="2" name="Wind Vortex Slug">
-		<!-- Creates a powerful Wind Vortex that inflicts Wind damage on the enemy with 175 Power added to M. Atk. -->
+		<!-- Attacks by wind vortex and inflicts wind damage on the target with $s1 Power added to M. Atk. -->
 		<icon>icon.skill1456</icon>
 		<castRange>900</castRange>
 		<effectPoint>-1009</effectPoint>
@@ -3120,7 +3155,7 @@
 		</effects>
 	</skill>
 	<skill id="1459" toLevel="3" name="Divine Power">
-		<!-- Increases the power of recovery magic with $s2 Power for $s1. -->
+		<!-- For $s1, Received Healing +$s2. -->
 		<icon>icon.skill1459</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -3675,7 +3710,7 @@
 		</effects>
 	</skill>
 	<skill id="1476" toLevel="3" name="Appetite for Destruction">
-		<!-- For $s1, awakens a party member's destructive instincts and P. Atk., Critical Rate and Critical Damage +$s2. -->
+		<!-- For $s1, awakens a party member's destructive instincts and P. Atk./ P. Critical Rate/ P. Critical Damage +$s2. -->
 		<icon>icon.skill1476</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3837,7 +3872,7 @@
 		</effects>
 	</skill>
 	<skill id="1479" toLevel="3" name="Magic Impulse">
-		<!-- Stirs up the magic urge to get M. Atk. +$s2 Casting Spd. +$s3, and the chance of prominent magic damage +$s4 for $s1. -->
+		<!-- Stirs up the magic urge to get M. Atk. +$s2 Casting Spd. +$s3, and the chance of prominent magic damage +$s4 for $s1 -->
 		<icon>icon.skill1479</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3990,7 +4025,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Oblivion -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
@@ -4049,7 +4084,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Weak Constitution -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
@@ -4120,7 +4155,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Thin Skin -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
@@ -4179,7 +4214,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Enervation -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
@@ -4191,7 +4226,7 @@
 		</effects>
 	</skill>
 	<skill id="1485" toLevel="3" name="Spite">
-		<!-- For $s1, inflicts a curse that causes malice in the target that is attacking the enemy and causes great Critical Damage at a certain rate when damage is received. -->
+		<!-- For $s1, inflicts a curse that causes malice in the target that is attacking the enemy and causes great P. Critical Damage at a certain rate when damage is received. -->
 		<icon>icon.skill1485</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -4233,7 +4268,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Spite -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
@@ -4286,7 +4321,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Mental Impoverish -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
@@ -4449,7 +4484,7 @@
 		</effects>
 	</skill>
 	<skill id="1490" toLevel="1" name="Healer Ability: Heal">
-		<!-- Has a chance to recover HP while being attacked. -->
+		<!-- Has a chance to recover HP when striking. -->
 		<icon>icon.skill1011</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>75</magicLvl>
@@ -4458,7 +4493,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Healer Ability - Heal -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>2</chance>
@@ -4479,7 +4514,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Summoner Ability - Spirit -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>2</chance>
@@ -4511,7 +4546,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Flame Armor -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>10</chance>
@@ -4547,7 +4582,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Frost Armor -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>10</chance>
@@ -4583,7 +4618,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Hurricane Armor -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>10</chance>
@@ -4689,7 +4724,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Excessive Royalty -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
@@ -4709,7 +4744,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Mutual Response -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>

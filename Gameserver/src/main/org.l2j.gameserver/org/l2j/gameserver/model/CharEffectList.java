@@ -352,6 +352,26 @@ public final class CharEffectList {
     }
 
     /**
+     * Exits all active, passive and option effects in this effect list without excluding anything,<br>
+     * like necessary toggles, irreplacable buffs or effects that last through death.<br>
+     * Stops all the effects, clear the effect lists and updates the effect flags and icons.
+     * @param update set to true to update the effect flags and icons.
+     * @param broadcast {@code true} to broadcast update packets, {@code false} otherwise.
+     */
+    public void stopAllEffectsWithoutExclusions(boolean update, boolean broadcast)
+    {
+        _actives.forEach(this::remove);
+        _passives.forEach(this::remove);
+        _options.forEach(this::remove);
+
+        // Update stats, effect flags and icons.
+        if (update)
+        {
+            updateEffectList(broadcast);
+        }
+    }
+
+    /**
      * Stops all active toggle skills.
      */
     public void stopAllToggles() {

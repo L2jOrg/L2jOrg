@@ -30,6 +30,8 @@ import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Energy Attack effect implementation.
  * @author NosBit
@@ -75,7 +77,7 @@ public final class EnergyAttack extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effector.isPlayer())
+		if (!isPlayer(effector))
 		{
 			return;
 		}
@@ -125,6 +127,7 @@ public final class EnergyAttack extends AbstractEffect
 			// Trait, elements
 			final double weaponTraitMod = Formulas.calcWeaponTraitBonus(attacker, effected);
 			final double generalTraitMod = Formulas.calcGeneralTraitBonus(attacker, effected, skill.getTraitType(), true);
+			final double weaknessMod = Formulas.calcWeaknessBonus(attacker, effected, skill.getTraitType());
 			final double attributeMod = Formulas.calcAttributeBonus(attacker, effected, skill);
 			final double pvpPveMod = Formulas.calculatePvpPveBonus(attacker, effected, skill, true);
 			
@@ -147,12 +150,11 @@ public final class EnergyAttack extends AbstractEffect
 			// ...................________Initial Damage_________...__Charges Additional Damage__...____________________________________
 			// ATTACK CALCULATION ((77 * ((pAtk * lvlMod) + power) * (1 + (0.1 * chargesConsumed)) / pdef) * skillPower) + skillPowerAdd
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-			final double baseMod = (77 * ((attacker.getPAtk() * attacker.getLevelMod()) + _power)) / defence;
-			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * attributeMod * energyChargesBoost * pvpPveMod;
-			damage = attacker.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, damage);
+			final double baseMod = (77 * ((attacker.getPAtk() * attacker.getLevelMod()) + _power + effector.getStat().getValue(Stats.SKILL_POWER_ADD, 0))) / defence;
+			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * energyChargesBoost * pvpPveMod;
 		}
-		
-		damage = Math.max(0, damage);
+
+		damage = Math.max(0, damage * effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 1));
 		
 		effector.doAttack(damage, effected, skill, false, false, critical, false);
 	}

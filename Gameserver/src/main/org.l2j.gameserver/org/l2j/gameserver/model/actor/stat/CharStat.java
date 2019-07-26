@@ -34,11 +34,13 @@ public class CharStat {
     private final Deque<StatsHolder> _additionalAdd = new ConcurrentLinkedDeque<>();
     private final Deque<StatsHolder> _additionalMul = new ConcurrentLinkedDeque<>();
     private final Map<Stats, Double> _fixedValue = new ConcurrentHashMap<>();
-    private final float[] _attackTraits = new float[TraitType.values().length];
-    private final float[] _defenceTraits = new float[TraitType.values().length];
-    private final int[] _attackTraitsCount = new int[TraitType.values().length];
-    private final int[] _defenceTraitsCount = new int[TraitType.values().length];
-    private final int[] _traitsInvul = new int[TraitType.values().length];
+
+    private final float[] _attackTraitValues = new float[TraitType.values().length];
+    private final float[] _defenceTraitValues = new float[TraitType.values().length];
+    private final Set<TraitType> _attackTraits = EnumSet.noneOf(TraitType.class);
+    private final Set<TraitType> _defenceTraits = EnumSet.noneOf(TraitType.class);
+    private final Set<TraitType> _invulnerableTraits = EnumSet.noneOf(TraitType.class);
+
     private final ReentrantReadWriteLock _lock = new ReentrantReadWriteLock();
     private long _exp = 0;
     private long _sp = 0;
@@ -56,8 +58,11 @@ public class CharStat {
 
     public CharStat(Creature activeChar) {
         _activeChar = activeChar;
-        Arrays.fill(_attackTraits, 1.0f);
-        Arrays.fill(_defenceTraits, 1.0f);
+        for (int i = 0; i < TraitType.values().length; i++)
+        {
+            _attackTraitValues[i] = 1;
+            _defenceTraitValues[i] = 1;
+        }
     }
 
     /**
@@ -465,44 +470,155 @@ public class CharStat {
         }
     }
 
-    public float getAttackTrait(TraitType traitType) {
-        return _attackTraits[traitType.ordinal()];
+    public void mergeAttackTrait(TraitType traitType, float value)
+    {
+        _lock.readLock().lock();
+        try
+        {
+            _attackTraitValues[traitType.ordinal()] += value;
+            _attackTraits.add(traitType);
+        }
+        finally
+        {
+            _lock.readLock().unlock();
+        }
     }
 
-    public float[] getAttackTraits() {
-        return _attackTraits;
+    public void removeAttackTrait(TraitType traitType, float value)
+    {
+        _lock.readLock().lock();
+        try
+        {
+            _attackTraitValues[traitType.ordinal()] -= value;
+            if (_attackTraitValues[traitType.ordinal()] == 1)
+            {
+                _attackTraits.remove(traitType);
+            }
+        }
+        finally
+        {
+            _lock.readLock().unlock();
+        }
     }
+
+    public float getAttackTrait(TraitType traitType) {
+        _lock.readLock().lock();
+        try
+        {
+            return _attackTraitValues[traitType.ordinal()];
+        }
+        finally
+        {
+            _lock.readLock().unlock();
+        }
+    }
+
 
     public boolean hasAttackTrait(TraitType traitType) {
-        return _attackTraitsCount[traitType.ordinal()] > 0;
+        _lock.readLock().lock();
+        try
+        {
+            return _attackTraits.contains(traitType);
+        }
+        finally
+        {
+            _lock.readLock().unlock();
+        }
     }
 
-    public int[] getAttackTraitsCount() {
-        return _attackTraitsCount;
+    public void mergeDefenceTrait(TraitType traitType, float value)
+    {
+        _lock.readLock().lock();
+        try
+        {
+            _defenceTraitValues[traitType.ordinal()] += value;
+            _defenceTraits.add(traitType);
+        }
+        finally
+        {
+            _lock.readLock().unlock();
+        }
+    }
+
+    public void removeDefenceTrait(TraitType traitType, float value)
+    {
+        _lock.readLock().lock();
+        try
+        {
+            _defenceTraitValues[traitType.ordinal()] -= value;
+            if (_defenceTraitValues[traitType.ordinal()] == 1)
+            {
+                _defenceTraits.remove(traitType);
+            }
+        }
+        finally
+        {
+            _lock.readLock().unlock();
+        }
     }
 
     public float getDefenceTrait(TraitType traitType) {
-        return _defenceTraits[traitType.ordinal()];
-    }
-
-    public float[] getDefenceTraits() {
-        return _defenceTraits;
+        _lock.readLock().lock();
+        try
+        {
+            return _defenceTraitValues[traitType.ordinal()];
+        }
+        finally
+        {
+            _lock.readLock().unlock();
+        }
     }
 
     public boolean hasDefenceTrait(TraitType traitType) {
-        return _defenceTraitsCount[traitType.ordinal()] > 0;
+        _lock.readLock().lock();
+        try
+        {
+            return _defenceTraits.contains(traitType);
+        }
+        finally
+        {
+            _lock.readLock().unlock();
+        }
     }
 
-    public int[] getDefenceTraitsCount() {
-        return _defenceTraitsCount;
+    public void mergeInvulnerableTrait(TraitType traitType)
+    {
+        _lock.readLock().lock();
+        try
+        {
+            _invulnerableTraits.add(traitType);
+        }
+        finally
+        {
+            _lock.readLock().unlock();
+        }
     }
 
-    public boolean isTraitInvul(TraitType traitType) {
-        return _traitsInvul[traitType.ordinal()] > 0;
+    public void removeInvulnerableTrait(TraitType traitType)
+    {
+        _lock.readLock().lock();
+        try
+        {
+            _invulnerableTraits.remove(traitType);
+        }
+        finally
+        {
+            _lock.readLock().unlock();
+        }
     }
 
-    public int[] getTraitsInvul() {
-        return _traitsInvul;
+
+    public boolean isInvulnerableTrait(TraitType traitType)
+    {
+        _lock.readLock().lock();
+        try
+        {
+            return _invulnerableTraits.contains(traitType);
+        }
+        finally
+        {
+            _lock.readLock().unlock();
+        }
     }
 
     /**

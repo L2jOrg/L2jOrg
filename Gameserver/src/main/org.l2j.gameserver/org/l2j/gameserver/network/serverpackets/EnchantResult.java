@@ -11,18 +11,18 @@ public class EnchantResult extends ServerPacket {
     public static int BLESSED_FAIL = 3;
     public static int NO_CRYSTAL = 4;
     public static int SAFE_FAIL = 5;
-    private final int _result;
-    private final int _crystal;
-    private final int _count;
-    private final int _enchantLevel;
-    private final int[] _enchantOptions;
+    private final int result;
+    private final int crystal;
+    private final int count;
+    private final int enchantLevel;
+    private final int[] enchantOptions;
 
     public EnchantResult(int result, int crystal, int count, int enchantLevel, int[] options) {
-        _result = result;
-        _crystal = crystal;
-        _count = count;
-        _enchantLevel = enchantLevel;
-        _enchantOptions = options;
+        this.result = result;
+        this.crystal = crystal;
+        this.count = count;
+        this.enchantLevel = enchantLevel;
+        enchantOptions = options;
     }
 
     public EnchantResult(int result, int crystal, int count) {
@@ -37,13 +37,15 @@ public class EnchantResult extends ServerPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.ENCHANT_RESULT);
 
-        writeInt(_result);
-        writeInt(_crystal);
-        writeLong(_count);
-        writeInt(_enchantLevel);
-        for (int option : _enchantOptions) {
-            writeShort((short) option);
+        writeInt(result);
+        writeInt(crystal);
+        writeLong(count);
+
+        for (int option : enchantOptions) {
+            writeInt(option);
         }
+
+        writeInt(enchantLevel);
     }
 
 }

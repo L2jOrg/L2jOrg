@@ -12,6 +12,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 
 /**
  * Attack stance task manager.
@@ -94,7 +96,7 @@ public class AttackStanceTaskManager {
                         if (actor != null) {
                             actor.broadcastPacket(new AutoAttackStop(actor.getObjectId()));
                             actor.getAI().setAutoAttacking(false);
-                            if (actor.isPlayer() && actor.hasSummon()) {
+                            if (isPlayer(actor) && actor.hasSummon()) {
                                 final Summon pet = actor.getPet();
                                 if (pet != null) {
                                     pet.broadcastPacket(new AutoAttackStop(pet.getObjectId()));

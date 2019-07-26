@@ -252,6 +252,12 @@
 			<value level="10">48</value>
 			<value level="11">48</value>
 			<value level="12">49</value>
+			<value level="13">49</value>
+			<value level="14">49</value>
+			<value level="15">49</value>
+			<value level="16">49</value>
+			<value level="17">49</value>
+			<value level="18">49</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -404,7 +410,7 @@
 		</effects>
 	</skill>
 	<skill id="1307" toLevel="3" name="Prayer">
-		<!-- For $s1, party members' HP heal amount +$s2. -->
+		<!-- All party members' Received Healing +$s2 for $s1 -->
 		<icon>icon.skill1307</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -455,7 +461,7 @@
 		</effects>
 	</skill>
 	<skill id="1308" toLevel="3" name="Chant of Predator">
-		<!-- All party members' Critical Rate +$s2 for $s1. -->
+		<!-- All party members' P. Critical Rate +$s2 for $s1 -->
 		<icon>icon.skill1308</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -506,7 +512,7 @@
 		</effects>
 	</skill>
 	<skill id="1309" toLevel="3" name="Chant of Eagle">
-		<!-- All party members' Accuracy +$s2 for $s1. -->
+		<!-- All party members' P. Accuracy +$s2 for $s1 -->
 		<icon>icon.skill1309</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -614,7 +620,7 @@
 		</effects>
 	</skill>
 	<skill id="1311" toLevel="6" name="Body of Avatar">
-		<!-- Restores HP of all party members by $s2 andMax HP +$s3 for $s1. -->
+		<!-- For $s2, restores HP of all party members by $s1 and Max HP +$s3. -->
 		<icon>icon.skill1311</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -844,7 +850,7 @@
 		</effects>
 	</skill>
 	<skill id="1327" toLevel="1" name="Noblesse Symphony">
-		<!-- Advances to the frontline of the battleground. For 15 sec., M. Def. +4500, Speed +25%, Buff-canceling Attack Resistance +80%, Bow Resistance +10, and Crossbow Resistance +6. CP -20%. Can only be used on the battleground when CP is above 50%. Consumes 5 Spirit Ore. Maximum fighting spirit and HP are limited. -->
+		<!-- Advances to the frontline of the battleground. For 15 sec., P. Def. +4500, Speed +25%, Buff-canceling Attack Resistance +80%, Bow Resistance +10, and Crossbow Resistance +6. CP -20%. Can only be used on the battleground when CP is above 50%. Consumes 5 Spirit Ore. Maximum fighting spirit and HP are limited. -->
 		<icon>icon.skill1327</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1725,6 +1731,7 @@
 				<power>
 					<value level="1">12</value>
 					<value level="2">16</value>
+					<value level="3">20</value>
 				</power>
 				<ticks>1</ticks>
 			</effect>
@@ -1795,7 +1802,7 @@
 		</effects>
 	</skill>
 	<skill id="1342" toLevel="1" name="Light Vortex">
-		<!-- Stirs up a vortex connected to the holy dimension and inflicts Holy damage on the enemy with 139 Power added to M. Atk. For 30 sec., Accuracy -6 and Holy Attack Resistance -30. Consumes 12 MP every sec. -->
+		<!-- Stirs up a vortex connected to the holy dimension and inflicts Holy damage on the enemy with 139 Power added to M. Atk. For 30 sec., P. Accuracy -6 and Holy Attack Resistance -30. Consumes 12 MP every sec. -->
 		<icon>icon.skill1342</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1954,7 +1961,7 @@
 		</effects>
 	</skill>
 	<skill id="1346" toLevel="1" name="Warrior Servitor">
-		<!-- For 10 min., causes the servitor to be possessed with the spirit of an ancient hero. Max HP +10%, HP Recovery Bonus +10%, P. Def. +10%, P. Atk. +10%, Atk. Spd. +5%, Debuff Resistance +20%. Consumes 20 Spirit Ore. -->
+		<!-- For 10 min., causes the servitor to be possessed with the spirit of an ancient hero. Max HP +30%, HP Recovery Bonus +20%, P. Atk. +25%, P. Def. +25%, Atk. Spd. +20%, Debuff Resistance +20%. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1346</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2003,7 +2010,7 @@
 		</effects>
 	</skill>
 	<skill id="1347" toLevel="1" name="Wizard Servitor">
-		<!-- For 10 min., causes the servitor to be possessed with the spirit of an ancient wizard. MP Recovery Bonus +10%, M. Atk. +10%, M. Def. +10%, Casting Spd. +5%, Debuff Resistance +20%. Skill MP Consumption -3%. Consumes 20 Spirit Ore. -->
+		<!-- For 10 min., causes the servitor to be possessed with the spirit of an ancient wizard. MP Recovery Bonus +30%, M. Atk. +25%, M. Def. +25%, Casting Spd. +20%, Debuff Resistance +20%. Skill MP Consumption -5%. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1347</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2053,7 +2060,7 @@
 		</effects>
 	</skill>
 	<skill id="1348" toLevel="1" name="Assassin Servitor">
-		<!-- Possesses a Servitor with a spirit of ancient assassins. For 10 min. P. Evasion +3, P. Accuracy +3, P. Critical +10%, P. Critical Damage +15%, Speed +10%, Debuff Resistance +20%. Consumes 20 Spirit Ore. -->
+		<!-- Possesses a Servitor with a spirit of ancient assassins. For 10 min. P./ M. Accuracy +4, P./ M. Evasion +4, P./ M. Critical Rate +20%, P./ M. Critical Damage +25%, Speed +10, Debuff Resistance +20%. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1348</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2106,7 +2113,7 @@
 		</effects>
 	</skill>
 	<skill id="1349" toLevel="1" name="Final Servitor">
-		<!-- For 10 min., causes the servitor to be possessed with the spirit of an ancient hero. Max HP/ MP +10%, P./ M. Accuracy +4, P./ M. Evasion +4, P./ M. Atk. +10%, P./ M. Def. +10%, Atk. Spd./ Casting Spd. +5%, P./ M. Critical Rate +10%, P./ M. Critical Damage +10%, and Debuff Resistance +20. Consumes 40 Spirit Ore. -->
+		<!-- For 10 min., causes the servitor to be possessed with the spirit of an ancient hero. Max HP/ MP +20%, P./ M. Accuracy +4, P./ M. Evasion +4, P./ M. Atk. +20%, P./ M. Def. +20%, Atk. Spd./ Casting Spd. +15%, P./ M. Critical Rate +15%, P./ M. Critical Damage +15%, and Debuff Resistance +20%. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1349</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2398,7 +2405,7 @@
 		</effects>
 	</skill>
 	<skill id="1355" toLevel="2" name="Prophecy of Water">
-		<!-- For 10 min., a powerful spirit acts to get a party member's MP Recovery bonus +10%, M. Atk. +10%, M. Def +10%, Casting Spd. +5%, Debuff Resistance +10%. Skill MP Consumption -3%. Consumes 20 Spirit Ore. -->
+		<!-- For $s1, party member's MP Recovery Bonus +$s2, M. Atk. +$s3, M. Def. +$s4, Casting Spd. +$s5, Debuff Resistance +$s6, Skill MP Consumption -$s7. Consumes $s8 Spirit Ore. -->
 		<icon>icon.skill1355</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -2493,7 +2500,7 @@
 		</effects>
 	</skill>
 	<skill id="1356" toLevel="2" name="Prophecy of Fire">
-		<!-- For 10 min., a powerful spirit acts to get a party member's Max HP +10%, HP Recovery bonus +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. + 5%, and Debuff Resistance +10%. Consumes 20 Spirit Ore. -->
+		<!-- For $s1, party member's Max HP +$s2, HP Recovery Bonus +$s3, P. Atk. +$s4, P. Def. +$s5, Atk. Spd. +$s6, Debuff Resistance +$s7. Consumes $s8 Spirit Ore. -->
 		<icon>icon.skill1356</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -2571,7 +2578,7 @@
 		</effects>
 	</skill>
 	<skill id="1357" toLevel="2" name="Prophecy of Wind">
-		<!-- For 10 min., party member's P. Evasion +3, P. Accuracy +3, P. Critical Rate +10%, P. Critical Damage +15%, Speed +10%, Debuff Resistance +10%, damage to Raid Bosses +10%. Consumes 20 Spirit Ore. -->
+		<!-- For $s1, party member's P./ M. Accuracy +$s2, P./ M. Evasion +$s3, P./ M. Critical Rate +$s4, P./ M. Critical Damage +$s5, Speed +$s6, Debuff Resistance +$s7, damage to raid bosses +$s8. Consumes $s9 Spirit Ore. -->
 		<icon>icon.skill1357</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -2686,7 +2693,7 @@
 		</effects>
 	</skill>
 	<skill id="1359" toLevel="1" name="Block Wind Walk">
-		<!-- For 2 min., target's Speed -20%, prevents receiving Speed-increasing buffs. -->
+		<!-- For 2 min., target's Speed -40, prevents receiving Speed-increasing buffs. -->
 		<icon>icon.skill1359</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2830,7 +2837,7 @@
 		</effects>
 	</skill>
 	<skill id="1363" toLevel="2" name="Chant of Victory">
-		<!-- For 10 min., a powerful spirit acts to get a party members HP/ MP Recovery bonus +20%, P./ M. Accuracy +4, P./ M. Evasion +4, P./ M. Atk. +15%, Atk./ Casting Spd. +10%, P./ M. Critical Rate +15%, P./ M. Critical Damage + 15%. Consumes 60 Spirit Ore. -->
+		<!-- For $s1, party member's HP/ MP Recovery Bonus +$s2, P./ M. Accuracy +$s3, P./ M. Evasion +$s4, P./ M. Atk. +$s5, Atk. Spd./ Casting Spd. +$s6, P./ M. Critical Rate +$s7, P./ M. Critical Damage +$s8. Consumes $s9 Spirit Ore. -->
 		<icon>icon.skill1363</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -2938,7 +2945,7 @@
 		</effects>
 	</skill>
 	<skill id="1364" toLevel="1" name="Pa'agrio's Eye">
-		<!-- For 20 min., nearby clan members' P. Accuracy +4 and chance of receiving critical attacks -30%. -->
+		<!-- For 20 min., nearby clan members' P. Accuracy +4 and chance of receiving P. Critical Attack -30%. -->
 		<icon>icon.skill1364</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -3996,7 +4003,7 @@
 		</effects>
 	</skill>
 	<skill id="1388" toLevel="3" name="Greater Might">
-		<!-- P. Atk. +$s2 for $s1. Consumes $s3 Spirit Ore(s). -->
+		<!-- For $s1, P. Atk. +$s2. Consumes $s3 Spirit Ore. -->
 		<icon>icon.skill1388</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4048,7 +4055,7 @@
 		</effects>
 	</skill>
 	<skill id="1389" toLevel="3" name="Greater Shield">
-		<!-- P. Def. +$s2 for $s1. Consumes $s3 Spirit Ore(s). -->
+		<!-- For $s1, P. Def. +$s2. Consumes $s3 Spirit Ore. -->
 		<icon>icon.skill1389</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4204,7 +4211,7 @@
 		</effects>
 	</skill>
 	<skill id="1392" toLevel="3" name="Holy Attack Resistance">
-		<!-- Holy Resistance +$s2 for $s1. -->
+		<!-- For $s1, Holy Resistance +$s2. -->
 		<icon>icon.skill1392</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4250,7 +4257,7 @@
 		</effects>
 	</skill>
 	<skill id="1393" toLevel="3" name="Dark Attack Resistance">
-		<!-- Dark Attack Resistance +$s2 for $s1. -->
+		<!-- For $s1, Dark Attack Resistance +$s2. -->
 		<icon>icon.skill1393</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

@@ -39,9 +39,10 @@ public abstract class AbstractOlympiadGame {
     protected static final String COMP_DONE_WEEK_CLASSED = "competitions_done_week_classed";
     protected static final String COMP_DONE_WEEK_NON_CLASSED = "competitions_done_week_non_classed";
     protected static final String COMP_DONE_WEEK_TEAM = "competitions_done_week_team";
-    protected final int _stadiumId;
+
     protected long _startTime = 0;
     protected boolean _aborted = false;
+	protected final int _stadiumId;
 
     protected AbstractOlympiadGame(int id) {
         _stadiumId = id;
@@ -399,10 +400,6 @@ public abstract class AbstractOlympiadGame {
     protected abstract void validateWinner(OlympiadStadium stadium);
 
     protected abstract int getDivider();
-
-    protected abstract List<ItemHolder> getReward();
-
-    protected abstract String getWeeklyMatchType();
 
     protected abstract void healPlayers();
 

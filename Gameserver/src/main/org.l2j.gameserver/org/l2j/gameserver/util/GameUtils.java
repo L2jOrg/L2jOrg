@@ -2,7 +2,6 @@ package org.l2j.gameserver.util;
 
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
@@ -15,12 +14,17 @@ import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.tasks.player.IllegalPlayerActionTask;
 import org.l2j.gameserver.model.interfaces.ILocational;
+import org.l2j.gameserver.model.items.Armor;
+import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.network.serverpackets.AbstractHtmlPacket;
 import org.l2j.gameserver.network.serverpackets.ShowBoard;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.text.*;
+import java.text.DateFormat;
+import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -477,6 +481,14 @@ public final class GameUtils {
 
     public static boolean isAttackable(WorldObject object) {
         return object instanceof Attackable && !(object instanceof FriendlyNpc);
+    }
+
+    public static boolean isWeapon(ItemTemplate item) {
+        return item instanceof Weapon;
+    }
+
+    public static boolean isArmor(ItemTemplate item) {
+        return item instanceof Armor;
     }
 
     public static <T extends WorldObject> Predicate<T> isVisible(WorldObject reference, int range) {

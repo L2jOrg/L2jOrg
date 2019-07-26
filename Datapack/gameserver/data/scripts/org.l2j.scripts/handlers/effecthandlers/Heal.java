@@ -84,7 +84,8 @@ public final class Heal extends AbstractEffect
 		if (!skill.isStatic())
 		{
 			amount += staticShotBonus + Math.sqrt(mAtkMul * effector.getMAtk());
-			amount = effected.getStat().getValue(Stats.HEAL_EFFECT, amount);
+			amount *= effected.getStat().getValue(Stats.HEAL_EFFECT, 1);
+			amount += effected.getStat().getValue(Stats.HEAL_EFFECT_ADD, 0);
 			// Heal critic, since CT2.3 Gracia Final
 			if (skill.isMagic() && Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill))
 			{

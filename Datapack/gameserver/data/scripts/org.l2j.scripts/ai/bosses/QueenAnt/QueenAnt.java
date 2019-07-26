@@ -1,24 +1,7 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package ai.bosses.QueenAnt;
 
 import ai.AbstractNpcAI;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
@@ -41,7 +24,6 @@ import org.l2j.gameserver.util.MathUtil;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ScheduledFuture;
 
 /**
  * Queen Ant's AI
@@ -84,7 +66,6 @@ public final class QueenAnt extends AbstractNpcAI
 	Monster _queen = null;
 	private Monster _larva = null;
 	private final Set<Monster> _nurses = ConcurrentHashMap.newKeySet();
-	ScheduledFuture<?> _task = null;
 	
 	private QueenAnt()
 	{
@@ -160,7 +141,9 @@ public final class QueenAnt extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
-		if (event.equalsIgnoreCase("heal"))
+		switch (event)
+		{
+			case "heal":
 		{
 			boolean notCasting;
 			final boolean larvaNeedHeal = (_larva != null) && (_larva.getCurrentHp() < _larva.getMaxHp());
@@ -202,10 +185,11 @@ public final class QueenAnt extends AbstractNpcAI
 					nurse.setTarget(null);
 				}
 			}
+				break;
 		}
-		else if (event.equalsIgnoreCase("action") && (npc != null))
+			case "action":
 		{
-			if (getRandom(3) == 0)
+				if ((npc != null) && (getRandom(3) == 0))
 			{
 				if (getRandom(2) == 0)
 				{
@@ -216,12 +200,28 @@ public final class QueenAnt extends AbstractNpcAI
 					npc.broadcastSocialAction(4);
 				}
 			}
+				break;
 		}
-		else if (event.equalsIgnoreCase("queen_unlock"))
+			case "queen_unlock":
 		{
 			final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
 			GrandBossManager.getInstance().setBossStatus(QUEEN, ALIVE);
 			spawnBoss(queen);
+				break;
+			}
+			case "ANT_QUEEN_TASK":
+			{
+				if ((_queen == null) || _queen.isDead())
+				{
+					cancelQuestTimers("ANT_QUEEN_TASK");
+				}
+				else if (!MathUtil.isInsideRadius2D(_queen, QUEEN_X, QUEEN_Y, 2000))
+				{
+					_queen.clearAggroList();
+					_queen.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(QUEEN_X, QUEEN_Y, QUEEN_Z, 0));
+				}
+				break;
+			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -258,7 +258,8 @@ public final class QueenAnt extends AbstractNpcAI
 				{
 					((Monster) npc).getMinionList().spawnMinions(npc.getParameters().getMinionList("Privates"));
 				}
-				_task = ThreadPoolManager.scheduleAtFixedRate(new QueenAntTask(), 5 * 1000, 5 * 1000);
+				cancelQuestTimer("ANT_QUEEN_TASK", npc, null);
+				startQuestTimer("ANT_QUEEN_TASK", 5000, npc, null, true);
 				break;
 			}
 		}
@@ -360,11 +361,7 @@ public final class QueenAnt extends AbstractNpcAI
 			_larva.deleteMe();
 			_larva = null;
 			_queen = null;
-			if (_task != null)
-			{
-				_task.cancel(false);
-				_task = null;
-			}
+			cancelQuestTimers("ANT_QUEEN_TASK");
 		}
 		else if ((_queen != null) && !_queen.isAlikeDead())
 		{
@@ -388,30 +385,7 @@ public final class QueenAnt extends AbstractNpcAI
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
-	
-	private class QueenAntTask implements Runnable
-	{
-		public QueenAntTask()
-		{
-			// Constructor stub
-		}
-		
-		@Override
-		public void run()
-		{
-			if ((_queen == null) || _queen.isDead())
-			{
-				_task.cancel(false);
-				_task = null;
-			}
-			else if (MathUtil.isInsideRadius2D(_queen, QUEEN_X, QUEEN_Y, 2000))
-			{
-				_queen.clearAggroList();
-				_queen.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(QUEEN_X, QUEEN_Y, QUEEN_Z, 0));
-			}
-		}
-	}
-	
+
 	public static AbstractNpcAI provider()
 	{
 		return new QueenAnt();

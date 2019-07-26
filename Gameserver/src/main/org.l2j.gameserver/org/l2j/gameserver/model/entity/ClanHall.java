@@ -309,8 +309,8 @@ public final class ClanHall extends AbstractResidence {
             if (_owner != null) {
                 if (_owner.getWarehouse().getAdena() < _lease) {
                     if (getCostFailDay() > 8) {
-                        setOwner(null);
                         _owner.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_HALL_FEE_IS_ONE_WEEK_OVERDUE_THEREFORE_THE_CLAN_HALL_OWNERSHIP_HAS_BEEN_REVOKED));
+                        setOwner(null);
                     } else {
                         _checkPaymentTask = ThreadPoolManager.schedule(new CheckPaymentTask(), 24 * 60 * 60 * 1000); // 1 day
                         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);

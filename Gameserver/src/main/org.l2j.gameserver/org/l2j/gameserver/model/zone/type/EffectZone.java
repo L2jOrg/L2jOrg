@@ -33,6 +33,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * another type of damage zone with skills
  *
@@ -124,13 +126,13 @@ public final class EffectZone extends Zone {
             if (getSettings().getTask() == null) {
                 synchronized (this) {
                     if (getSettings().getTask() == null) {
-                        getSettings().setTask(ThreadPoolManager.getInstance().scheduleAtFixedRate(new ApplySkill(), _initialDelay, _reuse));
+                        getSettings().setTask(ThreadPoolManager.scheduleAtFixedRate(new ApplySkill(), _initialDelay, _reuse));
                     }
                 }
             }
         }
 
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             character.setInsideZone(ZoneId.ALTERED, true);
             if (_isShowDangerIcon) {
                 character.setInsideZone(ZoneId.DANGER_AREA, true);
@@ -141,7 +143,7 @@ public final class EffectZone extends Zone {
 
     @Override
     protected void onExit(Creature character) {
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             character.setInsideZone(ZoneId.ALTERED, false);
             if (_isShowDangerIcon) {
                 character.setInsideZone(ZoneId.DANGER_AREA, false);

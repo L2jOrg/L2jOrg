@@ -109,6 +109,7 @@ public class GameServer {
         EnchantItemHPBonusData.getInstance();
         BuyListData.getInstance();
         MultisellData.getInstance();
+        EquipmentUpgradeData.getInstance();
         RecipeData.getInstance();
         ArmorSetsData.getInstance();
         FishingData.getInstance();

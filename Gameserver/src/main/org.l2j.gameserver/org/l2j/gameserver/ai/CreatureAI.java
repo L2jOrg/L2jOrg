@@ -109,12 +109,6 @@ public class CreatureAI extends AbstractAI {
             // Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
             clientStopAutoAttack();
 
-            // Also enable random animations for this Creature if allowed
-            // This is only for mobs - town npcs are handled in their constructor
-            if (actor.isAttackable()) {
-                ((Npc) actor).startRandomAnimationTask();
-            }
-
             // Launch the Think Event
             onEvtThink();
         }
@@ -248,9 +242,10 @@ public class CreatureAI extends AbstractAI {
      * <li>Set the Intention of this AI to AI_INTENTION_MOVE_TO</li>
      * <li>Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)</li>
      * </ul>
+     * @param loc
      */
     @Override
-    protected void onIntentionMoveTo(Location loc) {
+    protected void onIntentionMoveTo(ILocational loc) {
         if (getIntention() == AI_INTENTION_REST) {
             // Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
             clientActionFailed();

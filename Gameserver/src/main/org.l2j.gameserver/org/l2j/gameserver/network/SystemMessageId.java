@@ -14,158 +14,235 @@ public final class SystemMessageId {
     private static final Logger LOGGER = LoggerFactory.getLogger(SystemMessageId.class);
     @ClientString(id = 0, message = "You have been disconnected from the server.")
     public static SystemMessageId YOU_HAVE_BEEN_DISCONNECTED_FROM_THE_SERVER;
+
     @ClientString(id = 1, message = "The server will be coming down in $s1 second(s). Please find a safe place to log out.")
     public static SystemMessageId THE_SERVER_WILL_BE_COMING_DOWN_IN_S1_SECOND_S_PLEASE_FIND_A_SAFE_PLACE_TO_LOG_OUT;
+
     @ClientString(id = 2, message = "$s1 does not exist.")
     public static SystemMessageId S1_DOES_NOT_EXIST;
+
     @ClientString(id = 3, message = "$s1 is not currently logged in.")
     public static SystemMessageId S1_IS_NOT_CURRENTLY_LOGGED_IN;
+
     @ClientString(id = 4, message = "You cannot ask yourself to apply to a clan.")
     public static SystemMessageId YOU_CANNOT_ASK_YOURSELF_TO_APPLY_TO_A_CLAN;
+
     @ClientString(id = 5, message = "$s1 already exists.")
     public static SystemMessageId S1_ALREADY_EXISTS;
+
     @ClientString(id = 6, message = "$s1 does not exist.")
     public static SystemMessageId S1_DOES_NOT_EXIST_2;
+
     @ClientString(id = 7, message = "You are already a member of $s1.")
     public static SystemMessageId YOU_ARE_ALREADY_A_MEMBER_OF_S1;
+
     @ClientString(id = 8, message = "You are already a member of another clan.")
     public static SystemMessageId YOU_ARE_ALREADY_A_MEMBER_OF_ANOTHER_CLAN;
+
     @ClientString(id = 9, message = "$s1 is not a clan leader.")
     public static SystemMessageId S1_IS_NOT_A_CLAN_LEADER;
+
     @ClientString(id = 10, message = "$s1 is already a member of another clan.")
     public static SystemMessageId S1_IS_ALREADY_A_MEMBER_OF_ANOTHER_CLAN;
+
     @ClientString(id = 11, message = "There are no applicants for this clan.")
     public static SystemMessageId THERE_ARE_NO_APPLICANTS_FOR_THIS_CLAN;
+
     @ClientString(id = 12, message = "Applicant information is incorrect.")
     public static SystemMessageId APPLICANT_INFORMATION_IS_INCORRECT;
+
     @ClientString(id = 13, message = "Unable to dissolve: your clan has requested to participate in a castle siege.")
     public static SystemMessageId UNABLE_TO_DISSOLVE_YOUR_CLAN_HAS_REQUESTED_TO_PARTICIPATE_IN_A_CASTLE_SIEGE;
+
     @ClientString(id = 14, message = "Unable to dissolve: your clan owns one or more castles or clan halls.")
     public static SystemMessageId UNABLE_TO_DISSOLVE_YOUR_CLAN_OWNS_ONE_OR_MORE_CASTLES_OR_CLAN_HALLS;
+
     @ClientString(id = 15, message = "You are in siege.")
     public static SystemMessageId YOU_ARE_IN_SIEGE;
+
     @ClientString(id = 16, message = "You are not in siege.")
     public static SystemMessageId YOU_ARE_NOT_IN_SIEGE;
+
     @ClientString(id = 17, message = "The castle siege has begun.")
     public static SystemMessageId THE_CASTLE_SIEGE_HAS_BEGUN;
+
     @ClientString(id = 18, message = "The castle siege has ended.")
     public static SystemMessageId THE_CASTLE_SIEGE_HAS_ENDED;
+
     @ClientString(id = 19, message = "There is a new Lord of the castle!")
     public static SystemMessageId THERE_IS_A_NEW_LORD_OF_THE_CASTLE;
+
     @ClientString(id = 20, message = "The gate is being opened.")
     public static SystemMessageId THE_GATE_IS_BEING_OPENED;
+
     @ClientString(id = 21, message = "The gate is being destroyed.")
     public static SystemMessageId THE_GATE_IS_BEING_DESTROYED;
+
     @ClientString(id = 22, message = "Your target is out of range.")
     public static SystemMessageId YOUR_TARGET_IS_OUT_OF_RANGE;
+
     @ClientString(id = 23, message = "Not enough HP.")
     public static SystemMessageId NOT_ENOUGH_HP;
+
     @ClientString(id = 24, message = "Not enough MP.")
     public static SystemMessageId NOT_ENOUGH_MP;
+
     @ClientString(id = 25, message = "Rejuvenating HP.")
     public static SystemMessageId REJUVENATING_HP;
+
     @ClientString(id = 26, message = "Rejuvenating MP.")
     public static SystemMessageId REJUVENATING_MP;
+
     @ClientString(id = 27, message = "Your casting has been interrupted.")
     public static SystemMessageId YOUR_CASTING_HAS_BEEN_INTERRUPTED;
+
     @ClientString(id = 28, message = "You have obtained $s1 Adena.")
     public static SystemMessageId YOU_HAVE_OBTAINED_S1_ADENA;
+
     @ClientString(id = 29, message = "You have obtained $s2 $s1.")
     public static SystemMessageId YOU_HAVE_OBTAINED_S2_S1;
+
     @ClientString(id = 30, message = "You have obtained $s1.")
     public static SystemMessageId YOU_HAVE_OBTAINED_S1;
+
     @ClientString(id = 31, message = "You cannot use actions and skills while the character is sitting.")
     public static SystemMessageId YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING;
+
     @ClientString(id = 32, message = "You are unable to engage in combat. Please go to the nearest restart point.")
     public static SystemMessageId YOU_ARE_UNABLE_TO_ENGAGE_IN_COMBAT_PLEASE_GO_TO_THE_NEAREST_RESTART_POINT;
+
     @ClientString(id = 33, message = "You cannot move while casting.")
     public static SystemMessageId YOU_CANNOT_MOVE_WHILE_CASTING;
+
     @ClientString(id = 34, message = "Welcome to the World of Lineage II.")
     public static SystemMessageId WELCOME_TO_THE_WORLD_OF_LINEAGE_II;
+
     @ClientString(id = 35, message = "You hit for $s1 damage.")
     public static SystemMessageId YOU_HIT_FOR_S1_DAMAGE;
+
     @ClientString(id = 36, message = "$c1 hit you for $s2 damage.")
     public static SystemMessageId C1_HIT_YOU_FOR_S2_DAMAGE;
+
     @ClientString(id = 37, message = "$c1 hit you for $s2 damage.")
     public static SystemMessageId C1_HIT_YOU_FOR_S2_DAMAGE_2;
+
     @ClientString(id = 38, message = "The TGS2002 event begins!")
     public static SystemMessageId THE_TGS2002_EVENT_BEGINS;
+
     @ClientString(id = 39, message = "The TGS2002 event is over. Thank you very much.")
     public static SystemMessageId THE_TGS2002_EVENT_IS_OVER_THANK_YOU_VERY_MUCH;
+
     @ClientString(id = 40, message = "This is the TGS demo: the character will immediately be restored.")
     public static SystemMessageId THIS_IS_THE_TGS_DEMO_THE_CHARACTER_WILL_IMMEDIATELY_BE_RESTORED;
+
     @ClientString(id = 41, message = "You carefully nock an arrow.")
     public static SystemMessageId YOU_CAREFULLY_NOCK_AN_ARROW;
+
     @ClientString(id = 42, message = "You have avoided $c1's attack.")
     public static SystemMessageId YOU_HAVE_AVOIDED_C1_S_ATTACK;
+
     @ClientString(id = 43, message = "You have missed.")
     public static SystemMessageId YOU_HAVE_MISSED;
+
     @ClientString(id = 44, message = "Critical hit!")
     public static SystemMessageId CRITICAL_HIT;
+
     @ClientString(id = 45, message = "You have earned $s1 XP.")
     public static SystemMessageId YOU_HAVE_EARNED_S1_XP;
+
     @ClientString(id = 46, message = "You use $s1.")
     public static SystemMessageId YOU_USE_S1;
+
     @ClientString(id = 47, message = "You begin to use a(n) $s1.")
     public static SystemMessageId YOU_BEGIN_TO_USE_A_N_S1;
+
     @ClientString(id = 48, message = "$s1 is not available at this time: being prepared for reuse.")
     public static SystemMessageId S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE;
+
     @ClientString(id = 49, message = "You have equipped your $s1.")
     public static SystemMessageId YOU_HAVE_EQUIPPED_YOUR_S1;
+
     @ClientString(id = 50, message = "Your target cannot be found.")
     public static SystemMessageId YOUR_TARGET_CANNOT_BE_FOUND;
+
     @ClientString(id = 51, message = "You cannot use this on yourself.")
     public static SystemMessageId YOU_CANNOT_USE_THIS_ON_YOURSELF;
+
     @ClientString(id = 52, message = "You have earned $s1 Adena.")
     public static SystemMessageId YOU_HAVE_EARNED_S1_ADENA;
+
     @ClientString(id = 53, message = "You have earned $s2 $s1(s).")
     public static SystemMessageId YOU_HAVE_EARNED_S2_S1_S;
+
     @ClientString(id = 54, message = "You have earned $s1.")
     public static SystemMessageId YOU_HAVE_EARNED_S1;
+
     @ClientString(id = 55, message = "You have failed to pick up $s1 Adena.")
     public static SystemMessageId YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA;
+
     @ClientString(id = 56, message = "You have failed to pick up $s1.")
     public static SystemMessageId YOU_HAVE_FAILED_TO_PICK_UP_S1;
+
     @ClientString(id = 57, message = "You have failed to pick up $s2 $s1(s).")
     public static SystemMessageId YOU_HAVE_FAILED_TO_PICK_UP_S2_S1_S;
+
     @ClientString(id = 58, message = "You have failed to earn $s1 Adena.")
     public static SystemMessageId YOU_HAVE_FAILED_TO_EARN_S1_ADENA;
+
     @ClientString(id = 59, message = "You have failed to earn $s1.")
     public static SystemMessageId YOU_HAVE_FAILED_TO_EARN_S1;
+
     @ClientString(id = 60, message = "You have failed to earn $s2 $s1(s).")
     public static SystemMessageId YOU_HAVE_FAILED_TO_EARN_S2_S1_S;
+
     @ClientString(id = 61, message = "Nothing happened.")
     public static SystemMessageId NOTHING_HAPPENED;
+
     @ClientString(id = 62, message = "Your $s1 has been successfully enchanted.")
     public static SystemMessageId YOUR_S1_HAS_BEEN_SUCCESSFULLY_ENCHANTED;
+
     @ClientString(id = 63, message = "Your +$s1 $s2 has been successfully enchanted.")
     public static SystemMessageId YOUR_S1_S2_HAS_BEEN_SUCCESSFULLY_ENCHANTED;
+
     @ClientString(id = 64, message = "The enchantment has failed! Your $s1 has been crystallized.")
     public static SystemMessageId THE_ENCHANTMENT_HAS_FAILED_YOUR_S1_HAS_BEEN_CRYSTALLIZED;
+
     @ClientString(id = 65, message = "The enchantment has failed! Your +$s1 $s2 has been crystallized.")
     public static SystemMessageId THE_ENCHANTMENT_HAS_FAILED_YOUR_S1_S2_HAS_BEEN_CRYSTALLIZED;
+
     @ClientString(id = 66, message = "$c1 is inviting you to join a party. Do you accept?")
     public static SystemMessageId C1_IS_INVITING_YOU_TO_JOIN_A_PARTY_DO_YOU_ACCEPT;
+
     @ClientString(id = 67, message = "$s1 has invited you to join their clan, $s2. Do you wish to join?")
     public static SystemMessageId S1_HAS_INVITED_YOU_TO_JOIN_THEIR_CLAN_S2_DO_YOU_WISH_TO_JOIN;
+
     @ClientString(id = 68, message = "Would you like to withdraw from clan $s1? If you leave, you will have to wait at least a day before joining another clan.")
     public static SystemMessageId WOULD_YOU_LIKE_TO_WITHDRAW_FROM_CLAN_S1_IF_YOU_LEAVE_YOU_WILL_HAVE_TO_WAIT_AT_LEAST_A_DAY_BEFORE_JOINING_ANOTHER_CLAN;
+
     @ClientString(id = 69, message = "Would you like to dismiss $s1 from the clan? If you do so, you will have to wait at least a day before accepting a new member.")
     public static SystemMessageId WOULD_YOU_LIKE_TO_DISMISS_S1_FROM_THE_CLAN_IF_YOU_DO_SO_YOU_WILL_HAVE_TO_WAIT_AT_LEAST_A_DAY_BEFORE_ACCEPTING_A_NEW_MEMBER;
+
     @ClientString(id = 70, message = "Do you wish to disperse the clan, $s1?")
     public static SystemMessageId DO_YOU_WISH_TO_DISPERSE_THE_CLAN_S1;
+
     @ClientString(id = 71, message = "How much $s1(s) do you wish to discard?")
     public static SystemMessageId HOW_MUCH_S1_S_DO_YOU_WISH_TO_DISCARD;
+
     @ClientString(id = 72, message = "How much $s1(s) do you wish to move?")
     public static SystemMessageId HOW_MUCH_S1_S_DO_YOU_WISH_TO_MOVE;
+
     @ClientString(id = 73, message = "How much $s1(s) do you wish to destroy?")
     public static SystemMessageId HOW_MUCH_S1_S_DO_YOU_WISH_TO_DESTROY;
+
     @ClientString(id = 74, message = "Do you wish to destroy your $s1?")
     public static SystemMessageId DO_YOU_WISH_TO_DESTROY_YOUR_S1;
+
     @ClientString(id = 75, message = "ID does not exist.")
     public static SystemMessageId ID_DOES_NOT_EXIST;
+
     @ClientString(id = 76, message = "Incorrect password.")
     public static SystemMessageId INCORRECT_PASSWORD;
+
     @ClientString(id = 77, message = "You cannot create another character. Please delete an existing character and try again.")
     public static SystemMessageId YOU_CANNOT_CREATE_ANOTHER_CHARACTER_PLEASE_DELETE_AN_EXISTING_CHARACTER_AND_TRY_AGAIN;
     @ClientString(id = 78, message = "When you delete a character, any items in his/her possession will also be deleted. Do you really wish to delete $s1?")
@@ -2140,8 +2217,10 @@ public final class SystemMessageId {
     public static SystemMessageId WRITING_SOMETHING_NEW_IS_POSSIBLE_AFTER_LEVEL_10;
     @ClientString(id = 1063, message = "The Petition Service is currently unavailable, please send a support ticket on https://support.4game.com; If you become trapped or unable to move, please use the '/unstuck' command.")
     public static SystemMessageId THE_PETITION_SERVICE_IS_CURRENTLY_UNAVAILABLE_PLEASE_SEND_A_SUPPORT_TICKET_ON_HTTPS_SUPPORT_4GAME_COM_IF_YOU_BECOME_TRAPPED_OR_UNABLE_TO_MOVE_PLEASE_USE_THE_UNSTUCK_COMMAND;
-    @ClientString(id = 1064, message = "The equipment, +$s1 $s2, has been removed.")
-    public static SystemMessageId THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED;
+
+    @ClientString(id = 1064, message = "+$s1 $s2 has been unequipped.")
+    public static SystemMessageId S1_S2_HAS_BEEN_UNEQUIPPED;
+
     @ClientString(id = 1065, message = "While operating a private store or workshop, you cannot discard, destroy, or trade an item.")
     public static SystemMessageId WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM;
     @ClientString(id = 1066, message = "$s1 HP has been restored.")
@@ -4222,8 +4301,8 @@ public final class SystemMessageId {
     public static SystemMessageId YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_ASSOCIATED_WITH_THE_CURRENT_COMMAND_CHANNEL;
     @ClientString(id = 2104, message = "The maximum number of Instance Zones has been exceeded. You cannot enter.")
     public static SystemMessageId THE_MAXIMUM_NUMBER_OF_INSTANCE_ZONES_HAS_BEEN_EXCEEDED_YOU_CANNOT_ENTER;
-    @ClientString(id = 2105, message = "You have entered another Instance Zone, therefore you cannot enter corresponding dungeon.")
-    public static SystemMessageId YOU_HAVE_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON;
+    @ClientString(id = 2105, message = "Since $c1  entered another Instance Zone, therefore you cannot enter this dungeon.")
+    public static SystemMessageId SINCE_C1_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_THIS_DUNGEON;
     @ClientString(id = 2106, message = "This dungeon will expire in $s1 minute(s). You will be forced out of the dungeon when the time expires.")
     public static SystemMessageId THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES;
     @ClientString(id = 2107, message = "This Instance Zone will be terminated in $s1 minute(s). You will be forced out of the dungeon when the time expires.")
@@ -4698,8 +4777,10 @@ public final class SystemMessageId {
     public static SystemMessageId THE_ENCHANT_WILL_BEGIN_ONCE_YOU_PRESS_THE_START_BUTTON_BELOW;
     @ClientString(id = 2342, message = "Success! The item is now $s1.")
     public static SystemMessageId SUCCESS_THE_ITEM_IS_NOW_S1;
-    @ClientString(id = 2343, message = "Failed. You have obtained $s2 of $s1.")
-    public static SystemMessageId FAILED_YOU_HAVE_OBTAINED_S2_OF_S1;
+
+    @ClientString(id = 2343, message = "Modification failed. You obtained the following item:")
+    public static SystemMessageId MODIFICATION_FAILED_YOU_OBTAINED_THE_FOLLOWING_ITEM;
+
     @ClientString(id = 2344, message = "You have been killed by an attack from $c1.")
     public static SystemMessageId YOU_HAVE_BEEN_KILLED_BY_AN_ATTACK_FROM_C1;
     @ClientString(id = 2345, message = "You have attacked and killed $c1.")
@@ -4780,8 +4861,10 @@ public final class SystemMessageId {
     public static SystemMessageId YOU_CANNOT_REPORT_THIS_PERSON_AGAIN_AT_THIS_TIME_3;
     @ClientString(id = 2383, message = "You cannot report this person again at this time.")
     public static SystemMessageId YOU_CANNOT_REPORT_THIS_PERSON_AGAIN_AT_THIS_TIME_4;
-    @ClientString(id = 2384, message = "This item does not meet the requirements for the enhancement spellbook.")
-    public static SystemMessageId THIS_ITEM_DOES_NOT_MEET_THE_REQUIREMENTS_FOR_THE_ENHANCEMENT_SPELLBOOK;
+
+    @ClientString(id = 2384, message = "This item does not meet the requirements for the enhancement scroll.")
+    public static SystemMessageId THIS_ITEM_DOES_NOT_MEET_THE_REQUIREMENTS_FOR_THE_ENHANCEMENT_SCROLL;
+
     @ClientString(id = 2385, message = "Incorrect Lucky Enchant Stone.")
     public static SystemMessageId INCORRECT_LUCKY_ENCHANT_STONE;
     @ClientString(id = 2386, message = "This item is not compatible with the Lucky Enchant Stone used.")
@@ -5938,8 +6021,10 @@ public final class SystemMessageId {
     public static SystemMessageId THE_NUMBER_OF_USES_OF_THE_DAILY_TELEPHONE_CERTIFICATION_SERVICE_HAS_BEEN_EXCEEDED;
     @ClientString(id = 3105, message = "Telephone certification is already underway. Please try again later.")
     public static SystemMessageId TELEPHONE_CERTIFICATION_IS_ALREADY_UNDERWAY_PLEASE_TRY_AGAIN_LATER;
-    @ClientString(id = 3106, message = "Telephone certification is underway.")
-    public static SystemMessageId TELEPHONE_CERTIFICATION_IS_UNDERWAY;
+
+    @ClientString(id = 3106, message = "Phone number identification is not available starting from November 21, 2018, due to account security improvement measures.<br><br>We recommend using OTP function.<br>You can enable the function via account management section.")
+    public static SystemMessageId PHONE_NUMBER_IDENTIFICATION_IS_NOT_AVAILABLE_STARTING_FROM_NOVEMBER_21_2018_DUE_TO_ACCOUNT_SECURITY_IMPROVEMENT_MEASURES_BR_BR_WE_RECOMMEND_USING_OTP_FUNCTION_BR_YOU_CAN_ENABLE_THE_FUNCTION_VIA_ACCOUNT_MANAGEMENT_SECTION;
+
     @ClientString(id = 3107, message = "One moment, please.")
     public static SystemMessageId ONE_MOMENT_PLEASE;
     @ClientString(id = 3108, message = "You are no longer protected from aggressive monsters.")
@@ -6747,8 +6832,8 @@ public final class SystemMessageId {
     @ClientString(id = 3509, message = "24hz has ended.")
     public static SystemMessageId TWENTY_FOUR_HZ_HAS_ENDED;
 
-    /*@ClientString(id = 3510, message = "You cannot perform the action while using Sayune.")
-    public static SystemMessageId YOU_CANNOT_PERFORM_THE_ACTION_WHILE_USING_SAYUNE;*/
+    @ClientString(id = 3510, message = "You cannot perform the action while using Sayune.")
+    public static SystemMessageId YOU_CANNOT_PERFORM_THE_ACTION_WHILE_USING_SAYUNE;
 
     @ClientString(id = 3511, message = "A replacement player for $c1 has been found, and an invitation is sent.")
     public static SystemMessageId A_REPLACEMENT_PLAYER_FOR_C1_HAS_BEEN_FOUND_AND_AN_INVITATION_IS_SENT;
@@ -6979,8 +7064,8 @@ public final class SystemMessageId {
     @ClientString(id = 3624, message = "Failed to retrieve the item from the clan warehouse.")
     public static SystemMessageId FAILED_TO_RETRIEVE_THE_ITEM_FROM_THE_CLAN_WAREHOUSE;
 
-    /* @ClientString(id = 3625, message = "You may not use Sayune while a servitor is around.")
-    public static SystemMessageId YOU_MAY_NOT_USE_SAYUNE_WHILE_A_SERVITOR_IS_AROUND; */
+    @ClientString(id = 3625, message = "You may not use Sayune while a servitor is around.")
+    public static SystemMessageId YOU_MAY_NOT_USE_SAYUNE_WHILE_A_SERVITOR_IS_AROUND;
 
     @ClientString(id = 3626, message = "I am Hermuncus, leader of the Giants.")
     public static SystemMessageId I_AM_HERMUNCUS_LEADER_OF_THE_GIANTS;
@@ -7039,8 +7124,8 @@ public final class SystemMessageId {
     @ClientString(id = 3653, message = "Unable to process this request until your inventory's weight and slot count are less than 70 percent of capacity.")
     public static SystemMessageId UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_70_PERCENT_OF_CAPACITY;
 
-    /*  @ClientString(id = 3654, message = "You cannot use Sayune while in a chaotic state.")
-    public static SystemMessageId YOU_CANNOT_USE_SAYUNE_WHILE_IN_A_CHAOTIC_STATE; */
+    @ClientString(id = 3654, message = "You cannot use Sayune while in a chaotic state.")
+    public static SystemMessageId YOU_CANNOT_USE_SAYUNE_WHILE_IN_A_CHAOTIC_STATE;
 
     @ClientString(id = 3655, message = "You cannot Awaken while you're transformed or riding.")
     public static SystemMessageId YOU_CANNOT_AWAKEN_WHILE_YOU_RE_TRANSFORMED_OR_RIDING;
@@ -7106,8 +7191,10 @@ public final class SystemMessageId {
     public static SystemMessageId A_REPLACEMENT_FOR_S1_IS_FOUND_THE_PLAYER_WILL_BE_REPLACED_IN_3_MINUTES;
     @ClientString(id = 3686, message = "The shared dimensional item has been successfully found.")
     public static SystemMessageId THE_SHARED_DIMENSIONAL_ITEM_HAS_BEEN_SUCCESSFULLY_FOUND;
-    @ClientString(id = 3687, message = "The NC OTP number is incorrect. Please check the number and enter it again.")
-    public static SystemMessageId THE_NC_OTP_NUMBER_IS_INCORRECT_PLEASE_CHECK_THE_NUMBER_AND_ENTER_IT_AGAIN;
+
+	@ClientString(id = 3687, message = "You have enabled OTP authentication. Enter your one-time password, please.")
+    public static SystemMessageId YOU_HAVE_ENABLED_OTP_AUTHENTICATION_ENTER_YOUR_ONE_TIME_PASSWORD_PLEASE;
+
     @ClientString(id = 3688, message = "The shared dimensional item has not been found.")
     public static SystemMessageId THE_SHARED_DIMENSIONAL_ITEM_HAS_NOT_BEEN_FOUND;
     @ClientString(id = 3689, message = "The mentoring relationship with $s1 has been canceled. The mentor cannot obtain another mentee for two days.")
@@ -7957,8 +8044,8 @@ public final class SystemMessageId {
     @ClientString(id = 4204, message = "Only Heroes can enter the Hero channel.")
     public static SystemMessageId ONLY_HEROES_CAN_ENTER_THE_HERO_CHANNEL;
 
-   /* @ClientString(id = 4205, message = "Sayune cannot be used while taking other actions.")
-    public static SystemMessageId SAYUNE_CANNOT_BE_USED_WHILE_TAKING_OTHER_ACTIONS; */
+    @ClientString(id = 4205, message = "Sayune cannot be used while taking other actions.")
+    public static SystemMessageId SAYUNE_CANNOT_BE_USED_WHILE_TAKING_OTHER_ACTIONS;
 
     @ClientString(id = 4206, message = "You gained Ability Points as a bonus!")
     public static SystemMessageId YOU_GAINED_ABILITY_POINTS_AS_A_BONUS;
@@ -8457,8 +8544,8 @@ public final class SystemMessageId {
     @ClientString(id = 4453, message = "$c1 cannot perform the Couple Action as the person is using a skill.")
     public static SystemMessageId C1_CANNOT_PERFORM_THE_COUPLE_ACTION_AS_THE_PERSON_IS_USING_A_SKILL;
 
-   /* @ClientString(id = 4454, message = "$c1 cannot perform the Couple Action as the person is using Sayunes.")
-    public static SystemMessageId C1_CANNOT_PERFORM_THE_COUPLE_ACTION_AS_THE_PERSON_IS_USING_SAYUNES; */
+    @ClientString(id = 4454, message = "$c1 cannot perform the Couple Action as the person is using Sayunes.")
+    public static SystemMessageId C1_CANNOT_PERFORM_THE_COUPLE_ACTION_AS_THE_PERSON_IS_USING_SAYUNES;
 
     @ClientString(id = 4455, message = "You cannot attack other players in this area.")
     public static SystemMessageId YOU_CANNOT_ATTACK_OTHER_PLAYERS_IN_THIS_AREA;
@@ -9364,6 +9451,13 @@ public final class SystemMessageId {
     public static SystemMessageId REJECT_A_CLAN_MEMBER_S_FRIEND_REQUEST;
     @ClientString(id = 4906, message = "Turn on/off to reject friend requests from everyone.")
     public static SystemMessageId TURN_ON_OFF_TO_REJECT_FRIEND_REQUESTS_FROM_EVERYONE;
+
+	@ClientString(id = 4907, message = "Shows equipment of other characters, even if they are transformed/")
+	public static SystemMessageId SHOWS_EQUIPMENT_OF_OTHER_CHARACTERS_EVEN_IF_THEY_ARE_TRANSFORMED;
+
+	@ClientString(id = 4908, message = "Shows the equipment of the player's character, even if the character is transformed.")
+	public static SystemMessageId SHOWS_THE_EQUIPMENT_OF_THE_PLAYER_S_CHARACTER_EVEN_IF_THE_CHARACTER_IS_TRANSFORMED;
+
     @ClientString(id = 5000, message = "Your account has been restricted due to an account theft issue. If you have an email address registered to your account information, please check your inbox for an email message with details. If you have no direct connection to account theft, please visit the <font color='#FFDF4C'>4Game website(</font><font color='#6699FF'><a href='asfunction:homePage'>https://support.4game.com</a></font><font color='#FFDF4C'>) 1:1 Customer Service Center</font> and file a petition. For more details, please visit <font color='#FFDF4C'>1:1 Customer Service Center</font>.")
     public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_DUE_TO_AN_ACCOUNT_THEFT_ISSUE_IF_YOU_HAVE_AN_EMAIL_ADDRESS_REGISTERED_TO_YOUR_ACCOUNT_INFORMATION_PLEASE_CHECK_YOUR_INBOX_FOR_AN_EMAIL_MESSAGE_WITH_DETAILS_IF_YOU_HAVE_NO_DIRECT_CONNECTION_TO_ACCOUNT_THEFT_PLEASE_VISIT_THE_FONT_COLOR_FFDF4C_4GAME_WEBSITE_FONT_FONT_COLOR_6699FF_A_HREF_ASFUNCTION_HOMEPAGE_HTTPS_SUPPORT_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_1_1_CUSTOMER_SERVICE_CENTER_FONT_AND_FILE_A_PETITION_FOR_MORE_DETAILS_PLEASE_VISIT_FONT_COLOR_FFDF4C_1_1_CUSTOMER_SERVICE_CENTER_FONT;
     @ClientString(id = 5001, message = "Your account has been restricted in accordance with our terms of service due to your confirmed fraudulent report. For more details, please visit the <font color='#FFDF4C'>4Game website(</font><font color='#6699FF'><a href='asfunction:homePage'>https://support.4game.com</a></font><font color='#FFDF4C'>) 1:1 Customer Service Center</font>.")
@@ -9504,12 +9598,17 @@ public final class SystemMessageId {
     public static SystemMessageId TO_REQUEST_AN_OTP_SERVICE_BR_RUN_THE_CELL_PHONE_OTP_SERVICE_BR_AND_ENTER_THE_DISPLAYED_OTP_NUMBER_WITHIN_1_MINUTE_BR_IF_YOU_DID_NOT_MAKE_THE_REQUEST_BR_LEAVE_THIS_PART_BLANK_BR_AND_CLICK_ON_THE_LOGIN_TAB;
     @ClientString(id = 5069, message = "Please enter card number <font color='#FFDF4C'>$s1</font>.")
     public static SystemMessageId PLEASE_ENTER_CARD_NUMBER_FONT_COLOR_FFDF4C_S1_FONT;
-    @ClientString(id = 5070, message = "<font size='15' color='#FFDF5F'>As of July 26th 2017, Lineage II launched the updated Classic Server.</font><br><font size='13' color='#ABABAB'>Giran, Elf, Dark Elf</font> → Giran (NEW)")
-    public static SystemMessageId FONT_SIZE_15_COLOR_FFDF5F_AS_OF_JULY_26TH_2017_LINEAGE_II_LAUNCHED_THE_UPDATED_CLASSIC_SERVER_FONT_BR_FONT_SIZE_13_COLOR_ABABAB_GIRAN_ELF_DARK_ELF_FONT_GIRAN_NEW;
+
+	@ClientString(id = 5070, message = "<font size='15' color='#FFDF5F'>On July, 2015, Lineage II launched mew Classic server.</font><br>Blood (NEW)")
+    public static SystemMessageId FONT_SIZE_15_COLOR_FFDF5F_ON_JULY_2015_LINEAGE_II_LAUNCHED_MEW_CLASSIC_SERVER_FONT_BR_BLOOD_NEW;
     @ClientString(id = 5071, message = "<font color='#FFDF4C'>We give various benefits to warriors who return after a long time.</font>")
     public static SystemMessageId FONT_COLOR_FFDF4C_WE_GIVE_VARIOUS_BENEFITS_TO_WARRIORS_WHO_RETURN_AFTER_A_LONG_TIME_FONT;
     @ClientString(id = 5072, message = "You can receive the benefits provided to dormant customers on <font color='#FFDF4C'>Lineage II Homepage > Dormant Membership Page</font>(<font color='#6699FF'><a href='asfunction:homePage'>https://eu.4game.com</a></font>).<br>Receive benefits for dormant customers and log into the game again!")
     public static SystemMessageId YOU_CAN_RECEIVE_THE_BENEFITS_PROVIDED_TO_DORMANT_CUSTOMERS_ON_FONT_COLOR_FFDF4C_LINEAGE_II_HOMEPAGE_DORMANT_MEMBERSHIP_PAGE_FONT_FONT_COLOR_6699FF_A_HREF_ASFUNCTION_HOMEPAGE_HTTPS_EU_4GAME_COM_A_FONT_BR_RECEIVE_BENEFITS_FOR_DORMANT_CUSTOMERS_AND_LOG_INTO_THE_GAME_AGAIN;
+
+	@ClientString(id = 5073, message = "The server connection will be opened after enabling OTP function.</br></br>Go to <font color='FFDF4C'>Help Page</font> to enable OTP?")
+	public static SystemMessageId THE_SERVER_CONNECTION_WILL_BE_OPENED_AFTER_ENABLING_OTP_FUNCTION_BR_BR_GO_TO_FONT_COLOR_FFDF4C_HELP_PAGE_FONT_TO_ENABLE_OTP;
+
     @ClientString(id = 5100, message = "Available only for members authorized to activate items")
     public static SystemMessageId AVAILABLE_ONLY_FOR_MEMBERS_AUTHORIZED_TO_ACTIVATE_ITEMS;
     @ClientString(id = 5101, message = "No war in progress. The clan must be level 5 or higher to start a clan war.")
@@ -9720,36 +9819,90 @@ public final class SystemMessageId {
     public static SystemMessageId STAGE_S1;
     @ClientString(id = 5204, message = "Time Left: $s1 min")
     public static SystemMessageId TIME_LEFT_S1_MIN;
-    @ClientString(id = 5206, message = "")
-    public static SystemMessageId EMPTY_10;
-    @ClientString(id = 5207, message = "")
-    public static SystemMessageId EMPTY_11;
-    @ClientString(id = 5208, message = "")
-    public static SystemMessageId EMPTY_12;
-    @ClientString(id = 5209, message = "")
-    public static SystemMessageId EMPTY_13;
-    @ClientString(id = 5210, message = "")
-    public static SystemMessageId EMPTY_14;
-    @ClientString(id = 5211, message = "")
-    public static SystemMessageId EMPTY_15;
-    @ClientString(id = 5212, message = "")
-    public static SystemMessageId EMPTY_16;
-    @ClientString(id = 5213, message = "")
-    public static SystemMessageId EMPTY_17;
-    @ClientString(id = 5214, message = "")
-    public static SystemMessageId EMPTY_18;
-    @ClientString(id = 5215, message = "")
-    public static SystemMessageId EMPTY_19;
-    @ClientString(id = 5216, message = "")
-    public static SystemMessageId EMPTY_20;
-    @ClientString(id = 5217, message = "")
-    public static SystemMessageId EMPTY_21;
-    @ClientString(id = 5218, message = "")
-    public static SystemMessageId EMPTY_22;
+
+	@ClientString(id = 5205, message = "No display area.")
+	public static SystemMessageId NO_DISPLAY_AREA;
+
+	@ClientString(id = 5206, message = "There isn't enough space for the artifact in inventory. Free some space and try again.")
+	public static SystemMessageId THERE_ISN_T_ENOUGH_SPACE_FOR_THE_ARTIFACT_IN_INVENTORY_FREE_SOME_SPACE_AND_TRY_AGAIN;
+
+	@ClientString(id = 5207, message = "There isn't enough space for items and artifacts. Free some space and try again.")
+	public static SystemMessageId THERE_ISN_T_ENOUGH_SPACE_FOR_ITEMS_AND_ARTIFACTS_FREE_SOME_SPACE_AND_TRY_AGAIN;
+
+	@ClientString(id = 5208, message = "Successful artifact upgrade. You have obtained $s1.")
+	public static SystemMessageId SUCCESSFUL_ARTIFACT_UPGRADE_YOU_HAVE_OBTAINED_S1;
+
+	@ClientString(id = 5209, message = "Upgrade failed. The modification of the items has not changed.")
+	public static SystemMessageId UPGRADE_FAILED_THE_MODIFICATION_OF_THE_ITEMS_HAS_NOT_CHANGED;
+
+	@ClientString(id = 5210, message = "Such artifact is already equipped.")
+	public static SystemMessageId SUCH_ARTIFACT_IS_ALREADY_EQUIPPED;
+
+	@ClientString(id = 5211, message = "Unable to equip $s1, because you do not have a Book of Artifacts.")
+	public static SystemMessageId UNABLE_TO_EQUIP_S1_BECAUSE_YOU_DO_NOT_HAVE_A_BOOK_OF_ARTIFACTS;
+
+	@ClientString(id = 5212, message = "There isn't enough space for items and artifacts in inventory. Unable to process this request until your inventory's weight and slot count are less than 80%% of capacity.")
+	public static SystemMessageId THERE_ISN_T_ENOUGH_SPACE_FOR_ITEMS_AND_ARTIFACTS_IN_INVENTORY_UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_OF_CAPACITY;
+
+	@ClientString(id = 5213, message = "There isn't enough space for artifacts in inventory. Unable to process this request until your inventory's slot count is less than 80%% of capacity.")
+	public static SystemMessageId THERE_ISN_T_ENOUGH_SPACE_FOR_ARTIFACTS_IN_INVENTORY_UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_SLOT_COUNT_IS_LESS_THAN_80_OF_CAPACITY;
+
+	@ClientString(id = 5214, message = "There isn't enough space for items and artifacts in inventory. Unable to process this request until your inventory's weight is less than 80%% and slot count is less than 90%% of capacity.")
+	public static SystemMessageId THERE_ISN_T_ENOUGH_SPACE_FOR_ITEMS_AND_ARTIFACTS_IN_INVENTORY_UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_IS_LESS_THAN_80_AND_SLOT_COUNT_IS_LESS_THAN_90_OF_CAPACITY;
+
+	@ClientString(id = 5215, message = "Not enough space in inventory. Unable to process this request until your inventory's weight is less than 80%% and slot count is less than 90%% of capacity.")
+	public static SystemMessageId NOT_ENOUGH_SPACE_IN_INVENTORY_UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_IS_LESS_THAN_80_AND_SLOT_COUNT_IS_LESS_THAN_90_OF_CAPACITY;
+
+	@ClientString(id = 5216, message = "There isn't enough space for artifacts in inventory. Unable to process this request until your inventory's slot count is less than 90%% of capacity.")
+	public static SystemMessageId THERE_ISN_T_ENOUGH_SPACE_FOR_ARTIFACTS_IN_INVENTORY_UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_SLOT_COUNT_IS_LESS_THAN_90_OF_CAPACITY;
+
+	@ClientString(id = 5217, message = "+$s1 or higher quality material is required.")
+	public static SystemMessageId S1_OR_HIGHER_QUALITY_MATERIAL_IS_REQUIRED;
+
+	@ClientString(id = 5218, message = "No artifacts selected.")
+	public static SystemMessageId NO_ARTIFACTS_SELECTED;
+
+	@ClientString(id = 5219, message = "Upon failure, the item is destroyed (crystallized). In case of modification for +7 or higher failure you will also obtain a Weapon Enhancement Stone.")
+	public static SystemMessageId UPON_FAILURE_THE_ITEM_IS_DESTROYED_CRYSTALLIZED_IN_CASE_OF_MODIFICATION_FOR_7_OR_HIGHER_FAILURE_YOU_WILL_ALSO_OBTAIN_A_WEAPON_ENHANCEMENT_STONE;
+
+	@ClientString(id = 5220, message = "Upon failure, the item is destroyed (crystallized). In case of modification for +6 or higher failure you will also obtain a Armor Enhancement Stone.")
+	public static SystemMessageId UPON_FAILURE_THE_ITEM_IS_DESTROYED_CRYSTALLIZED_IN_CASE_OF_MODIFICATION_FOR_6_OR_HIGHER_FAILURE_YOU_WILL_ALSO_OBTAIN_A_ARMOR_ENHANCEMENT_STONE;
+
+	@ClientString(id = 5221, message = "Attack points available today: $s1. \\nVitality points left: $s2.\\nAttacking character with 1 or more attack/ vitality points gets Bloody Coins for killing a character with 1 or more attack/ vital points. The points are reset daily at 6:30 a.m.")
+	public static SystemMessageId ATTACK_POINTS_AVAILABLE_TODAY_S1_NVITALITY_POINTS_LEFT_S2_NATTACKING_CHARACTER_WITH_1_OR_MORE_ATTACK_VITALITY_POINTS_GETS_BLOODY_COINS_FOR_KILLING_A_CHARACTER_WITH_1_OR_MORE_ATTACK_VITAL_POINTS_THE_POINTS_ARE_RESET_DAILY_AT_6_30_A_M;
+
+	@ClientString(id = 5222, message = "Bloody Coins system is available for Lv. 95 and higher characters.")
+	public static SystemMessageId BLOODY_COINS_SYSTEM_IS_AVAILABLE_FOR_LV_95_AND_HIGHER_CHARACTERS;
+
+	@ClientString(id = 5223, message = "Character $c1 gets $s2 Bloody Coins for the victory. Attack points -1. To see your points enter /bloodycoin to your chat window.")
+	public static SystemMessageId CHARACTER_C1_GETS_S2_BLOODY_COINS_FOR_THE_VICTORY_ATTACK_POINTS_1_TO_SEE_YOUR_POINTS_ENTER_BLOODYCOIN_TO_YOUR_CHAT_WINDOW;
+
+	@ClientString(id = 5224, message = "Character $c1 loses 1 vitality point because of failure. The character will get Bloody Coins for a victory only if he or she has at least 1 vitality point. To see your points enter /bloodycoin to your chat window.")
+	public static SystemMessageId CHARACTER_C1_LOSES_1_VITALITY_POINT_BECAUSE_OF_FAILURE_THE_CHARACTER_WILL_GET_BLOODY_COINS_FOR_A_VICTORY_ONLY_IF_HE_OR_SHE_HAS_AT_LEAST_1_VITALITY_POINT_TO_SEE_YOUR_POINTS_ENTER_BLOODYCOIN_TO_YOUR_CHAT_WINDOW;
+
+	@ClientString(id = 5225, message = "Location: $s1 / $s2 / $s3 (close to the base).")
+	public static SystemMessageId LOCATION_S1_S2_S3_CLOSE_TO_THE_BASE;
+
+	@ClientString(id = 5226, message = "After item modification $c1 gets +$s2 $s3 ($s4 pcs.).")
+	public static SystemMessageId AFTER_ITEM_MODIFICATION_C1_GETS_S2_S3_S4_PCS;
+
+	@ClientString(id = 5227, message = "Items with Rune or Augment effects cannot be upgraded. Remove the effects and try again.")
+	public static SystemMessageId ITEMS_WITH_RUNE_OR_AUGMENT_EFFECTS_CANNOT_BE_UPGRADED_REMOVE_THE_EFFECTS_AND_TRY_AGAIN;
+
+	@ClientString(id = 5228, message = "======<Bloody Coins Info>======")
+	public static SystemMessageId BLOODY_COINS_INFO;
+
+	@ClientString(id = 5229, message = "Attack points: $s1")
+	public static SystemMessageId ATTACK_POINTS_S1;
+
+	@ClientString(id = 5230, message = "Vitality: $s1")
+	public static SystemMessageId VITALITY_S1;
+
     @ClientString(id = 5300, message = "Your account has been restricted due to an account theft issue. If you have an email address registered to your account information, please check your inbox for an email message with details. If you have no direct connection to account theft, please visit the <font color='#FFDF4C'>4Game website(</font><font color='#6699FF'><a href='asfunction:homePage'>https://support.4game.com</a></font><font color='#FFDF4C'>) 1:1 Customer Service Center</font> and file a petition. For more details, please visit <font color='#FFDF4C'>1:1 Chat in Customer Service Center</font>.")
     public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_DUE_TO_AN_ACCOUNT_THEFT_ISSUE_IF_YOU_HAVE_AN_EMAIL_ADDRESS_REGISTERED_TO_YOUR_ACCOUNT_INFORMATION_PLEASE_CHECK_YOUR_INBOX_FOR_AN_EMAIL_MESSAGE_WITH_DETAILS_IF_YOU_HAVE_NO_DIRECT_CONNECTION_TO_ACCOUNT_THEFT_PLEASE_VISIT_THE_FONT_COLOR_FFDF4C_4GAME_WEBSITE_FONT_FONT_COLOR_6699FF_A_HREF_ASFUNCTION_HOMEPAGE_HTTPS_SUPPORT_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_1_1_CUSTOMER_SERVICE_CENTER_FONT_AND_FILE_A_PETITION_FOR_MORE_DETAILS_PLEASE_VISIT_FONT_COLOR_FFDF4C_1_1_CHAT_IN_CUSTOMER_SERVICE_CENTER_FONT;
-    @ClientString(id = 5301, message = "Your account has been restricted in accordance with our terms of service due to your confirmed abuse of GM services or reporting services. For more details, please visit the <font color='#FFDF4C'>website(</font><font color='#6699FF'><a href='asfunction:homePage'>https://support.4game.com</a></font><font color='#FFDF4C'>) 1:1 Customer Service Center</font><font color='#FFDF4C'>) 1:1 Customer Service Center</font>.")
-    public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_IN_ACCORDANCE_WITH_OUR_TERMS_OF_SERVICE_DUE_TO_YOUR_CONFIRMED_ABUSE_OF_GM_SERVICES_OR_REPORTING_SERVICES_FOR_MORE_DETAILS_PLEASE_VISIT_THE_FONT_COLOR_FFDF4C_WEBSITE_FONT_FONT_COLOR_6699FF_A_HREF_ASFUNCTION_HOMEPAGE_HTTPS_SUPPORT_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_1_1_CUSTOMER_SERVICE_CENTER_FONT_FONT_COLOR_FFDF4C_1_1_CUSTOMER_SERVICE_CENTER_FONT;
+
+	@ClientString(id = 5301, message = "Your account may mislead other users, because with it you can pose as a customer support employee, dissiminate false information or use other fraudilent methods. Your account was suspended due to possibility of intervention with the game on your part. For more information refer to the corresponding section <br><font color='FFDF4C'>of the official website(</font><font color='6699FF'><a action='url https://support.4game.ru'>www.l2.ru</a></font><font color='FFDF4C'>)</font>, please.")
+    public static SystemMessageId YOUR_ACCOUNT_MAY_MISLEAD_OTHER_USERS_BECAUSE_WITH_IT_YOU_CAN_POSE_AS_A_CUSTOMER_SUPPORT_EMPLOYEE_DISSIMINATE_FALSE_INFORMATION_OR_USE_OTHER_FRAUDILENT_METHODS_YOUR_ACCOUNT_WAS_SUSPENDED_DUE_TO_POSSIBILITY_OF_INTERVENTION_WITH_THE_GAME_ON_YOUR_PART_FOR_MORE_INFORMATION_REFER_TO_THE_CORRESPONDING_SECTION_BR_FONT_COLOR_FFDF4C_OF_THE_OFFICIAL_WEBSITE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_SUPPORT_4GAME_RU_WWW_L2_RU_A_FONT_FONT_COLOR_FFDF4C_FONT_PLEASE;
     @ClientString(id = 5302, message = "Your account has been restricted in accordance with our terms of service as you failed to verify your identity within a given time after an account theft report. You may undo the restriction by visiting the <font color='#FFDF4C'>4Game website(</font><font color='#6699FF'><a href='asfunction:homePage'>https://support.4game.com</a></font><font color='#FFDF4C'>) 1:1 Customer Service Center<font color='#FFDF4C'>) Support Center</font> and going through the personal verification process in the account theft report. For more details, please visit <font color='#FFDF4C'>1:1 Customer Service Center</font>.")
     public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_IN_ACCORDANCE_WITH_OUR_TERMS_OF_SERVICE_AS_YOU_FAILED_TO_VERIFY_YOUR_IDENTITY_WITHIN_A_GIVEN_TIME_AFTER_AN_ACCOUNT_THEFT_REPORT_YOU_MAY_UNDO_THE_RESTRICTION_BY_VISITING_THE_FONT_COLOR_FFDF4C_4GAME_WEBSITE_FONT_FONT_COLOR_6699FF_A_HREF_ASFUNCTION_HOMEPAGE_HTTPS_SUPPORT_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_1_1_CUSTOMER_SERVICE_CENTER_FONT_COLOR_FFDF4C_SUPPORT_CENTER_FONT_AND_GOING_THROUGH_THE_PERSONAL_VERIFICATION_PROCESS_IN_THE_ACCOUNT_THEFT_REPORT_FOR_MORE_DETAILS_PLEASE_VISIT_FONT_COLOR_FFDF4C_1_1_CUSTOMER_SERVICE_CENTER_FONT_2;
     @ClientString(id = 5303, message = "Your account has been restricted due to your abuse of game systems that resulted in damage to other players' gaming experience. For more details, please the <font color='#FFDF4C'>4Game website(</font><font color='#6699FF'><a href='asfunction:homePage'>https://support.4game.com</a></font><font color='#FFDF4C'>) 1:1 Customer Service Center</font><font color='#FFDF4C'>)1:1 Chat in Customer Service Center</font>.")
@@ -9758,8 +9911,10 @@ public final class SystemMessageId {
     public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_DUE_TO_YOUR_CONFIRMED_ATTEMPT_AT_COMMERCIAL_ADVERTISING_OR_TRADE_INVOLVING_CASH_OR_OTHER_GAMES_FOR_MORE_DETAILS_PLEASE_VISIT_THE_FONT_COLOR_FFDF4C_4GAME_WEBSITE_FONT_FONT_COLOR_6699FF_A_HREF_ASFUNCTION_HOMEPAGE_HTTPS_SUPPORT_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_1_1_CUSTOMER_SERVICE_CENTER_FONT;
     @ClientString(id = 5305, message = "Your account has been restricted due to your confirmed cash/account trade activities. For more details, please visit the <font color='#FFDF4C'>4Game website(</font><font color='#6699FF'><a href='asfunction:homePage'>https://support.4game.com</a></font><font color='#FFDF4C'>) 1:1 Customer Service Center</font>.")
     public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_DUE_TO_YOUR_CONFIRMED_CASH_ACCOUNT_TRADE_ACTIVITIES_FOR_MORE_DETAILS_PLEASE_VISIT_THE_FONT_COLOR_FFDF4C_4GAME_WEBSITE_FONT_FONT_COLOR_6699FF_A_HREF_ASFUNCTION_HOMEPAGE_HTTPS_SUPPORT_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_1_1_CUSTOMER_SERVICE_CENTER_FONT_2;
-    @ClientString(id = 5306, message = "Your account has been restricted in accordance with our terms of service due to misconduct or fraud. For more details, please visit the <font color='#FFDF4C'>4Game website(</font><font color='#6699FF'><a href='asfunction:homePage'>https://support.4game.com</a></font><font color='#FFDF4C'>) 1:1 Customer Service Center</font>.")
-    public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_IN_ACCORDANCE_WITH_OUR_TERMS_OF_SERVICE_DUE_TO_MISCONDUCT_OR_FRAUD_FOR_MORE_DETAILS_PLEASE_VISIT_THE_FONT_COLOR_FFDF4C_4GAME_WEBSITE_FONT_FONT_COLOR_6699FF_A_HREF_ASFUNCTION_HOMEPAGE_HTTPS_SUPPORT_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_1_1_CUSTOMER_SERVICE_CENTER_FONT_2;
+
+	@ClientString(id = 5306, message = "Your account has been restricted in accordance with our terms of service due to misconduct or fraud in accordance with the User Agreement. For more information, please, visit the <font color='FFDF4C'>) FAQ section of the Customer Support Center</font> at <font color='FFDF4C'>offcial plaync website(</font> <font color='6699FF'><a action='url https://support.4game.ru'>www.plaync.co.kr</a></font>.")
+    public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_IN_ACCORDANCE_WITH_OUR_TERMS_OF_SERVICE_DUE_TO_MISCONDUCT_OR_FRAUD_IN_ACCORDANCE_WITH_THE_USER_AGREEMENT_FOR_MORE_INFORMATION_PLEASE_VISIT_THE_FONT_COLOR_FFDF4C_FAQ_SECTION_OF_THE_CUSTOMER_SUPPORT_CENTER_FONT_AT_FONT_COLOR_FFDF4C_OFFCIAL_PLAYNC_WEBSITE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_SUPPORT_4GAME_RU_WWW_PLAYNC_CO_KR_A_FONT;
+
     @ClientString(id = 5307, message = "Your account has been restricted due to the use of inappropriate language. For more details, please visit the <font color='#FFDF4C'>4Game website(</font><font color='#6699FF'><a href='asfunction:homePage'>https://support.4game.com</a></font><font color='#FFDF4C'>) 1:1 Customer Service Center</font>.")
     public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_DUE_TO_THE_USE_OF_INAPPROPRIATE_LANGUAGE_FOR_MORE_DETAILS_PLEASE_VISIT_THE_FONT_COLOR_FFDF4C_4GAME_WEBSITE_FONT_FONT_COLOR_6699FF_A_HREF_ASFUNCTION_HOMEPAGE_HTTPS_SUPPORT_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_1_1_CUSTOMER_SERVICE_CENTER_FONT;
     @ClientString(id = 5308, message = "Your account has been restricted due to your abuse of system weaknesses or bugs. Abusing bugs can cause grievous system errors or destroy the game balance. For more details, please visit the <font color='#FFDF4C'>4Game website(</font><font color='#6699FF'><a href='asfunction:homePage'>https://support.4game.com</a></font><font color='#FFDF4C'>) 1:1 Customer Service Center</font>.")
@@ -10367,9 +10522,17 @@ public final class SystemMessageId {
     @ClientString(id = 6204, message = "$c1 has succeeded in crafting $s2.")
     public static SystemMessageId C1_HAS_SUCCEEDED_IN_CRAFTING_S2;
     @ClientString(id = 6205, message = "")
-    public static SystemMessageId EMPTY_23;
+	public static SystemMessageId EMPTY_10;
+
     @ClientString(id = 6206, message = "Use offerings to increase the success rate to 100%%. At the moment the success rate is $s1%%. Do you want to continue?")
     public static SystemMessageId USE_OFFERINGS_TO_INCREASE_THE_SUCCESS_RATE_TO_100_AT_THE_MOMENT_THE_SUCCESS_RATE_IS_S1_DO_YOU_WANT_TO_CONTINUE;
+
+	@ClientString(id = 6207, message = "The Festival is not available right now.")
+	public static SystemMessageId THE_FESTIVAL_IS_NOT_AVAILABLE_RIGHT_NOW;
+
+	@ClientString(id = 6208, message = "The Festival has ended. Please participate in the next round.")
+	public static SystemMessageId THE_FESTIVAL_HAS_ENDED_PLEASE_PARTICIPATE_IN_THE_NEXT_ROUND;
+
     @ClientString(id = 6501, message = "You cannot bookmark this location because you do not have a My Teleport Flag.")
     public static SystemMessageId YOU_CANNOT_BOOKMARK_THIS_LOCATION_BECAUSE_YOU_DO_NOT_HAVE_A_MY_TELEPORT_FLAG;
     @ClientString(id = 6502, message = "My Teleport Flag: $s1")
@@ -10433,7 +10596,8 @@ public final class SystemMessageId {
     @ClientString(id = 6823, message = "The number of items you are trying to purchase is limited for each account. You have purchased the maximum quantity and cannot purchase more.")
     public static SystemMessageId THE_NUMBER_OF_ITEMS_YOU_ARE_TRYING_TO_PURCHASE_IS_LIMITED_FOR_EACH_ACCOUNT_YOU_HAVE_PURCHASED_THE_MAXIMUM_QUANTITY_AND_CANNOT_PURCHASE_MORE;
     @ClientString(id = 6824, message = "")
-    public static SystemMessageId EMPTY_24;
+	public static SystemMessageId EMPTY_11;
+
     @ClientString(id = 6825, message = "The client will be closed. Do you want to continue?")
     public static SystemMessageId THE_CLIENT_WILL_BE_CLOSED_DO_YOU_WANT_TO_CONTINUE;
     @ClientString(id = 6826, message = "Your clan has achieved login bonus Lv. $s1.")
@@ -10451,961 +10615,112 @@ public final class SystemMessageId {
     @ClientString(id = 6832, message = "No items will be dropped in this location until you collect dropped ones.")
     public static SystemMessageId NO_ITEMS_WILL_BE_DROPPED_IN_THIS_LOCATION_UNTIL_YOU_COLLECT_DROPPED_ONES;
     @ClientString(id = 6833, message = "")
-    public static SystemMessageId EMPTY_25;
+	public static SystemMessageId EMPTY_12;
+
     @ClientString(id = 6834, message = "The sanctions were imposed on the character. <br>Please, click on the icon below to find out the details.")
     public static SystemMessageId THE_SANCTIONS_WERE_IMPOSED_ON_THE_CHARACTER_BR_PLEASE_CLICK_ON_THE_ICON_BELOW_TO_FIND_OUT_THE_DETAILS;
-    @ClientString(id = 6835, message = "According to the User Agreement (https://eu.4game.com/l2ceu-user-agreement/), the game was temporarily blocked. Please, contact support to find out the details.")
-    public static SystemMessageId ACCORDING_TO_THE_USER_AGREEMENT_HTTPS_EU_4GAME_COM_L2CEU_USER_AGREEMENT_THE_GAME_WAS_TEMPORARILY_BLOCKED_PLEASE_CONTACT_SUPPORT_TO_FIND_OUT_THE_DETAILS;
+
+	@ClientString(id = 6835, message = "The character was blocked due to the User Agreement Violation. Please contact Support for the detailed information: https://eu.4gamesupport.com/")
+    public static SystemMessageId THE_CHARACTER_WAS_BLOCKED_DUE_TO_THE_USER_AGREEMENT_VIOLATION_PLEASE_CONTACT_SUPPORT_FOR_THE_DETAILED_INFORMATION_HTTPS_EU_4GAMESUPPORT_COM;
     @ClientString(id = 6836, message = "The security card service has ended so you will be able to connect to the game after cancelling the security card. In order to protect your account, please cancel the security card and request Google OTP.")
     public static SystemMessageId THE_SECURITY_CARD_SERVICE_HAS_ENDED_SO_YOU_WILL_BE_ABLE_TO_CONNECT_TO_THE_GAME_AFTER_CANCELLING_THE_SECURITY_CARD_IN_ORDER_TO_PROTECT_YOUR_ACCOUNT_PLEASE_CANCEL_THE_SECURITY_CARD_AND_REQUEST_GOOGLE_OTP;
     @ClientString(id = 6837, message = "Please enter the OTP number. The numbers change for each login.")
     public static SystemMessageId PLEASE_ENTER_THE_OTP_NUMBER_THE_NUMBERS_CHANGE_FOR_EACH_LOGIN;
     @ClientString(id = 6838, message = "The Secret Supplies of the Balthus Knights arrived! Someone received $s1.")
     public static SystemMessageId THE_SECRET_SUPPLIES_OF_THE_BALTHUS_KNIGHTS_ARRIVED_SOMEONE_RECEIVED_S1;
-    @ClientString(id = 7001, message = "")
-    public static SystemMessageId EMPTY_26;
-    @ClientString(id = 7002, message = "")
-    public static SystemMessageId EMPTY_27;
-    @ClientString(id = 7003, message = "")
-    public static SystemMessageId EMPTY_28;
-    @ClientString(id = 7004, message = "")
-    public static SystemMessageId EMPTY_29;
-    @ClientString(id = 7005, message = "")
-    public static SystemMessageId EMPTY_30;
-    @ClientString(id = 7006, message = "")
-    public static SystemMessageId EMPTY_31;
-    @ClientString(id = 7007, message = "")
-    public static SystemMessageId EMPTY_32;
-    @ClientString(id = 7008, message = "")
-    public static SystemMessageId EMPTY_33;
-    @ClientString(id = 7009, message = "")
-    public static SystemMessageId EMPTY_34;
-    @ClientString(id = 7010, message = "")
-    public static SystemMessageId EMPTY_35;
-    @ClientString(id = 7011, message = "")
-    public static SystemMessageId EMPTY_36;
-    @ClientString(id = 7012, message = "")
-    public static SystemMessageId EMPTY_37;
-    @ClientString(id = 7013, message = "")
-    public static SystemMessageId EMPTY_38;
-    @ClientString(id = 7014, message = "")
-    public static SystemMessageId EMPTY_39;
-    @ClientString(id = 7015, message = "")
-    public static SystemMessageId EMPTY_40;
-    @ClientString(id = 7016, message = "")
-    public static SystemMessageId EMPTY_41;
-    @ClientString(id = 7017, message = "")
-    public static SystemMessageId EMPTY_42;
-    @ClientString(id = 7018, message = "")
-    public static SystemMessageId EMPTY_43;
-    @ClientString(id = 7019, message = "")
-    public static SystemMessageId EMPTY_44;
-    @ClientString(id = 7020, message = "")
-    public static SystemMessageId EMPTY_45;
-    @ClientString(id = 7021, message = "")
-    public static SystemMessageId EMPTY_46;
-    @ClientString(id = 7022, message = "")
-    public static SystemMessageId EMPTY_47;
-    @ClientString(id = 7023, message = "")
-    public static SystemMessageId EMPTY_48;
-    @ClientString(id = 7024, message = "")
-    public static SystemMessageId EMPTY_49;
-    @ClientString(id = 7025, message = "")
-    public static SystemMessageId EMPTY_50;
-    @ClientString(id = 7026, message = "")
-    public static SystemMessageId EMPTY_51;
-    @ClientString(id = 7027, message = "")
-    public static SystemMessageId EMPTY_52;
-    @ClientString(id = 7028, message = "")
-    public static SystemMessageId EMPTY_53;
-    @ClientString(id = 7029, message = "")
-    public static SystemMessageId EMPTY_54;
-    @ClientString(id = 7030, message = "")
-    public static SystemMessageId EMPTY_55;
-    @ClientString(id = 7031, message = "")
-    public static SystemMessageId EMPTY_56;
-    @ClientString(id = 7032, message = "")
-    public static SystemMessageId EMPTY_57;
-    @ClientString(id = 7033, message = "")
-    public static SystemMessageId EMPTY_58;
-    @ClientString(id = 7034, message = "")
-    public static SystemMessageId EMPTY_59;
-    @ClientString(id = 7035, message = "")
-    public static SystemMessageId EMPTY_60;
-    @ClientString(id = 7036, message = "")
-    public static SystemMessageId EMPTY_61;
-    @ClientString(id = 7037, message = "")
-    public static SystemMessageId EMPTY_62;
-    @ClientString(id = 7038, message = "")
-    public static SystemMessageId EMPTY_63;
-    @ClientString(id = 7039, message = "")
-    public static SystemMessageId EMPTY_64;
-    @ClientString(id = 7040, message = "")
-    public static SystemMessageId EMPTY_65;
-    @ClientString(id = 7041, message = "")
-    public static SystemMessageId EMPTY_66;
-    @ClientString(id = 7042, message = "")
-    public static SystemMessageId EMPTY_67;
-    @ClientString(id = 7043, message = "")
-    public static SystemMessageId EMPTY_68;
-    @ClientString(id = 7044, message = "")
-    public static SystemMessageId EMPTY_69;
-    @ClientString(id = 7045, message = "")
-    public static SystemMessageId EMPTY_70;
-    @ClientString(id = 7046, message = "")
-    public static SystemMessageId EMPTY_71;
-    @ClientString(id = 7047, message = "")
-    public static SystemMessageId EMPTY_72;
-    @ClientString(id = 7048, message = "")
-    public static SystemMessageId EMPTY_73;
-    @ClientString(id = 7049, message = "")
-    public static SystemMessageId EMPTY_74;
-    @ClientString(id = 7050, message = "")
-    public static SystemMessageId EMPTY_75;
-    @ClientString(id = 7051, message = "")
-    public static SystemMessageId EMPTY_76;
-    @ClientString(id = 7052, message = "")
-    public static SystemMessageId EMPTY_77;
-    @ClientString(id = 7053, message = "")
-    public static SystemMessageId EMPTY_78;
-    @ClientString(id = 7054, message = "")
-    public static SystemMessageId EMPTY_79;
-    @ClientString(id = 7055, message = "")
-    public static SystemMessageId EMPTY_80;
-    @ClientString(id = 7056, message = "")
-    public static SystemMessageId EMPTY_81;
-    @ClientString(id = 7057, message = "")
-    public static SystemMessageId EMPTY_82;
-    @ClientString(id = 7058, message = "")
-    public static SystemMessageId EMPTY_83;
-    @ClientString(id = 7059, message = "")
-    public static SystemMessageId EMPTY_84;
-    @ClientString(id = 7060, message = "")
-    public static SystemMessageId EMPTY_85;
-    @ClientString(id = 7061, message = "")
-    public static SystemMessageId EMPTY_86;
-    @ClientString(id = 7062, message = "")
-    public static SystemMessageId EMPTY_87;
-    @ClientString(id = 7063, message = "")
-    public static SystemMessageId EMPTY_88;
-    @ClientString(id = 7064, message = "")
-    public static SystemMessageId EMPTY_89;
-    @ClientString(id = 7065, message = "")
-    public static SystemMessageId EMPTY_90;
-    @ClientString(id = 7066, message = "")
-    public static SystemMessageId EMPTY_91;
-    @ClientString(id = 7067, message = "")
-    public static SystemMessageId EMPTY_92;
-    @ClientString(id = 7068, message = "")
-    public static SystemMessageId EMPTY_93;
-    @ClientString(id = 7069, message = "")
-    public static SystemMessageId EMPTY_94;
-    @ClientString(id = 7070, message = "")
-    public static SystemMessageId EMPTY_95;
-    @ClientString(id = 7071, message = "")
-    public static SystemMessageId EMPTY_96;
-    @ClientString(id = 7072, message = "")
-    public static SystemMessageId EMPTY_97;
-    @ClientString(id = 7073, message = "")
-    public static SystemMessageId EMPTY_98;
-    @ClientString(id = 7074, message = "")
-    public static SystemMessageId EMPTY_99;
-    @ClientString(id = 7075, message = "")
-    public static SystemMessageId EMPTY_100;
-    @ClientString(id = 7076, message = "")
-    public static SystemMessageId EMPTY_101;
-    @ClientString(id = 7077, message = "")
-    public static SystemMessageId EMPTY_102;
-    @ClientString(id = 7078, message = "")
-    public static SystemMessageId EMPTY_103;
-    @ClientString(id = 7079, message = "")
-    public static SystemMessageId EMPTY_104;
-    @ClientString(id = 7080, message = "")
-    public static SystemMessageId EMPTY_105;
-    @ClientString(id = 7081, message = "")
-    public static SystemMessageId EMPTY_106;
-    @ClientString(id = 7082, message = "")
-    public static SystemMessageId EMPTY_107;
-    @ClientString(id = 7083, message = "")
-    public static SystemMessageId EMPTY_108;
-    @ClientString(id = 7084, message = "")
-    public static SystemMessageId EMPTY_109;
-    @ClientString(id = 7085, message = "")
-    public static SystemMessageId EMPTY_110;
-    @ClientString(id = 7086, message = "")
-    public static SystemMessageId EMPTY_111;
-    @ClientString(id = 7087, message = "")
-    public static SystemMessageId EMPTY_112;
-    @ClientString(id = 7088, message = "")
-    public static SystemMessageId EMPTY_113;
-    @ClientString(id = 7089, message = "")
-    public static SystemMessageId EMPTY_114;
-    @ClientString(id = 7090, message = "")
-    public static SystemMessageId EMPTY_115;
-    @ClientString(id = 7091, message = "")
-    public static SystemMessageId EMPTY_116;
-    @ClientString(id = 7092, message = "")
-    public static SystemMessageId EMPTY_117;
-    @ClientString(id = 7093, message = "")
-    public static SystemMessageId EMPTY_118;
-    @ClientString(id = 7094, message = "")
-    public static SystemMessageId EMPTY_119;
-    @ClientString(id = 7095, message = "")
-    public static SystemMessageId EMPTY_120;
-    @ClientString(id = 7096, message = "")
-    public static SystemMessageId EMPTY_121;
-    @ClientString(id = 7097, message = "")
-    public static SystemMessageId EMPTY_122;
-    @ClientString(id = 7098, message = "")
-    public static SystemMessageId EMPTY_123;
-    @ClientString(id = 7099, message = "")
-    public static SystemMessageId EMPTY_124;
-    @ClientString(id = 7100, message = "")
-    public static SystemMessageId EMPTY_125;
-    @ClientString(id = 7101, message = "")
-    public static SystemMessageId EMPTY_126;
-    @ClientString(id = 7102, message = "")
-    public static SystemMessageId EMPTY_127;
-    @ClientString(id = 7103, message = "")
-    public static SystemMessageId EMPTY_128;
-    @ClientString(id = 7104, message = "")
-    public static SystemMessageId EMPTY_129;
-    @ClientString(id = 7105, message = "")
-    public static SystemMessageId EMPTY_130;
-    @ClientString(id = 7106, message = "")
-    public static SystemMessageId EMPTY_131;
-    @ClientString(id = 7107, message = "")
-    public static SystemMessageId EMPTY_132;
-    @ClientString(id = 7108, message = "")
-    public static SystemMessageId EMPTY_133;
-    @ClientString(id = 7109, message = "")
-    public static SystemMessageId EMPTY_134;
-    @ClientString(id = 7110, message = "")
-    public static SystemMessageId EMPTY_135;
-    @ClientString(id = 7111, message = "")
-    public static SystemMessageId EMPTY_136;
-    @ClientString(id = 7112, message = "")
-    public static SystemMessageId EMPTY_137;
-    @ClientString(id = 7113, message = "")
-    public static SystemMessageId EMPTY_138;
-    @ClientString(id = 7114, message = "")
-    public static SystemMessageId EMPTY_139;
-    @ClientString(id = 7115, message = "")
-    public static SystemMessageId EMPTY_140;
-    @ClientString(id = 7116, message = "")
-    public static SystemMessageId EMPTY_141;
-    @ClientString(id = 7117, message = "")
-    public static SystemMessageId EMPTY_142;
-    @ClientString(id = 7118, message = "")
-    public static SystemMessageId EMPTY_143;
-    @ClientString(id = 7119, message = "")
-    public static SystemMessageId EMPTY_144;
-    @ClientString(id = 7120, message = "")
-    public static SystemMessageId EMPTY_145;
-    @ClientString(id = 7121, message = "")
-    public static SystemMessageId EMPTY_146;
-    @ClientString(id = 7122, message = "")
-    public static SystemMessageId EMPTY_147;
-    @ClientString(id = 7123, message = "")
-    public static SystemMessageId EMPTY_148;
-    @ClientString(id = 7124, message = "")
-    public static SystemMessageId EMPTY_149;
-    @ClientString(id = 7125, message = "")
-    public static SystemMessageId EMPTY_150;
-    @ClientString(id = 7126, message = "")
-    public static SystemMessageId EMPTY_151;
-    @ClientString(id = 7127, message = "")
-    public static SystemMessageId EMPTY_152;
-    @ClientString(id = 7128, message = "")
-    public static SystemMessageId EMPTY_153;
-    @ClientString(id = 7129, message = "")
-    public static SystemMessageId EMPTY_154;
-    @ClientString(id = 7130, message = "")
-    public static SystemMessageId EMPTY_155;
-    @ClientString(id = 7140, message = "")
-    public static SystemMessageId EMPTY_156;
-    @ClientString(id = 7150, message = "")
-    public static SystemMessageId EMPTY_157;
-    @ClientString(id = 7151, message = "")
-    public static SystemMessageId EMPTY_158;
-    @ClientString(id = 7152, message = "")
-    public static SystemMessageId EMPTY_159;
-    @ClientString(id = 7153, message = "")
-    public static SystemMessageId EMPTY_160;
-    @ClientString(id = 7154, message = "")
-    public static SystemMessageId EMPTY_161;
-    @ClientString(id = 7155, message = "")
-    public static SystemMessageId EMPTY_162;
-    @ClientString(id = 7156, message = "")
-    public static SystemMessageId EMPTY_163;
-    @ClientString(id = 7157, message = "")
-    public static SystemMessageId EMPTY_164;
-    @ClientString(id = 7158, message = "")
-    public static SystemMessageId EMPTY_165;
-    @ClientString(id = 7159, message = "")
-    public static SystemMessageId EMPTY_166;
-    @ClientString(id = 7160, message = "")
-    public static SystemMessageId EMPTY_167;
-    @ClientString(id = 7161, message = "")
-    public static SystemMessageId EMPTY_168;
-    @ClientString(id = 7162, message = "")
-    public static SystemMessageId EMPTY_169;
-    @ClientString(id = 7163, message = "")
-    public static SystemMessageId EMPTY_170;
-    @ClientString(id = 7164, message = "")
-    public static SystemMessageId EMPTY_171;
-    @ClientString(id = 7165, message = "")
-    public static SystemMessageId EMPTY_172;
-    @ClientString(id = 7166, message = "")
-    public static SystemMessageId EMPTY_173;
-    @ClientString(id = 7167, message = "")
-    public static SystemMessageId EMPTY_174;
-    @ClientString(id = 7168, message = "")
-    public static SystemMessageId EMPTY_175;
-    @ClientString(id = 7169, message = "")
-    public static SystemMessageId EMPTY_176;
-    @ClientString(id = 7170, message = "")
-    public static SystemMessageId EMPTY_177;
-    @ClientString(id = 7171, message = "")
-    public static SystemMessageId EMPTY_178;
-    @ClientString(id = 7172, message = "")
-    public static SystemMessageId EMPTY_179;
-    @ClientString(id = 7173, message = "")
-    public static SystemMessageId EMPTY_180;
-    @ClientString(id = 7174, message = "")
-    public static SystemMessageId EMPTY_181;
-    @ClientString(id = 7175, message = "")
-    public static SystemMessageId EMPTY_182;
-    @ClientString(id = 7176, message = "")
-    public static SystemMessageId EMPTY_183;
-    @ClientString(id = 7177, message = "")
-    public static SystemMessageId EMPTY_184;
-    @ClientString(id = 7178, message = "")
-    public static SystemMessageId EMPTY_185;
-    @ClientString(id = 7179, message = "")
-    public static SystemMessageId EMPTY_186;
-    @ClientString(id = 7180, message = "")
-    public static SystemMessageId EMPTY_187;
-    @ClientString(id = 7181, message = "")
-    public static SystemMessageId EMPTY_188;
-    @ClientString(id = 7182, message = "")
-    public static SystemMessageId EMPTY_189;
-    @ClientString(id = 7183, message = "")
-    public static SystemMessageId EMPTY_190;
-    @ClientString(id = 7184, message = "")
-    public static SystemMessageId EMPTY_191;
-    @ClientString(id = 7185, message = "")
-    public static SystemMessageId EMPTY_192;
-    @ClientString(id = 7186, message = "")
-    public static SystemMessageId EMPTY_193;
-    @ClientString(id = 7187, message = "")
-    public static SystemMessageId EMPTY_194;
-    @ClientString(id = 7188, message = "")
-    public static SystemMessageId EMPTY_195;
-    @ClientString(id = 7189, message = "")
-    public static SystemMessageId EMPTY_196;
-    @ClientString(id = 7190, message = "")
-    public static SystemMessageId EMPTY_197;
-    @ClientString(id = 7191, message = "")
-    public static SystemMessageId EMPTY_198;
-    @ClientString(id = 7192, message = "")
-    public static SystemMessageId EMPTY_199;
-    @ClientString(id = 7193, message = "")
-    public static SystemMessageId EMPTY_200;
-    @ClientString(id = 7194, message = "")
-    public static SystemMessageId EMPTY_201;
-    @ClientString(id = 7195, message = "")
-    public static SystemMessageId EMPTY_202;
-    @ClientString(id = 7196, message = "")
-    public static SystemMessageId EMPTY_203;
-    @ClientString(id = 7197, message = "")
-    public static SystemMessageId EMPTY_204;
-    @ClientString(id = 7198, message = "")
-    public static SystemMessageId EMPTY_205;
-    @ClientString(id = 7199, message = "")
-    public static SystemMessageId EMPTY_206;
-    @ClientString(id = 7200, message = "")
-    public static SystemMessageId EMPTY_207;
-    @ClientString(id = 7201, message = "")
-    public static SystemMessageId EMPTY_208;
-    @ClientString(id = 7202, message = "")
-    public static SystemMessageId EMPTY_209;
-    @ClientString(id = 7203, message = "")
-    public static SystemMessageId EMPTY_210;
-    @ClientString(id = 7204, message = "")
-    public static SystemMessageId EMPTY_211;
-    @ClientString(id = 7205, message = "")
-    public static SystemMessageId EMPTY_212;
-    @ClientString(id = 7206, message = "")
-    public static SystemMessageId EMPTY_213;
-    @ClientString(id = 7207, message = "")
-    public static SystemMessageId EMPTY_214;
-    @ClientString(id = 7208, message = "")
-    public static SystemMessageId EMPTY_215;
-    @ClientString(id = 7209, message = "")
-    public static SystemMessageId EMPTY_216;
-    @ClientString(id = 7210, message = "")
-    public static SystemMessageId EMPTY_217;
-    @ClientString(id = 7211, message = "")
-    public static SystemMessageId EMPTY_218;
-    @ClientString(id = 7212, message = "")
-    public static SystemMessageId EMPTY_219;
-    @ClientString(id = 7213, message = "")
-    public static SystemMessageId EMPTY_220;
-    @ClientString(id = 7214, message = "")
-    public static SystemMessageId EMPTY_221;
-    @ClientString(id = 7215, message = "")
-    public static SystemMessageId EMPTY_222;
-    @ClientString(id = 7216, message = "")
-    public static SystemMessageId EMPTY_223;
-    @ClientString(id = 7217, message = "")
-    public static SystemMessageId EMPTY_224;
-    @ClientString(id = 7218, message = "")
-    public static SystemMessageId EMPTY_225;
-    @ClientString(id = 7219, message = "")
-    public static SystemMessageId EMPTY_226;
-    @ClientString(id = 7220, message = "")
-    public static SystemMessageId EMPTY_227;
-    @ClientString(id = 7221, message = "")
-    public static SystemMessageId EMPTY_228;
-    @ClientString(id = 7222, message = "")
-    public static SystemMessageId EMPTY_229;
-    @ClientString(id = 7223, message = "")
-    public static SystemMessageId EMPTY_230;
-    @ClientString(id = 7224, message = "")
-    public static SystemMessageId EMPTY_231;
-    @ClientString(id = 7225, message = "")
-    public static SystemMessageId EMPTY_232;
-    @ClientString(id = 7226, message = "")
-    public static SystemMessageId EMPTY_233;
-    @ClientString(id = 7227, message = "")
-    public static SystemMessageId EMPTY_234;
-    @ClientString(id = 7228, message = "")
-    public static SystemMessageId EMPTY_235;
-    @ClientString(id = 7229, message = "")
-    public static SystemMessageId EMPTY_236;
-    @ClientString(id = 7230, message = "")
-    public static SystemMessageId EMPTY_237;
-    @ClientString(id = 7231, message = "")
-    public static SystemMessageId EMPTY_238;
-    @ClientString(id = 7232, message = "")
-    public static SystemMessageId EMPTY_239;
-    @ClientString(id = 7233, message = "")
-    public static SystemMessageId EMPTY_240;
-    @ClientString(id = 7234, message = "")
-    public static SystemMessageId EMPTY_241;
-    @ClientString(id = 7235, message = "")
-    public static SystemMessageId EMPTY_242;
-    @ClientString(id = 7236, message = "")
-    public static SystemMessageId EMPTY_243;
-    @ClientString(id = 7237, message = "")
-    public static SystemMessageId EMPTY_244;
-    @ClientString(id = 7238, message = "")
-    public static SystemMessageId EMPTY_245;
-    @ClientString(id = 7239, message = "")
-    public static SystemMessageId EMPTY_246;
-    @ClientString(id = 7240, message = "")
-    public static SystemMessageId EMPTY_247;
-    @ClientString(id = 7241, message = "")
-    public static SystemMessageId EMPTY_248;
-    @ClientString(id = 7242, message = "")
-    public static SystemMessageId EMPTY_249;
-    @ClientString(id = 7243, message = "")
-    public static SystemMessageId EMPTY_250;
-    @ClientString(id = 7244, message = "")
-    public static SystemMessageId EMPTY_251;
-    @ClientString(id = 7245, message = "")
-    public static SystemMessageId EMPTY_252;
-    @ClientString(id = 7246, message = "")
-    public static SystemMessageId EMPTY_253;
-    @ClientString(id = 7247, message = "")
-    public static SystemMessageId EMPTY_254;
-    @ClientString(id = 7248, message = "")
-    public static SystemMessageId EMPTY_255;
-    @ClientString(id = 7249, message = "")
-    public static SystemMessageId EMPTY_256;
-    @ClientString(id = 7250, message = "")
-    public static SystemMessageId EMPTY_257;
-    @ClientString(id = 7251, message = "")
-    public static SystemMessageId EMPTY_258;
-    @ClientString(id = 7252, message = "")
-    public static SystemMessageId EMPTY_259;
-    @ClientString(id = 7253, message = "")
-    public static SystemMessageId EMPTY_260;
-    @ClientString(id = 7254, message = "")
-    public static SystemMessageId EMPTY_261;
-    @ClientString(id = 7255, message = "")
-    public static SystemMessageId EMPTY_262;
-    @ClientString(id = 7256, message = "")
-    public static SystemMessageId EMPTY_263;
-    @ClientString(id = 7257, message = "")
-    public static SystemMessageId EMPTY_264;
-    @ClientString(id = 7258, message = "")
-    public static SystemMessageId EMPTY_265;
-    @ClientString(id = 7259, message = "")
-    public static SystemMessageId EMPTY_266;
-    @ClientString(id = 7260, message = "")
-    public static SystemMessageId EMPTY_267;
-    @ClientString(id = 7261, message = "")
-    public static SystemMessageId EMPTY_268;
-    @ClientString(id = 7262, message = "")
-    public static SystemMessageId EMPTY_269;
-    @ClientString(id = 7263, message = "")
-    public static SystemMessageId EMPTY_270;
-    @ClientString(id = 7264, message = "")
-    public static SystemMessageId EMPTY_271;
-    @ClientString(id = 7265, message = "")
-    public static SystemMessageId EMPTY_272;
-    @ClientString(id = 7266, message = "")
-    public static SystemMessageId EMPTY_273;
-    @ClientString(id = 7267, message = "")
-    public static SystemMessageId EMPTY_274;
-    @ClientString(id = 7268, message = "")
-    public static SystemMessageId EMPTY_275;
-    @ClientString(id = 7269, message = "")
-    public static SystemMessageId EMPTY_276;
-    @ClientString(id = 7270, message = "")
-    public static SystemMessageId EMPTY_277;
-    @ClientString(id = 7271, message = "")
-    public static SystemMessageId EMPTY_278;
-    @ClientString(id = 7272, message = "")
-    public static SystemMessageId EMPTY_279;
-    @ClientString(id = 7273, message = "")
-    public static SystemMessageId EMPTY_280;
-    @ClientString(id = 7274, message = "")
-    public static SystemMessageId EMPTY_281;
-    @ClientString(id = 7275, message = "")
-    public static SystemMessageId EMPTY_282;
-    @ClientString(id = 7276, message = "")
-    public static SystemMessageId EMPTY_283;
-    @ClientString(id = 7277, message = "")
-    public static SystemMessageId EMPTY_284;
-    @ClientString(id = 7278, message = "")
-    public static SystemMessageId EMPTY_285;
-    @ClientString(id = 7279, message = "")
-    public static SystemMessageId EMPTY_286;
-    @ClientString(id = 7280, message = "")
-    public static SystemMessageId EMPTY_287;
-    @ClientString(id = 7281, message = "")
-    public static SystemMessageId EMPTY_288;
-    @ClientString(id = 7282, message = "")
-    public static SystemMessageId EMPTY_289;
-    @ClientString(id = 7283, message = "")
-    public static SystemMessageId EMPTY_290;
-    @ClientString(id = 7284, message = "")
-    public static SystemMessageId EMPTY_291;
-    @ClientString(id = 7285, message = "")
-    public static SystemMessageId EMPTY_292;
-    @ClientString(id = 7286, message = "")
-    public static SystemMessageId EMPTY_293;
-    @ClientString(id = 7287, message = "")
-    public static SystemMessageId EMPTY_294;
-    @ClientString(id = 7288, message = "")
-    public static SystemMessageId EMPTY_295;
-    @ClientString(id = 7289, message = "")
-    public static SystemMessageId EMPTY_296;
-    @ClientString(id = 7290, message = "")
-    public static SystemMessageId EMPTY_297;
-    @ClientString(id = 7291, message = "")
-    public static SystemMessageId EMPTY_298;
-    @ClientString(id = 7292, message = "")
-    public static SystemMessageId EMPTY_299;
-    @ClientString(id = 7293, message = "")
-    public static SystemMessageId EMPTY_300;
-    @ClientString(id = 7294, message = "")
-    public static SystemMessageId EMPTY_301;
-    @ClientString(id = 7295, message = "")
-    public static SystemMessageId EMPTY_302;
-    @ClientString(id = 7296, message = "")
-    public static SystemMessageId EMPTY_303;
-    @ClientString(id = 7297, message = "")
-    public static SystemMessageId EMPTY_304;
-    @ClientString(id = 7298, message = "")
-    public static SystemMessageId EMPTY_305;
-    @ClientString(id = 7299, message = "")
-    public static SystemMessageId EMPTY_306;
-    @ClientString(id = 7300, message = "")
-    public static SystemMessageId EMPTY_307;
-    @ClientString(id = 7301, message = "")
-    public static SystemMessageId EMPTY_308;
-    @ClientString(id = 7302, message = "")
-    public static SystemMessageId EMPTY_309;
-    @ClientString(id = 7303, message = "")
-    public static SystemMessageId EMPTY_310;
-    @ClientString(id = 7304, message = "")
-    public static SystemMessageId EMPTY_311;
-    @ClientString(id = 7305, message = "")
-    public static SystemMessageId EMPTY_312;
-    @ClientString(id = 7306, message = "")
-    public static SystemMessageId EMPTY_313;
-    @ClientString(id = 7307, message = "")
-    public static SystemMessageId EMPTY_314;
-    @ClientString(id = 7308, message = "")
-    public static SystemMessageId EMPTY_315;
-    @ClientString(id = 7309, message = "")
-    public static SystemMessageId EMPTY_316;
-    @ClientString(id = 7310, message = "")
-    public static SystemMessageId EMPTY_317;
-    @ClientString(id = 7311, message = "")
-    public static SystemMessageId EMPTY_318;
-    @ClientString(id = 7312, message = "")
-    public static SystemMessageId EMPTY_319;
-    @ClientString(id = 7313, message = "")
-    public static SystemMessageId EMPTY_320;
-    @ClientString(id = 7314, message = "")
-    public static SystemMessageId EMPTY_321;
-    @ClientString(id = 7315, message = "")
-    public static SystemMessageId EMPTY_322;
-    @ClientString(id = 7316, message = "")
-    public static SystemMessageId EMPTY_323;
-    @ClientString(id = 7317, message = "")
-    public static SystemMessageId EMPTY_324;
-    @ClientString(id = 7318, message = "")
-    public static SystemMessageId EMPTY_325;
-    @ClientString(id = 7319, message = "")
-    public static SystemMessageId EMPTY_326;
-    @ClientString(id = 7320, message = "")
-    public static SystemMessageId EMPTY_327;
-    @ClientString(id = 7321, message = "")
-    public static SystemMessageId EMPTY_328;
-    @ClientString(id = 7322, message = "")
-    public static SystemMessageId EMPTY_329;
-    @ClientString(id = 7323, message = "")
-    public static SystemMessageId EMPTY_330;
-    @ClientString(id = 7324, message = "")
-    public static SystemMessageId EMPTY_331;
-    @ClientString(id = 7325, message = "")
-    public static SystemMessageId EMPTY_332;
-    @ClientString(id = 7326, message = "")
-    public static SystemMessageId EMPTY_333;
-    @ClientString(id = 7327, message = "")
-    public static SystemMessageId EMPTY_334;
-    @ClientString(id = 7328, message = "")
-    public static SystemMessageId EMPTY_335;
-    @ClientString(id = 7329, message = "")
-    public static SystemMessageId EMPTY_336;
-    @ClientString(id = 7330, message = "")
-    public static SystemMessageId EMPTY_337;
-    @ClientString(id = 7331, message = "")
-    public static SystemMessageId EMPTY_338;
-    @ClientString(id = 7332, message = "")
-    public static SystemMessageId EMPTY_339;
-    @ClientString(id = 7333, message = "")
-    public static SystemMessageId EMPTY_340;
-    @ClientString(id = 7334, message = "")
-    public static SystemMessageId EMPTY_341;
-    @ClientString(id = 7335, message = "")
-    public static SystemMessageId EMPTY_342;
-    @ClientString(id = 7336, message = "")
-    public static SystemMessageId EMPTY_343;
-    @ClientString(id = 7337, message = "")
-    public static SystemMessageId EMPTY_344;
-    @ClientString(id = 7338, message = "")
-    public static SystemMessageId EMPTY_345;
-    @ClientString(id = 7339, message = "")
-    public static SystemMessageId EMPTY_346;
-    @ClientString(id = 7340, message = "")
-    public static SystemMessageId EMPTY_347;
-    @ClientString(id = 7341, message = "")
-    public static SystemMessageId EMPTY_348;
-    @ClientString(id = 7342, message = "")
-    public static SystemMessageId EMPTY_349;
-    @ClientString(id = 7343, message = "")
-    public static SystemMessageId EMPTY_350;
-    @ClientString(id = 7344, message = "")
-    public static SystemMessageId EMPTY_351;
-    @ClientString(id = 7345, message = "")
-    public static SystemMessageId EMPTY_352;
-    @ClientString(id = 7346, message = "")
-    public static SystemMessageId EMPTY_353;
-    @ClientString(id = 7347, message = "")
-    public static SystemMessageId EMPTY_354;
-    @ClientString(id = 7348, message = "")
-    public static SystemMessageId EMPTY_355;
-    @ClientString(id = 7349, message = "")
-    public static SystemMessageId EMPTY_356;
-    @ClientString(id = 7350, message = "")
-    public static SystemMessageId EMPTY_357;
-    @ClientString(id = 7351, message = "")
-    public static SystemMessageId EMPTY_358;
-    @ClientString(id = 7352, message = "")
-    public static SystemMessageId EMPTY_359;
-    @ClientString(id = 7353, message = "")
-    public static SystemMessageId EMPTY_360;
-    @ClientString(id = 7354, message = "")
-    public static SystemMessageId EMPTY_361;
-    @ClientString(id = 7355, message = "")
-    public static SystemMessageId EMPTY_362;
-    @ClientString(id = 7356, message = "")
-    public static SystemMessageId EMPTY_363;
-    @ClientString(id = 7357, message = "")
-    public static SystemMessageId EMPTY_364;
-    @ClientString(id = 7358, message = "")
-    public static SystemMessageId EMPTY_365;
-    @ClientString(id = 7359, message = "")
-    public static SystemMessageId EMPTY_366;
-    @ClientString(id = 7360, message = "")
-    public static SystemMessageId EMPTY_367;
-    @ClientString(id = 7361, message = "")
-    public static SystemMessageId EMPTY_368;
-    @ClientString(id = 7362, message = "")
-    public static SystemMessageId EMPTY_369;
-    @ClientString(id = 7363, message = "")
-    public static SystemMessageId EMPTY_370;
-    @ClientString(id = 7364, message = "")
-    public static SystemMessageId EMPTY_371;
-    @ClientString(id = 7365, message = "")
-    public static SystemMessageId EMPTY_372;
-    @ClientString(id = 7366, message = "")
-    public static SystemMessageId EMPTY_373;
-    @ClientString(id = 7367, message = "")
-    public static SystemMessageId EMPTY_374;
-    @ClientString(id = 7368, message = "")
-    public static SystemMessageId EMPTY_375;
-    @ClientString(id = 7369, message = "")
-    public static SystemMessageId EMPTY_376;
-    @ClientString(id = 7370, message = "")
-    public static SystemMessageId EMPTY_377;
-    @ClientString(id = 7371, message = "")
-    public static SystemMessageId EMPTY_378;
-    @ClientString(id = 7372, message = "")
-    public static SystemMessageId EMPTY_379;
-    @ClientString(id = 7373, message = "")
-    public static SystemMessageId EMPTY_380;
-    @ClientString(id = 7374, message = "")
-    public static SystemMessageId EMPTY_381;
-    @ClientString(id = 7375, message = "")
-    public static SystemMessageId EMPTY_382;
-    @ClientString(id = 7376, message = "")
-    public static SystemMessageId EMPTY_383;
-    @ClientString(id = 7377, message = "")
-    public static SystemMessageId EMPTY_384;
-    @ClientString(id = 7378, message = "")
-    public static SystemMessageId EMPTY_385;
-    @ClientString(id = 7379, message = "")
-    public static SystemMessageId EMPTY_386;
-    @ClientString(id = 7380, message = "")
-    public static SystemMessageId EMPTY_387;
-    @ClientString(id = 7381, message = "")
-    public static SystemMessageId EMPTY_388;
-    @ClientString(id = 7382, message = "")
-    public static SystemMessageId EMPTY_389;
-    @ClientString(id = 7383, message = "")
-    public static SystemMessageId EMPTY_390;
-    @ClientString(id = 7384, message = "")
-    public static SystemMessageId EMPTY_391;
-    @ClientString(id = 7385, message = "")
-    public static SystemMessageId EMPTY_392;
-    @ClientString(id = 7386, message = "")
-    public static SystemMessageId EMPTY_393;
-    @ClientString(id = 7387, message = "")
-    public static SystemMessageId EMPTY_394;
-    @ClientString(id = 7388, message = "")
-    public static SystemMessageId EMPTY_395;
-    @ClientString(id = 7389, message = "")
-    public static SystemMessageId EMPTY_396;
-    @ClientString(id = 7390, message = "")
-    public static SystemMessageId EMPTY_397;
-    @ClientString(id = 7391, message = "")
-    public static SystemMessageId EMPTY_398;
-    @ClientString(id = 7392, message = "")
-    public static SystemMessageId EMPTY_399;
-    @ClientString(id = 7393, message = "")
-    public static SystemMessageId EMPTY_400;
-    @ClientString(id = 7394, message = "")
-    public static SystemMessageId EMPTY_401;
-    @ClientString(id = 7395, message = "")
-    public static SystemMessageId EMPTY_402;
-    @ClientString(id = 7396, message = "")
-    public static SystemMessageId EMPTY_403;
-    @ClientString(id = 7397, message = "")
-    public static SystemMessageId EMPTY_404;
-    @ClientString(id = 7398, message = "")
-    public static SystemMessageId EMPTY_405;
-    @ClientString(id = 7399, message = "")
-    public static SystemMessageId EMPTY_406;
-    @ClientString(id = 7400, message = "")
-    public static SystemMessageId EMPTY_407;
-    @ClientString(id = 7401, message = "")
-    public static SystemMessageId EMPTY_408;
-    @ClientString(id = 7402, message = "")
-    public static SystemMessageId EMPTY_409;
-    @ClientString(id = 7403, message = "")
-    public static SystemMessageId EMPTY_410;
-    @ClientString(id = 7404, message = "")
-    public static SystemMessageId EMPTY_411;
-    @ClientString(id = 7405, message = "")
-    public static SystemMessageId EMPTY_412;
-    @ClientString(id = 7406, message = "")
-    public static SystemMessageId EMPTY_413;
-    @ClientString(id = 7407, message = "")
-    public static SystemMessageId EMPTY_414;
-    @ClientString(id = 7408, message = "")
-    public static SystemMessageId EMPTY_415;
-    @ClientString(id = 7409, message = "")
-    public static SystemMessageId EMPTY_416;
-    @ClientString(id = 7410, message = "")
-    public static SystemMessageId EMPTY_417;
-    @ClientString(id = 7411, message = "")
-    public static SystemMessageId EMPTY_418;
-    @ClientString(id = 7412, message = "")
-    public static SystemMessageId EMPTY_419;
-    @ClientString(id = 7413, message = "")
-    public static SystemMessageId EMPTY_420;
-    @ClientString(id = 7414, message = "")
-    public static SystemMessageId EMPTY_421;
-    @ClientString(id = 7415, message = "")
-    public static SystemMessageId EMPTY_422;
-    @ClientString(id = 7416, message = "")
-    public static SystemMessageId EMPTY_423;
-    @ClientString(id = 7417, message = "")
-    public static SystemMessageId EMPTY_424;
-    @ClientString(id = 7418, message = "")
-    public static SystemMessageId EMPTY_425;
-    @ClientString(id = 7419, message = "")
-    public static SystemMessageId EMPTY_426;
-    @ClientString(id = 7420, message = "")
-    public static SystemMessageId EMPTY_427;
-    @ClientString(id = 7421, message = "")
-    public static SystemMessageId EMPTY_428;
-    @ClientString(id = 7422, message = "")
-    public static SystemMessageId EMPTY_429;
-    @ClientString(id = 7423, message = "")
-    public static SystemMessageId EMPTY_430;
-    @ClientString(id = 7424, message = "")
-    public static SystemMessageId EMPTY_431;
-    @ClientString(id = 7425, message = "")
-    public static SystemMessageId EMPTY_432;
-    @ClientString(id = 7426, message = "")
-    public static SystemMessageId EMPTY_433;
-    @ClientString(id = 7427, message = "")
-    public static SystemMessageId EMPTY_434;
-    @ClientString(id = 7428, message = "")
-    public static SystemMessageId EMPTY_435;
-    @ClientString(id = 7429, message = "")
-    public static SystemMessageId EMPTY_436;
-    @ClientString(id = 7430, message = "")
-    public static SystemMessageId EMPTY_437;
-    @ClientString(id = 7431, message = "")
-    public static SystemMessageId EMPTY_438;
-    @ClientString(id = 7432, message = "")
-    public static SystemMessageId EMPTY_439;
-    @ClientString(id = 7433, message = "")
-    public static SystemMessageId EMPTY_440;
-    @ClientString(id = 7434, message = "")
-    public static SystemMessageId EMPTY_441;
-    @ClientString(id = 7435, message = "")
-    public static SystemMessageId EMPTY_442;
-    @ClientString(id = 7436, message = "")
-    public static SystemMessageId EMPTY_443;
-    @ClientString(id = 7437, message = "")
-    public static SystemMessageId EMPTY_444;
-    @ClientString(id = 7438, message = "")
-    public static SystemMessageId EMPTY_445;
-    @ClientString(id = 7439, message = "")
-    public static SystemMessageId EMPTY_446;
-    @ClientString(id = 7440, message = "")
-    public static SystemMessageId EMPTY_447;
-    @ClientString(id = 7441, message = "")
-    public static SystemMessageId EMPTY_448;
-    @ClientString(id = 7442, message = "")
-    public static SystemMessageId EMPTY_449;
-    @ClientString(id = 7443, message = "")
-    public static SystemMessageId EMPTY_450;
-    @ClientString(id = 7444, message = "")
-    public static SystemMessageId EMPTY_451;
-    @ClientString(id = 7445, message = "")
-    public static SystemMessageId EMPTY_452;
-    @ClientString(id = 7446, message = "")
-    public static SystemMessageId EMPTY_453;
-    @ClientString(id = 7447, message = "")
-    public static SystemMessageId EMPTY_454;
-    @ClientString(id = 7448, message = "")
-    public static SystemMessageId EMPTY_455;
-    @ClientString(id = 7449, message = "")
-    public static SystemMessageId EMPTY_456;
-    @ClientString(id = 7450, message = "")
-    public static SystemMessageId EMPTY_457;
-    @ClientString(id = 7451, message = "")
-    public static SystemMessageId EMPTY_458;
-    @ClientString(id = 7452, message = "")
-    public static SystemMessageId EMPTY_459;
-    @ClientString(id = 7453, message = "")
-    public static SystemMessageId EMPTY_460;
-    @ClientString(id = 7454, message = "")
-    public static SystemMessageId EMPTY_461;
-    @ClientString(id = 7455, message = "")
-    public static SystemMessageId EMPTY_462;
-    @ClientString(id = 7456, message = "")
-    public static SystemMessageId EMPTY_463;
-    @ClientString(id = 7457, message = "")
-    public static SystemMessageId EMPTY_464;
-    @ClientString(id = 7458, message = "")
-    public static SystemMessageId EMPTY_465;
-    @ClientString(id = 7459, message = "")
-    public static SystemMessageId EMPTY_466;
-    @ClientString(id = 7460, message = "")
-    public static SystemMessageId EMPTY_467;
-    @ClientString(id = 7461, message = "")
-    public static SystemMessageId EMPTY_468;
-    @ClientString(id = 7462, message = "")
-    public static SystemMessageId EMPTY_469;
-    @ClientString(id = 7463, message = "")
-    public static SystemMessageId EMPTY_470;
-    @ClientString(id = 7464, message = "")
-    public static SystemMessageId EMPTY_471;
-    @ClientString(id = 7465, message = "")
-    public static SystemMessageId EMPTY_472;
-    @ClientString(id = 7466, message = "")
-    public static SystemMessageId EMPTY_473;
-    @ClientString(id = 7467, message = "")
-    public static SystemMessageId EMPTY_474;
-    @ClientString(id = 7468, message = "")
-    public static SystemMessageId EMPTY_475;
-    @ClientString(id = 7469, message = "")
-    public static SystemMessageId EMPTY_476;
-    @ClientString(id = 7470, message = "")
-    public static SystemMessageId EMPTY_477;
-    @ClientString(id = 7471, message = "")
-    public static SystemMessageId EMPTY_478;
-    @ClientString(id = 7472, message = "")
-    public static SystemMessageId EMPTY_479;
-    @ClientString(id = 7473, message = "")
-    public static SystemMessageId EMPTY_480;
-    @ClientString(id = 7474, message = "")
-    public static SystemMessageId EMPTY_481;
-    @ClientString(id = 7475, message = "")
-    public static SystemMessageId EMPTY_482;
-    @ClientString(id = 7476, message = "")
-    public static SystemMessageId EMPTY_483;
-    @ClientString(id = 7477, message = "")
-    public static SystemMessageId EMPTY_484;
-    @ClientString(id = 7478, message = "")
-    public static SystemMessageId EMPTY_485;
-    @ClientString(id = 7479, message = "")
-    public static SystemMessageId EMPTY_486;
-    @ClientString(id = 7480, message = "")
-    public static SystemMessageId EMPTY_487;
-    @ClientString(id = 7481, message = "")
-    public static SystemMessageId EMPTY_488;
-    @ClientString(id = 7482, message = "")
-    public static SystemMessageId EMPTY_489;
-    @ClientString(id = 7483, message = "")
-    public static SystemMessageId EMPTY_490;
-    @ClientString(id = 7484, message = "")
-    public static SystemMessageId EMPTY_491;
-    @ClientString(id = 7485, message = "")
-    public static SystemMessageId EMPTY_492;
-    @ClientString(id = 7486, message = "")
-    public static SystemMessageId EMPTY_493;
-    @ClientString(id = 7487, message = "")
-    public static SystemMessageId EMPTY_494;
-    @ClientString(id = 7488, message = "")
-    public static SystemMessageId EMPTY_495;
-    @ClientString(id = 7489, message = "")
-    public static SystemMessageId EMPTY_496;
-    @ClientString(id = 7490, message = "")
-    public static SystemMessageId EMPTY_497;
+
+	@ClientString(id = 6839, message = "Local time $s1:$s2.")
+	public static SystemMessageId LOCAL_TIME_S1_S2;
+
+	@ClientString(id = 6840, message = "In $s1 min. you will be able to choose the collection effect again.")
+	public static SystemMessageId IN_S1_MIN_YOU_WILL_BE_ABLE_TO_CHOOSE_THE_COLLECTION_EFFECT_AGAIN;
+
+	@ClientString(id = 6841, message = "Collection effect has already been activated.")
+	public static SystemMessageId COLLECTION_EFFECT_HAS_ALREADY_BEEN_ACTIVATED;
+
+	@ClientString(id = 6842, message = "The collection is not full, you cannot activate the effect.")
+	public static SystemMessageId THE_COLLECTION_IS_NOT_FULL_YOU_CANNOT_ACTIVATE_THE_EFFECT;
+
+	@ClientString(id = 6843, message = "Unable to activate the effect due to system error. Try again later.")
+	public static SystemMessageId UNABLE_TO_ACTIVATE_THE_EFFECT_DUE_TO_SYSTEM_ERROR_TRY_AGAIN_LATER;
+
+	@ClientString(id = 6844, message = "Unable to continue due to system error. Try again later.")
+	public static SystemMessageId UNABLE_TO_CONTINUE_DUE_TO_SYSTEM_ERROR_TRY_AGAIN_LATER;
+
+	@ClientString(id = 6845, message = "List of transformations hasn't loaded. Try again later.")
+	public static SystemMessageId LIST_OF_TRANSFORMATIONS_HASN_T_LOADED_TRY_AGAIN_LATER;
+
+	@ClientString(id = 6846, message = "Transformation, evolution, and extraction are not available during private store or workshop use.")
+	public static SystemMessageId TRANSFORMATION_EVOLUTION_AND_EXTRACTION_ARE_NOT_AVAILABLE_DURING_PRIVATE_STORE_OR_WORKSHOP_USE;
+
+	@ClientString(id = 6847, message = "Inappropriate item.")
+	public static SystemMessageId INAPPROPRIATE_ITEM;
+
+	@ClientString(id = 6848, message = "Not enough items.")
+	public static SystemMessageId NOT_ENOUGH_ITEMS;
+
+	@ClientString(id = 6849, message = "Transformation, evolution, and extraction are not available in the freeze state.")
+	public static SystemMessageId TRANSFORMATION_EVOLUTION_AND_EXTRACTION_ARE_NOT_AVAILABLE_IN_THE_FREEZE_STATE;
+
+	@ClientString(id = 6850, message = "Dead character cannot use transformation, evolution, and extraction.")
+	public static SystemMessageId DEAD_CHARACTER_CANNOT_USE_TRANSFORMATION_EVOLUTION_AND_EXTRACTION;
+
+	@ClientString(id = 6851, message = "Transformation, evolution, and extraction are not available during exchange.")
+	public static SystemMessageId TRANSFORMATION_EVOLUTION_AND_EXTRACTION_ARE_NOT_AVAILABLE_DURING_EXCHANGE;
+
+	@ClientString(id = 6852, message = "Transformation, evolution, and extraction are not available in the petrification state.")
+	public static SystemMessageId TRANSFORMATION_EVOLUTION_AND_EXTRACTION_ARE_NOT_AVAILABLE_IN_THE_PETRIFICATION_STATE;
+
+	@ClientString(id = 6853, message = "Transformation, evolution, and extraction are not available during fishing.")
+	public static SystemMessageId TRANSFORMATION_EVOLUTION_AND_EXTRACTION_ARE_NOT_AVAILABLE_DURING_FISHING;
+
+	@ClientString(id = 6854, message = "You cannot use transformation, evolution, and extraction while sitting.")
+	public static SystemMessageId YOU_CANNOT_USE_TRANSFORMATION_EVOLUTION_AND_EXTRACTION_WHILE_SITTING;
+
+	@ClientString(id = 6855, message = "Evolution and extraction are not available during a fight.")
+	public static SystemMessageId EVOLUTION_AND_EXTRACTION_ARE_NOT_AVAILABLE_DURING_A_FIGHT;
+
+	@ClientString(id = 6856, message = "Evolution is not available for this transformation.")
+	public static SystemMessageId EVOLUTION_IS_NOT_AVAILABLE_FOR_THIS_TRANSFORMATION;
+
+	@ClientString(id = 6857, message = "Not enough material for evolution.")
+	public static SystemMessageId NOT_ENOUGH_MATERIAL_FOR_EVOLUTION;
+
+	@ClientString(id = 6858, message = "Transformation, evolution, and extraction are not available in a fight.")
+	public static SystemMessageId TRANSFORMATION_EVOLUTION_AND_EXTRACTION_ARE_NOT_AVAILABLE_IN_A_FIGHT;
+
+	@ClientString(id = 6859, message = "Extraction is not available for this transformation.")
+	public static SystemMessageId EXTRACTION_IS_NOT_AVAILABLE_FOR_THIS_TRANSFORMATION;
+
+	@ClientString(id = 6860, message = "Not enough materials for extraction.")
+	public static SystemMessageId NOT_ENOUGH_MATERIALS_FOR_EXTRACTION;
+
+	@ClientString(id = 6861, message = "Not enough space in inventory. Free some space and try again.")
+	public static SystemMessageId NOT_ENOUGH_SPACE_IN_INVENTORY_FREE_SOME_SPACE_AND_TRY_AGAIN;
+
+	@ClientString(id = 6862, message = "You cannot block or unblock a transformation during a fight.")
+	public static SystemMessageId YOU_CANNOT_BLOCK_OR_UNBLOCK_A_TRANSFORMATION_DURING_A_FIGHT;
+
+	@ClientString(id = 6863, message = "You cannor set and unblock your favorites during a fight.")
+	public static SystemMessageId YOU_CANNOR_SET_AND_UNBLOCK_YOUR_FAVORITES_DURING_A_FIGHT;
+
+	@ClientString(id = 6864, message = "In $s1 sec. you will be able to choose the collection effect again.")
+	public static SystemMessageId IN_S1_SEC_YOU_WILL_BE_ABLE_TO_CHOOSE_THE_COLLECTION_EFFECT_AGAIN;
+
+	@ClientString(id = 6865, message = "Transformation is not available at the moment. Try again later.")
+	public static SystemMessageId TRANSFORMATION_IS_NOT_AVAILABLE_AT_THE_MOMENT_TRY_AGAIN_LATER;
+
+	@ClientString(id = 6866, message = "Evolution of transformation is not available at the moment. Try again later.")
+	public static SystemMessageId EVOLUTION_OF_TRANSFORMATION_IS_NOT_AVAILABLE_AT_THE_MOMENT_TRY_AGAIN_LATER;
+
+	@ClientString(id = 6867, message = "Transformation cannot be extracted at the moment. Try again later.")
+	public static SystemMessageId TRANSFORMATION_CANNOT_BE_EXTRACTED_AT_THE_MOMENT_TRY_AGAIN_LATER;
+
+	@ClientString(id = 7203, message = "An error occurred while waiting for server connection. Try again later.")
+	public static SystemMessageId AN_ERROR_OCCURRED_WHILE_WAITING_FOR_SERVER_CONNECTION_TRY_AGAIN_LATER;
+
+
+
     private static Map<Integer, SystemMessageId> VALUES = new HashMap<>();
 
     static {

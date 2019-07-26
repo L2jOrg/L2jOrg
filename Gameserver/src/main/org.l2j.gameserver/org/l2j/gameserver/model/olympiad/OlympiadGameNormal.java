@@ -374,7 +374,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
 
                     winside = 1;
 
-                    rewardParticipant(_playerOne.getPlayer(), getReward());
+                    rewardParticipant(_playerOne.getPlayer(),  Config.ALT_OLY_WINNER_REWARD);
 
                     if (Config.ALT_OLY_LOG_FIGHTS) {
                         LOGGER_OLYMPIAD.info(_playerTwo.getName() + " crash," + _playerOne + "," + _playerTwo + ",0,0,0,0," + pointDiff + "," + getType());
@@ -397,7 +397,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
 
                     winside = 2;
 
-                    rewardParticipant(_playerTwo.getPlayer(), getReward());
+                    rewardParticipant(_playerTwo.getPlayer(), Config.ALT_OLY_WINNER_REWARD);
 
                     if (Config.ALT_OLY_LOG_FIGHTS) {
                         LOGGER_OLYMPIAD.info(_playerOne.getName() + " crash," + _playerOne + "," + _playerTwo + ",0,0,0,0," + pointDiff + "," + getType());
@@ -426,8 +426,6 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
                 _playerTwo.updateStat(COMP_DONE, 1);
                 _playerOne.updateStat(COMP_DONE_WEEK, 1);
                 _playerTwo.updateStat(COMP_DONE_WEEK, 1);
-                _playerOne.updateStat(getWeeklyMatchType(), 1);
-                _playerTwo.updateStat(getWeeklyMatchType(), 1);
 
                 if (winside == 1) {
                     result = new ExOlympiadMatchResult(tie, winside, list1, list2);
@@ -496,7 +494,8 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
 
                 // Save Fight Result
                 saveResults(_playerOne, _playerTwo, 1, _startTime, _fightTime, getType());
-                rewardParticipant(_playerOne.getPlayer(), getReward());
+                rewardParticipant(_playerOne.getPlayer(), Config.ALT_OLY_WINNER_REWARD); // Winner
+                rewardParticipant(_playerTwo.getPlayer(), Config.ALT_OLY_LOSER_REWARD); // Loser
 
                 // Notify to scripts
                 EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerOne, _playerTwo, getType()), Olympiad.getInstance());
@@ -519,7 +518,9 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
 
                 // Save Fight Result
                 saveResults(_playerOne, _playerTwo, 2, _startTime, _fightTime, getType());
-                rewardParticipant(_playerTwo.getPlayer(), getReward());
+
+                rewardParticipant(_playerTwo.getPlayer(), Config.ALT_OLY_WINNER_REWARD); // Winner
+                rewardParticipant(_playerOne.getPlayer(), Config.ALT_OLY_LOSER_REWARD); // Loser
 
                 // Notify to scripts
                 EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, getType()), Olympiad.getInstance());
@@ -546,8 +547,6 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
             _playerTwo.updateStat(COMP_DONE, 1);
             _playerOne.updateStat(COMP_DONE_WEEK, 1);
             _playerTwo.updateStat(COMP_DONE_WEEK, 1);
-            _playerOne.updateStat(getWeeklyMatchType(), 1);
-            _playerTwo.updateStat(getWeeklyMatchType(), 1);
 
             if (winside == 1) {
                 result = new ExOlympiadMatchResult(tie, winside, list1, list2);

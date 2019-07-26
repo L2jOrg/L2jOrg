@@ -3,16 +3,17 @@ package org.l2j.gameserver.model;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
+import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.interfaces.INamable;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.taskmanager.RespawnTaskManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,7 +37,7 @@ public class Spawn extends Location implements IIdentifiable, INamable {
     /**
      * The current number of SpawnTask in progress or stand by of this Spawn
      */
-    protected int _scheduledCount;
+    public int _scheduledCount;
     /**
      * String identifier of this spawn
      */
@@ -253,7 +254,7 @@ public class Spawn extends Location implements IIdentifiable, INamable {
             _scheduledCount++;
 
             // Create a new SpawnTask to launch after the respawn Delay
-            ThreadPoolManager.getInstance().schedule(new SpawnTask(), hasRespawnRandom() ? Rnd.get(_respawnMinDelay, _respawnMaxDelay) : _respawnMinDelay);
+            RespawnTaskManager.getInstance().add(oldNpc, System.currentTimeMillis() + (hasRespawnRandom() ? Rnd.get(_respawnMinDelay, _respawnMaxDelay) : _respawnMinDelay));
         }
     }
 
@@ -338,6 +339,22 @@ public class Spawn extends Location implements IIdentifiable, INamable {
             LOGGER.warn("Error while spawning " + _template.getId(), e);
         }
         return null;
+    }
+
+    public void respawnNpc(Npc oldNpc)
+    {
+        if (_doRespawn)
+        {
+            oldNpc.refreshID();
+            initializeNpcInstance(oldNpc);
+
+            // Register NPC back to instance world.
+            final Instance instance = oldNpc.getInstanceWorld();
+            if (instance != null)
+            {
+                instance.addNpc(oldNpc);
+            }
+        }
     }
 
     /**
@@ -504,24 +521,5 @@ public class Spawn extends Location implements IIdentifiable, INamable {
     @Override
     public String toString() {
         return "Spawn ID: " + _template.getId() + " X: " + getX() + " Y: " + getY() + " Z: " + getZ() + " Heading: " + getHeading();
-    }
-
-    /**
-     * The task launching the function doSpawn()
-     */
-    class SpawnTask implements Runnable {
-        public SpawnTask() {
-        }
-
-        @Override
-        public void run() {
-            try {
-                doSpawn();
-            } catch (Exception e) {
-                LOGGER.warn("", e);
-            }
-
-            _scheduledCount--;
-        }
     }
 }

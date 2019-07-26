@@ -1,11 +1,12 @@
 package org.l2j.gameserver.model;
 
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.GameTimeController;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.PartyDistributionType;
+import org.l2j.gameserver.enums.StatusUpdateType;
 import org.l2j.gameserver.instancemanager.DuelManager;
 import org.l2j.gameserver.instancemanager.PcCafePointsManager;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -282,6 +283,10 @@ public class Party extends AbstractPlayerGroup {
             _partyLvl = player.getLevel();
         }
 
+        final StatusUpdate su = new StatusUpdate(player);
+        su.addUpdate(StatusUpdateType.MAX_HP, player.getMaxHp());
+        su.addUpdate(StatusUpdateType.CUR_HP, (int) player.getCurrentHp());
+
         // update partySpelled
         Summon summon;
         for (Player member : _members) {
@@ -293,6 +298,8 @@ public class Party extends AbstractPlayerGroup {
                     summon.updateEffectIcons();
                 }
                 member.getServitors().values().forEach(Summon::updateEffectIcons);
+
+                member.sendPacket(su);
             }
         }
 

@@ -171,7 +171,7 @@ public abstract class AbstractAI implements Ctrl {
                 break;
             }
             case AI_INTENTION_MOVE_TO: {
-                onIntentionMoveTo((Location) args[0]);
+                onIntentionMoveTo((ILocational) args[0]);
                 break;
             }
             case AI_INTENTION_FOLLOW: {
@@ -324,7 +324,7 @@ public abstract class AbstractAI implements Ctrl {
 
     protected abstract void onIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove);
 
-    protected abstract void onIntentionMoveTo(Location destination);
+    protected abstract void onIntentionMoveTo(ILocational destination);
 
     protected abstract void onIntentionFollow(Creature target);
 

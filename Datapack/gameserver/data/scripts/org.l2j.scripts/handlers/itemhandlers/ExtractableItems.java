@@ -16,13 +16,8 @@
  */
 package handlers.itemhandlers;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.l2j.gameserver.Config;
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.ExtractableProduct;
@@ -33,6 +28,11 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Extractable Items handler.
@@ -60,7 +60,7 @@ public class ExtractableItems implements IItemHandler
 		
 		if (!activeChar.isInventoryUnder80(false))
 		{
-			activeChar.sendPacket(SystemMessageId.EMPTY_463);
+			activeChar.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
 			return false;
 		}
 		

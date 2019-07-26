@@ -22,6 +22,8 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.BuilderUtil;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * This class handles following admin commands: - invul = turns invulnerability on/off
  * @version $Revision: 1.2.4.4 $ $Date: 2007/07/31 10:06:02 $
@@ -54,7 +56,7 @@ public class AdminInvul implements IAdminCommandHandler
 		else if (command.equals("admin_setinvul"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			if ((target != null) && target.isPlayer())
+			if ( isPlayer(target))
 			{
 				handleInvul((Player) target);
 			}

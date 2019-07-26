@@ -1,24 +1,7 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.stat.CharStat;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -40,46 +23,30 @@ public final class AttackTrait extends AbstractEffect
 	{
 		if (params.isEmpty())
 		{
-			LOGGER.warn(": this effect must have parameters!");
+			LOGGER.warn("this effect must have parameters!");
 			return;
 		}
 		
 		for (Entry<String, Object> param : params.getSet().entrySet())
 		{
-			_attackTraits.put(TraitType.valueOf(param.getKey()), (Float.parseFloat((String) param.getValue()) + 100) / 100);
-		}
-	}
-	
-	@Override
-	public void onExit(Creature effector, Creature effected, Skill skill)
-	{
-		final CharStat charStat = effected.getStat();
-		synchronized (charStat.getAttackTraits())
-		{
-			for (Entry<TraitType, Float> trait : _attackTraits.entrySet())
-			{
-				if (charStat.getAttackTraitsCount()[trait.getKey().ordinal()] == 0)
-				{
-					continue;
-				}
-				
-				charStat.getAttackTraits()[trait.getKey().ordinal()] /= trait.getValue();
-				charStat.getAttackTraitsCount()[trait.getKey().ordinal()]--;
-			}
+			_attackTraits.put(TraitType.valueOf(param.getKey()), Float.parseFloat((String) param.getValue()) / 100);
 		}
 	}
 	
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		final CharStat charStat = effected.getStat();
-		synchronized (charStat.getAttackTraits())
+		for (Entry<TraitType, Float> trait : _attackTraits.entrySet()) {
+			effected.getStat().mergeAttackTrait(trait.getKey(), trait.getValue());
+		}
+	}
+
+	@Override
+	public void onExit(Creature effector, Creature effected, Skill skill)
+	{
+		for (Entry<TraitType, Float> trait : _attackTraits.entrySet())
 		{
-			for (Entry<TraitType, Float> trait : _attackTraits.entrySet())
-			{
-				charStat.getAttackTraits()[trait.getKey().ordinal()] *= trait.getValue();
-				charStat.getAttackTraitsCount()[trait.getKey().ordinal()]++;
-			}
+			effected.getStat().removeAttackTrait(trait.getKey(), trait.getValue());
 		}
 	}
 }

@@ -5,10 +5,10 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.tasks.StartMovingTask;
-import org.l2j.gameserver.model.NpcWalkerNode;
-import org.l2j.gameserver.model.WalkRoute;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.NpcWalkerNode;
 import org.l2j.gameserver.model.WalkInfo;
+import org.l2j.gameserver.model.WalkRoute;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.tasks.npc.walker.ArrivedTask;
@@ -29,11 +29,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ScheduledFuture;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance3D;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
-
 
 /**
  * This class manages walking monsters.
@@ -56,6 +57,9 @@ public final class WalkingManager extends GameXmlReader {
     private final Map<String, WalkRoute> _routes = new HashMap<>(); // all available routes
     private final Map<Integer, WalkInfo> _activeRoutes = new HashMap<>(); // each record represents NPC, moving by predefined route from _routes, and moving progress
     private final Map<Integer, NpcRoutesHolder> _routesToAttach = new HashMap<>(); // each record represents NPC and all available routes for it
+    private final Map<Npc, ScheduledFuture<?>> _startMoveTasks = new ConcurrentHashMap<>();
+    private final Map<Npc, ScheduledFuture<?>> _repeatMoveTasks = new ConcurrentHashMap<>();
+    private final Map<Npc, ScheduledFuture<?>> _arriveTasks = new ConcurrentHashMap<>();
 
     private WalkingManager() {
         load();
@@ -244,11 +248,22 @@ public final class WalkingManager extends GameXmlReader {
                         npc.setWalking();
                     }
                     npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, node);
-                    walk.setWalkCheckTask(ThreadPoolManager.scheduleAtFixedRate(new StartMovingTask(npc, routeName), 60000, 60000)); // start walk check task, for resuming walk after fight
+
+                    final ScheduledFuture<?> task = _repeatMoveTasks.get(npc);
+                    if ((task == null) || task.isCancelled() || task.isDone())
+                    {
+                        final ScheduledFuture<?> newTask = ThreadPoolManager.scheduleAtFixedRate(new StartMovingTask(npc, routeName), 60000, 60000);
+                        _repeatMoveTasks.put(npc, newTask);
+                        walk.setWalkCheckTask(newTask); // start walk check task, for resuming walk after fight
+                    }
 
                     _activeRoutes.put(npc.getObjectId(), walk); // register route
                 } else {
-                    ThreadPoolManager.schedule(new StartMovingTask(npc, routeName), 60000);
+                    final ScheduledFuture<?> task = _startMoveTasks.get(npc);
+                    if ((task == null) || task.isCancelled() || task.isDone())
+                    {
+                        _startMoveTasks.put(npc, ThreadPoolManager.schedule(new StartMovingTask(npc, routeName), 60000));
+                    }
                 }
             } else
             // walk was stopped due to some reason (arrived to node, script action, fight or something else), resume it
@@ -363,7 +378,11 @@ public final class WalkingManager extends GameXmlReader {
                         npc.broadcastSay(ChatType.NPC_GENERAL, node.getChatText());
                     }
 
-                    ThreadPoolManager.schedule(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000));
+                    final ScheduledFuture<?> task = _arriveTasks.get(npc);
+                    if ((task == null) || task.isCancelled() || task.isDone())
+                    {
+                        _arriveTasks.put(npc, ThreadPoolManager.schedule(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000)));
+                    }
                 }
             }
         }

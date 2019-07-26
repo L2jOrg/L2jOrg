@@ -32,17 +32,16 @@ public final class OlyBuffer extends AbstractNpcAI
 	// NPC
 	private static final int OLYMPIAD_BUFFER = 36402;
 	// Skills
-	private static final SkillHolder[] ALLOWED_BUFFS =
-	{
-		new SkillHolder(4357, 2), // Haste Lv2
-		new SkillHolder(4355, 3), // Acumen Lv3
-		new SkillHolder(4342, 2), // Wind Walk Lv2
-		new SkillHolder(4345, 3), // Might Lv3
-		new SkillHolder(4344, 3), // Shield Lv3
-		new SkillHolder(4349, 2), // Magic Barrier lv.2		
-		new SkillHolder(4347, 4), // Blessed Body lv.4
-		new SkillHolder(4348, 4), // Blessed Soul lv.4
-		new SkillHolder(4352, 2), // Berserker Spirit Lv2
+	private static final SkillHolder[] ALLOWED_BUFFS = {
+		new SkillHolder(1086, 1), // Haste - Atk. Spd. +15%.
+		new SkillHolder(1085, 1), // Acumen - Casting Spd. +15%
+		new SkillHolder(1204, 1), // Wind Walk - Speed +20.
+		new SkillHolder(1068, 1), // Might - P. Atk. +8%.
+		new SkillHolder(1040, 1), // Shield - P. Def. +8%.
+		new SkillHolder(1036, 1), // Magic Barrier - M. Def. +23%.
+		new SkillHolder(1045, 1), // Blessed Body - Max HP +10%.
+		new SkillHolder(1048, 1), // Blessed Soul - Max MP +10%.
+		new SkillHolder(1062, 1), // Berserker Spirit - P. Def. -5%, M. Def. -10%, P. Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5% and Speed +5.
 	};
 	
 	private OlyBuffer()

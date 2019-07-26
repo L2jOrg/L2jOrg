@@ -864,7 +864,7 @@
 		</effects>
 	</skill>
 	<skill id="109" toLevel="1" name="Ogre Spirit Totem">
-		<!-- Possessed by an Ogre's Spirit, P. Atk., P. Def. and M. Def. +20%, Critical Damage +20% for 5 min. Requires a fist weapon. -->
+		<!-- Possessed by an Ogre's Spirit, P. Atk., P. Def. and M. Def. +20%, P. Critical Damage +20% for 5 min. Requires a fist weapon. -->
 		<icon>icon.skill0109</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -912,7 +912,7 @@
 		</effects>
 	</skill>
 	<skill id="110" toLevel="2" name="Ultimate Defense">
-		<!-- For $s1., P. Def. +$s2, M. Def. +$s3, and Buff-canceling Attack Resistance +$s4, and restricts movement. -->
+		<!-- For $s1, P. Def. +$s2, M. Def. +$s3, and Buff-canceling Attack Resistance +$s4, and restricts movement. -->
 		<icon>icon.skill0110</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -963,7 +963,7 @@
 		</effects>
 	</skill>
 	<skill id="111" toLevel="2" name="Ultimate Evasion">
-		<!-- For $s1, Evasion +$s2, physical attack skill Evasion Rate +$s3, and Buff-canceling Attack Resistance +$s4. -->
+		<!-- For $s1, P. Evasion +$s2, physical attack skill Evasion Rate +$s3, and Buff-canceling Attack Resistance +$s4. -->
 		<icon>icon.skill0111</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1335,7 +1335,7 @@
 		</effects>
 	</skill>
 	<skill id="120" toLevel="15" name="Stunning Fist">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. and stuns them for $s2. Requires a fist weapon. Over-hit. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2 Requires a fist weapon. Over-hit. -->
 		<icon>icon.skill0120</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -2691,7 +2691,7 @@
 		</effects>
 	</skill>
 	<skill id="150" toLevel="3" name="Weight Limit">
-		<!-- Doubles your weight limit. -->
+		<!-- Weight limit +$s1 times. -->
 		<icon>icon.skill0150</icon>
 		<magicLvl>
 			<value level="1">10</value>
@@ -2940,7 +2940,7 @@
 		</effects>
 	</skill>
 	<skill id="176" toLevel="9" name="Frenzy">
-		<!-- For $s1, P. Atk. +$s2, Atk. Spd. +$s3, P. Critical Rate +$s4, P. Critical Damage +$s5, and Speed +$s6. Additional P. Accuracy $s7 and P. Atk. +$s8 when using a two-handed sword, two-handed blunt weapon, or spear. Available when HP is $s9 or lower. -->
+		<!-- For $s1, P. Atk. +$s2, Atk. Spd. +$s3, P. Critical Rate +$s4, P. Critical Damage +$s5, and Speed +$s6. Additionally, P. Accuracy +$s7 and P. Atk. +$s8 when using a two-handed sword, two-handed blunt weapon, or spear. Available when HP is $s9 or lower. -->
 		<icon>icon.skill0176</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3190,7 +3190,7 @@
 		</effects>
 	</skill>
 	<skill id="190" toLevel="45" name="Fatal Strike">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit. Ignores Shield Defense. -->
+		<!-- Attacks the target with $s1 Power added to P. Atk. Requires a sword or blunt weapon to be equipped. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill0190</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -3429,7 +3429,7 @@
 		</effects>
 	</skill>
 	<skill id="193" toLevel="7" name="Critical Damage">
-		<!-- Critical Damage +$s1. -->
+		<!-- P. Critical Damage +$s1. -->
 		<icon>icon.skill0193</icon>
 		<magicLvl>
 			<value level="1">24</value>
@@ -3527,7 +3527,7 @@
 		</effects>
 	</skill>
 	<skill id="198" toLevel="3" name="Boost Evasion">
-		<!-- P. Evasion +$s1, P./ M. Skill Evasion +$s2. -->
+		<!-- P. Evasion +$s1, Evasion Rate against P./ M. Skills +$s2. -->
 		<icon>icon.skill0198</icon>
 		<magicLvl>
 			<value level="1">24</value>

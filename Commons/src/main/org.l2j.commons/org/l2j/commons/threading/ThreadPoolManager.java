@@ -17,6 +17,7 @@ public class ThreadPoolManager {
         var processors = Runtime.getRuntime().availableProcessors();
         scheduledExecutor = new ScheduledThreadPoolExecutor(processors *4, new PriorityThreadFactory("ScheduledThreadPool", Thread.NORM_PRIORITY), new ThreadPoolExecutor.CallerRunsPolicy());
         scheduledExecutor.setRejectedExecutionHandler(rejectedHandler);
+        scheduledExecutor.setRemoveOnCancelPolicy(true);
 
         executor = new ThreadPoolExecutor(processors * 6, Integer.MAX_VALUE, 5L, TimeUnit.SECONDS, new LinkedBlockingQueue<>(), new PriorityThreadFactory("ThreadPoolExecutor", Thread.NORM_PRIORITY), new ThreadPoolExecutor.CallerRunsPolicy());
         executor.setRejectedExecutionHandler(rejectedHandler);

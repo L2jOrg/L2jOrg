@@ -7,11 +7,9 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.actor.Vehicle;
+import org.l2j.gameserver.taskmanager.RandomAnimationTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -27,7 +25,6 @@ import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.*;
 
 public final class WorldRegion {
-    private static final Logger LOGGER = LoggerFactory.getLogger(WorldRegion.class);
 
     private final int regionX;
     private final int regionY;
@@ -101,8 +98,6 @@ public final class WorldRegion {
 
         // Turn the AI on or off to match the region's activation.
         switchAI(value);
-
-        LOGGER.debug("{} Grid {}", (value ? "Starting" : "Stopping"), this);
     }
 
     private void switchAI(boolean isOn) {
@@ -110,11 +105,9 @@ public final class WorldRegion {
             return;
         }
 
-        int c = 0;
         if (!isOn) {
             for (WorldObject o : objects.values()) {
                 if (isAttackable(o)) {
-                    c++;
                     final Attackable mob = (Attackable) o;
 
                     // Set target to null and cancel attack or cast.
@@ -134,22 +127,20 @@ public final class WorldRegion {
                         mob.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
                         mob.getAI().stopAITask();
                     }
-                } else if (o instanceof Vehicle) {
-                    c++;
+                    RandomAnimationTaskManager.getInstance().remove(mob);
+                } else if (isNpc(o)) {
+                    RandomAnimationTaskManager.getInstance().remove((Npc) o);
                 }
             }
-            LOGGER.debug("{} mobs were turned off", c);
         } else {
             for (WorldObject o : objects.values()) {
                 if (isAttackable(o)) {
-                    c++;
                     // Start HP/MP/CP regeneration task.
                     ((Attackable) o).getStatus().startHpMpRegeneration();
                 } else if (isNpc(o)) {
-                    ((Npc) o).startRandomAnimationTask();
+                    RandomAnimationTaskManager.getInstance().add((Npc) o);
                 }
             }
-            LOGGER.debug("{} mobs were turned on", c);
         }
     }
 

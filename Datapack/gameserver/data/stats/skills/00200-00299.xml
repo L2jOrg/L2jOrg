@@ -72,7 +72,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack" fromLevel="9" toLevel="53">
 				<!-- Blunt Mastery -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -476,7 +476,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack" fromLevel="9" toLevel="53">
 				<!-- Dagger Mastery -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -679,7 +679,7 @@
 		</effects>
 	</skill>
 	<skill id="211" toLevel="10" name="Boost HP">
-		<!-- Max HP +$s1 -->
+		<!-- Max HP +$s1. -->
 		<icon>icon.skill0211</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -745,7 +745,7 @@
 		</effects>
 	</skill>
 	<skill id="213" toLevel="8" name="Boost Mana">
-		<!-- Max MP +$s1 -->
+		<!-- Max MP +$s1. -->
 		<icon>icon.skill0213</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -1515,7 +1515,7 @@
 		</effects>
 	</skill>
 	<skill id="225" toLevel="3" name="Acrobatic Move">
-		<!-- Evasion +$s1 when running. -->
+		<!-- P. Evasion +$s1 when running. -->
 		<icon>icon.skill0225</icon>
 		<magicLvl>
 			<value level="1">28</value>
@@ -1812,7 +1812,7 @@
 		</effects>
 	</skill>
 	<skill id="230" toLevel="2" name="Sprint">
-		<!-- For $s1 Speed +$s2. -->
+		<!-- For $s1, Speed +$s2. -->
 		<icon>icon.skill0230</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2939,7 +2939,7 @@
 		</effects>
 	</skill>
 	<skill id="245" toLevel="15" name="Wild Sweep">
-		<!-- Attacks multiple enemies simultaneously with $s1 Power added to P. Atk. Requires a polearm. Over-hit. -->
+		<!-- Attacks multiple enemies with Power $s1 added to P. Atk. Requires a polearm to be equipped. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill0245</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>80</affectRange>
@@ -3979,7 +3979,7 @@
 		</effects>
 	</skill>
 	<skill id="255" toLevel="15" name="Power Smash">
-		<!-- Lands an excruciating blow with $s1 Power added to P. Atk. Requires a sword/ a blunt weapon. Over-hit. -->
+		<!-- Delivers a powerful blow that strikes the target with $s1 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit. -->
 		<icon>icon.skill0255</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -4074,7 +4074,7 @@
 		</effects>
 	</skill>
 	<skill id="256" toLevel="1" name="Accuracy">
-		<!-- Accuracy +3. Continuously consumes MP proportionately to your level. -->
+		<!-- P. Accuracy +3. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0256</icon>
 		<magicLvl>24</magicLvl>
 		<mpConsume>5</mpConsume>
@@ -4459,7 +4459,7 @@
 		</effects>
 	</skill>
 	<skill id="260" toLevel="45" name="Hammer Crush">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. and inflicts Stun for $s2. Requires a blunt weapon. Ignores Shield Defense. Over-hit. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2. Requires a blunt weapon. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill0260</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -5252,7 +5252,7 @@
 		</effects>
 	</skill>
 	<skill id="264" toLevel="2" name="Song of Earth">
-		<!-- All party members' P. Def. +25% for 5 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<!-- All party members' M. Def. +$s2 for $s1 MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<icon>icon.skill0264</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -5287,7 +5287,7 @@
 		</effects>
 	</skill>
 	<skill id="265" toLevel="1" name="Song of Life">
-		<!-- All party members' HP Recovery bonus +25% for 5 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<!-- All party members' M. Def. +$s2 for $s1 MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<icon>icon.skill0265</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -5313,7 +5313,7 @@
 		</effects>
 	</skill>
 	<skill id="266" toLevel="2" name="Song of Water">
-		<!-- All party members' Max. MP +5%, MP Recovery +15% for 5 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<!-- All party members' Max MP +$s2, MP Recovery Bonus +$s3 for $s1 MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<icon>icon.skill0266</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -5355,7 +5355,7 @@
 		</effects>
 	</skill>
 	<skill id="267" toLevel="2" name="Song of Warding">
-		<!-- All party members' M. Def. +30% for 5 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<!-- All party members' M. Def. +$s2 for $s1 MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<icon>icon.skill0267</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -5466,7 +5466,7 @@
 		</effects>
 	</skill>
 	<skill id="270" toLevel="2" name="Song of Invocation">
-		<!-- All party members' chance to be hit by P. Critical Atk./ M. Critical Atk. - 5% for 5 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<!-- All party members' chance of receiving P./ M. Critical Attack -$s2 for $s1 MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<icon>icon.skill0270</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -5508,7 +5508,7 @@
 		</effects>
 	</skill>
 	<skill id="271" toLevel="2" name="Dance of the Warrior">
-		<!-- All party members' P. Atk. +12% for 5 min. Additionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires dual swords. -->
+		<!-- All party members' P. Atk. +$s2 for $s1 MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill0271</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -5551,7 +5551,7 @@
 		</effects>
 	</skill>
 	<skill id="272" toLevel="1" name="Dance of Inspiration">
-		<!-- All party members' Accuracy +4 for 5 min. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+		<!-- All party members' P. Accuracy +$s2 for $s1 MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill0272</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -5585,7 +5585,7 @@
 		</effects>
 	</skill>
 	<skill id="273" toLevel="2" name="Dance of the Mystic">
-		<!-- All party members' M. Atk. +20% for 5 min. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+		<!-- All party members' M. Atk. +$s2 for $s1 MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill0273</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -5773,7 +5773,7 @@
 		</effects>
 	</skill>
 	<skill id="277" toLevel="1" name="Dance of Light">
-		<!-- All party members' Holy Attack +20 for 5 min. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+		<!-- All party members' Holy Attack +$s2 for $s1 MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill0277</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -6199,7 +6199,7 @@
 		</effects>
 	</skill>
 	<skill id="281" toLevel="45" name="Soul Breaker">
-		<!-- Hurls an iron-fist to attack the target with $s1 Power added to P. Atk. and inflicts Stun for $s2. Requires a fist weapon. Ignores Shield Defense. Over-hit. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2 Requires a fist weapon. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill0281</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -6502,7 +6502,7 @@
 		</effects>
 	</skill>
 	<skill id="282" toLevel="1" name="Puma Spirit Totem">
-		<!-- Possessed by a Puma Spirit, Atk. Spd/ Speed +20% and Accuracy +6 for 5 min. Requires a fist weapon. -->
+		<!-- Possessed by a Puma Spirit, Atk. Spd/ Speed +20% and P. Accuracy +6 for 5 min. Requires a fist weapon. -->
 		<icon>icon.skill0282</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -6952,7 +6952,7 @@
 		</effects>
 	</skill>
 	<skill id="286" toLevel="13" name="Provoke">
-		<!-- Provokes enemies within a wide range and Spear Resistance -$s2 for $s1. -->
+		<!-- Provokes enemies within a wide range and Spear/ Blunt Weapon Resistance -$s1 for 20 sec. Requires a spear or blunt weapon. -->
 		<icon>icon.skill0286</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -7030,7 +7030,7 @@
 		</effects>
 	</skill>
 	<skill id="287" toLevel="3" name="Lionheart">
-		<!-- Paralysis/ Hold/ Sleep/ Stun/ Buff-canceling Attack Resistance +$s2 for $s1. -->
+		<!-- Paralysis/ Hold/ Sleep/ Stun/ Buff-canceling Attack Resistance +$s1 for 1 min. -->
 		<icon>icon.skill0287</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -7134,7 +7134,7 @@
 		</effects>
 	</skill>
 	<skill id="289" toLevel="17" name="Life Leech">
-		<!-- Inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. Absorbs $s2 of the damage as HP. -->
+		<!-- Inflicts damage on the enemy with $s1 Power added to M. Atk. Absorbs $s2 of the damage as HP. -->
 		<icon>icon.skill0289</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -7511,7 +7511,7 @@
 		</effects>
 	</skill>
 	<skill id="294" toLevel="1" name="Shadow Sense">
-		<!-- Accuracy +3 at night. -->
+		<!-- P. Accuracy +3 at night. -->
 		<icon>icon.skill0294</icon>
 		<magicLvl>15</magicLvl>
 		<operateType>P</operateType>
@@ -7602,7 +7602,7 @@
 		</effects>
 	</skill>
 	<skill id="298" toLevel="1" name="Rabbit Spirit Totem">
-		<!-- Possessed by a Rabbit's Spirit. Atk. Spd. +30%, Speed +30%, Evasion +6 and Accuracy +6 for 5 min. Requires a fist weapon. -->
+		<!-- Possessed by a Rabbit's Spirit. Atk. Spd. +30%, Speed +30%, P. Evasion +6 and P. Accuracy +6 for 5 min. Requires a fist weapon. -->
 		<icon>icon.skill0298</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>

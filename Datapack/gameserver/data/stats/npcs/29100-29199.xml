@@ -134,7 +134,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="91119" min="1" max="1" chance="4.999" /> <!-- Ignis' Necklace -->
+				<item id="91119" min="1" max="1" chance="5.048" /> <!-- Ignis' Necklace -->
 				<item id="289" min="1" max="1" chance="0.3" /> <!-- Soul Bow -->
 				<item id="305" min="1" max="1" chance="0.3" /> <!-- Tallum Glaive -->
 				<item id="2500" min="1" max="1" chance="0.3" /> <!-- Dark Legion's Edge -->
@@ -170,36 +170,40 @@
 				<item id="8679" min="1" max="1" chance="0.075" /> <!-- Sword of Ipos -->
 				<item id="730" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (A-grade) -->
 				<item id="70000" min="19" max="57" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-				<item id="729" min="1" max="1" chance="30.29" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-				<item id="49756" min="1" max="1" chance="10.025" /> <!-- Cloth Piece -->
-				<item id="8619" min="1" max="1" chance="9.944" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="8620" min="1" max="1" chance="5.004" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-				<item id="91124" min="1" max="1" chance="1.972" /> <!-- Radiant Spirit's Varnish -->
-				<item id="49967" min="1" max="1" chance="1.736" /> <!-- Best Dye of MEN <MEN +3 INT -1> - 3rd Class Transfer -->
-				<item id="49969" min="1" max="1" chance="1.719" /> <!-- Best Dye of WIT <WIT +3 INT -1> - 3rd Class Transfer -->
-				<item id="49959" min="1" max="1" chance="1.704" /> <!-- Best Dye of STR <STR +3 CON -1> - 3rd Class Transfer -->
-				<item id="49961" min="1" max="1" chance="1.702" /> <!-- Best Dye of CON <CON +3 STR -1> - 3rd Class Transfer -->
-				<item id="49966" min="1" max="1" chance="1.689" /> <!-- Best Dye of INT <INT +3 WIT -1> - 3rd Class Transfer -->
-				<item id="49970" min="1" max="1" chance="1.654" /> <!-- Best Dye of WIT <WIT +2 MEN -1> - 3rd Class Transfer -->
-				<item id="49962" min="1" max="1" chance="1.625" /> <!-- Best Dye of CON <CON +3 DEX -1> - 3rd Class Transfer -->
-				<item id="49960" min="1" max="1" chance="1.605" /> <!-- Best Dye of STR <STR +3 DEX -1> - 3rd Class Transfer -->
-				<item id="49968" min="1" max="1" chance="1.604" /> <!-- Best Dye of MEN <MEN +3 WIT -1> - 3rd Class Transfer -->
-				<item id="49964" min="1" max="1" chance="1.603" /> <!-- Best Dye of DEX <DEX +3 CON -1> - 3rd Class Transfer -->
-				<item id="49965" min="1" max="1" chance="1.6" /> <!-- Best Dye of INT <INT +3 MEN -1> - 3rd Class Transfer -->
-				<item id="49963" min="1" max="1" chance="1.598" /> <!-- Best Dye of DEX <DEX +3 STR -1> - 3rd Class Transfer -->
+				<item id="91546" min="1" max="1" chance="50.77" /> <!-- Accessory Varnish (A-grade) -->
+				<item id="91532" min="1" max="1" chance="49.73" /> <!-- Weapon Varnish (A-grade) -->
+				<item id="91539" min="1" max="1" chance="49.16" /> <!-- Armor Varnish (A-grade) -->
+				<item id="729" min="1" max="1" chance="30.57" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="91395" min="1" max="1" chance="10.024" /> <!-- Forgotten Manuscript - Page 3 -->
+				<item id="49756" min="1" max="1" chance="9.978" /> <!-- Cloth Piece -->
+				<item id="8619" min="1" max="1" chance="9.939" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="8620" min="1" max="1" chance="5.044" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+				<item id="91124" min="1" max="1" chance="2.036" /> <!-- Radiant Spirit's Varnish -->
+				<item id="49961" min="1" max="1" chance="1.72" /> <!-- Best Dye of CON (CON 3 STR -1) -->
+				<item id="49960" min="1" max="1" chance="1.714" /> <!-- Best Dye of STR (STR 3 DEX -1) -->
+				<item id="49968" min="1" max="1" chance="1.706" /> <!-- Best Dye of MEN (MEN 3 WIT -1) -->
+				<item id="49967" min="1" max="1" chance="1.698" /> <!-- Best Dye of MEN (MEN 3 INT -1) -->
+				<item id="49964" min="1" max="1" chance="1.692" /> <!-- Best Dye of DEX (DEX 3 CON -1) -->
+				<item id="49963" min="1" max="1" chance="1.673" /> <!-- Best Dye of DEX (DEX 3 STR -1) -->
+				<item id="49969" min="1" max="1" chance="1.668" /> <!-- Best Dye of WIT (WIT 3 INT -1) -->
+				<item id="49959" min="1" max="1" chance="1.665" /> <!-- Best Dye of STR (STR 3 CON -1) -->
+				<item id="49965" min="1" max="1" chance="1.645" /> <!-- Best Dye of INT (INT 3 MEN -1) -->
+				<item id="49970" min="1" max="1" chance="1.62" /> <!-- Best Dye of WIT (WIT 2 MEN -1) -->
+				<item id="49962" min="1" max="1" chance="1.614" /> <!-- Best Dye of CON (CON 3 DEX -1) -->
+				<item id="49966" min="1" max="1" chance="1.596" /> <!-- Best Dye of INT (INT 3 WIT -1) -->
 				<item id="90898" min="1" max="1" chance="0.3" /> <!-- Agathion's Soul -->
-				<item id="90006" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT <WIT +4 MEN -2> - 3rd Class Transfer -->
-				<item id="90005" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT <WIT +4 INT -2> - 3rd Class Transfer -->
-				<item id="90004" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN <MEN +4 WIT -2> - 3rd Class Transfer -->
-				<item id="90003" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN <MEN +4 INT -2> - 3rd Class Transfer -->
-				<item id="90002" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT <INT +4 WIT -2> - 3rd Class Transfer -->
-				<item id="90001" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT <INT +4 MEN -2> - 3rd Class Transfer -->
-				<item id="90000" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX <DEX +4 CON -2> - 3rd Class Transfer -->
-				<item id="49999" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX <DEX +4 STR -2> - 3rd Class Transfer -->
-				<item id="49998" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON <CON +4 DEX -2> - 3rd Class Transfer -->
-				<item id="49997" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON <CON +4 STR -2> - 3rd Class Transfer -->
-				<item id="49995" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR <STR +4 CON -2> - 3rd Class Transfer -->
-				<item id="49996" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR <STR +4 DEX -2> - 3rd Class Transfer -->
+				<item id="90006" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT (WIT 4 MEN -2) -->
+				<item id="90005" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT (WIT 4 INT -2) -->
+				<item id="90004" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN (MEN 4 WIT -2) -->
+				<item id="90003" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN (MEN 4 INT -2) -->
+				<item id="90002" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT (INT 4 WIT -2) -->
+				<item id="90001" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT (INT 4 MEN -2) -->
+				<item id="90000" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX (DEX 4 CON -2) -->
+				<item id="49999" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX (DEX 4 STR -2) -->
+				<item id="49998" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON (CON 4 DEX -2) -->
+				<item id="49997" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON (CON 4 STR -2) -->
+				<item id="49995" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR (STR 4 CON -2) -->
+				<item id="49996" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR (STR 4 DEX -2) -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -228,7 +232,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="91117" min="1" max="1" chance="4.98" /> <!-- Nebula's Necklace -->
+				<item id="91117" min="1" max="1" chance="4.937" /> <!-- Nebula's Necklace -->
 				<item id="289" min="1" max="1" chance="0.3" /> <!-- Soul Bow -->
 				<item id="305" min="1" max="1" chance="0.3" /> <!-- Tallum Glaive -->
 				<item id="2500" min="1" max="1" chance="0.3" /> <!-- Dark Legion's Edge -->
@@ -264,36 +268,40 @@
 				<item id="8679" min="1" max="1" chance="0.075" /> <!-- Sword of Ipos -->
 				<item id="730" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (A-grade) -->
 				<item id="70000" min="19" max="57" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-				<item id="729" min="1" max="1" chance="29.02" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-				<item id="8619" min="1" max="1" chance="10.035" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="49756" min="1" max="1" chance="9.97" /> <!-- Cloth Piece -->
-				<item id="8620" min="1" max="1" chance="4.944" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-				<item id="91124" min="1" max="1" chance="1.945" /> <!-- Radiant Spirit's Varnish -->
-				<item id="49964" min="1" max="1" chance="1.715" /> <!-- Best Dye of DEX <DEX +3 CON -1> - 3rd Class Transfer -->
-				<item id="49963" min="1" max="1" chance="1.707" /> <!-- Best Dye of DEX <DEX +3 STR -1> - 3rd Class Transfer -->
-				<item id="49967" min="1" max="1" chance="1.692" /> <!-- Best Dye of MEN <MEN +3 INT -1> - 3rd Class Transfer -->
-				<item id="49959" min="1" max="1" chance="1.689" /> <!-- Best Dye of STR <STR +3 CON -1> - 3rd Class Transfer -->
-				<item id="49960" min="1" max="1" chance="1.678" /> <!-- Best Dye of STR <STR +3 DEX -1> - 3rd Class Transfer -->
-				<item id="49966" min="1" max="1" chance="1.655" /> <!-- Best Dye of INT <INT +3 WIT -1> - 3rd Class Transfer -->
-				<item id="49968" min="1" max="1" chance="1.652" /> <!-- Best Dye of MEN <MEN +3 WIT -1> - 3rd Class Transfer -->
-				<item id="49969" min="1" max="1" chance="1.624" /> <!-- Best Dye of WIT <WIT +3 INT -1> - 3rd Class Transfer -->
-				<item id="49965" min="1" max="1" chance="1.614" /> <!-- Best Dye of INT <INT +3 MEN -1> - 3rd Class Transfer -->
-				<item id="49961" min="1" max="1" chance="1.614" /> <!-- Best Dye of CON <CON +3 STR -1> - 3rd Class Transfer -->
-				<item id="49970" min="1" max="1" chance="1.606" /> <!-- Best Dye of WIT <WIT +2 MEN -1> - 3rd Class Transfer -->
-				<item id="49962" min="1" max="1" chance="1.596" /> <!-- Best Dye of CON <CON +3 DEX -1> - 3rd Class Transfer -->
+				<item id="91532" min="1" max="1" chance="50.93" /> <!-- Weapon Varnish (A-grade) -->
+				<item id="91546" min="1" max="1" chance="50.23" /> <!-- Accessory Varnish (A-grade) -->
+				<item id="91539" min="1" max="1" chance="49.28" /> <!-- Armor Varnish (A-grade) -->
+				<item id="729" min="1" max="1" chance="30.6" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="8619" min="1" max="1" chance="10.053" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="49756" min="1" max="1" chance="9.995" /> <!-- Cloth Piece -->
+				<item id="91395" min="1" max="1" chance="9.93" /> <!-- Forgotten Manuscript - Page 3 -->
+				<item id="8620" min="1" max="1" chance="5.061" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+				<item id="91124" min="1" max="1" chance="1.968" /> <!-- Radiant Spirit's Varnish -->
+				<item id="49970" min="1" max="1" chance="1.721" /> <!-- Best Dye of WIT (WIT 2 MEN -1) -->
+				<item id="49967" min="1" max="1" chance="1.715" /> <!-- Best Dye of MEN (MEN 3 INT -1) -->
+				<item id="49961" min="1" max="1" chance="1.709" /> <!-- Best Dye of CON (CON 3 STR -1) -->
+				<item id="49966" min="1" max="1" chance="1.699" /> <!-- Best Dye of INT (INT 3 WIT -1) -->
+				<item id="49964" min="1" max="1" chance="1.689" /> <!-- Best Dye of DEX (DEX 3 CON -1) -->
+				<item id="49963" min="1" max="1" chance="1.655" /> <!-- Best Dye of DEX (DEX 3 STR -1) -->
+				<item id="49968" min="1" max="1" chance="1.653" /> <!-- Best Dye of MEN (MEN 3 WIT -1) -->
+				<item id="49969" min="1" max="1" chance="1.65" /> <!-- Best Dye of WIT (WIT 3 INT -1) -->
+				<item id="49960" min="1" max="1" chance="1.647" /> <!-- Best Dye of STR (STR 3 DEX -1) -->
+				<item id="49959" min="1" max="1" chance="1.638" /> <!-- Best Dye of STR (STR 3 CON -1) -->
+				<item id="49962" min="1" max="1" chance="1.627" /> <!-- Best Dye of CON (CON 3 DEX -1) -->
+				<item id="49965" min="1" max="1" chance="1.621" /> <!-- Best Dye of INT (INT 3 MEN -1) -->
 				<item id="90898" min="1" max="1" chance="0.3" /> <!-- Agathion's Soul -->
-				<item id="90006" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT <WIT +4 MEN -2> - 3rd Class Transfer -->
-				<item id="90005" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT <WIT +4 INT -2> - 3rd Class Transfer -->
-				<item id="90004" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN <MEN +4 WIT -2> - 3rd Class Transfer -->
-				<item id="90003" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN <MEN +4 INT -2> - 3rd Class Transfer -->
-				<item id="90002" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT <INT +4 WIT -2> - 3rd Class Transfer -->
-				<item id="90001" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT <INT +4 MEN -2> - 3rd Class Transfer -->
-				<item id="90000" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX <DEX +4 CON -2> - 3rd Class Transfer -->
-				<item id="49999" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX <DEX +4 STR -2> - 3rd Class Transfer -->
-				<item id="49998" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON <CON +4 DEX -2> - 3rd Class Transfer -->
-				<item id="49997" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON <CON +4 STR -2> - 3rd Class Transfer -->
-				<item id="49995" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR <STR +4 CON -2> - 3rd Class Transfer -->
-				<item id="49996" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR <STR +4 DEX -2> - 3rd Class Transfer -->
+				<item id="90006" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT (WIT 4 MEN -2) -->
+				<item id="90005" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT (WIT 4 INT -2) -->
+				<item id="90004" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN (MEN 4 WIT -2) -->
+				<item id="90003" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN (MEN 4 INT -2) -->
+				<item id="90002" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT (INT 4 WIT -2) -->
+				<item id="90001" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT (INT 4 MEN -2) -->
+				<item id="90000" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX (DEX 4 CON -2) -->
+				<item id="49999" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX (DEX 4 STR -2) -->
+				<item id="49998" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON (CON 4 DEX -2) -->
+				<item id="49997" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON (CON 4 STR -2) -->
+				<item id="49995" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR (STR 4 CON -2) -->
+				<item id="49996" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR (STR 4 DEX -2) -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -322,7 +330,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="91121" min="1" max="1" chance="4.955" /> <!-- Procella's Necklace -->
+				<item id="91121" min="1" max="1" chance="5.049" /> <!-- Procella's Necklace -->
 				<item id="289" min="1" max="1" chance="0.3" /> <!-- Soul Bow -->
 				<item id="305" min="1" max="1" chance="0.3" /> <!-- Tallum Glaive -->
 				<item id="2500" min="1" max="1" chance="0.3" /> <!-- Dark Legion's Edge -->
@@ -358,36 +366,40 @@
 				<item id="8679" min="1" max="1" chance="0.075" /> <!-- Sword of Ipos -->
 				<item id="730" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (A-grade) -->
 				<item id="70000" min="19" max="57" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-				<item id="729" min="1" max="1" chance="30.94" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-				<item id="8619" min="1" max="1" chance="10.008" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="49756" min="1" max="1" chance="9.935" /> <!-- Cloth Piece -->
-				<item id="8620" min="1" max="1" chance="5.016" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-				<item id="91124" min="1" max="1" chance="1.985" /> <!-- Radiant Spirit's Varnish -->
-				<item id="49964" min="1" max="1" chance="1.733" /> <!-- Best Dye of DEX <DEX +3 CON -1> - 3rd Class Transfer -->
-				<item id="49970" min="1" max="1" chance="1.728" /> <!-- Best Dye of WIT <WIT +2 MEN -1> - 3rd Class Transfer -->
-				<item id="49962" min="1" max="1" chance="1.716" /> <!-- Best Dye of CON <CON +3 DEX -1> - 3rd Class Transfer -->
-				<item id="49963" min="1" max="1" chance="1.679" /> <!-- Best Dye of DEX <DEX +3 STR -1> - 3rd Class Transfer -->
-				<item id="49966" min="1" max="1" chance="1.668" /> <!-- Best Dye of INT <INT +3 WIT -1> - 3rd Class Transfer -->
-				<item id="49960" min="1" max="1" chance="1.665" /> <!-- Best Dye of STR <STR +3 DEX -1> - 3rd Class Transfer -->
-				<item id="49961" min="1" max="1" chance="1.662" /> <!-- Best Dye of CON <CON +3 STR -1> - 3rd Class Transfer -->
-				<item id="49967" min="1" max="1" chance="1.658" /> <!-- Best Dye of MEN <MEN +3 INT -1> - 3rd Class Transfer -->
-				<item id="49968" min="1" max="1" chance="1.655" /> <!-- Best Dye of MEN <MEN +3 WIT -1> - 3rd Class Transfer -->
-				<item id="49959" min="1" max="1" chance="1.65" /> <!-- Best Dye of STR <STR +3 CON -1> - 3rd Class Transfer -->
-				<item id="49969" min="1" max="1" chance="1.636" /> <!-- Best Dye of WIT <WIT +3 INT -1> - 3rd Class Transfer -->
-				<item id="49965" min="1" max="1" chance="1.618" /> <!-- Best Dye of INT <INT +3 MEN -1> - 3rd Class Transfer -->
+				<item id="91532" min="1" max="1" chance="49.78" /> <!-- Weapon Varnish (A-grade) -->
+				<item id="91546" min="1" max="1" chance="49.17" /> <!-- Accessory Varnish (A-grade) -->
+				<item id="91539" min="1" max="1" chance="48.81" /> <!-- Armor Varnish (A-grade) -->
+				<item id="729" min="1" max="1" chance="28.92" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="8619" min="1" max="1" chance="10.045" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="49756" min="1" max="1" chance="9.989" /> <!-- Cloth Piece -->
+				<item id="91395" min="1" max="1" chance="9.95" /> <!-- Forgotten Manuscript - Page 3 -->
+				<item id="8620" min="1" max="1" chance="4.958" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+				<item id="91124" min="1" max="1" chance="2.039" /> <!-- Radiant Spirit's Varnish -->
+				<item id="49964" min="1" max="1" chance="1.714" /> <!-- Best Dye of DEX (DEX 3 CON -1) -->
+				<item id="49966" min="1" max="1" chance="1.712" /> <!-- Best Dye of INT (INT 3 WIT -1) -->
+				<item id="49967" min="1" max="1" chance="1.703" /> <!-- Best Dye of MEN (MEN 3 INT -1) -->
+				<item id="49965" min="1" max="1" chance="1.673" /> <!-- Best Dye of INT (INT 3 MEN -1) -->
+				<item id="49968" min="1" max="1" chance="1.672" /> <!-- Best Dye of MEN (MEN 3 WIT -1) -->
+				<item id="49969" min="1" max="1" chance="1.646" /> <!-- Best Dye of WIT (WIT 3 INT -1) -->
+				<item id="49959" min="1" max="1" chance="1.644" /> <!-- Best Dye of STR (STR 3 CON -1) -->
+				<item id="49961" min="1" max="1" chance="1.641" /> <!-- Best Dye of CON (CON 3 STR -1) -->
+				<item id="49963" min="1" max="1" chance="1.639" /> <!-- Best Dye of DEX (DEX 3 STR -1) -->
+				<item id="49970" min="1" max="1" chance="1.632" /> <!-- Best Dye of WIT (WIT 2 MEN -1) -->
+				<item id="49960" min="1" max="1" chance="1.63" /> <!-- Best Dye of STR (STR 3 DEX -1) -->
+				<item id="49962" min="1" max="1" chance="1.62" /> <!-- Best Dye of CON (CON 3 DEX -1) -->
 				<item id="90898" min="1" max="1" chance="0.3" /> <!-- Agathion's Soul -->
-				<item id="90006" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT <WIT +4 MEN -2> - 3rd Class Transfer -->
-				<item id="90005" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT <WIT +4 INT -2> - 3rd Class Transfer -->
-				<item id="90004" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN <MEN +4 WIT -2> - 3rd Class Transfer -->
-				<item id="90003" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN <MEN +4 INT -2> - 3rd Class Transfer -->
-				<item id="90002" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT <INT +4 WIT -2> - 3rd Class Transfer -->
-				<item id="90001" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT <INT +4 MEN -2> - 3rd Class Transfer -->
-				<item id="90000" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX <DEX +4 CON -2> - 3rd Class Transfer -->
-				<item id="49999" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX <DEX +4 STR -2> - 3rd Class Transfer -->
-				<item id="49998" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON <CON +4 DEX -2> - 3rd Class Transfer -->
-				<item id="49997" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON <CON +4 STR -2> - 3rd Class Transfer -->
-				<item id="49995" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR <STR +4 CON -2> - 3rd Class Transfer -->
-				<item id="49996" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR <STR +4 DEX -2> - 3rd Class Transfer -->
+				<item id="90006" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT (WIT 4 MEN -2) -->
+				<item id="90005" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT (WIT 4 INT -2) -->
+				<item id="90004" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN (MEN 4 WIT -2) -->
+				<item id="90003" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN (MEN 4 INT -2) -->
+				<item id="90002" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT (INT 4 WIT -2) -->
+				<item id="90001" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT (INT 4 MEN -2) -->
+				<item id="90000" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX (DEX 4 CON -2) -->
+				<item id="49999" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX (DEX 4 STR -2) -->
+				<item id="49998" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON (CON 4 DEX -2) -->
+				<item id="49997" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON (CON 4 STR -2) -->
+				<item id="49995" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR (STR 4 CON -2) -->
+				<item id="49996" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR (STR 4 DEX -2) -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -416,7 +428,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="91123" min="1" max="1" chance="5.068" /> <!-- Petram's Necklace -->
+				<item id="91123" min="1" max="1" chance="5.043" /> <!-- Petram's Necklace -->
 				<item id="289" min="1" max="1" chance="0.3" /> <!-- Soul Bow -->
 				<item id="305" min="1" max="1" chance="0.3" /> <!-- Tallum Glaive -->
 				<item id="2500" min="1" max="1" chance="0.3" /> <!-- Dark Legion's Edge -->
@@ -452,36 +464,40 @@
 				<item id="8679" min="1" max="1" chance="0.075" /> <!-- Sword of Ipos -->
 				<item id="730" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (A-grade) -->
 				<item id="70000" min="19" max="57" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-				<item id="729" min="1" max="1" chance="29.71" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-				<item id="8619" min="1" max="1" chance="10.035" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="49756" min="1" max="1" chance="9.968" /> <!-- Cloth Piece -->
-				<item id="8620" min="1" max="1" chance="4.936" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-				<item id="91124" min="1" max="1" chance="1.939" /> <!-- Radiant Spirit's Varnish -->
-				<item id="49959" min="1" max="1" chance="1.73" /> <!-- Best Dye of STR <STR +3 CON -1> - 3rd Class Transfer -->
-				<item id="49964" min="1" max="1" chance="1.73" /> <!-- Best Dye of DEX <DEX +3 CON -1> - 3rd Class Transfer -->
-				<item id="49965" min="1" max="1" chance="1.699" /> <!-- Best Dye of INT <INT +3 MEN -1> - 3rd Class Transfer -->
-				<item id="49969" min="1" max="1" chance="1.69" /> <!-- Best Dye of WIT <WIT +3 INT -1> - 3rd Class Transfer -->
-				<item id="49963" min="1" max="1" chance="1.674" /> <!-- Best Dye of DEX <DEX +3 STR -1> - 3rd Class Transfer -->
-				<item id="49966" min="1" max="1" chance="1.665" /> <!-- Best Dye of INT <INT +3 WIT -1> - 3rd Class Transfer -->
-				<item id="49961" min="1" max="1" chance="1.656" /> <!-- Best Dye of CON <CON +3 STR -1> - 3rd Class Transfer -->
-				<item id="49962" min="1" max="1" chance="1.625" /> <!-- Best Dye of CON <CON +3 DEX -1> - 3rd Class Transfer -->
-				<item id="49967" min="1" max="1" chance="1.623" /> <!-- Best Dye of MEN <MEN +3 INT -1> - 3rd Class Transfer -->
-				<item id="49970" min="1" max="1" chance="1.621" /> <!-- Best Dye of WIT <WIT +2 MEN -1> - 3rd Class Transfer -->
-				<item id="49960" min="1" max="1" chance="1.615" /> <!-- Best Dye of STR <STR +3 DEX -1> - 3rd Class Transfer -->
-				<item id="49968" min="1" max="1" chance="1.607" /> <!-- Best Dye of MEN <MEN +3 WIT -1> - 3rd Class Transfer -->
+				<item id="91546" min="1" max="1" chance="50.95" /> <!-- Accessory Varnish (A-grade) -->
+				<item id="91532" min="1" max="1" chance="50.35" /> <!-- Weapon Varnish (A-grade) -->
+				<item id="91539" min="1" max="1" chance="50.26" /> <!-- Armor Varnish (A-grade) -->
+				<item id="729" min="1" max="1" chance="30.92" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="8619" min="1" max="1" chance="10.067" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="49756" min="1" max="1" chance="10.066" /> <!-- Cloth Piece -->
+				<item id="91395" min="1" max="1" chance="9.971" /> <!-- Forgotten Manuscript - Page 3 -->
+				<item id="8620" min="1" max="1" chance="4.94" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+				<item id="91124" min="1" max="1" chance="1.948" /> <!-- Radiant Spirit's Varnish -->
+				<item id="49962" min="1" max="1" chance="1.729" /> <!-- Best Dye of CON (CON 3 DEX -1) -->
+				<item id="49964" min="1" max="1" chance="1.727" /> <!-- Best Dye of DEX (DEX 3 CON -1) -->
+				<item id="49961" min="1" max="1" chance="1.723" /> <!-- Best Dye of CON (CON 3 STR -1) -->
+				<item id="49959" min="1" max="1" chance="1.718" /> <!-- Best Dye of STR (STR 3 CON -1) -->
+				<item id="49966" min="1" max="1" chance="1.711" /> <!-- Best Dye of INT (INT 3 WIT -1) -->
+				<item id="49965" min="1" max="1" chance="1.7" /> <!-- Best Dye of INT (INT 3 MEN -1) -->
+				<item id="49967" min="1" max="1" chance="1.696" /> <!-- Best Dye of MEN (MEN 3 INT -1) -->
+				<item id="49969" min="1" max="1" chance="1.652" /> <!-- Best Dye of WIT (WIT 3 INT -1) -->
+				<item id="49968" min="1" max="1" chance="1.652" /> <!-- Best Dye of MEN (MEN 3 WIT -1) -->
+				<item id="49970" min="1" max="1" chance="1.618" /> <!-- Best Dye of WIT (WIT 2 MEN -1) -->
+				<item id="49963" min="1" max="1" chance="1.601" /> <!-- Best Dye of DEX (DEX 3 STR -1) -->
+				<item id="49960" min="1" max="1" chance="1.6" /> <!-- Best Dye of STR (STR 3 DEX -1) -->
 				<item id="90898" min="1" max="1" chance="0.3" /> <!-- Agathion's Soul -->
-				<item id="90006" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT <WIT +4 MEN -2> - 3rd Class Transfer -->
-				<item id="90005" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT <WIT +4 INT -2> - 3rd Class Transfer -->
-				<item id="90004" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN <MEN +4 WIT -2> - 3rd Class Transfer -->
-				<item id="90003" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN <MEN +4 INT -2> - 3rd Class Transfer -->
-				<item id="90002" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT <INT +4 WIT -2> - 3rd Class Transfer -->
-				<item id="90001" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT <INT +4 MEN -2> - 3rd Class Transfer -->
-				<item id="90000" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX <DEX +4 CON -2> - 3rd Class Transfer -->
-				<item id="49999" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX <DEX +4 STR -2> - 3rd Class Transfer -->
-				<item id="49998" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON <CON +4 DEX -2> - 3rd Class Transfer -->
-				<item id="49997" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON <CON +4 STR -2> - 3rd Class Transfer -->
-				<item id="49995" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR <STR +4 CON -2> - 3rd Class Transfer -->
-				<item id="49996" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR <STR +4 DEX -2> - 3rd Class Transfer -->
+				<item id="90006" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT (WIT 4 MEN -2) -->
+				<item id="90005" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT (WIT 4 INT -2) -->
+				<item id="90004" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN (MEN 4 WIT -2) -->
+				<item id="90003" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN (MEN 4 INT -2) -->
+				<item id="90002" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT (INT 4 WIT -2) -->
+				<item id="90001" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT (INT 4 MEN -2) -->
+				<item id="90000" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX (DEX 4 CON -2) -->
+				<item id="49999" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX (DEX 4 STR -2) -->
+				<item id="49998" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON (CON 4 DEX -2) -->
+				<item id="49997" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON (CON 4 STR -2) -->
+				<item id="49995" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR (STR 4 CON -2) -->
+				<item id="49996" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR (STR 4 DEX -2) -->
 			</drop>
 		</dropLists>
 	</npc>

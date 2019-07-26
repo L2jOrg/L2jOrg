@@ -53,7 +53,6 @@
 		</stats>
 	</item>
 	<item id="2502" name="Dwarven War Hammer" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dwarven_warhammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -81,7 +80,6 @@
 		</stats>
 	</item>
 	<item id="2503" name="Yaksa Mace" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -279,7 +277,7 @@
 		</skills>
 	</item>
 	<item id="2516" name="Saber*Saber" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -306,7 +304,7 @@
 		</stats>
 	</item>
 	<item id="2517" name="Saber*Bastard Sword" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -333,7 +331,7 @@
 		</stats>
 	</item>
 	<item id="2518" name="Saber*Spinebone Sword" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -360,7 +358,7 @@
 		</stats>
 	</item>
 	<item id="2519" name="Saber*Artisan's Sword" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -387,7 +385,7 @@
 		</stats>
 	</item>
 	<item id="2520" name="Saber*Knight's Sword" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -414,7 +412,7 @@
 		</stats>
 	</item>
 	<item id="2521" name="Saber*Crimson Sword" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -441,7 +439,7 @@
 		</stats>
 	</item>
 	<item id="2522" name="Saber*Elven Sword" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -468,7 +466,7 @@
 		</stats>
 	</item>
 	<item id="2523" name="Saber*Sword of Revolution" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -495,7 +493,7 @@
 		</stats>
 	</item>
 	<item id="2524" name="Saber*Elven Long Sword" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -522,7 +520,7 @@
 		</stats>
 	</item>
 	<item id="2525" name="Bastard Sword*Bastard Sword" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -549,7 +547,7 @@
 		</stats>
 	</item>
 	<item id="2526" name="Bastard Sword*Spinebone Sword" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -576,7 +574,7 @@
 		</stats>
 	</item>
 	<item id="2527" name="Bastard Sword*Artisan's Sword" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -603,7 +601,7 @@
 		</stats>
 	</item>
 	<item id="2528" name="Bastard Sword*Knight's Sword" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -657,7 +655,7 @@
 		</stats>
 	</item>
 	<item id="2530" name="Bastard Sword*Elven Sword" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />

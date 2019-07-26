@@ -187,7 +187,7 @@ public final class UseItem extends ClientPacket {
                 }
             } else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_ARTIFACT) {
                 if (!item.isEquipped() && (activeChar.getInventory().getArtifactSlots() == 0)) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.EMPTY_15);
+                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UNABLE_TO_EQUIP_S1_BECAUSE_YOU_DO_NOT_HAVE_A_BOOK_OF_ARTIFACTS);
                     sm.addItemName(item);
                     activeChar.sendPacket(sm);
                     return;

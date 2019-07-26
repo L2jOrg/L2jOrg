@@ -26,6 +26,6 @@ public class PhysicalSkillPower extends AbstractStatEffect
 {
 	public PhysicalSkillPower(StatsSet params)
 	{
-		super(params, Stats.PHYSICAL_SKILL_POWER);
+		super(params, Stats.PHYSICAL_SKILL_POWER, Stats.SKILL_POWER_ADD);
 	}
 }

@@ -23,6 +23,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Defender;
+import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -57,7 +58,7 @@ public class DoorAI extends CreatureAI {
     }
 
     @Override
-    protected void onIntentionMoveTo(Location destination) {
+    protected void onIntentionMoveTo(ILocational destination) {
     }
 
     @Override

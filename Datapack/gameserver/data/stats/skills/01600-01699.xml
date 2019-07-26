@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1600" toLevel="1" name="Soul Instinct">
-		<!-- For 15 sec., awakens party members' destructive instincts to get P. Atk., P. Critical Rate, M. Atk., and M. Critical Rate +50%, and Atk. Spd. and Casting Spd. +20%. -->
+		<!-- For 15 sec., P. Atk., P. Critical Rate, M. Atk., and M. Critical Rate +50%, Atk. Spd. and Casting Spd. +20%. -->
 		<icon>icon.skill1600</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -128,7 +128,7 @@
 		</effects>
 	</skill>
 	<skill id="1606" toLevel="10" name="Quick Spear">
-		<!-- Attacks nearby enemies by throwing a spear with $s1 Power added to P. Atk. Stuns for $s2. Requires a polearm. Over-hit. Critical. Ignores Shield Defense. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2. Range 300. Requires a spear. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill1606</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -218,7 +218,7 @@
 		</effects>
 	</skill>
 	<skill id="1607" toLevel="45" name="Excruciating Strike">
-		<!-- Attacks the enemies in front of the character with $s1 Power added to P. Atk. Ignores $s2 of the enemy's P. Def. Requires a sword/ two-handed sword. Over-hit. Ignores Shield Defense. -->
+		<!-- Attacks the enemies in front of the character with $s1 Power added to P. Atk. Ignores $s2 of the enemy's P. Def. Requires a sword/ two-handed sword. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill1607</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -467,7 +467,7 @@
 		</endEffects>
 	</skill>
 	<skill id="1609" toLevel="4" name="Sword Expert">
-		<!-- P. Atk. +$s1, Accuracy +$s2. Atk. Spd. Boost +$s3 when using a sword/ two-handed sword. Continuously consumes MP proportionately to your level. -->
+		<!-- P. Atk. +$s1, P. Accuracy +$s2. Atk. Spd. +$s3 when using a sword/ two-handed sword. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill1609</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -707,7 +707,7 @@
 		</effects>
 	</skill>
 	<skill id="1612" toLevel="1" name="Slowing Power">
-		<!-- For 15 sec., Speed -20%. -->
+		<!-- Speed -20% for 15 sec. -->
 		<icon>icon.skill0210</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -807,7 +807,7 @@
 		</effects>
 	</skill>
 	<skill id="1615" toLevel="4" name="Weapon Reinforcement">
-		<!-- For 5 min., enhances polearms and blunt weapons, P. Atk. +$s1. At a certain chance to decrease target s Atk. Spd. and Casting Spd. -$s2. -->
+		<!-- For $s1, enhances polearms, P. Atk. +$s2. At a certain chance target s Atk. Spd. and Casting Spd. -$s3. -->
 		<icon>icon.skill1615</icon>
 		<reuseDelay>2000</reuseDelay>
 		<coolTime>500</coolTime>
@@ -845,7 +845,7 @@
 				</weaponType>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<chance>10</chance>
@@ -911,7 +911,7 @@
 				</SHOCK>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<chance>10</chance>
@@ -945,9 +945,11 @@
 		</effects>
 	</skill>
 	<skill id="1619" toLevel="8" name="Sonic Focus">
+		<!-- Max. Energy $s1. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1620" toLevel="8" name="Focus Force">
+		<!-- Max. Energy $s1. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1621" toLevel="5" name="Shield of Sacrifice">
@@ -1023,7 +1025,7 @@
 		</effects>
 	</skill>
 	<skill id="1622" toLevel="1" name="Blood of Sacrifice">
-		<!-- The sacrifice decreases Max HP. -->
+		<!-- Sacrifices, decreasing Max HP by 20%. -->
 		<icon>icon.skill1621</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>180</abnormalTime>
@@ -1033,7 +1035,7 @@
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<effects>
 			<effect name="MaxHp">
 				<amount>-20</amount>
@@ -1109,7 +1111,7 @@
 		</effects>
 	</skill>
 	<skill id="1624" toLevel="4" name="Indestructible Sound">
-		<!-- Using Momentum, throws a powerful strike with a sword, blocking the target for $s1 Damage received by the target -50%, blocks target's movements and skill usage. Requires a dual sword. Requires Momentum level 5. -->
+		<!-- Using Momentum, throws a powerful strike with a sword, blocking the target for $s1 Damage received by the target -$s2, blocks target's movements and skill usage. Requires a dual sword. Requires Momentum level 5. -->
 		<icon>icon.skill1624</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1176,7 +1178,7 @@
 		</effects>
 	</skill>
 	<skill id="1625" toLevel="1" name="Throwing Spear">
-		<!-- Throws a spear at the enemy with $s1 Power added to P. Atk. and immobilizes them for $s2. Requires a polearm. Over-hit. Ignores Shield Defense. -->
+		<!-- Throws a spear at the enemy with $s1 Power added to P. Atk., inflicting Immobilize for $s2. Range 300. Requires a spear. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill1625</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>

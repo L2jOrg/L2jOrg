@@ -30,6 +30,12 @@ public final class TeleportToTarget extends AbstractEffect
 	{
 		return EffectType.TELEPORT_TO_TARGET;
 	}
+
+	@Override
+	public boolean canStart(Creature effector, Creature effected, Skill skill)
+	{
+		return (effected != null) && GeoEngine.getInstance().canSeeTarget(effected, effector);
+	}
 	
 	@Override
 	public boolean isInstant()

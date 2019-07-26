@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.model.items.enchant;
 
 import org.l2j.gameserver.model.holders.RangeChanceHolder;
@@ -31,6 +15,7 @@ public final class EnchantItemGroup {
     private static final Logger LOGGER = LoggerFactory.getLogger(EnchantItemGroup.class);
     private final List<RangeChanceHolder> _chances = new ArrayList<>();
     private final String _name;
+    private byte _maximumEnchant = -1;
 
     public EnchantItemGroup(String name) {
         _name = name;
@@ -66,5 +51,24 @@ public final class EnchantItemGroup {
         }
         LOGGER.warn(": item group: " + _name + " doesn't have any chances!");
         return -1;
+    }
+
+    /**
+     * @return the maximum enchant level for current enchant item group.
+     */
+    public byte getMaximumEnchant()
+    {
+        if (_maximumEnchant == -1)
+        {
+            for (RangeChanceHolder holder : _chances)
+            {
+                if ((holder.getChance() > 0) && (holder.getMax() > _maximumEnchant))
+                {
+                    _maximumEnchant = (byte) holder.getMax();
+                }
+            }
+            _maximumEnchant++;
+        }
+        return _maximumEnchant;
     }
 }

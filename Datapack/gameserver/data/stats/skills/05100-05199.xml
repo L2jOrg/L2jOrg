@@ -314,7 +314,7 @@
 		</effects>
 	</skill>
 	<skill id="5112" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -484,6 +484,7 @@
 		</effects>
 	</skill>
 	<skill id="5115" toLevel="12" name="Cubic Hate">
+		<!-- Draw enemy's attention. -->
 		<icon>icon.skill0100</icon>
 		<effectPoint>
 			<value level="1">-2908</value>
@@ -524,8 +525,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5116" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+	<skill id="5116" toLevel="12" name="Cubic Hold">
+		<!-- Temporarily inflicted with Hold and unable to move. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -564,7 +565,7 @@
 		</effects>
 	</skill>
 	<skill id="5117" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -641,7 +642,7 @@
 		</effects>
 	</skill>
 	<skill id="5120" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -704,7 +705,7 @@
 		</effects>
 	</skill>
 	<skill id="5123" toLevel="1" name="Maximum Defense">
-		<!-- Maximizes P. Def., M. Def. and Shield Defense momentarily. -->
+		<!-- Temporarily increases P./ M. Def., Shield Defense and Buff Removing. -->
 		<icon>icon.skill0454</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -776,7 +777,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5126" toLevel="1" name="Maximum Recovery">
+	<skill id="5126" toLevel="1" name="Maximum Recovery Bonus">
 		<!-- HP and CP recovery bonus are maximized. -->
 		<icon>icon.skill0457</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -832,7 +833,7 @@
 		</effects>
 	</skill>
 	<skill id="5128" toLevel="1" name="Maximize long-range weapon use">
-		<!-- Maximizes bow/ crossbow use abilities. -->
+		<!-- Maximizes bow use abilities. -->
 		<icon>icon.skill0459</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -868,7 +869,7 @@
 		</effects>
 	</skill>
 	<skill id="5129" toLevel="1" name="Smokescreen">
-		<!-- Maximizes Evasion and assassination skill. -->
+		<!-- Maximizes P. Evasion and assassination skill. -->
 		<icon>icon.skill0460</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -1014,6 +1015,7 @@
 		</effects>
 	</skill>
 	<skill id="5135" toLevel="1" name="Slash">
+		<!-- Inflicts damage on the enemy with $s1 Power. -->
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1035,6 +1037,7 @@
 		</effects>
 	</skill>
 	<skill id="5136" toLevel="1" name="Spin Slash">
+		<!-- Inflicts damage on the enemy with $s1 Power. -->
 		<affectRange>150</affectRange>
 		<coolTime>733</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1055,7 +1058,7 @@
 		</effects>
 	</skill>
 	<skill id="5137" toLevel="1" name="Grip of the Cat">
-		<!-- Immobilized. -->
+		<!-- Attack of Feline King holds target for 15 sec. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1087,7 +1090,7 @@
 		</effects>
 	</skill>
 	<skill id="5138" toLevel="1" name="Whiplash">
-		<!-- Stunned State -->
+		<!-- Attack of Magnus the Unicorn stuns target for 15 sec. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1120,6 +1123,7 @@
 		</effects>
 	</skill>
 	<skill id="5139" toLevel="1" name="Tidal Wave">
+		<!-- Inflicts magic damage on the enemy with $s1 Power added to M. Atk. -->
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -1146,7 +1150,7 @@
 		</effects>
 	</skill>
 	<skill id="5140" toLevel="1" name="Dark Curse">
-		<!-- Casts a curse poisoning nearby enemies. Decreases Atk. Spd. -->
+		<!-- Curse decreases Atk. Spd./ Casting Spd. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1180,6 +1184,7 @@
 		</effects>
 	</skill>
 	<skill id="5141" toLevel="1" name="Dicing Death">
+		<!-- Inflicts damage on the enemy with $s1 Power. Has a chance to cancel target. -->
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1200,6 +1205,7 @@
 		</effects>
 	</skill>
 	<skill id="5142" toLevel="1" name="Corpse Burst">
+		<!-- Inflicts magic damage on the enemy with $s1 Power added to M. Atk. -->
 		<affectRange>150</affectRange>
 		<castRange>400</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1368,7 +1374,7 @@
 		</effects>
 	</skill>
 	<skill id="5147" toLevel="10" name="Blessed Body">
-		<!-- Active: Increases the maximum HP temporarily. -->
+		<!-- In case of success: Increases Max HP for a certain amount of time. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1413,7 +1419,7 @@
 		</effects>
 	</skill>
 	<skill id="5148" toLevel="10" name="Prayer">
-		<!-- Active: Increases the effect of HP recovery magic temporarily. -->
+		<!-- In case of success: Increases Received Healing for a certain amount of time. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1498,7 +1504,7 @@
 		</effects>
 	</skill>
 	<skill id="5150" toLevel="10" name="Blessed Soul">
-		<!-- Active: Maximum MP +$s1 temporarily. -->
+		<!-- In case of success: Max. MP +$s1 for a certain amount of time. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1543,7 +1549,7 @@
 		</effects>
 	</skill>
 	<skill id="5151" toLevel="15" name="Mana Gain">
-		<!-- Active: When using the Recharge skill, MP Recovery Rate increases. -->
+		<!-- In case of success: When using the Recharge skill, MP Recovery Rate increases. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1623,7 +1629,7 @@
 		</effects>
 	</skill>
 	<skill id="5153" toLevel="10" name="Cheer">
-		<!-- Active: Maximum CP +$s1 temporarily. -->
+		<!-- In case of success: Max. CP +$s1 for a certain amount of time. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1668,7 +1674,7 @@
 		</effects>
 	</skill>
 	<skill id="5154" toLevel="15" name="Might">
-		<!-- Active: Increases P. Atk. temporarily. -->
+		<!-- In case of success: Increases P. Atk. for a certain amount of time. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1723,7 +1729,7 @@
 		</effects>
 	</skill>
 	<skill id="5156" toLevel="15" name="Empower">
-		<!-- Active: Increases M. Atk. temporarily. -->
+		<!-- In case of success: Increases M. Atk. for a certain amount of time. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1778,7 +1784,7 @@
 		</effects>
 	</skill>
 	<skill id="5157" toLevel="10" name="Power in Duel">
-		<!-- Chance: Temporarily increases your P. Atk. in PvP. -->
+		<!-- In case of success: Increases P. Atk. in PvP for a certain amount of time. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1816,7 +1822,7 @@
 		</effects>
 	</skill>
 	<skill id="5158" toLevel="15" name="Shield">
-		<!-- Active: Increases P. Def. temporarily. -->
+		<!-- In case of success: Increases P. Def. for a certain amount of time. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1871,7 +1877,7 @@
 		</effects>
 	</skill>
 	<skill id="5159" toLevel="15" name="Magic Barrier">
-		<!-- Active: Increases M. Def. temporarily. -->
+		<!-- In case of success: Increases M. Def. for a certain amount of time. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1926,7 +1932,7 @@
 		</effects>
 	</skill>
 	<skill id="5160" toLevel="10" name="Weakness in Duel">
-		<!-- Chance: temporarily decreases P. Atk. in PvP. -->
+		<!-- In case of success: Decreases enemy's P. Atk. in PvP for a certain amount of time. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1969,7 +1975,7 @@
 		</effects>
 	</skill>
 	<skill id="5161" toLevel="15" name="Agility">
-		<!-- Active: Increases Evasion temporarily. -->
+		<!-- In case of success: Increases P. Evasion for a certain amount of time. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2024,7 +2030,7 @@
 		</effects>
 	</skill>
 	<skill id="5162" toLevel="15" name="Guidance">
-		<!-- Active: Increases Accuracy temporarily. -->
+		<!-- In case of success: Increases P. Accuracy for a certain amount of time. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2079,7 +2085,7 @@
 		</effects>
 	</skill>
 	<skill id="5163" toLevel="10" name="Focus">
-		<!-- Active: Increases critical attack rate temporarily. -->
+		<!-- In case of success: Increases P. Critical Rate for a certain amount of time. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2124,7 +2130,7 @@
 		</effects>
 	</skill>
 	<skill id="5164" toLevel="10" name="Wild Magic">
-		<!-- Active: Increases critical attack rate of magic attacks temporarily. -->
+		<!-- In case of success: Increases M. Critical Rate for a certain amount of time. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2222,7 +2228,7 @@
 		</effects>
 	</skill>
 	<skill id="5166" toLevel="15" name="Decrease Speed">
-		<!-- Active: Momentarily decreases the target's Speed. Effect $s1 -->
+		<!-- In case of success: Momentarily target's Speed -30%. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2266,7 +2272,7 @@
 		</effects>
 	</skill>
 	<skill id="5167" toLevel="15" name="Winter">
-		<!-- Active: Momentarily decreases the target's Atk. Spd. Effect $s1 -->
+		<!-- In case of success: Momentarily target's Atk. Spd. -23%. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2310,7 +2316,7 @@
 		</effects>
 	</skill>
 	<skill id="5168" toLevel="10" name="Stun">
-		<!-- Active: Momentarily Stuns the target. -->
+		<!-- In case of success: Momentarily inflicts Stun on the target. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2389,7 +2395,7 @@
 		</effects>
 	</skill>
 	<skill id="5170" toLevel="10" name="Sleep">
-		<!-- Active: Momentarily inflicts Sleep on the target. Chance to further be inflicted with Sleep greatly decreases while effect lasts. -->
+		<!-- In case of success: Momentarily inflicts Sleep on the target. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2547,7 +2553,7 @@
 		</effects>
 	</skill>
 	<skill id="5174" toLevel="15" name="Poison">
-		<!-- Active: Momentarily poisons the target. Effect $s1 -->
+		<!-- In case of success: Momentarily poisons the target. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -2626,7 +2632,7 @@
 		</effects>
 	</skill>
 	<skill id="5175" toLevel="15" name="Bleed">
-		<!-- Active: Momentarily inflicts Bleed on the target. Effect $s1 -->
+		<!-- In case of success: Momentarily inflicts Bleed on the target. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -2744,7 +2750,7 @@
 		</effects>
 	</skill>
 	<skill id="5177" toLevel="10" name="Doom">
-		<!-- Active: Momentarily blocks the target's physical/ magic skills. -->
+		<!-- In case of success: Momentarily blocks the target's physical/ magic skills. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2803,21 +2809,21 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5179" toLevel="1" name="Raid Boss (Lv. 80)">
+	<skill id="5179" toLevel="1" name="80 Lv. Raid Boss">
 		<!-- The younger brother of the Elrokian chief, Mushika, he is notoriously ambitious, jealous and prone to fits of violence. Where his legendary brother is concerned, he also suffers from something of an inferiority complex. He currently leads the Elrokian faction opposed to Mushika's policies and is scheming to depose his brother and make himself chief. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5180" toLevel="1" name="Raid Boss (Lv. 80)">
+	<skill id="5180" toLevel="1" name="80 Lv. Raid Boss">
 		<!-- Sailren, an enormous, vicious and dangerous dinosaur who inhabits the Primeval Isle, was sealed inside the Lost Nest ages ago by Shilen and the ancient Elrokian warriors. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5181" toLevel="1" name="Raid Boss (Lv. 80)">
+	<skill id="5181" toLevel="1" name="80 Lv. Raid Boss">
 		<!-- Wandering near Goddard Castle, this seemingly ordinary Human knight is actually a demon searching for a powerful weapon to increase its strength. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
@@ -2825,7 +2831,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5182" toLevel="1" name="Blessing of Protection">
-		<!-- Keeps you safe from an attack by a chaotic character who is more than 10 Lv.s apart from you. -->
+		<!-- Keeps you safe from an attack by a chaotic character who is more than 10 levels apart from you. -->
 		<icon>icon.skill0194</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
@@ -2882,7 +2888,7 @@
 		</effects>
 	</skill>
 	<skill id="5186" toLevel="2" name="Pet Haste">
-		<!-- Atk. Spd. increases temporarily. Effect $s1 -->
+		<!-- Temporarily Atk. Spd. +15%. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2924,7 +2930,7 @@
 		</effects>
 	</skill>
 	<skill id="5187" toLevel="4" name="Pet Vampiric Rage">
-		<!-- Provides the ability to recover HP temporarily by damaging the enemy with a certain probability. Effect $s1 -->
+		<!-- Temporarily increases the ability to restore some HP from the damage inflicted on the enemy temporarily with a certain probability. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2976,7 +2982,7 @@
 		</effects>
 	</skill>
 	<skill id="5188" toLevel="3" name="Pet Regeneration">
-		<!-- Increases HP recovery bonus for a fixed time. Effect $s1 -->
+		<!-- HP Recovery Bonus +10% for a certain amount of time. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3027,7 +3033,7 @@
 		</effects>
 	</skill>
 	<skill id="5189" toLevel="6" name="Pet Blessed Body">
-		<!-- Increases maximum HP temporarily. Effect $s1 -->
+		<!-- Max HP +10% for a certain amount of time. -->
 		<icon>icon.skill1045</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3096,7 +3102,7 @@
 		</effects>
 	</skill>
 	<skill id="5190" toLevel="6" name="Pet Blessed Soul">
-		<!-- Increases maximum MP temporarily. Effect $s1 -->
+		<!-- Max MP +10% for a certain amount of time. -->
 		<icon>icon.skill1048</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3165,7 +3171,7 @@
 		</effects>
 	</skill>
 	<skill id="5191" toLevel="3" name="Pet Guidance">
-		<!-- Increases Accuracy temporarily. Effect $s1 -->
+		<!-- Temporarily P. Accuracy +2. -->
 		<icon>icon.skill1240</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3216,7 +3222,7 @@
 		</effects>
 	</skill>
 	<skill id="5192" toLevel="2" name="Pet Wind Walk">
-		<!-- Increases Speed temporarily. Effect $s1 -->
+		<!-- Temporarily Speed +20. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3261,7 +3267,7 @@
 		</effects>
 	</skill>
 	<skill id="5193" toLevel="3" name="Pet Acumen">
-		<!-- Increases Casting Spd. temporarily. Effect $s1 -->
+		<!-- Temporarily Atk. Spd. +15%. -->
 		<icon>icon.skill1085</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3312,7 +3318,7 @@
 		</effects>
 	</skill>
 	<skill id="5194" toLevel="3" name="Pet Empower">
-		<!-- Increases M. Atk. power temporarily. Effect $s1 -->
+		<!-- Temporarily M. Atk. +55%. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3363,7 +3369,7 @@
 		</effects>
 	</skill>
 	<skill id="5195" toLevel="12" name="Pet Greater Heal">
-		<!-- Recovers HP and momentarily increases HP Recovery Bonus. Power 50. Effect $s1 -->
+		<!-- Recovers HP and momentarily increases HP Recovery Bonus. -->
 		<icon>icon.skill1217</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

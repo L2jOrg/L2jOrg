@@ -75,7 +75,7 @@
 		</effects>
 	</skill>
 	<skill id="1502" toLevel="1" name="Improve Critical Attack">
-		<!-- Combines Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. For 40 min., Critical Rate +30% and Critical Damage +35%. -->
+		<!-- Combines P. Critical Rate increase and P. Critical Damage increase to have more advanced critical increase effect. For 40 min., P. Critical Rate +30% and P. Critical Damage +35%. -->
 		<icon>icon.skill1502</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
@@ -149,7 +149,7 @@
 		</effects>
 	</skill>
 	<skill id="1504" toLevel="1" name="Improve Movement">
-		<!-- Combines Spd. increase and Evasion increase to have more advanced movement increase effect. For 40 min., Speed +33 and Evasion +4. -->
+		<!-- Combines Speed increase and P. Evasion increase to have more advanced movement increase effect. For 40 min., Speed +33 and P. Evasion +4. -->
 		<icon>icon.skill1504</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
@@ -186,7 +186,7 @@
 		</effects>
 	</skill>
 	<skill id="1505" toLevel="1" name="Sublime Self-Sacrifice">
-		<!-- Sacrifices oneself to allow all other party members (excluding oneself) to fully recover their HP/ MP/ CP and to become invincible for 15 sec. -->
+		<!-- Sacrifices oneself to allow all other allies (excluding oneself) to fully recover their HP/ MP/ CP and to become invincible for 15 sec. -->
 		<icon>icon.skill1505</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -330,7 +330,7 @@
 		</effects>
 	</skill>
 	<skill id="1509" toLevel="9" name="Seal of Limit">
-		<!-- During PvP, limits the CP, HP, and MP recovery of the target and nearby enemies to maximum $s2 for $s1. -->
+		<!-- During PvP, limits the CP, HP, and MP recovery of the target and nearby enemies to maximum $s2 for $s1 -->
 		<icon>icon.skill1509</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -518,7 +518,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Light Flow -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
@@ -539,7 +539,7 @@
 		</effects>
 	</skill>
 	<skill id="1512" toLevel="1" name="Soul Vortex">
-		<!-- Stirs up a vortex connecting to the dimension of souls and inflicts non-attribute damage on the enemy with 112 Power added to M. Atk. For 30 sec., Speed -20%, Atk. Spd. -30%, and Casting Spd. -30%. Consumes 12 MP every sec. Over-hit. -->
+		<!-- Stirs up a vortex connecting to the dimension of souls and inflicts damage on the enemy with 112 Power added to M. Atk. For 30 sec., Speed -20%, Atk. Spd. -30%, and Casting Spd. -30%. Consumes 12 MP every sec. Over-hit. -->
 		<icon>icon.skill1512</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -727,7 +727,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Lightning Barrier -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>20</chance>
@@ -739,7 +739,7 @@
 		</effects>
 	</skill>
 	<skill id="1516" toLevel="1" name="Soul Strike">
-		<!-- Consecutively throws souls to inflict non-attribute damage on the enemy using 166 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
+		<!-- Consecutively throws souls to inflict damage on the enemy with 166 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
 		<icon>icon.skill1516</icon>
 		<castRange>750</castRange>
 		<effectPoint>-662</effectPoint>
@@ -799,7 +799,7 @@
 		</effects>
 	</skill>
 	<skill id="1518" toLevel="1" name="Chant of Critical">
-		<!-- Combines party members' Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. Critical Rate +30% and Critical Damage 35% for 40 min. -->
+		<!-- Combines party members' P. Critical Rate increase and P. Critical Damage increase to have more advanced critical increase effect. For 40 min., P. Critical Rate +30% and P. Critical Damage +35%. -->
 		<icon>icon.skill1502</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
@@ -873,7 +873,7 @@
 		</effects>
 	</skill>
 	<skill id="1523" toLevel="42" name="Divine Punishment">
-		<!-- Calls down the gods' retribution to inflict damage on the enemy using $s1 Power added to M. Atk. -->
+		<!-- Calls down the gods' retribution to inflict damage on the enemy with $s1 Power added to M. Atk. -->
 		<icon>icon.skill1523</icon>
 		<castRange>750</castRange>
 		<effectPoint>
@@ -1406,7 +1406,7 @@
 		</effects>
 	</skill>
 	<skill id="1525" toLevel="42" name="Divine Curse">
-		<!-- For $s1, casts the wrathful curse of the gods to decrease the effect of recovery magic -$s2. Decreases $s3 HP every sec. -->
+		<!-- For $s1, casts the wrathful curse of the gods to decrease the Received Healing by $s2. Decreases $s3 HP every sec. -->
 		<icon>icon.skill1525</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -1669,7 +1669,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Steal Mana -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<minDamage>
@@ -2252,7 +2252,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Bless the Blood -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>60</chance>
@@ -2352,7 +2352,7 @@
 		</effects>
 	</skill>
 	<skill id="1534" toLevel="1" name="Courage of Pa'agrio">
-		<!-- Temporarily increases party and clan members' Max CP. Effect 1. -->
+		<!-- Temporarily party and clan members' Max CP +10%. -->
 		<icon>icon.skill1534</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -2467,7 +2467,7 @@
 		</effects>
 	</skill>
 	<skill id="1537" toLevel="1" name="Critical of Pa'agrio">
-		<!-- Combines a party/ clan member's Critical Rate increase and Critical Damage increase effects for a more advanced critical increase effect. For 40 min., Critical Rate +30% and Critical Damage +35%. -->
+		<!-- Combines P. Critical Rate increase and P. Critical Damage increase to have more advanced critical increase effect. For 40 min., party and clan members' P. Critical Rate +30% and P. Critical Damage +35%. -->
 		<icon>icon.skill1537</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
@@ -2748,6 +2748,12 @@
 					<value level="3">-32</value>
 					<value level="4">-40</value>
 					<value level="5">-48</value>
+					<value level="6">-49</value>
+					<value level="7">-50</value>
+					<value level="8">-51</value>
+					<value level="9">-52</value>
+					<value level="10">-53</value>
+					<value level="11">-54</value>
 				</RAPIER>
 			</effect>
 		</effects>
@@ -2789,7 +2795,7 @@
 		</effects>
 	</skill>
 	<skill id="1541" toLevel="1" name="Curse of Desparion">
-		<!-- Inflicts the Curse of Desparion, momentarily decreasing enemy Speed, Accuracy, P. Atk. and Atk. Spd. -->
+		<!-- Inflicts the Curse of Desparion, momentarily decreasing enemy Speed, P. Accuracy, P. Atk. and Atk. Spd. -->
 		<icon>icon.skill1541</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2833,7 +2839,7 @@
 		</effects>
 	</skill>
 	<skill id="1542" toLevel="2" name="Counter Critical">
-		<!-- For 20 min., Received Critical Damage -30%. When the target receives an attack above a certain amount of damage, increases Critical Damage of standard melee attack for 8 sec. -->
+		<!-- For 20 min., Received P. Critical Damage -30%. When the target receives an attack above a certain amount of damage, increases P. Critical Damage of standard melee attack for 8 sec. -->
 		<icon>icon.skill1542</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -2861,7 +2867,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Counter Critical -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<chance>80</chance>
@@ -3007,7 +3013,7 @@
 		</effects>
 	</skill>
 	<skill id="1547" toLevel="5" name="Spirit Sharing">
-		<!-- For $s1 character's P.Atk. +$s2, M. Atk. +$s3, Atk. Spd. +$s4, Casting Spd. +$s5, P./ M. Critical Rate +$s6. Transfers master's enchanced skills to the servitor. Consumes $s7 Spirit Ore. -->
+		<!-- For $s1, character's P. Atk. +$s2, M. Atk. +$s3, Atk. Spd. +$s4, Casting Spd. +$s5, P./ M. Critical Rate +$s6. Transfers master's enchanced skills to the servitor. Consumes $s7 Spirit Ore. -->
 		<icon>icon.skill1497</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3319,7 +3325,7 @@
 		</effects>
 	</skill>
 	<skill id="1554" toLevel="1" name="Aura Blast">
-		<!-- Inflicts non-attribute damage on the target and enemies around the target with 141 Power added to M. Atk., and recovers MP. Inflicts additional non-attribute damage with 58 Power if the target is a monster. -->
+		<!-- Inflicts non-attribute damage on the target and nearby enemies with 141 Power added to M. Atk. and recovers MP. If a monster is targeted, inflicts additional damage with 58 Power. -->
 		<icon>icon.skill1554</icon>
 		<abnormalTime>3</abnormalTime>
 		<affectLimit>10-0-1</affectLimit>
@@ -3357,7 +3363,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="1555" toLevel="1" name="Aura Cannon">
-		<!-- Inflicts non-attribute damage on the enemy with 178 Power added to M. Atk. and recovers MP. Inflicts additional non-attribute damage with 124 Power if the target is a monster. -->
+		<!-- Inflicts non-attribute damage on the target with 178 Power added to M. Atk. and recovers MP. If a monster is targeted, inflicts additional damage with 124 Power. -->
 		<icon>icon.skill1555</icon>
 		<castRange>150</castRange>
 		<effectPoint>-689</effectPoint>
@@ -3475,7 +3481,7 @@
 		</effects>
 	</skill>
 	<skill id="1558" toLevel="24" name="Dimension Spiral">
-		<!-- Creates a tear in the dimension to inflict damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
+		<!-- Creates a tear in the dimension to inflict magic damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
 		<icon>icon.skill1558</icon>
 		<castRange>900</castRange>
 		<effectPoint>-590</effectPoint>
@@ -3604,7 +3610,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="1559" toLevel="3" name="Potential Ability">
-		<!-- When equipped with a dagger or a dual dagger, Critical Rate +$s1 and Critical Damage +$s2. Requires a light armor to be equipped. -->
+		<!-- When equipped with a dagger or a dual dagger, P. Critical Rate +$s1 and P. Critical Damage +$s2. Requires a light armor to be equipped. -->
 		<icon>icon.skill1559</icon>
 		<magicLvl>
 			<value level="1">28</value>
@@ -3648,7 +3654,7 @@
 		</effects>
 	</skill>
 	<skill id="1560" toLevel="1" name="Lucky Blow">
-		<!-- Attacks the target's vital points with 11234 Power added to P. Atk., causing a Spoiled state. Lethal Strike. Half-kill. Over-hit. Critical. Requires a dual dagger. -->
+		<!-- Attacks the target's vital points with 11234 Power added to P. Atk., ?onfuses the interior of the target's body. Lethal Strike. Half-kill. Over-hit. Critical. Requires a dual dagger. -->
 		<icon>icon.skill1560</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -3735,7 +3741,7 @@
 		</effects>
 	</skill>
 	<skill id="1562" toLevel="2" name="Chant of Berserker">
-		<!-- For $s1, all party members' P. Def. -$s2, M. Def. -$s3, and Evasion -$s4, P. Atk. +$s5, M. Atk. +$s6, Atk. Spd. +$s7, Casting Spd. +$s8, Speed +$s9. -->
+		<!-- For $s1, all party members' P. Def. -$s2, M. Def. -$s3, and P. Evasion -$s4, P. Atk. +$s5, M. Atk. +$s6, Atk. Spd. +$s7, Casting Spd. +$s8, Speed +$s9. -->
 		<icon>icon.skill1562</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3883,7 +3889,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Penetration Attack -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>107</maxAttackerLevel>
 				<chance>10</chance>
@@ -3934,7 +3940,7 @@
 		</effects>
 	</skill>
 	<skill id="1572" toLevel="1" name="Weight Increase">
-		<!-- Weight limit +10000. -->
+		<!-- Weight limit +$s1. -->
 		<icon>icon.skill0150</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3977,7 +3983,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1574" toLevel="6" name="Sub - P. Def./M. Def. Increase">
+	<skill id="1574" toLevel="6" name="Sub - P./ M. Def. Increase">
 		<!-- P. Def. +$s1 and M. Def. +$s2. -->
 		<icon>icon.skill0439</icon>
 		<operateType>P</operateType>
@@ -4033,7 +4039,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1576" toLevel="3" name="Sub - Critical Rate Increase">
+	<skill id="1576" toLevel="3" name="Sub - P./ M. Critical Rate Increase">
 		<!-- P. Critical Rate/ M. Critical Rate +$s1. -->
 		<icon>icon.skill0814</icon>
 		<operateType>P</operateType>
@@ -4058,7 +4064,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1577" toLevel="3" name="Sub - Critical Damage Increase">
+	<skill id="1577" toLevel="3" name="Sub - P./ M. Critical Damage Increase">
 		<!-- P. Critical Damage +$s1, M. Critical Damage +$s2. -->
 		<icon>icon.skill0815</icon>
 		<operateType>P</operateType>
@@ -4219,7 +4225,7 @@
 		</effects>
 	</skill>
 	<skill id="1585" toLevel="1" name="Rhythm of Critical Dark">
-		<!-- For 2 min., party members' Critical Damage +35% and critical attack rate +100%. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+		<!-- For 2 min., party members' P. Critical Damage +35% and P. Critical Rate +100%. Additionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill1583</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4263,7 +4269,7 @@
 		</effects>
 	</skill>
 	<skill id="1586" toLevel="1" name="Rhythm of Critical">
-		<!-- For 2 min., party members' Critical Damage +35% and critical attack rate +100%. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<!-- For 2 min., party members' P. Critical Damage +35% and P. Critical Rate +100%. Additionally increases MP Consumption when the skill is used while song/ dance effect is in place. -->
 		<icon>icon.skill1583</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4299,7 +4305,7 @@
 		</effects>
 	</skill>
 	<skill id="1587" toLevel="1" name="Rhythm of Magic Dark">
-		<!-- All party members' M. Atk. +20% and M. Def. +30% for 2 min. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+		<!-- All party members' M. Atk. +20% and M. Def. +30% for 2 min. Additionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill1588</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4379,7 +4385,7 @@
 		</effects>
 	</skill>
 	<skill id="1589" toLevel="1" name="Rhythm of Combat Dark">
-		<!-- All party members' P. Atk. +12% and P. Def. +25% for 2 min. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+		<!-- All party members' P. Atk. +12% and P. Def. +25% for 2 min. Additionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill1584</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4459,7 +4465,7 @@
 		</effects>
 	</skill>
 	<skill id="1591" toLevel="1" name="Rhythm of Fighter Dark">
-		<!-- All party members' Atk. Spd. +15% and Max HP +30% for 2 min. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+		<!-- All party members' Atk. Spd. +15% and Max HP +30% for 2 min. Additionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill1587</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4617,7 +4623,7 @@
 		</effects>
 	</skill>
 	<skill id="1595" toLevel="1" name="Rhythm of Start Dark">
-		<!-- For 2 min., all party members' damage attack magic's Critical Rate -100%, physical/ magic/ song/ dance skills' MP Consumption -5%, and physical/ magic skills' Cooldown -20%. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+		<!-- For 2 min., all party members' damage attack magic's Critical Rate -100%, physical/ magic/ song/ dance skills' MP Consumption -5%, and P./ M. Skill Cooldown -20%. Additionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill1586</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4682,7 +4688,7 @@
 		</effects>
 	</skill>
 	<skill id="1596" toLevel="1" name="Rhythm of Start">
-		<!-- For 2 min., all party members' damage attack magic's Critical Rate -100%, physical/ magic/ song/ dance skills' MP Consumption -5%, and physical/ magic skills' Cooldown -20%. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<!-- For 2 min., all party members' damage attack magic's Critical Rate -100%, physical/ magic/ song/ dance skills' MP Consumption -5%, and P./ M. Skill Cooldown -20%. Additionally increases MP Consumption when the skill is used while song/ dance effect is in place. -->
 		<icon>icon.skill1586</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4739,7 +4745,7 @@
 		</effects>
 	</skill>
 	<skill id="1597" toLevel="1" name="Weight Increase">
-		<!-- Weight limit +15000. -->
+		<!-- Weight limit +$s1. -->
 		<icon>icon.skill0150</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -4751,7 +4757,7 @@
 		</effects>
 	</skill>
 	<skill id="1598" toLevel="1" name="Rhythm of Magician Dark">
-		<!-- For 2 min., all party members' magic cancel damage -40, MP Consumption for magic skills -10%, and Casting Spd. +30% and MP recovery bonus +20%. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+		<!-- For 2 min., all party members' magic cancel damage -40, M. Skill MP Consumption -10%, and Casting Spd. +30% and MP recovery bonus +20%. Additionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill11005</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4804,7 +4810,7 @@
 		</effects>
 	</skill>
 	<skill id="1599" toLevel="1" name="Rhythm of Magician">
-		<!-- For 2 min., all party members' magic cancel damage -40, MP Consumption for magic skills -10%, and Casting Spd. +30% and MP recovery bonus +20%. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<!-- For 2 min., all party members' magic cancel damage -40, M. Skill MP Consumption -10%, and Casting Spd. +30% and MP recovery bonus +20%. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<icon>icon.skill11005</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>

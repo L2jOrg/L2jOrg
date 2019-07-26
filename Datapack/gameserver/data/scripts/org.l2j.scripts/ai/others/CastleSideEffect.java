@@ -7,6 +7,8 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.network.serverpackets.ExCastleState;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Shows castle side effect in cities.
  * @author Gigi
@@ -35,7 +37,7 @@ public class CastleSideEffect extends AbstractNpcAI
 	@Override
 	public String onEnterZone(Creature character, Zone zone)
 	{
-		if (character.isPlayer())
+		if (isPlayer(character))
 		{
 			for (Castle castle : CastleManager.getInstance().getCastles())
 			{

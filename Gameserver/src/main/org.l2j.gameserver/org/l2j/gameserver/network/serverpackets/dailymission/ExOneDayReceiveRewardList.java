@@ -51,7 +51,7 @@ public class ExOneDayReceiveRewardList extends ServerPacket {
             writeShort(mission.getId());
             writeByte(mission.getStatus(player));
             writeByte((mission.getRequiredCompletions() > 1));
-            writeInt(Math.min(mission.getProgress(player), player.getLevel()));
+            writeInt(mission.getProgress(player));
             writeInt(mission.getRequiredCompletions());
         }
     }

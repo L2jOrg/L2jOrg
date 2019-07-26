@@ -25,8 +25,8 @@ import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 public final class RequestEnchantItem extends ClientPacket {
+
     protected static final Logger LOGGER_ENCHANT = LoggerFactory.getLogger("enchant.items");
 
     private int _objectId;
@@ -228,7 +228,7 @@ public final class RequestEnchantItem extends ClientPacket {
                         // unequip item on enchant failure to avoid item skills stack
                         if (item.isEquipped()) {
                             if (item.getEnchantLevel() > 0) {
-                                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+                                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
                                 sm.addInt(item.getEnchantLevel());
                                 sm.addItemName(item);
                                 client.sendPacket(sm);
@@ -340,31 +340,7 @@ public final class RequestEnchantItem extends ClientPacket {
                 }
             }
 
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                if (scroll.getCount() == 0) {
-                    iu.addRemovedItem(scroll);
-                } else {
-                    iu.addModifiedItem(scroll);
-                }
-
-                if (item.getCount() == 0) {
-                    iu.addRemovedItem(item);
-                } else {
-                    iu.addModifiedItem(item);
-                }
-
-                if (support != null) {
-                    if (support.getCount() == 0) {
-                        iu.addRemovedItem(support);
-                    } else {
-                        iu.addModifiedItem(support);
-                    }
-                }
-
-                activeChar.sendInventoryUpdate(iu);
-            } else {
-                activeChar.sendItemList();
-            }
+            activeChar.sendItemList();
 
             request.setProcessing(false);
             activeChar.broadcastUserInfo(UserInfoType.ENCHANTLEVEL);

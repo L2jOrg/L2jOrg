@@ -1,25 +1,11 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.model.actor.appearance;
 
 import org.l2j.gameserver.enums.Sex;
 import org.l2j.gameserver.model.actor.instance.Player;
 
-public class PcAppearance {
+import static java.util.Objects.isNull;
+
+public class PlayerAppearance {
     public static final int DEFAULT_TITLE_COLOR = 0xECF9A2;
 
     private Player owner;
@@ -58,7 +44,7 @@ public class PcAppearance {
     private int _visibleAllyId = -1;
     private int _visibleAllyCrestId = -1;
 
-    public PcAppearance(Player owner, byte face, byte hairColor, byte hairStyle, boolean female) {
+    public PlayerAppearance(Player owner, byte face, byte hairColor, byte hairStyle, boolean female) {
         this.owner = owner;
         this.face = face;
         this.hairColor = hairColor;
@@ -218,7 +204,7 @@ public class PcAppearance {
     }
 
     public int getVisibleAllyCrestId() {
-        return _visibleAllyCrestId != -1 ? _visibleAllyCrestId : owner.isCursedWeaponEquipped() ? 0 : owner.getAllyCrestId();
+        return _visibleAllyCrestId != -1 ? _visibleAllyCrestId : isNull(owner) || owner.isCursedWeaponEquipped() ? 0 : owner.getAllyCrestId();
     }
 
     public void setVisibleClanData(int clanId, int clanCrestId, int clanLargeCrestId, int allyId, int allyCrestId) {

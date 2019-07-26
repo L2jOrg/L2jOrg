@@ -471,6 +471,8 @@ public final class Config {
     public static int ALT_OLY_WEEKLY_POINTS;
     public static int ALT_OLY_CLASSED;
     public static int ALT_OLY_NONCLASSED;
+    public static List<ItemHolder> ALT_OLY_WINNER_REWARD;
+    public static List<ItemHolder> ALT_OLY_LOSER_REWARD;
     public static int ALT_OLY_REG_DISPLAY;
     public static List<ItemHolder> ALT_OLY_CLASSED_REWARD;
     public static List<ItemHolder> ALT_OLY_NONCLASSED_REWARD;
@@ -1506,10 +1508,10 @@ public final class Config {
         FORCE_INVENTORY_UPDATE = General.getBoolean("ForceInventoryUpdate", false);
 
         CACHE_CHAR_NAMES = General.getBoolean("CacheCharNames", true);
-        MIN_NPC_ANIMATION = General.getInt("MinNPCAnimation", 10);
-        MAX_NPC_ANIMATION = General.getInt("MaxNPCAnimation", 20);
+        MIN_NPC_ANIMATION = General.getInt("MinNPCAnimation", 5);
+        MAX_NPC_ANIMATION = General.getInt("MaxNPCAnimation", 60);
         MIN_MONSTER_ANIMATION = General.getInt("MinMonsterAnimation", 5);
-        MAX_MONSTER_ANIMATION = General.getInt("MaxMonsterAnimation", 20);
+        MAX_MONSTER_ANIMATION = General.getInt("MaxMonsterAnimation", 60);
         GRIDS_ALWAYS_ON = General.getBoolean("GridsAlwaysOn", false);
         GRID_NEIGHBOR_TURNON_TIME = General.getInt("GridNeighborTurnOnTime", 1);
         GRID_NEIGHBOR_TURNOFF_TIME = General.getInt("GridNeighborTurnOffTime", 90);
@@ -1825,8 +1827,10 @@ public final class Config {
         ALT_OLY_VPERIOD = Olympiad.getLong("AltOlyVPeriod", 86400000);
         ALT_OLY_START_POINTS = Olympiad.getInt("AltOlyStartPoints", 10);
         ALT_OLY_WEEKLY_POINTS = Olympiad.getInt("AltOlyWeeklyPoints", 10);
-        ALT_OLY_CLASSED = Olympiad.getInt("AltOlyClassedParticipants", 11);
-        ALT_OLY_NONCLASSED = Olympiad.getInt("AltOlyNonClassedParticipants", 11);
+        ALT_OLY_CLASSED = Olympiad.getInt("AltOlyClassedParticipants", 20);
+        ALT_OLY_NONCLASSED = Olympiad.getInt("AltOlyNonClassedParticipants", 20);
+        ALT_OLY_WINNER_REWARD = parseItemsList(Olympiad.getString("AltOlyWinReward", "none"));
+        ALT_OLY_LOSER_REWARD = parseItemsList(Olympiad.getString("AltOlyLoserReward", "none"));
         ALT_OLY_REG_DISPLAY = Olympiad.getInt("AltOlyRegistrationDisplayNumber", 100);
         ALT_OLY_CLASSED_REWARD = parseItemsList(Olympiad.getString("AltOlyClassedReward", "13722,50"));
         ALT_OLY_NONCLASSED_REWARD = parseItemsList(Olympiad.getString("AltOlyNonClassedReward", "13722,40"));
@@ -1861,7 +1865,7 @@ public final class Config {
         ALT_OLY_PERIOD = Olympiad.getString("AltOlyPeriod", "MONTH");
         ALT_OLY_PERIOD_MULTIPLIER = Olympiad.getInt("AltOlyPeriodMultiplier", 1);
         ALT_OLY_COMPETITION_DAYS = new ArrayList<>();
-        for (String s : Olympiad.getString("AltOlyCompetitionDays", "1,2,3,4,5,6,7").split(",")) {
+        for (String s : Olympiad.getString("AltOlyCompetitionDays", "6,7").split(",")) {
             ALT_OLY_COMPETITION_DAYS.add(Integer.parseInt(s));
         }
 

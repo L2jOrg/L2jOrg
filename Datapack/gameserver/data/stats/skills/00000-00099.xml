@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1" toLevel="45" name="Triple Slash">
-		<!-- Quickly strikes the target three times with $s1 Power. For $s2, enemy s P. Def. -$s3. Requires dual swords. Over-hit. Ignores shield block. -->
+		<!-- Quickly strikes the target three times with $s1 Power. For $s2, enemy s P. Def. -$s3. Requires dual swords. Ignores shield block. Over-hit. -->
 		<icon>icon.skill0001</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -376,7 +376,7 @@
 		</effects>
 	</skill>
 	<skill id="4" toLevel="2" name="Dash">
-		<!-- For $s1 Speed +$s2. -->
+		<!-- For $s1, Speed +$s2. -->
 		<icon>icon.skill0004</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -414,7 +414,7 @@
 		</effects>
 	</skill>
 	<skill id="5" toLevel="34" name="Double Sonic Slash">
-		<!-- Discharges a powerful energy beam at the enemy with $s1 Power added to P. Atk. Requires dual sword. Increases Power upon consumption of Momentum, and consumes up to $s2. Over-hit. Critical. -->
+		<!-- Discharges a powerful energy beam at the enemy with $s1 Power added to P. Atk. Requires dual sword. Increases Power upon consumption of Momentum, and consumes up to $s2. Critical. Over-hit. -->
 		<icon>icon.skill0005</icon>
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
@@ -587,7 +587,7 @@
 		</effects>
 	</skill>
 	<skill id="6" toLevel="45" name="Sonic Blaster">
-		<!-- Hurls a deadly blast of force from the sword with $s1 Power added to P. Atk, stunning the target for $s2. Requires a dual sword, sword or blunt to be equipped. Increases Power upon consuming Momentum, and consumes up to $s3. Over-hit. Critical. -->
+		<!-- Hurls a deadly blast of force from the sword with $s1 Power added to P. Atk, stunning the target for $s2. Requires a dual sword, sword or blunt to be equipped. Increases Power upon consuming Momentum, and consumes up to $s3. Critical. Over-hit. -->
 		<icon>icon.skill0006</icon>
 		<castRange>600</castRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -807,7 +807,7 @@
 		</effects>
 	</skill>
 	<skill id="7" toLevel="44" name="Sonic Storm">
-		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. Requires a sword, blunt weapon, spear, fist weapon, or dual sword. Increases Power upon consuming Momentum, and consumes up to $s2. Over-hit. Critical. -->
+		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. Requires a sword, blunt weapon, spear, fist weapon, or dual sword. Increases Power upon consuming Momentum, and consumes up to $s2. Critical. Over-hit. -->
 		<icon>icon.skill0007</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -1089,7 +1089,7 @@
 		</effects>
 	</skill>
 	<skill id="9" toLevel="37" name="Sonic Buster">
-		<!-- Hurls a powerful burst of energy at enemies in front with $s1 Power added to P. Atk. Requires a dual sword, sword or blunt weapon. Increases Power upon consuming Momentum, and consumes up to $s2. Consumes $s3 Momentum Stones. Over-hit. Critical. -->
+		<!-- Hurls a powerful burst of energy at enemies in front with $s1 Power added to P. Atk. Requires a dual sword, sword or blunt weapon. Increases Power upon consuming Momentum, and consumes up to $s2. Consumes $s3 Momentum Stones. Critical. Over-hit. -->
 		<icon>icon.skill0009</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1909,7 +1909,7 @@
 		</effects>
 	</skill>
 	<skill id="17" toLevel="37" name="Force Burst">
-		<!-- Hurls a powerful burst of energy at enemies in front with $s1 Power added to P. Atk. Requires a fist weapon. Increases Power upon consuming Momentum, and consumes up to $s3. Consumes $s2 Momentum Stones. Over-hit. Critical. -->
+		<!-- Hurls a powerful burst of energy at enemies in front with $s1 Power added to P. Atk. Increases Power upon consuming Momentum, and consumes up to $s2. Consumes $s3 Momentum Stones. Critical. Over-hit. -->
 		<icon>icon.skill0017</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -3343,7 +3343,7 @@
 		</effects>
 	</skill>
 	<skill id="30" toLevel="45" name="Backstab">
-		<!-- Attacks the enemy's unprotected back with $s1 Power added to P. Atk. Requires a dagger to be equipped. Over-hit. Critical. -->
+		<!-- Attacks the enemy's unprotected back with $s1 Power added to P. Atk. Requires a dagger to be equipped. Critical. Over-hit. -->
 		<icon>icon.skill0030</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -3779,7 +3779,7 @@
 		</effects>
 	</skill>
 	<skill id="35" toLevel="44" name="Force Storm">
-		<!-- Attacks near the enemy with $s1 Power added to P. Atk. Requires a sword, blunt weapon, spear, fist weapon, or dual sword. Over-hit. Critical. -->
+		<!-- Attacks near the enemy with $s1 Power added to P. Atk. Requires a sword, blunt weapon, spear, fist weapon, or dual sword. Critical. Over-hit. -->
 		<icon>icon.skill0035</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -4260,7 +4260,7 @@
 		</effects>
 	</skill>
 	<skill id="45" toLevel="9" name="Divine Heal">
-		<!-- Restores HP with $s1 Power. -->
+		<!-- Restores the target's HP with $s1 Power. -->
 		<icon>icon.skill0045</icon>
 		<effectPoint>
 			<value level="1">204</value>
@@ -4451,7 +4451,7 @@
 		</effects>
 	</skill>
 	<skill id="48" toLevel="49" name="Thunder Storm">
-		<!-- Swings a spear to attack nearby enemies with $s1 Power added to P. Atk. and causes Stun for $s2. Requires a polearm to be equipped. Ignores Shield Defense. Over-hit. Critical. -->
+		<!-- Swings a spear to attack nearby enemies with $s1 Power added to P. Atk. and causes Stun for $s2. Requires a polearm to be equipped. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill0048</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -4866,7 +4866,7 @@
 		</effects>
 	</skill>
 	<skill id="50" toLevel="8" name="Focus Force">
-		<!-- Channels Momentum when using a fist weapon. Momentum will disperse after 10 min. of non-use. Can be charged up to level $s1. -->
+		<!-- Channels Momentum. Requires a fist weapon to be equipped. Momentum will disperse after 10 min. of non-use. Can be charged up to level $s1. -->
 		<icon>icon.skill0050</icon>
 		<effectPoint>150</effectPoint>
 		<hitTime>900</hitTime>
@@ -4941,7 +4941,7 @@
 		</effects>
 	</skill>
 	<skill id="54" toLevel="57" name="Force Blaster">
-		<!-- Discharges a powerful energy beam at the enemy with $s1 Power added to P. Atk. Requires a fist weapon. Increases Power upon consumption of Momentum, and consumes up to $s2. Over-hit. Critical. -->
+		<!-- Discharges a powerful energy beam at the enemy with $s1 Power added to P. Atk. Requires a fist weapon. Increases Power upon consuming Momentum, and consumes up to $s2. Critical. Over-hit. -->
 		<icon>icon.skill0054</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -6418,7 +6418,7 @@
 		</effects>
 	</skill>
 	<skill id="76" toLevel="1" name="Bear Spirit Totem">
-		<!-- Possessed by a Bear's Spirit, P. Atk., P. Def. and M. Def. +10%, Critical Damage +10% for 5 min. Requires a fist weapon. -->
+		<!-- Possessed by a Bear's Spirit, P. Atk., P. Def. and M. Def. +10%, P. Critical Damage +10% for 5 min. Requires a fist weapon. -->
 		<icon>icon.skill0076</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -6588,7 +6588,7 @@
 		</effects>
 	</skill>
 	<skill id="81" toLevel="3" name="Punch of Doom">
-		<!-- Inflicts great damage on the enemy with iron-fist. Requires a fist weapon. Ignores Shield Defense. Over-hit. Critical. Power $s1. -->
+		<!-- Inflicts great damage on the enemy by iron fist with $s1 Power added to P. Atk. Ignores Shield Defense. Requires a fist weapon. Critical. Over-hit. -->
 		<icon>icon.skill0081</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
@@ -6641,7 +6641,7 @@
 		</effects>
 	</skill>
 	<skill id="82" toLevel="3" name="Majesty">
-		<!-- P. Def. +$s2 and Evasion -$s3 for $s1. -->
+		<!-- P. Def. +$s2 and P. Evasion -$s3 for $s1. -->
 		<icon>icon.skill0082</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -6692,7 +6692,7 @@
 		</effects>
 	</skill>
 	<skill id="83" toLevel="1" name="Wolf Spirit Totem">
-		<!-- Possessed by a Wolf's Spirit, Speed and Atk. Spd. Boost +10%, Accuracy +3 for 5 min. Requires a fist weapon. -->
+		<!-- Possessed by a Wolf's Spirit, Speed and Atk. Spd. Boost +10%, P. Accuracy +3 for 5 min. Requires a fist weapon. -->
 		<icon>icon.skill0083</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -6944,7 +6944,7 @@
 		</effects>
 	</skill>
 	<skill id="92" toLevel="60" name="Shield Stun">
-		<!-- Makes an attack with a shield, stunning the target for $s1. Requires a shield. -->
+		<!-- Attacks the enemy with shield with $s1 Power added to P. Atk, stunning them for $s2 Requires a shield. Target cancel is possible. -->
 		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -7156,7 +7156,7 @@
 		</effects>
 	</skill>
 	<skill id="94" toLevel="7" name="Rage">
-		<!-- For $s1 P. Atk. +$s2. When using a two-handed sword/ two-handed blunt/ polearm additionally P. Atk. +$s3, when using a two-handed sword/ two-handed blunt Accuracy +$s4. Requires a sword/ blunt/ polearm/ fist weapon/ dual swords. -->
+		<!-- For $s1 P. Atk. +$s2. When using a two-handed sword/ two-handed blunt/ polearm additionally P. Atk. +$s3, when using a two-handed sword/ two-handed blunt P. Accuracy +$s4. Requires a sword/ blunt/ polearm/ fist weapon/ dual swords. -->
 		<icon>icon.skill0094</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -7641,7 +7641,7 @@
 		</effects>
 	</skill>
 	<skill id="98" toLevel="8" name="Sword Symphony">
-		<!-- Attacks the enemy with 825 Power added to P. Atk. and blocks the use of magic skills for 10 sec. Over-hit. Critical. -->
+		<!-- Attacks the enemy with 825 Power added to P. Atk. and blocks the use of magic skills for 10 sec. Critical. Over-hit. -->
 		<icon>icon.skill0098</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>

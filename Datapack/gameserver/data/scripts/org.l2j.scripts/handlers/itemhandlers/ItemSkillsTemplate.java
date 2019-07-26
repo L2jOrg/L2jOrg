@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.itemhandlers;
 
 import org.l2j.gameserver.ai.CtrlIntention;
@@ -31,6 +15,8 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import java.util.List;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Template for item skills handler.
  * @author Zoey76
@@ -40,7 +26,7 @@ public class ItemSkillsTemplate implements IItemHandler
     @Override
     public boolean useItem(Playable playable, Item item, boolean forceUse)
     {
-        if (!playable.isPlayer() && !playable.isPet())
+        if (!isPlayer(playable) && !playable.isPet())
         {
             return false;
         }
@@ -81,7 +67,7 @@ public class ItemSkillsTemplate implements IItemHandler
             {
                 if (itemSkill.hasEffectType(EffectType.EXTRACT_ITEM) && (playable.getActingPlayer() != null) && !playable.getActingPlayer().isInventoryUnder80(false))
                 {
-                    playable.getActingPlayer().sendPacket(SystemMessageId.EMPTY_463);
+                    playable.getActingPlayer().sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
                     return false;
                 }
 

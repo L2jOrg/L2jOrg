@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="55700" toLevel="1" name="Scroll: Dance of Fire">
-		<!-- Critical Attack effect +35% for 10 min. -->
+		<!-- For 10 min., P. Critical Damage +35%. -->
 		<icon>icon.skill0274</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -27,7 +27,7 @@
 		</effects>
 	</skill>
 	<skill id="55702" toLevel="1" name="Hour of Penitence">
-		<!-- Hour of Penitence - 1 hr. Within this time monsters must be defeated and Crumbs of Penitence must be collected (Monsters that are 5 lvl lower than the character are not counted). Activates when Sin Eater is summoned. <Warning!> Removing the bracelet will end the Hour of Penitence. Crumbs of Penitence can not be obtained when belonging to the union. Remains after death. -->
+		<!-- Hour of Penitence - 1 h. Within this time monsters must be defeated and Crumbs of Penitence must be collected (Monsters that are 5 lvl lower than the character are not counted). Activates when Sin Eater is summoned. <Warning!> Removing the bracelet will end the Hour of Penitence. Crumbs of Penitence can not be obtained when belonging to the union. Effect remains after death. -->
 		<icon>icon.etc_leash_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>EXP_BOTTLE</abnormalType>
@@ -127,6 +127,7 @@
 		<effects>
 			<effect name="EnlargeSlot">
 				<amount>12</amount>
+				<type>INVENTORY_NORMAL</type>
 			</effect>
 		</effects>
 	</skill>
@@ -183,14 +184,14 @@
 		</effects>
 	</skill>
 	<skill id="55716" toLevel="1" name="Letter Collector Spell">
-		<!-- Grants the power of the Letter Collector. For 1 hr., Max. HP +5%, Max. MP +5%, Max. CP +5%, Speed +10, P. Atk. +8%, M. Atk. +10%. -->
+		<!-- Grants the power of the Letter Collector. For 1 h., Max. HP +5%, Max. MP +5%, Max. CP +5%, Speed +10, P. Atk. +8%, M. Atk. +10%. -->
 		<icon>icon.etc_candle_yellow_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55717" toLevel="1" name="Shilen's Treasure Chest">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55718" toLevel="1" name="XP Rune 50%">
+	<skill id="55718" toLevel="1" name="XP and SP Rune - 50%">
 		<!-- Acquired XP/ SP +50%. -->
 		<icon>icon.skill19226</icon>
 		<operateType>A1</operateType>
@@ -200,13 +201,13 @@
 		<icon>br_cashtex.item.br_cash_rune_of_feather_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55720" toLevel="1" name="Irene' Hourglass - 1 Hour">
-		<!-- Acquired XP/ SP +50% for the duration of the effect. -->
+	<skill id="55720" toLevel="1" name="Irene's Hourglass - 1 Hour">
+		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55721" toLevel="1" name="Storm Power">
-		<!-- Acquired XP/ SP +50% for 2 hr. Cooldown: 2 hr. Buff remains after death. -->
+		<!-- Acquired XP/ SP +50% for 2 h. Cooldown: 2 h. Effect remains after death. -->
 		<icon>icon.power_of_storm</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -663,17 +664,17 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55773" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- P. Critical Damage Boost -->
+		<!-- P. Critical Damage +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55774" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- P. Skill Critical Damage Boost -->
+		<!-- P. Skill Critical Damage +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55775" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- M. Critical Damage Boost -->
+		<!-- M. Critical Damage +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>A1</operateType>
 	</skill>

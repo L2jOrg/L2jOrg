@@ -47,6 +47,7 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author BiggBoss
@@ -145,7 +146,7 @@ public final class ReportTable {
      */
     public boolean reportBot(Player reporter) {
         final WorldObject target = reporter.getTarget();
-        if (isNull(target) || !target.isPlayer() || target.getObjectId() == reporter.getObjectId()) {
+        if (!isPlayer(target) || target.getObjectId() == reporter.getObjectId()) {
             return false;
         }
 

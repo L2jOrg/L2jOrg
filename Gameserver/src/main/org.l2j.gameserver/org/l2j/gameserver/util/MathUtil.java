@@ -110,6 +110,10 @@ public final class MathUtil {
         return calculateDistance3D(object.getX(), object.getY(), object.getZ(), x, y, z) <= range;
     }
 
+    public static boolean isInsideRadius3D(int originX, int originY, int originZ, int targetX, int targetY, int targetZ, int range) {
+        return calculateDistance3D(originX, originY, originZ, targetX, targetY, targetZ) <= range;
+    }
+
     public static int calculateHeadingFrom(ILocational from, ILocational to) {
         return calculateHeadingFrom(from.getX(), from.getY(), to.getX(), to.getY());
     }
@@ -145,4 +149,6 @@ public final class MathUtil {
         }
         return angleTarget;
     }
+
+
 }

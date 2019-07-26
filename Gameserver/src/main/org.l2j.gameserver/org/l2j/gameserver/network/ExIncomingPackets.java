@@ -39,6 +39,7 @@ import org.l2j.gameserver.network.clientpackets.shuttle.MoveToLocationInShuttle;
 import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
 import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOn;
 import org.l2j.gameserver.network.clientpackets.training.NotifyTrainingRoomEnd;
+import org.l2j.gameserver.network.clientpackets.equipmentupgrade.RequestUpgradeSystemResult;
 import org.l2j.gameserver.network.clientpackets.vip.ExRequestVipInfo;
 import org.l2j.gameserver.network.clientpackets.vip.RequestVipLuckGameInfo;
 import org.l2j.gameserver.network.clientpackets.vip.RequestVipProductList;
@@ -353,7 +354,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EXREQUEST_MATCH_GROUP_WITHDRAW(0x133, null, ConnectionState.IN_GAME),
     EXREQUEST_MATCH_GROUP_OUST(0x134, null, ConnectionState.IN_GAME),
     EXREQUEST_MATCH_GROUP_CHANGE_MASTER(0x135, null, ConnectionState.IN_GAME),
-    REQUEST_UPGRADE_SYSTEM_RESULT(0x136, null, ConnectionState.IN_GAME),
+    REQUEST_UPGRADE_SYSTEM_RESULT(0x136, RequestUpgradeSystemResult::new, ConnectionState.IN_GAME),
     EX_CARD_UPDOWN_PICK_NUMB(0x137, null, ConnectionState.IN_GAME),
     EX_CARD_UPDOWN_GAME_REWARD_REQUEST(0x138, null, ConnectionState.IN_GAME),
     EX_CARD_UPDOWN_GAME_RETRY(0x139, null, ConnectionState.IN_GAME),

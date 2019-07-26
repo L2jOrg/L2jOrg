@@ -31,6 +31,7 @@ public enum Stats {
     ADDITIONAL_POTION_CP("addPotionCp"),
     MANA_CHARGE("manaCharge"),
     HEAL_EFFECT("healEffect"),
+    HEAL_EFFECT_ADD("healEffectAdd"),
 
     // ATTACK & DEFENCE
     PHYSICAL_DEFENCE("pDef", new PDefenseFinalizer()),

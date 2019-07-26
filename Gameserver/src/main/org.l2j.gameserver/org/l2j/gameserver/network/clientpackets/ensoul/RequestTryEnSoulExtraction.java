@@ -58,6 +58,15 @@ public class RequestTryEnSoulExtraction extends ClientPacket {
         EnsoulOption option = null;
         if (_type == 1) {
             option = item.getSpecialAbility(_position);
+
+            if ((option == null) && (_position == 0))
+            {
+                option = item.getSpecialAbility(1);
+                if (option != null)
+                {
+                    _position = 1;
+                }
+            }
         }
         if (_type == 2) {
             option = item.getAdditionalSpecialAbility(_position);

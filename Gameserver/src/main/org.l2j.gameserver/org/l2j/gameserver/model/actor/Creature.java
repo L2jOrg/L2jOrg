@@ -170,6 +170,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private volatile Map<Integer, Npc> _summonedNpcs = null;
     private SkillChannelizer _channelizer = null;
     private SkillChannelized _channelized = null;
+
+    private BuffFinishTask _buffFinishTask = null;
+
     private Optional<Transform> _transform = Optional.empty();
     private boolean _cursorKeyMovement = false;
     private boolean _cursorKeyMovementActive = true;
@@ -1346,7 +1349,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         _status.stopHpMpRegeneration();
 
         if (isMonster()) {
-            stopAllEffects();
+            final Spawn spawn = ((Npc) this).getSpawn();
+            if ((spawn != null) && spawn.isRespawnEnabled())
+            {
+                stopAllEffects();
+            }
+            else
+            {
+                _effectList.stopAllEffectsWithoutExclusions(true, true);
+            }
         } else {
             stopAllEffectsExceptThoseThatLastThroughDeath();
         }
@@ -1376,6 +1387,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     @Override
+    public boolean decayMe()
+    {
+        if (hasAI())
+        {
+            getAI().stopAITask();
+        }
+        return super.decayMe();
+    }
+
+    @Override
     public boolean deleteMe() {
         if (hasAI()) {
             getAI().stopAITask();
@@ -1387,10 +1408,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
 
         // Remove all effects, do not broadcast changes.
-        _effectList.stopAllEffects(false);
+        _effectList.stopAllEffectsWithoutExclusions(false, false);
 
         // Cancel all timers related to this Creature
         TimersManager.getInstance().cancelTimers(getObjectId());
+
+        cancelBuffFinishTask();
 
         // Set world region to null.
         setWorldRegion(null);
@@ -4495,6 +4518,36 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     public ElementalType getElementalSpiritType() {
         return ElementalType.NONE;
+    }
+
+    public void addBuffInfoTime(BuffInfo info)
+    {
+        if (_buffFinishTask == null)
+        {
+            _buffFinishTask = new BuffFinishTask();
+        }
+        _buffFinishTask.addBuffInfo(info);
+    }
+
+    public void removeBuffInfoTime(BuffInfo info)
+    {
+        if (_buffFinishTask != null)
+        {
+            _buffFinishTask.removeBuffInfo(info);
+        }
+    }
+
+    public void cancelBuffFinishTask()
+    {
+        if (_buffFinishTask != null)
+        {
+            final ScheduledFuture<?> task = _buffFinishTask.getTask();
+            if ((task != null) && !task.isCancelled() && !task.isDone())
+            {
+                task.cancel(true);
+            }
+            _buffFinishTask = null;
+        }
     }
 
     /**

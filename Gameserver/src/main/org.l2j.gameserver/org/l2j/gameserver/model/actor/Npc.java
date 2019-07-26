@@ -1,9 +1,9 @@
 package org.l2j.gameserver.model.actor;
 
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
@@ -16,7 +16,6 @@ import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.instance.*;
 import org.l2j.gameserver.model.actor.stat.NpcStat;
 import org.l2j.gameserver.model.actor.status.NpcStatus;
-import org.l2j.gameserver.model.actor.tasks.npc.RandomAnimationTask;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.ClanHall;
@@ -63,7 +62,6 @@ public class Npc extends Creature {
      */
     private static final int MINIMUM_SOCIAL_INTERVAL = 6000;
     private final boolean _isQuestMonster = getTemplate().isQuestMonster();
-    protected RandomAnimationTask _rAniTask;
     /**
      * The Spawn object that manage this Folk
      */
@@ -146,30 +144,6 @@ public class Npc extends Creature {
 
         setIsFlying(template.isFlying());
         initStatusUpdateCache();
-    }
-
-    public void startRandomAnimationTask() {
-        if (!hasRandomAnimation()) {
-            return;
-        }
-
-        if (_rAniTask == null) {
-            synchronized (this) {
-                if (_rAniTask == null) {
-                    _rAniTask = new RandomAnimationTask(this);
-                }
-            }
-        }
-
-        _rAniTask.startRandomAnimationTimer();
-    }
-
-    public void stopRandomAnimationTask() {
-        final RandomAnimationTask rAniTask = _rAniTask;
-        if (rAniTask != null) {
-            rAniTask.stopRandomAnimationTimer();
-            _rAniTask = null;
-        }
     }
 
     /**

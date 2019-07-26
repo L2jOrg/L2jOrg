@@ -1,6 +1,7 @@
 import handlers.actionhandlers.*;
 import handlers.actionshifthandlers.*;
 import handlers.admincommandhandlers.AdminCoins;
+import handlers.bypasshandlers.EquipmentUpgrade;
 
 open module org.l2j.scripts {
 
@@ -253,6 +254,7 @@ open module org.l2j.scripts {
             handlers.bypasshandlers.TutorialClose,
             handlers.bypasshandlers.VoiceCommand,
             handlers.bypasshandlers.Wear,
+                EquipmentUpgrade,
 
             //custom
             custom.SellBuff.SellBuff;
