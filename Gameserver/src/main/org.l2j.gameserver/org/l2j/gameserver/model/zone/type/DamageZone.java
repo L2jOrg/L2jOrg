@@ -58,7 +58,7 @@ public class DamageZone extends Zone {
         _castleId = 0;
         _castle = null;
 
-        setTargetType(InstanceType.L2Playable); // default only playabale
+        setTargetType(InstanceType.Playable); // default only playabale
         AbstractZoneSettings settings = ZoneManager.getSettings(getName());
         if (settings == null) {
             settings = new TaskZoneSettings();

@@ -230,7 +230,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             throw new NullPointerException("Template is null!");
         }
 
-        setInstanceType(InstanceType.L2Character);
+        setInstanceType(InstanceType.Creature);
         // Set its template to the new Creature
         _template = template;
         initCharStat();

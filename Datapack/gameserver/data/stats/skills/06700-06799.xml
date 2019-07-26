@@ -492,7 +492,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Bless the Blood -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>60</chance>

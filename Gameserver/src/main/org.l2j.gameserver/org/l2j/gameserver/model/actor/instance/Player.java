@@ -4429,7 +4429,7 @@ public final class Player extends Playable {
         }
 
         // Cursed weapons progress
-        if (isCursedWeaponEquipped() && killedPlayer.isPlayer()) {
+        if (isCursedWeaponEquipped() && GameUtils.isPlayer(killedPlayer)) {
             CursedWeaponsManager.getInstance().increaseKills(getCursedWeaponEquippedId());
             return;
         }

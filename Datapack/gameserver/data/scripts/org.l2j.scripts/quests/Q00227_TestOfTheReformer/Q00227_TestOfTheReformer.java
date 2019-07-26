@@ -36,6 +36,8 @@ import org.l2j.gameserver.util.GameUtils;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Test Of The Reformer (227)
  * @author ivantotov
@@ -241,7 +243,7 @@ public final class Q00227_TestOfTheReformer extends Quest
 						npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.COWARDLY_GUY));
 						npc.deleteMe();
 					}
-					if (attacker.isPlayer())
+					if (isPlayer(attacker))
 					{
 						npc.setScriptValue(attacker.getObjectId());
 					}

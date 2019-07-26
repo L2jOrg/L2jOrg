@@ -48,7 +48,7 @@ public abstract class Zone extends ListenersContainer {
     private int[] _race;
     private int[] _class;
     private char _classType;
-    private InstanceType _target = InstanceType.L2Character; // default all chars
+    private InstanceType _target = InstanceType.Creature; // default all chars
     private boolean _allowStore;
     private AbstractZoneSettings _settings;
     private int _instanceTemplateId;

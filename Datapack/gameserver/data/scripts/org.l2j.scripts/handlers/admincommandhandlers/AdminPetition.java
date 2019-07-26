@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * This class handles commands for GMs to respond to petitions.
  * @author Tempy
@@ -102,7 +104,7 @@ public class AdminPetition implements IAdminCommandHandler
 			try
 			{
 				final WorldObject targetChar = activeChar.getTarget();
-				if ((targetChar == null) || !targetChar.isPlayer())
+				if (!isPlayer(targetChar))
 				{
 					activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 					return false;

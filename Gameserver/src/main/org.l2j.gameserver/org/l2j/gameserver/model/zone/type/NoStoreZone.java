@@ -41,7 +41,7 @@ public class NoStoreZone extends Zone {
 
     @Override
     protected void onExit(Creature character) {
-        if (character.isPlayer()) {
+        if (isPlayer(character)) {
             character.setInsideZone(ZoneId.NO_STORE, false);
         }
     }

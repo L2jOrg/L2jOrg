@@ -2,10 +2,12 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.EquipmentUpgradeHolder;
+import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 import java.io.File;
@@ -14,7 +16,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -23,7 +24,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  */
 public class EquipmentUpgradeData extends GameXmlReader
 {
-    private static Logger LOGGER = Logger.getLogger(EquipmentUpgradeData.class.getName());
+    private static Logger LOGGER = LoggerFactory.getLogger(EquipmentUpgradeData.class.getName());
     private static final Map<Integer, EquipmentUpgradeHolder> _upgrades = new HashMap<>();
 
     protected EquipmentUpgradeData()
@@ -33,7 +34,7 @@ public class EquipmentUpgradeData extends GameXmlReader
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/armorSets.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/EquipmentUpgradeData.xsd");
     }
 
     @Override

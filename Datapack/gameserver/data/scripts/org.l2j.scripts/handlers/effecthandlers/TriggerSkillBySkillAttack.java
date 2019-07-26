@@ -61,7 +61,7 @@ public final class TriggerSkillBySkillAttack extends AbstractEffect
 		_attackSkill = new SkillHolder(params.getInt("attackSkillId"), params.getInt("attackSkillLevel", 1));
 		_skillLevelScaleTo = params.getInt("skillLevelScaleTo", 0);
 		_targetType = params.getEnum("targetType", TargetType.class, TargetType.TARGET);
-		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
+		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.Creature);
 	}
 	
 	@Override

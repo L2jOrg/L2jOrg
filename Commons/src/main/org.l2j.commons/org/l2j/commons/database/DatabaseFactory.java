@@ -29,7 +29,7 @@ public class DatabaseFactory {
         }
     }
 
-    // TODO remove access from external modules
+    // TODO remove access from external module
     public static DatabaseFactory getInstance() throws SQLException {
         if (isNull(instance)) {
             instance = new DatabaseFactory();

@@ -28,7 +28,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- NPC Trigger Target Cancel -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -70,7 +70,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- NPC Trigger Target Cancel -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -338,7 +338,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Putrefaction Cleanse -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>

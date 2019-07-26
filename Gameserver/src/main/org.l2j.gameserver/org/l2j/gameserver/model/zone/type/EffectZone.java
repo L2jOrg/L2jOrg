@@ -53,7 +53,7 @@ public final class EffectZone extends Zone {
         _chance = 100;
         _initialDelay = 0;
         _reuse = 30000;
-        setTargetType(InstanceType.L2Playable); // default only playable
+        setTargetType(InstanceType.Playable); // default only playable
         _bypassConditions = false;
         _isShowDangerIcon = true;
         AbstractZoneSettings settings = ZoneManager.getSettings(getName());

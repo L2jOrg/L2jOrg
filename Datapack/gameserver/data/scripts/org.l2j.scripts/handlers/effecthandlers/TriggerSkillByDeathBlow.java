@@ -52,7 +52,7 @@ public final class TriggerSkillByDeathBlow extends AbstractEffect
 		_chance = params.getInt("chance", 100);
 		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel"));
 		_targetType = params.getEnum("targetType", TargetType.class, TargetType.SELF);
-		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
+		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.Creature);
 	}
 	
 	private void onDamageReceivedEvent(OnCreatureDamageReceived event)

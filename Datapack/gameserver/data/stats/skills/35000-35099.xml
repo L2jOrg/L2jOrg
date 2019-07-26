@@ -868,7 +868,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>111</maxAttackerLevel>
 				<skillId>35027</skillId> <!-- Border Power - Lv. 1 -->

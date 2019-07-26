@@ -46,13 +46,13 @@ public abstract class Playable extends Creature {
      */
     public Playable(int objectId, CreatureTemplate template) {
         super(objectId, template);
-        setInstanceType(InstanceType.L2Playable);
+        setInstanceType(InstanceType.Playable);
         setIsInvul(false);
     }
 
     public Playable(CreatureTemplate template) {
         super(template);
-        setInstanceType(InstanceType.L2Playable);
+        setInstanceType(InstanceType.Playable);
         setIsInvul(false);
     }
 
