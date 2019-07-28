@@ -8291,7 +8291,7 @@ public final class SystemMessageId {
     public static SystemMessageId CHOOSE_A_WEAPON;
     @ClientString(id = 4327, message = "Place a weapon that you want to encrust with a rune.")
     public static SystemMessageId PLACE_A_WEAPON_THAT_YOU_WANT_TO_ENCRUST_WITH_A_RUNE;
-    @ClientString(id = 4328, message = "Place the rune into corresponding slot.\\nPress “Start” button.")
+    @ClientString(id = 4328, message = "Place the rune into corresponding slot.\\nPress 'Start' button.")
     public static SystemMessageId PLACE_THE_RUNE_INTO_CORRESPONDING_SLOT_NPRESS_START_BUTTON;
     @ClientString(id = 4329, message = "Place the rune.")
     public static SystemMessageId PLACE_THE_RUNE;
@@ -8305,8 +8305,10 @@ public final class SystemMessageId {
     public static SystemMessageId THE_RUNE_HAS_BEEN_INSERTED_SUCCESSFULLY;
     @ClientString(id = 4334, message = "There was an error. Please, try again later.")
     public static SystemMessageId THERE_WAS_AN_ERROR_PLEASE_TRY_AGAIN_LATER;
-    @ClientString(id = 4335, message = "To finish rune insertion and get the affect press “Confirm” button.")
+
+    @ClientString(id = 4335, message = "To finish rune insertion and get the affect press 'Confirm' button.")
     public static SystemMessageId TO_FINISH_RUNE_INSERTION_AND_GET_THE_AFFECT_PRESS_CONFIRM_BUTTON;
+
     @ClientString(id = 4336, message = "Rune is being inserted…")
     public static SystemMessageId RUNE_IS_BEING_INSERTED;
     @ClientString(id = 4337, message = "Rune insertion is impossible when private store and workshop are opened.")
@@ -9965,8 +9967,10 @@ public final class SystemMessageId {
     public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_DUE_TO_YOUR_ABUSE_OF_SYSTEM_WEAKNESSES_OR_BUGS_ABUSING_BUGS_CAN_CAUSE_GRIEVOUS_SYSTEM_ERRORS_OR_DESTROY_THE_GAME_BALANCE_FOR_MORE_DETAILS_PLEASE_VISIT_THE_FONT_COLOR_FFDF4C_4GAME_WEBSITE_FONT_FONT_COLOR_6699FF_A_HREF_ASFUNCTION_HOMEPAGE_HTTPS_SUPPORT_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_1_1_CUSTOMER_SERVICE_CENTER_FONT_3;
     @ClientString(id = 5331, message = "Your account is temporarily restricted due to a complaint filed in the process of name changing. For more information,visit the <font color='#FFDF4C'>4Game website(</font><font color='#6699FF'><a href='asfunction:homePage'>https://support.4game.com</a></font><font color='#FFDF4C'>) 1:1 Customer Service Center</font>.")
     public static SystemMessageId YOUR_ACCOUNT_IS_TEMPORARILY_RESTRICTED_DUE_TO_A_COMPLAINT_FILED_IN_THE_PROCESS_OF_NAME_CHANGING_FOR_MORE_INFORMATION_VISIT_THE_FONT_COLOR_FFDF4C_4GAME_WEBSITE_FONT_FONT_COLOR_6699FF_A_HREF_ASFUNCTION_HOMEPAGE_HTTPS_SUPPORT_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_1_1_CUSTOMER_SERVICE_CENTER_FONT;
-    @ClientString(id = 5332, message = "You have not used your account for a long time. If you have not logged into the game for a set period of time, you will be able to log in via <font color=”FFDF4C”>plaync homepage (</font><font color='6699FF'><a action='url https://id.plaync.com/account/dormant/index'>id.plaync.com/account/dormant/index</a></font><font color='FFDF4C'>) https://id.plaync.com/account/dormant/index'>id.plaync.com/account/dormant/index</a></font><font color='FFDF4C'>)</font>.")
+
+    @ClientString(id = 5332, message = "You have not used your account for a long time. If you have not logged into the game for a set period of time, you will be able to log in via plaync homepage (<a action='url https://id.plaync.com/account/dormant/index'>id.plaync.com/account/dormant/index</a>) https://id.plaync.com/account/dormant/index'>id.plaync.com/account/dormant/index</a>.")
     public static SystemMessageId YOU_HAVE_NOT_USED_YOUR_ACCOUNT_FOR_A_LONG_TIME_IF_YOU_HAVE_NOT_LOGGED_INTO_THE_GAME_FOR_A_SET_PERIOD_OF_TIME_YOU_WILL_BE_ABLE_TO_LOG_IN_VIA_FONT_COLOR_FFDF4C_PLAYNC_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_ID_PLAYNC_COM_ACCOUNT_DORMANT_INDEX_ID_PLAYNC_COM_ACCOUNT_DORMANT_INDEX_A_FONT_FONT_COLOR_FFDF4C_HTTPS_ID_PLAYNC_COM_ACCOUNT_DORMANT_INDEX_ID_PLAYNC_COM_ACCOUNT_DORMANT_INDEX_A_FONT_FONT_COLOR_FFDF4C_FONT;
+
     @ClientString(id = 5333, message = "Your account has been completely blocked due to account theft. For more information, please visit the Support Center on the official website (https://support.4game.com).")
     public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_DUE_TO_ACCOUNT_THEFT_FOR_MORE_INFORMATION_PLEASE_VISIT_THE_SUPPORT_CENTER_ON_THE_OFFICIAL_WEBSITE_HTTPS_SUPPORT_4GAME_COM;
     @ClientString(id = 5334, message = "Your account is temporarily banned because a suspicious attempt to sign into your account was detected. For more information, please visit the Support Center on the official website (https://support.4game.com).")

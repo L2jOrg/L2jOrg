@@ -65,7 +65,6 @@ public abstract class Operator {
                     '^',
                     '!',
                     '#',
-                    '§',
                     '$',
                     '&',
                     ';',
