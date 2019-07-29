@@ -22,6 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.isSummon;
 
 /**
  * Buff Info.<br>
@@ -367,7 +368,7 @@ public final class BuffInfo {
         }
 
         // Set the proper system message.
-        if ((_skill != null) && !(_effected.isSummon() && !((Summon) _effected).getOwner().hasSummon()) && !_skill.isHidingMessages()) {
+        if ((_skill != null) && !(isSummon(_effected) && !((Summon) _effected).getOwner().hasSummon()) && !_skill.isHidingMessages()) {
             SystemMessageId smId = null;
             if (_skill.isToggle()) {
                 smId = SystemMessageId.S1_HAS_BEEN_ABORTED;

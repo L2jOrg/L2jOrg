@@ -739,7 +739,7 @@ public final class SkillTreesData extends GameXmlReader {
     }
 
     private boolean isCurrentClassSkillNoParent(ClassId classId, Long hashCode) {
-        return classSkillTrees.getOrDefault(classId, Containers.emptyLongObjectMap()).containsKey(hashCode);
+        return classSkillTrees.getOrDefault(classId, Containers.emptyLongMap()).containsKey(hashCode);
     }
 
     /**

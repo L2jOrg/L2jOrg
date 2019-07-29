@@ -32,7 +32,7 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
  * This class contains all informations concerning the item (weapon, armor, etc).<BR>
@@ -666,14 +666,14 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
             return true;
         }
 
-        final Creature target = object.isCharacter() ? (Creature) object : null;
+        final Creature target = isCreature(object) ? (Creature) object : null;
         for (Condition preCondition : _preConditions) {
             if (preCondition == null) {
                 continue;
             }
 
             if (!preCondition.test(activeChar, target, null, null)) {
-                if (activeChar.isSummon()) {
+                if (isSummon(activeChar)) {
                     activeChar.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
                     return false;
                 }

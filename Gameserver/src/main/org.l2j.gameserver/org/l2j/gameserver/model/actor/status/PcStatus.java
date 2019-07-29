@@ -18,6 +18,8 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.GameUtils;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
+
 public class PcStatus extends PlayableStatus {
     private double _currentCp = 0; // Current CP of the Player
 
@@ -157,7 +159,7 @@ public class PcStatus extends PlayableStatus {
                         }
                     }
 
-                    if ((attacker.isPlayable()) && (caster.getCurrentCp() > 0)) {
+                    if ((isPlayable(attacker)) && (caster.getCurrentCp() > 0)) {
                         if (caster.getCurrentCp() > transferDmg) {
                             caster.getStatus().reduceCp(transferDmg);
                         } else {
@@ -174,7 +176,7 @@ public class PcStatus extends PlayableStatus {
                 }
             }
 
-            if (!ignoreCP && attacker.isPlayable()) {
+            if (!ignoreCP && isPlayable(attacker)) {
                 if (_currentCp >= value) {
                     setCurrentCp(_currentCp - value); // Set Cp to diff of Cp vs value
                     value = 0; // No need to subtract anything from Hp
@@ -193,7 +195,7 @@ public class PcStatus extends PlayableStatus {
                 smsg.addPopup(getActiveChar().getObjectId(), attacker.getObjectId(), -fullValue);
                 getActiveChar().sendPacket(smsg);
 
-                if ((tDmg > 0) && (summon != null) && (attackerPlayer != null)) {
+                if (tDmg > 0 && attackerPlayer != null) {
                     smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DEALT_S1_DAMAGE_TO_YOUR_TARGET_AND_S2_DAMAGE_TO_THE_SERVITOR);
                     smsg.addInt(fullValue);
                     smsg.addInt(tDmg);

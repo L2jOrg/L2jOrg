@@ -1,11 +1,11 @@
--- TODO change to characters relationships and put index
-DROP TABLE IF EXISTS `character_friends`;
-CREATE TABLE IF NOT EXISTS `character_friends` (
-  `charId` INT UNSIGNED NOT NULL DEFAULT 0,
-  `friendId` INT UNSIGNED NOT NULL DEFAULT 0,
-  `relation` INT UNSIGNED NOT NULL DEFAULT 0,
+DROP TABLE IF EXISTS character_relationship;
+CREATE TABLE IF NOT EXISTS character_relationship (
+  `char_id` INT UNSIGNED NOT NULL DEFAULT 0,
+  `friend_id` INT UNSIGNED NOT NULL DEFAULT 0,
+  `relation` ENUM('FRIEND', 'BLOCK') NOT NULL DEFAULT 'FRIEND',
 
-  PRIMARY KEY (`charId`,`friendId`),
-  FOREIGN KEY FK_FRIENDS_CHARACTER (`charId`) REFERENCES characters (`charId`) ON DELETE CASCADE,
-  FOREIGN KEY FK_FRIENDS_FRIEND (`friendId`) REFERENCES characters (`charId`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`char_id`,`friend_id`),
+  KEY `relation`(`relation`),
+  FOREIGN KEY FK_FRIENDS_CHARACTER (`char_id`) REFERENCES characters (`charId`) ON DELETE CASCADE,
+  FOREIGN KEY FK_FRIENDS_FRIEND (`friend_id`) REFERENCES characters (`charId`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

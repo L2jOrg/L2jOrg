@@ -1305,7 +1305,7 @@ public final class Skill implements IIdentifiable {
      */
     public final void activateSkill(Creature caster, CubicInstance cubic, Item item, WorldObject... targets) {
         for (WorldObject targetObject : targets) {
-            if (!targetObject.isCharacter()) {
+            if (!isCreature(targetObject)) {
                 continue;
             }
 
@@ -1318,7 +1318,7 @@ public final class Skill implements IIdentifiable {
                 final BuffInfo info = new BuffInfo(caster, target, this, false, item, null);
                 applyEffectScope(EffectScope.GENERAL, info, true, false);
 
-                final EffectScope pvpOrPveEffectScope = caster.isPlayable() && target.isAttackable() ? EffectScope.PVE : caster.isPlayable() && target.isPlayable() ? EffectScope.PVP : null;
+                final EffectScope pvpOrPveEffectScope = isPlayable(caster) && isAttackable(target) ? EffectScope.PVE : isPlayable(caster)  && isPlayable(target) ? EffectScope.PVP : null;
                 applyEffectScope(pvpOrPveEffectScope, info, true, false);
             } else {
                 applyEffects(caster, target, item);

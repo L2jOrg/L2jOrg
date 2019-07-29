@@ -95,7 +95,7 @@ public enum IncomingPackets implements PacketFactory {
     REQUEST_PLEDGE_INFO(0x65, RequestPledgeInfo::new, ConnectionState.IN_GAME),
     REQUEST_PLEDGE_EXTENDED_INFO(0x66, RequestPledgeExtendedInfo::new, ConnectionState.IN_GAME),
     REQUEST_PLEDGE_CREST(0x67, RequestPledgeCrest::new, ConnectionState.IN_GAME),
-  //  REQUEST_FRIEND_LIST(0x6B, null, ConnectionState.IN_GAME), // TODO
+    //REQUEST_FRIEND_MANAGE(0x6A, RequestExFriendListExtended::new, ConnectionState.IN_GAME), // TODO
     REQUEST_SEND_FRIEND_MSG(0x6B, RequestSendFriendMsg::new, ConnectionState.IN_GAME),
     REQUEST_SHOW_MINI_MAP(0x6C, RequestShowMiniMap::new, ConnectionState.IN_GAME),
     REQUEST_RECORD_INFO(0x6E, RequestRecordInfo::new, ConnectionState.IN_GAME),

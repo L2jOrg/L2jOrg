@@ -1,5 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.friend;
 
+import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -7,6 +9,9 @@ import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.Calendar;
+
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author Sdw
@@ -20,8 +25,16 @@ public class ExFriendDetailInfo extends ServerPacket {
     public ExFriendDetailInfo(Player player, String name) {
         _objectId = player.getObjectId();
         _name = name;
-        friend = World.getInstance().findPlayer(_name);
-        lastAccess = friend.isBlocked(player) ? 0 : friend.isOnline() ? 0 : (int) (System.currentTimeMillis() - friend.getLastAccess()) / 1000;
+
+        var friendId = PlayerNameTable.getInstance().getIdByName(name);
+
+        friend = World.getInstance().findPlayer(friendId);
+        if(nonNull(friend)) {
+            lastAccess = friend.isBlocked(player) ? 0 : friend.isOnline() ? -1 : (int) (System.currentTimeMillis() - friend.getLastAccess()) / 1000;
+        } else {
+            lastAccess = !player.getFriendList().contains(friendId) ? 0 : (int) (System.currentTimeMillis() - getDAO(CharacterDAO.class).findFriendData(friendId).getLastAccess() / 1000);
+        }
+
     }
 
     @Override

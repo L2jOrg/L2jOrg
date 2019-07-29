@@ -15,6 +15,7 @@ import org.l2j.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.l2j.gameserver.util.GameUtils.isPet;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 
@@ -43,7 +44,7 @@ public class PlayableStat extends CharStat {
         setExp(getExp() + value);
 
         byte minimumLevel = 1;
-        if (getActiveChar().isPet()) {
+        if (isPet(getActiveChar())) {
             // get minimum level from NpcTemplate
             minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((Pet) getActiveChar()).getTemplate().getId());
         }
@@ -84,7 +85,7 @@ public class PlayableStat extends CharStat {
         setExp(getExp() - value);
 
         byte minimumLevel = 1;
-        if (getActiveChar().isPet()) {
+        if (isPet(getActiveChar())) {
             // get minimum level from NpcTemplate
             minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((Pet) getActiveChar()).getTemplate().getId());
         }

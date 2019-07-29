@@ -6687,12 +6687,12 @@ public final class Player extends Playable {
         }
 
         // Check if the attacker is a Monster
-        if (attacker.isMonster()) {
+        if (GameUtils.isMonster(attacker)) {
             return true;
         }
 
         // is AutoAttackable if both players are in the same duel and the duel is still going on
-        if (attacker.isPlayable() && (_duelState == Duel.DUELSTATE_DUELLING) && (getDuelId() == attacker.getActingPlayer().getDuelId())) {
+        if (GameUtils.isPlayable(attacker) && (_duelState == Duel.DUELSTATE_DUELLING) && (getDuelId() == attacker.getActingPlayer().getDuelId())) {
             return true;
         }
 
@@ -6719,7 +6719,7 @@ public final class Player extends Playable {
         }
 
         // Check if the attacker is a Playable
-        if (attacker.isPlayable()) {
+        if (GameUtils.isPlayable(attacker)) {
             if (isInsideZone(ZoneId.PEACE)) {
                 return false;
             }
@@ -9386,9 +9386,9 @@ public final class Player extends Playable {
 
         SystemMessage sm = null;
 
-        if ((target.isHpBlocked() && !target.isNpc()) || (GameUtils.isPlayer(target) && target.isAffected(EffectFlag.DUELIST_FURY) && !isAffected(EffectFlag.FACEOFF))) {
+        if ((target.isHpBlocked() && !GameUtils.isNpc(target)) || (GameUtils.isPlayer(target) && target.isAffected(EffectFlag.DUELIST_FURY) && !isAffected(EffectFlag.FACEOFF))) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
-        } else if (target.isDoor() || (target instanceof ControlTower)) {
+        } else if (GameUtils.isDoor(target) || target instanceof ControlTower) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HIT_FOR_S1_DAMAGE);
             sm.addInt(damage);
         } else if (this != target){
@@ -10411,14 +10411,14 @@ public final class Player extends Playable {
     }
 
     public boolean canAttackCharacter(Creature cha) {
-        if (cha.isAttackable()) {
+        if (GameUtils.isAttackable(cha)) {
             return true;
-        } else if (cha.isPlayable()) {
+        } else if (GameUtils.isPlayable(cha)) {
             if (cha.isInsideZone(ZoneId.PVP) && !cha.isInsideZone(ZoneId.SIEGE)) {
                 return true;
             }
 
-            final Player target = cha.isSummon() ? ((Summon) cha).getOwner() : (Player) cha;
+            final Player target =  GameUtils.isSummon( cha)  ? ((Summon) cha).getOwner() : (Player) cha;
 
             if (isInDuel() && target.isInDuel() && (target.getDuelId() == getDuelId())) {
                 return true;

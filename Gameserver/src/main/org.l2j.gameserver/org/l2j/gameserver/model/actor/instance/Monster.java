@@ -55,12 +55,12 @@ public class Monster extends Attackable {
             return true;
         }
 
-        if (attacker.isMonster()) {
+        if (GameUtils.isMonster(attacker)) {
             return false;
         }
 
         // Anything considers monsters friendly except Players, Attackables (Guards, Friendly NPC), Traps and EffectPoints.
-        if (!attacker.isPlayable() && !attacker.isAttackable() && !(attacker instanceof Trap) && !(attacker instanceof EffectPoint)) {
+        if (!GameUtils.isPlayable(attacker) && !GameUtils.isAttackable(attacker) && !(attacker instanceof Trap) && !(attacker instanceof EffectPoint)) {
             return false;
         }
 

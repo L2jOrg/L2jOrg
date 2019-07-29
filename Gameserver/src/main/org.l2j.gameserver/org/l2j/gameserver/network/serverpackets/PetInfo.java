@@ -10,6 +10,8 @@ import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 
 import java.util.Set;
 
+import static org.l2j.gameserver.util.GameUtils.isPet;
+
 public class PetInfo extends ServerPacket {
     private final Summon _summon;
     private final int _val;
@@ -36,7 +38,7 @@ public class PetInfo extends ServerPacket {
         _flyRunSpd = summon.isFlying() ? _runSpd : 0;
         _flyWalkSpd = summon.isFlying() ? _walkSpd : 0;
         _val = val;
-        if (summon.isPet()) {
+        if (isPet(summon)) {
             final Pet pet = (Pet) _summon;
             _curFed = pet.getCurrentFed(); // how fed it is
             _maxFed = pet.getMaxFed(); // max fed it can be

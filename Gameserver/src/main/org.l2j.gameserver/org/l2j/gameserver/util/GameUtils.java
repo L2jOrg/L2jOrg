@@ -9,15 +9,13 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.*;
-import org.l2j.gameserver.model.actor.instance.FriendlyNpc;
-import org.l2j.gameserver.model.actor.instance.Monster;
-import org.l2j.gameserver.model.actor.instance.Pet;
-import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.actor.instance.*;
 import org.l2j.gameserver.model.actor.tasks.player.IllegalPlayerActionTask;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.items.Armor;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.Weapon;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.AbstractHtmlPacket;
 import org.l2j.gameserver.network.serverpackets.ShowBoard;
 import org.slf4j.Logger;
@@ -486,6 +484,18 @@ public final class GameUtils {
 
     public static boolean isPet(WorldObject object) {
         return object instanceof Pet;
+    }
+
+    public static boolean isDoor(WorldObject object) {
+        return object instanceof Door;
+    }
+
+    public static boolean isTrap(WorldObject object) {
+        return object instanceof Trap;
+    }
+
+    public static boolean isItem(WorldObject object) {
+        return object instanceof Item;
     }
 
     public static boolean isWeapon(ItemTemplate item) {

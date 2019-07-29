@@ -22,6 +22,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static org.l2j.gameserver.util.GameUtils.isItem;
+
 
 /**
  * @author Advi
@@ -151,7 +153,7 @@ public class TradeList {
         }
 
         final WorldObject o = World.getInstance().findObject(objectId);
-        if (!o.isItem()) {
+        if (!isItem(o)) {
             LOGGER.warn(_owner.getName() + ": Trying to add something other than an item!");
             return null;
         }

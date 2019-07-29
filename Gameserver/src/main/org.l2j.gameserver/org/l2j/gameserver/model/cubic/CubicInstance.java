@@ -11,6 +11,7 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoCubic;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
 
 import java.util.Comparator;
@@ -165,7 +166,7 @@ public class CubicInstance {
         }
 
         if (target != null) {
-            if (target.isDoor() && !cubicSkill.canUseOnStaticObjects()) {
+            if (GameUtils.isDoor(target) && !cubicSkill.canUseOnStaticObjects()) {
                 return;
             }
 

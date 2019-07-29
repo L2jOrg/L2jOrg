@@ -22,6 +22,8 @@ import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
 import java.util.stream.Stream;
 
+import static org.l2j.gameserver.util.GameUtils.isSummon;
+
 public class CharStat {
     private final Creature _activeChar;
     private final Map<Stats, Double> _statsAdd = new EnumMap<>(Stats.class);
@@ -767,7 +769,7 @@ public class CharStat {
                     .forEach(effect -> effect.pump(info.getEffected(), info.getSkill())));
             //@formatter:on
 
-            if (_activeChar.isSummon() && (_activeChar.getActingPlayer() != null) && _activeChar.getActingPlayer().hasAbnormalType(AbnormalType.ABILITY_CHANGE)) {
+            if (isSummon(_activeChar) && (_activeChar.getActingPlayer() != null) && _activeChar.getActingPlayer().hasAbnormalType(AbnormalType.ABILITY_CHANGE)) {
                 //@formatter:off
                 _activeChar.getActingPlayer().getEffectList().getEffects().stream()
                         .filter(BuffInfo::isInUse)

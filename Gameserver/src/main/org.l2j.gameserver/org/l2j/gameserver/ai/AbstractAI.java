@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.Future;
 
 import static org.l2j.gameserver.ai.CtrlIntention.*;
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 /**
@@ -424,7 +424,7 @@ public abstract class AbstractAI implements Ctrl {
             }
 
             // Send a Server->Client packet MoveToPawn/CharMoveToLocation to the actor and all Player in its _knownPlayers
-            if (pawn.isCharacter()) {
+            if (isCreature(pawn)) {
                 if (actor.isOnGeodataPath()) {
                     actor.broadcastPacket(new MoveToLocation(actor));
                     _clientMovingToPawnOffset = 0;
@@ -516,7 +516,7 @@ public abstract class AbstractAI implements Ctrl {
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT>
      */
     public void clientStartAutoAttack() {
-        if (actor.isSummon()) {
+        if (isSummon(actor)) {
             final Summon summon = (Summon) actor;
             if (summon.getOwner() != null) {
                 summon.getOwner().getAI().clientStartAutoAttack();
@@ -543,7 +543,7 @@ public abstract class AbstractAI implements Ctrl {
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT>
      */
     void clientStopAutoAttack() {
-        if (actor.isSummon()) {
+        if (isSummon(actor)) {
             final Summon summon = (Summon) actor;
             if (summon.getOwner() != null) {
                 summon.getOwner().getAI().clientStopAutoAttack();
@@ -598,7 +598,7 @@ public abstract class AbstractAI implements Ctrl {
     }
 
     public boolean isFollowing() {
-        return (_target != null) && _target.isCharacter() && (intention == AI_INTENTION_FOLLOW);
+        return isCreature(_target) && (intention == AI_INTENTION_FOLLOW);
     }
 
     /**
@@ -634,7 +634,7 @@ public abstract class AbstractAI implements Ctrl {
 
                 final WorldObject followTarget = getTarget(); // copy to prevent NPE
                 if (followTarget == null) {
-                    if (actor.isSummon()) {
+                    if (isSummon(actor)) {
                         ((Summon) actor).setFollowStatus(false);
                     }
                     setIntention(AI_INTENTION_IDLE);
@@ -644,7 +644,7 @@ public abstract class AbstractAI implements Ctrl {
                 if (!isInsideRadius3D(actor, followTarget, followRange)) {
                     if (!isInsideRadius3D(actor, followTarget, 3000)) {
                         // if the target is too far (maybe also teleported)
-                        if (actor.isSummon()) {
+                        if (isSummon(actor)) {
                             ((Summon) actor).setFollowStatus(false);
                         }
 

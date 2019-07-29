@@ -39,6 +39,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.Broadcast;
+import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
 
 import java.util.List;
@@ -301,7 +302,7 @@ public class Npc extends Creature {
             return false;
         }
 
-        if (attacker.isAttackable()) {
+        if (GameUtils.isAttackable(attacker)) {
             if (isInMyClan((Npc) attacker)) {
                 return false;
             }
@@ -762,7 +763,7 @@ public class Npc extends Creature {
         }
 
         // Apply Mp Rewards
-        if ((getTemplate().getMpRewardValue() > 0) && (killer != null) && killer.isPlayable()) {
+        if ((getTemplate().getMpRewardValue() > 0) && GameUtils.isPlayable(killer)) {
             final Player killerPlayer = killer.getActingPlayer();
             new MpRewardTask(killerPlayer, this);
             for (Summon summon : killerPlayer.getServitors().values()) {

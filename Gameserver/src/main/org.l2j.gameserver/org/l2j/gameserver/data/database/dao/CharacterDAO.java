@@ -30,27 +30,27 @@ public interface CharacterDAO extends DAO<CharacterData> {
     @Query("SELECT charId, accesslevel FROM characters WHERE char_name=:name:")
     CharacterData findIdAndAccessLevelByName(String name);
 
-    @Query("INSERT INTO character_friends (charId, friendId) VALUES (:playerId:, :otherId:), (:otherId:, :playerId:)")
+    @Query("REPLACE INTO character_relationship (char_id, friend_id) VALUES (:playerId:, :otherId:), (:otherId:, :playerId:)")
     void saveFriendship(int playerId, int otherId);
 
-    @Query("SELECT friendId FROM character_friends WHERE charId=:playerId: AND relation=0")
+    @Query("SELECT friend_id FROM character_relationship WHERE char_id=:playerId: AND relation='FRIEND'")
     IntSet findFriendsById(int playerId);
 
-    @Query("DELETE FROM character_friends WHERE charId=:playerId: OR friendId=:playerId:")
+    @Query("DELETE FROM character_relationship WHERE char_id=:playerId: OR friend_id=:playerId:")
     void deleteFriendship(int playerId);
 
-    @Query("DELETE FROM character_friends WHERE (charId=:playerId: AND friendId=:friendId:) OR (charId=:friendId: AND friendId=:playerId:)")
+    @Query("DELETE FROM character_relationship WHERE (char_id=:playerId: AND friend_id=:friendId:) OR (char_id=:friendId: AND friend_id=:playerId:)")
     void deleteFriendship(int playerId, int friendId);
 
-    @Query("SELECT friendId FROM character_friends WHERE charId=:playerId: AND relation=1")
+    @Query("SELECT friend_id FROM character_relationship WHERE char_id=:playerId: AND relation='BLOCK'")
     IntSet findBlockListById(int playerId);
 
-    @Query("INSERT INTO character_friends (charId, friendId, relation) VALUES (:playerId:, :blockedId:, 1)")
+    @Query("REPLACE INTO character_relationship (char_id, friend_id, relation) VALUES (:playerId:, :blockedId:, 'BLOCK')")
     void saveBlockedPlayer(int playerId, int blockedId);
 
-    @Query("DELETE FROM character_friends WHERE charId=:playerId: AND friendId=:blockedId: AND relation=1")
+    @Query("DELETE FROM character_relationship WHERE char_id=:playerId: AND friend_id=:blockedId: AND relation='BLOCK'")
     void deleteBlockedPlayer(int playerId, int blockedId);
 
-    @Query("SELECT char_name, classid, level FROM characters WHERE charId = :friendId:")
+    @Query("SELECT char_name, classid, level, lastAccess FROM characters WHERE charId = :friendId:")
     CharacterData findFriendData(int friendId);
 }

@@ -77,6 +77,9 @@ import java.util.concurrent.PriorityBlockingQueue;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+
 
 /**
  * @author UnAfraid
@@ -2865,7 +2868,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param desire the desire to perform the attack
      */
     protected void addAttackPlayerDesire(Npc npc, Playable target, int desire) {
-        if (npc.isAttackable()) {
+        if (isAttackable(npc)) {
             ((Attackable) npc).addDamageHate(target, 0, desire);
         }
         npc.setRunning();
@@ -2939,7 +2942,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param desire the desire to cast the skill
      */
     protected void addSkillCastDesire(Npc npc, WorldObject target, Skill skill, int desire) {
-        if (npc.isAttackable() && (target != null) && target.isCharacter()) {
+        if (isAttackable(npc) && isCreature(target)) {
             ((Attackable) npc).addDamageHate((Creature) target, 0, desire);
         }
         npc.setTarget(target != null ? target : npc);

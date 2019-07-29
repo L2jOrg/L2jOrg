@@ -236,14 +236,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         initCharStat();
         initCharStatus();
 
-        if (isNpc()) {
+        if (GameUtils.isNpc(this)) {
             // Copy the skills of the L2NPCInstance from its template to the Creature Instance
             // The skills list can be affected by spell effects so it's necessary to make a copy
             // to avoid that a spell affecting a Folk, affects others L2NPCInstance of the same type too.
             for (Skill skill : template.getSkills().values()) {
                 addSkill(skill);
             }
-        } else if (isSummon()) {
+        } else if (GameUtils.isSummon(this)) {
             // Copy the skills of the Summon from its template to the Creature Instance
             // The skills list can be affected by spell effects so it's necessary to make a copy
             // to avoid that a spell affecting a Summon, affects others Summon of the same type too.
@@ -1862,7 +1862,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return Config.CHAMP_TITLE;
         }
         // Custom level titles
-        if (Config.SHOW_NPC_LVL && isMonster()) {
+        if (Config.SHOW_NPC_LVL && GameUtils.isMonster(this)) {
             String t = "Lv " + getLevel() + (((Monster) this).isAggressive() ? "*" : "");
             if (_title != null) {
                 t += " " + _title;
@@ -1870,7 +1870,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return t;
         }
         // Set trap title
-        if (isTrap() && (((Trap) this).getOwner() != null)) {
+        if (GameUtils.isTrap(this) && (((Trap) this).getOwner() != null)) {
             _title = ((Trap) this).getOwner().getName();
         }
         return _title != null ? _title : "";
@@ -2095,7 +2095,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             stopMove(null);
         }
 
-        if (isSummon()) {
+        if (GameUtils.isSummon(this)) {
             final Summon summon = (Summon) this;
             if (summon.getOwner() != null) {
                 summon.updateAndBroadcastStatus(1);
@@ -2219,7 +2219,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 if (hasServitors() && hasAbnormalType(AbnormalType.ABILITY_CHANGE)) {
                     getServitors().values().forEach(Summon::broadcastStatusUpdate);
                 }
-            } else if (isNpc()) {
+            } else if (GameUtils.isNpc(this)) {
                 if (broadcastFull) {
                     World.getInstance().forEachVisibleObject(this, Player.class, player ->
                     {
@@ -2774,7 +2774,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
                 if (!isInVehicle // Not in vehicle.
                         && !(GameUtils.isPlayer(this) && (distance > 3000)) // Should be able to click far away and move.
-                        && !(isMonster() && (Math.abs(dz) > 100)) // Monsters can move on ledges.
+                        && !(GameUtils.isMonster(this) && (Math.abs(dz) > 100)) // Monsters can move on ledges.
                         && !(((curZ - z) > 300) && (distance < 300))) // Prohibit correcting destination if character wants to fall.
                 {
                     // location different if destination wasn't reached (or just z coord is different)
@@ -2822,8 +2822,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
 
             // If no distance to go through, the movement is canceled
-            if ((distance < 1) && (Config.PATHFINDING || isPlayable())) {
-                if (isSummon()) {
+            if ((distance < 1) && (Config.PATHFINDING || GameUtils.isPlayable(this))) {
+                if (GameUtils.isSummon(this)) {
                     ((Summon) this).setFollowStatus(false);
                 }
                 getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
@@ -3201,7 +3201,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (player.isInOlympiadMode() && (player.getTarget() != null) && player.getTarget().isPlayable()) {
             Player target = null;
             final WorldObject object = player.getTarget();
-            if ((object != null) && object.isPlayable()) {
+            if (GameUtils.isPlayable(object)) {
                 target = object.getActingPlayer();
             }
 
@@ -3726,7 +3726,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         // Calculate PvP/PvE damage received. It is a post-attack stat.
         if (attacker != null) {
-            if (attacker.isPlayable()) {
+            if (GameUtils.isPlayable(attacker)) {
                 value *= (100 + _stat.getValue(Stats.PVP_DAMAGE_TAKEN)) / 100;
             } else {
                 value *= (100 + _stat.getValue(Stats.PVE_DAMAGE_TAKEN)) / 100;
@@ -3824,7 +3824,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return the max weight that the Creature can load.
      */
     public int getMaxLoad() {
-        if (GameUtils.isPlayer(this) || isPet()) {
+        if (GameUtils.isPlayer(this) || GameUtils.isPet(this)) {
             // Weight Limit = (CON Modifier*69000) * Skills
             // Source http://l2p.bravehost.com/weightlimit.html (May 2007)
             final double baseLoad = Math.floor(BaseStats.CON.calcBonus(this) * 69000 * Config.ALT_WEIGHT_LIMIT);
@@ -3834,7 +3834,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public int getBonusWeightPenalty() {
-        if (GameUtils.isPlayer(this) || isPet()) {
+        if (GameUtils.isPlayer(this) || GameUtils.isPet(this)) {
             return (int) _stat.getValue(Stats.WEIGHT_PENALTY, 1);
         }
         return 0;

@@ -42,6 +42,7 @@ import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -371,7 +372,7 @@ public class Pet extends Summon {
         getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
         broadcastPacket(new StopMove(this));
 
-        if (!object.isItem()) {
+        if (!GameUtils.isItem(object)) {
             // dont try to pickup anything that is not an item :)
             LOGGER_PET.warn(this + " trying to pickup wrong target." + object);
             sendPacket(ActionFailed.STATIC_PACKET);

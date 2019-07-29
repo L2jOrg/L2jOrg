@@ -32,7 +32,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
 import static org.l2j.gameserver.ai.CtrlIntention.*;
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.*;
 
 
 /**
@@ -348,7 +348,7 @@ public class CreatureAI extends AbstractAI {
         // Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
         clientStopAutoAttack();
 
-        if (object.isItem() && (((Item) object).getItemLocation() != ItemLocation.VOID)) {
+        if (isItem(object) && (((Item) object).getItemLocation() != ItemLocation.VOID)) {
             return;
         }
 
@@ -537,7 +537,7 @@ public class CreatureAI extends AbstractAI {
             return;
         }
 
-        if (getActor().isAttackable()) {
+        if (isAttackable(getActor())) {
             ((Attackable) getActor()).setisReturningToSpawnPoint(false);
         }
         clientStoppedMoving();
@@ -547,7 +547,7 @@ public class CreatureAI extends AbstractAI {
             setIntention(AI_INTENTION_ACTIVE);
         }
 
-        if (actor.isNpc()) {
+        if (isNpc(actor)) {
             final Npc npc = (Npc) actor;
             WalkingManager.getInstance().onArrived(npc); // Walking Manager support
 
@@ -689,7 +689,7 @@ public class CreatureAI extends AbstractAI {
         // Kill the actor client side by sending Server->Client packet AutoAttackStop, StopMove/StopRotation, Die (broadcast)
         clientNotifyDead();
 
-        if (!actor.isPlayable()) {
+        if (!isPlayable(actor)) {
             actor.setWalking();
         }
     }
@@ -798,7 +798,7 @@ public class CreatureAI extends AbstractAI {
         }
 
         offset += actor.getTemplate().getCollisionRadius();
-        if (target.isCharacter()) {
+        if (isCreature(target)) {
             offset += ((Creature) target).getTemplate().getCollisionRadius();
         }
 

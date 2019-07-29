@@ -206,7 +206,7 @@ public class Attackable extends Npc {
         }
 
         // If this Attackable is a Monster and it has spawned minions, call its minions to battle
-        if (isMonster()) {
+        if (GameUtils.isMonster(this)) {
             Monster master = (Monster) this;
 
             if (master.hasMinions()) {
@@ -247,13 +247,13 @@ public class Attackable extends Npc {
             return false;
         }
 
-        if ((killer != null) && killer.isPlayable()) {
+        if (GameUtils.isPlayable(killer)) {
             // Delayed notification
-            EventDispatcher.getInstance().notifyEventAsync(new OnAttackableKill(killer.getActingPlayer(), this, killer.isSummon()), this);
+            EventDispatcher.getInstance().notifyEventAsync(new OnAttackableKill(killer.getActingPlayer(), this, GameUtils.isSummon(killer)), this);
         }
 
         // Notify to minions if there are.
-        if (isMonster()) {
+        if (GameUtils.isMonster(this)) {
             final Monster mob = (Monster) this;
             if ((mob.getLeader() != null) && mob.getLeader().hasMinions()) {
                 final int respawnTime = Config.MINIONS_RESPAWN_TIME.containsKey(getId()) ? Config.MINIONS_RESPAWN_TIME.get(getId()) * 1000 : -1;
@@ -579,7 +579,7 @@ public class Attackable extends Npc {
 
                 final Player player = attacker.getActingPlayer();
                 if (player != null) {
-                    EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAttack(player, this, damage, skill, attacker.isSummon()), this);
+                    EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAttack(player, this, damage, skill, GameUtils.isSummon(attacker)), this);
                 }
             } catch (Exception e) {
                 LOGGER.error("", e);
@@ -601,7 +601,7 @@ public class Attackable extends Npc {
 
         Player targetPlayer = attacker.getActingPlayer();
         final Creature summoner = attacker.getSummoner();
-        if (attacker.isNpc() && GameUtils.isPlayer(summoner) && !attacker.isTargetable()) {
+        if (GameUtils.isNpc(attacker) && GameUtils.isPlayer(summoner) && !attacker.isTargetable()) {
             targetPlayer = summoner.getActingPlayer();
             attacker = summoner;
         }
@@ -626,7 +626,7 @@ public class Attackable extends Npc {
             }
 
             // Notify to scripts
-            EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAggroRangeEnter(this, targetPlayer, attacker.isSummon()), this);
+            EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAggroRangeEnter(this, targetPlayer, GameUtils.isSummon(attacker)), this);
         } else if ((targetPlayer == null) && (aggro == 0)) {
             aggro = 1;
             ai.addHate(1);
@@ -1189,7 +1189,7 @@ public class Attackable extends Npc {
 
         if (Config.CHAMPION_ENABLE) {
             // Set champion on next spawn
-            if (isMonster() && !isQuestMonster() && !getTemplate().isUndying() && !_isRaid && !_isRaidMinion && (Config.CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.CHAMP_MIN_LVL) && (getLevel() <= Config.CHAMP_MAX_LVL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0))) {
+            if (GameUtils.isMonster(this) && !isQuestMonster() && !getTemplate().isUndying() && !_isRaid && !_isRaidMinion && (Config.CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.CHAMP_MIN_LVL) && (getLevel() <= Config.CHAMP_MAX_LVL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0))) {
                 if (Rnd.get(100) < Config.CHAMPION_FREQUENCY) {
                     _champion = true;
                     if (Config.SHOW_CHAMPION_AURA) {

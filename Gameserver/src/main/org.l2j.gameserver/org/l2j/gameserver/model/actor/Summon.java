@@ -154,7 +154,7 @@ public abstract class Summon extends Playable {
             }
 
             final AbstractMaskPacket<NpcInfoType> packet;
-            if (isPet()) {
+            if (GameUtils.isPet(this)) {
                 packet = new ExPetInfo(this, player, 1);
             } else {
                 packet = new SummonInfo(this, player, 1);
@@ -279,7 +279,7 @@ public abstract class Summon extends Playable {
 
     @Override
     public void onDecay() {
-        if (!isPet()) {
+        if (!GameUtils.isPet(this)) {
             super.onDecay();
         }
         deleteMe(_owner);
@@ -339,7 +339,7 @@ public abstract class Summon extends Playable {
             stopHpMpRegeneration();
 
             if (owner != null) {
-                if (isPet()) {
+                if (GameUtils.isPet(this)) {
                     owner.setPet(null);
                 } else {
                     owner.removeServitor(getObjectId());
@@ -495,7 +495,7 @@ public abstract class Summon extends Playable {
             final WorldObject currentTarget = _owner.getTarget();
             if (currentTarget != null)
             {
-                target = skill.getTarget(this, forceUse && (!currentTarget.isPlayable() || !currentTarget.isInsideZone(ZoneId.PEACE)), dontMove, false);
+                target = skill.getTarget(this, forceUse && (!GameUtils.isPlayable(currentTarget) || !currentTarget.isInsideZone(ZoneId.PEACE)), dontMove, false);
                 final Player currentTargetPlayer = currentTarget.getActingPlayer();
                 if (!forceUse && (currentTargetPlayer != null) && !currentTargetPlayer.isAutoAttackable(_owner))
                 {
@@ -594,7 +594,7 @@ public abstract class Summon extends Playable {
 
             final SystemMessage sm;
 
-            if ((target.isHpBlocked() && !target.isNpc()) || (GameUtils.isPlayer(target) && target.isAffected(EffectFlag.DUELIST_FURY) && !_owner.isAffected(EffectFlag.FACEOFF))) {
+            if ((target.isHpBlocked() && !GameUtils.isNpc(target)) || (GameUtils.isPlayer(target) && target.isAffected(EffectFlag.DUELIST_FURY) && !_owner.isAffected(EffectFlag.FACEOFF))) {
                 sm = SystemMessage.getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
             } else {
                 sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
@@ -690,7 +690,7 @@ public abstract class Summon extends Playable {
         // Check if the Player is the owner of the Pet
         if (activeChar == _owner) {
             activeChar.sendPacket(new PetInfo(this, isDead() ? 0 : 1));
-            if (isPet()) {
+            if (GameUtils.isPet(this)) {
                 activeChar.sendPacket(new PetItemList(getInventory().getItems()));
             }
         } else {
@@ -780,7 +780,7 @@ public abstract class Summon extends Playable {
             getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
         }
 
-        if (isPet() && ((getLevel() - _owner.getLevel()) > 20)) {
+        if (GameUtils.isPet(this) && ((getLevel() - _owner.getLevel()) > 20)) {
             sendPacket(SystemMessageId.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
@@ -809,7 +809,7 @@ public abstract class Summon extends Playable {
         }
 
         // Summons can attack NPCs even when the owner cannot.
-        if (!target.isAutoAttackable(_owner) && !ctrlPressed && !target.isNpc()) {
+        if (!target.isAutoAttackable(_owner) && !ctrlPressed && !GameUtils.isNpc(target)) {
             setFollowStatus(false);
             getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, target);
             sendPacket(SystemMessageId.INVALID_TARGET);
@@ -817,7 +817,7 @@ public abstract class Summon extends Playable {
         }
 
         // Siege golems AI doesn't support attacking other than doors/walls at the moment.
-        return !target.isDoor() || (getTemplate().getRace() == Race.SIEGE_WEAPON);
+        return !GameUtils.isDoor(target) || (getTemplate().getRace() == Race.SIEGE_WEAPON);
     }
 
     @Override
