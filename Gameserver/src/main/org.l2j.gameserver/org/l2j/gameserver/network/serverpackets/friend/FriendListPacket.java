@@ -1,14 +1,8 @@
 package org.l2j.gameserver.network.serverpackets.friend;
 
-import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
-import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
-
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Support for "Chat with Friends" dialog. <br />
@@ -16,59 +10,25 @@ import java.util.List;
  *
  * @author Tempy
  */
-public class FriendListPacket extends ServerPacket {
-    private final List<FriendInfo> _info = new LinkedList<>();
+public class FriendListPacket extends AbstractFriendListPacket {
 
     public FriendListPacket(Player player) {
-        for (int objId : player.getFriendList()) {
-            final String name = PlayerNameTable.getInstance().getNameById(objId);
-            final Player player1 = World.getInstance().findPlayer(objId);
-            boolean online = false;
-            int level = 0;
-            int classId = 0;
-
-            if (player1 != null) {
-                online = true;
-                level = player1.getLevel();
-                classId = player1.getClassId().getId();
-            } else {
-                level = PlayerNameTable.getInstance().getLevelById(objId);
-                classId = PlayerNameTable.getInstance().getClassIdById(objId);
-            }
-            _info.add(new FriendInfo(objId, name, online, level, classId));
-        }
+        super(player);
     }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.L2_FRIEND_LIST);
 
-        writeInt(_info.size());
-        for (FriendInfo info : _info) {
-            writeInt(info._objId); // character id
-            writeString(info._name);
-            writeInt(info._online ? 0x01 : 0x00); // online
-            writeInt(info._online ? info._objId : 0x00); // object id if online
-            writeInt(info._level);
-            writeInt(info._classId);
+        writeInt(info.size());
+        for (FriendInfo info : info) {
+            writeInt(info.objId);
+            writeString(info.name);
+            writeInt(info.online);
+            writeInt(info.online ? info.objId : 0x00); // object id if online
+            writeInt(info.level);
+            writeInt(info.classId);
             writeShort((short) 0x00);
-        }
-    }
-
-
-    private static class FriendInfo {
-        int _objId;
-        String _name;
-        int _level;
-        int _classId;
-        boolean _online;
-
-        public FriendInfo(int objId, String name, boolean online, int level, int classId) {
-            _objId = objId;
-            _name = name;
-            _online = online;
-            _level = level;
-            _classId = classId;
         }
     }
 }

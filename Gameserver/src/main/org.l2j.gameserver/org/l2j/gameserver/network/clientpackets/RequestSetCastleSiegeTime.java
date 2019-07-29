@@ -58,7 +58,7 @@ public class RequestSetCastleSiegeTime extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getActiveChar();
+        final Player activeChar = client.getPlayer();
         final Castle castle = CastleManager.getInstance().getCastleById(_castleId);
         if ((activeChar == null) || (castle == null)) {
             LOGGER.warn(getClass().getSimpleName() + ": activeChar: " + activeChar + " castle: " + castle + " castleId: " + _castleId);

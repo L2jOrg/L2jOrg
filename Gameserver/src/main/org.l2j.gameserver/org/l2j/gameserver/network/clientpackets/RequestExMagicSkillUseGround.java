@@ -40,7 +40,7 @@ public final class RequestExMagicSkillUseGround extends ClientPacket {
     @Override
     public void runImpl() {
         // Get the current Player of the player
-        final Player activeChar = client.getActiveChar();
+        final Player activeChar = client.getPlayer();
         if (activeChar == null) {
             return;
         }

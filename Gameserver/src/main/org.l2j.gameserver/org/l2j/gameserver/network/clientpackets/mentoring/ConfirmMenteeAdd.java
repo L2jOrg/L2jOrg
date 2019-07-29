@@ -90,7 +90,7 @@ public class ConfirmMenteeAdd extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player mentee = client.getActiveChar();
+        final Player mentee = client.getPlayer();
         if (mentee == null) {
             return;
         }

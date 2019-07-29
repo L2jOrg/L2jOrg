@@ -41,7 +41,7 @@ public final class RequestJoinParty extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player requestor = client.getActiveChar();
+        final Player requestor = client.getPlayer();
         if (requestor == null) {
             return;
         }

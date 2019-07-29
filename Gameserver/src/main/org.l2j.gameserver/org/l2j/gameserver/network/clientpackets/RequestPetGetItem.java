@@ -23,7 +23,7 @@ public final class RequestPetGetItem extends ClientPacket {
     public void runImpl() {
         final World world = World.getInstance();
         final Item item = (Item) world.findObject(_objectId);
-        if ((item == null) || (client.getActiveChar() == null) || !client.getActiveChar().hasPet()) {
+        if ((item == null) || (client.getPlayer() == null) || !client.getPlayer().hasPet()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
@@ -39,7 +39,7 @@ public final class RequestPetGetItem extends ClientPacket {
             return;
         }
 
-        final Pet pet = client.getActiveChar().getPet();
+        final Pet pet = client.getPlayer().getPet();
         if (pet.isDead() || pet.isControlBlocked()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;

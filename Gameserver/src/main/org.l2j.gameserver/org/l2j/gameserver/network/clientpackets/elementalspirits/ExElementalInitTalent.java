@@ -7,7 +7,6 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritSetTalent;
 
 import static java.util.Objects.isNull;
-import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 
 public class ExElementalInitTalent extends ClientPacket {
@@ -21,7 +20,7 @@ public class ExElementalInitTalent extends ClientPacket {
 
     @Override
     protected void runImpl() {
-        var player = client.getActiveChar();
+        var player = client.getPlayer();
 
         var spirit = player.getElementalSpirit(ElementalType.of(type));
 

@@ -22,12 +22,12 @@ public final class RequestPledgePower extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = client.getActiveChar();
+        final Player player = client.getPlayer();
         if (player == null) {
             return;
         }
 
-        player.sendPacket(new ManagePledgePower(client.getActiveChar().getClan(), _action, _rank));
+        player.sendPacket(new ManagePledgePower(client.getPlayer().getClan(), _action, _rank));
         if (_action == 2) {
             if (player.isClanLeader()) {
                 if (_rank == 9) {

@@ -21,7 +21,7 @@ public class RequestPledgeWaitingUser extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getActiveChar();
+        final Player activeChar = client.getPlayer();
         if ((activeChar == null) || (activeChar.getClanId() != _clanId)) {
             return;
         }

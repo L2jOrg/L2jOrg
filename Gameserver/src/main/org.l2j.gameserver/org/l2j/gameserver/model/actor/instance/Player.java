@@ -2,6 +2,7 @@ package org.l2j.gameserver.model.actor.instance;
 
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
@@ -138,10 +139,8 @@ public final class Player extends Playable {
 
         radar = new Radar(this);
 
-        for (int i = 0; i < htmlActionCaches.length; ++i) {
-            htmlActionCaches[i] = new LinkedList<>();
-        }
-        setRunning();
+        Arrays.fill(htmlActionCaches, new LinkedList<>());
+        running = true;
     }
 
     public static Player create(CharacterData characterData, PlayerTemplate template) {
@@ -434,7 +433,7 @@ public final class Player extends Playable {
     /**
      * list of character friends
      */
-    private final Set<Integer> _friendList = ConcurrentHashMap.newKeySet();
+    private final IntSet friends = CHashIntMap.newKeySet();
     protected int _baseClass;
     protected int _activeClass;
     protected int _classIndex = 0;
@@ -1255,14 +1254,14 @@ public final class Player extends Playable {
      * @return a table containing all Common RecipeList of the Player.
      */
     public RecipeList[] getCommonRecipeBook() {
-        return _commonRecipeBook.values().toArray(new RecipeList[_commonRecipeBook.values().size()]);
+        return _commonRecipeBook.values().toArray(RecipeList[]::new);
     }
 
     /**
      * @return a table containing all Dwarf RecipeList of the Player.
      */
     public RecipeList[] getDwarvenRecipeBook() {
-        return _dwarvenRecipeBook.values().toArray(new RecipeList[_dwarvenRecipeBook.values().size()]);
+        return _dwarvenRecipeBook.values().toArray(RecipeList[]::new);
     }
 
     /**
@@ -1436,7 +1435,7 @@ public final class Player extends Playable {
         } else if (_questNpcObject > 0) {
             final WorldObject object = World.getInstance().findObject(getLastQuestNpcObject());
 
-            if (object.isNpc() && MathUtil.isInsideRadius2D(this, object, Npc.INTERACTION_DISTANCE)) {
+            if (GameUtils.isNpc(object) && MathUtil.isInsideRadius2D(this, object, Npc.INTERACTION_DISTANCE)) {
                 final Npc npc = (Npc) object;
                 quest.notifyEvent(event, npc, this);
             }
@@ -4043,7 +4042,7 @@ public final class Player extends Playable {
             oldTarget.removeStatusListener(this);
         }
 
-        if ((newTarget != null) && newTarget.isCharacter()) {
+        if (GameUtils.isCreature(newTarget)) {
             final Creature target = (Creature) newTarget;
 
             // Validate location of the new target.
@@ -4360,14 +4359,14 @@ public final class Player extends Playable {
             double dropPercent = 0;
 
             // Classic calculation.
-            if (killer.isPlayable() && (getReputation() < 0) && (_pkKills >= Config.KARMA_PK_LIMIT)) {
+            if (GameUtils.isPlayable(killer) && (getReputation() < 0) && (_pkKills >= Config.KARMA_PK_LIMIT)) {
                 isKarmaDrop = true;
                 dropPercent = Config.KARMA_RATE_DROP * getStat().getValue(Stats.REDUCE_DEATH_PENALTY_BY_PVP, 1);
                 dropEquip = Config.KARMA_RATE_DROP_EQUIP;
                 dropEquipWeapon = Config.KARMA_RATE_DROP_EQUIP_WEAPON;
                 dropItem = Config.KARMA_RATE_DROP_ITEM;
                 dropLimit = Config.KARMA_DROP_LIMIT;
-            } else if (killer.isNpc()) {
+            } else if (GameUtils.isNpc(killer)) {
                 dropPercent = Config.PLAYER_RATE_DROP * (killer.isRaid() ? getStat().getValue(Stats.REDUCE_DEATH_PENALTY_BY_RAID, 1) : getStat().getValue(Stats.REDUCE_DEATH_PENALTY_BY_MOB, 1));
                 dropEquip = Config.PLAYER_RATE_DROP_EQUIP;
                 dropEquipWeapon = Config.PLAYER_RATE_DROP_EQUIP_WEAPON;
@@ -4474,7 +4473,7 @@ public final class Player extends Playable {
             setPkKills(getPkKills() + 1);
         } else {
             // Calculate new karma and increase pk count
-            setReputation(getReputation() - Formulas.calculateKarmaGain(getPkKills(), killedPlayable.isSummon()));
+            setReputation(getReputation() - Formulas.calculateKarmaGain(getPkKills(), GameUtils.isSummon(killedPlayable)));
             setPkKills(getPkKills() + 1);
         }
 
@@ -4583,7 +4582,7 @@ public final class Player extends Playable {
         if (killer != null) {
             if (killer.isRaid()) {
                 percentLost *= getStat().getValue(Stats.REDUCE_EXP_LOST_BY_RAID, 1);
-            } else if (killer.isMonster()) {
+            } else if (GameUtils.isMonster(killer)) {
                 percentLost *= getStat().getValue(Stats.REDUCE_EXP_LOST_BY_MOB, 1);
             } else if (killer.isPlayable()) {
                 percentLost *= getStat().getValue(Stats.REDUCE_EXP_LOST_BY_PVP, 1);
@@ -10055,39 +10054,19 @@ public final class Player extends Playable {
         return (int) time;
     }
 
-    public Set<Integer> getFriendList() {
-        return _friendList;
+    public IntSet getFriendList() {
+        return friends;
     }
 
     public void restoreFriendList() {
-        _friendList.clear();
-
-        final String sqlQuery = "SELECT friendId FROM character_friends WHERE charId=? AND relation=0";
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(sqlQuery)) {
-            statement.setInt(1, getObjectId());
-            try (ResultSet rset = statement.executeQuery()) {
-                while (rset.next()) {
-                    final int friendId = rset.getInt("friendId");
-                    if (friendId == getObjectId()) {
-                        continue;
-                    }
-                    _friendList.add(friendId);
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.warn("Error found in " + getName() + "'s FriendList: " + e.getMessage(), e);
-        }
+        friends.clear();
+        friends.addAll(getDAO(CharacterDAO.class).findFriendsById(getObjectId()));
     }
 
     public void notifyFriends(int type) {
         final FriendStatus pkt = new FriendStatus(this, type);
-        for (int id : _friendList) {
-            final Player friend = World.getInstance().findPlayer(id);
-            if (friend != null) {
-                friend.sendPacket(pkt);
-            }
-        }
+        var word = World.getInstance();
+        friends.stream().mapToObj(word::findPlayer).filter(Objects::nonNull).forEach(pkt::sendTo);
     }
 
     /**

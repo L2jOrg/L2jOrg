@@ -53,7 +53,7 @@ public class RequestProcureCropList extends ClientPacket {
             return;
         }
 
-        final Player player = client.getActiveChar();
+        final Player player = client.getPlayer();
         if (player == null) {
             return;
         }

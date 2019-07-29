@@ -29,7 +29,7 @@ public class ExElementalSpiritAbsorb extends ClientPacket {
 
     @Override
     protected void runImpl()  {
-        var player = client.getActiveChar();
+        var player = client.getPlayer();
 
         var spirit = player.getElementalSpirit(ElementalType.of(type));
 

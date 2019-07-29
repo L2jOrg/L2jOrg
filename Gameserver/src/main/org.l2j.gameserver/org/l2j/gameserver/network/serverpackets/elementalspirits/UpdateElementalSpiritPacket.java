@@ -16,7 +16,7 @@ public abstract class UpdateElementalSpiritPacket extends AbstractElementalSpiri
     }
 
     protected void writeUpdate(GameClient client) {
-        var player = client.getActiveChar();
+        var player = client.getPlayer();
         writeByte(update);
         writeByte(type);
 

@@ -15,6 +15,6 @@ public final class RequestQuestList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        client.sendPacket(new QuestList(client.getActiveChar()));
+        client.sendPacket(new QuestList(client.getPlayer()));
     }
 }

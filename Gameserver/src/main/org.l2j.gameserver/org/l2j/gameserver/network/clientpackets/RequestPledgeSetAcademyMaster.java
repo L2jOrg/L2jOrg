@@ -26,7 +26,7 @@ public final class RequestPledgeSetAcademyMaster extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getActiveChar();
+        final Player activeChar = client.getPlayer();
         final Clan clan = activeChar.getClan();
         if (clan == null) {
             return;

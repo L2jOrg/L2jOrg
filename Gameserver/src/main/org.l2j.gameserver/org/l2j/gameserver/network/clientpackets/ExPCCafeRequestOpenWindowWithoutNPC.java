@@ -14,7 +14,7 @@ public class ExPCCafeRequestOpenWindowWithoutNPC extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getActiveChar();
+        final Player activeChar = client.getPlayer();
         if ((activeChar != null) && Config.PC_CAFE_ENABLED) {
             final NpcHtmlMessage html = new NpcHtmlMessage();
             html.setFile(activeChar, "data/html/pccafe.htm");

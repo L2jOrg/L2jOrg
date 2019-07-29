@@ -19,7 +19,7 @@ public class ElementalSpiritInfo extends AbstractElementalSpiritPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_ELEMENTAL_SPIRIT_INFO);
 
-        var player = client.getActiveChar();
+        var player = client.getPlayer();
         var spirits = player.getSpirits();
 
         if(isNull(spirits)) {

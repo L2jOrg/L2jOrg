@@ -15,7 +15,7 @@ public final class RequestPrivateStoreManageBuy extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = client.getActiveChar();
+        final Player player = client.getPlayer();
         if (player != null) {
             player.tryOpenPrivateBuyStore();
         }

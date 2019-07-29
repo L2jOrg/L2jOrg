@@ -38,7 +38,7 @@ public class ExElementalSpiritSetTalent extends ClientPacket {
 
     @Override
     protected void runImpl()  {
-        var spirit = client.getActiveChar().getElementalSpirit(ElementalType.of(type));
+        var spirit = client.getPlayer().getElementalSpirit(ElementalType.of(type));
 
         var result = false;
 
@@ -65,7 +65,7 @@ public class ExElementalSpiritSetTalent extends ClientPacket {
         }
 
         if(result) {
-            var userInfo = new UserInfo(client.getActiveChar());
+            var userInfo = new UserInfo(client.getPlayer());
             userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
             client.sendPacket(userInfo);
             client.sendPacket(SystemMessage.getSystemMessage(CHARACTERISTICS_WERE_APPLIED_SUCCESSFULLY));

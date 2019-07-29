@@ -11,7 +11,7 @@ public class ExBrPremiumState extends ServerPacket {
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_BR_PREMIUM_STATE);
-        var activeChar = client.getActiveChar();
+        var activeChar = client.getPlayer();
         writeInt(activeChar.getObjectId());
         writeByte((byte) (activeChar.getVipTier() > 0 ? 0x01 : 0x00));
     }

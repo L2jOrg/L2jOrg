@@ -81,7 +81,7 @@ public class JailHandler implements IPunishmentHandler
 				final GameClient client = AuthServerCommunication.getInstance().getAuthedClient(account);
 				if (client != null)
 				{
-					final Player player = client.getActiveChar();
+					final Player player = client.getPlayer();
 					if (player != null)
 					{
 						applyToPlayer(task, player);
@@ -125,7 +125,7 @@ public class JailHandler implements IPunishmentHandler
 				final GameClient client = AuthServerCommunication.getInstance().getAuthedClient(account);
 				if (client != null)
 				{
-					final Player player = client.getActiveChar();
+					final Player player = client.getPlayer();
 					if (player != null)
 					{
 						removeFromPlayer(player);

@@ -30,7 +30,7 @@ public final class RequestGetItemFromPet extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = client.getActiveChar();
+        final Player player = client.getPlayer();
         if ((_amount <= 0) || (player == null) || !player.hasPet()) {
             return;
         }

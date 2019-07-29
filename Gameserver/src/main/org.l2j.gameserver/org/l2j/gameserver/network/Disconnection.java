@@ -20,7 +20,7 @@ public final class Disconnection {
     private final Player _activeChar;
 
     private Disconnection(GameClient client) {
-        this(client, client.getActiveChar());
+        this(client, client.getPlayer());
     }
     private Disconnection(Player activeChar) {
         this(activeChar.getClient(), activeChar);
@@ -60,7 +60,7 @@ public final class Disconnection {
         }
 
         if (client != null) {
-            return client.getActiveChar();
+            return client.getPlayer();
         }
 
         return null;

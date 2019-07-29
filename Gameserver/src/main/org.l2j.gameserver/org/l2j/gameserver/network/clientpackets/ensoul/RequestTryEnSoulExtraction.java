@@ -45,7 +45,7 @@ public class RequestTryEnSoulExtraction extends ClientPacket {
 
     @Override
     public void runImpl() {
-        Player player = client.getActiveChar();
+        Player player = client.getPlayer();
         if (player == null) {
             return;
         }

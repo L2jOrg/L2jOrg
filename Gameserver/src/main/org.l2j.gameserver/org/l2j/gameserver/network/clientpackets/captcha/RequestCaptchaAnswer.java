@@ -24,7 +24,7 @@ public class RequestCaptchaAnswer extends ClientPacket {
 
     @Override
     protected void runImpl() {
-        var player = client.getActiveChar();
+        var player = client.getPlayer();
         var request = player.getRequest(CaptchaRequest.class);
         if(nonNull(request)) {
             if(answer == request.getCaptcha().getCode()) {

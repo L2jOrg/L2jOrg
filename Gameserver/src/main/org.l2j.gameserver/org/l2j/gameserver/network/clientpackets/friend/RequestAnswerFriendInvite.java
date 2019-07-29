@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.network.clientpackets.friend;
 
-import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -25,8 +25,7 @@ import org.l2j.gameserver.network.serverpackets.friend.FriendAddRequestResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 public final class RequestAnswerFriendInvite extends ClientPacket {
 
@@ -42,7 +41,7 @@ public final class RequestAnswerFriendInvite extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = client.getActiveChar();
+        final Player player = client.getPlayer();
         if (player == null) {
             return;
         }
@@ -66,34 +65,25 @@ public final class RequestAnswerFriendInvite extends ClientPacket {
         }
 
         if (_response == 1) {
-            try (Connection con = DatabaseFactory.getInstance().getConnection();
-                 PreparedStatement statement = con.prepareStatement("INSERT INTO character_friends (charId, friendId) VALUES (?, ?), (?, ?)")) {
-                statement.setInt(1, requestor.getObjectId());
-                statement.setInt(2, player.getObjectId());
-                statement.setInt(3, player.getObjectId());
-                statement.setInt(4, requestor.getObjectId());
-                statement.execute();
-                SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.THAT_PERSON_HAS_BEEN_SUCCESSFULLY_ADDED_TO_YOUR_FRIEND_LIST);
-                requestor.sendPacket(msg);
+            getDAO(CharacterDAO.class).saveFriendship(requestor.getObjectId(), player.getObjectId());
+            SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.THAT_PERSON_HAS_BEEN_SUCCESSFULLY_ADDED_TO_YOUR_FRIEND_LIST);
+            requestor.sendPacket(msg);
 
-                // Player added to your friend list
-                msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_FRIENDS_LIST);
-                msg.addString(player.getName());
-                requestor.sendPacket(msg);
-                requestor.getFriendList().add(player.getObjectId());
+            // Player added to your friend list
+            msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_FRIENDS_LIST);
+            msg.addString(player.getName());
+            requestor.sendPacket(msg);
+            requestor.getFriendList().add(player.getObjectId());
 
-                // has joined as friend.
-                msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_FRIENDS_LIST_2);
-                msg.addString(requestor.getName());
-                player.sendPacket(msg);
-                player.getFriendList().add(requestor.getObjectId());
+            // has joined as friend.
+            msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_FRIENDS_LIST_2);
+            msg.addString(requestor.getName());
+            player.sendPacket(msg);
+            player.getFriendList().add(requestor.getObjectId());
 
-                // Send notifications for both player in order to show them online
-                player.sendPacket(new FriendAddRequestResult(requestor, 1));
-                requestor.sendPacket(new FriendAddRequestResult(player, 1));
-            } catch (Exception e) {
-                LOGGER.warn("Could not add friend objectid", e);
-            }
+            // Send notifications for both player in order to show them online
+            player.sendPacket(new FriendAddRequestResult(requestor, 1));
+            requestor.sendPacket(new FriendAddRequestResult(player, 1));
         } else {
             final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_ADD_A_FRIEND_TO_YOUR_FRIENDS_LIST);
             requestor.sendPacket(msg);

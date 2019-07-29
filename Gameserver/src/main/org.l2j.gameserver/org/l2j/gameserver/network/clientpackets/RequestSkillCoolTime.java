@@ -11,6 +11,6 @@ public class RequestSkillCoolTime extends ClientPacket {
 
     @Override
     protected void readImpl() throws Exception {
-        client.sendPacket(new SkillCoolTime(client.getActiveChar()));
+        client.sendPacket(new SkillCoolTime(client.getPlayer()));
     }
 }

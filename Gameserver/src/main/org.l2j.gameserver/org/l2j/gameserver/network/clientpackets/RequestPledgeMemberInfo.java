@@ -25,7 +25,7 @@ public final class RequestPledgeMemberInfo extends ClientPacket {
     public void runImpl() {
         // LOGGER.info("C5: RequestPledgeMemberInfo d:"+_unk1);
         // LOGGER.info("C5: RequestPledgeMemberInfo S:"+_player);
-        final Player activeChar = client.getActiveChar();
+        final Player activeChar = client.getPlayer();
         if (activeChar == null) {
             return;
         }

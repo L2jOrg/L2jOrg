@@ -7,11 +7,10 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-/**
- * This class ...
- *
- * @version $Revision: 1.3.4.3 $ $Date: 2005/03/27 15:29:30 $
- */
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
+
 public final class RequestFriendList extends ClientPacket {
     @Override
     public void readImpl() {
@@ -19,41 +18,24 @@ public final class RequestFriendList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getActiveChar();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+        if (isNull(player)) {
             return;
         }
 
+        player.sendPacket(SystemMessageId.FRIENDS_LIST);
+        player.sendPacket(player.getFriendList().stream().mapToObj(this::statusMessage).toArray(SystemMessage[]::new));
+        player.sendPacket(SystemMessageId.END_LIST);
+    }
+
+    private SystemMessage statusMessage(int friendId) {
+        var friend = World.getInstance().findPlayer(friendId);
         SystemMessage sm;
-
-        // ======<Friend List>======
-        activeChar.sendPacket(SystemMessageId.FRIENDS_LIST);
-
-        Player friend;
-        for (int id : activeChar.getFriendList()) {
-            // int friendId = rset.getInt("friendId");
-            final String friendName = PlayerNameTable.getInstance().getNameById(id);
-
-            if (friendName == null) {
-                continue;
-            }
-
-            friend = World.getInstance().findPlayer(friendName);
-
-            if ((friend == null) || !friend.isOnline()) {
-                // (Currently: Offline)
-                sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CURRENTLY_OFFLINE);
-                sm.addString(friendName);
-            } else {
-                // (Currently: Online)
-                sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CURRENTLY_ONLINE);
-                sm.addString(friendName);
-            }
-
-            activeChar.sendPacket(sm);
+        if(nonNull(friend)) {
+            sm = getSystemMessage(SystemMessageId.S1_CURRENTLY_ONLINE).addString(friend.getName());
+        } else {
+            sm = getSystemMessage(SystemMessageId.S1_CURRENTLY_OFFLINE).addString(PlayerNameTable.getInstance().getNameById(friendId));
         }
-
-        // =========================
-        activeChar.sendPacket(SystemMessageId.EMPTY_3);
+        return sm;
     }
 }

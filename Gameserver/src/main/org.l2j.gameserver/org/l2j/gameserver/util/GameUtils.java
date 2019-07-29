@@ -11,6 +11,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.*;
 import org.l2j.gameserver.model.actor.instance.FriendlyNpc;
 import org.l2j.gameserver.model.actor.instance.Monster;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.tasks.player.IllegalPlayerActionTask;
 import org.l2j.gameserver.model.interfaces.ILocational;
@@ -82,10 +83,10 @@ public final class GameUtils {
         }
 
         int radius = 0;
-        if (obj1.isCharacter()) {
+        if (isCreature(obj1)) {
             radius += ((Creature) obj1).getTemplate().getCollisionRadius();
         }
-        if (obj2.isCharacter()) {
+        if (isCreature(obj2)) {
             radius += ((Creature) obj2).getTemplate().getCollisionRadius();
         }
 
@@ -481,6 +482,10 @@ public final class GameUtils {
 
     public static boolean isAttackable(WorldObject object) {
         return object instanceof Attackable && !(object instanceof FriendlyNpc);
+    }
+
+    public static boolean isPet(WorldObject object) {
+        return object instanceof Pet;
     }
 
     public static boolean isWeapon(ItemTemplate item) {

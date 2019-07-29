@@ -190,7 +190,7 @@ public final class AntiFeedManager {
      * @param client
      */
     public void onDisconnect(GameClient client) {
-        if ((client == null) || (client.getHostAddress() == null) || (client.getActiveChar() == null)) {
+        if ((client == null) || (client.getHostAddress() == null) || (client.getPlayer() == null)) {
             return;
         }
 

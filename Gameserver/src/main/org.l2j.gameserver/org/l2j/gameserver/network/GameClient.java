@@ -5,6 +5,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.network.SessionKey;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.AccountDAO;
+import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.database.data.AccountData;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
@@ -74,123 +75,119 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
         _crypt = new Crypt(this);
     }
 
-    public static void deleteCharByObjId(int objid) {
-        if (objid < 0) {
+    public static void deleteCharByObjId(int objId) {
+        if (objId < 0) {
             return;
         }
 
-        PlayerNameTable.getInstance().removeName(objid);
+        PlayerNameTable.getInstance().removeName(objId);
 
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_contacts WHERE charId=? OR contactId=?")) {
-                ps.setInt(1, objid);
-                ps.setInt(2, objid);
+                ps.setInt(1, objId);
+                ps.setInt(2, objId);
                 ps.execute();
             }
 
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_friends WHERE charId=? OR friendId=?")) {
-                ps.setInt(1, objid);
-                ps.setInt(2, objid);
-                ps.execute();
-            }
+            getDAO(CharacterDAO.class).deleteFriendship(objId);
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_hennas WHERE charId=?")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_macroses WHERE charId=?")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_quests WHERE charId=?")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_recipebook WHERE charId=?")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_shortcuts WHERE charId=?")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_skills WHERE charId=?")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_skills_save WHERE charId=?")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_subclasses WHERE charId=?")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM heroes WHERE charId=?")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM olympiad_nobles WHERE charId=?")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM pets WHERE item_obj_id IN (SELECT object_id FROM items WHERE items.owner_id=?)")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_variations WHERE itemId IN (SELECT object_id FROM items WHERE items.owner_id=?)")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_special_abilities WHERE objectId IN (SELECT object_id FROM items WHERE items.owner_id=?)")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_variables WHERE id IN (SELECT object_id FROM items WHERE items.owner_id=?)")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM items WHERE owner_id=?")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM merchant_lease WHERE player_id=?")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_reco_bonus WHERE charId=?")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_instance_time WHERE charId=?")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE charId=?")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM characters WHERE charId=?")) {
-                ps.setInt(1, objid);
+                ps.setInt(1, objId);
                 ps.execute();
             }
         } catch (Exception e) {
@@ -250,7 +247,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
         return key;
     }
 
-    public Player getActiveChar() {
+    public Player getPlayer() {
         return activeChar;
     }
 

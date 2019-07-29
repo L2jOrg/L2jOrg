@@ -1,6 +1,10 @@
 package org.l2j.gameserver.model;
 
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -11,46 +15,25 @@ import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 public class BlockList {
-    private static final Map<Integer, List<Integer>> OFFLINE_LIST = new ConcurrentHashMap<>();
+    private static final IntMap<IntSet> OFFLINE_LIST = new CHashIntMap<>();
     private static final Logger LOGGER = LoggerFactory.getLogger(BlockList.class);
-    private final Player _owner;
-    private List<Integer> _blockList;
+    private final Player owner;
+    private IntSet list;
 
     public BlockList(Player owner) {
-        _owner = owner;
-        _blockList = OFFLINE_LIST.get(owner.getObjectId());
-        if (_blockList == null) {
-            _blockList = loadList(_owner.getObjectId());
+        this.owner = owner;
+        list = OFFLINE_LIST.get(owner.getObjectId());
+        if (list == null) {
+            list = loadList(this.owner.getObjectId());
         }
     }
 
-    private static List<Integer> loadList(int ObjId) {
-        final List<Integer> list = new ArrayList<>();
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("SELECT friendId FROM character_friends WHERE charId=? AND relation=1")) {
-            statement.setInt(1, ObjId);
-            try (ResultSet rset = statement.executeQuery()) {
-                int friendId;
-                while (rset.next()) {
-                    friendId = rset.getInt("friendId");
-                    if (friendId == ObjId) {
-                        continue;
-                    }
-                    list.add(friendId);
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.warn("Error found in " + ObjId + " FriendList while loading BlockList: " + e.getMessage(), e);
-        }
-        return list;
+    private static IntSet loadList(int objId) {
+        return getDAO(CharacterDAO.class).findBlockListById(objId);
     }
 
     public static boolean isBlocked(Player listOwner, Player target) {
@@ -117,10 +100,6 @@ public class BlockList {
         listOwner.sendPacket(sm);
     }
 
-    public static boolean isInBlockList(Player listOwner, Player target) {
-        return listOwner.getBlockList().isInBlockList(target);
-    }
-
     public static void setBlockAll(Player listOwner, boolean newValue) {
         listOwner.getBlockList().setBlockAll(newValue);
     }
@@ -146,63 +125,44 @@ public class BlockList {
     }
 
     private void addToBlockList(int target) {
-        _blockList.add(target);
+        list.add(target);
         updateInDB(target, true);
     }
 
     private void removeFromBlockList(int target) {
-        _blockList.remove(Integer.valueOf(target));
+        list.remove(target);
         updateInDB(target, false);
     }
 
     public void playerLogout() {
-        OFFLINE_LIST.put(_owner.getObjectId(), _blockList);
+        OFFLINE_LIST.put(owner.getObjectId(), list);
     }
 
-    private void updateInDB(int targetId, boolean state) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            if (state) // add
-            {
-                try (PreparedStatement statement = con.prepareStatement("INSERT INTO character_friends (charId, friendId, relation) VALUES (?, ?, 1)")) {
-                    statement.setInt(1, _owner.getObjectId());
-                    statement.setInt(2, targetId);
-                    statement.execute();
-                }
-            } else
-            // remove
-            {
-                try (PreparedStatement statement = con.prepareStatement("DELETE FROM character_friends WHERE charId=? AND friendId=? AND relation=1")) {
-                    statement.setInt(1, _owner.getObjectId());
-                    statement.setInt(2, targetId);
-                    statement.execute();
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.warn("Could not add block player: " + e.getMessage(), e);
+    private void updateInDB(int targetId, boolean add) {
+        if (add) {
+            getDAO(CharacterDAO.class).saveBlockedPlayer(owner.getObjectId(), targetId);
+        } else {
+            getDAO(CharacterDAO.class).deleteBlockedPlayer(owner.getObjectId(), targetId);
         }
     }
 
     public boolean isInBlockList(Player target) {
-        return _blockList.contains(target.getObjectId());
+        return list.contains(target.getObjectId());
     }
 
     public boolean isInBlockList(int targetId) {
-        return _blockList.contains(targetId);
+        return list.contains(targetId);
     }
 
     public boolean isBlockAll() {
-        return _owner.getMessageRefusal();
+        return owner.getMessageRefusal();
     }
 
     private void setBlockAll(boolean state) {
-        _owner.setMessageRefusal(state);
+        owner.setMessageRefusal(state);
     }
 
-    private List<Integer> getBlockList() {
-        return _blockList;
-    }
-
-    public boolean isBlockAll(Player listOwner) {
-        return listOwner.getBlockList().isBlockAll();
+    private IntSet getBlockList() {
+        return list;
     }
 }

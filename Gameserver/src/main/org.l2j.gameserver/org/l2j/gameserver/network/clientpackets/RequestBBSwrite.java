@@ -27,6 +27,6 @@ public final class RequestBBSwrite extends ClientPacket {
 
     @Override
     public final void runImpl() {
-        CommunityBoardHandler.getInstance().handleWriteCommand(client.getActiveChar(), _url, _arg1, _arg2, _arg3, _arg4, _arg5);
+        CommunityBoardHandler.getInstance().handleWriteCommand(client.getPlayer(), _url, _arg1, _arg2, _arg3, _arg4, _arg5);
     }
 }

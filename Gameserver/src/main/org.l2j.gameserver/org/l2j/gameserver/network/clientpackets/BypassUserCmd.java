@@ -19,7 +19,7 @@ public class BypassUserCmd extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = client.getActiveChar();
+        final Player player = client.getPlayer();
         if (player == null) {
             return;
         }
@@ -30,7 +30,7 @@ public class BypassUserCmd extends ClientPacket {
                 player.sendMessage("User commandID " + _command + " not implemented yet.");
             }
         } else {
-            handler.useUserCommand(_command, client.getActiveChar());
+            handler.useUserCommand(_command, client.getPlayer());
         }
     }
 }

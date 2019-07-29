@@ -129,7 +129,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private boolean _isImmobilized = false;
     private boolean _isOverloaded = false; // the char is carrying too much
     private boolean _isPendingRevive = false;
-    private boolean _isRunning;
+    protected boolean running;
     private boolean _isInvul = false;
     private boolean _isUndying = false;
     private boolean _isFlying = false;
@@ -736,12 +736,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return;
         }
         try {
-            if ((target == null) || (isAttackingDisabled() && !isSummon()) || !target.isTargetable()) {
+            if ((target == null) || (isAttackingDisabled() && !GameUtils.isSummon(this)) || !target.isTargetable()) {
                 return;
             }
 
             if (!isAlikeDead()) {
-                if ((isNpc() && target.isAlikeDead()) || !isInSurroundingRegion(target)) {
+                if ((GameUtils.isNpc(this) && target.isAlikeDead()) || !isInSurroundingRegion(target)) {
                     getAI().setIntention(AI_INTENTION_ACTIVE);
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
@@ -1696,15 +1696,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return True if the Creature is running.
      */
     public boolean isRunning() {
-        return _isRunning;
+        return running;
     }
 
     private final void setIsRunning(boolean value) {
-        if (_isRunning == value) {
+        if (running == value) {
             return;
         }
-
-        _isRunning = value;
+        running = value;
         if (_stat.getRunSpeed() != 0) {
             broadcastPacket(new ChangeMoveType(this));
         }
@@ -4406,9 +4405,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public MoveType getMoveType() {
-        if (isMoving() && _isRunning) {
+        if (isMoving() && running) {
             return MoveType.RUNNING;
-        } else if (isMoving() && !_isRunning) {
+        } else if (isMoving() && !running) {
             return MoveType.WALKING;
         }
         return MoveType.STANDING;

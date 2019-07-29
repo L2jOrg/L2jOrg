@@ -22,7 +22,7 @@ public final class RequestHennaItemRemoveInfo extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getActiveChar();
+        final Player activeChar = client.getPlayer();
         if ((activeChar == null) || (_symbolId == 0)) {
             return;
         }

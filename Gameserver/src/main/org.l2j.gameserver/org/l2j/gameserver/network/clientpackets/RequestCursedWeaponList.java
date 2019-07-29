@@ -16,7 +16,7 @@ public class RequestCursedWeaponList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Creature activeChar = client.getActiveChar();
+        final Creature activeChar = client.getPlayer();
         if (activeChar == null) {
             return;
         }

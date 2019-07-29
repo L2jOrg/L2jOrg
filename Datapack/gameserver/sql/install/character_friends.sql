@@ -1,3 +1,4 @@
+-- TODO change to characters relationships and put index
 DROP TABLE IF EXISTS `character_friends`;
 CREATE TABLE IF NOT EXISTS `character_friends` (
   `charId` INT UNSIGNED NOT NULL DEFAULT 0,

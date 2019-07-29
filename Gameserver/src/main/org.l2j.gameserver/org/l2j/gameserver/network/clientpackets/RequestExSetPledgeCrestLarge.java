@@ -31,7 +31,7 @@ public final class RequestExSetPledgeCrestLarge extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getActiveChar();
+        final Player activeChar = client.getPlayer();
         if (activeChar == null) {
             return;
         }

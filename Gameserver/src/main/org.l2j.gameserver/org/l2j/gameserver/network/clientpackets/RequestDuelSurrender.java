@@ -14,6 +14,6 @@ public final class RequestDuelSurrender extends ClientPacket {
 
     @Override
     public void runImpl() {
-        DuelManager.getInstance().doSurrender(client.getActiveChar());
+        DuelManager.getInstance().doSurrender(client.getPlayer());
     }
 }

@@ -13,7 +13,7 @@ public final class RequestSkillList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player cha = client.getActiveChar();
+        final Player cha = client.getPlayer();
         if (cha != null) {
             cha.sendSkillList();
         }

@@ -59,7 +59,7 @@ public final class RequestSetCrop extends ClientPacket {
         }
 
         // Check player privileges
-        final Player player = client.getActiveChar();
+        final Player player = client.getPlayer();
         if ((player == null) || (player.getClan() == null) || (player.getClan().getCastleId() != _manorId) || !player.hasClanPrivilege(ClanPrivilege.CS_MANOR_ADMIN) || !player.getLastFolkNPC().canInteract(player)) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;

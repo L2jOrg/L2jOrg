@@ -13,8 +13,8 @@ public final class RequestItemList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if ((client != null) && (client.getActiveChar() != null) && !client.getActiveChar().isInventoryDisabled()) {
-            client.getActiveChar().sendItemList();
+        if ((client != null) && (client.getPlayer() != null) && !client.getPlayer().isInventoryDisabled()) {
+            client.getPlayer().sendItemList();
         }
     }
 }

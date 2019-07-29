@@ -34,6 +34,10 @@ import org.l2j.gameserver.util.BuilderUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Objects;
+
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
+
 /**
  * Enter World Packet Handler
  * <p>
@@ -64,8 +68,8 @@ public class EnterWorld extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getActiveChar();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+        if (player == null) {
             LOGGER.warn("EnterWorld failed! activeChar returned 'null'.");
             Disconnection.of(client).defaultSequence(false);
             return;
@@ -86,83 +90,83 @@ public class EnterWorld extends ClientPacket {
 
         // Restore to instanced area if enabled
         if (Config.RESTORE_PLAYER_INSTANCE) {
-            final PlayerVariables vars = activeChar.getVariables();
-            final Instance instance = InstanceManager.getInstance().getPlayerInstance(activeChar, false);
+            final PlayerVariables vars = player.getVariables();
+            final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
             if ((instance != null) && (instance.getId() == vars.getInt("INSTANCE_RESTORE", 0))) {
-                activeChar.setInstance(instance);
+                player.setInstance(instance);
             }
             vars.remove("INSTANCE_RESTORE");
         }
 
-        activeChar.updatePvpTitleAndColor(false);
+        player.updatePvpTitleAndColor(false);
 
         // Apply special GM properties to the GM when entering
-        if (activeChar.isGM()) {
-            onGameMasterEnter(activeChar);
+        if (player.isGM()) {
+            onGameMasterEnter(player);
         }
 
         // Chat banned icon.
-        if (activeChar.isChatBanned()) {
-            activeChar.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.NO_CHAT);
+        if (player.isChatBanned()) {
+            player.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.NO_CHAT);
         }
 
         // Set dead status if applies
-        if (activeChar.getCurrentHp() < 0.5) {
-            activeChar.setIsDead(true);
+        if (player.getCurrentHp() < 0.5) {
+            player.setIsDead(true);
         }
 
         if (Config.ENABLE_VITALITY) {
-            activeChar.sendPacket(new ExVitalityEffectInfo(activeChar));
+            player.sendPacket(new ExVitalityEffectInfo(player));
         }
 
         // Send Macro List
-        activeChar.getMacros().sendAllMacros();
+        player.getMacros().sendAllMacros();
 
         // Send Teleport Bookmark List
-        client.sendPacket(new ExGetBookMarkInfoPacket(activeChar));
+        client.sendPacket(new ExGetBookMarkInfoPacket(player));
 
         // Send Item List
-        client.sendPacket(new ItemList(1, activeChar));
-        client.sendPacket(new ItemList(2, activeChar));
+        client.sendPacket(new ItemList(1, player));
+        client.sendPacket(new ItemList(2, player));
 
         // Send Quest Item List
-        client.sendPacket(new ExQuestItemList(1, activeChar));
-        client.sendPacket(new ExQuestItemList(2, activeChar));
+        client.sendPacket(new ExQuestItemList(1, player));
+        client.sendPacket(new ExQuestItemList(2, player));
 
         // Send Adena and Inventory Count
-        client.sendPacket(new ExAdenaInvenCount(activeChar));
+        client.sendPacket(new ExAdenaInvenCount(player));
 
         // Send Shortcuts
-        client.sendPacket(new ShortCutInit(activeChar));
+        client.sendPacket(new ShortCutInit(player));
 
         // Send Action list
-        activeChar.sendPacket(ExBasicActionList.STATIC_PACKET);
+        player.sendPacket(ExBasicActionList.STATIC_PACKET);
 
         // Send blank skill list
-        activeChar.sendPacket(new SkillList());
+        player.sendPacket(new SkillList());
 
         // Send castle state.
         for (Castle castle : CastleManager.getInstance().getCastles()) {
-            activeChar.sendPacket(new ExCastleState(castle));
+            player.sendPacket(new ExCastleState(castle));
         }
 
         // Send Dye Information
-        activeChar.sendPacket(new HennaInfo(activeChar));
+        player.sendPacket(new HennaInfo(player));
 
         // Send Skill list
-        activeChar.sendSkillList();
+        player.sendSkillList();
 
         // Send EtcStatusUpdate
-        activeChar.sendPacket(new EtcStatusUpdate(activeChar));
+        player.sendPacket(new EtcStatusUpdate(player));
 
         boolean showClanNotice = false;
 
         // Clan related checks are here
-        final Clan clan = activeChar.getClan();
+        final Clan clan = player.getClan();
         // Clan packets
         if (clan != null) {
-            notifyClanMembers(activeChar);
-            notifySponsorOrApprentice(activeChar);
+            notifyClanMembers(player);
+            notifySponsorOrApprentice(player);
 
             for (Siege siege : SiegeManager.getInstance().getSieges()) {
                 if (!siege.isInProgress()) {
@@ -170,11 +174,11 @@ public class EnterWorld extends ClientPacket {
                 }
 
                 if (siege.checkIsAttacker(clan)) {
-                    activeChar.setSiegeState((byte) 1);
-                    activeChar.setSiegeSide(siege.getCastle().getResidenceId());
+                    player.setSiegeState((byte) 1);
+                    player.setSiegeSide(siege.getCastle().getResidenceId());
                 } else if (siege.checkIsDefender(clan)) {
-                    activeChar.setSiegeState((byte) 2);
-                    activeChar.setSiegeSide(siege.getCastle().getResidenceId());
+                    player.setSiegeState((byte) 2);
+                    player.setSiegeSide(siege.getCastle().getResidenceId());
                 }
             }
 
@@ -184,132 +188,127 @@ public class EnterWorld extends ClientPacket {
                 }
 
                 if (siege.checkIsAttacker(clan)) {
-                    activeChar.setSiegeState((byte) 1);
-                    activeChar.setSiegeSide(siege.getFort().getResidenceId());
+                    player.setSiegeState((byte) 1);
+                    player.setSiegeSide(siege.getFort().getResidenceId());
                 } else if (siege.checkIsDefender(clan)) {
-                    activeChar.setSiegeState((byte) 2);
-                    activeChar.setSiegeSide(siege.getFort().getResidenceId());
+                    player.setSiegeState((byte) 2);
+                    player.setSiegeSide(siege.getFort().getResidenceId());
                 }
             }
 
             // Residential skills support
-            if (activeChar.getClan().getCastleId() > 0) {
-                CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(activeChar);
+            if (player.getClan().getCastleId() > 0) {
+                CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(player);
             }
 
-            if (activeChar.getClan().getFortId() > 0) {
-                FortDataManager.getInstance().getFortByOwner(clan).giveResidentialSkills(activeChar);
+            if (player.getClan().getFortId() > 0) {
+                FortDataManager.getInstance().getFortByOwner(clan).giveResidentialSkills(player);
             }
 
             showClanNotice = clan.isNoticeEnabled();
 
-            clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(activeChar));
-            PledgeShowMemberListAll.sendAllTo(activeChar);
+            clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(player));
+            PledgeShowMemberListAll.sendAllTo(player);
             clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
-            activeChar.sendPacket(new PledgeSkillList(clan));
+            player.sendPacket(new PledgeSkillList(clan));
             final ClanHall ch = ClanHallData.getInstance().getClanHallByClan(clan);
             if ((ch != null) && (ch.getCostFailDay() > 0)) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
                 sm.addInt(ch.getLease());
-                activeChar.sendPacket(sm);
+                player.sendPacket(sm);
             }
         } else {
-            activeChar.sendPacket(ExPledgeWaitingListAlarm.STATIC_PACKET);
+            player.sendPacket(ExPledgeWaitingListAlarm.STATIC_PACKET);
         }
 
         // Send SubClass Info
-        activeChar.sendPacket(new ExSubjobInfo(activeChar, SubclassInfoType.NO_CHANGES));
+        player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NO_CHANGES));
 
         // Send Inventory Info
-        activeChar.sendPacket(new ExUserInfoInvenWeight(activeChar));
+        player.sendPacket(new ExUserInfoInvenWeight(player));
 
         // Send Adena / Inventory Count Info
-        activeChar.sendPacket(new ExAdenaInvenCount(activeChar));
+        player.sendPacket(new ExAdenaInvenCount(player));
 
         // Send Unread Mail Count
-        if (MailManager.getInstance().hasUnreadPost(activeChar)) {
-            activeChar.sendPacket(new ExUnReadMailCount(activeChar));
+        if (MailManager.getInstance().hasUnreadPost(player)) {
+            player.sendPacket(new ExUnReadMailCount(player));
         }
 
         // Send Quest List
-        activeChar.sendPacket(new QuestList(activeChar));
+        player.sendPacket(new QuestList(player));
 
         if (Config.PLAYER_SPAWN_PROTECTION > 0) {
-            activeChar.setSpawnProtection(true);
+            player.setSpawnProtection(true);
         }
 
-        activeChar.spawnMe();
-        activeChar.sendPacket(new ExRotation(activeChar.getObjectId(), activeChar.getHeading()));
+        player.spawnMe();
+        player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
 
-        activeChar.getInventory().applyItemSkills();
+        player.getInventory().applyItemSkills();
 
-        if (Event.isParticipant(activeChar)) {
-            Event.restorePlayerEventStatus(activeChar);
+        if (Event.isParticipant(player)) {
+            Event.restorePlayerEventStatus(player);
         }
 
-        if (activeChar.isCursedWeaponEquipped()) {
-            CursedWeaponsManager.getInstance().getCursedWeapon(activeChar.getCursedWeaponEquippedId()).cursedOnLogin();
+        if (player.isCursedWeaponEquipped()) {
+            CursedWeaponsManager.getInstance().getCursedWeapon(player.getCursedWeaponEquippedId()).cursedOnLogin();
         }
 
         if (Config.PC_CAFE_ENABLED) {
-            if (activeChar.getPcCafePoints() > 0) {
-                activeChar.sendPacket(new ExPCCafePointInfo(activeChar.getPcCafePoints(), 0, 1));
+            if (player.getPcCafePoints() > 0) {
+                player.sendPacket(new ExPCCafePointInfo(player.getPcCafePoints(), 0, 1));
             } else {
-                activeChar.sendPacket(new ExPCCafePointInfo());
+                player.sendPacket(new ExPCCafePointInfo());
             }
         }
 
         // Expand Skill
-        activeChar.sendPacket(new ExStorageMaxCount(activeChar));
+        player.sendPacket(new ExStorageMaxCount(player));
 
         // Friend list
-        client.sendPacket(new FriendListPacket(activeChar));
+        client.sendPacket(new FriendListPacket(player));
 
-        SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN);
-        sm.addString(activeChar.getName());
-        for (int id : activeChar.getFriendList()) {
-            final WorldObject obj = World.getInstance().findObject(id);
-            if (obj != null) {
-                obj.sendPacket(sm);
-            }
-        }
+        SystemMessage sm = getSystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN).addString(player.getName());
+        var world = World.getInstance();
+        player.getFriendList().stream().mapToObj(world::findPlayer).filter(Objects::nonNull).forEach(sm::sendTo);
 
-        activeChar.sendPacket(SystemMessageId.WELCOME_TO_THE_WORLD_OF_LINEAGE_II);
+        player.sendPacket(SystemMessageId.WELCOME_TO_THE_WORLD_OF_LINEAGE_II);
 
-        AnnouncementsTable.getInstance().showAnnouncements(activeChar);
+        AnnouncementsTable.getInstance().showAnnouncements(player);
 
         if ((Config.SERVER_RESTART_SCHEDULE_ENABLED) && (Config.SERVER_RESTART_SCHEDULE_MESSAGE)) {
-            activeChar.sendPacket(new CreatureSay(2, ChatType.BATTLEFIELD, "[SERVER]", "Next restart is scheduled at " + ServerRestartManager.getInstance().getNextRestartTime() + "."));
+            player.sendPacket(new CreatureSay(2, ChatType.BATTLEFIELD, "[SERVER]", "Next restart is scheduled at " + ServerRestartManager.getInstance().getNextRestartTime() + "."));
         }
 
         if (showClanNotice) {
             final NpcHtmlMessage notice = new NpcHtmlMessage();
-            notice.setFile(activeChar, "data/html/clanNotice.htm");
-            notice.replace("%clan_name%", activeChar.getClan().getName());
-            notice.replace("%notice_text%", activeChar.getClan().getNotice().replaceAll("\r\n", "<br>"));
+            notice.setFile(player, "data/html/clanNotice.htm");
+            notice.replace("%clan_name%", player.getClan().getName());
+            notice.replace("%notice_text%", player.getClan().getNotice().replaceAll("\r\n", "<br>"));
             notice.disableValidation();
             client.sendPacket(notice);
         } else if (Config.SERVER_NEWS) {
-            final String serverNews = HtmCache.getInstance().getHtm(activeChar, "data/html/servnews.htm");
+            final String serverNews = HtmCache.getInstance().getHtm(player, "data/html/servnews.htm");
             if (serverNews != null) {
                 client.sendPacket(new NpcHtmlMessage(serverNews));
             }
         }
 
         if (Config.PETITIONING_ALLOWED) {
-            PetitionManager.getInstance().checkPetitionMessages(activeChar);
+            PetitionManager.getInstance().checkPetitionMessages(player);
         }
 
-        if (activeChar.isAlikeDead()) // dead or fake dead
+        if (player.isAlikeDead()) // dead or fake dead
         {
             // no broadcast needed since the player will already spawn dead to others
-            client.sendPacket(new Die(activeChar));
+            client.sendPacket(new Die(player));
         }
 
-        client.sendPacket(new SkillCoolTime(activeChar));
-        client.sendPacket(new ExVoteSystemInfo(activeChar));
+        client.sendPacket(new SkillCoolTime(player));
+        client.sendPacket(new ExVoteSystemInfo(player));
 
-        for (Item item : activeChar.getInventory().getItems()) {
+        for (Item item : player.getInventory().getItems()) {
             if (item.isTimeLimitedItem()) {
                 item.scheduleLifeTimeTask();
             }
@@ -318,101 +317,101 @@ public class EnterWorld extends ClientPacket {
             }
         }
 
-        for (Item whItem : activeChar.getWarehouse().getItems()) {
+        for (Item whItem : player.getWarehouse().getItems()) {
             if (whItem.isTimeLimitedItem()) {
                 whItem.scheduleLifeTimeTask();
             }
         }
 
-        if (activeChar.getClanJoinExpiryTime() > System.currentTimeMillis()) {
-            activeChar.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
+        if (player.getClanJoinExpiryTime() > System.currentTimeMillis()) {
+            player.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
         }
 
         // remove combat flag before teleporting
-        if (activeChar.getInventory().getItemByItemId(9819) != null) {
-            final Fort fort = FortDataManager.getInstance().getFort(activeChar);
+        if (player.getInventory().getItemByItemId(9819) != null) {
+            final Fort fort = FortDataManager.getInstance().getFort(player);
             if (fort != null) {
-                FortSiegeManager.getInstance().dropCombatFlag(activeChar, fort.getResidenceId());
+                FortSiegeManager.getInstance().dropCombatFlag(player, fort.getResidenceId());
             } else {
-                final long slot = activeChar.getInventory().getSlotFromItem(activeChar.getInventory().getItemByItemId(9819));
-                activeChar.getInventory().unEquipItemInBodySlot(slot);
-                activeChar.destroyItem("CombatFlag", activeChar.getInventory().getItemByItemId(9819), null, true);
+                final long slot = player.getInventory().getSlotFromItem(player.getInventory().getItemByItemId(9819));
+                player.getInventory().unEquipItemInBodySlot(slot);
+                player.destroyItem("CombatFlag", player.getInventory().getItemByItemId(9819), null, true);
             }
         }
 
         // Attacker or spectator logging in to a siege zone.
         // Actually should be checked for inside castle only?
-        if (!activeChar.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && activeChar.isInsideZone(ZoneId.SIEGE) && (!activeChar.isInSiege() || (activeChar.getSiegeState() < 2))) {
-            activeChar.teleToLocation(TeleportWhereType.TOWN);
+        if (!player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && player.isInsideZone(ZoneId.SIEGE) && (!player.isInSiege() || (player.getSiegeState() < 2))) {
+            player.teleToLocation(TeleportWhereType.TOWN);
         }
 
         // Remove demonic weapon if character is not cursed weapon equipped.
-        if ((activeChar.getInventory().getItemByItemId(8190) != null) && !activeChar.isCursedWeaponEquipped()) {
-            activeChar.destroyItem("Zariche", activeChar.getInventory().getItemByItemId(8190), null, true);
+        if ((player.getInventory().getItemByItemId(8190) != null) && !player.isCursedWeaponEquipped()) {
+            player.destroyItem("Zariche", player.getInventory().getItemByItemId(8190), null, true);
         }
-        if ((activeChar.getInventory().getItemByItemId(8689) != null) && !activeChar.isCursedWeaponEquipped()) {
-            activeChar.destroyItem("Akamanah", activeChar.getInventory().getItemByItemId(8689), null, true);
+        if ((player.getInventory().getItemByItemId(8689) != null) && !player.isCursedWeaponEquipped()) {
+            player.destroyItem("Akamanah", player.getInventory().getItemByItemId(8689), null, true);
         }
 
         if (Config.ALLOW_MAIL) {
-            if (MailManager.getInstance().hasUnreadPost(activeChar)) {
+            if (MailManager.getInstance().hasUnreadPost(player)) {
                 client.sendPacket(ExNoticePostArrived.valueOf(false));
             }
         }
 
         if (Config.WELCOME_MESSAGE_ENABLED) {
-            activeChar.sendPacket(new ExShowScreenMessage(Config.WELCOME_MESSAGE_TEXT, Config.WELCOME_MESSAGE_TIME));
+            player.sendPacket(new ExShowScreenMessage(Config.WELCOME_MESSAGE_TEXT, Config.WELCOME_MESSAGE_TIME));
         }
 
-        final int birthday = activeChar.checkBirthDay();
+        final int birthday = player.checkBirthDay();
         if (birthday == 0) {
-            activeChar.sendPacket(SystemMessageId.HAPPY_BIRTHDAY_ALEGRIA_HAS_SENT_YOU_A_BIRTHDAY_GIFT);
+            player.sendPacket(SystemMessageId.HAPPY_BIRTHDAY_ALEGRIA_HAS_SENT_YOU_A_BIRTHDAY_GIFT);
             // activeChar.sendPacket(new ExBirthdayPopup()); Removed in H5?
         } else if (birthday != -1) {
-            sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_DAYS_REMAINING_UNTIL_YOUR_BIRTHDAY_ON_YOUR_BIRTHDAY_YOU_WILL_RECEIVE_A_GIFT_THAT_ALEGRIA_HAS_CAREFULLY_PREPARED);
+            sm = getSystemMessage(SystemMessageId.THERE_ARE_S1_DAYS_REMAINING_UNTIL_YOUR_BIRTHDAY_ON_YOUR_BIRTHDAY_YOU_WILL_RECEIVE_A_GIFT_THAT_ALEGRIA_HAS_CAREFULLY_PREPARED);
             sm.addString(Integer.toString(birthday));
-            activeChar.sendPacket(sm);
+            player.sendPacket(sm);
         }
 
-        if (!activeChar.getPremiumItemList().isEmpty()) {
-            activeChar.sendPacket(ExNotifyPremiumItem.STATIC_PACKET);
+        if (!player.getPremiumItemList().isEmpty()) {
+            player.sendPacket(ExNotifyPremiumItem.STATIC_PACKET);
         }
 
         if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.STORE_OFFLINE_TRADE_IN_REALTIME) {
-            OfflineTradersTable.onTransaction(activeChar, true, false);
+            OfflineTradersTable.onTransaction(player, true, false);
         }
 
-        if (BeautyShopData.getInstance().hasBeautyData(activeChar.getRace(), activeChar.getAppearance().getSexType())) {
-            activeChar.sendPacket(new ExBeautyItemList(activeChar));
+        if (BeautyShopData.getInstance().hasBeautyData(player.getRace(), player.getAppearance().getSexType())) {
+            player.sendPacket(new ExBeautyItemList(player));
         }
 
-        if(activeChar.getActiveElementalSpiritType() >= 0) {
-            client.sendPacket(new ElementalSpiritInfo(activeChar.getActiveElementalSpiritType(), (byte) 2));
+        if(player.getActiveElementalSpiritType() >= 0) {
+            client.sendPacket(new ElementalSpiritInfo(player.getActiveElementalSpiritType(), (byte) 2));
         }
 
-        activeChar.broadcastUserInfo();
+        player.broadcastUserInfo();
         // Send Equipped Items
-        activeChar.sendPacket(new ExUserInfoEquipSlot(activeChar));
+        player.sendPacket(new ExUserInfoEquipSlot(player));
 
         if (Config.ENABLE_WORLD_CHAT) {
-            activeChar.sendPacket(new ExWorldChatCnt(activeChar));
+            player.sendPacket(new ExWorldChatCnt(player));
         }
-        activeChar.sendPacket(new ExConnectedTimeAndGettableReward(activeChar));
+        player.sendPacket(new ExConnectedTimeAndGettableReward(player));
 
         // Handle soulshots, disable all on EnterWorld
-        activeChar.sendPacket(new ExAutoSoulShot(0, true, 0));
-        activeChar.sendPacket(new ExAutoSoulShot(0, true, 1));
-        activeChar.sendPacket(new ExAutoSoulShot(0, true, 2));
-        activeChar.sendPacket(new ExAutoSoulShot(0, true, 3));
+        player.sendPacket(new ExAutoSoulShot(0, true, 0));
+        player.sendPacket(new ExAutoSoulShot(0, true, 1));
+        player.sendPacket(new ExAutoSoulShot(0, true, 2));
+        player.sendPacket(new ExAutoSoulShot(0, true, 3));
 
 
         // Fix for equipped item skills
-        if (!activeChar.getEffectList().getCurrentAbnormalVisualEffects().isEmpty()) {
-            activeChar.updateAbnormalVisualEffects();
+        if (!player.getEffectList().getCurrentAbnormalVisualEffects().isEmpty()) {
+            player.updateAbnormalVisualEffects();
         }
 
         if (Config.ENABLE_ATTENDANCE_REWARDS) {
-            sendAttendanceInfo(activeChar);
+            sendAttendanceInfo(player);
         }
 
         if (Config.HARDWARE_INFO_ENABLED) {
@@ -424,8 +423,8 @@ public class EnterWorld extends ClientPacket {
             }, 5000);
         }
 
-        activeChar.onPlayerEnter();
-        Quest.playerEnter(activeChar);
+        player.onPlayerEnter();
+        Quest.playerEnter(player);
     }
 
     private void sendAttendanceInfo(Player activeChar) {
@@ -495,7 +494,7 @@ public class EnterWorld extends ClientPacket {
         if (clan != null) {
             clan.getClanMember(activeChar.getObjectId()).setPlayerInstance(activeChar);
 
-            final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME);
+            final SystemMessage msg = getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME);
             msg.addString(activeChar.getName());
             clan.broadcastToOtherOnlineMembers(msg, activeChar);
             clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(activeChar), activeChar);
@@ -506,14 +505,14 @@ public class EnterWorld extends ClientPacket {
         if (activeChar.getSponsor() != 0) {
             final Player sponsor = World.getInstance().findPlayer(activeChar.getSponsor());
             if (sponsor != null) {
-                final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_APPRENTICE_S1_HAS_LOGGED_IN);
+                final SystemMessage msg = getSystemMessage(SystemMessageId.YOUR_APPRENTICE_S1_HAS_LOGGED_IN);
                 msg.addString(activeChar.getName());
                 sponsor.sendPacket(msg);
             }
         } else if (activeChar.getApprentice() != 0) {
             final Player apprentice = World.getInstance().findPlayer(activeChar.getApprentice());
             if (apprentice != null) {
-                final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SPONSOR_C1_HAS_LOGGED_IN);
+                final SystemMessage msg = getSystemMessage(SystemMessageId.YOUR_SPONSOR_C1_HAS_LOGGED_IN);
                 msg.addString(activeChar.getName());
                 apprentice.sendPacket(msg);
             }

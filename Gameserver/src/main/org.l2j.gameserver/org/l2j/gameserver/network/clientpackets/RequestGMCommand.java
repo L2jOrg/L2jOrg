@@ -24,7 +24,7 @@ public final class RequestGMCommand extends ClientPacket {
     @Override
     public void runImpl() {
         // prevent non gm or low level GMs from vieweing player stuff
-        if (!client.getActiveChar().isGM() || !client.getActiveChar().getAccessLevel().allowAltG()) {
+        if (!client.getPlayer().isGM() || !client.getPlayer().getAccessLevel().allowAltG()) {
             return;
         }
 

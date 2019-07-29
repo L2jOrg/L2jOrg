@@ -13,7 +13,7 @@ public class ExBRGamePoint extends ServerPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_BR_GAME_POINT);
 
-        var player = client.getActiveChar();
+        var player = client.getPlayer();
         writeInt(player.getObjectId());
         writeLong(client.getCoin());
         writeInt(0x00);

@@ -43,7 +43,7 @@ public abstract class IdFactory {
         clanDao.resetSubpledgeLeaderWithoutCharacter();
 
         getDAO(CastleDAO.class).updateToNeutralWithoutOwner();
-        getDAO(CharacterDAO.class).resetClanInfoOfInextentClan();
+        getDAO(CharacterDAO.class).resetClanInfoOfNonexistentClan();
         getDAO(FortDAO.class).resetWithoutOwner();
 
         LOGGER.info("Cleaned {} elements from database in {} s", cleanCount, (System.currentTimeMillis() - cleanupStart) / 1000);

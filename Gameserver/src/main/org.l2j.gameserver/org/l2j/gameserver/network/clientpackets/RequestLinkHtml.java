@@ -23,7 +23,7 @@ public final class RequestLinkHtml extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player actor = client.getActiveChar();
+        final Player actor = client.getPlayer();
         if (actor == null) {
             return;
         }

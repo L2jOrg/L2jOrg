@@ -22,7 +22,7 @@ public class ExElementalSpiritChangeType extends ClientPacket {
 
     @Override
     protected void runImpl() {
-        var player = client.getActiveChar();
+        var player = client.getPlayer();
 
         if(isNull(player.getElementalSpirit(ElementalType.of(element)))) {
             client.sendPacket(NO_SPIRITS_ARE_AVAILABLE);

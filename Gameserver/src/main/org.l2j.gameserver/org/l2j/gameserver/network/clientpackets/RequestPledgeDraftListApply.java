@@ -21,7 +21,7 @@ public class RequestPledgeDraftListApply extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getActiveChar();
+        final Player activeChar = client.getPlayer();
 
         if ((activeChar == null) || (activeChar.getClan() != null)) {
             return;

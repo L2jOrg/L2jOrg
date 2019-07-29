@@ -23,7 +23,7 @@ public class ExRequestBlockListForAD extends ClientPacket {
             return;
         }
 
-        var player = client.getActiveChar();
+        var player = client.getPlayer();
         final int reportedId = PlayerNameTable.getInstance().getIdByName(name);
         BlockList.addToBlockList(player, reportedId);
 

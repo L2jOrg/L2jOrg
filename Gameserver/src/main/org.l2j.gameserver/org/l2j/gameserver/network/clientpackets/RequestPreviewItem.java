@@ -65,7 +65,7 @@ public final class RequestPreviewItem extends ClientPacket {
         }
 
         // Get the current player and return if null
-        final Player activeChar = client.getActiveChar();
+        final Player activeChar = client.getPlayer();
         if (activeChar == null) {
             return;
         }

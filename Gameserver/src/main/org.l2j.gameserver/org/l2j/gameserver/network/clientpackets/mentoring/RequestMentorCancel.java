@@ -31,7 +31,7 @@ public class RequestMentorCancel extends ClientPacket {
             return;
         }
 
-        final Player player = client.getActiveChar();
+        final Player player = client.getPlayer();
         final int objectId = PlayerNameTable.getInstance().getIdByName(_name);
         if (player != null) {
             if (player.isMentor()) {

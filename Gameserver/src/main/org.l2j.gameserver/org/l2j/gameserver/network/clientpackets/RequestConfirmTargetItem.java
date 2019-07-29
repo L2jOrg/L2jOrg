@@ -21,7 +21,7 @@ public final class RequestConfirmTargetItem extends AbstractRefinePacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getActiveChar();
+        final Player activeChar = client.getPlayer();
         if (activeChar == null) {
             return;
         }

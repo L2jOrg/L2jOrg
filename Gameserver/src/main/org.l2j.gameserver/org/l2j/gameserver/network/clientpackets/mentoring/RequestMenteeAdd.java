@@ -20,7 +20,7 @@ public class RequestMenteeAdd extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player mentor = client.getActiveChar();
+        final Player mentor = client.getPlayer();
         if (mentor == null) {
             return;
         }

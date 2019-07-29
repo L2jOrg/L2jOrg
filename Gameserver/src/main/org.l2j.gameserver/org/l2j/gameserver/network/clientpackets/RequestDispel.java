@@ -29,7 +29,7 @@ public class RequestDispel extends ClientPacket {
         if ((_skillId <= 0) || (_skillLevel <= 0)) {
             return;
         }
-        final Player activeChar = client.getActiveChar();
+        final Player activeChar = client.getPlayer();
         if (activeChar == null) {
             return;
         }

@@ -301,7 +301,7 @@ public abstract class Summon extends Playable {
                 party.broadcastToPartyMembers(owner, new ExPartyPetWindowDelete(this));
             }
 
-            if (isPet()) {
+            if (GameUtils.isPet(this)) {
                 owner.setPet(null);
             } else {
                 owner.removeServitor(getObjectId());

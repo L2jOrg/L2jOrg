@@ -14,7 +14,7 @@ public class ReceiveVipInfo extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) {
-        var player = client.getActiveChar();
+        var player = client.getPlayer();
         var vipData = VipData.getInstance();
         var vipTier = player.getVipTier();
 

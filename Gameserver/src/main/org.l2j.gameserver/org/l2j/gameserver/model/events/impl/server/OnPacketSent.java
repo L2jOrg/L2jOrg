@@ -34,7 +34,7 @@ public class OnPacketSent implements IBaseEvent {
     }
 
     public Player getActiveChar() {
-        return _client.getActiveChar();
+        return _client.getPlayer();
     }
 
     public GameClient getClient() {

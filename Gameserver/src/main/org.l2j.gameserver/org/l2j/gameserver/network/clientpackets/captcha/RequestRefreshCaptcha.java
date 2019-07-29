@@ -19,7 +19,7 @@ public class RequestRefreshCaptcha extends ClientPacket {
 
     @Override
     protected void runImpl()  {
-        var player = client.getActiveChar();
+        var player = client.getPlayer();
         var request = player.getRequest(CaptchaRequest.class);
         Captcha captcha = CaptchaEngine.getInstance().next((int) captchaId);
         if(nonNull(request)) {

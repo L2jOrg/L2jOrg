@@ -13,7 +13,7 @@ public class ReceiveVipProductList extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) {
-        var player = client.getActiveChar();
+        var player = client.getPlayer();
         var products = PrimeShopData.getInstance().getPrimeItems();
         var gift = PrimeShopData.getInstance().getVipGiftOfTier(player.getVipTier());
 

@@ -40,7 +40,7 @@ public final class Attack extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getActiveChar();
+        final Player activeChar = client.getPlayer();
         if (isNull(activeChar)) {
             return;
         }

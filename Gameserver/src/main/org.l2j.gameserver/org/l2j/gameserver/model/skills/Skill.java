@@ -36,7 +36,7 @@ import java.util.*;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.*;
 
 public final class Skill implements IIdentifiable {
     private static final Logger LOGGER = LoggerFactory.getLogger(Skill.class);
@@ -1187,7 +1187,7 @@ public final class Skill implements IIdentifiable {
 
             applyEffectScope(EffectScope.GENERAL, info, instant, addContinuousEffects);
 
-            final EffectScope pvpOrPveEffectScope = effector.isPlayable() && effected.isAttackable() ? EffectScope.PVE : effector.isPlayable() && effected.isPlayable() ? EffectScope.PVP : null;
+            final EffectScope pvpOrPveEffectScope = isPlayable(effector) && isAttackable(effected) ? EffectScope.PVE : isPlayable(effector) && isPlayable(effected) ? EffectScope.PVP : null;
             applyEffectScope(pvpOrPveEffectScope, info, instant, addContinuousEffects);
 
             if (addContinuousEffects) {

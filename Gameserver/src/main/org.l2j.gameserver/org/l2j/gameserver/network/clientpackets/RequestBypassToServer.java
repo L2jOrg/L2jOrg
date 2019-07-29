@@ -79,7 +79,7 @@ public final class RequestBypassToServer extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getActiveChar();
+        final Player activeChar = client.getPlayer();
         if (activeChar == null) {
             return;
         }
@@ -206,7 +206,7 @@ public final class RequestBypassToServer extends ClientPacket {
                     EventDispatcher.getInstance().notifyEventAsync(new OnNpcManorBypass(activeChar, lastNpc, ask, state, time), lastNpc);
                 }
             } else if (_command.startsWith("pccafe")) {
-                final Player player = client.getActiveChar();
+                final Player player = client.getPlayer();
                 if ((player == null) || !Config.PC_CAFE_ENABLED) {
                     return;
                 }

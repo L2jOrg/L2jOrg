@@ -15,7 +15,7 @@ public class RequestPrivateStoreQuitBuy extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = client.getActiveChar();
+        final Player player = client.getPlayer();
         if (player == null) {
             return;
         }

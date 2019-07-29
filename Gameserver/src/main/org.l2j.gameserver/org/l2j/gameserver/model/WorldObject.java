@@ -150,7 +150,6 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     @Override
     public final boolean spawnMe() {
         synchronized (this) {
-            // Set the x,y,z position of the WorldObject spawn and update its _worldregion
             _isSpawned = true;
             setWorldRegion(World.getInstance().getRegion(this));
 
@@ -175,7 +174,6 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
             setXYZ(x, y, z);
         }
 
-        // Spawn and update its _worldregion
         spawnMe();
     }
 
@@ -229,6 +227,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      *
      * @return {@code true} if object is instance of Attackable, {@code false} otherwise
      */
+    @Deprecated
     public boolean isAttackable() {
         return false;
     }
@@ -238,6 +237,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      *
      * @return {@code true} if object is instance of Creature, {@code false} otherwise
      */
+    @Deprecated
     public boolean isCharacter() {
         return false;
     }
@@ -247,6 +247,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      *
      * @return {@code true} if object is instance of Door, {@code false} otherwise
      */
+    @Deprecated
     public boolean isDoor() {
         return false;
     }
@@ -256,6 +257,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      *
      * @return {@code true} if object is instance of Monster, {@code false} otherwise
      */
+    @Deprecated
     public boolean isMonster() {
         return false;
     }
@@ -265,6 +267,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      *
      * @return {@code true} if object is instance of Npc, {@code false} otherwise
      */
+    @Deprecated
     public boolean isNpc() {
         return false;
     }
@@ -274,6 +277,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      *
      * @return {@code true} if object is instance of Pet, {@code false} otherwise
      */
+    @Deprecated
     public boolean isPet() {
         return false;
     }
@@ -294,6 +298,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @return {@code true} if object is instance of Playable, {@code false} otherwise
      *
      */
+    @Deprecated
     public boolean isPlayable() {
         return false;
     }
@@ -313,6 +318,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      *
      * @return {@code true} if object is instance of Summon, {@code false} otherwise
      */
+    @Deprecated
     public boolean isSummon() {
         return false;
     }
@@ -322,6 +328,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      *
      * @return {@code true} if object is instance of Trap, {@code false} otherwise
      */
+    @Deprecated
     public boolean isTrap() {
         return false;
     }
@@ -331,6 +338,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      *
      * @return {@code true} if object is instance of Item, {@code false} otherwise
      */
+    @Deprecated
     public boolean isItem() {
         return false;
     }
@@ -340,6 +348,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      *
      * @return {@code true} if object is a walker NPC, {@code false} otherwise
      */
+    @Deprecated
     public boolean isWalker() {
         return false;
     }

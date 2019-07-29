@@ -20,7 +20,7 @@ public class ElementalSpiritEvolutionInfo extends ServerPacket {
     protected void writeImpl(GameClient client) {
         writeId(EX_ELEMENTAL_SPIRIT_EVOLUTION_INFO);
 
-        var player = client.getActiveChar();
+        var player = client.getPlayer();
         var spirit = player.getElementalSpirit(ElementalType.of(type));
 
         if(isNull(spirit)) {

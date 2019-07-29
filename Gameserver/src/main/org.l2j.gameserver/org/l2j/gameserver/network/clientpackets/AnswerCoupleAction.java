@@ -27,7 +27,7 @@ public class AnswerCoupleAction extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getActiveChar();
+        final Player activeChar = client.getPlayer();
         final Player target = World.getInstance().findPlayer(_charObjId);
         if ((activeChar == null) || (target == null)) {
             return;

@@ -81,7 +81,7 @@ public class PartyInfo implements IUserCommandHandler
 			// activeChar.sendPacket(sm);
 			// }
 		}
-		activeChar.sendPacket(SystemMessageId.EMPTY_3);
+		activeChar.sendPacket(SystemMessageId.END_LIST);
 		return true;
 	}
 	

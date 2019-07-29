@@ -34,7 +34,7 @@ public final class RequestSaveInventoryOrder extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = client.getActiveChar();
+        final Player player = client.getPlayer();
         if (player != null) {
             final Inventory inventory = player.getInventory();
             for (InventoryOrder order : _order) {

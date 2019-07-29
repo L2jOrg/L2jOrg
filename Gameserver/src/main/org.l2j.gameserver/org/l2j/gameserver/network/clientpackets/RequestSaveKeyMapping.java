@@ -25,7 +25,7 @@ public class RequestSaveKeyMapping extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = client.getActiveChar();
+        final Player player = client.getPlayer();
         if (!Config.STORE_UI_SETTINGS || //
                 (player == null) || //
                 (_uiKeyMapping == null) || //

@@ -92,7 +92,7 @@ public class PlayerAuthResponse extends ReceivablePacket {
             GameClient oldClient = AuthServerCommunication.getInstance().addAuthedClient(client);
             if(nonNull(oldClient))  {
                 oldClient.setConnectionState(ConnectionState.DISCONNECTED);
-                Player activeChar = oldClient.getActiveChar();
+                Player activeChar = oldClient.getPlayer();
 
                 if(nonNull(activeChar )) {
                     activeChar.sendPacket(SystemMessageId.YOU_ARE_LOGGED_IN_TO_TWO_PLACES_IF_YOU_SUSPECT_ACCOUNT_THEFT_WE_RECOMMEND_CHANGING_YOUR_PASSWORD_SCANNING_YOUR_COMPUTER_FOR_VIRUSES_AND_USING_AN_ANTI_VIRUS_SOFTWARE);

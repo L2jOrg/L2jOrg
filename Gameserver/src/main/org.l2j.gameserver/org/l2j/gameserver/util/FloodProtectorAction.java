@@ -72,7 +72,7 @@ public final class FloodProtectorAction {
     public boolean tryPerformAction(String command) {
         final int curTick = GameTimeController.getInstance().getGameTicks();
 
-        if ((_client.getActiveChar() != null) && _client.getActiveChar().canOverrideCond(PcCondOverride.FLOOD_CONDITIONS)) {
+        if ((_client.getPlayer() != null) && _client.getPlayer().canOverrideCond(PcCondOverride.FLOOD_CONDITIONS)) {
             return true;
         }
 
@@ -130,11 +130,11 @@ public final class FloodProtectorAction {
      * Jails char.
      */
     private void jailChar() {
-        if (_client.getActiveChar() == null) {
+        if (_client.getPlayer() == null) {
             return;
         }
 
-        final int charId = _client.getActiveChar().getObjectId();
+        final int charId = _client.getPlayer().getObjectId();
         if (charId > 0) {
             PunishmentManager.getInstance().startPunishment(new PunishmentTask(charId, PunishmentAffect.CHARACTER, PunishmentType.JAIL, System.currentTimeMillis() + _config.PUNISHMENT_TIME, "", getClass().getSimpleName()));
         }
@@ -157,10 +157,10 @@ public final class FloodProtectorAction {
         final ConnectionState state = _client.getConnectionState();
         switch (state) {
             case IN_GAME: {
-                if (_client.getActiveChar() != null) {
-                    output.append(_client.getActiveChar().getName());
+                if (_client.getPlayer() != null) {
+                    output.append(_client.getPlayer().getName());
                     output.append("(");
-                    output.append(_client.getActiveChar().getObjectId());
+                    output.append(_client.getPlayer().getObjectId());
                     output.append(") ");
                 }
                 break;

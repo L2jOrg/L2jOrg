@@ -53,7 +53,7 @@ public class RequestPackageSend extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = client.getActiveChar();
+        final Player player = client.getPlayer();
         if ((_items == null) || (player == null) || !player.getAccountChars().containsKey(_objectId)) {
             return;
         }

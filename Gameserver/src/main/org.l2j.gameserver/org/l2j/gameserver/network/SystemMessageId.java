@@ -353,8 +353,10 @@ public final class SystemMessageId {
     public static SystemMessageId YOUR_WAREHOUSE_IS_FULL;
     @ClientString(id = 131, message = "$s1 has logged in.")
     public static SystemMessageId S1_HAS_LOGGED_IN;
+
     @ClientString(id = 132, message = "$s1 has been added to your friends list.")
     public static SystemMessageId S1_HAS_BEEN_ADDED_TO_YOUR_FRIENDS_LIST;
+
     @ClientString(id = 133, message = "$s1 has been removed from your friends list.")
     public static SystemMessageId S1_HAS_BEEN_REMOVED_FROM_YOUR_FRIENDS_LIST;
     @ClientString(id = 134, message = "Please check your friends list again.")
@@ -1047,8 +1049,10 @@ public final class SystemMessageId {
     public static SystemMessageId NO_RESPONSE_INVITATION_TO_JOIN_AN_ALLIANCE_HAS_BEEN_CANCELLED;
     @ClientString(id = 478, message = "No response. Your entrance to the alliance has been cancelled.")
     public static SystemMessageId NO_RESPONSE_YOUR_ENTRANCE_TO_THE_ALLIANCE_HAS_BEEN_CANCELLED;
+
     @ClientString(id = 479, message = "$s1 has been added to your friends list.")
     public static SystemMessageId S1_HAS_BEEN_ADDED_TO_YOUR_FRIENDS_LIST_2;
+
     @ClientString(id = 480, message = "Please check your friends list.")
     public static SystemMessageId PLEASE_CHECK_YOUR_FRIENDS_LIST;
     @ClientString(id = 481, message = "$s1 has been removed from your friends list.")
@@ -1063,14 +1067,19 @@ public final class SystemMessageId {
     public static SystemMessageId NO_NEW_FRIEND_INVITATIONS_MAY_BE_ACCEPTED;
     @ClientString(id = 486, message = "The following user is not on your friends list.")
     public static SystemMessageId THE_FOLLOWING_USER_IS_NOT_ON_YOUR_FRIENDS_LIST;
+
     @ClientString(id = 487, message = "======<Friends List>======")
     public static SystemMessageId FRIENDS_LIST;
+
     @ClientString(id = 488, message = "$s1 (Currently: Online)")
     public static SystemMessageId S1_CURRENTLY_ONLINE;
+
     @ClientString(id = 489, message = "$s1 (Currently: Offline)")
     public static SystemMessageId S1_CURRENTLY_OFFLINE;
+
     @ClientString(id = 490, message = "========================")
-    public static SystemMessageId EMPTY_3;
+    public static SystemMessageId END_LIST;
+
     @ClientString(id = 491, message = "=======<Alliance Information>=======")
     public static SystemMessageId ALLIANCE_INFORMATION;
     @ClientString(id = 492, message = "Alliance Name: $s1")

@@ -31,6 +31,8 @@ import org.l2j.gameserver.util.BuilderUtil;
 
 import java.util.StringTokenizer;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * This class handles following admin commands: - itemcreate = show menu - create_item <id> [num] = creates num items with respective id, if num is not specified, assumes 1.
  * @version $Revision: 1.2.2.2.2.3 $ $Date: 2005/04/11 10:06:06 $
@@ -125,7 +127,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			try
 			{
 				final WorldObject target = activeChar.getTarget();
-				if ((target == null) || !target.isPlayer())
+				if (!isPlayer(target))
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Invalid target.");
 					return false;

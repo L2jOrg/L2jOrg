@@ -79,90 +79,90 @@ public final class Say2 extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getActiveChar();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+        if (player == null) {
             return;
         }
 
         ChatType chatType = ChatType.findByClientId(_type);
         if (chatType == null) {
-            LOGGER.warn("Say2: Invalid type: " + _type + " Player : " + activeChar.getName() + " text: " + _text);
-            activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-            Disconnection.of(activeChar).defaultSequence(false);
+            LOGGER.warn("Say2: Invalid type: " + _type + " Player : " + player.getName() + " text: " + _text);
+            player.sendPacket(ActionFailed.STATIC_PACKET);
+            Disconnection.of(player).defaultSequence(false);
             return;
         }
 
         if (_text.isEmpty()) {
-            LOGGER.warn(activeChar.getName() + ": sending empty text. Possible packet hack!");
-            activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-            Disconnection.of(activeChar).defaultSequence(false);
+            LOGGER.warn(player.getName() + ": sending empty text. Possible packet hack!");
+            player.sendPacket(ActionFailed.STATIC_PACKET);
+            Disconnection.of(player).defaultSequence(false);
             return;
         }
 
         // Even though the client can handle more characters than it's current limit allows, an overflow (critical error) happens if you pass a huge (1000+) message.
         // July 11, 2011 - Verified on High Five 4 official client as 105.
         // Allow higher limit if player shift some item (text is longer then).
-        if (!activeChar.isGM() && (((_text.indexOf(8) >= 0) && (_text.length() > 500)) || ((_text.indexOf(8) < 0) && (_text.length() > 105)))) {
-            activeChar.sendPacket(SystemMessageId.WHEN_A_USER_S_KEYBOARD_INPUT_EXCEEDS_A_CERTAIN_CUMULATIVE_SCORE_A_CHAT_BAN_WILL_BE_APPLIED_THIS_IS_DONE_TO_DISCOURAGE_SPAMMING_PLEASE_AVOID_POSTING_THE_SAME_MESSAGE_MULTIPLE_TIMES_DURING_A_SHORT_PERIOD);
+        if (!player.isGM() && (((_text.indexOf(8) >= 0) && (_text.length() > 500)) || ((_text.indexOf(8) < 0) && (_text.length() > 105)))) {
+            player.sendPacket(SystemMessageId.WHEN_A_USER_S_KEYBOARD_INPUT_EXCEEDS_A_CERTAIN_CUMULATIVE_SCORE_A_CHAT_BAN_WILL_BE_APPLIED_THIS_IS_DONE_TO_DISCOURAGE_SPAMMING_PLEASE_AVOID_POSTING_THE_SAME_MESSAGE_MULTIPLE_TIMES_DURING_A_SHORT_PERIOD);
             return;
         }
 
         if (Config.L2WALKER_PROTECTION && (chatType == ChatType.WHISPER) && checkBot(_text)) {
-            GameUtils.handleIllegalPlayerAction(activeChar, "Client Emulator Detect: Player " + activeChar.getName() + " using l2walker.", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(player, "Client Emulator Detect: Player " + player.getName() + " using l2walker.", Config.DEFAULT_PUNISH);
             return;
         }
 
-        if (activeChar.isCursedWeaponEquipped() && ((chatType == ChatType.TRADE) || (chatType == ChatType.SHOUT))) {
-            activeChar.sendPacket(SystemMessageId.SHOUT_AND_TRADE_CHATTING_CANNOT_BE_USED_WHILE_POSSESSING_A_CURSED_WEAPON);
+        if (player.isCursedWeaponEquipped() && ((chatType == ChatType.TRADE) || (chatType == ChatType.SHOUT))) {
+            player.sendPacket(SystemMessageId.SHOUT_AND_TRADE_CHATTING_CANNOT_BE_USED_WHILE_POSSESSING_A_CURSED_WEAPON);
             return;
         }
 
-        if (activeChar.isChatBanned() && (_text.charAt(0) != '.')) {
-            if (activeChar.isAffected(EffectFlag.CHAT_BLOCK)) {
-                activeChar.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_CHATTING_IS_NOT_ALLOWED);
+        if (player.isChatBanned() && (_text.charAt(0) != '.')) {
+            if (player.isAffected(EffectFlag.CHAT_BLOCK)) {
+                player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_CHATTING_IS_NOT_ALLOWED);
             } else if (Config.BAN_CHAT_CHANNELS.contains(chatType)) {
-                activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
+                player.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
             }
             return;
         }
 
-        if (activeChar.isInOlympiadMode() || OlympiadManager.getInstance().isRegistered(activeChar)) {
-            activeChar.sendPacket(SystemMessageId.YOU_CANNOT_CHAT_WHILE_PARTICIPATING_IN_THE_OLYMPIAD);
+        if (player.isInOlympiadMode() || OlympiadManager.getInstance().isRegistered(player)) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_CHAT_WHILE_PARTICIPATING_IN_THE_OLYMPIAD);
             return;
         }
 
-        if (activeChar.isOnEvent(CeremonyOfChaosEvent.class)) {
-            activeChar.sendPacket(SystemMessageId.YOU_CANNOT_CHAT_IN_THE_CEREMONY_OF_CHAOS);
+        if (player.isOnEvent(CeremonyOfChaosEvent.class)) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_CHAT_IN_THE_CEREMONY_OF_CHAOS);
             return;
         }
 
-        if (activeChar.isJailed() && Config.JAIL_DISABLE_CHAT) {
+        if (player.isJailed() && Config.JAIL_DISABLE_CHAT) {
             if ((chatType == ChatType.WHISPER) || (chatType == ChatType.SHOUT) || (chatType == ChatType.TRADE) || (chatType == ChatType.HERO_VOICE)) {
-                activeChar.sendMessage("You can not chat with players outside of the jail.");
+                player.sendMessage("You can not chat with players outside of the jail.");
                 return;
             }
         }
 
-        if ((chatType == ChatType.PETITION_PLAYER) && activeChar.isGM()) {
+        if ((chatType == ChatType.PETITION_PLAYER) && player.isGM()) {
             chatType = ChatType.PETITION_GM;
         }
 
         if (Config.LOG_CHAT) {
             if (chatType == ChatType.WHISPER) {
-                LOGGER_CHAT.info(chatType.name() + " [" + activeChar + " to " + _target + "] " + _text);
+                LOGGER_CHAT.info(chatType.name() + " [" + player + " to " + _target + "] " + _text);
             } else {
-                LOGGER_CHAT.info(chatType.name() + " [" + activeChar + "] " + _text);
+                LOGGER_CHAT.info(chatType.name() + " [" + player + "] " + _text);
             }
 
         }
 
         if (_text.indexOf(8) >= 0) {
-            if (!parseAndPublishItem(client, activeChar)) {
+            if (!parseAndPublishItem(client, player)) {
                 return;
             }
         }
 
-        final ChatFilterReturn filter = EventDispatcher.getInstance().notifyEvent(new OnPlayerChat(activeChar, _target, _text, chatType), activeChar, ChatFilterReturn.class);
+        final ChatFilterReturn filter = EventDispatcher.getInstance().notifyEvent(new OnPlayerChat(player, _target, _text, chatType), player, ChatFilterReturn.class);
         if (filter != null) {
             _text = filter.getFilteredText();
             chatType = filter.getChatType();
@@ -175,7 +175,7 @@ public final class Say2 extends ClientPacket {
 
         final IChatHandler handler = ChatHandler.getInstance().getHandler(chatType);
         if (handler != null) {
-            handler.handleChat(chatType, activeChar, _target, _text);
+            handler.handleChat(chatType, player, _target, _text);
         } else {
             LOGGER.info("No handler registered for ChatType: " + _type + " Player: " + client);
         }

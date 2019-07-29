@@ -70,7 +70,7 @@ public class CharacterSelect extends ClientPacket {
             try {
                 // should always be null
                 // but if not then this is repeated packet and nothing should be done here
-                if (client.getActiveChar() == null) {
+                if (client.getPlayer() == null) {
                     final CharSelectInfoPackage info = client.getCharSelection(_charSlot);
                     if (info == null) {
                         return;

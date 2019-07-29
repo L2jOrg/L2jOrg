@@ -19,6 +19,6 @@ public final class RequestShowBoard extends ClientPacket {
 
     @Override
     public void runImpl() {
-        CommunityBoardHandler.getInstance().handleParseCommand(Config.BBS_DEFAULT, client.getActiveChar());
+        CommunityBoardHandler.getInstance().handleParseCommand(Config.BBS_DEFAULT, client.getPlayer());
     }
 }

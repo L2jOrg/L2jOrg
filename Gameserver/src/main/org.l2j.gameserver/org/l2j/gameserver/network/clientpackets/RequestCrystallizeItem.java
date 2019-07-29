@@ -39,7 +39,7 @@ public final class RequestCrystallizeItem extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getActiveChar();
+        final Player activeChar = client.getPlayer();
 
         if (activeChar == null) {
             LOGGER.debug("RequestCrystalizeItem: activeChar was null");

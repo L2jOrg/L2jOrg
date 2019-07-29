@@ -19,7 +19,7 @@ public class ElementalSpiritExtractInfo extends ServerPacket {
     protected void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_ELEMENTAL_SPIRIT_EXTRACT_INFO);
 
-        var spirit = client.getActiveChar().getElementalSpirit(ElementalType.of(type));
+        var spirit = client.getPlayer().getElementalSpirit(ElementalType.of(type));
         if(isNull(spirit)) {
             writeByte(0);
             writeByte(0);

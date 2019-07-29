@@ -24,7 +24,7 @@ public class KickPlayer extends ReceivablePacket {
         if (client == null)
             return;
 
-        Player activeChar = client.getActiveChar();
+        Player activeChar = client.getPlayer();
         if (activeChar != null) {
             activeChar.sendPacket(SystemMessageId.YOU_ARE_LOGGED_IN_TO_TWO_PLACES_IF_YOU_SUSPECT_ACCOUNT_THEFT_WE_RECOMMEND_CHANGING_YOUR_PASSWORD_SCANNING_YOUR_COMPUTER_FOR_VIRUSES_AND_USING_AN_ANTI_VIRUS_SOFTWARE);
             Disconnection.of(activeChar).defaultSequence(false);

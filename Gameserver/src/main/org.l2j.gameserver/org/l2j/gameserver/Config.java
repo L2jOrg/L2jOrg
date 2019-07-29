@@ -31,6 +31,8 @@ import java.util.regex.PatternSyntaxException;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import static org.l2j.commons.util.Util.isNullOrEmpty;
+
 /**
  * This class loads all the game server related configurations from files.<br>
  * The files are usually located in config folder in server root folder.<br>
@@ -2335,6 +2337,9 @@ public final class Config {
      * @return the parsed list or {@code null} if nothing was parsed
      */
     private static List<ItemHolder> parseItemsList(String line) {
+        if(isNullOrEmpty(line)) {
+            return null;
+        }
         final String[] propertySplit = line.split(";");
         if (propertySplit.length == 0) {
             // nothing to do here

@@ -20,7 +20,7 @@ public class RequestTargetActionMenu extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = client.getActiveChar();
+        final Player player = client.getPlayer();
         if (isNull(player)) {
             return;
         }

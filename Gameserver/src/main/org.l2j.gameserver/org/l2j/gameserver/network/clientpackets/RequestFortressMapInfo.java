@@ -23,9 +23,9 @@ public class RequestFortressMapInfo extends ClientPacket {
     public void runImpl() {
         final Fort fort = FortDataManager.getInstance().getFortById(_fortressId);
         if (fort == null) {
-            LOGGER.warn("Fort is not found with id (" + _fortressId + ") in all forts with size of (" + FortDataManager.getInstance().getForts().size() + ") called by player (" + client.getActiveChar() + ")");
+            LOGGER.warn("Fort is not found with id (" + _fortressId + ") in all forts with size of (" + FortDataManager.getInstance().getForts().size() + ") called by player (" + client.getPlayer() + ")");
 
-            if (client.getActiveChar() == null) {
+            if (client.getPlayer() == null) {
                 return;
             }
 

@@ -28,12 +28,12 @@ public final class RequestShortCutReg extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if ((client.getActiveChar() == null) || (_page > 19) || (_page < 0)) {
+        if ((client.getPlayer() == null) || (_page > 19) || (_page < 0)) {
             return;
         }
 
         final Shortcut sc = new Shortcut(_slot, _page, _type, _id, _lvl, _subLvl, _characterType);
-        client.getActiveChar().registerShortCut(sc);
+        client.getPlayer().registerShortCut(sc);
         client.sendPacket(new ShortCutRegister(sc));
     }
 }

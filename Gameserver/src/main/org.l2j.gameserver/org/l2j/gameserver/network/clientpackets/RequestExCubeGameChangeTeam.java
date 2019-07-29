@@ -28,7 +28,7 @@ public final class RequestExCubeGameChangeTeam extends ClientPacket {
         if (HandysBlockCheckerManager.getInstance().arenaIsBeingUsed(_arena)) {
             return;
         }
-        final Player player = client.getActiveChar();
+        final Player player = client.getPlayer();
 
         switch (_team) {
             case 0:

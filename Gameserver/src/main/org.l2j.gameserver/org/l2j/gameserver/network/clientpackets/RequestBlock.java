@@ -28,7 +28,7 @@ public final class RequestBlock extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getActiveChar();
+        final Player activeChar = client.getPlayer();
         final int targetId = PlayerNameTable.getInstance().getIdByName(_name);
         final int targetAL = PlayerNameTable.getInstance().getAccessLevelById(targetId);
 

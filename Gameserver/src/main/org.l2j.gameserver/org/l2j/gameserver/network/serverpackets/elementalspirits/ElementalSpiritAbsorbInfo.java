@@ -21,7 +21,7 @@ public class ElementalSpiritAbsorbInfo extends ServerPacket {
     protected void writeImpl(GameClient client) {
         writeId(EX_ELEMENTAL_SPIRIT_ABSORB_INFO);
 
-        var player = client.getActiveChar();
+        var player = client.getPlayer();
         var spirit = player.getElementalSpirit(ElementalType.of(type));
 
         if(isNull(spirit)) {
